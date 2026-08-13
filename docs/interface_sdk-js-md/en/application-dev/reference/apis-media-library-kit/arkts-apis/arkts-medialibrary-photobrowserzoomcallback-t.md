@@ -4,13 +4,17 @@
 export type PhotoBrowserZoomCallback = (scale: double) => void
 ```
 
-The callback of onPhotoBrowserZoom event
+Callback to be invoked when the large image is zoomed in or out after the large image is entered through the **PhotoPickerComponent**.
 
-**Since:** 26.1.0
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-unnamed-export type PhotoBrowserZoomCallback = (scale: double) => void--><!--Device-unnamed-export type PhotoBrowserZoomCallback = (scale: double) => void-End-->
 
@@ -20,5 +24,5 @@ The callback of onPhotoBrowserZoom event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | double | Yes |  |
+| scale | double | Yes | Scale of the image compared with the original image. |
 

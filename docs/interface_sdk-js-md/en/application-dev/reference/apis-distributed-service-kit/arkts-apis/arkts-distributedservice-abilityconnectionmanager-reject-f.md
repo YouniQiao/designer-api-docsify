@@ -12,11 +12,13 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 function reject(token: string, reason: string): void
 ```
 
-Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer  application is rejected, a rejection reason is returned.
+Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,7 +37,7 @@ Rejects a connection request in a cross-device collaboration session. After a co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 
 ## Examples
 

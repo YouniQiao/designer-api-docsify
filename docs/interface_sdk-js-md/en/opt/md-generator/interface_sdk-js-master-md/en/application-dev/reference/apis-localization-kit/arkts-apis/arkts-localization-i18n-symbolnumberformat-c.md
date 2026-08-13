@@ -1,12 +1,14 @@
 # SymbolNumberFormat
 
-Provide a Number formatting interface that supports custom symbols.This interface formats number values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "null" to "NA").
+Provide a Number formatting interface that supports custom symbols. This interface formats number values into strings with custom symbols, and can replace variable symbols in the formatted result with custom fixed symbols (e.g., replacing "null" to "NA").
 
-**Inheritance/Implementation:** SymbolNumberFormat implements [Intl.NumberFormat](Intl.NumberFormat)
+**Inheritance/Implementation:** SymbolNumberFormat implements Intl.NumberFormat
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat--><!--Device-i18n-export class SymbolNumberFormat implements Intl.NumberFormat-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export class SymbolNumberFormat--><!--Device-i18n-export class SymbolNumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -25,6 +27,8 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 A constructor used to create a SymbolNumberFormat object.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ public format(value: number | bigint): string
 Formats a number with give locale and SymbolNumberFormatOptions.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +86,8 @@ public formatRange(startRange: number, endRange: number): string
 Formats a number range.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +120,8 @@ Formats a number range into parts.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -143,6 +153,8 @@ Formats a number into parts.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -173,6 +185,8 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -198,7 +212,7 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## resolvedOptions
 
@@ -206,9 +220,11 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 ```
 
-Represents optional element for the ResolvedSymbolDateTimeFormatOptions object.Define the resolved symbol element and value that need to get.
+Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. Define the resolved symbol element and value that need to get.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,14 @@
 # ReminderRequestTimer
 
-ReminderRequestTimer extends ReminderRequest
-
-Defines a reminder for a scheduled timer.
+ReminderRequestTimer extends ReminderRequest Defines a reminder for a scheduled timer.
 
 **Inheritance/Implementation:** ReminderRequestTimer extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-reminderAgentManager-interface ReminderRequestTimer extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestTimer extends ReminderRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-reminderAgentManager-interface ReminderRequestTimer--><!--Device-reminderAgentManager-interface ReminderRequestTimer-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -24,13 +24,13 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 repeatCount?: number
 ```
 
-Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**.
-
-The value range is [0, +∞). If the value is out of range, error code 401 is returned.
+Number of repetitions. The default value is **0**, indicating infinite repetitions. This parameter must be used together with **repeatInterval**. The value range is [0, +∞). If the value is out of range, error code 401 is returned.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +44,13 @@ The value range is [0, +∞). If the value is out of range, error code 401 is re
 repeatInterval?: number
 ```
 
-Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**.
-
-The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
+Repeat interval. There is no default value. If no value is set, there is no repeat interval. This parameter must be used together with **repeatCount**. The value range is [86400, +∞), in seconds. If the value is out of range, error code 401 is returned.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +64,13 @@ The value range is [86400, +∞), in seconds. If the value is out of range, erro
 triggerTimeInSeconds: number
 ```
 
-Number of seconds in the countdown timer.
-
-Unit: s
+Number of seconds in the countdown timer. Unit: s
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestTimer-triggerTimeInSeconds: long--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: long-End-->
 

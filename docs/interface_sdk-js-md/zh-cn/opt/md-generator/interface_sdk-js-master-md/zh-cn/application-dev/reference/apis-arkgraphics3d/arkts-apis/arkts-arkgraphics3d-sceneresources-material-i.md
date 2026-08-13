@@ -4,9 +4,11 @@
 
 **继承/实现关系：** Material extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-unnamed-export interface Material extends SceneResource--><!--Device-unnamed-export interface Material extends SceneResource-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Material--><!--Device-unnamed-export interface Material-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -16,11 +18,13 @@
 alphaCutoff?: number
 ```
 
-透明通道阈值，如果像素的alpha值等于或高于此阈值，则渲染该像素；如果低于此阈值，则不会渲染该像素。设置值小于1时，则开启该模式，取值范围为[0, 1]，默认值为1。
+透明通道阈值，如果像素的alpha值等于或高于此阈值，则渲染该像素；如果低于此阈值，则不会渲染该像素。 设置值小于1时，则开启该模式，取值范围为[0, 1]，默认值为1。
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Material-alphaCutoff?: double--><!--Device-Material-alphaCutoff?: double-End-->
 
@@ -38,7 +42,9 @@ blend?: Blend
 
 **默认值：** undefined, which means that blending is disabled.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Material-blend?: Blend--><!--Device-Material-blend?: Blend-End-->
 
@@ -54,7 +60,9 @@ cullMode?: CullMode
 
 **类型：** [CullMode](arkts-arkgraphics3d-sceneresources-cullmode-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Material-cullMode?: CullMode--><!--Device-Material-cullMode?: CullMode-End-->
 
@@ -70,7 +78,9 @@ readonly materialType: MaterialType
 
 **类型：** [MaterialType](arkts-arkgraphics3d-sceneresources-materialtype-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Material-readonly materialType: MaterialType--><!--Device-Material-readonly materialType: MaterialType-End-->
 
@@ -90,6 +100,8 @@ polygonMode?: PolygonMode
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-Material-polygonMode?: PolygonMode--><!--Device-Material-polygonMode?: PolygonMode-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -104,7 +116,9 @@ renderSort?: RenderSort
 
 **类型：** [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Material-renderSort?: RenderSort--><!--Device-Material-renderSort?: RenderSort-End-->
 
@@ -120,7 +134,9 @@ shadowReceiver?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Material-shadowReceiver?: boolean--><!--Device-Material-shadowReceiver?: boolean-End-->
 

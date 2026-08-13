@@ -9,7 +9,9 @@ type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,    callback: IUserAuthCallback) => void--><!--Device-osAccount-type DomainPluginAuthWithPopupFunc = (domainAccountInfo: DomainAccountInfo,    callback: IUserAuthCallback) => void-End-->
 

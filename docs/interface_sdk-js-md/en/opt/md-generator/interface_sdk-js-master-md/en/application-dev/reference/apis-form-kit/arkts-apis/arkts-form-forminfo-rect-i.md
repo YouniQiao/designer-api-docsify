@@ -2,7 +2,9 @@
 
 Indicates rectangle, unit is vp.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface Rect--><!--Device-formInfo-interface Rect-End-->
 
@@ -24,9 +26,11 @@ The height of Rect Unit: vp.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-height: double--><!--Device-Rect-height: double-End-->
 
@@ -42,9 +46,11 @@ The left position of Rect Unit: vp.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-left: double--><!--Device-Rect-left: double-End-->
 
@@ -60,9 +66,11 @@ The top position of Rect Unit: vp.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-top: double--><!--Device-Rect-top: double-End-->
 
@@ -78,9 +86,11 @@ The width of Rect Unit: vp.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Rect-width: double--><!--Device-Rect-width: double-End-->
 

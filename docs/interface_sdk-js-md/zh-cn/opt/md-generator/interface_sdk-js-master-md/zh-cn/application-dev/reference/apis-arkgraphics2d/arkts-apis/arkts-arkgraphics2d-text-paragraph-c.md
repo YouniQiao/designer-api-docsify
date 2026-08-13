@@ -1,10 +1,10 @@
 # Paragraph
 
-保存文本内容及样式的载体，支持排版与绘制操作。
+保存文本内容及样式的载体，支持排版与绘制操作。 下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到 Paragraph对象实例，再通过此实例调用对应方法。
 
-下列API示例中都需先使用[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)类的[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口获取到Paragraph对象实例，再通过此实例调用对应方法。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-text-class Paragraph--><!--Device-text-class Paragraph-End-->
 
@@ -18,7 +18,9 @@ didExceedMaxLines(): boolean
 
 返回段落是否超过最大行数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -44,12 +46,11 @@ let didExceed = paragraph.didExceedMaxLines();
 forceReuseRasterResult(isForce: boolean): void
 ```
 
-设置是否强制复用光栅化结果。不调用此接口时，系统默认允许更新光栅化结果。
-
-适用于文本内容未发生变化但需要多次调用[paint](#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用  
-[paint](#paint)绘制时生效。
+设置是否强制复用光栅化结果。不调用此接口时，系统默认允许更新光栅化结果。 适用于文本内容未发生变化但需要多次调用[paint](#paint)绘制的场景，通过复用光栅化结果可避免重复光栅化计算以提升绘制性能。设置后，在下次调用 [paint](#paint)绘制时生效。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,7 +121,9 @@ getActualTextRange(lineNumber: number, includeSpaces: boolean): Range
 
 获取指定行的实际可见文本范围，不包括溢出的省略号。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -155,7 +158,9 @@ getAlphabeticBaseline(): number
 
 获取拉丁字母基线位置。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -185,6 +190,8 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -211,7 +218,7 @@ getCharacterPositionAtCoordinate(x: number, y: number, encoding: drawing.TextEnc
 
 | 错误码ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
 ## 示例
 
@@ -259,6 +266,8 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -284,7 +293,7 @@ getCharacterRangeForGlyphRange(glyphRange: Range, encoding: drawing.TextEncoding
 
 | 错误码ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
 ## 示例
 
@@ -329,7 +338,9 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 获取与给定坐标最接近的字形位置信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -366,6 +377,8 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -391,7 +404,7 @@ getGlyphRangeForCharacterRange(characterRange: Range, encoding: drawing.TextEnco
 
 | 错误码ID |
 | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-参数值异常) |
+| [25900001](../errorcode-drawing.md#25900001-参数值异常) |
 
 ## 示例
 
@@ -436,7 +449,9 @@ getHeight(): number
 
 获取文本总高度。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -464,7 +479,9 @@ getIdeographicBaseline(): number
 
 获取表意字（如CJK（中文，日文，韩文））下的基线位置。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -492,7 +509,9 @@ getLineCount(): number
 
 返回文本行数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -520,7 +539,9 @@ getLineHeight(line: number): number
 
 返回指定行的行高。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -554,7 +575,9 @@ getLineMetrics(): Array<LineMetrics>
 
 获取文本行的行度量数组。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -582,7 +605,9 @@ getLineMetrics(lineNumber: number): LineMetrics | undefined
 
 获取特定行号的行度量信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -616,7 +641,9 @@ getLineWidth(line: number): number
 
 返回指定行的行宽。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -650,7 +677,9 @@ getLongestLine(): number
 
 获取文本最长行宽。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -678,7 +707,9 @@ getLongestLineWithIndent(): number
 
 获取文本最长一行的宽度（包含缩进），建议向上取整。文本内容为空时返回0。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -706,7 +737,9 @@ getMaxIntrinsicWidth(): number
 
 获取段落最大固有宽度。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -734,7 +767,9 @@ getMaxWidth(): number
 
 获取文本最大行宽。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -762,7 +797,9 @@ getMinIntrinsicWidth(): number
 
 获取段落最小固有宽度。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -791,6 +828,8 @@ getParagraphStyle(): ParagraphStyle
 获取段落的样式配置。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -864,6 +903,8 @@ getProcessState(): TextProcessState
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -921,7 +962,9 @@ getRectsForPlaceholders(): Array<TextBox>
 
 获取文本中所有占位符所占的矩形区域。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -949,7 +992,9 @@ getRectsForRange(range: Range, widthStyle: RectWidthStyle, heightStyle: RectHeig
 
 获取给定的矩形区域宽度以及矩形区域高度的规格下，文本中该区间范围内的字符所占的矩形区域。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -987,6 +1032,8 @@ getTextDisplayState(): TextDisplayState
 获取段落的文本显示状态。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1045,7 +1092,9 @@ getTextLines(): Array<TextLine>
 
 返回所有的文本行。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1071,23 +1120,11 @@ let lines = paragraph.getTextLines();
 getVisibleTextRanges(): Array<Range>
 ```
 
-获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)的maxLines属性）截断或省略号模式（  
-[EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)）替换而未显示的文本。
-
-**说明：**
-
-返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）：  
-| 场景 | 说明 |
-|---|---|
-| 文本未被截断 | 范围包含全部已排版文本 |
-| 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 |
-| 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 |
-| 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 |
-| 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 |
-| 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 |
-| 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） |
+获取段落中在屏幕上可见的文本范围。不包含因最大行数（[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)的maxLines属性）截断或省略号模式（ [EllipsisMode](arkts-arkgraphics2d-text-ellipsismode-e.md#EllipsisMode)）替换而未显示的文本。 **说明：** 返回的范围取决于段落的具体截断情况（如是否设置最大行数或省略号等）： | 场景 | 说明 | |---|---| | 文本未被截断 | 范围包含全部已排版文本 | | 仅设置maxLines截断（未设置省略号） | 范围为实际显示的文本，即第一行至第maxLines行末尾的文本。 | | 尾部省略（EllipsisMode.END） | 范围为省略号之前的文本。 | | 头部省略（EllipsisMode.START） | 范围为省略号之后的文本。 | | 中部省略（EllipsisMode.MIDDLE） | 第一个范围为省略号之前的文本，第二个范围为省略号之后的文本。 | | 多行头部省略（EllipsisMode.MULTILINE_START） | 同中部省略，返回省略号前后的文本范围。 | | 多行中部省略（EllipsisMode.MULTILINE_MIDDLE） | 同中部省略，返回省略号前后的文本范围。 |
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1117,7 +1154,9 @@ getWordBoundary(offset: number): Range
 
 返回给定offset的字形所在单词的索引区间。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1151,7 +1190,9 @@ layout(width: number): Promise<void>
 
 进行排版并计算所有字形位置，使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1175,7 +1216,7 @@ layout(width: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1258,7 +1299,9 @@ layoutSync(width: number): void
 
 进行排版并计算所有字形位置。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1287,6 +1330,8 @@ layoutWithConstraints(size: TextRectSize): TextLayoutResult
 使用给定的高度和宽度进行排版并计算所有字形的位置。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1327,7 +1372,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 在画布上以 (x, y) 为左上角绘制文本。调用前必须先调用[layout()](#layout)接口进行排版，否则无法正确显示文本内容。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1339,7 +1386,7 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| canvas | drawing.Canvas | 是 |
+| [canvas](../../apis-arkui/arkts-apis/arkts-arkui-canvasrenderingcontext2d-c.md) | drawing.Canvas | 是 |
 | x | number | 是 |
 | y | number | 是 |
 
@@ -1361,7 +1408,9 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 在画布上沿路径绘制文本。调用前必须先调用[layout()](#layout)接口进行排版，否则无法正确显示文本内容。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1373,7 +1422,7 @@ paintOnPath(canvas: drawing.Canvas, path: drawing.Path, hOffset: number, vOffset
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| canvas | drawing.Canvas | 是 |
+| [canvas](../../apis-arkui/arkts-apis/arkts-arkui-canvasrenderingcontext2d-c.md) | drawing.Canvas | 是 |
 | path | drawing.Path | 是 |
 | hOffset | number | 是 |
 | vOffset | number | 是 |
@@ -1398,7 +1447,9 @@ updateColor(color: common2D.Color): void
 
 更新整个文本段落的颜色。如果当前装饰线未设置颜色，使用该接口也会同时更新装饰线的颜色。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1426,7 +1477,9 @@ updateDecoration(decoration: Decoration): void
 
 更新整个文本段落的装饰线。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

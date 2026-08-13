@@ -2,9 +2,11 @@
 
 The proxy of the UIExtension window.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-uiExtension-interface WindowProxy--><!--Device-uiExtension-interface WindowProxy-End-->
 
@@ -24,13 +26,15 @@ createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptio
 
 Creates a subwindow for this window proxy. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>--><!--Device-WindowProxy-createSubWindowWithOptions(name: string, subWindowOptions: window.SubWindowOptions): Promise<window.Window>-End-->
 
@@ -54,9 +58,9 @@ Creates a subwindow for this window proxy. This API uses a promise to return the
 | Error Code ID | Error Message |
 | --- | --- |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible causes: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
 ## Examples
 
@@ -116,7 +120,9 @@ Create subwindow.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,8 +149,8 @@ Create subwindow.
 | Error Code ID | Error Message |
 | --- | --- |
 | 1300035 | Creating a subwindow is not allowed in the current context. Possible cause: 1. An AgentUIExtensionAbility cannot create a subwindow. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. 3. The subWindow has been created and cannot be created again. 4. It is not allowed to create non-secure window when secure extension exists. |
 
 ## Examples
 
@@ -199,15 +205,17 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea
 ```
 
-Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area,and soft keyboard area.
+Obtains the area where this window cannot be displayed, for example, the system bar area, notch, gesture area, and soft keyboard area.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea--><!--Device-WindowProxy-getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea-End-->
 
@@ -229,7 +237,7 @@ Obtains the area where this window cannot be displayed, for example, the system 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
 
 ## Examples
 
@@ -250,25 +258,21 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 
 ## occupyEvents
 
-ArkTS-Dyn:
-```TypeScript
-occupyEvents(eventFlags: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 occupyEvents(eventFlags: int): Promise<void>
 ```
 
 Sets the events that the component (**EmbeddedComponent** or **UIExtensionComponent**) will occupy, preventing the host from responding to these events within the component's area.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowProxy-occupyEvents(eventFlags: int): Promise<void>--><!--Device-WindowProxy-occupyEvents(eventFlags: int): Promise<void>-End-->
 
@@ -278,7 +282,7 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of events to occupy. For details about the available values, see [EventFlag](arkts-arkui-uiextension-eventflag-e.md#EventFlag). |
+| eventFlags | int | Yes | Type of events to occupy. For details about the available values, see [EventFlag](arkts-arkui-uiextension-eventflag-e.md#EventFlag). |
 
 **Return value:**
 
@@ -290,9 +294,9 @@ Sets the events that the component (**EmbeddedComponent** or **UIExtensionCompon
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed. 2. Internal task error. |
 
 ## Examples
 
@@ -323,7 +327,104 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 }
 ```
 
-## off('avoidAreaChange')
+## offAvoidAreaChange
+
+```TypeScript
+offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void
+```
+
+Unsubscribes from the event indicating changes to the area where the window cannot be displayed.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowProxy-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void--><!--Device-WindowProxy-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+
+## offRectChange
+
+```TypeScript
+offRectChange(callback?: Callback<RectChangeOptions>): void
+```
+
+Unsubscribes from changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowProxy-offRectChange(callback?: Callback<RectChangeOptions>): void--><!--Device-WindowProxy-offRectChange(callback?: Callback<RectChangeOptions>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+
+## offWindowSizeChange
+
+```TypeScript
+offWindowSizeChange(callback?: Callback<window.Size>): void
+```
+
+Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size change event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-WindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+
+## off_avoidAreaChange
 
 ```TypeScript
 off(type: 'avoidAreaChange', callback?: Callback<AvoidAreaInfo>): void
@@ -334,6 +435,8 @@ Unsubscribes from events of system avoidance area changes.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -348,14 +451,14 @@ Unsubscribes from events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | No | Callback used for unsubscription. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | No | Callback used for unsubscription. If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
@@ -372,67 +475,19 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 }
 ```
 
-## off('windowSizeChange')
-
-```TypeScript
-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
-```
-
-Unsubscribes from size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-WindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
-
-## Examples
-
-```TypeScript
-// ExtensionProvider.ts
-import { EmbeddedUIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
-
-export default class EntryAbility extends EmbeddedUIExtensionAbility {
-  onSessionDestroy(session: UIExtensionContentSession) {
-    const extensionWindow = session.getUIExtensionWindowProxy();
-    // Unsubscribe from size change events of the component (EmbeddedComponent or UIExtensionComponent).
-    extensionWindow.off('windowSizeChange');
-  }
-}
-```
-
-## off('rectChange')
+## off_rectChange
 
 ```TypeScript
 off(type: 'rectChange', callback?: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from position and size change events of the component (**EmbeddedComponent** or  
-**UIExtensionComponent**).
+Unsubscribes from position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -447,15 +502,15 @@ Unsubscribes from position and size change events of the component (**EmbeddedCo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'rectChange' | Yes | Event type. The value is fixed at **'rectChange'**, indicating the rectangle change event for the component (**EmbeddedComponent** or **UIExtensionComponent**). |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | No | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | No | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
@@ -472,21 +527,25 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 }
 ```
 
-## offAvoidAreaChange
+## off_windowSizeChange
 
 ```TypeScript
-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void
+off(type: 'windowSizeChange', callback?: Callback<window.Size>): void
 ```
 
-Unsubscribes from the event indicating changes to the area where the window cannot be displayed.
+Unsubscribes from size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowProxy-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void--><!--Device-WindowProxy-offAvoidAreaChange(callback?: Callback<AvoidAreaInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void--><!--Device-WindowProxy-off(type: 'windowSizeChange', callback?: Callback<window.Size>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -494,29 +553,48 @@ Unsubscribes from the event indicating changes to the area where the window cann
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | No | Callback used to return the size of the current component ( **EmbeddedComponent** or **UIExtensionComponent**). If a value is passed in, the corresponding subscription is canceled. If no value is passed in, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
 
-## offRectChange
+## Examples
 
 ```TypeScript
-offRectChange(callback?: Callback<RectChangeOptions>): void
+// ExtensionProvider.ts
+import { EmbeddedUIExtensionAbility, UIExtensionContentSession } from '@kit.AbilityKit';
+
+export default class EntryAbility extends EmbeddedUIExtensionAbility {
+  onSessionDestroy(session: UIExtensionContentSession) {
+    const extensionWindow = session.getUIExtensionWindowProxy();
+    // Unsubscribe from size change events of the component (EmbeddedComponent or UIExtensionComponent).
+    extensionWindow.off('windowSizeChange');
+  }
+}
 ```
 
-Unsubscribes from changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
+## onAvoidAreaChange
+
+```TypeScript
+onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void
+```
+
+Subscribes to the event indicating changes to the area where the window cannot be displayed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowProxy-offRectChange(callback?: Callback<RectChangeOptions>): void--><!--Device-WindowProxy-offRectChange(callback?: Callback<RectChangeOptions>): void-End-->
+<!--Device-WindowProxy-onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void--><!--Device-WindowProxy-onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -524,30 +602,31 @@ Unsubscribes from changes in the position and size of the component (EmbeddedCom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | Yes | Callback used to return the avoid area information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## offWindowSizeChange
+## onRectChange
 
 ```TypeScript
-offWindowSizeChange(callback?: Callback<window.Size>): void
+onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void
 ```
 
-Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size change event.
+Subscribes to changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void--><!--Device-WindowProxy-offWindowSizeChange(callback?: Callback<window.Size>): void-End-->
+<!--Device-WindowProxy-onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void--><!--Device-WindowProxy-onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -555,15 +634,49 @@ Unsubscribes from the component (EmbeddedComponent or UIExtensionComponent) size
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| reasons | int | Yes | The reasons of component rect change. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes | Callback used to return the RectChangeOptions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listening type is not registered. 3. The listener has not been registered. 4. The UIExtension window proxy is abnormal. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: &lt;br&gt; 1. The listening type is not supported. &lt;br&gt; 2. The listener has been registered. &lt;br&gt; 3. The UIExtension window proxy is abnormal. |
 
-## on('avoidAreaChange')
+## onWindowSizeChange
+
+```TypeScript
+onWindowSizeChange(callback: Callback<window.Size>): void
+```
+
+Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size change event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-WindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+
+## on_avoidAreaChange
 
 ```TypeScript
 on(type: 'avoidAreaChange', callback: Callback<AvoidAreaInfo>): void
@@ -574,6 +687,8 @@ Subscribes to events of system avoidance area changes.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -588,14 +703,14 @@ Subscribes to events of system avoidance area changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'avoidAreaChange' | Yes | Event type. The value is fixed at **'avoidAreaChange'**, indicating the event of changes to the area where the window cannot be displayed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | Yes | Callback function that receives the information about the current avoidance area. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | Yes | Callback function that receives the information about the current avoidance area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
@@ -615,69 +730,19 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 }
 ```
 
-## on('windowSizeChange')
-
-```TypeScript
-on(type: 'windowSizeChange', callback: Callback<window.Size>): void
-```
-
-Subscribes to size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-WindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-WindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
-
-## Examples
-
-```TypeScript
-// ExtensionProvider.ts
-import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-
-export default class EntryAbility extends EmbeddedUIExtensionAbility {
-  onSessionCreate(want: Want, session: UIExtensionContentSession) {
-    const extensionWindow = session.getUIExtensionWindowProxy();
-    // Subscribe to size change events of the component (EmbeddedComponent or UIExtensionComponent).
-    extensionWindow.on('windowSizeChange', (size: window.Size) => {
-      console.info(`The avoid area of the host window is: ${JSON.stringify(size)}.`);
-    });
-  }
-}
-```
-
-## on('rectChange')
+## on_rectChange
 
 ```TypeScript
 on(type: 'rectChange', reasons: number, callback: Callback<RectChangeOptions>): void
 ```
 
-Subscribes to position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
+Subscribes to position and size change events of the component (**EmbeddedComponent** or **UIExtensionComponent** ).
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -693,15 +758,15 @@ Subscribes to position and size change events of the component (**EmbeddedCompon
 | --- | --- | --- | --- |
 | type | 'rectChange' | Yes | Event type. The value is fixed at **'rectChange'**, indicating the rectangle change event for the component (**EmbeddedComponent** or **UIExtensionComponent**). |
 | reasons | number | Yes | Reason why the position and size of the component (**EmbeddedComponent** or **UIExtensionComponent**) change. For details about the values, see [RectChangeReason](arkts-arkui-uiextension-rectchangereason-e.md#RectChangeReason). |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | Yes | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;RectChangeOptions&gt; | Yes | Callback used to return the current rectangle change values and the reason for the change of the component (**EmbeddedComponent** or **UIExtensionComponent**). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## Examples
 
@@ -721,21 +786,25 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 }
 ```
 
-## onAvoidAreaChange
+## on_windowSizeChange
 
 ```TypeScript
-onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void
+on(type: 'windowSizeChange', callback: Callback<window.Size>): void
 ```
 
-Subscribes to the event indicating changes to the area where the window cannot be displayed.
+Subscribes to size change events of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WindowProxy-onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void--><!--Device-WindowProxy-onAvoidAreaChange(callback: Callback<AvoidAreaInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void--><!--Device-WindowProxy-on(type: 'windowSizeChange', callback: Callback<window.Size>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -743,75 +812,33 @@ Subscribes to the event indicating changes to the area where the window cannot b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AvoidAreaInfo](arkts-arkui-uiextension-avoidareainfo-i.md)&gt; | Yes | Callback used to return the avoid area information. |
+| type | 'windowSizeChange' | Yes | Event type. The value is fixed at **'windowSizeChange'**, indicating the component (**EmbeddedComponent** or **UIExtensionComponent**) size change events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;window.Size&gt; | Yes | Callback function that receives the current component size as the input parameter. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
-## onRectChange
+## Examples
 
 ```TypeScript
-onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void
+// ExtensionProvider.ts
+import { EmbeddedUIExtensionAbility, UIExtensionContentSession, Want } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends EmbeddedUIExtensionAbility {
+  onSessionCreate(want: Want, session: UIExtensionContentSession) {
+    const extensionWindow = session.getUIExtensionWindowProxy();
+    // Subscribe to size change events of the component (EmbeddedComponent or UIExtensionComponent).
+    extensionWindow.on('windowSizeChange', (size: window.Size) => {
+      console.info(`The avoid area of the host window is: ${JSON.stringify(size)}.`);
+    });
+  }
+}
 ```
-
-Subscribes to changes in the position and size of the component (EmbeddedComponent or UIExtensionComponent). This API can be used only on 2-in-1 devices.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowProxy-onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void--><!--Device-WindowProxy-onRectChange(reasons: int, callback: Callback<RectChangeOptions>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| reasons | int | Yes | The reasons of component rect change. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | Yes | Callback used to return the RectChangeOptions. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: &lt;br&gt; 1. The listening type is not supported. &lt;br&gt; 2. The listener has been registered. &lt;br&gt; 3. The UIExtension window proxy is abnormal. |
-
-## onWindowSizeChange
-
-```TypeScript
-onWindowSizeChange(callback: Callback<window.Size>): void
-```
-
-Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size change event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void--><!--Device-WindowProxy-onWindowSizeChange(callback: Callback<window.Size>): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;window.Size&gt; | Yes | Callback used to return the window size. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | Abnormal state. Possible causes: 1. The listening type is not supported. 2. The listener has been registered. 3. The UIExtension window proxy is abnormal. |
 
 ## properties
 
@@ -819,21 +846,19 @@ Subscribes to the component (EmbeddedComponent or UIExtensionComponent) size cha
 properties: WindowProxyProperties
 ```
 
-Information about the component (**EmbeddedComponent** or **UIExtensionComponent**).
-
-Note: Due to architecture restrictions, avoid obtaining the value in  
-[onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate). Instead, when possible, obtain the value after receiving the  
-[on('windowSizeChange')](@ohos.arkui.uiExtension:uiExtension.WindowProxy.on(type: 'windowSizeChange', callback: Callback&lt;window.Size&gt;))callback.
+Information about the component (**EmbeddedComponent** or **UIExtensionComponent**). Note: Due to architecture restrictions, avoid obtaining the value in [onSessionCreate](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate). Instead, when possible, obtain the value after receiving the [on('windowSizeChange')](#on_avoidAreaChange) callback.
 
 **Type:** [WindowProxyProperties](arkts-arkui-uiextension-windowproxyproperties-i.md)
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowProxy-properties: WindowProxyProperties--><!--Device-WindowProxy-properties: WindowProxyProperties-End-->
 

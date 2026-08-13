@@ -10,6 +10,8 @@ Declare the event listener callback of the enter key.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type SearchSubmitCallback = (searchContent: string, event?: SubmitEvent) => void--><!--Device-unnamed-export type SearchSubmitCallback = (searchContent: string, event?: SubmitEvent) => void-End-->

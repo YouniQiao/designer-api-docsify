@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface MenuElement--><!--Device-unnamed-declare interface MenuElement-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,9 +20,13 @@ action: () => void
 
 点击菜单项的事件回调。
 
+**类型：** () =&gt; void
+
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,11 +40,7 @@ action: () => void
 enabled?: boolean
 ```
 
-菜单条目是否可进行交互。
-
-true：菜单条目可以进行交互；false：菜单条目不可以进行交互。
-
-默认值：true
+菜单条目是否可进行交互。 true：菜单条目可以进行交互；false：菜单条目不可以进行交互。 默认值：true
 
 **类型：** boolean
 
@@ -47,6 +49,8 @@ true：菜单条目可以进行交互；false：菜单条目不可以进行交�
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,6 +74,8 @@ icon?: ResourceStr
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -92,6 +98,8 @@ symbolIcon?: SymbolGlyphModifier
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -113,6 +121,8 @@ value: ResourceStr
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

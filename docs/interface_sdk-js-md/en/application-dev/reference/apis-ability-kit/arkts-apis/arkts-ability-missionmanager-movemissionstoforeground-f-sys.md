@@ -14,9 +14,11 @@ function moveMissionsToForeground(missionIds: Array<int>, callback: AsyncCallbac
 
 Switches a batch of missions to the foreground. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -30,17 +32,17 @@ Switches a batch of missions to the foreground. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| missionIds | Array&lt;int&gt; | Yes | Array holding the mission IDs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -88,9 +90,11 @@ function moveMissionsToForeground(missionIds: Array<int>, topMission: int, callb
 
 Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -104,18 +108,18 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| topMission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the mission to be moved to the top. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| missionIds | Array&lt;int&gt; | Yes | Array holding the mission IDs. |
+| topMission | int | Yes | ID of the mission to be moved to the top. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -163,9 +167,11 @@ function moveMissionsToForeground(missionIds: Array<int>, topMission?: int): Pro
 
 Switches a batch of missions to the foreground, and moves the mission with the specified ID to the top. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -179,8 +185,8 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionIds | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Array holding the mission IDs. |
-| topMission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | ID of the mission to be moved to the top. The default value is **-1**, indicating that the default mission is moved to the top. |
+| missionIds | Array&lt;int&gt; | Yes | Array holding the mission IDs. |
+| topMission | int | No | ID of the mission to be moved to the top. The default value is **-1**, indicating that the default mission is moved to the top. |
 
 **Return value:**
 
@@ -192,10 +198,10 @@ Switches a batch of missions to the foreground, and moves the mission with the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

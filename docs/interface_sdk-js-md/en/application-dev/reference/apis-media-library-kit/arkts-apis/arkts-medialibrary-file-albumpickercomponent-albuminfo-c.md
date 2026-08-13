@@ -1,10 +1,12 @@
 # AlbumInfo
 
-AlbumInfo: include album uri
+Represents album information.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class AlbumInfo--><!--Device-unnamed-export declare class AlbumInfo-End-->
 
@@ -19,40 +21,44 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 ## albumName
 
 ```TypeScript
-public albumName?: string
+albumName?: string
 ```
 
-Album name
+Album name.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AlbumInfo-public albumName?: string--><!--Device-AlbumInfo-public albumName?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AlbumInfo-albumName?: string--><!--Device-AlbumInfo-albumName?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uri
 
 ```TypeScript
-public uri?: string
+uri?: string
 ```
 
-Album uri
+Album URI.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AlbumInfo-public uri?: string--><!--Device-AlbumInfo-public uri?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AlbumInfo-uri?: string--><!--Device-AlbumInfo-uri?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

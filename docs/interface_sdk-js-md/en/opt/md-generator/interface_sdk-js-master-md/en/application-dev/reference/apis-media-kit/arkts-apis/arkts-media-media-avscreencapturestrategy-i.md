@@ -2,7 +2,9 @@
 
 Provides the media AVScreenCaptureStrategy definition.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVScreenCaptureStrategy--><!--Device-media-interface AVScreenCaptureStrategy-End-->
 
@@ -24,7 +26,9 @@ Indicates whether to enable B-frame encoding, which is used to reduce the size o
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean--><!--Device-AVScreenCaptureStrategy-enableBFrame?: boolean-End-->
 
@@ -41,6 +45,8 @@ Enable pausing the screen capture. The default value is false.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Allows starting or maintaining screen capture during a call
 
 **Default:** {false} [Required if provided]
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean--><!--Device-AVScreenCaptureStrategy-keepCaptureDuringCall?: boolean-End-->
 
@@ -77,6 +85,8 @@ Set the fill mode for screen capture when a privacy window exists.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

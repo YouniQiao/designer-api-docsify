@@ -2,7 +2,9 @@
 
 Defines a device status change event.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface SensorStatusEvent--><!--Device-sensor-interface SensorStatusEvent-End-->
 
@@ -24,7 +26,9 @@ Device ID.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorStatusEvent-deviceId: int--><!--Device-SensorStatusEvent-deviceId: int-End-->
 
@@ -40,7 +44,9 @@ Device name.
 
 **Type:** string
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorStatusEvent-deviceName: string--><!--Device-SensorStatusEvent-deviceName: string-End-->
 
@@ -56,7 +62,9 @@ Sensor status. The value **true** indicates that the sensor is online, and the v
 
 **Type:** boolean
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorStatusEvent-isSensorOnline: boolean--><!--Device-SensorStatusEvent-isSensorOnline: boolean-End-->
 
@@ -72,7 +80,9 @@ Sensor ID.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorStatusEvent-sensorId: int--><!--Device-SensorStatusEvent-sensorId: int-End-->
 
@@ -88,7 +98,9 @@ Sensor index.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorStatusEvent-sensorIndex: int--><!--Device-SensorStatusEvent-sensorIndex: int-End-->
 
@@ -104,7 +116,9 @@ Timestamp when an event occurs, in ms.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorStatusEvent-timestamp: long--><!--Device-SensorStatusEvent-timestamp: long-End-->
 

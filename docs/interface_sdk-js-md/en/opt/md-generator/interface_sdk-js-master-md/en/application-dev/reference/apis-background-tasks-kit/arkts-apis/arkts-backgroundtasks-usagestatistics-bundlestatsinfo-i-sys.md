@@ -1,6 +1,8 @@
 # BundleStatsInfo (System API)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface BundleStatsInfo--><!--Device-usageStatistics-interface BundleStatsInfo-End-->
 
@@ -20,11 +22,13 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 abilityInFgTotalTime?: number
 ```
 
-The total duration, in milliseconds.&lt;br&gt; Unit:ms
+The total duration, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-abilityInFgTotalTime?: long--><!--Device-BundleStatsInfo-abilityInFgTotalTime?: long-End-->
 
@@ -38,11 +42,13 @@ The total duration, in milliseconds.&lt;br&gt; Unit:ms
 abilityPrevAccessTime?: number
 ```
 
-The last time when the application was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the application was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-abilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-abilityPrevAccessTime?: long-End-->
 
@@ -56,11 +62,13 @@ The last time when the application was accessed, in milliseconds.&lt;br&gt; Unit
 abilityPrevSeenTime?: number
 ```
 
-The last time when the application was visible in the foreground, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the application was visible in the foreground, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-abilityPrevSeenTime?: long--><!--Device-BundleStatsInfo-abilityPrevSeenTime?: long-End-->
 
@@ -74,11 +82,13 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: number
 ```
 
-The total duration, in milliseconds.&lt;br&gt; Unit:ms
+The total duration, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-abilitySeenTotalTime?: long--><!--Device-BundleStatsInfo-abilitySeenTotalTime?: long-End-->
 
@@ -96,7 +106,9 @@ The app index of the application.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-appIndex?: int--><!--Device-BundleStatsInfo-appIndex?: int-End-->
 
@@ -114,7 +126,9 @@ The bundle name of the application.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-bundleName?: string--><!--Device-BundleStatsInfo-bundleName?: string-End-->
 
@@ -128,11 +142,13 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: number
 ```
 
-The total duration, in milliseconds.&lt;br&gt; Unit:ms
+The total duration, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long--><!--Device-BundleStatsInfo-fgAbilityAccessTotalTime?: long-End-->
 
@@ -146,11 +162,13 @@ The total duration, in milliseconds.&lt;br&gt; Unit:ms
 fgAbilityPrevAccessTime?: number
 ```
 
-The last time when the foreground application was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the foreground application was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long--><!--Device-BundleStatsInfo-fgAbilityPrevAccessTime?: long-End-->
 
@@ -168,7 +186,9 @@ The identifier of BundleStatsInfo.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-id: int--><!--Device-BundleStatsInfo-id: int-End-->
 
@@ -182,11 +202,13 @@ The identifier of BundleStatsInfo.
 infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-infosBeginTime?: long--><!--Device-BundleStatsInfo-infosBeginTime?: long-End-->
 
@@ -200,11 +222,13 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleStatsInfo-infosEndTime?: long--><!--Device-BundleStatsInfo-infosEndTime?: long-End-->
 

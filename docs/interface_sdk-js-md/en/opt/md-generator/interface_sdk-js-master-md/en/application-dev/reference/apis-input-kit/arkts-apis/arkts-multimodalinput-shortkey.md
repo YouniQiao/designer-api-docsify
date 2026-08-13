@@ -1,8 +1,6 @@
-# @ohos.multimodalInput.shortKey(Preset Global Shortcut Keys)
+# @ohos.multimodalInput.shortKey
 
-The **shortKey** module provides APIs to set the delay for starting an ability using a shortcut key. For example, you
- can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds.
-
+The shortKey module provides APIs to set the delay for starting an ability using a shortcut key. For example, you can set the delay to 3 seconds so that a screenshot is taken when you press and hold the shortcut key for 3 seconds.
 
 ## Modules to Import
 

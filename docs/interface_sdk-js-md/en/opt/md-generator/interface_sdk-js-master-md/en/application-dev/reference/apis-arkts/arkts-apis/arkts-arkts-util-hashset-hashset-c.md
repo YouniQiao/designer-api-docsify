@@ -2,9 +2,11 @@
 
 HashSet is implemented based on HashMap. In HashSet, only the value object is processed.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class HashSet<T>--><!--Device-unnamed-declare class HashSet<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class HashSet--><!--Device-unnamed-declare class HashSet-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ HashSet is implemented based on HashMap. In HashSet, only the value object is pr
 ```TypeScript
 import { HashSet } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+returns an iterator.Each item of the iterator is a Javascript Object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-HashSet-$_iterator(): IterableIterator<T>--><!--Device-HashSet-$_iterator(): IterableIterator<T>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-HashSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -34,13 +62,13 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -86,7 +114,9 @@ add(value: T): boolean
 
 Adds elements to this HashSet.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -110,7 +140,7 @@ Adds elements to this HashSet.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -128,7 +158,9 @@ clear(): void
 
 Clears this HashSet and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -140,7 +172,7 @@ Clears this HashSet and sets its length to **0**.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -161,7 +193,9 @@ constructor()
 
 A constructor used to create a **HashSet** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -173,7 +207,7 @@ A constructor used to create a **HashSet** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -189,7 +223,9 @@ entries(): IterableIterator<[T, T]>
 
 Returns an iterator that contains all the elements in this HashSet.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -201,13 +237,13 @@ Returns an iterator that contains all the elements in this HashSet.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[T, T]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -249,6 +285,8 @@ Uses a callback to traverse each element.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void--><!--Device-HashSet-forEach(callbackFn: (value?: T, key?: T, set?: HashSet<T>) => void, thisArg?: Object): void-End-->
@@ -266,7 +304,7 @@ Uses a callback to traverse each element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -292,6 +330,30 @@ for(let i = 0; i < 10; i++) {
 }
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: HashSetCbFn<T>): void
+```
+
+Iterates over all elements in the HashSet and executes a callback function for each element.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-HashSet-forEach(callbackFn: HashSetCbFn<T>): void--><!--Device-HashSet-forEach(callbackFn: HashSetCbFn<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [HashSetCbFn](arkts-arkts-hashsetcbfn-t.md)&lt;T&gt; | Yes |
+
 ## has
 
 ```TypeScript
@@ -300,7 +362,9 @@ has(value: T): boolean
 
 Checks whether this HashSet has the specified element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -324,7 +388,7 @@ Checks whether this HashSet has the specified element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -343,7 +407,9 @@ isEmpty(): boolean
 
 Checks whether this HashSet is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -361,7 +427,7 @@ Checks whether this HashSet is empty (contains no element).
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -379,7 +445,9 @@ remove(value: T): boolean
 
 Removes an element from this HashSet.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -403,7 +471,7 @@ Removes an element from this HashSet.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -423,7 +491,9 @@ values(): IterableIterator<T>
 
 Returns an iterator that contains all the values in this HashSet.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -435,13 +505,13 @@ Returns an iterator that contains all the values in this HashSet.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -468,6 +538,8 @@ Number of elements in a HashSet.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,7 +2,9 @@
 
 Background communication object created by the system for the UIAbility, known as the Callee UIAbility (Callee), which is capable of receiving data sent from the Caller object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Callee--><!--Device-unnamed-export interface Callee-End-->
 
@@ -14,7 +16,7 @@ Background communication object created by the system for the UIAbility, known a
 import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(method: string): void
@@ -22,7 +24,9 @@ off(method: string): void
 
 Unregisters a caller notification callback, which is invoked when the target UIAbility registers a function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +44,9 @@ Unregisters a caller notification callback, which is invoked when the target UIA
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16200005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200005-method-not-registered) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200005](../errorcode-ability.md#16200005-method-not-registered) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -63,7 +67,7 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(method: string, callback: CalleeCallback): void
@@ -71,7 +75,9 @@ on(method: string, callback: CalleeCallback): void
 
 Registers a caller notification callback, which is invoked when the target UIAbility registers a function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,9 +96,9 @@ Registers a caller notification callback, which is invoked when the target UIAbi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200004-method-registered) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16200004](../errorcode-ability.md#16200004-method-registered) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 

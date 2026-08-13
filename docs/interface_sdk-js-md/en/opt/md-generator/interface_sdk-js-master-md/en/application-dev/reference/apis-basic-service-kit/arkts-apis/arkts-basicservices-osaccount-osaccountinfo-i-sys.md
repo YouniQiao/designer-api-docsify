@@ -2,7 +2,9 @@
 
 Represents information about an OS account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
 
@@ -20,13 +22,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 isLoggedIn?: boolean
 ```
 
-Whether the OS account is logged in. The value **true** means that the OS account has logged in; the value **false** means the opposite.
-
-This is a system API. The default value is **false**.
+Whether the OS account is logged in. The value **true** means that the OS account has logged in; the value **false** means the opposite. This is a system API. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-isLoggedIn?: boolean--><!--Device-OsAccountInfo-isLoggedIn?: boolean-End-->
 
@@ -40,13 +42,13 @@ This is a system API. The default value is **false**.
 shortName?: string
 ```
 
-Short name of the OS account.
-
-This is a system API and is left blank by default.
+Short name of the OS account. This is a system API and is left blank by default.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-shortName?: string--><!--Device-OsAccountInfo-shortName?: string-End-->
 

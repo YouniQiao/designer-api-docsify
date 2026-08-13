@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-image-interface XMPEnumerateOptions--><!--Device-image-interface XMPEnumerateOptions-End-->
 
@@ -16,15 +18,15 @@
 isRecursive?: boolean
 ```
 
-表示是否进行递归遍历。
-
-true表示进行递归遍历。false表示仅遍历直接子节点。默认为false。
+表示是否进行递归遍历。 true表示进行递归遍历。false表示仅遍历直接子节点。默认为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ true表示进行递归遍历。false表示仅遍历直接子节点。默认为fa
 onlyQualifier?: boolean
 ```
 
-表示是否仅遍历限定符节点。
-
-true表示仅遍历限定符节点。false表示遍历所有节点。默认为false。
+表示是否仅遍历限定符节点。 true表示仅遍历限定符节点。false表示遍历所有节点。默认为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

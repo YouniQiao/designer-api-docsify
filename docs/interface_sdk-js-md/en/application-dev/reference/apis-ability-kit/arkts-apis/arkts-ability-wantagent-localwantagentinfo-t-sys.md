@@ -6,9 +6,11 @@ export type LocalWantAgentInfo = _LocalWantAgentInfo
 
 Provides the information required to create a local WantAgent.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo--><!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo-End-->
 

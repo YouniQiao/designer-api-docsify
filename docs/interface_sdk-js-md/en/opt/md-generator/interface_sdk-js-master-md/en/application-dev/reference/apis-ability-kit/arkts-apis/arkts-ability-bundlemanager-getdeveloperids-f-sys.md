@@ -12,10 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDeveloperIds(appDistributionType?: number): Array<string>
 ```
 
-Obtains all the developer IDs of the current user based on the given application  
-[distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md#AppDistributionType).
+Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md#AppDistributionType-(System-API)).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,9 +42,9 @@ Obtains all the developer IDs of the current user based on the given application
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

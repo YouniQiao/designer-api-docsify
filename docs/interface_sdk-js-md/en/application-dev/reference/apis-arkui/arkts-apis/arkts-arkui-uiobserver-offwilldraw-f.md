@@ -1,4 +1,4 @@
-# offWillDraw
+# off_willDraw
 
 ## Modules to Import
 
@@ -6,21 +6,25 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## offWillDraw
+## off_willDraw
 
 ```TypeScript
-export function offWillDraw(context: UIContext, callback?: Callback<void>): void
+export function off(type: 'willDraw', context: UIContext, callback?: Callback<void>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+Unregisters the listener for drawing instruction dispatch in each frame.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function offWillDraw(context: UIContext, callback?: Callback<void>): void--><!--Device-uiObserver-export function offWillDraw(context: UIContext, callback?: Callback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function off(type: 'willDraw', context: UIContext, callback?: Callback<void>): void--><!--Device-uiObserver-export function off(type: 'willDraw', context: UIContext, callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +32,7 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'willDraw' | Yes | Event event. The value **'willDraw'** indicates whether drawing is about to occur. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Target listener to unregister. |
 

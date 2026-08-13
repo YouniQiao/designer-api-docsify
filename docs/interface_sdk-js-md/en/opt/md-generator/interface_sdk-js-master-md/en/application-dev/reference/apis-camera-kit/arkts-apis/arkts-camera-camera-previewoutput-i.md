@@ -4,9 +4,11 @@ PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-c
 
 **Inheritance/Implementation:** PreviewOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-camera-interface PreviewOutput extends CameraOutput--><!--Device-camera-interface PreviewOutput extends CameraOutput-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface PreviewOutput--><!--Device-camera-interface PreviewOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -16,54 +18,17 @@ PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-c
 import { camera } from '@kit.CameraKit';
 ```
 
-## addDeferredSurface
-
-```TypeScript
-addDeferredSurface(surfaceId: string): void
-```
-
-Adds a surface for delayed preview. This API can run after [commitConfig](arkts-camera-camera-session-i.md#commitConfig) or  
-[start](arkts-camera-camera-session-i.md#start) is called.
-
-**Since:** 24
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void--><!--Device-PreviewOutput-addDeferredSurface(surfaceId: string): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| surfaceId | string | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## enableBandwidthCompression
 
 ```TypeScript
 enableBandwidthCompression(enabled: boolean): void
 ```
 
-Enables preview bandwidth compression.
-
-Before enabling this feature, you can call   
-[isBandwidthCompressionSupported](#isBandwidthCompressionSupported) to check whether the device supports preview bandwidth compression.
-
-> **NOTE：**
-> 
-> This function must be called prior to
-> [Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig). Otherwise, the
-> preview output stream format will be affected.
+Enables preview bandwidth compression. Before enabling this feature, you can call [isBandwidthCompressionSupported](#isBandwidthCompressionSupported) to check whether the device supports preview bandwidth compression. > **NOTE：**> > This function must be called prior to > [Session.commitConfig](arkts-camera-camera-session-i.md#commitConfig). Otherwise, the > preview output stream format will be affected.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -81,9 +46,9 @@ Before enabling this feature, you can call
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## getActiveFrameRate
 
@@ -91,11 +56,11 @@ Before enabling this feature, you can call
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.
+Obtains the configured frame rate range. This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for preview streams.
 
-This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for preview streams.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -117,7 +82,9 @@ getActiveProfile(): Profile
 
 Obtains the profile that takes effect currently.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -135,7 +102,7 @@ Obtains the profile that takes effect currently.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## getPreviewRotation
 
@@ -143,16 +110,11 @@ Obtains the profile that takes effect currently.
 getPreviewRotation(displayRotation?: number): ImageRotation
 ```
 
-Obtains the preview rotation angle.
+Obtains the preview rotation angle. - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation. - [Screen Rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction): indicates the clockwise rotation angle of the device screen.
 
-- Device' natural orientation: the default orientation for using a device. For example, the default orientation   
-of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's   
-natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.  
--   
-[Screen Rotation](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-multi-device-window-direction):indicates the clockwise rotation angle of the device screen.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,8 +140,8 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## getSupportedFrameRates
 
@@ -189,7 +151,9 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 Obtains the supported frame rates.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -213,6 +177,8 @@ Checks whether preview bandwidth compression is supported. This involves reducin
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PreviewOutput-isBandwidthCompressionSupported(): boolean--><!--Device-PreviewOutput-isBandwidthCompressionSupported(): boolean-End-->
@@ -235,6 +201,8 @@ Checks whether log video view assistance is supported.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -249,19 +217,19 @@ Checks whether log video view assistance is supported.
 | --- |
 | boolean |
 
-## off('frameStart')
+## offError
 
 ```TypeScript
-off(type: 'frameStart', callback?: AsyncCallback<void>): void
+offError(callback?: ErrorCallback): void
 ```
 
-Unsubscribes from preview frame start events.
+Unsubscribes from error events.
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
 
-<!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-offError(callback?: ErrorCallback): void--><!--Device-PreviewOutput-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -269,22 +237,21 @@ Unsubscribes from preview frame start events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'frameStart' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
-## off('frameEnd')
+## offFrameEnd
 
 ```TypeScript
-off(type: 'frameEnd', callback?: AsyncCallback<void>): void
+offFrameEnd(callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from preview frame end events.
+Unsubscribes from frame end event callback.
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
 
-<!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -292,10 +259,31 @@ Unsubscribes from preview frame end events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'frameEnd' | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
 
-## off('error')
+## offFrameStart
+
+```TypeScript
+offFrameStart(callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from frame start event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -304,6 +292,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from PreviewOutput error events.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -318,50 +308,21 @@ Unsubscribes from PreviewOutput error events.
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
-## on('frameStart')
+## off_frameEnd
 
 ```TypeScript
-on(type: 'frameStart', callback: AsyncCallback<void>): void
+off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-Subscribes to preview frame start events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Unsubscribes from preview frame end events.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'frameStart' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-## on('frameEnd')
-
-```TypeScript
-on(type: 'frameEnd', callback: AsyncCallback<void>): void
-```
-
-Subscribes to preview frame end events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+<!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -370,21 +331,110 @@ Subscribes to preview frame end events. This API uses an asynchronous callback t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameEnd' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+## off_frameStart
+
+```TypeScript
+off(type: 'frameStart', callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from preview frame start events.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-PreviewOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'frameStart' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PreviewOutput-onError(callback: ErrorCallback): void--><!--Device-PreviewOutput-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+## onFrameEnd
+
+```TypeScript
+onFrameEnd(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame end event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-## on('error')
+## onFrameStart
+
+```TypeScript
+onFrameStart(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame start event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to PreviewOutput error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -399,22 +449,67 @@ Subscribes to PreviewOutput error events. This API uses an asynchronous callback
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
+## on_frameEnd
+
+```TypeScript
+on(type: 'frameEnd', callback: AsyncCallback<void>): void
+```
+
+Subscribes to preview frame end events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'frameEnd' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+## on_frameStart
+
+```TypeScript
+on(type: 'frameStart', callback: AsyncCallback<void>): void
+```
+
+Subscribes to preview frame start events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'frameStart' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
 ## setFrameRate
 
 ```TypeScript
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for preview streams. The range must be within the supported frame rate range,
+Sets a frame rate range for preview streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates). > **NOTE：**> > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or > [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
 
-which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates).
+**Since:** 23
 
-> **NOTE：**
-> 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or
-> [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -433,8 +528,8 @@ which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRate
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-configuration-conflicts) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) |
 
 ## setLogViewAssistEnable
 
@@ -442,10 +537,11 @@ which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRate
 setLogViewAssistEnable(enable: boolean): void
 ```
 
-Log video view assistance toggle. Before enabling this feature, you can call  
-[isLogViewAssistSupported](#isLogViewAssistSupported) to check whether the device supports log video view assistance.
+Log video view assistance toggle. Before enabling this feature, you can call [isLogViewAssistSupported](#isLogViewAssistSupported) to check whether the device supports log video view assistance.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -465,9 +561,9 @@ Log video view assistance toggle. Before enabling this feature, you can call
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## setPreviewRotation
 
@@ -477,7 +573,9 @@ setPreviewRotation(previewRotation: ImageRotation, isDisplayLocked?: boolean): v
 
 Sets the preview rotation angle.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -496,8 +594,8 @@ Sets the preview rotation angle.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -511,7 +609,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [start](camera.Session.start(callback:)
+**Substitutes:** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -527,7 +625,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## start
 
@@ -557,7 +655,7 @@ Starts to output preview streams. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## stop
 
@@ -571,7 +669,7 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [stop](camera.Session.stop(callback:)
+**Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 

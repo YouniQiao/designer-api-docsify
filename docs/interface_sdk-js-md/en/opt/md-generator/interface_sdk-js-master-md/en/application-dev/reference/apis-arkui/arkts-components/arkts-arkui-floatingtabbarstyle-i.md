@@ -4,6 +4,8 @@ Provides an interface for the options for the floating bar mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface FloatingTabBarStyle--><!--Device-unnamed-interface FloatingTabBarStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Whether to adapt to the handedness.
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ The distance between the bar and the bottom of tab. It cannot be set in percenta
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -61,6 +67,8 @@ The width of the left and right margins of the bar. It cannot be set in percenta
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +90,8 @@ The bar width of the tab width at different breakpoints.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -101,6 +111,8 @@ The color of the mask.
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,6 +134,8 @@ The height of the mask. It cannot be set in percentage.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -141,6 +155,8 @@ The style of the material.
 **Type:** UIMaterial.ImmersiveMaterial
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

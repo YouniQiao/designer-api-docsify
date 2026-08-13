@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-restrictions-enum SettingsForAccount--><!--Device-restrictions-enum SettingsForAccount-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ MODIFY_WALLPAPER = 0
 修改壁纸，包含锁屏壁纸和桌面壁纸。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

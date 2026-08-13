@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
 
@@ -20,7 +22,9 @@ cancelDevicePairing(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -42,10 +46,10 @@ cancelDevicePairing(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## connect
 
@@ -57,7 +61,9 @@ connect(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -79,10 +85,10 @@ connect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## disconnect
 
@@ -94,7 +100,9 @@ disconnect(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -116,10 +124,10 @@ disconnect(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## getDeviceAlias
 
@@ -131,7 +139,9 @@ getDeviceAlias(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -153,10 +163,10 @@ getDeviceAlias(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## getDeviceModel
 
@@ -168,7 +178,9 @@ getDeviceModel(): DeviceModel
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,18 +200,12 @@ getDeviceModel(): DeviceModel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## getRssiValue
 
-ArkTS-Dyn:
-```TypeScript
-getRssiValue(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getRssiValue(): Promise<int>
 ```
@@ -208,7 +214,9 @@ getRssiValue(): Promise<int>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK
 
@@ -224,16 +232,16 @@ getRssiValue(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | 返回RSSI值的promise对象。 |
+| Promise&lt;int&gt; | 返回RSSI值的promise对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## removePairedDevice
 
@@ -245,7 +253,9 @@ removePairedDevice(): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -267,10 +277,10 @@ removePairedDevice(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## setConnectionInterval
 
@@ -282,7 +292,9 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_NEARLINK
 
@@ -304,10 +316,10 @@ setConnectionInterval(interval: ConnectionInterval): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## setDeviceAlias
 
@@ -319,7 +331,9 @@ setDeviceAlias(alias: string): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -341,11 +355,11 @@ setDeviceAlias(alias: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
 | 36100046 | String exceeds maximum length. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## setPairingConfirmation
 
@@ -357,7 +371,9 @@ setPairingConfirmation(accept: boolean): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -379,10 +395,10 @@ setPairingConfirmation(accept: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 
 ## setPairingPasscode
 
@@ -394,7 +410,9 @@ setPairingPasscode(passcode: string): Promise<void>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -422,10 +440,10 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 | 36100045 | Passcode must be a 6-digit number. |
 
 ## startCrediblePairing
@@ -434,11 +452,13 @@ setPairingPasscode(passcode: string): Promise<void>
 startCrediblePairing(): Promise<void>
 ```
 
-发起与可信的远端星闪设备的配对。该接口不触发对话框，不需要用户授权。
+发起与可信的远端星闪设备的配对。 该接口不触发对话框，不需要用户授权。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -460,8 +480,8 @@ startCrediblePairing(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [36100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100003--星闪关闭) | NearLink disabled. |
-| [36100099](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
+| [36100003](../errorcode-nearlink-service.md#36100003-星闪关闭) | NearLink disabled. |
+| [36100099](../errorcode-nearlink-service.md#36100099-操作失败) | Operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Non-system applications are not allowed to use system APIs. |
 

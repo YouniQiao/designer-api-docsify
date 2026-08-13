@@ -6,6 +6,8 @@ Provides APIs for observing events. listening for the distributed file system st
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface DfsListeners--><!--Device-unnamed-export interface DfsListeners-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -22,12 +24,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 onStatus(networkId: string, status: number): void
 ```
 
-Called to return the specified status. Its parameters are passed in by  
-[connectDfs](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioconnectdfs12).
+Called to return the specified status. Its parameters are passed in by connectDfs.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-DfsListeners-onStatus(networkId: string, status: number): void--><!--Device-DfsListeners-onStatus(networkId: string, status: number): void-End-->
 
@@ -38,5 +41,5 @@ Called to return the specified status. Its parameters are passed in by
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. |
-| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:&lt;br&gt;- [13900046](../../../reference/apis-core-file-kit/errorcode-filemanagement.md#13900046-connection-interrupted-by-software) : The connection is interrupted by software. |
+| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:&lt;br&gt;- [13900046](../errorcode-filemanagement.md#13900046-connection-interrupted-by-software) : The connection is interrupted by software. |
 

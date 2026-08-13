@@ -4,7 +4,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.request.agent.Task.on)
+**替代接口：** on
 
 <!--Device-unnamed-export interface OnDownloadCompleteResponse--><!--Device-unnamed-export interface OnDownloadCompleteResponse-End-->
 
@@ -24,7 +24,7 @@ uri: string
 
 **废弃版本：** 9
 
-**替代接口：** [saveas](ohos.request.agent.Task.config.saveas)
+**替代接口：** saveas
 
 <!--Device-OnDownloadCompleteResponse-uri: string--><!--Device-OnDownloadCompleteResponse-uri: string-End-->
 

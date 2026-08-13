@@ -8,9 +8,11 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 
 快速修复的补丁安装接口。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -25,17 +27,17 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapModuleQuickFixFiles | Array&lt;string&gt; | 是 | 快速修复补丁文件（补丁文件需包含有效的文件路径）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当快速修复的补丁安装成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
-| [18500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500002-指定的补丁包无效) | Invalid patch package. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
+| [18500002](../errorcode-ability.md#18500002-指定的补丁包无效) | Invalid patch package. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -65,9 +67,11 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 
 快速修复的补丁安装接口。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INSTALL_BUNDLE
 
@@ -93,11 +97,11 @@ function applyQuickFix(hapModuleQuickFixFiles: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [18500008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
-| [18500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#18500002-指定的补丁包无效) | Invalid patch package. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [18500008](../errorcode-ability.md#18500008-快速修复内部错误) | Internal error. |
+| [18500002](../errorcode-ability.md#18500002-指定的补丁包无效) | Invalid patch package. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

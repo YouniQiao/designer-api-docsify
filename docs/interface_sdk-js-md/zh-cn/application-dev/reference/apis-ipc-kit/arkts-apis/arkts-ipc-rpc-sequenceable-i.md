@@ -28,7 +28,7 @@ marshalling(dataOut: MessageParcel): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [marshalling](rpc.Parcelable#marshalling(dataOut:)
+**替代接口：** [marshalling](arkts-ipc-rpc-parcelable-i.md#marshalling)(dataOut: MessageSequence)
 
 <!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean--><!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean-End-->
 
@@ -98,7 +98,7 @@ unmarshalling(dataIn: MessageParcel): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [unmarshalling](rpc.Parcelable#unmarshalling(dataIn:)
+**替代接口：** [unmarshalling](arkts-ipc-rpc-parcelable-i.md#unmarshalling)(dataIn: MessageSequence)
 
 <!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean--><!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean-End-->
 

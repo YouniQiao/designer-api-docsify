@@ -12,17 +12,13 @@ import { advertising } from '@kit.AdsKit';
 function showAd(ad: Advertisement, options: AdDisplayOptions, context?: common.UIAbilityContext): void
 ```
 
-Shows a full-screen ad.
-
-> **NOTE：**
-> 
-> 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API.
-> 
-> 2. This API only supports displaying rewarded ads and interstitial ads.
+Shows a full-screen ad. > **NOTE：**> > 1. To ensure that ads can be displayed correctly, this API must be used together with the ad request API. > > 2. This API only supports displaying rewarded ads and interstitial ads.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,13 +38,13 @@ Shows a full-screen ad.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [21800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [21800004](../errorcode-ads.md#21800004-ad-display-failure) | Failed to display the ad. |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

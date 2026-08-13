@@ -2,7 +2,9 @@
 
 坐标位置：在全局坐标系中，以主屏左上角为原点。在相对坐标系中，以指定屏幕左上角为原点。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-display-interface Position--><!--Device-display-interface Position-End-->
 
@@ -18,7 +20,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Position-x: long--><!--Device-Position-x: long-End-->
 
@@ -34,7 +38,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Position-y: long--><!--Device-Position-y: long-End-->
 

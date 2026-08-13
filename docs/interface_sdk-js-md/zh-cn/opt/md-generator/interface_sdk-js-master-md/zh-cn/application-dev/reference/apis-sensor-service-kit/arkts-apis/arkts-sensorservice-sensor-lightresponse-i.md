@@ -4,9 +4,11 @@
 
 **继承/实现关系：** LightResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface LightResponse extends Response--><!--Device-sensor-interface LightResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface LightResponse--><!--Device-sensor-interface LightResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ colorTemperature?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LightResponse-colorTemperature?: double--><!--Device-LightResponse-colorTemperature?: double-End-->
 
@@ -36,7 +40,9 @@ infraredLuminance?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LightResponse-infraredLuminance?: double--><!--Device-LightResponse-infraredLuminance?: double-End-->
 
@@ -52,7 +58,9 @@ intensity: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LightResponse-intensity: double--><!--Device-LightResponse-intensity: double-End-->
 

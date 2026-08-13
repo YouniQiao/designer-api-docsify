@@ -4,13 +4,17 @@
 export declare type NodeRenderStateChangeCallback = (state: NodeRenderState, node?: FrameNode) => void
 ```
 
-Defines the callback type used in UIObserver to monitor one specific node's render state.
+Defines the callback type for listening for the rendering state of a specific node in **UIObserver**.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-unnamed-export declare type NodeRenderStateChangeCallback = (state: NodeRenderState, node?: FrameNode) => void--><!--Device-unnamed-export declare type NodeRenderStateChangeCallback = (state: NodeRenderState, node?: FrameNode) => void-End-->
 
@@ -20,6 +24,6 @@ Defines the callback type used in UIObserver to monitor one specific node's rend
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes | the node's render state |
-| node | FrameNode | No | the information of frameNode |
+| state | [NodeRenderState](arkts-arkui-arkui-uicontext-noderenderstate-e.md) | Yes | Information about the gesture event that triggers the callback. |
+| node | FrameNode | No | Component bound to the gesture event that triggers the listener; returns **null** if the component has been released. |
 

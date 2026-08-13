@@ -14,7 +14,9 @@ function getP2pPeerDevices(): Promise<WifiP2pDevice[]>
 
 Obtain the information about the found devices.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -32,9 +34,9 @@ Obtain the information about the found devices.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2801000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2801000-p2p-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 
 ## getP2pPeerDevices
@@ -45,7 +47,9 @@ function getP2pPeerDevices(callback: AsyncCallback<WifiP2pDevice[]>): void
 
 Obtain the information about the found devices.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -63,10 +67,10 @@ Obtain the information about the found devices.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2801000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2801000-p2p-module-error) |
-| [2801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2801001-p2p-module-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2801000](../errorcode-wifi.md#2801000-p2p-module-error) |
+| [2801001](../errorcode-wifi.md#2801001-p2p-module-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

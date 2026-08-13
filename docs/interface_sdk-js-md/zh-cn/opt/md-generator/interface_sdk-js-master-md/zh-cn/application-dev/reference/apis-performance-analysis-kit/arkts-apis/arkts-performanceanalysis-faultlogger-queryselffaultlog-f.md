@@ -12,7 +12,7 @@ function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<F
 
 **废弃版本：** 9
 
-**替代接口：** [query](ohos.faultlogger/FaultLogger#query)
+**替代接口：** query
 
 <!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -66,7 +66,7 @@ function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 **废弃版本：** 9
 
-**替代接口：** [query](ohos.faultlogger/FaultLogger#query)
+**替代接口：** query
 
 <!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function querySelfFaultLog(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 

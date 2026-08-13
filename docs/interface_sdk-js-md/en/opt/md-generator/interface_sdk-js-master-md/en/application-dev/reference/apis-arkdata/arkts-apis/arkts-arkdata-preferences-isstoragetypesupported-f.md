@@ -14,9 +14,11 @@ function isStorageTypeSupported(type: StorageType): boolean
 
 Checks whether the specified storage type is supported. This API returns the result synchronously. If the storage type is supported, **true** is returned. Otherwise, **false** is returned.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-preferences-function isStorageTypeSupported(type: StorageType): boolean--><!--Device-preferences-function isStorageTypeSupported(type: StorageType): boolean-End-->
 
@@ -38,7 +40,7 @@ Checks whether the specified storage type is supported. This API returns the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

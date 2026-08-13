@@ -1,12 +1,12 @@
 # WorkSchedulerExtensionAbility
 
-Provides callbacks to be invoked when the scheduling conditions are met or the scheduling ends, for example,   
-[onWorkStart()](#onWorkStart) or   
-[onWorkStop()](#onWorkStop) in WorkSchedulerExtensionAbility.
+Provides callbacks to be invoked when the scheduling conditions are met or the scheduling ends, for example, [onWorkStart()](#onWorkStart) or [onWorkStop()](#onWorkStop) in WorkSchedulerExtensionAbility.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WorkSchedulerExtensionAbility--><!--Device-unnamed-declare class WorkSchedulerExtensionAbility-End-->
 
@@ -26,9 +26,11 @@ onWorkStart(work: workScheduler.WorkInfo): void
 
 Called when the system starts scheduling the deferred task.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,9 +66,11 @@ onWorkStop(work: workScheduler.WorkInfo): void
 
 Called when the system stops scheduling the deferred task. This callback is triggered when the deferred task times out for 2 minutes or the [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopWork) API is called to cancel the task.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,9 +108,11 @@ Context of the WorkSchedulerExtensionAbility. This context inherits from Extensi
 
 **Type:** [WorkSchedulerExtensionContext](arkts-backgroundtasks-workschedulerextensioncontext-t.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

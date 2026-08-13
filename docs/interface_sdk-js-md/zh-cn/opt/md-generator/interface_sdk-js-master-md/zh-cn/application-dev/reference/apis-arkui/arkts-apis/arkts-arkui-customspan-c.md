@@ -1,10 +1,10 @@
 # CustomSpan
 
-自定义绘制Span，仅提供基类，具体实现由开发者定义。适用于需要在文本流中嵌入自定义绘制内容的场景，例如在文本中绘制自定义图标、进度条、特殊装饰效果等。
-
-自定义绘制Span拖拽显示的缩略图为空白。
+自定义绘制Span，仅提供基类，具体实现由开发者定义。适用于需要在文本流中嵌入自定义绘制内容的场景，例如在文本中绘制自定义图标、进度条、特殊装饰效果等。 自定义绘制Span拖拽显示的缩略图为空白。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare abstract class CustomSpan--><!--Device-unnamed-declare abstract class CustomSpan-End-->
 
@@ -19,6 +19,8 @@ invalidate(): void
 主动刷新使用CustomSpan的Text组件。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +40,8 @@ abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -50,7 +54,7 @@ abstract onDraw(context: DrawContext,  drawInfo: CustomSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-drawcontext-t.md) | 是 |
+| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-drawcontext-t.md) | 是 |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | 是 |
 
 ## onMeasure
@@ -62,6 +66,8 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics
 获取自定义绘制Span的尺寸大小。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

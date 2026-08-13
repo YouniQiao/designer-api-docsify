@@ -16,7 +16,9 @@ Listens to the event of get live form status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formHost-function onGetLiveFormStatus(callback: formInfo.GetLiveFormStatusCallback): void--><!--Device-formHost-function onGetLiveFormStatus(callback: formInfo.GetLiveFormStatusCallback): void-End-->
 
@@ -34,5 +36,5 @@ Listens to the event of get live form status.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

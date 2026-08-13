@@ -1,15 +1,10 @@
-# @ohos.enterprise.dateTimeManager(系统时间管理)
+# @ohos.enterprise.dateTimeManager
 
-本模块提供系统时间管理能力。
-
-> **说明：**
-> 
-> 本模块接口仅对[MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)开放，需通过
-> [enableAdmin](arkts-mdm-adminmanager-enableadmin-f.md#enableAdmin)接口将设备管理应用激活后调用。
-> 
-> 本模块接口均为系统接口。
+本模块提供系统时间管理能力。 > **说明：** > > 本模块接口仅对[MDM应用](../../../mdm/mdm-kit-term.md#mdm应用)开放，需通过 > [enableAdmin](arkts-mdm-adminmanager-enableadmin-f-sys.md#enableAdmin（系统接口）)接口将设备管理应用激活后调用。 > > 本模块接口均为系统接口。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace dateTimeManager--><!--Device-unnamed-declare namespace dateTimeManager-End-->
 
@@ -24,10 +19,10 @@
 
 | 名称 |
 | --- |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowmodifydatetime) |
-| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowmodifydatetime-1) |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#ismodifydatetimedisallowed) |
-| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#ismodifydatetimedisallowed-1) |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setdatetime) |
-| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setdatetime-1) |
+| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowModifyDateTime（系统接口）) |
+| [disallowModifyDateTime](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md#disallowModifyDateTime（系统接口）) |
+| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#isModifyDateTimeDisallowed（系统接口）) |
+| [isModifyDateTimeDisallowed](arkts-mdm-datetimemanager-ismodifydatetimedisallowed-f-sys.md#isModifyDateTimeDisallowed（系统接口）) |
+| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setDateTime（系统接口）) |
+| [setDateTime](arkts-mdm-datetimemanager-setdatetime-f-sys.md#setDateTime（系统接口）) |
 <!--DelEnd-->

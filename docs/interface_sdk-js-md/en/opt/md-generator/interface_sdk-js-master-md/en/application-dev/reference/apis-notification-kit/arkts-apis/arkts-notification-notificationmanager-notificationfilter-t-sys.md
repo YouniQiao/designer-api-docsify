@@ -6,7 +6,9 @@ export type NotificationFilter = _NotificationFilter
 
 Describes the filter criteria for querying the live view.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationFilter = _NotificationFilter--><!--Device-notificationManager-export type NotificationFilter = _NotificationFilter-End-->
 

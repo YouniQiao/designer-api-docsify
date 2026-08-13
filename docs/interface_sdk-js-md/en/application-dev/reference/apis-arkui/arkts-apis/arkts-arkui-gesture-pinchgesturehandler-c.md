@@ -8,7 +8,9 @@ Defines the PinchGesture handler.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class PinchGestureHandler extends GestureHandler--><!--Device-unnamed-export declare class PinchGestureHandler extends GestureHandler-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PinchGestureHandler--><!--Device-unnamed-export declare class PinchGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ The Pinch gesture is successfully recognized and a callback is triggered when th
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +84,8 @@ The Pinch gesture is successfully recognized. When the finger is lifted, the cal
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PinchGestureHandler-onActionEnd(event: Callback<GestureEvent>): this--><!--Device-PinchGestureHandler-onActionEnd(event: Callback<GestureEvent>): this-End-->
@@ -108,6 +116,8 @@ Pinch gesture recognition success callback.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PinchGestureHandler-onActionStart(event: Callback<GestureEvent>): this--><!--Device-PinchGestureHandler-onActionStart(event: Callback<GestureEvent>): this-End-->
@@ -137,6 +147,8 @@ Callback when the Pinch gesture is moving.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

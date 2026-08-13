@@ -2,9 +2,11 @@
 
 Provides fingerprint gesture event types and the offset of the fingerprint sensor relative to the side edge.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface FingerprintEvent--><!--Device-unnamed-export declare interface FingerprintEvent-End-->
 
@@ -28,9 +30,11 @@ Enumeration of fingerprint gesture event types.
 
 **Type:** [FingerprintAction](arkts-input-multimodalinput-shortkey-fingerprintaction-e-sys.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintEvent-action: FingerprintAction--><!--Device-FingerprintEvent-action: FingerprintAction-End-->
 
@@ -44,13 +48,15 @@ Enumeration of fingerprint gesture event types.
 distanceX: double
 ```
 
-Offset relative to the short axis of the side fingerprint device (positive values indicate movement to the right,and negative values indicate movement to the left).
+Offset relative to the short axis of the side fingerprint device (positive values indicate movement to the right, and negative values indicate movement to the left).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintEvent-distanceX: double--><!--Device-FingerprintEvent-distanceX: double-End-->
 
@@ -66,11 +72,13 @@ distanceY: double
 
 Offset relative to the long axis of the side fingerprint device (positive values indicate upward movement, and negative values indicate downward movement).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintEvent-distanceY: double--><!--Device-FingerprintEvent-distanceY: double-End-->
 

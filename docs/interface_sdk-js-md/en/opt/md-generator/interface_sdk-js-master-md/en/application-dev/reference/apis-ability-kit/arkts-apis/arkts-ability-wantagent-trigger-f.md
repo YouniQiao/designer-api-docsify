@@ -12,9 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: AsyncCallback<CompleteData>): void
 ```
 
-Proactively triggers a WantAgent object.This API uses an asynchronous callback to return the result.
+Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,7 +36,7 @@ Proactively triggers a WantAgent object.This API uses an asynchronous callback t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

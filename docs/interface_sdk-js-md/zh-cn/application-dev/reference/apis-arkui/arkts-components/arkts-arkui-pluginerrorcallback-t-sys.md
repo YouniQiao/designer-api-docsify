@@ -10,6 +10,8 @@ declare type PluginErrorCallback = (info: PluginErrorData) => void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare type PluginErrorCallback = (info: PluginErrorData) => void--><!--Device-unnamed-declare type PluginErrorCallback = (info: PluginErrorData) => void-End-->

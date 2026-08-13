@@ -14,7 +14,9 @@ function openProxyChannel(channelInfo: ChannelInfo): Promise<number>
 
 Opens a proxy channel. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -40,14 +42,14 @@ Opens a proxy channel. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [32390006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) |
-| [32390102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [32390100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) |
-| [32390101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) |
-| [32390002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) |
-| [32390001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) |
+| [32390102](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) |
+| [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) |
+| [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) |
 
 ## Examples
 

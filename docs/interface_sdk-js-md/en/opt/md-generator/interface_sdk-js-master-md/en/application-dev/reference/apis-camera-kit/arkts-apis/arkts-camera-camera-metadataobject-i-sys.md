@@ -2,7 +2,9 @@
 
 Describes the camera metadata, which is the data source of [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput). The metadata is obtained through **metadataOutput.on('metadataObjectsAvailable')**.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface MetadataObject--><!--Device-camera-interface MetadataObject-End-->
 
@@ -24,7 +26,9 @@ Confidence of the detection, with a value range of [0, 1].
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MetadataObject-readonly confidence: double--><!--Device-MetadataObject-readonly confidence: double-End-->
 
@@ -42,7 +46,9 @@ Metadata object ID.
 
 **Type:** number
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MetadataObject-readonly objectId: int--><!--Device-MetadataObject-readonly objectId: int-End-->
 

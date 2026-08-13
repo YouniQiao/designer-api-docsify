@@ -2,7 +2,9 @@
 
 Indicates the contact types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export enum ContactType--><!--Device-sim-export enum ContactType-End-->
 
@@ -18,7 +20,9 @@ GENERAL_CONTACT = 1
 
 Indicates the common contact number.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContactType-GENERAL_CONTACT = 1--><!--Device-ContactType-GENERAL_CONTACT = 1-End-->
 
@@ -34,7 +38,9 @@ FIXED_DIALING = 2
 
 Indicates the fixed dialing number.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ContactType-FIXED_DIALING = 2--><!--Device-ContactType-FIXED_DIALING = 2-End-->
 
@@ -51,6 +57,8 @@ SDN_DIALING = 3
 Service dialing number.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-ContactType-SDN_DIALING = 3--><!--Device-ContactType-SDN_DIALING = 3-End-->
 

@@ -2,7 +2,9 @@
 
 订阅类型枚举。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-enum SubscribeType--><!--Device-distributedKVStore-enum SubscribeType-End-->
 
@@ -16,7 +18,9 @@ SUBSCRIBE_TYPE_LOCAL
 
 表示订阅本地数据变更。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,7 +36,9 @@ SUBSCRIBE_TYPE_REMOTE
 
 表示订阅远端数据变更。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +54,9 @@ SUBSCRIBE_TYPE_ALL
 
 表示订阅远端和本地数据变更。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,6 +10,8 @@ The callback of onOverrideErrorPage.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string--><!--Device-unnamed-type OnOverrideErrorPageCallback = (errorPageEvent: OnErrorReceiveEvent) => string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

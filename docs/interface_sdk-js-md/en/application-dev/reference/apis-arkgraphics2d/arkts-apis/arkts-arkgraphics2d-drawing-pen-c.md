@@ -1,17 +1,12 @@
 # Pen
 
-Defines a pen, which is used to describe the style and color to outline a shape.
+Defines a pen, which is used to describe the style and color to outline a shape. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class Pen--><!--Device-drawing-class Pen-End-->
 
@@ -31,9 +26,11 @@ constructor()
 
 A constructor used to create a **Pen** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-constructor()--><!--Device-Pen-constructor()-End-->
 
@@ -47,9 +44,11 @@ constructor(pen: Pen)
 
 Copies a **Pen** object to create a new one.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-constructor(pen: Pen)--><!--Device-Pen-constructor(pen: Pen)-End-->
 
@@ -65,25 +64,21 @@ Copies a **Pen** object to create a new one.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getAlpha
 
-ArkTS-Dyn:
-```TypeScript
-getAlpha(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAlpha(): int
 ```
 
 Obtains the alpha value of this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getAlpha(): int--><!--Device-Pen-getAlpha(): int-End-->
 
@@ -93,7 +88,7 @@ Obtains the alpha value of this pen.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Alpha value of the pen. The return value is an integer ranging from 0 to 255. |
+| int | Alpha value of the pen. The return value is an integer ranging from 0 to 255. |
 
 ## getCapStyle
 
@@ -103,9 +98,11 @@ getCapStyle(): CapStyle
 
 Obtains the cap style of this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getCapStyle(): CapStyle--><!--Device-Pen-getCapStyle(): CapStyle-End-->
 
@@ -129,6 +126,8 @@ Obtains the color of this pen.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Pen-getColor(): common2D.Color--><!--Device-Pen-getColor(): common2D.Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -149,7 +148,9 @@ Obtains the color of this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getColor(): common2D.Color | undefined--><!--Device-Pen-getColor(): common2D.Color | undefined-End-->
 
@@ -173,6 +174,8 @@ Obtains the pen color. The difference between this method and [getColor](#getCol
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-Pen-getColor4f(): common2D.Color4f--><!--Device-Pen-getColor4f(): common2D.Color4f-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -193,7 +196,9 @@ Obtains the color of a pen. The color is used by the pen to outline a shape.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getColor4f(): common2D.Color4f | undefined--><!--Device-Pen-getColor4f(): common2D.Color4f | undefined-End-->
 
@@ -217,6 +222,8 @@ Obtains the color filter of this pen.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Pen-getColorFilter(): ColorFilter--><!--Device-Pen-getColorFilter(): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -237,7 +244,9 @@ Obtains the color filter of this pen.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getColorFilter(): ColorFilter | undefined--><!--Device-Pen-getColorFilter(): ColorFilter | undefined-End-->
 
@@ -257,9 +266,11 @@ getFillPath(src: Path, dst: Path): boolean
 
 Obtains the source path outline drawn using this pen and represents it using a destination path.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getFillPath(src: Path, dst: Path): boolean--><!--Device-Pen-getFillPath(src: Path, dst: Path): boolean-End-->
 
@@ -282,25 +293,21 @@ Obtains the source path outline drawn using this pen and represents it using a d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getHexColor
 
-ArkTS-Dyn:
-```TypeScript
-getHexColor(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getHexColor(): int
 ```
 
 Obtains the color of this pen.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getHexColor(): int--><!--Device-Pen-getHexColor(): int-End-->
 
@@ -310,7 +317,7 @@ Obtains the color of this pen.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
+| int | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
 
 ## getJoinStyle
 
@@ -320,9 +327,11 @@ getJoinStyle(): JoinStyle
 
 Obtains the join style of this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getJoinStyle(): JoinStyle--><!--Device-Pen-getJoinStyle(): JoinStyle-End-->
 
@@ -336,21 +345,17 @@ Obtains the join style of this pen.
 
 ## getMiterLimit
 
-ArkTS-Dyn:
-```TypeScript
-getMiterLimit(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMiterLimit(): double
 ```
 
 Obtains the maximum ratio allowed between the sharp corner length of a polyline and its line width.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getMiterLimit(): double--><!--Device-Pen-getMiterLimit(): double-End-->
 
@@ -360,25 +365,21 @@ Obtains the maximum ratio allowed between the sharp corner length of a polyline 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Maximum ratio obtained. |
+| double | Maximum ratio obtained. |
 
 ## getWidth
 
-ArkTS-Dyn:
-```TypeScript
-getWidth(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWidth(): double
 ```
 
 Obtains the stroke width of this pen. The width describes the thickness of the outline of a shape.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getWidth(): double--><!--Device-Pen-getWidth(): double-End-->
 
@@ -388,7 +389,7 @@ Obtains the stroke width of this pen. The width describes the thickness of the o
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Stroke width for the pen, in px. |
+| double | Stroke width for the pen, in px. |
 
 ## isAntiAlias
 
@@ -398,9 +399,11 @@ isAntiAlias(): boolean
 
 Checks whether anti-aliasing is enabled for this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-isAntiAlias(): boolean--><!--Device-Pen-isAntiAlias(): boolean-End-->
 
@@ -420,9 +423,11 @@ reset(): void
 
 Resets this pen to the initial state.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-reset(): void--><!--Device-Pen-reset(): void-End-->
 
@@ -430,21 +435,17 @@ Resets this pen to the initial state.
 
 ## setAlpha
 
-ArkTS-Dyn:
-```TypeScript
-setAlpha(alpha: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAlpha(alpha: int): void
 ```
 
 Sets an alpha value for this pen.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setAlpha(alpha: int): void--><!--Device-Pen-setAlpha(alpha: int): void-End-->
 
@@ -454,13 +455,13 @@ Sets an alpha value for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
+| alpha | int | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setAntiAlias
 
@@ -470,9 +471,11 @@ setAntiAlias(aa: boolean): void
 
 Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setAntiAlias(aa: boolean): void--><!--Device-Pen-setAntiAlias(aa: boolean): void-End-->
 
@@ -488,7 +491,7 @@ Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setBlendMode
 
@@ -498,9 +501,11 @@ setBlendMode(mode: BlendMode): void
 
 Sets a blend mode for this pen.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setBlendMode(mode: BlendMode): void--><!--Device-Pen-setBlendMode(mode: BlendMode): void-End-->
 
@@ -516,7 +521,7 @@ Sets a blend mode for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setCapStyle
 
@@ -526,9 +531,11 @@ setCapStyle(style: CapStyle): void
 
 Sets the cap style for this pen. If this API is not called, the default cap style is **FLAT_CAP**.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setCapStyle(style: CapStyle): void--><!--Device-Pen-setCapStyle(style: CapStyle): void-End-->
 
@@ -544,7 +551,7 @@ Sets the cap style for this pen. If this API is not called, the default cap styl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -554,9 +561,11 @@ setColor(color: common2D.Color): void
 
 Sets a color for this pen.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor(color: common2D.Color): void--><!--Device-Pen-setColor(color: common2D.Color): void-End-->
 
@@ -572,26 +581,21 @@ Sets a color for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
-ArkTS-Dyn:
-```TypeScript
-setColor(alpha: number, red: number, green: number, blue: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-Sets a color for this pen. This API provides better performance than  
-[setColor](#setColor) and is recommended.
+Sets a color for this pen. This API provides better performance than [setColor](#setColor) and is recommended.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -601,34 +605,30 @@ Sets a color for this pen. This API provides better performance than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
-| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
+| alpha | int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| red | int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
+| green | int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| blue | int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setColor
 
-ArkTS-Dyn:
-```TypeScript
-setColor(color: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setColor(color: int): void
 ```
 
 Sets a color for this pen.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor(color: int): void--><!--Device-Pen-setColor(color: int): void-End-->
 
@@ -638,7 +638,7 @@ Sets a color for this pen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Color in hexadecimal ARGB format. |
+| color | int | Yes | Color in hexadecimal ARGB format. |
 
 ## setColor4f
 
@@ -646,12 +646,13 @@ Sets a color for this pen.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this pen. The difference between this method and  
-[setColor](#setColor) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this pen. The difference between this method and [setColor](#setColor) is that the color gamut can be set separately.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -672,9 +673,11 @@ setColorFilter(filter: ColorFilter | null): void
 
 Sets a color filter for this pen.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColorFilter(filter: ColorFilter | null): void--><!--Device-Pen-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -690,7 +693,7 @@ Sets a color filter for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setDither
 
@@ -700,9 +703,11 @@ setDither(dither: boolean): void
 
 Enables dithering for this pen. Dithering make the drawn color more realistic.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setDither(dither: boolean): void--><!--Device-Pen-setDither(dither: boolean): void-End-->
 
@@ -718,7 +723,7 @@ Enables dithering for this pen. Dithering make the drawn color more realistic.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setImageFilter
 
@@ -728,9 +733,11 @@ setImageFilter(filter: ImageFilter | null): void
 
 Sets an image filter for this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setImageFilter(filter: ImageFilter | null): void--><!--Device-Pen-setImageFilter(filter: ImageFilter | null): void-End-->
 
@@ -746,7 +753,7 @@ Sets an image filter for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setJoinStyle
 
@@ -756,9 +763,11 @@ setJoinStyle(style: JoinStyle): void
 
 Sets the join style for this pen. If this API is not called, the default join style is **MITER_JOIN**.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setJoinStyle(style: JoinStyle): void--><!--Device-Pen-setJoinStyle(style: JoinStyle): void-End-->
 
@@ -774,7 +783,7 @@ Sets the join style for this pen. If this API is not called, the default join st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setMaskFilter
 
@@ -784,9 +793,11 @@ setMaskFilter(filter: MaskFilter | null): void
 
 Adds a mask filter for this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void-End-->
 
@@ -802,25 +813,21 @@ Adds a mask filter for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMiterLimit
 
-ArkTS-Dyn:
-```TypeScript
-setMiterLimit(miter: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setMiterLimit(miter: double): void
 ```
 
-Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#JoinStyle) is set to **MITER_JOIN**and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
+Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#JoinStyle) is set to **MITER_JOIN** and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setMiterLimit(miter: double): void--><!--Device-Pen-setMiterLimit(miter: double): void-End-->
 
@@ -830,13 +837,13 @@ Sets the maximum ratio allowed between the sharp corner length of a polyline and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| miter | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Maximum ratio of the sharp corner length of the polyline to the line width. A negative number is processed as **4.0** during drawing. Non-negative numbers take effect normally. The value is a floating point number. |
+| miter | double | Yes | Maximum ratio of the sharp corner length of the polyline to the line width. A negative number is processed as **4.0** during drawing. Non-negative numbers take effect normally. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setPathEffect
 
@@ -846,9 +853,11 @@ setPathEffect(effect: PathEffect | null): void
 
 Sets the path effect for this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setPathEffect(effect: PathEffect | null): void--><!--Device-Pen-setPathEffect(effect: PathEffect | null): void-End-->
 
@@ -864,7 +873,7 @@ Sets the path effect for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShaderEffect
 
@@ -874,9 +883,11 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 Sets the shader effect for this pen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
@@ -892,7 +903,7 @@ Sets the shader effect for this pen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShadowLayer
 
@@ -902,9 +913,11 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 Sets a shadow layer for this pen. The shadow layer effect takes effect only when text is drawn.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
@@ -920,25 +933,21 @@ Sets a shadow layer for this pen. The shadow layer effect takes effect only when
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setStrokeWidth
 
-ArkTS-Dyn:
-```TypeScript
-setStrokeWidth(width: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setStrokeWidth(width: double): void
 ```
 
 Sets the stroke width for this pen. The value **0** is treated as an unusually thin width. During drawing, the width of 0 is always drawn as 1 pixel wide, regardless of any scaling applied to the canvas. Negative values are also regarded as the value **0** during the drawing process.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setStrokeWidth(width: double): void--><!--Device-Pen-setStrokeWidth(width: double): void-End-->
 
@@ -948,11 +957,11 @@ Sets the stroke width for this pen. The value **0** is treated as an unusually t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Stroke width. The value is a floating point number. If a value less than 1 is passed in , the value **1** is used. |
+| width | double | Yes | Stroke width. The value is a floating point number. If a value less than 1 is passed in , the value **1** is used. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

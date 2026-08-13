@@ -12,14 +12,13 @@ import { image } from '@kit.ImageKit';
 function createPicture(mainPixelmap : PixelMap): Picture
 ```
 
-Creates a Picture object based on a main PixelMap.
+Creates a Picture object based on a main PixelMap. Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using a Picture instance, call   
-[release](arkts-image-image-picture-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**Since:** 23
 
-**Since:** 13
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture--><!--Device-image-function createPicture(mainPixelmap : PixelMap): Picture-End-->
 
@@ -41,7 +40,7 @@ Images occupy a large amount of memory. When you finish using a Picture instance
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

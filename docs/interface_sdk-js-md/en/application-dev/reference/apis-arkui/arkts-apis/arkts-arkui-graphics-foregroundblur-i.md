@@ -1,10 +1,12 @@
 # ForegroundBlur
 
-Defines the foreground blur effect.
+Sets a foreground blur effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ForegroundBlur--><!--Device-unnamed-export interface ForegroundBlur-End-->
 
@@ -16,15 +18,19 @@ Defines the foreground blur effect.
 radius: double
 ```
 
-Blur radius for foreground blur.Value range: [0, +∞). The larger the value, the more blurred the foreground.
+Blur radius. The value range is [0, +∞). The default value is **0**. A negative value, **NaN**, and **Infinity** are invalid and treated as the default value. A larger value indicates a more obvious foreground blur effect. If the value is **0**, the foreground is not blurred.
 
 **Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ForegroundBlur-radius: double--><!--Device-ForegroundBlur-radius: double-End-->
 

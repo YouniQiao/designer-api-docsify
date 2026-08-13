@@ -6,6 +6,8 @@ Defines DecorationOptions for Decoration.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface DecorationOptions--><!--Device-unnamed-export declare interface DecorationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Enable to show multi TextDecorationType at a time.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

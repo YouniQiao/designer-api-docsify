@@ -14,9 +14,11 @@ function createNetConnection(netSpecifier?: NetSpecifier, timeout?: number): Net
 
 Create a network connection with optional netSpecifier and timeout.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection--><!--Device-connection-function createNetConnection(netSpecifier?: NetSpecifier, timeout?: int): NetConnection-End-->
 

@@ -6,7 +6,9 @@ Extends [FrameNode](arkts-arkui-framenode-c.md#FrameNode) to define a FrameNode 
 
 **Since:** 12
 
-<!--Device-unnamed-export interface TypedFrameNode<C, T> extends FrameNode--><!--Device-unnamed-export interface TypedFrameNode<C, T> extends FrameNode-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface TypedFrameNode--><!--Device-unnamed-export interface TypedFrameNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ Attribute configuration object for setting or updating common and specific attri
 **Type:** T
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Construction parameters for creating a component, used to set or update the comp
 **Type:** C
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnScrollEvent--><!--Device-unnamed-declare interface OnScrollEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -16,15 +18,15 @@
 xOffset: number
 ```
 
-以网页最左端为基准，水平滚动条滚动所在位置。
-
-单位：vp。
+以网页最左端为基准，水平滚动条滚动所在位置。 单位：vp。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,15 +40,15 @@ xOffset: number
 yOffset: number
 ```
 
-以网页最上端为基准，竖直滚动条滚动所在位置。
-
-单位：vp。
+以网页最上端为基准，竖直滚动条滚动所在位置。 单位：vp。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

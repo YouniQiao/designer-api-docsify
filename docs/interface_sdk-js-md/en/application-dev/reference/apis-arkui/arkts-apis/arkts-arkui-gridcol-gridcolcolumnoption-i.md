@@ -6,6 +6,8 @@ Defines the option in int unit of grid-container child component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface GridColColumnOption--><!--Device-unnamed-export declare interface GridColColumnOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Grid Col Column Option lg
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Grid Col Column Option md
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridColColumnOption-md?: int--><!--Device-GridColColumnOption-md?: int-End-->
@@ -63,6 +69,8 @@ Grid Col Column Option sm
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ Grid Col Column Option xl
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridColColumnOption-xl?: int--><!--Device-GridColColumnOption-xl?: int-End-->
@@ -104,6 +114,8 @@ Grid Col Column Option xs
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridColColumnOption-xs?: int--><!--Device-GridColColumnOption-xs?: int-End-->
@@ -123,6 +135,8 @@ Grid Col Column Option xxl
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

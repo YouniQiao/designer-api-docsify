@@ -1,12 +1,14 @@
 # ICurve
 
-Interface for curve object.
+Represents a curve object. Different types of curve objects can be created using APIs in this module, including [curves.cubicBezierCurve](../../apis-na/arkts-apis/arkts-na-curves-cubicbeziercurve-f.md#cubicBezierCurve) and [curves.interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingSpring). The curve object provides interpolation functionality through its member method [interpolate](../../apis-na/arkts-apis/arkts-na-curves-icurve-i.md#interpolate).
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-curves-export interface ICurve--><!--Device-curves-export interface ICurve-End-->
+**Deprecated since:** -1
+
+<!--Device-curves-interface ICurve--><!--Device-curves-interface ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,18 +21,20 @@ import { curves } from '@kit.ArkUI';
 ## interpolate
 
 ```TypeScript
-interpolate(fraction: double): double
+interpolate(fraction : number) : number
 ```
 
-Get curve value by fraction.
+Calculates the interpolated value along the curve at the specified normalized time point.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ICurve-interpolate(fraction: double): double--><!--Device-ICurve-interpolate(fraction: double): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ICurve-interpolate(fraction : number) : number--><!--Device-ICurve-interpolate(fraction : number) : number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,11 +42,19 @@ Get curve value by fraction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fraction | double | Yes | Indicates the current normalized time parameter. Value range: [0, 1]. Note: If the value is less than 0, it will be processed as 0. If the value is greater than 1, 1 is used. |
+| fraction | number | Yes | Current normalized time.&lt;br&gt;Value range: [0, 1].&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number | Curve interpolation corresponding to the normalized time point. |
+
+## Examples
+
+```TypeScript
+import { curves } from '@kit.ArkUI'
+let curveValue = curves.initCurve(Curve.EaseIn) // Create an ease-in curve.
+let value: number = curveValue.interpolate(0.5) // Calculate the interpolation for half of the time.
+```
 

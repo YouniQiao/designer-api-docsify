@@ -6,7 +6,9 @@ type TelCallState = call.TelCallState
 
 Enumerates call states.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-type TelCallState = call.TelCallState--><!--Device-observer-type TelCallState = call.TelCallState-End-->
 

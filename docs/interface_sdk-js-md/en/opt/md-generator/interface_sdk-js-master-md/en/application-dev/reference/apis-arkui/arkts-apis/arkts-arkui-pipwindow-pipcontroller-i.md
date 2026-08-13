@@ -1,11 +1,10 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks. Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
 
-Before calling any of the following APIs, you must use  
-[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
+**Since:** 26.0.0
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
@@ -25,9 +24,11 @@ getPiPSettingSwitch(): Promise<boolean>
 
 Obtains the status of the auto-start PiP switch in Settings. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPController-getPiPSettingSwitch(): Promise<boolean>--><!--Device-PiPController-getPiPSettingSwitch(): Promise<boolean>-End-->
 
@@ -43,8 +44,8 @@ Obtains the status of the auto-start PiP switch in Settings. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
 
 ## Examples
 
@@ -73,9 +74,11 @@ getPiPWindowInfo(): Promise<PiPWindowInfo>
 
 Obtains the PIP window information. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>--><!--Device-PiPController-getPiPWindowInfo(): Promise<PiPWindowInfo>-End-->
 
@@ -91,8 +94,8 @@ Obtains the PIP window information. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
 
 ## Examples
 
@@ -121,9 +124,11 @@ isPiPActive(): Promise<boolean>
 
 Check whether the PiP window is active. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPController-isPiPActive(): Promise<boolean>--><!--Device-PiPController-isPiPActive(): Promise<boolean>-End-->
 
@@ -139,7 +144,7 @@ Check whether the PiP window is active. This API uses a promise to return the re
 
 | Error Code ID |
 | --- |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
 
 ## Examples
 
@@ -160,19 +165,19 @@ try {
 }
 ```
 
-## off('stateChange')
+## offActiveStatusChange
 
 ```TypeScript
-off(type: 'stateChange'): void
+offActiveStatusChange(callback?: Callback<boolean>): void
 ```
 
-Unsubscribes from PiP state events.
+Unregister picture-in-picture active status change listener
 
-**Since:** 11
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-PiPController-off(type: 'stateChange'): void--><!--Device-PiPController-off(type: 'stateChange'): void-End-->
+<!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void--><!--Device-PiPController-offActiveStatusChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -180,29 +185,28 @@ Unsubscribes from PiP state events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'stateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
 
-## Examples
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
+
+## offControlEvent
 
 ```TypeScript
-// Unsubscribe from PiP state events.
-this.pipController.off('stateChange');
+offControlEvent(callback?: Callback<ControlEventParam>): void
 ```
 
-## off('controlPanelActionEvent')
+Unregister picture-in-picture control event listener
 
-```TypeScript
-off(type: 'controlPanelActionEvent'): void
-```
+**Since:** 26.0.0
 
-Unsubscribes from PiP action events. The  
-**[off('controlEvent')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)**API is preferred.
+**Deprecated since:** -1
 
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PiPController-off(type: 'controlPanelActionEvent'): void--><!--Device-PiPController-off(type: 'controlPanelActionEvent'): void-End-->
+<!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-offControlEvent(callback?: Callback<ControlEventParam>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -210,61 +214,37 @@ Unsubscribes from PiP action events. The
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'controlPanelActionEvent' | Yes |
-
-## Examples
-
-```TypeScript
-// Unsubscribe from PiP controller action events.
-this.pipController.off('controlPanelActionEvent');
-```
-
-## off('controlEvent')
-
-```TypeScript
-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
-```
-
-Unsubscribes from PiP action events.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'controlEvent' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No |
 
-## Examples
+## offControlPanelActionEvent
 
 ```TypeScript
-let callbackFunc = (event: PiPWindow.ControlEventParam) => {
-  console.info(`receive control event: ${event.controlType}, ${event.status}`);
-}
-// Unsubscribe from PiP controller action events.
-this.pipController.off('controlEvent', callbackFunc);
+offControlPanelActionEvent(): void
 ```
 
-## off('pipWindowSizeChange')
+Unregister picture-in-picture lifecycle event listener
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-offControlPanelActionEvent(): void--><!--Device-PiPController-offControlPanelActionEvent(): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## offPipWindowSizeChange
 
 ```TypeScript
-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
+offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void
 ```
 
-Unsubscribes from the PiP window size change event.
+Unregister picture-in-picture window size change event listener
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
 
-<!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void-End-->
+<!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-offPipWindowSizeChange(callback?: Callback<PiPWindowSize>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -272,40 +252,31 @@ Unsubscribes from the PiP window size change event.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'pipWindowSizeChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
-## Examples
+## offStateChange
 
 ```TypeScript
-const callback = (size: PiPWindow.PiPWindowSize) => {
-  // ...
-}
-try {
-  // Enable listening through the on API.
-  this.pipController.on('pipWindowSizeChange', callback);
-} catch (exception) {
-  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
-}
-
-try {
-  // Disable the listening of a specified callback.
-  this.pipController.off('pipWindowSizeChange', callback);
-  // Unregister all the callbacks that have been registered through on().
-  this.pipController.off('pipWindowSizeChange');
-} catch (exception) {
-  console.error(`Failed to disable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
-}
+offStateChange(): void
 ```
 
-## off('activeStatusChange')
+Unregister picture-in-picture lifecycle state change listener.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-offStateChange(): void--><!--Device-PiPController-offStateChange(): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## off_activeStatusChange
 
 ```TypeScript
 off(type: 'activeStatusChange', callback?: Callback<boolean>): void
@@ -314,6 +285,8 @@ off(type: 'activeStatusChange', callback?: Callback<boolean>): void
 Unsubscribes from PiP window active status change events.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -338,19 +311,21 @@ let callback = (activeStatus: boolean) => {
 this.pipController.off('activeStatusChange', callback);
 ```
 
-## on('stateChange')
+## off_controlEvent
 
 ```TypeScript
-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
+off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void
 ```
 
-Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+Unsubscribes from PiP action events.
 
-**Since:** 11
+**Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void--><!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void-End-->
+<!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void--><!--Device-PiPController-off(type: 'controlEvent', callback?: Callback<ControlEventParam>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -358,55 +333,34 @@ Subscribes to PiP state events. To avoid potential memory leaks, you are advised
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'stateChange' | Yes |
-| callback | (state: PiPState, reason: string) = & gt; void | Yes |
+| type | 'controlEvent' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | No |
 
 ## Examples
 
 ```TypeScript
-// Subscribe to PiP state events.
-this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
-  let curState: string = '';
-  switch (state) {
-    case PiPWindow.PiPState.ABOUT_TO_START:
-      curState = 'ABOUT_TO_START';
-      break;
-    case PiPWindow.PiPState.STARTED:
-      curState = 'STARTED';
-      break;
-    case PiPWindow.PiPState.ABOUT_TO_STOP:
-      curState = 'ABOUT_TO_STOP';
-      break;
-    case PiPWindow.PiPState.STOPPED:
-      curState = 'STOPPED';
-      break;
-    case PiPWindow.PiPState.ABOUT_TO_RESTORE:
-      curState = 'ABOUT_TO_RESTORE';
-      break;
-    case PiPWindow.PiPState.ERROR:
-      curState = 'ERROR';
-      break;
-    default:
-      break;
-  }
-  console.info('stateChange:' + curState + ' reason:' + reason);
-});
+let callbackFunc = (event: PiPWindow.ControlEventParam) => {
+  console.info(`receive control event: ${event.controlType}, ${event.status}`);
+}
+// Unsubscribe from PiP controller action events.
+this.pipController.off('controlEvent', callbackFunc);
 ```
 
-## on('controlPanelActionEvent')
+## off_controlPanelActionEvent
 
 ```TypeScript
-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
+off(type: 'controlPanelActionEvent'): void
 ```
 
-Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The  
-[on('controlEvent')](PiPWindow.PiPController.on(type: 'controlEvent', callback: Callback&lt;ControlEventParam&gt;))API is preferred.
+Unsubscribes from PiP action events. The **[off('controlEvent')](#off_stateChange)** API is preferred.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void-End-->
+<!--Device-PiPController-off(type: 'controlPanelActionEvent'): void--><!--Device-PiPController-off(type: 'controlPanelActionEvent'): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -415,41 +369,260 @@ Subscribes to PiP action events. To avoid potential memory leaks, you are advise
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'controlPanelActionEvent' | Yes |
-| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes |
 
 ## Examples
 
 ```TypeScript
-// Subscribe to PiP controller action events.
-this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEventType, status?: number) => {
-  switch (event) {
-    case 'playbackStateChanged':
-      if (status === 0) {
-        // Stop the video.
-      } else if (status === 1) {
-        // Play the video.
-      }
-      break;
-    case 'nextVideo':
-      // Switch to the next video.
-      break;
-    case 'previousVideo':
-      // Switch to the previous video.
-      break;
-    case 'fastForward':
-      // Fast forward the video.
-      break;
-    case 'fastBackward':
-      // Rewind the video.
-      break;
-    default:
-      break;
-  }
-  console.info('registerActionEventCallback, event:' + event);
-});
+// Unsubscribe from PiP controller action events.
+this.pipController.off('controlPanelActionEvent');
 ```
 
-## on('controlEvent')
+## off_pipWindowSizeChange
+
+```TypeScript
+off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void
+```
+
+Unsubscribes from the PiP window size change event.
+
+**Since:** 15
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void--><!--Device-PiPController-off(type: 'pipWindowSizeChange', callback?: Callback<PiPWindowSize>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'pipWindowSizeChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+
+## Examples
+
+```TypeScript
+const callback = (size: PiPWindow.PiPWindowSize) => {
+  // ...
+}
+try {
+  // Enable listening through the on API.
+  this.pipController.on('pipWindowSizeChange', callback);
+} catch (exception) {
+  console.error(`Failed to enable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+}
+
+try {
+  // Disable the listening of a specified callback.
+  this.pipController.off('pipWindowSizeChange', callback);
+  // Unregister all the callbacks that have been registered through on().
+  this.pipController.off('pipWindowSizeChange');
+} catch (exception) {
+  console.error(`Failed to disable the listener for pip window size changes. Code: ${exception.code}, message: ${exception.message}`);
+}
+```
+
+## off_stateChange
+
+```TypeScript
+off(type: 'stateChange'): void
+```
+
+Unsubscribes from PiP state events.
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-off(type: 'stateChange'): void--><!--Device-PiPController-off(type: 'stateChange'): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'stateChange' | Yes |
+
+## Examples
+
+```TypeScript
+// Unsubscribe from PiP state events.
+this.pipController.off('stateChange');
+```
+
+## onActiveStatusChange
+
+```TypeScript
+onActiveStatusChange(callback: Callback<boolean>): void
+```
+
+Register picture-in-picture active status change listener.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void--><!--Device-PiPController-onActiveStatusChange(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
+
+## onControlEvent
+
+```TypeScript
+onControlEvent(callback: Callback<ControlEventParam>): void
+```
+
+Register picture-in-picture control event listener.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void--><!--Device-PiPController-onControlEvent(callback: Callback<ControlEventParam>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ControlEventParam](arkts-arkui-pipwindow-controleventparam-i.md)&gt; | Yes |
+
+## onControlPanelActionEvent
+
+```TypeScript
+onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void
+```
+
+Register picture-in-picture control panel action event listener.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-onControlPanelActionEvent(callback: ControlPanelActionEventCallback): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes |
+
+## onPipWindowSizeChange
+
+```TypeScript
+onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void
+```
+
+Register picture-in-picture window size change event listener
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void--><!--Device-PiPController-onPipWindowSizeChange(callback: Callback<PiPWindowSize>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: StateChangeCallback): void
+```
+
+Register picture-in-picture control state change listener.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+<!--Device-PiPController-onStateChange(callback: StateChangeCallback): void--><!--Device-PiPController-onStateChange(callback: StateChangeCallback): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) | Yes |
+
+## on_activeStatusChange
+
+```TypeScript
+on(type: 'activeStatusChange', callback: Callback<boolean>): void
+```
+
+Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+
+**Since:** 22
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void--><!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'activeStatusChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+
+## Examples
+
+```TypeScript
+let callback = (activeStatus: boolean) => {
+  console.info(`pip window is visible: ${activeStatus}`);
+}
+// Subscribe to PiP window active status change events.
+this.pipController.on('activeStatusChange', callback);
+```
+
+## on_controlEvent
 
 ```TypeScript
 on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
@@ -458,6 +631,8 @@ on(type: 'controlEvent', callback: Callback<ControlEventParam>): void
 Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -504,7 +679,64 @@ this.pipController.on('controlEvent', (control) => {
 });
 ```
 
-## on('pipWindowSizeChange')
+## on_controlPanelActionEvent
+
+```TypeScript
+on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void
+```
+
+Subscribes to PiP action events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed. The [on('controlEvent')](#on_stateChange) API is preferred.
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void--><!--Device-PiPController-on(type: 'controlPanelActionEvent', callback: ControlPanelActionEventCallback): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'controlPanelActionEvent' | Yes |
+| callback | [ControlPanelActionEventCallback](arkts-arkui-pipwindow-controlpanelactioneventcallback-t.md) | Yes |
+
+## Examples
+
+```TypeScript
+// Subscribe to PiP controller action events.
+this.pipController.on('controlPanelActionEvent', (event: PiPWindow.PiPActionEventType, status?: number) => {
+  switch (event) {
+    case 'playbackStateChanged':
+      if (status === 0) {
+        // Stop the video.
+      } else if (status === 1) {
+        // Play the video.
+      }
+      break;
+    case 'nextVideo':
+      // Switch to the next video.
+      break;
+    case 'previousVideo':
+      // Switch to the previous video.
+      break;
+    case 'fastForward':
+      // Fast forward the video.
+      break;
+    case 'fastBackward':
+      // Rewind the video.
+      break;
+    default:
+      break;
+  }
+  console.info('registerActionEventCallback, event:' + event);
+});
+```
+
+## on_pipWindowSizeChange
 
 ```TypeScript
 on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
@@ -513,6 +745,8 @@ on(type: 'pipWindowSizeChange', callback: Callback<PiPWindowSize>): void
 Subscribes to PiP window size change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -531,9 +765,9 @@ Subscribes to PiP window size change events. To avoid potential memory leaks, yo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
 
 ## Examples
 
@@ -548,19 +782,21 @@ try {
 }
 ```
 
-## on('activeStatusChange')
+## on_stateChange
 
 ```TypeScript
-on(type: 'activeStatusChange', callback: Callback<boolean>): void
+on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void
 ```
 
-Subscribes to PiP window active status change events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
+Subscribes to PiP state events. To avoid potential memory leaks, you are advised to stop listening when it is no longer needed.
 
-**Since:** 22
+**Since:** 11
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
 
-<!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void--><!--Device-PiPController-on(type: 'activeStatusChange', callback: Callback<boolean>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void--><!--Device-PiPController-on(type: 'stateChange', callback: (state: PiPState, reason: string) => void): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -568,17 +804,39 @@ Subscribes to PiP window active status change events. To avoid potential memory 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'activeStatusChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| type | 'stateChange' | Yes |
+| callback | (state: PiPState, reason: string) = & gt; void | Yes |
 
 ## Examples
 
 ```TypeScript
-let callback = (activeStatus: boolean) => {
-  console.info(`pip window is visible: ${activeStatus}`);
-}
-// Subscribe to PiP window active status change events.
-this.pipController.on('activeStatusChange', callback);
+// Subscribe to PiP state events.
+this.pipController.on('stateChange', (state: PiPWindow.PiPState, reason: string) => {
+  let curState: string = '';
+  switch (state) {
+    case PiPWindow.PiPState.ABOUT_TO_START:
+      curState = 'ABOUT_TO_START';
+      break;
+    case PiPWindow.PiPState.STARTED:
+      curState = 'STARTED';
+      break;
+    case PiPWindow.PiPState.ABOUT_TO_STOP:
+      curState = 'ABOUT_TO_STOP';
+      break;
+    case PiPWindow.PiPState.STOPPED:
+      curState = 'STOPPED';
+      break;
+    case PiPWindow.PiPState.ABOUT_TO_RESTORE:
+      curState = 'ABOUT_TO_RESTORE';
+      break;
+    case PiPWindow.PiPState.ERROR:
+      curState = 'ERROR';
+      break;
+    default:
+      break;
+  }
+  console.info('stateChange:' + curState + ' reason:' + reason);
+});
 ```
 
 ## setAutoStartEnabled
@@ -587,12 +845,11 @@ this.pipController.on('activeStatusChange', callback);
 setAutoStartEnabled(enable: boolean): void
 ```
 
-Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started.
+Sets whether to automatically start the PiP window when the application's main window which can start the PiP window transitions to the background. By default, the PiP window is not automatically started. If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management , the system caches the top stack information with the specified navigation ID upon the first call of **setAutoStartEnabled(true)**.
 
-If the XComponent approach is used to implement PiP and the **Navigation** component is used for route management, the system caches the top stack information with the specified navigation ID upon the first call of  
-**setAutoStartEnabled(true)**.
+**Since:** 26.0.0
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -621,9 +878,11 @@ setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void
 
 Sets the enabled status for a component displayed on the PiP controller.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void--><!--Device-PiPController-setPiPControlEnabled(controlType: PiPControlType, enabled: boolean): void-End-->
 
@@ -640,7 +899,7 @@ Sets the enabled status for a component displayed on the PiP controller.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -658,7 +917,9 @@ startPiP(): Promise<void>
 
 Starts a PiP window. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -676,11 +937,11 @@ Starts a PiP window. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1300034](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
-| [1300015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300015-repeated-pip-operations) |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
-| [1300013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300013-failure-in-creating-a-pip-window) |
-| [1300012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300012-abnormal-pip-window-status) |
+| [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) |
+| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
+| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) |
+| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) |
 
 ## Examples
 
@@ -702,7 +963,9 @@ stopPiP(): Promise<void>
 
 Stops a PiP window. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -720,9 +983,9 @@ Stops a PiP window. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1300011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300011-failure-in-destroying-a-pip-window) |
-| [1300015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300015-repeated-pip-operations) |
-| [1300012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300012-abnormal-pip-window-status) |
+| [1300011](../errorcode-window.md#1300011-failure-in-destroying-a-pip-window) |
+| [1300015](../errorcode-window.md#1300015-repeated-pip-operations) |
+| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) |
 
 ## Examples
 
@@ -743,9 +1006,11 @@ updateContentNode(contentNode: typeNode.XComponent): Promise<void>
 
 Updates the PiP node content. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPController-updateContentNode(contentNode: typeNode.XComponent): Promise<void>--><!--Device-PiPController-updateContentNode(contentNode: typeNode.XComponent): Promise<void>-End-->
 
@@ -767,9 +1032,9 @@ Updates the PiP node content. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |
 
 ## Examples
 
@@ -794,7 +1059,9 @@ updateContentSize(width: number, height: number): void
 
 Updates the media content size when the media content changes.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -813,7 +1080,7 @@ Updates the media content size when the media content changes.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -831,9 +1098,11 @@ updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): v
 
 Updates the PiP controller status.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void--><!--Device-PiPController-updatePiPControlStatus(controlType: PiPControlType, status: PiPControlStatus): void-End-->
 
@@ -850,7 +1119,7 @@ Updates the PiP controller status.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

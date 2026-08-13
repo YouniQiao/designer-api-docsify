@@ -2,9 +2,11 @@
 
 Out Of Band data used in Bluetooth device pairing.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-connection-interface OobData--><!--Device-connection-interface OobData-End-->
 
@@ -28,9 +30,11 @@ Confirmation data in OOB pairing, with a size of 16 octets.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ The address of remote Bluetooth device.
 
 **Type:** BluetoothAddress
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,9 +78,11 @@ The name of the remote Bluetooth device.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +102,11 @@ The role of the remote Bluetooth device.
 
 **Type:** DeviceRole
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,9 +126,11 @@ Randomizer data in OOB pairing, with a size of 16 octets.
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

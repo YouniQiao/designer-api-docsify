@@ -4,6 +4,8 @@ Defines the parameters of the **Canvas** component.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CanvasParams--><!--Device-unnamed-declare interface CanvasParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ AI image analysis options. You can configure the analysis type or bind an analyz
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -34,11 +38,13 @@ AI image analysis options. You can configure the analysis type or bind an analyz
 unit?: LengthMetricsUnit
 ```
 
-Indicates the unit mode employed by Canvas during drawing.&lt;br&gt;It can only be set when creating the **Canvas** component and cannot be modified afterwards.&lt;br&gt;Default value: **LengthMetricsUnit.DEFAULT**
+Indicates the unit mode employed by Canvas during drawing. &lt;br&gt;It can only be set when creating the **Canvas** component and cannot be modified afterwards. &lt;br&gt;Default value: **LengthMetricsUnit.DEFAULT**
 
 **Type:** LengthMetricsUnit
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

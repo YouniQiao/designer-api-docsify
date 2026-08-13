@@ -2,9 +2,11 @@
 
 Enumerates the mechanical device types.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum MechDeviceType--><!--Device-mechanicManager-export enum MechDeviceType-End-->
 
@@ -20,7 +22,9 @@ Desktop gimbal device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1--><!--Device-MechDeviceType-DESKTOP_GIMBAL_DEVICE = 1-End-->
 
@@ -38,7 +42,9 @@ Wheeled?mounted base device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2--><!--Device-MechDeviceType-WHEELED_BASE_DEVICE = 2-End-->
 

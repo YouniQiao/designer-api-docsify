@@ -2,9 +2,11 @@
 
 彩信优先级类型。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export enum MmsPriorityType--><!--Device-sms-export enum MmsPriorityType-End-->
 
@@ -20,9 +22,11 @@ MMS_LOW = 128
 
 彩信优先级低
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsPriorityType-MMS_LOW = 128--><!--Device-MmsPriorityType-MMS_LOW = 128-End-->
 
@@ -38,9 +42,11 @@ MMS_NORMAL = 129
 
 彩信优先级正常
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsPriorityType-MMS_NORMAL = 129--><!--Device-MmsPriorityType-MMS_NORMAL = 129-End-->
 
@@ -56,9 +62,11 @@ MMS_HIGH = 130
 
 彩信优先级高
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsPriorityType-MMS_HIGH = 130--><!--Device-MmsPriorityType-MMS_HIGH = 130-End-->
 

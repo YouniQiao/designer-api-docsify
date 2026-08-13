@@ -4,7 +4,7 @@ Declaration of the title configuration.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class EditableTitleV2--><!--Device-unnamed-export declare class EditableTitleV2-End-->
 
@@ -26,6 +26,8 @@ Constructor of EditableTitleV2.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ Constructor of EditableTitleV2.
 ## mainTitle
 
 ```TypeScript
-public mainTitle: ResourceStr
+@Trace
+  public mainTitle: ResourceStr
 ```
 
 Main title content.
@@ -54,18 +57,21 @@ Main title content.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleV2-public mainTitle: ResourceStr--><!--Device-EditableTitleV2-public mainTitle: ResourceStr-End-->
+<!--Device-EditableTitleV2-@Trace  public mainTitle: ResourceStr--><!--Device-EditableTitleV2-@Trace  public mainTitle: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## subTitle
 
 ```TypeScript
-public subTitle?: ResourceStr
+@Trace
+  public subTitle?: ResourceStr
 ```
 
 Subtitle content.
@@ -74,10 +80,12 @@ Subtitle content.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleV2-public subTitle?: ResourceStr--><!--Device-EditableTitleV2-public subTitle?: ResourceStr-End-->
+<!--Device-EditableTitleV2-@Trace  public subTitle?: ResourceStr--><!--Device-EditableTitleV2-@Trace  public subTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -4,6 +4,8 @@ Provides methods for scanning and discovering nearby devices.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace scan--><!--Device-unnamed-declare namespace scan-End-->
@@ -22,10 +24,10 @@ import { scan } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offdevicefound) |
-| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#ondevicefound) |
-| [startScan](arkts-connectivity-scan-startscan-f.md#startscan) |
-| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopscan) |
+| [offDeviceFound](arkts-connectivity-scan-offdevicefound-f.md#offDeviceFound) |
+| [onDeviceFound](arkts-connectivity-scan-ondevicefound-f.md#onDeviceFound) |
+| [startScan](arkts-connectivity-scan-startscan-f.md#startScan) |
+| [stopScan](arkts-connectivity-scan-stopscan-f.md#stopScan) |
 
 ### Interfaces
 

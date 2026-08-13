@@ -1,28 +1,22 @@
 # @ohos.hiTraceMeter(Performance Tracing)
 
-The **HiTraceMeter** module provides the functions of tracing service processes and monitoring the system performance. It provides the data needed for HiTraceMeter to carry out performance analysis.
+/*
+ Copyright (C) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-For details about the development process, see  
-[Using HiTraceMeter (ArkTS)](../../../dfx/hitracemeter-guidelines-arkts.md).
 
-> **NOTE：**
-> 
-> You are advised to use the performance tracing APIs of API version 19. The
-> [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace), [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace), and
-> [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue) APIs will be deprecated.
-> 
-> The trace output level cannot be specified in the [startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace),
-> [finishTrace()](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace) and [traceByValue()](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue) APIs. By
-> default, the trace output level is **COMMERCIAL**.
-> 
-> The vertical bar (|) is used as the separator in
-> [user-mode trace format](../../../dfx/hitracemeter-view.md#user-mode-trace-format). Therefore, the string
-> parameters passed by the performance tracing APIs must exclude this character to avoid trace parsing exceptions.
-> 
-> The maximum length of a [user-mode trace](../../../dfx/hitracemeter-view.md#user-mode-trace-format) is 512
-> characters. Excess characters will be truncated.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hiTraceMeter--><!--Device-unnamed-declare namespace hiTraceMeter-End-->
 
@@ -40,17 +34,17 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishasynctrace) |
-| [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishsynctrace) |
-| [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishtrace) |
-| [isTraceEnabled](arkts-performanceanalysis-hitracemeter-istraceenabled-f.md#istraceenabled) |
-| [registerTraceListener](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registertracelistener) |
-| [startAsyncTrace](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startasynctrace) |
-| [startSyncTrace](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startsynctrace) |
-| [startTrace](arkts-performanceanalysis-hitracemeter-starttrace-f.md#starttrace) |
-| [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue) |
-| [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#tracebyvalue-1) |
-| [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md#unregistertracelistener) |
+| [finishAsyncTrace](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishAsyncTrace) |
+| [finishSyncTrace](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishSyncTrace) |
+| [finishTrace](arkts-performanceanalysis-hitracemeter-finishtrace-f.md#finishTrace) |
+| [isTraceEnabled](arkts-performanceanalysis-hitracemeter-istraceenabled-f.md#isTraceEnabled) |
+| [registerTraceListener](arkts-performanceanalysis-hitracemeter-registertracelistener-f.md#registerTraceListener) |
+| [startAsyncTrace](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace) |
+| [startSyncTrace](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startSyncTrace) |
+| [startTrace](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace) |
+| [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue) |
+| [traceByValue](arkts-performanceanalysis-hitracemeter-tracebyvalue-f.md#traceByValue) |
+| [unregisterTraceListener](arkts-performanceanalysis-hitracemeter-unregistertracelistener-f.md#unregisterTraceListener) |
 
 ### Enums
 

@@ -4,7 +4,9 @@ Declare class TreeListenerV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class TreeListenerV2--><!--Device-unnamed-export declare class TreeListenerV2-End-->
 
@@ -26,9 +28,13 @@ Destroy node add callback event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-offNodeAdd(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeAdd(callback?: OnChangedCallback): void-End-->
 
@@ -50,9 +56,13 @@ Destroy node click callback event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-offNodeClick(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeClick(callback?: OnChangedCallback): void-End-->
 
@@ -74,9 +84,13 @@ Destroy node delete callback event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-offNodeDelete(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeDelete(callback?: OnChangedCallback): void-End-->
 
@@ -98,9 +112,13 @@ Destroy node modify callback event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-offNodeModify(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeModify(callback?: OnChangedCallback): void-End-->
 
@@ -122,9 +140,13 @@ Destroy node move callback event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-offNodeMove(callback?: OnChangedCallback): void--><!--Device-TreeListenerV2-offNodeMove(callback?: OnChangedCallback): void-End-->
 
@@ -142,13 +164,17 @@ Destroy node move callback event.
 onNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.The event will not be destroyed after being processed.
+Node add event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onNodeAdd(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeAdd(callback: OnChangedCallback): void-End-->
 
@@ -166,13 +192,17 @@ Node add event registration and processing.The event will not be destroyed after
 onNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.The event will not be destroyed after being processed.
+Node click event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onNodeClick(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeClick(callback: OnChangedCallback): void-End-->
 
@@ -190,13 +220,17 @@ Node click event registration and processing.The event will not be destroyed aft
 onNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.The event will not be destroyed after being processed.
+Node delete event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onNodeDelete(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeDelete(callback: OnChangedCallback): void-End-->
 
@@ -214,13 +248,17 @@ Node delete event registration and processing.The event will not be destroyed af
 onNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.The event will not be destroyed after being processed.
+Node modify event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onNodeModify(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeModify(callback: OnChangedCallback): void-End-->
 
@@ -238,13 +276,17 @@ Node modify event registration and processing.The event will not be destroyed af
 onNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.The event will not be destroyed after being processed.
+Node move event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onNodeMove(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onNodeMove(callback: OnChangedCallback): void-End-->
 
@@ -262,13 +304,17 @@ Node move event registration and processing.The event will not be destroyed afte
 onceNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.After the event is processed once, it will be destroyed.
+Node add event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onceNodeAdd(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeAdd(callback: OnChangedCallback): void-End-->
 
@@ -286,13 +332,17 @@ Node add event registration and processing.After the event is processed once, it
 onceNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.After the event is processed once, it will be destroyed.
+Node click event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onceNodeClick(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeClick(callback: OnChangedCallback): void-End-->
 
@@ -310,13 +360,17 @@ Node click event registration and processing.After the event is processed once, 
 onceNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.After the event is processed once, it will be destroyed.
+Node delete event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onceNodeDelete(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeDelete(callback: OnChangedCallback): void-End-->
 
@@ -334,13 +388,17 @@ Node delete event registration and processing.After the event is processed once,
 onceNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.After the event is processed once, it will be destroyed.
+Node modify event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onceNodeModify(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeModify(callback: OnChangedCallback): void-End-->
 
@@ -358,13 +416,17 @@ Node modify event registration and processing.After the event is processed once,
 onceNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.After the event is processed once, it will be destroyed.
+Node move event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerV2-onceNodeMove(callback: OnChangedCallback): void--><!--Device-TreeListenerV2-onceNodeMove(callback: OnChangedCallback): void-End-->
 

@@ -1,72 +1,86 @@
 # Vector3
 
-Defines a vector with three values.
+Represents a vector including three values: x, y, and z.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export interface Vector3--><!--Device-unnamed-export interface Vector3-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Vector3--><!--Device-unnamed-interface Vector3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Value for x-axis of the vector.
+Rotation angle along the x-axis. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Vector3-x: double--><!--Device-Vector3-x: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Vector3-x: number--><!--Device-Vector3-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Value for y-axis of the vector.
+Rotation angle along the y-axis. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Vector3-y: double--><!--Device-Vector3-y: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Vector3-y: number--><!--Device-Vector3-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z: double
+z: number
 ```
 
-Value for z-axis of the vector.
+Rotation angle along the z-axis. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Vector3-z: double--><!--Device-Vector3-z: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Vector3-z: number--><!--Device-Vector3-z: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

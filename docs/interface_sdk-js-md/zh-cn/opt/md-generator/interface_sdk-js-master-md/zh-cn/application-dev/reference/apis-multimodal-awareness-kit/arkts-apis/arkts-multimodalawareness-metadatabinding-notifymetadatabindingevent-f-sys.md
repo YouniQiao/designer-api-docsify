@@ -8,7 +8,9 @@ function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 
 推送待嵌入的信息给调用编码接口的应用或服务。使用promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>--><!--Device-metadataBinding-function notifyMetadataBindingEvent(bundleName: string): Promise<string>-End-->
 
@@ -32,8 +34,8 @@ function notifyMetadataBindingEvent(bundleName: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [32100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

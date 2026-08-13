@@ -6,6 +6,8 @@ Defines the target region information for snapshot taking.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentSnapshot-export interface SnapshotRegion--><!--Device-componentSnapshot-export interface SnapshotRegion-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Bottom side position of Rectangle, in PX.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SnapshotRegion-bottom: double--><!--Device-SnapshotRegion-bottom: double-End-->
@@ -49,6 +53,8 @@ Left side position of rectangle, in PX.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Right side position of Rectangle, in PX.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SnapshotRegion-right: double--><!--Device-SnapshotRegion-right: double-End-->
@@ -89,6 +97,8 @@ Top side position of Rectangle, in PX.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

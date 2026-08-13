@@ -4,6 +4,8 @@
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DepthVector3--><!--Device-unnamed-declare interface DepthVector3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ X component.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Y component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -65,6 +71,8 @@ Z component.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

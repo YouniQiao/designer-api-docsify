@@ -16,6 +16,8 @@ Obtains the AttestResultInfo object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-deviceAttest-function getAttestStatusSync(): AttestResultInfo--><!--Device-deviceAttest-function getAttestStatusSync(): AttestResultInfo-End-->
 
 **System capability:** SystemCapability.XTS.DeviceAttest
@@ -32,9 +34,9 @@ Obtains the AttestResultInfo object.
 
 | Error Code ID |
 | --- |
-| [20000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [20000001](../../apis-basic-services-kit/errorcode-deviceAttest.md#20000001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

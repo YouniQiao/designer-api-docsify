@@ -1,11 +1,6 @@
 # DisplayOrientation
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation) instead.
-
-Enumerates display orientations.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md#DisplayOrientation) instead. Enumerates display orientations.
 
 **Since:** 7
 
@@ -33,7 +28,7 @@ Unspecified display orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNSPECIFIED](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#UNSPECIFIED)
+**Substitutes:** [UNSPECIFIED](arkts-ability-bundlemanager-displayorientation-e.md#UNSPECIFIED)
 
 <!--Device-DisplayOrientation-UNSPECIFIED = 0--><!--Device-DisplayOrientation-UNSPECIFIED = 0-End-->
 
@@ -53,7 +48,7 @@ Landscape orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** [LANDSCAPE](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#LANDSCAPE)
+**Substitutes:** [LANDSCAPE](arkts-ability-bundlemanager-displayorientation-e.md#LANDSCAPE)
 
 <!--Device-DisplayOrientation-LANDSCAPE = 1--><!--Device-DisplayOrientation-LANDSCAPE = 1-End-->
 
@@ -73,7 +68,7 @@ Portrait orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PORTRAIT](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#PORTRAIT)
+**Substitutes:** [PORTRAIT](arkts-ability-bundlemanager-displayorientation-e.md#PORTRAIT)
 
 <!--Device-DisplayOrientation-PORTRAIT = 2--><!--Device-DisplayOrientation-PORTRAIT = 2-End-->
 
@@ -93,7 +88,7 @@ Orientation same as that of the nearest ability in the stack.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOLLOW_RECENT](ohos.bundle.bundleManager/bundleManager.DisplayOrientation#FOLLOW_RECENT)
+**Substitutes:** [FOLLOW_RECENT](arkts-ability-bundlemanager-displayorientation-e.md#FOLLOW_RECENT)
 
 <!--Device-DisplayOrientation-FOLLOW_RECENT = 3--><!--Device-DisplayOrientation-FOLLOW_RECENT = 3-End-->
 

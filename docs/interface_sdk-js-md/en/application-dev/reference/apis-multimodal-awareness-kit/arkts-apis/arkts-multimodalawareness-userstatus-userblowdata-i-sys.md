@@ -2,13 +2,15 @@
 
 Defines user blow data.
 
-**Inheritance/Implementation:** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**Inheritance/Implementation:** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData-(System-API))
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-userStatus-export interface UserBlowData extends UserStatusData--><!--Device-userStatus-export interface UserBlowData extends UserStatusData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserBlowData--><!--Device-userStatus-export interface UserBlowData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -26,13 +28,15 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 blowDirection?: int
 ```
 
-Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
+Blow direction. The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,13 +52,15 @@ Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bot
 emotion?: int
 ```
 
-User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+User emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,13 +76,15 @@ User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happ
 facePosition?: double[]
 ```
 
-Face position relative to screen.The normalized coordinate system ranges from 0 to 640.
+Face position relative to screen. The normalized coordinate system ranges from 0 to 640.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,11 +102,13 @@ gravityAcceleration?: double[]
 
 Gravity acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,7 +130,9 @@ Whether user is gazing at screen.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,11 +150,13 @@ linearAcceleration?: double[][]
 
 Linear acceleration of user motion status, in m/s²..
 
-**Type:** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
+**Type:** double[][]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,13 +172,15 @@ Linear acceleration of user motion status, in m/s²..
 strengthLevel?: int
 ```
 
-Blow strength level.The value must be an integer within [1,12].
+Blow strength level. The value must be an integer within [1,12].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Enumerates the data channel types supported by the UDMF. It is used to identify different service scenarios, to which the UDMF data channels apply.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-enum Intention--><!--Device-unifiedDataChannel-enum Intention-End-->
 
@@ -16,7 +18,9 @@ DATA_HUB = 'DataHub'
 
 Public data channel.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,35 +30,17 @@ Public data channel.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-## DRAG
-
-```TypeScript
-DRAG = 'Drag'
-```
-
-Channel in which data can be dragged and dropped.
-
-**Use scenario**: This API is used to share data across applications in drag-and-drop scenarios.
-
-**Since:** 14
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Intention-DRAG = 'Drag'--><!--Device-Intention-DRAG = 'Drag'-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
 ## SYSTEM_SHARE
 
 ```TypeScript
 SYSTEM_SHARE = 'SystemShare'
 ```
 
-Data channel of the system sharing type.
+Data channel of the system sharing type. **Use scenario**: This API is used to share data across applications in system sharing scenarios.
 
-**Use scenario**: This API is used to share data across applications in system sharing scenarios.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +54,11 @@ Data channel of the system sharing type.
 PICKER = 'Picker'
 ```
 
-Data channel of the picker type.
+Data channel of the picker type. **Use scenario**: This API is used to share data across applications in the scenarios where a picker is used.
 
-**Use scenario**: This API is used to share data across applications in the scenarios where a picker is used.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,11 +72,11 @@ Data channel of the picker type.
 MENU = 'Menu'
 ```
 
-Data channel of the menu type.
+Data channel of the menu type. **Use scenario**: This API is used to share data across applications in the shortcut menu.
 
-**Use scenario**: This API is used to share data across applications in the shortcut menu.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,50 +1,22 @@
-# WindowInfo
+# WindowInfo (System API)
 
 Describes the window information.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface WindowInfo--><!--Device-window-interface WindowInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
 ```TypeScript
 import { window } from '@kit.ArkUI';
 ```
-
-## abilityName
-
-```TypeScript
-abilityName: string
-```
-
-abilityName of window
-
-**Type:** string
-
-**Since:** 18
-
-<!--Device-WindowInfo-abilityName: string--><!--Device-WindowInfo-abilityName: string-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## bundleName
-
-```TypeScript
-bundleName: string
-```
-
-Bundle name of the application.
-
-**Type:** string
-
-**Since:** 18
-
-<!--Device-WindowInfo-bundleName: string--><!--Device-WindowInfo-bundleName: string-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
 
 ## displayId
 
@@ -57,6 +29,8 @@ Indicates the ID of the display where the window is located.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +48,9 @@ Window size in the global coordinate system. In extended screen scenarios, the t
 
 **Type:** Rect
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowInfo-globalDisplayRect?: Rect--><!--Device-WindowInfo-globalDisplayRect?: Rect-End-->
 
@@ -92,72 +68,10 @@ Indicates the actual display size and position of the window.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowInfo-globalRect?: Rect--><!--Device-WindowInfo-globalRect?: Rect-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## isFocused
-
-```TypeScript
-isFocused?: boolean
-```
-
-Whether the window gains focus. **true** if the window gains focus, **false** otherwise. The return value is the same as that of the [isFocused()](arkts-arkui-window-window-i.md#isFocused) API.
-
-**Type:** boolean
-
-**Since:** 18
-
-<!--Device-WindowInfo-isFocused?: boolean--><!--Device-WindowInfo-isFocused?: boolean-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## rect
-
-```TypeScript
-rect: Rect
-```
-
-Window size.
-
-**Type:** Rect
-
-**Since:** 18
-
-<!--Device-WindowInfo-rect: Rect--><!--Device-WindowInfo-rect: Rect-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## windowId
-
-```TypeScript
-windowId: number
-```
-
-Window ID.
-
-**Type:** number
-
-**Since:** 18
-
-<!--Device-WindowInfo-windowId: int--><!--Device-WindowInfo-windowId: int-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## windowStatusType
-
-```TypeScript
-windowStatusType: WindowStatusType
-```
-
-Window mode.
-
-**Type:** WindowStatusType
-
-**Since:** 18
-
-<!--Device-WindowInfo-windowStatusType: WindowStatusType--><!--Device-WindowInfo-windowStatusType: WindowStatusType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

@@ -2,9 +2,11 @@
 
 Describes the attributes of the input method panel.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface PanelInfo--><!--Device-inputMethodEngine-export interface PanelInfo-End-->
 
@@ -28,9 +30,11 @@ State type of the panel.
 
 **Default:** FLG_FIXED
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
 
@@ -46,9 +50,11 @@ Type of the panel.
 
 **Type:** PanelType
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
 

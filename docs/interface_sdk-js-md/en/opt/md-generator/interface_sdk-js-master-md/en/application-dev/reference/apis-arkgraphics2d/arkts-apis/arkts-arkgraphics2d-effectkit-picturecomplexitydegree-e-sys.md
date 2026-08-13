@@ -2,7 +2,9 @@
 
 Enumerates the complexity degree of the image.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-effectKit-enum PictureComplexityDegree--><!--Device-effectKit-enum PictureComplexityDegree-End-->
 
@@ -18,7 +20,9 @@ UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0
 
 Default value. The complexity degree of the image is unknown.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PictureComplexityDegree-UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0--><!--Device-PictureComplexityDegree-UNKNOWN_COMPLEXITY_DEGREE_PICTURE = 0-End-->
 
@@ -34,7 +38,9 @@ PURE_PICTURE = 1
 
 The complexity degree of the image is pure.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PictureComplexityDegree-PURE_PICTURE = 1--><!--Device-PictureComplexityDegree-PURE_PICTURE = 1-End-->
 
@@ -50,7 +56,9 @@ MODERATE_COMPLEXITY_PICTURE = 2
 
 The complexity degree of the image is moderate.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PictureComplexityDegree-MODERATE_COMPLEXITY_PICTURE = 2--><!--Device-PictureComplexityDegree-MODERATE_COMPLEXITY_PICTURE = 2-End-->
 
@@ -66,7 +74,9 @@ VERY_FLOWERY_PICTURE = 3
 
 The complexity degree of the image is very flowery.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PictureComplexityDegree-VERY_FLOWERY_PICTURE = 3--><!--Device-PictureComplexityDegree-VERY_FLOWERY_PICTURE = 3-End-->
 

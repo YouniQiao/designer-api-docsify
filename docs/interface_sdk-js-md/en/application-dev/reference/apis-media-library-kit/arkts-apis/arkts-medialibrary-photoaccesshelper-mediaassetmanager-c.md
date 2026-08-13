@@ -2,9 +2,11 @@
 
 The MediaAssetManager class is used for manipulating the read and write operations of media assets.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class MediaAssetManager--><!--Device-photoAccessHelper-class MediaAssetManager-End-->
 
@@ -24,9 +26,11 @@ static cancelRequest(context: Context, requestId: string): Promise<void>
 
 Cancels a request for the asset, the callback of which has not been triggered yet. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -51,8 +55,8 @@ Cancels a request for the asset, the callback of which has not been triggered ye
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | System inner fail |
 
 ## loadMovingPhoto
@@ -67,9 +71,11 @@ static loadMovingPhoto(
 
 Loads a moving photo in the application sandbox. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -95,7 +101,7 @@ Loads a moving photo in the application sandbox. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
 ## quickRequestImage
@@ -111,9 +117,11 @@ static quickRequestImage(
 
 Requests an image quickly. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -140,8 +148,8 @@ Requests an image quickly. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | Internal system error |
 
 ## requestImage
@@ -157,9 +165,11 @@ static requestImage(
 
 Requests an image. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -186,8 +196,8 @@ Requests an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | System inner fail. Possible causes: &lt;br&gt;1. The database is corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## requestImageData
@@ -203,9 +213,11 @@ static requestImageData(
 
 Requests image data. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -232,8 +244,8 @@ Requests image data. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | System inner fail. Possible causes: &lt;br&gt;1. The database is corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## requestMovingPhoto
@@ -249,9 +261,11 @@ static requestMovingPhoto(
 
 Requests a moving photo object, which can be used to request the asset data of the moving photo. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -278,9 +292,9 @@ Requests a moving photo object, which can be used to request the asset data of t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 18 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | System inner fail |
 
 ## requestVideoFile
@@ -297,9 +311,11 @@ static requestVideoFile(
 
 Requests a video and saves it to the specified sandbox directory. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -327,8 +343,8 @@ Requests a video and saves it to the specified sandbox directory. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 15 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 15 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | 14000011 | System inner fail. Possible causes: &lt;br&gt;1. The database is corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 

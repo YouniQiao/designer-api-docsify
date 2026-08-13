@@ -8,7 +8,9 @@ function getCfgDirListSync(): Array<string>
 
 获取配置层级目录列表，按优先级从低到高。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-configPolicy-function getCfgDirListSync(): Array<string>--><!--Device-configPolicy-function getCfgDirListSync(): Array<string>-End-->
 

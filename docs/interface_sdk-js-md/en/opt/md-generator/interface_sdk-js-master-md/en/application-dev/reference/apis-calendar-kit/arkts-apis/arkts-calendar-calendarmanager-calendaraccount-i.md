@@ -4,6 +4,8 @@ Describes the calendar account information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-interface CalendarAccount--><!--Device-calendarManager-interface CalendarAccount-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -26,6 +28,8 @@ Account name displayed on the calendar application (defined by users). If this p
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CalendarAccount-displayName?: string--><!--Device-CalendarAccount-displayName?: string-End-->
@@ -44,6 +48,8 @@ Account name (defined by developers), with a maximum of 5,000 characters.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CalendarAccount-readonly name: string--><!--Device-CalendarAccount-readonly name: string-End-->
@@ -61,6 +67,8 @@ Account type.
 **Type:** [CalendarType](arkts-calendar-calendarmanager-calendartype-e.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

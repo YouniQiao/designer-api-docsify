@@ -2,9 +2,11 @@
 
 定义用于指定节点几何体形变目标的Morpher接口.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Morpher--><!--Device-unnamed-export interface Morpher-End-->
 
@@ -18,11 +20,13 @@ readonly targets: Record<string, double>
 
 形变目标名称和权重
 
-**类型：** ArkTS-Dyn: Record&lt;string, number&gt;  <br>ArkTS-Sta：Record&lt;string, double&gt;
+**类型：** Record&lt;string, double&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Morpher-readonly targets: Record<string, double>--><!--Device-Morpher-readonly targets: Record<string, double>-End-->
 

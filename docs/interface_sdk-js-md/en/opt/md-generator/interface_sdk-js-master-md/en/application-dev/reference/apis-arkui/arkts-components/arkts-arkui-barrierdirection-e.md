@@ -4,6 +4,8 @@ Defines the direction of a barrier.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum BarrierDirection--><!--Device-unnamed-declare enum BarrierDirection-End-->
 
 **System capability:** SystemCapability.Test.UiTest
@@ -14,10 +16,11 @@ Defines the direction of a barrier.
 LEFT
 ```
 
-The barrier is on the left side of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
+The barrier is on the left side of all the referenced components specified by [referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,10 +36,11 @@ The barrier is on the left side of all the referenced components specified by
 RIGHT
 ```
 
-The barrier is on the right side of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
+The barrier is on the right side of all the referenced components specified by [referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,10 +56,11 @@ The barrier is on the right side of all the referenced components specified by
 TOP
 ```
 
-The barrier is at the top of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
+The barrier is at the top of all the referenced components specified by [referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,10 +76,11 @@ The barrier is at the top of all the referenced components specified by
 BOTTOM
 ```
 
-The barrier is at the bottom of all the referenced components specified by  
-[referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
+The barrier is at the bottom of all the referenced components specified by [referencedId](arkts-arkui-barrierstyle-i.md#BarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

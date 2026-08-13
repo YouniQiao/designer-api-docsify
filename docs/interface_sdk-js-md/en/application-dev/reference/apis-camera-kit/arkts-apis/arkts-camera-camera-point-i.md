@@ -2,9 +2,11 @@
 
 Describes the point coordinates, which are used for focus and exposure configuration.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface Point--><!--Device-camera-interface Point-End-->
 
@@ -24,11 +26,13 @@ x: double
 
 X coordinate of a point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -44,11 +48,13 @@ y: double
 
 Y coordinate of a point.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

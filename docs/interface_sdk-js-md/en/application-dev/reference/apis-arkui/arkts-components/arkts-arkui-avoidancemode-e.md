@@ -6,6 +6,8 @@ Enumerates the drop-down menu avoidance modes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AvoidanceMode--><!--Device-unnamed-declare enum AvoidanceMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ If there is not enough space below the target component, cover the target compon
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -36,11 +40,13 @@ If there is not enough space below the target component, cover the target compon
 AVOID_AROUND_TARGET
 ```
 
-If there is not enough space around the target component, compress and display in the largest available space (scrollable).
+If there is not enough space around the target component, compress and display in the largest available space ( scrollable).
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

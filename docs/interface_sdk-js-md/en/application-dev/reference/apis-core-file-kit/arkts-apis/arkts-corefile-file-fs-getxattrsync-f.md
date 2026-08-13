@@ -18,6 +18,8 @@ Obtains an extended attribute of a file or directory. This API returns the resul
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function getxattrSync(path: string, key: string): string--><!--Device-unnamed-declare function getxattrSync(path: string, key: string): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -39,7 +41,7 @@ Obtains an extended attribute of a file or directory. This API returns the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900037 | No data available |
 | 13900038 | Value too large for defined data type |
 | 13900007 | Arg list too long |

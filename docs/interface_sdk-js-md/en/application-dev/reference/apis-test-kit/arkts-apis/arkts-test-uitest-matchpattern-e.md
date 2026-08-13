@@ -2,9 +2,11 @@
 
 Enumerates the match patterns supported for component attributes.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum MatchPattern--><!--Device-unnamed-declare enum MatchPattern-End-->
 
@@ -18,9 +20,11 @@ EQUALS = 0
 
 Equals the given value.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +40,11 @@ CONTAINS = 1
 
 Contains the given value.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,9 +60,11 @@ STARTS_WITH = 2
 
 Starts with the given value.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,9 +80,11 @@ ENDS_WITH = 3
 
 Ends with the given value.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,11 +100,13 @@ REG_EXP = 4
 
 Uses regular expression matching.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MatchPattern-REG_EXP = 4--><!--Device-MatchPattern-REG_EXP = 4-End-->
 
@@ -108,11 +120,13 @@ REG_EXP_ICASE = 5
 
 Uses case-insensitive regular expression matching.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MatchPattern-REG_EXP_ICASE = 5--><!--Device-MatchPattern-REG_EXP_ICASE = 5-End-->
 

@@ -4,6 +4,8 @@ Provides material configuration information, including the material enabling sta
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-uiMaterial-interface MaterialInfo--><!--Device-uiMaterial-interface MaterialInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Material enabling state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -49,6 +53,8 @@ Material type ID, indicating the material type corresponding to the current conf
 **Default:** MaterialType.IMMERSIVE
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

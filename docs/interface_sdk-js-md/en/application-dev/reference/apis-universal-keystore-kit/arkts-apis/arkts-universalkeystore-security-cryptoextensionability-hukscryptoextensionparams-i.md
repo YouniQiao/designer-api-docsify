@@ -6,6 +6,8 @@ Defines options used in the APIs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface HuksCryptoExtensionParams--><!--Device-unnamed-export interface HuksCryptoExtensionParams-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -30,6 +32,8 @@ The input data of the operation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HuksCryptoExtensionParams-inData?: Uint8Array--><!--Device-HuksCryptoExtensionParams-inData?: Uint8Array-End-->
@@ -49,6 +53,8 @@ The properties of the operation.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

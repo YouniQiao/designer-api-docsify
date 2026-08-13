@@ -1,17 +1,12 @@
 # AudioSpatializationManager
 
-空间音频管理。
+空间音频管理。 在使用AudioSpatializationManager的接口之前，需先通过 [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getSpatializationManager)获取AudioSpatializationManager实例。 > **说明：** > > - 本Interface首批接口从API version 18开始支持。
 
-在使用AudioSpatializationManager的接口之前，需先通过  
-[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getSpatializationManager)获取AudioSpatializationManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 18开始支持。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 18
-
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
 
@@ -27,7 +22,9 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -55,12 +52,12 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability is not supported in this device. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed, hrtfDescriptor is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) | System internal error, fail to save HRTF on disk, like service died. |
-| [6800105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800105-处理超时) | Time out when saving HRTF on disk. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability is not supported in this device. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed, hrtfDescriptor is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) | System internal error, fail to save HRTF on disk, like service died. |
+| [6800105](../errorcode-audio.md#6800105-处理超时) | Time out when saving HRTF on disk. |
 
 ## getCurrentSpatialAudioSourceType
 
@@ -72,7 +69,9 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,7 +91,7 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -117,9 +116,11 @@ getSpatializationSceneType(): AudioSpatializationSceneType
 
 Get spatialization rendering scene type.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType--><!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType-End-->
 
@@ -137,7 +138,7 @@ Get spatialization rendering scene type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -164,7 +165,9 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -188,8 +191,8 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -255,7 +258,7 @@ Checks whether the head tracking is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -280,9 +283,11 @@ isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 
 Checks whether the head tracking is enabled by the specified device.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -306,9 +311,9 @@ Checks whether the head tracking is enabled by the specified device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -348,9 +353,11 @@ isHeadTrackingSupported(): boolean
 
 Checks whether head tracking is supported by system.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean-End-->
 
@@ -368,7 +375,7 @@ Checks whether head tracking is supported by system.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -393,9 +400,11 @@ isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boole
 
 Checks whether head tracking is supported by the specified device.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -419,9 +428,9 @@ Checks whether head tracking is supported by the specified device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -463,7 +472,9 @@ isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor):
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -489,8 +500,8 @@ isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## isPersonalizedSpatializationSupported
 
@@ -502,7 +513,9 @@ isPersonalizedSpatializationSupported(): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -522,7 +535,7 @@ isPersonalizedSpatializationSupported(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## isSpatializationEnabled
 
@@ -556,7 +569,7 @@ Checks whether the spatialization is enabled.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -581,9 +594,11 @@ isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 
 Checks whether the spatialization is enabled by the specified device.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -607,9 +622,9 @@ Checks whether the spatialization is enabled by the specified device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -649,9 +664,11 @@ isSpatializationSupported(): boolean
 
 Checks whether spatialization is supported by system.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean-End-->
 
@@ -669,7 +686,7 @@ Checks whether spatialization is supported by system.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -693,9 +710,11 @@ isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boo
 
 Checks whether spatialization is supported by the specified device.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -719,9 +738,9 @@ Checks whether spatialization is supported by the specified device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -753,218 +772,6 @@ try {
 }
 ```
 
-## off('spatializationEnabledChange')
-
-```TypeScript
-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
-```
-
-Unsubscribes to the spatialization enable state change events.
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** 12
-
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-
-## 示例
-
-```TypeScript
-// 取消该事件的所有监听。
-audioSpatializationManager.off('spatializationEnabledChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
-
-audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
-```
-
-## off('spatializationEnabledChangeForAnyDevice')
-
-```TypeScript
-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the spatialization enable state change events by the specified device.
-
-**起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-
-## 示例
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// 取消该事件的所有监听。
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
-```
-
-## off('headTrackingEnabledChange')
-
-```TypeScript
-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
-```
-
-Unsubscribes to the head tracking enable state change events.
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** 12
-
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-
-<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-
-## 示例
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// 取消该事件的所有监听。
-audioSpatializationManager.off('headTrackingEnabledChange');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let headTrackingEnabledChangeCallback = (isHeadTrackingEnabled: boolean) => {
-  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-};
-
-audioSpatializationManager.on('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
-
-audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
-```
-
-## off('headTrackingEnabledChangeForAnyDevice')
-
-```TypeScript
-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the head tracking enable state change events by the specified device.
-
-**起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-
-## 示例
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// 取消该事件的所有监听。
-audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice');
-
-// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
-let headTrackingEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
-```
-
 ## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
 
 ```TypeScript
@@ -975,7 +782,9 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -987,14 +796,14 @@ Unsubscribes to the adaptive spatial rendering enable state change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1025,7 +834,9 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -1037,14 +848,14 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1072,11 +883,13 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-取消订阅指定设备的个性化空间启用状态更改事件。当状态发生变化时，已注册的客户端将收到回调。
+取消订阅指定设备的个性化空间启用状态更改事件。 当状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1090,13 +903,13 @@ offPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 否 | 回调用于通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## offSpatialAudioSourceTypeChange
 
@@ -1108,7 +921,9 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1122,14 +937,14 @@ offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): vo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 否 | 回调用于 接收当前空间音频源类型变化 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 否 | 回调用于 接收当前空间音频源类型变化 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1157,7 +972,9 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -1169,14 +986,14 @@ Unsubscribes to the spatialization enable state change events by the specified d
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1195,13 +1012,13 @@ audioSpatializationManager.onSpatializationEnabledChangeForAnyDevice(spatializat
 audioSpatializationManager.offSpatializationEnabledChangeForAnyDevice(spatializationEnabledChangeForAnyDeviceCallback);
 ```
 
-## on('spatializationEnabledChange')
+## off_headTrackingEnabledChange
 
 ```TypeScript
-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
+off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
 ```
 
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes,registered clients will receive the callback.
+Unsubscribes to the head tracking enable state change events.
 
 **起始版本：** 11
 
@@ -1209,100 +1026,9 @@ Subscribes to the spatialization enable state change events. When the spatializa
 
 **废弃版本：** 12
 
-**替代接口：** [on](ohos.multimedia.audio.AudioSpatializationManager#on)
+**替代接口：** off
 
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-
-## 示例
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-});
-```
-
-## on('spatializationEnabledChangeForAnyDevice')
-
-```TypeScript
-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Subscribes to the spatialization enable state change events by the specified device.When the spatialization enable state changes, registered clients will receive the callback.
-
-**起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
-
-## 示例
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
-```
-
-## on('headTrackingEnabledChange')
-
-```TypeScript
-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
-```
-
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes,registered clients will receive the callback.
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**废弃版本：** 12
-
-**替代接口：** [on](ohos.multimedia.audio.AudioSpatializationManager#on)
-
-<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1313,39 +1039,49 @@ Subscribes to the head tracking enable state change events. When the head tracki
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | Callback used to get the head tracking enable state. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 
-audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
+// 取消该事件的所有监听。
+audioSpatializationManager.off('headTrackingEnabledChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let headTrackingEnabledChangeCallback = (isHeadTrackingEnabled: boolean) => {
   console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-});
+};
+
+audioSpatializationManager.on('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
+
+audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
 ```
 
-## on('headTrackingEnabledChangeForAnyDevice')
+## off_headTrackingEnabledChangeForAnyDevice
 
 ```TypeScript
-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device.When the head tracking enable state changes, registered clients will receive the callback.
+Unsubscribes to the head tracking enable state change events by the specified device.
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1356,25 +1092,140 @@ Subscribes to the head tracking enable state change events by the specified devi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+// 取消该事件的所有监听。
+audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let headTrackingEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
   console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
   console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
+};
+
+audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
+
+audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
+```
+
+## off_spatializationEnabledChange
+
+```TypeScript
+off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
+```
+
+Unsubscribes to the spatialization enable state change events.
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** 12
+
+**替代接口：** off
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | Callback used to get the spatialization enable state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+// 取消该事件的所有监听。
+audioSpatializationManager.off('spatializationEnabledChange');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
+  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
+};
+
+audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
+
+audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
+```
+
+## off_spatializationEnabledChangeForAnyDevice
+
+```TypeScript
+off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Unsubscribes to the spatialization enable state change events by the specified device.
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 否 | Callback used to get the spatialization enable state by the specified device. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+// 取消该事件的所有监听。
+audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
+
+// 同一监听事件中，on方法和off方法传入callback参数一致，off方法取消对应on方法订阅的监听。
+let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+};
+
+audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
+
+audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
 ```
 
 ## onAdaptiveSpatialRenderingEnabledChangeForAnyDevice
@@ -1383,11 +1234,13 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events.When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Subscribes to the adaptive spatial rendering enable state change events. When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -1399,14 +1252,14 @@ Subscribes to the adaptive spatial rendering enable state change events.When the
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the adaptive spatial rendering enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1425,11 +1278,13 @@ audioSpatializationManager.onAdaptiveSpatialRenderingEnabledChangeForAnyDevice((
 onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the head tracking enable state change events by the specified device.When the head tracking enable state changes, registered clients will receive the callback.
+Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -1441,14 +1296,14 @@ Subscribes to the head tracking enable state change events by the specified devi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1466,11 +1321,13 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
       callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-指定设备订阅个性化空间化使能状态变更事件。当状态发生变化时，已注册的客户端将收到回调。
+指定设备订阅个性化空间化使能状态变更事件。 当状态发生变化时，已注册的客户端将收到回调。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1484,13 +1341,13 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 是 | 回调用于 通过所述指定设备获取所述个性化空间化使能状态。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | 是 | 回调用于 通过所述指定设备获取所述个性化空间化使能状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## onSpatialAudioSourceTypeChange
 
@@ -1498,11 +1355,13 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-订阅空间音源类型变化事件。当当前空间音源类型发生变化时，注册的客户端将收到回调。
+订阅空间音源类型变化事件。当当前空间音源类型发生变化时， 注册的客户端将收到回调。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1516,14 +1375,14 @@ onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 是 | 回调用于 接收所述当前空间音源类型。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | 是 | 回调用于 接收所述当前空间音源类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1541,11 +1400,13 @@ audioSpatializationManager.onSpatialAudioSourceTypeChange((spatialAudioSourceTyp
 onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device.When the spatialization enable state changes, registered clients will receive the callback.
+Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -1557,14 +1418,14 @@ Subscribes to the spatialization enable state change events by the specified dev
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1572,6 +1433,192 @@ Subscribes to the spatialization enable state change events by the specified dev
 import { audio } from '@kit.AudioKit';
 
 audioSpatializationManager.onSpatializationEnabledChangeForAnyDevice((audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+});
+```
+
+## on_headTrackingEnabledChange
+
+```TypeScript
+on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
+```
+
+Subscribes to the head tracking enable state change events. When the head tracking enable state changes, registered clients will receive the callback.
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** 12
+
+**替代接口：** on
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'headTrackingEnabledChange' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Callback used to get the head tracking enable state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
+  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
+});
+```
+
+## on_headTrackingEnabledChangeForAnyDevice
+
+```TypeScript
+on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'headTrackingEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the head tracking enable state by the specified device. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+});
+```
+
+## on_spatializationEnabledChange
+
+```TypeScript
+on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
+```
+
+Subscribes to the spatialization enable state change events. When the spatialization enable state changes, registered clients will receive the callback.
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** 12
+
+**替代接口：** on
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChange' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | Callback used to get the spatialization enable state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
+  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
+});
+```
+
+## on_spatializationEnabledChangeForAnyDevice
+
+```TypeScript
+on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+
+**起始版本：** 12
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'spatializationEnabledChangeForAnyDevice' | 是 | Type of the event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | 是 | Callback used to get the spatialization enable state by the specified device. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+
+## 示例
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
   console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
   console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
 });
@@ -1587,7 +1634,9 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1614,10 +1663,10 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported on the device. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported on the device. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1678,16 +1727,16 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Head tracking enable state. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1746,9 +1795,9 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1771,11 +1820,13 @@ audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
 setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled by the specified device.This method uses a promise to return the result.
+Sets the head tracking enabled or disabled by the specified device. This method uses a promise to return the result.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1802,10 +1853,10 @@ Sets the head tracking enabled or disabled by the specified device.This method u
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1847,7 +1898,9 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1876,9 +1929,9 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability is not supported in this device. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability is not supported in this device. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
 
 ## setSpatializationEnabled
 
@@ -1909,16 +1962,16 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enable | boolean | 是 | Spatialization enable state. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by callback. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -1977,9 +2030,9 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -2002,11 +2055,13 @@ audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
 setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled by the specified device.This method uses a promise to return the result.
+Sets the spatialization enabled or disabled by the specified device. This method uses a promise to return the result.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -2033,10 +2088,10 @@ Sets the spatialization enabled or disabled by the specified device.This method 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -2075,9 +2130,11 @@ setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType
 
 Set spatialization rendering scene type.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -2097,10 +2154,10 @@ Set spatialization rendering scene type.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 
@@ -2125,9 +2182,11 @@ updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void
 
 Updates the spatial device state.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -2147,10 +2206,10 @@ Updates the spatial device state.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system App. |
 
 ## 示例
 

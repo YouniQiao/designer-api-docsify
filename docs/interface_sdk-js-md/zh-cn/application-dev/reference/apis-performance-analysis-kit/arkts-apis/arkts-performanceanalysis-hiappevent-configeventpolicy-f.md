@@ -6,15 +6,15 @@
 function configEventPolicy(policy: EventPolicy): Promise<void>
 ```
 
-系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。
+系统事件相关的配置策略设置方法，使用Promise方式作为异步回调。 在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。
 
-在同一生命周期中，可以通过配置策略设置系统事件相关的策略参数。
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>--><!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the statuses of tasks used for downloading cloud media assets.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CloudMediaAssetTaskStatus--><!--Device-photoAccessHelper-enum CloudMediaAssetTaskStatus-End-->
 
@@ -20,9 +22,11 @@ DOWNLOADING = 0
 
 The task is in progress.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudMediaAssetTaskStatus-DOWNLOADING = 0--><!--Device-CloudMediaAssetTaskStatus-DOWNLOADING = 0-End-->
 
@@ -38,9 +42,11 @@ PAUSED = 1
 
 The task is paused.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudMediaAssetTaskStatus-PAUSED = 1--><!--Device-CloudMediaAssetTaskStatus-PAUSED = 1-End-->
 
@@ -56,9 +62,11 @@ IDLE = 2
 
 There is no download task.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudMediaAssetTaskStatus-IDLE = 2--><!--Device-CloudMediaAssetTaskStatus-IDLE = 2-End-->
 

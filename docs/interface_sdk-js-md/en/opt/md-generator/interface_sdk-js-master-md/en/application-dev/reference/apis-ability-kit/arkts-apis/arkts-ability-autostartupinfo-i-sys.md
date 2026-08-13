@@ -2,7 +2,9 @@
 
 The module defines information about the application component that automatically starts upon system boot.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AutoStartupInfo--><!--Device-unnamed-export interface AutoStartupInfo-End-->
 
@@ -20,7 +22,9 @@ Ability name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +44,9 @@ Ability type.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Index of an application clone.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +88,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,12 +106,13 @@ Bundle name.
 readonly canUserModify?: boolean
 ```
 
-Whether the developer is allowed to modify the auto-startup status of this application. The options include  
-**true** (yes) and **false** (no).
+Whether the developer is allowed to modify the auto-startup status of this application. The options include **true** (yes) and **false** (no).
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,7 +132,9 @@ Module name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,7 +154,9 @@ User ID of the person who set the application to automatically start upon system
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,7 +176,9 @@ User ID associated with the application, used to differentiate applications belo
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

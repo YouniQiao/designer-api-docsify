@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace pluginBundleManager--><!--Device-unnamed-declare namespace pluginBundleManager-End-->
@@ -16,9 +18,9 @@
 
 | 名称 |
 | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself) |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin) |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin) |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getAllLocalPluginInfoForSelf) |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installLocalPlugin) |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstallLocalPlugin) |
 
 ### 类型
 

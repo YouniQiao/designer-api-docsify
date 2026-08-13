@@ -1,4 +1,4 @@
-# @ohos.hiviewdfx.FaultLogExtensionContext(Delayed Fault Notification Context)
+# @ohos.hiviewdfx.FaultLogExtensionContext
 
 ## Modules to Import
 
@@ -12,5 +12,5 @@ import { FaultLogExtensionContext } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md) | FaultLogExtensionContext is the context of  [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility) and inherits from  [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).  This module provides APIs for accessing resources of a specific  [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility). An ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext.  > **NOTE：** >  > - The APIs of this module can be used only in the stage model. |
+| [FaultLogExtensionContext](arkts-performanceanalysis-hiviewdfx-faultlogextensioncontext-faultlogextensioncontext-c.md) | FaultLogExtensionContext is the context of [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility) and inherits from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext). This module provides APIs for accessing resources of a specific [FaultLogExtensionAbility](arkts-performanceanalysis-hiviewdfx-faultlogextensionability-faultlogextensionability-c.md#FaultLogExtensionAbility). An ExtensionAbility can use the context directly provided by ExtensionContext or that extended from ExtensionContext. > **NOTE：**> > - The APIs of this module can be used only in the stage model. |
 

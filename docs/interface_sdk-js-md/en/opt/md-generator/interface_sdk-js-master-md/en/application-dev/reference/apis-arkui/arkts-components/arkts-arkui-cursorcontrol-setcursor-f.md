@@ -10,6 +10,8 @@ Sets the current mouse cursor style. This API can be used globally in method sta
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

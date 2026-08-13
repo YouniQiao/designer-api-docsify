@@ -18,6 +18,8 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -38,6 +40,8 @@ fail?: (data: string, code: number) => void
 
 Called when the stored content fails to be cleared.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
@@ -50,13 +54,6 @@ Called when the stored content fails to be cleared.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
 ## success
 
 ```TypeScript
@@ -64,6 +61,8 @@ success?: () => void
 ```
 
 Called when the stored content is cleared successfully.
+
+**Type:** () =&gt; void
 
 **Since:** 3
 

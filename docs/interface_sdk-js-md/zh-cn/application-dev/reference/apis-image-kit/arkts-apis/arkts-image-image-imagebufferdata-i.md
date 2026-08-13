@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-interface ImageBufferData--><!--Device-image-interface ImageBufferData-End-->
 
@@ -22,7 +24,9 @@ readonly byteBuffer: ArrayBuffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,15 +40,15 @@ readonly byteBuffer: ArrayBuffer
 readonly pixelStride: int[]
 ```
 
-颜色分量的像素间距。单位：字节（Byte）。
+颜色分量的像素间距。单位：字节（Byte）。 对于编码后的图片如JPEG，该属性无意义。
 
-对于编码后的图片如JPEG，该属性无意义。
-
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,18 +62,15 @@ readonly pixelStride: int[]
 readonly rowStride: int[]
 ```
 
-颜色分量的行跨距。单位：字节（Byte）。
+颜色分量的行跨距。单位：字节（Byte）。 对于编码后的图片如JPEG，该属性无意义。 读取相机预览流数据时，需要按rowStride进行读取，使用详情请参考 [相机预览花屏解决方案](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-deal-stride-solution)。
 
-对于编码后的图片如JPEG，该属性无意义。
-
-读取相机预览流数据时，需要按rowStride进行读取，使用详情请参考  
-[相机预览花屏解决方案](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-deal-stride-solution)。
-
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

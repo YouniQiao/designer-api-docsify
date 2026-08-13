@@ -8,11 +8,13 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 获取指定资源标识符和组件信息标志对应的Ability信息。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_ABILITY_INFO
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>--><!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>-End-->
 
@@ -35,8 +37,8 @@ function getAbilityInfo(uri: string, abilityFlags: number): Promise<Array<Abilit
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 ## 示例
 

@@ -6,7 +6,9 @@ export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData
 
 Describes the properties of the application that the permission to send notifications has changed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData--><!--Device-notificationSubscribe-export type EnabledNotificationCallbackData = _EnabledNotificationCallbackData-End-->
 

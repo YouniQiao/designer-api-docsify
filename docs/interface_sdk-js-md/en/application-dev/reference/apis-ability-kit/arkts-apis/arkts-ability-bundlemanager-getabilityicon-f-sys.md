@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the PixelMap of an icon based on the bundle name, module name, and ability name.This API uses a promise to return the result.
+Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -37,20 +37,20 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 | bundleName | string | Yes | Bundle name of the application to be queried. |
 | moduleName | string | Yes | Module name of the application to be queried. |
 | abilityName | string | Yes | Ability component name to be queried. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and PixelMap as the input parameter for starting the application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and PixelMap as the input parameter for starting the application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700029](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
-| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 
 
 ## getAbilityIcon
@@ -59,7 +59,7 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the PixelMap of an icon based on the bundle name, module name, and ability name.This API uses a promise to return the result.
+Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -95,12 +95,12 @@ Obtains the PixelMap of an icon based on the bundle name, module name, and abili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700029](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
-| [17700026](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
-| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
+| [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) | The specified module is not found. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified ability is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 

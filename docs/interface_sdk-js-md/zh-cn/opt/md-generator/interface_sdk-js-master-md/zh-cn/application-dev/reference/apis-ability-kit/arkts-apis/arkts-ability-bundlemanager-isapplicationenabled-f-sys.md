@@ -8,7 +8,9 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 
 获取指定应用或分身应用的禁用或使能状态。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, appIndex: int): Promise<boolean>-End-->
 
@@ -33,10 +35,10 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -68,7 +70,9 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 获取指定应用的禁用或使能状态。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -87,9 +91,9 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -123,7 +127,9 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 
 获取指定应用的禁用或使能状态。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>--><!--Device-bundleManager-function isApplicationEnabled(bundleName: string): Promise<boolean>-End-->
 
@@ -147,9 +153,9 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

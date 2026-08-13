@@ -1,10 +1,12 @@
 # Component
 
-Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component,scrolling to search for a component, and text injection.All APIs provided in this class use a promise to return the result and must be invoked using **await**.
+Represents a component on the UI and provides APIs for obtaining component attributes, clicking a component, scrolling to search for a component, and text injection. All APIs provided in this class use a promise to return the result and must be invoked using **await**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Component--><!--Device-unnamed-declare class Component-End-->
 
@@ -24,9 +26,11 @@ clearText(): Promise<void>
 
 Clears the text information of a component. This API takes effect only for editable text components. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,8 +48,8 @@ Clears the text information of a component. This API takes effect only for edita
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -68,9 +72,11 @@ click(): Promise<void>
 
 Clicks this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,8 +94,8 @@ Clicks this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -112,9 +118,11 @@ doubleClick(): Promise<void>
 
 Double-clicks this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,8 +140,8 @@ Double-clicks this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -156,9 +164,11 @@ dragTo(target: Component): Promise<void>
 
 Drags a component to the target component. This method is valid only for components that can be dragged. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -182,9 +192,9 @@ Drags a component to the target component. This method is valid only for compone
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -208,9 +218,11 @@ getBounds(): Promise<Rect>
 
 Obtains the bounds information of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -228,8 +240,8 @@ Obtains the bounds information of this component. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -252,9 +264,11 @@ getBoundsCenter(): Promise<Point>
 
 Obtains the center point of the area occupied by this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -272,8 +286,8 @@ Obtains the center point of the area occupied by this component. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -296,11 +310,13 @@ getDescription(): Promise<string>
 
 Obtains the description of this component. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getDescription(): Promise<string>--><!--Device-Component-getDescription(): Promise<string>-End-->
 
@@ -316,8 +332,8 @@ Obtains the description of this component. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -334,23 +350,19 @@ async function demo() {
 
 ## getDisplayId
 
-ArkTS-Dyn:
-```TypeScript
-getDisplayId(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDisplayId(): Promise<int>
 ```
 
 Obtains the ID of the display to which the component belongs. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getDisplayId(): Promise<int>--><!--Device-Component-getDisplayId(): Promise<int>-End-->
 
@@ -360,14 +372,14 @@ Obtains the ID of the display to which the component belongs. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the ID of the display to which the component belongs. |
+| Promise&lt;int&gt; | Promise used to return the ID of the display to which the component belongs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -390,11 +402,13 @@ getHint(): Promise<string>
 
 Obtains the hint text of a component. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getHint(): Promise<string>--><!--Device-Component-getHint(): Promise<string>-End-->
 
@@ -410,8 +424,8 @@ Obtains the hint text of a component. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -434,9 +448,11 @@ getId(): Promise<string>
 
 Obtains the ID of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -454,8 +470,8 @@ Obtains the ID of this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -476,14 +492,15 @@ async function demo() {
 getOriginalText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result. If the  
-[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#getText) cannot.
+Obtains the text information of this component. This API uses a promise to return the result. If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) attribute of the component is set to **no** or **no-hide-descendants**, this API can be used to obtain the text information of the component, but [Component.getText()](#getText) cannot.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-getOriginalText(): Promise<string>--><!--Device-Component-getOriginalText(): Promise<string>-End-->
 
@@ -499,8 +516,8 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -521,18 +538,13 @@ async function demo() {
 getText(): Promise<string>
 ```
 
-Obtains the text information of this component. This API uses a promise to return the result.
+Obtains the text information of this component. This API uses a promise to return the result. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) > attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the > text information of the component. In this case, you can use > [Component.getOriginalText ()](#getOriginalText) instead.
 
-> **NOTE：**
-> 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
-> attribute of the component is set to **no** or **no-hide-descendants**, this API cannot be used to obtain the
-> text information of the component. In this case, you can use
-> [Component.getOriginalText ()](#getOriginalText) instead.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -550,8 +562,8 @@ Obtains the text information of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -574,9 +586,11 @@ getType(): Promise<string>
 
 Obtains the type of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -594,8 +608,8 @@ Obtains the type of this component. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -618,9 +632,11 @@ inputText(text: string): Promise<void>
 
 Clears the original text in a component and inputs the specified text. This API takes effect only for editable text components. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -644,9 +660,9 @@ Clears the original text in a component and inputs the specified text. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -669,11 +685,13 @@ inputText(text: string, mode: InputTextMode): Promise<void>
 
 Inputs text to a component in a specified text input mode. This API takes effect only for editable text components. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>--><!--Device-Component-inputText(text: string, mode: InputTextMode): Promise<void>-End-->
 
@@ -696,10 +714,10 @@ Inputs text to a component in a specified text input mode. This API takes effect
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function can not work correctly due to limited device capabilities. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -722,9 +740,11 @@ isCheckable(): Promise<boolean>
 
 Obtains the checkable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -742,8 +762,8 @@ Obtains the checkable status of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -770,9 +790,11 @@ isChecked(): Promise<boolean>
 
 Obtains the checked status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -790,8 +812,8 @@ Obtains the checked status of this component. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -818,9 +840,11 @@ isClickable(): Promise<boolean>
 
 Obtains the clickable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -838,8 +862,8 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -866,9 +890,11 @@ isEnabled(): Promise<boolean>
 
 Obtains the enabled status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -886,8 +912,8 @@ Obtains the enabled status of this component. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -914,9 +940,11 @@ isFocused(): Promise<boolean>
 
 Checks whether a component is focused. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -934,8 +962,8 @@ Checks whether a component is focused. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -962,9 +990,11 @@ isLongClickable(): Promise<boolean>
 
 Obtains the clickable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -982,8 +1012,8 @@ Obtains the clickable status of this component. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1010,9 +1040,11 @@ isScrollable(): Promise<boolean>
 
 Obtains the scrollable status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1030,8 +1062,8 @@ Obtains the scrollable status of this component. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1058,9 +1090,11 @@ isSelected(): Promise<boolean>
 
 Obtains the selected status of this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1078,8 +1112,8 @@ Obtains the selected status of this component. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1106,9 +1140,11 @@ longClick(): Promise<void>
 
 Long-clicks this component. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1126,8 +1162,8 @@ Long-clicks this component. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1144,21 +1180,17 @@ async function demo() {
 
 ## pinchIn
 
-ArkTS-Dyn:
-```TypeScript
-pinchIn(scale: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 pinchIn(scale: double): Promise<void>
 ```
 
-Pinches in a component at the specified scale. This method is valid only for components that support scaling.This API uses a promise to return the result.
+Pinches in a component at the specified scale. This method is valid only for components that support scaling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1170,7 +1202,7 @@ Pinches in a component at the specified scale. This method is valid only for com
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor. The value range is (0, 1]. If the value is **0** or a negative number, error code 401 is returned. |
+| scale | double | Yes | Scale factor. The value range is (0, 1]. If the value is **0** or a negative number, error code 401 is returned. |
 
 **Return value:**
 
@@ -1182,9 +1214,9 @@ Pinches in a component at the specified scale. This method is valid only for com
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1201,21 +1233,17 @@ async function demo() {
 
 ## pinchOut
 
-ArkTS-Dyn:
-```TypeScript
-pinchOut(scale: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 pinchOut(scale: double): Promise<void>
 ```
 
-Pinches out a component at the specified scale. This method is valid only for components that support scaling.This API uses a promise to return the result.
+Pinches out a component at the specified scale. This method is valid only for components that support scaling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1227,7 +1255,7 @@ Pinches out a component at the specified scale. This method is valid only for co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Scale factor, which is a value greater than 1. If the input value is less than or equal to 1, error code 401 is thrown. |
+| scale | double | Yes | Scale factor, which is a value greater than 1. If the input value is less than or equal to 1, error code 401 is thrown. |
 
 **Return value:**
 
@@ -1239,9 +1267,9 @@ Pinches out a component at the specified scale. This method is valid only for co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1268,6 +1296,8 @@ Scrolls on this component to search for the target component. This API is applic
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Component-scrollSearch(on: On): Promise<Component>--><!--Device-Component-scrollSearch(on: On): Promise<Component>-End-->
@@ -1290,9 +1320,9 @@ Scrolls on this component to search for the target component. This API is applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1319,6 +1349,8 @@ Scrolls on this component to search for the target component. This API is applic
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: number): Promise<Component>-End-->
@@ -1343,9 +1375,9 @@ Scrolls on this component to search for the target component. This API is applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1370,7 +1402,9 @@ Scroll on this [Component](#Component)to find matched [Component](#Component),ap
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: int): Promise<Component | null>--><!--Device-Component-scrollSearch(on: On, vertical?: boolean, offset?: int): Promise<Component | null>-End-->
 
@@ -1394,27 +1428,23 @@ Scroll on this [Component](#Component)to find matched [Component](#Component),ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## scrollToBottom
 
-ArkTS-Dyn:
-```TypeScript
-scrollToBottom(speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 scrollToBottom(speed?: int): Promise<void>
 ```
 
 Scrolls to the bottom of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1426,7 +1456,7 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1438,9 +1468,9 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 
@@ -1457,21 +1487,17 @@ async function demo() {
 
 ## scrollToTop
 
-ArkTS-Dyn:
-```TypeScript
-scrollToTop(speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 scrollToTop(speed?: int): Promise<void>
 ```
 
 Scrolls to the top of this component. This API is applicable to components that support scrolling. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1483,7 +1509,7 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1495,9 +1521,9 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000004](../errorcode-uitest.md#17000004-target-componentwindow-invisible-or-destroyed) | The window or component is invisible or destroyed. |
 
 ## Examples
 

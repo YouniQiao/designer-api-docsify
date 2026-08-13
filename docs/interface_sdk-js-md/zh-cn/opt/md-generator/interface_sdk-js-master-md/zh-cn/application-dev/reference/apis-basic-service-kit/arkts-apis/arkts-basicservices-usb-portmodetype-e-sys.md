@@ -6,7 +6,7 @@ USB端口模式类型。
 
 **废弃版本：** 9
 
-**替代接口：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#PortModeType)
+**替代接口：** [PortModeType](arkts-basicservices-usbmanager-portmodetype-e-sys.md#PortModeType（系统接口）)
 
 <!--Device-usb-export enum PortModeType--><!--Device-usb-export enum PortModeType-End-->
 

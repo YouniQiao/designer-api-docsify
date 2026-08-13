@@ -14,9 +14,11 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 Get system input method config ability
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName--><!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName-End-->
 
@@ -32,7 +34,7 @@ Get system input method config ability
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 

@@ -1,16 +1,16 @@
 # AutoExposure
 
-**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery).
-
-It provides APIs related to auto exposure.
+**AutoExposure** inherits from [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery). It provides APIs related to auto exposure.
 
 **Inheritance/Implementation:** AutoExposure extends [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface AutoExposure extends AutoExposureQuery--><!--Device-camera-interface AutoExposure extends AutoExposureQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface AutoExposure--><!--Device-camera-interface AutoExposure-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -20,72 +20,19 @@ It provides APIs related to auto exposure.
 import { camera } from '@kit.CameraKit';
 ```
 
-## getExposureMeteringMode
-
-```TypeScript
-getExposureMeteringMode(): ExposureMeteringMode
-```
-
-Obtains the exposure metering mode in use.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode--><!--Device-AutoExposure-getExposureMeteringMode(): ExposureMeteringMode-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Exposure metering mode obtained. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function getExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPhotoSession): camera.ExposureMeteringMode | undefined {
-  let exposureMeteringMode: camera.ExposureMeteringMode | undefined = undefined;
-  try {
-    exposureMeteringMode = professionalPhotoSession.getExposureMeteringMode();
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The getExposureMeteringMode call failed. error code: ${err.code}`);
-  }
-  return exposureMeteringMode;
-}
-```
-
 ## getExposureMode
 
 ```TypeScript
 getExposureMode(): ExposureMode
 ```
 
-Obtains the exposure mode in use.
+Obtains the exposure mode in use. > **NOTE：**> > This API directly returns an invalid value if you have not set the exposure mode using > [setExposureMode](#setExposureMode).
 
-> **NOTE：**
-> 
-> This API directly returns an invalid value if you have not set the exposure mode using
-> [setExposureMode](#setExposureMode).
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -103,25 +50,21 @@ Obtains the exposure mode in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureValue
 
-ArkTS-Dyn:
-```TypeScript
-getExposureValue(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getExposureValue(): double
 ```
 
 Obtains the exposure value in use.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -133,13 +76,13 @@ Obtains the exposure value in use.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. &lt;br&gt;If the operation fails, an error code defined in [CameraErrorCode]{ |
+| double | Exposure value obtained. There is a step for EV. For example, if the step is 0.5 and this parameter is set to 1.2, the EV that takes effect is 1.0. &lt;br&gt;If the operation fails, an error code defined in [CameraErrorCode]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getMeteringPoint
 
@@ -149,9 +92,11 @@ getMeteringPoint(): Point
 
 Obtains the metering point of the camera device.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -169,7 +114,7 @@ Obtains the metering point of the camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## offExposureStateChange
 
@@ -181,7 +126,9 @@ Unregisters the listener for exposure state change events. This API uses an asyn
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -195,7 +142,7 @@ Unregisters the listener for exposure state change events. This API uses an asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. If the callback object is null or an anonymous function, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. If the callback object is null or an anonymous function, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## onExposureStateChange
 
@@ -207,7 +154,9 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,28 +170,21 @@ Listens to exposure state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | Yes | Callback used to return the exposure state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureState](arkts-camera-camera-exposurestate-e.md)&gt; | Yes | Callback used to return the exposure state. |
 
 ## setExposureBias
 
-ArkTS-Dyn:
-```TypeScript
-setExposureBias(exposureBias: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setExposureBias(exposureBias: double): void
 ```
 
-Sets an exposure compensation value (EV).
+Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) to obtain the supported values.
 
-Before the setting, you are advised to use   
-[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) to obtain the supported values.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -254,63 +196,14 @@ Before the setting, you are advised to use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exposureBias | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange). If the value passed is not within the supported range, the nearest critical point is used. &lt;br&gt;Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. &lt;br&gt;If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode) is returned. |
+| exposureBias | double | Yes | EV. The supported EV range can be obtained by calling [getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange). If the value passed is not within the supported range, the nearest critical point is used. &lt;br&gt;Exposure compensation is adjusted in steps, and the step size may vary across devices due to hardware differences. For example, if the step size is 0.5, setting a value of 1.2 would result in an actual effective exposure compensation value of 1.0. &lt;br&gt;If the operation fails, an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode) is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-
-## setExposureMeteringMode
-
-```TypeScript
-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void
-```
-
-Sets exposure metering mode.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void--><!--Device-AutoExposure-setExposureMeteringMode(aeMeteringMode: ExposureMeteringMode): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| aeMeteringMode | [ExposureMeteringMode](arkts-camera-camera-exposuremeteringmode-e.md) | Yes | Exposure metering mode. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 23 |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal.<br>**Applicable version:** 24 and later |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config, only throw in session usage. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function setExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPhotoSession): void {
-  try {
-    professionalPhotoSession.setExposureMeteringMode(camera.ExposureMeteringMode.CENTER);
-  } catch (error) {
-    // If the operation fails, error.code is returned and processed.
-    let err = error as BusinessError;
-    console.error(`The setExposureMeteringMode call failed. error code: ${err.code}`);
-  }
-}
-```
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setExposureMode
 
@@ -318,12 +211,13 @@ function setExposureMeteringMode(professionalPhotoSession: camera.ProfessionalPh
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call   
-[isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported) to check whether the exposure mode is supported.
+Sets an exposure mode. Before the setting, call [isExposureModeSupported](arkts-camera-camera-autoexposurequery-i.md#isExposureModeSupported) to check whether the exposure mode is supported.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -341,8 +235,8 @@ Sets an exposure mode. Before the setting, call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 19 and later |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 19 and later |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setMeteringPoint
 
@@ -350,13 +244,13 @@ Sets an exposure mode. Before the setting, call
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
-The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -374,5 +268,5 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

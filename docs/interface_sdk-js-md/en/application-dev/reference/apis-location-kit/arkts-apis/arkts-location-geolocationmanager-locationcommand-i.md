@@ -2,9 +2,11 @@
 
 Location subsystem command structure.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface LocationCommand--><!--Device-geoLocationManager-export interface LocationCommand-End-->
 
@@ -26,9 +28,11 @@ Sent command content.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationCommand-command: string--><!--Device-LocationCommand-command: string-End-->
 
@@ -44,9 +48,11 @@ Information about the scenario where the command is sent.
 
 **Type:** LocationRequestScenario
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationCommand-scenario: LocationRequestScenario--><!--Device-LocationCommand-scenario: LocationRequestScenario-End-->
 

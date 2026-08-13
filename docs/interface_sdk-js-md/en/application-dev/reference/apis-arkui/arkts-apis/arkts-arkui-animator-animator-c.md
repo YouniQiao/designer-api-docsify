@@ -1,12 +1,14 @@
 # Animator
 
-Defines the Animator class.
+Creates an **Animator** object.
 
-**Since:** 23
+**Since:** 6
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-<!--Device-unnamed-export default declare class Animator--><!--Device-unnamed-export default declare class Animator-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export default class Animator--><!--Device-unnamed-export default class Animator-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,16 +21,80 @@ import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.Ark
 ## create
 
 ```TypeScript
+static create(options: AnimatorOptions): AnimatorResult
+```
+
+Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since API version 10, you can use the > [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext), which ensures that the object is created in the intended UI instance.
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** 18
+
+**Substitutes:** createAnimator
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions): AnimatorResult-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## Examples
+
+For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+
+```TypeScript
+import { Animator as animator, AnimatorOptions } from '@kit.ArkUI';
+
+let options: AnimatorOptions = {
+  duration: 1500,
+  easing: "friction",
+  delay: 0,
+  fill: "forwards",
+  direction: "normal",
+  iterations: 3,
+  begin: 200.0,
+  end: 400.0
+};
+animator.create(options); // You are advised to use UIContext.createAnimator().
+```
+
+## create
+
+```TypeScript
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Create an animator object for custom animation.This interface depends on the UI context and cannot be used when the UI context is unclear. It is recommended to use [createAnimator](ohos.arkui.UIContext.UIContext#createAnimator).
+Creates an **AnimatorResult** object for animations. Compared with [create](#create), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult--><!--Device-Animator-static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult-End-->
 
@@ -38,17 +104,80 @@ Create an animator object for custom animation.This interface depends on the UI 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | animator result |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. @static |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## Examples
+
+For precise UI context management, use the createAnimator API in [UIContext](arkts-apis-uicontext-uicontext.md) to specify the execution context.
+
+```TypeScript
+import { Animator as animator, SimpleAnimatorOptions } from '@kit.ArkUI';
+let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duration(2000);
+animator.create(options);// You are advised to use UIContext.createAnimator().
+```
+
+## createAnimator
+
+```TypeScript
+static createAnimator(options: AnimatorOptions): AnimatorResult
+```
+
+Creates an animation.
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** 9
+
+**Substitutes:** create
+
+<!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+
+## Examples
+
+See ArkTS-based Declarative Development Paradigm.
+
+```TypeScript
+import { Animator as animator } from '@kit.ArkUI';
+
+let options: AnimatorOptions = {
+  // There is no need to explicitly specify the type AnimatorOptions in the xxx.js file.
+  duration: 1500,
+  easing: "friction",
+  delay: 0,
+  fill: "forwards",
+  direction: "normal",
+  iterations: 3,
+  begin: 200.0,
+  end: 400.0,
+};
+this.animator = animator.createAnimator(options);
+```
 

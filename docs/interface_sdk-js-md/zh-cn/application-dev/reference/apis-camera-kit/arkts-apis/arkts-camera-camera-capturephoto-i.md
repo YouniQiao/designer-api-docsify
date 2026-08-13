@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-camera-interface CapturePhoto--><!--Device-camera-interface CapturePhoto-End-->
 
@@ -16,11 +18,13 @@
 release(): Promise<void>
 ```
 
-Releases output resources. This API uses a promise to return the result.Model constraint: This API can be used only in the stage model.
+Releases output resources. This API uses a promise to return the result. Model constraint: This API can be used only in the stage model.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +52,9 @@ Object of the full-quality image and the uncompressed image.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

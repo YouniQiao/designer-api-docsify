@@ -2,9 +2,11 @@
 
 Describes the properties of a gatt characteristic.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface GattProperties--><!--Device-ble-interface GattProperties-End-->
 
@@ -26,13 +28,15 @@ Support authenticated signed write property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattProperties-authenticatedSignedWrite?: boolean--><!--Device-GattProperties-authenticatedSignedWrite?: boolean-End-->
 
@@ -48,13 +52,15 @@ Support broadcast property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattProperties-broadcast?: boolean--><!--Device-GattProperties-broadcast?: boolean-End-->
 
@@ -70,13 +76,15 @@ Support extended properties property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GattProperties-extendedProperties?: boolean--><!--Device-GattProperties-extendedProperties?: boolean-End-->
 
@@ -92,9 +100,11 @@ Support indicate property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,9 +124,11 @@ Support notify property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,9 +148,11 @@ Support read property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,9 +172,11 @@ Support write property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,9 +196,11 @@ Support write no response property of the characteristic.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,8 +1,10 @@
 # PersistPropsOptions
 
-Defines a key-value pair object used to specify persistent properties and their default values, passed as a parameter to [persistProps](arkts-arkui-persistentstorage-c.md#persistProps).
+Defines a key-value pair object used to specify persistent properties and their default values, passed as a parameter to [persistProps](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-eccsignaturespec-i.md#s).
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface PersistPropsOptions--><!--Device-unnamed-declare interface PersistPropsOptions-End-->
 
@@ -14,11 +16,13 @@ Defines a key-value pair object used to specify persistent properties and their 
 defaultValue: number | string | boolean | Object
 ```
 
-Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage.Since API version 12, **defaultValue** can be set to **null** or **undefined**.
+Default value used for initialization if the specified **key** is not found in PersistentStorage and AppStorage. Since API version 12, **defaultValue** can be set to **null** or **undefined**.
 
 **Type:** number \| string \| boolean \| Object
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,6 +41,8 @@ Property name.
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

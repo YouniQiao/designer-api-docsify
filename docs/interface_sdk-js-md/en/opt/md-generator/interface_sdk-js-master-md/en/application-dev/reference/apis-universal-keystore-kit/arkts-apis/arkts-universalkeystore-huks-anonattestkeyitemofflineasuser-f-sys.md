@@ -13,17 +13,11 @@ function anonAttestKeyItemOfflineAsUser(userId: number, keyAlias: string,
       params: HuksParam[]): Promise<HuksReturnResult>
 ```
 
-Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Offline key attestation depends on the network. You need to periodically connect to the network to use this API
-> to update the offline certificate.
-> 
-> - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to
-> verify the certificate expiration.
+Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result. > **NOTE：**> > - Offline key attestation depends on the network. You need to periodically connect to the network to use this API > to update the offline certificate. > > - Offline anonymous key attestation requires that the local time be accurate. Otherwise, the peer end may fail to > verify the certificate expiration.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -53,25 +47,25 @@ Obtains an anonymous key certificate in offline mode for a specified user. This 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 12000027 |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-device-or-resource-busy) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) |
-| [12000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
-| [12000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
-| [12000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000001-feature-not-supported) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000004](../errorcode-huks.md#12000004-file-error) |
+| [12000003](../errorcode-huks.md#12000003-invalid-key-algorithm-parameter) |
+| [12000002](../errorcode-huks.md#12000002-missing-key-algorithm-parameter) |
+| [12000001](../errorcode-huks.md#12000001-feature-not-supported) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
 
 ## Examples
 
-Prerequisites: see Example of [generateKeyItemAsUser](#huksgeneratekeyitemasuser).
+Prerequisites: see Example of generateKeyItemAsUser.
 
 ```TypeScript
 import { huks } from '@kit.UniversalKeystoreKit';

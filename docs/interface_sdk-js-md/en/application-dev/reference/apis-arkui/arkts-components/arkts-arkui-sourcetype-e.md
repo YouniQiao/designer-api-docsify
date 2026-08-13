@@ -6,6 +6,8 @@ Enumerates the input source device types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SourceType--><!--Device-unnamed-declare enum SourceType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Unknown input source.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Mouse.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SourceType-Mouse--><!--Device-SourceType-Mouse-End-->
@@ -58,6 +64,8 @@ Touchscreen.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SourceType-TouchScreen--><!--Device-SourceType-TouchScreen-End-->
@@ -75,6 +83,8 @@ Key.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,6 +105,8 @@ Joystick.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

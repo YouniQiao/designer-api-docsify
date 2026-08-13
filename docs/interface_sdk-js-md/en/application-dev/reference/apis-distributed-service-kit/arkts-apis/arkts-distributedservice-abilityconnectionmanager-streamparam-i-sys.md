@@ -2,9 +2,11 @@
 
 Streaming configuration parameters.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->
 
@@ -26,11 +28,13 @@ bitrate?: int
 
 This value indicates video bitrate, default 80(kbps). Only valid on the sender side.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ This value indicates video bitrate, default 80(kbps). Only valid on the sender s
 colorSpaceConversionTarget?: colorSpaceManager.ColorSpace
 ```
 
-The target color space for conversion. Currently, only BT709_LIMIT is supported.If the video format on the sender side is HDR and needs to be converted to SDR during transmission, this parameter should be set.
+The target color space for conversion. Currently, only BT709_LIMIT is supported. If the video format on the sender side is HDR and needs to be converted to SDR during transmission, this parameter should be set.
 
 **Type:** colorSpaceManager.ColorSpace
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,9 +78,11 @@ Stream name, the receive end must be consistent with the transmit end.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +102,11 @@ Stream transmission role, which can be a receive stream or a transmit stream.
 
 **Type:** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

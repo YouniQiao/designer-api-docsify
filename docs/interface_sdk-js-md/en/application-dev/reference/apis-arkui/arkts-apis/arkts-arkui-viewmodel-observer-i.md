@@ -6,6 +6,8 @@ Defines the observer interface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface observer--><!--Device-unnamed-export interface observer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Turn on the listener.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,6 +49,8 @@ Turn off the listener.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -1,18 +1,10 @@
 # @ohos.PiPWindow
 
-The module provides basic APIs for manipulating Picture in Picture (PiP). For example, you can use the APIs to check whether the PiP feature is supported and create a PiP controller to start or stop a PiP window. PiP is mainly used in video playback, video calls, or video meetings.
+The module provides basic APIs for manipulating Picture in Picture (PiP). For example, you can use the APIs to check whether the PiP feature is supported and create a PiP controller to start or stop a PiP window. PiP is mainly used in video playback, video calls, or video meetings. > **NOTE：**> > - Before &lt;!--RP2--&gt;OpenHarmony 6.0&lt;!--RP2End--&gt;, the PiP feature was supported only on phones and tablets. Starting > from &lt;!--RP2--&gt;OpenHarmony 6.0&lt;!--RP2End--&gt;, the PiP feature is supported on phones, PCs/2-in-1 devices, tablets, > but is unavailable on all other devices. > > - For the system capability SystemCapability.Window.SessionManager, use > [canIUse()](arkts-arkui-global-caniuse-f.md#canIUse) to check whether the device supports this system > capability and the corresponding APIs.
 
-> **NOTE：**
-> 
-> - Before &lt;!--RP2--&gt;OpenHarmony 6.0&lt;!--RP2End--&gt;, the PiP feature was supported only on phones and tablets. Starting
-> from &lt;!--RP2--&gt;OpenHarmony 6.0&lt;!--RP2End--&gt;, the PiP feature is supported on phones, PCs/2-in-1 devices, tablets,
-> but is unavailable on all other devices.
-> 
-> - For the system capability SystemCapability.Window.SessionManager, use
-> [canIUse()](arkts-arkui-global-caniuse-f.md#canIUse) to check whether the device supports this system
-> capability and the corresponding APIs.
+**Since:** 26.0.0
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace PiPWindow--><!--Device-unnamed-declare namespace PiPWindow-End-->
 
@@ -31,8 +23,8 @@ import { PiPWindow } from '@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [create](arkts-arkui-pipwindow-create-f.md#create) |
-| [create](arkts-arkui-pipwindow-create-f.md#create-1) |
-| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md#ispipenabled) |
+| [create](arkts-arkui-pipwindow-create-f.md#create) |
+| [isPiPEnabled](arkts-arkui-pipwindow-ispipenabled-f.md#isPiPEnabled) |
 
 ### Interfaces
 
@@ -84,3 +76,4 @@ import { PiPWindow } from '@kit.ArkUI';
 | [PiPLiveActionEvent](arkts-arkui-pipwindow-pipliveactionevent-t.md) |
 | [PiPMeetingActionEvent](arkts-arkui-pipwindow-pipmeetingactionevent-t.md) |
 | [PiPVideoActionEvent](arkts-arkui-pipwindow-pipvideoactionevent-t.md) |
+| [StateChangeCallback](arkts-arkui-pipwindow-statechangecallback-t.md) |

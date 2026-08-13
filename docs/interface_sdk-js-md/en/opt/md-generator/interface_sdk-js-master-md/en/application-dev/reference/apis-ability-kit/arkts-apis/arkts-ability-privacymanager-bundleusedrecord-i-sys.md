@@ -2,7 +2,9 @@
 
 Represents the access records of an application or device.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-interface BundleUsedRecord--><!--Device-privacyManager-interface BundleUsedRecord-End-->
 
@@ -26,7 +28,9 @@ Bundle name of the application using the permission. In local scenarios, it can 
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleUsedRecord-bundleName: string--><!--Device-BundleUsedRecord-bundleName: string-End-->
 
@@ -44,7 +48,9 @@ ID of the device where the application using the permission is located. Mainly u
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleUsedRecord-deviceId: string--><!--Device-BundleUsedRecord-deviceId: string-End-->
 
@@ -58,11 +64,13 @@ ID of the device where the application using the permission is located. Mainly u
 deviceName?: string
 ```
 
-Name of the device where the application using the permission is located, used only in distributed scenarios.It can be used to display a more understandable device identifier in the UI.Default value: Empty string.
+Name of the device where the application using the permission is located, used only in distributed scenarios. It can be used to display a more understandable device identifier in the UI. Default value: Empty string.
 
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-BundleUsedRecord-deviceName?: string--><!--Device-BundleUsedRecord-deviceName?: string-End-->
 
@@ -80,7 +88,9 @@ Whether it is an access record in a distributed scenario. false indicates a loca
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleUsedRecord-isRemote: boolean--><!--Device-BundleUsedRecord-isRemote: boolean-End-->
 
@@ -98,7 +108,9 @@ Collection of permission usage records under the current application or device. 
 
 **Type:** Array&lt;[PermissionUsedRecord](arkts-ability-privacymanager-permissionusedrecord-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>--><!--Device-BundleUsedRecord-permissionRecords: Array<PermissionUsedRecord>-End-->
 
@@ -116,7 +128,9 @@ Application identity identifier for using the permission. This field is invalid 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleUsedRecord-tokenId: int--><!--Device-BundleUsedRecord-tokenId: int-End-->
 

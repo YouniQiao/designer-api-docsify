@@ -2,7 +2,9 @@
 
 包的版本。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Version--><!--Device-unnamed-export interface Version-End-->
 
@@ -20,7 +22,9 @@ readonly code: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Version-readonly code: int--><!--Device-Version-readonly code: int-End-->
 
@@ -38,7 +42,9 @@ readonly minCompatibleVersionCode: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Version-readonly minCompatibleVersionCode: int--><!--Device-Version-readonly minCompatibleVersionCode: int-End-->
 
@@ -56,7 +62,9 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Version-readonly name: string--><!--Device-Version-readonly name: string-End-->
 

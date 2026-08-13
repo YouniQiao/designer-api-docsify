@@ -6,6 +6,8 @@ Defines the parameters of the center of gravity.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GravityCenterOptions--><!--Device-unnamed-declare interface GravityCenterOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +20,15 @@ Defines the parameters of the center of gravity.
 gravityCenter?: boolean
 ```
 
-Specifies whether the current component is the center of gravity.&lt;br&gt;Default value:false.
+Specifies whether the current component is the center of gravity. &lt;br&gt;Default value:false.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ Specifies whether the current component is the center of gravity.&lt;br&gt;Defau
 gravityIntensity?: double
 ```
 
-Defines the gravitational strength of the attraction/repulsion force at the gravitational center.&lt;br&gt;Default value:0.&lt;br&gt;Negative numbers are repulsion, positive numbers are attractionn.
+Defines the gravitational strength of the attraction/repulsion force at the gravitational center. &lt;br&gt;Default value:0. &lt;br&gt;Negative numbers are repulsion, positive numbers are attractionn.
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

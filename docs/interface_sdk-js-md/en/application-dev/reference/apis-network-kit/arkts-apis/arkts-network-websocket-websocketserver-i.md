@@ -1,10 +1,12 @@
 # WebSocketServer
 
-&lt;p&gt;Defines a WebSocketServer object. Before invoking WebSocketServer APIs,you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.&lt;/p&gt;
+&lt;p&gt;Defines a WebSocketServer object. Before invoking WebSocketServer APIs, you need to call webSocketServer.createWebSocketServer to create a WebSocket Server.&lt;/p&gt;
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-webSocket-export interface WebSocketServer--><!--Device-webSocket-export interface WebSocketServer-End-->
 
@@ -26,7 +28,9 @@ Close a given WebSocket connection.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -52,7 +56,7 @@ Close a given WebSocket connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2302006 | websocket connection does not exist. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -100,7 +104,9 @@ List all alive connections.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -118,7 +124,7 @@ List all alive connections.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -160,52 +166,21 @@ localServer.on('connect', async (connection: webSocket.WebSocketConnection) => {
 });
 ```
 
-## off('error')
+## offConnect
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
-```
-
-Cancels listening for the error events of a WebSocket Server.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-<!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.off('error');
-```
-
-## off('connect')
-
-```TypeScript
-off(type: 'connect', callback?: Callback<WebSocketConnection>): void
+offConnect(callback?: Callback<WebSocketConnection>): void
 ```
 
 Cancels listening for events that a client requested to connect the server.
 
-**Since:** 24
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -213,20 +188,81 @@ Cancels listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | event indicating that a client requested to connect the server. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result. |
 
-## Examples
+## offMessageReceive
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.off('connect');
+offMessageReceive(callback?: Callback<WebSocketMessage>): void
 ```
 
-## off('close')
+Cancels listening for events that the server received a message.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result. |
+
+## offWebSocketServerClose
+
+```TypeScript
+offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void
+```
+
+Cancels listening for events that a connection from a given client has been closed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | the callback used to return the result. |
+
+## offWebSocketServerError
+
+```TypeScript
+offWebSocketServerError(callback?: ErrorCallback): void
+```
+
+Cancels listening for the error events of a WebSocket Server.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void--><!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+
+## off_close
 
 ```TypeScript
 off(type: 'close', callback?: ClientConnectionCloseCallback): void
@@ -237,6 +273,8 @@ Cancels listening for events that a connection from a given client has been clos
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-off(type: 'close', callback?: ClientConnectionCloseCallback): void-End-->
 
@@ -259,7 +297,77 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('close');
 ```
 
-## off('messageReceive')
+## off_connect
+
+```TypeScript
+off(type: 'connect', callback?: Callback<WebSocketConnection>): void
+```
+
+Cancels listening for events that a client requested to connect the server.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-off(type: 'connect', callback?: Callback<WebSocketConnection>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'connect' | Yes | event indicating that a client requested to connect the server. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.off('connect');
+```
+
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Cancels listening for the error events of a WebSocket Server.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void--><!--Device-WebSocketServer-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.off('error');
+```
+
+## off_messageReceive
 
 ```TypeScript
 off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void
@@ -271,6 +379,8 @@ Cancels listening for events that the server received a message.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-off(type: 'messageReceive', callback?: Callback<WebSocketMessage>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -280,7 +390,7 @@ Cancels listening for events that the server received a message.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'messageReceive' | Yes | event indicating that the server received a message. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
@@ -292,142 +402,21 @@ let localServer = webSocket.createWebSocketServer();
 localServer.off('messageReceive');
 ```
 
-## offConnect
+## onConnect
 
 ```TypeScript
-offConnect(callback?: Callback<WebSocketConnection>): void
-```
-
-Cancels listening for events that a client requested to connect the server.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-offConnect(callback?: Callback<WebSocketConnection>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | No | the callback used to return the result. |
-
-## offMessageReceive
-
-```TypeScript
-offMessageReceive(callback?: Callback<WebSocketMessage>): void
-```
-
-Cancels listening for events that the server received a message.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-offMessageReceive(callback?: Callback<WebSocketMessage>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | No | the callback used to return the result. |
-
-## offWebSocketServerClose
-
-```TypeScript
-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void
-```
-
-Cancels listening for events that a connection from a given client has been closed.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-<!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-offWebSocketServerClose(callback?: ClientConnectionCloseCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | No | the callback used to return the result. |
-
-## offWebSocketServerError
-
-```TypeScript
-offWebSocketServerError(callback?: ErrorCallback): void
-```
-
-Cancels listening for the error events of a WebSocket Server.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void--><!--Device-WebSocketServer-offWebSocketServerError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Enables listening for the error events of a WebSocket Server.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
-
-<!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
-
-## Examples
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let wsServer: webSocket.WebSocketServer = webSocket.createWebSocketServer();
-wsServer.on('error', (err: BusinessError) => {
-  console.error(`error. Code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## on('connect')
-
-```TypeScript
-on(type: 'connect', callback: Callback<WebSocketConnection>): void
+onConnect(callback: Callback<WebSocketConnection>): void
 ```
 
 Enables listening for events that a client requested to connect the server.
 
-**Since:** 24
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -435,34 +424,23 @@ Enables listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'connect' | Yes | event indicating that a client requested to connect the server. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
-
-```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError, Callback } from '@kit.BasicServicesKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
-  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
-});
-```
-
-## on('messageReceive')
+## onMessageReceive
 
 ```TypeScript
-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
+onMessageReceive(callback: Callback<WebSocketMessage>): void
 ```
 
 Enables listening for events that the server received a message.
 
-**Since:** 24
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -470,22 +448,57 @@ Enables listening for events that the server received a message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'messageReceive' | Yes | event indicating that the server received a message. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result. |
 
-## Examples
+## onWebSocketServerClose
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
-import { BusinessError, Callback } from '@kit.BasicServicesKit';
-
-let localServer = webSocket.createWebSocketServer();
-localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
-  console.info(`on message received, client: ${message.clientConnection}, data: ${message.data}`);
-});
+onWebSocketServerClose(callback: ClientConnectionCloseCallback): void
 ```
 
-## on('close')
+Enables listening for events that a connection from a given client has been closed.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | the callback function when a client connection is closed. |
+
+## onWebSocketServerError
+
+```TypeScript
+onWebSocketServerError(callback: ErrorCallback): void
+```
+
+Enables listening for the error events of a WebSocket Server.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void--><!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
+
+## on_close
 
 ```TypeScript
 on(type: 'close', callback: ClientConnectionCloseCallback): void
@@ -496,6 +509,8 @@ Enables listening for events that a connection from a given client has been clos
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-on(type: 'close', callback: ClientConnectionCloseCallback): void-End-->
 
@@ -520,19 +535,21 @@ localServer.on('close', (clientConnection: webSocket.WebSocketConnection, closeR
 });
 ```
 
-## onConnect
+## on_connect
 
 ```TypeScript
-onConnect(callback: Callback<WebSocketConnection>): void
+on(type: 'connect', callback: Callback<WebSocketConnection>): void
 ```
 
 Enables listening for events that a client requested to connect the server.
 
-**Since:** 23
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-<!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-onConnect(callback: Callback<WebSocketConnection>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void--><!--Device-WebSocketServer-on(type: 'connect', callback: Callback<WebSocketConnection>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -540,65 +557,36 @@ Enables listening for events that a client requested to connect the server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result. |
+| type | 'connect' | Yes | event indicating that a client requested to connect the server. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketConnection](arkts-network-websocket-websocketconnection-i.md)&gt; | Yes | the callback used to return the result. |
 
-## onMessageReceive
+## Examples
 
 ```TypeScript
-onMessageReceive(callback: Callback<WebSocketMessage>): void
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError, Callback } from '@kit.BasicServicesKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.on('connect', (connection: webSocket.WebSocketConnection) => {
+  console.info(`New client connected! Client ip: ${connection.clientIP}, Client port: ${connection.clientPort}`);
+});
 ```
 
-Enables listening for events that the server received a message.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-onMessageReceive(callback: Callback<WebSocketMessage>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result. |
-
-## onWebSocketServerClose
+## on_error
 
 ```TypeScript
-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void
-```
-
-Enables listening for events that a connection from a given client has been closed.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-<!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void--><!--Device-WebSocketServer-onWebSocketServerClose(callback: ClientConnectionCloseCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ClientConnectionCloseCallback](arkts-network-websocket-clientconnectionclosecallback-t.md) | Yes | the callback function when a client connection is closed. |
-
-## onWebSocketServerError
-
-```TypeScript
-onWebSocketServerError(callback: ErrorCallback): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
 Enables listening for the error events of a WebSocket Server.
 
-**Since:** 23
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-<!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void--><!--Device-WebSocketServer-onWebSocketServerError(callback: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void--><!--Device-WebSocketServer-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -606,7 +594,57 @@ Enables listening for the error events of a WebSocket Server.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
+| type | 'error' | Yes | event indicating that the WebSocket Server has encountered an error. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let wsServer: webSocket.WebSocketServer = webSocket.createWebSocketServer();
+wsServer.on('error', (err: BusinessError) => {
+  console.error(`error. Code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## on_messageReceive
+
+```TypeScript
+on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void
+```
+
+Enables listening for events that the server received a message.
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
+
+<!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void--><!--Device-WebSocketServer-on(type: 'messageReceive', callback: Callback<WebSocketMessage>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'messageReceive' | Yes | event indicating that the server received a message. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSocketMessage](arkts-network-websocket-websocketmessage-i.md)&gt; | Yes | the callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { webSocket } from '@kit.NetworkKit';
+import { BusinessError, Callback } from '@kit.BasicServicesKit';
+
+let localServer = webSocket.createWebSocketServer();
+localServer.on('messageReceive', (message: webSocket.WebSocketMessage) => {
+  console.info(`on message received, client: ${message.clientConnection}, data: ${message.data}`);
+});
+```
 
 ## send
 
@@ -618,7 +656,9 @@ Send a message using a specific connection.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -644,7 +684,7 @@ Send a message using a specific connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2302006 | websocket connection does not exist. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -695,7 +735,9 @@ Start the WebSocket Server, and listen to a given port.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -719,12 +761,12 @@ Start the WebSocket Server, and listen to a given port.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2302002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
-| [2302007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-webSocket.md#2302007-listening-port-already-occupied) | Websocket port already occupied. |
-| [2302999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error. |
-| [2302005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-webSocket.md#2302005-listening-failed-on-the-specified-port) | Can't listen on the given Port. |
-| [2302004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2302002](../errorcode-net-webSocket.md#2302002-websocket-certificate-does-not-exist) | Websocket certificate file does not exist. |
+| [2302007](../errorcode-net-webSocket.md#2302007-listening-port-already-occupied) | Websocket port already occupied. |
+| [2302999](../errorcode-net-webSocket.md#2302999-internal-error) | Websocket other unknown error. |
+| [2302005](../errorcode-net-webSocket.md#2302005-listening-failed-on-the-specified-port) | Can't listen on the given Port. |
+| [2302004](../errorcode-net-webSocket.md#2302004-listening-failed-on-the-specified-nic) | Can't listen on the given NIC. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -761,7 +803,9 @@ Stop listening.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -779,7 +823,7 @@ Stop listening.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

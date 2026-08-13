@@ -8,7 +8,9 @@ type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntit
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -20,7 +22,7 @@ type QueryPlaylistEvent = (pageIndex: int, sort: Sort) => Promise<PageMediaEntit
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 页面的索引。 |
+| pageIndex | int | 是 | 页面的索引。 |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | 是 |  |
 
 **返回值：**

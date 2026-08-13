@@ -8,6 +8,8 @@ The callback of safe browsing check.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void--><!--Device-unnamed-type OnSafeBrowsingCheckResultCallback = (threatType: ThreatType) => void-End-->

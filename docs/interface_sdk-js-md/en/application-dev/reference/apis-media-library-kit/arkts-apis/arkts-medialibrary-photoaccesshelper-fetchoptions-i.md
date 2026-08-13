@@ -2,9 +2,11 @@
 
 Defines the retrieval options.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface FetchOptions--><!--Device-photoAccessHelper-interface FetchOptions-End-->
 
@@ -22,21 +24,15 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 fetchColumns: Array<string>
 ```
 
-Names of the columns specified for query.
-
-If this parameter is left blank for photos, photos are fetched by **'uri'**, **'media_type'**, **'subtype'**, and  
-**'display_name'** by default. An error will be thrown if   
-[get](arkts-medialibrary-photoaccesshelper-photoasset-i.md#get) is used to obtain other attributes of this object. 
-
-Example: **fetchColumns: ['uri', 'title']**.
-
-If this parameter is left blank for albums, albums are fetched by **'uri'** and **'album_name'** by default.
+Names of the columns specified for query. If this parameter is left blank for photos, photos are fetched by **'uri'**, **'media_type'**, **'subtype'**, and **'display_name'** by default. An error will be thrown if [get](arkts-medialibrary-photoaccesshelper-photoasset-i.md#get) is used to obtain other attributes of this object. Example: **fetchColumns: ['uri', 'title']**. If this parameter is left blank for albums, albums are fetched by **'uri'** and **'album_name'** by default.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -54,9 +50,11 @@ Predicates that specify the fetch criteria.
 
 **Type:** dataSharePredicates.DataSharePredicates
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

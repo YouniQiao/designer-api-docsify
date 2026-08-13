@@ -12,19 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function setProcDumpInSharedOOM(enable: boolean): void
 ```
 
-Changes the dump heap snapshot from the thread-level to the process-level.
-
-> **NOTE：**
-> 
-> To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must
-> occur.
-> 
-> This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result
-> of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpJsRawHeapData).
-> 
-> This API can be called multiple times in the application lifecycle, but only the last call takes effect.
+Changes the dump heap snapshot from the thread-level to the process-level. > **NOTE：**> > To dump a process-level heap snapshot, you must call this API and pass **true**. In addition, SharedHeap OOM must > occur. > > This API does not affect the heap snapshot dumped in other scenarios. For example, it does not affect the result > of [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpJsRawHeapData). > > This API can be called multiple times in the application lifecycle, but only the last call takes effect.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

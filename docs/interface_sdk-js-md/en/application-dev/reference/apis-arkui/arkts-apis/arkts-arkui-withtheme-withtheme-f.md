@@ -3,6 +3,7 @@
 ## WithTheme
 
 ```TypeScript
+@ComponentBuilder
 export declare function WithTheme(
     options: WithThemeOptions | undefined, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines WithTheme Component
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-export declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +29,7 @@ Defines WithTheme Component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | Yes | options of WithTheme. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | the content of the component |
+| content_ | CustomBuilder | No | the content of the component |
 
 **Return value:**
 
@@ -38,6 +41,7 @@ Defines WithTheme Component
 ## WithTheme
 
 ```TypeScript
+@Builder
 export declare function WithTheme(
     style_: CustomBuilderT<WithThemeAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines the WithTheme component
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-export declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-@Builderexport declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,8 +66,8 @@ Defines the WithTheme component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md)&gt; | Yes | WithTheme attribute instance |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| style_ | CustomBuilderT&lt;[WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md)&gt; | Yes | WithTheme attribute instance |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 

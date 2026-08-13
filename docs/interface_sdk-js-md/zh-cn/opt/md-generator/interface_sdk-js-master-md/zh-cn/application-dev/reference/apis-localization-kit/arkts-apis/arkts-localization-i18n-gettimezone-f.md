@@ -8,7 +8,9 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 获取时区ID对应的时区对象。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

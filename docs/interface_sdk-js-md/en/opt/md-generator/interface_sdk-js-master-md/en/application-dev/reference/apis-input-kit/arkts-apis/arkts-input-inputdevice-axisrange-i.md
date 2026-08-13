@@ -2,7 +2,9 @@
 
 Defines the axis range of an input device.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-interface AxisRange--><!--Device-inputDevice-interface AxisRange-End-->
 
@@ -24,7 +26,9 @@ Axis type of an input device.
 
 **Type:** AxisType
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-axis: AxisType--><!--Device-AxisRange-axis: AxisType-End-->
 
@@ -40,7 +44,9 @@ Benchmark value of the axis.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-flat: int--><!--Device-AxisRange-flat: int-End-->
 
@@ -56,7 +62,9 @@ Fuzzy value of the axis.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-fuzz: int--><!--Device-AxisRange-fuzz: int-End-->
 
@@ -72,7 +80,9 @@ Maximum value of the axis.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-max: int--><!--Device-AxisRange-max: int-End-->
 
@@ -88,7 +98,9 @@ Minimum value of the axis.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-min: int--><!--Device-AxisRange-min: int-End-->
 
@@ -104,7 +116,9 @@ Resolution of the axis.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-resolution: int--><!--Device-AxisRange-resolution: int-End-->
 
@@ -120,7 +134,9 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 **Type:** SourceType
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AxisRange-source: SourceType--><!--Device-AxisRange-source: SourceType-End-->
 

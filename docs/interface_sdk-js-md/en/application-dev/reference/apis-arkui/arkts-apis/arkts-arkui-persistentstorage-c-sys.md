@@ -1,15 +1,12 @@
 # PersistentStorage
 
-For details about how to use PersistentStorage on the UI, see  
-[PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
-
-> **NOTE：**
-
-> Since API version 12, PersistentStorage supports **null** and **undefined**.
+For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md). > **NOTE：**> Since API version 12, PersistentStorage supports **null** and **undefined**.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
 
@@ -26,6 +23,8 @@ Constructor.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)--><!--Device-PersistentStorage-constructor(appStorage: AppStorage, storage: Storage)-End-->
 

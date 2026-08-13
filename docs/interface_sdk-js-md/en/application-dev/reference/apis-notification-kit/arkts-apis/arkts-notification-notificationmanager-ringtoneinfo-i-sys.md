@@ -2,9 +2,11 @@
 
 Describes the custom ringtone information.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface RingtoneInfo--><!--Device-notificationManager-export interface RingtoneInfo-End-->
 
@@ -28,9 +30,11 @@ File name of the ringtone.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneInfo-ringtoneFileName?: string--><!--Device-RingtoneInfo-ringtoneFileName?: string-End-->
 
@@ -48,9 +52,11 @@ Title of the ringtone.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneInfo-ringtoneTitle?: string--><!--Device-RingtoneInfo-ringtoneTitle?: string-End-->
 
@@ -68,9 +74,11 @@ Type of the ringtone.
 
 **Type:** RingtoneType
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneInfo-ringtoneType: RingtoneType--><!--Device-RingtoneInfo-ringtoneType: RingtoneType-End-->
 
@@ -88,9 +96,11 @@ URI of the ringtone.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RingtoneInfo-ringtoneUri?: string--><!--Device-RingtoneInfo-ringtoneUri?: string-End-->
 

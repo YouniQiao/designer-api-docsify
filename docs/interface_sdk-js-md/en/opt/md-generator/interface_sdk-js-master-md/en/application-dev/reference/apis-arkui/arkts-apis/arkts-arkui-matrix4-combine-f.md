@@ -28,10 +28,10 @@ Combines the effects of two matrices to generate a new matrix object.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes |
+| options | [Matrix4Transit](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md) | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| [Matrix4Transit](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md) |

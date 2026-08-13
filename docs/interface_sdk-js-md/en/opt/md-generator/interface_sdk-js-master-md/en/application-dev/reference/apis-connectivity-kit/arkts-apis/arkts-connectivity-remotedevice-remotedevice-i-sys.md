@@ -4,6 +4,8 @@ Remote device operation methods.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -23,6 +25,8 @@ cancelDevicePairing(): Promise<void>
 Cancel an in-progress pairing request.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -46,8 +50,8 @@ Cancel an in-progress pairing request.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## connect
 
@@ -58,6 +62,8 @@ connect(): Promise<void>
 Connect all allowed profiles.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -81,8 +87,8 @@ Connect all allowed profiles.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## disconnect
 
@@ -93,6 +99,8 @@ disconnect(): Promise<void>
 Disconnect all connected profiles.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -116,8 +124,8 @@ Disconnect all connected profiles.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getDeviceAlias
 
@@ -128,6 +136,8 @@ getDeviceAlias(): string
 Gets the alias of a remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -151,8 +161,8 @@ Gets the alias of a remote device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getDeviceModel
 
@@ -163,6 +173,8 @@ getDeviceModel(): DeviceModel
 Obtains the model information of a remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,7 +196,7 @@ Obtains the model information of a remote device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getRssiValue
 
@@ -195,6 +207,8 @@ getRssiValue(): Promise<number>
 Gets the RSSI value of a remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -218,8 +232,8 @@ Gets the RSSI value of a remote device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## removePairedDevice
 
@@ -230,6 +244,8 @@ removePairedDevice(): Promise<void>
 Remove a paired remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -253,8 +269,8 @@ Remove a paired remote device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setConnectionInterval
 
@@ -265,6 +281,8 @@ setConnectionInterval(interval: ConnectionInterval): void
 Sets the connection interval with a remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_NEARLINK
 
@@ -288,8 +306,8 @@ Sets the connection interval with a remote device.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setDeviceAlias
 
@@ -300,6 +318,8 @@ setDeviceAlias(alias: string): void
 Sets the alias of a remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -324,8 +344,8 @@ Sets the alias of a remote device.
 | 36100003 |
 | 36100099 |
 | 36100046 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setPairingConfirmation
 
@@ -336,6 +356,8 @@ setPairingConfirmation(accept: boolean): void
 Set the confirmation to a pairing request.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -359,8 +381,8 @@ Set the confirmation to a pairing request.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setPairingPasscode
 
@@ -371,6 +393,8 @@ setPairingPasscode(passcode: string): Promise<void>
 Set the passcode during pairing if the pairing type is passcode
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -400,8 +424,8 @@ Set the passcode during pairing if the pairing type is passcode
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100045 |
 
 ## startCrediblePairing
@@ -410,9 +434,11 @@ Set the passcode during pairing if the pairing type is passcode
 startCrediblePairing(): Promise<void>
 ```
 
-Starts pairing with a credible remote NearLink device.This interface does not trigger a dialog box and does not require user authorization.
+Starts pairing with a credible remote NearLink device. This interface does not trigger a dialog box and does not require user authorization.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -436,5 +462,5 @@ Starts pairing with a credible remote NearLink device.This interface does not tr
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

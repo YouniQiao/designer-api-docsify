@@ -2,7 +2,9 @@
 
 The **cloudSync** module provides the device-cloud sync capabilities for applications. You can use the APIs to start or stop device-cloud sync and start or stop the download of images.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cloudSync--><!--Device-unnamed-declare namespace cloudSync-End-->
 
@@ -20,21 +22,21 @@ import { cloudSync } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md#getcorefilesyncstate) |
-| [registerChange](arkts-corefile-cloudsync-registerchange-f.md#registerchange) |
-| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md#unregisterchange) |
+| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md#getCoreFileSyncState) |
+| [registerChange](arkts-corefile-cloudsync-registerchange-f.md#registerChange) |
+| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md#unregisterChange) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate) |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-1) |
-| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate-2) |
-| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md#optimizestorage) |
-| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md#startoptimizespace) |
-| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md#stopoptimizespace) |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getFileSyncState-(System-API)) |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getFileSyncState-(System-API)) |
+| [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getFileSyncState-(System-API)) |
+| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md#optimizeStorage-(System-API)) |
+| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md#startOptimizeSpace-(System-API)) |
+| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md#stopOptimizeSpace-(System-API)) |
 <!--DelEnd-->
 
 ### Classes

@@ -2,9 +2,11 @@
 
 Indicates the resource type of the wallpaper.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wallpaper-enum WallpaperResourceType--><!--Device-wallpaper-enum WallpaperResourceType-End-->
 
@@ -20,9 +22,11 @@ DEFAULT
 
 Indicates the default wallpaper resource.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperResourceType-DEFAULT--><!--Device-WallpaperResourceType-DEFAULT-End-->
 
@@ -38,9 +42,11 @@ PICTURE
 
 Indicates the picture wallpaper resource.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperResourceType-PICTURE--><!--Device-WallpaperResourceType-PICTURE-End-->
 
@@ -56,9 +62,11 @@ VIDEO
 
 Indicates the video wallpaper resource.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperResourceType-VIDEO--><!--Device-WallpaperResourceType-VIDEO-End-->
 
@@ -74,9 +82,11 @@ PACKAGE
 
 Indicates the package wallpaper resource.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WallpaperResourceType-PACKAGE--><!--Device-WallpaperResourceType-PACKAGE-End-->
 

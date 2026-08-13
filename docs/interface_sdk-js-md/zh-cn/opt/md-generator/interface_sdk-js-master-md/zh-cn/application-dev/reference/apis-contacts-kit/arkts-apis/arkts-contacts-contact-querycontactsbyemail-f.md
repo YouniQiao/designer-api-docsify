@@ -6,14 +6,13 @@
 function queryContactsByEmail(email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
+**替代接口：** [queryContactsByEmail](#queryContactsByEmail)(context: Context, email: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -50,10 +49,11 @@ contact.queryContactsByEmail('xxx@email.com', (err: BusinessError, data) => {
 function queryContactsByEmail(context: Context, email: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -73,12 +73,12 @@ function queryContactsByEmail(context: Context, email: string, callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -103,14 +103,13 @@ contact.queryContactsByEmail(context, 'xxx@email.com', (err: BusinessError, data
 function queryContactsByEmail(email: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
+**替代接口：** [queryContactsByEmail](#queryContactsByEmail)(context: Context, email: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -153,10 +152,11 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email和holder查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -177,12 +177,12 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder,
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -211,14 +211,13 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
+**替代接口：** [queryContactsByEmail](#queryContactsByEmail)(context: Context, email: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -259,10 +258,11 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -283,12 +283,12 @@ function queryContactsByEmail(context: Context, email: string, attrs: ContactAtt
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -315,14 +315,13 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
+**替代接口：** [queryContactsByEmail](#queryContactsByEmail)(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -367,10 +366,11 @@ contact.queryContactsByEmail('xxx@email.com', {
 function queryContactsByEmail(context: Context, email: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用callback异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -392,12 +392,12 @@ function queryContactsByEmail(context: Context, email: string, holder: Holder, a
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -428,14 +428,13 @@ contact.queryContactsByEmail(context, 'xxx@email.com', {
 function queryContactsByEmail(email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 7
 
 **废弃版本：** 10
 
-**替代接口：** [queryContactsByEmail](contact.queryContactsByEmail(context:)
+**替代接口：** [queryContactsByEmail](#queryContactsByEmail)(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -481,10 +480,11 @@ promise.then((data) => {
 function queryContactsByEmail(context: Context, email: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)接口，根据该接口返回的属性key查询。
+根据email、holder和attrs查询联系人。使用Promise异步回调。该接口返回的列表仅包含联系人信息中的id、key、Emails属性。如果要查询联系人的所有信息，建议使用 [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) 接口，根据该接口返回的属性key查询。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -511,12 +511,12 @@ function queryContactsByEmail(context: Context, email: string, holder?: Holder, 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

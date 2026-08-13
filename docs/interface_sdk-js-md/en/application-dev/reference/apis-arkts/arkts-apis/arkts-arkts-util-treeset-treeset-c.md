@@ -1,12 +1,14 @@
 # TreeSet
 
-TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed.TreeSet can be used to store values, each of which must be unique.
+TreeSet is implemented based on TreeMap. In TreeSet, only value objects are processed. TreeSet can be used to store values, each of which must be unique.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class TreeSet<T>--><!--Device-unnamed-declare class TreeSet<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class TreeSet--><!--Device-unnamed-declare class TreeSet-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +28,9 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,6 +56,8 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -68,7 +74,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -113,9 +119,11 @@ add(value: T): boolean
 
 If the set does not contain the element, the specified element is added
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -139,7 +147,7 @@ If the set does not contain the element, the specified element is added
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -157,9 +165,11 @@ clear(): void
 
 Clears all element groups in a set
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -171,7 +181,7 @@ Clears all element groups in a set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -196,6 +206,8 @@ A constructor used to create a TreeSet object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
@@ -212,7 +224,7 @@ A constructor used to create a TreeSet object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The TreeSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The TreeSet's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -266,7 +278,9 @@ A constructor used to create a TreeSet object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -288,9 +302,11 @@ entries(): IterableIterator<[T, T]>
 
 Returns a new Iterator object that contains the [key, value] pairs for each element in the Set object in insertion order
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -308,7 +324,7 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -349,6 +365,8 @@ Executes a provided function once for each value in the Set object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
@@ -366,7 +384,7 @@ Executes a provided function once for each value in the Set object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -402,7 +420,9 @@ Executes a provided function once for each value in the Set object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -424,9 +444,11 @@ getFirstValue(): T
 
 Gets the first elements in a set
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -444,8 +466,8 @@ Gets the first elements in a set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirstValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -469,6 +491,8 @@ Returns the least element greater than or equal to the specified key if the key 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-getHigherValue(key: T): T--><!--Device-TreeSet-getHigherValue(key: T): T-End-->
@@ -491,7 +515,7 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getHigherValue method cannot be bound. |
 
 ## Examples
 
@@ -514,7 +538,9 @@ Returns the least element greater than or equal to the specified key if the key 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -538,7 +564,7 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
 ## getLastValue
 
@@ -548,9 +574,11 @@ getLastValue(): T
 
 Gets the last elements in a set
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -568,8 +596,8 @@ Gets the last elements in a set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -593,6 +621,8 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeSet-getLowerValue(key: T): T--><!--Device-TreeSet-getLowerValue(key: T): T-End-->
@@ -615,7 +645,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLowerValue method cannot be bound. |
 
 ## Examples
 
@@ -638,7 +668,9 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -662,7 +694,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
 
 ## has
 
@@ -672,9 +704,11 @@ has(value: T): boolean
 
 Returns whether the Set object contains the elements
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -698,7 +732,7 @@ Returns whether the Set object contains the elements
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -717,9 +751,11 @@ isEmpty(): boolean
 
 Returns whether the Set object contains elements
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -737,7 +773,7 @@ Returns whether the Set object contains elements
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -755,9 +791,11 @@ popFirst(): T
 
 Return and delete the first element, returns undefined if tree set is empty
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -775,8 +813,8 @@ Return and delete the first element, returns undefined if tree set is empty
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -796,9 +834,11 @@ popLast(): T
 
 Return and delete the last element, returns undefined if tree set is empty
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -816,8 +856,8 @@ Return and delete the last element, returns undefined if tree set is empty
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The popLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -837,9 +877,11 @@ remove(value: T): boolean
 
 Remove a specified element from a Set object
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -863,7 +905,7 @@ Remove a specified element from a Set object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -883,9 +925,11 @@ values(): IterableIterator<T>
 
 Returns a new Iterator object that contains the values contained in this set
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -903,7 +947,7 @@ Returns a new Iterator object that contains the values contained in this set
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -931,7 +975,9 @@ Gets the element number of the TreeSet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

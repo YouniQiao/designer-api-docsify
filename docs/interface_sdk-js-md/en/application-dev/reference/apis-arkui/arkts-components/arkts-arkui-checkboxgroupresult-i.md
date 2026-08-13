@@ -6,6 +6,8 @@ Name and status of a check box group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CheckboxGroupResult--><!--Device-unnamed-declare interface CheckboxGroupResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Names of all the selected check boxes in the group.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,6 +49,8 @@ Selected status.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

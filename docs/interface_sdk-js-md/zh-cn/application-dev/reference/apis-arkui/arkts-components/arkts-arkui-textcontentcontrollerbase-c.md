@@ -6,6 +6,8 @@ TextContentControllerBase
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Add a text.
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,6 +59,8 @@ Clear the content of preview.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -74,6 +80,8 @@ deleteBackward(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,6 +103,8 @@ Delete text in TextRange.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -115,13 +125,13 @@ Delete text in TextRange.
 getCaretOffset() : CaretOffset
 ```
 
-Get the index and relative position of the CaretOffset.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If this API is called when the caret position is updated in the current frame, it will not take effect.&lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.&lt;br&gt;If no text is entered in the Search component,the return value contains the position information relative to the component.&lt;br&gt;The location information in the return value is the location of the caret relative to the editable component.&lt;/p&gt;
+Get the index and relative position of the CaretOffset. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If this API is called when the caret position is updated in the current frame, it will not take effect. &lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. &lt;br&gt;If no text is entered in the Search component, the return value contains the position information relative to the component. &lt;br&gt;The location information in the return value is the location of the caret relative to the editable component. &lt;/p&gt;
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,6 +159,8 @@ Gets the selected range of text content.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -169,11 +181,13 @@ Gets the selected range of text content.
 getTextContentLineCount() : number
 ```
 
-Get the lines number of the text content.The getTextContentLineCount type is used to obtain the number of lines of the edited text.
+Get the lines number of the text content. The getTextContentLineCount type is used to obtain the number of lines of the edited text.
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -195,13 +209,13 @@ Get the lines number of the text content.The getTextContentLineCount type is use
 getTextContentRect() : RectResult
 ```
 
-Get the start and end positions of the text content.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no text is entered, the return value contains the position information, but the size is 0.&lt;br&gt;The position information is the offset of the first character relative to the editable area.&lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component.&lt;br&gt;If there is input, the width in the return value is the fixed width of the editable area.&lt;/p&gt;
+Get the start and end positions of the text content. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If no text is entered, the return value contains the position information, but the size is 0. &lt;br&gt;The position information is the offset of the first character relative to the editable area. &lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. &lt;br&gt;If there is input, the width in the return value is the fixed width of the editable area. &lt;/p&gt;
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -229,6 +243,8 @@ scrollToVisible(range?: TextRange): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -254,6 +270,8 @@ setStyledPlaceholder(styledString: StyledString): void
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

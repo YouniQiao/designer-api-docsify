@@ -2,9 +2,11 @@
 
 Enumerates the types of the resources to write.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum ResourceType--><!--Device-photoAccessHelper-enum ResourceType-End-->
 
@@ -18,9 +20,11 @@ PHOTO_PROXY = 3
 
 Photo proxy.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-PHOTO_PROXY = 3--><!--Device-ResourceType-PHOTO_PROXY = 3-End-->
 
@@ -36,9 +40,11 @@ PRIVATE_MOVING_PHOTO_RESOURCE = 4
 
 Private moving photo.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_RESOURCE = 4-End-->
 
@@ -54,9 +60,11 @@ PRIVATE_MOVING_PHOTO_METADATA = 5
 
 Metadata resource of the private moving photo.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5--><!--Device-ResourceType-PRIVATE_MOVING_PHOTO_METADATA = 5-End-->
 

@@ -16,7 +16,9 @@ Obtains the space usage of a specified user, system application bundle name, or 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -32,7 +34,7 @@ Obtains the space usage of a specified user, system application bundle name, or 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | businessName | string | Yes | System application bundle name or system service name. |
 
 **Return value:**
@@ -47,8 +49,8 @@ Obtains the space usage of a specified user, system application bundle name, or 
 | --- | --- |
 | 13600012 | Failed to query the specified business space usage. |
 | 13600010 | The input parameter is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

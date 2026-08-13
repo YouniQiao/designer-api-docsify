@@ -8,7 +8,9 @@ const LOCAL_NETWORK_ID: string
 
 Define local device network id for audio.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-const LOCAL_NETWORK_ID: string--><!--Device-audio-const LOCAL_NETWORK_ID: string-End-->
 

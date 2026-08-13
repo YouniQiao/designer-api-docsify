@@ -6,20 +6,13 @@
 function create(id: string, type: WindowType, callback: AsyncCallback<Window>): void
 ```
 
-创建子窗口，使用callback异步回调。
-
-子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，参数id传入null或undefined时，可能会导致callback无法得到执行，建议使用
-> [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
+创建子窗口，使用callback异步回调。 子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，参数id传入null或undefined时，可能会导致callback无法得到执行，建议使用 > [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createWindow](window.createWindow(config:)
+**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -59,19 +52,13 @@ window.create('test', window.WindowType.TYPE_APP, (err: BusinessError, data) => 
 function create(id: string, type: WindowType): Promise<Window>
 ```
 
-创建子窗口，使用Promise异步回调。
-
-子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow-1)替代。
+创建子窗口，使用Promise异步回调。 子窗口创建后默认是[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createWindow](window.createWindow(config:)
+**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -114,17 +101,13 @@ promise.then((data) => {
 function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>
 ```
 
-创建系统窗口，使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow-1)替代。
+创建系统窗口，使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [createWindow](window.createWindow(config:)
+**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType): Promise<Window>-End-->
 
@@ -166,18 +149,13 @@ promise.then((data) => {
 function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void
 ```
 
-创建系统窗口，使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
+创建系统窗口，使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [createWindow](window.createWindow(config:)
+**替代接口：** [createWindow](arkts-arkui-window-createwindow-f.md#createWindow)(config: Configuration, callback: AsyncCallback&lt;Window&gt;)
 
 <!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void--><!--Device-window-function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncCallback<Window>): void-End-->
 

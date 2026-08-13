@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SpatialEffectParams--><!--Device-unnamed-declare interface SpatialEffectParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@
 occlusionWeight?: number
 ```
 
-空间效果的遮挡权重。&lt;br&gt;取值范围:[0, 1]。默认值:0。
+空间效果的遮挡权重。 &lt;br&gt;取值范围:[0, 1]。默认值:0。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,6 +47,8 @@ position: SpatialPosition | number
 **类型：** [SpatialPosition](arkts-arkui-spatialposition-i-sys.md) \| number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

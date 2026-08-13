@@ -2,9 +2,11 @@
 
 This interface is used to monitor the progress of sending data.
 
-**Since:** 15
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface DataSendProgressInfo--><!--Device-http-export interface DataSendProgressInfo-End-->
 
@@ -24,13 +26,15 @@ sendSize: int
 
 Used to specify the data size to be sent.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DataSendProgressInfo-sendSize: int--><!--Device-DataSendProgressInfo-sendSize: int-End-->
 
@@ -44,13 +48,15 @@ totalSize: int
 
 Total number of bytes to receive.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DataSendProgressInfo-totalSize: int--><!--Device-DataSendProgressInfo-totalSize: int-End-->
 

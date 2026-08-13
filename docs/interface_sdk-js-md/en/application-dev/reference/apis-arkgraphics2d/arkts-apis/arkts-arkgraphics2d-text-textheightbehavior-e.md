@@ -2,9 +2,11 @@
 
 Enumerates the text height modifier patterns.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-text-enum TextHeightBehavior--><!--Device-text-enum TextHeightBehavior-End-->
 
@@ -18,9 +20,11 @@ ALL = 0x0
 
 Allows the first line of the paragraph to rise and the last line to drop.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -36,9 +40,11 @@ DISABLE_FIRST_ASCENT = 0x1
 
 Prevents the first line of a paragraph from rising.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -54,9 +60,11 @@ DISABLE_LAST_ASCENT = 0x2
 
 Prevents the last line of a paragraph from dropping.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -72,9 +80,11 @@ DISABLE_ALL = 0x1 | 0x2
 
 Prevents the first line of the paragraph to rise and the last line to drop.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

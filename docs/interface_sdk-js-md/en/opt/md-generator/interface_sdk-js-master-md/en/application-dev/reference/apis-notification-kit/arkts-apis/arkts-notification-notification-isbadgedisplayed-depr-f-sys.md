@@ -6,13 +6,13 @@
 function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the notification badge is enabled for a specified application.This API uses an asynchronous callback to return the result.
+Checks whether the notification badge is enabled for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -36,13 +36,13 @@ Checks whether the notification badge is enabled for a specified application.Thi
 function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether the notification badge is enabled for a specified application.This API uses a promise to return the result.
+Checks whether the notification badge is enabled for a specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

@@ -1,10 +1,12 @@
 # WebCookieManager
 
-Provides methods for managing the web cookies.
+提供了用于管理网页Cookie的方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebCookieManager--><!--Device-webview-class WebCookieManager-End-->
 
@@ -16,11 +18,15 @@ Provides methods for managing the web cookies.
 static clearAllCookies(): Promise<void>
 ```
 
-Remove all cookies Asynchronously.
+清除所有cookie。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static clearAllCookies(): Promise<void>--><!--Device-WebCookieManager-static clearAllCookies(): Promise<void>-End-->
 
@@ -30,13 +36,13 @@ Remove all cookies Asynchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies have been deleted. |
+| Promise&lt;void&gt; | Promise实例，用于获取清除所有cookie是否成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 
 ## clearAllCookies
 
@@ -44,11 +50,15 @@ Remove all cookies Asynchronously.
 static clearAllCookies(callback: AsyncCallback<void>): void
 ```
 
-Remove all cookies Asynchronously.
+异步callback方式清除所有cookie。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static clearAllCookies(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static clearAllCookies(callback: AsyncCallback<void>): void-End-->
 
@@ -58,13 +68,13 @@ Remove all cookies Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback回调，用于获取清除所有cookie是否成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## clearAllCookiesSync
 
@@ -72,11 +82,15 @@ Remove all cookies Asynchronously.
 static clearAllCookiesSync(incognito?: boolean): void
 ```
 
-Remove all cookies.
+清除所有cookie。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static clearAllCookiesSync(incognito?: boolean): void--><!--Device-WebCookieManager-static clearAllCookiesSync(incognito?: boolean): void-End-->
 
@@ -86,7 +100,7 @@ Remove all cookies.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | {@code true} remove all cookies in incognito mode; {@code false} otherwise. |
+| incognito | boolean | 否 | true表示清除隐私模式下Webview的所有内存cookies，false表示清除正常非隐私模式下的持久化cookies。 |
 
 ## clearSessionCookie
 
@@ -94,11 +108,15 @@ Remove all cookies.
 static clearSessionCookie(): Promise<void>
 ```
 
-Delete the session cookies Asynchronously.
+清除所有会话cookie。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>--><!--Device-WebCookieManager-static clearSessionCookie(): Promise<void>-End-->
 
@@ -108,13 +126,13 @@ Delete the session cookies Asynchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies have been deleted. |
+| Promise&lt;void&gt; | Promise实例，用于获取清除所有会话cookie是否成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
 
 ## clearSessionCookie
 
@@ -122,11 +140,15 @@ Delete the session cookies Asynchronously.
 static clearSessionCookie(callback: AsyncCallback<void>): void
 ```
 
-Delete the session cookies Asynchronously.
+异步callback方式清除所有会话cookie。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static clearSessionCookie(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static clearSessionCookie(callback: AsyncCallback<void>): void-End-->
 
@@ -136,13 +158,13 @@ Delete the session cookies Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback回调，用于获取清除所有会话cookie是否成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## clearSessionCookieSync
 
@@ -150,11 +172,15 @@ Delete the session cookies Asynchronously.
 static clearSessionCookieSync(): void
 ```
 
-Delete the session cookies.
+清除所有会话cookie。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static clearSessionCookieSync(): void--><!--Device-WebCookieManager-static clearSessionCookieSync(): void-End-->
 
@@ -166,11 +192,15 @@ Delete the session cookies.
 static configCookie(url: string, value: string): Promise<void>
 ```
 
-Set a single cookie (key-value pair) for the given URL Asynchronously.
+指定url设置单个cookie的值。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static configCookie(url: string, value: string): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string): Promise<void>-End-->
 
@@ -180,22 +210,22 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookie is to be set. |
-| value | string | 是 | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
+| url | string | 是 | 要设置的cookie所属的url。 |
+| value | string | 是 | 要设置的cookie的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies of given URL have been set. |
+| Promise&lt;void&gt; | Promise实例，用于获取指定url设置单个cookie值是否成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## configCookie
 
@@ -203,11 +233,13 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>
 ```
 
-Set a single cookie (key-value pair) for the given URL Asynchronously.
+指定url设置单个cookie的值。使用Promise异步回调。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>--><!--Device-WebCookieManager-static configCookie(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): Promise<void>-End-->
 
@@ -217,24 +249,24 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookie is to be set. |
-| value | string | 是 | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | 是 | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
-| includeHttpOnly | boolean | 是 | {@code true} HTTP-only cookies can also be overwritten; {@code false} otherwise. |
+| url | string | 是 | 要设置的cookie所属的url。 |
+| value | string | 是 | 要设置的cookie的值。 |
+| incognito | boolean | 是 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。 |
+| includeHttpOnly | boolean | 是 | true表示允许覆盖含有http-only的cookies，false表示不允许覆盖含有http-only的cookies。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies of given URL have been set. |
+| Promise&lt;void&gt; | Promise实例，用于获取指定url设置单个cookie值是否成功。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## configCookie
 
@@ -242,11 +274,15 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookie(url: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Set a single cookie (key-value pair) for the given URL Asynchronously.
+异步callback方式为指定url设置单个cookie的值。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static configCookie(url: string, value: string, callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static configCookie(url: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -256,17 +292,17 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookie is to be set. |
-| value | string | 是 | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been set. |
+| url | string | 是 | 要设置的cookie所属的url。 |
+| value | string | 是 | 要设置的cookie的值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback回调，用于获取设置cookie的结果 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## configCookieSync
 
@@ -274,11 +310,15 @@ Set a single cookie (key-value pair) for the given URL Asynchronously.
 static configCookieSync(url: string, value: string, incognito?: boolean): void
 ```
 
-Set a single cookie (key-value pair) for the given URL.
+为指定url设置单个cookie的值。 > **说明：** > > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。 > > - 同步cookie的时机建议在Web组件加载之前完成。 > > - cookie每30s周期性保存到磁盘中，也可以使用接口saveCookieAsync进行强制落盘。 > > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以分号分隔的cookie属性列表（例如"key=value;Max-Age=100"）。 > > - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。 > > - 若通过configCookieSync进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。 > > - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。 > > - 如果要覆盖HttpOnly的cookies，需要在value中指定HttpOnly属性。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito?: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito?: boolean): void-End-->
 
@@ -288,17 +328,17 @@ Set a single cookie (key-value pair) for the given URL.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookie is to be set. |
-| value | string | 是 | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | 否 | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
+| url | string | 是 | 要设置的cookie所属的url，建议使用完整的url。 |
+| value | string | 是 | 要设置的cookie的值。 |
+| incognito | boolean | 否 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。&lt;br&gt;默认值：false。 &lt;br&gt;传入 undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## configCookieSync
 
@@ -306,11 +346,13 @@ Set a single cookie (key-value pair) for the given URL.
 static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void
 ```
 
-Set a single cookie (key-value pair) for the given URL.
+为指定url设置cookie的值。 > **说明：** > > - configCookieSync中的url，可以指定域名的方式来使得页面内请求也附带上cookie。 > > - 同步cookie的时机建议在Web组件加载之前完成。 > > - cookie每30s周期性保存到磁盘中，也可以使用接口saveCookieAsync进行强制落盘。 > > - value参数必须遵循Set-Cookie HTTP响应头的格式。形式为"key=value"的键值对，后面可跟随以分号分隔的cookie属性列表（例如"key=value;Max-Age=100"）。 > > - 若存在相同host、path和名称的cookie，将被新cookie替换。若设置的cookie已过期，则不会存储该cookie。如需设置多个cookie，应多次调用此方法。 > > - 若通过configCookieSync进行两次或多次设置cookie，则每次设置的cookie之间会通过"; "进行分隔。 > > - 如果指定的值包含"Secure"属性，则url必须使用"https://"协议。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void--><!--Device-WebCookieManager-static configCookieSync(url: string, value: string, incognito: boolean, includeHttpOnly: boolean): void-End-->
 
@@ -320,18 +362,58 @@ Set a single cookie (key-value pair) for the given URL.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookie is to be set. |
-| value | string | 是 | The cookie as a string, using the format of the 'Set-Cookie' HTTP response header. |
-| incognito | boolean | 是 | {@code true} set a single cookie (key-value pair) for the given URL in incognito mode; {@code false} otherwise. |
-| includeHttpOnly | boolean | 是 | {@code true} HTTP-only cookies can also be overwritten; {@code false} otherwise. |
+| url | string | 是 | 要设置的cookie所属的url。 |
+| value | string | 是 | 要设置的cookie的值。 |
+| incognito | boolean | 是 | true表示设置隐私模式下对应url的cookies，false表示设置正常非隐私模式下对应url的cookies。 |
+| includeHttpOnly | boolean | 是 | true表示允许覆盖含有http-only的cookies，false表示不允许覆盖含有http-only的cookies。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+
+## deleteEntireCookie
+
+```TypeScript
+static deleteEntireCookie(): void
+```
+
+清除所有cookie。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**替代接口：** [clearAllCookiesSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearAllCookiesSync)
+
+<!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+## deleteSessionCookie
+
+```TypeScript
+static deleteSessionCookie(): void
+```
+
+清除所有会话cookie。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**替代接口：** [clearSessionCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearSessionCookieSync)
+
+<!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
 
 ## existCookie
 
@@ -339,11 +421,15 @@ Set a single cookie (key-value pair) for the given URL.
 static existCookie(incognito?: boolean): boolean
 ```
 
-Check whether exists any cookies.
+获取是否存在cookie。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean--><!--Device-WebCookieManager-static existCookie(incognito?: boolean): boolean-End-->
 
@@ -353,27 +439,29 @@ Check whether exists any cookies.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 否 | {@code true} check whether exists any cookies. in incognito mode; {@code false} otherwise. |
+| incognito | boolean | 否 | true表示隐私模式下查询是否存在cookies，false表示正常非隐私模式下查询是否存在cookies。&lt;br&gt;默认值：false。&lt;br&gt;传入 undefined或null时返回undefined。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if exists more than one cookie else false; |
+| boolean | true表示存在cookie，false表示不存在cookie。 |
 
 ## fetchAllCookies
 
 ```TypeScript
-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>
+static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 ```
 
-Fetches all stored cookies asynchronously.
+异步获取所有cookie。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>--><!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean): Promise<Array<WebHttpCookie>>-End-->
+**废弃版本：** -1
+
+<!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>--><!--Device-WebCookieManager-static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -381,13 +469,13 @@ Fetches all stored cookies asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| incognito | boolean | 是 | {@code true} Gets all cookies in incognito context; {@code false} otherwise. |
+| incognito | boolean | 是 | {@code true} 隐私模式下获取所有Cookie。 {@code false} 非隐私模式下获取所有Cookie。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
+| Promise&lt;Array&lt;[WebHttpCookie](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
 
 ## fetchCookie
 
@@ -395,11 +483,15 @@ Fetches all stored cookies asynchronously.
 static fetchCookie(url: string): Promise<string>
 ```
 
-Gets all cookies for the given URL Asynchronously.
+以Promise方式异步获取指定url对应cookie的值。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string): Promise<string>-End-->
 
@@ -409,20 +501,20 @@ Gets all cookies for the given URL Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookies are requested. |
+| url | string | 是 | 要获取的cookie所属的url。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | A promise resolved after the cookies of given URL have been gotten. |
+| Promise&lt;string&gt; | Promise实例，用于获取指定url对应的cookie值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookie
 
@@ -430,11 +522,13 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookie(url: string, incognito: boolean): Promise<string>
 ```
 
-Gets all cookies for the given URL Asynchronously.
+以Promise方式异步获取指定url对应cookie的值。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>--><!--Device-WebCookieManager-static fetchCookie(url: string, incognito: boolean): Promise<string>-End-->
 
@@ -444,21 +538,21 @@ Gets all cookies for the given URL Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookies are requested. |
-| incognito | boolean | 是 | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. |
+| url | string | 是 | 要获取的cookie所属的url。 |
+| incognito | boolean | 是 | true表示获取隐私模式下webview的内存cookies，false表示正常非隐私模式下的cookies。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;string&gt; | A promise resolved after the cookies of given URL have been gotten. |
+| Promise&lt;string&gt; | Promise实例，用于获取指定url对应的cookie值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookie
 
@@ -466,11 +560,15 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookie(url: string, callback: AsyncCallback<string>): void
 ```
 
-Gets all cookies for the given URL Asynchronously.
+异步callback方式获取指定url对应cookie的值。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void--><!--Device-WebCookieManager-static fetchCookie(url: string, callback: AsyncCallback<string>): void-End-->
 
@@ -480,15 +578,15 @@ Gets all cookies for the given URL Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookies are requested. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Called after the cookies of given URL have been gotten. |
+| url | string | 是 | 要获取的cookie所属的url。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 在获取到指定URL的Cookie之后调用。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## fetchCookieSync
 
@@ -496,11 +594,15 @@ Gets all cookies for the given URL Asynchronously.
 static fetchCookieSync(url: string, incognito?: boolean): string
 ```
 
-Gets all cookies for the given URL.
+获取指定url对应cookie的值。 > **说明：** > > - 系统会自动清理过期的cookie，对于同名key的数据，新数据将会覆盖前一个数据。 > > - 为了获取可正常使用的cookie值，fetchCookieSync需传入完整链接。 > > - fetchCookieSync用于获取所有的cookie值，每条cookie值之间会通过"; "进行分隔，但无法单独获取某一条特定的cookie值。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean): string--><!--Device-WebCookieManager-static fetchCookieSync(url: string, incognito?: boolean): string-End-->
 
@@ -510,21 +612,60 @@ Gets all cookies for the given URL.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | The URL for which the cookies are requested. |
-| incognito | boolean | 否 | {@code true} gets all cookies for the given URL in incognito mode; {@code false} otherwise. |
+| url | string | 是 | 要获取的cookie所属的url。 |
+| incognito | boolean | 否 | true表示获取隐私模式下webview的内存cookies，false表示正常非隐私模式下的cookies。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | The cookie value for the given URL. |
+| string | 指定url对应的cookie的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [17100002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
+
+## getCookie
+
+```TypeScript
+static getCookie(url: string): string
+```
+
+获取指定url对应cookie的值。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**替代接口：** [fetchCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#fetchCookieSync)
+
+<!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 要获取的cookie所属的url。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| string | 指定url对应的cookie的值。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## isCookieAllowed
 
@@ -532,11 +673,15 @@ Gets all cookies for the given URL.
 static isCookieAllowed(): boolean
 ```
 
-Get whether the instance can send and accept cookies.
+获取WebCookieManager实例是否拥有发送和接收cookie的权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static isCookieAllowed(): boolean--><!--Device-WebCookieManager-static isCookieAllowed(): boolean-End-->
 
@@ -546,7 +691,7 @@ Get whether the instance can send and accept cookies.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the instance can send and accept cookies else false. |
+| boolean | 是否拥有发送和接收cookie的权限。 &lt;br&gt;true表示拥有发送和接收cookie的权限，false表示无发送和接收cookie的权限。 &lt;br&gt;默认值：true。 |
 
 ## isThirdPartyCookieAllowed
 
@@ -554,11 +699,15 @@ Get whether the instance can send and accept cookies.
 static isThirdPartyCookieAllowed(): boolean
 ```
 
-Get whether the instance can send and accept thirdparty cookies.
+获取WebCookieManager实例是否拥有发送和接收第三方cookie的权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean--><!--Device-WebCookieManager-static isThirdPartyCookieAllowed(): boolean-End-->
 
@@ -568,7 +717,7 @@ Get whether the instance can send and accept thirdparty cookies.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | True if the instance can send and accept thirdparty cookies else false. |
+| boolean | 是否拥有发送和接收第三方cookie的权限。 &lt;br&gt;true表示拥有发送和接收第三方cookie的权限，false表示无发送和接收第三方cookie的权限。 &lt;br&gt;默认值：false。 |
 
 ## putAcceptCookieEnabled
 
@@ -576,11 +725,15 @@ Get whether the instance can send and accept thirdparty cookies.
 static putAcceptCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept cookies.By default this is set to be true.
+设置WebCookieManager实例是否拥有发送和接收cookie的权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static putAcceptCookieEnabled(accept: boolean): void--><!--Device-WebCookieManager-static putAcceptCookieEnabled(accept: boolean): void-End-->
 
@@ -590,13 +743,13 @@ Set whether the instance should send and accept cookies.By default this is set t
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accept | boolean | 是 | Whether the instance should send and accept cookies. |
+| accept | boolean | 是 | 设置是否拥有发送和接收cookie的权限，默认为true，表示拥有发送和接收cookie的权限。false表示没有发送和接收cookie的权限。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## putAcceptThirdPartyCookieEnabled
 
@@ -604,11 +757,15 @@ Set whether the instance should send and accept cookies.By default this is set t
 static putAcceptThirdPartyCookieEnabled(accept: boolean): void
 ```
 
-Set whether the instance should send and accept thirdparty cookies.By default this is set to be false.
+设置WebCookieManager实例是否拥有发送和接收第三方cookie的权限。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static putAcceptThirdPartyCookieEnabled(accept: boolean): void--><!--Device-WebCookieManager-static putAcceptThirdPartyCookieEnabled(accept: boolean): void-End-->
 
@@ -618,13 +775,13 @@ Set whether the instance should send and accept thirdparty cookies.By default th
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| accept | boolean | 是 | Whether the instance should send and accept thirdparty cookies. |
+| accept | boolean | 是 | 是否允许设置、获取第三方cookie。&lt;br&gt;true表示允许设置、获取第三方cookie，false表示不允许设置、获取第三方cookie。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveCookieAsync
 
@@ -632,11 +789,15 @@ Set whether the instance should send and accept thirdparty cookies.By default th
 static saveCookieAsync(): Promise<void>
 ```
 
-Save the cookies Asynchronously.
+将当前可通过fetchCookie获取到的所有需要持久化的cookie以Promise方法异步保存到磁盘中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static saveCookieAsync(): Promise<void>--><!--Device-WebCookieManager-static saveCookieAsync(): Promise<void>-End-->
 
@@ -646,13 +807,13 @@ Save the cookies Asynchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A promise resolved after the cookies have been saved. |
+| Promise&lt;void&gt; | Promise实例，用于获取cookie是否成功保存。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveCookieAsync
 
@@ -660,11 +821,15 @@ Save the cookies Asynchronously.
 static saveCookieAsync(callback: AsyncCallback<void>): void
 ```
 
-Save the cookies Asynchronously.
+将当前可通过fetchCookie获取到的所有需要持久化的cookie异步保存到磁盘中。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebCookieManager-static saveCookieAsync(callback: AsyncCallback<void>): void--><!--Device-WebCookieManager-static saveCookieAsync(callback: AsyncCallback<void>): void-End-->
 
@@ -674,13 +839,13 @@ Save the cookies Asynchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Called after the cookies have been saved. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback回调，用于获取cookie是否成功保存。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveCookieSync
 
@@ -688,15 +853,52 @@ Save the cookies Asynchronously.
 static saveCookieSync(): void
 ```
 
-Save the cookies synchronously.
+将当前可通过fetchCookie获取到的所有需要持久化的cookie同步保存到磁盘中。 > **说明：** > > - saveCookieSync用于强制将需要持久化的cookies写入磁盘。PC/2in1和Tablet设备不会持久化session cookie，即使调用saveCookieSync，也不会将session > cookie写入磁盘。 > > - saveCookieSync将阻塞调用者直到操作完成，期间可能会执行I/O操作。
 
-**起始版本：** 23
+**起始版本：** 15
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-WebCookieManager-static saveCookieSync(): void--><!--Device-WebCookieManager-static saveCookieSync(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
+
+## setCookie
+
+```TypeScript
+static setCookie(url: string, value: string): void
+```
+
+为指定url设置单个cookie的值。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 11
+
+**替代接口：** [configCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#configCookieSync)
+
+<!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| url | string | 是 | 要设置的cookie所属的url。 |
+| value | string | 是 | 要设置的cookie的值。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [17100005](../errorcode-webview.md#17100005-cookie-value格式错误) | The provided cookie value is invalid. It must follow the format specified &lt;br&gt;in RFC 6265. |
+| [17100002](../errorcode-webview.md#17100002-url格式错误) | URL error. No valid cookie found for the specified URL. |
 
 ## setLazyInitializeWebEngine
 
@@ -704,11 +906,13 @@ Save the cookies synchronously.
 static setLazyInitializeWebEngine(lazy: boolean): void
 ```
 
-Delays the initialization of the web engine. By default, the web engine is initialized when the CookieManager interface is called. By setting the 'lazy' parameter to true,the web engine will not be initialized when the CookieManager interface is called.Instead, the web engine will be initialized either when the web component is created or when initializeWebEngine is called.
+Delays the initialization of the web engine. By default, the web engine is initialized when the CookieManager interface is called. By setting the 'lazy' parameter to true, the web engine will not be initialized when the CookieManager interface is called. Instead, the web engine will be initialized either when the web component is created or when initializeWebEngine is called.
 
-**起始版本：** 23
+**起始版本：** 22
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void--><!--Device-WebCookieManager-static setLazyInitializeWebEngine(lazy: boolean): void-End-->
 
@@ -718,5 +922,5 @@ Delays the initialization of the web engine. By default, the web engine is initi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lazy | boolean | 是 | Controls whether to delay the initialization of the web engine. @static |
+| lazy | boolean | 是 | Controls whether to delay the initialization of the web engine. |
 

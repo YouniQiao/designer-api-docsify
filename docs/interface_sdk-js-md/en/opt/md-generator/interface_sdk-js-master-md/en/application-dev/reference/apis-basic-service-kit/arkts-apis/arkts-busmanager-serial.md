@@ -4,6 +4,8 @@ Serial port management.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace serial--><!--Device-unnamed-declare namespace serial-End-->
@@ -22,14 +24,14 @@ import { serial } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getSerialPortList) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addportauthorization) |
+| [addPortAuthorization](arkts-basicservices-serial-addportauthorization-f-sys.md#addPortAuthorization-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

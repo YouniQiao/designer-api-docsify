@@ -2,7 +2,9 @@
 
 Describes the range of the selected text.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface Range--><!--Device-inputMethodEngine-export interface Range-End-->
 
@@ -24,7 +26,9 @@ Index of the last selected character in the text box.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-end: int--><!--Device-Range-end: int-End-->
 
@@ -40,7 +44,9 @@ Index of the first selected character in the text box.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-start: int--><!--Device-Range-start: int-End-->
 

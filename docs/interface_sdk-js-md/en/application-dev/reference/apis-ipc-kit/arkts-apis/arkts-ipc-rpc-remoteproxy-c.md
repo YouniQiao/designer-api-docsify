@@ -4,11 +4,13 @@ Provides APIs to implement **IRemoteObject**.
 
 **Inheritance/Implementation:** RemoteProxy extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#IRemoteObject)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-rpc-class RemoteProxy extends IRemoteObject--><!--Device-rpc-class RemoteProxy extends IRemoteObject-End-->
+**Deprecated since:** -1
+
+<!--Device-rpc-class RemoteProxy--><!--Device-rpc-class RemoteProxy-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -32,7 +34,7 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [registerDeathRecipient](rpc.IRemoteObject#registerDeathRecipient(recipient:)
+**Substitutes:** [registerDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#registerDeathRecipient)(recipient: DeathRecipient, flags: int)
 
 <!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -53,7 +55,7 @@ Adds a callback for receiving death notifications of the remote object.
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -115,9 +117,11 @@ getDescriptor(): string
 
 Obtains the interface descriptor (which is a string) of this object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-getDescriptor(): string--><!--Device-RemoteProxy-getDescriptor(): string-End-->
 
@@ -133,12 +137,12 @@ Obtains the interface descriptor (which is a string) of this object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-| [1900007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900007-failed-to-communicate-with-the-remote-object) | communication failed. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [1900007](../errorcode-rpc.md#1900007-failed-to-communicate-with-the-remote-object) | communication failed. |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -222,7 +226,7 @@ Obtains the interface descriptor of this proxy object.
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -279,9 +283,11 @@ getLocalInterface(interfaceDes: string): IRemoteBroker
 
 Obtains the **LocalInterface** object of an interface token.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-getLocalInterface(interfaceDes: string): IRemoteBroker--><!--Device-RemoteProxy-getLocalInterface(interfaceDes: string): IRemoteBroker-End-->
 
@@ -303,12 +309,12 @@ Obtains the **LocalInterface** object of an interface token.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | check param failed |
-| [1900006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900006-ipc-object-permission-error) | Operation allowed only for the remote object. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | check param failed |
+| [1900006](../errorcode-rpc.md#1900006-ipc-object-permission-error) | Operation allowed only for the remote object. |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -372,9 +378,11 @@ isObjectDead(): boolean
 
 Checks whether the **RemoteObject** is dead.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-isObjectDead(): boolean--><!--Device-RemoteProxy-isObjectDead(): boolean-End-->
 
@@ -388,7 +396,7 @@ Checks whether the **RemoteObject** is dead.
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -451,7 +459,7 @@ Obtains the **LocalInterface** object of an interface token.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLocalInterface](rpc.IRemoteObject#getLocalInterface(descriptor:)
+**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getLocalInterface)(descriptor: string)
 
 <!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker--><!--Device-RemoteProxy-queryLocalInterface(interface: string): IRemoteBroker-End-->
 
@@ -471,7 +479,7 @@ Obtains the **LocalInterface** object of an interface token.
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -522,21 +530,17 @@ if (proxy != undefined) {
 
 ## registerDeathRecipient
 
-ArkTS-Dyn:
-```TypeScript
-registerDeathRecipient(recipient: DeathRecipient, flags: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 registerDeathRecipient(recipient: DeathRecipient, flags: int): void
 ```
 
 Registers a callback for receiving death notifications of the remote object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-RemoteProxy-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
@@ -547,18 +551,18 @@ Registers a callback for receiving death notifications of the remote object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to register. |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Flag of the death notification. |
+| flags | int | Yes | Flag of the death notification. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -633,7 +637,7 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unregisterDeathRecipient](rpc.IRemoteObject#unregisterDeathRecipient(recipient:)
+**Substitutes:** [unregisterDeathRecipient](arkts-ipc-rpc-iremoteobject-c.md#unregisterDeathRecipient)(recipient: DeathRecipient, flags: int)
 
 <!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-RemoteProxy-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -654,7 +658,7 @@ Removes the callback used to receive death notifications of the remote object.
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -711,17 +715,6 @@ if (proxy != undefined) {
 
 ## sendMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-sendMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption
-    ): Promise<RequestResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendMessageRequest(
       code: int,
@@ -731,12 +724,13 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
@@ -746,7 +740,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| code | int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
@@ -761,11 +755,11 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -841,18 +835,6 @@ try {
 
 ## sendMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-sendMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption,
-      callback: AsyncCallback<RequestResult>
-    ): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendMessageRequest(
       code: int,
@@ -863,12 +845,13 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a callback will be called immediately, and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a callback will be invoked at certain time after the response to **RequestResult** is returned, and the reply contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked at certain time after the response to **RequestResult** is returned, and the reply contains the returned information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteProxy-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
 
@@ -878,17 +861,17 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| code | int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -896,7 +879,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 7
 
@@ -904,7 +887,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 8
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteProxy-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -927,7 +910,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1005,7 +988,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
@@ -1013,7 +996,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -1036,7 +1019,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1123,7 +1106,7 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a callback will be called immediately, and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
@@ -1131,7 +1114,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 <!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteProxy-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -1145,25 +1128,21 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
 
 ## unregisterDeathRecipient
 
-ArkTS-Dyn:
-```TypeScript
-unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void
 ```
 
 Unregisters from the callback used to receive death notifications of the remote object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-RemoteProxy-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
@@ -1174,18 +1153,18 @@ Unregisters from the callback used to receive death notifications of the remote 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | recipient | [DeathRecipient](arkts-ipc-rpc-deathrecipient-i.md) | Yes | Callback to unregister. |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Flag of the death notification. |
+| flags | int | Yes | Flag of the death notification. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The callback used to receive remote object death notifications is empty. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1261,7 +1240,9 @@ Internal instruction code used to obtain IPC service status information.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-static readonly DUMP_TRANSACTION: number--><!--Device-RemoteProxy-static readonly DUMP_TRANSACTION: number-End-->
 
@@ -1281,7 +1262,9 @@ Internal instruction code used to obtain the remote interface token.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-static readonly INTERFACE_TRANSACTION: number--><!--Device-RemoteProxy-static readonly INTERFACE_TRANSACTION: number-End-->
 
@@ -1301,7 +1284,9 @@ Maximum valid instruction code.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-static readonly MAX_TRANSACTION_ID: number--><!--Device-RemoteProxy-static readonly MAX_TRANSACTION_ID: number-End-->
 
@@ -1321,7 +1306,9 @@ Minimum valid instruction code.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-static readonly MIN_TRANSACTION_ID: number--><!--Device-RemoteProxy-static readonly MIN_TRANSACTION_ID: number-End-->
 
@@ -1341,7 +1328,9 @@ Internal instruction code used to test whether the IPC service is normal.
 
 **Since:** 7
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteProxy-static readonly PING_TRANSACTION: number--><!--Device-RemoteProxy-static readonly PING_TRANSACTION: number-End-->
 

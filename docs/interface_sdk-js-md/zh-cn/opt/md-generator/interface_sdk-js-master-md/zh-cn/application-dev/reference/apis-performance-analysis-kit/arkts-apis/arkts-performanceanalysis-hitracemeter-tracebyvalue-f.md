@@ -6,12 +6,11 @@
 function traceByValue(name: string, count: number): void
 ```
 
-用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者快速发现异常波动，分析数据趋势。
+用来标记一个跟踪的整数变量，该变量的数值会不断变化。适用于需要实时监控数值变化（如网络请求次数、缓存命中率、内存占用等）的场景，能够帮助开发者 快速发现异常波动，分析数据趋势。 从API version 19开始，建议使用 [traceByValue](#traceByValue)接口，以便分级控 制跟踪输出。
 
-从API version 19开始，建议使用  
-[traceByValue](#traceByValue-1)接口，以便分级控制跟踪输出。
+**起始版本：** 23
 
-**起始版本：** 8
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -45,9 +44,11 @@ function traceByValue(level: HiTraceOutputLevel, name: string, count: number): v
 
 整数跟踪事件，分级控制跟踪输出。用来标记一个预先定义需要跟踪的整数变量名及整数值。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void--><!--Device-hiTraceMeter-function traceByValue(level: HiTraceOutputLevel, name: string, count: long): void-End-->
 

@@ -14,9 +14,11 @@ function getBundleStats(packageName: string, callback: AsyncCallback<BundleStats
 
 Obtains the storage space of an application, in bytes. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -31,17 +33,17 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | packageName | string | Yes | Package name of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | Yes | Callback used to return the application storage space obtained. |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-1)<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStats](arkts-corefile-storagestatistics-bundlestats-i.md)&gt; | Yes | Callback used to return the application storage space obtained. |
+| index | int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo-(System-API)) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-(System-API))<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. |
 | 13600008 | No such object. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -84,9 +86,11 @@ function getBundleStats(packageName: string, index?: int): Promise<BundleStats>
 
 Obtains the storage space of an application, in bytes. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -101,7 +105,7 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | packageName | string | Yes | Package name of the application. |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-1)<br>**Since:** 12 |
+| index | int | No | Index of an application clone. The default value is **0**, which indicates the application itself. When an application clone is created, an index is assigned from 1 sequentially to **appIndex** of [BundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourceinfo-i-sys.md#BundleResourceInfo-(System-API)) The index can be obtained by [getBundleResourceInfo](../../apis-ability-kit/arkts-apis/arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md#getBundleResourceInfo-(System-API))<br>**Since:** 12 |
 
 **Return value:**
 
@@ -113,10 +117,10 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid. |
 | 13600008 | No such object. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

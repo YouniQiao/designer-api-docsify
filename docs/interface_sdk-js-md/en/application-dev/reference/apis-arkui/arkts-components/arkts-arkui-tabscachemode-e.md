@@ -6,6 +6,8 @@ Enumerates the caching modes for child components.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum TabsCacheMode--><!--Device-unnamed-declare enum TabsCacheMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Cache the currently displayed child component and the child components on both s
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Cache the currently displayed child component and the most recently switched chi
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Enumerates the text superscript and subscript styles.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SuperscriptStyle--><!--Device-unnamed-declare enum SuperscriptStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NORMAL = 0
 Normal text style.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Superscript text style.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -53,6 +59,8 @@ SUBSCRIPT = 2
 Subscript text style.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

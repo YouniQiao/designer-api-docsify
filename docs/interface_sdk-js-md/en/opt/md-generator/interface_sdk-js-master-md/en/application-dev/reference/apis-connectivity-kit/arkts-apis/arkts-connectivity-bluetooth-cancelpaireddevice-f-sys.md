@@ -18,7 +18,7 @@ Remove a paired remote device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelPairedDevice](ohos.bluetoothManager/bluetoothManager.cancelPairedDevice)
+**Substitutes:** [cancelPairedDevice](arkts-connectivity-bluetoothmanager-cancelpaireddevice-f-sys.md#cancelPairedDevice-(System-API))
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

@@ -6,14 +6,11 @@
 function createWindow(config: Configuration, callback: AsyncCallback<Window>): void
 ```
 
-创建子窗口或者系统窗口，使用callback异步回调。
+创建子窗口或者系统窗口，使用callback异步回调。 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
 
-非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是  
-[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+**起始版本：** 23
 
-自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本12+：ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -35,15 +32,15 @@ function createWindow(config: Configuration, callback: AsyncCallback<Window>): v
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) |
-| [1300006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300001](../errorcode-window.md#1300001-重复操作) |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) |
+| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [1300008](../errorcode-window.md#1300008-显示设备异常) |
 
 ## 示例
 
@@ -85,14 +82,11 @@ export default class EntryAbility extends UIAbility {
 function createWindow(config: Configuration): Promise<Window>
 ```
 
-创建子窗口或者系统窗口，使用Promise异步回调。
+创建子窗口或者系统窗口，使用Promise异步回调。 非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是 [沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。 自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口 创建后为非沉浸式布局。
 
-非[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下，子窗口创建后默认是  
-[沉浸式布局](../../../windowmanager/window-terminology.md#沉浸式布局)。
+**起始版本：** 23
 
-自由窗口状态下，子窗口参数[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration)为false时，子窗口创建后为沉浸式布局；子窗口参数decorEnabled为true，子窗口创建后为非沉浸式布局。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本12+：ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -119,15 +113,15 @@ function createWindow(config: Configuration): Promise<Window>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300001-重复操作) |
-| [1300006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300009-父窗口无效) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300008-显示设备异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300001](../errorcode-window.md#1300001-重复操作) |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) |
+| [1300004](../errorcode-window.md#1300004-无权限操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300009](../errorcode-window.md#1300009-父窗口无效) |
+| [1300008](../errorcode-window.md#1300008-显示设备异常) |
 
 ## 示例
 

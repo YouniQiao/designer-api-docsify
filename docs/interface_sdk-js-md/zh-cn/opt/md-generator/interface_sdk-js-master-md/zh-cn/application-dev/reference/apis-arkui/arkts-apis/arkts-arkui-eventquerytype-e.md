@@ -4,6 +4,8 @@
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum EventQueryType--><!--Device-unnamed-declare enum EventQueryType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ ON_CLICK = 0
 点击事件。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,7 +6,9 @@ export type SharedBundleInfo = _SharedBundleInfo
 
 Defines the shared bundle information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo--><!--Device-bundleManager-export type SharedBundleInfo = _SharedBundleInfo-End-->
 

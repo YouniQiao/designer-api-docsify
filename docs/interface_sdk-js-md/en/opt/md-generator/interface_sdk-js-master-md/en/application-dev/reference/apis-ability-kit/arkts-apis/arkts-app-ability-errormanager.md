@@ -2,7 +2,9 @@
 
 The ErrorManager module provides capabilities for registering and unregistering error observers, which are primarily used to listen for errors such as JavaScript crashes and application freezes.
 
-**Since:** 9
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace errorManager--><!--Device-unnamed-declare namespace errorManager-End-->
 
@@ -20,22 +22,26 @@ import { errorManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [off](arkts-ability-errormanager-off-f.md#off) |
-| [off](arkts-ability-errormanager-off-f.md#off-1) |
-| [off](arkts-ability-errormanager-off-f.md#off-2) |
-| [off](arkts-ability-errormanager-off-f.md#off-3) |
-| [off](arkts-ability-errormanager-off-f.md#off-4) |
-| [off](arkts-ability-errormanager-off-f.md#off-5) |
-| [off](arkts-ability-errormanager-off-f.md#off-6) |
-| [on](arkts-ability-errormanager-on-f.md#on) |
-| [on](arkts-ability-errormanager-on-f.md#on-1) |
-| [on](arkts-ability-errormanager-on-f.md#on-2) |
-| [on](arkts-ability-errormanager-on-f.md#on-3) |
-| [on](arkts-ability-errormanager-on-f.md#on-4) |
-| [on](arkts-ability-errormanager-on-f.md#on-5) |
-| [setDefaultErrorHandler](arkts-ability-errormanager-setdefaulterrorhandler-f.md#setdefaulterrorhandler) |
-| [setDefaultFreezeObserver](arkts-ability-errormanager-setdefaultfreezeobserver-f.md#setdefaultfreezeobserver) |
-| [setDefaultResourceUsageObserver](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md#setdefaultresourceusageobserver) |
+| [offFreeze](arkts-ability-errormanager-offfreeze-f.md#offFreeze) |
+| [offUnhandledRejection](arkts-ability-errormanager-offunhandledrejection-f.md#offUnhandledRejection) |
+| [off_error](arkts-ability-errormanager-offerror-f.md#off_error) |
+| [off_error](arkts-ability-errormanager-offerror-f.md#off_error) |
+| [off_freeze](arkts-ability-errormanager-offfreeze-f.md) |
+| [off_globalErrorOccurred](arkts-ability-errormanager-offglobalerroroccurred-f.md#off_globalErrorOccurred) |
+| [off_globalUnhandledRejectionDetected](arkts-ability-errormanager-offglobalunhandledrejectiondetected-f.md#off_globalUnhandledRejectionDetected) |
+| [off_loopObserver](arkts-ability-errormanager-offloopobserver-f.md#off_loopObserver) |
+| [off_unhandledRejection](arkts-ability-errormanager-offunhandledrejection-f.md) |
+| [onFreeze](arkts-ability-errormanager-onfreeze-f.md#onFreeze) |
+| [onUnhandledRejection](arkts-ability-errormanager-onunhandledrejection-f.md#onUnhandledRejection) |
+| [on_error](arkts-ability-errormanager-onerror-f.md#on_error) |
+| [on_freeze](arkts-ability-errormanager-onfreeze-f.md) |
+| [on_globalErrorOccurred](arkts-ability-errormanager-onglobalerroroccurred-f.md#on_globalErrorOccurred) |
+| [on_globalUnhandledRejectionDetected](arkts-ability-errormanager-onglobalunhandledrejectiondetected-f.md#on_globalUnhandledRejectionDetected) |
+| [on_loopObserver](arkts-ability-errormanager-onloopobserver-f.md#on_loopObserver) |
+| [on_unhandledRejection](arkts-ability-errormanager-onunhandledrejection-f.md) |
+| [setDefaultErrorHandler](arkts-ability-errormanager-setdefaulterrorhandler-f.md#setDefaultErrorHandler) |
+| [setDefaultFreezeObserver](arkts-ability-errormanager-setdefaultfreezeobserver-f.md#setDefaultFreezeObserver) |
+| [setDefaultResourceUsageObserver](arkts-ability-errormanager-setdefaultresourceusageobserver-f.md#setDefaultResourceUsageObserver) |
 
 ### Interfaces
 

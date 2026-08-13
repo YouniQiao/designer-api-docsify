@@ -10,6 +10,8 @@ Defines the callback triggered when the **Swiper** component is about to scroll.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.

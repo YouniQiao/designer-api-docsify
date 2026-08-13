@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface VerticalAlignParam--><!--Device-unnamed-declare interface VerticalAlignParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.
-
-Anonymous Object Rectification
+Sets the vertical alignment relative to the anchor component. Anonymous Object Rectification
 
 **类型：** VerticalAlign
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -40,15 +42,15 @@ Anonymous Object Rectification
 anchor: string
 ```
 
-Specifies the anchor component
-
-Anonymous Object Rectification
+Specifies the anchor component Anonymous Object Rectification
 
 **类型：** string
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

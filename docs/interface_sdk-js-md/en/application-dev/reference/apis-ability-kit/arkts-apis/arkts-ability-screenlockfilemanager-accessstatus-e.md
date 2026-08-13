@@ -2,9 +2,11 @@
 
 Enumerates the statuses for requesting access permissions for sensitive data under the lock screen.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screenLockFileManager-export enum AccessStatus--><!--Device-screenLockFileManager-export enum AccessStatus-End-->
 
@@ -18,9 +20,11 @@ ACCESS_DENIED = -1
 
 The request for access permission for sensitive data under lock screen is denied.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessStatus-ACCESS_DENIED = -1--><!--Device-AccessStatus-ACCESS_DENIED = -1-End-->
 
@@ -34,9 +38,11 @@ ACCESS_GRANTED = 0
 
 The request for access permission for sensitive data under lock screen is granted.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessStatus-ACCESS_GRANTED = 0--><!--Device-AccessStatus-ACCESS_GRANTED = 0-End-->
 

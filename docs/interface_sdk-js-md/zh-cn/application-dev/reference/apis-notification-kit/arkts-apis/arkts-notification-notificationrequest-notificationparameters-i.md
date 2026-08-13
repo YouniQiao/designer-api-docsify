@@ -4,7 +4,9 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationParameters--><!--Device-unnamed-export interface NotificationParameters-End-->
 
@@ -22,7 +24,9 @@ wantAction?:string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,20 +37,22 @@ wantAction?:string
 ## wantParameters
 
 ```TypeScript
-wantParameters?:Record<string, Object>
+wantParameters?:Record<string, RecordData>
 ```
 
 应用在创建wantAgent时，传入的want的parameters字段，具体含义请参考[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-NotificationParameters-wantParameters?:Record<string, Object>--><!--Device-NotificationParameters-wantParameters?:Record<string, Object>-End-->
+<!--Device-NotificationParameters-wantParameters?:Record<string, RecordData>--><!--Device-NotificationParameters-wantParameters?:Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -62,7 +68,9 @@ wantUri?:string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

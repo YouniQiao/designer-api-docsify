@@ -2,9 +2,11 @@
 
 Defines the device icon information.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceIconInfo--><!--Device-distributedDeviceManager-interface DeviceIconInfo-End-->
 
@@ -28,9 +30,11 @@ Icon.
 
 **Type:** ArrayBuffer
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-icon: ArrayBuffer--><!--Device-DeviceIconInfo-icon: ArrayBuffer-End-->
 
@@ -48,9 +52,11 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-imageType: string--><!--Device-DeviceIconInfo-imageType: string-End-->
 
@@ -68,9 +74,11 @@ Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-internalModel?: string--><!--Device-DeviceIconInfo-internalModel?: string-End-->
 
@@ -88,9 +96,11 @@ Product ID.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-productId: string--><!--Device-DeviceIconInfo-productId: string-End-->
 
@@ -104,16 +114,15 @@ Product ID.
 specName: string
 ```
 
-Image specification name. Value:
-
-- **lg**: large image (size: 1016064 pixels)  
-- **sm**: small image (size: 65536 pixels)
+Image specification name. Value: - **lg**: large image (size: 1016064 pixels) - **sm**: small image (size: 65536 pixels)
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-specName: string--><!--Device-DeviceIconInfo-specName: string-End-->
 
@@ -131,9 +140,11 @@ Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-subProductId?: string--><!--Device-DeviceIconInfo-subProductId?: string-End-->
 
@@ -151,9 +162,11 @@ URL.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfo-url: string--><!--Device-DeviceIconInfo-url: string-End-->
 

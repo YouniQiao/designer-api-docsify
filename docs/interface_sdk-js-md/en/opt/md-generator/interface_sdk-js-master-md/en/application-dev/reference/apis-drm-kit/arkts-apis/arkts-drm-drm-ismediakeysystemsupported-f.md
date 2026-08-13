@@ -14,7 +14,9 @@ function isMediaKeySystemSupported(name: string, mimeType: string, level: Conten
 
 Checks whether the device supports the combination of the DRM solution, MIME type, and content protection level.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -40,9 +42,9 @@ Checks whether the device supports the combination of the DRM solution, MIME typ
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## Examples
 
@@ -62,7 +64,9 @@ function isMediaKeySystemSupported(name: string, mimeType: string): boolean
 
 Checks whether the device supports the combination of the DRM solution and MIME type.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -87,9 +91,9 @@ Checks whether the device supports the combination of the DRM solution and MIME 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## Examples
 
@@ -109,7 +113,9 @@ function isMediaKeySystemSupported(name: string): boolean
 
 Checks whether the device supports the specified DRM solution.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -133,9 +139,9 @@ Checks whether the device supports the specified DRM solution.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## Examples
 

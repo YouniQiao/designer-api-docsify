@@ -6,11 +6,13 @@
 function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Promise<void>
 ```
 
-拉起指定[ShortcutInfo](./bundleManager/ShortcutInfo)中的ability。使用Promise异步回调。
+拉起指定ShortcutInfo中的ability。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.START_SHORTCUT
 
@@ -37,11 +39,11 @@ function startShortcut(shortcutInfo: ShortcutInfo, options?: StartOptions): Prom
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700065](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) | The specified shortcut want in shortcut info is not supported to be started. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not support. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Verify permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) | The specified shortcut want in shortcut info is not supported to be started. |
 
 ## 示例
 

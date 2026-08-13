@@ -1,9 +1,10 @@
 # StartAbilityParameter
 
-The module defines the parameters for starting an ability. The parameters can be used as input parameters in  
-[startAbility](arkts-ability-featureability-startability-f.md#startAbility)to start the specified ability.
+The module defines the parameters for starting an ability. The parameters can be used as input parameters in [startAbility](arkts-ability-featureability-startability-f.md#startAbility) to start the specified ability.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface StartAbilityParameter--><!--Device-unnamed-export interface StartAbilityParameter-End-->
 
@@ -21,6 +22,8 @@ Indicates the special start setting used in starting ability.
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }--><!--Device-StartAbilityParameter-abilityStartSetting?: { [key: string]: any }-End-->
@@ -33,11 +36,13 @@ Indicates the special start setting used in starting ability.
 abilityStartSettings?: Record<string, Object>
 ```
 
-Indicates the special start setting used in starting ability.The ability of this property is same as abilityStartSetting. If both are set, this property will be used.
+Indicates the special start setting used in starting ability. The ability of this property is same as abilityStartSetting. If both are set, this property will be used.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -56,6 +61,8 @@ Indicates the Want containing information about the target ability to start.
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

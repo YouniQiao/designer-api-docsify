@@ -1,10 +1,12 @@
 # SwiperContentTransitionProxy
 
-Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper**component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing.
+Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface SwiperContentTransitionProxy--><!--Device-unnamed-declare interface SwiperContentTransitionProxy-End-->
 
@@ -21,6 +23,8 @@ Notifies the **Swiper** component that the custom animation has finished playing
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Index of a page in the viewport.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,6 +75,8 @@ Length of the page specified by **index** along the main axis, in vp.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +102,8 @@ Position of the page specified by **index** relative to the start position of th
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -117,6 +127,8 @@ Index of the currently selected page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void
 ```
 
-Obtains the active notifications of this application. This API uses an asynchronous callback to return the result.
+Obtains the active notifications of this application. This API uses an asynchronous callback to return the result. This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
-This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void--><!--Device-notificationManager-function getActiveNotifications(callback: AsyncCallback<Array<NotificationRequest>>): void-End-->
 
@@ -24,7 +24,7 @@ This API is used to query the detailed information list of all stored notificati
 
 **See also:**
 
-[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int,callback: AsyncCallback<void>): void) sets the notification
+setBadgeNumber sets the notification
 
 **Parameters:**
 
@@ -36,10 +36,10 @@ This API is used to query the detailed information list of all stored notificati
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -63,11 +63,11 @@ notificationManager.getActiveNotifications(getActiveNotificationsCallback);
 function getActiveNotifications(): Promise<Array<NotificationRequest>>
 ```
 
-Obtains the active notifications of this application. This API uses a promise to return the result.
+Obtains the active notifications of this application. This API uses a promise to return the result. This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
 
-This API is used to query the detailed information list of all stored notifications of the current application in the notification center, including the ID, tag, content, and creation time of each notification.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getActiveNotifications(): Promise<Array<NotificationRequest>>--><!--Device-notificationManager-function getActiveNotifications(): Promise<Array<NotificationRequest>>-End-->
 
@@ -75,7 +75,7 @@ This API is used to query the detailed information list of all stored notificati
 
 **See also:**
 
-[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int): Promise<void>) sets the notification
+setBadgeNumber sets the notification
 
 **Return value:**
 
@@ -87,9 +87,9 @@ This API is used to query the detailed information list of all stored notificati
 
 | Error Code ID |
 | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

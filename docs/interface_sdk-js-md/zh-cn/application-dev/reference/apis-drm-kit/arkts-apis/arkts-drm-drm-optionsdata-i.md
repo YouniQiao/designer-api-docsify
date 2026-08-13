@@ -2,9 +2,11 @@
 
 设备证书请求的可选数据。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-drm-interface OptionsData--><!--Device-drm-interface OptionsData-End-->
 
@@ -20,9 +22,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,9 +44,11 @@ value: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

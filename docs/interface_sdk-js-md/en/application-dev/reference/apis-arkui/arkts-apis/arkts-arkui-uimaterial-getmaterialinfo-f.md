@@ -9,18 +9,22 @@ import { uiMaterial } from '@kit.ArkUI';
 ## getMaterialInfo
 
 ```TypeScript
-export function getMaterialInfo(): MaterialInfo
+function getMaterialInfo(): MaterialInfo
 ```
 
 Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../quick-start/module-configuration-file.md) file of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiMaterial-export function getMaterialInfo(): MaterialInfo--><!--Device-uiMaterial-export function getMaterialInfo(): MaterialInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-uiMaterial-function getMaterialInfo(): MaterialInfo--><!--Device-uiMaterial-function getMaterialInfo(): MaterialInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

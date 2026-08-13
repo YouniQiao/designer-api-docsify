@@ -16,6 +16,8 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function addContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
@@ -39,15 +41,15 @@ Calls the API for adding a contact to open the UI. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16700102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) |
-| [16700103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-operation-canceled) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16700102](../errorcode-contacts.md#16700102-database-data-addition-deletion-or-modification-failed) |
+| [16700103](../errorcode-contacts.md#16700103-operation-canceled) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 
-In the examples in this document, the UIAbilityContext is obtained through this.context, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, the UIAbilityContext is obtained through this.context, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

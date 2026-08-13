@@ -1,17 +1,19 @@
 # Dependency
 
 ```TypeScript
-export type Dependency = _HapModuleInfo.Dependency
+export type Dependency = _Dependency
 ```
 
 Defines the information about the dynamic shared libraries on which the module depends.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type Dependency = _HapModuleInfo.Dependency--><!--Device-bundleManager-export type Dependency = _HapModuleInfo.Dependency-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-bundleManager-export type Dependency = _Dependency--><!--Device-bundleManager-export type Dependency = _Dependency-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _HapModuleInfo.Dependency
+**Property type:** _Dependency

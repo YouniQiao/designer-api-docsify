@@ -6,6 +6,8 @@ Defines the outline of the drop-down menu.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MenuOutlineOptions--><!--Device-unnamed-declare interface MenuOutlineOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Defines the outline of the drop-down menu.
 color?: ResourceColor | EdgeColors
 ```
 
-Color of the outline.
+Color of the outline. Default value: **#19ffffff**
 
-Default value: **#19ffffff**
-
-**Type:** ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md)
+**Type:** ResourceColor \| EdgeColors
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ Default value: **#19ffffff**
 width?: Dimension | EdgeOutlineWidths
 ```
 
-Width of the outline. Percentage values are not supported.
+Width of the outline. Percentage values are not supported. Default value: **0**
 
-Default value: **0**
-
-**Type:** Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)
+**Type:** Dimension \| EdgeOutlineWidths
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

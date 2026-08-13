@@ -2,9 +2,11 @@
 
 Defines the cell broadcast configuration options.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface CBConfigOptions--><!--Device-sms-export interface CBConfigOptions-End-->
 
@@ -28,9 +30,11 @@ Whether to enable cell broadcast.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-enable: boolean--><!--Device-CBConfigOptions-enable: boolean-End-->
 
@@ -46,11 +50,13 @@ endMessageId: int
 
 End message ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-endMessageId: int--><!--Device-CBConfigOptions-endMessageId: int-End-->
 
@@ -68,9 +74,11 @@ RAN type.
 
 **Type:** [RanType](arkts-telephony-sms-rantype-e-sys.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-ranType: RanType--><!--Device-CBConfigOptions-ranType: RanType-End-->
 
@@ -86,11 +94,13 @@ slotId: int
 
 Card slot ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-slotId: int--><!--Device-CBConfigOptions-slotId: int-End-->
 
@@ -106,11 +116,13 @@ startMessageId: int
 
 Start message ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CBConfigOptions-startMessageId: int--><!--Device-CBConfigOptions-startMessageId: int-End-->
 

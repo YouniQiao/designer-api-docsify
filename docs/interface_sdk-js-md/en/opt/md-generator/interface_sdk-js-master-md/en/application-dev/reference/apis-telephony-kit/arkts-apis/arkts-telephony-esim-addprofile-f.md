@@ -14,7 +14,9 @@ function addProfile(profile: DownloadableProfile): Promise<boolean>
 
 Starts a page through an ability, on which users can touch the button to download a profile.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_ESIM_STATE_OPEN
 
@@ -38,11 +40,11 @@ Starts a page through an ability, on which users can touch the button to downloa
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [3120002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#3120002-system-internal-error) |
-| [3120001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#3120001-service-connection-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) |
 
 ## Examples
 

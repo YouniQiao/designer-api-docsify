@@ -14,7 +14,9 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 查询支持跨设备协同通知的设备类型。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -34,8 +36,8 @@ function getDistributedDeviceList(): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

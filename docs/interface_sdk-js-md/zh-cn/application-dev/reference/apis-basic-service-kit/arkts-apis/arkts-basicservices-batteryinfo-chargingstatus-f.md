@@ -12,6 +12,8 @@ function chargingStatus(): BatteryChargeState
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-function chargingStatus(): BatteryChargeState--><!--Device-batteryInfo-function chargingStatus(): BatteryChargeState-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

@@ -4,6 +4,8 @@ Defines the ad status change callback.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export interface AdInteractionListener--><!--Device-advertising-export interface AdInteractionListener-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -23,6 +25,8 @@ onStatusChanged(status: string, ad: Advertisement, data: string)
 Called when the ad display status changes.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

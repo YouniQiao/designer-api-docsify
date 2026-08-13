@@ -2,9 +2,11 @@
 
 Enumerates the color component types of images.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-enum ComponentType--><!--Device-image-enum ComponentType-End-->
 
@@ -18,9 +20,11 @@ YUV_Y = 1
 
 Luminance component.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-YUV_Y = 1--><!--Device-ComponentType-YUV_Y = 1-End-->
 
@@ -34,9 +38,11 @@ YUV_U = 2
 
 Chrominance component.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-YUV_U = 2--><!--Device-ComponentType-YUV_U = 2-End-->
 
@@ -50,9 +56,11 @@ YUV_V = 3
 
 Chrominance component.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-YUV_V = 3--><!--Device-ComponentType-YUV_V = 3-End-->
 
@@ -66,9 +74,11 @@ JPEG = 4
 
 JPEG type.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-JPEG = 4--><!--Device-ComponentType-JPEG = 4-End-->
 

@@ -2,9 +2,11 @@
 
 Represents the optional parameter used to create an OS account.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface CreateOsAccountOptions--><!--Device-osAccount-interface CreateOsAccountOptions-End-->
 
@@ -24,13 +26,15 @@ import { osAccount } from '@kit.BasicServicesKit';
 allowedPreinstalledBundles?: Array<string>
 ```
 
-Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std::nullopt**.
+Trustlist of the preinstalled applications, which can be installed on the device. The default value is **std:: nullopt**.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-allowedPreinstalledBundles?: Array<string>-End-->
 
@@ -44,13 +48,15 @@ Trustlist of the preinstalled applications, which can be installed on the device
 disallowedPreinstalledBundles?: Array<string>
 ```
 
-Forbidden list of the preinstalled applications, which cannot be installed on the device. The value is left empty  by default.
+Forbidden list of the preinstalled applications, which cannot be installed on the device. The value is left empty by default.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>--><!--Device-CreateOsAccountOptions-disallowedPreinstalledBundles?: Array<string>-End-->
 
@@ -61,22 +67,20 @@ Forbidden list of the preinstalled applications, which cannot be installed on th
 ## shortName
 
 ```TypeScript
-shortName: string
+shortName?: string
 ```
 
-Short name of the account (used as the name of the personal folder).
-
-**The short name cannot**:
-
-1. Contain any of the following characters: &lt; &gt;| : " * ? / \2. Contain any of the following: . or ..3. Exceed 255 characters.
+Short name of the account (used as the name of the personal folder). **The short name cannot**: 1. Contain any of the following characters: &lt; &gt;| : " * ? / \ 2. Contain any of the following: . or .. 3. Exceed 255 characters.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CreateOsAccountOptions-shortName: string--><!--Device-CreateOsAccountOptions-shortName: string-End-->
+**Deprecated since:** -1
+
+<!--Device-CreateOsAccountOptions-shortName?: string--><!--Device-CreateOsAccountOptions-shortName?: string-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -94,7 +98,9 @@ Token obtained from the authentication management API. The value is left empty b
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-CreateOsAccountOptions-token?: Uint8Array--><!--Device-CreateOsAccountOptions-token?: Uint8Array-End-->
 

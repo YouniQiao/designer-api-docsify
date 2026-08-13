@@ -6,19 +6,11 @@
 function openToast(options: ShowToastOptions): Promise<number>
 ```
 
-显示即时反馈并通过Promise返回其id。
-
-> **说明：**
-> 
-> - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明
-> [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel-1)
-> 。
-> 
-> - 直接使用openToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获
-> 取到PromptAction对象，再通过该对象调用
-> [openToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opentoast18)实现。
+显示即时反馈并通过Promise返回其id。 > **说明：** > > - 不支持在输入法类型窗口中使用子窗（showMode设置为TOP_MOST或者SYSTEM_TOP_MOST）的openToast，详情见输入法框架的约束与限制说明 > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) > 。 > > - 直接使用openToast可能导致[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题，建议使用UIContext中的getPromptAction方法获 > 取到PromptAction对象，再通过该对象调用 > [openToast](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction.md#opentoast18)实现。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,8 +36,8 @@ function openToast(options: ShowToastOptions): Promise<number>
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

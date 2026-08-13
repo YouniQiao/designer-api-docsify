@@ -4,7 +4,7 @@ Declaration of the title bar style configuration.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class EditableTitleBarStyleV2--><!--Device-unnamed-export declare class EditableTitleBarStyleV2-End-->
 
@@ -26,6 +26,8 @@ Constructor of EditableTitleBarStyleV2.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ Constructor of EditableTitleBarStyleV2.
 ## backgroundBlurStyle
 
 ```TypeScript
-public backgroundBlurStyle?: BlurStyle
+@Trace
+  public backgroundBlurStyle?: BlurStyle
 ```
 
 Background blur style.
@@ -52,18 +55,21 @@ Background blur style.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleBarStyleV2-public backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarStyleV2-public backgroundBlurStyle?: BlurStyle-End-->
+<!--Device-EditableTitleBarStyleV2-@Trace  public backgroundBlurStyle?: BlurStyle--><!--Device-EditableTitleBarStyleV2-@Trace  public backgroundBlurStyle?: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
 
 ```TypeScript
-public backgroundColor?: ResourceColor
+@Trace
+  public backgroundColor?: ResourceColor
 ```
 
 Background color.
@@ -72,18 +78,21 @@ Background color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleBarStyleV2-public backgroundColor?: ResourceColor--><!--Device-EditableTitleBarStyleV2-public backgroundColor?: ResourceColor-End-->
+<!--Device-EditableTitleBarStyleV2-@Trace  public backgroundColor?: ResourceColor--><!--Device-EditableTitleBarStyleV2-@Trace  public backgroundColor?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## contentMargin
 
 ```TypeScript
-public contentMargin?: LocalizedMargin
+@Trace
+  public contentMargin?: LocalizedMargin
 ```
 
 Content margin, supports RTL layout.
@@ -92,18 +101,21 @@ Content margin, supports RTL layout.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleBarStyleV2-public contentMargin?: LocalizedMargin--><!--Device-EditableTitleBarStyleV2-public contentMargin?: LocalizedMargin-End-->
+<!--Device-EditableTitleBarStyleV2-@Trace  public contentMargin?: LocalizedMargin--><!--Device-EditableTitleBarStyleV2-@Trace  public contentMargin?: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## safeAreaEdges
 
 ```TypeScript
-public safeAreaEdges?: Array<SafeAreaEdge>
+@Trace
+  public safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
 Indicates the edges of the safe area.
@@ -112,18 +124,21 @@ Indicates the edges of the safe area.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleBarStyleV2-public safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarStyleV2-public safeAreaEdges?: Array<SafeAreaEdge>-End-->
+<!--Device-EditableTitleBarStyleV2-@Trace  public safeAreaEdges?: Array<SafeAreaEdge>--><!--Device-EditableTitleBarStyleV2-@Trace  public safeAreaEdges?: Array<SafeAreaEdge>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## safeAreaTypes
 
 ```TypeScript
-public safeAreaTypes?: Array<SafeAreaType>
+@Trace
+  public safeAreaTypes?: Array<SafeAreaType>
 ```
 
 Indicates the types of the safe area.
@@ -132,10 +147,12 @@ Indicates the types of the safe area.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-EditableTitleBarStyleV2-public safeAreaTypes?: Array<SafeAreaType>--><!--Device-EditableTitleBarStyleV2-public safeAreaTypes?: Array<SafeAreaType>-End-->
+<!--Device-EditableTitleBarStyleV2-@Trace  public safeAreaTypes?: Array<SafeAreaType>--><!--Device-EditableTitleBarStyleV2-@Trace  public safeAreaTypes?: Array<SafeAreaType>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

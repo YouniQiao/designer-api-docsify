@@ -1,12 +1,14 @@
 # ChineseCalendar
 
-提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。继承自[Calendar](arkts-localization-i18n-calendar-c.md#Calendar)，支持[Calendar](arkts-localization-i18n-calendar-c.md#Calendar)的方法。
+提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](arkts-localization-i18n-calendar-c.md#Calendar)，支持[Calendar](arkts-localization-i18n-calendar-c.md#Calendar)的方法。
 
 **继承/实现关系：** ChineseCalendar extends [Calendar](arkts-localization-i18n-calendar-c.md#Calendar)
 
 **起始版本：** 26.0.0
 
-<!--Device-i18n-export class ChineseCalendar extends Calendar--><!--Device-i18n-export class ChineseCalendar extends Calendar-End-->
+**废弃版本：** -1
+
+<!--Device-i18n-export class ChineseCalendar--><!--Device-i18n-export class ChineseCalendar-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -19,6 +21,8 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 判断指定年份某月是否存在闰月。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,7 +50,7 @@ public static checkLeapMonth(gregorianYear: number, cyclicalYear: number, month:
 
 | 错误码ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 ## setChineseCalendarTime
 
@@ -57,6 +61,8 @@ public setChineseCalendarTime(chineseCalendarTime: ChineseCalendarTime): void
 设置农历对象的时间日期。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 InflateGetDictionary and deflateGetDictionary return value information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface DictionaryOutputInfo--><!--Device-zlib-interface DictionaryOutputInfo-End-->
 
@@ -24,9 +26,11 @@ Length of a dictionary.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DictionaryOutputInfo-dictionaryLength: int--><!--Device-DictionaryOutputInfo-dictionaryLength: int-End-->
 
@@ -42,9 +46,11 @@ For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#Retur
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DictionaryOutputInfo-status: ReturnStatus--><!--Device-DictionaryOutputInfo-status: ReturnStatus-End-->
 

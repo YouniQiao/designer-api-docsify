@@ -4,9 +4,11 @@ Defines a touch event.
 
 **Inheritance/Implementation:** TouchEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-export declare interface TouchEvent extends InputEvent--><!--Device-unnamed-export declare interface TouchEvent extends InputEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface TouchEvent--><!--Device-unnamed-export declare interface TouchEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,7 +28,9 @@ Coordinate correction mode.
 
 **Type:** [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md)
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchEvent-fixedMode?: FixedMode--><!--Device-TouchEvent-fixedMode?: FixedMode-End-->
 
@@ -40,12 +44,13 @@ Coordinate correction mode.
 isInject?: boolean
 ```
 
-Whether the touch event is an injection event. For details about injection events, see  
-[@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md#inputEventClient).
+Whether the touch event is an injection event. For details about injection events, see [@ohos.multimodalInput.inputEventClient](arkts-multimodalinput-inputeventclient.md#@ohos.multimodalInput.inputEventClient).
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TouchEvent-isInject?: boolean--><!--Device-TouchEvent-isInject?: boolean-End-->
 

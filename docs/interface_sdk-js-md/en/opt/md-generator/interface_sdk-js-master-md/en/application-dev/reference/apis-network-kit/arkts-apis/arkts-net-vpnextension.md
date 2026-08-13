@@ -4,6 +4,8 @@ Provides VPN related interfaces.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace vpnExtension--><!--Device-unnamed-declare namespace vpnExtension-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -20,19 +22,19 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection) |
-| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver) |
-| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability) |
-| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability) |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createVpnConnection) |
+| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createVpnObserver) |
+| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startVpnExtensionAbility) |
+| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopVpnExtensionAbility) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md#isalwaysonvpnenabled) |
-| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md#setalwaysonvpnenabled) |
-| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md#updatevpnauthorizedstate) |
+| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md#isAlwaysOnVpnEnabled-(System-API)) |
+| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md#setAlwaysOnVpnEnabled-(System-API)) |
+| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md#updateVpnAuthorizedState-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

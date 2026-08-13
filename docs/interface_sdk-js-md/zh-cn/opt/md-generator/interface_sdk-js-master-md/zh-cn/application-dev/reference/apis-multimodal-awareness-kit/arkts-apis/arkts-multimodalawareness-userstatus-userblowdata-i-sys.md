@@ -2,11 +2,13 @@
 
 用户吹气数据。
 
-**继承/实现关系：** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**继承/实现关系：** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData（系统接口）)
 
 **起始版本：** 26.0.0
 
-<!--Device-userStatus-export interface UserBlowData extends UserStatusData--><!--Device-userStatus-export interface UserBlowData extends UserStatusData-End-->
+**废弃版本：** -1
+
+<!--Device-userStatus-export interface UserBlowData--><!--Device-userStatus-export interface UserBlowData-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -23,6 +25,8 @@ blowDirection?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ emotion?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserBlowData-emotion?: int--><!--Device-UserBlowData-emotion?: int-End-->
@@ -63,6 +69,8 @@ facePosition?: number[]
 **类型：** number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ gravityAcceleration?: number[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserBlowData-gravityAcceleration?: double[]--><!--Device-UserBlowData-gravityAcceleration?: double[]-End-->
@@ -103,6 +113,8 @@ isGazeStatus?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,6 +136,8 @@ linearAcceleration?: number[][]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserBlowData-linearAcceleration?: double[][]--><!--Device-UserBlowData-linearAcceleration?: double[][]-End-->
@@ -143,6 +157,8 @@ strengthLevel?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 A color class used to store the color picking result. It is suitable for scenarios such as obtaining the main color, the color with the largest proportion, and the color with the highest saturation from an image in conjunction with ColorPicker, helping developers conveniently obtain and pass image color picking results.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-effectKit-interface Color--><!--Device-effectKit-interface Color-End-->
 
@@ -24,11 +26,13 @@ alpha: int
 
 Alpha component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,11 +50,13 @@ blue: int
 
 Blue component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,11 +74,13 @@ green: int
 
 Green component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,11 +98,13 @@ red: int
 
 Red component value. Value range: [0x0, 0xFF].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

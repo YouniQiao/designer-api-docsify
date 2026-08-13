@@ -18,6 +18,8 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -34,8 +36,8 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -59,7 +61,9 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>-End-->
 
@@ -77,6 +81,6 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

@@ -6,9 +6,9 @@ Defines chip symbol icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export abstract class ChipV2SymbolIcon extends ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2SymbolIcon extends ChipV2Icon-End-->
+<!--Device-unnamed-export abstract class ChipV2SymbolIcon--><!--Device-unnamed-export abstract class ChipV2SymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +28,8 @@ The constructor of ChipV2SymbolIcon
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,7 +47,8 @@ The constructor of ChipV2SymbolIcon
 ## activated
 
 ```TypeScript
-public activated?: SymbolGlyphModifier
+@Trace
+  public activated?: SymbolGlyphModifier
 ```
 
 Symbol activated.
@@ -54,18 +57,21 @@ Symbol activated.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2SymbolIcon-public activated?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-public activated?: SymbolGlyphModifier-End-->
+<!--Device-ChipV2SymbolIcon-@Trace  public activated?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-@Trace  public activated?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
 
 ```TypeScript
-public normal?: SymbolGlyphModifier
+@Trace
+  public normal?: SymbolGlyphModifier
 ```
 
 Symbol normal.
@@ -74,10 +80,12 @@ Symbol normal.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2SymbolIcon-public normal?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-public normal?: SymbolGlyphModifier-End-->
+<!--Device-ChipV2SymbolIcon-@Trace  public normal?: SymbolGlyphModifier--><!--Device-ChipV2SymbolIcon-@Trace  public normal?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

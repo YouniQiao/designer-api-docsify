@@ -1,14 +1,12 @@
 # PixelMap
 
-The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x  
-[Bytes per pixel](arkts-image-image-pixelmapformat-e.md#PixelMapFormat).Since API version 11, PixelMap supports cross-thread calls through [Worker](@ohos.worker). If a PixelMap object is invoked by another thread through [Worker](@ohos.worker), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request.Before calling any API in PixelMap, you can use  
-[image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap-1)to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md#image) to decode an image to a PixelMap object.To develop an atomic service, use [ImageSource](arkts-multimedia-image.md#image) to create a PixelMap object.Images occupy a large amount of memory. When you finish using a PixelMap instance, call  
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md#PixelMapFormat). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md#worker), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createPixelMap) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-multimedia-image.md#@ohos.multimedia.image) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-multimedia-image.md#@ohos.multimedia.image) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-interface PixelMap--><!--Device-image-interface PixelMap-End-->
 
@@ -22,9 +20,11 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback:
 
 Performs color space conversion (CSC) on the image pixel color based on a given color space. This API uses an asynchronous callback to return the result.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void-End-->
 
@@ -35,16 +35,16 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetColorSpace | colorSpaceManager.ColorSpaceManager | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
-| [62980108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
 
 ## applyColorSpace
 
@@ -54,9 +54,11 @@ applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<
 
 Performs Color Space Converters (CSC) on the image pixel color based on a given color space. This API uses a promise to return the result.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>--><!--Device-PixelMap-applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>-End-->
 
@@ -78,10 +80,10 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
-| [62980108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| [62980108](../errorcode-image.md#62980108-图片颜色转换错误) | Failed to convert the color space. |
 
 ## applyCrop
 
@@ -93,7 +95,9 @@ Crops the PixelMap.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -121,12 +125,12 @@ Crops the PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | The specified region is invalid or out of range. |
 
 ## applyCropSync
 
@@ -138,7 +142,9 @@ Crops the PixelMap.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,12 +166,12 @@ Crops the PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) | The specified region is invalid or out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. Failed to process pixel data. 2. The system is out of memory. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | The specified region is invalid or out of range. |
 
 ## applyFlip
 
@@ -177,7 +183,9 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,12 +214,12 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyFlipSync
 
@@ -223,7 +231,9 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,32 +256,26 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible cause: The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible cause: The system is out of memory. |
 
 ## applyRotate
 
-ArkTS-Dyn:
-```TypeScript
-applyRotate(angle: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyRotate(angle: double): Promise<void>
 ```
 
-Rotates the PixelMap.
-
-Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,7 +291,7 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The rotation angle in degrees. Unit: Degree. |
+| angle | double | 是 | The rotation angle in degrees. Unit: Degree. |
 
 **返回值：**
 
@@ -299,32 +303,26 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyRotateSync
 
-ArkTS-Dyn:
-```TypeScript
-applyRotateSync(angle: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyRotateSync(angle: double): void
 ```
 
-Rotates the PixelMap.
-
-Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -340,27 +338,21 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The rotation angle in degrees. Unit: Degree. |
+| angle | double | 是 | The rotation angle in degrees. Unit: Degree. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScale
 
-ArkTS-Dyn:
-```TypeScript
-applyScale(x: number, y: number, level?: AntiAliasingLevel): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyScale(x: double, y: double, level?: AntiAliasingLevel): Promise<void>
 ```
@@ -369,7 +361,9 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -385,8 +379,8 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The scale ratio of width. Unit: Percentage. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The scale ratio of height. Unit: Percentage. |
+| x | double | 是 | The scale ratio of width. Unit: Percentage. |
+| y | double | 是 | The scale ratio of height. Unit: Percentage. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | The anti-aliasing algorithm to be used. Default value: NONE. |
 
 **返回值：**
@@ -399,21 +393,15 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyScaleSync
 
-ArkTS-Dyn:
-```TypeScript
-applyScaleSync(x: number, y: number, level?: AntiAliasingLevel): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyScaleSync(x: double, y: double, level?: AntiAliasingLevel): void
 ```
@@ -422,7 +410,9 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -438,29 +428,23 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The scale ratio of width. Unit: Percentage. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The scale ratio of height. Unit: Percentage. |
+| x | double | 是 | The scale ratio of width. Unit: Percentage. |
+| y | double | 是 | The scale ratio of height. Unit: Percentage. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | The anti-aliasing algorithm to be used. Default value: NONE. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslate
 
-ArkTS-Dyn:
-```TypeScript
-applyTranslate(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyTranslate(x: double, y: double): Promise<void>
 ```
@@ -469,7 +453,9 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -485,8 +471,8 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | double | 是 | The distance in pixels to move in the horizontal direction. Unit: px. |
+| y | double | 是 | The distance in pixels to move in the vertical direction. Unit: px. |
 
 **返回值：**
 
@@ -498,21 +484,15 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## applyTranslateSync
 
-ArkTS-Dyn:
-```TypeScript
-applyTranslateSync(x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 applyTranslateSync(x: double, y: double): void
 ```
@@ -521,7 +501,9 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -537,19 +519,19 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | double | 是 | The distance in pixels to move in the horizontal direction. Unit: px. |
+| y | double | 是 | The distance in pixels to move in the vertical direction. Unit: px. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## clone
 
@@ -559,9 +541,11 @@ clone(): Promise<PixelMap>
 
 Copies this PixelMap object. This API uses a promise to return the result.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-clone(): Promise<PixelMap>--><!--Device-PixelMap-clone(): Promise<PixelMap>-End-->
 
@@ -577,11 +561,11 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource unavailable. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | Image YUV And ASTC types are not supported. |
-| [62980102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-图片分配内存错误) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-图片分配内存错误) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## cloneSync
 
@@ -591,9 +575,11 @@ cloneSync(): PixelMap
 
 Copies this PixelMap object. This API returns the result synchronously.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-cloneSync(): PixelMap--><!--Device-PixelMap-cloneSync(): PixelMap-End-->
 
@@ -609,11 +595,11 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource unavailable. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | Image YUV And ASTC types are not supported. |
-| [62980102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980102-图片分配内存错误) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | Image YUV And ASTC types are not supported. |
+| [62980102](../errorcode-image.md#62980102-图片分配内存错误) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
+| [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 
 ## convertPixelFormat
 
@@ -623,9 +609,11 @@ convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>
 
 The method is used for the transformation of the image formats. Pixel data will be changed by calling this method.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>--><!--Device-PixelMap-convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>-End-->
 
@@ -647,11 +635,11 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
-| [62980274](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980274-图片转换失败) | The conversion failed. |
-| [62980178](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the pixelmap. |
-| [62980276](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980276-不支持图片转换目标类型) | The type to be converted is an unsupported target pixel format. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid input parameter. |
+| [62980274](../errorcode-image.md#62980274-图片转换失败) | The conversion failed. |
+| [62980178](../errorcode-image.md#62980178-pixelmap创建失败) | Failed to create the pixelmap. |
+| [62980276](../errorcode-image.md#62980276-不支持图片转换目标类型) | The type to be converted is an unsupported target pixel format. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## createAlphaPixelmap
 
@@ -659,13 +647,13 @@ The method is used for the transformation of the image formats. Pixel data will 
 createAlphaPixelmap(): Promise<PixelMap>
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -687,13 +675,13 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractAlphaPixelMap) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -707,7 +695,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
 
 ## createAlphaPixelmapSync
 
@@ -715,15 +703,15 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 createAlphaPixelmapSync(): PixelMap
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
+Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractAlphaPixelMapSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractAlphaPixelMapSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap--><!--Device-PixelMap-createAlphaPixelmapSync(): PixelMap-End-->
 
@@ -739,26 +727,22 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## createCroppedAndScaledPixelMap
 
-ArkTS-Dyn:
-```TypeScript
-createCroppedAndScaledPixelMap(region: Region, x: number, y: number, level?: AntiAliasingLevel): Promise<PixelMap>
-```
-
-ArkTS-Sta:
 ```TypeScript
 createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>
 ```
 
 Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API uses a promise to return the result.
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>--><!--Device-PixelMap-createCroppedAndScaledPixelMap(region: Region, x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>-End-->
 
@@ -769,8 +753,8 @@ Creates an image that has been cropped and resized based on the specified croppi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | region | Region | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. It must not be **0**. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. It must not be **0**. |
+| x | double | 是 | Scale factor of the width. It must not be **0**. |
+| y | double | 是 | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
 
 **返回值：**
@@ -783,28 +767,24 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
-| [7600205](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported memory format or pixel format. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | Invalid region. |
 
 ## createCroppedAndScaledPixelMapSync
 
-ArkTS-Dyn:
-```TypeScript
-createCroppedAndScaledPixelMapSync(region: Region, x: number, y: number, level?: AntiAliasingLevel): PixelMap
-```
-
-ArkTS-Sta:
 ```TypeScript
 createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap
 ```
 
 Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API returns the result synchronously.
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap--><!--Device-PixelMap-createCroppedAndScaledPixelMapSync(region: Region, x: double, y: double, level?: AntiAliasingLevel): PixelMap-End-->
 
@@ -815,8 +795,8 @@ Creates an image that has been cropped and resized based on the specified croppi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | region | Region | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. It must not be **0**. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. It must not be **0**. |
+| x | double | 是 | Scale factor of the width. It must not be **0**. |
+| y | double | 是 | Scale factor of the height. It must not be **0**. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
 
 **返回值：**
@@ -829,28 +809,24 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
-| [7600205](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported memory format or pixel format. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
-| [7600204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600204-无效的区域) | Invalid region. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
+| [7600205](../errorcode-image.md#7600205-不支持的内存格式或像素格式) | Unsupported memory format or pixel format. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600204](../errorcode-image.md#7600204-无效的区域) | Invalid region. |
 
 ## createScaledPixelMap
 
-ArkTS-Dyn:
-```TypeScript
-createScaledPixelMap(x: number, y: number, level?: AntiAliasingLevel): Promise<PixelMap>
-```
-
-ArkTS-Sta:
 ```TypeScript
 createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>
 ```
 
 Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API uses a promise to return the result.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>--><!--Device-PixelMap-createScaledPixelMap(x: double, y: double, level?: AntiAliasingLevel): Promise<PixelMap>-End-->
 
@@ -860,8 +836,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
 
 **返回值：**
@@ -874,26 +850,22 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## createScaledPixelMapSync
 
-ArkTS-Dyn:
-```TypeScript
-createScaledPixelMapSync(x: number, y: number, level?: AntiAliasingLevel): PixelMap
-```
-
-ArkTS-Sta:
 ```TypeScript
 createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap
 ```
 
 Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API returns the result synchronously.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap--><!--Device-PixelMap-createScaledPixelMapSync(x: double, y: double, level?: AntiAliasingLevel): PixelMap-End-->
 
@@ -903,8 +875,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
 
 **返回值：**
@@ -917,8 +889,8 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## crop
 
@@ -926,13 +898,13 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 crop(region: Region, callback: AsyncCallback<void>): void
 ```
 
-Crops this image based on a given size. This API uses an asynchronous callback to return the result.
+Crops this image based on a given size. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -947,7 +919,7 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) inste
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | region | Region | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## crop
 
@@ -955,13 +927,13 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) inste
 crop(region: Region): Promise<void>
 ```
 
-Crops a PixelMap based on a given size. This API uses a promise to return the result.
+Crops a PixelMap based on a given size. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -989,15 +961,15 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applyCrop) inste
 cropSync(region: Region): void
 ```
 
-Crops this image based on a given size. This API returns the result synchronously.
+Crops this image based on a given size. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-cropSync(region: Region): void--><!--Device-PixelMap-cropSync(region: Region): void-End-->
 
@@ -1013,8 +985,8 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applyCropSyn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## extractAlphaPixelMap
 
@@ -1026,7 +998,9 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1048,11 +1022,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600306](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-数据转换失败) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The current PixelMap has been passed across threads. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The current PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-数据转换失败) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## extractAlphaPixelMapSync
 
@@ -1064,7 +1038,9 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1086,11 +1062,11 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600306](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600306-数据转换失败) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The current PixelMap has been passed across threads. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The current PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600306](../errorcode-image.md#7600306-数据转换失败) | Failed to convert the data. Possible causes: 1. Failed to perform pixel format conversion. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Current PixelMap data is corrupted. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The current PixelMap has been passed across threads. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The current PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
 
 ## flip
 
@@ -1098,13 +1074,13 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void
 ```
 
-Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
+Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1120,7 +1096,7 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) inste
 | --- | --- | --- | --- |
 | horizontal | boolean | 是 | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
 | vertical | boolean | 是 | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## flip
 
@@ -1128,13 +1104,13 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) inste
 flip(horizontal: boolean, vertical: boolean): Promise<void>
 ```
 
-Flips a PixelMap based on a given angle. This API uses a promise to return the result.
+Flips a PixelMap based on a given angle. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1163,15 +1139,15 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyFlip) inste
 flipSync(horizontal: boolean, vertical: boolean): void
 ```
 
-Flips this image horizontally or vertically, or both. This API returns the result synchronously.
+Flips this image horizontally or vertically, or both. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void--><!--Device-PixelMap-flipSync(horizontal: boolean, vertical: boolean): void-End-->
 
@@ -1188,26 +1164,22 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyFlipSyn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## getBytesNumberPerRow
 
-ArkTS-Dyn:
-```TypeScript
-getBytesNumberPerRow(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBytesNumberPerRow(): int
 ```
 
 Obtains the number of bytes per row of this image. Unit: bytes.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1221,7 +1193,7 @@ Obtains the number of bytes per row of this image. Unit: bytes.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of bytes per row. |
+| int | Number of bytes per row. |
 
 ## getColorSpace
 
@@ -1231,9 +1203,11 @@ getColorSpace(): colorSpaceManager.ColorSpaceManager
 
 Obtains the color space of this image.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager--><!--Device-PixelMap-getColorSpace(): colorSpaceManager.ColorSpaceManager-End-->
 
@@ -1249,27 +1223,23 @@ Obtains the color space of this image.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
 
 ## getDensity
 
-ArkTS-Dyn:
-```TypeScript
-getDensity(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDensity(): int
 ```
 
 Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1283,7 +1253,7 @@ Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Pixel density, in ppi. |
+| int | Pixel density, in ppi. |
 
 ## getImageInfo
 
@@ -1293,9 +1263,11 @@ getImageInfo(): Promise<ImageInfo>
 
 Obtains the image information of a PixelMap. This API uses a promise to return the result.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1319,9 +1291,11 @@ getImageInfo(callback: AsyncCallback<ImageInfo>): void
 
 Obtains the image information. This API uses an asynchronous callback to return the result.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1335,7 +1309,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful , **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
 
 ## getImageInfoSync
 
@@ -1345,13 +1319,15 @@ getImageInfoSync(): ImageInfo
 
 Obtains the image information. This API returns the result synchronously.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMap-getImageInfoSync(): ImageInfo--><!--Device-PixelMap-getImageInfoSync(): ImageInfo-End-->
 
@@ -1367,7 +1343,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## getMetadata
 
@@ -1377,9 +1353,11 @@ getMetadata(key: HdrMetadataKey): HdrMetadataValue
 
 Obtains the value of the metadata with a given key in this PixelMap.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-getMetadata(key: HdrMetadataKey): HdrMetadataValue--><!--Device-PixelMap-getMetadata(key: HdrMetadataKey): HdrMetadataValue-End-->
 
@@ -1401,28 +1379,24 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource unavailable. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-内存拷贝失败) | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-内存拷贝失败) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## getPixelBytesNumber
 
-ArkTS-Dyn:
-```TypeScript
-getPixelBytesNumber(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getPixelBytesNumber(): int
 ```
 
 Obtains the total number of bytes of this image. Unit: bytes.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1436,25 +1410,21 @@ Obtains the total number of bytes of this image. Unit: bytes.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total number of bytes. |
+| int | Total number of bytes. |
 
 ## getUniqueId
 
-ArkTS-Dyn:
-```TypeScript
-getUniqueId(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getUniqueId(): int
 ```
 
 Obtains the unique ID of this PixelMap.
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-getUniqueId(): int--><!--Device-PixelMap-getUniqueId(): int-End-->
 
@@ -1464,13 +1434,13 @@ Obtains the unique ID of this PixelMap.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Unique ID. The value is a positive integer. |
+| int | Unique ID. The value is a positive integer. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | The PixelMap has been released. |
 
 ## isReleased
 
@@ -1478,16 +1448,13 @@ Obtains the unique ID of this PixelMap.
 isReleased(): boolean
 ```
 
-Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail.
+Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail. > **NOTE：**> > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
-> **NOTE：**
-> 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-PixelMap-isReleased(): boolean--><!--Device-PixelMap-isReleased(): boolean-End-->
 
@@ -1507,9 +1474,11 @@ marshalling(sequence: rpc.MessageSequence): void
 
 Marshals this PixelMap object and writes it to a MessageSequence object.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void--><!--Device-PixelMap-marshalling(sequence: rpc.MessageSequence): void-End-->
 
@@ -1525,28 +1494,22 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 
 ## opacity
 
-ArkTS-Dyn:
-```TypeScript
-opacity(rate: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 opacity(rate: double, callback: AsyncCallback<void>): void
 ```
 
-Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
+Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1560,28 +1523,22 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Opacity rate. The value range is (0,1]. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| rate | double | 是 | Opacity rate. The value range is (0,1]. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## opacity
 
-ArkTS-Dyn:
-```TypeScript
-opacity(rate: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 opacity(rate: double): Promise<void>
 ```
 
-Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
+Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1595,7 +1552,7 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Opacity rate. The value range is (0,1]. |
+| rate | double | 是 | Opacity rate. The value range is (0,1]. |
 
 **返回值：**
 
@@ -1605,25 +1562,19 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setOpacity) ins
 
 ## opacitySync
 
-ArkTS-Dyn:
-```TypeScript
-opacitySync(rate: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 opacitySync(rate: double): void
 ```
 
-Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
+Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images. Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacitySync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacitySync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-opacitySync(rate: double): void--><!--Device-PixelMap-opacitySync(rate: double): void-End-->
 
@@ -1633,14 +1584,14 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacityS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Opacity rate. The value range is (0,1]. |
+| rate | double | 是 | Opacity rate. The value range is (0,1]. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## readAllPixelsToBuffer
 
@@ -1648,11 +1599,13 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setOpacityS
 readAllPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads all the pixel data from the PixelMap and writes the data to a buffer.The resulting data will be in the same pixel format as the PixelMap.
+Reads all the pixel data from the PixelMap and writes the data to a buffer. The resulting data will be in the same pixel format as the PixelMap.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1680,11 +1633,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readAllPixelsToBufferSync
 
@@ -1692,11 +1645,13 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readAllPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads all the pixel data from the PixelMap and writes the data to a buffer.The resulting data will be in the same pixel format as the PixelMap.
+Reads all the pixel data from the PixelMap and writes the data to a buffer. The resulting data will be in the same pixel format as the PixelMap.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1718,11 +1673,11 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readPixels
 
@@ -1730,14 +1685,13 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer.The r
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1765,14 +1719,13 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixel
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixelsToArea) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1787,7 +1740,7 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixel
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the pixels will be read. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readPixelsSync
 
@@ -1795,16 +1748,15 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readPixel
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API returns the result synchronously.
+Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels buffer. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readPixelsToAreaSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readPixelsToAreaSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-readPixelsSync(area: PositionArea): void--><!--Device-PixelMap-readPixelsSync(area: PositionArea): void-End-->
 
@@ -1820,8 +1772,8 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readP
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## readPixelsToArea
 
@@ -1833,7 +1785,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1861,11 +1815,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readPixelsToAreaSync
 
@@ -1877,7 +1831,9 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1899,11 +1855,11 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## readPixelsToBuffer
 
@@ -1911,13 +1867,13 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses a promise to return the result.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1945,13 +1901,13 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API uses an asynchronous callback to return the result.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readAllPixelsToBuffer) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1966,7 +1922,7 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | dst | ArrayBuffer | 是 | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](#getPixelBytesNumber). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## readPixelsToBufferSync
 
@@ -1974,17 +1930,17 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 readPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer.This API returns the result synchronously.
+Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readAllPixelsToBufferSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readAllPixelsToBufferSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void--><!--Device-PixelMap-readPixelsToBufferSync(dst: ArrayBuffer): void-End-->
 
@@ -2000,8 +1956,8 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## release
 
@@ -2009,16 +1965,13 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result.Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. > **NOTE：**> > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
-> **NOTE：**
-> 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2032,7 +1985,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -2040,16 +1993,13 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 release(): Promise<void>
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result.Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly.Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. > **NOTE：**> > Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied > by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
 
-> **NOTE：**
-> 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2067,23 +2017,17 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 ## rotate
 
-ArkTS-Dyn:
-```TypeScript
-rotate(angle: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 rotate(angle: double, callback: AsyncCallback<void>): void
 ```
 
-Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
+Rotates this image based on a given angle. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2097,28 +2041,22 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Angle to rotate. Unit: degrees. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| angle | double | 是 | Angle to rotate. Unit: degrees. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## rotate
 
-ArkTS-Dyn:
-```TypeScript
-rotate(angle: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 rotate(angle: double): Promise<void>
 ```
 
-Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
+Rotates a PixelMap based on a given angle. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2132,7 +2070,7 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Angle to rotate. Unit: degrees. |
+| angle | double | 是 | Angle to rotate. Unit: degrees. |
 
 **返回值：**
 
@@ -2142,25 +2080,19 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyRotate) i
 
 ## rotateSync
 
-ArkTS-Dyn:
-```TypeScript
-rotateSync(angle: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 rotateSync(angle: double): void
 ```
 
-Rotates this image based on a given angle. This API returns the result synchronously.
+Rotates this image based on a given angle. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotateSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotateSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-rotateSync(angle: double): void--><!--Device-PixelMap-rotateSync(angle: double): void-End-->
 
@@ -2170,34 +2102,28 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyRotat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Angle to rotate. Unit: degrees. |
+| angle | double | 是 | Angle to rotate. Unit: degrees. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## scale
 
-ArkTS-Dyn:
-```TypeScript
-scale(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 scale(x: double, y: double, callback: AsyncCallback<void>): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
+Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2211,29 +2137,23 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## scale
 
-ArkTS-Dyn:
-```TypeScript
-scale(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 scale(x: double, y: double): Promise<void>
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
+Scales this image based on the scale factors of the width and height. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2247,8 +2167,8 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
 
 **返回值：**
 
@@ -2258,27 +2178,21 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 ## scale
 
-ArkTS-Dyn:
-```TypeScript
-scale(x: number, y: number, level: AntiAliasingLevel): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMap-scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>--><!--Device-PixelMap-scale(x: double, y: double, level: AntiAliasingLevel): Promise<void>-End-->
 
@@ -2288,8 +2202,8 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 是 | Anti-aliasing level. |
 
 **返回值：**
@@ -2302,30 +2216,24 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyScale) ins
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## scaleSync
 
-ArkTS-Dyn:
-```TypeScript
-scaleSync(x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 scaleSync(x: double, y: double): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
+Scales this image based on the scale factors of the width and height. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-scaleSync(x: double, y: double): void--><!--Device-PixelMap-scaleSync(x: double, y: double): void-End-->
 
@@ -2335,37 +2243,31 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## scaleSync
 
-ArkTS-Dyn:
-```TypeScript
-scaleSync(x: number, y: number, level: AntiAliasingLevel): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 scaleSync(x: double, y: double, level: AntiAliasingLevel): void
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
+Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-scaleSync(x: double, y: double, level: AntiAliasingLevel): void--><!--Device-PixelMap-scaleSync(x: double, y: double, level: AntiAliasingLevel): void-End-->
 
@@ -2375,16 +2277,16 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleS
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the width. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Scale factor of the height. |
+| x | double | 是 | Scale factor of the width. |
+| y | double | 是 | Scale factor of the height. |
 | level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 是 | Anti-aliasing level. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## setColorSpace
 
@@ -2392,13 +2294,13 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyScaleS
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixel map.
+Set color space of pixel map. This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
 
-This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method.If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or{@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
@@ -2414,8 +2316,8 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
-| [62980111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | If the image parameter invalid. |
+| [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 
 ## setMemoryNameSync
 
@@ -2425,9 +2327,11 @@ setMemoryNameSync(name: string): void
 
 Sets a memory name for this PixelMap.
 
-**起始版本：** 13
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-setMemoryNameSync(name: string): void--><!--Device-PixelMap-setMemoryNameSync(name: string): void-End-->
 
@@ -2443,9 +2347,9 @@ Sets a memory name for this PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource unavailable. |
-| [62980286](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980286-pixelmap设置内存标识符失败) | Memory format not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980286](../errorcode-image.md#62980286-pixelmap设置内存标识符失败) | Memory format not supported. |
 
 ## setMetadata
 
@@ -2455,9 +2359,11 @@ setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>
 
 Sets the value for the metadata with a given key in this PixelMap. This API uses a promise to return the result.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>--><!--Device-PixelMap-setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>-End-->
 
@@ -2480,19 +2386,13 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource unavailable. |
-| [62980173](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
-| [62980302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980302-内存拷贝失败) | Memory copy failed. Possibly caused by invalid metadata value. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource unavailable. |
+| [62980173](../errorcode-image.md#62980173-dma内存空间错误) | The DMA memory does not exist. |
+| [62980302](../errorcode-image.md#62980302-内存拷贝失败) | Memory copy failed. Possibly caused by invalid metadata value. |
 
 ## setOpacity
 
-ArkTS-Dyn:
-```TypeScript
-setOpacity(value: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOpacity(value: double): Promise<void>
 ```
@@ -2501,7 +2401,9 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2517,7 +2419,7 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | double | 是 | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
 
 **返回值：**
 
@@ -2529,21 +2431,15 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-不支持的数据格式) | Unsupported data format. Possible cause: Alpha type is not supported. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-不支持的数据格式) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setOpacitySync
 
-ArkTS-Dyn:
-```TypeScript
-setOpacitySync(value: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOpacitySync(value: double): void
 ```
@@ -2552,7 +2448,9 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2568,18 +2466,18 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | double | 是 | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600207](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600207-不支持的数据格式) | Unsupported data format. Possible cause: Alpha type is not supported. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: The specified value is out of range. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600207](../errorcode-image.md#7600207-不支持的数据格式) | Unsupported data format. Possible cause: Alpha type is not supported. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: The specified value is out of range. |
 
 ## setTransferDetached
 
@@ -2589,9 +2487,11 @@ setTransferDetached(detached: boolean): void
 
 Sets whether to detach from the original thread when this PixelMap is transmitted across threads. This API applies to the scenario where the PixelMap needs to be released immediately.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-setTransferDetached(detached: boolean): void--><!--Device-PixelMap-setTransferDetached(detached: boolean): void-End-->
 
@@ -2607,7 +2507,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## toSdr
 
@@ -2617,9 +2517,11 @@ toSdr(): Promise<void>
 
 Convert pixelmap to standard dynamic range.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-toSdr(): Promise<void>--><!--Device-PixelMap-toSdr(): Promise<void>-End-->
 
@@ -2635,27 +2537,21 @@ Convert pixelmap to standard dynamic range.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980137](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980137-图片操作无效) | Invalid image operation. |
+| [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid image operation. |
 
 ## translate
 
-ArkTS-Dyn:
-```TypeScript
-translate(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 translate(x: double, y: double, callback: AsyncCallback<void>): void
 ```
 
-Translates this image based on given coordinates. This API uses an asynchronous callback to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2669,29 +2565,23 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTransl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Y coordinate to translate, in px. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | double | 是 | X coordinate to translate, in px. |
+| y | double | 是 | Y coordinate to translate, in px. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## translate
 
-ArkTS-Dyn:
-```TypeScript
-translate(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 translate(x: double, y: double): Promise<void>
 ```
 
-Translates a PixelMap based on given coordinates. This API uses a promise to return the result.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTranslate) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2705,8 +2595,8 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTransl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Y coordinate to translate, in px. |
+| x | double | 是 | X coordinate to translate, in px. |
+| y | double | 是 | Y coordinate to translate, in px. |
 
 **返回值：**
 
@@ -2716,25 +2606,19 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applyTransl
 
 ## translateSync
 
-ArkTS-Dyn:
-```TypeScript
-translateSync(x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 translateSync(x: double, y: double): void
 ```
 
-Translates this image based on given coordinates. This API returns the result synchronously.The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen. Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTranslateSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTranslateSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-translateSync(x: double, y: double): void--><!--Device-PixelMap-translateSync(x: double, y: double): void-End-->
 
@@ -2744,15 +2628,15 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | X coordinate to translate, in px. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Y coordinate to translate, in px. |
+| x | double | 是 | X coordinate to translate, in px. |
+| y | double | 是 | Y coordinate to translate, in px. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## unmarshalling
 
@@ -2760,11 +2644,13 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applyTr
 unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 ```
 
-Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode,use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel).
+Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode, use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createPixelMapFromParcel).
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>--><!--Device-PixelMap-unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>-End-->
 
@@ -2786,9 +2672,9 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980097](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
 
 ## writeAllPixelsFromBuffer
 
@@ -2796,11 +2682,13 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 writeAllPixelsFromBuffer(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixel data from a buffer and writes the data to the PixelMap.The source data must be in the same pixel format as the PixelMap.
+Reads the pixel data from a buffer and writes the data to the PixelMap. The source data must be in the same pixel format as the PixelMap.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2828,12 +2716,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writeAllPixelsFromBufferSync
 
@@ -2841,11 +2729,13 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 writeAllPixelsFromBufferSync(src: ArrayBuffer): void
 ```
 
-Reads the pixel data from a buffer and writes the data to the PixelMap.The source data must be in the same pixel format as the PixelMap.
+Reads the pixel data from a buffer and writes the data to the PixelMap. The source data must be in the same pixel format as the PixelMap.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2867,12 +2757,12 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible cause: Size of the buffer is too small. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writeBufferToPixels
 
@@ -2880,13 +2770,13 @@ Reads the pixel data from a buffer and writes the data to the PixelMap.The sourc
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses a promise to return the result.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2914,13 +2804,13 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API uses an asynchronous callback to return the result.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeAllPixelsFromBuffer) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2935,7 +2825,7 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | src | ArrayBuffer | 是 | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](#getPixelBytesNumber). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writeBufferToPixelsSync
 
@@ -2943,15 +2833,15 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 writeBufferToPixelsSync(src: ArrayBuffer): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object.This API returns the result synchronously.
+Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeAllPixelsFromBufferSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeAllPixelsFromBufferSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void--><!--Device-PixelMap-writeBufferToPixelsSync(src: ArrayBuffer): void-End-->
 
@@ -2967,8 +2857,8 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## writePixels
 
@@ -2976,14 +2866,13 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses a promise to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3011,14 +2900,13 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writeP
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses an asynchronous callback to return the result.You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**.YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component)RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component) Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writePixelsFromArea) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 7
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3033,7 +2921,7 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writeP
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the pixels will be written. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## writePixelsFromArea
 
@@ -3045,7 +2933,9 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3073,12 +2963,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writePixelsFromAreaSync
 
@@ -3090,7 +2980,9 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3112,12 +3004,12 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
-| [7600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
+| [7600106](../errorcode-image.md#7600106-pixelmap已被传递至另一个线程) | The PixelMap has been passed to another thread. |
+| [7600105](../errorcode-image.md#7600105-pixelmap已被释放) | The PixelMap has been released. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation because the PixelMap is not editable or is locked. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get image data. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: 1. PositionArea.pixels is too small. 2. PositionArea.region is out of range. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Failed to copy the memory. |
 
 ## writePixelsSync
 
@@ -3125,18 +3017,17 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by  
-[PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API returns the result synchronously.
+Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md#PositionArea).pixels in this PixelMap object. This API returns the result synchronously. Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writePixelsFromAreaSync) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writePixelsFromAreaSync) instead for better exception handling capabilities.
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMap-writePixelsSync(area: PositionArea): void--><!--Device-PixelMap-writePixelsSync(area: PositionArea): void-End-->
 
@@ -3152,8 +3043,8 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [501](../errorcode-image.md#501-无法调用接口) | Resource Unavailable. |
 
 ## isEditable
 
@@ -3161,13 +3052,15 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 readonly isEditable: boolean
 ```
 
-Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.&lt;br&gt;This API can be used in atomic services since API version 11.&lt;br&gt;This API can be used in ArkTS widgets since API version 12.
+Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.&lt;br&gt; This API can be used in atomic services since API version 11.&lt;br&gt; This API can be used in ArkTS widgets since API version 12.
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3183,13 +3076,15 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 readonly isStrideAlignment: boolean
 ```
 
-Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned, and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false**means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
+Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned , and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false** means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PixelMap-readonly isStrideAlignment: boolean--><!--Device-PixelMap-readonly isStrideAlignment: boolean-End-->
 

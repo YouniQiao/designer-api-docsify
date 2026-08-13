@@ -12,13 +12,15 @@ import { connection } from '@kit.NetworkKit';
 function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void
 ```
 
-Remove the custom DNS rule of the [host](host) for current application.
+Remove the custom DNS rule of the host for current application.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-connection-function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void--><!--Device-connection-function removeCustomDnsRule(host: string, callback: AsyncCallback<void>): void-End-->
 
@@ -35,11 +37,11 @@ Remove the custom DNS rule of the [host](host) for current application.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -63,13 +65,15 @@ connection.removeCustomDnsRule("xxxx", (error: BusinessError, data: void) => {
 function removeCustomDnsRule(host: string): Promise<void>
 ```
 
-Remove the custom DNS rule of the [host](host) for current application.
+Remove the custom DNS rule of the host for current application.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-connection-function removeCustomDnsRule(host: string): Promise<void>--><!--Device-connection-function removeCustomDnsRule(host: string): Promise<void>-End-->
 
@@ -91,11 +95,11 @@ Remove the custom DNS rule of the [host](host) for current application.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

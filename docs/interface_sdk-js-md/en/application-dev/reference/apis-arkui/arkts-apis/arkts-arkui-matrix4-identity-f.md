@@ -12,13 +12,15 @@ import { matrix4 } from '@kit.ArkUI';
 function identity(): Matrix4Transit
 ```
 
-Matrix initialization function, which can return an identity matrix object.
+Constructs an identity matrix.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-matrix4-function identity(): Matrix4Transit--><!--Device-matrix4-function identity(): Matrix4Transit-End-->
 
@@ -28,5 +30,5 @@ Matrix initialization function, which can return an identity matrix object.
 
 | Type | Description |
 | --- | --- |
-| Matrix4Transit | Return to Matrix4Transit |
+| Matrix4Transit | Identity matrix object. |
 

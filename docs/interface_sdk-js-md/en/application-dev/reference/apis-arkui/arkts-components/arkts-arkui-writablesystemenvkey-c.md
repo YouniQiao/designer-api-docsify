@@ -2,17 +2,19 @@
 
 Defines writable system environment variable keys.
 
-**Inheritance/Implementation:** WritableSystemEnvKey extends [SystemEnvKey<T>](SystemEnvKey<T>)
+**Inheritance/Implementation:** WritableSystemEnvKey extends SystemEnvKey<T>
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-unnamed-declare class WritableSystemEnvKey<T> extends SystemEnvKey<T>--><!--Device-unnamed-declare class WritableSystemEnvKey<T> extends SystemEnvKey<T>-End-->
+<!--Device-unnamed-declare class WritableSystemEnvKey--><!--Device-unnamed-declare class WritableSystemEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

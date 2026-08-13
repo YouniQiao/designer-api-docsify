@@ -14,9 +14,11 @@ function createServer(name: string): Server
 
 Creates a **Server** object. After **start()** is called, the device can be connected to other devices as a server.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -42,10 +44,10 @@ Creates a **Server** object. After **start()** is called, the device can be conn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
-| [32390203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Invalid parameter. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the linkEnhance function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-duplicate-service-name) | Duplicate server name. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

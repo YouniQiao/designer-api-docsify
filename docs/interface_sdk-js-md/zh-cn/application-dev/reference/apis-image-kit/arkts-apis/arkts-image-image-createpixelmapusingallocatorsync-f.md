@@ -7,11 +7,13 @@ function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: Initializa
     allocatorType?: AllocatorType): PixelMap
 ```
 
-Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
+Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap-End-->
 
@@ -35,9 +37,9 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) | Memory copy failed. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
 ## 示例
 
@@ -95,11 +97,13 @@ function createPixelMapUsingAllocatorSync() {
 function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
+Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
@@ -122,8 +126,8 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Memory alloc failed. |
 
 ## 示例
 

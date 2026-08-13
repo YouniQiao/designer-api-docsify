@@ -8,9 +8,11 @@ function createFilter(): Filter
 
 创建Filter实例用于给组件添加多种Filter效果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
 

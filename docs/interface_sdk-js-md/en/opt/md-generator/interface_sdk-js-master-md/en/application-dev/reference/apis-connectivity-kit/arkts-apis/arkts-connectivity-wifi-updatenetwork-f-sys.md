@@ -18,7 +18,7 @@ Updates the specified Wi-Fi configuration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateDeviceConfig](ohos.wifiManager/wifiManager.updateDeviceConfig)
+**Substitutes:** updateDeviceConfig
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 

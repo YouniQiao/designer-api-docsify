@@ -1,32 +1,12 @@
 # ResourceManager
 
-Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources.
+Provides the capability of accessing application resources and system resources. The accessible resources include the resources in the HAP/HSP module corresponding to the current context and all system resources. > **NOTE：**> > - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative > development paradigm. > > - Resource files are defined in the **resources** directory of the project. You can obtain resource values such > as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object. > **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through > `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`. > > - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with > **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are > in different HAPs or HSPs, you first need to use > [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext) to create the context > of the corresponding module and then call the API with **resName** or **resId** specified. For more information, > see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources). > > - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code > HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate- > code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see > [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
 
-> **NOTE：**
-> 
-> - The methods involved in **ResourceManager** are applicable only to the TypeScript-based declarative
-> development paradigm.
-> 
-> - Resource files are defined in the **resources** directory of the project. You can obtain resource values such
-> as strings, string arrays, and colors based on the specified **resName**, **resId**, or **Resource** object.
-> **resName** indicates the resource name, **resId** indicates the resource ID, which can be obtained through
-> `\$r(*resource-address*).id`, for example, `\$r('app.string.test').id`.
-> 
-> - No matter whether resources are in the same HAP or different HAPs or HSPs, you are advised to use the API with
-> **resName** or **resId** specified. Using the **Resource** object will take a longer time. If the resources are
-> in different HAPs or HSPs, you first need to use
-> [createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext) to create the context
-> of the corresponding module and then call the API with **resName** or **resId** specified. For more information,
-> see [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
-> 
-> - In API version 22 and earlier versions, an exception is thrown due to an invalid ID when the intermediate-code
-> HAR or bytecode HAR accesses resources through resource ID-related APIs. From API version 23, the intermediate-
-> code HAR or bytecode HAR can properly access resources through resource ID-related APIs. For details, see
-> [Accessing Resources](../../../quick-start/resource-categories-and-access.md#accessing-resources).
+**Since:** 23
 
-**Since:** 6
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-resourceManager-export interface ResourceManager--><!--Device-resourceManager-export interface ResourceManager-End-->
 
@@ -44,15 +24,13 @@ import { resourceManager } from '@kit.LocalizationKit';
 addResource(path: string) : void
 ```
 
-Loads the specified overlay resource during application runtime to implement theme switching or resource overriding.
+Loads the specified overlay resource during application runtime to implement theme switching or resource overriding. > **NOTE：**> > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
-> **NOTE：**
-> 
-> Resource overwriting is not supported for the **rawfile** and **resfile** directories.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,8 +48,8 @@ Loads the specified overlay resource during application runtime to implement the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
 ## Examples
 
@@ -102,9 +80,11 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 Closes the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -123,8 +103,8 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -162,9 +142,11 @@ closeRawFd(path: string): Promise<void>
 
 Closes the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -188,8 +170,8 @@ Closes the file descriptor (fd) of the HAP where a specific rawfile in the **res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -222,9 +204,11 @@ closeRawFdSync(path: string): void
 
 Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **resources/rawfile** directory is located. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -242,8 +226,8 @@ Closes the file descriptor (fd) of the HAP where the **rawfile** file in the **r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -283,7 +267,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
+**Substitutes:** [closeRawFd](#closeRawFd)(path: string, callback: _AsyncCallback&lt;void&gt;)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -324,7 +308,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
+**Substitutes:** [closeRawFd](#closeRawFd)(path: string)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -354,21 +338,17 @@ resourceManager.getResourceManager((error, mgr) => {
 
 ## getBoolean
 
-ArkTS-Dyn:
-```TypeScript
-getBoolean(resId: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBoolean(resId: long): boolean
 ```
 
 Obtains a Boolean value based on the specified resource ID. This API returns the result synchronously.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -380,7 +360,7 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -392,10 +372,10 @@ Obtains a Boolean value based on the specified resource ID. This API returns the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -445,7 +425,7 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 **Deprecated since:** 20
 
-**Substitutes:** [getBoolean](resourceManager.ResourceManager.getBoolean(resId:)
+**Substitutes:** [getBoolean](#getBoolean)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -471,10 +451,10 @@ Obtains a Boolean value based on the specified resource object. This API returns
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -518,9 +498,11 @@ getBooleanByName(resName: string): boolean
 
 Obtains a Boolean value based on the specified resource name. This API returns the result synchronously.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -544,10 +526,10 @@ Obtains a Boolean value based on the specified resource name. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -585,21 +567,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getColor
 
-ArkTS-Dyn:
-```TypeScript
-getColor(resId: number, callback: _AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColor(resId: long, callback: _AsyncCallback<long>): void
 ```
 
 Obtains the color value corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -611,35 +589,31 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| callback | ArkTS-Dyn: _AsyncCallback&lt;number&gt;  <br>ArkTS-Sta：_AsyncCallback&lt;long&gt; | Yes | Callback used to return the color value (decimal). |
+| resId | long | Yes | Resource ID. |
+| callback | _AsyncCallback&lt;long&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getColor
 
-ArkTS-Dyn:
-```TypeScript
-getColor(resId: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColor(resId: long): Promise<long>
 ```
 
 Obtains the color value corresponding to the specified resource ID. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -651,22 +625,22 @@ Obtains the color value corresponding to the specified resource ID. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the color value (decimal). |
+| Promise&lt;long&gt; | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -715,7 +689,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Deprecated since:** 20
 
-**Substitutes:** [getColor](resourceManager.ResourceManager.getColor(resId:)
+**Substitutes:** [getColor](#getColor)(resId: long, callback: _AsyncCallback&lt;long&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -736,10 +710,10 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -788,7 +762,7 @@ Obtains the color value corresponding to the specified resource object. This API
 
 **Deprecated since:** 20
 
-**Substitutes:** [getColor](resourceManager.ResourceManager.getColor(resId:)
+**Substitutes:** [getColor](#getColor)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -814,10 +788,10 @@ Obtains the color value corresponding to the specified resource object. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -854,21 +828,17 @@ this.context.resourceManager.getColor(resource)
 
 ## getColorByName
 
-ArkTS-Dyn:
-```TypeScript
-getColorByName(resName: string, callback: _AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColorByName(resName: string, callback: _AsyncCallback<long>): void
 ```
 
 Obtains the color value corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -881,16 +851,16 @@ Obtains the color value corresponding to the specified resource name. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| callback | ArkTS-Dyn: _AsyncCallback&lt;number&gt;  <br>ArkTS-Sta：_AsyncCallback&lt;long&gt; | Yes | Callback used to return the color value (decimal). |
+| callback | _AsyncCallback&lt;long&gt; | Yes | Callback used to return the color value (decimal). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -927,21 +897,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getColorByName
 
-ArkTS-Dyn:
-```TypeScript
-getColorByName(resName: string): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColorByName(resName: string): Promise<long>
 ```
 
 Obtains the color value corresponding to the specified resource name. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -959,16 +925,16 @@ Obtains the color value corresponding to the specified resource name. This API u
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the color value (decimal). |
+| Promise&lt;long&gt; | Promise used to return the color value (decimal). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1005,21 +971,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getColorByNameSync
 
-ArkTS-Dyn:
-```TypeScript
-getColorByNameSync(resName: string) : number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColorByNameSync(resName: string) : long
 ```
 
 Obtains a color value based on the specified resource name. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1037,16 +999,16 @@ Obtains a color value based on the specified resource name. This API returns the
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Color value (decimal) corresponding to the specified resource name. |
+| long | Color value (decimal) corresponding to the specified resource name. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1084,21 +1046,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getColorSync
 
-ArkTS-Dyn:
-```TypeScript
-getColorSync(resId: number) : number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColorSync(resId: long) : long
 ```
 
 Obtains a color value based on the specified resource ID. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1110,22 +1068,22 @@ Obtains a color value based on the specified resource ID. This API returns the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Color value (decimal) corresponding to the specified resource ID. |
+| long | Color value (decimal) corresponding to the specified resource ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1175,7 +1133,7 @@ Obtains a color value based on the specified resource object. This API returns t
 
 **Deprecated since:** 20
 
-**Substitutes:** [getColorSync](resourceManager.ResourceManager.getColorSync(resId:)
+**Substitutes:** [getColorSync](#getColorSync)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1201,10 +1159,10 @@ Obtains a color value based on the specified resource object. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1248,9 +1206,11 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 Obtains the configuration of a device. This API uses an asynchronous callback to return the result.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1297,9 +1257,11 @@ getConfiguration(): Promise<Configuration>
 
 Obtains the configuration of a device. This API uses a promise to return the result.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1344,9 +1306,11 @@ getConfigurationSync(): Configuration
 
 Obtains the device configuration. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1386,9 +1350,11 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 Obtains the device capabilities of a device. This API uses an asynchronous callback to return the result.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1435,9 +1401,11 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 Obtains the device capabilities of a device. This API uses a promise to return the result.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1482,9 +1450,11 @@ getDeviceCapabilitySync(): DeviceCapability
 
 Obtains the device capability. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1526,7 +1496,9 @@ Obtains an float number based on the specified resource ID. This API returns the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1550,9 +1522,9 @@ Obtains an float number based on the specified resource ID. This API returns the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getDoubleByName
 
@@ -1564,7 +1536,9 @@ Obtains an float number based on the specified resource name. This API returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1588,9 +1562,9 @@ Obtains an float number based on the specified resource name. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getDoublePluralStringByNameSync
 
@@ -1598,19 +1572,13 @@ Obtains an float number based on the specified resource name. This API returns t
 getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1636,10 +1604,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## Examples
 
@@ -1692,16 +1660,13 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1727,10 +1692,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## getDoublePluralStringValueSync
 
@@ -1738,19 +1703,13 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1776,10 +1735,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1832,19 +1791,13 @@ export default class EntryAbility extends UIAbility {
 getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1870,10 +1823,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getDoublePluralStringValueSync
 
@@ -1881,12 +1834,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -1894,7 +1842,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [getDoublePluralStringValueSync](resourceManager.ResourceManager.getDoublePluralStringValueSync(resId:)
+**Substitutes:** [getDoublePluralStringValueSync](#getDoublePluralStringValueSync)(resId: number, num: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1922,10 +1870,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -1975,21 +1923,17 @@ try {
 
 ## getDrawableDescriptor
 
-ArkTS-Dyn:
-```TypeScript
-getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableDescriptor
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor
 ```
 
 Obtains the **DrawableDescriptor** object for icon display corresponding to the specified resource ID. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2001,9 +1945,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
-| type | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
+| resId | long | Yes | Resource ID. |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| type | int | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
@@ -2015,9 +1959,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -2070,7 +2014,7 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getDrawableDescriptor](resourceManager.ResourceManager.getDrawableDescriptor(resId:)
+**Substitutes:** [getDrawableDescriptor](#getDrawableDescriptor)(resId: long, density?: int, type?: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2098,9 +2042,9 @@ Obtains a **DrawableDescriptor** object for icon display based on the specified 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -2139,21 +2083,17 @@ try {
 
 ## getDrawableDescriptorByName
 
-ArkTS-Dyn:
-```TypeScript
-getDrawableDescriptorByName(resName: string, density?: number, type?: number): DrawableDescriptor
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor
 ```
 
 Obtains the **DrawableDescriptor** object for icon display corresponding to the specified resource name. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2166,8 +2106,8 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
-| type | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| type | int | No | Icon type. The default value is **0**. &lt;br&gt;**0**: Icon resource of the application. &lt;br&gt;**1**: Layered icon resource of the application in the theme resource package. |
 
 **Return value:**
 
@@ -2179,9 +2119,9 @@ Obtains the **DrawableDescriptor** object for icon display corresponding to the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -2230,7 +2170,9 @@ Obtains an integer number based on the specified resource ID. This API returns t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2254,9 +2196,9 @@ Obtains an integer number based on the specified resource ID. This API returns t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getIntByName
 
@@ -2268,7 +2210,9 @@ Obtains an integer number based on the specified resource name. This API returns
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2292,9 +2236,9 @@ Obtains an integer number based on the specified resource name. This API returns
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getIntPluralStringByNameSync
 
@@ -2302,19 +2246,13 @@ Obtains an integer number based on the specified resource name. This API returns
 getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -2340,10 +2278,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## Examples
 
@@ -2396,19 +2334,13 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource name, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2434,10 +2366,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## getIntPluralStringValueSync
 
@@ -2445,19 +2377,13 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
-> 
-> - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for
-> example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource ID, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html). > > - In languages such as English and German, singular/plural numbers are classified into cardinal numbers (for > example, 1, 2, 3) and ordinal numbers (for example, 1st, 2nd, 3rd). This API applies only to cardinal numbers.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -2483,10 +2409,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -2539,16 +2465,13 @@ export default class EntryAbility extends UIAbility {
 getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -2574,10 +2497,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getIntPluralStringValueSync
 
@@ -2585,12 +2508,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the [plural](../../../internationalization/l10n-singular-plural.md) string corresponding to the specified resource object, and replaces the format placeholders in the string in sequence using the **args** parameters. This API returns the result synchronously. > **NOTE：**> > - Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 18
 
@@ -2598,7 +2516,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2626,10 +2544,10 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -2685,11 +2603,13 @@ getLocales(includeSystem?: boolean): Array<string>
 
 Obtains the language list of an application.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
 
@@ -2711,7 +2631,7 @@ Obtains the language list of an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## Examples
 
@@ -2763,7 +2683,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -2804,7 +2724,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**Substitutes:** [getMediaContent](#getMediaContent)(resId: long)
 
 <!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
 
@@ -2850,7 +2770,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -2891,7 +2811,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
 
@@ -2931,9 +2851,11 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 Obtains the Base64 encoding of the image resource corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2952,9 +2874,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -2984,21 +2906,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaBase64ByName
 
-ArkTS-Dyn:
-```TypeScript
-getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void
 ```
 
 Obtains the Base64 encoding of the image resource for the specified screen density corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3011,16 +2929,16 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3056,9 +2974,11 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 Obtains the Base64 encoding of the image resource corresponding to the specified resource name. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3082,9 +3002,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3112,21 +3032,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaBase64ByName
 
-ArkTS-Dyn:
-```TypeScript
-getMediaBase64ByName(resName: string, density: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaBase64ByName(resName: string, density: int): Promise<string>
 ```
 
 Obtains the Base64 encoding of the image resource for the specified screen density corresponding to the specified resource name. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3139,7 +3055,7 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3151,9 +3067,9 @@ Obtains the Base64 encoding of the image resource for the specified screen densi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3181,21 +3097,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaBase64ByNameSync
 
-ArkTS-Dyn:
-```TypeScript
-getMediaBase64ByNameSync(resName: string, density?: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaBase64ByNameSync(resName: string, density?: int): string
 ```
 
 Obtains an image's Base64 encoding for the default or specified screen density based on the specified resource name. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3208,7 +3120,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3220,9 +3132,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3261,9 +3173,11 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 Obtains the content of the media file corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3282,9 +3196,9 @@ Obtains the content of the media file corresponding to the specified resource na
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3314,21 +3228,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaByName
 
-ArkTS-Dyn:
-```TypeScript
-getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8Array>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void
 ```
 
 Obtains the media file content for the specified screen density based on the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3341,16 +3251,16 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3386,9 +3296,11 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 Obtains the content of the media file corresponding to the specified resource name. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3412,9 +3324,9 @@ Obtains the content of the media file corresponding to the specified resource na
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3442,21 +3354,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaByName
 
-ArkTS-Dyn:
-```TypeScript
-getMediaByName(resName: string, density: number): Promise<Uint8Array>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaByName(resName: string, density: int): Promise<Uint8Array>
 ```
 
 Obtains the media file content for the specified screen density based on the specified resource name. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3469,7 +3377,7 @@ Obtains the media file content for the specified screen density based on the spe
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3481,9 +3389,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3511,21 +3419,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaByNameSync
 
-ArkTS-Dyn:
-```TypeScript
-getMediaByNameSync(resName: string, density?: number): Uint8Array
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaByNameSync(resName: string, density?: int): Uint8Array
 ```
 
-Obtains the media file content for the default or specified screen density based on the specified resource name.This API returns the result synchronously.
+Obtains the media file content for the default or specified screen density based on the specified resource name. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3538,7 +3442,7 @@ Obtains the media file content for the default or specified screen density based
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | resName | string | Yes | Resource name. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -3550,9 +3454,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
 
 ## Examples
 
@@ -3597,7 +3501,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3618,9 +3522,9 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3662,7 +3566,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, density: int, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3684,9 +3588,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3728,7 +3632,7 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**Substitutes:** [getMediaContent](#getMediaContent)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3754,9 +3658,9 @@ Obtains the content of the media file corresponding to the specified resource ob
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3796,7 +3700,7 @@ Obtains the media file content for the specified screen density based on the spe
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**Substitutes:** [getMediaContent](#getMediaContent)(resId: long, density: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3823,9 +3727,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3853,21 +3757,17 @@ try {
 
 ## getMediaContent
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void
 ```
 
 Obtains the content of the media file corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3879,16 +3779,16 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3919,21 +3819,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContent
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Array>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void
 ```
 
 Obtains the media file content for the specified screen density based on the specified resource ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3945,17 +3841,17 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| resId | long | Yes | Resource ID. |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;Uint8Array&gt; | Yes | Callback used to return the media file content. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -3985,21 +3881,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContent
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContent(resId: number): Promise<Uint8Array>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContent(resId: long): Promise<Uint8Array>
 ```
 
 Obtains the content of the media file corresponding to the specified resource ID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4011,7 +3903,7 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -4023,9 +3915,9 @@ Obtains the content of the media file corresponding to the specified resource ID
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4053,21 +3945,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContent
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContent(resId: number, density: number): Promise<Uint8Array>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContent(resId: long, density: int): Promise<Uint8Array>
 ```
 
 Obtains the media file content for the specified screen density based on the specified resource ID. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4079,8 +3967,8 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| resId | long | Yes | Resource ID. |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4092,9 +3980,9 @@ Obtains the media file content for the specified screen density based on the spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4134,7 +4022,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4155,9 +4043,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4199,7 +4087,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, density: int, callback: _AsyncCallback&lt;string&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4221,9 +4109,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4265,7 +4153,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4291,9 +4179,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4333,7 +4221,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**Substitutes:** [getMediaContentBase64](#getMediaContentBase64)(resId: long, density: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4360,9 +4248,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4390,21 +4278,17 @@ try {
 
 ## getMediaContentBase64
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void
 ```
 
 Obtains the Base64 encoding of the image resource corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4416,16 +4300,16 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4455,21 +4339,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContentBase64
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void
 ```
 
 Obtains the Base64 encoding of the image resource corresponding to the specified resource ID and the specified screen density. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4481,17 +4361,17 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| resId | long | Yes | Resource ID. |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the Base64 encoding of the image. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4521,21 +4401,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContentBase64
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContentBase64(resId: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContentBase64(resId: long): Promise<string>
 ```
 
 Obtains the Base64 encoding of the image resource corresponding to the specified resource ID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4547,7 +4423,7 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -4559,9 +4435,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4589,21 +4465,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContentBase64
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContentBase64(resId: number, density: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContentBase64(resId: long, density: int): Promise<string>
 ```
 
 Obtains the Base64 encoding of the image resource corresponding to the specified resource ID and the specified screen density. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4615,8 +4487,8 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| resId | long | Yes | Resource ID. |
+| density | int | Yes | Screen density. The value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4628,9 +4500,9 @@ Obtains the Base64 encoding of the image resource corresponding to the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4658,21 +4530,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getMediaContentBase64Sync
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContentBase64Sync(resId: number, density?: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContentBase64Sync(resId: long, density?: int): string
 ```
 
 Obtains an image's Base64 encoding for the default or specified screen density based on the specified resource ID. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4684,8 +4552,8 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| resId | long | Yes | Resource ID. |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4697,9 +4565,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4744,7 +4612,7 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentBase64Sync](resourceManager.ResourceManager.getMediaContentBase64Sync(resId:)
+**Substitutes:** [getMediaContentBase64Sync](#getMediaContentBase64Sync)(resId: long, density?: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4771,9 +4639,9 @@ Obtains an image's Base64 encoding for the default or specified screen density b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4805,21 +4673,17 @@ try {
 
 ## getMediaContentSync
 
-ArkTS-Dyn:
-```TypeScript
-getMediaContentSync(resId: number, density?: number): Uint8Array
-```
-
-ArkTS-Sta:
 ```TypeScript
 getMediaContentSync(resId: long, density?: int): Uint8Array
 ```
 
-Obtains the media file content for the default or specified screen density based on the specified resource ID.This API returns the result synchronously.
+Obtains the media file content for the default or specified screen density based on the specified resource ID. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4831,8 +4695,8 @@ Obtains the media file content for the default or specified screen density based
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
-| density | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
+| resId | long | Yes | Resource ID. |
+| density | int | No | Screen density. The default value or value **0** indicates the default screen density. For details about the values, see [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity). |
 
 **Return value:**
 
@@ -4844,9 +4708,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4891,7 +4755,7 @@ Obtains the media file content for the default or specified screen density based
 
 **Deprecated since:** 20
 
-**Substitutes:** [getMediaContentSync](resourceManager.ResourceManager.getMediaContentSync(resId:)
+**Substitutes:** [getMediaContentSync](#getMediaContentSync)(resId: long, density?: int)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4918,9 +4782,9 @@ Obtains the media file content for the default or specified screen density based
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2 .Parameter verification failed. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
 
 ## Examples
 
@@ -4962,6 +4826,8 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getNumber(resId: number): number--><!--Device-ResourceManager-getNumber(resId: number): number-End-->
@@ -4984,10 +4850,10 @@ Obtains an integer or float number based on the specified resource ID. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5063,7 +4929,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getNumber](resourceManager.ResourceManager.getNumber(resId:)
+**Substitutes:** [getNumber](#getNumber)(resId: number)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5089,10 +4955,10 @@ Obtains an integer or float number based on the specified resource object. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5141,6 +5007,8 @@ Obtains an integer or float number based on the specified resource name. This AP
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getNumberByName(resName: string): number--><!--Device-ResourceManager-getNumberByName(resName: string): number-End-->
@@ -5163,10 +5031,10 @@ Obtains an integer or float number based on the specified resource name. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5234,15 +5102,15 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-Obtains the configuration of differentiated resources. This API returns the result synchronously.
+Obtains the configuration of differentiated resources. This API returns the result synchronously. For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getOverrideResourceManager) API, this API returns the same configuration information.
 
-For both the common resource management object and the differentiated resource management object obtained through the [getOverrideResourceManager](#getOverrideResourceManager) API, this API returns the same configuration information.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getOverrideConfiguration(): Configuration--><!--Device-ResourceManager-getOverrideConfiguration(): Configuration-End-->
 
@@ -5283,15 +5151,15 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously.
+Obtains a **ResourceManager** object for loading differentiated resources. This API returns the result synchronously. The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
 
-The resource configuration (including the language, color mode, resolution, and orientation) obtained by a common **ResourceManager** object is determined by the system. With this API, an application can obtain resources of the specified configuration (that is, differentiated resources), for example, dark color resources in light color mode.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
 
@@ -5313,7 +5181,7 @@ The resource configuration (including the language, color mode, resolution, and 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## Examples
 
@@ -5344,12 +5212,7 @@ export default class EntryAbility extends UIAbility {
 getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
 
@@ -5357,7 +5220,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
+**Substitutes:** [getPluralStringValue](#getPluralStringValue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -5393,12 +5256,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralString(resId: number, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 6
 
@@ -5406,7 +5264,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
+**Substitutes:** [getPluralStringValue](#getPluralStringValue)(resId: number, num: number)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -5445,12 +5303,7 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5458,7 +5311,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
+**Substitutes:** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5478,10 +5331,10 @@ Obtains the plural string based on the specified resource name and the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5527,12 +5380,7 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 getPluralStringByName(resName: string, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource name and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5540,7 +5388,7 @@ Obtains the plural string based on the specified resource name and the specified
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
+**Substitutes:** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5565,10 +5413,10 @@ Obtains the plural string based on the specified resource name and the specified
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5614,12 +5462,7 @@ this.context.resourceManager.getPluralStringByName("test", 1)
 getPluralStringByNameSync(resName: string, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains singular/plural strings based on the specified quantity and resource name. This API returns the result synchronously. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -5627,7 +5470,7 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
+**Substitutes:** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5652,10 +5495,10 @@ Obtains singular/plural strings based on the specified quantity and resource nam
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5702,12 +5545,7 @@ try {
 getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5715,7 +5553,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5737,10 +5575,10 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5793,12 +5631,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
 getPluralStringValue(resource: Resource, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource information and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5806,7 +5639,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -5833,10 +5666,10 @@ Obtains the plural string based on the specified resource information and the sp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5888,12 +5721,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
 getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses an asynchronous callback to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5901,7 +5729,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -5921,10 +5749,10 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -5971,12 +5799,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
 getPluralStringValue(resId: number, num: number): Promise<string>
 ```
 
-Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains the plural string based on the specified resource ID and the specified resource quantity. This API uses a promise to return the result. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 9
 
@@ -5984,7 +5807,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6009,10 +5832,10 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -6058,12 +5881,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
 getPluralStringValueSync(resId: number, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains singular/plural strings based on the specified resource ID and quantity. This API returns the result synchronously. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -6071,7 +5889,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6096,10 +5914,10 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -6146,12 +5964,7 @@ try {
 getPluralStringValueSync(resource: Resource, num: number): string
 ```
 
-Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> Strings distinguish between singular and plural forms in all languages except Chinese. For details, see
-> [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
+Obtains singular/plural strings based on the specified quantity and resource object. This API returns the result synchronously. > **NOTE：**> > Strings distinguish between singular and plural forms in all languages except Chinese. For details, see > [Language Plural Rules](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html).
 
 **Since:** 10
 
@@ -6159,7 +5972,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**Substitutes:** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6186,10 +5999,10 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -6242,17 +6055,13 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses an asynchronous callback to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or > [closeRawFd](#closeRawFd) > to close the fd after use.
 
-> **NOTE：**
-> 
-> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
-> [closeRawFd](#closeRawFd)
-> to close the fd after use.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6271,8 +6080,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6309,17 +6118,13 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result.
+Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **resources/rawfile** directory is located. This API uses a promise to return the result. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or > [closeRawFd](#closeRawFd) > to close the fd after use.
 
-> **NOTE：**
-> 
-> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
-> [closeRawFd](#closeRawFd)
-> to close the fd after use.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6343,8 +6148,8 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6379,17 +6184,13 @@ export default class EntryAbility extends UIAbility {
 getRawFdSync(path: string): RawFileDescriptor
 ```
 
-Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located.This API is called in synchronous mode.
+Obtains the file descriptor (fd) of the HAP where the rawfile file in the resources/rawfile directory is located. This API is called in synchronous mode. > **NOTE：**> > To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or > [closeRawFd](#closeRawFd) > to close the fd after use.
 
-> **NOTE：**
-> 
-> To prevent resource leakage, call [closeRawFdSync](#closeRawFdSync) or
-> [closeRawFd](#closeRawFd)
-> to close the fd after use.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6413,8 +6214,8 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6450,7 +6251,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
+**Substitutes:** [getRawFileContent](#getRawFileContent)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -6493,7 +6294,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
+**Substitutes:** [getRawFileContent](#getRawFileContent)(path: string)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -6533,9 +6334,11 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 Obtain the content of a rawfile in the **resources/rawfile** directory. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6554,8 +6357,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6591,9 +6394,11 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 Obtain the content of a rawfile in the **resources/rawfile** directory. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6617,8 +6422,8 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6652,9 +6457,11 @@ getRawFileContentSync(path: string): Uint8Array
 
 Obtains the content of a rawfile in the **resources/rawfile** directory. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6678,8 +6485,8 @@ Obtains the content of a rawfile in the **resources/rawfile** directory. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6715,7 +6522,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
+**Substitutes:** [getRawFd](#getRawFd)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -6760,7 +6567,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
+**Substitutes:** [getRawFd](#getRawFd)(path: string)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -6800,16 +6607,13 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses an asynchronous callback to return the result. > **NOTE：**> > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the > directory, the list of the folders and files is returned.
 
-> **NOTE：**
-> 
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
-> directory, the list of the folders and files is returned.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6828,8 +6632,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6859,16 +6663,13 @@ export default class EntryAbility extends UIAbility {
 getRawFileList(path: string): Promise<Array<string>>
 ```
 
-Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API uses a promise to return the result. > **NOTE：**> > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the > directory, the list of the folders and files is returned.
 
-> **NOTE：**
-> 
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
-> directory, the list of the folders and files is returned.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6892,8 +6693,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6923,16 +6724,13 @@ export default class EntryAbility extends UIAbility {
 getRawFileListSync(path: string): Array<string>
 ```
 
-Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously.
+Obtains the list of directories and files in the specified subdirectory under **resources/rawfile**. This API returns the result synchronously. > **NOTE：**> > If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the > directory, the list of the folders and files is returned.
 
-> **NOTE：**
-> 
-> If there is no folder or file in the directory, an exception is thrown. If there are folders and files in the
-> directory, the list of the folders and files is returned.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -6956,8 +6754,8 @@ Obtains the list of directories and files in the specified subdirectory under **
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -6984,12 +6782,6 @@ export default class EntryAbility extends UIAbility {
 
 ## getResourceName
 
-ArkTS-Dyn:
-```TypeScript
-getResourceName(resId: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getResourceName(resId: long): string
 ```
@@ -6998,7 +6790,9 @@ Obtains the resource name corresponding to the specified resource ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7012,7 +6806,7 @@ Obtains the resource name corresponding to the specified resource ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -7024,7 +6818,7 @@ Obtains the resource name corresponding to the specified resource ID.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
 
 ## getString
 
@@ -7040,7 +6834,7 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**Substitutes:** [getStringValue](#getStringValue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -7081,7 +6875,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**Substitutes:** [getStringValue](#getStringValue)(resId: long)
 
 <!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
 
@@ -7127,7 +6921,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -7168,7 +6962,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long)
 
 <!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
 
@@ -7208,9 +7002,11 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 Obtains the string array corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7229,10 +7025,10 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7280,9 +7076,11 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 Obtains the string array corresponding to the specified resource name. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7306,10 +7104,10 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7356,9 +7154,11 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 Obtains the string array corresponding to the specified resource name. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7382,10 +7182,10 @@ Obtains the string array corresponding to the specified resource name. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7439,7 +7239,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7460,10 +7260,10 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7516,7 +7316,7 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**Substitutes:** [getStringArrayValue](#getStringArrayValue)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7542,10 +7342,10 @@ Obtains the string array corresponding to the specified resource object. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7586,21 +7386,17 @@ this.context.resourceManager.getStringArrayValue(resource)
 
 ## getStringArrayValue
 
-ArkTS-Dyn:
-```TypeScript
-getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void
 ```
 
 Obtains the string array corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7612,17 +7408,17 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 | callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the obtained string array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7664,21 +7460,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getStringArrayValue
 
-ArkTS-Dyn:
-```TypeScript
-getStringArrayValue(resId: number): Promise<Array<string>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getStringArrayValue(resId: long): Promise<Array<string>>
 ```
 
 Obtains the string array corresponding to the specified resource ID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7690,7 +7482,7 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -7702,10 +7494,10 @@ Obtains the string array corresponding to the specified resource ID. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7746,21 +7538,17 @@ export default class EntryAbility extends UIAbility {
 
 ## getStringArrayValueSync
 
-ArkTS-Dyn:
-```TypeScript
-getStringArrayValueSync(resId: number): Array<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getStringArrayValueSync(resId: long): Array<string>
 ```
 
 Obtains the string array corresponding to the specified resource ID. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7772,7 +7560,7 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -7784,10 +7572,10 @@ Obtains the string array corresponding to the specified resource ID. This API re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7841,7 +7629,7 @@ Obtains a string array based on the specified resource object. This API returns 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringArrayValueSync](resourceManager.ResourceManager.getStringArrayValueSync(resId:)
+**Substitutes:** [getStringArrayValueSync](#getStringArrayValueSync)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7867,10 +7655,10 @@ Obtains a string array based on the specified resource object. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7918,9 +7706,11 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 Obtains the string corresponding to the specified resource name. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -7939,10 +7729,10 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -7985,9 +7775,11 @@ getStringByName(resName: string): Promise<string>
 
 Obtains the string corresponding to the specified resource name. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8011,10 +7803,10 @@ Obtains the string corresponding to the specified resource name. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8059,6 +7851,8 @@ Obtains the string corresponding to the specified resource name. This API return
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string): string--><!--Device-ResourceManager-getStringByNameSync(resName: string): string-End-->
@@ -8081,10 +7875,10 @@ Obtains the string corresponding to the specified resource name. This API return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8132,6 +7926,8 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string-End-->
@@ -8155,11 +7951,11 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## Examples
 
@@ -8205,7 +8001,9 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -8230,10 +8028,10 @@ Obtains the string corresponding to the specified resource name, and replaces th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
-| [9001008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001008](../errorcode-resource-manager.md#9001008-failed-to-format-the-resource-obtained-based-on-resname) | Failed to format the resource obtained based on the resource name. |
 
 ## getStringSync
 
@@ -8246,6 +8044,8 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8269,10 +8069,10 @@ Obtains the string corresponding to the specified resource ID. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8320,6 +8120,8 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string-End-->
@@ -8343,11 +8145,11 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8393,7 +8195,9 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -8418,10 +8222,10 @@ Obtains the string corresponding to the specified resource ID, and replaces the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getStringSync
 
@@ -8437,7 +8241,7 @@ Obtains a string based on the specified resource object. This API returns the re
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
+**Substitutes:** [getStringSync](#getStringSync)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8463,10 +8267,10 @@ Obtains a string based on the specified resource object. This API returns the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8516,7 +8320,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
+**Substitutes:** [getStringSync](#getStringSync)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8543,11 +8347,11 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001007](../errorcode-resource-manager.md#9001007-failed-to-format-the-resource-obtained-based-on-the-current-id) | Failed to format the resource obtained based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8597,7 +8401,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**Substitutes:** [getStringValue](#getStringValue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8618,10 +8422,10 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8670,7 +8474,7 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**Substitutes:** [getStringValue](#getStringValue)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8696,10 +8500,10 @@ Obtains the string corresponding to the specified resource object. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8724,21 +8528,17 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 
 ## getStringValue
 
-ArkTS-Dyn:
-```TypeScript
-getStringValue(resId: number, callback: _AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getStringValue(resId: long, callback: _AsyncCallback<string>): void
 ```
 
 Obtains the string corresponding to the specified resource ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8750,35 +8550,31 @@ Obtains the string corresponding to the specified resource ID. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 | callback | _AsyncCallback&lt;string&gt; | Yes | Callback used to return the obtained string. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## getStringValue
 
-ArkTS-Dyn:
-```TypeScript
-getStringValue(resId: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getStringValue(resId: long): Promise<string>
 ```
 
 Obtains the string corresponding to the specified resource ID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8790,7 +8586,7 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
@@ -8802,10 +8598,10 @@ Obtains the string corresponding to the specified resource ID. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8840,23 +8636,19 @@ export default class EntryAbility extends UIAbility {
 
 ## getSymbol
 
-ArkTS-Dyn:
-```TypeScript
-getSymbol(resId: number) : number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSymbol(resId: long) : long
 ```
 
 Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the specified resource ID. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
 
@@ -8866,22 +8658,22 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| resId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Resource ID. |
+| resId | long | Yes | Resource ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Unicode code (decimal) of the symbol. |
+| long | Unicode code (decimal) of the symbol. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8919,7 +8711,7 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSymbol](resourceManager.ResourceManager.getSymbol(resId:)
+**Substitutes:** [getSymbol](#getSymbol)(resId: long)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8945,10 +8737,10 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [9001001](../errorcode-resource-manager.md#9001001-invalid-resource-id) | Invalid resource ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001002](../errorcode-resource-manager.md#9001002-matching-resource-not-found-based-on-the-current-resource-id) | No matching resource is found based on the resource ID. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -8974,23 +8766,19 @@ try {
 
 ## getSymbolByName
 
-ArkTS-Dyn:
-```TypeScript
-getSymbolByName(resName: string) : number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSymbolByName(resName: string) : long
 ```
 
 Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/design/harmonyos-symbol) based on the specified resource name. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
 
@@ -9006,16 +8794,16 @@ Obtains the Unicode of a [symbol](https://developer.huawei.com/consumer/en/desig
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Unicode code (decimal) of the symbol. |
+| long | Unicode code (decimal) of the symbol. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
-| [9001004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
-| [9001006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001003](../errorcode-resource-manager.md#9001003-invalid-resource-name) | Invalid resource name. |
+| [9001004](../errorcode-resource-manager.md#9001004-matching-resource-not-found-based-on-the-passed-resource-name) | No matching resource is found based on the resource name. |
+| [9001006](../errorcode-resource-manager.md#9001006-circular-reference-in-resources) | The resource is referenced cyclically. |
 
 ## Examples
 
@@ -9047,11 +8835,13 @@ isRawDir(path: string): boolean
 
 Checks whether a path is a subdirectory in the **rawfile** directory. This API returns the result synchronously.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
 
@@ -9073,8 +8863,8 @@ Checks whether a path is a subdirectory in the **rawfile** directory. This API r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001005](../errorcode-resource-manager.md#9001005-invalid-relative-path) | Invalid relative path. |
 
 ## Examples
 
@@ -9141,15 +8931,13 @@ try {
 removeResource(path: string) : void
 ```
 
-Removes the specified overlay resource during application runtime and restores the original resource before the override.
+Removes the specified overlay resource during application runtime and restores the original resource before the override. > **NOTE：**> > Resource overwriting is not supported for the **rawfile** and **resfile** directories.
 
-> **NOTE：**
-> 
-> Resource overwriting is not supported for the **rawfile** and **resfile** directories.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -9167,8 +8955,8 @@ Removes the specified overlay resource during application runtime and restores t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
-| [9001010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
+| [9001010](../errorcode-resource-manager.md#9001010-invalid-overlay-path) | Invalid overlay path. |
 
 ## Examples
 
@@ -9197,16 +8985,15 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-Updates the configuration of a differentiated resource management object.
+Updates the configuration of a differentiated resource management object. This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via [getOverrideResourceManager](#getOverrideResourceManager).
 
-This API updates the configuration of the differentiated resource management object, regardless of whether it is called on the common resource management object or on the differentiated one obtained via   
-[getOverrideResourceManager](#getOverrideResourceManager).
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void--><!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void-End-->
 
@@ -9222,7 +9009,7 @@ This API updates the configuration of the differentiated resource management obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types. |
 
 ## Examples
 

@@ -1,20 +1,12 @@
 # Tool
 
-A utility class that provides only static methods to convert data structs defined in other modules and  
-[common2D](arkts-graphics-common2d.md#common2D).
+A utility class that provides only static methods to convert data structs defined in other modules and [common2D](arkts-graphics-common2d.md#@ohos.graphics.common2D). > **NOTE：**> > - The initial APIs of this class are supported since API version 15. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 15.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 15
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class Tool--><!--Device-drawing-class Tool-End-->
 
@@ -38,6 +30,8 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color--><!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -58,7 +52,7 @@ Converts a color value of the **ResourceColor** type to a **common2D.Color** obj
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeColorFromResourceColor
 
@@ -70,7 +64,9 @@ Converts a color value of the ResourceColor type to a common2D.Color object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color | undefined--><!--Device-Tool-static makeColorFromResourceColor(resourceColor: ResourceColor): common2D.Color | undefined-End-->
 
@@ -92,5 +88,5 @@ Converts a color value of the ResourceColor type to a common2D.Color object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

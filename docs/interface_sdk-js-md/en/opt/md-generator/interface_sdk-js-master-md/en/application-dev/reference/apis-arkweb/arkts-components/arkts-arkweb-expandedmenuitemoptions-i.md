@@ -20,6 +20,8 @@ action: (selectedText: {plainText: string}) => void
 
 Selected text.
 
+**Type:** (selectedText: {plainText: string}) =&gt; void
+
 **Since:** 12
 
 **Deprecated since:** 20
@@ -31,12 +33,6 @@ Selected text.
 <!--Device-ExpandedMenuItemOptions-action: (selectedText: {plainText: string}) => void--><!--Device-ExpandedMenuItemOptions-action: (selectedText: {plainText: string}) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| selectedText | {plainText: string} | Yes |
 
 ## content
 

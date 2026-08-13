@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface IReusePool--><!--Device-unnamed-export declare interface IReusePool-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ getReusableInfo(constructor: ReusableComponentConstructor,
 检索此复用池中给定可复用组件类型的回收实例信息。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -113,17 +117,11 @@ struct PoolOwner {
 preRender(builder: WrappedBuilder<[]>, times: number): Promise<void>
 ```
 
-调用空闲任务以预创建可复用组件并在首次使用前将其放入复用池。
-
-> **说明：**
-> 
-> 1. `preRender`仅将池配置为接受的组件放入池中。预渲染池不接受的组件会立即创建并销毁。
-> 
-> 2. 预渲染期间不会从池中复用组件；池仅接受新创建的实例。
-> 
-> 3. @Builder函数执行完整的深度渲染，包括嵌套的子组件。
+调用空闲任务以预创建可复用组件并在首次使用前将其放入复用池。 > **说明：** > > 1. `preRender`仅将池配置为接受的组件放入池中。预渲染池不接受的组件会立即创建并销毁。 > > 2. 预渲染期间不会从池中复用组件；池仅接受新创建的实例。 > > 3. @Builder函数执行完整的深度渲染，包括嵌套的子组件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

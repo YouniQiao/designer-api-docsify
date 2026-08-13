@@ -6,6 +6,8 @@ Enumerates reasons for the activation state changes of the **NavDestination** co
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum NavDestinationActiveReason--><!--Device-unnamed-declare enum NavDestinationActiveReason-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Activation state changes due to page navigation.
 **Since:** 17
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Activation state changes due to the opening or closing of a modal page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -61,6 +67,8 @@ Activation state changes due to the opening or closing of a sheet.
 **Since:** 17
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +90,8 @@ Activation state changes due to the opening or closing of a custom dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -102,6 +112,8 @@ Activation state changes due to the opening or closing of an overlay using **Ove
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 17.
@@ -121,6 +133,8 @@ Activation state changes due to switching between foreground and background stat
 **Since:** 17
 
 **ArkTS mode:** ArkTS-Dyn only, since version 17.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

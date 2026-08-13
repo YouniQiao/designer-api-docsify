@@ -2,7 +2,9 @@
 
 描述触发按钮信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export interface ButtonOptions--><!--Device-notificationManager-export interface ButtonOptions-End-->
 
@@ -26,7 +28,9 @@ buttonName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER and ohos.permission.NOTIFICATION_AGENT_CONTROLLER
 

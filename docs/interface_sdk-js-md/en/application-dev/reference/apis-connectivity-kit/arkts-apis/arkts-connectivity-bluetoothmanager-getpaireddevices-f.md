@@ -12,7 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getPairedDevices(): Array<string>
 ```
 
-Obtains the list of Bluetooth devices that have been paired with the current device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the list of Bluetooth devices that have been paired with the current device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 **Deprecated since:** 10
 
-**Substitutes:** [getPairedDevices](ohos.bluetooth.connection/connection#getPairedDevices)
+**Substitutes:** [getPairedDevices](arkts-connectivity-connection-getpaireddevices-f.md#getPairedDevices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -40,8 +40,8 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |

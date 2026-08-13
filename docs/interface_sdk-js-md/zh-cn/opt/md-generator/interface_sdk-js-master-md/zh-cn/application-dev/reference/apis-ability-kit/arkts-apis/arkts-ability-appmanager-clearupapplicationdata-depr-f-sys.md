@@ -12,7 +12,7 @@ function clearUpApplicationData(bundleName: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
+**替代接口：** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData（系统接口）)
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -63,7 +63,7 @@ function clearUpApplicationData(bundleName: string, callback: AsyncCallback<void
 
 **废弃版本：** 9
 
-**替代接口：** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
+**替代接口：** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData（系统接口）)
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 

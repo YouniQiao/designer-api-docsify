@@ -6,7 +6,9 @@ type ValueType = string | image.PixelMap | Want | ArrayBuffer
 
 Indicates type of value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

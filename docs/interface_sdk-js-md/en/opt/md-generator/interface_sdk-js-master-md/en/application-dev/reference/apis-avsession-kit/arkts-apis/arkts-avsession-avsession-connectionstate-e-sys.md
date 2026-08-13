@@ -2,7 +2,9 @@
 
 Define the device connection state.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum ConnectionState--><!--Device-avSession-enum ConnectionState-End-->
 
@@ -17,6 +19,8 @@ STATE_AUTHENTICATING = 10
 Authenticating with a remote device.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Mirroring to the stream.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -57,6 +63,8 @@ STATE_STREAM_TO_MIRROR = 12
 Streaming to the mirror.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

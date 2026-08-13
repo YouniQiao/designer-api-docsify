@@ -12,16 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function openDLPFile(ciphertextFd: number, appId: string): Promise<DLPFile>
 ```
 
-Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result.
-
-After calling **openDLPFile()** to return a **DLPFile** object, the system must call   
-[closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closeDLPFile) to release resources after using the object.
-
-When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
+Opens a DLP file. After the API is successfully called, the **DLPFile** object is returned, which can be used to manage the permissions on the DLP file and perform related operations. This API uses a promise to return the result. After calling **openDLPFile()** to return a **DLPFile** object, the system must call [closeDLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md#closeDLPFile) to release resources after using the object. When a DLP management application or an authorized application needs to access a DLP file, it must first open the file to obtain the managed object.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
@@ -48,21 +45,21 @@ When a DLP management application or an authorized application needs to access a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [19100009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
-| [19100019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [19100018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
-| [19100020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
+| [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
 
 ## Examples
 
@@ -115,6 +112,8 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_DLP_FILE
 
 <!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void--><!--Device-dlpPermission-function openDLPFile(ciphertextFd: number, appId: string, callback: AsyncCallback<DLPFile>): void-End-->
@@ -129,27 +128,27 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | --- | --- | --- | --- |
 | ciphertextFd | number | Yes | FD of the encrypted file. The value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. If the value of **fd** is less than 0, an error log is generated, and the function stops running. If the value of **fd** is greater than 2&lt;sup&gt;31&lt;/sup&gt;-1, the excess part will be truncated. |
 | appId | string | Yes | ID of the caller. The value contains 8 to 1024 bytes. If the value is out of range, error code 401 is thrown. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DLPFile](arkts-dataprotection-dlppermission-dlpfile-i-sys.md)&gt; | Yes | Callback used to receive the result of opening a DLP file. The callback parameters include **err** and **res**. **err** is **undefined** when the operation is successful; otherwise, **err** is an error object. **res** is a **DLPFile** object that represents the DLP file opened. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
-| [19100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [19100009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
-| [19100008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
-| [19100019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [19100018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
-| [19100020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
+| [19100003](../errorcode-dlp.md#19100003-encryptiondecryption-timeout) | Credential task time out. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100005](../errorcode-dlp.md#19100005-credential-authentication-server-error) | Credential authentication server error. |
+| [19100004](../errorcode-dlp.md#19100004-credential-service-error) | Credential service error. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [19100009](../errorcode-dlp.md#19100009-failed-to-operate-the-dlp-file) | Failed to operate the DLP file. |
+| [19100008](../errorcode-dlp.md#19100008-nondlp-file) | The file is not a DLP file. |
+| [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [19100018](../errorcode-dlp.md#19100018-application-unauthorized) | The application is not authorized. |
+| [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
 
 ## Examples
 

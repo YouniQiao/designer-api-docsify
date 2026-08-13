@@ -14,9 +14,11 @@ function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void
 
 Sets the camera tracking layout for this mechanical device.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void--><!--Device-mechanicManager-function setCameraTrackingLayout(trackingLayout: CameraTrackingLayout): void-End-->
 
@@ -34,10 +36,10 @@ Sets the camera tracking layout for this mechanical device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
-| [33300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
-| [33300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) | Device not connected. |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) | Feature not supported. |
 
 ## Examples
 

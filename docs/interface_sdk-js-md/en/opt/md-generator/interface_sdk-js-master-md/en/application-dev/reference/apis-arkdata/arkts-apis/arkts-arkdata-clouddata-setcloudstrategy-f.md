@@ -14,7 +14,9 @@ function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.Value
 
 Sets the cloud sync strategy of an application. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>--><!--Device-cloudData-function setCloudStrategy(strategy: StrategyType, param?: Array<commonType.ValueType>): Promise<void>-End-->
 
@@ -37,8 +39,8 @@ Sets the cloud sync strategy of an application. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

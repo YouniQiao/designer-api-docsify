@@ -2,9 +2,11 @@
 
 Describes the style of captions.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-accessibility-interface CaptionsStyle--><!--Device-accessibility-interface CaptionsStyle-End-->
 
@@ -22,19 +24,15 @@ import { accessibility } from '@kit.AccessibilityKit';
 backgroundColor: int | string
 ```
 
-Background color of captions.
+Background color of captions. **number**: HEX format, used to represent colors defined in either the RGB or ARGB color models. **string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format. Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
 
-**number**: HEX format, used to represent colors defined in either the RGB or ARGB color models.
+**Type:** int \| string
 
-**string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format.
+**Since:** 23
 
-Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -50,19 +48,15 @@ Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00',
 fontColor: int | string
 ```
 
-Font color of captions.
+Font color of captions. **number**: HEX format, used to represent colors defined in either the RGB or ARGB color models. **string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format. Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
 
-**number**: HEX format, used to represent colors defined in either the RGB or ARGB color models.
+**Type:** int \| string
 
-**string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format.
+**Since:** 23
 
-Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,9 +76,11 @@ Font edge type of captions.
 
 **Type:** [CaptionsFontEdgeType](arkts-accessibility-accessibility-captionsfontedgetype-t.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -104,9 +100,11 @@ Font family of captions.
 
 **Type:** [CaptionsFontFamily](arkts-accessibility-accessibility-captionsfontfamily-t.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -124,11 +122,13 @@ fontScale: int
 
 Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -144,19 +144,15 @@ Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 windowColor: int | string
 ```
 
-Window color of captions.
+Window color of captions. **number**: HEX format, used to represent colors defined in either the RGB or ARGB color models. **string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format. Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
 
-**number**: HEX format, used to represent colors defined in either the RGB or ARGB color models.
+**Type:** int \| string
 
-**string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format.
+**Since:** 23
 
-Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Type:** ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

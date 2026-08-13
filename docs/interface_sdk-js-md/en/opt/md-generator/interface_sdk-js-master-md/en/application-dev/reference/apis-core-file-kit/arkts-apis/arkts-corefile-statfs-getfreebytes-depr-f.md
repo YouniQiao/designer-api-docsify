@@ -12,7 +12,7 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFreeBytes](@ohos.file.statvfs:statfs.getFreeBytes)
+**Substitutes:** getFreeBytes
 
 <!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getFreeBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -54,7 +54,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFreeBytes](@ohos.file.statvfs:statfs.getFreeBytes)
+**Substitutes:** getFreeBytes
 
 <!--Device-Statfs-function getFreeBytes(path: string): Promise<number>--><!--Device-Statfs-function getFreeBytes(path: string): Promise<number>-End-->
 

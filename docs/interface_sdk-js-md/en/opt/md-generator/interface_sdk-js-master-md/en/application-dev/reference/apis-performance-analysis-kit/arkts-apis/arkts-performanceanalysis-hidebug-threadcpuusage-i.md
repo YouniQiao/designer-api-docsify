@@ -2,7 +2,9 @@
 
 Describes the CPU usage of a thread.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-interface ThreadCpuUsage--><!--Device-hidebug-interface ThreadCpuUsage-End-->
 
@@ -24,7 +26,9 @@ CPU usage of the thread.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ThreadCpuUsage-cpuUsage: double--><!--Device-ThreadCpuUsage-cpuUsage: double-End-->
 
@@ -40,7 +44,9 @@ Thread ID.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ThreadCpuUsage-threadId: long--><!--Device-ThreadCpuUsage-threadId: long-End-->
 

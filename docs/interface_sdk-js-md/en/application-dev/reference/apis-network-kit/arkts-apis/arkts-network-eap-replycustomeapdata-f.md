@@ -14,9 +14,11 @@ function replyCustomEapData(result: CustomResult, data: EapData): void
 
 send Customized eap packets to system
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_ENTERPRISE_WIFI_CONNECTION
 
@@ -35,9 +37,9 @@ send Customized eap packets to system
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [33200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [33200099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200099-internal-program-error) | internal error |
-| [33200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200004-invalid-eap-result-value) | Invalid result |
-| [33200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-eap.md#33200005-invalid-data-length) | Invalid size of eap data |
+| [33200009](../errorcode-net-eap.md#33200009-netmanager-not-exist) | netmanager stop |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [33200099](../errorcode-net-eap.md#33200099-internal-program-error) | internal error |
+| [33200004](../errorcode-net-eap.md#33200004-invalid-eap-result-value) | Invalid result |
+| [33200005](../errorcode-net-eap.md#33200005-invalid-data-length) | Invalid size of eap data |
 

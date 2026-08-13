@@ -1,10 +1,10 @@
 # TextEmbedding
 
-描述文本嵌入模型的文本嵌入函数。
+描述文本嵌入模型的文本嵌入函数。 下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#getTextEmbeddingModel)获取到TextEmbedding实例，再通过此实例调用对 应接口。
 
-下列接口都需先使用[intelligence.getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#getTextEmbeddingModel)获取到TextEmbedding实例，再通过此实例调用对应接口。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 <!--Device-intelligence-interface TextEmbedding--><!--Device-intelligence-interface TextEmbedding-End-->
 
@@ -16,11 +16,11 @@
 getEmbedding(text: string): Promise<Array<number>>
 ```
 
-获取给定文本的嵌入向量。使用Promise异步回调。
+获取给定文本的嵌入向量。使用Promise异步回调。 该接口需先调用[loadModel](#loadModel)加载嵌入模型，加载成功后调用getEmbedding。
 
-该接口需先调用[loadModel](#loadModel)加载嵌入模型，加载成功后调用getEmbedding。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 <!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>--><!--Device-TextEmbedding-getEmbedding(text: string): Promise<Array<double>>-End-->
 
@@ -42,9 +42,9 @@ getEmbedding(text: string): Promise<Array<number>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-服务内部异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) |
 
 ## 示例
 
@@ -73,11 +73,11 @@ textEmbedding.loadModel()
 getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
 ```
 
-获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。
+获取给定批次文本的嵌入向量。批量处理可以提高性能，适用于需要同时处理多个文本的场景。使用Promise异步回调。 该接口需先调用[loadModel](#loadModel)加载嵌入模型，加载成功后调用getEmbedding。
 
-该接口需先调用[loadModel](#loadModel)加载嵌入模型，加载成功后调用getEmbedding。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 <!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>--><!--Device-TextEmbedding-getEmbedding(batchTexts: Array<string>): Promise<Array<Array<double>>>-End-->
 
@@ -99,9 +99,9 @@ getEmbedding(batchTexts: Array<string>): Promise<Array<Array<number>>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-服务内部异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) |
 
 ## 示例
 
@@ -130,14 +130,11 @@ textEmbedding.loadModel()
 loadModel(): Promise<void>
 ```
 
-加载文本嵌入模型。使用Promise异步回调。
+加载文本嵌入模型。使用Promise异步回调。 **配对调用：** - 调用loadModel()后，必须在使用完毕后调用[releaseModel()](#releaseModel)释放模型资源。 - 未调用releaseModel()会导致资源泄漏，影响系统性能。 - 建议将releaseModel()放在finally块中确保资源被正确释放。
 
-**配对调用：**  
-- 调用loadModel()后，必须在使用完毕后调用[releaseModel()](#releasemodel)释放模型资源。  
-- 未调用releaseModel()会导致资源泄漏，影响系统性能。  
-- 建议将releaseModel()放在finally块中确保资源被正确释放。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 <!--Device-TextEmbedding-loadModel(): Promise<void>--><!--Device-TextEmbedding-loadModel(): Promise<void>-End-->
 
@@ -153,8 +150,8 @@ loadModel(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-服务内部异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) |
 
 ## 示例
 
@@ -179,7 +176,9 @@ releaseModel(): Promise<void>
 
 释放文本嵌入模型。使用Promise异步回调。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TextEmbedding-releaseModel(): Promise<void>--><!--Device-TextEmbedding-releaseModel(): Promise<void>-End-->
 
@@ -195,8 +194,8 @@ releaseModel(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [31300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-intelligence.md#31300000-服务内部异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [31300000](../errorcode-intelligence.md#31300000-服务内部异常) |
 
 ## 示例
 

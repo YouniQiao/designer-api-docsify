@@ -18,7 +18,7 @@ Removes a notification slot of a specified type. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeNotificationSlot](reminderAgentManager.removeNotificationSlot)
+**Substitutes:** removeNotificationSlot
 
 <!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -56,7 +56,7 @@ Removes a notification slot of a specified type. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeNotificationSlot](reminderAgentManager.removeNotificationSlot)
+**Substitutes:** removeNotificationSlot
 
 <!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 

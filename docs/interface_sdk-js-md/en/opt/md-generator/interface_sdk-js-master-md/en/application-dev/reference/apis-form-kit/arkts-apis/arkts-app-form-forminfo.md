@@ -1,13 +1,10 @@
 # @ohos.app.form.formInfo
 
-The **formInfo** module provides types and enums related to the widget information and state.
+The **formInfo** module provides types and enums related to the widget information and state. > **NOTE：**> - This topic describes only system APIs provided by the module. For details about its public APIs, see > [@ohos.app.form.formInfo (formInfo)](#@ohos.app.form.formInfo).
 
-> **NOTE：**
+**Since:** 23
 
-> - This topic describes only system APIs provided by the module. For details about its public APIs, see
-> [@ohos.app.form.formInfo (formInfo)](#formInfo).
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace formInfo--><!--Device-unnamed-declare namespace formInfo-End-->
 
@@ -30,7 +27,6 @@ import { formInfo } from '@kit.FormKit';
 | [FormStateInfo](arkts-form-forminfo-formstateinfo-i.md) |
 | [OverflowInfo](arkts-form-forminfo-overflowinfo-i.md) |
 | [Rect](arkts-form-forminfo-rect-i.md) |
-| [RunningFormInfo](arkts-form-forminfo-runningforminfo-i.md) |
 
 <!--Del-->
 ### Interfaces（系统接口）
@@ -46,6 +42,7 @@ import { formInfo } from '@kit.FormKit';
 | [OverflowRequest](arkts-form-forminfo-overflowrequest-i-sys.md) |
 | [PublishFormCrossBundleInfo](arkts-form-forminfo-publishformcrossbundleinfo-i-sys.md) |
 | [PublishFormResult](arkts-form-forminfo-publishformresult-i-sys.md) |
+| [RunningFormInfo](arkts-form-forminfo-runningforminfo-i-sys.md) |
 | [SceneAnimationParams](arkts-form-forminfo-sceneanimationparams-i-sys.md) |
 | [TemplateFormDetailInfo](arkts-form-forminfo-templateformdetailinfo-i-sys.md) |
 <!--DelEnd-->
@@ -70,6 +67,7 @@ import { formInfo } from '@kit.FormKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [FormLocation](arkts-form-forminfo-formlocation-e-sys.md) |
 | [FormParam](arkts-form-forminfo-formparam-e-sys.md) |
 | [FormUsageState](arkts-form-forminfo-formusagestate-e-sys.md) |
 | [PublishFormErrorCode](arkts-form-forminfo-publishformerrorcode-e-sys.md) |

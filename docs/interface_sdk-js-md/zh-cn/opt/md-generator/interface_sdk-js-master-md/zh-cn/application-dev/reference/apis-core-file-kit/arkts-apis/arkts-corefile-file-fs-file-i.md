@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface File--><!--Device-unnamed-declare interface File-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ getParent(): string
 获取File对象对应文件父目录。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-File-getParent(): string--><!--Device-File-getParent(): string-End-->
 
@@ -54,6 +58,8 @@ lock(exclusive?: boolean): Promise<void>
 对文件阻塞式施加共享锁或独占锁，使用promise异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-File-lock(exclusive?: boolean): Promise<void>--><!--Device-File-lock(exclusive?: boolean): Promise<void>-End-->
 
@@ -108,6 +114,8 @@ lock(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-File-lock(callback: AsyncCallback<void>): void--><!--Device-File-lock(callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -155,6 +163,8 @@ lock(exclusive: boolean, callback: AsyncCallback<void>): void
 对文件阻塞式施加共享锁或独占锁，使Callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void--><!--Device-File-lock(exclusive: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -205,6 +215,8 @@ tryLock(exclusive?: boolean): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-File-tryLock(exclusive?: boolean): void--><!--Device-File-tryLock(exclusive?: boolean): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -246,6 +258,8 @@ unlock(): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-File-unlock(): void--><!--Device-File-unlock(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -284,6 +298,8 @@ readonly fd: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-File-readonly fd: number--><!--Device-File-readonly fd: number-End-->
@@ -302,6 +318,8 @@ readonly name: string
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-File-readonly name: string--><!--Device-File-readonly name: string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -317,6 +335,8 @@ readonly path: string
 **类型：** string
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-File-readonly path: string--><!--Device-File-readonly path: string-End-->
 

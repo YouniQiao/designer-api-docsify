@@ -14,7 +14,9 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 
 Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -34,8 +36,8 @@ Obtains the information of all installed printer extensions. This API uses an as
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -61,7 +63,9 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 
 Obtains the information of all installed printer extensions. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB
 
@@ -81,8 +85,8 @@ Obtains the information of all installed printer extensions. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

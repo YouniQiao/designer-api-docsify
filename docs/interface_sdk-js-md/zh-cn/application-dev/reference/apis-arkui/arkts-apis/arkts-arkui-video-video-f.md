@@ -3,6 +3,7 @@
 ## Video
 
 ```TypeScript
+@ComponentBuilder
 export declare function Video(
     value: VideoOptions
 ): VideoAttribute
@@ -14,9 +15,11 @@ export declare function Video(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Video(    value: VideoOptions): VideoAttribute--><!--Device-unnamed-export declare function Video(    value: VideoOptions): VideoAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Video(    value: VideoOptions): VideoAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Video(    value: VideoOptions): VideoAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ export declare function Video(
 ## Video
 
 ```TypeScript
+@Builder
 export declare function Video(
     style: CustomBuilderT<VideoAttribute>
 ): VideoAttribute
@@ -47,11 +51,11 @@ Defines Video Component.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute--><!--Device-unnamed-export declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute--><!--Device-unnamed-@Builderexport declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Video Component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; | 是 | the callback to set up component's attributes. |
 
 **返回值：**
 

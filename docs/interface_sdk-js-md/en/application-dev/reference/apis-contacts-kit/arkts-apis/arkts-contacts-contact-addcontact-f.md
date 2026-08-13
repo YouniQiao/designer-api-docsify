@@ -20,7 +20,7 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [addContact](contact.addContact(context:)
+**Substitutes:** [addContact](#addContact)(context: Context, contact: Contact, callback: AsyncCallback&lt;number&gt;)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -33,7 +33,7 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -72,6 +72,8 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -86,18 +88,18 @@ Adds a contact. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | contact | [Contact](arkts-contacts-contact-contact-c.md) | Yes | Indicates the contact information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the added contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -136,7 +138,7 @@ Adds a contact. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [addContact](contact.addContact(context:)
+**Substitutes:** [addContact](#addContact)(context: Context, contact: Contact)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -189,6 +191,8 @@ Adds a contact. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -214,12 +218,12 @@ Adds a contact. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | 1.Parameter error. Possible causes: Mandatory parameters are left unspecified. 2.Failed to open contact portrait file. 3.Internal error. Invalid contact id. Failed to generate contact profile. 4.Internal error. Failed to save contact portrait. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

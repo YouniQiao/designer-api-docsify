@@ -4,6 +4,8 @@ IP配置信息。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-wifiManager-interface IpProfile--><!--Device-wifiManager-interface IpProfile-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -19,6 +21,8 @@ DNS服务器，数组内最多包含首选DNS服务器和备用DNS服务器两�
 **类型：** number[]
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ domains: Array<string>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-IpProfile-domains: Array<string>--><!--Device-IpProfile-domains: Array<string>-End-->
@@ -55,6 +61,8 @@ gateway: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ IP地址，十进制表示，正常点分十进制写法为192.168.1.1，对应�
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-IpProfile-ipAddress: number--><!--Device-IpProfile-ipAddress: number-End-->
@@ -91,6 +101,8 @@ prefixLength: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

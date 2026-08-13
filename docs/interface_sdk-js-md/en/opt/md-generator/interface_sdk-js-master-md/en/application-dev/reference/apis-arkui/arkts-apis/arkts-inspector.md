@@ -15,7 +15,7 @@ Profiler tools for inspectors.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md#getinspectornodebyid) |
-| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md#getinspectornodes) |
-| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md#setappbgcolor) |
+| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md#getInspectorNodeById-(System-API)) |
+| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md#getInspectorNodes-(System-API)) |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md#setAppBgColor-(System-API)) |
 <!--DelEnd-->

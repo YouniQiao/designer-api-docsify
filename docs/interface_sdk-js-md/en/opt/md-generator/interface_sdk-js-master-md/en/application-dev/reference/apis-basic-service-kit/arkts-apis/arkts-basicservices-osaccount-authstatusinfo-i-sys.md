@@ -2,7 +2,9 @@
 
 Presents the authentication status information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AuthStatusInfo--><!--Device-osAccount-interface AuthStatusInfo-End-->
 
@@ -26,7 +28,9 @@ Freezing time, in milliseconds.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthStatusInfo-freezingTime: int--><!--Device-AuthStatusInfo-freezingTime: int-End-->
 
@@ -44,7 +48,9 @@ Number of remaining times.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthStatusInfo-remainTimes: int--><!--Device-AuthStatusInfo-remainTimes: int-End-->
 

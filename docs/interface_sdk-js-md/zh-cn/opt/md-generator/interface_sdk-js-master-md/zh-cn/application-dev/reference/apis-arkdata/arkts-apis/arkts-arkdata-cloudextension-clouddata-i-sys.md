@@ -2,7 +2,9 @@
 
 云数据。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface CloudData--><!--Device-cloudExtension-export interface CloudData-End-->
 
@@ -20,7 +22,9 @@ hasMore: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudData-hasMore: boolean--><!--Device-CloudData-hasMore: boolean-End-->
 
@@ -38,7 +42,9 @@ nextCursor: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudData-nextCursor: string--><!--Device-CloudData-nextCursor: string-End-->
 
@@ -56,7 +62,9 @@ values: Array<Record<string, CloudType>>
 
 **类型：** Array&lt;Record&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CloudData-values: Array<Record<string, CloudType>>--><!--Device-CloudData-values: Array<Record<string, CloudType>>-End-->
 

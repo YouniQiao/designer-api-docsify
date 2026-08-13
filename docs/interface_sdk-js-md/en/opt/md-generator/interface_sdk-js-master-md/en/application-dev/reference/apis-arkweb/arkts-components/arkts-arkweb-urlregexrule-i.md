@@ -4,6 +4,8 @@ Defines the regular expression rule.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface UrlRegexRule--><!--Device-unnamed-declare interface UrlRegexRule-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Full URL regular expression.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ Exact match of the second-level domain. For example, the second-level domain of 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

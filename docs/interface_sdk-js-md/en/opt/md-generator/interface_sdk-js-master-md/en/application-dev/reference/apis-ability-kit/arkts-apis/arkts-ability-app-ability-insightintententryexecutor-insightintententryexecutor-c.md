@@ -2,9 +2,11 @@
 
 The class of insight intent entry executor.
 
-**Since:** 20
+**Since:** 26.0.0
 
-<!--Device-unnamed-declare class InsightIntentEntryExecutor<T>--><!--Device-unnamed-declare class InsightIntentEntryExecutor<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class InsightIntentEntryExecutor--><!--Device-unnamed-declare class InsightIntentEntryExecutor-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -22,11 +24,13 @@ onExecute(): Promise<insightIntent.IntentResult<T>>
 
 Called when insight intent execute.
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InsightIntentEntryExecutor-onExecute(): Promise<insightIntent.IntentResult<T>>--><!--Device-InsightIntentEntryExecutor-onExecute(): Promise<insightIntent.IntentResult<T>>-End-->
 
@@ -48,11 +52,13 @@ The insight intent context.
 
 **Type:** [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InsightIntentEntryExecutor-context: InsightIntentContext--><!--Device-InsightIntentEntryExecutor-context: InsightIntentContext-End-->
 
@@ -68,11 +74,13 @@ The insight intent execute mode.
 
 **Type:** insightIntent.ExecuteMode
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InsightIntentEntryExecutor-executeMode: insightIntent.ExecuteMode--><!--Device-InsightIntentEntryExecutor-executeMode: insightIntent.ExecuteMode-End-->
 
@@ -88,11 +96,13 @@ The UIExtension content session.
 
 **Type:** [UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md)
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InsightIntentEntryExecutor-uiExtensionSession?: UIExtensionContentSession--><!--Device-InsightIntentEntryExecutor-uiExtensionSession?: UIExtensionContentSession-End-->
 
@@ -108,11 +118,13 @@ The window stage.
 
 **Type:** window.WindowStage
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-InsightIntentEntryExecutor-windowStage?: window.WindowStage--><!--Device-InsightIntentEntryExecutor-windowStage?: window.WindowStage-End-->
 

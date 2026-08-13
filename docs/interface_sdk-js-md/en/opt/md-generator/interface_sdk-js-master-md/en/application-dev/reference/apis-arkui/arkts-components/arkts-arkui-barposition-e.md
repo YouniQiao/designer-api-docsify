@@ -4,6 +4,8 @@ Enumerates the positions of the **Tabs** component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum BarPosition--><!--Device-unnamed-declare enum BarPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,9 +16,11 @@ Enumerates the positions of the **Tabs** component.
 Start
 ```
 
-If the **vertical** attribute is set to **true**, the tab is on the left of the container. If the **vertical**attribute is set to **false**, the tab is on the top of the container.
+If the **vertical** attribute is set to **true**, the tab is on the left of the container. If the **vertical** attribute is set to **false**, the tab is on the top of the container.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -30,9 +34,11 @@ If the **vertical** attribute is set to **true**, the tab is on the left of the 
 End
 ```
 
-If the **vertical** attribute is set to **true**, the tab is on the right of the container. If the **vertical**attribute is set to **false**, the tab is at the bottom of the container.
+If the **vertical** attribute is set to **true**, the tab is on the right of the container. If the **vertical** attribute is set to **false**, the tab is at the bottom of the container.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

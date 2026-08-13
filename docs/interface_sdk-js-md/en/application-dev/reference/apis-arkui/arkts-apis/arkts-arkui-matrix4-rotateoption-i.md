@@ -1,12 +1,14 @@
 # RotateOption
 
-Set Rotation Parameters.
+Describes the rotation parameters.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-matrix4-export interface RotateOption--><!--Device-matrix4-export interface RotateOption-End-->
+**Deprecated since:** -1
+
+<!--Device-matrix4-interface RotateOption--><!--Device-matrix4-interface RotateOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,120 +21,132 @@ import { matrix4 } from '@kit.ArkUI';
 ## angle
 
 ```TypeScript
-angle?: double
+angle?: number
 ```
 
-Rotation angle.
+Rotation angle. Default value: **0**
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RotateOption-angle?: double--><!--Device-RotateOption-angle?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-angle?: number--><!--Device-RotateOption-angle?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerX
 
 ```TypeScript
-centerX?: double
+centerX?: number
 ```
 
-Transform the x-axis coordinate of the center point.
+Additional x-axis offset of the transformation center relative to the component's anchor. Unit: px Default value: **0** **NOTE：**The value **0** indicates that the transformation center coincides with the component's x-axis anchor. For details about the implementation, see [Example 3: Implementing Rotation Around a Center Point](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RotateOption-centerX?: double--><!--Device-RotateOption-centerX?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-centerX?: number--><!--Device-RotateOption-centerX?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## centerY
 
 ```TypeScript
-centerY?: double
+centerY?: number
 ```
 
-Transform the y-axis coordinate of the center point.
+Additional y-axis offset of the transformation center relative to the component's anchor. Unit: px Default value: **0** **NOTE：**The value **0** indicates that the transformation center coincides with the component's y-axis anchor. For details about the implementation, see [Example 3: Implementing Rotation Around a Center Point](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#example-3-implementing-rotation-around-a-center-point).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RotateOption-centerY?: double--><!--Device-RotateOption-centerY?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-centerY?: number--><!--Device-RotateOption-centerY?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
-Axis of rotation vector x coordinate.
+X-coordinate of the rotation axis vector. Default value: **0** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RotateOption-x?: double--><!--Device-RotateOption-x?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-x?: number--><!--Device-RotateOption-x?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
-Axis of rotation vector y coordinate.
+Y-coordinate of the rotation axis vector. Default value: **0** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RotateOption-y?: double--><!--Device-RotateOption-y?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-y?: number--><!--Device-RotateOption-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
-Axis of rotation vector z coordinate.
+Z-coordinate of the rotation axis vector. Default value: **0** Value range: (-∞, +∞) **NOTE：**The rotation axis vector is valid only when at least one of **x**, **y**, and **z** is not 0.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RotateOption-z?: double--><!--Device-RotateOption-z?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RotateOption-z?: number--><!--Device-RotateOption-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

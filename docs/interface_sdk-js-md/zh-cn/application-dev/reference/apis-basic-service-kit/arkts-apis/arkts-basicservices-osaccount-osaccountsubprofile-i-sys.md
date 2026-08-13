@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface OsAccountSubProfile--><!--Device-osAccount-interface OsAccountSubProfile-End-->
 
@@ -24,7 +26,9 @@ distributedInfo?: distributedAccount.DistributedInfo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +44,15 @@ distributedInfo?: distributedAccount.DistributedInfo
 id: int
 ```
 
-系统账号子profile的标识符。取值范围为全体整数。
+系统账号子profile的标识符。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,13 +68,15 @@ id: int
 index: int
 ```
 
-系统账号子profile的位置索引，取值范围：0~子profile个数减1。该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。取值范围为全体整数。
+系统账号子profile的位置索引，取值范围：0~子profile个数减1。 该索引在每个系统账号下唯一，由系统在创建子Profile时自动分配。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,13 +92,15 @@ index: int
 osAccountLocalId: int
 ```
 
-子profile所属系统账号的本地标识符。取值范围为全体整数。
+子profile所属系统账号的本地标识符。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

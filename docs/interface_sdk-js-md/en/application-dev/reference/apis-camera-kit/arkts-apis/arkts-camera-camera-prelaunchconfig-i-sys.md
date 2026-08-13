@@ -1,10 +1,12 @@
 # PrelaunchConfig (System API)
 
-Defines the camera prelaunch configuration.Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a later version.
+Defines the camera prelaunch configuration. Currently, the configuration is used for sensor-level prelaunch. It will be used for stream-level prelaunch in a later version.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface PrelaunchConfig--><!--Device-camera-interface PrelaunchConfig-End-->
 
@@ -26,11 +28,13 @@ activeTime?: int
 
 Activation time, in minutes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrelaunchConfig-activeTime?: int--><!--Device-PrelaunchConfig-activeTime?: int-End-->
 
@@ -48,9 +52,11 @@ Camera device.
 
 **Type:** [CameraDevice](arkts-camera-camera-cameradevice-i.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrelaunchConfig-cameraDevice: CameraDevice--><!--Device-PrelaunchConfig-cameraDevice: CameraDevice-End-->
 
@@ -68,9 +74,11 @@ Type of the parameter used for prelaunch.
 
 **Type:** [RestoreParamType](arkts-camera-camera-restoreparamtype-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType--><!--Device-PrelaunchConfig-restoreParamType?: RestoreParamType-End-->
 
@@ -88,9 +96,11 @@ Setting parameter.
 
 **Type:** [SettingParam](arkts-camera-camera-settingparam-i-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrelaunchConfig-settingParam?: SettingParam--><!--Device-PrelaunchConfig-settingParam?: SettingParam-End-->
 

@@ -14,7 +14,9 @@ function destroyAbilityConnectionSession(sessionId: number): void
 
 Destroys a collaboration session between applications.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

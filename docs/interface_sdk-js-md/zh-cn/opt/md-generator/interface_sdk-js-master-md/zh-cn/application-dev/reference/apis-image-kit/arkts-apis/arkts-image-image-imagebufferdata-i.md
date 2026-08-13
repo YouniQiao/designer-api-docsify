@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-image-interface ImageBufferData--><!--Device-image-interface ImageBufferData-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -20,6 +22,8 @@ readonly byteBuffer: ArrayBuffer
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ImageBufferData-readonly byteBuffer: ArrayBuffer--><!--Device-ImageBufferData-readonly byteBuffer: ArrayBuffer-End-->
@@ -32,13 +36,13 @@ readonly byteBuffer: ArrayBuffer
 readonly pixelStride: number[]
 ```
 
-颜色分量的像素间距。单位：字节（Byte）。
-
-对于编码后的图片如JPEG，该属性无意义。
+颜色分量的像素间距。单位：字节（Byte）。 对于编码后的图片如JPEG，该属性无意义。
 
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,16 +56,13 @@ readonly pixelStride: number[]
 readonly rowStride: number[]
 ```
 
-颜色分量的行跨距。单位：字节（Byte）。
-
-对于编码后的图片如JPEG，该属性无意义。
-
-读取相机预览流数据时，需要按rowStride进行读取，使用详情请参考  
-[相机预览花屏解决方案](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-deal-stride-solution)。
+颜色分量的行跨距。单位：字节（Byte）。 对于编码后的图片如JPEG，该属性无意义。 读取相机预览流数据时，需要按rowStride进行读取，使用详情请参考 [相机预览花屏解决方案](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-deal-stride-solution)。
 
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

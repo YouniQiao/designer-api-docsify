@@ -2,7 +2,9 @@
 
 Describes the frame shutter information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface FrameShutterInfo--><!--Device-camera-interface FrameShutterInfo-End-->
 
@@ -24,7 +26,9 @@ ID of this capture action.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +46,9 @@ Timestamp when the frame shutter event is triggered, in milliseconds.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

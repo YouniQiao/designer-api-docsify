@@ -6,6 +6,8 @@ Represents CLI (Command Line Interface) information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-abilityAccessCtrl-interface CliInfo--><!--Device-abilityAccessCtrl-interface CliInfo-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -32,6 +34,8 @@ CLI name. This field cannot be empty and its length cannot exceed 256 characters
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CliInfo-cliName: string--><!--Device-CliInfo-cliName: string-End-->
@@ -53,6 +57,8 @@ CLI sub-command name. This field can be empty, but its length cannot exceed 256 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

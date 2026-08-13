@@ -2,7 +2,9 @@
 
 拒绝消息可选参数。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface RejectMessageOptions--><!--Device-call-export interface RejectMessageOptions-End-->
 
@@ -20,7 +22,9 @@ messageContent: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RejectMessageOptions-messageContent: string--><!--Device-RejectMessageOptions-messageContent: string-End-->
 

@@ -4,7 +4,9 @@ Indicates the options of the menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface EditableTitleBarMenuItemV2Options--><!--Device-unnamed-export declare interface EditableTitleBarMenuItemV2Options-End-->
 
@@ -15,24 +17,6 @@ Indicates the options of the menu item.
 ```TypeScript
 import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
 ```
-
-## action
-
-```TypeScript
-action?: OnActionCallback
-```
-
-Callback function when click on this menu item.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -46,9 +30,13 @@ Accessibility description.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-accessibilityDescription?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2Options-accessibilityDescription?: ResourceStr-End-->
 
@@ -60,7 +48,7 @@ Accessibility description.
 accessibilityLevel?: string
 ```
 
-Accessibility level, options: 'auto', 'yes', 'no'.
+Accessibility level, options: 'auto', 'yes', 'no'. value: 'auto'.
 
 **Type:** string
 
@@ -68,9 +56,13 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-accessibilityLevel?: string--><!--Device-EditableTitleBarMenuItemV2Options-accessibilityLevel?: string-End-->
 
@@ -88,11 +80,39 @@ Accessibility text for screen reader.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
 <!--Device-EditableTitleBarMenuItemV2Options-accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2Options-accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+action?: OnActionCallback
+```
+
+Callback function when click on this menu item.
+
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2Options-action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -110,9 +130,13 @@ Whether to get focus by default.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-defaultFocus?: boolean--><!--Device-EditableTitleBarMenuItemV2Options-defaultFocus?: boolean-End-->
 
@@ -132,9 +156,13 @@ Whether to enable this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-isEnabled?: boolean--><!--Device-EditableTitleBarMenuItemV2Options-isEnabled?: boolean-End-->
 
@@ -152,9 +180,13 @@ Label text for long press dialog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-label?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2Options-label?: ResourceStr-End-->
 
@@ -172,9 +204,13 @@ Symbol icon style modifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItemV2Options-symbolStyle?: SymbolGlyphModifier-End-->
 
@@ -192,9 +228,13 @@ Icon resource, supports Symbol or Image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2Options-value?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2Options-value?: ResourceStr-End-->
 

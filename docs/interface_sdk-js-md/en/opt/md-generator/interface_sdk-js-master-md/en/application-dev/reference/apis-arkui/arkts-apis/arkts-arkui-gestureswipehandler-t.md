@@ -8,6 +8,8 @@ Defines the callback triggered on a frame-by-frame basis during a swipe-based pa
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-unnamed-declare type GestureSwipeHandler = (index: number, event: SwiperAnimationEvent) => void--><!--Device-unnamed-declare type GestureSwipeHandler = (index: number, event: SwiperAnimationEvent) => void-End-->

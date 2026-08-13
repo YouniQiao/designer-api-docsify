@@ -12,7 +12,7 @@ function showToast(options: ShowToastOptions): void
 
 **废弃版本：** 9
 
-**替代接口：** [showToast](ohos.arkui.UIContext.PromptAction#showToast)
+**替代接口：** showToast
 
 <!--Device-prompt-function showToast(options: ShowToastOptions): void--><!--Device-prompt-function showToast(options: ShowToastOptions): void-End-->
 

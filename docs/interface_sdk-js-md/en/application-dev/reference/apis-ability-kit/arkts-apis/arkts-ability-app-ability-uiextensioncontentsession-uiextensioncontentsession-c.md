@@ -1,10 +1,12 @@
 # UIExtensionContentSession
 
-UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading  and allows configuration of the window privacy mode of the host application.
+UIExtensionContentSession is the UI operation class for the UIExtensionAbility. It provides control over page loading and allows configuration of the window privacy mode of the host application.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
 
@@ -24,9 +26,11 @@ getUIExtensionWindowProxy(): uiExtension.WindowProxy
 
 Obtains the window proxy of this UIExtensionAbility.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,7 @@ Obtains the window proxy of this UIExtensionAbility.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -92,12 +96,13 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the   
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) lifecycle of the UIExtensionAbility.
+Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) lifecycle of the UIExtensionAbility.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +121,8 @@ Loads a page for the [UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -151,13 +156,13 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a   
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a  named route page in the   
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) lifecycle of the UIExtensionAbility.
+Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility), with state properties passed to the page through [LocalStorage](../../../ui/state-management/arkts-localstorage.md). This API is used to load a named route page in the [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate) lifecycle of the UIExtensionAbility.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,7 +181,7 @@ Loads a [named route](../../../ui/arkts-routing.md#named-route) page for a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -242,11 +247,13 @@ struct UIExtensionPage {
 setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 ```
 
-Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or  recorded. This API uses a promise to return the result.
+Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or recorded. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
@@ -272,8 +279,8 @@ Enables or disables the window privacy mode of the host application. A window in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 
 ## Examples
 
@@ -312,11 +319,13 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 ```
 
-Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or  recorded. This API uses an asynchronous callback to return the result.
+Enables or disables the window privacy mode of the host application. A window in privacy mode cannot be captured or recorded. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
@@ -331,14 +340,14 @@ Enables or disables the window privacy mode of the host application. A window in
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | isPrivacyMode | boolean | Yes | Whether to enable the privacy mode. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the setting is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
 
 ## Examples
 
@@ -378,11 +387,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Implicitly starts a given type of UIExtensionAbility. This API uses an asynchronous callback to return the result. It can be called only by applications running in the foreground.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
+Implicitly starts a given type of UIExtensionAbility. This API uses an asynchronous callback to return the result. It can be called only by applications running in the foreground. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -397,19 +408,19 @@ Implicitly starts a given type of UIExtensionAbility. This API uses an asynchron
 | type | string | Yes | Type of the UIExtensionAbility. For details, see [Starting an Application of the Specified Type](../../../application-models/start-intent-panel.md#matching-rules). |
 | wantParam | Record&lt;string, Object&gt; | Yes | Parameters passed for starting the UIExtensionAbility. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Execution result of starting the UIExtensionAbility. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 and later |
-| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 and later |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 and later |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -454,11 +465,13 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Starts the UIAbility or UIExtensionAbility by type.If the caller application is in the background, it is not allowed to call this interface.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
+Starts the UIAbility or UIExtensionAbility by type. If the caller application is in the background, it is not allowed to call this interface. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -473,13 +486,13 @@ Starts the UIAbility or UIExtensionAbility by type.If the caller application is 
 | type | string | Yes | The type of target ability. |
 | wantParam | Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | Yes | Indicates the want parameter. |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes | Indicates the abilityStartCallback. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of startAbility. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of startAbility. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## startAbilityByType
 
@@ -493,6 +506,8 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -518,13 +533,13 @@ Implicitly starts a given type of UIExtensionAbility. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 and later |
-| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 and later |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component.<br>**Applicable version:** 11 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist.<br>**Applicable version:** 11 and later |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type.<br>**Applicable version:** 11 and later |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released.<br>**Applicable version:** 11 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface.<br>**Applicable version:** 11 and later |
 
 ## Examples
 
@@ -569,11 +584,13 @@ startAbilityByType(type: string, wantParam: Record<string, RecordData>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Starts the UIAbility or UIExtensionAbility by type.If the caller application is in the background, it is not allowed to call this interface.
+Starts the UIAbility or UIExtensionAbility by type. If the caller application is in the background, it is not allowed to call this interface.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -599,7 +616,7 @@ Starts the UIAbility or UIExtensionAbility by type.If the caller application is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## terminateSelf
 
@@ -609,9 +626,11 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -623,13 +642,13 @@ Destroys this UIExtensionAbility and closes the corresponding window of the host
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -673,9 +692,11 @@ terminateSelf(): Promise<void>
 
 Destroys this UIExtensionAbility and closes the corresponding window of the host application. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -731,9 +752,11 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -746,13 +769,13 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the host application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 
@@ -806,9 +829,11 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 Destroys this UIExtensionAbility, closes the corresponding window of the host application, and returns the result to the host application. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -832,7 +857,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## Examples
 

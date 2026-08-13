@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class System--><!--Device-i18n-export class System-End-->
 
@@ -20,7 +22,9 @@ static addPreferredLanguage(language: string, index?: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -41,10 +45,27 @@ static addPreferredLanguage(language: string, index?: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 将语言zh-CN添加到系统偏好语言列表中
+let language = 'zh-CN';
+let index = 0;
+try {
+  i18n.System.addPreferredLanguage(language, index); // 将zh-CN添加到系统偏好语言列表的第1位
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.addPreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemCollations
 
@@ -56,7 +77,9 @@ static getSystemCollations(): Map<string, string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getSystemCollations(): Map<string, string>--><!--Device-System-static getSystemCollations(): Map<string, string>-End-->
 
@@ -74,7 +97,21 @@ static getSystemCollations(): Map<string, string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let systemCollations: Map<string, string> = i18n.System.getSystemCollations();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemCollations failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemMeasurements
 
@@ -86,7 +123,9 @@ static getSystemMeasurements(): Map<string, string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getSystemMeasurements(): Map<string, string>--><!--Device-System-static getSystemMeasurements(): Map<string, string>-End-->
 
@@ -104,7 +143,21 @@ static getSystemMeasurements(): Map<string, string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let systemMeasurements: Map<string, string> = i18n.System.getSystemMeasurements();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemMeasurements failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemNumberPatterns
 
@@ -116,7 +169,9 @@ static getSystemNumberPatterns(): Map<string, string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getSystemNumberPatterns(): Map<string, string>--><!--Device-System-static getSystemNumberPatterns(): Map<string, string>-End-->
 
@@ -134,7 +189,21 @@ static getSystemNumberPatterns(): Map<string, string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let systemNumberPatterns: Map<string, string> = i18n.System.getSystemNumberPatterns();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemNumberPatterns failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemNumberingSystems
 
@@ -146,7 +215,9 @@ static getSystemNumberingSystems(): Map<string, string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getSystemNumberingSystems(): Map<string, string>--><!--Device-System-static getSystemNumberingSystems(): Map<string, string>-End-->
 
@@ -164,7 +235,21 @@ static getSystemNumberingSystems(): Map<string, string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let systemNumberingSystems: Map<string, string> = i18n.System.getSystemNumberingSystems();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemNumberingSystems failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getSystemNumericalDatePatterns
 
@@ -176,7 +261,9 @@ static getSystemNumericalDatePatterns(): Map<string, string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>--><!--Device-System-static getSystemNumericalDatePatterns(): Map<string, string>-End-->
 
@@ -194,7 +281,21 @@ static getSystemNumericalDatePatterns(): Map<string, string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let datePatterns: Map<string, string> = i18n.System.getSystemNumericalDatePatterns();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getSystemNumericalDatePatterns failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getUsingCollation
 
@@ -206,7 +307,9 @@ static getUsingCollation(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getUsingCollation(): string--><!--Device-System-static getUsingCollation(): string-End-->
 
@@ -224,7 +327,21 @@ static getUsingCollation(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let usingCollation: string = i18n.System.getUsingCollation();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getUsingCollation failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getUsingMeasurement
 
@@ -236,7 +353,9 @@ static getUsingMeasurement(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getUsingMeasurement(): string--><!--Device-System-static getUsingMeasurement(): string-End-->
 
@@ -254,7 +373,21 @@ static getUsingMeasurement(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let usingMeasurement: string = i18n.System.getUsingMeasurement();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getUsingMeasurement failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getUsingNumberPattern
 
@@ -266,7 +399,9 @@ static getUsingNumberPattern(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getUsingNumberPattern(): string--><!--Device-System-static getUsingNumberPattern(): string-End-->
 
@@ -284,7 +419,21 @@ static getUsingNumberPattern(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let usingNumberPattern: string = i18n.System.getUsingNumberPattern();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getUsingNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getUsingNumberingSystem
 
@@ -296,7 +445,9 @@ static getUsingNumberingSystem(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getUsingNumberingSystem(): string--><!--Device-System-static getUsingNumberingSystem(): string-End-->
 
@@ -314,7 +465,7 @@ static getUsingNumberingSystem(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## getUsingNumericalDatePattern
 
@@ -326,7 +477,9 @@ static getUsingNumericalDatePattern(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-System-static getUsingNumericalDatePattern(): string--><!--Device-System-static getUsingNumericalDatePattern(): string-End-->
 
@@ -344,7 +497,21 @@ static getUsingNumericalDatePattern(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let datePattern: string = i18n.System.getUsingNumericalDatePattern();
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.getUsingNumericalDatePattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## removePreferredLanguage
 
@@ -356,7 +523,9 @@ static removePreferredLanguage(index: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -376,10 +545,26 @@ static removePreferredLanguage(index: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed.<br>**适用版本：** 23 - 24 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed.<br>**适用版本：** 9 - 24 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 删除系统偏好语言列表中的第一个偏好语言
+let index = 0;
+try {
+  i18n.System.removePreferredLanguage(index);
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.removePreferredLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## set24HourClock
 
@@ -391,7 +576,9 @@ static set24HourClock(option: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -411,10 +598,25 @@ static set24HourClock(option: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed.<br>**适用版本：** 23 - 24 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed.<br>**适用版本：** 9 - 24 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 将系统时制设置为24小时制
+try {
+  i18n.System.set24HourClock(true);
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.set24HourClock failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setFirstDayOfWeek
 
@@ -426,7 +628,9 @@ static setFirstDayOfWeek(type: WeekDay): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -446,9 +650,23 @@ static setFirstDayOfWeek(type: WeekDay): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setFirstDayOfWeek(i18n.WeekDay.MON); // 设置用户偏好的周起始日为周一
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setFirstDayOfWeek failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemCollation
 
@@ -460,7 +678,9 @@ static setSystemCollation(identifier: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -480,9 +700,23 @@ static setSystemCollation(identifier: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemCollation("zhuyin"); // 如果设置当前系统不支持的排序方式会报错
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemCollation failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemLanguage
 
@@ -490,13 +724,13 @@ static setSystemCollation(identifier: string): void
 static setSystemLanguage(language: string): void
 ```
 
-设置系统语言。若要监听系统语言变化，可以监听  
-[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
-[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。 &lt;br&gt;**说明：**  &lt;br&gt;可以通过[i18n.System.getSystemLanguage()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemlanguage9)接口获取系统语言。 &lt;br&gt;从API version 21开始，也可以使用[param工具](../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
+设置系统语言。若要监听系统语言变化，可以监听 [公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。 &lt;br&gt;**说明：** &lt;br&gt;可以通过i18n.System.getSystemLanguage()接口获取系统语言。 &lt;br&gt;从API version 21开始，也可以使用[param工具](../../../tools/param-tool.md#获取系统参数的值)的“param get persist.global.language”命令获取系统语言。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -516,10 +750,75 @@ static setSystemLanguage(language: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+// 设置系统语言
+try {
+  i18n.System.setSystemLanguage('zh'); // 设置系统当前语言为 "zh"
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemLanguage failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
+
+## setSystemLocale
+
+```TypeScript
+static setSystemLocale(locale: string): void
+```
+
+设置系统区域。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** 20
+
+**需要权限：** ohos.permission.UPDATE_CONFIGURATION
+
+<!--Device-System-static setSystemLocale(locale: string): void--><!--Device-System-static setSystemLocale(locale: string): void-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| locale | string | 是 | [表示区域ID的字符串](../../../internationalization/i18n-locale-culture.md#实现原理)， 由语言、脚本、国家或地区组成。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemLocale('zh-CN');  // 设置系统当前区域ID为 "zh-CN"
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemLocale failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemMeasurement
 
@@ -531,7 +830,9 @@ static setSystemMeasurement(identifier: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -551,9 +852,23 @@ static setSystemMeasurement(identifier: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemMeasurement("uksystem"); // 如果设置当前系统不支持的度量衡会抛8900001错误码
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemMeasurement failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemNumberPattern
 
@@ -565,7 +880,9 @@ static setSystemNumberPattern(pattern: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -585,9 +902,23 @@ static setSystemNumberPattern(pattern: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemNumberPattern("002e002c"); // 如果设置当前系统不支持的数字格式会报错
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemNumberPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemNumberingSystem
 
@@ -599,7 +930,9 @@ static setSystemNumberingSystem(identifier: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -619,9 +952,23 @@ static setSystemNumberingSystem(identifier: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemNumberingSystem("arab"); // 如果设置当前系统不支持的数字系统会报错
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemNumberingSystem failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemNumericalDatePattern
 
@@ -633,7 +980,9 @@ static setSystemNumericalDatePattern(identifier : string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -653,9 +1002,23 @@ static setSystemNumericalDatePattern(identifier : string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemNumericalDatePattern("dd/MM/y"); // 如果设置当前系统不支持的数字日期格式，系统会抛出8900001错误码
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemNumericalDatePattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setSystemRegion
 
@@ -663,13 +1026,13 @@ static setSystemNumericalDatePattern(identifier : string): void
 static setSystemRegion(region: string): void
 ```
 
-设置系统地区。若要监听系统地区变化，可以监听  
-[公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed)OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考  
-[系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。 &lt;br&gt;**说明：**  &lt;br&gt;可以通过[i18n.System.getSystemRegion()](../../../reference/apis-localization-kit/js-apis-i18n.md#getsystemregion9)接口获取系统地区。
+设置系统地区。若要监听系统地区变化，可以监听 [公共事件](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_locale_changed) OHOS::EventFwk::CommonEventSupport::COMMON_EVENT_LOCALE_CHANGED，具体可参考 [系统语言与区域](../../../internationalization/i18n-system-language-region.md#开发步骤)。 &lt;br&gt;**说明：** &lt;br&gt;可以通过i18n.System.getSystemRegion()接口获取系统地区。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -689,10 +1052,24 @@ static setSystemRegion(region: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setSystemRegion('CN');  // 设置系统当前地区为 "CN"
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setSystemRegion failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setTemperatureType
 
@@ -704,7 +1081,9 @@ static setTemperatureType(type: TemperatureType): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -724,9 +1103,23 @@ static setTemperatureType(type: TemperatureType): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setTemperatureType(i18n.TemperatureType.CELSIUS); // 设置温度单位为摄氏度
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setTemperatureType failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## setUsingLocalDigit
 
@@ -738,7 +1131,9 @@ static setUsingLocalDigit(flag: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 
@@ -758,7 +1153,22 @@ static setUsingLocalDigit(flag: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 26.0.0+ |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed.<br>**适用版本：** 9 - 24 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  i18n.System.setUsingLocalDigit(true); // 打开本地化数字开关
+} catch(error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call System.setUsingLocalDigit failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

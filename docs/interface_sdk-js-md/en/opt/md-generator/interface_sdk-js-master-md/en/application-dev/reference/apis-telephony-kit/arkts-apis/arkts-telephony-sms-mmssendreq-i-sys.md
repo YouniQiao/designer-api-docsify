@@ -2,7 +2,9 @@
 
 Defines an MMS message sending request.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsSendReq--><!--Device-sms-export interface MmsSendReq-End-->
 
@@ -26,7 +28,9 @@ Blind carbon copy.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-bcc?: Array<MmsAddress>--><!--Device-MmsSendReq-bcc?: Array<MmsAddress>-End-->
 
@@ -44,7 +48,9 @@ Carbon copy.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-cc?: Array<MmsAddress>--><!--Device-MmsSendReq-cc?: Array<MmsAddress>-End-->
 
@@ -62,7 +68,9 @@ Content type.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-contentType: string--><!--Device-MmsSendReq-contentType: string-End-->
 
@@ -80,7 +88,9 @@ Date.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-date?: long--><!--Device-MmsSendReq-date?: long-End-->
 
@@ -98,7 +108,9 @@ Delivery report.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-deliveryReport?: int--><!--Device-MmsSendReq-deliveryReport?: int-End-->
 
@@ -116,7 +128,9 @@ Expiration.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-expiry?: int--><!--Device-MmsSendReq-expiry?: int-End-->
 
@@ -134,7 +148,9 @@ MMS message source.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-from: MmsAddress--><!--Device-MmsSendReq-from: MmsAddress-End-->
 
@@ -152,7 +168,9 @@ Message class.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-messageClass?: int--><!--Device-MmsSendReq-messageClass?: int-End-->
 
@@ -170,7 +188,9 @@ Priority.
 
 **Type:** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-priority?: MmsPriorityType--><!--Device-MmsSendReq-priority?: MmsPriorityType-End-->
 
@@ -188,7 +208,9 @@ Read report.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-readReport?: int--><!--Device-MmsSendReq-readReport?: int-End-->
 
@@ -206,7 +228,9 @@ Sender visibility.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-senderVisibility?: int--><!--Device-MmsSendReq-senderVisibility?: int-End-->
 
@@ -224,7 +248,9 @@ Subject.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-subject?: string--><!--Device-MmsSendReq-subject?: string-End-->
 
@@ -242,7 +268,9 @@ Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-to?: Array<MmsAddress>--><!--Device-MmsSendReq-to?: Array<MmsAddress>-End-->
 
@@ -260,7 +288,9 @@ Transaction ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-transactionId: string--><!--Device-MmsSendReq-transactionId: string-End-->
 
@@ -278,7 +308,9 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsSendReq-version: MmsVersionType--><!--Device-MmsSendReq-version: MmsVersionType-End-->
 

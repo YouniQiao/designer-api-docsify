@@ -6,13 +6,13 @@
 function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether a specified application supports distributed notifications.This API uses an asynchronous callback to return the result.
+Sets whether a specified application supports distributed notifications. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle)
+**Substitutes:** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -37,13 +37,13 @@ Sets whether a specified application supports distributed notifications.This API
 function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promise<void>
 ```
 
-Sets whether a specified application supports distributed notifications.This API uses a promise to return the result.
+Sets whether a specified application supports distributed notifications. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle)
+**Substitutes:** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

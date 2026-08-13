@@ -4,7 +4,9 @@ Defines the custom environment Key.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class CustomEnvKey<S>--><!--Device-unnamed-declare class CustomEnvKey<S>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CustomEnvKey--><!--Device-unnamed-declare class CustomEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ protected constructor()
 constructor.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ static create<T>(): CustomEnvKey<T>
 create CustomEnvKey
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,6 +67,8 @@ The corresponding type of the custom env key.
 **Type:** S
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

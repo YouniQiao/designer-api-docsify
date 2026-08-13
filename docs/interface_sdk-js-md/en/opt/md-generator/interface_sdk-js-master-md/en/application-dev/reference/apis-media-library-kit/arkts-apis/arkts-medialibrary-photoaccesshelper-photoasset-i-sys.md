@@ -2,7 +2,9 @@
 
 PhotoAsset provides APIs for encapsulating file asset attributes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAsset--><!--Device-photoAccessHelper-interface PhotoAsset-End-->
 
@@ -22,7 +24,9 @@ cancelPhotoRequest(requestId: string): void
 
 Cancels a task for obtaining media thumbnails.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -42,9 +46,9 @@ Cancels a task for obtaining media thumbnails.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -91,15 +95,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 commitEditedAsset(editData: string, uri: string, callback: AsyncCallback<void>): void
 ```
 
-Commits the edited image or video asset. This API uses an asynchronous callback to return the result.
+Commits the edited image or video asset. This API uses an asynchronous callback to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#@ohos.file.fileuri). > **NOTE：**> > The commit operation overwrites the previous edited data.
 
-The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#fileUri).
+**Since:** 23
 
-> **NOTE：**
-> 
-> The commit operation overwrites the previous edited data.
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -121,9 +121,9 @@ The edited file is transferred to the media library based on the URI, which is *
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## commitEditedAsset
@@ -132,15 +132,11 @@ The edited file is transferred to the media library based on the URI, which is *
 commitEditedAsset(editData: string, uri: string): Promise<void>
 ```
 
-Commits the edited image or video asset. This API uses a promise to return the result.
+Commits the edited image or video asset. This API uses a promise to return the result. The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#@ohos.file.fileuri). > **NOTE：**> > The commit operation overwrites the previous edited data.
 
-The edited file is transferred to the media library based on the URI, which is **FileUri** of the edited file in the application sandbox directory. For details, see [File URI](../../apis-core-file-kit/arkts-apis/arkts-file-fileuri.md#fileUri).
+**Since:** 23
 
-> **NOTE：**
-> 
-> The commit operation overwrites the previous edited data.
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -167,9 +163,9 @@ The edited file is transferred to the media library based on the URI, which is *
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -207,7 +203,9 @@ convertImageFormat(title: string, imageFormat: SupportedImageFormat): Promise<Ph
 
 Duplicates an image within the same album (either user-created or application-specific) and converts it to the specified format. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -234,10 +232,10 @@ Duplicates an image within the same album (either user-created or application-sp
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -271,7 +269,9 @@ createTemporaryCompatibleDuplicate(): Promise<void>
 
 Creates a JPEG-compatible copy for a third-party application that does not support HEIF/HEIC image encoding. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -291,10 +291,10 @@ Creates a JPEG-compatible copy for a third-party application that does not suppo
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -327,7 +327,9 @@ getAnalysisData(analysisType: AnalysisType): Promise<string>
 
 Obtains analysis data. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -353,9 +355,9 @@ Obtains analysis data. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -393,11 +395,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getEditData(): Promise<MediaAssetEditData>
 ```
 
-Obtains the edited data of this asset. This API uses a promise to return the result.
+Obtains the edited data of this asset. This API uses a promise to return the result. If the asset has never been edited, an empty string is returned.
 
-If the asset has never been edited, an empty string is returned.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -417,9 +419,9 @@ If the asset has never been edited, an empty string is returned.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -454,17 +456,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey). > **NOTE：**> > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys). These two fields must be passed in via > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions).fetchColumns.
 
-The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey).
+**Since:** 23
 
-> **NOTE：**
-> 
-> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
-> [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys). These two fields must be passed in via
-> [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions).fetchColumns.
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -485,9 +481,9 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -531,17 +527,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getExif(): Promise<string>
 ```
 
-Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result.
+Obtains the Exif data from a JPG image and returns a JSON string. This API uses a promise to return the result. The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey). > **NOTE：**> > This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and > [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys). These two fields must be passed in via > [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions).fetchColumns.
 
-The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) module. For details about the Exif data, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey).
+**Since:** 23
 
-> **NOTE：**
-> 
-> This API returns a JSON string consisting of Exif tags. The complete Exif data consists of **all_exif** and
-> [PhotoKeys.USER_COMMENT](arkts-medialibrary-photoaccesshelper-photokeys-e.md#PhotoKeys). These two fields must be passed in via
-> [FetchOptions](arkts-medialibrary-photoaccesshelper-fetchoptions-i.md#FetchOptions).fetchColumns.
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -562,9 +552,9 @@ The Exif data obtained are provided by the [image](../../apis-image-kit/arkts-ap
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -603,7 +593,9 @@ getKeyFrameThumbnail(beginFrameTimeMs: number, type: ThumbnailType): Promise<ima
 
 Obtains the thumbnail of the specified type for the key frame. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -630,9 +622,9 @@ Obtains the thumbnail of the specified type for the key frame. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -674,6 +666,8 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>--><!--Device-PhotoAsset-getReadOnlyFdWithCached(): Promise<int>-End-->
@@ -693,9 +687,9 @@ Open the file and cache it in the gallery sandbox when streaming video from the 
 | Error Code ID |
 | --- |
 | 23800302 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## getThumbnailData
 
@@ -705,7 +699,9 @@ getThumbnailData(type: ThumbnailType): Promise<ArrayBuffer>
 
 Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -731,9 +727,9 @@ Obtains the ArrayBuffer of a file thumbnail by specifying its type. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -768,7 +764,9 @@ isEdited(callback: AsyncCallback<boolean>): void
 
 Checks whether this image or video asset is edited. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -788,9 +786,9 @@ Checks whether this image or video asset is edited. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -835,7 +833,9 @@ isEdited(): Promise<boolean>
 
 Checks whether this image or video asset is edited. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -855,9 +855,9 @@ Checks whether this image or video asset is edited. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -895,20 +895,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-Opens this file asset. This API uses an asynchronous callback to return the result.
-
-The returned FD must be closed when it is not required.
-
-> **NOTE：**
-> 
-> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
-> for obtaining the media file handle is no longer provided.
+Opens this file asset. This API uses an asynchronous callback to return the result. The returned FD must be closed when it is not required. > **NOTE：**> > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API > for obtaining the media file handle is no longer provided.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
@@ -930,9 +923,9 @@ The returned FD must be closed when it is not required.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -961,20 +954,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 open(mode: string): Promise<number>
 ```
 
-Opens this file asset. This API uses a promise to return the result.
-
-The returned FD must be closed when it is not required.
-
-> **NOTE：**
-> 
-> This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API
-> for obtaining the media file handle is no longer provided.
+Opens this file asset. This API uses a promise to return the result. The returned FD must be closed when it is not required. > **NOTE：**> > This API is supported since API version 10 and deprecated since API version 11. For security purposes, the API > for obtaining the media file handle is no longer provided.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1001,9 +987,9 @@ The returned FD must be closed when it is not required.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1035,11 +1021,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(callback: AsyncCallback<string>): void
 ```
 
-Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result.
+Obtains the edit data of this image or video asset. This API uses an asynchronous callback to return the result. If the asset has never been edited, an empty string is returned.
 
-If the asset has never been edited, an empty string is returned.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1059,9 +1045,9 @@ If the asset has never been edited, an empty string is returned.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1100,11 +1086,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestEditData(): Promise<string>
 ```
 
-Obtains the edit data of this image or video asset. This API uses a promise to return the result.
+Obtains the edit data of this image or video asset. This API uses a promise to return the result. If the asset has never been edited, an empty string is returned.
 
-If the asset has never been edited, an empty string is returned.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1124,9 +1110,9 @@ If the asset has never been edited, an empty string is returned.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1160,11 +1146,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 requestPhoto(callback: AsyncCallback<image.PixelMap>): string
 ```
 
-Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
-
-The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
+Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result. The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail is 256 x 256. After this API is called, the callback will be invoked twice to return a quick thumbnail and a quality thumbnail in sequence.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1190,9 +1176,9 @@ The size of a quick thumbnail is 128 x 128, and the size of a quality thumbnail 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1229,12 +1215,55 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 ## requestPhoto
 
 ```TypeScript
+requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null
+```
+
+Obtains the quick thumbnail and quality thumbnail of this asset. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null--><!--Device-PhotoAsset-requestPhoto(callback: AsyncCallback<image.PixelMap>): string | null-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## requestPhoto
+
+```TypeScript
 requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string
 ```
 
 Obtains the thumbnails of an asset based on the specified options. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1261,9 +1290,9 @@ Obtains the thumbnails of an asset based on the specified options. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1303,6 +1332,48 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+## requestPhoto
+
+```TypeScript
+requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string | null
+```
+
+Obtains the thumbnails of an asset based on the specified options. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string | null--><!--Device-PhotoAsset-requestPhoto(options: RequestPhotoOptions, callback: AsyncCallback<image.PixelMap>): string | null-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| options | [RequestPhotoOptions](arkts-medialibrary-photoaccesshelper-requestphotooptions-i-sys.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| string |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
 ## requestSource
 
 ```TypeScript
@@ -1311,7 +1382,9 @@ requestSource(callback: AsyncCallback<number>): void
 
 Opens the source file and returns the FD. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1331,9 +1404,9 @@ Opens the source file and returns the FD. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1374,7 +1447,9 @@ requestSource(): Promise<number>
 
 Opens the source file and returns the FD. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1394,9 +1469,9 @@ Opens the source file and returns the FD. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1430,14 +1505,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 revertToOriginal(callback: AsyncCallback<void>): void
 ```
 
-Reverts to the state of the file before being edited. This API uses an asynchronous callback to return the result.
+Reverts to the state of the file before being edited. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored. > Exercise caution when using this API.
 
-> **NOTE：**
-> 
-> This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
-> Exercise caution when using this API.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1457,9 +1529,9 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## revertToOriginal
@@ -1468,14 +1540,11 @@ Reverts to the state of the file before being edited. This API uses an asynchron
 revertToOriginal(): Promise<void>
 ```
 
-Reverts to the state of the file before being edited. This API uses a promise to return the result.
+Reverts to the state of the file before being edited. This API uses a promise to return the result. > **NOTE：**> > This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored. > Exercise caution when using this API.
 
-> **NOTE：**
-> 
-> This API deletes the edited data and edited image or video asset, and the deleted data cannot be restored.
-> Exercise caution when using this API.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1495,9 +1564,9 @@ Reverts to the state of the file before being edited. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1541,7 +1610,7 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 
 **Deprecated since:** 11
 
-**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setFavorite)
+**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setFavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1563,9 +1632,9 @@ Favorites or unfavorites this file asset. This API uses an asynchronous callback
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1606,7 +1675,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Deprecated since:** 11
 
-**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setFavorite)
+**Substitutes:** [setFavorite](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setFavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1633,9 +1702,9 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1673,9 +1742,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result.
-
-Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses an asynchronous callback to return the result. Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1703,9 +1770,9 @@ Private files are stored in the private album. After obtaining private files fro
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1740,9 +1807,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-Sets this file asset to the hidden state. This API uses a promise to return the result.
-
-Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses a promise to return the result. Private files are stored in the private album. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1775,9 +1840,9 @@ Private files are stored in the private album. After obtaining private files fro
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1814,17 +1879,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result.
+Sets the pending state for this image or video asset. This API uses an asynchronous callback to return the result. The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned. > **NOTE：**> > **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)** > cannot be used to set the pending state for the file.
 
-The pending state can be removed only through **setPending(false)**. You can use   
-**photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
+**Since:** 23
 
-> **NOTE：**
-> 
-> **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
-> cannot be used to set the pending state for the file.
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1845,9 +1904,9 @@ The pending state can be removed only through **setPending(false)**. You can use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1885,17 +1944,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPending(pendingState: boolean): Promise<void>
 ```
 
-Sets the pending state for this image or video asset. This API uses a promise to return the result.
+Sets the pending state for this image or video asset. This API uses a promise to return the result. The pending state can be removed only through **setPending(false)**. You can use **photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned. > **NOTE：**> > **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)** > cannot be used to set the pending state for the file.
 
-The pending state can be removed only through **setPending(false)**. You can use   
-**photoAsset.get(photoAccessHelper.PhotoKeys.PENDING)** to check whether the asset state is pending. If the asset is in pending state, **true** is returned. Otherwise, **false** is returned.
+**Since:** 23
 
-> **NOTE：**
-> 
-> **setPending** can be used only during the file creation process. Once the FD is closed, **setPending(true)**
-> cannot be used to set the pending state for the file.
-
-**Since:** 11
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1921,9 +1974,9 @@ The pending state can be removed only through **setPending(false)**. You can use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1979,9 +2032,9 @@ Sets user comment information of an image or video. This API uses an asynchronou
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2054,9 +2107,9 @@ Sets user comment information of an image or video. This API uses a promise to r
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples

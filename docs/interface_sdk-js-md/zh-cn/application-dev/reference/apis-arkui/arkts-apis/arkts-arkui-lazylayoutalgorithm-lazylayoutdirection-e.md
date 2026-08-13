@@ -1,12 +1,14 @@
 # LazyLayoutDirection
 
-定义懒加载布局的方向。
+懒加载布局方向枚举。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-<!--Device-unnamed-export declare enum LazyLayoutDirection--><!--Device-unnamed-export declare enum LazyLayoutDirection-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export enum LazyLayoutDirection--><!--Device-unnamed-export enum LazyLayoutDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,13 +18,17 @@
 FORWARD = 0
 ```
 
-向前的方向。
+向前方向，表示当前布局是从内容起始端往末尾端布局。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LazyLayoutDirection-FORWARD = 0--><!--Device-LazyLayoutDirection-FORWARD = 0-End-->
 
@@ -34,13 +40,17 @@ FORWARD = 0
 BACKWARD = 1
 ```
 
-向后的方向。
+向后方向，表示当前布局是从内容末尾端往起始端布局。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LazyLayoutDirection-BACKWARD = 1--><!--Device-LazyLayoutDirection-BACKWARD = 1-End-->
 

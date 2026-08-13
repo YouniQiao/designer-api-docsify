@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-userStatus-export enum DeviceType--><!--Device-userStatus-export enum DeviceType-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
@@ -19,6 +21,8 @@ UNKNOWN_TYPE = 0
 未知设备类型。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ PC设备。
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceType-PC = 0x0C--><!--Device-DeviceType-PC = 0x0C-End-->
@@ -56,6 +62,8 @@ PHONE = 0x0E
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DeviceType-PHONE = 0x0E--><!--Device-DeviceType-PHONE = 0x0E-End-->
@@ -73,6 +81,8 @@ TABLET = 0x11
 平板设备。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

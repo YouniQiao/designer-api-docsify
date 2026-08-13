@@ -2,9 +2,11 @@
 
 Enumerates the types of changes that trigger the media asset or album change events.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum NotifyChangeType--><!--Device-photoAccessHelper-enum NotifyChangeType-End-->
 
@@ -18,9 +20,11 @@ NOTIFY_CHANGE_ADD = 0
 
 A media asset or an album is created.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD = 0--><!--Device-NotifyChangeType-NOTIFY_CHANGE_ADD = 0-End-->
 
@@ -34,9 +38,11 @@ NOTIFY_CHANGE_UPDATE = 1
 
 A media asset or an album is modified.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotifyChangeType-NOTIFY_CHANGE_UPDATE = 1--><!--Device-NotifyChangeType-NOTIFY_CHANGE_UPDATE = 1-End-->
 
@@ -50,9 +56,11 @@ NOTIFY_CHANGE_REMOVE = 2
 
 A media asset or an album is deleted.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE = 2--><!--Device-NotifyChangeType-NOTIFY_CHANGE_REMOVE = 2-End-->
 

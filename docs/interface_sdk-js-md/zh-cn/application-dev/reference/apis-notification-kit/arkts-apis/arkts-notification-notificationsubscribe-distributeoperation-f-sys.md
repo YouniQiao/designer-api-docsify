@@ -14,9 +14,11 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 触发指定通知的跨设备协同操作（例如通知跨设备点击跳转、通知跨设备快捷回复等）。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,11 +45,11 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600010](../errorcode-notification.md#1600010-分布式操作失败) | Distributed operation failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600021](../errorcode-notification.md#1600021-跨设备通信超时) | Distributed operation timed out. |
 
 ## 示例
 

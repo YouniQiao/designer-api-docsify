@@ -1,11 +1,12 @@
 # @ohos.multimedia.avMusicTemplate
 
-AVMusicTemplate
-
+> **说明：** > > - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -19,26 +20,26 @@ AVMusicTemplate
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate) | 创建音频模板，返回音频模板实例。 |
+| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate) | 创建音频模板，返回音频模板实例。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAVMusicTemplateController](arkts-avsession-avmusictemplate-createavmusictemplatecontroller-f-sys.md#createavmusictemplatecontroller) | 创建音频模板控制器，返回音频模板控制器对象。 |
-| [getAllAVMusicTemplateDescriptors](arkts-avsession-avmusictemplate-getallavmusictemplatedescriptors-f-sys.md#getallavmusictemplatedescriptors) | 获取所有的音频模板描述，返回音频模板描述的集合。 |
-| [offAVMusicTemplateCreate](arkts-avsession-avmusictemplate-offavmusictemplatecreate-f-sys.md#offavmusictemplatecreate) | 注销音频模板创建监听。 |
-| [offAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-offavmusictemplatedestroy-f-sys.md#offavmusictemplatedestroy) | 注销音频模板销毁监听。 |
-| [onAVMusicTemplateCreate](arkts-avsession-avmusictemplate-onavmusictemplatecreate-f-sys.md#onavmusictemplatecreate) | 注册音频模板创建的监听。使用callback异步回调。 |
-| [onAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-onavmusictemplatedestroy-f-sys.md#onavmusictemplatedestroy) | 注册音频模板销毁监听。使用callback异步回调。 |
+| [createAVMusicTemplateController](arkts-avsession-avmusictemplate-createavmusictemplatecontroller-f-sys.md#createAVMusicTemplateController) | 创建音频模板控制器，返回音频模板控制器对象。 |
+| [getAllAVMusicTemplateDescriptors](arkts-avsession-avmusictemplate-getallavmusictemplatedescriptors-f-sys.md#getAllAVMusicTemplateDescriptors) | 获取所有的音频模板描述，返回音频模板描述的集合。 |
+| [offAVMusicTemplateCreate](arkts-avsession-avmusictemplate-offavmusictemplatecreate-f-sys.md#offAVMusicTemplateCreate) | 注销音频模板创建监听。 |
+| [offAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-offavmusictemplatedestroy-f-sys.md#offAVMusicTemplateDestroy) | 注销音频模板销毁监听。 |
+| [onAVMusicTemplateCreate](arkts-avsession-avmusictemplate-onavmusictemplatecreate-f-sys.md#onAVMusicTemplateCreate) | 注册音频模板创建的监听。使用callback异步回调。 |
+| [onAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-onavmusictemplatedestroy-f-sys.md#onAVMusicTemplateDestroy) | 注册音频模板销毁监听。使用callback异步回调。 |
 <!--DelEnd-->
 
 ### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。 |
+| [AVMusicTemplate](arkts-avsession-avmusictemplate-avmusictemplate-c.md) | 调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取 方法。随后，同步数据给模板控制方，以完成后续操作。 |
 | [AVMusicTemplateController](arkts-avsession-avmusictemplate-avmusictemplatecontroller-c.md) | 音频模板控制器，可以获得音频模板控制器唯一的标识，用于与接入音频模板的媒体应用数据交互。 |
 
 ### 接口

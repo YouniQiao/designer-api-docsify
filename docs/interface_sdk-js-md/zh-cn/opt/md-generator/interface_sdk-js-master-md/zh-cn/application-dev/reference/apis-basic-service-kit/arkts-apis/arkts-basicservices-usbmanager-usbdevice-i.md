@@ -2,7 +2,9 @@
 
 USB设备信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-interface USBDevice--><!--Device-usbManager-interface USBDevice-End-->
 
@@ -18,7 +20,9 @@ busNum: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-busNum: int--><!--Device-USBDevice-busNum: int-End-->
 
@@ -34,7 +38,9 @@ clazz: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-clazz: int--><!--Device-USBDevice-clazz: int-End-->
 
@@ -50,7 +56,9 @@ configs: Array<USBConfiguration>
 
 **类型：** Array&lt;[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-configs: Array<USBConfiguration>--><!--Device-USBDevice-configs: Array<USBConfiguration>-End-->
 
@@ -66,7 +74,9 @@ devAddress: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-devAddress: int--><!--Device-USBDevice-devAddress: int-End-->
 
@@ -82,7 +92,9 @@ manufacturerName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-manufacturerName: string--><!--Device-USBDevice-manufacturerName: string-End-->
 
@@ -98,7 +110,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-name: string--><!--Device-USBDevice-name: string-End-->
 
@@ -114,7 +128,9 @@ productId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-productId: int--><!--Device-USBDevice-productId: int-End-->
 
@@ -130,7 +146,9 @@ productName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-productName: string--><!--Device-USBDevice-productName: string-End-->
 
@@ -146,7 +164,9 @@ protocol: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-protocol: int--><!--Device-USBDevice-protocol: int-End-->
 
@@ -162,7 +182,9 @@ serial: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-serial: string--><!--Device-USBDevice-serial: string-End-->
 
@@ -178,7 +200,9 @@ subClass: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-subClass: int--><!--Device-USBDevice-subClass: int-End-->
 
@@ -194,7 +218,9 @@ vendorId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-vendorId: int--><!--Device-USBDevice-vendorId: int-End-->
 
@@ -210,7 +236,9 @@ version: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevice-version: string--><!--Device-USBDevice-version: string-End-->
 

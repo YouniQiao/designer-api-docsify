@@ -14,7 +14,7 @@ Obtains the total size of the specified file system, in bytes. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
+**Substitutes:** getTotalBytes
 
 <!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -25,7 +25,7 @@ Obtains the total size of the specified file system, in bytes. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file system. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the total size obtained, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the total size obtained, in bytes. |
 
 ## Examples
 
@@ -58,7 +58,7 @@ Obtains the total size of the specified file system, in byte. This API uses a pr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
+**Substitutes:** getTotalBytes
 
 <!--Device-Statfs-function getTotalBytes(path: string): Promise<number>--><!--Device-Statfs-function getTotalBytes(path: string): Promise<number>-End-->
 

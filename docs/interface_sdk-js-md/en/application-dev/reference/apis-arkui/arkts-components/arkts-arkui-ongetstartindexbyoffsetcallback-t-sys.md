@@ -10,6 +10,8 @@ Defines the callback type used in onGetStartIndexByOffset of GridLayoutOptions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo--><!--Device-unnamed-declare type OnGetStartIndexByOffsetCallback = (totalOffset: double) => StartLineInfo-End-->

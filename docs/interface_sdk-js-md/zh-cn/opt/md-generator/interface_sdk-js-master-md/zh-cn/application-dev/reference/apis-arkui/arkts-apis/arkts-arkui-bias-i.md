@@ -4,6 +4,8 @@ Defines the Bias.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface Bias--><!--Device-unnamed-declare interface Bias-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Horizontal ratio of the Bias, it must be >= 0.
 **默认值：** 0.5
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +49,8 @@ Vertical ratio of the Bias, it must be >= 0.
 **默认值：** 0.5
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

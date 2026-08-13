@@ -12,9 +12,7 @@ import { image } from '@kit.ImageKit';
 function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver
 ```
 
-Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
-[release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageReceiver instance by specifying the image width, height, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) . Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
@@ -22,7 +20,7 @@ Creates an ImageReceiver instance by specifying the image width, height, format,
 
 **Deprecated since:** 11
 
-**Substitutes:** [createImageReceiver](image.createImageReceiver(size:)
+**Substitutes:** [createImageReceiver](#createImageReceiver)(size: Size, format: ImageFormat, capacity: int)
 
 <!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver--><!--Device-image-function createImageReceiver(width: number, height: number, format: number, capacity: number): ImageReceiver-End-->
 
@@ -56,13 +54,13 @@ let receiver: image.ImageReceiver = image.createImageReceiver(8192, 8192, image.
 function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver
 ```
 
-Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with   
-[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput).Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
-[release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageReceiver instance by specifying the image size, format, and capacity. The ImageReceiver acts as the receiver and consumer of images. Its parameter properties do not actually affect the received images. The configuration of image properties should be done on the sending side (the producer), such as when creating a camera preview stream with [createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createPreviewOutput) . Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-image-imagereceiver-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver-End-->
 
@@ -86,7 +84,7 @@ Creates an ImageReceiver instance by specifying the image size, format, and capa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; |
 
 ## Examples
 
@@ -109,7 +107,9 @@ Creates an ImageReceiver instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver | undefined--><!--Device-image-function createImageReceiver(size: Size, format: ImageFormat, capacity: int): ImageReceiver | undefined-End-->
 
@@ -140,7 +140,9 @@ Creates an ImageReceiver instance.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,5 +166,5 @@ Creates an ImageReceiver instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7900201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. |
+| [7900201](../errorcode-image.md#7900201-invalid-parameter) | Invalid parameter. |
 

@@ -1,22 +1,10 @@
 # ResourceManager
 
-提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。
+提供访问应用资源和系统资源的能力，可访问的资源范围为当前Context对应的HAP/HSP模块中的资源以及所有的系统资源。 > **说明：** > > - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。 > > - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式 > 获取，例如`\$r('app.string.test').id`。 > > - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源， > **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext)创建对应module的context**， > 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。 > > - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源， > 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
 
-> **说明：**
-> 
-> - ResourceManager涉及到的方法，仅限基于TS扩展的声明式开发范式使用。
-> 
-> - 资源文件在工程的resources目录中定义，通过resName、resId、Resource对象等可以获取对应的字符串、字符串数组、颜色等资源值，resName为资源名称，resId可通过`\$r(资源地址).id`的方式
-> 获取，例如`\$r('app.string.test').id`。
-> 
-> - 单HAP包获取自身资源、跨HAP/HSP包获取资源，由于入参为Resource的接口相比于入参为resName、resId的接口耗时更长，因此更推荐使用参数为resName或resId的接口。跨HAP/HSP包获取资源，
-> **需要先使用[createModuleContext](../../apis-ability-kit/arkts-apis/arkts-ability-application-createmodulecontext-f.md#createModuleContext)创建对应module的context**，
-> 再调用参数为resName或resId的接口。更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
-> 
-> - 在API version 22及之前版本，中间码HAR、字节码HAR通过资源ID相关接口访问资源时，因ID无效会抛出异常；从API version 23开始，中间码HAR、字节码HAR通过资源ID相关接口可以正常访问资源，
-> 更多请参考[资源访问](../../../quick-start/resource-categories-and-access.md#资源访问)。
+**起始版本：** 23
 
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-resourceManager-export interface ResourceManager--><!--Device-resourceManager-export interface ResourceManager-End-->
 
@@ -28,13 +16,11 @@
 addResource(path: string) : void
 ```
 
-应用运行时加载指定的overlay资源，实现主题切换或资源覆盖。
+应用运行时加载指定的overlay资源，实现主题切换或资源覆盖。 > **说明：**> > rawfile和resfile目录不支持资源覆盖。
 
-> **说明：**
-> 
-> rawfile和resfile目录不支持资源覆盖。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -52,8 +38,8 @@ addResource(path: string) : void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-无效的overlay路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001010](../errorcode-resource-manager.md#9001010-无效的overlay路径) |
 
 ## 示例
 
@@ -84,7 +70,9 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 关闭resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -103,8 +91,8 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -142,7 +130,9 @@ closeRawFd(path: string): Promise<void>
 
 关闭resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -166,8 +156,8 @@ closeRawFd(path: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -200,7 +190,9 @@ closeRawFdSync(path: string): void
 
 关闭resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -218,8 +210,8 @@ closeRawFdSync(path: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -257,7 +249,7 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
+**替代接口：** [closeRawFd](#closeRawFd)(path: string, callback: _AsyncCallback&lt;void&gt;)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -296,7 +288,7 @@ closeRawFileDescriptor(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [closeRawFd](resourceManager.ResourceManager.closeRawFd(path:)
+**替代接口：** [closeRawFd](#closeRawFd)(path: string)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -332,7 +324,9 @@ getBoolean(resId: number): boolean
 
 获取指定资源ID值对应的布尔值，使用同步方式返回。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -356,10 +350,10 @@ getBoolean(resId: number): boolean
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -407,7 +401,7 @@ getBoolean(resource: Resource): boolean
 
 **废弃版本：** 20
 
-**替代接口：** [getBoolean](resourceManager.ResourceManager.getBoolean(resId:)
+**替代接口：** [getBoolean](#getBoolean)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -433,10 +427,10 @@ getBoolean(resource: Resource): boolean
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -480,7 +474,9 @@ getBooleanByName(resName: string): boolean
 
 获取指定资源名称对应的布尔值，使用同步方式返回。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -504,10 +500,10 @@ getBooleanByName(resName: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -551,7 +547,9 @@ getColor(resId: number, callback: _AsyncCallback<number>): void
 
 获取指定资源ID对应的颜色值。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -570,10 +568,10 @@ getColor(resId: number, callback: _AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## getColor
 
@@ -583,7 +581,9 @@ getColor(resId: number): Promise<number>
 
 获取指定资源ID对应的颜色值。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -607,10 +607,10 @@ getColor(resId: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -657,7 +657,7 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 **废弃版本：** 20
 
-**替代接口：** [getColor](resourceManager.ResourceManager.getColor(resId:)
+**替代接口：** [getColor](#getColor)(resId: long, callback: _AsyncCallback&lt;long&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -678,10 +678,10 @@ getColor(resource: Resource, callback: _AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -728,7 +728,7 @@ getColor(resource: Resource): Promise<number>
 
 **废弃版本：** 20
 
-**替代接口：** [getColor](resourceManager.ResourceManager.getColor(resId:)
+**替代接口：** [getColor](#getColor)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -754,10 +754,10 @@ getColor(resource: Resource): Promise<number>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -800,7 +800,9 @@ getColorByName(resName: string, callback: _AsyncCallback<number>): void
 
 获取指定资源名称对应的颜色值。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -819,10 +821,10 @@ getColorByName(resName: string, callback: _AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -865,7 +867,9 @@ getColorByName(resName: string): Promise<number>
 
 获取指定资源名称对应的颜色值。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -889,10 +893,10 @@ getColorByName(resName: string): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -935,7 +939,9 @@ getColorByNameSync(resName: string) : number
 
 获取指定资源名称对应的颜色值，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -959,10 +965,10 @@ getColorByNameSync(resName: string) : number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -1006,7 +1012,9 @@ getColorSync(resId: number) : number
 
 获取指定资源ID对应的颜色值，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1030,10 +1038,10 @@ getColorSync(resId: number) : number
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -1081,7 +1089,7 @@ getColorSync(resource: Resource) : number
 
 **废弃版本：** 20
 
-**替代接口：** [getColorSync](resourceManager.ResourceManager.getColorSync(resId:)
+**替代接口：** [getColorSync](#getColorSync)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1107,10 +1115,10 @@ getColorSync(resource: Resource) : number
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -1154,7 +1162,9 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 获取设备的Configuration。使用callback异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1201,7 +1211,9 @@ getConfiguration(): Promise<Configuration>
 
 获取设备的Configuration。使用Promise异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1246,7 +1258,9 @@ getConfigurationSync(): Configuration
 
 获取设备的Configuration，使用同步形式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1286,7 +1300,9 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 获取设备的DeviceCapability。使用callback异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1333,7 +1349,9 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 获取设备的DeviceCapability。使用Promise异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1378,7 +1396,9 @@ getDeviceCapabilitySync(): DeviceCapability
 
 获取设备的DeviceCapability，使用同步形式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1410,22 +1430,93 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getDouble
+
+```TypeScript
+getDouble(resId: number): number
+```
+
+获取指定资源ID对应的float数值，使用同步方式返回。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDouble(resId: long): double--><!--Device-ResourceManager-getDouble(resId: long): double-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resId | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
+## getDoubleByName
+
+```TypeScript
+getDoubleByName(resName: string): number
+```
+
+获取指定资源名称对应的float数值，使用同步方式返回。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDoubleByName(resName: string): double--><!--Device-ResourceManager-getDoubleByName(resName: string): double-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resName | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
 ## getDoublePluralStringByNameSync
 
 ```TypeScript
 getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-> **说明：**
-> 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
-> 
-> - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1451,10 +1542,10 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 
 | 错误码ID |
 | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
-| [9001008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
 
 ## 示例
 
@@ -1501,22 +1592,58 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getDoublePluralStringByNameSync
+
+```TypeScript
+getDoublePluralStringByNameSync(resName: string, num: number, ...args: (string | number)[]): string
+```
+
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string--><!--Device-ResourceManager-getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string | double)[]): string-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resName | string | 是 |
+| num | number | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (string \| number)[] | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
+
 ## getDoublePluralStringValueSync
 
 ```TypeScript
 getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-> **说明：**
-> 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
-> 
-> - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1542,10 +1669,10 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -1595,21 +1722,57 @@ export default class EntryAbility extends UIAbility {
 ## getDoublePluralStringValueSync
 
 ```TypeScript
+getDoublePluralStringValueSync(resId: number, num: number, ...args: (string | number)[]): string
+```
+
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string--><!--Device-ResourceManager-getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | double)[]): string-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resId | number | 是 |
+| num | number | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (string \| number)[] | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
+## getDoublePluralStringValueSync
+
+```TypeScript
 getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-> **说明：**
-> 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式 返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
 
 **废弃版本：** 20
 
-**替代接口：** [getDoublePluralStringValueSync](resourceManager.ResourceManager.getDoublePluralStringValueSync(resId:)
+**替代接口：** [getDoublePluralStringValueSync](#getDoublePluralStringValueSync)(resId: number, num: number, ...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1637,10 +1800,10 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -1696,7 +1859,9 @@ getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableD
 
 获取指定资源ID对应的DrawableDescriptor对象，用于图标的显示，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1722,9 +1887,9 @@ getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableD
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -1775,7 +1940,7 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 **废弃版本：** 20
 
-**替代接口：** [getDrawableDescriptor](resourceManager.ResourceManager.getDrawableDescriptor(resId:)
+**替代接口：** [getDrawableDescriptor](#getDrawableDescriptor)(resId: long, density?: int, type?: int)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1803,9 +1968,9 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -1850,7 +2015,9 @@ getDrawableDescriptorByName(resName: string, density?: number, type?: number): D
 
 获取指定资源名称对应的DrawableDescriptor对象，用于图标的显示，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1876,9 +2043,9 @@ getDrawableDescriptorByName(resName: string, density?: number, type?: number): D
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -1917,22 +2084,93 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getInt
+
+```TypeScript
+getInt(resId: number): number
+```
+
+获取指定资源ID对应的integer数值，使用同步方式返回。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getInt(resId: long): int--><!--Device-ResourceManager-getInt(resId: long): int-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resId | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
+## getIntByName
+
+```TypeScript
+getIntByName(resName: string): number
+```
+
+获取指定资源名称对应的intege数值，使用同步方式返回。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getIntByName(resName: string): int--><!--Device-ResourceManager-getIntByName(resName: string): int-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resName | string | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| number |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
 ## getIntPluralStringByNameSync
 
 ```TypeScript
 getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-> **说明：**
-> 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
-> 
-> - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1958,10 +2196,10 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 
 | 错误码ID |
 | --- |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
-| [9001008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
 
 ## 示例
 
@@ -2008,22 +2246,58 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getIntPluralStringByNameSync
+
+```TypeScript
+getIntPluralStringByNameSync(resName: string, num: number, ...args: (string | number)[]): string
+```
+
+获取指定资源名称对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string--><!--Device-ResourceManager-getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | double)[]): string-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resName | string | 是 |
+| num | number | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (string \| number)[] | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
+
 ## getIntPluralStringValueSync
 
 ```TypeScript
 getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | number>): string
 ```
 
-获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-> **说明：**
-> 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
-> 
-> - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -2049,10 +2323,10 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -2102,21 +2376,57 @@ export default class EntryAbility extends UIAbility {
 ## getIntPluralStringValueSync
 
 ```TypeScript
+getIntPluralStringValueSync(resId: number, num: number,...args: (string | number)[]): string
+```
+
+获取指定资源ID对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。 > > - 在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本接口仅支持在基数词类型下使用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string--><!--Device-ResourceManager-getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]): string-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resId | number | 是 |
+| num | number | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (string \| number)[] | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
+## getIntPluralStringValueSync
+
+```TypeScript
 getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<string | number>): string
 ```
 
-获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
-
-> **说明：**
-> 
-> - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定resource对象对应的[单复数](../../../internationalization/l10n-singular-plural.md)字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式 返回。 > **说明：**> > - 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 18
 
 **废弃版本：** 20
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2144,10 +2454,10 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -2203,9 +2513,11 @@ getLocales(includeSystem?: boolean): Array<string>
 
 获取应用的语言列表。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
 
@@ -2227,7 +2539,7 @@ getLocales(includeSystem?: boolean): Array<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -2277,7 +2589,7 @@ getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**替代接口：** [getMediaContent](#getMediaContent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMedia(resId: number, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -2316,7 +2628,7 @@ getMedia(resId: number): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**替代接口：** [getMediaContent](#getMediaContent)(resId: long)
 
 <!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>--><!--Device-ResourceManager-getMedia(resId: number): Promise<Uint8Array>-End-->
 
@@ -2360,7 +2672,7 @@ getMediaBase64(resId: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**替代接口：** [getMediaContentBase64](#getMediaContentBase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -2399,7 +2711,7 @@ getMediaBase64(resId: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**替代接口：** [getMediaContentBase64](#getMediaContentBase64)(resId: long)
 
 <!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>--><!--Device-ResourceManager-getMediaBase64(resId: number): Promise<string>-End-->
 
@@ -2439,7 +2751,9 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 获取指定资源名称对应的图片资源Base64编码。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2458,9 +2772,9 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2496,7 +2810,9 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 
 获取指定资源名称对应的指定屏幕密度图片资源Base64编码。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2516,9 +2832,9 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2554,7 +2870,9 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 获取指定资源名称对应的图片资源Base64编码。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2578,9 +2896,9 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2614,7 +2932,9 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 获取指定资源名称对应的指定屏幕密度图片资源Base64编码。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2639,9 +2959,9 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2675,7 +2995,9 @@ getMediaBase64ByNameSync(resName: string, density?: number): string
 
 获取指定资源名称对应的默认或指定的屏幕密度图片资源Base64编码，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2700,9 +3022,9 @@ getMediaBase64ByNameSync(resName: string, density?: number): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2741,7 +3063,9 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 获取指定资源名称对应的媒体文件内容。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2760,9 +3084,9 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2798,7 +3122,9 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 
 获取指定资源名称对应的指定屏幕密度媒体文件内容。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2818,9 +3144,9 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2856,7 +3182,9 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 获取指定资源名称对应的媒体文件内容。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2880,9 +3208,9 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2916,7 +3244,9 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 获取指定资源名称对应的指定屏幕密度媒体文件内容。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2941,9 +3271,9 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -2977,7 +3307,9 @@ getMediaByNameSync(resName: string, density?: number): Uint8Array
 
 获取指定资源名称对应的默认或指定的屏幕密度媒体文件内容，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3002,9 +3334,9 @@ getMediaByNameSync(resName: string, density?: number): Uint8Array
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
 
 ## 示例
 
@@ -3047,7 +3379,7 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**替代接口：** [getMediaContent](#getMediaContent)(resId: long, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3068,9 +3400,9 @@ getMediaContent(resource: Resource, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3110,7 +3442,7 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**替代接口：** [getMediaContent](#getMediaContent)(resId: long, density: int, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3132,9 +3464,9 @@ getMediaContent(resource: Resource, density: number, callback: _AsyncCallback<Ui
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3174,7 +3506,7 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**替代接口：** [getMediaContent](#getMediaContent)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3200,9 +3532,9 @@ getMediaContent(resource: Resource): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3240,7 +3572,7 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContent](resourceManager.ResourceManager.getMediaContent(resId:)
+**替代接口：** [getMediaContent](#getMediaContent)(resId: long, density: int)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3267,9 +3599,9 @@ getMediaContent(resource: Resource, density: number): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3303,7 +3635,9 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 
 获取指定资源ID对应的媒体文件内容。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3322,9 +3656,9 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3361,7 +3695,9 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 
 获取指定资源ID对应的指定屏幕密度媒体文件内容。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3381,9 +3717,9 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3419,7 +3755,9 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 获取指定资源ID对应的媒体文件内容。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3443,9 +3781,9 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3479,7 +3817,9 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 获取指定资源ID对应的指定屏幕密度媒体文件内容。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3504,9 +3844,9 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3544,7 +3884,7 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**替代接口：** [getMediaContentBase64](#getMediaContentBase64)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3565,9 +3905,9 @@ getMediaContentBase64(resource: Resource, callback: _AsyncCallback<string>): voi
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3607,7 +3947,7 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**替代接口：** [getMediaContentBase64](#getMediaContentBase64)(resId: long, density: int, callback: _AsyncCallback&lt;string&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3629,9 +3969,9 @@ getMediaContentBase64(resource: Resource, density: number, callback: _AsyncCallb
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3671,7 +4011,7 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**替代接口：** [getMediaContentBase64](#getMediaContentBase64)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3697,9 +4037,9 @@ getMediaContentBase64(resource: Resource): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3737,7 +4077,7 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContentBase64](resourceManager.ResourceManager.getMediaContentBase64(resId:)
+**替代接口：** [getMediaContentBase64](#getMediaContentBase64)(resId: long, density: int)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3764,9 +4104,9 @@ getMediaContentBase64(resource: Resource, density: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3800,7 +4140,9 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 
 获取指定资源ID对应的图片资源Base64编码。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3819,9 +4161,9 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3857,7 +4199,9 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 
 获取指定资源ID对应的指定屏幕密度图片资源Base64编码。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3877,9 +4221,9 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3915,7 +4259,9 @@ getMediaContentBase64(resId: number): Promise<string>
 
 获取指定资源ID对应的图片资源Base64编码。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3939,9 +4285,9 @@ getMediaContentBase64(resId: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -3975,7 +4321,9 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 获取指定资源ID对应的指定屏幕密度图片资源Base64编码。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4000,9 +4348,9 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -4036,7 +4384,9 @@ getMediaContentBase64Sync(resId: number, density?: number): string
 
 获取指定资源ID对应的默认或指定的屏幕密度图片资源Base64编码，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4061,9 +4411,9 @@ getMediaContentBase64Sync(resId: number, density?: number): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -4106,7 +4456,7 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContentBase64Sync](resourceManager.ResourceManager.getMediaContentBase64Sync(resId:)
+**替代接口：** [getMediaContentBase64Sync](#getMediaContentBase64Sync)(resId: long, density?: int)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4133,9 +4483,9 @@ getMediaContentBase64Sync(resource: Resource, density?: number): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -4173,7 +4523,9 @@ getMediaContentSync(resId: number, density?: number): Uint8Array
 
 获取指定资源ID对应的默认或指定的屏幕密度媒体文件内容，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4198,9 +4550,9 @@ getMediaContentSync(resId: number, density?: number): Uint8Array
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -4243,7 +4595,7 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 **废弃版本：** 20
 
-**替代接口：** [getMediaContentSync](resourceManager.ResourceManager.getMediaContentSync(resId:)
+**替代接口：** [getMediaContentSync](#getMediaContentSync)(resId: long, density?: int)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4270,9 +4622,9 @@ getMediaContentSync(resource: Resource, density?: number): Uint8Array
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
 
 ## 示例
 
@@ -4312,6 +4664,8 @@ getNumber(resId: number): number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getNumber(resId: number): number--><!--Device-ResourceManager-getNumber(resId: number): number-End-->
@@ -4334,10 +4688,10 @@ getNumber(resId: number): number
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -4411,7 +4765,7 @@ getNumber(resource: Resource): number
 
 **废弃版本：** 20
 
-**替代接口：** [getNumber](resourceManager.ResourceManager.getNumber(resId:)
+**替代接口：** [getNumber](#getNumber)(resId: number)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4437,10 +4791,10 @@ getNumber(resource: Resource): number
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -4487,6 +4841,8 @@ getNumberByName(resName: string): number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getNumberByName(resName: string): number--><!--Device-ResourceManager-getNumberByName(resName: string): number-End-->
@@ -4509,10 +4865,10 @@ getNumberByName(resName: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -4580,13 +4936,13 @@ export default class EntryAbility extends UIAbility {
 getOverrideConfiguration(): Configuration
 ```
 
-获取差异化资源的配置，使用同步方式返回。
+获取差异化资源的配置，使用同步方式返回。 无论是普通资源管理对象，还是通过[getOverrideResourceManager](#getOverrideResourceManager)接口获 取的差异化资源管理对象，调用该接口都会返回相同的配置信息。
 
-无论是普通资源管理对象，还是通过[getOverrideResourceManager](#getOverrideResourceManager)接口获取的差异化资源管理对象，调用该接口都会返回相同的配置信息。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getOverrideConfiguration(): Configuration--><!--Device-ResourceManager-getOverrideConfiguration(): Configuration-End-->
 
@@ -4627,13 +4983,13 @@ export default class EntryAbility extends UIAbility {
 getOverrideResourceManager(configuration?: Configuration): ResourceManager
 ```
 
-获取可以加载差异化资源的资源管理对象，使用同步方式返回。
+获取可以加载差异化资源的资源管理对象，使用同步方式返回。 普通的资源管理对象获取的资源的配置（语言、深浅色、分辨率、横竖屏等）是由系统决定的，而通过该接口返回的对象，应用可以获取符合指定配置的资源，即差异化资源，比如在浅色模式时可以获取深色资源。
 
-普通的资源管理对象获取的资源的配置（语言、深浅色、分辨率、横竖屏等）是由系统决定的，而通过该接口返回的对象，应用可以获取符合指定配置的资源，即差异化资源，比如在浅色模式时可以获取深色资源。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
 
@@ -4655,7 +5011,7 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -4686,18 +5042,13 @@ export default class EntryAbility extends UIAbility {
 getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
+**替代接口：** [getPluralStringValue](#getPluralStringValue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -4733,18 +5084,13 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralString(resId: number, num: number): Promise<string>
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [getPluralStringValue](resourceManager.ResourceManager.getPluralStringValue(resId:)
+**替代接口：** [getPluralStringValue](#getPluralStringValue)(resId: number, num: number)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -4783,18 +5129,13 @@ resourceManager.getResourceManager((error, mgr) => {
 getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源名称，指定资源数量的单复数字符串。使用callback异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源名称，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
+**替代接口：** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4814,10 +5155,10 @@ getPluralStringByName(resName: string, num: number, callback: _AsyncCallback<str
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -4863,18 +5204,13 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 getPluralStringByName(resName: string, num: number): Promise<string>
 ```
 
-获取指定资源名称，指定资源数量的单复数字符串。使用Promise异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源名称，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
+**替代接口：** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4899,10 +5235,10 @@ getPluralStringByName(resName: string, num: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -4948,18 +5284,13 @@ this.context.resourceManager.getPluralStringByName("test", 1)
 getPluralStringByNameSync(resName: string, num: number): string
 ```
 
-获取指定资源名称，指定资源数量的单复数字符串，使用同步方式返回。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源名称，指定资源数量的单复数字符串，使用同步方式返回。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringByNameSync](resourceManager.ResourceManager.getIntPluralStringByNameSync(resName:)
+**替代接口：** [getIntPluralStringByNameSync](#getIntPluralStringByNameSync)(resName: string, num: number, ...args: Array&lt;string | number&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4984,10 +5315,10 @@ getPluralStringByNameSync(resName: string, num: number): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5034,18 +5365,13 @@ try {
 getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源信息，指定资源数量的单复数字符串。使用callback异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源信息，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5067,10 +5393,10 @@ getPluralStringValue(resource: Resource, num: number, callback: _AsyncCallback<s
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5123,18 +5449,13 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
 getPluralStringValue(resource: Resource, num: number): Promise<string>
 ```
 
-获取指定资源信息，指定资源数量的单复数字符串。使用Promise异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源信息，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5161,10 +5482,10 @@ getPluralStringValue(resource: Resource, num: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5216,18 +5537,13 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
 getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string>): void
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用callback异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5247,10 +5563,10 @@ getPluralStringValue(resId: number, num: number, callback: _AsyncCallback<string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5297,18 +5613,13 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
 getPluralStringValue(resId: number, num: number): Promise<string>
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串。使用Promise异步回调。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5333,10 +5644,10 @@ getPluralStringValue(resId: number, num: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5382,18 +5693,13 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
 getPluralStringValueSync(resId: number, num: number): string
 ```
 
-获取指定资源ID，指定资源数量的单复数字符串，使用同步方式返回。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源ID，指定资源数量的单复数字符串，使用同步方式返回。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5418,10 +5724,10 @@ getPluralStringValueSync(resId: number, num: number): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5468,18 +5774,13 @@ try {
 getPluralStringValueSync(resource: Resource, num: number): string
 ```
 
-获取指定资源信息，指定资源数量的单复数字符串，使用同步方式返回。
-
-> **说明：**
-> 
-> 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考
-> [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
+获取指定资源信息，指定资源数量的单复数字符串，使用同步方式返回。 > **说明：**> > 中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考 > [语言单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [getIntPluralStringValueSync](resourceManager.ResourceManager.getIntPluralStringValueSync(resId:)
+**替代接口：** [getIntPluralStringValueSync](#getIntPluralStringValueSync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5506,10 +5807,10 @@ getPluralStringValueSync(resource: Resource, num: number): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -5562,15 +5863,11 @@ try {
 getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 ```
 
-获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。
+获取resources/rawfile目录下对应rawfile文件所在HAP的文件描述符（fd）。使用callback异步回调。 > **说明：**> > 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closeRawFdSync)或 > [closeRawFd](#closeRawFd)关闭 > fd，避免资源泄露。
 
-> **说明：**
-> 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closeRawFdSync)或
-> [closeRawFd](#closeRawFd)关闭
-> fd，避免资源泄露。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5589,8 +5886,8 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -5627,15 +5924,11 @@ export default class EntryAbility extends UIAbility {
 getRawFd(path: string): Promise<RawFileDescriptor>
 ```
 
-获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。
+获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd）。使用Promise异步回调。 > **说明：**> > 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closeRawFdSync)或 > [closeRawFd](#closeRawFd)关闭 > fd，避免资源泄露。
 
-> **说明：**
-> 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closeRawFdSync)或
-> [closeRawFd](#closeRawFd)关闭
-> fd，避免资源泄露。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5659,8 +5952,8 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -5695,15 +5988,11 @@ export default class EntryAbility extends UIAbility {
 getRawFdSync(path: string): RawFileDescriptor
 ```
 
-获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。
+获取resources/rawfile目录下rawfile文件所在HAP的文件描述符（fd），使用同步方式返回。 > **说明：**> > 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closeRawFdSync)或 > [closeRawFd](#closeRawFd)关闭 > fd，避免资源泄露。
 
-> **说明：**
-> 
-> 文件描述符（fd）使用完毕后需调用[closeRawFdSync](#closeRawFdSync)或
-> [closeRawFd](#closeRawFd)关闭
-> fd，避免资源泄露。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5727,8 +6016,8 @@ getRawFdSync(path: string): RawFileDescriptor
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -5762,7 +6051,7 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
+**替代接口：** [getRawFileContent](#getRawFileContent)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -5803,7 +6092,7 @@ getRawFile(path: string): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFileContent](resourceManager.ResourceManager.getRawFileContent(path:)
+**替代接口：** [getRawFileContent](#getRawFileContent)(path: string)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -5843,7 +6132,9 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 获取resources/rawfile目录下对应的rawfile文件内容。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5862,8 +6153,8 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -5899,7 +6190,9 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 获取resources/rawfile目录下对应的rawfile文件内容。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5923,8 +6216,8 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -5958,7 +6251,9 @@ getRawFileContentSync(path: string): Uint8Array
 
 获取resources/rawfile目录下对应的rawfile文件内容，使用同步形式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5982,8 +6277,8 @@ getRawFileContentSync(path: string): Uint8Array
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -6017,7 +6312,7 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
+**替代接口：** [getRawFd](#getRawFd)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -6060,7 +6355,7 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFd](resourceManager.ResourceManager.getRawFd(path:)
+**替代接口：** [getRawFd](#getRawFd)(path: string)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -6100,13 +6395,11 @@ resourceManager.getResourceManager((error, mgr) => {
 getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 ```
 
-获取resources/rawfile下指定子目录中的文件夹及文件列表。使用callback异步回调。
+获取resources/rawfile下指定子目录中的文件夹及文件列表。使用callback异步回调。 > **说明：**> > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
-> **说明：**
-> 
-> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6125,8 +6418,8 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -6156,13 +6449,11 @@ export default class EntryAbility extends UIAbility {
 getRawFileList(path: string): Promise<Array<string>>
 ```
 
-获取resources/rawfile下指定子目录中的文件夹及文件列表。使用Promise异步回调。
+获取resources/rawfile下指定子目录中的文件夹及文件列表。使用Promise异步回调。 > **说明：**> > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
-> **说明：**
-> 
-> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6186,8 +6477,8 @@ getRawFileList(path: string): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -6217,13 +6508,11 @@ export default class EntryAbility extends UIAbility {
 getRawFileListSync(path: string): Array<string>
 ```
 
-获取resources/rawfile下指定子目录中的文件夹及文件列表，使用同步形式返回。
+获取resources/rawfile下指定子目录中的文件夹及文件列表，使用同步形式返回。 > **说明：**> > 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
 
-> **说明：**
-> 
-> 若文件夹中无文件，则抛出异常；若文件夹中有文件，则返回文件夹及文件列表。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6247,8 +6536,8 @@ getRawFileListSync(path: string): Array<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -6283,6 +6572,8 @@ getResourceName(resId: number): string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -6307,7 +6598,7 @@ getResourceName(resId: number): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
 
 ## 示例
 
@@ -6355,7 +6646,7 @@ getString(resId: number, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**替代接口：** [getStringValue](#getStringValue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getString(resId: number, callback: AsyncCallback<string>): void-End-->
 
@@ -6394,7 +6685,7 @@ getString(resId: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**替代接口：** [getStringValue](#getStringValue)(resId: long)
 
 <!--Device-ResourceManager-getString(resId: number): Promise<string>--><!--Device-ResourceManager-getString(resId: number): Promise<string>-End-->
 
@@ -6438,7 +6729,7 @@ getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**替代接口：** [getStringArrayValue](#getStringArrayValue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArray(resId: number, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -6477,7 +6768,7 @@ getStringArray(resId: number): Promise<Array<string>>
 
 **废弃版本：** 9
 
-**替代接口：** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**替代接口：** [getStringArrayValue](#getStringArrayValue)(resId: long)
 
 <!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>--><!--Device-ResourceManager-getStringArray(resId: number): Promise<Array<string>>-End-->
 
@@ -6517,7 +6808,9 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 获取指定资源名称对应的字符串数组。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6536,10 +6829,10 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -6587,7 +6880,9 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 获取指定资源名称对应的字符串数组。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6611,10 +6906,10 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -6661,7 +6956,9 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 获取指定资源名称对应的字符串数组，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6685,10 +6982,10 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -6740,7 +7037,7 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 **废弃版本：** 20
 
-**替代接口：** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**替代接口：** [getStringArrayValue](#getStringArrayValue)(resId: long, callback: _AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6761,10 +7058,10 @@ getStringArrayValue(resource: Resource, callback: _AsyncCallback<Array<string>>)
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -6815,7 +7112,7 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 **废弃版本：** 20
 
-**替代接口：** [getStringArrayValue](resourceManager.ResourceManager.getStringArrayValue(resId:)
+**替代接口：** [getStringArrayValue](#getStringArrayValue)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6841,10 +7138,10 @@ getStringArrayValue(resource: Resource): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -6891,7 +7188,9 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 
 获取指定资源ID对应的字符串数组。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6910,10 +7209,10 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -6961,7 +7260,9 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 获取指定资源ID对应的字符串数组。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6985,10 +7286,10 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7035,7 +7336,9 @@ getStringArrayValueSync(resId: number): Array<string>
 
 获取指定资源ID对应的字符串数组，使用同步方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7059,10 +7362,10 @@ getStringArrayValueSync(resId: number): Array<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7114,7 +7417,7 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 **废弃版本：** 20
 
-**替代接口：** [getStringArrayValueSync](resourceManager.ResourceManager.getStringArrayValueSync(resId:)
+**替代接口：** [getStringArrayValueSync](#getStringArrayValueSync)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7140,10 +7443,10 @@ getStringArrayValueSync(resource: Resource): Array<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7191,7 +7494,9 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 获取指定资源名称对应的字符串。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7210,10 +7515,10 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7256,7 +7561,9 @@ getStringByName(resName: string): Promise<string>
 
 获取指定资源名称对应的字符串。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7280,10 +7587,10 @@ getStringByName(resName: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7326,6 +7633,8 @@ getStringByNameSync(resName: string): string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string): string--><!--Device-ResourceManager-getStringByNameSync(resName: string): string-End-->
@@ -7348,10 +7657,10 @@ getStringByNameSync(resName: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7397,6 +7706,8 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: Array<string | number>): string-End-->
@@ -7420,11 +7731,11 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
-| [9001008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
 
 ## 示例
 
@@ -7460,6 +7771,46 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## getStringByNameSync
+
+```TypeScript
+getStringByNameSync(resName: string, ...args: (string | number)[]): string
+```
+
+获取指定资源名称对应的字符串，并使用args参数依次替换字符串中的格式化占位符，使用同步方式返回。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: (string | double)[]): string--><!--Device-ResourceManager-getStringByNameSync(resName: string, ...args: (string | double)[]): string-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resName | string | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (string \| number)[] | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001008](../errorcode-resource-manager.md#9001008-根据当前名称获取的资源格式化失败) |
+
 ## getStringSync
 
 ```TypeScript
@@ -7469,6 +7820,8 @@ getStringSync(resId: number): string
 获取指定资源ID对应的字符串，使用同步方式返回。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7492,10 +7845,10 @@ getStringSync(resId: number): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7541,6 +7894,8 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string--><!--Device-ResourceManager-getStringSync(resId: number, ...args: Array<string | number>): string-End-->
@@ -7564,11 +7919,11 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7607,6 +7962,46 @@ export default class EntryAbility extends UIAbility {
 ## getStringSync
 
 ```TypeScript
+getStringSync(resId: number, ...args: (string | number)[]): string
+```
+
+获取指定资源ID对应的字符串，并使用args参数依次替换字符串中的格式化占位符。使用同步方式返回。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ResourceManager-getStringSync(resId: long, ...args: (string | double)[]): string--><!--Device-ResourceManager-getStringSync(resId: long, ...args: (string | double)[]): string-End-->
+
+**系统能力：** SystemCapability.Global.ResourceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| resId | number | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | (string \| number)[] | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
+
+## getStringSync
+
+```TypeScript
 getStringSync(resource: Resource): string
 ```
 
@@ -7616,7 +8011,7 @@ getStringSync(resource: Resource): string
 
 **废弃版本：** 20
 
-**替代接口：** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
+**替代接口：** [getStringSync](#getStringSync)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7642,10 +8037,10 @@ getStringSync(resource: Resource): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7693,7 +8088,7 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 **废弃版本：** 20
 
-**替代接口：** [getStringSync](resourceManager.ResourceManager.getStringSync(resId:)
+**替代接口：** [getStringSync](#getStringSync)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7720,11 +8115,11 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001007](../errorcode-resource-manager.md#9001007-根据当前id获取的资源格式化失败) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7772,7 +8167,7 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 **废弃版本：** 20
 
-**替代接口：** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**替代接口：** [getStringValue](#getStringValue)(resId: long, callback: _AsyncCallback&lt;string&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7793,10 +8188,10 @@ getStringValue(resource: Resource, callback: _AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7843,7 +8238,7 @@ getStringValue(resource: Resource): Promise<string>
 
 **废弃版本：** 20
 
-**替代接口：** [getStringValue](resourceManager.ResourceManager.getStringValue(resId:)
+**替代接口：** [getStringValue](#getStringValue)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7869,10 +8264,10 @@ getStringValue(resource: Resource): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -7903,7 +8298,9 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 
 获取指定资源ID对应的字符串。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7922,10 +8319,10 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## getStringValue
 
@@ -7935,7 +8332,9 @@ getStringValue(resId: number): Promise<string>
 
 获取指定资源ID对应的字符串。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7959,10 +8358,10 @@ getStringValue(resId: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -8003,9 +8402,11 @@ getSymbol(resId: number) : number
 
 获取指定资源ID对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
 
@@ -8027,10 +8428,10 @@ getSymbol(resId: number) : number
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -8066,7 +8467,7 @@ getSymbol(resource: Resource) : number
 
 **废弃版本：** 20
 
-**替代接口：** [getSymbol](resourceManager.ResourceManager.getSymbol(resId:)
+**替代接口：** [getSymbol](#getSymbol)(resId: long)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8092,10 +8493,10 @@ getSymbol(resource: Resource) : number
 
 | 错误码ID |
 | --- |
-| [9001001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001001-无效的资源id) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [9001001](../errorcode-resource-manager.md#9001001-无效的资源id) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001002](../errorcode-resource-manager.md#9001002-根据当前资源id未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -8127,9 +8528,11 @@ getSymbolByName(resName: string) : number
 
 获取指定资源名称对应的[Symbol字符](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol)Unicode码，使用同步方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
 
@@ -8151,10 +8554,10 @@ getSymbolByName(resName: string) : number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001003-无效的资源名称) |
-| [9001004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
-| [9001006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001006-资源存在循环引用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001003](../errorcode-resource-manager.md#9001003-无效的资源名称) |
+| [9001004](../errorcode-resource-manager.md#9001004-根据当前资源名称未找到匹配的资源) |
+| [9001006](../errorcode-resource-manager.md#9001006-资源存在循环引用) |
 
 ## 示例
 
@@ -8186,9 +8589,11 @@ isRawDir(path: string): boolean
 
 判断指定路径是否为rawfile下的目录，使用同步方式返回。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
 
@@ -8210,8 +8615,8 @@ isRawDir(path: string): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001005-无效的相对路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001005](../errorcode-resource-manager.md#9001005-无效的相对路径) |
 
 ## 示例
 
@@ -8276,13 +8681,11 @@ try {
 removeResource(path: string) : void
 ```
 
-应用运行时移除指定的overlay资源，还原被覆盖前的资源。
+应用运行时移除指定的overlay资源，还原被覆盖前的资源。 > **说明：**> > rawfile和resfile目录不支持资源覆盖。
 
-> **说明：**
-> 
-> rawfile和resfile目录不支持资源覆盖。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8300,8 +8703,8 @@ removeResource(path: string) : void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [9001010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001010-无效的overlay路径) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [9001010](../errorcode-resource-manager.md#9001010-无效的overlay路径) |
 
 ## 示例
 
@@ -8330,13 +8733,13 @@ export default class EntryAbility extends UIAbility {
 updateOverrideConfiguration(configuration: Configuration): void
 ```
 
-更新差异化资源管理对象的配置。
+更新差异化资源管理对象的配置。 无论是普通资源管理对象，还是通过[getOverrideResourceManager](#getOverrideResourceManager)接口获 取的差异化资源管理对象，调用该方法均可更新差异化资源管理对象的配置。
 
-无论是普通资源管理对象，还是通过[getOverrideResourceManager](#getOverrideResourceManager)接口获取的差异化资源管理对象，调用该方法均可更新差异化资源管理对象的配置。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void--><!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void-End-->
 
@@ -8352,7 +8755,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

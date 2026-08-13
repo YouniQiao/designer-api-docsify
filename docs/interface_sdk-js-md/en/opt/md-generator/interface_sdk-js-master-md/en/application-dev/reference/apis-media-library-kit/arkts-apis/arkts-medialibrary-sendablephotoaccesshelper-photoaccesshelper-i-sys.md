@@ -2,11 +2,13 @@
 
 Helper functions to access photos and albums.
 
-**Inheritance/Implementation:** PhotoAccessHelper extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** PhotoAccessHelper extends lang.ISendable
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper--><!--Device-sendablePhotoAccessHelper-interface PhotoAccessHelper-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -22,19 +24,11 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-Creates an asset with the specified file name. This API uses a promise to return the result.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates an asset with the specified file name. This API uses a promise to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -61,15 +55,15 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](js-apis-sendablePhotoAccessHelper.md).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#@ohos.file.sendablePhotoAccessHelper).
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
@@ -91,19 +85,11 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 createAsset(displayName: string, options: photoAccessHelper.PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-Creates an asset with the specified file name and options. This API uses a promise to return the result.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; |
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates an asset with the specified file name and options. This API uses a promise to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -131,15 +117,15 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](js-apis-sendablePhotoAccessHelper.md).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#@ohos.file.sendablePhotoAccessHelper).
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper) {
@@ -171,6 +157,8 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
 <!--Device-PhotoAccessHelper-getHiddenAlbums(      mode: photoAccessHelper.HiddenPhotosDisplayMode,      options?: photoAccessHelper.FetchOptions    ): Promise<FetchResult<Album>>--><!--Device-PhotoAccessHelper-getHiddenAlbums(      mode: photoAccessHelper.HiddenPhotosDisplayMode,      options?: photoAccessHelper.FetchOptions    ): Promise<FetchResult<Album>>-End-->
@@ -196,9 +184,9 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## getPhotoAssets
@@ -210,6 +198,8 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,13 +225,13 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](js-apis-sendablePhotoAccessHelper.md).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#@ohos.file.sendablePhotoAccessHelper).
 
 ```TypeScript
 async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelper, context: Context) {
@@ -276,6 +266,8 @@ Fetch shared photo assets.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
 <!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>--><!--Device-PhotoAccessHelper-getSharedPhotoAssets(options: photoAccessHelper.FetchOptions): Array<SharedPhotoAsset>-End-->
@@ -300,7 +292,7 @@ Fetch shared photo assets.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |

@@ -20,7 +20,7 @@ Clears the stored content.
 
 **Deprecated since:** 6
 
-**Substitutes:** [clear](ohos.preferences.preferences.clear)
+**Substitutes:** clear
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,7 +46,7 @@ Deletes the stored content.
 
 **Deprecated since:** 6
 
-**Substitutes:** [delete](ohos.preferences.preferences.delete)
+**Substitutes:** delete
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -72,7 +72,7 @@ Reads the stored content.
 
 **Deprecated since:** 6
 
-**Substitutes:** [get](ohos.preferences.preferences.get)
+**Substitutes:** get
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -2,7 +2,9 @@
 
 Provides interfaces to manage and use data networks.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace connection--><!--Device-unnamed-declare namespace connection-End-->
 
@@ -20,86 +22,86 @@ import { connection } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addcustomdnsrule) |
-| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addcustomdnsrule-1) |
-| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearcustomdnsrules) |
-| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearcustomdnsrules-1) |
-| [createNetConnection](arkts-network-connection-createnetconnection-f.md#createnetconnection) |
-| [findProxyForUrl](arkts-network-connection-findproxyforurl-f.md#findproxyforurl) |
-| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getaddressesbyname) |
-| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getaddressesbyname-1) |
-| [getAddressesByNameWithOptions](arkts-network-connection-getaddressesbynamewithoptions-f.md#getaddressesbynamewithoptions) |
-| [getAllNets](arkts-network-connection-getallnets-f.md#getallnets) |
-| [getAllNets](arkts-network-connection-getallnets-f.md#getallnets-1) |
-| [getAllNetsSync](arkts-network-connection-getallnetssync-f.md#getallnetssync) |
-| [getAppNet](arkts-network-connection-getappnet-f.md#getappnet) |
-| [getAppNet](arkts-network-connection-getappnet-f.md#getappnet-1) |
-| [getAppNetSync](arkts-network-connection-getappnetsync-f.md#getappnetsync) |
-| [getConnectOwnerUid](arkts-network-connection-getconnectowneruid-f.md#getconnectowneruid) |
-| [getConnectOwnerUidSync](arkts-network-connection-getconnectowneruidsync-f.md#getconnectowneruidsync) |
-| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getconnectionproperties) |
-| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getconnectionproperties-1) |
-| [getConnectionPropertiesSync](arkts-network-connection-getconnectionpropertiessync-f.md#getconnectionpropertiessync) |
-| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getdefaulthttpproxy) |
-| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getdefaulthttpproxy-1) |
-| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getdefaultnet) |
-| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getdefaultnet-1) |
-| [getDefaultNetSync](arkts-network-connection-getdefaultnetsync-f.md#getdefaultnetsync) |
-| [getDnsAscii](arkts-network-connection-getdnsascii-f.md#getdnsascii) |
-| [getDnsUnicode](arkts-network-connection-getdnsunicode-f.md#getdnsunicode) |
-| [getIpNeighTable](arkts-network-connection-getipneightable-f.md#getipneightable) |
-| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getnetcapabilities) |
-| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getnetcapabilities-1) |
-| [getNetCapabilitiesSync](arkts-network-connection-getnetcapabilitiessync-f.md#getnetcapabilitiessync) |
-| [getNetExtAttribute](arkts-network-connection-getnetextattribute-f.md#getnetextattribute) |
-| [getNetExtAttributeSync](arkts-network-connection-getnetextattributesync-f.md#getnetextattributesync) |
-| [getPacFileUrl](arkts-network-connection-getpacfileurl-f.md#getpacfileurl) |
-| [getPacUrl](arkts-network-connection-getpacurl-f.md#getpacurl) |
-| [getSystemNetPortStates](arkts-network-connection-getsystemnetportstates-f.md#getsystemnetportstates) |
-| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasdefaultnet) |
-| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasdefaultnet-1) |
-| [hasDefaultNetSync](arkts-network-connection-hasdefaultnetsync-f.md#hasdefaultnetsync) |
-| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isdefaultnetmetered) |
-| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isdefaultnetmetered-1) |
-| [isDefaultNetMeteredSync](arkts-network-connection-isdefaultnetmeteredsync-f.md#isdefaultnetmeteredsync) |
-| [queryProbeResult](arkts-network-connection-queryproberesult-f.md#queryproberesult) |
-| [queryTraceRoute](arkts-network-connection-querytraceroute-f.md#querytraceroute) |
-| [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md#refreshglobalhttpproxy) |
-| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule) |
-| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removecustomdnsrule-1) |
-| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected) |
-| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportnetconnected-1) |
-| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportnetdisconnected) |
-| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportnetdisconnected-1) |
-| [setAppHttpProxy](arkts-network-connection-setapphttpproxy-f.md#setapphttpproxy) |
-| [setAppNet](arkts-network-connection-setappnet-f.md#setappnet) |
-| [setAppNet](arkts-network-connection-setappnet-f.md#setappnet-1) |
-| [setNetExtAttribute](arkts-network-connection-setnetextattribute-f.md#setnetextattribute) |
-| [setNetExtAttributeSync](arkts-network-connection-setnetextattributesync-f.md#setnetextattributesync) |
-| [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md#setpacfileurl) |
-| [setPacUrl](arkts-network-connection-setpacurl-f.md#setpacurl) |
+| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addCustomDnsRule) |
+| [addCustomDnsRule](arkts-network-connection-addcustomdnsrule-f.md#addCustomDnsRule) |
+| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearCustomDnsRules) |
+| [clearCustomDnsRules](arkts-network-connection-clearcustomdnsrules-f.md#clearCustomDnsRules) |
+| [createNetConnection](arkts-network-connection-createnetconnection-f.md#createNetConnection) |
+| [findProxyForUrl](arkts-network-connection-findproxyforurl-f.md#findProxyForUrl) |
+| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getAddressesByName) |
+| [getAddressesByName](arkts-network-connection-getaddressesbyname-f.md#getAddressesByName) |
+| [getAddressesByNameWithOptions](arkts-network-connection-getaddressesbynamewithoptions-f.md#getAddressesByNameWithOptions) |
+| [getAllNets](arkts-network-connection-getallnets-f.md#getAllNets) |
+| [getAllNets](arkts-network-connection-getallnets-f.md#getAllNets) |
+| [getAllNetsSync](arkts-network-connection-getallnetssync-f.md#getAllNetsSync) |
+| [getAppNet](arkts-network-connection-getappnet-f.md#getAppNet) |
+| [getAppNet](arkts-network-connection-getappnet-f.md#getAppNet) |
+| [getAppNetSync](arkts-network-connection-getappnetsync-f.md#getAppNetSync) |
+| [getConnectOwnerUid](arkts-network-connection-getconnectowneruid-f.md#getConnectOwnerUid) |
+| [getConnectOwnerUidSync](arkts-network-connection-getconnectowneruidsync-f.md#getConnectOwnerUidSync) |
+| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getConnectionProperties) |
+| [getConnectionProperties](arkts-network-connection-getconnectionproperties-f.md#getConnectionProperties) |
+| [getConnectionPropertiesSync](arkts-network-connection-getconnectionpropertiessync-f.md#getConnectionPropertiesSync) |
+| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getDefaultHttpProxy) |
+| [getDefaultHttpProxy](arkts-network-connection-getdefaulthttpproxy-f.md#getDefaultHttpProxy) |
+| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getDefaultNet) |
+| [getDefaultNet](arkts-network-connection-getdefaultnet-f.md#getDefaultNet) |
+| [getDefaultNetSync](arkts-network-connection-getdefaultnetsync-f.md#getDefaultNetSync) |
+| [getDnsAscii](arkts-network-connection-getdnsascii-f.md#getDnsAscii) |
+| [getDnsUnicode](arkts-network-connection-getdnsunicode-f.md#getDnsUnicode) |
+| [getIpNeighTable](arkts-network-connection-getipneightable-f.md#getIpNeighTable) |
+| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getNetCapabilities) |
+| [getNetCapabilities](arkts-network-connection-getnetcapabilities-f.md#getNetCapabilities) |
+| [getNetCapabilitiesSync](arkts-network-connection-getnetcapabilitiessync-f.md#getNetCapabilitiesSync) |
+| [getNetExtAttribute](arkts-network-connection-getnetextattribute-f.md#getNetExtAttribute) |
+| [getNetExtAttributeSync](arkts-network-connection-getnetextattributesync-f.md#getNetExtAttributeSync) |
+| [getPacFileUrl](arkts-network-connection-getpacfileurl-f.md#getPacFileUrl) |
+| [getPacUrl](arkts-network-connection-getpacurl-f.md#getPacUrl) |
+| [getSystemNetPortStates](arkts-network-connection-getsystemnetportstates-f.md#getSystemNetPortStates) |
+| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasDefaultNet) |
+| [hasDefaultNet](arkts-network-connection-hasdefaultnet-f.md#hasDefaultNet) |
+| [hasDefaultNetSync](arkts-network-connection-hasdefaultnetsync-f.md#hasDefaultNetSync) |
+| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isDefaultNetMetered) |
+| [isDefaultNetMetered](arkts-network-connection-isdefaultnetmetered-f.md#isDefaultNetMetered) |
+| [isDefaultNetMeteredSync](arkts-network-connection-isdefaultnetmeteredsync-f.md#isDefaultNetMeteredSync) |
+| [queryProbeResult](arkts-network-connection-queryproberesult-f.md#queryProbeResult) |
+| [queryTraceRoute](arkts-network-connection-querytraceroute-f.md#queryTraceRoute) |
+| [refreshGlobalHttpProxy](arkts-network-connection-refreshglobalhttpproxy-f.md#refreshGlobalHttpProxy) |
+| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removeCustomDnsRule) |
+| [removeCustomDnsRule](arkts-network-connection-removecustomdnsrule-f.md#removeCustomDnsRule) |
+| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportNetConnected) |
+| [reportNetConnected](arkts-network-connection-reportnetconnected-f.md#reportNetConnected) |
+| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportNetDisconnected) |
+| [reportNetDisconnected](arkts-network-connection-reportnetdisconnected-f.md#reportNetDisconnected) |
+| [setAppHttpProxy](arkts-network-connection-setapphttpproxy-f.md#setAppHttpProxy) |
+| [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet) |
+| [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet) |
+| [setNetExtAttribute](arkts-network-connection-setnetextattribute-f.md#setNetExtAttribute) |
+| [setNetExtAttributeSync](arkts-network-connection-setnetextattributesync-f.md#setNetExtAttributeSync) |
+| [setPacFileUrl](arkts-network-connection-setpacfileurl-f.md#setPacFileUrl) |
+| [setPacUrl](arkts-network-connection-setpacurl-f.md#setPacUrl) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addVlanIp](arkts-network-connection-addvlanip-f-sys.md#addvlanip) |
-| [createVlanInterface](arkts-network-connection-createvlaninterface-f-sys.md#createvlaninterface) |
-| [deleteVlanIp](arkts-network-connection-deletevlanip-f-sys.md#deletevlanip) |
-| [destroyVlanInterface](arkts-network-connection-destroyvlaninterface-f-sys.md#destroyvlaninterface) |
-| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableairplanemode) |
-| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableairplanemode-1) |
-| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableairplanemode) |
-| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableairplanemode-1) |
-| [factoryReset](arkts-network-connection-factoryreset-f-sys.md#factoryreset) |
-| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getglobalhttpproxy) |
-| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getglobalhttpproxy-1) |
-| [getProxyMode](arkts-network-connection-getproxymode-f-sys.md#getproxymode) |
-| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setglobalhttpproxy) |
-| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setglobalhttpproxy-1) |
-| [setInterfaceUp](arkts-network-connection-setinterfaceup-f-sys.md#setinterfaceup) |
-| [setProxyMode](arkts-network-connection-setproxymode-f-sys.md#setproxymode) |
+| [addVlanIp](arkts-network-connection-addvlanip-f-sys.md#addVlanIp-(System-API)) |
+| [createVlanInterface](arkts-network-connection-createvlaninterface-f-sys.md#createVlanInterface-(System-API)) |
+| [deleteVlanIp](arkts-network-connection-deletevlanip-f-sys.md#deleteVlanIp-(System-API)) |
+| [destroyVlanInterface](arkts-network-connection-destroyvlaninterface-f-sys.md#destroyVlanInterface-(System-API)) |
+| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableAirplaneMode-(System-API)) |
+| [disableAirplaneMode](arkts-network-connection-disableairplanemode-f-sys.md#disableAirplaneMode-(System-API)) |
+| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableAirplaneMode-(System-API)) |
+| [enableAirplaneMode](arkts-network-connection-enableairplanemode-f-sys.md#enableAirplaneMode-(System-API)) |
+| [factoryReset](arkts-network-connection-factoryreset-f-sys.md#factoryReset-(System-API)) |
+| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getGlobalHttpProxy-(System-API)) |
+| [getGlobalHttpProxy](arkts-network-connection-getglobalhttpproxy-f-sys.md#getGlobalHttpProxy-(System-API)) |
+| [getProxyMode](arkts-network-connection-getproxymode-f-sys.md#getProxyMode-(System-API)) |
+| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setGlobalHttpProxy-(System-API)) |
+| [setGlobalHttpProxy](arkts-network-connection-setglobalhttpproxy-f-sys.md#setGlobalHttpProxy-(System-API)) |
+| [setInterfaceUp](arkts-network-connection-setinterfaceup-f-sys.md#setInterfaceUp-(System-API)) |
+| [setProxyMode](arkts-network-connection-setproxymode-f-sys.md#setProxyMode-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

@@ -4,6 +4,8 @@ Represents the permission dialog information of a single command.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityAccessCtrl-interface PermissionDialogDetail--><!--Device-abilityAccessCtrl-interface PermissionDialogDetail-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -28,6 +30,8 @@ Authorization result string.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDialogDetail-authResult: string--><!--Device-PermissionDialogDetail-authResult: string-End-->
@@ -47,6 +51,8 @@ Whether the current CLI command requires a permission dialog. The value **true**
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ List of permission names that the agent initiating CLI-related operations curren
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDialogDetail-permissionNameList: Array<Permissions>--><!--Device-PermissionDialogDetail-permissionNameList: Array<Permissions>-End-->
@@ -87,6 +95,8 @@ List of permission decision statuses.
 **Type:** Array&lt;[PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

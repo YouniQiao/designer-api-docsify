@@ -1,8 +1,10 @@
 # DataResubmissionHandler
 
-Defines the onDataResubmission callback, related to [onDataResubmission](onDataResubmission) method.
+Defines the onDataResubmission callback, related to onDataResubmission method.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class DataResubmissionHandler--><!--Device-unnamed-declare class DataResubmissionHandler-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 Do not resend related form data.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Constructor.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-DataResubmissionHandler-constructor()--><!--Device-DataResubmissionHandler-constructor()-End-->
@@ -49,6 +55,8 @@ resend(): void
 Resend related form data.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

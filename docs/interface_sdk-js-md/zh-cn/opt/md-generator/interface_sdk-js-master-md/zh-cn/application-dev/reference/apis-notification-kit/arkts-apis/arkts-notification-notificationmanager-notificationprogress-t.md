@@ -6,7 +6,9 @@ export type NotificationProgress = _NotificationProgress
 
 通知进度。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationProgress = _NotificationProgress--><!--Device-notificationManager-export type NotificationProgress = _NotificationProgress-End-->
 

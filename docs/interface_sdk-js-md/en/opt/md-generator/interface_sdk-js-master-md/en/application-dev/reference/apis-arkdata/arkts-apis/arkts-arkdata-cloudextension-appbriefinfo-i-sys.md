@@ -2,7 +2,9 @@
 
 Represents the brief application information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface AppBriefInfo--><!--Device-cloudExtension-export interface AppBriefInfo-End-->
 
@@ -26,7 +28,9 @@ Application ID.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppBriefInfo-appId: string--><!--Device-AppBriefInfo-appId: string-End-->
 
@@ -44,7 +48,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppBriefInfo-bundleName: string--><!--Device-AppBriefInfo-bundleName: string-End-->
 
@@ -58,11 +64,13 @@ Bundle name of the application.
 cloudSwitch: boolean
 ```
 
-Whether the cloud service is enabled for the application.The value true means the cloud service is enabled; the value false means the opposite.
+Whether the cloud service is enabled for the application. The value true means the cloud service is enabled; the value false means the opposite.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppBriefInfo-cloudSwitch: boolean--><!--Device-AppBriefInfo-cloudSwitch: boolean-End-->
 
@@ -76,11 +84,13 @@ Whether the cloud service is enabled for the application.The value true means th
 instanceId: number
 ```
 
-Application twin ID.The value 0 indicates the application itself, and the twin ID increases in ascending order.
+Application twin ID. The value 0 indicates the application itself, and the twin ID increases in ascending order.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AppBriefInfo-instanceId: int--><!--Device-AppBriefInfo-instanceId: int-End-->
 

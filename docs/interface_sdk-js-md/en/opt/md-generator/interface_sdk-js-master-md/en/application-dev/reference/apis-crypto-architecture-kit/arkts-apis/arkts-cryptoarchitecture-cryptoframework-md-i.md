@@ -1,8 +1,10 @@
 # Md
 
-Message digest interface, defining methods for calculating message digests. Before use, you must create an **Md**instance by using [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createMd).
+Message digest interface, defining methods for calculating message digests. Before use, you must create an **Md** instance by using [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createMd).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface Md--><!--Device-cryptoFramework-interface Md-End-->
 
@@ -24,7 +26,9 @@ digest(callback: AsyncCallback<DataBlob>): void
 
 Generates a message digest. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -48,8 +52,8 @@ Generates a message digest. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -76,7 +80,9 @@ digest(): Promise<DataBlob>
 
 Generates a message digest. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,8 +104,8 @@ Generates a message digest. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -208,13 +214,13 @@ export default {
 digestSync(): DataBlob
 ```
 
-Generates a message digest. This API returns the result synchronously.
+Generates a message digest. This API returns the result synchronously. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [digest](#digest). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [digest](#digest). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Md-digestSync(): DataBlob--><!--Device-Md-digestSync(): DataBlob-End-->
 
@@ -230,10 +236,10 @@ Generates a message digest. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) |
 
 ## Examples
 
@@ -331,7 +337,9 @@ getMdLength(): number
 
 Obtains the message digest length, in bytes.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -355,7 +363,7 @@ Obtains the message digest length, in bytes.
 
 | Error Code ID |
 | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
 
 ## Examples
 
@@ -374,15 +382,11 @@ function getLength() {
 update(input: DataBlob, callback: AsyncCallback<void>): void
 ```
 
-Updates the message digest status. This API uses an asynchronous callback to return the result. **update** must be used with **digest** together. **digest** is mandatory, and **update** is optional.
+Updates the message digest status. This API uses an asynchronous callback to return the result. **update** must be used with **digest** together. **digest** is mandatory, and **update** is optional. > **NOTE：**> > For details about the code for calling **update** multiple times in a message digest operation, see > [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment) > .
 
-> **NOTE：**
-> 
-> For details about the code for calling **update** multiple times in a message digest operation, see
-> [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 12 and later: This API can be used in both the stage model and FA model.
@@ -407,9 +411,9 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## update
 
@@ -417,16 +421,11 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 update(input: DataBlob): Promise<void>
 ```
 
-Updates the message digest status. This API uses a promise to return the result. **update** must be used with  
-**digest** together. **digest** is mandatory, and **update** is optional.
+Updates the message digest status. This API uses a promise to return the result. **update** must be used with **digest** together. **digest** is mandatory, and **update** is optional. > **NOTE：**> > For details about the code for calling **update** multiple times in a message digest operation, see > [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment) > .
 
-> **NOTE：**
-> 
-> For details about the code for calling **update** multiple times in a message digest operation, see
-> [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
-> .
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -454,9 +453,9 @@ Updates the message digest status. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## updateSync
 
@@ -464,20 +463,13 @@ Updates the message digest status. This API uses a promise to return the result.
 updateSync(input: DataBlob): void
 ```
 
-Updates the message digest status. This API returns the result synchronously. **updateSync** must be used with  
-**digestSync** together. **digestSync** is mandatory, and **updateSync** is optional.
+Updates the message digest status. This API returns the result synchronously. **updateSync** must be used with **digestSync** together. **digestSync** is mandatory, and **updateSync** is optional. > **NOTE：**> > For details about the code for calling **updateSync** multiple times in a message digest operation, see > [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment) > . &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, update. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-> **NOTE：**
-> 
-> For details about the code for calling **updateSync** multiple times in a message digest operation, see
-> [Generating an MD by Passing In Data by Segment](../../../security/CryptoArchitectureKit/crypto-generate-message-digest.md#generating-an-md-by-passing-in-data-by-segment)
-> .
+**Since:** 23
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [update](update). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Deprecated since:** -1
 
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Md-updateSync(input: DataBlob): void--><!--Device-Md-updateSync(input: DataBlob): void-End-->
 
@@ -493,9 +485,9 @@ Updates the message digest status. This API returns the result synchronously. **
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## algName
 
@@ -507,7 +499,9 @@ Indicates the algorithm name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

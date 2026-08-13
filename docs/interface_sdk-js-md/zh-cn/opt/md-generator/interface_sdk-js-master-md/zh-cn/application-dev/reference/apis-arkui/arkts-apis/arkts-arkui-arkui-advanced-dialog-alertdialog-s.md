@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare struct AlertDialog--><!--Device-unnamed-export declare struct AlertDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 content: ResourceStr
 ```
 
-操作确认弹出框内容。
-
-默认不设置或设置为undefined，确认弹出框内容不显示。
+操作确认弹出框内容。 默认不设置或设置为undefined，确认弹出框内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ content: ResourceStr
 controller: CustomDialogController
 ```
 
-操作确认弹出框控制器，用于控制弹出框的显示和隐藏。
-
-**说明：** 未使用@Require装饰，构造时不强制校验参数。
+操作确认弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,13 +60,13 @@ controller: CustomDialogController
 primaryButton?: ButtonOptions
 ```
 
-操作确认弹出框左侧按钮。
-
-默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
+操作确认弹出框左侧按钮。 默认不设置或设置为undefined，确认弹出框左侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,15 +82,13 @@ primaryButton?: ButtonOptions
 primaryTitle?: ResourceStr
 ```
 
-操作确认弹出框一级标题。
-
-默认不设置或设置为undefined，确认弹出框一级标题不显示。
-
-**说明：** 标题超过两行会显示“...”。
+操作确认弹出框一级标题。 默认不设置或设置为undefined，确认弹出框一级标题不显示。 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,13 +104,13 @@ primaryTitle?: ResourceStr
 secondaryButton?: ButtonOptions
 ```
 
-操作确认弹出框右侧按钮。
-
-默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
+操作确认弹出框右侧按钮。 默认不设置或设置为undefined，确认弹出框右侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,15 +126,13 @@ secondaryButton?: ButtonOptions
 secondaryTitle?: ResourceStr
 ```
 
-操作确认弹出框二级标题。
-
-默认不设置或设置为undefined，确认弹出框二级标题不显示。
-
-**说明：** 标题超过两行会显示“...”。
+操作确认弹出框二级标题。 默认不设置或设置为undefined，确认弹出框二级标题不显示。 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,6 +154,8 @@ theme?: Theme | CustomTheme
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -170,13 +170,13 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,12 +1,4 @@
-# @ohos.arkui.advanced.FullScreenLaunchComponent(Defines the fullScreen launch component)
-
-###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
- ###### Events
- The [universal events](./@internal/component/ets/common) are not supported.
-
+# @ohos.arkui.advanced.FullScreenLaunchComponent
 
 ## Modules to Import
 
@@ -20,7 +12,7 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner,the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.  > **NOTE：** >  > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system > cannot guarantee that the atomic service will function properly. |
+| [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md) | **FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. > **NOTE：**> > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system > cannot guarantee that the atomic service will function properly. |
 
 ### Types
 

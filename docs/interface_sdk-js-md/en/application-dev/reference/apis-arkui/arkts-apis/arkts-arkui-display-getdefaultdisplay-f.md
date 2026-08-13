@@ -30,7 +30,7 @@ Obtains the default Display object. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | Yes | Callback used to return the default Display object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Display](arkts-arkui-display-display-i.md)&gt; | Yes | Callback used to return the default Display object. |
 
 ## Examples
 

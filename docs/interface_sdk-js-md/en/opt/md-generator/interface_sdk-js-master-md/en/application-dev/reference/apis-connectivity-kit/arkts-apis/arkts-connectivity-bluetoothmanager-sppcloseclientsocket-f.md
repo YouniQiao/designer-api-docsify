@@ -18,7 +18,7 @@ Disables an spp client socket and releases related resources.
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppCloseClientSocket](ohos.bluetooth.socket/socket#sppCloseClientSocket)
+**Substitutes:** [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md#sppCloseClientSocket)
 
 <!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void--><!--Device-bluetoothManager-function sppCloseClientSocket(socket: number): void-End-->
 
@@ -34,8 +34,8 @@ Disables an spp client socket and releases related resources.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900001 |
 | 2900099 |
 

@@ -7,11 +7,11 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
       callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。
+获取指定应用中所有module的OverlayModuleInfo信息。使用callback异步回调。 指定应用是调用方自身时不需要权限。
 
-指定应用是调用方自身时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -32,11 +32,11 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -69,11 +69,11 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string, callback: AsyncCallback<Array<OverlayModuleInfo>>): void
 ```
 
-获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。
+获取指定应用中指定module的OverlayModuleInfo信息。使用callback异步回调。 指定应用是调用方自身时不需要权限。
 
-指定应用是调用方自身时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -95,13 +95,13 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-| [17700033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
 ## 示例
 
@@ -135,11 +135,11 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。
+获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。 指定应用是调用方自身时不需要权限。
 
-指定应用是调用方自身时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -166,13 +166,13 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
-| [17700033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) |
 
 ## 示例
 

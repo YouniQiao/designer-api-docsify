@@ -2,13 +2,15 @@
 
 Video Conflict Functions object.
 
-**Inheritance/Implementation:** VideoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [MacroQuery](arkts-camera-camera-macroquery-i.md#MacroQuery)
+**Inheritance/Implementation:** VideoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API))
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface VideoConflictFunctions extends ZoomQuery, MacroQuery--><!--Device-camera-interface VideoConflictFunctions extends ZoomQuery, MacroQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface VideoConflictFunctions--><!--Device-camera-interface VideoConflictFunctions-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

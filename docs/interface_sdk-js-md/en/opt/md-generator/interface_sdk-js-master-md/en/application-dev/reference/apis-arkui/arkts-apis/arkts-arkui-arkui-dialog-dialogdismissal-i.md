@@ -4,6 +4,8 @@ Provides information about the action to dismiss the dialog box.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface DialogDismissal--><!--Device-unnamed-export interface DialogDismissal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,11 @@ dismiss: VoidCallback
 
 Callback for dismissing the dialog box. This API is called only when the dialog box needs to be exited.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +49,8 @@ Reason why the dialog box cannot be dismissed.
 **Type:** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

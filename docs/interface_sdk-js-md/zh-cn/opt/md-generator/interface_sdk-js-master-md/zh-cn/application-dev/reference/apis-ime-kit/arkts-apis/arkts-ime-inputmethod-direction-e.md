@@ -2,7 +2,9 @@
 
 光标移动方向。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export enum Direction--><!--Device-inputMethod-export enum Direction-End-->
 
@@ -14,11 +16,11 @@
 CURSOR_UP = 1
 ```
 
-向上。
+向上。 **使用场景：**输入法请求光标向上移动时使用，如多行文本中上移光标。
 
-**使用场景：**输入法请求光标向上移动时使用，如多行文本中上移光标。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-Direction-CURSOR_UP = 1--><!--Device-Direction-CURSOR_UP = 1-End-->
 
@@ -30,11 +32,11 @@ CURSOR_UP = 1
 CURSOR_DOWN
 ```
 
-向下。
+向下。 **使用场景：**输入法请求光标向下移动时使用。
 
-**使用场景：**输入法请求光标向下移动时使用。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-Direction-CURSOR_DOWN--><!--Device-Direction-CURSOR_DOWN-End-->
 
@@ -46,11 +48,11 @@ CURSOR_DOWN
 CURSOR_LEFT
 ```
 
-向左。
+向左。 **使用场景：**输入法请求光标向左移动时使用，如删除左侧字符前移动光标。
 
-**使用场景：**输入法请求光标向左移动时使用，如删除左侧字符前移动光标。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-Direction-CURSOR_LEFT--><!--Device-Direction-CURSOR_LEFT-End-->
 
@@ -62,11 +64,11 @@ CURSOR_LEFT
 CURSOR_RIGHT
 ```
 
-向右。
+向右。 **使用场景：**输入法请求光标向右移动时使用。
 
-**使用场景：**输入法请求光标向右移动时使用。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-Direction-CURSOR_RIGHT--><!--Device-Direction-CURSOR_RIGHT-End-->
 

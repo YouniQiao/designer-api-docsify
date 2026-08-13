@@ -1,11 +1,12 @@
 # GetInputDataOptions (System API)
 
-Represents a set of optional parameters for  
-[onGetData](../../../reference/apis-basic-services-kit/js-apis-osAccount-sys.md#ongetdata8).
+Represents a set of optional parameters for onGetData.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface GetInputDataOptions--><!--Device-osAccount-interface GetInputDataOptions-End-->
 
@@ -29,9 +30,11 @@ Challenge value, which is **undefined** by default.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetInputDataOptions-challenge?: Uint8Array--><!--Device-GetInputDataOptions-challenge?: Uint8Array-End-->
 

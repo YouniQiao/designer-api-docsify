@@ -1,12 +1,14 @@
 # CommonController
 
-The class used to control common dialog.
+Implements a common controller for managing components related to **promptAction**.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-promptAction-export class CommonController--><!--Device-promptAction-export class CommonController-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-class CommonController--><!--Device-promptAction-class CommonController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 close(): void
 ```
 
-Close the corresponding common dialog.
+Closes the custom dialog box. If the dialog box is already closed, this API has no effect.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonController-close(): void--><!--Device-CommonController-close(): void-End-->
 
@@ -40,13 +46,17 @@ Close the corresponding common dialog.
 constructor()
 ```
 
-The constructor.
+A constructor used to create a controller instance.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonController-constructor()--><!--Device-CommonController-constructor()-End-->
 
@@ -58,13 +68,17 @@ The constructor.
 getState(): CommonState
 ```
 
-Get the state.
+Obtains the state of the custom dialog box.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonController-getState(): CommonState--><!--Device-CommonController-getState(): CommonState-End-->
 
@@ -74,5 +88,5 @@ Get the state.
 
 | Type | Description |
 | --- | --- |
-| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | return the state. |
+| [CommonState](arkts-arkui-promptaction-commonstate-e.md) | State of the custom dialog box. |
 

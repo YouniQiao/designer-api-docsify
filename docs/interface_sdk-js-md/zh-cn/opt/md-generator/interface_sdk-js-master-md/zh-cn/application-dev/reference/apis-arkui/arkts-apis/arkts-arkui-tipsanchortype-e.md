@@ -4,6 +4,8 @@ Follow position type.
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum TipsAnchorType--><!--Device-unnamed-declare enum TipsAnchorType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TARGET
 Follow the component.
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ CURSOR
 Follow the cursor.
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

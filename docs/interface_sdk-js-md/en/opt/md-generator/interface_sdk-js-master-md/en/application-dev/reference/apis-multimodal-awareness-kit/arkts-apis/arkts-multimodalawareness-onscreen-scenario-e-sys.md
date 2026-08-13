@@ -2,7 +2,9 @@
 
 Enumerates the scenarios of the onscreen content.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export enum Scenario--><!--Device-onScreen-export enum Scenario-End-->
 
@@ -16,7 +18,9 @@ UNKNOWN = 0
 
 Unknown scenario.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Scenario-UNKNOWN = 0--><!--Device-Scenario-UNKNOWN = 0-End-->
 
@@ -32,7 +36,9 @@ ARTICLE = 1
 
 Article scenario.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Scenario-ARTICLE = 1--><!--Device-Scenario-ARTICLE = 1-End-->
 

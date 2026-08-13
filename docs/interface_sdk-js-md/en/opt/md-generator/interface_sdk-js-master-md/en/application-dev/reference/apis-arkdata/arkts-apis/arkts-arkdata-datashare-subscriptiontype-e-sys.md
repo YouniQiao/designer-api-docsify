@@ -1,0 +1,33 @@
+# SubscriptionType (System API)
+
+Enumerates the data subscription types.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-dataShare-enum SubscriptionType--><!--Device-dataShare-enum SubscriptionType-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.
+
+## SUBSCRIPTION_TYPE_EXACT_URI
+
+```TypeScript
+SUBSCRIPTION_TYPE_EXACT_URI = 0
+```
+
+Data change of the specified URI.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SubscriptionType-SUBSCRIPTION_TYPE_EXACT_URI = 0--><!--Device-SubscriptionType-SUBSCRIPTION_TYPE_EXACT_URI = 0-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**System API:** This is a system API.

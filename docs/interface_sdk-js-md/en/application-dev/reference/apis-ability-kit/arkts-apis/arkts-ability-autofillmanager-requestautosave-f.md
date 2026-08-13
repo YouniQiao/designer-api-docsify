@@ -12,11 +12,13 @@ import { autoFillManager } from '@kit.AbilityKit';
 export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void
 ```
 
-Requests to automatically save the widget data. This API uses an asynchronous callback to return the result.If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
+Requests to automatically save the widget data. This API uses an asynchronous callback to return the result. If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,8 +39,8 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: 1. Get instance id failed; &lt;br&gt;2. Parse instance id failed; 3. The second parameter is not of type callback. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Get instance id failed; &lt;br&gt;2. Parse instance id failed; 3. The second parameter is not of type callback. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -134,7 +136,9 @@ Trigger an auto save request.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,5 +160,5 @@ Trigger an auto save request.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 

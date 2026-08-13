@@ -2,7 +2,9 @@
 
 This module provides file descriptor information of the HAP where the `rawfile` file is located, including the file descriptor, start offset, and file length.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RawFileDescriptor--><!--Device-unnamed-export interface RawFileDescriptor-End-->
 
@@ -18,7 +20,9 @@ File descriptor.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,7 +40,9 @@ File length, indicating the size of the `rawfile` file. The unit is bytes.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,7 +60,9 @@ Start offset, indicating the start position of the `rawfile` file in the HAP. Th
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

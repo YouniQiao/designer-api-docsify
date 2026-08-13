@@ -4,6 +4,8 @@ ArcSwiper容器组件的控制器，可以将此对象绑定至ArcSwiper组件�
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export class ArcSwiperController--><!--Device-unnamed-export class ArcSwiperController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
@@ -17,6 +19,8 @@ constructor()
 ArcSwiperController的构造函数。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ finishAnimation(handler?: FinishAnimationHandler)
 停止播放动画。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -52,9 +58,11 @@ finishAnimation(handler?: FinishAnimationHandler)
 showNext()
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
+翻至下一页。翻页带动效切换过程，时长通过duration指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -68,9 +76,11 @@ showNext()
 showPrevious()
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
+翻至上一页。翻页带动效切换过程，时长通过duration指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

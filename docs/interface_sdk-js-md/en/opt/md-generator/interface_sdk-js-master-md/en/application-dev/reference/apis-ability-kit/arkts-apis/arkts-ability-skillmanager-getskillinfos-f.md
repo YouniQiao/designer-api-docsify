@@ -12,9 +12,11 @@ import { skillManager } from '@kit.AbilityKit';
 function getSkillInfos(bundleName: string, flags: number, userId?: number): Promise<Array<SkillInfo>>
 ```
 
-Obtains all SkillInfo of a specified application based on bundleName.To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
+Obtains all SkillInfo of a specified application based on bundleName. To query information for other local accounts, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS must additionally be granted.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SKILL_PRIVILEGE or ohos.permission.MANAGE_SKILL
 
@@ -44,6 +46,6 @@ Obtains all SkillInfo of a specified application based on bundleName.To query in
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |

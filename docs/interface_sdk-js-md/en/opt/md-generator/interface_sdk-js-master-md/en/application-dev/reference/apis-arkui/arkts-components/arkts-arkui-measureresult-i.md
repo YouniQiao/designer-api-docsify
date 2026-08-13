@@ -6,10 +6,12 @@ Provides the measurement result of the component. This API inherits from [SizeRe
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare interface MeasureResult extends SizeResult--><!--Device-unnamed-declare interface MeasureResult extends SizeResult-End-->
+<!--Device-unnamed-declare interface MeasureResult--><!--Device-unnamed-declare interface MeasureResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -14,7 +14,9 @@ function show(id: string, callback: AsyncCallback<TaskInfo>): void
 
 Queries the task details based on the task ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void--><!--Device-agent-function show(id: string, callback: AsyncCallback<TaskInfo>): void-End-->
 
@@ -31,9 +33,9 @@ Queries the task details based on the task ID. This API uses an asynchronous cal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
 
 
 ## show
@@ -44,7 +46,9 @@ function show(id: string): Promise<TaskInfo>
 
 Queries the task details based on the task ID. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-function show(id: string): Promise<TaskInfo>--><!--Device-agent-function show(id: string): Promise<TaskInfo>-End-->
 
@@ -66,6 +70,6 @@ Queries the task details based on the task ID. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-task-not-found) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) |

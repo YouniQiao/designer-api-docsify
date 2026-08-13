@@ -2,7 +2,9 @@
 
 长时任务暂停信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-interface ContinuousTaskSuspendInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskSuspendInfo-End-->
 
@@ -18,7 +20,9 @@ continuousTaskId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskSuspendInfo-continuousTaskId: int--><!--Device-ContinuousTaskSuspendInfo-continuousTaskId: int-End-->
 
@@ -36,6 +40,8 @@ suspendMessage?: SuspendMessage
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContinuousTaskSuspendInfo-suspendMessage?: SuspendMessage--><!--Device-ContinuousTaskSuspendInfo-suspendMessage?: SuspendMessage-End-->
@@ -52,7 +58,9 @@ suspendReason: ContinuousTaskSuspendReason
 
 **类型：** [ContinuousTaskSuspendReason](arkts-backgroundtasks-backgroundtaskmanager-continuoustasksuspendreason-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskSuspendInfo-suspendReason: ContinuousTaskSuspendReason--><!--Device-ContinuousTaskSuspendInfo-suspendReason: ContinuousTaskSuspendReason-End-->
 
@@ -68,7 +76,9 @@ suspendState: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskSuspendInfo-suspendState: boolean--><!--Device-ContinuousTaskSuspendInfo-suspendState: boolean-End-->
 

@@ -4,9 +4,11 @@
 export type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void
 ```
 
-注册应用通知静默提醒使能状态变化的回调函数类型。type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void
+注册应用通知静默提醒使能状态变化的回调函数类型。 type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

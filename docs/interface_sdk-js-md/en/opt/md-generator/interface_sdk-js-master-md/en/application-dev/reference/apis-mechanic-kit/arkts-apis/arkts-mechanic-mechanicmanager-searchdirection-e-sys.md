@@ -2,7 +2,9 @@
 
 Search direction.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum SearchDirection--><!--Device-mechanicManager-export enum SearchDirection-End-->
 
@@ -18,7 +20,9 @@ DEFAULT = 0
 
 System Default Direction.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SearchDirection-DEFAULT = 0--><!--Device-SearchDirection-DEFAULT = 0-End-->
 
@@ -34,7 +38,9 @@ LEFTWARD = 1
 
 Leftward direction. Also indicates clockwise direction.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SearchDirection-LEFTWARD = 1--><!--Device-SearchDirection-LEFTWARD = 1-End-->
 
@@ -50,7 +56,9 @@ RIGHTWARD = 2
 
 Rightward direction. Also indicates the counterclockwise direction.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SearchDirection-RIGHTWARD = 2--><!--Device-SearchDirection-RIGHTWARD = 2-End-->
 

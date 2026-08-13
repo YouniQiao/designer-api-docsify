@@ -1,4 +1,4 @@
-# notificationSubscriber(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)
+# notificationSubscriber
 
 ## 汇总
 
@@ -25,6 +25,7 @@
 
 | 名称 |
 | --- |
+| [BadgeEnabledChangedCallback](arkts-notification-badgeenabledchangedcallback-t-sys.md) |
 | [EnabledSilentReminderChangedCallback](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md) |
 | [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md) |
 | [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md) |

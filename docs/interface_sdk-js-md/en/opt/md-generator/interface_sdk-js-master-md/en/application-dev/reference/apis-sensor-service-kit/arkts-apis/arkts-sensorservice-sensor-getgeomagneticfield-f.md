@@ -18,7 +18,7 @@ Obtains the geomagnetic field of a geographic location. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
+**Substitutes:** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)(locationOptions: LocationOptions, timeMillis: long, callback: AsyncCallback&lt;GeomagneticResponse&gt;)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number, callback: AsyncCallback<GeomagneticResponse>): void-End-->
 
@@ -63,7 +63,7 @@ Obtains the geomagnetic field of a geographic location. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getGeomagneticInfo](sensor.getGeomagneticInfo(locationOptions:)
+**Substitutes:** [getGeomagneticInfo](arkts-sensorservice-sensor-getgeomagneticinfo-f.md#getGeomagneticInfo)(locationOptions: LocationOptions, timeMillis: long)
 
 <!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>--><!--Device-sensor-function getGeomagneticField(locationOptions: LocationOptions, timeMillis: number): Promise<GeomagneticResponse>-End-->
 

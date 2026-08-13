@@ -1,10 +1,12 @@
 # TriggerInfo
 
-The module defines the information required for triggering the WantAgent. The information is used as an input parameter of [trigger](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#wantagenttrigger).
+The module defines the information required for triggering the WantAgent. The information is used as an input parameter of trigger.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface TriggerInfo--><!--Device-unnamed-export interface TriggerInfo-End-->
 
@@ -16,16 +18,15 @@ The module defines the information required for triggering the WantAgent. The in
 code: int
 ```
 
-Common event code. This field is valid only when  
-[OperationType](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#operationtype) of the WantAgent instance is **'SEND_COMMON_EVENT'**. The meaning of this field is the same as that of the **code** field set in  
-[CommonEventPublishData](../../../reference/apis-basic-services-kit/js-apis-inner-commonEvent-commonEventPublishData.md#properties) when the publisher uses  
-[commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish) to publish common events.
+Common event code. This field is valid only when OperationType of the WantAgent instance is **'SEND_COMMON_EVENT'**. The meaning of this field is the same as that of the **code** field set in [CommonEventPublishData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md#CommonEventPublishData) when the publisher uses [commonEventManager.publish](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish) to publish common events.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,41 +37,40 @@ Common event code. This field is valid only when
 ## extraInfo
 
 ```TypeScript
-extraInfo?: { [key: string]: any }
+extraInfo?: Record<string, RecordData>
 ```
 
 Extra information.
 
-**Type:** { [key: string]: any }
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-TriggerInfo-extraInfo?: { [key: string]: any }--><!--Device-TriggerInfo-extraInfo?: { [key: string]: any }-End-->
+<!--Device-TriggerInfo-extraInfo?: Record<string, RecordData>--><!--Device-TriggerInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
 ## extraInfos
 
 ```TypeScript
-extraInfos?: Record<string, Object>
+extraInfos?: Record<string, RecordData>
 ```
 
-Extra information. You are advised to use this property to replace **extraInfo**. When this property is set,  
-**extraInfo** does not take effect.
+Extra information. You are advised to use this property to replace extraInfo. When this property is set, extraInfo does not take effect.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-TriggerInfo-extraInfos?: Record<string, Object>--><!--Device-TriggerInfo-extraInfos?: Record<string, Object>-End-->
+<!--Device-TriggerInfo-extraInfos?: Record<string, RecordData>--><!--Device-TriggerInfo-extraInfos?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -80,14 +80,15 @@ Extra information. You are advised to use this property to replace **extraInfo**
 permission?: string
 ```
 
-Permission required for a subscriber to receive the common event. This field is valid only when  
-[OperationType](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#operationtype) of the WantAgent instance is **'SEND_COMMON_EVENT'**.
+Permission required for a subscriber to receive the common event. This field is valid only when OperationType of the WantAgent instance is **'SEND_COMMON_EVENT'**.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,9 +106,11 @@ Carrier for information transfer between objects (application components).
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

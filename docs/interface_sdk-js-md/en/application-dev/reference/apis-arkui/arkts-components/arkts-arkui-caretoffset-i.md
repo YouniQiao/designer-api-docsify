@@ -6,6 +6,8 @@ Describes the position of the caret relative to the text box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CaretOffset--><!--Device-unnamed-declare interface CaretOffset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Index of the caret position.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ X coordinate of the cursor relative to the text box, in px.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -67,6 +73,8 @@ Y coordinate of the cursor relative to the text box, in px.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

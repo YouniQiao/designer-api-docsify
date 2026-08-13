@@ -2,9 +2,11 @@
 
 Defines the call disconnection cause.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface DisconnectedDetails--><!--Device-call-export interface DisconnectedDetails-End-->
 
@@ -28,9 +30,11 @@ Call ending message.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisconnectedDetails-message: string--><!--Device-DisconnectedDetails-message: string-End-->
 
@@ -48,9 +52,11 @@ Defines the call disconnection cause.
 
 **Type:** DisconnectedReason
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DisconnectedDetails-reason: DisconnectedReason--><!--Device-DisconnectedDetails-reason: DisconnectedReason-End-->
 

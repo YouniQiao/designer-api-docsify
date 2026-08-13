@@ -8,7 +8,7 @@ Describes the service data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ServiceData](ohos.bluetoothManager/bluetoothManager.ServiceData)
+**Substitutes:** [ServiceData](arkts-connectivity-bluetoothmanager-servicedata-i.md#ServiceData)
 
 <!--Device-bluetooth-interface ServiceData--><!--Device-bluetooth-interface ServiceData-End-->
 
@@ -36,7 +36,7 @@ Indicates the UUID of the service data to add
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.ServiceData.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-servicedata-i.md#serviceUuid)
 
 <!--Device-ServiceData-serviceUuid: string--><!--Device-ServiceData-serviceUuid: string-End-->
 
@@ -58,7 +58,7 @@ Indicates the service data to add
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceValue](ohos.bluetoothManager/bluetoothManager.ServiceData.serviceValue)
+**Substitutes:** [serviceValue](arkts-connectivity-bluetoothmanager-servicedata-i.md#serviceValue)
 
 <!--Device-ServiceData-serviceValue: ArrayBuffer--><!--Device-ServiceData-serviceValue: ArrayBuffer-End-->
 

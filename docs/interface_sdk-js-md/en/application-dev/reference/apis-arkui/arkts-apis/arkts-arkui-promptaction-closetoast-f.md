@@ -9,18 +9,22 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ## closeToast
 
 ```TypeScript
-export function closeToast(toastId: int): void
+function closeToast(toastId: number): void
 ```
 
-Close the notification text.
+Closes the specified toast. > **NOTE：**> > Directly using **closeToast** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the > [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closeToast) API through this object.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-promptAction-export function closeToast(toastId: int): void--><!--Device-promptAction-export function closeToast(toastId: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-promptAction-function closeToast(toastId: number): void--><!--Device-promptAction-function closeToast(toastId: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,13 +32,13 @@ Close the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| toastId | int | Yes | the toast id returned by openToast. |
+| toastId | number | Yes | Toast ID returned from **openToast**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [103401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [103401](../errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 

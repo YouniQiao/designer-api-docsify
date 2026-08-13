@@ -16,7 +16,9 @@ Update the power configuration value for a given scene name.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.POWER_CONFIG
 
@@ -39,9 +41,9 @@ Update the power configuration value for a given scene name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4900601](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900601-failure-to-write-the-power-supply-configuration-node) | Failed to write the power configuration value. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900400](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes: 1. The sceneName or value parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes; 3. The length of value parameter exceeds 128 bytes. |
-| [4900101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| [4900601](../../apis-basic-services-kit/errorcode-power.md#4900601-failure-to-write-the-power-supply-configuration-node) | Failed to write the power configuration value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) | Invalid parameter. Possible causes: 1. The sceneName or value parameter is an empty string; 2. The length of sceneName parameter exceeds 128 bytes; 3. The length of value parameter exceeds 128 bytes. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 

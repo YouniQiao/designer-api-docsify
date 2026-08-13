@@ -14,7 +14,9 @@ function getOperatorNameSync(slotId: number): string
 
 Get the operator name of the specified SIM card slot.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-function getOperatorNameSync(slotId: int): string--><!--Device-radio-function getOperatorNameSync(slotId: int): string-End-->
 

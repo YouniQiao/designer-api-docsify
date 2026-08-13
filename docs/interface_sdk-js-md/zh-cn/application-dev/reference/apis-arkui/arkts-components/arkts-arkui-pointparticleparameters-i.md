@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface PointParticleParameters--><!--Device-unnamed-interface PointParticleParameters-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 radius: VP
 ```
 
-粒子半径。
-
-默认值：0，小于0时取默认值0。
+粒子半径。 默认值：0，小于0时取默认值0。
 
 **类型：** VP
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

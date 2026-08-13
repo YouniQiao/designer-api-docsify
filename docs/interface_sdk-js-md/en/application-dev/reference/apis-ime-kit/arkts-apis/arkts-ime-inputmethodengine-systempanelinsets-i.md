@@ -2,9 +2,11 @@
 
 Defines the offset area between the input method soft keyboard and the system panel.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
 
@@ -24,11 +26,13 @@ readonly bottom: int
 
 Distance between the bottom border of the keyboard area and the bottom border of the system panel area, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly bottom: int--><!--Device-SystemPanelInsets-readonly bottom: int-End-->
 
@@ -42,11 +46,13 @@ readonly left: int
 
 Distance between the left border of the keyboard area and the left border of the system panel area, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly left: int--><!--Device-SystemPanelInsets-readonly left: int-End-->
 
@@ -60,11 +66,13 @@ readonly right: int
 
 Distance between the right border of the keyboard area and the right border of the system panel area, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SystemPanelInsets-readonly right: int--><!--Device-SystemPanelInsets-readonly right: int-End-->
 

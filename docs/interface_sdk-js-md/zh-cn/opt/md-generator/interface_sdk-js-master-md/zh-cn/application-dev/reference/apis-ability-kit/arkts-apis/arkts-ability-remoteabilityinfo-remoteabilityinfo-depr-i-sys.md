@@ -1,18 +1,12 @@
 # RemoteAbilityInfo（系统接口）
 
-remoteAbility信息。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-RemoteAbilityInfo](#RemoteAbilityInfo)替代。
-> 
-> 本模块为系统接口。
+remoteAbility信息。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-RemoteAbilityInfo](#RemoteAbilityInfo（系统接口）)替代。 > > 本模块为系统接口。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [RemoteAbilityInfo](#RemoteAbilityInfo)
+**替代接口：** [RemoteAbilityInfo](#RemoteAbilityInfo（系统接口）)
 
 <!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
@@ -36,7 +30,7 @@ ability元素资源信息。
 
 **废弃版本：** 9
 
-**替代接口：** [elementName](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#elementName)
+**替代接口：** elementName
 
 <!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
 
@@ -60,7 +54,7 @@ readonly icon: string
 
 **废弃版本：** 9
 
-**替代接口：** [icon](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#icon)
+**替代接口：** icon
 
 <!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
 
@@ -84,7 +78,7 @@ readonly label: string
 
 **废弃版本：** 9
 
-**替代接口：** [label](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#label)
+**替代接口：** label
 
 <!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
 

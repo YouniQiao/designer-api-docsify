@@ -1,14 +1,16 @@
 # TypedFrameNode
 
-TypedFrameNode继承自[FrameNode](arkts-arkui-framenode-c.md#FrameNode)，用于声明具体类型的FrameNode，支持Text、Image、Button、Column等多种组件类型，适用于通过代码动态创建具体类型组件节点的场景。
+TypedFrameNode继承自[FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md#FrameNode)，用于声明具体类型的FrameNode，支持Text、Image、Button、Column等多种组件类型，适用于通过代码动态创建具体类型组件节 点的场景。
 
-**继承/实现关系：** TypedFrameNode extends [FrameNode](arkts-arkui-framenode-c.md#FrameNode)
+**继承/实现关系：** TypedFrameNode extends [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md#FrameNode)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-export interface TypedFrameNode<C, T> extends FrameNode--><!--Device-unnamed-export interface TypedFrameNode<C, T> extends FrameNode-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface TypedFrameNode--><!--Device-unnamed-export interface TypedFrameNode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ readonly attribute: T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +51,8 @@ initialize: C
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

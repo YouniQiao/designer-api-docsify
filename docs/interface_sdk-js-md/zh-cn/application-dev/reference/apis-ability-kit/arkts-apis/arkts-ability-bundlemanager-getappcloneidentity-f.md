@@ -8,9 +8,11 @@ function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>
 
 根据uid查询分身应用的包名和分身索引。使用Promise异步回调。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -22,7 +24,7 @@ function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示应用程序的UID。 |
+| uid | int | 是 | 表示应用程序的UID。 |
 
 **返回值：**
 
@@ -34,9 +36,9 @@ function getAppCloneIdentity(uid: int): Promise<AppCloneIdentity>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
 
 ## 示例
 

@@ -14,7 +14,7 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 
 **废弃版本：** 9
 
-**替代接口：** [displayBadge](ohos.notificationManager/notificationManager#displayBadge)
+**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displayBadge（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -30,7 +30,7 @@ function displayBadge(bundle: BundleOption, enable: boolean, callback: AsyncCall
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | enable | boolean | 是 | 使能状态。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定角标使能回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 设定角标使能回调函数。 |
 
 
 ## displayBadge
@@ -47,7 +47,7 @@ function displayBadge(bundle: BundleOption, enable: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [displayBadge](ohos.notificationManager/notificationManager#displayBadge)
+**替代接口：** [displayBadge](arkts-notification-notificationmanager-displaybadge-f-sys.md#displayBadge（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

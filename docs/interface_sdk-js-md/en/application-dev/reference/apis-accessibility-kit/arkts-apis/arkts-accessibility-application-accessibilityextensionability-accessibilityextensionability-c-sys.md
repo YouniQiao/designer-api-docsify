@@ -2,9 +2,11 @@
 
 The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
@@ -22,11 +24,13 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 onAccessibilityConnect(): void
 ```
 
-Called when the AccessibilityExtensionAbility is enabled and connected to the system service.In this API, you can have the service logic initialized. This API can be overridden as required. It returns the result to notify that the ability is successfully connected.
+Called when the AccessibilityExtensionAbility is enabled and connected to the system service. In this API, you can have the service logic initialized. This API can be overridden as required. It returns the result to notify that the ability is successfully connected.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -40,8 +44,8 @@ Called when the AccessibilityExtensionAbility is enabled and connected to the sy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -61,11 +65,13 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-Called when the AccessibilityExtensionAbility is successfully disconnected from the system service.In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
+Called when the AccessibilityExtensionAbility is successfully disconnected from the system service. In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -79,8 +85,8 @@ Called when the AccessibilityExtensionAbility is successfully disconnected from 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -102,9 +108,11 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 
 Called when a specified event occurs in an application. In this API, you can implement event-specific service logic. Generally, this API needs to be overridden.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -124,8 +132,8 @@ Called when a specified event occurs in an application. In this API, you can imp
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -150,9 +158,11 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -178,8 +188,8 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

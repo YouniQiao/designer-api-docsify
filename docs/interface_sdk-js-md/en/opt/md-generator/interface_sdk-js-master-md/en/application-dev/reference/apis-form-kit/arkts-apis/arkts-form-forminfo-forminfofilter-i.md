@@ -2,7 +2,9 @@
 
 The optional options used as filters to ask getFormsInfo to return formInfos from only forms that match the options.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface FormInfoFilter--><!--Device-formInfo-interface FormInfoFilter-End-->
 
@@ -24,7 +26,9 @@ optional moduleName that used to ask getFormsInfo to return form infos with the 
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

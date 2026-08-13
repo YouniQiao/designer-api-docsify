@@ -2,9 +2,11 @@
 
 The **deviceStatus** module provides the device status awareness functionality.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace deviceStatus--><!--Device-unnamed-declare namespace deviceStatus-End-->
 
@@ -22,17 +24,17 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-multimodalawareness-devicestatus-off-f.md#off) | Unsubscribes from steady standing state events. |
-| [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md#offsteadystandingdetect) | Unsubscribes from steady standing status detection events. |
-| [on](arkts-multimodalawareness-devicestatus-on-f.md#on) | Subscribes to steady standing state events. |
-| [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md#onsteadystandingdetect) | Subscribes to steady standing status detection events. |
+| [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md#offSteadyStandingDetect) | Unsubscribes from steady standing status detection events. |
+| off_steadyStandingDetect | Unsubscribes from steady standing state events. |
+| [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md#onSteadyStandingDetect) | Subscribes to steady standing status detection events. |
+| on_steadyStandingDetect | Subscribes to steady standing state events. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getDeviceRotationRadian](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md#getdevicerotationradian) | Obtains the device posture data.  The posture data contains the rotation angles of the x, y, and z axes, that is, the Euler angles of the three axes.The definitions of the three axes are the same as those of the device sensor, and the right-handed coordinate system is used. Posture rotation angles are calculated under the z-x-y intrinsic rotation order, and derived by converting quaternions obtained via sensor fusion. |
+| [getDeviceRotationRadian](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md#getDeviceRotationRadian) | Obtains the device posture data. The posture data contains the rotation angles of the x, y, and z axes, that is, the Euler angles of the three axes. The definitions of the three axes are the same as those of the device sensor, and the right-handed coordinate system is used. Posture rotation angles are calculated under the z-x-y intrinsic rotation order, and derived by converting quaternions obtained via sensor fusion. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -47,5 +49,5 @@ import { deviceStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md) | Defines the steady standing state (that is, stand mode).  A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relative to the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state. |
+| [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md) | Defines the steady standing state (that is, stand mode). A device enters stand mode when it is stationary, and its screen is at an angle between 45 and 135 degrees relative to the horizontal plane. For foldable smartphones, the device must be in a folded state or fully unfolded state. |
 

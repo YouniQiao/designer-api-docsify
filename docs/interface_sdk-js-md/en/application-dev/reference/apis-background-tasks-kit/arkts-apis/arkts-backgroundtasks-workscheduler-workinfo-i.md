@@ -2,9 +2,11 @@
 
 Represents the deferred task information, which is used to set the trigger condition.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-workScheduler-export interface WorkInfo--><!--Device-workScheduler-export interface WorkInfo-End-->
 
@@ -26,9 +28,11 @@ Ability name in the bundle.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,15 +46,15 @@ Ability name in the bundle.
 batteryLevel?: int
 ```
 
-Battery level.
+Battery level. Value range: [0, 100]
 
-Value range: [0, 100]
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +72,11 @@ Battery status.
 
 **Type:** [BatteryStatus](arkts-backgroundtasks-workscheduler-batterystatus-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,9 +94,11 @@ Bundle name of the application where the deferred task is located.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,9 +116,11 @@ Charging type.
 
 **Type:** [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,13 +134,15 @@ Charging type.
 earliestStartTime?: int
 ```
 
-Interval between the initial execution time and the request time for a task, in milliseconds. The default value is **0**, and the value must be greater than or equal to 0.The value range is all integers.
+Interval between the initial execution time and the request time for a task, in milliseconds. The default value is **0**, and the value must be greater than or equal to 0. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,11 +158,13 @@ idleWaitTime?: int
 
 Idle wait time, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,16 +178,15 @@ Idle wait time, in milliseconds.
 isCharging?: boolean
 ```
 
-Whether the device needs to enter the charging state. The default value is **false**.
-
-- **true**: The device needs to enter the charging state to trigger deferred task scheduling.  
-- **false**: The device does not need to enter the charging state to trigger deferred task scheduling.
+Whether the device needs to enter the charging state. The default value is **false**. - **true**: The device needs to enter the charging state to trigger deferred task scheduling. - **false**: The device does not need to enter the charging state to trigger deferred task scheduling.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -187,17 +200,15 @@ Whether the device needs to enter the charging state. The default value is **fal
 isDeepIdle?: boolean
 ```
 
-Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is   
-**false**.
-
-- **true**: The device needs to enter the idle state to trigger deferred task scheduling.  
-- **false**: The device does not need to enter the idle state to trigger deferred task scheduling.
+Whether the device needs to enter the idle state to trigger deferred task scheduling. The default value is **false**. - **true**: The device needs to enter the idle state to trigger deferred task scheduling. - **false**: The device does not need to enter the idle state to trigger deferred task scheduling.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -211,16 +222,15 @@ Whether the device needs to enter the idle state to trigger deferred task schedu
 isPersisted?: boolean
 ```
 
-Whether the registered deferred task can be saved in the system. The default value is **false**.
-
-- **true**: The task can be saved. That is, the task can be restored after the system restarts.  
-- **false**: The task cannot be saved.
+Whether the registered deferred task can be saved in the system. The default value is **false**. - **true**: The task can be saved. That is, the task can be restored after the system restarts. - **false**: The task cannot be saved.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,16 +244,15 @@ Whether the registered deferred task can be saved in the system. The default val
 isRepeat?: boolean
 ```
 
-Whether the task is repeated. The default value is **false**.
-
-- **true**: The task is repeated.  
-- **false**: The task is not repeated.
+Whether the task is repeated. The default value is **false**. - **true**: The task is repeated. - **false**: The task is not repeated.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -261,9 +270,11 @@ Network type.
 
 **Type:** NetworkType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -279,11 +290,13 @@ parameters?: Record<string, int | double | string | boolean>
 
 Carried parameters.
 
-**Type:** ArkTS-Dyn: Record&lt;string, number \| number \| string \| boolean&gt;  <br>ArkTS-Sta：Record&lt;string, int \| double \| string \| boolean&gt;
+**Type:** Record&lt;string, int \| double \| string \| boolean&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,11 +312,13 @@ repeatCount?: int
 
 Number of repeat times.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -319,11 +334,13 @@ repeatCycleTime?: int
 
 Repeat interval, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -341,9 +358,11 @@ Storage status.
 
 **Type:** [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -359,11 +378,13 @@ workId: int
 
 ID of the deferred task.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

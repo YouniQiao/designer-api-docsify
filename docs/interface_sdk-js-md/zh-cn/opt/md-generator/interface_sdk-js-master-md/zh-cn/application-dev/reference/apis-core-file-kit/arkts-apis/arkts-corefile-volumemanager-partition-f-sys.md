@@ -6,9 +6,11 @@
 function partition(diskId: string, type: number, callback: AsyncCallback<void>): void
 ```
 
-对磁盘进行分区，使用callback异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。不支持对光盘进行分区。
+对磁盘进行分区，使用callback异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。 不支持对光盘进行分区。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -30,10 +32,10 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600008 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |
 
@@ -44,9 +46,11 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 function partition(diskId: string, type: number): Promise<void>
 ```
 
-对磁盘设备进行分区，使用Promise异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。不支持对光盘进行分区。
+对磁盘设备进行分区，使用Promise异步回调。当前仅支持将磁盘设备重新分区为一个分区，系统是支持读取多分区的磁盘设备。 不支持对光盘进行分区。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MOUNT_FORMAT_MANAGER
 
@@ -73,9 +77,9 @@ function partition(diskId: string, type: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13600008 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 | 13900042 |

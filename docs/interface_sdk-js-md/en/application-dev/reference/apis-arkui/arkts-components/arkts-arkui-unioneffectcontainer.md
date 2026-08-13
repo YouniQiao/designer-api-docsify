@@ -14,6 +14,8 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UnionEffectContainerInterface-(options?: UnionEffectContainerOptions): UnionEffectContainerAttribute--><!--Device-UnionEffectContainerInterface-(options?: UnionEffectContainerOptions): UnionEffectContainerAttribute-End-->
@@ -30,5 +32,5 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 ## Summary
 
-- [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md)
-- [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md)
+- [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md)
+- [UnionMode](arkts-arkui-unionmode-e-sys.md)

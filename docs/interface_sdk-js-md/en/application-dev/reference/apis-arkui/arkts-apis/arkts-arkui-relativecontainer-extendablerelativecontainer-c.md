@@ -2,20 +2,23 @@
 
 Defines the Extendable RelativeContainer.
 
-**Inheritance/Implementation:** ExtendableRelativeContainer implements [RelativeContainerAttribute](arkts-arkui-relativecontainer-relativecontainerattribute-i.md#RelativeContainerAttribute)
+**Inheritance/Implementation:** ExtendableRelativeContainer implements RelativeContainerAttribute
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-<!--Device-unnamed-export declare abstract class ExtendableRelativeContainer implements RelativeContainerAttribute--><!--Device-unnamed-export declare abstract class ExtendableRelativeContainer implements RelativeContainerAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare abstract class ExtendableRelativeContainer--><!--Device-unnamed-export declare abstract class ExtendableRelativeContainer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $_instantiate
 
 ```TypeScript
-static $_instantiate<T extends ExtendableRelativeContainer>(
+@ComponentBuilder
+  static $_instantiate<T extends ExtendableRelativeContainer>(
     factory: ConstructorT<T>,
     content_?: CustomBuilder
   ): T
@@ -27,9 +30,11 @@ Constructor of Extendable RelativeContainer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRelativeContainer-static $_instantiate<T extends ExtendableRelativeContainer>(    factory: ConstructorT<T>,    content_?: CustomBuilder  ): T--><!--Device-ExtendableRelativeContainer-static $_instantiate<T extends ExtendableRelativeContainer>(    factory: ConstructorT<T>,    content_?: CustomBuilder  ): T-End-->
+<!--Device-ExtendableRelativeContainer-@ComponentBuilder  static $_instantiate<T extends ExtendableRelativeContainer>(    factory: ConstructorT<T>,    content_?: CustomBuilder  ): T--><!--Device-ExtendableRelativeContainer-@ComponentBuilder  static $_instantiate<T extends ExtendableRelativeContainer>(    factory: ConstructorT<T>,    content_?: CustomBuilder  ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -37,8 +42,8 @@ Constructor of Extendable RelativeContainer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -49,7 +54,8 @@ Constructor of Extendable RelativeContainer.
 ## _instantiateImpl
 
 ```TypeScript
-static _instantiateImpl<T extends ExtendableRelativeContainer>(
+@Builder
+  static _instantiateImpl<T extends ExtendableRelativeContainer>(
     styles: CustomBuilderT<T>,
     factory: ConstructorT<T>,
     content_?: CustomBuilder
@@ -62,11 +68,11 @@ Entry of Extendable RelativeContainer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRelativeContainer-static _instantiateImpl<T extends ExtendableRelativeContainer>(    styles: CustomBuilderT<T>,    factory: ConstructorT<T>,    content_?: CustomBuilder  ): void--><!--Device-ExtendableRelativeContainer-static _instantiateImpl<T extends ExtendableRelativeContainer>(    styles: CustomBuilderT<T>,    factory: ConstructorT<T>,    content_?: CustomBuilder  ): void-End-->
+<!--Device-ExtendableRelativeContainer-@Builder  static _instantiateImpl<T extends ExtendableRelativeContainer>(    styles: CustomBuilderT<T>,    factory: ConstructorT<T>,    content_?: CustomBuilder  ): void--><!--Device-ExtendableRelativeContainer-@Builder  static _instantiateImpl<T extends ExtendableRelativeContainer>(    styles: CustomBuilderT<T>,    factory: ConstructorT<T>,    content_?: CustomBuilder  ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,9 +80,9 @@ Entry of Extendable RelativeContainer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| styles | CustomBuilderT&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
+| content_ | CustomBuilder | No |  |
 
 ## setRelativeContainerOptions
 
@@ -89,6 +95,8 @@ Set the RelativeContainer Options.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

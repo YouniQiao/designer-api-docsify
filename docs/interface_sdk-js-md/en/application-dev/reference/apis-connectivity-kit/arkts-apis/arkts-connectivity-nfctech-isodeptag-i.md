@@ -2,35 +2,33 @@
 
 Provides methods for accessing IsoDep tag.
 
-**Inheritance/Implementation:** IsoDepTag extends [TagSession](TagSession)
+**Inheritance/Implementation:** IsoDepTag extends TagSession
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface IsoDepTag extends TagSession--><!--Device-unnamed-export interface IsoDepTag extends TagSession-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface IsoDepTag--><!--Device-unnamed-export interface IsoDepTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## getHiLayerResponse
 
-ArkTS-Dyn:
-```TypeScript
-getHiLayerResponse(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 getHiLayerResponse(): int[]
 ```
 
-Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology.It could be null if not based on NfcB.
+Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology. It could be null if not based on NfcB.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
 
@@ -40,7 +38,7 @@ Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technol
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns HiLayer Response bytes, the length could be 0. |
+| int[] | Returns HiLayer Response bytes, the length could be 0. |
 
 ## Examples
 
@@ -54,23 +52,19 @@ console.info("isoDep hiLayerResponse: " + hiLayerResponse);
 
 ## getHistoricalBytes
 
-ArkTS-Dyn:
-```TypeScript
-getHistoricalBytes(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 getHistoricalBytes(): int[]
 ```
 
-Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology.It could be null if not based on NfcA.
+Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology. It could be null if not based on NfcA.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
 
@@ -80,7 +74,7 @@ Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology.It
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Returns the Historical bytes, the length could be 0. |
+| int[] | Returns the Historical bytes, the length could be 0. |
 
 ## Examples
 
@@ -100,13 +94,15 @@ isExtendedApduSupported(): Promise<boolean>
 
 Checks if extended apdu length supported or not.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>--><!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>-End-->
 
@@ -122,10 +118,10 @@ Checks if extended apdu length supported or not.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [3100204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The tag I/O operation failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -163,13 +159,15 @@ isExtendedApduSupported(callback: AsyncCallback<boolean>): void
 
 Checks if extended apdu length supported or not.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void--><!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void-End-->
 
@@ -179,16 +177,16 @@ Checks if extended apdu length supported or not.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [3100204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
-| [3100201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) | The Tag I/O operation failed. |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) | The tag running state is abnormal in the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

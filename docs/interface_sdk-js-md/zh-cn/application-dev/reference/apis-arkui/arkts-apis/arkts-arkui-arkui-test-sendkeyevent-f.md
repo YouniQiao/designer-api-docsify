@@ -6,13 +6,13 @@
 export declare function sendKeyEvent(event: KeyEvent): boolean
 ```
 
-发送按键事件。
-
-此接口仅用于对应用的测试。由于耗时长，不建议使用。
+发送按键事件。 此接口仅用于对应用的测试。由于耗时长，不建议使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -24,7 +24,7 @@ export declare function sendKeyEvent(event: KeyEvent): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | KeyEvent | 是 | 按键事件，event参数见[KeyEvent](KeyEvent)介绍。 |
+| event | KeyEvent | 是 | 按键事件，event参数见KeyEvent介绍。 |
 
 **返回值：**
 

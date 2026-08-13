@@ -2,9 +2,11 @@
 
 定义图片扫描进度的接口。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-scan-interface PictureScanProgress--><!--Device-scan-interface PictureScanProgress-End-->
 
@@ -20,9 +22,11 @@ isFinal: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PictureScanProgress-isFinal: boolean--><!--Device-PictureScanProgress-isFinal: boolean-End-->
 
@@ -36,11 +40,13 @@ pictureFd: int
 
 扫描图片的文件描述符。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PictureScanProgress-pictureFd: int--><!--Device-PictureScanProgress-pictureFd: int-End-->
 
@@ -54,11 +60,13 @@ progress: int
 
 当前进度百分比，范围从0~100。单位：百分比。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PictureScanProgress-progress: int--><!--Device-PictureScanProgress-progress: int-End-->
 

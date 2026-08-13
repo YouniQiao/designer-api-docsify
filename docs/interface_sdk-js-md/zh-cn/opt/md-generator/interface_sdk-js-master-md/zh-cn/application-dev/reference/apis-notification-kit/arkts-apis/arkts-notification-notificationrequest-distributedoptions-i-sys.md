@@ -2,7 +2,9 @@
 
 描述跨设备协同选项。预留能力，暂未支持。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DistributedOptions--><!--Device-unnamed-export interface DistributedOptions-End-->
 
@@ -18,7 +20,9 @@ readonly remindType?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedOptions-readonly remindType?: int--><!--Device-DistributedOptions-readonly remindType?: int-End-->
 

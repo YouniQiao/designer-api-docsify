@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-pluginComponentManager-interface PushParameterForStage--><!--Device-pluginComponentManager-interface PushParameterForStage-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ data: KVObject
 **类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-PushParameterForStage-data: KVObject--><!--Device-PushParameterForStage-data: KVObject-End-->
 
@@ -40,6 +44,8 @@ extraData: KVObject
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-PushParameterForStage-extraData: KVObject--><!--Device-PushParameterForStage-extraData: KVObject-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -52,11 +58,13 @@ extraData: KVObject
 jsonPath?: string
 ```
 
-存放模板路径的external.json文件的路径。当需要从external.json文件加载模板路径而非通过Push通信发送模板时传入此参数。当jsonPath字段不为空时不触发Push通信，组件模板路径从external.json文件中读取；当jsonPath为空（默认）时，通过Push通信向组件使用方发送组件模板。
+存放模板路径的external.json文件的路径。当需要从external.json文件加载模板路径而非通过Push通信发送模板时传入此参数。 当jsonPath字段不为空时不触发Push通信，组件模板路径从external.json文件中读取；当jsonPath为空（默认）时，通过Push通信向组件使用方发送组件模板。
 
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-PushParameterForStage-jsonPath?: string--><!--Device-PushParameterForStage-jsonPath?: string-End-->
 
@@ -76,6 +84,8 @@ name: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-PushParameterForStage-name: string--><!--Device-PushParameterForStage-name: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -94,6 +104,8 @@ owner: Want
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-PushParameterForStage-owner: Want--><!--Device-PushParameterForStage-owner: Want-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -111,6 +123,8 @@ target: Want
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-PushParameterForStage-target: Want--><!--Device-PushParameterForStage-target: Want-End-->
 

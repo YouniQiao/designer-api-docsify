@@ -2,7 +2,9 @@
 
 Enumerates device log event code.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum DeviceLogEventCode--><!--Device-avSession-enum DeviceLogEventCode-End-->
 
@@ -18,7 +20,9 @@ DEVICE_LOG_FULL = 1
 
 Log is full.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1--><!--Device-DeviceLogEventCode-DEVICE_LOG_FULL = 1-End-->
 
@@ -34,7 +38,9 @@ DEVICE_LOG_EXCEPTION = 2
 
 Log is written with exception, such as the fd cannot be written and so on.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2--><!--Device-DeviceLogEventCode-DEVICE_LOG_EXCEPTION = 2-End-->
 

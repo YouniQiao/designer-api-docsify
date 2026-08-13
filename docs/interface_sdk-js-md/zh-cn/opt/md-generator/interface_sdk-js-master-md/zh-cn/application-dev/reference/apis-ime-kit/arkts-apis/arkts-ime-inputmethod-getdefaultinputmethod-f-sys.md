@@ -10,6 +10,8 @@ function getDefaultInputMethod(userId?: number): InputMethodProperty
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-inputMethod-function getDefaultInputMethod(userId?: int): InputMethodProperty--><!--Device-inputMethod-function getDefaultInputMethod(userId?: int): InputMethodProperty-End-->
@@ -34,11 +36,11 @@ function getDefaultInputMethod(userId?: number): InputMethodProperty
 
 | 错误码ID |
 | --- |
-| [12800023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12800025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
-| [12800024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) |
 
 ## 示例
 

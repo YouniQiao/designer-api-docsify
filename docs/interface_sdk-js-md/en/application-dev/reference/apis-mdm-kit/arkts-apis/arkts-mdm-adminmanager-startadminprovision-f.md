@@ -18,6 +18,8 @@ Enables the device administrator application to open a page for the BYOD adminis
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.START_PROVISIONING_MESSAGE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -39,8 +41,8 @@ Enables the device administrator application to open a page for the BYOD adminis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## Examples
 

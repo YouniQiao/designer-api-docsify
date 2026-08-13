@@ -1,13 +1,14 @@
 # GenericsTask
 
-Implements a generic task. **GenericsTask** inherits from  
-[Task](arkts-arkts-taskpool-execute-f.md#execute).During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
+Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-taskpool-execute-f.md#execute). During the creation of a generic task, the passed-in parameter types and return value types of concurrent functions are verified in the compilation phase. Other behaviors are the same as those during the creation of a task.
 
 **Inheritance/Implementation:** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md#Task)
 
 **Since:** 13
 
-<!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task--><!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task-End-->
+**Deprecated since:** -1
+
+<!--Device-taskpool-class GenericsTask--><!--Device-taskpool-class GenericsTask-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,6 +28,8 @@ A constructor used to create a **GenericsTask** object.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(func: (...args: A) => R | Promise<R>, ...args: A)-End-->
@@ -44,7 +47,7 @@ A constructor used to create a **GenericsTask** object.
 
 | Error Code ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
 
 ## Examples
 
@@ -82,6 +85,8 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)-End-->
@@ -100,7 +105,7 @@ A constructor used to create a **GenericsTask** instance, with the task name spe
 
 | Error Code ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
 
 ## Examples
 

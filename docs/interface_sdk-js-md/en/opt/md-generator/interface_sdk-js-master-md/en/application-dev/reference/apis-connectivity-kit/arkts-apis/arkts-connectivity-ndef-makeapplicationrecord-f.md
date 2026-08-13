@@ -14,9 +14,11 @@ function makeApplicationRecord(bundleName: string): NdefRecord
 
 Creates an NDEF Record with OpenHarmony application bundle name.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ndef-function makeApplicationRecord(bundleName: string): NdefRecord--><!--Device-ndef-function makeApplicationRecord(bundleName: string): NdefRecord-End-->
 
@@ -38,4 +40,4 @@ Creates an NDEF Record with OpenHarmony application bundle name.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

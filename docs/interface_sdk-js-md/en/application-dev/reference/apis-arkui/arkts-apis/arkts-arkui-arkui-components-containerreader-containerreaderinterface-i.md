@@ -1,10 +1,12 @@
 # ContainerReaderInterface
 
-Defines the ContainerReader Component.Used for reading and analyzing container layout information based on size breakpoints in dynamic scenarios.Provides container dimension analysis and breakpoint detection capabilities.
+Defines the ContainerReader Component. Used for reading and analyzing container layout information based on size breakpoints in dynamic scenarios. Provides container dimension analysis and breakpoint detection capabilities.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContainerReaderInterface--><!--Device-unnamed-export interface ContainerReaderInterface-End-->
 
@@ -16,17 +18,19 @@ Defines the ContainerReader Component.Used for reading and analyzing container l
 import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value: ContainerReaderInfo): ContainerReaderAttribute
 ```
 
-Sets the container reading configuration for ContainerReader component.Configures the size parameters and breakpoint rules for container layout analysis.
+Sets the container reading configuration for ContainerReader component. Configures the size parameters and breakpoint rules for container layout analysis.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

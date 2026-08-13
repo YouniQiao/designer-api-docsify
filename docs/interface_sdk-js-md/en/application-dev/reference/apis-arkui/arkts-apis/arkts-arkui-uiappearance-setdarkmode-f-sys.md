@@ -12,11 +12,13 @@ import { uiAppearance } from '@kit.ArkUI';
 function setDarkMode(mode: DarkMode, callback: AsyncCallback<void>): void
 ```
 
-Set the system dark-mode.
+Sets the system color mode. This API uses an asynchronous callback to return the result. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -30,16 +32,36 @@ Set the system dark-mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setDarkMode |
+| mode | [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setDarkMode |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiappearance.md#500001-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK, (error) => {
+    if (error) {
+      console.error('Set dark-mode failed, ' + error.message);
+    } else {
+      console.info('Set dark-mode successfully.');
+    }
+  })
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('Set dark-mode failed, ' + message);
+}
+```
 
 
 ## setDarkMode
@@ -48,11 +70,13 @@ Set the system dark-mode.
 function setDarkMode(mode: DarkMode): Promise<void>
 ```
 
-Set the system dark-mode.
+Sets the system color mode. This API uses a promise to return the result. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
@@ -66,19 +90,37 @@ Set the system dark-mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [DarkMode](arkts-arkui-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
+| mode | [DarkMode](../../apis-na/arkts-apis/arkts-na-uiappearance-darkmode-e.md) | Yes | indicates the dark-mode to set |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiappearance.md#500001-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+## Examples
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+try {
+  uiAppearance.setDarkMode(uiAppearance.DarkMode.ALWAYS_DARK).then(() => {
+    console.info('Set dark-mode successfully.');
+  }).catch((error: Error) => {
+    console.error('Set dark-mode failed, ' + error.message);
+  });
+} catch (error) {
+  let message = (error as BusinessError).message;
+  console.error('Set dark-mode failed, ' + message);
+}
+```
 

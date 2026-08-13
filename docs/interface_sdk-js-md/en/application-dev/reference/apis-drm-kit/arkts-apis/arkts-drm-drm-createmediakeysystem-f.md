@@ -18,6 +18,8 @@ Creates a MediaKeySystem instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem-End-->
@@ -40,10 +42,10 @@ Creates a MediaKeySystem instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
 
 ## Examples
 
@@ -69,7 +71,9 @@ Creates a MediaKeySystem instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem | undefined--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem | undefined-End-->
 
@@ -91,8 +95,8 @@ Creates a MediaKeySystem instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-| [24700103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700103](../errorcode-drm.md#24700103-too-many-mediakeysystem-instances) | Meet max MediaKeySystem num limit. |
 

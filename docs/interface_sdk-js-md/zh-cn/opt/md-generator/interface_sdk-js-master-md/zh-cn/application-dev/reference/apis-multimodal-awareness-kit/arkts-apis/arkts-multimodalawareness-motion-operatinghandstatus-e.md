@@ -2,7 +2,9 @@
 
 触控操作手状态信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-motion-export enum OperatingHandStatus--><!--Device-motion-export enum OperatingHandStatus-End-->
 
@@ -16,7 +18,9 @@ UNKNOWN_STATUS = 0
 
 表示未识别。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperatingHandStatus-UNKNOWN_STATUS = 0--><!--Device-OperatingHandStatus-UNKNOWN_STATUS = 0-End-->
 
@@ -30,7 +34,9 @@ LEFT_HAND_OPERATED = 1
 
 表示触控操作手是左手。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperatingHandStatus-LEFT_HAND_OPERATED = 1--><!--Device-OperatingHandStatus-LEFT_HAND_OPERATED = 1-End-->
 
@@ -44,7 +50,9 @@ RIGHT_HAND_OPERATED = 2
 
 表示触控操作手是右手。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperatingHandStatus-RIGHT_HAND_OPERATED = 2--><!--Device-OperatingHandStatus-RIGHT_HAND_OPERATED = 2-End-->
 

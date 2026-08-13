@@ -14,9 +14,11 @@ function setAppHttpProxy(httpProxy: HttpProxy): void
 
 Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-i.md#HttpProxy).
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void--><!--Device-connection-function setAppHttpProxy(httpProxy: HttpProxy): void-End-->
 
@@ -32,8 +34,8 @@ Set application level http proxy [HttpProxy](arkts-network-connection-httpproxy-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid http proxy. |
 
 ## Examples
 

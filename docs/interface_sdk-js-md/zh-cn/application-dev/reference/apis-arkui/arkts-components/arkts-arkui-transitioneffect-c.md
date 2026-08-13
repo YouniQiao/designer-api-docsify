@@ -6,7 +6,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare class TransitionEffect<  Type extends keyof TransitionEffects = keyof TransitionEffects,  Effect extends TransitionEffects[Type] = TransitionEffects[Type]>--><!--Device-unnamed-declare class TransitionEffect<  Type extends keyof TransitionEffects = keyof TransitionEffects,  Effect extends TransitionEffects[Type] = TransitionEffects[Type]>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class TransitionEffect--><!--Device-unnamed-declare class TransitionEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ animation(value: AnimateParam): TransitionEffect
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,12 +57,13 @@ static asymmetric(
   ): TransitionEffect<"asymmetric">
 ```
 
-设置非对称的转场效果，即出现、消失为两套独立不同的动画，效果不互为逆过程。具体效果可参考  
-[示例2](../../../reference/apis-arkui/arkui-ts/ts-transition-animation-component.md#示例2使用不同接口实现图片出现消失)。
+设置非对称的转场效果，即出现、消失为两套独立不同的动画，效果不互为逆过程。具体效果可参考 [示例2](../../../reference/apis-arkui/arkui-ts/ts-transition-animation-component.md#示例2使用不同接口实现图片出现消失)。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,6 +100,8 @@ combine(transitionEffect: TransitionEffect): TransitionEffect
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -129,6 +136,8 @@ constructor(type: Type, effect: Effect)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -157,6 +166,8 @@ static move(edge: TransitionEdge): TransitionEffect<"move">
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -192,6 +203,8 @@ static opacity(alpha: number): TransitionEffect<"opacity">
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -225,6 +238,8 @@ static rotate(options: RotateOptions): TransitionEffect<"rotate">
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -260,6 +275,8 @@ static scale(options: ScaleOptions): TransitionEffect<"scale">
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -293,6 +310,8 @@ static translate(options: TranslateOptions): TransitionEffect<"translate">
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -330,6 +349,8 @@ static readonly IDENTITY: TransitionEffect<"identity">
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -354,6 +375,8 @@ static readonly OPACITY: TransitionEffect<"opacity">
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -376,13 +399,15 @@ static readonly SLIDE: TransitionEffect<
   >
 ```
 
-相当于TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move(TransitionEdge.END))。从START边滑入，END边滑出。即在LTR模式下，从左侧滑入，右侧滑出；在RTL模式下，从右侧滑入，左侧滑出。
+相当于TransitionEffect.asymmetric(TransitionEffect.move(TransitionEdge.START), TransitionEffect.move( TransitionEdge.END))。从START边滑入，END边滑出。即在LTR模式下，从左侧滑入，右侧滑出；在RTL模式下，从右侧滑入，左侧滑出。
 
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"asymmetric", {       appear: TransitionEffect&lt;"move", [TransitionEdge](arkts-arkui-transitionedge-e.md)&gt;;       disappear: TransitionEffect&lt;"move", TransitionEdge&gt;;     }&gt;
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -400,13 +425,15 @@ static readonly SLIDE: TransitionEffect<
 static readonly SLIDE_SWITCH: TransitionEffect<"slideSwitch">
 ```
 
-指定出现时从右侧先缩小再放大滑入、消失时从左侧先缩小再放大滑出的转场效果。自带动画参数，也可覆盖动画参数，自带的动画参数时长600ms，指定动画曲线cubicBezierCurve(0.24, 0.0, 0.50, 1.0)，最小缩放比例为0.8。
+指定出现时从右侧先缩小再放大滑入、消失时从左侧先缩小再放大滑出的转场效果。自带动画参数，也可覆盖动画参数，自带的动画参数时长600ms，指定动画曲线cubicBezierCurve(0.24, 0.0, 0.50, 1.0)，最小 缩放比例为0.8。
 
 **类型：** [TransitionEffect](arkts-arkui-transitioneffect-c.md)&lt;"slideSwitch"&gt;
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

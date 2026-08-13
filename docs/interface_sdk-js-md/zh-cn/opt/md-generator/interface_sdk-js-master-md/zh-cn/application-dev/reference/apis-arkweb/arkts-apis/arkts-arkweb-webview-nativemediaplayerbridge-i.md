@@ -1,16 +1,10 @@
 # NativeMediaPlayerBridge
 
-[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的返回值类型。接管网页媒体的播放器和ArkWeb内核之间的一个接口类。
-
-ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 12开始支持。
-> 
-> - 示例效果请以真机运行为准。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的返回值类型。接管网页媒体 的播放器和ArkWeb内核之间的一个接口类。 ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-webview-interface NativeMediaPlayerBridge--><!--Device-webview-interface NativeMediaPlayerBridge-End-->
 
@@ -25,6 +19,8 @@ enterFullscreen(): void
 播放器进入全屏。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,6 +38,8 @@ exitFullscreen(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerBridge-exitFullscreen(): void--><!--Device-NativeMediaPlayerBridge-exitFullscreen(): void-End-->
@@ -57,6 +55,8 @@ pause(): void
 暂停播放。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +74,8 @@ play(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerBridge-play(): void--><!--Device-NativeMediaPlayerBridge-play(): void-End-->
@@ -89,6 +91,8 @@ release(): void
 销毁播放器。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -106,6 +110,8 @@ resumePlayer?(): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-NativeMediaPlayerBridge-resumePlayer?(): void--><!--Device-NativeMediaPlayerBridge-resumePlayer?(): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -119,6 +125,8 @@ seek(targetTime: number): void
 跳转播放进度到指定时间点。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -142,6 +150,8 @@ setMuted(muted: boolean): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void--><!--Device-NativeMediaPlayerBridge-setMuted(muted: boolean): void-End-->
@@ -163,6 +173,8 @@ setPlaybackRate(playbackRate: number): void
 设置播放速率。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -186,6 +198,8 @@ setVolume(volume: number): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void--><!--Device-NativeMediaPlayerBridge-setVolume(volume: number): void-End-->
@@ -208,6 +222,8 @@ suspendPlayer?(type: SuspendType): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void--><!--Device-NativeMediaPlayerBridge-suspendPlayer?(type: SuspendType): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -227,6 +243,8 @@ updateRect(x: number, y: number, width: number, height: number): void
 更新surface位置信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

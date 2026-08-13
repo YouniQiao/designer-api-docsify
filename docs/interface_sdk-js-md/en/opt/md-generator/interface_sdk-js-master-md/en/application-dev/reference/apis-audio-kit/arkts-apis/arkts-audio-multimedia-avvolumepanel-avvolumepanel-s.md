@@ -4,7 +4,7 @@ A panel to set the system audio output volume.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AVVolumePanel--><!--Device-unnamed-export declare struct AVVolumePanel-End-->
 
@@ -19,27 +19,29 @@ import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
 ## volumeLevel
 
 ```TypeScript
-volumeLevel?: number
+@Prop
+  volumeLevel?: number
 ```
 
-Sets the device volume through the volume panel.The value should be between mininum and maxinum current device volume, otherwise it will be discarded.
+Sets the device volume through the volume panel. The value should be between mininum and maxinum current device volume, otherwise it will be discarded.
 
 **Type:** number
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVVolumePanel-volumeLevel?: number--><!--Device-AVVolumePanel-volumeLevel?: number-End-->
+<!--Device-AVVolumePanel-@Prop  volumeLevel?: number--><!--Device-AVVolumePanel-@Prop  volumeLevel?: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## volumeParameter
 
 ```TypeScript
-volumeParameter?: AVVolumePanelParameter
+@Prop
+  volumeParameter?: AVVolumePanelParameter
 ```
 
 Sets the custom parameters of volume panel.
@@ -48,10 +50,10 @@ Sets the custom parameters of volume panel.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVVolumePanel-volumeParameter?: AVVolumePanelParameter--><!--Device-AVVolumePanel-volumeParameter?: AVVolumePanelParameter-End-->
+<!--Device-AVVolumePanel-@Prop  volumeParameter?: AVVolumePanelParameter--><!--Device-AVVolumePanel-@Prop  volumeParameter?: AVVolumePanelParameter-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume

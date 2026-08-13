@@ -2,7 +2,9 @@
 
 表示水印裁剪图图片信息的枚举。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-enum FragmentMapPropertyKey--><!--Device-image-enum FragmentMapPropertyKey-End-->
 
@@ -16,7 +18,9 @@ X_IN_ORIGINAL = 'XInOriginal'
 
 水印裁剪图左上角在原始图中的X坐标。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FragmentMapPropertyKey-X_IN_ORIGINAL = 'XInOriginal'--><!--Device-FragmentMapPropertyKey-X_IN_ORIGINAL = 'XInOriginal'-End-->
 
@@ -30,7 +34,9 @@ Y_IN_ORIGINAL = 'YInOriginal'
 
 水印裁剪图左上角在原始图中的Y坐标。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FragmentMapPropertyKey-Y_IN_ORIGINAL = 'YInOriginal'--><!--Device-FragmentMapPropertyKey-Y_IN_ORIGINAL = 'YInOriginal'-End-->
 
@@ -44,7 +50,9 @@ WIDTH = 'FragmentImageWidth'
 
 水印裁剪图的宽。单位：像素（px）。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FragmentMapPropertyKey-WIDTH = 'FragmentImageWidth'--><!--Device-FragmentMapPropertyKey-WIDTH = 'FragmentImageWidth'-End-->
 
@@ -58,7 +66,9 @@ HEIGHT = 'FragmentImageHeight'
 
 水印裁剪图的高。单位：像素（px）。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FragmentMapPropertyKey-HEIGHT = 'FragmentImageHeight'--><!--Device-FragmentMapPropertyKey-HEIGHT = 'FragmentImageHeight'-End-->
 

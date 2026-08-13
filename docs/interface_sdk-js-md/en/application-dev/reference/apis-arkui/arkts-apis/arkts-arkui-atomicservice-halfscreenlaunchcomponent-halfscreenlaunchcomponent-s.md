@@ -1,18 +1,12 @@
 # HalfScreenLaunchComponent
 
-**HalfScreenLaunchComponent** is a component designed for launching atomic services in half screen. If the invoked application (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in half-screen embedded mode. If authorization is not provided,the invoker will launch the atomic service in a pop-up manner.
-
-> **NOTE：**
-> 
-> To implement an embeddable atomic service, make sure it inherits from
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). If the atomic service does
-> not inherit from **EmbeddableUIAbility**, the system cannot guarantee its proper operation.
+**HalfScreenLaunchComponent** is a component designed for launching atomic services in half screen. If the invoked application (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in half-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. > **NOTE：**> > To implement an embeddable atomic service, make sure it inherits from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). If the atomic service does > not inherit from **EmbeddableUIAbility**, the system cannot guarantee its proper operation.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct HalfScreenLaunchComponent--><!--Device-unnamed-export declare struct HalfScreenLaunchComponent-End-->
 
@@ -38,6 +32,8 @@ Application ID for the atomic service.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-HalfScreenLaunchComponent-appId: string--><!--Device-HalfScreenLaunchComponent-appId: string-End-->
@@ -47,22 +43,23 @@ Application ID for the atomic service.
 ## content
 
 ```TypeScript
-content: Callback<void>
+@BuilderParam
+  content: Callback<void>
 ```
 
 Content displayed in the component.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @BuilderParam
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-HalfScreenLaunchComponent-content: Callback<void>--><!--Device-HalfScreenLaunchComponent-content: Callback<void>-End-->
+<!--Device-HalfScreenLaunchComponent-@BuilderParam  content: Callback<void>--><!--Device-HalfScreenLaunchComponent-@BuilderParam  content: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,11 +71,13 @@ onError?: ErrorCallback
 
 Invoked when an error occurs during the running of the atomic service.
 
-**Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)
+**Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -92,13 +91,15 @@ Invoked when an error occurs during the running of the atomic service.
 onReceive?: Callback<Record<string, Object>>
 ```
 
-Callback triggered when an embedded atomic service calls [@ohos.window (window)](@ohos.window) APIs.
+Callback triggered when an embedded atomic service calls [@ohos.window (window)](arkts-arkui-window-n.md#window) APIs.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt;
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -112,15 +113,15 @@ Callback triggered when an embedded atomic service calls [@ohos.window (window)]
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)or  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf).
+Callback triggered when an embedded atomic service exits normally. Exit scenarios include user-triggered exit button taps or edge swipes, or calls to terminateSelfWithResult or terminateSelf.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -141,6 +142,8 @@ Parameters for starting the atomic service. The default value is empty.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

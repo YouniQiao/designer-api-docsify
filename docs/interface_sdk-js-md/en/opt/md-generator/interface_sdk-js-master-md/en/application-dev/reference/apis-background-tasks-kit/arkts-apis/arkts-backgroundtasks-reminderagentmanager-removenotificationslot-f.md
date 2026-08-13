@@ -14,7 +14,9 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 Removes a specified notification slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +33,7 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -59,7 +61,9 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 Removes a specified notification slot. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 
@@ -81,7 +85,7 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

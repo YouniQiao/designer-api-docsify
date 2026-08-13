@@ -10,6 +10,8 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -33,7 +35,7 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 
 
 ## getEvent
@@ -45,6 +47,8 @@ function getEvent(node: FrameNode, nodeType: 'List'): UIListEvent | undefined
 Obtains the **UIListEvent** object associated with the **List** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,7 +73,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 
 
 ## getEvent
@@ -81,6 +85,8 @@ function getEvent(node: FrameNode, nodeType: 'WaterFlow'): UIWaterFlowEvent | un
 Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow) node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,7 +111,7 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 
 
 ## getEvent
@@ -117,6 +123,8 @@ function getEvent(node: FrameNode, nodeType: 'Grid'): UIGridEvent | undefined
 Obtains the **UIGridEvent** object associated with the **Grid** node for configuring scroll events. The scroll events configured through this API coexist with declarative events without overriding them. If both event callbacks are registered, the declaratively defined event callback takes precedence.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,4 +149,4 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.

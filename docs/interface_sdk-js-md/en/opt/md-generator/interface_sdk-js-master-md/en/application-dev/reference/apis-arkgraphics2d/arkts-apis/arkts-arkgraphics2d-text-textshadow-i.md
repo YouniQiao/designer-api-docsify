@@ -2,7 +2,9 @@
 
 Represents a text shadow.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface TextShadow--><!--Device-text-interface TextShadow-End-->
 
@@ -24,7 +26,9 @@ Blur radius, a floating-point value in physical pixels (px), with a default valu
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Color of the text shadow. The default value is black Color(255, 0, 0, 0).
 
 **Type:** common2D.Color
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ Offset position of the text shadow relative to the current text. The horizontal 
 
 **Type:** common2D.Point
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -8,6 +8,8 @@ Describes a callback function.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-taskpool-type CallbackFunction = () => void--><!--Device-taskpool-type CallbackFunction = () => void-End-->

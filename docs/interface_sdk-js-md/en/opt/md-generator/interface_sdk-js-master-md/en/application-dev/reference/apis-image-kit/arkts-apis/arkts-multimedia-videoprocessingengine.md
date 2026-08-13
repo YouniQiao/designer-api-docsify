@@ -1,8 +1,10 @@
-# @ohos.multimedia.videoProcessingEngine(Provides the capability of image quality processing.)
+# @ohos.multimedia.videoProcessingEngine
 
 This module provides the capability of content processing for images, including image scaling.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace videoProcessingEngine--><!--Device-unnamed-declare namespace videoProcessingEngine-End-->
 
@@ -21,8 +23,8 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [create](arkts-image-videoprocessingengine-create-f.md#create) |
-| [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md#deinitializeenvironment) |
-| [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md#initializeenvironment) |
+| [deinitializeEnvironment](arkts-image-videoprocessingengine-deinitializeenvironment-f.md#deinitializeEnvironment) |
+| [initializeEnvironment](arkts-image-videoprocessingengine-initializeenvironment-f.md#initializeEnvironment) |
 
 ### Interfaces
 

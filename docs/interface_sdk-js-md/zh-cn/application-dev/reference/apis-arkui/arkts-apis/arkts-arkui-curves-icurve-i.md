@@ -1,12 +1,12 @@
 # ICurve
 
-曲线对象，支持通过本模块中的  
-[curves.cubicBezierCurve](../../../reference/apis-arkui/js-apis-curve_static.md#curvescubicbeziercurve9)、  
-[curves.interpolatingSpring](../../../reference/apis-arkui/js-apis-curve_static.md#curvesinterpolatingspring10)等方法创建不同类型的曲线对象，并可通过曲线对象调用其[interpolate](../../../reference/apis-arkui/js-apis-curve_static.md#interpolate9)的成员方法。
+曲线对象，支持通过本模块中的 curves.cubicBezierCurve、 curves.interpolatingSpring等 方法创建不同类型的曲线对象，并可通过曲线对象调用其interpolate的成员方法。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-curves-export interface ICurve--><!--Device-curves-export interface ICurve-End-->
 
@@ -23,6 +23,8 @@ interpolate(fraction: double): double
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

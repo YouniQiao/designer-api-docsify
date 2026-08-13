@@ -4,6 +4,8 @@ WebGL 1.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-interface WebGLRenderbuffer--><!--Device-unnamed-interface WebGLRenderbuffer-End-->

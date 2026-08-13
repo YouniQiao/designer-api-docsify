@@ -12,11 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getNotificationSetting(): Promise<NotificationSetting>
 ```
 
-Obtains the notification settings of the application, including the switch statuses for lock screen notifications, banner notifications, desktop badges, vibration, and ringtone.This API uses a promise to return the result.
+Obtains the notification settings of the application, including the switch statuses for lock screen notifications, banner notifications, desktop badges, vibration, and ringtone. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getNotificationSetting(): Promise<NotificationSetting>--><!--Device-notificationManager-function getNotificationSetting(): Promise<NotificationSetting>-End-->
 
@@ -24,9 +26,9 @@ Obtains the notification settings of the application, including the switch statu
 
 **See also:**
 
-[openNotificationSettings](notificationManager.openNotificationSettings(context: UIAbilityContext): Promise<void>) opens the notification
+openNotificationSettings opens the notification
 
-[isNotificationEnabled](notificationManager.isNotificationEnabled(): Promise<boolean>) Checks whether notification is enabled for the
+isNotificationEnabled Checks whether notification is enabled for the
 
 **Return value:**
 
@@ -38,9 +40,9 @@ Obtains the notification settings of the application, including the switch statu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 

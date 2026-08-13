@@ -17,6 +17,8 @@ Execute a CLI command
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.EXEC_CLI_TOOL
 
 **Model restriction:** This API can be used only in the stage model.
@@ -33,7 +35,7 @@ Execute a CLI command
 | --- | --- | --- |
 | [toolName](arkts-ability-climanager-clisessioninfo-i-sys.md) | string | Yes |
 | subCommand | string | Yes |
-| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 | challenge | string | Yes |
 | execOptions | [ExecOptions](arkts-ability-climanager-execoptions-i-sys.md) | No |
 
@@ -49,6 +51,6 @@ Execute a CLI command
 | --- |
 | 35600031 |
 | 35600030 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 35600050 |

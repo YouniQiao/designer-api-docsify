@@ -6,6 +6,8 @@ ArkTS脚本执行结果。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-scriptManager-interface ExecuteResult--><!--Device-scriptManager-interface ExecuteResult-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
@@ -24,6 +26,8 @@ code: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -38,13 +42,15 @@ code: number
 flags?: number
 ```
 
-表示URI的读写权限，与[flags](Want#flags)的flags字段含义一致。取值范围如下：[FLAG_AUTH_READ_URI_PERMISSION](wantConstant#Flags#FLAG_AUTH_READ_URI_PERMISSION)：读权限。[FLAG_AUTH_WRITE_URI_PERMISSION](wantConstant#Flags#FLAG_AUTH_WRITE_URI_PERMISSION)：写权限。以上两个标志的组合：同时授权读写权限。
+表示URI的读写权限，与flags的flags字段含义一致。取值范围如下： FLAG_AUTH_READ_URI_PERMISSION：读权限。 FLAG_AUTH_WRITE_URI_PERMISSION：写权限。 以上两个标志的组合：同时授权读写权限。
 
 **类型：** number
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,6 +74,8 @@ result?: Record<string, Object>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -89,6 +97,8 @@ uris?: Array<string>
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

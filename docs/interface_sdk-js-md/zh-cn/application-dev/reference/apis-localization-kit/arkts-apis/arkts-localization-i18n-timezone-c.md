@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class TimeZone--><!--Device-i18n-export class TimeZone-End-->
 
@@ -16,11 +18,13 @@
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setAppDefaultTimeZoneById)设置了默认时区，则返回设置的默认时区对象；否则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setAppDefaultTimeZoneById)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,25 @@ static getAppDefaultTimeZone(): TimeZone
 | --- | --- |
 | [TimeZone](arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
 
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let zoneID: string = 'Asia/Shanghai';
+  i18n.TimeZone.setAppDefaultTimeZoneById(zoneID);
+  console.info('setAppDefaultTimeZoneById success.');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call TimeZone.setAppDefaultTimeZoneById failed, error code: ${err.code}, message: ${err.message}.`);
+}
+let timeZone: i18n.TimeZone = i18n.TimeZone.getAppDefaultTimeZone();
+let id: string = timeZone.getID();
+console.info(`getAppDefaultTimeZone success, time zone id: ${id}`);
+```
+
 ## getAvailableIDs
 
 ```TypeScript
@@ -46,9 +69,11 @@ static getAvailableIDs(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getAvailableIDs(): Array<string>--><!--Device-TimeZone-static getAvailableIDs(): Array<string>-End-->
 
@@ -60,6 +85,15 @@ static getAvailableIDs(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | 系统支持的时区ID列表。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// ids = ['America/Adak', 'America/Anchorage', 'America/Bogota', 'America/Denver', 'America/Los_Angeles', 'America/Montevideo', 'America/Santiago', 'America/Sao_Paulo', 'Asia/Ashgabat', 'Asia/Hovd', 'Asia/Jerusalem', 'Asia/Magadan', 'Asia/Omsk', 'Asia/Shanghai', 'Asia/Tokyo', 'Asia/Yerevan', 'Atlantic/Cape_Verde', 'Australia/Lord_Howe', 'Europe/Dublin', 'Europe/London', 'Europe/Moscow', 'Pacific/Auckland', 'Pacific/Easter', 'Pacific/Pago-Pago']
+let ids: Array<string> = i18n.TimeZone.getAvailableIDs();
+```
+
 ## getAvailableZoneCityIDs
 
 ```TypeScript
@@ -70,9 +104,11 @@ static getAvailableZoneCityIDs(): Array<string>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>--><!--Device-TimeZone-static getAvailableZoneCityIDs(): Array<string>-End-->
 
@@ -84,6 +120,15 @@ static getAvailableZoneCityIDs(): Array<string>
 | --- | --- |
 | Array&lt;string&gt; | 系统支持的时区城市ID列表。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// cityIDs = ['Auckland', 'Magadan', 'Lord Howe Island', 'Tokyo', 'Shanghai', 'Hovd', 'Omsk', 'Ashgabat', 'Yerevan', 'Moscow', 'Tel Aviv', 'Dublin', 'London', 'Praia', 'Montevideo', 'Brasília', 'Santiago', 'Bogotá', 'Easter Island', 'Salt Lake City', 'Los Angeles', 'Anchorage', 'Adak', 'Pago Pago']
+let cityIDs: Array<string> = i18n.TimeZone.getAvailableZoneCityIDs();
+```
+
 ## getCityDisplayName
 
 ```TypeScript
@@ -94,9 +139,11 @@ static getCityDisplayName(cityID: string, locale: string): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getCityDisplayName(cityID: string, locale: string): string--><!--Device-TimeZone-static getCityDisplayName(cityID: string, locale: string): string-End-->
 
@@ -115,6 +162,14 @@ static getCityDisplayName(cityID: string, locale: string): string
 | --- | --- |
 | string | 时区城市名称在指定语言下的翻译。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let displayName: string = i18n.TimeZone.getCityDisplayName('Shanghai', 'zh-CN'); // displayName = '上海 (中国)'
+```
+
 ## getDisplayName
 
 ```TypeScript
@@ -125,9 +180,11 @@ getDisplayName(locale?: string, isDST?: boolean): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-getDisplayName(locale?: string, isDST?: boolean): string--><!--Device-TimeZone-getDisplayName(locale?: string, isDST?: boolean): string-End-->
 
@@ -146,6 +203,15 @@ getDisplayName(locale?: string, isDST?: boolean): string
 | --- | --- |
 | string | 时区对象名称在指定语言下的翻译。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let timezoneName: string = timezone.getDisplayName('zh-CN', false); // timezoneName = '中国标准时间'
+```
+
 ## getID
 
 ```TypeScript
@@ -156,9 +222,11 @@ getID(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-getID(): string--><!--Device-TimeZone-getID(): string-End-->
 
@@ -170,6 +238,15 @@ getID(): string
 | --- | --- |
 | string | 时区对象对应的时区ID。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.getTimeZone('Asia/Shanghai');
+let timezoneID: string = timezone.getID(); // timezoneID = 'Asia/Shanghai'
+```
+
 ## getOffset
 
 ```TypeScript
@@ -180,9 +257,11 @@ getOffset(date?: double): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-getOffset(date?: double): int--><!--Device-TimeZone-getOffset(date?: double): int-End-->
 
@@ -200,6 +279,15 @@ getOffset(date?: double): int
 | --- | --- |
 | int | 时区的偏移量，单位为毫秒（ms）。当处于夏令时时，时区偏移量为时区原始偏移量加夏令时偏移量。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone = i18n.getTimeZone('Asia/Shanghai');
+let offset = timezone.getOffset(1234567890); // offset = 28800000
+```
+
 ## getRawOffset
 
 ```TypeScript
@@ -210,9 +298,11 @@ getRawOffset(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-getRawOffset(): int--><!--Device-TimeZone-getRawOffset(): int-End-->
 
@@ -224,6 +314,15 @@ getRawOffset(): int
 | --- | --- |
 | int | 时区的原始偏移量，单位为毫秒（ms）。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone = i18n.getTimeZone('Asia/Shanghai');
+let offset = timezone.getRawOffset(); // offset = 28800000
+```
+
 ## getTimezoneFromCity
 
 ```TypeScript
@@ -234,9 +333,11 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getTimezoneFromCity(cityID: string): TimeZone--><!--Device-TimeZone-static getTimezoneFromCity(cityID: string): TimeZone-End-->
 
@@ -254,6 +355,14 @@ static getTimezoneFromCity(cityID: string): TimeZone
 | --- | --- |
 | [TimeZone](arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let timezone: i18n.TimeZone = i18n.TimeZone.getTimezoneFromCity('Shanghai');
+```
+
 ## getTimezonesByLocation
 
 ```TypeScript
@@ -264,9 +373,11 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TimeZone-static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>--><!--Device-TimeZone-static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZone>-End-->
 
@@ -289,8 +400,22 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let timezoneArray: Array<i18n.TimeZone> = i18n.TimeZone.getTimezonesByLocation(-118.1, 34.0);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call TimeZone.getTimezonesByLocation failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## getZoneRules
 
@@ -302,7 +427,9 @@ public getZoneRules(): ZoneRules
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -326,7 +453,9 @@ public isDaylightSavingTime(date: Date): boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -354,15 +483,13 @@ public isDaylightSavingTime(date: Date): boolean
 static setAppDefaultTimeZoneById(zoneID: string): void
 ```
 
-设置当前应用的默认时区，在应用运行时生命周期内有效。
-
-> **说明：**
-> 
-> 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
+设置当前应用的默认时区，在应用运行时生命周期内有效。 > **说明：** > > 进行日期时间格式化时，若未指定时区，会优先使用应用设置的默认时区。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -382,5 +509,21 @@ static setAppDefaultTimeZoneById(zoneID: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let zoneID: string = 'Asia/Shanghai';
+  i18n.TimeZone.setAppDefaultTimeZoneById(zoneID);
+  console.info('setAppDefaultTimeZoneById success.');
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call TimeZone.setAppDefaultTimeZoneById failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

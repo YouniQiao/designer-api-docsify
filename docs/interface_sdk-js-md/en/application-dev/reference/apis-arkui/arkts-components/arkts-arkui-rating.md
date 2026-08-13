@@ -1,26 +1,8 @@
 # Rating
 
-The **Rating** component provides a rating bar.
+The **Rating** component provides a rating bar. > **NOTE** > - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height > for the **Rating** component, or set its parent node's clip > attribute to **true**.
 
-> **NOTE**
-
-> - If the parent node of the **Rating** component has fixed dimensions, you must also specify the width and height 
-> for the **Rating** component, or set its parent node's [clip]{@link CommonMethod#clip(clip: Optional<boolean>)} 
-> attribute to **true**.
-
-## Child Components
-
-Not supported
-
-## Sequential Keyboard Navigation Specifications
-
-| Key | Description |  
-|------------|-----------------------------|  
-| Tab | Switch the focus between components. |  
-| Left and right arrow keys | Increase or decrease the rating on preview at the specified step, without changing the actual rating.|  
-| Home | Move the focus to the first star, without changing the actual rating. |  
-| End | Move the focus to the last star, without changing the actual rating. |  
-| Space/Enter | Submit the rating result based on the current rating. |
+## Child Components Not supported ###### Sequential Keyboard Navigation Specifications | Key        | Description                       | |------------|-----------------------------| | Tab        | Switch the focus between components.                   | | Left and right arrow keys  | Increase or decrease the rating on preview at the specified step, without changing the actual rating.| | Home       | Move the focus to the first star, without changing the actual rating.         | | End        | Move the focus to the last star, without changing the actual rating.        | | Space/Enter | Submit the rating result based on the current rating.              |
 
 ## Rating
 
@@ -31,6 +13,8 @@ Rating(options?: RatingOptions)
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +32,7 @@ Rating(options?: RatingOptions)
 
 ## Summary
 
-- [RatingConfiguration](arkts-arkui-rating-ratingconfiguration-i.md)
-- [RatingOptions](arkts-arkui-rating-ratingoptions-i.md)
-- [StarStyleOptions](arkts-arkui-rating-starstyleoptions-i.md)
-- [OnRatingChangeCallback](arkts-arkui-rating-onratingchangecallback-t.md)
+- [RatingConfiguration](arkts-arkui-ratingconfiguration-i.md)
+- [RatingOptions](arkts-arkui-ratingoptions-i.md)
+- [StarStyleOptions](arkts-arkui-starstyleoptions-i.md)
+- [OnRatingChangeCallback](arkts-arkui-onratingchangecallback-t.md)

@@ -6,6 +6,8 @@ Sets the expected frame rate range for an animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ExpectedFrameRateRange--><!--Device-unnamed-declare interface ExpectedFrameRateRange-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Sets the expected frame rate range for an animation.
 expected: number
 ```
 
-Expected optimal frame rate, in fps.
-
-The value range is [**min**, **max**]. When this parameter is set to **0**, the frame rate of the app is used.
+Expected optimal frame rate, in fps. The value range is [**min**, **max**]. When this parameter is set to **0**, the frame rate of the app is used.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ The value range is [**min**, **max**]. When this parameter is set to **0**, the 
 max: number
 ```
 
-Expected maximum frame rate, in fps.
-
-The value range is [**min**, Maximum frame rate of the device].
+Expected maximum frame rate, in fps. The value range is [**min**, Maximum frame rate of the device].
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,15 +66,15 @@ The value range is [**min**, Maximum frame rate of the device].
 min: number
 ```
 
-Expected minimum frame rate, in fps.
-
-The value range is [0, Maximum frame rate of the device].
+Expected minimum frame rate, in fps. The value range is [0, Maximum frame rate of the device].
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

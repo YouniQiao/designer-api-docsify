@@ -6,6 +6,8 @@ File mapping object. Before invoking the FileMapping method, you need to use the
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FileMapping--><!--Device-unnamed-declare interface FileMapping-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -27,6 +29,8 @@ Obtains the capacity of the file mapping area.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,6 +64,8 @@ Mode reversal. That is, the limit attribute is set to the current position, and 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-flip(): void--><!--Device-FileMapping-flip(): void-End-->
@@ -85,6 +91,8 @@ Obtains the upper bound of the readable and writable area of the file mapping ar
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,6 +126,8 @@ Gets the current location of the file mapping area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-getPosition(): number--><!--Device-FileMapping-getPosition(): number-End-->
@@ -144,11 +154,13 @@ Gets the current location of the file mapping area.
 msync(): Promise<void>
 ```
 
-Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise asynchronous callback function.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronizes the dirty page data in the entire file mapping area to the disk file and uses the promise asynchronous callback function. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,11 +191,13 @@ Synchronizes the dirty page data in the entire file mapping area to the disk fil
 msync(position: number, length: number): Promise<void>
 ```
 
-Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the promise asynchronous callback function.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronizes the dirty page data in the specified range of the file mapping area to the disk file and uses the promise asynchronous callback function. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,11 +235,13 @@ Synchronizes the dirty page data in the specified range of the file mapping area
 msyncSync(): void
 ```
 
-Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization method.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronizes the dirty page data of the entire file mapping area to the disk file by using the synchronization method. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -250,11 +266,13 @@ Synchronizes the dirty page data of the entire file mapping area to the disk fil
 msyncSync(position: number, length: number): void
 ```
 
-Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the synchronization method.Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
+Synchronize the dirty page data in the specified range of the file mapping area to the disk file by using the synchronization method. Note: If the file is not stored on the local device, calling this API does not ensure that all changes are stored persistently.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,6 +309,8 @@ Reads data from the current position and moves the position backward by the numb
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,6 +352,8 @@ Reads data from the specified location without affecting the current location.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,6 +397,8 @@ Obtains the number of remaining bytes between the current position (position) an
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-remaining(): number--><!--Device-FileMapping-remaining(): number-End-->
@@ -406,6 +430,8 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -439,6 +465,8 @@ Sets the current location of the file mapping area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-setPosition(position: number): void--><!--Device-FileMapping-setPosition(position: number): void-End-->
@@ -471,6 +499,8 @@ Releases the file mapping area and use the promise asynchronous callback functio
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-unmap(): Promise<void>--><!--Device-FileMapping-unmap(): Promise<void>-End-->
@@ -502,6 +532,8 @@ Releases the file mapping area by using the synchronization method.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileMapping-unmapSync(): void--><!--Device-FileMapping-unmapSync(): void-End-->
@@ -526,6 +558,8 @@ Writes data from the current location and moves the location backward by the num
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -568,6 +602,8 @@ Writes data from the specified location without affecting the current location.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

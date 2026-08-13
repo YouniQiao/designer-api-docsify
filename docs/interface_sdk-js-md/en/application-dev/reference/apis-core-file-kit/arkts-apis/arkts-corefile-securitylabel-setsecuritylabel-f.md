@@ -14,9 +14,11 @@ function setSecurityLabel(path: string, type: DataLevel): Promise<void>
 
 Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel): Promise<void>-End-->
 
@@ -69,9 +71,11 @@ function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback
 
 Sets the data security level for a file or directory. The level can only be adjusted from low to high, or set to the same level. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void--><!--Device-securityLabel-function setSecurityLabel(path: string, type: DataLevel, callback: AsyncCallback<void>): void-End-->
 
@@ -83,7 +87,7 @@ Sets the data security level for a file or directory. The level can only be adju
 | --- | --- | --- | --- |
 | path | string | Yes | File path. |
 | type | [DataLevel](arkts-corefile-securitylabel-datalevel-t.md) | Yes | Data security level. The value can only be **s0**, **s1**, **s2**, **s3**, or **s4**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the security level. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the security level. |
 
 **Error codes:**
 

@@ -2,7 +2,9 @@
 
 Window animation target.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-export interface WindowAnimationTarget--><!--Device-windowAnimationManager-export interface WindowAnimationTarget-End-->
 
@@ -26,7 +28,9 @@ readonly abilityName: string
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnimationTarget-readonly abilityName: string--><!--Device-WindowAnimationTarget-readonly abilityName: string-End-->
 
@@ -44,7 +48,9 @@ The bundle name of the window animation target.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnimationTarget-readonly bundleName: string--><!--Device-WindowAnimationTarget-readonly bundleName: string-End-->
 
@@ -62,7 +68,9 @@ readonly missionId: number
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnimationTarget-readonly missionId: int--><!--Device-WindowAnimationTarget-readonly missionId: int-End-->
 
@@ -80,7 +88,9 @@ readonly windowBounds: RRect
 
 **Type:** RRect
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowAnimationTarget-readonly windowBounds: RRect--><!--Device-WindowAnimationTarget-readonly windowBounds: RRect-End-->
 

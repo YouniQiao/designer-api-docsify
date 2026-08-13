@@ -2,13 +2,15 @@
 
 Provides the method of switching the cursor position.
 
-**Inheritance/Implementation:** TextInputController extends [TextContentControllerBase](TextContentControllerBase)
+**Inheritance/Implementation:** TextInputController extends TextContentControllerBase
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class TextInputController extends TextContentControllerBase--><!--Device-unnamed-export declare class TextInputController extends TextContentControllerBase-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class TextInputController--><!--Device-unnamed-export declare class TextInputController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,13 @@ Provides the method of switching the cursor position.
 caretPosition(value: int): void
 ```
 
-Called when the position of the insertion cursor is set.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If the value is less than 0, the value 0 is used.&lt;br&gt;If the value exceeds the text length, the caret is placed at the end of the text.&lt;/p&gt;
+Called when the position of the insertion cursor is set. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the value is less than 0, the value 0 is used. &lt;br&gt;If the value exceeds the text length, the caret is placed at the end of the text. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,11 +46,13 @@ Called when the position of the insertion cursor is set.
 constructor()
 ```
 
-constructor.A constructor used to create a TextInputController object.
+constructor. A constructor used to create a TextInputController object.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +66,13 @@ constructor.A constructor used to create a TextInputController object.
 setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-Text selection is achieved by specifying the start and end positions of the text.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used.&lt;br&gt;If selectionMenuHidden is set to true or a 2-in-1 device is used,calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW.&lt;br&gt;If the selected text contains an emoji,the emoji is selected when its start position is within the text selection range.&lt;/p&gt;
+Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used. &lt;br&gt;If selectionMenuHidden is set to true or a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW. &lt;br&gt;If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,6 +99,8 @@ Exit edit state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

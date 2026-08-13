@@ -4,6 +4,8 @@ Enumerates the states of the float view.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-floatView-enum FloatViewState--><!--Device-floatView-enum FloatViewState-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -17,6 +19,8 @@ STARTED = 1
 The float view has been started and displayed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ The float view has been hidden. This event is triggered when the user swipes up 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewState-HIDDEN = 2--><!--Device-FloatViewState-HIDDEN = 2-End-->
@@ -49,6 +55,8 @@ STOPPED = 3
 The float view has been stopped.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ The float view is in the sidebar.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewState-IN_SIDEBAR = 4--><!--Device-FloatViewState-IN_SIDEBAR = 4-End-->
@@ -82,6 +92,8 @@ The float view is switched to the floating ball.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewState-IN_FLOATING_BALL = 5--><!--Device-FloatViewState-IN_FLOATING_BALL = 5-End-->
@@ -97,6 +109,8 @@ ERROR = 6
 An exception occurs in the float view.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

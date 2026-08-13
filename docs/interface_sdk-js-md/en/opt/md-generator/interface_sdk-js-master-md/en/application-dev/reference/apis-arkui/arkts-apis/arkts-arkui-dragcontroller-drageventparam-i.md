@@ -4,6 +4,8 @@ Callback used to return the result.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface DragEventParam--><!--Device-dragController-interface DragEventParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Drag event information that includes only the drag result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -40,13 +44,13 @@ Drag event information that includes only the drag result.
 extraParams: string
 ```
 
-Additional information about the drag action. Not supported currently.
-
-The default value is null.
+Additional information about the drag action. Not supported currently. The default value is null.
 
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Enumerates the font edging types.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum FontEdging--><!--Device-drawing-enum FontEdging-End-->
 
@@ -18,9 +20,11 @@ ALIAS = 0
 
 No anti-aliasing processing is used.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -36,9 +40,11 @@ ANTI_ALIAS = 1
 
 Uses anti-aliasing to smooth the jagged edges.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -54,9 +60,11 @@ SUBPIXEL_ANTI_ALIAS = 2
 
 Uses sub-pixel anti-aliasing to provide a smoother effect for jagged edges.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

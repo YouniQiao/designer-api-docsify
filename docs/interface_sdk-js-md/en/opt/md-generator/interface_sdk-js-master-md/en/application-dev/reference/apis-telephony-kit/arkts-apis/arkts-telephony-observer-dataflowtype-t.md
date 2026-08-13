@@ -6,7 +6,9 @@ type DataFlowType = data.DataFlowType
 
 Defines the cellular data flow type.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-type DataFlowType = data.DataFlowType--><!--Device-observer-type DataFlowType = data.DataFlowType-End-->
 

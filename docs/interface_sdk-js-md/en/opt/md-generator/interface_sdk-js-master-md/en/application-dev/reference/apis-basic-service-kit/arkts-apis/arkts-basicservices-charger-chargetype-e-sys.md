@@ -2,7 +2,9 @@
 
 Enumerates charging types.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-charger-export enum ChargeType--><!--Device-charger-export enum ChargeType-End-->
 
@@ -18,7 +20,9 @@ NONE
 
 Unknown charging type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-NONE--><!--Device-ChargeType-NONE-End-->
 
@@ -34,7 +38,9 @@ WIRED_NORMAL
 
 Wired normal charging.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-WIRED_NORMAL--><!--Device-ChargeType-WIRED_NORMAL-End-->
 
@@ -50,7 +56,9 @@ WIRED_QUICK
 
 Wired fast charging.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-WIRED_QUICK--><!--Device-ChargeType-WIRED_QUICK-End-->
 
@@ -66,7 +74,9 @@ WIRED_SUPER_QUICK
 
 Wired super fast charging.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-WIRED_SUPER_QUICK--><!--Device-ChargeType-WIRED_SUPER_QUICK-End-->
 
@@ -82,7 +92,9 @@ WIRELESS_NORMAL
 
 Wireless normal charging.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-WIRELESS_NORMAL--><!--Device-ChargeType-WIRELESS_NORMAL-End-->
 
@@ -98,7 +110,9 @@ WIRELESS_QUICK
 
 Wireless fast charging.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-WIRELESS_QUICK--><!--Device-ChargeType-WIRELESS_QUICK-End-->
 
@@ -114,7 +128,9 @@ WIRELESS_SUPER_QUICK
 
 Wireless super fast charging.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChargeType-WIRELESS_SUPER_QUICK--><!--Device-ChargeType-WIRELESS_SUPER_QUICK-End-->
 

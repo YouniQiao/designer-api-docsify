@@ -4,6 +4,8 @@ Defines the cursor style.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface CaretStyle--><!--Device-unnamed-interface CaretStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Defines the cursor style.
 color?: ResourceColor
 ```
 
-Caret color.
-
-Default value: **'#ff007dff'**
+Caret color. Default value: **'#ff007dff'**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Default value: **'#ff007dff'**
 width?: Length
 ```
 
-Caret size. It cannot be set in percentage.
-
-Default value: **'2vp'**
+Caret size. It cannot be set in percentage. Default value: **'2vp'**
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

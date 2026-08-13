@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum AnchoredColorMode--><!--Device-unnamed-declare enum AnchoredColorMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FOLLOW_SYSTEM = 0
 颜色模式跟随系统
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ FOLLOW_TARGET = 1
 颜色模式跟随目标组件
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

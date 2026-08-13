@@ -1,12 +1,10 @@
 # ArcScrollBarOptions
 
-ArcScrollBar的构造函数参数。
-
-> **说明：**
-> 
-> ArcScrollBar与可滚动组件需通过scroller进行绑定后方能实现联动，且ArcScrollBar与可滚动组件仅限于一对一的绑定方式。
+ArcScrollBar的构造函数参数。 > **说明：** > > ArcScrollBar与可滚动组件需通过scroller进行绑定后方能实现联动，且ArcScrollBar与可滚动组件仅限于一对一的绑定方式。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface ArcScrollBarOptions--><!--Device-unnamed-declare interface ArcScrollBarOptions-End-->
 
@@ -23,6 +21,8 @@ scroller: Scroller
 **类型：** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -41,6 +41,8 @@ state?: BarState
 **类型：** [BarState](arkts-arkui-barstate-e.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

@@ -2,9 +2,11 @@
 
 用于自动填充的矩形区域。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export default interface AutoFillRect--><!--Device-unnamed-export default interface AutoFillRect-End-->
 
@@ -20,11 +22,13 @@ height: double
 
 AutoFill表单或页面节点的高度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +46,13 @@ left: double
 
 AutoFill表单或页面节点与页面左边界的距离。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,11 +70,13 @@ top: double
 
 AutoFill表单或页面节点与页面上边界的距离。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,11 +94,13 @@ width: double
 
 AutoFill表单或页面节点的宽度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

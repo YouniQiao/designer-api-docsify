@@ -2,7 +2,9 @@
 
 Configuring parameters in BeaconFence request.
 
-**Since:** 20
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface BeaconFenceRequest--><!--Device-geoLocationManager-export interface BeaconFenceRequest-End-->
 
@@ -24,9 +26,11 @@ Beacon fence information.
 
 **Type:** [BeaconFence](arkts-location-geolocationmanager-beaconfence-i.md)
 
-**Since:** 20
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BeaconFenceRequest-beacon: BeaconFence--><!--Device-BeaconFenceRequest-beacon: BeaconFence-End-->
 
@@ -42,9 +46,11 @@ Indicates the name of FenceExtensionAbility.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BeaconFenceRequest-fenceExtensionAbilityName?: string--><!--Device-BeaconFenceRequest-fenceExtensionAbilityName?: string-End-->
 
@@ -60,9 +66,11 @@ Indicates the callback for reporting the BeaconFence transition status.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GeofenceTransition](arkts-location-geolocationmanager-geofencetransition-i.md)&gt;
 
-**Since:** 20
+**Since:** 26.1.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-BeaconFenceRequest-transitionCallback?: Callback<GeofenceTransition>--><!--Device-BeaconFenceRequest-transitionCallback?: Callback<GeofenceTransition>-End-->
 

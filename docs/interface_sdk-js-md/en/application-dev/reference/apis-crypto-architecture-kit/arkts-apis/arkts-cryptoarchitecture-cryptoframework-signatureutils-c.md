@@ -2,9 +2,11 @@
 
 Provides utilities for converting ECC/SM2 signature data.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-class SignatureUtils--><!--Device-cryptoFramework-class SignatureUtils-End-->
 
@@ -24,11 +26,13 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 Converts an ECC/SM2 signature (r, s) to the ASN.1 DER encoding.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array--><!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array-End-->
 
@@ -50,10 +54,10 @@ Converts an ECC/SM2 signature (r, s) to the ASN.1 DER encoding.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The r or s value of the spec parameter is 0 or too large. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The r or s value of the spec parameter is 0 or too large. |
 
 ## Examples
 
@@ -86,11 +90,13 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 Generates r and s from the ECC/SM2 signature data in ASN.1 DER encoding.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec--><!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec-End-->
 
@@ -112,10 +118,10 @@ Generates r and s from the ECC/SM2 signature data in ASN.1 DER encoding.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data parameter is 0 or too large. |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
+| [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data parameter is 0 or too large. |
 
 ## Examples
 

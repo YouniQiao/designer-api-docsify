@@ -2,9 +2,11 @@
 
 Defines the request for publishing a reminder.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequest-End-->
 
@@ -19,22 +21,20 @@ import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ## actionButton
 
 ```TypeScript
-actionButton?: [ActionButton?, ActionButton?, ActionButton?]
+actionButton?: Array<ActionButton>
 ```
 
-Buttons displayed for the reminder notification.
+Action button displayed on the reminder notification.
 
-For third-party applications, a maximum of two buttons are supported.
+**Type:** Array&lt;ActionButton&gt;
 
-For system applications, a maximum of three buttons are supported in API version 10 and later versions, and a maximum of two buttons are supported in versions earlier than API version 10.
+**Since:** 23
 
-**Type:** [ActionButton?, ActionButton?, ActionButton?]
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 9
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-<!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?, ActionButton?]-End-->
+<!--Device-ReminderRequest-actionButton?: Array<ActionButton>--><!--Device-ReminderRequest-actionButton?: Array<ActionButton>-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -44,16 +44,15 @@ For system applications, a maximum of three buttons are supported in API version
 autoDeletedTime?: long
 ```
 
-Time when the notification is automatically cleared.
+Time when the notification is automatically cleared. The data format is timestamp, in milliseconds. For details, please refer to [NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autoDeletedTime)
 
-The data format is timestamp, in milliseconds. For details, please refer to   
-[NotificationRequest.autoDeletedTime](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#autoDeletedTime)
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-autoDeletedTime?: long--><!--Device-ReminderRequest-autoDeletedTime?: long-End-->
 
@@ -69,9 +68,11 @@ Reminder content.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
@@ -85,11 +86,13 @@ contentResourceId?: int
 
 Resource ID of the reminder content, which can be obtained through \$r(*resource-name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-contentResourceId?: int--><!--Device-ReminderRequest-contentResourceId?: int-End-->
 
@@ -105,9 +108,11 @@ URI of the custom prompt tone. The prompt tone file must be stored in the **reso
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-customRingUri?: string--><!--Device-ReminderRequest-customRingUri?: string-End-->
 
@@ -123,9 +128,11 @@ Content to be displayed after the reminder expires.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
@@ -137,14 +144,15 @@ Content to be displayed after the reminder expires.
 expiredContentResourceId?: int
 ```
 
-Resource ID of the content to be displayed after the reminder expires, which can be obtained through \$r(*resource  
--name*).id.
+Resource ID of the content to be displayed after the reminder expires, which can be obtained through \$r(*resource -name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-expiredContentResourceId?: int--><!--Device-ReminderRequest-expiredContentResourceId?: int-End-->
 
@@ -162,7 +170,9 @@ Time zone type. The default value is **TimeZoneType.DEFAULT**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,9 +190,11 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-groupId?: string--><!--Device-ReminderRequest-groupId?: string-End-->
 
@@ -194,15 +206,15 @@ Group ID used for the reminder. If "Don't ask again" or similar information is s
 maxScreenWantAgent?: MaxScreenWantAgent
 ```
 
-Information about the ability that is started automatically and displayed in full-screen mode when the reminder arrives. If the device is in use, only a notification banner is displayed.
-
-This API is reserved.
+Information about the ability that is started automatically and displayed in full-screen mode when the reminder arrives. If the device is in use, only a notification banner is displayed. This API is reserved.
 
 **Type:** MaxScreenWantAgent
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
@@ -216,11 +228,13 @@ notificationId?: int
 
 Notification ID used by the reminder. You must pass in a notification ID. If there are reminders with the same notification ID, the later one will overwrite the earlier one. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-notificationId?: int--><!--Device-ReminderRequest-notificationId?: int-End-->
 
@@ -238,7 +252,9 @@ Notification request message. This parameter is left empty by default.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,9 +272,11 @@ Type of the reminder.
 
 **Type:** ReminderType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
@@ -274,9 +292,11 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 
 **Type:** [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-ringChannel?: RingChannel--><!--Device-ReminderRequest-ringChannel?: RingChannel-End-->
 
@@ -288,22 +308,15 @@ Audio channel of the custom prompt tone. The default channel is the alarm channe
 ringDuration?: long
 ```
 
-Ringing duration.
+Ringing duration. The value ranges from 0 to1800, in seconds. The default value is **1**. If the value is **0**, the system notification tone is used. If the value is greater than 0 and [ReminderRequest.customRingUri](#ReminderRequest) is set, the reminder rings on the specified channel [ReminderRequest.ringChannel](#ReminderRequest). Otherwise, the custom notification tone of the agent-powered reminder is used. The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
 
-The value ranges from 0 to1800, in seconds. The default value is **1**.
+**Type:** long
 
-If the value is **0**, the system notification tone is used.
+**Since:** 23
 
-If the value is greater than 0 and [ReminderRequest.customRingUri](#ReminderRequest) is set, the reminder rings on the specified channel   
-[ReminderRequest.ringChannel](#ReminderRequest). Otherwise, the custom notification tone of the agent-powered reminder is used.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-The device vibrates when the reminder rings. Since API version 26.0.0, long vibration is supported, and the vibration duration is the same as the ring duration. In versions earlier than API 26.0.0, the device vibrates once quickly when the reminder rings.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-ringDuration?: long--><!--Device-ReminderRequest-ringDuration?: long-End-->
 
@@ -319,9 +332,11 @@ Type of the slot used by the reminder.
 
 **Type:** notification.SlotType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
@@ -337,9 +352,11 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
@@ -351,14 +368,15 @@ Content to be displayed when the reminder is snoozing. (It is not applicable to 
 snoozeContentResourceId?: int
 ```
 
-Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r(  
-*resource-name*).id.
+Resource ID of the content to be displayed when the reminder is snoozing, which can be obtained through \$r( *resource-name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-snoozeContentResourceId?: int--><!--Device-ReminderRequest-snoozeContentResourceId?: int-End-->
 
@@ -374,9 +392,11 @@ Type of the slot used by the snoozed reminder. (It is not applicable to countdow
 
 **Type:** notification.SlotType
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-snoozeSlotType?: notification.SlotType--><!--Device-ReminderRequest-snoozeSlotType?: notification.SlotType-End-->
 
@@ -390,11 +410,13 @@ snoozeTimes?: int
 
 Number of reminder snooze times. The default value is **0**. (It is not applicable to countdown reminders.)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-snoozeTimes?: int--><!--Device-ReminderRequest-snoozeTimes?: int-End-->
 
@@ -406,17 +428,15 @@ Number of reminder snooze times. The default value is **0**. (It is not applicab
 tapDismissed?: boolean
 ```
 
-Whether the reminder is automatically cleared. The default value is **true**. For details, see   
-[NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapDismissed)
-
-- **true** (default): The reminder is automatically cleared after the notification or button is tapped.  
-- **false**: The reminder is retained after the notification or button is tapped.
+Whether the reminder is automatically cleared. The default value is **true**. For details, see [NotificationRequest.tapDismissed](../../apis-notification-kit/arkts-apis/arkts-notification-notificationrequest-notificationrequest-i.md#tapDismissed) - **true** (default): The reminder is automatically cleared after the notification or button is tapped. - **false**: The reminder is retained after the notification or button is tapped.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-tapDismissed?: boolean--><!--Device-ReminderRequest-tapDismissed?: boolean-End-->
 
@@ -428,15 +448,15 @@ Whether the reminder is automatically cleared. The default value is **true**. Fo
 timeInterval?: long
 ```
 
-Reminder snooze interval,
+Reminder snooze interval, in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
 
-in seconds. The minimum value is 30s. (It is not applicable to countdown reminders.)
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-timeInterval?: long--><!--Device-ReminderRequest-timeInterval?: long-End-->
 
@@ -452,9 +472,11 @@ Reminder title.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
@@ -468,11 +490,13 @@ titleResourceId?: int
 
 Resource ID of the reminder title, which can be obtained through \$r(*resource-name*).id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-titleResourceId?: int--><!--Device-ReminderRequest-titleResourceId?: int-End-->
 
@@ -488,9 +512,11 @@ Information about the ability that is redirected to when the reminder is clicked
 
 **Type:** WantAgent
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 

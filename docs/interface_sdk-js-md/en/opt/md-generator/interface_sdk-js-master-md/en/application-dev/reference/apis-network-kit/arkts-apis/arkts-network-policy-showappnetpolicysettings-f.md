@@ -12,9 +12,11 @@ import { policy } from '@kit.NetworkKit';
 function showAppNetPolicySettings(context: Context): Promise<void>
 ```
 
-Open the network settings interface of the application, which is presented in a semi-modal form and can  be used to configure the network connection method. This API uses a promise to return the result.
+Open the network settings interface of the application, which is presented in a semi-modal form and can be used to configure the network connection method. This API uses a promise to return the result.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +38,7 @@ Open the network settings interface of the application, which is presented in a 
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { policy } from '@kit.NetworkKit';

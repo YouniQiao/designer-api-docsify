@@ -1,15 +1,16 @@
 # SendableResource
 
-This module provides information related to `SendableResource`, including the application bundle package name,application module name, and resource type. `SendableResource` implements the   
-[ISendable](../../../arkts-utils/arkts-sendable.md#isendable) API and supports cross-thread transmission, enabling access to application resources in multi-thread scenarios.
+This module provides information related to `SendableResource`, including the application bundle package name, application module name, and resource type. `SendableResource` implements the [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) API and supports cross-thread transmission, enabling access to application resources in multi-thread scenarios.
 
-**Inheritance/Implementation:** SendableResource extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** SendableResource extends lang.ISendable
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-interface SendableResource extends lang.ISendable--><!--Device-unnamed-interface SendableResource extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface SendableResource--><!--Device-unnamed-interface SendableResource-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -27,6 +28,8 @@ Application bundle name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SendableResource-bundleName: string--><!--Device-SendableResource-bundleName: string-End-->
@@ -39,13 +42,15 @@ Application bundle name.
 id: number
 ```
 
-Resource ID. The value ranges are as follows:&lt;br&gt;- Application resource ranges: [0x01000000, 0x06FFFFFF] and [0x08000000, 0xFFFFFFFF], indicating the resource IDs of the application itself.&lt;br&gt;- System resource range: [0x07000000, 0x07FFFFFF], indicating the resource IDs preset by the system.
+Resource ID. The value ranges are as follows: &lt;br&gt;- Application resource ranges: [0x01000000, 0x06FFFFFF] and [0x08000000, 0xFFFFFFFF], indicating the resource IDs of the application itself. &lt;br&gt;- System resource range: [0x07000000, 0x07FFFFFF], indicating the resource IDs preset by the system.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -67,6 +72,8 @@ Application module name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SendableResource-moduleName: string--><!--Device-SendableResource-moduleName: string-End-->
@@ -87,6 +94,8 @@ Resource parameters, including the resource name (string type), replacement valu
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SendableResource-params?: collections.Array <string | number>--><!--Device-SendableResource-params?: collections.Array <string | number>-End-->
@@ -99,13 +108,15 @@ Resource parameters, including the resource name (string type), replacement valu
 type?: number
 ```
 
-Resource type. The options are as follows:&lt;br&gt;- 10001: color&lt;br&gt;- 10002: float&lt;br&gt;- 10003: string&lt;br&gt;- 10004: plural&lt;br&gt;- 10005: boolean&lt;br&gt;- 10006: intarray&lt;br&gt;- 10007: integer&lt;br&gt;- 10008: pattern&lt;br&gt;- 10009: strarray&lt;br&gt;- 20000: media&lt;br&gt;- 30000: rawfile&lt;br&gt;- 40000: symbol
+Resource type. The options are as follows: &lt;br&gt;- 10001: color &lt;br&gt;- 10002: float &lt;br&gt;- 10003: string &lt;br&gt;- 10004: plural &lt;br&gt;- 10005: boolean &lt;br&gt;- 10006: intarray &lt;br&gt;- 10007: integer &lt;br&gt;- 10008: pattern &lt;br&gt;- 10009: strarray &lt;br&gt;- 20000: media &lt;br&gt;- 30000: rawfile &lt;br&gt;- 40000: symbol
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

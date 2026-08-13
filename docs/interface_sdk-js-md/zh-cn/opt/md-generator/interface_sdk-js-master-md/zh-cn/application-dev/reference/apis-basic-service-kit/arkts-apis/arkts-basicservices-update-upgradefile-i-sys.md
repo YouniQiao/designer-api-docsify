@@ -2,7 +2,9 @@
 
 升级文件，包含文件类型和文件路径，用于指定要安装的本地升级包。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export interface UpgradeFile--><!--Device-update-export interface UpgradeFile-End-->
 
@@ -20,7 +22,9 @@ filePath: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UpgradeFile-filePath: string--><!--Device-UpgradeFile-filePath: string-End-->
 
@@ -38,7 +42,9 @@ fileType: ComponentType
 
 **类型：** ComponentType
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UpgradeFile-fileType: ComponentType--><!--Device-UpgradeFile-fileType: ComponentType-End-->
 

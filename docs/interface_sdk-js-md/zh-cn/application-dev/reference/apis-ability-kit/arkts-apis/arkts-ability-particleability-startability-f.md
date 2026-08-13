@@ -6,15 +6,13 @@
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void
 ```
 
-启动指定的particleAbility。使用callback异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动指定的particleAbility。使用callback异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -27,7 +25,7 @@ function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | 是 | 表示启动的ability。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当启动指定的particleAbility成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当启动指定的particleAbility成功，err为undefined，否则为错误对象。 |
 
 ## 示例
 
@@ -65,15 +63,13 @@ particleAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<void>
 ```
 
-启动指定的particleAbility。使用Promise异步回调。
-
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
+启动指定的particleAbility。使用Promise异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（FA模型）](../../../application-models/component-startup-rules-fa.md)。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

@@ -1,15 +1,10 @@
 # AudioStreamManager
 
-This interface implements audio stream management.
+This interface implements audio stream management. Before calling any API in AudioStreamManager, you must use [getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager) to obtain an AudioStreamManager instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 9.
 
-Before calling any API in AudioStreamManager, you must use  
-[getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager) to obtain an AudioStreamManager instance.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The initial APIs of this interface are supported since API version 9.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioStreamManager--><!--Device-audio-interface AudioStreamManager-End-->
 
@@ -29,7 +24,9 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 Obtains information about the audio effect mode in use. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void-End-->
 
@@ -46,8 +43,8 @@ Obtains information about the audio effect mode in use. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getAudioEffectInfoArray
 
@@ -57,7 +54,9 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 Obtains information about the audio effect mode in use. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>-End-->
 
@@ -79,8 +78,8 @@ Obtains information about the audio effect mode in use. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getAudioEffectInfoArraySync
 
@@ -90,7 +89,9 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 Obtains information about the audio effect mode in use. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray--><!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray-End-->
 
@@ -112,8 +113,8 @@ Obtains information about the audio effect mode in use. This API returns the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -121,14 +122,11 @@ Obtains information about the audio effect mode in use. This API returns the res
 getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void
 ```
 
-Obtains the information about this audio capturer. This API uses an asynchronous callback to return the result.
+Obtains the information about this audio capturer. This API uses an asynchronous callback to return the result. > **NOTE：**> > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
 
-> **NOTE：**
-> 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice
-> wakeup and cellular calls.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -146,14 +144,11 @@ Obtains the information about this audio capturer. This API uses an asynchronous
 getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 ```
 
-Obtains the information about this audio capturer. This API uses a promise to return the result.
+Obtains the information about this audio capturer. This API uses a promise to return the result. > **NOTE：**> > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
 
-> **NOTE：**
-> 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice
-> wakeup and cellular calls.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>-End-->
 
@@ -171,14 +166,11 @@ Obtains the information about this audio capturer. This API uses a promise to re
 getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 ```
 
-Obtains the information about this audio capturer. This API returns the result synchronously.
+Obtains the information about this audio capturer. This API returns the result synchronously. > **NOTE：**> > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
 
-> **NOTE：**
-> 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice
-> wakeup and cellular calls.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray-End-->
 
@@ -196,14 +188,11 @@ Obtains the information about this audio capturer. This API returns the result s
 getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void
 ```
 
-Obtains the information about this audio renderer. This API uses an asynchronous callback to return the result.
+Obtains the information about this audio renderer. This API uses an asynchronous callback to return the result. > **NOTE：**> > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
 
-> **NOTE：**
-> 
-> The audio renderer information returned by this API may include internal audio playback streams, such as
-> cellular calls and ultrasonic streams.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void-End-->
 
@@ -221,14 +210,11 @@ Obtains the information about this audio renderer. This API uses an asynchronous
 getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 ```
 
-Obtains the information about this audio renderer. This API uses a promise to return the result.
+Obtains the information about this audio renderer. This API uses a promise to return the result. > **NOTE：**> > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
 
-> **NOTE：**
-> 
-> The audio renderer information returned by this API may include internal audio playback streams, such as
-> cellular calls and ultrasonic streams.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>-End-->
 
@@ -246,14 +232,11 @@ Obtains the information about this audio renderer. This API uses a promise to re
 getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 ```
 
-Obtains the information about this audio renderer. This API returns the result synchronously.
+Obtains the information about this audio renderer. This API returns the result synchronously. > **NOTE：**> > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
 
-> **NOTE：**
-> 
-> The audio renderer information returned by this API may include internal audio playback streams, such as
-> cellular calls and ultrasonic streams.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray-End-->
 
@@ -273,7 +256,9 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 Checks whether the specified audio source type supports echo cancellation.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean-End-->
 
@@ -283,7 +268,7 @@ Checks whether the specified audio source type supports echo cancellation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes |
+| sourceType | [SourceType](../../apis-na/arkts-apis/arkts-na-webview-sourcetype-e.md) | Yes |
 
 **Return value:**
 
@@ -295,7 +280,7 @@ Checks whether the specified audio source type supports echo cancellation.
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isActive
 
@@ -305,7 +290,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 Checks whether a stream is active. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -330,7 +315,7 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 Checks whether a stream is active. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -360,7 +345,7 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 Checks whether a stream is active. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -386,8 +371,8 @@ Checks whether a stream is active. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isAudioLoopbackSupported
 
@@ -397,7 +382,9 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 Checks whether the current system supports the specified audio loopback mode.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean--><!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean-End-->
 
@@ -419,7 +406,7 @@ Checks whether the current system supports the specified audio loopback mode.
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isDirectPlaybackSupported
 
@@ -430,6 +417,8 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 Return if direct playback is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -460,6 +449,8 @@ Return if fast playback is supported for the specific audio stream info and usag
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
@@ -489,6 +480,8 @@ Return if fast recording is supported for the specific audio stream info and usa
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean--><!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean-End-->
@@ -500,7 +493,7 @@ Return if fast recording is supported for the specific audio stream info and usa
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | streamInfo | [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md) | Yes |
-| source | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes |
+| source | [SourceType](../../apis-na/arkts-apis/arkts-na-webview-sourcetype-e.md) | Yes |
 
 **Return value:**
 
@@ -516,7 +509,9 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 Checks whether the intelligent noise reduction feature is enabled for the audio stream of the specified source type.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean-End-->
 
@@ -526,7 +521,7 @@ Checks whether the intelligent noise reduction feature is enabled for the audio 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| sourceType | [SourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-sourcetype-e.md) | Yes |
+| sourceType | [SourceType](../../apis-na/arkts-apis/arkts-na-webview-sourcetype-e.md) | Yes |
 
 **Return value:**
 
@@ -538,7 +533,7 @@ Checks whether the intelligent noise reduction feature is enabled for the audio 
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isMultichannelPlaybackSupported
 
@@ -549,6 +544,8 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 Return if multichannel playback is supported for the specific audio stream info and usage type in current device situation.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -579,6 +576,8 @@ Return if offload playback is supported for the specific audio stream info and u
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
@@ -606,7 +605,9 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 Checks whether recording can be started based on the audio source type in the audio capturer information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean--><!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean-End-->
 
@@ -628,7 +629,7 @@ Checks whether recording can be started based on the audio source type in the au
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isStreamActive
 
@@ -638,7 +639,9 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 Checks whether a stream is active. This API returns the result synchronously.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean--><!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean-End-->
 
@@ -660,24 +663,49 @@ Checks whether a stream is active. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## off('audioRendererChange')
+## offAudioCapturerChange
 
 ```TypeScript
-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Unsubscribes from the audio renderer change event. This API uses an asynchronous callback to return the result.
+Unsubscribes to audio capturer change events.
 
-> **NOTE：**
-> 
-> The audio renderer information returned by this API may include internal audio playback streams, such as
-> cellular calls and ultrasonic streams.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
-<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
+<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## offAudioRendererChange
+
+```TypeScript
+offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Unsubscribes to audio renderer change events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -685,29 +713,25 @@ Unsubscribes from the audio renderer change event. This API uses an asynchronous
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'audioRendererChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## off('audioCapturerChange')
+## off_audioCapturerChange
 
 ```TypeScript
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Unsubscribes from the audio capturer change event. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice
-> wakeup and cellular calls.
+Unsubscribes from the audio capturer change event. This API uses an asynchronous callback to return the result. > **NOTE：**> > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -724,24 +748,21 @@ Unsubscribes from the audio capturer change event. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('audioRendererChange')
+## off_audioRendererChange
 
 ```TypeScript
-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
+off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-Subscribes to the audio renderer change event, which is triggered when the audio playback stream status or device is changed. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The audio renderer information returned by this API may include internal audio playback streams, such as
-> cellular calls and ultrasonic streams.
+Unsubscribes from the audio renderer change event. This API uses an asynchronous callback to return the result. > **NOTE：**> > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
 
 **Since:** 9
 
-<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -750,29 +771,81 @@ Subscribes to the audio renderer change event, which is triggered when the audio
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'audioRendererChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onAudioRendererChange
+
+```TypeScript
+onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('audioCapturerChange')
+## on_audioCapturerChange
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-Subscribes to the audio capturer change event, which is triggered when the audio recording stream status or device is changed. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The audio capturer information returned by this API may include internal audio recording streams, such as voice
-> wakeup and cellular calls.
+Subscribes to the audio capturer change event, which is triggered when the audio recording stream status or device is changed. This API uses an asynchronous callback to return the result. > **NOTE：**> > The audio capturer information returned by this API may include internal audio recording streams, such as voice > wakeup and cellular calls.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -789,5 +862,35 @@ Subscribes to the audio capturer change event, which is triggered when the audio
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## on_audioRendererChange
+
+```TypeScript
+on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Subscribes to the audio renderer change event, which is triggered when the audio playback stream status or device is changed. This API uses an asynchronous callback to return the result. > **NOTE：**> > The audio renderer information returned by this API may include internal audio playback streams, such as > cellular calls and ultrasonic streams.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Renderer
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'audioRendererChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |

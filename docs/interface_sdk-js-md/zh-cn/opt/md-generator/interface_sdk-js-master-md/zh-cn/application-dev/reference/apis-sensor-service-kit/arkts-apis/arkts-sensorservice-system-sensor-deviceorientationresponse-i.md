@@ -26,7 +26,7 @@ alpha: number
 
 **废弃版本：** 8
 
-**替代接口：** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
+**替代接口：** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -48,7 +48,7 @@ beta: number
 
 **废弃版本：** 8
 
-**替代接口：** [beta](ohos.sensor/sensor#OrientationResponse.beta)
+**替代接口：** [beta](arkts-sensorservice-sensor-orientationresponse-i.md#beta)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -70,7 +70,7 @@ gamma: number
 
 **废弃版本：** 8
 
-**替代接口：** [gamma](ohos.sensor/sensor#OrientationResponse.gamma)
+**替代接口：** [gamma](arkts-sensorservice-sensor-orientationresponse-i.md#gamma)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

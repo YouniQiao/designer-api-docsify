@@ -2,9 +2,11 @@
 
 Obtains traffic statistics.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace statistics--><!--Device-unnamed-declare namespace statistics-End-->
 
@@ -22,47 +24,47 @@ import { statistics } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getallrxbytes) | Queries the data traffic (including all TCP and UDP data packets) received through all NICs. |
-| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getallrxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) received through all NICs. |
-| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getalltxbytes) | Queries the data traffic (including all TCP and UDP data packets) sent through all NICs. |
-| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getalltxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) sent through all NICs. |
-| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getcellularrxbytes) | Queries the data traffic (including all TCP and UDP data packets) received through the cellular network. |
-| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getcellularrxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) received through the cellular network. |
-| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getcellulartxbytes) | Queries the data traffic (including all TCP and UDP data packets) sent through the cellular network. |
-| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getcellulartxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) sent through the cellular network. |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getifacerxbytes) | Queries the data traffic (including all TCP and UDP data packets) received through a specified NIC. |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getifacerxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) received through a specified NIC. |
-| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getifacetxbytes) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified NIC. |
-| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getifacetxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified NIC. |
-| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md#getselftrafficstats) | Get the traffic usage details of the specified network of the calling application in the specified time period and the specified networktype. |
-| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getsockfdrxbytes) | Queries the data traffic (including all TCP and UDP data packets) received through a specified sockfd. |
-| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getsockfdrxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) received through a specified sockfd. |
-| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getsockfdtxbytes) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified sockfd. |
-| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getsockfdtxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified sockfd. |
-| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getuidrxbytes) | Queries the data traffic (including all TCP and UDP data packets) received by a specified application. |
-| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getuidrxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) received by a specified application. |
-| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getuidtxbytes) | Queries the data traffic (including all TCP and UDP data packets) sent by a specified application. |
-| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getuidtxbytes-1) | Queries the data traffic (including all TCP and UDP data packets) sent by a specified application. |
+| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getAllRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through all NICs. |
+| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getAllRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through all NICs. |
+| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getAllTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through all NICs. |
+| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getAllTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through all NICs. |
+| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getCellularRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through the cellular network. |
+| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getCellularRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through the cellular network. |
+| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getCellularTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through the cellular network. |
+| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getCellularTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through the cellular network. |
+| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getIfaceRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through a specified NIC. |
+| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getIfaceRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through a specified NIC. |
+| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getIfaceTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified NIC. |
+| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getIfaceTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified NIC. |
+| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md#getSelfTrafficStats) | Get the traffic usage details of the specified network of the calling application in the specified time period and the specified networktype. |
+| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getSockfdRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through a specified sockfd. |
+| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getSockfdRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received through a specified sockfd. |
+| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getSockfdTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified sockfd. |
+| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getSockfdTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent through a specified sockfd. |
+| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getUidRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received by a specified application. |
+| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getUidRxBytes) | Queries the data traffic (including all TCP and UDP data packets) received by a specified application. |
+| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getUidTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent by a specified application. |
+| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getUidTxBytes) | Queries the data traffic (including all TCP and UDP data packets) sent by a specified application. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md#getmonthtrafficstats) | Get this month traffic data of the cellular network. |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#gettrafficstatsbyiface) | Get the traffic usage details of the network interface in the specified time period. |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#gettrafficstatsbyiface-1) | Get the traffic usage details of the network interface in the specified time period. |
-| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md#gettrafficstatsbynetwork) | Get the traffic usage details of the specified network of all applications in the specified time period. |
-| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#gettrafficstatsbyuid) | Get the traffic usage details of the specified time period of the application. |
-| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#gettrafficstatsbyuid-1) | Get the traffic usage details of the specified time period of the application. |
-| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md#gettrafficstatsbyuidnetwork) | Get the traffic usage sequence of the specified network of the application in the specified time period. |
-| [off](arkts-network-statistics-off-f-sys.md#off) | Unregister notifications of network traffic updates. |
-| [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md#offnetstatschange) | Unregister notifications of network traffic updates. |
-| [on](arkts-network-statistics-on-f-sys.md#on) | Register notifications of network traffic updates. |
-| [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md#onnetstatschange) | Register notifications of network traffic updates. |
-| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md#setcalibrationtraffic) | Set calibration traffic data. |
-| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md#updateifacesstats) | Updates network interface statistics data. |
-| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md#updatestatsdata) | Updates network statistics data. |
+| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md#getMonthTrafficStats) | Get this month traffic data of the cellular network. |
+| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#getTrafficStatsByIface) | Get the traffic usage details of the network interface in the specified time period. |
+| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#getTrafficStatsByIface-(System-API)) | Get the traffic usage details of the network interface in the specified time period. |
+| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md#getTrafficStatsByNetwork) | Get the traffic usage details of the specified network of all applications in the specified time period. |
+| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#getTrafficStatsByUid) | Get the traffic usage details of the specified time period of the application. |
+| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#getTrafficStatsByUid-(System-API)) | Get the traffic usage details of the specified time period of the application. |
+| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md#getTrafficStatsByUidNetwork) | Get the traffic usage sequence of the specified network of the application in the specified time period. |
+| [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md#offNetStatsChange) | Unregister notifications of network traffic updates. |
+| off_netStatsChange | Unregister notifications of network traffic updates. |
+| [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md#onNetStatsChange) | Register notifications of network traffic updates. |
+| on_netStatsChange | Register notifications of network traffic updates. |
+| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md#setCalibrationTraffic) | Set calibration traffic data. |
+| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md#updateIfacesStats) | Updates network interface statistics data. |
+| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md#updateStatsData) | Updates network statistics data. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -94,7 +96,7 @@ import { statistics } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md#NetStatsInfoSequenceItem). |
+| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) | Array of [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md#NetStatsInfoSequenceItem-(System-API)). |
 | [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) | [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md#NetStatsInfo) for every UID. Key is UID. |
 <!--DelEnd-->
 

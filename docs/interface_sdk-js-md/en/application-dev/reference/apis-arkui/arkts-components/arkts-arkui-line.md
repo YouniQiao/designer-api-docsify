@@ -1,15 +1,6 @@
 # Line
 
-The **Line** component is used to draw a straight line.
-> **NOTE**
->
-> This component supports dynamic constructor parameter updates using the
-> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the
-> [AttributeUpdater](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20.
->
-> **Child Components**
->
-> None
+The **Line** component is used to draw a straight line. > **NOTE** > > This component supports dynamic constructor parameter updates using the > updateConstructorParams API of the > AttributeUpdater class since API version 20. > > **Child Components** > > None
 
 ## Line
 
@@ -17,11 +8,13 @@ The **Line** component is used to draw a straight line.
 Line(options?: LineOptions)
 ```
 
-Uses new to create the line.Anonymous Object Rectification.
+Uses new to create the line. Anonymous Object Rectification.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,6 +42,8 @@ Defines the constructor of Line component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -65,4 +60,4 @@ Defines the constructor of Line component.
 
 ## Summary
 
-- [LineOptions](arkts-arkui-line-lineoptions-i.md)
+- [LineOptions](arkts-arkui-lineoptions-i.md)

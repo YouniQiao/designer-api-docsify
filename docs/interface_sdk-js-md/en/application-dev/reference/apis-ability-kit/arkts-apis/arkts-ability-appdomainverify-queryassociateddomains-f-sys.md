@@ -14,9 +14,11 @@ function queryAssociatedDomains(bundleName: string): string[]
 
 query domains verify associated with bundleName.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_APP_DOMAIN_BUNDLE_INFO
 
@@ -44,10 +46,10 @@ query domains verify associated with bundleName.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [29900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [29900001](../errorcode-appDomainVerify-sys.md#29900001-internal-system-service-error) | Internal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API accessed by non-system app. |
 
 ## Examples
 

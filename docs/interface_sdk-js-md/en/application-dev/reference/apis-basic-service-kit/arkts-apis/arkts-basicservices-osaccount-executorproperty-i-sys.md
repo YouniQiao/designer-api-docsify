@@ -2,9 +2,11 @@
 
 Defines the executor property.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface ExecutorProperty--><!--Device-osAccount-interface ExecutorProperty-End-->
 
@@ -28,9 +30,11 @@ Authentication credential subtype.
 
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-authSubType: AuthSubType--><!--Device-ExecutorProperty-authSubType: AuthSubType-End-->
 
@@ -46,11 +50,13 @@ credentialLength?: int
 
 Credential length, which is **undefined** by default. When credentials with indefinite-length attributes such as biometric information are queried, **undefined** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-credentialLength?: int--><!--Device-ExecutorProperty-credentialLength?: int-End-->
 
@@ -68,9 +74,11 @@ Enrollment progress, which is left blank by default.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-enrollmentProgress?: string--><!--Device-ExecutorProperty-enrollmentProgress?: string-End-->
 
@@ -86,11 +94,13 @@ freezingTime?: int
 
 Freezing time, in milliseconds. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-freezingTime?: int--><!--Device-ExecutorProperty-freezingTime?: int-End-->
 
@@ -106,11 +116,13 @@ nextPhaseFreezingTime?: int
 
 Next freezing time, in milliseconds. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-nextPhaseFreezingTime?: int--><!--Device-ExecutorProperty-nextPhaseFreezingTime?: int-End-->
 
@@ -126,11 +138,13 @@ remainTimes?: int
 
 Number of remaining authentication times, which is **-1** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-remainTimes?: int--><!--Device-ExecutorProperty-remainTimes?: int-End-->
 
@@ -146,11 +160,13 @@ result: int
 
 Result.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-result: int--><!--Device-ExecutorProperty-result: int-End-->
 
@@ -168,9 +184,11 @@ Sensor information, which is left blank by default.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExecutorProperty-sensorInfo?: string--><!--Device-ExecutorProperty-sensorInfo?: string-End-->
 

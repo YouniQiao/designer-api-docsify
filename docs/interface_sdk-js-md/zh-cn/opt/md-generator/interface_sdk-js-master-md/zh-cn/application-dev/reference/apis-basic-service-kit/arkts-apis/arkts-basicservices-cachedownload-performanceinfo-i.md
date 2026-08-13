@@ -2,7 +2,9 @@
 
 预下载的性能信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cacheDownload-interface PerformanceInfo--><!--Device-cacheDownload-interface PerformanceInfo-End-->
 
@@ -18,7 +20,9 @@ readonly connectTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly connectTime: double--><!--Device-PerformanceInfo-readonly connectTime: double-End-->
 
@@ -34,7 +38,9 @@ readonly dnsTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly dnsTime: double--><!--Device-PerformanceInfo-readonly dnsTime: double-End-->
 
@@ -50,7 +56,9 @@ readonly firstReceiveTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly firstReceiveTime: double--><!--Device-PerformanceInfo-readonly firstReceiveTime: double-End-->
 
@@ -66,7 +74,9 @@ readonly firstSendTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly firstSendTime: double--><!--Device-PerformanceInfo-readonly firstSendTime: double-End-->
 
@@ -82,7 +92,9 @@ readonly redirectTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly redirectTime: double--><!--Device-PerformanceInfo-readonly redirectTime: double-End-->
 
@@ -98,7 +110,9 @@ readonly tlsTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly tlsTime: double--><!--Device-PerformanceInfo-readonly tlsTime: double-End-->
 
@@ -114,7 +128,9 @@ readonly totalTime: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PerformanceInfo-readonly totalTime: double--><!--Device-PerformanceInfo-readonly totalTime: double-End-->
 

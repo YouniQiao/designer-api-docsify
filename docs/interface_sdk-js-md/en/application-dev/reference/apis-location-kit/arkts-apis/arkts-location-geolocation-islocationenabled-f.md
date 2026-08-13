@@ -20,7 +20,7 @@ Obtain current location switch status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLocationEnabled](ohos.geoLocationManager/geoLocationManager.isLocationEnabled)
+**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -32,7 +32,7 @@ Obtain current location switch status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Indicates the callback for reporting the location switch result. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Obtain current location switch status
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLocationEnabled](ohos.geoLocationManager/geoLocationManager.isLocationEnabled)
+**Substitutes:** [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled)
 
 **Required permissions:** ohos.permission.LOCATION
 

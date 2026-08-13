@@ -14,9 +14,11 @@ function createHttpResponseCache(cacheSize?: number): HttpResponseCache
 
 Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-http-function createHttpResponseCache(cacheSize?: int): HttpResponseCache--><!--Device-http-function createHttpResponseCache(cacheSize?: int): HttpResponseCache-End-->
 

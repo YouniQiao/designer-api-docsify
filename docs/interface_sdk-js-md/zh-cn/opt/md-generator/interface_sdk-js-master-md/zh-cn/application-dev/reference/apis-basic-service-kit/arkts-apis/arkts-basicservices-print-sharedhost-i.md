@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-print-interface SharedHost--><!--Device-print-interface SharedHost-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -19,6 +21,8 @@ ip: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ shareName: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SharedHost-shareName: string--><!--Device-SharedHost-shareName: string-End-->
@@ -55,6 +61,8 @@ workgroupName: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

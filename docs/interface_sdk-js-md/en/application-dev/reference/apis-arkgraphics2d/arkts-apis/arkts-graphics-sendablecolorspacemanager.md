@@ -1,10 +1,12 @@
-# @ohos.graphics.sendableColorSpaceManager(Sendable Color Space Management)
+# @ohos.graphics.sendableColorSpaceManager
 
 This module provides APIs for creating and managing sendable color space objects and obtaining basic attributes of sendable color spaces. It is applicable to scenarios where color space information needs to be transferred between multiple threads. It solves the problem that color management objects cannot be shared across threads, improving the efficiency and consistency of color processing.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace sendableColorSpaceManager--><!--Device-unnamed-declare namespace sendableColorSpaceManager-End-->
 
@@ -23,13 +25,13 @@ import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
 | Name | Description |
 | --- | --- |
 | [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) | Creates a criterion color space management instance that is sendable. |
-| [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create-1) | Creates a custom color space object that is sendable. |
+| [create](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) | Creates a custom color space object that is sendable. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Implements management of color space objects. ColorSpaceManager is a core class used to manage and operate color space objects. It provides functions such as obtaining the color space type, white point value, and gamma value, and supports transfer between concurrent ArkTS instances.  Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager. |
+| [ColorSpaceManager](arkts-arkgraphics2d-sendablecolorspacemanager-colorspacemanager-i.md) | Implements management of color space objects. ColorSpaceManager is a core class used to manage and operate color space objects. It provides functions such as obtaining the color space type, white point value, and gamma value, and supports transfer between concurrent ArkTS instances. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-sendablecolorspacemanager-create-f.md#create) to create a color space manager. |
 
 ### Types
 

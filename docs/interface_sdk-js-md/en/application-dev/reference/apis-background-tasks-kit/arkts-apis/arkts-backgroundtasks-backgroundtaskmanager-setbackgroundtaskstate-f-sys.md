@@ -14,9 +14,11 @@ function setBackgroundTaskState(stateInfo: BackgroundTaskStateInfo): void
 
 Sets the authorization information of a continuous task.
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_BACKGROUND_TASK_STATE
 
@@ -38,10 +40,10 @@ Sets the authorization information of a continuous task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-continuous-task-verification-failure) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 

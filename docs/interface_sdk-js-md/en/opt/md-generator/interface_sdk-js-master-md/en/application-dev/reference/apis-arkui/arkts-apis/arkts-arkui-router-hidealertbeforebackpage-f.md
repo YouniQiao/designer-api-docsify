@@ -12,14 +12,7 @@ import { router } from '@kit.ArkUI';
 function hideAlertBeforeBackPage(): void
 ```
 
-Disables the display of a confirm dialog box before returning to the previous page.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Disables the display of a confirm dialog box before returning to the previous page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 

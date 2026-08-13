@@ -10,6 +10,8 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -29,11 +31,11 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 | 错误码ID |
 | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
-| [9800004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
-| [9800007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) |
-| [9800006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) |
+| [9800007](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) |
+| [9800006](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

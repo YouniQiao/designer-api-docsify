@@ -1,14 +1,10 @@
 # ToggleOptions
 
-Options of the toggle.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is larger than inner elements'. This does not affect interface usability.
+Options of the toggle. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is larger than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ToggleOptions--><!--Device-unnamed-declare interface ToggleOptions-End-->
 
@@ -20,20 +16,13 @@ Options of the toggle.
 isOn?: boolean
 ```
 
-Whether the toggle is turned on.
-
-**true**: on. **false**: off.
-
-Default value: **false**
-
-This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
-
-This property supports two-way binding through   
-[!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
+Whether the toggle is turned on. **true**: on. **false**: off. Default value: **false** This parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
 
 **Type:** boolean
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,13 +38,13 @@ This property supports two-way binding through
 type: ToggleType
 ```
 
-Type of the toggle.
-
-Default value: **ToggleType.Switch**
+Type of the toggle. Default value: **ToggleType.Switch**
 
 **Type:** [ToggleType](arkts-arkui-toggletype-e.md)
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

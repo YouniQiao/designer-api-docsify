@@ -6,6 +6,8 @@ Enumerates progress indicator styles.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ProgressStyle--><!--Device-unnamed-declare enum ProgressStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Linear style.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,6 +46,8 @@ The ring is gradually displayed until completely filled.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -61,6 +67,8 @@ Eclipse style, which visualizes the progress in a way similar to the moon waxing
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,6 +90,8 @@ Ring style with scales, which is similar to the clock scale style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -101,6 +111,8 @@ Capsule style. At both ends, the progress indicator works in the same manner as 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

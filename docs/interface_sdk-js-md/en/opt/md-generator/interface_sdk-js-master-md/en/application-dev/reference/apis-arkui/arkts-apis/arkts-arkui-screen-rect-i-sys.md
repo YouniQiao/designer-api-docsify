@@ -2,7 +2,9 @@
 
 Describes the rectangle information.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-interface Rect--><!--Device-screen-interface Rect-End-->
 
@@ -26,7 +28,9 @@ Height of the rectangle, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
 
@@ -44,7 +48,9 @@ X coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
 
@@ -62,7 +68,9 @@ Y coordinate of the vertex in the top-left corner of the rectangle, in px. The v
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
 
@@ -80,7 +88,9 @@ Width of the rectangle, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
 

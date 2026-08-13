@@ -12,13 +12,13 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 function releaseAccess(): ReleaseStatus
 ```
 
-Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero, the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold.
+Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero, the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold. Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireAccess) API has been called to request the permission successfully first.
 
-Before calling this API, ensure that the app has enabled the sensitive data protection function under the lock screen, and that the [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireAccess) API has been called to request the permission successfully first.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-screenLockFileManager-function releaseAccess(): ReleaseStatus--><!--Device-screenLockFileManager-function releaseAccess(): ReleaseStatus-End-->
 
@@ -34,10 +34,10 @@ Before calling this API, ensure that the app has enabled the sensitive data prot
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found. |
-| [29300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300005-permission-to-access-sensitive-data-on-the-lock-screen-is-not-requested) | File access was not acquired. |
-| [29300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300003-sensitive-data-access-management-under-lock-screen-is-not-enabled) | The application is not enabled the data protection under lock screen. |
-| [29300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found. |
+| [29300005](../errorcode-screenLockFileManager.md#29300005-permission-to-access-sensitive-data-on-the-lock-screen-is-not-requested) | File access was not acquired. |
+| [29300003](../errorcode-screenLockFileManager.md#29300003-sensitive-data-access-management-under-lock-screen-is-not-enabled) | The application is not enabled the data protection under lock screen. |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-system-service-abnormal) | The system ability works abnormally. |
 
 ## Examples
 

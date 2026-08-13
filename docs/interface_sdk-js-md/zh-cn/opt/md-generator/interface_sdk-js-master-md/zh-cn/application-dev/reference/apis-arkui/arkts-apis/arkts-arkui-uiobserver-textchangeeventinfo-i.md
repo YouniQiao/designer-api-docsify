@@ -4,6 +4,8 @@ Text change event info
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-uiObserver-export interface TextChangeEventInfo--><!--Device-uiObserver-export interface TextChangeEventInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Current content of text field component.
 **类型：** string
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ The id of text field component.
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
@@ -59,6 +65,8 @@ The uniqueId of the text field component.
 **类型：** number
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

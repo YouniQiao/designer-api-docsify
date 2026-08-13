@@ -2,13 +2,15 @@
 
 Define configuration of the system VPN network.
 
-**Inheritance/Implementation:** SysVpnConfig extends [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#VpnConfig)
+**Inheritance/Implementation:** SysVpnConfig extends [VpnConfig](arkts-network-vpn-vpnconfig-i-sys.md#VpnConfig-(System-API))
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-vpn-export interface SysVpnConfig extends VpnConfig--><!--Device-vpn-export interface SysVpnConfig extends VpnConfig-End-->
+**Deprecated since:** -1
+
+<!--Device-vpn-export interface SysVpnConfig--><!--Device-vpn-export interface SysVpnConfig-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -34,6 +36,8 @@ The forwarding routes for the VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-SysVpnConfig-forwardingRoutes?: string--><!--Device-SysVpnConfig-forwardingRoutes?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -52,7 +56,9 @@ The array of local addresses for VPN interface.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +82,8 @@ The user password for the VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-SysVpnConfig-password?: string--><!--Device-SysVpnConfig-password?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -95,6 +103,8 @@ The p12 cert data for the ipsec VPN network.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array--><!--Device-SysVpnConfig-pkcs12FileData?: Uint8Array-End-->
 
@@ -116,6 +126,8 @@ The p12 cert password for the ipsec VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-SysVpnConfig-pkcs12Password?: string--><!--Device-SysVpnConfig-pkcs12Password?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -135,6 +147,8 @@ The array of addresses for remote server.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-SysVpnConfig-remoteAddresses?: Array<string>--><!--Device-SysVpnConfig-remoteAddresses?: Array<string>-End-->
 
@@ -156,6 +170,8 @@ Whether the VPN network save login name and password. The default value is false
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-SysVpnConfig-saveLogin?: boolean--><!--Device-SysVpnConfig-saveLogin?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -175,6 +191,8 @@ The system user id for the VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-SysVpnConfig-userId?: number--><!--Device-SysVpnConfig-userId?: number-End-->
 
@@ -196,6 +214,8 @@ The user name for the VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-SysVpnConfig-userName?: string--><!--Device-SysVpnConfig-userName?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -215,6 +235,8 @@ The uuid for the VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-SysVpnConfig-vpnId?: string--><!--Device-SysVpnConfig-vpnId?: string-End-->
 
@@ -236,6 +258,8 @@ The name for the VPN network.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-SysVpnConfig-vpnName?: string--><!--Device-SysVpnConfig-vpnName?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -255,6 +279,8 @@ The type for the VPN network.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-SysVpnConfig-vpnType?: SysVpnType--><!--Device-SysVpnConfig-vpnType?: SysVpnType-End-->
 

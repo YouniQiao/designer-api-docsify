@@ -2,7 +2,9 @@
 
 Enumerates the audio effect modes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioEffectMode--><!--Device-audio-enum AudioEffectMode-End-->
 
@@ -16,7 +18,9 @@ EFFECT_NONE = 0
 
 The audio effect is disabled.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ EFFECT_DEFAULT = 1
 
 The default audio effect is used.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

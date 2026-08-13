@@ -6,6 +6,8 @@ Gesture recognizer object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class GestureRecognizer--><!--Device-unnamed-declare class GestureRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Obtains the information about the component corresponding to this gesture recogn
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Obtains the number of fingers required to trigger the preset gesture.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -73,6 +79,8 @@ Obtains the state of this gesture recognizer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +108,8 @@ Obtains the tag of this gesture recognizer.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -125,6 +135,8 @@ Obtains the type of this gesture recognizer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,6 +164,8 @@ Obtains whether this gesture recognizer is a built-in gesture.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -177,6 +191,8 @@ Obtains the enabled state of this gesture recognizer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,6 +220,8 @@ Checks whether the preset gesture detects the number of fingers on the screen.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -229,6 +247,8 @@ Returns whether the node bound to the current gesture recognizer is a descendant
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,6 +282,8 @@ Whether the current gesture recognizer is valid.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizer-isValid(): boolean--><!--Device-GestureRecognizer-isValid(): boolean-End-->
@@ -286,6 +308,8 @@ Prevents a gesture recognizer from participating in the current gesture recognit
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -305,6 +329,8 @@ Sets the enabled state of this gesture recognizer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

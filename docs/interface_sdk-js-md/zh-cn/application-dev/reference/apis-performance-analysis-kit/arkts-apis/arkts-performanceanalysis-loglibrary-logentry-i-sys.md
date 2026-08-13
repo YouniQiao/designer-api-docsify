@@ -2,9 +2,11 @@
 
 日志文件对象接口。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-logLibrary-interface LogEntry--><!--Device-logLibrary-interface LogEntry-End-->
 
@@ -20,11 +22,13 @@ mtime: long
 
 上次修改该文件的时间，表示距1970年1月1日0时0分0秒的秒数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LogEntry-mtime: long--><!--Device-LogEntry-mtime: long-End-->
 
@@ -42,9 +46,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LogEntry-name: string--><!--Device-LogEntry-name: string-End-->
 
@@ -60,11 +66,13 @@ size: long
 
 文件大小，以字节为单位。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-LogEntry-size: long--><!--Device-LogEntry-size: long-End-->
 

@@ -2,7 +2,9 @@
 
 输入法软键盘的窗口信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export interface InputWindowInfo--><!--Device-inputMethod-export interface InputWindowInfo-End-->
 
@@ -14,13 +16,13 @@
 displayId?: number
 ```
 
-输入法软键盘窗口所在的屏幕ID。
-
-**模型约束：** 该参数仅可在Stage模型下使用。
+输入法软键盘窗口所在的屏幕ID。 **模型约束：** 该参数仅可在Stage模型下使用。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +40,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputWindowInfo-height: long--><!--Device-InputWindowInfo-height: long-End-->
 
@@ -54,7 +58,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputWindowInfo-left: int--><!--Device-InputWindowInfo-left: int-End-->
 
@@ -70,7 +76,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputWindowInfo-name: string--><!--Device-InputWindowInfo-name: string-End-->
 
@@ -86,7 +94,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputWindowInfo-top: int--><!--Device-InputWindowInfo-top: int-End-->
 
@@ -102,7 +112,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-InputWindowInfo-width: long--><!--Device-InputWindowInfo-width: long-End-->
 

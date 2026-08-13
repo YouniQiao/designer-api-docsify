@@ -3,60 +3,14 @@
 ## getFreeSize
 
 ```TypeScript
-function getFreeSize(callback: AsyncCallback<number>): void
-```
-
-获取内置存储的可用空间大小（单位为Byte），以callback方式返回。
-
-**起始版本：** 15
-
-**需要权限：** 
-- API版本9 - 14：ohos.permission.STORAGE_MANAGER
-
-<!--Device-storageStatistics-function getFreeSize(callback: AsyncCallback<long>): void--><!--Device-storageStatistics-function getFreeSize(callback: AsyncCallback<long>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.StorageService.SpatialStatistics
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| 13600001 |
-| 13900042 |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-storageStatistics.getFreeSize((error: BusinessError, freeSize: number) => {
-  if (error) {
-    console.error(`getFreeSize failed. Code: ${error.code}, message: ${error.message}`);
-  } else {
-    // do something
-    console.info('getFreeSize successfully:' + freeSize);
-  }
-});
-```
-
-
-## getFreeSize
-
-```TypeScript
 function getFreeSize(): Promise<number>
 ```
 
 获取内置存储的可用空间大小（单位为Byte），以Promise方式返回。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-storageStatistics-function getFreeSize(): Promise<long>--><!--Device-storageStatistics-function getFreeSize(): Promise<long>-End-->
 

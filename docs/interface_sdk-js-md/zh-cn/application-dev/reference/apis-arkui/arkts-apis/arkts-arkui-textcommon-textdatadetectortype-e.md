@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum TextDataDetectorType--><!--Device-unnamed-export declare enum TextDataDetectorType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ PHONE_NUMBER = 0
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ URL = 1
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextDataDetectorType-URL = 1--><!--Device-TextDataDetectorType-URL = 1-End-->
@@ -57,6 +63,8 @@ EMAIL = 2
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +84,8 @@ ADDRESS = 3
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextDataDetectorType-ADDRESS = 3--><!--Device-TextDataDetectorType-ADDRESS = 3-End-->
@@ -93,6 +103,8 @@ DATE_TIME = 4
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

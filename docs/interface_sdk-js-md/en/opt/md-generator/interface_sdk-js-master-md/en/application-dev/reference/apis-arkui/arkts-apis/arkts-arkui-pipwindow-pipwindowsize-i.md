@@ -2,7 +2,9 @@
 
 Describes the size of a PiP window.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-interface PiPWindowSize--><!--Device-PiPWindow-interface PiPWindowSize-End-->
 
@@ -24,9 +26,11 @@ Window height, in px. The value must be a positive integer and cannot be greater
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowSize-height: int--><!--Device-PiPWindowSize-height: int-End-->
 
@@ -42,9 +46,11 @@ Scale factor of the window, representing the display size relative to the width 
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowSize-scale: double--><!--Device-PiPWindowSize-scale: double-End-->
 
@@ -60,9 +66,11 @@ Window width, in px. The value must be a positive integer and cannot be greater 
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowSize-width: int--><!--Device-PiPWindowSize-width: int-End-->
 

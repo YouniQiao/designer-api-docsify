@@ -12,14 +12,13 @@ import { image } from '@kit.ImageKit';
 function createImageSource(uri: string): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given URI. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -31,7 +30,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), [.svg&lt;sup&gt;10+&lt;/sup&gt;](@ohos.multimedia.image:image.Functions#SVG Tags), and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 
 **Return value:**
 
@@ -60,7 +59,9 @@ Creates an ImageSource instance based on the URI.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(uri: string): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string): ImageSource | undefined-End-->
 
@@ -85,14 +86,13 @@ Creates an ImageSource instance based on the URI.
 function createImageSource(uri: string, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given URI. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,7 +106,7 @@ Images occupy a large amount of memory. When you finish using an ImageSource ins
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), [.svg&lt;sup&gt;10+&lt;/sup&gt;](@ohos.multimedia.image:image.Functions#SVG Tags), and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**
@@ -137,7 +137,9 @@ Creates an ImageSource instance based on the URI.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined-End-->
 
@@ -163,14 +165,13 @@ Creates an ImageSource instance based on the URI.
 function createImageSource(fd: int): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given file descriptor. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -214,7 +215,9 @@ Creates an ImageSource instance based on the file descriptor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(fd: int): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int): ImageSource | undefined-End-->
 
@@ -239,14 +242,13 @@ Creates an ImageSource instance based on the file descriptor.
 function createImageSource(fd: int, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given file descriptor. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -294,7 +296,9 @@ Creates an ImageSource instance based on the file descriptor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined-End-->
 
@@ -320,13 +324,13 @@ Creates an ImageSource instance based on the file descriptor.
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync-1).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -368,7 +372,9 @@ Creates an ImageSource instance based on the buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined-End-->
 
@@ -393,13 +399,13 @@ Creates an ImageSource instance based on the buffer.
 function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync-1).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -443,7 +449,9 @@ Creates an ImageSource instance based on the buffer.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined-End-->
 
@@ -469,12 +477,13 @@ Creates an ImageSource instance based on the buffer.
 function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on the raw file descriptor of an image resource file.Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on the raw file descriptor of an image resource file. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -525,7 +534,9 @@ Creates an ImageSource instance based on the raw file descriptor.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined-End-->
 

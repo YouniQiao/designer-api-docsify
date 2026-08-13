@@ -14,7 +14,9 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 Creates a BrightnessBlender instance for adding a brightness effect to a component.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 

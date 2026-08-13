@@ -1,10 +1,12 @@
 # HitTestValue
 
-Provides element information of the click area. related to [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) method.
+提供点击区域的元素信息。示例代码参考 [getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest).
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface HitTestValue--><!--Device-webview-interface HitTestValue-End-->
 
@@ -16,13 +18,17 @@ Provides element information of the click area. related to [getLastHitTest](arkt
 extra: string
 ```
 
-Get the hit test extra data.If the clicked area is an image or a link, the additional parameter information is it's URL address.
+点击区域的附加参数信息。若被点击区域为图片或链接，则附加参数信息为其url地址。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HitTestValue-extra: string--><!--Device-HitTestValue-extra: string-End-->
 
@@ -34,13 +40,17 @@ Get the hit test extra data.If the clicked area is an image or a link, the addit
 type: WebHitTestType
 ```
 
-Get the hit test type.
+当前被点击区域的元素类型。
 
-**类型：** [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md)
+**类型：** [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HitTestValue-type: WebHitTestType--><!--Device-HitTestValue-type: WebHitTestType-End-->
 

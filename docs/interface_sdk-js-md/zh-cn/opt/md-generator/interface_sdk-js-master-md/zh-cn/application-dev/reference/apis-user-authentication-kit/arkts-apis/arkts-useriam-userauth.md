@@ -1,17 +1,10 @@
-# @ohos.userIAM.userAuth(用户认证)
+# @ohos.userIAM.userAuth
 
-**userAuth**模块是OpenHarmony系统中用于用户身份认证的核心模块，提供了设备解锁、支付验证、应用登录等场景下的身份认证能力。
+**userAuth**模块是OpenHarmony系统中用于用户身份认证的核心模块，提供了设备解锁、支付验证、应用登录等场景下的身份认证能力。 该模块支持多种生物特征认证方式（人脸、指纹）和密码认证（PIN），并提供不同级别的安全信任等级。从API版本26.0.0开始，新增伴随设备认证的方式。 该模块主要用于以下场景： - 设备解锁认证。 - 金融支付验证。 - 应用登录保护。 - 敏感操作确认。
 
-该模块支持多种生物特征认证方式（人脸、指纹）和密码认证（PIN），并提供不同级别的安全信任等级。从API版本26.0.0开始，新增伴随设备认证的方式。
+**起始版本：** 23
 
-该模块主要用于以下场景：
-
-- 设备解锁认证。  
-- 金融支付验证。  
-- 应用登录保护。  
-- 敏感操作确认。
-
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace userAuth--><!--Device-unnamed-declare namespace userAuth-End-->
 
@@ -23,23 +16,23 @@
 
 | 名称 |
 | --- |
-| [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance) |
-| [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getauthlockstate) |
-| [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md#getauthenticator) |
-| [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus) |
-| [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getenrolledstate) |
-| [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance) |
+| [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getAuthInstance) |
+| [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getAuthLockState) |
+| [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md#getAuthenticator) |
+| [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getAvailableStatus) |
+| [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getEnrolledState) |
+| [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getUserAuthInstance) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getUserAuthWidgetMgr](arkts-userauthentication-userauth-getuserauthwidgetmgr-f-sys.md#getuserauthwidgetmgr) |
-| [queryReusableAuthResult](arkts-userauthentication-userauth-queryreusableauthresult-f-sys.md#queryreusableauthresult) |
-| [registerRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerremoteauthcallback) |
-| [sendNotice](arkts-userauthentication-userauth-sendnotice-f-sys.md#sendnotice) |
-| [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterremoteauthcallback) |
+| [getUserAuthWidgetMgr](arkts-userauthentication-userauth-getuserauthwidgetmgr-f-sys.md#getUserAuthWidgetMgr（系统接口）) |
+| [queryReusableAuthResult](arkts-userauthentication-userauth-queryreusableauthresult-f-sys.md#queryReusableAuthResult（系统接口）) |
+| [registerRemoteAuthCallback](arkts-userauthentication-userauth-registerremoteauthcallback-f-sys.md#registerRemoteAuthCallback（系统接口）) |
+| [sendNotice](arkts-userauthentication-userauth-sendnotice-f-sys.md#sendNotice（系统接口）) |
+| [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterRemoteAuthCallback（系统接口）) |
 <!--DelEnd-->
 
 ### 类
@@ -110,6 +103,7 @@
 
 | 名称 |
 | --- |
+| [AuthCallbackOnResultFunc](arkts-userauthentication-userauth-authcallbackonresultfunc-t.md) |
 | [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) |
 | [AuthTipCallback](arkts-userauthentication-userauth-authtipcallback-t.md) |
 | [AuthType](arkts-userauthentication-userauth-authtype-t.md) |
@@ -121,6 +115,7 @@
 
 | 名称 |
 | --- |
+| [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md) |
 | [ResultCallback](arkts-userauthentication-userauth-resultcallback-t-sys.md) |
 | [WidgetParamCallback](arkts-userauthentication-userauth-widgetparamcallback-t-sys.md) |
 <!--DelEnd-->
@@ -129,5 +124,5 @@
 
 | 名称 |
 | --- |
-| [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#max_allowable_reuse_duration) |
-| [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#permanent_lockout_duration) |
+| [MAX_ALLOWABLE_REUSE_DURATION](arkts-userauthentication-userauth-con.md#MAX_ALLOWABLE_REUSE_DURATION) |
+| [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION) |

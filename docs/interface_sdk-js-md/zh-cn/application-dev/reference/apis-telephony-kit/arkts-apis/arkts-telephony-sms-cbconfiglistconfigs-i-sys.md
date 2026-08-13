@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface CBConfigListConfigs--><!--Device-sms-export interface CBConfigListConfigs-End-->
 
@@ -20,11 +22,13 @@ messageIds: int[]
 
 定义当前小区广播列表的消息号
 
-**类型：** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**类型：** int[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigListConfigs-messageIds: int[]--><!--Device-CBConfigListConfigs-messageIds: int[]-End-->
 
@@ -44,7 +48,9 @@ ranType: RanType
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigListConfigs-ranType: RanType--><!--Device-CBConfigListConfigs-ranType: RanType-End-->
 
@@ -60,11 +66,13 @@ slotId: int
 
 指定当前小区广播配置列表对应的卡槽
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CBConfigListConfigs-slotId: int--><!--Device-CBConfigListConfigs-slotId: int-End-->
 

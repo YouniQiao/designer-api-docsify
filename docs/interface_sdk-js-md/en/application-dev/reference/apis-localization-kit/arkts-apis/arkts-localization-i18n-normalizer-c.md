@@ -1,10 +1,12 @@
 # Normalizer
 
-Provides the API for text encoding normalization.
+Provides the text normalization capabilities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
 
@@ -22,13 +24,15 @@ import { i18n } from '@kit.LocalizationKit';
 static getInstance(mode: NormalizerMode): Normalizer
 ```
 
-Obtains a Normalizer object.
+Obtains a **Normalizer** object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer--><!--Device-Normalizer-static getInstance(mode: NormalizerMode): Normalizer-End-->
 
@@ -38,19 +42,33 @@ Obtains a Normalizer object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
+| mode | [NormalizerMode](../../apis-na/arkts-apis/arkts-na-i18n-normalizermode-e.md) | Yes | Text normalization mode. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Normalizer](arkts-localization-i18n-normalizer-c.md) | Normalizer object for text normalization. |
+| [Normalizer](../../apis-na/arkts-apis/arkts-na-i18n-normalizer-c.md) | Normalizer** object for text normalization. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let normalizer: i18n.Normalizer = i18n.Normalizer.getInstance(i18n.NormalizerMode.NFC);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call Normalizer.getInstance failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## normalize
 
@@ -62,9 +80,11 @@ Normalizes input strings.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Normalizer-normalize(text: string): string--><!--Device-Normalizer-normalize(text: string): string-End-->
 
@@ -74,7 +94,7 @@ Normalizes input strings.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Input strings. |
+| text | string | Yes | Input text. |
 
 **Return value:**
 
@@ -86,5 +106,20 @@ Normalizes input strings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let normalizer: i18n.Normalizer = i18n.Normalizer.getInstance(i18n.NormalizerMode.NFC);
+  let normalizedText: string = normalizer.normalize('\u1E9B\u0323'); // normalizedText = 'ẛ̣'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call Normalizer.getInstance failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

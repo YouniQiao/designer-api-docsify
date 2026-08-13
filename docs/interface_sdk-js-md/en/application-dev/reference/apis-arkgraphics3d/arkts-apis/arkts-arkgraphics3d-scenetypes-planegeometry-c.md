@@ -4,29 +4,13 @@ Define a plane.
 
 **Inheritance/Implementation:** PlaneGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export declare class PlaneGeometry extends GeometryDefinition--><!--Device-unnamed-export declare class PlaneGeometry extends GeometryDefinition-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
-## size
-
-```TypeScript
-set size(value: Vec2)
-```
-
-The width and length of the plane, the unit is the scene unit in the world coordinate system (e.g., cm, m, km).
-
-**Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
-
-<!--Device-PlaneGeometry-set size(value: Vec2)--><!--Device-PlaneGeometry-set size(value: Vec2)-End-->
+<!--Device-unnamed-export declare class PlaneGeometry--><!--Device-unnamed-export declare class PlaneGeometry-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 

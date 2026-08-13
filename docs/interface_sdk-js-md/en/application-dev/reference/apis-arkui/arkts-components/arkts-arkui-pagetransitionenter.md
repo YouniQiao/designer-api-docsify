@@ -14,6 +14,8 @@ Sets the page entrance animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PageTransitionEnterInterface-(value: PageTransitionOptions): PageTransitionEnterInterface--><!--Device-PageTransitionEnterInterface-(value: PageTransitionOptions): PageTransitionEnterInterface-End-->
@@ -38,6 +40,8 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PageTransitionEnterInterface-onEnter(event: PageTransitionCallback): PageTransitionEnterInterface--><!--Device-PageTransitionEnterInterface-onEnter(event: PageTransitionCallback): PageTransitionEnterInterface-End-->
@@ -52,8 +56,7 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 
 ## Summary
 
-- [PageTransitionExitInterface](arkts-arkui-pagetransitionenter-pagetransitionexitinterface-i.md)
-- [PageTransitionOptions](arkts-arkui-pagetransitionenter-pagetransitionoptions-i.md)
-- [PageTransitionCallback](arkts-arkui-pagetransitionenter-pagetransitioncallback-t.md)
-- [RouteType](arkts-arkui-pagetransitionenter-routetype-e.md)
-- [SlideEffect](arkts-arkui-pagetransitionenter-slideeffect-e.md)
+- [PageTransitionOptions](arkts-arkui-pagetransitionoptions-i.md)
+- [PageTransitionCallback](arkts-arkui-pagetransitioncallback-t.md)
+- [RouteType](arkts-arkui-routetype-e.md)
+- [SlideEffect](arkts-arkui-slideeffect-e.md)

@@ -14,7 +14,9 @@ function hasVoiceCapability(): boolean
 
 Checks whether a device supports voice calls.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function hasVoiceCapability(): boolean--><!--Device-call-function hasVoiceCapability(): boolean-End-->
 

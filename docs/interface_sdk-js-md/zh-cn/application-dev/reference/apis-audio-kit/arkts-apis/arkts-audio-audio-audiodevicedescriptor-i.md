@@ -2,9 +2,11 @@
 
 描述音频设备。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
 
@@ -16,15 +18,15 @@
 readonly address: string
 ```
 
-设备静态MAC地址。
-
-如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+设备静态MAC地址。 如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,9 +44,11 @@ readonly capabilities?: Array<AudioStreamInfo>
 
 **类型：** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>--><!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>-End-->
 
@@ -58,11 +62,13 @@ readonly channelCounts: Array<int>
 
 支持的通道数。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;int&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -78,11 +84,13 @@ readonly channelMasks: Array<int>
 
 支持的通道掩码。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;int&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -100,9 +108,11 @@ readonly deviceRole: DeviceRole
 
 **类型：** [DeviceRole](arkts-audio-audio-devicerole-e.md)
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,9 +130,11 @@ readonly deviceType: DeviceType
 
 **类型：** DeviceType
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -140,9 +152,11 @@ readonly displayName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -160,9 +174,11 @@ readonly encodingTypes?: Array<AudioEncodingType>
 
 **类型：** Array&lt;[AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -178,11 +194,13 @@ readonly id: int
 
 唯一的设备id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -200,9 +218,11 @@ readonly model?: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly model?: string--><!--Device-AudioDeviceDescriptor-readonly model?: string-End-->
 
@@ -214,15 +234,15 @@ readonly model?: string
 readonly name: string
 ```
 
-设备名称。
-
-如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
+设备名称。 如果是蓝牙设备，需要申请权限ohos.permission.USE_BLUETOOTH。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -238,11 +258,13 @@ readonly sampleRates: Array<int>
 
 支持的采样率。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**类型：** Array&lt;int&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -260,9 +282,11 @@ readonly spatializationSupported?: boolean
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean-End-->
 

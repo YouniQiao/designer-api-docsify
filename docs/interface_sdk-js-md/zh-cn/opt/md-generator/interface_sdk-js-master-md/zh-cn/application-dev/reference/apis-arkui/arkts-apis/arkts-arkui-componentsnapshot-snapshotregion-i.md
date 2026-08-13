@@ -4,6 +4,8 @@
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-componentSnapshot-interface SnapshotRegion--><!--Device-componentSnapshot-interface SnapshotRegion-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@
 bottom: number
 ```
 
-截图区域矩形右下角的y轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件高度]
+截图区域矩形右下角的y轴坐标。 单位：px 取值范围：[0, 组件高度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +38,13 @@ bottom: number
 left: number
 ```
 
-截图区域矩形左上角的x轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件宽度]
+截图区域矩形左上角的x轴坐标。 单位：px 取值范围：[0, 组件宽度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,15 +60,13 @@ left: number
 right: number
 ```
 
-截图区域矩形右下角的x轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件宽度]
+截图区域矩形右下角的x轴坐标。 单位：px 取值范围：[0, 组件宽度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,15 +82,13 @@ right: number
 top: number
 ```
 
-截图区域矩形左上角的y轴坐标。
-
-单位：px 
-
-取值范围：[0, 组件高度]
+截图区域矩形左上角的y轴坐标。 单位：px 取值范围：[0, 组件高度]
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

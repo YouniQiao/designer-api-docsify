@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class PanGesture extends Gesture--><!--Device-unnamed-export declare class PanGesture extends Gesture-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class PanGesture--><!--Device-unnamed-export declare class PanGesture-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ static $_instantiate(factory: () => PanGesture, value?: PanGestureHandlerOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,6 +59,8 @@ onActionCancel(event: Callback<GestureEvent>): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanGesture-onActionCancel(event: Callback<GestureEvent>): this--><!--Device-PanGesture-onActionCancel(event: Callback<GestureEvent>): this-End-->
@@ -84,6 +90,8 @@ onActionEnd(event: Callback<GestureEvent>): this
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,6 +123,8 @@ onActionStart(event: Callback<GestureEvent>): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanGesture-onActionStart(event: Callback<GestureEvent>): this--><!--Device-PanGesture-onActionStart(event: Callback<GestureEvent>): this-End-->
@@ -144,6 +154,8 @@ onActionUpdate(event: Callback<GestureEvent>): this
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

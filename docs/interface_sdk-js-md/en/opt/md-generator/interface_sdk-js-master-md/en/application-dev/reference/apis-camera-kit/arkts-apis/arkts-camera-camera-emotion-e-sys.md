@@ -1,0 +1,93 @@
+# Emotion (System API)
+
+Enumerates the types of emotions in the detected human face information.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-camera-enum Emotion--><!--Device-camera-enum Emotion-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## NEUTRAL
+
+```TypeScript
+NEUTRAL = 0
+```
+
+Neutral.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Emotion-NEUTRAL = 0--><!--Device-Emotion-NEUTRAL = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## SADNESS
+
+```TypeScript
+SADNESS = 1
+```
+
+Sad.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Emotion-SADNESS = 1--><!--Device-Emotion-SADNESS = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## SMILE
+
+```TypeScript
+SMILE = 2
+```
+
+Smile.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Emotion-SMILE = 2--><!--Device-Emotion-SMILE = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## SURPRISE
+
+```TypeScript
+SURPRISE = 3
+```
+
+Surprise.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-Emotion-SURPRISE = 3--><!--Device-Emotion-SURPRISE = 3-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.

@@ -12,7 +12,7 @@ Distributed service instance id.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DISTRIBUTED_SERVICE_INSTANCE_ID](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param#DISTRIBUTED_SERVICE_INSTANCE_ID)
+**Substitutes:** DISTRIBUTED_SERVICE_INSTANCE_ID
 
 <!--Device-Param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string--><!--Device-Param-const DISTRIBUTED_SERVICE_INSTANCE_ID: string-End-->
 
@@ -30,7 +30,7 @@ Distributed service name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DISTRIBUTED_SERVICE_NAME](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param#DISTRIBUTED_SERVICE_NAME)
+**Substitutes:** DISTRIBUTED_SERVICE_NAME
 
 <!--Device-Param-const DISTRIBUTED_SERVICE_NAME: string--><!--Device-Param-const DISTRIBUTED_SERVICE_NAME: string-End-->
 
@@ -48,7 +48,7 @@ User id.
 
 **Deprecated since:** 9
 
-**Substitutes:** [USER_ID](ohos.hiviewdfx.hiAppEvent/hiAppEvent.Param#USER_ID)
+**Substitutes:** USER_ID
 
 <!--Device-Param-const USER_ID: string--><!--Device-Param-const USER_ID: string-End-->
 

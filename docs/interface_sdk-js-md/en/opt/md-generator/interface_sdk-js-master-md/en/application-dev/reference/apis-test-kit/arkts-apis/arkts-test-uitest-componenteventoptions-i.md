@@ -1,8 +1,10 @@
 # ComponentEventOptions
 
-Describes the extended configuration of component operation event listening,which is used to specify the listening process configuration and event filtering conditions.
+Describes the extended configuration of component operation event listening, which is used to specify the listening process configuration and event filtering conditions.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ComponentEventOptions--><!--Device-unnamed-declare interface ComponentEventOptions-End-->
 
@@ -20,15 +22,15 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 on?: On
 ```
 
-Attribute requirements of the target component to listen for. By default, all components are listened for.  
-**Note：**: Only components with specified attributes can be listened for. Components with relative positions such as
-**On.isBefore**, **On.isAfter**, and **On.within** cannot be listened for.
+Attribute requirements of the target component to listen for. By default, all components are listened for. **Note：**: Only components with specified attributes can be listened for. Components with relative positions such as **On.isBefore**, **On.isAfter**, and **On.within** cannot be listened for.
 
 **Type:** [On](arkts-test-uitest-on-c.md)
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventOptions-on?: On--><!--Device-ComponentEventOptions-on?: On-End-->
 
@@ -44,9 +46,11 @@ Listening timeout interval, in milliseconds. The value is an integer greater tha
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventOptions-timeout?: int--><!--Device-ComponentEventOptions-timeout?: int-End-->
 

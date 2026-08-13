@@ -2,9 +2,11 @@
 
 Enumerates certificate types obtained from CMS.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum CmsCertType--><!--Device-cert-enum CmsCertType-End-->
 
@@ -18,11 +20,13 @@ SIGNER_CERTS = 0
 
 Signer certificates.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsCertType-SIGNER_CERTS = 0--><!--Device-CmsCertType-SIGNER_CERTS = 0-End-->
 
@@ -36,11 +40,13 @@ ALL_CERTS = 1
 
 All certificates.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsCertType-ALL_CERTS = 1--><!--Device-CmsCertType-ALL_CERTS = 1-End-->
 

@@ -4,6 +4,8 @@ Describes the returned paragraph information.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorParagraphResult--><!--Device-unnamed-declare interface RichEditorParagraphResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Start and end positions of the paragraph.
 **Type:** [number, number]
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Paragraph style.
 **Type:** [RichEditorParagraphStyle](arkts-arkui-richeditorparagraphstyle-i.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,12 @@
 # MouseHistoricalPoint
 
-Mouse event historical point information.
-
-Historical points are arranged in chronological order. The first historical point obtained is the earliest event, and the last is the most recent event. The number of historical points depends on the system event queue configuration and hardware performance. Historical points are mainly used for the following scenarios:
-
-1. Smooth drawing: Historical points enable smoother drawing effects, especially when the mouse moves quickly.2. Gesture recognition: By analyzing the trajectory of historical points, various mouse gestures can be recognized.3. Performance optimization: Processing multiple historical points in one event callback reduces event processing frequency and improves performance.4. Trajectory analysis: Analyzing mouse movement trajectories for drawing applications or gesture control.5. Data analysis: The **timestamp** in historical points can be used to calculate mouse movement speed.
+Mouse event historical point information. Historical points are arranged in chronological order. The first historical point obtained is the earliest event, and the last is the most recent event. The number of historical points depends on the system event queue configuration and hardware performance. Historical points are mainly used for the following scenarios: 1. Smooth drawing: Historical points enable smoother drawing effects, especially when the mouse moves quickly. 2. Gesture recognition: By analyzing the trajectory of historical points, various mouse gestures can be recognized. 3. Performance optimization: Processing multiple historical points in one event callback reduces event processing frequency and improves performance. 4. Trajectory analysis: Analyzing mouse movement trajectories for drawing applications or gesture control. 5. Data analysis: The **timestamp** in historical points can be used to calculate mouse movement speed.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface MouseHistoricalPoint--><!--Device-unnamed-declare interface MouseHistoricalPoint-End-->
 
@@ -20,15 +18,15 @@ Historical points are arranged in chronological order. The first historical poin
 displayX: double
 ```
 
-X coordinate of the mouse pointer relative to the upper-left corner of the entire screen.
-
-Unit: vp
+X coordinate of the mouse pointer relative to the upper-left corner of the entire screen. Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,15 +42,15 @@ Unit: vp
 displayY: double
 ```
 
-Y coordinate of the mouse pointer relative to the upper-left corner of the entire screen.
-
-Unit: vp
+Y coordinate of the mouse pointer relative to the upper-left corner of the entire screen. Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,16 +66,15 @@ Unit: vp
 globalDisplayX: double
 ```
 
-X coordinate of the mouse position in the  
-[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
-
-Unit: vp
+X coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,16 +90,15 @@ Unit: vp
 globalDisplayY: double
 ```
 
-Y coordinate of the mouse position in the  
-[global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system).
-
-Unit: vp
+Y coordinate of the mouse position in the [global coordinate system](../../../windowmanager/window-terminology.md#global-coordinate-system). Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,15 +114,15 @@ Unit: vp
 timestamp: long
 ```
 
-Timestamp of the mouse event.
-
-Unit: ns
+Timestamp of the mouse event. Unit: ns
 
 **Type:** long
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,15 +138,15 @@ Unit: ns
 windowX: double
 ```
 
-X coordinate of the mouse pointer relative to the upper-left corner of the application window.
-
-Unit: vp
+X coordinate of the mouse pointer relative to the upper-left corner of the application window. Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,15 +162,15 @@ Unit: vp
 windowY: double
 ```
 
-Y coordinate of the mouse pointer relative to the upper-left corner of the application window.
-
-Unit: vp
+Y coordinate of the mouse pointer relative to the upper-left corner of the application window. Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,15 +186,15 @@ Unit: vp
 x: double
 ```
 
-X coordinate of the mouse pointer relative to the upper-left corner of the clicked component.
-
-Unit: vp
+X coordinate of the mouse pointer relative to the upper-left corner of the clicked component. Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -214,15 +210,15 @@ Unit: vp
 y: double
 ```
 
-Y coordinate of the mouse pointer relative to the upper-left corner of the clicked component.
-
-Unit: vp
+Y coordinate of the mouse pointer relative to the upper-left corner of the clicked component. Unit: vp
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

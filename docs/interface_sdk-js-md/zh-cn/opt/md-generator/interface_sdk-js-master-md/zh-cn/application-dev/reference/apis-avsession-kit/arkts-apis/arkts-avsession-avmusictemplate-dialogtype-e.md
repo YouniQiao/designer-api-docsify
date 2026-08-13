@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avMusicTemplate-enum DialogType--><!--Device-avMusicTemplate-enum DialogType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ NORMAL = 0
 普通对话框。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ INTERNET = 1
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogType-INTERNET = 1--><!--Device-DialogType-INTERNET = 1-End-->
@@ -49,6 +55,8 @@ FLOW = 2
 流程对话框。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ PAID = 3
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogType-PAID = 3--><!--Device-DialogType-PAID = 3-End-->
@@ -81,6 +91,8 @@ VIP = 4
 VIP对话框。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +110,8 @@ LOGIN = 5
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogType-LOGIN = 5--><!--Device-DialogType-LOGIN = 5-End-->
@@ -114,6 +128,8 @@ ERROR = 6
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogType-ERROR = 6--><!--Device-DialogType-ERROR = 6-End-->
@@ -129,6 +145,8 @@ UNKNOWN = 7
 未知对话框。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

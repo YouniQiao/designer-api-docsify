@@ -2,7 +2,9 @@
 
 Defines the optional parameters carried in the request for establishing a WebSocket connection.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-webSocket-export interface WebSocketRequestOptions--><!--Device-webSocket-export interface WebSocketRequestOptions-End-->
 
@@ -24,7 +26,9 @@ File path for client cert.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketRequestOptions-caPath?: string--><!--Device-WebSocketRequestOptions-caPath?: string-End-->
 
@@ -40,7 +44,9 @@ Client cert.
 
 **Type:** ClientCert
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketRequestOptions-clientCert?: ClientCert--><!--Device-WebSocketRequestOptions-clientCert?: ClientCert-End-->
 
@@ -49,18 +55,20 @@ Client cert.
 ## header
 
 ```TypeScript
-header?: Object
+header?: Record<string, string>
 ```
 
 HTTP request header.
 
-**Type:** Object
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-WebSocketRequestOptions-header?: Object--><!--Device-WebSocketRequestOptions-header?: Object-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebSocketRequestOptions-header?: Record<string, string>--><!--Device-WebSocketRequestOptions-header?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -76,6 +84,8 @@ The minimum support version of TLS protocol.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol--><!--Device-WebSocketRequestOptions-minSupportTlsProtocol?: TlsProtocol-End-->
@@ -88,11 +98,13 @@ The minimum support version of TLS protocol.
 pingInterval?: number
 ```
 
-Self defined interval of ping frame.default: 30. disable: 0. max: 30000. unit:second.Ping is performed at every pingInterval.
+Self defined interval of ping frame. default: 30. disable: 0. max: 30000. unit:second. Ping is performed at every pingInterval.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketRequestOptions-pingInterval?: int--><!--Device-WebSocketRequestOptions-pingInterval?: int-End-->
 
@@ -104,11 +116,13 @@ Self defined interval of ping frame.default: 30. disable: 0. max: 30000. unit:se
 pongTimeout?: number
 ```
 
-Self defined timeout of pong frame.default: 30. max: 30000. unit:second. The value must be less than or equal to pingInterval.If no pong is received within the pongTimeout period, the websocket connection will be disconnected.
+Self defined timeout of pong frame. default: 30. max: 30000. unit:second. The value must be less than or equal to pingInterval. If no pong is received within the pongTimeout period, the websocket connection will be disconnected.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketRequestOptions-pongTimeout?: int--><!--Device-WebSocketRequestOptions-pongTimeout?: int-End-->
 
@@ -126,6 +140,8 @@ Self defined protocol.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-WebSocketRequestOptions-protocol?: string--><!--Device-WebSocketRequestOptions-protocol?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -142,6 +158,8 @@ HTTP proxy configuration. Use 'system' if this field is not set.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration--><!--Device-WebSocketRequestOptions-proxy?: ProxyConfiguration-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -156,7 +174,9 @@ Whether or not to skip the verification of the server's certification.
 
 **Type:** boolean
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean--><!--Device-WebSocketRequestOptions-skipServerCertVerification?: boolean-End-->
 
@@ -173,6 +193,8 @@ The option of supporting origin port.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

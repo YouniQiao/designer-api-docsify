@@ -14,7 +14,9 @@ function deleteExcludeDates(reminderId: number): Promise<void>
 
 Deletes all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>-End-->
 
@@ -36,8 +38,8 @@ Deletes all non-reminder dates for a recurring calendar reminder with a specific
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) |
 
 ## Examples
 

@@ -1,21 +1,10 @@
 # ComposeTitleBar
 
-**ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture (optional). It can come with a Back button for switching between pages of different levels.
-
-> **NOTE：**
-> 
-> - This component can be used only in the stage model.
-> 
-> - If the **ComposeTitleBar** component has [universal attributes](./@internal/component/ets/common) and
-> [universal events](./@internal/component/ets/common) configured, the compiler toolchain automatically
-> generates an additional **__Common__** node and mounts the universal attributes and universal events on this node
-> rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and
-> universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes
-> and events with the **ComposeTitleBar** component.
+**ComposeTitleBar** represents a common title bar that contains a title, subtitle (optional), and profile picture ( optional). It can come with a Back button for switching between pages of different levels. > **NOTE：**> > - This component can be used only in the stage model. > > - If the **ComposeTitleBar** component has universal attributes and > universal events configured, the compiler toolchain automatically > generates an additional **__Common__** node and mounts the universal attributes and universal events on this node > rather than the **ComposeTitleBar** component itself. As a result, the configured universal attributes and > universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes > and events with the **ComposeTitleBar** component.
 
 **Since:** 10
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ComposeTitleBar--><!--Device-unnamed-export declare struct ComposeTitleBar-End-->
 
@@ -39,6 +28,8 @@ A single menu item for the profile picture on the left.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -58,6 +49,8 @@ List of menu items on the right.
 **Type:** Array&lt;[ComposeTitleBarMenuItem](arkts-arkui-arkui-advanced-composetitlebar-composetitlebarmenuitem-c.md)&gt;
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +72,8 @@ Subtitle.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -98,6 +93,8 @@ Title.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

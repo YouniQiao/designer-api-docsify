@@ -1,11 +1,10 @@
 # AutoDeviceSwitchQuery
 
-**AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch.
+**AutoDeviceSwitchQuery** is used to check whether a device supports automatic camera switch. [Automatic Camera Switching](arkts-camera-camera-autodeviceswitch-i.md#enableAutoDeviceSwitch) is supported only on foldable devices. For details about how to enable this capability, see [enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableAutoDeviceSwitch).
 
-[Automatic Camera Switching](arkts-camera-camera-autodeviceswitch-i.md#enableAutoDeviceSwitch) is supported only on foldable devices. For details about how to enable this capability, see   
-[enableAutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#enableAutoDeviceSwitch).
+**Since:** 23
 
-**Since:** 13
+**Deprecated since:** -1
 
 <!--Device-camera-interface AutoDeviceSwitchQuery--><!--Device-camera-interface AutoDeviceSwitchQuery-End-->
 
@@ -25,7 +24,9 @@ isAutoDeviceSwitchSupported(): boolean
 
 Checks whether the device supports automatic camera switch.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -43,4 +44,4 @@ Checks whether the device supports automatic camera switch.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

@@ -6,7 +6,7 @@ Wi-Fi station information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [StationInfo](ohos.wifiManager/wifiManager.StationInfo)
+**Substitutes:** [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md#StationInfo-(System-API))
 
 <!--Device-wifi-interface StationInfo--><!--Device-wifi-interface StationInfo-End-->
 
@@ -34,7 +34,7 @@ The IP address of the Wi-Fi client
 
 **Deprecated since:** 9
 
-**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.StationInfo.ipAddress)
+**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#ipAddress)
 
 <!--Device-StationInfo-ipAddress: string--><!--Device-StationInfo-ipAddress: string-End-->
 
@@ -56,7 +56,7 @@ The MAC address of the Wi-Fi client
 
 **Deprecated since:** 9
 
-**Substitutes:** [macAddress](ohos.wifiManager/wifiManager.StationInfo.macAddress)
+**Substitutes:** [macAddress](arkts-connectivity-wifimanager-stationinfo-i-sys.md#macAddress)
 
 <!--Device-StationInfo-macAddress: string--><!--Device-StationInfo-macAddress: string-End-->
 
@@ -78,7 +78,7 @@ the network name of the Wi-Fi client
 
 **Deprecated since:** 9
 
-**Substitutes:** [name](ohos.wifiManager/wifiManager.StationInfo.name)
+**Substitutes:** [name](arkts-connectivity-wifimanager-stationinfo-i-sys.md#name)
 
 <!--Device-StationInfo-name: string--><!--Device-StationInfo-name: string-End-->
 

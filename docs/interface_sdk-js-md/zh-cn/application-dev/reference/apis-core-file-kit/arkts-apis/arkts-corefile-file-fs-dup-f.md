@@ -12,6 +12,8 @@ declare function dup(fd: number): File
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function dup(fd: number): File--><!--Device-unnamed-declare function dup(fd: number): File-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

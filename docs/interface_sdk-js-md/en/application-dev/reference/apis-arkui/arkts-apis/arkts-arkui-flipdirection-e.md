@@ -6,6 +6,8 @@ Enumerates the directions of the flip animation. The default value is **DOWN**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FlipDirection--><!--Device-unnamed-declare enum FlipDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Content flips downward.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Content flips upward.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

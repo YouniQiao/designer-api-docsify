@@ -4,6 +4,8 @@ Define html web message port.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Close port.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessagePort-close(): void--><!--Device-WebMessagePort-close(): void-End-->
@@ -39,6 +43,8 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 Receive message from other port.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,8 +62,8 @@ Receive message from other port.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) |
 
 ## onMessageEventExt
 
@@ -68,6 +74,8 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 Receive message from other port.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,8 +93,8 @@ Receive message from other port.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100006](../errorcode-webview.md#17100006-message-port-callback-cannot-be-registered) |
 
 ## postMessageEvent
 
@@ -97,6 +105,8 @@ postMessageEvent(message: WebMessage): void
 Post a message to other port.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -114,8 +124,8 @@ Post a message to other port.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) |
 
 ## postMessageEventExt
 
@@ -126,6 +136,8 @@ postMessageEventExt(message: WebMessageExt): void
 Post a message to other port.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -143,8 +155,8 @@ Post a message to other port.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100010](../errorcode-webview.md#17100010-failure-to-send-messages-through-a-port) |
 
 ## isExtentionType
 
@@ -157,6 +169,8 @@ The flag indicates whether more formats are supported than string and array buff
 **Type:** boolean
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,9 +4,11 @@
 declare type AccessibilityActionInterceptCallback = (action: AccessibilityAction) => AccessibilityActionInterceptResult
 ```
 
-定义在可访问性操作拦截中使用的回调类型。action的值表示可访问性动作类型。
+定义在可访问性操作拦截中使用的回调类型。 action的值表示可访问性动作类型。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

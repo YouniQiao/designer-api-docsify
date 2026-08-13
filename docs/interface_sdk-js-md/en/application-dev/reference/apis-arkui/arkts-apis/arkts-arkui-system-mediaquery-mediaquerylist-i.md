@@ -6,6 +6,8 @@ Defines the MediaQuery list info.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface MediaQueryList--><!--Device-unnamed-export interface MediaQueryList-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,11 +24,13 @@ import { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
 addListener(callback: (event: MediaQueryEvent) => void): void
 ```
 
-Adds a listening function to MediaQueryList.The listening function must be added before onShow is called, that is, added to the onInit or onReady function.
+Adds a listening function to MediaQueryList. The listening function must be added before onShow is called, that is, added to the onInit or onReady function.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,30 +44,6 @@ Adds a listening function to MediaQueryList.The listening function must be added
 | --- | --- | --- | --- |
 | callback | (event: MediaQueryEvent) =&gt; void | Yes |  |
 
-## onchange
-
-```TypeScript
-onchange?: (matches: boolean) => void
-```
-
-Called when the matches value changes.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MediaQueryList-onchange?: (matches: boolean) => void--><!--Device-MediaQueryList-onchange?: (matches: boolean) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| matches | boolean | Yes |  |
-
 ## removeListener
 
 ```TypeScript
@@ -75,6 +55,8 @@ Removes a listening function from MediaQueryList.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,13 +76,15 @@ Removes a listening function from MediaQueryList.
 matches?: boolean
 ```
 
-Whether the query is successful. True if the query condition is matched successfully, false otherwise.This parameter is read-only.
+Whether the query is successful. True if the query condition is matched successfully, false otherwise. This parameter is read-only.
 
 **Type:** boolean
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,7 +98,7 @@ Whether the query is successful. True if the query condition is matched successf
 media?: string
 ```
 
-Serialized media query condition.This parameter is read-only.
+Serialized media query condition. This parameter is read-only.
 
 **Type:** string
 
@@ -122,9 +106,33 @@ Serialized media query condition.This parameter is read-only.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaQueryList-media?: string--><!--Device-MediaQueryList-media?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onchange
+
+```TypeScript
+onchange?: (matches: boolean) => void
+```
+
+Called when the matches value changes.
+
+**Type:** (matches: boolean) =&gt; void
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MediaQueryList-onchange?: (matches: boolean) => void--><!--Device-MediaQueryList-onchange?: (matches: boolean) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

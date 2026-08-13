@@ -2,11 +2,37 @@
 
 Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。Queue基于循环队列的数据结构实现。
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-unnamed-declare class Queue<T>--><!--Device-unnamed-declare class Queue<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class Queue--><!--Device-unnamed-declare class Queue-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+返回一个迭代器，每一项都是一个ArkTS对象。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-$_iterator(): IterableIterator<T>--><!--Device-Queue-$_iterator(): IterableIterator<T>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -17,6 +43,8 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 返回一个迭代器，每一项为T类型的元素。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +62,7 @@ Queue遵循先进先出原则：在尾部增加元素，在头部删除元素。
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -77,7 +105,9 @@ add(element: T): boolean
 
 在队列尾部插入元素，插入成功则返回true，队列长度增加，否则返回false。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -101,7 +131,7 @@ add(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -130,7 +160,9 @@ constructor()
 
 Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue容器类使用静态语言实现，限制了存储位置和属性，不支持自定义属性和方法。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -142,7 +174,7 @@ Queue的构造函数，创建一个新的Queue实例，初始长度为0。Queue�
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -162,6 +194,8 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void--><!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void-End-->
@@ -179,7 +213,7 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -199,6 +233,32 @@ queue.forEach((value: number, index: number): void => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: QueueForEachCb<T>): void
+```
+
+在遍历队列对象中每一个元素的过程中，对每个元素执行回调函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Queue-forEach(callbackFn: QueueForEachCb<T>): void--><!--Device-Queue-forEach(callbackFn: QueueForEachCb<T>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | 是 |
+
 ## getFirst
 
 ```TypeScript
@@ -207,7 +267,9 @@ getFirst(): T
 
 获取队列的头元素（不会删除队列的头元素）。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -225,8 +287,8 @@ getFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -249,7 +311,9 @@ pop(): T
 
 删除队列头部元素，并返回被删除元素。当Queue为空时，返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -267,8 +331,8 @@ pop(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -295,6 +359,8 @@ Queue的元素个数。
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

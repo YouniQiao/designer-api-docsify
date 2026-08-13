@@ -6,18 +6,13 @@
 function replace(options: RouterOptions): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../ui/arkts-navigation-architecture.md)。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl-1)替代。
+用应用内的某个页面替换当前页面，并销毁被替换的页面。不支持设置页面转场动效，如需设置，推荐使用[Navigation组件](../../../ui/arkts-navigation-architecture.md)。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃，建议使用 > [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [replaceUrl](@ohos.arkui.UIContext:Router#replaceUrl(options:)
+**替代接口：** [replaceUrl](arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)(options: router.RouterOptions)
 
 <!--Device-router-function replace(options: RouterOptions): void--><!--Device-router-function replace(options: RouterOptions): void-End-->
 

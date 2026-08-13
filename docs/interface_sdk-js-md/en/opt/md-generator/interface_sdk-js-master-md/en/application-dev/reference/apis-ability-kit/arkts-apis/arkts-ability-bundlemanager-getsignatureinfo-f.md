@@ -14,7 +14,9 @@ function getSignatureInfo(uid: number): SignatureInfo
 
 Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo) of an application based on the given UID.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SIGNATURE_INFO
 
@@ -38,8 +40,8 @@ Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17700021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-invalid-uid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17700021](../errorcode-bundle.md#17700021-invalid-uid) |
 
 ## Examples
 

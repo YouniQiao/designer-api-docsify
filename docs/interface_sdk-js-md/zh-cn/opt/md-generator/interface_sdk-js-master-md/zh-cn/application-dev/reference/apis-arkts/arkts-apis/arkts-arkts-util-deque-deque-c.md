@@ -2,11 +2,37 @@
 
 Deque（double-ended queue）基于循环队列的数据结构实现，支持两端元素的插入和删除。Deque同时具备先进先出以及先进后出的特点，可根据操作端的不同同时作为队列和栈使用。当现有容量不足以容纳新插入的元素时，Deque会动态调整容量，每次扩容两倍，无需手动预设容量。
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-unnamed-declare class Deque<T>--><!--Device-unnamed-declare class Deque<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class Deque--><!--Device-unnamed-declare class Deque-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+返回一个迭代器，每一项都是一个ArkTS对象。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-$_iterator(): IterableIterator<T>--><!--Device-Deque-$_iterator(): IterableIterator<T>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -17,6 +43,8 @@ Deque（double-ended queue）基于循环队列的数据结构实现，支持两
 返回一个迭代器，按插入顺序遍历Deque中的元素，迭代器每项为T类型的元素。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +62,7 @@ Deque（double-ended queue）基于循环队列的数据结构实现，支持两
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -81,7 +109,9 @@ constructor()
 
 Deque的构造函数，用于创建一个基于循环队列数据结构的空Deque实例。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -93,7 +123,7 @@ Deque的构造函数，用于创建一个基于循环队列数据结构的空Deq
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -112,6 +142,8 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void--><!--Device-Deque-forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisArg?: Object): void-End-->
@@ -129,7 +161,7 @@ forEach(callbackFn: (value: T, index?: number, deque?: Deque<T>) => void, thisAr
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -152,6 +184,30 @@ deque.forEach((value: number, index: number): void => {
  */
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: DequeForEachCb<T>): void
+```
+
+通过回调函数遍历Deque实例中的每个元素。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Deque-forEach(callbackFn: DequeForEachCb<T>): void--><!--Device-Deque-forEach(callbackFn: DequeForEachCb<T>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [DequeForEachCb](arkts-arkts-dequeforeachcb-t.md)&lt;T&gt; | 是 |
+
 ## getFirst
 
 ```TypeScript
@@ -160,7 +216,9 @@ getFirst(): T
 
 获取Deque实例的头元素，不删除该元素。调用后，Deque的内容和长度不变。如需删除并返回首元素，请使用popFirst。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -178,8 +236,8 @@ getFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -203,7 +261,9 @@ getLast(): T
 
 获取Deque实例的尾元素，不删除该元素。调用后，Deque的内容和长度不变。如需删除并返回尾元素，请使用popLast。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -221,8 +281,8 @@ getLast(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -246,7 +306,9 @@ has(element: T): boolean
 
 判断此Deque中是否包含指定元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -270,7 +332,7 @@ has(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -292,7 +354,9 @@ insertEnd(element: T): void
 
 在Deque尾部插入元素。插入成功后Deque的元素个数增加1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -310,7 +374,7 @@ insertEnd(element: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -342,7 +406,9 @@ insertFront(element: T): void
 
 在Deque头部插入元素。插入成功后Deque的元素个数增加1。Deque在头部插入元素的效率高于ArrayList。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -360,7 +426,7 @@ insertFront(element: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -392,7 +458,9 @@ popFirst(): T
 
 删除并返回Deque的首元素。删除成功后Deque的元素个数减少1。Deque在头部删除元素的效率高于ArrayList。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -410,8 +478,8 @@ popFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -436,7 +504,9 @@ popLast(): T
 
 删除并返回Deque的尾元素。删除成功后Deque的元素个数减少1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -454,8 +524,8 @@ popLast(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -483,6 +553,8 @@ Deque的元素个数。
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

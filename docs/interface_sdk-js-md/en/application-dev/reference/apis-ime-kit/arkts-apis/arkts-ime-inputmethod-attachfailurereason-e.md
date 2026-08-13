@@ -2,9 +2,11 @@
 
 Enumerates the specific reasons for attachment failure
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export enum AttachFailureReason--><!--Device-inputMethod-export enum AttachFailureReason-End-->
 
@@ -18,9 +20,11 @@ CALLER_NOT_FOCUSED = 0
 
 The attachment failure reason is CALLER_NOT_FOCUSED.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AttachFailureReason-CALLER_NOT_FOCUSED = 0--><!--Device-AttachFailureReason-CALLER_NOT_FOCUSED = 0-End-->
 
@@ -34,9 +38,11 @@ IME_ABNORMAL
 
 The attachment failure reason is IME_ABNORMAL.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AttachFailureReason-IME_ABNORMAL--><!--Device-AttachFailureReason-IME_ABNORMAL-End-->
 
@@ -50,9 +56,11 @@ SERVICE_ABNORMAL
 
 The attachment failure reason is SERVICE_ABNORMAL.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AttachFailureReason-SERVICE_ABNORMAL--><!--Device-AttachFailureReason-SERVICE_ABNORMAL-End-->
 

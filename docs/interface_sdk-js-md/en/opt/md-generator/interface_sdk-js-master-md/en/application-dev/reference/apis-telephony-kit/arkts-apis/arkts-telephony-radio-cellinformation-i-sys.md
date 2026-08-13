@@ -2,7 +2,9 @@
 
 Obtains current cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface CellInformation--><!--Device-radio-export interface CellInformation-End-->
 
@@ -25,7 +27,9 @@ Obtains signal strength under different network formats.
 
 **Type:** [CdmaCellInformation](arkts-telephony-radio-cdmacellinformation-i-sys.md) \| [GsmCellInformation](arkts-telephony-radio-gsmcellinformation-i-sys.md) \| [LteCellInformation](arkts-telephony-radio-ltecellinformation-i-sys.md) \| [NrCellInformation](arkts-telephony-radio-nrcellinformation-i-sys.md) \| [TdscdmaCellInformation](arkts-telephony-radio-tdscdmacellinformation-i-sys.md) \| [WcdmaCellInformation](arkts-telephony-radio-wcdmacellinformation-i-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CellInformation-data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInformation | TdscdmaCellInformation      | WcdmaCellInformation--><!--Device-CellInformation-data: CdmaCellInformation | GsmCellInformation | LteCellInformation | NrCellInformation | TdscdmaCellInformation      | WcdmaCellInformation-End-->
 
@@ -39,13 +43,13 @@ Obtains signal strength under different network formats.
 isCamped: boolean
 ```
 
-Obtains the camp-on status of the serving cell.
-
-Returns {@code true} if the user equipment (UE) is camped on the cell; returns {@code false} otherwise.
+Obtains the camp-on status of the serving cell. Returns {@code true} if the user equipment (UE) is camped on the cell; returns {@code false} otherwise.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CellInformation-isCamped: boolean--><!--Device-CellInformation-isCamped: boolean-End-->
 
@@ -59,13 +63,13 @@ Returns {@code true} if the user equipment (UE) is camped on the cell; returns {
 timeStamp: number
 ```
 
-Obtains the timestamp when the cell information is obtained.
-
-Returns a timestamp since boot, in nanoseconds.
+Obtains the timestamp when the cell information is obtained. Returns a timestamp since boot, in nanoseconds.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CellInformation-timeStamp: int--><!--Device-CellInformation-timeStamp: int-End-->
 

@@ -1,17 +1,10 @@
 # PromptAction
 
-创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。
-
-> **说明：**
-> 
-> - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> - 本Class首批接口从API version 10开始支持。
-> 
-> - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取到
- PromptAction对象，再通过该对象调用对应方法。
+创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 > **说明：** > > - 本模块首批接口从API version 10开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getPromptAction()](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取到 PromptAction对象，再通过该对象调用对应方法。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class PromptAction--><!--Device-unnamed-export class PromptAction-End-->
 
@@ -26,6 +19,8 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 关闭已弹出的dialogContent对应的自定义弹窗，使用Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,9 +46,9 @@ closeCustomDialog<T extends Object>(dialogContent: ComponentContent<T>): Promise
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## closeCustomDialog
 
@@ -64,6 +59,8 @@ closeCustomDialog(dialogId: number): void
 关闭自定义弹窗。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,8 +80,8 @@ closeCustomDialog(dialogId: number): void
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## closeMenu
 
@@ -95,6 +92,8 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 关闭content对应的Menu弹窗。使用Promise异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,9 +119,9 @@ closeMenu<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## closePopup
 
@@ -133,6 +132,8 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 关闭content对应的Popup弹窗，使用Promise异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,9 +159,9 @@ closePopup<T extends Object>(content: ComponentContent<T>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## closeToast
 
@@ -171,6 +172,8 @@ closeToast(toastId: number): void
 关闭即时反馈。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -190,9 +193,9 @@ closeToast(toastId: number): void
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103401-无法找到对应的文本提示框) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103401](../errorcode-promptAction.md#103401-无法找到对应的文本提示框) |
 
 ## getBottomOrder
 
@@ -203,6 +206,8 @@ getBottomOrder(): LevelOrder
 获取最底层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -224,11 +229,11 @@ getBottomOrder(): LevelOrder
 getTopOrder(): LevelOrder
 ```
 
-返回最顶层显示的弹窗的顺序。
-
-获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
+返回最顶层显示的弹窗的顺序。 获取最顶层显示的弹窗的顺序，可以在下一个弹窗时指定期望的顺序。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -250,9 +255,11 @@ getTopOrder(): LevelOrder
 openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
+创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示， 即相当于customDialog设置customStyle为true时的显示效果。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -279,9 +286,9 @@ openCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options?:
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
 
 ## openCustomDialog
 
@@ -292,6 +299,8 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -317,8 +326,8 @@ openCustomDialog(options: promptAction.CustomDialogOptions): Promise<number>
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## openCustomDialogWithController
 
@@ -327,11 +336,11 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
     options?: promptAction.BaseDialogOptions): Promise<void>
 ```
 
-创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
-
-通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
+创建并弹出dialogContent对应的自定义弹窗，使用Promise异步回调。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。 通过该接口弹出的弹窗内容样式完全按照dialogContent中设置的样式显示，即相当于customDialog设置customStyle为true时的显示效果。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -359,9 +368,9 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
 
 ## openMenu
 
@@ -369,22 +378,11 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。
-
-> **说明：**
-> 
-> - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。
-> 
-> - 由于[updateMenu](#updateMenu)和[closeMenu](#closeMenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。
-> 
-> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup)、
- [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)组件），则  
- [ComponentContent](arkts-arkui-componentcontent-c.md#ComponentContent)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。  
-> 
-> - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](#openMenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了
- showInSubWindow为true的弹窗。
+创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 > > - 由于[updateMenu](#updateMenu)和[closeMenu](#closeMenu)依赖content去更新或者关闭指定的menu弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、 [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)组件），则 [ComponentContent](arkts-arkui-componentcontent-c.md#ComponentContent)应采用带有四个参数的构造函数constructor， 其中options参数应传递{ nestingBuilderSupported: true }。 > > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](#openMenu)设置了showInSubWindow为true时，则不能再弹出另一个设置了 showInSubWindow为true的弹窗。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -412,11 +410,11 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
-| [103305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) |
-| [103304](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103304-指定的targetid不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
+| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) |
+| [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) |
 
 ## openPopup
 
@@ -424,17 +422,11 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: PopupCommonOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。
-
-> **说明：**
-> 
-> - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。
-> 
-> - 由于[updatePopup](#updatePopup)和[closePopup](#closePopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。
-> 
-> - 如果在wrapBuilder中包含其他组件（例如：[Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup)、[Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md#ComponentContent)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
+创建并弹出以content作为内容的Popup弹窗，使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出popup弹窗。 > > - 由于[updatePopup](#updatePopup)和[closePopup](#closePopup)依赖content去更新或者关闭指定的popup弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)组件），则[ComponentContent](arkts-arkui-componentcontent-c.md#ComponentContent)应采用带有四个参数的构造函数constructor，其中options参数应传递{ nestingBuilderSupported: true }。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -462,11 +454,11 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
-| [103305](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) |
-| [103304](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103304-指定的targetid不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103302](../errorcode-promptAction.md#103302-内容节点对应自定义弹窗已存在) |
+| [103305](../errorcode-promptAction.md#103305-指定的targetid对应的节点未挂载在组件树上) |
+| [103304](../errorcode-promptAction.md#103304-指定的targetid不存在) |
 
 ## openToast
 
@@ -477,6 +469,8 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 显示即时反馈。使用Promise异步回调返回即时反馈的id，可供closeToast使用。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -502,8 +496,8 @@ openToast(options: promptAction.ShowToastOptions): Promise<number>
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## presentCustomDialog
 
@@ -512,11 +506,11 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
     options?: promptAction.DialogOptions): Promise<number>
 ```
 
-创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。
-
-支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
+创建并弹出自定义弹窗。使用Promise异步回调返回对话框的id，可供closeCustomDialog使用。 支持在自定义弹窗内容中持有弹窗ID进行对应操作。支持传入弹窗控制器与自定义弹窗绑定，后续可以通过控制器控制自定义弹窗。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -544,8 +538,8 @@ presentCustomDialog(builder: CustomBuilder | CustomBuilderWithId, controller?: p
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## showActionMenu
 
@@ -576,8 +570,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: promptAction.A
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## showActionMenu
 
@@ -588,6 +582,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -608,8 +604,8 @@ showActionMenu(options: promptAction.ActionMenuOptions, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## showActionMenu
 
@@ -620,6 +616,8 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 创建并显示操作菜单，通过Promise异步回调获取菜单的响应结果。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -645,8 +643,8 @@ showActionMenu(options: promptAction.ActionMenuOptions): Promise<promptAction.Ac
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## showDialog
 
@@ -657,6 +655,8 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 创建并显示对话框，对话框响应结果使用callback异步回调返回。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -677,8 +677,8 @@ showDialog(options: promptAction.ShowDialogOptions, callback: AsyncCallback<prom
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## showDialog
 
@@ -689,6 +689,8 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 创建并显示对话框，使用Promise异步回调获取对话框的响应结果。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -714,8 +716,8 @@ showDialog(options: promptAction.ShowDialogOptions): Promise<promptAction.ShowDi
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## showToast
 
@@ -726,6 +728,8 @@ showToast(options: promptAction.ShowToastOptions): void
 创建并显示即时反馈。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -745,8 +749,8 @@ showToast(options: promptAction.ShowToastOptions): void
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## updateCustomDialog
 
@@ -757,6 +761,8 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 更新已弹出的dialogContent对应的自定义弹窗的样式，使用Promise异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -783,9 +789,9 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## updateMenu
 
@@ -793,16 +799,11 @@ updateCustomDialog<T extends Object>(dialogContent: ComponentContent<T>, options
 updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-更新content对应的Menu弹窗的样式。使用Promise异步回调。
-
-> **说明：**
-> 
-> - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、
-> aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。
-> 
-> - 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md#MenuMaskType)实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
+更新content对应的Menu弹窗的样式。使用Promise异步回调。 > **说明：** > > - 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 > aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。 > > - 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-menumasktype-i.md#MenuMaskType)实现更新蒙层样式，不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -830,9 +831,9 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
 
 ## updatePopup
 
@@ -840,13 +841,11 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommonOptions, partialUpdate?: boolean): Promise<void>
 ```
 
-更新content对应的Popup弹窗的样式，使用Promise异步回调。
-
-> **说明：**
-> 
-> 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。
+更新content对应的Popup弹窗的样式，使用Promise异步回调。 > **说明：** > > 不支持更新showInSubWindow、focusable、onStateChange、onWillDismiss、transition。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -874,6 +873,6 @@ updatePopup<T extends Object>(content: ComponentContent<T>, options: PopupCommon
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [103301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
-| [103303](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [103301](../errorcode-promptAction.md#103301-自定义弹窗内容节点错误) |
+| [103303](../errorcode-promptAction.md#103303-无法找到内容节点对应的自定义弹窗) |

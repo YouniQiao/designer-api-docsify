@@ -1,19 +1,14 @@
 # ColumnLayoutAlgorithm
 
-垂直方向线性布局算法类。
-
-> **说明：**
-> 
-> ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](@ohos.arkui.components.ArkDynamicLayout)组件
-> 的入参指定布局算法。
+垂直方向线性布局算法类。 > **说明：** > > ColumnLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为DynamicLayout组件 > 的入参指定布局算法。
 
 **继承/实现关系：** ColumnLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **起始版本：** 24
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
-<!--Device-unnamed-export class ColumnLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export class ColumnLayoutAlgorithm implements LayoutAlgorithm-End-->
+<!--Device-unnamed-export class ColumnLayoutAlgorithm--><!--Device-unnamed-export class ColumnLayoutAlgorithm-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +21,8 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 垂直方向线性布局算法类的构造函数。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,20 +43,16 @@ constructor(option?: ColumnLayoutAlgorithmOptions)
 ## alignItems
 
 ```TypeScript
-public alignItems?: HorizontalAlign
+@Trace public alignItems?: HorizontalAlign
 ```
 
-所有子组件在水平方向上的对齐格式。
-
-默认值：HorizontalAlign.Center 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+所有子组件在水平方向上的对齐格式。 默认值：HorizontalAlign.Center 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** [HorizontalAlign](arkts-arkui-horizontalalign-e.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,28 +60,23 @@ public alignItems?: HorizontalAlign
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ColumnLayoutAlgorithm-public alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithm-public alignItems?: HorizontalAlign-End-->
+<!--Device-ColumnLayoutAlgorithm-@Trace public alignItems?: HorizontalAlign--><!--Device-ColumnLayoutAlgorithm-@Trace public alignItems?: HorizontalAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
 
 ```TypeScript
-public isReverse?: boolean
+@Trace public isReverse?: boolean
 ```
 
-子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性[direction](CommonMethod#direction)影响，如果  
-[direction](CommonMethod#direction)属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。
-
-默认值：false 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+子组件在水平方向上的排列是否反转。取值为true表示子组件在水平方向上反转排列，由于水平方向受通用属性direction影响，如果 direction属性生效，再做一次反转。取值为false表示子组件在水平方向上正序排列。 默认值：false 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** boolean
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,27 +84,23 @@ public isReverse?: boolean
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ColumnLayoutAlgorithm-public isReverse?: boolean--><!--Device-ColumnLayoutAlgorithm-public isReverse?: boolean-End-->
+<!--Device-ColumnLayoutAlgorithm-@Trace public isReverse?: boolean--><!--Device-ColumnLayoutAlgorithm-@Trace public isReverse?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## justifyContent
 
 ```TypeScript
-public justifyContent?: FlexAlign
+@Trace public justifyContent?: FlexAlign
 ```
 
-所有子组件在垂直方向上的对齐格式。
-
-默认值：FlexAlign.Start 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+所有子组件在垂直方向上的对齐格式。 默认值：FlexAlign.Start 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** [FlexAlign](arkts-arkui-flexalign-e.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,27 +108,23 @@ public justifyContent?: FlexAlign
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ColumnLayoutAlgorithm-public justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithm-public justifyContent?: FlexAlign-End-->
+<!--Device-ColumnLayoutAlgorithm-@Trace public justifyContent?: FlexAlign--><!--Device-ColumnLayoutAlgorithm-@Trace public justifyContent?: FlexAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
 
 ```TypeScript
-public space?: LengthMetrics
+@Trace public space?: LengthMetrics
 ```
 
-纵向布局元素垂直方向间距。
-
-默认值：LengthMetrics.vp(0) 
-
-非法值：按默认值处理。
-
-装饰器类型：@Trace
+纵向布局元素垂直方向间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
 **类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -152,6 +132,6 @@ public space?: LengthMetrics
 
 **卡片能力：** 从API版本24开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-ColumnLayoutAlgorithm-public space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithm-public space?: LengthMetrics-End-->
+<!--Device-ColumnLayoutAlgorithm-@Trace public space?: LengthMetrics--><!--Device-ColumnLayoutAlgorithm-@Trace public space?: LengthMetrics-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

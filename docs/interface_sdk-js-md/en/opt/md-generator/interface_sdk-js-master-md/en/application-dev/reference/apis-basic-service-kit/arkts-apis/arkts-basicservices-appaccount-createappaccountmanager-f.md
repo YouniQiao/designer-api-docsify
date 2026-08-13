@@ -14,7 +14,9 @@ function createAppAccountManager(): AppAccountManager
 
 Creates an **AppAccountManager** object.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-function createAppAccountManager(): AppAccountManager--><!--Device-appAccount-function createAppAccountManager(): AppAccountManager-End-->
 

@@ -4,7 +4,9 @@ Represents optional configuration items for AdvancedMeasureFormat object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface AdvancedMeasureFormatOptions--><!--Device-i18n-export interface AdvancedMeasureFormatOptions-End-->
 
@@ -24,11 +26,13 @@ unitUsage?: UnitUsage
 
 Scenarios for MeasureFormat.
 
-**Type:** [UnitUsage](arkts-localization-i18n-unitusage-e.md)
+**Type:** [UnitUsage](../../apis-na/arkts-apis/arkts-na-i18n-unitusage-e.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

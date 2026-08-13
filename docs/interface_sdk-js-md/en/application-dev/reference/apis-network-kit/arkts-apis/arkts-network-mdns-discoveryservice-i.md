@@ -6,6 +6,8 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-mdns-export interface DiscoveryService--><!--Device-mdns-export interface DiscoveryService-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -16,7 +18,7 @@ Defines a DiscoveryService object for discovering mDNS services of the specified
 import { mdns } from '@kit.NetworkKit';
 ```
 
-## off('discoveryStart')
+## off_discoveryStart
 
 ```TypeScript
 off(type: 'discoveryStart', callback?: Callback<DiscoveryEventInfo>): void
@@ -27,6 +29,8 @@ Cancels listening for discoveryStart events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,11 +43,11 @@ Cancels listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -67,7 +71,7 @@ discoveryService.off('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 });
 ```
 
-## off('discoveryStop')
+## off_discoveryStop
 
 ```TypeScript
 off(type: 'discoveryStop', callback?: Callback<DiscoveryEventInfo>): void
@@ -78,6 +82,8 @@ Cancels listening for discoveryStop events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -90,9 +96,9 @@ Cancels listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | No | the callback used to return the result. |
 
-## off('serviceFound')
+## off_serviceFound
 
 ```TypeScript
 off(type: 'serviceFound', callback?: Callback<LocalServiceInfo>): void
@@ -103,6 +109,8 @@ Cancels listening for serviceFound events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,11 +123,11 @@ Cancels listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -146,7 +154,7 @@ discoveryService.off('serviceFound', (data: mdns.LocalServiceInfo) => {
 });
 ```
 
-## off('serviceLost')
+## off_serviceLost
 
 ```TypeScript
 off(type: 'serviceLost', callback?: Callback<LocalServiceInfo>): void
@@ -157,6 +165,8 @@ Cancels listening for serviceLost events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -169,11 +179,11 @@ Cancels listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | No | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -197,7 +207,7 @@ discoveryService.off('serviceLost', (data: mdns.LocalServiceInfo) => {
 });
 ```
 
-## on('discoveryStart')
+## on_discoveryStart
 
 ```TypeScript
 on(type: 'discoveryStart', callback: Callback<DiscoveryEventInfo>): void
@@ -208,6 +218,8 @@ Enables listening for discoveryStart events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -220,11 +232,11 @@ Enables listening for discoveryStart events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStart' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -244,7 +256,7 @@ discoveryService.on('discoveryStart', (data: mdns.DiscoveryEventInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on('discoveryStop')
+## on_discoveryStop
 
 ```TypeScript
 on(type: 'discoveryStop', callback: Callback<DiscoveryEventInfo>): void
@@ -255,6 +267,8 @@ Enables listening for discoveryStop events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -267,11 +281,11 @@ Enables listening for discoveryStop events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'discoveryStop' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryEventInfo](arkts-network-mdns-discoveryeventinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -291,7 +305,7 @@ discoveryService.on('discoveryStop', (data: mdns.DiscoveryEventInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on('serviceFound')
+## on_serviceFound
 
 ```TypeScript
 on(type: 'serviceFound', callback: Callback<LocalServiceInfo>): void
@@ -302,6 +316,8 @@ Enables listening for serviceFound events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -314,11 +330,11 @@ Enables listening for serviceFound events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceFound' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -341,7 +357,7 @@ discoveryService.on('serviceFound', (data: mdns.LocalServiceInfo) => {
 discoveryService.stopSearchingMDNS();
 ```
 
-## on('serviceLost')
+## on_serviceLost
 
 ```TypeScript
 on(type: 'serviceLost', callback: Callback<LocalServiceInfo>): void
@@ -352,6 +368,8 @@ Enables listening for serviceLost events of mDNS services.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -364,11 +382,11 @@ Enables listening for serviceLost events of mDNS services.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceLost' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalServiceInfo](arkts-network-mdns-localserviceinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { mdns } from '@kit.NetworkKit';
@@ -399,6 +417,8 @@ Starts searching for mDNS services on the LAN.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -433,6 +453,8 @@ Stops searching for mDNS services on the LAN.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

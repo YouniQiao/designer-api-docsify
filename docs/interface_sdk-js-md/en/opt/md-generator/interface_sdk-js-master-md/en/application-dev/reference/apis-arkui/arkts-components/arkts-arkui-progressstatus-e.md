@@ -4,6 +4,8 @@ Current state of the progress indicator.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ProgressStatus--><!--Device-unnamed-declare enum ProgressStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ LOADING
 Loading.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ PROGRESSING
 Progressing.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,20 +1,24 @@
 # ListItemGroup
 
 ```TypeScript
-type ListItemGroup = ListItemGroupFrameNode
+type ListItemGroup = TypedFrameNode<ListItemGroupInterface, ListItemGroupAttribute>
 ```
 
-Define the FrameNode type for ListItemGroup.
+Represents a FrameNode of the **ListItemGroup** type. Only ListItem child components can be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type ListItemGroup = ListItemGroupFrameNode--><!--Device-typeNode-type ListItemGroup = ListItemGroupFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type ListItemGroup = TypedFrameNode<ListItemGroupInterface, ListItemGroupAttribute>--><!--Device-typeNode-type ListItemGroup = TypedFrameNode<ListItemGroupInterface, ListItemGroupAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ListItemGroupFrameNode
+**Property type:** TypedFrameNode<ListItemGroupInterface, ListItemGroupAttribute>
 

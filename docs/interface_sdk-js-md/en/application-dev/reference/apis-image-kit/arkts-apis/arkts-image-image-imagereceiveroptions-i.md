@@ -4,7 +4,9 @@ Describes the initialization options for ImageReceiver.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface ImageReceiverOptions--><!--Device-image-interface ImageReceiverOptions-End-->
 
@@ -22,13 +24,15 @@ import { image } from '@kit.ImageKit';
 capacity?: int
 ```
 
-Maximum number of images that can be accessed simultaneously.The value range is all integers, The value must be a positive integer less than or equal to 64.
+Maximum number of images that can be accessed simultaneously. The value range is all integers, The value must be a positive integer less than or equal to 64.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +52,9 @@ Image size, with both the width and height greater than 0.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

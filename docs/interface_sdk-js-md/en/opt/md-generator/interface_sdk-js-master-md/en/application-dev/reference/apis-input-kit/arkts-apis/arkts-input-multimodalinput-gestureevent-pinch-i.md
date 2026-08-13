@@ -2,7 +2,9 @@
 
 Defines a pinch event.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Pinch--><!--Device-unnamed-export declare interface Pinch-End-->
 
@@ -24,7 +26,9 @@ Pinch scale factor. The value is greater than or equal to 0.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pinch-scale: double--><!--Device-Pinch-scale: double-End-->
 
@@ -40,7 +44,9 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pinch-type: ActionType--><!--Device-Pinch-type: ActionType-End-->
 

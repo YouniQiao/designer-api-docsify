@@ -6,6 +6,8 @@ Defines the configuration options of the text picker.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextPickerOptions--><!--Device-unnamed-declare interface TextPickerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@ Defines the configuration options of the text picker.
 columnWidths?: LengthMetrics[]
 ```
 
-Custom widths for each column.
-
-Default value: Each column has equal width, calculated by dividing the total component width by the number of columns.
-
-**NOTE：**
-
-1. Text truncation occurs when content exceeds column width.2. Invalid values are treated as the default value.3. Individual array elements can be **Undefined** or **Null**, but the entire array cannot be **Undefined[]** or **Null[]**.
+Custom widths for each column. Default value: Each column has equal width, calculated by dividing the total component width by the number of columns. **NOTE：**1. Text truncation occurs when content exceeds column width. 2. Invalid values are treated as the default value. 3. Individual array elements can be **Undefined** or **Null**, but the entire array cannot be **Undefined[]** or **Null[]**.
 
 **Type:** LengthMetrics[]
 
@@ -31,6 +27,8 @@ Default value: Each column has equal width, calculated by dividing the total com
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,17 +44,15 @@ Default value: Each column has equal width, calculated by dividing the total com
 range: string[] | string[][] | Resource | TextPickerRangeContent[] | TextCascadePickerRangeContent[]
 ```
 
-Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array,no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed.
-
-**NOTE：**
-
-1. Single-column pickers: string[], [Resource](Resource), or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md#TextPickerRangeContent)[]2. Multi-column independent pickers: string[][]3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md#TextCascadePickerRangeContent)[]4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories).5. The type and number of columns in the range cannot be dynamically modified.
+Data selection range of the picker. This parameter cannot be set to an empty array. If it is set to an empty array, no value is displayed. If it is dynamically changed to an empty array, the current valid value remains displayed. **NOTE：**1. Single-column pickers: string[], Resource, or [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md#TextPickerRangeContent)[] 2. Multi-column independent pickers: string[][] 3. Multi-column cascading pickers: [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md#TextCascadePickerRangeContent)[] 4. The Resource type supports only [strarray.json] (../../../quick-start/resource-categories-and-access.md#resource-group-directories). 5. The type and number of columns in the range cannot be dynamically modified.
 
 **Type:** string[] \| string[][] \| Resource \| [TextPickerRangeContent](arkts-arkui-textpickerrangecontent-i.md)[] \| [TextCascadePickerRangeContent](arkts-arkui-textcascadepickerrangecontent-i.md)[]
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,14 +66,7 @@ Data selection range of the picker. This parameter cannot be set to an empty arr
 selected?: number | number[]
 ```
 
-Index of the selected item in the data list. The index is zero-based.
-
-Default value: **0**
-
-**NOTE：**
-
-1. Single-column pickers: number2. Multi-column pickers: number[]3. Since API version 10, this parameter supports two-way binding through  
- [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Index of the selected item in the data list. The index is zero-based. Default value: **0** **NOTE：**1. Single-column pickers: number 2. Multi-column pickers: number[] 3. Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Type:** number \| number[]
 
@@ -86,6 +75,8 @@ Default value: **0**
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -99,14 +90,7 @@ Default value: **0**
 value?: ResourceStr | ResourceStr[]
 ```
 
-Value of the selected item. The priority of this parameter is lower than that of **selected**.
-
-Default value: value of the first item in the data list.
-
-**NOTE：**
-
-1. Since API version 10, this parameter supports two-way binding through  
- [\$\$](../../../ui/state-management/arkts-two-way-sync.md).2. The [Resource](Resource) type is supported since API version 20.3. This parameter works only when the picker contains text only. It does not work when the picker contains images or mixed content.4. Single-column pickers: [ResourceStr](ResourceStr)5. Multi-column pickers: [ResourceStr](ResourceStr)[]
+Value of the selected item. The priority of this parameter is lower than that of **selected**. Default value: value of the first item in the data list. **NOTE：**1. Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). 2. The Resource type is supported since API version 20. 3. This parameter works only when the picker contains text only. It does not work when the picker contains images or mixed content. 4. Single-column pickers: ResourceStr 5. Multi-column pickers: ResourceStr[]
 
 **Type:** ResourceStr \| ResourceStr[]
 
@@ -115,6 +99,8 @@ Default value: value of the first item in the data list.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

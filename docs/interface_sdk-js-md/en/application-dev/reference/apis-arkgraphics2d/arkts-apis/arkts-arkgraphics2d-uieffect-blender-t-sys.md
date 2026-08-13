@@ -8,7 +8,9 @@ Blender type, used to describe the blending effect.
 
 **Since:** 13
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

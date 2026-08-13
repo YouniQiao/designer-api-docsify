@@ -1,17 +1,19 @@
 # WindowSize
 
 ```TypeScript
-export type WindowSize = _AbilityInfo.WindowSize
+export type WindowSize = _WindowSize
 ```
 
 窗口尺寸。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-bundleManager-export type WindowSize = _AbilityInfo.WindowSize--><!--Device-bundleManager-export type WindowSize = _AbilityInfo.WindowSize-End-->
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-bundleManager-export type WindowSize = _WindowSize--><!--Device-bundleManager-export type WindowSize = _WindowSize-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-**属性类型：** _AbilityInfo.WindowSize
+**属性类型：** _WindowSize

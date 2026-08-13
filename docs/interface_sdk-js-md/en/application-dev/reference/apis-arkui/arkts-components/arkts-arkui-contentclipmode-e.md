@@ -6,6 +6,8 @@ Enum of scrollable containers' content clip mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ContentClipMode--><!--Device-unnamed-declare enum ContentClipMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Clip to content rect inside margin & padding.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Clip to scrollable's outer rect, including padding but inside margin.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -61,6 +67,8 @@ Clip to the safeArea of scrollable container.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

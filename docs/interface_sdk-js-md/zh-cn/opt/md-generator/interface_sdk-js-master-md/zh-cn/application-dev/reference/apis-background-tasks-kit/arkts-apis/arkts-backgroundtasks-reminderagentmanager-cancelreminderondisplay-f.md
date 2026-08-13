@@ -10,6 +10,8 @@ function cancelReminderOnDisplay(reminderId: number): Promise<void>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function cancelReminderOnDisplay(reminderId: int): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
@@ -30,8 +32,8 @@ function cancelReminderOnDisplay(reminderId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) |
-| [1700007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) |
 
 ## 示例
 

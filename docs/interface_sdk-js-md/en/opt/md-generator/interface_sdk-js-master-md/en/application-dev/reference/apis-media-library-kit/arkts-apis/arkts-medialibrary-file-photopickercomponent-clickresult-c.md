@@ -4,6 +4,8 @@ Sets whether the asset with the specified URI is selected.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ClickResult--><!--Device-unnamed-export declare class ClickResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -20,12 +22,13 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 isSelected: boolean
 ```
 
-Sets whether the specified media asset is selected. The value **true** indicates that the asset is selected, and  
-**false** indicates the opposite.
+Sets whether the specified media asset is selected. The value **true** indicates that the asset is selected, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +49,8 @@ URI of the media asset.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

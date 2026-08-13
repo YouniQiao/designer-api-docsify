@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface NotificationSwitchChangedCallbackData--><!--Device-unnamed-export interface NotificationSwitchChangedCallbackData-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -21,6 +23,8 @@ readonly enableStatus: notificationManager.SwitchState
 **类型：** notificationManager.SwitchState
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ readonly switchName: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-NotificationSwitchChangedCallbackData-readonly switchName: string--><!--Device-NotificationSwitchChangedCallbackData-readonly switchName: string-End-->
@@ -61,6 +67,8 @@ readonly userId: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

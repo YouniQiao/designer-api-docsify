@@ -6,6 +6,8 @@ Defines a LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalSocket--><!--Device-socket-export interface LocalSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,6 +30,8 @@ Binds the Local address.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-bind(address: LocalAddress): Promise<void>--><!--Device-LocalSocket-bind(address: LocalAddress): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -48,14 +52,14 @@ Binds the Local address.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2301013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
 | 2301098 | Address already in use. |
 | 2301022 | Invalid argument. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -86,6 +90,8 @@ Closes a LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-close(): Promise<void>--><!--Device-LocalSocket-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -100,7 +106,7 @@ Closes a LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2301009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
 ## Examples
 
@@ -128,6 +134,8 @@ Sets up a connection to the specified Local address .
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-connect(options: LocalConnectOptions): Promise<void>--><!--Device-LocalSocket-connect(options: LocalConnectOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -148,15 +156,15 @@ Sets up a connection to the specified Local address .
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301111 | Connection refused. |
-| [2301013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
+| [2301013](../errorcode-net-socket.md#2301013-insufficient-permissions) | Insufficient permissions. |
 | 2301099 | Cannot assign requested address. |
 | 2301022 | Invalid argument. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -191,6 +199,8 @@ Gets other attributes of the LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-getExtraOptions(): Promise<ExtraOptionsBase>--><!--Device-LocalSocket-getExtraOptions(): Promise<ExtraOptionsBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -205,11 +215,11 @@ Gets other attributes of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2301009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -245,9 +255,11 @@ getLocalAddress(): Promise<string>
 
 Obtains the local address of a LocalSocket connection.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocket-getLocalAddress(): Promise<string>--><!--Device-LocalSocket-getLocalAddress(): Promise<string>-End-->
 
@@ -263,13 +275,13 @@ Obtains the local address of a LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2301009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -306,6 +318,8 @@ Obtains the file descriptor of the LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-getSocketFd(): Promise<number>--><!--Device-LocalSocket-getSocketFd(): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -318,7 +332,7 @@ Obtains the file descriptor of the LocalSocket connection.
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -358,6 +372,8 @@ Obtains the status of the LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-getState(): Promise<SocketStateBase>--><!--Device-LocalSocket-getState(): Promise<SocketStateBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -370,7 +386,7 @@ Obtains the status of the LocalSocket connection.
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -398,7 +414,145 @@ client.connect(connectOpt).then(() => {
 });
 ```
 
-## off('message')
+## off_close
+
+```TypeScript
+off(type: 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for close events of the LocalSocket connection.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+<!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'close' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let callback = () => {
+  console.info("on close success");
+}
+client.on('close', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+client.off('close', callback);
+client.off('close');
+```
+
+## off_connect
+
+```TypeScript
+off(type: 'connect', callback?: Callback<void>): void
+```
+
+Cancels listening for connection events of the LocalSocket connection.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+<!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'connect' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let callback = () => {
+  console.info("on connect success");
+}
+client.on('connect', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+client.off('connect', callback);
+client.off('connect');
+```
+
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Cancels listening for error events of the LocalSocket connection.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+<!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Indicates Event name. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+let callback = (err: Object) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+client.on('error', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+client.off('error', callback);
+client.off('error');
+```
+
+## off_message
 
 ```TypeScript
 off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void
@@ -410,6 +564,8 @@ Cancels listening for message receiving events of the LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocket-off(type: 'message', callback?: Callback<LocalSocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -419,13 +575,13 @@ Cancels listening for message receiving events of the LocalSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -447,63 +603,21 @@ client.on('message', callback);
 client.off('message');
 ```
 
-## off('connect')
+## on_close
 
 ```TypeScript
-off(type: 'connect', callback?: Callback<void>): void
+on(type: 'close', callback: Callback<void>): void
 ```
 
-Cancels listening for connection events of the LocalSocket connection.
+Listens for close events of the LocalSocket connection.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'connect', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let callback = () => {
-  console.info("on connect success");
-}
-client.on('connect', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-client.off('connect', callback);
-client.off('connect');
-```
-
-## off('close')
-
-```TypeScript
-off(type: 'close', callback?: Callback<void>): void
-```
-
-Cancels listening for close events of the LocalSocket connection.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-<!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void--><!--Device-LocalSocket-off(type: 'close', callback?: Callback<void>): void-End-->
+<!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -512,13 +626,13 @@ Cancels listening for close events of the LocalSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -530,24 +644,65 @@ let callback = () => {
   console.info("on close success");
 }
 client.on('close', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-client.off('close', callback);
-client.off('close');
 ```
 
-## off('error')
+## on_connect
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
+on(type: 'connect', callback: Callback<void>): void
 ```
 
-Cancels listening for error events of the LocalSocket connection.
+Listens for connection events of the LocalSocket connection.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-LocalSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'connect' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+
+let client: socket.LocalSocket = socket.constructLocalSocketInstance();
+client.on('connect', () => {
+  console.info("on connect success")
+});
+```
+
+## on_error
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+Listens for error events of the LocalSocket connection.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+<!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -556,13 +711,13 @@ Cancels listening for error events of the LocalSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -570,16 +725,12 @@ Cancels listening for error events of the LocalSocket connection.
 import { socket } from '@kit.NetworkKit';
 
 let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let callback = (err: Object) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
-client.on('error', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-client.off('error', callback);
-client.off('error');
+client.on('error', (err: Object) => {
+  console.error("on error, err:" + JSON.stringify(err))
+});
 ```
 
-## on('message')
+## on_message
 
 ```TypeScript
 on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void
@@ -591,6 +742,8 @@ Listens for message receiving events of the LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void--><!--Device-LocalSocket-on(type: 'message', callback: Callback<LocalSocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -600,13 +753,13 @@ Listens for message receiving events of the LocalSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LocalSocketMessageInfo](arkts-network-socket-localsocketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -625,127 +778,6 @@ client.on('message', (value: socket.LocalSocketMessageInfo) => {
 });
 ```
 
-## on('connect')
-
-```TypeScript
-on(type: 'connect', callback: Callback<void>): void
-```
-
-Listens for connection events of the LocalSocket connection.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-<!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'connect', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-client.on('connect', () => {
-  console.info("on connect success")
-});
-```
-
-## on('close')
-
-```TypeScript
-on(type: 'close', callback: Callback<void>): void
-```
-
-Listens for close events of the LocalSocket connection.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-<!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void--><!--Device-LocalSocket-on(type: 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-let callback = () => {
-  console.info("on close success");
-}
-client.on('close', callback);
-```
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Listens for error events of the LocalSocket connection.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-<!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-LocalSocket-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-
-let client: socket.LocalSocket = socket.constructLocalSocketInstance();
-client.on('error', (err: Object) => {
-  console.error("on error, err:" + JSON.stringify(err))
-});
-```
-
 ## send
 
 ```TypeScript
@@ -757,6 +789,8 @@ Sends data over a LocalSocket connection.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-LocalSocket-send(options: LocalSendOptions): Promise<void>--><!--Device-LocalSocket-send(options: LocalSendOptions): Promise<void>-End-->
 
@@ -779,11 +813,11 @@ Sends data over a LocalSocket connection.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2301011 | Operation would block. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';
@@ -826,6 +860,8 @@ Sets other attributes of the LocalSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalSocket-setExtraOptions(options: ExtraOptionsBase): Promise<void>--><!--Device-LocalSocket-setExtraOptions(options: ExtraOptionsBase): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -846,12 +882,12 @@ Sets other attributes of the LocalSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2301009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket } from '@kit.NetworkKit';

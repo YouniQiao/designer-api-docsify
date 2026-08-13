@@ -1,8 +1,10 @@
 # I18NUtil
 
-Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval,time segment name retrieval, region matching, and path localization.
+Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval, time segment name retrieval, region matching, and path localization.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class I18NUtil--><!--Device-i18n-export class I18NUtil-End-->
 
@@ -23,6 +25,8 @@ static convertCanonicalLocaleIdentifier(locale: string): string
 Adjusts a locale ID to a format that complies with the [BCP47](https://www.rfc-editor.org/info/bcp47) standard.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,9 +56,11 @@ static getBestMatchLocale(locale: string, localeList: string[]): string
 
 Obtains the locale that best matches a region from the specified locale list.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string--><!--Device-I18NUtil-static getBestMatchLocale(locale: string, localeList: string[]): string-End-->
 
@@ -77,8 +83,8 @@ Obtains the locale that best matches a region from the specified locale list.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## getDateOrder
 
@@ -88,7 +94,9 @@ static getDateOrder(locale: string): string
 
 Obtains the sequence of the year, month, and day in the specified locale.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,13 +122,13 @@ Obtains the sequence of the year, month, and day in the specified locale.
 static getThreeLetterLanguage(locale: string): string
 ```
 
-Converts a language code from two letters to three letters.
+Converts a language code from two letters to three letters. For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
 
-For example, the two-letter language code of Chinese is **zh**, and the corresponding three-letter language code is **zho**. For details, see [ISO 639](https://www.iso.org/iso-639-language-code).
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string--><!--Device-I18NUtil-static getThreeLetterLanguage(locale: string): string-End-->
 
@@ -142,8 +150,8 @@ For example, the two-letter language code of Chinese is **zh**, and the correspo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## getThreeLetterRegion
 
@@ -151,14 +159,13 @@ For example, the two-letter language code of Chinese is **zh**, and the correspo
 static getThreeLetterRegion(locale: string): string
 ```
 
-Converts a region code from two letters to three letters.
+Converts a region code from two letters to three letters. For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is **CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
 
-For example, the two-letter region code of China is **CN**, and the corresponding three-letter region code is  
-**CHN**. For details, see [ISO 3166](https://www.iso.org/iso-3166-country-codes.html).
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string--><!--Device-I18NUtil-static getThreeLetterRegion(locale: string): string-End-->
 
@@ -180,8 +187,8 @@ For example, the two-letter region code of China is **CN**, and the correspondin
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## getTimePeriodName
 
@@ -191,7 +198,9 @@ static getTimePeriodName(hour:number, locale?: string): string
 
 Obtains the localized expression of the specified time in the specified locale.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -216,8 +225,8 @@ Obtains the localized expression of the specified time in the specified locale.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## getUnicodeWrappedFilePath
 
@@ -225,13 +234,13 @@ Obtains the localized expression of the specified time in the specified locale.
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string
 ```
 
-Localizes a file path for the specified locale.
+Localizes a file path for the specified locale. For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
-For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string--><!--Device-I18NUtil-static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: Intl.Locale): string-End-->
 
@@ -255,7 +264,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## getUnicodeWrappedFilePath
 
@@ -263,15 +272,13 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 static getUnicodeWrappedFilePath(path: string, delimiter?: string, locale?: intl.Locale): string
 ```
 
-Localizes a file path for the specified locale.
-
-For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
+Localizes a file path for the specified locale. For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 **Since:** 18
 
 **Deprecated since:** 20
 
-**Substitutes:** [getUnicodeWrappedFilePath](i18n.I18NUtil.getUnicodeWrappedFilePath(path:)
+**Substitutes:** [getUnicodeWrappedFilePath](#getUnicodeWrappedFilePath)(path: string, delimiter?: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -297,7 +304,7 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 
 | Error Code ID |
 | --- |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## setUnicodeWrappedBidiDirection
 
@@ -305,9 +312,11 @@ For example, "/data/out/tmp" is changed to "tmp/out/data/" after localization.
 static setUnicodeWrappedBidiDirection(text: string, direction: 'RTL' | 'LTR'): string
 ```
 
-Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right). NOTE: The setting does not take effect within strong characters (characters  with an intrinsic, unambiguous writing direction).
+Sets the text direction for certain text within a paragraph, including RTL (right-to-left) and LTR (left-to-right). NOTE: The setting does not take effect within strong characters (characters with an intrinsic, unambiguous writing direction).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,7 +347,9 @@ static unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: number, locale: 
 
 Converts one measurement unit into another and formats the unit based on the specified locale and style.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

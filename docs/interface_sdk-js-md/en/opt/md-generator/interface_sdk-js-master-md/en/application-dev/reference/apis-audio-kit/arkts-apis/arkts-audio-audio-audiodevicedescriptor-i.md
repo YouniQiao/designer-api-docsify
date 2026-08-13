@@ -2,7 +2,9 @@
 
 Describes an audio device.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
 
@@ -20,13 +22,13 @@ import { audio } from '@kit.AudioKit';
 readonly address: string
 ```
 
-Static MAC address of the device.
-
-For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
+Static MAC address of the device. For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,7 +46,9 @@ Audio stream capabilities supported by the device.
 
 **Type:** Array&lt;[AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)&gt;
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>--><!--Device-AudioDeviceDescriptor-readonly capabilities?: Array<AudioStreamInfo>-End-->
 
@@ -60,7 +64,9 @@ Number of channels supported.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +84,9 @@ Supported channel masks.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,7 +104,9 @@ Device role.
 
 **Type:** DeviceRole
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -114,7 +124,9 @@ Device type.
 
 **Type:** DeviceType
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,7 +144,9 @@ Display name of the device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -150,7 +164,9 @@ Supported encoding types.
 
 **Type:** Array&lt;[AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -168,7 +184,9 @@ Audio device id.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -186,7 +204,9 @@ Model of the device.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceDescriptor-readonly model?: string--><!--Device-AudioDeviceDescriptor-readonly model?: string-End-->
 
@@ -198,13 +218,13 @@ Model of the device.
 readonly name: string
 ```
 
-Device name.
-
-For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
+Device name. For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permission.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -218,13 +238,13 @@ For a Bluetooth device, you must request the ohos.permission.USE_BLUETOOTH permi
 readonly sampleRates: Array<number>
 ```
 
-Supported sampling rates.
-
-SystemCapability.Multimedia.Audio.Device
+Supported sampling rates. SystemCapability.Multimedia.Audio.Device
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -242,7 +262,9 @@ Whether the device supports spatial audio rendering. **true** if supported, **fa
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly spatializationSupported?: boolean-End-->
 

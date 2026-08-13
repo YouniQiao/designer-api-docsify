@@ -2,6 +2,10 @@
 
 定义拉起UIExtensionAbility执行结果的回调。
 
+**起始版本：** -1
+
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface AbilityStartCallback--><!--Device-unnamed-declare interface AbilityStartCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -15,6 +19,8 @@ onError(code: number, name: string, message: string): void
 拉起UIExtensionAbility执行失败的回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +48,8 @@ onResult?(parameter: AbilityResult): void
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -67,6 +75,8 @@ completionHandler?: CompletionHandlerForAbilityStartCallback
 **类型：** [CompletionHandlerForAbilityStartCallback](arkts-ability-app-ability-completionhandlerforabilitystartcallback-completionhandlerforabilitystartcallback-c.md)
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

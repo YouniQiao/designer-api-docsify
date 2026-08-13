@@ -96,7 +96,7 @@ Data sent to the ability which need to be serializable.
 deviceType?: number
 ```
 
-If more than one FA meets the conditions, the user can select the device from the popup.0: Default. Select the FA to start from the local and remote devices.1: start FA from the local device.
+If more than one FA meets the conditions, the user can select the device from the popup. 0: Default. Select the FA to start from the local and remote devices. 1: start FA from the local device.
 
 **Type:** number
 

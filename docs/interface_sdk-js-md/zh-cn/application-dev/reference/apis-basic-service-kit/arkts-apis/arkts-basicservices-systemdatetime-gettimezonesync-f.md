@@ -8,9 +8,11 @@ function getTimezoneSync(): string
 
 获取系统时区，使用同步方式。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getTimezoneSync(): string--><!--Device-systemDateTime-function getTimezoneSync(): string-End-->
 
@@ -20,7 +22,7 @@ function getTimezoneSync(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 返回系统时区。具体可见[支持的系统时区](../../../reference/apis-basic-services-kit/js-apis-date-time.md#支持的系统时区)。 |
+| string | 返回系统时区。具体可见支持的系统时区。 |
 
 ## 示例
 

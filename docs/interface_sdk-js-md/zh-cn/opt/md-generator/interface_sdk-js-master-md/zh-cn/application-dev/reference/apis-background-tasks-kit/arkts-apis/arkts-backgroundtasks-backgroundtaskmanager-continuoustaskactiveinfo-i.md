@@ -2,7 +2,9 @@
 
 长时任务激活信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo--><!--Device-backgroundTaskManager-interface ContinuousTaskActiveInfo-End-->
 
@@ -18,7 +20,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ContinuousTaskActiveInfo-id: int--><!--Device-ContinuousTaskActiveInfo-id: int-End-->
 

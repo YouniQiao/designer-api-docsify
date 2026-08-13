@@ -2,9 +2,11 @@
 
 Enumerates fingerprint gesture event types.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum FingerprintAction--><!--Device-unnamed-export declare enum FingerprintAction-End-->
 
@@ -20,9 +22,11 @@ DOWN = 0
 
 Pressing down
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintAction-DOWN = 0--><!--Device-FingerprintAction-DOWN = 0-End-->
 
@@ -38,9 +42,11 @@ UP = 1
 
 Lifting up
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintAction-UP = 1--><!--Device-FingerprintAction-UP = 1-End-->
 
@@ -56,9 +62,11 @@ SLIDE = 2
 
 Sliding
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintAction-SLIDE = 2--><!--Device-FingerprintAction-SLIDE = 2-End-->
 
@@ -74,9 +82,11 @@ RETOUCH = 3
 
 Second pressing down
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintAction-RETOUCH = 3--><!--Device-FingerprintAction-RETOUCH = 3-End-->
 
@@ -92,9 +102,11 @@ CLICK = 4
 
 Double-click
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FingerprintAction-CLICK = 4--><!--Device-FingerprintAction-CLICK = 4-End-->
 

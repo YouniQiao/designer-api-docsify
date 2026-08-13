@@ -14,9 +14,11 @@ function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolut
 
 Obtains all the display modes supported by the current device, along with the physical screen resolutions for each mode. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>--><!--Device-display-function getAllDisplayPhysicalResolution(): Promise<Array<DisplayPhysicalResolution>>-End-->
 
@@ -32,7 +34,7 @@ Obtains all the display modes supported by the current device, along with the ph
 
 | Error Code ID |
 | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

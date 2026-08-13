@@ -1,10 +1,10 @@
 # @ohos.app.ability.kioskManager
 
-The KioskManager module provides APIs to manage kiosk mode, including entering/exiting kiosk mode and querying the kiosk mode status.
+The KioskManager module provides APIs to manage kiosk mode, including entering/exiting kiosk mode and querying the kiosk mode status. Kiosk mode is a dedicated device lockdown mode that ensures the device UI serves only specific interaction scenarios. In this mode, device usage is confined to predetermined applications. A typical example is a bank ATM, where users can only interact with the ATM software and cannot exit it or access any other functions.
 
-Kiosk mode is a dedicated device lockdown mode that ensures the device UI serves only specific interaction scenarios.In this mode, device usage is confined to predetermined applications. A typical example is a bank ATM, where users can only interact with the ATM software and cannot exit it or access any other functions.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,15 +24,15 @@ import { kioskManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode) |
-| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md#exitkioskmode) |
+| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md#enterKioskMode) |
+| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md#exitKioskMode) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getKioskStatus](arkts-ability-kioskmanager-getkioskstatus-f-sys.md#getkioskstatus) |
+| [getKioskStatus](arkts-ability-kioskmanager-getkioskstatus-f-sys.md#getKioskStatus-(System-API)) |
 <!--DelEnd-->
 
 ### Types

@@ -2,7 +2,9 @@
 
 提供查询和更新分布式账号登录状态方法（需要先获取分布式账号的单实例对象）。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
@@ -16,7 +18,9 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 获取分布式账号信息。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -34,9 +38,9 @@ getOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -68,7 +72,9 @@ getOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 获取分布式账号信息。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or ohos.permission.GET_DISTRIBUTED_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -86,8 +92,8 @@ getOsAccountDistributedInfo(): Promise<DistributedInfo>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -114,19 +120,13 @@ try {
 queryOsAccountDistributedInfo(callback: AsyncCallback<DistributedInfo>): void
 ```
 
-获取分布式账号信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)
-> 替代。
+获取分布式账号信息。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountDistributedInfo](#getOsAccountDistributedInfo) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.getOsAccountDistributedInfo(callback:)
+**替代接口：** [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -163,13 +163,7 @@ accountAbility.queryOsAccountDistributedInfo(
 queryOsAccountDistributedInfo(): Promise<DistributedInfo>
 ```
 
-获取分布式账号信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountDistributedInfo](#getOsAccountDistributedInfo)
-> 替代。
+获取分布式账号信息。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountDistributedInfo](#getOsAccountDistributedInfo) > 替代。
 
 **起始版本：** 7
 
@@ -209,9 +203,11 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-更新分布式账号信息。使用callback异步回调。该接口仅限系统应用调用。
+更新分布式账号信息。使用callback异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -230,12 +226,12 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallbac
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300406](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300406](../../apis-basic-services-kit/errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) |
 
 ## 示例
 
@@ -267,9 +263,11 @@ try {
 setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-更新分布式账号信息。使用Promise异步回调。该接口仅限系统应用调用。
+更新分布式账号信息。使用Promise异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -293,12 +291,12 @@ setOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300406](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300406](../../apis-basic-services-kit/errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) |
 
 ## 示例
 
@@ -328,19 +326,13 @@ try {
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo, callback: AsyncCallback<void>): void
 ```
 
-更新分布式账号信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)
-> 替代。
+更新分布式账号信息。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setOsAccountDistributedInfo](#setOsAccountDistributedInfo) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.setOsAccountDistributedInfo(accountInfo:)
+**替代接口：** [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -380,19 +372,13 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 updateOsAccountDistributedInfo(accountInfo: DistributedInfo): Promise<void>
 ```
 
-更新分布式账号信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setOsAccountDistributedInfo](#setOsAccountDistributedInfo-1)
-> 替代。
+更新分布式账号信息。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setOsAccountDistributedInfo](#setOsAccountDistributedInfo) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setOsAccountDistributedInfo](distributedAccount.DistributedAccountAbility.setOsAccountDistributedInfo(accountInfo:)
+**替代接口：** [setOsAccountDistributedInfo](#setOsAccountDistributedInfo)(accountInfo: DistributedInfo)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 

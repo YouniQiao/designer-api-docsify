@@ -4,6 +4,8 @@ Implements a **NestedScrollOptionsExt** object to set up, down, left, and right 
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -14,13 +16,13 @@ Implements a **NestedScrollOptionsExt** object to set up, down, left, and right 
 scrollDown?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls down.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls down. Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
 
@@ -32,13 +34,13 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 scrollLeft?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls left.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls left. Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
 
@@ -50,13 +52,13 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 scrollRight?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls right.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls right. Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
 
@@ -68,13 +70,13 @@ Default value: **NestedScrollMode.SELF_FIRST**.
 scrollUp?: NestedScrollMode
 ```
 
-Nested scrolling options when the component scrolls up.
-
-Default value: **NestedScrollMode.SELF_FIRST**.
+Nested scrolling options when the component scrolls up. Default value: **NestedScrollMode.SELF_FIRST**.
 
 **Type:** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
 

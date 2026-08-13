@@ -2,7 +2,9 @@
 
 Enumerates the types of media key requests.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drm-enum MediaKeyRequestType--><!--Device-drm-enum MediaKeyRequestType-End-->
 
@@ -16,7 +18,9 @@ MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
 
 Unknown type.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ MEDIA_KEY_REQUEST_TYPE_INITIAL = 1
 
 Initial request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
 
 Renewal request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +72,9 @@ MEDIA_KEY_REQUEST_TYPE_RELEASE = 3
 
 Release request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,7 +90,9 @@ MEDIA_KEY_REQUEST_TYPE_NONE = 4
 
 No request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,7 +108,9 @@ MEDIA_KEY_REQUEST_TYPE_UPDATE = 5
 
 Update request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

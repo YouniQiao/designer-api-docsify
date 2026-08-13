@@ -2,13 +2,15 @@
 
 Portrait Photo Conflict Functions object.
 
-**Inheritance/Implementation:** PortraitPhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery), [ApertureQuery](arkts-camera-camera-aperturequery-i.md#ApertureQuery)
+**Inheritance/Implementation:** PortraitPhotoConflictFunctions extends [ZoomQuery](arkts-camera-camera-zoomquery-i.md#ZoomQuery), [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery-(System-API)), [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md#ApertureQuery-(System-API))
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface PortraitPhotoConflictFunctions extends ZoomQuery, PortraitQuery, ApertureQuery--><!--Device-camera-interface PortraitPhotoConflictFunctions extends ZoomQuery, PortraitQuery, ApertureQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface PortraitPhotoConflictFunctions--><!--Device-camera-interface PortraitPhotoConflictFunctions-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

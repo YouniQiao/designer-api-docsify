@@ -13,29 +13,13 @@ function createFromBuilder(builder: CustomBuilder, callback: AsyncCallback<image
     delay?: number, checkImageStatus?: boolean, options?: SnapshotOptions): void
 ```
 
-Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
-
-> **NOTE：**
-> 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
-> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
-> object associated with the current UI context.
-> 
-> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
-> has a delay of less than 500 ms.
-> 
-> - Components in the builder do not support the setting of animation-related attributes, such as
-> [transition](common).
-> 
-> - If a component is on a time-consuming task, for example, an [Image](image) or [Web](web) component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
-> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. > **NOTE：**> > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot) > object associated with the current UI context. > > - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots > has a delay of less than 500 ms. > > - Components in the builder do not support the setting of animation-related attributes, such as > transition. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [createFromBuilder](ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder)
+**Substitutes:** createFromBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,9 +43,9 @@ Renders a custom component in the application background and outputs its snapsho
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
 
 ## Examples
 
@@ -133,29 +117,13 @@ function createFromBuilder(builder: CustomBuilder, delay?: number,
     checkImageStatus?: boolean, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback.
-
-> **NOTE：**
-> 
-> - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)
-> API in [UIContext](@ohos.arkui.UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)
-> object associated with the current UI context.
-> 
-> - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots
-> has a delay of less than 500 ms.
-> 
-> - Components in the builder do not support the setting of animation-related attributes, such as
-> [transition](common).
-> 
-> - If a component is on a time-consuming task, for example, an [Image](image) or [Web](web) component
-> that is loading online images, its loading may be still in progress when this API is called. In this case, the
-> output snapshot does not represent the component in the way it looks when the loading is successfully completed.
+Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. > **NOTE：**> > - Since API version 12, you can use the [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot) > API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot) > object associated with the current UI context. > > - To account for the time spent in awaiting component building and rendering, the callback of offscreen snapshots > has a delay of less than 500 ms. > > - Components in the builder do not support the setting of animation-related attributes, such as > transition. > > - If a component is on a time-consuming task, for example, an Image or Web component > that is loading online images, its loading may be still in progress when this API is called. In this case, the > output snapshot does not represent the component in the way it looks when the loading is successfully completed.
 
 **Since:** 10
 
 **Deprecated since:** 18
 
-**Substitutes:** [createFromBuilder](ohos.arkui.UIContext.ComponentSnapshot#createFromBuilder)
+**Substitutes:** createFromBuilder
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,9 +152,9 @@ Renders a custom component in the application background and outputs its snapsho
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160001-image-loading-error) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160001](../errorcode-snapshot.md#160001-image-loading-error) |
 
 ## Examples
 

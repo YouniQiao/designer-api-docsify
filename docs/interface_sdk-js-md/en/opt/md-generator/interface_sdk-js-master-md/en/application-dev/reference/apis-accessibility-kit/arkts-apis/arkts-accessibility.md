@@ -1,8 +1,6 @@
 # @ohos.accessibility
 
-The **Accessibility** module implements the accessibility features, including obtaining the accessibility application
- list, accessibility application enabling state, and captions configuration.
-
+Accessibility
 
 ## Modules to Import
 

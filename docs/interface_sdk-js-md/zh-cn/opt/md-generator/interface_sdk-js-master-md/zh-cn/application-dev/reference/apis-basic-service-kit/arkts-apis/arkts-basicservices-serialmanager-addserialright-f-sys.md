@@ -6,9 +6,11 @@
 function addSerialRight(tokenId: number, portId: number): void
 ```
 
-为应用程序添加访问串口设备权限。serialManager.requestSerialRight会触发弹窗请求用户授权；addSerialRight不会触发弹窗，而是直接添加应用程序访问设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授权。
+为应用程序添加访问串口设备权限。 serialManager.requestSerialRight会触发弹窗请求用户授权；addSerialRight不会触发弹窗，而是直接添加应用程序访问设备的权限。应用退出自动移除对串口设备的访问权限，在应用重启后需要重新申请授 权。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
@@ -29,12 +31,12 @@ function addSerialRight(tokenId: number, portId: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
-| [14400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400005-数据库操作异常) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
+| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-数据库操作异常) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
 
 ## 示例
 

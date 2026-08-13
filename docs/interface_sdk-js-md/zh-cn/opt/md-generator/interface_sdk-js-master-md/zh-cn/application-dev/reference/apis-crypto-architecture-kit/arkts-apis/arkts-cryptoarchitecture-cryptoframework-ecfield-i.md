@@ -2,7 +2,9 @@
 
 指定椭圆曲线的域类型。当前只支持Fp域。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface ECField--><!--Device-cryptoFramework-interface ECField-End-->
 
@@ -20,7 +22,9 @@ fieldType: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

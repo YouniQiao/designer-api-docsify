@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cloudData-interface DBActionInfo--><!--Device-cloudData-interface DBActionInfo-End-->
 
@@ -24,7 +26,9 @@ action: ClearAction
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DBActionInfo-action: ClearAction--><!--Device-DBActionInfo-action: ClearAction-End-->
 
@@ -44,7 +48,9 @@ tableInfo?: Record<string, ClearAction>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DBActionInfo-tableInfo?: Record<string, ClearAction>--><!--Device-DBActionInfo-tableInfo?: Record<string, ClearAction>-End-->
 

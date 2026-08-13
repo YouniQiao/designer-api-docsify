@@ -4,6 +4,8 @@ Enumerates the properties available for the metadata of a WebP image.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-image-enum WebPPropertyKey--><!--Device-image-enum WebPPropertyKey-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -17,6 +19,8 @@ CANVAS_WIDTH = 'WebPCanvasWidth'
 Canvas Width.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Canvas Height.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebPPropertyKey-CANVAS_HEIGHT = 'WebPCanvasHeight'--><!--Device-WebPPropertyKey-CANVAS_HEIGHT = 'WebPCanvasHeight'-End-->
@@ -49,6 +55,8 @@ DELAY_TIME = 'WebPDelayTime'
 Delay of each frame in milliseconds.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Unclamped delay of each frame in milliseconds.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebPPropertyKey-UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'--><!--Device-WebPPropertyKey-UNCLAMPED_DELAY_TIME = 'WebPUnclampedDelayTime'-End-->
@@ -81,6 +91,8 @@ LOOP_COUNT = 'WebPLoopCount'
 Loop count.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

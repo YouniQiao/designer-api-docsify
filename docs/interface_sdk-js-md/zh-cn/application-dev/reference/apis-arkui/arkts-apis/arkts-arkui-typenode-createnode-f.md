@@ -12,6 +12,8 @@ function createNode(context: UIContext, nodeType: 'Text'): Text
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -45,6 +47,8 @@ function createNode(context: UIContext, nodeType: 'Column'): Column
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -80,6 +84,8 @@ function createNode(context: UIContext, nodeType: 'Row'): Row
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -113,6 +119,8 @@ function createNode(context: UIContext, nodeType: 'Stack'): Stack
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,6 +156,8 @@ function createNode(context: UIContext, nodeType: 'GridRow'): GridRow
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -181,6 +191,8 @@ function createNode(context: UIContext, nodeType: 'GridCol'): GridCol
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,6 +228,8 @@ function createNode(context: UIContext, nodeType: 'Flex'): Flex
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -249,6 +263,8 @@ function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,6 +300,8 @@ function createNode(context: UIContext, nodeType: 'Progress'): Progress
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -317,6 +335,8 @@ function createNode(context: UIContext, nodeType: 'Scroll'): Scroll
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -352,6 +372,8 @@ function createNode(context: UIContext, nodeType: 'RelativeContainer'): Relative
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -385,6 +407,8 @@ function createNode(context: UIContext, nodeType: 'Divider'): Divider
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -420,6 +444,8 @@ function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingPro
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -453,6 +479,8 @@ function createNode(context: UIContext, nodeType: 'Search'): Search
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -488,6 +516,8 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -521,6 +551,8 @@ function createNode(context: UIContext, nodeType: 'Image'): Image
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -556,6 +588,8 @@ function createNode(context: UIContext, nodeType: 'List'): List
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -589,6 +623,8 @@ function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -624,6 +660,8 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -657,6 +695,8 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -692,6 +732,8 @@ function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGrou
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -725,6 +767,8 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -760,6 +804,8 @@ function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -794,6 +840,8 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -827,6 +875,8 @@ function createNode(context: UIContext, nodeType: 'XComponent', options: XCompon
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -863,6 +913,8 @@ function createNode(context: UIContext, nodeType: 'XComponent', parameters: Nati
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -898,6 +950,8 @@ function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -931,6 +985,8 @@ function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGrou
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -966,6 +1022,8 @@ function createNode(context: UIContext, nodeType: 'Radio'): Radio
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -999,6 +1057,8 @@ function createNode(context: UIContext, nodeType: 'Rating'): Rating
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1034,6 +1094,8 @@ function createNode(context: UIContext, nodeType: 'Select'): Select
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1068,6 +1130,8 @@ function createNode(context: UIContext, nodeType: 'Slider'): Slider
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -1101,6 +1165,8 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1137,6 +1203,8 @@ function createNode(context: UIContext, nodeType: 'Marquee'): Marquee
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -1170,6 +1238,8 @@ function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1205,6 +1275,8 @@ function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -1238,6 +1310,8 @@ function createNode(context: UIContext, nodeType: 'QRCode'): QRCode
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1273,6 +1347,8 @@ function createNode(context: UIContext, nodeType: 'Badge'): Badge
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -1306,6 +1382,8 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1341,6 +1419,8 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -1375,6 +1455,8 @@ function createNode(context: UIContext, nodeType: 'Grid'): Grid
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -1408,6 +1490,8 @@ function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

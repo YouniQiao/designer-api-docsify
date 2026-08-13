@@ -2,7 +2,9 @@
 
 Describes the event indicating that the output device changes.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface CurrentOutputDeviceChangedEvent--><!--Device-audio-interface CurrentOutputDeviceChangedEvent-End-->
 
@@ -24,7 +26,9 @@ Audio device change reason.
 
 **Type:** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CurrentOutputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason--><!--Device-CurrentOutputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason-End-->
 
@@ -40,7 +44,9 @@ Audio device descriptors after change.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CurrentOutputDeviceChangedEvent-devices: AudioDeviceDescriptors--><!--Device-CurrentOutputDeviceChangedEvent-devices: AudioDeviceDescriptors-End-->
 
@@ -58,6 +64,8 @@ Audio device descriptors before change.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CurrentOutputDeviceChangedEvent-preDevices?: AudioDeviceDescriptors--><!--Device-CurrentOutputDeviceChangedEvent-preDevices?: AudioDeviceDescriptors-End-->
@@ -74,7 +82,9 @@ Recommend action when device change.
 
 **Type:** [OutputDeviceChangeRecommendedAction](arkts-audio-audio-outputdevicechangerecommendedaction-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CurrentOutputDeviceChangedEvent-recommendedAction: OutputDeviceChangeRecommendedAction--><!--Device-CurrentOutputDeviceChangedEvent-recommendedAction: OutputDeviceChangeRecommendedAction-End-->
 

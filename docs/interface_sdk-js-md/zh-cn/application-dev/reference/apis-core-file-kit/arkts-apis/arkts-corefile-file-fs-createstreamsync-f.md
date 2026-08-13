@@ -12,6 +12,8 @@ declare function createStreamSync(path: string, mode: string): Stream
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream--><!--Device-unnamed-declare function createStreamSync(path: string, mode: string): Stream-End-->

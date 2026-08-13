@@ -12,7 +12,7 @@ function dumpHeapData(filename: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [dumpJsHeapData](hidebug.dumpJsHeapData(filename)
+**替代接口：** [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpJsHeapData)(filename : string)
 
 <!--Device-hidebug-function dumpHeapData(filename: string): void--><!--Device-hidebug-function dumpHeapData(filename: string): void-End-->
 

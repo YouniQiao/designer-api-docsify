@@ -6,6 +6,8 @@ RichEditor url style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorUrlStyle--><!--Device-unnamed-export declare interface RichEditorUrlStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ uniform resource locator.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

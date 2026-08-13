@@ -1,14 +1,16 @@
 # BaseShape
 
-Base shape class
+This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
 
-**Inheritance/Implementation:** BaseShape extends [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod)
+**Inheritance/Implementation:** BaseShape extends CommonShapeMethod<T>
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class BaseShape extends CommonShapeMethod--><!--Device-unnamed-export declare class BaseShape extends CommonShapeMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class BaseShape--><!--Device-unnamed-declare class BaseShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,18 +23,24 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ## height
 
 ```TypeScript
-height(height: Length): this
+height(height: Length): T
 ```
 
-Sets the height of the shape.
+Sets the height of a shape.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseShape-height(height: Length): this--><!--Device-BaseShape-height(height: Length): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BaseShape-height(height: Length): T--><!--Device-BaseShape-height(height: Length): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,29 +48,35 @@ Sets the height of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | Length | Yes |  |
+| height | Length | Yes | Height of the shape.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| T | Current object. |
 
 ## size
 
 ```TypeScript
-size(size: SizeOptions): this
+size(size: SizeOptions): T
 ```
 
-Sets the size of the shape.
+Sets the size of a shape.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseShape-size(size: SizeOptions): this--><!--Device-BaseShape-size(size: SizeOptions): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BaseShape-size(size: SizeOptions): T--><!--Device-BaseShape-size(size: SizeOptions): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -70,29 +84,35 @@ Sets the size of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | SizeOptions | Yes |  |
+| size | SizeOptions | Yes | Size of the shape. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| T | Current object. |
 
 ## width
 
 ```TypeScript
-width(width: Length): this
+width(width: Length): T
 ```
 
-Sets the width of the shape.
+Sets the width of a shape.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BaseShape-width(width: Length): this--><!--Device-BaseShape-width(width: Length): this-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-BaseShape-width(width: Length): T--><!--Device-BaseShape-width(width: Length): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -100,11 +120,11 @@ Sets the width of the shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Length | Yes |  |
+| width | Length | Yes | Width of the shape.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this |  |
+| T | Current object. |
 

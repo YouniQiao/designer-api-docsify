@@ -8,7 +8,9 @@ function stopTimer(timer: number, callback: AsyncCallback<void>): void
 
 该方法停止定时器，并使用callback进行异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemTimer-function stopTimer(timer: long, callback: AsyncCallback<void>): void--><!--Device-systemTimer-function stopTimer(timer: long, callback: AsyncCallback<void>): void-End-->
 
@@ -27,8 +29,8 @@ function stopTimer(timer: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -71,7 +73,9 @@ function stopTimer(timer: number): Promise<void>
 
 此方法用于停止定时器，并使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemTimer-function stopTimer(timer: long): Promise<void>--><!--Device-systemTimer-function stopTimer(timer: long): Promise<void>-End-->
 
@@ -95,8 +99,8 @@ function stopTimer(timer: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

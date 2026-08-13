@@ -4,6 +4,8 @@ Enumerates Ethernet network interface configurations. Only IPv4 is supported.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-networkManager-interface InterfaceConfig--><!--Device-networkManager-interface InterfaceConfig-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ DNS service address. The value ranges from **0.0.0.0** to **255.255.255.255**. (
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InterfaceConfig-dnsServers?: string--><!--Device-InterfaceConfig-dnsServers?: string-End-->
@@ -43,6 +47,8 @@ Gateway. The value ranges from **0.0.0.0** to **255.255.255.255**. (This paramet
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Static IP address. The value ranges from **0.0.0.0** to **255.255.255.255**. (Th
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InterfaceConfig-ipAddress?: string--><!--Device-InterfaceConfig-ipAddress?: string-End-->
@@ -80,6 +88,8 @@ Ethernet connection configuration mode.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InterfaceConfig-ipSetMode: IpSetMode--><!--Device-InterfaceConfig-ipSetMode: IpSetMode-End-->
@@ -97,6 +107,8 @@ Subnet mask. The value ranges from **0.0.0.0** to **255.255.255.255**. (This par
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

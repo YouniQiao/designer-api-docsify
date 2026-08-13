@@ -10,7 +10,9 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,10 +37,10 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-不支持的操作) | Unsupported operation, e.g. on cross-platform. |
-| [7600104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-获取图像数据失败) | Failed to get the data from Surface. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. |
+| [7600201](../errorcode-image.md#7600201-不支持的操作) | Unsupported operation, e.g. on cross-platform. |
+| [7600104](../errorcode-image.md#7600104-获取图像数据失败) | Failed to get the data from Surface. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
 
 ## 示例
 

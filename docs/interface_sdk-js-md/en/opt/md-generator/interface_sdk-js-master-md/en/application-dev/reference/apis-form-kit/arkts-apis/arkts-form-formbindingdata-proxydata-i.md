@@ -2,7 +2,9 @@
 
 Defines the form proxy data.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formBindingData-interface ProxyData--><!--Device-formBindingData-interface ProxyData-End-->
 
@@ -24,7 +26,9 @@ Key for proxy. The value depends on the data publisher.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ SubscriberId. The value depends on the data publisher. The default value is curr
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

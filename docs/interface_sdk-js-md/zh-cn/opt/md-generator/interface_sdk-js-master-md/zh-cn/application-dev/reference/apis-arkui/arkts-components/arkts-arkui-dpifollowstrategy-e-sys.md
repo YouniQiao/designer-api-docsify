@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum DpiFollowStrategy--><!--Device-unnamed-declare enum DpiFollowStrategy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ FOLLOW_HOST_DPI = 0
 跟随宿主DPI。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ FOLLOW_UI_EXTENSION_ABILITY_DPI = 1
 跟随UIExtensionAbility。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

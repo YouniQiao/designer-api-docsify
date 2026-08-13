@@ -1,10 +1,10 @@
 # request
 
-request模块给应用提供上传下载文件、后台代理传输的基础功能。
+request模块给应用提供上传下载文件、后台代理传输的基础功能。 - request暂不支持在Extension中调用。
 
-- request暂不支持在Extension中调用。
+**起始版本：** 23
 
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace request--><!--Device-unnamed-declare namespace request-End-->
 
@@ -24,13 +24,13 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 | 名称 |
 | --- |
 | [download](arkts-basicservices-request-download-f.md#download) |
-| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) | 创建并启动一个下载任务，使用callback异步回调，支持HTTP协议。通过  [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \|
-| [download](arkts-basicservices-request-download-f.md#download-1) |
-| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1) | 创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过  [on('complete'\|'pause'\|'remove')](request.DownloadTask.on(type: 'complete' \| 'pause' \|
+| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) | 创建并启动一个下载任务，使用callback异步回调，支持HTTP协议。通过 on('complete'\|'pause'\|
+| [download](arkts-basicservices-request-download-f.md#download) |
+| [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) | 创建并启动一个下载任务，使用Promise异步回调，支持HTTP协议。通过 on('complete'\|'pause'\|
 | [upload](arkts-basicservices-request-upload-f.md#upload) |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) | 创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过  [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \|
-| [upload](arkts-basicservices-request-upload-f.md#upload-1) |
-| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1) | 创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过  [on('complete'\|'fail')](request.UploadTask.on(type: 'complete' \|
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) | 创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过 [on('complete'\|
+| [upload](arkts-basicservices-request-upload-f.md#upload) |
+| [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) | 创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过 [on('complete'\|
 
 ### 接口
 
@@ -42,40 +42,52 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 | [File](arkts-basicservices-request-file-i.md) |
 | [RequestData](arkts-basicservices-request-requestdata-i.md) |
 | [UploadConfig](arkts-basicservices-request-uploadconfig-i.md) |
-| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是  [on('complete' \| 'fail')](request.UploadTask.on(type: 'complete' \| 'fail', callback: Callback & lt;Array<[TaskState](arkts-basicservices-request-taskstate-i.md)> & gt; & lt;TaskState & gt;>))和  [off('complete' \ |
+| [TaskState](arkts-basicservices-request-taskstate-i.md) | 上传任务的任务信息，是 [on('complete' \| 'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) 和 [off('complete' \|
 | [UploadTask](arkts-basicservices-request-uploadtask-i.md) |
+
+### 类型
+
+| 名称 |
+| --- |
+| [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) |
+| [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) |
+| [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) |
+| [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) |
+| [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) |
+| [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) |
+| [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) |
 
 ### 常量
 
 | 名称 |
 | --- |
-| [EXCEPTION_PERMISSION](arkts-basicservices-request-con.md#exception_permission) |
-| [EXCEPTION_PARAMCHECK](arkts-basicservices-request-con.md#exception_paramcheck) |
-| [EXCEPTION_UNSUPPORTED](arkts-basicservices-request-con.md#exception_unsupported) |
-| [EXCEPTION_FILEIO](arkts-basicservices-request-con.md#exception_fileio) |
-| [EXCEPTION_FILEPATH](arkts-basicservices-request-con.md#exception_filepath) |
-| [EXCEPTION_SERVICE](arkts-basicservices-request-con.md#exception_service) |
-| [EXCEPTION_OTHERS](arkts-basicservices-request-con.md#exception_others) |
-| [NETWORK_MOBILE](arkts-basicservices-request-con.md#network_mobile) |
-| [NETWORK_WIFI](arkts-basicservices-request-con.md#network_wifi) |
-| [ERROR_CANNOT_RESUME](arkts-basicservices-request-con.md#error_cannot_resume) |
-| [ERROR_DEVICE_NOT_FOUND](arkts-basicservices-request-con.md#error_device_not_found) |
-| [ERROR_FILE_ALREADY_EXISTS](arkts-basicservices-request-con.md#error_file_already_exists) |
-| [ERROR_FILE_ERROR](arkts-basicservices-request-con.md#error_file_error) |
-| [ERROR_HTTP_DATA_ERROR](arkts-basicservices-request-con.md#error_http_data_error) |
-| [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#error_insufficient_space) |
-| [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#error_too_many_redirects) |
-| [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#error_unhandled_http_code) |
-| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#error_unknown) |
-| [ERROR_OFFLINE](arkts-basicservices-request-con.md#error_offline) |
-| [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#error_unsupported_network_type) |
-| [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#paused_queued_for_wifi) |
-| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#paused_waiting_for_network) |
-| [PAUSED_WAITING_TO_RETRY](arkts-basicservices-request-con.md#paused_waiting_to_retry) |
-| [PAUSED_BY_USER](arkts-basicservices-request-con.md#paused_by_user) |
-| [PAUSED_UNKNOWN](arkts-basicservices-request-con.md#paused_unknown) |
-| [SESSION_SUCCESSFUL](arkts-basicservices-request-con.md#session_successful) |
-| [SESSION_RUNNING](arkts-basicservices-request-con.md#session_running) |
-| [SESSION_PENDING](arkts-basicservices-request-con.md#session_pending) |
-| [SESSION_PAUSED](arkts-basicservices-request-con.md#session_paused) |
-| [SESSION_FAILED](arkts-basicservices-request-con.md#session_failed) |
+| [EXCEPTION_PERMISSION](arkts-basicservices-request-con.md#EXCEPTION_PERMISSION) |
+| [EXCEPTION_PARAMCHECK](arkts-basicservices-request-con.md#EXCEPTION_PARAMCHECK) |
+| [EXCEPTION_UNSUPPORTED](arkts-basicservices-request-con.md#EXCEPTION_UNSUPPORTED) |
+| [EXCEPTION_FILEIO](arkts-basicservices-request-con.md#EXCEPTION_FILEIO) |
+| [EXCEPTION_FILEPATH](arkts-basicservices-request-con.md#EXCEPTION_FILEPATH) |
+| [EXCEPTION_SERVICE](arkts-basicservices-request-con.md#EXCEPTION_SERVICE) |
+| [EXCEPTION_OTHERS](arkts-basicservices-request-con.md#EXCEPTION_OTHERS) |
+| [NETWORK_MOBILE](arkts-basicservices-request-con.md#NETWORK_MOBILE) |
+| [NETWORK_WIFI](arkts-basicservices-request-con.md#NETWORK_WIFI) |
+| [ERROR_CANNOT_RESUME](arkts-basicservices-request-con.md#ERROR_CANNOT_RESUME) |
+| [ERROR_DEVICE_NOT_FOUND](arkts-basicservices-request-con.md#ERROR_DEVICE_NOT_FOUND) |
+| [ERROR_FILE_ALREADY_EXISTS](arkts-basicservices-request-con.md#ERROR_FILE_ALREADY_EXISTS) |
+| [ERROR_FILE_ERROR](arkts-basicservices-request-con.md#ERROR_FILE_ERROR) |
+| [ERROR_HTTP_DATA_ERROR](arkts-basicservices-request-con.md#ERROR_HTTP_DATA_ERROR) |
+| [ERROR_INSUFFICIENT_SPACE](arkts-basicservices-request-con.md#ERROR_INSUFFICIENT_SPACE) |
+| [ERROR_TOO_MANY_REDIRECTS](arkts-basicservices-request-con.md#ERROR_TOO_MANY_REDIRECTS) |
+| [ERROR_UNHANDLED_HTTP_CODE](arkts-basicservices-request-con.md#ERROR_UNHANDLED_HTTP_CODE) |
+| [ERROR_UNKNOWN](arkts-basicservices-request-con.md#ERROR_UNKNOWN) |
+| [ERROR_OFFLINE](arkts-basicservices-request-con.md#ERROR_OFFLINE) |
+| [ERROR_UNSUPPORTED_NETWORK_TYPE](arkts-basicservices-request-con.md#ERROR_UNSUPPORTED_NETWORK_TYPE) |
+| [PAUSED_QUEUED_FOR_WIFI](arkts-basicservices-request-con.md#PAUSED_QUEUED_FOR_WIFI) |
+| [PAUSED_WAITING_FOR_NETWORK](arkts-basicservices-request-con.md#PAUSED_WAITING_FOR_NETWORK) |
+| [PAUSED_WAITING_TO_RETRY](arkts-basicservices-request-con.md#PAUSED_WAITING_TO_RETRY) |
+| [PAUSED_BY_USER](arkts-basicservices-request-con.md#PAUSED_BY_USER) |
+| [PAUSED_UNKNOWN](arkts-basicservices-request-con.md#PAUSED_UNKNOWN) |
+| [SESSION_SUCCESSFUL](arkts-basicservices-request-con.md#SESSION_SUCCESSFUL) |
+| [SESSION_RUNNING](arkts-basicservices-request-con.md#SESSION_RUNNING) |
+| [SESSION_PENDING](arkts-basicservices-request-con.md#SESSION_PENDING) |
+| [SESSION_PAUSED](arkts-basicservices-request-con.md#SESSION_PAUSED) |
+| [SESSION_FAILED](arkts-basicservices-request-con.md#SESSION_FAILED) |

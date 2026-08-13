@@ -1,9 +1,10 @@
 # RectChangeReason
 
-Enumerates the reasons for changes in the rectangle (position and size) of the component (**EmbeddedComponent** or  
-**UIExtensionComponent**).
+Enumerates the reasons for changes in the rectangle (position and size) of the component (**EmbeddedComponent** or **UIExtensionComponent**).
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiExtension-enum RectChangeReason--><!--Device-uiExtension-enum RectChangeReason-End-->
 
@@ -17,11 +18,13 @@ HOST_WINDOW_RECT_CHANGE = 0x0001
 
 The rectangle of the host window containing the component changes.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeReason-HOST_WINDOW_RECT_CHANGE = 0x0001--><!--Device-RectChangeReason-HOST_WINDOW_RECT_CHANGE = 0x0001-End-->
 

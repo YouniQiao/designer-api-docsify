@@ -12,9 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function createLocalWantAgent(info: LocalWantAgentInfo): WantAgent
 ```
 
-Create a local WantAgent object.The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer.If this WantAgent object is passed across processes,its contained data will be serialized and transmitted to the target process.
+Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +42,7 @@ Create a local WantAgent object.The WantAgent created by this interface stores d
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

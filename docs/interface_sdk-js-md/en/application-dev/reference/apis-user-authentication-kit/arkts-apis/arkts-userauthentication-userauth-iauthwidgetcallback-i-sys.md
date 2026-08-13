@@ -2,9 +2,11 @@
 
 Defines the callback of the authentication widget. The authentication widget uses this callback to obtain commands sent by the user authentication framework and perform corresponding authentication operations based on the command content.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-userAuth-interface IAuthWidgetCallback--><!--Device-userAuth-interface IAuthWidgetCallback-End-->
 
@@ -29,6 +31,8 @@ Triggered to receive commands from the user authentication framework. The user a
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void--><!--Device-IAuthWidgetCallback-sendCommand(cmdData: string): void-End-->
 
@@ -72,9 +76,13 @@ sendCommand: AuthWidgetCallbackSendCommandFunc
 
 Called to return the command sent from the user authentication framework to the user authentication widget.
 
+**Type:** [AuthWidgetCallbackSendCommandFunc](arkts-userauthentication-userauth-authwidgetcallbacksendcommandfunc-t-sys.md)
+
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc--><!--Device-IAuthWidgetCallback-sendCommand: AuthWidgetCallbackSendCommandFunc-End-->
 

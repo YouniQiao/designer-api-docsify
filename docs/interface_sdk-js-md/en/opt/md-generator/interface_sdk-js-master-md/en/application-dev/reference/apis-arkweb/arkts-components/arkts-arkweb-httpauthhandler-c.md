@@ -1,8 +1,10 @@
 # HttpAuthHandler
 
-Defines the http auth request result, related to [onHttpAuthRequest](onHttpAuthRequest) method.
+Defines the http auth request result, related to onHttpAuthRequest method.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class HttpAuthHandler--><!--Device-unnamed-declare class HttpAuthHandler-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 Cancels HTTP authentication as requested by the user.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ confirm(userName: string, password: string): boolean
 Performs HTTP authentication with the user name and password provided by the user.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,6 +69,8 @@ Constructor.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpAuthHandler-constructor()--><!--Device-HttpAuthHandler-constructor()-End-->
@@ -78,6 +86,8 @@ isHttpAuthInfoSaved(): boolean
 Determine whether the credentials stored for the current host are suitable for use. If the credentials have previously been rejected by the server for the current request, they are not suitable for use.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

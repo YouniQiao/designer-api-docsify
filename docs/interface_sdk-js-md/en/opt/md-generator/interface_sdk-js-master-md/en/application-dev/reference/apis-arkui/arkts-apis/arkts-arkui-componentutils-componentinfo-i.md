@@ -4,6 +4,8 @@ Implements a **ComponentInfo** object, which provides the size, position, transl
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface ComponentInfo--><!--Device-componentUtils-interface ComponentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Offset of the component relative to the parent component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -45,6 +49,8 @@ Rotation of the component.
 **Type:** [RotateResult](arkts-arkui-componentutils-rotateresult-i.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Scaling of the component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -85,6 +93,8 @@ Offset of the component relative to the screen.
 **Type:** Offset
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Component size.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -125,6 +137,8 @@ Affine matrix of the component, which is a 4x4 matrix object created based on th
 **Type:** [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +160,8 @@ Translation of the component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -165,6 +181,8 @@ Offset of the component relative to the window.
 **Type:** Offset
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,9 +8,11 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 通过传入的PixelMap创建ColorPicker实例，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +38,7 @@ function createColorPicker(source: image.PixelMap): Promise<ColorPicker>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
 ## 示例
 
@@ -73,9 +75,11 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +94,7 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
-| region | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
+| region | Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
 
 **返回值：**
 
@@ -102,7 +106,7 @@ function createColorPicker(source: image.PixelMap, region: Array<double>): Promi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
 ## 示例
 
@@ -139,9 +143,11 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 
 通过传入的PixelMap创建ColorPicker实例，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -156,13 +162,13 @@ function createColorPicker(source: image.PixelMap, callback: AsyncCallback<Color
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
 ## 示例
 
@@ -199,9 +205,11 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 
 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -216,14 +224,14 @@ function createColorPicker(source: image.PixelMap, region: Array<double>, callba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | source | image.PixelMap | 是 | image模块创建的PixelMap实例。可通过图片解码或直接创建获得， 具体可见[Image Kit简介](../../../media/image/image-overview.md)。 |
-| region | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
+| region | Array&lt;double&gt; | 是 | 指定图片的取色区域。 数组第三个元素需大于第一个元素，第四个元素需大于第二个元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md)&gt; | 是 | 回调函数。返回创建的ColorPicker实例。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 输入参数错误。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 输入参数错误。 |
 
 ## 示例
 

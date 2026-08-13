@@ -1,12 +1,10 @@
 # FocusQuery
 
-提供了查询是否支持当前对焦模式的方法。
+提供了查询是否支持当前对焦模式的方法。 > **说明：** > > - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
 
-> **说明：**
-> 
-> - 本Interface的起始版本为API version 12。接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
 
@@ -20,7 +18,9 @@ isFocusAssistSupported(): boolean
 
 Checks whether the focus assist is supported.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusQuery-isFocusAssistSupported(): boolean--><!--Device-FocusQuery-isFocusAssistSupported(): boolean-End-->
 
@@ -38,8 +38,8 @@ Checks whether the focus assist is supported.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -67,7 +67,9 @@ isFocusDrivenTypeSupported(type: FocusDrivenType): boolean
 
 Checks whether a focus drive type is supported.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean--><!--Device-FocusQuery-isFocusDrivenTypeSupported(type: FocusDrivenType): boolean-End-->
 
@@ -91,9 +93,9 @@ Checks whether a focus drive type is supported.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -121,7 +123,9 @@ isFocusRangeTypeSupported(type: FocusRangeType): boolean
 
 Checks whether a focus range type is supported.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean--><!--Device-FocusQuery-isFocusRangeTypeSupported(type: FocusRangeType): boolean-End-->
 
@@ -145,9 +149,9 @@ Checks whether a focus range type is supported.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnRefreshAccessedHistoryEvent--><!--Device-unnamed-declare interface OnRefreshAccessedHistoryEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -14,11 +16,13 @@
 isMainFrame?: boolean
 ```
 
-是否是主文档触发。true表示是主文档触发，false表示不是主文档触发。
+是否是主文档触发。 true表示是主文档触发，false表示不是主文档触发。
 
 **类型：** boolean
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-OnRefreshAccessedHistoryEvent-isMainFrame?: boolean--><!--Device-OnRefreshAccessedHistoryEvent-isMainFrame?: boolean-End-->
 
@@ -30,11 +34,13 @@ isMainFrame?: boolean
 isRefreshed: boolean
 ```
 
-true表示该页面是被重新加载的（调用[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)接口），false表示该页面是新加载的。
+true表示该页面是被重新加载的（调用[refresh](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#refresh)接口 ），false表示该页面是新加载的。
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -53,6 +59,8 @@ url: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

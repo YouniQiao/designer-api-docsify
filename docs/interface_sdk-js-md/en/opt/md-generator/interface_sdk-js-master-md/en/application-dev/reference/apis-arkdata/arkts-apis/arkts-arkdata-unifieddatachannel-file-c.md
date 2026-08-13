@@ -1,14 +1,14 @@
 # File
 
-Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord) and a base class of the data of the file type. You are advised to use the child class of **File**, for example,   
-[Image](arkts-arkdata-unifieddatachannel-image-c.md#Image), [Video](arkts-arkdata-unifieddatachannel-video-c.md#Video), and   
-[Folder](arkts-arkdata-unifieddatachannel-folder-c.md#Folder), to describe data.
+Represents the file data. It is a child class of [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord) and a base class of the data of the file type. You are advised to use the child class of **File**, for example, [Image](arkts-arkdata-unifieddatachannel-image-c.md#Image), [Video](arkts-arkdata-unifieddatachannel-video-c.md#Video), and [Folder](arkts-arkdata-unifieddatachannel-folder-c.md#Folder), to describe data.
 
 **Inheritance/Implementation:** File extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-unifiedDataChannel-class File extends UnifiedRecord--><!--Device-unifiedDataChannel-class File extends UnifiedRecord-End-->
+**Deprecated since:** -1
+
+<!--Device-unifiedDataChannel-class File--><!--Device-unifiedDataChannel-class File-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -24,66 +24,18 @@ import { unifiedDataChannel } from '@kit.ArkData';
 details?: Record<string, string>
 ```
 
-A dictionary type object, where both the key and value are of the string type and are used to describe file information. For example, a data object with the following content can be created to describe a file:
+A dictionary type object, where both the key and value are of the string type and are used to describe file information. For example, a data object with the following content can be created to describe a file: { "name":"File name", "type":"File type" } The default value is an empty dictionary object.
 
-{
-
-"name":"File name",
-
-"type":"File type"
-
-}
-
-The default value is an empty dictionary object.
-
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-File-details?: Record<string, string>--><!--Device-File-details?: Record<string, string>-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## uri
-
-```TypeScript
-set uri(value: string)
-```
-
-Indicates the uri of file
-
-**Type:** string
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-File-set uri(value: string)--><!--Device-File-set uri(value: string)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## uriAuthorizationPolicies
-
-```TypeScript
-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)
-```
-
-Defines URI authorization policies for drag intention.
-
-**Type:** Array&lt;[UriPermission](arkts-arkdata-unifieddatachannel-uripermission-e.md)&gt;
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-File-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)--><!--Device-File-set uriAuthorizationPolicies(value: Array<UriPermission> | undefined)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core

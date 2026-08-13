@@ -2,7 +2,9 @@
 
 Enumerates the policy types.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum PolicyType--><!--Device-camera-enum PolicyType-End-->
 
@@ -18,7 +20,9 @@ PRIVACY = 1
 
 Privacy.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PolicyType-PRIVACY = 1--><!--Device-PolicyType-PRIVACY = 1-End-->
 

@@ -8,7 +8,9 @@ Define the text extended editing controller.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface TextEditControllerEx extends TextBaseController--><!--Device-unnamed-export declare interface TextEditControllerEx extends TextBaseController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface TextEditControllerEx--><!--Device-unnamed-export declare interface TextEditControllerEx-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Get caret offset from controller.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Get PreviewText.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextEditControllerEx-getPreviewText(): PreviewText | undefined--><!--Device-TextEditControllerEx-getPreviewText(): PreviewText | undefined-End-->
@@ -72,6 +78,8 @@ Judge whether is in editing state
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextEditControllerEx-isEditing(): boolean | undefined--><!--Device-TextEditControllerEx-isEditing(): boolean | undefined-End-->
@@ -95,6 +103,8 @@ Set caret offset.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,6 +135,8 @@ Stop editing state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

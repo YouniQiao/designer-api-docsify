@@ -1,10 +1,12 @@
 # SnapshotResult
 
-Represents a full drawing result.
+全量绘制回调结果。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface SnapshotResult--><!--Device-webview-interface SnapshotResult-End-->
 
@@ -16,13 +18,17 @@ Represents a full drawing result.
 id?: string
 ```
 
-Id of the snapshot.
+snapshot的id。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SnapshotResult-id?: string--><!--Device-SnapshotResult-id?: string-End-->
 
@@ -34,13 +40,17 @@ Id of the snapshot.
 imagePixelMap?: image.PixelMap
 ```
 
-Full drawing result in image.PixelMap format.
+全量绘制结果为image.PixelMap格式。
 
 **类型：** image.PixelMap
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SnapshotResult-imagePixelMap?: image.PixelMap--><!--Device-SnapshotResult-imagePixelMap?: image.PixelMap-End-->
 
@@ -52,13 +62,17 @@ Full drawing result in image.PixelMap format.
 size?: SizeOptions
 ```
 
-Actual size drawn on the web page.The value is of the number type, and the unit is vp.
+web绘制的尺寸，最多支持16000px * 16000px，长度单位支持px、vp、%，需保持不同参数传入长度单位一致，默认单位vp，超过规格时返回最大规格。（示例：width:'100px'，height:'200px'。 或者 width:'20%'，height:'30%'。只写数字时单位为vp。）
 
 **类型：** SizeOptions
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SnapshotResult-size?: SizeOptions--><!--Device-SnapshotResult-size?: SizeOptions-End-->
 
@@ -70,13 +84,17 @@ Actual size drawn on the web page.The value is of the number type, and the unit 
 status?: boolean
 ```
 
-The status of the snapshot.The value can be true (normal) or false (failure). If the full drawing result fails to be obtained,the width and height of the returned size are both 0, and the map is empty.
+snapshot的状态，正常为true，失败为false，获取全量绘制结果失败，返回size的长宽都为0，map为空。
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SnapshotResult-status?: boolean--><!--Device-SnapshotResult-status?: boolean-End-->
 

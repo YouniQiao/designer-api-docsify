@@ -2,7 +2,9 @@
 
 Enumerates detailed call states.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum DetailedCallState--><!--Device-call-export enum DetailedCallState-End-->
 
@@ -18,7 +20,9 @@ CALL_STATUS_ACTIVE = 0
 
 Active state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_ACTIVE = 0--><!--Device-DetailedCallState-CALL_STATUS_ACTIVE = 0-End-->
 
@@ -34,7 +38,9 @@ CALL_STATUS_HOLDING = 1
 
 Hold state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_HOLDING = 1--><!--Device-DetailedCallState-CALL_STATUS_HOLDING = 1-End-->
 
@@ -50,7 +56,9 @@ CALL_STATUS_DIALING = 2
 
 Dialing state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_DIALING = 2--><!--Device-DetailedCallState-CALL_STATUS_DIALING = 2-End-->
 
@@ -66,7 +74,9 @@ CALL_STATUS_ALERTING = 3
 
 Alerting state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_ALERTING = 3--><!--Device-DetailedCallState-CALL_STATUS_ALERTING = 3-End-->
 
@@ -82,7 +92,9 @@ CALL_STATUS_INCOMING = 4
 
 Incoming state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_INCOMING = 4--><!--Device-DetailedCallState-CALL_STATUS_INCOMING = 4-End-->
 
@@ -98,7 +110,9 @@ CALL_STATUS_WAITING = 5
 
 Enumerates call waiting states.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_WAITING = 5--><!--Device-DetailedCallState-CALL_STATUS_WAITING = 5-End-->
 
@@ -114,7 +128,9 @@ CALL_STATUS_DISCONNECTED = 6
 
 Disconnected state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_DISCONNECTED = 6--><!--Device-DetailedCallState-CALL_STATUS_DISCONNECTED = 6-End-->
 
@@ -130,7 +146,9 @@ CALL_STATUS_DISCONNECTING = 7
 
 Disconnecting state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_DISCONNECTING = 7--><!--Device-DetailedCallState-CALL_STATUS_DISCONNECTING = 7-End-->
 
@@ -146,7 +164,9 @@ CALL_STATUS_IDLE = 8
 
 Idle state.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DetailedCallState-CALL_STATUS_IDLE = 8--><!--Device-DetailedCallState-CALL_STATUS_IDLE = 8-End-->
 

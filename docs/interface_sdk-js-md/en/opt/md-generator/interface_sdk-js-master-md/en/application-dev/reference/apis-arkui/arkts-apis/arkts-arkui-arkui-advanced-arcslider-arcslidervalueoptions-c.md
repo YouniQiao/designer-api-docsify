@@ -4,7 +4,7 @@ Defines the value of the arc slider.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ArcSliderValueOptions--><!--Device-unnamed-declare class ArcSliderValueOptions-End-->
 
@@ -26,6 +26,8 @@ A constructor used to create an **ArcSliderValueOptions** instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)--><!--Device-ArcSliderValueOptions-constructor(options?: ArcSliderValueOptionsConstructorOptions)-End-->
@@ -41,18 +43,11 @@ A constructor used to create an **ArcSliderValueOptions** instance.
 ## max
 
 ```TypeScript
-max?: number
+@Trace
+  max?: number
 ```
 
-Maximum value.
-
-Default value: **100**
-
-**NOTE：**
-
-If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**.
-
-If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
+Maximum value. Default value: **100** **NOTE：**If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**. If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
 
 **Type:** number
 
@@ -60,21 +55,22 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderValueOptions-max?: number--><!--Device-ArcSliderValueOptions-max?: number-End-->
+<!--Device-ArcSliderValueOptions-@Trace  max?: number--><!--Device-ArcSliderValueOptions-@Trace  max?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## min
 
 ```TypeScript
-min?: number
+@Trace
+  min?: number
 ```
 
-Minimum value.
-
-Default value: **0**.
+Minimum value. Default value: **0**.
 
 **Type:** number
 
@@ -82,28 +78,31 @@ Default value: **0**.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderValueOptions-min?: number--><!--Device-ArcSliderValueOptions-min?: number-End-->
+<!--Device-ArcSliderValueOptions-@Trace  min?: number--><!--Device-ArcSliderValueOptions-@Trace  min?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## progress
 
 ```TypeScript
-progress?: number
+@Trace
+  progress?: number
 ```
 
-Current progress.
-
-Default value: same as the value of **min**.
+Current progress. Default value: same as the value of **min**.
 
 **Type:** number
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderValueOptions-progress?: number--><!--Device-ArcSliderValueOptions-progress?: number-End-->
+<!--Device-ArcSliderValueOptions-@Trace  progress?: number--><!--Device-ArcSliderValueOptions-@Trace  progress?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

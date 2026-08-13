@@ -6,7 +6,9 @@ type SignalInformation = radio.SignalInformation
 
 Defines the signal strength.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-type SignalInformation = radio.SignalInformation--><!--Device-observer-type SignalInformation = radio.SignalInformation-End-->
 

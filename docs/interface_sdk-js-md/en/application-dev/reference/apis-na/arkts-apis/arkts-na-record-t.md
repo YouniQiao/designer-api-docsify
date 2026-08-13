@@ -1,0 +1,22 @@
+# Record
+
+```TypeScript
+type Record<K extends keyof any, T> = {
+    [P in K]: T;
+}
+```
+
+Construct a type with a set of properties K of type T
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-type Record<K extends keyof any, T> = {    [P in K]: T;}--><!--Device-unnamed-type Record<K extends keyof any, T> = {    [P in K]: T;}-End-->
+
+**Property type:** {
+    [P in K]: T;
+}
+

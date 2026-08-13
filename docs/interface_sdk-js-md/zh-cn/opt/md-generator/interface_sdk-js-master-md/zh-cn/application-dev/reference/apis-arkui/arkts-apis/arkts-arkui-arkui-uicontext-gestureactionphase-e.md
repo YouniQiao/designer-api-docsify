@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export const enum GestureActionPhase--><!--Device-unnamed-export const enum GestureActionPhase-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ WILL_START = 0
 该手势已被系统成功识别，action-start/action回调函数将立即执行。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ WILL_END = 1
 这表示手势已被确定为结束，这通常发生在用户抬起手指，结束整个交互时，并且动作结束回调将立即执行。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

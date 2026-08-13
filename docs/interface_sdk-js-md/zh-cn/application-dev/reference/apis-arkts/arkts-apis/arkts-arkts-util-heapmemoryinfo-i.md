@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 <!--Device-util-interface HeapMemoryInfo--><!--Device-util-interface HeapMemoryInfo-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -23,6 +25,8 @@ heapObjectSize: number
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ heapType: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HeapMemoryInfo-heapType: string--><!--Device-HeapMemoryInfo-heapType: string-End-->
@@ -56,13 +62,15 @@ heapType: string
 threadId?: number
 ```
 
-如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程 ID 的整数；如果此内存信息描述的是 shared 堆，则该值为 undefined。
+如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程 ID 的整数； 如果此内存信息描述的是 shared 堆，则该值为 undefined。
 
 **类型：** number
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,13 +84,15 @@ threadId?: number
 threadName?: string
 ```
 
-如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程名称的字符串；如果此内存信息描述的是 shared 堆，则该值为 undefined。
+如果此内存信息描述的是 ArkTS-VM 的 local 堆，该值为表示运行线程名称的字符串； 如果此内存信息描述的是 shared 堆，则该值为 undefined。
 
 **类型：** string
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

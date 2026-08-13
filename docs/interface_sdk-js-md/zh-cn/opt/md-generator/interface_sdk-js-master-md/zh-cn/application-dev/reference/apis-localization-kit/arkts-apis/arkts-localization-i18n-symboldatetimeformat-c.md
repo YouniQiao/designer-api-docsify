@@ -1,14 +1,14 @@
 # SymbolDateTimeFormat
 
-提供自定义时间日期符号的能力。继承自  
-[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)，支持  
-[Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)的方法。
+提供自定义时间日期符号的能力。继承自 [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat)， 支持 [Intl.DateTimeFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/DateTimeFormat) 的方法。
 
 **继承/实现关系：** SymbolDateTimeFormat extends [Intl.DateTimeFormat](arkts-localization-intl-datetimeformat-c.md#DateTimeFormat)
 
 **起始版本：** 26.0.0
 
-<!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat-End-->
+**废弃版本：** -1
+
+<!--Device-i18n-export class SymbolDateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -21,6 +21,8 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 创建使用自定义符号的时间日期格式化对象。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,7 +43,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 
 | 错误码ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 ## format
 
@@ -52,6 +54,8 @@ public format(date?: Date | number): string
 对时间日期进行格式化，返回使用自定义符号的时间日期字符串。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +86,8 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 对时间日期范围进行格式化。自定义符号在该接口上暂不生效。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,6 +121,8 @@ public formatRangeToParts(startDate: Date | number | bigint, endDate: Date | num
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -146,6 +154,8 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -176,6 +186,8 @@ public parse(text: string, lenientMode: boolean): number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -201,7 +213,7 @@ public parse(text: string, lenientMode: boolean): number
 
 | 错误码ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-参数校验错误) |
+| [8900001](../errorcode-i18n.md#8900001-参数校验错误) |
 
 ## resolvedOptions
 
@@ -212,6 +224,8 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 解析自定义时间日期符号的配置项。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

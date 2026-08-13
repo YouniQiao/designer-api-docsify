@@ -1,18 +1,12 @@
 # AbilityDelegator
 
-The **AbilityDelegator** module can listen for and manage the lifecycle changes of  
-[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) through  
-[AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the  
-**onForeground** state), start a specified UIAbility, and set the timeout mechanism.You can obtain **AbilityDelegator** by calling  
-[getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getAbilityDelegator).
+The **AbilityDelegator** module can listen for and manage the lifecycle changes of [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) through [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instances. For example, you can obtain the current state of a UIAbility (for example, whether the UIAbility has been created or is in the foreground), obtain the UIAbility that currently has the focus, wait for the UIAbility to enter a lifecycle node (for example, the **onForeground** state), start a specified UIAbility, and set the timeout mechanism. You can obtain **AbilityDelegator** by calling [getAbilityDelegator](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-getabilitydelegator-f.md#getAbilityDelegator). > **NOTE：**> > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
-> **NOTE：**
-> 
-> The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AbilityDelegator--><!--Device-unnamed-export interface AbilityDelegator-End-->
 
@@ -26,9 +20,11 @@ addAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): void
 
 Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,15 +36,15 @@ Adds an **AbilityMonitor** instance. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is added, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -81,9 +77,11 @@ addAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 
 Adds an **AbilityMonitor** instance. This API uses a promise to return the result. Multi-thread concurrent calls are not supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -95,7 +93,7 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
 
 **Return value:**
 
@@ -107,8 +105,8 @@ Adds an **AbilityMonitor** instance. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -139,9 +137,11 @@ addAbilityMonitorSync(monitor: AbilityMonitor): void
 
 Adds an **AbilityMonitor** instance. This API returns the result synchronously. Multi-thread concurrent calls are not supported.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -153,14 +153,14 @@ Adds an **AbilityMonitor** instance. This API returns the result synchronously. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitorSync failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityMonitorSync failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -191,9 +191,11 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<voi
 
 Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes of an ability stage. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -205,15 +207,15 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is added, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -240,9 +242,11 @@ addAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes of an ability stage. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -254,7 +258,7 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
 
 **Return value:**
 
@@ -266,8 +270,8 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -293,9 +297,11 @@ addAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 
 Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes of an ability stage. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -307,14 +313,14 @@ Adds an **AbilityStageMonitor** instance to monitor the lifecycle state changes 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitorSync failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddAbilityStageMonitorSync failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -336,11 +342,13 @@ abilityDelegator.addAbilityStageMonitorSync({
 addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 ```
 
-Add an InteropAbilityMonitor object for monitoring the lifecycle state changes of the specified ability  in this process.
+Add an InteropAbilityMonitor object for monitoring the lifecycle state changes of the specified ability in this process.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -360,7 +368,7 @@ Add an InteropAbilityMonitor object for monitoring the lifecycle state changes o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddInteropAbilityMonitorSync failed. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling AddInteropAbilityMonitorSync failed. |
 
 ## doAbilityBackground
 
@@ -368,11 +376,13 @@ Add an InteropAbilityMonitor object for monitoring the lifecycle state changes o
 doAbilityBackground(ability: UIAbility, callback: AsyncCallback<void>): void
 ```
 
-Schedules the lifecycle state of an ability to **Background**. This API uses an asynchronous callback to return the  result.
+Schedules the lifecycle state of an ability to **Background**. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -385,14 +395,14 @@ Schedules the lifecycle state of an ability to **Background**. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Background**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -422,9 +432,11 @@ doAbilityBackground(ability: UIAbility): Promise<void>
 
 Schedules the lifecycle state of an ability to **Background**. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -448,8 +460,8 @@ Schedules the lifecycle state of an ability to **Background**. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityBackground failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -477,11 +489,13 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 doAbilityForeground(ability: UIAbility, callback: AsyncCallback<void>): void
 ```
 
-Schedules the lifecycle state of an ability to **Foreground**. This API uses an asynchronous callback to return the  result.
+Schedules the lifecycle state of an ability to **Foreground**. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -494,14 +508,14 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | Yes | Target ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability lifecycle state is changed to **Foreground**, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -531,9 +545,11 @@ doAbilityForeground(ability: UIAbility): Promise<void>
 
 Schedules the lifecycle state of an ability to **Foreground**. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -557,8 +573,8 @@ Schedules the lifecycle state of an ability to **Foreground**. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling DoAbilityForeground failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -586,11 +602,13 @@ abilityDelegator.getCurrentTopAbility((err: BusinessError, data: UIAbility) => {
 executeShellCommand(cmd: string, callback: AsyncCallback<ShellCmdResult>): void
 ```
 
-Executes a shell command. This API uses an asynchronous callback to return the result.Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm,hidumper, wukong, pkill, ps, and pidof.
+Executes a shell command. This API uses an asynchronous callback to return the result. Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm, hidumper, wukong, pkill, ps, and pidof.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -603,7 +621,7 @@ Executes a shell command. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -622,21 +640,17 @@ abilityDelegator.executeShellCommand(cmd, (err: BusinessError, data: abilityDele
 
 ## executeShellCommand
 
-ArkTS-Dyn:
-```TypeScript
-executeShellCommand(cmd: string, timeoutSecs: number, callback: AsyncCallback<ShellCmdResult>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 executeShellCommand(cmd: string, timeoutSecs: long, callback: AsyncCallback<ShellCmdResult>): void
 ```
 
-Executes a shell command with the timeout period specified. This API uses an asynchronous callback to return the result.Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm,hidumper, wukong, pkill, ps, and pidof.
+Executes a shell command with the timeout period specified. This API uses an asynchronous callback to return the result. Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm, hidumper, wukong, pkill, ps, and pidof.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -649,8 +663,8 @@ Executes a shell command with the timeout period specified. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
-| timeoutSecs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Command timeout period, in seconds. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
+| timeoutSecs | long | Yes | Command timeout period, in seconds. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)&gt; | Yes | Callback used to return the result. If the shell command is executed , **err** is **undefined** and **data** is the execution result obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -670,21 +684,17 @@ abilityDelegator.executeShellCommand(cmd, timeout, (err: BusinessError, data: ab
 
 ## executeShellCommand
 
-ArkTS-Dyn:
-```TypeScript
-executeShellCommand(cmd: string, timeoutSecs?: number): Promise<ShellCmdResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 executeShellCommand(cmd: string, timeoutSecs?: long): Promise<ShellCmdResult>
 ```
 
-Executes a shell command with the timeout period specified. This API uses a promise to return the result.Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm,hidumper, wukong, pkill, ps, and pidof.
+Executes a shell command with the timeout period specified. This API uses a promise to return the result. Only the following shell commands are supported: aa, bm, cp, mkdir, rm, uinput, hilog, ppwd, echo, uitest, acm, hidumper, wukong, pkill, ps, and pidof.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -697,7 +707,7 @@ Executes a shell command with the timeout period specified. This API uses a prom
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | cmd | string | Yes | Shell command string. |
-| timeoutSecs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Command timeout period, in seconds. The default value is **0**, indicating that the timeout period is not set. |
+| timeoutSecs | long | No | Command timeout period, in seconds. The default value is **0**, indicating that the timeout period is not set. |
 
 **Return value:**
 
@@ -722,21 +732,17 @@ abilityDelegator.executeShellCommand(cmd, timeout).then((data) => {
 
 ## finishTest
 
-ArkTS-Dyn:
-```TypeScript
-finishTest(msg: string, code: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 finishTest(msg: string, code: long, callback: AsyncCallback<void>): void
 ```
 
 Finishes the test and prints log information to the unit test console. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -749,15 +755,15 @@ Finishes the test and prints log information to the unit test console. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Log code. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
+| code | long | Yes | Log code. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the test finishes and the log information is printed to the unit test console, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -776,21 +782,17 @@ abilityDelegator.finishTest(msg, 0, (err: BusinessError) => {
 
 ## finishTest
 
-ArkTS-Dyn:
-```TypeScript
-finishTest(msg: string, code: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 finishTest(msg: string, code: long): Promise<void>
 ```
 
 Finishes the test and prints log information to the unit test console. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -803,7 +805,7 @@ Finishes the test and prints log information to the unit test console. This API 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Log code. |
+| code | long | Yes | Log code. |
 
 **Return value:**
 
@@ -815,8 +817,8 @@ Finishes the test and prints log information to the unit test console. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling FinishTest failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -834,21 +836,17 @@ abilityDelegator.finishTest(msg, 0).then(() => {
 
 ## getAbilityState
 
-ArkTS-Dyn:
-```TypeScript
-getAbilityState(ability: UIAbility): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAbilityState(ability: UIAbility): int
 ```
 
 Obtains the lifecycle state of an ability.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -866,13 +864,13 @@ Obtains the lifecycle state of an ability.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState]{ |
+| int | Lifecycle state of the ability, For details about the state values, see [AbilityLifecycleState]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -901,9 +899,11 @@ getAppContext(): Context
 
 Obtains the application context.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -935,11 +935,13 @@ let context = abilityDelegator.getAppContext();
 getCurrentTopAbility(callback: AsyncCallback<UIAbility>): void
 ```
 
-Obtains the top ability of this application. This API uses an asynchronous callback to return the result. It cannot  be called in the worker thread.
+Obtains the top ability of this application. This API uses an asynchronous callback to return the result. It cannot be called in the worker thread.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -951,14 +953,14 @@ Obtains the top ability of this application. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the top ability is obtained, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -985,9 +987,11 @@ getCurrentTopAbility(): Promise<UIAbility>
 
 Obtains the top ability of this application. This API uses a promise to return the result. It cannot be called in the worker thread.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1005,7 +1009,7 @@ Obtains the top ability of this application. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling GetCurrentTopAbility failed. |
 
 ## Examples
 
@@ -1031,9 +1035,11 @@ print(msg: string, callback: AsyncCallback<void>): void
 
 Prints log information to the unit test console. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1046,7 +1052,7 @@ Prints log information to the unit test console. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | string | Yes | Log string. The value contains a maximum of 10,000 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the log information is printed to the unit test console, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1071,9 +1077,11 @@ print(msg: string): Promise<void>
 
 Prints log information to the unit test console. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1115,9 +1123,11 @@ printSync(msg: string): void
 
 Prints log information to the unit test console.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1135,7 +1145,7 @@ Prints log information to the unit test console.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1157,9 +1167,11 @@ removeAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<void>): vo
 
 Removes an **AbilityMonitor** instance. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1171,15 +1183,15 @@ Removes an **AbilityMonitor** instance. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityMonitor** instance is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1211,11 +1223,13 @@ abilityDelegator.removeAbilityMonitor(monitor, (error: BusinessError) => {
 removeAbilityMonitor(monitor: AbilityMonitor): Promise<void>
 ```
 
-Removes an **AbilityMonitor** instance. This API uses a promise to return the result. Multi-thread concurrent calls  are not supported.
+Removes an **AbilityMonitor** instance. This API uses a promise to return the result. Multi-thread concurrent calls are not supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1227,7 +1241,7 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
 
 **Return value:**
 
@@ -1239,8 +1253,8 @@ Removes an **AbilityMonitor** instance. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1272,9 +1286,11 @@ removeAbilityMonitorSync(monitor: AbilityMonitor): void
 
 Removes an **AbilityMonitor** instance. This API returns the result synchronously. Multi-thread concurrent calls are not supported.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1286,14 +1302,14 @@ Removes an **AbilityMonitor** instance. This API returns the result synchronousl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitorSync failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityMonitorSync failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1323,9 +1339,11 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<
 
 Removes an **AbilityStageMonitor** instance from the application memory. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1337,15 +1355,15 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the **AbilityStageMonitor** instance is removed, **err** is undefined. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1372,9 +1390,11 @@ removeAbilityStageMonitor(monitor: AbilityStageMonitor): Promise<void>
 
 Removes an **AbilityStageMonitor** instance from the application memory. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1386,7 +1406,7 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
 
 **Return value:**
 
@@ -1398,8 +1418,8 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1425,9 +1445,11 @@ removeAbilityStageMonitorSync(monitor: AbilityStageMonitor): void
 
 Removes an **AbilityStageMonitor** instance from the application memory. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1439,14 +1461,14 @@ Removes an **AbilityStageMonitor** instance from the application memory. This AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitorSync failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveAbilityStageMonitorSync failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1472,7 +1494,9 @@ Remove a specified InteropAbilityMonitor object from the application memory.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1492,7 +1516,7 @@ Remove a specified InteropAbilityMonitor object from the application memory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveInteropAbilityMonitorSync failed. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling RemoveInteropAbilityMonitorSync failed. |
 
 ## setMockList
 
@@ -1505,6 +1529,8 @@ Sets a list of mock data.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1522,8 +1548,8 @@ Sets a list of mock data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -1548,9 +1574,11 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts an ability. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1563,28 +1591,28 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want** parameter for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ability is started, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
-| [16000013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
-| [16000008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## Examples
 
@@ -1613,9 +1641,11 @@ startAbility(want: Want): Promise<void>
 
 Starts an ability. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1639,22 +1669,22 @@ Starts an ability. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
-| [16000055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [16000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [16000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
-| [16000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
-| [16000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
-| [16000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
-| [16200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-| [16000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
-| [16000013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
-| [16000008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
-| [16000009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
-| [16000010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
-| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) | The ability is not on the top of the UI. |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) | Installation-free timed out. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) | The specified process does not have the permission. |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) | Cross-user operations are not allowed. |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
+| [16200001](../errorcode-ability.md#16200001-caller-released) | The caller has been released. |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) | The application is controlled.<br>**Applicable version:** 10 and later |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) | The application is controlled by EDM.<br>**Applicable version:** 10 and later |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) | An ability cannot be started or stopped in Wukong mode. |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) | The call with the continuation and prepare continuation flag is forbidden. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## Examples
 
@@ -1680,11 +1710,13 @@ abilityDelegator.startAbility(want).then((data: void) => {
 waitAbilityMonitor(monitor: AbilityMonitor, callback: AsyncCallback<UIAbility>): void
 ```
 
-Waits for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle  state and returns the **Ability** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
+Waits for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle state and returns the **Ability** instance. This API uses an asynchronous callback to return the result. Multi- thread concurrent calls are not supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1696,15 +1728,15 @@ Waits for the **Ability** instance that matches the **AbilityMonitor** instance 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **Ability** instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1735,22 +1767,17 @@ abilityDelegator.waitAbilityMonitor(monitor, (error: BusinessError, data: UIAbil
 
 ## waitAbilityMonitor
 
-ArkTS-Dyn:
-```TypeScript
-waitAbilityMonitor(monitor: AbilityMonitor, timeout: number, callback: AsyncCallback<UIAbility>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 waitAbilityMonitor(monitor: AbilityMonitor, timeout: long, callback: AsyncCallback<UIAbility>): void
 ```
 
-Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the  
-**onCreate** lifecycle state and returns the **Ability** instance. This API uses an asynchronous callback to return  the result. Multi-thread concurrent calls are not supported.
+Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle state and returns the **Ability** instance. This API uses an asynchronous callback to return the result. Multi-thread concurrent calls are not supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1762,16 +1789,16 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1803,22 +1830,17 @@ abilityDelegator.waitAbilityMonitor(monitor, timeout, (error: BusinessError, dat
 
 ## waitAbilityMonitor
 
-ArkTS-Dyn:
-```TypeScript
-waitAbilityMonitor(monitor: AbilityMonitor, timeout?: number): Promise<UIAbility>
-```
-
-ArkTS-Sta:
 ```TypeScript
 waitAbilityMonitor(monitor: AbilityMonitor, timeout?: long): Promise<UIAbility>
 ```
 
-Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the  
-**onCreate** lifecycle state and returns the **Ability** instance. This API uses a promise to return the result.Multi-thread concurrent calls are not supported.
+Waits a period of time for the **Ability** instance that matches the **AbilityMonitor** instance to reach the **onCreate** lifecycle state and returns the **Ability** instance. This API uses a promise to return the result. Multi-thread concurrent calls are not supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1830,8 +1852,8 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](./application/AbilityMonitor:AbilityMonitor) instance. |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| monitor | [AbilityMonitor](arkts-ability-abilitymonitor-i.md) | Yes | [AbilityMonitor](arkts-ability-abilitymonitor-i.md#AbilityMonitor) instance. |
+| timeout | long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
 
@@ -1843,8 +1865,8 @@ Waits a period of time for the **Ability** instance that matches the **AbilityMo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1876,9 +1898,11 @@ waitAbilityStageMonitor(monitor: AbilityStageMonitor, callback: AsyncCallback<Ab
 
 Returns an **AbilityStage** instance that matches the conditions set in an **AbilityStageMonitor** instance. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1890,15 +1914,15 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) instance obtained. Otherwise, **err** is an error object. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1920,21 +1944,17 @@ abilityDelegator.waitAbilityStageMonitor({
 
 ## waitAbilityStageMonitor
 
-ArkTS-Dyn:
-```TypeScript
-waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: number, callback: AsyncCallback<AbilityStage>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout: long, callback: AsyncCallback<AbilityStage>): void
 ```
 
 Returns an **AbilityStage** instance that matches the conditions set in an **AbilityStageMonitor** instance within the specified timeout period. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1946,16 +1966,16 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) instance obtained. Otherwise, **err** is an error object. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| timeout | long | Yes | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is undefined and data is the [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) instance obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -1978,21 +1998,17 @@ abilityDelegator.waitAbilityStageMonitor({
 
 ## waitAbilityStageMonitor
 
-ArkTS-Dyn:
-```TypeScript
-waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: number): Promise<AbilityStage>
-```
-
-ArkTS-Sta:
 ```TypeScript
 waitAbilityStageMonitor(monitor: AbilityStageMonitor, timeout?: long): Promise<AbilityStage>
 ```
 
 Returns an **AbilityStage** instance that matches the conditions set in an **AbilityStageMonitor** instance. You can specify the timeout period. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2004,8 +2020,8 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](./application/AbilityStageMonitor:AbilityStageMonitor) instance. |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
+| monitor | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md) | Yes | [AbilityStageMonitor](arkts-ability-abilitystagemonitor-i.md#AbilityStageMonitor) instance. |
+| timeout | long | No | Maximum waiting time, in milliseconds. The default value is 5000 ms. |
 
 **Return value:**
 
@@ -2017,8 +2033,8 @@ Returns an **AbilityStage** instance that matches the conditions set in an **Abi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [16000100](../errorcode-ability.md#16000100-failed-to-call-abilitymonitor-apis-to-listen-for-ability-lifecycle-changes) | Calling WaitAbilityStageMonitor failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 

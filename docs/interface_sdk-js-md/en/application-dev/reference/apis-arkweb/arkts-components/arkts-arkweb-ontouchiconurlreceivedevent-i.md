@@ -6,6 +6,8 @@ Defines the triggered callback when the application receive an new url of an app
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnTouchIconUrlReceivedEvent--><!--Device-unnamed-declare interface OnTouchIconUrlReceivedEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Corresponding to whether apple-touch-icon is precomposited.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,6 +47,8 @@ The apple-touch-icon URL address received.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

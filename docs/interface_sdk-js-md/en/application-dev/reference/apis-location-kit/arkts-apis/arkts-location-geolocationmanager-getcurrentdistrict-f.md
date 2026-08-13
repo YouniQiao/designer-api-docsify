@@ -14,15 +14,17 @@ function getCurrentDistrict(params?: DistrictRequestParams): Promise<DistrictInf
 
 Obtains the information about the district where the current device is located.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 26.0.0; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.APPROXIMATELY_LOCATION
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-geoLocationManager-function getCurrentDistrict(params?: DistrictRequestParams): Promise<DistrictInfo>--><!--Device-geoLocationManager-function getCurrentDistrict(params?: DistrictRequestParams): Promise<DistrictInfo>-End-->
 
@@ -44,9 +46,9 @@ Obtains the information about the district where the current device is located.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.getCurrentDistrict} due to limited device capabilities. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [3301000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
-| [3301100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
-| [3301500](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301500-area-information-query-failed) | Failed to query the area information because the reverse geocoding server returns an error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.getCurrentDistrict} due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| [3301100](../errorcode-geoLocationManager.md#3301100-positioning-failed-because-the-location-switch-is-turned-off) | The location switch is off. |
+| [3301500](../errorcode-geoLocationManager.md#3301500-area-information-query-failed) | Failed to query the area information because the reverse geocoding server returns an error. |
 

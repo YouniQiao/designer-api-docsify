@@ -2,7 +2,9 @@
 
 表示分布式硬件的描述信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hardwareManager-interface HardwareDescriptor--><!--Device-hardwareManager-interface HardwareDescriptor-End-->
 
@@ -20,7 +22,9 @@ srcNetworkId?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
@@ -40,7 +44,9 @@ type: DistributedHardwareType
 
 **类型：** [DistributedHardwareType](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 

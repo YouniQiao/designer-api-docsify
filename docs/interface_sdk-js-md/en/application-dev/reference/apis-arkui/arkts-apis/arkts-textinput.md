@@ -38,8 +38,8 @@
 
 | Name | Description |
 | --- | --- |
-| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Defines a TextInput callback when onContentScroll.Anonymous Object Rectification. |
-| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Defines a TextInput callback when onPaste.  Anonymous Object Rectification. |
-| [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md) | Defines a TextInput callback when onSubmit.  Anonymous Object Rectification. |
-| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Defines a TextInput callback when onTextSelectionChange.Anonymous Object Rectification. |
+| [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md) | Defines a TextInput callback when onContentScroll. Anonymous Object Rectification. |
+| [OnPasteCallback](arkts-arkui-onpastecallback-t.md) | Defines a TextInput callback when onPaste. Anonymous Object Rectification. |
+| [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md) | Defines a TextInput callback when onSubmit. Anonymous Object Rectification. |
+| [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md) | Defines a TextInput callback when onTextSelectionChange. Anonymous Object Rectification. |
 

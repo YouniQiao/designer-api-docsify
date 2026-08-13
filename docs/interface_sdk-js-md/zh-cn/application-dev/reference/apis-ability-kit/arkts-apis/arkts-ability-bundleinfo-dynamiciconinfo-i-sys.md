@@ -2,9 +2,11 @@
 
 应用的动态图标信息。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DynamicIconInfo--><!--Device-unnamed-export interface DynamicIconInfo-End-->
 
@@ -20,11 +22,13 @@ readonly appIndex: int
 
 标识当前动态图标所属的应用分身索引信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly appIndex: int--><!--Device-DynamicIconInfo-readonly appIndex: int-End-->
 
@@ -42,9 +46,11 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly bundleName: string--><!--Device-DynamicIconInfo-readonly bundleName: string-End-->
 
@@ -62,9 +68,11 @@ readonly moduleName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly moduleName: string--><!--Device-DynamicIconInfo-readonly moduleName: string-End-->
 
@@ -80,11 +88,13 @@ readonly userId: int
 
 标识当前动态图标所属的用户信息。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly userId: int--><!--Device-DynamicIconInfo-readonly userId: int-End-->
 

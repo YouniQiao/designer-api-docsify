@@ -6,17 +6,13 @@
 function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 ```
 
-查询当前系统是否处于稳定性测试场景。使用callback异步回调。
-
-> **说明：**
-> 
-> 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
+查询当前系统是否处于稳定性测试场景。使用callback异步回调。 > **说明：** > > 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [isRunningInStabilityTest](ohos.app.ability.appManager/appManager#isRunningInStabilityTest)
+**替代接口：** [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isRunningInStabilityTest)
 
 <!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void--><!--Device-appManager-function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void-End-->
 
@@ -49,17 +45,13 @@ appManager.isRunningInStabilityTest((error, flag) => {
 function isRunningInStabilityTest(): Promise<boolean>
 ```
 
-查询当前系统是否处于稳定性测试场景。使用Promise异步回调。
-
-> **说明：**
-> 
-> 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
+查询当前系统是否处于稳定性测试场景。使用Promise异步回调。 > **说明：** > > 稳定性测试场景指为验证应用在复杂、极端或长期运行条件下的可靠性而设计的特定测试环境。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [isRunningInStabilityTest](ohos.app.ability.appManager/appManager#isRunningInStabilityTest)
+**替代接口：** [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isRunningInStabilityTest)
 
 <!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>--><!--Device-appManager-function isRunningInStabilityTest(): Promise<boolean>-End-->
 

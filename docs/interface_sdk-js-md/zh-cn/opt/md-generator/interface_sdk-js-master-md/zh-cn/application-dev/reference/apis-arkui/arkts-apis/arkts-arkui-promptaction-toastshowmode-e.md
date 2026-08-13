@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-promptAction-export enum ToastShowMode--><!--Device-promptAction-export enum ToastShowMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 Toast显示在应用内。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ TOP_MOST = 1
 Toast显示在子窗。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

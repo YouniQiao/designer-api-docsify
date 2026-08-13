@@ -2,7 +2,9 @@
 
 云服务信息
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface ServiceInfo--><!--Device-cloudExtension-export interface ServiceInfo-End-->
 
@@ -20,7 +22,9 @@ enableCloud: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ServiceInfo-enableCloud: boolean--><!--Device-ServiceInfo-enableCloud: boolean-End-->
 
@@ -38,7 +42,9 @@ id: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ServiceInfo-id: string--><!--Device-ServiceInfo-id: string-End-->
 
@@ -56,7 +62,9 @@ remainingSpace: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ServiceInfo-remainingSpace: long--><!--Device-ServiceInfo-remainingSpace: long-End-->
 
@@ -74,7 +82,9 @@ totalSpace: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ServiceInfo-totalSpace: long--><!--Device-ServiceInfo-totalSpace: long-End-->
 
@@ -92,7 +102,9 @@ user: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ServiceInfo-user: int--><!--Device-ServiceInfo-user: int-End-->
 

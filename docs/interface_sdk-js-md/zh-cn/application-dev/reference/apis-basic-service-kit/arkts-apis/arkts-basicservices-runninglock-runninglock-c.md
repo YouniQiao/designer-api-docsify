@@ -2,9 +2,11 @@
 
 阻止系统睡眠的锁。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-runningLock-class RunningLock--><!--Device-runningLock-class RunningLock-End-->
 
@@ -12,21 +14,17 @@
 
 ## hold
 
-ArkTS-Dyn:
-```TypeScript
-hold(timeout: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 hold(timeout: int): void
 ```
 
 锁定和持有RunningLock。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -38,14 +36,14 @@ hold(timeout: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。&lt;br&gt;该参数必须为数字类型：&lt;br&gt;**-1**：永久持锁，需要主动释放。&lt;br&gt;**0**：默认3s后超时释放。&lt;br&gt; **>0**：按传入值超时释放。 |
+| timeout | int | 是 | 锁定和持有RunningLock的时长，单位：毫秒。&lt;br&gt;该参数必须为数字类型：&lt;br&gt;**-1**：永久持锁，需要主动释放。&lt;br&gt;**0**：默认3s后超时释放。&lt;br&gt; **>0**：按传入值超时释放。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
 ## 示例
 
@@ -86,9 +84,11 @@ isHolding(): boolean
 
 查询当前RunningLock是持有状态还是释放状态。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RunningLock-isHolding(): boolean--><!--Device-RunningLock-isHolding(): boolean-End-->
 
@@ -215,9 +215,11 @@ unhold(): void
 
 释放RunningLock锁。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_LOCK
 
@@ -229,7 +231,7 @@ unhold(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | If the permission is denied. |
 
 ## 示例
 

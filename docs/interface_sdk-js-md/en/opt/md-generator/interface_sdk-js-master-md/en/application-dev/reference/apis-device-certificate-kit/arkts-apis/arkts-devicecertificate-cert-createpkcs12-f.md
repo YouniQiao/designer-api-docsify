@@ -14,9 +14,11 @@ function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<U
 
 Creates P12. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-cert-function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<Uint8Array>--><!--Device-cert-function createPkcs12(data: Pkcs12Data, config: Pkcs12CreationConfig): Promise<Uint8Array>-End-->
 
@@ -39,10 +41,10 @@ Creates P12. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## Examples
 

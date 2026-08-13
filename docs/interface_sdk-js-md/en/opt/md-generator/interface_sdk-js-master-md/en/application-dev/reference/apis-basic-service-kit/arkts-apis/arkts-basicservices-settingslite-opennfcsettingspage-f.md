@@ -16,6 +16,8 @@ Opens the NFC settings page.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-settingsLite-function openNfcSettingsPage(): void--><!--Device-settingsLite-function openNfcSettingsPage(): void-End-->

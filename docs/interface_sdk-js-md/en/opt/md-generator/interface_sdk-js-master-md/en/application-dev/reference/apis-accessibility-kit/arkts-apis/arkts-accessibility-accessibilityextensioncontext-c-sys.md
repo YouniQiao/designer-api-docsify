@@ -2,11 +2,13 @@
 
 The accessibility extension context. Used to configure, query information, and inject gestures.
 
-**Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -19,6 +21,8 @@ addAccessibilityVirtualNodes(elementId: number, windowId: number, nodes: Array<A
 Add accessibility virtual nodes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -48,9 +52,9 @@ Add accessibility virtual nodes.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
 
 ## getAccessibilityFocusedElement
 
@@ -60,7 +64,9 @@ getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 
 Obtains the element that is currently focused. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -80,10 +86,10 @@ Obtains the element that is currently focused. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -137,7 +143,9 @@ getAccessibilityWindowsSync(displayId?: number): Array<AccessibilityElement>
 
 Obtains the accessibility windows.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -163,9 +171,9 @@ Obtains the accessibility windows.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## getDefaultFocusedElementIds
 
@@ -175,7 +183,9 @@ getDefaultFocusedElementIds(windowId: number): Promise<Array<number>>
 
 Obtains the custom default focuses of an application. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>--><!--Device-AccessibilityExtensionContext-getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>-End-->
 
@@ -199,9 +209,9 @@ Obtains the custom default focuses of an application. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -256,7 +266,9 @@ getElements(windowId: number, elementId?: number): Promise<Array<AccessibilityEl
 
 Obtains node elements in batches. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityExtensionContext-getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>-End-->
 
@@ -281,9 +293,9 @@ Obtains node elements in batches. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -340,7 +352,9 @@ getRootInActiveWindow(windowId?: number): Promise<AccessibilityElement>
 
 Obtains the root element of an active window. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -366,10 +380,10 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## holdRunningLockSync
 
@@ -379,7 +393,9 @@ holdRunningLockSync(): void
 
 Holds the running lock. After the lock is held, the screen will not turn off automatically.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -393,8 +409,8 @@ Holds the running lock. After the lock is held, the screen will not turn off aut
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -444,12 +460,11 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-Notifies the accessibility service that the accessibility extension service can be disconnected.
+Notifies the accessibility service that the accessibility extension service can be disconnected. This API must be used together with the [on('preDisconnect')](#on_preDisconnect) API. If the **on('preDisconnect')** API is not called, this API does not take effect.
 
-This API must be used together with the   
-[on('preDisconnect')](AccessibilityExtensionContext#on(type: 'preDisconnect', callback: Callback&lt;void&gt;)) API.If the **on('preDisconnect')** API is not called, this API does not take effect.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -463,8 +478,8 @@ This API must be used together with the
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -508,7 +523,40 @@ export default class AccessibilityManager {
 }
 ```
 
-## off('preDisconnect')
+## offPreDisconnect
+
+```TypeScript
+offPreDisconnect(callback?: Callback<void>): void
+```
+
+Unregister accessibilityExtensionAbility disconnect callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void--><!--Device-AccessibilityExtensionContext-offPreDisconnect(callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_preDisconnect
 
 ```TypeScript
 off(type: 'preDisconnect', callback?: Callback<void>): void
@@ -517,6 +565,8 @@ off(type: 'preDisconnect', callback?: Callback<void>): void
 Unsubscribes from the pre-disconnection event of the accessibility extension service. This API is not called until the accessibility extension service is disconnected. This API uses an asynchronous callback to return the result.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -537,8 +587,8 @@ Unsubscribes from the pre-disconnection event of the accessibility extension ser
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -584,17 +634,50 @@ export default class AccessibilityManager {
 }
 ```
 
-## on('preDisconnect')
+## onPreDisconnect
+
+```TypeScript
+onPreDisconnect(callback: Callback<void>): void
+```
+
+Register accessibilityExtensionAbility disconnect callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
+
+<!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void--><!--Device-AccessibilityExtensionContext-onPreDisconnect(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_preDisconnect
 
 ```TypeScript
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-Subscribes to the pre-disconnection event of the accessibility extension service. This API is called when the accessibility extension service is about to be disconnected. This API uses an asynchronous callback to return the result.
-
-Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
+Subscribes to the pre-disconnection event of the accessibility extension service. This API is called when the accessibility extension service is about to be disconnected. This API uses an asynchronous callback to return the result. Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -615,8 +698,8 @@ Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessi
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -672,6 +755,8 @@ Remove accessibility virtual nodes.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -699,9 +784,9 @@ Remove accessibility virtual nodes.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
 
 ## startAbility
 
@@ -711,7 +796,9 @@ startAbility(want: Want): Promise<void>
 
 Starts the foreground page. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>--><!--Device-AccessibilityExtensionContext-startAbility(want: Want): Promise<void>-End-->
 
@@ -735,8 +822,8 @@ Starts the foreground page. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -795,7 +882,9 @@ unholdRunningLockSync(): void
 
 Releases the running lock. After the lock is released, the screen will automatically turn off.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -809,8 +898,8 @@ Releases the running lock. After the lock is released, the screen will automatic
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -864,6 +953,8 @@ Update accessibility element property.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -892,6 +983,6 @@ Update accessibility element property.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |

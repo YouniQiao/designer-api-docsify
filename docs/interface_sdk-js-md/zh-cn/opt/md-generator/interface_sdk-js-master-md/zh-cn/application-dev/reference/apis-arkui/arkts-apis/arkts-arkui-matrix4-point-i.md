@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-matrix4-export interface Point--><!--Device-matrix4-export interface Point-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 x: number
 ```
 
-x轴坐标。
-
-取值范围：(-∞, +∞)
+x轴坐标。 取值范围：(-∞, +∞)
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ x轴坐标。
 y: number
 ```
 
-y轴坐标。
-
-取值范围：(-∞, +∞)
+y轴坐标。 取值范围：(-∞, +∞)
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

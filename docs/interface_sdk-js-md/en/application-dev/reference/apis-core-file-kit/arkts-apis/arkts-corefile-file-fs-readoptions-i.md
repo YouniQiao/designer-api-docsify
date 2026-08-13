@@ -2,9 +2,11 @@
 
 Defines the options used in **read()**.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ReadOptions--><!--Device-unnamed-export interface ReadOptions-End-->
 
@@ -19,36 +21,44 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 ## length
 
 ```TypeScript
-length?: long
+length?: number
 ```
 
 Length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-ReadOptions-length?: long--><!--Device-ReadOptions-length?: long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReadOptions-length?: number--><!--Device-ReadOptions-length?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## offset
 
 ```TypeScript
-offset?: long
+offset?: number
 ```
 
-Start position of the file to read, in bytes. This parameter is optional.By default, data is read from the current position.
+Start position of the file to read, in bytes. This parameter is optional. By default, data is read from the current position.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-ReadOptions-offset?: long--><!--Device-ReadOptions-offset?: long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ReadOptions-offset?: number--><!--Device-ReadOptions-offset?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

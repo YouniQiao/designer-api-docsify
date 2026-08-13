@@ -2,7 +2,9 @@
 
 标识拦截规则。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appControl-export interface DisposedRule--><!--Device-appControl-export interface DisposedRule-End-->
 
@@ -20,7 +22,9 @@ componentType: ComponentType
 
 **类型：** ComponentType
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DisposedRule-componentType: ComponentType--><!--Device-DisposedRule-componentType: ComponentType-End-->
 
@@ -38,7 +42,9 @@ controlType: ControlType
 
 **类型：** [ControlType](arkts-ability-appcontrol-controltype-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DisposedRule-controlType: ControlType--><!--Device-DisposedRule-controlType: ControlType-End-->
 
@@ -56,7 +62,9 @@ disposedType: DisposedType
 
 **类型：** [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DisposedRule-disposedType: DisposedType--><!--Device-DisposedRule-disposedType: DisposedType-End-->
 
@@ -74,7 +82,9 @@ elementList: Array<ElementName>
 
 **类型：** Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DisposedRule-elementList: Array<ElementName>--><!--Device-DisposedRule-elementList: Array<ElementName>-End-->
 
@@ -92,7 +102,9 @@ priority: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DisposedRule-priority: int--><!--Device-DisposedRule-priority: int-End-->
 
@@ -110,7 +122,9 @@ want: Want
 
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DisposedRule-want: Want--><!--Device-DisposedRule-want: Want-End-->
 

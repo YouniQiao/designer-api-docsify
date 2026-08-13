@@ -1,8 +1,10 @@
 # PostProcessSettings
 
-Post-processing settings, which are used to configure the image processing effect after camera rendering,including tone mapping, bloom, vignetting, and chromatic aberration.This is used as the postProcess attribute of Camera.
+Post-processing settings, which are used to configure the image processing effect after camera rendering, including tone mapping, bloom, vignetting, and chromatic aberration. This is used as the postProcess attribute of Camera.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PostProcessSettings--><!--Device-unnamed-export interface PostProcessSettings-End-->
 
@@ -18,7 +20,9 @@ Bloom settings of the post processing settings. The default value is undefined.
 
 **Type:** [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-bloom?: BloomSettings--><!--Device-PostProcessSettings-bloom?: BloomSettings-End-->
 
@@ -36,7 +40,9 @@ Color fringe settings of the post processing settings.
 
 **Default:** undefined
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings--><!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings-End-->
 
@@ -52,7 +58,9 @@ Tone mapping settings of the post processing settings. The default value is unde
 
 **Type:** [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings--><!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings-End-->
 
@@ -70,7 +78,9 @@ Vignette settings of the post processing settings.
 
 **Default:** undefined
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PostProcessSettings-vignette?: VignetteSettings--><!--Device-PostProcessSettings-vignette?: VignetteSettings-End-->
 

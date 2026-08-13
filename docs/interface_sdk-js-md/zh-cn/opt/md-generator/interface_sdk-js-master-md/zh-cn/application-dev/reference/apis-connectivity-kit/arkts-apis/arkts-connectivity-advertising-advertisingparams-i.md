@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-advertising-interface AdvertisingParams--><!--Device-advertising-interface AdvertisingParams-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -19,6 +21,8 @@ advertisingData: AdvertisingData
 **类型：** [AdvertisingData](arkts-connectivity-advertising-advertisingdata-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ advertisingSettings: AdvertisingSettings
 **类型：** [AdvertisingSettings](arkts-connectivity-advertising-advertisingsettings-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

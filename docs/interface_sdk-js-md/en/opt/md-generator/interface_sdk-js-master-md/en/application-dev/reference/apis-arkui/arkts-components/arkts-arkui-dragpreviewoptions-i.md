@@ -4,6 +4,8 @@ Preview image processing mode and badge count during dragging.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DragPreviewOptions--><!--Device-unnamed-declare interface DragPreviewOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@ Preview image processing mode and badge count during dragging.
 mode?: DragPreviewMode | Array<DragPreviewMode>
 ```
 
-How the background image is processed when the component is dragged.
-
-Default value: **DragPreviewMode.AUTO**
-
-If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **DragPreviewMode.AUTO** takes precedence and the other values are ignored.
+How the background image is processed when the component is dragged. Default value: **DragPreviewMode.AUTO** If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **DragPreviewMode.AUTO** takes precedence and the other values are ignored.
 
 **Type:** [DragPreviewMode](arkts-arkui-dragpreviewmode-e.md) \| Array&lt;[DragPreviewMode](arkts-arkui-dragpreviewmode-e.md)&gt;
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,18 +38,13 @@ If **DragPreviewMode.AUTO** is set concurrently with other enumerated values, **
 numberBadge?: boolean | number
 ```
 
-Whether to display the number badge or the number displayed on the badge. For a number badge, the value range is  
-[0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. Values outside this range will be processed as the default state. If the value specified is a floating-point number, only the integer part is displayed.
-
-**NOTE：**
-
-When multiple items are dragged, use this API to set the number of items dragged.
-
-Default value: **true**.
+Whether to display the number badge or the number displayed on the badge. For a number badge, the value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. Values outside this range will be processed as the default state. If the value specified is a floating-point number, only the integer part is displayed. **NOTE：**When multiple items are dragged, use this API to set the number of items dragged. Default value: **true**.
 
 **Type:** boolean \| number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,13 +60,13 @@ Default value: **true**.
 sizeChangeEffect?: DraggingSizeChangeEffect
 ```
 
-Transition effect between the floating image and drag preview.
-
-Default value: **DraggingSizeChangeEffect.DEFAULT**.
+Transition effect between the floating image and drag preview. Default value: **DraggingSizeChangeEffect.DEFAULT**.
 
 **Type:** [DraggingSizeChangeEffect](arkts-arkui-draggingsizechangeeffect-e.md)
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

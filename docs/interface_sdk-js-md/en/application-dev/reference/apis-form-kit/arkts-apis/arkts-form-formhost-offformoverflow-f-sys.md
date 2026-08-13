@@ -12,13 +12,13 @@ import { formHost } from '@kit.FormKit';
 function offFormOverflow(callback?: Callback<formInfo.OverflowRequest>): void
 ```
 
-Cancels listening to the event of formOverflow.
-
-You can use this method to cancel listening to the event of formOverflow.
+Cancels listening to the event of formOverflow. You can use this method to cancel listening to the event of formOverflow.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formHost-function offFormOverflow(callback?: Callback<formInfo.OverflowRequest>): void--><!--Device-formHost-function offFormOverflow(callback?: Callback<formInfo.OverflowRequest>): void-End-->
 
@@ -30,11 +30,11 @@ You can use this method to cancel listening to the event of formOverflow.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;formInfo.OverflowRequest&gt; | No | The callback of formOverflow. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;formInfo.OverflowRequest&gt; | No | The callback of formOverflow. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 

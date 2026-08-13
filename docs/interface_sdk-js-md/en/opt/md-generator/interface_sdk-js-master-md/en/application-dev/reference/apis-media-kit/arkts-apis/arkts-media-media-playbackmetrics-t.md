@@ -8,6 +8,8 @@ Describes the container for the key-value pairs of playback metrics.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-media-type PlaybackMetrics = Record<PlaybackMetricsKey, Object>--><!--Device-media-type PlaybackMetrics = Record<PlaybackMetricsKey, Object>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

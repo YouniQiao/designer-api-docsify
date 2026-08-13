@@ -16,6 +16,8 @@ Delegates other applications to set device management policies. The applications
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_DELEGATED_POLICY
 
 **Model restriction:** This API can be used only in the stage model.
@@ -36,11 +38,11 @@ Delegates other applications to set device management policies. The applications
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200009-failed-to-grant-permissions-to-an-application) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9200009](../errorcode-enterpriseDeviceManager.md#9200009-failed-to-grant-permissions-to-an-application) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 
@@ -60,60 +62,6 @@ try {
   // Replace parameters with actual values.
   adminManager.setDelegatedPolicies(admin, "com.example.enterprise.xxx", policies);
   console.info('Succeeded in setting delegated policies.');
-} catch (err) {
-  console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-
-## setDelegatedPolicies
-
-```TypeScript
-function setDelegatedPolicies(bundleName: string, accountId: number, policies: Array<string>): void
-```
-
-Delegates other applications to set device management policies. The applications must request the permissions required.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.MANAGE_ENTERPRISE_DEVICE_ADMIN
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-adminManager-function setDelegatedPolicies(bundleName: string, accountId: number, policies: Array<string>): void--><!--Device-adminManager-function setDelegatedPolicies(bundleName: string, accountId: number, policies: Array<string>): void-End-->
-
-**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| bundleName | string | Yes |
-| accountId | number | Yes |
-| policies | Array & lt;string & gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [9200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200009-failed-to-grant-permissions-to-an-application) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { adminManager } from '@kit.MDMKit';
-import { common, Want } from '@kit.AbilityKit';
-
-// Replace with actual values.
-let bundleName = 'com.example.myapplication';
-let userId = 100;
-let policies: Array<string> = ["disabled_hdc"];
-
-try {
-  adminManager.setDelegatedPolicies(bundleName, userId, policies);
-  console.info(`Succeeded in setting delegated policies.`);
 } catch (err) {
   console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
 }

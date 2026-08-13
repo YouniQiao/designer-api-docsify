@@ -8,7 +8,9 @@ The &lt;video&gt; component provides a video player.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
-<!--Device-unnamed-export interface VideoElement extends Element--><!--Device-unnamed-export interface VideoElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface VideoElement--><!--Device-unnamed-export interface VideoElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Requests to exit the full screen mode.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -42,6 +46,8 @@ Requests to pause a video.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-VideoElement-pause(): void--><!--Device-VideoElement-pause(): void-End-->
@@ -59,6 +65,8 @@ Requests to enter the full screen mode.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -84,6 +92,8 @@ Specifies the video playing position.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-VideoElement-setCurrentTime(param: { currenttime: number }): void--><!--Device-VideoElement-setCurrentTime(param: { currenttime: number }): void-End-->
@@ -108,6 +118,8 @@ Requests to start playing a video.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-VideoElement-start(): void--><!--Device-VideoElement-start(): void-End-->
@@ -125,6 +137,8 @@ Requests to stop playing a video.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

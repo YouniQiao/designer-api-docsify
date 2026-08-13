@@ -1,20 +1,24 @@
 # Button
 
 ```TypeScript
-type Button = ButtonFrameNode
+type Button = TypedFrameNode<ButtonInterface, ButtonAttribute>
 ```
 
-Define the FrameNode type for Button.
+Represents a FrameNode of the **Button** type. When created in child component mode, this type of node allows only one child component to be added. When created in label mode, it does not child components to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Button = ButtonFrameNode--><!--Device-typeNode-type Button = ButtonFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Button = TypedFrameNode<ButtonInterface, ButtonAttribute>--><!--Device-typeNode-type Button = TypedFrameNode<ButtonInterface, ButtonAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ButtonFrameNode
+**Property type:** TypedFrameNode<ButtonInterface, ButtonAttribute>
 

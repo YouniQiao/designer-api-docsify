@@ -6,6 +6,8 @@ Defines the options for rendering context.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RenderingContextOptions--><!--Device-unnamed-export declare interface RenderingContextOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the options for rendering context.
 antialias?: boolean
 ```
 
-Indicates whether anti-aliasing is enabled for rendering context.Default value is false, undefined means setting to default value.
+Indicates whether anti-aliasing is enabled for rendering context. Default value is false, undefined means setting to default value.
 
 **Type:** boolean
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,9 @@ Displays a solid color. **ColorShaderStyle** inherits from [ShaderStyle](arkts-a
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-<!--Device-unnamed-declare class ColorShaderStyle extends ShaderStyle--><!--Device-unnamed-declare class ColorShaderStyle extends ShaderStyle-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ColorShaderStyle--><!--Device-unnamed-declare class ColorShaderStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ A constructor used to create a **ResourceColor** object.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +55,8 @@ Options for displaying a solid color.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,14 +1,16 @@
 # Portrait（系统接口）
 
-Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery).Provides the APIs for portrait photo settings.
+Portrait: inherits from [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery（系统接口）). Provides the APIs for portrait photo settings.
 
-**继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery)
+**继承/实现关系：** Portrait extends [PortraitQuery](arkts-camera-camera-portraitquery-i-sys.md#PortraitQuery（系统接口）)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-camera-interface Portrait extends PortraitQuery--><!--Device-camera-interface Portrait extends PortraitQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface Portrait--><!--Device-camera-interface Portrait-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -22,9 +24,11 @@ getPortraitEffect(): PortraitEffect
 
 Obtains the portrait effect in use.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Portrait-getPortraitEffect(): PortraitEffect--><!--Device-Portrait-getPortraitEffect(): PortraitEffect-End-->
 
@@ -42,8 +46,8 @@ Obtains the portrait effect in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -60,12 +64,13 @@ function getPortraitEffect(portraitPhotoSession: camera.PortraitPhotoSession): c
 setPortraitEffect(effect: PortraitEffect): void
 ```
 
-Sets a portrait effect. Before the setting, use  
-[getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getSupportedPortraitEffects) to obtain the supported portrait effects and check whether the target portrait effect is supported.
+Sets a portrait effect. Before the setting, use [getSupportedPortraitEffects](arkts-camera-camera-portraitquery-i-sys.md#getSupportedPortraitEffects) to obtain the supported portrait effects and check whether the target portrait effect is supported.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Portrait-setPortraitEffect(effect: PortraitEffect): void--><!--Device-Portrait-setPortraitEffect(effect: PortraitEffect): void-End-->
 
@@ -83,8 +88,8 @@ Sets a portrait effect. Before the setting, use
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 11+ |
 
 ## 示例
 

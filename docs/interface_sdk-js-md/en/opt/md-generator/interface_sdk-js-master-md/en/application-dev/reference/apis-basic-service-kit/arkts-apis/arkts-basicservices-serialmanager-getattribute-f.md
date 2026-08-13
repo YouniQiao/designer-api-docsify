@@ -14,7 +14,9 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 
 Obtains the configuration parameters of a specified serial port.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
 
@@ -30,16 +32,16 @@ Obtains the configuration parameters of a specified serial port.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [31400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) |
 
 ## Examples
 

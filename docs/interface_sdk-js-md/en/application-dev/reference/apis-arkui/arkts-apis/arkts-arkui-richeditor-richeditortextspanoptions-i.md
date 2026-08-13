@@ -6,6 +6,8 @@ Defines the span options of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorTextSpanOptions--><!--Device-unnamed-export declare interface RichEditorTextSpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ RichEditor gesture.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ the offset that add a text span at.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanOptions-offset?: int--><!--Device-RichEditorTextSpanOptions-offset?: int-End-->
@@ -63,6 +69,8 @@ Paragraph style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ text style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanOptions-style?: RichEditorTextStyle--><!--Device-RichEditorTextSpanOptions-style?: RichEditorTextStyle-End-->
@@ -103,6 +113,8 @@ RichEditor url style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

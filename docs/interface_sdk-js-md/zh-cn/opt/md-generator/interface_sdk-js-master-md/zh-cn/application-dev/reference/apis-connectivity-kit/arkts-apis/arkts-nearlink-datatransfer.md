@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace dataTransfer--><!--Device-unnamed-declare namespace dataTransfer-End-->
@@ -17,15 +19,15 @@
 | 名称 |
 | --- |
 | [connect](arkts-connectivity-datatransfer-connect-f.md#connect) |
-| [createPort](arkts-connectivity-datatransfer-createport-f.md#createport) |
-| [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md#destroyport) |
+| [createPort](arkts-connectivity-datatransfer-createport-f.md#createPort) |
+| [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md#destroyPort) |
 | [disconnect](arkts-connectivity-datatransfer-disconnect-f.md#disconnect) |
-| [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md#getconnectionstate) |
-| [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md#offconnectionstatechanged) |
-| [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md#offreaddata) |
-| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onconnectionstatechanged) |
-| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md#onreaddata) |
-| [writeData](arkts-connectivity-datatransfer-writedata-f.md#writedata) |
+| [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md#getConnectionState) |
+| [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md#offConnectionStateChanged) |
+| [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md#offReadData) |
+| [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onConnectionStateChanged) |
+| [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md#onReadData) |
+| [writeData](arkts-connectivity-datatransfer-writedata-f.md#writeData) |
 
 ### 接口
 

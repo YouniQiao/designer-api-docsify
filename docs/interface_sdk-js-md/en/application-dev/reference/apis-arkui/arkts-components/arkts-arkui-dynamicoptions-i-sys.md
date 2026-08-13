@@ -6,6 +6,8 @@ Defines the parameters to be passed during **DynamicComponent** construction.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DynamicOptions--><!--Device-unnamed-declare interface DynamicOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,14 +20,15 @@ Defines the parameters to be passed during **DynamicComponent** construction.
 allowCrossProcessNesting?: boolean
 ```
 
-Whether to allow cross-process [UIExtensionComponent](./ui_extension_component) nesting.  
-**true**: yes; **false**: no.The default value is **false**.
+Whether to allow cross-process UIExtensionComponent nesting. **true**: yes; **false**: no. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +52,8 @@ Indicates allow keyboard avoidance inside the DynamicComponent.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DynamicOptions-allowOccupied?: boolean--><!--Device-DynamicOptions-allowOccupied?: boolean-End-->
@@ -63,14 +68,15 @@ Indicates allow keyboard avoidance inside the DynamicComponent.
 backgroundTransparent?: boolean
 ```
 
-Whether to enable the transparent background for the component.  
-**true**: yes; **false**: no.The default value is **false**.
+Whether to enable the transparent background for the component. **true**: yes; **false**: no. The default value is **false**.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +100,8 @@ Entry of the .abc page to be loaded.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DynamicOptions-entryPoint: string--><!--Device-DynamicOptions-entryPoint: string-End-->
@@ -115,6 +123,8 @@ Worker for running the .abc file.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

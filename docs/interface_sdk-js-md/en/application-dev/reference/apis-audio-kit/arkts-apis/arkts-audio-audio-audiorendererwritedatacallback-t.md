@@ -1,16 +1,18 @@
 # AudioRendererWriteDataCallback
 
 ```TypeScript
-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void
+type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult
 ```
 
-Defines the callback function used to write data to the audio renderer. Once the callback function finishes its execution, the audio service queues the data pointed to by **data** for playback. Therefore, do not change the data outside the callback. It is crucial to fill **data** with the exact length of data designated for playback;otherwise, noises may occur during playback.
+Type definition of callback function for audio renderer write data.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void--><!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult | void-End-->
+**Deprecated since:** -1
+
+<!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult--><!--Device-audio-type AudioRendererWriteDataCallback = (data: ArrayBuffer) => AudioDataCallbackResult-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Renderer
 
@@ -18,11 +20,11 @@ Defines the callback function used to write data to the audio renderer. Once the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | Yes | Data to be written to the buffer. |
+| data | ArrayBuffer | Yes | audio data array buffer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) \| void | If **void** or **AudioDataCallbackResult.VALID** is returned, the data is valid and the audio data is played. If **AudioDataCallbackResult.INVALID** is returned, the data is invalid and the audio data is not played. |
+| [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md) | result of callback. If AudioDataCallbackResult.VALID is returned, it indicates the data is valid and will be played. If AudioDataCallbackResult.INVALID is returned, it indicates the data is will not be played. |
 

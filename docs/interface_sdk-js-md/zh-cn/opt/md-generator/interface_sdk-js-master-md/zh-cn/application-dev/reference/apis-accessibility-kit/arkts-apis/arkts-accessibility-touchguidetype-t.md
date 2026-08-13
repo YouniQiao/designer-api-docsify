@@ -8,6 +8,8 @@ type TouchGuideType = 'touchBegin' | 'touchEnd'
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd'--><!--Device-unnamed-type TouchGuideType = 'touchBegin' | 'touchEnd'-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

@@ -2,9 +2,11 @@
 
 Defines the PiP status data.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface SketchStatusData--><!--Device-camera-interface SketchStatusData-End-->
 
@@ -28,9 +30,11 @@ Offset of PiP.
 
 **Type:** Point
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SketchStatusData-centerPointOffset: Point--><!--Device-SketchStatusData-centerPointOffset: Point-End-->
 
@@ -46,11 +50,13 @@ sketchRatio: double
 
 Zoom ratio of PiP.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SketchStatusData-sketchRatio: double--><!--Device-SketchStatusData-sketchRatio: double-End-->
 
@@ -66,11 +72,13 @@ status: int
 
 Status of PiP. The options are 0 (stopped), 1 (started), 2 (stopping), and 3 (starting).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SketchStatusData-status: int--><!--Device-SketchStatusData-status: int-End-->
 

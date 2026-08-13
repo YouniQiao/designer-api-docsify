@@ -2,9 +2,11 @@
 
 Defines the credential information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface CredentialInfo--><!--Device-osAccount-interface CredentialInfo-End-->
 
@@ -26,11 +28,13 @@ accountId?: int
 
 OS account ID, which is **undefined** by default.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-accountId?: int--><!--Device-CredentialInfo-accountId?: int-End-->
 
@@ -50,7 +54,9 @@ Additional information about the credential, which is an empty string by default
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-additionalInfo?: string--><!--Device-CredentialInfo-additionalInfo?: string-End-->
 
@@ -68,9 +74,11 @@ Authentication credential subtype.
 
 **Type:** [AuthSubType](arkts-basicservices-osaccount-authsubtype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-credSubType: AuthSubType--><!--Device-CredentialInfo-credSubType: AuthSubType-End-->
 
@@ -88,9 +96,11 @@ Authentication credential type.
 
 **Type:** AuthType
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-credType: AuthType--><!--Device-CredentialInfo-credType: AuthType-End-->
 
@@ -108,9 +118,11 @@ Authentication token, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialInfo-token: Uint8Array--><!--Device-CredentialInfo-token: Uint8Array-End-->
 

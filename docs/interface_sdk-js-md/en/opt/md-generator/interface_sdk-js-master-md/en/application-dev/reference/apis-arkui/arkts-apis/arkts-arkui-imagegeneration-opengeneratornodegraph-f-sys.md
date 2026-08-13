@@ -16,6 +16,8 @@ Open the AI node graph Sheet.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-imageGeneration-function openGeneratorNodeGraph(uiContext: UIContext, options?: GeneratorNodeGraphOptions): Promise<void>--><!--Device-imageGeneration-function openGeneratorNodeGraph(uiContext: UIContext, options?: GeneratorNodeGraphOptions): Promise<void>-End-->

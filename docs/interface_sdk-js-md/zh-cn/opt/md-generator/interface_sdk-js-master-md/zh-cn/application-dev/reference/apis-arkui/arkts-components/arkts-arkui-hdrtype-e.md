@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum HdrType--><!--Device-unnamed-declare enum HdrType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 默认类型。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ AIHDR = 1
 AIHDR类型。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

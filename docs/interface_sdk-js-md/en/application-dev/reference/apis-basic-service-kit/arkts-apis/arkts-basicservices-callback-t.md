@@ -10,6 +10,8 @@ Defines a common callback. You can set **data** to customize the data type of th
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export type Callback<T> = (data: T) => void--><!--Device-unnamed-export type Callback<T> = (data: T) => void-End-->
 
 **System capability:** SystemCapability.Base

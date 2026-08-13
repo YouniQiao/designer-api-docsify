@@ -8,7 +8,7 @@ Defines the menu item option.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](EditMenuOptions)
+**Substitutes:** EditMenuOptions
 
 <!--Device-unnamed-declare interface ExpandedMenuItemOptions--><!--Device-unnamed-declare interface ExpandedMenuItemOptions-End-->
 
@@ -22,25 +22,21 @@ action: (selectedText: {plainText: string}) => void
 
 Selected text.
 
+**Type:** (selectedText: {plainText: string}) =&gt; void
+
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](EditMenuOptions)
+**Substitutes:** EditMenuOptions
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ExpandedMenuItemOptions-action: (selectedText: {plainText: string}) => void--><!--Device-ExpandedMenuItemOptions-action: (selectedText: {plainText: string}) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| selectedText | {plainText: string} | Yes |  |
 
 ## content
 
@@ -58,7 +54,7 @@ Display content.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](EditMenuOptions)
+**Substitutes:** EditMenuOptions
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,7 +78,7 @@ Display icon. The default value is empty, and no icon is displayed.
 
 **Deprecated since:** 20
 
-**Substitutes:** [EditMenuOptions](EditMenuOptions)
+**Substitutes:** EditMenuOptions
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

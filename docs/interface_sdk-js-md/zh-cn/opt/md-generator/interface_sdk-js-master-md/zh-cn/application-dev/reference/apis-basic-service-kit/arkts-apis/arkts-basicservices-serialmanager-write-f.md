@@ -8,7 +8,9 @@ function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<nu
 
 向串口设备异步写数据，每次写入数据长度不超过4KB，数据过大会导致数据丢失，长数据建议分包写入。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>--><!--Device-serialManager-function write(portId: int, buffer: Uint8Array, timeout?: int): Promise<int>-End-->
 
@@ -32,12 +34,12 @@ function write(portId: number, buffer: Uint8Array, timeout?: number): Promise<nu
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [31400007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400007-io异常) |
-| [31400006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400006-传输超时) |
-| [31400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [31400007](../../apis-basic-services-kit/errorcode-usb.md#31400007-io异常) |
+| [31400006](../../apis-basic-services-kit/errorcode-usb.md#31400006-传输超时) |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
 
 ## 示例
 

@@ -1,20 +1,24 @@
 # Context
 
 ```TypeScript
-export type Context = OriginalContext
+export type Context = common.Context
 ```
 
-Export Context.
+当前组件所在Ability的上下文。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export type Context = OriginalContext--><!--Device-unnamed-export type Context = OriginalContext-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-unnamed-export type Context = common.Context--><!--Device-unnamed-export type Context = common.Context-End-->
 
-**属性类型：** OriginalContext
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**属性类型：** common.Context
 

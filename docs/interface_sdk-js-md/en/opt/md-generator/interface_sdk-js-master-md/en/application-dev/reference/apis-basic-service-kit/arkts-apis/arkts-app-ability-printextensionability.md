@@ -13,3 +13,11 @@ import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md) |
+
+<!--Del-->
+### Classes（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md) |
+<!--DelEnd-->

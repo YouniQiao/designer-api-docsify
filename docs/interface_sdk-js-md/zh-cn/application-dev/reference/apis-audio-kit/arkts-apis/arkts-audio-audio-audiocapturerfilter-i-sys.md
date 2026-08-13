@@ -1,8 +1,10 @@
 # AudioCapturerFilter（系统接口）
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCapturerFilter--><!--Device-audio-interface AudioCapturerFilter-End-->
 
@@ -18,9 +20,11 @@ capturerInfo?: AudioCapturerInfo
 
 **类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerFilter-capturerInfo?: AudioCapturerInfo--><!--Device-AudioCapturerFilter-capturerInfo?: AudioCapturerInfo-End-->
 
@@ -36,11 +40,13 @@ uid?: int
 
 Application uid.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerFilter-uid?: int--><!--Device-AudioCapturerFilter-uid?: int-End-->
 

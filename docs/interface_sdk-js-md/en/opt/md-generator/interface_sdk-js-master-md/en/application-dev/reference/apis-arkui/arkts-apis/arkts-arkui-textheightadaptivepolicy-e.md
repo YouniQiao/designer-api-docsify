@@ -4,6 +4,8 @@ The mode of adjusting the text font size to adapt to the layout.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum TextHeightAdaptivePolicy--><!--Device-unnamed-declare enum TextHeightAdaptivePolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,9 +16,11 @@ The mode of adjusting the text font size to adapt to the layout.
 MAX_LINES_FIRST
 ```
 
-the text height adaptation mode to [maxLines](TextAreaAttribute#maxLines(value: number)) first.
+the text height adaptation mode to maxLines first.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Prioritize the **minFontSize** settings.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -53,6 +59,8 @@ LAYOUT_CONSTRAINT_FIRST
 Prioritize the layout constraint settings in terms of height.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

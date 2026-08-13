@@ -4,6 +4,8 @@ Sets the focus priority of a component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FocusPriority--><!--Device-unnamed-declare enum FocusPriority-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ AUTO = 0
 Default priority, that is, the focus priority assigned by default.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Priority that indicates the component is prioritized in the container. This leve
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,6 +59,8 @@ PREVIOUS = 3000
 Priority of a previously focused node in the container. This level is higher than **PRIOR**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

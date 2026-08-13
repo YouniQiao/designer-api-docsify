@@ -2,7 +2,9 @@
 
 Enumerates the audio ring modes.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioRingMode--><!--Device-audio-enum AudioRingMode-End-->
 
@@ -16,7 +18,9 @@ RINGER_MODE_SILENT = 0
 
 Silent mode.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRingMode-RINGER_MODE_SILENT = 0--><!--Device-AudioRingMode-RINGER_MODE_SILENT = 0-End-->
 
@@ -30,7 +34,9 @@ RINGER_MODE_VIBRATE = 1
 
 Vibration mode.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRingMode-RINGER_MODE_VIBRATE = 1--><!--Device-AudioRingMode-RINGER_MODE_VIBRATE = 1-End-->
 
@@ -44,7 +50,9 @@ RINGER_MODE_NORMAL = 2
 
 Normal mode.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRingMode-RINGER_MODE_NORMAL = 2--><!--Device-AudioRingMode-RINGER_MODE_NORMAL = 2-End-->
 

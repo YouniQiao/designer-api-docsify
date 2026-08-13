@@ -8,7 +8,9 @@ function setRestartWant(want: Want): void
 
 设置下次恢复主动拉起场景下的Ability。该Ability必须为当前包下的UIAbility。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

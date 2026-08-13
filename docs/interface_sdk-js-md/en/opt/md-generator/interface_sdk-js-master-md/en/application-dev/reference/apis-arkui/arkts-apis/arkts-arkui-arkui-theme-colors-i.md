@@ -4,6 +4,8 @@ Defines the struct of Colors.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface Colors--><!--Device-unnamed-export declare interface Colors-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ System alert Color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,6 +49,8 @@ System emphasize level background color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ System fourth level background color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,6 +93,8 @@ System Primary level background color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ System Secondary level background color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -125,6 +137,8 @@ System tertiary level background color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +160,8 @@ System brand Color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -165,6 +181,8 @@ compBackgroundEmphasize: ResourceColor
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,6 +204,8 @@ CompBackgroundFocus Color
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -205,6 +225,8 @@ CompBackgroundGray color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,6 +248,8 @@ Black neutral high gloss color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -245,6 +269,8 @@ CompBackgroundPrimary color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,6 +292,8 @@ CompBackgroundPrimaryContrary color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -285,6 +313,8 @@ CompBackgroundPrimaryTran color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,6 +336,8 @@ compBackgroundSecondary: ResourceColor
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -325,6 +357,8 @@ compBackgroundTertiary: ResourceColor
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -346,6 +380,8 @@ CompCommonContrary Color
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -365,6 +401,8 @@ Universal Division Line Color
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -386,6 +424,8 @@ compEmphasizeSecondary: ResourceColor
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -405,6 +445,8 @@ compEmphasizeTertiary: ResourceColor
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,6 +468,8 @@ CompFocusedPrimary Color
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -445,6 +489,8 @@ CompFocusedSecondary Color
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -466,6 +512,8 @@ CompFocusedTertiary Color
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -485,6 +533,8 @@ CompForegroundPrimary color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -506,6 +556,8 @@ System confirm Color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -525,6 +577,8 @@ System container Color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -546,6 +600,8 @@ Emphasize text color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -565,6 +621,8 @@ Fourth text color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -586,6 +644,8 @@ Fourth level text inversion, used on colored backgrounds.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -605,6 +665,8 @@ First level text inversion, used on colored backgrounds.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -626,6 +688,8 @@ Secondary level text inversion, used on colored backgrounds.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -645,6 +709,8 @@ Tertiary level text inversion, used on colored backgrounds.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -666,6 +732,8 @@ First level text color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -685,6 +753,8 @@ Secondary text color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -706,6 +776,8 @@ Tertiary text color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -725,6 +797,8 @@ Emphasize level icon color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -746,6 +820,8 @@ Fourth level icon color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -765,6 +841,8 @@ Fourth level icon reversed, used on a colored background.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -786,6 +864,8 @@ First level icon reversed, used on a colored background.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -805,6 +885,8 @@ Secondary level icon reversed, used on a colored background.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -826,6 +908,8 @@ Tertiary level icon reversed, used on a colored background.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -845,6 +929,8 @@ First level icon color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -866,6 +952,8 @@ Secondary level icon color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -885,6 +973,8 @@ Secondary emphasize level icon color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -906,6 +996,8 @@ Tertiary level icon color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -925,6 +1017,8 @@ Active interactive color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -946,6 +1040,8 @@ Click interactive color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -965,6 +1061,8 @@ Focus interactive color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -986,6 +1084,8 @@ Hover interactive color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1005,6 +1105,8 @@ Pressed interactive color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1026,6 +1128,8 @@ Select interactive color.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1045,6 +1149,8 @@ System onPrimary Color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1066,6 +1172,8 @@ System primary Color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -1085,6 +1193,8 @@ System warning Color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

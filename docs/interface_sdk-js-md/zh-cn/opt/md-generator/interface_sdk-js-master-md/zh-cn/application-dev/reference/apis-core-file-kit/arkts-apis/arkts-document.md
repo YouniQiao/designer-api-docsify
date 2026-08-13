@@ -15,7 +15,7 @@ document
 | 名称 |
 | --- |
 | [choose](arkts-corefile-document-choose-f.md#choose) |
-| [choose](arkts-corefile-document-choose-f.md#choose-1) |
-| [choose](arkts-corefile-document-choose-f.md#choose-2) |
+| [choose](arkts-corefile-document-choose-f.md#choose) |
+| [choose](arkts-corefile-document-choose-f.md#choose) |
 | [show](arkts-corefile-document-show-f.md#show) |
-| [show](arkts-corefile-document-show-f.md#show-1) |
+| [show](arkts-corefile-document-show-f.md#show) |

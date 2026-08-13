@@ -6,6 +6,8 @@ Defines the underline color width property.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface UnderlineColor--><!--Device-unnamed-export declare interface UnderlineColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the underline color width property.
 disable?: ResourceColor | undefined
 ```
 
-Disable underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no value is specified or if the value specified is undefined,null, or invalid, the default value is used.&lt;/p&gt;
+Disable underline color width property. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If no value is specified or if the value specified is undefined, null, or invalid, the default value is used. &lt;/p&gt;
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ Disable underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt
 error?: ResourceColor | undefined
 ```
 
-Error underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no value is specified or if the value specified is undefined,null, or invalid, the default value is used.&lt;br&gt;This option changes the color used in the showCounter attribute when the maximum number of characters is reached.&lt;/p&gt;
+Error underline color width property. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If no value is specified or if the value specified is undefined, null, or invalid, the default value is used. &lt;br&gt;This option changes the color used in the showCounter attribute when the maximum number of characters is reached. &lt;/p&gt;
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,13 +62,15 @@ Error underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:
 normal?: ResourceColor | undefined
 ```
 
-Normal underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no value is specified or if the value specified is undefined,null, or invalid, the default value is used.&lt;/p&gt;
+Normal underline color width property. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If no value is specified or if the value specified is undefined, null, or invalid, the default value is used. &lt;/p&gt;
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,13 +84,15 @@ Normal underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;
 typing?: ResourceColor | undefined
 ```
 
-Typing underline color width property.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If no value is specified or if the value specified is undefined,null, or invalid, the default value is used.&lt;/p&gt;
+Typing underline color width property. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If no value is specified or if the value specified is undefined, null, or invalid, the default value is used. &lt;/p&gt;
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md) \| undefined
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

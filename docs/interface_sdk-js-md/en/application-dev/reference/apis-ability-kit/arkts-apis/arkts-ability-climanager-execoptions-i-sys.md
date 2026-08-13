@@ -6,6 +6,8 @@ Tool execution options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-cliManager-interface ExecOptions--><!--Device-cliManager-interface ExecOptions-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -34,6 +36,8 @@ Indicates whether the tool is executed in the background.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecOptions-background?: boolean--><!--Device-ExecOptions-background?: boolean-End-->
@@ -58,6 +62,8 @@ Indicates the maximum execution time of the tool, in seconds.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecOptions-timeout?: long--><!--Device-ExecOptions-timeout?: long-End-->
@@ -81,6 +87,8 @@ Indicates the foreground waiting timeout in milliseconds.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

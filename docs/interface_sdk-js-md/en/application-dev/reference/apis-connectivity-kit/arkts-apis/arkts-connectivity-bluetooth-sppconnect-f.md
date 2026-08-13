@@ -20,7 +20,7 @@ Connects to a remote device over the socket.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppConnect](ohos.bluetoothManager/bluetoothManager.sppConnect)
+**Substitutes:** [sppConnect](arkts-connectivity-bluetoothmanager-sppconnect-f.md#sppConnect)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -34,7 +34,7 @@ Connects to a remote device over the socket.
 | --- | --- | --- | --- |
 | device | string | Yes | The address of the remote device to connect. |
 | option | SppOption | Yes | Indicates the connect parameters [SppOption](arkts-connectivity-bluetooth-sppoption-i.md#SppOption). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 ## Examples
 

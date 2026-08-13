@@ -14,7 +14,9 @@ function setCallWaiting(slotId: number, activate: boolean, callback: AsyncCallba
 
 Specifies whether to enable the call waiting service. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -36,13 +38,13 @@ Specifies whether to enable the call waiting service. This API uses an asynchron
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -67,7 +69,9 @@ function setCallWaiting(slotId: number, activate: boolean): Promise<void>
 
 Specifies whether to enable the call waiting service. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -94,13 +98,13 @@ Specifies whether to enable the call waiting service. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 

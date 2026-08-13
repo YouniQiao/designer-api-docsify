@@ -4,6 +4,8 @@ Enumerates the result codes for blinking operations.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-config-export enum BlinkResultCode--><!--Device-config-export enum BlinkResultCode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ SUCCESS = 0
 Success.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Currently flashing.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkResultCode-ALREADY_FLASHING = 1--><!--Device-BlinkResultCode-ALREADY_FLASHING = 1-End-->
@@ -55,6 +61,8 @@ DEVICE_IN_USE = 2
 Device is in use.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Flash blinking is unsupported.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkResultCode-FLASH_BLINKING_UNSUPPORTED = 3--><!--Device-BlinkResultCode-FLASH_BLINKING_UNSUPPORTED = 3-End-->
@@ -92,6 +102,8 @@ Screen blinking is unsupported.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BlinkResultCode-SCREEN_BLINKING_UNSUPPORTED = 4--><!--Device-BlinkResultCode-SCREEN_BLINKING_UNSUPPORTED = 4-End-->
@@ -109,6 +121,8 @@ FEATURE_DISABLED = 5
 Feature switch is disabled.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,7 +4,9 @@ Enumerates the Picker color modes.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum PickerColorMode--><!--Device-photoAccessHelper-export enum PickerColorMode-End-->
 
@@ -20,7 +22,9 @@ Same with the system.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +44,9 @@ Light mode.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Dark mode.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,9 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 
 获取指定串口的配置参数。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
 
@@ -30,10 +32,10 @@ function getAttribute(portId: number): Readonly<SerialAttribute>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [31400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
 
 ## 示例
 

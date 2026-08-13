@@ -14,9 +14,11 @@ function getAttribute(portId: int): Readonly<SerialAttribute>
 
 Obtains the configuration parameters of a specified serial port.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>--><!--Device-serialManager-function getAttribute(portId: int): Readonly<SerialAttribute>-End-->
 
@@ -26,22 +28,22 @@ Obtains the configuration parameters of a specified serial port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| portId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
+| portId | int | Yes | Port number of the target device, which is obtained from the serial port parameter SerialPort returned by [getPortList](arkts-basicservices-serialmanager-getportlist-f.md#getPortList). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Configuration parameters of the serial port. |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;[SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)&gt; | Configuration parameters of the serial port. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [31400005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) | The serial port device is not opened. Call the open API first. |
-| [31400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
-| [31400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-device-not-opened) | The serial port device is not opened. Call the open API first. |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-port-number-not-exist) | PortId does not exist. |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-serial-port-service-error) | Serial port management exception. |
 
 ## Examples
 

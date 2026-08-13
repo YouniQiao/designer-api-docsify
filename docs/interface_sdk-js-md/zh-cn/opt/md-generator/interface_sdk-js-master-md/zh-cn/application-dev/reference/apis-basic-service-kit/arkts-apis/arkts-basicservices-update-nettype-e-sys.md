@@ -2,7 +2,9 @@
 
 网络类型，用于指定下载的网络类型。设置CELLULAR仅允许数据网络下载，设置WIFI仅允许WIFI下载，设置CELLULAR_AND_WIFI允许两者均可下载。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export enum NetType--><!--Device-update-export enum NetType-End-->
 
@@ -18,7 +20,9 @@ CELLULAR = 1
 
 数据网络。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetType-CELLULAR = 1--><!--Device-NetType-CELLULAR = 1-End-->
 
@@ -34,7 +38,9 @@ METERED_WIFI = 2
 
 热点WIFI。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetType-METERED_WIFI = 2--><!--Device-NetType-METERED_WIFI = 2-End-->
 
@@ -50,7 +56,9 @@ NOT_METERED_WIFI = 4
 
 非热点WIFI。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetType-NOT_METERED_WIFI = 4--><!--Device-NetType-NOT_METERED_WIFI = 4-End-->
 
@@ -66,7 +74,9 @@ WIFI = 6
 
 WIFI。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetType-WIFI = 6--><!--Device-NetType-WIFI = 6-End-->
 
@@ -82,7 +92,9 @@ CELLULAR_AND_WIFI = 7
 
 数据网络和WIFI。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NetType-CELLULAR_AND_WIFI = 7--><!--Device-NetType-CELLULAR_AND_WIFI = 7-End-->
 

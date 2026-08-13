@@ -2,9 +2,11 @@
 
 Indicates the information of preinstalled application.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PreinstalledApplicationInfo--><!--Device-unnamed-export interface PreinstalledApplicationInfo-End-->
 
@@ -22,9 +24,11 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly bundleName: string--><!--Device-PreinstalledApplicationInfo-readonly bundleName: string-End-->
 
@@ -40,11 +44,13 @@ readonly descriptionId?: long
 
 App description ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +68,13 @@ readonly iconId: long
 
 Icon ID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly iconId: long--><!--Device-PreinstalledApplicationInfo-readonly iconId: long-End-->
 
@@ -82,11 +90,13 @@ readonly labelId: long
 
 Label ID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly labelId: long--><!--Device-PreinstalledApplicationInfo-readonly labelId: long-End-->
 
@@ -104,9 +114,11 @@ Module name of the application. The value is **moduleName** configured for the e
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly moduleName: string--><!--Device-PreinstalledApplicationInfo-readonly moduleName: string-End-->
 

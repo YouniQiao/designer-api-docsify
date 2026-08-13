@@ -2,7 +2,9 @@
 
 Enumerates the camera scene modes.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum SceneMode--><!--Device-camera-enum SceneMode-End-->
 
@@ -16,7 +18,9 @@ NORMAL_PHOTO = 1
 
 Normal photo mode. For details, see [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ NORMAL_VIDEO = 2
 
 Normal record mode. For details, see [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -48,7 +54,9 @@ SECURE_PHOTO = 12
 
 Secure mode. For details, see [SecureSession](arkts-camera-camera-securesession-i.md#SecureSession).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

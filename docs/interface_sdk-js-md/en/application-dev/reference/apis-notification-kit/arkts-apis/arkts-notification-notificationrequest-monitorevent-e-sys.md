@@ -4,7 +4,9 @@ Enumerates the event types of monitoring a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum MonitorEvent--><!--Device-unnamed-export enum MonitorEvent-End-->
 
@@ -22,7 +24,9 @@ Entering a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MonitorEvent-MONITOR_TYPE_ENTRY = 1--><!--Device-MonitorEvent-MONITOR_TYPE_ENTRY = 1-End-->
 
@@ -40,7 +44,9 @@ Exiting a geofence.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MonitorEvent-MONITOR_TYPE_LEAVE = 2--><!--Device-MonitorEvent-MONITOR_TYPE_LEAVE = 2-End-->
 

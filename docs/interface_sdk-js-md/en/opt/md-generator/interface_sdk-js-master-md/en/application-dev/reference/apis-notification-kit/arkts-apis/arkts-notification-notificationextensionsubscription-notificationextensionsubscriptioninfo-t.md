@@ -6,7 +6,9 @@ export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscr
 
 Describes the information about the notification extension subscription.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationExtensionSubscription-export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscriptionInfo--><!--Device-notificationExtensionSubscription-export type NotificationExtensionSubscriptionInfo = _NotificationExtensionSubscriptionInfo-End-->
 

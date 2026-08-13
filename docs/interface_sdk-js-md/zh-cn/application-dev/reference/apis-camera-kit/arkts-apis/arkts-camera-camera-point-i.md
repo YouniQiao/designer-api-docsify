@@ -2,9 +2,11 @@
 
 点坐标用于对焦和曝光配置。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-camera-interface Point--><!--Device-camera-interface Point-End-->
 
@@ -18,11 +20,13 @@ x: double
 
 点的x坐标。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -38,11 +42,13 @@ y: double
 
 点的y坐标。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

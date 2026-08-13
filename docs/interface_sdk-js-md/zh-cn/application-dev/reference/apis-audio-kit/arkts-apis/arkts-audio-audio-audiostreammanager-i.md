@@ -1,16 +1,12 @@
 # AudioStreamManager
 
-音频流管理。
+音频流管理。 在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager)获取AudioStreamManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager)获取AudioStreamManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioStreamManager--><!--Device-audio-interface AudioStreamManager-End-->
 
@@ -24,9 +20,11 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 获取当前音效模式的信息。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void-End-->
 
@@ -37,14 +35,14 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | usage | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 是 | 音频流使用类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音效模式的信息成功，err为undefined，data为获取到的当前音效模式的信息；否则 为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 
 ## getAudioEffectInfoArray
 
@@ -54,9 +52,11 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 获取当前音效模式的信息。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>-End-->
 
@@ -78,8 +78,8 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
 
 ## getAudioEffectInfoArraySync
 
@@ -89,9 +89,11 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 获取当前音效模式的信息。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray--><!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray-End-->
 
@@ -113,8 +115,8 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -122,15 +124,13 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void
 ```
 
-获取当前音频采集器的信息。使用callback异步回调。
+获取当前音频采集器的信息。使用callback异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -140,7 +140,7 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频采集器的信息成功，err为undefined，data为获取到的当前音 频采集器的信息；否则为错误对象。 |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -148,15 +148,13 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 ```
 
-获取当前音频采集器的信息。使用Promise异步回调。
+获取当前音频采集器的信息。使用Promise异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>-End-->
 
@@ -174,15 +172,13 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 ```
 
-获取当前音频采集器的信息。同步返回结果。
+获取当前音频采集器的信息。同步返回结果。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray-End-->
 
@@ -200,15 +196,13 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void
 ```
 
-获取当前音频渲染器的信息。使用callback异步回调。
+获取当前音频渲染器的信息。使用callback异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void-End-->
 
@@ -218,7 +212,7 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数。当获取当前音频渲染器的信息成功，err为undefined，data为获取到的当前音 频渲染器的信息；否则为错误对象。 |
 
 ## getCurrentAudioRendererInfoArray
 
@@ -226,15 +220,13 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 ```
 
-获取当前音频渲染器的信息。使用Promise异步回调。
+获取当前音频渲染器的信息。使用Promise异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>-End-->
 
@@ -252,15 +244,13 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 ```
 
-获取当前音频渲染器的信息。同步返回结果。
+获取当前音频渲染器的信息。同步返回结果。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray-End-->
 
@@ -280,9 +270,11 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 查询指定的音源类型是否支持回声消除。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean-End-->
 
@@ -304,7 +296,7 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## isActive
 
@@ -314,9 +306,9 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音频流活跃状态。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 20
 
@@ -331,7 +323,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | 是 | 音频流类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当获取指定音频流活跃状态成功，err为undefined，data为true表示活跃，false表示不活跃；否则为错误对象。 |
 
 ## isActive
 
@@ -341,9 +333,9 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音频流是否为活跃状态。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 20
 
@@ -373,9 +365,9 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 获取指定音频流是否为活跃状态。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 20
 
@@ -401,8 +393,8 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## isAudioLoopbackSupported
 
@@ -412,9 +404,11 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 查询当前系统是否支持指定的音频返听模式。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean--><!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean-End-->
 
@@ -436,7 +430,7 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## isDirectPlaybackSupported
 
@@ -448,7 +442,9 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -479,7 +475,9 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -510,7 +508,9 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -539,9 +539,11 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 查询指定的音源类型智能降噪开关是否打开。
 
-**起始版本：** 21
+**起始版本：** 24
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean-End-->
 
@@ -563,7 +565,7 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## isMultichannelPlaybackSupported
 
@@ -575,7 +577,9 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -606,7 +610,9 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -635,9 +641,11 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 检查传入的音频采集器信息中音源类型的录制是否可以启动成功。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean--><!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean-End-->
 
@@ -659,7 +667,7 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## isStreamActive
 
@@ -669,9 +677,11 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 获取指定音频流是否为活跃状态。同步返回结果。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean--><!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean-End-->
 
@@ -693,73 +703,7 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## off('audioRendererChange')
-
-```TypeScript
-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
-```
-
-取消监听音频渲染器更改事件。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Renderer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## off('audioCapturerChange')
-
-```TypeScript
-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
-```
-
-取消监听音频采集器更改事件。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-<!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offAudioCapturerChange
 
@@ -771,7 +715,9 @@ Unsubscribes to audio capturer change events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -781,13 +727,13 @@ Unsubscribes to audio capturer change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio capturer change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
 ## offAudioRendererChange
 
@@ -799,7 +745,9 @@ Unsubscribes to audio renderer change events.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
@@ -809,31 +757,60 @@ Unsubscribes to audio renderer change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | Callback invoked for the audio renderer change event. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on('audioRendererChange')
+## off_audioCapturerChange
 
 ```TypeScript
-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
+off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+取消监听音频采集器更改事件。使用callback异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当取消监听音频采集器更改事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频采集器信息。<br>**起始版本：** 18 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## off_audioRendererChange
+
+```TypeScript
+off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
+```
+
+取消监听音频渲染器更改事件。使用callback异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -841,31 +818,88 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当音频播放流状态变化或设备变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频渲染器信息。 |
+| type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当取消监听音频渲染器更改事件时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 | 回调函数，返回当前音频渲染器信息。<br>**起始版本：** 18 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## on('audioCapturerChange')
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## onAudioRendererChange
+
+```TypeScript
+onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+
+## on_audioCapturerChange
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -876,56 +910,30 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioCapturerChange' | 是 | 事件回调类型，支持的事件为'audioCapturerChange'，当音频录制流状态变化或设备变化时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频采集器信息。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频采集器信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
-## onAudioCapturerChange
-
-```TypeScript
-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
-```
-
-Listens for audio capturer change events. When there is any audio capturer change,registered clients will receive the callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio capturer change event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-
-## onAudioRendererChange
+## on_audioRendererChange
 
 ```TypeScript
-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-Listens for audio renderer change events. When there is any audio renderer change,registered clients will receive the callback.
+监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -933,11 +941,13 @@ Listens for audio renderer change events. When there is any audio renderer chang
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | Callback invoked for the audio renderer change event. |
+| type | 'audioRendererChange' | 是 | 事件回调类型，支持的事件为'audioRendererChange'，当音频播放流状态变化或设备变化时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 | 回调函数，返回当前音频渲染器信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 

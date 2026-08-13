@@ -2,9 +2,11 @@
 
 AbilityFormInfo: the form info of an ability.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AbilityFormInfo--><!--Device-unnamed-export interface AbilityFormInfo-End-->
 
@@ -22,9 +24,11 @@ Default dimensions of the widget. The value must be available in the **supportDi
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly defaultDimension: string--><!--Device-AbilityFormInfo-readonly defaultDimension: string-End-->
 
@@ -42,9 +46,11 @@ Widget name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly name: string--><!--Device-AbilityFormInfo-readonly name: string-End-->
 
@@ -62,9 +68,11 @@ Scheduled time to update the widget. The value is in 24-hour format and accurate
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly scheduledUpdateTime: string--><!--Device-AbilityFormInfo-readonly scheduledUpdateTime: string-End-->
 
@@ -78,13 +86,15 @@ Scheduled time to update the widget. The value is in 24-hour format and accurate
 readonly supportDimensions: Array<string>
 ```
 
-Dimensions of the widget. The value can be **1*2**, **2*2**, **2*4**, **4*4**, or a combination of these options.At least one option must be specified when defining the widget.
+Dimensions of the widget. The value can be **1*2**, **2*2**, **2*4**, **4*4**, or a combination of these options. At least one option must be specified when defining the widget.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly supportDimensions: Array<string>--><!--Device-AbilityFormInfo-readonly supportDimensions: Array<string>-End-->
 
@@ -102,9 +112,11 @@ Widget type.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly type: string--><!--Device-AbilityFormInfo-readonly type: string-End-->
 
@@ -118,14 +130,15 @@ Widget type.
 readonly updateDuration: int
 ```
 
-Interval to update the widget. The unit is 30 minutes. The value is a multiple of 30. A widget can be updated at a specified interval (**updateDuration**) or at the scheduled time (**scheduledUpdateTime**). If both are configured,  
-**updateDuration** takes precedence.
+Interval to update the widget. The unit is 30 minutes. The value is a multiple of 30. A widget can be updated at a specified interval (**updateDuration**) or at the scheduled time (**scheduledUpdateTime**). If both are configured, **updateDuration** takes precedence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly updateDuration: int--><!--Device-AbilityFormInfo-readonly updateDuration: int-End-->
 
@@ -143,9 +156,11 @@ Whether the widget supports periodic update. **true** if the widget supports per
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityFormInfo-readonly updateEnabled: boolean--><!--Device-AbilityFormInfo-readonly updateEnabled: boolean-End-->
 

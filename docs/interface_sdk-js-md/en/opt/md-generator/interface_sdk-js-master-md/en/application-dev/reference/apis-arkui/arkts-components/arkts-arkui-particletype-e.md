@@ -4,6 +4,8 @@ Enumerates the particle types.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ParticleType--><!--Device-unnamed-declare enum ParticleType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ POINT = 'point'
 Point-like particle.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ IMAGE = 'image'
 Image-like particle.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

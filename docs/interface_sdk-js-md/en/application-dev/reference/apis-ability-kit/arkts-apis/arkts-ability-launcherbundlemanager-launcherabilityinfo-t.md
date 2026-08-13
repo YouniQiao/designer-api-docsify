@@ -6,9 +6,11 @@ export type LauncherAbilityInfo = _LauncherAbilityInfo
 
 Defines the information about the launcher ability.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-launcherBundleManager-export type LauncherAbilityInfo = _LauncherAbilityInfo--><!--Device-launcherBundleManager-export type LauncherAbilityInfo = _LauncherAbilityInfo-End-->
 

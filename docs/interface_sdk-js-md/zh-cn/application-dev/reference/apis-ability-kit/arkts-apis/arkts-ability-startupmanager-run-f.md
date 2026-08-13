@@ -6,17 +6,13 @@
 function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 ```
 
-执行启动框架启动任务或加载so文件。
+执行启动框架启动任务或加载so文件。 > **说明：** > > 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用 > [startupManager.run](#run) > 接口。
 
-> **说明：**
-> 
-> 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用
-> [startupManager.run](#run)
-> 接口。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,12 +37,12 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [28800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
-| [28800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
-| [28800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [28800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
 
 ## 示例
 
@@ -85,11 +81,13 @@ export default class EntryAbility extends UIAbility {
 function run(startupTasks: Array<string>, context: common.AbilityStageContext, config: StartupConfig): Promise<void>
 ```
 
-执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext)用于启动任务的加载。使用Promise异步回调。
+执行启动框架启动任务或加载so文件。支持指定[AbilityStageContext](arkts-ability-abilitystagecontext-c.md#AbilityStageContext)用于启动任务的加载。使 用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,11 +113,11 @@ function run(startupTasks: Array<string>, context: common.AbilityStageContext, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [28800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
-| [28800003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
-| [28800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [28800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
+| [28800004](../errorcode-ability.md#28800004-执行启动任务超时) | Running startup tasks timeout. |
+| [28800003](../errorcode-ability.md#28800003-运行启动任务时发生错误) | An error occurred while running the startup tasks. |
+| [28800002](../errorcode-ability.md#28800002-启动任务之间存在循环依赖关系) | The startup tasks have circular dependencies. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [28800001](../errorcode-ability.md#28800001-启动任务或其依赖项不存在) | Startup task or its dependency not found. |
 
 ## 示例
 

@@ -6,7 +6,9 @@ Provides APIs to manage albums.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,6 +28,8 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 <!--Device-Album-getFaceId(): Promise<string>--><!--Device-Album-getFaceId(): Promise<string>-End-->
@@ -44,13 +48,13 @@ Obtains the face identifier on the cover of a portrait album or group photo albu
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](js-apis-sendablePhotoAccessHelper.md).
+For details about how to create a phAccessHelper instance, see the example provided in [@ohos.file.sendablePhotoAccessHelper (Album Management Based on a Sendable Object)](arkts-file-sendablephotoaccesshelper.md#@ohos.file.sendablePhotoAccessHelper).
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

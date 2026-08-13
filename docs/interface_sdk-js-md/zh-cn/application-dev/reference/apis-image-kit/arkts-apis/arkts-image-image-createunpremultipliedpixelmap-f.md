@@ -8,9 +8,11 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: A
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
 
@@ -22,16 +24,16 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 | --- | --- | --- | --- |
 | src | PixelMap | 是 | The source pixelmap. |
 | dst | PixelMap | 是 | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980246](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
-| [62980248](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
 
 ## 示例
 
@@ -70,9 +72,11 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<vo
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
 
@@ -95,10 +99,10 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
-| [62980246](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
-| [62980248](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) | Failed to read the pixelMap. |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) | Pixelmap not allow modify. |
 
 ## 示例
 

@@ -4,7 +4,9 @@ XMPMetadata instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-image-class XMPMetadata--><!--Device-image-class XMPMetadata-End-->
 
@@ -30,7 +32,9 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +54,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## getBlob
 
@@ -62,7 +66,9 @@ Obtains the XMP metadata as a blob.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,8 +86,8 @@ Obtains the XMP metadata as a blob.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
 ## getTag
 
@@ -93,7 +99,9 @@ Get a single XMP tag from specified path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,7 +125,7 @@ Get a single XMP tag from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## getTags
 
@@ -129,7 +137,9 @@ Get all XMP tags from specified path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,7 +164,7 @@ Get all XMP tags from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The rootPath syntax is invalid. |
 
 ## registerXMPNamespace
 
@@ -166,7 +176,9 @@ Register a new namespace according to the xml namespace and prefix.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,7 +202,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Invalid namespace format. 2. The uri is already registered. 3. The prefix is already registered. |
 
 ## removeTag
 
@@ -202,7 +214,9 @@ Remove the XMP tag from specified path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,7 +240,7 @@ Remove the XMP tag from specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. |
 
 ## setBlob
 
@@ -238,7 +252,9 @@ Set a blob into the XMP metadata.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,7 +278,7 @@ Set a blob into the XMP metadata.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. The buffer is empty or invalid. |
 
 ## setValue
 
@@ -274,7 +290,9 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,5 +318,5 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid argument. Possible causes: 1. Namespace is not registered. 2. The path syntax is invalid. 3. The path does not match the type. 4. The value is invalid for the type. |
 

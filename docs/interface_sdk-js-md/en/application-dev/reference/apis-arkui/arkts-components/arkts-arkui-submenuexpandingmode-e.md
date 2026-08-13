@@ -6,6 +6,8 @@ Enumerates the submenu expanding modes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SubMenuExpandingMode--><!--Device-unnamed-declare enum SubMenuExpandingMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Default mode. Submenus are expanded on the side on the same plane.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Embedded mode. Submenus are expanded while embedded within the main menu.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -61,6 +67,8 @@ Stack mode. Submenus are expanded above the main menu.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

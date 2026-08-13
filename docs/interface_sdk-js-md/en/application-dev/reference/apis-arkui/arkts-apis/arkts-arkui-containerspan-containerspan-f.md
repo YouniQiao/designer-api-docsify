@@ -3,6 +3,7 @@
 ## ContainerSpan
 
 ```TypeScript
+@ComponentBuilder
 export declare function ContainerSpan(
     content_?: CustomBuilder,
 ): ContainerSpanAttribute
@@ -14,9 +15,11 @@ Defines ContainerSpan Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-export declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,7 +27,7 @@ Defines ContainerSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -36,6 +39,7 @@ Defines ContainerSpan Component.
 ## ContainerSpan
 
 ```TypeScript
+@Builder
 export declare function ContainerSpan(
     style: CustomBuilderT<ContainerSpanAttribute>,
     content_?: CustomBuilder,
@@ -48,11 +52,11 @@ Defines ContainerSpan Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-export declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-@Builderexport declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,8 +64,8 @@ Defines ContainerSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; | Yes | containerspan attribute instance. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; | Yes | containerspan attribute instance. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 

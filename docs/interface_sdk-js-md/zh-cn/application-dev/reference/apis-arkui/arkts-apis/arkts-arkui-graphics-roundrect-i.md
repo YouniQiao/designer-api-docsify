@@ -2,9 +2,11 @@
 
 用于设置带有圆角的矩形。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RoundRect--><!--Device-unnamed-export interface RoundRect-End-->
 
@@ -18,13 +20,17 @@ corners: CornerRadius
 
 设置圆角的属性。
 
-**类型：** [CornerRadius](arkts-arkui-cornerradius-t.md)
+**类型：** [CornerRadius](../../apis-na/arkts-apis/arkts-na-cornerradius-t.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RoundRect-corners: CornerRadius--><!--Device-RoundRect-corners: CornerRadius-End-->
 
@@ -38,13 +44,17 @@ rect: Rect
 
 设置矩形的属性。
 
-**类型：** [Rect](arkts-arkui-rect-t.md)
+**类型：** [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RoundRect-rect: Rect--><!--Device-RoundRect-rect: Rect-End-->
 

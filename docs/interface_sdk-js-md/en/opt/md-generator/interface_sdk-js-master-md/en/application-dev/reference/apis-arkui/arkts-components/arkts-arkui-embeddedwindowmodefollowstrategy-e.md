@@ -4,6 +4,8 @@ Enumeration of different types of EmbeddedWindowModeFollowStrategy.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EmbeddedWindowModeFollowStrategy--><!--Device-unnamed-declare enum EmbeddedWindowModeFollowStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FOLLOW_HOST_WINDOW_MODE = 0
 Followed the host Window Mode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE = 1
 Followed the EmbeddedUIExtensionAbility.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

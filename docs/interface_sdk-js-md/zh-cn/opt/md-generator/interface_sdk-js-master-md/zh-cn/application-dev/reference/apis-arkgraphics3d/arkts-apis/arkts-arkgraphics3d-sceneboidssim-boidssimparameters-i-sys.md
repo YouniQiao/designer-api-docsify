@@ -1,16 +1,10 @@
 # BoidsSimParameters（系统接口）
 
-群组模拟参数，用于配置每个个体的行为属性。
-
-> **说明：**
-> 模拟帧是指群组模拟中按固定时间步长执行的更新周期，类似Unity中的FixedUpdate。
-> 默认时间步长为16ms（约62.5FPS），模拟通过累积真实时间并按固定步长消耗来驱动。
-> 下文部分参数的默认值基于该时间步长计算：
-> - maxVelocityMag： 0.01 / 0.016 ≈ 0.625（m/s）。
-> - maxAccelerationMag： maxVelocityMag / 0.016 ≈ 39.06（m/s²）。
-> - maxTurnRate： π × 0.75 × 0.016 ≈ 0.0377（rad/模拟帧）。
+群组模拟参数，用于配置每个个体的行为属性。 > **说明：** > 模拟帧是指群组模拟中按固定时间步长执行的更新周期，类似Unity中的FixedUpdate。 > 默认时间步长为16ms（约62.5FPS），模拟通过累积真实时间并按固定步长消耗来驱动。 > 下文部分参数的默认值基于该时间步长计算： > - maxVelocityMag： 0.01 / 0.016 ≈ 0.625（m/s）。 > - maxAccelerationMag： maxVelocityMag / 0.016 ≈ 39.06（m/s²）。 > - maxTurnRate： π × 0.75 × 0.016 ≈ 0.0377（rad/模拟帧）。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface BoidsSimParameters--><!--Device-unnamed-export interface BoidsSimParameters-End-->
 
@@ -29,6 +23,8 @@ alignmentDistance?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,6 +46,8 @@ boid在alignmentDistance范围内匹配邻近个体平均航向的强度。取�
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-alignmentWeight?: double--><!--Device-BoidsSimParameters-alignmentWeight?: double-End-->
@@ -69,6 +67,8 @@ boundaryDistance?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +90,8 @@ boundaryMaxPos?: Vec3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-boundaryMaxPos?: Vec3--><!--Device-BoidsSimParameters-boundaryMaxPos?: Vec3-End-->
@@ -109,6 +111,8 @@ boundaryMinPos?: Vec3
 **类型：** [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,6 +134,8 @@ boundaryWeight?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-boundaryWeight?: double--><!--Device-BoidsSimParameters-boundaryWeight?: double-End-->
@@ -149,6 +155,8 @@ cohesionDistance?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,6 +178,8 @@ boid在cohesionDistance范围内朝向邻近个体平均位置的强度。取值
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-cohesionWeight?: double--><!--Device-BoidsSimParameters-cohesionWeight?: double-End-->
@@ -189,6 +199,8 @@ gravityWeight?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,6 +222,8 @@ initialPosition?: Vec3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-initialPosition?: Vec3--><!--Device-BoidsSimParameters-initialPosition?: Vec3-End-->
@@ -224,11 +238,13 @@ initialPosition?: Vec3
 initialRotation?: Quaternion
 ```
 
-boid的初始旋转. 未设置时，使用实体的当前变换旋转.默认值：(NaN, NaN, NaN, NaN).
+boid的初始旋转. 未设置时，使用实体的当前变换旋转. 默认值：(NaN, NaN, NaN, NaN).
 
 **类型：** [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -250,6 +266,8 @@ initialVelocity?: Vec3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-initialVelocity?: Vec3--><!--Device-BoidsSimParameters-initialVelocity?: Vec3-End-->
@@ -269,6 +287,8 @@ maxAccelerationMag?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,6 +310,8 @@ maxTurnRate?: Vec3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-maxTurnRate?: Vec3--><!--Device-BoidsSimParameters-maxTurnRate?: Vec3-End-->
@@ -309,6 +331,8 @@ maxVelocityMag?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -330,6 +354,8 @@ repulsionWeight?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-repulsionWeight?: double--><!--Device-BoidsSimParameters-repulsionWeight?: double-End-->
@@ -350,6 +376,8 @@ separationDistance?: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BoidsSimParameters-separationDistance?: double--><!--Device-BoidsSimParameters-separationDistance?: double-End-->
@@ -369,6 +397,8 @@ separationWeight?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

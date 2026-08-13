@@ -2,9 +2,11 @@
 
 Describes a depth data object.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface DepthData--><!--Device-camera-interface DepthData-End-->
 
@@ -26,9 +28,11 @@ release(): Promise<void>
 
 Releases depth data output resources. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthData-release(): Promise<void>--><!--Device-DepthData-release(): Promise<void>-End-->
 
@@ -46,7 +50,7 @@ Releases depth data output resources. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -66,9 +70,11 @@ Accuracy of the depth data, which can be either relative accuracy or absolute ac
 
 **Type:** [DepthDataAccuracy](arkts-camera-camera-depthdataaccuracy-e-sys.md)
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthData-readonly dataAccuracy: DepthDataAccuracy--><!--Device-DepthData-readonly dataAccuracy: DepthDataAccuracy-End-->
 
@@ -86,9 +92,11 @@ Depth map.
 
 **Type:** image.PixelMap
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthData-readonly depthMap: image.PixelMap--><!--Device-DepthData-readonly depthMap: image.PixelMap-End-->
 
@@ -106,9 +114,11 @@ Camera output format.
 
 **Type:** [CameraFormat](arkts-camera-camera-cameraformat-e.md)
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthData-readonly format: CameraFormat--><!--Device-DepthData-readonly format: CameraFormat-End-->
 
@@ -126,9 +136,11 @@ Quality level of the depth map.
 
 **Type:** [DepthDataQualityLevel](arkts-camera-camera-depthdataqualitylevel-e-sys.md)
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthData-readonly qualityLevel: DepthDataQualityLevel--><!--Device-DepthData-readonly qualityLevel: DepthDataQualityLevel-End-->
 

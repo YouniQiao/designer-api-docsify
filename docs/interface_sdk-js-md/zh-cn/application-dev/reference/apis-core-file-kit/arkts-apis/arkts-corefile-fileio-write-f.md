@@ -70,7 +70,7 @@ declare function write(fd: number, buffer: ArrayBuffer | string, callback: Async
 | --- | --- | --- | --- |
 | fd | number | 是 | 待写入文件的文件描述符。 |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步将数据写入完成后执行的回调函数。返回实际写入的长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步将数据写入完成后执行的回调函数。返回实际写入的长度，单位为Byte。 |
 
 
 ## write
@@ -110,5 +110,5 @@ declare function write(
 | fd | number | 是 | 待写入文件的文件描述符。 |
 | buffer | ArrayBuffer \| string | 是 | 待写入文件的数据，可来自缓冲区或字符串。 |
 | options | {     offset?: number;     length?: number;     position?: number;     encoding?: string;   } | 是 | 支持如下选项：&lt;br/&gt;-?offset，number类型，表示期望写入数据的位置相对于数据首地址的偏移，单位为Byte。可选，默认为0。&lt;br/&gt;-?length， number类型，表示期望写入数据的长度，单位为Byte。可选，默认缓冲区长度减去偏移长度。&lt;br/&gt;-?position，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;-? encoding，string类型，当数据是string类型时有效，表示数据的编码方式，默认?'utf-8'。仅支持?'utf-8'。&lt;br/&gt;约束：offset+length<=buffer.size。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步将数据写入完成后执行的回调函数。返回实际写入的长度，单位为Byte。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步将数据写入完成后执行的回调函数。返回实际写入的长度，单位为Byte。 |
 

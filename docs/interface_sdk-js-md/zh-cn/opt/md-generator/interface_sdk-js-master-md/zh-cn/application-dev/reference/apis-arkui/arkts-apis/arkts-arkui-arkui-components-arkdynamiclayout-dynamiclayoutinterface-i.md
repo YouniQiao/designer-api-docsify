@@ -1,16 +1,16 @@
 # DynamicLayoutInterface
 
-动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。
-
-> **说明：**
+动态布局容器组件，支持在运行时动态切换不同的布局算法，不改变子组件的状态。 > **说明：**
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DynamicLayoutInterface--><!--Device-unnamed-export interface DynamicLayoutInterface-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (algorithm: LayoutAlgorithm): DynamicLayoutAttribute
@@ -19,6 +19,8 @@
 动态布局容器。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

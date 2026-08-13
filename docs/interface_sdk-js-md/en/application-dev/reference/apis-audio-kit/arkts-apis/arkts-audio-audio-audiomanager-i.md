@@ -1,13 +1,12 @@
 # AudioManager
 
-This interface implements audio volume and device management.
+This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) to obtain an AudioManager instance.
 
-Before calling any API in AudioManager, you must use  
-[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) to obtain an AudioManager instance.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
@@ -42,7 +41,7 @@ Obtains the value of an audio parameter. This method uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the audio parameter whose value is to be obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the value of the audio parameter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the value of the audio parameter. |
 
 ## getAudioParameter
 
@@ -82,9 +81,11 @@ getAudioScene(callback: AsyncCallback<AudioScene>): void
 
 Obtains the audio scene. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void--><!--Device-AudioManager-getAudioScene(callback: AsyncCallback<AudioScene>): void-End-->
 
@@ -94,7 +95,7 @@ Obtains the audio scene. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio scene obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio scene obtained; otherwise, **err** is an error object. |
 
 ## getAudioScene
 
@@ -104,9 +105,11 @@ getAudioScene(): Promise<AudioScene>
 
 Obtains the audio scene. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getAudioScene(): Promise<AudioScene>--><!--Device-AudioManager-getAudioScene(): Promise<AudioScene>-End-->
 
@@ -126,9 +129,11 @@ getAudioSceneSync(): AudioScene
 
 Obtains the audio scene. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getAudioSceneSync(): AudioScene--><!--Device-AudioManager-getAudioSceneSync(): AudioScene-End-->
 
@@ -146,11 +151,13 @@ Obtains the audio scene. This API returns the result synchronously.
 getDebuggingManager(): AudioDebuggingManager
 ```
 
-Obtains an AudioDebuggingManager instance.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md#AudioDebuggingManager) instance is a singleton.&lt;/p&gt;
+Obtains an AudioDebuggingManager instance. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md#AudioDebuggingManager) instance is a singleton. &lt;/p&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -174,7 +181,9 @@ Obtains a device enhancement manager instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,7 +211,7 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDevices](ohos.multimedia.audio.AudioRoutingManager#getDevices)
+**Substitutes:** getDevices
 
 <!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void--><!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag, callback: AsyncCallback<AudioDeviceDescriptors>): void-End-->
 
@@ -213,7 +222,7 @@ Obtains the audio devices with a specific flag. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceFlag | DeviceFlag | Yes | Audio device flag. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the audio devices obtained; otherwise, **err** is an error object. |
 
 ## getDevices
 
@@ -229,7 +238,7 @@ Obtains the audio devices with a specific flag. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDevices](ohos.multimedia.audio.AudioRoutingManager#getDevices)
+**Substitutes:** getDevices
 
 <!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>--><!--Device-AudioManager-getDevices(deviceFlag: DeviceFlag): Promise<AudioDeviceDescriptors>-End-->
 
@@ -261,7 +270,7 @@ Obtains the maximum volume allowed for a stream. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMaxVolume](ohos.multimedia.audio.AudioVolumeGroupManager#getMaxVolume)
+**Substitutes:** getMaxVolume
 
 <!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
@@ -272,7 +281,7 @@ Obtains the maximum volume allowed for a stream. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum stream volume obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the maximum stream volume obtained; otherwise, **err** is an error object. |
 
 ## getMaxVolume
 
@@ -288,7 +297,7 @@ Obtains the maximum volume allowed for a stream. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMaxVolume](ohos.multimedia.audio.AudioVolumeGroupManager#getMaxVolume)
+**Substitutes:** getMaxVolume
 
 <!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getMaxVolume(volumeType: AudioVolumeType): Promise<number>-End-->
 
@@ -320,7 +329,7 @@ Obtains the minimum volume allowed for a stream. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMinVolume](ohos.multimedia.audio.AudioVolumeGroupManager#getMinVolume)
+**Substitutes:** getMinVolume
 
 <!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
@@ -331,7 +340,7 @@ Obtains the minimum volume allowed for a stream. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum stream volume obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum stream volume obtained; otherwise, **err** is an error object. |
 
 ## getMinVolume
 
@@ -347,7 +356,7 @@ Obtains the minimum volume allowed for a stream. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [getMinVolume](ohos.multimedia.audio.AudioVolumeGroupManager#getMinVolume)
+**Substitutes:** getMinVolume
 
 <!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getMinVolume(volumeType: AudioVolumeType): Promise<number>-End-->
 
@@ -375,7 +384,9 @@ Obtains a recording manager instance. Provides recording strategy management, in
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -403,7 +414,7 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRingerMode](ohos.multimedia.audio.AudioVolumeGroupManager#getRingerMode)
+**Substitutes:** getRingerMode
 
 <!--Device-AudioManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
 
@@ -413,7 +424,7 @@ Obtains the ringer mode. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the ringer mode obtained; otherwise, **err** is an error object. |
 
 ## getRingerMode
 
@@ -429,7 +440,7 @@ Obtains the ringer mode. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRingerMode](ohos.multimedia.audio.AudioVolumeGroupManager#getRingerMode)
+**Substitutes:** getRingerMode
 
 <!--Device-AudioManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioManager-getRingerMode(): Promise<AudioRingMode>-End-->
 
@@ -449,9 +460,11 @@ getRoutingManager(): AudioRoutingManager
 
 Obtains an AudioRoutingManager instance.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getRoutingManager(): AudioRoutingManager--><!--Device-AudioManager-getRoutingManager(): AudioRoutingManager-End-->
 
@@ -471,9 +484,11 @@ getSessionManager(): AudioSessionManager
 
 Obtains an AudioSessionManager instance.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -495,9 +510,11 @@ getSpatializationManager(): AudioSpatializationManager
 
 Obtains an AudioSpatializationManager instance.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager--><!--Device-AudioManager-getSpatializationManager(): AudioSpatializationManager-End-->
 
@@ -517,9 +534,11 @@ getStreamManager(): AudioStreamManager
 
 Obtains an AudioStreamManager instance.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getStreamManager(): AudioStreamManager--><!--Device-AudioManager-getStreamManager(): AudioStreamManager-End-->
 
@@ -545,7 +564,7 @@ Obtains the volume of a stream. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [getVolume](ohos.multimedia.audio.AudioVolumeGroupManager#getVolume)
+**Substitutes:** getVolume
 
 <!--Device-AudioManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void--><!--Device-AudioManager-getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void-End-->
 
@@ -556,7 +575,7 @@ Obtains the volume of a stream. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getMinVolume) and [getMaxVolume](#getMaxVolume) . |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the stream volume obtained; otherwise, **err** is an error object. The volume range of a specified stream can be obtained by calling [getMinVolume](#getMinVolume) and [getMaxVolume](#getMaxVolume) . |
 
 ## getVolume
 
@@ -572,7 +591,7 @@ Obtains the volume of a stream. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getVolume](ohos.multimedia.audio.AudioVolumeGroupManager#getVolume)
+**Substitutes:** getVolume
 
 <!--Device-AudioManager-getVolume(volumeType: AudioVolumeType): Promise<number>--><!--Device-AudioManager-getVolume(volumeType: AudioVolumeType): Promise<number>-End-->
 
@@ -598,9 +617,11 @@ getVolumeManager(): AudioVolumeManager
 
 Obtains an AudioVolumeManager instance.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -628,7 +649,7 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [isActive](ohos.multimedia.audio.AudioStreamManager#isActive)
+**Substitutes:** isActive
 
 <!--Device-AudioManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -639,7 +660,7 @@ Checks whether a stream is active. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is active or **false** if not active; otherwise, **err** is an error object. |
 
 ## isActive
 
@@ -655,7 +676,7 @@ Checks whether a stream is active. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isActive](ohos.multimedia.audio.AudioStreamManager#isActive)
+**Substitutes:** isActive
 
 <!--Device-AudioManager-isActive(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioManager-isActive(volumeType: AudioVolumeType): Promise<boolean>-End-->
 
@@ -698,7 +719,7 @@ Checks whether a device is active. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | Yes | Active audio device type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the device is active or **false** if not active; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the device is active or **false** if not active; otherwise, **err** is an error object. |
 
 ## isDeviceActive
 
@@ -746,7 +767,7 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [isMicrophoneMute](ohos.multimedia.audio.AudioVolumeGroupManager#isMicrophoneMute)
+**Substitutes:** isMicrophoneMute
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -758,7 +779,7 @@ Checks whether the microphone is muted. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the microphone is muted or **false** if not muted; otherwise, **err** is an error object. |
 
 ## isMicrophoneMute
 
@@ -774,7 +795,7 @@ Checks whether the microphone is muted. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [isMicrophoneMute](ohos.multimedia.audio.AudioVolumeGroupManager#isMicrophoneMute)
+**Substitutes:** isMicrophoneMute
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -802,7 +823,7 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [isMute](ohos.multimedia.audio.AudioVolumeGroupManager#isMute)
+**Substitutes:** isMute
 
 <!--Device-AudioManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void--><!--Device-AudioManager-isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void-End-->
 
@@ -813,7 +834,7 @@ Checks whether a stream is muted. This API uses an asynchronous callback to retu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise , **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true** if the stream is muted or **false** if not muted; otherwise , **err** is an error object. |
 
 ## isMute
 
@@ -829,7 +850,7 @@ Checks whether a stream is muted. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isMute](ohos.multimedia.audio.AudioVolumeGroupManager#isMute)
+**Substitutes:** isMute
 
 <!--Device-AudioManager-isMute(volumeType: AudioVolumeType): Promise<boolean>--><!--Device-AudioManager-isMute(volumeType: AudioVolumeType): Promise<boolean>-End-->
 
@@ -873,7 +894,7 @@ Mutes a volume type. This method uses an asynchronous callback to return the res
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the volume type, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## mute
 
@@ -908,7 +929,31 @@ Mutes a volume type. This method uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
-## off('audioSceneChange')
+## offAudioSceneChange
+
+```TypeScript
+offAudioSceneChange(callback?: Callback<AudioScene>): void
+```
+
+Unsubscribes to audio scene change events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AudioManager-offAudioSceneChange(callback?: Callback<AudioScene>): void--><!--Device-AudioManager-offAudioSceneChange(callback?: Callback<AudioScene>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Communication
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | No | Callback used in subscription. |
+
+## off_audioSceneChange
 
 ```TypeScript
 off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
@@ -920,6 +965,8 @@ Unsubscribes from the audio scene change event. This API uses an asynchronous ca
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void--><!--Device-AudioManager-off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -929,9 +976,9 @@ Unsubscribes from the audio scene change event. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | No | Callback used to return the current audio scene. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | No | Callback used to return the current audio scene. |
 
-## off('deviceChange')
+## off_deviceChange
 
 ```TypeScript
 off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
@@ -945,7 +992,7 @@ Unsubscribes from the audio device change event. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceChange](ohos.multimedia.audio.AudioRoutingManager#event:deviceChange)
+**Substitutes:** deviceChange
 
 <!--Device-AudioManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void--><!--Device-AudioManager-off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void-End-->
 
@@ -956,9 +1003,9 @@ Unsubscribes from the audio device change event. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the device change details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | No | Callback used to return the device change details. |
 
-## off('interrupt')
+## off_interrupt
 
 ```TypeScript
 off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void
@@ -972,7 +1019,7 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 
 **Deprecated since:** 11
 
-**Substitutes:** [audioInterrupt](ohos.multimedia.audio.AudioRenderer#event:audioInterrupt)
+**Substitutes:** audioInterrupt
 
 <!--Device-AudioManager-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void--><!--Device-AudioManager-off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptAction>): void-End-->
 
@@ -984,21 +1031,23 @@ Unsubscribes from the audio interruption event. This API uses an asynchronous ca
 | --- | --- | --- | --- |
 | type | 'interrupt' | Yes | Event type. The event **'interrupt'** is triggered when the audio focus is changed. |
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | No | Callback used to return the event information. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | No | Callback used to return the event information. |
 
-## offAudioSceneChange
+## onAudioSceneChange
 
 ```TypeScript
-offAudioSceneChange(callback?: Callback<AudioScene>): void
+onAudioSceneChange(callback: Callback<AudioScene>): void
 ```
 
-Unsubscribes to audio scene change events.
+Subscribes to audio scene change events. When system changes communication scene status, registered clients will receive the callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-AudioManager-offAudioSceneChange(callback?: Callback<AudioScene>): void--><!--Device-AudioManager-offAudioSceneChange(callback?: Callback<AudioScene>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioManager-onAudioSceneChange(callback: Callback<AudioScene>): void--><!--Device-AudioManager-onAudioSceneChange(callback: Callback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
 
@@ -1006,9 +1055,9 @@ Unsubscribes to audio scene change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | No | Callback used in subscription. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to obtain the latest audio scene. |
 
-## on('audioSceneChange')
+## on_audioSceneChange
 
 ```TypeScript
 on(type: 'audioSceneChange', callback: Callback<AudioScene>): void
@@ -1020,6 +1069,8 @@ Subscribes to the audio scene change event. This API uses an asynchronous callba
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void--><!--Device-AudioManager-on(type: 'audioSceneChange', callback: Callback<AudioScene>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Communication
@@ -1029,9 +1080,9 @@ Subscribes to the audio scene change event. This API uses an asynchronous callba
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'audioSceneChange' | Yes | Event type. The event **'audioSceneChange'** is triggered when the audio scene is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to return the current audio scene. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to return the current audio scene. |
 
-## on('deviceChange')
+## on_deviceChange
 
 ```TypeScript
 on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
@@ -1045,7 +1096,7 @@ Subscribes to the event indicating that the connection status of an audio device
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceChange](ohos.multimedia.audio.AudioRoutingManager#event:deviceChange)
+**Substitutes:** deviceChange
 
 <!--Device-AudioManager-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void--><!--Device-AudioManager-on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void-End-->
 
@@ -1056,18 +1107,15 @@ Subscribes to the event indicating that the connection status of an audio device
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | Yes | Event type. The event **'deviceChange'** is triggered when the connection status of an audio device is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | Yes | Callback used to return the device change details. |
 
-## on('interrupt')
+## on_interrupt
 
 ```TypeScript
 on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
 ```
 
-Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
-
-Same as  
-[on('audioInterrupt')](@ohos.multimedia.audio:audio.AudioRenderer.on(type: 'audioInterrupt', callback: Callback&lt;InterruptEvent&gt;)), this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
+Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result. Same as [on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#on_audioInterrupt) , this API is used to listen for focus changes. However, this API is used in scenarios without audio streams (no AudioRenderer instance is created), such as frequency modulation (FM) and voice wakeup.
 
 **Since:** 7
 
@@ -1075,7 +1123,7 @@ Same as
 
 **Deprecated since:** 11
 
-**Substitutes:** [audioInterrupt](ohos.multimedia.audio.AudioRenderer#event:audioInterrupt)
+**Substitutes:** audioInterrupt
 
 <!--Device-AudioManager-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void--><!--Device-AudioManager-on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void-End-->
 
@@ -1087,29 +1135,7 @@ Same as
 | --- | --- | --- | --- |
 | type | 'interrupt' | Yes | Event type. The event **'interrupt'** is triggered when the audio focus is changed. |
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Yes | Audio interruption event type. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | Yes | Callback used to return the event information. |
-
-## onAudioSceneChange
-
-```TypeScript
-onAudioSceneChange(callback: Callback<AudioScene>): void
-```
-
-Subscribes to audio scene change events. When system changes communication scene status, registered clients will receive the callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AudioManager-onAudioSceneChange(callback: Callback<AudioScene>): void--><!--Device-AudioManager-onAudioSceneChange(callback: Callback<AudioScene>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Communication
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | Yes | Callback used to obtain the latest audio scene. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | Yes | Callback used to return the event information. |
 
 ## setAudioParameter
 
@@ -1137,7 +1163,7 @@ Sets an audio parameter. This method uses an asynchronous callback to return the
 | --- | --- | --- | --- |
 | key | string | Yes | Key of the audio parameter to set. |
 | value | string | Yes | Value of the audio parameter to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setAudioParameter
 
@@ -1198,7 +1224,7 @@ Sets a device to the active state. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | deviceType | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | Yes | Active audio device type. |
 | active | boolean | Yes | Active state to set. **true** to set the device to the active state, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## setDeviceActive
 
@@ -1258,7 +1284,7 @@ Mutes or unmutes the microphone. This method uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mute | boolean | Yes | Mute status to set. The value true means to mute the microphone, and false means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setMicrophoneMute
 
@@ -1317,7 +1343,7 @@ Sets the ringer mode. This method uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | Yes | Ringer mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setRingerMode
 
@@ -1379,7 +1405,7 @@ Sets the volume for a volume type. This method uses an asynchronous callback to 
 | --- | --- | --- | --- |
 | volumeType | [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md) | Yes | Audio volume type. |
 | volume | number | Yes | Volume to set. The value range can be obtained by calling getMinVolume and getMaxVolume. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setVolume
 

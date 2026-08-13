@@ -2,7 +2,9 @@
 
 彩信回复标志。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsRespInd--><!--Device-sms-export interface MmsRespInd-End-->
 
@@ -20,7 +22,9 @@ reportAllowed?: ReportType
 
 **类型：** [ReportType](arkts-telephony-sms-reporttype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsRespInd-reportAllowed?: ReportType--><!--Device-MmsRespInd-reportAllowed?: ReportType-End-->
 
@@ -38,7 +42,9 @@ status: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsRespInd-status: int--><!--Device-MmsRespInd-status: int-End-->
 
@@ -56,7 +62,9 @@ transactionId: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsRespInd-transactionId: string--><!--Device-MmsRespInd-transactionId: string-End-->
 
@@ -74,7 +82,9 @@ version: MmsVersionType
 
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsRespInd-version: MmsVersionType--><!--Device-MmsRespInd-version: MmsVersionType-End-->
 

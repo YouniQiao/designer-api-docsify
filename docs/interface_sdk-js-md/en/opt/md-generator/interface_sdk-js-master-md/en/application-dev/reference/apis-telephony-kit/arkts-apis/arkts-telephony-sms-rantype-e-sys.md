@@ -2,7 +2,9 @@
 
 RAN type.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export enum RanType--><!--Device-sms-export enum RanType-End-->
 
@@ -18,7 +20,9 @@ TYPE_GSM = 1
 
 GSM
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RanType-TYPE_GSM = 1--><!--Device-RanType-TYPE_GSM = 1-End-->
 
@@ -34,7 +38,9 @@ TYPE_CDMA = 2
 
 CMDA
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RanType-TYPE_CDMA = 2--><!--Device-RanType-TYPE_CDMA = 2-End-->
 

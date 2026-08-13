@@ -6,6 +6,8 @@ Defines the Localized align rule options of relative container.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LocalizedAlignRuleOptions--><!--Device-unnamed-declare interface LocalizedAlignRuleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Defines the Localized align rule options of relative container.
 bias?: Bias
 ```
 
-Offset of the component under the anchor constraints.&lt;br&gt;The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
+Offset of the component under the anchor constraints. &lt;br&gt;The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **Type:** Bias
 
@@ -25,6 +27,8 @@ Offset of the component under the anchor constraints.&lt;br&gt;The value is the 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Bottom alignment in the vertical direction.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,6 +75,8 @@ Center alignment in the vertical direction.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +100,8 @@ Right alignment with left-to-right scripts and left alignment with right-to-left
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -113,6 +123,8 @@ Center alignment in the horizontal direction.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,6 +148,8 @@ Left alignment with left-to-right scripts and right alignment with right-to-left
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -157,6 +171,8 @@ Top alignment in the vertical direction.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,6 +10,8 @@ declare function copyDirSync(src: string, dest: string, mode?: number): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function copyDirSync(src: string, dest: string, mode?: number): void--><!--Device-unnamed-declare function copyDirSync(src: string, dest: string, mode?: number): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

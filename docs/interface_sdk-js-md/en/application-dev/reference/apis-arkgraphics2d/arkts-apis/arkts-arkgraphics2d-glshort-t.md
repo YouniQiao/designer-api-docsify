@@ -10,6 +10,8 @@ WebGL 1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-type GLshort = number--><!--Device-unnamed-type GLshort = number-End-->

@@ -2,7 +2,9 @@
 
 Obtains CDMA cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface CdmaCellInformation--><!--Device-radio-export interface CdmaCellInformation-End-->
 
@@ -26,7 +28,9 @@ Indicates the base station Id.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-baseId: int--><!--Device-CdmaCellInformation-baseId: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the latitude.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-latitude: int--><!--Device-CdmaCellInformation-latitude: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the longitude.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-longitude: int--><!--Device-CdmaCellInformation-longitude: int-End-->
 
@@ -80,7 +88,9 @@ Indicates the network identification code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-nid: int--><!--Device-CdmaCellInformation-nid: int-End-->
 
@@ -98,7 +108,9 @@ Indicates the system identification code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-sid: int--><!--Device-CdmaCellInformation-sid: int-End-->
 

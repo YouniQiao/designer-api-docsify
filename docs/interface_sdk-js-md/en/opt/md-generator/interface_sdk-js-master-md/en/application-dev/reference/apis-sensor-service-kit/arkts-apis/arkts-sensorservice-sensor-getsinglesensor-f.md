@@ -14,7 +14,9 @@ function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 
 Obtains information about the sensor of a specific type. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void--><!--Device-sensor-function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void-End-->
 
@@ -31,9 +33,9 @@ Obtains information about the sensor of a specific type. This API uses an asynch
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
-| [14500102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+| [14500102](../errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) |
 
 ## Examples
 
@@ -73,7 +75,9 @@ function getSingleSensor(type: SensorId): Promise<Sensor>
 
 Obtains information about the sensor of a specific type. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>--><!--Device-sensor-function getSingleSensor(type: SensorId): Promise<Sensor>-End-->
 
@@ -95,9 +99,9 @@ Obtains information about the sensor of a specific type. This API uses a promise
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
-| [14500102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
+| [14500102](../errorcode-sensor.md#14500102-sensor-not-supported-by-the-device) |
 
 ## Examples
 

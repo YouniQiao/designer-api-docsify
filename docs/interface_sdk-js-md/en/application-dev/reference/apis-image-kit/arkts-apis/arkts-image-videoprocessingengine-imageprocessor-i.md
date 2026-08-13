@@ -2,9 +2,11 @@
 
 Provides the ImageProcessor type, including the processing function.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
 
@@ -18,23 +20,19 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 
 ## enhanceDetail
 
-ArkTS-Dyn:
-```TypeScript
-enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): Promise<image.PixelMap>
-```
-
-ArkTS-Sta:
 ```TypeScript
 enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to width and height. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to width and height. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
@@ -45,8 +43,8 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of width. |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of height. |
+| width | int | Yes | The zoom value of width. |
+| height | int | Yes | The zoom value of height. |
 | level | QualityLevel | No | The quality level. |
 
 **Return value:**
@@ -59,9 +57,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
-| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 
@@ -79,23 +77,19 @@ async function enhanceDetail(sourceImage: image.PixelMap, width: number, height:
 
 ## enhanceDetail
 
-ArkTS-Dyn:
-```TypeScript
-enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): Promise<image.PixelMap>
-```
-
-ArkTS-Sta:
 ```TypeScript
 enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
@@ -106,7 +100,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The zoom ratio. |
+| scale | double | Yes | The zoom ratio. |
 | level | QualityLevel | No | The quality level. |
 
 **Return value:**
@@ -119,9 +113,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
-| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetail can not work correctly due to &lt;br&gt;limited device capabilities. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 
@@ -139,23 +133,19 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
 
 ## enhanceDetailSync
 
-ArkTS-Dyn:
-```TypeScript
-enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): image.PixelMap
-```
-
-ArkTS-Sta:
 ```TypeScript
 enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to width and height. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to width and height. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
 
@@ -166,8 +156,8 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of width. |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The zoom value of height. |
+| width | int | Yes | The zoom value of width. |
+| height | int | Yes | The zoom value of height. |
 | level | QualityLevel | No | The quality level. |
 
 **Return value:**
@@ -180,10 +170,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
-| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 
@@ -201,23 +191,19 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, width: number, hei
 
 ## enhanceDetailSync
 
-ArkTS-Dyn:
-```TypeScript
-enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): image.PixelMap
-```
-
-ArkTS-Sta:
 ```TypeScript
 enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
 
@@ -228,7 +214,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sourceImage | image.PixelMap | Yes | The source pixelmap. |
-| scale | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | The zoom ratio. |
+| scale | double | Yes | The zoom ratio. |
 | level | QualityLevel | No | The quality level. |
 
 **Return value:**
@@ -241,10 +227,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
-| [29200009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
-| [29200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
-| [29200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function enhanceDetailSync can not work correctly due &lt;br&gt;to limited device capabilities. |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) | Input value is invalid. This error is returned for &lt;br&gt;all of the following error conditions: &lt;br&gt;1 - Invalid input or output image buffer - The image buffer width(height) &lt;br&gt;is too large or colorspace is incorrect. &lt;br&gt;2 - Invalid parameter - The parameter does not contain valid information, &lt;br&gt;such as detail enhancer level is incorrect. |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) | Failed to process image buffer. For example, the processing times out. |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 
 ## Examples
 

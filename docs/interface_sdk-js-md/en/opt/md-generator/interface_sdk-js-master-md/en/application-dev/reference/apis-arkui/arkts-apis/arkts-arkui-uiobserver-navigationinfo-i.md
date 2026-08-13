@@ -4,6 +4,8 @@ Provides information about the **Navigation** component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export interface NavigationInfo--><!--Device-uiObserver-export interface NavigationInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ ID of the **Navigation** component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,6 +50,8 @@ Navigation controller of the **Navigation** component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,12 +66,13 @@ Navigation controller of the **Navigation** component.
 uniqueId?: number
 ```
 
-Unique ID of the **Navigation** component, which can be obtained through  
-[queryNavigationInfo](../arkts-components/arkts-arkui-basecustomcomponent-c.md#queryNavigationInfo).
+Unique ID of the **Navigation** component, which can be obtained through queryNavigationInfo.
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

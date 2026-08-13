@@ -16,6 +16,8 @@ Requests trace collection with the specified configuration.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -40,9 +42,9 @@ Requests trace collection with the specified configuration.
 
 | Error Code ID |
 | --- |
-| [11400302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400302-trace-collection-exceeds-the-resource-quota) |
-| [11400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
-| [11400120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-trace.md#11400120-trace-file-storage-limit-reached) |
+| [11400302](../errorcode-hiviewdfx-hidebug-trace.md#11400302-trace-collection-exceeds-the-resource-quota) |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
+| [11400120](../errorcode-hiviewdfx-hidebug-trace.md#11400120-trace-file-storage-limit-reached) |
 
 ## Examples
 

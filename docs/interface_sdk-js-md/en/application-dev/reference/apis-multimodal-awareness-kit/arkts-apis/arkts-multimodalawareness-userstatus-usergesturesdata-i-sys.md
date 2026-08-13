@@ -2,13 +2,15 @@
 
 Defines user gesture data.
 
-**Inheritance/Implementation:** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData)
+**Inheritance/Implementation:** UserGesturesData extends [UserFacesData](arkts-multimodalawareness-userstatus-userfacesdata-i-sys.md#UserFacesData-(System-API))
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-userStatus-export interface UserGesturesData extends UserFacesData--><!--Device-userStatus-export interface UserGesturesData extends UserFacesData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserGesturesData--><!--Device-userStatus-export interface UserGesturesData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -26,13 +28,15 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 directionAngle?: double[]
 ```
 
-Angle between user gesture and screen directions.The value ranges from 0 to 90, in degrees.
+Angle between user gesture and screen directions. The value ranges from 0 to 90, in degrees.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +54,13 @@ gestureSpeed?: double[]
 
 Gesture speed, in frames per second (fps).
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,11 +78,13 @@ handPosition?: double[]
 
 Hand position relative to screen. The normalized coordinate system ranges from 0 to 640.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,13 +100,15 @@ Hand position relative to screen. The normalized coordinate system ranges from 0
 handType?: int
 ```
 
-User static gesture type.The value ranges from 0 to 3. 0: Palm, 1: Fist, 2: Scissors, 3: Finger heart.
+User static gesture type. The value ranges from 0 to 3. 0: Palm, 1: Fist, 2: Scissors, 3: Finger heart.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,7 +130,9 @@ Whether user hand exists.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +148,15 @@ Whether user hand exists.
 motionGesture?: int
 ```
 
-User dynamic gesture type.The value ranges from 0 to 3. 0: Up, 1: Down, 2: Screen capture, 3: Release.
+User dynamic gesture type. The value ranges from 0 to 3. 0: Up, 1: Down, 2: Screen capture, 3: Release.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

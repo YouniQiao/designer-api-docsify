@@ -12,7 +12,7 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 **废弃版本：** 9
 
-**替代接口：** [uploadFile](request.uploadFile(context:)
+**替代接口：** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -33,7 +33,7 @@ function upload(config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -68,7 +68,7 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 **废弃版本：** 9
 
-**替代接口：** [uploadFile](request.uploadFile(context:)
+**替代接口：** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -94,7 +94,7 @@ function upload(config: UploadConfig): Promise<UploadTask>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface GestureTriggerInfo--><!--Device-unnamed-export interface GestureTriggerInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ current: GestureRecognizer
 **类型：** [GestureRecognizer](arkts-arkui-gesturerecognizer-c.md)
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ currentPhase: GestureActionPhase
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -60,6 +66,8 @@ event: GestureEvent
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -79,6 +87,8 @@ node?: FrameNode
 **类型：** FrameNode
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

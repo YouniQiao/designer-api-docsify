@@ -4,6 +4,8 @@ Provides usage information of the Web SQL Database.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface WebStorageOrigin--><!--Device-webview-interface WebStorageOrigin-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -26,6 +28,8 @@ Index of the origin.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorageOrigin-origin: string--><!--Device-WebStorageOrigin-origin: string-End-->
@@ -44,6 +48,8 @@ Storage quota of the origin.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorageOrigin-quota: number--><!--Device-WebStorageOrigin-quota: number-End-->
@@ -61,6 +67,8 @@ Storage usage of the origin.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

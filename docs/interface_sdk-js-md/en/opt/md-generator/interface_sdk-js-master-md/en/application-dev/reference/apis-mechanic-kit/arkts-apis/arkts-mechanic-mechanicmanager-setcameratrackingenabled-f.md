@@ -14,7 +14,9 @@ function setCameraTrackingEnabled(isEnabled: boolean): void
 
 Enables or disables camera tracking.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void--><!--Device-mechanicManager-function setCameraTrackingEnabled(isEnabled: boolean): void-End-->
 
@@ -30,9 +32,9 @@ Enables or disables camera tracking.
 
 | Error Code ID |
 | --- |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) |
-| [33300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-function-not-supported) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
+| [33300003](../errorcode-mechanic.md#33300003-function-not-supported) |
 
 ## Examples
 

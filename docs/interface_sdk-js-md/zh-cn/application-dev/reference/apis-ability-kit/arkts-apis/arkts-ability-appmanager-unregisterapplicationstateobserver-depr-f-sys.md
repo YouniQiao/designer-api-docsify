@@ -14,7 +14,7 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**替代接口：** [off](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -29,7 +29,7 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | observerId | number | 是 | 表示观察者的编号代码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示指定的callback回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 表示指定的callback回调方法。 |
 
 ## 示例
 
@@ -64,7 +64,7 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**替代接口：** [off](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 

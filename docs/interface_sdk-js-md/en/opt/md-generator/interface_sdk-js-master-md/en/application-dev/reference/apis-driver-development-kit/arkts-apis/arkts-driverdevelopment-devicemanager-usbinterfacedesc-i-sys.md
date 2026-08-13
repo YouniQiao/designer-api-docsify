@@ -2,7 +2,9 @@
 
 Defines the interface descriptor of a USB device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface USBInterfaceDesc--><!--Device-deviceManager-interface USBInterfaceDesc-End-->
 
@@ -26,7 +28,9 @@ Interface class.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bClass: int--><!--Device-USBInterfaceDesc-bClass: int-End-->
 
@@ -44,7 +48,9 @@ Interface ID.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bInterfaceNumber: int--><!--Device-USBInterfaceDesc-bInterfaceNumber: int-End-->
 
@@ -62,7 +68,9 @@ Interface protocol.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bProtocol: int--><!--Device-USBInterfaceDesc-bProtocol: int-End-->
 
@@ -80,7 +88,9 @@ Interface subclass.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bSubClass: int--><!--Device-USBInterfaceDesc-bSubClass: int-End-->
 

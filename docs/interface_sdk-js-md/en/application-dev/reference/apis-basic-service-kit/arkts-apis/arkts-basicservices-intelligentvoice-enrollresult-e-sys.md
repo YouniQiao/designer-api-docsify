@@ -2,9 +2,11 @@
 
 Enumerates enroll result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-enum EnrollResult--><!--Device-intelligentVoice-enum EnrollResult-End-->
 
@@ -20,9 +22,11 @@ SUCCESS = 0
 
 Success.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-SUCCESS = 0--><!--Device-EnrollResult-SUCCESS = 0-End-->
 
@@ -38,9 +42,11 @@ VPR_TRAIN_FAILED = -1
 
 Vpr train failed.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-VPR_TRAIN_FAILED = -1--><!--Device-EnrollResult-VPR_TRAIN_FAILED = -1-End-->
 
@@ -56,9 +62,11 @@ WAKEUP_PHRASE_NOT_MATCH = -2
 
 Wakeup phrase not match.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-WAKEUP_PHRASE_NOT_MATCH = -2--><!--Device-EnrollResult-WAKEUP_PHRASE_NOT_MATCH = -2-End-->
 
@@ -74,9 +82,11 @@ TOO_NOISY = -3
 
 Too noisy.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-TOO_NOISY = -3--><!--Device-EnrollResult-TOO_NOISY = -3-End-->
 
@@ -92,9 +102,11 @@ TOO_LOUD = -4
 
 Too loud.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-TOO_LOUD = -4--><!--Device-EnrollResult-TOO_LOUD = -4-End-->
 
@@ -110,9 +122,11 @@ INTERVAL_LARGE = -5
 
 Interval large.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-INTERVAL_LARGE = -5--><!--Device-EnrollResult-INTERVAL_LARGE = -5-End-->
 
@@ -128,9 +142,11 @@ DIFFERENT_PERSON = -6
 
 Different person.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-DIFFERENT_PERSON = -6--><!--Device-EnrollResult-DIFFERENT_PERSON = -6-End-->
 
@@ -146,9 +162,11 @@ UNKNOWN_ERROR = -100
 
 Unknown error.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnrollResult-UNKNOWN_ERROR = -100--><!--Device-EnrollResult-UNKNOWN_ERROR = -100-End-->
 

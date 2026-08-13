@@ -2,9 +2,11 @@
 
 Controls the transparency of materials.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Blend--><!--Device-unnamed-export interface Blend-End-->
 
@@ -20,9 +22,11 @@ Whether the transparency of the material is enabled. true if enabled, false othe
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Blend-enabled: boolean--><!--Device-Blend-enabled: boolean-End-->
 

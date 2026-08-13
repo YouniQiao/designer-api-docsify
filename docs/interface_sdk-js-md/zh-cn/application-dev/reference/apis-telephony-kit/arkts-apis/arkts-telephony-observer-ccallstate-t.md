@@ -8,7 +8,9 @@ type CCallState = call.CCallState
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-observer-type CCallState = call.CCallState--><!--Device-observer-type CCallState = call.CCallState-End-->
 

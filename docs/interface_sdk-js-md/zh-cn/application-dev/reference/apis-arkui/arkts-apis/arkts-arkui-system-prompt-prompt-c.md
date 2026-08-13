@@ -1,14 +1,12 @@
 # Prompt
 
-创建并显示文本提示框、对话框和操作菜单。
-
-> **说明：**
-> 
-> - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md#promptAction)。
+创建并显示文本提示框、对话框和操作菜单。 > **说明：** > > - 从API version 8 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](../../apis-na/arkts-apis/arkts-na-promptaction-n.md#promptAction)。
 
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export default class Prompt--><!--Device-unnamed-export default class Prompt-End-->
 
@@ -25,6 +23,8 @@ static showActionMenu(options: ShowActionMenuOptions): void
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,6 +50,8 @@ static showDialog(options: ShowDialogOptions): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Prompt-static showDialog(options: ShowDialogOptions): void--><!--Device-Prompt-static showDialog(options: ShowDialogOptions): void-End-->
@@ -73,6 +75,8 @@ static showToast(options: ShowToastOptions): void
 **起始版本：** 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为3。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

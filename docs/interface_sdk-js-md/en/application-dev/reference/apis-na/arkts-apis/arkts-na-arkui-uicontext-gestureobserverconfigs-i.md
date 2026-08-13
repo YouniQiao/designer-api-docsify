@@ -1,0 +1,36 @@
+# GestureObserverConfigs
+
+The observer options for global gesture listener.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface GestureObserverConfigs--><!--Device-unnamed-export interface GestureObserverConfigs-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## actionPhases
+
+```TypeScript
+actionPhases: Array<GestureActionPhase>
+```
+
+The gesture callback phases want to monitor. Only the specific action phases can be notified when the gesture is triggered. If empty array provided, the register will has no any effect.
+
+**Type:** Array&lt;[GestureActionPhase](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-gestureactionphase-e.md)&gt;
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>--><!--Device-GestureObserverConfigs-actionPhases: Array<GestureActionPhase>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

@@ -4,6 +4,8 @@ Enumerates the external encrypted data types.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-huksExternalCrypto-export enum HuksExternalCryptoTagType--><!--Device-huksExternalCrypto-export enum HuksExternalCryptoTagType-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -18,6 +20,8 @@ The tag value is an integer.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28--><!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -31,6 +35,8 @@ HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28
 The tag value is a byte array.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28--><!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_BYTES = 5 << 28-End-->
 

@@ -2,9 +2,11 @@
 
 Used to intercept url requests. Response headers and body can be sent through WebResourceHandler.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebResourceHandler--><!--Device-webview-class WebResourceHandler-End-->
 
@@ -24,9 +26,13 @@ didFail(code: WebNetErrorList): void
 
 Notify that this request should be failed.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void-End-->
 
@@ -42,8 +48,8 @@ Notify that this request should be failed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 
 ## didFail
 
@@ -53,9 +59,11 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 
 Notify that this request should be failed.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void-End-->
 
@@ -72,22 +80,24 @@ Notify that this request should be failed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100101-incorrect-network-error-code) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| [17100101](../errorcode-webview.md#17100101-incorrect-network-error-code) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 
 ## didFail
 
 ```TypeScript
-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: int): void
+didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void
 ```
 
 Notify that this request should be failed.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
-<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: int): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: int): void-End-->
+**Deprecated since:** -1
+
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -97,13 +107,13 @@ Notify that this request should be failed.
 | --- | --- | --- | --- |
 | code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set response error code to intercept. |
 | completeIfNoResponse | boolean | Yes | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
-| customErrorCode | int | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
+| customErrorCode | number | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 
 ## didFinish
 
@@ -113,9 +123,13 @@ didFinish(): void
 
 Notify that this request should be finished and there is no more data available.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebResourceHandler-didFinish(): void--><!--Device-WebResourceHandler-didFinish(): void-End-->
 
@@ -125,7 +139,7 @@ Notify that this request should be finished and there is no more data available.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 
 ## didReceiveResponse
 
@@ -135,9 +149,13 @@ didReceiveResponse(response: WebSchemeHandlerResponse): void
 
 Pass response headers to intercepted requests.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void--><!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void-End-->
 
@@ -153,8 +171,8 @@ Pass response headers to intercepted requests.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 
 ## didReceiveResponseBody
 
@@ -164,9 +182,13 @@ didReceiveResponseBody(data: ArrayBuffer): void
 
 Pass response body data to intercepted requests.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void--><!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void-End-->
 
@@ -182,6 +204,6 @@ Pass response body data to intercepted requests.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler-is-invalid) | The resource handler is invalid. |
 

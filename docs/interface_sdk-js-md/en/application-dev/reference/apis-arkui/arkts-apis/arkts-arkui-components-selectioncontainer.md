@@ -8,19 +8,21 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 
 ## Summary
 
-### Functions
+### Classes
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-selectioncontainer-f.md#selectioncontainer) | Defines SelectionContainer component.It requires calling setSelectionContainerOptions at start of the component attribute set-up,and it requires calling applyAttributesFinish at the end of the component attribute set-up. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | Defines the attributes of SelectionContainer. |
+| [SelectionContainerController](arkts-arkui-arkui-components-selectioncontainer-selectioncontainercontroller-c.md) | Defines the controller of the SelectionContainer component. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | Defines the attributes of SelectionContainer. |
 | [SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) | Defines custom edit menu options for SelectionContainer. |
+| [SelectionContainerInterface](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerinterface-i.md) | Provides a SelectionContainer component interface. |
 | [SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) | Defines selection menu options for SelectionContainer. |
+| [SelectionContainerOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontaineroptions-i.md) | Describes the initialization options of the SelectionContainer component. |
 
 ### Enums
 
@@ -33,4 +35,11 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 | Name | Description |
 | --- | --- |
 | [OnMenuItemClickWithTextCallback](arkts-arkui-onmenuitemclickwithtextcallback-t.md) | Invoke upon clicking an item, capable of intercepting the default system menu execution behavior. |
+
+### Constants
+
+| Name | Description |
+| --- | --- |
+| [SelectionContainer](arkts-arkui-arkui-components-selectioncontainer-con.md#SelectionContainer) | Defines SelectionContainer component. |
+| [SelectionContainerInstance](arkts-arkui-arkui-components-selectioncontainer-con.md#SelectionContainerInstance) | Defines SelectionContainer component instance. |
 

@@ -4,6 +4,8 @@ Enumerates the event service types.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export enum ServiceType--><!--Device-calendarManager-export enum ServiceType-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -17,6 +19,8 @@ MEETING = 'Meeting'
 Join a meeting.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Watch a video.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-WATCHING = 'Watching'--><!--Device-ServiceType-WATCHING = 'Watching'-End-->
@@ -49,6 +55,8 @@ REPAYMENT = 'Repayment'
 Make a payment.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ Watch live TV.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-LIVE = 'Live'--><!--Device-ServiceType-LIVE = 'Live'-End-->
@@ -81,6 +91,8 @@ SHOPPING = 'Shopping'
 Go shopping.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ View the trip.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-TRIP = 'Trip'--><!--Device-ServiceType-TRIP = 'Trip'-End-->
@@ -113,6 +127,8 @@ CLASS = 'Class'
 Join class.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,6 +146,8 @@ Watch a sports event.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'--><!--Device-ServiceType-SPORTS_EVENTS = 'SportsEvents'-End-->
@@ -145,6 +163,8 @@ SPORTS_EXERCISE = 'SportsExercise'
 Start exercising.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

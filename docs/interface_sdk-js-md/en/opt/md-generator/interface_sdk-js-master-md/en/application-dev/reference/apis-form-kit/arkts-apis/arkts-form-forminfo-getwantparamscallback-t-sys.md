@@ -8,6 +8,8 @@ Get want parameters callback.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-formInfo-type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Record<string, Object>>--><!--Device-formInfo-type GetWantParamsCallback = (formInfo: Array<formInfo.FormInfo>) => Array<Record<string, Object>>-End-->
@@ -26,4 +28,4 @@ Get want parameters callback.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; |
+| Array&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; |

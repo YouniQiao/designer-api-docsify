@@ -1,10 +1,12 @@
 # AnimatorParams
 
-AnimatorParams
+Defines animation parameters for entering or exiting the photo browser page.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class AnimatorParams--><!--Device-unnamed-export declare class AnimatorParams-End-->
 
@@ -19,40 +21,44 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 ## curve
 
 ```TypeScript
-public curve?: Curve | ICurve | string
+curve?: Curve | ICurve | string
 ```
 
-Animate curve
+Animation curve.
 
 **Type:** Curve \| ICurve \| string
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorParams-public curve?: Curve | ICurve | string--><!--Device-AnimatorParams-public curve?: Curve | ICurve | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AnimatorParams-curve?: Curve | ICurve | string--><!--Device-AnimatorParams-curve?: Curve | ICurve | string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## duration
 
 ```TypeScript
-public duration?: int
+duration?: number
 ```
 
-Animate duration
+Animation duration, in ms.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AnimatorParams-public duration?: int--><!--Device-AnimatorParams-public duration?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AnimatorParams-duration?: number--><!--Device-AnimatorParams-duration?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

@@ -2,9 +2,11 @@
 
 Defines the data structure of the task information for query. The fields available vary depending on the query type.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface TaskInfo--><!--Device-agent-interface TaskInfo-End-->
 
@@ -22,13 +24,15 @@ import { request } from '@kit.BasicServicesKit';
 readonly bundle?: string
 ```
 
-The bundle name.For system query only.
+The bundle name. For system query only.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TaskInfo-readonly bundle?: string--><!--Device-TaskInfo-readonly bundle?: string-End-->
 
@@ -42,13 +46,15 @@ The bundle name.For system query only.
 readonly uid?: string
 ```
 
-The UID of an application.For system query only.
+The UID of an application. For system query only.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TaskInfo-readonly uid?: string--><!--Device-TaskInfo-readonly uid?: string-End-->
 

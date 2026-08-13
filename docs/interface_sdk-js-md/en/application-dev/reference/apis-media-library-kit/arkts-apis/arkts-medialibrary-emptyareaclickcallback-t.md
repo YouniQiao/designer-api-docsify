@@ -4,13 +4,15 @@
 export type EmptyAreaClickCallback = () => void
 ```
 
-The callback of onEmptyAreaClick event
+Called when the blank area of the **AlbumPickerComponent** is tapped.
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-unnamed-export type EmptyAreaClickCallback = () => void--><!--Device-unnamed-export type EmptyAreaClickCallback = () => void-End-->
 

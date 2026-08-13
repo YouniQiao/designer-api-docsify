@@ -12,6 +12,8 @@ Create ASR processing controller on one audio capturer.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
@@ -34,10 +36,10 @@ Create ASR processing controller on one audio capturer.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_WAKEUP), or this audio capturer is already released. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_WAKEUP), or this audio capturer is already released. |
 
 ## 示例
 
@@ -84,7 +86,9 @@ Create ASR processing controller on one audio capturer.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null-End-->
 
@@ -108,9 +112,9 @@ Create ASR processing controller on one audio capturer.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_WAKEUP), or this audio capturer is already released. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. e.g. the source type of the input audio capturer is not [SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md#SOURCE_TYPE_VOICE_RECOGNITION) or [SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_WAKEUP), or this audio capturer is already released. |
 
 ## 示例
 

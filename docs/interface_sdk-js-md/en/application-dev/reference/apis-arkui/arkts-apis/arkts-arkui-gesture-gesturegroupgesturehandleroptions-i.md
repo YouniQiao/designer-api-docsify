@@ -6,6 +6,8 @@ Defines the GestureGroupGestureHandler options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface GestureGroupGestureHandlerOptions--><!--Device-unnamed-export interface GestureGroupGestureHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Indicates the gestures included in the gesture group.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ Indicates the mode of gesture group.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

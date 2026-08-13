@@ -4,6 +4,8 @@ This module provides the capability to subscribe to report the distance measurem
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace spatialAwareness--><!--Device-unnamed-declare namespace spatialAwareness-End-->
@@ -25,10 +27,10 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offdistancemeasure) |
-| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offindoororoutdooridentify) |
-| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#ondistancemeasure) |
-| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onindoororoutdooridentify) |
+| [offDistanceMeasure](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md#offDistanceMeasure-(System-API)) |
+| [offIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-offindoororoutdooridentify-f-sys.md#offIndoorOrOutdoorIdentify-(System-API)) |
+| [onDistanceMeasure](arkts-multimodalawareness-spatialawareness-ondistancemeasure-f-sys.md#onDistanceMeasure-(System-API)) |
+| [onIndoorOrOutdoorIdentify](arkts-multimodalawareness-spatialawareness-onindoororoutdooridentify-f-sys.md#onIndoorOrOutdoorIdentify-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

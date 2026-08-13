@@ -1,9 +1,10 @@
 # TextStyle
 
-文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)的  
-[pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)（控制段落级别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
+文本样式，用于控制文本的视觉表现属性，包括字体、颜色、字号、间距、装饰线和阴影等。TextStyle通过[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)的 [pushStyle](arkts-arkgraphics2d-text-paragraphbuilder-c.md#pushStyle)方法应用到后续添加的文本内容，与[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)（控制段落级 别属性）配合使用。同一段落中可通过多次pushStyle实现对不同文本片段应用不同样式。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface TextStyle--><!--Device-text-interface TextStyle-End-->
 
@@ -19,7 +20,9 @@ backgroundRect?: RectStyle
 
 **类型：** [RectStyle](arkts-arkgraphics2d-text-rectstyle-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -37,7 +40,9 @@ badgeType?: TextBadgeType
 
 **类型：** [TextBadgeType](arkts-arkgraphics2d-text-textbadgetype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -55,7 +60,9 @@ baseline?: TextBaseline
 
 **类型：** [TextBaseline](arkts-arkgraphics2d-text-textbaseline-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -73,7 +80,9 @@ baselineShift?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -91,7 +100,9 @@ color?: common2D.Color
 
 **类型：** common2D.Color
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -109,7 +120,9 @@ decoration?: Decoration
 
 **类型：** [Decoration](arkts-arkgraphics2d-text-decoration-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -127,7 +140,9 @@ ellipsis?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -145,7 +160,9 @@ ellipsisMode?: EllipsisMode
 
 **类型：** EllipsisMode
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -165,6 +182,8 @@ fontEdging?: drawing.FontEdging
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -183,7 +202,9 @@ fontFamilies?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -201,7 +222,9 @@ fontFeatures?: Array<FontFeature>
 
 **类型：** Array&lt;FontFeature&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -219,7 +242,9 @@ fontSize?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -237,7 +262,9 @@ fontStyle?: FontStyle
 
 **类型：** FontStyle
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -251,13 +278,13 @@ fontStyle?: FontStyle
 fontTypefaces?: Array<drawing.Typeface>
 ```
 
-指定排版字体对象数组，用于优先使用指定的字体对象进行文本塑形，跳过字体匹配流程。当数组中某个字体对象无法塑形部分文字时，未能塑形的文字将使用系统字体进行塑形。默认为空数组，表示不指定字体对象，使用默认字体匹配流程。
-
-当fontTypefaces与[TextStyle](#TextStyle).fontFamilies同时设置时，fontTypefaces优先级更高。
+指定排版字体对象数组，用于优先使用指定的字体对象进行文本塑形，跳过字体匹配流程。当数组中某个字体对象无法塑形部分文字时，未能塑形的文字将使用系统字体进行塑形。默认为空数组，表示不指定字体对象，使用默认字体匹配流程。 当fontTypefaces与[TextStyle](#TextStyle).fontFamilies同时设置时，fontTypefaces优先级更高。
 
 **类型：** Array&lt;drawing.Typeface&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -277,7 +304,9 @@ fontVariations?: Array<FontVariation>
 
 **类型：** Array&lt;FontVariation&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -291,11 +320,13 @@ fontVariations?: Array<FontVariation>
 fontWeight?: FontWeight
 ```
 
-字重，默认为W400。 在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
+字重，默认为W400。 在&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;之前，仅系统字体中的可变字体支持字重调节；从&lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;开 始，系统字体与三方注册字体中的可变字体均支持字重调节。非可变字体设置字重值小于semi-bold（即W600）时字体粗细无变化，设置字重值大于等于semi-bold（即W600）时可能会触发伪加粗效果。
 
 **类型：** FontWeight
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -313,7 +344,9 @@ fontWidth?: FontWidth
 
 **类型：** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -331,7 +364,9 @@ true表示将行间距平分至行的顶部与底部，false则不平分，默�
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -349,7 +384,9 @@ true表示根据字体大小和heightScale设置文本框的高度，false表示
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -367,7 +404,9 @@ heightScale?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -385,7 +424,9 @@ letterSpacing?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -403,7 +444,9 @@ lineHeightMaximum?: number
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -421,7 +464,9 @@ lineHeightMinimum?: number
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -439,7 +484,9 @@ lineHeightStyle?: LineHeightStyle
 
 **类型：** LineHeightStyle
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -453,11 +500,13 @@ lineHeightStyle?: LineHeightStyle
 locale?: string
 ```
 
-语言类型，例如'en-Latn'代表英文(拉丁文字)，'zh-Hans'代表简体中文，'zh-Hant'代表繁体中文。支持language-script格式的两段式语言标签，language遵循ISO 639-1规范，script遵循ISO 15924规范。未指定locale或者设置为空字符串或为undefined时，默认locale为'zh-Hans'。
+语言类型，例如'en-Latn'代表英文(拉丁文字)，'zh-Hans'代表简体中文，'zh-Hant'代表繁体中文。支持language-script格式的两段式语言标签，language遵循ISO 639-1规范， script遵循ISO 15924规范。未指定locale或者设置为空字符串或为undefined时，默认locale为'zh-Hans'。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -475,7 +524,9 @@ textShadows?: Array<TextShadow>
 
 **类型：** Array&lt;[TextShadow](arkts-arkgraphics2d-text-textshadow-i.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -493,7 +544,9 @@ wordSpacing?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

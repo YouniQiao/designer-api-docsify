@@ -6,7 +6,9 @@ export type ExtensionRunningInfo = _ExtensionRunningInfo
 
 Defines the level-2 module ExtensionRunningInfo.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityManager-export type ExtensionRunningInfo = _ExtensionRunningInfo--><!--Device-abilityManager-export type ExtensionRunningInfo = _ExtensionRunningInfo-End-->
 

@@ -4,9 +4,9 @@ Declaration of the menu item on the right side.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class EditableTitleBarMenuItemV2--><!--Device-unnamed-export declare class EditableTitleBarMenuItemV2-End-->
 
@@ -18,24 +18,6 @@ Declaration of the menu item on the right side.
 import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
 ```
 
-## action
-
-```TypeScript
-public action?: OnActionCallback
-```
-
-Callback function when click on this menu item.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EditableTitleBarMenuItemV2-public action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2-public action?: OnActionCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## constructor
 
 ```TypeScript
@@ -46,9 +28,13 @@ Constructor of EditableTitleBarMenuItemV2.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableTitleBarMenuItemV2-constructor(options?: EditableTitleBarMenuItemV2Options)--><!--Device-EditableTitleBarMenuItemV2-constructor(options?: EditableTitleBarMenuItemV2Options)-End-->
 
@@ -63,7 +49,8 @@ Constructor of EditableTitleBarMenuItemV2.
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+  public accessibilityDescription?: ResourceStr
 ```
 
 Accessibility description.
@@ -72,18 +59,23 @@ Accessibility description.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public accessibilityDescription?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public accessibilityDescription?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel: string
+@Trace
+  public accessibilityLevel: string
 ```
 
 Accessibility level, options: 'auto', 'yes', 'no'.
@@ -94,18 +86,23 @@ Accessibility level, options: 'auto', 'yes', 'no'.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public accessibilityLevel: string--><!--Device-EditableTitleBarMenuItemV2-public accessibilityLevel: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityLevel: string--><!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityLevel: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-public accessibilityText?: ResourceStr
+@Trace
+  public accessibilityText?: ResourceStr
 ```
 
 Accessibility text for screen reader.
@@ -114,18 +111,48 @@ Accessibility text for screen reader.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public accessibilityText?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+@Trace
+  public action?: OnActionCallback
+```
+
+Callback function when click on this menu item.
+
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public action?: OnActionCallback--><!--Device-EditableTitleBarMenuItemV2-@Trace  public action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## defaultFocus
 
 ```TypeScript
-public defaultFocus: boolean
+@Trace
+  public defaultFocus: boolean
 ```
 
 Whether to get focus by default.
@@ -136,18 +163,23 @@ Whether to get focus by default.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public defaultFocus: boolean--><!--Device-EditableTitleBarMenuItemV2-public defaultFocus: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public defaultFocus: boolean--><!--Device-EditableTitleBarMenuItemV2-@Trace  public defaultFocus: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isEnabled
 
 ```TypeScript
-public isEnabled: boolean
+@Trace
+  public isEnabled: boolean
 ```
 
 Whether to enable this menu item.
@@ -158,18 +190,23 @@ Whether to enable this menu item.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public isEnabled: boolean--><!--Device-EditableTitleBarMenuItemV2-public isEnabled: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public isEnabled: boolean--><!--Device-EditableTitleBarMenuItemV2-@Trace  public isEnabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
 
 ```TypeScript
-public label?: ResourceStr
+@Trace
+  public label?: ResourceStr
 ```
 
 Label text for long press dialog.
@@ -178,18 +215,23 @@ Label text for long press dialog.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public label?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public label?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public label?: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
 
 ```TypeScript
-public symbolStyle?: SymbolGlyphModifier
+@Trace
+  public symbolStyle?: SymbolGlyphModifier
 ```
 
 Symbol icon style modifier.
@@ -198,18 +240,23 @@ Symbol icon style modifier.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItemV2-public symbolStyle?: SymbolGlyphModifier-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-EditableTitleBarMenuItemV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
 
 ```TypeScript
-public value: ResourceStr
+@Trace
+  public value: ResourceStr
 ```
 
 Icon resource, supports Symbol or Image.
@@ -220,11 +267,15 @@ Icon resource, supports Symbol or Image.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarMenuItemV2-public value: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-public value: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarMenuItemV2-@Trace  public value: ResourceStr--><!--Device-EditableTitleBarMenuItemV2-@Trace  public value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

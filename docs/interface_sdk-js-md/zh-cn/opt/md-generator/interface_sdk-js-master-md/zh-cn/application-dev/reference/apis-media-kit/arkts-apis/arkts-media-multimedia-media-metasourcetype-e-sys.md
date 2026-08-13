@@ -2,7 +2,9 @@
 
 录制的元数据源类型枚举。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-enum MetaSourceType--><!--Device-unnamed-enum MetaSourceType-End-->
 
@@ -18,7 +20,9 @@ VIDEO_MAKER_INFO = 0
 
 视频的Maker信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MetaSourceType-VIDEO_MAKER_INFO = 0--><!--Device-MetaSourceType-VIDEO_MAKER_INFO = 0-End-->
 

@@ -2,7 +2,9 @@
 
 Represents a device screen lock password policy.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-securityManager-export interface PasswordPolicy--><!--Device-securityManager-export interface PasswordPolicy-End-->
 
@@ -24,7 +26,9 @@ Password complexity description, for example, "The password must contain 8 to 30
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Regular expression for password complexity.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Encryption algorithm used to process password data. After the setting, the encry
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs--><!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs-End-->
@@ -78,7 +86,9 @@ Password validity period, in ms.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

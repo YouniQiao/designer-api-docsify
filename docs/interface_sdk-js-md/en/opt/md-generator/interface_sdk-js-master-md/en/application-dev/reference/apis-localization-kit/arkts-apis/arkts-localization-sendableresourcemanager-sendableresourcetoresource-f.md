@@ -16,6 +16,8 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource--><!--Device-sendableResourceManager-export function sendableResourceToResource(resource: SendableResource): Resource-End-->
@@ -38,7 +40,7 @@ Converts a `SendableResource` object transmitted across threads to a `Resource` 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

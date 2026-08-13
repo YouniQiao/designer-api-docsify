@@ -4,6 +4,8 @@ Defines the device status information. It describes the current status of the co
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-companionDeviceAuth-interface DeviceStatus--><!--Device-companionDeviceAuth-interface DeviceStatus-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -28,6 +30,8 @@ Key device information. It uniquely identifies a device, including the device ID
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceStatus-deviceKey: DeviceKey--><!--Device-DeviceStatus-deviceKey: DeviceKey-End-->
@@ -47,6 +51,8 @@ Device model information. It identifies the device model, such as the product mo
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Device name. It is the name or alias of a device, and is displayed to the user i
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceStatus-deviceName: string--><!--Device-DeviceStatus-deviceName: string-End-->
@@ -87,6 +95,8 @@ Device user name. It is the display name of the current user on the device, and 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +118,8 @@ Device online status. The value **true** indicates that the device is online and
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceStatus-isOnline: boolean--><!--Device-DeviceStatus-isOnline: boolean-End-->
@@ -127,6 +139,8 @@ List of service IDs supported by the device. It indicates the service scenarios 
 **Type:** number[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

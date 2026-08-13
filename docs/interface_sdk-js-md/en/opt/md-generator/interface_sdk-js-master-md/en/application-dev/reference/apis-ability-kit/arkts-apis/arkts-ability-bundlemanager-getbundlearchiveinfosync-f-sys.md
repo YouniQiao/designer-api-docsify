@@ -14,7 +14,9 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): Bun
 
 Obtains the bundle information based on the given HAP file path and bundle flags. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,10 +43,10 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17700022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700022-invalid-source-file) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17700022](../errorcode-bundle.md#17700022-invalid-source-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -8,7 +8,9 @@ Provides APIs to manage albums.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -30,6 +32,8 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
@@ -46,12 +50,12 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 14000011 | Internal system error |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -88,6 +92,8 @@ Converts this Sendable album to a non-Sendable album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album--><!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -102,12 +108,12 @@ Converts this Sendable album to a non-Sendable album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 14000011 | Internal system error |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -150,6 +156,8 @@ Number of image assets in the album
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Album-readonly imageCount?: number--><!--Device-Album-readonly imageCount?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -167,6 +175,8 @@ Number of video assets in the album
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-Album-readonly videoCount?: number--><!--Device-Album-readonly videoCount?: number-End-->
 

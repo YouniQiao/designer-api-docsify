@@ -12,14 +12,13 @@ import { power } from '@kit.BasicServicesKit';
 function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 ```
 
-Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event.
+Sets the power key filtering strategy. After the power service subscribes to the power key event, this API is used to configure the processing mode of this event. For details about the power key filtering strategy, see [power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md#PowerKeyFilteringStrategy).
 
-For details about the power key filtering strategy, see  
-[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md#PowerKeyFilteringStrategy).
+**Since:** 23
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.POWER_MANAGER
 
@@ -39,9 +38,9 @@ For details about the power key filtering strategy, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) | Failed to connect to the service. |
 
 ## Examples
 

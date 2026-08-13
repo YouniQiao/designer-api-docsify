@@ -2,7 +2,9 @@
 
 表示用户认证回调类。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface IUserAuthCallback--><!--Device-osAccount-interface IUserAuthCallback-End-->
 
@@ -18,37 +20,17 @@ onAcquireInfo?: (module: number, acquire: number, extraInfo: Uint8Array) => void
 
 身份认证信息获取回调函数。
 
-**起始版本：** 8
+**类型：** (module: number, acquire: number, extraInfo: Uint8Array) =&gt; void
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IUserAuthCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void--><!--Device-IUserAuthCallback-onAcquireInfo?: (module: int, acquire: int, extraInfo: Uint8Array) => void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| module | number | 是 |
-| acquire | number | 是 |
-| extraInfo | Uint8Array | 是 |
-
-## 示例
-
-```TypeScript
-let authCallback: osAccount.IUserAuthCallback = {
-  onResult: (result: number, extraInfo: osAccount.AuthResult) => {
-    console.info('auth result = ' + result)
-    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-  },
-  onAcquireInfo: (module: number, acquire: number, extraInfo: Uint8Array) => {
-    console.info('auth module = ' + module);
-    console.info('auth acquire = ' + acquire);
-    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```
 
 ## onResult
 
@@ -58,28 +40,14 @@ onResult: (result: number, extraInfo: AuthResult) => void
 
 身份认证结果回调函数，返回结果码和认证结果信息。
 
-**起始版本：** 8
+**类型：** (result: number, extraInfo: AuthResult) =&gt; void
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IUserAuthCallback-onResult: (result: int, extraInfo: AuthResult) => void--><!--Device-IUserAuthCallback-onResult: (result: int, extraInfo: AuthResult) => void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
 
 **系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| result | number | 是 |
-| extraInfo | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | 是 |
-
-## 示例
-
-```TypeScript
-let authCallback: osAccount.IUserAuthCallback = {
-  onResult: (result: number, extraInfo: osAccount.AuthResult) => {
-    console.info('auth result = ' + result);
-    console.info('auth extraInfo = ' + JSON.stringify(extraInfo));
-  }
-};
-```

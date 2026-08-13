@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class Calendar--><!--Device-i18n-export class Calendar-End-->
 
@@ -20,9 +22,11 @@ add(field: string, amount: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-add(field: string, amount: int): void--><!--Device-Calendar-add(field: string, amount: int): void-End-->
 
@@ -39,8 +43,25 @@ add(field: string, amount: int): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [890001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let calendar = i18n.getCalendar('zh-Hans');
+  calendar.set(2021, 11, 11, 8, 0, 0); // 设置时间日期为2021.12.11 08:00:00
+  calendar.add('year', 8); // 2021 + 8
+  let year = calendar.get('year'); // year = 2029
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`call Calendar.add failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## compareDays
 
@@ -52,9 +73,11 @@ compareDays(date: Date): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-compareDays(date: Date): int--><!--Device-Calendar-compareDays(date: Date): int-End-->
 
@@ -76,7 +99,24 @@ compareDays(date: Date): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+  calendar.setTime(5000);
+  let date = new Date(6000);
+  let diff = calendar.compareDays(date); // diff = 1
+} catch (error) {
+  let err = error as BusinessError;
+  console.error(`call Calendar.compareDays failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 ## get
 
@@ -88,9 +128,11 @@ get(field: string): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-get(field: string): int--><!--Device-Calendar-get(field: string): int-End-->
 
@@ -108,6 +150,16 @@ get(field: string): int
 | --- | --- |
 | int | 日历属性的值，如当前Calendar对象的内部日期的年份为1990，get('year')返回1990。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('zh-Hans');
+calendar.set(2021, 10, 1, 8, 0, 0); // 设置时间日期为2021.11.1 08:00:00
+let hourOfDay = calendar.get('hour_of_day'); // hourOfDay = 8
+```
+
 ## getDisplayName
 
 ```TypeScript
@@ -118,9 +170,11 @@ getDisplayName(locale: string): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-getDisplayName(locale: string): string--><!--Device-Calendar-getDisplayName(locale: string): string-End-->
 
@@ -138,6 +192,15 @@ getDisplayName(locale: string): string
 | --- | --- |
 | string | 日历对象名称在指定语言下的翻译。如buddhist在en-US上显示的名称为“Buddhist Calendar”。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'buddhist');
+let calendarName: string = calendar.getDisplayName('zh'); // calendarName = '佛历'
+```
+
 ## getFirstDayOfWeek
 
 ```TypeScript
@@ -148,9 +211,11 @@ getFirstDayOfWeek(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-getFirstDayOfWeek(): int--><!--Device-Calendar-getFirstDayOfWeek(): int-End-->
 
@@ -162,6 +227,15 @@ getFirstDayOfWeek(): int
 | --- | --- |
 | int | 周起始日，1代表周日，7代表周六。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('en-US', 'gregory');
+let firstDayOfWeek = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 1
+```
+
 ## getMinimalDaysInFirstWeek
 
 ```TypeScript
@@ -172,9 +246,11 @@ getMinimalDaysInFirstWeek(): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-getMinimalDaysInFirstWeek(): int--><!--Device-Calendar-getMinimalDaysInFirstWeek(): int-End-->
 
@@ -186,6 +262,15 @@ getMinimalDaysInFirstWeek(): int
 | --- | --- |
 | int | 一年中第一周的最小天数。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('zh-Hans');
+let minimalDaysInFirstWeek = calendar.getMinimalDaysInFirstWeek(); // minimalDaysInFirstWeek = 1
+```
+
 ## getTimeInMillis
 
 ```TypeScript
@@ -196,9 +281,11 @@ getTimeInMillis(): long
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-getTimeInMillis(): long--><!--Device-Calendar-getTimeInMillis(): long-End-->
 
@@ -210,6 +297,16 @@ getTimeInMillis(): long
 | --- | --- |
 | long | Unix时间戳，表示从1970.1.1 00:00:00 GMT逝去的毫秒数。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('zh-Hans');
+calendar.setTime(5000);
+let millisecond = calendar.getTimeInMillis(); // millisecond = 5000
+```
+
 ## getTimeZone
 
 ```TypeScript
@@ -220,9 +317,11 @@ getTimeZone(): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-getTimeZone(): string--><!--Device-Calendar-getTimeZone(): string-End-->
 
@@ -234,6 +333,16 @@ getTimeZone(): string
 | --- | --- |
 | string | 表示时区ID的字符串。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+calendar.setTimeZone('Asia/Shanghai');
+let timezone: string = calendar.getTimeZone(); // timezone = 'Asia/Shanghai'
+```
+
 ## isWeekend
 
 ```TypeScript
@@ -244,9 +353,11 @@ isWeekend(date?: Date): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-isWeekend(date?: Date): boolean--><!--Device-Calendar-isWeekend(date?: Date): boolean-End-->
 
@@ -264,6 +375,18 @@ isWeekend(date?: Date): boolean
 | --- | --- |
 | boolean | true表示指定的日期是周末，false表示指定的日期不是周末。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+calendar.set(2021, 11, 11, 8, 0, 0); // 设置时间为2021.12.11 08:00:00
+let isWeekend: boolean = calendar.isWeekend(); // isWeekend = true
+let date: Date = new Date(2011, 11, 6, 9, 0, 0); // 时间日期为2011.12.06 09:00:00
+isWeekend = calendar.isWeekend(date); // isWeekend = false
+```
+
 ## set
 
 ```TypeScript
@@ -274,9 +397,11 @@ set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): vo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void--><!--Device-Calendar-set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): void-End-->
 
@@ -293,6 +418,15 @@ set(year: int, month: int, date:int, hour?: int, minute?: int, second?: int): vo
 | minute | int | 否 | 设置的分钟。默认值：系统时间。 |
 | second | int | 否 | 设置的秒。默认值：系统时间。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+calendar.set(2021, 10, 1, 8, 0, 0); // 设置时间日期为2021.11.1 08:00:00
+```
+
 ## setFirstDayOfWeek
 
 ```TypeScript
@@ -303,9 +437,11 @@ setFirstDayOfWeek(value: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-setFirstDayOfWeek(value: int): void--><!--Device-Calendar-setFirstDayOfWeek(value: int): void-End-->
 
@@ -317,6 +453,16 @@ setFirstDayOfWeek(value: int): void
 | --- | --- | --- | --- |
 | value | int | 是 | 一周的起始日，1代表周日，7代表周六。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('zh-Hans');
+calendar.setFirstDayOfWeek(3);
+let firstDayOfWeek = calendar.getFirstDayOfWeek(); // firstDayOfWeek = 3
+```
+
 ## setMinimalDaysInFirstWeek
 
 ```TypeScript
@@ -327,9 +473,11 @@ setMinimalDaysInFirstWeek(value: int): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void--><!--Device-Calendar-setMinimalDaysInFirstWeek(value: int): void-End-->
 
@@ -341,6 +489,16 @@ setMinimalDaysInFirstWeek(value: int): void
 | --- | --- | --- | --- |
 | value | int | 是 | 一年中第一周的最小天数。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar = i18n.getCalendar('zh-Hans');
+calendar.setMinimalDaysInFirstWeek(3);
+let minimalDaysInFirstWeek = calendar.getMinimalDaysInFirstWeek(); // minimalDaysInFirstWeek = 3
+```
+
 ## setTime
 
 ```TypeScript
@@ -351,9 +509,11 @@ setTime(date: Date): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-setTime(date: Date): void--><!--Device-Calendar-setTime(date: Date): void-End-->
 
@@ -365,6 +525,16 @@ setTime(date: Date): void
 | --- | --- | --- | --- |
 | date | Date | 是 | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
+let date: Date = new Date(2021, 10, 7, 8, 0, 0); // 时间日期为2021.11.07 08:00:00
+calendar.setTime(date);
+```
+
 ## setTime
 
 ```TypeScript
@@ -375,9 +545,11 @@ setTime(time: double): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-setTime(time: double): void--><!--Device-Calendar-setTime(time: double): void-End-->
 
@@ -389,6 +561,15 @@ setTime(time: double): void
 | --- | --- | --- | --- |
 | time | double | 是 | Unix时间戳，表示从1970.1.1 00:00:00 GMT逝去的毫秒数。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('en-US', 'gregory');
+calendar.setTime(10540800000);
+```
+
 ## setTimeZone
 
 ```TypeScript
@@ -399,9 +580,11 @@ setTimeZone(timezone: string): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Calendar-setTimeZone(timezone: string): void--><!--Device-Calendar-setTimeZone(timezone: string): void-End-->
 
@@ -412,4 +595,13 @@ setTimeZone(timezone: string): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | timezone | string | 是 | 合法的时区ID，如“Asia/Shanghai”。 |
+
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let calendar: i18n.Calendar = i18n.getCalendar('zh-Hans');
+calendar.setTimeZone('Asia/Shanghai');
+```
 

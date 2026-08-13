@@ -2,7 +2,9 @@
 
 系统事件订阅者对象接口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiSysEvent-interface Watcher--><!--Device-hiSysEvent-interface Watcher-End-->
 
@@ -16,21 +18,19 @@
 onEvent: (info: SysEventInfo) => void
 ```
 
-订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo)) => void。
+订阅事件的回调方法(info: [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md#SysEventInfo（系统接口）)) => void。
 
-**起始版本：** 9
+**类型：** (info: SysEventInfo) =&gt; void
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Watcher-onEvent: (info: SysEventInfo) => void--><!--Device-Watcher-onEvent: (info: SysEventInfo) => void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
 **系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| info | [SysEventInfo](arkts-performanceanalysis-hisysevent-syseventinfo-i-sys.md) | 是 |
 
 ## onServiceDied
 
@@ -40,7 +40,11 @@ onServiceDied: () => void
 
 系统事件服务关闭的回调方法() => void。
 
-**起始版本：** 9
+**类型：** () =&gt; void
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Watcher-onServiceDied: () => void--><!--Device-Watcher-onServiceDied: () => void-End-->
 
@@ -58,7 +62,9 @@ rules: WatchRule[]
 
 **类型：** [WatchRule](arkts-performanceanalysis-hisysevent-watchrule-i-sys.md)[]
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Watcher-rules: WatchRule[]--><!--Device-Watcher-rules: WatchRule[]-End-->
 

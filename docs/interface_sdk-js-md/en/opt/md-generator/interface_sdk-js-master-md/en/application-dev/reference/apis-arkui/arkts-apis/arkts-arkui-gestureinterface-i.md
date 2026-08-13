@@ -4,7 +4,9 @@ Defines the gesture API.
 
 **Since:** 11
 
-<!--Device-unnamed-interface GestureInterface<T>--><!--Device-unnamed-interface GestureInterface<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface GestureInterface--><!--Device-unnamed-interface GestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,6 +20,8 @@ Sets the input types that can trigger the gesture response.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -30,7 +34,7 @@ Sets the input types that can trigger the gesture response.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | Array&lt;[SourceTool](../arkts-components/arkts-arkui-sourcetool-e.md)&gt; | Yes |
 
 **Return value:**
 
@@ -47,6 +51,8 @@ tag(tag: string): T
 Sets a gesture tag.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

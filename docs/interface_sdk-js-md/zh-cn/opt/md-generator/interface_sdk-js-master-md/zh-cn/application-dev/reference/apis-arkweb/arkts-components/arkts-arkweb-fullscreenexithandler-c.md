@@ -1,8 +1,10 @@
 # FullScreenExitHandler
 
-Define the handler to exit the full screen mode, related to the [onFullScreenEnter](onFullScreenEnter) event.
+Define the handler to exit the full screen mode, related to the onFullScreenEnter event.
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class FullScreenExitHandler--><!--Device-unnamed-declare class FullScreenExitHandler-End-->
 
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ exitFullScreen(): void
 Exit the full screen mode.
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

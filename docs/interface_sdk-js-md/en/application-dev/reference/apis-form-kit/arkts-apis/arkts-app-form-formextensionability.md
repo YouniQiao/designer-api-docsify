@@ -1,18 +1,5 @@
 # @ohos.app.form.FormExtensionAbility
 
-The **FormExtensionAbility** module provides lifecycle callbacks invoked when a widget is created, destroyed, or
- updated.
- > **NOTE**
- > - The formExtensionAbility is cleared after 10 seconds of inactivity.
- > - The following modules cannot be referenced in the FormExtensionAbility, as doing so may cause the program to exit
- >  abnormally:
- >   - @ohos.ability.particleAbility (ParticleAbility)
- >   - @ohos.multimedia.audio (Audio Management)
- >   - @ohos.multimedia.camera (Camera Management)
- >   - @ohos.multimedia.media (Media)
- >   - @ohos.resourceschedule.backgroundTaskManager (Background Task Management)
-
-
 ## Modules to Import
 
 ```TypeScript
@@ -39,7 +26,7 @@ import { FormExtensionAbility } from '@kit.FormKit';
 
 | Name | Description |
 | --- | --- |
-| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) | Called to return a [FormState](FormState) object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns [DEFAULT](FormState#DEFAULT) by default.&lt;/p&gt; |
+| [OnAcquireFormStateFn](arkts-form-onacquireformstatefn-t.md) | Called to return a FormState object. &lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.&lt;/p&gt; |
 | [OnStopFn](arkts-form-onstopfn-t.md) | Called when this ability breaks the last link, notifying the provider that the provider process is about to stop. |
 
 <!--Del-->

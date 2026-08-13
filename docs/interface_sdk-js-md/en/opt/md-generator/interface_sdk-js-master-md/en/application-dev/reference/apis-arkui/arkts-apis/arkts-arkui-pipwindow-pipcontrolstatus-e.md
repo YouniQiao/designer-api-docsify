@@ -2,7 +2,9 @@
 
 Enumerates the statuses of components displayed on the PiP controller.
 
-**Since:** 12
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum PiPControlStatus--><!--Device-PiPWindow-enum PiPControlStatus-End-->
 
@@ -16,9 +18,11 @@ PLAY = 1
 
 Play.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlStatus-PLAY = 1--><!--Device-PiPControlStatus-PLAY = 1-End-->
 
@@ -32,9 +36,11 @@ PAUSE = 0
 
 Pause.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlStatus-PAUSE = 0--><!--Device-PiPControlStatus-PAUSE = 0-End-->
 
@@ -48,9 +54,11 @@ OPEN = 1
 
 Open.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlStatus-OPEN = 1--><!--Device-PiPControlStatus-OPEN = 1-End-->
 
@@ -64,9 +72,11 @@ CLOSE = 0
 
 Close.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlStatus-CLOSE = 0--><!--Device-PiPControlStatus-CLOSE = 0-End-->
 

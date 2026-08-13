@@ -2,9 +2,11 @@
 
 Describes a result object from raycasting, containing details about the 3D object hit by the ray.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RaycastResult--><!--Device-unnamed-export interface RaycastResult-End-->
 
@@ -16,13 +18,15 @@ Describes a result object from raycasting, containing details about the 3D objec
 centerDistance: double
 ```
 
-Distance from the center of the hit object's bounding box to the camera center,in scene units of the world coordinate system (such as cm, m, km, etc.).The value range is greater than 0.
+Distance from the center of the hit object's bounding box to the camera center, in scene units of the world coordinate system (such as cm, m, km, etc.). The value range is greater than 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RaycastResult-centerDistance: double--><!--Device-RaycastResult-centerDistance: double-End-->
 
@@ -34,13 +38,15 @@ Distance from the center of the hit object's bounding box to the camera center,i
 hitPosition: Position3
 ```
 
-Exact world coordinates of the collision point between the ray and the object ({x: number, y: number, z: number}),in scene units of the world coordinate system (such as cm, m, km, etc.).
+Exact world coordinates of the collision point between the ray and the object ({x: number, y: number, z: number}), in scene units of the world coordinate system (such as cm, m, km, etc.).
 
 **Type:** [Position3](arkts-arkgraphics3d-position3-t.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RaycastResult-hitPosition: Position3--><!--Device-RaycastResult-hitPosition: Position3-End-->
 
@@ -52,13 +58,15 @@ Exact world coordinates of the collision point between the ray and the object ({
 node: Node
 ```
 
-3D scene node hit by the ray.You can use this node to manipulate the target object (for example, moving, rotating, or hiding the object).
+3D scene node hit by the ray. You can use this node to manipulate the target object (for example, moving, rotating, or hiding the object).
 
 **Type:** [Node](arkts-arkgraphics3d-scenenodes-node-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RaycastResult-node: Node--><!--Device-RaycastResult-node: Node-End-->
 

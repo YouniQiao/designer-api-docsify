@@ -2,7 +2,9 @@
 
 Enumerates the tripod statuses.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum TripodStatus--><!--Device-camera-enum TripodStatus-End-->
 
@@ -16,9 +18,11 @@ Enumerates the tripod statuses.
 INVALID = 0
 ```
 
-Error status, or no tripod detected.This is a system API.
+Error status, or no tripod detected. This is a system API.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TripodStatus-INVALID = 0--><!--Device-TripodStatus-INVALID = 0-End-->
 
@@ -32,9 +36,11 @@ Error status, or no tripod detected.This is a system API.
 ACTIVE = 1
 ```
 
-The tripod is active.This is a system API.
+The tripod is active. This is a system API.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TripodStatus-ACTIVE = 1--><!--Device-TripodStatus-ACTIVE = 1-End-->
 
@@ -48,9 +54,11 @@ The tripod is active.This is a system API.
 ENTERING = 2
 ```
 
-The system is transitioning into a stable tripod mode.This is a system API.
+The system is transitioning into a stable tripod mode. This is a system API.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TripodStatus-ENTERING = 2--><!--Device-TripodStatus-ENTERING = 2-End-->
 
@@ -64,9 +72,11 @@ The system is transitioning into a stable tripod mode.This is a system API.
 EXITING = 3
 ```
 
-The system is leaving the stable tripod mode.This is a system API.
+The system is leaving the stable tripod mode. This is a system API.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TripodStatus-EXITING = 3--><!--Device-TripodStatus-EXITING = 3-End-->
 

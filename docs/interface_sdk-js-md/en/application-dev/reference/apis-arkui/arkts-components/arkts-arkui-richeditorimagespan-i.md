@@ -6,6 +6,8 @@ Image span information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorImageSpan--><!--Device-unnamed-declare interface RichEditorImageSpan-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Image style.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Span position.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -67,6 +73,8 @@ Image content.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

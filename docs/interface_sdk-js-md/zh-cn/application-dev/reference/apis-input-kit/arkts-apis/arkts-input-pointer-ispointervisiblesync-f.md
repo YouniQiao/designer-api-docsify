@@ -8,9 +8,11 @@ function isPointerVisibleSync(): boolean
 
 获取当前窗口鼠标光标的显示状态，使用同步方式。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-pointer-function isPointerVisibleSync(): boolean--><!--Device-pointer-function isPointerVisibleSync(): boolean-End-->
 

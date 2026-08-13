@@ -6,6 +6,8 @@ Enumerates color space types for specifying color rendering modes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ColorSpace--><!--Device-unnamed-declare enum ColorSpace-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Standard RGB color space, suitable for most display devices.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Display P3 color space with wider gamut, designed for high-end display devices.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

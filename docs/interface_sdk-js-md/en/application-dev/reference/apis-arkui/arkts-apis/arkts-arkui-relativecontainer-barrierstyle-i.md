@@ -6,6 +6,8 @@ Specifies the BarrierStyle of relative container
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface BarrierStyle--><!--Device-unnamed-export declare interface BarrierStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Specifies the direction of barrier
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Specifies the id of barrier
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BarrierStyle-id: string--><!--Device-BarrierStyle-id: string-End-->
@@ -63,6 +69,8 @@ Specifies the referencedId of barrier
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

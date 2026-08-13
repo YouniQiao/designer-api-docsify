@@ -2,9 +2,11 @@
 
 Data struct describes geographic locations.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface GeoAddress--><!--Device-geoLocationManager-export interface GeoAddress-End-->
 
@@ -26,9 +28,11 @@ Indicates whether it is an mock GeoAddress
 
 **Type:** Boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-isFromMock?: Boolean--><!--Device-GeoAddress-isFromMock?: Boolean-End-->
 

@@ -6,6 +6,8 @@ Enumerates the transition edge types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum TransitionEdge--><!--Device-unnamed-declare enum TransitionEdge-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Top edge of the window.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Bottom edge of the window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -66,6 +72,8 @@ Start edge of the window, which is the left edge for left-to-right scripts and t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -87,6 +95,8 @@ End edge of the window, which is the right edge for left-to-right scripts and th
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

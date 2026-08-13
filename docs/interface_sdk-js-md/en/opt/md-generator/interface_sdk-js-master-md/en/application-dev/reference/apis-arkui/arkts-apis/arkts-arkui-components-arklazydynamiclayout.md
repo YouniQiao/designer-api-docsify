@@ -12,7 +12,7 @@ import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#lazydynamiclayout) |
+| [LazyDynamicLayout](arkts-arkui-arkui-components-arklazydynamiclayout-lazydynamiclayout-f.md#LazyDynamicLayout) |
 
 ### Classes
 
@@ -24,4 +24,4 @@ import { LazyDynamicLayoutAttribute, LazyDynamicLayout } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [LazyDynamicLayoutInstance](arkts-arkui-arkui-components-arklazydynamiclayout-con.md#lazydynamiclayoutinstance) |
+| [LazyDynamicLayoutInstance](arkts-arkui-arkui-components-arklazydynamiclayout-con.md#LazyDynamicLayoutInstance) |

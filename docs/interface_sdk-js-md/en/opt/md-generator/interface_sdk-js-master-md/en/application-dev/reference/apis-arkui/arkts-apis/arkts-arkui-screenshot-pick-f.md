@@ -14,9 +14,11 @@ function pick(): Promise<PickInfo>
 
 Obtains this screenshot. Currently, only the screenshot of the display whose ID is **0** can be obtained. (If a screenshot of the extended screen is needed, you can use the [capture](arkts-arkui-screenshot-capture-f.md#capture) API.) This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-screenshot-function pick(): Promise<PickInfo>--><!--Device-screenshot-function pick(): Promise<PickInfo>-End-->
 
@@ -32,8 +34,8 @@ Obtains this screenshot. Currently, only the screenshot of the display whose ID 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

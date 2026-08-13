@@ -16,6 +16,8 @@ Sets an application clone as the default application of the specified type. This
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.SET_DEFAULT_APPLICATION or (ohos.permission.SET_DEFAULT_APPLICATION and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
 <!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void--><!--Device-defaultAppManager-function setDefaultApplicationForAppClone(type: string, elementName: ElementName, appIndex: int, userId?: int): void-End-->
@@ -37,13 +39,13 @@ Sets an application clone as the default application of the specified type. This
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17700028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700028-mismatch-between-ability-and-type) |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-| [17700025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700025-invalid-type) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
+| [17700025](../errorcode-bundle.md#17700025-invalid-type) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Media file descriptor. The caller needs to ensure that the fd is valid and the offset and length are correct.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVFileDescriptor--><!--Device-media-interface AVFileDescriptor-End-->
 
@@ -24,7 +26,9 @@ The file descriptor of audio or video source from file system. The caller is res
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ The length in bytes of the data to be read. By default, the length is the rest o
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,11 +62,13 @@ The length in bytes of the data to be read. By default, the length is the rest o
 offset?: number
 ```
 
-The offset into the file where the data to be read, in bytes. By default,the offset is zero.
+The offset into the file where the data to be read, in bytes. By default, the offset is zero.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

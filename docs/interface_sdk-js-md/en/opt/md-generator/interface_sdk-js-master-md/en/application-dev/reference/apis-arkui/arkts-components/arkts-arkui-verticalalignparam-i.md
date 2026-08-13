@@ -4,6 +4,8 @@ Defines the vertical align rule of relative container.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface VerticalAlignParam--><!--Device-unnamed-declare interface VerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Defines the vertical align rule of relative container.
 align: VerticalAlign
 ```
 
-Sets the vertical alignment relative to the anchor component.
-
-Anonymous Object Rectification
+Sets the vertical alignment relative to the anchor component. Anonymous Object Rectification
 
 **Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -36,13 +38,13 @@ Anonymous Object Rectification
 anchor: string
 ```
 
-Specifies the anchor component
-
-Anonymous Object Rectification
+Specifies the anchor component Anonymous Object Rectification
 
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

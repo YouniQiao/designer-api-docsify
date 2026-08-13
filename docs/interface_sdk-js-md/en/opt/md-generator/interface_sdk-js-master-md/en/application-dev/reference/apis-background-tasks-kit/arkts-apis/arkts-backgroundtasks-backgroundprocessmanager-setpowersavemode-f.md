@@ -12,16 +12,11 @@ import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
 function setPowerSaveMode(pid: number, powerSaveMode: PowerSaveMode): Promise<void>
 ```
 
-Sets the power saving mode for a process. This API uses a promise to return the result.
+Sets the power saving mode for a process. This API uses a promise to return the result. You can set to enter the power saving mode when: - The application is not focused, and there are no audio operations or UI updates. - The application cannot obtain the power lock through the system framework. - The application needs to perform time-consuming computing tasks, such as compression, decompression, and compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
 
-You can set to enter the power saving mode when:
+**Since:** 23
 
-- The application is not focused, and there are no audio operations or UI updates.  
-- The application cannot obtain the power lock through the system framework.  
-- The application needs to perform time-consuming computing tasks, such as compression, decompression, and   
-compilation, which are significantly restricted by CPU resources. (In this case, the power saving mode will be enabled forcibly.)
-
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
@@ -46,11 +41,11 @@ compilation, which are significantly restricted by CPU resources. (In this case,
 
 | Error Code ID |
 | --- |
-| [31800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) |
-| [31800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [31800004](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31800003](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

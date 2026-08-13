@@ -2,9 +2,11 @@
 
 Enumerates the device types.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum DeviceType--><!--Device-audio-enum DeviceType-End-->
 
@@ -18,9 +20,11 @@ INVALID = 0
 
 Invalid device.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,9 +40,11 @@ EARPIECE = 1
 
 Built-in earpiece.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,9 +60,11 @@ SPEAKER = 2
 
 Built-in speaker.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -72,9 +80,11 @@ WIRED_HEADSET = 3
 
 Wired headset with a microphone.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,9 +100,11 @@ WIRED_HEADPHONES = 4
 
 Wired headset without a microphone.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -108,9 +120,11 @@ BLUETOOTH_SCO = 7
 
 Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,9 +140,11 @@ BLUETOOTH_A2DP = 8
 
 Bluetooth device using Advanced Audio Distribution Profile (A2DP) links.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,9 +160,11 @@ MIC = 15
 
 Built-in microphone.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -162,9 +180,11 @@ USB_HEADSET = 22
 
 USB Type-C headset.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -180,11 +200,13 @@ DISPLAY_PORT = 23
 
 Display port (DP), which is used to connect to external devices.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceType-DISPLAY_PORT = 23--><!--Device-DeviceType-DISPLAY_PORT = 23-End-->
 
@@ -198,11 +220,13 @@ REMOTE_CAST = 24
 
 Remote cast device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceType-REMOTE_CAST = 24--><!--Device-DeviceType-REMOTE_CAST = 24-End-->
 
@@ -216,9 +240,11 @@ USB_DEVICE = 25
 
 USB device (excluding USB headsets).
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-USB_DEVICE = 25--><!--Device-DeviceType-USB_DEVICE = 25-End-->
 
@@ -232,9 +258,11 @@ HDMI = 27
 
 HDMI device (such as HDMI, ARC, and eARC).
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-HDMI = 27--><!--Device-DeviceType-HDMI = 27-End-->
 
@@ -248,9 +276,11 @@ LINE_DIGITAL = 28
 
 Wired digital device (such as S/PDIF)
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-LINE_DIGITAL = 28--><!--Device-DeviceType-LINE_DIGITAL = 28-End-->
 
@@ -264,11 +294,13 @@ REMOTE_DAUDIO = 29
 
 Distributed device.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DeviceType-REMOTE_DAUDIO = 29--><!--Device-DeviceType-REMOTE_DAUDIO = 29-End-->
 
@@ -280,11 +312,13 @@ Distributed device.
 HEARING_AID = 30
 ```
 
-Hearing aid audio device.Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
+Hearing aid audio device. Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-HEARING_AID = 30--><!--Device-DeviceType-HEARING_AID = 30-End-->
 
@@ -296,11 +330,13 @@ Hearing aid audio device.Note: This original device type can be obtained after i
 NEARLINK = 31
 ```
 
-Nearlink device.Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
+Nearlink device. Note: This original device type can be obtained after it is declared via [declareDeviceTypesCompatibility](arkts-audio-audio-audioroutingmanager-i.md#declareDeviceTypesCompatibility).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-NEARLINK = 31--><!--Device-DeviceType-NEARLINK = 31-End-->
 
@@ -314,9 +350,11 @@ SYSTEM_PRIVATE = 200
 
 System private device. (This device is a private device within the system, and applications can ignore it.)
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-SYSTEM_PRIVATE = 200--><!--Device-DeviceType-SYSTEM_PRIVATE = 200-End-->
 
@@ -330,9 +368,11 @@ DEFAULT = 1000
 
 Default device type.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

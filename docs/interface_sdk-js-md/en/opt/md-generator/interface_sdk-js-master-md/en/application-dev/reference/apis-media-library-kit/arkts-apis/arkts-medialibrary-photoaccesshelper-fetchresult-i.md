@@ -2,9 +2,11 @@
 
 FetchResult provides APIs to manage the file retrieval result.
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-photoAccessHelper-interface FetchResult<T>--><!--Device-photoAccessHelper-interface FetchResult<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-interface FetchResult--><!--Device-photoAccessHelper-interface FetchResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -22,7 +24,9 @@ close(): void
 
 Closes this FetchResult instance to invalidate it. After this instance is released, the APIs in this instance cannot be invoked.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -46,6 +50,8 @@ contains(object: T): Promise<boolean>
 Checks whether the specified file asset is contained in the result set. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +81,9 @@ getAllObjects(callback: AsyncCallback<Array<T>>): void
 
 Obtains all the file assets in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -104,7 +112,9 @@ getAllObjects(): Promise<Array<T>>
 
 Obtains all the file assets in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -133,7 +143,9 @@ getCount(): number
 
 Obtains the total number of files in the result set.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -162,7 +174,9 @@ getFirstObject(callback: AsyncCallback<T>): void
 
 Obtains the first file asset in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -191,7 +205,9 @@ getFirstObject(): Promise<T>
 
 Obtains the first file asset in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -222,6 +238,8 @@ Obtains the index of a specified file asset in the result set. This API uses a p
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -250,7 +268,9 @@ getLastObject(callback: AsyncCallback<T>): void
 
 Obtains the last file asset in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -279,7 +299,9 @@ getLastObject(): Promise<T>
 
 Obtains the last file asset in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -306,11 +328,11 @@ Obtains the last file asset in the result set. This API uses a promise to return
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -337,11 +359,11 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result.
+Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -370,7 +392,9 @@ getObjectByPosition(index: number, callback: AsyncCallback<T>): void
 
 Obtains a file asset with the specified index in the result set. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -400,7 +424,9 @@ getObjectByPosition(index: number): Promise<T>
 
 Obtains a file asset with the specified index in the result set. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -437,6 +463,8 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -461,42 +489,7 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 | Error Code ID |
 | --- |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
-
-## getRangeObjects
-
-```TypeScript
-getRangeObjects(index: number, offset: number): Promise<T[]>
-```
-
-Obtains the file asset array of a specified length (second parameter) from the specified index (first parameter) in the result set. This API uses a promise to return the result.
-
-**Since:** 23
-
-<!--Device-FetchResult-getRangeObjects(index: int, offset: int): Promise<T[]>--><!--Device-FetchResult-getRangeObjects(index: int, offset: int): Promise<T[]>-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| index | number | Yes |
-| offset | number | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| Promise & lt;T[] & gt; |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## isAfterLast
 
@@ -506,7 +499,9 @@ isAfterLast(): boolean
 
 Checks whether the cursor is in the last row of the result set.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class WithEnvAttribute--><!--Device-unnamed-export declare class WithEnvAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -34,14 +38,14 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [CustomEnvKey](arkts-arkui-decorator-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境变量的键。 |
+| key | [CustomEnvKey](../../apis-na/arkts-apis/arkts-na-decorator-customenvkey-c.md)&lt;T&gt; | 是 | 自定义环境变量的键。 |
 | value | T | 是 | 自定义环境变量的值。value的类型T对应CustomEnvKey&lt;T&gt;的类型T。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute对象。 |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
 
 ## env
 
@@ -55,6 +59,8 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -67,12 +73,12 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [WritableSystemEnvKey](arkts-arkui-decorator-writablesystemenvkey-c.md)&lt;T&gt; | 是 | 系统环境变量键。当前正式支持WritableEnvKey.FONT_SCALE和WritableEnvKey.DIRECTION。 |
+| key | [WritableSystemEnvKey](../../apis-na/arkts-apis/arkts-na-decorator-writablesystemenvkey-c.md)&lt;T&gt; | 是 | 系统环境变量键。当前正式支持WritableEnvKey.FONT_SCALE和WritableEnvKey.DIRECTION。 |
 | value | T | 是 | 系统环境变量值。value的类型T对应WritableSystemEnvKey&lt;T&gt;中的类型T。当key为WritableEnvKey.FONT_SCALE时，value类型为number；当key为WritableEnvKey.DIRECTION时，value类型为Direction。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-i.md) | WithEnvAttribute对象。 |
+| [WithEnvAttribute](arkts-arkui-arkui-withenv-withenvattribute-c.md) | WithEnvAttribute对象。 |
 

@@ -4,6 +4,8 @@ Defines the MediaQuery event.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface MediaQueryEvent--><!--Device-unnamed-export interface MediaQueryEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ The result of match result.
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

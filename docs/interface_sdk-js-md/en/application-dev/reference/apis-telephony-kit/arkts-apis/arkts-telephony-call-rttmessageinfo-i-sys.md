@@ -2,9 +2,11 @@
 
 Indicates the info of the rtt message.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface RttMessageInfo--><!--Device-call-export interface RttMessageInfo-End-->
 
@@ -26,11 +28,13 @@ callId: int
 
 Indicates the id of rtt.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttMessageInfo-callId: int--><!--Device-RttMessageInfo-callId: int-End-->
 
@@ -48,9 +52,11 @@ Indicates the rtt messgae.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttMessageInfo-rttMessage: string--><!--Device-RttMessageInfo-rttMessage: string-End-->
 

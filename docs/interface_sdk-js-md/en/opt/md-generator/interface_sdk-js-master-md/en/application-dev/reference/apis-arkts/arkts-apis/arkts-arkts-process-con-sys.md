@@ -10,6 +10,8 @@ Returns the numeric valid group ID of the process
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-process-const egid: number--><!--Device-process-const egid: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -25,6 +27,8 @@ const euid: number
 Return the numeric valid user identity of the process
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-process-const euid: number--><!--Device-process-const euid: number-End-->
 
@@ -42,6 +46,8 @@ Returns the numeric group id of the process
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-process-const gid: number--><!--Device-process-const gid: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -58,6 +64,8 @@ Return an array with supplementary group id
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-process-const groups: number[]--><!--Device-process-const groups: number[]-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -73,6 +81,8 @@ const ppid: number
 Return ppid is The pid of the current child process
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-process-const ppid: number--><!--Device-process-const ppid: number-End-->
 

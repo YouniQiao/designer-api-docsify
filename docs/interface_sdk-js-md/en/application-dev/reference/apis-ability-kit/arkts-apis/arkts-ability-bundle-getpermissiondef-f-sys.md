@@ -20,7 +20,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -35,7 +35,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | permissionName | string | Yes | Name of the permission. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Yes | Callback used to return the permission details. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Yes | Callback used to return the permission details. |
 
 
 ## getPermissionDef
@@ -52,7 +52,7 @@ Obtains the permission details by permission name. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

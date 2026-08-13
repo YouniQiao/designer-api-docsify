@@ -2,7 +2,9 @@
 
 Circular fence information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface Geofence--><!--Device-geoLocationManager-export interface Geofence-End-->
 
@@ -24,7 +26,9 @@ Coordinate system type.
 
 **Type:** CoordinateSystemType
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-coordinateSystemType?: CoordinateSystemType--><!--Device-Geofence-coordinateSystemType?: CoordinateSystemType-End-->
 
@@ -40,7 +44,9 @@ Expiration of the circular fence.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-expiration: double--><!--Device-Geofence-expiration: double-End-->
 
@@ -56,7 +62,9 @@ Latitude of the center point of the circular fence.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-latitude: double--><!--Device-Geofence-latitude: double-End-->
 
@@ -72,7 +80,9 @@ Longitude of the center point of the circular fence.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-longitude: double--><!--Device-Geofence-longitude: double-End-->
 
@@ -88,7 +98,9 @@ Radius of the circular fence.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-radius: double--><!--Device-Geofence-radius: double-End-->
 

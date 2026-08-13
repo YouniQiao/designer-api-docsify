@@ -2,7 +2,9 @@
 
 Represents the user authorization result.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export enum UserAuthResult--><!--Device-backgroundTaskManager-export enum UserAuthResult-End-->
 
@@ -14,10 +16,11 @@ Represents the user authorization result.
 NOT_SUPPORTED = 0
 ```
 
-The authorization is not supported. For example, if the main type of the requested continuous task is not   
-**MODE_SPECIAL_SCENARIO_PROCESSING**, continuous task running in the background is not supported.
+The authorization is not supported. For example, if the main type of the requested continuous task is not **MODE_SPECIAL_SCENARIO_PROCESSING**, continuous task running in the background is not supported.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-UserAuthResult-NOT_SUPPORTED = 0--><!--Device-UserAuthResult-NOT_SUPPORTED = 0-End-->
 
@@ -31,7 +34,9 @@ NOT_DETERMINED = 1
 
 No user operation.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-UserAuthResult-NOT_DETERMINED = 1--><!--Device-UserAuthResult-NOT_DETERMINED = 1-End-->
 
@@ -45,7 +50,9 @@ DENIED = 2
 
 The authorization is denied.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-UserAuthResult-DENIED = 2--><!--Device-UserAuthResult-DENIED = 2-End-->
 
@@ -57,11 +64,11 @@ The authorization is denied.
 GRANTED_ONCE = 3
 ```
 
-The authorization is granted this time.
+The authorization is granted this time. Note: The authorization record will be cleared when the application exits.
 
-Note: The authorization record will be cleared when the application exits.
+**Since:** 24
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-UserAuthResult-GRANTED_ONCE = 3--><!--Device-UserAuthResult-GRANTED_ONCE = 3-End-->
 
@@ -73,19 +80,11 @@ Note: The authorization record will be cleared when the application exits.
 GRANTED_ALWAYS = 4
 ```
 
-The authorization is granted always.
+The authorization is granted always. **NOTE：**When the following common events are received, the related authorization records will be cleared: [COMMON_EVENT_PACKAGE_ADDED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_added) , [COMMON_EVENT_PACKAGE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_removed) , [COMMON_EVENT_BUNDLE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_bundle_removed) , [COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_fully_removed) , [COMMON_EVENT_PACKAGE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_changed) .
 
-**NOTE：**
+**Since:** 24
 
-When the following common events are received, the related authorization records will be cleared:
-
-[COMMON_EVENT_PACKAGE_ADDED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_added),   
-[COMMON_EVENT_PACKAGE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_removed),   
-[COMMON_EVENT_BUNDLE_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_bundle_removed),   
-[COMMON_EVENT_PACKAGE_FULLY_REMOVED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_fully_removed),   
-[COMMON_EVENT_PACKAGE_CHANGED](../../../reference/apis-basic-services-kit/common_event/commonEventManager-definitions.md#common_event_package_changed).
-
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-UserAuthResult-GRANTED_ALWAYS = 4--><!--Device-UserAuthResult-GRANTED_ALWAYS = 4-End-->
 

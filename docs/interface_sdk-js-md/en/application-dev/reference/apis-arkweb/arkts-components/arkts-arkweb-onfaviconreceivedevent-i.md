@@ -6,6 +6,8 @@ Defines the triggered callback when the application receive a new favicon for th
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnFaviconReceivedEvent--><!--Device-unnamed-declare interface OnFaviconReceivedEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Received the Favicon icon for the PixelMap object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

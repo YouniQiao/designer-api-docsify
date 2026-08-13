@@ -35,6 +35,8 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-matrix4-function init(    options: [      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number    ]  ): Matrix4Transit--><!--Device-matrix4-function init(    options: [      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number,      number    ]  ): Matrix4Transit-End-->
@@ -51,4 +53,4 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) |
+| [Matrix4Transit](../../apis-na/arkts-apis/arkts-na-matrix4-matrix4transit-i.md) |

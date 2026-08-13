@@ -4,6 +4,8 @@ Network traceroute option definition.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-connection-export interface TraceRouteOptions--><!--Device-connection-export interface TraceRouteOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -26,6 +28,8 @@ Maximum number of jumps, max is 30. Default is 30.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TraceRouteOptions-maxJumpNumber?: int--><!--Device-TraceRouteOptions-maxJumpNumber?: int-End-->
@@ -43,6 +47,8 @@ Packets type. Default is NETCONN_PACKETS_ICMP.
 **Type:** [PacketsType](arkts-network-connection-packetstype-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

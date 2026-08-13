@@ -2,7 +2,9 @@
 
 Enumerates the types of the cloud-device sync strategy.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-enum StrategyType--><!--Device-cloudData-enum StrategyType-End-->
 
@@ -16,7 +18,9 @@ NETWORK
 
 Sync over the network.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StrategyType-NETWORK--><!--Device-StrategyType-NETWORK-End-->
 

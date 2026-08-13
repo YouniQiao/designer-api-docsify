@@ -4,6 +4,8 @@ Defines the triggered callback when web page requires the user to create a windo
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnWindowNewExtEvent--><!--Device-unnamed-declare interface OnWindowNewExtEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Lets you set the WebviewController instance for creating a new window.
 **类型：** [ControllerHandler](arkts-arkweb-controllerhandler-c.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ true indicates the request to create a dialog and false indicates a new tab.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnWindowNewExtEvent-isAlert: boolean--><!--Device-OnWindowNewExtEvent-isAlert: boolean-End-->
@@ -55,6 +61,8 @@ true indicates that it is triggered by the user, and false indicates that it is 
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ The navigation policy causing the new web view to be created.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy--><!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy-End-->
@@ -92,6 +102,8 @@ Destination URL.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnWindowNewExtEvent-targetUrl: string--><!--Device-OnWindowNewExtEvent-targetUrl: string-End-->
@@ -109,6 +121,8 @@ Contains the attributes that a webpage requests from its containing web view, th
 **类型：** [WindowFeatures](arkts-arkweb-windowfeatures-i.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

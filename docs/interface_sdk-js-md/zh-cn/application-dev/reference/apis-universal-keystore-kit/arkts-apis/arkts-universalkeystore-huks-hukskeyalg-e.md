@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 <!--Device-huks-export enum HuksKeyAlg--><!--Device-huks-export enum HuksKeyAlg-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -21,6 +23,8 @@ HUKS_ALG_RSA = 1
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,6 +46,8 @@ HUKS_ALG_ECC = 2
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2--><!--Device-HuksKeyAlg-HUKS_ALG_ECC = 2-End-->
@@ -61,6 +67,8 @@ HUKS_ALG_DSA = 3
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -82,6 +90,8 @@ HUKS_ALG_AES = 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_AES = 20--><!--Device-HuksKeyAlg-HUKS_ALG_AES = 20-End-->
@@ -99,6 +109,8 @@ HUKS_ALG_HMAC = 50
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -120,6 +132,8 @@ HUKS_ALG_HKDF = 51
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51--><!--Device-HuksKeyAlg-HUKS_ALG_HKDF = 51-End-->
@@ -139,6 +153,8 @@ HUKS_ALG_PBKDF2 = 52
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -160,6 +176,8 @@ HUKS_ALG_ECDH = 100
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100--><!--Device-HuksKeyAlg-HUKS_ALG_ECDH = 100-End-->
@@ -179,6 +197,8 @@ HUKS_ALG_X25519 = 101
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -200,6 +220,8 @@ HUKS_ALG_ED25519 = 102
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102--><!--Device-HuksKeyAlg-HUKS_ALG_ED25519 = 102-End-->
@@ -219,6 +241,8 @@ HUKS_ALG_DH = 103
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -240,6 +264,8 @@ HUKS_ALG_SM2 = 150
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150--><!--Device-HuksKeyAlg-HUKS_ALG_SM2 = 150-End-->
@@ -259,6 +285,8 @@ HUKS_ALG_SM3 = 151
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -280,6 +308,8 @@ HUKS_ALG_SM4 = 152
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152--><!--Device-HuksKeyAlg-HUKS_ALG_SM4 = 152-End-->
@@ -300,6 +330,8 @@ HUKS_ALG_DES = 160
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_DES = 160--><!--Device-HuksKeyAlg-HUKS_ALG_DES = 160-End-->
@@ -317,6 +349,8 @@ HUKS_ALG_3DES = 161
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -336,6 +370,8 @@ HUKS_ALG_CMAC = 162
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_CMAC = 162--><!--Device-HuksKeyAlg-HUKS_ALG_CMAC = 162-End-->
@@ -354,6 +390,8 @@ ML-KEM算法
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200--><!--Device-HuksKeyAlg-HUKS_ALG_ML_KEM = 200-End-->
@@ -371,6 +409,8 @@ ML-DSA算法
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

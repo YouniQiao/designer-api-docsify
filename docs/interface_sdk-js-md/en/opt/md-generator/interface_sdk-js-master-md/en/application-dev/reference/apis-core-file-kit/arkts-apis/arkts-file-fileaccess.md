@@ -1,11 +1,6 @@
 # @ohos.file.fileAccess
 
-The **fileAccess** module provides a framework for accessing and operating user files based on   
-[extension](../../../application-models/extensionability-overview.md). This module interacts with a variety of file management services, such as the storage management service, and provides a set of unified file access and management APIs for system applications. The storage management service manages both the directories of the built-in storage and resources on external devices, such as shared disks, USB flash drives, and SD cards.
-
-> **NOTE：**
-> 
-> - Currently, the APIs of this module can be called only by **FilePicker** and **FileManager**.
+The **fileAccess** module provides a framework for accessing and operating user files based on [extension](../../../application-models/extensionability-overview.md). This module interacts with a variety of file management services, such as the storage management service, and provides a set of unified file access and management APIs for system applications. The storage management service manages both the directories of the built-in storage and resources on external devices, such as shared disks, USB flash drives, and SD cards. > **NOTE：**> > - Currently, the APIs of this module can be called only by **FilePicker** and **FileManager**.
 
 **Since:** 9
 
@@ -30,10 +25,10 @@ import { fileAccess } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper) |
-| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper-1) |
-| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo) |
-| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-1) |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createFileAccessHelper-(System-API)) |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createFileAccessHelper-(System-API)) |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getFileAccessAbilityInfo-(System-API)) |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getFileAccessAbilityInfo-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -66,5 +61,5 @@ import { fileAccess } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DEVICES_URI](arkts-corefile-fileaccess-con-sys.md#devices_uri) |
+| [DEVICES_URI](arkts-corefile-fileaccess-con-sys.md#DEVICES_URI) |
 <!--DelEnd-->

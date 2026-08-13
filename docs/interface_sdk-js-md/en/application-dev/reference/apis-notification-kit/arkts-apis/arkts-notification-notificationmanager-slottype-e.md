@@ -1,12 +1,12 @@
 # SlotType
 
-Enumerates the notification slot types.
+Enumerates the notification slot types. Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) values, determining the reminder behavior of the notification.
 
-Different types correspond to different [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) values,determining the reminder behavior of the notification.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export enum SlotType--><!--Device-notificationManager-export enum SlotType-End-->
 
@@ -18,12 +18,13 @@ Different types correspond to different [SlotLevel](arkts-notification-notificat
 UNKNOWN_TYPE = 0
 ```
 
-Unknown type. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_MIN**.
+Unknown type. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_MIN**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,12 +38,13 @@ Unknown type. This type corresponds to the
 SOCIAL_COMMUNICATION = 1
 ```
 
-Social communication. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_HIGH**.
+Social communication. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_HIGH**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,12 +58,13 @@ Social communication. This type corresponds to the
 SERVICE_INFORMATION = 2
 ```
 
-Service information. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_HIGH**.
+Service information. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_HIGH**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -75,12 +78,13 @@ Service information. This type corresponds to the
 CONTENT_INFORMATION = 3
 ```
 
-Content information. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_MIN**.
+Content information. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_MIN**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,12 +98,13 @@ Content information. This type corresponds to the
 LIVE_VIEW = 4
 ```
 
-Live view. A third-party application cannot directly create a notification of this type. Instead, after the system proxy creates a notification, the third-party application can release the notification with the same ID to update the specified content. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_DEFAULT**.
+Live view. A third-party application cannot directly create a notification of this type. Instead, after the system proxy creates a notification, the third-party application can release the notification with the same ID to update the specified content. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_DEFAULT**.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -113,12 +118,13 @@ Live view. A third-party application cannot directly create a notification of th
 CUSTOMER_SERVICE = 5
 ```
 
-Customer service message. This type is used for messages between users and customer service providers. The messages must be initiated by users. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_DEFAULT**.
+Customer service message. This type is used for messages between users and customer service providers. The messages must be initiated by users. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_DEFAULT**.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,12 +138,13 @@ Customer service message. This type is used for messages between users and custo
 OTHER_TYPES = 0xFFFF
 ```
 
-Other types. This type corresponds to the  
-[SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_MIN**.
+Other types. This type corresponds to the [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel) of **LEVEL_MIN**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

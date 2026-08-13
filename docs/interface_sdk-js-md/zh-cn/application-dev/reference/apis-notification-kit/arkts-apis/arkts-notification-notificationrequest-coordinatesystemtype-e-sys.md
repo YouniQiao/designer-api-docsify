@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum CoordinateSystemType--><!--Device-unnamed-export enum CoordinateSystemType-End-->
 
@@ -22,7 +24,9 @@ WGS84坐标系。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CoordinateSystemType-COORDINATE_TYPE_WGS84 = 1--><!--Device-CoordinateSystemType-COORDINATE_TYPE_WGS84 = 1-End-->
 
@@ -40,7 +44,9 @@ GCJ02坐标系。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CoordinateSystemType-COORDINATE_TYPE_GCJ02 = 2--><!--Device-CoordinateSystemType-COORDINATE_TYPE_GCJ02 = 2-End-->
 

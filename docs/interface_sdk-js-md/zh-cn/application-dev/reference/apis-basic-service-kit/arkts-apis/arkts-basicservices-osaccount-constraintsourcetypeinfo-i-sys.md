@@ -2,9 +2,11 @@
 
 表示约束来源类型信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface ConstraintSourceTypeInfo--><!--Device-osAccount-interface ConstraintSourceTypeInfo-End-->
 
@@ -20,11 +22,13 @@ localId: int
 
 系统账号ID
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConstraintSourceTypeInfo-localId: int--><!--Device-ConstraintSourceTypeInfo-localId: int-End-->
 
@@ -42,9 +46,11 @@ type: ConstraintSourceType
 
 **类型：** [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType--><!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType-End-->
 

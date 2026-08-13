@@ -4,6 +4,8 @@ Indicates whether to restrict cookies so that only requests sent back to the sam
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum WebHttpCookieSameSitePolicy--><!--Device-webview-enum WebHttpCookieSameSitePolicy-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NONE = 0
 Cookies marked as Secure are allowed to be carried in cross-site requests.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-NONE = 0--><!--Device-WebHttpCookieSameSitePolicy-NONE = 0-End-->
 
@@ -32,6 +36,8 @@ Allow specific cross-site requests to carry cookies.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-WebHttpCookieSameSitePolicy-LAX = 1--><!--Device-WebHttpCookieSameSitePolicy-LAX = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -45,6 +51,8 @@ STRICT = 2
 Prohibit cross-site requests from carrying cookies.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-STRICT = 2--><!--Device-WebHttpCookieSameSitePolicy-STRICT = 2-End-->
 

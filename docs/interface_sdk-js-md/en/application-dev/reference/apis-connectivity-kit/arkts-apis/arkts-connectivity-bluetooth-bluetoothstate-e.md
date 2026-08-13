@@ -8,7 +8,7 @@ The enum of bluetooth state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BluetoothState](ohos.bluetoothManager/bluetoothManager.BluetoothState)
+**Substitutes:** [BluetoothState](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#BluetoothState)
 
 <!--Device-bluetooth-enum BluetoothState--><!--Device-bluetooth-enum BluetoothState-End-->
 
@@ -28,7 +28,7 @@ Indicates the local Bluetooth is off
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_OFF](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_OFF)
+**Substitutes:** [STATE_OFF](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_OFF)
 
 <!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
 
@@ -48,7 +48,7 @@ Indicates the local Bluetooth is turning on
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_TURNING_ON](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_TURNING_ON)
+**Substitutes:** [STATE_TURNING_ON](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_TURNING_ON)
 
 <!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
 
@@ -68,7 +68,7 @@ Indicates the local Bluetooth is on, and ready for use
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_ON](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_ON)
+**Substitutes:** [STATE_ON](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_ON)
 
 <!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
 
@@ -88,7 +88,7 @@ Indicates the local Bluetooth is turning off
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_TURNING_OFF](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_TURNING_OFF)
+**Substitutes:** [STATE_TURNING_OFF](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_TURNING_OFF)
 
 <!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
 
@@ -108,7 +108,7 @@ Indicates the local Bluetooth is turning LE mode on
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_BLE_TURNING_ON](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_BLE_TURNING_ON)
+**Substitutes:** [STATE_BLE_TURNING_ON](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_BLE_TURNING_ON)
 
 <!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
 
@@ -128,7 +128,7 @@ Indicates the local Bluetooth is in LE only mode
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_BLE_ON](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_BLE_ON)
+**Substitutes:** [STATE_BLE_ON](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_BLE_ON)
 
 <!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
 
@@ -148,7 +148,7 @@ Indicates the local Bluetooth is turning off LE only mode
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATE_BLE_TURNING_OFF](ohos.bluetoothManager/bluetoothManager.BluetoothState.STATE_BLE_TURNING_OFF)
+**Substitutes:** [STATE_BLE_TURNING_OFF](arkts-connectivity-bluetoothmanager-bluetoothstate-e.md#STATE_BLE_TURNING_OFF)
 
 <!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
 

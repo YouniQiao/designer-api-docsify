@@ -12,12 +12,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createSymKeyGenerator(algName: string): SymKeyGenerator
 ```
 
-Creates a symmetric key generator instance with the specified algorithm.
+Creates a symmetric key generator instance with the specified algorithm. &lt;br&gt;For details about the supported specifications, see Symmetric Key Generation and Conversion Specifications .
 
-&lt;br&gt;For details about the supported specifications, see  
-[Symmetric Key Generation and Conversion Specifications](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -43,8 +42,8 @@ Creates a symmetric key generator instance with the specified algorithm.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

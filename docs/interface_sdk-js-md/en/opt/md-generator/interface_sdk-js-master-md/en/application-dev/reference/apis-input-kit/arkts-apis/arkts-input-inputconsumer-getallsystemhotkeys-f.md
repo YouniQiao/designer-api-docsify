@@ -14,7 +14,9 @@ function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>
 
 Obtains all system shortcut keys. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>--><!--Device-inputConsumer-function getAllSystemHotkeys(): Promise<Array<HotkeyOptions>>-End-->
 
@@ -30,7 +32,7 @@ Obtains all system shortcut keys. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

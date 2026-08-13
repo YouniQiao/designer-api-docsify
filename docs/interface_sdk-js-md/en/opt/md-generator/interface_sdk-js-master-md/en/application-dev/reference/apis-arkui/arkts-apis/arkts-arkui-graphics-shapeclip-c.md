@@ -4,6 +4,8 @@ Sets the clipping shape.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ShapeClip--><!--Device-unnamed-export declare class ShapeClip-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor()
 A constructor used to create a **ShapeClip** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ setCircleShape(circle: Circle): void
 Sets a circle for shape clipping.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +118,8 @@ Sets the command for drawing a path.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -186,6 +194,8 @@ setOvalShape(oval: Rect): void
 Sets an oval shape for shape clipping.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,6 +276,8 @@ setRectShape(rect: Rect): void
 Sets a rectangle for shape clipping.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -349,6 +361,8 @@ setRoundRectShape(roundRect: RoundRect): void
 Sets a rounded rectangle for shape clipping.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

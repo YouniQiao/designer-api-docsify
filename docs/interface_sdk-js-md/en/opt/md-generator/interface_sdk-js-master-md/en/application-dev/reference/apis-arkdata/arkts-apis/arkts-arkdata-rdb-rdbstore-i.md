@@ -1,9 +1,6 @@
 # RdbStore
 
-Provides APIs for managing data in an RDB store.
-
-Before using the APIs of this class, use   
-[executeSql](#executeSql)to initialize the database table structure and related data.
+Provides APIs for managing data in an RDB store. Before using the APIs of this class, use [executeSql](#executeSql) to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -549,14 +546,7 @@ promise.then((rowId: BusinessError) => {
 obtainDistributedTableName(device: string, table: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-
-> The value of **device** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
-> . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
+Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses an asynchronous callback to return the result. > **NOTE：**> The value of **device** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
 
 **Since:** 8
 
@@ -610,14 +600,7 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 obtainDistributedTableName(device: string, table: string): Promise<string>
 ```
 
-Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result.
-
-> **NOTE：**
-
-> The value of **device** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
-> . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
+Obtains the distributed table name of a remote device based on the local table name of the device. The distributed table name is required when the RDB store of a remote device is queried. This API uses a promise to return the result. > **NOTE：**> The value of **device** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > . &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
 
 **Since:** 8
 
@@ -669,7 +652,7 @@ promise.then((tableName: String) => {
 })
 ```
 
-## off
+## off_dataChange
 
 ```TypeScript
 off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
@@ -681,7 +664,7 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](@ohos.data.relationalStore:relationalStore.RdbStore.off)
+**Substitutes:** [off](arkts-arkdata-relationalstore-rdbstore-i.md#off_dataChange)
 
 <!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -711,7 +694,7 @@ try {
 }
 ```
 
-## on
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void
@@ -723,7 +706,7 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.data.relationalStore:relationalStore.RdbStore.on)
+**Substitutes:** [on](arkts-arkdata-relationalstore-rdbstore-i.md#on_dataChange)
 
 <!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void--><!--Device-RdbStore-on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>): void-End-->
 
@@ -933,7 +916,7 @@ Rolls back the SQL statements that have been executed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [rollBack](arkts-arkdata-relationalstore-rdbstore-i.md#rollBack)
+**Substitutes:** rollBack
 
 <!--Device-RdbStore-rollBack(): void--><!--Device-RdbStore-rollBack(): void-End-->
 

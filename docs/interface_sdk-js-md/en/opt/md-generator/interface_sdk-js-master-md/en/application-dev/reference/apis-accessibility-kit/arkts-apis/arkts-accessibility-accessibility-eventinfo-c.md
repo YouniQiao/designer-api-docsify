@@ -2,7 +2,9 @@
 
 Describes a GUI change event.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-accessibility-class EventInfo--><!--Device-accessibility-class EventInfo-End-->
 
@@ -23,6 +25,8 @@ constructor(jsonObject: Object)
 Constructor, which is used to construct an EventInfo instance using a JSON object.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -53,12 +57,34 @@ let eventInfo: accessibility.EventInfo = ({
 ## constructor
 
 ```TypeScript
+constructor()
+```
+
+A constructor used to create a EventInfo object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
+
+<!--Device-EventInfo-constructor()--><!--Device-EventInfo-constructor()-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
+## constructor
+
+```TypeScript
 constructor(type: EventType, bundleName: string, triggerAction: Action)
 ```
 
 Constructor, which is used to construct an EventInfo instance using independent parameters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -73,8 +99,8 @@ Constructor, which is used to construct an EventInfo instance using independent 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [type](#type) | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |
-| [bundleName](#bundlename) | string | Yes |
-| [triggerAction](#triggeraction) | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes |
+| [bundleName](#bundleName) | string | Yes |
+| [triggerAction](#triggerAction) | [Action](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-agent-action-e.md) | Yes |
 
 ## Examples
 
@@ -94,7 +120,9 @@ Start index. The default value is **0**.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -114,7 +142,9 @@ Name of the target application (mandatory).
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -130,16 +160,13 @@ Name of the target application (mandatory).
 componentType?: string
 ```
 
-It should correspond to the event source component type, and the default value is empty.
-
-Example:
-
-- Button type - > 'Button'  
-- Image type - > 'Image'
+It should correspond to the event source component type, and the default value is empty. Example: - Button type - > 'Button' - Image type - > 'Image'
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -159,7 +186,9 @@ Content list, which is set according to the actual scenario with no special rest
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -179,7 +208,9 @@ Current index. The default value is **0**.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -199,7 +230,9 @@ Component ID for active focusing, and the default value is empty.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -219,7 +252,9 @@ Event description, which is set according to the actual scenario with no special
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -239,7 +274,9 @@ Element ID of the component. The default value is **0**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -259,7 +296,9 @@ End index. The default value is **0**.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -279,7 +318,9 @@ Total number of items. The default value is **0**.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -299,7 +340,9 @@ Latest content, which is set according to the actual scenario with no special re
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -319,7 +362,9 @@ ID of the page where the event occurs. The default value is **0**.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -339,7 +384,9 @@ Content for auto-broadcasting. When the application needs to proactively broadca
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -359,7 +406,9 @@ Text moving granularity. The default value is char.
 
 **Type:** [TextMoveUnit](arkts-accessibility-accessibility-textmoveunit-t.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -379,7 +428,9 @@ Content for auto-broadcasting. The value is a string of the **Resource** type.
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -399,7 +450,9 @@ Action that triggers the event (mandatory).
 
 **Type:** Action
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -419,7 +472,9 @@ Accessibility event type (mandatory).
 
 **Type:** EventType
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -439,7 +494,9 @@ Window update type.
 
 **Type:** [WindowUpdateType](arkts-accessibility-accessibility-windowupdatetype-t.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

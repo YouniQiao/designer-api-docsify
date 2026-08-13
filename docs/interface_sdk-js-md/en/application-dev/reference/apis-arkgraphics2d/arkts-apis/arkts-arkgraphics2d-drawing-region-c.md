@@ -1,19 +1,12 @@
 # Region
 
-Describes a region, which is used to describe the region where the shape can be drawn.
+Describes a region, which is used to describe the region where the shape can be drawn. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class Region--><!--Device-drawing-class Region-End-->
 
@@ -33,9 +26,11 @@ constructor()
 
 Constructs a **Region** object.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-constructor()--><!--Device-Region-constructor()-End-->
 
@@ -49,9 +44,11 @@ constructor(region: Region)
 
 Copies a **Region** object.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-constructor(region: Region)--><!--Device-Region-constructor(region: Region)-End-->
 
@@ -65,21 +62,17 @@ Copies a **Region** object.
 
 ## constructor
 
-ArkTS-Dyn:
-```TypeScript
-constructor(left: number, top: number, right: number, bottom: number)
-```
-
-ArkTS-Sta:
 ```TypeScript
 constructor(left: int, top: int, right: int, bottom: int)
 ```
 
 Constructs a rectangular region.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)--><!--Device-Region-constructor(left: int, top: int, right: int, bottom: int)-End-->
 
@@ -89,10 +82,10 @@ Constructs a rectangular region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Left position of the rectangle (X coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin , while a negative value places the point above the coordinate origin. |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Right position of the rectangle (X coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Bottom position of the rectangle (Y coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
+| left | int | Yes | Left position of the rectangle (X coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
+| top | int | Yes | Top position of the rectangle (Y coordinate of the upper left corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin , while a negative value places the point above the coordinate origin. |
+| right | int | Yes | Right position of the rectangle (X coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point to the right of the coordinate origin, while a negative value places the point to the left. |
+| bottom | int | Yes | Bottom position of the rectangle (Y coordinate of the lower right corner). The value must be an integer. **0** indicates the coordinate origin. A positive value places the point below the coordinate origin, while a negative value places the point above the coordinate origin. |
 
 ## getBoundaryPath
 
@@ -105,6 +98,8 @@ Obtains a new path that is the boundary of the existing region.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-Region-getBoundaryPath(): Path--><!--Device-Region-getBoundaryPath(): Path-End-->
 
@@ -122,11 +117,13 @@ Obtains a new path that is the boundary of the existing region.
 getBoundaryPath(): Path | undefined
 ```
 
-Gets the boundary of the region, which represents by a path.Gets the bounds of the region.
+Gets the boundary of the region, which represents by a path. Gets the bounds of the region.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-getBoundaryPath(): Path | undefined--><!--Device-Region-getBoundaryPath(): Path | undefined-End-->
 
@@ -150,6 +147,8 @@ Obtains the boundaries of the existing region.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-Region-getBounds(): common2D.Rect--><!--Device-Region-getBounds(): common2D.Rect-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -170,7 +169,9 @@ Gets the bounds of the region.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-getBounds(): common2D.Rect | undefined--><!--Device-Region-getBounds(): common2D.Rect | undefined-End-->
 
@@ -190,9 +191,11 @@ isComplex(): boolean
 
 Checks whether this region contains multiple rectangles.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-isComplex(): boolean--><!--Device-Region-isComplex(): boolean-End-->
 
@@ -212,9 +215,11 @@ isEmpty(): boolean
 
 Checks whether the existing region is empty.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-isEmpty(): boolean--><!--Device-Region-isEmpty(): boolean-End-->
 
@@ -234,9 +239,11 @@ isEqual(other: Region): boolean
 
 Checks whether another region is equal to this region.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-isEqual(other: Region): boolean--><!--Device-Region-isEqual(other: Region): boolean-End-->
 
@@ -256,21 +263,17 @@ Checks whether another region is equal to this region.
 
 ## isPointContained
 
-ArkTS-Dyn:
-```TypeScript
-isPointContained(x: number, y:number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 isPointContained(x: int, y:int): boolean
 ```
 
 Checks whether a point is contained in this region.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-isPointContained(x: int, y:int): boolean--><!--Device-Region-isPointContained(x: int, y:int): boolean-End-->
 
@@ -280,8 +283,8 @@ Checks whether a point is contained in this region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | X coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Y coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| x | int | Yes | X coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| y | int | Yes | Y coordinate of the point. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
 
 **Return value:**
 
@@ -293,7 +296,7 @@ Checks whether a point is contained in this region.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## isRect
 
@@ -305,7 +308,9 @@ Checks whether this region is the same as a single rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -327,9 +332,11 @@ isRegionContained(other: Region): boolean
 
 Checks whether another region is contained in this region.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-isRegionContained(other: Region): boolean--><!--Device-Region-isRegionContained(other: Region): boolean-End-->
 
@@ -351,25 +358,21 @@ Checks whether another region is contained in this region.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## offset
 
-ArkTS-Dyn:
-```TypeScript
-offset(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 offset(dx: int, dy: int): void
 ```
 
 Translates a region.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-offset(dx: int, dy: int): void--><!--Device-Region-offset(dx: int, dy: int): void-End-->
 
@@ -379,8 +382,8 @@ Translates a region.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis, and a negative number indicates an offset towards the negative direction of the X axis. The value is an integer. |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis, and a negative number indicates an offset towards the negative direction of the Y axis. The value is an integer. |
+| dx | int | Yes | X offset. A positive number indicates an offset towards the positive direction of the X axis, and a negative number indicates an offset towards the negative direction of the X axis. The value is an integer. |
+| dy | int | Yes | Y offset. A positive number indicates an offset towards the positive direction of the Y axis, and a negative number indicates an offset towards the negative direction of the Y axis. The value is an integer. |
 
 ## op
 
@@ -388,11 +391,13 @@ Translates a region.
 op(region: Region, regionOp: RegionOp): boolean
 ```
 
-Performs an operation on this region and another region, and stores the resulting region in this **Region**object.
+Performs an operation on this region and another region, and stores the resulting region in this **Region** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-op(region: Region, regionOp: RegionOp): boolean--><!--Device-Region-op(region: Region, regionOp: RegionOp): boolean-End-->
 
@@ -415,16 +420,10 @@ Performs an operation on this region and another region, and stores the resultin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickContains
 
-ArkTS-Dyn:
-```TypeScript
-quickContains(left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 quickContains(left: int, top: int, right: int, bottom: int): boolean
 ```
@@ -433,7 +432,9 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -445,10 +446,10 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| left | int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| top | int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| right | int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
 
 **Return value:**
 
@@ -458,21 +459,17 @@ Checks whether this region is the same as a single rectangle and contains the sp
 
 ## quickReject
 
-ArkTS-Dyn:
-```TypeScript
-quickReject(left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 quickReject(left: int, top: int, right: int, bottom: int): boolean
 ```
 
 Checks whether a rectangle do not intersect with this region. Actually, this API determines whether the rectangle does not intersect with the bounding rectangle of the region, and therefore the result may not be accurate.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-quickReject(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -482,10 +479,10 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| left | int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| top | int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| right | int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
 
 **Return value:**
 
@@ -497,7 +494,7 @@ Checks whether a rectangle do not intersect with this region. Actually, this API
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## quickRejectRegion
 
@@ -507,9 +504,11 @@ quickRejectRegion(region: Region): boolean
 
 Checks whether the existing region does not intersect with another region. Actually, the outer rectangles of the two regions are compared to determine whether they do not intersect. Therefore, there may be an error.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-quickRejectRegion(region: Region): boolean--><!--Device-Region-quickRejectRegion(region: Region): boolean-End-->
 
@@ -535,9 +534,11 @@ setEmpty(): void
 
 Set the existing region to empty.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-setEmpty(): void--><!--Device-Region-setEmpty(): void-End-->
 
@@ -551,9 +552,11 @@ setPath(path: Path, clip: Region): boolean
 
 Sets a region that matches the outline of a path within the cropping area.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-setPath(path: Path, clip: Region): boolean--><!--Device-Region-setPath(path: Path, clip: Region): boolean-End-->
 
@@ -576,25 +579,21 @@ Sets a region that matches the outline of a path within the cropping area.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRect
 
-ArkTS-Dyn:
-```TypeScript
-setRect(left: number, top: number, right: number, bottom: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRect(left: int, top: int, right: int, bottom: int): boolean
 ```
 
 Sets a rectangle.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean--><!--Device-Region-setRect(left: int, top: int, right: int, bottom: int): boolean-End-->
 
@@ -604,10 +603,10 @@ Sets a rectangle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| left | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| top | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| right | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
-| bottom | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
+| left | int | Yes | Left position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| top | int | Yes | Top position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| right | int | Yes | Right position of the rectangle. The value must be an integer. If a decimal is passed in, the decimal part is rounded off. |
+| bottom | int | Yes | Bottom position of the rectangle. The value must be an integer. If a decimal is passed in , the decimal part is rounded off. |
 
 **Return value:**
 
@@ -619,7 +618,7 @@ Sets a rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setRegion
 
@@ -629,9 +628,11 @@ setRegion(region: Region): void
 
 Sets the existing region to another region.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Region-setRegion(region: Region): void--><!--Device-Region-setRegion(region: Region): void-End-->
 

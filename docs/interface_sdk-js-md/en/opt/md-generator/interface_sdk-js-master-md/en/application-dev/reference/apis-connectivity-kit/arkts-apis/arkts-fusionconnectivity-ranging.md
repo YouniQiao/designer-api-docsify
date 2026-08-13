@@ -1,8 +1,10 @@
-# @ohos.FusionConnectivity.ranging(Ranging Module)
+# @ohos.FusionConnectivity.ranging
 
 Provides APIs for Fusion Connectivity ranging.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,14 +24,14 @@ import { ranging } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getRangingCapability](arkts-connectivity-ranging-getrangingcapability-f.md#getrangingcapability) |
-| [isRangingSupported](arkts-connectivity-ranging-israngingsupported-f.md#israngingsupported) |
-| [offRangingStateChange](arkts-connectivity-ranging-offrangingstatechange-f.md#offrangingstatechange) |
-| [onRangingStateChange](arkts-connectivity-ranging-onrangingstatechange-f.md#onrangingstatechange) |
-| [startPassiveRanging](arkts-connectivity-ranging-startpassiveranging-f.md#startpassiveranging) |
-| [startRanging](arkts-connectivity-ranging-startranging-f.md#startranging) |
-| [stopPassiveRanging](arkts-connectivity-ranging-stoppassiveranging-f.md#stoppassiveranging) |
-| [stopRanging](arkts-connectivity-ranging-stopranging-f.md#stopranging) |
+| [getRangingCapability](arkts-connectivity-ranging-getrangingcapability-f.md#getRangingCapability) |
+| [isRangingSupported](arkts-connectivity-ranging-israngingsupported-f.md#isRangingSupported) |
+| [offRangingStateChange](arkts-connectivity-ranging-offrangingstatechange-f.md#offRangingStateChange) |
+| [onRangingStateChange](arkts-connectivity-ranging-onrangingstatechange-f.md#onRangingStateChange) |
+| [startPassiveRanging](arkts-connectivity-ranging-startpassiveranging-f.md#startPassiveRanging) |
+| [startRanging](arkts-connectivity-ranging-startranging-f.md#startRanging) |
+| [stopPassiveRanging](arkts-connectivity-ranging-stoppassiveranging-f.md#stopPassiveRanging) |
+| [stopRanging](arkts-connectivity-ranging-stopranging-f.md#stopRanging) |
 
 ### Interfaces
 

@@ -18,7 +18,7 @@ Obtains the country code of this device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCountryCode](ohos.wifiManager/wifiManager.getCountryCode)
+**Substitutes:** [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md#getCountryCode)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

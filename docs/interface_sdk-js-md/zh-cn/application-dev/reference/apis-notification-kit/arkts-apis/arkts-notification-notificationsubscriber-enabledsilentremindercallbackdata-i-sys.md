@@ -4,7 +4,9 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface EnabledSilentReminderCallbackData--><!--Device-unnamed-export interface EnabledSilentReminderCallbackData-End-->
 
@@ -24,7 +26,9 @@ readonly bundle: string
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +44,15 @@ readonly bundle: string
 readonly enableStatus: notificationManager.SwitchState
 ```
 
-应用通知的静默提醒开关状态。  
-- USER_MODIFIED_OFF：用户设置的关闭状态。  
-- USER_MODIFIED_ON：用户设置的开启状态。  
-- SYSTEM_DEFAULT_OFF：用户设置前的初始关闭状态。  
-- SYSTEM_DEFAULT_ON：用户设置前的初始开启状态。
+应用通知的静默提醒开关状态。 - USER_MODIFIED_OFF：用户设置的关闭状态。 - USER_MODIFIED_ON：用户设置的开启状态。 - SYSTEM_DEFAULT_OFF：用户设置前的初始关闭状态。 - SYSTEM_DEFAULT_ON：用户设置前的初始开启状态。
 
 **类型：** notificationManager.SwitchState
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,11 +70,13 @@ readonly uid: int
 
 应用的uid。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

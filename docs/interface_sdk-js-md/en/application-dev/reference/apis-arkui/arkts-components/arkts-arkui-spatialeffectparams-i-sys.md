@@ -6,6 +6,8 @@ Spatial effect params.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SpatialEffectParams--><!--Device-unnamed-declare interface SpatialEffectParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +20,15 @@ Spatial effect params.
 occlusionWeight?: double
 ```
 
-Occlusion weight for spatial effect.&lt;br&gt;Value range:[0, 1].Default value:0
+Occlusion weight for spatial effect. &lt;br&gt;Value range:[0, 1].Default value:0
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Spatial position defined by corner points or depth value.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

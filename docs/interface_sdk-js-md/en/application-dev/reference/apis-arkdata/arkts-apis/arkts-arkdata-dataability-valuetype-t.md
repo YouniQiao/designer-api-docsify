@@ -10,6 +10,8 @@ Defines the value types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-dataAbility-type ValueType = number | string | boolean--><!--Device-dataAbility-type ValueType = number | string | boolean-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core

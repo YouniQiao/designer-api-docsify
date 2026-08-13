@@ -4,6 +4,8 @@ Defines the options of the dialog box.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-promptAction-interface BaseDialogOptions--><!--Device-promptAction-interface BaseDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,97 +16,19 @@ Defines the options of the dialog box.
 import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
-## onDidAppear
-
-```TypeScript
-onDidAppear?: () => void
-```
-
-Event callback after the dialog box appears.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-&lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.&lt;br&gt;3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.&lt;br&gt;4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BaseDialogOptions-onDidAppear?: () => void--><!--Device-BaseDialogOptions-onDidAppear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: () => void
-```
-
-Event callback after the dialog box disappears.&lt;br&gt;**NOTE：**&lt;br&gt;The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-&lt;br&gt;This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BaseDialogOptions-onDidDisappear?: () => void--><!--Device-BaseDialogOptions-onDidDisappear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: () => void
-```
-
-Event callback when the dialog box is about to appear.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-&lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BaseDialogOptions-onWillAppear?: () => void--><!--Device-BaseDialogOptions-onWillAppear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: () => void
-```
-
-Event callback when the dialog box is about to disappear.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange)
-> onWillDisappear > onDidDisappear.
-&lt;br&gt;2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-BaseDialogOptions-onWillDisappear?: () => void--><!--Device-BaseDialogOptions-onWillDisappear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## alignment
 
 ```TypeScript
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.&lt;br&gt;Default value: **DialogAlignment.Default**&lt;br&gt;**NOTE：**&lt;br&gt;If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
+Alignment mode of the dialog box in the vertical direction. &lt;br&gt;Default value: **DialogAlignment.Default** &lt;br&gt;**NOTE：**&lt;br&gt;If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
 **Type:** [DialogAlignment](arkts-arkui-dialogalignment-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,6 +52,8 @@ Whether to dismiss the dialog box when the mask is touched. The value **true** m
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -147,6 +73,8 @@ Options for customizing the background blur style. For details about the default
 **Type:** [BackgroundBlurStyleOptions](../arkts-components/arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,6 +96,8 @@ Options for customizing the background effect. For details about the default val
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -187,6 +117,8 @@ Transition effect for the dialog box content. By default, there is no transition
 **Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,6 +142,8 @@ Defines the dialog display mode when show in subwindow.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -224,13 +158,15 @@ Defines the dialog display mode when show in subwindow.
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode.&lt;br&gt;Default value: **false**, meaning not to respond when the device is in semi-folded mode.&lt;br&gt;**NOTE：**&lt;br&gt;For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
+Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. &lt;br&gt;Default value: **false**, meaning not to respond when the device is in semi-folded mode. &lt;br&gt;**NOTE：**&lt;br&gt;For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,13 +182,15 @@ Whether to respond when the device is in semi-folded mode. The value **true** me
 focusable?: boolean
 ```
 
-Whether the dialog box can gain focus. &lt;br&gt;**true**: The dialog box can gain focus.&lt;br&gt;**false**: The dialog box cannot gain focus.&lt;br&gt;Default value: **true**.&lt;br&gt;**NOTE：**&lt;br&gt;Only dialog boxes that are displayed on top of the current window can gain focus.
+Whether the dialog box can gain focus. &lt;br&gt;**true**: The dialog box can gain focus. &lt;br&gt;**false**: The dialog box cannot gain focus. &lt;br&gt;Default value: **true**. &lt;br&gt;**NOTE：**&lt;br&gt;Only dialog boxes that are displayed on top of the current window can gain focus.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -268,13 +206,15 @@ Whether the dialog box can gain focus. &lt;br&gt;**true**: The dialog box can ga
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box in the hover state.&lt;br&gt;Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Display area of the dialog box in the hover state. &lt;br&gt;Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** [HoverModeAreaType](../arkts-components/arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,13 +230,15 @@ Display area of the dialog box in the hover state.&lt;br&gt;Default value: **Hov
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Overlay effect for the page-level dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT** &lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,13 +254,15 @@ Overlay effect for the page-level dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- De
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box. &lt;br&gt;**true**: The dialog box is a modal. &lt;br&gt;**false**: The dialog box is not a modal.&lt;br&gt;Default value: **true**.
+Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box. &lt;br&gt;**true**: The dialog box is a modal. &lt;br&gt;**false**: The dialog box is not a modal. &lt;br&gt;Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,11 +278,13 @@ Whether the dialog box is a modal, which has a mask applied and does not allow f
 keyboardAvoidDistance?: LengthMetrics
 ```
 
-Distance between the dialog box and the keyboard after keyboard avoidance is applied.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **16vp**&lt;br&gt;- Default unit: vp&lt;br&gt;- This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
+Distance between the dialog box and the keyboard after keyboard avoidance is applied. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **16vp** &lt;br&gt;- Default unit: vp &lt;br&gt;- This parameter takes effect only when **keyboardAvoidMode** is set to **DEFAULT**.
 
 **Type:** LengthMetrics
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -354,13 +300,15 @@ Distance between the dialog box and the keyboard after keyboard avoidance is app
 keyboardAvoidMode?: KeyboardAvoidMode
 ```
 
-How the dialog box avoids the soft keyboard when it is brought up.&lt;br&gt;Default value: **KeyboardAvoidMode.DEFAULT**
+How the dialog box avoids the soft keyboard when it is brought up. &lt;br&gt;Default value: **KeyboardAvoidMode.DEFAULT**
 
 **Type:** KeyboardAvoidMode
 
 **Default:** KeyboardAvoidMode.DEFAULT
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,13 +324,15 @@ How the dialog box avoids the soft keyboard when it is brought up.&lt;br&gt;Defa
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelMode.OVERLAY**&lt;br&gt;- This parameter takes effect only when **showInSubWindow** is set to **false**.
+Display level of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelMode.OVERLAY** &lt;br&gt;- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -398,13 +348,15 @@ Display level of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: 
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelOrder.clamp(0)**&lt;br&gt;- Dynamic updating is not supported.
+Display order of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelOrder.clamp(0)** &lt;br&gt;- Dynamic updating is not supported.
 
 **Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **Default:** The value returned by LevelOrder.clamp(0)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -420,11 +372,13 @@ Display order of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;- Default value: 
 levelUniqueId?: number
 ```
 
-[Unique ID](js-apis-arkui-frameNode.md#getuniqueid12) of the node under the display level for the page-level dialog box.&lt;br&gt;Value range: a number no less than 0&lt;br&gt;**NOTE：**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Unique ID of the node under the display level for the page-level dialog box. &lt;br&gt;Value range: a number no less than 0 &lt;br&gt;**NOTE：**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -440,11 +394,13 @@ levelUniqueId?: number
 maskColor?: ResourceColor
 ```
 
-Mask color.&lt;br&gt;Default value: **0x33000000**
+Mask color. &lt;br&gt;Default value: **0x33000000**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -460,11 +416,13 @@ Mask color.&lt;br&gt;Default value: **0x33000000**
 maskRect?: Rectangle
 ```
 
-Mask area.&lt;br&gt;Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**&lt;br&gt;**NOTE：**&lt;br&gt;**maskRect** does not take effect when **showInSubWindow** is set to **true**.&lt;br&gt;If only some properties in [Rectangle](arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
+Mask area. &lt;br&gt;Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }** &lt;br&gt;**NOTE：**&lt;br&gt;**maskRect** does not take effect when **showInSubWindow** is set to **true**. &lt;br&gt;If only some properties in [Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
 
 **Type:** [Rectangle](../arkts-components/arkts-arkui-rectangle-i.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -486,6 +444,8 @@ Transition effect for the mask. By default, there is no transition effect.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -500,11 +460,13 @@ Transition effect for the mask. By default, there is no transition effect.
 offset?: Offset
 ```
 
-Offset of the dialog box based on the **alignment** settings.&lt;br&gt;Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
+Offset of the dialog box based on the **alignment** settings. &lt;br&gt;Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
 **Type:** Offset
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -514,17 +476,107 @@ Offset of the dialog box based on the **alignment** settings.&lt;br&gt;Default v
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## onDidAppear
+
+```TypeScript
+onDidAppear?: () => void
+```
+
+Event callback after the dialog box appears. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. &lt;br&gt;3. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. &lt;br&gt;4. If the dialog box is dismissed before its appearance animation is finished, this callback is not invoked.
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onDidAppear?: () => void--><!--Device-BaseDialogOptions-onDidAppear?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: () => void
+```
+
+Event callback after the dialog box disappears. &lt;br&gt;**NOTE：**&lt;br&gt;The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;This callback is not triggered if the dialog box disappearance animation is interrupted (for example, by page navigation).
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onDidDisappear?: () => void--><!--Device-BaseDialogOptions-onDidDisappear?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: () => void
+```
+
+Event callback when the dialog box is about to appear. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onWillAppear?: () => void--><!--Device-BaseDialogOptions-onWillAppear?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: () => void
+```
+
+Event callback when the dialog box is about to disappear. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. &lt;br&gt;2. If the user dismisses the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**.
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BaseDialogOptions-onWillDisappear?: () => void--><!--Device-BaseDialogOptions-onWillDisappear?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## onWillDismiss
 
 ```TypeScript
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback for interactive dismissal of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt;1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**.&lt;br&gt;2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
+Callback for interactive dismissal of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be dismissed. The reason returned by the component does not support the value **CLOSE_BUTTON**. &lt;br&gt;2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
 **Type:** Callback&lt;[DismissDialogAction](arkts-arkui-promptaction-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -540,13 +592,15 @@ Callback for interactive dismissal of the dialog box.&lt;br&gt;**NOTE：**&lt;br
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;br&gt;**true**: The dialog box is shown in a subwindow.&lt;br&gt;Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;br&gt;**true**: The dialog box is shown in a subwindow. &lt;br&gt;Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -562,11 +616,13 @@ Whether to show the dialog box in a subwindow when the dialog box needs to be di
 systemMaterial?: SystemUiMaterial
 ```
 
-System material of the dialog box. Different materials have different effects and can affect visual attributes  such as the background color, border, and shadow of the dialog box.
+System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
 
-**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-systemuimaterial-t-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -582,11 +638,13 @@ System material of the dialog box. Different materials have different effects an
 transition?: TransitionEffect
 ```
 
-Transition effect for the appearance and disappearance of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt; 1. If this parameter is not set, the default effect is used.&lt;br&gt; 2. Touching the Back button during the appearance animation pauses the appearance animation and starts  the disappearance animation. The final effect is one obtained after the curves of the appearance and disappearance animations are combined.&lt;br&gt; 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
+Transition effect for the appearance and disappearance of the dialog box.&lt;br&gt;**NOTE：**&lt;br&gt; 1. If this parameter is not set, the default effect is used. &lt;br&gt; 2. Touching the Back button during the appearance animation pauses the appearance animation and starts the disappearance animation. The final effect is one obtained after the curves of the appearance and disappearance animations are combined. &lt;br&gt; 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
 
 **Type:** [TransitionEffect](../arkts-components/arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

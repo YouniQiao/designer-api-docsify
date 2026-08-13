@@ -2,9 +2,11 @@
 
 Defines the parameters for expanding a screen.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screen-interface ExpandOption--><!--Device-screen-interface ExpandOption-End-->
 
@@ -26,11 +28,13 @@ screenId: long
 
 Screen ID. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExpandOption-screenId: long--><!--Device-ExpandOption-screenId: long-End-->
 
@@ -46,11 +50,13 @@ startX: long
 
 Start X coordinate of the screen. in px. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExpandOption-startX: long--><!--Device-ExpandOption-startX: long-End-->
 
@@ -66,11 +72,13 @@ startY: long
 
 Start Y coordinate of the screen. in px. The value must be an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ExpandOption-startY: long--><!--Device-ExpandOption-startY: long-End-->
 

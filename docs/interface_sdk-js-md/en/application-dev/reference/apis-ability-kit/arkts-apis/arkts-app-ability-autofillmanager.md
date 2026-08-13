@@ -1,12 +1,12 @@
 # @ohos.app.ability.autoFillManager
 
-The autoFillManager module provides APIs for saving accounts and passwords.
+The autoFillManager module provides APIs for saving accounts and passwords. Unlike the system's auto-save feature that triggers during page transitions, this feature requires manual activation by the user. For example, the user must input their account and password on a website and click the **Save** button to initiate the saving process.
 
-Unlike the system's auto-save feature that triggers during page transitions, this feature requires manual activation by the user. For example, the user must input their account and password on a website and click the **Save** button to initiate the saving process.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,9 +26,9 @@ import { autoFillManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md#requestautofill) | Trigger an auto fill request. |
-| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md#requestautosave) | Requests to automatically save the widget data. This API uses an asynchronous callback to return the result.If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete. |
-| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md#requestautosave-1) | Trigger an auto save request. |
+| [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md#requestAutoFill) | Trigger an auto fill request. |
+| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md#requestAutoSave) | Requests to automatically save the widget data. This API uses an asynchronous callback to return the result. If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete. |
+| [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md#requestAutoSave) | Trigger an auto save request. |
 
 ### Interfaces
 
@@ -41,18 +41,11 @@ import { autoFillManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md) | Defines the rectangle used for auto-fill. |
-| [AutoFillTriggerType](arkts-ability-autofillmanager-autofilltriggertype-t.md) | The enum of auto fill trigget type. |
-| [AutoFillType](arkts-ability-autofillmanager-autofilltype-t.md) | The enum of auto fill type. |
 | [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md) | The interface of filling failure result. |
-| [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md) | Defines the information about an auto-fill request. |
 | [OnFailureFn](arkts-ability-autofillmanager-onfailurefn-t.md) | Called when auto-save fails. |
 | [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md) | Called when auto fill request is failed to be handled. |
 | [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md) | Called when auto fill request is successfully handled. |
 | [OnSuccessFn](arkts-ability-autofillmanager-onsuccessfn-t.md) | Called when auto-save is successful. |
-| [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md) | Defines the page node information used for auto-fill. |
-| [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) | Defines the information about an auto-save request. |
-| [ViewData](arkts-ability-autofillmanager-viewdata-t.md) | Defines the view data used for auto-fill. |
 
 <!--Del-->
 ### Types（系统接口）
@@ -60,12 +53,19 @@ import { autoFillManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [AutoFillPopupConfig](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md) | Defines the size and position information of an auto-fill pop-up. |
+| [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t-sys.md) | Defines the rectangle used for auto-fill. |
+| [AutoFillTriggerType](arkts-ability-autofillmanager-autofilltriggertype-t-sys.md) | The enum of auto fill trigget type. |
+| [AutoFillType](arkts-ability-autofillmanager-autofilltype-t-sys.md) | The enum of auto fill type. |
 | [CustomData](arkts-ability-autofillmanager-customdata-t-sys.md) | Defines the custom data. |
+| [FillRequest](arkts-ability-autofillmanager-fillrequest-t-sys.md) | Defines the information about an auto-fill request. |
 | [FillRequestCallback](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md) | Defines the callback for an auto-fill request, which is used to automatically fill in or generate a password. The callback can be used to notify the client of the success or failure of the request. |
 | [FillResponse](arkts-ability-autofillmanager-fillresponse-t-sys.md) | Defines the information about the response to an auto-fill request. |
+| [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md) | Defines the page node information used for auto-fill. |
 | [PopupPlacement](arkts-ability-autofillmanager-popupplacement-t-sys.md) | The popup placement of auto fill popup config. |
 | [PopupSize](arkts-ability-autofillmanager-popupsize-t-sys.md) | Defines the width and height of an auto-fill pop-up. |
+| [SaveRequest](arkts-ability-autofillmanager-saverequest-t-sys.md) | Defines the information about an auto-save request. |
 | [SaveRequestCallback](arkts-ability-autofillmanager-saverequestcallback-t-sys.md) | Defines the callback for an automatic or a manual saving request. |
 | [UpdateRequest](arkts-ability-autofillmanager-updaterequest-t-sys.md) | Defines the information about an auto-update request. |
+| [ViewData](arkts-ability-autofillmanager-viewdata-t-sys.md) | Defines the view data used for auto-fill. |
 <!--DelEnd-->
 

@@ -1,4 +1,4 @@
-# onWillDraw
+# on_willDraw
 
 ## Modules to Import
 
@@ -6,21 +6,25 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## onWillDraw
+## on_willDraw
 
 ```TypeScript
-export function onWillDraw(context: UIContext, callback: Callback<void>): void
+export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void
 ```
 
-Registers a callback function to be called when the draw command will be drawn.
+Listens for drawing instruction dispatch in each frame.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function onWillDraw(context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function onWillDraw(context: UIContext, callback: Callback<void>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void--><!--Device-uiObserver-export function on(type: 'willDraw', context: UIContext, callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +32,29 @@ Registers a callback function to be called when the draw command will be drawn.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | The context scope of the observer. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | The callback function to be called when the draw command will be drawn. |
+| type | 'willDraw' | Yes | Event event. The value **'willDraw'** indicates whether drawing is about to occur. |
+| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | Context information, which is used to specify the target page scope. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  willDrawCallback = () => {
+    console.info("willDraw instruction dispatched.");
+  }
+  build() {
+    Column() {
+      Button('Listen for Drawing Instruction Dispatch')
+        .onClick(() => {
+          uiObserver.on('willDraw', this.getUIContext(), this.willDrawCallback);
+        })
+    }
+  }
+}
+```
 

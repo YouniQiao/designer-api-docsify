@@ -10,6 +10,8 @@ type ProgressListener = (progress: Progress) => void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type ProgressListener = (progress: Progress) => void--><!--Device-unnamed-type ProgressListener = (progress: Progress) => void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

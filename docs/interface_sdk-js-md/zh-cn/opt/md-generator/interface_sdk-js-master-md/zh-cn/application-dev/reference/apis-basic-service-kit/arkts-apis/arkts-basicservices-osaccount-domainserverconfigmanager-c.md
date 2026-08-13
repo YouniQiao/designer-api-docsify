@@ -2,7 +2,9 @@
 
 域服务器配置管理类。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-class DomainServerConfigManager--><!--Device-osAccount-class DomainServerConfigManager-End-->
 
@@ -17,6 +19,8 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 添加域服务器配置。使用Promise异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -40,11 +44,11 @@ static addServerConfig(parameters: Record<string, Object>): Promise<DomainServer
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300215 |
 | 12300213 |
 
@@ -65,6 +69,48 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 });
 ```
 
+## addServerConfig
+
+```TypeScript
+static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>
+```
+
+添加域服务器配置。使用Promise异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| parameters | Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 12300211 |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| 12300215 |
+| 12300213 |
+
 ## getAccountServerConfig
 
 ```TypeScript
@@ -73,7 +119,9 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 获取目标域账号的服务器配置。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -97,10 +145,10 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -127,7 +175,9 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 获取所有域服务器配置。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -145,9 +195,9 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -179,7 +229,9 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 获取域服务器配置。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -203,9 +255,9 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300212 |
 
 ## 示例
@@ -238,7 +290,9 @@ static removeServerConfig(configId: string): Promise<void>
 
 删除域服务器配置。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -262,9 +316,9 @@ static removeServerConfig(configId: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300214 |
 | 12300212 |
 
@@ -297,6 +351,8 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
@@ -320,11 +376,11 @@ static updateServerConfig(configId: string, parameters: Record<string, Object>):
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 | 12300214 |
 | 12300213 |
 | 12300212 |
@@ -350,3 +406,47 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
   console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+## updateServerConfig
+
+```TypeScript
+static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>
+```
+
+更新域服务器配置。使用Promise异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| [configId](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | 是 |
+| parameters | Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| 12300211 |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| 12300214 |
+| 12300213 |
+| 12300212 |

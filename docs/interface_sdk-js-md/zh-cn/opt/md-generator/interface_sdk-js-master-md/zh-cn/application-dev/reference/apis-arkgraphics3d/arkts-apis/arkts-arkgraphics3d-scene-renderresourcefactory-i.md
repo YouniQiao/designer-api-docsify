@@ -2,7 +2,9 @@
 
 渲染资源工厂，用于创建可在共享RenderContext的场景间共享的资源。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
 
@@ -16,7 +18,9 @@ createImage(params: SceneResourceParameters): Promise<Image>
 
 创建图像.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>--><!--Device-RenderResourceFactory-createImage(params: SceneResourceParameters): Promise<Image>-End-->
 
@@ -64,6 +68,8 @@ createImageStream(params: SceneResourceParameters): Promise<ImageStream>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>--><!--Device-RenderResourceFactory-createImageStream(params: SceneResourceParameters): Promise<ImageStream>-End-->
@@ -108,7 +114,9 @@ createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promi
 
 从顶点数组创建网格.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>--><!--Device-RenderResourceFactory-createMesh(params: SceneResourceParameters, geometry: GeometryDefinition): Promise<MeshResource>-End-->
 
@@ -206,7 +214,9 @@ createSampler(params:SceneResourceParameters): Promise<Sampler>
 
 创建采样器.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>--><!--Device-RenderResourceFactory-createSampler(params:SceneResourceParameters): Promise<Sampler>-End-->
 
@@ -252,7 +262,9 @@ createScene(uri?: ResourceStr): Promise<Scene>
 
 从指定的资源URI创建一个新的场景。如果不指定URI，则创建一个空场景，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>--><!--Device-RenderResourceFactory-createScene(uri?: ResourceStr): Promise<Scene>-End-->
 
@@ -301,7 +313,9 @@ createShader(params: SceneResourceParameters): Promise<Shader>
 
 创建着色器.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>--><!--Device-RenderResourceFactory-createShader(params: SceneResourceParameters): Promise<Shader>-End-->
 

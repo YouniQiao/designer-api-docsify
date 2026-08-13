@@ -1,14 +1,6 @@
 # ConcatArray
 
-An array-like object that can be concatenated. This API extends **ISendable**.
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> This section uses the following to identify the use of generics:
-
-- T: type, which can be any of the  
-[sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).
+An array-like object that can be concatenated. This API extends **ISendable**. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > This section uses the following to identify the use of generics: - T: type, which can be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).
 
 **Inheritance/Implementation:** ConcatArray extends [ISendable](arkts-arkts-collections-isendable-t.md#ISendable)
 
@@ -16,7 +8,9 @@ An array-like object that can be concatenated. This API extends **ISendable**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-collections-interface ConcatArray<T> extends ISendable--><!--Device-collections-interface ConcatArray<T> extends ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-collections-interface ConcatArray--><!--Device-collections-interface ConcatArray-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -37,6 +31,8 @@ Concatenates all elements in this array into a string, with a given separator.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,6 +64,8 @@ Selects a range of elements in this array to create an array.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>--><!--Device-ConcatArray-slice(start?: number, end?: number): ConcatArray<T>-End-->
@@ -87,24 +85,6 @@ Selects a range of elements in this array to create an array.
 | --- | --- |
 | ConcatArray&lt;T&gt; | New array containing the selected elements. |
 
-## [index: number]
-
-```TypeScript
-readonly [index: number]: T
-```
-
-Returns the element at a given index in this ConcatArray.
-
-**Type:** T
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-<!--Device-ConcatArray-readonly [index: number]: T--><!--Device-ConcatArray-readonly [index: number]: T-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## length
 
 ```TypeScript
@@ -118,6 +98,8 @@ Number of elements in a ConcatArray.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,20 +1,24 @@
 # Progress
 
 ```TypeScript
-type Progress = ProgressFrameNode
+type Progress = TypedFrameNode<ProgressInterface, ProgressAttribute>
 ```
 
-Define the FrameNode type for Progress.
+Represents a FrameNode of the **Progress** type. This type of node does not allow child components to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Progress = ProgressFrameNode--><!--Device-typeNode-type Progress = ProgressFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Progress = TypedFrameNode<ProgressInterface, ProgressAttribute>--><!--Device-typeNode-type Progress = TypedFrameNode<ProgressInterface, ProgressAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ProgressFrameNode
+**Property type:** TypedFrameNode<ProgressInterface, ProgressAttribute>
 

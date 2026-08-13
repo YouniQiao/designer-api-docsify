@@ -1,17 +1,19 @@
 # PackageSummary（系统接口）
 
 ```TypeScript
-export type PackageSummary = _PackInfo.PackageSummary
+export type PackageSummary = _PackageSummary
 ```
 
 pack.info中的包摘要信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-freeInstall-export type PackageSummary = _PackInfo.PackageSummary--><!--Device-freeInstall-export type PackageSummary = _PackInfo.PackageSummary-End-->
+**废弃版本：** -1
+
+<!--Device-freeInstall-export type PackageSummary = _PackageSummary--><!--Device-freeInstall-export type PackageSummary = _PackageSummary-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **系统接口：** 此接口为系统接口。
 
-**属性类型：** _PackInfo.PackageSummary
+**属性类型：** _PackageSummary

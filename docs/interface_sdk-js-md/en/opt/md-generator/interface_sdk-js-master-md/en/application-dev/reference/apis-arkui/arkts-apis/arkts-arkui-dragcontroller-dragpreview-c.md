@@ -4,6 +4,8 @@ Implements a **DragPreview** object. This API does not work in the **OnDrop** an
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-dragController-export class DragPreview--><!--Device-dragController-export class DragPreview-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,11 @@ import { dragController } from '@kit.ArkUI';
 animate(options: AnimationOptions, handler: () =>void): void
 ```
 
-Applies a foreground color animation to the drag preview. This API does not work in the **OnDrop** and  
-**OnDragEnd** callbacks. It can only be used on the object obtained through the  
-[getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getDragPreview) API.
+Applies a foreground color animation to the drag preview. This API does not work in the **OnDrop** and **OnDragEnd** callbacks. It can only be used on the object obtained through the [getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getDragPreview) API.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,10 +187,11 @@ struct DragControllerPage {
 setForegroundColor(color: ResourceColor): void
 ```
 
-Sets the foreground color of the drag preview. This API does not work in the **OnDrop** and **OnDragEnd**callbacks. It can only be used on the object obtained through the  
-[getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getDragPreview) API.
+Sets the foreground color of the drag preview. This API does not work in the **OnDrop** and **OnDragEnd** callbacks. It can only be used on the object obtained through the [getDragPreview()](arkts-arkui-arkui-uicontext-dragcontroller-c.md#getDragPreview) API.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,4 +209,4 @@ Sets the foreground color of the drag preview. This API does not work in the **O
 
 ## Examples
 
-See [animate](#animate11).
+See [animate](#animate).

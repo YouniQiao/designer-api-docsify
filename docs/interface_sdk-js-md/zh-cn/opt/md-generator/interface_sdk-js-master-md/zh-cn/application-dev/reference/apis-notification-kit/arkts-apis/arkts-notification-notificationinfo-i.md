@@ -1,9 +1,10 @@
 # NotificationInfo
 
-通知订阅扩展能力中  
-[onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onReceiveMessage)回调的通知信息。
+通知订阅扩展能力中 [onReceiveMessage](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md#onReceiveMessage) 回调的通知信息。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationInfo--><!--Device-unnamed-export interface NotificationInfo-End-->
 
@@ -19,7 +20,9 @@ readonly appIndex: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly appIndex: int--><!--Device-NotificationInfo-readonly appIndex: int-End-->
 
@@ -35,7 +38,9 @@ readonly appName?: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly appName?: string--><!--Device-NotificationInfo-readonly appName?: string-End-->
 
@@ -51,7 +56,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly bundleName: string--><!--Device-NotificationInfo-readonly bundleName: string-End-->
 
@@ -67,7 +74,9 @@ readonly content: NotificationExtensionContent
 
 **类型：** [NotificationExtensionContent](arkts-notification-notificationextensioncontent-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly content: NotificationExtensionContent--><!--Device-NotificationInfo-readonly content: NotificationExtensionContent-End-->
 
@@ -79,11 +88,13 @@ readonly content: NotificationExtensionContent
 readonly deliveryTime?: number
 ```
 
-通知发布的时间戳。数据格式：时间戳。单位：毫秒。
+通知发布的时间戳。 数据格式：时间戳。 单位：毫秒。
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly deliveryTime?: long--><!--Device-NotificationInfo-readonly deliveryTime?: long-End-->
 
@@ -99,7 +110,9 @@ readonly groupName?: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly groupName?: string--><!--Device-NotificationInfo-readonly groupName?: string-End-->
 
@@ -115,7 +128,9 @@ readonly hashCode: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly hashCode: string--><!--Device-NotificationInfo-readonly hashCode: string-End-->
 
@@ -127,11 +142,13 @@ readonly hashCode: string
 readonly notificationSlotType: notificationManager.SlotType
 ```
 
-通知渠道类型，标识通知所属的渠道分类（如社交通讯、服务提醒等）。不同渠道类型对应不同的提醒方式。
+通知渠道类型，标识通知所属的渠道分类（如社交通讯、服务提醒等）。 不同渠道类型对应不同的提醒方式。
 
 **类型：** notificationManager.SlotType
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationInfo-readonly notificationSlotType: notificationManager.SlotType--><!--Device-NotificationInfo-readonly notificationSlotType: notificationManager.SlotType-End-->
 

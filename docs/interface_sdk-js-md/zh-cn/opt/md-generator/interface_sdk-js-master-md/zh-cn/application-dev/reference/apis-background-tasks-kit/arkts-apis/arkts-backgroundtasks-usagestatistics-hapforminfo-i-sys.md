@@ -2,7 +2,9 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface HapFormInfo--><!--Device-usageStatistics-interface HapFormInfo-End-->
 
@@ -20,7 +22,9 @@ count: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapFormInfo-count: int--><!--Device-HapFormInfo-count: int-End-->
 
@@ -38,7 +42,9 @@ formDimension: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapFormInfo-formDimension: int--><!--Device-HapFormInfo-formDimension: int-End-->
 
@@ -56,7 +62,9 @@ formId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapFormInfo-formId: long--><!--Device-HapFormInfo-formId: long-End-->
 
@@ -74,7 +82,9 @@ formLastUsedTime: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapFormInfo-formLastUsedTime: long--><!--Device-HapFormInfo-formLastUsedTime: long-End-->
 
@@ -92,7 +102,9 @@ formName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapFormInfo-formName: string--><!--Device-HapFormInfo-formName: string-End-->
 

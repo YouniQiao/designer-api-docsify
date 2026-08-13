@@ -4,11 +4,13 @@
 
 **继承/实现关系：** VideoProfile extends [Profile](arkts-camera-camera-profile-i.md#Profile)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-camera-interface VideoProfile extends Profile--><!--Device-camera-interface VideoProfile extends Profile-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface VideoProfile--><!--Device-camera-interface VideoProfile-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -22,9 +24,11 @@ readonly frameRateRange: FrameRateRange
 
 **类型：** [FrameRateRange](arkts-camera-camera-frameraterange-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

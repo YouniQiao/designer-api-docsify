@@ -3,180 +3,220 @@
 ## ISO_DEP
 
 ```TypeScript
-const ISO_DEP = 3
+const ISO_DEP: int
 ```
 
-Indicates an ISO_DEP tag.
+Indicates an ISO_DEP tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const ISO_DEP = 3--><!--Device-tag-const ISO_DEP = 3-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const ISO_DEP: int--><!--Device-tag-const ISO_DEP: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## MIFARE_CLASSIC
 
 ```TypeScript
-const MIFARE_CLASSIC = 8
+const MIFARE_CLASSIC: int
 ```
 
-Indicates an MIFARE CLASSIC tag.
+Indicates an MIFARE CLASSIC tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const MIFARE_CLASSIC = 8--><!--Device-tag-const MIFARE_CLASSIC = 8-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const MIFARE_CLASSIC: int--><!--Device-tag-const MIFARE_CLASSIC: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## MIFARE_ULTRALIGHT
 
 ```TypeScript
-const MIFARE_ULTRALIGHT = 9
+const MIFARE_ULTRALIGHT: int
 ```
 
-Indicates an MIFARE ULTRALIGHT tag.
+Indicates an MIFARE ULTRALIGHT tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const MIFARE_ULTRALIGHT = 9--><!--Device-tag-const MIFARE_ULTRALIGHT = 9-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const MIFARE_ULTRALIGHT: int--><!--Device-tag-const MIFARE_ULTRALIGHT: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NDEF
 
 ```TypeScript
-const NDEF = 6
+const NDEF: int
 ```
 
-Indicates an NDEF tag.
+Indicates an NDEF tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const NDEF = 6--><!--Device-tag-const NDEF = 6-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NDEF: int--><!--Device-tag-const NDEF: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NDEF_FORMATABLE
 
 ```TypeScript
-const NDEF_FORMATABLE = 7
+const NDEF_FORMATABLE: int
 ```
 
-Indicates an NDEF Formatable tag.
+Indicates an NDEF Formatable tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const NDEF_FORMATABLE = 7--><!--Device-tag-const NDEF_FORMATABLE = 7-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NDEF_FORMATABLE: int--><!--Device-tag-const NDEF_FORMATABLE: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_A
 
 ```TypeScript
-const NFC_A = 1
+const NFC_A: int
 ```
 
-Indicates an NFC-A tag.
+Indicates an NFC-A tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const NFC_A = 1--><!--Device-tag-const NFC_A = 1-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NFC_A: int--><!--Device-tag-const NFC_A: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_B
 
 ```TypeScript
-const NFC_B = 2
+const NFC_B: int
 ```
 
-Indicates an NFC-B tag.
+Indicates an NFC-B tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const NFC_B = 2--><!--Device-tag-const NFC_B = 2-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NFC_B: int--><!--Device-tag-const NFC_B: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_BARCODE
 
 ```TypeScript
-const NFC_BARCODE = 10
+const NFC_BARCODE: int
 ```
 
-Indicates an NfcBarcode tag.
+Indicates an NfcBarcode tag. The value should be an integer.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
 
-<!--Device-tag-const NFC_BARCODE = 10--><!--Device-tag-const NFC_BARCODE = 10-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NFC_BARCODE: int--><!--Device-tag-const NFC_BARCODE: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_F
 
 ```TypeScript
-const NFC_F = 4
+const NFC_F: int
 ```
 
-Indicates an NFC-F tag.
+Indicates an NFC-F tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const NFC_F = 4--><!--Device-tag-const NFC_F = 4-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NFC_F: int--><!--Device-tag-const NFC_F: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
 ## NFC_V
 
 ```TypeScript
-const NFC_V = 5
+const NFC_V: int
 ```
 
-Indicates an NFC-V tag.
+Indicates an NFC-V tag. The value should be an integer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-tag-const NFC_V = 5--><!--Device-tag-const NFC_V = 5-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-tag-const NFC_V: int--><!--Device-tag-const NFC_V: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -188,11 +228,13 @@ const RTD_TEXT: int[]
 
 RTD type TEXT, see NFC Record Type Definition (RTD) Specification.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-tag-const RTD_TEXT: int[]--><!--Device-tag-const RTD_TEXT: int[]-End-->
 
@@ -206,11 +248,13 @@ const RTD_URI: int[]
 
 RTD type URI, see NFC Record Type Definition (RTD) Specification.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-tag-const RTD_URI: int[]--><!--Device-tag-const RTD_URI: int[]-End-->
 
@@ -219,20 +263,22 @@ RTD type URI, see NFC Record Type Definition (RTD) Specification.
 ## SKIP_NDEF
 
 ```TypeScript
-const SKIP_NDEF = 11
+const SKIP_NDEF: int
 ```
 
-Skip NDEF when app is reading a card in the foreground.
+Skip NDEF when app is reading a card in the foreground. The value range is all integers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-tag-const SKIP_NDEF = 11--><!--Device-tag-const SKIP_NDEF = 11-End-->
+<!--Device-tag-const SKIP_NDEF: int--><!--Device-tag-const SKIP_NDEF: int-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 

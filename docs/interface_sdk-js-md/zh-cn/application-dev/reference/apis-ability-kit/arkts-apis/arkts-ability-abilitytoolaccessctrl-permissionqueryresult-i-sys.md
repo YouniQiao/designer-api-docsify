@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface PermissionQueryResult--><!--Device-abilityToolAccessCtrl-interface PermissionQueryResult-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -25,6 +27,8 @@ needDialog: boolean
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-PermissionQueryResult-needDialog: boolean--><!--Device-PermissionQueryResult-needDialog: boolean-End-->
 
@@ -46,6 +50,8 @@ permissionResults: PermissionInfo[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]--><!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -65,6 +71,8 @@ ticket?: TicketInfo
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-PermissionQueryResult-ticket?: TicketInfo--><!--Device-PermissionQueryResult-ticket?: TicketInfo-End-->
 

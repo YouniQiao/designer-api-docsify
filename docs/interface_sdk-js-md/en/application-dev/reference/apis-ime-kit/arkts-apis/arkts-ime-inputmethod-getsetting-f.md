@@ -14,9 +14,11 @@ function getSetting(): InputMethodSetting
 
 Input method setting
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function getSetting(): InputMethodSetting--><!--Device-inputMethod-function getSetting(): InputMethodSetting-End-->
 
@@ -32,7 +34,7 @@ Input method setting
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800007-input-method-setter-error) | input method setter error. Possible cause: create InputMethodSetting object failed. |
+| [12800007](../errorcode-inputmethod-framework.md#12800007-input-method-setter-error) | input method setter error. Possible cause: create InputMethodSetting object failed. |
 
 ## Examples
 

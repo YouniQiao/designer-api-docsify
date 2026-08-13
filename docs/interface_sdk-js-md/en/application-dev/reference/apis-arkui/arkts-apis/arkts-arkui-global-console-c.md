@@ -6,6 +6,8 @@ Defines the console info.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class console--><!--Device-unnamed-export declare class console-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Prints assertion information.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -39,7 +43,7 @@ Prints assertion information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## count
 
@@ -47,11 +51,13 @@ Prints assertion information.
 static count(label?: string): void
 ```
 
-Maintains an internal counter. When this counter is invoked,its label name and the corresponding call count are printed.
+Maintains an internal counter. When this counter is invoked, its label name and the corresponding call count are printed.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -69,7 +75,7 @@ Maintains an internal counter. When this counter is invoked,its label name and t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## countReset
 
@@ -82,6 +88,8 @@ Resets a counter based on the specified label name.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -99,7 +107,7 @@ Resets a counter based on the specified label name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## debug
 
@@ -112,6 +120,8 @@ Prints debugging information in formatted output mode.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -140,6 +150,8 @@ Prints content of the specified object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static dir(dir?: Object): void--><!--Device-console-static dir(dir?: Object): void-End-->
@@ -158,11 +170,13 @@ Prints content of the specified object.
 static dirxml(...arguments: Object[]): void
 ```
 
-Displays an interactive tree of the descendant elements of the specified XML element.This API is implemented by calling console.log() internally.It does not produce any XML elements. The usage method is the same as that of console.log().
+Displays an interactive tree of the descendant elements of the specified XML element. This API is implemented by calling console.log() internally. It does not produce any XML elements. The usage method is the same as that of console.log().
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -188,6 +202,8 @@ Prints error information in formatted output mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -209,11 +225,13 @@ Prints error information in formatted output mode.
 static group(...arguments: Object[]): void
 ```
 
-Increases the indentation of subsequent lines by two spaces.If the information to be printed is provided, the information is printed without extra indentation.
+Increases the indentation of subsequent lines by two spaces. If the information to be printed is provided, the information is printed without extra indentation.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -233,11 +251,13 @@ Increases the indentation of subsequent lines by two spaces.If the information t
 static groupCollapsed(...arguments: Object[]): void
 ```
 
-Creates a new inline group in collapsed mode.The usage and function of this API are the same as those of console.group().
+Creates a new inline group in collapsed mode. The usage and function of this API are the same as those of console.group().
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -263,6 +283,8 @@ Reduces the indentation of subsequent lines by two spaces.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static groupEnd(): void--><!--Device-console-static groupEnd(): void-End-->
@@ -280,6 +302,8 @@ Prints log information in formatted output mode. This API is the alias of consol
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -308,6 +332,8 @@ Prints log information in formatted output mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -335,6 +361,8 @@ Prints data in a table.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static table(tableData?: Object): void--><!--Device-console-static table(tableData?: Object): void-End-->
@@ -353,11 +381,13 @@ Prints data in a table.
 static time(label?: string): void
 ```
 
-Starts a timer to track the duration of an operation.You can use console.timeEnd() to close the timer and print the elapsed time (in ms).
+Starts a timer to track the duration of an operation. You can use console.timeEnd() to close the timer and print the elapsed time (in ms).
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -375,7 +405,7 @@ Starts a timer to track the duration of an operation.You can use console.timeEnd
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## timeEnd
 
@@ -388,6 +418,8 @@ Stops the timer started by calling console.time() and prints the elapsed time (i
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -405,7 +437,7 @@ Stops the timer started by calling console.time() and prints the elapsed time (i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## timeLog
 
@@ -418,6 +450,8 @@ Prints the elapsed time and other data parameters for the timer started by conso
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -436,7 +470,7 @@ Prints the elapsed time and other data parameters for the timer started by conso
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## trace
 
@@ -449,6 +483,8 @@ Creates a stack trace.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -474,6 +510,8 @@ Prints information about the current hybrid stack of the calling thread in the m
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-console-static traceHybridStack(): void--><!--Device-console-static traceHybridStack(): void-End-->
@@ -491,6 +529,8 @@ Prints warning information in formatted output mode.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

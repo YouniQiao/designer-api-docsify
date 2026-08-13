@@ -2,9 +2,11 @@
 
 配置文件中的有效期。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
 
@@ -20,11 +22,13 @@ readonly notAfter: long
 
 表示配置文件有效期的结束时间，单位：秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
 
@@ -40,11 +44,13 @@ readonly notBefore: long
 
 表示配置文件有效期的开始时间，单位：秒。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
 

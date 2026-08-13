@@ -2,7 +2,9 @@
 
 RGBA格式的颜色描述。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-interface Color--><!--Device-uiEffect-interface Color-End-->
 
@@ -20,7 +22,9 @@ alpha: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-alpha: double--><!--Device-Color-alpha: double-End-->
 
@@ -38,7 +42,9 @@ blue: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-blue: double--><!--Device-Color-blue: double-End-->
 
@@ -56,7 +62,9 @@ green: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-green: double--><!--Device-Color-green: double-End-->
 
@@ -74,7 +82,9 @@ red: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color-red: double--><!--Device-Color-red: double-End-->
 

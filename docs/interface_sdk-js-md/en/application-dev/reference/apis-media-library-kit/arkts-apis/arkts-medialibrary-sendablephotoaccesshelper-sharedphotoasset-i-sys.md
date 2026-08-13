@@ -2,13 +2,15 @@
 
 Defines the shared photo asset
 
-**Inheritance/Implementation:** SharedPhotoAsset extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** SharedPhotoAsset extends lang.ISendable
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-<!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset extends lang.ISendable--><!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset--><!--Device-sendablePhotoAccessHelper-interface SharedPhotoAsset-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -34,6 +36,8 @@ Camera shot key of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-cameraShotKey: string--><!--Device-SharedPhotoAsset-cameraShotKey: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -53,6 +57,8 @@ Path data of photo asset
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-data: string--><!--Device-SharedPhotoAsset-data: string-End-->
 
@@ -74,6 +80,8 @@ Added date of photo asset Unit: ms, The value must be an integer greater than or
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-dateAdded: number--><!--Device-SharedPhotoAsset-dateAdded: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -93,6 +101,8 @@ Added date of photo asset in milliseconds
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateAddedMs: number--><!--Device-SharedPhotoAsset-dateAddedMs: number-End-->
 
@@ -114,6 +124,8 @@ The day of the file created
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-dateDay: string--><!--Device-SharedPhotoAsset-dateDay: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -133,6 +145,8 @@ Modify date of photo asset Unit: ms, The value must be an integer greater than o
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateModified: number--><!--Device-SharedPhotoAsset-dateModified: number-End-->
 
@@ -154,6 +168,8 @@ Modified time of the asset in milliseconds
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-dateModifiedMs: number--><!--Device-SharedPhotoAsset-dateModifiedMs: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -173,6 +189,8 @@ The month of the file created
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateMonth: string--><!--Device-SharedPhotoAsset-dateMonth: string-End-->
 
@@ -194,6 +212,8 @@ DateTaken of photo asset Unit: ms, The value must be an integer greater than or 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-dateTaken: number--><!--Device-SharedPhotoAsset-dateTaken: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -213,6 +233,8 @@ Trashed date of photo asset
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateTrashed: number--><!--Device-SharedPhotoAsset-dateTrashed: number-End-->
 
@@ -234,6 +256,8 @@ Trashed time of the asset in milliseconds
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-dateTrashedMs: number--><!--Device-SharedPhotoAsset-dateTrashedMs: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -253,6 +277,8 @@ The year of the file created
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-dateYear: string--><!--Device-SharedPhotoAsset-dateYear: string-End-->
 
@@ -274,6 +300,8 @@ Display name of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-displayName: string--><!--Device-SharedPhotoAsset-displayName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -293,6 +321,8 @@ Duration of video photo asset Unit: ms, The value must be an integer greater tha
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-duration: number--><!--Device-SharedPhotoAsset-duration: number-End-->
 
@@ -314,6 +344,8 @@ Dynamic range type of the asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType--><!--Device-SharedPhotoAsset-dynamicRangeType: DynamicRangeType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -333,6 +365,8 @@ File id of photo asset
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-fileId: number--><!--Device-SharedPhotoAsset-fileId: number-End-->
 
@@ -354,6 +388,8 @@ Height of photo asset Unit: px, The value must be an integer greater than or equ
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-height: number--><!--Device-SharedPhotoAsset-height: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -373,6 +409,8 @@ Hidden state of photo asset
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-hidden: boolean--><!--Device-SharedPhotoAsset-hidden: boolean-End-->
 
@@ -394,6 +432,8 @@ Favorite state of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-isFavorite: boolean--><!--Device-SharedPhotoAsset-isFavorite: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -413,6 +453,8 @@ Width and height information of lcd picture
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-lcdSize: string--><!--Device-SharedPhotoAsset-lcdSize: string-End-->
 
@@ -434,6 +476,8 @@ Media type of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-mediaType: PhotoType--><!--Device-SharedPhotoAsset-mediaType: PhotoType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -453,6 +497,8 @@ Effect mode of moving photo
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode--><!--Device-SharedPhotoAsset-movingPhotoEffectMode: MovingPhotoEffectMode-End-->
 
@@ -474,6 +520,8 @@ Orientation of photo asset Unit: deg, The value must be an integer within [0,359
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-orientation: number--><!--Device-SharedPhotoAsset-orientation: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -493,6 +541,8 @@ Pending state of the asset, true means asset is pending
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-pending: boolean--><!--Device-SharedPhotoAsset-pending: boolean-End-->
 
@@ -514,6 +564,8 @@ Position of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-position: PositionType--><!--Device-SharedPhotoAsset-position: PositionType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -533,6 +585,8 @@ Size of photo asset Unit: Byte, The value must be an integer greater than or equ
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-size: number--><!--Device-SharedPhotoAsset-size: number-End-->
 
@@ -554,6 +608,8 @@ Subtype of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-subtype: PhotoSubtype--><!--Device-SharedPhotoAsset-subtype: PhotoSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -573,6 +629,8 @@ Width and height information of thumbnail picture
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-thmSize: string--><!--Device-SharedPhotoAsset-thmSize: string-End-->
 
@@ -594,6 +652,8 @@ modified time of thumbnail status
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-thumbnailModifiedMs: number--><!--Device-SharedPhotoAsset-thumbnailModifiedMs: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -613,6 +673,8 @@ Ready state of thumbnail
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-thumbnailReady: boolean--><!--Device-SharedPhotoAsset-thumbnailReady: boolean-End-->
 
@@ -634,6 +696,8 @@ visibility of thumbnails
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility--><!--Device-SharedPhotoAsset-thumbnailVisible: ThumbnailVisibility-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -653,6 +717,8 @@ Title of photo asset
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-title: string--><!--Device-SharedPhotoAsset-title: string-End-->
 
@@ -674,6 +740,8 @@ URI of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-uri: string--><!--Device-SharedPhotoAsset-uri: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -694,6 +762,8 @@ User comment info of photo asset
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-SharedPhotoAsset-userComment: string--><!--Device-SharedPhotoAsset-userComment: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -713,6 +783,8 @@ Width of photo asset Unit: px, The value must be an integer greater than or equa
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-SharedPhotoAsset-width: number--><!--Device-SharedPhotoAsset-width: number-End-->
 

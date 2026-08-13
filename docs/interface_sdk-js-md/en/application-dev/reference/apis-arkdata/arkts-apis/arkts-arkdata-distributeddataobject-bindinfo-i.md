@@ -2,9 +2,11 @@
 
 Represents the information about the joint asset in the RDB store to bind. Currently, only the RDB stores are supported.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDataObject-interface BindInfo--><!--Device-distributedDataObject-interface BindInfo-End-->
 
@@ -26,9 +28,11 @@ Name of the target asset in the RDB store.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BindInfo-assetName: string--><!--Device-BindInfo-assetName: string-End-->
 
@@ -44,9 +48,11 @@ Column in which the target asset is located in the RDB store.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BindInfo-field: string--><!--Device-BindInfo-field: string-End-->
 
@@ -62,9 +68,11 @@ Primary key of the target asset in the RDB store.
 
 **Type:** commonType.ValuesBucket
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BindInfo-primaryKey: commonType.ValuesBucket--><!--Device-BindInfo-primaryKey: commonType.ValuesBucket-End-->
 
@@ -80,9 +88,11 @@ RDB store to which the target asset (asset to bind) belongs.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BindInfo-storeName: string--><!--Device-BindInfo-storeName: string-End-->
 
@@ -98,9 +108,11 @@ Table to which the target asset is located in the RDB store.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BindInfo-tableName: string--><!--Device-BindInfo-tableName: string-End-->
 

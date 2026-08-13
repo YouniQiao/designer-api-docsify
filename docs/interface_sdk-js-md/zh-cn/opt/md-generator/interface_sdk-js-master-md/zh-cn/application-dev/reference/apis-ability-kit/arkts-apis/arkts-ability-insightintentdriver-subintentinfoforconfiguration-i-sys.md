@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration--><!--Device-insightIntentDriver-interface SubIntentInfoForConfiguration-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -13,18 +15,20 @@
 ## entities
 
 ```TypeScript
-readonly entities?: Record<string, Object>
+readonly entities?: Record<string, RecordData>
 ```
 
 表示意图包含的实体信息。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, Object>--><!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, Object>-End-->
+<!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, RecordData>--><!--Device-SubIntentInfoForConfiguration-readonly entities?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -42,6 +46,8 @@ readonly form?: FormIntentInfo
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubIntentInfoForConfiguration-readonly form?: FormIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly form?: FormIntentInfo-End-->
@@ -53,18 +59,20 @@ readonly form?: FormIntentInfo
 ## inputParams
 
 ```TypeScript
-readonly inputParams?: Array<Record<string, Object>>
+readonly inputParams?: Array<Record<string, RecordData>>
 ```
 
 表示意图参数的数据格式声明，用于意图调用时定义入参的数据格式。
 
-**类型：** Array&lt;Record&lt;string, Object&gt;&gt;
+**类型：** Array&lt;Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;&gt;
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, Object>>--><!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, Object>>-End-->
+<!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, RecordData>>--><!--Device-SubIntentInfoForConfiguration-readonly inputParams?: Array<Record<string, RecordData>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -73,18 +81,20 @@ readonly inputParams?: Array<Record<string, Object>>
 ## outputParams
 
 ```TypeScript
-readonly outputParams?: Array<Record<string, Object>>
+readonly outputParams?: Array<Record<string, RecordData>>
 ```
 
 表示意图调用返回结果的数据格式声明，用于定义意图调用返回结果的数据格式。
 
-**类型：** Array&lt;Record&lt;string, Object&gt;&gt;
+**类型：** Array&lt;Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;&gt;
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, Object>>--><!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, Object>>-End-->
+<!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, RecordData>>--><!--Device-SubIntentInfoForConfiguration-readonly outputParams?: Array<Record<string, RecordData>>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -101,6 +111,8 @@ readonly serviceExtension?: ServiceExtensionIntentInfo
 **类型：** [ServiceExtensionIntentInfo](arkts-ability-insightintentdriver-serviceextensionintentinfo-i-sys.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,6 +134,8 @@ readonly srcEntry: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubIntentInfoForConfiguration-readonly srcEntry: string--><!--Device-SubIntentInfoForConfiguration-readonly srcEntry: string-End-->
@@ -142,6 +156,8 @@ readonly uiAbility?: UIAbilityIntentInfo
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SubIntentInfoForConfiguration-readonly uiAbility?: UIAbilityIntentInfo--><!--Device-SubIntentInfoForConfiguration-readonly uiAbility?: UIAbilityIntentInfo-End-->
@@ -161,6 +177,8 @@ readonly uiExtension?: UIExtensionIntentInfo
 **类型：** [UIExtensionIntentInfo](arkts-ability-insightintentdriver-uiextensionintentinfo-i-sys.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

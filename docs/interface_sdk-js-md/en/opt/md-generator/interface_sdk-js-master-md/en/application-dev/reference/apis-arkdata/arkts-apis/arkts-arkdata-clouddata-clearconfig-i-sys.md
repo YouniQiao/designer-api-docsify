@@ -4,6 +4,8 @@ Defines the clearance configuration of a device-cloud synergy database.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-cloudData-interface ClearConfig--><!--Device-cloudData-interface ClearConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Config
@@ -22,11 +24,13 @@ import { cloudData } from '@kit.ArkData';
 dbInfo: Record<string, DBActionInfo>
 ```
 
-Information about the database whose data is to be cleared and the clearance rules. The key is the database name, and the value is the clearance configuration of the database.
+Information about the database whose data is to be cleared and the clearance rules. The key is the database name , and the value is the clearance configuration of the database.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [DBActionInfo](arkts-arkdata-clouddata-dbactioninfo-i-sys.md)&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

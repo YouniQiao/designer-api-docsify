@@ -2,9 +2,11 @@
 
 Describes the size of an image.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface Size--><!--Device-image-interface Size-End-->
 
@@ -22,15 +24,15 @@ import { image } from '@kit.ImageKit';
 height: int
 ```
 
-Height
+Height Unit:px.
 
-Unit:px.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 6
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,15 +48,15 @@ Unit:px.
 width: int
 ```
 
-Width
+Width Unit:px.
 
-Unit:px.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 6
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

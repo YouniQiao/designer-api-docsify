@@ -4,7 +4,9 @@ The parameters for loading a scene
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneLoadParams--><!--Device-unnamed-export interface SceneLoadParams-End-->
 
@@ -20,13 +22,15 @@ offset?: long
 
 The offset of the start of the 3D model data in the resource Unit: byte, The value must be greater than or equal to 0. Default value: 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Default:** { 0 }
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

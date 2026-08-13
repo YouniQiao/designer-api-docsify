@@ -16,6 +16,8 @@ Change current directory
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-process-function chdir(dir: string): void--><!--Device-process-function chdir(dir: string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang

@@ -2,9 +2,11 @@
 
 Indicates the info of the rtt event.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
 
@@ -26,11 +28,13 @@ callId: int
 
 Indicates the id of rtt.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
 
@@ -46,11 +50,13 @@ eventType: int
 
 Indicates the type of rtt event.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
 
@@ -66,11 +72,13 @@ reason: int
 
 Indicates the reason of rtt event.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
 

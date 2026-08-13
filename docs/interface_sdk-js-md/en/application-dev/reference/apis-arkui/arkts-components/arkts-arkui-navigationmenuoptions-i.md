@@ -6,6 +6,8 @@ Defines options for menu items in the upper right corner of the page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationMenuOptions--><!--Device-unnamed-declare interface NavigationMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Options for the toolbar's more button menu.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

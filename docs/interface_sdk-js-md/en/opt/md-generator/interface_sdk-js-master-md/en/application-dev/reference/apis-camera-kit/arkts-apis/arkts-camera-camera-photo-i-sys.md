@@ -2,7 +2,9 @@
 
 Photo defines a full-quality image object.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface Photo--><!--Device-camera-interface Photo-End-->
 
@@ -24,7 +26,9 @@ Depth data.
 
 **Type:** [DepthData](arkts-camera-camera-depthdata-i-sys.md)
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Photo-depthData?: DepthData--><!--Device-Photo-depthData?: DepthData-End-->
 
@@ -42,7 +46,9 @@ Raw image.
 
 **Type:** image.Image
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Photo-raw?: image.Image--><!--Device-Photo-raw?: image.Image-End-->
 

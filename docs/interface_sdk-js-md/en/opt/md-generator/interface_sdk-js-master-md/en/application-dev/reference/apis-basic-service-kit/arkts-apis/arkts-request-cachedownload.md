@@ -1,14 +1,10 @@
-# @ohos.request.cacheDownload(Download and Cache)
+# @ohos.request.cacheDownload
 
-The **request** module provides applications with the basic capabilities of file upload and download and background transfer proxy.
+The **request** module provides applications with the basic capabilities of file upload and download and background transfer proxy. - The child component **cacheDownload** provides the basic capability of caching application resources in advance. - **cacheDownload** uses the HTTP to download data and caches data resources to the application memory or specified files in the application sandbox directory. - The cached data can be used by specific ArkUI components (such as **Image**) to improve resource loading efficiency. Check whether the ArkUI components support this function by referring to the ArkUI component topics.
 
-- The child component **cacheDownload** provides the basic capability of caching application resources in advance.  
-- **cacheDownload** uses the HTTP to download data and caches data resources to the application memory or specified   
-files in the application sandbox directory.  
-- The cached data can be used by specific ArkUI components (such as **Image**) to improve resource loading   
-efficiency. Check whether the ArkUI components support this function by referring to the ArkUI component topics.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cacheDownload--><!--Device-unnamed-declare namespace cacheDownload-End-->
 
@@ -27,19 +23,19 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [cancel](arkts-basicservices-cachedownload-cancel-f.md#cancel) |
-| [clearFileCache](arkts-basicservices-cachedownload-clearfilecache-f.md#clearfilecache) |
-| [clearMemoryCache](arkts-basicservices-cachedownload-clearmemorycache-f.md#clearmemorycache) |
+| [clearFileCache](arkts-basicservices-cachedownload-clearfilecache-f.md#clearFileCache) |
+| [clearMemoryCache](arkts-basicservices-cachedownload-clearmemorycache-f.md#clearMemoryCache) |
 | [download](arkts-basicservices-cachedownload-download-f.md#download) |
-| [getDownloadInfo](arkts-basicservices-cachedownload-getdownloadinfo-f.md#getdownloadinfo) |
-| [offDownloadError](arkts-basicservices-cachedownload-offdownloaderror-f.md#offdownloaderror) |
-| [offDownloadSuccess](arkts-basicservices-cachedownload-offdownloadsuccess-f.md#offdownloadsuccess) |
-| [onDownloadError](arkts-basicservices-cachedownload-ondownloaderror-f.md#ondownloaderror) |
-| [onDownloadSuccess](arkts-basicservices-cachedownload-ondownloadsuccess-f.md#ondownloadsuccess) |
-| [setDownloadInfoListSize](arkts-basicservices-cachedownload-setdownloadinfolistsize-f.md#setdownloadinfolistsize) |
-| [setFileCacheSize](arkts-basicservices-cachedownload-setfilecachesize-f.md#setfilecachesize) |
-| [setGlobalRetryOptions](arkts-basicservices-cachedownload-setglobalretryoptions-f.md#setglobalretryoptions) |
-| [setGlobalTimeoutOptions](arkts-basicservices-cachedownload-setglobaltimeoutoptions-f.md#setglobaltimeoutoptions) |
-| [setMemoryCacheSize](arkts-basicservices-cachedownload-setmemorycachesize-f.md#setmemorycachesize) |
+| [getDownloadInfo](arkts-basicservices-cachedownload-getdownloadinfo-f.md#getDownloadInfo) |
+| [offDownloadError](arkts-basicservices-cachedownload-offdownloaderror-f.md#offDownloadError) |
+| [offDownloadSuccess](arkts-basicservices-cachedownload-offdownloadsuccess-f.md#offDownloadSuccess) |
+| [onDownloadError](arkts-basicservices-cachedownload-ondownloaderror-f.md#onDownloadError) |
+| [onDownloadSuccess](arkts-basicservices-cachedownload-ondownloadsuccess-f.md#onDownloadSuccess) |
+| [setDownloadInfoListSize](arkts-basicservices-cachedownload-setdownloadinfolistsize-f.md#setDownloadInfoListSize) |
+| [setFileCacheSize](arkts-basicservices-cachedownload-setfilecachesize-f.md#setFileCacheSize) |
+| [setGlobalRetryOptions](arkts-basicservices-cachedownload-setglobalretryoptions-f.md#setGlobalRetryOptions) |
+| [setGlobalTimeoutOptions](arkts-basicservices-cachedownload-setglobaltimeoutoptions-f.md#setGlobalTimeoutOptions) |
+| [setMemoryCacheSize](arkts-basicservices-cachedownload-setmemorycachesize-f.md#setMemoryCacheSize) |
 
 ### Interfaces
 

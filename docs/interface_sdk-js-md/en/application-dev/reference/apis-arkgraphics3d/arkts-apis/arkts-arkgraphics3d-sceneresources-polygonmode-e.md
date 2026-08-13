@@ -4,7 +4,9 @@ The enum of polygon mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum PolygonMode--><!--Device-unnamed-export enum PolygonMode-End-->
 
@@ -20,7 +22,9 @@ Render the whole polygon
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolygonMode-FILL = 0--><!--Device-PolygonMode-FILL = 0-End-->
 
@@ -36,7 +40,9 @@ Render only edges(wireframe) of the polygon
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolygonMode-LINE = 1--><!--Device-PolygonMode-LINE = 1-End-->
 
@@ -52,7 +58,9 @@ Render only vertices of the polygon
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolygonMode-POINT = 2--><!--Device-PolygonMode-POINT = 2-End-->
 

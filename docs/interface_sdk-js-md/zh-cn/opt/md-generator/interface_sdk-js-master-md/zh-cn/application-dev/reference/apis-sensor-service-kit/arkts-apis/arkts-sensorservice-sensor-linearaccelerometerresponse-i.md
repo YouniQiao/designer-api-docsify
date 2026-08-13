@@ -4,9 +4,11 @@
 
 **继承/实现关系：** LinearAccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface LinearAccelerometerResponse extends Response--><!--Device-sensor-interface LinearAccelerometerResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface LinearAccelerometerResponse--><!--Device-sensor-interface LinearAccelerometerResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LinearAccelerometerResponse-x: double--><!--Device-LinearAccelerometerResponse-x: double-End-->
 
@@ -36,7 +40,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LinearAccelerometerResponse-y: double--><!--Device-LinearAccelerometerResponse-y: double-End-->
 
@@ -52,7 +58,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LinearAccelerometerResponse-z: double--><!--Device-LinearAccelerometerResponse-z: double-End-->
 

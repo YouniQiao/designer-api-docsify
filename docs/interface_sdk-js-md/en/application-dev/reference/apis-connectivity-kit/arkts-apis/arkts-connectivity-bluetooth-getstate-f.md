@@ -20,7 +20,7 @@ Obtains the Bluetooth status of a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getState](ohos.bluetoothManager/bluetoothManager.getState)
+**Substitutes:** [getState](arkts-connectivity-bluetoothmanager-getstate-f.md#getState)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

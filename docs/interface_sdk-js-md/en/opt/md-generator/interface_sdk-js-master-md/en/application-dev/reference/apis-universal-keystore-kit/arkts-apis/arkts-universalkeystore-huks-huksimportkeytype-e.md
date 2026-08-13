@@ -4,6 +4,8 @@ Enumerates the types of keys to import. By default, a public key is imported. Th
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksImportKeyType--><!--Device-huks-export enum HuksImportKeyType-End-->
 
 **System capability:** 
@@ -19,6 +21,8 @@ HUKS_KEY_TYPE_PUBLIC_KEY = 0
 Public key
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,6 +42,8 @@ Private key
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PRIVATE_KEY = 1--><!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PRIVATE_KEY = 1-End-->
@@ -55,6 +61,8 @@ HUKS_KEY_TYPE_KEY_PAIR = 2
 Public and private key pair
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

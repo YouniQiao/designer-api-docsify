@@ -16,6 +16,8 @@ Create ASR processing controller on one audio capturer.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -38,10 +40,10 @@ Create ASR processing controller on one audio capturer.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |
 
 ## Examples
 
@@ -76,3 +78,42 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
   }
 });
 ```
+
+
+## createAsrProcessingController
+
+```TypeScript
+function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null
+```
+
+Create ASR processing controller on one audio capturer.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Capturer
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) |

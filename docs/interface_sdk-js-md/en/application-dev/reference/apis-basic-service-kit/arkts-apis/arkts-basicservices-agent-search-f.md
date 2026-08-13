@@ -12,12 +12,13 @@ import { request } from '@kit.BasicServicesKit';
 function search(callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -27,14 +28,14 @@ Searches for task IDs based on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 
 ## search
@@ -43,12 +44,13 @@ Searches for task IDs based on
 function search(filter: Filter, callback: AsyncCallback<Array<string>>): void
 ```
 
-Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void--><!--Device-agent-function search(filter: Filter, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -59,14 +61,14 @@ Searches for task IDs based on
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filter | Filter | Yes | Filter criteria. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the task ID. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 
 ## search
@@ -75,12 +77,13 @@ Searches for task IDs based on
 function search(filter?: Filter): Promise<Array<string>>
 ```
 
-Searches for task IDs based on   
-[Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result.
+Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md#Filter). This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-function search(filter?: Filter): Promise<Array<string>>--><!--Device-agent-function search(filter?: Filter): Promise<Array<string>>-End-->
 
@@ -102,6 +105,6 @@ Searches for task IDs based on
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
-| [13400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter type. &lt;br&gt; 2. Parameter verification failed. |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 

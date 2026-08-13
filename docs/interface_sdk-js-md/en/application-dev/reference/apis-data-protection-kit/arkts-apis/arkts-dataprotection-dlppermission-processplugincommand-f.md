@@ -18,6 +18,8 @@ Process the plugin-related commands in the transparent encryption and decryption
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,9 +45,9 @@ Process the plugin-related commands in the transparent encryption and decryption
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 19100025 | The file is invalid. |
 

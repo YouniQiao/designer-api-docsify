@@ -12,7 +12,7 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 **废弃版本：** 18
 
-**替代接口：** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
+**替代接口：** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -29,9 +29,9 @@ function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>
 
 | 错误码ID |
 | --- |
-| [10600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-服务未启动或故障) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 
@@ -78,7 +78,7 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 **废弃版本：** 18
 
-**替代接口：** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
+**替代接口：** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
@@ -100,9 +100,9 @@ function query(faultType: FaultType): Promise<Array<FaultLogInfo>>
 
 | 错误码ID |
 | --- |
-| [10600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-服务未启动或故障) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [10600001](../errorcode-faultlogger.md#10600001-服务未启动或故障) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

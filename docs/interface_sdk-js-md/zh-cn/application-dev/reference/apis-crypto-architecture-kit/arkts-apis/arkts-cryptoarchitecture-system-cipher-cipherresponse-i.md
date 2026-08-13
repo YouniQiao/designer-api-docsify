@@ -8,7 +8,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-unnamed-export interface CipherResponse--><!--Device-unnamed-export interface CipherResponse-End-->
 
@@ -30,7 +30,7 @@ text: string
 
 **废弃版本：** 11
 
-**替代接口：** [Cipher](ohos.security.cryptoFramework.Cipher)
+**替代接口：** Cipher
 
 <!--Device-CipherResponse-text: string--><!--Device-CipherResponse-text: string-End-->
 

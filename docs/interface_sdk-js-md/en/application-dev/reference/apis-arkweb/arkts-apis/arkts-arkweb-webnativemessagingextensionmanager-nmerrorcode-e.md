@@ -2,9 +2,11 @@
 
 Provides the native messaging error codes.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-webNativeMessagingExtensionManager-export enum NmErrorCode--><!--Device-webNativeMessagingExtensionManager-export enum NmErrorCode-End-->
 
@@ -16,11 +18,13 @@ Provides the native messaging error codes.
 PERMISSION_DENY = 17100203
 ```
 
-Provides the native messaging error codes.
+Permission denied due to missing ohos.permission.WEB_NATIVE_MESSAGING.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +40,11 @@ WANT_CONTENT_ERROR = 17100202
 
 The want content is invalid.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,9 +60,11 @@ INNER_ERROR = 17100201
 
 Inner error for native messaging.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

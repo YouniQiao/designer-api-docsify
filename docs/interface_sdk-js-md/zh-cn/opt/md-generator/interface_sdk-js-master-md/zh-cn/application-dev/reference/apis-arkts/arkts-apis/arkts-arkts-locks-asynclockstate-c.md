@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-locks-class AsyncLockState--><!--Device-locks-class AsyncLockState-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -19,6 +21,8 @@ held: AsyncLockInfo[]
 **类型：** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ pending: AsyncLockInfo[]
 **类型：** [AsyncLockInfo](arkts-arkts-locks-asynclockinfo-c.md)[]
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

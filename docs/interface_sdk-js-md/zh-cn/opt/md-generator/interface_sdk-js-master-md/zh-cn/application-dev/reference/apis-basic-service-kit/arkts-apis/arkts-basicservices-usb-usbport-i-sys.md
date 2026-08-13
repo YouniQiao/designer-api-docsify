@@ -6,7 +6,7 @@ USB设备端口。
 
 **废弃版本：** 9
 
-**替代接口：** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md#USBPort)
+**替代接口：** [USBPort](arkts-basicservices-usbmanager-usbport-i-sys.md#USBPort（系统接口）)
 
 <!--Device-usb-interface USBPort--><!--Device-usb-interface USBPort-End-->
 

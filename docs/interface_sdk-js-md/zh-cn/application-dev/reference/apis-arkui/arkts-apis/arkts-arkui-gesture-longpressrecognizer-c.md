@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class LongPressRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class LongPressRecognizer extends GestureRecognizer-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class LongPressRecognizer--><!--Device-unnamed-export declare class LongPressRecognizer-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ getAllowableMovement(): double
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ getDuration(): int
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-LongPressRecognizer-getDuration(): int--><!--Device-LongPressRecognizer-getDuration(): int-End-->
@@ -71,6 +77,8 @@ isRepeat(): boolean
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Defines the authentication result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface AuthResult--><!--Device-appAccount-interface AuthResult-End-->
 
@@ -24,7 +26,9 @@ Information about the account to which the token belongs. By default, no value i
 
 **Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-account?: AppAccountInfo--><!--Device-AuthResult-account?: AppAccountInfo-End-->
 
@@ -40,7 +44,9 @@ Token information. By default, no value is passed in.
 
 **Type:** [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-tokenInfo?: AuthTokenInfo--><!--Device-AuthResult-tokenInfo?: AuthTokenInfo-End-->
 

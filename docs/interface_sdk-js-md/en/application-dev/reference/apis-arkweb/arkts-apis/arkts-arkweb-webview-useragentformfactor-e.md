@@ -4,7 +4,9 @@ The form factors for User-Agent metadata.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum UserAgentFormFactor--><!--Device-webview-enum UserAgentFormFactor-End-->
 
@@ -20,7 +22,9 @@ Form factor option: Automotive.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +42,9 @@ Form factor option: Desktop.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +62,9 @@ Form factor option: Mobile.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +82,9 @@ Form factor option: EInk.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,7 +102,9 @@ Form factor option: Tablet.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,7 +122,9 @@ Form factor option: Watch.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,7 +142,9 @@ Form factor option: XR.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

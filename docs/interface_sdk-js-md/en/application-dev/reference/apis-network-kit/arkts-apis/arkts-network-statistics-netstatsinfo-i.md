@@ -2,9 +2,11 @@
 
 Detailed information of statistics.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetStatsInfo--><!--Device-statistics-export interface NetStatsInfo-End-->
 
@@ -24,11 +26,13 @@ rxBytes: long
 
 Bytes of received.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-rxBytes: long--><!--Device-NetStatsInfo-rxBytes: long-End-->
 
@@ -42,11 +46,13 @@ rxPackets: long
 
 Packets of received.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-rxPackets: long--><!--Device-NetStatsInfo-rxPackets: long-End-->
 
@@ -60,11 +66,13 @@ txBytes: long
 
 Bytes of send.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-txBytes: long--><!--Device-NetStatsInfo-txBytes: long-End-->
 
@@ -78,11 +86,13 @@ txPackets: long
 
 Packets of send.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-txPackets: long--><!--Device-NetStatsInfo-txPackets: long-End-->
 

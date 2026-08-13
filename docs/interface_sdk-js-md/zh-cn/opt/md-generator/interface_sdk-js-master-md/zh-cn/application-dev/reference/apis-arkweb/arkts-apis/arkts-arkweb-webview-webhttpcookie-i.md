@@ -1,8 +1,10 @@
 # WebHttpCookie
 
-Defines the Web's HTTPCookie.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The maximum length allowed for each attribute value in a cookie string is 1024.&lt;/p&gt;
+Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt;
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
 
@@ -20,6 +22,8 @@ domain: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-WebHttpCookie-domain: string--><!--Device-WebHttpCookie-domain: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ expiresDate: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-expiresDate: string--><!--Device-WebHttpCookie-expiresDate: string-End-->
 
@@ -52,6 +58,8 @@ isHttpOnly: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-WebHttpCookie-isHttpOnly: boolean--><!--Device-WebHttpCookie-isHttpOnly: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -67,6 +75,8 @@ isSecure: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-isSecure: boolean--><!--Device-WebHttpCookie-isSecure: boolean-End-->
 
@@ -84,6 +94,8 @@ isSessionCookie: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-WebHttpCookie-isSessionCookie: boolean--><!--Device-WebHttpCookie-isSessionCookie: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -99,6 +111,8 @@ name: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-name: string--><!--Device-WebHttpCookie-name: string-End-->
 
@@ -116,6 +130,8 @@ path: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-WebHttpCookie-path: string--><!--Device-WebHttpCookie-path: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -132,6 +148,8 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy--><!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -147,6 +165,8 @@ value: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-value: string--><!--Device-WebHttpCookie-value: string-End-->
 

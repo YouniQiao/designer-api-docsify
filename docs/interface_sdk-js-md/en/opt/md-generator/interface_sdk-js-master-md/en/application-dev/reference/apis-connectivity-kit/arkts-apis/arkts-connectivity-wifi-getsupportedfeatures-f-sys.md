@@ -12,15 +12,13 @@ import { wifi } from '@kit.ConnectivityKit';
 function getSupportedFeatures(): number
 ```
 
-Obtains the features supported by this device.
-
-&lt;p&gt;To check whether this device supports a specified feature.
+Obtains the features supported by this device. &lt;p&gt;To check whether this device supports a specified feature.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSupportedFeatures](ohos.wifiManager/wifiManager.getSupportedFeatures)
+**Substitutes:** [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md#getSupportedFeatures-(System-API))
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

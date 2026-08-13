@@ -1,15 +1,12 @@
 # ShortcutWant (System API)
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager-ShortcutWant](#ShortcutWant) instead.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager-ShortcutWant](#ShortcutWant-(System-API)) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShortcutWant](#ShortcutWant)
+**Substitutes:** [ShortcutWant](#ShortcutWant-(System-API))
 
 <!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
 
@@ -31,7 +28,7 @@ Target bundle of the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [targetBundle](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetBundle)
+**Substitutes:** targetBundle
 
 <!--Device-ShortcutWant-readonly targetBundle: string--><!--Device-ShortcutWant-readonly targetBundle: string-End-->
 
@@ -53,7 +50,7 @@ Target class required by the shortcut.
 
 **Deprecated since:** 9
 
-**Substitutes:** [targetAbility](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetAbility)
+**Substitutes:** targetAbility
 
 <!--Device-ShortcutWant-readonly targetClass: string--><!--Device-ShortcutWant-readonly targetClass: string-End-->
 

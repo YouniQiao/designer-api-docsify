@@ -1,15 +1,12 @@
 # TextSpanType
 
-Provides the [span](./span) type information.
-
-> **NOTE：**
-> 
-> The system follows the priority order below when determining the menu type to display during text interactions:
-> 
+Provides the span type information. > **NOTE：**> > The system follows the priority order below when determining the menu type to display during text interactions: >
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum TextSpanType--><!--Device-unnamed-declare enum TextSpanType-End-->
 
@@ -26,6 +23,8 @@ Text span.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +46,8 @@ Image span.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -67,6 +68,8 @@ Mixed span, which contains both text and imagery.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -86,6 +89,8 @@ When this type is registered but **TEXT**, **IMAGE**, or **MIXED** types are not
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

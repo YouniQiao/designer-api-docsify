@@ -1,8 +1,5 @@
 # @system.configuration
 
-应用配置
-
-
 ## 汇总
 
 ### 类

@@ -4,7 +4,9 @@ HiPlay Device Information Definition
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface HiPlayDeviceInfo--><!--Device-avSession-interface HiPlayDeviceInfo-End-->
 
@@ -24,13 +26,15 @@ import { avSession } from '@kit.AVSessionKit';
 castMode?: int
 ```
 
-HiPlay device cast mode.1: DEVICE_LEVEL_CAST2: APP_LEVEL_CAST
+HiPlay device cast mode. 1: DEVICE_LEVEL_CAST 2: APP_LEVEL_CAST
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,11 +54,13 @@ castUid?: int
 
 HiPlay device current cast uid.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,13 +78,15 @@ HiPlay device current cast uid.
 supportCastMode?: int
 ```
 
-HiPlay device supports cast mode.when device both support device level cast and app level cast, support cast mode is DEVICE_LEVEL_CAST|APP_LEVEL_CAST1: DEVICE_LEVEL_CAST2: APP_LEVEL_CAST
+HiPlay device supports cast mode. when device both support device level cast and app level cast, support cast mode is DEVICE_LEVEL_CAST| APP_LEVEL_CAST 1: DEVICE_LEVEL_CAST 2: APP_LEVEL_CAST
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

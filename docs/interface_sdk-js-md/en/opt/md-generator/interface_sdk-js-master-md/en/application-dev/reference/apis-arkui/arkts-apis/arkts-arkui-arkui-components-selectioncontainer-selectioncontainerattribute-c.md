@@ -2,11 +2,13 @@
 
 Defines the attributes of SelectionContainer.
 
-**Inheritance/Implementation:** SelectionContainerAttribute extends [CommonMethod<SelectionContainerAttribute>](CommonMethod<SelectionContainerAttribute>)
+**Inheritance/Implementation:** SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>--><!--Device-unnamed-export declare class SelectionContainerAttribute extends CommonMethod<SelectionContainerAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class SelectionContainerAttribute--><!--Device-unnamed-export declare class SelectionContainerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,11 +25,11 @@ bindSelectionMenu(spanType: Optional<TextSpanType>, content: Optional<CustomBuil
     responseType: Optional<TextResponseType>, options?: Optional<SelectionContainerMenuOptions>): SelectionContainerAttribute
 ```
 
-Bind to the selection menu.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The duration required for a long-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu.&lt;br&gt;When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a  long-press gesture, bindSelectionMenu is triggered first.&lt;br&gt;If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked.&lt;/p&gt;
+Bind to the selection menu. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The duration required for a long-press gesture is 600 ms for bindSelectionMenu and 800 ms for bindContextMenu. &lt;br&gt;When both bindSelectionMenu and bindContextMenu are set and both are configured to be triggered by a long-press gesture, bindSelectionMenu is triggered first. &lt;br&gt;If the custom menu is too long, embed a Scroll component to prevent the keyboard from being blocked. &lt;/p&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +64,8 @@ Set the caret color for selected text.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -92,6 +96,8 @@ Set whether to allow copy and where data can be copied.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -118,9 +124,11 @@ Set whether to allow copy and where data can be copied.
 editMenuOptions(editMenu: Optional<SelectionContainerEditMenuOptions>): SelectionContainerAttribute
 ```
 
-Set the custom text menu.Sets the extended options of the custom context menu on selection,including the text content, icon, and callback.
+Set the custom text menu. Sets the extended options of the custom context menu on selection, including the text content, icon, and callback.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,6 +160,8 @@ Enable or disable haptic feedback.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -178,9 +188,11 @@ Enable or disable haptic feedback.
 onCopy(callback: Optional<Callback<string>>): SelectionContainerAttribute
 ```
 
-Called when selected text is copied.Currently, only text can be copied.
+Called when selected text is copied. Currently, only text can be copied.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,6 +224,8 @@ Called when text selection changes in SelectionContainer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -238,9 +252,11 @@ Called when text selection changes in SelectionContainer.
 onWillCopy(callback: Optional<Callback<string, boolean>>): SelectionContainerAttribute
 ```
 
-Called before using the Clipboard copy menu.Currently, only text can be copied.
+Called before using the Clipboard copy menu. Currently, only text can be copied.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,6 +288,8 @@ Set selected text background color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -298,11 +316,11 @@ Set selected text background color.
 textJoinStyle(style: Optional<SelectionContainerTextJoinStyle>): SelectionContainerAttribute
 ```
 
-Set text join style for aggregated text in SelectionContainer.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This setting affects the string value used in callbacks such as onWillCopy and onCopy.&lt;br&gt;It also affects built-in text menu item logic that depends on string concatenation, such as copy.&lt;br&gt;The default style is SelectionContainerTextJoinStyle.NEWLINE.&lt;/p&gt;
+Set text join style for aggregated text in SelectionContainer. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This setting affects the string value used in callbacks such as onWillCopy and onCopy. &lt;br&gt;It also affects built-in text menu item logic that depends on string concatenation, such as copy. &lt;br&gt;The default style is SelectionContainerTextJoinStyle.NEWLINE. &lt;/p&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

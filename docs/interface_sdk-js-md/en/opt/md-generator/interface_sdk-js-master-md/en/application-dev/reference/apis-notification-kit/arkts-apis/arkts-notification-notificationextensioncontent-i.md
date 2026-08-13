@@ -2,7 +2,9 @@
 
 The **NotificationExtensionContent** module describes the notification extension content.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationExtensionContent--><!--Device-unnamed-export interface NotificationExtensionContent-End-->
 
@@ -18,7 +20,9 @@ Notification body content. It cannot be an empty string. The size cannot exceed 
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationExtensionContent-text: string--><!--Device-NotificationExtensionContent-text: string-End-->
 
@@ -34,7 +38,9 @@ Notification title. It cannot be an empty string. The size cannot exceed 1024 by
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationExtensionContent-title: string--><!--Device-NotificationExtensionContent-title: string-End-->
 

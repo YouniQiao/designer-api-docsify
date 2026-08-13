@@ -2,7 +2,9 @@
 
 Enumerates the window blur styles.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum BlurStyle--><!--Device-window-enum BlurStyle-End-->
 
@@ -18,7 +20,9 @@ OFF = 0
 
 Blur disabled.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurStyle-OFF = 0--><!--Device-BlurStyle-OFF = 0-End-->
 
@@ -34,7 +38,9 @@ THIN = 1
 
 Thin blur.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurStyle-THIN = 1--><!--Device-BlurStyle-THIN = 1-End-->
 
@@ -50,7 +56,9 @@ REGULAR = 2
 
 Regular blur.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurStyle-REGULAR = 2--><!--Device-BlurStyle-REGULAR = 2-End-->
 
@@ -66,7 +74,9 @@ THICK = 3
 
 Thick blur.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BlurStyle-THICK = 3--><!--Device-BlurStyle-THICK = 3-End-->
 

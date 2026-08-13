@@ -6,6 +6,8 @@ Defines undo style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum UndoStyle--><!--Device-unnamed-export declare enum UndoStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Undo without style.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Undo keep style.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

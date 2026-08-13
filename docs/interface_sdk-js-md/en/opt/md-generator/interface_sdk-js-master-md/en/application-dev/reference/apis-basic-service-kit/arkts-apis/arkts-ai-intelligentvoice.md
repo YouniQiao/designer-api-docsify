@@ -1,6 +1,8 @@
 # @ohos.ai.intelligentVoice
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace intelligentVoice--><!--Device-unnamed-declare namespace intelligentVoice-End-->
 
@@ -21,12 +23,12 @@ import { intelligentVoice } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createenrollintelligentvoiceengine) |
-| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createenrollintelligentvoiceengine-1) |
-| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createwakeupintelligentvoiceengine) |
-| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createwakeupintelligentvoiceengine-1) |
-| [getIntelligentVoiceManager](arkts-basicservices-intelligentvoice-getintelligentvoicemanager-f-sys.md#getintelligentvoicemanager) |
-| [getWakeupManager](arkts-basicservices-intelligentvoice-getwakeupmanager-f-sys.md#getwakeupmanager) |
+| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createEnrollIntelligentVoiceEngine-(System-API)) |
+| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createEnrollIntelligentVoiceEngine-(System-API)) |
+| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createWakeupIntelligentVoiceEngine-(System-API)) |
+| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createWakeupIntelligentVoiceEngine-(System-API)) |
+| [getIntelligentVoiceManager](arkts-basicservices-intelligentvoice-getintelligentvoicemanager-f-sys.md#getIntelligentVoiceManager-(System-API)) |
+| [getWakeupManager](arkts-basicservices-intelligentvoice-getwakeupmanager-f-sys.md#getWakeupManager-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

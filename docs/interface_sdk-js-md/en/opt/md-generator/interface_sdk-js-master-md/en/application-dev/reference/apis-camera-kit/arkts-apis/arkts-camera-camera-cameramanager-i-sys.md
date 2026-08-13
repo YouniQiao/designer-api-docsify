@@ -1,9 +1,10 @@
 # CameraManager
 
-**CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use   
-[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager) to obtain a **CameraManager** instance.
+**CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager) to obtain a **CameraManager** instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
@@ -21,11 +22,11 @@ import { camera } from '@kit.CameraKit';
 createCameraInputWithTokenId(camera: CameraDevice, tokenId: number): CameraInput
 ```
 
-Creates a CameraInput instance by camera and calling token.
-
-Before using this interface, first through the getSupportedCameras interface to query the current list of camera devices supported by the device, the developer needs to be based on specific scenarios to choose the camera device that meets the needs of the developer, and then use this interface to create a CameraInput instance.
+Creates a CameraInput instance by camera and calling token. Before using this interface, first through the getSupportedCameras interface to query the current list of camera devices supported by the device, the developer needs to be based on specific scenarios to choose the camera device that meets the needs of the developer, and then use this interface to create a CameraInput instance.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CAMERA
 
@@ -54,10 +55,10 @@ Before using this interface, first through the getSupportedCameras interface to 
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## createControlCenterSession
 
@@ -67,7 +68,9 @@ createControlCenterSession(): ControlCenterSession
 
 Create a ControlCenterSession instance.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CAMERA_CONTROL
 
@@ -87,8 +90,48 @@ Create a ControlCenterSession instance.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## createDeferredPreviewOutput
+
+```TypeScript
+createDeferredPreviewOutput(profile: Profile): PreviewOutput
+```
+
+Creates a deferred **PreviewOutput** instance and adds it, instead of a common **PreviewOutput** instance, to the data stream during stream configuration.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## createDepthDataOutput
 
@@ -98,7 +141,9 @@ createDepthDataOutput(profile: DepthProfile): DepthDataOutput
 
 Creates a DepthDataOutput instance. This API returns the result synchronously.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput--><!--Device-CameraManager-createDepthDataOutput(profile: DepthProfile): DepthDataOutput-End-->
 
@@ -122,8 +167,8 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -152,7 +197,9 @@ isCameraMuteSupported(): boolean
 
 Checks whether the camera device can be muted.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-isCameraMuteSupported(): boolean--><!--Device-CameraManager-isCameraMuteSupported(): boolean-End-->
 
@@ -170,7 +217,7 @@ Checks whether the camera device can be muted.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -189,7 +236,9 @@ isControlCenterActive(): boolean
 
 Check if the control center active.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-isControlCenterActive(): boolean--><!--Device-CameraManager-isControlCenterActive(): boolean-End-->
 
@@ -207,7 +256,7 @@ Check if the control center active.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isPrelaunchSupported
 
@@ -217,7 +266,9 @@ isPrelaunchSupported(camera: CameraDevice): boolean
 
 Checks whether a camera device supports prelaunch.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean--><!--Device-CameraManager-isPrelaunchSupported(camera: CameraDevice): boolean-End-->
 
@@ -241,8 +292,8 @@ Checks whether a camera device supports prelaunch.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -261,6 +312,40 @@ function isPreLaunchSupported(context: common.BaseContext): boolean {
   return isSupported;
 }
 ```
+
+## isTorchLevelControlSupported
+
+```TypeScript
+isTorchLevelControlSupported(): boolean
+```
+
+Checks whether the device supports flashlight brightness control.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## muteCamera
 
@@ -305,7 +390,9 @@ muteCameraPersistent(mute: boolean, type: PolicyType): void
 
 Mutes the camera device permanently.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CAMERA_CONTROL
 
@@ -326,9 +413,9 @@ Mutes the camera device permanently.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -339,7 +426,67 @@ function muteCameraPersistent(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## off('cameraMute')
+## offCameraMute
+
+```TypeScript
+offCameraMute(callback?: AsyncCallback<boolean>): void
+```
+
+Unsubscribes from camera mute change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offCameraMute(callback?: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offControlCenterStatusChange
+
+```TypeScript
+offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void
+```
+
+Unsubscribes control center status change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-offControlCenterStatusChange(callback?: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_cameraMute
 
 ```TypeScript
 off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
@@ -348,6 +495,8 @@ off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void
 Unsubscribes from camera mute status events.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'cameraMute', callback?: AsyncCallback<boolean>): void-End-->
 
@@ -366,7 +515,7 @@ Unsubscribes from camera mute status events.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -382,7 +531,7 @@ function unregisterCameraMute(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## off('controlCenterStatusChange')
+## off_controlCenterStatusChange
 
 ```TypeScript
 off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void
@@ -391,6 +540,8 @@ off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void
 Unsubscribes control center status change event callback.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void--><!--Device-CameraManager-off(type: 'controlCenterStatusChange', callback?: AsyncCallback<boolean>): void-End-->
 
@@ -409,9 +560,69 @@ Unsubscribes control center status change event callback.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## on('cameraMute')
+## onCameraMute
+
+```TypeScript
+onCameraMute(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes camera mute change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onCameraMute(callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onControlCenterStatusChange
+
+```TypeScript
+onControlCenterStatusChange(callback: AsyncCallback<boolean>): void
+```
+
+Subscribes control center status change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-onControlCenterStatusChange(callback: AsyncCallback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_cameraMute
 
 ```TypeScript
 on(type: 'cameraMute', callback: AsyncCallback<boolean>): void
@@ -420,6 +631,8 @@ on(type: 'cameraMute', callback: AsyncCallback<boolean>): void
 Subscribes to camera mute status events. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'cameraMute', callback: AsyncCallback<boolean>): void-End-->
 
@@ -438,7 +651,7 @@ Subscribes to camera mute status events. This API uses an asynchronous callback 
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -459,7 +672,7 @@ function registerCameraMute(cameraManager: camera.CameraManager): void {
 }
 ```
 
-## on('controlCenterStatusChange')
+## on_controlCenterStatusChange
 
 ```TypeScript
 on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void
@@ -468,6 +681,8 @@ on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void
 Subscribes control center status change event callback.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void--><!--Device-CameraManager-on(type: 'controlCenterStatusChange', callback: AsyncCallback<boolean>): void-End-->
 
@@ -486,7 +701,7 @@ Subscribes control center status change event callback.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## preSwitchCamera
 
@@ -496,7 +711,9 @@ preSwitchCamera(cameraId: string): void
 
 Pre-switches a camera device to speed up its startup.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-preSwitchCamera(cameraId: string): void--><!--Device-CameraManager-preSwitchCamera(cameraId: string): void-End-->
 
@@ -514,9 +731,9 @@ Pre-switches a camera device to speed up its startup.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -543,7 +760,9 @@ prelaunch(): void
 
 Prelaunches the camera device. This API is called when a user clicks the system camera icon to start the camera application.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraManager-prelaunch(): void--><!--Device-CameraManager-prelaunch(): void-End-->
 
@@ -555,7 +774,7 @@ Prelaunches the camera device. This API is called when a user clicks the system 
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -581,9 +800,11 @@ function preLaunch(context: common.BaseContext): void {
 setPrelaunchConfig(prelaunchConfig: PrelaunchConfig): void
 ```
 
-Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported](#isPrelaunchSupported) to check whether the camera device supports prelaunch.
+Sets prelaunch configuration. Before the setting, call [isPrelaunchSupported](#isPrelaunchSupported) to check whether the camera device supports prelaunch.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CAMERA
 
@@ -603,10 +824,10 @@ Sets prelaunch configuration.Before the setting, call [isPrelaunchSupported](#is
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -630,3 +851,39 @@ function setPrelaunchConfig(context: common.BaseContext): void {
   }
 }
 ```
+
+## setTorchModeOnWithLevel
+
+```TypeScript
+setTorchModeOnWithLevel(torchLevel: number): void
+```
+
+Sets the torch mode to [ON](arkts-camera-camera-torchmode-e.md#ON) with the specified torch level.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [torchLevel](arkts-camera-camera-torchstatusinfo-i.md) | number | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

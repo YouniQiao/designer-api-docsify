@@ -10,6 +10,8 @@ declare function copyFile(src: string | number, dest: string | number, mode?: nu
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, mode?: number): Promise<void>-End-->
@@ -64,6 +66,8 @@ declare function copyFile(src: string | number, dest: string | number, callback:
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyFile(src: string | number, dest: string | number, callback: AsyncCallback<void>): void-End-->
@@ -115,6 +119,8 @@ declare function copyFile(
 复制文件，可设置覆盖文件的方式，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,9 +2,11 @@
 
 Provides APIs for managing OS accounts.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
 
@@ -24,9 +26,11 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -36,14 +40,14 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -73,9 +77,11 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
 
@@ -91,7 +97,7 @@ Checks whether multiple OS accounts are supported. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -117,12 +123,7 @@ try {
 checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -141,17 +142,17 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## checkOsAccountActivated
 
@@ -159,12 +160,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 checkOsAccountActivated(localId: number): Promise<boolean>
 ```
 
-Checks whether an OS account is activated. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -194,11 +190,11 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## checkOsAccountConstraintEnabled
 
@@ -206,12 +202,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -230,18 +221,18 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraint. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraint. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## checkOsAccountConstraintEnabled
 
@@ -249,12 +240,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -273,7 +259,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
 
 **Return value:**
 
@@ -285,11 +271,11 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraint. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraint. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## checkOsAccountTestable
 
@@ -299,9 +285,11 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -311,14 +299,14 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite; the default value is **false**. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite; the default value is **false**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -348,9 +336,11 @@ checkOsAccountTestable(): Promise<boolean>
 
 Checks whether this OS account is a test account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
 
@@ -366,7 +356,7 @@ Checks whether this OS account is a test account. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -392,12 +382,7 @@ try {
 checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this OS account is unlocked. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
-> [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
+Checks whether this OS account is unlocked. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. You are advised to use > [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
 
 **Since:** 9
 
@@ -415,13 +400,13 @@ Checks whether this OS account is unlocked. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -449,12 +434,7 @@ try {
 checkOsAccountVerified(): Promise<boolean>
 ```
 
-Checks whether this OS account has been verified. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. You are advised to use
-> [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
+Checks whether this OS account has been verified. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. You are advised to use > [isOsAccountUnlocked](#isOsAccountUnlocked) instead.
 
 **Since:** 9
 
@@ -478,7 +458,7 @@ Checks whether this OS account has been verified. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -504,12 +484,7 @@ try {
 checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -528,17 +503,17 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -567,12 +542,7 @@ try {
 checkOsAccountVerified(localId: number): Promise<boolean>
 ```
 
-Checks whether an OS account has been verified. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -602,11 +572,11 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -629,21 +599,17 @@ try {
 
 ## getActivatedOsAccountLocalIds
 
-ArkTS-Dyn:
-```TypeScript
-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void
 ```
 
 Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
@@ -653,14 +619,14 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -687,21 +653,17 @@ try {
 
 ## getActivatedOsAccountLocalIds
 
-ArkTS-Dyn:
-```TypeScript
-getActivatedOsAccountLocalIds(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getActivatedOsAccountLocalIds(): Promise<Array<int>>
 ```
 
 Obtains information about all activated OS accounts. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
 
@@ -711,13 +673,13 @@ Obtains information about all activated OS accounts. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the information about all activated OS accounts. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the information about all activated OS accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -743,12 +705,7 @@ try {
 getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountCount](#getOsAccountCount) instead.
+Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountCount](#getOsAccountCount) instead.
 
 **Since:** 7
 
@@ -756,7 +713,7 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountCount](osAccount.AccountManager.getOsAccountCount(callback:)
+**Substitutes:** [getOsAccountCount](#getOsAccountCount)(callback: AsyncCallback&lt;int&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -768,7 +725,7 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
 
 ## Examples
 
@@ -791,12 +748,7 @@ accountManager.getCreatedOsAccountsCount((err: BusinessError, count: number)=>{
 getCreatedOsAccountsCount(): Promise<number>
 ```
 
-Obtains the number of OS accounts created. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountCount](#getOsAccountCount) instead.
+Obtains the number of OS accounts created. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountCount](#getOsAccountCount) instead.
 
 **Since:** 7
 
@@ -837,12 +789,7 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
 getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -862,14 +809,14 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -897,12 +844,7 @@ try {
 getCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -928,8 +870,8 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -955,13 +897,7 @@ try {
 getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 ```
 
-Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)
-> instead.
+Obtains the ID of a distributed virtual device. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) > instead.
 
 **Since:** 7
 
@@ -969,7 +905,7 @@ Obtains the ID of a distributed virtual device. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryDistributedVirtualDeviceId](osAccount.AccountManager.queryDistributedVirtualDeviceId(callback:)
+**Substitutes:** [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)(callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -981,7 +917,7 @@ Obtains the ID of a distributed virtual device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
 
 ## Examples
 
@@ -1004,12 +940,7 @@ accountManager.getDistributedVirtualDeviceId((err: BusinessError, virtualID: str
 getDistributedVirtualDeviceId(): Promise<string>
 ```
 
-Obtains the ID of this distributed virtual device. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) instead.
+Obtains the ID of this distributed virtual device. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) instead.
 
 **Since:** 7
 
@@ -1046,21 +977,17 @@ accountManager.getDistributedVirtualDeviceId().then((virtualID: string) => {
 
 ## getForegroundOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getForegroundOsAccountLocalId(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForegroundOsAccountLocalId(): Promise<int>
 ```
 
 Obtains the ID of the foreground OS account. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
 
@@ -1070,13 +997,13 @@ Obtains the ID of the foreground OS account. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the ID of the foreground OS account. |
+| Promise&lt;int&gt; | Promise used to return the ID of the foreground OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1102,12 +1029,7 @@ try {
 getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -1115,7 +1037,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**Substitutes:** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1128,7 +1050,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabled for the OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) enabled for the OS account. Otherwise, **err** is an error object. |
 
 ## getOsAccountAllConstraints
 
@@ -1136,12 +1058,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 ```
 
-Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -1149,7 +1066,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**Substitutes:** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1167,7 +1084,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabled for the OS account. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) enabled for the OS account. |
 
 ## getOsAccountConstraints
 
@@ -1175,12 +1092,7 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -1199,17 +1111,17 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is all [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is all [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountConstraints
 
@@ -1217,12 +1129,7 @@ Obtains all constraints enabled for an OS account. This API uses an asynchronous
 getOsAccountConstraints(localId: number): Promise<Array<string>>
 ```
 
-Obtains all constraints enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 11. The substitute API is available
-> only to system applications.
+Obtains all constraints enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 11. The substitute API is available > only to system applications.
 
 **Since:** 9
 
@@ -1246,35 +1153,31 @@ Obtains all constraints enabled for an OS account. This API uses a promise to re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) enabled for the OS account. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) enabled for the OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountCount
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountCount(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountCount(callback: AsyncCallback<int>): void
 ```
 
-Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+Obtains the number of OS accounts created. This API uses an asynchronous callback to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1286,15 +1189,15 @@ Obtains the number of OS accounts created. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the number of created OS accounts. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1318,21 +1221,17 @@ try {
 
 ## getOsAccountCount
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountCount(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountCount(): Promise<int>
 ```
 
-Obtains the number of OS accounts created. This API uses a promise to return the result.This API can be called only by system applications.
+Obtains the number of OS accounts created. This API uses a promise to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1344,14 +1243,14 @@ Obtains the number of OS accounts created. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of created OS accounts. |
+| Promise&lt;int&gt; | Promise used to return the number of created OS accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1383,6 +1282,8 @@ Obtains the domain account information associated with a specified OS account. T
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
@@ -1405,10 +1306,10 @@ Obtains the domain account information associated with a specified OS account. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | OS account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | OS account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1439,7 +1340,9 @@ Obtains the domain account information associated with a specified OS account. T
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1463,27 +1366,23 @@ Obtains the domain account information associated with a specified OS account. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | OS account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | OS account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalId(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalId(callback: AsyncCallback<int>): void
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback  to return the result.
+Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
 
@@ -1493,14 +1392,14 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1524,21 +1423,17 @@ try {
 
 ## getOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalId(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalId(): Promise<int>
 ```
 
 Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
 
@@ -1548,13 +1443,13 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;int&gt; | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1580,13 +1475,7 @@ try {
 getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)
-> instead.
+Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > instead.
 
 **Since:** 8
 
@@ -1594,7 +1483,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
 
@@ -1605,7 +1494,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serialNumber | number | Yes | Account SN. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 ## getOsAccountLocalIdBySerialNumber
 
@@ -1613,13 +1502,7 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 ```
 
-Obtains the OS account ID based on the SN. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber-1)
-> instead.
+Obtains the OS account ID based on the SN. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > instead.
 
 **Since:** 8
 
@@ -1627,7 +1510,7 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**Substitutes:** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
@@ -1647,21 +1530,17 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 ## getOsAccountLocalIdForDomain
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<int>): void
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.This API can be called only by system applications.
+Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1674,17 +1553,17 @@ Obtains the OS account ID based on the domain account information. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the ID of the OS account associated with the domain account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the ID of the OS account associated with the domain account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domainInfo. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domainInfo. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1709,21 +1588,17 @@ try {
 
 ## getOsAccountLocalIdForDomain
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<int>
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.This API can be called only by system applications.
+Obtains the OS account ID based on the domain account information. This API uses a promise to return the result. This API can be called only by system applications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1741,17 +1616,17 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the ID of the OS account associated with the domain account. |
+| Promise&lt;int&gt; | Promise used to return the ID of the OS account associated with the domain account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domainInfo. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domainInfo. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1774,21 +1649,17 @@ try {
 
 ## getOsAccountLocalIdForSerialNumber
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void
 ```
 
 Obtains the OS account ID based on the SN. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
 
@@ -1798,35 +1669,31 @@ Obtains the OS account ID based on the SN. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serialNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Account SN. |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| serialNumber | long | Yes | Account SN. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The account indicated by serialNumber does not exist. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid serialNumber. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The account indicated by serialNumber does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid serialNumber. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountLocalIdForSerialNumber
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>
 ```
 
 Obtains the OS account ID based on the SN. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
 
@@ -1836,40 +1703,36 @@ Obtains the OS account ID based on the SN. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serialNumber | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Account SN. |
+| serialNumber | long | Yes | Account SN. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;int&gt; | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The account indicated by serialNumber does not exist. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid serialNumber. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The account indicated by serialNumber does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid serialNumber. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountLocalIdForUid
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void
 ```
 
 Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
 
@@ -1879,34 +1742,30 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
+| uid | int | Yes | Process UID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountLocalIdForUid
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForUid(uid: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForUid(uid: int): Promise<int>
 ```
 
 Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
 
@@ -1916,39 +1775,35 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
+| uid | int | Yes | Process UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the OS account ID obtained. |
+| Promise&lt;int&gt; | Promise used to return the OS account ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountLocalIdForUidSync
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIdForUidSync(uid: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIdForUidSync(uid: int): int
 ```
 
 Obtains the OS account ID based on the process UID. The API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
 
@@ -1958,20 +1813,20 @@ Obtains the OS account ID based on the process UID. The API returns the result s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
+| uid | int | Yes | Process UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | OS account ID obtained. |
+| int | OS account ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
 ## getOsAccountLocalIdFromDomain
 
@@ -1979,13 +1834,7 @@ Obtains the OS account ID based on the process UID. The API returns the result s
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)
-> instead.
+Obtains the OS account ID based on the domain account information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > instead.
 
 **Since:** 8
 
@@ -1993,7 +1842,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;int&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2006,7 +1855,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2030,13 +1879,7 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-Obtains the OS account ID based on the domain account information. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain-1)
-> instead.
+Obtains the OS account ID based on the domain account information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > instead.
 
 **Since:** 8
 
@@ -2044,7 +1887,7 @@ Obtains the OS account ID based on the domain account information. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2084,13 +1927,7 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback  to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalId](#getOsAccountLocalId)
-> instead.
+Obtains the ID of the OS account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalId](#getOsAccountLocalId) > instead.
 
 **Since:** 7
 
@@ -2098,7 +1935,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalId](osAccount.AccountManager.getOsAccountLocalId(callback:)
+**Substitutes:** [getOsAccountLocalId](#getOsAccountLocalId)(callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
 
@@ -2108,7 +1945,7 @@ Obtains the ID of the OS account to which the current process belongs. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2131,12 +1968,7 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
 getOsAccountLocalIdFromProcess(): Promise<number>
 ```
 
-Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalId](#getOsAccountLocalId) instead.
+Obtains the ID of the OS account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalId](#getOsAccountLocalId) instead.
 
 **Since:** 7
 
@@ -2175,13 +2007,7 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)
-> instead.
+Obtains the OS account ID based on the process UID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid) > instead.
 
 **Since:** 7
 
@@ -2189,7 +2015,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**Substitutes:** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2200,7 +2026,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uid | number | Yes | Process UID. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account ID obtained. Otherwise, **data** is an error object. |
 
 ## getOsAccountLocalIdFromUid
 
@@ -2208,12 +2034,7 @@ Obtains the OS account ID based on the process UID. This API uses an asynchronou
 getOsAccountLocalIdFromUid(uid: number): Promise<number>
 ```
 
-Obtains the OS account ID based on the process UID. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid-1) instead.
+Obtains the OS account ID based on the process UID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid) instead.
 
 **Since:** 7
 
@@ -2221,7 +2042,7 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**Substitutes:** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
@@ -2241,12 +2062,6 @@ Obtains the OS account ID based on the process UID. This API uses a promise to r
 
 ## getOsAccountLocalIds
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountLocalIds(): Promise<number[]>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountLocalIds(): Promise<int[]>
 ```
@@ -2255,7 +2070,9 @@ Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS a
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -2269,14 +2086,14 @@ Obtains the local IDs of all non-system-level OS accounts. Non-system-level OS a
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number[]&gt;  <br>ArkTS-Sta：Promise&lt;int[]&gt; | Promise used to return the local IDs of all non-system-level OS accounts. |
+| Promise&lt;int[]&gt; | Promise used to return the local IDs of all non-system-level OS accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2304,9 +2121,11 @@ getOsAccountName(): Promise<string>
 
 Obtains the name of the OS account of the caller. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
 
@@ -2322,7 +2141,7 @@ Obtains the name of the OS account of the caller. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2344,12 +2163,6 @@ try {
 
 ## getOsAccountNameByLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountNameByLocalId(localId: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountNameByLocalId(localId: int): Promise<string>
 ```
@@ -2358,7 +2171,9 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
@@ -2372,7 +2187,7 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Local ID of the target OS account. |
+| localId | int | Yes | Local ID of the target OS account. |
 
 **Return value:**
 
@@ -2384,10 +2199,10 @@ Obtains the name of an OS account based on its local ID. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountType
 
@@ -2397,9 +2212,11 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -2409,14 +2226,14 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2446,9 +2263,11 @@ getOsAccountType(): Promise<OsAccountType>
 
 Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
 
@@ -2464,7 +2283,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2490,13 +2309,7 @@ try {
 getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountType](#getOsAccountType)
-> instead.
+Obtains the type of the account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountType](#getOsAccountType) > instead.
 
 **Since:** 7
 
@@ -2504,7 +2317,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountType](osAccount.AccountManager.getOsAccountType(callback:)
+**Substitutes:** [getOsAccountType](#getOsAccountType)(callback: AsyncCallback&lt;OsAccountType&gt;)
 
 <!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -2514,7 +2327,7 @@ Obtains the type of the account to which the current process belongs. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account type obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2537,12 +2350,7 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
 getOsAccountTypeFromProcess(): Promise<OsAccountType>
 ```
 
-Obtains the type of the account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountType](#getOsAccountType) instead.
+Obtains the type of the account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getOsAccountType](#getOsAccountType) instead.
 
 **Since:** 7
 
@@ -2581,13 +2389,7 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
 ```
 
-Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)
-> instead.
+Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > instead.
 
 **Since:** 8
 
@@ -2595,7 +2397,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int, callback: AsyncCallback&lt;long&gt;)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2606,7 +2408,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
 
 ## getSerialNumberByOsAccountLocalId
 
@@ -2614,13 +2416,7 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 ```
 
-Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId-1)
-> instead.
+Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > instead.
 
 **Since:** 8
 
@@ -2628,7 +2424,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**Substitutes:** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
@@ -2648,21 +2444,17 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 ## getSerialNumberForOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void
 ```
 
 Obtains the SN of an OS account based on the account ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
@@ -2672,35 +2464,31 @@ Obtains the SN of an OS account based on the account ID. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
+| localId | int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the SN obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getSerialNumberForOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSerialNumberForOsAccountLocalId(localId: int): Promise<long>
 ```
 
 Obtains the SN of an OS account based on the account ID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
 
@@ -2710,22 +2498,22 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the SN obtained. |
+| Promise&lt;long&gt; | Promise used to return the SN obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## isMultiOsAccountEnable
 
@@ -2733,13 +2521,7 @@ Obtains the SN of an OS account based on the account ID. This API uses a promise
 isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)
-> instead.
+Checks whether multiple OS accounts are supported. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) > instead.
 
 **Since:** 7
 
@@ -2747,7 +2529,7 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkMultiOsAccountEnabled](osAccount.AccountManager.checkMultiOsAccountEnabled(callback:)
+**Substitutes:** [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -2757,7 +2539,7 @@ Checks whether multiple OS accounts are supported. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means multiple OS accounts are supported; the value **false** means the opposite. |
 
 ## Examples
 
@@ -2780,12 +2562,7 @@ accountManager.isMultiOsAccountEnable((err: BusinessError, isEnabled: boolean) =
 isMultiOsAccountEnable(): Promise<boolean>
 ```
 
-Checks whether multiple OS accounts are supported. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) instead.
+Checks whether multiple OS accounts are supported. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) instead.
 
 **Since:** 7
 
@@ -2824,12 +2601,7 @@ accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
 isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account is activated. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -2837,7 +2609,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**Substitutes:** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2850,7 +2622,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is activated; the value **false** means the opposite. |
 
 ## isOsAccountActived
 
@@ -2858,12 +2630,7 @@ Checks whether an OS account is activated. This API uses an asynchronous callbac
 isOsAccountActived(localId: number): Promise<boolean>
 ```
 
-Checks whether an OS account is activated. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account is activated. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -2871,7 +2638,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**Substitutes:** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2897,12 +2664,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -2910,7 +2672,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**Substitutes:** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2923,8 +2685,8 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the specified constraint is enabled; the value **false** means the opposite. |
 
 ## isOsAccountConstraintEnable
 
@@ -2932,12 +2694,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>
 ```
 
-Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether the specified constraint is enabled for an OS account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -2945,7 +2702,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**Substitutes:** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2958,7 +2715,7 @@ Checks whether the specified constraint is enabled for an OS account. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
 
 **Return value:**
 
@@ -2974,9 +2731,11 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 Checks whether a constraint is enabled for this OS account. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
 
@@ -2986,7 +2745,7 @@ Checks whether a constraint is enabled for this OS account. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
 
 **Return value:**
 
@@ -2998,8 +2757,8 @@ Checks whether a constraint is enabled for this OS account. This API uses a prom
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## isOsAccountUnlocked
 
@@ -3009,9 +2768,11 @@ isOsAccountUnlocked(): Promise<boolean>
 
 Checks whether this OS account is unlocked. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
 
@@ -3027,7 +2788,7 @@ Checks whether this OS account is unlocked. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -3053,13 +2814,7 @@ try {
 isOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountVerified](#checkOsAccountVerified)
-> instead.
+Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkOsAccountVerified](#checkOsAccountVerified) > instead.
 
 **Since:** 7
 
@@ -3067,7 +2822,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(callback:)
+**Substitutes:** [checkOsAccountVerified](#checkOsAccountVerified)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3079,7 +2834,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 ## Examples
 
@@ -3102,12 +2857,7 @@ accountManager.isOsAccountVerified((err: BusinessError, isVerified: boolean) => 
 isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -3115,7 +2865,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**Substitutes:** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3128,7 +2878,7 @@ Checks whether an OS account has been verified. This API uses an asynchronous ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | localId | number | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the OS account has been verified; the value **false** means the opposite. |
 
 ## Examples
 
@@ -3152,12 +2902,7 @@ accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boo
 isOsAccountVerified(localId?: number): Promise<boolean>
 ```
 
-Checks whether an OS account has been verified. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Checks whether an OS account has been verified. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -3165,7 +2910,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**Substitutes:** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3204,13 +2949,7 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 isTestOsAccount(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountTestable](#checkOsAccountTestable)
-> instead.
+Checks whether this OS account is a test account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkOsAccountTestable](#checkOsAccountTestable) > instead.
 
 **Since:** 7
 
@@ -3218,7 +2957,7 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkOsAccountTestable](osAccount.AccountManager.checkOsAccountTestable(callback:)
+**Substitutes:** [checkOsAccountTestable](#checkOsAccountTestable)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
 
@@ -3228,7 +2967,7 @@ Checks whether this OS account is a test account. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the account is a test account; the value **false** means the opposite. |
 
 ## Examples
 
@@ -3251,12 +2990,7 @@ accountManager.isTestOsAccount((err: BusinessError, isTestable: boolean) => {
 isTestOsAccount(): Promise<boolean>
 ```
 
-Checks whether this OS account is a test account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkOsAccountTestable](#checkOsAccountTestable) instead.
+Checks whether this OS account is a test account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkOsAccountTestable](#checkOsAccountTestable) instead.
 
 **Since:** 7
 
@@ -3295,13 +3029,7 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)
-> instead.
+Obtains information about all activated OS accounts. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) > instead.
 
 **Since:** 8
 
@@ -3309,7 +3037,7 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 **Deprecated since:** 9
 
-**Substitutes:** [getActivatedOsAccountLocalIds](osAccount.AccountManager.getActivatedOsAccountLocalIds(callback:)
+**Substitutes:** [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)(callback: AsyncCallback&lt;Array&lt;int&gt;&gt;)
 
 <!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -3319,7 +3047,7 @@ Obtains information about all activated OS accounts. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;number&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of activated OS accounts. Otherwise, **data** is an error object. |
 
 ## Examples
 
@@ -3345,12 +3073,7 @@ accountManager.queryActivatedOsAccountIds((err: BusinessError, idArray: number[]
 queryActivatedOsAccountIds(): Promise<Array<number>>
 ```
 
-Obtains information about all activated OS accounts. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) instead.
+Obtains information about all activated OS accounts. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) instead.
 
 **Since:** 8
 
@@ -3389,12 +3112,7 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -3402,7 +3120,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentOsAccount](osAccount.AccountManager.getCurrentOsAccount(callback:)
+**Substitutes:** [getCurrentOsAccount](#getCurrentOsAccount)(callback: AsyncCallback&lt;OsAccountInfo&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3414,7 +3132,7 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 ## Examples
 
@@ -3437,12 +3155,7 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
 queryCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. The substitute API is available
-> only to system applications.
+Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. The substitute API is available > only to system applications.
 
 **Since:** 7
 
@@ -3485,9 +3198,11 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 Queries the ID of a distributed virtual device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3499,15 +3214,15 @@ Queries the ID of a distributed virtual device. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the distributed virtual device ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -3537,9 +3252,11 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 Queries the ID of this distributed virtual device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3557,8 +3274,8 @@ Queries the ID of this distributed virtual device. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 

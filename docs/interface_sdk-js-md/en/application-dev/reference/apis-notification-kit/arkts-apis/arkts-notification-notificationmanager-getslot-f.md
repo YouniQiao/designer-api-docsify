@@ -12,13 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void
 ```
 
-Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.
-
-This API is used to query the detailed configuration information of a created notification slot,including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
+Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result. This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
@@ -26,27 +26,27 @@ This API is used to query the detailed configuration information of a created no
 
 **See also:**
 
-[addSlot](notificationManager.addSlot(slotType: SlotType,callback: AsyncCallback<void>): void) adds a notification
+addSlot adds a notification
 
-[removeSlot](notificationManager.removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void) removes a notification slot of
+removeSlot removes a notification slot of
 
-[removeAllSlots](notificationManager.removeAllSlots(callback: AsyncCallback): void) removes all notification slots
+removeAllSlots removes all notification slots
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 
@@ -72,13 +72,13 @@ notificationManager.getSlot(slotType, getSlotCallback);
 function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot|null>): void
 ```
 
-Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result.
-
-This API is used to query the detailed configuration information of a created notification slot,including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
+Obtains a notification slot of a specified type. This API uses an asynchronous callback to return the result. This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot|null>): void--><!--Device-notificationManager-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot|null>): void-End-->
 
@@ -86,27 +86,27 @@ This API is used to query the detailed configuration information of a created no
 
 **See also:**
 
-[addSlot](notificationManager.addSlot(slotType: SlotType,callback: AsyncCallback<void>): void) adds a notification
+addSlot adds a notification
 
-[removeSlot](notificationManager.removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void) removes a notification slot of
+removeSlot removes a notification slot of
 
-[removeAllSlots](notificationManager.removeAllSlots(callback: AsyncCallback): void) removes all notification slots
+removeAllSlots removes all notification slots
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | SlotType | Yes | Notification slot type, such as social communication, service reminder, and content consultation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NotificationSlot \| null&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NotificationSlot \| null&gt; | Yes | Callback used to return the result. If the notification slot is obtained successfully, **err** is **undefined** and **data** is the obtained **NotificationSlot**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 
 ## getSlot
@@ -115,13 +115,13 @@ This API is used to query the detailed configuration information of a created no
 function getSlot(slotType: SlotType): Promise<NotificationSlot>
 ```
 
-Obtains a notification slot of a specified type. This API uses a promise to return the result.
-
-This API is used to query the detailed configuration information of a created notification slot,including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
+Obtains a notification slot of a specified type. This API uses a promise to return the result. This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 
@@ -129,11 +129,11 @@ This API is used to query the detailed configuration information of a created no
 
 **See also:**
 
-[addSlot](notificationManager.addSlot(slotType: SlotType): Promise<void>) adds a notification slot of a specified type.
+addSlot adds a notification slot of a specified type.
 
-[removeSlot](notificationManager.removeSlot(slotType: SlotType): Promise<void>) removes a notification
+removeSlot removes a notification
 
-[removeAllSlots](notificationManager.removeAllSlots(): Promise<void>) removes all
+removeAllSlots removes all
 
 **Parameters:**
 
@@ -151,10 +151,10 @@ This API is used to query the detailed configuration information of a created no
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
 ## Examples
 
@@ -176,13 +176,13 @@ notificationManager.getSlot(slotType).then((data: notificationManager.Notificati
 function getSlot(slotType: SlotType): Promise<NotificationSlot|null>
 ```
 
-Obtains a notification slot of a specified type. This API uses a promise to return the result.
-
-This API is used to query the detailed configuration information of a created notification slot,including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
+Obtains a notification slot of a specified type. This API uses a promise to return the result. This API is used to query the detailed configuration information of a created notification slot, including settings such as reminder method, level, and lock screen display. A corresponding type of notification slot must be created first through addSlot, otherwise the obtained result will be empty.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot|null>--><!--Device-notificationManager-function getSlot(slotType: SlotType): Promise<NotificationSlot|null>-End-->
 
@@ -190,11 +190,11 @@ This API is used to query the detailed configuration information of a created no
 
 **See also:**
 
-[addSlot](notificationManager.addSlot(slotType: SlotType): Promise<void>) adds a notification slot of
+addSlot adds a notification slot of
 
-[removeSlot](notificationManager.removeSlot(slotType: SlotType): Promise<void>) removes a notification slot of a
+removeSlot removes a notification slot of a
 
-[removeAllSlots](notificationManager.removeAllSlots(): Promise<void>) removes all notification slots for
+removeAllSlots removes all notification slots for
 
 **Parameters:**
 
@@ -212,8 +212,8 @@ This API is used to query the detailed configuration information of a created no
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 

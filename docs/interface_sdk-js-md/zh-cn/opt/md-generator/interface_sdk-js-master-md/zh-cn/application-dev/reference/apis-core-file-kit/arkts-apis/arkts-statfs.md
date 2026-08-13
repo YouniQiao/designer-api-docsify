@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [statfs](arkts-file-statvfs.md#statfs)
+**替代接口：** [statfs](arkts-file-statvfs.md#@ohos.file.statvfs)
 
 <!--Device-unnamed-declare namespace Statfs--><!--Device-unnamed-declare namespace Statfs-End-->
 
@@ -18,7 +18,7 @@
 
 | 名称 |
 | --- |
-| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes) |
-| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getfreebytes-1) |
-| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes) |
-| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#gettotalbytes-1) |
+| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getFreeBytes) |
+| [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md#getFreeBytes) |
+| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#getTotalBytes) |
+| [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md#getTotalBytes) |

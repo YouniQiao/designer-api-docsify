@@ -4,6 +4,8 @@ Focus Rule Type Enumeration
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export enum FocusRuleType--><!--Device-unnamed-export enum FocusRuleType-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ DEFAULT = 1
 Default focus type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Focus by link type, for example, an element that can be clicked to jump on the w
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FocusRuleType-FOCUS_BY_LINK = 2--><!--Device-FocusRuleType-FOCUS_BY_LINK = 2-End-->
@@ -55,6 +61,8 @@ FOCUS_BY_TITLE = 3
 Focus by title type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

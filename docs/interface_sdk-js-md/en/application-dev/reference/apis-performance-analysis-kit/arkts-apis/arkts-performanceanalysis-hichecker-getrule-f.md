@@ -14,9 +14,11 @@ function getRule() : bigint
 
 Obtains a collection of thread, process, and alarm rules that have been added.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hichecker-function getRule() : bigint--><!--Device-hichecker-function getRule() : bigint-End-->
 

@@ -2,7 +2,9 @@
 
 Represents statistics about SQL statements executed by the database.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface SqlExecutionInfo--><!--Device-relationalStore-interface SqlExecutionInfo-End-->
 
@@ -24,7 +26,9 @@ Time used to execute the SQL statements, in μs.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SqlExecutionInfo-executeTime: long--><!--Device-SqlExecutionInfo-executeTime: long-End-->
 
@@ -40,7 +44,9 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SqlExecutionInfo-prepareTime: long--><!--Device-SqlExecutionInfo-prepareTime: long-End-->
 
@@ -52,11 +58,13 @@ Time used to get the SQL statements ready and bind parameters, in μs.
 sql: Array<string>
 ```
 
-SQL statements executed. If the value of [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert) is too large, multiple SQL statements may be executed.
+SQL statements executed. If the value of [batchInsert] [batchInsert](arkts-arkdata-relationalstore-rdbstore-i.md#batchInsert) is too large, multiple SQL statements may be executed.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SqlExecutionInfo-sql: Array<string>--><!--Device-SqlExecutionInfo-sql: Array<string>-End-->
 
@@ -72,7 +80,9 @@ Total time used to execute the SQL statements, in μs.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SqlExecutionInfo-totalTime: long--><!--Device-SqlExecutionInfo-totalTime: long-End-->
 
@@ -88,7 +98,9 @@ Time used to obtain the handle, in μs.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SqlExecutionInfo-waitTime: long--><!--Device-SqlExecutionInfo-waitTime: long-End-->
 

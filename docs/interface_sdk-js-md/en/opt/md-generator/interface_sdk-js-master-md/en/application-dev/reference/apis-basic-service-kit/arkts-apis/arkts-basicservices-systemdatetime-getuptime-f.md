@@ -14,7 +14,9 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): number
 
 Obtains the time elapsed since system startup. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
 
@@ -37,7 +39,7 @@ Obtains the time elapsed since system startup. This API returns the result synch
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

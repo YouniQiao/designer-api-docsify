@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-dlpPermission-export interface DLPManagerResult--><!--Device-dlpPermission-export interface DLPManagerResult-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -19,6 +21,8 @@ resultCode: number
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ want: Want
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

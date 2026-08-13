@@ -6,6 +6,8 @@ KeyEvent object description.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface KeyEvent--><!--Device-unnamed-declare interface KeyEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Obtains the pressed status of modifier keys.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,25 +50,7 @@ Obtains the pressed status of modifier keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
-
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-KeyEvent-stopPropagation: () => void--><!--Device-KeyEvent-stopPropagation: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## deviceId
 
@@ -80,6 +66,8 @@ ID of the input device that triggers the key event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-deviceId: number--><!--Device-KeyEvent-deviceId: number-End-->
@@ -92,9 +80,7 @@ ID of the input device that triggers the key event.
 intentionCode: IntentionCode
 ```
 
-Intention corresponding to the key.
-
-Default value: **IntentionCode.INTENTION_UNKNOWN**.
+Intention corresponding to the key. Default value: **IntentionCode.INTENTION_UNKNOWN**.
 
 **Type:** [IntentionCode](arkts-arkui-intentioncode-t.md)
 
@@ -103,6 +89,8 @@ Default value: **IntentionCode.INTENTION_UNKNOWN**.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,6 +114,8 @@ CapsLock state. **true**: locked. **false**: unlocked.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -147,6 +137,8 @@ NumLock state. **true**: locked. **false**: unlocked.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,6 +162,8 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -184,14 +178,15 @@ ScrollLock state. **true**: locked. **false**: unlocked.
 keyCode: number
 ```
 
-Key value. For details about the key values provided by the key-based input devices, see  
-[KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode).
+Key value. For details about the key values provided by the key-based input devices, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode).
 
 **Type:** number
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -213,6 +208,8 @@ Type of the input device that triggers the key event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-keySource: KeySource--><!--Device-KeyEvent-keySource: KeySource-End-->
@@ -233,6 +230,8 @@ Name of the key.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-keyText: string--><!--Device-KeyEvent-keyText: string-End-->
@@ -245,7 +244,7 @@ Name of the key.
 metaKey: number
 ```
 
-State of the Meta key (the key located next to the **Ctrl** key in the lower left corner of the keyboard, or the key marked with a window logo) when the key event occurs. The value **1** indicates that the Meta key is pressed,and **0** indicates that it is not pressed.
+State of the Meta key (the key located next to the **Ctrl** key in the lower left corner of the keyboard, or the key marked with a window logo) when the key event occurs. The value **1** indicates that the Meta key is pressed, and **0** indicates that it is not pressed.
 
 **Type:** number
 
@@ -253,9 +252,33 @@ State of the Meta key (the key located next to the **Ctrl** key in the lower lef
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-metaKey: number--><!--Device-KeyEvent-metaKey: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+Blocks [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+
+**Type:** () =&gt; void
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-KeyEvent-stopPropagation: () => void--><!--Device-KeyEvent-stopPropagation: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -272,6 +295,8 @@ Timestamp of the event. It is the interval between the time when the event is tr
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -293,6 +318,8 @@ Key type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-KeyEvent-type: KeyType--><!--Device-KeyEvent-type: KeyType-End-->
@@ -312,6 +339,8 @@ Unicode value of the key. Non-space basic Latin characters in the 0x0021-0x007E 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,20 +2,23 @@
 
 Defines the Extendable Text.
 
-**Inheritance/Implementation:** ExtendableText implements [TextAttribute](arkts-arkui-text-textattribute-i.md#TextAttribute)
+**Inheritance/Implementation:** ExtendableText implements TextAttribute
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-<!--Device-unnamed-export declare abstract class ExtendableText implements TextAttribute--><!--Device-unnamed-export declare abstract class ExtendableText implements TextAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare abstract class ExtendableText--><!--Device-unnamed-export declare abstract class ExtendableText-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $_instantiate
 
 ```TypeScript
-static $_instantiate<T extends ExtendableText>(
+@ComponentBuilder
+    static $_instantiate<T extends ExtendableText>(
       factory: ConstructorT<T>, 
       content?: string | Resource, 
       value?: TextOptions, 
@@ -29,9 +32,11 @@ Constructor of Extendable Text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableText-static $_instantiate<T extends ExtendableText>(      factory: ConstructorT<T>,       content?: string | Resource,       value?: TextOptions,       content_?: CustomBuilder    ): T--><!--Device-ExtendableText-static $_instantiate<T extends ExtendableText>(      factory: ConstructorT<T>,       content?: string | Resource,       value?: TextOptions,       content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableText-@ComponentBuilder    static $_instantiate<T extends ExtendableText>(      factory: ConstructorT<T>,       content?: string | Resource,       value?: TextOptions,       content_?: CustomBuilder    ): T--><!--Device-ExtendableText-@ComponentBuilder    static $_instantiate<T extends ExtendableText>(      factory: ConstructorT<T>,       content?: string | Resource,       value?: TextOptions,       content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -39,10 +44,10 @@ Constructor of Extendable Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
 | content | string \| [Resource](arkts-arkui-resource-t.md) | No |  |
 | value | [TextOptions](arkts-arkui-text-textoptions-i.md) | No |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -53,7 +58,8 @@ Constructor of Extendable Text.
 ## _instantiateImpl
 
 ```TypeScript
-static _instantiateImpl<T extends ExtendableText>(
+@Builder
+    static _instantiateImpl<T extends ExtendableText>(
         styles: CustomBuilderT<T>,  
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -66,11 +72,11 @@ Entry of Extendable Text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableText-static _instantiateImpl<T extends ExtendableText>(        styles: CustomBuilderT<T>,          factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableText-static _instantiateImpl<T extends ExtendableText>(        styles: CustomBuilderT<T>,          factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableText-@Builder    static _instantiateImpl<T extends ExtendableText>(        styles: CustomBuilderT<T>,          factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableText-@Builder    static _instantiateImpl<T extends ExtendableText>(        styles: CustomBuilderT<T>,          factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,9 +84,9 @@ Entry of Extendable Text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| styles | CustomBuilderT&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
+| content_ | CustomBuilder | No |  |
 
 ## setTextOptions
 
@@ -96,6 +102,8 @@ Set the Text Options.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

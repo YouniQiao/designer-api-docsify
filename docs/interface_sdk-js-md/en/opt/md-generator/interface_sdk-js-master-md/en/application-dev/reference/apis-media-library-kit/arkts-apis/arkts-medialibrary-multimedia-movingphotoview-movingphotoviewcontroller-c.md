@@ -4,6 +4,8 @@ Defines the MovingPhotoView controller.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class MovingPhotoViewController--><!--Device-unnamed-export class MovingPhotoViewController-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,6 +26,8 @@ constructor.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewController-constructor()--><!--Device-MovingPhotoViewController-constructor()-End-->
@@ -39,6 +43,8 @@ refreshMovingPhoto()
 refresh moving photo data
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -56,6 +62,8 @@ Start play moving photo.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewController-startPlayback()--><!--Device-MovingPhotoViewController-startPlayback()-End-->
@@ -71,6 +79,8 @@ stopPlayback()
 Stop play moving photo.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

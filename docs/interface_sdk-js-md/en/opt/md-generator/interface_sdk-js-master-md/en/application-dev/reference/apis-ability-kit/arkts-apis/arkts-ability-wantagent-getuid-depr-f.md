@@ -12,7 +12,7 @@ Obtains the UID of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getUid](ohos.app.ability.wantAgent/wantAgent#getUid)
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getUid)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +94,7 @@ Obtains the UID of a WantAgent.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getUid](ohos.app.ability.wantAgent/wantAgent#getUid)
+**Substitutes:** [getUid](arkts-ability-wantagent-getuid-f.md#getUid)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

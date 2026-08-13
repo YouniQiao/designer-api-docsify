@@ -6,6 +6,8 @@ PasswordIcon对象。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface PasswordIcon--><!--Device-unnamed-interface PasswordIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ PasswordIcon对象。
 offIconSrc?: string | Resource
 ```
 
-密码输入模式时，能够切换密码不可见时显示的图标。默认为系统提供的密码图标。
-
-string格式可用于加载网络图片和本地图片。
-
-网络图片支持http或https协议的URL格式；本地图片支持应用资源路径格式。
+密码输入模式时，能够切换密码不可见时显示的图标。默认为系统提供的密码图标。 string格式可用于加载网络图片和本地图片。 网络图片支持http或https协议的URL格式；本地图片支持应用资源路径格式。
 
 **类型：** string \| Resource
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +42,15 @@ string格式可用于加载网络图片和本地图片。
 onIconSrc?: string | Resource
 ```
 
-密码输入模式时，能够切换密码可见时显示的图标。默认为系统提供的密码图标。
-
-string格式可用于加载网络图片和本地图片。
-
-网络图片支持http或https协议的URL格式；本地图片支持应用资源路径格式。
+密码输入模式时，能够切换密码可见时显示的图标。默认为系统提供的密码图标。 string格式可用于加载网络图片和本地图片。 网络图片支持http或https协议的URL格式；本地图片支持应用资源路径格式。
 
 **类型：** string \| Resource
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

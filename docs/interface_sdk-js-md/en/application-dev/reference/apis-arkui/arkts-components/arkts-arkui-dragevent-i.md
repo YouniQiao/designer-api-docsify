@@ -6,6 +6,8 @@ Provides information about the drag event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DragEvent--><!--Device-unnamed-declare interface DragEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,12 +18,13 @@ Provides information about the drag event.
 executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
-Sets the execution function of the custom drop animation. This parameter is valid only when  
-[useCustomDropAnimation](#useCustomDropAnimation) is set to **true**.
+Sets the execution function of the custom drop animation. This parameter is valid only when [useCustomDropAnimation](#useCustomDropAnimation) is set to **true**.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +52,8 @@ Obtains drag-related data.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -67,8 +72,8 @@ Obtains drag-related data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [190002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
-| [190001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-data-not-found) | Data not found. |
+| [190002](../errorcode-drag-event.md#190002-data-retrieval-error) | Data error. |
+| [190001](../errorcode-drag-event.md#190001-data-not-found) | Data not found. |
 
 ## getDisplayId
 
@@ -76,12 +81,13 @@ Obtains drag-related data.
 getDisplayId(): number
 ```
 
-Obtains the ID of the screen where the current drag event occurs. This API is not supported in the  
-[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd) callback.
+Obtains the ID of the screen where the current drag event occurs. This API is not supported in the [onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd) callback.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,6 +115,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -134,6 +142,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,6 +171,8 @@ Obtains the package name of the drag source application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -186,6 +198,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -213,6 +227,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -239,6 +255,8 @@ Obtains the pressed status of modifier keys.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -263,7 +281,7 @@ Obtains the pressed status of modifier keys.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -276,6 +294,8 @@ Obtains the position of the drag preview relative to the current window and the 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -303,6 +323,8 @@ Obtains the drag result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -328,6 +350,8 @@ Obtains a summary of drag data, including data type and size information. In a d
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -355,6 +379,8 @@ Obtains the dragging velocity along the main axis.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -380,6 +406,8 @@ Obtains the dragging velocity along the x-axis.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -407,6 +435,8 @@ Obtains the dragging velocity along the y-axis.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -432,6 +462,8 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -459,6 +491,8 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -479,9 +513,7 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 getX(): number
 ```
 
-Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp.
-
-> **NOTE：**
+Obtains the x-coordinate of the drag point relative to the upper left corner of the window, in vp. > **NOTE：**
 
 **Since:** 7
 
@@ -507,9 +539,7 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 getY(): number
 ```
 
-Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp.
-
-> **NOTE：**
+Obtains the y-coordinate of the drag point relative to the upper left corner of the window, in vp. > **NOTE：**
 
 **Since:** 7
 
@@ -541,6 +571,8 @@ Checks whether the drag operation is cross-device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -567,6 +599,8 @@ Sets drag-related data in **DragEvent**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -587,12 +621,13 @@ Sets drag-related data in **DragEvent**.
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application,the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](#setData), the last called API takes precedence. This API takes effect only in the  
-[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart) callback.
+Sets the parameters for deferred data loading from the drag source. This API provides data loading parameters to the system instead of directly providing complete data objects. When the user drops data on the target application, the system will use these parameters to request the actual data from the drag source. If this API is used together with [setData](#setData), the last called API takes precedence. This API takes effect only in the [onDragStart](arkts-arkui-commonmethod-c.md#onDragStart) callback.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -620,6 +655,8 @@ Sets the drag result in **DragEvent**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -646,6 +683,8 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -670,8 +709,8 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [190003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-operation-not-allowed-in-the-current-phase) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -679,13 +718,15 @@ Asynchronously obtains drag data and notifies you of the current data synchroniz
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-Set the uniqueId or uniqueId array of components that need to be automatically hidden during dragging.This property takes effect only in onDragStart. After the drag starts successfully, the system hides the target components before the drag preview window is shown. Developers need to restore component visibility in onDragEnd or onDrop based on service requirements.
+Set the uniqueId or uniqueId array of components that need to be automatically hidden during dragging. This property takes effect only in onDragStart. After the drag starts successfully, the system hides the target components before the drag preview window is shown. Developers need to restore component visibility in onDragEnd or onDrop based on service requirements.
 
 **Type:** int \| int[]
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -701,9 +742,7 @@ Set the uniqueId or uniqueId array of components that need to be automatically h
 dragBehavior: DragBehavior
 ```
 
-Copy or paste mode.
-
-Default value: **DragBehavior.COPY**
+Copy or paste mode. Default value: **DragBehavior.COPY**
 
 **Type:** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -712,6 +751,8 @@ Default value: **DragBehavior.COPY**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -727,21 +768,15 @@ Default value: **DragBehavior.COPY**
 useCustomDropAnimation: boolean
 ```
 
-Whether to disable the default drop animation when the dragging ends.
-
-If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used.
-
-If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setResult)is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect.
-
-When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts.
-
-Default value: **false**
+Whether to disable the default drop animation when the dragging ends. If this parameter is set to **true**, the default drop animation is disabled, and the custom one is used. If this parameter is not set or is set to **false**, the default drop animation takes effect. When [setResult](#setResult) is set to **DRAG_SUCCESSFUL**, a shrink-out animation takes effect. Otherwise, an expand-out animation takes effect. When the default drop animation is not disabled, avoid implementing custom animations to prevent conflicts. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

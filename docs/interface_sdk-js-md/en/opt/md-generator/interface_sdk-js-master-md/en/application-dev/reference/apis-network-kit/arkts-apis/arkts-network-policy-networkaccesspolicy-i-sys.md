@@ -4,6 +4,8 @@ Network policies that limit the specified UID of application to access the netwo
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-policy-export interface NetworkAccessPolicy--><!--Device-policy-export interface NetworkAccessPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -28,6 +30,8 @@ Indicate whether the application can be allowed to access the network by cellula
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-NetworkAccessPolicy-allowCellular?: boolean--><!--Device-NetworkAccessPolicy-allowCellular?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -45,6 +49,8 @@ Indicate whether the application can be allowed to access the network by wifi.
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-NetworkAccessPolicy-allowWiFi?: boolean--><!--Device-NetworkAccessPolicy-allowWiFi?: boolean-End-->
 
@@ -64,6 +70,8 @@ Indicate whether the application can be always allowed to access the network by 
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-NetworkAccessPolicy-alwaysAllowCellular?: boolean--><!--Device-NetworkAccessPolicy-alwaysAllowCellular?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -81,6 +89,8 @@ Indicate whether the application can be always allowed to access the network by 
 **Type:** boolean
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-NetworkAccessPolicy-alwaysAllowWiFi?: boolean--><!--Device-NetworkAccessPolicy-alwaysAllowWiFi?: boolean-End-->
 

@@ -1,10 +1,12 @@
 # NotificationActionButton
 
-NotificationActionButton模块定义了通知中显示的操作按钮，用于在[NotificationRequest](@link ./notificationRequest::NotificationRequest)中添加交互式操作按钮，让用户通过点击按钮触发WantAgent动作。当开发者需要在通知中提供交互式操作按钮（如"回复"、"标记已读"等）时使用此模块。
+NotificationActionButton模块定义了通知中显示的操作按钮，用于在NotificationRequest中添加 交互式操作按钮，让用户通过点击按钮触发WantAgent动作。当开发者需要在通知中提供交互式操作 按钮（如"回复"、"标记已读"等）时使用此模块。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationActionButton--><!--Device-unnamed-export interface NotificationActionButton-End-->
 
@@ -13,18 +15,20 @@ NotificationActionButton模块定义了通知中显示的操作按钮，用于�
 ## extras
 
 ```TypeScript
-extras?: { [key: string]: any }
+extras?: Record<string, RecordData>
 ```
 
-按钮扩展信息。默认为空。用于存储按钮的自定义扩展数据，应用可按需添加任意键值对信息，如按钮的特定标识、附加数据等。
+按钮扩展信息。默认为空。 用于存储按钮的自定义扩展数据，应用可按需添加任意键值对信息，如按钮的特定标识、附加数据等。
 
-**类型：** { [key: string]: any }
+**类型：** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-NotificationActionButton-extras?: { [key: string]: any }--><!--Device-NotificationActionButton-extras?: { [key: string]: any }-End-->
+**废弃版本：** -1
+
+<!--Device-NotificationActionButton-extras?: Record<string, RecordData>--><!--Device-NotificationActionButton-extras?: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -38,9 +42,11 @@ title: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationActionButton-title: string--><!--Device-NotificationActionButton-title: string-End-->
 
@@ -56,9 +62,11 @@ userInput?: NotificationUserInput
 
 **类型：** [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationActionButton-userInput?: NotificationUserInput--><!--Device-NotificationActionButton-userInput?: NotificationUserInput-End-->
 
@@ -70,13 +78,15 @@ userInput?: NotificationUserInput
 wantAgent: WantAgent
 ```
 
-点击按钮时触发的WantAgent，封装了应用的行为意图。用户点击按钮后，系统将按WantAgent指定的方式执行动作（如跳转至指定UIAbility或发送公共事件）。
+点击按钮时触发的WantAgent，封装了应用的行为意图。用户点击按钮后，系统将按WantAgent指定的方式 执行动作（如跳转至指定UIAbility或发送公共事件）。
 
 **类型：** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationActionButton-wantAgent: WantAgent--><!--Device-NotificationActionButton-wantAgent: WantAgent-End-->
 

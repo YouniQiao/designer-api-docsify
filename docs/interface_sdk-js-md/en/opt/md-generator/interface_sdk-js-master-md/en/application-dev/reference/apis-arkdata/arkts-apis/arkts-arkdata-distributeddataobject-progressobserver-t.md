@@ -6,7 +6,9 @@ type ProgressObserver = (sessionId: string, progress: number) => void
 
 Defines an observer for obtaining the transfer progress.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void--><!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void-End-->
 

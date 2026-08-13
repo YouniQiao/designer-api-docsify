@@ -2,7 +2,9 @@
 
 Enum for locating required data type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum LocatingRequiredDataType--><!--Device-geoLocationManager-export enum LocatingRequiredDataType-End-->
 
@@ -18,7 +20,9 @@ WIFI = 1
 
 Obtains WiFi scanning information for locating.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataType-WIFI = 1--><!--Device-LocatingRequiredDataType-WIFI = 1-End-->
 
@@ -34,7 +38,9 @@ BLUETOOTH = 2
 
 Obtains BT scanning information for locating.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataType-BLUETOOTH = 2--><!--Device-LocatingRequiredDataType-BLUETOOTH = 2-End-->
 
@@ -51,6 +57,8 @@ CELLULAR = 3
 Obtaining cellular cell information for locating.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocatingRequiredDataType-CELLULAR = 3--><!--Device-LocatingRequiredDataType-CELLULAR = 3-End-->
 

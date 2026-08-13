@@ -4,6 +4,8 @@ Provides APIs to check different types of built-in objects, such as ArrayBuffer,
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-util-class types--><!--Device-util-class types-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -23,6 +25,8 @@ constructor()
 A constructor used to create a **Types** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,6 +49,8 @@ isAnyArrayBuffer(value: Object): boolean
 Checks whether the value is of the ArrayBuffer or SharedArrayBuffer type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,6 +88,8 @@ isArgumentsObject(value: Object): boolean
 Checks whether the value is an **arguments** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -123,6 +131,8 @@ Checks whether the value is of the ArrayBuffer type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isArrayBuffer(value: Object): boolean--><!--Device-types-isArrayBuffer(value: Object): boolean-End-->
@@ -159,6 +169,8 @@ isArrayBufferView(value: Object): boolean
 Checks whether the value is of the ArrayBufferView type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -197,6 +209,8 @@ Checks whether the value is an asynchronous function.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isAsyncFunction(value: Object): boolean--><!--Device-types-isAsyncFunction(value: Object): boolean-End-->
@@ -233,6 +247,8 @@ isBigInt64Array(value: Object): boolean
 Checks whether the value is of the BigInt64Array type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -271,6 +287,8 @@ Checks whether the value is of the BigUint64Array type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isBigUint64Array(value: Object): boolean--><!--Device-types-isBigUint64Array(value: Object): boolean-End-->
@@ -304,11 +322,7 @@ console.info("result = " + result);
 isBooleanObject(value: Object): boolean
 ```
 
-Checks whether the value is of the Boolean type.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is of the Boolean type. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -347,11 +361,7 @@ console.info("result = " + result);
 isBoxedPrimitive(value: Object): boolean
 ```
 
-Checks whether the value is of the Boolean, Number, String, or Symbol type.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is of the Boolean, Number, String, or Symbol type. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -394,6 +404,8 @@ Checks whether the value is of the DataView type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isDataView(value: Object): boolean--><!--Device-types-isDataView(value: Object): boolean-End-->
@@ -432,6 +444,8 @@ Checks whether the value is of the Date type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isDate(value: Object): boolean--><!--Device-types-isDate(value: Object): boolean-End-->
@@ -468,6 +482,8 @@ isExternal(value: Object): boolean
 Checks whether the value is of the native external type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -544,6 +560,8 @@ Checks whether the value is of the Float32Array type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isFloat32Array(value: Object): boolean--><!--Device-types-isFloat32Array(value: Object): boolean-End-->
@@ -581,6 +599,8 @@ Checks whether the value is of the Float64Array type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isFloat64Array(value: Object): boolean--><!--Device-types-isFloat64Array(value: Object): boolean-End-->
@@ -617,6 +637,8 @@ isGeneratorFunction(value: Object): boolean
 Checks whether the value is a generator function.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -661,6 +683,8 @@ isGeneratorObject(value: Object): boolean
 Checks whether the value is a generator object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -707,6 +731,8 @@ Checks whether the value is of the Int16Array type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isInt16Array(value: Object): boolean--><!--Device-types-isInt16Array(value: Object): boolean-End-->
@@ -743,6 +769,8 @@ isInt32Array(value: Object): boolean
 Checks whether the value is of the Int32Array type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -781,6 +809,8 @@ Checks whether the value is of the Int8Array type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isInt8Array(value: Object): boolean--><!--Device-types-isInt8Array(value: Object): boolean-End-->
@@ -817,6 +847,8 @@ isMap(value: Object): boolean
 Checks whether the value is of the Map type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -855,6 +887,8 @@ Checks whether the value is of the MapIterator type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isMapIterator(value: Object): boolean--><!--Device-types-isMapIterator(value: Object): boolean-End-->
@@ -892,6 +926,8 @@ isModuleNamespaceObject(value: Object): boolean
 Checks whether the value is a module namespace object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -939,6 +975,8 @@ Checks whether the value is of the Error type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isNativeError(value: Object): boolean--><!--Device-types-isNativeError(value: Object): boolean-End-->
@@ -972,11 +1010,7 @@ console.info("result = " + result);
 isNumberObject(value: Object): boolean
 ```
 
-Checks whether the value is of the Number type.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is of the Number type. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -1019,6 +1053,8 @@ Checks whether the value is a promise.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isPromise(value: Object): boolean--><!--Device-types-isPromise(value: Object): boolean-End-->
@@ -1055,6 +1091,8 @@ isProxy(value: Object): boolean
 Checks whether the value is a proxy.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1097,6 +1135,8 @@ Checks whether the value is of the RegExp type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isRegExp(value: Object): boolean--><!--Device-types-isRegExp(value: Object): boolean-End-->
@@ -1133,6 +1173,8 @@ isSet(value: Object): boolean
 Checks whether the value is of the Set type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1172,6 +1214,8 @@ Checks whether the value is of the SetIterator type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isSetIterator(value: Object): boolean--><!--Device-types-isSetIterator(value: Object): boolean-End-->
@@ -1210,6 +1254,8 @@ Checks whether the value is of the SharedArrayBuffer type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isSharedArrayBuffer(value: Object): boolean--><!--Device-types-isSharedArrayBuffer(value: Object): boolean-End-->
@@ -1243,11 +1289,7 @@ console.info("result = " + result);
 isStringObject(value: Object): boolean
 ```
 
-Checks whether the value is a string object.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is a string object. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -1286,11 +1328,7 @@ console.info("result = " + result);
 isSymbolObject(value: Object): boolean
 ```
 
-Checks whether the value is a symbol object.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+Checks whether the value is a symbol object. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
 
 **Since:** 8
 
@@ -1340,6 +1378,8 @@ Checks whether the value is of the TypedArray type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isTypedArray(value: Object): boolean--><!--Device-types-isTypedArray(value: Object): boolean-End-->
@@ -1376,6 +1416,8 @@ isUint16Array(value: Object): boolean
 Checks whether the value is of the Uint16Array type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1414,6 +1456,8 @@ Checks whether the value is of the Uint32Array type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isUint32Array(value: Object): boolean--><!--Device-types-isUint32Array(value: Object): boolean-End-->
@@ -1450,6 +1494,8 @@ isUint8Array(value: Object): boolean
 Checks whether the value is of the Uint8Array type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1488,6 +1534,8 @@ Checks whether the value is of the Uint8ClampedArray type.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isUint8ClampedArray(value: Object): boolean--><!--Device-types-isUint8ClampedArray(value: Object): boolean-End-->
@@ -1524,6 +1572,8 @@ isWeakMap(value: Object): boolean
 Checks whether the value is of the WeakMap type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1562,6 +1612,8 @@ isWeakSet(value: Object): boolean
 Checks whether the value is of the WeakSet type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

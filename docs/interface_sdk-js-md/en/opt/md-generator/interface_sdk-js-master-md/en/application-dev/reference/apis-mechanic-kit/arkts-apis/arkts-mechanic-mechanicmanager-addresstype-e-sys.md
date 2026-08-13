@@ -4,6 +4,8 @@ Mechanic device address type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-mechanicManager-export enum AddressType--><!--Device-mechanicManager-export enum AddressType-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -19,6 +21,8 @@ BLE_ADDR = 0
 Mechanic device ble address type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

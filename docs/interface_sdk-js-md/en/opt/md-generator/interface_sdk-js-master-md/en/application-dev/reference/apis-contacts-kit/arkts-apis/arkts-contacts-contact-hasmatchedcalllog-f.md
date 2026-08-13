@@ -12,9 +12,11 @@ import { contact } from '@kit.ContactsKit';
 function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: number): Promise<boolean>
 ```
 
-Checks whether there are call records that meet the specified conditions. By default, call records within the last6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result.
+Checks whether there are call records that meet the specified conditions. By default, call records within the last 6 hours are queried. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
@@ -44,13 +46,13 @@ Checks whether there are call records that meet the specified conditions. By def
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -74,9 +76,11 @@ contact.hasMatchedCallLog(context, phoneNumber, minDuration).then((hasMatch:bool
 function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: number, withinTime: number): Promise<boolean>
 ```
 
-Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls.This API uses a promise to return the result.
+Checks whether there are call records that meet the specified conditions. This API applies only to carrier calls. This API uses a promise to return the result.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CHECK_CALL_LOG
 
@@ -107,13 +111,13 @@ Checks whether there are call records that meet the specified conditions. This A
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

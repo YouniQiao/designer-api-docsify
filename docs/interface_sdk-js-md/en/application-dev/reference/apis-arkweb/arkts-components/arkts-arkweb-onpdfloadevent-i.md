@@ -6,6 +6,8 @@ Defines the function triggered when the PDF loading is successful or fails.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnPdfLoadEvent--><!--Device-unnamed-declare interface OnPdfLoadEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ The PDF page loading result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-OnPdfLoadEvent-result: PdfLoadResult--><!--Device-OnPdfLoadEvent-result: PdfLoadResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -41,6 +45,8 @@ URL of the page.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-OnPdfLoadEvent-url: string--><!--Device-OnPdfLoadEvent-url: string-End-->
 

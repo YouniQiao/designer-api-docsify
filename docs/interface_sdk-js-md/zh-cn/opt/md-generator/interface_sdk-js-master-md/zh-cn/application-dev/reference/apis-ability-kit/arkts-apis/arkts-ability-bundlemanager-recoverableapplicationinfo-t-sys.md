@@ -6,7 +6,9 @@ export type RecoverableApplicationInfo = _RecoverableApplicationInfo
 
 预置应用被卸载后可以恢复的预置应用信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-bundleManager-export type RecoverableApplicationInfo = _RecoverableApplicationInfo--><!--Device-bundleManager-export type RecoverableApplicationInfo = _RecoverableApplicationInfo-End-->
 

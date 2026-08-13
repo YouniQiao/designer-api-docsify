@@ -1,8 +1,10 @@
 # Caller
 
-调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall)接口拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
+调用方Caller UIAbility通过[startAbilityByCall](arkts-ability-uiabilitycontext-c.md#startAbilityByCall)接口 拉起目标Callee UIAbility，目标UIAbility启动成功后，返回一个Caller对象给调用方进行通信。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Caller--><!--Device-unnamed-export interface Caller-End-->
 
@@ -16,7 +18,9 @@ call(method: string, data: rpc.Parcelable): Promise<void>
 
 Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,10 +45,10 @@ Caller UIAbility向Callee UIAbility发送双方约定好的序列化的数据。
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200002-通用组件服务端callee无效) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -113,7 +117,9 @@ callWithResult(method: string, data: rpc.Parcelable): Promise<rpc.MessageSequenc
 
 Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成后返回结果。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,10 +144,10 @@ Caller UIAbility向Callee UIAbility发送消息，Callee UIAbility处理完成�
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200002-通用组件服务端callee无效) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -205,15 +211,59 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off('release')
+## offRelease
+
+```TypeScript
+offRelease(callback: OnReleaseCallback): void
+```
+
+取消注册Callee UIAbility断开的通知，与[Caller.onRelease](#onRelease)是反向操作。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-offRelease(callback: OnReleaseCallback): void--><!--Device-Caller-offRelease(callback: OnReleaseCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 |
+
+## offRelease
+
+```TypeScript
+offRelease(): void
+```
+
+取消注册Callee UIAbility断开的通知，与[Caller.onRelease](#onRelease)是反向操作。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-offRelease(): void--><!--Device-Caller-offRelease(): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## off_release
 
 ```TypeScript
 off(type: 'release', callback: OnReleaseCallback): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[on('release')](Caller.on)是反向操作，当前暂未支持。
+取消注册Callee UIAbility断开通知的监听，与[on('release')](#on_release)是反向操作，当前暂未支持。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,7 +282,7 @@ off(type: 'release', callback: OnReleaseCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -266,15 +316,17 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## off('release')
+## off_release
 
 ```TypeScript
 off(type: 'release'): void
 ```
 
-取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')](Caller.on)是反向操作，当前暂未支持。
+取消注册Callee UIAbility断开通知的监听，与[Caller.on('release')](#on_release)是反向操作，当前暂未支持。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -292,7 +344,7 @@ off(type: 'release'): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -327,67 +379,6 @@ export default class MainUIAbility extends UIAbility {
 }
 ```
 
-## on('release')
-
-```TypeScript
-on(type: 'release', callback: OnReleaseCallback): void
-```
-
-Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的监听。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'release' | 是 |
-| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-
-## 示例
-
-```TypeScript
-import { UIAbility, Caller } from '@kit.AbilityKit';
-import { window } from '@kit.ArkUI';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-export default class MainUIAbility extends UIAbility {
-  onWindowStageCreate(windowStage: window.WindowStage) {
-    let dstDeviceId: string = 'xxxx';
-    this.context.startAbilityByCall({
-      bundleName: 'com.example.myservice',
-      abilityName: 'MainUIAbility',
-      deviceId: dstDeviceId
-    }).then((obj) => {
-      let caller: Caller = obj;
-      try {
-        // 注册release事件监听
-        caller.on('release', (str) => {
-          console.info(`Caller OnRelease CallBack is called ${str}`);
-        });
-      } catch (error) {
-        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
-      }
-    }).catch((err: BusinessError) => {
-      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
-    });
-  }
-}
-```
-
 ## onRelease
 
 ```TypeScript
@@ -396,7 +387,9 @@ onRelease(callback: OnReleaseCallback): void
 
 Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的监听。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -414,8 +407,8 @@ Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 ## 示例
 
@@ -455,7 +448,9 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 
 注册协同场景下跨设备组件状态变化监听通知。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -473,8 +468,8 @@ onRemoteStateChange(callback: OnRemoteStateChangeCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 ## 示例
 
@@ -509,6 +504,69 @@ export default class MainAbility extends UIAbility {
 }
 ```
 
+## on_release
+
+```TypeScript
+on(type: 'release', callback: OnReleaseCallback): void
+```
+
+Caller UIAbility可使用该接口注册与Callee UIAbility连接断开通知的监听。
+
+**起始版本：** 9
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void--><!--Device-Caller-on(type: 'release', callback: OnReleaseCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'release' | 是 |
+| callback | [OnReleaseCallback](arkts-ability-app-ability-uiability-onreleasecallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+
+## 示例
+
+```TypeScript
+import { UIAbility, Caller } from '@kit.AbilityKit';
+import { window } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class MainUIAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage) {
+    let dstDeviceId: string = 'xxxx';
+    this.context.startAbilityByCall({
+      bundleName: 'com.example.myservice',
+      abilityName: 'MainUIAbility',
+      deviceId: dstDeviceId
+    }).then((obj) => {
+      let caller: Caller = obj;
+      try {
+        // 注册release事件监听
+        caller.on('release', (str) => {
+          console.info(`Caller OnRelease CallBack is called ${str}`);
+        });
+      } catch (error) {
+        console.error(`Caller.on catch error, error.code: ${error.code}, error.message: ${error.message}`);
+      }
+    }).catch((err: BusinessError) => {
+      console.error(`Caller GetCaller error, error.code: ${err.code}, error.message: ${err.message}`);
+    });
+  }
+}
+```
+
 ## release
 
 ```TypeScript
@@ -517,7 +575,9 @@ release(): void
 
 Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不能再使用call或callWithResult向Callee方发送消息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -529,8 +589,8 @@ Caller主动释放与Callee UIAbility的连接。调用该接口后，Caller不�
 
 | 错误码ID |
 | --- |
-| [16200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200002-通用组件服务端callee无效) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16200002](../errorcode-ability.md#16200002-通用组件服务端callee无效) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
 
 ## 示例
 

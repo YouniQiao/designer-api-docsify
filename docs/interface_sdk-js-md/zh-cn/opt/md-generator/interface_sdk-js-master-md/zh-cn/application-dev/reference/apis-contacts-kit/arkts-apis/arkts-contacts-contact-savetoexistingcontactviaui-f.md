@@ -10,6 +10,8 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
 <!--Device-contact-function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>--><!--Device-contact-function saveToExistingContactViaUI(context: Context, contact: Contact): Promise<number>-End-->
@@ -33,16 +35,16 @@ function saveToExistingContactViaUI(context: Context, contact: Contact): Promise
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [16700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700102-增删改数据库失败) |
-| [16700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700103-用户取消) |
-| [16700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700101-查询数据库失败) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16700102](../errorcode-contacts.md#16700102-增删改数据库失败) |
+| [16700103](../errorcode-contacts.md#16700103-用户取消) |
+| [16700101](../errorcode-contacts.md#16700101-查询数据库失败) |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

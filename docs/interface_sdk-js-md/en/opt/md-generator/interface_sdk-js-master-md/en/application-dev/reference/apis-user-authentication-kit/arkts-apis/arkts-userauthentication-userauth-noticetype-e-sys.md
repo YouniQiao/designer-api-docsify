@@ -2,7 +2,9 @@
 
 Enumerates the notification types of user authentication. This enum defines the notification types supported by the system, which are used to identify the source of a notification.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-userAuth-enum NoticeType--><!--Device-userAuth-enum NoticeType-End-->
 
@@ -18,7 +20,9 @@ WIDGET_NOTICE = 1
 
 The notification is sent by the system authentication widget to notify the user of events related to the authentication framework.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NoticeType-WIDGET_NOTICE = 1--><!--Device-NoticeType-WIDGET_NOTICE = 1-End-->
 

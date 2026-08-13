@@ -1,14 +1,10 @@
 # MarqueeOptions
 
-Describes the initialization options of the **Marquee** component.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Describes the initialization options of the **Marquee** component. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface MarqueeOptions--><!--Device-unnamed-interface MarqueeOptions-End-->
 
@@ -20,15 +16,13 @@ Describes the initialization options of the **Marquee** component.
 delay?: number
 ```
 
-The waiting time between each round of the marquee.
-
-Default value: 0.
-
-Unit: ms.
+The waiting time between each round of the marquee. Default value: 0. Unit: ms.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,19 +40,15 @@ Unit: ms.
 fromStart?: boolean
 ```
 
-Whether the text scrolls from the start.
-
-**true**: Scroll from the start.
-
-**false**: Scroll from the end.
-
-Default value: **true**.
+Whether the text scrolls from the start. **true**: Scroll from the start. **false**: Scroll from the end. Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true [since 18]
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,19 +64,15 @@ Default value: **true**.
 loop?: number
 ```
 
-Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously.
-
-Default value: **-1**
-
-**NOTE：**
-
-Regardless of the value, the marquee scrolls only once on an ArkTS widget.
+Number of times the marquee will scroll. If the value is less than or equal to **0**, the marquee will scroll continuously. Default value: **-1** **NOTE：**Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 
 **Type:** number
 
 **Default:** -1 [since 18]
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -102,13 +88,13 @@ Regardless of the value, the marquee scrolls only once on an ArkTS widget.
 spacing?: LengthMetrics
 ```
 
-The spacing between two rounds of marquee.
-
-Default value is marquee width.
+The spacing between two rounds of marquee. Default value is marquee width.
 
 **Type:** LengthMetrics
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,6 +118,8 @@ Text to scroll.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -146,17 +134,13 @@ Text to scroll.
 start: boolean
 ```
 
-Whether to start scrolling.
-
-**true**: yes; **false**: no
-
-**NOTE：**
-
-This parameter cannot be used to restart scrolling that has been completed.
+Whether to start scrolling. **true**: yes; **false**: no **NOTE：**This parameter cannot be used to restart scrolling that has been completed.
 
 **Type:** boolean
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -172,17 +156,15 @@ This parameter cannot be used to restart scrolling that has been completed.
 step?: number
 ```
 
-Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used.
-
-Default value: **6**
-
-Unit: [vp](common)
+Step length of the scrolling animation text. If the value is greater than the text width of the marquee, the default value is used. Default value: **6** Unit: vp
 
 **Type:** number
 
 **Default:** 6 [since 18]
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

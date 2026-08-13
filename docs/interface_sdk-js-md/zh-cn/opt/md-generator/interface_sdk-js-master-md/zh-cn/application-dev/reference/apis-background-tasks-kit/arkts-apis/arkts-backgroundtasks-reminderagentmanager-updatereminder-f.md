@@ -8,7 +8,9 @@ function updateReminder(reminderId: number, reminderReq: ReminderRequest): Promi
 
 更新指定id的代理提醒，使用Promise异步回调。仅[有效（未过期）](../../../task-management/agent-powered-reminder.md#约束与限制)、未显示在通知中心的代理提醒支持更新。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PUBLISH_AGENT_REMINDER
 
@@ -33,9 +35,9 @@ function updateReminder(reminderId: number, reminderReq: ReminderRequest): Promi
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) |
-| [1700007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) |
 
 ## 示例
 

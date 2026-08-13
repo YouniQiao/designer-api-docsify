@@ -6,6 +6,8 @@ Defines the options of blurStyle
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BlurStyleOptions--><!--Device-unnamed-declare interface BlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Defines the options of blurStyle
 adaptiveColor?: AdaptiveColor
 ```
 
-Adaptive color mode.
-
-Default value: **AdaptiveColor.DEFAULT**
+Adaptive color mode. Default value: **AdaptiveColor.DEFAULT**
 
 **Type:** [AdaptiveColor](arkts-arkui-adaptivecolor-e.md)
 
@@ -27,6 +27,8 @@ Default value: **AdaptiveColor.DEFAULT**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +44,7 @@ Default value: **AdaptiveColor.DEFAULT**
 blurOptions?: BlurOptions
 ```
 
-Grayscale blur parameters.
-
-Default value: **grayscale: [0,0]**
+Grayscale blur parameters. Default value: **grayscale: [0,0]**
 
 **Type:** [BlurOptions](arkts-arkui-bluroptions-i.md)
 
@@ -53,6 +53,8 @@ Default value: **grayscale: [0,0]**
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +70,7 @@ Default value: **grayscale: [0,0]**
 colorMode?: ThemeColorMode
 ```
 
-Color mode used for the foreground blur.
-
-Default value: **ThemeColorMode.SYSTEM**
+Color mode used for the foreground blur. Default value: **ThemeColorMode.SYSTEM**
 
 **Type:** [ThemeColorMode](arkts-arkui-themecolormode-e.md)
 
@@ -79,6 +79,8 @@ Default value: **ThemeColorMode.SYSTEM**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,15 +96,7 @@ Default value: **ThemeColorMode.SYSTEM**
 scale?: number
 ```
 
-Foreground blur scale.
-
-Default value: **1.0**
-
-Value range: [0.0, 1.0]
-
-**1.0** indicates the highest blur degree.
-
-**0.0** indicates the lowest blur degree.
+Foreground blur scale. Default value: **1.0** Value range: [0.0, 1.0] **1.0** indicates the highest blur degree. **0.0** indicates the lowest blur degree.
 
 **Type:** number
 
@@ -111,6 +105,8 @@ Value range: [0.0, 1.0]
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Indicates options for preloading a page.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PreloadOptions--><!--Device-unnamed-declare interface PreloadOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Callback when preloaded page is destroyed by the system.
 **Type:** Callback&lt;void&gt;
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

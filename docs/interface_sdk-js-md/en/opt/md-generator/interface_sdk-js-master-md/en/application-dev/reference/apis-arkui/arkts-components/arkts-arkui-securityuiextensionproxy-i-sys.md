@@ -4,13 +4,15 @@ Implements a **SecurityUIExtensionProxy** instance for the component host to sen
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SecurityUIExtensionProxy--><!--Device-unnamed-declare interface SecurityUIExtensionProxy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
 
-## off('asyncReceiverRegister')
+## off_asyncReceiverRegister
 
 ```TypeScript
 off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -19,6 +21,8 @@ off(type: 'asyncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 Unsubscribes from the callback triggered for the asynchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,7 +39,7 @@ Unsubscribes from the callback triggered for the asynchronous registration of th
 | type | 'asyncReceiverRegister' | Yes |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No |
 
-## off('syncReceiverRegister')
+## off_syncReceiverRegister
 
 ```TypeScript
 off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
@@ -44,6 +48,8 @@ off(type: 'syncReceiverRegister', callback?: Callback<UIExtensionProxy>): void
 Unsubscribes from the callback triggered for the synchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,7 @@ Unsubscribes from the callback triggered for the synchronous registration of the
 | type | 'syncReceiverRegister' | Yes |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | No |
 
-## on('asyncReceiverRegister')
+## on_asyncReceiverRegister
 
 ```TypeScript
 on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -69,6 +75,8 @@ on(type: 'asyncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 Subscribes to the callback triggered for asynchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,7 +93,7 @@ Subscribes to the callback triggered for asynchronous registration of the starte
 | type | 'asyncReceiverRegister' | Yes |
 | callback | Callback&lt;[UIExtensionProxy](arkts-arkui-uiextensionproxy-i-sys.md)&gt; | Yes |
 
-## on('syncReceiverRegister')
+## on_syncReceiverRegister
 
 ```TypeScript
 on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
@@ -94,6 +102,8 @@ on(type: 'syncReceiverRegister', callback: Callback<UIExtensionProxy>): void
 Subscribes to the callback triggered for synchronous registration of the started ability. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +130,8 @@ Asynchronously sends data to the ability started by the component host through t
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityUIExtensionProxy-send(data: Record<string, Object>): void--><!--Device-SecurityUIExtensionProxy-send(data: Record<string, Object>): void-End-->
@@ -132,7 +144,7 @@ Asynchronously sends data to the ability started by the component host through t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 
 ## sendSync
 
@@ -143,6 +155,8 @@ sendSync(data: Record<string, Object>): Record<string, Object>
 Synchronously sends data to the ability started by the component host through the connection established between the two parties.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,17 +170,17 @@ Synchronously sends data to the ability started by the component host through th
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 
 **Return value:**
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; |
+| [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100011-no-synchronous-callback-registered) |
-| [100012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-uiextension.md#100012-data-transfer-failure) |
+| [100011](../errorcode-uiextension.md#100011-no-synchronous-callback-registered) |
+| [100012](../errorcode-uiextension.md#100012-data-transfer-failure) |

@@ -6,6 +6,8 @@ Defines the options of TextArea.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface TextAreaOptions--><!--Device-unnamed-export declare interface TextAreaOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Called when the position of the insertion cursor is set.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextAreaOptions-controller?: TextAreaController--><!--Device-TextAreaOptions-controller?: TextAreaController-End-->
@@ -36,15 +40,15 @@ Called when the position of the insertion cursor is set.
 placeholder?: ResourceStr
 ```
 
-The place holder text string.Text displayed when there is no input.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;When only the placeholder attribute is set, the text selection handle is still available.&lt;br&gt;The caret stays at the beginning of the placeholder text when the handle is released.&lt;/p&gt;
+The place holder text string. Text displayed when there is no input. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;When only the placeholder attribute is set, the text selection handle is still available. &lt;br&gt;The caret stays at the beginning of the placeholder text when the handle is released. &lt;/p&gt;
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,11 +64,13 @@ text?: ResourceStr | Bindable<ResourceStr> | Bindable<Resource> | Bindable<strin
 
 Sets the current value of TextArea.
 
-**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;string&gt;
+**类型：** [ResourceStr](arkts-arkui-resourcestr-t.md) \| [Bindable](../../apis-na/arkts-apis/arkts-na-common-bindable-i.md)&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt; \| [Bindable](../../apis-na/arkts-apis/arkts-na-common-bindable-i.md)&lt;[Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)&gt; \| [Bindable](../../apis-na/arkts-apis/arkts-na-common-bindable-i.md)&lt;string&gt;
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

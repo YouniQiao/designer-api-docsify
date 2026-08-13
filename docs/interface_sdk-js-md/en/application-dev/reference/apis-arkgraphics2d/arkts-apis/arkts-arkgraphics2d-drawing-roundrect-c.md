@@ -1,19 +1,12 @@
 # RoundRect
 
-Rounded rectangle.
+Rounded rectangle. > **NOTE：**> > - The initial APIs of this class are supported since API version 12. > > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 12.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class RoundRect--><!--Device-drawing-class RoundRect-End-->
 
@@ -33,9 +26,11 @@ constructor(roundRect: RoundRect)
 
 Copies a rounded rectangle.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-constructor(roundRect: RoundRect)--><!--Device-RoundRect-constructor(roundRect: RoundRect)-End-->
 
@@ -49,22 +44,17 @@ Copies a rounded rectangle.
 
 ## constructor
 
-ArkTS-Dyn:
-```TypeScript
-constructor(rect: common2D.Rect, xRadii: number, yRadii: number)
-```
-
-ArkTS-Sta:
 ```TypeScript
 constructor(rect: common2D.Rect, xRadii: double, yRadii: double)
 ```
 
-A constructor used to create a **RoundRect** object. A rounded rectangle is created when both **xRadii** and  
-**yRadii** are greater than 0. Otherwise, only a rectangle is created.
+A constructor used to create a **RoundRect** object. A rounded rectangle is created when both **xRadii** and **yRadii** are greater than 0. Otherwise, only a rectangle is created.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)--><!--Device-RoundRect-constructor(rect: common2D.Rect, xRadii: double, yRadii: double)-End-->
 
@@ -75,14 +65,14 @@ A constructor used to create a **RoundRect** object. A rounded rectangle is crea
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rect | common2D.Rect | Yes | Rectangle that encloses the rounded rectangle to create. |
-| xRadii | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
-| yRadii | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
+| xRadii | double | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
+| yRadii | double | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getCorner
 
@@ -95,6 +85,8 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point-End-->
 
@@ -116,7 +108,7 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## getCorner
 
@@ -128,7 +120,9 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined--><!--Device-RoundRect-getCorner(pos: CornerPos): common2D.Point | undefined-End-->
 
@@ -150,25 +144,21 @@ Obtains the radii of the specified rounded corner in this rounded rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offset
 
-ArkTS-Dyn:
-```TypeScript
-offset(dx: number, dy: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 offset(dx: double, dy: double): void
 ```
 
 Translates this rounded rectangle by an offset along the X axis and Y axis.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-offset(dx: double, dy: double): void--><!--Device-RoundRect-offset(dx: double, dy: double): void-End-->
 
@@ -178,32 +168,28 @@ Translates this rounded rectangle by an offset along the X axis and Y axis.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dx | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
-| dy | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
+| dx | double | Yes | Horizontal distance to translate. A positive number indicates a translation towards the positive direction of the X axis, and a negative number indicates a translation towards the negative direction of the X axis. The value is a floating point number. |
+| dy | double | Yes | Vertical distance to translate. A positive number indicates a translation towards the positive direction of the Y axis, and a negative number indicates a translation towards the negative direction of the Y axis. The value is a floating point number. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setCorner
 
-ArkTS-Dyn:
-```TypeScript
-setCorner(pos: CornerPos, x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setCorner(pos: CornerPos, x: double, y: double): void
 ```
 
 Sets the radii of the specified rounded corner in this rounded rectangle.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void--><!--Device-RoundRect-setCorner(pos: CornerPos, x: double, y: double): void-End-->
 
@@ -214,12 +200,12 @@ Sets the radii of the specified rounded corner in this rounded rectangle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pos | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) | Yes | Position of the rounded corner. |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
+| x | double | Yes | Radius of the rounded corner on the X axis. The value is a floating point number. A negative number is invalid. |
+| y | double | Yes | Radius of the rounded corner on the Y axis. The value is a floating point number. A negative number is invalid. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 

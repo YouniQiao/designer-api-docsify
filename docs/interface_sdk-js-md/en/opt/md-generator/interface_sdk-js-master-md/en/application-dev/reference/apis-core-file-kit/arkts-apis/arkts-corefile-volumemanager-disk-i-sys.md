@@ -4,6 +4,8 @@ Disk information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-volumeManager-export interface Disk--><!--Device-volumeManager-export interface Disk-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Volume
@@ -28,6 +30,8 @@ Disk ID, in the disk-{Primary device ID}-{Secondary device ID} format.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Disk-diskId: string--><!--Device-Disk-diskId: string-End-->
@@ -47,6 +51,8 @@ Disk type.
 **Type:** [DiskType](arkts-corefile-volumemanager-disktype-e-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Disk information extension field.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Disk-extraInfo: string--><!--Device-Disk-extraInfo: string-End-->
@@ -88,6 +96,8 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Disk-removable: boolean--><!--Device-Disk-removable: boolean-End-->
@@ -102,11 +112,13 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 sizeBytes: number
 ```
 
-Disk total size.&lt;br&gt;Unit: Byte.
+Disk total size. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,6 +139,8 @@ Indicates the volume of a disk. A disk may contain multiple volumes.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

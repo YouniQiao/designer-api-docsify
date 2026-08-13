@@ -8,7 +8,9 @@ BounceSymbolEffect继承自父类SymbolEffect。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare class BounceSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect extends SymbolEffect-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class BounceSymbolEffect--><!--Device-unnamed-declare class BounceSymbolEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ ScaleSymbolEffect的构造函数，缩放动效。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,15 +51,15 @@ ScaleSymbolEffect的构造函数，缩放动效。
 direction?: EffectDirection
 ```
 
-动效方向。具体枚举值及说明请参考EffectDirection枚举说明。
-
-默认值：EffectDirection.DOWN
+动效方向。具体枚举值及说明请参考EffectDirection枚举说明。 默认值：EffectDirection.DOWN
 
 **类型：** [EffectDirection](arkts-arkui-effectdirection-e.md)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,15 +77,15 @@ direction?: EffectDirection
 scope?: EffectScope
 ```
 
-动效范围。具体枚举值及说明请参考EffectScope枚举说明。
-
-默认值：EffectScope.LAYER
+动效范围。具体枚举值及说明请参考EffectScope枚举说明。 默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Cell information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-geoLocationManager-export interface CellInfo--><!--Device-geoLocationManager-export interface CellInfo-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
@@ -28,6 +30,8 @@ Indicates additional information map.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-additionsMap?: Map<string, string>--><!--Device-CellInfo-additionsMap?: Map<string, string>-End-->
@@ -42,11 +46,13 @@ Indicates additional information map.
 arfcn: number
 ```
 
-Indicates absolute radio frequency channel number (ARFCN).The value should be an integer.
+Indicates absolute radio frequency channel number (ARFCN). The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Indicates ID of cell.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CellInfo-cellId: long--><!--Device-CellInfo-cellId: long-End-->
@@ -82,11 +90,13 @@ Indicates ID of cell.
 lac: number
 ```
 
-Indicates location area code(LAC).The value should be an integer.
+Indicates location area code(LAC). The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,11 +112,13 @@ Indicates location area code(LAC).The value should be an integer.
 mcc: number
 ```
 
-Indicates mobile country code (MCC).The value should be an integer.
+Indicates mobile country code (MCC). The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,11 +134,13 @@ Indicates mobile country code (MCC).The value should be an integer.
 mnc: number
 ```
 
-Indicates mobile network code (MNC).The value should be an integer.
+Indicates mobile network code (MNC). The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,11 +156,13 @@ Indicates mobile network code (MNC).The value should be an integer.
 pci: number
 ```
 
-Indicates physical cell identifier (PCI).The value should be an integer.
+Indicates physical cell identifier (PCI). The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,11 +178,13 @@ Indicates physical cell identifier (PCI).The value should be an integer.
 rat: number
 ```
 
-Indicates radio access technology (RAT).The value should be an integer.
+Indicates radio access technology (RAT). The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,11 +200,13 @@ Indicates radio access technology (RAT).The value should be an integer.
 signalIntensity: number
 ```
 
-Indicates signal intensity.The value should be an integer.
+Indicates signal intensity. The value should be an integer.
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,11 +222,13 @@ Indicates signal intensity.The value should be an integer.
 tac?: number
 ```
 
-Indicates tracking area code (TAC).The value range is all integers.
+Indicates tracking area code (TAC). The value range is all integers.
 
 **Type:** number
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -227,6 +249,8 @@ Indicates timestamp since boot.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

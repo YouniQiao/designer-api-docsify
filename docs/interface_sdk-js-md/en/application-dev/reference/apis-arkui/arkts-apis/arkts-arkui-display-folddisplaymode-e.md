@@ -1,20 +1,12 @@
 # FoldDisplayMode
 
-Enumerates the display modes of a foldable device.
+Enumerates the display modes of a foldable device. > **NOTE：**> For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide- > folding models �� the inner screen's display mode is **FOLD_DISPLAY_MODE_FULL**, and the outer screen's display > mode is **FOLD_DISPLAY_MODE_MAIN**. > For foldable devices where the outer screen serves only as an auxiliary display �� like small-folding models �� the > inner screen's display mode is **FOLD_DISPLAY_MODE_MAIN**, and the outer screen's display mode is > **FOLD_DISPLAY_MODE_SUB**.
 
-> **NOTE：**
+**Since:** 23
 
-> For foldable devices where both the inner and outer screens can serve as the primary screen �� like large or wide-
-> folding models �� the inner screen's display mode is **FOLD_DISPLAY_MODE_FULL**, and the outer screen's display
-> mode is **FOLD_DISPLAY_MODE_MAIN**.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-> For foldable devices where the outer screen serves only as an auxiliary display �� like small-folding models �� the
-> inner screen's display mode is **FOLD_DISPLAY_MODE_MAIN**, and the outer screen's display mode is
-> **FOLD_DISPLAY_MODE_SUB**.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-display-enum FoldDisplayMode--><!--Device-display-enum FoldDisplayMode-End-->
 
@@ -28,9 +20,11 @@ FOLD_DISPLAY_MODE_UNKNOWN = 0
 
 The display mode of the device is unknown.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,9 +40,11 @@ FOLD_DISPLAY_MODE_FULL = 1
 
 The device is displayed in full screen.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,9 +60,11 @@ FOLD_DISPLAY_MODE_MAIN = 2
 
 The primary screen of the device is displayed.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,9 +80,11 @@ FOLD_DISPLAY_MODE_SUB = 3
 
 The secondary screen of the device is displayed.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -100,9 +100,11 @@ FOLD_DISPLAY_MODE_COORDINATION
 
 Both screens of the device are displayed in collaborative mode.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

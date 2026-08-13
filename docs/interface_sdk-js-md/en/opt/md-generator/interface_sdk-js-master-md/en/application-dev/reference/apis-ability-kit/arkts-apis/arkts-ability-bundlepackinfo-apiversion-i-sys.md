@@ -2,7 +2,9 @@
 
 ApiVersion: the bundle Api version class.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ApiVersion--><!--Device-unnamed-export interface ApiVersion-End-->
 
@@ -20,7 +22,9 @@ Minimum API version.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly compatible: int--><!--Device-ApiVersion-readonly compatible: int-End-->
 
@@ -38,7 +42,9 @@ Name of the API version.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly releaseType: string--><!--Device-ApiVersion-readonly releaseType: string-End-->
 
@@ -56,7 +62,9 @@ Target API version.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApiVersion-readonly target: int--><!--Device-ApiVersion-readonly target: int-End-->
 

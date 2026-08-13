@@ -2,9 +2,11 @@
 
 Defines the response to the request.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-rpc-interface RequestResult--><!--Device-rpc-interface RequestResult-End-->
 
@@ -24,11 +26,13 @@ code: int
 
 Message code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-code: int--><!--Device-RequestResult-code: int-End-->
 
@@ -44,9 +48,11 @@ data: MessageSequence
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-data: MessageSequence--><!--Device-RequestResult-data: MessageSequence-End-->
 
@@ -60,11 +66,13 @@ errCode: int
 
 Error code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-errCode: int--><!--Device-RequestResult-errCode: int-End-->
 
@@ -80,9 +88,11 @@ reply: MessageSequence
 
 **Type:** [MessageSequence](arkts-ipc-rpc-messagesequence-c.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RequestResult-reply: MessageSequence--><!--Device-RequestResult-reply: MessageSequence-End-->
 

@@ -2,7 +2,9 @@
 
 Enumerates call waiting states.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum CallWaitingStatus--><!--Device-call-export enum CallWaitingStatus-End-->
 
@@ -18,7 +20,9 @@ CALL_WAITING_DISABLE = 0
 
 Call waiting disabled.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallWaitingStatus-CALL_WAITING_DISABLE = 0--><!--Device-CallWaitingStatus-CALL_WAITING_DISABLE = 0-End-->
 
@@ -34,7 +38,9 @@ CALL_WAITING_ENABLE = 1
 
 Call waiting enabled.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallWaitingStatus-CALL_WAITING_ENABLE = 1--><!--Device-CallWaitingStatus-CALL_WAITING_ENABLE = 1-End-->
 

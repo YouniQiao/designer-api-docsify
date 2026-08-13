@@ -2,9 +2,11 @@
 
 Define pattern options of keyboard.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PatternOptions--><!--Device-unnamed-export interface PatternOptions-End-->
 
@@ -18,31 +20,23 @@ import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
 
 ## action
 
-ArkTS-Dyn:
-```TypeScript
-action: (index: number) => void
-```
-
-ArkTS-Sta:
 ```TypeScript
 action: (index: int) => void
 ```
 
 Mandatory. Callback invoked when the pattern option changes.
 
-**Since:** 11
+**Type:** (index: int) =&gt; void
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PatternOptions-action: (index: int) => void--><!--Device-PatternOptions-action: (index: int) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes |  |
 
 ## defaultSelected
 
@@ -52,11 +46,13 @@ defaultSelected?: int
 
 Optional. Default selected pattern.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PatternOptions-defaultSelected?: int--><!--Device-PatternOptions-defaultSelected?: int-End-->
 
@@ -72,9 +68,11 @@ Mandatory. Resource of the pattern option.
 
 **Type:** Array&lt;[Pattern](arkts-ime-inputmethodlist-pattern-i.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PatternOptions-patterns: Array<Pattern>--><!--Device-PatternOptions-patterns: Array<Pattern>-End-->
 

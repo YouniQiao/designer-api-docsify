@@ -2,7 +2,9 @@
 
 Enumerates the connection states of the proxy channel.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-proxyChannelManager-enum ChannelState--><!--Device-proxyChannelManager-enum ChannelState-End-->
 
@@ -16,7 +18,9 @@ CHANNEL_WAIT_RESUME = 0
 
 The connection is disconnected, and the channel is unavailable.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ CHANNEL_RESUME = 1
 
 The connection is restored, and the channel is available.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ CHANNEL_EXCEPTION_SOFTWARE_FAILED = 2
 
 The channel is unavailable due to other software errors.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ CHANNEL_BR_NO_PAIRED = 3
 
 The Bluetooth pairing relationship is deleted, and the channel is unavailable.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

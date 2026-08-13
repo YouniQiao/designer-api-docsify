@@ -1,10 +1,12 @@
 # KeyProcessingMode
 
-Key processing mode.Determines the priority of key event processing when component cannot handle the key event.
+Key processing mode. Determines the priority of key event processing when component cannot handle the key event.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum KeyProcessingMode--><!--Device-unnamed-export declare enum KeyProcessingMode-End-->
 
@@ -21,6 +23,8 @@ Key events are used to move focus.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Key events bubble up to ancestors.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

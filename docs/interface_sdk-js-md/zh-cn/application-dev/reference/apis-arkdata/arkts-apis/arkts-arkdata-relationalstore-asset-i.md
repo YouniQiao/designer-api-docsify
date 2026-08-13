@@ -2,9 +2,11 @@
 
 记录资产附件（文件、图片、视频等类型文件）的相关信息。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface Asset--><!--Device-relationalStore-interface Asset-End-->
 
@@ -20,9 +22,11 @@ createTime: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
 
@@ -38,9 +42,11 @@ modifyTime: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
 
@@ -56,9 +62,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
 
@@ -74,9 +82,11 @@ path: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
 
@@ -88,13 +98,15 @@ path: string
 size: string
 ```
 
-资产占用空间的大小。在端云同步机制中，本字段作为判定资产是否发生变更的关键依据之一，需确保在全链路中保持统一、一致的存储格式与取值逻辑。建议所有系统节点均采用标准化处理方式（单位为字节（Byte），取值为非负整数），避免因格式差异导致同步异常或误判。
+资产占用空间的大小。在端云同步机制中，本字段作为判定资产是否发生变更的关键依据之一，需确保在全链路中保持统一、一致的存储格式与取值逻辑。建议所有系统节点均采用标准化处理方式（单位为字节（Byte），取值为非负整数），避免因格式 差异导致同步异常或误判。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
 
@@ -110,9 +122,11 @@ status?: AssetStatus
 
 **类型：** AssetStatus
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
 
@@ -128,9 +142,11 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
 

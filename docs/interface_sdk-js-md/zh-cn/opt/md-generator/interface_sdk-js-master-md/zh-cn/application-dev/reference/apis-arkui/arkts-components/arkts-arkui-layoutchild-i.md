@@ -6,7 +6,7 @@
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 <!--Device-unnamed-declare interface LayoutChild--><!--Device-unnamed-declare interface LayoutChild-End-->
 
@@ -24,7 +24,7 @@ layout(childLayoutInfo: LayoutInfo)
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -50,7 +50,7 @@ measure(childConstraint: ConstraintSizeOptions)
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -78,7 +78,7 @@ borderInfo: LayoutBorderInfo
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -100,7 +100,7 @@ constraint: ConstraintSizeOptions
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -122,7 +122,7 @@ id: string
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -144,7 +144,7 @@ name: string
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
@@ -166,7 +166,7 @@ position: Position
 
 **废弃版本：** 10
 
-**替代接口：** [Measurable/Layoutable](Measurable/Layoutable)
+**替代接口：** Measurable/Layoutable
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 

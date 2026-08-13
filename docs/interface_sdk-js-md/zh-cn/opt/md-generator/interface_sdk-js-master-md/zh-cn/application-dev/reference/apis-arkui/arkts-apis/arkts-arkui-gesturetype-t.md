@@ -15,6 +15,8 @@ Defines the Gesture Type.
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare type GestureType =  TapGestureInterface  | LongPressGestureInterface  | PanGestureInterface  | PinchGestureInterface  | SwipeGestureInterface  | RotationGestureInterface  | GestureGroupInterface--><!--Device-unnamed-declare type GestureType =  TapGestureInterface  | LongPressGestureInterface  | PanGestureInterface  | PinchGestureInterface  | SwipeGestureInterface  | RotationGestureInterface  | GestureGroupInterface-End-->

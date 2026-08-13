@@ -2,7 +2,9 @@
 
 CMS KeyAgree类型接收者摘要算法的枚举。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm--><!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm-End-->
 
@@ -16,9 +18,11 @@ SHA256 = 0
 
 SHA256算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0-End-->
 
@@ -32,9 +36,11 @@ SHA384 = 1
 
 SHA384算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1-End-->
 
@@ -48,9 +54,11 @@ SHA512 = 2
 
 SHA512算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2-End-->
 

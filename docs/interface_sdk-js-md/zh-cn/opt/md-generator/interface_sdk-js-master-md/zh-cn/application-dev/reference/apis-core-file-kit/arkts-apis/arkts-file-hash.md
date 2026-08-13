@@ -2,7 +2,9 @@
 
 该模块提供文件哈希处理能力，对文件内容进行哈希处理。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace hash--><!--Device-unnamed-declare namespace hash-End-->
 
@@ -14,9 +16,9 @@
 
 | 名称 |
 | --- |
-| [createHash](arkts-corefile-hash-createhash-f.md#createhash) |
+| [createHash](arkts-corefile-hash-createhash-f.md#createHash) |
 | [hash](arkts-corefile-hash-f.md#hash) |
-| [hash](arkts-corefile-hash-f.md#hash-1) |
+| [hash](arkts-corefile-hash-f.md#hash) |
 
 ### 类
 

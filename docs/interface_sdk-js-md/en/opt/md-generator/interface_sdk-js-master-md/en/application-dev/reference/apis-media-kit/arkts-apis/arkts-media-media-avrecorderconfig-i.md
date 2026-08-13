@@ -1,10 +1,10 @@
 # AVRecorderConfig
 
-Describes the audio and video recording parameters.
+Describes the audio and video recording parameters. The **audioSourceType** and **videoSourceType** parameters are used to distinguish audio-only recording, video-only recording, and audio and video recording. For audio-only recording, set only **audioSourceType**. For video-only recording, set only **videoSourceType**. For audio and video recording, set both **audioSourceType** and **videoSourceType**.
 
-The **audioSourceType** and **videoSourceType** parameters are used to distinguish audio-only recording,video-only recording, and audio and video recording. For audio-only recording, set only **audioSourceType**.For video-only recording, set only **videoSourceType**. For audio and video recording, set both **audioSourceType**and **videoSourceType**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-media-interface AVRecorderConfig--><!--Device-media-interface AVRecorderConfig-End-->
 
@@ -22,11 +22,13 @@ import { media } from '@kit.MediaKit';
 audioSourceType?: AudioSourceType
 ```
 
-Type of the audio source to record. This parameter is mandatory for audio recording.&lt;br&gt;**Atomic service API**:This API can be used in atomic services since API version 12.
+Type of the audio source to record. This parameter is mandatory for audio recording.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,7 +46,9 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 
 **Type:** [FileGenerationMode](arkts-media-media-filegenerationmode-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode--><!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode-End-->
 
@@ -56,8 +60,7 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 location?: Location
 ```
 
-Geographical location of the recorded video. By default, the geographical location information is not recorded.&lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use  
-**AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
+Geographical location of the recorded video. By default, the geographical location information is not recorded. &lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
 
 **Type:** Location
 
@@ -65,7 +68,7 @@ Geographical location of the recorded video. By default, the geographical locati
 
 **Deprecated since:** 12
 
-**Substitutes:** [location](ohos.multimedia.media/media.AVMetadata#location)
+**Substitutes:** [location](arkts-media-media-avmetadata-i.md#location)
 
 <!--Device-AVRecorderConfig-location?: Location--><!--Device-AVRecorderConfig-location?: Location-End-->
 
@@ -77,11 +80,13 @@ Geographical location of the recorded video. By default, the geographical locati
 maxDuration?: number
 ```
 
-Maximum recording duration, in seconds. The value range is [1, 2^31-1]. If an invalid value is provided,it is reset to the maximum allowed duration. Once the recording reaches the specified duration,it stops automatically and notifies via the **stateChange** callback that the recording has stopped:AVRecorderState = 'stopped', StateChangeReason = BACKGROUND.
+Maximum recording duration, in seconds. The value range is [1, 2^31-1]. If an invalid value is provided, it is reset to the maximum allowed duration. Once the recording reaches the specified duration, it stops automatically and notifies via the **stateChange** callback that the recording has stopped: AVRecorderState = 'stopped', StateChangeReason = BACKGROUND.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderConfig-maxDuration?: int--><!--Device-AVRecorderConfig-maxDuration?: int-End-->
 
@@ -97,7 +102,9 @@ Metadata. For details, see @AVMetadata.
 
 **Type:** AVMetadata
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderConfig-metadata?: AVMetadata--><!--Device-AVRecorderConfig-metadata?: AVMetadata-End-->
 
@@ -113,7 +120,9 @@ Recording profile. This parameter is mandatory.&lt;br&gt;**Atomic service API**:
 
 **Type:** [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -127,8 +136,7 @@ Recording profile. This parameter is mandatory.&lt;br&gt;**Atomic service API**:
 rotation?: number
 ```
 
-Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos.&lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use.  
-**AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
+Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. &lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
 
 **Type:** number
 
@@ -148,11 +156,13 @@ Rotation angle of the recorded video, in degrees. The value can be 0 (default), 
 url: string
 ```
 
-Recording output URL: fd://xx (fd number).&lt;br&gt;This parameter is mandatory.&lt;br&gt;**Atomic service API**:This API can be used in atomic services since API version 12.
+Recording output URL: fd://xx (fd number).&lt;br&gt;This parameter is mandatory.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -170,7 +180,9 @@ Type of the video source to record. This parameter is mandatory for video record
 
 **Type:** [VideoSourceType](arkts-media-media-videosourcetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType--><!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType-End-->
 

@@ -6,6 +6,8 @@ Defines data panel configuration options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DataPanelOptions--><!--Device-unnamed-declare interface DataPanelOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Defines data panel configuration options.
 max?: number
 ```
 
-- When set to a value greater than 0, this parameter indicates the maximum value in the **values** list.  
-- When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values**  
-list, and the values are displayed proportionally based on their relative sizes.
-
-Default value: **100**
+- When set to a value greater than 0, this parameter indicates the maximum value in the **values** list. - When set to a value equal to or smaller than 0, this parameter indicates the sum of values in the **values** list, and the values are displayed proportionally based on their relative sizes. Default value: **100**
 
 **Type:** number
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,15 +42,15 @@ Default value: **100**
 type?: DataPanelType
 ```
 
-Type of the data panel (dynamic modification is not supported).
-
-Default value: **DataPanelType.Circle**
+Type of the data panel (dynamic modification is not supported). Default value: **DataPanelType.Circle**
 
 **Type:** [DataPanelType](arkts-arkui-datapaneltype-e.md)
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -73,6 +73,8 @@ Data value list. A maximum of nine values are supported. If more than nine value
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

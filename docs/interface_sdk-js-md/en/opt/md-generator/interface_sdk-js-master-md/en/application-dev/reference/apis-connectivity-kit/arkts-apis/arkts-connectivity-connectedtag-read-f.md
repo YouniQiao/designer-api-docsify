@@ -16,6 +16,8 @@ Reads the NDEF data from the connected NFC tag.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.NFC_TAG
 
 <!--Device-connectedTag-function read(): Promise<number[]>--><!--Device-connectedTag-function read(): Promise<number[]>-End-->
@@ -32,9 +34,9 @@ Reads the NDEF data from the connected NFC tag.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3200101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -60,6 +62,8 @@ Reads the NDEF data from the connected NFC tag.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.NFC_TAG
 
 <!--Device-connectedTag-function read(callback: AsyncCallback<number[]>): void--><!--Device-connectedTag-function read(callback: AsyncCallback<number[]>): void-End-->
@@ -76,9 +80,9 @@ Reads the NDEF data from the connected NFC tag.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3200101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3200101](../errorcode-nfc.md#3200101-abnormal-active-nfc-tag-status) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

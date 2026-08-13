@@ -1,12 +1,12 @@
 # AVRecorderConfig
 
-音视频录制的参数。
+音视频录制的参数。 audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频录制和音视频录制。纯音频录制仅设置audioSourceType。纯视频录制仅设置videoSourceType。音视频录制需同时设置audioSourceType和videoSourceType。
 
-audioSourceType和videoSourceType参数用于区分纯音频录制、纯视频录制和音视频录制。纯音频录制仅设置audioSourceType。纯视频录制仅设置videoSourceType。音视频录制需同时设置audioSourceType和videoSourceType。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-unnamed-interface AVRecorderConfig--><!--Device-unnamed-interface AVRecorderConfig-End-->
 
@@ -22,9 +22,11 @@ audioSourceType?: AudioSourceType
 
 **类型：** [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -42,9 +44,11 @@ fileGenerationMode?: FileGenerationMode
 
 **类型：** [FileGenerationMode](arkts-media-multimedia-media-filegenerationmode-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode--><!--Device-AVRecorderConfig-fileGenerationMode?: FileGenerationMode-End-->
 
@@ -66,7 +70,7 @@ location?: Location
 
 **废弃版本：** 12
 
-**替代接口：** [location](ohos.multimedia.media/media.AVMetadata#location)
+**替代接口：** [location](arkts-media-media-avmetadata-i.md#location)
 
 <!--Device-AVRecorderConfig-location?: Location--><!--Device-AVRecorderConfig-location?: Location-End-->
 
@@ -80,11 +84,13 @@ maxDuration?: int
 
 最大录制时长，单位为秒。取值范围为[1, 2^31-1]。如果提供了无效值，将重置为最大允许时长。一旦录制达到指定时长，将自动停止并通过**stateChange**回调通知录制已停止：AVRecorderState = 'stopped'，StateChangeReason = BACKGROUND。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-maxDuration?: int--><!--Device-AVRecorderConfig-maxDuration?: int-End-->
 
@@ -100,9 +106,11 @@ metadata?: AVMetadata
 
 **类型：** AVMetadata
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-metadata?: AVMetadata--><!--Device-AVRecorderConfig-metadata?: AVMetadata-End-->
 
@@ -118,9 +126,11 @@ profile: AVRecorderProfile
 
 **类型：** [AVRecorderProfile](arkts-media-multimedia-media-avrecorderprofile-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -160,9 +170,11 @@ url: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -180,9 +192,11 @@ videoSourceType?: VideoSourceType
 
 **类型：** [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType--><!--Device-AVRecorderConfig-videoSourceType?: VideoSourceType-End-->
 

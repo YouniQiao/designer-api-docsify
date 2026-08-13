@@ -2,7 +2,9 @@
 
 Describes the information about the display density of the screen where the window is located and the window's custom display density. It is a scale factor independent of pixel units, that is, a factor for scaling display size.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface WindowDensityInfo--><!--Device-window-interface WindowDensityInfo-End-->
 
@@ -20,14 +22,15 @@ import { window } from '@kit.ArkUI';
 customDensity: number
 ```
 
-Custom display size scale factor of the window. The value ranges from 0.5 to 4.0. If this parameter is left unspecified, the system's display size scale factor is used. This parameter takes effect only for the main window. For the child window or system window, it is equivalent to the system's display size scale factor (  
-**systemDensity**).
+Custom display size scale factor of the window. The value ranges from 0.5 to 4.0. If this parameter is left unspecified, the system's display size scale factor is used. This parameter takes effect only for the main window. For the child window or system window, it is equivalent to the system's display size scale factor ( **systemDensity**).
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowDensityInfo-customDensity: double--><!--Device-WindowDensityInfo-customDensity: double-End-->
 
@@ -39,13 +42,15 @@ Custom display size scale factor of the window. The value ranges from 0.5 to 4.0
 defaultDensity: number
 ```
 
-Default display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0and varies with the screen.
+Default display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0 and varies with the screen.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowDensityInfo-defaultDensity: double--><!--Device-WindowDensityInfo-defaultDensity: double-End-->
 
@@ -57,13 +62,15 @@ Default display size scale factor for the screen where the window is located. Th
 systemDensity: number
 ```
 
-System's display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0and varies according to user settings.
+System's display size scale factor for the screen where the window is located. The value ranges from 0.5 to 4.0 and varies according to user settings.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowDensityInfo-systemDensity: double--><!--Device-WindowDensityInfo-systemDensity: double-End-->
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ValueType](ohos.data.distributedKVStore.ValueType)
+**替代接口：** ValueType
 
 <!--Device-distributedData-enum ValueType--><!--Device-distributedData-enum ValueType-End-->
 
@@ -24,7 +24,7 @@ STRING = 0
 
 **废弃版本：** 9
 
-**替代接口：** [STRING](ohos.data.distributedKVStore.ValueType#STRING)
+**替代接口：** STRING
 
 <!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
 
@@ -42,7 +42,7 @@ INTEGER = 1
 
 **废弃版本：** 9
 
-**替代接口：** [INTEGER](ohos.data.distributedKVStore.ValueType#INTEGER)
+**替代接口：** INTEGER
 
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
@@ -60,7 +60,7 @@ FLOAT = 2
 
 **废弃版本：** 9
 
-**替代接口：** [FLOAT](ohos.data.distributedKVStore.ValueType#FLOAT)
+**替代接口：** FLOAT
 
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
@@ -78,7 +78,7 @@ BYTE_ARRAY = 3
 
 **废弃版本：** 9
 
-**替代接口：** [BYTE_ARRAY](ohos.data.distributedKVStore.ValueType#BYTE_ARRAY)
+**替代接口：** BYTE_ARRAY
 
 <!--Device-ValueType-BYTE_ARRAY = 3--><!--Device-ValueType-BYTE_ARRAY = 3-End-->
 
@@ -96,7 +96,7 @@ BOOLEAN = 4
 
 **废弃版本：** 9
 
-**替代接口：** [BOOLEAN](ohos.data.distributedKVStore.ValueType#BOOLEAN)
+**替代接口：** BOOLEAN
 
 <!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
 
@@ -114,7 +114,7 @@ DOUBLE = 5
 
 **废弃版本：** 9
 
-**替代接口：** [DOUBLE](ohos.data.distributedKVStore.ValueType#DOUBLE)
+**替代接口：** DOUBLE
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
 

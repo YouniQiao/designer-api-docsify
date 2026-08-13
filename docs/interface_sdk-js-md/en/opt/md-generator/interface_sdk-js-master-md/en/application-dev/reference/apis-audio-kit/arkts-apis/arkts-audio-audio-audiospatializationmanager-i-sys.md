@@ -2,7 +2,9 @@
 
 Implements audio spatialization management.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
 
@@ -23,6 +25,8 @@ downloadPersonalizedHRTF(hrtfDescriptor: AudioHRTFAnonymousDescriptor): Promise<
 Downloads personalized HRTF data from anonymous file descriptor.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -50,12 +54,12 @@ Downloads personalized HRTF data from anonymous file descriptor.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
-| [6800105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800105-processing-timeout) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
+| [6800105](../errorcode-audio.md#6800105-processing-timeout) |
 
 ## getCurrentSpatialAudioSourceType
 
@@ -66,6 +70,8 @@ getCurrentSpatialAudioSourceType(): SpatialAudioSourceType
 Gets the current spatial audio source type.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,7 +91,7 @@ Gets the current spatial audio source type.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getSpatializationSceneType
 
@@ -95,7 +101,9 @@ getSpatializationSceneType(): AudioSpatializationSceneType
 
 Get spatialization rendering scene type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType--><!--Device-AudioSpatializationManager-getSpatializationSceneType(): AudioSpatializationSceneType-End-->
 
@@ -113,7 +121,7 @@ Get spatialization rendering scene type.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -140,6 +148,8 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -162,8 +172,8 @@ Checks whether the adaptive spatial rendering is enabled by the specified device
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isHeadTrackingEnabled
 
@@ -195,7 +205,7 @@ Checks whether the head tracking is enabled.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -220,7 +230,9 @@ isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 
 Checks whether the head tracking is enabled by the specified device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -244,9 +256,9 @@ Checks whether the head tracking is enabled by the specified device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -286,7 +298,9 @@ isHeadTrackingSupported(): boolean
 
 Checks whether head tracking is supported by system.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupported(): boolean-End-->
 
@@ -304,7 +318,7 @@ Checks whether head tracking is supported by system.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -329,7 +343,9 @@ isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boole
 
 Checks whether head tracking is supported by the specified device.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isHeadTrackingSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -353,9 +369,9 @@ Checks whether head tracking is supported by the specified device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -397,6 +413,8 @@ Checks whether the personalized spatialization is enabled by the specified devic
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor): boolean-End-->
@@ -421,8 +439,8 @@ Checks whether the personalized spatialization is enabled by the specified devic
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isPersonalizedSpatializationSupported
 
@@ -433,6 +451,8 @@ isPersonalizedSpatializationSupported(): boolean
 Checks whether personalized spatialization is supported by system.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -452,7 +472,7 @@ Checks whether personalized spatialization is supported by system.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isSpatializationEnabled
 
@@ -484,7 +504,7 @@ Checks whether the spatialization is enabled.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -509,7 +529,9 @@ isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean
 
 Checks whether the spatialization is enabled by the specified device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -533,9 +555,9 @@ Checks whether the spatialization is enabled by the specified device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -575,7 +597,9 @@ isSpatializationSupported(): boolean
 
 Checks whether spatialization is supported by system.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupported(): boolean-End-->
 
@@ -593,7 +617,7 @@ Checks whether spatialization is supported by system.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -617,7 +641,9 @@ isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boo
 
 Checks whether spatialization is supported by the specified device.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioSpatializationManager-isSpatializationSupportedForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -641,9 +667,9 @@ Checks whether spatialization is supported by the specified device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -675,21 +701,19 @@ try {
 }
 ```
 
-## off('spatializationEnabledChange')
+## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
 
 ```TypeScript
-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
+offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Unsubscribes to the spatialization enable state change events.
+Unsubscribes to the adaptive spatial rendering enable state change events by the specified device.
 
-**Since:** 11
+**Since:** 24
 
-**Deprecated since:** 12
+**Deprecated since:** -1
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
+<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -699,84 +723,144 @@ Unsubscribes to the spatialization enable state change events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'spatializationEnabledChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-// Cancel all subscriptions to the event.
-audioSpatializationManager.off('spatializationEnabledChange');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
-  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
-
-audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
-```
-
-## off('spatializationEnabledChangeForAnyDevice')
-
-```TypeScript
-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Unsubscribes to the spatialization enable state change events by the specified device.
-
-**Since:** 12
-
-<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'spatializationEnabledChangeForAnyDevice' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## Examples
+## offHeadTrackingEnabledChangeForAnyDevice
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
-
-// Cancel all subscriptions to the event.
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-};
-
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
-
-audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
+offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-## off('headTrackingEnabledChange')
+Unsubscribes to the head tracking enable state change events by the specified device.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offHeadTrackingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offPersonalizedSpatializationEnabledChangeForAnyDevice
+
+```TypeScript
+offPersonalizedSpatializationEnabledChangeForAnyDevice(
+        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
+```
+
+Unsubscribes to the personalized spatialization enable state change events by the specified device.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offSpatialAudioSourceTypeChange
+
+```TypeScript
+offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void
+```
+
+Unsubscribes from the spatial audio source type change events.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offSpatializationEnabledChangeForAnyDevice
+
+```TypeScript
+offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Unsubscribes to the spatialization enable state change events by the specified device.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_headTrackingEnabledChange
 
 ```TypeScript
 off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
@@ -788,7 +872,7 @@ Unsubscribes to the head tracking enable state change events.
 
 **Deprecated since:** 12
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -807,9 +891,9 @@ Unsubscribes to the head tracking enable state change events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -829,7 +913,7 @@ audioSpatializationManager.on('headTrackingEnabledChange', headTrackingEnabledCh
 audioSpatializationManager.off('headTrackingEnabledChange', headTrackingEnabledChangeCallback);
 ```
 
-## off('headTrackingEnabledChangeForAnyDevice')
+## off_headTrackingEnabledChangeForAnyDevice
 
 ```TypeScript
 off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
@@ -838,6 +922,8 @@ off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpat
 Unsubscribes to the head tracking enable state change events by the specified device.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -856,9 +942,9 @@ Unsubscribes to the head tracking enable state change events by the specified de
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -879,112 +965,21 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', headTrack
 audioSpatializationManager.off('headTrackingEnabledChangeForAnyDevice', headTrackingEnabledChangeForAnyDeviceCallback);
 ```
 
-## offAdaptiveSpatialRenderingEnabledChangeForAnyDevice
+## off_spatializationEnabledChange
 
 ```TypeScript
-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void
+off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
 ```
 
-Unsubscribes to the adaptive spatial rendering enable state change events by the specified device.
-
-**Since:** 24
-
-<!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-offAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offPersonalizedSpatializationEnabledChangeForAnyDevice
-
-```TypeScript
-offPersonalizedSpatializationEnabledChangeForAnyDevice(
-        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
-```
-
-Unsubscribes to the personalized spatialization enable state change events by the specified device.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void--><!--Device-AudioSpatializationManager-offPersonalizedSpatializationEnabledChangeForAnyDevice(        callback?: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## offSpatialAudioSourceTypeChange
-
-```TypeScript
-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void
-```
-
-Unsubscribes from the spatial audio source type change events.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void--><!--Device-AudioSpatializationManager-offSpatialAudioSourceTypeChange(callback?: Callback<SpatialAudioSourceType>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SpatialAudioSourceType](arkts-audio-audio-spatialaudiosourcetype-e-sys.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## on('spatializationEnabledChange')
-
-```TypeScript
-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
-```
-
-Subscribes to the spatialization enable state change events. When the spatialization enable state changes,registered clients will receive the callback.
+Unsubscribes to the spatialization enable state change events.
 
 **Since:** 11
 
 **Deprecated since:** 12
 
-**Substitutes:** [on](ohos.multimedia.audio.AudioSpatializationManager#on)
+**Substitutes:** off
 
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -995,37 +990,45 @@ Subscribes to the spatialization enable state change events. When the spatializa
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'spatializationEnabledChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+// Cancel all subscriptions to the event.
+audioSpatializationManager.off('spatializationEnabledChange');
 
-audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let spatializationEnabledChangeCallback = (isSpatializationEnabled: boolean) => {
   console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
-});
+};
+
+audioSpatializationManager.on('spatializationEnabledChange', spatializationEnabledChangeCallback);
+
+audioSpatializationManager.off('spatializationEnabledChange', spatializationEnabledChangeCallback);
 ```
 
-## on('spatializationEnabledChangeForAnyDevice')
+## off_spatializationEnabledChangeForAnyDevice
 
 ```TypeScript
-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the spatialization enable state change events by the specified device.When the spatialization enable state changes, registered clients will receive the callback.
+Unsubscribes to the spatialization enable state change events by the specified device.
 
 **Since:** 12
 
-<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForAnyDevice', callback?: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -1036,112 +1039,33 @@ Subscribes to the spatialization enable state change events by the specified dev
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'spatializationEnabledChangeForAnyDevice' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
 ```TypeScript
 import { audio } from '@kit.AudioKit';
 
-audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+// Cancel all subscriptions to the event.
+audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice');
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let spatializationEnabledChangeForAnyDeviceCallback = (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
   console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
   console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
-```
+};
 
-## on('headTrackingEnabledChange')
+audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
 
-```TypeScript
-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
-```
-
-Subscribes to the head tracking enable state change events. When the head tracking enable state changes,registered clients will receive the callback.
-
-**Since:** 11
-
-**Deprecated since:** 12
-
-**Substitutes:** [on](ohos.multimedia.audio.AudioSpatializationManager#on)
-
-<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'headTrackingEnabledChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
-  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
-});
-```
-
-## on('headTrackingEnabledChangeForAnyDevice')
-
-```TypeScript
-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
-```
-
-Subscribes to the head tracking enable state change events by the specified device.When the head tracking enable state changes, registered clients will receive the callback.
-
-**Since:** 12
-
-<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'headTrackingEnabledChangeForAnyDevice' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { audio } from '@kit.AudioKit';
-
-audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
-  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
-  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
-});
+audioSpatializationManager.off('spatializationEnabledChangeForAnyDevice', spatializationEnabledChangeForAnyDeviceCallback);
 ```
 
 ## onAdaptiveSpatialRenderingEnabledChangeForAnyDevice
@@ -1150,9 +1074,11 @@ audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpa
 onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
 ```
 
-Subscribes to the adaptive spatial rendering enable state change events by the specified device.When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
+Subscribes to the adaptive spatial rendering enable state change events by the specified device. When the adaptive spatial rendering enable state changes, registered clients will receive the callback.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onAdaptiveSpatialRenderingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
 
@@ -1170,8 +1096,39 @@ Subscribes to the adaptive spatial rendering enable state change events by the s
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onHeadTrackingEnabledChangeForAnyDevice
+
+```TypeScript
+onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onHeadTrackingEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onPersonalizedSpatializationEnabledChangeForAnyDevice
 
@@ -1180,9 +1137,11 @@ onPersonalizedSpatializationEnabledChangeForAnyDevice(
         callback: Callback<AudioPersonalizedSpatialEnabledChangeForAnyDevice>): void
 ```
 
-Subscribes to the personalized spatialization enable state change events by the specified device.When the state changes, registered clients will receive the callback.
+Subscribes to the personalized spatialization enable state change events by the specified device. When the state changes, registered clients will receive the callback.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1202,7 +1161,7 @@ Subscribes to the personalized spatialization enable state change events by the 
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onSpatialAudioSourceTypeChange
 
@@ -1210,9 +1169,11 @@ Subscribes to the personalized spatialization enable state change events by the 
 onSpatialAudioSourceTypeChange(callback: Callback<SpatialAudioSourceType>): void
 ```
 
-Subscribes to the spatial audio source type change events. When the current spatial audio source type changes,registered clients will receive callbacks.
+Subscribes to the spatial audio source type change events. When the current spatial audio source type changes, registered clients will receive callbacks.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1232,8 +1193,217 @@ Subscribes to the spatial audio source type change events. When the current spat
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## onSpatializationEnabledChangeForAnyDevice
+
+```TypeScript
+onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForAnyDevice(callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_headTrackingEnabledChange
+
+```TypeScript
+on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
+```
+
+Subscribes to the head tracking enable state change events. When the head tracking enable state changes, registered clients will receive the callback.
+
+**Since:** 11
+
+**Deprecated since:** 12
+
+**Substitutes:** on
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'headTrackingEnabledChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('headTrackingEnabledChange', (isHeadTrackingEnabled: boolean) => {
+  console.info(`isHeadTrackingEnabled: ${isHeadTrackingEnabled}`);
+});
+```
+
+## on_headTrackingEnabledChangeForAnyDevice
+
+```TypeScript
+on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the head tracking enable state change events by the specified device. When the head tracking enable state changes, registered clients will receive the callback.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'headTrackingEnabledChangeForAnyDevice' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('headTrackingEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+});
+```
+
+## on_spatializationEnabledChange
+
+```TypeScript
+on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
+```
+
+Subscribes to the spatialization enable state change events. When the spatialization enable state changes, registered clients will receive the callback.
+
+**Since:** 11
+
+**Deprecated since:** 12
+
+**Substitutes:** on
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'spatializationEnabledChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('spatializationEnabledChange', (isSpatializationEnabled: boolean) => {
+  console.info(`isSpatializationEnabled: ${isSpatializationEnabled}`);
+});
+```
+
+## on_spatializationEnabledChangeForAnyDevice
+
+```TypeScript
+on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void
+```
+
+Subscribes to the spatialization enable state change events by the specified device. When the spatialization enable state changes, registered clients will receive the callback.
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'spatializationEnabledChangeForAnyDevice' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+
+audioSpatializationManager.on('spatializationEnabledChangeForAnyDevice', (audioSpatialEnabledStateForDevice: audio.AudioSpatialEnabledStateForDevice) => {
+  console.info(`deviceDescriptor: ${audioSpatialEnabledStateForDevice.deviceDescriptor}`);
+  console.info(`isSpatializationEnabled: ${audioSpatialEnabledStateForDevice.enabled}`);
+});
+```
 
 ## setAdaptiveSpatialRenderingEnabled
 
@@ -1241,9 +1411,11 @@ Subscribes to the spatial audio source type change events. When the current spat
 setAdaptiveSpatialRenderingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the adaptive spatial rendering enabled or disabled by the specified device.This method uses a promise to return the result.When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
+Sets the adaptive spatial rendering enabled or disabled by the specified device. This method uses a promise to return the result. When the adaptive spatial rendering is enabled, spatial audio rendering will not take effect on stereo audio.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1270,10 +1442,10 @@ Sets the adaptive spatial rendering enabled or disabled by the specified device.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setHeadTrackingEnabled
 
@@ -1308,10 +1480,10 @@ Sets the head tracking enabled or disabled. This method uses an asynchronous cal
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1368,9 +1540,9 @@ Sets the head tracking enabled or disabled. This method uses a promise to return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1393,9 +1565,11 @@ audioSpatializationManager.setHeadTrackingEnabled(enable).then(() => {
 setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the head tracking enabled or disabled by the specified device.This method uses a promise to return the result.
+Sets the head tracking enabled or disabled by the specified device. This method uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1422,10 +1596,10 @@ Sets the head tracking enabled or disabled by the specified device.This method u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1466,6 +1640,8 @@ Set the personalized spatialization enabled or disabled by the specified device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1493,9 +1669,9 @@ Set the personalized spatialization enabled or disabled by the specified device.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setSpatializationEnabled
 
@@ -1530,10 +1706,10 @@ Sets the spatialization enabled or disabled. This method uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1590,9 +1766,9 @@ Sets the spatialization enabled or disabled. This method uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1615,9 +1791,11 @@ audioSpatializationManager.setSpatializationEnabled(enable).then(() => {
 setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>
 ```
 
-Sets the spatialization enabled or disabled by the specified device.This method uses a promise to return the result.
+Sets the spatialization enabled or disabled by the specified device. This method uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1644,10 +1822,10 @@ Sets the spatialization enabled or disabled by the specified device.This method 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1686,7 +1864,9 @@ setSpatializationSceneType(spatializationSceneType: AudioSpatializationSceneType
 
 Set spatialization rendering scene type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1706,10 +1886,10 @@ Set spatialization rendering scene type.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1734,7 +1914,9 @@ updateSpatialDeviceState(spatialDeviceState: AudioSpatialDeviceState): void
 
 Updates the spatial device state.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SYSTEM_AUDIO_EFFECTS
 
@@ -1754,10 +1936,10 @@ Updates the spatial device state.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

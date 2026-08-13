@@ -6,11 +6,13 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare interface Callback<T, V = void>--><!--Device-unnamed-declare interface Callback<T, V = void>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (data: T): V
@@ -21,6 +23,8 @@
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

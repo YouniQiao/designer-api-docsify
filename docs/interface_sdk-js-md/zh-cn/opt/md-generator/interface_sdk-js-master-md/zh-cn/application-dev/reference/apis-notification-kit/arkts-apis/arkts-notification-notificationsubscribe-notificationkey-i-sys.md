@@ -2,7 +2,9 @@
 
 通知键值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export interface NotificationKey--><!--Device-notificationSubscribe-export interface NotificationKey-End-->
 
@@ -26,7 +28,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationKey-id: int--><!--Device-NotificationKey-id: int-End-->
 
@@ -44,7 +48,9 @@ label?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 

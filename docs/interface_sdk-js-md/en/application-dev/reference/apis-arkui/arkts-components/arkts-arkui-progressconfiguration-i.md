@@ -1,14 +1,16 @@
 # ProgressConfiguration
 
-Provides progress indicator configuration. Inherits from [CommonConfiguration](CommonConfiguration).
+Provides progress indicator configuration. Inherits from CommonConfiguration.
 
-**Inheritance/Implementation:** ProgressConfiguration extends [CommonConfiguration<ProgressConfiguration>](CommonConfiguration<ProgressConfiguration>)
+**Inheritance/Implementation:** ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>--><!--Device-unnamed-declare interface ProgressConfiguration extends CommonConfiguration<ProgressConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ProgressConfiguration--><!--Device-unnamed-declare interface ProgressConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,19 +20,15 @@ Provides progress indicator configuration. Inherits from [CommonConfiguration](C
 total: number
 ```
 
-Total progress.
-
-Default value: **100**
-
-**NOTE：**
-
-If the value of **total** is a negative number, it is treated as 100.
+Total progress. Default value: **100** **NOTE：**If the value of **total** is a negative number, it is treated as 100.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,17 +44,15 @@ If the value of **total** is a negative number, it is treated as 100.
 value: number
 ```
 
-Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped at the value of **total**.
-
-Default value: **0**
-
-Value range: [0, total]
+Current progress. Values less than 0 are adjusted to **0**. Values greater than the value of **total** are capped at the value of **total**. Default value: **0** Value range: [0, total]
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

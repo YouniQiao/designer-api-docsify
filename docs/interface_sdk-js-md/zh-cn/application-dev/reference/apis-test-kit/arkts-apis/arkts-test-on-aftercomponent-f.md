@@ -6,11 +6,13 @@
 export function afterComponent(com: Component): On
 ```
 
-要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md#Component)指定的另一个组件之后对象，用于相对于组件定位。
+要求目标组件位于由给定[Component](arkts-test-uitest-component-c.md#Component)指定的另一个组件之后 对象，用于相对于组件定位。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-ON-export function afterComponent(com: Component): On--><!--Device-ON-export function afterComponent(com: Component): On-End-->
 
@@ -32,5 +34,5 @@ export function afterComponent(com: Component): On
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-参数不合法) | Parameter verification failed. |
 

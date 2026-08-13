@@ -14,7 +14,9 @@ function isLocked(): boolean
 
 Checks whether the screen is currently locked.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenLock-function isLocked(): boolean--><!--Device-screenLock-function isLocked(): boolean-End-->
 
@@ -32,7 +34,7 @@ Checks whether the screen is currently locked.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

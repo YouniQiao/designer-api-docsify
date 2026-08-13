@@ -2,9 +2,11 @@
 
 ScrollEvent info.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export interface ScrollEventInfo--><!--Device-uiObserver-export interface ScrollEventInfo-End-->
 
@@ -26,11 +28,15 @@ Scroll axis.
 
 **Type:** Axis
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ScrollEventInfo-axis?: Axis--><!--Device-ScrollEventInfo-axis?: Axis-End-->
 
@@ -46,11 +52,15 @@ Scroll id.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScrollEventInfo-id: string--><!--Device-ScrollEventInfo-id: string-End-->
 
@@ -59,20 +69,24 @@ Scroll id.
 ## offset
 
 ```TypeScript
-offset: double
+offset: number
 ```
 
 Changed ScrollEvent offset.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ScrollEventInfo-offset: double--><!--Device-ScrollEventInfo-offset: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScrollEventInfo-offset: number--><!--Device-ScrollEventInfo-offset: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,11 +100,15 @@ Changed ScrollEvent type.
 
 **Type:** [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScrollEventInfo-scrollEvent: ScrollEventType--><!--Device-ScrollEventInfo-scrollEvent: ScrollEventType-End-->
 
@@ -99,20 +117,24 @@ Changed ScrollEvent type.
 ## uniqueId
 
 ```TypeScript
-uniqueId: int
+uniqueId: number
 ```
 
 The uniqueId of the scrollable component.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ScrollEventInfo-uniqueId: int--><!--Device-ScrollEventInfo-uniqueId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ScrollEventInfo-uniqueId: number--><!--Device-ScrollEventInfo-uniqueId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

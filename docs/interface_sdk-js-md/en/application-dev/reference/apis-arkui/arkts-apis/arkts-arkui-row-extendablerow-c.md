@@ -2,20 +2,23 @@
 
 Defines the Extendable Row.
 
-**Inheritance/Implementation:** ExtendableRow implements [RowAttribute](arkts-arkui-row-rowattribute-i.md#RowAttribute)
+**Inheritance/Implementation:** ExtendableRow implements RowAttribute
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-<!--Device-unnamed-export declare abstract class ExtendableRow implements RowAttribute--><!--Device-unnamed-export declare abstract class ExtendableRow implements RowAttribute-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare abstract class ExtendableRow--><!--Device-unnamed-export declare abstract class ExtendableRow-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## $_instantiate
 
 ```TypeScript
-static $_instantiate<T extends ExtendableRow>(
+@ComponentBuilder
+    static $_instantiate<T extends ExtendableRow>(
         factory: ConstructorT<T>, 
         options?: RowOptions | RowOptionsV2,
         content_?: CustomBuilder
@@ -28,9 +31,11 @@ Constructor of Extendable Row.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRow-static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,         options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T--><!--Device-ExtendableRow-static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,         options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableRow-@ComponentBuilder    static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,         options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T--><!--Device-ExtendableRow-@ComponentBuilder    static $_instantiate<T extends ExtendableRow>(        factory: ConstructorT<T>,         options?: RowOptions | RowOptionsV2,        content_?: CustomBuilder    ): T-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +43,9 @@ Constructor of Extendable Row.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
 | options | [RowOptions](arkts-arkui-row-rowoptions-i.md) \| [RowOptionsV2](arkts-arkui-row-rowoptionsv2-i.md) | No |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| content_ | CustomBuilder | No |  |
 
 **Return value:**
 
@@ -51,7 +56,8 @@ Constructor of Extendable Row.
 ## _instantiateImpl
 
 ```TypeScript
-static _instantiateImpl<T extends ExtendableRow>(
+@Builder
+    static _instantiateImpl<T extends ExtendableRow>(
         styles: CustomBuilderT<T>, 
         factory: ConstructorT<T>, 
         content_?: CustomBuilder
@@ -64,11 +70,11 @@ Entry of Extendable Row.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExtendableRow-static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableRow-static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableRow-@Builder    static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void--><!--Device-ExtendableRow-@Builder    static _instantiateImpl<T extends ExtendableRow>(        styles: CustomBuilderT<T>,         factory: ConstructorT<T>,         content_?: CustomBuilder    ): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,9 +82,9 @@ Entry of Extendable Row.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes |  |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | Yes |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No |  |
+| styles | CustomBuilderT&lt;T&gt; | Yes |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | Yes |  |
+| content_ | CustomBuilder | No |  |
 
 ## setRowOptions
 
@@ -91,6 +97,8 @@ Set the Row Options.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

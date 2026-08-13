@@ -2,7 +2,9 @@
 
 云同步策略类型枚举。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudData-enum StrategyType--><!--Device-cloudData-enum StrategyType-End-->
 
@@ -16,7 +18,9 @@ NETWORK
 
 通过网络同步策略。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StrategyType-NETWORK--><!--Device-StrategyType-NETWORK-End-->
 

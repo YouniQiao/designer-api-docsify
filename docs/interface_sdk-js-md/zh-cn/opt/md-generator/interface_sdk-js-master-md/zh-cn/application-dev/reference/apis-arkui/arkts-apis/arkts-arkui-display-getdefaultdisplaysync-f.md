@@ -8,7 +8,9 @@ function getDefaultDisplaySync(): Display
 
 返回应用所在屏幕的Display对象。若应用内多个Ability在不同屏幕，返回主屏的Display对象，若应用内多个Ability在同一屏幕，返回所在屏幕的Display对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +28,7 @@ function getDefaultDisplaySync(): Display
 
 | 错误码ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
 ## 示例
 

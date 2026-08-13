@@ -4,6 +4,8 @@ Defines the CustomSpanDrawInfo interface.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CustomSpanDrawInfo--><!--Device-unnamed-declare interface CustomSpanDrawInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Defines the CustomSpanDrawInfo interface.
 baseline: number
 ```
 
-Baseline offset of the line where the custom span is located.
-
-Unit: [px](common)
+Baseline offset of the line where the custom span is located. Unit: px
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Unit: [px](common)
 lineBottom: number
 ```
 
-Bottom margin of the custom span relative to the **Text** component.
-
-Unit: [px](common)
+Bottom margin of the custom span relative to the **Text** component. Unit: px
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +60,13 @@ Unit: [px](common)
 lineTop: number
 ```
 
-Top margin of the custom span relative to the **Text** component.
-
-Unit: [px](common)
+Top margin of the custom span relative to the **Text** component. Unit: px
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,13 +82,13 @@ Unit: [px](common)
 x: number
 ```
 
-Offset of the custom span relative to the mounted component.
-
-Unit: [px](common)
+Offset of the custom span relative to the mounted component. Unit: px
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

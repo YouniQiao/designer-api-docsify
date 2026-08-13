@@ -2,9 +2,11 @@
 
 Enumerates the text baseline types.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-text-enum TextBaseline--><!--Device-text-enum TextBaseline-End-->
 
@@ -18,9 +20,11 @@ ALPHABETIC = 0
 
 Alphabetic baseline, where the letters in Latin alphabets sit on.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -36,9 +40,11 @@ IDEOGRAPHIC = 1
 
 Ideographic baseline, where the baseline is at the bottom of the text area. It is usually used for CJK text.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

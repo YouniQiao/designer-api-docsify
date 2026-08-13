@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface DragEvent--><!--Device-unnamed-declare interface DragEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,10 +16,11 @@
 executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
-设置自定义落位动效的执行函数，仅在  
-[useCustomDropAnimation](#useCustomDropAnimation)为true时有效。
+设置自定义落位动效的执行函数，仅在 [useCustomDropAnimation](#useCustomDropAnimation)为true时有效。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,6 +46,8 @@ getData(): UnifiedData
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -61,8 +66,8 @@ getData(): UnifiedData
 
 | 错误码ID |
 | --- |
-| [190002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-获取数据错误) |
-| [190001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-数据未找到) |
+| [190002](../errorcode-drag-event.md#190002-获取数据错误) |
+| [190001](../errorcode-drag-event.md#190001-数据未找到) |
 
 ## getDisplayId
 
@@ -73,6 +78,8 @@ getDisplayId(): number
 获取当前拖拽事件发生时所在的屏幕ID，不支持在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)阶段使用。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +105,8 @@ getDisplayX(): number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -121,6 +130,8 @@ getDisplayY(): number
 获取当前拖拽点相对于屏幕左上角的y轴坐标。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +157,8 @@ getDragSource(): string
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -169,6 +182,8 @@ getGlobalDisplayX(): number
 当前拖拽点相对于全局屏幕的左上角的X坐标。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -194,6 +209,8 @@ getGlobalDisplayY(): number
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -217,6 +234,8 @@ getModifierKeyState?(keys: Array<string>): boolean
 获取功能键按压状态。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -242,7 +261,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## getPreviewRect
 
@@ -253,6 +272,8 @@ getPreviewRect(): Rectangle
 获取拖拽预览图相对于当前窗口的位置，以及预览图尺寸信息。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -278,6 +299,8 @@ getResult(): DragResult
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -301,6 +324,8 @@ getSummary(): Summary
 获取所拖拽数据的概要，包括数据类型及大小信息；在延迟拖拽场景下，只能获取到数据类型信息。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -326,6 +351,8 @@ getVelocity(): number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -349,6 +376,8 @@ getVelocityX(): number
 获取当前拖拽的x轴方向拖动速度。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -374,6 +403,8 @@ getVelocityY(): number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -397,6 +428,8 @@ getWindowX(): number
 获取拖拽点相对于窗口左上角的x轴坐标。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -422,6 +455,8 @@ getWindowY(): number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -442,9 +477,7 @@ getWindowY(): number
 getX(): number
 ```
 
-当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。
-
-> **说明：**
+当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。 > **说明：**
 
 **起始版本：** 7
 
@@ -468,9 +501,7 @@ getX(): number
 getY(): number
 ```
 
-当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。
-
-> **说明：**
+当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。 > **说明：**
 
 **起始版本：** 7
 
@@ -498,6 +529,8 @@ isRemote(): boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -522,6 +555,8 @@ setData(unifiedData: UnifiedData): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -542,9 +577,11 @@ setData(unifiedData: UnifiedData): void
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](#setData)方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中生效。
+设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](#setData)方法 同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中生效。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -570,6 +607,8 @@ setResult(dragResult: DragResult): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -593,6 +632,8 @@ startDataLoading(options: DataSyncOptions): string
 异步获取拖拽数据，并通知开发者当前数据同步进度，仅支持在onDrop阶段使用。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -618,8 +659,8 @@ startDataLoading(options: DataSyncOptions): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [190003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-当前阶段不允许操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) |
 
 ## autoHideComponentUniqueIds
 
@@ -627,20 +668,13 @@ startDataLoading(options: DataSyncOptions): string
 autoHideComponentUniqueIds?: number | number[]
 ```
 
-设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
-
-仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
-
-若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
-
-组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getUniqueId)获取。
-
-开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或  
-[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void))中恢复组件显示状态。
+设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById) 配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getUniqueId)获取。 开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或 onDrop中恢复组件显示状态。
 
 **类型：** number \| number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -656,15 +690,15 @@ autoHideComponentUniqueIds?: number | number[]
 dragBehavior: DragBehavior
 ```
 
-切换复制和剪贴模式的角标显示状态。
-
-默认值：DragBehavior.COPY。
+切换复制和剪贴模式的角标显示状态。 默认值：DragBehavior.COPY。
 
 **类型：** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
 **默认值：** COPY
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -680,19 +714,13 @@ dragBehavior: DragBehavior
 useCustomDropAnimation: boolean
 ```
 
-当拖拽结束时，是否禁用系统默认落位动效。
-
-应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
-
-当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setResult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则为放大消失动效。
-
-当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
-
-默认值：false
+当拖拽结束时，是否禁用系统默认落位动效。 应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。 当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setResult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则 为放大消失动效。 当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

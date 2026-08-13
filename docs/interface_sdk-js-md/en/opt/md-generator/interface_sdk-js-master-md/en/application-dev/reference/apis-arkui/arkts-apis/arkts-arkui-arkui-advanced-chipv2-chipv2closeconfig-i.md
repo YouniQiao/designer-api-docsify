@@ -6,7 +6,9 @@ Defines config of default close icon.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export interface ChipV2CloseConfig extends ChipV2AccessibilityConfig--><!--Device-unnamed-export interface ChipV2CloseConfig extends ChipV2AccessibilityConfig-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface ChipV2CloseConfig--><!--Device-unnamed-export interface ChipV2CloseConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Set font size for the close icon.
 **Type:** LengthMetrics
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

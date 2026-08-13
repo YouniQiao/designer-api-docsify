@@ -6,7 +6,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-unnamed-export interface OnDownloadCompleteOptions--><!--Device-unnamed-export interface OnDownloadCompleteOptions-End-->
 
@@ -26,13 +26,15 @@ complete?: () => void
 
 Called when API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-OnDownloadCompleteOptions-complete?: () => void--><!--Device-OnDownloadCompleteOptions-complete?: () => void-End-->
 
@@ -46,24 +48,19 @@ fail?: (data: any, code: number) => void
 
 Called when API call has failed. Header information and HTTP status code returned when the upload task fails.
 
+**Type:** (data: any, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void--><!--Device-OnDownloadCompleteOptions-fail?: (data: any, code: number) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | any | Yes |  |
-| code | number | Yes |  |
 
 ## success
 
@@ -73,23 +70,19 @@ success?: (data: OnDownloadCompleteResponse) => void
 
 Called when API call is successful.
 
+**Type:** (data: OnDownloadCompleteResponse) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.request.agent.Task.on)
+**Substitutes:** on
 
 <!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void--><!--Device-OnDownloadCompleteOptions-success?: (data: OnDownloadCompleteResponse) => void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [OnDownloadCompleteResponse](arkts-basicservices-system-request-ondownloadcompleteresponse-i.md) | Yes |  |
 
 ## token
 
@@ -107,7 +100,7 @@ Result token returned by the download API.
 
 **Deprecated since:** 9
 
-**Substitutes:** [tid](ohos.request.agent.Task.tid)
+**Substitutes:** tid
 
 <!--Device-OnDownloadCompleteOptions-token: string--><!--Device-OnDownloadCompleteOptions-token: string-End-->
 

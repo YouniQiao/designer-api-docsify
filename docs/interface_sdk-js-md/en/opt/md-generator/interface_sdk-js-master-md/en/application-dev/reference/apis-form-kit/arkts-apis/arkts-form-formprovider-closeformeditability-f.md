@@ -16,6 +16,8 @@ Closes the widget editing page.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void--><!--Device-formProvider-function closeFormEditAbility(isMainPage?: boolean): void-End-->
@@ -32,9 +34,9 @@ Closes the widget editing page.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16501015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501015-failed-to-close-semimodal-widget-editing-page-of-another-application) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16501015](../errorcode-form.md#16501015-failed-to-close-semimodal-widget-editing-page-of-another-application) |
 
 ## Examples
 

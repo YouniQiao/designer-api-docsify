@@ -1,10 +1,12 @@
 # DensityInfo
 
-Density info.
+Provides the information contained in the callback when the screen pixel density changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export class DensityInfo--><!--Device-uiObserver-export class DensityInfo-End-->
 
@@ -22,15 +24,19 @@ import { uiObserver } from '@kit.ArkUI';
 context: UIContext
 ```
 
-The context of the changed screen density.
+Context corresponding to the page when the screen pixel density changes.
 
 **Type:** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DensityInfo-context: UIContext--><!--Device-DensityInfo-context: UIContext-End-->
 
@@ -39,20 +45,24 @@ The context of the changed screen density.
 ## density
 
 ```TypeScript
-density: double
+density: number
 ```
 
-The changed screen density.
+Screen pixel density after the change. Value range: [0, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DensityInfo-density: double--><!--Device-DensityInfo-density: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DensityInfo-density: number--><!--Device-DensityInfo-density: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

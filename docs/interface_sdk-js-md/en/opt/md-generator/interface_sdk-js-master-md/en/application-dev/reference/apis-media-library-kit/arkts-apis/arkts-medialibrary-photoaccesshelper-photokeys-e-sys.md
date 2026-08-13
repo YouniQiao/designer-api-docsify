@@ -2,11 +2,33 @@
 
 Defines the key information about an image or video file.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum PhotoKeys--><!--Device-photoAccessHelper-enum PhotoKeys-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## POSITION
+
+```TypeScript
+POSITION = 'position'
+```
+
+File location type.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
 
 ## DATE_TRASHED
 
@@ -16,7 +38,9 @@ DATE_TRASHED = 'date_trashed'
 
 Date when the file was deleted. The value is the number of seconds elapsed since the Epoch time.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-DATE_TRASHED = 'date_trashed'--><!--Device-PhotoKeys-DATE_TRASHED = 'date_trashed'-End-->
 
@@ -32,7 +56,9 @@ HIDDEN = 'hidden'
 
 Whether the file is hidden.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-HIDDEN = 'hidden'--><!--Device-PhotoKeys-HIDDEN = 'hidden'-End-->
 
@@ -48,7 +74,9 @@ USER_COMMENT = 'user_comment'
 
 User comment information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-USER_COMMENT = 'user_comment'--><!--Device-PhotoKeys-USER_COMMENT = 'user_comment'-End-->
 
@@ -64,7 +92,9 @@ CAMERA_SHOT_KEY = 'camera_shot_key'
 
 Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off. (This parameter is available only for the system camera, and the key value is defined by the system camera.)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-CAMERA_SHOT_KEY = 'camera_shot_key'--><!--Device-PhotoKeys-CAMERA_SHOT_KEY = 'camera_shot_key'-End-->
 
@@ -80,7 +110,9 @@ DATE_YEAR = 'date_year'
 
 Year when the file was created.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-DATE_YEAR = 'date_year'--><!--Device-PhotoKeys-DATE_YEAR = 'date_year'-End-->
 
@@ -96,7 +128,9 @@ DATE_MONTH = 'date_month'
 
 Month when the file was created.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-DATE_MONTH = 'date_month'--><!--Device-PhotoKeys-DATE_MONTH = 'date_month'-End-->
 
@@ -112,7 +146,9 @@ DATE_DAY = 'date_day'
 
 Date when the file was created.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-DATE_DAY = 'date_day'--><!--Device-PhotoKeys-DATE_DAY = 'date_day'-End-->
 
@@ -128,7 +164,9 @@ PENDING = 'pending'
 
 Pending state.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-PENDING = 'pending'--><!--Device-PhotoKeys-PENDING = 'pending'-End-->
 
@@ -142,11 +180,11 @@ Pending state.
 DATE_TRASHED_MS = 'date_trashed_ms'
 ```
 
-Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time. 
+Date when the file was deleted. The value is the number of milliseconds elapsed since the Epoch time. **NOTE：**: The photos queried cannot be sorted based on this field.
 
-**NOTE：**: The photos queried cannot be sorted based on this field.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-DATE_TRASHED_MS = 'date_trashed_ms'--><!--Device-PhotoKeys-DATE_TRASHED_MS = 'date_trashed_ms'-End-->
 
@@ -162,7 +200,9 @@ MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'
 
 Effect of the moving photo.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'--><!--Device-PhotoKeys-MOVING_PHOTO_EFFECT_MODE = 'moving_photo_effect_mode'-End-->
 
@@ -178,7 +218,9 @@ THUMBNAIL_READY = 'thumbnail_ready'
 
 Whether a thumbnail is generated.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-THUMBNAIL_READY = 'thumbnail_ready'--><!--Device-PhotoKeys-THUMBNAIL_READY = 'thumbnail_ready'-End-->
 
@@ -194,7 +236,9 @@ CE_AVAILABLE = 'ce_available'
 
 Cloud enhancement identifier.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-CE_AVAILABLE = 'ce_available'--><!--Device-PhotoKeys-CE_AVAILABLE = 'ce_available'-End-->
 
@@ -210,7 +254,9 @@ SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'
 
 Watermark type to set.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'--><!--Device-PhotoKeys-SUPPORTED_WATERMARK_TYPE = 'supported_watermark_type'-End-->
 
@@ -226,7 +272,9 @@ THUMBNAIL_VISIBLE = 'thumbnail_visible'
 
 Whether the thumbnail of the media asset is visible.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-THUMBNAIL_VISIBLE = 'thumbnail_visible'--><!--Device-PhotoKeys-THUMBNAIL_VISIBLE = 'thumbnail_visible'-End-->
 
@@ -242,9 +290,29 @@ IS_CE_AUTO = 'is_auto'
 
 Whether automatic cloud enhancement is supported.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'--><!--Device-PhotoKeys-IS_CE_AUTO = 'is_auto'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## OWNER_ALBUM_ID
+
+```TypeScript
+OWNER_ALBUM_ID = 'owner_album_id'
+```
+
+ID of the album to which the photo belongs.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'--><!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -258,7 +326,9 @@ IS_RECENT_SHOW = 'is_recent_show'
 
 Whether the asset is displayed in the **Recent** list.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-IS_RECENT_SHOW = 'is_recent_show'--><!--Device-PhotoKeys-IS_RECENT_SHOW = 'is_recent_show'-End-->
 
@@ -274,7 +344,9 @@ SUM_SIZE = 'sum(size)'
 
 Total size of files. When **SUM_SIZE** is filled in **fetchColumns**, only the first asset is obtained, and the property includes the total size of all assets.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-SUM_SIZE = 'sum(size)'--><!--Device-PhotoKeys-SUM_SIZE = 'sum(size)'-End-->
 
@@ -290,7 +362,9 @@ EXIF_ROTATE = 'exif_rotate'
 
 Rotational angle of the file.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-EXIF_ROTATE = 'exif_rotate'--><!--Device-PhotoKeys-EXIF_ROTATE = 'exif_rotate'-End-->
 
@@ -306,7 +380,9 @@ HAS_APPLINK = 'has_applink'
 
 Whether to enable or disable the app link association.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-HAS_APPLINK = 'has_applink'--><!--Device-PhotoKeys-HAS_APPLINK = 'has_applink'-End-->
 
@@ -322,7 +398,9 @@ APPLINK = 'applink'
 
 Information about the app link association.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-APPLINK = 'applink'--><!--Device-PhotoKeys-APPLINK = 'applink'-End-->
 
@@ -338,7 +416,9 @@ HDR_MODE = 'hdr_mode'
 
 HDR mode of the file.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-HDR_MODE = 'hdr_mode'--><!--Device-PhotoKeys-HDR_MODE = 'hdr_mode'-End-->
 
@@ -354,7 +434,9 @@ CLOUD_ID = 'cloud_id'
 
 Unique ID of the file on the cloud.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-CLOUD_ID = 'cloud_id'--><!--Device-PhotoKeys-CLOUD_ID = 'cloud_id'-End-->
 
@@ -370,7 +452,9 @@ EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'
 
 Whether a JPEG-compatible copy exists.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'--><!--Device-PhotoKeys-EXIST_COMPATIBLE_DUPLICATE = 'exist_compatible_duplicate'-End-->
 
@@ -388,6 +472,8 @@ Display status of the composite image asset.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-PhotoKeys-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'--><!--Device-PhotoKeys-COMPOSITE_DISPLAY_STATUS = 'composite_display_status'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -402,7 +488,9 @@ VIDEO_MODE = 'video_mode'
 
 Log mode of a video file.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-VIDEO_MODE = 'video_mode'--><!--Device-PhotoKeys-VIDEO_MODE = 'video_mode'-End-->
 
@@ -418,7 +506,9 @@ ASSET_SOURCE_TYPE = 'file_source_type'
 
 Source type of assets, read only
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-ASSET_SOURCE_TYPE = 'file_source_type'--><!--Device-PhotoKeys-ASSET_SOURCE_TYPE = 'file_source_type'-End-->
 
@@ -434,7 +524,9 @@ FUSION_ASSET_STORAGE_PATH = 'storage_path'
 
 Storage path of fusion assets, read only
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-FUSION_ASSET_STORAGE_PATH = 'storage_path'--><!--Device-PhotoKeys-FUSION_ASSET_STORAGE_PATH = 'storage_path'-End-->
 
@@ -450,7 +542,9 @@ EDIT_DATA_EXIST = 'edit_data_exist'
 
 Edit data for the asset already exists.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-EDIT_DATA_EXIST = 'edit_data_exist'--><!--Device-PhotoKeys-EDIT_DATA_EXIST = 'edit_data_exist'-End-->
 
@@ -467,6 +561,8 @@ PACKAGE_NAME = 'package_name'
 Package name of a file.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -486,6 +582,8 @@ Image risk control
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoKeys-PHOTO_RISK_STATUS = 'photo_risk_status'--><!--Device-PhotoKeys-PHOTO_RISK_STATUS = 'photo_risk_status'-End-->
@@ -503,6 +601,8 @@ DATE_ADDED_YEAR = 'date_added_year'
 Year when an asset is added.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -522,6 +622,8 @@ Month when an asset is added.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoKeys-DATE_ADDED_MONTH = 'date_added_month'--><!--Device-PhotoKeys-DATE_ADDED_MONTH = 'date_added_month'-End-->
@@ -539,6 +641,8 @@ DATE_ADDED_DAY = 'date_added_day'
 Date when an asset is added.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -558,6 +662,8 @@ LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoKeys-LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'--><!--Device-PhotoKeys-LIVEPHOTO_4D_STATUS = 'livephoto_4d_status'-End-->
@@ -575,6 +681,8 @@ UNIQUE_ID = 'unique_id'
 Unique id of asset.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -594,6 +702,8 @@ hidden time of asset.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoKeys-HIDDEN_TIME = 'hidden_time'--><!--Device-PhotoKeys-HIDDEN_TIME = 'hidden_time'-End-->
@@ -611,6 +721,8 @@ THUMB_STATUS = 'thumb_status'
 Status of thumbnail, read only
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -630,6 +742,8 @@ Size of lcd file, read only
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoKeys-LCD_FILE_SIZE = 'lcd_file_size'--><!--Device-PhotoKeys-LCD_FILE_SIZE = 'lcd_file_size'-End-->
@@ -648,6 +762,8 @@ File hidden state of filemanager.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoKeys-FILE_HIDDEN = 'file_hidden'--><!--Device-PhotoKeys-FILE_HIDDEN = 'file_hidden'-End-->
@@ -665,6 +781,8 @@ ATTACHMENT_SIZE = 'attachment_size'
 Size of the asset attachment, in bytes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

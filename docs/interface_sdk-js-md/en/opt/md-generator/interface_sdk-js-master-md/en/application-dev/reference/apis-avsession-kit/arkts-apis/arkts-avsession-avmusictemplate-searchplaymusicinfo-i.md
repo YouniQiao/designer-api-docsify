@@ -4,6 +4,8 @@ The definition of SearchPlayMusicInfo.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface SearchPlayMusicInfo--><!--Device-avMusicTemplate-interface SearchPlayMusicInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ Other descriptions of the Media.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayMusicInfo-description?: string--><!--Device-SearchPlayMusicInfo-description?: string-End-->
@@ -43,6 +47,8 @@ displayName of the Media.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ extras of the Media.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayMusicInfo-extras?: string--><!--Device-SearchPlayMusicInfo-extras?: string-End-->
@@ -79,6 +87,8 @@ list of music
 **Type:** [SearchPlayMusicItem](arkts-avsession-avmusictemplate-searchplaymusicitem-i.md)[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ playMode of the Media.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchPlayMusicInfo-playMode?: string--><!--Device-SearchPlayMusicInfo-playMode?: string-End-->
@@ -115,6 +127,8 @@ playMusicOnly of the Media.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

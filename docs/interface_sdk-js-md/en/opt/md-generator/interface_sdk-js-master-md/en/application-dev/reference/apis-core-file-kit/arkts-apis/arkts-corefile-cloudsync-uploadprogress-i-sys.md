@@ -4,6 +4,8 @@ The UploadProgress data structure.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cloudSync-interface UploadProgress--><!--Device-cloudSync-interface UploadProgress-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -28,6 +30,8 @@ The error type of upload.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UploadProgress-error: ErrorType--><!--Device-UploadProgress-error: ErrorType-End-->
@@ -42,11 +46,13 @@ The error type of upload.
 processed: number
 ```
 
-The processed data size for current file.&lt;br&gt;Unit:Byte.
+The processed data size for current file. &lt;br&gt;Unit:Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +68,13 @@ The processed data size for current file.&lt;br&gt;Unit:Byte.
 size: number
 ```
 
-The size of current file.&lt;br&gt;Unit:Byte.
+The size of current file. &lt;br&gt;Unit:Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,6 +96,8 @@ The current upload state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UploadProgress-state: UploadState--><!--Device-UploadProgress-state: UploadState-End-->
@@ -107,6 +117,8 @@ The uri of current file.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

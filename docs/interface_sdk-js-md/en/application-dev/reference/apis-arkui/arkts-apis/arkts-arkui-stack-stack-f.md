@@ -3,6 +3,7 @@
 ## Stack
 
 ```TypeScript
+@ComponentBuilder
 export declare function Stack(
     options?: StackOptions,
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines Stack Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Stack(    options?: StackOptions,    content_?: CustomBuilder,): StackAttribute--><!--Device-unnamed-export declare function Stack(    options?: StackOptions,    content_?: CustomBuilder,): StackAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Stack(    options?: StackOptions,    content_?: CustomBuilder,): StackAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Stack(    options?: StackOptions,    content_?: CustomBuilder,): StackAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,18 +29,19 @@ Defines Stack Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [StackOptions](arkts-arkui-stack-stackoptions-i.md) | No | Stack options. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StackAttribute](arkts-arkui-stack-stackattribute-i.md) |  |
+| StackAttribute |  |
 
 
 ## Stack
 
 ```TypeScript
+@Builder
 export declare function Stack(
     style: CustomBuilderT<StackAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines Stack Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Stack(    style: CustomBuilderT<StackAttribute>,    content_?: CustomBuilder,): StackAttribute--><!--Device-unnamed-export declare function Stack(    style: CustomBuilderT<StackAttribute>,    content_?: CustomBuilder,): StackAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Stack(    style: CustomBuilderT<StackAttribute>,    content_?: CustomBuilder,): StackAttribute--><!--Device-unnamed-@Builderexport declare function Stack(    style: CustomBuilderT<StackAttribute>,    content_?: CustomBuilder,): StackAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,12 +66,12 @@ Defines Stack Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[StackAttribute](arkts-arkui-stack-stackattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;StackAttribute&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [StackAttribute](arkts-arkui-stack-stackattribute-i.md) |  |
+| StackAttribute |  |
 

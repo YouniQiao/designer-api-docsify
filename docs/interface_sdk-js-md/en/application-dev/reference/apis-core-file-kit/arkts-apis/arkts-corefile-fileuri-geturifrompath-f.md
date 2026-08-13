@@ -14,11 +14,13 @@ function getUriFromPath(path: string): string
 
 Get the uri from the path of file in app sandbox
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-fileUri-function getUriFromPath(path: string): string--><!--Device-fileUri-function getUriFromPath(path: string): string-End-->
 
@@ -40,7 +42,7 @@ Get the uri from the path of file in app sandbox
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalidPossible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## Examples
 

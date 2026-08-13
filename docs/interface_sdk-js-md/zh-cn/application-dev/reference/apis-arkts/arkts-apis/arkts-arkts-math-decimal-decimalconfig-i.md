@@ -2,9 +2,11 @@
 
 提供Decimal的配置属性，可使用Decimal.set方法进行配置。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DecimalConfig--><!--Device-unnamed-export interface DecimalConfig-End-->
 
@@ -16,15 +18,17 @@
 crypto?: boolean
 ```
 
-确定是否使用加密安全伪随机数生成的值。默认值：false。
+确定是否使用加密安全伪随机数生成的值。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-crypto?: boolean--><!--Device-DecimalConfig-crypto?: boolean-End-->
 
@@ -36,15 +40,17 @@ crypto?: boolean
 defaults?: boolean
 ```
 
-表示未指定的属性是否被设置为默认值，true表示使用默认值。默认值：false。
+表示未指定的属性是否被设置为默认值，true表示使用默认值。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-defaults?: boolean--><!--Device-DecimalConfig-defaults?: boolean-End-->
 
@@ -56,15 +62,17 @@ defaults?: boolean
 maxE?: double
 ```
 
-正指数极限，若Decimal的指数值大于该值，会溢出至无穷大。默认值：9e15。
+正指数极限，若Decimal的指数值大于该值，会溢出至无穷大。 默认值：9e15。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-maxE?: double--><!--Device-DecimalConfig-maxE?: double-End-->
 
@@ -76,15 +84,17 @@ maxE?: double
 minE?: double
 ```
 
-负指数极限，若Decimal的指数值小于该值，会下溢到零。默认值：-9e15。
+负指数极限，若Decimal的指数值小于该值，会下溢到零。 默认值：-9e15。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-minE?: double--><!--Device-DecimalConfig-minE?: double-End-->
 
@@ -96,15 +106,17 @@ minE?: double
 modulo?: Modulo
 ```
 
-模计算时使用的舍入模式，即计算a mod n时的舍入模式。默认值：1（ROUND_DOWN）。
+模计算时使用的舍入模式，即计算a mod n时的舍入模式。 默认值：1（ROUND_DOWN）。
 
 **类型：** [Modulo](arkts-arkts-modulo-t.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-modulo?: Modulo--><!--Device-DecimalConfig-modulo?: Modulo-End-->
 
@@ -116,15 +128,17 @@ modulo?: Modulo
 precision?: double
 ```
 
-运算结果的最大有效位数。默认值：20。
+运算结果的最大有效位数。 默认值：20。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-precision?: double--><!--Device-DecimalConfig-precision?: double-End-->
 
@@ -136,15 +150,17 @@ precision?: double
 rounding?: Rounding
 ```
 
-舍入模式，用于将运算结果舍入到precision位有效数字，以及作为round、toBinary、toDecimalPlaces、toExponential、toFixed、toHexadecimal、toNearest、toOctal、toPrecision和toSignificantDigits方法返回值的默认舍入模式。默认值：4（ROUND_HALF_UP）。
+舍入模式，用于将运算结果舍入到precision位有效数字，以及作为round、toBinary、toDecimalPlaces、toExponential、toFixed、 toHexadecimal、toNearest、toOctal、toPrecision和toSignificantDigits方法返回值的默认舍入模式。 默认值：4（ROUND_HALF_UP）。
 
 **类型：** [Rounding](arkts-arkts-rounding-t.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-rounding?: Rounding--><!--Device-DecimalConfig-rounding?: Rounding-End-->
 
@@ -156,15 +172,17 @@ rounding?: Rounding
 toExpNeg?: double
 ```
 
-指数表示法的负指数值的极限值，若Decimal的负指数小于等于该值时，使用科学计数法表示。默认值：-7。
+指数表示法的负指数值的极限值，若Decimal的负指数小于等于该值时，使用科学计数法表示。 默认值：-7。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-toExpNeg?: double--><!--Device-DecimalConfig-toExpNeg?: double-End-->
 
@@ -176,15 +194,17 @@ toExpNeg?: double
 toExpPos?: double
 ```
 
-指数表示法的正指数值的极限值，若Decimal的正指数大于等于该值时，使用科学计数法表示。默认值：21。
+指数表示法的正指数值的极限值，若Decimal的正指数大于等于该值时，使用科学计数法表示。 默认值：21。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecimalConfig-toExpPos?: double--><!--Device-DecimalConfig-toExpPos?: double-End-->
 

@@ -14,7 +14,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancel](ohos.app.ability.wantAgent/wantAgent#cancel)
+**Substitutes:** [cancel](arkts-ability-wantagent-cancel-f.md#cancel)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -27,7 +27,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to cancel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Cancel the callback method for Want in WantAgent. |
 
 ## Examples
 
@@ -98,7 +98,7 @@ Cancel a WantAgent. Only the application that creates the WantAgent can cancel i
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancel](ohos.app.ability.wantAgent/wantAgent#cancel)
+**Substitutes:** [cancel](arkts-ability-wantagent-cancel-f.md#cancel)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -2,7 +2,9 @@
 
 描述通知的鉴权信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationCheckRequest--><!--Device-unnamed-export interface NotificationCheckRequest-End-->
 
@@ -20,7 +22,9 @@ contentType: notificationManager.ContentType
 
 **类型：** notificationManager.ContentType
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationCheckRequest-contentType: notificationManager.ContentType--><!--Device-NotificationCheckRequest-contentType: notificationManager.ContentType-End-->
 
@@ -38,7 +42,9 @@ extraInfoKeys: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationCheckRequest-extraInfoKeys: Array<string>--><!--Device-NotificationCheckRequest-extraInfoKeys: Array<string>-End-->
 
@@ -56,7 +62,9 @@ slotType: notificationManager.SlotType
 
 **类型：** notificationManager.SlotType
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationCheckRequest-slotType: notificationManager.SlotType--><!--Device-NotificationCheckRequest-slotType: notificationManager.SlotType-End-->
 

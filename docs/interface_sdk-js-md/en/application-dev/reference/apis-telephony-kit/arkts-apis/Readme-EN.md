@@ -1,7 +1,6 @@
 # ArkTS API<!--arkts-telephonykit-->
 
 - [@ohos.telephony.call](arkts-telephony-call.md)
-  - [answerCall](arkts-telephony-call-answercall-f.md)
   <!--Del-->
   - [answerCall(system api)](arkts-telephony-call-answercall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -42,7 +41,6 @@
   - [getSubCallIdList(system api)](arkts-telephony-call-getsubcallidlist-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getVoNRState(system api)](arkts-telephony-call-getvonrstate-f-sys.md)<!--DelEnd-->
-  - [hangUpCall](arkts-telephony-call-hangupcall-f.md)
   <!--Del-->
   - [hangUpCall(system api)](arkts-telephony-call-hangupcall-f-sys.md)<!--DelEnd-->
   - [hasCall](arkts-telephony-call-hascall-f.md)
@@ -72,7 +70,25 @@
   <!--Del-->
   - [muteRinger(system api)](arkts-telephony-call-muteringer-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-telephony-call-off-f-sys.md)<!--DelEnd-->
+  - [off_audioDeviceChange(system api)](arkts-telephony-call-offaudiodevicechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_callDetailsChange(system api)](arkts-telephony-call-offcalldetailschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_callDisconnectedCause(system api)](arkts-telephony-call-offcalldisconnectedcause-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_callEventChange(system api)](arkts-telephony-call-offcalleventchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_callSessionEvent(system api)](arkts-telephony-call-offcallsessionevent-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_cameraCapabilitiesChange(system api)](arkts-telephony-call-offcameracapabilitieschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_imsCallModeChange(system api)](arkts-telephony-call-offimscallmodechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_mmiCodeResult(system api)](arkts-telephony-call-offmmicoderesult-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_peerDimensionsChange(system api)](arkts-telephony-call-offpeerdimensionschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_postDialDelay(system api)](arkts-telephony-call-offpostdialdelay-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offAudioDeviceChange(system api)](arkts-telephony-call-offaudiodevicechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -100,7 +116,25 @@
   <!--Del-->
   - [offRttModifyInd(system api)](arkts-telephony-call-offrttmodifyind-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-telephony-call-on-f-sys.md)<!--DelEnd-->
+  - [on_audioDeviceChange(system api)](arkts-telephony-call-onaudiodevicechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_callDetailsChange(system api)](arkts-telephony-call-oncalldetailschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_callDisconnectedCause(system api)](arkts-telephony-call-oncalldisconnectedcause-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_callEventChange(system api)](arkts-telephony-call-oncalleventchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_callSessionEvent(system api)](arkts-telephony-call-oncallsessionevent-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_cameraCapabilitiesChange(system api)](arkts-telephony-call-oncameracapabilitieschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_imsCallModeChange(system api)](arkts-telephony-call-onimscallmodechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_mmiCodeResult(system api)](arkts-telephony-call-onmmicoderesult-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_peerDimensionsChange(system api)](arkts-telephony-call-onpeerdimensionschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_postDialDelay(system api)](arkts-telephony-call-onpostdialdelay-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onAudioDeviceChange(system api)](arkts-telephony-call-onaudiodevicechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -131,7 +165,6 @@
   - [postDialProceed(system api)](arkts-telephony-call-postdialproceed-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [preloadCallUI(system api)](arkts-telephony-call-preloadcallui-f-sys.md)<!--DelEnd-->
-  - [rejectCall](arkts-telephony-call-rejectcall-f.md)
   <!--Del-->
   - [rejectCall(system api)](arkts-telephony-call-rejectcall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -196,7 +229,8 @@
   - [CallSessionEvent(system api)](arkts-telephony-call-callsessionevent-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CallTransferInfo(system api)](arkts-telephony-call-calltransferinfo-i-sys.md)<!--DelEnd-->
-  - [CallTransferResult](arkts-telephony-call-calltransferresult-i.md)
+  <!--Del-->
+  - [CallTransferResult(system api)](arkts-telephony-call-calltransferresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CameraCapabilities(system api)](arkts-telephony-call-cameracapabilities-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -240,7 +274,8 @@
   - [CallState](arkts-telephony-call-callstate-e.md)
   <!--Del-->
   - [CallTransferSettingType(system api)](arkts-telephony-call-calltransfersettingtype-e-sys.md)<!--DelEnd-->
-  - [CallTransferType](arkts-telephony-call-calltransfertype-e.md)
+  <!--Del-->
+  - [CallTransferType(system api)](arkts-telephony-call-calltransfertype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CallType(system api)](arkts-telephony-call-calltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -271,7 +306,8 @@
   <!--Del-->
   - [RttState(system api)](arkts-telephony-call-rttstate-e-sys.md)<!--DelEnd-->
   - [TelCallState](arkts-telephony-call-telcallstate-e.md)
-  - [TransferStatus](arkts-telephony-call-transferstatus-e.md)
+  <!--Del-->
+  - [TransferStatus(system api)](arkts-telephony-call-transferstatus-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VideoRequestResultType(system api)](arkts-telephony-call-videorequestresulttype-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -386,9 +422,16 @@
   <!--Del-->
   - [SolvableErrors(system api)](arkts-telephony-esim-solvableerrors-e-sys.md)<!--DelEnd-->
 - [@ohos.telephony.observer](arkts-telephony-observer.md)
-  - [off](arkts-telephony-observer-off-f.md)
+  - [off_callStateChange](arkts-telephony-observer-offcallstatechange-f.md)
+  - [off_callStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md)
   <!--Del-->
-  - [off(system api)](arkts-telephony-observer-off-f-sys.md)<!--DelEnd-->
+  - [off_cellInfoChange(system api)](arkts-telephony-observer-offcellinfochange-f-sys.md)<!--DelEnd-->
+  - [off_cellularDataConnectionStateChange](arkts-telephony-observer-offcellulardataconnectionstatechange-f.md)
+  - [off_cellularDataFlowChange](arkts-telephony-observer-offcellulardataflowchange-f.md)
+  - [off_iccAccountInfoChange](arkts-telephony-observer-officcaccountinfochange-f.md)
+  - [off_networkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md)
+  - [off_signalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md)
+  - [off_simStateChange](arkts-telephony-observer-offsimstatechange-f.md)
   - [offCallStateChange](arkts-telephony-observer-offcallstatechange-f.md)
   - [offCallStateChangeEx](arkts-telephony-observer-offcallstatechangeex-f.md)
   - [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md)
@@ -402,9 +445,16 @@
   - [offNetworkStateChange](arkts-telephony-observer-offnetworkstatechange-f.md)
   - [offSignalInfoChange](arkts-telephony-observer-offsignalinfochange-f.md)
   - [offSimStateChange](arkts-telephony-observer-offsimstatechange-f.md)
-  - [on](arkts-telephony-observer-on-f.md)
+  - [on_callStateChange](arkts-telephony-observer-oncallstatechange-f.md)
+  - [on_callStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md)
   <!--Del-->
-  - [on(system api)](arkts-telephony-observer-on-f-sys.md)<!--DelEnd-->
+  - [on_cellInfoChange(system api)](arkts-telephony-observer-oncellinfochange-f-sys.md)<!--DelEnd-->
+  - [on_cellularDataConnectionStateChange](arkts-telephony-observer-oncellulardataconnectionstatechange-f.md)
+  - [on_cellularDataFlowChange](arkts-telephony-observer-oncellulardataflowchange-f.md)
+  - [on_iccAccountInfoChange](arkts-telephony-observer-oniccaccountinfochange-f.md)
+  - [on_networkStateChange](arkts-telephony-observer-onnetworkstatechange-f.md)
+  - [on_signalInfoChange](arkts-telephony-observer-onsignalinfochange-f.md)
+  - [on_simStateChange](arkts-telephony-observer-onsimstatechange-f.md)
   - [onCallStateChange](arkts-telephony-observer-oncallstatechange-f.md)
   - [onCallStateChangeEx](arkts-telephony-observer-oncallstatechangeex-f.md)
   - [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md)
@@ -482,11 +532,11 @@
   - [isNRSupported](arkts-telephony-radio-isnrsupported-f.md)
   - [isRadioOn](arkts-telephony-radio-isradioon-f.md)
   <!--Del-->
-  - [off(system api)](arkts-telephony-radio-off-f-sys.md)<!--DelEnd-->
+  - [off_imsRegStateChange(system api)](arkts-telephony-radio-offimsregstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offImsRegStateChange(system api)](arkts-telephony-radio-offimsregstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-telephony-radio-on-f-sys.md)<!--DelEnd-->
+  - [on_imsRegStateChange(system api)](arkts-telephony-radio-onimsregstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onImsRegStateChange(system api)](arkts-telephony-radio-onimsregstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->

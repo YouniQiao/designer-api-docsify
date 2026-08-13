@@ -24,7 +24,7 @@ SPEAKER = 2
 
 **废弃版本：** 9
 
-**替代接口：** [SPEAKER](ohos.multimedia.audio.CommunicationDeviceType.SPEAKER)
+**替代接口：** SPEAKER
 
 <!--Device-ActiveDeviceType-SPEAKER = 2--><!--Device-ActiveDeviceType-SPEAKER = 2-End-->
 
@@ -42,7 +42,7 @@ BLUETOOTH_SCO = 7
 
 **废弃版本：** 9
 
-**替代接口：** [BLUETOOTH_SCO](ohos.multimedia.audio.DeviceType#BLUETOOTH_SCO)
+**替代接口：** BLUETOOTH_SCO
 
 <!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7--><!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7-End-->
 

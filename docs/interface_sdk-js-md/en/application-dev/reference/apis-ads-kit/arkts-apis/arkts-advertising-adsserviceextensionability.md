@@ -1,8 +1,4 @@
-# @ohos.advertising.AdsServiceExtensionAbility(ExtensionAbility for Ads)
-
-The AdsServiceExtensionAbility module provides ExtensionAbilities for the ads service. Device vendors can implement
- the callbacks for ads requests.
-
+# @ohos.advertising.AdsServiceExtensionAbility
 
 ## Modules to Import
 

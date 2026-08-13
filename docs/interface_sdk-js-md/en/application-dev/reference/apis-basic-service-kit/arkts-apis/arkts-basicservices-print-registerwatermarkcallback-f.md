@@ -16,7 +16,9 @@ Register to listen for watermark handling.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_PRINT
 
@@ -36,5 +38,5 @@ Register to listen for watermark handling.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 

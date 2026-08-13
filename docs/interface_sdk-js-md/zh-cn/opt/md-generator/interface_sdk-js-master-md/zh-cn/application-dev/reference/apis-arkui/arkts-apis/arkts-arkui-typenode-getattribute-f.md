@@ -10,6 +10,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -83,6 +85,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -102,7 +106,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 | 类型 |
 | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) |
+| ColumnAttribute |
 
 ## 示例
 
@@ -155,6 +159,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -174,7 +180,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 | 类型 |
 | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |
+| RowAttribute |
 
 ## 示例
 
@@ -227,6 +233,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -246,7 +254,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 | 类型 |
 | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |
+| StackAttribute |
 
 ## 示例
 
@@ -299,6 +307,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -318,7 +328,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 | 类型 |
 | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |
+| FlexAttribute |
 
 ## 示例
 
@@ -371,6 +381,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -390,11 +402,11 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 | 类型 |
 | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) |
+| [SwiperAttribute](../../apis-na/arkts-apis/arkts-na-swiper-swiperattribute-i.md) |
 
 ## 示例
 
-请参考[createNode('Swiper')12+示例](#createnodeswiper12)。
+请参考createNode('Swiper')12+示例。
 
 
 ## getAttribute
@@ -406,6 +418,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 获取Progress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -426,7 +440,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 | 类型 |
 | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) |
+| ProgressAttribute |
 
 ## 示例
 
@@ -478,6 +492,8 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -497,11 +513,11 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 | 类型 |
 | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) |
+| ScrollAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('Scroll')](#createnodescroll12)的示例。
+完整示例请参考createNode('Scroll')的示例。
 
 
 ## getAttribute
@@ -513,6 +529,8 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 获取RelativeContainer节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -533,7 +551,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 | 类型 |
 | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |
+| RelativeContainerAttribute |
 
 ## 示例
 
@@ -582,9 +600,11 @@ struct FrameNodeTypeTest {
 export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined
 ```
 
-获取[LoadingProgress](../@internal/component/ets/loading_progress)节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
+获取LoadingProgress节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访 问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -605,7 +625,7 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 | 类型 |
 | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |
+| LoadingProgressAttribute |
 
 ## 示例
 
@@ -655,6 +675,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -674,7 +696,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 | 类型 |
 | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |
+| ImageAttribute |
 
 ## 示例
 
@@ -733,6 +755,8 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -752,11 +776,11 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 | 类型 |
 | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |
+| ListAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('List')](#createnodelist12)的示例。
+完整示例请参考createNode('List')的示例。
 
 
 ## getAttribute
@@ -768,6 +792,8 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 获取ListItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -788,11 +814,11 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 | 类型 |
 | --- |
-| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) |
+| ListItemAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('List')](#createnodelist12)的示例。
+完整示例请参考createNode('List')的示例。
 
 
 ## getAttribute
@@ -804,6 +830,8 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 获取TextInput节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -824,7 +852,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 | 类型 |
 | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) |
+| TextInputAttribute |
 
 ## 示例
 
@@ -873,6 +901,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 获取Button节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -949,6 +979,8 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -968,7 +1000,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 | 类型 |
 | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |
+| ListItemGroupAttribute |
 
 ## 示例
 
@@ -986,6 +1018,8 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 获取WaterFlow节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1006,11 +1040,11 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 | 类型 |
 | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |
+| WaterFlowAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('WaterFlow')](#createnodewaterflow12)的示例。
+完整示例请参考createNode('WaterFlow')的示例。
 
 
 ## getAttribute
@@ -1022,6 +1056,8 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 获取FlowItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1042,11 +1078,11 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 | 类型 |
 | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |
+| FlowItemAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('WaterFlow')](#createnodewaterflow12)的示例。
+完整示例请参考createNode('WaterFlow')的示例。
 
 
 ## getAttribute
@@ -1058,6 +1094,8 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 获取XComponent节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1097,6 +1135,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1116,7 +1156,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 | 类型 |
 | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |
+| CheckboxAttribute |
 
 ## 示例
 
@@ -1174,6 +1214,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1193,7 +1235,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 | 类型 |
 | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) |
+| [RadioAttribute](../../apis-na/arkts-apis/arkts-na-radio-radioattribute-i.md) |
 
 ## 示例
 
@@ -1250,6 +1292,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1269,7 +1313,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 | 类型 |
 | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |
+| SliderAttribute |
 
 ## 示例
 
@@ -1321,6 +1365,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1340,7 +1386,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 | 类型 |
 | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) |
+| [ToggleAttribute](../../apis-na/arkts-apis/arkts-na-toggle-toggleattribute-i.md) |
 
 ## 示例
 
@@ -1392,6 +1438,8 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1411,7 +1459,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 | 类型 |
 | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) |
+| TextAreaAttribute |
 
 ## 示例
 
@@ -1461,6 +1509,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1480,11 +1530,11 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 | 类型 |
 | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) |
+| GridAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('Grid')](#createnodegrid14)的示例。
+完整示例请参考createNode('Grid')的示例。
 
 
 ## getAttribute
@@ -1496,6 +1546,8 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 获取GridItem节点的属性。若该节点非ArkTS语言创建，则需要设置是否支持跨语言访问，如果不支持跨语言访问，则返回undefined。该接口不支持声明式方式创建的节点。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1516,8 +1568,8 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 | 类型 |
 | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |
+| GridItemAttribute |
 
 ## 示例
 
-完整示例请参考[createNode('Grid')](#createnodegrid14)的示例。
+完整示例请参考createNode('Grid')的示例。

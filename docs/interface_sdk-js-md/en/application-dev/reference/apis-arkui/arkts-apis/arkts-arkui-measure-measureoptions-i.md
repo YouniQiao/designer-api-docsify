@@ -6,6 +6,8 @@ Defines the options of MeasureText.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface MeasureOptions--><!--Device-unnamed-export interface MeasureOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Baseline offset.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-baselineOffset?: double | string--><!--Device-MeasureOptions-baselineOffset?: double | string-End-->
@@ -49,6 +53,8 @@ Text display area of width.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Font list of text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-fontFamily?: string | Resource--><!--Device-MeasureOptions-fontFamily?: string | Resource-End-->
@@ -89,6 +97,8 @@ Font Size.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +120,8 @@ Font style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-fontStyle?: int | FontStyle--><!--Device-MeasureOptions-fontStyle?: int | FontStyle-End-->
@@ -129,6 +141,8 @@ Font weight.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,6 +164,8 @@ Distance between text fonts.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-letterSpacing?: double | string--><!--Device-MeasureOptions-letterSpacing?: double | string-End-->
@@ -169,6 +185,8 @@ Vertical center mode of the font.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,6 +208,8 @@ Maximum int of lines of text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-maxLines?: int--><!--Device-MeasureOptions-maxLines?: int-End-->
@@ -209,6 +229,8 @@ Overflow mode of the font.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,6 +252,8 @@ Alignment of text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-textAlign?: int | TextAlign--><!--Device-MeasureOptions-textAlign?: int | TextAlign-End-->
@@ -249,6 +273,8 @@ Type of letter in the text font
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -270,6 +296,8 @@ Text to display.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-textContent: string | Resource--><!--Device-MeasureOptions-textContent: string | Resource-End-->
@@ -290,6 +318,8 @@ Specify the indentation of the first line in a text-block.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MeasureOptions-textIndent?: double | string--><!--Device-MeasureOptions-textIndent?: double | string-End-->
@@ -309,6 +339,8 @@ Set the word break type.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

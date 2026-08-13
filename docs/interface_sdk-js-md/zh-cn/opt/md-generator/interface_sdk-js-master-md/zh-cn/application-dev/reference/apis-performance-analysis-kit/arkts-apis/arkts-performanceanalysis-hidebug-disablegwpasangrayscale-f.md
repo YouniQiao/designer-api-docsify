@@ -8,7 +8,9 @@ function disableGwpAsanGrayscale(): void
 
 停止使能GWP-ASan。调用该接口将取消自定义配置，恢复默认参数GwpAsanOptions。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function disableGwpAsanGrayscale(): void--><!--Device-hidebug-function disableGwpAsanGrayscale(): void-End-->
 

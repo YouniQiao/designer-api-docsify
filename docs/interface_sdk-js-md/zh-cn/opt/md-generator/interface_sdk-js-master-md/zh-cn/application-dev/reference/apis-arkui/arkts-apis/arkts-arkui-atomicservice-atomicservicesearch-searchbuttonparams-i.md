@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface SearchButtonParams--><!--Device-unnamed-export interface SearchButtonParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ options?: SearchButtonOptions
 **类型：** [SearchButtonOptions](../arkts-components/arkts-arkui-searchbuttonoptions-i.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ searchButtonValue: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

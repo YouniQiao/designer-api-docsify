@@ -6,7 +6,9 @@ export type NotificationCapsule = _NotificationCapsule
 
 通知胶囊。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationCapsule = _NotificationCapsule--><!--Device-notificationManager-export type NotificationCapsule = _NotificationCapsule-End-->
 

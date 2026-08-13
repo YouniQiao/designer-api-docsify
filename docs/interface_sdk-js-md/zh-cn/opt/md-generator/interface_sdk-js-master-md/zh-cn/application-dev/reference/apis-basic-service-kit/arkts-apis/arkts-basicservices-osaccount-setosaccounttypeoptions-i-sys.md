@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-osAccount-interface SetOsAccountTypeOptions--><!--Device-osAccount-interface SetOsAccountTypeOptions-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -21,6 +23,8 @@ token?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-SetOsAccountTypeOptions-token?: Uint8Array--><!--Device-SetOsAccountTypeOptions-token?: Uint8Array-End-->
 

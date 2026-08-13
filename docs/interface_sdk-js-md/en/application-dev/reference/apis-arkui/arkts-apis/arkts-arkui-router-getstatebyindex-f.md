@@ -12,14 +12,7 @@ import { router } from '@kit.ArkUI';
 function getStateByIndex(index: number): RouterState | undefined
 ```
 
-Obtains the status information about a page by its index.
-
-> **NOTE：**
-> 
-> - Since API version 12, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Obtains the status information about a page by its index. > **NOTE：**> > - Since API version 12, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 12
 

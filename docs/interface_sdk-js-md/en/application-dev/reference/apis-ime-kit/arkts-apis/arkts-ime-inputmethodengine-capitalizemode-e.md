@@ -2,9 +2,11 @@
 
 Enumerates the modes of capitalizing the first letter of a text.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export enum CapitalizeMode--><!--Device-inputMethodEngine-export enum CapitalizeMode-End-->
 
@@ -18,9 +20,11 @@ NONE = 0
 
 Capitalize nothing.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CapitalizeMode-NONE = 0--><!--Device-CapitalizeMode-NONE = 0-End-->
 
@@ -34,9 +38,11 @@ SENTENCES
 
 Capitalize the first letter of each sentence.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CapitalizeMode-SENTENCES--><!--Device-CapitalizeMode-SENTENCES-End-->
 
@@ -50,9 +56,11 @@ WORDS
 
 Capitalize the first letter of each word.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CapitalizeMode-WORDS--><!--Device-CapitalizeMode-WORDS-End-->
 
@@ -66,9 +74,11 @@ CHARACTERS
 
 Capitalize each letter.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CapitalizeMode-CHARACTERS--><!--Device-CapitalizeMode-CHARACTERS-End-->
 

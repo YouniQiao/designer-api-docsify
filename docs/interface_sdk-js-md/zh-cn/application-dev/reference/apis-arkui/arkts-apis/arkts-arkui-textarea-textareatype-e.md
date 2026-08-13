@@ -6,6 +6,8 @@ Declare the type of input box
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum TextAreaType--><!--Device-unnamed-export declare enum TextAreaType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Declare the type of input box
 NORMAL = 0
 ```
 
-Basic input mode.The value can contain digits, letters, underscores (_), spaces, and special characters.
+Basic input mode. The value can contain digits, letters, underscores (_), spaces, and special characters.
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ Pure digital input mode.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextAreaType-NUMBER = 2--><!--Device-TextAreaType-NUMBER = 2-End-->
@@ -52,11 +58,13 @@ Pure digital input mode.
 PHONE_NUMBER = 3
 ```
 
-Phone number entry mode.In this mode, the following are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#).the length is not limited.
+Phone number entry mode. In this mode, the following are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#). the length is not limited.
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,11 +78,13 @@ Phone number entry mode.In this mode, the following are allowed: digits, spaces,
 EMAIL = 5
 ```
 
-E-mail address input mode.This mode accepts only digits, letters, underscores (_), dots (.),and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once).
+E-mail address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' * + - / = ? ^ ` { | } ~ @ (which can only appear once).
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,11 +98,13 @@ E-mail address input mode.This mode accepts only digits, letters, underscores (_
 NUMBER_DECIMAL = 12
 ```
 
-Number decimal entry mode.The value can contain digits and one decimal point.
+Number decimal entry mode. The value can contain digits and one decimal point.
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +124,8 @@ URL entry mode.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextAreaType-URL = 13--><!--Device-TextAreaType-URL = 13-End-->
@@ -129,6 +143,8 @@ ONE_TIME_CODE = 14
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

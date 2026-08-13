@@ -12,9 +12,11 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function registerRemoteAuthCallback(callback: IRemoteAuthCallback): void
 ```
 
-Registers a remote authentication callback. This API is used in remote authentication scenarios. After registration, the system can obtain the page parameters required for remote authentication through the callback and receive the authentication result after the authentication is complete. Duplicate registration is not allowed. When the callback is no longer needed, call [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterRemoteAuthCallback)to unregister it to prevent the callback from being unable to be released.
+Registers a remote authentication callback. This API is used in remote authentication scenarios. After registration, the system can obtain the page parameters required for remote authentication through the callback and receive the authentication result after the authentication is complete. Duplicate registration is not allowed. When the callback is no longer needed, call [unregisterRemoteAuthCallback](arkts-userauthentication-userauth-unregisterremoteauthcallback-f-sys.md#unregisterRemoteAuthCallback-(System-API)) to unregister it to prevent the callback from being unable to be released.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -36,9 +38,9 @@ Registers a remote authentication callback. This API is used in remote authentic
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

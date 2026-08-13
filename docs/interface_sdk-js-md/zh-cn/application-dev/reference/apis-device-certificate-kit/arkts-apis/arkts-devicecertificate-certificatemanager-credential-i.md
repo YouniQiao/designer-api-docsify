@@ -2,9 +2,11 @@
 
 表示凭据详细信息。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-certificateManager-export interface Credential--><!--Device-certificateManager-export interface Credential-End-->
 
@@ -20,9 +22,11 @@ alias: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-alias: string--><!--Device-Credential-alias: string-End-->
 
@@ -36,11 +40,13 @@ certNum: int
 
 表示凭据中包含的证书个数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-certNum: int--><!--Device-Credential-certNum: int-End-->
 
@@ -56,9 +62,11 @@ certPurpose?: CertificatePurpose
 
 **类型：** [CertificatePurpose](arkts-devicecertificate-certificatemanager-certificatepurpose-e.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-certPurpose?: CertificatePurpose--><!--Device-Credential-certPurpose?: CertificatePurpose-End-->
 
@@ -74,9 +82,11 @@ credentialData: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-credentialData: Uint8Array--><!--Device-Credential-credentialData: Uint8Array-End-->
 
@@ -90,11 +100,13 @@ keyNum: int
 
 表示凭据中包含的密钥个数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-keyNum: int--><!--Device-Credential-keyNum: int-End-->
 
@@ -110,9 +122,11 @@ keyUri: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-keyUri: string--><!--Device-Credential-keyUri: string-End-->
 
@@ -128,9 +142,11 @@ type: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Credential-type: string--><!--Device-Credential-type: string-End-->
 

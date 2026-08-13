@@ -8,9 +8,11 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 
 启动投播。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -26,17 +28,17 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | 是 | 会话令牌。SessionToken表示单个token。 |
 | device | [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md) | 是 | 设备相关信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并启动投播，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功并启动投播，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600108](../errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 
 ## startCasting
@@ -47,9 +49,11 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 
 启动投播。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -76,11 +80,11 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600108](../errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 

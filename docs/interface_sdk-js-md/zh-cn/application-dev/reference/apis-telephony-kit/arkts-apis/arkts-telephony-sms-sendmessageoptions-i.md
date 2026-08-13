@@ -2,9 +2,11 @@
 
 发送短信的参数和回调。根据SendMessageOptions中的可选参数content的值判断短信类型。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface SendMessageOptions--><!--Device-sms-export interface SendMessageOptions-End-->
 
@@ -18,11 +20,13 @@ content: string | Array<int>
 
 如果内容是字符串，则这是一条文本短信。如果内容是字节数组，则这是一条数据短信。
 
-**类型：** ArkTS-Dyn: string \| Array&lt;number&gt;  <br>ArkTS-Sta：string \| Array&lt;int&gt;
+**类型：** string \| Array&lt;int&gt;
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-content: string | Array<int>--><!--Device-SendMessageOptions-content: string | Array<int>-End-->
 
@@ -36,11 +40,13 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 短信送达结果回调，返回短信递送报告，参考[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md#IDeliveryShortMessageCallback)。发送数据短信时，此项必填。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>--><!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>-End-->
 
@@ -56,9 +62,11 @@ destinationHost: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-destinationHost: string--><!--Device-SendMessageOptions-destinationHost: string-End-->
 
@@ -72,11 +80,13 @@ destinationPort?: int
 
 如果发送数据消息，destinationPort 是必需的。否则是可选的。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-destinationPort?: int--><!--Device-SendMessageOptions-destinationPort?: int-End-->
 
@@ -90,11 +100,13 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 短信发送结果回调，返回短信发送的结果，参考[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md#ISendShortMessageCallback)。发送数据短信时，此项必填。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>--><!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>-End-->
 
@@ -110,9 +122,11 @@ serviceCenter?: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-serviceCenter?: string--><!--Device-SendMessageOptions-serviceCenter?: string-End-->
 
@@ -124,16 +138,15 @@ serviceCenter?: string
 slotId: int
 ```
 
-用于发送短信的SIM卡槽ID：
+用于发送短信的SIM卡槽ID： - 0：卡槽1。 - 1：卡槽2。
 
-- 0：卡槽1。  
-- 1：卡槽2。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 6
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-SendMessageOptions-slotId: int--><!--Device-SendMessageOptions-slotId: int-End-->
 

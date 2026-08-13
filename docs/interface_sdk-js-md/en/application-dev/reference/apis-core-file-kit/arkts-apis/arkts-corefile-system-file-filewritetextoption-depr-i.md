@@ -12,71 +12,6 @@ Defines the options used in writeText().
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
-## complete
-
-```TypeScript
-complete?: () => void
-```
-
-Callback invoked when the API call is complete.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-## fail
-
-```TypeScript
-fail?: (data: string, code: number) => void
-```
-
-Callback invoked when the API call fails.  
-**data** indicates the error information.  
-**code** indicates the returned error code:  
-**202**: invalid parameter  
-**300**: I/O error
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Callback invoked when the API call is successful.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 10
-
-<!--Device-FileWriteTextOption-success?: () => void--><!--Device-FileWriteTextOption-success?: () => void-End-->
-
-**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
-
 ## append
 
 ```TypeScript
@@ -97,6 +32,26 @@ Whether to enable the append mode. The default value is **false**. The value **t
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
+## complete
+
+```TypeScript
+complete?: () => void
+```
+
+Callback invoked when the API call is complete.
+
+**Type:** () =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileWriteTextOption-complete?: () => void--><!--Device-FileWriteTextOption-complete?: () => void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
 ## encoding
 
 ```TypeScript
@@ -114,6 +69,46 @@ Encoding format. The default format is **UTF-8**.
 **Deprecated since:** 10
 
 <!--Device-FileWriteTextOption-encoding?: string--><!--Device-FileWriteTextOption-encoding?: string-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## fail
+
+```TypeScript
+fail?: (data: string, code: number) => void
+```
+
+Callback invoked when the API call fails. **data** indicates the error information. **code** indicates the returned error code: **202**: invalid parameter **300**: I/O error
+
+**Type:** (data: string, code: number) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void--><!--Device-FileWriteTextOption-fail?: (data: string, code: number) => void-End-->
+
+**System capability:** SystemCapability.FileManagement.File.FileIO.Lite
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Callback invoked when the API call is successful.
+
+**Type:** () =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 10
+
+<!--Device-FileWriteTextOption-success?: () => void--><!--Device-FileWriteTextOption-success?: () => void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO.Lite
 
@@ -143,7 +138,7 @@ String to write into the file.
 uri: string
 ```
 
-URI of a local file. If it does not exist, a file will be created. Restricted by the underlying file system of lite wearables, the value must meet the following requirements:1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F.2. The value can contain a maximum of 128 characters.
+URI of a local file. If it does not exist, a file will be created. Restricted by the underlying file system of lite wearables, the value must meet the following requirements: 1. The URI cannot contain the following special characters: \"*+,:;&lt;=&gt;?[]|\x7F. 2. The value can contain a maximum of 128 characters.
 
 **Type:** string
 

@@ -2,7 +2,9 @@
 
 Describes the size of the screen region to capture.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenshot-interface Size--><!--Device-screenshot-interface Size-End-->
 
@@ -26,7 +28,9 @@ Height of the screen region to capture, in px. The value must be a positive inte
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Size-height: long--><!--Device-Size-height: long-End-->
 
@@ -44,7 +48,9 @@ Width of the screen region to capture, in px. The value must be a positive integ
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Size-width: long--><!--Device-Size-width: long-End-->
 

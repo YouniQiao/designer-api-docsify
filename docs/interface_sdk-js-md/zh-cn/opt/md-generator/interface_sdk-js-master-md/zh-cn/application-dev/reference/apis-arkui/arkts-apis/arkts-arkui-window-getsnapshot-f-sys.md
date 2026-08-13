@@ -6,10 +6,11 @@
 function getSnapshot(windowId: number): Promise<image.PixelMap>
 ```
 
-获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过  
-[setWindowPrivacyMode](arkts-arkui-window-window-i.md#setWindowPrivacyMode)接口设置），截图结果为白屏。
+获取指定窗口相同尺寸截图，使用Promise异步回调。若当前窗口设置为隐私模式（可通过 [setWindowPrivacyMode](arkts-arkui-window-window-i.md#setWindowPrivacyMode) 接口设置），截图结果为白屏。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>--><!--Device-window-function getSnapshot(windowId: int): Promise<image.PixelMap>-End-->
 
@@ -33,10 +34,10 @@ function getSnapshot(windowId: number): Promise<image.PixelMap>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

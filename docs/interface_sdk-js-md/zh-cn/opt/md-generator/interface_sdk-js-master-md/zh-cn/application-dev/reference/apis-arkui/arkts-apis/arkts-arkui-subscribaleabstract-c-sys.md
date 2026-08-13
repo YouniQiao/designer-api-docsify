@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare abstract class SubscribaleAbstract--><!--Device-unnamed-declare abstract class SubscribaleAbstract-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,11 @@
 public addOwningProperty(subscriber: IPropertySubscriber): void
 ```
 
-添加持有的属性。属性不再使用时，应调用[removeOwningProperty](#removeOwningProperty)或[removeOwningPropertyById](#removeOwningPropertyById)移除。
+添加持有的属性。属性不再使用时，应调用[removeOwningProperty](#removeOwningProperty) 或[removeOwningPropertyById](#removeOwningPropertyById)移除。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public addOwningProperty(subscriber: IPropertySubscriber): void-End-->
 
@@ -42,6 +46,8 @@ constructor()
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-SubscribaleAbstract-constructor()--><!--Device-SubscribaleAbstract-constructor()-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -57,6 +63,8 @@ protected notifyPropertyHasChanged(propName: string, newValue: any): void
 通知属性更改时调用。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void--><!--Device-SubscribaleAbstract-protected notifyPropertyHasChanged(propName: string, newValue: any): void-End-->
 
@@ -81,6 +89,8 @@ public removeOwningProperty(property: IPropertySubscriber): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void--><!--Device-SubscribaleAbstract-public removeOwningProperty(property: IPropertySubscriber): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -102,6 +112,8 @@ public removeOwningPropertyById(subscriberId: number): void
 使用ID删除持有的属性时调用。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void--><!--Device-SubscribaleAbstract-public removeOwningPropertyById(subscriberId: number): void-End-->
 
@@ -126,6 +138,8 @@ private owningProperties_: Set<number>
 **类型：** Set&lt;number&gt;
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-SubscribaleAbstract-private owningProperties_: Set<number>--><!--Device-SubscribaleAbstract-private owningProperties_: Set<number>-End-->
 

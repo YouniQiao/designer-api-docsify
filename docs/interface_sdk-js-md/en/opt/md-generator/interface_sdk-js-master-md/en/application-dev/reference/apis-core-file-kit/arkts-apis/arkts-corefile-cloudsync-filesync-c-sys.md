@@ -1,8 +1,10 @@
 # FileSync
 
-Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit.Before using the APIs of this class, you need to create a **FileSync** instance.
+Provides APIs for the file manager application to perform device-cloud sync of the files stored in the Drive Kit. Before using the APIs of this class, you need to create a **FileSync** instance.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-class FileSync--><!--Device-cloudSync-class FileSync-End-->
 
@@ -22,7 +24,9 @@ constructor(bundleName: string)
 
 A constructor used to create a **FileSync** instance.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FileSync-constructor(bundleName: string)--><!--Device-FileSync-constructor(bundleName: string)-End-->
 
@@ -40,8 +44,8 @@ A constructor used to create a **FileSync** instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -58,6 +62,8 @@ getUploadList(uris: Array<string>): Promise<Array<UploadProgress>>
 Query the upload state of the cloud file list.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -86,8 +92,8 @@ Query the upload state of the cloud file list.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900010 |
 
 ## pauseUpload
@@ -99,6 +105,8 @@ pauseUpload(uri: string): void
 Pause the upload of the cloud file.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -122,8 +130,8 @@ Pause the upload of the cloud file.
 | --- |
 | 13900002 |
 | 14000002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900010 |
 
 ## registerUploadProgress
@@ -135,6 +143,8 @@ registerUploadProgress(callback: Callback<UploadProgress>): void
 Registers to cloud file upload progress change. This method uses a callback to get upload progress changes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -157,8 +167,8 @@ Registers to cloud file upload progress change. This method uses a callback to g
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900010 |
 
 ## resumeUpload
@@ -170,6 +180,8 @@ resumeUpload(uri: string): void
 Resume the upload of the cloud file.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -193,8 +205,8 @@ Resume the upload of the cloud file.
 | --- |
 | 13900002 |
 | 14000002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900010 |
 
 ## unregisterUploadProgress
@@ -206,6 +218,8 @@ unregisterUploadProgress(): void
 Unregisters from cloud file upload progress change.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -221,6 +235,6 @@ Unregisters from cloud file upload progress change.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900010 |

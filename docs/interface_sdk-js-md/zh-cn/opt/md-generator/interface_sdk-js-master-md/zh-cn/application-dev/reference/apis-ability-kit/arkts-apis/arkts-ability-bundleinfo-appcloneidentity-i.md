@@ -2,7 +2,9 @@
 
 描述应用包的身份信息。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AppCloneIdentity--><!--Device-unnamed-export interface AppCloneIdentity-End-->
 
@@ -18,7 +20,9 @@ readonly appIndex: number
 
 **类型：** number
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppCloneIdentity-readonly appIndex: int--><!--Device-AppCloneIdentity-readonly appIndex: int-End-->
 
@@ -34,7 +38,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppCloneIdentity-readonly bundleName: string--><!--Device-AppCloneIdentity-readonly bundleName: string-End-->
 

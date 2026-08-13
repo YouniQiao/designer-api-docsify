@@ -6,6 +6,8 @@ Round rect.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface RRect--><!--Device-unnamed-interface RRect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ height: number
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-height: number--><!--Device-RRect-height: number-End-->
 
@@ -42,6 +46,8 @@ left: number
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-RRect-left: number--><!--Device-RRect-left: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -59,6 +65,8 @@ radius: number
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-radius: number--><!--Device-RRect-radius: number-End-->
 
@@ -78,6 +86,8 @@ top: number
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-RRect-top: number--><!--Device-RRect-top: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -95,6 +105,8 @@ width: number
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-width: number--><!--Device-RRect-width: number-End-->
 

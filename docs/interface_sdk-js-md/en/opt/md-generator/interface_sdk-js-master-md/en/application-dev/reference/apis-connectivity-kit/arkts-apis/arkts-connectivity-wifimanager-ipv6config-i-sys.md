@@ -2,7 +2,9 @@
 
 Wi-Fi Ipv6 configuration information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface Ipv6Config--><!--Device-wifiManager-interface Ipv6Config-End-->
 
@@ -26,7 +28,9 @@ DNS servers.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Config-dnsServers: Array<string>--><!--Device-Ipv6Config-dnsServers: Array<string>-End-->
 
@@ -44,7 +48,9 @@ Domains.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Config-domains: Array<string>--><!--Device-Ipv6Config-domains: Array<string>-End-->
 
@@ -62,7 +68,9 @@ Gate way.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Config-gateway: string--><!--Device-Ipv6Config-gateway: string-End-->
 
@@ -80,7 +88,9 @@ IPv6 address.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Config-ipAddress: string--><!--Device-Ipv6Config-ipAddress: string-End-->
 
@@ -98,7 +108,9 @@ Prefix length.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Ipv6Config-prefixLength: int--><!--Device-Ipv6Config-prefixLength: int-End-->
 

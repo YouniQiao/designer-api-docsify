@@ -16,23 +16,3 @@
 import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
-## [key: string]
-
-```TypeScript
-[key: string]: BundleStateInfo
-```
-
-the struct of BundleActiveInfoResponse.
-
-**Type:** [BundleStateInfo](arkts-backgroundtasks-bundlestate-bundlestateinfo-i.md)
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Deprecated since:** 9
-
-<!--Device-BundleActiveInfoResponse-[key: string]: BundleStateInfo--><!--Device-BundleActiveInfoResponse-[key: string]: BundleStateInfo-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.UsageStatistics.App
-

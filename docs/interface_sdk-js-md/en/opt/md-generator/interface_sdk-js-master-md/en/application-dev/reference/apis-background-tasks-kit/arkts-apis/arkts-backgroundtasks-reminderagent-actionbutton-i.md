@@ -32,7 +32,7 @@ Text on the button.
 
 **Deprecated since:** 9
 
-**Substitutes:** [title](reminderAgentManager.ActionButton.title)
+**Substitutes:** title
 
 <!--Device-ActionButton-title: string--><!--Device-ActionButton-title: string-End-->
 
@@ -52,7 +52,7 @@ Button type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [type](reminderAgentManager.ActionButton.type)
+**Substitutes:** type
 
 <!--Device-ActionButton-type: ActionButtonType--><!--Device-ActionButton-type: ActionButtonType-End-->
 

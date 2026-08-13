@@ -2,7 +2,9 @@
 
 Indicates request parameters for obtaining the district information.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-interface DistrictInfo--><!--Device-geoLocationManager-interface DistrictInfo-End-->
 
@@ -24,11 +26,13 @@ Indicates administrative region name.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-administrativeArea?: string--><!--Device-DistrictInfo-administrativeArea?: string-End-->
 
@@ -44,11 +48,13 @@ Indicates country code.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-countryCode?: string--><!--Device-DistrictInfo-countryCode?: string-End-->
 
@@ -64,11 +70,13 @@ Indicates country name.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-countryName?: string--><!--Device-DistrictInfo-countryName?: string-End-->
 
@@ -80,15 +88,17 @@ Indicates country name.
 locale?: string
 ```
 
-Indicates language used for the location description.zh indicates Chinese, and en indicates English.
+Indicates language used for the location description. zh indicates Chinese, and en indicates English.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-locale?: string--><!--Device-DistrictInfo-locale?: string-End-->
 
@@ -104,11 +114,13 @@ Indicates locality information.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-locality?: string--><!--Device-DistrictInfo-locality?: string-End-->
 
@@ -124,11 +136,13 @@ Indicates sub-administrative region name.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-subAdministrativeArea?: string--><!--Device-DistrictInfo-subAdministrativeArea?: string-End-->
 
@@ -144,11 +158,13 @@ Indicates sub-locality information.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DistrictInfo-subLocality?: string--><!--Device-DistrictInfo-subLocality?: string-End-->
 

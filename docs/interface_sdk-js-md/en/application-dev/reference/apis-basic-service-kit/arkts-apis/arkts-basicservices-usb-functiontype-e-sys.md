@@ -8,7 +8,7 @@ Enumerates USB device function types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#FunctionType)
+**Substitutes:** [FunctionType](arkts-basicservices-usbmanager-functiontype-e-sys.md#FunctionType-(System-API))
 
 <!--Device-usb-export enum FunctionType--><!--Device-usb-export enum FunctionType-End-->
 

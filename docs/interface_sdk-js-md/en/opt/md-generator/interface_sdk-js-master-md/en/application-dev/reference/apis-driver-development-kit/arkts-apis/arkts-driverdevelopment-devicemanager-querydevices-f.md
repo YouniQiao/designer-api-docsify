@@ -14,7 +14,9 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 Queries the list of peripheral devices. If the device has no peripheral device connected, an empty list is returned.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -32,14 +34,14 @@ Queries the list of peripheral devices. If the device has no peripheral device c
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;Device&gt;&gt; |
+| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;Device&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [22900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) |
 
 ## Examples
 

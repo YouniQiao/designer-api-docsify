@@ -8,7 +8,9 @@ function createStream(sessionId: number, param: StreamParam): Promise<number>
 
 Creating a Stream.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,11 +37,11 @@ Creating a Stream.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [32300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300004-色彩空间不支持) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [32300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300001-重复创建传输流) |
-| [32300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300003-比特率不支持) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-色彩空间不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-重复创建传输流) |
+| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-比特率不支持) |
 
 ## 示例
 

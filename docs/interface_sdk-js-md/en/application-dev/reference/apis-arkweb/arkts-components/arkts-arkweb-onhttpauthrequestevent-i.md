@@ -6,6 +6,8 @@ Defines the triggered when the browser needs credentials from the user.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnHttpAuthRequestEvent--><!--Device-unnamed-declare interface OnHttpAuthRequestEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Defines the http auth request result.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +48,8 @@ Host of the page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnHttpAuthRequestEvent-host: string--><!--Device-OnHttpAuthRequestEvent-host: string-End-->
@@ -63,6 +69,8 @@ realm of the page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

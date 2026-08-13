@@ -2,7 +2,9 @@
 
 Describes enroll callback information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface EnrollCallbackInfo--><!--Device-intelligentVoice-interface EnrollCallbackInfo-End-->
 
@@ -26,7 +28,9 @@ Describes enroll event context.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnrollCallbackInfo-context: string--><!--Device-EnrollCallbackInfo-context: string-End-->
 
@@ -44,7 +48,9 @@ Result.
 
 **Type:** [EnrollResult](arkts-basicservices-intelligentvoice-enrollresult-e-sys.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnrollCallbackInfo-result: EnrollResult--><!--Device-EnrollCallbackInfo-result: EnrollResult-End-->
 

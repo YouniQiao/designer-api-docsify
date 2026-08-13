@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare abstract class LeadingMarginSpan--><!--Device-unnamed-export declare abstract class LeadingMarginSpan-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ abstract getLeadingMargin(): LengthMetrics
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +50,8 @@ abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-LeadingMarginSpan-abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void--><!--Device-LeadingMarginSpan-abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void-End-->
@@ -56,6 +62,6 @@ abstract onDraw(context: DrawContext, drawInfo: LeadingMarginSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 |  |
+| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | 是 |  |
 | drawInfo | [LeadingMarginSpanDrawInfo](arkts-arkui-styledstring-leadingmarginspandrawinfo-i.md) | 是 |  |
 

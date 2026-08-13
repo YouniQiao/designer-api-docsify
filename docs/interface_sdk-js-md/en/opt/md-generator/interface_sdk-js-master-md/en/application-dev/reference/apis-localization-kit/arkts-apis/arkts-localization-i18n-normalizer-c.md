@@ -2,7 +2,9 @@
 
 Provides the text normalization capabilities.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class Normalizer--><!--Device-i18n-export class Normalizer-End-->
 
@@ -22,7 +24,9 @@ static getInstance(mode: NormalizerMode): Normalizer
 
 Obtains a **Normalizer** object.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -46,7 +50,7 @@ Obtains a **Normalizer** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -70,7 +74,9 @@ normalize(text: string): string
 
 Normalizes input strings.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,7 +100,7 @@ Normalizes input strings.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -16,7 +16,9 @@ Get the SMS short code type of the destination address.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SEND_MESSAGES
 
@@ -30,7 +32,7 @@ Get the SMS short code type of the destination address.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
+| slotId | int | Yes | Indicates the ID of the slot holding the SIM card for sending SMS messages. The value {@code 0} indicates card slot 1, and the value {@code 1} indicates card slot 2. |
 | destAddr | string | Yes | Indicates the destination address of the sending SMS. &lt;br&gt;Value range:[0,+∞) |
 
 **Return value:**
@@ -43,11 +45,11 @@ Get the SMS short code type of the destination address.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
-| [8300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-sim-card-not-detected) | Do not have sim card. |
-| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Nonsystem applications use system APIs. |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | Do not have sim card. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 

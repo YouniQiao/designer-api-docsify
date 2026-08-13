@@ -4,9 +4,11 @@
 type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'
 ```
 
-Defines the interval between repeated clicks.The configuration of **RepeatClickInterval** takes effect when [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) is set to **true**; the normal type is used when [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) is set to **false**.
+Defines the interval between repeated clicks. The configuration of **RepeatClickInterval** takes effect when [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) is set to **true**; the normal type is used when [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) is set to **false**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'--><!--Device-config-type RepeatClickInterval = 'Shortest' | 'Short' | 'Medium' | 'Long' | 'Longest'-End-->
 

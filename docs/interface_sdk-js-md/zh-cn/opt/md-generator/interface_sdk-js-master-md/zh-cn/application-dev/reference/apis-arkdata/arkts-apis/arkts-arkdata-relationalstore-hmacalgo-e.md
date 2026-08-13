@@ -2,7 +2,9 @@
 
 数据库的HMAC算法枚举。请使用枚举名称而非枚举值。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-enum HmacAlgo--><!--Device-relationalStore-enum HmacAlgo-End-->
 
@@ -16,7 +18,9 @@ SHA1 = 0
 
 HMAC_SHA1算法。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HmacAlgo-SHA1 = 0--><!--Device-HmacAlgo-SHA1 = 0-End-->
 
@@ -30,7 +34,9 @@ SHA256 = 1
 
 HMAC_SHA256算法。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HmacAlgo-SHA256 = 1--><!--Device-HmacAlgo-SHA256 = 1-End-->
 
@@ -44,7 +50,9 @@ SHA512 = 2
 
 HMAC_SHA512算法。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HmacAlgo-SHA512 = 2--><!--Device-HmacAlgo-SHA512 = 2-End-->
 

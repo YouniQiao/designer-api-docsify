@@ -1,10 +1,10 @@
 # CustomSpan
 
-Describes the custom span. Only the base class is provided. You need to define the specific implementation.
-
-The drag preview of a custom span is blank.
+Describes the custom span. Only the base class is provided. You need to define the specific implementation. The drag preview of a custom span is blank.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare abstract class CustomSpan--><!--Device-unnamed-declare abstract class CustomSpan-End-->
 
@@ -19,6 +19,8 @@ invalidate(): void
 Manually triggers a refresh of the **Text** component that uses this **CustomSpan**.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +40,8 @@ Called to draw a custom span.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -50,7 +54,7 @@ Called to draw a custom span.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes |
+| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | Yes |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-customspandrawinfo-i.md) | Yes |
 
 ## onMeasure
@@ -62,6 +66,8 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo) : CustomSpanMetrics
 Called to obtain the size of a custom span.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

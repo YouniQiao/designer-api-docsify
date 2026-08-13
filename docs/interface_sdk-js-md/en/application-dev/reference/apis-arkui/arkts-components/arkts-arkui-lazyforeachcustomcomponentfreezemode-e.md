@@ -6,6 +6,8 @@ Enumerates the freeze modes for cached custom nodes that have been removed from 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LazyForEachCustomComponentFreezeMode--><!--Device-unnamed-declare enum LazyForEachCustomComponentFreezeMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Follow the enableCustomComponentFreeze field in Metadata to determine whether fr
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Freezing is disabled for cached custom nodes removed from the component tree.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -56,11 +62,13 @@ Freezing is disabled for cached custom nodes removed from the component tree.
 ENABLED = 2
 ```
 
-Freezing is enabled for cached custom nodes removed from the component tree.State updates of cached custom components will be frozen.
+Freezing is enabled for cached custom nodes removed from the component tree. State updates of cached custom components will be frozen.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

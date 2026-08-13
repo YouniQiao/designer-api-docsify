@@ -1,7 +1,4 @@
-# @ohos.InputMethodExtensionContext(InputMethodExtensionContext)
-
-在使用InputMethodExtensionContext的功能前，需要通过InputMethodExtensionAbility子类实例获取。
-
+# @ohos.InputMethodExtensionContext
 
 ## 汇总
 

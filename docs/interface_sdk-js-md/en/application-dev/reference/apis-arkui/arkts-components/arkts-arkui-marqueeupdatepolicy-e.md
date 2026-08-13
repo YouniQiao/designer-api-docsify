@@ -6,6 +6,8 @@ Sets the scrolling policy of the marquee after its attributes are updated.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum MarqueeUpdatePolicy--><!--Device-unnamed-declare enum MarqueeUpdatePolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Restarts the marquee from the start position after the attributes of the marquee
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Resumes the marquee from the current position after the attributes of the marque
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

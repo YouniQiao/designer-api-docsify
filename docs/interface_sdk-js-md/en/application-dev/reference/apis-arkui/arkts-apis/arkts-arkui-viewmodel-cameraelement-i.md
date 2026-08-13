@@ -8,7 +8,9 @@ The &lt;camera&gt; component provides preview and photographing functions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
-<!--Device-unnamed-export interface CameraElement extends Element--><!--Device-unnamed-export interface CameraElement extends Element-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface CameraElement--><!--Device-unnamed-export interface CameraElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Take photos with specified parameters.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

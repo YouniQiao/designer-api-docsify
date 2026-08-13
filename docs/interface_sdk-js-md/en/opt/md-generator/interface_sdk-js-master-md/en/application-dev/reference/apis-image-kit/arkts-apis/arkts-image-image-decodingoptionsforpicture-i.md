@@ -2,7 +2,9 @@
 
 Describes the image decoding options.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface DecodingOptionsForPicture--><!--Device-image-interface DecodingOptionsForPicture-End-->
 
@@ -20,13 +22,13 @@ import { image } from '@kit.ImageKit';
 desiredAuxiliaryPictures: Array<AuxiliaryPictureType>
 ```
 
-Auxiliary picture type. If no auxiliary picture type is specified or an empty array is passed, the system decodes all available auxiliary picture types.
-
-To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
+Auxiliary picture type. If no auxiliary picture type is specified or an empty array is passed, the system decodes all available auxiliary picture types. To exclude all auxiliary picture, you can decode the auxiliary picture to a PixelMap and use the PixelMap to create a Picture that contains only the main picture.
 
 **Type:** Array&lt;[AuxiliaryPictureType](arkts-image-image-auxiliarypicturetype-e.md)&gt;
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>--><!--Device-DecodingOptionsForPicture-desiredAuxiliaryPictures: Array<AuxiliaryPictureType>-End-->
 
@@ -43,6 +45,8 @@ Desired Pixel format, RGBA_8888\BGRA_8888\RGB_565\NV12\NV21 are supported.
 **Type:** PixelMapFormat
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,6 +65,8 @@ Desired size of the main pixel map. The value (0, 0) indicates that the pixels a
 **Type:** Size
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

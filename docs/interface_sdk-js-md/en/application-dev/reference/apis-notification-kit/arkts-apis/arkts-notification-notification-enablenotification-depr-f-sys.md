@@ -6,7 +6,7 @@
 function enableNotification(bundle: BundleOption, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable notification for a specified application.This API uses an asynchronous callback to return the result.
+Sets whether to enable notification for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Sets whether to enable notification for a specified application.This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
+**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -30,7 +30,7 @@ Sets whether to enable notification for a specified application.This API uses an
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | enable | boolean | Yes | Whether to enable notification. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## enableNotification
@@ -47,7 +47,7 @@ Sets whether to enable notification for a specified application. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable)
+**Substitutes:** [setNotificationEnable](arkts-notification-notificationmanager-setnotificationenable-f-sys.md#setNotificationEnable-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

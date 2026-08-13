@@ -2,7 +2,9 @@
 
 The module describes the size and position information of an auto-fill pop-up.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default interface AutoFillPopupConfig--><!--Device-unnamed-export default interface AutoFillPopupConfig-End-->
 
@@ -20,7 +22,9 @@ Position of the auto-fill pop-up. If this parameter is not set, the position is 
 
 **Type:** [PopupPlacement](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +44,9 @@ Width and height of the auto-fill pop-up. If this parameter is not set, the widt
 
 **Type:** [PopupSize](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

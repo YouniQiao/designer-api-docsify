@@ -10,6 +10,8 @@ declare function lstat(path: string): Promise<Stat>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -51,6 +53,8 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 获取符号链接文件信息，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 

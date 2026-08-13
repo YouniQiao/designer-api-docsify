@@ -12,15 +12,13 @@ import { ranging } from '@kit.ConnectivityKit';
 function startPassiveRanging(capabilityType: RangingTypes): Promise<int>
 ```
 
-Starts passive ranging mode.
-
-Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets.
-
-The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
+Starts passive ranging mode. Upon successful startup, returns a handle identifier for the passive ranging session and begins broadcasting ranging packets. The returned handle can be used to stop the passive ranging broadcast via stopPassiveRanging.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -40,15 +38,15 @@ The returned handle can be used to stop the passive ranging broadcast via stopPa
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the handle for starts ranging listening. |
+| Promise&lt;int&gt; | Promise used to return the handle for starts ranging listening. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
 | 34900052 | The specified type of ranging service is not supported. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 34900053 | The ranging service is disabled. |
-| [34900099](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) | Internal system error. For example, Internal object is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

@@ -1,8 +1,5 @@
 # AutoFillPopupConfig
 
-The module describes the size and position information of an auto-fill pop-up.
-
-
 ## Summary
 
 <!--Del-->

@@ -1,8 +1,10 @@
 # Session
 
-会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相机功能（录像，拍照）。
+会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相机功 能（录像，拍照）。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface Session--><!--Device-camera-interface Session-End-->
 
@@ -17,6 +19,8 @@ getActiveParameter(key: string): string
 Gets the active value of the given key in camera metadata.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,10 +46,10 @@ Gets the active value of the given key in camera metadata.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getCameraOutputCapabilities
 
@@ -55,7 +59,9 @@ getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>
 
 Get the supported camera output capability set.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Session-getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>--><!--Device-Session-getCameraOutputCapabilities(camera: CameraDevice): Array<CameraOutputCapability>-End-->
 
@@ -79,9 +85,9 @@ Get the supported camera output capability set.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getParameters
 
@@ -92,6 +98,8 @@ getParameters(key: string): Array<string>
 Gets the values of the given key in camera metadata.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,10 +125,10 @@ Gets the values of the given key in camera metadata.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSupportedKeys
 
@@ -131,6 +139,8 @@ getSupportedKeys(): Array<string>
 Gets the supported keys in camera metadata.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,9 +160,9 @@ Gets the supported keys in camera metadata.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setParameters
 
@@ -163,6 +173,8 @@ setParameters(kvpairs: Record<string, string>): void
 Sets key-value pairs parameters for the session.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,10 +194,10 @@ Sets key-value pairs parameters for the session.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setUsage
 
@@ -195,7 +207,9 @@ setUsage(usage: UsageType, enabled: boolean): void
 
 Set usage for the capture session.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Session-setUsage(usage: UsageType, enabled: boolean): void--><!--Device-Session-setUsage(usage: UsageType, enabled: boolean): void-End-->
 
@@ -214,8 +228,8 @@ Set usage for the capture session.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

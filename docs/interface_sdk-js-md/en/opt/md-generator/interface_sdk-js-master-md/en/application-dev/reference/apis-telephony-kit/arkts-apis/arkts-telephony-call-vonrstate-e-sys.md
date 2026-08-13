@@ -2,7 +2,9 @@
 
 Enumerates VoNR switch states.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum VoNRState--><!--Device-call-export enum VoNRState-End-->
 
@@ -18,7 +20,9 @@ VONR_STATE_OFF = 0
 
 Disabled.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VoNRState-VONR_STATE_OFF = 0--><!--Device-VoNRState-VONR_STATE_OFF = 0-End-->
 
@@ -34,7 +38,9 @@ VONR_STATE_ON = 1
 
 Enabled.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VoNRState-VONR_STATE_ON = 1--><!--Device-VoNRState-VONR_STATE_ON = 1-End-->
 

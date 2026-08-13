@@ -1,18 +1,20 @@
 # WindowStageCallbackFn
 
 ```TypeScript
-type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => void
+type WindowStageCallbackFn = (ability: Any, windowStage: window.WindowStage) => void
 ```
 
 The callback was called when both ability and window stage are registered for listening.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => void--><!--Device-unnamed-type WindowStageCallbackFn = (ability: any, windowStage: window.WindowStage) => void-End-->
+<!--Device-unnamed-type WindowStageCallbackFn = (ability: Any, windowStage: window.WindowStage) => void--><!--Device-unnamed-type WindowStageCallbackFn = (ability: Any, windowStage: window.WindowStage) => void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -20,6 +22,6 @@ The callback was called when both ability and window stage are registered for li
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ability | any | Yes | Indicates the ability to register for listening. |
+| ability | Any | Yes | Indicates the ability to register for listening. |
 | windowStage | window.WindowStage | Yes | Indicates the window stage to register for listening. |
 

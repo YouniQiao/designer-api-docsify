@@ -12,9 +12,9 @@ import { print } from '@kit.BasicServicesKit';
 function print(files: Array<string>, callback: AsyncCallback<PrintTask>): void
 ```
 
-Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page,call the [print](#print) API and pass in context.
+Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page, call the [print](#print) API and pass in context.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 
@@ -37,8 +37,8 @@ Prints files. This API uses an asynchronous callback to return the result. To st
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -68,10 +68,9 @@ print.print([fileUri.getUriFromPath(filePath)], (err: BusinessError, printTask: 
 function print(files: Array<string>): Promise<PrintTask>
 ```
 
-Prints files. This API uses a promise to return the result. To start the system print preview page, call the  
-[print](#print) API and pass in context.
+Prints files. This API uses a promise to return the result. To start the system print preview page, call the [print](#print) API and pass in context.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 
@@ -99,8 +98,8 @@ Prints files. This API uses a promise to return the result. To start the system 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -130,7 +129,9 @@ function print(files: Array<string>, context: Context, callback: AsyncCallback<P
 
 Prints files. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -150,8 +151,8 @@ Prints files. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -199,7 +200,9 @@ function print(files: Array<string>, context: Context): Promise<PrintTask>
 
 Prints files. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -224,8 +227,8 @@ Prints files. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -272,7 +275,9 @@ function print(jobName: string, printAdapter: PrintDocumentAdapter, printAttribu
 
 Prints a file. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -299,8 +304,8 @@ Prints a file. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

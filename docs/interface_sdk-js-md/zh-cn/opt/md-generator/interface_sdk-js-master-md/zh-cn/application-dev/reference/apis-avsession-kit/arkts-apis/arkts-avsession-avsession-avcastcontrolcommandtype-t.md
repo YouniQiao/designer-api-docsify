@@ -5,7 +5,9 @@ type AVCastControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPr
   'seek' | 'setVolume' | 'setSpeed' | 'setLoopMode' | 'toggleFavorite' | 'toggleMute'
 ```
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

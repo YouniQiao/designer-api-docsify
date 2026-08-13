@@ -6,11 +6,13 @@
 function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 ```
 
-根据userId获取指定用户下所有应用的[Provision](bundleManager/AppProvisionInfo)配置文件信息。使用Promise异步回调。
+根据userId获取指定用户下所有应用的Provision配置文件信息。使用Promise异步回调。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -24,7 +26,7 @@ function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。&lt;br&gt;默认值：调用方所在用户ID。&lt;br&gt;取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。&lt;br&gt;默认值：调用方所在用户ID。&lt;br&gt;取值范围：大于等于0。 |
 
 **返回值：**
 
@@ -36,9 +38,9 @@ function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. A non-system application is not allowed to call a system API. |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
 
 ## 示例
 

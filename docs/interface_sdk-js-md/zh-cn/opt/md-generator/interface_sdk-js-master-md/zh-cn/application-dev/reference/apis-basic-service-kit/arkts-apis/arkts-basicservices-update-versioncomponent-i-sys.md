@@ -2,7 +2,9 @@
 
 版本组件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export interface VersionComponent--><!--Device-update-export interface VersionComponent-End-->
 
@@ -20,7 +22,9 @@ componentId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-componentId: string--><!--Device-VersionComponent-componentId: string-End-->
 
@@ -38,7 +42,9 @@ componentType: ComponentType
 
 **类型：** ComponentType
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-componentType: ComponentType--><!--Device-VersionComponent-componentType: ComponentType-End-->
 
@@ -56,7 +62,9 @@ descriptionInfo: DescriptionInfo
 
 **类型：** [DescriptionInfo](arkts-basicservices-update-descriptioninfo-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-descriptionInfo: DescriptionInfo--><!--Device-VersionComponent-descriptionInfo: DescriptionInfo-End-->
 
@@ -74,7 +82,9 @@ displayVersion: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-displayVersion: string--><!--Device-VersionComponent-displayVersion: string-End-->
 
@@ -92,7 +102,9 @@ effectiveMode: EffectiveMode
 
 **类型：** [EffectiveMode](arkts-basicservices-update-effectivemode-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-effectiveMode: EffectiveMode--><!--Device-VersionComponent-effectiveMode: EffectiveMode-End-->
 
@@ -110,7 +122,9 @@ innerVersion: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-innerVersion: string--><!--Device-VersionComponent-innerVersion: string-End-->
 
@@ -124,11 +138,13 @@ innerVersion: string
 otaMode?: OtaMode
 ```
 
-升级模式。当需要指定特定的升级模式时传入此参数，适用于存储空间受限、快速升级或A/B分区设备等特殊场景。取值原则：REGULAR_OTA为正常升级，适用于大多数常规升级场景；STREAM_OTA为流式升级，适用于存储空间受限或需要快速升级的场景；AB_REGULAR_OTA为AB正常升级，适用于A/B分区设备；AB_STREAM_OTA为AB流式升级，适用于A/B分区设备。不传入时默认为REGULAR_OTA，使用正常升级模式。
+升级模式。当需要指定特定的升级模式时传入此参数，适用于存储空间受限、快速升级或A/B分区设备等特殊场景。取值原则：REGULAR_OTA为正常升级，适用于大多数常规升级场景；STREAM_OTA为流式升级，适用于存储空间受限或 需要快速升级的场景；AB_REGULAR_OTA为AB正常升级，适用于A/B分区设备；AB_STREAM_OTA为AB流式升级，适用于A/B分区设备。不传入时默认为REGULAR_OTA，使用正常升级模式。
 
 **类型：** [OtaMode](arkts-basicservices-update-otamode-e-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-otaMode?: OtaMode--><!--Device-VersionComponent-otaMode?: OtaMode-End-->
 
@@ -146,7 +162,9 @@ size: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-size: int--><!--Device-VersionComponent-size: int-End-->
 
@@ -164,7 +182,9 @@ upgradeAction: UpgradeAction
 
 **类型：** [UpgradeAction](arkts-basicservices-update-upgradeaction-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionComponent-upgradeAction: UpgradeAction--><!--Device-VersionComponent-upgradeAction: UpgradeAction-End-->
 

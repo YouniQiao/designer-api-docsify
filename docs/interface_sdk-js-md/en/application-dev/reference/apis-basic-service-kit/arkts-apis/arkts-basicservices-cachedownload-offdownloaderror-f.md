@@ -16,7 +16,9 @@ Unsubscribes from the pre-download error events. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void--><!--Device-cacheDownload-function offDownloadError(url: string, callback?: Callback<DownloadError>): void-End-->
 
@@ -27,7 +29,7 @@ Unsubscribes from the pre-download error events. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | url | string | Yes | URL to be unregistered, with a maximum of 8192 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | No | Callback used to return the error information about the pre- download. If this parameter is left blank, all error callback functions of the URL are unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[DownloadError](arkts-basicservices-cachedownload-downloaderror-i.md)&gt; | No | Callback used to return the error information about the pre- download. If this parameter is left blank, all error callback functions of the URL are unregistered. |
 
 ## Examples
 

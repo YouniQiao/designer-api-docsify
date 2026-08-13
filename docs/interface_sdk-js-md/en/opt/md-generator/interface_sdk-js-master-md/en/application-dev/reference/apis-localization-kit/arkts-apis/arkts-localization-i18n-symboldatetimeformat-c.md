@@ -1,12 +1,14 @@
 # SymbolDateTimeFormat
 
-Provide a DateTime formatting interface that supports custom symbols.This interface formats date time values into strings with custom symbols,and can replace variable symbols in the formatted result with custom fixed symbols(e.g., replacing "2:23 PM" with "2:23 afternoon").
+Provide a DateTime formatting interface that supports custom symbols. This interface formats date time values into strings with custom symbols, and can replace variable symbols in the formatted result with custom fixed symbols (e.g., replacing "2:23 PM" with "2:23 afternoon").
 
-**Inheritance/Implementation:** SymbolDateTimeFormat extends [Intl.DateTimeFormat](Intl.DateTimeFormat)
+**Inheritance/Implementation:** SymbolDateTimeFormat extends Intl.DateTimeFormat
 
 **Since:** 26.0.0
 
-<!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat extends Intl.DateTimeFormat-End-->
+**Deprecated since:** -1
+
+<!--Device-i18n-export class SymbolDateTimeFormat--><!--Device-i18n-export class SymbolDateTimeFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -25,6 +27,8 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 A constructor used to create a SymbolDateTimeFormat object.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,7 +49,7 @@ A constructor used to create a SymbolDateTimeFormat object.
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## format
 
@@ -56,6 +60,8 @@ public format(date?: Date | number): string
 Formats the date and time.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +92,8 @@ public formatRange(startDate: Date | number | bigint, endDate: Date | number | b
 Formats date and time ranges.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,6 +127,8 @@ Formats a date time range to Parts.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -150,6 +160,8 @@ Formats a date to parts.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -176,9 +188,11 @@ Formats a date to parts.
 public parse(text: string, lenientMode: boolean): number
 ```
 
-Parse a date time localized string to Unix timestamp.Unix timestamp, indicating the number of milliseconds elapsed since 00:00:00 on January 1, 1970 GMT.
+Parse a date time localized string to Unix timestamp. Unix timestamp, indicating the number of milliseconds elapsed since 00:00:00 on January 1, 1970 GMT.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -205,7 +219,7 @@ Parse a date time localized string to Unix timestamp.Unix timestamp, indicating 
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 ## resolvedOptions
 
@@ -213,9 +227,11 @@ Parse a date time localized string to Unix timestamp.Unix timestamp, indicating 
 public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 ```
 
-Obtains the options for creating a SymbolDateTimeFormat object.This will allow us to check the current config symbols.
+Obtains the options for creating a SymbolDateTimeFormat object. This will allow us to check the current config symbols.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

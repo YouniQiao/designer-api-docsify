@@ -18,6 +18,8 @@ Creates an AVMetadataExtractor instance. This API uses a promise to return the r
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor>-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -32,7 +34,7 @@ Creates an AVMetadataExtractor instance. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
 ## Examples
 
@@ -63,7 +65,9 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor | undefined>--><!--Device-media-function createAVMetadataExtractor(): Promise<AVMetadataExtractor | undefined>-End-->
 
@@ -79,7 +83,7 @@ Creates an **AVMetadataExtractor** instance. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by promise. |
 
 
 ## createAVMetadataExtractor
@@ -94,6 +98,8 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -102,13 +108,13 @@ Creates an AVMetadataExtractor instance. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AVMetadataExtractor instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 
 ## Examples
 
@@ -137,7 +143,9 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor | undefined>): void--><!--Device-media-function createAVMetadataExtractor(callback: AsyncCallback<AVMetadataExtractor | undefined>): void-End-->
 
@@ -147,11 +155,11 @@ Creates an **AVMetadataExtractor** instance. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVMetadataExtractor](arkts-media-media-avmetadataextractor-i.md) \| undefined&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **AVMetadataExtractor** instance created; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Returned by callback. |
 

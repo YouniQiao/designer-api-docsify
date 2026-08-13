@@ -6,7 +6,7 @@ Navigation type.
 
 **Deprecated since:** 13
 
-**Substitutes:** [Navigation](Navigation)
+**Substitutes:** Navigation
 
 <!--Device-unnamed-declare enum NavigationType--><!--Device-unnamed-declare enum NavigationType-End-->
 
@@ -18,18 +18,13 @@ Navigation type.
 Push
 ```
 
-Navigates to the specified page in the application.
-
-**NOTE：**
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[pushPath](NavPathStack#pushPath(info: NavPathInfo, animated?: boolean)) instead.
+Navigates to the specified page in the application. **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use pushPath instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [pushPath](NavPathStack#pushPath)
+**Substitutes:** pushPath
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,18 +38,13 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 Back
 ```
 
-Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to.
-
-**NOTE：**
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[pop](NavPathStack#pop(animated?: boolean)) instead.
+Returns to the specified page. If the specified page does not exist in the stack, no response is returned. If no page is specified, the previous page is returned to. **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use pop instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [pop](NavPathStack#pop)
+**Substitutes:** pop
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,18 +58,13 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 Replace
 ```
 
-Replaces the current page with another one in the application and destroys the current page.
-
-**NOTE：**
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use  
-[replacePath](NavPathStack#replacePath(info: NavPathInfo, animated?: boolean)) instead.
+Replaces the current page with another one in the application and destroys the current page. **NOTE：**This API is supported since API version 7 and deprecated since API version 13. You are advised to use replacePath instead.
 
 **Since:** 7
 
 **Deprecated since:** 13
 
-**Substitutes:** [replacePath](NavPathStack.replacePath)
+**Substitutes:** replacePath
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

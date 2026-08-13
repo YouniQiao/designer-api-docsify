@@ -12,15 +12,11 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getDevices(): Array<Readonly<USBDevice>>
 ```
 
-Obtains the list of USB devices connected to the host.
+Obtains the list of USB devices connected to the host. > **NOTE：**> > Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they > request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight) > and then initiate a control transfer to obtain it.
 
-> **NOTE：**
-> 
-> Third-party applications are not allowed to obtain the device serial number from the **serial** field unless they
-> request permission using [usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)
-> and then initiate a control transfer to obtain it.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>--><!--Device-usbManager-function getDevices(): Array<Readonly<USBDevice>>-End-->
 
@@ -30,13 +26,13 @@ Obtains the list of USB devices connected to the host.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevice&gt;&gt; |
+| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;USBDevice&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

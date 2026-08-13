@@ -8,7 +8,9 @@ function createConnection(deviceId: string, name: string): Connection
 
 作为客户端的设备创建连接对象，以便后续向服务端设备发起连接。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -35,9 +37,9 @@ function createConnection(deviceId: string, name: string): Connection
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

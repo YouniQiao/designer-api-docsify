@@ -2,9 +2,11 @@
 
 The definition of cast command to be sent to the session
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AVCastControlCommand--><!--Device-avSession-interface AVCastControlCommand-End-->
 
@@ -26,9 +28,11 @@ The command value [AVCastControlCommandType](arkts-avsession-avsession-avcastcon
 
 **Type:** [AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,13 +46,15 @@ The command value [AVCastControlCommandType](arkts-avsession-avsession-avcastcon
 parameter?: media.PlaybackSpeed | double | string | LoopMode
 ```
 
-Parameter carried in the command.The seek command must carry the number parameter.The setVolume command must carry the number parameter.The toggleFavorite command must carry the [assetId](arkts-avsession-avsession-avmediadescription-i.md#assetId) parameter.The setSpeed command must carry the [PlaybackSpeed](#media.PlaybackSpeed) parameter.The setLoopMode command must carry the [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode) parameter.Other commands do not need to carry parameters.
+Parameter carried in the command. The seek command must carry the number parameter. The setVolume command must carry the number parameter. The toggleFavorite command must carry the [assetId](arkts-avsession-avsession-avmediadescription-i.md#assetId) parameter. The setSpeed command must carry the PlaybackSpeed parameter. The setLoopMode command must carry the [LoopMode](arkts-avsession-avsession-loopmode-e.md#LoopMode) parameter. Other commands do not need to carry parameters.
 
-**Type:** ArkTS-Dyn: media.PlaybackSpeed \| number \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)  <br>ArkTS-Sta：media.PlaybackSpeed \| double \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)
+**Type:** media.PlaybackSpeed \| double \| string \| [LoopMode](arkts-avsession-avsession-loopmode-e.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

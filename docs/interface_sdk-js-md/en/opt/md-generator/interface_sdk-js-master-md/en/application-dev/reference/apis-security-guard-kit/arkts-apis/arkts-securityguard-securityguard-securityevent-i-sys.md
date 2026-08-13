@@ -4,6 +4,8 @@ Provides the SecurityEvent type, including the event id, version info, report co
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-securityGuard-interface SecurityEvent--><!--Device-securityGuard-interface SecurityEvent-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -28,6 +30,8 @@ The report content
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-SecurityEvent-content: string--><!--Device-SecurityEvent-content: string-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -45,6 +49,8 @@ The event id
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-SecurityEvent-eventId: number--><!--Device-SecurityEvent-eventId: number-End-->
 
@@ -64,6 +70,8 @@ The event timestamp, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-SecurityEvent-timestamp?: string--><!--Device-SecurityEvent-timestamp?: string-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -81,6 +89,8 @@ The version of a security event. Different versions indicate different data form
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-SecurityEvent-version: string--><!--Device-SecurityEvent-version: string-End-->
 

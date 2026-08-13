@@ -1,12 +1,14 @@
 # ActionMenuOptions
 
-ActionMenu options.
+Describes the options for showing the action menu.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-promptAction-export interface ActionMenuOptions--><!--Device-promptAction-export interface ActionMenuOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface ActionMenuOptions--><!--Device-promptAction-interface ActionMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,21 +21,29 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ## buttons
 
 ```TypeScript
-buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTripleButtons |
-            PromptActionQuadrupleButtons | PromptActionQuintupleButtons | PromptActionSextupleButtons
+buttons: [
+            Button,
+            Button?,
+            Button?,
+            Button?,
+            Button?,
+            Button?
+        ]
 ```
 
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
+Array of menu item buttons. The array structure is **{text:'button', color: '\#666666'}**. Up to six buttons are supported. If there are more than six buttons, only the first six buttons will be displayed.
 
-**Type:** [PromptActionSingleButton](arkts-arkui-promptaction-promptactionsinglebutton-t.md) \| [PromptActionDoubleButtons](arkts-arkui-promptaction-promptactiondoublebuttons-t.md) \| [PromptActionTripleButtons](arkts-arkui-promptaction-promptactiontriplebuttons-t.md) \| [PromptActionQuadrupleButtons](arkts-arkui-promptaction-promptactionquadruplebuttons-t.md) \| [PromptActionQuintupleButtons](arkts-arkui-promptaction-promptactionquintuplebuttons-t.md) \| [PromptActionSextupleButtons](arkts-arkui-promptaction-promptactionsextuplebuttons-t.md)
+**Type:** [             Button,             Button?,             Button?,             Button?,             Button?,             Button?         ]
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ActionMenuOptions-buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTripleButtons |            PromptActionQuadrupleButtons | PromptActionQuintupleButtons | PromptActionSextupleButtons--><!--Device-ActionMenuOptions-buttons: PromptActionSingleButton | PromptActionDoubleButtons | PromptActionTripleButtons |            PromptActionQuadrupleButtons | PromptActionQuintupleButtons | PromptActionSextupleButtons-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionMenuOptions-buttons: [            Button,            Button?,            Button?,            Button?,            Button?,            Button?        ]--><!--Device-ActionMenuOptions-buttons: [            Button,            Button?,            Button?,            Button?,            Button?,            Button?        ]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -43,17 +53,21 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 immersiveMode?: ImmersiveMode
 ```
 
-Determine the immersive mode of the dialog.
+Overlay effect for the page-level menu. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT** &lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **Default:** ImmersiveMode.DEFAULT
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ActionMenuOptions-immersiveMode?: ImmersiveMode--><!--Device-ActionMenuOptions-immersiveMode?: ImmersiveMode-End-->
 
@@ -65,17 +79,21 @@ Determine the immersive mode of the dialog.
 isModal?: boolean
 ```
 
-Whether it is a modal dialog
+Whether the menu is a modal, which has a mask applied and does not allow for interaction with other components around the menu. &lt;br&gt;**true**: The menu is a modal. &lt;br&gt;**false**: The menu is not a modal. &lt;br&gt;Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ActionMenuOptions-isModal?: boolean--><!--Device-ActionMenuOptions-isModal?: boolean-End-->
 
@@ -87,17 +105,21 @@ Whether it is a modal dialog
 levelMode?: LevelMode
 ```
 
-Determine the display level of the dialog.
+Display level mode of the menu. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelMode.OVERLAY** &lt;br&gt;- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **Default:** LevelMode.OVERLAY
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ActionMenuOptions-levelMode?: LevelMode--><!--Device-ActionMenuOptions-levelMode?: LevelMode-End-->
 
@@ -106,100 +128,120 @@ Determine the display level of the dialog.
 ## levelUniqueId
 
 ```TypeScript
-levelUniqueId?: int
+levelUniqueId?: number
 ```
 
-The uniqueId of any node in the router or navigation page.
+Unique ID of the node under the display level for the page-level menu. &lt;br&gt;Value range: a number no less than 0 &lt;br&gt;**NOTE：**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ActionMenuOptions-levelUniqueId?: int--><!--Device-ActionMenuOptions-levelUniqueId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-ActionMenuOptions-levelUniqueId?: number--><!--Device-ActionMenuOptions-levelUniqueId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidAppear
 
 ```TypeScript
-onDidAppear?: VoidCallback
+onDidAppear?: Callback<void>
 ```
 
-Callback function when the menu appears.
+Callback invoked after the menu appears. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. &lt;br&gt;2. When a menu is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.
 
-**Type:** VoidCallback
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ActionMenuOptions-onDidAppear?: VoidCallback--><!--Device-ActionMenuOptions-onDidAppear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ActionMenuOptions-onDidAppear?: Callback<void>--><!--Device-ActionMenuOptions-onDidAppear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onDidDisappear
 
 ```TypeScript
-onDidDisappear?: VoidCallback
+onDidDisappear?: Callback<void>
 ```
 
-Callback function when the menu disappears.
+Callback invoked after the menu disappears. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** VoidCallback
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ActionMenuOptions-onDidDisappear?: VoidCallback--><!--Device-ActionMenuOptions-onDidDisappear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ActionMenuOptions-onDidDisappear?: Callback<void>--><!--Device-ActionMenuOptions-onDidDisappear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillAppear
 
 ```TypeScript
-onWillAppear?: VoidCallback
+onWillAppear?: Callback<void>
 ```
 
-Callback function before the menu openAnimation starts.
+Callback invoked before the menu appearance animation.&lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** VoidCallback
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ActionMenuOptions-onWillAppear?: VoidCallback--><!--Device-ActionMenuOptions-onWillAppear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ActionMenuOptions-onWillAppear?: Callback<void>--><!--Device-ActionMenuOptions-onWillAppear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onWillDisappear
 
 ```TypeScript
-onWillDisappear?: VoidCallback
+onWillDisappear?: Callback<void>
 ```
 
-Callback function before the menu closeAnimation starts.
+Callback invoked before the menu disappearance animation. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
-**Type:** VoidCallback
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ActionMenuOptions-onWillDisappear?: VoidCallback--><!--Device-ActionMenuOptions-onWillDisappear?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-ActionMenuOptions-onWillDisappear?: Callback<void>--><!--Device-ActionMenuOptions-onWillDisappear?: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -209,17 +251,21 @@ Callback function before the menu closeAnimation starts.
 showInSubWindow?: boolean
 ```
 
-Whether to display in the sub window.
+Whether to show the menu in a subwindow when the menu needs to be displayed outside the main window. &lt;br&gt;**true**: The menu is shown in a subwindow. &lt;br&gt;Default value: **false**, indicating that the dialog box is not displayed in a subwindow.&lt;br&gt;**NOTE：**&lt;br&gt; - A menu whose **showInSubWindow** attribute is **true** cannot trigger the display of another menu whose **showInSubWindow** attribute is also **true**. &lt;br&gt; - If **showInSubWindow** is set to **true** in **UIExtension**, the menu is aligned with the host window based on **UIExtension**.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ActionMenuOptions-showInSubWindow?: boolean--><!--Device-ActionMenuOptions-showInSubWindow?: boolean-End-->
 
@@ -228,22 +274,24 @@ Whether to display in the sub window.
 ## systemMaterial
 
 ```TypeScript
-systemMaterial?: uiMaterial.Material
+systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
 
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
-
-**Type:** uiMaterial.Material
+**Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ActionMenuOptions-systemMaterial?: uiMaterial.Material--><!--Device-ActionMenuOptions-systemMaterial?: uiMaterial.Material-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ActionMenuOptions-systemMaterial?: SystemUiMaterial--><!--Device-ActionMenuOptions-systemMaterial?: SystemUiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -253,15 +301,17 @@ Device Behavior Differences:The effect of same material may vary across differen
 title?: string | Resource
 ```
 
-Title of the text to display.
+Title of the dialog box.&lt;br&gt;Default value: **undefined**, which indicates that no title is not displayed by default.
 
 **Type:** string \| Resource
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ActionMenuOptions-title?: string | Resource--><!--Device-ActionMenuOptions-title?: string | Resource-End-->
 

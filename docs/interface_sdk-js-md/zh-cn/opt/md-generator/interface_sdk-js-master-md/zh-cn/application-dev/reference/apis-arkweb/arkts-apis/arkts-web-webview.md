@@ -4,6 +4,8 @@ This module provides the capability to manage web modules.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -14,7 +16,7 @@ This module provides the capability to manage web modules.
 
 | 名称 |
 | --- |
-| [once](arkts-arkweb-webview-once-f.md#once) |
+| [once_string](arkts-arkweb-webview-oncestring-f.md#once_string) |
 
 ### 类
 

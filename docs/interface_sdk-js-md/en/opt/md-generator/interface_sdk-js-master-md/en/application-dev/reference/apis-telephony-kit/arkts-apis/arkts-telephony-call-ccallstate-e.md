@@ -4,6 +4,8 @@ Carrier call state code.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-call-export enum CCallState--><!--Device-call-export enum CCallState-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -17,6 +19,8 @@ CCALL_STATE_UNKNOWN = -1
 The call status fails to be obtained and is unknown.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CCallState-CCALL_STATE_UNKNOWN = -1--><!--Device-CCallState-CCALL_STATE_UNKNOWN = -1-End-->
 
@@ -32,6 +36,8 @@ The call is connected.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CCallState-CCALL_STATE_ACTIVE = 0--><!--Device-CCallState-CCALL_STATE_ACTIVE = 0-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -45,6 +51,8 @@ CCALL_STATE_HOLDING = 1
 The call is on hold.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CCallState-CCALL_STATE_HOLDING = 1--><!--Device-CCallState-CCALL_STATE_HOLDING = 1-End-->
 
@@ -60,6 +68,8 @@ The outgoing call is in the dialing process, and the peer end has not received t
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CCallState-CCALL_STATE_DIALING = 2--><!--Device-CCallState-CCALL_STATE_DIALING = 2-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -73,6 +83,8 @@ CCALL_STATE_ALERTING = 3
 The outgoing call is in the ringing process, and the peer end is ringing.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CCallState-CCALL_STATE_ALERTING = 3--><!--Device-CCallState-CCALL_STATE_ALERTING = 3-End-->
 
@@ -88,6 +100,8 @@ Indicates that an incoming call is received.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CCallState-CCALL_STATE_INCOMING = 4--><!--Device-CCallState-CCALL_STATE_INCOMING = 4-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -101,6 +115,8 @@ CCALL_STATE_WAITING = 5
 Indicates that another incoming call is received when there is an ongoing call in the same card slot.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CCallState-CCALL_STATE_WAITING = 5--><!--Device-CCallState-CCALL_STATE_WAITING = 5-End-->
 
@@ -116,6 +132,8 @@ Indicates that the call has been released.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CCallState-CCALL_STATE_DISCONNECTED = 6--><!--Device-CCallState-CCALL_STATE_DISCONNECTED = 6-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -129,6 +147,8 @@ CCALL_STATE_DISCONNECTING = 7
 Indicates that the call is being released.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CCallState-CCALL_STATE_DISCONNECTING = 7--><!--Device-CCallState-CCALL_STATE_DISCONNECTING = 7-End-->
 
@@ -144,6 +164,8 @@ No call is in progress.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-CCallState-CCALL_STATE_IDLE = 8--><!--Device-CCallState-CCALL_STATE_IDLE = 8-End-->
 
 **System capability:** SystemCapability.Telephony.CallManager
@@ -157,6 +179,8 @@ CCALL_STATE_ANSWERED = 9
 The incoming call is answered.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CCallState-CCALL_STATE_ANSWERED = 9--><!--Device-CCallState-CCALL_STATE_ANSWERED = 9-End-->
 

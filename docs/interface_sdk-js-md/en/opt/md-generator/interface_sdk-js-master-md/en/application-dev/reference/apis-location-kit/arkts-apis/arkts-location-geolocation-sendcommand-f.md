@@ -18,7 +18,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
+**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -61,7 +61,7 @@ Send extended commands to location subsystem.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendCommand](ohos.geoLocationManager/geoLocationManager.sendCommand)
+**Substitutes:** [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand)
 
 **Required permissions:** ohos.permission.LOCATION
 

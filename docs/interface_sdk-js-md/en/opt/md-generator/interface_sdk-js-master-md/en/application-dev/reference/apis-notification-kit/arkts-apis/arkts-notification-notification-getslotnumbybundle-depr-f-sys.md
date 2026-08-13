@@ -6,13 +6,13 @@
 function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of notification slots of a specified application.This API uses an asynchronous callback to return the result.
+Obtains the number of notification slots of a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
+**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getSlotNumByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Obtains the number of notification slots of a specified application. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
+**Substitutes:** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getSlotNumByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

@@ -4,6 +4,8 @@ Enumerates the cache states of the player.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum ReadyState--><!--Device-webview-enum ReadyState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ HAVE_NOTHING = 0
 There is no data cached.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +38,8 @@ Only media metadata is cached.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_METADATA = 1--><!--Device-ReadyState-HAVE_METADATA = 1-End-->
@@ -49,6 +55,8 @@ HAVE_CURRENT_DATA = 2
 Data up to the current playback position is cached.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -66,6 +74,8 @@ Data beyond the current playback position is cached, but there might still be st
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReadyState-HAVE_FUTURE_DATA = 3--><!--Device-ReadyState-HAVE_FUTURE_DATA = 3-End-->
@@ -81,6 +91,8 @@ HAVE_ENOUGH_DATA = 4
 Sufficient data has been cached to ensure smooth playback.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

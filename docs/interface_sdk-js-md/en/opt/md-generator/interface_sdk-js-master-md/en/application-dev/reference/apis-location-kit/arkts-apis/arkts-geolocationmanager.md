@@ -1,8 +1,10 @@
 # @ohos.geoLocationManager
 
-Provides interfaces for acquiring location information, managing location switches,geocoding, reverse geocoding, country code, fencing and other functions.
+Provides interfaces for acquiring location information, managing location switches, geocoding, reverse geocoding, country code, fencing and other functions.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace geoLocationManager--><!--Device-unnamed-declare namespace geoLocationManager-End-->
 
@@ -21,94 +23,114 @@ import { geoLocationManager } from '@kit.LocationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md#addbeaconfence) |
-| [addGnssGeofence](arkts-location-geolocationmanager-addgnssgeofence-f.md#addgnssgeofence) |
-| [findMatchingWlan](arkts-location-geolocationmanager-findmatchingwlan-f.md#findmatchingwlan) |
-| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushcachedgnsslocations) |
-| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushcachedgnsslocations-1) |
-| [getActiveGeoFences](arkts-location-geolocationmanager-getactivegeofences-f.md#getactivegeofences) |
-| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getaddressesfromlocation) |
-| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getaddressesfromlocation-1) |
-| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname) |
-| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getaddressesfromlocationname-1) |
-| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize) |
-| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize-1) |
-| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getcountrycode) |
-| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getcountrycode-1) |
-| [getCurrentDistrict](arkts-location-geolocationmanager-getcurrentdistrict-f.md#getcurrentdistrict) |
-| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation) |
-| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation-1) |
-| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getcurrentlocation-2) |
-| [getCurrentWifiBssidForLocating](arkts-location-geolocationmanager-getcurrentwifibssidforlocating-f.md#getcurrentwifibssidforlocating) |
-| [getDistanceBetweenLocations](arkts-location-geolocationmanager-getdistancebetweenlocations-f.md#getdistancebetweenlocations) |
-| [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md#getgeofencesupportedcoordtypes) |
-| [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getlastlocation) |
-| [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md#getpoiinfo) |
-| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getpostprocessingtrack) |
-| [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md#isbeaconfencesupported) |
-| [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md#iscachedgnssservicesupported) |
-| [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isgeocoderavailable) |
-| [isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md#isgnssfenceservicesupported) |
-| [isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md#isgnssservicesupported) |
-| [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#islocationenabled) |
-| [isPoiServiceSupported](arkts-location-geolocationmanager-ispoiservicesupported-f.md#ispoiservicesupported) |
-| [isWlanBssidMatched](arkts-location-geolocationmanager-iswlanbssidmatched-f.md#iswlanbssidmatched) |
-| [off](arkts-location-geolocationmanager-off-f.md#off) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-1) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-2) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-3) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-4) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-5) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-6) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-7) |
-| [off](arkts-location-geolocationmanager-off-f.md#off-10) |
-| [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md#offlocationchange) |
-| [on](arkts-location-geolocationmanager-on-f.md#on) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-1) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-2) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-3) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-4) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-5) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-6) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-7) |
-| [on](arkts-location-geolocationmanager-on-f.md#on-10) |
-| [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md#onlocationchange) |
-| [removeBeaconFence](arkts-location-geolocationmanager-removebeaconfence-f.md#removebeaconfence) |
-| [removeGnssGeofence](arkts-location-geolocationmanager-removegnssgeofence-f.md#removegnssgeofence) |
-| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendcommand) |
-| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendcommand-1) |
-| [startBluetoothSearch](arkts-location-geolocationmanager-startbluetoothsearch-f.md#startbluetoothsearch) |
-| [stopBluetoothSearch](arkts-location-geolocationmanager-stopbluetoothsearch-f.md#stopbluetoothsearch) |
+| [addBeaconFence](arkts-location-geolocationmanager-addbeaconfence-f.md#addBeaconFence) |
+| [addGnssGeofence](arkts-location-geolocationmanager-addgnssgeofence-f.md#addGnssGeofence) |
+| [findMatchingWlan](arkts-location-geolocationmanager-findmatchingwlan-f.md#findMatchingWlan) |
+| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations) |
+| [flushCachedGnssLocations](arkts-location-geolocationmanager-flushcachedgnsslocations-f.md#flushCachedGnssLocations) |
+| [getActiveGeoFences](arkts-location-geolocationmanager-getactivegeofences-f.md#getActiveGeoFences) |
+| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation) |
+| [getAddressesFromLocation](arkts-location-geolocationmanager-getaddressesfromlocation-f.md#getAddressesFromLocation) |
+| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName) |
+| [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName) |
+| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) |
+| [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) |
+| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getCountryCode) |
+| [getCountryCode](arkts-location-geolocationmanager-getcountrycode-f.md#getCountryCode) |
+| [getCurrentDistrict](arkts-location-geolocationmanager-getcurrentdistrict-f.md#getCurrentDistrict) |
+| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation) |
+| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation) |
+| [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation) |
+| [getCurrentWifiBssidForLocating](arkts-location-geolocationmanager-getcurrentwifibssidforlocating-f.md#getCurrentWifiBssidForLocating) |
+| [getDistanceBetweenLocations](arkts-location-geolocationmanager-getdistancebetweenlocations-f.md#getDistanceBetweenLocations) |
+| [getGeofenceSupportedCoordTypes](arkts-location-geolocationmanager-getgeofencesupportedcoordtypes-f.md#getGeofenceSupportedCoordTypes) |
+| [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getLastLocation) |
+| [getPoiInfo](arkts-location-geolocationmanager-getpoiinfo-f.md#getPoiInfo) |
+| [getPostProcessingTrack](arkts-location-geolocationmanager-getpostprocessingtrack-f.md#getPostProcessingTrack) |
+| [isBeaconFenceSupported](arkts-location-geolocationmanager-isbeaconfencesupported-f.md#isBeaconFenceSupported) |
+| [isCachedGnssServiceSupported](arkts-location-geolocationmanager-iscachedgnssservicesupported-f.md#isCachedGnssServiceSupported) |
+| [isGeocoderAvailable](arkts-location-geolocationmanager-isgeocoderavailable-f.md#isGeocoderAvailable) |
+| [isGnssFenceServiceSupported](arkts-location-geolocationmanager-isgnssfenceservicesupported-f.md#isGnssFenceServiceSupported) |
+| [isGnssServiceSupported](arkts-location-geolocationmanager-isgnssservicesupported-f.md#isGnssServiceSupported) |
+| [isLocationEnabled](arkts-location-geolocationmanager-islocationenabled-f.md#isLocationEnabled) |
+| [isPoiServiceSupported](arkts-location-geolocationmanager-ispoiservicesupported-f.md#isPoiServiceSupported) |
+| [isWlanBssidMatched](arkts-location-geolocationmanager-iswlanbssidmatched-f.md#isWlanBssidMatched) |
+| [offBluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md#offBluetoothScanResultChange) |
+| [offCachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md#offCachedGnssLocationsChange) |
+| [offCountryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md#offCountryCodeChange) |
+| [offGnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md#offGnssFenceStatusChange) |
+| [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md#offLocationChange) |
+| [offLocationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md#offLocationEnabledChange) |
+| [offLocationError](arkts-location-geolocationmanager-offlocationerror-f.md#offLocationError) |
+| [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md#offNmeaMessage) |
+| [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md#offSatelliteStatusChange) |
+| [off_bluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md) |
+| [off_cachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md) |
+| [off_countryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md) |
+| [off_gnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md) |
+| off_locationChange |
+| [off_locationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md) |
+| [off_locationError](arkts-location-geolocationmanager-offlocationerror-f.md) |
+| [off_nmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md) |
+| [off_satelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md) |
+| [onBluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md#onBluetoothScanResultChange) |
+| [onCachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md#onCachedGnssLocationsChange) |
+| [onCountryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md#onCountryCodeChange) |
+| [onGnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md#onGnssFenceStatusChange) |
+| [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md#onLocationChange) |
+| [onLocationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md#onLocationEnabledChange) |
+| [onLocationError](arkts-location-geolocationmanager-onlocationerror-f.md#onLocationError) |
+| [onNmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md#onNmeaMessage) |
+| [onSatelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md#onSatelliteStatusChange) |
+| [on_bluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md) |
+| [on_cachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md) |
+| [on_countryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md) |
+| [on_gnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md) |
+| on_locationChange |
+| [on_locationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md) |
+| [on_locationError](arkts-location-geolocationmanager-onlocationerror-f.md) |
+| [on_nmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md) |
+| [on_satelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md) |
+| [removeBeaconFence](arkts-location-geolocationmanager-removebeaconfence-f.md#removeBeaconFence) |
+| [removeGnssGeofence](arkts-location-geolocationmanager-removegnssgeofence-f.md#removeGnssGeofence) |
+| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand) |
+| [sendCommand](arkts-location-geolocationmanager-sendcommand-f.md#sendCommand) |
+| [startBluetoothSearch](arkts-location-geolocationmanager-startbluetoothsearch-f.md#startBluetoothSearch) |
+| [stopBluetoothSearch](arkts-location-geolocationmanager-stopbluetoothsearch-f.md#stopBluetoothSearch) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addFusionFence](arkts-location-geolocationmanager-addfusionfence-f-sys.md#addfusionfence) |
-| [disableLocation](arkts-location-geolocationmanager-disablelocation-f-sys.md#disablelocation) |
-| [disableLocationByUserId](arkts-location-geolocationmanager-disablelocationbyuserid-f-sys.md#disablelocationbyuserid) |
-| [disableLocationMock](arkts-location-geolocationmanager-disablelocationmock-f-sys.md#disablelocationmock) |
-| [disableReverseGeocodingMock](arkts-location-geolocationmanager-disablereversegeocodingmock-f-sys.md#disablereversegeocodingmock) |
-| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enablelocation) |
-| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enablelocation-1) |
-| [enableLocationByUserId](arkts-location-geolocationmanager-enablelocationbyuserid-f-sys.md#enablelocationbyuserid) |
-| [enableLocationMock](arkts-location-geolocationmanager-enablelocationmock-f-sys.md#enablelocationmock) |
-| [enableReverseGeocodingMock](arkts-location-geolocationmanager-enablereversegeocodingmock-f-sys.md#enablereversegeocodingmock) |
-| [getLocatingRequiredData](arkts-location-geolocationmanager-getlocatingrequireddata-f-sys.md#getlocatingrequireddata) |
-| [getLocationIconStatus](arkts-location-geolocationmanager-getlocationiconstatus-f-sys.md#getlocationiconstatus) |
-| [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md#isfusionfencesupported) |
-| [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md#islocationenabledbyuserid) |
-| [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md#islocationprivacyconfirmed) |
-| [off](arkts-location-geolocationmanager-off-f-sys.md#off-8) |
-| [off](arkts-location-geolocationmanager-off-f-sys.md#off-9) |
-| [on](arkts-location-geolocationmanager-on-f-sys.md#on-8) |
-| [on](arkts-location-geolocationmanager-on-f-sys.md#on-9) |
-| [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md#removefusionfence) |
-| [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md#setlocationprivacyconfirmstatus) |
-| [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md#setlocationswitchignored) |
-| [setMockedLocations](arkts-location-geolocationmanager-setmockedlocations-f-sys.md#setmockedlocations) |
-| [setReverseGeocodingMockInfo](arkts-location-geolocationmanager-setreversegeocodingmockinfo-f-sys.md#setreversegeocodingmockinfo) |
+| [addFusionFence](arkts-location-geolocationmanager-addfusionfence-f-sys.md#addFusionFence-(System-API)) |
+| [disableLocation](arkts-location-geolocationmanager-disablelocation-f-sys.md#disableLocation-(System-API)) |
+| [disableLocationByUserId](arkts-location-geolocationmanager-disablelocationbyuserid-f-sys.md#disableLocationByUserId-(System-API)) |
+| [disableLocationMock](arkts-location-geolocationmanager-disablelocationmock-f-sys.md#disableLocationMock-(System-API)) |
+| [disableReverseGeocodingMock](arkts-location-geolocationmanager-disablereversegeocodingmock-f-sys.md#disableReverseGeocodingMock-(System-API)) |
+| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enableLocation-(System-API)) |
+| [enableLocation](arkts-location-geolocationmanager-enablelocation-f-sys.md#enableLocation-(System-API)) |
+| [enableLocationByUserId](arkts-location-geolocationmanager-enablelocationbyuserid-f-sys.md#enableLocationByUserId-(System-API)) |
+| [enableLocationMock](arkts-location-geolocationmanager-enablelocationmock-f-sys.md#enableLocationMock-(System-API)) |
+| [enableReverseGeocodingMock](arkts-location-geolocationmanager-enablereversegeocodingmock-f-sys.md#enableReverseGeocodingMock-(System-API)) |
+| [getLocatingRequiredData](arkts-location-geolocationmanager-getlocatingrequireddata-f-sys.md#getLocatingRequiredData-(System-API)) |
+| [getLocationIconStatus](arkts-location-geolocationmanager-getlocationiconstatus-f-sys.md#getLocationIconStatus-(System-API)) |
+| [isFusionFenceSupported](arkts-location-geolocationmanager-isfusionfencesupported-f-sys.md#isFusionFenceSupported-(System-API)) |
+| [isLocationEnabledByUserId](arkts-location-geolocationmanager-islocationenabledbyuserid-f-sys.md#isLocationEnabledByUserId-(System-API)) |
+| [isLocationPrivacyConfirmed](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md#isLocationPrivacyConfirmed-(System-API)) |
+| [offLocatingRequiredDataChange](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md#offLocatingRequiredDataChange-(System-API)) |
+| [offLocationIconStatusChange](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md#offLocationIconStatusChange-(System-API)) |
+| [off_locatingRequiredDataChange](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md) |
+| [off_locationIconStatusChange](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md) |
+| [onLocatingRequiredDataChange](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md#onLocatingRequiredDataChange-(System-API)) |
+| [onLocationIconStatusChange](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md#onLocationIconStatusChange-(System-API)) |
+| [on_locatingRequiredDataChange](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md) |
+| [on_locationIconStatusChange](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md) |
+| [removeFusionFence](arkts-location-geolocationmanager-removefusionfence-f-sys.md#removeFusionFence-(System-API)) |
+| [setLocationPrivacyConfirmStatus](arkts-location-geolocationmanager-setlocationprivacyconfirmstatus-f-sys.md#setLocationPrivacyConfirmStatus-(System-API)) |
+| [setLocationSwitchIgnored](arkts-location-geolocationmanager-setlocationswitchignored-f-sys.md#setLocationSwitchIgnored-(System-API)) |
+| [setMockedLocations](arkts-location-geolocationmanager-setmockedlocations-f-sys.md#setMockedLocations-(System-API)) |
+| [setReverseGeocodingMockInfo](arkts-location-geolocationmanager-setreversegeocodingmockinfo-f-sys.md#setReverseGeocodingMockInfo-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -151,12 +173,14 @@ import { geoLocationManager } from '@kit.LocationKit';
 | [BluetoothScanInfo](arkts-location-geolocationmanager-bluetoothscaninfo-i-sys.md) |
 | [CellFence](arkts-location-geolocationmanager-cellfence-i-sys.md) |
 | [CellInfo](arkts-location-geolocationmanager-cellinfo-i-sys.md) |
+| [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md) |
 | [FusionFenceRequestParams](arkts-location-geolocationmanager-fusionfencerequestparams-i-sys.md) |
 | [FusionFenceTransition](arkts-location-geolocationmanager-fusionfencetransition-i-sys.md) |
 | [GeoAddress](arkts-location-geolocationmanager-geoaddress-i-sys.md) |
 | [GnssFence](arkts-location-geolocationmanager-gnssfence-i-sys.md) |
 | [LocatingRequiredData](arkts-location-geolocationmanager-locatingrequireddata-i-sys.md) |
 | [LocatingRequiredDataConfig](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md) |
+| [Location](arkts-location-geolocationmanager-location-i-sys.md) |
 | [LocationMockConfig](arkts-location-geolocationmanager-locationmockconfig-i-sys.md) |
 | [ReverseGeocodingMockInfo](arkts-location-geolocationmanager-reversegeocodingmockinfo-i-sys.md) |
 | [WifiFence](arkts-location-geolocationmanager-wififence-i-sys.md) |

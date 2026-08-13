@@ -2,7 +2,9 @@
 
 Defines cross-device collaborative operation information.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export interface OperationInfo--><!--Device-notificationSubscribe-export interface OperationInfo-End-->
 
@@ -22,12 +24,13 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 actionName?: string
 ```
 
-Operation button displayed in the notification. The value must be the same as that of **title** in   
-[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton).
+Operation button displayed in the notification. The value must be the same as that of **title** in [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton).
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationInfo-actionName?: string--><!--Device-OperationInfo-actionName?: string-End-->
 
@@ -45,7 +48,9 @@ Index of the non-live view button or live view auxiliary area that the user taps
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationInfo-buttonIndex?: int--><!--Device-OperationInfo-buttonIndex?: int-End-->
 
@@ -59,16 +64,13 @@ Index of the non-live view button or live view auxiliary area that the user taps
 operationType?: number
 ```
 
-Operation type.
-
-- **0**: The user taps the non-live view.  
-- **1**: The user taps the non-live view button.  
-- **32**: The user taps the live view.  
-- **33**: The user taps the live view auxiliary area.
+Operation type. - **0**: The user taps the non-live view. - **1**: The user taps the non-live view button. - **32**: The user taps the live view. - **33**: The user taps the live view auxiliary area.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationInfo-operationType?: int--><!--Device-OperationInfo-operationType?: int-End-->
 
@@ -82,12 +84,13 @@ Operation type.
 userInput?: string
 ```
 
-User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in   
-[NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#NotificationUserInput).
+User input, used to apply quick reply across devices. The value must be the same as that of **inputKey** in [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#NotificationUserInput).
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationInfo-userInput?: string--><!--Device-OperationInfo-userInput?: string-End-->
 

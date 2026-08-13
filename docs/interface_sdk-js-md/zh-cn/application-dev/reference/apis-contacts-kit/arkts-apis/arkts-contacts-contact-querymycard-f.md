@@ -14,7 +14,7 @@ function queryMyCard(callback: AsyncCallback<Contact>): void
 
 **废弃版本：** 10
 
-**替代接口：** [queryMyCard](contact.queryMyCard(context:)
+**替代接口：** [queryMyCard](#queryMyCard)(context: Context, callback: AsyncCallback&lt;Contact&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -26,7 +26,7 @@ function queryMyCard(callback: AsyncCallback<Contact>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 ## 示例
 
@@ -57,6 +57,8 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void-End-->
@@ -68,18 +70,18 @@ function queryMyCard(context: Context, callback: AsyncCallback<Contact>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -112,7 +114,7 @@ function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>)
 
 **废弃版本：** 10
 
-**替代接口：** [queryMyCard](contact.queryMyCard(context:)
+**替代接口：** [queryMyCard](#queryMyCard)(context: Context, attrs: ContactAttributes, callback: AsyncCallback&lt;Contact&gt;)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -125,7 +127,7 @@ function queryMyCard(attrs: ContactAttributes, callback: AsyncCallback<Contact>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 ## 示例
 
@@ -158,6 +160,8 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryMyCard(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void--><!--Device-contact-function queryMyCard(context: Context, attrs: ContactAttributes, callback: AsyncCallback<Contact>): void-End-->
@@ -170,18 +174,18 @@ function queryMyCard(context: Context, attrs: ContactAttributes, callback: Async
 | --- | --- | --- | --- |
 | context | Context | 是 | 应用上下文Context。 |
 | attrs | [ContactAttributes](arkts-contacts-contact-contactattributes-c.md) | 是 | 联系人的属性列表，如果为空，则查询联系人的所有属性字段（包括姓名、电话、邮箱等）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Contact](arkts-contacts-contact-contact-c.md)&gt; | 是 | 回调函数。成功返回“我的名片”信息；失败返回具体的错误码信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -216,7 +220,7 @@ function queryMyCard(attrs?: ContactAttributes): Promise<Contact>
 
 **废弃版本：** 10
 
-**替代接口：** [queryMyCard](contact.queryMyCard(context:)
+**替代接口：** [queryMyCard](#queryMyCard)(context: Context, attrs?: ContactAttributes)
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -263,6 +267,8 @@ function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Conta
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.READ_CONTACTS
 
 <!--Device-contact-function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>--><!--Device-contact-function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Contact>-End-->
@@ -286,12 +292,12 @@ function queryMyCard(context: Context, attrs?: ContactAttributes): Promise<Conta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

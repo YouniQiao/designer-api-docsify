@@ -2,9 +2,11 @@
 
 Provides http related APIs.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace http--><!--Device-unnamed-declare namespace http-End-->
 
@@ -22,8 +24,8 @@ import { http } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createHttp](arkts-network-http-createhttp-f.md#createhttp) | Creates an HTTP request task. |
-| [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md#createhttpresponsecache) | Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests. |
+| [createHttp](arkts-network-http-createhttp-f.md#createHttp) | Creates an HTTP request task. |
+| [createHttpResponseCache](arkts-network-http-createhttpresponsecache-f.md#createHttpResponseCache) | Creates a default {@code HttpResponseCache} object to store the responses of HTTP access requests. |
 
 ### Classes
 
@@ -36,13 +38,13 @@ import { http } from '@kit.NetworkKit';
 | Name | Description |
 | --- | --- |
 | [CertificatePinning](arkts-network-http-certificatepinning-i.md) | Certificate pinning option. |
-| [ClientCert](arkts-network-http-clientcert-i.md) | The clientCert field of the client certificate, which includes 4 attributes:client certificate (cert), client certificate type (certType), certificate private key (key), and passphrase (keyPassword). |
+| [ClientCert](arkts-network-http-clientcert-i.md) | The clientCert field of the client certificate, which includes 4 attributes: client certificate (cert), client certificate type (certType), certificate private key (key), and passphrase (keyPassword). |
 | [ConnectionExtraInfo](arkts-network-http-connectionextrainfo-i.md) | Information details of the HTTP request |
 | [Credential](arkts-network-http-credential-i.md) | HTTP credential. Some server or proxy server need this. |
 | [DataReceiveProgressInfo](arkts-network-http-datareceiveprogressinfo-i.md) | This interface is used to obtain the progress information of file upload or download. |
 | [DataSendProgressInfo](arkts-network-http-datasendprogressinfo-i.md) | This interface is used to monitor the progress of sending data. |
 | [HttpInterceptor](arkts-network-http-httpinterceptor-i.md) | Defines an HTTP Interceptor. User can implement this interface to define the handle function. |
-| [HttpRequest](arkts-network-http-httprequest-i.md) | &lt;p&gt;Defines an HTTP request task. Before invoking APIs provided by HttpRequest,you must call createHttp() to create an HttpRequestTask object.&lt;/p&gt; |
+| [HttpRequest](arkts-network-http-httprequest-i.md) | &lt;p&gt;Defines an HTTP request task. Before invoking APIs provided by HttpRequest, you must call createHttp() to create an HttpRequestTask object.&lt;/p&gt; |
 | [HttpRequestContext](arkts-network-http-httprequestcontext-i.md) | The request data. |
 | [HttpRequestOptions](arkts-network-http-httprequestoptions-i.md) | Specifies the type and value range of the optional parameters in the HTTP request. |
 | [HttpResponse](arkts-network-http-httpresponse-i.md) | Defines the response to an HTTP request. |
@@ -74,20 +76,20 @@ import { http } from '@kit.NetworkKit';
 | [ChainContinue](arkts-network-http-chaincontinue-t.md) | Whether or not to continue process of interceptor chain. |
 | [CipherSuite](arkts-network-http-ciphersuite-t.md) | Include all cipher suite. |
 | [HttpProxy](arkts-network-http-httpproxy-t.md) | Http Proxy Configuration Information. |
-| [PathPreference](arkts-network-http-pathpreference-t.md) | HTTP request path preference.This is only a suggestion of the caller, and the system decides which path to use. |
-| [QueryParamObject](arkts-network-http-queryparamobject-t.md) | A key-value object used to construct URL query parameters automatically.  Each property name is treated as a query parameter key.Each property value may be either:  - a single [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), or  - an array of [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), which is expanded into repeated  parameters with the same key.  Serialization rules:  - Keys and values are URL-encoded by the system.  - A single value is serialized as one `key=value` pair.  - An array value is serialized as multiple pairs using the same key.  For example, `{ tag: ['a', 'b'] }` is serialized as `tag=a&tag=b`.  - For array values, `undefined` and `null` elements are serialized as empty values without `=`.  For example, `{ a: [1, "", undefined, null] }` is serialized as `a=1&a=&a&a`.  Order semantics:  - This type represents query parameters as an object, not as an ordered list  of key-value pairs.  - Multiple values for the same key are supported through arrays.  - However, callers must not rely on preserving an exact original pair order  such as `a=1&b=2&a=3`. If strict ordering or repeated-key ordering is required, use a pre-encoded query string instead of [QueryParamObject](arkts-network-http-queryparamobject-t.md#QueryParamObject).  Usage notes:  - Provide raw, unencoded keys and values. Do not pre-encode them.  - If you need full control over the final query string format, use the `string`  form of `queryParams` instead. |
-| [QueryParamValue](arkts-network-http-queryparamvalue-t.md) | A single value that can be used as a query parameter.  Serialization rules when used in [QueryParamObject](arkts-network-http-queryparamobject-t.md#QueryParamObject):  - textual values: serialized as-is before URL encoding.  - numeric values: converted to its string representation before URL encoding.  - logical values: converted to "true" or "false" before URL encoding.  - null or undefined: serialized as the key without `=` or a value (for example, `{ a: null }` -> `a`). |
+| [PathPreference](arkts-network-http-pathpreference-t.md) | HTTP request path preference. This is only a suggestion of the caller, and the system decides which path to use. |
+| [QueryParamObject](arkts-network-http-queryparamobject-t.md) | A key-value object used to construct URL query parameters automatically. Each property name is treated as a query parameter key. Each property value may be either: - a single [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), or - an array of [QueryParamValue](arkts-network-http-queryparamvalue-t.md#QueryParamValue), which is expanded into repeated parameters with the same key. Serialization rules: - Keys and values are URL-encoded by the system. - A single value is serialized as one `key=value` pair. - An array value is serialized as multiple pairs using the same key. For example, `{ tag: ['a', 'b'] }` is serialized as `tag=a&tag=b`. - For array values, `undefined` and `null` elements are serialized as empty values without `=`. For example, `{ a: [1, "", undefined, null] }` is serialized as `a=1&a=&a&a`. Order semantics: - This type represents query parameters as an object, not as an ordered list of key-value pairs. - Multiple values for the same key are supported through arrays. - However, callers must not rely on preserving an exact original pair order such as `a=1&b=2&a=3`. If strict ordering or repeated-key ordering is required, use a pre-encoded query string instead of [QueryParamObject](arkts-network-http-queryparamobject-t.md#QueryParamObject). Usage notes: - Provide raw, unencoded keys and values. Do not pre-encode them. - If you need full control over the final query string format, use the `string` form of `queryParams` instead. |
+| [QueryParamValue](arkts-network-http-queryparamvalue-t.md) | A single value that can be used as a query parameter. Serialization rules when used in [QueryParamObject](arkts-network-http-queryparamobject-t.md#QueryParamObject): - textual values: serialized as-is before URL encoding. - numeric values: converted to its string representation before URL encoding. - logical values: converted to "true" or "false" before URL encoding. - null or undefined: serialized as the key without `=` or a value (for example, `{ a: null }` -> `a`). |
 | [RemoteValidation](arkts-network-http-remotevalidation-t.md) | Remote Validation Type. |
 | [Socks5Proxy](arkts-network-http-socks5proxy-t.md) | Socks5 Proxy Configuration Information. |
 | [SslType](arkts-network-http-ssltype-t.md) | The secure communication protocol. |
-| [TlsOptions](arkts-network-http-tlsoptions-t.md) | TlsOptions.'system': use system tls configuration.TlsOption: tls version range, and specify cipher suite. |
+| [TlsOptions](arkts-network-http-tlsoptions-t.md) | TlsOptions. 'system': use system tls configuration. TlsOption: tls version range, and specify cipher suite. |
 | [TlsV10CipherSuite](arkts-network-http-tlsv10ciphersuite-t.md) | TLS1.0 cipher suite. |
 | [TlsV10SpecificCipherSuite](arkts-network-http-tlsv10specificciphersuite-t.md) | Cipher suite which TLS1.0+ support. |
 | [TlsV11CipherSuite](arkts-network-http-tlsv11ciphersuite-t.md) | TLS1.1 cipher suite is same as TLS1.0 cipher suite. |
 | [TlsV12CipherSuite](arkts-network-http-tlsv12ciphersuite-t.md) | TLS1.2 cipher suite should include TLS1.1 cipher suite. |
 | [TlsV12SpecificCipherSuite](arkts-network-http-tlsv12specificciphersuite-t.md) | Cipher suite which TLS1.2+ support. |
 | [TlsV13CipherSuite](arkts-network-http-tlsv13ciphersuite-t.md) | TLS1.3 cipher suite should include TLS1.2 cipher suite. |
-| [TlsV13SpecificCipherSuite](arkts-network-http-tlsv13specificciphersuite-t.md) | Cipher suite which TLS1.3+ support.The framework has a built-in preference order, but your choice will be recorded. |
-| [ValidationCallback](arkts-network-http-validationcallback-t.md) | Self defined remote validation.This API uses a promise to return the result. |
+| [TlsV13SpecificCipherSuite](arkts-network-http-tlsv13specificciphersuite-t.md) | Cipher suite which TLS1.3+ support. The framework has a built-in preference order, but your choice will be recorded. |
+| [ValidationCallback](arkts-network-http-validationcallback-t.md) | Self defined remote validation. This API uses a promise to return the result. |
 | [X509Cert](arkts-network-http-x509cert-t.md) | X509 certificate. |
 

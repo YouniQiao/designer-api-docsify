@@ -2,7 +2,9 @@
 
 Defines the PiP status data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface SketchStatusData--><!--Device-camera-interface SketchStatusData-End-->
 
@@ -26,7 +28,9 @@ Offset of PiP.
 
 **Type:** Point
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SketchStatusData-centerPointOffset: Point--><!--Device-SketchStatusData-centerPointOffset: Point-End-->
 
@@ -44,7 +48,9 @@ Zoom ratio of PiP.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SketchStatusData-sketchRatio: double--><!--Device-SketchStatusData-sketchRatio: double-End-->
 
@@ -62,7 +68,9 @@ Status of PiP. The options are 0 (stopped), 1 (started), 2 (stopping), and 3 (st
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SketchStatusData-status: int--><!--Device-SketchStatusData-status: int-End-->
 

@@ -1,14 +1,14 @@
 # HeifsMetadata
 
-HeifsMetadata implements Metadata
-
-HEIF序列图像元数据类，用于存储图像的元数据。
+HeifsMetadata implements Metadata HEIF序列图像元数据类，用于存储图像的元数据。
 
 **继承/实现关系：** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **起始版本：** 23
 
-<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+**废弃版本：** -1
+
+<!--Device-image-class HeifsMetadata--><!--Device-image-class HeifsMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -21,6 +21,8 @@ clone(): Promise<HeifsMetadata>
 对Heifs元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +46,8 @@ static createInstance(): HeifsMetadata
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HeifsMetadata-static createInstance(): HeifsMetadata--><!--Device-HeifsMetadata-static createInstance(): HeifsMetadata-End-->
@@ -62,11 +66,11 @@ static createInstance(): HeifsMetadata
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-获取图片中所有元数据的属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
+获取图片中所有元数据的属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +94,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-HeifsMetadata-getBlob(): Promise<ArrayBuffer>-End-->
@@ -108,11 +114,11 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像元数据的属性值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
+获取图像元数据的属性值。使用Promise异步回调。 要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,7 +142,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## setBlob
 
@@ -147,6 +153,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 使用二进制数据替换当前元数据。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,7 +178,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## setProperties
 
@@ -178,11 +186,11 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,7 +214,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## heifsCanvasHeight
 
@@ -214,15 +222,13 @@ setProperties(records: Record<string, string | null>): Promise<void>
 readonly heifsCanvasHeight?: number
 ```
 
-HEIF序列图片的画布高度。
-
-单位为像素（px）。
-
-该值为正整数。
+HEIF序列图片的画布高度。 单位为像素（px）。 该值为正整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -236,15 +242,13 @@ HEIF序列图片的画布高度。
 readonly heifsCanvasWidth?: number
 ```
 
-HEIF序列图片的画布宽度。
-
-单位为像素（px）。
-
-该值为正整数。
+HEIF序列图片的画布宽度。 单位为像素（px）。 该值为正整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -264,6 +268,8 @@ HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-HeifsMetadata-readonly heifsDelayTime?: int--><!--Device-HeifsMetadata-readonly heifsDelayTime?: int-End-->
@@ -276,15 +282,13 @@ HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 readonly heifsUnclampedDelayTime?: number
 ```
 
-HEIF序列图片每帧未钳制的延迟时长。
-
-单位为毫秒（ms）。
-
-该值为正整数。
+HEIF序列图片每帧未钳制的延迟时长。 单位为毫秒（ms）。 该值为正整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

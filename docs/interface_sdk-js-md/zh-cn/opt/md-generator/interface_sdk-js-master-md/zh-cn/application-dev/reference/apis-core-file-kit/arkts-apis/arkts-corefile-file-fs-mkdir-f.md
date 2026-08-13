@@ -10,6 +10,8 @@ declare function mkdir(path: string): Promise<void>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function mkdir(path: string): Promise<void>--><!--Device-unnamed-declare function mkdir(path: string): Promise<void>-End-->
@@ -58,6 +60,8 @@ declare function mkdir(path: string, recursion: boolean): Promise<void>
 创建目录，使用promise异步回调。当recursion指定为true时，可递归创建目录。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -109,6 +113,8 @@ declare function mkdir(path: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void-End-->
@@ -152,6 +158,8 @@ declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback
 创建目录，使用callback异步回调。当recursion指定为true，可递归创建目录。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

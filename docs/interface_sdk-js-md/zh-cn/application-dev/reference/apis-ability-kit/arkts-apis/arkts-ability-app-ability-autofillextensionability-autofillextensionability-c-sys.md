@@ -1,15 +1,16 @@
 # AutoFillExtensionAbility（系统接口）
 
-AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)。
+AutoFillExtensionAbility模块支持账号、密码、地址等多种数据类型的自动填充与保存，继承自 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)。
 
-**继承/实现关系：** AutoFillExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**继承/实现关系：** AutoFillExtensionAbility extends ExtensionAbility
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility extends ExtensionAbility-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class AutoFillExtensionAbility--><!--Device-unnamed-declare class AutoFillExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -23,9 +24,11 @@ onBackground(): void
 
 当AutoFillExtensionAbility从前台转到后台时触发。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,9 +59,11 @@ onCreate(): void
 
 AutoFillExtensionAbility创建时触发回调函数。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,6 +98,8 @@ onDestroy(): void | Promise<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>--><!--Device-AutoFillExtensionAbility-onDestroy(): void | Promise<void>-End-->
@@ -124,7 +131,9 @@ onDestroy(): Promise<void> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,9 +173,11 @@ onFillRequest(session: UIExtensionContentSession, request: FillRequest, callback
 
 当发起自动填充请求或者生成密码时触发此回调函数。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -269,9 +280,11 @@ onForeground(): void
 
 当AutoFillExtensionAbility从后台转到前台时触发。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,9 +315,11 @@ onSaveRequest(session: UIExtensionContentSession, request: SaveRequest, callback
 
 当发起自动保存或者手动保存时触发此回调函数。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -403,9 +418,11 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 当AutoFillExtensionAbility界面内容对象销毁后调用。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -442,9 +459,11 @@ onUpdateRequest(request: UpdateRequest): void
 
 当收到更新请求时触发此回调函数。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -484,9 +503,11 @@ AutoFillExtension的上下文环境，继承自ExtensionContext。
 
 **类型：** [AutoFillExtensionContext](arkts-ability-autofillextensioncontext-c-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

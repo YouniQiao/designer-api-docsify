@@ -14,7 +14,9 @@ function getBundleInfoForSelf(bundleFlags: number): Promise<BundleInfo>
 
 Obtains the bundle information of the current application based on the given bundle flags. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,7 +40,7 @@ Obtains the bundle information of the current application based on the given bun
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -72,7 +74,9 @@ function getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback<Bundl
 
 Obtains the bundle information of the current application based on the given bundle flags. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -91,7 +95,7 @@ Obtains the bundle information of the current application based on the given bun
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

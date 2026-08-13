@@ -2,9 +2,11 @@
 
 The module provides all level-2 module APIs for developers to export.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 11 and later: This API can be used in both the stage model and FA model.

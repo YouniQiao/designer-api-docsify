@@ -14,9 +14,11 @@ function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>
 
 获取应用自定义铃声信息。使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,12 +44,12 @@ function getRingtoneInfoByBundle(bundle: BundleOption): Promise<RingtoneInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600024-未配置自定义铃声) | The specified bundle has no custom ringtone information. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invalid. |
+| [1600024](../errorcode-notification.md#1600024-未配置自定义铃声) | The specified bundle has no custom ringtone information. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600022](../errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invalid. |
 
 ## 示例
 

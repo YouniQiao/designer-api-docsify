@@ -6,6 +6,8 @@ Enumerates charging states.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-export enum BatteryChargeState--><!--Device-batteryInfo-export enum BatteryChargeState-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -21,6 +23,8 @@ Unknown state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BatteryChargeState-NONE--><!--Device-BatteryChargeState-NONE-End-->
 
@@ -38,6 +42,8 @@ The battery is being charged.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-BatteryChargeState-ENABLE--><!--Device-BatteryChargeState-ENABLE-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -54,6 +60,8 @@ The battery is not being charged.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-BatteryChargeState-DISABLE--><!--Device-BatteryChargeState-DISABLE-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core
@@ -69,6 +77,8 @@ The battery is fully charged.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BatteryChargeState-FULL--><!--Device-BatteryChargeState-FULL-End-->
 

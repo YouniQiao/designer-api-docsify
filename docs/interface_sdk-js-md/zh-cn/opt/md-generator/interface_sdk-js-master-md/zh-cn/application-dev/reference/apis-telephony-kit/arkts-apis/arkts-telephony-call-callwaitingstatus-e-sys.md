@@ -2,7 +2,9 @@
 
 呼叫等待状态。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export enum CallWaitingStatus--><!--Device-call-export enum CallWaitingStatus-End-->
 
@@ -18,7 +20,9 @@ CALL_WAITING_DISABLE = 0
 
 禁用呼叫等待。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallWaitingStatus-CALL_WAITING_DISABLE = 0--><!--Device-CallWaitingStatus-CALL_WAITING_DISABLE = 0-End-->
 
@@ -34,7 +38,9 @@ CALL_WAITING_ENABLE = 1
 
 启用呼叫等待。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallWaitingStatus-CALL_WAITING_ENABLE = 1--><!--Device-CallWaitingStatus-CALL_WAITING_ENABLE = 1-End-->
 

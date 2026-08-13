@@ -1,10 +1,12 @@
 # PhotoBrowserRange
 
-PhotoBrowserRange. include ALL and SELECTED_ONLY
+Enumerates the view range on the photo browser page.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum PhotoBrowserRange--><!--Device-unnamed-export declare enum PhotoBrowserRange-End-->
 
@@ -16,13 +18,15 @@ PhotoBrowserRange. include ALL and SELECTED_ONLY
 ALL = 0
 ```
 
-ALL. all photos or vedios
+View all images and videos.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoBrowserRange-ALL = 0--><!--Device-PhotoBrowserRange-ALL = 0-End-->
 
@@ -34,13 +38,15 @@ ALL. all photos or vedios
 SELECTED_ONLY = 1
 ```
 
-SELECTED_ONLY. only selected photos or vedios
+View selected images and videos only.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoBrowserRange-SELECTED_ONLY = 1--><!--Device-PhotoBrowserRange-SELECTED_ONLY = 1-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PixelStretchEffectOptions--><!--Device-unnamed-declare interface PixelStretchEffectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,15 @@
 bottom?: Length
 ```
 
-组件图像下边沿像素扩展距离。
-
-默认值：0vp
+组件图像下边沿像素扩展距离。 默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ bottom?: Length
 left?: Length
 ```
 
-组件图像左边沿像素扩展距离。
-
-默认值：0vp
+组件图像左边沿像素扩展距离。 默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,15 +64,15 @@ left?: Length
 right?: Length
 ```
 
-组件图像右边沿像素扩展距离。
-
-默认值：0vp
+组件图像右边沿像素扩展距离。 默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,15 +88,15 @@ right?: Length
 top?: Length
 ```
 
-组件图像上边沿像素扩展距离。
-
-默认值：0vp
+组件图像上边沿像素扩展距离。 默认值：0vp
 
 **类型：** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **默认值：** 0
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

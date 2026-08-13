@@ -2,7 +2,9 @@
 
 Defines a SIM message.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface SimShortMessage--><!--Device-sms-export interface SimShortMessage-End-->
 
@@ -26,7 +28,9 @@ SIM card index.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimShortMessage-indexOnSim: int--><!--Device-SimShortMessage-indexOnSim: int-End-->
 
@@ -44,7 +48,9 @@ SMS message.
 
 **Type:** [ShortMessage](arkts-telephony-sms-shortmessage-i.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimShortMessage-shortMessage: ShortMessage--><!--Device-SimShortMessage-shortMessage: ShortMessage-End-->
 
@@ -62,7 +68,9 @@ SIM message status.
 
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimShortMessage-simMessageStatus: SimMessageStatus--><!--Device-SimShortMessage-simMessageStatus: SimMessageStatus-End-->
 

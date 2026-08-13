@@ -12,6 +12,8 @@ declare function mkdtempSync(prefix: string): string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

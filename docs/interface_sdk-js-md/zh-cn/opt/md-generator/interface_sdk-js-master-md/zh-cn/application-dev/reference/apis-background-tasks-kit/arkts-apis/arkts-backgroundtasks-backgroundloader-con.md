@@ -10,6 +10,8 @@ const ON_START: string
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-backgroundLoader-const ON_START: string--><!--Device-backgroundLoader-const ON_START: string-End-->
@@ -25,6 +27,8 @@ const ON_STOP: string
 监听任务结束的方法
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

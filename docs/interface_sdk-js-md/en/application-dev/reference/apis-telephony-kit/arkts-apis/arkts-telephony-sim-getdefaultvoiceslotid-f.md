@@ -14,9 +14,11 @@ function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void
 
 Obtains the default card slot for the voice service.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -26,7 +28,7 @@ Obtains the default card slot for the voice service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
 
 ## Examples
 
@@ -48,9 +50,11 @@ function getDefaultVoiceSlotId(): Promise<int>
 
 Obtains the default card slot for the voice service.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>-End-->
 
@@ -60,7 +64,7 @@ Obtains the default card slot for the voice service.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns { |
+| Promise&lt;int&gt; | Returns { |
 
 ## Examples
 

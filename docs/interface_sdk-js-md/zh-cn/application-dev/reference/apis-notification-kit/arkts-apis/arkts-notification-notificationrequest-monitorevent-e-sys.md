@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum MonitorEvent--><!--Device-unnamed-export enum MonitorEvent-End-->
 
@@ -22,7 +24,9 @@ MONITOR_TYPE_ENTRY = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MonitorEvent-MONITOR_TYPE_ENTRY = 1--><!--Device-MonitorEvent-MONITOR_TYPE_ENTRY = 1-End-->
 
@@ -40,7 +44,9 @@ MONITOR_TYPE_LEAVE = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MonitorEvent-MONITOR_TYPE_LEAVE = 2--><!--Device-MonitorEvent-MONITOR_TYPE_LEAVE = 2-End-->
 

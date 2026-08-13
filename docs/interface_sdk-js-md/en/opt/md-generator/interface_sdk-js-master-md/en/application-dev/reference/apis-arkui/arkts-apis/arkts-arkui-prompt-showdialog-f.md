@@ -18,7 +18,7 @@ Displays the dialog box.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**Substitutes:** showDialog
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void--><!--Device-prompt-function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDialogSuccessResponse>): void-End-->
 
@@ -70,7 +70,7 @@ Displays the dialog box.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showDialog](ohos.arkui.UIContext.PromptAction#showDialog)
+**Substitutes:** showDialog
 
 <!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>--><!--Device-prompt-function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessResponse>-End-->
 

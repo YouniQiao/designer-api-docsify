@@ -1,14 +1,10 @@
 # RichEditorTextStyleResult
 
-后端返回的文本样式信息。
-
-在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。
-
-而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。
-
-RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和RichEditorTextStyleResult中fontWeight的转换关系一致。
+后端返回的文本样式信息。 在RichEditorTextStyle中，fontWeight是设置字体粗细的输入参数。 而在RichEditorTextStyleResult中，会将之前设置的字体粗细转换为数字后返回。 RichEditorSymbolSpanStyle和RichEditorSymbolSpanStyleResult中fontWeight的转换关系，与RichEditorTextStyle和 RichEditorTextStyleResult中fontWeight的转换关系一致。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface RichEditorTextStyleResult--><!--Device-unnamed-declare interface RichEditorTextStyleResult-End-->
 
@@ -25,6 +21,8 @@ decoration: DecorationStyleResult
 **类型：** [DecorationStyleResult](../arkts-apis/arkts-arkui-decorationstyleresult-i.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +44,8 @@ fontColor: ResourceColor
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -65,6 +65,8 @@ fontFamily: string
 **类型：** string
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,6 +88,8 @@ fontFeature?: string
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -105,6 +109,8 @@ fontSize: number
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,6 +132,8 @@ fontStyle: FontStyle
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -146,6 +154,8 @@ fontWeight: number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -160,15 +170,13 @@ fontWeight: number
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。
-
-true表示将行间距平分至行的顶部与底部，false则不平分。
-
-默认值：false。
+文本是否将行间距平分至行的顶部与底部。 true表示将行间距平分至行的顶部与底部，false则不平分。 默认值：false。
 
 **类型：** boolean
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -190,6 +198,8 @@ letterSpacing?: number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -209,6 +219,8 @@ lineHeight?: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -230,6 +242,8 @@ strokeColor?: ResourceColor
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -244,13 +258,13 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
+文本描边拐角样式。 默认值：StrokeJoinStyle.MITER_JOIN。
 
 **类型：** [StrokeJoinStyle](../arkts-apis/arkts-arkui-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,13 +280,13 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: number
 ```
 
-文本描边宽度。
-
-单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
+文本描边宽度。 单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -294,6 +308,8 @@ textBackgroundStyle?: TextBackgroundStyle
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -308,15 +324,13 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: Array<ShadowOptions>
 ```
 
-文字阴影效果。
-
-**说明：**
-
-仅支持查询阴影模糊半径、颜色和偏移量。
+文字阴影效果。 **说明：** 仅支持查询阴影模糊半径、颜色和偏移量。
 
 **类型：** Array&lt;[ShadowOptions](arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

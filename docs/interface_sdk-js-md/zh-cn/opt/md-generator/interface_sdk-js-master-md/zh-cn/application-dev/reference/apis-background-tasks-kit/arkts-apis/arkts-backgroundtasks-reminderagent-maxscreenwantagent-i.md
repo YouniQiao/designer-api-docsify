@@ -26,7 +26,7 @@ abilityName: string
 
 **废弃版本：** 9
 
-**替代接口：** [abilityName](reminderAgentManager.MaxScreenWantAgent.abilityName)
+**替代接口：** abilityName
 
 <!--Device-MaxScreenWantAgent-abilityName: string--><!--Device-MaxScreenWantAgent-abilityName: string-End-->
 
@@ -46,7 +46,7 @@ pkgName: string
 
 **废弃版本：** 9
 
-**替代接口：** [pkgName](reminderAgentManager.MaxScreenWantAgent.pkgName)
+**替代接口：** pkgName
 
 <!--Device-MaxScreenWantAgent-pkgName: string--><!--Device-MaxScreenWantAgent-pkgName: string-End-->
 

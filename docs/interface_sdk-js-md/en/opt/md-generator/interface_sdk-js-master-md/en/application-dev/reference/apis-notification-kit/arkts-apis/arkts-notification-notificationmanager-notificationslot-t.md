@@ -6,7 +6,9 @@ export type NotificationSlot = _NotificationSlot
 
 Describes the notification slot.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationSlot = _NotificationSlot--><!--Device-notificationManager-export type NotificationSlot = _NotificationSlot-End-->
 

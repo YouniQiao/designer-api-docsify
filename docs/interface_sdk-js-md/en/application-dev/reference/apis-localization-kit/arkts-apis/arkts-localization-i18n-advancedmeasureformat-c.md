@@ -4,7 +4,9 @@ Provides the number formatting capability, supporting automatic unit conversion 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
 
@@ -22,11 +24,13 @@ import { i18n } from '@kit.LocalizationKit';
 constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOptions)
 ```
 
-A constructor used to create an AdvancedMeasureFormat object.
+Creates a **NumberFormat** object for the specified locale.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +45,18 @@ A constructor used to create an AdvancedMeasureFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
+| options | [AdvancedMeasureFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-advancedmeasureformatoptions-i.md) | No |  |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh-Hans-CN', { style: 'unit', unit: 'fahrenheit' });
+let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasureFormat(numFmt, {
+  unitUsage: i18n.UnitUsage.TEMPERATURE_PERSON
+});
+```
 
 ## format
 
@@ -53,7 +68,9 @@ Formats a number by appropriate measure for usage scenarios. For instance, when 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,11 +84,23 @@ Formats a number by appropriate measure for usage scenarios. For instance, when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| num | double | Yes | number to be formatted. |
+| num | double | Yes | Number to be formatted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | measure formatting result. |
+| string | Formatted text. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh-Hans-CN', { style: 'unit', unit: 'fahrenheit' });
+let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasureFormat(numFmt, {
+  unitUsage: i18n.UnitUsage.TEMPERATURE_PERSON
+});
+let result = advancedMeasureFormat.format(100); // result = '37.778°C'
+```
 

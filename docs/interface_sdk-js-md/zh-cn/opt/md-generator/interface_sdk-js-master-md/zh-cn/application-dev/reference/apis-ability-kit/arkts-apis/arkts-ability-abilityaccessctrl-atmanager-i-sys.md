@@ -1,8 +1,10 @@
 # AtManager
 
-程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager)获取实例。
+程序访问控制管理类，提供权限校验、运行时权限弹窗申请、设置页授权引导、全局开关请求和权限状态监听等能力。通过[createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager) 获取实例。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityAccessCtrl-interface AtManager--><!--Device-abilityAccessCtrl-interface AtManager-End-->
 
@@ -20,6 +22,8 @@ generateCliAuthResult(
 根据CLI授权信息生成授权结果。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
@@ -49,13 +53,13 @@ generateCliAuthResult(
 
 | 错误码ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -91,6 +95,8 @@ getCliPermissionRequestInfo(agentID: string, cliInfoList: Array<CliInfo>): Promi
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -118,11 +124,11 @@ getCliPermissionRequestInfo(agentID: string, cliInfoList: Array<CliInfo>): Promi
 
 | 错误码ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -156,6 +162,8 @@ getCliPermissions(
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_TOOL_RUNTIME_PERMISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -184,12 +192,12 @@ getCliPermissions(
 
 | 错误码ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -219,7 +227,9 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 
 获取指定应用的指定权限的标志。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS or ohos.permission.GRANT_SENSITIVE_PERMISSIONS or ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -246,14 +256,14 @@ getPermissionFlags(tokenID: number, permissionName: Permissions): Promise<number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -278,7 +288,9 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 获取当前用户指定权限的弹窗开关状态。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -304,13 +316,13 @@ getPermissionRequestToggleStatus(permissionName: Permissions): Promise<Permissio
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -344,6 +356,8 @@ getPermissionRequestToggleStatus(
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -371,13 +385,13 @@ getPermissionRequestToggleStatus(
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -403,7 +417,9 @@ getPermissionsStatus(tokenID: number, permissionList: Array<Permissions>): Promi
 
 获取指定应用权限状态列表。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -430,12 +446,12 @@ getPermissionsStatus(tokenID: number, permissionList: Array<Permissions>): Promi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -460,7 +476,9 @@ getVersion(): Promise<number>
 
 获取当前权限管理的数据版本号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AtManager-getVersion(): Promise<int>--><!--Device-AtManager-getVersion(): Promise<int>-End-->
 
@@ -478,7 +496,7 @@ getVersion(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -501,10 +519,11 @@ promise.then((data: number) => {
 grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: number): Promise<void>
 ```
 
-授予应用权限。调用成功后，指定应用获得该权限，可以访问相应的受保护资源。与  
-[grantUserGrantedPermission](#grantUserGrantedPermission)仅支持user_grant类型权限不同,该接口同时支持user_grant和manual_settings类型的权限授予。使用Promise异步回调。
+授予应用权限。调用成功后，指定应用获得该权限，可以访问相应的受保护资源。与 [grantUserGrantedPermission](#grantUserGrantedPermission)仅支持user_grant类型权限不同, 该接口同时支持user_grant和manual_settings类型的权限授予。使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
@@ -532,14 +551,14 @@ grantPermission(tokenID: number, permissionName: Permissions, permissionFlags: n
 
 | 错误码ID |
 | --- |
-| [12100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-非预期的权限) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -563,12 +582,11 @@ atManager.grantPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags
 grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permissionFlags: number): Promise<void>
 ```
 
-授予应用user_grant权限。调用成功后，应用获得该user_grant权限，可以访问相应的受保护资源。使用Promise异步回调。
+授予应用user_grant权限。调用成功后，应用获得该user_grant权限，可以访问相应的受保护资源。使用Promise异步回调。 本接口仅支持授予user_grant类型的权限。若需要授予user_grant或manual_settings类型权限，建议使用 [grantPermission](#grantPermission)。
 
-本接口仅支持授予user_grant类型的权限。若需要授予user_grant或manual_settings类型权限，建议使用  
-[grantPermission](#grantPermission)。
+**起始版本：** 23
 
-**起始版本：** 8
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
@@ -596,14 +614,14 @@ grantUserGrantedPermission(tokenID: number, permissionName: Permissions, permiss
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -634,7 +652,9 @@ grantUserGrantedPermission(
 
 授予应用user_grant权限。使用callback异步回调。调用成功后，应用获得该user_grant权限，可以访问相应的受保护资源。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 
@@ -657,14 +677,14 @@ grantUserGrantedPermission(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -684,7 +704,50 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
-## off('permissionStateChange')
+## offPermissionStateChange
+
+```TypeScript
+offPermissionStateChange(
+      tokenIDList: Array<number>,
+      permissionList: Array<Permissions>,
+      callback?: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。 > **说明：**> 该接口通常与[onPermissionStateChange](#on_permissionStateChange) > 配套使用，用于取消通过onPermissionStateChange创建的监听关系。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-offPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback?: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tokenIDList | Array & lt;number & gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+
+## off_permissionStateChange
 
 ```TypeScript
 off(
@@ -695,14 +758,11 @@ off(
     ): void
 ```
 
-取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。
-
-取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。
-
-> **说明：**
-> 该接口通常与[on](abilityAccessCtrl.AtManager.on)配套使用，用于取消通过on创建的监听关系。
+取消订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 取消订阅时，若不传入callback，则批量取消与tokenIDList和permissionList完全匹配的所有监听回调。 > **说明：**> 该接口通常与[on](#on_permissionStateChange)配套使用，用于取消通过on创建的监听关系。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -725,11 +785,11 @@ off(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -749,7 +809,52 @@ try {
 }
 ```
 
-## on('permissionStateChange')
+## onPermissionStateChange
+
+```TypeScript
+onPermissionStateChange(
+      tokenIDList: Array<number>,
+      permissionList: Array<Permissions>,
+      callback: Callback<PermissionStateChangeInfo>
+    ): void
+```
+
+订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 允许指定tokenID列表与权限列表订阅多个callback。 若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。 该接口通常与[offPermissionStateChange](#off_permissionStateChange)配套使用， 当不再需要监听时应调用offPermissionStateChange取消订阅。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void--><!--Device-AtManager-onPermissionStateChange(      tokenIDList: Array<int>,      permissionList: Array<Permissions>,      callback: Callback<PermissionStateChangeInfo>    ): void-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| tokenIDList | Array & lt;number & gt; | 是 |
+| permissionList | Array & lt;Permissions & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
+
+## on_permissionStateChange
 
 ```TypeScript
 on(
@@ -760,15 +865,11 @@ on(
     ): void
 ```
 
-订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。
-
-允许指定tokenID列表与权限列表订阅多个callback。
-
-> **说明：**
-> 若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。
-> 该接口通常与[off](abilityAccessCtrl.AtManager.of)配套使用，当不再需要监听时应调用off取消订阅。
+订阅指定tokenID列表与权限列表的权限状态变更事件。使用callback异步回调。 允许指定tokenID列表与权限列表订阅多个callback。 > **说明：**> 若新的订阅与已有订阅在tokenID列表和权限列表上存在交集，不允许使用相同的callback进行订阅。 > 该接口通常与off配套使用，当不再需要监听时应调用off取消订阅。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -791,13 +892,13 @@ on(
 
 | 错误码ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100005-监听器数量超过限制) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100005](../errorcode-access-token.md#12100005-监听器数量超过限制) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -832,6 +933,8 @@ queryStatusByPermission(
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -858,12 +961,12 @@ queryStatusByPermission(
 
 | 错误码ID |
 | --- |
-| [12100015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100015-查询的数据超过上限) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100015](../errorcode-access-token.md#12100015-查询的数据超过上限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -889,6 +992,8 @@ queryStatusByTokenID(tokenIDList: Array<number>): Promise<Array<PermissionStatus
 根据应用tokenID列表查询其所有的权限状态。使用Promise异步回调。当查询的数据结果的大小超过50000条时，接口会直接返回12100015错误码。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -916,12 +1021,12 @@ queryStatusByTokenID(tokenIDList: Array<number>): Promise<Array<PermissionStatus
 
 | 错误码ID |
 | --- |
-| [12100015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100015-查询的数据超过上限) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100015](../errorcode-access-token.md#12100015-查询的数据超过上限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -947,7 +1052,9 @@ requestPermissionOnApplicationSetting(tokenID: number): Promise<void>
 
 拉起应用权限设置页面。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -973,10 +1080,10 @@ requestPermissionOnApplicationSetting(tokenID: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1002,14 +1109,11 @@ requestPermissionsFromUserWithWindowId(
         permissionList: Array<Permissions>) : Promise<PermissionRequestResult>
 ```
 
-基于窗口ID弹出弹窗请求用户授权，调用成功后，返回本次权限申请结果对象，开发者可根据权限申请结果继续窗口级授权后的业务流程。使用Promise异步回调。
-
-适用于系统应用需要将权限申请弹窗明确附着到指定窗口的场景。
-
-如果用户拒绝授权，将无法再次拉起弹窗，可通过以下方式重新获取权限：1. 在系统设置界面中手动授权；2. 调用  
-[requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionOnSetting)，拉起权限设置弹窗引导用户授权。
+基于窗口ID弹出弹窗请求用户授权，调用成功后，返回本次权限申请结果对象，开发者可根据权限申请结果继续窗口级授权后的业务流程。使用Promise异步回调。 适用于系统应用需要将权限申请弹窗明确附着到指定窗口的场景。 如果用户拒绝授权，将无法再次拉起弹窗，可通过以下方式重新获取权限：1. 在系统设置界面中手动授权；2. 调用 [requestPermissionOnSetting](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionOnSetting)，拉起权限设置弹窗引导用户授权。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1037,12 +1141,12 @@ requestPermissionsFromUserWithWindowId(
 
 | 错误码ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
 
 ## 示例
 
-关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../security/AccessToken/request-user-authorization.md)。
+关于向用户申请授权的完整流程及示例，请参见[向用户申请授权](../../../security/AccessToken/request-user-authorization.md)。
 
 ```TypeScript
 import { abilityAccessCtrl, Context, PermissionRequestResult } from '@kit.AbilityKit';
@@ -1075,11 +1179,11 @@ revokePermission(
       killProcess?: boolean): Promise<void>
 ```
 
-撤销应用权限。调用成功后，应用失去该权限，无法访问相应的受保护资源。根据killProcess参数的值决定是否终止应用进程。使用Promise异步回调。
+撤销应用权限。调用成功后，应用失去该权限，无法访问相应的受保护资源。根据killProcess参数的值决定是否终止应用进程。使用Promise异步回调。 当killProcess参数为true且权限状态从“已授权”变为“未授权”时，应用进程会被终止。
 
-当killProcess参数为true且权限状态从“已授权”变为“未授权”时，应用进程会被终止。
+**起始版本：** 23
 
-**起始版本：** 21
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -1108,14 +1212,14 @@ revokePermission(
 
 | 错误码ID |
 | --- |
-| [12100014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100014-非预期的权限) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100014](../errorcode-access-token.md#12100014-非预期的权限) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1146,14 +1250,11 @@ atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlag
 revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permissionFlags: number): Promise<void>
 ```
 
-撤销应用user_grant权限。调用成功后，应用失去该user_grant权限，无法访问相应的受保护资源。使用Promise异步回调。
+撤销应用user_grant权限。调用成功后，应用失去该user_grant权限，无法访问相应的受保护资源。使用Promise异步回调。 本接口仅支持撤销user_grant类型的权限，且不支持控制是否终止应用进程。若需要撤销user_grant或manual_settings类型权限，或需要控制撤销权限后是否终止应用进程，建议使用 [revokePermission](#revokePermission)。 当权限状态从“已授权”变为“未授权”时，应用进程会被终止。
 
-本接口仅支持撤销user_grant类型的权限，且不支持控制是否终止应用进程。若需要撤销user_grant或manual_settings类型权限，或需要控制撤销权限后是否终止应用进程，建议使用  
-[revokePermission](#revokePermission)。
+**起始版本：** 23
 
-当权限状态从“已授权”变为“未授权”时，应用进程会被终止。
-
-**起始版本：** 8
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -1181,14 +1282,14 @@ revokeUserGrantedPermission(tokenID: number, permissionName: Permissions, permis
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1219,7 +1320,9 @@ revokeUserGrantedPermission(
 
 撤销应用user_grant权限。使用callback异步回调。调用成功后，应用失去该user_grant权限，无法访问相应的受保护资源。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 
@@ -1242,14 +1345,14 @@ revokeUserGrantedPermission(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1275,9 +1378,11 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 setPermissionRequestToggleStatus(permissionName: Permissions, status: PermissionRequestToggleStatus): Promise<void>
 ```
 
-设置当前用户指定权限的弹窗开关状态。调用成功后，该权限的弹窗开关状态将被设置为指定值。当状态为CLOSED时，应用请求该权限时不会弹出权限弹窗；当状态为OPEN时，应用请求该权限时会正常弹出权限弹窗。使用Promise异步回调。
+设置当前用户指定权限的弹窗开关状态。调用成功后，该权限的弹窗开关状态将被设置为指定值。当状态为CLOSED时，应用请求该权限时不会弹出权限弹窗；当状态为OPEN时，应用请求该权限时会正常弹出权限弹窗。使用Promise异步回 调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISABLE_PERMISSION_DIALOG
 
@@ -1304,14 +1409,14 @@ setPermissionRequestToggleStatus(permissionName: Permissions, status: Permission
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -1342,6 +1447,8 @@ setPermissionRequestToggleStatus(
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DISABLE_PERMISSION_DIALOG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -1370,14 +1477,14 @@ setPermissionRequestToggleStatus(
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100006-指定操作不允许) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100006](../errorcode-access-token.md#12100006-指定操作不允许) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 

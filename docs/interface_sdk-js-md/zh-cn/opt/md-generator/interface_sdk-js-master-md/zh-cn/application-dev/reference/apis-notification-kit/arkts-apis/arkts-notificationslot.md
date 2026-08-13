@@ -1,4 +1,4 @@
-# notificationSlot(Description of the notification channel)
+# notificationSlot
 
 ## 汇总
 

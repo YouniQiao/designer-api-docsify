@@ -6,11 +6,13 @@ type OnTrackChangeHandler = (index: int, isSelected: boolean) => void
 
 Describes the callback invoked for the track change event.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-media-type OnTrackChangeHandler = (index: int, isSelected: boolean) => void--><!--Device-media-type OnTrackChangeHandler = (index: int, isSelected: boolean) => void-End-->
 
@@ -20,6 +22,6 @@ Describes the callback invoked for the track change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the track that has changed. |
+| index | int | Yes | Index of the track that has changed. |
 | isSelected | boolean | Yes | Whether the track at the current index is selected. **true** if selected, **false** otherwise. |
 

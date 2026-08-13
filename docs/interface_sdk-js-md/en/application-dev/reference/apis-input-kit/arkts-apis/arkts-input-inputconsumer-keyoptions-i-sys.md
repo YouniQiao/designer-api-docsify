@@ -2,9 +2,11 @@
 
 Represents combination key options.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputConsumer-interface KeyOptions--><!--Device-inputConsumer-interface KeyOptions-End-->
 
@@ -24,15 +26,15 @@ import { inputConsumer } from '@kit.InputKit';
 finalKey: int
 ```
 
-Final key. This parameter is mandatory. A callback is triggered by the final key.
+Final key. This parameter is mandatory. A callback is triggered by the final key. For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final key.
 
-For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final key.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-KeyOptions-finalKey: int--><!--Device-KeyOptions-finalKey: int-End-->
 
@@ -46,17 +48,15 @@ For example, in the combination keys **Ctrl+Alt+A**, **A** is called the final k
 finalKeyDownDuration: int
 ```
 
-Duration for holding down the key, in μs.
+Duration for holding down the key, in μs. If the value of this field is **0**, a callback is triggered immediately. If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback is triggered when the key is released before the specified duration expires.
 
-If the value of this field is **0**, a callback is triggered immediately.
+**Type:** int
 
-If the value of this field is greater than **0** and **isFinalKeyDown** is **true**, a callback is triggered when the key keeps being pressed after the specified duration expires. If **isFinalKeyDown** is **false**, a callback is triggered when the key is released before the specified duration expires.
+**Since:** 23
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-KeyOptions-finalKeyDownDuration: int--><!--Device-KeyOptions-finalKeyDownDuration: int-End-->
 
@@ -70,15 +70,15 @@ If the value of this field is greater than **0** and **isFinalKeyDown** is **tru
 isFinalKeyDown: boolean
 ```
 
-Whether the final key is pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether the final key is pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyOptions-isFinalKeyDown: boolean--><!--Device-KeyOptions-isFinalKeyDown: boolean-End-->
 
@@ -92,14 +92,15 @@ The value **true** indicates that the key is pressed, and the value **false** in
 isRepeat?: boolean
 ```
 
-Whether to report repeated key events. The value **true** means to report repeated key events, and the value  
-**false** means the opposite. The default value is **true**.
+Whether to report repeated key events. The value **true** means to report repeated key events, and the value **false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyOptions-isRepeat?: boolean--><!--Device-KeyOptions-isRepeat?: boolean-End-->
 
@@ -113,15 +114,15 @@ Whether to report repeated key events. The value **true** means to report repeat
 preKeys: Array<int>
 ```
 
-Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of the keys.
+Preceding key set. The number of preceding keys ranges from 0 to 4. There is no requirement on the sequence of the keys. For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called preceding keys.
 
-For example, in the combination keys **Ctrl+Alt+A**, **Ctrl+Alt** are called preceding keys.
+**Type:** Array&lt;int&gt;
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-KeyOptions-preKeys: Array<int>--><!--Device-KeyOptions-preKeys: Array<int>-End-->
 
@@ -141,7 +142,9 @@ Trigger type, which indicates that the conditions for triggering the callback ex
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

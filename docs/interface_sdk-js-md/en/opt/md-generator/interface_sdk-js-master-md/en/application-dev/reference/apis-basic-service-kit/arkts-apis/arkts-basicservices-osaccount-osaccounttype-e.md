@@ -2,7 +2,9 @@
 
 Enumerates the OS account types.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
 
@@ -16,7 +18,9 @@ ADMIN = 0
 
 Administrator account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountType-ADMIN = 0--><!--Device-OsAccountType-ADMIN = 0-End-->
 
@@ -30,7 +34,9 @@ NORMAL = 1
 
 Normal account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountType-NORMAL = 1--><!--Device-OsAccountType-NORMAL = 1-End-->
 
@@ -44,7 +50,9 @@ GUEST = 2
 
 Guest account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountType-GUEST = 2--><!--Device-OsAccountType-GUEST = 2-End-->
 

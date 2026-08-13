@@ -12,15 +12,13 @@ import { wifi } from '@kit.ConnectivityKit';
 function getDeviceConfigs(): Array<WifiDeviceConfig>
 ```
 
-Obtains the list of all existing Wi-Fi configurations.
-
-&lt;p&gt;You can obtain only the Wi-Fi configurations you created on your own application.
+Obtains the list of all existing Wi-Fi configurations. &lt;p&gt;You can obtain only the Wi-Fi configurations you created on your own application.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceConfigs](ohos.wifiManager/wifiManager.getDeviceConfigs)
+**Substitutes:** [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md#getDeviceConfigs)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO and ohos.permission.LOCATION and ohos.permission.GET_WIFI_CONFIG
 

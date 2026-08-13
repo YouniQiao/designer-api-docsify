@@ -4,6 +4,8 @@ FlexDirection enumeration description
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FlexDirection--><!--Device-unnamed-declare enum FlexDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Row
 The main axis is consistent with the row direction as the layout mode.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,6 +40,8 @@ The main axis is consistent with the column direction as the layout mode.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -54,6 +60,8 @@ The layout is in the opposite direction to the Row direction.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -71,6 +79,8 @@ ColumnReverse
 Layout in the opposite direction to the column.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

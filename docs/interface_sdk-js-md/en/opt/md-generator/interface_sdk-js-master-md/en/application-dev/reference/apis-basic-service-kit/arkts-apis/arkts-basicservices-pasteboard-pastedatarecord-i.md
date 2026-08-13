@@ -1,8 +1,10 @@
 # PasteDataRecord
 
-Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records.After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord.If you need to refresh the attribute value of the PasteDataRecord,please use [addEntry](#addEntry).
+Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definition of the content in the pasteboard. The pasteboard content consists of one or more plain text, HTML, URI, or Want records. After creating a PasteDataRecord, it is not supported to modify the value of the default data type of the PasteDataRecord. The correct value for the default data type should be specified when creating the PasteDataRecord. If you need to refresh the attribute value of the PasteDataRecord, please use [addEntry](#addEntry).
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-interface PasteDataRecord--><!--Device-pasteboard-interface PasteDataRecord-End-->
 
@@ -20,10 +22,11 @@ import { pasteboard } from '@kit.BasicServicesKit';
 addEntry(type: string, value: ValueType): void
 ```
 
-Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the  
-[getData](#getData) API to read the corresponding data.
+Adds PasteData of an extra type to **PasteDataRecord**. The type added using this method is not the default type of **Record**. You can only use the [getData](#getData) API to read the corresponding data.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void--><!--Device-PasteDataRecord-addEntry(type: string, value: ValueType): void-End-->
 
@@ -40,7 +43,7 @@ Adds PasteData of an extra type to **PasteDataRecord**. The type added using thi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -61,7 +64,7 @@ record.addEntry(pasteboard.MIMETYPE_TEXT_HTML, html);
 convertToText(callback: AsyncCallback<string>): void
 ```
 
-Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return  the result.
+Forcibly converts the content in a **PasteData** object to text. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -83,7 +86,7 @@ Forcibly converts the content in a **PasteData** object to text. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -145,7 +148,9 @@ getData(type: string): Promise<ValueType>
 
 Obtains data of the specified type from **PasteDataRecord**.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>--><!--Device-PasteDataRecord-getData(type: string): Promise<ValueType>-End-->
 
@@ -167,7 +172,7 @@ Obtains data of the specified type from **PasteDataRecord**.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -200,7 +205,9 @@ getValidTypes(types: Array<string>): Array<string>
 
 Obtains the intersection of the input types and the types of the PasteData.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>--><!--Device-PasteDataRecord-getValidTypes(types: Array<string>): Array<string>-End-->
 
@@ -210,7 +217,7 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array & lt;string & gt; | Yes |
+| [types](../../apis-na/arkts-apis/arkts-na-util-types-c.md) | Array & lt;string & gt; | Yes |
 
 **Return value:**
 
@@ -222,7 +229,7 @@ Obtains the intersection of the input types and the types of the PasteData.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -248,7 +255,9 @@ toPlainText(): string
 
 Forcibly converts HTML, plain, and URI content in a **PasteDataRecord** to the plain text.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,9 +287,11 @@ data: Record<string, ArrayBuffer>
 
 Content of custom data.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ArrayBuffer&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ArrayBuffer&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -298,7 +309,9 @@ HTML content.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -316,7 +329,9 @@ Default type of PasteDataRecord.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -334,7 +349,9 @@ PixelMap content.
 
 **Type:** image.PixelMap
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -352,7 +369,9 @@ Plain text.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -370,7 +389,9 @@ URI content.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -388,7 +409,9 @@ Want content.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

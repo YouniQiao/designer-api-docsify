@@ -1,10 +1,12 @@
 # HceService
 
-A class for NFC host application.&lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
+A class for NFC host application. &lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cardEmulation-export class HceService--><!--Device-cardEmulation-export class HceService-End-->
 
@@ -16,7 +18,42 @@ A class for NFC host application.&lt;p&gt;The NFC host application use this clas
 import { cardEmulation } from '@kit.ConnectivityKit';
 ```
 
-## off('hceCmd')
+## offHceCmd
+
+```TypeScript
+offHceCmd(callback?: AsyncCallback<int[]>): void
+```
+
+Unsubscribe the event to receive the APDU data.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.NFC_CARD_EMULATION
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void--><!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void-End-->
+
+**System capability:** SystemCapability.Communication.NFC.CardEmulation
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+## off_hceCmd
 
 ```TypeScript
 off(type: 'hceCmd', callback?: AsyncCallback<int[]>): void
@@ -27,6 +64,8 @@ Unsubscribe the event to receive the APDU data.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -41,14 +80,14 @@ Unsubscribe the event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to unregister event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -86,23 +125,25 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## offHceCmd
+## onHceCmd
 
 ```TypeScript
-offHceCmd(callback?: AsyncCallback<int[]>): void
+onHceCmd(callback: AsyncCallback<int[]>): void
 ```
 
-Unsubscribe the event to receive the APDU data.
+register HCE event to receive the APDU data.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void--><!--Device-HceService-offHceCmd(callback?: AsyncCallback<int[]>): void-End-->
+<!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void--><!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
@@ -110,16 +151,17 @@ Unsubscribe the event to receive the APDU data.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | No | The callback used to listen for the event. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## on('hceCmd')
+## on_hceCmd
 
 ```TypeScript
 on(type: 'hceCmd', callback: AsyncCallback<int[]>): void
@@ -130,6 +172,8 @@ register HCE event to receive the APDU data.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -144,15 +188,15 @@ register HCE event to receive the APDU data.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'hceCmd' | Yes | The type to register. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameter. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameter. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -229,47 +273,13 @@ export default {
 }
 ```
 
-## onHceCmd
-
-```TypeScript
-onHceCmd(callback: AsyncCallback<int[]>): void
-```
-
-register HCE event to receive the APDU data.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Required permissions:** ohos.permission.NFC_CARD_EMULATION
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void--><!--Device-HceService-onHceCmd(callback: AsyncCallback<int[]>): void-End-->
-
-**System capability:** SystemCapability.Communication.NFC.CardEmulation
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int[]&gt; | Yes | Callback used to listen to HCE data that local device received. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-
 ## sendResponse
 
 ```TypeScript
 sendResponse(responseApdu: number[]): void
 ```
 
-Sends a response APDU to the remote device.&lt;p&gt;This method is used by a host application when swiping card.
+Sends a response APDU to the remote device. &lt;p&gt;This method is used by a host application when swiping card.
 
 **Since:** 8
 
@@ -277,7 +287,7 @@ Sends a response APDU to the remote device.&lt;p&gt;This method is used by a hos
 
 **Deprecated since:** 9
 
-**Substitutes:** [transmit](ohos.nfc.cardEmulation/cardEmulation.HceService#transmit)
+**Substitutes:** [transmit](#transmit)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -301,13 +311,15 @@ start(elementName: ElementName, aidList: string[]): void
 
 Starts the HCE, register more aids and allows this application to be preferred while in foreground.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-start(elementName: ElementName, aidList: string[]): void--><!--Device-HceService-start(elementName: ElementName, aidList: string[]): void-End-->
 
@@ -324,10 +336,10 @@ Starts the HCE, register more aids and allows this application to be preferred w
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## startHCE
 
@@ -343,7 +355,7 @@ start HCE
 
 **Deprecated since:** 9
 
-**Substitutes:** [start](ohos.nfc.cardEmulation/cardEmulation.HceService#start)
+**Substitutes:** [start](#start)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -373,13 +385,15 @@ stop(elementName: ElementName): void
 
 Stops the HCE, and unset the preferred service while in foreground.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-stop(elementName: ElementName): void--><!--Device-HceService-stop(elementName: ElementName): void-End-->
 
@@ -395,10 +409,10 @@ Stops the HCE, and unset the preferred service while in foreground.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## stopHCE
 
@@ -414,7 +428,7 @@ stop HCE
 
 **Deprecated since:** 9
 
-**Substitutes:** [stop](ohos.nfc.cardEmulation/cardEmulation.HceService#stop)
+**Substitutes:** [stop](#stop)
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
@@ -432,29 +446,25 @@ stop HCE
 
 ## Examples
 
-For details, see the example of [on](#on8).
+For details, see the example of on.
 
 ## transmit
 
-ArkTS-Dyn:
-```TypeScript
-transmit(response: number[]): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 transmit(response: int[]): Promise<void>
 ```
 
 Sends a response APDU to the remote device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-transmit(response: int[]): Promise<void>--><!--Device-HceService-transmit(response: int[]): Promise<void>-End-->
 
@@ -464,7 +474,7 @@ Sends a response APDU to the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Indicates the response to send, which is a byte array. |
+| response | int[] | Yes | Indicates the response to send, which is a byte array. |
 
 **Return value:**
 
@@ -476,10 +486,10 @@ Sends a response APDU to the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -517,25 +527,21 @@ console.info("transmit Promise end.");
 
 ## transmit
 
-ArkTS-Dyn:
-```TypeScript
-transmit(response: number[], callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 transmit(response: int[], callback: AsyncCallback<void>): void
 ```
 
 Sends a response APDU to the remote device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_CARD_EMULATION
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void--><!--Device-HceService-transmit(response: int[], callback: AsyncCallback<void>): void-End-->
 
@@ -545,17 +551,17 @@ Sends a response APDU to the remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Indicates the response to send, which is a byte array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback |
+| response | int[] | Yes | Indicates the response to send, which is a byte array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3100301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3100301](../errorcode-nfc.md#3100301-abnormal-nfc-card-emulation-status) | Card emulation running state is abnormal in service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

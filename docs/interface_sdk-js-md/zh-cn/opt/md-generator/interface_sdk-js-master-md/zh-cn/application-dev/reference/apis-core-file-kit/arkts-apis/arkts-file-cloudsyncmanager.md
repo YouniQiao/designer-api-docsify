@@ -2,7 +2,9 @@
 
 该模块向云盘管理应用提供端云同步管理能力：包括全量下载的状态和停止原因，以及应用本地和云端文件数量信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace cloudSyncManager--><!--Device-unnamed-declare namespace cloudSyncManager-End-->
 
@@ -15,20 +17,20 @@
 
 | 名称 |
 | --- |
-| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeappcloudswitch) |
-| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeappcloudswitch-1) |
-| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean) |
-| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean-1) |
-| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disablecloud) |
-| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disablecloud-1) |
-| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enablecloud) |
-| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enablecloud-1) |
-| [getBundlesLocalFilePresentStatus](arkts-corefile-cloudsyncmanager-getbundleslocalfilepresentstatus-f-sys.md#getbundleslocalfilepresentstatus) |
-| [getDowngradeDownloadTaskState](arkts-corefile-cloudsyncmanager-getdowngradedownloadtaskstate-f-sys.md#getdowngradedownloadtaskstate) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-1) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-2) |
-| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange-3) |
+| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeAppCloudSwitch（系统接口）) |
+| [changeAppCloudSwitch](arkts-corefile-cloudsyncmanager-changeappcloudswitch-f-sys.md#changeAppCloudSwitch（系统接口）) |
+| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean（系统接口）) |
+| [clean](arkts-corefile-cloudsyncmanager-clean-f-sys.md#clean（系统接口）) |
+| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disableCloud（系统接口）) |
+| [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disableCloud（系统接口）) |
+| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enableCloud（系统接口）) |
+| [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enableCloud（系统接口）) |
+| [getBundlesLocalFilePresentStatus](arkts-corefile-cloudsyncmanager-getbundleslocalfilepresentstatus-f-sys.md#getBundlesLocalFilePresentStatus（系统接口）) |
+| [getDowngradeDownloadTaskState](arkts-corefile-cloudsyncmanager-getdowngradedownloadtaskstate-f-sys.md#getDowngradeDownloadTaskState（系统接口）) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange（系统接口）) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange（系统接口）) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange（系统接口）) |
+| [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifyDataChange（系统接口）) |
 <!--DelEnd-->
 
 ### 类

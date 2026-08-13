@@ -20,7 +20,7 @@ ArkUI提供的Native侧Node类型接口集合。Node模块相关接口需要在�
 
 | 名称 | 描述 |
 | -- | -- |
-| int32_t version |  |
+| int32_t version | 结构体版本，当前使用的ArkUI_NativeNodeAPI_1结构体的版本编号，由系统提供，开发者无需修改。<br>**起始版本：** 12 |
 
 
 ### 成员函数
@@ -34,7 +34,7 @@ ArkUI提供的Native侧Node类型接口集合。Node模块相关接口需要在�
 | [int32_t (\*insertChildAfter)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, ArkUI_NodeHandle sibling)](#insertchildafter) | 将组件挂载到某个父节点之下，挂载位置在<b>sibling</b>节点之后。本接口属于节点操作接口，不建议在非主线程上调用。 |
 | [int32_t (\*insertChildBefore)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, ArkUI_NodeHandle sibling)](#insertchildbefore) | 将组件挂载到某个父节点之下，挂载位置在<b>sibling</b>节点之前。本接口属于节点操作接口，不建议在非主线程上调用。 |
 | [int32_t (\*insertChildAt)(ArkUI_NodeHandle parent, ArkUI_NodeHandle child, int32_t position)](#insertchildat) | 将组件挂载到某个父节点之下，挂载位置由<b>position</b>指定。本接口属于节点操作接口，不建议在非主线程上调用。 |
-| [int32_t (\*setAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute, const ArkUI_AttributeItem* item)](#setattribute) | 属性设置函数，不建议在非主线程上调用。<br>     在实际业务场景下，如果组件设置的属性包含由开发者申请的堆内存，需确保组件不再使用后再调用对应释放接口。<br> 例如：[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype)中的<br> NODE_TEXT_CONTENT_WITH_STYLED_STRING。 |
+| [int32_t (\*setAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute, const ArkUI_AttributeItem* item)](#setattribute) | 属性设置函数，不建议在非主线程上调用。<br>     在实际业务场景下，如果组件设置的属性包含由开发者申请的堆内存，需确保组件不再使用后再调用对应释放接口。例如：[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype)中的NODE_TEXT_CONTENT_WITH_STYLED_STRING。 |
 | [const ArkUI_AttributeItem* (\*getAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute)](#getattribute) | 属性获取函数。该接口返回的指针是ArkUI框架内部的缓冲区指针，不需要开发者主动调用delete释放内存，但是需要在该函数下一次被调用前使用，否则可能会被其他值所覆盖。 |
 | [int32_t (\*resetAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute)](#resetattribute) | 重置属性函数，不建议在非主线程上调用。 |
 | [int32_t (\*registerNodeEvent)(ArkUI_NodeHandle node, ArkUI_NodeEventType eventType,int32_t targetId, void* userData)](#registernodeevent) | 注册节点事件函数。 |
@@ -92,7 +92,7 @@ ArkUI_NodeHandle (*createNode)(ArkUI_NodeType type)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 返回创建完成的组件对象指针，如果创建失败返回NULL。需要开发者自行管理返回的组件对象指针的生命周期，否则有可能导致Use After Free等进程崩溃或内存泄漏问题。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | 返回创建完成的组件操作指针，如果创建失败返回NULL。需要开发者自行管理返回的组件对象指针的生命周期，否则有可能导致Use After Free等进程崩溃或内存泄漏问题。 |
 
 ### disposeNode()
 
@@ -248,7 +248,7 @@ int32_t (*setAttribute)(ArkUI_NodeHandle node, ArkUI_NodeAttributeType attribute
 
 **描述**
 
-属性设置函数，不建议在非主线程上调用。<br>     在实际业务场景下，如果组件设置的属性包含由开发者申请的堆内存，需确保组件不再使用后再调用对应释放接口。<br> 例如：[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype)中的<br> NODE_TEXT_CONTENT_WITH_STYLED_STRING。
+属性设置函数，不建议在非主线程上调用。<br>     在实际业务场景下，如果组件设置的属性包含由开发者申请的堆内存，需确保组件不再使用后再调用对应释放接口。例如：[ArkUI_NodeAttributeType](capi-native-node-h.md#arkui_nodeattributetype)中的NODE_TEXT_CONTENT_WITH_STYLED_STRING。
 
 **起始版本：** 12
 
@@ -997,7 +997,7 @@ int32_t (*removeAllChildren)(ArkUI_NodeHandle parent)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | 父节点指针。 |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) parent | 目标节点对象。 |
 
 **返回：**
 

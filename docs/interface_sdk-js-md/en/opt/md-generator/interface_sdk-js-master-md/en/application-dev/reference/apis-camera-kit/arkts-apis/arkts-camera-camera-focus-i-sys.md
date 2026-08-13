@@ -1,14 +1,14 @@
 # Focus
 
-**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery).
-
-It provides APIs related to focus operations.
+**Focus** inherits from [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery). It provides APIs related to focus operations.
 
 **Inheritance/Implementation:** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface Focus extends FocusQuery--><!--Device-camera-interface Focus extends FocusQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface Focus--><!--Device-camera-interface Focus-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -26,7 +26,9 @@ getFocusAssist(): boolean
 
 Checks whether the focus assist is enabled.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Focus-getFocusAssist(): boolean--><!--Device-Focus-getFocusAssist(): boolean-End-->
 
@@ -44,8 +46,8 @@ Checks whether the focus assist is enabled.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -71,7 +73,9 @@ getFocusDriven(): FocusDrivenType
 
 Obtains the focus drive type in use.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Focus-getFocusDriven(): FocusDrivenType--><!--Device-Focus-getFocusDriven(): FocusDrivenType-End-->
 
@@ -89,8 +93,8 @@ Obtains the focus drive type in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -118,7 +122,9 @@ getFocusRange(): FocusRangeType
 
 Obtains the focus range type in use.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Focus-getFocusRange(): FocusRangeType--><!--Device-Focus-getFocusRange(): FocusRangeType-End-->
 
@@ -136,8 +142,8 @@ Obtains the focus range type in use.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -163,10 +169,11 @@ function getFocusRange(session: camera.VideoSessionForSys): camera.FocusRangeTyp
 setFocusAssist(enabled: boolean): void
 ```
 
-Sets the focus assist. Before the setting, call  
-[isFocusAssistSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusAssistSupported) to check whether the device supports the focus assist.
+Sets the focus assist. Before the setting, call [isFocusAssistSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusAssistSupported) to check whether the device supports the focus assist.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Focus-setFocusAssist(enabled: boolean): void--><!--Device-Focus-setFocusAssist(enabled: boolean): void-End-->
 
@@ -184,9 +191,9 @@ Sets the focus assist. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -210,10 +217,11 @@ function setFocusAssist(professionalPhotoSession: camera.ProfessionalPhotoSessio
 setFocusDriven(type: FocusDrivenType): void
 ```
 
-Sets a focus drive type. Before the setting, call  
-[isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusDrivenTypeSupported) to check whether the focus drive type is supported.
+Sets a focus drive type. Before the setting, call [isFocusDrivenTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusDrivenTypeSupported) to check whether the focus drive type is supported.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Focus-setFocusDriven(type: FocusDrivenType): void--><!--Device-Focus-setFocusDriven(type: FocusDrivenType): void-End-->
 
@@ -231,11 +239,11 @@ Sets a focus drive type. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -259,10 +267,11 @@ function setFocusDriven(session: camera.VideoSessionForSys, type: camera.FocusDr
 setFocusRange(type: FocusRangeType): void
 ```
 
-Sets a focus range type. Before the setting, call  
-[isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusRangeTypeSupported) to check whether the focus range type is supported.
+Sets a focus range type. Before the setting, call [isFocusRangeTypeSupported](arkts-camera-camera-focusquery-i-sys.md#isFocusRangeTypeSupported) to check whether the focus range type is supported.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Focus-setFocusRange(type: FocusRangeType): void--><!--Device-Focus-setFocusRange(type: FocusRangeType): void-End-->
 
@@ -280,11 +289,11 @@ Sets a focus range type. Before the setting, call
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

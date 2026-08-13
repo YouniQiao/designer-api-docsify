@@ -10,6 +10,8 @@ function isEncoding(encoding: string): boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function isEncoding(encoding: string): boolean--><!--Device-fastbuffer-function isEncoding(encoding: string): boolean-End-->

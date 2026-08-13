@@ -4,11 +4,13 @@ Effect resource.
 
 **Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface Effect extends SceneResource--><!--Device-unnamed-export interface Effect extends SceneResource-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Effect--><!--Device-unnamed-export interface Effect-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -22,7 +24,9 @@ Get the value of a specific effect property.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,9 @@ Set the value of a specific effect property
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,13 +85,15 @@ Set the value of a specific effect property
 readonly effectId: string
 ```
 
-The id of the effect.This is the id that was used to create the effect.
+The id of the effect. This is the id that was used to create the effect.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Effect-readonly effectId: string--><!--Device-Effect-readonly effectId: string-End-->
 
@@ -101,9 +109,11 @@ Controls whether the effect is enabled or not.
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Effect-enabled: boolean--><!--Device-Effect-enabled: boolean-End-->
 

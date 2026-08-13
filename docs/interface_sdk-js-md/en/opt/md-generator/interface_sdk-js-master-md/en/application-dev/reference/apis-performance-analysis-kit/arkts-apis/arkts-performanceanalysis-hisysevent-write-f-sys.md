@@ -14,7 +14,9 @@ function write(info: SysEventInfo): Promise<void>
 
 Writes event information to the event file. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>--><!--Device-hiSysEvent-function write(info: SysEventInfo): Promise<void>-End-->
 
@@ -38,15 +40,15 @@ Writes event information to the event file. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 11200002 |
-| [11200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200003-environment-error) |
-| [11200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
+| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
 | 11200001 |
-| [11200054](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
-| [11200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
-| [11200052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
-| [11200053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
+| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
+| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
+| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
 
 ## Examples
 
@@ -91,7 +93,9 @@ function write(info: SysEventInfo, callback: AsyncCallback<void>): void
 
 Writes event information to the event file. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiSysEvent-function write(info: SysEventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -110,15 +114,15 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 11200002 |
-| [11200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200003-environment-error) |
-| [11200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
+| [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) |
+| [11200051](../errorcode-hisysevent-sys.md#11200051-invalid-event-parameter) |
 | 11200001 |
-| [11200054](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
-| [11200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
-| [11200052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
-| [11200053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
+| [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) |
+| [11200004](../errorcode-hisysevent-sys.md#11200004-invalid-event-length) |
+| [11200052](../errorcode-hisysevent-sys.md#11200052-length-of-event-parameter-values-of-the-string-type-exceeding-the-limit) |
+| [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) |
 
 ## Examples
 

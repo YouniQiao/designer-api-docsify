@@ -6,7 +6,9 @@ export type NotificationMultiLineContent = _NotificationMultiLineContent
 
 Describes the multi-line text notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent--><!--Device-notificationManager-export type NotificationMultiLineContent = _NotificationMultiLineContent-End-->
 

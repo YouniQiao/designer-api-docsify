@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ComputedBarAttribute--><!--Device-unnamed-declare interface ComputedBarAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Grid内容总长度，单位px。
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +43,8 @@ Grid内容相对显示区域的总偏移，单位px。
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

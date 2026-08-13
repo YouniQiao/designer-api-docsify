@@ -12,6 +12,8 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -32,8 +34,8 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 
@@ -88,7 +90,9 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_INSTALLED_BUNDLE_LIST
 
@@ -110,6 +114,6 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, RecordData>>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 

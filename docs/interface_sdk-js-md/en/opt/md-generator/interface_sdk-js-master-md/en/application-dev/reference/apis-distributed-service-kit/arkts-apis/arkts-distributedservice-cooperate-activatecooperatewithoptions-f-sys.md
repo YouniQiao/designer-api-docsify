@@ -16,7 +16,9 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: nu
 
 Starts screen hopping based on the specified options. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.COOPERATE_MANAGER
 
@@ -44,9 +46,9 @@ Starts screen hopping based on the specified options. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [20900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-devicestatus.md#20900001-input-device-operation-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-input-device-operation-failed) |
 
 ## Examples
 

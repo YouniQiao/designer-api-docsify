@@ -6,6 +6,8 @@ Sets the single-line text box type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum InputType--><!--Device-unnamed-declare enum InputType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@ Sets the single-line text box type.
 Normal
 ```
 
-Normal input mode. In this mode, there is no special restriction on the input characters.
-
-The inline style supports only the **InputType.Normal** type.
+Normal input mode. In this mode, there is no special restriction on the input characters. The inline style supports only the **InputType.Normal** type.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,13 +38,13 @@ The inline style supports only the **InputType.Normal** type.
 Number
 ```
 
-Digit input mode.
-
-Negative numbers and decimals are not supported.
+Digit input mode. Negative numbers and decimals are not supported.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,13 +58,13 @@ Negative numbers and decimals are not supported.
 PhoneNumber
 ```
 
-Phone number input mode.
-
-In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
+Phone number input mode. In this mode, the following characters are allowed: digits, spaces, plus signs (+), hyphens (-), asterisks (*), and number signs (#), opening parentheses ((), and closing parenthesis ()); the length is not limited.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,13 +78,13 @@ In this mode, the following characters are allowed: digits, spaces, plus signs (
 Email
 ```
 
-Email address input mode.
-
-This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % &' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
+Email address input mode. This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' " * + - / = ? ^ ` { | } ~ @. The at sign can appear only once.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,20 +98,13 @@ This mode accepts only digits, letters, underscores (_), dots (.), and the follo
 Password
 ```
 
-Password input mode.
-
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
-
-The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
-
-The [decoration](TextInputAttribute#decoration), [showUnderline](TextInputAttribute#showUnderline), and  
-[lineHeight](TextInputAttribute#lineHeight) attributes do not take effect in password input mode.
-
-If Password Vault is enabled, autofill is available for the username and password.
+Password input mode. The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices. The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices. The decoration, showUnderline, and lineHeight attributes do not take effect in password input mode. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -123,17 +118,13 @@ If Password Vault is enabled, autofill is available for the username and passwor
 NUMBER_PASSWORD = 8
 ```
 
-Numeric password input mode.
-
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
-
-The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
-
-The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
+Numeric password input mode. The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices. The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices. The password input mode does not support underlines. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,13 +140,13 @@ The password input mode does not support underlines. If Password Vault is enable
 USER_NAME = 10
 ```
 
-User name input mode with no special restrictions.
-
-If Password Vault is enabled, autofill is available for the username and password.
+User name input mode with no special restrictions. If Password Vault is enabled, autofill is available for the username and password.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -171,17 +162,13 @@ If Password Vault is enabled, autofill is available for the username and passwor
 NEW_PASSWORD = 11
 ```
 
-New password input mode with no special restrictions.
-
-The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices.
-
-The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices.
-
-If Password Vault is enabled, a new password can be automatically generated.
+New password input mode with no special restrictions. The entered text is briefly displayed before turning to dots by default. Since API version 12, the entered text is directly displayed as dots on PCs and 2-in-1 devices. The eye icon at the end of the input box is hidden by default on TV devices, and shown by default on other devices. If Password Vault is enabled, a new password can be automatically generated.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,13 +184,13 @@ If Password Vault is enabled, a new password can be automatically generated.
 NUMBER_DECIMAL = 12
 ```
 
-Number input mode with a decimal point.
-
-The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of negative decimals, use **inputFilter**.
+Number input mode with a decimal point. The value can contain digits and only one decimal point. Negative decimals are not supported. For the input mode of negative decimals, use **inputFilter**.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -225,6 +212,8 @@ URL input mode with no special restrictions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -244,6 +233,8 @@ One-time code (verification code) input mode with no special restrictions.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

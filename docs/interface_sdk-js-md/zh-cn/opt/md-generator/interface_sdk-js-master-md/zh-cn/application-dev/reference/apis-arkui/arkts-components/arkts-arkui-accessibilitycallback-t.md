@@ -4,9 +4,11 @@
 declare type AccessibilityCallback = (isHover: boolean, event: AccessibilityHoverEvent) => void
 ```
 
-Defines the callback type used in accessibility hover events.The value of isHover indicates whether the touch is hovering over the component.The value of event contains information about AccessibilityHoverEvent.
+Defines the callback type used in accessibility hover events. The value of isHover indicates whether the touch is hovering over the component. The value of event contains information about AccessibilityHoverEvent.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

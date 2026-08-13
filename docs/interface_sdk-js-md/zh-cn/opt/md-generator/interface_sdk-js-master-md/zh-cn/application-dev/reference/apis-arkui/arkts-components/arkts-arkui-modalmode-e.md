@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ModalMode--><!--Device-unnamed-declare enum ModalMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ AUTO = 0
 自动模式，菜单组件在当前设备的默认行为。当前版本在所有设备上的效果等同于ModalMode.NONE。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ NONE = 1
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ TARGET_WINDOW = 2
 菜单所在应用的窗口与菜单区域不可传递事件，其他区域可传递事件。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

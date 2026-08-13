@@ -3,6 +3,7 @@
 ## TextInput
 
 ```TypeScript
+@ComponentBuilder
 export declare function TextInput(
     value?: TextInputOptions
 ): TextInputAttribute
@@ -14,9 +15,11 @@ export declare function TextInput(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function TextInput(    value?: TextInputOptions): TextInputAttribute--><!--Device-unnamed-export declare function TextInput(    value?: TextInputOptions): TextInputAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function TextInput(    value?: TextInputOptions): TextInputAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function TextInput(    value?: TextInputOptions): TextInputAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ export declare function TextInput(
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md) |  |
+| TextInputAttribute |  |
 
 
 ## TextInput
 
 ```TypeScript
+@Builder
 export declare function TextInput(
     style: CustomBuilderT<TextInputAttribute>,
 ): TextInputAttribute
@@ -47,11 +51,11 @@ export declare function TextInput(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute--><!--Device-unnamed-export declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute--><!--Device-unnamed-@Builderexport declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ export declare function TextInput(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md)&gt; | 是 | TextInput属性的实例。 |
+| style | CustomBuilderT&lt;TextInputAttribute&gt; | 是 | TextInput属性的实例。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md) |  |
+| TextInputAttribute |  |
 

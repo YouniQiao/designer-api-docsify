@@ -2,9 +2,11 @@
 
 Indicates the lock types.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-export enum LockType--><!--Device-sim-export enum LockType-End-->
 
@@ -20,9 +22,11 @@ PIN_LOCK = 1
 
 Indicates the SIM card password lock.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LockType-PIN_LOCK = 1--><!--Device-LockType-PIN_LOCK = 1-End-->
 
@@ -38,9 +42,11 @@ FDN_LOCK = 2
 
 Indicates the fixed dialing lock.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LockType-FDN_LOCK = 2--><!--Device-LockType-FDN_LOCK = 2-End-->
 

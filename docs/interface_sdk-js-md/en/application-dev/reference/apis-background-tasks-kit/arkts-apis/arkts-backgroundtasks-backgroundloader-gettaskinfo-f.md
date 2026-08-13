@@ -16,7 +16,9 @@ Obtains the information of a background load task. This API returns the result v
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -30,7 +32,7 @@ Obtains the information of a background load task. This API returns the result v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Id of the background load task. &lt;br&gt;The value range is all integers. |
+| taskId | int | Yes | Id of the background load task. &lt;br&gt;The value range is all integers. |
 
 **Return value:**
 
@@ -42,7 +44,7 @@ Obtains the information of a background load task. This API returns the result v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
-| [9700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | No permission. |
+| [9700004](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700004-workinfo-verification-failure) | Check on taskInfo failed. |
+| [9700003](../../apis-backgroundtasks-kit/errorcode-workScheduler.md#9700003-system-service-failure) | System service operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | No permission. |
 

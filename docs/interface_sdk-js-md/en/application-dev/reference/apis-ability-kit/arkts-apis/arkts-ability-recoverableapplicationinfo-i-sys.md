@@ -1,15 +1,12 @@
 # RecoverableApplicationInfo (System API)
 
-The module defines the information about a preinstalled application that can be restored after being uninstalled. The information can be obtained through  
-[bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getRecoverableApplicationInfo).
+The module defines the information about a preinstalled application that can be restored after being uninstalled. The information can be obtained through [bundleManager.getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getRecoverableApplicationInfo-(System-API)) . > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RecoverableApplicationInfo--><!--Device-unnamed-export interface RecoverableApplicationInfo-End-->
 
@@ -27,9 +24,11 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly bundleName: string--><!--Device-RecoverableApplicationInfo-readonly bundleName: string-End-->
 
@@ -47,9 +46,11 @@ Bundle type.
 
 **Type:** bundleManager.BundleType
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly bundleType: bundleManager.BundleType--><!--Device-RecoverableApplicationInfo-readonly bundleType: bundleManager.BundleType-End-->
 
@@ -67,9 +68,11 @@ Installation directory of the application.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly codePaths: Array<string>--><!--Device-RecoverableApplicationInfo-readonly codePaths: Array<string>-End-->
 
@@ -85,11 +88,13 @@ readonly iconId: long
 
 ID of the module icon.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly iconId: long--><!--Device-RecoverableApplicationInfo-readonly iconId: long-End-->
 
@@ -105,11 +110,13 @@ readonly labelId: long
 
 ID of the module label.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly labelId: long--><!--Device-RecoverableApplicationInfo-readonly labelId: long-End-->
 
@@ -127,9 +134,11 @@ Module name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly moduleName: string--><!--Device-RecoverableApplicationInfo-readonly moduleName: string-End-->
 
@@ -147,9 +156,11 @@ Whether the application is a system application. **true** if it is a system appl
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RecoverableApplicationInfo-readonly systemApp: boolean--><!--Device-RecoverableApplicationInfo-readonly systemApp: boolean-End-->
 

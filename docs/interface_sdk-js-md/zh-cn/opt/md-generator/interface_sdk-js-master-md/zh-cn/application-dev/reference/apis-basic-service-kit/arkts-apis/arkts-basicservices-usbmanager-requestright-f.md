@@ -8,7 +8,9 @@ function requestRight(deviceName: string): Promise<boolean>
 
 请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-function requestRight(deviceName: string): Promise<boolean>--><!--Device-usbManager-function requestRight(deviceName: string): Promise<boolean>-End-->
 
@@ -30,8 +32,8 @@ function requestRight(deviceName: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

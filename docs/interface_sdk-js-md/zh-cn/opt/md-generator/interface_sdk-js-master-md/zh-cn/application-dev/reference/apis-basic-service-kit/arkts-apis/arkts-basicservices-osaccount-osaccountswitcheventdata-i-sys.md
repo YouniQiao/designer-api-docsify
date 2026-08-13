@@ -2,7 +2,9 @@
 
 表示系统账号前后台开始切换和结束切换事件的数据结构。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface OsAccountSwitchEventData--><!--Device-osAccount-interface OsAccountSwitchEventData-End-->
 
@@ -22,6 +24,8 @@ displayId?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-OsAccountSwitchEventData-displayId?: long--><!--Device-OsAccountSwitchEventData-displayId?: long-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -38,7 +42,9 @@ fromAccountId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountSwitchEventData-fromAccountId: int--><!--Device-OsAccountSwitchEventData-fromAccountId: int-End-->
 
@@ -56,7 +62,9 @@ toAccountId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OsAccountSwitchEventData-toAccountId: int--><!--Device-OsAccountSwitchEventData-toAccountId: int-End-->
 

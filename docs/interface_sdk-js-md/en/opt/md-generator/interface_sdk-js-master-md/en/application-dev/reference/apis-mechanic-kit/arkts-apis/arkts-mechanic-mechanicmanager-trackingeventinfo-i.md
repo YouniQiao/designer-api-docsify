@@ -2,7 +2,9 @@
 
 Tracking event callback info.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface TrackingEventInfo--><!--Device-mechanicManager-export interface TrackingEventInfo-End-->
 
@@ -24,7 +26,9 @@ Tracking event.
 
 **Type:** [TrackingEvent](arkts-mechanic-mechanicmanager-trackingevent-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TrackingEventInfo-event: TrackingEvent--><!--Device-TrackingEventInfo-event: TrackingEvent-End-->
 

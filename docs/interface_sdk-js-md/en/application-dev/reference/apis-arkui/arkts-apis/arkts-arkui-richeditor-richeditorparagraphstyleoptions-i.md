@@ -8,7 +8,9 @@ Defines paragraph style option of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface RichEditorParagraphStyleOptions extends RichEditorRange--><!--Device-unnamed-export declare interface RichEditorParagraphStyleOptions extends RichEditorRange-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface RichEditorParagraphStyleOptions--><!--Device-unnamed-export declare interface RichEditorParagraphStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ Paragraph style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

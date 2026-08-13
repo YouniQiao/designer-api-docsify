@@ -1,14 +1,16 @@
 # RoundRectShapeOptions
 
-Interface for RectShape constructor parameters with separate radius values.
+Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize).
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface RoundRectShapeOptions extends ShapeSize--><!--Device-unnamed-export interface RoundRectShapeOptions extends ShapeSize-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface RoundRectShapeOptions--><!--Device-unnamed-interface RoundRectShapeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,40 +23,52 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 ## radiusHeight
 
 ```TypeScript
-radiusHeight?: double | string
+radiusHeight?: number | string
 ```
 
-Defines the height of the corner radius for RectShape.
+Radius height of the rectangle border corners. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RoundRectShapeOptions-radiusHeight?: double | string--><!--Device-RoundRectShapeOptions-radiusHeight?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RoundRectShapeOptions-radiusHeight?: number | string--><!--Device-RoundRectShapeOptions-radiusHeight?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## radiusWidth
 
 ```TypeScript
-radiusWidth?: double | string
+radiusWidth?: number | string
 ```
 
-Defines the width of the corner radius for RectShape.
+Radius width of the rectangle border corners. When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification. Unit: vp. If the value is invalid, 0 vp is used.
 
-**Type:** double \| string
+**Type:** number \| string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RoundRectShapeOptions-radiusWidth?: double | string--><!--Device-RoundRectShapeOptions-radiusWidth?: double | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
+
+<!--Device-RoundRectShapeOptions-radiusWidth?: number | string--><!--Device-RoundRectShapeOptions-radiusWidth?: number | string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

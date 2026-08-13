@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class TextMenuItemId--><!--Device-unnamed-export declare class TextMenuItemId-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ equals(id: TextMenuItemId): boolean
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,6 +55,8 @@ static of(id: ResourceStr): TextMenuItemId
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +90,8 @@ static readonly AI_WRITER: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId--><!--Device-TextMenuItemId-static readonly AI_WRITER: TextMenuItemId-End-->
@@ -103,6 +111,8 @@ static readonly CAMERA_INPUT: TextMenuItemId
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,6 +134,8 @@ static readonly COLLABORATION_SERVICE: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly COLLABORATION_SERVICE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly COLLABORATION_SERVICE: TextMenuItemId-End-->
@@ -143,6 +155,8 @@ static readonly COPY: TextMenuItemId
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,6 +178,8 @@ static readonly CUT: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly CUT: TextMenuItemId--><!--Device-TextMenuItemId-static readonly CUT: TextMenuItemId-End-->
@@ -183,6 +199,8 @@ static readonly PASTE: TextMenuItemId
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,6 +222,8 @@ static readonly SEARCH: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly SEARCH: TextMenuItemId--><!--Device-TextMenuItemId-static readonly SEARCH: TextMenuItemId-End-->
@@ -223,6 +243,8 @@ static readonly SELECT_ALL: TextMenuItemId
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -244,6 +266,8 @@ static readonly SHARE: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly SHARE: TextMenuItemId--><!--Device-TextMenuItemId-static readonly SHARE: TextMenuItemId-End-->
@@ -263,6 +287,8 @@ static readonly TRANSLATE: TextMenuItemId
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,6 +310,8 @@ static readonly address: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly address: TextMenuItemId--><!--Device-TextMenuItemId-static readonly address: TextMenuItemId-End-->
@@ -304,6 +332,8 @@ static readonly askAI: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId--><!--Device-TextMenuItemId-static readonly askAI: TextMenuItemId-End-->
@@ -316,13 +346,15 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-自动填充，为一级菜单项。点击后会展开二级菜单项“密码保险箱”，仅支持Search、TextInput、TextArea或RichEditor组件。
+自动填充，为一级菜单项。 点击后会展开二级菜单项“密码保险箱”，仅支持Search、TextInput、TextArea或RichEditor组件。
 
 **类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -344,6 +376,8 @@ static readonly dateTime: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId--><!--Device-TextMenuItemId-static readonly dateTime: TextMenuItemId-End-->
@@ -364,6 +398,8 @@ static readonly email: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly email: TextMenuItemId--><!--Device-TextMenuItemId-static readonly email: TextMenuItemId-End-->
@@ -376,13 +412,15 @@ static readonly email: TextMenuItemId
 static readonly passwordVault: TextMenuItemId
 ```
 
-密码保险箱，为二级菜单项。点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持Search、TextInput、TextArea或RichEditor组件。
+密码保险箱，为二级菜单项。 点击该菜单项后会拉起密码保险箱应用，该应用提供自动填充账号密码能力，仅支持Search、TextInput、TextArea或RichEditor组件。
 
 **类型：** [TextMenuItemId](arkts-arkui-textcommon-textmenuitemid-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -404,6 +442,8 @@ static readonly phoneNumber: TextMenuItemId
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId--><!--Device-TextMenuItemId-static readonly phoneNumber: TextMenuItemId-End-->
@@ -423,6 +463,8 @@ static readonly url: TextMenuItemId
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

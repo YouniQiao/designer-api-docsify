@@ -1,16 +1,16 @@
 # PasteButton properties/events
 
-This component can only inherit the [universal attributes of security components](./security_component).
+This component can only inherit the universal attributes of security components. &lt;br&gt;Only the following events are supported.
 
-&lt;br&gt;Only the following events are supported.
-
-**Inheritance/Implementation:** PasteButtonAttribute extends [SecurityComponentMethod<PasteButtonAttribute>](SecurityComponentMethod<PasteButtonAttribute>)
+**Inheritance/Implementation:** PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare class PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>--><!--Device-unnamed-declare class PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PasteButtonAttribute--><!--Device-unnamed-declare class PasteButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,17 +20,13 @@ This component can only inherit the [universal attributes of security components
 onClick(event: PasteButtonCallback)
 ```
 
-Triggered when the paste button is clicked, returning the authorization result. Upon successful authorization, the application obtains temporary permission to read clipboard content.
-
-> **NOTE：**
-> - You may want to learn the
-> [restrictions on security component
-styles](../../../security/AccessToken/security-component-overview.md#constraints)  
-> to avoid authorization failures caused by incompliant styles.
+Triggered when the paste button is clicked, returning the authorization result. Upon successful authorization, the application obtains temporary permission to read clipboard content. > **NOTE：**> - You may want to learn the > [restrictions on security component styles](../../../security/AccessToken/security-component-overview.md#constraints) > to avoid authorization failures caused by incompliant styles.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

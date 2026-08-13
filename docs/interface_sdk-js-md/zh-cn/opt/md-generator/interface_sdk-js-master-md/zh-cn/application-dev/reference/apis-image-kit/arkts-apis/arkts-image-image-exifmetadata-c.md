@@ -1,14 +1,14 @@
 # ExifMetadata
 
-ExifMetadata implements Metadata
-
-Exif（Exchangeable image file format）元数据。
+ExifMetadata implements Metadata Exif（Exchangeable image file format）元数据。
 
 **继承/实现关系：** ExifMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **起始版本：** 23
 
-<!--Device-image-class ExifMetadata implements Metadata--><!--Device-image-class ExifMetadata implements Metadata-End-->
+**废弃版本：** -1
+
+<!--Device-image-class ExifMetadata--><!--Device-image-class ExifMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -21,6 +21,8 @@ clone(): Promise<ExifMetadata>
 对Exif元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +46,8 @@ static createInstance(): ExifMetadata
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-static createInstance(): ExifMetadata--><!--Device-ExifMetadata-static createInstance(): ExifMetadata-End-->
@@ -65,6 +69,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 获取图片中所有元数据的属性和值。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,6 +94,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-ExifMetadata-getBlob(): Promise<ArrayBuffer>-End-->
@@ -106,11 +114,11 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像的元数据属性值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
+获取图像的元数据属性值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,7 +142,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## setBlob
 
@@ -145,6 +153,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 使用二进制数据替换当前元数据。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,7 +178,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## setProperties
 
@@ -176,11 +186,11 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,7 +214,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## apertureValue
 
@@ -217,6 +227,8 @@ apertureValue?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -236,6 +248,8 @@ artist?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-artist?: string--><!--Device-ExifMetadata-artist?: string-End-->
@@ -253,6 +267,8 @@ bitsPerSample?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -272,6 +288,8 @@ bodySerialNumber?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-bodySerialNumber?: string--><!--Device-ExifMetadata-bodySerialNumber?: string-End-->
@@ -289,6 +307,8 @@ brightnessValue?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -308,6 +328,8 @@ cameraOwnerName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-cameraOwnerName?: string--><!--Device-ExifMetadata-cameraOwnerName?: string-End-->
@@ -325,6 +347,8 @@ cfaPattern?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -344,6 +368,8 @@ colorSpace?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-colorSpace?: int--><!--Device-ExifMetadata-colorSpace?: int-End-->
@@ -361,6 +387,8 @@ componentsConfiguration?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -380,6 +408,8 @@ compositeImage?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-compositeImage?: int--><!--Device-ExifMetadata-compositeImage?: int-End-->
@@ -397,6 +427,8 @@ compressedBitsPerPixel?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -416,6 +448,8 @@ compression?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-compression?: int--><!--Device-ExifMetadata-compression?: int-End-->
@@ -433,6 +467,8 @@ contrast?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -452,6 +488,8 @@ copyright?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-copyright?: string--><!--Device-ExifMetadata-copyright?: string-End-->
@@ -470,6 +508,8 @@ customRendered?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-customRendered?: int--><!--Device-ExifMetadata-customRendered?: int-End-->
@@ -482,13 +522,13 @@ customRendered?: number
 dateTime?: string
 ```
 
-图像创建的日期和时间。
-
-在本标准中，指文件更改的日期和时间。格式为：“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。例如：“2025:12:15 18:44:59”。
+图像创建的日期和时间。 在本标准中，指文件更改的日期和时间。格式为：“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。例如：“2025:12:15 18:44:59”。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -502,13 +542,13 @@ dateTime?: string
 dateTimeDigitized?: string
 ```
 
-将图像作为数字数据存储的日期和时间。
-
-例如，如果DSC捕获了图像，并同时记录了文件，则DateTimeOriginal和DateTimeDigitized将具有相同的内容。格式为“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。
+将图像作为数字数据存储的日期和时间。 例如，如果DSC捕获了图像，并同时记录了文件，则DateTimeOriginal和DateTimeDigitized将具有相同的内容。格式为“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -522,13 +562,13 @@ dateTimeDigitized?: string
 dateTimeOriginal?: string
 ```
 
-生成原始图像数据的日期和时间。
-
-对于DSC（Digital Still Camera 数码静态相机），会记录拍摄照片的日期和时间。格式为“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。
+生成原始图像数据的日期和时间。 对于DSC（Digital Still Camera 数码静态相机），会记录拍摄照片的日期和时间。格式为“YYYY:MM:DD HH:MM:SS”，时间以24小时格式显示。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -548,6 +588,8 @@ deviceSettingDescription?: ArrayBuffer
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer--><!--Device-ExifMetadata-deviceSettingDescription?: ArrayBuffer-End-->
@@ -565,6 +607,8 @@ digitalZoomRatio?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -584,6 +628,8 @@ exifVersion?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-exifVersion?: string--><!--Device-ExifMetadata-exifVersion?: string-End-->
@@ -601,6 +647,8 @@ exposureBiasValue?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -620,6 +668,8 @@ exposureIndex?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-exposureIndex?: double--><!--Device-ExifMetadata-exposureIndex?: double-End-->
@@ -637,6 +687,8 @@ exposureMode?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -656,6 +708,8 @@ exposureProgram?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-exposureProgram?: int--><!--Device-ExifMetadata-exposureProgram?: int-End-->
@@ -673,6 +727,8 @@ exposureTime?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -692,6 +748,8 @@ fNumber?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-fNumber?: double--><!--Device-ExifMetadata-fNumber?: double-End-->
@@ -709,6 +767,8 @@ fileSource?: ArrayBuffer
 **类型：** ArrayBuffer
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -728,6 +788,8 @@ flash?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-flash?: int--><!--Device-ExifMetadata-flash?: int-End-->
@@ -745,6 +807,8 @@ flashEnergy?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -764,6 +828,8 @@ FPXR（FlashPix Extension Resource）支持的FlashPix格式版本，用于增�
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-flashpixVersion?: string--><!--Device-ExifMetadata-flashpixVersion?: string-End-->
@@ -781,6 +847,8 @@ focalLength?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -800,6 +868,8 @@ focalLengthIn35mmFilm?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-focalLengthIn35mmFilm?: int--><!--Device-ExifMetadata-focalLengthIn35mmFilm?: int-End-->
@@ -817,6 +887,8 @@ FocalPlaneXResolution和FocalPlaneYResolution的测量单位。
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -836,6 +908,8 @@ focalPlaneXResolution?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-focalPlaneXResolution?: double--><!--Device-ExifMetadata-focalPlaneXResolution?: double-End-->
@@ -853,6 +927,8 @@ focalPlaneYResolution?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -872,6 +948,8 @@ gainControl?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gainControl?: int--><!--Device-ExifMetadata-gainControl?: int-End-->
@@ -889,6 +967,8 @@ gamma?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -908,6 +988,8 @@ gpsAltitude?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsAltitude?: double--><!--Device-ExifMetadata-gpsAltitude?: double-End-->
@@ -925,6 +1007,8 @@ gpsAltitudeRef?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -944,6 +1028,8 @@ GPS区域名称的字符串。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsAreaInformation?: string--><!--Device-ExifMetadata-gpsAreaInformation?: string-End-->
@@ -961,6 +1047,8 @@ GPS日期戳。
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -980,6 +1068,8 @@ gpsDestBearing?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsDestBearing?: double--><!--Device-ExifMetadata-gpsDestBearing?: double-End-->
@@ -997,6 +1087,8 @@ gpsDestBearingRef?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1016,6 +1108,8 @@ gpsDestDistance?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsDestDistance?: double--><!--Device-ExifMetadata-gpsDestDistance?: double-End-->
@@ -1033,6 +1127,8 @@ gpsDestDistanceRef?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1052,6 +1148,8 @@ gpsDestLatitude?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsDestLatitude?: double[]--><!--Device-ExifMetadata-gpsDestLatitude?: double[]-End-->
@@ -1069,6 +1167,8 @@ gpsDestLatitudeRef?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1088,6 +1188,8 @@ gpsDestLongitude?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsDestLongitude?: double[]--><!--Device-ExifMetadata-gpsDestLongitude?: double[]-End-->
@@ -1105,6 +1207,8 @@ gpsDestLongitudeRef?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1124,6 +1228,8 @@ gpsDifferential?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsDifferential?: int--><!--Device-ExifMetadata-gpsDifferential?: int-End-->
@@ -1141,6 +1247,8 @@ GPS数据精度DOP精度衰减因子（Dilution of Precision）。
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1160,6 +1268,8 @@ gpsHPositioningError?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsHPositioningError?: double--><!--Device-ExifMetadata-gpsHPositioningError?: double-End-->
@@ -1177,6 +1287,8 @@ gpsImgDirection?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1196,6 +1308,8 @@ gpsImgDirectionRef?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsImgDirectionRef?: string--><!--Device-ExifMetadata-gpsImgDirectionRef?: string-End-->
@@ -1208,15 +1322,13 @@ gpsImgDirectionRef?: string
 gpsLatitude?: number[]
 ```
 
-GPS纬度。
-
-纬度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。
-
-当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100,0/1。
+GPS纬度。 纬度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。 当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100,0/1。
 
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1236,6 +1348,8 @@ GPS纬度参考。例如，N表示北纬，S表示南纬。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsLatitudeRef?: string--><!--Device-ExifMetadata-gpsLatitudeRef?: string-End-->
@@ -1248,15 +1362,13 @@ GPS纬度参考。例如，N表示北纬，S表示南纬。
 gpsLongitude?: number[]
 ```
 
-GPS经度。
-
-经度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。
-
-当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100，0/1。
+GPS经度。 经度用三个RATIONAL（分数形式存储的数值）值表示，分别是度、分和秒，格式为dd/1、mm/1、ss/1。 当使用度数和分钟时，分钟分数最多保留两位小数，格式为dd/1，mmmm/100，0/1。
 
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1276,6 +1388,8 @@ GPS经度参考。例如，E表示东经，W表示西经。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsLongitudeRef?: string--><!--Device-ExifMetadata-gpsLongitudeRef?: string-End-->
@@ -1293,6 +1407,8 @@ GPS接收机使用的大地测量数据。
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1312,6 +1428,8 @@ GPS测量模式。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsMeasureMode?: string--><!--Device-ExifMetadata-gpsMeasureMode?: string-End-->
@@ -1329,6 +1447,8 @@ gpsProcessingMethod?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1348,6 +1468,8 @@ gpsSatellites?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsSatellites?: string--><!--Device-ExifMetadata-gpsSatellites?: string-End-->
@@ -1365,6 +1487,8 @@ GPS接收器移动的速度。
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1384,6 +1508,8 @@ GPS接收器移动速度的单位。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsSpeedRef?: string--><!--Device-ExifMetadata-gpsSpeedRef?: string-End-->
@@ -1401,6 +1527,8 @@ gpsStatus?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1420,6 +1548,8 @@ GPS时间戳。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsTimestamp?: double[]--><!--Device-ExifMetadata-gpsTimestamp?: double[]-End-->
@@ -1437,6 +1567,8 @@ GPS接收器移动的方向。
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1456,6 +1588,8 @@ gpsTrackRef?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-gpsTrackRef?: string--><!--Device-ExifMetadata-gpsTrackRef?: string-End-->
@@ -1473,6 +1607,8 @@ GPS信息的格式版本标识符。
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1492,6 +1628,8 @@ imageDescription?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-imageDescription?: string--><!--Device-ExifMetadata-imageDescription?: string-End-->
@@ -1509,6 +1647,8 @@ imageLength?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1528,6 +1668,8 @@ imageUniqueId?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-imageUniqueId?: string--><!--Device-ExifMetadata-imageUniqueId?: string-End-->
@@ -1545,6 +1687,8 @@ imageWidth?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1564,6 +1708,8 @@ isoSpeedLatitudeyyy?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-isoSpeedLatitudeyyy?: int--><!--Device-ExifMetadata-isoSpeedLatitudeyyy?: int-End-->
@@ -1581,6 +1727,8 @@ isoSpeedLatitudezzz?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1600,6 +1748,8 @@ ISO 12232中指定的相机或输入设备的ISO速度和ISO纬度。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-isoSpeedRatings?: int--><!--Device-ExifMetadata-isoSpeedRatings?: int-End-->
@@ -1617,6 +1767,8 @@ JPEG交换格式比特流的SOI（Start of Image）标记。
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1636,6 +1788,8 @@ JPEG流的字节数。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-jpegInterchangeFormatLength?: int--><!--Device-ExifMetadata-jpegInterchangeFormatLength?: int-End-->
@@ -1653,6 +1807,8 @@ lensMake?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1672,6 +1828,8 @@ lensModel?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-lensModel?: string--><!--Device-ExifMetadata-lensModel?: string-End-->
@@ -1689,6 +1847,8 @@ lensSerialNumber?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1708,6 +1868,8 @@ lensSpecification?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-lensSpecification?: double[]--><!--Device-ExifMetadata-lensSpecification?: double[]-End-->
@@ -1725,6 +1887,8 @@ lightSource?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1744,6 +1908,8 @@ make?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-make?: string--><!--Device-ExifMetadata-make?: string-End-->
@@ -1761,6 +1927,8 @@ Exif/相机文件系统设计规则DCF（Design rule for Camera File system）�
 **类型：** ArrayBuffer
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1780,6 +1948,8 @@ maxApertureValue?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-maxApertureValue?: double--><!--Device-ExifMetadata-maxApertureValue?: double-End-->
@@ -1797,6 +1967,8 @@ meteringMode?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1816,6 +1988,8 @@ model?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-model?: string--><!--Device-ExifMetadata-model?: string-End-->
@@ -1833,6 +2007,8 @@ newSubfileType?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1852,6 +2028,8 @@ ISO 14524中规定的光电转换函数（OECF）。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-oecf?: ArrayBuffer--><!--Device-ExifMetadata-oecf?: ArrayBuffer-End-->
@@ -1869,6 +2047,8 @@ offsetTime?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1888,6 +2068,8 @@ offsetTimeDigitized?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-offsetTimeDigitized?: string--><!--Device-ExifMetadata-offsetTimeDigitized?: string-End-->
@@ -1905,6 +2087,8 @@ offsetTimeOriginal?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1924,6 +2108,8 @@ orientation?: Orientation
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-orientation?: Orientation--><!--Device-ExifMetadata-orientation?: Orientation-End-->
@@ -1941,6 +2127,8 @@ photoMode?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1960,6 +2148,8 @@ photographicSensitivity?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-photographicSensitivity?: int[]--><!--Device-ExifMetadata-photographicSensitivity?: int[]-End-->
@@ -1977,6 +2167,8 @@ photometricInterpretation?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1996,6 +2188,8 @@ pixelXDimension?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-pixelXDimension?: int--><!--Device-ExifMetadata-pixelXDimension?: int-End-->
@@ -2013,6 +2207,8 @@ pixelYDimension?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2032,6 +2228,8 @@ planarConfiguration?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-planarConfiguration?: int--><!--Device-ExifMetadata-planarConfiguration?: int-End-->
@@ -2049,6 +2247,8 @@ primaryChromaticities?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2068,6 +2268,8 @@ recommendedExposureIndex?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-recommendedExposureIndex?: int--><!--Device-ExifMetadata-recommendedExposureIndex?: int-End-->
@@ -2085,6 +2287,8 @@ referenceBlackWhite?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2104,6 +2308,8 @@ relatedSoundFile?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-relatedSoundFile?: string--><!--Device-ExifMetadata-relatedSoundFile?: string-End-->
@@ -2121,6 +2327,8 @@ resolutionUnit?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2140,6 +2348,8 @@ rowsPerStrip?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-rowsPerStrip?: int--><!--Device-ExifMetadata-rowsPerStrip?: int-End-->
@@ -2152,15 +2362,13 @@ rowsPerStrip?: number
 samplesPerPixel?: number
 ```
 
-记录每个像素的颜色分量数量，适用于RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）色彩模型。
-
-由于这两种模型都是三分量模型（一个亮度分量加两个色度分量，或三个颜色通道），因此该标签的标准值为3。
-
-对于JPEG压缩图像，此标签将会被对应的JPEG标记替换。
+记录每个像素的颜色分量数量，适用于RGB（红绿蓝，Red Green Blue）和YCbCr（亮度-蓝色色差-红色色差，Luma-Chrominance）色彩模型。 由于这两种模型都是三分量模型（一个亮度分量加两个色度分量，或三个颜色通道），因此该标签的标准值为3。 对于JPEG压缩图像，此标签将会被对应的JPEG标记替换。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2180,6 +2388,8 @@ saturation?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-saturation?: int--><!--Device-ExifMetadata-saturation?: int-End-->
@@ -2197,6 +2407,8 @@ sceneCaptureType?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2216,6 +2428,8 @@ sceneType?: ArrayBuffer
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-sceneType?: ArrayBuffer--><!--Device-ExifMetadata-sceneType?: ArrayBuffer-End-->
@@ -2233,6 +2447,8 @@ sensingMethod?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2252,6 +2468,8 @@ sensitivityType?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-sensitivityType?: int--><!--Device-ExifMetadata-sensitivityType?: int-End-->
@@ -2269,6 +2487,8 @@ sharpness?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2288,6 +2508,8 @@ shutterSpeedValue?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-shutterSpeedValue?: double--><!--Device-ExifMetadata-shutterSpeedValue?: double-End-->
@@ -2305,6 +2527,8 @@ software?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2324,6 +2548,8 @@ sourceExposureTimesOfCompositeImage?: ArrayBuffer
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer--><!--Device-ExifMetadata-sourceExposureTimesOfCompositeImage?: ArrayBuffer-End-->
@@ -2341,6 +2567,8 @@ sourceImageNumberOfCompositeImage?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2360,6 +2588,8 @@ spatialFrequencyResponse?: ArrayBuffer
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer--><!--Device-ExifMetadata-spatialFrequencyResponse?: ArrayBuffer-End-->
@@ -2377,6 +2607,8 @@ spectralSensitivity?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2396,6 +2628,8 @@ standardOutputSensitivity?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-standardOutputSensitivity?: int--><!--Device-ExifMetadata-standardOutputSensitivity?: int-End-->
@@ -2414,6 +2648,8 @@ stripByteCounts?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-stripByteCounts?: int[]--><!--Device-ExifMetadata-stripByteCounts?: int[]-End-->
@@ -2426,15 +2662,13 @@ stripByteCounts?: number[]
 stripOffsets?: number[]
 ```
 
-图像数据的分块存储偏移量，单位为字节（Byte）。
-
-为提高大图像访问效率，原始像素数据被分割为多个连续区块（称为条带）。
-
-此标签按顺序存储每个条带在文件中的起始位置偏移量。
+图像数据的分块存储偏移量，单位为字节（Byte）。 为提高大图像访问效率，原始像素数据被分割为多个连续区块（称为条带）。 此标签按顺序存储每个条带在文件中的起始位置偏移量。
 
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2454,6 +2688,8 @@ subfileType?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-subfileType?: int--><!--Device-ExifMetadata-subfileType?: int-End-->
@@ -2471,6 +2707,8 @@ subjectArea?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2490,6 +2728,8 @@ subjectDistance?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-subjectDistance?: double--><!--Device-ExifMetadata-subjectDistance?: double-End-->
@@ -2507,6 +2747,8 @@ subjectDistanceRange?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2526,6 +2768,8 @@ subjectLocation?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-subjectLocation?: int[]--><!--Device-ExifMetadata-subjectLocation?: int[]-End-->
@@ -2543,6 +2787,8 @@ subsecTime?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2562,6 +2808,8 @@ subsecTimeDigitized?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-subsecTimeDigitized?: string--><!--Device-ExifMetadata-subsecTimeDigitized?: string-End-->
@@ -2579,6 +2827,8 @@ subsecTimeOriginal?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2598,6 +2848,8 @@ transferFunction?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-transferFunction?: string--><!--Device-ExifMetadata-transferFunction?: string-End-->
@@ -2615,6 +2867,8 @@ userComment?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2634,6 +2888,8 @@ whiteBalance?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-whiteBalance?: int--><!--Device-ExifMetadata-whiteBalance?: int-End-->
@@ -2651,6 +2907,8 @@ whitePoint?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2670,6 +2928,8 @@ xResolution?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-xResolution?: double--><!--Device-ExifMetadata-xResolution?: double-End-->
@@ -2687,6 +2947,8 @@ yCbCrCoefficients?: number[]
 **类型：** number[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2706,6 +2968,8 @@ yCbCrPositioning?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-yCbCrPositioning?: int--><!--Device-ExifMetadata-yCbCrPositioning?: int-End-->
@@ -2724,6 +2988,8 @@ yCbCrSubSampling?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ExifMetadata-yCbCrSubSampling?: int[]--><!--Device-ExifMetadata-yCbCrSubSampling?: int[]-End-->
@@ -2741,6 +3007,8 @@ yResolution?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

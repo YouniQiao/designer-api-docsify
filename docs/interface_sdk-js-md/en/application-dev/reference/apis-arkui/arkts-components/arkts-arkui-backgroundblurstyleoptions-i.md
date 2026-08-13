@@ -8,7 +8,9 @@ Defines the options of backgroundBlurStyle
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface BackgroundBlurStyleOptions extends BlurStyleOptions--><!--Device-unnamed-declare interface BackgroundBlurStyleOptions extends BlurStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface BackgroundBlurStyleOptions--><!--Device-unnamed-declare interface BackgroundBlurStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,8 +20,7 @@ Defines the options of backgroundBlurStyle
 inactiveColor?: ResourceColor
 ```
 
-Background color when the blur effect does not take effect. This parameter must be used together with the   
-**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
 **Type:** ResourceColor
 
@@ -28,6 +29,8 @@ Background color when the blur effect does not take effect. This parameter must 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +55,8 @@ Blur activation policy.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

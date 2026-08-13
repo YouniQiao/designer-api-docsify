@@ -8,7 +8,9 @@ function getAVScreenCaptureConfigurableParameters(sessionId: number): Promise<st
 
 get Configurations which user can changes from AVScreenCapture server
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
 
@@ -32,8 +34,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [5400109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400109-会话id不存在) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [5400109](../errorcode-media.md#5400109-会话id不存在) |
 
 ## 示例
 

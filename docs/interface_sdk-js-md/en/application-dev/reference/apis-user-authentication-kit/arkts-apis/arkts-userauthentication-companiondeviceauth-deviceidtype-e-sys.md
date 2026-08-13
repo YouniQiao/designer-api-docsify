@@ -4,7 +4,9 @@ Enumerates device ID types. They are used to define the device service identifie
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-enum DeviceIdType--><!--Device-companionDeviceAuth-enum DeviceIdType-End-->
 
@@ -22,7 +24,9 @@ Unified device ID. It is a system-defined device service ID type, used for unifi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Start value of the vendor-defined device ID type. The vendor can extend device I
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

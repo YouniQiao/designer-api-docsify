@@ -18,7 +18,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +61,7 @@ Starts the device selection module to show the list of available devices on the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,13 +104,13 @@ continuationManager.startDeviceManager(
 function startDeviceManager(token: number, options?: ContinuationExtraParams): Promise<void>
 ```
 
-Starts the device selection module to show the list of available devices on the network. This API uses a promise to  return the result.
+Starts the device selection module to show the list of available devices on the network. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Model restriction:** This API can be used only in the stage model.
 

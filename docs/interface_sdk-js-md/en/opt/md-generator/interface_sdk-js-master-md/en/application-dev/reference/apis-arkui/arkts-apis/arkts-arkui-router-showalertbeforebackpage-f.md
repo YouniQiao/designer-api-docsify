@@ -12,14 +12,7 @@ import { router } from '@kit.ArkUI';
 function showAlertBeforeBackPage(options: EnableAlertOptions): void
 ```
 
-Enables the display of a confirm dialog box before returning to the previous page.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Enables the display of a confirm dialog box before returning to the previous page. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 9
 
@@ -43,8 +36,8 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

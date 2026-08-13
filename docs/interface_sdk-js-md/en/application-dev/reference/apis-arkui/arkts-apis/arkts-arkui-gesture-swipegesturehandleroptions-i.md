@@ -8,7 +8,9 @@ Defines the SwipeGestureHandler options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface SwipeGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-export interface SwipeGestureHandlerOptions extends BaseHandlerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface SwipeGestureHandlerOptions--><!--Device-unnamed-export interface SwipeGestureHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Defines the SwipeGestureHandler options.
 direction?: SwipeDirection
 ```
 
-Indicates the move direction of the swipe gesture.The default value is SwipeDirection.All.
+Indicates the move direction of the swipe gesture. The default value is SwipeDirection.All.
 
 **Type:** [SwipeDirection](arkts-arkui-gesture-swipedirection-e.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +42,15 @@ Indicates the move direction of the swipe gesture.The default value is SwipeDire
 fingers?: int
 ```
 
-Indicates the hand index that triggers the swipe. If the value is less than 1, the default value is used.The default value is 1.
+Indicates the hand index that triggers the swipe. If the value is less than 1, the default value is used. The default value is 1.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +64,15 @@ Indicates the hand index that triggers the swipe. If the value is less than 1, t
 speed?: double
 ```
 
-Indicates minimum move speed.The default value is 100vp/s.
+Indicates minimum move speed. The default value is 100vp/s.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

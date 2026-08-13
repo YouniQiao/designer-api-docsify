@@ -4,6 +4,8 @@ common enum of the checkbox shape
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum CheckBoxShape--><!--Device-unnamed-declare enum CheckBoxShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ CIRCLE = 0
 Circle.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ ROUNDED_SQUARE = 1
 Rounded Square.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

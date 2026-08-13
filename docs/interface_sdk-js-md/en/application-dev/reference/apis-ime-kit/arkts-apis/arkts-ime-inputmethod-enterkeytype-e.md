@@ -2,9 +2,11 @@
 
 Enumerates the enter key type.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export enum EnterKeyType--><!--Device-inputMethod-export enum EnterKeyType-End-->
 
@@ -18,9 +20,11 @@ UNSPECIFIED = 0
 
 The enter key type is UNSPECIFIED.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-UNSPECIFIED = 0--><!--Device-EnterKeyType-UNSPECIFIED = 0-End-->
 
@@ -34,9 +38,11 @@ NONE
 
 The enter key type is NONE.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-NONE--><!--Device-EnterKeyType-NONE-End-->
 
@@ -50,9 +56,11 @@ GO
 
 The enter key type is GO.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-GO--><!--Device-EnterKeyType-GO-End-->
 
@@ -66,9 +74,11 @@ SEARCH
 
 The enter key type is SEARCH.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-SEARCH--><!--Device-EnterKeyType-SEARCH-End-->
 
@@ -82,9 +92,11 @@ SEND
 
 The enter key type is SEND.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-SEND--><!--Device-EnterKeyType-SEND-End-->
 
@@ -98,9 +110,11 @@ NEXT
 
 The enter key type is NEXT.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-NEXT--><!--Device-EnterKeyType-NEXT-End-->
 
@@ -114,9 +128,11 @@ DONE
 
 The enter key type is DONE.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-DONE--><!--Device-EnterKeyType-DONE-End-->
 
@@ -130,9 +146,11 @@ PREVIOUS
 
 The enter key type is PREVIOUS.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-PREVIOUS--><!--Device-EnterKeyType-PREVIOUS-End-->
 
@@ -146,9 +164,11 @@ NEWLINE
 
 The enter key type is NEWLINE.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnterKeyType-NEWLINE--><!--Device-EnterKeyType-NEWLINE-End-->
 

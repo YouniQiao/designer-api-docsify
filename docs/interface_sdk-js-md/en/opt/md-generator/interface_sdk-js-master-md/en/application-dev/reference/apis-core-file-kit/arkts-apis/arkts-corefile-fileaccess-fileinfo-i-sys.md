@@ -24,13 +24,13 @@ import { fileAccess } from '@kit.CoreFileKit';
 listFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#FileInfo) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
+Obtains a **FileIterator** object that lists the next-level files or directories matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#FileInfo-(System-API)) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, only built-in storage devices support the file filter.
 
 **Since:** 9
 
 **Deprecated since:** 23
 
-**Substitutes:** [listFile](@ohos.file.fs:fileIo.listFile)
+**Substitutes:** listFile
 
 **Required permissions:** ohos.permission.FILE_ACCESS_MANAGER
 
@@ -131,8 +131,7 @@ try {
 scanFile(filter?: Filter): FileIterator
 ```
 
-Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#FileInfo) is returned by   
-[next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
+Obtains a **FileIterator** object that recursively retrieves the files matching the specified conditions of this directory. This API returns the result synchronously. [FileInfo](#FileInfo-(System-API)) is returned by [next()](arkts-corefile-fileaccess-fileiterator-i-sys.md#next). Currently, this API supports only built-in storage devices.
 
 **Since:** 9
 
@@ -309,7 +308,7 @@ Permissions on the file or directory.
 mtime: number
 ```
 
-Time when the file or directory was last modified.&lt;br&gt;Unit: ms.
+Time when the file or directory was last modified. &lt;br&gt;Unit: ms.
 
 **Type:** number
 
@@ -357,7 +356,7 @@ Relative path of the file or directory.
 size: number
 ```
 
-Size of the file or directory.&lt;br&gt;Unit: Byte.
+Size of the file or directory. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 

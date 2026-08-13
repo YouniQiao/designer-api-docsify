@@ -2,7 +2,9 @@
 
 Defines a rectangle.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Rect--><!--Device-unnamed-export interface Rect-End-->
 
@@ -18,7 +20,9 @@ Height of the rectangle, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-height: int--><!--Device-Rect-height: int-End-->
 
@@ -34,7 +38,9 @@ Left boundary of the rectangle, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-left: int--><!--Device-Rect-left: int-End-->
 
@@ -50,7 +56,9 @@ Top boundary of the rectangle, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-top: int--><!--Device-Rect-top: int-End-->
 
@@ -66,7 +74,9 @@ Width of the rectangle, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Rect-width: int--><!--Device-Rect-width: int-End-->
 

@@ -14,7 +14,9 @@ function getDefaultSmsSlotId(callback: AsyncCallback<number>): void
 
 Obtains the default slot ID of the SIM card used to send SMS messages. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void--><!--Device-sms-function getDefaultSmsSlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -46,7 +48,9 @@ function getDefaultSmsSlotId(): Promise<number>
 
 Obtains the default slot ID of the SIM card used to send SMS messages. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-function getDefaultSmsSlotId(): Promise<int>--><!--Device-sms-function getDefaultSmsSlotId(): Promise<int>-End-->
 

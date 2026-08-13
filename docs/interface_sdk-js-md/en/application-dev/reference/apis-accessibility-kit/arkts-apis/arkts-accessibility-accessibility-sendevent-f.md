@@ -20,7 +20,7 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent](accessibility.sendAccessibilityEvent(event:)
+**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendAccessibilityEvent)(event: EventInfo, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void--><!--Device-accessibility-function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -31,7 +31,7 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | EventInfo | Yes | Accessibility event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
 
 ## Examples
 
@@ -69,7 +69,7 @@ Sends an accessibility event. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendAccessibilityEvent](accessibility.sendAccessibilityEvent(event:)
+**Substitutes:** [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendAccessibilityEvent)(event: EventInfo)
 
 <!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>--><!--Device-accessibility-function sendEvent(event: EventInfo): Promise<void>-End-->
 

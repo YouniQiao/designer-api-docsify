@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function openNotificationSettingsWithResult(context: UIAbilityContext): Promise<NotificationSetting>
 ```
 
-Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed.
-
-Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic.
+Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc. This API uses a promise to return the user-set status when the semi-modal window is closed. Unlike openNotificationSettings, this API returns a NotificationSetting object when the semi-modal window is closed. You can determine whether the user has enabled the notification permission based on the returned result, thereby deciding subsequent logic.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,9 +26,9 @@ Unlike openNotificationSettings, this API returns a NotificationSetting object w
 
 **See also:**
 
-[requestEnableNotification](notificationManager.requestEnableNotification(context: UIAbilityContext): Promise<void>) requests notification
+requestEnableNotification requests notification
 
-[isNotificationEnabled](notificationManager.isNotificationEnabled(): Promise<boolean>) checks whether notification
+isNotificationEnabled checks whether notification
 
 **Parameters:**
 
@@ -46,10 +46,10 @@ Unlike openNotificationSettings, this API returns a NotificationSetting object w
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

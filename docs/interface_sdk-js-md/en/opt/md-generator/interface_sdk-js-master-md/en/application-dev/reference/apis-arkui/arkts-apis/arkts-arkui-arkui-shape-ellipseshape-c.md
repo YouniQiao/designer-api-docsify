@@ -1,14 +1,14 @@
 # EllipseShape
 
-Represents an ellipse shape used in the **clipShape** and **maskShape** APIs.
+Represents an ellipse shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape).
 
-This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape).
-
-**Inheritance/Implementation:** EllipseShape extends [BaseShape<EllipseShape>](BaseShape<EllipseShape>)
+**Inheritance/Implementation:** EllipseShape extends BaseShape<EllipseShape>
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class EllipseShape extends BaseShape<EllipseShape>--><!--Device-unnamed-export declare class EllipseShape extends BaseShape<EllipseShape>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class EllipseShape--><!--Device-unnamed-export declare class EllipseShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ constructor(options?: ShapeSize)
 A constructor used to create a **EllipseShape** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

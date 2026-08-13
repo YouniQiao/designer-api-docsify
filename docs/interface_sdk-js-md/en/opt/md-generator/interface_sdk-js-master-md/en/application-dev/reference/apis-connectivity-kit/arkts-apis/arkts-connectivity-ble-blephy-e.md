@@ -2,7 +2,9 @@
 
 Phy type for advertising or connection.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-ble-enum BlePhy--><!--Device-ble-enum BlePhy-End-->
 
@@ -16,7 +18,9 @@ BLE_PHY_1M = 1
 
 Use 1M phy for advertising or connection.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ BLE_PHY_2M = 2
 
 Use 2M phy for advertising or connection.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ BLE_PHY_CODED = 3
 
 Use coded phy for advertising or connection.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

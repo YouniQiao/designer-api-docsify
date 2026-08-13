@@ -2,7 +2,9 @@
 
 The **thermal** module provides thermal level-related callback and query APIs to obtain the information required for thermal control.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace thermal--><!--Device-unnamed-declare namespace thermal-End-->
 
@@ -20,12 +22,12 @@ import { thermal } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getLevel](arkts-basicservices-thermal-getlevel-f.md#getlevel) |
-| [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md#getthermallevel) |
-| [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md#registerthermallevelcallback) |
-| [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md#subscribethermallevel) |
-| [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md#unregisterthermallevelcallback) |
-| [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md#unsubscribethermallevel) |
+| [getLevel](arkts-basicservices-thermal-getlevel-f.md#getLevel) |
+| [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md#getThermalLevel) |
+| [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md#registerThermalLevelCallback) |
+| [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md#subscribeThermalLevel) |
+| [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md#unregisterThermalLevelCallback) |
+| [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md#unsubscribeThermalLevel) |
 
 ### Enums
 

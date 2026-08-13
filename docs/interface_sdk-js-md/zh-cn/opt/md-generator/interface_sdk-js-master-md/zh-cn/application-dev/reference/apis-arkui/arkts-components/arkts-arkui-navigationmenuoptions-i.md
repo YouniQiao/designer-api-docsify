@@ -4,6 +4,8 @@
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NavigationMenuOptions--><!--Device-unnamed-declare interface NavigationMenuOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ moreButtonOptions?: MoreButtonOptions
 **类型：** [MoreButtonOptions](arkts-arkui-morebuttonoptions-i.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

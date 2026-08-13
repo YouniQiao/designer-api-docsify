@@ -8,7 +8,9 @@ function hasCallSync(): boolean
 
 判断是否存在通话。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function hasCallSync(): boolean--><!--Device-call-function hasCallSync(): boolean-End-->
 

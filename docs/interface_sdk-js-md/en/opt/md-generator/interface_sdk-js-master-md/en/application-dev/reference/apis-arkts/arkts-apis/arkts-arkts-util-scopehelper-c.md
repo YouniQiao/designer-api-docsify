@@ -4,6 +4,8 @@ Provides APIs to define the valid range of a field. The constructor of this clas
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -23,6 +25,8 @@ clamp(value: ScopeType): ScopeType
 Limits a value to this **Scope**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,6 +88,8 @@ A constructor used to create a **ScopeHelper** object with the specified upper a
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
@@ -135,6 +141,8 @@ contains(value: ScopeType): boolean
 Checks whether a range is within this **Scope**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -195,6 +203,8 @@ contains(range: ScopeHelper): boolean
 Checks whether a range is within this **Scope**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -258,6 +268,8 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
@@ -319,6 +331,8 @@ expand(range: ScopeHelper): ScopeHelper
 Obtains the union set of this **Scope** and the given **Scope**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -382,6 +396,8 @@ Obtains the union set of this **Scope** and the given value.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
@@ -442,6 +458,8 @@ Obtains the lower limit of this **Scope**.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
@@ -495,6 +513,8 @@ Obtains the upper limit of this **Scope**.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
@@ -547,6 +567,8 @@ intersect(range: ScopeHelper): ScopeHelper
 Obtains the intersection of this **Scope** and the given **Scope**. If the intersection is empty, an exception is thrown.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -610,6 +632,8 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
@@ -671,6 +695,8 @@ toString(): string
 Obtains a string representation that contains this **Scope**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

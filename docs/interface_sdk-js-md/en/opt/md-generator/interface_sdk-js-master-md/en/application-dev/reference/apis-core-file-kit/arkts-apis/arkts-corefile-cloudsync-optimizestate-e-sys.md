@@ -2,7 +2,9 @@
 
 Enumerates the space optimization states.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum OptimizeState--><!--Device-cloudSync-enum OptimizeState-End-->
 
@@ -18,7 +20,9 @@ RUNNING = 0
 
 The space is being optimized.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OptimizeState-RUNNING = 0--><!--Device-OptimizeState-RUNNING = 0-End-->
 
@@ -34,7 +38,9 @@ COMPLETED = 1
 
 The space optimization is complete.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OptimizeState-COMPLETED = 1--><!--Device-OptimizeState-COMPLETED = 1-End-->
 
@@ -50,7 +56,9 @@ FAILED = 2
 
 Space optimization failed.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OptimizeState-FAILED = 2--><!--Device-OptimizeState-FAILED = 2-End-->
 
@@ -66,7 +74,9 @@ STOPPED = 3
 
 Space optimization stopped.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OptimizeState-STOPPED = 3--><!--Device-OptimizeState-STOPPED = 3-End-->
 

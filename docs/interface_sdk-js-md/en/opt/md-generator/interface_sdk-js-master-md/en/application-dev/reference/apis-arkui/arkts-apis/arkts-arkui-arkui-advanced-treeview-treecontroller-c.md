@@ -4,6 +4,8 @@ Implements a **TreeController** object, which can be bound to a tree view compon
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class TreeController--><!--Device-unnamed-export declare class TreeController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ addNode(nodeParam?: NodeParam): TreeController
 Adds a child node to the selected node.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +58,8 @@ Builds a tree view. After a node is added, this API must be called to save the t
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -72,6 +78,8 @@ Modifies the selected node.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -89,6 +97,8 @@ refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: Reso
 Refreshes the tree view. You can call this API to update the information about the current node.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,6 +125,8 @@ removeNode(): void
 Removes the selected node.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

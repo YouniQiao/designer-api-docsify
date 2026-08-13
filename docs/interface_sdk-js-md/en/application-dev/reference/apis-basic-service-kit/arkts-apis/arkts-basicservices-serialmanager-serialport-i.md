@@ -2,9 +2,11 @@
 
 Represents the parameters of a serial port.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-interface SerialPort--><!--Device-serialManager-interface SerialPort-End-->
 
@@ -26,9 +28,11 @@ Serial port device name.
 
 **Type:** string
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SerialPort-deviceName: string--><!--Device-SerialPort-deviceName: string-End-->
 
@@ -42,11 +46,13 @@ portId: int
 
 Port number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SerialPort-portId: int--><!--Device-SerialPort-portId: int-End-->
 

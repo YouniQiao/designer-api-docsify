@@ -2,9 +2,11 @@
 
 Enumerates the authentication result codes.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum ResultCode--><!--Device-osAccount-enum ResultCode-End-->
 
@@ -20,9 +22,11 @@ SUCCESS = 0
 
 The authentication is successful or the authentication feature is supported.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-SUCCESS = 0--><!--Device-ResultCode-SUCCESS = 0-End-->
 
@@ -38,9 +42,11 @@ FAIL = 1
 
 The authentication executor failed to identify the user.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-FAIL = 1--><!--Device-ResultCode-FAIL = 1-End-->
 
@@ -56,9 +62,11 @@ GENERAL_ERROR = 2
 
 Other errors.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-GENERAL_ERROR = 2--><!--Device-ResultCode-GENERAL_ERROR = 2-End-->
 
@@ -74,9 +82,11 @@ CANCELED = 3
 
 The authentication is canceled.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-CANCELED = 3--><!--Device-ResultCode-CANCELED = 3-End-->
 
@@ -92,9 +102,11 @@ TIMEOUT = 4
 
 The authentication timed out.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-TIMEOUT = 4--><!--Device-ResultCode-TIMEOUT = 4-End-->
 
@@ -110,9 +122,11 @@ TYPE_NOT_SUPPORT = 5
 
 The authentication credential type is not supported.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-TYPE_NOT_SUPPORT = 5--><!--Device-ResultCode-TYPE_NOT_SUPPORT = 5-End-->
 
@@ -128,9 +142,11 @@ TRUST_LEVEL_NOT_SUPPORT = 6
 
 The authentication trust level is not supported.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6--><!--Device-ResultCode-TRUST_LEVEL_NOT_SUPPORT = 6-End-->
 
@@ -146,9 +162,11 @@ BUSY = 7
 
 The authentication executor is busy. Try again after a few seconds.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-BUSY = 7--><!--Device-ResultCode-BUSY = 7-End-->
 
@@ -164,9 +182,11 @@ INVALID_PARAMETERS = 8
 
 Incorrect parameters are detected.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-INVALID_PARAMETERS = 8--><!--Device-ResultCode-INVALID_PARAMETERS = 8-End-->
 
@@ -182,9 +202,11 @@ LOCKED = 9
 
 The authentication executor is locked.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-LOCKED = 9--><!--Device-ResultCode-LOCKED = 9-End-->
 
@@ -200,9 +222,11 @@ NOT_ENROLLED = 10
 
 The authentication executor is not enrolled.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ResultCode-NOT_ENROLLED = 10--><!--Device-ResultCode-NOT_ENROLLED = 10-End-->
 

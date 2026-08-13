@@ -12,11 +12,11 @@ import { contact } from '@kit.ContactsKit';
 function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 ```
 
-Queries information about ongoing contact synchronization for the calling application.
-
-If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
+Queries information about ongoing contact synchronization for the calling application. If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -44,12 +44,12 @@ If the returned contact synchronization information is empty, the invoking party
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) |
 
 ## Examples
 
-In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples of this document, UIAbilityContext is obtained through this.context, where this represents a UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

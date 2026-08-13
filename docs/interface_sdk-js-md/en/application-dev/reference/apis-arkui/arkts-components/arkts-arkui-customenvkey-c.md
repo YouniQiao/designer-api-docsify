@@ -6,7 +6,9 @@ Defines the custom environment Key.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-declare class CustomEnvKey<S>--><!--Device-unnamed-declare class CustomEnvKey<S>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CustomEnvKey--><!--Device-unnamed-declare class CustomEnvKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ constructor.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ create CustomEnvKey
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,6 +75,8 @@ The corresponding type of the custom env key.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

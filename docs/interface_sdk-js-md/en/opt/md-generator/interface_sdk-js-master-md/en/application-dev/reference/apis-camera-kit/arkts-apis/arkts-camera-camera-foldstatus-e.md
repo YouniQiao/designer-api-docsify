@@ -2,7 +2,9 @@
 
 Enumerates the fold states available for a fordable device.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum FoldStatus--><!--Device-camera-enum FoldStatus-End-->
 
@@ -16,7 +18,9 @@ NON_FOLDABLE = 0
 
 The device is not foldable.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ EXPANDED = 1
 
 The device is fully unfolded.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -48,7 +54,9 @@ FOLDED = 2
 
 The device is folded.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

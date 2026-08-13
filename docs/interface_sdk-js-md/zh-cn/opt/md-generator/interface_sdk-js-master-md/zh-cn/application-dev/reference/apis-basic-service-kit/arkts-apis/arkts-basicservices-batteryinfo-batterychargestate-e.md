@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-export enum BatteryChargeState--><!--Device-batteryInfo-export enum BatteryChargeState-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -17,6 +19,8 @@ NONE
 表示电池充电状态为未充电。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ ENABLE
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BatteryChargeState-ENABLE--><!--Device-BatteryChargeState-ENABLE-End-->
@@ -50,6 +56,8 @@ DISABLE
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BatteryChargeState-DISABLE--><!--Device-BatteryChargeState-DISABLE-End-->
@@ -65,6 +73,8 @@ FULL
 表示电池充电状态为已充满状态。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

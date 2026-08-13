@@ -1,12 +1,14 @@
 # FocusController
 
-class FocusController
+Provides capabilities to control focus, including features such as clearing, moving, and activating focus. > **NOTE：**> > In the following API examples, you must first use [getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController) in > **UIContext** to obtain a **FocusController** instance, and then call the APIs using the obtained instance.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class FocusController--><!--Device-unnamed-export declare class FocusController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class FocusController--><!--Device-unnamed-export class FocusController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 activate(isActive: boolean, autoInactive?: boolean): void
 ```
 
-Activate focus style.
+Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md) of this page.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-FocusController-activate(isActive: boolean, autoInactive?: boolean): void--><!--Device-FocusController-activate(isActive: boolean, autoInactive?: boolean): void-End-->
 
@@ -38,8 +44,8 @@ Activate focus style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isActive | boolean | Yes | activate/deactivate the focus style. |
-| autoInactive | boolean | No | deactivate the focus style when touch event or mouse event triggers, the default value is true. |
+| isActive | boolean | Yes | Whether to enter or exit the focus activation state.&lt;br&gt;The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
+| autoInactive | boolean | No | Logic for exiting the focus activation state.&lt;br&gt;The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.&lt;br&gt;Default value: **true |
 
 ## clearFocus
 
@@ -47,13 +53,17 @@ Activate focus style.
 clearFocus(): void
 ```
 
-clear focus to the root container.
+Clears the focus and forcibly moves the focus to the root container node of the page, causing other nodes in the focus chain to lose focus.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FocusController-clearFocus(): void--><!--Device-FocusController-clearFocus(): void-End-->
 
@@ -65,13 +75,17 @@ clear focus to the root container.
 isActive(): boolean
 ```
 
-Get whether the focus style is active.
+Obtains the focus activation state of the UI instance. For details about the focus activation state, see [Basic Concepts](../../../ui/arkts-common-events-focus-event.md#basic-concepts).
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FocusController-isActive(): boolean--><!--Device-FocusController-isActive(): boolean-End-->
 
@@ -81,7 +95,7 @@ Get whether the focus style is active.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the focus style is active. |
+| boolean | Focus activation state of the UI instance. The value **true** means that the instance has entered the focus activation state, and **false** means that the instance has exited the focus activation state. |
 
 ## requestFocus
 
@@ -89,13 +103,17 @@ Get whether the focus style is active.
 requestFocus(key: string): void
 ```
 
-request focus to the specific component.
+Transfers focus to a component node by the component ID, which is effective immediately.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FocusController-requestFocus(key: string): void--><!--Device-FocusController-requestFocus(key: string): void-End-->
 
@@ -105,15 +123,15 @@ request focus to the specific component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | the inspector key of the component. |
+| key | string | Yes | Component ID of the target node. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [150002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
-| [150003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
-| [150001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-focus.md#150001-component-not-focusable) | the component cannot be focused. |
+| [150002](../errorcode-focus.md#150002-ancestor-component-not-focusable) | This component has an unfocusable ancestor. |
+| [150003](../errorcode-focus.md#150003-component-does-not-exist) | the component is not on tree or does not exist. |
+| [150001](../errorcode-focus.md#150001-component-not-focusable) | the component cannot be focused. |
 
 ## setAutoFocusTransfer
 
@@ -121,13 +139,17 @@ request focus to the specific component.
 setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 ```
 
-Set whether to enable autofocus transfer.
+Sets whether the new page automatically obtains focus during page switching.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-FocusController-setAutoFocusTransfer(isAutoFocusTransfer: boolean): void--><!--Device-FocusController-setAutoFocusTransfer(isAutoFocusTransfer: boolean): void-End-->
 
@@ -137,7 +159,7 @@ Set whether to enable autofocus transfer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | Yes | A Boolean value that indicates whether autofocus transfer is enabled. |
+| isAutoFocusTransfer | boolean | Yes | Whether the new page automatically obtains focus during page switching using navigation components or APIs, such as [Router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router), Navigation, Menu, Dialog, and Popup. The value **true** means the new page automatically obtains focus, and **false** means the opposite. Default value: **true**. |
 
 ## setKeyProcessingMode
 
@@ -145,13 +167,17 @@ Set whether to enable autofocus transfer.
 setKeyProcessingMode(mode: KeyProcessingMode): void
 ```
 
-Set the priority of key event processing when component cannot handle the key event..
+Sets the mode for processing key events.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FocusController-setKeyProcessingMode(mode: KeyProcessingMode): void--><!--Device-FocusController-setKeyProcessingMode(mode: KeyProcessingMode): void-End-->
 
@@ -161,5 +187,5 @@ Set the priority of key event processing when component cannot handle the key ev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | KeyProcessingMode | Yes | Key processing mode. |
+| mode | KeyProcessingMode | Yes | Mode for processing key events. |
 

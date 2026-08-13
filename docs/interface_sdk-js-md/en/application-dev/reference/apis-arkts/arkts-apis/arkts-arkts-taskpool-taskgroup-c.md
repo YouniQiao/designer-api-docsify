@@ -1,11 +1,12 @@
 # TaskGroup
 
-Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling  
-[addTask](#addTask-1). If any task fails, the corresponding exception is thrown.If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
+Implements a task group, in which tasks are associated with each other and all tasks are executed at a time. If all the tasks are executed normally, an array of task results is returned asynchronously, and the sequence of elements in the array is the same as the sequence of tasks added by calling [addTask](#addTask). If any task fails, the corresponding exception is thrown. If multiple tasks in the task group fail, the exception of the first failed task is thrown. A task group can be executed for multiple times, but no task can be added after the task group is executed.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-taskpool-class TaskGroup--><!--Device-taskpool-class TaskGroup-End-->
 
@@ -23,11 +24,13 @@ import { taskpool } from '@kit.ArkTS';
 addTask(func: Function, ...args: Object[]): void
 ```
 
-Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup**instance.
+Adds the function to be executed to this task group. Before using this API, you must create a **TaskGroup** instance.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,14 +42,14 @@ Adds the function to be executed to this task group. Before using this API, you 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| func | Function | Yes | Function that must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). |
-| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see [Sequenceable Data Types](../../../reference/apis-arkts/js-apis-taskpool.md#sequenceable-data-types). The default value is **undefined**. |
+| func | Function | Yes | Function that must be decorated using [@Concurrent](../../../arkts-utils/taskpool-introduction.md#concurrent-decorator). For details about the supported return value types, see Sequenceable Data Types. |
+| args | Object[] | Yes | Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types. The default value is **undefined**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
 
 ## Examples
 
@@ -73,6 +76,8 @@ Adds a created task to this task group. Before using this API, you must create a
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TaskGroup-addTask(task: Task): void--><!--Device-TaskGroup-addTask(task: Task): void-End-->
@@ -89,9 +94,9 @@ Adds a created task to this task group. Before using this API, you must create a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
-| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
-| [10200051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) | The task cannot be executed by two APIs.<br>**Applicable version:** 18 and later |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) | The function is not marked as concurrent. |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) | The periodic task cannot be executed again.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -119,6 +124,8 @@ Constructor used to create a **TaskGroup** instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TaskGroup-constructor()--><!--Device-TaskGroup-constructor()-End-->
@@ -142,6 +149,8 @@ A constructor used to create a **TaskGroup** instance, with the task group name 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -176,6 +185,8 @@ Name of the task group specified when the task group is created.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

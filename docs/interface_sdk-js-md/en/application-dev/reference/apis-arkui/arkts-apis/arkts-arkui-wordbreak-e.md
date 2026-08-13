@@ -6,6 +6,8 @@ The word break rule.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum WordBreak--><!--Device-unnamed-declare enum WordBreak-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Word breaks can occur between any two characters for Chinese, Japanese, and Kore
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -36,12 +40,13 @@ Word breaks can occur between any two characters for Chinese, Japanese, and Kore
 BREAK_ALL = 1
 ```
 
-Line breaks can occur between any two characters for non-CJK text. For CJK text, the effect is the same as that of  
-**NORMAL**.
+Line breaks can occur between any two characters for non-CJK text. For CJK text, the effect is the same as that of **NORMAL**.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,11 +62,13 @@ Line breaks can occur between any two characters for non-CJK text. For CJK text,
 BREAK_WORD = 2
 ```
 
-This option has the same effect as **BREAK_ALL** for non-CJK text, except that it preferentially wraps lines at appropriate characters (for example, spaces). If no breakpoints are found, it breaks between any two characters.For CJK text, the effect is the same as that of **NORMAL**.
+This option has the same effect as **BREAK_ALL** for non-CJK text, except that it preferentially wraps lines at appropriate characters (for example, spaces). If no breakpoints are found, it breaks between any two characters. For CJK text, the effect is the same as that of **NORMAL**.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,11 +84,13 @@ This option has the same effect as **BREAK_ALL** for non-CJK text, except that i
 HYPHENATION = 3
 ```
 
-This option has the same effect as **BREAK_ALL** for non-CJK text, except that it preferentially wraps lines at appropriate characters (for example, spaces). If no breakpoints are found, it breaks between any two characters.For CJK text, the effect is the same as that of **NORMAL**.
+This option has the same effect as **BREAK_ALL** for non-CJK text, except that it preferentially wraps lines at appropriate characters (for example, spaces). If no breakpoints are found, it breaks between any two characters. For CJK text, the effect is the same as that of **NORMAL**.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

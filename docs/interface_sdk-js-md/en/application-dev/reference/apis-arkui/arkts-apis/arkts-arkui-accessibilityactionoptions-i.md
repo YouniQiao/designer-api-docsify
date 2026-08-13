@@ -6,6 +6,8 @@ Defines the struct of AccessibilityActionOptions that can affect operation under
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface AccessibilityActionOptions--><!--Device-unnamed-declare interface AccessibilityActionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ scrollStep - the step when the component is scrolled by accessibility.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Information about the system font.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-font-interface FontInfo--><!--Device-font-interface FontInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Family of the system font.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -46,6 +50,8 @@ Name of the system font.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -60,15 +66,13 @@ Name of the system font.
 italic: boolean
 ```
 
-Whether the system font is italic.
-
-Default value: **false**
-
-**true**: The system font is italic. **false**: The system font is not italic.
+Whether the system font is italic. Default value: **false** **true**: The system font is italic. **false**: The system font is not italic.
 
 **Type:** boolean
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,15 +88,13 @@ Default value: **false**
 monoSpace: boolean
 ```
 
-Whether the system font is monospaced.
-
-Default value: **false**
-
-**true**: The system font is monospaced. **false**: The system font is not monospaced.
+Whether the system font is monospaced. Default value: **false** **true**: The system font is monospaced. **false**: The system font is not monospaced.
 
 **Type:** boolean
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,6 +116,8 @@ File path of the system font.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -133,6 +137,8 @@ PostScript name of the system font.
 **Type:** string
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,6 +160,8 @@ Subfamily of the system font.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -168,15 +176,13 @@ Subfamily of the system font.
 symbolic: boolean
 ```
 
-Whether the system font supports symbols.
-
-Default value: **false**
-
-**true**: The system font supports symbols. **false**: The system font does not support symbols.
+Whether the system font supports symbols. Default value: **false** **true**: The system font supports symbols. **false**: The system font does not support symbols.
 
 **Type:** boolean
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,16 +198,13 @@ Default value: **false**
 weight: number
 ```
 
-Weight of the system font.
-
-Value range: [100, 900], with intervals of 100, corresponding to the values in the  
-[FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md#FontWeight) enum
-
-Default value: **100**
+Weight of the system font. Value range: [100, 900], with intervals of 100, corresponding to the values in the [FontWeight](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontweight-e.md#FontWeight) enum Default value: **100**
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -217,14 +220,13 @@ Default value: **100**
 width: number
 ```
 
-Width of the system font.
-
-Value range: [1, 9], with intervals of 1, corresponding to the values in the  
-[FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md#FontWidth) enum
+Width of the system font. Value range: [1, 9], with intervals of 1, corresponding to the values in the [FontWidth](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontwidth-e.md#FontWidth) enum
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

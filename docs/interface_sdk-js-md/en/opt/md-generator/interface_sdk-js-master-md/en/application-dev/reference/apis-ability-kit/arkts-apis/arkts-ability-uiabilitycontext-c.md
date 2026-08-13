@@ -1,12 +1,14 @@
 # UIAbilityContext
 
-UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that needs to store its status. It inherits from [Context](./../app/context) and provides UIAbility-related configuration and APIs  for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
+UIAbilityContext provides the context environment for a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that needs to store its status. It inherits from Context and provides UIAbility-related configuration and APIs for operating UIAbility and ServiceExtensionAbility components. For example, you can use the APIs to start a UIAbility, terminate a UIAbility to which the UIAbilityContext belongs, and start, terminate, connect to, or disconnect from a ServiceExtensionAbility.
 
-**Inheritance/Implementation:** UIAbilityContext extends [Context](Context)
+**Inheritance/Implementation:** UIAbilityContext extends Context
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-declare class UIAbilityContext extends Context--><!--Device-unnamed-declare class UIAbilityContext extends Context-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class UIAbilityContext--><!--Device-unnamed-declare class UIAbilityContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,15 +18,15 @@ UIAbilityContext provides the context environment for a [UIAbility](arkts-abilit
 backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string): Promise<void>
 ```
 
-Returns the startup result to the caller of   
-[startAbilityForResult](#startAbilityForResult) or [openLink](#openLink). Different from   
-[terminateSelfWithResult](#terminateSelfWithResult), this API does not destroy the current UIAbility when it returns the result. This API uses a promise to return the  result.
+Returns the startup result to the caller of [startAbilityForResult](#startAbilityForResult) or [openLink](#openLink). Different from [terminateSelfWithResult](#terminateSelfWithResult) , this API does not destroy the current UIAbility when it returns the result. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string): Promise<void>--><!--Device-UIAbilityContext-backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string): Promise<void>-End-->
 
@@ -47,13 +49,13 @@ Returns the startup result to the caller of
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000074](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000074-caller-corresponding-to-requestcode-does-not-exist-when-the-result-is-returned) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
-| [16000075](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000075-caller-cannot-be-started-when-the-result-is-returned) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000074](../errorcode-ability.md#16000074-caller-corresponding-to-requestcode-does-not-exist-when-the-result-is-returned) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000075](../errorcode-ability.md#16000075-caller-cannot-be-started-when-the-result-is-returned) |
 
 ## connectAppServiceExtensionAbility
 
@@ -61,20 +63,11 @@ Returns the startup result to the caller of
 connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 ```
 
-Connects this UIAbility to an   
-[AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Connects this UIAbility to an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) . It enables communication with the AppServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the AppServiceExtensionAbility. It can be called only on the main thread. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > If the > [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) > instance is not started, the caller of this API must be the application to which the > [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) > instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance > (configured in the **appIdentifierAllowList** property of > [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
 
-> **NOTE：**
-> 
-> If the
-> [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
-> instance is not started, the caller of this API must be the application to which the
-> [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
-> instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance
-> (configured in the **appIdentifierAllowList** property of
-> [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,16 +92,16 @@ Connects this UIAbility to an
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000201-target-service-is-not-started) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000201](../errorcode-ability.md#16000201-target-service-is-not-started) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -157,14 +150,11 @@ export default class EntryAbility extends UIAbility {
 connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 ```
 
-Connects this UIAbility to a [ServiceExtensionAbility](../../../application-models/extensionability-overview.md). It enables communication with the ServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the ServiceExtensionAbility. It can be called only on the main thread.
+Connects this UIAbility to a [ServiceExtensionAbility](../../../application-models/extensionability-overview.md). It enables communication with the ServiceExtensionAbility via a proxy, allowing access to the capabilities exposed by the ServiceExtensionAbility. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,20 +179,20 @@ Connects this UIAbility to a [ServiceExtensionAbility](../../../application-mode
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -251,18 +241,15 @@ export default class EntryAbility extends UIAbility {
 connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>
 ```
 
-Connects to a UIServiceExtensionAbility. This API uses a promise to return the result.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Connects to a UIServiceExtensionAbility. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>--><!--Device-UIAbilityContext-connectUIServiceExtensionAbility(want: Want, callback: UIServiceExtensionConnectCallback) : Promise<UIServiceProxy>-End-->
 
@@ -285,18 +272,18 @@ Connects to a UIServiceExtensionAbility. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -370,11 +357,11 @@ struct UIServiceExtensionAbility {
 disconnectAppServiceExtensionAbility(connection: number): Promise<void>
 ```
 
-Disconnects from an   
-[AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md). It can be called only on the main thread. This API uses a promise to return the result.Once the connection is terminated, you are advised to set the remote object returned when the connection is established to null, so as to prevent communication using the remote object that may become invalid.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.  
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+Disconnects from an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) . It can be called only on the main thread. This API uses a promise to return the result. Once the connection is terminated, you are advised to set the remote object returned when the connection is established to null, so as to prevent communication using the remote object that may become invalid. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -398,9 +385,9 @@ Disconnects from an
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -443,7 +430,9 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 Disconnects from a [ServiceExtensionAbility](../../../application-models/extensionability-overview.md). Once the connection is terminated, set the remote object, which is returned when the connection is established, to null. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -462,9 +451,9 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -509,7 +498,9 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 Disconnects from a [ServiceExtensionAbility](../../../application-models/extensionability-overview.md). Once the connection is terminated, set the remote object, which is returned when the connection is established, to null. This API uses a promise to return the result. It can be called only on the main thread.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,9 +524,9 @@ Disconnects from a [ServiceExtensionAbility](../../../application-models/extensi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -576,18 +567,15 @@ export default class EntryAbility extends UIAbility {
 disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>
 ```
 
-Disconnects from a UIServiceExtensionAbility. This API uses a promise to return the result.
+Disconnects from a UIServiceExtensionAbility. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>--><!--Device-UIAbilityContext-disconnectUIServiceExtensionAbility(proxy: UIServiceProxy): Promise<void>-End-->
 
@@ -609,9 +597,9 @@ Disconnects from a UIServiceExtensionAbility. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -678,10 +666,11 @@ struct UIServiceExtensionAbility {
 hideAbility(): Promise<void>
 ```
 
-Hides this UIAbility. This API uses a promise to return the result. It can be called only on the main thread.Before calling this API, ensure that the application has been added to the status bar.This API can be properly called only on PC/2-in-1 devices and tablets. On other devices, it returns the error code 801.  
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+Hides this UIAbility. This API uses a promise to return the result. It can be called only on the main thread. Before calling this API, ensure that the application has been added to the status bar. This API can be properly called only on PC/2-in-1 devices and tablets. On other devices, it returns the error code 801. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -699,9 +688,9 @@ Hides this UIAbility. This API uses a promise to return the result. It can be ca
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000067](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
 
 ## Examples
 
@@ -784,7 +773,9 @@ isTerminating(): boolean
 
 Checks whether this UIAbility is in the terminating state.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -804,7 +795,7 @@ Checks whether this UIAbility is in the terminating state.
 
 | Error Code ID |
 | --- |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -825,14 +816,15 @@ export default class EntryAbility extends UIAbility {
 moveAbilityToBackground(): Promise<void>
 ```
 
-Moves this UIAbility from the foreground to the background. This API uses a promise to return the result. It can be  called only on the main thread.&lt;br&gt;&lt;!--RP1--&gt;&lt;!--RP1End--&gt;Starting from API version 12, this API can be properly called on phones, wearables, and TVs. If it is called on other device types, error code 16000061 is returned.Starting from API version 13, this API can be properly called on phones, tablets, wearables, and TVs. If it is called on other device types, error code 16000061 is returned.  
-**Atomic service API**: This API can be used in atomic services since API version 12.
+Moves this UIAbility from the foreground to the background. This API uses a promise to return the result. It can be called only on the main thread.&lt;br&gt;&lt;!--RP1--&gt;&lt;!--RP1End--&gt; Starting from API version 12, this API can be properly called on phones, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. Starting from API version 13, this API can be properly called on phones, tablets, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. **Atomic service API**: This API can be used in atomic services since API version 12.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-moveAbilityToBackground(): Promise<void>--><!--Device-UIAbilityContext-moveAbilityToBackground(): Promise<void>-End-->
 
@@ -848,11 +840,11 @@ Moves this UIAbility from the foreground to the background. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [16000065](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000066](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000066-ability-cannot-be-switched-to-the-foreground-or-background-in-wukong-mode) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000065](../errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000066](../errorcode-ability.md#16000066-ability-cannot-be-switched-to-the-foreground-or-background-in-wukong-mode) |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -894,26 +886,15 @@ struct Index {
 openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>
 ```
 
-Opens an atomic service in an independent window. This API uses a promise to return the result. It can be called only on the main thread.After an atomic service is started, the following situations may occur:
+Opens an atomic service in an independent window. This API uses a promise to return the result. It can be called only on the main thread. After an atomic service is started, the following situations may occur: - Normally, the atomic service can call [terminateSelfWithResult](#terminateSelfWithResult) to terminate itself. The result is returned to the caller. - If an exception occurs, for example, the atomic service is killed, an exception result, in which **resultCode** is **-1**, is returned to the caller. - If the atomic service is started multiple times by different applications calling this API, when the atomic service calls [terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-- Normally, the atomic service can call   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate itself. The result is returned to the caller.  
-- If an exception occurs, for example, the atomic service is killed, an exception result, in which **resultCode**   
-is **-1**, is returned to the caller.  
-- If the atomic service is started multiple times by different applications calling this API, when the atomic   
-service calls   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>--><!--Device-UIAbilityContext-openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<AbilityResult>-End-->
 
@@ -936,16 +917,16 @@ service calls
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -986,26 +967,15 @@ export default class EntryAbility extends UIAbility {
 openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>
 ```
 
-Starts a UIAbility by using &lt;!--RP2--&gt;[App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP2End-  
--&gt; or [Deep Linking](../../../application-models/deep-linking-startup.md), and returns the exit result of the   
-launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread.A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit  Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking:
+Starts a UIAbility by using &lt;!--RP2--&gt;[App Linking](../../../application-models/app-linking-startup.md)&lt;!--RP2End- -&gt; or [Deep Linking](../../../application-models/deep-linking-startup.md), and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. A URL in the standard format is passed in to the **link** field to start the target UIAbility based on the implicit Want matching rules. The target UIAbility must have the following filter characteristics to process links of App Linking: - The **actions** field must contain **ohos.want.action.viewData**. - The **entities** field must contain **entity.system.browsable**. - The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**. If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see [startAbilityForResult](#startAbilityForResult) . If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-- The **actions** field must contain **ohos.want.action.viewData**.  
-- The **entities** field must contain **entity.system.browsable**.  
-- The **uris** field must contain elements whose **scheme** is **https** and **domainVerify** is **true**.  
-If you want to obtain the result after the started UIAbility is terminated, set the **callback** parameter. For details about how to use this parameter, see   
-[startAbilityForResult](#startAbilityForResult).If an input parameter is invalid, for example, a mandatory parameter is not set or the URL set in **link** is not in the standard format, an exception is thrown. If the parameter verification is successful but an error occurs when starting the target UIAbility, the error information is returned through promise.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>--><!--Device-UIAbilityContext-openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<AbilityResult>): Promise<void>-End-->
 
@@ -1029,23 +999,23 @@ If you want to obtain the result after the started UIAbility is terminated, set 
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000136](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000136](../errorcode-ability.md#16000136-prohibited-from-launching-the-applications-own-uiability-via-app-linking) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1105,7 +1075,9 @@ reportDrawnCompleted(callback: AsyncCallback<void>): void
 
 Called when the window content associated with the UIAbility finishes drawing. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1125,8 +1097,8 @@ Called when the window content associated with the UIAbility finishes drawing. T
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1170,15 +1142,11 @@ export default class EntryAbility extends UIAbility {
 requestDialogService(want: Want, result: AsyncCallback<dialogRequest.RequestResult>): void
 ```
 
-Starts a ServiceExtensionAbility that supports modal dialog boxes. After the ServiceExtensionAbility is started, the application displays a modal dialog box. You can call   
-[setRequestResult](arkts-ability-dialogrequest-requestcallback-i.md#setRequestResult) to obtain the result. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+Starts a ServiceExtensionAbility that supports modal dialog boxes. After the ServiceExtensionAbility is started, the application displays a modal dialog box. You can call [setRequestResult](arkts-ability-dialogrequest-requestcallback-i.md#setRequestResult) to obtain the result. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1197,23 +1165,23 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1255,15 +1223,11 @@ export default class EntryAbility extends UIAbility {
 requestDialogService(want: Want): Promise<dialogRequest.RequestResult>
 ```
 
-Starts a ServiceExtensionAbility that supports modal dialog boxes. After the ServiceExtensionAbility is started, the application displays a modal dialog box. You can call   
-[setRequestResult](arkts-ability-dialogrequest-requestcallback-i.md#setRequestResult) to obtain the result. This API uses a promise to return the result. It can be called only on the main thread.
+Starts a ServiceExtensionAbility that supports modal dialog boxes. After the ServiceExtensionAbility is started, the application displays a modal dialog box. You can call [setRequestResult](arkts-ability-dialogrequest-requestcallback-i.md#setRequestResult) to obtain the result. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1287,23 +1251,23 @@ Starts a ServiceExtensionAbility that supports modal dialog boxes. After the Ser
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1344,27 +1308,15 @@ export default class EntryAbility extends UIAbility {
 restartApp(want: Want): Promise<void>
 ```
 
-Called by a focused UIAbility to restart its own process and launch a specified UIAbility within the same application. This API can be called only on the main thread. This API uses a promise to return the result.If the target UIAbility is the current one, this action resets the window to its initial state. If it is a different UIAbility, the system navigates to and open a new window for that UIAbility.This API can be properly called only on phones. If it is called on other device types, error code 801 is returned.
+Called by a focused UIAbility to restart its own process and launch a specified UIAbility within the same application. This API can be called only on the main thread. This API uses a promise to return the result. If the target UIAbility is the current one, this action resets the window to its initial state. If it is a different UIAbility, the system navigates to and open a new window for that UIAbility. This API can be properly called only on phones. If it is called on other device types, error code 801 is returned. > **NOTE：**> > When this API is called to restart the process, the **onDestroy** lifecycle callback of the UIAbility in the > process is not triggered. > > If an atomic service calls this API, > [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartSelfAtomicService), or > [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartApp) within 3 > seconds after a successful call to this API, the system returns error code 16000064. > > If an application calls this API or > [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartApp) within 3 > seconds after a successful call to this API, the system returns error code 16000064.
 
-> **NOTE：**
-> 
-> When this API is called to restart the process, the **onDestroy** lifecycle callback of the UIAbility in the
-> process is not triggered.
-> 
-> If an atomic service calls this API,
-> [restartSelfAtomicService()](arkts-ability-abilitymanager-restartselfatomicservice-f.md#restartSelfAtomicService), or
-> [ApplicationContext.restartApp()](./application/ApplicationContext:ApplicationContext.restartApp) within 3
-> seconds after a successful call to this API, the system returns error code 16000064.
-> 
-> If an application calls this API or
-> [ApplicationContext.restartApp()](arkts-ability-applicationcontext-c.md#restartApp) within 3
-> seconds after a successful call to this API, the system returns error code 16000064.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-restartApp(want: Want): Promise<void>--><!--Device-UIAbilityContext-restartApp(want: Want): Promise<void>-End-->
 
@@ -1386,12 +1338,12 @@ Called by a focused UIAbility to restart its own process and launch a specified 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000064-frequent-application-restart) |
-| [16000065](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000063-invalid-ability-during-application-restart) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000064](../errorcode-ability.md#16000064-frequent-application-restart) |
+| [16000065](../errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000063](../errorcode-ability.md#16000063-invalid-ability-during-application-restart) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1441,7 +1393,9 @@ restoreWindowStage(localStorage: LocalStorage): void
 
 Restores the WindowStage data in the UIAbility. It can be called only on the main thread.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1461,9 +1415,9 @@ Restores the WindowStage data in the UIAbility. It can be called only on the mai
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1484,14 +1438,11 @@ export default class EntryAbility extends UIAbility {
 revokeDelegator(): Promise<void>
 ```
 
-When the first UIAbility launched under a module needs to redirect to another UIAbility, the target UIAbility is known as the DelegatorAbility. For details about how to set up the DelegatorAbility, see step 1 in the example provided for this API.Once the DelegatorAbility has completed its specific operations, you can use this API to revert to the first UIAbility. This API uses a promise to return the result.
+When the first UIAbility launched under a module needs to redirect to another UIAbility, the target UIAbility is known as the DelegatorAbility. For details about how to set up the DelegatorAbility, see step 1 in the example provided for this API. Once the DelegatorAbility has completed its specific operations, you can use this API to revert to the first UIAbility. This API uses a promise to return the result. > **NOTE：**> > After the API is successfully called, the [Window](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md#window) API within the DelegatorAbility becomes > invalid.
 
-> **NOTE：**
-> 
-> After the API is successfully called, the [Window](./../@ohos.window) API within the DelegatorAbility becomes
-> invalid.
+**Since:** 23
 
-**Since:** 17
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1509,12 +1460,12 @@ When the first UIAbility launched under a module needs to redirect to another UI
 
 | Error Code ID |
 | --- |
-| [16000084](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000084-only-one-delegatorability-is-allowed-to-call-the-api) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000085](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000085-error-occurs-during-the-interaction-between-the-ability-and-window) |
-| [16000065](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000084](../errorcode-ability.md#16000084-only-one-delegatorability-is-allowed-to-call-the-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000085](../errorcode-ability.md#16000085-error-occurs-during-the-interaction-between-the-ability-and-window) |
+| [16000065](../errorcode-ability.md#16000065-api-can-be-called-only-for-a-foreground-ability) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1555,10 +1506,11 @@ export default class DelegatorAbility extends UIAbility {
 setAbilityInstanceInfo(label: string, icon: image.PixelMap): Promise<void>
 ```
 
-Sets the icon and label for this UIAbility. The icon and label can be displayed in the task center and the shortcut  bar. This API uses a promise to return the result.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.  
-**Required permissions**: ohos.permission.SET_ABILITY_INSTANCE_INFO
+Sets the icon and label for this UIAbility. The icon and label can be displayed in the task center and the shortcut bar. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. **Required permissions**: ohos.permission.SET_ABILITY_INSTANCE_INFO
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_ABILITY_INSTANCE_INFO
 
@@ -1585,11 +1537,11 @@ Sets the icon and label for this UIAbility. The icon and label can be displayed 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1637,28 +1589,15 @@ export default class EntryAbility extends UIAbility {
 setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 ```
 
-Sets the dark/light color mode for this UIAbility. Before calling this API, ensure that the page corresponding to the UIAbility has been loaded. This API can be called only on the main thread.
+Sets the dark/light color mode for this UIAbility. Before calling this API, ensure that the page corresponding to the UIAbility has been loaded. This API can be called only on the main thread. > **NOTE：**> > - Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility > has been loaded (using the > [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle). > > - After this API is called, a new resource manager object is created. If a resource manager was previously cached > , it should be updated accordingly. > > - The priority of the dark/light color mode is as follows: UIAbility dark/light color mode > Application dark/ > light color mode (set via > [ApplicationContext.setColorMode](arkts-ability-applicationcontext-c.md#setColorMode)) > System > dark/light color mode.
 
-> **NOTE：**
-> 
-> - Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility
-> has been loaded (using the
-> [loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9) API in the
-> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate) lifecycle).
-> 
-> - After this API is called, a new resource manager object is created. If a resource manager was previously cached
-> , it should be updated accordingly.
-> 
-> - The priority of the dark/light color mode is as follows: UIAbility dark/light color mode > Application dark/
-> light color mode (set via
-> [ApplicationContext.setColorMode](arkts-ability-applicationcontext-c.md#setColorMode)) > System
-> dark/light color mode.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-setColorMode(colorMode: ConfigurationConstant.ColorMode): void--><!--Device-UIAbilityContext-setColorMode(colorMode: ConfigurationConstant.ColorMode): void-End-->
 
@@ -1674,7 +1613,7 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 
 | Error Code ID |
 | --- |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1705,7 +1644,9 @@ setMissionContinueState(state: AbilityConstant.ContinueState, callback: AsyncCal
 
 Sets the mission continuation state of this UIAbility. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1726,9 +1667,9 @@ Sets the mission continuation state of this UIAbility. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1753,7 +1694,9 @@ setMissionContinueState(state: AbilityConstant.ContinueState): Promise<void>
 
 Sets the mission continuation state of this UIAbility. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1779,9 +1722,9 @@ Sets the mission continuation state of this UIAbility. This API uses a promise t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1808,7 +1751,9 @@ setMissionLabel(label: string, callback: AsyncCallback<void>): void
 
 Sets a mission label for this UIAbility on the multitasking screen. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1829,9 +1774,9 @@ Sets a mission label for this UIAbility on the multitasking screen. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1856,7 +1801,9 @@ setMissionLabel(label: string): Promise<void>
 
 Sets a mission label for this UIAbility on the multitasking screen. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1882,9 +1829,9 @@ Sets a mission label for this UIAbility on the multitasking screen. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -1911,18 +1858,11 @@ export default class EntryAbility extends UIAbility {
 setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>
 ```
 
-Sets the icon for this UIAbility, which is displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. This API uses a promise to return the result.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Sets the icon for this UIAbility, which is displayed in the application window, application card in the mission center, and window snapshot in the shortcut bar. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > There is no priority relationship among the **setMissionWindowIcon**&lt;!--Del--&gt;, > [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setMissionIcon) > ,&lt;!--DelEnd--&gt; and > [setAbilityInstanceInfo](#setAbilityInstanceInfo). The icon > set by the last called API takes effect. If these APIs are called sequentially, the icon set by the last call > takes precedence and overwrites any previous settings.
 
-> **NOTE：**
-> 
-> There is no priority relationship among the **setMissionWindowIcon**&lt;!--Del--&gt;,
-> [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setMissionIcon)
-> ,&lt;!--DelEnd--&gt; and
-> [setAbilityInstanceInfo](#setAbilityInstanceInfo). The icon
-> set by the last called API takes effect. If these APIs are called sequentially, the icon set by the last call
-> takes precedence and overwrites any previous settings.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1946,9 +1886,9 @@ Sets the icon for this UIAbility, which is displayed in the application window, 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000135](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000135-uiability-main-window-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -1992,20 +1932,15 @@ export default class EntryAbility extends UIAbility {
 setOnNewWantSkipScenarios(scenarios: number): Promise<void>
 ```
 
-Sets whether to trigger the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) lifecycle callback when a UIAbility is started in a specific scenario. It can be called only on the main thread. This API uses a promise to return the result.
+Sets whether to trigger the [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant) lifecycle callback when a UIAbility is started in a specific scenario. It can be called only on the main thread. This API uses a promise to return the result. > **NOTE：**> > This API is usually used within the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) lifecycle > callback. You are advised to include all the enumerated values of > [Scenarios](arkts-ability-contextconstant-scenarios-e.md#Scenarios) when specifying the **scenarios** > parameter. For details, see the sample code below.
 
-> **NOTE：**
-> 
-> This API is usually used within the [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) lifecycle
-> callback. You are advised to include all the enumerated values of
-> [Scenarios](arkts-ability-contextconstant-scenarios-e.md#Scenarios) when specifying the **scenarios**
-> parameter. For details, see the sample code below.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-setOnNewWantSkipScenarios(scenarios: int): Promise<void>--><!--Device-UIAbilityContext-setOnNewWantSkipScenarios(scenarios: int): Promise<void>-End-->
 
@@ -2027,7 +1962,7 @@ Sets whether to trigger the [onNewWant](arkts-ability-app-ability-uiability-uiab
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -2067,11 +2002,13 @@ setRestoreEnabled(enabled: boolean): void
 
 Sets whether to enable backup and restore for this UIAbility.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-setRestoreEnabled(enabled: boolean): void--><!--Device-UIAbilityContext-setRestoreEnabled(enabled: boolean): void-End-->
 
@@ -2087,8 +2024,8 @@ Sets whether to enable backup and restore for this UIAbility.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2116,10 +2053,11 @@ export default class EntryAbility extends UIAbility {
 showAbility(): Promise<void>
 ```
 
-Shows this UIAbility. This API uses a promise to return the result. It can be called only on the main thread.Before calling this API, ensure that the application has been added to the status bar.This API can be properly called only on PC/2-in-1 devices and tablets. On other devices, it returns the error code 801.  
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+Shows this UIAbility. This API uses a promise to return the result. It can be called only on the main thread. Before calling this API, ensure that the application has been added to the status bar. This API can be properly called only on PC/2-in-1 devices and tablets. On other devices, it returns the error code 801. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2137,9 +2075,9 @@ Shows this UIAbility. This API uses a promise to return the result. It can be ca
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000067](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
 
 ## Examples
 
@@ -2220,14 +2158,11 @@ export default class EntryAbility extends UIAbility {
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+Starts a UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2248,33 +2183,33 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2315,14 +2250,11 @@ export default class EntryAbility extends UIAbility {
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-Starts a UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+Starts a UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2344,37 +2276,37 @@ Starts a UIAbility. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000068-ability-is-already-running) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000067](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16300003](../errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000068](../errorcode-ability.md#16000068-ability-is-already-running) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2419,14 +2351,11 @@ export default class EntryAbility extends UIAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-Starts a UIAbility. This API uses a promise to return the result. It can be called only on the main thread.
+Starts a UIAbility. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2453,37 +2382,37 @@ Starts a UIAbility. This API uses a promise to return the result. It can be call
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000068-ability-is-already-running) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000067](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16300003](../errorcode-ability.md#16300003-target-application-is-not-the-invoker-application) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000068](../errorcode-ability.md#16000068-ability-is-already-running) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000067](../errorcode-ability.md#16000067-ability-startup-parameter-verification-failure) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2527,31 +2456,11 @@ export default class EntryAbility extends UIAbility {
 startAbilityByCall(want: Want): Promise<Caller>
 ```
 
-Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md#Caller) object for communicating with a   
-[Callee](arkts-ability-app-ability-uiability-callee-i.md#Callee) object. If the specified UIAbility is not started, the UIAbility  will be started in the foreground or background. This API uses a promise to return the result. It can be called only on the main thread.This API cannot be used to start the UIAbility with the launch type set to   
-[specified](../../../application-models/uiability-launch-type.md#specified).
+Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md#Caller) object for communicating with a [Callee](arkts-ability-app-ability-uiability-callee-i.md#Callee) object. If the specified UIAbility is not started, the UIAbility will be started in the foreground or background. This API uses a promise to return the result. It can be called only on the main thread. This API cannot be used to start the UIAbility with the launch type set to [specified](../../../application-models/uiability-launch-type.md#specified). > **NOTE：**> > - In cross-device scenarios, the caller and the callee must belong to the same application. > > - In same-device scenarios, the caller and the callee must belong to different applications, and the caller must > have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission (available only for system applications). > > - In addition, if the application needs to call this API in the background, the > ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications). > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md). > > **NOTE：**> > - For API version 10 and earlier, the permission ohos.permission.ABILITY_BACKGROUND_COMMUNICATION is required. > This permission is available only to system applications. > > - For API version 11 and later, only the permission ohos.permission.DISTRIBUTED_DATASYNC is required. This > permission is verified by the DSoftBus subsystem only when the link between applications is established. No > verification is conducted during the application launch phase.
 
-> **NOTE：**
-> 
-> - In cross-device scenarios, the caller and the callee must belong to the same application.
-> 
-> - In same-device scenarios, the caller and the callee must belong to different applications, and the caller must
-> have the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission (available only for system applications).
-> 
-> - In addition, if the application needs to call this API in the background, the
-> ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required (available only for system applications).
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-> > **NOTE：**
-> 
-> - For API version 10 and earlier, the permission ohos.permission.ABILITY_BACKGROUND_COMMUNICATION is required.
-> This permission is available only to system applications.
-> 
-> - For API version 11 and later, only the permission ohos.permission.DISTRIBUTED_DATASYNC is required. This
-> permission is verified by the DSoftBus subsystem only when the link between applications is established. No
-> verification is conducted during the application launch phase.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 11+: ohos.permission.DISTRIBUTED_DATASYNC
@@ -2579,28 +2488,28 @@ Obtains a [Caller](arkts-ability-app-ability-uiability-caller-i.md#Caller) objec
 
 | Error Code ID |
 | --- |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2734,10 +2643,11 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
 ```
 
-Implicitly starts a given type of   
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2752,7 +2662,7 @@ Implicitly starts a given type of
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | string | Yes |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
@@ -2760,13 +2670,13 @@ Implicitly starts a given type of
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -2801,14 +2711,49 @@ export default class EntryAbility extends UIAbility {
 ## startAbilityByType
 
 ```TypeScript
+startAbilityByType(type: string, wantParam: Record<string, RecordData>,
+    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
+```
+
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API uses an asynchronous callback to return the result. It can be called only in the main thread and by applications running in the foreground.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+
+## startAbilityByType
+
+```TypeScript
 startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
 
-Implicitly starts a given type of   
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2823,7 +2768,7 @@ Implicitly starts a given type of
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | string | Yes |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 | abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes |
 
 **Return value:**
@@ -2836,13 +2781,13 @@ Implicitly starts a given type of
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -2873,28 +2818,56 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## startAbilityByType
+
+```TypeScript
+startAbilityByType(type: string, wantParam: Record<string, RecordData>,
+    abilityStartCallback: AbilityStartCallback): Promise<void>
+```
+
+Implicitly starts a given type of [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility). This API uses a promise to return the result. It can be called only in the main thread and by applications running in the foreground.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIAbilityContext-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | string | Yes |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-c.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+
 ## startAbilityForResult
 
 ```TypeScript
 startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread.The following situations may be possible for a started UIAbility:
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility: - Normally, you can call [terminateSelfWithResult](#terminateSelfWithResult) to terminate the UIAbility and return the result to the caller. - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **- 1**, is returned to the caller. - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-- Normally, you can call   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate the UIAbility and return the result to the caller.  
-- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
-1**, is returned to the caller.  
-- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
- UIAbility is started multiple times by different applications calling this API, when the UIAbility calls   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2915,33 +2888,33 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -2983,22 +2956,11 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
 ```
 
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread.The following situations may be possible for a started UIAbility:
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility: - Normally, you can call [terminateSelfWithResult](#terminateSelfWithResult) to terminate the UIAbility and return the result to the caller. - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **- 1**, is returned to the caller. - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-- Normally, you can call   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate the UIAbility and return the result to the caller.  
-- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
-1**, is returned to the caller.  
-- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
- UIAbility is started multiple times by different applications calling this API, when the UIAbility calls   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3020,33 +2982,33 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3091,22 +3053,11 @@ export default class EntryAbility extends UIAbility {
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to  return the result. It can be called only on the main thread.The following situations may be possible for a started UIAbility:
+Starts a UIAbility and returns the exit result of the launched UIAbility via a callback. This API uses a promise to return the result. It can be called only on the main thread. The following situations may be possible for a started UIAbility: - Normally, you can call [terminateSelfWithResult](#terminateSelfWithResult) to terminate the UIAbility and return the result to the caller. - If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **- 1**, is returned to the caller. - If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this UIAbility is started multiple times by different applications calling this API, when the UIAbility calls [terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-- Normally, you can call   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate the UIAbility and return the result to the caller.  
-- If an exception occurs, for example, the UIAbility is killed, an exception result, in which **resultCode** is **-  
-1**, is returned to the caller.  
-- If the UIAbility is in [singleton mode](../../../application-models/uiability-launch-type.md#singleton) and this  
- UIAbility is started multiple times by different applications calling this API, when the UIAbility calls   
-[terminateSelfWithResult](#terminateSelfWithResult) to terminate itself, it will only return the normal result to the last caller. All other callers will receive an exception result with **resultCode** set to **-1**.
+**Since:** 23
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3133,33 +3084,33 @@ Starts a UIAbility and returns the exit result of the launched UIAbility via a c
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000080-new-instances-cannot-be-created) |
-| [16000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000071](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000071-application-clone-is-not-supported) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000076](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000077](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
-| [16000078](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
-| [16000079](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000072](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000073](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000073-appcloneindex-is-invalid) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000080](../errorcode-ability.md#16000080-new-instances-cannot-be-created) |
+| [16000018](../errorcode-ability.md#16000018-restricting-redirection-to-thirdparty-applications-of-api-version-11-or-later) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000071](../errorcode-ability.md#16000071-application-clone-is-not-supported) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000076](../errorcode-ability.md#16000076-appinstancekey-does-not-exist) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000077](../errorcode-ability.md#16000077-number-of-application-instances-reaches-the-upper-limit) |
+| [16000078](../errorcode-ability.md#16000078-multiinstance-mode-is-not-supported) |
+| [16000079](../errorcode-ability.md#16000079-appinstancekey-cannot-be-specified) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000072](../errorcode-ability.md#16000072-multiapp-mode-is-not-supported) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000073](../errorcode-ability.md#16000073-appcloneindex-is-invalid) |
+| [16000010](../errorcode-ability.md#16000010-continuation-flag-is-forbidden) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3203,18 +3154,11 @@ export default class EntryAbility extends UIAbility {
 startAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Starts an   
-[AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Starts an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > The caller of this API must be the application to which the > [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) > instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance > (configured in the **appIdentifierAllowList** property of > [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
 
-> **NOTE：**
-> 
-> The caller of this API must be the application to which the
-> [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
-> instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance
-> (configured in the **appIdentifierAllowList** property of
-> [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3238,19 +3182,19 @@ Starts an
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000200](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000200-caller-is-not-allowed-to-start-a-background-service-of-the-application) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000200](../errorcode-ability.md#16000200-caller-is-not-allowed-to-start-a-background-service-of-the-application) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3296,6 +3240,8 @@ Bring the current UIAbility instance to the foreground.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIAbilityContext-startSelf(): Promise<void>--><!--Device-UIAbilityContext-startSelf(): Promise<void>-End-->
@@ -3312,10 +3258,10 @@ Bring the current UIAbility instance to the foreground.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 | 16000082 |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## startSelfUIAbilityInChildProcess
 
@@ -3323,9 +3269,11 @@ Bring the current UIAbility instance to the foreground.
 startSelfUIAbilityInChildProcess(want: Want, specifiedFlag: string): Promise<void>
 ```
 
-Launch the application's own UIAbility in the child process.If the launchMode of UIAbility is specified, you can set specified flag.
+Launch the application's own UIAbility in the child process. If the launchMode of UIAbility is specified, you can set specified flag.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3350,18 +3298,18 @@ Launch the application's own UIAbility in the child process.If the launchMode of
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000130](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
-| [16000131](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000131-uiability-already-started) |
-| [16000124](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
-| [16000123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
+| [16000131](../errorcode-ability.md#16000131-uiability-already-started) |
+| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
 
 ## startSelfUIAbilityInCurrentProcess
 
@@ -3369,18 +3317,11 @@ Launch the application's own UIAbility in the child process.If the launchMode of
 startSelfUIAbilityInCurrentProcess(want: Want, specifiedFlag: string, options?: StartOptions): Promise<void>
 ```
 
-Starts the application's own UIAbility within the current process.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801is returned.
+Starts the application's own UIAbility within the current process. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > - The target UIAbility can only be cold-started. If an instance of the target UIAbility has already been > launched, the startup fails. > > - The UIAbility instance started through this API runs in the same process as the caller. Other process-related > policies for the target UIAbility (such as those specified via the **isolationProcess** or **isolationMode** > fields in the [module.json5](../../../quick-start/module-configuration-file.md) file) does not take effect.
 
-> **NOTE：**
-> 
-> - The target UIAbility can only be cold-started. If an instance of the target UIAbility has already been
-> launched, the startup fails.
-> 
-> - The UIAbility instance started through this API runs in the same process as the caller. Other process-related
-> policies for the target UIAbility (such as those specified via the **isolationProcess** or **isolationMode**
-> fields in the [module.json5](../../../quick-start/module-configuration-file.md) file) does not take effect.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3406,18 +3347,18 @@ Starts the application's own UIAbility within the current process.This API can b
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000130](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
-| [16000131](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000131-uiability-already-started) |
-| [16000124](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000122](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
-| [16000123](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000130](../errorcode-ability.md#16000130-uiability-does-not-belong-to-the-caller) |
+| [16000131](../errorcode-ability.md#16000131-uiability-already-started) |
+| [16000124](../errorcode-ability.md#16000124-starting-a-distributed-uiability-is-not-supported) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000122](../errorcode-ability.md#16000122-target-component-is-intercepted-by-the-system-control-module) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000123](../errorcode-ability.md#16000123-implicit-startup-is-not-supported) |
 
 ## Examples
 
@@ -3457,18 +3398,15 @@ export default class EntryAbility extends UIAbility {
 startUIServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Starts a UIServiceExtensionAbility. This API uses a promise to return the result.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Starts a UIServiceExtensionAbility. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-startUIServiceExtensionAbility(want: Want): Promise<void>--><!--Device-UIAbilityContext-startUIServiceExtensionAbility(want: Want): Promise<void>-End-->
 
@@ -3490,20 +3428,20 @@ Starts a UIServiceExtensionAbility. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000019](../errorcode-ability.md#16000019-no-matching-ability-is-found-during-implicit-startup) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3549,18 +3487,11 @@ struct Index {
 stopAppServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Stops an   
-[AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md) instance. This API uses a promise to return the result.This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned.
+Stops an [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) instance. This API uses a promise to return the result. This API can be properly called only on PCs/2-in-1 devices. If it is called on other device types, error code 801 is returned. > **NOTE：**> > The caller of this API must be the application to which the > [AppServiceExtensionAbility](arkts-ability-app-ability-appserviceextensionability-appserviceextensionability-c.md#AppServiceExtensionAbility) > instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance > (configured in the **appIdentifierAllowList** property of > [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
 
-> **NOTE：**
-> 
-> The caller of this API must be the application to which the
-> [AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)
-> instance belongs or an application in the application list supported by the AppServiceExtensionAbility instance
-> (configured in the **appIdentifierAllowList** property of
-> [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities)).
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3584,15 +3515,15 @@ Stops an
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000200](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000200-caller-is-not-allowed-to-start-a-background-service-of-the-application) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000200](../errorcode-ability.md#16000200-caller-is-not-allowed-to-start-a-background-service-of-the-application) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3634,14 +3565,11 @@ export default class EntryAbility extends UIAbility {
 terminateSelf(callback: AsyncCallback<void>): void
 ```
 
-Terminates this UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.
+Terminates this UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread. > **NOTE：**> > After this API is called, missions in the task center are not cleared by default. To clear missions, set > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
 
-> **NOTE：**
-> 
-> After this API is called, missions in the task center are not cleared by default. To clear missions, set
-> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3661,13 +3589,13 @@ Terminates this UIAbility. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3699,7 +3627,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../quick-start/module-configuration-file.md) file.
+(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 
 ```TypeScript
 {
@@ -3721,14 +3649,11 @@ export default class EntryAbility extends UIAbility {
 terminateSelf(): Promise<void>
 ```
 
-Terminates this UIAbility. This API uses a promise to return the result. It can be called only on the main thread.
+Terminates this UIAbility. This API uses a promise to return the result. It can be called only on the main thread. > **NOTE：**> > After this API is called, missions in the task center are not cleared by default. To clear missions, set > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
 
-> **NOTE：**
-> 
-> After this API is called, missions in the task center are not cleared by default. To clear missions, set
-> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3748,12 +3673,12 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3785,7 +3710,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../quick-start/module-configuration-file.md) file.
+(Optional) To remove the mission from the task center (that is, not to retain the snapshot in the recent tasks list) when terminating the UIAbility, set the removeMissionAfterTerminate field to true in the [module.json5](../../../quick-start/module-configuration-file.md) file.
 
 ```TypeScript
 {
@@ -3807,15 +3732,11 @@ export default class EntryAbility extends UIAbility {
 terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-Terminates this UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread.The result is returned to the caller when **terminateSelfWithResult** is called to terminate the UIAbility that is started by calling   
-[startAbilityForResult](#startAbilityForResult).
+Terminates this UIAbility. This API uses an asynchronous callback to return the result. It can be called only on the main thread. The result is returned to the caller when **terminateSelfWithResult** is called to terminate the UIAbility that is started by calling [startAbilityForResult](#startAbilityForResult) . > **NOTE：**> > After this API is called, missions in the task center are not cleared by default. To clear missions, set > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
 
-> **NOTE：**
-> 
-> After this API is called, missions in the task center are not cleared by default. To clear missions, set
-> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3836,13 +3757,13 @@ Terminates this UIAbility. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3889,15 +3810,11 @@ export default class EntryAbility extends UIAbility {
 terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-Terminates this UIAbility. This API uses a promise to return the result. It can be called only on the main thread.The result is returned to the caller when **terminateSelfWithResult** is called to terminate the UIAbility that is started by calling   
-[startAbilityForResult](#startAbilityForResult).
+Terminates this UIAbility. This API uses a promise to return the result. It can be called only on the main thread. The result is returned to the caller when **terminateSelfWithResult** is called to terminate the UIAbility that is started by calling [startAbilityForResult](#startAbilityForResult) . > **NOTE：**> > After this API is called, missions in the task center are not cleared by default. To clear missions, set > [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
 
-> **NOTE：**
-> 
-> After this API is called, missions in the task center are not cleared by default. To clear missions, set
-> [removeMissionAfterTerminate](../../../quick-start/module-configuration-file.md#abilities) to **true**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3923,13 +3840,13 @@ Terminates this UIAbility. This API uses a promise to return the result. It can 
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -3980,7 +3897,9 @@ UIAbility information.
 
 **Type:** [AbilityInfo](arkts-ability-abilityinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4000,7 +3919,9 @@ Environment variables for the application runtime, such as language and color mo
 
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4020,7 +3941,9 @@ Information about the HAP to which the UIAbility belongs.
 
 **Type:** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4040,11 +3963,13 @@ WindowStage object. It can be called only on the main thread.
 
 **Type:** window.WindowStage
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UIAbilityContext-windowStage: window.WindowStage--><!--Device-UIAbilityContext-windowStage: window.WindowStage-End-->
 

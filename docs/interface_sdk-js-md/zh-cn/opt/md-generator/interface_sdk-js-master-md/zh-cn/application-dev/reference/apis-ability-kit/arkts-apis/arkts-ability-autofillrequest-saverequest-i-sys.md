@@ -2,7 +2,9 @@
 
 保存自动填充的请求。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SaveRequest--><!--Device-unnamed-export interface SaveRequest-End-->
 
@@ -18,9 +20,11 @@ viewData: ViewData
 
 查看数据。填充请求的页面基本信息。
 
-**类型：** [ViewData](arkts-ability-viewdata-i.md)
+**类型：** [ViewData](arkts-ability-viewdata-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

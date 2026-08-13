@@ -4,7 +4,9 @@ Defines a common transition animation for page transitions.
 
 **Since:** 7
 
-<!--Device-unnamed-declare class CommonTransition<T>--><!--Device-unnamed-declare class CommonTransition<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CommonTransition--><!--Device-unnamed-declare class CommonTransition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ constructor()
 A constructor used to create a common transition animation.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ opacity(value: number): T
 Sets the starting opacity value for entrance or the ending opacity value for exit.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ Sets the scaling effect for page transitions.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonTransition-scale(value: ScaleOptions): T--><!--Device-CommonTransition-scale(value: ScaleOptions): T-End-->
@@ -89,6 +97,8 @@ slide(value: SlideEffect): T
 Sets the slide-in and slide-out effects for page transitions.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,6 +128,8 @@ Sets the translation effect for page transitions.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonTransition-translate(value: TranslateOptions): T--><!--Device-CommonTransition-translate(value: TranslateOptions): T-End-->
@@ -128,7 +140,7 @@ Sets the translation effect for page transitions.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | [TranslateOptions](../arkts-apis/arkts-arkui-common-translateoptions-i.md) | Yes |
+| value | [TranslateOptions](../../apis-na/arkts-apis/arkts-na-common-translateoptions-i.md) | Yes |
 
 **Return value:**
 

@@ -2,7 +2,9 @@
 
 Wi-Fi device configuration information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface WifiDeviceConfig--><!--Device-wifiManager-interface WifiDeviceConfig-End-->
 
@@ -24,9 +26,11 @@ Wi-Fi bssid(MAC): the length is 6.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiDeviceConfig-bssid?: string--><!--Device-WifiDeviceConfig-bssid?: string-End-->
 
@@ -42,9 +46,11 @@ Wi-Fi bssid type.
 
 **Type:** [DeviceAddressType](arkts-connectivity-wifimanager-deviceaddresstype-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiDeviceConfig-bssidType?: DeviceAddressType--><!--Device-WifiDeviceConfig-bssidType?: DeviceAddressType-End-->
 
@@ -60,7 +66,9 @@ EAP config info.
 
 **Type:** [WifiEapConfig](arkts-connectivity-wifimanager-wifieapconfig-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiDeviceConfig-eapConfig?: WifiEapConfig--><!--Device-WifiDeviceConfig-eapConfig?: WifiEapConfig-End-->
 
@@ -76,7 +84,9 @@ Hide SSID or not, false(default): not hide
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiDeviceConfig-isHiddenSsid?: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid?: boolean-End-->
 
@@ -92,7 +102,9 @@ Allocated networkId
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiDeviceConfig-netId?: int--><!--Device-WifiDeviceConfig-netId?: int-End-->
 
@@ -108,9 +120,11 @@ Wi-Fi key: maximum length is 64.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
 
@@ -126,9 +140,11 @@ Security type: reference definition of WifiSecurityType
 
 **Type:** WifiSecurityType
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
@@ -140,11 +156,13 @@ Security type: reference definition of WifiSecurityType
 showNoInternetDialog?: boolean
 ```
 
-Whether to show a dialog when the first network probe detects no internet.If false, the default network is bound to cellular with no dialog shown.If true, will show a no-internet dialog prompts the user to select the default network binding.Default value: true.
+Whether to show a dialog when the first network probe detects no internet. If false, the default network is bound to cellular with no dialog shown. If true, will show a no-internet dialog prompts the user to select the default network binding. Default value: true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,9 +180,11 @@ Wi-Fi SSID: the maximum length is 32.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
 
@@ -180,7 +200,9 @@ WAPI config info.
 
 **Type:** [WifiWapiConfig](arkts-connectivity-wifimanager-wifiwapiconfig-i.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiDeviceConfig-wapiConfig?: WifiWapiConfig--><!--Device-WifiDeviceConfig-wapiConfig?: WifiWapiConfig-End-->
 

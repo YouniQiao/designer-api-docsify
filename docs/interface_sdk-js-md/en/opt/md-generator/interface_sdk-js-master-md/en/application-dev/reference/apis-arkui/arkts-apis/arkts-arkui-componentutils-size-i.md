@@ -4,6 +4,8 @@ Defines the size property.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-interface Size--><!--Device-componentUtils-interface Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { componentUtils } from '@kit.ArkUI';
 height: number
 ```
 
-Component height.
-
-Unit: px
+Component height. Unit: px
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Unit: px
 width: number
 ```
 
-Component width.
-
-Unit: px
+Component width. Unit: px
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

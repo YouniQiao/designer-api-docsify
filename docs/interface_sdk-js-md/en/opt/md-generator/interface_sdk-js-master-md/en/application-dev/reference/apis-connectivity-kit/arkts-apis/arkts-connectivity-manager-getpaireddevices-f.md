@@ -12,9 +12,11 @@ import { manager } from '@kit.ConnectivityKit';
 function getPairedDevices(): string[]
 ```
 
-Gets the list of devices that have been paired with the current device.If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned.Otherwise, a random device address is returned.
+Gets the list of devices that have been paired with the current device. If the user has the ohos.permission.GET_NEARLINK_PEER_MAC permission, the real device address is returned. Otherwise, a random device address is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -34,7 +36,7 @@ Gets the list of devices that have been paired with the current device.If the us
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |

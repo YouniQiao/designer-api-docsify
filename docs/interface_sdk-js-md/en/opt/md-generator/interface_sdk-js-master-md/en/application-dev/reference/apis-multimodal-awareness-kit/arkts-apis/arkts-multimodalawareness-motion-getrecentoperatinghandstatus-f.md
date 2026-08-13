@@ -14,7 +14,9 @@ function getRecentOperatingHandStatus(): OperatingHandStatus
 
 Obtains the latest operating hand status.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 20+: ohos.permission.ACTIVITY_MOTION or ohos.permission.DETECT_GESTURE
@@ -34,9 +36,9 @@ Obtains the latest operating hand status.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-service-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-service-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

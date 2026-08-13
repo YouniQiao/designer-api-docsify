@@ -6,6 +6,8 @@ Element
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface Element--><!--Device-unnamed-export interface Element-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Adds a node to the end of the child node list of the current node.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,6 +49,8 @@ Creates and runs an animation shortcut on the component. Specify the keyframes a
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -77,6 +83,8 @@ If 0.5 is returned, 50% of the current component is visible.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Element-createIntersectionObserver(param: { ratios: Array<number> }): observer--><!--Device-Element-createIntersectionObserver(param: { ratios: Array<number> }): observer-End-->
@@ -101,11 +109,13 @@ If 0.5 is returned, 50% of the current component is visible.
 focus(obj?: FocusParamObj): void
 ```
 
-Requests or cancels the focus for a component.If focus is set to true, the focus is requested for the component.If focus is set to false, the focus is canceled for the component.This attribute can be defaulted to true.
+Requests or cancels the focus for a component. If focus is set to true, the focus is requested for the component. If focus is set to false, the focus is canceled for the component. This attribute can be defaulted to true.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -131,6 +141,8 @@ Obtains the size and position of the element.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Element-getBoundingClientRect(): RectObj--><!--Device-Element-getBoundingClientRect(): RectObj-End-->
@@ -149,11 +161,13 @@ Obtains the size and position of the element.
 rotation(obj?: FocusParamObj): void
 ```
 
-Requests or cancels the crown rotation focus for a component.If focus is set to true, the crown event focus is requested.If focus is set to false, the crown event focus is canceled.This attribute can be defaulted to true.
+Requests or cancels the crown rotation focus for a component. If focus is set to true, the crown event focus is requested. If focus is set to false, the crown event focus is canceled. This attribute can be defaulted to true.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -179,6 +193,8 @@ Sets the value of an attribute on a specified element. If the attribute already 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Element-setAttribute(name: string, value: string): void--><!--Device-Element-setAttribute(name: string, value: string): void-End-->
@@ -203,6 +219,8 @@ Sets a style value on a specified element. If the style exists and the style val
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

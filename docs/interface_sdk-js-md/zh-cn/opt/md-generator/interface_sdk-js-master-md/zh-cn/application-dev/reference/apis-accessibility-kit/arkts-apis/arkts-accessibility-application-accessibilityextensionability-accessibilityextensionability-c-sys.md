@@ -2,7 +2,9 @@
 
 AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能业务的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class AccessibilityExtensionAbility--><!--Device-unnamed-declare class AccessibilityExtensionAbility-End-->
 
@@ -14,11 +16,11 @@ AccessibilityExtensionAbility基于ExtensionAbility框架，提供辅助功能�
 onAccessibilityConnect(): void
 ```
 
-连接无障碍服务成功后的回调函数。
+连接无障碍服务成功后的回调函数。 用户启用AccessibilityExtensionAbility时，系统服务完成连接后回调该接口，在该方法中完成初始化业务逻辑操作。 该方法可以选择性重写。 无障碍服务通过该回调，通知Ability已成功连接。
 
-用户启用AccessibilityExtensionAbility时，系统服务完成连接后回调该接口，在该方法中完成初始化业务逻辑操作。 该方法可以选择性重写。 无障碍服务通过该回调，通知Ability已成功连接。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -32,8 +34,8 @@ onAccessibilityConnect(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -53,11 +55,11 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-断开无障碍服务成功后的回调函数。
+断开无障碍服务成功后的回调函数。 用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后回调该接口，在该方法中执行资源回收和退出业务操作。该方法可以选择性重写。
 
-用户停用AccessibilityExtensionAbility时，系统服务完成断开连接后回调该接口，在该方法中执行资源回收和退出业务操作。该方法可以选择性重写。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -71,8 +73,8 @@ onAccessibilityDisconnect(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -94,7 +96,9 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 
 在应用和事件发生时回调该接口，根据事件信息处理业务逻辑。通常需要重写。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -114,8 +118,8 @@ onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -140,7 +144,9 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 在物理按键按下时回调该方法，在该方法中根据业务判断是否消费事件。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -154,7 +160,7 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
+| [keyEvent](../../apis-input-kit/arkts-apis/arkts-input-inputeventclient-keyeventdata-i-sys.md) | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 |
 
 **返回值：**
 
@@ -166,8 +172,8 @@ onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

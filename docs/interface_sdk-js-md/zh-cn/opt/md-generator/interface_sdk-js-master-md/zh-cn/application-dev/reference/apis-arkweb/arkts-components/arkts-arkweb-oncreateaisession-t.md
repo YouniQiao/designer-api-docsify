@@ -8,6 +8,8 @@ AI会话创建回调函数类型。允许自定义模型初始化和结果处理
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-type OnCreateAISession = (id: string, params: string, result: OnAISessionCallback) => boolean--><!--Device-unnamed-type OnCreateAISession = (id: string, params: string, result: OnAISessionCallback) => boolean-End-->

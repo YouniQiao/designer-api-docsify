@@ -6,11 +6,13 @@ type ProgressListener = (progress: ProgressInfo) => void
 
 Defines a listener for progress data changes. If the default progress indicator is not used, you can set this API to obtain the paste progress.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-pasteboard-type ProgressListener = (progress: ProgressInfo) => void--><!--Device-pasteboard-type ProgressListener = (progress: ProgressInfo) => void-End-->
 

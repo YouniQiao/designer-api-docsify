@@ -8,11 +8,13 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 添加数据处理者配置信息，通过配置文件配置处理者接收的事件名等信息，事件发生后处理者可以接收事件，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>--><!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>-End-->
 
@@ -29,13 +31,13 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
+| Promise&lt;long&gt; | Promise对象。返回添加的事件数据处理者的唯一ID，可用于移除该数据处理者。 添加失败返回11105001错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11105001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
+| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
 
 ## 示例
 

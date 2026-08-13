@@ -6,6 +6,8 @@ Secure Element service state definition.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-omapi-enum ServiceState--><!--Device-omapi-enum ServiceState-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -22,6 +24,8 @@ Service is disconnected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-ServiceState-DISCONNECTED = 0--><!--Device-ServiceState-DISCONNECTED = 0-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -37,6 +41,8 @@ Service is connected.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-ServiceState-CONNECTED = 1--><!--Device-ServiceState-CONNECTED = 1-End-->
 

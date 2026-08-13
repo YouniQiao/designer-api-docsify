@@ -12,7 +12,7 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 function getState(): BluetoothState
 ```
 
-Obtains the Bluetooth status of a device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the Bluetooth status of a device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -20,7 +20,7 @@ Obtains the Bluetooth status of a device.On API 10 and above, the permission req
 
 **Deprecated since:** 10
 
-**Substitutes:** [getState](ohos.bluetooth.access/access#getState)
+**Substitutes:** [getState](arkts-connectivity-access-getstate-f.md#getState)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -40,8 +40,8 @@ Obtains the Bluetooth status of a device.On API 10 and above, the permission req
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900001 | Service stopped. |
 | 2900099 | Operation failed. |
 

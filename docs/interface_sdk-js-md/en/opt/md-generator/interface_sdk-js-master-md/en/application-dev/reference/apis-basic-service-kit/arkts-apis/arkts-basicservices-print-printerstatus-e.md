@@ -2,7 +2,9 @@
 
 Enumerates the printer states.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrinterStatus--><!--Device-print-enum PrinterStatus-End-->
 
@@ -16,7 +18,9 @@ PRINTER_IDLE = 0
 
 The printer is idle.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterStatus-PRINTER_IDLE = 0--><!--Device-PrinterStatus-PRINTER_IDLE = 0-End-->
 
@@ -30,7 +34,9 @@ PRINTER_BUSY = 1
 
 The printer is busy.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterStatus-PRINTER_BUSY = 1--><!--Device-PrinterStatus-PRINTER_BUSY = 1-End-->
 
@@ -44,7 +50,9 @@ PRINTER_UNAVAILABLE = 2
 
 The printer is unavailable.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2--><!--Device-PrinterStatus-PRINTER_UNAVAILABLE = 2-End-->
 

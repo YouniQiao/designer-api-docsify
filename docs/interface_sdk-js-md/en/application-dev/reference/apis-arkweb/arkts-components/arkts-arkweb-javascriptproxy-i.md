@@ -6,6 +6,8 @@ Defines the JavaScript object to be injected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface JavaScriptProxy--><!--Device-unnamed-declare interface JavaScriptProxy-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ The async method of the application side JavaScript object participating in the 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +48,8 @@ Controller.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-JavaScriptProxy-controller: WebController | WebviewController--><!--Device-JavaScriptProxy-controller: WebController | WebviewController-End-->
@@ -56,13 +62,15 @@ Controller.
 methodList: Array<string>
 ```
 
-The method of the application side JavaScript object participating  in the registration.
+The method of the application side JavaScript object participating in the registration.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,13 +84,15 @@ The method of the application side JavaScript object participating  in the regis
 name: string
 ```
 
-The name of the registered object, which is consistent with the  object name called in the window.
+The name of the registered object, which is consistent with the object name called in the window.
 
 **Type:** string
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,6 +114,8 @@ Objects participating in registration.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-JavaScriptProxy-object: object--><!--Device-JavaScriptProxy-object: object-End-->
@@ -116,13 +128,15 @@ Objects participating in registration.
 permission?: string
 ```
 
-permission configuration defining web page URLs that can access JavaScriptProxy methods.The configuration can be defined at two levels, object level and method level.
+permission configuration defining web page URLs that can access JavaScriptProxy methods. The configuration can be defined at two levels, object level and method level.
 
 **Type:** string
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,7 +4,9 @@ Remote device operation methods.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-remoteDevice-interface RemoteDevice--><!--Device-remoteDevice-interface RemoteDevice-End-->
 
@@ -26,7 +28,9 @@ Gets the ACB connection state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -48,7 +52,7 @@ Gets the ACB connection state.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getConnectionState
 
@@ -60,7 +64,9 @@ Gets the profile connection state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -82,7 +88,7 @@ Gets the profile connection state.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceClass
 
@@ -94,7 +100,9 @@ Gets the type of the NearLink device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -116,7 +124,7 @@ Gets the type of the NearLink device.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceInformation
 
@@ -128,7 +136,9 @@ Obtains the remote device information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -150,7 +160,7 @@ Obtains the remote device information.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getDeviceName
 
@@ -162,7 +172,9 @@ Gets the name of the NearLink device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -184,7 +196,7 @@ Gets the name of the NearLink device.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## getPairingState
 
@@ -196,7 +208,9 @@ Gets the pairing state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -218,7 +232,7 @@ Gets the pairing state.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## startPairing
 
@@ -230,7 +244,9 @@ Initiate pairing to remote NearLink device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -252,5 +268,5 @@ Initiate pairing to remote NearLink device.
 | --- | --- |
 | 36100003 | NearLink disabled. |
 | 36100099 | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

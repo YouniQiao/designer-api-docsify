@@ -14,11 +14,13 @@ function stopVibrationSync(): void
 
 Stops any form of motor vibration.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-vibrator-function stopVibrationSync(): void--><!--Device-vibrator-function stopVibrationSync(): void-End-->
 
@@ -28,8 +30,8 @@ Stops any form of motor vibration.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [14600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
 ## Examples
 

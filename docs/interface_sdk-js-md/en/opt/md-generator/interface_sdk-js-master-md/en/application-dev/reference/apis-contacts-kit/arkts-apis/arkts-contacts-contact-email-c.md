@@ -4,6 +4,8 @@ Defines a contact's email.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Email--><!--Device-contact-class Email-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -26,6 +28,8 @@ Custom email type, the default value is **0**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Email-static readonly CUSTOM_LABEL: 0--><!--Device-Email-static readonly CUSTOM_LABEL: 0-End-->
@@ -43,6 +47,8 @@ Home email type, the default value is **1**.
 **Type:** 1
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ Other email type, the default value is **3**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Email-static readonly EMAIL_OTHER: 3--><!--Device-Email-static readonly EMAIL_OTHER: 3-End-->
@@ -79,6 +87,8 @@ Work email type, the default value is **2**.
 **Type:** 2
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +108,8 @@ Invalid email type, the default value is **-1**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Email-static readonly INVALID_LABEL_ID: -1--><!--Device-Email-static readonly INVALID_LABEL_ID: -1-End-->
@@ -115,6 +127,8 @@ Displayed name of the email.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,6 +148,8 @@ Email address of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Email-email: string--><!--Device-Email-email: string-End-->
@@ -152,6 +168,8 @@ Type of the email.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Email-labelId?: number--><!--Device-Email-labelId?: number-End-->
@@ -169,6 +187,8 @@ Type name of the email.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

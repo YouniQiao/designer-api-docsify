@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo--><!--Device-unnamed-declare interface MicrophoneCaptureStateChangeInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ newState: MicrophoneCaptureState
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-newState: MicrophoneCaptureState-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -41,6 +45,8 @@ originalState: MicrophoneCaptureState
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState--><!--Device-MicrophoneCaptureStateChangeInfo-originalState: MicrophoneCaptureState-End-->
 

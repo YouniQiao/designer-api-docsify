@@ -14,7 +14,9 @@ function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean
 
 Checks whether the trace flag is enabled for **HiTraceId**. This API returns the result synchronously.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean--><!--Device-hiTraceChain-function isFlagEnabled(id: HiTraceId, flag: HiTraceFlag): boolean-End-->
 

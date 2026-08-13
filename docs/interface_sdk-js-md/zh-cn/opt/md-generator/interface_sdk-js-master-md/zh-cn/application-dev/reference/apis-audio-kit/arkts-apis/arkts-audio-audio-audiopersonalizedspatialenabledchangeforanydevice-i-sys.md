@@ -1,8 +1,10 @@
 # AudioPersonalizedSpatialEnabledChangeForAnyDevice（系统接口）
 
-通知监听器开启个性化空间任何设备的状态变化。
+通知监听器开启个性化空间 任何设备的状态变化。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice--><!--Device-audio-interface AudioPersonalizedSpatialEnabledChangeForAnyDevice-End-->
 
@@ -21,6 +23,8 @@ deviceDescriptor: AudioDeviceDescriptor
 **类型：** [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ enabled: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

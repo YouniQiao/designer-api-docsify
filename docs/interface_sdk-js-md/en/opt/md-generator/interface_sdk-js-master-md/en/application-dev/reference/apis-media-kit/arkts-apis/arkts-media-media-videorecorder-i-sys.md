@@ -1,8 +1,10 @@
 # VideoRecorder (System API)
 
-The maintenance of this interface has been stopped since version api 9. Please use AVRecorder.Manages and record video. Before calling an VideoRecorder method, you must use createVideoRecorder()to create an VideoRecorder instance.
+The maintenance of this interface has been stopped since version api 9. Please use AVRecorder. Manages and record video. Before calling an VideoRecorder method, you must use createVideoRecorder() to create an VideoRecorder instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface VideoRecorder--><!--Device-media-interface VideoRecorder-End-->
 
@@ -26,6 +28,8 @@ get input surface.it must be called between prepare completed and start.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -42,10 +46,10 @@ get input surface.it must be called between prepare completed and start.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -67,12 +71,47 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 ## getInputSurface
 
 ```TypeScript
+getInputSurface(callback: AsyncCallback<string | undefined>): void
+```
+
+get input surface.it must be called between prepare completed and start.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string | undefined>): void--><!--Device-VideoRecorder-getInputSurface(callback: AsyncCallback<string | undefined>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoRecorder
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string \| undefined & gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+
+## getInputSurface
+
+```TypeScript
 getInputSurface(): Promise<string>
 ```
 
 get input surface. it must be called between prepare completed and start.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-getInputSurface(): Promise<string>--><!--Device-VideoRecorder-getInputSurface(): Promise<string>-End-->
 
@@ -90,10 +129,10 @@ get input surface. it must be called between prepare completed and start.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -110,7 +149,73 @@ videoRecorder.getInputSurface().then((surfaceId: string) => {
 });
 ```
 
-## on('error')
+## getInputSurface
+
+```TypeScript
+getInputSurface(): Promise<string | undefined>
+```
+
+get input surface. it must be called between prepare completed and start.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoRecorder-getInputSurface(): Promise<string | undefined>--><!--Device-VideoRecorder-getInputSurface(): Promise<string | undefined>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoRecorder
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;string \ | undefined & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Listens for video recording error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoRecorder-onError(callback: ErrorCallback): void--><!--Device-VideoRecorder-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoRecorder
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -119,6 +224,8 @@ on(type: 'error', callback: ErrorCallback): void
 Listens for video recording error events.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void--><!--Device-VideoRecorder-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -137,10 +244,10 @@ Listens for video recording error events.
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -161,7 +268,9 @@ pause(callback: AsyncCallback<void>): void
 
 Pauses video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -179,10 +288,10 @@ Pauses video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -207,7 +316,9 @@ pause(): Promise<void>
 
 Pauses video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-pause(): Promise<void>--><!--Device-VideoRecorder-pause(): Promise<void>-End-->
 
@@ -225,10 +336,10 @@ Pauses video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -251,7 +362,9 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 
 Prepares for recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -272,11 +385,11 @@ Prepares for recording.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -324,7 +437,9 @@ prepare(config: VideoRecorderConfig): Promise<void>
 
 Prepares for recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MICROPHONE
 
@@ -350,11 +465,11 @@ Prepares for recording.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -400,7 +515,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases resources used for video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-release(callback: AsyncCallback<void>): void-End-->
 
@@ -418,8 +535,8 @@ Releases resources used for video recording.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -444,7 +561,9 @@ release(): Promise<void>
 
 Releases resources used for video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-release(): Promise<void>--><!--Device-VideoRecorder-release(): Promise<void>-End-->
 
@@ -462,8 +581,8 @@ Releases resources used for video recording.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -484,9 +603,11 @@ videoRecorder.release().then(() => {
 reset(callback: AsyncCallback<void>): void
 ```
 
-Resets video recording.Before resetting video recording, you must call stop() to stop recording. After video recording is reset,you must call prepare() to set the recording configurations for another recording.
+Resets video recording. Before resetting video recording, you must call stop() to stop recording. After video recording is reset, you must call prepare() to set the recording configurations for another recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -504,9 +625,9 @@ Resets video recording.Before resetting video recording, you must call stop() to
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -529,9 +650,11 @@ videoRecorder.reset((err: BusinessError) => {
 reset(): Promise<void>
 ```
 
-Resets video recording.Before resetting video recording, you must call stop() to stop recording. After video recording is reset,you must call prepare() to set the recording configurations for another recording.
+Resets video recording. Before resetting video recording, you must call stop() to stop recording. After video recording is reset, you must call prepare() to set the recording configurations for another recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-reset(): Promise<void>--><!--Device-VideoRecorder-reset(): Promise<void>-End-->
 
@@ -549,9 +672,9 @@ Resets video recording.Before resetting video recording, you must call stop() to
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -574,7 +697,9 @@ resume(callback: AsyncCallback<void>): void
 
 Resumes video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-resume(callback: AsyncCallback<void>): void-End-->
 
@@ -592,10 +717,10 @@ Resumes video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -620,7 +745,9 @@ resume(): Promise<void>
 
 Resumes video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-resume(): Promise<void>--><!--Device-VideoRecorder-resume(): Promise<void>-End-->
 
@@ -638,10 +765,10 @@ Resumes video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -664,7 +791,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-start(callback: AsyncCallback<void>): void-End-->
 
@@ -682,10 +811,10 @@ Starts video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -710,7 +839,9 @@ start(): Promise<void>
 
 Starts video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-start(): Promise<void>--><!--Device-VideoRecorder-start(): Promise<void>-End-->
 
@@ -728,10 +859,10 @@ Starts video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -754,7 +885,9 @@ stop(callback: AsyncCallback<void>): void
 
 Stops video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void--><!--Device-VideoRecorder-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -772,10 +905,10 @@ Stops video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -800,7 +933,9 @@ stop(): Promise<void>
 
 Stops video recording.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-stop(): Promise<void>--><!--Device-VideoRecorder-stop(): Promise<void>-End-->
 
@@ -818,10 +953,10 @@ Stops video recording.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../errorcode-media.md#5400103-io-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -846,7 +981,9 @@ video recorder state.
 
 **Type:** [VideoRecordState](arkts-media-media-videorecordstate-t-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorder-readonly state: VideoRecordState--><!--Device-VideoRecorder-readonly state: VideoRecordState-End-->
 

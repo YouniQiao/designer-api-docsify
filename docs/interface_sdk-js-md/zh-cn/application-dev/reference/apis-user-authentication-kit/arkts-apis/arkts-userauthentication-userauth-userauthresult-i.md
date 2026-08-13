@@ -1,10 +1,12 @@
 # UserAuthResult
 
-用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#IAuthCallback)的onResult回调获取此结果。
+用户认证结果。认证通过时，返回认证类型和认证通过的令牌信息；认证不通过时，返回相应的错误码。该接口用于描述认证完成后的结果信息，应用可通过[IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#IAuthCallback)的 onResult回调获取此结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-userAuth-interface UserAuthResult--><!--Device-userAuth-interface UserAuthResult-End-->
 
@@ -20,9 +22,11 @@ authType?: UserAuthType
 
 **类型：** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,15 +40,17 @@ authType?: UserAuthType
 enrolledState?: EnrolledState
 ```
 
-认证通过时，返回注册凭据的状态。包含当前认证类型的凭据摘要和数量。应用可通过对比此值与之前保存的值，判断用户凭据是否发生变化。若启用了认证结果复用且之前认证使用的凭据已被删除（人脸或指纹），返回的enrolledState中credentialCount和credentialDigest均为0。
+认证通过时，返回注册凭据的状态。包含当前认证类型的凭据摘要和数量。应用可通过对比此值与之前保存的值，判断用户凭据是否发生变化。若启用了认证结果复用且之前认证使用的凭据已被删除（人脸或指纹），返回的enrolledState中 credentialCount和credentialDigest均为0。
 
 **类型：** [EnrolledState](arkts-userauthentication-userauth-enrolledstate-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-UserAuthResult-enrolledState?: EnrolledState--><!--Device-UserAuthResult-enrolledState?: EnrolledState-End-->
 
@@ -56,22 +62,15 @@ enrolledState?: EnrolledState
 result: int
 ```
 
-用户认证结果。若成功返回SUCCESS(12500000)，若失败返回相应错误码。错误码包括：
+用户认证结果。若成功返回SUCCESS(12500000)，若失败返回相应错误码。错误码包括： - FAIL(12500001)：认证不通过。 - CANCELED(12500003)：认证取消。 - TIMEOUT(12500004)：认证超时。 - LOCKED(12500009)：认证器锁定。 - NOT_ENROLLED(12500010)：未注册凭据。 - PIN_EXPIRED(12500013)：锁屏密码过期。 完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode)。
 
-- FAIL(12500001)：认证不通过。  
-- CANCELED(12500003)：认证取消。  
-- TIMEOUT(12500004)：认证超时。  
-- LOCKED(12500009)：认证器锁定。  
-- NOT_ENROLLED(12500010)：未注册凭据。  
-- PIN_EXPIRED(12500013)：锁屏密码过期。
+**类型：** int
 
-完整错误码列表参见[UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode)。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -89,9 +88,11 @@ token?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

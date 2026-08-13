@@ -2,7 +2,9 @@
 
 表示请求结果的信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface RequestResult--><!--Device-osAccount-interface RequestResult-End-->
 
@@ -20,7 +22,9 @@ credentialId?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestResult-credentialId?: Uint8Array--><!--Device-RequestResult-credentialId?: Uint8Array-End-->
 

@@ -2,11 +2,13 @@
 
 Defines the moving photo view attribute functions.
 
-**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod<MovingPhotoViewAttribute>](CommonMethod<MovingPhotoViewAttribute>)
+**Inheritance/Implementation:** MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>--><!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class MovingPhotoViewAttribute--><!--Device-unnamed-declare class MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -25,6 +27,8 @@ setPlaybackStrategy(strategy: media.PlaybackStrategy): MovingPhotoViewAttribute
 Sets playback strategy.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -50,7 +54,7 @@ Sets playback strategy.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

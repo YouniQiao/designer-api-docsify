@@ -12,13 +12,13 @@ import { text } from '@kit.ArkGraphics2D';
 function getFontCount(path: string | Resource) : int
 ```
 
-Obtains the number of font files contained in a font file based on the font file path.
-
-Returns **0** if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
+Obtains the number of font files contained in a font file based on the font file path. Returns **0** if the font file is not found, the font file path is invalid, the font file does not have the required permission, or the file is not in the font format.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +38,7 @@ Returns **0** if the font file is not found, the font file path is invalid, the 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of fonts. |
+| int | Number of fonts. |
 
 ## Examples
 

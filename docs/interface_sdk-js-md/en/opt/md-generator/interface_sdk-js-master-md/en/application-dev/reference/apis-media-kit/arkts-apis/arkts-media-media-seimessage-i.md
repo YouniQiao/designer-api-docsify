@@ -2,7 +2,9 @@
 
 Describes the information of an SEI message.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface SeiMessage--><!--Device-media-interface SeiMessage-End-->
 
@@ -24,9 +26,11 @@ Payload data of SEI message.
 
 **Type:** ArrayBuffer
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SeiMessage-payload: ArrayBuffer--><!--Device-SeiMessage-payload: ArrayBuffer-End-->
 
@@ -42,9 +46,11 @@ Payload type of SEI message.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SeiMessage-payloadType: int--><!--Device-SeiMessage-payloadType: int-End-->
 

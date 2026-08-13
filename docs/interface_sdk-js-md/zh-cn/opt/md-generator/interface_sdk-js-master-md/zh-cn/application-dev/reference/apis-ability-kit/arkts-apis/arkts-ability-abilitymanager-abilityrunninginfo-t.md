@@ -6,7 +6,9 @@ export type AbilityRunningInfo = _AbilityRunningInfo
 
 AbilityRunningInfo二级模块。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityManager-export type AbilityRunningInfo = _AbilityRunningInfo--><!--Device-abilityManager-export type AbilityRunningInfo = _AbilityRunningInfo-End-->
 

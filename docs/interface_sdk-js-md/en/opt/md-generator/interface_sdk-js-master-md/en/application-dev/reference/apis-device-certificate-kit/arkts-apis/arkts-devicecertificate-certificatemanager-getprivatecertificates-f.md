@@ -14,7 +14,9 @@ function getPrivateCertificates(): Promise<CMResult>
 
 Obtains the credentials for installing the application. This API uses a promise to return the result asynchronously.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -32,8 +34,8 @@ Obtains the credentials for installing the application. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 

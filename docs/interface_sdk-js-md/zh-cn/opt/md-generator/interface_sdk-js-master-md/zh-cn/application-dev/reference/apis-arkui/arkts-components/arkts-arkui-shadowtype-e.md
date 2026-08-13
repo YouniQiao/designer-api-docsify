@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ShadowType--><!--Device-unnamed-declare enum ShadowType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ COLOR = 0
 颜色。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ BLUR = 1
 模糊。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

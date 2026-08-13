@@ -4,6 +4,8 @@ HUKS handle结构体。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-huks-export interface HuksSessionHandle--><!--Device-huks-export interface HuksSessionHandle-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -14,12 +16,13 @@ HUKS handle结构体。
 challenge?: Uint8Array
 ```
 
-表示  
-[initSession](arkts-universalkeystore-huks-initsession-f.md#initSession)操作之后获取到的challenge信息。默认为undefined。
+表示 [initSession](arkts-universalkeystore-huks-initsession-f.md#initSession) 操作之后获取到的challenge信息。默认为undefined。
 
 **类型：** Uint8Array
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +41,8 @@ handle: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -1,15 +1,4 @@
-# @ohos.atomicservice.AtomicServiceWeb(Defines the atomicService web component)
-
-###### 需要权限
- 访问在线网页时需添加网络权限：ohos.permission.INTERNET，
- 具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
- ###### 子组件
- 无
- ###### 属性
- 不支持[通用属性](./@internal/component/ets/common)。
- ###### 事件
- 不支持[通用事件](./@internal/component/ets/common)。
-
+# @ohos.atomicservice.AtomicServiceWeb
 
 ## 汇总
 
@@ -17,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md) | 通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。一个AtomicServiceWebController对象只能控制一个AtomicServiceWeb组件，且必须在AtomicServiceWeb组件和AtomicServiceWebController绑定后，才能调用AtomicServiceWebController上的方法。 |
+| [AtomicServiceWebController](arkts-arkui-atomicservice-atomicserviceweb-atomicservicewebcontroller-c.md) | 通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。一个AtomicServiceWebController对象只能控制一个AtomicServiceWeb组件，且必须在 AtomicServiceWeb组件和AtomicServiceWebController绑定后，才能调用AtomicServiceWebController上的方法。 |
 
 ### 结构体
 

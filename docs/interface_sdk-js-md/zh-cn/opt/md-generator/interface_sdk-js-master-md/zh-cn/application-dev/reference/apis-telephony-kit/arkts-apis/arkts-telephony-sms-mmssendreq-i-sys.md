@@ -2,7 +2,9 @@
 
 彩信发送请求。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsSendReq--><!--Device-sms-export interface MmsSendReq-End-->
 
@@ -20,7 +22,9 @@ bcc?: Array<MmsAddress>
 
 **类型：** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-bcc?: Array<MmsAddress>--><!--Device-MmsSendReq-bcc?: Array<MmsAddress>-End-->
 
@@ -38,7 +42,9 @@ cc?: Array<MmsAddress>
 
 **类型：** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-cc?: Array<MmsAddress>--><!--Device-MmsSendReq-cc?: Array<MmsAddress>-End-->
 
@@ -56,7 +62,9 @@ contentType: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-contentType: string--><!--Device-MmsSendReq-contentType: string-End-->
 
@@ -74,7 +82,9 @@ date?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-date?: long--><!--Device-MmsSendReq-date?: long-End-->
 
@@ -92,7 +102,9 @@ deliveryReport?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-deliveryReport?: int--><!--Device-MmsSendReq-deliveryReport?: int-End-->
 
@@ -110,7 +122,9 @@ expiry?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-expiry?: int--><!--Device-MmsSendReq-expiry?: int-End-->
 
@@ -128,7 +142,9 @@ from: MmsAddress
 
 **类型：** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-from: MmsAddress--><!--Device-MmsSendReq-from: MmsAddress-End-->
 
@@ -146,7 +162,9 @@ messageClass?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-messageClass?: int--><!--Device-MmsSendReq-messageClass?: int-End-->
 
@@ -164,7 +182,9 @@ priority?: MmsPriorityType
 
 **类型：** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-priority?: MmsPriorityType--><!--Device-MmsSendReq-priority?: MmsPriorityType-End-->
 
@@ -182,7 +202,9 @@ readReport?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-readReport?: int--><!--Device-MmsSendReq-readReport?: int-End-->
 
@@ -200,7 +222,9 @@ senderVisibility?: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-senderVisibility?: int--><!--Device-MmsSendReq-senderVisibility?: int-End-->
 
@@ -218,7 +242,9 @@ subject?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-subject?: string--><!--Device-MmsSendReq-subject?: string-End-->
 
@@ -236,7 +262,9 @@ to?: Array<MmsAddress>
 
 **类型：** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-to?: Array<MmsAddress>--><!--Device-MmsSendReq-to?: Array<MmsAddress>-End-->
 
@@ -254,7 +282,9 @@ transactionId: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-transactionId: string--><!--Device-MmsSendReq-transactionId: string-End-->
 
@@ -272,7 +302,9 @@ version: MmsVersionType
 
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsSendReq-version: MmsVersionType--><!--Device-MmsSendReq-version: MmsVersionType-End-->
 

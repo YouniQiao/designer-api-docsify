@@ -4,6 +4,8 @@ The http body stream of the request.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ getPosition(): number
 读取WebHttpBodyStream中当前的读取位置。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,6 +44,8 @@ getSize(): number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
@@ -62,6 +68,8 @@ initialize(): Promise<void>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
@@ -78,7 +86,7 @@ initialize(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [17100022](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100022-webhttpbodystream初始化失败) |
+| [17100022](../errorcode-webview.md#17100022-webhttpbodystream初始化失败) |
 
 ## isChunked
 
@@ -89,6 +97,8 @@ isChunked(): boolean
 WebHttpBodyStream是否采用分块传输。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -112,6 +122,8 @@ isEof(): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-isEof(): boolean--><!--Device-WebHttpBodyStream-isEof(): boolean-End-->
@@ -133,6 +145,8 @@ isInMemory(): boolean
 判断WebHttpBodyStream中的上传数据是否在内存中。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -156,6 +170,8 @@ read(size: number): Promise<ArrayBuffer>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>-End-->
@@ -178,4 +194,4 @@ read(size: number): Promise<ArrayBuffer>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

@@ -8,6 +8,8 @@ Represents resource-related information, including the application bundle name, 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendableResourceManager-export type Resource = _Resource--><!--Device-sendableResourceManager-export type Resource = _Resource-End-->

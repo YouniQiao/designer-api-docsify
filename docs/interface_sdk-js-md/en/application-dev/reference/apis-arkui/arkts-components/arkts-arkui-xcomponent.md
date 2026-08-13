@@ -1,14 +1,8 @@
 # XComponent
 
-**XComponent** provides a [surface](docroot://ui/napi-xcomponent-guidelines.md#overview) for graphics rendering and
-media data input into your view. You can customize the position and size of the surface as needed. For details, see
-[Native XComponent](docroot://ui/napi-xcomponent-guidelines.md).
+**XComponent** provides a [surface](../../../ui/napi-xcomponent-guidelines.md#overview) for graphics rendering and media data input into your view. You can customize the position and size of the surface as needed. For details, see [Native XComponent](../../../ui/napi-xcomponent-guidelines.md). > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## XComponent
 
@@ -24,7 +18,7 @@ Constructor parameters
 
 **Deprecated since:** 12
 
-**Substitutes:** [(value:]((value:)
+**Substitutes:** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 
 <!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
 
@@ -42,14 +36,13 @@ Constructor parameters
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
-Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side.
-
-This API is deprecated since API version 12. You are advised to use  
-[XComponent(options: XComponentOptions)](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)instead.
+Creates an **XComponent** component, whose lifecycle callbacks can be triggered from the native side. This API is deprecated since API version 12. You are advised to use [XComponent(options: XComponentOptions)](../../../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12) instead.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,6 +70,8 @@ Creates an **XComponent** component, allowing you to obtain the **SurfaceId** va
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -103,6 +98,8 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -119,10 +116,10 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 
 ## Summary
 
-- [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md)
-- [SurfaceConfig](arkts-arkui-xcomponent-surfaceconfig-i.md)
-- [SurfaceRect](arkts-arkui-xcomponent-surfacerect-i.md)
-- [SurfaceRotationOptions](arkts-arkui-xcomponent-surfacerotationoptions-i.md)
-- [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md)
-- [OnNativeLoadCallback](arkts-arkui-xcomponent-onnativeloadcallback-t.md)
-- [HdrType](arkts-arkui-xcomponent-hdrtype-e.md)
+- [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md)
+- [SurfaceConfig](arkts-arkui-surfaceconfig-i.md)
+- [SurfaceRect](arkts-arkui-surfacerect-i.md)
+- [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)
+- [XComponentOptions](arkts-arkui-xcomponentoptions-i.md)
+- [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md)
+- [HdrType](arkts-arkui-hdrtype-e.md)

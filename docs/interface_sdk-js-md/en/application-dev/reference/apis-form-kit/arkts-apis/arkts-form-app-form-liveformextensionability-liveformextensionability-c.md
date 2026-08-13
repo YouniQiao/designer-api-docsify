@@ -2,13 +2,15 @@
 
 Interactive widget extension class. It provides APIs for the widget provider to receive notifications about widget creation and destruction.
 
-**Inheritance/Implementation:** LiveFormExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** LiveFormExtensionAbility extends ExtensionAbility
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class LiveFormExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class LiveFormExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LiveFormExtensionAbility--><!--Device-unnamed-declare class LiveFormExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -26,13 +28,15 @@ onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession)
 
 Called after the UI content of **LiveFormExtensionAbility** is created.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LiveFormExtensionAbility-onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession): void--><!--Device-LiveFormExtensionAbility-onLiveFormCreate(liveFormInfo: LiveFormInfo, session: UIExtensionContentSession): void-End-->
 
@@ -68,13 +72,15 @@ onLiveFormDestroy(liveFormInfo: LiveFormInfo): void
 
 Called to clear resources when this **LiveFormExtensionAbility** is destroyed.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LiveFormExtensionAbility-onLiveFormDestroy(liveFormInfo: LiveFormInfo): void--><!--Device-LiveFormExtensionAbility-onLiveFormDestroy(liveFormInfo: LiveFormInfo): void-End-->
 
@@ -106,14 +112,15 @@ export default class LiveFormExtAbility extends LiveFormExtensionAbility {
 context: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,14 +136,15 @@ Context of the **LiveFormExtensionAbility**. This context is inherited from
 liveFormContext: LiveFormExtensionContext
 ```
 
-Context of the **LiveFormExtensionAbility**. This context is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context of the **LiveFormExtensionAbility**. This context is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [LiveFormExtensionContext](arkts-form-liveformextensioncontext-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

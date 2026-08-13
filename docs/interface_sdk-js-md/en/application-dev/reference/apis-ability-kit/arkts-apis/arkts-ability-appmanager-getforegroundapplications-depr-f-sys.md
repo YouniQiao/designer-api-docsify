@@ -14,7 +14,7 @@ getForegroundApplications.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
+**Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications-(System-API))
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -28,7 +28,7 @@ getForegroundApplications.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
 
 ## Examples
 
@@ -59,7 +59,7 @@ getForegroundApplications.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
+**Substitutes:** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications-(System-API))
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 

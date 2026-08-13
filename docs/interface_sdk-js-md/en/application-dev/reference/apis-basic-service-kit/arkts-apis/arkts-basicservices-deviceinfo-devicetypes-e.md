@@ -2,9 +2,11 @@
 
 Enumerates device types, which can be used to verify the return value of **deviceType**.
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-deviceInfo-enum DeviceTypes--><!--Device-deviceInfo-enum DeviceTypes-End-->
 
@@ -18,11 +20,13 @@ TYPE_DEFAULT = 'default'
 
 Default device
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_DEFAULT = 'default'--><!--Device-DeviceTypes-TYPE_DEFAULT = 'default'-End-->
 
@@ -36,11 +40,13 @@ TYPE_PHONE = 'phone'
 
 Smartphone
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_PHONE = 'phone'--><!--Device-DeviceTypes-TYPE_PHONE = 'phone'-End-->
 
@@ -54,11 +60,13 @@ TYPE_TABLET = 'tablet'
 
 Tablet
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_TABLET = 'tablet'--><!--Device-DeviceTypes-TYPE_TABLET = 'tablet'-End-->
 
@@ -72,11 +80,13 @@ TYPE_2IN1 = '2in1'
 
 PC/2-in-1 device
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_2IN1 = '2in1'--><!--Device-DeviceTypes-TYPE_2IN1 = '2in1'-End-->
 
@@ -90,11 +100,13 @@ TYPE_TV = 'tv'
 
 Smart TV
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_TV = 'tv'--><!--Device-DeviceTypes-TYPE_TV = 'tv'-End-->
 
@@ -108,11 +120,13 @@ TYPE_WEARABLE = 'wearable'
 
 Wearable
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'--><!--Device-DeviceTypes-TYPE_WEARABLE = 'wearable'-End-->
 
@@ -126,11 +140,13 @@ TYPE_CAR = 'car'
 
 Head unit
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-DeviceTypes-TYPE_CAR = 'car'--><!--Device-DeviceTypes-TYPE_CAR = 'car'-End-->
 

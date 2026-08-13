@@ -2,7 +2,9 @@
 
 Enumerates the certificate algorithms.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CertAlgorithm--><!--Device-certificateManager-export enum CertAlgorithm-End-->
 
@@ -16,7 +18,9 @@ INTERNATIONAL = 1
 
 International cryptographic algorithm, such as RSA and NIST ECC.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertAlgorithm-INTERNATIONAL = 1--><!--Device-CertAlgorithm-INTERNATIONAL = 1-End-->
 
@@ -28,9 +32,11 @@ International cryptographic algorithm, such as RSA and NIST ECC.
 SM = 2
 ```
 
-Indicates the commercial cryptographic algorithm, such as SM2 and SM4.Devices outside China do not support certificates using this algorithm.
+Indicates the commercial cryptographic algorithm, such as SM2 and SM4. Devices outside China do not support certificates using this algorithm.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertAlgorithm-SM = 2--><!--Device-CertAlgorithm-SM = 2-End-->
 

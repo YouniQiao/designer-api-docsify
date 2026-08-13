@@ -12,11 +12,13 @@ import { settings } from '@kit.BasicServicesKit';
 function isDoubleClickAppForSelf(): Promise<boolean>
 ```
 
-1. Checks whether the application started by double-pressing the Down key is the application itself.2. This API is triggered to check whether double-pressing the Down key starts the application itself.
+1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

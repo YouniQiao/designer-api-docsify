@@ -8,7 +8,7 @@ Configuring parameters in reverse geocode requests
 
 **Deprecated since:** 9
 
-**Substitutes:** [ReverseGeoCodeRequest](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest)
+**Substitutes:** [ReverseGeoCodeRequest](arkts-location-geolocationmanager-reversegeocoderequest-i.md#ReverseGeoCodeRequest)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -36,7 +36,7 @@ latitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#latitude)
+**Substitutes:** [latitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#latitude)
 
 <!--Device-ReverseGeoCodeRequest-latitude: number--><!--Device-ReverseGeoCodeRequest-latitude: number-End-->
 
@@ -56,7 +56,7 @@ locale?: string
 
 **Deprecated since:** 9
 
-**Substitutes:** [locale](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#locale)
+**Substitutes:** [locale](arkts-location-geolocationmanager-reversegeocoderequest-i.md#locale)
 
 <!--Device-ReverseGeoCodeRequest-locale?: string--><!--Device-ReverseGeoCodeRequest-locale?: string-End-->
 
@@ -76,7 +76,7 @@ longitude: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#longitude)
+**Substitutes:** [longitude](arkts-location-geolocationmanager-reversegeocoderequest-i.md#longitude)
 
 <!--Device-ReverseGeoCodeRequest-longitude: number--><!--Device-ReverseGeoCodeRequest-longitude: number-End-->
 
@@ -96,7 +96,7 @@ maxItems?: number
 
 **Deprecated since:** 9
 
-**Substitutes:** [maxItems](ohos.geoLocationManager/geoLocationManager.ReverseGeoCodeRequest#maxItems)
+**Substitutes:** [maxItems](arkts-location-geolocationmanager-reversegeocoderequest-i.md#maxItems)
 
 <!--Device-ReverseGeoCodeRequest-maxItems?: number--><!--Device-ReverseGeoCodeRequest-maxItems?: number-End-->
 

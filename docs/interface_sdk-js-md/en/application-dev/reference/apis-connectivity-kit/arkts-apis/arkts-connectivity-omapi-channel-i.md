@@ -6,6 +6,8 @@ Channel represents an [ISO 7816-4] channel opened to a SE. It can be either a lo
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface Channel--><!--Device-omapi-export interface Channel-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -22,11 +24,13 @@ import { omapi } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Closes this channel to the SE.If the method is called when the channel is already closed, this method SHALL be ignored.
+Closes this channel to the SE. If the method is called when the channel is already closed, this method SHALL be ignored.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Channel-close(): void--><!--Device-Channel-close(): void-End-->
 
@@ -36,7 +40,7 @@ Closes this channel to the SE.If the method is called when the channel is alread
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -66,6 +70,8 @@ Returns the data as received from the application select command, including the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Channel-getSelectResponse(): number[]--><!--Device-Channel-getSelectResponse(): number[]-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -80,7 +86,7 @@ Returns the data as received from the application select command, including the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -111,6 +117,8 @@ Get the session that has opened this channel.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Channel-getSession(): Session--><!--Device-Channel-getSession(): Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -125,7 +133,7 @@ Get the session that has opened this channel.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -157,6 +165,8 @@ Checks whether this channel is the basic channel.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Channel-isBasicChannel(): boolean--><!--Device-Channel-isBasicChannel(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -171,7 +181,7 @@ Checks whether this channel is the basic channel.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -202,6 +212,8 @@ Checks if this channel is closed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Channel-isClosed(): boolean--><!--Device-Channel-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -216,7 +228,7 @@ Checks if this channel is closed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -247,6 +259,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Channel-transmit(command: number[]): Promise<number[]>--><!--Device-Channel-transmit(command: number[]): Promise<number[]>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -267,11 +281,11 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -306,6 +320,8 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void--><!--Device-Channel-transmit(command: number[], callback: AsyncCallback<number[]>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -315,17 +331,17 @@ Transmit an APDU command (as per ISO/IEC 7816) to the SE.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | command | number[] | Yes | The APDU command to be transmitted, as a byte array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number[]&gt; | Yes | The callback to return the response received, as a byte array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number[]&gt; | Yes | The callback to return the response received, as a byte array. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the command is filtered by the security policy. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session or channel that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 

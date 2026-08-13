@@ -13,13 +13,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo,
     callback: AsyncCallback<DragEventParam>): void
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object
-> associated with the current UI context.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. > **NOTE：**> > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object > associated with the current UI context.
 
 **Since:** 10
 
@@ -27,7 +21,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Deprecated since:** 18
 
-**Substitutes:** [executeDrag](ohos.arkui.UIContext.DragController#executeDrag)
+**Substitutes:** executeDrag
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,20 +35,20 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.&lt;br&gt;**NOTE：**&lt;br&gt;The global builder is not supported. If the [Image](image) component is used in the builder, enable synchronous loading, that is, set the [syncLoad](ImageAttribute#syncLoad) attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
+| custom | CustomBuilder \| DragItemInfo | Yes | Object to be dragged.&lt;br&gt;**NOTE：**&lt;br&gt;The global builder is not supported. If the Image component is used in the builder, enable synchronous loading, that is, set the syncLoad attribute of the component to **true**. The builder is used only to generate the image displayed during the current dragging. If the root component of the builder has zero width or height, it will cause failure in drag image generation, which in turn breaks the entire drag operation. Changes to the builder, if any, apply to the next dragging, but not to the current dragging. |
 | dragInfo | [DragInfo](arkts-arkui-dragcontroller-draginfo-i.md) | Yes | Drag information. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined** and **data** is the **DragEventParam** object obtained. Otherwise, **err** is an error object.<br>**Since:** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined** and **data** is the **DragEventParam** object obtained. Otherwise, **err** is an error object.<br>**Since:** 12 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 
-You are advised to use the [getDragController](arkts-apis-uicontext-uicontext.md#getdragcontroller11) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';
@@ -140,13 +134,7 @@ struct DragControllerPage {
 function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): Promise<DragEventParam>
 ```
 
-Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object
-> associated with the current UI context.
+Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. > **NOTE：**> > Since API version 11, you can use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [DragController](arkts-arkui-arkui-uicontext-dragcontroller-c.md#DragController) object > associated with the current UI context.
 
 **Since:** 10
 
@@ -154,7 +142,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Deprecated since:** 18
 
-**Substitutes:** [executeDrag](ohos.arkui.UIContext.DragController#executeDrag)
+**Substitutes:** executeDrag
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,12 +170,12 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal handling failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal handling failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 
-You are advised to use the [getDragController](arkts-apis-uicontext-uicontext.md#getdragcontroller11) to obtain the DragController object associated with the current UI context.
+You are advised to use the [getDragController](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) to obtain the DragController object associated with the current UI context.
 
 ```TypeScript
 import { dragController } from '@kit.ArkUI';

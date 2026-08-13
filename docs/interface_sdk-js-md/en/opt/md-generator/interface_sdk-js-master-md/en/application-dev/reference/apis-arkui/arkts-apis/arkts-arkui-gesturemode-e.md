@@ -4,6 +4,8 @@ Defines the recognition mode of a gesture group.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum GestureMode--><!--Device-unnamed-declare enum GestureMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,11 @@ Defines the recognition mode of a gesture group.
 Sequence
 ```
 
-Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized.
-
-Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
+Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized. Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,6 +38,8 @@ Parallel recognition. Registered gestures are recognized concurrently until all 
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-GestureMode-Parallel--><!--Device-GestureMode-Parallel-End-->
@@ -51,6 +55,8 @@ Exclusive
 Exclusive recognition. All registered gestures are processed simultaneously. Once any gesture is recognized successfully, the recognition process ends, and all other gestures are deemed unrecognized.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

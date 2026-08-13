@@ -2,7 +2,9 @@
 
 画中画控制面板控件动作回调的参数。
 
-**起始版本：** 12
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-PiPWindow-interface ControlEventParam--><!--Device-PiPWindow-interface ControlEventParam-End-->
 
@@ -18,9 +20,11 @@ controlType: PiPControlType
 
 **类型：** [PiPControlType](arkts-arkui-pipwindow-pipcontroltype-e.md)
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ControlEventParam-controlType: PiPControlType--><!--Device-ControlEventParam-controlType: PiPControlType-End-->
 
@@ -32,13 +36,15 @@ controlType: PiPControlType
 status?: PiPControlStatus
 ```
 
-表示可切换状态的控件当前的状态，如具备打开和关闭两种状态的麦克风控件组、摄像头控件组和静音控件组，打开为PiPControlStatus.PLAY，关闭为PiPControlStatus.PAUSE。如不具备开/关和播放/暂停状态的挂断控件默认返回值为-1。
+表示可切换状态的控件当前的状态，如具备打开和关闭两种状态的麦克风控件组、摄像头控件组和静音控件组，打开为PiPControlStatus.PLAY，关闭为PiPControlStatus.PAUSE。如不具备开/关和播放/暂停 状态的挂断控件默认返回值为-1。
 
 **类型：** [PiPControlStatus](arkts-arkui-pipwindow-pipcontrolstatus-e.md)
 
-**起始版本：** 12
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ControlEventParam-status?: PiPControlStatus--><!--Device-ControlEventParam-status?: PiPControlStatus-End-->
 

@@ -2,7 +2,9 @@
 
 Defines the SIM card label.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface SimLabel--><!--Device-sim-export interface SimLabel-End-->
 
@@ -24,7 +26,9 @@ Represents the SIM card index.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimLabel-index: int--><!--Device-SimLabel-index: int-End-->
 
@@ -40,7 +44,9 @@ Represents the SIM card type.
 
 **Type:** [SimType](arkts-telephony-sim-simtype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimLabel-simType: SimType--><!--Device-SimLabel-simType: SimType-End-->
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RichEditorImageSpanResult--><!--Device-unnamed-export declare interface RichEditorImageSpanResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ imageStyle: RichEditorImageSpanStyleResult
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +51,8 @@ offsetInSpan: [
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorImageSpanResult-offsetInSpan: [        int,        int    ]--><!--Device-RichEditorImageSpanResult-offsetInSpan: [        int,        int    ]-End-->
@@ -66,6 +72,8 @@ Span位置。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,6 +95,8 @@ valuePixelMap?: PixelMap
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorImageSpanResult-valuePixelMap?: PixelMap--><!--Device-RichEditorImageSpanResult-valuePixelMap?: PixelMap-End-->
@@ -106,6 +116,8 @@ valueResourceStr?: ResourceStr
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

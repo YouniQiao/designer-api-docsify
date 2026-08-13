@@ -2,7 +2,9 @@
 
 Enumerates dragging states.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-dragInteraction-enum DragState--><!--Device-dragInteraction-enum DragState-End-->
 
@@ -18,7 +20,9 @@ MSG_DRAG_STATE_START = 1
 
 Dragging is started.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DragState-MSG_DRAG_STATE_START = 1--><!--Device-DragState-MSG_DRAG_STATE_START = 1-End-->
 
@@ -34,7 +38,9 @@ MSG_DRAG_STATE_STOP = 2
 
 Dragging is ended.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DragState-MSG_DRAG_STATE_STOP = 2--><!--Device-DragState-MSG_DRAG_STATE_STOP = 2-End-->
 
@@ -50,7 +56,9 @@ MSG_DRAG_STATE_CANCEL = 3
 
 Dragging is canceled.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DragState-MSG_DRAG_STATE_CANCEL = 3--><!--Device-DragState-MSG_DRAG_STATE_CANCEL = 3-End-->
 

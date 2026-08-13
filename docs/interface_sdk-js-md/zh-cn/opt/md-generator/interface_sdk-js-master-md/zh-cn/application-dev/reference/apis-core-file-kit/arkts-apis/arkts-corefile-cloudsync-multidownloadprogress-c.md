@@ -2,7 +2,9 @@
 
 云文件批量缓存的进度信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-class MultiDownloadProgress--><!--Device-cloudSync-class MultiDownloadProgress-End-->
 
@@ -16,7 +18,9 @@ getFailedFiles(): Array<FailedFileInfo>
 
 获取批量缓存失败的文件列表。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>--><!--Device-MultiDownloadProgress-getFailedFiles(): Array<FailedFileInfo>-End-->
 
@@ -74,7 +78,9 @@ getSuccessfulFiles(): Array<string>
 
 获取批量缓存成功的文件列表。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>--><!--Device-MultiDownloadProgress-getSuccessfulFiles(): Array<string>-End-->
 
@@ -132,7 +138,9 @@ downloadedSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-downloadedSize: long--><!--Device-MultiDownloadProgress-downloadedSize: long-End-->
 
@@ -148,7 +156,9 @@ errType: DownloadErrorType
 
 **类型：** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-errType: DownloadErrorType--><!--Device-MultiDownloadProgress-errType: DownloadErrorType-End-->
 
@@ -164,7 +174,9 @@ failedCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-failedCount: int--><!--Device-MultiDownloadProgress-failedCount: int-End-->
 
@@ -180,7 +192,9 @@ state: State
 
 **类型：** State
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-state: State--><!--Device-MultiDownloadProgress-state: State-End-->
 
@@ -196,7 +210,9 @@ successfulCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-successfulCount: int--><!--Device-MultiDownloadProgress-successfulCount: int-End-->
 
@@ -212,7 +228,9 @@ taskId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-taskId: long--><!--Device-MultiDownloadProgress-taskId: long-End-->
 
@@ -228,7 +246,9 @@ totalCount: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-totalCount: int--><!--Device-MultiDownloadProgress-totalCount: int-End-->
 
@@ -244,7 +264,9 @@ totalSize: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiDownloadProgress-totalSize: long--><!--Device-MultiDownloadProgress-totalSize: long-End-->
 

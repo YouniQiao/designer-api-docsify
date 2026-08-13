@@ -1,15 +1,14 @@
 # ExtensionContext
 
-ExtensionContext provides the context environment for an  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It inherits from  
-[Context](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context).This module provides APIs for accessing resources of a specific  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility).
+ExtensionContext provides the context environment for an [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It inherits from [Context](arkts-ability-context-c.md#Context). This module provides APIs for accessing resources of a specific [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility).
 
-**Inheritance/Implementation:** ExtensionContext extends [Context](Context)
+**Inheritance/Implementation:** ExtensionContext extends Context
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-declare class ExtensionContext extends Context--><!--Device-unnamed-declare class ExtensionContext extends Context-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ExtensionContext--><!--Device-unnamed-declare class ExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,7 +22,9 @@ Indicates configuration information.
 
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,7 +44,9 @@ Indicates configuration information about an module.
 
 **Type:** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,7 +66,9 @@ Extension information.
 
 **Type:** [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

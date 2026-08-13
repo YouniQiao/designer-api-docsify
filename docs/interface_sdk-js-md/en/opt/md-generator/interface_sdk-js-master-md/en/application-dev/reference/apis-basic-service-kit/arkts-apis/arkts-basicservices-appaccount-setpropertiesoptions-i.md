@@ -2,7 +2,9 @@
 
 Represents the options for setting authenticator properties.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface SetPropertiesOptions--><!--Device-appAccount-interface SetPropertiesOptions-End-->
 
@@ -17,31 +19,35 @@ import { appAccount } from '@kit.BasicServicesKit';
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: Record<string, RecordData>
 ```
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-SetPropertiesOptions-parameters?: Record<string, Object>--><!--Device-SetPropertiesOptions-parameters?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
 ## properties
 
 ```TypeScript
-properties?: Record<string, Object>
+properties?: Record<string, RecordData>
 ```
 
 Property object. By default, no value is passed in.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-SetPropertiesOptions-properties?: Record<string, Object>--><!--Device-SetPropertiesOptions-properties?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>--><!--Device-SetPropertiesOptions-properties?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount

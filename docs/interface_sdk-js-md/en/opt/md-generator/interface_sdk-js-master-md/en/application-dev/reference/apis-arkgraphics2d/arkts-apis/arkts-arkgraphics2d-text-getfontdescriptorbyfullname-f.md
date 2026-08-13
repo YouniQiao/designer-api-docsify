@@ -12,11 +12,11 @@ import { text } from '@kit.ArkGraphics2D';
 function getFontDescriptorByFullName(fullName: string, fontType: SystemFontType): Promise<FontDescriptor>
 ```
 
-Obtains the font descriptor based on the font name and type. This API uses a promise to return the result.
+Obtains the font descriptor based on the font name and type. This API uses a promise to return the result. A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
 
-A font descriptor is a data structure that describes font features. It contains details of the font appearance and properties.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -41,7 +41,7 @@ A font descriptor is a data structure that describes font features. It contains 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

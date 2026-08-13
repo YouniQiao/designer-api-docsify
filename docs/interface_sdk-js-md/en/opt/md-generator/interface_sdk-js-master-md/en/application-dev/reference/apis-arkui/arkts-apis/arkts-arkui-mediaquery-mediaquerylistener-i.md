@@ -1,14 +1,14 @@
 # MediaQueryListener
 
-Implements the media query listener, including the first query result when the listener is applied for. The specified media query condition, for example, **'(width <= 600vp)'**, is compared system information. If related information is not initialized during the first query, **matches** returns **false**.
-
-Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult).
+Implements the media query listener, including the first query result when the listener is applied for. The specified media query condition, for example, **'(width <= 600vp)'**, is compared system information. If related information is not initialized during the first query, **matches** returns **false**. Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult).
 
 **Inheritance/Implementation:** MediaQueryListener extends [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#MediaQueryResult)
 
 **Since:** 7
 
-<!--Device-mediaquery-interface MediaQueryListener extends MediaQueryResult--><!--Device-mediaquery-interface MediaQueryListener extends MediaQueryResult-End-->
+**Deprecated since:** -1
+
+<!--Device-mediaquery-interface MediaQueryListener--><!--Device-mediaquery-interface MediaQueryListener-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,7 +18,7 @@ Inherits from [MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md#Me
 import { mediaquery } from '@kit.ArkUI';
 ```
 
-## off('change')
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<MediaQueryResult>): void
@@ -27,6 +27,8 @@ off(type: 'change', callback?: Callback<MediaQueryResult>): void
 Deregisters a media query listener, so that no callback is triggered when the media attributes change.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,19 +62,17 @@ listener.on('change', onPortrait) // Register the media query listener.
 listener.off('change', onPortrait) // Unregister the callback.
 ```
 
-## on('change')
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: Callback<MediaQueryResult>): void
 ```
 
-Registers a media query listener. The callback is triggered when the media attributes change.
-
-> **NOTE：**
-> 
-> The **on** or **off** function cannot be called in the registered callback.
+Registers a media query listener. The callback is triggered when the media attributes change. > **NOTE：**> > The **on** or **off** function cannot be called in the registered callback.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -91,4 +91,4 @@ Registers a media query listener. The callback is triggered when the media attri
 
 ## Examples
 
-For details, see [off('change')](#offchange).
+For details, see off('change').

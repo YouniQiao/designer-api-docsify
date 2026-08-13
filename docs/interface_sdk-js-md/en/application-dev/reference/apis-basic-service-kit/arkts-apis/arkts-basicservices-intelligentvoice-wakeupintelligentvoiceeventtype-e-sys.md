@@ -2,9 +2,11 @@
 
 Enumerates wakeup intelligent voice event type.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-enum WakeupIntelligentVoiceEventType--><!--Device-intelligentVoice-enum WakeupIntelligentVoiceEventType-End-->
 
@@ -20,9 +22,11 @@ INTELLIGENT_VOICE_EVENT_WAKEUP_NONE = 0
 
 Wakeup None.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEventType-INTELLIGENT_VOICE_EVENT_WAKEUP_NONE = 0--><!--Device-WakeupIntelligentVoiceEventType-INTELLIGENT_VOICE_EVENT_WAKEUP_NONE = 0-End-->
 
@@ -38,9 +42,11 @@ INTELLIGENT_VOICE_EVENT_RECOGNIZE_COMPLETE = 1
 
 Recognize complete.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEventType-INTELLIGENT_VOICE_EVENT_RECOGNIZE_COMPLETE = 1--><!--Device-WakeupIntelligentVoiceEventType-INTELLIGENT_VOICE_EVENT_RECOGNIZE_COMPLETE = 1-End-->
 
@@ -56,9 +62,11 @@ INTELLIGENT_VOICE_EVENT_HEADSET_RECOGNIZE_COMPLETE = 2
 
 Headset Recognize complete.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEventType-INTELLIGENT_VOICE_EVENT_HEADSET_RECOGNIZE_COMPLETE = 2--><!--Device-WakeupIntelligentVoiceEventType-INTELLIGENT_VOICE_EVENT_HEADSET_RECOGNIZE_COMPLETE = 2-End-->
 

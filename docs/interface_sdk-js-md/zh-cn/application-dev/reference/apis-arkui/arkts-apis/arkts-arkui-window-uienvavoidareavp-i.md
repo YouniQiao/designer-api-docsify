@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-window-interface UIEnvAvoidAreaVP--><!--Device-window-interface UIEnvAvoidAreaVP-End-->
 
@@ -22,7 +24,9 @@ bottomRect: RectInVP
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvAvoidAreaVP-bottomRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-bottomRect: RectInVP-End-->
 
@@ -40,7 +44,9 @@ leftRect: RectInVP
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvAvoidAreaVP-leftRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-leftRect: RectInVP-End-->
 
@@ -58,7 +64,9 @@ rightRect: RectInVP
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvAvoidAreaVP-rightRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-rightRect: RectInVP-End-->
 
@@ -76,7 +84,9 @@ topRect: RectInVP
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvAvoidAreaVP-topRect: RectInVP--><!--Device-UIEnvAvoidAreaVP-topRect: RectInVP-End-->
 
@@ -94,7 +104,9 @@ visible: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvAvoidAreaVP-visible: boolean--><!--Device-UIEnvAvoidAreaVP-visible: boolean-End-->
 

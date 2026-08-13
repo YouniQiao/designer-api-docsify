@@ -2,7 +2,9 @@
 
 Describes the font descriptor information.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface FontDescriptor--><!--Device-text-interface FontDescriptor-End-->
 
@@ -26,6 +28,8 @@ Font copyright information. Any string is acceptable. The default value is an em
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-copyright?: string--><!--Device-FontDescriptor-copyright?: string-End-->
@@ -42,7 +46,9 @@ Family name of the font. Any string is acceptable. The default value is an empty
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -56,11 +62,13 @@ Family name of the font. Any string is acceptable. The default value is an empty
 fontFeatures?: Array<string>
 ```
 
-Array of OpenType feature tags supported by the font. The default value is an empty array. Each element in the array is a feature tag string (such as 'liga' for standard ligatures and 'kern' for kerning adjustment),indicating the font features supported by the font.
+Array of OpenType feature tags supported by the font. The default value is an empty array. Each element in the array is a feature tag string (such as 'liga' for standard ligatures and 'kern' for kerning adjustment), indicating the font features supported by the font.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +88,9 @@ Subfamily name of the font. Any string is acceptable. The default value is an em
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -98,7 +108,9 @@ Font name. Any string is acceptable. The default value is an empty string.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,6 +130,8 @@ Font index. This parameter is valid only when the font file is in TTC format. Th
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -136,7 +150,9 @@ Whether the font is italic. The value **0** means that the font is not italic, a
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -155,6 +171,8 @@ List of languages supported by the font. The default value is an empty array. Ea
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,6 +194,8 @@ Font license information. Any string is acceptable. The default value is an empt
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-license?: string--><!--Device-FontDescriptor-license?: string-End-->
@@ -193,6 +213,8 @@ Extracts the font family name based on the system language configuration. If the
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -212,6 +234,8 @@ Extracts the full font name based on the system language configuration. If the f
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-localFullName?: string--><!--Device-FontDescriptor-localFullName?: string-End-->
@@ -229,6 +253,8 @@ Extracts the unique font ID based on the system language configuration. If the f
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -248,6 +274,8 @@ Extracts the font subfamily name based on the system language configuration. If 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-localSubFamilyName?: string--><!--Device-FontDescriptor-localSubFamilyName?: string-End-->
@@ -266,6 +294,8 @@ Font manufacturer information. Any string is acceptable. The default value is an
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-manufacture?: string--><!--Device-FontDescriptor-manufacture?: string-End-->
@@ -282,7 +312,9 @@ Whether the font is monospaced. The value **true** means that the font is monosp
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -300,7 +332,9 @@ Absolute path of the font. Any string that complies with the system restrictions
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -318,7 +352,9 @@ Unique name of the font. Any string is acceptable. The default value is an empty
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -336,7 +372,9 @@ Whether the font is symbolic. The value **true** means that the font is symbolic
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -356,6 +394,8 @@ Font trademark information. Any string is acceptable. The default value is an em
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-trademark?: string--><!--Device-FontDescriptor-trademark?: string-End-->
@@ -368,11 +408,13 @@ Font trademark information. Any string is acceptable. The default value is an em
 variationAxisRecords?: Array<FontVariationAxis>
 ```
 
-Font variable axis record array, which is used to describe the variable axis information supported by the font.For non-variable fonts, this field is **undefined**.
+Font variable axis record array, which is used to describe the variable axis information supported by the font. For non-variable fonts, this field is **undefined**.
 
 **Type:** Array&lt;[FontVariationAxis](arkts-arkgraphics2d-text-fontvariationaxis-i.md)&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -392,6 +434,8 @@ Font variable instance record array, which is used to describe the variable inst
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontDescriptor-variationInstanceRecords?: Array<FontVariationInstance>--><!--Device-FontDescriptor-variationInstanceRecords?: Array<FontVariationInstance>-End-->
@@ -410,6 +454,8 @@ Font version. Any string is acceptable. The default value is an empty string.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FontDescriptor-version?: string--><!--Device-FontDescriptor-version?: string-End-->
@@ -426,7 +472,9 @@ Font weight. The default value is **0**.
 
 **Type:** FontWeight
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -444,7 +492,9 @@ Font width. The value is an integer ranging from 1 to 9. The default value is **
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

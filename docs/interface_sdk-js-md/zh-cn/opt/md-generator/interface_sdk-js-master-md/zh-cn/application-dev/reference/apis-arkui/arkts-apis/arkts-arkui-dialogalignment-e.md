@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum DialogAlignment--><!--Device-unnamed-declare enum DialogAlignment-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Top
 垂直顶部对齐。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ Center
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogAlignment-Center--><!--Device-DialogAlignment-Center-End-->
@@ -49,6 +55,8 @@ Bottom
 垂直底部对齐。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ Default
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogAlignment-Default--><!--Device-DialogAlignment-Default-End-->
@@ -81,6 +91,8 @@ TopStart
 左上对齐。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +110,8 @@ TopEnd
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogAlignment-TopEnd--><!--Device-DialogAlignment-TopEnd-End-->
@@ -113,6 +127,8 @@ CenterStart
 左中对齐。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -130,6 +146,8 @@ CenterEnd
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogAlignment-CenterEnd--><!--Device-DialogAlignment-CenterEnd-End-->
@@ -146,6 +164,8 @@ BottomStart
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogAlignment-BottomStart--><!--Device-DialogAlignment-BottomStart-End-->
@@ -161,6 +181,8 @@ BottomEnd
 右下对齐。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

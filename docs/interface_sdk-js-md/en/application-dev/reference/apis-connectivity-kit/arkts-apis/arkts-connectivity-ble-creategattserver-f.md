@@ -20,7 +20,7 @@ create a JavaScript Gatt server instance.
 
 **Deprecated since:** 10
 
-**Substitutes:** [createGattServer](ohos.bluetooth.ble/ble#createGattServer)
+**Substitutes:** [createGattServer](#createGattServer)
 
 <!--Device-BLE-function createGattServer(): GattServer--><!--Device-BLE-function createGattServer(): GattServer-End-->
 

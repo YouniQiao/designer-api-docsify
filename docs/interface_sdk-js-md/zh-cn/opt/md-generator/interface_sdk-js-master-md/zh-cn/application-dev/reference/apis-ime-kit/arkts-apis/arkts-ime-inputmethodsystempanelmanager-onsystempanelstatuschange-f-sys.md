@@ -10,6 +10,8 @@ function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-inputMethodSystemPanelManager-function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void--><!--Device-inputMethodSystemPanelManager-function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void-End-->
@@ -28,4 +30,4 @@ function onSystemPanelStatusChange(callback: Callback<SystemPanelStatus>): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

@@ -1,14 +1,14 @@
 # SelectActionProposal
 
-Smart gesture selection action handling. When dynamically customizing smart gesture behavior through the  
-[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value  
-[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type causes the target component to be selected.
+Smart gesture selection action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type causes the target component to be selected.
 
 **Inheritance/Implementation:** SelectActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class SelectActionProposal extends TargetedGestureProposal--><!--Device-unnamed-export class SelectActionProposal extends TargetedGestureProposal-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class SelectActionProposal--><!--Device-unnamed-export class SelectActionProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ constructor(node: FrameNode)
 Constructor for the smart gesture selection action handling.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,12 @@
 # RenderProcessMode
 
-Defines the render process mode.
+Enumerates the ArkWeb render subprocess modes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum RenderProcessMode--><!--Device-webview-enum RenderProcessMode-End-->
 
@@ -16,11 +18,15 @@ Defines the render process mode.
 SINGLE = 0
 ```
 
-ArkWeb single rendering subprocess mode. In this mode, multiple Web pages reuse a rendering subprocess.
+ArkWeb single render subprocess mode. In this mode, multiple **Web** components share one render subprocess.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RenderProcessMode-SINGLE = 0--><!--Device-RenderProcessMode-SINGLE = 0-End-->
 
@@ -29,16 +35,20 @@ ArkWeb single rendering subprocess mode. In this mode, multiple Web pages reuse 
 ## MULTIPLE
 
 ```TypeScript
-MULTIPLE
+MULTIPLE = 1
 ```
 
-ArkWeb multi-rendering subprocess mode. In this mode, there is one rendering subprocess per Web.
+ArkWeb multi-render subprocess mode. In this mode, each **Web** component has a rendering subprocess.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-RenderProcessMode-MULTIPLE--><!--Device-RenderProcessMode-MULTIPLE-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-RenderProcessMode-MULTIPLE = 1--><!--Device-RenderProcessMode-MULTIPLE = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

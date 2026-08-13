@@ -6,6 +6,8 @@ Configuration stream result for AI-generated image tasks.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GenerateImageTaskPartialResult--><!--Device-imageGeneration-interface GenerateImageTaskPartialResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -32,6 +34,8 @@ image data of the image corresponding to AI-generated image task, available in p
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskPartialResult-imageData?: string--><!--Device-GenerateImageTaskPartialResult-imageData?: string-End-->
@@ -54,6 +58,8 @@ Sequence number of the image corresponding to AI-generated image task, available
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskPartialResult-imageIndex?: int--><!--Device-GenerateImageTaskPartialResult-imageIndex?: int-End-->
@@ -70,11 +76,13 @@ partialFail?: BusinessError
 
 Information of the partial error corresponding to AI-generated image task, available in partial error result.
 
-**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-c.md)
+**Type:** [BusinessError](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +106,8 @@ Total number of the image corresponding to AI-generated image task, available in
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskPartialResult-totalCount?: int--><!--Device-GenerateImageTaskPartialResult-totalCount?: int-End-->
@@ -119,6 +129,8 @@ The type information used for AI-generated image task.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

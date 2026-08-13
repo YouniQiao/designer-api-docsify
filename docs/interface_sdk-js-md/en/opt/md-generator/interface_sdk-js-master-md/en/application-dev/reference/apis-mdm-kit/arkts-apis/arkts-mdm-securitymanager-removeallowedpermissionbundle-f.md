@@ -12,15 +12,11 @@ import { securityManager } from '@kit.MDMKit';
 function removeAllowedPermissionBundle(admin: Want, permission: string, applicationInstance: common.ApplicationInstance): void
 ```
 
-Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more.
-
-> **NOTE：**
-> 
-> The permission must first be disabled via the
-> [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md#setDisallowedPermission) API before an application can be removed
-> from the permission usage exception list. Otherwise, error code 9201044 is returned.
+Removes an application from the permission usage exception list. After the application is removed, it cannot use the corresponding permission any more. > **NOTE：**> > The permission must first be disabled via the > [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md#setDisallowedPermission) API before an application can be removed > from the permission usage exception list. Otherwise, error code 9201044 is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
@@ -42,11 +38,11 @@ Removes an application from the permission usage exception list. After the appli
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [9201044](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201044-specified-permission-not-disabled) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [9201044](../errorcode-enterpriseDeviceManager.md#9201044-specified-permission-not-disabled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

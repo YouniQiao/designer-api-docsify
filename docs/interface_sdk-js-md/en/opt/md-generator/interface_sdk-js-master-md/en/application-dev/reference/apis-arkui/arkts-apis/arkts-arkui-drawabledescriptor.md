@@ -1,11 +1,4 @@
-# @ohos.arkui.drawableDescriptor(DrawableDescriptor)
-
-This module provides capabilities for layered icon composition (foreground, background, mask), animated image
- control, and basic image processing.
- > **NOTE**
- >
- > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
-
+# @ohos.arkui.drawableDescriptor
 
 ## Modules to Import
 

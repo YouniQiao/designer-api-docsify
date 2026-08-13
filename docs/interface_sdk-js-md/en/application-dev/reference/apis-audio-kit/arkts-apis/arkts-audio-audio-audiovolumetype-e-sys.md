@@ -2,9 +2,11 @@
 
 Enumerates the audio volume types.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioVolumeType--><!--Device-audio-enum AudioVolumeType-End-->
 
@@ -18,9 +20,11 @@ SYSTEM = 6
 
 Audio volume type for system sound.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-SYSTEM = 6--><!--Device-AudioVolumeType-SYSTEM = 6-End-->
 
@@ -36,9 +40,11 @@ ULTRASONIC = 10
 
 Audio volume type for ultrasonic.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-ULTRASONIC = 10--><!--Device-AudioVolumeType-ULTRASONIC = 10-End-->
 
@@ -54,9 +60,11 @@ NOTIFICATION = 11
 
 Audio volume type for notification.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-NOTIFICATION = 11--><!--Device-AudioVolumeType-NOTIFICATION = 11-End-->
 
@@ -72,9 +80,11 @@ NAVIGATION = 12
 
 Audio volume type for navigation.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-NAVIGATION = 12--><!--Device-AudioVolumeType-NAVIGATION = 12-End-->
 
@@ -90,9 +100,11 @@ ALL = 100
 
 Audio volume type for all common.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeType-ALL = 100--><!--Device-AudioVolumeType-ALL = 100-End-->
 

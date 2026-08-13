@@ -2,9 +2,11 @@
 
 Describes the switch state of notifications.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export enum SwitchState--><!--Device-notificationManager-export enum SwitchState-End-->
 
@@ -20,9 +22,11 @@ USER_MODIFIED_OFF = 0
 
 Disabled state set by the user.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwitchState-USER_MODIFIED_OFF = 0--><!--Device-SwitchState-USER_MODIFIED_OFF = 0-End-->
 
@@ -38,9 +42,11 @@ USER_MODIFIED_ON = 1
 
 Enabled state set by the user.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwitchState-USER_MODIFIED_ON = 1--><!--Device-SwitchState-USER_MODIFIED_ON = 1-End-->
 
@@ -56,9 +62,11 @@ SYSTEM_DEFAULT_OFF = 2
 
 Initial disabled state before user settings.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwitchState-SYSTEM_DEFAULT_OFF = 2--><!--Device-SwitchState-SYSTEM_DEFAULT_OFF = 2-End-->
 
@@ -74,9 +82,11 @@ SYSTEM_DEFAULT_ON = 3
 
 Initial enabled state before user settings.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SwitchState-SYSTEM_DEFAULT_ON = 3--><!--Device-SwitchState-SYSTEM_DEFAULT_ON = 3-End-->
 

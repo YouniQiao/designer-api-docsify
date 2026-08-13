@@ -4,6 +4,8 @@ Implements a common event callback. Passing **undefined** as the input parameter
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface UICommonEvent--><!--Device-unnamed-declare interface UICommonEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ setOnAppear(callback: Callback<void> | undefined): void
 Sets the callback for the [onAppear](arkts-arkui-commonmethod-c.md#onAppear) event.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onBlur) event.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -62,9 +68,11 @@ Sets the callback for the [onBlur](arkts-arkui-commonmethod-c.md#onBlur) event.
 setOnClick(callback: Callback<ClickEvent> | undefined): void
 ```
 
-Set the callback for the [click event](CommonMethod#onClick(event: (event: ClickEvent) => void)).
+Set the callback for the click event.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Sets the callback for the [onDisAppear](arkts-arkui-commonmethod-c.md#onDisAppea
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -113,6 +123,8 @@ setOnFocus(callback: Callback<void> | undefined): void
 Sets the callback for the [onFocus](arkts-arkui-commonmethod-c.md#onFocus) event.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,6 +150,8 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onHover) event
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -158,9 +172,11 @@ Sets the callback for the [onHover](arkts-arkui-commonmethod-c.md#onHover) event
 setOnKeyEvent(callback: Callback<KeyEvent> | undefined): void
 ```
 
-Sets the callback for the [key event](common).
+Sets the callback for the key event.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,6 +202,8 @@ Sets the callback for the [onMouse](arkts-arkui-commonmethod-c.md#onMouse) event
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -210,6 +228,8 @@ Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onSizeCha
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -230,9 +250,11 @@ Sets the callback for the [onSizeChange](arkts-arkui-commonmethod-c.md#onSizeCha
 setOnTouch(callback: Callback<TouchEvent> | undefined): void
 ```
 
-Sets the callback for the [touch event](CommonMethod#onTouch(event: (event: TouchEvent) => void)).
+Sets the callback for the touch event.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,10 +276,11 @@ Sets the callback for the [touch event](CommonMethod#onTouch(event: (event: Touc
 setOnVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): void
 ```
 
-Sets the callback for the  
-[onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange)visible area change event.
+Sets the callback for the [onVisibleAreaChange](arkts-arkui-commonmethod-c.md#onVisibleAreaChange) visible area change event.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,7 +8,9 @@ function getPowerMode(): DevicePowerMode
 
 获取当前设备的电源模式。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-power-function getPowerMode(): DevicePowerMode--><!--Device-power-function getPowerMode(): DevicePowerMode-End-->
 

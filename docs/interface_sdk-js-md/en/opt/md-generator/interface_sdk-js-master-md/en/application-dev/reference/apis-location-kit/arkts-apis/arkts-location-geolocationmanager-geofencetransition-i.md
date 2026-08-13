@@ -2,7 +2,9 @@
 
 Geofence transition status.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface GeofenceTransition--><!--Device-geoLocationManager-export interface GeofenceTransition-End-->
 
@@ -24,7 +26,9 @@ Indicate the beaconFence which transitionEvent occurs.
 
 **Type:** [BeaconFence](arkts-location-geolocationmanager-beaconfence-i.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeofenceTransition-beaconFence?: BeaconFence--><!--Device-GeofenceTransition-beaconFence?: BeaconFence-End-->
 
@@ -40,7 +44,9 @@ ID of the geofence.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeofenceTransition-geofenceId: int--><!--Device-GeofenceTransition-geofenceId: int-End-->
 
@@ -56,7 +62,9 @@ Indicates the geofence transition status.
 
 **Type:** [GeofenceTransitionEvent](arkts-location-geolocationmanager-geofencetransitionevent-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeofenceTransition-transitionEvent: GeofenceTransitionEvent--><!--Device-GeofenceTransition-transitionEvent: GeofenceTransitionEvent-End-->
 

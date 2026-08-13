@@ -10,6 +10,8 @@ function isControlSupported(mechDeviceType?: MechDeviceType): boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean--><!--Device-mechanicManager-function isControlSupported(mechDeviceType?: MechDeviceType): boolean-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core

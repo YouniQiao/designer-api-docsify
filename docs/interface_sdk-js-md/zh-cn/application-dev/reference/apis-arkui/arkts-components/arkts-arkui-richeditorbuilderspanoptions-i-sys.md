@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RichEditorBuilderSpanOptions--><!--Device-unnamed-declare interface RichEditorBuilderSpanOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 dragBackgroundColor? : ColorMetrics
 ```
 
-设置BuilderSpan单独拖拽时的背板颜色。未配置或传入无效颜色值时，按默认值处理。
-
-默认值：跟随系统主题拖拽背板色。
+设置BuilderSpan单独拖拽时的背板颜色。未配置或传入无效颜色值时，按默认值处理。 默认值：跟随系统主题拖拽背板色。
 
 **类型：** ColorMetrics
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +42,15 @@ dragBackgroundColor? : ColorMetrics
 isDragShadowNeeded?: boolean
 ```
 
-设置BuilderSpan单独拖拽时是否需要投影。true表示需要投影，false表示不需要投影。未配置或传入无效值时，按默认值处理。
-
-默认值：true。
+设置BuilderSpan单独拖拽时是否需要投影。true表示需要投影，false表示不需要投影。未配置或传入无效值时，按默认值处理。 默认值：true。
 
 **类型：** boolean
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

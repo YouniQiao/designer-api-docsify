@@ -1,20 +1,22 @@
 # AbilityInfo
 
 ```TypeScript
-export type AbilityInfo = _AbilityInfo.AbilityInfo
+export type AbilityInfo = _AbilityInfo
 ```
 
 Defines the ability information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type AbilityInfo = _AbilityInfo.AbilityInfo--><!--Device-bundleManager-export type AbilityInfo = _AbilityInfo.AbilityInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-bundleManager-export type AbilityInfo = _AbilityInfo--><!--Device-bundleManager-export type AbilityInfo = _AbilityInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _AbilityInfo.AbilityInfo
+**Property type:** _AbilityInfo
 

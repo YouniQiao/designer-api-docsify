@@ -2,7 +2,9 @@
 
 Describes the illumination information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface LuminationInfo--><!--Device-camera-interface LuminationInfo-End-->
 
@@ -26,7 +28,9 @@ Illumination. The value range is [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LuminationInfo-readonly lumination?: double--><!--Device-LuminationInfo-readonly lumination?: double-End-->
 

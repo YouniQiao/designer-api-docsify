@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface DialogResult--><!--Device-unnamed-export interface DialogResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@
 dialogId: number
 ```
 
-对话框的ID。取值限定为整数。
+对话框的ID。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

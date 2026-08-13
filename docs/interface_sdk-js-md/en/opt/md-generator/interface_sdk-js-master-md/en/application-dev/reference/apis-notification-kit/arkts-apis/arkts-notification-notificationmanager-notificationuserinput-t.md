@@ -6,7 +6,9 @@ export type NotificationUserInput = _NotificationUserInput
 
 Describes the user input for the notification.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationUserInput = _NotificationUserInput--><!--Device-notificationManager-export type NotificationUserInput = _NotificationUserInput-End-->
 

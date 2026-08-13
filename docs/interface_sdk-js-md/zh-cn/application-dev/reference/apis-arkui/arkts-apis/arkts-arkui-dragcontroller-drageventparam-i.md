@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-dragController-interface DragEventParam--><!--Device-dragController-interface DragEventParam-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ event: DragEvent
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -38,15 +42,15 @@ event: DragEvent
 extraParams: string
 ```
 
-设置拖拽事件额外信息，具体功能暂未实现。
-
-默认值：空
+设置拖拽事件额外信息，具体功能暂未实现。 默认值：空
 
 **类型：** string
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

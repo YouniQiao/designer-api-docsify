@@ -4,6 +4,8 @@ Describes the parameters for connection result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-dataTransfer-interface ConnectionResult--><!--Device-dataTransfer-interface ConnectionResult-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,11 +22,13 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the connected device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the connected device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ Indicates the connected device address.The length must be 17, The value consists
 mtu: number
 ```
 
-Indicates the maximum channel data length.Unit: Bytes, The value must be an integer within [0,65535].
+Indicates the maximum channel data length. Unit: Bytes, The value must be an integer within [0,65535].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Connection state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionResult-state: ConnectionState--><!--Device-ConnectionResult-state: ConnectionState-End-->
@@ -74,11 +82,13 @@ Connection state.
 uuid: string
 ```
 
-Indicates the service UUID.The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-),for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier.&lt;br&gt;NearLink standard UUIDs are not allowed.
+Indicates the service UUID. The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. &lt;br&gt;NearLink standard UUIDs are not allowed.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

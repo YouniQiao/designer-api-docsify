@@ -1,23 +1,12 @@
 # @ohos.arkui.advanced.Popup
 
-Popup是用于显示特定样式气泡。
- > **说明：**
- >
- > - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
- > - 该组件不支持在Wearable设备上使用。
- >
- > - 建议结合[Popup控制](common)中的自定义气泡功能。
- ######  子组件
- 无
-
-
 ## 汇总
 
 ### 函数
 
 | 名称 | 说明 |
 | --- | --- |
-| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#popup) |  |
+| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup) |  |
 
 ### 接口
 

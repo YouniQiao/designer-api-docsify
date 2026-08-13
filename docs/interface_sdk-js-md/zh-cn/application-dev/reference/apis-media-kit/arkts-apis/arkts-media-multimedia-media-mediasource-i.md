@@ -1,15 +1,12 @@
 # MediaSource
 
-媒体数据信息。来源于  
-[createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl)。
+媒体数据信息。来源于 [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl) 。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 12开始支持。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-unnamed-interface MediaSource--><!--Device-unnamed-interface MediaSource-End-->
 
@@ -25,7 +22,9 @@ enableOfflineCache(enable: boolean): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MediaSource-enableOfflineCache(enable: boolean): void--><!--Device-MediaSource-enableOfflineCache(enable: boolean): void-End-->
 
@@ -47,7 +46,9 @@ getID(): string
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,7 +74,9 @@ Obtains the configured audio and video feature filtering values.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,11 +98,13 @@ setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void
 
 设置MediaSourceLoader，帮助播放器请求媒体数据。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void--><!--Device-MediaSource-setMediaResourceLoaderDelegate(resourceLoader: MediaSourceLoader): void-End-->
 
@@ -119,11 +124,13 @@ setMimeType(mimeType: AVMimeTypes): void
 
 设置媒体MIME类型，以帮助播放器处理扩展的媒体源。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void--><!--Device-MediaSource-setMimeType(mimeType: AVMimeTypes): void-End-->
 
@@ -141,11 +148,13 @@ setMimeType(mimeType: AVMimeTypes): void
 setTrackSelectionFilter(filter: TrackSelectionFilter): void
 ```
 
-Set the audio and video feature filtering items of the MediaSource,After the user defines the audio and video filtering items of the MediaSource,When playing or downloading MediaSource data offline,Preferentially perform a corresponding operation in the filtering feature.
+Set the audio and video feature filtering items of the MediaSource, After the user defines the audio and video filtering items of the MediaSource, When playing or downloading MediaSource data offline, Preferentially perform a corresponding operation in the filtering feature.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

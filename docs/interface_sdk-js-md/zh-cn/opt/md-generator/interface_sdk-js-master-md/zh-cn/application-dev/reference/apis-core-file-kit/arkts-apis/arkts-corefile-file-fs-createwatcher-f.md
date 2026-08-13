@@ -10,6 +10,8 @@ declare function createWatcher(path: string, events: number, listener: WatchEven
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function createWatcher(path: string, events: number, listener: WatchEventListener): Watcher--><!--Device-unnamed-declare function createWatcher(path: string, events: number, listener: WatchEventListener): Watcher-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

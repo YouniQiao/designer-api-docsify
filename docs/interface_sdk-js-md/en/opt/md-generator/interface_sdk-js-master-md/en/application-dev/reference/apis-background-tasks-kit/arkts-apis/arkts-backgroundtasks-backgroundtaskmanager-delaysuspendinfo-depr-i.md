@@ -18,9 +18,7 @@ Provides the information about the suspension delay.
 actualDelayTime: number
 ```
 
-Actual suspension delay duration of the application, in milliseconds.
-
-The default duration is 180000 when the battery level is higher than or equal to the broadcast low battery level and 60000 when the battery level is lower than the broadcast low battery level.
+Actual suspension delay duration of the application, in milliseconds. The default duration is 180000 when the battery level is higher than or equal to the broadcast low battery level and 60000 when the battery level is lower than the broadcast low battery level.
 
 **Type:** number
 
@@ -28,7 +26,7 @@ The default duration is 180000 when the battery level is higher than or equal to
 
 **Deprecated since:** 9
 
-**Substitutes:** [DelaySuspendInfo](ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo)
+**Substitutes:** DelaySuspendInfo
 
 <!--Device-DelaySuspendInfo-actualDelayTime: number--><!--Device-DelaySuspendInfo-actualDelayTime: number-End-->
 
@@ -48,7 +46,7 @@ ID of the suspension delay request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DelaySuspendInfo](ohos.resourceschedule.backgroundTaskManager.DelaySuspendInfo)
+**Substitutes:** DelaySuspendInfo
 
 <!--Device-DelaySuspendInfo-requestId: number--><!--Device-DelaySuspendInfo-requestId: number-End-->
 

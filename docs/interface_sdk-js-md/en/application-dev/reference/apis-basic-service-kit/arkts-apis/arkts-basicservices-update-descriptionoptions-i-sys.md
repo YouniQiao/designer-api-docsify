@@ -1,11 +1,12 @@
 # DescriptionOptions (System API)
 
-Defines the description options, which specifies the format and language of the description file. The object contains the **format** and **language** fields. **format** indicates the description file format, which can be   
-**STANDARD** or **SIMPLIFIED**. **language** indicates the language code, which can be **zh-cn**.
+Defines the description options, which specifies the format and language of the description file. The object contains the **format** and **language** fields. **format** indicates the description file format, which can be **STANDARD** or **SIMPLIFIED**. **language** indicates the language code, which can be **zh-cn**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface DescriptionOptions--><!--Device-update-export interface DescriptionOptions-End-->
 
@@ -29,9 +30,11 @@ Format of the description file. The value **STANDARD** is applicable to the scen
 
 **Type:** [DescriptionFormat](arkts-basicservices-update-descriptionformat-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DescriptionOptions-format: DescriptionFormat--><!--Device-DescriptionOptions-format: DescriptionFormat-End-->
 
@@ -45,14 +48,15 @@ Format of the description file. The value **STANDARD** is applicable to the scen
 language: string
 ```
 
-Language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese),   
-**en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-).Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters.
+Language of the description file. The value is a string of 2 to 10 characters, for example, **zh-cn** (Chinese), **en-us** (English), and **ja-jp** (Japanese). Valid characters include letters (case sensitive) and hyphens (-). Lowercase letters are recommended. An exception is thrown if the value is out of range or contains invalid characters.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DescriptionOptions-language: string--><!--Device-DescriptionOptions-language: string-End-->
 

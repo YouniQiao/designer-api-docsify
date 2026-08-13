@@ -6,7 +6,9 @@ type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>
 
 Defines an AudioCapturerChangeInfo array, which is read-only.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>--><!--Device-audio-type AudioCapturerChangeInfoArray = Array<Readonly<AudioCapturerChangeInfo>>-End-->
 

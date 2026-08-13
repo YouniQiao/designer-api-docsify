@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RoundedRectOptions--><!--Device-unnamed-export declare interface RoundedRectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 height?: Length
 ```
 
-高度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+高度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。 Anonymous Object Rectification
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,15 +40,15 @@ Anonymous Object Rectification
 radiusHeight?: Length
 ```
 
-圆角高度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+圆角高度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。 Anonymous Object Rectification
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,15 +62,15 @@ Anonymous Object Rectification
 radiusWidth?: Length
 ```
 
-圆角宽度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+圆角宽度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。 Anonymous Object Rectification
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,15 +84,15 @@ Anonymous Object Rectification
 width?: Length
 ```
 
-宽度，取值范围≥0。默认值：0默认单位：vp异常值按照默认值处理。
-
-Anonymous Object Rectification
+宽度，取值范围≥0。 默认值：0 默认单位：vp 异常值按照默认值处理。 Anonymous Object Rectification
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

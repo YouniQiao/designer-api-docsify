@@ -1,10 +1,10 @@
 # WindowSize
 
-Describes the window size.
+Describes the window size. **Atomic service API**: This API can be used in atomic services since API version 11.
 
-**Atomic service API**: This API can be used in atomic services since API version 11.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
 
@@ -20,7 +20,9 @@ Maximum height of the window in free window mode. The unit is vp.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,7 +40,9 @@ Maximum aspect ratio of the window in free window mode. The value ranges from 0 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,7 +60,9 @@ Maximum width of the window in free window mode. The unit is vp.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,7 +80,9 @@ Minimum height of the window in free window mode. The unit is vp.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -92,7 +100,9 @@ Minimum aspect ratio of the window in free window mode. The value ranges from 0 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,7 +120,9 @@ Minimum width of the window in free window mode. The unit is vp.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

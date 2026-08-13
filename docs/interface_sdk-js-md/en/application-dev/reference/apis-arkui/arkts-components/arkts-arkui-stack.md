@@ -1,14 +1,6 @@
 # Stack
 
-The **Stack** component provides a stack container where child components are successively stacked and the latter one
-overwrites the previous one.
-> **NOTE**
->
-> - The general attribute [align]{@link CommonMethod#align} supports the mirroring capability on this component.
->
-> **Child Components**
->
-> Supported
+The **Stack** component provides a stack container where child components are successively stacked and the latter one overwrites the previous one. > **NOTE** > > - The general attribute align supports the mirroring capability on this component. > > **Child Components** > > Supported
 
 ## Stack
 
@@ -16,17 +8,13 @@ overwrites the previous one.
 Stack(options?: StackOptions)
 ```
 
-> **NOTE：**
-> 
-> Excessive component nesting can lead to performance degradation. In some scenarios, using component attributes
-> directly or leveraging system APIs can achieve the same effect as the stack container, reducing the number of
-> nested components and optimizing performance. For best practices, see
-> [Preferentially Using Component Properties Instead of Nested Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-component-nesting-optimization#section78181114123811)
-> .
+> **NOTE：**> > Excessive component nesting can lead to performance degradation. In some scenarios, using component attributes > directly or leveraging system APIs can achieve the same effect as the stack container, reducing the number of > nested components and optimizing performance. For best practices, see > [Preferentially Using Component Properties Instead of Nested Components](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-component-nesting-optimization#section78181114123811) > .
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,4 +32,4 @@ Stack(options?: StackOptions)
 
 ## Summary
 
-- [StackOptions](arkts-arkui-stack-stackoptions-i.md)
+- [StackOptions](arkts-arkui-stackoptions-i.md)

@@ -4,6 +4,8 @@ JFIF metadata.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-class JfifMetadata--><!--Device-image-class JfifMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -20,11 +22,13 @@ import { image } from '@kit.ImageKit';
 readonly densityUnit?: number
 ```
 
-JFIF density unit.The value should be an integer.
+JFIF density unit. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ whether the JFIF image is progressive.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-JfifMetadata-readonly isProgressive?: boolean--><!--Device-JfifMetadata-readonly isProgressive?: boolean-End-->
@@ -62,6 +68,8 @@ JFIF version.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-JfifMetadata-readonly version?: int[]--><!--Device-JfifMetadata-readonly version?: int[]-End-->
@@ -74,11 +82,13 @@ JFIF version.
 readonly xDensity?: number
 ```
 
-JFIF x density.The value should be an integer.
+JFIF x density. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,11 +102,13 @@ JFIF x density.The value should be an integer.
 readonly yDensity?: number
 ```
 
-JFIF y density.The value should be an integer.
+JFIF y density. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,9 +1,10 @@
 # PickerError
 
-Describes the function name, error code, and message of the error returned when an error occurs during the use of the  
-**PhotoPickerComponent** component.
+Describes the function name, error code, and message of the error returned when an error occurs during the use of the **PhotoPickerComponent** component.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class PickerError--><!--Device-unnamed-export declare class PickerError-End-->
 
@@ -27,6 +28,8 @@ Error code.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -47,6 +50,8 @@ Function name of the error.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -66,6 +71,8 @@ Error message.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

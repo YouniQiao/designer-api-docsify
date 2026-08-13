@@ -12,7 +12,7 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
+**替代接口：** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant（系统接口）)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
@@ -40,7 +40,7 @@ function getWant(agent: WantAgent): Promise<Want>
 
 **废弃版本：** 9
 
-**替代接口：** [getWant](ohos.app.ability.wantAgent/wantAgent#getWant)
+**替代接口：** [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant（系统接口）)
 
 <!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 

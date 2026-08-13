@@ -2,7 +2,9 @@
 
 ModuleAbilityInfo: the ability info of a module.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ModuleAbilityInfo--><!--Device-unnamed-export interface ModuleAbilityInfo-End-->
 
@@ -16,12 +18,13 @@ ModuleAbilityInfo: the ability info of a module.
 readonly exported: boolean
 ```
 
-Whether the ability can be invoked by other applications. **true** if it can be invoked by other applications,  
-**false** otherwise.
+Whether the ability can be invoked by other applications. **true** if it can be invoked by other applications, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleAbilityInfo-readonly exported: boolean--><!--Device-ModuleAbilityInfo-readonly exported: boolean-End-->
 
@@ -39,7 +42,9 @@ Widget information.
 
 **Type:** Array&lt;[AbilityFormInfo](arkts-ability-bundlepackinfo-abilityforminfo-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleAbilityInfo-readonly forms: Array<AbilityFormInfo>--><!--Device-ModuleAbilityInfo-readonly forms: Array<AbilityFormInfo>-End-->
 
@@ -57,7 +62,9 @@ Name of the ability displayed to users. The value is a resource index to names i
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleAbilityInfo-readonly label: string--><!--Device-ModuleAbilityInfo-readonly label: string-End-->
 
@@ -75,7 +82,9 @@ Name of the ability. The name must be unique in the bundle.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ModuleAbilityInfo-readonly name: string--><!--Device-ModuleAbilityInfo-readonly name: string-End-->
 

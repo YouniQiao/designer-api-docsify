@@ -2,7 +2,9 @@
 
 Represents the holding hand status. The holding hand status is returned if listening for holding hand status changes is enabled.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-motion-export enum HoldingHandStatus--><!--Device-motion-export enum HoldingHandStatus-End-->
 
@@ -16,7 +18,9 @@ NOT_HELD = 0
 
 No holding.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-NOT_HELD = 0--><!--Device-HoldingHandStatus-NOT_HELD = 0-End-->
 
@@ -30,7 +34,9 @@ LEFT_HAND_HELD = 1
 
 Holding with the left hand.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-LEFT_HAND_HELD = 1--><!--Device-HoldingHandStatus-LEFT_HAND_HELD = 1-End-->
 
@@ -44,7 +50,9 @@ RIGHT_HAND_HELD = 2
 
 Holding with the right hand.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-RIGHT_HAND_HELD = 2--><!--Device-HoldingHandStatus-RIGHT_HAND_HELD = 2-End-->
 
@@ -58,7 +66,9 @@ BOTH_HANDS_HELD = 3
 
 Holding with both hands.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-BOTH_HANDS_HELD = 3--><!--Device-HoldingHandStatus-BOTH_HANDS_HELD = 3-End-->
 
@@ -72,7 +82,9 @@ UNKNOWN_STATUS = 16
 
 Unknown status.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HoldingHandStatus-UNKNOWN_STATUS = 16--><!--Device-HoldingHandStatus-UNKNOWN_STATUS = 16-End-->
 

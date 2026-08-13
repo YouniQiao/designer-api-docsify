@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RichEditorParagraphStyle--><!--Device-unnamed-export declare interface RichEditorParagraphStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorParagraphStyle-leadingMargin?: Dimension | LeadingMarginPlaceholder--><!--Device-RichEditorParagraphStyle-leadingMargin?: Dimension | LeadingMarginPlaceholder-End-->
@@ -36,17 +40,15 @@ leadingMargin?: Dimension | LeadingMarginPlaceholder
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-设置折行规则。 
-
-默认值：LineBreakStrategy.GREEDY
-
-在wordBreak不等于breakAll的时候生效，不支持连字符。
+设置折行规则。 默认值：LineBreakStrategy.GREEDY 在wordBreak不等于breakAll的时候生效，不支持连字符。
 
 **类型：** [LineBreakStrategy](arkts-arkui-linebreakstrategy-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,17 +62,15 @@ lineBreakStrategy?: LineBreakStrategy
 paragraphSpacing?: double
 ```
 
-设置段落间距大小。
-
-单位：fp
-
-段落间距默认大小为0。
+设置段落间距大小。 单位：fp 段落间距默认大小为0。
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,18 +84,15 @@ paragraphSpacing?: double
 shaderStyle?: ShaderStyle
 ```
 
-设置文本着色器效果。
-
-该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#RichEditorTextStyleResult)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于  
-[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#RichEditorTextStyleResult)的fontColor。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+设置文本着色器效果。 该接口与[RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#RichEditorTextStyleResult)中的strokeWidth同时设置时，该接口不生效，shaderStyle的优先级高于 [RichEditorTextStyle](arkts-arkui-richeditor-richeditortextstyleresult-i.md#RichEditorTextStyleResult)的fontColor。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [ShaderStyle](arkts-arkui-textcommon-shaderstyle-c.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -117,6 +114,8 @@ textAlign?: TextAlign
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorParagraphStyle-textAlign?: TextAlign--><!--Device-RichEditorParagraphStyle-textAlign?: TextAlign-End-->
@@ -129,15 +128,15 @@ textAlign?: TextAlign
 textDirection?: TextDirection
 ```
 
-设置文本书写方向。
-
-默认值：TextDirection.DEFAULT
+设置文本书写方向。 默认值：TextDirection.DEFAULT
 
 **类型：** [TextDirection](arkts-arkui-textcommon-textdirection-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -151,17 +150,15 @@ textDirection?: TextDirection
 textVerticalAlign?: TextVerticalAlign
 ```
 
-设置文本段落在垂直方向的对齐方式。
-
-默认值：TextVerticalAlign.BASELINE 
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+设置文本段落在垂直方向的对齐方式。 默认值：TextVerticalAlign.BASELINE **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [TextVerticalAlign](arkts-arkui-textcommon-textverticalalign-e.md)
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -175,15 +172,15 @@ textVerticalAlign?: TextVerticalAlign
 wordBreak?: WordBreak
 ```
 
-设置断行规则。 
-
-默认值：WordBreak.BREAK_WORD
+设置断行规则。 默认值：WordBreak.BREAK_WORD
 
 **类型：** [WordBreak](arkts-arkui-wordbreak-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

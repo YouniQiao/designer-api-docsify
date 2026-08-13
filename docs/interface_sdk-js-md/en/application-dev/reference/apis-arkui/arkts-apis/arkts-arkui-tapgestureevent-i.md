@@ -1,7 +1,6 @@
 # TapGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of   
-[onGestureJudgeBegin](CommonMethod#onGestureJudgeBegin).
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin.
 
 **Inheritance/Implementation:** TapGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
 
@@ -9,7 +8,9 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEv
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-interface TapGestureEvent extends BaseGestureEvent--><!--Device-unnamed-interface TapGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface TapGestureEvent--><!--Device-unnamed-interface TapGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,14 +20,15 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEv
 tapLocation?: EventLocationInfo
 ```
 
-Coordinate information of the current tap gesture. For non-tap gestures, the return value of **tapLocation** is   
-**undefined**.
+Coordinate information of the current tap gesture. For non-tap gestures, the return value of **tapLocation** is **undefined**.
 
 **Type:** [EventLocationInfo](arkts-arkui-eventlocationinfo-i.md)
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

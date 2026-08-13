@@ -2,7 +2,9 @@
 
 Enum for auxiliary type.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum AuxiliaryType--><!--Device-camera-enum AuxiliaryType-End-->
 
@@ -18,7 +20,9 @@ CONTRACT_LENS = 0
 
 Contract lens.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryType-CONTRACT_LENS = 0--><!--Device-AuxiliaryType-CONTRACT_LENS = 0-End-->
 

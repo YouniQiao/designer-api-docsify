@@ -2,9 +2,11 @@
 
 通话结束原因。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface DisconnectedDetails--><!--Device-call-export interface DisconnectedDetails-End-->
 
@@ -22,9 +24,11 @@ message: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DisconnectedDetails-message: string--><!--Device-DisconnectedDetails-message: string-End-->
 
@@ -42,9 +46,11 @@ reason: DisconnectedReason
 
 **类型：** [DisconnectedReason](arkts-telephony-call-disconnectedreason-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DisconnectedDetails-reason: DisconnectedReason--><!--Device-DisconnectedDetails-reason: DisconnectedReason-End-->
 

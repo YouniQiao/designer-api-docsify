@@ -2,9 +2,11 @@
 
 Describes the advertising data.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface AdvertiseData--><!--Device-ble-interface AdvertiseData-End-->
 
@@ -22,19 +24,21 @@ import { ble } from '@kit.ConnectivityKit';
 advertiseName?: string
 ```
 
-Indicates the local name data type in the advertisement packet. If both the property and[includeDeviceName](#includeDeviceName) property are used together,the [advertiseName](#advertiseName) property will ultimately take effect.
+Indicates the local name data type in the advertisement packet. If both the property and [includeDeviceName](#includeDeviceName) property are used together, the [advertiseName](#advertiseName) property will ultimately take effect.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_BLUETOOTH_ADVERTISER_NAME
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AdvertiseData-advertiseName?: string--><!--Device-AdvertiseData-advertiseName?: string-End-->
 
@@ -50,9 +54,11 @@ Indicates whether the device name will be included in the advertisement packet.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,13 +78,15 @@ Indicates whether the tx power will be included in the advertisement packet.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AdvertiseData-includeTxPower?: boolean--><!--Device-AdvertiseData-includeTxPower?: boolean-End-->
 
@@ -94,9 +102,11 @@ The specified manufacturer data list to this advertisement
 
 **Type:** Array&lt;ManufactureData&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,9 +126,11 @@ The specified service data list to this advertisement
 
 **Type:** Array&lt;ServiceData&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,9 +150,11 @@ The specified service UUID list to this advertisement
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

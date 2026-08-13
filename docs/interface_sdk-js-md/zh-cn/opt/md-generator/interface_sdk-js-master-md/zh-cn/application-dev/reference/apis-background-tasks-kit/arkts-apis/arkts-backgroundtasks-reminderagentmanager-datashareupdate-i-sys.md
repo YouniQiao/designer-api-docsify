@@ -1,11 +1,10 @@
 # DataShareUpdate（系统接口）
 
-更新数据库需要的参数信息。
+更新数据库需要的参数信息。 数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见 [数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。
 
-数据提供方需要在module.json5中的proxyData节点定义要共享的表的标识，读写权限和基本信息。配置方式请见  
-[数据提供方应用的开发](../../../database/share-data-by-silent-access-sys.md#数据提供方应用的开发)。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-interface DataShareUpdate--><!--Device-reminderAgentManager-interface DataShareUpdate-End-->
 
@@ -23,7 +22,9 @@ equalTo: Record<string, number | string | boolean>
 
 **类型：** Record&lt;string, number \| string \| boolean&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>--><!--Device-DataShareUpdate-equalTo: Record<string, double | string | boolean>-End-->
 
@@ -41,7 +42,9 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataShareUpdate-uri: string--><!--Device-DataShareUpdate-uri: string-End-->
 
@@ -59,7 +62,9 @@ value: ValuesBucket
 
 **类型：** [ValuesBucket](../../apis-arkdata/arkts-apis/arkts-arkdata-valuesbucket-t.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataShareUpdate-value: ValuesBucket--><!--Device-DataShareUpdate-value: ValuesBucket-End-->
 

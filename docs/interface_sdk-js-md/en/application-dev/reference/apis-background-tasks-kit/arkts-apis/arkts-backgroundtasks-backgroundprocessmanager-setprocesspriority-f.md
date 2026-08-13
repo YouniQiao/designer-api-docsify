@@ -14,9 +14,11 @@ function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>
 
 Sets the child process priority. After a child process is suppressed, the CPU resources that can be obtained will be limited. If the scheduling policy of the main process changes, for example, from the background to the foreground, the child process changes with the main process. To suppress the child process, call this API again.
 
-**Since:** 17
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>--><!--Device-backgroundProcessManager-function setProcessPriority(pid: int, priority: ProcessPriority): Promise<void>-End-->
 
@@ -26,7 +28,7 @@ Sets the child process priority. After a child process is suppressed, the CPU re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the child process to be suppressed, which is the **pid** parameter after the child process is created through the [OH_Ability_StartNativeChildProcess](../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess) API. |
+| pid | int | Yes | ID of the child process to be suppressed, which is the **pid** parameter after the child process is created through the [OH_Ability_StartNativeChildProcess](../../../reference/apis-ability-kit/capi-native-child-process-h.md#oh_ability_startnativechildprocess) API. |
 | priority | [ProcessPriority](arkts-backgroundtasks-backgroundprocessmanager-processpriority-e.md) | Yes | Suppression priority. |
 
 **Return value:**
@@ -39,7 +41,7 @@ Sets the child process priority. After a child process is suppressed, the CPU re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: priority is out of range. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: priority is out of range. |
 
 ## Examples
 

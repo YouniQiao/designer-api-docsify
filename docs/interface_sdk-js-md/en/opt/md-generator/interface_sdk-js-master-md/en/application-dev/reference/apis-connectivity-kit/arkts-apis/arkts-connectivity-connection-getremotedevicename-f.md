@@ -16,6 +16,8 @@ Obtains the name of a peer Bluetooth device.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -42,9 +44,9 @@ Obtains the name of a peer Bluetooth device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -69,13 +71,15 @@ function getRemoteDeviceName(deviceId: string, alias?: boolean): string
 
 Obtains the name or alias of the Bluetooth peer device.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 16.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function getRemoteDeviceName(deviceId: string, alias?: boolean): string--><!--Device-connection-function getRemoteDeviceName(deviceId: string, alias?: boolean): string-End-->
 
@@ -98,9 +102,9 @@ Obtains the name or alias of the Bluetooth peer device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |

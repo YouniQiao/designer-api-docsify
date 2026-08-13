@@ -2,9 +2,11 @@
 
 Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem).
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface BackForwardList--><!--Device-webview-interface BackForwardList-End-->
 
@@ -19,16 +21,20 @@ import { webview } from '@kit.ArkWeb';
 ## getItemAtIndex
 
 ```TypeScript
-getItemAtIndex(index: int): HistoryItem
+getItemAtIndex(index: number): HistoryItem
 ```
 
 Get history entry at given index.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-BackForwardList-getItemAtIndex(index: int): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: int): HistoryItem-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem--><!--Device-BackForwardList-getItemAtIndex(index: number): HistoryItem-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,7 +42,7 @@ Get history entry at given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of back forward list entry. |
+| index | number | Yes | Index of back forward list entry. |
 
 **Return value:**
 
@@ -48,41 +54,49 @@ Get history entry at given index.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## currentIndex
 
 ```TypeScript
-currentIndex: int
+currentIndex: number
 ```
 
 Current index in BackForwardList.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-BackForwardList-currentIndex: int--><!--Device-BackForwardList-currentIndex: int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-currentIndex: number--><!--Device-BackForwardList-currentIndex: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
 Size of in BackForwardList.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-BackForwardList-size: int--><!--Device-BackForwardList-size: int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-BackForwardList-size: number--><!--Device-BackForwardList-size: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -18,6 +18,8 @@ Allocates a new FastBuffer using an array of bytes in the range 0 – 255. Array
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(array: number[]): FastBuffer--><!--Device-fastbuffer-function from(array: number[]): FastBuffer-End-->
@@ -59,6 +61,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer--><!--Device-fastbuffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): FastBuffer-End-->
@@ -83,8 +87,8 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -110,6 +114,8 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer--><!--Device-fastbuffer-function from(buffer: FastBuffer | Uint8Array): FastBuffer-End-->
@@ -132,7 +138,7 @@ Copies the passed buffer data onto a new FastBuffer instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## Examples
 
@@ -165,6 +171,8 @@ Creates a new FastBuffer containing string. The encoding parameter identifies th
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -13,9 +13,7 @@ function getApplicationInfo(bundleName: string,
     bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information of the specified user based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the application information of the specified user based on a given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -36,7 +34,7 @@ No permission is required for obtaining the caller's own information.
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
 | userId | number | Yes | User ID. The value must be greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Callback used to return the application information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Callback used to return the application information. |
 
 
 ## getApplicationInfo
@@ -45,9 +43,7 @@ No permission is required for obtaining the caller's own information.
 function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -67,7 +63,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | bundleFlags | number | Yes | Type of information that will be returned. For details about the available enumerated values, see the application information flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md#BundleFlag). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Callback used to return the application information. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt; | Yes | Callback used to return the application information. |
 
 
 ## getApplicationInfo
@@ -76,9 +72,7 @@ No permission is required for obtaining the caller's own information.
 function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>
 ```
 
-Obtains the application information based on a given bundle name. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the application information based on a given bundle name. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 

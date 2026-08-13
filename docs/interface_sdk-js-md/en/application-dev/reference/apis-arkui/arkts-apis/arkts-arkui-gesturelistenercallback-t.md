@@ -4,13 +4,17 @@
 export declare type GestureListenerCallback = (info: GestureTriggerInfo) => void
 ```
 
-Defines the callback type used in UIObserver to monitor specific gesture triggered information.
+Defines the callback type for listening for specific gesture trigger information in **UIObserver**.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-unnamed-export declare type GestureListenerCallback = (info: GestureTriggerInfo) => void--><!--Device-unnamed-export declare type GestureListenerCallback = (info: GestureTriggerInfo) => void-End-->
 
@@ -20,5 +24,5 @@ Defines the callback type used in UIObserver to monitor specific gesture trigger
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | Yes | the gesture details triggered with user interaction |
+| info | [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md) | Yes | Details of the gesture triggered by the interaction. |
 

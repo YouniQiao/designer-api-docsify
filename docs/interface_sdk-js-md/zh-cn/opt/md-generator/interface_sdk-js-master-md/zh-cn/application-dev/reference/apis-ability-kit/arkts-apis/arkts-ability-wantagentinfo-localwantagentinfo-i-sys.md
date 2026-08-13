@@ -1,9 +1,10 @@
 # LocalWantAgentInfo（系统接口）
 
-定义触发本地WantAgent所需要的信息，可以作为  
-[createLocalWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent-sys.md#wantagentcreatelocalwantagent20)的入参创建指定的本地WantAgent对象。
+定义触发本地WantAgent所需要的信息，可以作为 createLocalWantAgent 的入参创建指定的本地WantAgent对象。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface LocalWantAgentInfo--><!--Device-unnamed-export interface LocalWantAgentInfo-End-->
 
@@ -21,7 +22,9 @@ operationType?: abilityWantAgent.OperationType
 
 **类型：** abilityWantAgent.OperationType
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,7 +44,9 @@ requestCode: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,7 +66,9 @@ wants: Array<Want>
 
 **类型：** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

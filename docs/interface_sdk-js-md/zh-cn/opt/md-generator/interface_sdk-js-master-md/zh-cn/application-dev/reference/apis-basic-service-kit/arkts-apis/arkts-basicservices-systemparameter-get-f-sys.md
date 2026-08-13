@@ -12,7 +12,7 @@ function get(key: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [get](ohos.systemParameterEnhance.get)
+**替代接口：** get
 
 <!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -31,10 +31,10 @@ function get(key: string, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) |
-| [14700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) |
-| [14700104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) |
+| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) |
+| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
 ## 示例
 
@@ -67,7 +67,7 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [get](ohos.systemParameterEnhance.get)
+**替代接口：** get
 
 <!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void-End-->
 
@@ -87,10 +87,10 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) |
-| [14700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) |
-| [14700104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) |
+| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) |
+| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
 ## 示例
 
@@ -123,7 +123,7 @@ function get(key: string, def?: string): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [get](ohos.systemParameterEnhance.get)
+**替代接口：** get
 
 <!--Device-systemParameter-function get(key: string, def?: string): Promise<string>--><!--Device-systemParameter-function get(key: string, def?: string): Promise<string>-End-->
 
@@ -148,10 +148,10 @@ function get(key: string, def?: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14700102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) |
-| [14700103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) |
-| [14700104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14700102](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700102-系统参数值无效) |
+| [14700103](../../apis-basic-services-kit/errorcode-device-info.md#14700103-操作因权限被拒绝) |
+| [14700104](../../apis-basic-services-kit/errorcode-system-parameterV9.md#14700104-系统内部错误包括内存不足死锁等) |
 
 ## 示例
 

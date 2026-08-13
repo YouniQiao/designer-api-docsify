@@ -8,7 +8,9 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Arr
 
 根据给定的resourceFlags获取所有已卸载且保留数据的应用的BundleResourceInfo。使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -34,8 +36,8 @@ function getAllUninstalledBundleResourceInfo(resourceFlags: number): Promise<Arr
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

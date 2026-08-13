@@ -16,6 +16,8 @@ Create a MediaSource object from the given directory.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-media-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>--><!--Device-media-function createMediaSourceWithDirectory(path: string): Promise< MediaSource | undefined>-End-->
@@ -38,4 +40,4 @@ Create a MediaSource object from the given directory.
 
 | Error Code ID |
 | --- |
-| [5411007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411007-no-resource-available) |
+| [5411007](../errorcode-media.md#5411007-no-resource-available) |

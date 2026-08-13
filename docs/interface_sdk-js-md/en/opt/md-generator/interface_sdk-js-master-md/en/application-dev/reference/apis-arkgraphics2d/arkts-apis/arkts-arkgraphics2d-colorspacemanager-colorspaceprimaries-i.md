@@ -2,7 +2,9 @@
 
 The three primary colors (red, green, blue) and white as defined by the color space standard, whose positions in the color space are represented by (x, y) coordinates based on real-world chromaticity.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-interface ColorSpacePrimaries--><!--Device-colorSpaceManager-interface ColorSpacePrimaries-End-->
 
@@ -24,7 +26,9 @@ X coordinate of the blue color in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-blueX: double--><!--Device-ColorSpacePrimaries-blueX: double-End-->
 
@@ -40,7 +44,9 @@ Y coordinate of the blue color in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-blueY: double--><!--Device-ColorSpacePrimaries-blueY: double-End-->
 
@@ -56,7 +62,9 @@ X coordinate of the green color in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-greenX: double--><!--Device-ColorSpacePrimaries-greenX: double-End-->
 
@@ -72,7 +80,9 @@ Y coordinate of the green color in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-greenY: double--><!--Device-ColorSpacePrimaries-greenY: double-End-->
 
@@ -88,7 +98,9 @@ X coordinate of the red color in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-redX: double--><!--Device-ColorSpacePrimaries-redX: double-End-->
 
@@ -104,7 +116,9 @@ Y coordinate of the red color in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-redY: double--><!--Device-ColorSpacePrimaries-redY: double-End-->
 
@@ -120,7 +134,9 @@ X coordinate of the white point in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-whitePointX: double--><!--Device-ColorSpacePrimaries-whitePointX: double-End-->
 
@@ -136,7 +152,9 @@ Y coordinate of the white point in the color space.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpacePrimaries-whitePointY: double--><!--Device-ColorSpacePrimaries-whitePointY: double-End-->
 

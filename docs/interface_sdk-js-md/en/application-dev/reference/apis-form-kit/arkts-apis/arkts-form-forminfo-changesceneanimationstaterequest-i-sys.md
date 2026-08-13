@@ -2,9 +2,11 @@
 
 ChangeSceneAnimationStateRequest
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface ChangeSceneAnimationStateRequest--><!--Device-formInfo-interface ChangeSceneAnimationStateRequest-End-->
 
@@ -28,9 +30,11 @@ The form id about request change scene animation state
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChangeSceneAnimationStateRequest-formId: string--><!--Device-ChangeSceneAnimationStateRequest-formId: string-End-->
 
@@ -46,11 +50,13 @@ state: int
 
 The state of scene animation. 0 means deactivate, 1 means activate The value must be an integer within [0,1].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ChangeSceneAnimationStateRequest-state: int--><!--Device-ChangeSceneAnimationStateRequest-state: int-End-->
 

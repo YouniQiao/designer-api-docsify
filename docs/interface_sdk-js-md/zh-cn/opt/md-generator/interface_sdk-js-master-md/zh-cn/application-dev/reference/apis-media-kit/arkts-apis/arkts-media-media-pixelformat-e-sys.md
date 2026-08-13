@@ -2,7 +2,9 @@
 
 Enumerates the color formats supported by the video thumbnail.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-media-enum PixelFormat--><!--Device-media-enum PixelFormat-End-->
 
@@ -18,7 +20,9 @@ RGB_565 = 2
 
 RGB_565.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PixelFormat-RGB_565 = 2--><!--Device-PixelFormat-RGB_565 = 2-End-->
 
@@ -34,7 +38,9 @@ RGBA_8888 = 3
 
 RGBA_8888.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PixelFormat-RGBA_8888 = 3--><!--Device-PixelFormat-RGBA_8888 = 3-End-->
 
@@ -50,7 +56,9 @@ RGB_888 = 5
 
 RGB_888.
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PixelFormat-RGB_888 = 5--><!--Device-PixelFormat-RGB_888 = 5-End-->
 

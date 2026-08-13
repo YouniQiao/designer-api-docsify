@@ -2,7 +2,9 @@
 
 Defines the authentication result information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AuthResult--><!--Device-osAccount-interface AuthResult-End-->
 
@@ -26,7 +28,9 @@ OS account ID, which is **undefined** by default.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-accountId?: int--><!--Device-AuthResult-accountId?: int-End-->
 
@@ -44,7 +48,9 @@ Credential ID, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-credentialId?: Uint8Array--><!--Device-AuthResult-credentialId?: Uint8Array-End-->
 
@@ -62,7 +68,9 @@ Freezing time, in milliseconds. The default value is **-1**.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-freezingTime?: int--><!--Device-AuthResult-freezingTime?: int-End-->
 
@@ -80,7 +88,9 @@ Next freezing time, in milliseconds. The default value is **undefined**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-nextPhaseFreezingTime?: int--><!--Device-AuthResult-nextPhaseFreezingTime?: int-End-->
 
@@ -98,7 +108,9 @@ Authentication validity period, in milliseconds. The default value is **undefine
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-pinValidityPeriod?: long--><!--Device-AuthResult-pinValidityPeriod?: long-End-->
 
@@ -116,7 +128,9 @@ Number of remaining authentication times, which is **-1** by default.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-remainTimes?: int--><!--Device-AuthResult-remainTimes?: int-End-->
 
@@ -134,7 +148,9 @@ Authentication token, which is left blank by default.
 
 **Type:** Uint8Array
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthResult-token?: Uint8Array--><!--Device-AuthResult-token?: Uint8Array-End-->
 

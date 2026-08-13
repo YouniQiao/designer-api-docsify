@@ -4,6 +4,8 @@ FileIO
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace fileIo--><!--Device-unnamed-declare namespace fileIo-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

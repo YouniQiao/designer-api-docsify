@@ -4,7 +4,9 @@ Callback API type used during data migration, defining the callback methods for 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-fontManager-interface DataMigrationCallback--><!--Device-fontManager-interface DataMigrationCallback-End-->
 
@@ -28,7 +30,9 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DataMigrationCallback-onHeartBeat(): void--><!--Device-DataMigrationCallback-onHeartBeat(): void-End-->
 
@@ -73,7 +77,9 @@ Callback function that is periodically invoked during the execution of the data 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void--><!--Device-DataMigrationCallback-onProgress(progress : DataMigrationProgress): void-End-->
 
@@ -116,12 +122,6 @@ dataMigration() {
 
 ## onResult
 
-ArkTS-Dyn:
-```TypeScript
-onResult(result : number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onResult(result : int): void
 ```
@@ -130,7 +130,9 @@ Callback function that is invoked after the data migration task is completed (wh
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DataMigrationCallback-onResult(result : int): void--><!--Device-DataMigrationCallback-onResult(result : int): void-End-->
 
@@ -142,7 +144,7 @@ Callback function that is invoked after the data migration task is completed (wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Data migration result. &lt;br&gt;**0**: Data migration succeeded. &lt;br&gt;**1**: No data migration is required. &lt;br&gt;**2**: Failed to obtain the user ID. &lt;br&gt;**3**: Failed to check the directory. &lt;br&gt;**4**: Failed to initialize the cache directory. &lt;br&gt;**5**: Failed to open the source file. &lt;br&gt;**6**: Failed to copy the file. &lt;br&gt;**7**: Failed to rename the file. &lt;br&gt;**8**: Failed to delete the file. |
+| result | int | Yes | Data migration result. &lt;br&gt;**0**: Data migration succeeded. &lt;br&gt;**1**: No data migration is required. &lt;br&gt;**2**: Failed to obtain the user ID. &lt;br&gt;**3**: Failed to check the directory. &lt;br&gt;**4**: Failed to initialize the cache directory. &lt;br&gt;**5**: Failed to open the source file. &lt;br&gt;**6**: Failed to copy the file. &lt;br&gt;**7**: Failed to rename the file. &lt;br&gt;**8**: Failed to delete the file. |
 
 ## Examples
 

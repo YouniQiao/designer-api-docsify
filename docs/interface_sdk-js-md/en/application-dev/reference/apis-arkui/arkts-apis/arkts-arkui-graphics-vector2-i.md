@@ -1,52 +1,62 @@
 # Vector2
 
-Defines a vector with two values.
+Defines a vector that contains the x and y coordinate values.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export interface Vector2--><!--Device-unnamed-export interface Vector2-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Vector2--><!--Device-unnamed-interface Vector2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Value for x-axis of the vector.
+X coordinate value of the vector. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Vector2-x: double--><!--Device-Vector2-x: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Vector2-x: number--><!--Device-Vector2-x: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Value for y-axis of the vector.
+Y coordinate value of the vector. Value range: (-∞, +∞).
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Vector2-y: double--><!--Device-Vector2-y: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Vector2-y: number--><!--Device-Vector2-y: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

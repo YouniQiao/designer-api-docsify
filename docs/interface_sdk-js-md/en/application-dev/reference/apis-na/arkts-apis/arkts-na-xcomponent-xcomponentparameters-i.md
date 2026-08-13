@@ -1,0 +1,102 @@
+# XComponentParameters
+
+Defines the XComponent parameter interface.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface XComponentParameters--><!--Device-unnamed-export declare interface XComponentParameters-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## controller
+
+```TypeScript
+controller?: XComponentController
+```
+
+The controller of xcomponent.
+
+**Type:** [XComponentController](arkts-na-xcomponent-xcomponentcontroller-c.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentParameters-controller?: XComponentController--><!--Device-XComponentParameters-controller?: XComponentController-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## id
+
+```TypeScript
+id: string
+```
+
+The id of xcomponent
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentParameters-id: string--><!--Device-XComponentParameters-id: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## nativeXComponentHandler
+
+```TypeScript
+nativeXComponentHandler: Callback<NativeXComponentPointer>
+```
+
+The callback to handle NativeXComponent Pointer.
+
+**Type:** [Callback](../../apis-arkui/arkts-components/arkts-arkui-callback-i.md)&lt;[NativeXComponentPointer](arkts-na-nativexcomponentpointer-t.md)&gt;
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentParameters-nativeXComponentHandler: Callback<NativeXComponentPointer>--><!--Device-XComponentParameters-nativeXComponentHandler: Callback<NativeXComponentPointer>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## type
+
+```TypeScript
+type: XComponentType
+```
+
+The type of xcomponent
+
+**Type:** [XComponentType](../../apis-arkui/arkts-apis/arkts-arkui-xcomponenttype-e.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-XComponentParameters-type: XComponentType--><!--Device-XComponentParameters-type: XComponentType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

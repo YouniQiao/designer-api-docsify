@@ -2,9 +2,11 @@
 
 提供有关活动通知的排序信息。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationSorting--><!--Device-unnamed-export interface NotificationSorting-End-->
 
@@ -22,9 +24,11 @@ readonly hashCode: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSorting-readonly hashCode: string--><!--Device-NotificationSorting-readonly hashCode: string-End-->
 
@@ -40,11 +44,13 @@ readonly ranking: long
 
 通知级别，不设置则根据通知渠道类型有默认值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSorting-readonly ranking: long--><!--Device-NotificationSorting-readonly ranking: long-End-->
 
@@ -62,9 +68,11 @@ readonly slot: NotificationSlot
 
 **类型：** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSorting-readonly slot: NotificationSlot--><!--Device-NotificationSorting-readonly slot: NotificationSlot-End-->
 

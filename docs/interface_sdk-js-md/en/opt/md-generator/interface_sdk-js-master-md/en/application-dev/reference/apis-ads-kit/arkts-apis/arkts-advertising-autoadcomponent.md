@@ -1,4 +1,4 @@
-# @ohos.advertising.AutoAdComponent(Carousel Ad Component)
+# @ohos.advertising.AutoAdComponent
 
 ## Modules to Import
 

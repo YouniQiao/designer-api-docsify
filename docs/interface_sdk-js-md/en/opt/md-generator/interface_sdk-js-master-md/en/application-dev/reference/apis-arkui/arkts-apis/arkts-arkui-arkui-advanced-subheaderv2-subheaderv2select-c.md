@@ -4,7 +4,7 @@ Defines the content and events for selection.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class SubHeaderV2Select--><!--Device-unnamed-export declare class SubHeaderV2Select-End-->
 
@@ -26,6 +26,8 @@ A constructor used to create a **SubHeaderV2SelectOptions** object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -40,39 +42,14 @@ A constructor used to create a **SubHeaderV2SelectOptions** object.
 | --- | --- | --- |
 | [options](#options) | [SubHeaderV2SelectOptions](arkts-arkui-arkui-advanced-subheaderv2-subheaderv2selectoptions-i.md) | Yes |
 
-## onSelect
-
-```TypeScript
-onSelect?: SubHeaderV2SelectOnSelect
-```
-
-Sets the onSelect of the SubHeaderV2SelectOptions.
-
-**Since:** 18
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-SubHeaderV2Select-onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2Select-onSelect?: SubHeaderV2SelectOnSelect-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## defaultFocus
 
 ```TypeScript
-defaultFocus?: boolean
+@Trace
+  defaultFocus?: boolean
 ```
 
-Whether the drop-down button is the default focus.
-
-**true**: The drop-down button is the default focus.
-
-**false**: The drop-down button is not the default focus.
-
-Default value: **false**
-
-Decorator: @Trace
+Whether the drop-down button is the default focus. **true**: The drop-down button is the default focus. **false**: The drop-down button is not the default focus. Default value: **false** Decorator: @Trace
 
 **Type:** boolean
 
@@ -80,18 +57,21 @@ Decorator: @Trace
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-defaultFocus?: boolean--><!--Device-SubHeaderV2Select-defaultFocus?: boolean-End-->
+<!--Device-SubHeaderV2Select-@Trace  defaultFocus?: boolean--><!--Device-SubHeaderV2Select-@Trace  defaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## id
 
 ```TypeScript
-id?: string
+@Trace
+  id?: string
 ```
 
 Set the id for the SubHeaderV2Select.
@@ -100,38 +80,67 @@ Set the id for the SubHeaderV2Select.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-SubHeaderV2Select-id?: string--><!--Device-SubHeaderV2Select-id?: string-End-->
+<!--Device-SubHeaderV2Select-@Trace  id?: string--><!--Device-SubHeaderV2Select-@Trace  id?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onSelect
+
+```TypeScript
+@Trace
+  onSelect?: SubHeaderV2SelectOnSelect
+```
+
+Sets the onSelect of the SubHeaderV2SelectOptions.
+
+**Type:** [SubHeaderV2SelectOnSelect](arkts-arkui-subheaderv2selectonselect-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-SubHeaderV2Select-@Trace  onSelect?: SubHeaderV2SelectOnSelect--><!--Device-SubHeaderV2Select-@Trace  onSelect?: SubHeaderV2SelectOnSelect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
 ```TypeScript
-options: SelectOption[]
+@Trace
+  options: SelectOption[]
 ```
 
 Sets the options of the SubHeaderV2SelectOptions.
 
-**Type:** [SelectOption](../arkts-components/arkts-arkui-selectoption-i.md)[]
+**Type:** SelectOption[]
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-options: SelectOption[]--><!--Device-SubHeaderV2Select-options: SelectOption[]-End-->
+<!--Device-SubHeaderV2Select-@Trace  options: SelectOption[]--><!--Device-SubHeaderV2Select-@Trace  options: SelectOption[]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedContent
 
 ```TypeScript
-selectedContent?: ResourceStr
+@Trace
+  selectedContent?: ResourceStr
 ```
 
 Sets the selected content of the SubHeaderV2SelectOptions.
@@ -140,18 +149,21 @@ Sets the selected content of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-selectedContent?: ResourceStr--><!--Device-SubHeaderV2Select-selectedContent?: ResourceStr-End-->
+<!--Device-SubHeaderV2Select-@Trace  selectedContent?: ResourceStr--><!--Device-SubHeaderV2Select-@Trace  selectedContent?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## selectedIndex
 
 ```TypeScript
-selectedIndex?: number
+@Trace
+  selectedIndex?: number
 ```
 
 Sets the selected index of the SubHeaderV2SelectOptions.
@@ -160,10 +172,12 @@ Sets the selected index of the SubHeaderV2SelectOptions.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Select-selectedIndex?: number--><!--Device-SubHeaderV2Select-selectedIndex?: number-End-->
+<!--Device-SubHeaderV2Select-@Trace  selectedIndex?: number--><!--Device-SubHeaderV2Select-@Trace  selectedIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

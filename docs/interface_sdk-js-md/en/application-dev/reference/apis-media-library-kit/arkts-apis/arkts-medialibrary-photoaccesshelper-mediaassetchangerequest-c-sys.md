@@ -4,11 +4,13 @@ Represents a media asset change request.
 
 **Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,15 +26,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, proxy: PhotoProxy): void
 ```
 
-Adds resources using **PhotoProxy** data.
+Adds resources using **PhotoProxy** data. > **NOTE：**> > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
-> **NOTE：**
-> 
-> For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void-End-->
 
@@ -51,9 +51,9 @@ Adds resources using **PhotoProxy** data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -89,9 +89,11 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 
 Adds a resource using fileUri from file management directory
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -112,10 +114,10 @@ Adds a resource using fileUri from file management directory
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The file corresponding to the URI is not in the app sandbox. &lt;br&gt;2. ResourceType must be image or video |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: &lt;br&gt;1. The database is corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The file corresponding to the URI is not in the app sandbox. &lt;br&gt;2. ResourceType must be image or video |
 
 ## createAssetRequest
 
@@ -123,21 +125,13 @@ Adds a resource using fileUri from file management directory
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-Creates an asset change request with the specified file name.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | 
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates an asset change request with the specified file name. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest-End-->
 
@@ -163,9 +157,9 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000001 | Invalid display name |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -199,7 +193,9 @@ Creates an asset change request with the specified file name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest | null--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest | null-End-->
 
@@ -225,9 +221,9 @@ Creates an asset change request with the specified file name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 23800102 | The format or length of the display name does not meet the specifications. |
 
 ## deleteAssetsPermanentlyWithUri
@@ -236,19 +232,13 @@ Creates an asset change request with the specified file name.
 static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be
-> permanently deleted. The deleted assets are not stored in the recycle bin.
-> 
-> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this
-> operation.
+Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result. > **NOTE：**> > - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be > permanently deleted. The deleted assets are not stored in the recycle bin. > > - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this > operation.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -277,10 +267,10 @@ Permanently deletes images or videos in batches by URI. The deleted images or vi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by nonsystem application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by nonsystem application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Asset uri array size is empty or bigger than 500 . |
 
 ## Examples
 
@@ -302,20 +292,13 @@ async function example(context: Context, assetUri: string) {
 static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes cloud media assets to the trash in batches. This API uses a promise to return the result.
+Deletes cloud media assets to the trash in batches. This API uses a promise to return the result. > **NOTE：**> > - If the assets are only on the local device, no changes are made. > > - If the assets are only in the cloud, they are moved directly to the trash. > > - If the assets are on both the local device and the cloud, after deletion, they only remain on the local > device, and the cloud copies are moved in the trash.
 
-> **NOTE：**
-> 
-> - If the assets are only on the local device, no changes are made.
-> 
-> - If the assets are only in the cloud, they are moved directly to the trash.
-> 
-> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local
-> device, and the cloud copies are moved in the trash.
+**Since:** 26.0.0
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -342,10 +325,10 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Asset uri array size is empty or bigger than 500 . |
 
 ## Examples
 
@@ -366,16 +349,13 @@ async function example(context: Context, assetUri: string) {
 static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>
 ```
 
-Permanently deletes images or videos in batches. This API uses a promise to return the result.
+Permanently deletes images or videos in batches. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -402,9 +382,9 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## Examples
@@ -436,16 +416,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>
 ```
 
-Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result.
+Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+**Since:** 23
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -473,8 +450,8 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## deleteLocalAssetsWithUri
@@ -483,20 +460,13 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes local media assets to the trash in batches. This API uses a promise to return the result.
+Deletes local media assets to the trash in batches. This API uses a promise to return the result. > **NOTE：**> > - If the assets are only on the local device, they are moved directly to the trash. > > - If the assets are only in the cloud, no changes are made. > > - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and > the local copies are moved in the trash.
 
-> **NOTE：**
-> 
-> - If the assets are only on the local device, they are moved directly to the trash.
-> 
-> - If the assets are only in the cloud, no changes are made.
-> 
-> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and
-> the local copies are moved in the trash.
+**Since:** 26.0.0
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -523,10 +493,10 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1.Database corrupted; &lt;br&gt;2.The file system is abnormal; &lt;br&gt;3.The IPC request timed out; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Asset uri array size is empty or bigger than 500 . |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1.Database corrupted; &lt;br&gt;2.The file system is abnormal; &lt;br&gt;3.The IPC request timed out; |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1. The context is empty; &lt;br&gt;2. Asset uri array size is empty or bigger than 500 . |
 
 ## Examples
 
@@ -549,9 +519,11 @@ setAppLinkInfo(appLink: string): void
 
 Sets the information about the app link association.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void--><!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void-End-->
 
@@ -569,9 +541,9 @@ Sets the information about the app link association.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter's length is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter's length is not within the valid range. |
 
 ## Examples
 
@@ -604,7 +576,9 @@ Sets the status of the app link association.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -624,9 +598,9 @@ Sets the status of the app link association.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Invoked by non-system applications |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Invoked by non-system applications |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
 ## setCameraEditData
 
@@ -638,7 +612,9 @@ Saves the camera edited data of an asset.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void-End-->
 
@@ -656,9 +632,9 @@ Saves the camera edited data of an asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
 ## setCameraShotKey
 
@@ -668,9 +644,11 @@ setCameraShotKey(cameraShotKey: string): void
 
 Sets the Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void--><!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void-End-->
 
@@ -688,8 +666,8 @@ Sets the Key for the Ultra Snapshot feature, which allows the camera to take pho
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -721,7 +699,9 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>--><!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>-End-->
 
@@ -745,9 +725,9 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameter verification failed. Possible causes: &lt;br&gt;1. The compositeDisplayMode is not within the supported range. &lt;br&gt;2. The original file does not exist locally in PhotoAsset. &lt;br&gt;3. The PhotoAsset is not a composite asset. &lt;br&gt;4. The original file format is not within the supported range. &lt;br&gt;5. The original file has been edited. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: &lt;br&gt;1. Database corrupted. &lt;br&gt;2. The file system is abnormal. &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameter verification failed. Possible causes: &lt;br&gt;1. The compositeDisplayMode is not within the supported range. &lt;br&gt;2. The original file does not exist locally in PhotoAsset. &lt;br&gt;3. The PhotoAsset is not a composite asset. &lt;br&gt;4. The original file format is not within the supported range. &lt;br&gt;5. The original file has been edited. |
 
 ## Examples
 
@@ -782,9 +762,11 @@ setEditData(editData: MediaAssetEditData): void
 
 Saves the edited data of an asset.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void-End-->
 
@@ -802,8 +784,8 @@ Saves the edited data of an asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -846,9 +828,11 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 
 Sets the effect of this moving photo.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void--><!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void-End-->
 
@@ -866,9 +850,9 @@ Sets the effect of this moving photo.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -894,23 +878,78 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
 }
 ```
 
-## setHasAppLink
+## setFavorite
 
-ArkTS-Dyn:
 ```TypeScript
-setHasAppLink(hasAppLink: number): void
+setFavorite(favoriteState: boolean): void
 ```
 
-ArkTS-Sta:
+Favorites or unfavorites this file asset.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void--><!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| favoriteState | boolean | Yes | Whether to favorite the file. **true** to favorite, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 14000011 | System inner fail |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setFavoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  assetChangeRequest.setFavorite(true);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setFavorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
+## setHasAppLink
+
 ```TypeScript
 setHasAppLink(hasAppLink: int): void
 ```
 
 Sets the status of the app link association.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void--><!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void-End-->
 
@@ -922,15 +961,15 @@ Sets the status of the app link association.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hasAppLink | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Whether to enable or disable the app link association. |
+| hasAppLink | int | Yes | Whether to enable or disable the app link association. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
 ## Examples
 
@@ -966,9 +1005,11 @@ setHidden(hiddenState: boolean): void
 
 Hides this file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
@@ -986,8 +1027,8 @@ Hides this file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1027,7 +1068,9 @@ Set hidden state of asset.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1047,27 +1090,23 @@ Set hidden state of asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted.2. The filesystem is abnormal.3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The asset is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: 1. Database corrupted.2. The filesystem is abnormal.3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The asset is not exist; |
 
 ## setLocation
 
-ArkTS-Dyn:
-```TypeScript
-setLocation(longitude: number, latitude: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setLocation(longitude: double, latitude: double): void
 ```
 
 Sets location information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void--><!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void-End-->
 
@@ -1079,15 +1118,15 @@ Sets location information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| longitude | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Longitude. |
-| latitude | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Latitude. |
+| longitude | double | Yes | Longitude. |
+| latitude | double | Yes | Latitude. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1119,12 +1158,6 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ## setMovingPhotoVersion
 
-ArkTS-Dyn:
-```TypeScript
-setMovingPhotoVersion(version: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setMovingPhotoVersion(version: int): void
 ```
@@ -1133,7 +1166,9 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void--><!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void-End-->
 
@@ -1145,15 +1180,15 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| version | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Motion picture version number |
+| version | int | Yes | Motion picture version number |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Parameter error, only supports 9. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Parameter error, only supports 9. |
 
 ## setSupportedWatermarkType
 
@@ -1163,9 +1198,11 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 
 Sets the watermark type supported by photos.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void--><!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void-End-->
 
@@ -1183,8 +1220,8 @@ Sets the watermark type supported by photos.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -1222,7 +1259,9 @@ Set title by filemanger.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1242,9 +1281,9 @@ Set title by filemanger.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The asset is not exist; |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes:1. Database corrupted.2. The file system is abnormal.3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: 1. The asset is not exist; |
 
 ## setUserComment
 
@@ -1254,9 +1293,11 @@ setUserComment(userComment: string): void
 
 Sets the user comment information of this media asset.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void-End-->
 
@@ -1274,8 +1315,8 @@ Sets the user comment information of this media asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | System inner fail |
 
 ## Examples
@@ -1314,9 +1355,11 @@ setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: str
 
 Set video enhancement attribute
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void--><!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void-End-->
 
@@ -1335,8 +1378,8 @@ Set video enhancement attribute
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 | 14000016 | Operation Not Support |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 

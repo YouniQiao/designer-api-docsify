@@ -4,9 +4,9 @@ Declaration of the left icon configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class EditableLeftIconV2--><!--Device-unnamed-export declare class EditableLeftIconV2-End-->
 
@@ -28,9 +28,13 @@ Constructor of EditableLeftIconV2.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-EditableLeftIconV2-constructor(options?: EditableLeftIconV2Options)--><!--Device-EditableLeftIconV2-constructor(options?: EditableLeftIconV2Options)-End-->
 
@@ -42,28 +46,11 @@ Constructor of EditableLeftIconV2.
 | --- | --- | --- | --- |
 | options | [EditableLeftIconV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editablelefticonv2options-i.md) | No | The options of the left icon |
 
-## onAction
-
-```TypeScript
-public onAction?: OnActionCallback
-```
-
-Callback function when click on the left icon.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EditableLeftIconV2-public onAction?: OnActionCallback--><!--Device-EditableLeftIconV2-public onAction?: OnActionCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## defaultFocus
 
 ```TypeScript
-public defaultFocus: boolean
+@Trace
+  public defaultFocus: boolean
 ```
 
 Whether to get focus by default.
@@ -74,18 +61,23 @@ Whether to get focus by default.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableLeftIconV2-public defaultFocus: boolean--><!--Device-EditableLeftIconV2-public defaultFocus: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableLeftIconV2-@Trace  public defaultFocus: boolean--><!--Device-EditableLeftIconV2-@Trace  public defaultFocus: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## iconType
 
 ```TypeScript
-public iconType: EditableLeftIconTypeV2
+@Trace
+  public iconType: EditableLeftIconTypeV2
 ```
 
 Icon type, Back or Cancel.
@@ -96,11 +88,40 @@ Icon type, Back or Cancel.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableLeftIconV2-public iconType: EditableLeftIconTypeV2--><!--Device-EditableLeftIconV2-public iconType: EditableLeftIconTypeV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableLeftIconV2-@Trace  public iconType: EditableLeftIconTypeV2--><!--Device-EditableLeftIconV2-@Trace  public iconType: EditableLeftIconTypeV2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onAction
+
+```TypeScript
+@Trace
+  public onAction?: OnActionCallback
+```
+
+Callback function when click on the left icon.
+
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableLeftIconV2-@Trace  public onAction?: OnActionCallback--><!--Device-EditableLeftIconV2-@Trace  public onAction?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

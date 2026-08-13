@@ -1,18 +1,22 @@
 # MonitorCallback
 
 ```TypeScript
-export type MonitorCallback = (iMonitor: IMonitor) => void
+export declare type MonitorCallback = (monitorValue: IMonitor) => void
 ```
 
-Defines IMonitor callback function.
+Listener callback function of the IMonitor type.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export type MonitorCallback = (iMonitor: IMonitor) => void--><!--Device-unnamed-export type MonitorCallback = (iMonitor: IMonitor) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-unnamed-export declare type MonitorCallback = (monitorValue: IMonitor) => void--><!--Device-unnamed-export declare type MonitorCallback = (monitorValue: IMonitor) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,5 +24,5 @@ Defines IMonitor callback function.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iMonitor | [IMonitor](arkts-arkui-decorator-imonitor-i.md) | Yes | Monitor value |
+| monitorValue | IMonitor | Yes | Change information passed by the callback. |
 

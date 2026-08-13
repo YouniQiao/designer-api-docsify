@@ -4,6 +4,8 @@ A **VideoController** object can control one or more **Video** components.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class VideoController--><!--Device-unnamed-declare class VideoController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor()
 A constructor used to create a **VideoController** object.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Exits full-screen mode.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoController-exitFullscreen()--><!--Device-VideoController-exitFullscreen()-End-->
@@ -50,6 +56,8 @@ Pauses playback. The current frame is then displayed, and playback will be resum
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoController-pause()--><!--Device-VideoController-pause()-End-->
@@ -65,6 +73,8 @@ requestFullscreen(value: boolean)
 Requests full-screen playback.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,6 +98,8 @@ Resets the **AVPlayer** instance of this component, which displays the current f
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -102,14 +114,11 @@ Resets the **AVPlayer** instance of this component, which displays the current f
 setCurrentTime(value: number)
 ```
 
-Sets the video playback position.
-
-> **NOTE：**
-> 
-> To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then
-> seek to the target position.
+Sets the video playback position. > **NOTE：**> > To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then > seek to the target position.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,6 +141,8 @@ setCurrentTime(value: number, seekMode: SeekMode)
 Sets the video playback position with the specified seek mode.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,6 +167,8 @@ Starts playback.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoController-start()--><!--Device-VideoController-start()-End-->
@@ -171,6 +184,8 @@ stop()
 Stops playback. The current frame is then displayed, and playback will restart from the very beginning.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

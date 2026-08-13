@@ -1,15 +1,4 @@
-# @ohos.atomicservice.AtomicServiceWeb(Defines the atomicService web component)
-
-###### Required Permissions
- **ohos.permission.INTERNET**, required for accessing online web pages. For details about how to apply for a
- permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
- ###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
- ###### Events
- The [universal events](./@internal/component/ets/common) are not supported.
-
+# @ohos.atomicservice.AtomicServiceWeb
 
 ## Modules to Import
 

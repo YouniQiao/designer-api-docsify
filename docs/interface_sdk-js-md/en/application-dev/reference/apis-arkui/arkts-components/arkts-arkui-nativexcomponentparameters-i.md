@@ -1,10 +1,12 @@
 # NativeXComponentParameters
 
-Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding [FrameNode](../../../arkui/FrameNode) object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md).
+Defines the options of the **XComponent**. An XComponent created with such constructor parameters can pass its corresponding FrameNode object to the Native side, enabling the use of NDK APIs for surface lifecycle–related settings and [component event listening](../../../ui/ndk-listen-to-component-events.md).
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface NativeXComponentParameters--><!--Device-unnamed-declare interface NativeXComponentParameters-End-->
 
@@ -23,6 +25,8 @@ AI analysis options. You can configure the analysis type or bind an analyzer con
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +49,8 @@ Type of the component.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

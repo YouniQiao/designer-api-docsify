@@ -6,9 +6,11 @@ export type ValueType = long | double | string | boolean
 
 Defines the value types allowed in a **ValuesBucket** instance.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

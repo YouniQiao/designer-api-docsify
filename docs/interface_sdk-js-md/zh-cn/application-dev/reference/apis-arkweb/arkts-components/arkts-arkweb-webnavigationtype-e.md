@@ -6,6 +6,8 @@ Enum type supplied to [navigationType](arkts-arkweb-loadcommitteddetails-i.md#na
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum WebNavigationType--><!--Device-unnamed-declare enum WebNavigationType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -22,6 +24,8 @@ Unknown type.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebNavigationType-UNKNOWN = 0--><!--Device-WebNavigationType-UNKNOWN = 0-End-->
@@ -34,11 +38,13 @@ Unknown type.
 MAIN_FRAME_NEW_ENTRY = 1
 ```
 
-A new entry was created due to a navigation happened on the main frame.Contains all situations that will generate a mainframe navigation entry,which means that navigations to a hash on the same document or history.pushState also belong to this type.
+A new entry was created due to a navigation happened on the main frame. Contains all situations that will generate a mainframe navigation entry, which means that navigations to a hash on the same document or history.pushState also belong to this type.
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -52,11 +58,13 @@ A new entry was created due to a navigation happened on the main frame.Contains 
 MAIN_FRAME_EXISTING_ENTRY = 2
 ```
 
-Navigate to an existing entry due to a navigation on the main frame.e.g. 1. History navigations. 2. Reloads (contains loading the same url). 3. Same-document navigations(history.replaceState(), location.replace()).
+Navigate to an existing entry due to a navigation on the main frame. e.g. 1. History navigations. 2. Reloads (contains loading the same url). 3. Same-document navigations(history.replaceState(), location.replace()).
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -76,6 +84,8 @@ A navigation happened on subframe which was triggered by user.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebNavigationType-NAVIGATION_TYPE_NEW_SUBFRAME = 4--><!--Device-WebNavigationType-NAVIGATION_TYPE_NEW_SUBFRAME = 4-End-->
@@ -93,6 +103,8 @@ A navigation happened on the subframe automatically.
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

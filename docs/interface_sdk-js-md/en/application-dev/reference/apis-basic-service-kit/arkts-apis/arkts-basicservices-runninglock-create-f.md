@@ -14,9 +14,11 @@ function create(name: string, type: RunningLockType, callback: AsyncCallback<Run
 
 Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -30,14 +32,14 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the **RunningLock** object. The value must be a string. |
 | type | [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md) | Yes | Type of the **RunningLock** object. The value must be an enum. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[RunningLock](arkts-basicservices-runninglock-runninglock-c.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and data is the created **RunningLock** object. Otherwise, **err** is an error object. **AsyncCallback** has encapsulated an API of the **RunningLock** class. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 
@@ -60,9 +62,11 @@ function create(name: string, type: RunningLockType): Promise<RunningLock>
 
 Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.RUNNING_LOCK
 
@@ -87,8 +91,8 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#Running
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | If the permission is denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
 
 ## Examples
 

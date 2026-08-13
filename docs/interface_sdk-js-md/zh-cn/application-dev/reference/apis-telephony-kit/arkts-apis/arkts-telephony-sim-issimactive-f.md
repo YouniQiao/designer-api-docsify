@@ -8,9 +8,11 @@ function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void
 
 Checks whether the SIM card in a specified slot is activated.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void--><!--Device-sim-function isSimActive(slotId: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -20,8 +22,8 @@ Checks whether the SIM card in a specified slot is activated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | Indicates the callback for checking whether the SIM card in a specified slot is activated. Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
+| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | Indicates the callback for checking whether the SIM card in a specified slot is activated. Returns {@code true} if the SIM card is activated; returns {@code false} otherwise. |
 
 ## 示例
 
@@ -43,9 +45,11 @@ function isSimActive(slotId: int): Promise<boolean>
 
 Checks whether the SIM card in a specified slot is activated.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sim-function isSimActive(slotId: int): Promise<boolean>--><!--Device-sim-function isSimActive(slotId: int): Promise<boolean>-End-->
 
@@ -55,7 +59,7 @@ Checks whether the SIM card in a specified slot is activated.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
+| slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
 
 **返回值：**
 

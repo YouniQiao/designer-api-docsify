@@ -3,6 +3,7 @@
 ## RowSplit
 
 ```TypeScript
+@ComponentBuilder
 export declare function RowSplit(
     
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines RowSplit Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function RowSplit(        content_?: CustomBuilder,): RowSplitAttribute--><!--Device-unnamed-export declare function RowSplit(        content_?: CustomBuilder,): RowSplitAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function RowSplit(        content_?: CustomBuilder,): RowSplitAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function RowSplit(        content_?: CustomBuilder,): RowSplitAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,18 +28,19 @@ Defines RowSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RowSplitAttribute](arkts-arkui-rowsplit-rowsplitattribute-i.md) |  |
+| RowSplitAttribute |  |
 
 
 ## RowSplit
 
 ```TypeScript
+@Builder
 export declare function RowSplit(
     style: CustomBuilderT<RowSplitAttribute>,
     content_?: CustomBuilder,
@@ -49,11 +53,11 @@ Defines RowSplit Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function RowSplit(    style: CustomBuilderT<RowSplitAttribute>,    content_?: CustomBuilder,): RowSplitAttribute--><!--Device-unnamed-export declare function RowSplit(    style: CustomBuilderT<RowSplitAttribute>,    content_?: CustomBuilder,): RowSplitAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function RowSplit(    style: CustomBuilderT<RowSplitAttribute>,    content_?: CustomBuilder,): RowSplitAttribute--><!--Device-unnamed-@Builderexport declare function RowSplit(    style: CustomBuilderT<RowSplitAttribute>,    content_?: CustomBuilder,): RowSplitAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,12 +65,12 @@ Defines RowSplit Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[RowSplitAttribute](arkts-arkui-rowsplit-rowsplitattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;RowSplitAttribute&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [RowSplitAttribute](arkts-arkui-rowsplit-rowsplitattribute-i.md) |  |
+| RowSplitAttribute |  |
 

@@ -1,6 +1,7 @@
 # ContentBuilder
 
 ```TypeScript
+@Builder
 type ContentBuilder = () => void
 ```
 
@@ -10,9 +11,9 @@ Defines ContentBuilder.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
-<!--Device-unnamed-type ContentBuilder = () => void--><!--Device-unnamed-type ContentBuilder = () => void-End-->
+<!--Device-unnamed-@Buildertype ContentBuilder = () => void--><!--Device-unnamed-@Buildertype ContentBuilder = () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

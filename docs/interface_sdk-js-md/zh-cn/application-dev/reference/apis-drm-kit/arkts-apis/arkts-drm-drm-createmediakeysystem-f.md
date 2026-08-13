@@ -12,6 +12,8 @@ Creates a MediaKeySystem instance.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem-End-->
@@ -34,10 +36,10 @@ Creates a MediaKeySystem instance.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700103-mediakeysystem数量达到极限) | Meet max MediaKeySystem num limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700103](../errorcode-drm.md#24700103-mediakeysystem数量达到极限) | Meet max MediaKeySystem num limit. |
 
 ## 示例
 
@@ -60,7 +62,9 @@ Creates a MediaKeySystem instance.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem | undefined--><!--Device-drm-function createMediaKeySystem(name: string): MediaKeySystem | undefined-End-->
 
@@ -82,8 +86,8 @@ Creates a MediaKeySystem instance.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) | All unknown errors. |
-| [24700103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700103-mediakeysystem数量达到极限) | Meet max MediaKeySystem num limit. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-服务异常) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-未知错误) | All unknown errors. |
+| [24700103](../errorcode-drm.md#24700103-mediakeysystem数量达到极限) | Meet max MediaKeySystem num limit. |
 

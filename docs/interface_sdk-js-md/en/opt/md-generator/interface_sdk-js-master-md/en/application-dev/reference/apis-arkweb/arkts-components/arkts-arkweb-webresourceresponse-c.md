@@ -4,6 +4,8 @@ Defines the Web resource response.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class WebResourceResponse--><!--Device-unnamed-declare class WebResourceResponse-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ getReasonMessage(): string
 Gets the reason message.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +62,8 @@ Gets the response code.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebResourceResponse-getResponseCode(): number--><!--Device-WebResourceResponse-getResponseCode(): number-End-->
@@ -77,6 +85,8 @@ getResponseData(): string
 Gets the response data.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,6 +110,8 @@ Gets the response data.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined--><!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -119,6 +131,8 @@ getResponseEncoding(): string
 Gets the response encoding.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -142,6 +156,8 @@ Gets the response headers.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebResourceResponse-getResponseHeader(): Array<Header>--><!--Device-WebResourceResponse-getResponseHeader(): Array<Header>-End-->
@@ -164,6 +180,8 @@ Gets whether the response is ready.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 <!--Device-WebResourceResponse-getResponseIsReady(): boolean--><!--Device-WebResourceResponse-getResponseIsReady(): boolean-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -183,6 +201,8 @@ getResponseMimeType(): string
 Gets the response MIME type.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,6 +226,8 @@ Sets the reason message.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebResourceResponse-setReasonMessage(reason: string): void--><!--Device-WebResourceResponse-setReasonMessage(reason: string): void-End-->
@@ -227,6 +249,8 @@ setResponseCode(code: number): void
 Sets the response code.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -250,6 +274,8 @@ Sets the response data.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void--><!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void-End-->
@@ -271,6 +297,8 @@ setResponseEncoding(encoding: string): void
 Sets the response encoding.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -294,6 +322,8 @@ Sets the response headers.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void--><!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void-End-->
@@ -316,6 +346,8 @@ Sets the response is ready or not.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void--><!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void-End-->
@@ -337,6 +369,8 @@ setResponseMimeType(mimeType: string): void
 Sets the response MIME type.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

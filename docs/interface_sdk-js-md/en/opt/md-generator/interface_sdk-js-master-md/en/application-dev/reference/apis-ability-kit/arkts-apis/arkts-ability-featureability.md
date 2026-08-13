@@ -4,6 +4,8 @@ The FeatureAbility module provides APIs that enable user interaction. You can us
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-declare namespace featureAbility--><!--Device-unnamed-declare namespace featureAbility-End-->
@@ -22,25 +24,25 @@ import { featureAbility } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) |
-| [connectAbility](arkts-ability-featureability-connectability-f.md#connectability) |
-| [disconnectAbility](arkts-ability-featureability-disconnectability-f.md#disconnectability) |
-| [disconnectAbility](arkts-ability-featureability-disconnectability-f.md#disconnectability-1) |
-| [getContext](arkts-ability-featureability-getcontext-f.md#getcontext) |
-| [getWant](arkts-ability-featureability-getwant-f.md#getwant) |
-| [getWant](arkts-ability-featureability-getwant-f.md#getwant-1) |
-| [getWindow](arkts-ability-featureability-getwindow-f.md#getwindow) |
-| [getWindow](arkts-ability-featureability-getwindow-f.md#getwindow-1) |
-| [hasWindowFocus](arkts-ability-featureability-haswindowfocus-f.md#haswindowfocus) |
-| [hasWindowFocus](arkts-ability-featureability-haswindowfocus-f.md#haswindowfocus-1) |
-| [startAbility](arkts-ability-featureability-startability-f.md#startability) |
-| [startAbility](arkts-ability-featureability-startability-f.md#startability-1) |
-| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult) |
-| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startabilityforresult-1) |
-| [terminateSelf](arkts-ability-featureability-terminateself-f.md#terminateself) |
-| [terminateSelf](arkts-ability-featureability-terminateself-f.md#terminateself-1) |
-| [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult) |
-| [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateselfwithresult-1) |
+| [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper) |
+| [connectAbility](arkts-ability-featureability-connectability-f.md#connectAbility) |
+| [disconnectAbility](arkts-ability-featureability-disconnectability-f.md#disconnectAbility) |
+| [disconnectAbility](arkts-ability-featureability-disconnectability-f.md#disconnectAbility) |
+| [getContext](arkts-ability-featureability-getcontext-f.md#getContext) |
+| [getWant](arkts-ability-featureability-getwant-f.md#getWant) |
+| [getWant](arkts-ability-featureability-getwant-f.md#getWant) |
+| [getWindow](arkts-ability-featureability-getwindow-f.md#getWindow) |
+| [getWindow](arkts-ability-featureability-getwindow-f.md#getWindow) |
+| [hasWindowFocus](arkts-ability-featureability-haswindowfocus-f.md#hasWindowFocus) |
+| [hasWindowFocus](arkts-ability-featureability-haswindowfocus-f.md#hasWindowFocus) |
+| [startAbility](arkts-ability-featureability-startability-f.md#startAbility) |
+| [startAbility](arkts-ability-featureability-startability-f.md#startAbility) |
+| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult) |
+| [startAbilityForResult](arkts-ability-featureability-startabilityforresult-f.md#startAbilityForResult) |
+| [terminateSelf](arkts-ability-featureability-terminateself-f.md#terminateSelf) |
+| [terminateSelf](arkts-ability-featureability-terminateself-f.md#terminateSelf) |
+| [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateSelfWithResult) |
+| [terminateSelfWithResult](arkts-ability-featureability-terminateselfwithresult-f.md#terminateSelfWithResult) |
 
 ### Enums
 

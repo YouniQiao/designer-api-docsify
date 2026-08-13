@@ -2,7 +2,9 @@
 
 Provides the flag attributes of this window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WindowFilter--><!--Device-unnamed-declare interface WindowFilter-End-->
 
@@ -24,9 +26,11 @@ Whether the window is interacting with the user. The value **true** indicates th
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowFilter-active?: boolean--><!--Device-WindowFilter-active?: boolean-End-->
 
@@ -38,9 +42,7 @@ Whether the window is interacting with the user. The value **true** indicates th
 actived?: boolean
 ```
 
-Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite.
-
-This API is supported since API version 9 and deprecated since API version 11. You are advised to use[active](#active) instead.
+Whether the window is interacting with the user. The value **true** indicates that the window is interacting with the user, and **false** indicates the opposite. This API is supported since API version 9 and deprecated since API version 11. You are advised to use [active](#active) instead.
 
 **Type:** boolean
 
@@ -48,7 +50,7 @@ This API is supported since API version 9 and deprecated since API version 11. Y
 
 **Deprecated since:** 11
 
-**Substitutes:** [active](ohos.UiTest.WindowFilter#active)
+**Substitutes:** active
 
 <!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 
@@ -64,7 +66,9 @@ Bundle name of the application to which the window belongs, which is used to fil
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,9 +86,11 @@ ID of the display to which the window belongs. The value is an integer greater t
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WindowFilter-displayId?: int--><!--Device-WindowFilter-displayId?: int-End-->
 
@@ -96,11 +102,13 @@ ID of the display to which the window belongs. The value is an integer greater t
 focused?: boolean
 ```
 
-Whether the window is focused. The value **true** indicates that the window is focused, and **false** indicates the  opposite. The default value is **false**.
+Whether the window is focused. The value **true** indicates that the window is focused, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -118,7 +126,9 @@ Window title, which is used to filter the target window in multi-window scenario
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

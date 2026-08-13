@@ -2,7 +2,9 @@
 
 Defines the return value of the listener callback.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface ChangeData--><!--Device-photoAccessHelper-interface ChangeData-End-->
 
@@ -24,7 +26,9 @@ URIs of the changed files in the album. The value may be undefined. Check whethe
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-extraUris: Array<string>--><!--Device-ChangeData-extraUris: Array<string>-End-->
 
@@ -40,7 +44,9 @@ Notification type.
 
 **Type:** NotifyType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-type: NotifyType--><!--Device-ChangeData-type: NotifyType-End-->
 
@@ -56,7 +62,9 @@ All URIs with the same [NotifyType](arkts-medialibrary-photoaccesshelper-notifyt
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeData-uris: Array<string>--><!--Device-ChangeData-uris: Array<string>-End-->
 

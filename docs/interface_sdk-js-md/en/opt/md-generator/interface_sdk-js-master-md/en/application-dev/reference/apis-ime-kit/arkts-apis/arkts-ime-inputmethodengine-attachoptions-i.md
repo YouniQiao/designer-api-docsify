@@ -2,7 +2,9 @@
 
 Defines additional options for binding an input method.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface AttachOptions--><!--Device-inputMethodEngine-export interface AttachOptions-End-->
 
@@ -20,13 +22,13 @@ import { inputMethodEngine } from '@kit.IMEKit';
 isSimpleKeyboardEnabled?: boolean
 ```
 
-Whether to enable the simple keyboard. This attribute is set by the edit box application. The value **true** means that the simple keyboard is enabled, and the value **false** means the opposite.
-
-If this attribute is not set or is set to an invalid value, the simple keyboard is disabled by default.
+Whether to enable the simple keyboard. This attribute is set by the edit box application. The value **true** means that the simple keyboard is enabled, and the value **false** means the opposite. If this attribute is not set or is set to an invalid value, the simple keyboard is disabled by default.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean--><!--Device-AttachOptions-isSimpleKeyboardEnabled?: boolean-End-->
 
@@ -42,7 +44,9 @@ Reason for requesting the keyboard. This attribute is set by the edit box applic
 
 **Type:** RequestKeyboardReason
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
 

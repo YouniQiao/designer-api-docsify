@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface KeyboardAppearanceConfig--><!--Device-unnamed-declare interface KeyboardAppearanceConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,15 +20,15 @@
 fluidLightMode?: KeyboardFluidLightMode
 ```
 
-键盘的流光效果。
-
-默认值：KeyboardFluidLightMode.NONE
+键盘的流光效果。 默认值：KeyboardFluidLightMode.NONE
 
 **类型：** [KeyboardFluidLightMode](arkts-arkui-keyboardfluidlightmode-e-sys.md)
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,15 +44,15 @@ fluidLightMode?: KeyboardFluidLightMode
 gradientMode?: KeyboardGradientMode
 ```
 
-键盘的模糊效果。
-
-默认值：KeyboardGradientMode.NONE
+键盘的模糊效果。 默认值：KeyboardGradientMode.NONE
 
 **类型：** [KeyboardGradientMode](arkts-arkui-keyboardgradientmode-e-sys.md)
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

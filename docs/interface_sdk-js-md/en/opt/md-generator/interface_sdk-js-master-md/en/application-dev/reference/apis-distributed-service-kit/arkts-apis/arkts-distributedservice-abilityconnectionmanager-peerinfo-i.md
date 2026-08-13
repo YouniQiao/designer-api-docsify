@@ -2,7 +2,9 @@
 
 Defines the application collaboration information.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityConnectionManager-interface PeerInfo--><!--Device-abilityConnectionManager-interface PeerInfo-End-->
 
@@ -24,7 +26,9 @@ Ability name of the peer application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Peer device ID.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ Module name of the peer application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +106,9 @@ Service name for the application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

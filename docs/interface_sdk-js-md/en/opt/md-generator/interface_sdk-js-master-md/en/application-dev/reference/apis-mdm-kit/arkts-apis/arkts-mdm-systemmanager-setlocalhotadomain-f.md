@@ -16,6 +16,8 @@ Set the local HOTA domain of the device.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 
 **Model restriction:** This API can be used only in the stage model.
@@ -35,9 +37,9 @@ Set the local HOTA domain of the device.
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
-| [9200018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200018-the-device-is-not-an-enterprise-device) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200018](../errorcode-enterpriseDeviceManager.md#9200018-the-device-is-not-an-enterprise-device) |

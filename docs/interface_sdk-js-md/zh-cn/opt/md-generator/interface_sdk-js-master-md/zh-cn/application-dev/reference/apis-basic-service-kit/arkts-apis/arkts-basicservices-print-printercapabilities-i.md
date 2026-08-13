@@ -2,7 +2,9 @@
 
 定义打印机能力的接口。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-interface PrinterCapabilities--><!--Device-print-interface PrinterCapabilities-End-->
 
@@ -18,7 +20,9 @@ options?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-options?: string--><!--Device-PrinterCapabilities-options?: string-End-->
 
@@ -34,7 +38,9 @@ supportedColorModes: Array<PrintColorMode>
 
 **类型：** Array&lt;[PrintColorMode](arkts-basicservices-print-printcolormode-e.md)&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>--><!--Device-PrinterCapabilities-supportedColorModes: Array<PrintColorMode>-End-->
 
@@ -50,7 +56,9 @@ supportedDuplexModes: Array<PrintDuplexMode>
 
 **类型：** Array&lt;[PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>--><!--Device-PrinterCapabilities-supportedDuplexModes: Array<PrintDuplexMode>-End-->
 
@@ -66,7 +74,9 @@ supportedMediaTypes?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>--><!--Device-PrinterCapabilities-supportedMediaTypes?: Array<string>-End-->
 
@@ -82,7 +92,9 @@ supportedOrientations?: Array<PrintOrientationMode>
 
 **类型：** Array&lt;[PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>--><!--Device-PrinterCapabilities-supportedOrientations?: Array<PrintOrientationMode>-End-->
 
@@ -98,7 +110,9 @@ supportedPageSizes: Array<PrintPageSize>
 
 **类型：** Array&lt;[PrintPageSize](arkts-basicservices-print-printpagesize-i.md)&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>--><!--Device-PrinterCapabilities-supportedPageSizes: Array<PrintPageSize>-End-->
 
@@ -114,7 +128,9 @@ supportedQualities?: Array<PrintQuality>
 
 **类型：** Array&lt;[PrintQuality](arkts-basicservices-print-printquality-e.md)&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>--><!--Device-PrinterCapabilities-supportedQualities?: Array<PrintQuality>-End-->
 

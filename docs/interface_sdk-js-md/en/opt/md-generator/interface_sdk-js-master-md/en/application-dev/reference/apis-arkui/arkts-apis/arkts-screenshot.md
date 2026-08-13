@@ -2,7 +2,9 @@
 
 Provides the screen capture capability.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace screenshot--><!--Device-unnamed-declare namespace screenshot-End-->
 
@@ -28,10 +30,10 @@ import { screenshot } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save) |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save-1) |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save-2) |
-| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#savehdrpicture) |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save-(System-API)) |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save-(System-API)) |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save-(System-API)) |
+| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#saveHdrPicture-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

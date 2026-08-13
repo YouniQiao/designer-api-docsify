@@ -14,9 +14,11 @@ function startStream(streamId: int): void
 
 Start Streaming
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,13 +32,13 @@ Start Streaming
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| streamId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of a transport stream. |
+| streamId | int | Yes | Indicates the ID of a transport stream. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
-| [32300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300002-stream-receive-end-not-started) | The stream at the receive end is not started. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
+| [32300002](../../apis-distributedservice-kit/errorcode-device-manager.md#32300002-stream-receive-end-not-started) | The stream at the receive end is not started. |
 

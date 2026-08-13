@@ -2,9 +2,11 @@
 
 回调实例。返回短信发送结果、存储已发送短信的URI和是否为长短信的最后一部分。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface ISendShortMessageCallback--><!--Device-sms-export interface ISendShortMessageCallback-End-->
 
@@ -16,17 +18,15 @@
 isLastPart: boolean
 ```
 
-指定这是否是长短信的最后一部分。默认为false。
-
--true：是
-
--false：否
+指定这是否是长短信的最后一部分。默认为false。 -true：是 -false：否
 
 **类型：** boolean
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ISendShortMessageCallback-isLastPart: boolean--><!--Device-ISendShortMessageCallback-isLastPart: boolean-End-->
 
@@ -42,9 +42,11 @@ result: SendSmsResult
 
 **类型：** [SendSmsResult](arkts-telephony-sms-sendsmsresult-e.md)
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ISendShortMessageCallback-result: SendSmsResult--><!--Device-ISendShortMessageCallback-result: SendSmsResult-End-->
 
@@ -60,9 +62,11 @@ url: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ISendShortMessageCallback-url: string--><!--Device-ISendShortMessageCallback-url: string-End-->
 

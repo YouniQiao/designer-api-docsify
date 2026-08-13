@@ -6,9 +6,7 @@
 function getAbilityInfo(bundleName: string, abilityName: string, callback: AsyncCallback<AbilityInfo>): void
 ```
 
-通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过Bundle名称和组件名获取Ability组件信息，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -52,9 +50,7 @@ bundle.getAbilityInfo(bundleName, abilityName, (err, data) => {
 function getAbilityInfo(bundleName: string, abilityName: string): Promise<AbilityInfo>
 ```
 
-通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过Bundle名称和组件名获取Ability组件信息，使用Promise形式异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 

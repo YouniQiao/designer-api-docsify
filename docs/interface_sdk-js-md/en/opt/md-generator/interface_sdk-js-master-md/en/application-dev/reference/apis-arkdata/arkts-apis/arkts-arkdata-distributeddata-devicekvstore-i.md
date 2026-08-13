@@ -1,8 +1,6 @@
 # DeviceKVStore
 
-Provides APIs to query and synchronize data in a device KV store. This class inherits from  
-[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md#KVStoreType).Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified.For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted.Before calling any method in **DeviceKVStore**, you must use  
-[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) to obtain a **DeviceKVStore** object.
+Provides APIs to query and synchronize data in a device KV store. This class inherits from [KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md#KVStoreType). Data is distinguished by device in a device KV store. Each device can only write and modify its own data. Data of other devices is read-only and cannot be modified. For example, a device KV store can be used to implement image sharing between devices. The images of other devices can be viewed, but not be modified or deleted. Before calling any method in **DeviceKVStore**, you must use getKVStore to obtain a **DeviceKVStore** object.
 
 **Inheritance/Implementation:** DeviceKVStore extends [KVStore](arkts-arkdata-distributeddata-kvstore-i.md#KVStore)
 
@@ -10,9 +8,9 @@ Provides APIs to query and synchronize data in a device KV store. This class inh
 
 **Deprecated since:** 9
 
-**Substitutes:** [DeviceKVStore](ohos.data.distributedKVStore.DeviceKVStore)
+**Substitutes:** DeviceKVStore
 
-<!--Device-distributedData-interface DeviceKVStore extends KVStore--><!--Device-distributedData-interface DeviceKVStore extends KVStore-End-->
+<!--Device-distributedData-interface DeviceKVStore--><!--Device-distributedData-interface DeviceKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -22,14 +20,13 @@ Provides APIs to query and synchronize data in a device KV store. This class inh
 closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[DeviceKVStore.getResultSet](getResultSet(deviceId: string, query: Query, callback: AsyncCallback&lt;KvStoreResultSet&gt;)). This API uses an asynchronous callback to return the result.
+Closes the **KvStoreResultSet** object obtained by DeviceKVStore.getResultSet. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeResultSet](ohos.data.distributedKVStore.DeviceKVStore#closeResultSet)
+**Substitutes:** closeResultSet
 
 <!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void--><!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet, callback: AsyncCallback<void>): void-End-->
 
@@ -67,14 +64,13 @@ try {
 closeResultSet(resultSet: KvStoreResultSet): Promise<void>
 ```
 
-Closes the **KvStoreResultSet** object obtained by  
-[DeviceKVStore.getResultSet](getResultSet(deviceId: string, query: Query, callback: AsyncCallback&lt;KvStoreResultSet&gt;)). This API uses a promise to return the result.
+Closes the **KvStoreResultSet** object obtained by DeviceKVStore.getResultSet. This API uses a promise to return the result.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeResultSet](ohos.data.distributedKVStore.DeviceKVStore#closeResultSet)
+**Substitutes:** closeResultSet
 
 <!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>--><!--Device-DeviceKVStore-closeResultSet(resultSet: KvStoreResultSet): Promise<void>-End-->
 
@@ -115,21 +111,13 @@ try {
 get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void
 ```
 
-Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains a string value that matches the specified device ID and key. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.data.distributedKVStore.DeviceKVStore#get)
+**Substitutes:** get
 
 <!--Device-DeviceKVStore-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void--><!--Device-DeviceKVStore-get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | Uint8Array>): void-End-->
 
@@ -167,21 +155,13 @@ try{
 get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>
 ```
 
-Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains a string value that matches the specified device ID and key. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [get](ohos.data.distributedKVStore.DeviceKVStore#get)
+**Substitutes:** get
 
 <!--Device-DeviceKVStore-get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>--><!--Device-DeviceKVStore-get(deviceId: string, key: string): Promise<boolean | string | number | Uint8Array>-End-->
 
@@ -228,21 +208,13 @@ try {
 getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to  return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains all KV pairs that match the specified device ID and key prefix. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -293,21 +265,13 @@ try {
 getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
-Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains all KV pairs that match the specified device ID and key prefix. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>-End-->
 
@@ -375,7 +339,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -436,7 +400,7 @@ Obtains the KV pairs that match the specified **Query** object. This API uses a 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(query: Query): Promise<Entry[]>-End-->
 
@@ -497,21 +461,13 @@ try {
 getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains the KV pairs that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void--><!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void-End-->
 
@@ -567,21 +523,13 @@ try {
 getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
-Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains the KV pairs that match the specified device ID and **Query** object. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getEntries](ohos.data.distributedKVStore.DeviceKVStore#getEntries)
+**Substitutes:** getEntries
 
 <!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query): Promise<Entry[]>--><!--Device-DeviceKVStore-getEntries(deviceId: string, query: Query): Promise<Entry[]>-End-->
 
@@ -644,21 +592,13 @@ try {
 getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -696,21 +636,13 @@ try {
 getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains a **KvStoreResultSet** object that matches the specified device ID and key prefix. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, keyPrefix: string): Promise<KvStoreResultSet>-End-->
 
@@ -763,7 +695,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(query: Query, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -824,7 +756,7 @@ Obtains a **KvStoreResultSet** object that matches the specified **Query** objec
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(query: Query): Promise<KvStoreResultSet>-End-->
 
@@ -891,21 +823,13 @@ try {
 getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResultSet>): void
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an  asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResultSet>): void--><!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KvStoreResultSet>): void-End-->
 
@@ -960,21 +884,13 @@ try {
 getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>
 ```
 
-Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains a **KvStoreResultSet** object that matches the specified device ID and **Query** object. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSet](ohos.data.distributedKVStore.DeviceKVStore#getResultSet)
+**Substitutes:** getResultSet
 
 <!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>--><!--Device-DeviceKVStore-getResultSet(deviceId: string, query: Query): Promise<KvStoreResultSet>-End-->
 
@@ -1049,7 +965,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
+**Substitutes:** getResultSize
 
 <!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void--><!--Device-DeviceKVStore-getResultSize(query: Query, callback: AsyncCallback<number>): void-End-->
 
@@ -1105,7 +1021,7 @@ Obtains the number of results that match the specified **Query** object. This AP
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
+**Substitutes:** getResultSize
 
 <!--Device-DeviceKVStore-getResultSize(query: Query): Promise<number>--><!--Device-DeviceKVStore-getResultSize(query: Query): Promise<number>-End-->
 
@@ -1164,21 +1080,13 @@ try {
 getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void
 ```
 
-Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains the number of results that match the specified device ID and **Query** object. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
+**Substitutes:** getResultSize
 
 <!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void--><!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void-End-->
 
@@ -1228,21 +1136,13 @@ try {
 getResultSize(deviceId: string, query: Query): Promise<number>
 ```
 
-Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to  return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Obtains the number of results that match the specified device ID and **Query** object. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getResultSize](ohos.data.distributedKVStore.DeviceKVStore#getResultSize)
+**Substitutes:** getResultSize
 
 <!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query): Promise<number>--><!--Device-DeviceKVStore-getResultSize(deviceId: string, query: Query): Promise<number>-End-->
 
@@ -1295,7 +1195,7 @@ try {
 }
 ```
 
-## off
+## off_dataChange
 
 ```TypeScript
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
@@ -1307,7 +1207,7 @@ Unsubscribes from data changes.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-DeviceKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-DeviceKVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -1341,7 +1241,7 @@ class KvstoreModel {
 }
 ```
 
-## off
+## off_syncComplete
 
 ```TypeScript
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
@@ -1353,7 +1253,7 @@ Unsubscribes from sync completion events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**Substitutes:** off
 
 <!--Device-DeviceKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-DeviceKVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -1387,7 +1287,7 @@ class KvstoreModel {
 }
 ```
 
-## on
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
@@ -1399,7 +1299,7 @@ Subscribes to data changes of the specified type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.data.distributedKVStore.DeviceKVStore#on)
+**Substitutes:** on
 
 <!--Device-DeviceKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-DeviceKVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -1422,7 +1322,7 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 });
 ```
 
-## on
+## on_syncComplete
 
 ```TypeScript
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
@@ -1434,7 +1334,7 @@ Subscribes to sync completion events.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](ohos.data.distributedKVStore.DeviceKVStore#on)
+**Substitutes:** on
 
 <!--Device-DeviceKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-DeviceKVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -1473,21 +1373,13 @@ try {
 removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes data of the specified device from this KV store. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Deletes data of the specified device from this KV store. This API uses an asynchronous callback to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeDeviceData](ohos.data.distributedKVStore.DeviceKVStore#removeDeviceData)
+**Substitutes:** removeDeviceData
 
 <!--Device-DeviceKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void--><!--Device-DeviceKVStore-removeDeviceData(deviceId: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1532,21 +1424,13 @@ try {
 removeDeviceData(deviceId: string): Promise<void>
 ```
 
-Deletes data of the specified device from this KV store. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The value of **deviceId** can be obtained by &lt;!--RP1--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
-> For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
+Deletes data of the specified device from this KV store. This API uses a promise to return the result. > **NOTE：**> > The value of **deviceId** can be obtained by &lt;!--RP1--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP1End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications. > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributeddata-singlekvstore-i.md#sync).
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeDeviceData](ohos.data.distributedKVStore.DeviceKVStore#removeDeviceData)
+**Substitutes:** removeDeviceData
 
 <!--Device-DeviceKVStore-removeDeviceData(deviceId: string): Promise<void>--><!--Device-DeviceKVStore-removeDeviceData(deviceId: string): Promise<void>-End-->
 
@@ -1598,21 +1482,13 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-Synchronizes the KV store manually.
-
-> **NOTE：**
-> 
-> **deviceIds** is **networkId** in &lt;!--RP2--&gt;
-> [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md#DeviceInfo), which can be obtained by
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync).
-> &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
+Synchronizes the KV store manually. > **NOTE：**> > **deviceIds** is **networkId** in &lt;!--RP2--&gt; > [DeviceInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-deviceinfo-i-sys.md#DeviceInfo-(System-API)), which can be obtained by > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync). > &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [sync](ohos.data.distributedKVStore.DeviceKVStore#sync)
+**Substitutes:** sync
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 

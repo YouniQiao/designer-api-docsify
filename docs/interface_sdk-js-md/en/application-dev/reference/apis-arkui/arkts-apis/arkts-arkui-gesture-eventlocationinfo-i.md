@@ -6,6 +6,8 @@ The location info used in gesture event.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface EventLocationInfo--><!--Device-unnamed-export declare interface EventLocationInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,7 +15,27 @@ The location info used in gesture event.
 ## getCurrentLocalPosition
 
 ```TypeScript
-default getCurrentLocalPosition(): Coordinate2D
+getCurrentLocalPosition(): Coordinate2D
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-EventLocationInfo-getCurrentLocalPosition(): Coordinate2D--><!--Device-EventLocationInfo-getCurrentLocalPosition(): Coordinate2D-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) |  |
+
+## default
+
+```TypeScript
+default
 ```
 
 Gets the coordinates of the top-left corner of the current component based on its real-time position.
@@ -22,17 +44,13 @@ Gets the coordinates of the top-left corner of the current component based on it
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EventLocationInfo-default getCurrentLocalPosition(): Coordinate2D--><!--Device-EventLocationInfo-default getCurrentLocalPosition(): Coordinate2D-End-->
+<!--Device-EventLocationInfo-default--><!--Device-EventLocationInfo-default-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | return the coordinates of the top-left corner of the current component based on its real-time position. |
 
 ## displayX
 
@@ -47,6 +65,8 @@ X-axis coordinates relative to the upper left corner of the screen.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +88,8 @@ Y-axis coordinates relative to the upper left corner of the screen.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EventLocationInfo-displayY: double--><!--Device-EventLocationInfo-displayY: double-End-->
@@ -87,6 +109,8 @@ X position of the point relative to the global display coordinate.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +132,8 @@ Y position of the point relative to the global display coordinate.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EventLocationInfo-globalDisplayY?: double--><!--Device-EventLocationInfo-globalDisplayY?: double-End-->
@@ -127,6 +153,8 @@ X-axis coordinates relative to the upper left corner of the window.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +176,8 @@ Y-axis coordinates relative to the upper left corner of the window.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EventLocationInfo-windowY: double--><!--Device-EventLocationInfo-windowY: double-End-->
@@ -168,6 +198,8 @@ X-axis coordinates relative to the upper left corner of the component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EventLocationInfo-x: double--><!--Device-EventLocationInfo-x: double-End-->
@@ -187,6 +219,8 @@ Y-axis coordinates relative to the upper left corner of the component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Indicates the screen lock authentication state.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screenLock-enum AuthState--><!--Device-screenLock-enum AuthState-End-->
 
@@ -20,9 +22,11 @@ NOT_AUTHED = 0
 
 Indicates the screen lock is not authenticated.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-NOT_AUTHED = 0--><!--Device-AuthState-NOT_AUTHED = 0-End-->
 
@@ -38,9 +42,11 @@ PRE_AUTHED_BY_CREDENTIAL = 1
 
 Indicates the screen lock is pre authenticated by credential.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-PRE_AUTHED_BY_CREDENTIAL = 1--><!--Device-AuthState-PRE_AUTHED_BY_CREDENTIAL = 1-End-->
 
@@ -56,9 +62,11 @@ PRE_AUTHED_BY_FINGERPRINT = 2
 
 Indicates the screen lock is pre authenticated by fingerprint.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-PRE_AUTHED_BY_FINGERPRINT = 2--><!--Device-AuthState-PRE_AUTHED_BY_FINGERPRINT = 2-End-->
 
@@ -74,9 +82,11 @@ PRE_AUTHED_BY_FACE = 3
 
 Indicates the screen lock is pre authenticated by face.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-PRE_AUTHED_BY_FACE = 3--><!--Device-AuthState-PRE_AUTHED_BY_FACE = 3-End-->
 
@@ -92,9 +102,11 @@ AUTHED_BY_CREDENTIAL = 4
 
 Indicates the screen lock is authenticated by credential.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-AUTHED_BY_CREDENTIAL = 4--><!--Device-AuthState-AUTHED_BY_CREDENTIAL = 4-End-->
 
@@ -110,9 +122,11 @@ AUTHED_BY_FINGERPRINT = 5
 
 Indicates the screen lock is authenticated by fingerprint.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-AUTHED_BY_FINGERPRINT = 5--><!--Device-AuthState-AUTHED_BY_FINGERPRINT = 5-End-->
 
@@ -128,9 +142,11 @@ AUTHED_BY_FACE = 6
 
 Indicates the screen lock is authenticated by face.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AuthState-AUTHED_BY_FACE = 6--><!--Device-AuthState-AUTHED_BY_FACE = 6-End-->
 

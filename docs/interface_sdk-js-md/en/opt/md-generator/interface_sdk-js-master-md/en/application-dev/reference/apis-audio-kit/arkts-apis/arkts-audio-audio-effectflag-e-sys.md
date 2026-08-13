@@ -2,7 +2,9 @@
 
 Enumerates audio effect flags.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum EffectFlag--><!--Device-audio-enum EffectFlag-End-->
 
@@ -18,7 +20,9 @@ RENDER_EFFECT_FLAG = 0
 
 Audio render effect.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EffectFlag-RENDER_EFFECT_FLAG = 0--><!--Device-EffectFlag-RENDER_EFFECT_FLAG = 0-End-->
 
@@ -34,7 +38,9 @@ CAPTURE_EFFECT_FLAG = 1
 
 Audio capture effect.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EffectFlag-CAPTURE_EFFECT_FLAG = 1--><!--Device-EffectFlag-CAPTURE_EFFECT_FLAG = 1-End-->
 

@@ -12,7 +12,9 @@ type DeleteFn = (
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -28,5 +30,5 @@ type DeleteFn = (
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the database table storing the data to delete. |
 | predicates | dataSharePredicates.DataSharePredicates | 是 | Indicates filter criteria. If this parameter is null, all data records will be deleted by default. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Returns the number of data records deleted. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | Returns the number of data records deleted. |
 

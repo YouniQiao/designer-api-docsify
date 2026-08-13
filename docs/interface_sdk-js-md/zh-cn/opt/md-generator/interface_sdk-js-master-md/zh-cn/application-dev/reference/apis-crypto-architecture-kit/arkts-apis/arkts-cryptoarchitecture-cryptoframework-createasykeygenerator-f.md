@@ -6,12 +6,11 @@
 function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 ```
 
-创建对应算法的非对称密钥生成器实例。
+创建对应算法的非对称密钥生成器实例。 &lt;br&gt;支持的规格详见 [非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)。
 
-&lt;br&gt;支持的规格详见  
-[非对称密钥生成和转换规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -37,9 +36,9 @@ function createAsyKeyGenerator(algName: string): AsyKeyGenerator
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 

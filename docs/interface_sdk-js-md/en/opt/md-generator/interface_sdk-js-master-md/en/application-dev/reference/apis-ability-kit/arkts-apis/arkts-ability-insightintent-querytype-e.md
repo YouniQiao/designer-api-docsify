@@ -4,6 +4,8 @@ Enum for query entity mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-insightIntent-enum QueryType--><!--Device-insightIntent-enum QueryType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -17,6 +19,8 @@ ALL = 'all'
 Query all entities.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ BY_PROPERTY = 'byProperty'
 Query entities by property.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

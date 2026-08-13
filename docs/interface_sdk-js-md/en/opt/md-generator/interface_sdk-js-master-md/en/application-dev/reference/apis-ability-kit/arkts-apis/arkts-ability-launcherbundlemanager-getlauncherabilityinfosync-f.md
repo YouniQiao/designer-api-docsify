@@ -14,7 +14,9 @@ function getLauncherAbilityInfoSync(bundleName: string, userId: number): Array<L
 
 Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md#LauncherAbilityInfo) based on the given bundle name and user ID.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -39,7 +41,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |

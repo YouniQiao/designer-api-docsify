@@ -4,6 +4,8 @@ Provides methods to manage BLE scan.
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export default class Bluetooth--><!--Device-unnamed-export default class Bluetooth-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -23,6 +25,8 @@ static startBLEScan(options: StartBLEScanOptions): void
 Start BLE scan
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,6 +50,8 @@ Stop BLE scan
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Bluetooth-static stopBLEScan(options: StopBLEScanOptions): void--><!--Device-Bluetooth-static stopBLEScan(options: StopBLEScanOptions): void-End-->
@@ -68,6 +74,8 @@ Subscribe BLE found
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-Bluetooth-static subscribeBLEFound(options: SubscribeBLEFoundOptions): void--><!--Device-Bluetooth-static subscribeBLEFound(options: SubscribeBLEFoundOptions): void-End-->
@@ -89,6 +97,8 @@ static unsubscribeBLEFound(): void
 Stop the subscription of BLE found
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

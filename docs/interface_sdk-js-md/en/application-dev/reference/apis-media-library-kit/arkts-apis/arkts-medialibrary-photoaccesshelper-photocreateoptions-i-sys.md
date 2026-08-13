@@ -2,9 +2,11 @@
 
 Options for creating an image or video asset.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoCreateOptions--><!--Device-photoAccessHelper-interface PhotoCreateOptions-End-->
 
@@ -28,9 +30,11 @@ Key for the Ultra Snapshot feature, which allows the camera to take photos or re
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreateOptions-cameraShotKey?: string--><!--Device-PhotoCreateOptions-cameraShotKey?: string-End-->
 
@@ -48,9 +52,11 @@ Subtype of the image or video.
 
 **Type:** PhotoSubtype
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreateOptions-subtype?: PhotoSubtype--><!--Device-PhotoCreateOptions-subtype?: PhotoSubtype-End-->
 
@@ -66,11 +72,13 @@ userId?: int
 
 User ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreateOptions-userId?: int--><!--Device-PhotoCreateOptions-userId?: int-End-->
 

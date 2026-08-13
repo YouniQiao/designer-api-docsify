@@ -6,6 +6,8 @@ Enumerates the attendee role types in a conference event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export enum AttendeeRole--><!--Device-calendarManager-export enum AttendeeRole-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -21,6 +23,8 @@ Conference organizer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -39,6 +43,8 @@ Conference participant.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,9 +4,11 @@ Describes the gravity sensor data. It extends from [Response](arkts-sensorservic
 
 **Inheritance/Implementation:** GravityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface GravityResponse extends Response--><!--Device-sensor-interface GravityResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface GravityResponse--><!--Device-sensor-interface GravityResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Gravitational acceleration along the x-axis of the device, in m/s?.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GravityResponse-x: double--><!--Device-GravityResponse-x: double-End-->
 
@@ -42,7 +46,9 @@ Gravitational acceleration along the y-axis of the device, in m/s?.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GravityResponse-y: double--><!--Device-GravityResponse-y: double-End-->
 
@@ -58,7 +64,9 @@ Gravitational acceleration along the z-axis of the device, in m/s?.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GravityResponse-z: double--><!--Device-GravityResponse-z: double-End-->
 

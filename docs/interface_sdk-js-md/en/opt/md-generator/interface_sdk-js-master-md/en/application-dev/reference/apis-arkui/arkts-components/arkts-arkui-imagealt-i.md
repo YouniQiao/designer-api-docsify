@@ -4,6 +4,8 @@ Sets the placeholder image.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ImageAlt--><!--Device-unnamed-declare interface ImageAlt-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Placeholder image displayed when loading fails.
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Placeholder image displayed during loading.
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| PixelMap
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

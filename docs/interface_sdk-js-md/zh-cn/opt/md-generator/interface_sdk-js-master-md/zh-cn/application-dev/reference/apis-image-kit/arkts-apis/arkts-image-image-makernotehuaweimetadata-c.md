@@ -1,14 +1,14 @@
 # MakerNoteHuaweiMetadata
 
-MakerNoteHuaweiMetadata implements Metadata
-
-来自Huawei相机的照片元数据。
+MakerNoteHuaweiMetadata implements Metadata 来自Huawei相机的照片元数据。
 
 **继承/实现关系：** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **起始版本：** 23
 
-<!--Device-image-class MakerNoteHuaweiMetadata implements Metadata--><!--Device-image-class MakerNoteHuaweiMetadata implements Metadata-End-->
+**废弃版本：** -1
+
+<!--Device-image-class MakerNoteHuaweiMetadata--><!--Device-image-class MakerNoteHuaweiMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -21,6 +21,8 @@ clone(): Promise<MakerNoteHuaweiMetadata>
 对[MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata)元数据进行克隆。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +46,8 @@ static createInstance(): MakerNoteHuaweiMetadata
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-static createInstance(): MakerNoteHuaweiMetadata--><!--Device-MakerNoteHuaweiMetadata-static createInstance(): MakerNoteHuaweiMetadata-End-->
@@ -65,6 +69,8 @@ getAllProperties(): Promise<Record<string, string | null>>
 获取图片中所有元数据的属性和值。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,6 +94,8 @@ getBlob(): Promise<ArrayBuffer>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-getBlob(): Promise<ArrayBuffer>--><!--Device-MakerNoteHuaweiMetadata-getBlob(): Promise<ArrayBuffer>-End-->
@@ -106,11 +114,11 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像中属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
+获取图像中属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,7 +142,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## setBlob
 
@@ -145,6 +153,8 @@ setBlob(blob: ArrayBuffer): Promise<void>
 使用二进制数据替换当前元数据。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,7 +178,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## setProperties
 
@@ -176,11 +186,11 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey)。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,7 +214,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) |
 
 ## burstNumber
 
@@ -217,6 +227,8 @@ burstNumber?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -236,6 +248,8 @@ captureMode?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-captureMode?: int--><!--Device-MakerNoteHuaweiMetadata-captureMode?: int-End-->
@@ -253,6 +267,8 @@ cloudLabel?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -272,6 +288,8 @@ faceConfidences?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-faceConfidences?: int[]--><!--Device-MakerNoteHuaweiMetadata-faceConfidences?: int[]-End-->
@@ -289,6 +307,8 @@ faceCount?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -308,6 +328,8 @@ faceSmileScores?: number[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-faceSmileScores?: int[]--><!--Device-MakerNoteHuaweiMetadata-faceSmileScores?: int[]-End-->
@@ -325,6 +347,8 @@ focusMode?: FocusMode
 **类型：** FocusMode
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -344,6 +368,8 @@ isCloudEnhanced?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-isCloudEnhanced?: boolean--><!--Device-MakerNoteHuaweiMetadata-isCloudEnhanced?: boolean-End-->
@@ -362,6 +388,8 @@ isFrontCamera?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-isFrontCamera?: boolean--><!--Device-MakerNoteHuaweiMetadata-isFrontCamera?: boolean-End-->
@@ -374,13 +402,13 @@ isFrontCamera?: boolean
 isWindSnapshot?: boolean
 ```
 
-是否采用风快照模式拍摄。true表示采用，false表示不采用。
-
-该模式是针对拍摄快速移动物体或容易产生模糊场景（如大风中、抓拍运动物体）的专门摄影。
+是否采用风快照模式拍摄。true表示采用，false表示不采用。 该模式是针对拍摄快速移动物体或容易产生模糊场景（如大风中、抓拍运动物体）的专门摄影。
 
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -400,6 +428,8 @@ isXmageSupported?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-isXmageSupported?: boolean--><!--Device-MakerNoteHuaweiMetadata-isXmageSupported?: boolean-End-->
@@ -417,6 +447,8 @@ physicalAperture?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -436,6 +468,8 @@ pitchAngle?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-pitchAngle?: int--><!--Device-MakerNoteHuaweiMetadata-pitchAngle?: int-End-->
@@ -453,6 +487,8 @@ rollAngle?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -472,6 +508,8 @@ sceneBeachConfidence?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-sceneBeachConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneBeachConfidence?: int-End-->
@@ -489,6 +527,8 @@ sceneBlueSkyConfidence?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -508,6 +548,8 @@ sceneFlowersConfidence?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-sceneFlowersConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneFlowersConfidence?: int-End-->
@@ -525,6 +567,8 @@ sceneFoodConfidence?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -544,6 +588,8 @@ sceneGreenPlantConfidence?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-sceneGreenPlantConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneGreenPlantConfidence?: int-End-->
@@ -561,6 +607,8 @@ sceneNightConfidence?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -580,6 +628,8 @@ sceneSnowConfidence?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-sceneSnowConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneSnowConfidence?: int-End-->
@@ -597,6 +647,8 @@ sceneStageConfidence?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -616,6 +668,8 @@ sceneSunsetConfidence?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-sceneSunsetConfidence?: int--><!--Device-MakerNoteHuaweiMetadata-sceneSunsetConfidence?: int-End-->
@@ -633,6 +687,8 @@ sceneTextConfidence?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -652,6 +708,8 @@ sceneVersion?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-sceneVersion?: int--><!--Device-MakerNoteHuaweiMetadata-sceneVersion?: int-End-->
@@ -669,6 +727,8 @@ xmageBottom?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -688,6 +748,8 @@ XMAGE颜色模式。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-xmageColorMode?: XmageColorMode--><!--Device-MakerNoteHuaweiMetadata-xmageColorMode?: XmageColorMode-End-->
@@ -705,6 +767,8 @@ xmageLeft?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -724,6 +788,8 @@ xmageRight?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-xmageRight?: int--><!--Device-MakerNoteHuaweiMetadata-xmageRight?: int-End-->
@@ -742,6 +808,8 @@ xmageTop?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-MakerNoteHuaweiMetadata-xmageTop?: int--><!--Device-MakerNoteHuaweiMetadata-xmageTop?: int-End-->
@@ -754,11 +822,13 @@ xmageTop?: number
 xmageWatermarkMode?: number
 ```
 
-XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md#image)。
+XMAGE水印模式。具体取值请参考[Constants](arkts-multimedia-image.md#@ohos.multimedia.image)。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

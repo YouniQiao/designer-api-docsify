@@ -4,6 +4,8 @@ Enumerates the actions that can be taken for data packets.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-networkManager-enum Action--><!--Device-networkManager-enum Action-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ ALLOW = 0
 Receive data packets.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Discard data packets.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Action-DENY = 1--><!--Device-Action-DENY = 1-End-->
@@ -49,6 +55,8 @@ REJECT = 2
 Reject data packets.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

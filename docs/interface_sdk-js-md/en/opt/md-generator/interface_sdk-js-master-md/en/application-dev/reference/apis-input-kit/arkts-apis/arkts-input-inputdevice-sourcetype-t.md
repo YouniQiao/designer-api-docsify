@@ -6,7 +6,9 @@ type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick'
 
 Input sources supported by the input device, including the keyboard, mouse, touchscreen, trackball, touchpad, and joystick.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'--><!--Device-inputDevice-type SourceType = 'keyboard' | 'mouse' | 'touchpad' | 'touchscreen' | 'joystick' | 'trackball'-End-->
 

@@ -4,6 +4,8 @@ The ProxyRule used by insertProxyRule.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-webview-class ProxyRule--><!--Device-webview-class ProxyRule-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ getSchemeFilter(): ProxySchemeFilter
 Returns the scheme filter used for this rule.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -45,6 +49,8 @@ getUrl(): string
 Returns the proxy URL.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

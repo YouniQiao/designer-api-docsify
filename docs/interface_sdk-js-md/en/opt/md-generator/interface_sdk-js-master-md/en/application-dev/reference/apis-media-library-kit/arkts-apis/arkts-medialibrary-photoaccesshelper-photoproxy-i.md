@@ -2,7 +2,9 @@
 
 Photo proxy object, which is used by the camera application to write image data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoProxy--><!--Device-photoAccessHelper-interface PhotoProxy-End-->
 

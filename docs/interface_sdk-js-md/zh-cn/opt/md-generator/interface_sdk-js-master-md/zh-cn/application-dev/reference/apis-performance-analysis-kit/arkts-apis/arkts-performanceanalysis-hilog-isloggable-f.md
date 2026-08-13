@@ -8,7 +8,9 @@ function isLoggable(domain: number, tag: string, level: LogLevel): boolean
 
 在打印日志前调用该接口，用于检查指定领域标识、日志标识和级别的日志是否可以打印。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

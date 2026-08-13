@@ -1,11 +1,10 @@
 # StartupTask
 
-The module provides capabilities related to startup tasks in  
-[AppStartup](../../../application-models/app-startup.md).
+The module provides capabilities related to startup tasks in [AppStartup](../../../application-models/app-startup.md).
 
 **Since:** 12
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StartupTask--><!--Device-unnamed-declare class StartupTask-End-->
 
@@ -23,9 +22,11 @@ import { StartupTask } from '@kit.AbilityKit';
 init(context: AbilityStageContext): Promise<Object | void>
 ```
 
-Called when all the dependent startup tasks are complete. You can initialize the startup task in this callback.This API uses a promise to return the result.
+Called when all the dependent startup tasks are complete. You can initialize the startup task in this callback. This API uses a promise to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +79,8 @@ onDependencyCompleted?(dependency: string, result: Object): void
 Called when the dependent startup task is complete.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

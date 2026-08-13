@@ -1,12 +1,10 @@
 # KVStoreType
 
-Enumerates the distributed KV store types.  
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](arkts-arkdata-distributeddata-value-i.md) | Description |
-| -------------------- | - | ------------------------------------------------------------ |
-| [DEVICE_COLLABORATION](#device_collaboration) | 0 | Device KV store. & lt;br & gt;The device KV store manages data by device, which eliminates conflicts. Data can be queried by device. & lt;br & gt;**System capability**:SystemCapability.DistributedDataManager.KVStore.DistributedKVStore |
-| [SINGLE_VERSION](#single_version) | 1 |
+Enumerates the distributed KV store types. | Name | Value| Description | | -------------------- | - | ------------------------------------------------------------ | | DEVICE_COLLABORATION | 0 | Device KV store.&lt;br&gt;The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.&lt;br&gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.DistributedKVStore| | SINGLE_VERSION | 1 | Single KV store.&lt;br&gt;The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.&lt;br&gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.Core|
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-enum KVStoreType--><!--Device-distributedKVStore-enum KVStoreType-End-->
 
@@ -20,7 +18,9 @@ DEVICE_COLLABORATION
 
 Device-collaboration database, as specified by {@code DeviceKVStore}
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +36,9 @@ SINGLE_VERSION
 
 Single-version database, as specified by {@code SingleKVStore}
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

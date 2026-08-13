@@ -2,9 +2,11 @@
 
 Represents the holder of a remote proxy object. It is used to obtain a proxy object.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-rpc-interface IRemoteBroker--><!--Device-rpc-interface IRemoteBroker-End-->
 
@@ -24,9 +26,11 @@ asObject(): IRemoteObject
 
 Obtains a proxy or remote object. This API must be implemented by its derived classes.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteBroker-asObject(): IRemoteObject--><!--Device-IRemoteBroker-asObject(): IRemoteObject-End-->
 
@@ -51,7 +55,7 @@ class TestAbility extends rpc.RemoteObject {
 let remoteObject = new TestAbility("testObject").asObject();
 ```
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.

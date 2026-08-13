@@ -8,7 +8,9 @@ List中sort方法的回调函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -27,5 +29,5 @@ List中sort方法的回调函数。
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 通过回调函数返回的值，List能够根据自定义的比较规则维护元素的顺序。 |
+| double | 通过回调函数返回的值，List能够根据自定义的比较规则维护元素的顺序。 |
 

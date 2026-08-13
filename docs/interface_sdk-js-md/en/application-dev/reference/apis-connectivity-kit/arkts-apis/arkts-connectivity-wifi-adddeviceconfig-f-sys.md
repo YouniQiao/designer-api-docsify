@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function addDeviceConfig(config: WifiDeviceConfig): Promise<number>
 ```
 
-Adds Wi-Fi connection configuration to the device.
-
-&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
+Adds Wi-Fi connection configuration to the device. &lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
 
 **Since:** 6
 
@@ -22,7 +20,7 @@ Adds Wi-Fi connection configuration to the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addDeviceConfig](ohos.wifiManager/wifiManager.addDeviceConfig)
+**Substitutes:** [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#addDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
@@ -84,9 +82,7 @@ try {
 function addDeviceConfig(config: WifiDeviceConfig, callback: AsyncCallback<number>): void
 ```
 
-Adds Wi-Fi connection configuration to the device.
-
-&lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
+Adds Wi-Fi connection configuration to the device. &lt;p&gt;The configuration will be updated when the configuration is added.&lt;/p&gt;
 
 **Since:** 6
 
@@ -94,7 +90,7 @@ Adds Wi-Fi connection configuration to the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addDeviceConfig](ohos.wifiManager/wifiManager.addDeviceConfig)
+**Substitutes:** [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#addDeviceConfig)
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG
 
@@ -109,7 +105,7 @@ Adds Wi-Fi connection configuration to the device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | WifiDeviceConfig | Yes | Indicates the device configuration for connection to the Wi-Fi network. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes |  |
 
 ## Examples
 

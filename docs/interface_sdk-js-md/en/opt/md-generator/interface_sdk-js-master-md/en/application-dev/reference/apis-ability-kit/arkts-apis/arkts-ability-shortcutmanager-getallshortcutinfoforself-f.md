@@ -12,10 +12,11 @@ import { shortcutManager } from '@kit.AbilityKit';
 function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>
 ```
 
-Obtains all the shortcut information defined in the  
-[configuration](../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result.
+Obtains all the shortcut information defined in the [configuration](../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>--><!--Device-shortcutManager-function getAllShortcutInfoForSelf(): Promise<Array<ShortcutInfo>>-End-->
 

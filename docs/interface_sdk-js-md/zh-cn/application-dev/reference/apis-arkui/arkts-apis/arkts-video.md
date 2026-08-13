@@ -19,14 +19,6 @@
 | [VideoAttribute](arkts-arkui-video-videoattribute-i.md) | 用于播放视频文件并控制其播放状态的组件。 |
 | [VideoOptions](arkts-arkui-video-videooptions-i.md) | 定义Video的具体配置参数。 |
 
-<!--Del-->
-### 接口（系统接口）
-
-| 名称 | 说明 |
-| --- | --- |
-| [VideoAttribute](arkts-arkui-video-videoattribute-i-sys.md) | 用于播放视频文件并控制其播放状态的组件。 |
-<!--DelEnd-->
-
 ### 枚举
 
 | 名称 | 说明 |

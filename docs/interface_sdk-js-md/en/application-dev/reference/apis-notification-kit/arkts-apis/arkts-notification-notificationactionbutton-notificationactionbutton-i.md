@@ -1,11 +1,12 @@
 # NotificationActionButton
 
-The **NotificationActionButton** module defines the action buttons displayed in a notification. It is used to add interactive action buttons in NotificationRequest, allowing users to trigger a **WantAgent** action by tapping the button. This module is used when you need to provide interactive action buttons (such as **Reply** and  
-**Mark as read**) in a notification.
+The **NotificationActionButton** module defines the action buttons displayed in a notification. It is used to add interactive action buttons in NotificationRequest, allowing users to trigger a **WantAgent** action by tapping the button. This module is used when you need to provide interactive action buttons (such as **Reply** and **Mark as read**) in a notification.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationActionButton--><!--Device-unnamed-export interface NotificationActionButton-End-->
 
@@ -14,18 +15,20 @@ The **NotificationActionButton** module defines the action buttons displayed in 
 ## extras
 
 ```TypeScript
-extras?: { [key: string]: any }
+extras?: Record<string, RecordData>
 ```
 
-Extension information of the button. The default value is empty. It is used to store custom extension data of the button.An application can add any key-value pair information as needed, such as the specific identifier and additional data of the button.
+Extension information of the button. The default value is empty. It is used to store custom extension data of the button. An application can add any key-value pair information as needed, such as the specific identifier and additional data of the button.
 
-**Type:** { [key: string]: any }
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-NotificationActionButton-extras?: { [key: string]: any }--><!--Device-NotificationActionButton-extras?: { [key: string]: any }-End-->
+**Deprecated since:** -1
+
+<!--Device-NotificationActionButton-extras?: Record<string, RecordData>--><!--Device-NotificationActionButton-extras?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -35,13 +38,15 @@ Extension information of the button. The default value is empty. It is used to s
 title: string
 ```
 
-Title of the button, displayed on the action button of the notification. The string length cannot exceed 202bytes; the excess part will be truncated. It cannot be an empty string.
+Title of the button, displayed on the action button of the notification. The string length cannot exceed 202 bytes; the excess part will be truncated. It cannot be an empty string.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationActionButton-title: string--><!--Device-NotificationActionButton-title: string-End-->
 
@@ -57,9 +62,11 @@ User input object. This parameter is left empty by default. ID entered by a subs
 
 **Type:** [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationActionButton-userInput?: NotificationUserInput--><!--Device-NotificationActionButton-userInput?: NotificationUserInput-End-->
 
@@ -75,9 +82,11 @@ wantAgent: WantAgent
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationActionButton-wantAgent: WantAgent--><!--Device-NotificationActionButton-wantAgent: WantAgent-End-->
 

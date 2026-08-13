@@ -6,6 +6,8 @@ Enumerates the log types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-networkManager-enum LogType--><!--Device-networkManager-enum LogType-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Data packet logging function in the kernel Netfilter framework.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,16 +1,16 @@
 # ArcAlphabetIndexerAttribute
 
-除支持[通用属性](common)外，还支持以下属性：
+除支持通用属性外，还支持以下属性： 除支持通用事件外，还支持以下事件：
 
-除支持[通用事件](common)外，还支持以下事件：
-
-**继承/实现关系：** ArcAlphabetIndexerAttribute extends [CommonMethod<ArcAlphabetIndexerAttribute>](CommonMethod<ArcAlphabetIndexerAttribute>)
+**继承/实现关系：** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-<!--Device-unnamed-declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>--><!--Device-unnamed-declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class ArcAlphabetIndexerAttribute--><!--Device-unnamed-declare class ArcAlphabetIndexerAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -25,6 +25,8 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -42,7 +44,7 @@ autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## color
 
@@ -55,6 +57,8 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +76,7 @@ color(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## font
 
@@ -85,6 +89,8 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -102,7 +108,7 @@ font(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## itemSize
 
@@ -115,6 +121,8 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -132,7 +140,7 @@ itemSize(size: Optional<LengthMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## onSelect
 
@@ -145,6 +153,8 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -162,7 +172,7 @@ onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupBackground
 
@@ -175,6 +185,8 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -192,7 +204,7 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupBackgroundBlurStyle
 
@@ -200,16 +212,13 @@ popupBackground(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute
 ```
 
-设置提示弹窗的背景模糊材质。未通过该接口设置时，默认为关闭模糊，对应取值为BlurStyle中的NONE。
-
-> **说明：**
-
-> 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过
-> [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md#popupBackground)设置背景色。
+设置提示弹窗的背景模糊材质。未通过该接口设置时，默认为关闭模糊，对应取值为BlurStyle中的NONE。 > **说明：** > 当通过popupBackgroundBlurStyle设置弹窗气泡的背景模糊材质时，不建议再通过 > [popupBackground](#popupBackground)设置背景色。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -221,13 +230,13 @@ popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribut
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | Optional&lt;BlurStyle&gt; | 是 | 设置提示弹窗的背景模糊材质。&lt;br/&gt;默认值：BlurStyle.NONE。 &lt;br/&gt;设置此属性后不建议再设置[popupBackground](#popupbackground)属性。 |
+| style | Optional&lt;BlurStyle&gt; | 是 | 设置提示弹窗的背景模糊材质。&lt;br/&gt;默认值：BlurStyle.NONE。 &lt;br/&gt;设置此属性后不建议再设置[popupBackground](#popupBackground)属性。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupColor
 
@@ -240,6 +249,8 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -257,7 +268,7 @@ popupColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupFont
 
@@ -270,6 +281,8 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -287,7 +300,7 @@ popupFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selected
 
@@ -300,6 +313,8 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -317,7 +332,7 @@ selected(index: Optional<number>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selectedBackgroundColor
 
@@ -330,6 +345,8 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -347,7 +364,7 @@ selectedBackgroundColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttrib
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selectedColor
 
@@ -360,6 +377,8 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -377,7 +396,7 @@ selectedColor(color: Optional<ColorMetrics>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selectedFont
 
@@ -390,6 +409,8 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -407,7 +428,7 @@ selectedFont(font: Optional<Font>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## usePopup
 
@@ -420,6 +441,8 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -437,5 +460,5 @@ usePopup(enabled: Optional<boolean>): ArcAlphabetIndexerAttribute
 
 | 类型 | 说明 |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 

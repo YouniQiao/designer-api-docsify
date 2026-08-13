@@ -1,15 +1,14 @@
 # UIExtensionAbility
 
-UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自  
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)，提供了组件创建、销毁、前后台切换等基础生命周期。和UIAbility组件不同，UIExtensionAbility组件不会作为单独的任务在任务视图中体现。UIExtensionAbility组件被宿主窗口启动，该组件的前后台切换状态、以及是否可见均跟随宿主窗口。开发者不可以直接继承UIExtensionAbility组件，但可以根据实际业务场景选择使用继承自UIExtensionAbility组件的其他组件。例如，开发者处理其他应用分享的数据时，可以使用  
-[ShareExtensionAbility组件](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility)；开发者提供卡片编辑功能时，可以使用  
-[FormEditExtensionAbility组件](./@ohos.app.form.FormEditExtensionAbility:FormEditExtensionAbility)。各类Ability组件的继承关系详见[继承关系说明](../../../reference/apis-ability-kit/js-apis-app-ability-ability.md#ability的继承关系说明)。
+UIExtensionAbility组件是带界面的ExtensionAbility组件，继承自 [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)，提供了组件创建、销毁、前后台切换等基础生命周期。和UIAbility组件 不同，UIExtensionAbility组件不会作为单独的任务在任务视图中体现。UIExtensionAbility组件被宿主窗口启动，该组件的前后台切换状态、以及是否可见均跟随宿主窗口。 开发者不可以直接继承UIExtensionAbility组件，但可以根据实际业务场景选择使用继承自UIExtensionAbility组件的其他组件。例如，开发者处理其他应用分享的数据时，可以使用 [ShareExtensionAbility组件](arkts-ability-app-ability-shareextensionability-shareextensionability-c.md#ShareExtensionAbility)；开发者提供卡片编辑功能时，可以使用 FormEditExtensionAbility组件。 各类Ability组件的继承关系详见继承关系说明。
 
-**继承/实现关系：** UIExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**继承/实现关系：** UIExtensionAbility extends ExtensionAbility
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-unnamed-declare class UIExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class UIExtensionAbility extends ExtensionAbility-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class UIExtensionAbility--><!--Device-unnamed-declare class UIExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -21,7 +20,9 @@ onBackground(): void
 
 当UIExtensionAbility组件从前台转入到后台时，系统触发该回调。开发者可在该回调中实现UI不可见时的资源释放操作。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,7 +53,9 @@ onCreate(launchParam: AbilityConstant.LaunchParam): void
 
 当UIExtensionAbility组件实例完成创建时，系统会触发该回调。开发者可在该回调中执行初始化逻辑（如定义变量、加载资源等）。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,9 +90,11 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onDestroy(): void | Promise<void>
 ```
 
-当UIExtensionAbility组件被销毁时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。使用同步回调或Promise异步回调。在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。推荐使用Promise异步回调，避免因应用退出导致onDestroy中的异步函数（比如异步写入数据库）未能正确执行。
+当UIExtensionAbility组件被销毁时，系统触发该回调。开发者可以在该生命周期中执行资源清理、数据保存等相关操作。使用同步回调或Promise异步回调。 在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。推荐使用Promise异步回调，避免因应用退出导致onDestroy中的异步函数（比如异步写入数 据库）未能正确执行。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,6 +146,30 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+## onDestroy
+
+```TypeScript
+onDestroy(): Promise<void> | undefined
+```
+
+UIExtensionAbility生命周期回调，在销毁时回调，执行资源清理等操作。 在执行完onDestroy生命周期回调后，应用可能会退出，从而可能导致onDestroy中的异步函数未能正确执行，比如异步写入数据库。可以使用异步生命周期，以确保异步onDestroy完成后再继续后续的生命周期。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionAbility-onDestroy(): Promise<void> | undefined--><!--Device-UIExtensionAbility-onDestroy(): Promise<void> | undefined-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
 ## onForeground
 
 ```TypeScript
@@ -149,7 +178,9 @@ onForeground(): void
 
 当UIExtensionAbility组件首次启动到前台或者从后台转入到前台时，系统触发该回调。开发者可在该回调中实现UI可见时的资源申请操作。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -178,9 +209,11 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 onSessionCreate(want: Want, session: UIExtensionContentSession): void
 ```
 
-当[UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#UIExtensionContentSession)实例创建完成后，系统会触发该回调。开发者可在该回调中通过UIExtensionContentSession实例加载页面。
+当[UIExtensionContentSession](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#UIExtensionContentSession)实例创建完成后，系统会触发该回调。开发者可在该回调中通过 UIExtensionContentSession实例加载页面。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,7 +259,9 @@ onSessionDestroy(session: UIExtensionContentSession): void
 
 当UIExtensionContentSession实例销毁后，系统触发该回调。该回调用于通知开发者UIExtensionContentSession实例已被销毁，不能再继续使用。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,7 +300,9 @@ UIExtensionAbility组件的上下文。
 
 **类型：** [UIExtensionContext](arkts-ability-uiextensioncontext-c.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

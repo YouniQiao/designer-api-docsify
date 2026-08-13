@@ -1,8 +1,5 @@
 # PrintExtensionContext
 
-打印扩展上下文
-
-
 ## 汇总
 
 ### 类

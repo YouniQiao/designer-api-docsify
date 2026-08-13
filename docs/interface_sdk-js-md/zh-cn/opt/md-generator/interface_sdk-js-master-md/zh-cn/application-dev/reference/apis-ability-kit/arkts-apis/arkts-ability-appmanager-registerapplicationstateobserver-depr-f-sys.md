@@ -12,7 +12,7 @@ function registerApplicationStateObserver(observer: ApplicationStateObserver): n
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.app.ability.appManager/appManager#on)
+**替代接口：** [on](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 

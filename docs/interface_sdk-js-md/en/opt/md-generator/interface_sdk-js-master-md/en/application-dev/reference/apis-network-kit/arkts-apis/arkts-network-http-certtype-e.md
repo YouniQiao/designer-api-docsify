@@ -2,7 +2,9 @@
 
 Enum for certificate types
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export enum CertType--><!--Device-http-export enum CertType-End-->
 
@@ -16,7 +18,9 @@ PEM = 'PEM'
 
 PEM format certificate
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertType-PEM = 'PEM'--><!--Device-CertType-PEM = 'PEM'-End-->
 
@@ -30,7 +34,9 @@ DER = 'DER'
 
 DER format certificate
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertType-DER = 'DER'--><!--Device-CertType-DER = 'DER'-End-->
 
@@ -44,7 +50,9 @@ P12 = 'P12'
 
 P12 format certificate
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CertType-P12 = 'P12'--><!--Device-CertType-P12 = 'P12'-End-->
 

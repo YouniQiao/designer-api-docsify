@@ -1,0 +1,10 @@
+# nodeContainer
+
+## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [NodeContainer](arkts-na-nodecontainer-nodecontainer-f.md#NodeContainer) | Defines NodeContainer Component. It requires calling setNodeContainerOptions at start of component attribute set-up, and it requires calling applyAttributesFinish at end of component attribute set-up. |
+

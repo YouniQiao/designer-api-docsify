@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface IPropertySubscriber--><!--Device-unnamed-interface IPropertySubscriber-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ aboutToBeDeleted(owningView?: IPropertySubscriber): void
 销毁时调用。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-IPropertySubscriber-aboutToBeDeleted(owningView?: IPropertySubscriber): void--><!--Device-IPropertySubscriber-aboutToBeDeleted(owningView?: IPropertySubscriber): void-End-->
 
@@ -41,6 +45,8 @@ id(): number
 获取ID时调用。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-IPropertySubscriber-id(): number--><!--Device-IPropertySubscriber-id(): number-End-->
 

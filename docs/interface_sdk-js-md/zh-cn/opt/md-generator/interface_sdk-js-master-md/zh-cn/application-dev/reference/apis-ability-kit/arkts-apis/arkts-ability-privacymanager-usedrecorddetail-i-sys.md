@@ -2,7 +2,9 @@
 
 单次访问记录详情。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-privacyManager-interface UsedRecordDetail--><!--Device-privacyManager-interface UsedRecordDetail-End-->
 
@@ -16,11 +18,13 @@
 accessDuration: number
 ```
 
-访问时长。单位为：毫秒。
+访问时长。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsedRecordDetail-accessDuration: long--><!--Device-UsedRecordDetail-accessDuration: long-End-->
 
@@ -34,13 +38,13 @@ accessDuration: number
 count?: number
 ```
 
-访问次数。在accessRecords中表示成功访问次数，在rejectRecords中表示失败或拒绝次数。
-
-默认值：0。
+访问次数。在accessRecords中表示成功访问次数，在rejectRecords中表示失败或拒绝次数。 默认值：0。
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsedRecordDetail-count?: int--><!--Device-UsedRecordDetail-count?: int-End-->
 
@@ -54,16 +58,13 @@ count?: number
 lockScreenStatus?: number
 ```
 
-访问时的锁屏状态。
-
-- 1，表示非锁屏场景使用权限。  
-- 2，表示锁屏场景使用权限。
-
-默认值：1。
+访问时的锁屏状态。 - 1，表示非锁屏场景使用权限。 - 2，表示锁屏场景使用权限。 默认值：1。
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsedRecordDetail-lockScreenStatus?: int--><!--Device-UsedRecordDetail-lockScreenStatus?: int-End-->
 
@@ -81,7 +82,9 @@ status: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsedRecordDetail-status: int--><!--Device-UsedRecordDetail-status: int-End-->
 
@@ -95,11 +98,13 @@ status: number
 timestamp: number
 ```
 
-访问时的时间戳。单位为：毫秒。
+访问时的时间戳。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsedRecordDetail-timestamp: long--><!--Device-UsedRecordDetail-timestamp: long-End-->
 
@@ -113,13 +118,13 @@ timestamp: number
 usedType?: PermissionUsedType
 ```
 
-敏感权限访问方式。
-
-默认值：NORMAL_TYPE。
+敏感权限访问方式。 默认值：NORMAL_TYPE。
 
 **类型：** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UsedRecordDetail-usedType?: PermissionUsedType--><!--Device-UsedRecordDetail-usedType?: PermissionUsedType-End-->
 

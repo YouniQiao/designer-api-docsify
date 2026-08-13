@@ -8,7 +8,9 @@ function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void
 
 取消订阅绑定失败事件。使用callback异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function offAttachmentDidFail(callback?: Callback<AttachFailureReason>): void-End-->
 

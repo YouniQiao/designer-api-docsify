@@ -6,16 +6,11 @@
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-取消异步传输请求。
+取消异步传输请求。 > **说明：** > > 该接口的主要作用是主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。&lt;br&gt; > > 在调用该接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > claim通信接口。
 
-> **说明：**
-> 
-> 该接口的主要作用是主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。&lt;br&gt;
-> > 在调用该接口前需要通过
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
-> claim通信接口。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 <!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -31,11 +26,11 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 错误码ID |
 | --- |
-| [14400011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400011-未找到正在进行的传输) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [14400010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) |
-| [14400008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) |
-| [14400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
+| [14400011](../../apis-basic-services-kit/errorcode-usb.md#14400011-未找到正在进行的传输) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) |
 
 ## 示例
 

@@ -6,9 +6,11 @@ export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo
 
 Defines the preinstalled application information.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo--><!--Device-bundleManager-export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo-End-->
 

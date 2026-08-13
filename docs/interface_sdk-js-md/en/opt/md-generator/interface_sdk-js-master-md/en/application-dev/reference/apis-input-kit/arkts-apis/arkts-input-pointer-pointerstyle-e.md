@@ -2,7 +2,9 @@
 
 Mouse pointer style types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pointer-enum PointerStyle--><!--Device-pointer-enum PointerStyle-End-->
 
@@ -16,7 +18,9 @@ DEFAULT = 0
 
 Default
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-DEFAULT = 0--><!--Device-PointerStyle-DEFAULT = 0-End-->
 
@@ -30,7 +34,9 @@ EAST = 1
 
 East arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-EAST = 1--><!--Device-PointerStyle-EAST = 1-End-->
 
@@ -44,7 +50,9 @@ WEST = 2
 
 West arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-WEST = 2--><!--Device-PointerStyle-WEST = 2-End-->
 
@@ -58,7 +66,9 @@ SOUTH = 3
 
 South arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-SOUTH = 3--><!--Device-PointerStyle-SOUTH = 3-End-->
 
@@ -72,7 +82,9 @@ NORTH = 4
 
 North arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH = 4--><!--Device-PointerStyle-NORTH = 4-End-->
 
@@ -86,7 +98,9 @@ WEST_EAST = 5
 
 West-east arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-WEST_EAST = 5--><!--Device-PointerStyle-WEST_EAST = 5-End-->
 
@@ -100,7 +114,9 @@ NORTH_SOUTH = 6
 
 North-south arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_SOUTH = 6--><!--Device-PointerStyle-NORTH_SOUTH = 6-End-->
 
@@ -114,7 +130,9 @@ NORTH_EAST = 7
 
 North-east arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_EAST = 7--><!--Device-PointerStyle-NORTH_EAST = 7-End-->
 
@@ -128,7 +146,9 @@ NORTH_WEST = 8
 
 North-west arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_WEST = 8--><!--Device-PointerStyle-NORTH_WEST = 8-End-->
 
@@ -142,7 +162,9 @@ SOUTH_EAST = 9
 
 South-east arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-SOUTH_EAST = 9--><!--Device-PointerStyle-SOUTH_EAST = 9-End-->
 
@@ -156,7 +178,9 @@ SOUTH_WEST = 10
 
 South-west arrow
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-SOUTH_WEST = 10--><!--Device-PointerStyle-SOUTH_WEST = 10-End-->
 
@@ -170,7 +194,9 @@ NORTH_EAST_SOUTH_WEST = 11
 
 North-east and south-west adjustment
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11--><!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11-End-->
 
@@ -184,7 +210,9 @@ NORTH_WEST_SOUTH_EAST = 12
 
 North-west and south-east adjustment
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12--><!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12-End-->
 
@@ -198,7 +226,9 @@ CROSS = 13
 
 Cross (accurate selection)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-CROSS = 13--><!--Device-PointerStyle-CROSS = 13-End-->
 
@@ -212,7 +242,9 @@ CURSOR_COPY = 14
 
 Copy
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-CURSOR_COPY = 14--><!--Device-PointerStyle-CURSOR_COPY = 14-End-->
 
@@ -226,7 +258,9 @@ CURSOR_FORBID = 15
 
 Forbid
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-CURSOR_FORBID = 15--><!--Device-PointerStyle-CURSOR_FORBID = 15-End-->
 
@@ -240,7 +274,9 @@ COLOR_SUCKER = 16
 
 Color picker
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-COLOR_SUCKER = 16--><!--Device-PointerStyle-COLOR_SUCKER = 16-End-->
 
@@ -254,7 +290,9 @@ HAND_GRABBING = 17
 
 Grabbing hand
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-HAND_GRABBING = 17--><!--Device-PointerStyle-HAND_GRABBING = 17-End-->
 
@@ -268,7 +306,9 @@ HAND_OPEN = 18
 
 Opening hand
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-HAND_OPEN = 18--><!--Device-PointerStyle-HAND_OPEN = 18-End-->
 
@@ -282,7 +322,9 @@ HAND_POINTING = 19
 
 Hand-shaped pointer
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-HAND_POINTING = 19--><!--Device-PointerStyle-HAND_POINTING = 19-End-->
 
@@ -296,7 +338,9 @@ HELP = 20
 
 Help
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-HELP = 20--><!--Device-PointerStyle-HELP = 20-End-->
 
@@ -310,7 +354,9 @@ MOVE = 21
 
 Move
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MOVE = 21--><!--Device-PointerStyle-MOVE = 21-End-->
 
@@ -324,7 +370,9 @@ RESIZE_LEFT_RIGHT = 22
 
 Left and right resizing
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22--><!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22-End-->
 
@@ -338,7 +386,9 @@ RESIZE_UP_DOWN = 23
 
 Up and down resizing
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-RESIZE_UP_DOWN = 23--><!--Device-PointerStyle-RESIZE_UP_DOWN = 23-End-->
 
@@ -352,7 +402,9 @@ SCREENSHOT_CHOOSE = 24
 
 Screenshot crosshair
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24--><!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24-End-->
 
@@ -366,7 +418,9 @@ SCREENSHOT_CURSOR = 25
 
 Screenshot
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-SCREENSHOT_CURSOR = 25--><!--Device-PointerStyle-SCREENSHOT_CURSOR = 25-End-->
 
@@ -380,7 +434,9 @@ TEXT_CURSOR = 26
 
 Text selection
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-TEXT_CURSOR = 26--><!--Device-PointerStyle-TEXT_CURSOR = 26-End-->
 
@@ -394,7 +450,9 @@ ZOOM_IN = 27
 
 Zoom in
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-ZOOM_IN = 27--><!--Device-PointerStyle-ZOOM_IN = 27-End-->
 
@@ -408,7 +466,9 @@ ZOOM_OUT = 28
 
 Zoom out
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-ZOOM_OUT = 28--><!--Device-PointerStyle-ZOOM_OUT = 28-End-->
 
@@ -422,7 +482,9 @@ MIDDLE_BTN_EAST = 29
 
 Scrolling east
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_EAST = 29--><!--Device-PointerStyle-MIDDLE_BTN_EAST = 29-End-->
 
@@ -436,7 +498,9 @@ MIDDLE_BTN_WEST = 30
 
 Scrolling west
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_WEST = 30--><!--Device-PointerStyle-MIDDLE_BTN_WEST = 30-End-->
 
@@ -450,7 +514,9 @@ MIDDLE_BTN_SOUTH = 31
 
 Scrolling south
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31-End-->
 
@@ -464,7 +530,9 @@ MIDDLE_BTN_NORTH = 32
 
 Scrolling north
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32--><!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32-End-->
 
@@ -478,7 +546,9 @@ MIDDLE_BTN_NORTH_SOUTH = 33
 
 Scrolling north-south
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33-End-->
 
@@ -492,7 +562,9 @@ MIDDLE_BTN_NORTH_EAST = 34
 
 Scrolling north-east
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34-End-->
 
@@ -506,7 +578,9 @@ MIDDLE_BTN_NORTH_WEST = 35
 
 Scrolling north-west
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35-End-->
 
@@ -520,7 +594,9 @@ MIDDLE_BTN_SOUTH_EAST = 36
 
 Scrolling south-east
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36-End-->
 
@@ -534,7 +610,9 @@ MIDDLE_BTN_SOUTH_WEST = 37
 
 Scrolling south-west
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37-End-->
 
@@ -548,7 +626,9 @@ MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
 
 Moving as a cone in four directions
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38-End-->
 
@@ -562,7 +642,9 @@ HORIZONTAL_TEXT_CURSOR = 39
 
 Horizontal text selection
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39--><!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39-End-->
 
@@ -576,7 +658,9 @@ CURSOR_CROSS = 40
 
 Cross
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-CURSOR_CROSS = 40--><!--Device-PointerStyle-CURSOR_CROSS = 40-End-->
 
@@ -590,7 +674,9 @@ CURSOR_CIRCLE = 41
 
 Circle
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-CURSOR_CIRCLE = 41--><!--Device-PointerStyle-CURSOR_CIRCLE = 41-End-->
 
@@ -604,7 +690,9 @@ LOADING = 42
 
 Animation loading
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -620,7 +708,9 @@ RUNNING = 43
 
 Animation running in the background
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -636,7 +726,9 @@ MIDDLE_BTN_EAST_WEST = 44
 
 Scrolling east-west
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44--><!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44-End-->
 
@@ -650,7 +742,9 @@ RUNNING_LEFT = 45
 
 Running in the background (extension 1)
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-RUNNING_LEFT = 45--><!--Device-PointerStyle-RUNNING_LEFT = 45-End-->
 
@@ -664,7 +758,9 @@ RUNNING_RIGHT = 46
 
 Running in the background (extension 2)
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-RUNNING_RIGHT = 46--><!--Device-PointerStyle-RUNNING_RIGHT = 46-End-->
 
@@ -678,7 +774,9 @@ AECH_DEVELOPER_DEFINED_ICON = 47
 
 Custom circular pointer
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47--><!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47-End-->
 
@@ -692,7 +790,9 @@ SCREENRECORDER_CURSOR = 48
 
 Screen recording
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48--><!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48-End-->
 
@@ -704,11 +804,11 @@ Screen recording
 LASER_CURSOR = 49
 ```
 
-Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
+Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set. In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-LASER_CURSOR = 49--><!--Device-PointerStyle-LASER_CURSOR = 49-End-->
 
@@ -720,11 +820,11 @@ In air mouse mode, you can rotate the stylus in the air to control the movement 
 LASER_CURSOR_DOT = 50
 ```
 
-Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
+Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set. In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-LASER_CURSOR_DOT = 50--><!--Device-PointerStyle-LASER_CURSOR_DOT = 50-End-->
 
@@ -736,11 +836,11 @@ In air mouse mode, you can rotate the stylus in the air to control the movement 
 LASER_CURSOR_DOT_RED = 51
 ```
 
-Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
+Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set. In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
 
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51--><!--Device-PointerStyle-LASER_CURSOR_DOT_RED = 51-End-->
 
@@ -754,7 +854,9 @@ DEVELOPER_DEFINED_ICON = -100
 
 Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md#setCustomCursor) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md#setPointerStyle).
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100--><!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100-End-->
 

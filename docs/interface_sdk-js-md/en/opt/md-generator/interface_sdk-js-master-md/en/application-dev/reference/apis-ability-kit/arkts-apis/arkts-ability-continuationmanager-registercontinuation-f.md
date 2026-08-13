@@ -38,10 +38,10 @@ Registers the continuation management service and obtains a token. This API does
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
+| [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
 
 ## Examples
 
@@ -70,7 +70,7 @@ try {
 function registerContinuation(options: ContinuationExtraParams, callback: AsyncCallback<number>): void
 ```
 
-Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return  the result.
+Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -97,10 +97,10 @@ Registers the continuation management service and obtains a token. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
+| [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
 
 ## Examples
 
@@ -165,10 +165,10 @@ Registers the continuation management service and obtains a token. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
-| [16600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16600001](../errorcode-DistributedSchedule.md#16600001-the-system-ability-works-abnormally) |
+| [16600003](../errorcode-DistributedSchedule.md#16600003-the-number-of-token-registration-times-has-reached-the-upper-limit) |
 
 ## Examples
 

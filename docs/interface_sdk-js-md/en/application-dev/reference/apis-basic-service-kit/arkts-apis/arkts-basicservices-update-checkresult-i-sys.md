@@ -2,9 +2,11 @@
 
 Indicates the version check result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface CheckResult--><!--Device-update-export interface CheckResult-End-->
 
@@ -24,14 +26,15 @@ import { update } from '@kit.BasicServicesKit';
 isExistNewVersion: boolean
 ```
 
-Whether a new version is available. The value **true** indicates that a new version is available, and the value   
-**false** indicates the opposite.
+Whether a new version is available. The value **true** indicates that a new version is available, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CheckResult-isExistNewVersion: boolean--><!--Device-CheckResult-isExistNewVersion: boolean-End-->
 
@@ -49,9 +52,11 @@ Information about the new version.
 
 **Type:** [NewVersionInfo](arkts-basicservices-update-newversioninfo-i-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CheckResult-newVersionInfo: NewVersionInfo--><!--Device-CheckResult-newVersionInfo: NewVersionInfo-End-->
 

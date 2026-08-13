@@ -1,13 +1,10 @@
 # LayoutAlgorithm
 
-动态布局容器[DynamicLayout](@ohos.arkui.components.ArkDynamicLayout)的布局算法基础类型。
-
-> **说明：**
-> 
-> 该类型变量可以赋值具体的布局算法类对象，如[CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md#CustomLayoutAlgorithm)类对象、
-> [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md#RowLayoutAlgorithm)类对象等。
+动态布局容器DynamicLayout的布局算法基础类型。 > **说明：** > > 该类型变量可以赋值具体的布局算法类对象，如[CustomLayoutAlgorithm](arkts-arkui-layoutalgorithm-customlayoutalgorithm-c.md#CustomLayoutAlgorithm)类对象、 > [RowLayoutAlgorithm](arkts-arkui-layoutalgorithm-rowlayoutalgorithm-c.md#RowLayoutAlgorithm)类对象等。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

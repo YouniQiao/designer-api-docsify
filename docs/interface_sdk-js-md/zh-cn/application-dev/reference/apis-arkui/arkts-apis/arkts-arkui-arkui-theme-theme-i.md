@@ -1,11 +1,12 @@
 # Theme
 
-当前生效的主题风格对象，可从  
-[onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。
+当前生效的主题风格对象，可从 [onWillApplyTheme](../../../reference/apis-arkui/arkui-ts/ts-custom-component-lifecycle.md#onwillapplytheme12)中获取。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface Theme--><!--Device-unnamed-export declare interface Theme-End-->
 
@@ -21,11 +22,15 @@ colors: Colors
 
 **类型：** [Colors](arkts-arkui-arkui-theme-colors-i.md)
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Theme-colors: Colors--><!--Device-Theme-colors: Colors-End-->
 

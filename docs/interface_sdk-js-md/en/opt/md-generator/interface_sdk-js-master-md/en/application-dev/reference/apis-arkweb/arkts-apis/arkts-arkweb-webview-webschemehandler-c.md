@@ -4,6 +4,8 @@ This class is used to intercept requests for a specified scheme.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebSchemeHandler--><!--Device-webview-class WebSchemeHandler-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -25,6 +27,8 @@ Callback for handling the request.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandler-onRequestStart(      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void--><!--Device-WebSchemeHandler-onRequestStart(      callback: (request: WebSchemeHandlerRequest, handler: WebResourceHandler) => boolean): void-End-->
@@ -41,7 +45,7 @@ Callback for handling the request.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## onRequestStop
 
@@ -52,6 +56,8 @@ onRequestStop(callback: Callback<WebSchemeHandlerRequest>): void
 Callback when the request is completed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -69,4 +75,4 @@ Callback when the request is completed.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

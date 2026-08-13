@@ -2,9 +2,11 @@
 
 表示一个分布式数据对象。在使用以下接口前，需调用[create()](arkts-arkdata-distributeddataobject-create-f.md#create)获取DataObject对象。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-distributedDataObject-interface DataObject--><!--Device-distributedDataObject-interface DataObject-End-->
 
@@ -16,13 +18,13 @@
 bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void
 ```
 
-绑定分布式对象中的单个资产与其对应的数据库信息，当前版本只支持分布式对象中的资产与关系型数据库的绑定。使用callback方式异步回调。
+绑定分布式对象中的单个资产与其对应的数据库信息，当前版本只支持分布式对象中的资产与关系型数据库的绑定。使用callback方式异步回调。 当分布式对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出 session后，绑定关系随之消失。
 
-当分布式对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<void>): void-End-->
 
@@ -34,14 +36,14 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo, callback: AsyncCallback<voi
 | --- | --- | --- | --- |
 | assetKey | string | 是 | 待绑定的融合资产在分布式对象中的键值。 |
 | bindInfo | [BindInfo](arkts-arkdata-distributeddataobject-bindinfo-i.md) | 是 | 待绑定的融合资产在数据库中的信息，包含库名、表名、主键、列名及在数据库中的资产名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 绑定数据库的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 绑定数据库的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
@@ -161,13 +163,13 @@ class EntryAbility extends UIAbility {
 bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 ```
 
-绑定分布式对象中的单个资产与其对应的数据库信息，当前版本只支持分布式对象中的资产与关系型数据库的绑定。使用Promise方式作为异步回调。
+绑定分布式对象中的单个资产与其对应的数据库信息，当前版本只支持分布式对象中的资产与关系型数据库的绑定。使用Promise方式作为异步回调。 当分布式对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出 session后，绑定关系随之消失。
 
-当分布式对象中包含的资产和关系型数据库中包含的资产指向同一个实体资产文件，即两个资产的Uri相同时，就会存在冲突，我们把这种资产称为融合资产。如果需要分布式数据管理进行融合资产的冲突解决，需要先进行资产的绑定。当应用退出session后，绑定关系随之消失。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>--><!--Device-DataObject-bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>-End-->
 
@@ -190,8 +192,8 @@ bindAssetStore(assetKey: string, bindInfo: BindInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
@@ -303,248 +305,6 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-## off('change')
-
-```TypeScript
-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void
-```
-
-当不再进行数据变更监听时，使用此接口删除对象的变更监听。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-<!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-## 示例
-
-```TypeScript
-// 删除数据变更回调
-g_object.off('change', (sessionId: string, fields: Array<string>) => {
-    console.info('change' + sessionId);
-    if (g_object != null && fields != null && fields != undefined) {
-        for (let index: number = 0; index < fields.length; index++) {
-            console.info('changed !' + fields[index] + ' ' + g_object[fields[index]]);
-        }
-    }
-});
-// 删除所有的数据变更回调
-g_object.off('change');
-```
-
-## off('status')
-
-```TypeScript
-off(
-      type: 'status',
-      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void
-```
-
-当不再进行对象上下线监听时，使用此接口删除对象的上下线监听。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-<!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-## 示例
-
-```TypeScript
-// 删除上下线回调
-g_object.off('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
-});
-// 删除所有的上下线回调
-g_object.off('status');
-```
-
-## off('change')
-
-```TypeScript
-off(type: 'change', callback?: DataObserver): void
-```
-
-当不再进行数据变更监听时，使用此接口删除分布式对象数据变更监听的回调实例。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-<!--Device-DataObject-off(type: 'change', callback?: DataObserver): void--><!--Device-DataObject-off(type: 'change', callback?: DataObserver): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
-
-## 示例
-
-```TypeScript
-const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback1 ' + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info('change !' + fields[index]);
-      }
-  }
-}
-
-const changeCallback2: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
-  console.info('change callback2 ' + sessionId);
-  if (fields != null && fields != undefined) {
-      for (let index: number = 0; index < fields.length; index++) {
-          console.info('change !' + fields[index]);
-      }
-  }
-}
-
-try {
-  // 删除单个数据变更回调函数
-  g_object.on('change', changeCallback1);
-  g_object.off('change', changeCallback1);
-
-  // 删除所有数据变更回调函数
-  g_object.on('change', changeCallback1);
-  g_object.on('change', changeCallback2);
-  g_object.off('change');
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## off('status')
-
-```TypeScript
-off(type: 'status', callback?: StatusObserver): void
-```
-
-当不再进行分布式对象状态变更监听时，使用此接口删除分布式对象状态变更的回调实例。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-<!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void--><!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'status' | 是 | 事件类型，固定为'status'，表示数据对象状态变更事件。 |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
-
-## 示例
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info('status callback1' + sessionId);
-}
-
-const statusCallback2: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info('status callback2' + sessionId);
-}
-try {
-  // 删除单个状态变更回调函数
-  g_object.on('status', statusCallback1);
-  g_object.off('status', statusCallback1);
-
-  // 删除所有状态变更回调函数
-  g_object.on('status', statusCallback1);
-  g_object.on('status', statusCallback2);
-  g_object.off('status');
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## off('progressChanged')
-
-```TypeScript
-off(type: 'progressChanged', callback?: ProgressObserver): void
-```
-
-当不再进行资产传输进度监听时，使用此接口删除资产传输进度监听的回调实例。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-<!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void--><!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'progressChanged' | 是 | 事件类型，固定为'progressChanged'，表示资产传输进度变化事件。 |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 否 | 需要取消监听的回调实例，若不设置，则取消对该事件的所有监听。 |
-
-## 示例
-
-```TypeScript
-const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info('progressChanged callback1' + sessionId);
-  console.info('progressChanged callback1' + progress);
-}
-
-const progressChangedCallback2: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info('progressChanged callback2' + sessionId);
-  console.info('progressChanged callback2' + progress);
-}
-try {
-  g_object.on('progressChanged', progressChangedCallback1);
-  // 取消对资产传输进度的监听
-  g_object.off('progressChanged', progressChangedCallback1);
-
-  g_object.on('progressChanged', progressChangedCallback1);
-  g_object.on('progressChanged', progressChangedCallback2);
-  // 取消对资产传输进度的所有监听
-  g_object.off('progressChanged');
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## offChange
 
 ```TypeScript
@@ -555,7 +315,9 @@ offChange(callback?: DataObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-offChange(callback?: DataObserver): void--><!--Device-DataObject-offChange(callback?: DataObserver): void-End-->
 
@@ -612,7 +374,9 @@ offProgressChanged(callback?: ProgressObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void--><!--Device-DataObject-offProgressChanged(callback?: ProgressObserver): void-End-->
 
@@ -660,7 +424,9 @@ offStatus(callback?: StatusObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-offStatus(callback?: StatusObserver): void--><!--Device-DataObject-offStatus(callback?: StatusObserver): void-End-->
 
@@ -698,19 +464,21 @@ try {
 }
 ```
 
-## on('change')
+## off_change
 
 ```TypeScript
-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void
+off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void
 ```
 
-监听分布式数据对象的数据变更。
+当不再进行数据变更监听时，使用此接口删除对象的变更监听。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void-End-->
+**废弃版本：** -1
+
+<!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void ): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -719,18 +487,19 @@ on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 | 变更回调对象实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 否 | 需要删除的数据变更回调，若不设置则删除该对象所有的数据变更回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 
 ```TypeScript
-g_object.on('change', (sessionId: string, fields: Array<string>) => {
+// 删除数据变更回调
+g_object.off('change', (sessionId: string, fields: Array<string>) => {
     console.info('change' + sessionId);
     if (g_object != null && fields != null && fields != undefined) {
         for (let index: number = 0; index < fields.length; index++) {
@@ -738,61 +507,25 @@ g_object.on('change', (sessionId: string, fields: Array<string>) => {
         }
     }
 });
+// 删除所有的数据变更回调
+g_object.off('change');
 ```
 
-## on('status')
+## off_change
 
 ```TypeScript
-on(
-      type: 'status',
-      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
-    ): void
+off(type: 'change', callback?: DataObserver): void
 ```
 
-监听分布式数据对象的上下线。
-
-**起始版本：** 9
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
-
-<!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
-| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-
-## 示例
-
-```TypeScript
-g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
-    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
-});
-```
-
-## on('change')
-
-```TypeScript
-on(type: 'change', callback: DataObserver): void
-```
-
-监听分布式对象的数据变更。
+当不再进行数据变更监听时，使用此接口删除分布式对象数据变更监听的回调实例。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-DataObject-on(type: 'change', callback: DataObserver): void--><!--Device-DataObject-on(type: 'change', callback: DataObserver): void-End-->
+**废弃版本：** -1
+
+<!--Device-DataObject-off(type: 'change', callback?: DataObserver): void--><!--Device-DataObject-off(type: 'change', callback?: DataObserver): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -801,7 +534,7 @@ on(type: 'change', callback: DataObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
-| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式对象数据变更的回调实例。 |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 否 | 需要删除的数据变更回调实例，若不设置则删除该对象所有的数据变更回调实例。 |
 
 ## 示例
 
@@ -814,62 +547,45 @@ const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, 
       }
   }
 }
+
+const changeCallback2: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
+  console.info('change callback2 ' + sessionId);
+  if (fields != null && fields != undefined) {
+      for (let index: number = 0; index < fields.length; index++) {
+          console.info('change !' + fields[index]);
+      }
+  }
+}
+
 try {
+  // 删除单个数据变更回调函数
   g_object.on('change', changeCallback1);
+  g_object.off('change', changeCallback1);
+
+  // 删除所有数据变更回调函数
+  g_object.on('change', changeCallback1);
+  g_object.on('change', changeCallback2);
+  g_object.off('change');
 } catch (error) {
   console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
-## on('status')
+## off_progressChanged
 
 ```TypeScript
-on(type: 'status', callback: StatusObserver): void
+off(type: 'progressChanged', callback?: ProgressObserver): void
 ```
 
-监听分布式对象的状态变更。
+当不再进行资产传输进度监听时，使用此接口删除资产传输进度监听的回调实例。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-<!--Device-DataObject-on(type: 'status', callback: StatusObserver): void--><!--Device-DataObject-on(type: 'status', callback: StatusObserver): void-End-->
+**废弃版本：** -1
 
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'status' | 是 | 事件类型，固定为'status'，表示分布式对象状态变更事件。 |
-| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式对象状态变更的回调实例。 |
-
-## 示例
-
-```TypeScript
-const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
-  console.info('status callback ' + sessionId);
-}
-try {
-  g_object.on('status', statusCallback1);
-} catch (error) {
-  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## on('progressChanged')
-
-```TypeScript
-on(type: 'progressChanged', callback: ProgressObserver): void
-```
-
-监听资产传输进度。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-<!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void--><!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void-End-->
+<!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void--><!--Device-DataObject-off(type: 'progressChanged', callback?: ProgressObserver): void-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 
@@ -878,17 +594,123 @@ on(type: 'progressChanged', callback: ProgressObserver): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'progressChanged' | 是 | 事件类型，固定为'progressChanged'，表示资产传输进度变化事件。 |
-| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 是 | 表示资产传输进度变化的回调实例。 |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 否 | 需要取消监听的回调实例，若不设置，则取消对该事件的所有监听。 |
 
 ## 示例
 
 ```TypeScript
-const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
-  console.info('progressChanged callback' + sessionId);
-  console.info('progressChanged callback' + progress);
+const progressChangedCallback1: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
+  console.info('progressChanged callback1' + sessionId);
+  console.info('progressChanged callback1' + progress);
+}
+
+const progressChangedCallback2: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
+  console.info('progressChanged callback2' + sessionId);
+  console.info('progressChanged callback2' + progress);
 }
 try {
-  g_object.on('progressChanged', progressChangedCallback);
+  g_object.on('progressChanged', progressChangedCallback1);
+  // 取消对资产传输进度的监听
+  g_object.off('progressChanged', progressChangedCallback1);
+
+  g_object.on('progressChanged', progressChangedCallback1);
+  g_object.on('progressChanged', progressChangedCallback2);
+  // 取消对资产传输进度的所有监听
+  g_object.off('progressChanged');
+} catch (error) {
+  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## off_status
+
+```TypeScript
+off(
+      type: 'status',
+      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void
+```
+
+当不再进行对象上下线监听时，使用此接口删除对象的上下线监听。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 否 | 需要删除的上下线回调，若不设置则删除该对象所有的上下线回调。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+// 删除上下线回调
+g_object.off('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
+    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
+});
+// 删除所有的上下线回调
+g_object.off('status');
+```
+
+## off_status
+
+```TypeScript
+off(type: 'status', callback?: StatusObserver): void
+```
+
+当不再进行分布式对象状态变更监听时，使用此接口删除分布式对象状态变更的回调实例。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void--><!--Device-DataObject-off(type: 'status', callback?: StatusObserver): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'status' | 是 | 事件类型，固定为'status'，表示数据对象状态变更事件。 |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 否 | 需要删除状态变更的回调实例，若不设置则删除该对象所有的状态变更回调实例。 |
+
+## 示例
+
+```TypeScript
+const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
+  console.info('status callback1' + sessionId);
+}
+
+const statusCallback2: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
+  console.info('status callback2' + sessionId);
+}
+try {
+  // 删除单个状态变更回调函数
+  g_object.on('status', statusCallback1);
+  g_object.off('status', statusCallback1);
+
+  // 删除所有状态变更回调函数
+  g_object.on('status', statusCallback1);
+  g_object.on('status', statusCallback2);
+  g_object.off('status');
 } catch (error) {
   console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
 }
@@ -904,7 +726,9 @@ onChange(callback: DataObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-onChange(callback: DataObserver): void--><!--Device-DataObject-onChange(callback: DataObserver): void-End-->
 
@@ -944,7 +768,9 @@ onProgressChanged(callback: ProgressObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void--><!--Device-DataObject-onProgressChanged(callback: ProgressObserver): void-End-->
 
@@ -980,7 +806,9 @@ onStatus(callback: StatusObserver): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1008,21 +836,225 @@ try {
 }
 ```
 
+## on_change
+
+```TypeScript
+on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void
+```
+
+监听分布式数据对象的数据变更。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void--><!--Device-DataObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void ): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
+| callback | (sessionId: string, fields: Array&lt;string&gt;) =&gt; void | 是 | 变更回调对象实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;fields：标识对象变更的属性名。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+g_object.on('change', (sessionId: string, fields: Array<string>) => {
+    console.info('change' + sessionId);
+    if (g_object != null && fields != null && fields != undefined) {
+        for (let index: number = 0; index < fields.length; index++) {
+            console.info('changed !' + fields[index] + ' ' + g_object[fields[index]]);
+        }
+    }
+});
+```
+
+## on_change
+
+```TypeScript
+on(type: 'change', callback: DataObserver): void
+```
+
+监听分布式对象的数据变更。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-on(type: 'change', callback: DataObserver): void--><!--Device-DataObject-on(type: 'change', callback: DataObserver): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'change' | 是 | 事件类型，固定为'change'，表示数据变更。 |
+| callback | [DataObserver](arkts-arkdata-distributeddataobject-dataobserver-t.md) | 是 | 表示分布式对象数据变更的回调实例。 |
+
+## 示例
+
+```TypeScript
+const changeCallback1: distributedDataObject.DataObserver = (sessionId: string, fields: Array<string>) => {
+  console.info('change callback1 ' + sessionId);
+  if (fields != null && fields != undefined) {
+      for (let index: number = 0; index < fields.length; index++) {
+          console.info('change !' + fields[index]);
+      }
+  }
+}
+try {
+  g_object.on('change', changeCallback1);
+} catch (error) {
+  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## on_progressChanged
+
+```TypeScript
+on(type: 'progressChanged', callback: ProgressObserver): void
+```
+
+监听资产传输进度。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void--><!--Device-DataObject-on(type: 'progressChanged', callback: ProgressObserver): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'progressChanged' | 是 | 事件类型，固定为'progressChanged'，表示资产传输进度变化事件。 |
+| callback | [ProgressObserver](arkts-arkdata-distributeddataobject-progressobserver-t.md) | 是 | 表示资产传输进度变化的回调实例。 |
+
+## 示例
+
+```TypeScript
+const progressChangedCallback: distributedDataObject.ProgressObserver = (sessionId: string, progress: number) => {
+  console.info('progressChanged callback' + sessionId);
+  console.info('progressChanged callback' + progress);
+}
+try {
+  g_object.on('progressChanged', progressChangedCallback);
+} catch (error) {
+  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## on_status
+
+```TypeScript
+on(
+      type: 'status',
+      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void
+    ): void
+```
+
+监听分布式数据对象的上下线。
+
+**起始版本：** 9
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DataObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'status' | 是 | 事件类型，固定为'status'，表示对象上下线。 |
+| callback | (sessionId: string, networkId: string, status: 'online' \| 'offline' ) =&gt; void | 是 | 监听上下线回调实例。 &lt;br&gt;sessionId：标识变更对象的sessionId； &lt;br&gt;networkId：标识对象设备； &lt;br&gt;status：标识对象为'online'(上线)或'offline'(下线)的状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+
+## 示例
+
+```TypeScript
+g_object.on('status', (sessionId: string, networkId: string, status: 'online' | 'offline') => {
+    console.info('status changed ' + sessionId + ' ' + status + ' ' + networkId);
+});
+```
+
+## on_status
+
+```TypeScript
+on(type: 'status', callback: StatusObserver): void
+```
+
+监听分布式对象的状态变更。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+<!--Device-DataObject-on(type: 'status', callback: StatusObserver): void--><!--Device-DataObject-on(type: 'status', callback: StatusObserver): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'status' | 是 | 事件类型，固定为'status'，表示分布式对象状态变更事件。 |
+| callback | [StatusObserver](arkts-arkdata-distributeddataobject-statusobserver-t.md) | 是 | 表示分布式对象状态变更的回调实例。 |
+
+## 示例
+
+```TypeScript
+const statusCallback1: distributedDataObject.StatusObserver = (sessionId: string, networkId: string, status: string) => {
+  console.info('status callback ' + sessionId);
+}
+try {
+  g_object.on('status', statusCallback1);
+} catch (error) {
+  console.error(`Failed to execute. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
 ## revokeSave
 
 ```TypeScript
 revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 ```
 
-撤回保存的分布式数据对象。使用callback方式作为异步方法。
+撤回保存的分布式数据对象。使用callback方式作为异步方法。 如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。 如果对象保存在其他设备，那么将删除本地设备上的数据。
 
-如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。
+**起始版本：** 23
 
-如果对象保存在其他设备，那么将删除本地设备上的数据。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void--><!--Device-DataObject-revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void-End-->
 
@@ -1032,14 +1064,14 @@ revokeSave(callback: AsyncCallback<RevokeSaveSuccessResponse>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md)&gt; | 是 | 回调函数。返回RevokeSaveSuccessResponse，包含sessionId。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
@@ -1101,15 +1133,13 @@ g_object!.revokeSave((err: Error, result: distributedDataObject.RevokeSaveSucces
 revokeSave(): Promise<RevokeSaveSuccessResponse>
 ```
 
-撤回保存的分布式数据对象。使用Promise方式作为异步方法。
+撤回保存的分布式数据对象。使用Promise方式作为异步方法。 如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。 如果对象保存在其他设备，那么将删除本地设备上的数据。
 
-如果对象保存在本地设备，那么将删除所有受信任设备上所保存的数据。
+**起始版本：** 23
 
-如果对象保存在其他设备，那么将删除本地设备上的数据。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>--><!--Device-DataObject-revokeSave(): Promise<RevokeSaveSuccessResponse>-End-->
 
@@ -1125,7 +1155,7 @@ revokeSave(): Promise<RevokeSaveSuccessResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
@@ -1180,19 +1210,13 @@ g_object!.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessResp
 save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 ```
 
-保存分布式数据对象。使用callback方式异步回调。
+保存分布式数据对象。使用callback方式异步回调。 对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。 有以下几种情况时，保存的数据将会被释放： - 存储时间超过24小时。 - 应用卸载。 - 成功恢复数据之后。
 
-对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。
+**起始版本：** 23
 
-有以下几种情况时，保存的数据将会被释放：
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-- 存储时间超过24小时。  
-- 应用卸载。  
-- 成功恢复数据之后。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void--><!--Device-DataObject-save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void-End-->
 
@@ -1203,14 +1227,14 @@ save(deviceId: string, callback: AsyncCallback<SaveSuccessResponse>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 存储数据的设备号，标识需要保存对象的设备。"local"表示本地设备，否则表示其他设备的设备号。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等 信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md)&gt; | 是 | 回调函数。返回SaveSuccessResponse，包含sessionId、version、deviceId等 信息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
@@ -1252,19 +1276,13 @@ g_object!.save('local', (err: Error | null, result: distributedDataObject.SaveSu
 save(deviceId: string): Promise<SaveSuccessResponse>
 ```
 
-保存分布式数据对象。使用Promise方式作为异步回调。
+保存分布式数据对象。使用Promise方式作为异步回调。 对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。 有以下几种情况时，保存的数据将会被释放： - 存储时间超过24小时。 - 应用卸载。 - 成功恢复数据之后。
 
-对象数据保存成功后，当应用存在时不会释放对象数据，当应用退出后，重新进入应用时，恢复保存在设备上的数据。
+**起始版本：** 23
 
-有以下几种情况时，保存的数据将会被释放：
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-- 存储时间超过24小时。  
-- 应用卸载。  
-- 成功恢复数据之后。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>--><!--Device-DataObject-save(deviceId: string): Promise<SaveSuccessResponse>-End-->
 
@@ -1286,8 +1304,8 @@ save(deviceId: string): Promise<SaveSuccessResponse>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 
 ## 示例
 
@@ -1325,11 +1343,13 @@ g_object!.save('local').then((callbackInfo: distributedDataObject.SaveSuccessRes
 setAsset(assetKey: string, uri: string): Promise<void>
 ```
 
-设置分布式对象中的单个资产的属性信息，该接口必须在[setSessionId](#setSessionId-2)接口调用前使用。使用Promise异步回调。
+设置分布式对象中的单个资产的属性信息，该接口必须在[setSessionId](#setSessionId)接 口调用前使用。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>--><!--Device-DataObject-setAsset(assetKey: string, uri: string): Promise<void>-End-->
 
@@ -1352,8 +1372,8 @@ setAsset(assetKey: string, uri: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
-| [15400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
+| [15400003](../errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
 
 ## 示例
 
@@ -1451,11 +1471,13 @@ class EntryAbility extends UIAbility {
 setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 ```
 
-设置分布式对象中的多个资产的属性信息，该接口必须在[setSessionId](#setSessionId-2)接口调用前使用。使用Promise异步回调。
+设置分布式对象中的多个资产的属性信息，该接口必须在[setSessionId](#setSessionId)接 口调用前使用。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>--><!--Device-DataObject-setAssets(assetsKey: string, uris: Array<string>): Promise<void>-End-->
 
@@ -1478,8 +1500,8 @@ setAssets(assetsKey: string, uris: Array<string>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [15400002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
-| [15400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-参数错误) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
+| [15400003](../errorcode-distributed-dataObject.md#15400003-已设置分布式对象的sessionid) | The sessionId of the distributed object has been set. |
 
 ## 示例
 
@@ -1579,9 +1601,11 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 
 设置sessionId，使用callback方式异步回调。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自动同步。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1594,15 +1618,15 @@ setSessionId(sessionId: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | sessionId | string | 是 | 分布式数据对象在可信组网中的标识ID，长度不大于128字节，且只能包含字母数字或下划线_。当传入""、null时表示退出分布式组网。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 加入session的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 加入session的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [15400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
 
 ## 示例
 
@@ -1625,9 +1649,11 @@ setSessionId(callback: AsyncCallback<void>): void
 
 退出所有已加入的session，使用callback方式异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本9 - 19：ohos.permission.DISTRIBUTED_DATASYNC
@@ -1640,15 +1666,15 @@ setSessionId(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 退出所有已加入session的异步回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.<br>**适用版本：** 9 - 19 |
-| [15400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.<br>**适用版本：** 9 - 19 |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
 
 ## 示例
 
@@ -1669,11 +1695,13 @@ g_object.setSessionId(() => {
 setSessionId(sessionId?: string): Promise<void>
 ```
 
-设置sessionId或退出分布式组网，使用Promise异步回调。当传入""、null或不传入参数时，表示退出分布式组网。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自动同步。
+设置sessionId或退出分布式组网，使用Promise异步回调。当传入""、null或不传入参数时，表示退出分布式组网。当可信组网中有多个设备处于协同状态时，如果多个设备间的分布式对象设置为同一个sessionId，就能自 动同步。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1697,9 +1725,9 @@ setSessionId(sessionId?: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [15400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [15400001](../errorcode-distributed-dataObject.md#15400001-创建内存数据库失败) | Failed to create the in-memory database. |
 
 ## 示例
 
@@ -1736,22 +1764,4 @@ g_object!.setSessionId().then(() => {
   console.error(`Failed to set sessionId. Code: ${error.code}, message: ${error.message}`);
 });
 ```
-
-## [key: string]
-
-```TypeScript
-[key: string]: Object | null | undefined
-```
-
-Get and set value of property.
-
-**类型：** Object \| null \| undefined
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-DataObject-[key: string]: Object | null | undefined--><!--Device-DataObject-[key: string]: Object | null | undefined-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.DataObject.DistributedObject
 

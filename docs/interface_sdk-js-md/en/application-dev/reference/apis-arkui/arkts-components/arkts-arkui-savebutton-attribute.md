@@ -1,15 +1,16 @@
 # SaveButton properties/events
 
-Universal attributes are not supported. This component supports the attributes listed below, as well as  
-[universal attributes of security components](./security_component). Only the following events are supported.
+Universal attributes are not supported. This component supports the attributes listed below, as well as universal attributes of security components. Only the following events are supported.
 
-**Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
+**Inheritance/Implementation:** SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>--><!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class SaveButtonAttribute--><!--Device-unnamed-declare class SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +25,8 @@ Sets the corner radius of the **SaveButton** component.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -53,6 +56,8 @@ Sets the icon size of the **SaveButton** component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -65,7 +70,7 @@ Sets the icon size of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | Dimension \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. &lt;br&gt;The default width and height are 16 vp.&lt;br&gt;Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. &lt;br&gt;For the system icons provided by the **SaveButton** component: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. &lt;br&gt;For custom icons: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. &lt;br&gt;- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in [ImageFit.Cover](ImageFit) mode. |
+| size | Dimension \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. &lt;br&gt;The default width and height are 16 vp.&lt;br&gt;Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. &lt;br&gt;For the system icons provided by the **SaveButton** component: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. &lt;br&gt;For custom icons: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. &lt;br&gt;- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in ImageFit.Cover mode. |
 
 ## onClick
 
@@ -73,12 +78,13 @@ Sets the icon size of the **SaveButton** component.
 onClick(event: SaveButtonCallback)
 ```
 
-Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the  
-[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)constructor. Authorization fails if the user declines authorization or closes the dialog box.
+Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the [SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1) constructor. Authorization fails if the user declines authorization or closes the dialog box.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +112,8 @@ Sets the icon of the **SaveButton** component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -120,7 +128,7 @@ Sets the icon of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported. &lt;br&gt;Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see [Image](./image). If the resource is not an image resource or the format is not supported, the icon is displayed as blank. &lt;br&gt;Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
+| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported. &lt;br&gt;Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see Image. If the resource is not an image resource or the format is not supported, the icon is displayed as blank. &lt;br&gt;Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
 
 ## setText
 
@@ -133,6 +141,8 @@ Sets the text of the **SaveButton** component.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -162,6 +172,8 @@ Sets the press effect of the **SaveButton** component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -184,15 +196,13 @@ Sets the press effect of the **SaveButton** component.
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-Sets the font weight of the symbol icon for the save button.
-
-- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
-- If no symbol icon is configured, the font weight setting will not apply.
+Sets the font weight of the symbol icon for the save button. - Before calling this method, you need to call [setIcon](#setIcon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - If no symbol icon is configured, the font weight setting will not apply.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -208,7 +218,7 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. &lt;br&gt;For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. &lt;br&gt;For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of [FontWeight](FontWeight) (for example, **"normal"**). &lt;br&gt;Default value: **FontWeight.Normal** (the corresponding value is **400**) &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. &lt;br&gt;For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. &lt;br&gt;For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of FontWeight (for example, **"normal"**). &lt;br&gt;Default value: **FontWeight.Normal** (the corresponding value is **400**) &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolIconColor
 
@@ -216,17 +226,13 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-Sets the color of the symbol icon for the save button.
-
-- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.xxx')**).  
-- If no symbol icon is set, the color set via this method does not take effect.  
-- It is recommended that you use this API together with  
-[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy) to achieve different rendering effects.
+Sets the color of the symbol icon for the save button. - Before calling this method, you need to call [setIcon](#setIcon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.xxx')**). - If no symbol icon is set, the color set via this method does not take effect. - It is recommended that you use this API together with [symbolRenderingStrategy](#symbolRenderingStrategy) to achieve different rendering effects.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -242,7 +248,7 @@ style icon resource (i.e., **\$r('sys.symbol.xxx')**).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarios where the symbol icon needs to be consistent with the service visual style. &lt;br&gt;Default value: varies depending on [symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy). &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarios where the symbol icon needs to be consistent with the service visual style. &lt;br&gt;Default value: varies depending on [symbolRenderingStrategy](#symbolRenderingStrategy). &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolRenderingStrategy
 
@@ -250,17 +256,13 @@ style icon resource (i.e., **\$r('sys.symbol.xxx')**).
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-Sets the rendering strategy for the symbol icon of the save button.
-
-- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
-- The configured rendering strategy will not apply if no symbol icon is set.  
-- When this parameter is used together with [symbolIconColor](SaveButtonAttribute#symbolIconColor), the  
-rendering strategy determines how the color array is applied.
+Sets the rendering strategy for the symbol icon of the save button. - Before calling this method, you need to call [setIcon](#setIcon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - The configured rendering strategy will not apply if no symbol icon is set. - When this parameter is used together with [symbolIconColor](#symbolIconColor), the rendering strategy determines how the color array is applied.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -289,6 +291,8 @@ Sets the user authorization cancellation event for the **SaveButton** component.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

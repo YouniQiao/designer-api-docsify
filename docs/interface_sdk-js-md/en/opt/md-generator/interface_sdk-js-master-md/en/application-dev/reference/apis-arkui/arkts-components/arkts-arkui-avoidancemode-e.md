@@ -4,6 +4,8 @@ Enumerates the drop-down menu avoidance modes.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AvoidanceMode--><!--Device-unnamed-declare enum AvoidanceMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ COVER_TARGET
 If there is not enough space below the target component, cover the target component.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,9 +36,11 @@ If there is not enough space below the target component, cover the target compon
 AVOID_AROUND_TARGET
 ```
 
-If there is not enough space around the target component, compress and display in the largest available space (scrollable).
+If there is not enough space around the target component, compress and display in the largest available space ( scrollable).
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

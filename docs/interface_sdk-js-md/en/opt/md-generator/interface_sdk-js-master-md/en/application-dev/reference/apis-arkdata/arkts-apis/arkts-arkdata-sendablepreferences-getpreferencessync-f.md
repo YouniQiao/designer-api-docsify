@@ -16,6 +16,8 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-sendablePreferences-function getPreferencesSync(context: Context, options: Options): Preferences--><!--Device-sendablePreferences-function getPreferencesSync(context: Context, options: Options): Preferences-End-->
@@ -39,11 +41,11 @@ Obtains a **Preferences** instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [15501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-stage-model-required) |
-| [15501002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [15501001](../errorcode-preferences.md#15501001-stage-model-required) |
+| [15501002](../errorcode-preferences.md#15501002-invalid-datagroupid-parameter-in-options) |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) |
 
 ## Examples
 

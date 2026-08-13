@@ -8,6 +8,8 @@ export type ProcessInfo = _ProcessInfo
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-export type ProcessInfo = _ProcessInfo--><!--Device-featureAbility-export type ProcessInfo = _ProcessInfo-End-->

@@ -1,8 +1,10 @@
 # ServiceExtensionIntentInfo（系统接口）
 
-用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的ServiceExtensionAbility组件信息。
+用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的ServiceExtensionAbility组件信息 。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-insightIntentDriver-interface ServiceExtensionIntentInfo--><!--Device-insightIntentDriver-interface ServiceExtensionIntentInfo-End-->
 
@@ -21,6 +23,8 @@ readonly abilityName: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

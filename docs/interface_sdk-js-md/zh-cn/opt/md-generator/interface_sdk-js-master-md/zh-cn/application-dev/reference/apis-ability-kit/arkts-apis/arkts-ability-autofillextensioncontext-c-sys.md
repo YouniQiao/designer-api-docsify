@@ -1,13 +1,14 @@
 # AutoFillExtensionContext（系统接口）
 
-AutoFillExtensionContext模块是AutoFillExtensionAbility的上下文环境，继承自  
-[ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext)。
+AutoFillExtensionContext模块是AutoFillExtensionAbility的上下文环境，继承自 [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext)。
 
-**继承/实现关系：** AutoFillExtensionContext extends [ExtensionContext](ExtensionContext)
+**继承/实现关系：** AutoFillExtensionContext extends ExtensionContext
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-unnamed-declare class AutoFillExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AutoFillExtensionContext extends ExtensionContext-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class AutoFillExtensionContext--><!--Device-unnamed-declare class AutoFillExtensionContext-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -21,7 +22,9 @@ reloadInModal(customData: CustomData): Promise<void>
 
 拉起模态页面。使用Promise异步回调。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,10 +50,10 @@ reloadInModal(customData: CustomData): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 

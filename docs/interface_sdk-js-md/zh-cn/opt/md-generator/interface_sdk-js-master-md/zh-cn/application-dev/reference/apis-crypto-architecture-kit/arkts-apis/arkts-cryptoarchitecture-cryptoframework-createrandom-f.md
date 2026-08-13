@@ -8,7 +8,9 @@ function createRandom(): Random
 
 创建随机数实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -32,7 +34,7 @@ function createRandom(): Random
 
 | 错误码ID |
 | --- |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 

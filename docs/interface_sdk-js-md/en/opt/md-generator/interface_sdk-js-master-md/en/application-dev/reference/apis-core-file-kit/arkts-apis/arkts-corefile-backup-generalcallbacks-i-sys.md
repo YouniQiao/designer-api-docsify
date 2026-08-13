@@ -1,8 +1,10 @@
 # GeneralCallbacks (System API)
 
-General callbacks for both backup and restore procedure.The backup service will notify the client by these callbacks.
+General callbacks for both backup and restore procedure. The backup service will notify the client by these callbacks.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface GeneralCallbacks--><!--Device-backup-interface GeneralCallbacks-End-->
 
@@ -16,60 +18,17 @@ General callbacks for both backup and restore procedure.The backup service will 
 import { backup } from '@kit.CoreFileKit';
 ```
 
-## onBackupSizeReport
-
-```TypeScript
-onBackupSizeReport?: OnBackupSizeReport
-```
-
-Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the scanned bundle datasize.
-
-**Since:** 18
-
-<!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport--><!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-## onFileReadyBatch
-
-```TypeScript
-onFileReadyBatch?: OnFileReadyBatch
-```
-
-Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client.The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch--><!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch-End-->
-
-**System capability:** SystemCapability.FileManagement.StorageService.Backup
-
-**System API:** This is a system API.
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| 13900020 |
-| 13900005 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| 13900025 |
-| 13600001 |
-| 13900011 |
-
 ## onProcess
 
 ```TypeScript
 onProcess(bundleName: string, process: string): void
 ```
 
-Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the bundle.
+Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,11 +50,11 @@ Callback called when the backup_sa service return result information.The first r
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900005 |
 | 13500008 |
 | 13900001 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13500006 |
 | 13900025 |
 | 13600001 |
@@ -107,9 +66,11 @@ Callback called when the backup_sa service return result information.The first r
 onResultReport(bundleName: string, result: string): void
 ```
 
-Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle.
+Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,9 +91,9 @@ Callback called when the backup service return result information.The first retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900005 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900025 |
 | 13600001 |
 | 13900042 |
@@ -148,7 +109,9 @@ Callback called when the all the bundles to backup/restore are done or aborted u
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;undefined&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>--><!--Device-GeneralCallbacks-onAllBundlesEnd: AsyncCallback<undefined>-End-->
 
@@ -166,9 +129,31 @@ Callback called when the backup service dies unexpectedly.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;undefined&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>--><!--Device-GeneralCallbacks-onBackupServiceDied: Callback<undefined>-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+## onBackupSizeReport
+
+```TypeScript
+onBackupSizeReport?: OnBackupSizeReport
+```
+
+Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the scanned bundle datasize.
+
+**Type:** [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport--><!--Device-GeneralCallbacks-onBackupSizeReport?: OnBackupSizeReport-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -177,16 +162,20 @@ Callback called when the backup service dies unexpectedly.
 ## onBundleBegin
 
 ```TypeScript
-onBundleBegin: AsyncCallback<string, void | string>
+onBundleBegin: AsyncCallback<string, BundlePara>
 ```
 
-Callback called when a backup/restore procedure for an bundle is started.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
+Callback called when a backup/restore procedure for an bundle is started. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, void | string>-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, BundlePara>--><!--Device-GeneralCallbacks-onBundleBegin: AsyncCallback<string, BundlePara>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -195,16 +184,20 @@ Callback called when a backup/restore procedure for an bundle is started.The fir
 ## onBundleEnd
 
 ```TypeScript
-onBundleEnd: AsyncCallback<string, void | string>
+onBundleEnd: AsyncCallback<string, BundlePara>
 ```
 
-Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
+Callback called when a backup/restore procedure for an bundle ends successfully or gets aborted unexpectedly. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
-**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
+**Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, void | string>-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, BundlePara>--><!--Device-GeneralCallbacks-onBundleEnd: AsyncCallback<string, BundlePara>-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -216,13 +209,37 @@ Callback called when a backup/restore procedure for an bundle ends successfully 
 onFileReady: AsyncCallback<File>
 ```
 
-Callback called when the backup service tries to send files to the client.The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
+Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;File&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>--><!--Device-GeneralCallbacks-onFileReady: AsyncCallback<File>-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+## onFileReadyBatch
+
+```TypeScript
+onFileReadyBatch?: OnFileReadyBatch
+```
+
+Callback called when the backup service tries to send files to the client. The File argument indicates a file to send to the client. The returned file is owned by the backup service and will be cleaned by the service once the file is closed.
+
+**Type:** [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch--><!--Device-GeneralCallbacks-onFileReadyBatch?: OnFileReadyBatch-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 
@@ -234,15 +251,61 @@ Callback called when the backup service tries to send files to the client.The Fi
 onMigrateResult?: AsyncCallback<string, void | string>
 ```
 
-Callback called when the migrate result is reported.The first return string parameter indicates the name of the bundle.The second return string parameter indicates that when BusinessError errors occur,the callback data is the name of the bundle.
+Callback called when the migrate result is reported. The first return string parameter indicates the name of the bundle. The second return string parameter indicates that when BusinessError errors occur, the callback data is the name of the bundle.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string, void \| string&gt;
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>--><!--Device-GeneralCallbacks-onMigrateResult?: AsyncCallback<string, void | string>-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+## onProcess
+
+```TypeScript
+onProcess: OnProcess
+```
+
+Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
+
+**Type:** [OnProcess](arkts-corefile-backup-onprocess-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onProcess: OnProcess--><!--Device-GeneralCallbacks-onProcess: OnProcess-End-->
+
+**System capability:** SystemCapability.FileManagement.StorageService.Backup
+
+**System API:** This is a system API.
+
+## onResultReport
+
+```TypeScript
+onResultReport: OnResultReport
+```
+
+Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
+
+**Type:** [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GeneralCallbacks-onResultReport: OnResultReport--><!--Device-GeneralCallbacks-onResultReport: OnResultReport-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

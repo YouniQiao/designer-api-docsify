@@ -4,6 +4,8 @@ Define the menu pop-up policy
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum MenuPolicy--><!--Device-unnamed-declare enum MenuPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 Default value. The default logic of whether to pop up a menu depends on the scene.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ Hide pop up menu.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ SHOW = 2
 Show pop up menu.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

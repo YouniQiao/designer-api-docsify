@@ -6,12 +6,11 @@
 function setMemoryCacheSize(bytes: number): void
 ```
 
-设置缓存下载组件能够保存的内存缓存上限。
+设置缓存下载组件能够保存的内存缓存上限。 - 使用该接口调整缓存大小时，默认使用“LRU”（最近最少使用）方式清除多余的已缓存的内存缓存内容。 - 该方法为同步方法，不阻塞调用线程。
 
-- 使用该接口调整缓存大小时，默认使用“LRU”（最近最少使用）方式清除多余的已缓存的内存缓存内容。  
-- 该方法为同步方法，不阻塞调用线程。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 <!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void--><!--Device-cacheDownload-function setMemoryCacheSize(bytes: long): void-End-->
 
@@ -27,7 +26,7 @@ function setMemoryCacheSize(bytes: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

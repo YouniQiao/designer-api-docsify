@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-i18n-export interface StyledDateTimeFormatOptions--><!--Device-i18n-export interface StyledDateTimeFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
@@ -19,6 +21,8 @@ day?: TextStyle
 **类型：** TextStyle
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ dayPeriod?: TextStyle
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledDateTimeFormatOptions-dayPeriod?: TextStyle--><!--Device-StyledDateTimeFormatOptions-dayPeriod?: TextStyle-End-->
@@ -55,6 +61,8 @@ era?: TextStyle
 **类型：** TextStyle
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ hour?: TextStyle
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledDateTimeFormatOptions-hour?: TextStyle--><!--Device-StyledDateTimeFormatOptions-hour?: TextStyle-End-->
@@ -91,6 +101,8 @@ minute?: TextStyle
 **类型：** TextStyle
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ month?: TextStyle
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledDateTimeFormatOptions-month?: TextStyle--><!--Device-StyledDateTimeFormatOptions-month?: TextStyle-End-->
@@ -127,6 +141,8 @@ second?: TextStyle
 **类型：** TextStyle
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -146,6 +162,8 @@ timeZoneName?: TextStyle
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledDateTimeFormatOptions-timeZoneName?: TextStyle--><!--Device-StyledDateTimeFormatOptions-timeZoneName?: TextStyle-End-->
@@ -164,6 +182,8 @@ weekday?: TextStyle
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-StyledDateTimeFormatOptions-weekday?: TextStyle--><!--Device-StyledDateTimeFormatOptions-weekday?: TextStyle-End-->
@@ -181,6 +201,8 @@ year?: TextStyle
 **类型：** TextStyle
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

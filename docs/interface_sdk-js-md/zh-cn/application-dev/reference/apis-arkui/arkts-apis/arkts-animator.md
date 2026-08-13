@@ -6,7 +6,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Animator](arkts-arkui-animator-animator-c.md) | 定义Animator类 |
+| [Animator](arkts-arkui-animator-animator-c.md) |  |
 | [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | animator简易动画参数对象。与AnimatorOptions相比，部分动画参数有默认值，可不设置。 |
 
 ### 接口

@@ -1,20 +1,24 @@
 # GridRow
 
 ```TypeScript
-type GridRow = GridRowFrameNode
+type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>
 ```
 
-Define the FrameNode type for GridRow.
+Represents a FrameNode of the **GridRow** type. This type of node only allows child components of the **GridCol** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type GridRow = GridRowFrameNode--><!--Device-typeNode-type GridRow = GridRowFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>--><!--Device-typeNode-type GridRow = TypedFrameNode<GridRowInterface, GridRowAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** GridRowFrameNode
+**Property type:** TypedFrameNode<GridRowInterface, GridRowAttribute>
 

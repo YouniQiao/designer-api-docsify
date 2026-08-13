@@ -4,7 +4,9 @@ Declare TreeControllerV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class TreeControllerV2--><!--Device-unnamed-export declare class TreeControllerV2-End-->
 
@@ -22,13 +24,17 @@ import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, 
 addNode(nodeParam?: NodeParamV2): TreeControllerV2
 ```
 
-Initialize the interface of the tree view. This interface is used to generate ListNodeDataSource data.addNode is only designed for initialization. It can only be invoked during initialization.A maximum of 50 directory levels can be added.For details, see the comment description of NodeParam.
+Initialize the interface of the tree view. This interface is used to generate ListNodeDataSource data. addNode is only designed for initialization. It can only be invoked during initialization. A maximum of 50 directory levels can be added. For details, see the comment description of NodeParam.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeControllerV2-addNode(nodeParam?: NodeParamV2): TreeControllerV2--><!--Device-TreeControllerV2-addNode(nodeParam?: NodeParamV2): TreeControllerV2-End-->
 
@@ -52,13 +58,17 @@ Initialize the interface of the tree view. This interface is used to generate Li
 buildDone(): void
 ```
 
-After the initialization is complete by calling the addNode interface,call this interface to complete initialization.This interface must be called when you finish initializing the ListTreeViewV2 by addNode.
+After the initialization is complete by calling the addNode interface, call this interface to complete initialization. This interface must be called when you finish initializing the ListTreeViewV2 by addNode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeControllerV2-buildDone(): void--><!--Device-TreeControllerV2-buildDone(): void-End-->
 
@@ -70,13 +80,17 @@ After the initialization is complete by calling the addNode interface,call this 
 modifyNode(): void
 ```
 
-Modify the node name.Register an ON_ITEM_MODIFY callback to obtain the ID, parent node ID, and node name of the modified node.
+Modify the node name. Register an ON_ITEM_MODIFY callback to obtain the ID, parent node ID, and node name of the modified node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeControllerV2-modifyNode(): void--><!--Device-TreeControllerV2-modifyNode(): void-End-->
 
@@ -85,18 +99,22 @@ Modify the node name.Register an ON_ITEM_MODIFY callback to obtain the ID, paren
 ## refreshNode
 
 ```TypeScript
-refreshNode(parentId: int, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void
+refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void
 ```
 
 This interface is called when a secondaryTitle needs to be updated
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-TreeControllerV2-refreshNode(parentId: int, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void--><!--Device-TreeControllerV2-refreshNode(parentId: int, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-TreeControllerV2-refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void--><!--Device-TreeControllerV2-refreshNode(parentId: number, parentSubTitle: ResourceStr, currentSubtitle: ResourceStr): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -104,9 +122,9 @@ This interface is called when a secondaryTitle needs to be updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | int | Yes | ID of the parent node. &lt;br&gt;Value range:The value must be greater than or equal to -1. |
-| parentSubTitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
-| currentSubtitle | [ResourceStr](arkts-arkui-resourcestr-t.md) | Yes | secondaryTitle of current node. |
+| parentId | number | Yes | ID of the parent node. &lt;br&gt;Value range:The value must be greater than or equal to -1. |
+| parentSubTitle | [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
+| currentSubtitle | [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md) | Yes | secondaryTitle of current node. |
 
 ## removeNode
 
@@ -114,13 +132,17 @@ This interface is called when a secondaryTitle needs to be updated
 removeNode(): void
 ```
 
-Delete a node.Register an ON_ITEM_DELETE callback through the ListTreeListenerV2 mechanism to obtain the IDs of all deleted nodes.
+Delete a node. Register an ON_ITEM_DELETE callback through the ListTreeListenerV2 mechanism to obtain the IDs of all deleted nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeControllerV2-removeNode(): void--><!--Device-TreeControllerV2-removeNode(): void-End-->
 

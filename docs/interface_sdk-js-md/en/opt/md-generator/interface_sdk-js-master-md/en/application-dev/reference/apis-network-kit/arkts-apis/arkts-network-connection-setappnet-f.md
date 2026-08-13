@@ -12,9 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function setAppNet(netHandle: NetHandle, callback: AsyncCallback<void>): void
 ```
 
-Binds a process to {@code NetHandle}.&lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle},and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt;
+Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -33,15 +35,15 @@ Binds a process to {@code NetHandle}.&lt;p&gt;All the sockets created from the p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](#onnetavailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](#onnetlost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
+The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](arkts-network-connection-netconnection-i.md#on_netAvailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](arkts-network-connection-netconnection-i.md#on_netLost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';
@@ -95,9 +97,11 @@ netCon.register((error: BusinessError) => {
 function setAppNet(netHandle: NetHandle): Promise<void>
 ```
 
-Binds a process to {@code NetHandle}.&lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle},and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt;
+Binds a process to {@code NetHandle}. &lt;p&gt;All the sockets created from the process will be bound to the {@code NetHandle}, and the resolution of all host names will be managed by the {@code NetHandle}.&lt;/p&gt;
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -121,15 +125,15 @@ Binds a process to {@code NetHandle}.&lt;p&gt;All the sockets created from the p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](#onnetavailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](#onnetlost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
+The following example binds the application to a Wi-Fi network. It uses the [on('netAvailable')](arkts-network-connection-netconnection-i.md#on_netAvailable) API to bind the application when the Wi-Fi network is available, and the [on('netLost')](arkts-network-connection-netconnection-i.md#on_netLost) API to unbind the application and switch to the default network when the Wi-Fi network is unavailable.
 
 ```TypeScript
 import { connection } from '@kit.NetworkKit';

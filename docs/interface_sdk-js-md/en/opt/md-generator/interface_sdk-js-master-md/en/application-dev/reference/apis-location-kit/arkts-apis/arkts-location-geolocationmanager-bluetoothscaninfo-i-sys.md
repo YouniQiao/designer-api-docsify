@@ -2,7 +2,9 @@
 
 Describes the contents of the Bluetooth scan results.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface BluetoothScanInfo--><!--Device-geoLocationManager-export interface BluetoothScanInfo-End-->
 
@@ -26,7 +28,9 @@ The local name of the device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanInfo-deviceName: string--><!--Device-BluetoothScanInfo-deviceName: string-End-->
 
@@ -44,7 +48,9 @@ Mac address of the scanned device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanInfo-macAddress: string--><!--Device-BluetoothScanInfo-macAddress: string-End-->
 
@@ -62,7 +68,9 @@ RSSI of the remote device.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanInfo-rssi: int--><!--Device-BluetoothScanInfo-rssi: int-End-->
 
@@ -80,7 +88,9 @@ Time stamp.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanInfo-timestamp: long--><!--Device-BluetoothScanInfo-timestamp: long-End-->
 

@@ -14,13 +14,15 @@ function setRemoteDeviceName(deviceId: string, name: string): Promise<void>
 
 Modify remote device name.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function setRemoteDeviceName(deviceId: string, name: string): Promise<void>--><!--Device-connection-function setRemoteDeviceName(deviceId: string, name: string): Promise<void>-End-->
 
@@ -43,8 +45,8 @@ Modify remote device name.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 

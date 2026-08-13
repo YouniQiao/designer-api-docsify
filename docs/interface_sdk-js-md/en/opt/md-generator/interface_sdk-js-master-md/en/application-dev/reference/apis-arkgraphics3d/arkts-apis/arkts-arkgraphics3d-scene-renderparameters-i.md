@@ -2,7 +2,9 @@
 
 Describes the rendering parameters.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderParameters--><!--Device-unnamed-export interface RenderParameters-End-->
 
@@ -14,11 +16,13 @@ Describes the rendering parameters.
 alwaysRender?: boolean
 ```
 
-Whether to render every frame. The value true means to render every frame, and false means to render frames on demand.The default value is true.
+Whether to render every frame. The value true means to render every frame, and false means to render frames on demand. The default value is true.
 
 **Type:** boolean
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RenderParameters-alwaysRender?: boolean--><!--Device-RenderParameters-alwaysRender?: boolean-End-->
 

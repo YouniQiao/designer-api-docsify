@@ -12,11 +12,13 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function queryReusableAuthResult(authParam: AuthParam): Uint8Array
 ```
 
-Queries whether there is any reusable identity authentication result. This API is used to query whether there is an authentication result that meets the reuse conditions before authentication is initiated. If such a result exists,the **AuthToken** that can be reused is returned directly, and the user does not need to perform authentication again.
+Queries whether there is any reusable identity authentication result. This API is used to query whether there is an authentication result that meets the reuse conditions before authentication is initiated. If such a result exists, the **AuthToken** that can be reused is returned directly, and the user does not need to perform authentication again.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -42,11 +44,11 @@ Queries whether there is any reusable identity authentication result. This API i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12500008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500008-parameter-verification-failed) | The parameter is out of range. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500017-authentication-result-reuse-failed) | Failed to reuse authentication result. |
+| [12500008](../errorcode-useriam.md#12500008-parameter-verification-failed) | The parameter is out of range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied. Called by non-system application. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [12500017](../errorcode-useriam.md#12500017-authentication-result-reuse-failed) | Failed to reuse authentication result. |
 
 ## Examples
 

@@ -6,6 +6,8 @@ Defines detailed error information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-huksExternalCrypto-export interface HuksExternalErrorInfo--><!--Device-huksExternalCrypto-export interface HuksExternalErrorInfo-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -30,6 +32,8 @@ The detailed error code.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HuksExternalErrorInfo-errno: number--><!--Device-HuksExternalErrorInfo-errno: number-End-->
@@ -49,6 +53,8 @@ The detailed error description.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

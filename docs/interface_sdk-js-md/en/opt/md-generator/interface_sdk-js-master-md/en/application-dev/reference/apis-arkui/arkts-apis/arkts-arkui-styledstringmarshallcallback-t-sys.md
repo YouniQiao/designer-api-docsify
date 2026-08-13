@@ -4,9 +4,11 @@
 declare type StyledStringMarshallCallback = (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer
 ```
 
-Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
+Defines a callback for marshalling [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue-(System-API)).
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

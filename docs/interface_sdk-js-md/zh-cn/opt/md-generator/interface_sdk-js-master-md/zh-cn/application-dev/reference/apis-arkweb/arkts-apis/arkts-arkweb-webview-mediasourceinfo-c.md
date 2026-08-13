@@ -1,14 +1,10 @@
 # MediaSourceInfo
 
-表示媒体源的信息。
-
-> **说明：**
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 示例效果请以真机运行为准。
+表示媒体源的信息。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-webview-class MediaSourceInfo--><!--Device-webview-class MediaSourceInfo-End-->
 
@@ -25,6 +21,8 @@ format: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +42,8 @@ source: string
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceInfo-source: string--><!--Device-MediaSourceInfo-source: string-End-->
@@ -61,6 +61,8 @@ type: SourceType
 **类型：** SourceType
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-MediaSourceInfo-type: SourceType--><!--Device-MediaSourceInfo-type: SourceType-End-->
 

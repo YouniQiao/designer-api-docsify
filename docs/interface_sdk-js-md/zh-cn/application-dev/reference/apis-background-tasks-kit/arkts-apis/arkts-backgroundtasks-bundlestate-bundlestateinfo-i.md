@@ -16,7 +16,7 @@
 merge(toMerge: BundleStateInfo): void
 ```
 
-Merges a specified [BundleActiveInfo](BundleActiveInfo) object with this [BundleActiveInfo](BundleActiveInfo) object.The bundle name of both objects must be the same.
+Merges a specified BundleActiveInfo object with this BundleActiveInfo object. The bundle name of both objects must be the same.
 
 **起始版本：** 7
 
@@ -40,7 +40,7 @@ Merges a specified [BundleActiveInfo](BundleActiveInfo) object with this [Bundle
 abilityInFgTotalTime?: number
 ```
 
-The total duration, in milliseconds.&lt;br&gt; Unit:ms
+The total duration, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -60,7 +60,7 @@ The total duration, in milliseconds.&lt;br&gt; Unit:ms
 abilityPrevAccessTime?: number
 ```
 
-The last time when the application was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the application was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -80,7 +80,7 @@ The last time when the application was accessed, in milliseconds.&lt;br&gt; Unit
 abilityPrevSeenTime?: number
 ```
 
-The last time when the application was visible in the foreground, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the application was visible in the foreground, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -100,7 +100,7 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: number
 ```
 
-The total duration when the application was visible in the foreground, in milliseconds.&lt;br&gt; Unit:ms
+The total duration when the application was visible in the foreground, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -140,7 +140,7 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: number
 ```
 
-The total duration when the foreground application was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The total duration when the foreground application was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -160,7 +160,7 @@ The total duration when the foreground application was accessed, in milliseconds
 fgAbilityPrevAccessTime?: number
 ```
 
-The last time when the foreground application was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the foreground application was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -200,7 +200,7 @@ The identifier of BundleStateInfo.
 infosBeginTime?: number
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 
@@ -220,7 +220,7 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: number
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object,in milliseconds.&lt;br&gt; Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. &lt;br&gt; Unit:ms
 
 **类型：** number
 

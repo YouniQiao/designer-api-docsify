@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-window-interface UIEnvWindowAvoidAreaInfoPX--><!--Device-window-interface UIEnvWindowAvoidAreaInfoPX-End-->
 
@@ -22,7 +24,9 @@ cutout: AvoidArea
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea-End-->
 
@@ -40,7 +44,9 @@ keyboard: AvoidArea
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea-End-->
 
@@ -58,7 +64,9 @@ navigationIndicator: AvoidArea
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea-End-->
 
@@ -76,7 +84,9 @@ statusBar: AvoidArea
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea-End-->
 

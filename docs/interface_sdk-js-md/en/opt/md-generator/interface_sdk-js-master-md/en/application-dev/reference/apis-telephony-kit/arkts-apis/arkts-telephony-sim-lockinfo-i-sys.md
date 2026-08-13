@@ -2,7 +2,9 @@
 
 Defines the personalized lock information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->
 
@@ -26,7 +28,9 @@ Indicates the lock type.
 
 **Type:** [LockType](arkts-telephony-sim-locktype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockInfo-lockType: LockType--><!--Device-LockInfo-lockType: LockType-End-->
 
@@ -44,7 +48,9 @@ Indicates the password.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockInfo-password: string--><!--Device-LockInfo-password: string-End-->
 
@@ -62,7 +68,9 @@ Indicates the lock state.
 
 **Type:** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockInfo-state: LockState--><!--Device-LockInfo-state: LockState-End-->
 

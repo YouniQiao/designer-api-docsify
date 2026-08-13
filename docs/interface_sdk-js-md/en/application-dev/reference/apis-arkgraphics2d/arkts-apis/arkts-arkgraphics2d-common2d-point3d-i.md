@@ -4,11 +4,13 @@ Describes a 3D coordinate point. It inherits from [Point](arkts-arkgraphics2d-co
 
 **Inheritance/Implementation:** Point3d extends [Point](arkts-arkgraphics2d-common2d-point-i.md#Point)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-common2D-interface Point3d extends Point--><!--Device-common2D-interface Point3d extends Point-End-->
+**Deprecated since:** -1
+
+<!--Device-common2D-interface Point3d--><!--Device-common2D-interface Point3d-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -26,11 +28,13 @@ z: double
 
 Z-axis coordinate. The value is a floating point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Point3d-z: double--><!--Device-Point3d-z: double-End-->
 

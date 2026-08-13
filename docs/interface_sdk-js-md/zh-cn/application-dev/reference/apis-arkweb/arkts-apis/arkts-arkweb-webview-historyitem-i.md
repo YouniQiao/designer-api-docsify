@@ -2,9 +2,11 @@
 
 Provides information for history item in BackForwardList.
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
 
@@ -16,13 +18,17 @@ Provides information for history item in BackForwardList.
 historyRawUrl: string
 ```
 
-Original request url of this history item.
+历史记录项的原始url地址。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HistoryItem-historyRawUrl: string--><!--Device-HistoryItem-historyRawUrl: string-End-->
 
@@ -34,13 +40,17 @@ Original request url of this history item.
 historyUrl: string
 ```
 
-Url of this history item.
+历史记录项的url地址。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HistoryItem-historyUrl: string--><!--Device-HistoryItem-historyUrl: string-End-->
 
@@ -52,13 +62,17 @@ Url of this history item.
 icon: image.PixelMap
 ```
 
-Pixelmap of icon.
+历史页面图标的PixelMap对象。
 
 **类型：** image.PixelMap
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HistoryItem-icon: image.PixelMap--><!--Device-HistoryItem-icon: image.PixelMap-End-->
 
@@ -70,13 +84,17 @@ Pixelmap of icon.
 title: string
 ```
 
-Title of this history item.
+历史记录项的标题。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HistoryItem-title: string--><!--Device-HistoryItem-title: string-End-->
 

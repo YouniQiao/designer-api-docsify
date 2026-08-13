@@ -1,10 +1,10 @@
 # ExceptionPromptV2
 
-Declare struct ExceptionPromptV2 higher-order component.The exception prompt component is used to show an error message when an error arises.
+Declare struct ExceptionPromptV2 higher-order component. The exception prompt component is used to show an error message when an error arises.
 
 **Since:** 26.0.0
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ExceptionPromptV2--><!--Device-unnamed-export declare struct ExceptionPromptV2-End-->
 
@@ -19,43 +19,54 @@ import { MarginTypeV2, PromptOptionsV2, ExceptionPromptV2, PromptOptionsV2Config
 ## onActionTextClick
 
 ```TypeScript
-onActionTextClick?: OnActionTextClickCallback
+@Event
+  onActionTextClick?: OnActionTextClickCallback
 ```
 
 Callback invoked when the icon on the right is clicked.
 
+**Type:** [OnActionTextClickCallback](arkts-arkui-onactiontextclickcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExceptionPromptV2-onActionTextClick?: OnActionTextClickCallback--><!--Device-ExceptionPromptV2-onActionTextClick?: OnActionTextClickCallback-End-->
+<!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback--><!--Device-ExceptionPromptV2-@Event  onActionTextClick?: OnActionTextClickCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## onTipClick
 
 ```TypeScript
-onTipClick?: OnTipClickCallback
+@Event
+  onTipClick?: OnTipClickCallback
 ```
 
 Callback invoked when the prompt text on the left is clicked.
 
+**Type:** [OnTipClickCallback](arkts-arkui-ontipclickcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExceptionPromptV2-onTipClick?: OnTipClickCallback--><!--Device-ExceptionPromptV2-onTipClick?: OnTipClickCallback-End-->
+<!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback--><!--Device-ExceptionPromptV2-@Event  onTipClick?: OnTipClickCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
 ```TypeScript
-options: PromptOptionsV2
+@Param
+  options: PromptOptionsV2
 ```
 
 ExceptionPromptV2 configuration.
@@ -64,12 +75,12 @@ ExceptionPromptV2 configuration.
 
 **Since:** 26.0.0
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ExceptionPromptV2-options: PromptOptionsV2--><!--Device-ExceptionPromptV2-options: PromptOptionsV2-End-->
+<!--Device-ExceptionPromptV2-@Param  options: PromptOptionsV2--><!--Device-ExceptionPromptV2-@Param  options: PromptOptionsV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

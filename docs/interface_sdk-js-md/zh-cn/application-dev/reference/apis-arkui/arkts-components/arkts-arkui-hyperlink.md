@@ -1,18 +1,8 @@
 # Hyperlink
 
-超链接组件，支持文本和图片两种展示形式，在组件宽高范围内点击可实现跳转到指定网页。适用于应用内打开外部网页链接的场景，该组件仅支持与系统浏览器配合使用。
+超链接组件，支持文本和图片两种展示形式，在组件宽高范围内点击可实现跳转到指定网页。适用于应用内打开外部网页链接的场景，该组件仅支持与系统浏览器配合使用。 > **说明：** > > - 该组件仅支持与系统浏览器配合使用。
 
-> **说明：**
->
-> - 该组件仅支持与系统浏览器配合使用。
-
-## 需要权限
-
-跳转到目标网页需要使用网络时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](docroot://security/AccessToken/declare-permissions.md)。
-
-## 子组件
-
-可以包含[Image]{@link ./image}子组件。
+## 需要权限 跳转到目标网页需要使用网络时，需要申请权限ohos.permission.INTERNET。具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。 ###### 子组件 可以包含Image子组件。
 
 ## Hyperlink
 
@@ -23,6 +13,8 @@ Hyperlink(address: string | Resource, content?: string | Resource)
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -6,6 +6,8 @@ Provides information about the slider.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SliderOptions--><!--Device-unnamed-declare interface SliderOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Provides information about the slider.
 direction?: Axis
 ```
 
-Whether the slider moves horizontally or vertically.
-
-Default value: **Axis.Horizontal**
+Whether the slider moves horizontally or vertically. Default value: **Axis.Horizontal**
 
 **Type:** Axis
 
@@ -27,6 +27,8 @@ Default value: **Axis.Horizontal**
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,15 +44,7 @@ Default value: **Axis.Horizontal**
 max?: number
 ```
 
-Maximum value.
-
-Default value: **100**
-
-**NOTE：**
-
-If the value of **min** is greater than or equal to the value of **max**, the **min** value defaults to **0**, and the **max** value defaults to **100**.
-
-If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
+Maximum value. Default value: **100** **NOTE：**If the value of **min** is greater than or equal to the value of **max**, the **min** value defaults to **0**, and the **max** value defaults to **100**. If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
 
 **Type:** number
 
@@ -59,6 +53,8 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,9 +70,7 @@ If the value is not within the [min, max] range, the value of **min** or **max**
 min?: number
 ```
 
-Minimum value.
-
-Default value: **0**
+Minimum value. Default value: **0**
 
 **Type:** number
 
@@ -85,6 +79,8 @@ Default value: **0**
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,12 +96,7 @@ Default value: **0**
 reverse?: boolean
 ```
 
-Whether the slider values are reversed.
-
-**true**: A horizontal slider slides from right to left, and a vertical slider slides from bottom to top.   
-**false**: A horizontal slider slides from left to right, and a vertical slider slides from top to bottom.
-
-Default value: **false**
+Whether the slider values are reversed. **true**: A horizontal slider slides from right to left, and a vertical slider slides from bottom to top. **false**: A horizontal slider slides from left to right, and a vertical slider slides from top to bottom. Default value: **false**
 
 **Type:** boolean
 
@@ -114,6 +105,8 @@ Default value: **false**
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,15 +122,7 @@ Default value: **false**
 step?: number
 ```
 
-Step of the slider.
-
-Default value: **1**
-
-Value range: [0.01, max - min]
-
-**NOTE：**
-
-If this parameter is set to a value less than 0 or greater than the value of **max**, the default value is used.
+Step of the slider. Default value: **1** Value range: [0.01, max - min] **NOTE：**If this parameter is set to a value less than 0 or greater than the value of **max**, the default value is used.
 
 **Type:** number
 
@@ -146,6 +131,8 @@ If this parameter is set to a value less than 0 or greater than the value of **m
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -161,9 +148,7 @@ If this parameter is set to a value less than 0 or greater than the value of **m
 style?: SliderStyle
 ```
 
-Style of the slider thumb and track.
-
-Default value: **SliderStyle.OutSet**
+Style of the slider thumb and track. Default value: **SliderStyle.OutSet**
 
 **Type:** [SliderStyle](arkts-arkui-sliderstyle-e.md)
 
@@ -172,6 +157,8 @@ Default value: **SliderStyle.OutSet**
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -187,23 +174,7 @@ Default value: **SliderStyle.OutSet**
 value?: number
 ```
 
-Current progress.
-
-Default value: same as the value of **min**.
-
-Since API version 10, this property supports two-way binding through   
-[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
-
-This property supports two-way binding through   
-[!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters).
-
-Value range: [min, max]
-
-Values less than the value of **min** are adjusted to the value of **min**, and values greater than the value of   
-**max** are capped at the value of **max**.
-
-The \$\$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**.For details, see   
-[Example 7: Setting Two-Way Binding for the Slider](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
+Current progress. Default value: same as the value of **min**. Since API version 10, this property supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). This property supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md#two-way-binding-between-built-in-component-parameters). Value range: [min, max] Values less than the value of **min** are adjusted to the value of **min**, and values greater than the value of **max** are capped at the value of **max**. The \$\$ operator enables two-way synchronization between the TS variable and the **Slider** component's **value**. For details, see [Example 7: Setting Two-Way Binding for the Slider](../../../reference/apis-arkui/arkui-ts/ts-basic-components-slider.md#example-7-setting-two-way-binding-for-the-slider).
 
 **Type:** number
 
@@ -212,6 +183,8 @@ The \$\$ operator enables two-way synchronization between the TS variable and th
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

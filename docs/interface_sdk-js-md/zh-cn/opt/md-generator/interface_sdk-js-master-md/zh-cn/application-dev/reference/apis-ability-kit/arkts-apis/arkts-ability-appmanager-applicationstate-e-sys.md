@@ -2,7 +2,9 @@
 
 应用状态，该类型为枚举，可配合[AbilityStateData](arkts-ability-abilitystatedata-c.md#AbilityStateData)返回相应的应用状态。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appManager-export enum ApplicationState--><!--Device-appManager-export enum ApplicationState-End-->
 
@@ -18,7 +20,9 @@ STATE_CREATE = 0
 
 The application is being created.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationState-STATE_CREATE = 0--><!--Device-ApplicationState-STATE_CREATE = 0-End-->
 
@@ -34,7 +38,9 @@ STATE_FOREGROUND = 1
 
 The application is running in the foreground.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationState-STATE_FOREGROUND = 1--><!--Device-ApplicationState-STATE_FOREGROUND = 1-End-->
 
@@ -50,7 +56,9 @@ STATE_ACTIVE = 2
 
 The application is active.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationState-STATE_ACTIVE = 2--><!--Device-ApplicationState-STATE_ACTIVE = 2-End-->
 
@@ -66,7 +74,9 @@ STATE_BACKGROUND = 3
 
 The application is running in the background.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationState-STATE_BACKGROUND = 3--><!--Device-ApplicationState-STATE_BACKGROUND = 3-End-->
 
@@ -82,7 +92,9 @@ STATE_DESTROY = 4
 
 The application is being destroyed.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationState-STATE_DESTROY = 4--><!--Device-ApplicationState-STATE_DESTROY = 4-End-->
 

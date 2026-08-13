@@ -16,6 +16,8 @@ Whether desktop lyric feature is supported.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avSession-function isDesktopLyricSupported(): Promise<boolean>--><!--Device-avSession-function isDesktopLyricSupported(): Promise<boolean>-End-->
@@ -32,7 +34,7 @@ Whether desktop lyric feature is supported.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
 ## Examples
 

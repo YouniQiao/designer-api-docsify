@@ -6,6 +6,8 @@ Firewall IP parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface NetFirewallIpParams--><!--Device-netFirewall-interface NetFirewallIpParams-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -30,6 +32,8 @@ IP address: Valid when type equals 1, otherwise it will be ignored.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallIpParams-address?: string--><!--Device-NetFirewallIpParams-address?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -47,6 +51,8 @@ End IP: valid when type equals 2, otherwise it will be ignored.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallIpParams-endIp?: string--><!--Device-NetFirewallIpParams-endIp?: string-End-->
 
@@ -66,6 +72,8 @@ family?: number
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallIpParams-family?: number--><!--Device-NetFirewallIpParams-family?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -83,6 +91,8 @@ IPv4: subnet mask, IPv6: prefix, valid when type equals 1, otherwise it will be 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallIpParams-mask?: number--><!--Device-NetFirewallIpParams-mask?: number-End-->
 
@@ -102,6 +112,8 @@ Start IP: valid when type equals 2, otherwise it will be ignored.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallIpParams-startIp?: string--><!--Device-NetFirewallIpParams-startIp?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -119,6 +131,8 @@ type: number
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallIpParams-type: number--><!--Device-NetFirewallIpParams-type: number-End-->
 

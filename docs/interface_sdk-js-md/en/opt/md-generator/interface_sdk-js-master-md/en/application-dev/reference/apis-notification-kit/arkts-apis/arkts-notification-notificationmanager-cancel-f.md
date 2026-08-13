@@ -12,13 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancel(id: number, callback: AsyncCallback<void>): void
 ```
 
-Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result.
+Cancels a notification with the specified ID. This API uses an asynchronous callback to return the result. After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user. Compared with notificationManager.cancel(id, label, callback), which includes the label parameter, this API does not pass in a label and will cancel the notification matching the specified ID. When a notification is published with a non-empty label, the `notificationManager.cancel(id, label, callback)` API must be used to cancel it.
 
-After cancellation, the corresponding notification will be removed from the notification center, status bar, etc., and will no longer be visible to the user.
+**Since:** 23
 
-Compared with notificationManager.cancel(id, label, callback), which includes the label parameter,this API does not pass in a label and will cancel the notification matching the specified ID.When a notification is published with a non-empty label, the`notificationManager.cancel(id, label, callback)` API must be used to cancel it.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, callback: AsyncCallback<void>): void-End-->
 
@@ -26,11 +24,11 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 **See also:**
 
-[publish](notificationManager.publish(request: NotificationRequest,callback: AsyncCallback<void>): void) publishes a notification.
+publish publishes a notification.
 
-[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) cancels all notifications of this application.
+cancelAll cancels all notifications of this application.
 
-[cancelGroup](notificationManager.cancelGroup(groupName: string,callback: AsyncCallback<void,void>): void) cancels notifications
+cancelGroup cancels notifications
 
 **Parameters:**
 
@@ -43,11 +41,11 @@ Compared with notificationManager.cancel(id, label, callback), which includes th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 
@@ -72,13 +70,11 @@ notificationManager.cancel(0, cancelCallback);
 function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result.
+Cancels a published notification based on the notification ID and label. This API uses an asynchronous callback to return the result. After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled. Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels.
 
-After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user. This is suitable for scenarios where a specific notification with a particular tag needs to be precisely canceled.
+**Since:** 23
 
-Compared with notificationManager.cancel(id, callback), which requires only the notification ID, this API additionally has the **label** parameter, allowing precise cancellation of notifications with the same ID but different labels.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancel(id: int, label: string, callback: AsyncCallback<void>): void-End-->
 
@@ -86,11 +82,11 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 **See also:**
 
-[publish](notificationManager.publish(request: NotificationRequest,callback: AsyncCallback<void>): void) publishes a notification.
+publish publishes a notification.
 
-[cancelAll](notificationManager.cancelAll(callback: AsyncCallback<void>): void) cancels all notifications of this application.
+cancelAll cancels all notifications of this application.
 
-[cancelGroup](notificationManager.cancelGroup(groupName: string,callback: AsyncCallback<void,void>): void) cancels
+cancelGroup cancels
 
 **Parameters:**
 
@@ -104,11 +100,11 @@ Compared with notificationManager.cancel(id, callback), which requires only the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 
@@ -133,11 +129,11 @@ notificationManager.cancel(0, "label", cancelCallback);
 function cancel(id: number, label?: string): Promise<void>
 ```
 
-Cancels a published notification based on the notification ID and label. This API uses a promise to return the result.
+Cancels a published notification based on the notification ID and label. This API uses a promise to return the result. After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user.
 
-After cancellation, the corresponding notification will be removed from the notification center, status bar, and other locations, and will no longer be visible to the user.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>--><!--Device-notificationManager-function cancel(id: int, label?: string): Promise<void>-End-->
 
@@ -145,11 +141,11 @@ After cancellation, the corresponding notification will be removed from the noti
 
 **See also:**
 
-[publish](notificationManager.publish(request: NotificationRequest, callback: AsyncCallback<void>): void) publishes a notification.
+publish publishes a notification.
 
-[cancelAll](notificationManager.cancelAll(): Promise<void>) cancels all notifications of this application.
+cancelAll cancels all notifications of this application.
 
-[cancelGroup](notificationManager.cancelGroup(groupName: string): Promise<void>) cancels notifications
+cancelGroup cancels notifications
 
 **Parameters:**
 
@@ -168,11 +164,11 @@ After cancellation, the corresponding notification will be removed from the noti
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Data struct describes geographic locations.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface GeoAddress--><!--Device-geoLocationManager-export interface GeoAddress-End-->
 
@@ -24,7 +26,9 @@ Indicates website URL.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-addressUrl?: string--><!--Device-GeoAddress-addressUrl?: string-End-->
 
@@ -40,7 +44,9 @@ Indicates administrative region name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-administrativeArea?: string--><!--Device-GeoAddress-administrativeArea?: string-End-->
 
@@ -56,7 +62,9 @@ Indicates country code.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-countryCode?: string--><!--Device-GeoAddress-countryCode?: string-End-->
 
@@ -72,7 +80,9 @@ Indicates country name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-countryName?: string--><!--Device-GeoAddress-countryName?: string-End-->
 
@@ -88,7 +98,9 @@ Indicates additional information.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-descriptions?: Array<string>--><!--Device-GeoAddress-descriptions?: Array<string>-End-->
 
@@ -104,7 +116,9 @@ Indicates the amount of additional descriptive information.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-descriptionsSize?: int--><!--Device-GeoAddress-descriptionsSize?: int-End-->
 
@@ -116,11 +130,13 @@ Indicates the amount of additional descriptive information.
 latitude?: number
 ```
 
-Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
+Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-latitude?: double--><!--Device-GeoAddress-latitude?: double-End-->
 
@@ -132,11 +148,13 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 locale?: string
 ```
 
-Indicates language used for the location description.zh indicates Chinese, and en indicates English.
+Indicates language used for the location description. zh indicates Chinese, and en indicates English.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-locale?: string--><!--Device-GeoAddress-locale?: string-End-->
 
@@ -152,7 +170,9 @@ Indicates locality information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-locality?: string--><!--Device-GeoAddress-locality?: string-End-->
 
@@ -164,11 +184,13 @@ Indicates locality information.
 longitude?: number
 ```
 
-Indicates longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude.
+Indicates longitude information. A positive value indicates east longitude , and a negative value indicates west longitude.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-longitude?: double--><!--Device-GeoAddress-longitude?: double-End-->
 
@@ -184,7 +206,9 @@ Indicates phone number.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-phoneNumber?: string--><!--Device-GeoAddress-phoneNumber?: string-End-->
 
@@ -200,7 +224,9 @@ Indicates detailed address information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-placeName?: string--><!--Device-GeoAddress-placeName?: string-End-->
 
@@ -216,7 +242,9 @@ Indicates postal code.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-postalCode?: string--><!--Device-GeoAddress-postalCode?: string-End-->
 
@@ -232,7 +260,9 @@ Indicates house information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-premises?: string--><!--Device-GeoAddress-premises?: string-End-->
 
@@ -248,7 +278,9 @@ Indicates road name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-roadName?: string--><!--Device-GeoAddress-roadName?: string-End-->
 
@@ -264,7 +296,9 @@ Indicates sub-administrative region name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-subAdministrativeArea?: string--><!--Device-GeoAddress-subAdministrativeArea?: string-End-->
 
@@ -280,7 +314,9 @@ Indicates sub-locality information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-subLocality?: string--><!--Device-GeoAddress-subLocality?: string-End-->
 
@@ -296,7 +332,9 @@ Indicates auxiliary road information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoAddress-subRoadName?: string--><!--Device-GeoAddress-subRoadName?: string-End-->
 

@@ -6,6 +6,8 @@ Defines the LayoutDirection of device.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum LayoutDirection--><!--Device-unnamed-export declare enum LayoutDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Elements are laid out from right to left.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Elements are laid out from left to right.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LayoutDirection-LTR = 1--><!--Device-LayoutDirection-LTR = 1-End-->
@@ -57,6 +63,8 @@ Elements are laid out from auto.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

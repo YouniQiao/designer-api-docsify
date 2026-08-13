@@ -15,9 +15,11 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary screen.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,    secondaryScreenMode: MultiScreenMode): Promise<void>--><!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,    secondaryScreenMode: MultiScreenMode): Promise<void>-End-->
 
@@ -29,8 +31,8 @@ Sets the display mode (mirror or extend) of the secondary screen. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| primaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the primary screen. The value must be a non-negative integer. Floating- point numbers are rounded down. |
-| secondaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the secondary screen. The value must be a non-negative integer. Floating- point numbers are rounded down. |
+| primaryScreenId | long | Yes | ID of the primary screen. The value must be a non-negative integer. Floating- point numbers are rounded down. |
+| secondaryScreenId | long | Yes | ID of the secondary screen. The value must be a non-negative integer. Floating- point numbers are rounded down. |
 | secondaryScreenMode | [MultiScreenMode](arkts-arkui-screen-multiscreenmode-e-sys.md) | Yes | Display mode of the secondary screen. |
 
 **Return value:**
@@ -43,9 +45,9 @@ Sets the display mode (mirror or extend) of the secondary screen. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, non-system application uses system API. |
 
 ## Examples
 

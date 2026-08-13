@@ -12,11 +12,13 @@ import { emitter } from '@kit.BasicServicesKit';
 function offEventData(eventId: string, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback.This API takes effect only when Callback&lt;EventData&gt; has been registered through the on or once API.Otherwise, no processing is performed.
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when Callback&lt;EventData&gt; has been registered through the on or once API. Otherwise, no processing is performed.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-emitter-function offEventData(eventId: string, callback: Callback<EventData>): void--><!--Device-emitter-function offEventData(eventId: string, callback: Callback<EventData>): void-End-->
 
@@ -27,7 +29,7 @@ Unsubscribes from an event with the specified event ID and processed by the spec
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | eventId | string | Yes | Event ID. The value cannot be an empty string and exceed 10240 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[EventData](arkts-basicservices-emitter-eventdata-i.md)&gt; | Yes | Callback to unregister. |
 
 ## Examples
 

@@ -8,6 +8,8 @@ The callback of verify pin.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void--><!--Device-unnamed-type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

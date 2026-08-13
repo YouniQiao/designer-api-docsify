@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface TextChangeOptions--><!--Device-unnamed-export declare interface TextChangeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ oldContent: string
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ oldPreviewText: PreviewText
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeOptions-oldPreviewText: PreviewText--><!--Device-TextChangeOptions-oldPreviewText: PreviewText-End-->
@@ -64,6 +70,8 @@ rangeAfter: TextRange
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextChangeOptions-rangeAfter: TextRange--><!--Device-TextChangeOptions-rangeAfter: TextRange-End-->
@@ -83,6 +91,8 @@ rangeBefore: TextRange
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

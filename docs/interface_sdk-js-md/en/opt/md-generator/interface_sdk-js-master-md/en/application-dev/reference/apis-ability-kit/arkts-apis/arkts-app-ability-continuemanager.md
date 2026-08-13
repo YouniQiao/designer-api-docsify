@@ -2,7 +2,9 @@
 
 The continueManager module provides capabilities for managing cross-device application migration. For example, it allows you to obtain the result of quickly launching the target application during the cross-device migration process.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,8 +24,10 @@ import { continueManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [off](arkts-ability-continuemanager-off-f.md#off) |
-| [on](arkts-ability-continuemanager-on-f.md#on) |
+| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offPrepareContinue) |
+| [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onPrepareContinue) |
+| [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) |
 
 ### Interfaces
 

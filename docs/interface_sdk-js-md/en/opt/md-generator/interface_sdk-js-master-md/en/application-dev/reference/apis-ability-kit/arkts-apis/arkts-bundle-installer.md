@@ -1,12 +1,10 @@
 # @ohos.bundle.installer
 
-The module provides APIs for you to install, uninstall, and recover bundles on devices.
+The module provides APIs for you to install, uninstall, and recover bundles on devices. > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace installer--><!--Device-unnamed-declare namespace installer-End-->
 
@@ -27,9 +25,9 @@ import { installer } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller) |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller-1) |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getbundleinstallersync) |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getBundleInstaller-(System-API)) |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getBundleInstaller-(System-API)) |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getBundleInstallerSync-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

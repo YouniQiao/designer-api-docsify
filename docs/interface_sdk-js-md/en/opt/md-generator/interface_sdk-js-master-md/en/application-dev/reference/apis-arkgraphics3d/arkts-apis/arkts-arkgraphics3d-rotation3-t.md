@@ -6,7 +6,9 @@ export type Rotation3 = Vec3
 
 3D rotation info as euler angles, the unit is radian.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type Rotation3 = Vec3--><!--Device-unnamed-export type Rotation3 = Vec3-End-->
 

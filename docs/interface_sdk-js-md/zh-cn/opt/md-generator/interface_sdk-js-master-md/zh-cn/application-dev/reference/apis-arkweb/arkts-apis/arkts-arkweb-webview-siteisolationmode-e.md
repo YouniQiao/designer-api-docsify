@@ -4,6 +4,8 @@ Indicates the site isolation mode of the application, default value depends on d
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-webview-enum SiteIsolationMode--><!--Device-webview-enum SiteIsolationMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -18,6 +20,8 @@ The partial site isolation mode
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-SiteIsolationMode-PARTIAL = 0--><!--Device-SiteIsolationMode-PARTIAL = 0-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -31,6 +35,8 @@ STRICT = 1
 The strict site isolation mode
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 <!--Device-SiteIsolationMode-STRICT = 1--><!--Device-SiteIsolationMode-STRICT = 1-End-->
 

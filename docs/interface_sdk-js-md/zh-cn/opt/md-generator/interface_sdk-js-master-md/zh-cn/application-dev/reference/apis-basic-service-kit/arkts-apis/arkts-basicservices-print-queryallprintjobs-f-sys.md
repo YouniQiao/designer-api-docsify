@@ -8,11 +8,11 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 
 查询所有打印任务，使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 11
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -32,8 +32,8 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 
 ## queryAllPrintJobs
@@ -44,11 +44,11 @@ function queryAllPrintJobs(): Promise<void>
 
 查询所有打印任务，使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 11
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.MANAGE_PRINT_JOB
 
@@ -68,5 +68,5 @@ function queryAllPrintJobs(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

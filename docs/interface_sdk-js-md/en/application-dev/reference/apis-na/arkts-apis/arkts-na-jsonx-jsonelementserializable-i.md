@@ -1,0 +1,40 @@
+# JsonElementSerializable
+
+Interface for types that can be deserialized from JSON. Classes implementing this interface can be converted from a JsonElement.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-jsonx-export interface JsonElementSerializable--><!--Device-jsonx-export interface JsonElementSerializable-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## toJSON
+
+```TypeScript
+toJSON(): JsonElement
+```
+
+Converts the object to a JsonElement.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-JsonElementSerializable-toJSON(): JsonElement--><!--Device-JsonElementSerializable-toJSON(): JsonElement-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [JsonElement](arkts-na-jsonx-jsonelement-c.md) | The JsonElement representation. |
+

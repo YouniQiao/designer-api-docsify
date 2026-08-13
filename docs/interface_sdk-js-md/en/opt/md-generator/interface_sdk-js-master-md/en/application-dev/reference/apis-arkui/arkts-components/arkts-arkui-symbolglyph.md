@@ -1,12 +1,8 @@
 # SymbolGlyph
 
-The **SymbolGlyph** component represents a symbol glyph.<!--RP1--><!--RP1End-->
+The **SymbolGlyph** component represents a symbol glyph.<!--RP1--><!--RP1End--> > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## SymbolGlyph
 
@@ -17,6 +13,8 @@ SymbolGlyph(value?: Resource)
 Defines the constructor of SymbolGlyph.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +34,9 @@ Defines the constructor of SymbolGlyph.
 
 ## Summary
 
-- [EffectDirection](arkts-arkui-symbolglyph-effectdirection-e.md)
-- [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md)
-- [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
-- [ReplaceEffectType](arkts-arkui-symbolglyph-replaceeffecttype-e.md)
-- [SymbolEffectStrategy](arkts-arkui-symbolglyph-symboleffectstrategy-e.md)
-- [SymbolRenderingStrategy](arkts-arkui-symbolglyph-symbolrenderingstrategy-e.md)
+- [EffectDirection](arkts-arkui-effectdirection-e.md)
+- [EffectFillStyle](arkts-arkui-effectfillstyle-e.md)
+- [EffectScope](arkts-arkui-effectscope-e.md)
+- [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md)
+- [SymbolEffectStrategy](arkts-arkui-symboleffectstrategy-e.md)
+- [SymbolRenderingStrategy](arkts-arkui-symbolrenderingstrategy-e.md)

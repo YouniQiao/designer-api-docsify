@@ -1,9 +1,10 @@
 # ProcessInformation
 
-The module defines the process information. The information can be obtained through  
-[getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation) of appManager.
+The module defines the process information. The information can be obtained through [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation) of appManager.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ProcessInformation--><!--Device-unnamed-export interface ProcessInformation-End-->
 
@@ -19,9 +20,11 @@ Index of an application clone.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ProcessInformation-appCloneIndex?: int--><!--Device-ProcessInformation-appCloneIndex?: int-End-->
 
@@ -39,7 +42,9 @@ Names of all running bundles in the process.
 
 **Default:** an array of the bundleNames running in the process
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,9 +62,11 @@ Type of the bundle running in the process.
 
 **Type:** bundleManager.BundleType
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ProcessInformation-bundleType: bundleManager.BundleType--><!--Device-ProcessInformation-bundleType: bundleManager.BundleType-End-->
 
@@ -71,14 +78,13 @@ Type of the bundle running in the process.
 isPreload?: boolean
 ```
 
-Indicates whether the process is in the preload state.
-
-- `true`: The process is currently in the preload state.  
-- `false`: The process is either not a preload process, or its preload state has been consumed.
+Indicates whether the process is in the preload state. - `true`: The process is currently in the preload state. - `false`: The process is either not a preload process, or its preload state has been consumed.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,7 +106,9 @@ Process ID.
 
 **Default:** process id
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -120,7 +128,9 @@ Process name.
 
 **Default:** the name of the process
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -138,7 +148,9 @@ Running status of the process.
 
 **Type:** appManager.ProcessState
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -158,7 +170,9 @@ UID of the application.
 
 **Default:** user id
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

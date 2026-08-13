@@ -12,12 +12,13 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void
 ```
 
-Starts a synchronous trace with the trace output level specified. For details, see  
-[finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishSyncTrace).
+Starts a synchronous trace with the trace output level specified. For details, see [finishSyncTrace()](arkts-performanceanalysis-hitracemeter-finishsynctrace-f.md#finishSyncTrace).
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void--><!--Device-hiTraceMeter-function startSyncTrace(level: HiTraceOutputLevel, name: string, customArgs?: string): void-End-->
 

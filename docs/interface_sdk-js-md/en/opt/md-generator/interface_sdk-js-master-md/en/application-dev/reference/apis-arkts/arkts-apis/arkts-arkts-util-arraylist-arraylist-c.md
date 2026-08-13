@@ -1,10 +1,12 @@
 # ArrayList
 
-ArrayList is a linear data structure that is implemented based on arrays.ArrayList can dynamically adjust the capacity based on project requirements.It increases the capacity by 50% each time.
+ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the capacity based on project requirements. It increases the capacity by 50% each time.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class ArrayList<T>--><!--Device-unnamed-declare class ArrayList<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ArrayList--><!--Device-unnamed-declare class ArrayList-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ ArrayList is a linear data structure that is implemented based on arrays.ArrayLi
 ```TypeScript
 import { ArrayList } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+Obtains an iterator, each item of which is a JavaScript object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArrayList-$_iterator(): IterableIterator<T>--><!--Device-ArrayList-$_iterator(): IterableIterator<T>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>--><!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -34,13 +62,13 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -81,7 +109,9 @@ add(element: T): boolean
 
 Adds an element at the end of this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,7 +135,7 @@ Adds an element at the end of this ArrayList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -135,7 +165,9 @@ clear(): void
 
 Clears this ArrayList and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -147,7 +179,7 @@ Clears this ArrayList and sets its length to **0**.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -168,7 +200,9 @@ clone(): ArrayList<T>
 
 Clones this ArrayList and returns a copy. The modification to the copy does not affect the original instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -186,7 +220,7 @@ Clones this ArrayList and returns a copy. The modification to the copy does not 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -208,7 +242,9 @@ constructor()
 
 A constructor used to create an **ArrayList** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -220,7 +256,7 @@ A constructor used to create an **ArrayList** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -236,7 +272,9 @@ convertToArray(): Array<T>
 
 Converts this ArrayList into an array.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -254,7 +292,7 @@ Converts this ArrayList into an array.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -278,6 +316,8 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void--><!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void-End-->
@@ -295,7 +335,7 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -314,6 +354,30 @@ arrayList.forEach((value: number, index?: number) => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: ArrayListForEachCb<T>): void
+```
+
+Iterates over elements in a generic ArrayList and executes a callback function for each element.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArrayList-forEach(callbackFn: ArrayListForEachCb<T>): void--><!--Device-ArrayList-forEach(callbackFn: ArrayListForEachCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [ArrayListForEachCb](arkts-arkts-arraylistforeachcb-t.md)&lt;T&gt; | Yes |
+
 ## getCapacity
 
 ```TypeScript
@@ -322,7 +386,9 @@ getCapacity(): number
 
 Obtains the capacity of this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -340,7 +406,7 @@ Obtains the capacity of this ArrayList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -362,7 +428,9 @@ getIndexOf(element: T): number
 
 Obtains the index of the first occurrence of the specified element in this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -386,7 +454,7 @@ Obtains the index of the first occurrence of the specified element in this Array
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -411,7 +479,9 @@ getLastIndexOf(element: T): number
 
 Obtains the index of the last occurrence of the specified element in this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -435,7 +505,7 @@ Obtains the index of the last occurrence of the specified element in this ArrayL
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -460,7 +530,9 @@ has(element: T): boolean
 
 Checks whether this ArrayList has the specified element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -484,7 +556,7 @@ Checks whether this ArrayList has the specified element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -503,7 +575,9 @@ increaseCapacityTo(newCapacity: number): void
 
 Increases the capacity of this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -521,7 +595,7 @@ Increases the capacity of this ArrayList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -544,7 +618,9 @@ insert(element: T, index: number): void
 
 Inserts an element at a specified index within the length range. If index is out of range, the insertion fails.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -563,8 +639,8 @@ Inserts an element at a specified index within the length range. If index is out
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -584,7 +660,9 @@ isEmpty(): boolean
 
 Checks whether this ArrayList is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -602,7 +680,7 @@ Checks whether this ArrayList is empty (contains no element).
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -624,7 +702,9 @@ remove(element: T): boolean
 
 Removes the first occurrence of the specified element from this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -648,7 +728,7 @@ Removes the first occurrence of the specified element from this ArrayList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -670,7 +750,9 @@ removeByIndex(index: number): T
 
 Removes an element with the specified position from this ArrayList.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -694,8 +776,8 @@ Removes an element with the specified position from this ArrayList.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -718,7 +800,9 @@ removeByRange(fromIndex: number, toIndex: number): void
 
 Removes elements within the range [fromIndex, toIndex).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -737,8 +821,8 @@ Removes elements within the range [fromIndex, toIndex).
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -761,6 +845,8 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void--><!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void-End-->
@@ -778,7 +864,7 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -794,6 +880,30 @@ arrayList.replaceAllElements((value: number): number => {
 });
 ```
 
+## replaceAllElements
+
+```TypeScript
+replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void
+```
+
+Replaces all elements in this container with new elements, and returns the new ones.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArrayList-replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void--><!--Device-ArrayList-replaceAllElements(callbackFn: ArrayListReplaceCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [ArrayListReplaceCb](arkts-arkts-arraylistreplacecb-t.md)&lt;T&gt; | Yes |
+
 ## sort
 
 ```TypeScript
@@ -802,7 +912,9 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 Sorts elements in an ArrayList according to the order defined by the specified comparator.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -820,7 +932,7 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -841,10 +953,11 @@ arrayList.sort();
 subArrayList(fromIndex: number, toIndex: number): ArrayList<T>
 ```
 
-Obtains elements from this **ArrayList** within the range  
-[fromIndex, toIndex) and returns them as a new ArrayList instance.
+Obtains elements from this **ArrayList** within the range [fromIndex, toIndex) and returns them as a new ArrayList instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -869,8 +982,8 @@ Obtains elements from this **ArrayList** within the range
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -892,7 +1005,9 @@ trimToCurrentLength(): void
 
 Releases the reserved space in this ArrayList by adjusting the capacity to the actual number of elements in it.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -904,7 +1019,7 @@ Releases the reserved space in this ArrayList by adjusting the capacity to the a
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -918,24 +1033,6 @@ arrayList.trimToCurrentLength();
 console.info("result = ", arrayList.length); // result = 4
 ```
 
-## [index: int]
-
-```TypeScript
-[index: number]: T
-```
-
-Returns the element at the given index.
-
-**Type:** T
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ArrayList-[index: int]: T--><!--Device-ArrayList-[index: int]: T-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## length
 
 ```TypeScript
@@ -947,6 +1044,8 @@ Number of elements in an ArrayList.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

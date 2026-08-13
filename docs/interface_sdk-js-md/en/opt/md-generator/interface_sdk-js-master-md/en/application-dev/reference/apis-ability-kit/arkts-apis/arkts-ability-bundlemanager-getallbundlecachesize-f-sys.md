@@ -12,12 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllBundleCacheSize(): Promise<number>
 ```
 
-Obtains the global cache size. This API uses a promise to return the result.
+Obtains the global cache size. This API uses a promise to return the result. It is not possible to obtain the cache of applications that are currently running or have been granted the " AllowAppDataNotCleared" privilege as specified in the [application configuration guide](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
 
-It is not possible to obtain the cache of applications that are currently running or have been granted the "AllowAppDataNotCleared" privilege as specified in the  
-[application configuration guide](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
+**Since:** 23
 
-**Since:** 15
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -37,8 +36,8 @@ It is not possible to obtain the cache of applications that are currently runnin
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 The **Zip** module provides APIs for file compression and decompression.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace zlib--><!--Device-unnamed-declare namespace zlib-End-->
 
@@ -20,21 +22,21 @@ import { zlib } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile) |
-| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile-1) |
-| [compressFiles](arkts-basicservices-zlib-compressfiles-f.md#compressfiles) |
-| [createChecksum](arkts-basicservices-zlib-createchecksum-f.md#createchecksum) |
-| [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md#createchecksumsync) |
-| [createGZip](arkts-basicservices-zlib-creategzip-f.md#creategzip) |
-| [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md#creategzipsync) |
-| [createZip](arkts-basicservices-zlib-createzip-f.md#createzip) |
-| [createZipSync](arkts-basicservices-zlib-createzipsync-f.md#createzipsync) |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile) |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile-1) |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile-2) |
-| [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md#getoriginalsize) |
-| [unzipFile](arkts-basicservices-zlib-unzipfile-f.md#unzipfile) |
-| [zipFile](arkts-basicservices-zlib-zipfile-f.md#zipfile) |
+| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile) |
+| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile) |
+| [compressFiles](arkts-basicservices-zlib-compressfiles-f.md#compressFiles) |
+| [createChecksum](arkts-basicservices-zlib-createchecksum-f.md#createChecksum) |
+| [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md#createChecksumSync) |
+| [createGZip](arkts-basicservices-zlib-creategzip-f.md#createGZip) |
+| [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md#createGZipSync) |
+| [createZip](arkts-basicservices-zlib-createzip-f.md#createZip) |
+| [createZipSync](arkts-basicservices-zlib-createzipsync-f.md#createZipSync) |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) |
+| [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md#getOriginalSize) |
+| [unzipFile](arkts-basicservices-zlib-unzipfile-f.md#unzipFile) |
+| [zipFile](arkts-basicservices-zlib-zipfile-f.md#zipFile) |
 
 ### Interfaces
 

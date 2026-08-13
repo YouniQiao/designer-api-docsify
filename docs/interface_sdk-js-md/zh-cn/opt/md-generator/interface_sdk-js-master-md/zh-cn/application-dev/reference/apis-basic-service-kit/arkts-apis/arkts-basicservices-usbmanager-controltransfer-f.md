@@ -12,7 +12,7 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 **废弃版本：** 12
 
-**替代接口：** [usbControlTransfer](usbManager.usbControlTransfer(pipe:)
+**替代接口：** [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md#usbControlTransfer)(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout?: int)
 
 <!--Device-usbManager-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>--><!--Device-usbManager-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>-End-->
 
@@ -36,7 +36,7 @@ function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, ti
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

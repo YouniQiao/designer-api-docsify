@@ -1,19 +1,16 @@
 # ListScroller
 
-Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis.
+Implements the scroll controller of the **List** component. A **List** component is bound to a **ListScroller** on a one-to-one basis. > **NOTE：**> > **ListScroller** inherits from Scroller and has all methods of > Scroller.
 
-> **NOTE：**
-> 
-> **ListScroller** inherits from [Scroller](Scroller) and has all methods of
-> [Scroller](Scroller).
-
-**Inheritance/Implementation:** ListScroller extends [Scroller](Scroller)
+**Inheritance/Implementation:** ListScroller extends Scroller
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-declare class ListScroller extends Scroller--><!--Device-unnamed-declare class ListScroller extends Scroller-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ListScroller--><!--Device-unnamed-declare class ListScroller-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,11 +20,13 @@ Implements the scroll controller of the **List** component. A **List** component
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the [list items](list_item) in the [EXPANDED](SwipeActionState) state and sets callback events.
+Collapses the list items in the EXPANDED state and sets callback events.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,14 +40,14 @@ Collapses the [list items](list_item) in the [EXPANDED](SwipeActionState) state 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | No | Callback events for collapsing [list items](list_item) in the [EXPANDED](SwipeActionState) state. |
+| options | [CloseSwipeActionOptions](arkts-arkui-closeswipeactionoptions-i.md) | No | Callback events for collapsing list items in the EXPANDED state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRectInGroup
 
@@ -56,21 +55,13 @@ Collapses the [list items](list_item) in the [EXPANDED](SwipeActionState) state 
 getItemRectInGroup(index: number, indexInGroup: number): RectResult
 ```
 
-Obtains the size of a [list item](list_item) in a [list item group](list_item_group) and its position relative to the list.
-
-> **NOTE：**
-> 
-> - The value of **index** must be the index of a child component visible in the display area.
- Otherwise, the value is considered invalid.  
-> - The child component for which **index** is set must be a list item group. Otherwise,
- the **index** value is considered invalid.  
-> - The value of **indexInGroup** must be the index of a list item in the list item group visible
- in the display area. Otherwise, the value is considered invalid.  
-> - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
+Obtains the size of a list item in a list item group and its position relative to the list. > **NOTE：**> > - The value of **index** must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. > - The child component for which **index** is set must be a list item group. Otherwise, the **index** value is considered invalid. > - The value of **indexInGroup** must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. > - When **index** or **indexInGroup** is set to an invalid value, the returned size and position are both **0**.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,8 +88,8 @@ Obtains the size of a [list item](list_item) in a [list item group](list_item_gr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
 
@@ -111,6 +102,8 @@ Obtains the index information of the child component at the specified coordinate
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,8 +130,8 @@ Obtains the index information of the child component at the specified coordinate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
 
@@ -151,6 +144,8 @@ Scrolls to the specified list item in the specified list item group.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,6 +168,6 @@ Scrolls to the specified list item in the specified list item group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 

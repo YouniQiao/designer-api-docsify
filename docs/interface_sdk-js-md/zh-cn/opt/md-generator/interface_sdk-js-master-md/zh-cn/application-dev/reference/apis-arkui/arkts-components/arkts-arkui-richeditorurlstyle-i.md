@@ -4,6 +4,8 @@ Url信息。
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RichEditorUrlStyle--><!--Device-unnamed-declare interface RichEditorUrlStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Url信息。
 url?: ResourceStr
 ```
 
-url地址。
-
-默认值：undefined
+url地址。 默认值：undefined
 
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

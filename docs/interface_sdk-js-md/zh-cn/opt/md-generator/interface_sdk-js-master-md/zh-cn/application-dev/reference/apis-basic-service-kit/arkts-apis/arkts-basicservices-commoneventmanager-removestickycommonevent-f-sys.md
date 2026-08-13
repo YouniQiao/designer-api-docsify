@@ -8,7 +8,9 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 
 移除粘性公共事件。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
@@ -29,12 +31,12 @@ function removeStickyCommonEvent(event: string, callback: AsyncCallback<void>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [1500004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500004-无法发送系统公共事件) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [1500004](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500004-无法发送系统公共事件) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 
@@ -59,7 +61,9 @@ function removeStickyCommonEvent(event: string): Promise<void>
 
 移除已发布的粘性公共事件。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.COMMONEVENT_STICKY
 
@@ -85,12 +89,12 @@ function removeStickyCommonEvent(event: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [1500004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500004-无法发送系统公共事件) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [1500004](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500004-无法发送系统公共事件) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 

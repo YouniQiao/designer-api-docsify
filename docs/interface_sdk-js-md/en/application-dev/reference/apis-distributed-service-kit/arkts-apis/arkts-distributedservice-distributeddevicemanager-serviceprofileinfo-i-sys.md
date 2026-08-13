@@ -2,9 +2,11 @@
 
 Defines the service profile information. It is populated based on the data returned from the cloud.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface ServiceProfileInfo--><!--Device-distributedDeviceManager-interface ServiceProfileInfo-End-->
 
@@ -28,9 +30,11 @@ Service data. The value is a string of up to 1000 characters. This parameter is 
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ServiceProfileInfo-data?: string--><!--Device-ServiceProfileInfo-data?: string-End-->
 
@@ -48,9 +52,11 @@ Device ID.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ServiceProfileInfo-deviceId: string--><!--Device-ServiceProfileInfo-deviceId: string-End-->
 
@@ -68,9 +74,11 @@ Service ID.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ServiceProfileInfo-serviceId: string--><!--Device-ServiceProfileInfo-serviceId: string-End-->
 
@@ -88,9 +96,11 @@ Service type.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ServiceProfileInfo-serviceType: string--><!--Device-ServiceProfileInfo-serviceType: string-End-->
 

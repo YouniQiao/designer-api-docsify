@@ -2,7 +2,9 @@
 
 Describes audio stream information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioStreamInfo--><!--Device-audio-interface AudioStreamInfo-End-->
 
@@ -24,7 +26,9 @@ Audio channel layout. The default value is **0x0**.
 
 **Type:** [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout--><!--Device-AudioStreamInfo-channelLayout?: AudioChannelLayout-End-->
 
@@ -40,7 +44,9 @@ Number of audio channels.
 
 **Type:** [AudioChannel](arkts-audio-audio-audiochannel-e.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamInfo-channels: AudioChannel--><!--Device-AudioStreamInfo-channels: AudioChannel-End-->
 
@@ -56,7 +62,9 @@ Audio encoding type.
 
 **Type:** [AudioEncodingType](arkts-audio-audio-audioencodingtype-e.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamInfo-encodingType: AudioEncodingType--><!--Device-AudioStreamInfo-encodingType: AudioEncodingType-End-->
 
@@ -72,7 +80,9 @@ Audio sample format.
 
 **Type:** [AudioSampleFormat](arkts-audio-audio-audiosampleformat-e.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat--><!--Device-AudioStreamInfo-sampleFormat: AudioSampleFormat-End-->
 
@@ -88,7 +98,9 @@ Audio sampling rate.
 
 **Type:** [AudioSamplingRate](arkts-audio-audio-audiosamplingrate-e.md) \| number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 26.0.0 and later: This API can be used in both the stage model and FA model.

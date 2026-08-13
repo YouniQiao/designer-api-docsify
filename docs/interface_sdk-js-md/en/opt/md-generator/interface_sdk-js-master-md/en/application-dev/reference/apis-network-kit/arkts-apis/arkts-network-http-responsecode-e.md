@@ -2,7 +2,9 @@
 
 Enumerates the response codes for an HTTP request.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export enum ResponseCode--><!--Device-http-export enum ResponseCode-End-->
 
@@ -16,9 +18,11 @@ OK = 200
 
 The request was successful. Typically used for GET and POST requests.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-OK = 200--><!--Device-ResponseCode-OK = 200-End-->
 
@@ -32,9 +36,11 @@ CREATED
 
 Successfully requested and created a new resource.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-CREATED--><!--Device-ResponseCode-CREATED-End-->
 
@@ -48,9 +54,11 @@ ACCEPTED
 
 The request has been accepted but has not been processed completely.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-ACCEPTED--><!--Device-ResponseCode-ACCEPTED-End-->
 
@@ -64,9 +72,11 @@ NOT_AUTHORITATIVE
 
 Unauthorized information. The request was successful.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-NOT_AUTHORITATIVE--><!--Device-ResponseCode-NOT_AUTHORITATIVE-End-->
 
@@ -80,9 +90,11 @@ NO_CONTENT
 
 No content. The server successfully processed, but did not return content.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-NO_CONTENT--><!--Device-ResponseCode-NO_CONTENT-End-->
 
@@ -96,9 +108,11 @@ RESET
 
 Reset the content.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-RESET--><!--Device-ResponseCode-RESET-End-->
 
@@ -112,9 +126,11 @@ PARTIAL
 
 Partial content. The server successfully processed some GET requests.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-PARTIAL--><!--Device-ResponseCode-PARTIAL-End-->
 
@@ -128,9 +144,11 @@ MULT_CHOICE = 300
 
 Multiple options.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-MULT_CHOICE = 300--><!--Device-ResponseCode-MULT_CHOICE = 300-End-->
 
@@ -142,11 +160,13 @@ Multiple options.
 MOVED_PERM
 ```
 
-&lt;p&gt;Permanently move. The requested resource has been permanently moved to a new URI,and the returned information will include the new URI. The browser will automatically redirect to the new URI.&lt;/p&gt;
+&lt;p&gt;Permanently move. The requested resource has been permanently moved to a new URI, and the returned information will include the new URI. The browser will automatically redirect to the new URI.&lt;/p&gt;
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-MOVED_PERM--><!--Device-ResponseCode-MOVED_PERM-End-->
 
@@ -160,9 +180,11 @@ MOVED_TEMP
 
 Temporary movement.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-MOVED_TEMP--><!--Device-ResponseCode-MOVED_TEMP-End-->
 
@@ -176,9 +198,11 @@ SEE_OTHER
 
 View other addresses.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-SEE_OTHER--><!--Device-ResponseCode-SEE_OTHER-End-->
 
@@ -192,9 +216,11 @@ NOT_MODIFIED
 
 Not modified.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-NOT_MODIFIED--><!--Device-ResponseCode-NOT_MODIFIED-End-->
 
@@ -208,9 +234,11 @@ USE_PROXY
 
 Using proxies.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-USE_PROXY--><!--Device-ResponseCode-USE_PROXY-End-->
 
@@ -224,9 +252,11 @@ BAD_REQUEST = 400
 
 The server cannot understand the syntax error error requested by the client.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-BAD_REQUEST = 400--><!--Device-ResponseCode-BAD_REQUEST = 400-End-->
 
@@ -240,9 +270,11 @@ UNAUTHORIZED
 
 Request for user authentication.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-UNAUTHORIZED--><!--Device-ResponseCode-UNAUTHORIZED-End-->
 
@@ -256,9 +288,11 @@ PAYMENT_REQUIRED
 
 Reserved for future use.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-PAYMENT_REQUIRED--><!--Device-ResponseCode-PAYMENT_REQUIRED-End-->
 
@@ -272,9 +306,11 @@ FORBIDDEN
 
 The server understands the request from the requesting client, but refuses to execute it.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-FORBIDDEN--><!--Device-ResponseCode-FORBIDDEN-End-->
 
@@ -288,9 +324,11 @@ NOT_FOUND
 
 The server was unable to find resources (web pages) based on the client's request.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-NOT_FOUND--><!--Device-ResponseCode-NOT_FOUND-End-->
 
@@ -304,9 +342,11 @@ BAD_METHOD
 
 The method in the client request is prohibited.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-BAD_METHOD--><!--Device-ResponseCode-BAD_METHOD-End-->
 
@@ -320,9 +360,11 @@ NOT_ACCEPTABLE
 
 The server is unable to complete the request based on the content characteristics requested by the client.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-NOT_ACCEPTABLE--><!--Device-ResponseCode-NOT_ACCEPTABLE-End-->
 
@@ -336,9 +378,11 @@ PROXY_AUTH
 
 Request authentication of the proxy's identity.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-PROXY_AUTH--><!--Device-ResponseCode-PROXY_AUTH-End-->
 
@@ -352,9 +396,11 @@ CLIENT_TIMEOUT
 
 The request took too long and timed out.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-CLIENT_TIMEOUT--><!--Device-ResponseCode-CLIENT_TIMEOUT-End-->
 
@@ -366,11 +412,13 @@ The request took too long and timed out.
 CONFLICT
 ```
 
-&lt;p&gt;The server may have returned this code when completing the client's PUT request,as there was a conflict when the server was processing the request.&lt;/p&gt;
+&lt;p&gt;The server may have returned this code when completing the client's PUT request, as there was a conflict when the server was processing the request.&lt;/p&gt;
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-CONFLICT--><!--Device-ResponseCode-CONFLICT-End-->
 
@@ -384,9 +432,11 @@ GONE
 
 The resource requested by the client no longer exists.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-GONE--><!--Device-ResponseCode-GONE-End-->
 
@@ -400,9 +450,11 @@ LENGTH_REQUIRED
 
 The server is unable to process request information sent by the client without Content Length.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-LENGTH_REQUIRED--><!--Device-ResponseCode-LENGTH_REQUIRED-End-->
 
@@ -416,9 +468,11 @@ PRECON_FAILED
 
 The prerequisite for requesting information from the client is incorrect.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-PRECON_FAILED--><!--Device-ResponseCode-PRECON_FAILED-End-->
 
@@ -432,9 +486,11 @@ ENTITY_TOO_LARGE
 
 The request was rejected because the requested entity was too large for the server to process.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-ENTITY_TOO_LARGE--><!--Device-ResponseCode-ENTITY_TOO_LARGE-End-->
 
@@ -448,9 +504,11 @@ REQ_TOO_LONG
 
 The requested URI is too long (usually a URL) and the server cannot process it.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-REQ_TOO_LONG--><!--Device-ResponseCode-REQ_TOO_LONG-End-->
 
@@ -464,9 +522,11 @@ UNSUPPORTED_TYPE
 
 The server is unable to process the requested format.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-UNSUPPORTED_TYPE--><!--Device-ResponseCode-UNSUPPORTED_TYPE-End-->
 
@@ -482,6 +542,8 @@ The server cannot process the requested data range.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ResponseCode-RANGE_NOT_SATISFIABLE--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE-End-->
@@ -496,9 +558,11 @@ INTERNAL_ERROR = 500
 
 Internal server error, unable to complete the request.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-INTERNAL_ERROR = 500--><!--Device-ResponseCode-INTERNAL_ERROR = 500-End-->
 
@@ -512,9 +576,11 @@ NOT_IMPLEMENTED
 
 The server does not support the requested functionality and cannot complete the request.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-NOT_IMPLEMENTED--><!--Device-ResponseCode-NOT_IMPLEMENTED-End-->
 
@@ -528,9 +594,11 @@ BAD_GATEWAY
 
 The server acting as a gateway or proxy received an invalid request from the remote server.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-BAD_GATEWAY--><!--Device-ResponseCode-BAD_GATEWAY-End-->
 
@@ -544,9 +612,11 @@ UNAVAILABLE
 
 Due to overload or system maintenance, the server is temporarily unable to process client requests.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-UNAVAILABLE--><!--Device-ResponseCode-UNAVAILABLE-End-->
 
@@ -560,9 +630,11 @@ GATEWAY_TIMEOUT
 
 The server acting as a gateway or proxy did not obtain requests from the remote server in a timely manner.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-GATEWAY_TIMEOUT--><!--Device-ResponseCode-GATEWAY_TIMEOUT-End-->
 
@@ -576,9 +648,11 @@ VERSION
 
 The version of the HTTP protocol requested by the server.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ResponseCode-VERSION--><!--Device-ResponseCode-VERSION-End-->
 

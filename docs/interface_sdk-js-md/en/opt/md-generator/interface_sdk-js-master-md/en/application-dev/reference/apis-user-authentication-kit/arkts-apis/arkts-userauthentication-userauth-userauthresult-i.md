@@ -2,7 +2,9 @@
 
 Represents the user authentication result. If the authentication is successful, the authentication type and token information are returned. If the authentication fails, the corresponding error code is returned. This API is used to describe the result information after the authentication is complete. The application can obtain the result through the **onResult** callback of [IAuthCallback](arkts-userauthentication-userauth-iauthcallback-i.md#IAuthCallback).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-userAuth-interface UserAuthResult--><!--Device-userAuth-interface UserAuthResult-End-->
 
@@ -24,7 +26,9 @@ Authentication type that is actually used when the authentication is successful.
 
 **Type:** [UserAuthType](arkts-userauthentication-userauth-userauthtype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,14 +42,15 @@ Authentication type that is actually used when the authentication is successful.
 enrolledState?: EnrolledState
 ```
 
-Enrolled credential status returned when the authentication is successful. It contains the digest and quantity of the current authentication types. The application can compare this value with the previously saved value to determine whether the user credential has changed. If authentication result reuse is enabled and the credential (face or fingerprint) used for the previous authentication has been deleted, the values of **credentialCount** and  
-**credentialDigest** in the returned **enrolledState** are both **0**.
+Enrolled credential status returned when the authentication is successful. It contains the digest and quantity of the current authentication types. The application can compare this value with the previously saved value to determine whether the user credential has changed. If authentication result reuse is enabled and the credential ( face or fingerprint) used for the previous authentication has been deleted, the values of **credentialCount** and **credentialDigest** in the returned **enrolledState** are both **0**.
 
 **Type:** [EnrolledState](arkts-userauthentication-userauth-enrolledstate-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserAuthResult-enrolledState?: EnrolledState--><!--Device-UserAuthResult-enrolledState?: EnrolledState-End-->
 
@@ -57,20 +62,13 @@ Enrolled credential status returned when the authentication is successful. It co
 result: number
 ```
 
-User authentication result. If the operation is successful, **SUCCESS(12500000)** is returned. If the operation fails, the corresponding error code is returned. The error codes are as follows:
-
-- **FAIL(12500001)**: The authentication fails.  
-- **CANCELED(12500003)**: The authentication is canceled.  
-- **TIMEOUT(12500004)**: The authentication times out.  
-- **LOCKED(12500009)**: The authenticator is locked.  
-- **NOT_ENROLLED(12500010)**: The credential is not registered.  
-- **PIN_EXPIRED(12500013)**: The screen lock PIN has expired.
-
-For details about the complete error code list, see [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode).
+User authentication result. If the operation is successful, **SUCCESS(12500000)** is returned. If the operation fails, the corresponding error code is returned. The error codes are as follows: - **FAIL(12500001)**: The authentication fails. - **CANCELED(12500003)**: The authentication is canceled. - **TIMEOUT(12500004)**: The authentication times out. - **LOCKED(12500009)**: The authenticator is locked. - **NOT_ENROLLED(12500010)**: The credential is not registered. - **PIN_EXPIRED(12500013)**: The screen lock PIN has expired. For details about the complete error code list, see [UserAuthResultCode](arkts-userauthentication-userauth-userauthresultcode-e.md#UserAuthResultCode).
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -88,7 +86,9 @@ Token information returned when the authentication is successful. The token cont
 
 **Type:** Uint8Array
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,18 +1,20 @@
 # OverlayModuleInfo
 
 ```TypeScript
-export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo
+export type OverlayModuleInfo = _OverlayModuleInfo
 ```
 
-Defines the information about a module with the overlay feature.
+Obtains configuration information about a overlay hap module.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo--><!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo--><!--Device-overlay-export type OverlayModuleInfo = _OverlayModuleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Overlay
 
-**Property type:** _OverlayModuleInfo.OverlayModuleInfo
+**Property type:** _OverlayModuleInfo
 

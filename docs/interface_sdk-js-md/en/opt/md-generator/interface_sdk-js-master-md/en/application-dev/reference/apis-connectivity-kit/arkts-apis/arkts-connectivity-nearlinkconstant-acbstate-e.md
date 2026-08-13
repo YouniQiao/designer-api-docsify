@@ -4,6 +4,8 @@ ACB connection status enumeration.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-nearlinkConstant-export enum AcbState--><!--Device-nearlinkConstant-export enum AcbState-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ DISCONNECTED = 0
 ACB disconnected.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ ACB connected.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcbState-CONNECTED = 1--><!--Device-AcbState-CONNECTED = 1-End-->
@@ -49,6 +55,8 @@ ENCRYPTED = 2
 ACB encrypted.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

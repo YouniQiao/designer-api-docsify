@@ -2,7 +2,9 @@
 
 Obtains GSM cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface GsmCellInformation--><!--Device-radio-export interface GsmCellInformation-End-->
 
@@ -26,7 +28,9 @@ Indicates the ARFCN(absolute radio frequency channel int).
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-arfcn: int--><!--Device-GsmCellInformation-arfcn: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the base station identification code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-bsic: int--><!--Device-GsmCellInformation-bsic: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the cell identification.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-cellId: int--><!--Device-GsmCellInformation-cellId: int-End-->
 
@@ -80,7 +88,9 @@ Indicates the location area code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-lac: int--><!--Device-GsmCellInformation-lac: int-End-->
 
@@ -98,7 +108,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-mcc: string--><!--Device-GsmCellInformation-mcc: string-End-->
 
@@ -116,7 +128,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-mnc: string--><!--Device-GsmCellInformation-mnc: string-End-->
 

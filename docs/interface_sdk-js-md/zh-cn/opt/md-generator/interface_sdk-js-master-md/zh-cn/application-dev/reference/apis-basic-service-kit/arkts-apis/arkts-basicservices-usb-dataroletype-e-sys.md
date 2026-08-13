@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DataRoleType)
+**替代接口：** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DataRoleType（系统接口）)
 
 <!--Device-usb-export enum DataRoleType--><!--Device-usb-export enum DataRoleType-End-->
 

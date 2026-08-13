@@ -2,7 +2,9 @@
 
 Describes the rectangular area of the window.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface Rect--><!--Device-window-interface Rect-End-->
 
@@ -24,7 +26,9 @@ Height of the rectangle, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ Left boundary of the rectangle, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,7 +66,9 @@ Top boundary of the rectangle, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,7 +86,9 @@ Width of the rectangle, in px. The value must be an integer.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

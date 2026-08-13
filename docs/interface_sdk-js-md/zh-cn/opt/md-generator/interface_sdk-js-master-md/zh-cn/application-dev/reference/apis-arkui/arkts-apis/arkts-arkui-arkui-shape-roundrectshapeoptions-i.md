@@ -1,14 +1,14 @@
 # RoundRectShapeOptions
 
-RectShape 带有圆角半径的构造函数参数。
-
-继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)。
+RectShape 带有圆角半径的构造函数参数。 继承自[ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)。
 
 **继承/实现关系：** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)
 
 **起始版本：** 12
 
-<!--Device-unnamed-interface RoundRectShapeOptions extends ShapeSize--><!--Device-unnamed-interface RoundRectShapeOptions extends ShapeSize-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-interface RoundRectShapeOptions--><!--Device-unnamed-interface RoundRectShapeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,19 +18,13 @@ RectShape 带有圆角半径的构造函数参数。
 radiusHeight?: number | string
 ```
 
-矩形形状圆角半径的高度。
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。
-
-单位：vp
-
-默认值：0vp
-
-取值为异常值时按照0vp处理。
+矩形形状圆角半径的高度。 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 单位：vp 默认值：0vp 取值为异常值时按照0vp处理。
 
 **类型：** number \| string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,19 +42,13 @@ radiusHeight?: number | string
 radiusWidth?: number | string
 ```
 
-矩形形状圆角半径的宽度。
-
-类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。
-
-单位：vp
-
-默认值：0vp
-
-取值为异常值时按照0vp处理。
+矩形形状圆角半径的宽度。 类型为number时取值范围是[0, +∞)，string时是[Length](arkts-arkui-length-t.md#Length)。 单位：vp 默认值：0vp 取值为异常值时按照0vp处理。
 
 **类型：** number \| string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

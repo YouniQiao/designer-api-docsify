@@ -1,0 +1,18 @@
+# EclipseStyleOptions
+
+Defines the Eclipse style Options.
+
+**Inheritance/Implementation:** EclipseStyleOptions extends [CommonProgressStyleOptions](arkts-na-progress-commonprogressstyleoptions-i.md#CommonProgressStyleOptions)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export declare interface EclipseStyleOptions--><!--Device-unnamed-export declare interface EclipseStyleOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

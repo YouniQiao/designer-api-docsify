@@ -16,6 +16,8 @@ Creates a float view controller. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-floatView-function create(config: FloatViewConfiguration): Promise<FloatViewController>--><!--Device-floatView-function create(config: FloatViewConfiguration): Promise<FloatViewController>-End-->
@@ -38,9 +40,9 @@ Creates a float view controller. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 

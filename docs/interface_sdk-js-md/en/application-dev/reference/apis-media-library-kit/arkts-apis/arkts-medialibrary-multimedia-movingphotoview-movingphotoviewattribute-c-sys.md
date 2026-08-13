@@ -2,13 +2,15 @@
 
 Defines the moving photo view attribute functions.
 
-**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod<MovingPhotoViewAttribute>](CommonMethod<MovingPhotoViewAttribute>)
+**Inheritance/Implementation:** MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>--><!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class MovingPhotoViewAttribute--><!--Device-unnamed-declare class MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -29,6 +31,8 @@ Sets playback strategy.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -54,7 +58,7 @@ Sets playback strategy.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 
 ## Examples
 

@@ -14,7 +14,9 @@ function findWindow(name: string): Window
 
 Finds a window based on the name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,8 +40,8 @@ Finds a window based on the name.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 
 ## Examples
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-audio-enum NoiseReductionMode--><!--Device-audio-enum NoiseReductionMode-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -17,6 +19,8 @@ FIDELITY = 0
 保真模式，无噪音消除。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ PURE_VOCALS = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-NoiseReductionMode-PURE_VOCALS = 1--><!--Device-NoiseReductionMode-PURE_VOCALS = 1-End-->
@@ -49,6 +55,8 @@ STANDARD = 2
 标准模式，弱降噪。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

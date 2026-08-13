@@ -4,6 +4,8 @@ Enumerates whether to enable overscroll mode.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum OverScrollMode--><!--Device-unnamed-declare enum OverScrollMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NEVER = 0
 The overscroll mode is disabled.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ ALWAYS = 1
 The overscroll mode is enabled.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

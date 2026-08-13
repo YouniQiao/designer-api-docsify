@@ -2,7 +2,9 @@
 
 自动填充更新信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface UpdateRequest--><!--Device-unnamed-export interface UpdateRequest-End-->
 
@@ -18,9 +20,11 @@ viewData: ViewData
 
 页面数据。
 
-**类型：** [ViewData](arkts-ability-viewdata-i.md)
+**类型：** [ViewData](arkts-ability-viewdata-i-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Describes the state type of transfer task.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cloudSyncManager-enum TransferState--><!--Device-cloudSyncManager-enum TransferState-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -19,6 +21,8 @@ RUNNING = 0
 Indicates that the transfer task is running.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates that the transfer task has been finished.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferState-COMPLETED = 1--><!--Device-TransferState-COMPLETED = 1-End-->
@@ -55,6 +61,8 @@ STOPPED = 2
 Indicates that the transfer task has been stopped.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

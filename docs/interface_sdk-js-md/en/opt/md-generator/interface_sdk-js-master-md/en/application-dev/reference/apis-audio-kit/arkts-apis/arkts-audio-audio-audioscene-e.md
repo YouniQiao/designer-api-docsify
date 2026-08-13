@@ -2,7 +2,9 @@
 
 Enumerates the audio scenes.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioScene--><!--Device-audio-enum AudioScene-End-->
 
@@ -16,7 +18,9 @@ AUDIO_SCENE_DEFAULT = 0
 
 Default audio scene.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioScene-AUDIO_SCENE_DEFAULT = 0--><!--Device-AudioScene-AUDIO_SCENE_DEFAULT = 0-End-->
 
@@ -30,7 +34,9 @@ AUDIO_SCENE_RINGING = 1
 
 Ringing audio scene.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioScene-AUDIO_SCENE_RINGING = 1--><!--Device-AudioScene-AUDIO_SCENE_RINGING = 1-End-->
 
@@ -44,7 +50,9 @@ AUDIO_SCENE_PHONE_CALL = 2
 
 Phone call audio scene.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioScene-AUDIO_SCENE_PHONE_CALL = 2--><!--Device-AudioScene-AUDIO_SCENE_PHONE_CALL = 2-End-->
 
@@ -58,7 +66,9 @@ AUDIO_SCENE_VOICE_CHAT = 3
 
 Voice chat audio scene.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioScene-AUDIO_SCENE_VOICE_CHAT = 3--><!--Device-AudioScene-AUDIO_SCENE_VOICE_CHAT = 3-End-->
 

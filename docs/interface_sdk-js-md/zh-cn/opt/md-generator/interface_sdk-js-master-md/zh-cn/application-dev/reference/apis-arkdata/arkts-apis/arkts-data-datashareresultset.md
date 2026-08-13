@@ -1,8 +1,5 @@
 # @ohos.data.DataShareResultSet
 
-**DataShareResultSet** 可提供访问由查询数据库生成的结果集的相关方法，根据提供的行数，查询相应的值，也可查询指定数据类型的值。
-
-
 ## 汇总
 
 <!--Del-->

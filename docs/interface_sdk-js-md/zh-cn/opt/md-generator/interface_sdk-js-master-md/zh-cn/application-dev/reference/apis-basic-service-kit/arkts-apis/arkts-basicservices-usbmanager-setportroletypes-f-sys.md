@@ -8,7 +8,9 @@ function setPortRoleTypes(portId: number, powerRole: PowerRoleType, dataRole: Da
 
 设置指定的端口支持的角色模式，包含充电角色、数据传输角色。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_USB_CONFIG
 
@@ -36,8 +38,8 @@ function setPortRoleTypes(portId: number, powerRole: PowerRoleType, dataRole: Da
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [14400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400003-不支持的端口角色切换) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400003](../../apis-basic-services-kit/errorcode-usb.md#14400003-不支持的端口角色切换) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

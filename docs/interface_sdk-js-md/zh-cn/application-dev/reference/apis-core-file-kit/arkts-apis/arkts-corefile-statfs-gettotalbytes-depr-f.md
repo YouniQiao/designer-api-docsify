@@ -14,7 +14,7 @@ function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
+**替代接口：** getTotalBytes
 
 <!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void--><!--Device-Statfs-function getTotalBytes(path: string, callback: AsyncCallback<number>): void-End-->
 
@@ -25,7 +25,7 @@ function getTotalBytes(path: string, callback: AsyncCallback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 需要查询的文件系统的文件路径 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步获取总字节数之后的回调 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 异步获取总字节数之后的回调 |
 
 ## 示例
 
@@ -58,7 +58,7 @@ function getTotalBytes(path: string): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getTotalBytes](@ohos.file.statvfs:statfs.getTotalBytes)
+**替代接口：** getTotalBytes
 
 <!--Device-Statfs-function getTotalBytes(path: string): Promise<number>--><!--Device-Statfs-function getTotalBytes(path: string): Promise<number>-End-->
 

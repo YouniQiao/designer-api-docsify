@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface CanvasPattern--><!--Device-unnamed-export interface CanvasPattern-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ setTransform(transform?: Matrix2D): void
 使用Matrix2D对象作为参数，对当前CanvasPattern进行矩阵变换。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

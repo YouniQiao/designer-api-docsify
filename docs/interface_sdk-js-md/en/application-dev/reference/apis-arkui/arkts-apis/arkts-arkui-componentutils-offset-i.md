@@ -6,6 +6,8 @@ Defines the offset property.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-export interface Offset--><!--Device-componentUtils-export interface Offset-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Coordinate x of the Position.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Offset-x: double--><!--Device-Offset-x: double-End-->
@@ -49,6 +53,8 @@ Coordinate y of the Position.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

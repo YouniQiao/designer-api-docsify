@@ -4,7 +4,9 @@
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface GridLayoutAlgorithmOptions--><!--Device-unnamed-interface GridLayoutAlgorithmOptions-End-->
 
@@ -16,15 +18,21 @@
 columnsGap?: LengthMetrics
 ```
 
-列与列之间的间距。非法值：按默认值处理。
+列与列之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GridLayoutAlgorithmOptions-columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithmOptions-columnsGap?: LengthMetrics-End-->
 
@@ -36,15 +44,21 @@ columnsGap?: LengthMetrics
 columnsTemplate?: string | ItemFillPolicy
 ```
 
-设置当前网格布局的列数。非法值：按默认值处理。
+设置当前网格布局的列数。 默认值：'1fr' 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
+**类型：** string \| [ItemFillPolicy](../../apis-na/arkts-apis/arkts-na-units-itemfillpolicy-i.md)
 
 **默认值：** '1fr'
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GridLayoutAlgorithmOptions-columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithmOptions-columnsTemplate?: string | ItemFillPolicy-End-->
 
@@ -56,15 +70,21 @@ columnsTemplate?: string | ItemFillPolicy
 rowsGap?: LengthMetrics
 ```
 
-行与行之间的间距。非法值：按默认值处理。
+行与行之间的间距。 默认值：LengthMetrics.vp(0) 非法值：按默认值处理。 装饰器类型：@Trace
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **默认值：** LengthMetrics.vp(0)
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GridLayoutAlgorithmOptions-rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithmOptions-rowsGap?: LengthMetrics-End-->
 

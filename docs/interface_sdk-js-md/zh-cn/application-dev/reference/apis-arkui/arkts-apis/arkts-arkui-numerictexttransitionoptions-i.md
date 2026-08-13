@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NumericTextTransitionOptions--><!--Device-unnamed-declare interface NumericTextTransitionOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,19 +18,15 @@
 enableBlur?: boolean
 ```
 
-是否开启翻牌模糊效果。
-
-默认值：false
-
-true：开启翻牌模糊效果。
-
-false：不开启翻牌模糊效果。
+是否开启翻牌模糊效果。 默认值：false true：开启翻牌模糊效果。 false：不开启翻牌模糊效果。
 
 **类型：** boolean
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,15 +42,15 @@ false：不开启翻牌模糊效果。
 flipDirection?: FlipDirection
 ```
 
-翻牌方向。
-
-默认值：FlipDirection.DOWN
+翻牌方向。 默认值：FlipDirection.DOWN
 
 **类型：** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

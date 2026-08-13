@@ -12,11 +12,13 @@ import { networkSecurity } from '@kit.NetworkKit';
 export function isCleartextPermittedByHostName(hostName: string): boolean
 ```
 
-Checks whether the Cleartext traffic for a specified hostname is permitted.To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
+Checks whether the Cleartext traffic for a specified hostname is permitted. To invoke this method, you must have the {@code ohos.permission.INTERNET} permission.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -40,7 +42,7 @@ Checks whether the Cleartext traffic for a specified hostname is permitted.To in
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

@@ -1,8 +1,10 @@
-# @ohos.telephony.sms(SMS)
+# @ohos.telephony.sms
 
 The **sms** module provides basic SMS management functions. With the APIs provided by this module, you can create and send SMS messages, and obtain the ID of the default SIM card used to send and receive SMS messages, and check whether the current device can send and receive SMS messages.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace sms--><!--Device-unnamed-declare namespace sms-End-->
 
@@ -20,56 +22,56 @@ import { sms } from '@kit.TelephonyKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage) |
-| [createMessage](arkts-telephony-sms-createmessage-f.md#createmessage-1) |
-| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid) |
-| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid-1) |
-| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid) |
-| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid-1) |
-| [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md#hassmscapability) |
-| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendmessage) |
-| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage) |
-| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage-1) |
+| [createMessage](arkts-telephony-sms-createmessage-f.md#createMessage) |
+| [createMessage](arkts-telephony-sms-createmessage-f.md#createMessage) |
+| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getDefaultSmsSimId) |
+| [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getDefaultSmsSimId) |
+| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getDefaultSmsSlotId) |
+| [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getDefaultSmsSlotId) |
+| [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md#hasSmsCapability) |
+| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendMessage) |
+| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendShortMessage) |
+| [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendShortMessage) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addsimmessage) |
-| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addsimmessage-1) |
-| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodemms) |
-| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodemms-1) |
-| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delsimmessage) |
-| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delsimmessage-1) |
-| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadmms) |
-| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadmms-1) |
-| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodemms) |
-| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodemms-1) |
-| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getallsimmessages) |
-| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getallsimmessages-1) |
-| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getimsshortmessageformat) |
-| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getimsshortmessageformat-1) |
-| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo) |
-| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo-1) |
-| [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md#getsmsshortcodetype) |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr) |
-| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr-1) |
-| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported) |
-| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported-1) |
-| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms) |
-| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms-1) |
-| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig) |
-| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig-1) |
-| [setCBConfigList](arkts-telephony-sms-setcbconfiglist-f-sys.md#setcbconfiglist) |
-| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid) |
-| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid-1) |
-| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr) |
-| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr-1) |
-| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage) |
-| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitmessage-1) |
-| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage) |
-| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updatesimmessage-1) |
+| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addSimMessage-(System-API)) |
+| [addSimMessage](arkts-telephony-sms-addsimmessage-f-sys.md#addSimMessage-(System-API)) |
+| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodeMms-(System-API)) |
+| [decodeMms](arkts-telephony-sms-decodemms-f-sys.md#decodeMms-(System-API)) |
+| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delSimMessage-(System-API)) |
+| [delSimMessage](arkts-telephony-sms-delsimmessage-f-sys.md#delSimMessage-(System-API)) |
+| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadMms-(System-API)) |
+| [downloadMms](arkts-telephony-sms-downloadmms-f-sys.md#downloadMms-(System-API)) |
+| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodeMms-(System-API)) |
+| [encodeMms](arkts-telephony-sms-encodemms-f-sys.md#encodeMms-(System-API)) |
+| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getAllSimMessages-(System-API)) |
+| [getAllSimMessages](arkts-telephony-sms-getallsimmessages-f-sys.md#getAllSimMessages-(System-API)) |
+| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getImsShortMessageFormat-(System-API)) |
+| [getImsShortMessageFormat](arkts-telephony-sms-getimsshortmessageformat-f-sys.md#getImsShortMessageFormat-(System-API)) |
+| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getSmsSegmentsInfo-(System-API)) |
+| [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getSmsSegmentsInfo-(System-API)) |
+| [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md#getSmsShortCodeType-(System-API)) |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getSmscAddr-(System-API)) |
+| [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getSmscAddr-(System-API)) |
+| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isImsSmsSupported-(System-API)) |
+| [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isImsSmsSupported-(System-API)) |
+| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendMms-(System-API)) |
+| [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendMms-(System-API)) |
+| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setCBConfig-(System-API)) |
+| [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setCBConfig-(System-API)) |
+| [setCBConfigList](arkts-telephony-sms-setcbconfiglist-f-sys.md#setCBConfigList-(System-API)) |
+| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setDefaultSmsSlotId-(System-API)) |
+| [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setDefaultSmsSlotId-(System-API)) |
+| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setSmscAddr-(System-API)) |
+| [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setSmscAddr-(System-API)) |
+| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitMessage-(System-API)) |
+| [splitMessage](arkts-telephony-sms-splitmessage-f-sys.md#splitMessage-(System-API)) |
+| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updateSimMessage-(System-API)) |
+| [updateSimMessage](arkts-telephony-sms-updatesimmessage-f-sys.md#updateSimMessage-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

@@ -2,7 +2,9 @@
 
 过滤条件。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
@@ -14,11 +16,13 @@
 bundle?: string
 ```
 
-Specify the package name of an application.Only for advanced search, common search will be fixed to the caller.A "*" means any bundle.
+Specify the package name of an application. Only for advanced search, common search will be fixed to the caller. A "*" means any bundle.
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Filter-bundle?: string--><!--Device-Filter-bundle?: string-End-->
 

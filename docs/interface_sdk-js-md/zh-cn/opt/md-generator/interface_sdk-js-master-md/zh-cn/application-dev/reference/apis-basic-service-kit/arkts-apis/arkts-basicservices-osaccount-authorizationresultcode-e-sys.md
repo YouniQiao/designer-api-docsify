@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-osAccount-enum AuthorizationResultCode--><!--Device-osAccount-enum AuthorizationResultCode-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -19,6 +21,8 @@ AUTHORIZATION_SUCCESS = 0
 表示授权成功。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ AUTHORIZATION_CANCELED = 12300301
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AuthorizationResultCode-AUTHORIZATION_CANCELED = 12300301--><!--Device-AuthorizationResultCode-AUTHORIZATION_CANCELED = 12300301-End-->
@@ -52,13 +58,11 @@ AUTHORIZATION_CANCELED = 12300301
 AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302
 ```
 
-表示服务因不允许用户交互而拒绝授权。
-
-可能原因：
-
-1. 调用者位于后台；2. isInteractionAllowed选项的值为false；3. 指定的交互上下文无效。
+表示服务因不允许用户交互而拒绝授权。 可能原因： 1. 调用者位于后台； 2. isInteractionAllowed选项的值为false； 3. 指定的交互上下文无效。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,6 +82,8 @@ AUTHORIZATION_DENIED = 12300303
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AuthorizationResultCode-AUTHORIZATION_DENIED = 12300303--><!--Device-AuthorizationResultCode-AUTHORIZATION_DENIED = 12300303-End-->
@@ -92,11 +98,11 @@ AUTHORIZATION_DENIED = 12300303
 AUTHORIZATION_SERVICE_BUSY = 12300304
 ```
 
-表示服务忙碌。
-
-可能原因：正在处理其他授权。
+表示服务忙碌。 可能原因：正在处理其他授权。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

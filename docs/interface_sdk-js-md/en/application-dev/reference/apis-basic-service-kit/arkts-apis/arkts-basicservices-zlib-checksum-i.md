@@ -2,9 +2,11 @@
 
 Checksum object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface Checksum--><!--Device-zlib-interface Checksum-End-->
 
@@ -18,23 +20,19 @@ import { zlib } from '@kit.BasicServicesKit';
 
 ## adler32
 
-ArkTS-Dyn:
-```TypeScript
-adler32(adler: number, buf: ArrayBuffer): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 adler32(adler: long, buf: ArrayBuffer): Promise<long>
 ```
 
 Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-adler32(adler: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-adler32(adler: long, buf: ArrayBuffer): Promise<long>-End-->
 
@@ -44,20 +42,20 @@ Calculates the Adler-32 checksum. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adler | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Initial value of the Adler-32 checksum. |
+| adler | long | Yes | Initial value of the Adler-32 checksum. |
 | buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the calculated Adler-32 checksum. |
+| Promise&lt;long&gt; | Promise used to return the calculated Adler-32 checksum. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -81,23 +79,19 @@ checksum.adler32(0, arrayBufferIn).then(data => {
 
 ## adler32Combine
 
-ArkTS-Dyn:
-```TypeScript
-adler32Combine(adler1: number, adler2: number, len2: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>
 ```
 
 Combines two Adler-32 checksums. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>--><!--Device-Checksum-adler32Combine(adler1: long, adler2: long, len2: long): Promise<long>-End-->
 
@@ -107,21 +101,21 @@ Combines two Adler-32 checksums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adler1 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The first Adler-32 checksum to be combined. |
-| adler2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The second Adler-32 checksum to be combined. |
-| len2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Length of the data block of the second Adler-32 checksum. |
+| adler1 | long | Yes | The first Adler-32 checksum to be combined. |
+| adler2 | long | Yes | The second Adler-32 checksum to be combined. |
+| len2 | long | Yes | Length of the data block of the second Adler-32 checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the combined Adler-32 checksum. |
+| Promise&lt;long&gt; | Promise used to return the combined Adler-32 checksum. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -156,23 +150,19 @@ async function demo() {
 
 ## crc32
 
-ArkTS-Dyn:
-```TypeScript
-crc32(crc: number, buf: ArrayBuffer): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 crc32(crc: long, buf: ArrayBuffer): Promise<long>
 ```
 
 Updates a CRC-32 checksum. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-crc32(crc: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-crc32(crc: long, buf: ArrayBuffer): Promise<long>-End-->
 
@@ -182,20 +172,20 @@ Updates a CRC-32 checksum. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| crc | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Initial value of the CRC-32 checksum. |
+| crc | long | Yes | Initial value of the CRC-32 checksum. |
 | buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the updated CRC-32 checksum. |
+| Promise&lt;long&gt; | Promise used to return the updated CRC-32 checksum. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -221,23 +211,19 @@ checksum.crc32(0, arrayBufferIn).then((data) => {
 
 ## crc32Combine
 
-ArkTS-Dyn:
-```TypeScript
-crc32Combine(crc1: number, crc2: number, len2: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>
 ```
 
 Combines two CRC-32 checksums. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>--><!--Device-Checksum-crc32Combine(crc1: long, crc2: long, len2: long): Promise<long>-End-->
 
@@ -247,21 +233,21 @@ Combines two CRC-32 checksums. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| crc1 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The first CRC-32 checksum to be combined. |
-| crc2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | The second CRC-32 checksum to be combined. |
-| len2 | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicates the length of the second data block checked by CRC-32 |
+| crc1 | long | Yes | The first CRC-32 checksum to be combined. |
+| crc2 | long | Yes | The second CRC-32 checksum to be combined. |
+| len2 | long | Yes | Indicates the length of the second data block checked by CRC-32 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the combined CRC-32 checksum. |
+| Promise&lt;long&gt; | Promise used to return the combined CRC-32 checksum. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -296,23 +282,19 @@ async function demo() {
 
 ## crc64
 
-ArkTS-Dyn:
-```TypeScript
-crc64(crc: number, buf: ArrayBuffer): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 crc64(crc: long, buf: ArrayBuffer): Promise<long>
 ```
 
 Updates a CRC-64 checksum. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-crc64(crc: long, buf: ArrayBuffer): Promise<long>--><!--Device-Checksum-crc64(crc: long, buf: ArrayBuffer): Promise<long>-End-->
 
@@ -322,20 +304,20 @@ Updates a CRC-64 checksum. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| crc | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Initial value of the CRC-64 checksum. |
+| crc | long | Yes | Initial value of the CRC-64 checksum. |
 | buf | ArrayBuffer | Yes | Data buffer for calculating the checksum. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the updated CRC-64 checksum. |
+| Promise&lt;long&gt; | Promise used to return the updated CRC-64 checksum. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -361,23 +343,19 @@ checksum.crc64(0, arrayBufferIn).then((data) => {
 
 ## getCrc64Table
 
-ArkTS-Dyn:
-```TypeScript
-getCrc64Table(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCrc64Table(): Promise<Array<long>>
 ```
 
 Obtains this CRC-64 checksum table. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-getCrc64Table(): Promise<Array<long>>--><!--Device-Checksum-getCrc64Table(): Promise<Array<long>>-End-->
 
@@ -387,7 +365,7 @@ Obtains this CRC-64 checksum table. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the CRC-64 checksum table. |
+| Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the CRC-64 checksum table. |
 
 ## Examples
 
@@ -405,23 +383,19 @@ checksum.getCrc64Table().then((data) => {
 
 ## getCrcTable
 
-ArkTS-Dyn:
-```TypeScript
-getCrcTable(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCrcTable(): Promise<Array<long>>
 ```
 
 Obtains this CRC-32 checksum table. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Checksum-getCrcTable(): Promise<Array<long>>--><!--Device-Checksum-getCrcTable(): Promise<Array<long>>-End-->
 
@@ -431,7 +405,7 @@ Obtains this CRC-32 checksum table. This API uses a promise to return the result
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the CRC-32 checksum table. |
+| Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the CRC-32 checksum table. |
 
 ## Examples
 

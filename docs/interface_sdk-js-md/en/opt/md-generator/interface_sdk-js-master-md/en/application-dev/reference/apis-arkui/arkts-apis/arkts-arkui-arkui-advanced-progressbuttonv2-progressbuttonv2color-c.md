@@ -4,7 +4,7 @@ Declare ProgressButtonV2 Color.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ProgressButtonV2Color--><!--Device-unnamed-export declare class ProgressButtonV2Color-End-->
 
@@ -26,6 +26,8 @@ The constructor of ProgressButtonV2
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -43,7 +45,7 @@ The constructor of ProgressButtonV2
 ## backgroundColor
 
 ```TypeScript
-backgroundColor?: ColorMetrics
+@Trace backgroundColor?: ColorMetrics
 ```
 
 Set background color of the ProgressButtonV2.
@@ -52,18 +54,20 @@ Set background color of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-backgroundColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-backgroundColor?: ColorMetrics-End-->
+<!--Device-ProgressButtonV2Color-@Trace backgroundColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace backgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderColor
 
 ```TypeScript
-borderColor?: ColorMetrics
+@Trace borderColor?: ColorMetrics
 ```
 
 Set border color of the ProgressButtonV2.
@@ -72,18 +76,20 @@ Set border color of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-borderColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-borderColor?: ColorMetrics-End-->
+<!--Device-ProgressButtonV2Color-@Trace borderColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace borderColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressColor
 
 ```TypeScript
-progressColor?: ColorMetrics
+@Trace progressColor?: ColorMetrics
 ```
 
 Set progress color of the ProgressButtonV2.
@@ -92,18 +98,20 @@ Set progress color of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-progressColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-progressColor?: ColorMetrics-End-->
+<!--Device-ProgressButtonV2Color-@Trace progressColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace progressColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## textColor
 
 ```TypeScript
-textColor?: ColorMetrics
+@Trace textColor?: ColorMetrics
 ```
 
 Set text color of the ProgressButtonV2.
@@ -112,10 +120,12 @@ Set text color of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2Color-textColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-textColor?: ColorMetrics-End-->
+<!--Device-ProgressButtonV2Color-@Trace textColor?: ColorMetrics--><!--Device-ProgressButtonV2Color-@Trace textColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

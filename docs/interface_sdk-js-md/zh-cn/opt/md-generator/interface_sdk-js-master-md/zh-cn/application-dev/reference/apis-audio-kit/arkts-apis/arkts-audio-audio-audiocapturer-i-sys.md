@@ -1,14 +1,10 @@
 # AudioCapturer
 
-提供音频采集的相关接口。
+提供音频采集的相关接口。 在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer)获取AudioCapturer实例。 > **说明：** > > - 本Interface首批接口从API version 8开始支持。
 
-在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer)获取AudioCapturer实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 8开始支持。
-
-**起始版本：** 8
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
 
@@ -23,6 +19,8 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 取消订阅micIn音频数据回调。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,9 +40,9 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## onReadMicInData
 
@@ -52,9 +50,11 @@ offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void
 onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 ```
 
-订阅micIn音频数据回调。此回调的优先级高于“readData”回调。如果此回调和'readData'回调都被订阅，则仅此回调将被调用。有关更多详细信息，请参见[onReadData](#onReadData)。当有音频缓冲可用于读取更多数据时，触发该事件。
+订阅micIn音频数据回调。此回调的优先级高于“readData”回调。 如果此回调和'readData'回调都被订阅，则仅此回调将被调用。 有关更多详细信息，请参见onReadData。 当有音频缓冲可用于读取更多数据时，触发该事件。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,8 +74,8 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setInputDeviceToAccessory
 
@@ -83,9 +83,11 @@ onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 setInputDeviceToAccessory(): void
 ```
 
-Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other capturers' devices will not be affected by this method.This method can only be used before the capture stream starts. Besides,if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
+Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY. Other capturers' devices will not be affected by this method. This method can only be used before the capture stream starts. Besides, if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-setInputDeviceToAccessory(): void--><!--Device-AudioCapturer-setInputDeviceToAccessory(): void-End-->
 
@@ -97,5 +99,5 @@ Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other captur
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

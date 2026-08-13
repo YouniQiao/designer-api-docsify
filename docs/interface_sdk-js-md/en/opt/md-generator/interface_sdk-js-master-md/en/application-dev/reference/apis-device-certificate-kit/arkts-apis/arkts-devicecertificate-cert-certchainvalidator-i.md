@@ -2,7 +2,9 @@
 
 Provides APIs for certificate chain validator operations.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface CertChainValidator--><!--Device-cert-interface CertChainValidator-End-->
 
@@ -20,13 +22,11 @@ import { cert } from '@kit.DeviceCertificateKit';
 validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 ```
 
-Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result.
+Validates an X.509 certificate chain. This API uses an asynchronous callback to return the result. &lt;br&gt;Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkValidityWithDate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications) .
 
-&lt;br&gt;Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the  
-[checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkValidityWithDate) API of the **X509Cert** class. For details about certificate specifications, see  
-[Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,16 +45,16 @@ Validates an X.509 certificate chain. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19030002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030002-certificate-signature-verification-failed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
-| [19030006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
-| [19030007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
-| [19030004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-certificate-expired) |
-| [19030005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
 
 ## Examples
 
@@ -155,13 +155,11 @@ try {
 validate(certChain: CertChainData): Promise<void>
 ```
 
-Validates an X.509 certificate chain. This API uses a promise to return the result.
+Validates an X.509 certificate chain. This API uses a promise to return the result. &lt;br&gt;Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the [checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkValidityWithDate) API of the **X509Cert** class. For details about certificate specifications, see [Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications) .
 
-&lt;br&gt;Because the system time on the device is untrusted, the certificate chain validator does not verify the certificate validity period. To check the validity period of a certificate, use the  
-[checkValidityWithDate()](arkts-devicecertificate-cert-x509cert-i.md#checkValidityWithDate) API of the **X509Cert** class. For details about certificate specifications, see  
-[Certificate Specifications](../../../security/DeviceCertificateKit/certificate-framework-overview.md#certificate-specifications).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -185,16 +183,16 @@ Validates an X.509 certificate chain. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19030002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030002-certificate-signature-verification-failed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19030003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
-| [19030006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
-| [19030007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
-| [19030004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-certificate-expired) |
-| [19030005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
 
 ## Examples
 
@@ -293,11 +291,11 @@ try {
 validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>
 ```
 
-Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result.
-
-&lt;br&gt;The certificate chain construction process complies with the following rules:1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source.The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true.2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate.3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source.4. Construction completion conditions:If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found.If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete.5. Follow-up verification: After the certificate chain is constructed, perform other verification operations,such as certificate signature verification and certificate revocation check.
+Validates a certificate by building and verifying its certificate chain. This API uses a promise to return the result. &lt;br&gt;The certificate chain construction process complies with the following rules: 1. Trusted anchor source: The trusted certificate list (trustedCerts) is always used as the trust anchor source. The preconfigured certificate is used as the trust anchor source only when trustSystemCa is set to true. 2. Issuer search sequence: The system searches for the issuer from the trust anchor source first. If the issuer cannot be found, the system searches for the issuer in the untrusted certificate list (untrustedCerts). The intermediate CA certificate downloaded online is an untrusted certificate. 3. Trust anchor locking: Once the issuer is found in the trust anchor source, the subsequent lookup process does not roll back to the untrusted certificate, that is, the subsequent certificates must come from the trust anchor source. 4. Construction completion conditions: If partialChain is false (default value), the build is complete only when the root certificate (self-signed certificate) is found. If partialChain is true, the first time the issuer is found in the trust anchor source, the build is complete. 5. Follow-up verification: After the certificate chain is constructed, perform other verification operations, such as certificate signature verification and certificate revocation check.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,32 +322,32 @@ Validates a certificate by building and verifying its certificate chain. This AP
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030002-certificate-signature-verification-failed) |
-| [19030003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
-| [19030006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
-| [19030007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
-| [19030004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-certificate-expired) |
-| [19030005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
-| [19030010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030010-certificate-revoked) |
-| [19030011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030011-unsupported-key-extensions) |
-| [19030009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030009-untrusted-certificate) |
-| [19030014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030014-key-usage-mismatch) |
-| [19030015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030015-crl-not-found) |
-| [19030012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030012-host-name-mismatch) |
-| [19030013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030013-email-address-mismatch) |
-| [19030018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030018-crl-signature-verification-failure) |
-| [19030019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030019-crl-issuer-not-found) |
-| [19030016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030016-invalid-crl) |
-| [19030017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030017-crl-expired) |
-| [19030022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030022-ocsp-signature-verification-failure) |
-| [19030023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030023-unknown-ocsp-certificate-status) |
-| [19030020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030020-ocsp-response-not-found) |
-| [19030021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030021-invalid-ocsp-response) |
-| [19030024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030024-network-connection-timeout) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030002](../errorcode-cert.md#19030002-certificate-signature-verification-failed) |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
+| [19030006](../errorcode-cert.md#19030006-key-cannot-be-used-for-signing-a-certificate) |
+| [19030007](../errorcode-cert.md#19030007-key-cannot-be-used-for-digital-signature) |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) |
+| [19030010](../errorcode-cert.md#19030010-certificate-revoked) |
+| [19030011](../errorcode-cert.md#19030011-unsupported-key-extensions) |
+| [19030009](../errorcode-cert.md#19030009-untrusted-certificate) |
+| [19030014](../errorcode-cert.md#19030014-key-usage-mismatch) |
+| [19030015](../errorcode-cert.md#19030015-crl-not-found) |
+| [19030012](../errorcode-cert.md#19030012-host-name-mismatch) |
+| [19030013](../errorcode-cert.md#19030013-email-address-mismatch) |
+| [19030018](../errorcode-cert.md#19030018-crl-signature-verification-failure) |
+| [19030019](../errorcode-cert.md#19030019-crl-issuer-not-found) |
+| [19030016](../errorcode-cert.md#19030016-invalid-crl) |
+| [19030017](../errorcode-cert.md#19030017-crl-expired) |
+| [19030022](../errorcode-cert.md#19030022-ocsp-signature-verification-failure) |
+| [19030023](../errorcode-cert.md#19030023-unknown-ocsp-certificate-status) |
+| [19030020](../errorcode-cert.md#19030020-ocsp-response-not-found) |
+| [19030021](../errorcode-cert.md#19030021-invalid-ocsp-response) |
+| [19030024](../errorcode-cert.md#19030024-network-connection-timeout) |
 
 ## Examples
 
@@ -477,7 +475,9 @@ Algorithm used by the X.509 certificate chain validator.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

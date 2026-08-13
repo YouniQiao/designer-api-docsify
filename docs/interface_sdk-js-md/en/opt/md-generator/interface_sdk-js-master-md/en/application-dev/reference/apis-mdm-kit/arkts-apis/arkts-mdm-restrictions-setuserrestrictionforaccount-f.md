@@ -18,7 +18,7 @@ Sets restrictions on specified user behaviors.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setUserRestrictionForAccount](restrictions.setUserRestrictionForAccount(admin:)
+**Substitutes:** [setUserRestrictionForAccount](#setUserRestrictionForAccount)(admin: Want, settingsItem: SettingsForAccount, accountId: int, restricted: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -41,10 +41,10 @@ Sets restrictions on specified user behaviors.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 
@@ -79,6 +79,8 @@ Restricts a specified user from modifying specified setting items.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -100,11 +102,11 @@ Restricts a specified user from modifying specified setting items.
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

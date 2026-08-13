@@ -6,6 +6,8 @@ Enumerates date display modes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum DatePickerMode--><!--Device-unnamed-declare enum DatePickerMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Three-column display: year, month, and day.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Two-column display: year and month.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -56,13 +62,13 @@ Two-column display: year and month.
 MONTH_AND_DAY = 2
 ```
 
-Two-column display: month and day.
-
-In this mode, the year value remains fixed.
+Two-column display: month and day. In this mode, the year value remains fixed.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

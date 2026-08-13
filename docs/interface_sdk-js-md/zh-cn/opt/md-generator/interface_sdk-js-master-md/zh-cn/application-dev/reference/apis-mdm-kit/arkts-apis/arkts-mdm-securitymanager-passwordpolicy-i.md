@@ -2,7 +2,9 @@
 
 设备锁屏口令策略。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-securityManager-export interface PasswordPolicy--><!--Device-securityManager-export interface PasswordPolicy-End-->
 
@@ -18,7 +20,9 @@ additionalDescription?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ complexityRegex?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,6 +62,8 @@ passwordAlgs?: PasswordAlgs
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs--><!--Device-PasswordPolicy-passwordAlgs?: PasswordAlgs-End-->
@@ -72,7 +80,9 @@ validityPeriod?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

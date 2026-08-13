@@ -6,7 +6,9 @@ Defines DisappearSymbolEffect class, which inherits from **SymbolEffect**.
 
 **Since:** 12
 
-<!--Device-unnamed-declare class DisappearSymbolEffect extends SymbolEffect--><!--Device-unnamed-declare class DisappearSymbolEffect extends SymbolEffect-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class DisappearSymbolEffect--><!--Device-unnamed-declare class DisappearSymbolEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(scope?: EffectScope)
 A constructor used to create an **AppearSymbolEffect** instance, which comes with an appear animation effect.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,13 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 scope?: EffectScope
 ```
 
-Effect scope.
-
-Default value: **EffectScope.LAYER**
+Effect scope. Default value: **EffectScope.LAYER**
 
 **Type:** [EffectScope](arkts-arkui-effectscope-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

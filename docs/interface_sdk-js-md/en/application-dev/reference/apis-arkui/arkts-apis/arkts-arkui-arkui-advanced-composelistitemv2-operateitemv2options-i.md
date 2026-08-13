@@ -4,7 +4,9 @@ Declare interface OperateItemV2Options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface OperateItemV2Options--><!--Device-unnamed-export interface OperateItemV2Options-End-->
 
@@ -22,15 +24,19 @@ import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, Op
 arrow?: OperateIconV2
 ```
 
-Sets the arrow.
+Sets the arrow
 
 **Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-arrow?: OperateIconV2--><!--Device-OperateItemV2Options-arrow?: OperateIconV2-End-->
 
@@ -42,15 +48,19 @@ Sets the arrow.
 button?: OperateButtonV2
 ```
 
-Sets the button.
+Sets the button
 
 **Type:** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-button?: OperateButtonV2--><!--Device-OperateItemV2Options-button?: OperateButtonV2-End-->
 
@@ -62,15 +72,19 @@ Sets the button.
 checkbox?: OperateCheckV2
 ```
 
-Sets the checkBox.
+Sets the checkBox
 
 **Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-checkbox?: OperateCheckV2--><!--Device-OperateItemV2Options-checkbox?: OperateCheckV2-End-->
 
@@ -88,9 +102,13 @@ Sets the icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-icon?: OperateIconV2--><!--Device-OperateItemV2Options-icon?: OperateIconV2-End-->
 
@@ -102,15 +120,19 @@ Sets the icon.
 image?: ResourceStr
 ```
 
-Sets the image.
+Sets the image
 
 **Type:** ResourceStr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-image?: ResourceStr--><!--Device-OperateItemV2Options-image?: ResourceStr-End-->
 
@@ -122,15 +144,19 @@ Sets the image.
 radio?: OperateCheckV2
 ```
 
-Sets the radio.
+Sets the radio
 
 **Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-radio?: OperateCheckV2--><!--Device-OperateItemV2Options-radio?: OperateCheckV2-End-->
 
@@ -142,15 +168,19 @@ Sets the radio.
 subIcon?: OperateIconV2
 ```
 
-Sets the subIcon.
+Sets the subIcon
 
 **Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-subIcon?: OperateIconV2--><!--Device-OperateItemV2Options-subIcon?: OperateIconV2-End-->
 
@@ -162,15 +192,19 @@ Sets the subIcon.
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Sets the symbolStyle.
+Sets the symbolStyle
 
 **Type:** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-symbolStyle?: SymbolGlyphModifier--><!--Device-OperateItemV2Options-symbolStyle?: SymbolGlyphModifier-End-->
 
@@ -182,15 +216,19 @@ Sets the symbolStyle.
 text?: ResourceStr
 ```
 
-Sets the text.
+Sets the text
 
 **Type:** ResourceStr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-text?: ResourceStr--><!--Device-OperateItemV2Options-text?: ResourceStr-End-->
 
@@ -202,15 +240,19 @@ Sets the text.
 toggle?: OperateCheckV2
 ```
 
-Sets the toggle.
+Sets the toggle
 
 **Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateItemV2Options-toggle?: OperateCheckV2--><!--Device-OperateItemV2Options-toggle?: OperateCheckV2-End-->
 

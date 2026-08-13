@@ -1,8 +1,10 @@
 # ArcListInterface
 
-The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text,in a continuous, multi-row format.
+The **ArcList** component is a circular layout container that displays a series of list items in an arc shape. It is suitable for presenting homogeneous data, such as images and text, in a continuous, multi-row format.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ArcListInterface--><!--Device-unnamed-export interface ArcListInterface-End-->
 
@@ -14,7 +16,7 @@ The **ArcList** component is a circular layout container that displays a series 
 import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: ArkListOptions): ArcListAttribute
@@ -23,6 +25,8 @@ import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@k
 Creates an **ArcList** component instance with specified configuration options.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -6,6 +6,8 @@ Describes the text line spacing style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class LineSpacingStyle--><!--Device-unnamed-declare class LineSpacingStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@ Describes the text line spacing style.
 constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 ```
 
-A constructor used to create a text line spacing style.
-
-**Since**: 26.0.0
+A constructor used to create a text line spacing style. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +38,7 @@ A constructor used to create a text line spacing style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | LengthMetrics | Yes | Text line spacing.&lt;br&gt;Default value: **0.0**&lt;br&gt;Value range: [0, +∞) &lt;br&gt;**NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
+| lineSpacing | LengthMetrics | Yes | Text line spacing.&lt;br&gt;Default value: **0.0**&lt;br&gt;Value range: 0, +∞) &lt;br&gt;**NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
 | options | LineSpacingOptions | No | Line spacing options.&lt;br&gt;Default value: **{ onlyBetweenLines: false } |
 
 ## lineSpacing
@@ -45,17 +47,15 @@ A constructor used to create a text line spacing style.
 readonly lineSpacing: number
 ```
 
-Text line spacing.
-
-Value range: [0, +∞)
-
-Unit: [vp](common)
+Text line spacing. Value range: [0, +∞) Unit: [vp
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +78,8 @@ Line spacing options.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Enumerates the tip codes for facial authentication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum FaceTipsCode--><!--Device-osAccount-enum FaceTipsCode-End-->
 
@@ -18,7 +20,9 @@ FACE_AUTH_TIP_TOO_BRIGHT = 1
 
 The obtained face image is too bright.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_BRIGHT = 1--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_BRIGHT = 1-End-->
 
@@ -34,7 +38,9 @@ FACE_AUTH_TIP_TOO_DARK = 2
 
 The obtained face image is too dark.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_DARK = 2--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_DARK = 2-End-->
 
@@ -50,7 +56,9 @@ FACE_AUTH_TIP_TOO_CLOSE = 3
 
 The face is too close to the device.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_CLOSE = 3--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_CLOSE = 3-End-->
 
@@ -66,7 +74,9 @@ FACE_AUTH_TIP_TOO_FAR = 4
 
 The face is too far away from the device.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_FAR = 4--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_FAR = 4-End-->
 
@@ -82,7 +92,9 @@ FACE_AUTH_TIP_TOO_HIGH = 5
 
 Only the upper part of the face is captured because the device is angled too high.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_HIGH = 5--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_HIGH = 5-End-->
 
@@ -98,7 +110,9 @@ FACE_AUTH_TIP_TOO_LOW = 6
 
 Only the lower part of the face is captured because the device is angled too low.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LOW = 6--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LOW = 6-End-->
 
@@ -114,7 +128,9 @@ FACE_AUTH_TIP_TOO_RIGHT = 7
 
 Only the right part of the face is captured because the device is angled too much to the right.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_RIGHT = 7--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_RIGHT = 7-End-->
 
@@ -130,7 +146,9 @@ FACE_AUTH_TIP_TOO_LEFT = 8
 
 Only the left part of the face is captured because the device is angled too much to the left.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LEFT = 8--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_LEFT = 8-End-->
 
@@ -146,7 +164,9 @@ FACE_AUTH_TIP_TOO_MUCH_MOTION = 9
 
 The face moves too fast during facial information collection.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9--><!--Device-FaceTipsCode-FACE_AUTH_TIP_TOO_MUCH_MOTION = 9-End-->
 
@@ -162,7 +182,9 @@ FACE_AUTH_TIP_POOR_GAZE = 10
 
 The face is not facing the device.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_POOR_GAZE = 10--><!--Device-FaceTipsCode-FACE_AUTH_TIP_POOR_GAZE = 10-End-->
 
@@ -178,7 +200,9 @@ FACE_AUTH_TIP_NOT_DETECTED = 11
 
 No face is detected.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FaceTipsCode-FACE_AUTH_TIP_NOT_DETECTED = 11--><!--Device-FaceTipsCode-FACE_AUTH_TIP_NOT_DETECTED = 11-End-->
 

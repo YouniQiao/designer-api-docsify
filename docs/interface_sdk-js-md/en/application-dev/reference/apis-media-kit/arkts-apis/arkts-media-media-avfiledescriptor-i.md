@@ -2,9 +2,11 @@
 
 Media file descriptor. The caller needs to ensure that the fd is valid and the offset and length are correct.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVFileDescriptor--><!--Device-media-interface AVFileDescriptor-End-->
 
@@ -24,11 +26,13 @@ fd: int
 
 The file descriptor of audio or video source from file system. The caller is responsible to close the file descriptor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,11 +48,13 @@ length?: long
 
 The length in bytes of the data to be read. By default, the length is the rest of bytes in the file from the offset.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,13 +68,15 @@ The length in bytes of the data to be read. By default, the length is the rest o
 offset?: long
 ```
 
-The offset into the file where the data to be read, in bytes. By default,the offset is zero.
+The offset into the file where the data to be read, in bytes. By default, the offset is zero.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

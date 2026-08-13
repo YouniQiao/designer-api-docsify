@@ -45,18 +45,28 @@
 
 | Name | Description |
 | --- | --- |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | Defines the border radius property. |
 | [ColorMetrics](arkts-arkui-colormetrics-t.md) | Defines ColorMetrics. |
 | [Degree](arkts-arkui-degree-t.md) | Defines the angle property with number in units of deg. |
 | [Dimension](arkts-arkui-dimension-t.md) | Defines the dimension property with number with units(vp\|px\|fp\|lpx\|%), and resource. |
+| [EdgeColors](arkts-arkui-edgecolors-t.md) | Defines the border color property. |
+| [EdgeOutlineStyles](arkts-arkui-edgeoutlinestyles-t.md) | Defines the outline style property. |
+| [EdgeOutlineWidths](arkts-arkui-edgeoutlinewidths-t.md) | Defines the outline width property. |
+| [EdgeStyles](arkts-arkui-edgestyles-t.md) | Defines the border style property. |
 | [EdgeWidth](arkts-arkui-edgewidth-t.md) | Defines the border width property. |
+| [EdgeWidths](arkts-arkui-edgewidths-t.md) | Defines the border width property. |
 | [FP](arkts-arkui-fp-t.md) | Defines the length property with number in units of fp. |
 | [LPX](arkts-arkui-lpx-t.md) | Defines the length property with number in units of lpx. |
 | [Length](arkts-arkui-length-t.md) | Defines the length property with string, number and resource unit. |
+| [LengthConstrain](arkts-arkui-lengthconstrain-t.md) | Defines the length constrain property. |
 | [LengthMetrics](arkts-arkui-lengthmetrics-t.md) | Defines LengthMetrics. |
 | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | Defines length metrics unit. |
 | [LocalizedMargin](arkts-arkui-localizedmargin-t.md) | Defines the localized margin property. |
 | [Margin](arkts-arkui-margin-t.md) | Defines the margin property. |
+| [Offset](arkts-arkui-offset-t.md) | Defines the offset property. |
+| [OutlineRadiuses](arkts-arkui-outlineradiuses-t.md) | Defines the outline radius property. |
 | [PX](arkts-arkui-px-t.md) | Defines the length property with number in units of px. |
+| [Padding](arkts-arkui-padding-t.md) | Defines the padding property. |
 | [Percentage](arkts-arkui-percentage-t.md) | Defines the length property with number in units of Percentage. |
 | [Resource](arkts-arkui-resource-t.md) | Defines the data type of the interface restriction. |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) | Defines the color which can use resource. |

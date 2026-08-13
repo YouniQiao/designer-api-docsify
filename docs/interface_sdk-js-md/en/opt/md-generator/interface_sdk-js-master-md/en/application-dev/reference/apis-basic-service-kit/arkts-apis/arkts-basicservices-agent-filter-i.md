@@ -2,7 +2,9 @@
 
 Defines the filter criteria.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
@@ -20,15 +22,13 @@ import { request } from '@kit.BasicServicesKit';
 action?: Action
 ```
 
-Task action.
-
-- **UPLOAD**: Upload tasks.  
-- **DOWNLOAD**: Download tasks.  
-- If this parameter is not set, all tasks are queried.
+Task action. - **UPLOAD**: Upload tasks. - **DOWNLOAD**: Download tasks. - If this parameter is not set, all tasks are queried.
 
 **Type:** Action
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-action?: Action--><!--Device-Filter-action?: Action-End-->
 
@@ -44,7 +44,9 @@ Unix timestamp of the start time, in milliseconds. The default value is the invo
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-after?: long--><!--Device-Filter-after?: long-End-->
 
@@ -60,7 +62,9 @@ Unix timestamp of the end time, in milliseconds. The default value is the invoki
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-before?: long--><!--Device-Filter-before?: long-End-->
 
@@ -72,15 +76,13 @@ Unix timestamp of the end time, in milliseconds. The default value is the invoki
 mode?: Mode
 ```
 
-Task mode.
-
-- **FOREGROUND**: foreground task.  
-- **BACKGROUND**: background task.  
-- If this parameter is not set, all tasks are queried.
+Task mode. - **FOREGROUND**: foreground task. - **BACKGROUND**: background task. - If this parameter is not set, all tasks are queried.
 
 **Type:** [Mode](arkts-basicservices-agent-mode-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-mode?: Mode--><!--Device-Filter-mode?: Mode-End-->
 
@@ -96,7 +98,9 @@ Task state. If this parameter is not set, all tasks are queried.
 
 **Type:** State
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Filter-state?: State--><!--Device-Filter-state?: State-End-->
 

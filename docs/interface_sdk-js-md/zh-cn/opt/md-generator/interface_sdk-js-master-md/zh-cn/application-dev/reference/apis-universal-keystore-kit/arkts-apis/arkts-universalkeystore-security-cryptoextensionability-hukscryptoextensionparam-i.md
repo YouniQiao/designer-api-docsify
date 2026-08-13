@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface HuksCryptoExtensionParam--><!--Device-unnamed-export interface HuksCryptoExtensionParam-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -19,6 +21,8 @@ tag: huksExternalCrypto.HuksExternalCryptoTag | huks.HuksTag | number
 **类型：** huksExternalCrypto.HuksExternalCryptoTag \| huks.HuksTag \| number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ value: boolean | number | bigint | Uint8Array
 **类型：** boolean \| number \| bigint \| Uint8Array
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

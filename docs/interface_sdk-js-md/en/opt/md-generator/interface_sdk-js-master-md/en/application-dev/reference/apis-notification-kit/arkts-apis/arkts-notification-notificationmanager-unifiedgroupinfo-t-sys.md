@@ -6,7 +6,9 @@ export type UnifiedGroupInfo = _UnifiedGroupInfo
 
 Describes the fields of notification intelligent unification information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type UnifiedGroupInfo = _UnifiedGroupInfo--><!--Device-notificationManager-export type UnifiedGroupInfo = _UnifiedGroupInfo-End-->
 

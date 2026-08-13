@@ -4,6 +4,8 @@ Enumerates the style modes that can be set for **ArcButton**.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum ArcButtonStyleMode--><!--Device-unnamed-export declare enum ArcButtonStyleMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -17,6 +19,8 @@ EMPHASIZED_LIGHT = 0
 Emphasized style in light color mode. Displayed as a blue background with white text.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,6 +38,8 @@ Warning style in dark color mode. Displayed as a red background with white text.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-EMPHASIZED_DARK = 1--><!--Device-ArcButtonStyleMode-EMPHASIZED_DARK = 1-End-->
@@ -49,6 +55,8 @@ NORMAL_LIGHT = 2
 Normal style in light color mode. Displayed as a dark blue background with blue text.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,6 +74,8 @@ Normal style in dark color mode. Displayed as a dark gray background with blue t
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-NORMAL_DARK = 3--><!--Device-ArcButtonStyleMode-NORMAL_DARK = 3-End-->
@@ -81,6 +91,8 @@ CUSTOM = 4
 Custom button color and font color.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

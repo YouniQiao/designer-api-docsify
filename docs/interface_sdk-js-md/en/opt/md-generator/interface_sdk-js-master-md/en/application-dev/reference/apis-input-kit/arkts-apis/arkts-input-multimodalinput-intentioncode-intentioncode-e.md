@@ -1,8 +1,10 @@
 # IntentionCode
 
-The **intentionCode** module maps the original events of the keyboard to intention codes for normalized interaction.For example, if the mapped event of the space bar on the keyboard is **INTENTION_SELECT**, the intent is to select an item.
+The **intentionCode** module maps the original events of the keyboard to intention codes for normalized interaction. For example, if the mapped event of the space bar on the keyboard is **INTENTION_SELECT**, the intent is to select an item.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum IntentionCode--><!--Device-unnamed-export declare enum IntentionCode-End-->
 
@@ -16,7 +18,9 @@ INTENTION_UNKNOWN = -1
 
 Unknown intent
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ INTENTION_UP = 1
 
 Up
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ INTENTION_DOWN = 2
 
 Down
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +72,9 @@ INTENTION_LEFT = 3
 
 Left
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,7 +90,9 @@ INTENTION_RIGHT = 4
 
 Right
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,7 +108,9 @@ INTENTION_SELECT = 5
 
 Select
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -112,7 +126,9 @@ INTENTION_ESCAPE = 6
 
 Escape
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,7 +144,9 @@ INTENTION_BACK = 7
 
 Back
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,7 +162,9 @@ INTENTION_FORWARD = 8
 
 Forward
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -160,7 +180,9 @@ INTENTION_MENU = 9
 
 Menu
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -176,7 +198,9 @@ INTENTION_PAGE_UP = 11
 
 Page up
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -192,7 +216,9 @@ INTENTION_PAGE_DOWN = 12
 
 Page down
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -208,7 +234,9 @@ INTENTION_ZOOM_OUT = 13
 
 Zoom out
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -224,7 +252,9 @@ INTENTION_ZOOM_IN = 14
 
 Zoom in
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

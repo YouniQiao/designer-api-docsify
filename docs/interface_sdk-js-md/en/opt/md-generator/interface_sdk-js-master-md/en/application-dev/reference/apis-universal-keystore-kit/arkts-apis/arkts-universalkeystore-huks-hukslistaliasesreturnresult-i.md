@@ -4,6 +4,8 @@ Defines the returned key alias array.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-huks-export interface HuksListAliasesReturnResult--><!--Device-huks-export interface HuksListAliasesReturnResult-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -25,6 +27,8 @@ Array of key aliases.
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

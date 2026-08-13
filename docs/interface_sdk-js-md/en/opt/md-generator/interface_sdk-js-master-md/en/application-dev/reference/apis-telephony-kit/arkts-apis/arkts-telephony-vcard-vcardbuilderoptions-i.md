@@ -4,6 +4,8 @@ Indicates the options for VCard export.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-vcard-export interface VCardBuilderOptions--><!--Device-vcard-export interface VCardBuilderOptions-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -26,6 +28,8 @@ Indicates the VCard types.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-VCardBuilderOptions-cardType?: VCardType--><!--Device-VCardBuilderOptions-cardType?: VCardType-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -41,6 +45,8 @@ Indicates the Encoding format.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VCardBuilderOptions-charset?: string--><!--Device-VCardBuilderOptions-charset?: string-End-->
 

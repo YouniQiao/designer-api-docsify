@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CrownEvent--><!--Device-unnamed-declare interface CrownEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ action: CrownAction
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -34,13 +38,13 @@ action: CrownAction
 angularVelocity: number
 ```
 
-旋转角速度。
-
-单位：deg/s
+旋转角速度。 单位：deg/s
 
 **类型：** number
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,15 +60,13 @@ angularVelocity: number
 degree: number
 ```
 
-相对旋转角度。
-
-单位：deg 
-
-取值范围:[-360, 360]。
+相对旋转角度。 单位：deg 取值范围:[-360, 360]。
 
 **类型：** number
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,6 +88,8 @@ stopPropagation: Callback<void>
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -100,13 +104,13 @@ stopPropagation: Callback<void>
 timestamp: number
 ```
 
-时间戳。触发事件时距离系统启动的时间间隔。
-
-单位：ns
+时间戳。触发事件时距离系统启动的时间间隔。 单位：ns
 
 **类型：** number
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

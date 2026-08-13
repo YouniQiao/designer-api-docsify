@@ -2,9 +2,11 @@
 
 Screen hopping options, such as the exit position.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
 
@@ -26,11 +28,13 @@ displayId: long
 
 Screen ID of the peer device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
 
@@ -46,11 +50,13 @@ displayX: int
 
 X coordinate of the mouse cursor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
 
@@ -66,11 +72,13 @@ displayY: int
 
 Y coordinate of the mouse cursor.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 

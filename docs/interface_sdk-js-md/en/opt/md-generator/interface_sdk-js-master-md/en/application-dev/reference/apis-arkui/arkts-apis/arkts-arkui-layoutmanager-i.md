@@ -1,13 +1,10 @@
 # LayoutManager
 
-Implements a layout manager object.
-
-> **NOTE：**
-> 
-> After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-
-> to-date layout information.
+Implements a layout manager object. > **NOTE：**> > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up- > to-date layout information.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
 
@@ -22,6 +19,8 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 Obtains the position of the character nearest to the specified coordinate.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,6 +54,8 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -83,9 +84,11 @@ Obtains the position of the character nearest to the specified coordinate based 
 getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefined
 ```
 
-Obtains the character range and the actual glyph range based on the specified glyph range. If a text contains two Chinese characters and five letters, the glyph index range of the text is [0, 7]. A Chinese character occupies three characters, so the corresponding character index range is [0, 11]. If the specified index range is [0, 11],but there are only seven glyphs, the actual glyph index range is [0, 7].
+Obtains the character range and the actual glyph range based on the specified glyph range. If a text contains two Chinese characters and five letters, the glyph index range of the text is [0, 7]. A Chinese character occupies three characters, so the corresponding character index range is [0, 11]. If the specified index range is [0, 11], but there are only seven glyphs, the actual glyph index range is [0, 7].
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +119,8 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 Obtains the character range and the actual glyph range based on the specified glyph range and encoding type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +153,8 @@ Obtains the position of a glyph close to a given coordinate.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -175,9 +182,11 @@ Obtains the position of a glyph close to a given coordinate.
 getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefined
 ```
 
-Obtains the glyph range and the actual character range based on the specified character range. If the first glyph is a Chinese character, the glyph index range of the character is [0, 1]. A Chinese character occupies three characters, so the corresponding character index range is [0, 3]. If the specified character index range is [0, 1],one third of a Chinese character cannot be parsed, so the actual character index range is [0, 3].
+Obtains the glyph range and the actual character range based on the specified character range. If the first glyph is a Chinese character, the glyph index range of the character is [0, 1]. A Chinese character occupies three characters, so the corresponding character index range is [0, 3]. If the specified character index range is [0, 1], one third of a Chinese character cannot be parsed, so the actual character index range is [0, 3].
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,6 +217,8 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 Obtains the glyph range and the actual character range based on the specified character range and encoding type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -240,6 +251,8 @@ Obtains the total number of lines in the component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -263,6 +276,8 @@ getLineMetrics(lineNumber: number): LineMetrics
 Obtains the information about the specified line, including line metrics, text style information, and font properties.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -293,6 +308,8 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 Obtains the drawing area information of the characters or placeholders within any range of the text, based on the specified rectangle width and height styles.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

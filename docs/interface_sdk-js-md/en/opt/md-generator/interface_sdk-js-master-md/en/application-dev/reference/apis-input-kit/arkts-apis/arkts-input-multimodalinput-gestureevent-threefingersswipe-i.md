@@ -2,7 +2,9 @@
 
 Defines a three-finger swipe gesture event.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface ThreeFingersSwipe--><!--Device-unnamed-export declare interface ThreeFingersSwipe-End-->
 
@@ -24,7 +26,9 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ThreeFingersSwipe-type: ActionType--><!--Device-ThreeFingersSwipe-type: ActionType-End-->
 
@@ -40,7 +44,9 @@ X coordinate, in px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ThreeFingersSwipe-x: int--><!--Device-ThreeFingersSwipe-x: int-End-->
 
@@ -56,7 +62,9 @@ Y coordinate, in px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ThreeFingersSwipe-y: int--><!--Device-ThreeFingersSwipe-y: int-End-->
 

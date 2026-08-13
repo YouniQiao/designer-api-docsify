@@ -2,9 +2,11 @@
 
 Enumerates evaluation result code.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-enum EvaluationResultCode--><!--Device-intelligentVoice-enum EvaluationResultCode-End-->
 
@@ -20,9 +22,11 @@ UNKNOWN = 0
 
 Unknown.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-UNKNOWN = 0--><!--Device-EvaluationResultCode-UNKNOWN = 0-End-->
 
@@ -38,9 +42,11 @@ PASS = 1
 
 Pass.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-PASS = 1--><!--Device-EvaluationResultCode-PASS = 1-End-->
 
@@ -56,9 +62,11 @@ WORD_EMPTY = 2
 
 Word is empty.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-WORD_EMPTY = 2--><!--Device-EvaluationResultCode-WORD_EMPTY = 2-End-->
 
@@ -74,9 +82,11 @@ CHINESE_ONLY = 3
 
 Only chinese is supported.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-CHINESE_ONLY = 3--><!--Device-EvaluationResultCode-CHINESE_ONLY = 3-End-->
 
@@ -92,9 +102,11 @@ INVALID_LENGTH = 4
 
 Invalid length.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-INVALID_LENGTH = 4--><!--Device-EvaluationResultCode-INVALID_LENGTH = 4-End-->
 
@@ -110,9 +122,11 @@ UNUSUAL_WORD = 5
 
 Unusual word.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-UNUSUAL_WORD = 5--><!--Device-EvaluationResultCode-UNUSUAL_WORD = 5-End-->
 
@@ -128,9 +142,11 @@ CONSECUTIVE_SAME_WORD = 6
 
 Consecutive same word.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-CONSECUTIVE_SAME_WORD = 6--><!--Device-EvaluationResultCode-CONSECUTIVE_SAME_WORD = 6-End-->
 
@@ -146,9 +162,11 @@ TOO_FEW_PHONEMES = 7
 
 Too few phonemes.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-TOO_FEW_PHONEMES = 7--><!--Device-EvaluationResultCode-TOO_FEW_PHONEMES = 7-End-->
 
@@ -164,9 +182,11 @@ TOO_MANY_PHONEMES = 8
 
 Too many phonemes.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-TOO_MANY_PHONEMES = 8--><!--Device-EvaluationResultCode-TOO_MANY_PHONEMES = 8-End-->
 
@@ -182,9 +202,11 @@ COMMON_INSTRUCTION = 9
 
 Contain common instruction.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-COMMON_INSTRUCTION = 9--><!--Device-EvaluationResultCode-COMMON_INSTRUCTION = 9-End-->
 
@@ -200,9 +222,11 @@ COMMON_SPOKEN_LANGUAGE = 10
 
 Contain common spoken language.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-COMMON_SPOKEN_LANGUAGE = 10--><!--Device-EvaluationResultCode-COMMON_SPOKEN_LANGUAGE = 10-End-->
 
@@ -218,9 +242,11 @@ SENSITIVE_WORD = 11
 
 Contain sensitive word.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-SENSITIVE_WORD = 11--><!--Device-EvaluationResultCode-SENSITIVE_WORD = 11-End-->
 
@@ -236,9 +262,11 @@ NO_INITIAL_CONSONANT = 12
 
 Two consecutive words without initial consonant.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-NO_INITIAL_CONSONANT = 12--><!--Device-EvaluationResultCode-NO_INITIAL_CONSONANT = 12-End-->
 
@@ -254,9 +282,11 @@ REPEATED_PHONEME = 13
 
 Contain repeated phoneme.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EvaluationResultCode-REPEATED_PHONEME = 13--><!--Device-EvaluationResultCode-REPEATED_PHONEME = 13-End-->
 

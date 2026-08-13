@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface IndicatorIconInfo--><!--Device-unnamed-declare interface IndicatorIconInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ icon: ResourceStr | SymbolGlyphModifier
 **类型：** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [SymbolGlyphModifier](arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,11 +40,13 @@ icon: ResourceStr | SymbolGlyphModifier
 index: number
 ```
 
-指定索引。取值限定为整数。
+指定索引。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

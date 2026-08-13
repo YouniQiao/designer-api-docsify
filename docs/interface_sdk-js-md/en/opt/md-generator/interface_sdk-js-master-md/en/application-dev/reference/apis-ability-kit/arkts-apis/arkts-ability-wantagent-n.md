@@ -1,10 +1,10 @@
 # wantAgent
 
-The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md#Want) object, enabling an application to trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event)at a future time.
+The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c.md#Want) object, enabling an application to trigger a WantAgent object to perform specified operations (such as starting an ability or publishing a common event) at a future time. The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user touches a notification, the [trigger](arkts-ability-wantagent-trigger-f.md#trigger) API of WantAgent is triggered and the target application is started. For details, see [Notification](../../../notification/notification-with-wantagent.md).
 
-The module provides the APIs for creating a WantAgent object, obtaining the bundle name and UID of the application to which a WantAgent object belongs, proactively triggering a WantAgent object, and checking whether two WantAgent objects are the same. A typical use scenario of WantAgent is notification processing. For example, when a user touches a notification, the [trigger](arkts-ability-wantagent-trigger-f.md#trigger) API of WantAgent is triggered and the target application is started. For details, see [Notification](../../../notification/notification-with-wantagent.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace wantAgent--><!--Device-unnamed-declare namespace wantAgent-End-->
 
@@ -22,31 +22,31 @@ import { WantAgent } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename) |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename-1) |
-| [getUid](arkts-ability-wantagent-getuid-f.md#getuid) |
-| [getUid](arkts-ability-wantagent-getuid-f.md#getuid-1) |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName) |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName) |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getUid) |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getUid) |
 | [cancel](arkts-ability-wantagent-cancel-f.md#cancel) |
-| [cancel](arkts-ability-wantagent-cancel-f.md#cancel-1) |
+| [cancel](arkts-ability-wantagent-cancel-f.md#cancel) |
 | [trigger](arkts-ability-wantagent-trigger-f.md#trigger) |
 | [equal](arkts-ability-wantagent-equal-f.md#equal) |
-| [equal](arkts-ability-wantagent-equal-f.md#equal-1) |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent) |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent-1) |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype) |
-| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype-1) |
+| [equal](arkts-ability-wantagent-equal-f.md#equal) |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent) |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent) |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getOperationType) |
+| [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getOperationType) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant) |
-| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant-1) |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) |
-| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setwantagentmultithreading) |
-| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createlocalwantagent) |
-| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#islocalwantagent) |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant-(System-API)) |
+| [getWant](arkts-ability-wantagent-getwant-f-sys.md#getWant-(System-API)) |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerAsync-(System-API)) |
+| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setWantAgentMultithreading-(System-API)) |
+| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createLocalWantAgent-(System-API)) |
+| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#isLocalWantAgent-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

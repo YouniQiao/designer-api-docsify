@@ -4,6 +4,8 @@ Describes the observer options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export interface ObserverOptions--><!--Device-uiObserver-export interface ObserverOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Component ID.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

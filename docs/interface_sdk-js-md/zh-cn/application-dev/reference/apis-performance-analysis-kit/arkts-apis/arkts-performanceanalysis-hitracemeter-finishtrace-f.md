@@ -6,16 +6,13 @@
 function finishTrace(name: string, taskId: int): void
 ```
 
-标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。
+标记一个异步跟踪耗时任务的结束。调用成功后，完成该任务的跟踪。 finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)对应参数值一致。 从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishAsyncTrace)接口（需与 [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)接口配套使用）。
 
-finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)对应参数值一致。
+**起始版本：** 23
 
-从API version 19开始，建议使用[finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishAsyncTrace)接口（需与  
-[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)接口配套使用）。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 8
-
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -28,7 +25,7 @@ finishTrace的name和taskId必须与流程开始的[startTrace()](arkts-performa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 要跟踪的任务名称，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)对应参数值一致。 |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 任务id，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)对应参数值一致。 |
+| taskId | int | 是 | 任务id，必须与流程开始的[startTrace()](arkts-performanceanalysis-hitracemeter-starttrace-f.md#startTrace)对应参数值一致。 |
 
 ## 示例
 

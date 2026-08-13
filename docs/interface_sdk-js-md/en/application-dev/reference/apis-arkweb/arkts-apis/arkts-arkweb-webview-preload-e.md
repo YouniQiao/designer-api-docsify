@@ -2,9 +2,11 @@
 
 Enumerates how the player preloads media data.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum Preload--><!--Device-webview-enum Preload-End-->
 
@@ -18,9 +20,13 @@ NONE = 0
 
 No media data is preloaded.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preload-NONE = 0--><!--Device-Preload-NONE = 0-End-->
 
@@ -34,9 +40,13 @@ METADATA = 1
 
 Only the metadata of the media is preloaded.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preload-METADATA = 1--><!--Device-Preload-METADATA = 1-End-->
 
@@ -50,9 +60,13 @@ AUTO = 2
 
 A sufficient amount of media data is preloaded to ensure smooth playback
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preload-AUTO = 2--><!--Device-Preload-AUTO = 2-End-->
 

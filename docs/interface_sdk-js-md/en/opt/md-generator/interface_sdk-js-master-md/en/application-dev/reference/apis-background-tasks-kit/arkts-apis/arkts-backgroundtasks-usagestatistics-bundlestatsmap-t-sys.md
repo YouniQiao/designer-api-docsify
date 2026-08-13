@@ -4,7 +4,9 @@
 type BundleStatsMap = Record<string, BundleStatsInfo>
 ```
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-type BundleStatsMap = Record<string, BundleStatsInfo>--><!--Device-usageStatistics-type BundleStatsMap = Record<string, BundleStatsInfo>-End-->
 

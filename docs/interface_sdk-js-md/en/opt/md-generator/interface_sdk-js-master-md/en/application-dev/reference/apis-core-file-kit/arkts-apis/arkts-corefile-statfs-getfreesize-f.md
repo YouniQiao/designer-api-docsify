@@ -14,7 +14,9 @@ function getFreeSize(path: string): Promise<number>
 
 Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getFreeSize(path: string): Promise<long>--><!--Device-statfs-function getFreeSize(path: string): Promise<long>-End-->
 
@@ -75,7 +77,9 @@ function getFreeSize(path: string, callback: AsyncCallback<number>): void
 
 Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void--><!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void-End-->
 

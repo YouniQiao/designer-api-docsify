@@ -4,6 +4,8 @@ Enumeration of scenes of accessibility focus.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export enum AccessibilityFocusScene--><!--Device-unnamed-export enum AccessibilityFocusScene-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ HOVER_FOCUS = 1
 Hover to move the accessibility focus.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Swipe finger to move the accessibility focus.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityFocusScene-SWIPE_FOCUS = 2--><!--Device-AccessibilityFocusScene-SWIPE_FOCUS = 2-End-->
@@ -55,6 +61,8 @@ SCROLL_FOCUS = 3
 Move the accessibility focus after scrolling the component.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

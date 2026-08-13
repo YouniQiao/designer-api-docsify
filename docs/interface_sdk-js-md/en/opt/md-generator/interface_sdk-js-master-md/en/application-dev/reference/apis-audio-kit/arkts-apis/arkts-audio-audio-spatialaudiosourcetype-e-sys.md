@@ -4,6 +4,8 @@ Enumerates the spatial audio source type.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-audio-enum SpatialAudioSourceType--><!--Device-audio-enum SpatialAudioSourceType-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -19,6 +21,8 @@ SPATIAL_AUDIO_SOURCE_TYPE_STEREO = 0
 stereo source type.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ audio vivid source type.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SpatialAudioSourceType-SPATIAL_AUDIO_SOURCE_TYPE_AUDIO_VIVID = 1--><!--Device-SpatialAudioSourceType-SPATIAL_AUDIO_SOURCE_TYPE_AUDIO_VIVID = 1-End-->
@@ -55,6 +61,8 @@ SPATIAL_AUDIO_SOURCE_TYPE_MULTI_CHANNEL = 2
 multichannel source type.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

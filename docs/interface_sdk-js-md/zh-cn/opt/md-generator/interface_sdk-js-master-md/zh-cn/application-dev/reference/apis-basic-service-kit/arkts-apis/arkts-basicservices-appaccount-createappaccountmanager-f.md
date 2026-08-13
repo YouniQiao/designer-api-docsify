@@ -8,7 +8,9 @@ function createAppAccountManager(): AppAccountManager
 
 创建应用账号管理器对象。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appAccount-function createAppAccountManager(): AppAccountManager--><!--Device-appAccount-function createAppAccountManager(): AppAccountManager-End-->
 

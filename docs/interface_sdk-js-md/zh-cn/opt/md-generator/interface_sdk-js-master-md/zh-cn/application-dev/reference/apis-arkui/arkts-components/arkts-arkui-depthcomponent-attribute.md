@@ -1,12 +1,14 @@
 # DepthComponent属性/事件
 
-除支持[通用属性](./common)外，还支持以下属性：
+除支持通用属性外，还支持以下属性：
 
-**继承/实现关系：** DepthComponentAttribute extends [CommonMethod<DepthComponentAttribute>](CommonMethod<DepthComponentAttribute>)
+**继承/实现关系：** DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-declare class DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>--><!--Device-unnamed-declare class DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class DepthComponentAttribute--><!--Device-unnamed-declare class DepthComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

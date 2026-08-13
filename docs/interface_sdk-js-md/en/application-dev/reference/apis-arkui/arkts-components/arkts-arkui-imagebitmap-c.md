@@ -1,12 +1,12 @@
 # ImageBitmap
 
-An **ImageBitmap** object stores pixel data rendered on a canvas. Since API version 11,when an application creates a  
-[worker thread](../../../arkts-utils/worker-introduction.md), it can use **postMessage**to transfer the **ImageBitmap** instance to the worker thread for drawing, and use  
-**onmessage** to receive the drawing results sent by the worker thread for display.
+An **ImageBitmap** object stores pixel data rendered on a canvas. Since API version 11, when an application creates a [worker thread](../../../arkts-utils/worker-introduction.md), it can use **postMessage** to transfer the **ImageBitmap** instance to the worker thread for drawing, and use **onmessage** to receive the drawing results sent by the worker thread for display.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ImageBitmap--><!--Device-unnamed-declare class ImageBitmap-End-->
 
@@ -23,6 +23,8 @@ Releases all graphics resources associated with this **ImageBitmap** object and 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,6 +45,8 @@ Creates an **ImageBitmap** object using an **ImageSrc** object.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -69,6 +73,8 @@ Creates an **ImageBitmap** object using an **ImageSrc** object. The unit mode of
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,6 +105,8 @@ Creates an **ImageBitmap** object using a **PixelMap** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ImageBitmap-constructor(data: PixelMap)--><!--Device-ImageBitmap-constructor(data: PixelMap)-End-->
@@ -122,6 +130,8 @@ Creates an **ImageBitmap** object using a **PixelMap** object. The unit mode of 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,6 +160,8 @@ Transfer a Resource object to construct an ImageBitmap object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -171,15 +183,15 @@ Transfer a Resource object to construct an ImageBitmap object.
 readonly height: number
 ```
 
-Pixel height of the **ImageBitmap** object.
-
-Default unit: vp
+Pixel height of the **ImageBitmap** object. Default unit: vp
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -195,15 +207,15 @@ Default unit: vp
 readonly width: number
 ```
 
-Pixel width of the **ImageBitmap** object.
-
-Default unit: vp
+Pixel width of the **ImageBitmap** object. Default unit: vp
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

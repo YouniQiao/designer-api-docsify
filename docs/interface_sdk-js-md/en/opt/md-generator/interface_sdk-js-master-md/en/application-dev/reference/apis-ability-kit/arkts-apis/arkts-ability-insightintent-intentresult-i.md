@@ -1,11 +1,12 @@
 # IntentResult
 
-Defines the return result of intent execution. The  
-[generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
+Defines the return result of intent execution. The [generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported.
 
-**Since:** 20
+**Since:** 26.0.0
 
-<!--Device-insightIntent-interface IntentResult<T>--><!--Device-insightIntent-interface IntentResult<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-insightIntent-interface IntentResult--><!--Device-insightIntent-interface IntentResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -25,11 +26,13 @@ Error code returned by the intent execution, defined by the developer.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IntentResult-code: int--><!--Device-IntentResult-code: int-End-->
 
@@ -45,11 +48,13 @@ Result data returned by the intent execution, typically containing information t
 
 **Type:** T
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-IntentResult-result?: T--><!--Device-IntentResult-result?: T-End-->
 

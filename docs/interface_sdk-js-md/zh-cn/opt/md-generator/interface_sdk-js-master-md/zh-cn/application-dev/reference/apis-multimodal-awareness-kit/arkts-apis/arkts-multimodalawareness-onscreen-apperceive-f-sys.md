@@ -11,6 +11,8 @@ function apperceive(capability: OnscreenAwarenessCap,
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.GET_SCREEN_CONTENT or ohos.permission.ONSCREEN_AWARENESS
 - API版本23 - 24：ohos.permission.GET_SCREEN_CONTENT
@@ -40,11 +42,11 @@ function apperceive(capability: OnscreenAwarenessCap,
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [34000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-应用或页面不支持) |
-| [34000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-服务异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [34000002](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000002-应用或页面不支持) |
+| [34000001](../../apis-multimodalawareness-kit/errorcode-onScreen.md#34000001-服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

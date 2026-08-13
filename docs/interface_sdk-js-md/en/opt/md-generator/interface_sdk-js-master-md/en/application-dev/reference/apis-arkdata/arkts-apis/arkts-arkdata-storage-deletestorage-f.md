@@ -12,7 +12,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Deprecated since:** 9
 
-**Substitutes:** [deletePreferences](ohos.preferences.preferences.deletePreferences)
+**Substitutes:** deletePreferences
 
 <!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -36,7 +36,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Deprecated since:** 9
 
-**Substitutes:** [deletePreferences](ohos.preferences.preferences.deletePreferences)
+**Substitutes:** deletePreferences
 
 <!--Device-storage-function deleteStorage(path: string): Promise<void>--><!--Device-storage-function deleteStorage(path: string): Promise<void>-End-->
 

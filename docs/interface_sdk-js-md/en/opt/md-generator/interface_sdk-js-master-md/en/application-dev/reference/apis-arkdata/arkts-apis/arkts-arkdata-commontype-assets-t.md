@@ -6,7 +6,9 @@ type Assets = Array<Asset>
 
 Represents an array of Assets.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-commonType-type Assets = Array<Asset>--><!--Device-commonType-type Assets = Array<Asset>-End-->
 

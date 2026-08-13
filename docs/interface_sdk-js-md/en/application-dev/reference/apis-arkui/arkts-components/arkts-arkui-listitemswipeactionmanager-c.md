@@ -6,6 +6,8 @@ Implements the swipe action menu manager for list items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ListItemSwipeActionManager--><!--Device-unnamed-declare class ListItemSwipeActionManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Collapses the swipe action menu for the specified list item.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,8 +44,8 @@ Collapses the swipe action menu for the specified list item.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
-| [106203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
+| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
+| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 
 ## expand
 
@@ -54,6 +58,8 @@ Expands the swipe action menu for the specified list item.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +80,6 @@ Expands the swipe action menu for the specified list item.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
-| [106203](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
+| [100023](../errorcode-node.md#100023-parameter-error) | The component type of the node is incorrect. |
+| [106203](../errorcode-node.md#106203-passed-node-not-mounted-to-component-tree) | The node not mounted to component tree. |
 

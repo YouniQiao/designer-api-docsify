@@ -6,14 +6,13 @@
 function createMd(algName: string): Md
 ```
 
-创建消息摘要实例。
+创建消息摘要实例。 &lt;br&gt;支持的规格详见 [MD消息摘要算法规格](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#支持的算法与规格)。
 
-&lt;br&gt;支持的规格详见  
-[MD消息摘要算法规格](../../../security/CryptoArchitectureKit/crypto-generate-message-digest-overview.md#支持的算法与规格)。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -43,8 +42,8 @@ function createMd(algName: string): Md
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 

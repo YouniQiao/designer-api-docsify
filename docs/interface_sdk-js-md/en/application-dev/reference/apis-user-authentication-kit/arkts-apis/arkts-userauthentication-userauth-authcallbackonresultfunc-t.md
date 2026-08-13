@@ -4,11 +4,13 @@
 type AuthCallbackOnResultFunc = (result: UserAuthResult) => void
 ```
 
-Called to return the authentication result. If the authentication is successful,UserAuthResult contains the token information.
+Called to return the authentication result. If the authentication is successful, UserAuthResult contains the token information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-userAuth-type AuthCallbackOnResultFunc = (result: UserAuthResult) => void--><!--Device-userAuth-type AuthCallbackOnResultFunc = (result: UserAuthResult) => void-End-->
 

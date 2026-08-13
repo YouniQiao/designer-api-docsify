@@ -2,7 +2,9 @@
 
 Represents the properties of a form object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface MultiFormData--><!--Device-http-export interface MultiFormData-End-->
 
@@ -24,7 +26,9 @@ Content type of the data field.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiFormData-contentType: string--><!--Device-MultiFormData-contentType: string-End-->
 
@@ -40,7 +44,9 @@ This parameter sets a mime part's body content from memory data.
 
 **Type:** string \| Object \| ArrayBuffer
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiFormData-data?: string | Object | ArrayBuffer--><!--Device-MultiFormData-data?: string | Object | ArrayBuffer-End-->
 
@@ -52,11 +58,13 @@ This parameter sets a mime part's body content from memory data.
 filePath?: string
 ```
 
-This parameter sets a mime part's body content from the file's contents.This is an alternative to curl_mime_data for setting data to a mime part.If data is empty, filePath must be set.If data has a value, filePath does not take effect.
+This parameter sets a mime part's body content from the file's contents. This is an alternative to curl_mime_data for setting data to a mime part. If data is empty, filePath must be set. If data has a value, filePath does not take effect.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiFormData-filePath?: string--><!--Device-MultiFormData-filePath?: string-End-->
 
@@ -72,7 +80,9 @@ MIME name for the data field.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiFormData-name: string--><!--Device-MultiFormData-name: string-End-->
 
@@ -88,7 +98,9 @@ Remote file name for the data field.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MultiFormData-remoteFileName?: string--><!--Device-MultiFormData-remoteFileName?: string-End-->
 

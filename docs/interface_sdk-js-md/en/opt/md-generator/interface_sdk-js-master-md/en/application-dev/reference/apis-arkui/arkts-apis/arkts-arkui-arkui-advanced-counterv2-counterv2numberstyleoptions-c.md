@@ -6,7 +6,9 @@ Defines the number style options.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class CounterV2NumberStyleOptions extends CounterV2InlineStyleOptions--><!--Device-unnamed-declare class CounterV2NumberStyleOptions extends CounterV2InlineStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CounterV2NumberStyleOptions--><!--Device-unnamed-declare class CounterV2NumberStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,6 +18,28 @@ Defines the number style options.
 import { CounterV2Component, CounterV2Options, CounterV2Type, CounterV2DateData } from '@kit.ArkUI';
 ```
 
+## label
+
+```TypeScript
+label?: ResourceStr
+```
+
+Set the label of the counter component.
+
+**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CounterV2NumberStyleOptions-label?: ResourceStr--><!--Device-CounterV2NumberStyleOptions-label?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## onBlurDecrease
 
 ```TypeScript
@@ -24,7 +48,11 @@ onBlurDecrease?: VoidCallback
 
 Trigger an event when the decrease button loses focus.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +70,11 @@ onBlurIncrease?: VoidCallback
 
 Trigger an event when the increase button loses focus.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +92,11 @@ onFocusDecrease?: VoidCallback
 
 Trigger an event when the decrease button gets focus.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,32 +114,16 @@ onFocusIncrease?: VoidCallback
 
 Trigger an event when the increase button gets focus.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CounterV2NumberStyleOptions-onFocusIncrease?: VoidCallback--><!--Device-CounterV2NumberStyleOptions-onFocusIncrease?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## label
-
-```TypeScript
-label?: ResourceStr
-```
-
-Set the label of the counter component.
-
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CounterV2NumberStyleOptions-label?: ResourceStr--><!--Device-CounterV2NumberStyleOptions-label?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

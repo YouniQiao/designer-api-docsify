@@ -4,9 +4,11 @@ Provides material configuration information, including the material enabling sta
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-uiMaterial-export interface MaterialInfo--><!--Device-uiMaterial-export interface MaterialInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-uiMaterial-interface MaterialInfo--><!--Device-uiMaterial-interface MaterialInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,11 +28,17 @@ Material enabling state.
 
 **Type:** [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
 
+**Default:** MaterialState.DEFAULT
+
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MaterialInfo-state: MaterialState--><!--Device-MaterialInfo-state: MaterialState-End-->
 
@@ -46,11 +54,17 @@ Material type ID, indicating the material type corresponding to the current conf
 
 **Type:** MaterialType
 
+**Default:** MaterialType.IMMERSIVE
+
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MaterialInfo-type: MaterialType--><!--Device-MaterialInfo-type: MaterialType-End-->
 

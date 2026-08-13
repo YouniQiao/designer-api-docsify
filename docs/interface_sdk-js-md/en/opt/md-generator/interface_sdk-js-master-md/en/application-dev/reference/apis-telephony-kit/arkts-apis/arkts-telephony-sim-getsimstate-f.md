@@ -14,7 +14,9 @@ function getSimState(slotId: number, callback: AsyncCallback<SimState>): void
 
 Obtains the state of the SIM card in a specified slot.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimState(slotId: int, callback: AsyncCallback<SimState>): void--><!--Device-sim-function getSimState(slotId: int, callback: AsyncCallback<SimState>): void-End-->
 
@@ -31,11 +33,11 @@ Obtains the state of the SIM card in a specified slot.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -57,7 +59,9 @@ function getSimState(slotId: number): Promise<SimState>
 
 Obtains the state of the SIM card in a specified slot.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimState(slotId: int): Promise<SimState>--><!--Device-sim-function getSimState(slotId: int): Promise<SimState>-End-->
 
@@ -79,11 +83,11 @@ Obtains the state of the SIM card in a specified slot.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 

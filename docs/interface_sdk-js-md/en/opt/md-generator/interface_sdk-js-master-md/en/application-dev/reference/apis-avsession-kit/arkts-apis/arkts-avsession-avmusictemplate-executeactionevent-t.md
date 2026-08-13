@@ -8,6 +8,8 @@ The execute action event.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-type ExecuteActionEvent = (actionType: string, params: string) => Promise<string>--><!--Device-avMusicTemplate-type ExecuteActionEvent = (actionType: string, params: string) => Promise<string>-End-->

@@ -4,7 +4,31 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface BindOptions--><!--Device-unnamed-declare interface BindOptions-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## backgroundColor
+
+```TypeScript
+backgroundColor?: ResourceColor
+```
+
+半模态页面的背板颜色。 默认值：Color.White。
+
+**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-BindOptions-backgroundColor?: ResourceColor--><!--Device-BindOptions-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,7 +40,11 @@ onAppear?: () => void
 
 半模态页面显示（动画结束后）回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,7 +62,11 @@ onDisappear?: () => void
 
 半模态页面回退（动画结束后）回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,7 +84,11 @@ onWillAppear?: () => void
 
 半模态页面显示（动画开始前）回调函数。
 
+**类型：** () =&gt; void
+
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,40 +104,18 @@ onWillAppear?: () => void
 onWillDisappear?: () => void
 ```
 
-半模态页面回退（动画开始前）回调函数。
+半模态页面回退（动画开始前）回调函数。 **说明：** 不允许在onWillDisappear函数中修改状态变量，可能会导致组件行为不稳定。
 
-**说明：**
-
-不允许在onWillDisappear函数中修改状态变量，可能会导致组件行为不稳定。
+**类型：** () =&gt; void
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BindOptions-onWillDisappear?: () => void--><!--Device-BindOptions-onWillDisappear?: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## backgroundColor
-
-```TypeScript
-backgroundColor?: ResourceColor
-```
-
-半模态页面的背板颜色。
-
-默认值：Color.White。
-
-**类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
-
-**起始版本：** 10
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-BindOptions-backgroundColor?: ResourceColor--><!--Device-BindOptions-backgroundColor?: ResourceColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

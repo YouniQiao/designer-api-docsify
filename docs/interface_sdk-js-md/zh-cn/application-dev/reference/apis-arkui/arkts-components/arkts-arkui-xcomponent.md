@@ -1,12 +1,8 @@
 # XComponent
 
-**XComponent**提供用于图形绘制和媒体数据写入的[surface](docroot://ui/napi-xcomponent-guidelines.md#overview)，XComponent负责将其嵌入到视图中，支持应用自定义surface的位置和大小。同时支持AI图像分析、HDR视频亮度调节、防截屏录屏隐私保护、画布自绘制等能力，适用于视频播放、相机预览、游戏渲染、图像AI识别等需要高性能自绘制和媒体内容展示的场景。具体指南请参考[自定义渲染（XComponent）文档](docroot://ui/napi-xcomponent-guidelines.md)。
+**XComponent**提供用于图形绘制和媒体数据写入的[surface](../../../ui/napi-xcomponent-guidelines.md#overview)，XComponent负责将其嵌入到视图中，支持应用自定义surface的位置和大小。同时支持AI图像分析、HDR视频亮度调节、防截屏录屏隐私保护、画布自绘制等能力，适用于视频播放、相机预览、游戏渲染、图像AI识别等需要高性能自绘制和媒体内容展示的场景。具体指南请参考[自定义渲染（XComponent）文档](../../../ui/napi-xcomponent-guidelines.md)。 > **说明：**
 
-> **说明：**
-
-## 子组件
-
-不支持
+## 子组件 不支持
 
 ## XComponent
 
@@ -22,7 +18,7 @@ XComponent(value: { id: string; type: string; libraryname?: string; controller?:
 
 **废弃版本：** 12
 
-**替代接口：** [(value:]((value:)
+**替代接口：** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 
 <!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
 
@@ -40,13 +36,13 @@ XComponent(value: { id: string; type: string; libraryname?: string; controller?:
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
-创建**XComponent**组件，其生命周期回调可以从native侧触发。
-
-从API版本12开始，该接口不再维护。建议使用[XComponent(options: XComponentOptions)](docroot://reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)替代。
+创建**XComponent**组件，其生命周期回调可以从native侧触发。 从API版本12开始，该接口不再维护。建议使用[XComponent(options: XComponentOptions)](../../../reference/apis-arkui/arkui-ts/ts-basic-components-xcomponent.md#xcomponent12)替代。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +70,8 @@ XComponent(options: XComponentOptions)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -100,6 +98,8 @@ XComponent(params: NativeXComponentParameters)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -116,10 +116,10 @@ XComponent(params: NativeXComponentParameters)
 
 ## 汇总
 
-- [NativeXComponentParameters](arkts-arkui-xcomponent-nativexcomponentparameters-i.md)
-- [SurfaceConfig](arkts-arkui-xcomponent-surfaceconfig-i.md)
-- [SurfaceRect](arkts-arkui-xcomponent-surfacerect-i.md)
-- [SurfaceRotationOptions](arkts-arkui-xcomponent-surfacerotationoptions-i.md)
-- [XComponentOptions](arkts-arkui-xcomponent-xcomponentoptions-i.md)
-- [OnNativeLoadCallback](arkts-arkui-xcomponent-onnativeloadcallback-t.md)
-- [HdrType](arkts-arkui-xcomponent-hdrtype-e.md)
+- [NativeXComponentParameters](arkts-arkui-nativexcomponentparameters-i.md)
+- [SurfaceConfig](arkts-arkui-surfaceconfig-i.md)
+- [SurfaceRect](arkts-arkui-surfacerect-i.md)
+- [SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)
+- [XComponentOptions](arkts-arkui-xcomponentoptions-i.md)
+- [OnNativeLoadCallback](arkts-arkui-onnativeloadcallback-t.md)
+- [HdrType](arkts-arkui-hdrtype-e.md)

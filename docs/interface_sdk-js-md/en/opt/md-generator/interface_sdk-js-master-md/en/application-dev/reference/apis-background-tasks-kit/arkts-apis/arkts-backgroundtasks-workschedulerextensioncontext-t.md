@@ -4,10 +4,11 @@
 export type WorkSchedulerExtensionContext = _WorkSchedulerExtensionContext
 ```
 
-WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from   
-[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
+WorkSchedulerExtensionContext represents the context of WorkSchedulerExtensionAbility and is inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

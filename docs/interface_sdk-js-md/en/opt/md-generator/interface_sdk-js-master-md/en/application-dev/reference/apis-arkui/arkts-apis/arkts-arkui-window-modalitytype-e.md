@@ -2,7 +2,9 @@
 
 Enumerates the modality types of the child window.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum ModalityType--><!--Device-window-enum ModalityType-End-->
 
@@ -16,9 +18,11 @@ WINDOW_MODALITY = 0
 
 Select this value when only the parent window should not respond to user operations.
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ModalityType-WINDOW_MODALITY = 0--><!--Device-ModalityType-WINDOW_MODALITY = 0-End-->
 
@@ -30,14 +34,13 @@ Select this value when only the parent window should not respond to user operati
 APPLICATION_MODALITY = 1
 ```
 
-Select this value when other instances of the application should also not respond to user operations.
+Select this value when other instances of the application should also not respond to user operations. This enumeration can be called properly on a device that supports [freeform windows](../../../windowmanager/window-terminology.md#freeform-window) and is in the freeform window state. If the device does not support freeform windows, or if the device supports freeform windows but is not in the freeform window state, error code 801 is returned.
 
-This enumeration can be called properly on a device that supports  
-[freeform windows](../../../windowmanager/window-terminology.md#freeform-window) and is in the freeform window state. If the device does not support freeform windows, or if the device supports freeform windows but is not in the freeform window state, error code 801 is returned.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ModalityType-APPLICATION_MODALITY = 1--><!--Device-ModalityType-APPLICATION_MODALITY = 1-End-->
 

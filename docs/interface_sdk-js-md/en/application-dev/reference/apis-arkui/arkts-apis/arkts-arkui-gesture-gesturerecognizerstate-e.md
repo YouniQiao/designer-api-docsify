@@ -6,6 +6,8 @@ Creating an Object
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum GestureRecognizerState--><!--Device-unnamed-export declare enum GestureRecognizerState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Ready state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Detecting state.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizerState-DETECTING = 1--><!--Device-GestureRecognizerState-DETECTING = 1-End-->
@@ -57,6 +63,8 @@ Pending state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Blocked state.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizerState-BLOCKED = 3--><!--Device-GestureRecognizerState-BLOCKED = 3-End-->
@@ -94,6 +104,8 @@ Successful state.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureRecognizerState-SUCCESSFUL = 4--><!--Device-GestureRecognizerState-SUCCESSFUL = 4-End-->
@@ -111,6 +123,8 @@ Failed state.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

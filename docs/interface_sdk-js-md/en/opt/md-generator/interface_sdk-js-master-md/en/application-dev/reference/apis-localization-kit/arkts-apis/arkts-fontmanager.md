@@ -1,8 +1,22 @@
 # @ohos.fontManager
 
-This module provides system applications with the capabilities to install and uninstall third-party fonts and migrate font data. Specifically:&lt;br&gt;- Installing font files from a specified path (.ttf and .ttc formats are supported).&lt;br&gt;- Uninstalling installed fonts by font name.&lt;br&gt;- Starting a font data migration task during device upgrades, and providing callbacks for migration progress and results.
+/*
+ Copyright (c) 2025 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 19
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace fontManager--><!--Device-unnamed-declare namespace fontManager-End-->
 
@@ -23,9 +37,9 @@ import { fontManager } from '@kit.LocalizationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md#datamigration) |
-| [installFont](arkts-localization-fontmanager-installfont-f-sys.md#installfont) |
-| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md#uninstallfont) |
+| [dataMigration](arkts-localization-fontmanager-datamigration-f-sys.md#dataMigration-(System-API)) |
+| [installFont](arkts-localization-fontmanager-installfont-f-sys.md#installFont-(System-API)) |
+| [uninstallFont](arkts-localization-fontmanager-uninstallfont-f-sys.md#uninstallFont-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

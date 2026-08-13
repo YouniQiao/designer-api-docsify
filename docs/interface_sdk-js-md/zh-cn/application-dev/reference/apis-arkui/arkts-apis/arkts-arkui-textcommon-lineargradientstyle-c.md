@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
-<!--Device-unnamed-export declare class LinearGradientStyle extends ShaderStyle--><!--Device-unnamed-export declare class LinearGradientStyle extends ShaderStyle-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class LinearGradientStyle--><!--Device-unnamed-export declare class LinearGradientStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ constructor(options: LinearGradientOptions)
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,16 +46,15 @@ constructor(options: LinearGradientOptions)
 options: LinearGradientOptions
 ```
 
-显示为线性渐变效果。
-
-[LinearGradientOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradientoptions18对象说明)中的direction默认值按  
-[GradientDirection](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#gradientdirection)中的NONE处理。
+显示为线性渐变效果。 [LinearGradientOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-gradient-color.md#lineargradientoptions18对象说明) 中的direction默认值按 [GradientDirection](../../../reference/apis-arkui/arkui-ts/ts-appendix-enums.md#gradientdirection)中的NONE处理。
 
 **类型：** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

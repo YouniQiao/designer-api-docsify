@@ -8,9 +8,11 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 
 使用同步方式获取自系统启动以来经过的时间。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getUptime(timeType: TimeType, isNanoseconds?: boolean): long-End-->
 
@@ -27,13 +29,13 @@ function getUptime(timeType: TimeType, isNanoseconds?: boolean): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 自系统启动以来经过的时间。 |
+| long | 自系统启动以来经过的时间。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. This error code was added due to missing issues.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. This error code was added due to missing issues.<br>**适用版本：** 12+ |
 
 ## 示例
 

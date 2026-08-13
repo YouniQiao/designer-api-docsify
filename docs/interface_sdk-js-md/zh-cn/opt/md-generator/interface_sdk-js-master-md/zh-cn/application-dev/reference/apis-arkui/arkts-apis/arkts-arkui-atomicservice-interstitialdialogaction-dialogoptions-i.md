@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface DialogOptions--><!--Device-unnamed-export declare interface DialogOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ backgroundImage?: Resource
 **类型：** Resource
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ bottomOffsetType?: BottomOffset
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogOptions-bottomOffsetType?: BottomOffset--><!--Device-DialogOptions-bottomOffsetType?: BottomOffset-End-->
@@ -55,6 +61,8 @@ foregroundImage?: Resource
 **类型：** Resource
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ iconStyle?: IconStyle
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogOptions-iconStyle?: IconStyle--><!--Device-DialogOptions-iconStyle?: IconStyle-End-->
@@ -86,11 +96,13 @@ iconStyle?: IconStyle
 onDialogClick?: Callback<void>
 ```
 
-点击弹框任意位置后触发的用户自定义动作。默认调用closeDialog方法关闭弹框。说明：点击关闭按钮区域时仅触发onDialogClose，不触发本回调；若需同时触发，请在onDialogClose中显式调用本回调逻辑。
+点击弹框任意位置后触发的用户自定义动作。默认调用closeDialog方法关闭弹框。 说明：点击关闭按钮区域时仅触发onDialogClose，不触发本回调；若需同时触发，请在onDialogClose中显式调用本回调逻辑。
 
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ onDialogClose?: Callback<void>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogOptions-onDialogClose?: Callback<void>--><!--Device-DialogOptions-onDialogClose?: Callback<void>-End-->
@@ -127,6 +141,8 @@ subtitle?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -146,6 +162,8 @@ subtitleColor?: ResourceStr | Color
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogOptions-subtitleColor?: ResourceStr | Color--><!--Device-DialogOptions-subtitleColor?: ResourceStr | Color-End-->
@@ -163,6 +181,8 @@ title?: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -182,6 +202,8 @@ titleColor?: ResourceStr | Color
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogOptions-titleColor?: ResourceStr | Color--><!--Device-DialogOptions-titleColor?: ResourceStr | Color-End-->
@@ -200,6 +222,8 @@ titlePosition?: TitlePosition
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DialogOptions-titlePosition?: TitlePosition--><!--Device-DialogOptions-titlePosition?: TitlePosition-End-->
@@ -217,6 +241,8 @@ UI上下文实例。
 **类型：** [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

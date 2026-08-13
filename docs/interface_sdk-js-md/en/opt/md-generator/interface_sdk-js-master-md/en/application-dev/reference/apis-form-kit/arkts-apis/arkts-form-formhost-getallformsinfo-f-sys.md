@@ -14,7 +14,9 @@ function getAllFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): voi
 
 Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -34,12 +36,12 @@ Obtains the widget information provided by all applications on the device (exclu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 
 ## getAllFormsInfo
@@ -50,7 +52,9 @@ function getAllFormsInfo(): Promise<Array<formInfo.FormInfo>>
 
 Obtains the widget information provided by all applications on the device (excluding template widgets). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -70,8 +74,8 @@ Obtains the widget information provided by all applications on the device (exclu
 
 | Error Code ID |
 | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

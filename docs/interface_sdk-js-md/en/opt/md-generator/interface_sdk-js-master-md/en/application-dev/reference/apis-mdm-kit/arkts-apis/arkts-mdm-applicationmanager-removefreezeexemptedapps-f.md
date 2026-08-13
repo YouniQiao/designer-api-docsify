@@ -12,9 +12,11 @@ import { applicationManager } from '@kit.MDMKit';
 function removeFreezeExemptedApps(admin: Want, applicationInstances: Array<common.ApplicationInstance>): void
 ```
 
-Removes the background freeze-exempt application list for a specified user. After the removal, the applications can be frozen by the system. If the parameter list includes uninstalled applications, the removal will still succeed.Installed applications will be removed from the list, while uninstalled ones will not impact the removal process.
+Removes the background freeze-exempt application list for a specified user. After the removal, the applications can be frozen by the system. If the parameter list includes uninstalled applications, the removal will still succeed. Installed applications will be removed from the list, while uninstalled ones will not impact the removal process.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -35,10 +37,10 @@ Removes the background freeze-exempt application list for a specified user. Afte
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

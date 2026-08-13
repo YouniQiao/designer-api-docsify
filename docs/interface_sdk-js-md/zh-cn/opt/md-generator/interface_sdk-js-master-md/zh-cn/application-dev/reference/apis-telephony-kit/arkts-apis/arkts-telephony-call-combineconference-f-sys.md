@@ -8,7 +8,9 @@ function combineConference(callId: number, callback: AsyncCallback<void>): void
 
 合并通话，将两通电话合并成会议电话。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function combineConference(callId: int, callback: AsyncCallback<void>): void--><!--Device-call-function combineConference(callId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -27,13 +29,13 @@ function combineConference(callId: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 8300007 |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 
@@ -58,7 +60,9 @@ function combineConference(callId: number): Promise<void>
 
 合并通话，将两通电话合并成会议电话。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function combineConference(callId: int): Promise<void>--><!--Device-call-function combineConference(callId: int): Promise<void>-End-->
 
@@ -82,13 +86,13 @@ function combineConference(callId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 | 8300007 |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

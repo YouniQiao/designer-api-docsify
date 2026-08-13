@@ -4,6 +4,8 @@ Defines the triggered function when the web page wants to confirm navigation fro
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnBeforeUnloadEvent--><!--Device-unnamed-declare interface OnBeforeUnloadEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ isReload?: boolean
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-OnBeforeUnloadEvent-isReload?: boolean--><!--Device-OnBeforeUnloadEvent-isReload?: boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ message: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,6 +60,8 @@ result: JsResult
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnBeforeUnloadEvent-result: JsResult--><!--Device-OnBeforeUnloadEvent-result: JsResult-End-->
@@ -71,6 +79,8 @@ url: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

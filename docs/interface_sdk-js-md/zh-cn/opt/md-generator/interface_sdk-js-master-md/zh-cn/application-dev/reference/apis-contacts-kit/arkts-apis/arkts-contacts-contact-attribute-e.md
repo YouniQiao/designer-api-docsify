@@ -1,8 +1,10 @@
 # Attribute
 
-枚举，类型为number。联系人属性列表。通过JSON格式创建数据。
+枚举，类型为number。联系人属性列表。 通过JSON格式创建数据。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-contact-enum Attribute--><!--Device-contact-enum Attribute-End-->
 
@@ -17,6 +19,8 @@ ATTR_CONTACT_EVENT = 0
 联系人的生日、周年纪念等重要日期。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ ATTR_EMAIL = 1
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_EMAIL = 1--><!--Device-Attribute-ATTR_EMAIL = 1-End-->
@@ -49,6 +55,8 @@ ATTR_GROUP_MEMBERSHIP = 2
 联系人的群组。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ ATTR_IM = 3
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_IM = 3--><!--Device-Attribute-ATTR_IM = 3-End-->
@@ -81,6 +91,8 @@ ATTR_NAME = 4
 联系人的姓名。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +110,8 @@ ATTR_NICKNAME = 5
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_NICKNAME = 5--><!--Device-Attribute-ATTR_NICKNAME = 5-End-->
@@ -113,6 +127,8 @@ ATTR_NOTE = 6
 联系人的备注。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -130,6 +146,8 @@ ATTR_ORGANIZATION = 7
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_ORGANIZATION = 7--><!--Device-Attribute-ATTR_ORGANIZATION = 7-End-->
@@ -145,6 +163,8 @@ ATTR_PHONE = 8
 联系人的电话号码。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -162,6 +182,8 @@ ATTR_PORTRAIT = 9
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_PORTRAIT = 9--><!--Device-Attribute-ATTR_PORTRAIT = 9-End-->
@@ -177,6 +199,8 @@ ATTR_POSTAL_ADDRESS = 10
 联系人的邮政地址。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -194,6 +218,8 @@ ATTR_RELATION = 11
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_RELATION = 11--><!--Device-Attribute-ATTR_RELATION = 11-End-->
@@ -210,6 +236,8 @@ ATTR_SIP_ADDRESS = 12
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Attribute-ATTR_SIP_ADDRESS = 12--><!--Device-Attribute-ATTR_SIP_ADDRESS = 12-End-->
@@ -225,6 +253,8 @@ ATTR_WEBSITE = 13
 联系人的网站。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

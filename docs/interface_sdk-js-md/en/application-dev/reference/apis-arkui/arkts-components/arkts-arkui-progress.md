@@ -1,11 +1,8 @@
 # Progress
 
-The **Progress** component represents a progress indicator that displays the progress of content loading or an
-operation.
+The **Progress** component represents a progress indicator that displays the progress of content loading or an operation.
 
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## Progress
 
@@ -18,6 +15,8 @@ Creates a progress indicator.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,17 +34,17 @@ Creates a progress indicator.
 
 ## Summary
 
-- [CapsuleStyleOptions](arkts-arkui-progress-capsulestyleoptions-i.md)
-- [CommonProgressStyleOptions](arkts-arkui-progress-commonprogressstyleoptions-i.md)
-- [EclipseStyleOptions](arkts-arkui-progress-eclipsestyleoptions-i.md)
-- [LinearStyleOptions](arkts-arkui-progress-linearstyleoptions-i.md)
-- [ProgressConfiguration](arkts-arkui-progress-progressconfiguration-i.md)
-- [ProgressOptions](arkts-arkui-progress-progressoptions-i.md)
-- [ProgressStyleMap](arkts-arkui-progress-progressstylemap-i.md)
-- [ProgressStyleOptions](arkts-arkui-progress-progressstyleoptions-i.md)
-- [RingStyleOptions](arkts-arkui-progress-ringstyleoptions-i.md)
-- [ScaleRingStyleOptions](arkts-arkui-progress-scaleringstyleoptions-i.md)
-- [ScanEffectOptions](arkts-arkui-progress-scaneffectoptions-i.md)
-- [ProgressStatus](arkts-arkui-progress-progressstatus-e.md)
-- [ProgressStyle](arkts-arkui-progress-progressstyle-e.md)
-- [ProgressType](arkts-arkui-progress-progresstype-e.md)
+- [CapsuleStyleOptions](arkts-arkui-capsulestyleoptions-i.md)
+- [CommonProgressStyleOptions](arkts-arkui-commonprogressstyleoptions-i.md)
+- [EclipseStyleOptions](arkts-arkui-eclipsestyleoptions-i.md)
+- [LinearStyleOptions](arkts-arkui-linearstyleoptions-i.md)
+- [ProgressConfiguration](arkts-arkui-progressconfiguration-i.md)
+- [ProgressOptions](arkts-arkui-progressoptions-i.md)
+- [ProgressStyleMap](arkts-arkui-progressstylemap-i.md)
+- [ProgressStyleOptions](arkts-arkui-progressstyleoptions-i.md)
+- [RingStyleOptions](arkts-arkui-ringstyleoptions-i.md)
+- [ScaleRingStyleOptions](arkts-arkui-scaleringstyleoptions-i.md)
+- [ScanEffectOptions](arkts-arkui-scaneffectoptions-i.md)
+- [ProgressStatus](arkts-arkui-progressstatus-e.md)
+- [ProgressStyle](arkts-arkui-progressstyle-e.md)
+- [ProgressType](arkts-arkui-progresstype-e.md)

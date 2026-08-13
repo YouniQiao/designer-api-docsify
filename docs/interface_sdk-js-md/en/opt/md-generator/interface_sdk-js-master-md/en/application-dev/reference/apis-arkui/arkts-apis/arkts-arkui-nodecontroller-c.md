@@ -1,12 +1,10 @@
 # NodeController
 
-The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a [NodeContainer](../@internal/component/ets/node_container)component.
-
-> **NOTE：**
-> 
-> - NodeController objects do not support JSON serialization.
+The **NodeController** module provides APIs for managing custom nodes, such as creating, showing, and updating custom nodes, and APIs for mounting custom nodes to a NodeContainer component. > **NOTE：**> > - NodeController objects do not support JSON serialization.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export abstract class NodeController--><!--Device-unnamed-export abstract class NodeController-End-->
 
@@ -18,14 +16,11 @@ The **NodeController** module provides APIs for managing custom nodes, such as c
 aboutToAppear?(): void
 ```
 
-Called after the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance is attached and about to appear.
-
-> **NOTE：**
-> 
-> For details about the callback timing, see [onAppear](CommonMethod#onAppear).
+Called after the NodeContainer component bound to this **NodeController** instance is attached and about to appear. > **NOTE：**> > For details about the callback timing, see onAppear.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,14 +36,11 @@ Called after the [NodeContainer](../@internal/component/ets/node_container) comp
 aboutToDisappear?(): void
 ```
 
-Called when the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance is destroyed.
-
-> **NOTE：**
-> 
-> For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onDisAppear).
+Called when the NodeContainer component bound to this **NodeController** instance is destroyed. > **NOTE：**> > For details about the callback timing, see [onDisAppear](../arkts-components/arkts-arkui-commonmethod-c.md#onDisAppear).
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,10 +56,11 @@ Called when the [NodeContainer](../@internal/component/ets/node_container) compo
 aboutToResize?(size: Size): void
 ```
 
-Called when the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance is resized.
+Called when the NodeContainer component bound to this **NodeController** instance is resized.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,24 +82,11 @@ Called when the [NodeContainer](../@internal/component/ets/node_container) compo
 abstract makeNode(uiContext: UIContext): FrameNode | null
 ```
 
-Called when the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance is created. This callback returns a node, which will be mounted to the  
-**NodeContainer**.
-
-This callback can also be invoked through the **rebuild()** method of **NodeController**.
-
-> **NOTE：**
-> 
-> [NodeContainer](../@internal/component/ets/node_container) does not support cross-instance reuse. If
-> [NodeContainer](../@internal/component/ets/node_container) is reused across instances and
-> [NodeController](#NodeController) of [NodeContainer](../@internal/component/ets/node_container)
-> triggers the [makeNode](#makeNode) callback method, the
-> [UIContext](@ohos.arkui.UIContext) object in the input parameter may be undefined. In this case, you need
-> to check whether the [UIContext](@ohos.arkui.UIContext) object in the input parameter is undefined, which
-> prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when
-> the input parameter is used.
+Called when the NodeContainer component bound to this **NodeController** instance is created. This callback returns a node, which will be mounted to the **NodeContainer**. This callback can also be invoked through the **rebuild()** method of **NodeController**. > **NOTE：**> > NodeContainer does not support cross-instance reuse. If > NodeContainer is reused across instances and > [NodeController](#NodeController) of NodeContainer > triggers the [makeNode](#makeNode) callback method, the > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object in the input parameter may be undefined. In this case, you need > to check whether the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object in the input parameter is undefined, which > prevents the [invalid UIContext](../../../ui/arkts-wrong-uicontext-debug.md#identifying-uicontext-errors) when > the input parameter is used.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,14 +114,11 @@ This callback can also be invoked through the **rebuild()** method of **NodeCont
 onAttach?(): void
 ```
 
-Called when the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance is attached to the main node tree.
-
-> **NOTE：**
-> 
-> For details about the callback timing, see [onAttach](CommonMethod#onAttach).
+Called when the NodeContainer component bound to this **NodeController** instance is attached to the main node tree. > **NOTE：**> > For details about the callback timing, see onAttach.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -157,10 +134,11 @@ Called when the [NodeContainer](../@internal/component/ets/node_container) compo
 onBind?(containerId: number): void
 ```
 
-Called after this **NodeController** instance is bound to a  
-[NodeContainer](../@internal/component/ets/node_container) component.
+Called after this **NodeController** instance is bound to a NodeContainer component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,14 +160,11 @@ Called after this **NodeController** instance is bound to a
 onDetach?(): void
 ```
 
-Called when the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance is detached from the main node tree.
-
-> **NOTE：**
-> 
-> For details about the callback timing, see [onDetach](CommonMethod#onDetach).
+Called when the NodeContainer component bound to this **NodeController** instance is detached from the main node tree. > **NOTE：**> > For details about the callback timing, see onDetach.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -205,10 +180,11 @@ Called when the [NodeContainer](../@internal/component/ets/node_container) compo
 onTouchEvent?(event: TouchEvent): void
 ```
 
-Called when the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance receives a touch event.
+Called when the NodeContainer component bound to this **NodeController** instance receives a touch event.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -230,10 +206,11 @@ Called when the [NodeContainer](../@internal/component/ets/node_container) compo
 onUnbind?(containerId: number): void
 ```
 
-Called after this **NodeController** instance is unbound from a  
-[NodeContainer](../@internal/component/ets/node_container) component.
+Called after this **NodeController** instance is unbound from a NodeContainer component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -255,10 +232,11 @@ Called after this **NodeController** instance is unbound from a
 onWillBind?(containerId: number): void
 ```
 
-Called when this **NodeController** instance is about to be bound to a  
-[NodeContainer](../@internal/component/ets/node_container) component.
+Called when this **NodeController** instance is about to be bound to a NodeContainer component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -280,10 +258,11 @@ Called when this **NodeController** instance is about to be bound to a
 onWillUnbind?(containerId: number): void
 ```
 
-Called when this **NodeController** instance is about to be unbound from a  
-[NodeContainer](../@internal/component/ets/node_container) component.
+Called when this **NodeController** instance is about to be unbound from a NodeContainer component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -305,21 +284,11 @@ Called when this **NodeController** instance is about to be unbound from a
 rebuild(): void
 ```
 
-Instructs the [NodeContainer](../@internal/component/ets/node_container) component bound to this  
-**NodeController** instance to call the [makeNode](#makeNode) API again to change child nodes.
-
-> **NOTE：**
-> 
-> Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that
-> the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound
-> NodeContainer.
-> 
-> In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for
-> example, during event callbacks, you can use the
-> [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) method of
-> [UIContext](@ohos.arkui.UIContext) to explicitly define the UI context at the time of the call.
+Instructs the NodeContainer component bound to this **NodeController** instance to call the [makeNode](#makeNode) API again to change child nodes. > **NOTE：**> > Since the **rebuild** API is actively called by the application and is tied to the UI, you need to ensure that > the UI context is valid at the time of the call, that is, it must be consistent with the UI context of the bound > NodeContainer. > > In cases where the [UI context is unclear](../../../ui/arkts-global-interface.md#ambiguous-ui-context), for > example, during event callbacks, you can use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) method of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to explicitly define the UI context at the time of the call.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

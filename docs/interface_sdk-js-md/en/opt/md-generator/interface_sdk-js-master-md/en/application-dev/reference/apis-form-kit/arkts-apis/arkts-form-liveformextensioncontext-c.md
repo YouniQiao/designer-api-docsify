@@ -1,14 +1,14 @@
 # LiveFormExtensionContext
 
-**LiveFormExtensionContext**, inherited from   
-[ExtensionContext](./application/ExtensionContext:ExtensionContext), is the context of   
-[LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
+**LiveFormExtensionContext**, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), is the context of [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md#LiveFormExtensionAbility).
 
-**Inheritance/Implementation:** LiveFormExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** LiveFormExtensionContext extends ExtensionContext
 
-**Since:** 20
+**Since:** 23
 
-<!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LiveFormExtensionContext--><!--Device-unnamed-declare class LiveFormExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -18,13 +18,15 @@
 startAbilityByLiveForm(want: Want): Promise<void>
 ```
 
-Starts the widget provider (application) page. This API uses a promise to return the result.&lt;br&gt;This API can only be used to start the page of the interactive widget provider (application). If this API is used to start the page of another application, error code 16501011 will be reported.&lt;br&gt;You are advised to call this API in click event callbacks. Calling it in callbacks of other gesture events is not recommended, and direct calls in non-gesture events are not allowed. Otherwise, the error code 16501011 will be reported.&lt;br&gt;In addition, this API can be directly called in the click event callback but cannot be called after a delay. Otherwise, the error code 16501011 will be reported.
+Starts the widget provider (application) page. This API uses a promise to return the result. &lt;br&gt;This API can only be used to start the page of the interactive widget provider (application). If this API is used to start the page of another application, error code 16501011 will be reported. &lt;br&gt;You are advised to call this API in click event callbacks. Calling it in callbacks of other gesture events is not recommended, and direct calls in non-gesture events are not allowed. Otherwise, the error code 16501011 will be reported. &lt;br&gt;In addition, this API can be directly called in the click event callback but cannot be called after a delay. Otherwise, the error code 16501011 will be reported.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LiveFormExtensionContext-startAbilityByLiveForm(want: Want): Promise<void>--><!--Device-LiveFormExtensionContext-startAbilityByLiveForm(want: Want): Promise<void>-End-->
 
@@ -46,11 +48,11 @@ Starts the widget provider (application) page. This API uses a promise to return
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16501011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501011-api-not-supported) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16501011](../errorcode-form.md#16501011-api-not-supported) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

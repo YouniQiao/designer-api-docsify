@@ -6,13 +6,11 @@
 function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer
 ```
 
-将数组中指定字节长度的内容复制并拼接后，返回新的FastBuffer对象。
-
-当数组中所有对象的长度总和大于totalLength时，返回结果的长度将被截断为totalLength。
-
-当数组中所有对象的长度总和小于totalLength时，返回结果的多余部分将会被填充为0。
+将数组中指定字节长度的内容复制并拼接后，返回新的FastBuffer对象。 当数组中所有对象的长度总和大于totalLength时，返回结果的长度将被截断为totalLength。 当数组中所有对象的长度总和小于totalLength时，返回结果的多余部分将会被填充为0。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -37,7 +35,7 @@ function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBu
 
 | 错误码ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 

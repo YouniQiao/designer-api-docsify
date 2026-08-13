@@ -2,7 +2,9 @@
 
 客户端调用connect()后，返回的连接结果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-linkEnhance-interface ConnectResult--><!--Device-linkEnhance-interface ConnectResult-End-->
 
@@ -18,7 +20,9 @@ deviceId: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,17 +36,13 @@ deviceId: string
 reason: number
 ```
 
-连接成功返回0，连接失败返回错误码：
-
-- 32390200：表示客户端连接超时。  
-- 32390201：表示服务端服务未启动。  
-- 32390300：表示内部错误。
-
-更多关于错误码的详细介绍请参考[增强连接错误码](../../../reference/apis-distributedservice-kit/errorcode-link-enhance.md)。
+连接成功返回0，连接失败返回错误码： - 32390200：表示客户端连接超时。 - 32390201：表示服务端服务未启动。 - 32390300：表示内部错误。 更多关于错误码的详细介绍请参考[增强连接错误码](../../apis-distributedservice-kit/errorcode-link-enhance.md)。
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +60,9 @@ success: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

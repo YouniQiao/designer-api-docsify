@@ -1,8 +1,10 @@
 # DataAbilityHelper
 
-可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper)接口获取DataAbilityHelper对象。
+可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper)接口获取 DataAbilityHelper对象。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DataAbilityHelper--><!--Device-unnamed-export interface DataAbilityHelper-End-->
 
@@ -17,6 +19,8 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 将多个数据记录插入数据库。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -63,6 +67,8 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 将多个数据记录插入数据库。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -111,6 +117,8 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void-End-->
@@ -155,6 +163,8 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 调用DataAbility的扩展接口。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -205,6 +215,8 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void-End-->
@@ -248,6 +260,8 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 从数据库中删除一个或多个数据记录。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -294,6 +308,8 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
@@ -335,6 +351,8 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -375,6 +393,8 @@ denormalizeUri(uri: string): Promise<string>
 将由normalizeUri（uri）生成的给定规范化uri转换为非规范化uri。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -422,6 +442,8 @@ executeBatch(
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void--><!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void-End-->
@@ -465,6 +487,8 @@ executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Arra
 批量操作数据库中的数据。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -514,6 +538,8 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void-End-->
@@ -555,6 +581,8 @@ getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 获取支持的文件媒体资源类型。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -599,6 +627,8 @@ getType(uri: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -639,6 +669,8 @@ getType(uri: string): Promise<string>
 获取给定uri指向数据的媒体资源类型。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -682,6 +714,8 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
@@ -705,6 +739,8 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 将单个数据记录插入数据库。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -734,6 +770,8 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 将引用数据功能的给定uri转换为规范化uri。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -775,6 +813,8 @@ normalizeUri(uri: string): Promise<string>
 将引用数据功能的给定uri转换为规范化uri。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -818,6 +858,8 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
@@ -859,6 +901,8 @@ notifyChange(uri: string): Promise<void>
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>--><!--Device-DataAbilityHelper-notifyChange(uri: string): Promise<void>-End-->
@@ -891,7 +935,7 @@ DAHelper.notifyChange('dataability:///com.example.DataAbility').then(() => {
 });
 ```
 
-## off('dataChange')
+## off_dataChange
 
 ```TypeScript
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
@@ -900,6 +944,8 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 注销观察者以停止监听uri指定数据的数据变化通知。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -938,7 +984,7 @@ DAHelper.off(
 );
 ```
 
-## on('dataChange')
+## on_dataChange
 
 ```TypeScript
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
@@ -947,6 +993,8 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 注册观察者以监听uri指定数据的数据变化通知。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -991,6 +1039,8 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void-End-->
@@ -1033,6 +1083,8 @@ openFile(uri: string, mode: string): Promise<number>
 打开指定uri对应的文件，返回文件描述符。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1083,6 +1135,8 @@ query(
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void--><!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void-End-->
@@ -1129,6 +1183,8 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1169,6 +1225,8 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 查询数据库中的数据。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1213,6 +1271,8 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1256,6 +1316,8 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 查询数据库中的数据。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1309,6 +1371,8 @@ update(
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void--><!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void-End-->
@@ -1360,6 +1424,8 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 更新数据库中的数据记录。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1413,6 +1479,8 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 predicates筛选条件为空，自定义更新数据库的处理逻辑。使用callback异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

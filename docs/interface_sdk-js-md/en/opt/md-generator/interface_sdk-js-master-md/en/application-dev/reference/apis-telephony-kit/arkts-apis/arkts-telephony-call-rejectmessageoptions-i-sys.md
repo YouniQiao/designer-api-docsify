@@ -2,7 +2,9 @@
 
 Defines options for the call rejection message.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface RejectMessageOptions--><!--Device-call-export interface RejectMessageOptions-End-->
 
@@ -26,7 +28,9 @@ Message content.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RejectMessageOptions-messageContent: string--><!--Device-RejectMessageOptions-messageContent: string-End-->
 

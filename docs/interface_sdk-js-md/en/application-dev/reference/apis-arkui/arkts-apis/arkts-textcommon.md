@@ -67,7 +67,7 @@
 | [KeyboardAppearance](arkts-arkui-textcommon-keyboardappearance-e.md) | Defines keyboard appearance. |
 | [MaxLinesMode](arkts-arkui-textcommon-maxlinesmode-e.md) | Defines maxlines mode. |
 | [MenuType](arkts-arkui-textcommon-menutype-e.md) | Defines menu type. |
-| [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md) | An enumeration that defines the line corner style, i.e.,the style of the brush when drawing a polyline at the corners of the line segments. |
+| [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md) | An enumeration that defines the line corner style, i.e., the style of the brush when drawing a polyline at the corners of the line segments. |
 | [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md) | Defines the superscript style. |
 | [TextContentAlign](arkts-arkui-textcommon-textcontentalign-e.md) | Alignment of text content. |
 | [TextDataDetectorType](arkts-arkui-textcommon-textdatadetectortype-e.md) | Defines the text data detector type. |
@@ -99,7 +99,7 @@
 | [OnDidChangeCallback](arkts-arkui-ondidchangecallback-t.md) | Callback after content changed. |
 | [OnMenuItemClickCallback](arkts-arkui-onmenuitemclickcallback-t.md) | Invoke upon clicking an item, capable of intercepting the default system menu execution behavior. |
 | [OnPrepareMenuCallback](arkts-arkui-onpreparemenucallback-t.md) | Callback before displaying the menu when the selection range changes. |
-| [Paragraph](arkts-arkui-paragraph-t.md) | The Paragraph type provides detailed information about a paragraph,including properties such as line count, line height, and other relevant metrics. |
+| [Paragraph](arkts-arkui-paragraph-t.md) | The Paragraph type provides detailed information about a paragraph, including properties such as line count, line height, and other relevant metrics. |
 | [RectHeightStyle](arkts-arkui-rectheightstyle-t.md) | Define the RectHeightStyle type. |
 | [RectWidthStyle](arkts-arkui-rectwidthstyle-t.md) | Define the RectWidthStyle type. |
 | [TextBox](arkts-arkui-textbox-t.md) | Define the TextBox type. |

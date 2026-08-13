@@ -6,7 +6,9 @@ export type NotificationCheckRequest = _NotificationCheckRequest
 
 描述通知的鉴权信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest--><!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest-End-->
 

@@ -4,7 +4,9 @@ Enum for across-display policy used when maximizing in the half-folded state of 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-window-enum AcrossDisplayPresentation--><!--Device-window-enum AcrossDisplayPresentation-End-->
 
@@ -16,11 +18,13 @@ Enum for across-display policy used when maximizing in the half-folded state of 
 FOLLOW_ACROSS_DISPLAY_SETTING = 0
 ```
 
-Indicates following the current acrossDisplayPresentation.If the acrossDisplayPresentation has not been set, the default system policy applies:In the half-folded state of the device, the window enters single-screen maximization(i.e., when maximized, the window is displayed only on the upper or lower half of the screen).In the expanded state, the window is maximized and remains across-display mode(i.e., spanning across both the upper and lower displays) when folded back to the half-folded state.
+Indicates following the current acrossDisplayPresentation. If the acrossDisplayPresentation has not been set, the default system policy applies: In the half-folded state of the device, the window enters single-screen maximization (i.e., when maximized, the window is displayed only on the upper or lower half of the screen). In the expanded state, the window is maximized and remains across-display mode (i.e., spanning across both the upper and lower displays) when folded back to the half-folded state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,11 +38,13 @@ Indicates following the current acrossDisplayPresentation.If the acrossDisplayPr
 ENTER_ACROSS_DISPLAY_MODE = 1
 ```
 
-In the half-folded state of the device, the window could directly enter the across-display mode.In the expanded state, the window is maximized and remains across-display mode when folded back to the half-folded state.
+In the half-folded state of the device, the window could directly enter the across-display mode. In the expanded state, the window is maximized and remains across-display mode when folded back to the half-folded state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +62,9 @@ In the half-folded state of the device, the window exits across-display mode and
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

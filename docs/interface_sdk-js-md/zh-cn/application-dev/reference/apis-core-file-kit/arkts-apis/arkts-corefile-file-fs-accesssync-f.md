@@ -6,13 +6,13 @@
 declare function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-以同步方法检查文件或目录是否存在，或校验操作权限。
-
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+以同步方法检查文件或目录是否存在，或校验操作权限。 校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -57,13 +57,13 @@ declare function accessSync(path: string, mode?: AccessModeType): boolean
 declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-以同步方法检查文件或目录是否在本地，或校验操作权限。
-
-校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
+以同步方法检查文件或目录是否在本地，或校验操作权限。 校验读、写或读写权限不通过会抛出13900012（Permission denied）错误码。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean--><!--Device-unnamed-declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean-End-->
 
@@ -88,7 +88,7 @@ declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlag
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
 | 13900023 | Text file busy |
 | 13900033 | Too many symbolic links encountered |

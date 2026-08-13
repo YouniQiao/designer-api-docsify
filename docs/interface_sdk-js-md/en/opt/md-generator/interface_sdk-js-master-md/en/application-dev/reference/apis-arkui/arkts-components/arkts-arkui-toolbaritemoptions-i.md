@@ -4,6 +4,8 @@ Provides optional parameters for **ToolBarItem** configuration.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ToolBarItemOptions--><!--Device-unnamed-interface ToolBarItemOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,13 @@ Provides optional parameters for **ToolBarItem** configuration.
 placement?: ToolBarItemPlacement
 ```
 
-Placement position of the toolbar item.
-
-Default value: **ToolBarItemPlacement.TOP_BAR_LEADING**.
-
-**ToolBarItemPlacement.TOP_BAR_LEADING**: places the item at the start of the top bar.
-
-**ToolBarItemPlacement.TOP_BAR_TRAILING**: places the item at the end of the top bar.
+Placement position of the toolbar item. Default value: **ToolBarItemPlacement.TOP_BAR_LEADING**. **ToolBarItemPlacement.TOP_BAR_LEADING**: places the item at the start of the top bar. **ToolBarItemPlacement.TOP_BAR_TRAILING**: places the item at the end of the top bar.
 
 **Type:** [ToolBarItemPlacement](arkts-arkui-toolbaritemplacement-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,5 @@
 # @ohos.WorkSchedulerExtensionAbility
 
-The **WorkSchedulerExtensionAbility** module provides callbacks for deferred task scheduling. You can override the
- APIs provided by this module. When a deferred task is triggered, the system calls back the application through the
- APIs and processes the task logic in the callback.
-
-
 ## Modules to Import
 
 ```TypeScript

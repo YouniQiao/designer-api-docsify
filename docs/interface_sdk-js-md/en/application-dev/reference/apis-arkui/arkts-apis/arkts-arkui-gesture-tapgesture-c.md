@@ -8,7 +8,9 @@ Defines TapGesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class TapGesture extends Gesture--><!--Device-unnamed-export declare class TapGesture extends Gesture-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class TapGesture--><!--Device-unnamed-export declare class TapGesture-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,11 +20,13 @@ Defines TapGesture.
 static $_instantiate(factory: () => TapGesture, value?: TapGestureParameters): TapGesture
 ```
 
-Set the value.TapGestureParameters: The parameters of the tapGesture.
+Set the value. TapGestureParameters: The parameters of the tapGesture.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +58,8 @@ Tap gesture recognition success callback.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

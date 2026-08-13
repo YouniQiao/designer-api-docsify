@@ -2,7 +2,9 @@
 
 Describes the GPU memory data of an application, including the GL and Graph parts.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-interface GraphicsMemorySummary--><!--Device-hidebug-interface GraphicsMemorySummary-End-->
 
@@ -24,9 +26,11 @@ GL memory
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GraphicsMemorySummary-gl: int--><!--Device-GraphicsMemorySummary-gl: int-End-->
 
@@ -42,9 +46,11 @@ Graph memory
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GraphicsMemorySummary-graph: int--><!--Device-GraphicsMemorySummary-graph: int-End-->
 

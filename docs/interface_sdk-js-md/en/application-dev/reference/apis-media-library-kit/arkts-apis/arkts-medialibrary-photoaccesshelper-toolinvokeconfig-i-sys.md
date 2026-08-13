@@ -4,7 +4,9 @@ Configuration for invoking an analysis tool.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface ToolInvokeConfig--><!--Device-photoAccessHelper-interface ToolInvokeConfig-End-->
 
@@ -30,7 +32,9 @@ Parameters of the analysis tool to invoke, in JSON string format. The total leng
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,9 @@ Type of the analysis tool to invoke.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

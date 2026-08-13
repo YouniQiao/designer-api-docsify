@@ -2,9 +2,11 @@
 
 Defines the application account manager, which is used to manage account information of applications.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
 
@@ -22,13 +24,7 @@ import { appAccount } from '@kit.BasicServicesKit';
 addAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account with the given name. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createAccount)
-> instead.
+Adds an application account with the given name. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [createAccount](#createAccount) > instead.
 
 **Since:** 7
 
@@ -36,7 +32,7 @@ Adds an application account with the given name. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**Substitutes:** [createAccount](#createAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -47,7 +43,7 @@ Adds an application account with the given name. This API uses an asynchronous c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -65,13 +61,7 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Adds an application account name and additional information. This API uses an asynchronous callback to return the  result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createAccount)
-> instead.
+Adds an application account name and additional information. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [createAccount](#createAccount) > instead.
 
 **Since:** 7
 
@@ -79,7 +69,7 @@ Adds an application account name and additional information. This API uses an as
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**Substitutes:** [createAccount](#createAccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -91,7 +81,7 @@ Adds an application account name and additional information. This API uses an as
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -109,12 +99,7 @@ appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => {
 addAccount(name: string, extraInfo?: string): Promise<void>
 ```
 
-Adds an application account name and additional information. This API uses a promise to return the result.
-
-> **NOTE：**
-> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createAccount-2)
-> instead.
+Adds an application account name and additional information. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [createAccount](#createAccount) > instead.
 
 **Since:** 7
 
@@ -122,7 +107,7 @@ Adds an application account name and additional information. This API uses a pro
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**Substitutes:** [createAccount](#createAccount)(name: string, options?: CreateAccountOptions)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
@@ -164,13 +149,7 @@ addAccountImplicitly(
     ): void
 ```
 
-Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [createAccountImplicitly](#createAccountImplicitly)
-> instead.
+Adds an application account implicitly based on the specified owner. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [createAccountImplicitly](#createAccountImplicitly) > instead.
 
 **Since:** 8
 
@@ -178,7 +157,7 @@ Adds an application account implicitly based on the specified owner. This API us
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccountImplicitly](appAccount.AppAccountManager.createAccountImplicitly(owner:)
+**Substitutes:** [createAccountImplicitly](#createAccountImplicitly)(owner: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -201,9 +180,11 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 Authenticates an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
 
@@ -222,13 +203,13 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -294,6 +275,8 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -312,13 +295,13 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -385,7 +368,9 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void-End-->
 
@@ -405,12 +390,12 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## authenticate
 
@@ -424,13 +409,7 @@ authenticate(
     ): void
 ```
 
-Authenticates an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [auth](#auth)
-> instead.
+Authenticates an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [auth](#auth) > instead.
 
 **Since:** 8
 
@@ -438,7 +417,7 @@ Authenticates an application account. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [auth](appAccount.AppAccountManager.auth(name:)
+**Substitutes:** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -462,9 +441,11 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 Checks whether an application account has specific labels. This API uses an asynchronous callback to return the result. The labels are checked by the authenticator of the target application.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
 
@@ -477,19 +458,19 @@ Checks whether an application account has specific labels. This API uses an asyn
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | labels | Array&lt;string&gt; | Yes | Labels to check. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** or **false**. The value **true** means the application account has the labels; the value **false** means the opposite. If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -520,9 +501,11 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 Checks whether an application account has specific labels. This API uses a promise to return the result. The labels are checked by the authenticator of the target application.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
@@ -546,13 +529,13 @@ Checks whether an application account has specific labels. This API uses a promi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or labels. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -579,11 +562,13 @@ try {
 checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether an application can access the data of an account. This API uses an asynchronous callback to return  the result.
+Checks whether an application can access the data of an account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -595,16 +580,16 @@ Checks whether an application can access the data of an account. This API uses a
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the application can access the account data; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -634,9 +619,11 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 Checks whether an application can access the data of an account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
 
@@ -659,10 +646,10 @@ Checks whether an application can access the data of an account. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -687,13 +674,7 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback  to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](#checkDataSyncEnabled)
-> instead.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkDataSyncEnabled](#checkDataSyncEnabled) > instead.
 
 **Since:** 7
 
@@ -701,7 +682,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**Substitutes:** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -714,7 +695,7 @@ Checks whether data synchronization is enabled for an application account. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 ## Examples
 
@@ -736,12 +717,7 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](#checkDataSyncEnabled-1) instead.
+Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [checkDataSyncEnabled](#checkDataSyncEnabled) instead.
 
 **Since:** 7
 
@@ -749,7 +725,7 @@ Checks whether data synchronization is enabled for an application account. This 
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**Substitutes:** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -789,9 +765,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -804,17 +782,17 @@ Checks the visibility of an authorization token of the specified authentication 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -844,9 +822,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -870,11 +850,11 @@ Checks the visibility of an authorization token of the specified authentication 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -900,11 +880,13 @@ try {
 checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback  to return the result.
+Checks whether data synchronization is enabled for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -917,17 +899,17 @@ Checks whether data synchronization is enabled for an application account. This 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means data synchronization is enabled for the application account; the value **false** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -956,9 +938,11 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 Checks whether data synchronization is enabled for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -982,11 +966,11 @@ Checks whether data synchronization is enabled for an application account. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1016,13 +1000,7 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility)
-> instead.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > instead.
 
 **Since:** 8
 
@@ -1030,7 +1008,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**Substitutes:** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
 
@@ -1043,7 +1021,7 @@ Checks the visibility of an authorization token of the specified authentication 
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** can be **true** (the authorization token is visible to the application) or **false** (the authorization token is not visible to the application). If the operation fails, **err** is an error object. |
 
 ## Examples
 
@@ -1066,13 +1044,7 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility-1)
-> instead.
+Checks the visibility of an authorization token of the specified authentication type to an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > instead.
 
 **Since:** 8
 
@@ -1080,7 +1052,7 @@ Checks the visibility of an authorization token of the specified authentication 
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**Substitutes:** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -1121,9 +1093,11 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 Creates an application account with the given name. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1134,17 +1108,17 @@ Creates an application account with the given name. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -1173,9 +1147,11 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 Creates an application account with custom data. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -1187,17 +1163,17 @@ Creates an application account with custom data. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | options | [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md) | Yes | Options for creating the application account. You can customize data based on service requirements, but do not add sensitive data (such as passwords and tokens). |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -1231,9 +1207,11 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 Creates an application account with custom data. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
 
@@ -1256,11 +1234,11 @@ Creates an application account with custom data. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or options. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -1292,9 +1270,11 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 Creates an application account implicitly based on the specified account owner. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
@@ -1311,13 +1291,13 @@ Creates an application account implicitly based on the specified account owner. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 ## Examples
 
@@ -1372,9 +1352,11 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 Creates an application account implicitly based on the specified account owner and options. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
@@ -1392,13 +1374,13 @@ Creates an application account implicitly based on the specified account owner a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts reaches the upper limit. |
 
 ## Examples
 
@@ -1455,13 +1437,7 @@ struct Index {
 deleteAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](#removeAccount)
-> instead.
+Deletes an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [removeAccount](#removeAccount) > instead.
 
 **Since:** 7
 
@@ -1469,7 +1445,7 @@ Deletes an application account. This API uses an asynchronous callback to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**Substitutes:** [removeAccount](#removeAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1480,7 +1456,7 @@ Deletes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1498,13 +1474,7 @@ appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => {
 deleteAccount(name: string): Promise<void>
 ```
 
-Deletes an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](#removeAccount-1)
-> instead.
+Deletes an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [removeAccount](#removeAccount) > instead.
 
 **Since:** 7
 
@@ -1512,7 +1482,7 @@ Deletes an application account. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**Substitutes:** [removeAccount](#removeAccount)(name: string)
 
 <!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
@@ -1548,11 +1518,13 @@ appAccountManager.deleteAccount('ZhaoLiu').then(() => {
 deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1566,17 +1538,17 @@ Deletes the authorization token of the specified authentication type for an appl
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. If the token does not exist, no operation is performed. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1606,9 +1578,11 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1633,11 +1607,11 @@ Deletes the authorization token of the specified authentication type for an appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner, authType or token. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -1664,9 +1638,11 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 Deletes the credential of the specified type from an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1678,17 +1654,17 @@ Deletes the credential of the specified type from an application account. This A
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -1717,9 +1693,11 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 Deletes the credential of the specified type from an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
@@ -1742,11 +1720,11 @@ Deletes the credential of the specified type from an application account. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -1771,13 +1749,7 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](#deleteAuthToken)
-> instead.
+Deletes the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [deleteAuthToken](#deleteAuthToken) > instead.
 
 **Since:** 8
 
@@ -1785,7 +1757,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**Substitutes:** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1799,7 +1771,7 @@ Deletes the authorization token of the specified authentication type for an appl
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1822,13 +1794,7 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](#deleteAuthToken-1)
-> instead.
+Deletes the authorization token of the specified authentication type for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [deleteAuthToken](#deleteAuthToken) > instead.
 
 **Since:** 8
 
@@ -1836,7 +1802,7 @@ Deletes the authorization token of the specified authentication type for an appl
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**Substitutes:** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1875,13 +1841,7 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Disables an application account from accessing an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess)
-> instead.
+Disables an application account from accessing an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
@@ -1889,7 +1849,7 @@ Disables an application account from accessing an application. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1901,7 +1861,7 @@ Disables an application account from accessing an application. This API uses an 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1919,13 +1879,7 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err
 disableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-Disables an application account from accessing an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess-1)
-> instead.
+Disables an application account from accessing an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
@@ -1933,7 +1887,7 @@ Disables an application account from accessing an application. This API uses a p
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -1970,13 +1924,7 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-Enables an application account to access an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess)
-> instead.
+Enables an application account to access an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
@@ -1984,7 +1932,7 @@ Enables an application account to access an application. This API uses an asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1996,7 +1944,7 @@ Enables an application account to access an application. This API uses an asynch
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2018,13 +1966,7 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
 enableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-Enables an application account to access an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setAppAccess-1)
-> instead.
+Enables an application account to access an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setAppAccess](#setAppAccess) > instead.
 
 **Since:** 7
 
@@ -2032,7 +1974,7 @@ Enables an application account to access an application. This API uses a promise
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**Substitutes:** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -2069,13 +2011,7 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](#getCredential)
-> instead.
+Obtains the credential of an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCredential](#getCredential) > instead.
 
 **Since:** 7
 
@@ -2083,7 +2019,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**Substitutes:** [getCredential](#getCredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2095,7 +2031,7 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2117,13 +2053,7 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
 getAccountCredential(name: string, credentialType: string): Promise<string>
 ```
 
-Obtains the credential of an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](#getCredential-1)
-> instead.
+Obtains the credential of an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCredential](#getCredential) > instead.
 
 **Since:** 7
 
@@ -2131,7 +2061,7 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**Substitutes:** [getCredential](#getCredential)(name: string, credentialType: string)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -2168,13 +2098,7 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that  can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData)
-> instead.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) > instead.
 
 **Since:** 7
 
@@ -2182,7 +2106,7 @@ Obtains additional information of an application account. Additional information
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2193,7 +2117,7 @@ Obtains additional information of an application account. Additional information
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the additional information obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2215,12 +2139,7 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-Obtains additional information of an application account. Additional information refers to other information that  can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData-1) instead.
+Obtains additional information of an application account. Additional information refers to other information that can be converted to the string type. It cannot contain sensitive information, such as the application account password and token. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) instead.
 
 **Since:** 7
 
@@ -2228,7 +2147,7 @@ Obtains additional information of an application account. Additional information
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
@@ -2264,11 +2183,13 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2279,15 +2200,15 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is null and **data** is the application account information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -2315,11 +2236,13 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
@@ -2341,9 +2264,9 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -2369,13 +2292,7 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](#getAllAccounts)
-> instead.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAllAccounts](#getAllAccounts) > instead.
 
 **Since:** 7
 
@@ -2383,7 +2300,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAccounts](appAccount.AppAccountManager.getAllAccounts(callback:)
+**Substitutes:** [getAllAccounts](#getAllAccounts)(callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2395,7 +2312,7 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2417,12 +2334,7 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAllAccounts](#getAllAccounts) instead.
+Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAllAccounts](#getAllAccounts) instead.
 
 **Since:** 7
 
@@ -2462,11 +2374,13 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains information about all accessible application accounts. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2476,14 +2390,14 @@ Obtains information about all accessible application accounts. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accessible application accounts. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2510,11 +2424,13 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains information about all accessible application accounts. This API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications or&lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
+Obtains information about all accessible application accounts. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications or &lt;br&gt; have gained the ohos.permission.GET_ALL_APP_ACCOUNTS permission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
@@ -2530,7 +2446,7 @@ Obtains information about all accessible application accounts. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2555,13 +2471,7 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses an asynchronous callback to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](#getAccountsByOwner)
-> instead.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses an asynchronous callback to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAccountsByOwner](#getAccountsByOwner) > instead.
 
 **Since:** 7
 
@@ -2569,7 +2479,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**Substitutes:** [getAccountsByOwner](#getAccountsByOwner)(owner: string, callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2582,7 +2492,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return information about all accessible application accounts. |
 
 ## Examples
 
@@ -2605,12 +2515,7 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-Obtains the application accounts that can be accessed by the invoker based on the application account owner. This  API uses a promise to return the result.This method applies to the following accounts:&lt;br&gt; Accounts of this application.&lt;br&gt; Accounts of third-party applications. To obtain such information,&lt;br&gt; your application must have gained authorization from the third-party applications.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](#getAccountsByOwner-1) instead.
+Obtains the application accounts that can be accessed by the invoker based on the application account owner. This API uses a promise to return the result. This method applies to the following accounts: &lt;br&gt; Accounts of this application. &lt;br&gt; Accounts of third-party applications. To obtain such information, &lt;br&gt; your application must have gained authorization from the third-party applications. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getAccountsByOwner](#getAccountsByOwner) instead.
 
 **Since:** 7
 
@@ -2618,7 +2523,7 @@ Obtains the application accounts that can be accessed by the invoker based on th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**Substitutes:** [getAccountsByOwner](#getAccountsByOwner)(owner: string)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2659,9 +2564,11 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
@@ -2673,16 +2580,16 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2712,9 +2619,11 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
 
@@ -2737,10 +2646,10 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -2766,13 +2675,7 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](#getAllAuthTokens)
-> instead.
+Obtains all tokens visible to the invoker for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAllAuthTokens](#getAllAuthTokens) > instead.
 
 **Since:** 8
 
@@ -2780,7 +2683,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**Substitutes:** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
@@ -2792,7 +2695,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all tokens visible to the invoker. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2815,12 +2718,7 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](#getAllAuthTokens-1) instead.
+Obtains all tokens visible to the invoker for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAllAuthTokens](#getAllAuthTokens) instead.
 
 **Since:** 8
 
@@ -2828,7 +2726,7 @@ Obtains all tokens visible to the invoker for an application account. This API u
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**Substitutes:** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
@@ -2866,13 +2764,7 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData)
-> instead.
+Obtains the associated data of an application account based on the specified key. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) > instead.
 
 **Since:** 7
 
@@ -2880,7 +2772,7 @@ Obtains the associated data of an application account based on the specified key
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2892,7 +2784,7 @@ Obtains the associated data of an application account based on the specified key
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the data obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -2914,12 +2806,7 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
 getAssociatedData(name: string, key: string): Promise<string>
 ```
 
-Obtains data associated with an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getCustomData-1) instead.
+Obtains data associated with an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [getCustomData](#getCustomData) instead.
 
 **Since:** 7
 
@@ -2927,7 +2814,7 @@ Obtains data associated with an application account. This API uses a promise to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**Substitutes:** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
@@ -2966,9 +2853,11 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
@@ -2979,16 +2868,16 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3033,9 +2922,11 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
 
@@ -3057,10 +2948,10 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-authentication-session-not-found) | Session not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid sessionId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3101,12 +2992,13 @@ export default class EntryAbility extends UIAbility {
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setAuthTokenVisibility](#setAuthTokenVisibility). This API uses an asynchronous callback to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](#setAuthTokenVisibility) . This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3118,17 +3010,17 @@ Obtains the authorization list of the specified authentication type for an appli
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3155,12 +3047,13 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setAuthTokenVisibility](#setAuthTokenVisibility). This API uses a promise to return the result.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setAuthTokenVisibility](#setAuthTokenVisibility) . This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3183,11 +3076,11 @@ Obtains the authorization list of the specified authentication type for an appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3212,11 +3105,13 @@ try {
 getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3229,17 +3124,17 @@ Obtains the authorization token of the specified authentication type for an appl
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3269,9 +3164,11 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -3295,11 +3192,11 @@ Obtains the authorization token of the specified authentication type for an appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or authType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -3324,13 +3221,7 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getAuthCallback)
-> instead.
+Obtains the authenticator callback for an authentication session. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthCallback](#getAuthCallback) > instead.
 
 **Since:** 8
 
@@ -3338,7 +3229,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**Substitutes:** [getAuthCallback](#getAuthCallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
@@ -3349,7 +3240,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | ID of the authentication session. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator callback obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3383,12 +3274,7 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 ```
 
-Obtains the authenticator callback for an authentication session. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getAuthCallback-1) instead.
+Obtains the authenticator callback for an authentication session. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthCallback](#getAuthCallback) instead.
 
 **Since:** 8
 
@@ -3396,7 +3282,7 @@ Obtains the authenticator callback for an authentication session. This API uses 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**Substitutes:** [getAuthCallback](#getAuthCallback)(sessionId: string)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
@@ -3444,13 +3330,7 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo)
-> instead.
+Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [queryAuthenticatorInfo](#queryAuthenticatorInfo) > instead.
 
 **Since:** 8
 
@@ -3458,7 +3338,7 @@ Obtains the authenticator information of an application. This API uses an asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**Substitutes:** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -3469,7 +3349,7 @@ Obtains the authenticator information of an application. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3492,12 +3372,7 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
 getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-Obtains the authenticator information of an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo-1) instead.
+Obtains the authenticator information of an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [queryAuthenticatorInfo](#queryAuthenticatorInfo) instead.
 
 **Since:** 8
 
@@ -3505,7 +3380,7 @@ Obtains the authenticator information of an application. This API uses a promise
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**Substitutes:** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -3544,9 +3419,11 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 Obtains the credential of an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3558,17 +3435,17 @@ Obtains the credential of an application account. This API uses an asynchronous 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the credential obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -3597,9 +3474,11 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 Obtains the credential of an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -3622,11 +3501,11 @@ Obtains the credential of an application account. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or credentialType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | Credential not found. |
 
 ## Examples
 
@@ -3653,9 +3532,11 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 Obtains the custom data of an application account based on the specified key. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3667,17 +3548,17 @@ Obtains the custom data of an application account based on the specified key. Th
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the custom data value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
 
 ## Examples
 
@@ -3706,9 +3587,11 @@ getCustomData(name: string, key: string): Promise<string>
 
 Obtains the custom data of an application account based on the specified key. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
@@ -3731,11 +3614,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found |
 
 ## Examples
 
@@ -3762,9 +3645,11 @@ getCustomDataSync(name: string, key: string): string
 
 Obtains the custom data of an application account based on the specified key. The API returns the result synchronously.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
 
@@ -3787,11 +3672,11 @@ Obtains the custom data of an application account based on the specified key. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or key. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-custom-data-not-found) | Custom data not found. |
 
 ## Examples
 
@@ -3813,14 +3698,7 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility). This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](#getAuthList)
-> instead.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setOAuthTokenVisibility) . This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthList](#getAuthList) > instead.
 
 **Since:** 8
 
@@ -3828,7 +3706,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**Substitutes:** [getAuthList](#getAuthList)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3840,7 +3718,7 @@ Obtains the authorization list of the specified authentication type for an appli
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of authorized bundles obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3862,13 +3740,7 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-Obtains the authorization list of the specified authentication type for an application account. The authorization  list contains all authorized bundles. The token authorization list is set by  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility). This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](#getAuthList-1) instead.
+Obtains the authorization list of the specified authentication type for an application account. The authorization list contains all authorized bundles. The token authorization list is set by [setOAuthTokenVisibility](#setOAuthTokenVisibility) . This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthList](#getAuthList) instead.
 
 **Since:** 8
 
@@ -3876,7 +3748,7 @@ Obtains the authorization list of the specified authentication type for an appli
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**Substitutes:** [getAuthList](#getAuthList)(name: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3913,13 +3785,7 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses an  asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](#getAuthToken)
-> instead.
+Obtains the authorization token of the specified authentication type for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthToken](#getAuthToken) > instead.
 
 **Since:** 8
 
@@ -3927,7 +3793,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**Substitutes:** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3940,7 +3806,7 @@ Obtains the authorization token of the specified authentication type for an appl
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authorization token value obtained. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -3963,13 +3829,7 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](#getAuthToken-1)
-> instead.
+Obtains the authorization token of the specified authentication type for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [getAuthToken](#getAuthToken) > instead.
 
 **Since:** 8
 
@@ -3977,7 +3837,7 @@ Obtains the authorization token of the specified authentication type for an appl
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**Substitutes:** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -4009,29 +3869,21 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 });
 ```
 
-## off('change')
+## offAccountChange
 
 ```TypeScript
-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
+offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-Unsubscribes from account information changes.
+Unsubscribes from account events.
 
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [off('accountChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-> instead.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
+**Deprecated since:** -1
 
-**Deprecated since:** 9
-
-**Substitutes:** [off](appAccount.AppAccountManager.off(type:)
-
-<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+<!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4039,30 +3891,15 @@ Unsubscribes from account information changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Asynchronous callback interface. |
 
-## Examples
+**Error codes:**
 
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+| Error Code ID | Error Message |
+| --- | --- |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data: ' + JSON.stringify(data));
-  appAccountManager.off('change', () => {
-    console.info('off finish');
-  })
-}
-
-try {
-  appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`on accountOnOffDemo err: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('accountChange')
+## off_accountChange
 
 ```TypeScript
 off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
@@ -4074,6 +3911,8 @@ Unsubscribes from account information changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -4083,15 +3922,15 @@ Unsubscribes from account information changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to unsubscribe from. The value is **'accountChange'**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4116,47 +3955,13 @@ try {
 }
 ```
 
-## offAccountChange
+## off_change
 
 ```TypeScript
-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
+off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-Unsubscribes from account events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
-
-**System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Asynchronous callback interface. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-
-## on('change')
-
-```TypeScript
-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
-```
-
-Subscribes to account information changes of apps.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [on('accountChange')](appAccount.AppAccountManager.on(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
-> instead.
+Unsubscribes from account information changes. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [off('accountChange')](#off_change) > instead.
 
 **Since:** 7
 
@@ -4164,9 +3969,9 @@ Subscribes to account information changes of apps.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](appAccount.AppAccountManager.on(type:)
+**Substitutes:** [off](#off_change)(type: 'accountChange', callback?: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
-<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+<!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4175,8 +3980,7 @@ Subscribes to account information changes of apps.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
-| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | No | Callback to unregister. By default, no value is passed, which means to unregister all callbacks for the specified event. |
 
 ## Examples
 
@@ -4184,18 +3988,53 @@ Subscribes to account information changes of apps.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
+  console.info('receive change data: ' + JSON.stringify(data));
+  appAccountManager.off('change', () => {
+    console.info('off finish');
+  })
 }
 
 try {
   appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
+  console.error(`on accountOnOffDemo err: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
-## on('accountChange')
+## onAccountChange
+
+```TypeScript
+onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+```
+
+Subscribes to the change events of accounts of the specified owners.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
+**System capability:** SystemCapability.Account.AppAccount
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| owners | Array&lt;string&gt; | Yes | Indicates the account owners, which are specified by AppAccount. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Asynchronous callback interface. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+
+## on_accountChange
 
 ```TypeScript
 on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
@@ -4207,6 +4046,8 @@ Subscribes to account information changes of apps.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
@@ -4217,15 +4058,15 @@ Subscribes to account information changes of apps.
 | --- | --- | --- | --- |
 | type | 'accountChange' | Yes | Event type to subscribe to. The value is **'accountChange'**. An event will be reported when the account information of the target application changes. |
 | owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or owners. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or owners. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -4244,19 +4085,23 @@ try {
 }
 ```
 
-## onAccountChange
+## on_change
 
 ```TypeScript
-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-Subscribes to the change events of accounts of the specified owners.
+Subscribes to account information changes of apps. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [on('accountChange')](#on_change) > instead.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+**Deprecated since:** 9
+
+**Substitutes:** [on](#on_change)(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
+
+<!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -4264,15 +4109,26 @@ Subscribes to the change events of accounts of the specified owners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| owners | Array&lt;string&gt; | Yes | Indicates the account owners, which are specified by [AppAccount](AppAccount#AppAccount(String name, String owner)). |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Asynchronous callback interface. |
+| type | 'change' | Yes | Event type to subscribe to. The value is **'change'**. An event will be reported when the account information changes. |
+| owners | Array&lt;string&gt; | Yes | Application bundle names of the account. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback registered to return the list of changed application accounts. |
 
-**Error codes:**
+## Examples
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owners. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
+
+try {
+  appAccountManager.on('change', ['com.example.actsaccounttest'], changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`on accountOnOffDemo code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryAuthenticatorInfo
 
@@ -4282,9 +4138,11 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 Obtains the authenticator information of an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -4295,16 +4153,16 @@ Obtains the authenticator information of an application. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | owner | string | Yes | Owner of the application account. The value is the Bundle name of the application. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the authenticator information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -4334,9 +4192,11 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 Obtains the authenticator information of an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -4358,10 +4218,10 @@ Obtains the authenticator information of an application. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -4389,9 +4249,11 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 Removes an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4402,16 +4264,16 @@ Removes an application account. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4440,9 +4302,11 @@ removeAccount(name: string): Promise<void>
 
 Removes an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
 
@@ -4464,10 +4328,10 @@ Removes an application account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4494,9 +4358,11 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 Selects the accounts that can be accessed by the invoker based on the options. This API uses an asynchronous callback to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -4507,17 +4373,17 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md) | Yes | Options for selecting accounts. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of accounts selected. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4551,9 +4417,11 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 Selects the accounts that can be accessed by the invoker based on the options. This API uses a promise to return the result. If the options contain label constraints, the authenticator of the target application provides the capability of checking the labels.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
 
@@ -4575,11 +4443,11 @@ Selects the accounts that can be accessed by the invoker based on the options. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -4607,13 +4475,7 @@ try {
 setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
 ```
 
-Sets a credential for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](#setCredential)
-> instead.
+Sets a credential for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCredential](#setCredential) > instead.
 
 **Since:** 7
 
@@ -4621,7 +4483,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**Substitutes:** [setCredential](#setCredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4634,7 +4496,7 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -4656,13 +4518,7 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-Sets a credential for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](#setCredential-1)
-> instead.
+Sets a credential for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCredential](#setCredential) > instead.
 
 **Since:** 7
 
@@ -4670,7 +4526,7 @@ Sets a credential for an application account. This API uses a promise to return 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**Substitutes:** [setCredential](#setCredential)(name: string, credentialType: string, credential: string)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -4708,13 +4564,7 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-Sets additional information for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData)
-> instead.
+Sets additional information for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
@@ -4722,7 +4572,7 @@ Sets additional information for an application account. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4734,7 +4584,7 @@ Sets additional information for an application account. This API uses an asynchr
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | extraInfo | string | Yes | Additional information (information that can be converted to the string type). It cannot contain sensitive information, such as the application account password and token. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -4756,13 +4606,7 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
 setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 ```
 
-Sets additional information for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData-1)
-> instead.
+Sets additional information for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
@@ -4770,7 +4614,7 @@ Sets additional information for an application account. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
@@ -4809,9 +4653,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 Sets the access to the data of an account for an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -4824,17 +4670,17 @@ Sets the access to the data of an account for an application. This API uses an a
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isAccessible | boolean | Yes | Whether the access is allowed. The value **true** means to allow the access; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -4863,9 +4709,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 Sets the access to the data of an account for an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
 
@@ -4889,11 +4737,11 @@ Sets the access to the data of an account for an application. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit.<br>**Applicable version:** 14 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -4918,13 +4766,7 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](#setDataSyncEnabled)
-> instead.
+Sets data synchronization for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setDataSyncEnabled](#setDataSyncEnabled) > instead.
 
 **Since:** 7
 
@@ -4932,7 +4774,7 @@ Sets data synchronization for an application account. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**Substitutes:** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4946,7 +4788,7 @@ Sets data synchronization for an application account. This API uses an asynchron
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | isEnable | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -4968,13 +4810,7 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
 setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 ```
 
-Sets data synchronization for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](#setDataSyncEnabled-1)
-> instead.
+Sets data synchronization for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setDataSyncEnabled](#setDataSyncEnabled) > instead.
 
 **Since:** 7
 
@@ -4982,7 +4818,7 @@ Sets data synchronization for an application account. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**Substitutes:** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5021,13 +4857,7 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-Sets data to be associated with an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData)
-> instead.
+Sets data to be associated with an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
@@ -5035,7 +4865,7 @@ Sets data to be associated with an application account. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5048,7 +4878,7 @@ Sets data to be associated with an application account. This API uses an asynchr
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the associated data. |
 | value | string | Yes | Value of the data to set. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -5070,13 +4900,7 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
 setAssociatedData(name: string, key: string, value: string): Promise<void>
 ```
 
-Sets data to be associated with an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setCustomData-1)
-> instead.
+Sets data to be associated with an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 7 and deprecated since API version 9. You are advised to use > [setCustomData](#setCustomData) > instead.
 
 **Since:** 7
 
@@ -5084,7 +4908,7 @@ Sets data to be associated with an application account. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**Substitutes:** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -5124,9 +4948,11 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5139,17 +4965,17 @@ Sets an authorization token of the specific authentication type for an applicati
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
-| [12400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5178,9 +5004,11 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -5204,11 +5032,11 @@ Sets an authorization token of the specific authentication type for an applicati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
-| [12400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or token. |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-token-count-reached-the-limit) | The number of tokens reaches the upper limit. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5239,11 +5067,13 @@ setAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return  the result.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5257,18 +5087,18 @@ Sets the visibility of an authorization token to an application. This API uses a
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -5298,9 +5128,11 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -5325,12 +5157,12 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12400005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-authentication-type-not-found) | AuthType not found. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-bundles-in-the-oauth-list-reached-the-limit) | The size of authorization list reaches the upper limit. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, authType or bundleName. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-application-not-found) | Application not found.<br>**Applicable version:** 9 - 13 |
 
 ## Examples
 
@@ -5357,9 +5189,11 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 Sets the authenticator attributes of an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
 
@@ -5376,12 +5210,12 @@ Sets the authenticator attributes of an application. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -5413,9 +5247,11 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 Sets the authenticator properties. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
@@ -5433,12 +5269,12 @@ Sets the authenticator properties. This API uses an asynchronous callback to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -5474,9 +5310,11 @@ setCredential(name: string, credentialType: string, credential: string,
 
 Sets a credential for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void-End-->
 
@@ -5489,16 +5327,16 @@ Sets a credential for an application account. This API uses an asynchronous call
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | credentialType | string | Yes | Credential type. The custom type, the value cannot exceed 1024 characters. |
 | credential | string | Yes | Credential value. The custom value, the value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the credential is set successfully, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5527,9 +5365,11 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 Sets a credential for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -5553,10 +5393,10 @@ Sets a credential for an application account. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, credentialType or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5583,9 +5423,11 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 Sets custom data for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5598,17 +5440,17 @@ Sets custom data for an application account. This API uses an asynchronous callb
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | key | string | Yes | Key of the custom data. The value cannot exceed 512 characters. |
 | value | string | Yes | Value of the custom data. The value cannot exceed 512 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
 
 ## Examples
 
@@ -5637,9 +5479,11 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 Sets custom data for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -5663,11 +5507,11 @@ Sets custom data for an application account. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, key or value. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-custom-data-records-reached-the-limit) | The number of custom data reaches the upper limit. |
 
 ## Examples
 
@@ -5694,9 +5538,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 Sets data synchronization for an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5710,17 +5556,17 @@ Sets data synchronization for an application account. This API uses an asynchron
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | isEnabled | boolean | Yes | Whether to enable data synchronization. The value **true** means that data synchronization is enabled, and **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5745,9 +5591,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 Sets data synchronization for an application account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5772,11 +5620,11 @@ Sets data synchronization for an application account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
 ## Examples
 
@@ -5801,13 +5649,7 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](#setAuthToken)
-> instead.
+Sets an authorization token of the specific authentication type for an application account. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthToken](#setAuthToken) > instead.
 
 **Since:** 8
 
@@ -5815,7 +5657,7 @@ Sets an authorization token of the specific authentication type for an applicati
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**Substitutes:** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5828,7 +5670,7 @@ Sets an authorization token of the specific authentication type for an applicati
 | name | string | Yes | Name of the application account. The value cannot exceed 512 characters. |
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | token | string | Yes | Authorization token. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -5850,13 +5692,7 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](#setAuthToken-1)
-> instead.
+Sets an authorization token of the specific authentication type for an application account. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthToken](#setAuthToken) > instead.
 
 **Since:** 8
 
@@ -5864,7 +5700,7 @@ Sets an authorization token of the specific authentication type for an applicati
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**Substitutes:** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -5908,13 +5744,7 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return  the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](#setAuthTokenVisibility)
-> instead.
+Sets the visibility of an authorization token to an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthTokenVisibility](#setAuthTokenVisibility) > instead.
 
 **Since:** 8
 
@@ -5922,7 +5752,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility()
+**Substitutes:** [setAuthTokenVisibility](#setAuthTokenVisibility)( name: string, authType: string, bundleName: string, isVisible: boolean, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5936,7 +5766,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 | authType | string | Yes | Authentication type. The custom type, The value cannot exceed 1024 characters. |
 | bundleName | string | Yes | Bundle name of the application. The value cannot exceed 512 characters. |
 | isVisible | boolean | Yes | Whether the authorization token is visible to the application. The value **true** means the authorization token is visible to the application; the value **false** means the opposite. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -5959,13 +5789,7 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-Sets the visibility of an authorization token to an application. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](#setAuthTokenVisibility-1)
-> instead.
+Sets the visibility of an authorization token to an application. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 9. You are advised to use > [setAuthTokenVisibility](#setAuthTokenVisibility) > instead.
 
 **Since:** 8
 
@@ -5973,7 +5797,7 @@ Sets the visibility of an authorization token to an application. This API uses a
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility(name:)
+**Substitutes:** [setAuthTokenVisibility](#setAuthTokenVisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -6014,9 +5838,11 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 Verifies the credential of an application account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
 
@@ -6034,13 +5860,13 @@ Verifies the credential of an application account. This API uses an asynchronous
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or owner. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 
@@ -6072,9 +5898,11 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 Verifies the user credential. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
@@ -6093,13 +5921,13 @@ Verifies the user credential. This API uses an asynchronous callback to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or options. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Account service busy. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name, owner or options. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-authentication-service-abnormal) | Authenticator service exception. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | Authenticator service not found. |
 
 ## Examples
 

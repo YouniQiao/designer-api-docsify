@@ -6,7 +6,9 @@ type TwoParamCallback<T, G> = (data1: T, data2: G) => void
 
 定义包含两个参数的回调类型。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void--><!--Device-avSession-type TwoParamCallback<T, G> = (data1: T, data2: G) => void-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the types of the file to read.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum SourceMode--><!--Device-photoAccessHelper-enum SourceMode-End-->
 
@@ -20,9 +22,11 @@ ORIGINAL_MODE = 0
 
 Original file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SourceMode-ORIGINAL_MODE = 0--><!--Device-SourceMode-ORIGINAL_MODE = 0-End-->
 
@@ -38,9 +42,11 @@ EDITED_MODE = 1
 
 Edited file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SourceMode-EDITED_MODE = 1--><!--Device-SourceMode-EDITED_MODE = 1-End-->
 

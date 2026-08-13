@@ -4,6 +4,8 @@ Describes a circle.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface Circle--><!--Device-unnamed-export interface Circle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ X-coordinate of the center of the circle, in px.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Y-coordinate of the center of the circle, in px.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -54,13 +60,13 @@ Y-coordinate of the center of the circle, in px.
 radius: number
 ```
 
-Radius of the circle, in px.
-
-Value range: [0, +∞).
+Radius of the circle, in px. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

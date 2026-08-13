@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-export enum BatteryCapacityLevel--><!--Device-batteryInfo-export enum BatteryCapacityLevel-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -17,6 +19,8 @@ LEVEL_NONE
 表示电池电量等级为未知电量。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_NONE--><!--Device-BatteryCapacityLevel-LEVEL_NONE-End-->
 
@@ -32,6 +36,8 @@ LEVEL_FULL
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_FULL--><!--Device-BatteryCapacityLevel-LEVEL_FULL-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -45,6 +51,8 @@ LEVEL_HIGH
 表示电池电量等级为高电量。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_HIGH--><!--Device-BatteryCapacityLevel-LEVEL_HIGH-End-->
 
@@ -60,6 +68,8 @@ LEVEL_NORMAL
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_NORMAL--><!--Device-BatteryCapacityLevel-LEVEL_NORMAL-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -73,6 +83,8 @@ LEVEL_LOW
 表示电池电量等级为低电量。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_LOW--><!--Device-BatteryCapacityLevel-LEVEL_LOW-End-->
 
@@ -88,6 +100,8 @@ LEVEL_WARNING
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_WARNING--><!--Device-BatteryCapacityLevel-LEVEL_WARNING-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -102,6 +116,8 @@ LEVEL_CRITICAL
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-BatteryCapacityLevel-LEVEL_CRITICAL--><!--Device-BatteryCapacityLevel-LEVEL_CRITICAL-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -115,6 +131,8 @@ LEVEL_SHUTDOWN
 表示电池电量等级为关机电量。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN--><!--Device-BatteryCapacityLevel-LEVEL_SHUTDOWN-End-->
 

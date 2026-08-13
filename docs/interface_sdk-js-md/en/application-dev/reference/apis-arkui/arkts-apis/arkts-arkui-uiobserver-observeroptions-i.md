@@ -1,10 +1,12 @@
 # ObserverOptions
 
-observer options.
+Describes the observer options.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export interface ObserverOptions--><!--Device-uiObserver-export interface ObserverOptions-End-->
 
@@ -22,15 +24,19 @@ import { uiObserver } from '@kit.ArkUI';
 id: string
 ```
 
-component id.
+Component ID.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ObserverOptions-id: string--><!--Device-ObserverOptions-id: string-End-->
 

@@ -6,12 +6,13 @@
 function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, callerTokenId: int, targetTokenId: int): Promise<void>
 ```
 
-通过UDMF数据唯一标识key，将指定应用的文件URI访问权限授权给目标应用，权限将在目标应用退出后回收。使用Promise异步回调。该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。  
-**系统接口**：此接口为系统接口。
+通过UDMF数据唯一标识key，将指定应用的文件URI访问权限授权给目标应用，权限将在目标应用退出后回收。使用Promise异步回调。 该接口仅在Phone、PC/2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。 **系统接口**：此接口为系统接口。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GRANT_URI_PERMISSION_AS_CALLER
 
@@ -27,8 +28,8 @@ function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, 
 | --- | --- | --- | --- |
 | key | string | 是 | 目标UDMF数据唯一标识。key必须指定应用（即callerTokenId对应的应用）通过 [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) 创建，且写入的数据均为有权限授权的文件URI。&lt;br&gt;当前仅支持SYSTEM_SHARE、PICKER和MENU类型的 [UDMF数据通路](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md#Intention)的key。key的创建与使用方法详见 [标准化数据通路实现数据共享](../../../database/unified-data-channels.md)。 |
 | flag | wantConstant.Flags | 是 | URI的读权限或写权限。支持的取值如下：&lt;br&gt;- FLAG_AUTH_READ_URI_PERMISSION：读权限。&lt;br&gt;- FLAG_AUTH_WRITE_URI_PERMISSION：写权限。 |
-| callerTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 拉起方应用的身份标识，可以通过[want](arkts-ability-app-ability-want-want-c.md#Want)中的"ohos.aafwk.param.callerToken"字 段获取。 |
-| targetTokenId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 目标应用的身份标识，可以通过 [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getApplicationInfo) 获取。 |
+| callerTokenId | int | 是 | 拉起方应用的身份标识，可以通过[want](arkts-ability-app-ability-want-want-c.md#Want)中的"ohos.aafwk.param.callerToken"字 段获取。 |
+| targetTokenId | int | 是 | 目标应用的身份标识，可以通过 [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getApplicationInfo（系统接口）) 获取。 |
 
 **返回值：**
 
@@ -40,16 +41,16 @@ function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000060](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
-| [16000092](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000092-无权限授权uri) | No permission to authorize the URI. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16000093](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000093-调用方的token-id无效) | The caller token ID is invalid. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
-| [16000094](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000094-目标应用的token-id无效) | The target token ID is invalid. |
-| [16000058](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
-| [16000091](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000091-根据key获取文件uri数据失败) | Failed to get the file URI from the key. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
+| [16000092](../errorcode-ability.md#16000092-无权限授权uri) | No permission to authorize the URI. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000093](../errorcode-ability.md#16000093-调用方的token-id无效) | The caller token ID is invalid. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. Interface caller is not a system app. |
+| [16000094](../errorcode-ability.md#16000094-目标应用的token-id无效) | The target token ID is invalid. |
+| [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
+| [16000091](../errorcode-ability.md#16000091-根据key获取文件uri数据失败) | Failed to get the file URI from the key. |
 
 ## 示例
 

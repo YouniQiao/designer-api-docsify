@@ -4,6 +4,8 @@ Enumeration of media resource type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-enum EntityType--><!--Device-avMusicTemplate-enum EntityType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ UNKNOWN = 0
 Unknown type.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Single song type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EntityType-SINGLE = 1--><!--Device-EntityType-SINGLE = 1-End-->
@@ -49,6 +55,8 @@ SINGER = 2
 Singer type.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Album type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EntityType-ALBUM = 3--><!--Device-EntityType-ALBUM = 3-End-->
@@ -81,6 +91,8 @@ RANKING = 4
 Ranking type.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ Banner type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EntityType-BANNER = 5--><!--Device-EntityType-BANNER = 5-End-->
@@ -113,6 +127,8 @@ RADIO_STATION = 6
 Radio station type.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,6 +12,8 @@ Send a mock mouse event to the current application. This interface is only suita
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export declare function sendMouseEvent(event: MouseEvent): boolean--><!--Device-unnamed-export declare function sendMouseEvent(event: MouseEvent): boolean-End-->

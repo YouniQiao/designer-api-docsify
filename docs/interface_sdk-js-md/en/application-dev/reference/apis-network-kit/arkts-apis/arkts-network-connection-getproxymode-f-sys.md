@@ -12,11 +12,13 @@ import { connection } from '@kit.NetworkKit';
 function getProxyMode(): Promise<ProxyMode>
 ```
 
-Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#ProxyMode).
+Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#ProxyMode-(System-API)).
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
@@ -36,8 +38,8 @@ Obtain the proxy mode [ProxyMode](arkts-network-connection-proxymode-e-sys.md#Pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 

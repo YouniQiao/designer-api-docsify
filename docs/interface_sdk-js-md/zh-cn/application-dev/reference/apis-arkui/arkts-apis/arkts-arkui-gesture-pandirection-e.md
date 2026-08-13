@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum PanDirection--><!--Device-unnamed-export declare enum PanDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ None = 0
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ Left = 1
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-Left = 1--><!--Device-PanDirection-Left = 1-End-->
@@ -57,6 +63,8 @@ Right = 2
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +84,8 @@ Horizontal = 3
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-Horizontal = 3--><!--Device-PanDirection-Horizontal = 3-End-->
@@ -93,6 +103,8 @@ Up = 4
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +124,8 @@ UP_LEFT = 5
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-UP_LEFT = 5--><!--Device-PanDirection-UP_LEFT = 5-End-->
@@ -129,6 +143,8 @@ UP_RIGHT = 6
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,6 +164,8 @@ UP_HORIZONTAL = 7
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-UP_HORIZONTAL = 7--><!--Device-PanDirection-UP_HORIZONTAL = 7-End-->
@@ -165,6 +183,8 @@ Down = 8
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,6 +204,8 @@ DOWN_LEFT = 9
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-DOWN_LEFT = 9--><!--Device-PanDirection-DOWN_LEFT = 9-End-->
@@ -201,6 +223,8 @@ DOWN_RIGHT = 10
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -220,6 +244,8 @@ DOWN_HORIZONTAL = 11
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-DOWN_HORIZONTAL = 11--><!--Device-PanDirection-DOWN_HORIZONTAL = 11-End-->
@@ -237,6 +263,8 @@ Vertical = 12
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,6 +284,8 @@ VERTICAL_LEFT = 13
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-VERTICAL_LEFT = 13--><!--Device-PanDirection-VERTICAL_LEFT = 13-End-->
@@ -274,6 +304,8 @@ VERTICAL_RIGHT = 14
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PanDirection-VERTICAL_RIGHT = 14--><!--Device-PanDirection-VERTICAL_RIGHT = 14-End-->
@@ -291,6 +323,8 @@ All = 15
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

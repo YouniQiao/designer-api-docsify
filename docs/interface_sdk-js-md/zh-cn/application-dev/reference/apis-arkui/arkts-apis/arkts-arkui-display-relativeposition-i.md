@@ -2,9 +2,11 @@
 
 相对坐标系下的坐标位置，以displayId对应的屏幕左上角为原点。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-display-interface RelativePosition--><!--Device-display-interface RelativePosition-End-->
 
@@ -18,11 +20,13 @@ displayId: long
 
 相对坐标所对应的屏幕ID，仅支持整数输入，且需大于等于0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RelativePosition-displayId: long--><!--Device-RelativePosition-displayId: long-End-->
 
@@ -38,9 +42,11 @@ position: Position
 
 **类型：** Position
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RelativePosition-position: Position--><!--Device-RelativePosition-position: Position-End-->
 

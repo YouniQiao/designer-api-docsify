@@ -4,6 +4,8 @@ The result of AI-generated images
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GeneratorResult--><!--Device-imageGeneration-interface GeneratorResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Decoded data of AI-generated images.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorResult-image?: image.PixelMap--><!--Device-GeneratorResult-image?: image.PixelMap-End-->
@@ -48,6 +52,8 @@ Statistics of AI-generated image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorResult-statistic: TaskStatistic--><!--Device-GeneratorResult-statistic: TaskStatistic-End-->
@@ -67,6 +73,8 @@ The path information of AI-generated images.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

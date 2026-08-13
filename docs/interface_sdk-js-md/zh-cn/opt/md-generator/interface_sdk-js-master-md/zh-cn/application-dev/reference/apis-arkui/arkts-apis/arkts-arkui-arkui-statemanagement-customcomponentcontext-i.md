@@ -1,9 +1,10 @@
 # CustomComponentContext
 
-`CustomComponentContext`类提供对组件级服务的访问，包括复用池。通过  
-[UIUtils.getCustomComponentContext](arkts-arkui-arkui-statemanagement-uiutils-c.md#getCustomComponentContext)获取实例。
+`CustomComponentContext`类提供对组件级服务的访问，包括复用池。通过 [UIUtils.getCustomComponentContext](arkts-arkui-arkui-statemanagement-uiutils-c.md#getCustomComponentContext)获取实例。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface CustomComponentContext--><!--Device-unnamed-export declare interface CustomComponentContext-End-->
 
@@ -15,10 +16,11 @@
 getReusePool(): IReusePool | undefined
 ```
 
-返回该自定义组件拥有的全局复用池。如果组件或其上层组件没有通过`reusePool`和`poolAccepts`配置全局复用池，则返回`undefined`。配置全局复用池方式请参考  
-[全局复用开发指南](../../../ui/state-management/arkts-global-reuse-pool.md)。
+返回该自定义组件拥有的全局复用池。如果组件或其上层组件没有通过`reusePool`和`poolAccepts`配置全局复用池，则返回`undefined`。配置全局复用池方式请参考 [全局复用开发指南](../../../ui/state-management/arkts-global-reuse-pool.md)。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

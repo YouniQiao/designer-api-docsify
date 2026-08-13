@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-systemManager-interface KeyEventPolicy--><!--Device-systemManager-interface KeyEventPolicy-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -19,6 +21,8 @@ keyCode: KeyCode
 **类型：** KeyCode
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ keyPolicy: KeyPolicy
 **类型：** [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

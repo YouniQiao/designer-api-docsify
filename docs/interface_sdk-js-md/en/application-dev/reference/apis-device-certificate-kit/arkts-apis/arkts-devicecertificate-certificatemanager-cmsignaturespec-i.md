@@ -2,9 +2,11 @@
 
 Represents a set of parameters used for signing or signature verification, including the key usage purpose, padding mode, and digest algorithm.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export interface CMSignatureSpec--><!--Device-certificateManager-export interface CMSignatureSpec-End-->
 
@@ -22,13 +24,15 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 digest?: CmKeyDigest
 ```
 
-Digest algorithm.Default value: CM_DIGEST_SHA256: indicates that the SHA256 digest algorithm is used.
+Digest algorithm. Default value: CM_DIGEST_SHA256: indicates that the SHA256 digest algorithm is used.
 
 **Type:** [CmKeyDigest](arkts-devicecertificate-certificatemanager-cmkeydigest-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMSignatureSpec-digest?: CmKeyDigest--><!--Device-CMSignatureSpec-digest?: CmKeyDigest-End-->
 
@@ -40,13 +44,15 @@ Digest algorithm.Default value: CM_DIGEST_SHA256: indicates that the SHA256 dige
 padding?: CmKeyPadding
 ```
 
-Enumeration representing the padding mode.Default value: CM_PADDING_PSS: indicates that the PSS filling mode is used.
+Enumeration representing the padding mode. Default value: CM_PADDING_PSS: indicates that the PSS filling mode is used.
 
 **Type:** [CmKeyPadding](arkts-devicecertificate-certificatemanager-cmkeypadding-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMSignatureSpec-padding?: CmKeyPadding--><!--Device-CMSignatureSpec-padding?: CmKeyPadding-End-->
 
@@ -62,9 +68,11 @@ Purpose of using the key.
 
 **Type:** [CmKeyPurpose](arkts-devicecertificate-certificatemanager-cmkeypurpose-e.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMSignatureSpec-purpose: CmKeyPurpose--><!--Device-CMSignatureSpec-purpose: CmKeyPurpose-End-->
 

@@ -4,9 +4,9 @@ Declaration of the editable title bar.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct EditableTitleBarV2--><!--Device-unnamed-export declare struct EditableTitleBarV2-End-->
 
@@ -18,30 +18,11 @@ Declaration of the editable title bar.
 import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Decorator:** @Builder
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-EditableTitleBarV2-build(): void--><!--Device-EditableTitleBarV2-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## imageItem
 
 ```TypeScript
-imageItem?: EditableTitleBarItemV2
+@Param
+  imageItem?: EditableTitleBarItemV2
 ```
 
 Image item configuration, displayed on the left side of the title.
@@ -50,20 +31,23 @@ Image item configuration, displayed on the left side of the title.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarV2-imageItem?: EditableTitleBarItemV2--><!--Device-EditableTitleBarV2-imageItem?: EditableTitleBarItemV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-@Param  imageItem?: EditableTitleBarItemV2--><!--Device-EditableTitleBarV2-@Param  imageItem?: EditableTitleBarItemV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## leftIcon
 
 ```TypeScript
-leftIcon?: EditableLeftIconV2
+@Param
+  leftIcon?: EditableLeftIconV2
 ```
 
 Left icon configuration.
@@ -72,20 +56,23 @@ Left icon configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarV2-leftIcon?: EditableLeftIconV2--><!--Device-EditableTitleBarV2-leftIcon?: EditableLeftIconV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-@Param  leftIcon?: EditableLeftIconV2--><!--Device-EditableTitleBarV2-@Param  leftIcon?: EditableLeftIconV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## menuItems
 
 ```TypeScript
-menuItems?: Array<EditableTitleBarMenuItemV2>
+@Param
+  menuItems?: Array<EditableTitleBarMenuItemV2>
 ```
 
 Custom menu items array, maximum 2-3 items.
@@ -94,20 +81,23 @@ Custom menu items array, maximum 2-3 items.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarV2-menuItems?: Array<EditableTitleBarMenuItemV2>--><!--Device-EditableTitleBarV2-menuItems?: Array<EditableTitleBarMenuItemV2>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-@Param  menuItems?: Array<EditableTitleBarMenuItemV2>--><!--Device-EditableTitleBarV2-@Param  menuItems?: Array<EditableTitleBarMenuItemV2>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## options
 
 ```TypeScript
-options: EditableTitleBarStyleV2
+@Param
+  options: EditableTitleBarStyleV2
 ```
 
 Style and layout configuration.
@@ -116,20 +106,23 @@ Style and layout configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarV2-options: EditableTitleBarStyleV2--><!--Device-EditableTitleBarV2-options: EditableTitleBarStyleV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-@Param  options: EditableTitleBarStyleV2--><!--Device-EditableTitleBarV2-@Param  options: EditableTitleBarStyleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## saveButton
 
 ```TypeScript
-saveButton?: EditableSaveButtonV2
+@Param
+  saveButton?: EditableSaveButtonV2
 ```
 
 Save button configuration.
@@ -138,20 +131,23 @@ Save button configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarV2-saveButton?: EditableSaveButtonV2--><!--Device-EditableTitleBarV2-saveButton?: EditableSaveButtonV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-@Param  saveButton?: EditableSaveButtonV2--><!--Device-EditableTitleBarV2-@Param  saveButton?: EditableSaveButtonV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## title
 
 ```TypeScript
-title: ResourceStr | EditableTitleV2
+@Param
+  title: ResourceStr | EditableTitleV2
 ```
 
 Title configuration, supports string or object form.
@@ -160,13 +156,15 @@ Title configuration, supports string or object form.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param, @Require
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-EditableTitleBarV2-title: ResourceStr | EditableTitleV2--><!--Device-EditableTitleBarV2-title: ResourceStr | EditableTitleV2-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-EditableTitleBarV2-@Param  title: ResourceStr | EditableTitleV2--><!--Device-EditableTitleBarV2-@Param  title: ResourceStr | EditableTitleV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

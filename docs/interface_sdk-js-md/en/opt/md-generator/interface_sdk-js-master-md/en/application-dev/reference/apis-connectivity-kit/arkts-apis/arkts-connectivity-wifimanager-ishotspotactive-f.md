@@ -14,7 +14,9 @@ function isHotspotActive(): boolean
 
 Check whether Wi-Fi hotspot is active on a device.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -32,9 +34,9 @@ Check whether Wi-Fi hotspot is active on a device.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [2601000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2601000-hotspot-module-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2601000](../errorcode-wifi.md#2601000-hotspot-module-error) |
 
 ## Examples
 

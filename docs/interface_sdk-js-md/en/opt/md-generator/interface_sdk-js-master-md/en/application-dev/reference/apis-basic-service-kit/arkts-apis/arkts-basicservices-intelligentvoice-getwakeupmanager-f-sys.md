@@ -12,9 +12,11 @@ import { intelligentVoice } from '@kit.BasicServicesKit';
 function getWakeupManager(): WakeupManager
 ```
 
-Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md#WakeupManager) instance.
+Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md#WakeupManager-(System-API)) instance.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -34,10 +36,10 @@ Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-
 
 | Error Code ID |
 | --- |
-| [22700107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-intelligentVoice.md#22700107-system-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [22700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) |
+| [22700107](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700107-system-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [22700101](../../apis-basic-services-kit/errorcode-intelligentVoice.md#22700101-insufficient-memory) |
 
 ## Examples
 

@@ -1,8 +1,22 @@
 # @ohos.hiTraceChain(分布式跟踪)
 
-本模块提供了端侧业务流程调用链跟踪的打点能力，包括业务流程跟踪的启动、结束、信息埋点等能力。
+/*
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**起始版本：** 8
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace hiTraceChain--><!--Device-unnamed-declare namespace hiTraceChain-End-->
 
@@ -15,14 +29,14 @@
 | 名称 |
 | --- |
 | [begin](arkts-performanceanalysis-hitracechain-begin-f.md#begin) |
-| [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md#clearid) |
-| [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md#createspan) |
-| [enableFlag](arkts-performanceanalysis-hitracechain-enableflag-f.md#enableflag) |
+| [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md#clearId) |
+| [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md#createSpan) |
+| [enableFlag](arkts-performanceanalysis-hitracechain-enableflag-f.md#enableFlag) |
 | [end](arkts-performanceanalysis-hitracechain-end-f.md#end) |
-| [getId](arkts-performanceanalysis-hitracechain-getid-f.md#getid) |
-| [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md#isflagenabled) |
-| [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md#isvalid) |
-| [setId](arkts-performanceanalysis-hitracechain-setid-f.md#setid) |
+| [getId](arkts-performanceanalysis-hitracechain-getid-f.md#getId) |
+| [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md#isFlagEnabled) |
+| [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md#isValid) |
+| [setId](arkts-performanceanalysis-hitracechain-setid-f.md#setId) |
 | [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint) |
 
 ### 接口

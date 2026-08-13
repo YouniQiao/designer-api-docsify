@@ -3,6 +3,7 @@
 ## Search
 
 ```TypeScript
+@ComponentBuilder
 export declare function Search(
     options?: SearchOptions
 ): SearchAttribute
@@ -14,9 +15,11 @@ Defines Search Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Search(    options?: SearchOptions): SearchAttribute--><!--Device-unnamed-export declare function Search(    options?: SearchOptions): SearchAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Search(    options?: SearchOptions): SearchAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Search(    options?: SearchOptions): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines Search Component.
 
 | Type | Description |
 | --- | --- |
-| [SearchAttribute](arkts-arkui-search-searchattribute-i.md) |  |
+| SearchAttribute |  |
 
 
 ## Search
 
 ```TypeScript
+@Builder
 export declare function Search(
     style: CustomBuilderT<SearchAttribute>,
 ): SearchAttribute
@@ -47,11 +51,11 @@ Defines Search Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Search(    style: CustomBuilderT<SearchAttribute>,): SearchAttribute--><!--Device-unnamed-export declare function Search(    style: CustomBuilderT<SearchAttribute>,): SearchAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Search(    style: CustomBuilderT<SearchAttribute>,): SearchAttribute--><!--Device-unnamed-@Builderexport declare function Search(    style: CustomBuilderT<SearchAttribute>,): SearchAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines Search Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SearchAttribute](arkts-arkui-search-searchattribute-i.md)&gt; | Yes | Search attribute instance |
+| style | CustomBuilderT&lt;SearchAttribute&gt; | Yes | Search attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SearchAttribute](arkts-arkui-search-searchattribute-i.md) |  |
+| SearchAttribute |  |
 

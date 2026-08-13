@@ -6,6 +6,8 @@ Represents the DLP sandbox state information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export interface DLPSandboxState--><!--Device-dlpPermission-export interface DLPSandboxState-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -32,6 +34,8 @@ Index of the DLP sandbox application. The value range is [1000, 1100]. If the va
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-DLPSandboxState-appIndex: number--><!--Device-DLPSandboxState-appIndex: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -51,6 +55,8 @@ Bundle name of the application.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-DLPSandboxState-bundleName: string--><!--Device-DLPSandboxState-bundleName: string-End-->
 

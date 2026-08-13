@@ -1,14 +1,12 @@
-# @ohos.reminderAgent(Agent-powered Reminder)
+# @ohos.reminderAgent
 
-The **reminderAgent** module provides APIs for publishing scheduled reminders through the reminder agent.
-
-You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. When the created reminders are published, the timing and pop-up notification functions of your application will be taken over by the reminder agent in the background when your application is frozen or exits.
+The **reminderAgent** module provides APIs for publishing scheduled reminders through the reminder agent. You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. When the created reminders are published, the timing and pop-up notification functions of your application will be taken over by the reminder agent in the background when your application is frozen or exits.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager](arkts-reminderagentmanager.md#reminderAgentManager)
+**Substitutes:** [reminderAgentManager](arkts-reminderagentmanager.md#@ohos.reminderAgentManager)
 
 <!--Device-unnamed-declare namespace reminderAgent--><!--Device-unnamed-declare namespace reminderAgent-End-->
 
@@ -26,18 +24,18 @@ import { reminderAgent } from '@kit.BackgroundTasksKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addnotificationslot) |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addnotificationslot-1) |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelallreminders) |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelallreminders-1) |
-| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder) |
-| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder-1) |
-| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders) |
-| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders-1) |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder) |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder-1) |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot) |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot-1) |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addNotificationSlot) |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addNotificationSlot) |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelAllReminders) |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelAllReminders) |
+| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelReminder) |
+| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelReminder) |
+| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getValidReminders) |
+| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getValidReminders) |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishReminder) |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishReminder) |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removeNotificationSlot) |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removeNotificationSlot) |
 
 ### Interfaces
 

@@ -4,6 +4,8 @@ StyledString
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class StyledString--><!--Device-unnamed-declare class StyledString-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,10 +16,11 @@ StyledString
 static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer
 ```
 
-Marshals a styled string by defining a callback to marshal  
-[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
+Marshals a styled string by defining a callback to marshal [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue-(System-API)).
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +53,8 @@ Marshals a styled string.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StyledString-static marshalling(styledString: StyledString): ArrayBuffer--><!--Device-StyledString-static marshalling(styledString: StyledString): ArrayBuffer-End-->
@@ -76,10 +81,11 @@ Marshals a styled string.
 static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>
 ```
 
-Unmarshals a styled string by defining a callback to  
-[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue).
+Unmarshals a styled string by defining a callback to [StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue-(System-API)).
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +112,8 @@ Unmarshals a styled string by defining a callback to
 
 | Error Code ID |
 | --- |
-| [170002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-styled-string-decoding-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## unmarshalling
 
@@ -118,6 +124,8 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 Unmarshals a buffer to obtain a styled string.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -143,5 +151,5 @@ Unmarshals a buffer to obtain a styled string.
 
 | Error Code ID |
 | --- |
-| [170002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-styled-string-decoding-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

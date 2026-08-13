@@ -12,9 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function isRamConstrainedDevice(): Promise<boolean>
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses a promise to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +34,7 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -54,9 +56,11 @@ appManager.isRamConstrainedDevice().then((data) => {
 function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources).This API uses an asynchronous callback to return the result.
+Checks whether the current device is a RAM-constrained device (a device with severely limited memory resources). This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,8 +78,8 @@ Checks whether the current device is a RAM-constrained device (a device with sev
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 

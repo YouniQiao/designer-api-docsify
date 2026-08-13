@@ -1,9 +1,10 @@
 # DownloadInfo
 
-Defines the download task information, which is the callback parameter of the   
-[getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo) API.
+Defines the download task information, which is the callback parameter of the [getTaskInfo](arkts-basicservices-request-downloadtask-i.md#getTaskInfo) API.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-interface DownloadInfo--><!--Device-request-interface DownloadInfo-End-->
 
@@ -25,7 +26,9 @@ Description of the download task.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-description: string--><!--Device-DownloadInfo-description: string-End-->
 
@@ -41,7 +44,9 @@ Download task ID.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadId: long--><!--Device-DownloadInfo-downloadId: long-End-->
 
@@ -57,7 +62,9 @@ Name of the download task.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadTitle: string--><!--Device-DownloadInfo-downloadTitle: string-End-->
 
@@ -73,7 +80,9 @@ Total size of the files to download, in bytes.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadTotalBytes: long--><!--Device-DownloadInfo-downloadTotalBytes: long-End-->
 
@@ -89,7 +98,9 @@ Real-time download size, in bytes.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-downloadedBytes: long--><!--Device-DownloadInfo-downloadedBytes: long-End-->
 
@@ -101,12 +112,13 @@ Real-time download size, in bytes.
 failedReason: number
 ```
 
-Cause of the download failure. The value can be any constant in   
-[Download Error Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
+Cause of the download failure. The value can be any constant in Download Error Codes .
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-failedReason: int--><!--Device-DownloadInfo-failedReason: int-End-->
 
@@ -122,7 +134,9 @@ Name of the downloaded file.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-fileName: string--><!--Device-DownloadInfo-fileName: string-End-->
 
@@ -138,7 +152,9 @@ URI of the saved file.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-filePath: string--><!--Device-DownloadInfo-filePath: string-End-->
 
@@ -150,12 +166,13 @@ URI of the saved file.
 pausedReason: number
 ```
 
-Cause of download pause. The value can be any constant in   
-[Causes of Download Pause](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
+Cause of download pause. The value can be any constant in Causes of Download Pause .
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-pausedReason: int--><!--Device-DownloadInfo-pausedReason: int-End-->
 
@@ -167,12 +184,13 @@ Cause of download pause. The value can be any constant in
 status: number
 ```
 
-Download task status code. The value can be any constant in   
-[Download Task Status Codes](../../../reference/apis-basic-services-kit/js-apis-request.md#constants).
+Download task status code. The value can be any constant in Download Task Status Codes .
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-status: int--><!--Device-DownloadInfo-status: int-End-->
 
@@ -188,7 +206,9 @@ URI of the downloaded file.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-targetURI: string--><!--Device-DownloadInfo-targetURI: string-End-->
 

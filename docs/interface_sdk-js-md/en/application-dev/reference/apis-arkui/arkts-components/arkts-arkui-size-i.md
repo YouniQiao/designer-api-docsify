@@ -6,6 +6,8 @@ Provides size information of the **DrawingRenderingContext** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface Size--><!--Device-unnamed-declare interface Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Provides size information of the **DrawingRenderingContext** object.
 height: number
 ```
 
-Height of the **DrawingRenderingContext** object, which corresponds to the height of the associated **Canvas** component. Default unit: vp.
-
-If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
+Height of the **DrawingRenderingContext** object, which corresponds to the height of the associated **Canvas** component. Default unit: vp. If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +42,15 @@ If the unit mode of the **DrawingRenderingContext** object is set to px, the uni
 width: number
 ```
 
-Width of the **DrawingRenderingContext** object, which corresponds to the width of the associated **Canvas** component.
-
-Default unit: vp.
-
-If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
+Width of the **DrawingRenderingContext** object, which corresponds to the width of the associated **Canvas** component. Default unit: vp. If the unit mode of the **DrawingRenderingContext** object is set to px, the unit is px.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

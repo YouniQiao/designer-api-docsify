@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-mechanicManager-export interface MoveParams--><!--Device-mechanicManager-export interface MoveParams-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -22,6 +24,8 @@ angle: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-MoveParams-angle: double--><!--Device-MoveParams-angle: double-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -34,11 +38,13 @@ angle: number
 distance: number
 ```
 
-移动距离。取值限定为整数。
+移动距离。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-MoveParams-distance: int--><!--Device-MoveParams-distance: int-End-->
 
@@ -58,6 +64,8 @@ mode?: MarchingMode
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-MoveParams-mode?: MarchingMode--><!--Device-MoveParams-mode?: MarchingMode-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -75,6 +83,8 @@ speedGear?: SpeedGear
 **类型：** [SpeedGear](arkts-mechanic-mechanicmanager-speedgear-e-sys.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-MoveParams-speedGear?: SpeedGear--><!--Device-MoveParams-speedGear?: SpeedGear-End-->
 

@@ -16,6 +16,8 @@ Query if the app is participating the HiRetrieval project.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-hiRetrieval-function isParticipant(): boolean--><!--Device-hiRetrieval-function isParticipant(): boolean-End-->

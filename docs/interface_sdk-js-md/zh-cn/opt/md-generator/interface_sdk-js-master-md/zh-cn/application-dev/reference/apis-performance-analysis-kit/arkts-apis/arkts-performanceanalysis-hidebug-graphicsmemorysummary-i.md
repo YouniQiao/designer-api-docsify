@@ -2,7 +2,9 @@
 
 描述应用显存数据，包括gl和graph部分。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-interface GraphicsMemorySummary--><!--Device-hidebug-interface GraphicsMemorySummary-End-->
 
@@ -18,9 +20,11 @@ gl显存大小，RenderService渲染进程加载所需资源占用的内存，�
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GraphicsMemorySummary-gl: int--><!--Device-GraphicsMemorySummary-gl: int-End-->
 
@@ -36,9 +40,11 @@ graph显存大小，进程统计的DMA内存占用，包括直接通过接口申
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GraphicsMemorySummary-graph: int--><!--Device-GraphicsMemorySummary-graph: int-End-->
 

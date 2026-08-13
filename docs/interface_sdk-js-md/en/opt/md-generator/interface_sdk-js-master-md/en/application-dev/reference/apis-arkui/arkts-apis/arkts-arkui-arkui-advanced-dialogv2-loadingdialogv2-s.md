@@ -4,7 +4,7 @@ Declare CustomDialog LoadingDialogV2
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct LoadingDialogV2--><!--Device-unnamed-export declare struct LoadingDialogV2-End-->
 
@@ -19,7 +19,8 @@ import { AdvancedDialogV2OnCheckedChange, LoadingDialogV2, AdvancedDialogV2Butto
 ## content
 
 ```TypeScript
-content?: ResourceStr
+@Param
+  content?: ResourceStr
 ```
 
 Sets the LoadingDialogV2 content.
@@ -28,12 +29,12 @@ Sets the LoadingDialogV2 content.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-LoadingDialogV2-content?: ResourceStr--><!--Device-LoadingDialogV2-content?: ResourceStr-End-->
+<!--Device-LoadingDialogV2-@Param  content?: ResourceStr--><!--Device-LoadingDialogV2-@Param  content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

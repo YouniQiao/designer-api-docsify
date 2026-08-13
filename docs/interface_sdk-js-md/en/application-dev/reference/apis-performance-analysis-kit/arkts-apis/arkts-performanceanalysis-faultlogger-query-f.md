@@ -20,7 +20,7 @@ Obtains the fault information about the current application. This API uses an as
 
 **Deprecated since:** 18
 
-**Substitutes:** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
+**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -31,15 +31,15 @@ Obtains the fault information about the current application. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | faultType | [FaultType](arkts-performanceanalysis-faultlogger-faulttype-e.md) | Yes | Fault type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes | Callback used to return the fault information array.&lt;br&gt; **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[FaultLogInfo](arkts-performanceanalysis-faultlogger-faultloginfo-i.md)&gt;&gt; | Yes | Callback used to return the fault information array.&lt;br&gt; **value** is the fault information array obtained. If **value** is **undefined**, an exception occurs during the information retrieval. In this case, an error string will be returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Parameter type error |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found |
+| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
 
 ## Examples
 
@@ -88,7 +88,7 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Deprecated since:** 18
 
-**Substitutes:** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
+**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
@@ -110,9 +110,9 @@ Obtains the fault information about the current application. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed, Parameter type error |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | The specified SystemCapability name was not found |
+| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) | The service is not started or is faulty |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed, Parameter type error |
+| [801](../../errorcode-universal.md#801-api-not-supported) | The specified SystemCapability name was not found |
 
 ## Examples
 

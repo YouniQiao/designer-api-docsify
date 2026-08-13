@@ -4,7 +4,9 @@ Enumerates the playback metric keys.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum PlaybackMetricsKey--><!--Device-media-enum PlaybackMetricsKey-End-->
 
@@ -20,7 +22,9 @@ Preparation duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'--><!--Device-PlaybackMetricsKey-PREPARE_DURATION = 'prepare_duration'-End-->
 
@@ -36,7 +40,9 @@ Duration for establishing a resource connection, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'--><!--Device-PlaybackMetricsKey-RESOURCE_CONNECTION_DURATION = 'resource_connection_duration'-End-->
 
@@ -52,7 +58,9 @@ Duration for decapsulating the first frame, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'--><!--Device-PlaybackMetricsKey-FIRST_FRAME_DECAPSULATION_DURATION = 'first_frame_decapsulation_duration'-End-->
 
@@ -68,7 +76,9 @@ Total playback duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'--><!--Device-PlaybackMetricsKey-TOTAL_PLAYING_TIME = 'total_playback_time'-End-->
 
@@ -84,7 +94,9 @@ Total number of requests.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +114,9 @@ Total loading duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'--><!--Device-PlaybackMetricsKey-TOTAL_DOWNLOAD_TIME  = 'total_loading_time'-End-->
 
@@ -118,7 +132,9 @@ Total loading size, in bytes.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,7 +152,9 @@ Total number of stalling times.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'--><!--Device-PlaybackMetricsKey-STALLING_COUNT  = 'stalling_count'-End-->
 
@@ -152,7 +170,9 @@ Total stalling duration, in milliseconds.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'--><!--Device-PlaybackMetricsKey-TOTAL_STALLING_TIME  = 'total_stalling_time'-End-->
 
@@ -168,7 +188,9 @@ Cumulative lip async count.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,7 +208,9 @@ Total lip async duration during the playback, in milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

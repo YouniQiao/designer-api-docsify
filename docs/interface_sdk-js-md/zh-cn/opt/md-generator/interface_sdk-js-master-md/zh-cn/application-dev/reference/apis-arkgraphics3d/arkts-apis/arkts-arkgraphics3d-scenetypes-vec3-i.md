@@ -2,7 +2,9 @@
 
 定义Vec3（三维向量）.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Vec3--><!--Device-unnamed-export interface Vec3-End-->
 
@@ -18,7 +20,9 @@ vec3的X分量.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Vec3-x: double--><!--Device-Vec3-x: double-End-->
 
@@ -34,7 +38,9 @@ vec3的Y分量.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Vec3-y: double--><!--Device-Vec3-y: double-End-->
 
@@ -50,7 +56,9 @@ vec3的Z分量.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Vec3-z: double--><!--Device-Vec3-z: double-End-->
 

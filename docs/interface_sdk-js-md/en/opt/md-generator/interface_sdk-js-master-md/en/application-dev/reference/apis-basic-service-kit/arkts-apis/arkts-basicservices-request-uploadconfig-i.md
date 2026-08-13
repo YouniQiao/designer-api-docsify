@@ -2,7 +2,9 @@
 
 Describes the configuration of an upload task.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-interface UploadConfig--><!--Device-request-interface UploadConfig-End-->
 
@@ -24,7 +26,9 @@ File start point to read when the upload task begins, in bytes. The default valu
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-begins?: long--><!--Device-UploadConfig-begins?: long-End-->
 
@@ -40,7 +44,9 @@ Form data in the request body.
 
 **Type:** Array&lt;RequestData&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-data: Array<RequestData>--><!--Device-UploadConfig-data: Array<RequestData>-End-->
 
@@ -56,7 +62,9 @@ File end point to read when the upload task ends, in bytes. The default value is
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-ends?: long--><!--Device-UploadConfig-ends?: long-End-->
 
@@ -72,7 +80,9 @@ List of files to upload. The files are submitted in multipart/form-data format.
 
 **Type:** Array&lt;File&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-files: Array<File>--><!--Device-UploadConfig-files: Array<File>-End-->
 
@@ -81,16 +91,18 @@ List of files to upload. The files are submitted in multipart/form-data format.
 ## header
 
 ```TypeScript
-header: Object
+header: Record<string, string>
 ```
 
-HTTP or HTTPS header added to an upload request.
+Adds an HTTP or HTTPS header to be included with the upload request.
 
-**Type:** Object
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
-**Since:** 6
+**Since:** 23
 
-<!--Device-UploadConfig-header: Object--><!--Device-UploadConfig-header: Object-End-->
+**Deprecated since:** -1
+
+<!--Device-UploadConfig-header: Record<string, string>--><!--Device-UploadConfig-header: Record<string, string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -104,7 +116,9 @@ Path index of the task. The default value is **0**.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-index?: int--><!--Device-UploadConfig-index?: int-End-->
 
@@ -120,7 +134,9 @@ HTTP request method. The value can be **POST** or **PUT**. The default value is 
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-method: string--><!--Device-UploadConfig-method: string-End-->
 
@@ -132,12 +148,13 @@ HTTP request method. The value can be **POST** or **PUT**. The default value is 
 url: string
 ```
 
-Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15, the value contains a maximum of 8192 characters.   
-[Intercepting HTTP](../../../basic-services/request/app-file-upload-download.md#intercepting-http) is supported.
+Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15, the value contains a maximum of 8192 characters. [Intercepting HTTP](../../../basic-services/request/app-file-upload-download.md#intercepting-http) is supported.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-url: string--><!--Device-UploadConfig-url: string-End-->
 

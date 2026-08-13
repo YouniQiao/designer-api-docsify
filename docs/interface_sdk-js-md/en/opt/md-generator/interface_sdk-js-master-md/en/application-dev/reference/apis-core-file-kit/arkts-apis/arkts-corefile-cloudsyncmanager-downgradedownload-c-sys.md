@@ -1,10 +1,10 @@
 # DowngradeDownload (System API)
 
-Full download: provides the capability of downloading cloud data for applications.
+Full download: provides the capability of downloading cloud data for applications. It supports the full download of cloud application files.
 
-It supports the full download of cloud application files.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-class DowngradeDownload--><!--Device-cloudSyncManager-class DowngradeDownload-End-->
 
@@ -26,7 +26,9 @@ constructor(bundleName: string)
 
 A constructor used to create an instance of the **DowngradeDownload** class with a specified bundle name.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -48,8 +50,8 @@ A constructor used to create an instance of the **DowngradeDownload** class with
 | --- |
 | 13900020 |
 | 22400005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -71,9 +73,11 @@ try {
 getCloudFileInfo(): Promise<CloudFileInfo>
 ```
 
-Obtains the size and count of files for applications requiring full download, including those stored only locally, only in the cloud, or both locally and in the cloud. This API uses a promise to return the result.
+Obtains the size and count of files for applications requiring full download, including those stored only locally , only in the cloud, or both locally and in the cloud. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -94,8 +98,8 @@ Obtains the size and count of files for applications requiring full download, in
 | Error Code ID |
 | --- |
 | 22400005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13900010 |
 
@@ -119,11 +123,11 @@ downgradeMgr.getCloudFileInfo().then((fileInfo: cloudSyncManager.CloudFileInfo) 
 startDownload(callback: Callback<DownloadProgress>): Promise<void>
 ```
 
-Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result.
+Starts the full download for the specified application's cloud files. This API uses a promise to return the result. This API uses an asynchronous callback to return the result. Repeated triggering of a full download task will throw an error (22400006).
 
-Repeated triggering of a full download task will throw an error (22400006).
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -152,8 +156,8 @@ Repeated triggering of a full download task will throw an error (22400006).
 | 13900020 |
 | 22400005 |
 | 22400006 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13900010 |
 
@@ -189,6 +193,8 @@ Start to migrate the downloaded full data to the specified public directory of f
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -214,8 +220,8 @@ Start to migrate the downloaded full data to the specified public directory of f
 | 22400006 |
 | 13900001 |
 | 13900002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900010 |
 
 ## stopDownload
@@ -224,9 +230,11 @@ Start to migrate the downloaded full data to the specified public directory of f
 stopDownload(): Promise<void>
 ```
 
-Stops the full download task triggered by [startDownload](#startDownload). This API uses a promise to return the result.
+Stops the full download task triggered by [startDownload](#startDownload) . This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -247,8 +255,8 @@ Stops the full download task triggered by [startDownload](#startDownload). This 
 | Error Code ID |
 | --- |
 | 22400005 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## Examples

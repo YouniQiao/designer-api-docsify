@@ -4,6 +4,8 @@ Describes the paragraph style.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorParagraphStyle--><!--Device-unnamed-declare interface RichEditorParagraphStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,12 +16,13 @@ Describes the paragraph style.
 leadingMargin?: Dimension | LeadingMarginPlaceholder
 ```
 
-Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the   
-**Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
+Indent of the paragraph. It has no effect if the paragraph starts with an image or builder span. If of the **Dimension** type, this parameter cannot be set in percentage. Default value: **{"size":["0.00px","0.00px"]}**
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LeadingMarginPlaceholder](arkts-arkui-leadingmarginplaceholder-i.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,15 +38,13 @@ Indent of the paragraph. It has no effect if the paragraph starts with an image 
 lineBreakStrategy?: LineBreakStrategy
 ```
 
-Line break rule.
-
-Default value: **LineBreakStrategy.GREEDY**
-
-This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
+Line break rule. Default value: **LineBreakStrategy.GREEDY** This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphens are not supported.
 
 **Type:** [LineBreakStrategy](../arkts-apis/arkts-arkui-linebreakstrategy-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,15 +60,13 @@ This parameter takes effect when **wordBreak** is not set to **breakAll**. Hyphe
 paragraphSpacing?: number
 ```
 
-Spacing between paragraphs.
-
-Unit: fp
-
-Default value: **0**
+Spacing between paragraphs. Unit: fp Default value: **0**
 
 **Type:** number
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,6 +88,8 @@ Set shader style.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -103,13 +104,13 @@ Set shader style.
 textAlign?: TextAlign
 ```
 
-Horizontal alignment mode of the text. 
-
-Default value: **TextAlign.START**
+Horizontal alignment mode of the text. Default value: **TextAlign.START**
 
 **Type:** TextAlign
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,13 +126,13 @@ Default value: **TextAlign.START**
 textDirection?: TextDirection
 ```
 
-Sets the text direction.
-
-Default value: TextDirection.DEFAULT
+Sets the text direction. Default value: TextDirection.DEFAULT
 
 **Type:** TextDirection
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,13 +148,13 @@ Default value: TextDirection.DEFAULT
 textVerticalAlign?: TextVerticalAlign
 ```
 
-Vertical alignment of text paragraphs.
-
-Default value: **TextVerticalAlign.BASELINE**.
+Vertical alignment of text paragraphs. Default value: **TextVerticalAlign.BASELINE**.
 
 **Type:** TextVerticalAlign
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,13 +170,13 @@ Default value: **TextVerticalAlign.BASELINE**.
 wordBreak?: WordBreak
 ```
 
-Word break rule.
-
-Default value: **WordBreak.BREAK_WORD**
+Word break rule. Default value: **WordBreak.BREAK_WORD**
 
 **Type:** WordBreak
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

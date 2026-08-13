@@ -16,7 +16,9 @@ Disconnect a device with mechanic id.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECT_MECHANIC_HARDWARE
 
@@ -32,7 +34,7 @@ Disconnect a device with mechanic id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | mechanic device id. &lt;br&gt;The value should be an integer. |
+| mechId | int | Yes | mechanic device id. &lt;br&gt;The value should be an integer. |
 
 **Return value:**
 
@@ -44,7 +46,7 @@ Disconnect a device with mechanic id.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) | Service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) | Service exception. |
 

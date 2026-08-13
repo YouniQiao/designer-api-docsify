@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ReadStreamOptions--><!--Device-unnamed-export interface ReadStreamOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -20,6 +22,8 @@ end?: number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-ReadStreamOptions-end?: number--><!--Device-ReadStreamOptions-end?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -35,6 +39,8 @@ start?: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-ReadStreamOptions-start?: number--><!--Device-ReadStreamOptions-start?: number-End-->
 

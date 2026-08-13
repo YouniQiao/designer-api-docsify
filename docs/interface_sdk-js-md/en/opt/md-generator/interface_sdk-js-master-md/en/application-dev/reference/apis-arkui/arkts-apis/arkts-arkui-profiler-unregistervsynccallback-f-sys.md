@@ -10,6 +10,8 @@ Unregisters vsync callback.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-Profiler-function unregisterVsyncCallback(): void--><!--Device-Profiler-function unregisterVsyncCallback(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

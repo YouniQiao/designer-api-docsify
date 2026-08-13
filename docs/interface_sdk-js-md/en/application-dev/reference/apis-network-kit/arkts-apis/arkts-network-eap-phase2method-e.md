@@ -2,9 +2,11 @@
 
 802.1x phase 2 method.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eap-enum Phase2Method--><!--Device-eap-enum Phase2Method-End-->
 
@@ -18,9 +20,11 @@ PHASE2_NONE
 
 Not specified
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_NONE--><!--Device-Phase2Method-PHASE2_NONE-End-->
 
@@ -34,9 +38,11 @@ PHASE2_PAP
 
 Password authentication protocol
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_PAP--><!--Device-Phase2Method-PHASE2_PAP-End-->
 
@@ -50,9 +56,11 @@ PHASE2_MSCHAP
 
 Microsoft challenge handshake authentication protocol
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_MSCHAP--><!--Device-Phase2Method-PHASE2_MSCHAP-End-->
 
@@ -66,9 +74,11 @@ PHASE2_MSCHAPV2
 
 Microsoft challenge handshake authentication protocol version 2
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_MSCHAPV2--><!--Device-Phase2Method-PHASE2_MSCHAPV2-End-->
 
@@ -82,9 +92,11 @@ PHASE2_GTC
 
 Generic token card
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_GTC--><!--Device-Phase2Method-PHASE2_GTC-End-->
 
@@ -98,9 +110,11 @@ PHASE2_SIM
 
 Subscriber identity module
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_SIM--><!--Device-Phase2Method-PHASE2_SIM-End-->
 
@@ -114,9 +128,11 @@ PHASE2_AKA
 
 Authentication and key agreement
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_AKA--><!--Device-Phase2Method-PHASE2_AKA-End-->
 
@@ -130,9 +146,11 @@ PHASE2_AKA_PRIME
 
 AKA Prime
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Phase2Method-PHASE2_AKA_PRIME--><!--Device-Phase2Method-PHASE2_AKA_PRIME-End-->
 

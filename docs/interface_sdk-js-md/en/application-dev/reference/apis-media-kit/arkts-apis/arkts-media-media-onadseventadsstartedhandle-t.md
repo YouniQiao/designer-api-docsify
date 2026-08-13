@@ -8,7 +8,9 @@ Describes the callback function of the ad content playback start event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -21,5 +23,5 @@ Describes the callback function of the ad content playback start event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | adsId | string | Yes | ID of the ad resource that is being played. |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Playing duration of the advertisement, in milliseconds. <br>The value should be an integer. |
+| duration | int | Yes | Playing duration of the advertisement, in milliseconds. <br>The value should be an integer. |
 

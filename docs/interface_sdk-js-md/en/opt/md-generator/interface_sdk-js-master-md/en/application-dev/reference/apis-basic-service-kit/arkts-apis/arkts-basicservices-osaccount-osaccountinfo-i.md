@@ -2,7 +2,9 @@
 
 Represents information about an OS account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface OsAccountInfo--><!--Device-osAccount-interface OsAccountInfo-End-->
 
@@ -20,11 +22,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 constraints: Array<string>
 ```
 
-[Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the system account. By default, no value is passed in.
+Constraints of the system account. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-constraints: Array<string>--><!--Device-OsAccountInfo-constraints: Array<string>-End-->
 
@@ -40,7 +44,9 @@ OS account creation time. The value is a Unix timestamp (in seconds).
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-createTime: long--><!--Device-OsAccountInfo-createTime: long-End-->
 
@@ -56,7 +62,9 @@ Distributed account information. By default, no value is passed in.
 
 **Type:** distributedAccount.DistributedInfo
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo--><!--Device-OsAccountInfo-distributedInfo: distributedAccount.DistributedInfo-End-->
 
@@ -72,7 +80,9 @@ Domain account information. By default, no value is passed in.
 
 **Type:** [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-domainInfo: DomainAccountInfo--><!--Device-OsAccountInfo-domainInfo: DomainAccountInfo-End-->
 
@@ -84,12 +94,13 @@ Domain account information. By default, no value is passed in.
 isActivated: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value  
-**false** means the opposite.
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-isActivated: boolean--><!--Device-OsAccountInfo-isActivated: boolean-End-->
 
@@ -101,11 +112,7 @@ Whether the OS account is activated. The value **true** means the specified acco
 isActived: boolean
 ```
 
-Whether the OS account is activated. The value **true** means the specified account is activated; the value  
-**false** means the opposite.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use  
- **isActivated** instead.
+Whether the OS account is activated. The value **true** means the specified account is activated; the value **false** means the opposite. Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isActivated** instead.
 
 **Type:** boolean
 
@@ -125,11 +132,13 @@ Note: This parameter is supported since API version 7 and deprecated since API v
 isCreateCompleted: boolean
 ```
 
-Whether the OS account information is complete. The value **true** means the specified account is complete;the value **false** means the opposite.
+Whether the OS account information is complete. The value **true** means the specified account is complete; the value **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-isCreateCompleted: boolean--><!--Device-OsAccountInfo-isCreateCompleted: boolean-End-->
 
@@ -145,7 +154,9 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-isUnlocked: boolean--><!--Device-OsAccountInfo-isUnlocked: boolean-End-->
 
@@ -157,10 +168,7 @@ Whether the account is unlocked (whether the **el2/** directory is decrypted). T
 isVerified: boolean
 ```
 
-Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite.
-
-Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use  
- **isUnlocked** instead.
+Whether the account has been verified. The value **true** means the specified account has been verified; the value **false** means the opposite. Note: This parameter is supported since API version 7 and deprecated since API version 11. You are advised to use **isUnlocked** instead.
 
 **Type:** boolean
 
@@ -184,7 +192,9 @@ Last login time of the OS account. The value is a Unix timestamp (in seconds).
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-lastLoginTime: long--><!--Device-OsAccountInfo-lastLoginTime: long-End-->
 
@@ -200,7 +210,9 @@ ID of the target OS account.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-localId: int--><!--Device-OsAccountInfo-localId: int-End-->
 
@@ -216,7 +228,9 @@ Name of the OS account.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-localName: string--><!--Device-OsAccountInfo-localName: string-End-->
 
@@ -232,7 +246,9 @@ Avatar of the OS account. By default, no value is passed in.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-photo: string--><!--Device-OsAccountInfo-photo: string-End-->
 
@@ -248,7 +264,9 @@ SN of the OS account.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-serialNumber: long--><!--Device-OsAccountInfo-serialNumber: long-End-->
 
@@ -264,7 +282,9 @@ Type of the OS account.
 
 **Type:** [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountInfo-type: OsAccountType--><!--Device-OsAccountInfo-type: OsAccountType-End-->
 

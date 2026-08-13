@@ -6,7 +6,9 @@ The definition of pagination object.
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface PageMediaEntity extends OperResult--><!--Device-avMusicTemplate-interface PageMediaEntity extends OperResult-End-->
+**Deprecated since:** -1
+
+<!--Device-avMusicTemplate-interface PageMediaEntity--><!--Device-avMusicTemplate-interface PageMediaEntity-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,6 +30,8 @@ Query data content (pass corresponding structure data according to the type).
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PageMediaEntity-elements: MediaEntity[]--><!--Device-PageMediaEntity-elements: MediaEntity[]-End-->
@@ -45,6 +49,8 @@ Episode Range
 **Type:** [EpisodeRange](arkts-avsession-avmusictemplate-episoderange-i.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +70,8 @@ Have next page data.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PageMediaEntity-hasMoreData: boolean--><!--Device-PageMediaEntity-hasMoreData: boolean-End-->
@@ -81,6 +89,8 @@ Media type.
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +110,8 @@ Pagination query page number.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PageMediaEntity-pageIndex: int--><!--Device-PageMediaEntity-pageIndex: int-End-->
@@ -117,6 +129,8 @@ Size of per page.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,6 +150,8 @@ Data Sorting
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PageMediaEntity-sort?: Sort--><!--Device-PageMediaEntity-sort?: Sort-End-->
@@ -153,6 +169,8 @@ Total size of data.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

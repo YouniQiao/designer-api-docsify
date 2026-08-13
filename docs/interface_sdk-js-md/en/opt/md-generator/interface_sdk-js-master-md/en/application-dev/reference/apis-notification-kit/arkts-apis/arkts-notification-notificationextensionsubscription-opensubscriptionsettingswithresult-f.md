@@ -16,6 +16,8 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.SUBSCRIBE_NOTIFICATION
 
 **Model restriction:** This API can be used only in the stage model.
@@ -40,10 +42,10 @@ Opens the settings screen of notification extension subscription in a semi-modal
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
-| [1600023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600018](../errorcode-notification.md#1600018-notification-settings-page-already-displayed) |
+| [1600023](../errorcode-notification.md#1600023-notificationsubscriberextensionability-not-implemented) |
 
 ## Examples
 

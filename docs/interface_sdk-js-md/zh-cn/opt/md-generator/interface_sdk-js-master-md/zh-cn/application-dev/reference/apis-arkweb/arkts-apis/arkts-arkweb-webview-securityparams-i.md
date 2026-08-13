@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-webview-interface SecurityParams--><!--Device-webview-interface SecurityParams-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ disableJITCompilation?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ disableMathML?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SecurityParams-disableMathML?: boolean--><!--Device-SecurityParams-disableMathML?: boolean-End-->
@@ -56,6 +62,8 @@ disableNonProxyUDP?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SecurityParams-disableNonProxyUDP?: boolean--><!--Device-SecurityParams-disableNonProxyUDP?: boolean-End-->
@@ -68,11 +76,13 @@ disableNonProxyUDP?: boolean
 disablePDFViewer?: boolean
 ```
 
-是否禁用PDF查看器。true表示禁用，false表示不禁用。默认值：false。内置PDF解析引擎在解析复杂二进制格式和嵌入式脚本时容易存在漏洞，攻击者可构造特殊PDF文件利用字体解析或内存破坏漏洞控制应用主进程。禁用后无法在ArkWeb中加载PDF。非文档办公类App建议禁用，引导用户使用外部应用打开PDF。
+是否禁用PDF查看器。true表示禁用，false表示不禁用。默认值：false。 内置PDF解析引擎在解析复杂二进制格式和嵌入式脚本时容易存在漏洞，攻击者可构造特殊PDF文件利用字体解析或内存破坏漏洞控制应用主进程。 禁用后无法在ArkWeb中加载PDF。非文档办公类App建议禁用，引导用户使用外部应用打开PDF。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,6 +102,8 @@ disableServiceWorker?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SecurityParams-disableServiceWorker?: boolean--><!--Device-SecurityParams-disableServiceWorker?: boolean-End-->
@@ -110,6 +122,8 @@ disableWebAssembly?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SecurityParams-disableWebAssembly?: boolean--><!--Device-SecurityParams-disableWebAssembly?: boolean-End-->
@@ -127,6 +141,8 @@ disableWebGL?: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

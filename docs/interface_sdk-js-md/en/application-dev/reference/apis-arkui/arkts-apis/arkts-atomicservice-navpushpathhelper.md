@@ -1,11 +1,23 @@
 # @ohos.atomicservice.NavPushPathHelper(Defines provides a push method for the target page in the routing table.)
 
-###### Child Components
+/*
+ Copyright (c) 2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+ ###### Child Components
  Not supported
  ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
+ The universal attributes are not supported.
  ###### Events
- The [universal events](./@internal/component/ets/common) are not supported.
+ The universal events are not supported.
 
 
 ## Modules to Import
@@ -20,5 +32,5 @@ import { NavPushPathHelper } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [NavPushPathHelper](arkts-arkui-atomicservice-navpushpathhelper-navpushpathhelper-c.md) | On the initial launch, the atomic service only downloads and installs the main package and its dependencies.Therefore, if the [NavDestination](./@internal/component/ets/nav_destination) resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable [Navigation](./@internal/component/ets/navigation) to support dynamic loading of the HSP subpackage before the navigation occurs. |
+| [NavPushPathHelper](arkts-arkui-atomicservice-navpushpathhelper-navpushpathhelper-c.md) | On the initial launch, the atomic service only downloads and installs the main package and its dependencies. Therefore, if the NavDestination resides in a different HSP subpackage that is not a dependency of the main package, you'll need to use **NavPushPathHelper** to download and install the corresponding HSP subpackage first. After that, push the specified **NavDestination** page information onto the stack. This way, you enable Navigation to support dynamic loading of the HSP subpackage before the navigation occurs. |
 

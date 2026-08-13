@@ -12,9 +12,11 @@ import { util } from '@kit.ArkTS';
 function generateRandomBinaryUUID(entropyCache?: boolean): Uint8Array
 ```
 
-Uses a secure random number generator to generate a random universally unique identifier (UUID) of RFC 4122 version4.
+Uses a secure random number generator to generate a random universally unique identifier (UUID) of RFC 4122 version 4.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

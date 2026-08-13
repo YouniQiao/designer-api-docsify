@@ -20,7 +20,7 @@ Initializes Connected Tag.
 
 **Deprecated since:** 9
 
-**Substitutes:** [initialize](ohos.connectedTag/connectedTag#initialize)
+**Substitutes:** [initialize](arkts-connectivity-connectedtag-initialize-f.md#initialize)
 
 **Required permissions:** ohos.permission.NFC_TAG
 

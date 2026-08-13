@@ -6,9 +6,13 @@ type OnProxyConfigChangeCallback = () => void
 
 The callback for proxy changed.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-webview-type OnProxyConfigChangeCallback = () => void--><!--Device-webview-type OnProxyConfigChangeCallback = () => void-End-->
 

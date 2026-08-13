@@ -6,6 +6,8 @@ Title bar options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface TitleOptions--><!--Device-unnamed-export interface TitleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Background color.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TitleOptions-backgroundColor?: ResourceColor--><!--Device-TitleOptions-backgroundColor?: ResourceColor-End-->
@@ -51,6 +55,8 @@ Set title bar style.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,6 +80,8 @@ Whether to enable the blur effect.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TitleOptions-isBlurEnabled?: boolean--><!--Device-TitleOptions-isBlurEnabled?: boolean-End-->
@@ -96,6 +104,8 @@ Set title bar type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-TitleOptions-titleBarType?: TitleBarType--><!--Device-TitleOptions-titleBarType?: TitleBarType-End-->
@@ -117,6 +127,8 @@ Set title bar icon.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

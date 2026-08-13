@@ -14,9 +14,11 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 
 Notifies a screenshot event. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>--><!--Device-window-function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>-End-->
 
@@ -40,9 +42,9 @@ Notifies a screenshot event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

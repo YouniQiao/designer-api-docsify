@@ -2,7 +2,9 @@
 
 窗口矩形（窗口位置及窗口大小）变化返回的值及变化原因。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface RectChangeOptions--><!--Device-window-interface RectChangeOptions-End-->
 
@@ -18,9 +20,11 @@ reason: RectChangeReason
 
 **类型：** RectChangeReason
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RectChangeOptions-reason: RectChangeReason--><!--Device-RectChangeOptions-reason: RectChangeReason-End-->
 
@@ -36,9 +40,11 @@ New value of the window rectangle.
 
 **类型：** Rect
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RectChangeOptions-rect: Rect--><!--Device-RectChangeOptions-rect: Rect-End-->
 

@@ -2,7 +2,9 @@
 
 Defines the shared album asset
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface SharedAlbumAsset--><!--Device-photoAccessHelper-interface SharedAlbumAsset-End-->
 
@@ -26,7 +28,9 @@ album id of album asset
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumId: int--><!--Device-SharedAlbumAsset-albumId: int-End-->
 
@@ -44,7 +48,9 @@ album name
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumName: string--><!--Device-SharedAlbumAsset-albumName: string-End-->
 
@@ -62,7 +68,9 @@ subtype of album asset
 
 **Type:** AlbumSubtype
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype--><!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype-End-->
 
@@ -80,7 +88,9 @@ type of album asset
 
 **Type:** AlbumType
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumType: AlbumType--><!--Device-SharedAlbumAsset-albumType: AlbumType-End-->
 
@@ -98,7 +108,9 @@ number of assets in this album
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-count: int--><!--Device-SharedAlbumAsset-count: int-End-->
 
@@ -116,7 +128,9 @@ uri of album cover
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-coverUri: string--><!--Device-SharedAlbumAsset-coverUri: string-End-->
 
@@ -134,7 +148,9 @@ number of photo assets in this album
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-imageCount: int--><!--Device-SharedAlbumAsset-imageCount: int-End-->
 
@@ -152,7 +168,9 @@ number of video assets in this album
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-videoCount: int--><!--Device-SharedAlbumAsset-videoCount: int-End-->
 

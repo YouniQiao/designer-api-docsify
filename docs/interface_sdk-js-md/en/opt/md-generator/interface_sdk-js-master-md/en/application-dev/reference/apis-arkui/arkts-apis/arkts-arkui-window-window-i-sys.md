@@ -1,12 +1,10 @@
 # Window
 
-Represents a window instance, which is the basic unit managed by the window manager.
+Represents a window instance, which is the basic unit managed by the window manager. In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getLastWindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createWindow), or [findWindow()](arkts-arkui-window-findwindow-f.md#findWindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
-In the following API examples, you must use  
-[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getLastWindow),  
-[createWindow()](arkts-arkui-window-createwindow-f.md#createWindow),or [findWindow()](arkts-arkui-window-findwindow-f.md#findWindow) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+**Since:** 23
 
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-window-interface Window--><!--Device-window-interface Window-End-->
 
@@ -24,26 +22,11 @@ import { window } from '@kit.ArkUI';
 attachLayoutToParentWindow(anchorInfo?: WindowAnchorInfo, attachOptions?: SubWindowAttachOptions): Promise<void>
 ```
 
-Attaches a first-level child window to the main window to maintain a fixed relative position.This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window.The child window and the parent window use the same window anchor point.
-
-> **NOTE：**
-> 
-> - Only first-level child windows can call this API. The child window must be in floating window mode
-> (that is, the window mode is **window.WindowStatusType.FLOATING**).
-> 
-> - After the child window calls this API, the display position of the child window immediately follows the
-> main window and the relative position remains unchanged. In addition, the size and mode changes of the main
-> window can be listened to. The effect will persist unless the
-> [detachLayoutToParentWindow()](#detachlayouttoparentwindow24) API is called for detaching.
-> 
-> -After the child window calls this API, calling APIs such as
-> [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo),
-> [maximize()](arkts-arkui-window-window-i.md#maximize), and
-> [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled)
-> to change the window position, or dragging and moving or dragging and resizing the child window through mouse
-> or touch operations will not take effect.
+Attaches a first-level child window to the main window to maintain a fixed relative position. This API uses a promise to return the result. The relative position is represented by the anchor point offset between the child window and the parent window. The child window and the parent window use the same window anchor point. > **NOTE：**> > - Only first-level child windows can call this API. The child window must be in floating window mode > (that is, the window mode is **window.WindowStatusType.FLOATING**). > > - After the child window calls this API, the display position of the child window immediately follows the > main window and the relative position remains unchanged. In addition, the size and mode changes of the main > window can be listened to. The effect will persist unless the > [detachLayoutToParentWindow()](#detachLayoutToParentWindow) API is called for detaching. > > -After the child window calls this API, calling APIs such as > [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo), > [maximize()](arkts-arkui-window-window-i.md#maximize), and > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled) > to change the window position, or dragging and moving or dragging and resizing the child window through mouse > or touch operations will not take effect.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,12 +53,12 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -133,7 +116,9 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promis
 
 Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>--><!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>): Promise<void>-End-->
 
@@ -158,10 +143,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -223,7 +208,9 @@ bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callbac
 
 Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void--><!--Device-Window-bindDialogTarget(token: rpc.RemoteObject, deathCallback: Callback<void>, callback: AsyncCallback<void>): void-End-->
 
@@ -243,10 +230,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -310,7 +297,9 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>--><!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>): Promise<void>-End-->
 
@@ -335,10 +324,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -388,7 +377,9 @@ bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback
 
 Binds the modal window to the target window. After the binding is successful, the target window cannot respond to user operations. In addition, a callback used to listen for modal window destruction events is added. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void--><!--Device-Window-bindDialogTarget(requestInfo: dialogRequest.RequestInfo, deathCallback: Callback<void>, callback: AsyncCallback<void>): void-End-->
 
@@ -408,10 +399,10 @@ Binds the modal window to the target window. After the binding is successful, th
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -461,23 +452,11 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 detachLayoutToParentWindow(): Promise<void>
 ```
 
-Detach a first-level child window from the main window to cancel a fixed relative position.This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - When the child window calls this API, the child window must be in the attached state.
-> 
-> - After detached by calling this API, the child window retains its position during attaching.
-> You can drag the child window to change its size and position.
-> 
-> - After the detaching, calling APIs such as
-> [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo) or
-> [maximize()](arkts-arkui-window-window-i.md#maximize), and
-> [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled)
-> to change the window position, or dragging and moving or dragging and resizing the child window through mouse
-> or touch operations will take effect.
+Detach a first-level child window from the main window to cancel a fixed relative position. This API uses a promise to return the result. > **NOTE：**> > - When the child window calls this API, the child window must be in the attached state. > > - After detached by calling this API, the child window retains its position during attaching. > You can drag the child window to change its size and position. > > - After the detaching, calling APIs such as > [moveWindowTo()](arkts-arkui-window-window-i.md#moveWindowTo) or > [maximize()](arkts-arkui-window-window-i.md#maximize), and > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setFollowParentWindowLayoutEnabled) > to change the window position, or dragging and moving or dragging and resizing the child window through mouse > or touch operations will take effect.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -497,12 +476,12 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [1300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [1300010](../errorcode-window.md#1300010-unsupported-operation-in-the-current-window-mode) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -537,6 +516,46 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## enableDrag
+
+```TypeScript
+enableDrag(enable: boolean): Promise<void>
+```
+
+Enables or disables window dragging. This API takes effect only for system windows, application child windows, global floating windows, and modal windows. This API uses a promise to return the result. After window dragging is enabled, the window can be resized using the mouse or touch operations.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Window-enableDrag(enable: boolean): Promise<void>--><!--Device-Window-enableDrag(enable: boolean): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| enable | boolean | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
 ## getRotationLocked
 
 ```TypeScript
@@ -545,7 +564,9 @@ getRotationLocked(): boolean
 
 Checks whether the [system window](../../../windowmanager/window-terminology.md#system-window) has its screen rotation locked. If this API is called by a non-system window, error code 1300029 is thrown.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-getRotationLocked(): boolean--><!--Device-Window-getRotationLocked(): boolean-End-->
 
@@ -563,10 +584,10 @@ Checks whether the [system window](../../../windowmanager/window-terminology.md#
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 1300029 |
 
 ## Examples
@@ -588,7 +609,9 @@ getTransitionController(): TransitionController
 
 Obtains the transition animation controller.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-getTransitionController(): TransitionController--><!--Device-Window-getTransitionController(): TransitionController-End-->
 
@@ -606,9 +629,9 @@ Obtains the transition animation controller.
 
 | Error Code ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -624,7 +647,9 @@ hide (callback: AsyncCallback<void>): void
 
 Hides this window. This API uses an asynchronous callback to return the result. This API takes effect only for a system window or an application child window.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-hide (callback: AsyncCallback<void>): void--><!--Device-Window-hide (callback: AsyncCallback<void>): void-End-->
 
@@ -642,8 +667,8 @@ Hides this window. This API uses an asynchronous callback to return the result. 
 
 | Error Code ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -668,7 +693,9 @@ hide(): Promise<void>
 
 Hides this window. This API uses a promise to return the result. This API takes effect only for a system window or an application child window.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-hide(): Promise<void>--><!--Device-Window-hide(): Promise<void>-End-->
 
@@ -686,8 +713,8 @@ Hides this window. This API uses a promise to return the result. This API takes 
 
 | Error Code ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -708,12 +735,11 @@ promise.then(() => {
 hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#WindowType) is  
-**TYPE_FLOAT**). This API uses an asynchronous callback to return the result.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#WindowType) is **TYPE_FLOAT**). This API uses an asynchronous callback to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
-A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non-system floating window.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -732,12 +758,12 @@ A non-system floating window is a floating window created by a non-system applic
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -790,12 +816,11 @@ export default class EntryAbility extends UIAbility {
 hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>
 ```
 
-Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#WindowType) is  
-**TYPE_FLOAT**). This API uses a promise to return the result.
+Sets whether to hide non-system floating windows (where [windowType](arkts-arkui-window-windowtype-e.md#WindowType) is **TYPE_FLOAT**). This API uses a promise to return the result. A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non- system floating window.
 
-A non-system floating window is a floating window created by a non-system application. By default, the main window of a system application can be displayed together with a non-system floating window. This means that the main window may be blocked by an upper-layer non-system floating window. If the **shouldHide** parameter is set to **true**, all non-system floating windows are hidden, so that the main window will never be blocked by a non-system floating window.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>--><!--Device-Window-hideNonSystemFloatingWindows(shouldHide: boolean): Promise<void>-End-->
 
@@ -819,12 +844,12 @@ A non-system floating window is a floating window created by a non-system applic
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -879,7 +904,9 @@ hideWithAnimation(callback: AsyncCallback<void>): void
 
 Hides this window and plays an animation during the process. This API uses an asynchronous callback to return the result. This API takes effect only for a system window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-hideWithAnimation(callback: AsyncCallback<void>): void--><!--Device-Window-hideWithAnimation(callback: AsyncCallback<void>): void-End-->
 
@@ -897,10 +924,10 @@ Hides this window and plays an animation during the process. This API uses an as
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -925,7 +952,9 @@ hideWithAnimation(): Promise<void>
 
 Hides this window and plays an animation during the process. This API uses a promise to return the result. This API takes effect only for a system window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-hideWithAnimation(): Promise<void>--><!--Device-Window-hideWithAnimation(): Promise<void>-End-->
 
@@ -943,10 +972,10 @@ Hides this window and plays an animation during the process. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -969,7 +998,9 @@ isMainWindowFullScreenAcrossDisplays(): Promise<boolean>
 
 Checks whether the main window is in full-screen mode across multiple displays. This API uses a promise to return the result. It takes effect only for the main window and child windows.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-isMainWindowFullScreenAcrossDisplays(): Promise<boolean>--><!--Device-Window-isMainWindowFullScreenAcrossDisplays(): Promise<boolean>-End-->
 
@@ -987,11 +1018,11 @@ Checks whether the main window is in full-screen mode across multiple displays. 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1010,7 +1041,41 @@ try {
 }
 ```
 
-## off('mainWindowFullScreenAcrossDisplaysChanged')
+## offMainWindowFullScreenAcrossDisplaysChanged
+
+```TypeScript
+offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void
+```
+
+Unsubscribes from events indicating whether the main window is in full-screen mode across multiple displays.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void--><!--Device-Window-offMainWindowFullScreenAcrossDisplaysChanged(callback?: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_mainWindowFullScreenAcrossDisplaysChanged
 
 ```TypeScript
 off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void
@@ -1019,6 +1084,8 @@ off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boole
 Unsubscribes from events indicating whether the main window is in full-screen mode across multiple displays.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-Window-off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void--><!--Device-Window-off(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback?: Callback<boolean>): void-End-->
 
@@ -1037,11 +1104,11 @@ Unsubscribes from events indicating whether the main window is in full-screen mo
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1061,7 +1128,41 @@ try {
 }
 ```
 
-## on('mainWindowFullScreenAcrossDisplaysChanged')
+## onMainWindowFullScreenAcrossDisplaysChanged
+
+```TypeScript
+onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void
+```
+
+Subscribes to events indicating whether the main window is in full-screen mode across multiple displays.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void--><!--Device-Window-onMainWindowFullScreenAcrossDisplaysChanged(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_mainWindowFullScreenAcrossDisplaysChanged
 
 ```TypeScript
 on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void
@@ -1070,6 +1171,8 @@ on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean
 Subscribes to events indicating whether the main window is in full-screen mode across multiple displays.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-Window-on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void--><!--Device-Window-on(type: 'mainWindowFullScreenAcrossDisplaysChanged', callback: Callback<boolean>): void-End-->
 
@@ -1088,11 +1191,11 @@ Subscribes to events indicating whether the main window is in full-screen mode a
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1113,10 +1216,11 @@ try {
 opacity(opacity: number): void
 ```
 
-Sets the opacity for this window. This API can be used only when you  
-[customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
+Sets the opacity for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-opacity(opacity: double): void--><!--Device-Window-opacity(opacity: double): void-End-->
 
@@ -1134,10 +1238,10 @@ Sets the opacity for this window. This API can be used only when you
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1155,12 +1259,11 @@ try {
 raiseAboveTarget(windowId: number, callback: AsyncCallback<void>): void
 ```
 
-Raises a child window above a target child window. This API uses an asynchronous callback to return the result.
+Raises a child window above a target child window. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed for each.
 
-Before calling this API, ensure that the child window to raise and the target child window have been created and  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed for each.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-Window-raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void--><!--Device-Window-raiseAboveTarget(windowId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -1179,13 +1282,13 @@ Before calling this API, ensure that the child window to raise and the target ch
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
 
 ## Examples
 
@@ -1235,12 +1338,11 @@ export default class EntryAbility extends UIAbility {
 raiseAboveTarget(windowId: number): Promise<void>
 ```
 
-Raises a child window above a target child window. This API uses a promise to return the result.
+Raises a child window above a target child window. This API uses a promise to return the result. Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed for each.
 
-Before calling this API, ensure that the child window to raise and the target child window have been created and  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed for each.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseAboveTarget(windowId: int): Promise<void>-End-->
 
@@ -1264,13 +1366,13 @@ Before calling this API, ensure that the child window to raise and the target ch
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
 
 ## Examples
 
@@ -1318,18 +1420,11 @@ export default class EntryAbility extends UIAbility {
 raiseMainWindowAboveTarget(windowId: number): Promise<void>
 ```
 
-Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result.
+Moves the main window above another main window within the same application, with child windows following their parents' layer change. This API uses a promise to return the result. This API can be called only by the main window of a system application. You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows. - If the application's main window or its child windows currently have focus, calling this API to lower the layer will cause the window to lose focus automatically, and the highest-layered application window will gain focus. - If the main window calls this API to move above the current focused window, the highest-layered window among the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
 
-This API can be called only by the main window of a system application.
+**Since:** 23
 
-You need to pass the ID of the target main window. Both the calling window and the target window must be in the same application process, displayed on the same physical screen, below the lock screen layer, not topmost, not modal, and have no application-modal child windows.
-
-- If the application's main window or its child windows currently have focus, calling this API to lower the layer  
-will cause the window to lose focus automatically, and the highest-layered application window will gain focus.  
-- If the main window calls this API to move above the current focused window, the highest-layered window among  
-the raised main window and its child windows will gain focus. If the main window calls this API without moving above the current focused window, the focus remains unchanged.
-
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-Window-raiseMainWindowAboveTarget(windowId: int): Promise<void>--><!--Device-Window-raiseMainWindowAboveTarget(windowId: int): Promise<void>-End-->
 
@@ -1353,12 +1448,12 @@ the raised main window and its child windows will gain focus. If the main window
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1488,12 +1583,11 @@ export default class RaiseMainWindowAbility extends UIAbility {
 raiseToAppTop(callback: AsyncCallback<void>): void
 ```
 
-Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result.
+Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
 
-Before calling this API, ensure that the child window has been created and  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-Window-raiseToAppTop(callback: AsyncCallback<void>): void--><!--Device-Window-raiseToAppTop(callback: AsyncCallback<void>): void-End-->
 
@@ -1511,11 +1605,11 @@ Before calling this API, ensure that the child window has been created and
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
 
 ## Examples
 
@@ -1556,14 +1650,11 @@ export default class EntryAbility extends UIAbility {
 requestFocus(isFocused: boolean): Promise<void>
 ```
 
-Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use  
-[on('windowEvent')](@ohos.window:window.Window.on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;))to listen for the focus status of the window.
+Allows this window to proactively request to gain or lose focus. This API uses a promise to return the result. A value is returned as long as the API is successfully called. The return value does not indicate that the window has gained or lost focus. You can use [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationChange) to listen for the focus status of the window. When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed). Conversely, once a blur request is sent, the window will lose focus without any conditions.
 
-When a focus request is sent, whether the window can successfully gain focus depends on its capability of being focused and its current visibility. To gain focus, the window must be capable of receiving focus and in a visible state (actively displayed and not hidden or destroyed).
+**Since:** 23
 
-Conversely, once a blur request is sent, the window will lose focus without any conditions.
-
-**Since:** 13
+**Deprecated since:** -1
 
 <!--Device-Window-requestFocus(isFocused: boolean): Promise<void>--><!--Device-Window-requestFocus(isFocused: boolean): Promise<void>-End-->
 
@@ -1587,11 +1678,11 @@ Conversely, once a blur request is sent, the window will lose focus without any 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1613,10 +1704,11 @@ promise.then(() => {
 rotate(rotateOptions: RotateOptions): void
 ```
 
-Sets the rotation parameters for this window. This API can be used only when you  
-[customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
+Sets the rotation parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-rotate(rotateOptions: RotateOptions): void--><!--Device-Window-rotate(rotateOptions: RotateOptions): void-End-->
 
@@ -1634,10 +1726,10 @@ Sets the rotation parameters for this window. This API can be used only when you
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1662,10 +1754,11 @@ try {
 scale(scaleOptions: ScaleOptions): void
 ```
 
-Sets the scale parameters for this window. This API can be used only when you  
-[customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
+Sets the scale parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-scale(scaleOptions: ScaleOptions): void--><!--Device-Window-scale(scaleOptions: ScaleOptions): void-End-->
 
@@ -1683,10 +1776,10 @@ Sets the scale parameters for this window. This API can be used only when you
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1710,14 +1803,11 @@ try {
 setBackdropBlur(radius: number): void
 ```
 
-Blurs the background of this window.
+Blurs the background of this window. The window background refers to the lower-layer area covered by the window, which is the same as the window size. To make the blur effect visible, you must set the window background transparent by calling [setWindowBackgroundColor](arkts-arkui-window-window-i.md#setWindowBackgroundColor).
 
-The window background refers to the lower-layer area covered by the window, which is the same as the window size.
+**Since:** 23
 
-To make the blur effect visible, you must set the window background transparent by calling  
-[setWindowBackgroundColor](arkts-arkui-window-window-i.md#setWindowBackgroundColor).
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-Window-setBackdropBlur(radius: double): void--><!--Device-Window-setBackdropBlur(radius: double): void-End-->
 
@@ -1735,10 +1825,10 @@ To make the blur effect visible, you must set the window background transparent 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1759,7 +1849,9 @@ setBackdropBlurStyle(blurStyle: BlurStyle): void
 
 Sets the blur style for the background of this window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setBackdropBlurStyle(blurStyle: BlurStyle): void--><!--Device-Window-setBackdropBlurStyle(blurStyle: BlurStyle): void-End-->
 
@@ -1777,10 +1869,10 @@ Sets the blur style for the background of this window.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1800,7 +1892,9 @@ setBlur(radius: number): void
 
 Blurs this window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setBlur(radius: double): void--><!--Device-Window-setBlur(radius: double): void-End-->
 
@@ -1818,10 +1912,10 @@ Blurs this window.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1841,7 +1935,9 @@ setCornerRadius(cornerRadius: number): void
 
 Sets the radius of the rounded corners for this window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setCornerRadius(cornerRadius: double): void--><!--Device-Window-setCornerRadius(cornerRadius: double): void-End-->
 
@@ -1859,10 +1955,10 @@ Sets the radius of the rounded corners for this window.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1880,15 +1976,11 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after  
-[loadContent()](arkts-arkui-window-window-i.md#loadContent)or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent).
+Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadContent) or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent). If this API is not called, the default density is not used. If this API, [setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setDefaultDensityEnabled) , and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setCustomDensity) are all called, the setting from the last called API will be applied.
 
-If this API is not called, the default density is not used.
+**Since:** 23
 
-If this API,  
-[setDefaultDensityEnabled(true)](arkts-arkui-window-windowstage-i.md#setDefaultDensityEnabled), and [setCustomDensity](arkts-arkui-window-windowstage-i.md#setCustomDensity) are all called, the setting from the last called API will be applied.
-
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-Window-setDefaultDensityEnabled(enabled: boolean): void--><!--Device-Window-setDefaultDensityEnabled(enabled: boolean): void-End-->
 
@@ -1906,9 +1998,9 @@ If this API,
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -1929,7 +2021,7 @@ setForbidSplitMove(isForbidSplitMove: boolean, callback: AsyncCallback<void>): v
 
 Sets whether the main window is forbidden to move in split-screen mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 
@@ -1950,10 +2042,10 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2000,7 +2092,7 @@ setForbidSplitMove(isForbidSplitMove: boolean): Promise<void>
 
 Sets whether the main window is forbidden to move in split-screen mode. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 26.0.0
 
@@ -2026,10 +2118,10 @@ Sets whether the main window is forbidden to move in split-screen mode. This API
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2074,7 +2166,9 @@ setHandwritingFlag(enable: boolean): Promise<void>
 
 Adds or deletes the handwriting flag for this window. After this flag is added, the window responds to stylus events but not touch events. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setHandwritingFlag(enable: boolean): Promise<void>--><!--Device-Window-setHandwritingFlag(enable: boolean): Promise<void>-End-->
 
@@ -2098,11 +2192,11 @@ Adds or deletes the handwriting flag for this window. After this flag is added, 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2128,11 +2222,11 @@ try {
 setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>
 ```
 
-Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result.
-
-By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
+Sets whether to enable the main window to raise itself by click. This API uses a promise to return the result. By default, clicking the main window raises both the main window and its associated child windows. Disabling this feature (by passing **false**) prevents the main window and its child windows from being raised when the main window is clicked, preserving their current state. However, clicking on a child window still raises both the child window and the main window together.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>--><!--Device-Window-setMainWindowRaiseByClickEnabled(enable: boolean): Promise<void>-End-->
 
@@ -2156,11 +2250,11 @@ By default, clicking the main window raises both the main window and its associa
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2201,14 +2295,11 @@ export default class EntryAbility extends UIAbility {
 setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result.
+Sets whether to enable a child window to raise itself by click. This API uses an asynchronous callback to return the result. Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked. Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
 
-Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable**parameter is set to **false**, the child window is not displayed on the top when being clicked.
+**Since:** 23
 
-Before calling this API, ensure that the child window has been created and  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-Window-setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setRaiseByClickEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -2227,13 +2318,13 @@ Before calling this API, ensure that the child window has been created and
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
 
 ## Examples
 
@@ -2278,41 +2369,11 @@ export default class EntryAbility extends UIAbility {
 setRotationLocked(locked: boolean): Promise<void>
 ```
 
-Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result.
+Allows a [system window](../../../windowmanager/window-terminology.md#system-window) to lock or unlock its own screen-rotation behavior. When locked, the window's orientation remains unchanged. When unlocked, the window's orientation follows the main window's orientation, the system rotation-lock button, and the device's physical rotation sensor. If this API is called by a non-system window, error code 1300029 is thrown. This API uses a promise to return the result. > **NOTE：**> > - If the main window sets the display orientation via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > while rotation is locked, the window restores the last orientation request when brought to the foreground after > unlocking. > > - If the system window sets the display orientation via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > while rotation is locked, the window restores the last orientation request when brought to the foreground with > the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked** > does not hinder the system window at a higher level to set the display orientation by calling > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > . > > - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after > unlocking. > > - If the application calls > [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setOrientation) > to set the screen orientation while rotation is locked, that screen?orientation setting is ignored. > > - When rotation is unlocked, the application's display orientation is determined based on the main window's > display orientation set via > [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation) > , the sensor orientation, and more. For details, see > [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview). > > - The API does not affect the launch orientation set by the **orientation** under > [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the > application.
 
-> **NOTE：**
-> 
-> - If the main window sets the display orientation via
-> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation)
-> while rotation is locked, the window restores the last orientation request when brought to the foreground after
-> unlocking.
-> 
-> - If the system window sets the display orientation via
-> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation)
-> while rotation is locked, the window restores the last orientation request when brought to the foreground with
-> the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**
-> does not hinder the system window at a higher level to set the display orientation by calling
-> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation)
-> .
-> 
-> - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after
-> unlocking.
-> 
-> - If the application calls
-> [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setOrientation)
-> to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.
-> 
-> - When rotation is unlocked, the application's display orientation is determined based on the main window's
-> display orientation set via
-> [setPreferredOrientation()](arkts-arkui-window-window-i.md#setPreferredOrientation)
-> , the sensor orientation, and more. For details, see
-> [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
-> 
-> - The API does not affect the launch orientation set by the **orientation** under
-> [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the
-> application.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-Window-setRotationLocked(locked: boolean): Promise<void>--><!--Device-Window-setRotationLocked(locked: boolean): Promise<void>-End-->
 
@@ -2336,10 +2397,10 @@ Allows a [system window](../../../windowmanager/window-terminology.md#system-win
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 1300029 |
 
 ## Examples
@@ -2364,7 +2425,9 @@ setShadow(radius: number, color?: string, offsetX?: number, offsetY?: number): v
 
 Sets the shadow for the window borders.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void--><!--Device-Window-setShadow(radius: double, color?: string, offsetX?: double, offsetY?: double): void-End-->
 
@@ -2385,10 +2448,10 @@ Sets the shadow for the window borders.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2406,11 +2469,11 @@ try {
 setSingleFrameComposerEnabled(enable: boolean): Promise<void>
 ```
 
-Enables or disables the single-frame composer. This API uses a promise to return the result.
+Enables or disables the single-frame composer. This API uses a promise to return the result. The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
 
-The single-frame composer is mainly used in scenarios that require extremely low interaction latency. It reduces the screen display latency of the rendering node.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-Window-setSingleFrameComposerEnabled(enable: boolean): Promise<void>--><!--Device-Window-setSingleFrameComposerEnabled(enable: boolean): Promise<void>-End-->
 
@@ -2434,10 +2497,10 @@ The single-frame composer is mainly used in scenarios that require extremely low
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2463,12 +2526,11 @@ try {
 setSnapshotSkip(isSkip: boolean): void
 ```
 
-Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting.
+Sets whether to ignore this window during screen capture, recording, or casting. This API is typically used in situations where you want to prevent screen capture, recording, or casting. If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using [on('windowEvent')](arkts-arkui-window-window-i.md#on_rotationChange) . Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
 
-If you want the window to always be ignored during screen capture, recording, or casting while it is in the foreground, listen for window lifecycle changes using  
-[on('windowEvent')](@ohos.window:window.Window.on(type: 'windowEvent', callback: Callback&lt;WindowEventType&gt;)). Set **isSkip** to **false** when the window is in the background and **true** when it is in the foreground.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-Window-setSnapshotSkip(isSkip: boolean): void--><!--Device-Window-setSnapshotSkip(isSkip: boolean): void-End-->
 
@@ -2486,9 +2548,9 @@ If you want the window to always be ignored during screen capture, recording, or
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2507,11 +2569,11 @@ try {
 setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void
 ```
 
-Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window.
+Shows or hides the maximize, minimize, and split-screen buttons on the title bar of the main window. This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
 
-This API takes effect only for the title bar buttons (maximize, minimize, and split-screen) that are available in the current scenario.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-Window-setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void--><!--Device-Window-setTitleButtonVisible(isMaximizeVisible: boolean, isMinimizeVisible: boolean, isSplitVisible: boolean): void-End-->
 
@@ -2531,11 +2593,11 @@ This API takes effect only for the title bar buttons (maximize, minimize, and sp
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2583,7 +2645,9 @@ setTopmost(isTopmost: boolean): Promise<void>
 
 Called by the main window to place the window above all the other windows. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setTopmost(isTopmost: boolean): Promise<void>--><!--Device-Window-setTopmost(isTopmost: boolean): Promise<void>-End-->
 
@@ -2607,12 +2671,12 @@ Called by the main window to place the window above all the other windows. This 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2637,6 +2701,51 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## setTouchableAreas
+
+```TypeScript
+setTouchableAreas(rects: Array<Rect>): Promise<void>
+```
+
+Sets the touchable areas for this window. By default, the entire window is touchable. If a touchable area is set, touch events outside this area are transparently transmitted. The setting becomes invalid after the window rectangle changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.SET_WINDOW_TOUCH_AREAS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>--><!--Device-Window-setTouchableAreas(rects: Array<Rect>): Promise<void>-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rects | Array & lt;Rect & gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
 ## setWakeUpScreen
 
 ```TypeScript
@@ -2645,7 +2754,9 @@ setWakeUpScreen(wakeUp: boolean): void
 
 Wakes up the screen.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setWakeUpScreen(wakeUp: boolean): void--><!--Device-Window-setWakeUpScreen(wakeUp: boolean): void-End-->
 
@@ -2663,10 +2774,10 @@ Wakes up the screen.
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2687,7 +2798,9 @@ setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void
 
 Adds or deletes the watermark flag for this window. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setWaterMarkFlag(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -2706,11 +2819,11 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 
@@ -2740,7 +2853,9 @@ setWaterMarkFlag(enable: boolean): Promise<void>
 
 Adds or deletes the watermark flag for this window. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setWaterMarkFlag(enable: boolean): Promise<void>--><!--Device-Window-setWaterMarkFlag(enable: boolean): Promise<void>-End-->
 
@@ -2764,11 +2879,11 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 
@@ -2788,6 +2903,44 @@ try {
 }
 ```
 
+## setWindowContainerModalColor
+
+```TypeScript
+setWindowContainerModalColor(activeColor: string, inactiveColor: string): void
+```
+
+Sets the background color of the main window container for both when it has focus and when it does not. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadContent) or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent). The background color you set here covers the entire window, including both the title bar and the content area. If you also use [setWindowBackgroundColor()](arkts-arkui-window-window-i.md#setWindowBackgroundColor), the content area shows the window background color, whereas the title bar shows the container background color.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.SET_WINDOW_ALPHA
+
+<!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void--><!--Device-Window-setWindowContainerModalColor(activeColor: string, inactiveColor: string): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| activeColor | string | Yes |
+| inactiveColor | string | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
 ## setWindowMode
 
 ```TypeScript
@@ -2796,7 +2949,9 @@ setWindowMode(mode: WindowMode): Promise<void>
 
 Sets the mode of the main window. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setWindowMode(mode: WindowMode): Promise<void>--><!--Device-Window-setWindowMode(mode: WindowMode): Promise<void>-End-->
 
@@ -2820,10 +2975,10 @@ Sets the mode of the main window. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2868,7 +3023,9 @@ setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void
 
 Sets the mode of the main window. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void--><!--Device-Window-setWindowMode(mode: WindowMode, callback: AsyncCallback<void>): void-End-->
 
@@ -2887,10 +3044,10 @@ Sets the mode of the main window. This API uses an asynchronous callback to retu
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -3022,7 +3179,9 @@ showWithAnimation(callback: AsyncCallback<void>): void
 
 Shows this window and plays an animation during the process. This API uses an asynchronous callback to return the result. This API takes effect only for a system window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-showWithAnimation(callback: AsyncCallback<void>): void--><!--Device-Window-showWithAnimation(callback: AsyncCallback<void>): void-End-->
 
@@ -3040,10 +3199,10 @@ Shows this window and plays an animation during the process. This API uses an as
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -3068,7 +3227,9 @@ showWithAnimation(): Promise<void>
 
 Shows this window and plays an animation during the process. This API uses a promise to return the result. This API takes effect only for a system window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-showWithAnimation(): Promise<void>--><!--Device-Window-showWithAnimation(): Promise<void>-End-->
 
@@ -3086,10 +3247,10 @@ Shows this window and plays an animation during the process. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -3110,9 +3271,11 @@ promise.then(() => {
 startMovingWithOptions(startMovingOptions?: StartMovingOptions): Promise<void>
 ```
 
-Starts moving this window.The window moves along with the cursor only when this API is called in the callback function of onTouch,where the event type is TouchType.Down.
+Starts moving this window. The window moves along with the cursor only when this API is called in the callback function of onTouch, where the event type is TouchType.Down.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3138,13 +3301,13 @@ Starts moving this window.The window moves along with the cursor only when this 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../errorcode-window.md#1300001-repeated-operation) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -3200,10 +3363,11 @@ struct Index {
 translate(translateOptions: TranslateOptions): void
 ```
 
-Sets the translation parameters for this window. This API can be used only when you  
-[customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window).
+Sets the translation parameters for this window. This API can be used only when you [customize an animation to be played during the display or hiding of a system window](../../../windowmanager/system-window-stage-sys.md#customizing-an-animation-to-be-played-during-the-display-or-hiding-of-a-system-window) .
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Window-translate(translateOptions: TranslateOptions): void--><!--Device-Window-translate(translateOptions: TranslateOptions): void-End-->
 
@@ -3215,16 +3379,16 @@ Sets the translation parameters for this window. This API can be used only when 
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| translateOptions | [TranslateOptions](arkts-arkui-common-translateoptions-i.md) | Yes |
+| translateOptions | [TranslateOptions](../../apis-na/arkts-apis/arkts-na-common-translateoptions-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Describes the value and reason returned upon a window rectangle (position and size) change.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface RectChangeOptions--><!--Device-window-interface RectChangeOptions-End-->
 
@@ -24,9 +26,11 @@ Reason for the window rectangle change.
 
 **Type:** RectChangeReason
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeOptions-reason: RectChangeReason--><!--Device-RectChangeOptions-reason: RectChangeReason-End-->
 
@@ -42,9 +46,11 @@ New value of the window rectangle.
 
 **Type:** Rect
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RectChangeOptions-rect: Rect--><!--Device-RectChangeOptions-rect: Rect-End-->
 

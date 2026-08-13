@@ -4,7 +4,9 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 <!--Device-conversation-interface DeviceNodeInfo--><!--Device-conversation-interface DeviceNodeInfo-End-->
 
@@ -24,7 +26,9 @@ deviceName: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +46,13 @@ deviceTypeId: int
 
 设备类型标识符，表示设备的类别，取值为整数，例如：0x0E-手机、0x11-平板、0x9C-电视、0x0C-PC等（具体数值以系统定义为准）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,7 +74,9 @@ nearby: boolean
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,7 +98,9 @@ networkId: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,13 +116,15 @@ networkId: string
 udid: string
 ```
 
-设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识，不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
+设备的UDID，唯一标识一台设备，用于发送数据时的设备寻址。与networkId不同，UDID为设备的永久唯一标识， 不随网络拓扑变化而改变，两者互为替代，发送数据时可任选其一。
 
 **类型：** string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

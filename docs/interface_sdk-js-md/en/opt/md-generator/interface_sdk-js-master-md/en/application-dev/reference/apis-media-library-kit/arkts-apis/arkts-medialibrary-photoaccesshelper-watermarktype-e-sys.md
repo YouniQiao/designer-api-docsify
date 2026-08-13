@@ -2,7 +2,9 @@
 
 Enumerates the watermark editable flags.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum WatermarkType--><!--Device-photoAccessHelper-enum WatermarkType-End-->
 
@@ -18,7 +20,9 @@ DEFAULT = 0
 
 Watermarks are not editable.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatermarkType-DEFAULT = 0--><!--Device-WatermarkType-DEFAULT = 0-End-->
 
@@ -34,7 +38,9 @@ BRAND_COMMON = 1
 
 Brand and common watermarks are editable.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatermarkType-BRAND_COMMON = 1--><!--Device-WatermarkType-BRAND_COMMON = 1-End-->
 
@@ -50,7 +56,9 @@ COMMON = 2
 
 Common watermarks are editable.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatermarkType-COMMON = 2--><!--Device-WatermarkType-COMMON = 2-End-->
 
@@ -66,7 +74,9 @@ BRAND = 3
 
 Brand watermarks are editable.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WatermarkType-BRAND = 3--><!--Device-WatermarkType-BRAND = 3-End-->
 

@@ -4,6 +4,8 @@ The definition of play information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface PlayInfo--><!--Device-avMusicTemplate-interface PlayInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ Current duration.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-currentPlayDuration: int--><!--Device-PlayInfo-currentPlayDuration: int-End-->
@@ -43,6 +47,8 @@ Current play rate.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Is support next.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-isSupportNext: boolean--><!--Device-PlayInfo-isSupportNext: boolean-End-->
@@ -79,6 +87,8 @@ Is support switch play mode.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ Is support change play rate.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-isSupportPlayRate: boolean--><!--Device-PlayInfo-isSupportPlayRate: boolean-End-->
@@ -115,6 +127,8 @@ Is support prev.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +148,8 @@ Is supported progress, default true.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-isSupportProgress: boolean--><!--Device-PlayInfo-isSupportProgress: boolean-End-->
@@ -151,6 +167,8 @@ Is support quick backward.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,6 +188,8 @@ Is support quick forward.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-isSupportQuickForward: boolean--><!--Device-PlayInfo-isSupportQuickForward: boolean-End-->
@@ -187,6 +207,8 @@ Is support skip opening credits.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,6 +228,8 @@ Is support skip closing credits.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-isSupportSkipTail: boolean--><!--Device-PlayInfo-isSupportSkipTail: boolean-End-->
@@ -223,6 +247,8 @@ Is supported sound effect.
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,6 +268,8 @@ Is supported sound quality.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-isSupportSoundQuality: boolean--><!--Device-PlayInfo-isSupportSoundQuality: boolean-End-->
@@ -259,6 +287,8 @@ Play counts.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,6 +308,8 @@ The step of quick backward.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-quickBackwardStep: int--><!--Device-PlayInfo-quickBackwardStep: int-End-->
@@ -295,6 +327,8 @@ The step of quick forward.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,6 +348,8 @@ Supported play rate.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlayInfo-supportedPlayRate: string[]--><!--Device-PlayInfo-supportedPlayRate: string[]-End-->
@@ -331,6 +367,8 @@ Total duration.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

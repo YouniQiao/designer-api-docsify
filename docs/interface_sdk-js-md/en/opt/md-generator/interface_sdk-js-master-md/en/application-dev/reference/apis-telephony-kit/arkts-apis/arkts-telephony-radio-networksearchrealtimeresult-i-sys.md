@@ -4,6 +4,8 @@ Indicates the results of manual network scan
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-radio-export interface NetworkSearchRealTimeResult--><!--Device-radio-export interface NetworkSearchRealTimeResult-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -28,6 +30,8 @@ Indicates whether the network search was stop.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-NetworkSearchRealTimeResult-isFinish: boolean--><!--Device-NetworkSearchRealTimeResult-isFinish: boolean-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService
@@ -45,6 +49,8 @@ the network search results.
 **Type:** Array&lt;[NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSearchRealTimeResult-networkInfos: Array<NetworkInformation>--><!--Device-NetworkSearchRealTimeResult-networkInfos: Array<NetworkInformation>-End-->
 

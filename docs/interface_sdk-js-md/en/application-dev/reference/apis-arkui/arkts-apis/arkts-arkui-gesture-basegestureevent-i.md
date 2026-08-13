@@ -2,13 +2,15 @@
 
 Defines the gesture base event.
 
-**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](BaseEvent)
+**Inheritance/Implementation:** BaseGestureEvent extends BaseEvent
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface BaseGestureEvent extends BaseEvent--><!--Device-unnamed-export interface BaseGestureEvent extends BaseEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface BaseGestureEvent--><!--Device-unnamed-export interface BaseGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ All finger information when the gesture event is triggered, the return value is 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +49,8 @@ All finger information.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

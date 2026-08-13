@@ -5,10 +5,11 @@ type CreateNativeMediaPlayerCallback =
       (handler: NativeMediaPlayerHandler, mediaInfo: MediaInfo) => NativeMediaPlayerBridge
 ```
 
-Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the  
-[onCreateNativeMediaPlayer](@ohos.web.webview:webview.WebviewController#onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback))callback. This object is used to create a player to take over media playback of the web page.
+Defines a **CreateNativeMediaPlayerCallback** object used as a parameter of the [onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontroller-c.md#onCreateNativeMediaPlayer) callback. This object is used to create a player to take over media playback of the web page.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

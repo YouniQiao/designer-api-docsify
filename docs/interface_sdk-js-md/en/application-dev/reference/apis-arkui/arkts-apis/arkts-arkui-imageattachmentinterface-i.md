@@ -6,6 +6,8 @@ Defines the ImageAttachmentInterface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ImageAttachmentInterface--><!--Device-unnamed-declare interface ImageAttachmentInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Image color filter of the styled string.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Image layout.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,15 +66,15 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
-
-Default value: **ImageFit.Cover**
+Image scaling type. The **ImageFit.MATRIX** enum value is not supported. Default value: **ImageFit.Cover**
 
 **Type:** ImageFit
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,16 +90,15 @@ Default value: **ImageFit.Cover**
 size?: SizeOptions
 ```
 
-Image size, which does not support percentage values.
-
-The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is  
-**Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
+Image size, which does not support percentage values. The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** SizeOptions
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -117,6 +122,8 @@ Image data source.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -131,15 +138,15 @@ Image data source.
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
-
-Default value: **ImageSpanAlignment.BOTTOM**
+Alignment mode of the image with the text. Default value: **ImageSpanAlignment.BOTTOM**
 
 **Type:** ImageSpanAlignment
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

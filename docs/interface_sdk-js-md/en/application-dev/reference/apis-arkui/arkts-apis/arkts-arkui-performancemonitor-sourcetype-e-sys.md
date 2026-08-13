@@ -1,10 +1,12 @@
 # SourceType (System API)
 
-Enumerates the input source type.
+Enumerates the trigger source types of user scenes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-performanceMonitor-export enum SourceType--><!--Device-performanceMonitor-export enum SourceType-End-->
 
@@ -18,11 +20,13 @@ Enumerates the input source type.
 PERF_TOUCH_EVENT = 0
 ```
 
-The user touches the screen to trigger the scene.
+Touchscreen event.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ The user touches the screen to trigger the scene.
 PERF_MOUSE_EVENT = 1
 ```
 
-TThe user uses the mouse to trigger the scene.
+Mouse event.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,11 +64,13 @@ TThe user uses the mouse to trigger the scene.
 PERF_TOUCHPAD_EVENT = 2
 ```
 
-The user uses the touchpad to trigger the scene.
+Touchpad event.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,11 +86,13 @@ The user uses the touchpad to trigger the scene.
 PERF_JOYSTICK_EVENT = 3
 ```
 
-The user uses the joystick to trigger the scene.
+Joystick event.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,11 +108,13 @@ The user uses the joystick to trigger the scene.
 PERF_KEY_EVENT = 4
 ```
 
-The user uses the keyboard to trigger the scene.
+Keyboard event.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

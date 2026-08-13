@@ -14,7 +14,9 @@ function publishAsUser(event: string, userId: number, callback: AsyncCallback<vo
 
 Publishes a common event to a specified user. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void--><!--Device-commonEventManager-function publishAsUser(event: string, userId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -34,12 +36,12 @@ Publishes a common event to a specified user. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [1500006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500006-invalid-user-id) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
-| [1500003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
-| [1500009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) |
+| [1500006](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500006-invalid-user-id) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
+| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) |
 
 ## Examples
 
@@ -78,7 +80,9 @@ function publishAsUser(
 
 Publishes a common event to a specified user and specifies the information to be published. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-commonEventManager-function publishAsUser(    event: string,    userId: int,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void--><!--Device-commonEventManager-function publishAsUser(    event: string,    userId: int,    options: CommonEventPublishData,    callback: AsyncCallback<void>  ): void-End-->
 
@@ -99,12 +103,12 @@ Publishes a common event to a specified user and specifies the information to be
 
 | Error Code ID |
 | --- |
-| [1500006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500006-invalid-user-id) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
-| [1500003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
-| [1500009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) |
+| [1500006](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500006-invalid-user-id) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) |
+| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) |
 
 ## Examples
 

@@ -1,13 +1,8 @@
 # DynamicComponent
 
-**DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files
-within the current page, with the displayed content running in a worker thread.
+**DynamicComponent** is designed to support the embedding and display of UIs provided by independent .abc files within the current page, with the displayed content running in a worker thread. It is typically used in modular development scenarios where .abc pages are dynamically loaded.
 
-It is typically used in modular development scenarios where .abc pages are dynamically loaded.
-
-## Child Components
-
-None
+## Child Components None
 
 ## DynamicComponent
 
@@ -20,6 +15,8 @@ Creates a **DynamicComponent** component to display the .abc UI running in the w
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +34,6 @@ Creates a **DynamicComponent** component to display the .abc UI running in the w
 
 ## Summary
 
-- [DynamicOptions](arkts-arkui-dynamiccomponent-dynamicoptions-i-sys.md)
-- [ErrorCallback](arkts-arkui-dynamiccomponent-errorcallback-t-sys.md)
-- [Worker](arkts-arkui-dynamiccomponent-worker-t-sys.md)
+- [DynamicOptions](arkts-arkui-dynamicoptions-i-sys.md)
+- [ErrorCallback](arkts-arkui-errorcallback-t-sys.md)
+- [Worker](arkts-arkui-worker-t-sys.md)

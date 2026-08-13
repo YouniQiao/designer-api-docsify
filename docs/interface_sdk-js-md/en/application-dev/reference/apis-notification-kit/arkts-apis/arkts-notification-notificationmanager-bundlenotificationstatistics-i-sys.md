@@ -4,7 +4,9 @@ Describes the notification statistics of a specified application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface BundleNotificationStatistics--><!--Device-notificationManager-export interface BundleNotificationStatistics-End-->
 
@@ -30,7 +32,9 @@ Bundle information of the application.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-BundleNotificationStatistics-bundle: BundleOption--><!--Device-BundleNotificationStatistics-bundle: BundleOption-End-->
 
@@ -41,18 +45,20 @@ Bundle information of the application.
 ## lastTime
 
 ```TypeScript
-lastTime: number
+lastTime: long
 ```
 
 Time when the app last published a notification.&lt;br&gt;Data format: timestamp.&lt;br&gt;Unit: millisecond.
 
-**Type:** number
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-BundleNotificationStatistics-lastTime: number--><!--Device-BundleNotificationStatistics-lastTime: number-End-->
+**Deprecated since:** -1
+
+<!--Device-BundleNotificationStatistics-lastTime: long--><!--Device-BundleNotificationStatistics-lastTime: long-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -61,18 +67,20 @@ Time when the app last published a notification.&lt;br&gt;Data format: timestamp
 ## recentCount
 
 ```TypeScript
-recentCount: number
+recentCount: int
 ```
 
 Total number of notifications published by the application in the last seven days.
 
-**Type:** number
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-BundleNotificationStatistics-recentCount: number--><!--Device-BundleNotificationStatistics-recentCount: number-End-->
+**Deprecated since:** -1
+
+<!--Device-BundleNotificationStatistics-recentCount: int--><!--Device-BundleNotificationStatistics-recentCount: int-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 

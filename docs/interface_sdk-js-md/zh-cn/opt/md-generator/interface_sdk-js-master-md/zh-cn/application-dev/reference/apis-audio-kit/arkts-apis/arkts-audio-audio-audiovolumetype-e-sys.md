@@ -2,7 +2,9 @@
 
 表示音频音量类型的枚举。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum AudioVolumeType--><!--Device-audio-enum AudioVolumeType-End-->
 
@@ -16,7 +18,9 @@ SYSTEM = 6
 
 Audio volume for system sound.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeType-SYSTEM = 6--><!--Device-AudioVolumeType-SYSTEM = 6-End-->
 
@@ -32,7 +36,9 @@ ULTRASONIC = 10
 
 Audio volume for ultrasonic.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeType-ULTRASONIC = 10--><!--Device-AudioVolumeType-ULTRASONIC = 10-End-->
 
@@ -48,7 +54,9 @@ NOTIFICATION = 11
 
 Audio volume type for notification.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeType-NOTIFICATION = 11--><!--Device-AudioVolumeType-NOTIFICATION = 11-End-->
 
@@ -64,7 +72,9 @@ NAVIGATION = 12
 
 Audio volume type for navigation.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeType-NAVIGATION = 12--><!--Device-AudioVolumeType-NAVIGATION = 12-End-->
 
@@ -80,7 +90,9 @@ ALL = 100
 
 Audio stream for all common.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeType-ALL = 100--><!--Device-AudioVolumeType-ALL = 100-End-->
 

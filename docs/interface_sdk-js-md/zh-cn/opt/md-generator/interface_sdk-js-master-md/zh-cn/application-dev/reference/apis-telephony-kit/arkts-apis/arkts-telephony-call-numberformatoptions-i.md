@@ -2,7 +2,9 @@
 
 格式化号码的可选参数。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface NumberFormatOptions--><!--Device-call-export interface NumberFormatOptions-End-->
 
@@ -18,7 +20,9 @@ countryCode?: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NumberFormatOptions-countryCode?: string--><!--Device-NumberFormatOptions-countryCode?: string-End-->
 

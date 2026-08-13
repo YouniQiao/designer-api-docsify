@@ -2,9 +2,11 @@
 
 Provides an option for determining whether a call is a video call.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface MakeCallOptions--><!--Device-call-export interface MakeCallOptions-End-->
 
@@ -22,13 +24,15 @@ import { call } from '@kit.TelephonyKit';
 isCustomAccessibility?: boolean
 ```
 
-Whether the third-party app supports custom accessibility features.Default value: false.
+Whether the third-party app supports custom accessibility features. Default value: false.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -46,11 +50,13 @@ Whether to hide the dial screen. **true**: yes; **false**: no.
 
 **Type:** boolean
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 24.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MakeCallOptions-isHideDialScreen?: boolean--><!--Device-MakeCallOptions-isHideDialScreen?: boolean-End-->
 

@@ -4,11 +4,13 @@
 
 **继承/实现关系：** Image extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md#SceneResource)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export interface Image extends SceneResource--><!--Device-unnamed-export interface Image extends SceneResource-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface Image--><!--Device-unnamed-export interface Image-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -20,11 +22,13 @@ readonly height: int
 
 图像高度, 单位为像素.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-readonly height: int--><!--Device-Image-readonly height: int-End-->
 
@@ -38,11 +42,13 @@ readonly width: int
 
 图像宽度, 单位为像素.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Image-readonly width: int--><!--Device-Image-readonly width: int-End-->
 

@@ -1,4 +1,4 @@
-# @ohos.enterprise.EnterpriseAdminExtensionAbility(EnterpriseAdminExtensionAbility)
+# @ohos.enterprise.EnterpriseAdminExtensionAbility
 
 ## Modules to Import
 

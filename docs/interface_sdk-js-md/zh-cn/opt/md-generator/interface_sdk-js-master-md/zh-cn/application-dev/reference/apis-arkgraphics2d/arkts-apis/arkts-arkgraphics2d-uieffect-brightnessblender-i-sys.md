@@ -1,8 +1,10 @@
 # BrightnessBlender（系统接口）
 
-提亮混合器，用于将提亮效果添加到指定的组件上。在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。
+提亮混合器，用于将提亮效果添加到指定的组件上。 在调用BrightnessBlender前，需要先通过createBrightnessBlender创建一个BrightnessBlender实例。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-interface BrightnessBlender--><!--Device-uiEffect-interface BrightnessBlender-End-->
 
@@ -20,7 +22,9 @@ cubicRate: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -40,7 +44,9 @@ degree: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -60,7 +66,9 @@ fraction: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -80,7 +88,9 @@ linearRate: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -100,7 +110,9 @@ negativeCoefficient: [number, number, number]
 
 **类型：** [number, number, number]
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -120,7 +132,9 @@ positiveCoefficient: [number, number, number]
 
 **类型：** [number, number, number]
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -140,7 +154,9 @@ quadraticRate: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -160,7 +176,9 @@ saturation: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 

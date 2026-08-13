@@ -8,9 +8,11 @@ function begin(scene: string, startInputType: ActionType, note?: string): void
 
 用于标记用户场景开始，用户场景开始时调用此接口。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -27,4 +29,12 @@ function begin(scene: string, startInputType: ActionType, note?: string): void
 | scene | string | 是 | 用户场景id。字符串长度无限制，建议控制在255个字符以内，格式推荐字母大写且用下划线连接，例如LAUNCHER_APP_LAUNCH_FROM_ICON。 |
 | startInputType | ActionType | 是 | 用户场景触发模式。 |
 | note | string | 否 | 用户场景备注信息。字符串长度无限制，建议控制在255个字符以内，可以空缺不填，填写后性能指标上报会携带备注信息，不填无影响。 |
+
+## 示例
+
+用户点击图标启动应用场景动效开始点，由离手事件LAST_UP触发。
+
+```TypeScript
+performanceMonitor.begin("LAUNCHER_APP_LAUNCH_FROM_ICON", performanceMonitor.ActionType.LAST_UP, "APP_START_BEGIN");
+```
 

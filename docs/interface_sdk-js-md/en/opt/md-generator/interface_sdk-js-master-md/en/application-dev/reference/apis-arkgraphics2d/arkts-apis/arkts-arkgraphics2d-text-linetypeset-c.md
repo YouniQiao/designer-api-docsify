@@ -1,12 +1,10 @@
 # LineTypeset
 
-Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text.
+Implements a carrier that stores the text content and style. It can be used to compute layout details for individual lines of text. Before calling any of the following APIs, you must use [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset) in the [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **LineTypeset** object.
 
-Before calling any of the following APIs, you must use  
-[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset) in the  
-[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder) class to create a **LineTypeset** object.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 <!--Device-text-class LineTypeset--><!--Device-text-class LineTypeset-End-->
 
@@ -26,7 +24,9 @@ createLine(startIndex: number, count: number): TextLine
 
 Generates a text line object based on the specified layout range.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -51,7 +51,7 @@ Generates a text line object based on the specified layout range.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -70,7 +70,9 @@ getLineBreak(startIndex: number, width: number): number
 
 Obtains the number of characters that can fit in the layout from the specified position within a limited width.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -95,7 +97,7 @@ Obtains the number of characters that can fit in the layout from the specified p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

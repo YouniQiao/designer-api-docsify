@@ -10,7 +10,7 @@ Provides APIs to manage the file retrieval result.
 
 **Substitutes:** [FetchResult](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-fetchresult-i.md#FetchResult)
 
-<!--Device-userFileManager-interface FetchResult<T>--><!--Device-userFileManager-interface FetchResult<T>-End-->
+<!--Device-userFileManager-interface FetchResult--><!--Device-userFileManager-interface FetchResult-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -46,7 +46,7 @@ Releases and invalidates the **FetchFileResult** instance. After this instance i
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -94,11 +94,11 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return an array of all file assets in the result set. |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -151,7 +151,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -199,7 +199,7 @@ Obtains the total number of files in the result set.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -243,11 +243,11 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the first file asset obtained. |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -300,7 +300,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -344,11 +344,11 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the last file asset obtained. |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -401,7 +401,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -425,9 +425,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(callback: AsyncCallback<T>): void
 ```
 
-Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result.
-
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses an asynchronous callback to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -447,11 +445,11 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the next file asset. |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -483,9 +481,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getNextObject(): Promise<T>
 ```
 
-Obtains the next file asset in the result set. This API uses a promise to return the result.
-
-Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
+Obtains the next file asset in the result set. This API uses a promise to return the result. Before using this API, you must use [isAfterLast()](#isAfterLast) to check whether the current position is the end of the result set.
 
 **Since:** 9
 
@@ -509,7 +505,7 @@ Before using this API, you must use [isAfterLast()](#isAfterLast) to check wheth
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -557,7 +553,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the file asset to obtain. The value starts from **0**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the file asset obtained. |
 
 **Error codes:**
 
@@ -567,7 +563,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -632,7 +628,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -684,7 +680,7 @@ Checks whether the cursor is in the last row of the result set.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

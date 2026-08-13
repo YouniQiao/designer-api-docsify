@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-print-enum DocFlavor--><!--Device-print-enum DocFlavor-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
@@ -17,6 +19,8 @@ FILE_DESCRIPTOR = 0
 表示文件数据。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ BYTES = 1
 表示二进制数据。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

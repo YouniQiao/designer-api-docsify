@@ -6,13 +6,13 @@
 function shiftAppWindowPointerEvent(sourceWindowId: number, targetWindowId: number): Promise<void>
 ```
 
-主窗口和子窗口可正常调用，用于将鼠标输入事件从源窗口转移到目标窗口。使用Promise异步回调。
+主窗口和子窗口可正常调用，用于将鼠标输入事件从源窗口转移到目标窗口。使用Promise异步回调。 源窗口仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#ontouch)事件（事件类型必须为 TouchType.Down）的回调方法中调用此接口才会有鼠标输入事件转移效果，成功调用此接口后，系统会向源窗口补发鼠标按键抬起（TouchType.Up）事件，并且向目标窗口补发鼠标按键按下（TouchType.Down）事件。
 
-源窗口仅在[onTouch](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#ontouch)事件（事件类型必须为TouchType.Down）的回调方法中调用此接口才会有鼠标输入事件转移效果，成功调用此接口后，系统会向源窗口补发鼠标按键抬起（TouchType.Up）事件，并且向目标窗口补发鼠标按键按下（TouchType.Down）事件。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-window-function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): Promise<void>--><!--Device-window-function shiftAppWindowPointerEvent(sourceWindowId: int, targetWindowId: int): Promise<void>-End-->
 
@@ -35,11 +35,11 @@ function shiftAppWindowPointerEvent(sourceWindowId: number, targetWindowId: numb
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300004](../errorcode-window.md#1300004-无权限操作) |
 
 ## 示例
 

@@ -6,7 +6,9 @@ export type SizeUpdateCallback = (size: window.Size, keyboardArea: KeyboardArea)
 
 Callback triggered when the size of the input method panel changes.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export type SizeUpdateCallback = (size: window.Size, keyboardArea: KeyboardArea) => void--><!--Device-inputMethodEngine-export type SizeUpdateCallback = (size: window.Size, keyboardArea: KeyboardArea) => void-End-->
 

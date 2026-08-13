@@ -2,9 +2,11 @@
 
 Encapsulates the sync root information.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudDiskManager-interface SyncFolder--><!--Device-cloudDiskManager-interface SyncFolder-End-->
 
@@ -28,9 +30,11 @@ Bundle name of the sync root.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolder-bundleName: string--><!--Device-SyncFolder-bundleName: string-End-->
 
@@ -48,9 +52,11 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolder-customAlias?: string--><!--Device-SyncFolder-customAlias?: string-End-->
 
@@ -64,14 +70,15 @@ Custom alias displayed in the File Manager list. The default value is **undefine
 displayNameResId?: int
 ```
 
-Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is  
-**undefined**.
+Resource ID, which can be mapped to the alias displayed in the File Manager list. The default value is **undefined**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolder-displayNameResId?: int--><!--Device-SyncFolder-displayNameResId?: int-End-->
 
@@ -89,9 +96,11 @@ URI of the sync root.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolder-path: string--><!--Device-SyncFolder-path: string-End-->
 
@@ -109,9 +118,11 @@ State of the sync root.
 
 **Type:** [SyncFolderState](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncFolder-state: SyncFolderState--><!--Device-SyncFolder-state: SyncFolderState-End-->
 

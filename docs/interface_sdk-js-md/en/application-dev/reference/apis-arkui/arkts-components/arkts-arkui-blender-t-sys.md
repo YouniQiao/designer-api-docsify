@@ -10,6 +10,8 @@ Blender
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 13.

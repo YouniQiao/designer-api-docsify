@@ -6,6 +6,8 @@ Describes an opaque object of a template, which is created using the createPatte
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface CanvasPattern--><!--Device-unnamed-export interface CanvasPattern-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Adds the matrix transformation effect to the current template.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

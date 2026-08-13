@@ -12,6 +12,8 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -32,7 +34,7 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
 
 ## 示例
 

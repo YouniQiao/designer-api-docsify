@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-osAccount-interface AcquireAuthorizationResult--><!--Device-osAccount-interface AcquireAuthorizationResult-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -16,13 +18,13 @@
 isReused?: boolean
 ```
 
-是否为复用的授权结果，默认为undefined。
-
-true：表示是复用的授权结果。false：表示不是复用的授权结果。
+是否为复用的授权结果，默认为undefined。 true：表示是复用的授权结果。false：表示不是复用的授权结果。
 
 **类型：** boolean
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +46,8 @@ privilege: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AcquireAuthorizationResult-privilege: string--><!--Device-AcquireAuthorizationResult-privilege: string-End-->
@@ -63,6 +67,8 @@ resultCode: AuthorizationResultCode
 **类型：** [AuthorizationResultCode](arkts-basicservices-osaccount-authorizationresultcode-e-sys.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +90,8 @@ token?: Uint8Array
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AcquireAuthorizationResult-token?: Uint8Array--><!--Device-AcquireAuthorizationResult-token?: Uint8Array-End-->
@@ -103,6 +111,8 @@ validityPeriod?: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

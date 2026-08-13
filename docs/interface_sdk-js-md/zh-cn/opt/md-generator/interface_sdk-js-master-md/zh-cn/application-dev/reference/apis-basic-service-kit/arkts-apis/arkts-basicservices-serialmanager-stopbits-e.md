@@ -2,7 +2,9 @@
 
 Enumerates of the number of stop bits.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-enum StopBits--><!--Device-serialManager-enum StopBits-End-->
 
@@ -16,7 +18,9 @@ STOPBIT_1 = 0
 
 报文的有效停止位宽为1比特。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StopBits-STOPBIT_1 = 0--><!--Device-StopBits-STOPBIT_1 = 0-End-->
 
@@ -30,7 +34,9 @@ STOPBIT_2 = 1
 
 报文的有效停止位宽为2比特。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StopBits-STOPBIT_2 = 1--><!--Device-StopBits-STOPBIT_2 = 1-End-->
 

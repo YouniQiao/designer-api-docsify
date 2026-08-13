@@ -14,9 +14,11 @@ function uninstallFont(fullName: string): Promise<int>
 
 Uninstalls an installed font file from the system font library by font name. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_FONT
 
@@ -36,15 +38,15 @@ Uninstalls an installed font file from the system font library by font name. Thi
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the uninstallation result. &lt;br&gt;- The value **0** indicates that the uninstallation is successful and the font has been removed from the system font library. &lt;br&gt;- Any other value indicates that the uninstallation failed. Troubleshoot based on the error code. |
+| Promise&lt;int&gt; | Promise used to return the uninstallation result. &lt;br&gt;- The value **0** indicates that the uninstallation is successful and the font has been removed from the system font library. &lt;br&gt;- Any other value indicates that the uninstallation failed. Troubleshoot based on the error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [31100107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | The font file does not exist. |
-| [31100108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Failed to delete the font file. |
-| [31100109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [31100107](../errorcode-font-manager.md#31100107-uninstalled-font-file-not-exist) | The font file does not exist. |
+| [31100108](../errorcode-font-manager.md#31100108-failed-to-delete-font-file) | Failed to delete the font file. |
+| [31100109](../errorcode-font-manager.md#31100109-uninstallation-failed-due-to-other-errors) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 

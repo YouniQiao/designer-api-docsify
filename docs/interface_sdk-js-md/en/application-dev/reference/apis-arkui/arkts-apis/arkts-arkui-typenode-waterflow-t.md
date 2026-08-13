@@ -1,20 +1,24 @@
 # WaterFlow
 
 ```TypeScript
-type WaterFlow = WaterFlowFrameNode
+type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>
 ```
 
-Define the FrameNode type for WaterFlow.
+Represents a FrameNode of the **WaterFlow** type. Only FlowItem child components can be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type WaterFlow = WaterFlowFrameNode--><!--Device-typeNode-type WaterFlow = WaterFlowFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>--><!--Device-typeNode-type WaterFlow = TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** WaterFlowFrameNode
+**Property type:** TypedFrameNode<WaterFlowInterface, WaterFlowAttribute>
 

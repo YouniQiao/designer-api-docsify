@@ -8,7 +8,9 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 设置指定应用或分身应用的禁用或使能状态。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -36,11 +38,11 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -74,6 +76,8 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -103,10 +107,10 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 | 错误码ID |
 | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -144,7 +148,9 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 
 设置指定应用的禁用或使能状态。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -166,10 +172,10 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 
@@ -203,7 +209,9 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 
 设置指定应用的禁用或使能状态。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -230,10 +238,10 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

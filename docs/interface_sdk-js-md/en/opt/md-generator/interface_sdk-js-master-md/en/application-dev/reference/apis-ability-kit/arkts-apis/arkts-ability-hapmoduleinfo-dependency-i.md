@@ -2,7 +2,9 @@
 
 Describes the information about the dynamic shared library on which the module depends.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Dependency--><!--Device-unnamed-export interface Dependency-End-->
 
@@ -18,7 +20,9 @@ Name of the shared bundle on which the current module depends.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,7 +40,9 @@ Module name of the shared bundle on which the current module depends.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,7 +60,9 @@ Version number of the shared bundle.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

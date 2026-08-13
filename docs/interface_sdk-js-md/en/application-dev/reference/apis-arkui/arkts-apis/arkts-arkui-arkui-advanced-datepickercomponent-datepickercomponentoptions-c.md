@@ -4,7 +4,9 @@ DatePickerComponentOptions defines options for the date time picker component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class DatePickerComponentOptions--><!--Device-unnamed-export declare class DatePickerComponentOptions-End-->
 
@@ -28,9 +30,13 @@ Date options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentOptions-dateOptions?: DateOptions--><!--Device-DatePickerComponentOptions-dateOptions?: DateOptions-End-->
 
@@ -42,9 +48,7 @@ Date options.
 displayMode?: DisplayMode
 ```
 
-Display mode of the picker.
-
-Default value: DisplayMode.DATE
+Display mode of the picker. Default value: DisplayMode.DATE
 
 **Type:** [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
 
@@ -52,9 +56,13 @@ Default value: DisplayMode.DATE
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentOptions-displayMode?: DisplayMode--><!--Device-DatePickerComponentOptions-displayMode?: DisplayMode-End-->
 
@@ -72,9 +80,13 @@ Time options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DatePickerComponentOptions-timeOptions?: TimeOptions--><!--Device-DatePickerComponentOptions-timeOptions?: TimeOptions-End-->
 

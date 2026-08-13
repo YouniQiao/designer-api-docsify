@@ -2,7 +2,9 @@
 
 Enumerates mouse buttons.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum Button--><!--Device-unnamed-export declare enum Button-End-->
 
@@ -16,7 +18,9 @@ LEFT = 0
 
 Left button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-LEFT = 0--><!--Device-Button-LEFT = 0-End-->
 
@@ -30,7 +34,9 @@ MIDDLE = 1
 
 Middle button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-MIDDLE = 1--><!--Device-Button-MIDDLE = 1-End-->
 
@@ -44,7 +50,9 @@ RIGHT = 2
 
 Right button
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-RIGHT = 2--><!--Device-Button-RIGHT = 2-End-->
 
@@ -58,7 +66,9 @@ SIDE = 3
 
 Side button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-SIDE = 3--><!--Device-Button-SIDE = 3-End-->
 
@@ -72,7 +82,9 @@ EXTRA = 4
 
 Extended button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-EXTRA = 4--><!--Device-Button-EXTRA = 4-End-->
 
@@ -86,7 +98,9 @@ FORWARD = 5
 
 Forward button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-FORWARD = 5--><!--Device-Button-FORWARD = 5-End-->
 
@@ -100,7 +114,9 @@ BACK = 6
 
 Back button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-BACK = 6--><!--Device-Button-BACK = 6-End-->
 
@@ -114,7 +130,9 @@ TASK = 7
 
 Task button.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Button-TASK = 7--><!--Device-Button-TASK = 7-End-->
 

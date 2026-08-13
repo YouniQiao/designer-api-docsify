@@ -14,11 +14,13 @@ function getGraphicsMemory(): Promise<int>
 
 Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
 
@@ -28,13 +30,13 @@ Obtains the total GPU memory size (**gl** + **graph**) of the application. This 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the total GPU memory size of the application, in KB. |
+| Promise&lt;int&gt; | Promise used to return the total GPU memory size of the application, in KB. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) | Failed to get the application memory due to a remote exception. |
 
 ## Examples
 

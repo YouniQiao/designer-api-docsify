@@ -2,9 +2,11 @@
 
 Defines the scanner option value.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-scan-interface ScannerOptionValue--><!--Device-scan-interface ScannerOptionValue-End-->
 
@@ -26,9 +28,11 @@ Value of the Boolean type.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerOptionValue-boolValue?: boolean--><!--Device-ScannerOptionValue-boolValue?: boolean-End-->
 
@@ -42,11 +46,13 @@ numValue?: int
 
 Value of the number type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerOptionValue-numValue?: int--><!--Device-ScannerOptionValue-numValue?: int-End-->
 
@@ -62,9 +68,11 @@ Value of the string type.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerOptionValue-strValue?: string--><!--Device-ScannerOptionValue-strValue?: string-End-->
 
@@ -80,9 +88,11 @@ Value type.
 
 **Type:** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ScannerOptionValue-valueType: OptionValueType--><!--Device-ScannerOptionValue-valueType: OptionValueType-End-->
 

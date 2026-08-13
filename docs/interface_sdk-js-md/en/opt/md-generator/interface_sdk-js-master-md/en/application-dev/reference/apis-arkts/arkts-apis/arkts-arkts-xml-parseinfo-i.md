@@ -2,7 +2,9 @@
 
 The current parse info.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-xml-interface ParseInfo--><!--Device-xml-interface ParseInfo-End-->
 
@@ -22,7 +24,9 @@ getAttributeCount(): number
 
 Obtains the number of attributes for the current start tag.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +68,9 @@ getColumnNumber(): number
 
 Obtains the current column number, starting from 1.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -106,7 +112,9 @@ getDepth(): number
 
 Obtains the depth of this element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,7 +160,9 @@ getLineNumber(): number
 
 Obtains the current line number, starting from 1.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -194,7 +204,9 @@ getName(): string
 
 Obtains the name of this element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -236,7 +248,9 @@ getNamespace(): string
 
 Obtains the namespace of this element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -282,7 +296,9 @@ getPrefix(): string
 
 Obtains the prefix of this element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -328,7 +344,9 @@ getText(): string
 
 Obtains the text of the current event.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -370,7 +388,9 @@ isEmptyElementTag(): boolean
 
 Checks whether the current element is empty.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -416,7 +436,9 @@ isWhitespace(): boolean
 
 Checks whether the current event contains only whitespace characters.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

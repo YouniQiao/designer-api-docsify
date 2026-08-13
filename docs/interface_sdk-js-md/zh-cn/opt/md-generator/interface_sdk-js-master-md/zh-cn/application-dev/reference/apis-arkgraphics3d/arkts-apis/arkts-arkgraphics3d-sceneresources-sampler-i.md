@@ -2,7 +2,9 @@
 
 采样器接口
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Sampler--><!--Device-unnamed-export interface Sampler-End-->
 
@@ -18,7 +20,9 @@ U寻址模式
 
 **类型：** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sampler-addressModeU?: SamplerAddressMode--><!--Device-Sampler-addressModeU?: SamplerAddressMode-End-->
 
@@ -34,7 +38,9 @@ V寻址模式
 
 **类型：** [SamplerAddressMode](arkts-arkgraphics3d-sceneresources-sampleraddressmode-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sampler-addressModeV?: SamplerAddressMode--><!--Device-Sampler-addressModeV?: SamplerAddressMode-End-->
 
@@ -50,7 +56,9 @@ magFilter?: SamplerFilter
 
 **类型：** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sampler-magFilter?: SamplerFilter--><!--Device-Sampler-magFilter?: SamplerFilter-End-->
 
@@ -66,7 +74,9 @@ minFilter?: SamplerFilter
 
 **类型：** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sampler-minFilter?: SamplerFilter--><!--Device-Sampler-minFilter?: SamplerFilter-End-->
 
@@ -82,7 +92,9 @@ Mip-map模式
 
 **类型：** [SamplerFilter](arkts-arkgraphics3d-sceneresources-samplerfilter-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Sampler-mipMapMode?: SamplerFilter--><!--Device-Sampler-mipMapMode?: SamplerFilter-End-->
 

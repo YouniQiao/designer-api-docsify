@@ -8,9 +8,11 @@ function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 
 以同步方法根据给定的bundleFlags获取当前应用的BundleInfo。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -22,7 +24,7 @@ function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定返回的BundleInfo所包含的信息。 |
+| bundleFlags | int | 是 | 指定返回的BundleInfo所包含的信息。 |
 
 **返回值：**
 
@@ -34,7 +36,7 @@ function getBundleInfoForSelfSync(bundleFlags: int): BundleInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 

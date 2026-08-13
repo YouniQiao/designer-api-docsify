@@ -16,6 +16,8 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOptions): Promise<Picture | undefined>--><!--Device-image-function decomposeToPicture(hdrPixelMap : PixelMap, options?: HdrDecomposeOptions): Promise<Picture | undefined>-End-->
@@ -41,11 +43,11 @@ Decomposes an HDR Pixelmap object to a Picture object which contains an SDR Pixe
 
 | Error Code ID |
 | --- |
-| [7600208](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
-| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600208](../errorcode-image.md#7600208-failed-to-decompose-an-hdr-image) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

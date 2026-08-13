@@ -4,7 +4,9 @@ WebP metadata.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-image-class WebPMetadata--><!--Device-image-class WebPMetadata-End-->
 
@@ -16,13 +18,15 @@ WebP metadata.
 readonly canvasHeight?: int
 ```
 
-Canvas Height.Unit: px, The value should be an integer.
+Canvas Height. Unit: px, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +40,15 @@ Canvas Height.Unit: px, The value should be an integer.
 readonly canvasWidth?: int
 ```
 
-Canvas Width.Unit: px, The value should be an integer.
+Canvas Width. Unit: px, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +62,15 @@ Canvas Width.Unit: px, The value should be an integer.
 readonly delayTime?: int
 ```
 
-Delay of each frame.Unit: ms, The value should be an integer.
+Delay of each frame. Unit: ms, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,11 +86,13 @@ readonly loopCount?: int
 
 WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,13 +106,15 @@ WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 readonly unclampedDelayTime?: int
 ```
 
-Unclamped delay of each frame.Unit: ms, The value should be an integer.
+Unclamped delay of each frame. Unit: ms, The value should be an integer.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

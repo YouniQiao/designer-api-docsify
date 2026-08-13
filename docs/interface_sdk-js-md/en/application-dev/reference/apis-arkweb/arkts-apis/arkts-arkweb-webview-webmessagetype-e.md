@@ -1,10 +1,12 @@
 # WebMessageType
 
-Enum type supplied to [onMessageEventExt](onMessageEventExt) for indicating the type of web message.
+Enum type supplied to [onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onMessageEventExt) for indicating the type of web message.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebMessageType--><!--Device-webview-enum WebMessageType-End-->
 
@@ -13,112 +15,140 @@ Enum type supplied to [onMessageEventExt](onMessageEventExt) for indicating the 
 ## NOT_SUPPORT
 
 ```TypeScript
-NOT_SUPPORT
+NOT_SUPPORT = 0
 ```
 
 Unsupported data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-NOT_SUPPORT--><!--Device-WebMessageType-NOT_SUPPORT-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-NOT_SUPPORT = 0--><!--Device-WebMessageType-NOT_SUPPORT = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## STRING
 
 ```TypeScript
-STRING
+STRING = 1
 ```
 
 The string data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-STRING--><!--Device-WebMessageType-STRING-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-STRING = 1--><!--Device-WebMessageType-STRING = 1-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## NUMBER
 
 ```TypeScript
-NUMBER
+NUMBER = 2
 ```
 
 The number data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-NUMBER--><!--Device-WebMessageType-NUMBER-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-NUMBER = 2--><!--Device-WebMessageType-NUMBER = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## BOOLEAN
 
 ```TypeScript
-BOOLEAN
+BOOLEAN = 3
 ```
 
 The boolean data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-BOOLEAN--><!--Device-WebMessageType-BOOLEAN-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-BOOLEAN = 3--><!--Device-WebMessageType-BOOLEAN = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY_BUFFER
 
 ```TypeScript
-ARRAY_BUFFER
+ARRAY_BUFFER = 4
 ```
 
 The arraybuffer data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-ARRAY_BUFFER--><!--Device-WebMessageType-ARRAY_BUFFER-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-ARRAY_BUFFER = 4--><!--Device-WebMessageType-ARRAY_BUFFER = 4-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ARRAY
 
 ```TypeScript
-ARRAY
+ARRAY = 5
 ```
 
 The array data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-ARRAY--><!--Device-WebMessageType-ARRAY-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-ARRAY = 5--><!--Device-WebMessageType-ARRAY = 5-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## ERROR
 
 ```TypeScript
-ERROR
+ERROR = 6
 ```
 
 The error data type.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-WebMessageType-ERROR--><!--Device-WebMessageType-ERROR-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-WebMessageType-ERROR = 6--><!--Device-WebMessageType-ERROR = 6-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

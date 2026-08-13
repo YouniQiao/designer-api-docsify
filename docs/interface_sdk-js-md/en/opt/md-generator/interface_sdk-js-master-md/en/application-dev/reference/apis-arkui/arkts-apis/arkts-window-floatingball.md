@@ -1,14 +1,10 @@
 # @ohos.window.floatingBall
 
-This module provides essential functionalities for floating balls. It lets you check whether the device supports floating balls and create a controller to start, update, or stop them. It is ideal for tasks like comparing prices,searching for answers, or grabbing orders. The floating ball appears as a floating widget above other application,quickly showing important information.
+This module provides essential functionalities for floating balls. It lets you check whether the device supports floating balls and create a controller to start, update, or stop them. It is ideal for tasks like comparing prices, searching for answers, or grabbing orders. The floating ball appears as a floating widget above other application, quickly showing important information. > **NOTE：**> > - For the system capability SystemCapability.Window.SessionManager, use > [canIUse()](arkts-arkui-global-caniuse-f.md#canIUse) to check whether the device supports this system > capability and the corresponding APIs.
 
-> **NOTE：**
-> 
-> - For the system capability SystemCapability.Window.SessionManager, use
-> [canIUse()](arkts-arkui-global-caniuse-f.md#canIUse) to check whether the device supports this system
-> capability and the corresponding APIs.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace floatingBall--><!--Device-unnamed-declare namespace floatingBall-End-->
 
@@ -27,7 +23,7 @@ import { floatingBall } from '@kit.ArkUI';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [create](arkts-arkui-floatingball-create-f.md#create) |
-| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md#isfloatingballenabled) |
+| [isFloatingBallEnabled](arkts-arkui-floatingball-isfloatingballenabled-f.md#isFloatingBallEnabled) |
 
 ### Interfaces
 

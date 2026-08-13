@@ -2,7 +2,9 @@
 
 提供系统事件配置策略的定义，用于使用[configEventPolicy](arkts-performanceanalysis-hiappevent-configeventpolicy-f.md#configEventPolicy)设置事件配置策略。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiAppEvent-interface EventPolicy--><!--Device-hiAppEvent-interface EventPolicy-End-->
 
@@ -19,6 +21,8 @@ addressSanitizerPolicy?: AddressSanitizerPolicy
 **类型：** [AddressSanitizerPolicy](arkts-performanceanalysis-hiappevent-addresssanitizerpolicy-i.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ appCrashPolicy?: AppCrashPolicy
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EventPolicy-appCrashPolicy?: AppCrashPolicy--><!--Device-EventPolicy-appCrashPolicy?: AppCrashPolicy-End-->
@@ -56,6 +62,8 @@ appFreezePolicy?: AppFreezePolicy
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EventPolicy-appFreezePolicy?: AppFreezePolicy--><!--Device-EventPolicy-appFreezePolicy?: AppFreezePolicy-End-->
@@ -72,9 +80,11 @@ CPU高负载事件配置策略。
 
 **类型：** [CpuUsageHighPolicy](arkts-performanceanalysis-hiappevent-cpuusagehighpolicy-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EventPolicy-cpuUsageHighPolicy?: CpuUsageHighPolicy--><!--Device-EventPolicy-cpuUsageHighPolicy?: CpuUsageHighPolicy-End-->
 
@@ -90,9 +100,11 @@ mainThreadJankPolicy?: MainThreadJankPolicy
 
 **类型：** [MainThreadJankPolicy](arkts-performanceanalysis-hiappevent-mainthreadjankpolicy-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-EventPolicy-mainThreadJankPolicy?: MainThreadJankPolicy--><!--Device-EventPolicy-mainThreadJankPolicy?: MainThreadJankPolicy-End-->
 
@@ -109,6 +121,8 @@ resourceOverlimitPolicy?: ResourceOverlimitPolicy
 **类型：** [ResourceOverlimitPolicy](arkts-performanceanalysis-hiappevent-resourceoverlimitpolicy-i.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 

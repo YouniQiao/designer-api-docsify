@@ -2,7 +2,9 @@
 
 Rotation execution results.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum Result--><!--Device-mechanicManager-export enum Result-End-->
 
@@ -18,7 +20,9 @@ COMPLETED = 0
 
 Rotation completed.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-COMPLETED = 0--><!--Device-Result-COMPLETED = 0-End-->
 
@@ -34,7 +38,9 @@ INTERRUPTED = 1
 
 Rotation was interrupted.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-INTERRUPTED = 1--><!--Device-Result-INTERRUPTED = 1-End-->
 
@@ -50,7 +56,9 @@ LIMITED = 2
 
 Device reached limitation.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-LIMITED = 2--><!--Device-Result-LIMITED = 2-End-->
 
@@ -66,7 +74,9 @@ TIMEOUT = 3
 
 Rotation time out.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-TIMEOUT = 3--><!--Device-Result-TIMEOUT = 3-End-->
 
@@ -84,6 +94,8 @@ Termination caused by an obstacle.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-Result-TERMINATE_OBSTACLE  = 4--><!--Device-Result-TERMINATE_OBSTACLE  = 4-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -100,6 +112,8 @@ Termination caused by a cliff.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-Result-TERMINATE_CLIFF = 5--><!--Device-Result-TERMINATE_CLIFF = 5-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
@@ -114,7 +128,9 @@ SYSTEM_ERROR = 100
 
 Rotation failed due to system error.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Result-SYSTEM_ERROR = 100--><!--Device-Result-SYSTEM_ERROR = 100-End-->
 

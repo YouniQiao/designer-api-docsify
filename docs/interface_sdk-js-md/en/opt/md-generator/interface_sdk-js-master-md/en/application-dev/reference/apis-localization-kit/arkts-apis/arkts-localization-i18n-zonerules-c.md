@@ -2,7 +2,9 @@
 
 Queries the time zone transition rule.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
 
@@ -22,9 +24,11 @@ public nextTransition(date?: number): ZoneOffsetTransition
 
 Obtains the **nextTransition** object for the specified time.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition--><!--Device-ZoneRules-public nextTransition(date?: double): ZoneOffsetTransition-End-->
 

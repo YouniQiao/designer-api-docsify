@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-font-interface FontOptions--><!--Device-font-interface FontOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ The font name to register.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FontOptions-familyName: string | Resource--><!--Device-FontOptions-familyName: string | Resource-End-->
@@ -47,6 +51,8 @@ The path of the font file.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

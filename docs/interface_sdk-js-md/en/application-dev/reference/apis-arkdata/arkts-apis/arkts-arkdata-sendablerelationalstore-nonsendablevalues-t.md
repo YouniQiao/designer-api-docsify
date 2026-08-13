@@ -10,6 +10,8 @@ Represents the [ValueType](arkts-arkdata-relationalstore-valuetype-t.md#ValueTyp
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-type NonSendableValues = Array<relationalStore.ValueType>--><!--Device-sendableRelationalStore-type NonSendableValues = Array<relationalStore.ValueType>-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core

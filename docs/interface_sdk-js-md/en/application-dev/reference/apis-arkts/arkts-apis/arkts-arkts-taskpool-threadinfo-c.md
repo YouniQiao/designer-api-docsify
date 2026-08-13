@@ -6,6 +6,8 @@ Describes the internal information about a worker thread.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-taskpool-class ThreadInfo--><!--Device-taskpool-class ThreadInfo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,6 +32,8 @@ Priority of the calling thread. If the return value is empty, no task is running
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadInfo-priority?: Priority--><!--Device-ThreadInfo-priority?: Priority-End-->
@@ -49,6 +53,8 @@ IDs of tasks running on the calling thread. If the return value is empty, no tas
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -71,6 +77,8 @@ ID of the worker thread. If the return value is empty, no task is running. You a
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -14,9 +14,11 @@ function getTotalSizeSync(path: string): long
 
 Obtains the total size of the specified file system, in bytes. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getTotalSizeSync(path: string): long--><!--Device-statfs-function getTotalSizeSync(path: string): long-End-->
 
@@ -32,7 +34,7 @@ Obtains the total size of the specified file system, in bytes. This API returns 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Total size obtained, in bytes. |
+| long | Total size obtained, in bytes. |
 
 **Error codes:**
 

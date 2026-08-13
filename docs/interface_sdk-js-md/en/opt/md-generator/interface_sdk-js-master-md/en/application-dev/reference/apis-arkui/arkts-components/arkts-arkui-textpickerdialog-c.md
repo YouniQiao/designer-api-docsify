@@ -4,6 +4,8 @@ A text picker dialog box is a dialog box that allows users to select text from t
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TextPickerDialog--><!--Device-unnamed-declare class TextPickerDialog-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

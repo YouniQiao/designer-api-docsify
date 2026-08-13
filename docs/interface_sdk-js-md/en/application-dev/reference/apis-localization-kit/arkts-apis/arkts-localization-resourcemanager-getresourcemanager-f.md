@@ -18,6 +18,8 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void-End-->
@@ -69,6 +71,8 @@ Obtains the **ResourceManager** object of the specified application. This API us
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -125,6 +129,8 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>-End-->
@@ -172,6 +178,8 @@ Obtains the **ResourceManager** object of the specified application. This API us
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

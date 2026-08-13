@@ -2,9 +2,11 @@
 
 Obtains the network selection mode option.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface NetworkSelectionModeOptions--><!--Device-radio-export interface NetworkSelectionModeOptions-End-->
 
@@ -28,9 +30,11 @@ Indicates the network information.
 
 **Type:** [NetworkInformation](arkts-telephony-radio-networkinformation-i-sys.md)
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation--><!--Device-NetworkSelectionModeOptions-networkInformation: NetworkInformation-End-->
 
@@ -48,9 +52,11 @@ Indicates whether to continue selecting the network selection mode.
 
 **Type:** boolean
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionModeOptions-resumeSelection: boolean--><!--Device-NetworkSelectionModeOptions-resumeSelection: boolean-End-->
 
@@ -68,9 +74,11 @@ Indicates the network search mode of the SIM card.
 
 **Type:** [NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode--><!--Device-NetworkSelectionModeOptions-selectMode: NetworkSelectionMode-End-->
 
@@ -86,11 +94,13 @@ slotId: int
 
 Indicates the card slot index number, ranging from 0 to the maximum card slot index number supported by the device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkSelectionModeOptions-slotId: int--><!--Device-NetworkSelectionModeOptions-slotId: int-End-->
 

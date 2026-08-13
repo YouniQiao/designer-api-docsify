@@ -1,8 +1,10 @@
 # @ohos.data.cloudExtension
 
-The cloudExtension module provides APIs for third-party vendors to implement the device-cloud sharing service.You can use these APIs to share the device data to the server and implement device-cloud data sharing,including sharing and unsharing data, exiting a share,changing the privilege (operation permissions)on the shared data, querying participants by data identifier or invitation code, and confirming or changing a sharing invitation.
+The cloudExtension module provides APIs for third-party vendors to implement the device-cloud sharing service. You can use these APIs to share the device data to the server and implement device-cloud data sharing, including sharing and unsharing data, exiting a share,changing the privilege (operation permissions) on the shared data, querying participants by data identifier or invitation code, and confirming or changing a sharing invitation.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cloudExtension--><!--Device-unnamed-declare namespace cloudExtension-End-->
 
@@ -21,10 +23,10 @@ import { cloudExtension } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createassetloaderstub) |
-| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createclouddbstub) |
-| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createcloudservicestub) |
-| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createshareservicestub) |
+| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createAssetLoaderStub-(System-API)) |
+| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createCloudDBStub-(System-API)) |
+| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createCloudServiceStub-(System-API)) |
+| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createShareServiceStub-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

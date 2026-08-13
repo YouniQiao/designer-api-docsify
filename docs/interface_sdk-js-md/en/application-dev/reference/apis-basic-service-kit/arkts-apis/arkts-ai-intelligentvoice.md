@@ -1,8 +1,10 @@
 # @ohos.ai.intelligentVoice
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace intelligentVoice--><!--Device-unnamed-declare namespace intelligentVoice-End-->
 
@@ -23,12 +25,12 @@ import { intelligentVoice } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createenrollintelligentvoiceengine) | Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md#EnrollIntelligentVoiceEngine) instance. This method uses an asynchronous callback to return the EnrollIntelligentVoiceEngine instance. |
-| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createenrollintelligentvoiceengine-1) | Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md#EnrollIntelligentVoiceEngine) instance. This method uses a promise to return the EnrollIntelligentVoiceEngine instance. |
-| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createwakeupintelligentvoiceengine) | Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md#WakeupIntelligentVoiceEngine) instance. This method uses an asynchronous callback to return the WakeupIntelligentVoiceEngine instance. |
-| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createwakeupintelligentvoiceengine-1) | Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md#WakeupIntelligentVoiceEngine) instance. This method uses a promise to return the WakeupIntelligentVoiceEngine instance. |
-| [getIntelligentVoiceManager](arkts-basicservices-intelligentvoice-getintelligentvoicemanager-f-sys.md#getintelligentvoicemanager) | Obtains an [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md#IntelligentVoiceManager) instance. |
-| [getWakeupManager](arkts-basicservices-intelligentvoice-getwakeupmanager-f-sys.md#getwakeupmanager) | Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md#WakeupManager) instance. |
+| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createEnrollIntelligentVoiceEngine) | Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md#EnrollIntelligentVoiceEngine-(System-API)) instance. This method uses an asynchronous callback to return the EnrollIntelligentVoiceEngine instance. |
+| [createEnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md#createEnrollIntelligentVoiceEngine-(System-API)) | Obtains an [EnrollIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-enrollintelligentvoiceengine-i-sys.md#EnrollIntelligentVoiceEngine-(System-API)) instance. This method uses a promise to return the EnrollIntelligentVoiceEngine instance. |
+| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createWakeupIntelligentVoiceEngine) | Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md#WakeupIntelligentVoiceEngine-(System-API)) instance. This method uses an asynchronous callback to return the WakeupIntelligentVoiceEngine instance. |
+| [createWakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-createwakeupintelligentvoiceengine-f-sys.md#createWakeupIntelligentVoiceEngine-(System-API)) | Obtains an [WakeupIntelligentVoiceEngine](arkts-basicservices-intelligentvoice-wakeupintelligentvoiceengine-i-sys.md#WakeupIntelligentVoiceEngine-(System-API)) instance. This method uses a promise to return the WakeupIntelligentVoiceEngine instance. |
+| [getIntelligentVoiceManager](arkts-basicservices-intelligentvoice-getintelligentvoicemanager-f-sys.md#getIntelligentVoiceManager) | Obtains an [IntelligentVoiceManager](arkts-basicservices-intelligentvoice-intelligentvoicemanager-i-sys.md#IntelligentVoiceManager-(System-API)) instance. |
+| [getWakeupManager](arkts-basicservices-intelligentvoice-getwakeupmanager-f-sys.md#getWakeupManager) | Obtains an [WakeupManager](arkts-basicservices-intelligentvoice-wakeupmanager-i-sys.md#WakeupManager-(System-API)) instance. |
 <!--DelEnd-->
 
 <!--Del-->

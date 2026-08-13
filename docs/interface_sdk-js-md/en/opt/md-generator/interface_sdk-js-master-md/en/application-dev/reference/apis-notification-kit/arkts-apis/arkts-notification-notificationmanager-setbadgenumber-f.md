@@ -12,13 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function setBadgeNumber(badgeNumber: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the notification badge number. This API uses an asynchronous callback to return the result.
+Sets the notification badge number. This API uses an asynchronous callback to return the result. A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items. This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
-A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.
+**Since:** 23
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function setBadgeNumber(badgeNumber: int, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function setBadgeNumber(badgeNumber: int, callback: AsyncCallback<void>): void-End-->
 
@@ -26,7 +24,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **See also:**
 
-[getActiveNotificationCount](notificationManager.getActiveNotificationCount(callback: AsyncCallback<long>): void) obtains the number of
+getActiveNotificationCount obtains the number of
 
 **Parameters:**
 
@@ -39,12 +37,12 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -69,13 +67,11 @@ notificationManager.setBadgeNumber(badgeNumber, setBadgeNumberCallback);
 function setBadgeNumber(badgeNumber: number): Promise<void>
 ```
 
-Sets the notification badge number. This API uses a promise to return the result.
+Sets the notification badge number. This API uses a promise to return the result. A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items. This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
 
-A badge is a numeric identifier displayed in the upper right corner of an application's desktop icon, used to prompt the user about the number of unprocessed notifications. After setting, the desktop icon will display the corresponding badge number. This is suitable for scenarios where the number of pending messages needs to be prompted on the desktop icon, such as the number of unread messages and to-do items.
+**Since:** 23
 
-This API can be properly called on devices other than wearables. If it is called on wearables, error code 801 is returned.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function setBadgeNumber(badgeNumber: int): Promise<void>--><!--Device-notificationManager-function setBadgeNumber(badgeNumber: int): Promise<void>-End-->
 
@@ -83,7 +79,7 @@ This API can be properly called on devices other than wearables. If it is called
 
 **See also:**
 
-[getActiveNotificationCount](notificationManager.getActiveNotificationCount(): Promise<number>) obtains the number of
+getActiveNotificationCount obtains the number of
 
 **Parameters:**
 
@@ -101,12 +97,12 @@ This API can be properly called on devices other than wearables. If it is called
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

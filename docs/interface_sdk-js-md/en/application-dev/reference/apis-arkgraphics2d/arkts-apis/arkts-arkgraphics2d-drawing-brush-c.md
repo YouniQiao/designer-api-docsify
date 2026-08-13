@@ -1,17 +1,12 @@
 # Brush
 
-Defines a brush, which is used to describe the style and color to fill in a shape.
+Defines a brush, which is used to describe the style and color to fill in a shape. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - This module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - This module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class Brush--><!--Device-drawing-class Brush-End-->
 
@@ -31,9 +26,11 @@ constructor()
 
 A constructor used to create a **Brush** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-constructor()--><!--Device-Brush-constructor()-End-->
 
@@ -47,9 +44,11 @@ constructor(brush: Brush)
 
 Copies a **Brush** object to create a new one.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-constructor(brush: Brush)--><!--Device-Brush-constructor(brush: Brush)-End-->
 
@@ -65,25 +64,21 @@ Copies a **Brush** object to create a new one.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## getAlpha
 
-ArkTS-Dyn:
-```TypeScript
-getAlpha(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAlpha(): int
 ```
 
 Obtains the alpha value of this brush.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getAlpha(): int--><!--Device-Brush-getAlpha(): int-End-->
 
@@ -93,7 +88,7 @@ Obtains the alpha value of this brush.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Alpha value of the brush. The return value is an integer ranging from 0 to 255. |
+| int | Alpha value of the brush. The return value is an integer ranging from 0 to 255. |
 
 ## getColor
 
@@ -106,6 +101,8 @@ Obtains the color of this brush.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getColor(): common2D.Color--><!--Device-Brush-getColor(): common2D.Color-End-->
 
@@ -127,7 +124,9 @@ Obtains the color of this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getColor(): common2D.Color | undefined--><!--Device-Brush-getColor(): common2D.Color | undefined-End-->
 
@@ -151,6 +150,8 @@ Obtains the brush color. The difference between this method and [getColor](#getC
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-Brush-getColor4f(): common2D.Color4f--><!--Device-Brush-getColor4f(): common2D.Color4f-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -171,7 +172,9 @@ Obtains the color of a brush. The color is used by the brush to outline a shape.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getColor4f(): common2D.Color4f | undefined--><!--Device-Brush-getColor4f(): common2D.Color4f | undefined-End-->
 
@@ -195,6 +198,8 @@ Obtains the color filter of this brush.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-Brush-getColorFilter(): ColorFilter--><!--Device-Brush-getColorFilter(): ColorFilter-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -215,7 +220,9 @@ Obtains the color filter of this brush.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getColorFilter(): ColorFilter | undefined--><!--Device-Brush-getColorFilter(): ColorFilter | undefined-End-->
 
@@ -229,21 +236,17 @@ Obtains the color filter of this brush.
 
 ## getHexColor
 
-ArkTS-Dyn:
-```TypeScript
-getHexColor(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getHexColor(): int
 ```
 
 Obtains the color of this brush.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-getHexColor(): int--><!--Device-Brush-getHexColor(): int-End-->
 
@@ -253,7 +256,7 @@ Obtains the color of this brush.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
+| int | Color, represented as a 32-bit unsigned integer in hexadecimal ARGB format. |
 
 ## isAntiAlias
 
@@ -263,9 +266,11 @@ isAntiAlias(): boolean
 
 Checks whether anti-aliasing is enabled for this brush.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-isAntiAlias(): boolean--><!--Device-Brush-isAntiAlias(): boolean-End-->
 
@@ -285,9 +290,11 @@ reset(): void
 
 Resets this brush to the initial state.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-reset(): void--><!--Device-Brush-reset(): void-End-->
 
@@ -295,21 +302,17 @@ Resets this brush to the initial state.
 
 ## setAlpha
 
-ArkTS-Dyn:
-```TypeScript
-setAlpha(alpha: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAlpha(alpha: int): void
 ```
 
 Sets an alpha value for this brush.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setAlpha(alpha: int): void--><!--Device-Brush-setAlpha(alpha: int): void-End-->
 
@@ -319,13 +322,13 @@ Sets an alpha value for this brush.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
+| alpha | int | Yes | Alpha value. The value is an integer in the range [0, 255]. If a floating point number is passed in, the value is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setAntiAlias
 
@@ -335,9 +338,11 @@ setAntiAlias(aa: boolean): void
 
 Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setAntiAlias(aa: boolean): void--><!--Device-Brush-setAntiAlias(aa: boolean): void-End-->
 
@@ -353,7 +358,7 @@ Enables anti-aliasing for this brush. Anti-aliasing makes the edges of the conte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setBlendMode
 
@@ -363,9 +368,11 @@ setBlendMode(mode: BlendMode): void
 
 Sets a blend mode for this brush. If this API is not called, the default blend mode is **SRC_OVER**.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setBlendMode(mode: BlendMode): void--><!--Device-Brush-setBlendMode(mode: BlendMode): void-End-->
 
@@ -381,7 +388,7 @@ Sets a blend mode for this brush. If this API is not called, the default blend m
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
@@ -391,9 +398,11 @@ setColor(color: common2D.Color): void
 
 Sets a color for this brush.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor(color: common2D.Color): void--><!--Device-Brush-setColor(color: common2D.Color): void-End-->
 
@@ -409,26 +418,21 @@ Sets a color for this brush.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
-ArkTS-Dyn:
-```TypeScript
-setColor(alpha: number, red: number, green: number, blue: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setColor(alpha: int, red: int, green: int, blue: int): void
 ```
 
-Sets a color for this brush. This API provides better performance than  
-[setColor](#setColor) and is recommended.
+Sets a color for this brush. This API provides better performance than [setColor](#setColor) and is recommended.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Brush-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -438,34 +442,30 @@ Sets a color for this brush. This API provides better performance than
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| red | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
-| green | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| blue | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
+| alpha | int | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| red | int | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255 . Any passed-in floating point number is rounded down. |
+| green | int | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| blue | int | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor
 
-ArkTS-Dyn:
-```TypeScript
-setColor(color: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setColor(color: int): void
 ```
 
 Sets a color for this brush.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor(color: int): void--><!--Device-Brush-setColor(color: int): void-End-->
 
@@ -475,13 +475,13 @@ Sets a color for this brush.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Color in hexadecimal ARGB format. |
+| color | int | Yes | Color in hexadecimal ARGB format. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## setColor4f
 
@@ -489,12 +489,13 @@ Sets a color for this brush.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this brush. The difference between this method and  
-[setColor](#setColor) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this brush. The difference between this method and [setColor](#setColor) is that the color gamut can be set separately.
 
-**Since:** 20
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Brush-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -515,9 +516,11 @@ setColorFilter(filter: ColorFilter | null): void
 
 Sets a color filter for this brush.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setColorFilter(filter: ColorFilter | null): void--><!--Device-Brush-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -533,7 +536,7 @@ Sets a color filter for this brush.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setImageFilter
 
@@ -543,9 +546,11 @@ setImageFilter(filter: ImageFilter | null): void
 
 Sets an image filter for this brush.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setImageFilter(filter: ImageFilter | null): void--><!--Device-Brush-setImageFilter(filter: ImageFilter | null): void-End-->
 
@@ -561,7 +566,7 @@ Sets an image filter for this brush.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMaskFilter
 
@@ -571,9 +576,11 @@ setMaskFilter(filter: MaskFilter | null): void
 
 Adds a mask filter for this brush.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Brush-setMaskFilter(filter: MaskFilter | null): void-End-->
 
@@ -589,7 +596,7 @@ Adds a mask filter for this brush.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShaderEffect
 
@@ -599,9 +606,11 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 Sets the shader effect for this brush.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Brush-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
@@ -617,7 +626,7 @@ Sets the shader effect for this brush.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## setShadowLayer
 
@@ -627,9 +636,11 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 Sets a shadow layer for this brush. The shadow layer effect takes effect only when text is drawn.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Brush-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
@@ -645,5 +656,5 @@ Sets a shadow layer for this brush. The shadow layer effect takes effect only wh
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 

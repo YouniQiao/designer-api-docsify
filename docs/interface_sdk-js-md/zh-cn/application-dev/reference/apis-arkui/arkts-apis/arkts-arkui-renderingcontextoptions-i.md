@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RenderingContextOptions--><!--Device-unnamed-declare interface RenderingContextOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,19 +18,15 @@
 antialias?: boolean
 ```
 
-表明RenderingContext是否需要开启抗锯齿。
-
-异常值undefined或null按默认值处理。
-
-true：开启抗锯齿；false：不开启抗锯齿。
-
-默认值：false
+表明RenderingContext是否需要开启抗锯齿。 异常值undefined或null按默认值处理。 true：开启抗锯齿；false：不开启抗锯齿。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

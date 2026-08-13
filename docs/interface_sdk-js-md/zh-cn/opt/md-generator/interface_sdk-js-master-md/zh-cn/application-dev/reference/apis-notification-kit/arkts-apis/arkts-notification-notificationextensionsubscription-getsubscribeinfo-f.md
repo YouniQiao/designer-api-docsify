@@ -14,7 +14,9 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 获取当前应用的通知扩展订阅信息。使用Promise异步回调。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 
@@ -24,7 +26,7 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 **参见：**
 
-[subscribe](notificationExtensionSubscription.subscribe(info: NotificationExtensionSubscriptionInfo[]): Promise<void>) 订阅通知扩展。
+subscribe 订阅通知扩展。
 
 **返回值：**
 
@@ -36,9 +38,9 @@ function getSubscribeInfo(): Promise<NotificationExtensionSubscriptionInfo[]>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

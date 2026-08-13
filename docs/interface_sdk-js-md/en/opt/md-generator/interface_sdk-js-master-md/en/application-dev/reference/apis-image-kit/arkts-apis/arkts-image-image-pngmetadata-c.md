@@ -4,6 +4,8 @@ Png metadata.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-class PngMetadata--><!--Device-image-class PngMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -26,6 +28,8 @@ PNG author.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly author?: string--><!--Device-PngMetadata-readonly author?: string-End-->
@@ -43,6 +47,8 @@ PNG color primary/white-point coordinates.
 **Type:** number[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ PNG comment.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly comment?: string--><!--Device-PngMetadata-readonly comment?: string-End-->
@@ -79,6 +87,8 @@ PNG copyright.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ PNG creation time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly creationTime?: string--><!--Device-PngMetadata-readonly creationTime?: string-End-->
@@ -115,6 +127,8 @@ PNG description.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +148,8 @@ PNG disclaimer.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly disclaimer?: string--><!--Device-PngMetadata-readonly disclaimer?: string-End-->
@@ -152,6 +168,8 @@ PNG gamma.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly gamma?: double--><!--Device-PngMetadata-readonly gamma?: double-End-->
@@ -164,11 +182,13 @@ PNG gamma.
 readonly interlaceType?: number
 ```
 
-PNG interlacing mode.The value should be an integer.
+PNG interlacing mode. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,6 +208,8 @@ PNG modification time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly modificationTime?: string--><!--Device-PngMetadata-readonly modificationTime?: string-End-->
@@ -200,11 +222,13 @@ PNG modification time.
 readonly sRGBIntent?: number
 ```
 
-PNG sRGB rendering intent.The value should be an integer.
+PNG sRGB rendering intent. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,6 +248,8 @@ PNG software.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly software?: string--><!--Device-PngMetadata-readonly software?: string-End-->
@@ -241,6 +267,8 @@ PNG title.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,6 +288,8 @@ PNG warning.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PngMetadata-readonly warning?: string--><!--Device-PngMetadata-readonly warning?: string-End-->
@@ -272,11 +302,13 @@ PNG warning.
 readonly xPixelsPerMeter?: number
 ```
 
-PNG x pixels per meter.The value should be an integer.
+PNG x pixels per meter. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,11 +322,13 @@ PNG x pixels per meter.The value should be an integer.
 readonly yPixelsPerMeter?: number
 ```
 
-PNG y pixels per meter.The value should be an integer.
+PNG y pixels per meter. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

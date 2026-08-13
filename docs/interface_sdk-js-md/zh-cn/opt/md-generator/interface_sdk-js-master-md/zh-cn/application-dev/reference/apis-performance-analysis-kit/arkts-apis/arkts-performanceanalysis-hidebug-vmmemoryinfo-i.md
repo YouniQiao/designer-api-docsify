@@ -2,7 +2,9 @@
 
 VM内存信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-interface VMMemoryInfo--><!--Device-hidebug-interface VMMemoryInfo-End-->
 
@@ -18,7 +20,9 @@ allArraySize: bigint
 
 **类型：** bigint
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VMMemoryInfo-allArraySize: bigint--><!--Device-VMMemoryInfo-allArraySize: bigint-End-->
 
@@ -34,7 +38,9 @@ heapUsed: bigint
 
 **类型：** bigint
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VMMemoryInfo-heapUsed: bigint--><!--Device-VMMemoryInfo-heapUsed: bigint-End-->
 
@@ -50,7 +56,9 @@ totalHeap: bigint
 
 **类型：** bigint
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VMMemoryInfo-totalHeap: bigint--><!--Device-VMMemoryInfo-totalHeap: bigint-End-->
 

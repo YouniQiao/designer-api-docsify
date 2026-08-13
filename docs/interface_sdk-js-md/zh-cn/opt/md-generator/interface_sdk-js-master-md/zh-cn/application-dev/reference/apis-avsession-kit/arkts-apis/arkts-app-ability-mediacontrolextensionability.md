@@ -1,8 +1,5 @@
 # @ohos.app.ability.MediaControlExtensionAbility
 
-播控扩展能力
-
-
 ## 汇总
 
 ### 类

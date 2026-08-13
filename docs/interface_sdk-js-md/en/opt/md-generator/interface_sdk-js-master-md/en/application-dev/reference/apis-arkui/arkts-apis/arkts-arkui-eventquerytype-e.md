@@ -4,6 +4,8 @@ Enumerates interaction event types that can be queried.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EventQueryType--><!--Device-unnamed-declare enum EventQueryType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ ON_CLICK = 0
 Click event.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

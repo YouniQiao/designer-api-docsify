@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Size--><!--Device-unnamed-export interface Size-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,13 @@
 height: number
 ```
 
-组件大小的高度。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-负数按默认值处理。
+组件大小的高度。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。
 
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +38,13 @@ height: number
 width: number
 ```
 
-组件大小的宽度。
-
-单位：vp
-
-取值范围：[0, +∞)
-
-负数按默认值处理。
+组件大小的宽度。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。
 
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

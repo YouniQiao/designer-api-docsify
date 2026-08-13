@@ -2,9 +2,11 @@
 
 共享模块信息。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SharedModuleInfo--><!--Device-unnamed-export interface SharedModuleInfo-End-->
 
@@ -22,9 +24,11 @@ readonly description: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedModuleInfo-readonly description: string--><!--Device-SharedModuleInfo-readonly description: string-End-->
 
@@ -40,11 +44,13 @@ readonly descriptionId: long
 
 共享包描述的资源id值。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedModuleInfo-readonly descriptionId: long--><!--Device-SharedModuleInfo-readonly descriptionId: long-End-->
 
@@ -62,9 +68,11 @@ readonly name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedModuleInfo-readonly name: string--><!--Device-SharedModuleInfo-readonly name: string-End-->
 
@@ -80,11 +88,13 @@ readonly versionCode: long
 
 共享包的版本号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedModuleInfo-readonly versionCode: long--><!--Device-SharedModuleInfo-readonly versionCode: long-End-->
 
@@ -102,9 +112,11 @@ readonly versionName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SharedModuleInfo-readonly versionName: string--><!--Device-SharedModuleInfo-readonly versionName: string-End-->
 

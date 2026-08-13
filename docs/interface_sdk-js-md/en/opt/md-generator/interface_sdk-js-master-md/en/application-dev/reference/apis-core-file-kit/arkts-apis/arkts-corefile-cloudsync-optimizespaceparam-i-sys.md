@@ -2,7 +2,9 @@
 
 Sets the total optimization space and aging days.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-interface OptimizeSpaceParam--><!--Device-cloudSync-interface OptimizeSpaceParam-End-->
 
@@ -26,7 +28,9 @@ Aging days. The system optimizes the local images and videos that have been uplo
 
 **Type:** number
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -46,7 +50,9 @@ Total size of the optimization space. You can obtain the total size of all files
 
 **Type:** number
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 

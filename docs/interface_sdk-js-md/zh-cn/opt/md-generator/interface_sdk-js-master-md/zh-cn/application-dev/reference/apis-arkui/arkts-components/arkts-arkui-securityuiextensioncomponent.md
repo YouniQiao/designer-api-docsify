@@ -1,12 +1,8 @@
 # SecurityUIExtensionComponent
 
-**SecurityUIExtensionComponent**用于将其他应用提供的UI嵌入到当前页面中。显示的内容运行在另一个进程中，当前应用不参与其布局和渲染。
+**SecurityUIExtensionComponent**用于将其他应用提供的UI嵌入到当前页面中。显示的内容运行在另一个进程中，当前应用不参与其布局和渲染。 通常用于需要进程隔离的模块化开发场景。目前，**SecurityUIExtensionComponent**只能启动PhotoPicker类型的**UIExtensionAbility**。
 
-通常用于需要进程隔离的模块化开发场景。目前，**SecurityUIExtensionComponent**只能启动[PhotoPicker]{@link @ohos.file.PhotoPickerComponent}类型的**UIExtensionAbility**。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## SecurityUIExtensionComponent
 
@@ -20,6 +16,8 @@ SecurityUIExtensionComponent(
 创建**SecurityUIExtensionComponent**组件，用于嵌入显示远程**UIExtensionAbility**提供的UI。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +36,7 @@ SecurityUIExtensionComponent(
 
 ## 汇总
 
-- [SecurityUIExtensionOptions](arkts-arkui-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md)
-- [SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)
-- [TerminationInfo](arkts-arkui-securityuiextensioncomponent-terminationinfo-i-sys.md)
-- [SecurityDpiFollowStrategy](arkts-arkui-securityuiextensioncomponent-securitydpifollowstrategy-e-sys.md)
+- [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md)
+- [SecurityUIExtensionProxy](arkts-arkui-securityuiextensionproxy-i-sys.md)
+- [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md)
+- [SecurityDpiFollowStrategy](arkts-arkui-securitydpifollowstrategy-e-sys.md)

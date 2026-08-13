@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-asset-enum ConflictResolution--><!--Device-asset-enum ConflictResolution-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -17,6 +19,8 @@ OVERWRITE = 0
 覆盖原有的关键资产。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ THROW_ERROR = 1
 抛出异常，由业务进行后续处理。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

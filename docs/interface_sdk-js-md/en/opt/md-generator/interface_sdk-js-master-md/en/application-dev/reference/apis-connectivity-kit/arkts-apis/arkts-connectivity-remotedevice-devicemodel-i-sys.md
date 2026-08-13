@@ -4,6 +4,8 @@ Describes the remote device's model information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-remoteDevice-interface DeviceModel--><!--Device-remoteDevice-interface DeviceModel-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -28,6 +30,8 @@ The icon ID of the remote device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceModel-iconId: string--><!--Device-DeviceModel-iconId: string-End-->
@@ -48,6 +52,8 @@ The model ID of the remote device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeviceModel-modelId: string--><!--Device-DeviceModel-modelId: string-End-->
@@ -67,6 +73,8 @@ The sub-model ID of the remote device.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,7 +14,9 @@ function getVMRuntimeStats(): GcStats
 
 Obtains the system GC statistics.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getVMRuntimeStats(): GcStats--><!--Device-hidebug-function getVMRuntimeStats(): GcStats-End-->
 

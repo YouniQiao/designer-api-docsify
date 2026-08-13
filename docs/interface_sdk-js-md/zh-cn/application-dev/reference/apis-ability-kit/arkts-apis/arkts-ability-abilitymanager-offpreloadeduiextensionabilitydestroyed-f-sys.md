@@ -10,7 +10,9 @@ function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtension
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRELOAD_UI_EXTENSION_ABILITY
 
@@ -32,9 +34,9 @@ function offPreloadedUIExtensionAbilityDestroyed(callback?: PreloadedUIExtension
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The application is not system-app, can not use system-api. |
 
 ## 示例
 

@@ -1,14 +1,14 @@
 # SendableLruCache
 
-SendableLruCache在缓存空间不足时，会用新数据替换近期最少使用的数据。此设计基于资源访问的考虑：近期访问的数据可能在不久的将来再次访问，因此最少访问的数据价值最小，应优先移出缓存。SendableLruCache支持Sendable（可跨线程安全共享的）特性，可保存Sendable对象，确保跨线程安全访问。
+SendableLruCache在缓存空间不足时，会用新数据替换近期最少使用的数据。此设计基于资源访问的考虑： 近期访问的数据可能在不久的将来再次访问，因此最少访问的数据价值最小，应优先移出缓存。 SendableLruCache支持Sendable（可跨线程安全共享的）特性，可保存Sendable对象，确保跨线程安全访问。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
-<!--Device-utils-class SendableLruCache<K, V>--><!--Device-utils-class SendableLruCache<K, V>-End-->
+<!--Device-utils-class SendableLruCache--><!--Device-utils-class SendableLruCache-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -23,6 +23,8 @@ clear(): void
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -41,6 +43,8 @@ constructor(capacity?: number)
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -65,6 +69,8 @@ contains(key: K): boolean
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -96,6 +102,8 @@ entries(): IterableIterator<[K, V]>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-entries(): IterableIterator<[K, V]>--><!--Device-SendableLruCache-entries(): IterableIterator<[K, V]>-End-->
@@ -114,11 +122,13 @@ entries(): IterableIterator<[K, V]>
 get(key: K): V | undefined
 ```
 
-返回键对应的值。如果指定的键不存在于缓存中，将调用createDefault方法；若createDefault返回非undefined值，则将该键值对添加到缓存并返回该值；若createDefault返回undefined，则返回undefined。
+返回键对应的值。如果指定的键不存在于缓存中，将调用createDefault方法；若createDefault返回非undefined值，则将该键值对添加到缓存并返回该值；若createDefault返回undefined， 则返回undefined。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -150,6 +160,8 @@ getCapacity(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-getCapacity(): number--><!--Device-SendableLruCache-getCapacity(): number-End-->
@@ -173,6 +185,8 @@ getCreateCount(): number
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -198,6 +212,8 @@ getMatchCount(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-getMatchCount(): number--><!--Device-SendableLruCache-getMatchCount(): number-End-->
@@ -221,6 +237,8 @@ getMissCount(): number
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -246,6 +264,8 @@ getPutCount(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-getPutCount(): number--><!--Device-SendableLruCache-getPutCount(): number-End-->
@@ -269,6 +289,8 @@ getRemoveCount(): number
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -294,6 +316,8 @@ isEmpty(): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-isEmpty(): boolean--><!--Device-SendableLruCache-isEmpty(): boolean-End-->
@@ -318,6 +342,8 @@ keys(): K[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-keys(): K[]--><!--Device-SendableLruCache-keys(): K[]-End-->
@@ -341,6 +367,8 @@ put(key: K, value: V): V
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -373,6 +401,8 @@ remove(key: K): V | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-remove(key: K): V | undefined--><!--Device-SendableLruCache-remove(key: K): V | undefined-End-->
@@ -397,11 +427,13 @@ remove(key: K): V | undefined
 toString(): string
 ```
 
-返回对象的字符串表示形式，包含缓存最大容量、查询匹配成功次数、查询匹配失败次数及匹配率等信息。返回字符串格式是：SendableLruCache[ maxSize = (maxSize), hits = (hitCount), misses = (missCount), hitRate = (hitRate) ]。(maxSize)表示缓存最大值，(hitCount)表示查询值匹配成功的次数，(missCount)表示查询值匹配失败的次数，(hitRate)表示查询值匹配率。
+返回对象的字符串表示形式，包含缓存最大容量、查询匹配成功次数、查询匹配失败次数及匹配率等信息。 返回字符串格式是：SendableLruCache[ maxSize = (maxSize), hits = (hitCount), misses = (missCount), hitRate = (hitRate) ]。 (maxSize)表示缓存最大值， (hitCount)表示查询值匹配成功的次数， (missCount)表示查询值匹配失败的次数， (hitRate)表示查询值匹配率。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -427,6 +459,8 @@ updateCapacity(newCapacity: number): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SendableLruCache-updateCapacity(newCapacity: number): void--><!--Device-SendableLruCache-updateCapacity(newCapacity: number): void-End-->
@@ -450,6 +484,8 @@ values(): V[]
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -476,6 +512,8 @@ readonly length: number
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

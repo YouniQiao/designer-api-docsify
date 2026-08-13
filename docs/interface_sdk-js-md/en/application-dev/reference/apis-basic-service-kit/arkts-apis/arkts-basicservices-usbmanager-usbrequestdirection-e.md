@@ -2,9 +2,11 @@
 
 Enumerates request directions.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum USBRequestDirection--><!--Device-usbManager-export enum USBRequestDirection-End-->
 
@@ -18,9 +20,11 @@ USB_REQUEST_DIR_TO_DEVICE = 0
 
 Request for writing data from the host to the device.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBRequestDirection-USB_REQUEST_DIR_TO_DEVICE = 0--><!--Device-USBRequestDirection-USB_REQUEST_DIR_TO_DEVICE = 0-End-->
 
@@ -34,9 +38,11 @@ USB_REQUEST_DIR_FROM_DEVICE = 0x80
 
 Request for reading data from the device to the host.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBRequestDirection-USB_REQUEST_DIR_FROM_DEVICE = 0x80--><!--Device-USBRequestDirection-USB_REQUEST_DIR_FROM_DEVICE = 0x80-End-->
 

@@ -2,7 +2,9 @@
 
 系统定义的卡片类型数据，用于跨应用共享卡片信息。典型使用场景包括：卡片拖拽分享、卡片内容跨应用传输、桌面小组件数据共享等。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uniformDataStruct-interface Form--><!--Device-uniformDataStruct-interface Form-End-->
 
@@ -14,11 +16,13 @@
 abilityName: string
 ```
 
-卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如"com.example.myapplication.MainAbility"）。
+卡片对应的ability名。建议遵循Ability组件命名规范：取值为长度不超过127字节的字符串，以字母开头，可包含字母、数字、下划线（_）或点号（.）；确保该名称在整个应用中唯一。推荐使用"包名.Ability名"格式（如 "com.example.myapplication.MainAbility"）。
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +60,9 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 **类型：** Record&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,7 +80,9 @@ formId: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,7 +100,9 @@ formName: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,7 +120,9 @@ module: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,12 +136,13 @@ module: string
 readonly uniformDataType: 'openharmony.form'
 ```
 
-统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见  
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
+统一数据类型标识为卡片类型数据，固定为“openharmony.form”，数据类型描述信息见 [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType)。
 
 **类型：** 'openharmony.form'
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

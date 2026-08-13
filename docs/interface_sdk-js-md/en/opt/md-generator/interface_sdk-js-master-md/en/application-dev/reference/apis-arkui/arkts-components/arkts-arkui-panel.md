@@ -28,6 +28,6 @@ Called when the panel slidable panel pops up.
 
 ## Summary
 
-- [PanelHeight](arkts-arkui-panel-panelheight-e.md)
-- [PanelMode](arkts-arkui-panel-panelmode-e.md)
-- [PanelType](arkts-arkui-panel-paneltype-e.md)
+- [PanelHeight](arkts-arkui-panelheight-e.md)
+- [PanelMode](arkts-arkui-panelmode-e.md)
+- [PanelType](arkts-arkui-paneltype-e.md)

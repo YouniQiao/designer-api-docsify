@@ -2,7 +2,9 @@
 
 Enumerates the font types, which can be combined through bitwise OR operations.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-enum SystemFontType--><!--Device-text-enum SystemFontType-End-->
 
@@ -16,7 +18,9 @@ ALL = 1 << 0
 
 All font types, including the system font type, style font type, and user-installed font type.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -32,7 +36,9 @@ GENERIC = 1 << 1
 
 System font type.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,7 +54,9 @@ STYLISH = 1 << 2
 
 Style font type. The style font type is designed for 2-in-1 devices.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -64,7 +72,9 @@ INSTALLED = 1 << 3
 
 Font type that has been installed.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -80,7 +90,9 @@ CUSTOMIZED = 1 << 4
 
 Custom font type.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

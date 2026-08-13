@@ -15,7 +15,7 @@
 | --- | --- |
 | [TextMarqueeOptions](arkts-arkui-text-textmarqueeoptions-i.md) | Marquee初始化参数。 |
 | [TextOptions](arkts-arkui-text-textoptions-i.md) | Text初始化参数。 |
-| [TextOverflowOptions](arkts-arkui-text-textoverflowoptions-i.md) | 文本超长显示方式对象。  @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
+| [TextOverflowOptions](arkts-arkui-text-textoverflowoptions-i.md) | 文本超长显示方式对象。 @since版本号高于内层元素版本号的情况，但这不影响接口的使用。 |
 
 ### 枚举
 

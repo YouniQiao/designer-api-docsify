@@ -10,6 +10,8 @@ function terminateSelf(callback: AsyncCallback<void>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function terminateSelf(callback: AsyncCallback<void>): void--><!--Device-featureAbility-function terminateSelf(callback: AsyncCallback<void>): void-End-->
@@ -45,6 +47,8 @@ function terminateSelf(): Promise<void>
 停止当前的Ability。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

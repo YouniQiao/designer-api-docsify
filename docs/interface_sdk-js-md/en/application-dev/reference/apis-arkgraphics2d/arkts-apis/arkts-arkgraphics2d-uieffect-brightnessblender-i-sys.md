@@ -1,10 +1,12 @@
 # BrightnessBlender (System API)
 
-Brightness blender, used to add a brightness effect to a specified component.Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender.
+Brightness blender, used to add a brightness effect to a specified component. Before calling BrightnessBlender, you need to first create a BrightnessBlender instance through createBrightnessBlender.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface BrightnessBlender--><!--Device-uiEffect-interface BrightnessBlender-End-->
 
@@ -24,13 +26,15 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 cubicRate: double
 ```
 
-Third-order coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
+Third-order coefficient for grayscale adjustment. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -46,13 +50,15 @@ Third-order coefficient for grayscale adjustment. The value range is [-20, 20].V
 degree: double
 ```
 
-Grayscale adjustment ratio. The value range is [-20, 20].Values outside the range will be clamped during implementation.
+Grayscale adjustment ratio. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -68,13 +74,15 @@ Grayscale adjustment ratio. The value range is [-20, 20].Values outside the rang
 fraction: double
 ```
 
-Blending ratio for the brightness effect. The value range is [0, 1].Values outside the range will be clamped during implementation.
+Blending ratio for the brightness effect. The value range is [0, 1]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -90,13 +98,15 @@ Blending ratio for the brightness effect. The value range is [0, 1].Values outsi
 linearRate: double
 ```
 
-Linear coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
+Linear coefficient for grayscale adjustment. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -112,13 +122,15 @@ Linear coefficient for grayscale adjustment. The value range is [-20, 20].Values
 negativeCoefficient: [double, double, double]
 ```
 
-Negative RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20].Values outside the range will be clamped during implementation.
+Negative RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [double, double, double]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -134,13 +146,15 @@ Negative RGB adjustment coefficients based on the base saturation. The value ran
 positiveCoefficient: [double, double, double]
 ```
 
-Positive RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20].Values outside the range will be clamped during implementation.
+Positive RGB adjustment coefficients based on the base saturation. The value range for each number is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: [number, number, number]  <br>ArkTS-Sta：[double, double, double]
+**Type:** [double, double, double]
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -156,13 +170,15 @@ Positive RGB adjustment coefficients based on the base saturation. The value ran
 quadraticRate: double
 ```
 
-Second-order coefficient for grayscale adjustment. The value range is [-20, 20].Values outside the range will be clamped during implementation.
+Second-order coefficient for grayscale adjustment. The value range is [-20, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
@@ -178,13 +194,15 @@ Second-order coefficient for grayscale adjustment. The value range is [-20, 20].
 saturation: double
 ```
 
-Base saturation for brightness. The value range is [0, 20].Values outside the range will be clamped during implementation.
+Base saturation for brightness. The value range is [0, 20]. Values outside the range will be clamped during implementation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 22.
 

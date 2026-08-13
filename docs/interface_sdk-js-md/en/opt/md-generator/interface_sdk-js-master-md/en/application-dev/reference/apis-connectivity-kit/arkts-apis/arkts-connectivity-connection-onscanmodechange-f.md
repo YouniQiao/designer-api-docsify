@@ -14,7 +14,9 @@ function onScanModeChange(callback: Callback<ScanMode>): void
 
 Subscribe to an event indicating that the scanning mode of the local device has changed.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -34,8 +36,8 @@ Subscribe to an event indicating that the scanning mode of the local device has 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples

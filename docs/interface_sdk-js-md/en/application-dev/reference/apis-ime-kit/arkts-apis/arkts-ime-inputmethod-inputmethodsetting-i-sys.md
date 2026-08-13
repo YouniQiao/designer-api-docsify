@@ -2,9 +2,11 @@
 
 In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
 
@@ -24,9 +26,11 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 
 Enables or disables an input method. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
@@ -54,11 +58,11 @@ Enables or disables an input method. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
-| [12800018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -87,13 +91,6 @@ enableInputMethodSafely();
 
 ## enableInputMethod
 
-ArkTS-Dyn:
-```TypeScript
-enableInputMethod(
-      bundleName: string, extensionName: string, enabledState: EnabledState, userId?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 enableInputMethod(
       bundleName: string, extensionName: string, enabledState: EnabledState, userId?: int): Promise<void>
@@ -103,7 +100,9 @@ Change the enabled state of an input method of a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONNECT_IME_ABILITY
 
@@ -122,7 +121,7 @@ Change the enabled state of an input method of a specified user.
 | bundleName | string | Yes | Indicates the bundle name of the input method. |
 | extensionName | string | Yes | Indicates the extension name of the input method. |
 | enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | Indicates the enabledState to be changed. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -134,23 +133,17 @@ Change the enabled state of an input method of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
-| [12800018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
+| [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
+| [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
 | 12800023 | the specified user does not exist. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getAllInputMethodsSync
 
-ArkTS-Dyn:
-```TypeScript
-getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getAllInputMethodsSync(userId?: int): Array<InputMethodProperty>
 ```
@@ -159,7 +152,9 @@ Get all input methods sync of a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,7 +168,7 @@ Get all input methods sync of a specified user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -185,21 +180,15 @@ Get all input methods sync of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | 12800023 | the specified user does not exist. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getCursorInfo
 
-ArkTS-Dyn:
-```TypeScript
-getCursorInfo(userId?: number): CursorInfo
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCursorInfo(userId?: int): CursorInfo
 ```
@@ -208,7 +197,9 @@ Get the cursor information of a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,7 +213,7 @@ Get the cursor information of a specified user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. The value should be an integer. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. The value should be an integer. |
 
 **Return value:**
 
@@ -234,11 +225,11 @@ Get the cursor information of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
 | 12800023 | the specified user does not exist. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getDefaultInputMethodAbility
@@ -247,11 +238,13 @@ Get the cursor information of a specified user.
 getDefaultInputMethodAbility(): InputMethodProperty
 ```
 
-&lt;p&gt;Get the default input method ability.&lt;/p&gt;&lt;p&gt;To optimize performance, only the 'name' and 'id' properties which can uniquely identify an input method ability are included in the returned InputMethodProperty object.&lt;/p&gt;
+&lt;p&gt;Get the default input method ability.&lt;/p&gt; &lt;p&gt;To optimize performance, only the 'name' and 'id' properties which can uniquely identify an input method ability are included in the returned InputMethodProperty object.&lt;/p&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -271,17 +264,11 @@ getDefaultInputMethodAbility(): InputMethodProperty
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## getInputMethodSubtypes
 
-ArkTS-Dyn:
-```TypeScript
-getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSubtype>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getInputMethodSubtypes(bundleName: string, userId?: int): Array<InputMethodSubtype>
 ```
@@ -290,7 +277,9 @@ Get subtypes of a specified input method of a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -305,7 +294,7 @@ Get subtypes of a specified input method of a specified user.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | the bundle name of the specified input method. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -317,21 +306,15 @@ Get subtypes of a specified input method of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | 12800023 | the specified user does not exist. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## getInputMethodsSync
 
-ArkTS-Dyn:
-```TypeScript
-getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getInputMethodsSync(enable: boolean, userId?: int): Array<InputMethodProperty>
 ```
@@ -340,7 +323,9 @@ List enabled or disabled input methods sync of a specified user.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -355,7 +340,7 @@ List enabled or disabled input methods sync of a specified user.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | If true, collect enabled input methods. If false, collect disabled input methods. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
+| userId | int | No | the user ID. If not provided: If the caller is not a user 0 application, the value defaults to the caller's user ID. If the caller is a user 0 application, the value defaults to the foreground user ID of the main screen. |
 
 **Return value:**
 
@@ -367,11 +352,11 @@ List enabled or disabled input methods sync of a specified user.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) | bundle manager error. |
 | 12800023 | the specified user does not exist. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 | 12800025 | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 | 12800024 | the specified user is not in the foreground. |
 
 ## isPanelShown
@@ -382,9 +367,11 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 Checks whether the input method panel of a specified type is shown.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-isPanelShown(panelInfo: PanelInfo): boolean--><!--Device-InputMethodSetting-isPanelShown(panelInfo: PanelInfo): boolean-End-->
 
@@ -408,9 +395,9 @@ Checks whether the input method panel of a specified type is shown.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -428,12 +415,6 @@ console.info('Succeeded in querying isPanelShown, result: ' + result);
 
 ## isPanelShown
 
-ArkTS-Dyn:
-```TypeScript
-isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 ```
@@ -442,7 +423,9 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -457,7 +440,7 @@ Checks whether the input method panel of a specified type is shown on a specifie
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | panelInfo | [PanelInfo](arkts-ime-inputmethod-panel-panelinfo-i.md) | Yes | Information about the input method panel. |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. |
+| displayId | long | Yes | Display ID. |
 
 **Return value:**
 
@@ -469,8 +452,8 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
 ## Examples
 
@@ -487,20 +470,23 @@ let result: boolean = inputMethod.getSetting().isPanelShown(info, displayId);
 console.info('Succeeded in querying isPanelShown, result: ' + result);
 ```
 
-## off('imeShow')
+## offImeChangeWithUserId
 
 ```TypeScript
-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
+offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 ```
 
-Unsubscribes from the soft keyboard show event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state.
+Unsubscribe from the input method change event.
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-InputMethodSetting-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -510,27 +496,81 @@ Unsubscribes from the soft keyboard show event of the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.&lt;br&gt;If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | No | the callback called when the current input method changes, when the subscriber unsubscribes all callbacks, this parameter can be left blank. |
 
-## Examples
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+## offImeHide
 
 ```TypeScript
-inputMethod.getSetting().off('imeShow');
+offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
 ```
 
-## off('imeHide')
+Unsubscribe input window hide event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+
+## offImeShow
+
+```TypeScript
+offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
+```
+
+Unsubscribe input window show event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void--><!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
+
+## off_imeHide
 
 ```TypeScript
 off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-Unsubscribes from the soft keyboard hide event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state.
+Unsubscribes from the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void-End-->
 
@@ -551,102 +591,21 @@ Unsubscribes from the soft keyboard hide event of the
 inputMethod.getSetting().off('imeHide');
 ```
 
-## offImeChangeWithUserId
+## off_imeShow
 
 ```TypeScript
-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
+off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 ```
 
-Unsubscribe from the input method change event.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void--><!--Device-InputMethodSetting-offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ImeChangeWithUserIdCallback](arkts-ime-inputmethod-imechangewithuseridcallback-t-sys.md) | No | the callback called when the current input method changes, when the subscriber unsubscribes all callbacks, this parameter can be left blank. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-
-## offImeHide
-
-```TypeScript
-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void
-```
-
-Unsubscribe input window hide event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-offImeHide(callback?: Callback<Array<InputWindowInfo>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method hides, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
-
-## offImeShow
-
-```TypeScript
-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void
-```
-
-Unsubscribe input window show event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void--><!--Device-InputMethodSetting-offImeShow(callback?: Callback<Array<InputWindowInfo>>):void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | No | the callback called when input method shows, when subscriber unsubscribes all callback functions, this parameter can be left blank. |
-
-## on('imeShow')
-
-```TypeScript
-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
-```
-
-Subscribes to the soft keyboard show event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state. This API uses an asynchronous callback to return the result.
+Unsubscribes from the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-InputMethodSetting-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-InputMethodSetting-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -657,60 +616,12 @@ Subscribes to the soft keyboard show event of the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | Yes | Callback used to return the soft keyboard information of the input method panel in the fixed state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.&lt;br&gt;If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 ## Examples
 
 ```TypeScript
-inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>) => {
-  console.info('Succeeded in subscribing imeShow event.');
-});
-```
-
-## on('imeHide')
-
-```TypeScript
-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
-```
-
-Subscribes to the soft keyboard hide event of the   
-[input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-InputMethodSetting-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | Yes | Callback used to return the soft keyboard information of the input method panel in the fixed state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
-
-## Examples
-
-```TypeScript
-inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>) => {
-  console.info('Succeeded in subscribing imeHide event.');
-});
+inputMethod.getSetting().off('imeShow');
 ```
 
 ## onImeChangeWithUserId
@@ -723,7 +634,9 @@ Subscribe to the input method change event.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -743,7 +656,7 @@ Subscribe to the input method change event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## onImeHide
 
@@ -755,7 +668,9 @@ Subscribes to input window hidden events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-onImeHide(callback: Callback<Array<InputWindowInfo>>): void--><!--Device-InputMethodSetting-onImeHide(callback: Callback<Array<InputWindowInfo>>): void-End-->
 
@@ -767,13 +682,13 @@ Subscribes to input window hidden events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method hides. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method hides. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
 
 ## onImeShow
 
@@ -785,7 +700,9 @@ Subscribes to input window show events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -799,11 +716,93 @@ Subscribes to input window show events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method shows. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;&gt; | Yes | the callback called when input method shows. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+## on_imeHide
+
+```TypeScript
+on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
+```
+
+Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-InputMethodSetting-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | Yes | Callback used to return the soft keyboard information of the input method panel in the fixed state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+## Examples
+
+```TypeScript
+inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeHide event.');
+});
+```
+
+## on_imeShow
+
+```TypeScript
+on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
+```
+
+Subscribes to the soft keyboard show event of the [input method panel](arkts-ime-inputmethodengine-panel-i.md#Panel) in the fixed state. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-InputMethodSetting-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void--><!--Device-InputMethodSetting-on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | Yes | Callback used to return the soft keyboard information of the input method panel in the fixed state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application. |
+
+## Examples
+
+```TypeScript
+inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>) => {
+  console.info('Succeeded in subscribing imeShow event.');
+});
+```
 

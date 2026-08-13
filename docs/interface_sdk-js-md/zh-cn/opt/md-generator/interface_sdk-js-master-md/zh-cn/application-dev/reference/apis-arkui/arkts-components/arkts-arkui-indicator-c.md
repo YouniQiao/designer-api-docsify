@@ -1,11 +1,12 @@
 # Indicator
 
-设置导航点与Swiper组件的距离。由于导航点有默认交互区域，交互区域高度为32vp，所以无法让显示部分完全贴底。若想实现完全贴底，可以使用  
-[IndicatorComponent](../../../reference/apis-arkui/arkui-ts/ts-swiper-components-indicator.md#indicatorcomponent)组件，更灵活地调整位置。
+设置导航点与Swiper组件的距离。由于导航点有默认交互区域，交互区域高度为32vp，所以无法让显示部分完全贴底。若想实现完全贴底，可以使用 [IndicatorComponent](../../../reference/apis-arkui/arkui-ts/ts-swiper-components-indicator.md#indicatorcomponent)组件， 更灵活地调整位置。
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class Indicator<T>--><!--Device-unnamed-declare class Indicator<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class Indicator--><!--Device-unnamed-declare class Indicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,6 +19,8 @@ bottom(value: Length): T
 导航点底部相对于Swiper的位置。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,6 +53,8 @@ bottom(bottom: LengthMetrics | Length, ignoreSize: boolean): T
 导航点底部相对于Swiper的位置，并可通过ignoreSize属性忽略导航点大小。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +89,8 @@ static digit(): DigitIndicator
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -109,6 +116,8 @@ static dot(): DotIndicator
 返回一个DotIndicator对象。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,6 +145,8 @@ end(value: LengthMetrics): T
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -150,7 +161,7 @@ end(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
@@ -167,6 +178,8 @@ left(value: Length): T
 导航点左侧相对于Swiper的位置。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,6 +213,8 @@ right(value: Length): T
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -232,6 +247,8 @@ start(value: LengthMetrics): T
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -246,7 +263,7 @@ start(value: LengthMetrics): T
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| value | [LengthMetrics](../arkts-apis/arkts-arkui-lengthmetrics-t.md) | 是 |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-lengthmetrics-t.md) | 是 |
 
 **返回值：**
 
@@ -263,6 +280,8 @@ top(value: Length): T
 导航点顶部相对于Swiper的位置。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

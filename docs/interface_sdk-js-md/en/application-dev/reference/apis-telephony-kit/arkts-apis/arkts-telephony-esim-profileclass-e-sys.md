@@ -2,9 +2,11 @@
 
 The Profile class.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export enum ProfileClass--><!--Device-eSIM-export enum ProfileClass-End-->
 
@@ -20,9 +22,11 @@ PROFILE_CLASS_UNSPECIFIED = -1
 
 Profile class not specified.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileClass-PROFILE_CLASS_UNSPECIFIED = -1--><!--Device-ProfileClass-PROFILE_CLASS_UNSPECIFIED = -1-End-->
 
@@ -38,9 +42,11 @@ PROFILE_CLASS_TEST = 0
 
 Testing profiles.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileClass-PROFILE_CLASS_TEST = 0--><!--Device-ProfileClass-PROFILE_CLASS_TEST = 0-End-->
 
@@ -56,9 +62,11 @@ PROFILE_CLASS_PROVISIONING = 1
 
 Provisioning profiles that preloaded on the eUICC.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileClass-PROFILE_CLASS_PROVISIONING = 1--><!--Device-ProfileClass-PROFILE_CLASS_PROVISIONING = 1-End-->
 
@@ -74,9 +82,11 @@ PROFILE_CLASS_OPERATIONAL = 2
 
 Operational profiles that can be preloaded or downloaded.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProfileClass-PROFILE_CLASS_OPERATIONAL = 2--><!--Device-ProfileClass-PROFILE_CLASS_OPERATIONAL = 2-End-->
 

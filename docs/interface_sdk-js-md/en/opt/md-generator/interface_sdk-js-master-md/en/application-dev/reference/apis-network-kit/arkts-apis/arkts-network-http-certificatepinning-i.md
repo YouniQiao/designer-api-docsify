@@ -4,6 +4,8 @@ Certificate pinning option.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-http-interface CertificatePinning--><!--Device-http-interface CertificatePinning-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -26,6 +28,8 @@ Certificate public key hash algorithm.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'--><!--Device-CertificatePinning-hashAlgorithm: 'SHA-256'-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -41,6 +45,8 @@ Public key hash.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-CertificatePinning-publicKeyHash: string--><!--Device-CertificatePinning-publicKeyHash: string-End-->
 

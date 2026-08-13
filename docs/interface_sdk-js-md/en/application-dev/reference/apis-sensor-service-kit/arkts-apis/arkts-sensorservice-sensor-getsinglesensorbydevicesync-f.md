@@ -14,9 +14,11 @@ function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sens
 
 Obtains information about the sensor of a specific type.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>--><!--Device-sensor-function getSingleSensorByDeviceSync(type: SensorId, deviceId?: int): Array<Sensor>-End-->
 
@@ -27,7 +29,7 @@ Obtains information about the sensor of a specific type.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | Yes | Sensor type. |
-| deviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or [sensorStatusChange](sensor.on(type: 'sensorStatusChange', callback: Callback&lt;SensorStatusEvent&gt;)) to obtain the device ID. |
+| deviceId | int | No | Device ID. The default value is **-1**, indicating the local device. You can use [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getSensorList) or [sensorStatusChange](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) to obtain the device ID. |
 
 **Return value:**
 

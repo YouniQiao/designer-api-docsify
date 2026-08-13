@@ -6,6 +6,8 @@ Defines the js geolocation request.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class JsGeolocation--><!--Device-unnamed-declare class JsGeolocation-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Constructor.
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,6 +44,8 @@ Report the geolocation permission status from users.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void--><!--Device-JsGeolocation-invoke(origin: string, allow: boolean, retain: boolean): void-End-->
@@ -52,5 +58,5 @@ Report the geolocation permission status from users.
 | --- | --- | --- | --- |
 | origin | string | 是 | Index of the origin. |
 | allow | boolean | 是 | Geolocation permission status. {@code true} means to allow geolocation permission; {@code false} means to disallow geolocation permission. |
-| retain | boolean | 是 | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through [GeolocationPermissions](../arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md#GeolocationPermissions). |
+| retain | boolean | 是 | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through [GeolocationPermissions](../../apis-na/arkts-apis/arkts-na-webview-geolocationpermissions-c.md#GeolocationPermissions). |
 

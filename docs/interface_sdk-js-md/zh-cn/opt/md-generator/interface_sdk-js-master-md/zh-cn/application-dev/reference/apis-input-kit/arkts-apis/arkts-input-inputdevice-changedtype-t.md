@@ -6,7 +6,9 @@ type ChangedType = 'add' | 'remove'
 
 监听设备热插拔事件类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-type ChangedType = 'add' | 'remove'--><!--Device-inputDevice-type ChangedType = 'add' | 'remove'-End-->
 

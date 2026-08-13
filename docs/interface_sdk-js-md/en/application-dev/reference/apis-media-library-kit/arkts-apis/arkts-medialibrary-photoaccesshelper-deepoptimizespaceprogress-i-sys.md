@@ -4,7 +4,9 @@ Defines the DeepOptimizeSpaceProgress data structure.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress--><!--Device-photoAccessHelper-interface DeepOptimizeSpaceProgress-End-->
 
@@ -24,13 +26,15 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 progress: int
 ```
 
-The percentage of deep optimize space state.Unit: Percentage, The value range is all integers, Value range: [0, 100].
+The percentage of deep optimize space state. Unit: Percentage, The value range is all integers, Value range: [0, 100].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,7 +56,9 @@ The current deep optimize space state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

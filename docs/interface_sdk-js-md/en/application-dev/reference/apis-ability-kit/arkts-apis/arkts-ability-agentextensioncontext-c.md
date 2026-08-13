@@ -2,13 +2,15 @@
 
 The context of the agent service extension. It provides resources and methods that developers can access.
 
-**Inheritance/Implementation:** AgentExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** AgentExtensionContext extends ExtensionContext
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-<!--Device-unnamed-declare class AgentExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AgentExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AgentExtensionContext--><!--Device-unnamed-declare class AgentExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
 
@@ -24,7 +26,9 @@ Indicates the agent card of the current agent.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

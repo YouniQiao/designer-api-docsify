@@ -15,7 +15,9 @@ function getMainWindowSnapshot(windowId: Array<number>, config: WindowSnapshotCo
 
 Obtains the screenshots of one or more main windows specified by **windowId**. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOM_SCREEN_CAPTURE
 
@@ -40,9 +42,9 @@ Obtains the screenshots of one or more main windows specified by **windowId**. T
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

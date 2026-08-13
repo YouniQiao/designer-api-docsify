@@ -1,8 +1,10 @@
 # KVManager
 
-Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**,you must use [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager) to create a **KVManager** instance.
+Provides an instance to obtain information about a distributed KV store. Before calling any API in **KVManager**, you must use [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager) to create a **KVManager** instance.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface KVManager--><!--Device-distributedKVStore-interface KVManager-End-->
 
@@ -22,7 +24,9 @@ closeKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): voi
 
 Closes a distributed KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,7 @@ Closes a distributed KV store. This API uses an asynchronous callback to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -94,7 +98,9 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 Closes a distributed KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,7 +126,7 @@ Closes a distributed KV store. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -171,7 +177,9 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 
 Deletes a distributed KV store. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,8 +199,8 @@ Deletes a distributed KV store. This API uses an asynchronous callback to return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
 
 ## Examples
 
@@ -245,7 +253,9 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 Deletes a distributed KV store. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -271,8 +281,8 @@ Deletes a distributed KV store. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-failed-to-find-data) |
 
 ## Examples
 
@@ -321,11 +331,11 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-Obtains the IDs of all distributed KV stores that are created by  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
-[deleteKVStore](#deleteKVStore). This API uses an asynchronous callback to return the result.
+Obtains the IDs of all distributed KV stores that are created by getKVStore and have not been deleted by [deleteKVStore](#deleteKVStore) . This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,7 +354,7 @@ Obtains the IDs of all distributed KV stores that are created by
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -373,11 +383,11 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-Obtains the IDs of all distributed KV stores that are created by  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;)) and have not been deleted by  
-[deleteKVStore](#deleteKVStore). This API uses a promise to return the result.
+Obtains the IDs of all distributed KV stores that are created by getKVStore and have not been deleted by [deleteKVStore](#deleteKVStore) . This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -401,7 +411,7 @@ Obtains the IDs of all distributed KV stores that are created by
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -429,17 +439,11 @@ try {
 getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): void
 ```
 
-Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an asynchronous callback to return the result.
+Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses an asynchronous callback to return the result. > **NOTE：**> > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV > store instance. For important data that cannot be regenerated, you are advised to use the backup and restore > feature to prevent data loss. For details, see > [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
 
-> **NOTE：**
-> 
-> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
-> store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
-> store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
-> feature to prevent data loss. For details, see
-> [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -459,9 +463,9 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100002](../errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -502,17 +506,11 @@ try {
 getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
-Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a promise to return the result.
+Creates and obtains a distributed KV store based on the specified **options** and **storeId**. This API uses a promise to return the result. > **NOTE：**> > If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV > store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV > store instance. For important data that cannot be regenerated, you are advised to use the backup and restore > feature to prevent data loss. For details, see > [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
 
-> **NOTE：**
-> 
-> If the database file cannot be opened (for example, the file header is damaged) when an existing distributed KV
-> store is obtained, the automatic rebuild logic will be triggered to return a newly created distributed KV
-> store instance. For important data that cannot be regenerated, you are advised to use the backup and restore
-> feature to prevent data loss. For details, see
-> [Database Backup and Restoration](../../../database/data-backup-and-restore.md).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -537,9 +535,9 @@ Creates and obtains a distributed KV store based on the specified **options** an
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [15100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [15100002](../errorcode-distributedKVStore.md#15100002-parameter-configuration-changes) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-kv-store-corrupted) |
 
 ## Examples
 
@@ -570,7 +568,31 @@ try {
 }
 ```
 
-## off
+## offDistributedDataServiceDie
+
+```TypeScript
+offDistributedDataServiceDie(deathCallback?: Callback<void>): void
+```
+
+Unregister the death callback. Not notification will be received when the data manager service is terminated. &lt;p&gt;The unregistered death callback must be a registered death callback of the database. If no death callback parameter is passed, all database death callbacks will be unregistered.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void--><!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+## off_distributedDataServiceDie
 
 ```TypeScript
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
@@ -579,6 +601,8 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 Unsubscribes from the termination (death) of the distributed data service. The **deathCallback** parameter must be a callback registered for subscribing to the termination of the distributed data service. Otherwise, the unsubscription will fail.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
 
@@ -595,7 +619,7 @@ Unsubscribes from the termination (death) of the distributed data service. The *
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -614,7 +638,31 @@ try {
 }
 ```
 
-## on
+## onDistributedDataServiceDie
+
+```TypeScript
+onDistributedDataServiceDie(deathCallback: Callback<void>): void
+```
+
+Register a death callback to get notification when the data manager service is terminated. &lt;p&gt;If the data manager service is terminated,you need to re-subscribe to data change notifications and synchronization completion notifications, and calling the sync method will return a failure.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void--><!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## on_distributedDataServiceDie
 
 ```TypeScript
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
@@ -623,6 +671,8 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 Subscribes to the termination (death) of the distributed data service. If the service is terminated, you need to register the callbacks for data change notifications and cross-device sync completion notifications again. In addition, an error will be returned for a sync operation.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 
@@ -639,7 +689,7 @@ Subscribes to the termination (death) of the distributed data service. If the se
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

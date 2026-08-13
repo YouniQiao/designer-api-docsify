@@ -6,6 +6,8 @@ Enumerates the directions of pixel rounding at the component level.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PixelRoundPolicy--><!--Device-unnamed-declare interface PixelRoundPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Enumerates the directions of pixel rounding at the component level.
 bottom?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's bottom edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's bottom edge. &lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -25,6 +27,8 @@ Rounding alignment for the component's bottom edge.&lt;br&gt;Invalid values are 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,7 @@ Rounding alignment for the component's bottom edge.&lt;br&gt;Invalid values are 
 end?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's end edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's end edge. &lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -51,6 +55,8 @@ Rounding alignment for the component's end edge.&lt;br&gt;Invalid values are rou
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +74,7 @@ Rounding alignment for the component's end edge.&lt;br&gt;Invalid values are rou
 start?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's start edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's start edge. &lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -77,6 +83,8 @@ Rounding alignment for the component's start edge.&lt;br&gt;Invalid values are r
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,7 +102,7 @@ Rounding alignment for the component's start edge.&lt;br&gt;Invalid values are r
 top?: PixelRoundCalcPolicy
 ```
 
-Rounding alignment for the component's top edge.&lt;br&gt;Invalid values are rounded using the round-half-up rule.
+Rounding alignment for the component's top edge. &lt;br&gt;Invalid values are rounded using the round-half-up rule.
 
 **Type:** PixelRoundCalcPolicy
 
@@ -103,6 +111,8 @@ Rounding alignment for the component's top edge.&lt;br&gt;Invalid values are rou
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

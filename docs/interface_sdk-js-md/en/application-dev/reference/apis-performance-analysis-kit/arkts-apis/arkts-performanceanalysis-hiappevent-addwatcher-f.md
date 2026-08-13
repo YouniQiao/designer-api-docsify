@@ -14,9 +14,11 @@ function addWatcher(watcher: Watcher): AppEventPackageHolder
 
 Adds an event watcher. You can use the callback of the event watcher to subscribe to events.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,12 +42,12 @@ Adds an event watcher. You can use the callback of the event watcher to subscrib
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [11102001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102001-invalid-watcher-name) | Invalid watcher name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11102003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102003-invalid-event-number) | Invalid row value. Possibly caused by the row value is less than zero. |
-| [11102002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11102005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
-| [11102004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11102001](../errorcode-hiappevent.md#11102001-invalid-watcher-name) | Invalid watcher name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11102003](../errorcode-hiappevent.md#11102003-invalid-event-number) | Invalid row value. Possibly caused by the row value is less than zero. |
+| [11102002](../errorcode-hiappevent.md#11102002-invalid-filtering-event-domain-name) | Invalid filtering event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11102005](../errorcode-hiappevent.md#11102005-invalid-timeout-value) | Invalid timeout value. Possibly caused by the timeout value is less than zero. |
+| [11102004](../errorcode-hiappevent.md#11102004-invalid-event-size) | Invalid size value. Possibly caused by the size value is less than zero. |
 
 ## Examples
 

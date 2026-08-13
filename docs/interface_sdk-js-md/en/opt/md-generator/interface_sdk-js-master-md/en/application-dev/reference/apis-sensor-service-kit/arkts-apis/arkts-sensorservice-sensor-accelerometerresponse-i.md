@@ -4,9 +4,11 @@ Describes the acceleration sensor data. It extends from [Response](arkts-sensors
 
 **Inheritance/Implementation:** AccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface AccelerometerResponse extends Response--><!--Device-sensor-interface AccelerometerResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface AccelerometerResponse--><!--Device-sensor-interface AccelerometerResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Acceleration along the x-axis of the device, in m/s?. The value is equal to the 
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,7 +48,9 @@ Acceleration along the y-axis of the device, in m/s?. The value is equal to the 
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,7 +68,9 @@ Acceleration along the z-axis of the device, in m/s?. The value is equal to the 
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

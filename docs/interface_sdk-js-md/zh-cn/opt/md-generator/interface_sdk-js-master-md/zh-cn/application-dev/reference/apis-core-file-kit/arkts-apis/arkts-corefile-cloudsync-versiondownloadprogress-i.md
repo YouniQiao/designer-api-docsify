@@ -1,9 +1,10 @@
 # VersionDownloadProgress
 
-历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion)的  
-[downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadHistoryVersion)方法时，回调函数的入参类型。
+历史版本文件下载状态和进度信息，调用端云文件版本管理类[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion)的 [downloadHistoryVersion](arkts-corefile-cloudsync-fileversion-c.md#downloadHistoryVersion)方法时，回调函数的入参类型。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-interface VersionDownloadProgress--><!--Device-cloudSync-interface VersionDownloadProgress-End-->
 
@@ -19,7 +20,9 @@ errType: DownloadErrorType
 
 **类型：** [DownloadErrorType](arkts-corefile-cloudsync-downloaderrortype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionDownloadProgress-errType: DownloadErrorType--><!--Device-VersionDownloadProgress-errType: DownloadErrorType-End-->
 
@@ -35,7 +38,9 @@ progress: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionDownloadProgress-progress: int--><!--Device-VersionDownloadProgress-progress: int-End-->
 
@@ -51,7 +56,9 @@ state: State
 
 **类型：** State
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionDownloadProgress-state: State--><!--Device-VersionDownloadProgress-state: State-End-->
 

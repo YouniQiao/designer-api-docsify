@@ -2,9 +2,11 @@
 
 Mask effect class, used as input for Filter and VisualEffect. Different types of Mask provide different grayscale distribution patterns, such as wave ring masks, radial gradients, pixel map masks, etc.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-class Mask--><!--Device-uiEffect-class Mask-End-->
 
@@ -25,11 +27,13 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
       fillColor?: Color): Mask
 ```
 
-Creates a Mask instance with scaling effect by inputting a pixelMap, the area of the pixelMap to be drawn,the drawing area of the mounted node, and the color to fill outside the drawing area.
+Creates a Mask instance with scaling effect by inputting a pixelMap, the area of the pixelMap to be drawn, the drawing area of the mounted node, and the color to fill outside the drawing area.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      fillColor?: Color): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstRect: common2D.Rect,      fillColor?: Color): Mask-End-->
 
@@ -56,7 +60,7 @@ Creates a Mask instance with scaling effect by inputting a pixelMap, the area of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -107,9 +111,11 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 
 Creates a Mask instance by inputting a pixelMap. This interface does not perform scaling on the input pixelMap.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask--><!--Device-Mask-static createPixelMapMask(pixelMap: image.PixelMap): Mask-End-->
 
@@ -133,7 +139,7 @@ Creates a Mask instance by inputting a pixelMap. This interface does not perform
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -216,23 +222,18 @@ struct Index {
 
 ## createRadialGradientMask
 
-ArkTS-Dyn:
-```TypeScript
-static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY: number,
-      gradients: Array<[number, number]>): Mask
-```
-
-ArkTS-Sta:
 ```TypeScript
 static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,
       gradients: Array<[double, double]>): Mask
 ```
 
-Creates an elliptical mask Mask instance by inputting the center position of the ellipse,the semi-major and semi-minor axes, and shape parameters.
+Creates an elliptical mask Mask instance by inputting the center position of the ellipse, the semi-major and semi-minor axes, and shape parameters.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,      gradients: Array<[double, double]>): Mask--><!--Device-Mask-static createRadialGradientMask(center: common2D.Point, radiusX: double, radiusY: double,      gradients: Array<[double, double]>): Mask-End-->
 
@@ -245,9 +246,9 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | center | common2D.Point | Yes | Sets the center point of the ellipse. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| radiusX | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the semi-major axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| radiusY | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the semi-minor axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| gradients | ArkTS-Dyn: Array&lt;[number, number]&gt;  <br>ArkTS-Sta：Array&lt;[double, double]&gt; | Yes | The binary arrays in the array represent gradients: [RGBA color, position]. The RGBA color uses the same value for all four channels, which can be regarded as a grayscale value; position represents the distribution position of the RGBA color along the radial direction outward. Both RGBA color and position have a value range of [0, 1], floating-point values are supported, values less than 0 are treated as 0, and values greater than 1 are treated as 1. The position parameter values must be strictly increasing, the number of binary arrays in the Array must be greater than or equal to 2, and the elements in the binary arrays must not be empty; otherwise the elliptical distribution effect will not take effect. |
+| radiusX | double | Yes | Sets the semi-major axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| radiusY | double | Yes | Sets the semi-minor axis of the ellipse. When the radius is 1, it equals the component height. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| gradients | Array&lt;[double, double]&gt; | Yes | The binary arrays in the array represent gradients: [RGBA color, position]. The RGBA color uses the same value for all four channels, which can be regarded as a grayscale value; position represents the distribution position of the RGBA color along the radial direction outward. Both RGBA color and position have a value range of [0, 1], floating-point values are supported, values less than 0 are treated as 0, and values greater than 1 are treated as 1. The position parameter values must be strictly increasing, the number of binary arrays in the Array must be greater than or equal to 2, and the elements in the binary arrays must not be empty; otherwise the elliptical distribution effect will not take effect. |
 
 **Return value:**
 
@@ -259,25 +260,21 @@ Creates an elliptical mask Mask instance by inputting the center position of the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## createRippleMask
 
-ArkTS-Dyn:
-```TypeScript
-static createRippleMask(center: common2D.Point, radius: number, width: number, offset?: number): Mask
-```
-
-ArkTS-Sta:
 ```TypeScript
 static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask
 ```
 
 Creates a wave ring mask Mask instance by inputting the center position, radius, and width of the wave ring.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask--><!--Device-Mask-static createRippleMask(center: common2D.Point, radius: double, width: double, offset?: double): Mask-End-->
 
@@ -290,9 +287,9 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | center | common2D.Point | Yes | Sets the position of the wave ring center on the component. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], and values outside the range will be clamped during implementation. |
-| radius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the radius of the wave ring, using normalized values. When the radius is 1, the wave ring radius equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the width of the wave ring, using normalized values. When the width is 1, the wave ring width equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Sets the offset of the wave peak position. The default value is 0, meaning the wave peak is at the exact center of the wave ring; -1.0 means the wave peak is at the innermost edge of the wave ring; 1.0 means the wave peak is at the outermost edge of the wave ring. The value range is [-1, 1], and values outside the range will be clamped during implementation. |
+| radius | double | Yes | Sets the radius of the wave ring, using normalized values. When the radius is 1, the wave ring radius equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
+| width | double | Yes | Sets the width of the wave ring, using normalized values. When the width is 1, the wave ring width equals the component height. The value range is [0, 10], and values outside the range will be clamped during implementation. |
+| offset | double | No | Sets the offset of the wave peak position. The default value is 0, meaning the wave peak is at the exact center of the wave ring; -1.0 means the wave peak is at the innermost edge of the wave ring; 1.0 means the wave peak is at the outermost edge of the wave ring. The value range is [-1, 1], and values outside the range will be clamped during implementation. |
 
 **Return value:**
 
@@ -304,7 +301,7 @@ Creates a wave ring mask Mask instance by inputting the center position, radius,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -320,9 +317,11 @@ static createUseEffectMask(useEffect: boolean): Mask
 
 Creates and sets a Mask instance indicating whether to use blur caching. This Mask instance is specifically designed for the useEffectMask parameter of the liquidMaterial method, used to declare whether the material effect uses blur caching to improve performance. When this Mask instance is used with other Filter or VisualEffect methods, the useEffect property may not take effect.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask--><!--Device-Mask-static createUseEffectMask(useEffect: boolean): Mask-End-->
 
@@ -346,7 +345,7 @@ Creates and sets a Mask instance indicating whether to use blur caching. This Ma
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -408,13 +407,6 @@ struct Index {
 
 ## createWaveGradientMask
 
-ArkTS-Dyn:
-```TypeScript
-static createWaveGradientMask(center: common2D.Point, width: number, propagationRadius: number,
-      blurRadius: number, turbulenceStrength?: number): Mask
-```
-
-ArkTS-Sta:
 ```TypeScript
 static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,
       blurRadius: double, turbulenceStrength?: double): Mask
@@ -422,9 +414,11 @@ static createWaveGradientMask(center: common2D.Point, width: double, propagation
 
 Creates a single-wave mask Mask instance by inputting the wave source center position and single-wave parameters.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,      blurRadius: double, turbulenceStrength?: double): Mask--><!--Device-Mask-static createWaveGradientMask(center: common2D.Point, width: double, propagationRadius: double,      blurRadius: double, turbulenceStrength?: double): Mask-End-->
 
@@ -437,10 +431,10 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | center | common2D.Point | Yes | Sets the center point of the single-wave source. [0, 0] is the top-left corner of the component, [1, 1] is the bottom-right corner of the component. The value range is [-10, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the width of the single-wave ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| propagationRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the outer diffusion radius of the single-wave ring. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| blurRadius | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Sets the blur outer radius of the single-wave ring. A blur radius of 0 results in a solid-edge ring; otherwise, it is a soft-edge ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
-| turbulenceStrength | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Sets the turbulence intensity of the single-wave ring. The default value is 0; an intensity of 0 results in a regular ring, otherwise the ring edges will be turbulently distorted. The value range is [-1, 1], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| width | double | Yes | Sets the width of the single-wave ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| propagationRadius | double | Yes | Sets the outer diffusion radius of the single-wave ring. The value range is [0, 10], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| blurRadius | double | Yes | Sets the blur outer radius of the single-wave ring. A blur radius of 0 results in a solid-edge ring; otherwise, it is a soft-edge ring. The value range is [0, 5], floating-point values are supported, and values outside the range will be clamped during implementation. |
+| turbulenceStrength | double | No | Sets the turbulence intensity of the single-wave ring. The default value is 0; an intensity of 0 results in a regular ring, otherwise the ring edges will be turbulently distorted. The value range is [-1, 1], floating-point values are supported, and values outside the range will be clamped during implementation. |
 
 **Return value:**
 
@@ -452,7 +446,7 @@ Creates a single-wave mask Mask instance by inputting the wave source center pos
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

@@ -12,6 +12,8 @@ Create PixelMap by data buffer.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>--><!--Device-sendableImage-function createPixelMap(colors: ArrayBuffer, options: image.InitializationOptions): Promise<PixelMap>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

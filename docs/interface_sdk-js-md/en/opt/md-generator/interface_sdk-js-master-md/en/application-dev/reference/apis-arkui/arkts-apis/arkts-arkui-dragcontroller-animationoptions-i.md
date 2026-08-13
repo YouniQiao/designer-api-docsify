@@ -4,6 +4,8 @@ Defines parameters related to drag-and-drop animation effects.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface AnimationOptions--><!--Device-dragController-interface AnimationOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { dragController } from '@kit.ArkUI';
 curve?: Curve | ICurve
 ```
 
-Animation curve.
-
-Default value: **Curve.EaseInOut**
+Animation curve. Default value: **Curve.EaseInOut**
 
 **Type:** Curve \| ICurve
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,19 +44,13 @@ Default value: **Curve.EaseInOut**
 duration?: number
 ```
 
-Animation duration, in ms.
-
-Default value: **1000**
-
-**NOTE：**
-
-- If this parameter is set to a value less than 0, the value **0** is used.  
-- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be  
-used.
+Animation duration, in ms. Default value: **1000** **NOTE：**- If this parameter is set to a value less than 0, the value **0** is used. - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

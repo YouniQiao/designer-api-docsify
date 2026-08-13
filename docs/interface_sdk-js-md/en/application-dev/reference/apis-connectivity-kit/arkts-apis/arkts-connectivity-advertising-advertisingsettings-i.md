@@ -4,7 +4,9 @@ Describes the settings for advertising.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-advertising-interface AdvertisingSettings--><!--Device-advertising-interface AdvertisingSettings-End-->
 
@@ -22,13 +24,15 @@ import { advertising } from '@kit.ConnectivityKit';
 interval?: int
 ```
 
-Indicates the advertising interval.The minimum number of slots is 160, and the corresponding time is 20 ms (160 * 0.125 ms = 20 ms).The maximum number of slots is 16777215, and the corresponding time is 2097151.875 ms.Unit: Slots, The value must be an integer within [160,16777215], each slot is 125 microseconds.Default value: 5000.
+Indicates the advertising interval. The minimum number of slots is 160, and the corresponding time is 20 ms (160 * 0.125 ms = 20 ms). The maximum number of slots is 16777215, and the corresponding time is 2097151.875 ms. Unit: Slots, The value must be an integer within [160,16777215], each slot is 125 microseconds. Default value: 5000.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ Indicates the advertising interval.The minimum number of slots is 160, and the c
 isConnectable?: boolean
 ```
 
-Indicates whether the advertising is connectable.Default value: true.
+Indicates whether the advertising is connectable. Default value: true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +68,15 @@ Indicates whether the advertising is connectable.Default value: true.
 power?: TxPowerMode
 ```
 
-Indicates the advertising power mode.Default value: ADV_TX_POWER_LOW.
+Indicates the advertising power mode. Default value: ADV_TX_POWER_LOW.
 
 **Type:** [TxPowerMode](arkts-connectivity-advertising-txpowermode-e.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,20 +1,24 @@
 # QRCode
 
 ```TypeScript
-type QRCode = QRCodeFrameNode
+type QRCode = TypedFrameNode<QRCodeInterface, QRCodeAttribute>
 ```
 
-Define the FrameNode type for QRCode.
+Represents a FrameNode of the **QRCode** type.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type QRCode = QRCodeFrameNode--><!--Device-typeNode-type QRCode = QRCodeFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-typeNode-type QRCode = TypedFrameNode<QRCodeInterface, QRCodeAttribute>--><!--Device-typeNode-type QRCode = TypedFrameNode<QRCodeInterface, QRCodeAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** QRCodeFrameNode
+**Property type:** TypedFrameNode<QRCodeInterface, QRCodeAttribute>
 

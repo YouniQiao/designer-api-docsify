@@ -1,24 +1,12 @@
 # ArrayBuffer
 
-Underlying data structure of the ArkTS TypedArray ([Int8Array](./arkts/@arkts.collections:collections),  
-[Uint8Array](./arkts/@arkts.collections:collections),  
-[Int16Array](./arkts/@arkts.collections:collections),  
-[Uint16Array](./arkts/@arkts.collections:collections),  
-[Int32Array](./arkts/@arkts.collections:collections),  
-[Uint32Array](./arkts/@arkts.collections:collections),  
-[Uint8ClampedArray](./arkts/@arkts.collections:collections), and  
-[Float32Array](./arkts/@arkts.collections:collections)).
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> **Decorator**: \@Sendable
+Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections.md#@arkts.collections), [Uint8Array](arkts-collections.md#@arkts.collections), [Int16Array](arkts-collections.md#@arkts.collections), [Uint16Array](arkts-collections.md#@arkts.collections), [Int32Array](arkts-collections.md#@arkts.collections), [Uint32Array](arkts-collections.md#@arkts.collections), [Uint8ClampedArray](arkts-collections.md#@arkts.collections), and [Float32Array](arkts-collections.md#@arkts.collections)). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
 <!--Device-collections-class ArrayBuffer--><!--Device-collections-class ArrayBuffer-End-->
 
@@ -42,6 +30,8 @@ A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayBuffer-constructor(byteLength: number)--><!--Device-ArrayBuffer-constructor(byteLength: number)-End-->
@@ -58,7 +48,7 @@ A constructor used to create an ArkTS ArrayBuffer of a given length.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayBuffer's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayBuffer's constructor cannot be directly invoked. |
 
 ## slice
 
@@ -71,6 +61,8 @@ Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBu
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -95,8 +87,8 @@ Selects a range of elements in this ArkTS ArrayBuffer to create an ArkTS ArrayBu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## byteLength
 
@@ -111,6 +103,8 @@ Number of bytes occupied by the buffer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

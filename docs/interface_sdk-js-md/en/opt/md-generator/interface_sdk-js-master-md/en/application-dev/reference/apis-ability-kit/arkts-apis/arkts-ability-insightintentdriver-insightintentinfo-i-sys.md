@@ -2,7 +2,9 @@
 
 Defines the intent information, which is the specific parameter configuration of the intent in the device.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface InsightIntentInfo--><!--Device-insightIntentDriver-interface InsightIntentInfo-End-->
 
@@ -26,7 +28,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Development mode of the intent.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentInfo-readonly developType?: DevelopType--><!--Device-InsightIntentInfo-readonly developType?: DevelopType-End-->
@@ -66,7 +72,9 @@ Description of the intent displayed in the InsightIntent framework.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +94,9 @@ Name of the intent displayed in the InsightIntent framework.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,12 +112,13 @@ Name of the intent displayed in the InsightIntent framework.
 readonly domain: string
 ```
 
-Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music,and games). For details about the value range, see the vertical domain fields in  
-[smart distribution features in different vertical domains](https://developer.huawei.com/consumer/en/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215).
+Vertical domain of the intent. It is used to categorize intents by vertical fields (for example, video, music, and games). For details about the value range, see the vertical domain fields in [smart distribution features in different vertical domains](https://developer.huawei.com/consumer/en/doc/service/intents-ai-distribution-characteristic-0000001901922213#section2656133582215) .
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,7 +138,9 @@ Entity information contained in the intent.
 
 **Type:** Array&lt;EntityInfo&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,7 +160,9 @@ Icon of the intent.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,7 +182,9 @@ Intent name.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,16 +200,13 @@ Intent name.
 readonly intentType: InsightIntentType
 ```
 
-Type of intent defined by the intent decorator.
-
-**NOTE：**
-
-For intents developed using a configuration file, the return value of this field is  
-[@InsightIntentEntry](./js-apis-app-ability-InsightIntentDecorator.md#insightintententry) by default.
+Type of intent defined by the intent decorator. **NOTE：**For intents developed using a configuration file, the return value of this field is @InsightIntentEntry by default.
 
 **Type:** [InsightIntentType](arkts-ability-insightintentdriver-insightintenttype-e-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,7 +226,9 @@ Version number of the intent. It is used to distinguish and manage intents when 
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -232,7 +248,9 @@ Search keywords for the intent.
 
 **Type:** string[]
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,7 +270,9 @@ Function of an intent, which helps large language models understand the intent.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,7 +292,9 @@ Module name.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -285,18 +307,20 @@ Module name.
 ## parameters
 
 ```TypeScript
-readonly parameters: Record<string, Object>
+readonly parameters: Record<string, RecordData>
 ```
 
-Data format of intent parameters, which is used to define the input data format during intent calls.
+The insight intent parameters.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InsightIntentInfo-readonly parameters: Record<string, Object>--><!--Device-InsightIntentInfo-readonly parameters: Record<string, Object>-End-->
+<!--Device-InsightIntentInfo-readonly parameters: Record<string, RecordData>--><!--Device-InsightIntentInfo-readonly parameters: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -305,18 +329,20 @@ Data format of intent parameters, which is used to define the input data format 
 ## result
 
 ```TypeScript
-readonly result: Record<string, Object>
+readonly result: Record<string, RecordData>
 ```
 
-Execution result returned.
+The type definition of the result returned by intent call.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InsightIntentInfo-readonly result: Record<string, Object>--><!--Device-InsightIntentInfo-readonly result: Record<string, Object>-End-->
+<!--Device-InsightIntentInfo-readonly result: Record<string, RecordData>--><!--Device-InsightIntentInfo-readonly result: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -328,11 +354,13 @@ Execution result returned.
 readonly schema: string
 ```
 
-Standard intent name. If an intent in the standard intent list matches both the **schema** and **intentVersion**fields, it is processed as a standard intent.
+Standard intent name. If an intent in the standard intent list matches both the **schema** and **intentVersion** fields, it is processed as a standard intent.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -348,16 +376,13 @@ Standard intent name. If an intent in the standard intent list matches both the 
 readonly subIntentInfo: LinkIntentInfo | PageIntentInfo | FunctionIntentInfo | FormIntentInfo | EntryIntentInfo
 ```
 
-Intent information for specific intent decorators.
-
-**NOTE：**
-
-For intents developed using a configuration file, the return value of this field is  
-[EntryIntentInfo](#entryintentinfo20) by default.
+Intent information for specific intent decorators. **NOTE：**For intents developed using a configuration file, the return value of this field is [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md#EntryIntentInfo-(System-API)) by default.
 
 **Type:** [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) \| [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) \| [FunctionIntentInfo](arkts-ability-insightintentdriver-functionintentinfo-i.md) \| [FormIntentInfo](arkts-ability-insightintentdriver-formintentinfo-i-sys.md) \| [EntryIntentInfo](arkts-ability-insightintentdriver-entryintentinfo-i-sys.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -378,6 +403,8 @@ Unique information about the intent developed using a configuration file.
 **Type:** [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

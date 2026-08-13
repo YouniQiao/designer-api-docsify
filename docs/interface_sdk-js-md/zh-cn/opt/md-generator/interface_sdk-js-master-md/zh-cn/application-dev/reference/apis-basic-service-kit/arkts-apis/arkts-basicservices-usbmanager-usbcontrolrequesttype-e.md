@@ -2,7 +2,9 @@
 
 Enumerates control request types.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-export enum USBControlRequestType--><!--Device-usbManager-export enum USBControlRequestType-End-->
 
@@ -16,7 +18,9 @@ USB_REQUEST_TYPE_STANDARD = 0
 
 标准。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBControlRequestType-USB_REQUEST_TYPE_STANDARD = 0--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_STANDARD = 0-End-->
 
@@ -30,7 +34,9 @@ USB_REQUEST_TYPE_CLASS = 1
 
 类。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBControlRequestType-USB_REQUEST_TYPE_CLASS = 1--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_CLASS = 1-End-->
 
@@ -44,7 +50,9 @@ USB_REQUEST_TYPE_VENDOR = 2
 
 厂商。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBControlRequestType-USB_REQUEST_TYPE_VENDOR = 2--><!--Device-USBControlRequestType-USB_REQUEST_TYPE_VENDOR = 2-End-->
 

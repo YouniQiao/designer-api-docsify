@@ -1,4 +1,4 @@
-# offTabContentUpdate
+# off_tabContentUpdate
 
 ## Modules to Import
 
@@ -6,21 +6,25 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## offTabContentUpdate
+## off_tabContentUpdate
 
 ```TypeScript
-export function offTabContentUpdate(options: ObserverOptions, callback?: Callback<TabContentInfo>): void
+export function off(type: 'tabContentUpdate', options: ObserverOptions, callback?: Callback<TabContentInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+Unsubscribes from **TabContent** page switching events for the specified **Tabs** component identified by its ID.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function offTabContentUpdate(options: ObserverOptions, callback?: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function offTabContentUpdate(options: ObserverOptions, callback?: Callback<TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function off(type: 'tabContentUpdate', options: ObserverOptions, callback?: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function off(type: 'tabContentUpdate', options: ObserverOptions, callback?: Callback<TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,25 +32,30 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type and Tabs ID will be removed. |
+| type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
+| options | ObserverOptions | Yes | ID of the target **Tabs** component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 
 
-## offTabContentUpdate
+## off_tabContentUpdate
 
 ```TypeScript
-export function offTabContentUpdate(callback?: Callback<TabContentInfo>): void
+export function off(type: 'tabContentUpdate', callback?: Callback<TabContentInfo>): void
 ```
 
-Removes a callback function that was previously registered with `on()`.
+Unsubscribes from the **TabContent** switching event.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function offTabContentUpdate(callback?: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function offTabContentUpdate(callback?: Callback<TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function off(type: 'tabContentUpdate', callback?: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function off(type: 'tabContentUpdate', callback?: Callback<TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,5 +63,6 @@ Removes a callback function that was previously registered with `on()`.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
+| type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | No | Target listener to unregister. |
 

@@ -6,6 +6,8 @@ The information about the successfully loaded image.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface ImageLoadResult--><!--Device-unnamed-export declare interface ImageLoadResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ The information about the successfully loaded image.
 componentHeight: double
 ```
 
-The height of the component source.Unit: px.
+The height of the component source. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ The height of the component source.Unit: px.
 componentWidth: double
 ```
 
-The width of the component source.Unit: px.
+The width of the component source. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,13 +62,15 @@ The width of the component source.Unit: px.
 contentHeight: double
 ```
 
-The height of the picture that is actually drawn.Unit: px.
+The height of the picture that is actually drawn. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,13 +84,15 @@ The height of the picture that is actually drawn.Unit: px.
 contentOffsetX: double
 ```
 
-The offset between image content and image component on the X-axis.Unit: px.
+The offset between image content and image component on the X-axis. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,13 +106,15 @@ The offset between image content and image component on the X-axis.Unit: px.
 contentOffsetY: double
 ```
 
-The offset between image content and image component on the Y-axis.Unit: px.
+The offset between image content and image component on the Y-axis. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,13 +128,15 @@ The offset between image content and image component on the Y-axis.Unit: px.
 contentWidth: double
 ```
 
-The width of the picture that is actually drawn.Unit: px.
+The width of the picture that is actually drawn. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +150,15 @@ The width of the picture that is actually drawn.Unit: px.
 height: double
 ```
 
-The height of the image source.Unit: px.
+The height of the image source. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,13 +172,15 @@ The height of the image source.Unit: px.
 loadingStatus: double
 ```
 
-The value of the status of the image being loaded successfully.If the returned status value is 0, the image data is successfully loaded.If the returned status value is 1, the image is successfully decoded.
+The value of the status of the image being loaded successfully. If the returned status value is 0, the image data is successfully loaded. If the returned status value is 1, the image is successfully decoded.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,13 +194,15 @@ The value of the status of the image being loaded successfully.If the returned s
 width: double
 ```
 
-The width of the image source.Unit: px.
+The width of the image source. Unit: px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

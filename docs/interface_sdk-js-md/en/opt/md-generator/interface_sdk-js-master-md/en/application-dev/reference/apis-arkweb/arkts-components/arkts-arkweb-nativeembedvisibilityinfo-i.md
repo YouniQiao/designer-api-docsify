@@ -4,6 +4,8 @@ Provides visibility information about the same-layer tag.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NativeEmbedVisibilityInfo--><!--Device-unnamed-declare interface NativeEmbedVisibilityInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ ID of the same-layer rendered tag.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-NativeEmbedVisibilityInfo-embedId: string--><!--Device-NativeEmbedVisibilityInfo-embedId: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -30,13 +34,13 @@ ID of the same-layer rendered tag.
 visibility: boolean
 ```
 
-Whether the same-layer tag is visible.
-
-The value **true** indicates that the same-layer tag is visible, and **false** indicates the opposite.
+Whether the same-layer tag is visible. The value **true** indicates that the same-layer tag is visible, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedVisibilityInfo-visibility: boolean--><!--Device-NativeEmbedVisibilityInfo-visibility: boolean-End-->
 

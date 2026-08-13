@@ -13,9 +13,11 @@ function createPixelMapUsingAllocator(colors: ArrayBuffer, param: Initialization
     allocatorType?: AllocatorType): Promise<PixelMap>
 ```
 
-Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
+Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>--><!--Device-image-function createPixelMapUsingAllocator(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): Promise<PixelMap>-End-->
 
@@ -39,9 +41,9 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | Error Code ID |
 | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
-| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
-| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

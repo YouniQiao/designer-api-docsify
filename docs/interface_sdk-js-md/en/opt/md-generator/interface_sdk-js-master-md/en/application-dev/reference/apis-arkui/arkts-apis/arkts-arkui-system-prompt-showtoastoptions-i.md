@@ -6,7 +6,7 @@ Defines the options of ShowToast.
 
 **Deprecated since:** 8
 
-**Substitutes:** [ShowToastOptions](ohos.promptAction/promptAction.ShowToastOptions)
+**Substitutes:** [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md#ShowToastOptions)
 
 <!--Device-unnamed-export interface ShowToastOptions--><!--Device-unnamed-export interface ShowToastOptions-End-->
 
@@ -32,7 +32,7 @@ The distance between toast dialog box and the bottom of screen.
 
 **Deprecated since:** 8
 
-**Substitutes:** [bottom](ohos.promptAction/promptAction.ShowToastOptions#bottom)
+**Substitutes:** [bottom](arkts-arkui-promptaction-showtoastoptions-i.md#bottom)
 
 <!--Device-ShowToastOptions-bottom?: string | number--><!--Device-ShowToastOptions-bottom?: string | number-End-->
 
@@ -44,7 +44,7 @@ The distance between toast dialog box and the bottom of screen.
 duration?: number
 ```
 
-Duration of toast dialog box. The default value is 1500.The recommended value ranges from 1500 ms to 10000ms.NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
+Duration of toast dialog box. The default value is 1500. The recommended value ranges from 1500 ms to 10000ms. NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
 
 **Type:** number
 
@@ -52,7 +52,7 @@ Duration of toast dialog box. The default value is 1500.The recommended value ra
 
 **Deprecated since:** 8
 
-**Substitutes:** [duration](ohos.promptAction/promptAction.ShowToastOptions#duration)
+**Substitutes:** [duration](arkts-arkui-promptaction-showtoastoptions-i.md#duration)
 
 <!--Device-ShowToastOptions-duration?: number--><!--Device-ShowToastOptions-duration?: number-End-->
 
@@ -72,7 +72,7 @@ Text to display.
 
 **Deprecated since:** 8
 
-**Substitutes:** [message](ohos.promptAction/promptAction.ShowToastOptions#message)
+**Substitutes:** [message](arkts-arkui-promptaction-showtoastoptions-i.md#message)
 
 <!--Device-ShowToastOptions-message: string--><!--Device-ShowToastOptions-message: string-End-->
 

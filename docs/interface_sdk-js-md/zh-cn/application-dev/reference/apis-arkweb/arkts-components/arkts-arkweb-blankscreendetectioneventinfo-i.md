@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface BlankScreenDetectionEventInfo--><!--Device-unnamed-declare interface BlankScreenDetectionEventInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -16,15 +18,15 @@
 blankScreenDetails?: BlankScreenDetails
 ```
 
-本次检测白屏的结果的细节。
-
-如当发现近似白屏的现象产生，这个细节就包含具体命中了多少点。否则没有该属性。
+本次检测白屏的结果的细节。 如当发现近似白屏的现象产生，这个细节就包含具体命中了多少点。否则没有该属性。
 
 **类型：** [BlankScreenDetails](arkts-arkweb-blankscreendetails-i.md)
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails--><!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails-End-->
 
@@ -44,6 +46,8 @@ blankScreenReason: DetectedBlankScreenReason
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason--><!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -61,6 +65,8 @@ url: string
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-BlankScreenDetectionEventInfo-url: string--><!--Device-BlankScreenDetectionEventInfo-url: string-End-->
 

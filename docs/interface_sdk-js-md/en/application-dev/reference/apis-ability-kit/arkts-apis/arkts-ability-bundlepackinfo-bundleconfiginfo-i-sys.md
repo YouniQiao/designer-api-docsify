@@ -2,9 +2,11 @@
 
 BundleConfigInfo: the bundle summary class.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundleConfigInfo--><!--Device-unnamed-export interface BundleConfigInfo-End-->
 
@@ -22,9 +24,11 @@ Bundle name. It uniquely identifies an application.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BundleConfigInfo-readonly bundleName: string--><!--Device-BundleConfigInfo-readonly bundleName: string-End-->
 
@@ -42,9 +46,11 @@ Bundle version.
 
 **Type:** [Version](arkts-ability-bundlepackinfo-version-i-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BundleConfigInfo-readonly version: Version--><!--Device-BundleConfigInfo-readonly version: Version-End-->
 

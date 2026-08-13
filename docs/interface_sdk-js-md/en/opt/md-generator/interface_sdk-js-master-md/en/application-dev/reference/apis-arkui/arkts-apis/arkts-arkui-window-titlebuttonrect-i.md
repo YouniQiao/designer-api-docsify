@@ -2,7 +2,9 @@
 
 Describes the rectangle used to hold the minimize, maximize, and close buttons on the title bar. This rectangle is located in the top-right corner of the window.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface TitleButtonRect--><!--Device-window-interface TitleButtonRect-End-->
 
@@ -24,7 +26,9 @@ Height of the rectangle, in vp. The value must be an integer.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Right boundary of the rectangle, in vp. The value must be an integer.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,7 +66,9 @@ Top boundary of the rectangle, in vp. The value must be an integer.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +86,9 @@ Width of the rectangle, in vp. The value must be an integer.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

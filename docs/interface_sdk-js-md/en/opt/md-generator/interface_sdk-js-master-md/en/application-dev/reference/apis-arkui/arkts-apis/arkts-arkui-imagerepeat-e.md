@@ -4,6 +4,8 @@ ImageRepeat enumeration description
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ImageRepeat--><!--Device-unnamed-declare enum ImageRepeat-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NoRepeat
 Do not draw the picture again.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,6 +40,8 @@ Repeat the drawing only on the horizontal axis.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -54,6 +60,8 @@ Repeat the drawing only on the vertical axis.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -71,6 +79,8 @@ XY
 Draw the picture repeatedly on both axes.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -8,7 +8,9 @@ function getVMRuntimeStats(): GcStats
 
 获取系统GC统计信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getVMRuntimeStats(): GcStats--><!--Device-hidebug-function getVMRuntimeStats(): GcStats-End-->
 

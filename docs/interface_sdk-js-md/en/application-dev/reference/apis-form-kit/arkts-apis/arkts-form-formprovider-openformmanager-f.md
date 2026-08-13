@@ -14,11 +14,13 @@ function openFormManager(want: Want): void
 
 Opens the Widget Manager page of the current application.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function openFormManager(want: Want): void--><!--Device-formProvider-function openFormManager(want: Want): void-End-->
 
@@ -34,9 +36,9 @@ Opens the Widget Manager page of the current application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
-| [16500050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [16500100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 
 ## Examples
 

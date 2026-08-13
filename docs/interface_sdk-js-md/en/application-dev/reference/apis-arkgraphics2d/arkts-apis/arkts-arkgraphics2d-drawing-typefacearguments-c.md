@@ -1,19 +1,12 @@
 # TypefaceArguments
 
-This module defines a struct for setting typeface arguments.
+This module defines a struct for setting typeface arguments. > **NOTE：**> > - The initial APIs of this class are supported since API version 20. > > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 20.
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-class TypefaceArguments--><!--Device-drawing-class TypefaceArguments-End-->
 
@@ -37,6 +30,8 @@ Defines the typeface weight.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TypefaceArguments-addVariation(axis: string, value: number)--><!--Device-TypefaceArguments-addVariation(axis: string, value: number)-End-->
@@ -54,7 +49,7 @@ Defines the typeface weight.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## addVariation
 
@@ -66,7 +61,9 @@ Adds variation axis for the TypefaceArguments.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,7 +84,7 @@ Adds variation axis for the TypefaceArguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [25900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
+| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
 
 ## constructor
 
@@ -97,9 +94,11 @@ constructor()
 
 Constructor for typeface arguments.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

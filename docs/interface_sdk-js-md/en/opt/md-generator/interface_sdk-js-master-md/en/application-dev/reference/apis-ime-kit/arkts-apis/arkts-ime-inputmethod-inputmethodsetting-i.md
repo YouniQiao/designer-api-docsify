@@ -2,7 +2,9 @@
 
 In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-interface InputMethodSetting--><!--Device-inputMethod-interface InputMethodSetting-End-->
 
@@ -24,7 +26,7 @@ displayOptionalInputMethod(callback: AsyncCallback<void>): void
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void--><!--Device-InputMethodSetting-displayOptionalInputMethod(callback: AsyncCallback<void>): void-End-->
 
@@ -60,7 +62,7 @@ displayOptionalInputMethod(): Promise<void>
 
 **Deprecated since:** 9
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>--><!--Device-InputMethodSetting-displayOptionalInputMethod(): Promise<void>-End-->
 
@@ -92,7 +94,9 @@ getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void
 
 List all input methods
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getAllInputMethods(callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
@@ -108,8 +112,8 @@ List all input methods
 
 | Error Code ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -133,7 +137,9 @@ getAllInputMethods(): Promise<Array<InputMethodProperty>>
 
 List all input methods
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getAllInputMethods(): Promise<Array<InputMethodProperty>>-End-->
 
@@ -149,8 +155,8 @@ List all input methods
 
 | Error Code ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -172,7 +178,9 @@ getAllInputMethodsSync(): Array<InputMethodProperty>
 
 List all input methods sync
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getAllInputMethodsSync(): Array<InputMethodProperty>-End-->
 
@@ -188,8 +196,8 @@ List all input methods sync
 
 | Error Code ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -205,7 +213,9 @@ getInputMethodState(): Promise<EnabledState>
 
 The input method application calls this interface to obtain its own enabled state.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>--><!--Device-InputMethodSetting-getInputMethodState(): Promise<EnabledState>-End-->
 
@@ -221,8 +231,8 @@ The input method application calls this interface to obtain its own enabled stat
 
 | Error Code ID |
 | --- |
-| [12800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800004](../errorcode-inputmethod-framework.md#12800004-not-an-input-method) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -244,7 +254,9 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 
 List input methods
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void--><!--Device-InputMethodSetting-getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProperty>>): void-End-->
 
@@ -261,9 +273,9 @@ List input methods
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -287,7 +299,9 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 
 List input methods
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>--><!--Device-InputMethodSetting-getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>-End-->
 
@@ -309,9 +323,9 @@ List input methods
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -333,7 +347,9 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 
 List enabled or disabled input methods sync
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>--><!--Device-InputMethodSetting-getInputMethodsSync(enable: boolean): Array<InputMethodProperty>-End-->
 
@@ -355,9 +371,9 @@ List enabled or disabled input methods sync
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -373,7 +389,9 @@ listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>
 
 List subtype of current input method
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(callback: AsyncCallback<Array<InputMethodSubtype>>): void-End-->
 
@@ -389,8 +407,8 @@ List subtype of current input method
 
 | Error Code ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -416,7 +434,9 @@ listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>
 
 List subtype of current input method
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listCurrentInputMethodSubtype(): Promise<Array<InputMethodSubtype>>-End-->
 
@@ -432,8 +452,8 @@ List subtype of current input method
 
 | Error Code ID |
 | --- |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -531,7 +551,9 @@ listInputMethodSubtype(
 
 List subtype of the specified input method.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void--><!--Device-InputMethodSetting-listInputMethodSubtype(      inputMethodProperty: InputMethodProperty,      callback: AsyncCallback<Array<InputMethodSubtype>>    ): void-End-->
 
@@ -548,9 +570,9 @@ List subtype of the specified input method.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -584,7 +606,9 @@ listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<
 
 List subtype of the specified input method.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>--><!--Device-InputMethodSetting-listInputMethodSubtype(inputMethodProperty: InputMethodProperty): Promise<Array<InputMethodSubtype>>-End-->
 
@@ -606,9 +630,9 @@ List subtype of the specified input method.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800001-package-manager-error) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800001](../errorcode-inputmethod-framework.md#12800001-package-manager-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -631,7 +655,29 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty).then((data: Array
 })
 ```
 
-## off('imeChange')
+## offImeChange
+
+```TypeScript
+offImeChange(callback?: ImeChangeCallback): void
+```
+
+Unsubscribe input method or subtype change.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void--><!--Device-InputMethodSetting-offImeChange(callback?: ImeChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | No |
+
+## off_imeChange
 
 ```TypeScript
 off(
@@ -643,6 +689,8 @@ off(
 Unsubscribe input method or subtype change.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-off(      type: 'imeChange',      callback?: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
@@ -661,7 +709,29 @@ Unsubscribe input method or subtype change.
 inputMethod.getSetting().off('imeChange');
 ```
 
-## on('imeChange')
+## onImeChange
+
+```TypeScript
+onImeChange(callback: ImeChangeCallback): void
+```
+
+Subscribe input method or subtype change.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void--><!--Device-InputMethodSetting-onImeChange(callback: ImeChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) | Yes |
+
+## on_imeChange
 
 ```TypeScript
 on(
@@ -673,6 +743,8 @@ on(
 Subscribe input method or subtype change.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void--><!--Device-InputMethodSetting-on(      type: 'imeChange',      callback: (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) => void    ): void-End-->
 
@@ -709,7 +781,7 @@ Show input method setting extension dialog
 
 **Deprecated since:** 18
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void--><!--Device-InputMethodSetting-showOptionalInputMethods(callback: AsyncCallback<boolean>): void-End-->
 
@@ -725,7 +797,7 @@ Show input method setting extension dialog
 
 | Error Code ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -757,7 +829,7 @@ Show input method setting extension dialog
 
 **Deprecated since:** 18
 
-**Substitutes:** [inputMethodList/InputMethodListDialog](ohos.inputMethodList/InputMethodListDialog)
+**Substitutes:** [inputMethodList/InputMethodListDialog](arkts-ime-inputmethodlist-inputmethodlistdialog-s.md#InputMethodListDialog)
 
 <!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>--><!--Device-InputMethodSetting-showOptionalInputMethods(): Promise<boolean>-End-->
 
@@ -773,7 +845,7 @@ Show input method setting extension dialog
 
 | Error Code ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 

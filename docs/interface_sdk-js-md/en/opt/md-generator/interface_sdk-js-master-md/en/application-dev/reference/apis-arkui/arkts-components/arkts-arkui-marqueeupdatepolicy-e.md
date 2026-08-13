@@ -4,6 +4,8 @@ Sets the scrolling policy of the marquee after its attributes are updated.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum MarqueeUpdatePolicy--><!--Device-unnamed-declare enum MarqueeUpdatePolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 Restarts the marquee from the start position after the attributes of the marquee component are updated.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ PRESERVE_POSITION = 1
 Resumes the marquee from the current position after the attributes of the marquee component are updated.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

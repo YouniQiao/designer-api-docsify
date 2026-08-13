@@ -2,9 +2,11 @@
 
 Enumerates the color modes.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintColorMode--><!--Device-print-enum PrintColorMode-End-->
 
@@ -18,9 +20,11 @@ COLOR_MODE_MONOCHROME = 0
 
 Black and white.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintColorMode-COLOR_MODE_MONOCHROME = 0--><!--Device-PrintColorMode-COLOR_MODE_MONOCHROME = 0-End-->
 
@@ -34,9 +38,11 @@ COLOR_MODE_COLOR = 1
 
 Color.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintColorMode-COLOR_MODE_COLOR = 1--><!--Device-PrintColorMode-COLOR_MODE_COLOR = 1-End-->
 

@@ -20,7 +20,7 @@ Converts the USB function list in the string format to a numeric mask in Device 
 
 **Deprecated since:** 9
 
-**Substitutes:** [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md#usbFunctionsFromString)
+**Substitutes:** [usbFunctionsFromString](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md#usbFunctionsFromString-(System-API))
 
 <!--Device-usb-function usbFunctionsFromString(funcs: string): number--><!--Device-usb-function usbFunctionsFromString(funcs: string): number-End-->
 

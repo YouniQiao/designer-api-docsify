@@ -1,10 +1,12 @@
 # WebDestroyMode
 
-Enum type supplied to [SetWebDestroyMode](SetWebDestroyMode) for indicating the web component destroy mode.
+提供SetWebDestroyMode接口配置web组件的销毁模式
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebDestroyMode--><!--Device-webview-enum WebDestroyMode-End-->
 
@@ -16,11 +18,13 @@ Enum type supplied to [SetWebDestroyMode](SetWebDestroyMode) for indicating the 
 NORMAL_MODE = 0
 ```
 
-The normal destroy mode, when the web component triggers destroy,the resources will be released at the appropriate time.
+普通销毁模式，当web组件触发销毁时，相关资源会在合适的时机释放
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebDestroyMode-NORMAL_MODE = 0--><!--Device-WebDestroyMode-NORMAL_MODE = 0-End-->
 
@@ -32,11 +36,13 @@ The normal destroy mode, when the web component triggers destroy,the resources w
 FAST_MODE = 1
 ```
 
-The fast destroy mode, when the web component triggers destroy, the resources will be immediately released.
+快速销毁模式，当web组件触发销毁时，立即释放相关资源
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebDestroyMode-FAST_MODE = 1--><!--Device-WebDestroyMode-FAST_MODE = 1-End-->
 

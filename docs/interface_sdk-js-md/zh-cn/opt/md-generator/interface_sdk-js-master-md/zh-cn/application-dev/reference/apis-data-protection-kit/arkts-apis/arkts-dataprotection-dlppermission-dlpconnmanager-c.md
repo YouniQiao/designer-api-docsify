@@ -1,12 +1,10 @@
 # DlpConnManager
 
-用于调用registerPlugin和unregisterPlugin接口，在SA（System Ability）中注册或注销回调能力。
-
-> **说明：**
-> 
-> registerPlugin接口将回调能力注册进SA（System Ability），而unregisterPlugin接口将回调能力从SA（System Ability）中注销。
+用于调用registerPlugin和unregisterPlugin接口，在SA（System Ability）中注册或注销回调能力。 > **说明：** > > registerPlugin接口将回调能力注册进SA（System Ability），而unregisterPlugin接口将回调能力从SA（System Ability）中注销。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-export class DlpConnManager--><!--Device-dlpPermission-export class DlpConnManager-End-->
 
@@ -22,6 +20,8 @@ constructor()
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
 - API版本21 - 24：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
@@ -34,7 +34,7 @@ constructor()
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -50,13 +50,11 @@ let dlpConnManager: dlpPermission.DlpConnManager = new dlpPermission.DlpConnMana
 static registerPlugin(plugin: DlpConnPlugin): number
 ```
 
-该接口提供将回调注册到SA（System Ability）侧的功能。
-
-> **说明：**
-> 
-> registerPlugin将plugin注册到SA（System Ability）侧，待SA（System Ability）调用。
+该接口提供将回调注册到SA（System Ability）侧的功能。 > **说明：** > > registerPlugin将plugin注册到SA（System Ability）侧，待SA（System Ability）调用。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -82,11 +80,11 @@ static registerPlugin(plugin: DlpConnPlugin): number
 
 | 错误码ID |
 | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) |
-| [19100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -119,15 +117,11 @@ let pluginId: number = dlpPermission.DlpConnManager.registerPlugin(new DataCapsu
 static unregisterPlugin(): void
 ```
 
-提供将回调从SA（System Ability）侧注销的能力。
-
-该接口可用于应用退出时注销回调释放资源，确保回调能力正确释放。
-
-> **说明：**
-> 
-> unregisterPlugin将plugin从SA（System Ability）侧注销。
+提供将回调从SA（System Ability）侧注销的能力。 该接口可用于应用退出时注销回调释放资源，确保回调能力正确释放。 > **说明：** > > unregisterPlugin将plugin从SA（System Ability）侧注销。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本26.0.0+：ohos.permission.ENTERPRISE_ACCESS_DLP_FILE or ohos.permission.ACCESS_DLP_SERVICE
@@ -141,11 +135,11 @@ static unregisterPlugin(): void
 
 | 错误码ID |
 | --- |
-| [19100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100003-加解密超时) |
-| [19100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100002-加解密出错) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100004-凭据服务错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [19100003](../errorcode-dlp.md#19100003-加解密超时) |
+| [19100002](../errorcode-dlp.md#19100002-加解密出错) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100004](../errorcode-dlp.md#19100004-凭据服务错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

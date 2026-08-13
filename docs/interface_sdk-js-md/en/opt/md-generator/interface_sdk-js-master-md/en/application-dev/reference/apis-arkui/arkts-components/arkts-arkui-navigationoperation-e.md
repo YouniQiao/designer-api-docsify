@@ -4,6 +4,8 @@ Enumerates the page redirection types.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum NavigationOperation--><!--Device-unnamed-declare enum NavigationOperation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ PUSH = 1
 The transition is enter transition.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ The transition is exit transition.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -53,6 +59,8 @@ REPLACE = 3
 The transition is page replacement.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

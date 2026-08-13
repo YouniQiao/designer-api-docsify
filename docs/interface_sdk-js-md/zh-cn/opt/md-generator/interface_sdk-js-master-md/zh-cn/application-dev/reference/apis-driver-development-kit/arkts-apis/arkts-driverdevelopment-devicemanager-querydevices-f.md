@@ -8,7 +8,9 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 获取接入主设备的外部设备列表。如果没有设备接入，那么将会返回一个空的列表。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -32,8 +34,8 @@ function queryDevices(busType?: number): Array<Readonly<Device>>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [22900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-扩展外设驱动服务异常或bustype参数错误) |
 
 ## 示例
 

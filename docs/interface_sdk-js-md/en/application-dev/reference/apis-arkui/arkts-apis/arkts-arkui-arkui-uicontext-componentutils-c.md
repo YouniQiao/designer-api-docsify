@@ -1,12 +1,14 @@
 # ComponentUtils
 
-class ComponentUtils
+Provides API for obtaining the coordinates and size of the drawing area of a component. > **NOTE：**> > - The initial APIs of this class are supported since API version 10. > > - In the following API examples, you must first use [getComponentUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentUtils) in > **UIContext** to obtain a **ComponentUtils** instance, and then call the APIs using the obtained instance.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-export declare class ComponentUtils--><!--Device-unnamed-export declare class ComponentUtils-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ComponentUtils--><!--Device-unnamed-export class ComponentUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getRectangleById(id: string): componentUtils.ComponentInfo
 ```
 
-Provide the ability to obtain the coordinates and size of component drawing areas.
+Obtains the size, position, translation, scaling, rotation, and affine matrix information of the specified component. > **NOTE：**> > This API should be called after the target component's layout is complete to obtain its size information. It is > recommended that you use this API within onAppear.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ComponentUtils-getRectangleById(id: string): componentUtils.ComponentInfo--><!--Device-ComponentUtils-getRectangleById(id: string): componentUtils.ComponentInfo-End-->
 
@@ -38,17 +44,17 @@ Provide the ability to obtain the coordinates and size of component drawing area
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | ID of the component whose attributes are to be obtained. |
+| id | string | Yes | Unique component ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| componentUtils.ComponentInfo | the object of ComponentInfo. |
+| componentUtils.ComponentInfo | Size, position, translation, scaling, rotation, and affine matrix information of the component. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | UI execution context not found. |
+| [100001](../errorcode-internal.md#100001-internal-error) | UI execution context not found. |
 

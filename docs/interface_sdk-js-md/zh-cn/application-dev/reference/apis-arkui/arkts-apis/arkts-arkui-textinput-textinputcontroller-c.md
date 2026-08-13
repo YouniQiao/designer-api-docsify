@@ -1,24 +1,16 @@
 # TextInputController
 
-TextInput组件的控制器继承自  
-[TextContentControllerBase](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#textcontentcontrollerbase)，涉及的接口有  
-[getTextContentRect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentrect)、  
-[getTextContentLineCount](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentlinecount)、[getCaretOffset](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getcaretoffset11)、  
-[addText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#addtext15)、  
-[deleteText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletetext15)、  
-[getSelection](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getselection15)、  
-[clearPreviewText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#clearpreviewtext17)、  
-[setStyledPlaceholder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#setstyledplaceholder22)、[deleteBackward](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletebackward23)、  
-[scrollToVisible](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#scrolltovisible23)&lt;!-  
--Del--&gt;以及系统接口[getText](../../../reference/apis-arkui/arkui-ts/ts-text-common-sys.md#gettext19)&lt;!--DelEnd--&gt;。
+TextInput组件的控制器继承自 [TextContentControllerBase](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#textcontentcontrollerbase)， 涉及的接口有 [getTextContentRect](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentrect) 、 [getTextContentLineCount](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#gettextcontentlinecount) 、[getCaretOffset](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getcaretoffset11)、 [addText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#addtext15)、 [deleteText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletetext15)、 [getSelection](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#getselection15)、 [clearPreviewText](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#clearpreviewtext17)、 [setStyledPlaceholder](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#setstyledplaceholder22) 、[deleteBackward](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#deletebackward23)、 [scrollToVisible](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#scrolltovisible23)&lt;!- -Del--&gt;以及系统接口[getText](../../../reference/apis-arkui/arkui-ts/ts-text-common-sys.md#gettext19)&lt;!--DelEnd--&gt;。
 
-**继承/实现关系：** TextInputController extends [TextContentControllerBase](TextContentControllerBase)
+**继承/实现关系：** TextInputController extends TextContentControllerBase
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class TextInputController extends TextContentControllerBase--><!--Device-unnamed-export declare class TextInputController extends TextContentControllerBase-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class TextInputController--><!--Device-unnamed-export declare class TextInputController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -33,6 +25,8 @@ caretPosition(value: int): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,6 +52,8 @@ TextInputController的构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextInputController-constructor()--><!--Device-TextInputController-constructor()-End-->
@@ -75,6 +71,8 @@ setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOpti
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,6 +99,8 @@ stopEditing(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

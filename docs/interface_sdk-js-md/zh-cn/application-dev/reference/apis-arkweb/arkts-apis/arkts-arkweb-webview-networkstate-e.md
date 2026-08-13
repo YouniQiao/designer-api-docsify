@@ -2,9 +2,11 @@
 
 播放器的网络状态。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum NetworkState--><!--Device-webview-enum NetworkState-End-->
 
@@ -18,9 +20,13 @@ EMPTY = 0
 
 播放器还没有开始下载数据。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NetworkState-EMPTY = 0--><!--Device-NetworkState-EMPTY = 0-End-->
 
@@ -34,9 +40,13 @@ IDLE = 1
 
 播放器网络状态空闲，比如媒体分片下载完成，下一个分片还没有开始下载。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NetworkState-IDLE = 1--><!--Device-NetworkState-IDLE = 1-End-->
 
@@ -50,9 +60,13 @@ LOADING = 2
 
 播放器正在下载媒体数据。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NetworkState-LOADING = 2--><!--Device-NetworkState-LOADING = 2-End-->
 
@@ -66,9 +80,13 @@ NETWORK_ERROR = 3
 
 发生了网络错误。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NetworkState-NETWORK_ERROR = 3--><!--Device-NetworkState-NETWORK_ERROR = 3-End-->
 

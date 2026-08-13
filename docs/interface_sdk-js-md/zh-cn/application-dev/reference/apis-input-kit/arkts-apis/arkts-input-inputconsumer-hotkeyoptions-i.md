@@ -2,9 +2,11 @@
 
 快捷键选项。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputConsumer-interface HotkeyOptions--><!--Device-inputConsumer-interface HotkeyOptions-End-->
 
@@ -16,15 +18,15 @@
 finalKey: int
 ```
 
-被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode)。
+被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[@ohos.multimodalInput.keyCode (键值)](arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode)。 例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
 
-例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 14
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-HotkeyOptions-finalKey: int--><!--Device-HotkeyOptions-finalKey: int-End-->
 
@@ -40,9 +42,11 @@ isRepeat?: boolean
 
 **类型：** boolean
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-HotkeyOptions-isRepeat?: boolean--><!--Device-HotkeyOptions-isRepeat?: boolean-End-->
 
@@ -54,15 +58,15 @@ isRepeat?: boolean
 preKeys: Array<int>
 ```
 
-修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。
+修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。 例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
 
-例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。
+**类型：** Array&lt;int&gt;
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**起始版本：** 23
 
-**起始版本：** 14
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-HotkeyOptions-preKeys: Array<int>--><!--Device-HotkeyOptions-preKeys: Array<int>-End-->
 

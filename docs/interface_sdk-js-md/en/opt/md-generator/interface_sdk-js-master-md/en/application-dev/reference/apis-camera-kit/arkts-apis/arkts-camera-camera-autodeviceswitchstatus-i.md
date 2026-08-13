@@ -2,7 +2,9 @@
 
 Describes the information about the automatic camera switch status.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface AutoDeviceSwitchStatus--><!--Device-camera-interface AutoDeviceSwitchStatus-End-->
 
@@ -20,12 +22,13 @@ import { camera } from '@kit.CameraKit';
 readonly isDeviceCapabilityChanged: boolean
 ```
 
-Whether the camera capability is changed after the camera is automatically switched. **true** if changed,   
-**false** otherwise.
+Whether the camera capability is changed after the camera is automatically switched. **true** if changed, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -43,7 +46,9 @@ Whether the camera is automatically switched. **true** if auto-switched, **false
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

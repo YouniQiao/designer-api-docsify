@@ -1,18 +1,20 @@
 # GestureSwipeHandler
 
 ```TypeScript
-export type GestureSwipeHandler = (index: int, event: SwiperAnimationEvent) => void
+declare type GestureSwipeHandler = (index: number, event: SwiperAnimationEvent) => void
 ```
 
-Handler of swiper, used in OnGestureSwipe.
+Defines the callback triggered on a frame-by-frame basis during a swipe-based page turn.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export type GestureSwipeHandler = (index: int, event: SwiperAnimationEvent) => void--><!--Device-unnamed-export type GestureSwipeHandler = (index: int, event: SwiperAnimationEvent) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type GestureSwipeHandler = (index: number, event: SwiperAnimationEvent) => void--><!--Device-unnamed-declare type GestureSwipeHandler = (index: number, event: SwiperAnimationEvent) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -20,6 +22,6 @@ Handler of swiper, used in OnGestureSwipe.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index of the current swiper. |
-| event | SwiperAnimationEvent | Yes | The extra information of the animation. |
+| index | number | Yes | Index of the currently displayed element. |
+| event | SwiperAnimationEvent | Yes | Extra information of the animation, which is the offset of the currently displayed element relative to the start position of the **ArcSwiper** along the main axis. |
 

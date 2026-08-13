@@ -14,7 +14,9 @@ function getAttachedMechDevices(): MechInfo[]
 
 Obtain the list of connected mechanical devices.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
 
@@ -30,7 +32,7 @@ Obtain the list of connected mechanical devices.
 
 | Error Code ID |
 | --- |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
 
 ## Examples
 

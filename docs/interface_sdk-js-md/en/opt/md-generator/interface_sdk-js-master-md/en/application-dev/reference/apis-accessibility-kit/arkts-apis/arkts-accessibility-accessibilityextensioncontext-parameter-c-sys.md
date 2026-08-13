@@ -1,8 +1,10 @@
 # Parameter (System API)
 
-Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction) (executable actions for accessibility node elements).
+Sets the parameter for a specific operation when the accessibility node element executes this operation. For details, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (executable actions for accessibility node elements).
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class Parameter--><!--Device-unnamed-export declare class Parameter-End-->
 
@@ -21,6 +23,8 @@ Indicates the scene for AccessibilityAction.ACCESSIBILITY_FOCUS.
 **Type:** [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Indicates the action for AccessibilityAction.EXECUTE_CUSTOM_ACTION.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Parameter-customAction?: string--><!--Device-Parameter-customAction?: string-End-->
@@ -62,6 +68,8 @@ Injection action.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Parameter-injectActionType?: InjectActionType--><!--Device-Parameter-injectActionType?: InjectActionType-End-->
@@ -80,7 +88,9 @@ Cursor offset, for example, **'1'**.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-offset?: string--><!--Device-Parameter-offset?: string-End-->
 
@@ -98,7 +108,9 @@ Scroll type of the component. The options are **'fullScreen'** and **'halfScreen
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-scrollType?: string--><!--Device-Parameter-scrollType?: string-End-->
 
@@ -116,7 +128,9 @@ Start coordinate of the selected text in the component, for example, **'2'**.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-selectTextBegin?: string--><!--Device-Parameter-selectTextBegin?: string-End-->
 
@@ -134,7 +148,9 @@ End coordinate of the selected text in the component, for example, **'8'**.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-selectTextEnd?: string--><!--Device-Parameter-selectTextEnd?: string-End-->
 
@@ -152,7 +168,9 @@ Whether to forward select the text within the component. The value **true** indi
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-selectTextInForWard?: boolean--><!--Device-Parameter-selectTextInForWard?: boolean-End-->
 
@@ -170,7 +188,9 @@ Text content of the component.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-setText?: string--><!--Device-Parameter-setText?: string-End-->
 
@@ -188,7 +208,9 @@ ID of the hyperlink wrapped by the span tag.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Parameter-spanId?: string--><!--Device-Parameter-spanId?: string-End-->
 

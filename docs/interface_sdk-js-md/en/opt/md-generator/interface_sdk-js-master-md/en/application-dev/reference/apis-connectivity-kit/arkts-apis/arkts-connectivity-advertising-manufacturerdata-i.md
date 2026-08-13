@@ -4,6 +4,8 @@ Describes the manufacturer data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-advertising-interface ManufacturerData--><!--Device-advertising-interface ManufacturerData-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -26,6 +28,8 @@ Indicates the manufacturer data.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ManufacturerData-manufacturerData: ArrayBuffer--><!--Device-ManufacturerData-manufacturerData: ArrayBuffer-End-->
@@ -43,6 +47,8 @@ Indicates the manufacturer ID.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

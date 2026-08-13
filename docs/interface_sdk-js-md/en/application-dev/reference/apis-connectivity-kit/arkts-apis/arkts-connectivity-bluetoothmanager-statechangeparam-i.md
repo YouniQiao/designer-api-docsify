@@ -8,7 +8,7 @@ Profile state change parameters.
 
 **Deprecated since:** 10
 
-**Substitutes:** [StateChangeParam](ohos.bluetooth.baseProfile/baseProfile.StateChangeParam)
+**Substitutes:** [StateChangeParam](arkts-connectivity-baseprofile-statechangeparam-i.md#StateChangeParam)
 
 <!--Device-bluetoothManager-interface StateChangeParam--><!--Device-bluetoothManager-interface StateChangeParam-End-->
 
@@ -36,7 +36,7 @@ The address of device
 
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](ohos.bluetooth.baseProfile/baseProfile.StateChangeParam#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-baseprofile-statechangeparam-i.md#deviceId)
 
 <!--Device-StateChangeParam-deviceId: string--><!--Device-StateChangeParam-deviceId: string-End-->
 
@@ -58,7 +58,7 @@ Profile state value
 
 **Deprecated since:** 10
 
-**Substitutes:** [state](ohos.bluetooth.baseProfile/baseProfile.StateChangeParam#state)
+**Substitutes:** [state](arkts-connectivity-baseprofile-statechangeparam-i.md#state)
 
 <!--Device-StateChangeParam-state: ProfileConnectionState--><!--Device-StateChangeParam-state: ProfileConnectionState-End-->
 

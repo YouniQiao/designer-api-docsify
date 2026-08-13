@@ -2,7 +2,9 @@
 
 描述数据库执行的SQL语句的错误信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface ExceptionMessage--><!--Device-relationalStore-interface ExceptionMessage-End-->
 
@@ -18,7 +20,9 @@ code: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExceptionMessage-code: int--><!--Device-ExceptionMessage-code: int-End-->
 
@@ -34,7 +38,9 @@ message: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExceptionMessage-message: string--><!--Device-ExceptionMessage-message: string-End-->
 
@@ -50,7 +56,9 @@ sql: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExceptionMessage-sql: string--><!--Device-ExceptionMessage-sql: string-End-->
 

@@ -1,31 +1,14 @@
 # ButtonConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from   
-[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration).
 
-**Inheritance/Implementation:** ButtonConfiguration extends [CommonConfiguration<ButtonConfiguration>](CommonConfiguration<ButtonConfiguration>)
-
-**Since:** 12
-
-<!--Device-unnamed-declare interface ButtonConfiguration extends CommonConfiguration<ButtonConfiguration>--><!--Device-unnamed-declare interface ButtonConfiguration extends CommonConfiguration<ButtonConfiguration>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## triggerClick
-
-```TypeScript
-triggerClick: ButtonTriggerClickCallback
-```
-
-Click event of the new component constructed using the builder.
+**Inheritance/Implementation:** ButtonConfiguration extends CommonConfiguration<ButtonConfiguration>
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ButtonConfiguration-triggerClick: ButtonTriggerClickCallback--><!--Device-ButtonConfiguration-triggerClick: ButtonTriggerClickCallback-End-->
+<!--Device-unnamed-declare interface ButtonConfiguration--><!--Device-unnamed-declare interface ButtonConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -35,13 +18,13 @@ Click event of the new component constructed using the builder.
 label: string
 ```
 
-Text label of the button.
-
-Note: If the text is longer than the width of the button, it is truncated.
+Text label of the button. Note: If the text is longer than the width of the button, it is truncated.
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,24 +40,40 @@ Note: If the text is longer than the width of the button, it is truncated.
 pressed: boolean
 ```
 
-Whether the button is pressed.
-
-**true**: pressed; **false**: not pressed.
-
-Default value: **false**
-
-**NOTE：**
-
-This setting applies to the original button size, not to any new component constructed using the builder.
+Whether the button is pressed. **true**: pressed; **false**: not pressed. Default value: **false** **NOTE：**This setting applies to the original button size, not to any new component constructed using the builder.
 
 **Type:** boolean
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ButtonConfiguration-pressed: boolean--><!--Device-ButtonConfiguration-pressed: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## triggerClick
+
+```TypeScript
+triggerClick: ButtonTriggerClickCallback
+```
+
+Click event of the new component constructed using the builder.
+
+**Type:** [ButtonTriggerClickCallback](arkts-arkui-buttontriggerclickcallback-t.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ButtonConfiguration-triggerClick: ButtonTriggerClickCallback--><!--Device-ButtonConfiguration-triggerClick: ButtonTriggerClickCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -1,8 +1,22 @@
 # @ohos.app.ability.missionManager
 
-missionManager模块提供系统任务管理能力，包括对系统任务执行锁定、解锁、清理、切换到前台等操作。
+/*
+ Copyright (c) 2022-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**起始版本：** 9
+
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace missionManager--><!--Device-unnamed-declare namespace missionManager-End-->
 
@@ -17,33 +31,36 @@ missionManager模块提供系统任务管理能力，包括对系统任务执行
 
 | 名称 |
 | --- |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearallmissions) |
-| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearallmissions-1) |
-| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission) |
-| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearmission-1) |
-| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getlowresolutionmissionsnapshot) |
-| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getlowresolutionmissionsnapshot-1) |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo) |
-| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getmissioninfo-1) |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos) |
-| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getmissioninfos-1) |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot) |
-| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getmissionsnapshot-1) |
-| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission) |
-| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockmission-1) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-1) |
-| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront-2) |
-| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#movemissionstobackground) |
-| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#movemissionstobackground-1) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#movemissionstoforeground) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#movemissionstoforeground-1) |
-| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#movemissionstoforeground-2) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#off) |
-| [off](arkts-ability-missionmanager-off-f-sys.md#off-1) |
-| [on](arkts-ability-missionmanager-on-f-sys.md#on) |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockmission) |
-| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockmission-1) |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions（系统接口）) |
+| [clearAllMissions](arkts-ability-missionmanager-clearallmissions-f-sys.md#clearAllMissions（系统接口）) |
+| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearMission（系统接口）) |
+| [clearMission](arkts-ability-missionmanager-clearmission-f-sys.md#clearMission（系统接口）) |
+| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getLowResolutionMissionSnapShot（系统接口）) |
+| [getLowResolutionMissionSnapShot](arkts-ability-missionmanager-getlowresolutionmissionsnapshot-f-sys.md#getLowResolutionMissionSnapShot（系统接口）) |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo（系统接口）) |
+| [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo（系统接口）) |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos（系统接口）) |
+| [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos（系统接口）) |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot（系统接口）) |
+| [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot（系统接口）) |
+| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission（系统接口）) |
+| [lockMission](arkts-ability-missionmanager-lockmission-f-sys.md#lockMission（系统接口）) |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront（系统接口）) |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront（系统接口）) |
+| [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront（系统接口）) |
+| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#moveMissionsToBackground（系统接口）) |
+| [moveMissionsToBackground](arkts-ability-missionmanager-movemissionstobackground-f-sys.md#moveMissionsToBackground（系统接口）) |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#moveMissionsToForeground（系统接口）) |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#moveMissionsToForeground（系统接口）) |
+| [moveMissionsToForeground](arkts-ability-missionmanager-movemissionstoforeground-f-sys.md#moveMissionsToForeground（系统接口）) |
+| [offMission](arkts-ability-missionmanager-offmission-f-sys.md#offMission（系统接口）) |
+| [offMission](arkts-ability-missionmanager-offmission-f-sys.md#offMission（系统接口）) |
+| [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) |
+| [off_mission](arkts-ability-missionmanager-offmission-f-sys.md) |
+| [onMission](arkts-ability-missionmanager-onmission-f-sys.md#onMission（系统接口）) |
+| [on_mission](arkts-ability-missionmanager-onmission-f-sys.md) |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission（系统接口）) |
+| [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

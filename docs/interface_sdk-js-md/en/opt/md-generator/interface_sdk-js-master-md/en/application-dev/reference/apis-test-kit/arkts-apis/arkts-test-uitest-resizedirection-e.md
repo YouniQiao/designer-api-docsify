@@ -2,7 +2,9 @@
 
 Enumerates the directions in which a window can be resized.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ResizeDirection--><!--Device-unnamed-declare enum ResizeDirection-End-->
 
@@ -16,7 +18,9 @@ LEFT = 0
 
 Left.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ RIGHT = 1
 
 Right.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ UP = 2
 
 Up.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +72,9 @@ DOWN = 3
 
 Down.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,7 +90,9 @@ LEFT_UP = 4
 
 Upper left.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +108,9 @@ LEFT_DOWN = 5
 
 Lower left.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -112,7 +126,9 @@ RIGHT_UP = 6
 
 Upper right.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,7 +144,9 @@ RIGHT_DOWN = 7
 
 Lower right.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

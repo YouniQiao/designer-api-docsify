@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RichEditorTextSpanResult--><!--Device-unnamed-export declare interface RichEditorTextSpanResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -27,6 +29,8 @@ offsetInSpan: [
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextSpanResult-offsetInSpan: [        int,        int    ]--><!--Device-RichEditorTextSpanResult-offsetInSpan: [        int,        int    ]-End-->
@@ -46,6 +50,8 @@ paragraphStyle?: RichEditorParagraphStyle
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -67,6 +73,8 @@ previewText?: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextSpanResult-previewText?: string--><!--Device-RichEditorTextSpanResult-previewText?: string-End-->
@@ -86,6 +94,8 @@ Span位置。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -107,6 +117,8 @@ symbolSpanStyle?: RichEditorSymbolSpanStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextSpanResult-symbolSpanStyle?: RichEditorSymbolSpanStyle--><!--Device-RichEditorTextSpanResult-symbolSpanStyle?: RichEditorSymbolSpanStyle-End-->
@@ -127,6 +139,8 @@ textStyle: RichEditorTextStyleResult
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextSpanResult-textStyle: RichEditorTextStyleResult--><!--Device-RichEditorTextSpanResult-textStyle: RichEditorTextStyleResult-End-->
@@ -139,15 +153,15 @@ textStyle: RichEditorTextStyleResult
 urlStyle?: RichEditorUrlStyle
 ```
 
-url信息。
-
-默认值：undefined
+url信息。 默认值：undefined
 
 **类型：** [RichEditorUrlStyle](arkts-arkui-richeditor-richeditorurlstyle-i.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -169,6 +183,8 @@ value: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextSpanResult-value: string--><!--Device-RichEditorTextSpanResult-value: string-End-->
@@ -188,6 +204,8 @@ valueResource?: Resource
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

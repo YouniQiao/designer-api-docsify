@@ -2,7 +2,9 @@
 
 Describes the parameters for creating a floating ball controller.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-floatingBall-interface FloatingBallConfiguration--><!--Device-floatingBall-interface FloatingBallConfiguration-End-->
 
@@ -24,7 +26,9 @@ Context environment.
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallConfiguration-context: BaseContext--><!--Device-FloatingBallConfiguration-context: BaseContext-End-->
 

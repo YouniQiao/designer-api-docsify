@@ -1,9 +1,10 @@
 # HdrGainmapMetadata
 
-Describes the metadata keys used by a gain map, that is, the values available for **HDR_GAINMAP_METADATA** in   
-[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey). For details, see ISO 21496-1.
+Describes the metadata keys used by a gain map, that is, the values available for **HDR_GAINMAP_METADATA** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey). For details, see ISO 21496-1.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-interface HdrGainmapMetadata--><!--Device-image-interface HdrGainmapMetadata-End-->
 
@@ -25,7 +26,9 @@ The alternate hdr headroom.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-alternateHeadroom: double--><!--Device-HdrGainmapMetadata-alternateHeadroom: double-End-->
 
@@ -41,7 +44,9 @@ The baseline hdr headroom.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-baseHeadroom: double--><!--Device-HdrGainmapMetadata-baseHeadroom: double-End-->
 
@@ -57,7 +62,9 @@ The per-channel metadata.
 
 **Type:** Array&lt;[GainmapChannel](arkts-image-image-gainmapchannel-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-channels: Array<GainmapChannel>--><!--Device-HdrGainmapMetadata-channels: Array<GainmapChannel>-End-->
 
@@ -73,7 +80,9 @@ The number of gain map channels, with a value of 1 or 3.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-gainmapChannelCount: int--><!--Device-HdrGainmapMetadata-gainmapChannelCount: int-End-->
 
@@ -89,7 +98,9 @@ The minimum version a parser needs to understand.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-miniVersion: int--><!--Device-HdrGainmapMetadata-miniVersion: int-End-->
 
@@ -105,7 +116,9 @@ Indicate whether to use the color space of the base image.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-useBaseColorFlag: boolean--><!--Device-HdrGainmapMetadata-useBaseColorFlag: boolean-End-->
 
@@ -121,7 +134,9 @@ The version used by the writer.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HdrGainmapMetadata-writerVersion: int--><!--Device-HdrGainmapMetadata-writerVersion: int-End-->
 

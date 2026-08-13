@@ -4,6 +4,8 @@ ChipV2ImageIconConfig定义图标的通用属性配置。
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ChipV2ImageIconConfig--><!--Device-unnamed-export interface ChipV2ImageIconConfig-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,13 @@ ChipV2ImageIconConfig定义图标的通用属性配置。
 activatedFillColor?: ColorMetrics
 ```
 
-ChipV2激活时图标填充颜色。
-
-默认值：\$r('sys.color.chip_active_icon_color')，非SVG图片不应用默认值。
-
-值为undefined时，按默认值处理。
-
-仅在图片格式为SVG时，activatedFillColor属性才生效。
+ChipV2激活时图标填充颜色。 默认值：\$r('sys.color.chip_active_icon_color')，非SVG图片不应用默认值。 值为undefined时，按默认值处理。 仅在图片格式为SVG时，activatedFillColor属性才生效。
 
 **类型：** ColorMetrics
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +38,13 @@ ChipV2激活时图标填充颜色。
 fillColor?: ColorMetrics
 ```
 
-图标填充颜色。
-
-默认值：\$r('sys.color.chip_usually_icon_color')，非SVG图片不应用默认值。
-
-值为undefined时，按默认值处理。
-
-仅在图片格式为SVG时，fillColor属性才生效。
+图标填充颜色。 默认值：\$r('sys.color.chip_usually_icon_color')，非SVG图片不应用默认值。 值为undefined时，按默认值处理。 仅在图片格式为SVG时，fillColor属性才生效。
 
 **类型：** ColorMetrics
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,13 +60,13 @@ fillColor?: ColorMetrics
 modifier?: ImageModifier
 ```
 
-图标修饰器，用于设置图标的通用属性。当需要通过modifier动态修改图标属性（如opacity、objectFit等）时传入此参数。不传入或传入undefined时，不应用修饰器，图标使用默认属性设置。
-
-默认值：undefined，不应用修饰器。
+图标修饰器，用于设置图标的通用属性。当需要通过modifier动态修改图标属性（如opacity、objectFit等）时传入此参数。不传入或传入undefined时，不应用修饰器，图标使用默认属性设置。 默认值：undefined，不应用修饰器。
 
 **类型：** [ImageModifier](../arkts-components/arkts-arkui-imagemodifier-t.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,22 +82,13 @@ modifier?: ImageModifier
 size?: SizeT<LengthMetrics>
 ```
 
-图标大小，不支持百分比。传入百分比时按默认值处理。
-
-默认值：
-
-- 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r('  
-sys.float.chip_small_icon_size')}。  
-- 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r('  
-sys.float.chip_normal_icon_size')}。
-
-单位：vp
-
-值为undefined时，按默认值处理。
+图标大小，不支持百分比。传入百分比时按默认值处理。 默认值： - 当ChipV2Options.size为ChipV2Size.SMALL时，默认值为：{width: \$r('sys.float.chip_small_icon_size'), height: \$r(' sys.float.chip_small_icon_size')}。 - 当ChipV2Options.size为ChipV2Size.NORMAL时，默认值为：{width: \$r('sys.float.chip_normal_icon_size'), height: \$r(' sys.float.chip_normal_icon_size')}。 单位：vp 值为undefined时，按默认值处理。
 
 **类型：** SizeT&lt;LengthMetrics&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,6 +109,8 @@ src: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

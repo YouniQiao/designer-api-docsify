@@ -4,11 +4,13 @@
 declare type AccessibilityCallback = (isHover: boolean, event: AccessibilityHoverEvent) => void
 ```
 
-Defines the callback type used in accessibility hover events.The value of isHover indicates whether the touch is hovering over the component.The value of event contains information about AccessibilityHoverEvent.
+Defines the callback type used in accessibility hover events. The value of isHover indicates whether the touch is hovering over the component. The value of event contains information about AccessibilityHoverEvent.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

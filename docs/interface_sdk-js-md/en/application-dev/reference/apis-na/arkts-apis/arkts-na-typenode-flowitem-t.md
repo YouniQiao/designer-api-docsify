@@ -1,0 +1,22 @@
+# FlowItem
+
+```TypeScript
+type FlowItem = FlowItemFrameNode
+```
+
+Define the FrameNode type for FlowItem.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-typeNode-type FlowItem = FlowItemFrameNode--><!--Device-typeNode-type FlowItem = FlowItemFrameNode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Property type:** FlowItemFrameNode
+

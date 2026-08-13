@@ -2,9 +2,11 @@
 
 Obtains GSM cell information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface GsmCellInformation--><!--Device-radio-export interface GsmCellInformation-End-->
 
@@ -26,11 +28,13 @@ arfcn: int
 
 Indicates the ARFCN(absolute radio frequency channel int).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-arfcn: int--><!--Device-GsmCellInformation-arfcn: int-End-->
 
@@ -46,11 +50,13 @@ bsic: int
 
 Indicates the base station identification code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-bsic: int--><!--Device-GsmCellInformation-bsic: int-End-->
 
@@ -66,11 +72,13 @@ cellId: int
 
 Indicates the cell identification.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-cellId: int--><!--Device-GsmCellInformation-cellId: int-End-->
 
@@ -86,11 +94,13 @@ lac: int
 
 Indicates the location area code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-lac: int--><!--Device-GsmCellInformation-lac: int-End-->
 
@@ -108,9 +118,11 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-mcc: string--><!--Device-GsmCellInformation-mcc: string-End-->
 
@@ -128,9 +140,11 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GsmCellInformation-mnc: string--><!--Device-GsmCellInformation-mnc: string-End-->
 

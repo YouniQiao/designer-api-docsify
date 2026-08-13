@@ -6,9 +6,11 @@
 export function requestToolPermissions(permissionQuery: PermissionQuery): Promise<PermissionQueryResult>
 ```
 
-根据指定的操作查询工具权限。该函数用于检查权限查询中指定的CLI命令或API的权限状态。对于每个操作，它返回权限状态、授权状态以及是否需要用户对话框。当needTicket设置为true时，远程授权会生成一个票据。
+根据指定的操作查询工具权限。 该函数用于检查权限查询中指定的CLI命令或API的权限状态。 对于每个操作，它返回权限状态、授权状态以及是否需要用户对话框。 当needTicket设置为true时，远程授权会生成一个票据。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
@@ -34,13 +36,13 @@ export function requestToolPermissions(permissionQuery: PermissionQuery): Promis
 
 | 错误码ID |
 | --- |
-| [24010006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010006-设备处于锁屏状态时不允许执行操作) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [24010002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
-| [24010003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
-| [24010000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) |
-| [24010001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |
+| [24010006](../errorcode-abilityToolAccessCtrl-sys.md#24010006-设备处于锁屏状态时不允许执行操作) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
+| [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
+| [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |
 
 ## 示例
 

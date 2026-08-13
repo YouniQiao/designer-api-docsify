@@ -2,9 +2,11 @@
 
 Represents the cloud information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface CloudInfo--><!--Device-cloudExtension-export interface CloudInfo-End-->
 
@@ -28,9 +30,11 @@ Brief application information.
 
 **Type:** Record&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudInfo-apps: Record<string, AppBriefInfo>--><!--Device-CloudInfo-apps: Record<string, AppBriefInfo>-End-->
 
@@ -48,9 +52,11 @@ Cloud service information.
 
 **Type:** [ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudInfo-cloudInfo: ServiceInfo--><!--Device-CloudInfo-cloudInfo: ServiceInfo-End-->
 

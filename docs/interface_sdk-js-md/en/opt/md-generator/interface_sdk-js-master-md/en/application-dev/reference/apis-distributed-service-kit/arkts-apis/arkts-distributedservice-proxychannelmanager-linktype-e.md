@@ -2,7 +2,9 @@
 
 Enumerates the link types.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-proxyChannelManager-enum LinkType--><!--Device-proxyChannelManager-enum LinkType-End-->
 
@@ -16,7 +18,9 @@ LINK_BR = 0
 
 Bluetooth.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

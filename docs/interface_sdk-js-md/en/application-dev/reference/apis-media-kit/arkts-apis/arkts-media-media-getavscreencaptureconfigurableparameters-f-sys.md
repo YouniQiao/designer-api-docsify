@@ -14,9 +14,11 @@ function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<strin
 
 get Configurations which user can changes from AVScreenCapture server
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
 
@@ -28,7 +30,7 @@ get Configurations which user can changes from AVScreenCapture server
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The AVScreenCapture server session ID. |
+| sessionId | int | Yes | The AVScreenCapture server session ID. |
 
 **Return value:**
 
@@ -40,8 +42,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
-| [5400109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400109-session-id-does-not-exist) | Sessions not exist. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
+| [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) | Sessions not exist. Return by promise. |
 
 ## Examples
 

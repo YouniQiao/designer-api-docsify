@@ -6,7 +6,7 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
 <!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
 
@@ -23,6 +23,8 @@ constructor()
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -42,6 +44,8 @@ notifyAll(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConditionVariable-notifyAll(): void--><!--Device-ConditionVariable-notifyAll(): void-End-->
@@ -60,6 +64,8 @@ notifyOne(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConditionVariable-notifyOne(): void--><!--Device-ConditionVariable-notifyOne(): void-End-->
@@ -77,6 +83,8 @@ static request(name: string): ConditionVariable
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -108,6 +116,8 @@ wait(): Promise<void>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConditionVariable-wait(): Promise<void>--><!--Device-ConditionVariable-wait(): Promise<void>-End-->
@@ -131,6 +141,8 @@ waitFor(timeout: number): Promise<void>
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

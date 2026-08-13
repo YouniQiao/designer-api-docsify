@@ -2,9 +2,11 @@
 
 Represents the device-cloud sync statistics.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-interface StatisticInfo--><!--Device-cloudData-interface StatisticInfo-End-->
 
@@ -24,13 +26,15 @@ import { cloudData } from '@kit.ArkData';
 inserted: int
 ```
 
-Number of data records that are added locally and have not been synced to the cloud. For example, the value **2**indicates that the table has two data records that are added locally but not synced to the cloud.
+Number of data records that are added locally and have not been synced to the cloud. For example, the value **2** indicates that the table has two data records that are added locally but not synced to the cloud.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-StatisticInfo-inserted: int--><!--Device-StatisticInfo-inserted: int-End-->
 
@@ -46,11 +50,13 @@ normal: int
 
 Number of consistent data records between the device and the cloud. For example, the value **2** indicates that table has two data records that are consistent between the device and the cloud.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-StatisticInfo-normal: int--><!--Device-StatisticInfo-normal: int-End-->
 
@@ -64,14 +70,15 @@ Number of consistent data records between the device and the cloud. For example,
 table: string
 ```
 
-Name of the table queried. For example, the value **cloud_notes** indicates that the sync information of the   
-**cloud_notes** table is queried.
+Name of the table queried. For example, the value **cloud_notes** indicates that the sync information of the **cloud_notes** table is queried.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-StatisticInfo-table: string--><!--Device-StatisticInfo-table: string-End-->
 
@@ -85,14 +92,15 @@ Name of the table queried. For example, the value **cloud_notes** indicates that
 updated: int
 ```
 
-Number of data records that are modified locally or on the cloud but have not been synced. For example, the value  
-**2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
+Number of data records that are modified locally or on the cloud but have not been synced. For example, the value **2** indicates that the table has two data records that are updated locally or on the cloud but not synced.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-StatisticInfo-updated: int--><!--Device-StatisticInfo-updated: int-End-->
 

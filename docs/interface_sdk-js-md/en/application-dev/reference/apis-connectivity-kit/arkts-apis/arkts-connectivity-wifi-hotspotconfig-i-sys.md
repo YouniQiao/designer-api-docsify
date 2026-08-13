@@ -8,7 +8,7 @@ Wi-Fi hotspot configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [HotspotConfig](ohos.wifiManager/wifiManager.HotspotConfig)
+**Substitutes:** [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#HotspotConfig-(System-API))
 
 <!--Device-wifi-interface HotspotConfig--><!--Device-wifi-interface HotspotConfig-End-->
 
@@ -38,7 +38,7 @@ The frequency band of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** [band](ohos.wifiManager/wifiManager.HotspotConfig.band)
+**Substitutes:** [band](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#band)
 
 <!--Device-HotspotConfig-band: number--><!--Device-HotspotConfig-band: number-End-->
 
@@ -62,7 +62,7 @@ The maximum number of connections allowed by the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** [maxConn](ohos.wifiManager/wifiManager.HotspotConfig.maxConn)
+**Substitutes:** [maxConn](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#maxConn)
 
 <!--Device-HotspotConfig-maxConn: number--><!--Device-HotspotConfig-maxConn: number-End-->
 
@@ -86,7 +86,7 @@ The password of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** [preSharedKey](ohos.wifiManager/wifiManager.HotspotConfig.preSharedKey)
+**Substitutes:** [preSharedKey](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#preSharedKey)
 
 <!--Device-HotspotConfig-preSharedKey: string--><!--Device-HotspotConfig-preSharedKey: string-End-->
 
@@ -110,7 +110,7 @@ The encryption mode of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** [securityType](ohos.wifiManager/wifiManager.HotspotConfig.securityType)
+**Substitutes:** [securityType](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#securityType)
 
 <!--Device-HotspotConfig-securityType: WifiSecurityType--><!--Device-HotspotConfig-securityType: WifiSecurityType-End-->
 
@@ -134,7 +134,7 @@ The SSID of the Wi-Fi hotspot
 
 **Deprecated since:** 9
 
-**Substitutes:** [ssid](ohos.wifiManager/wifiManager.HotspotConfig.ssid)
+**Substitutes:** [ssid](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md#ssid)
 
 <!--Device-HotspotConfig-ssid: string--><!--Device-HotspotConfig-ssid: string-End-->
 

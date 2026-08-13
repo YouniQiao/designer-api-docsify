@@ -4,7 +4,9 @@ Defines the particle property lifecycle.
 
 **Since:** 10
 
-<!--Device-unnamed-interface ParticlePropertyAnimation<T>--><!--Device-unnamed-interface ParticlePropertyAnimation<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface ParticlePropertyAnimation--><!--Device-unnamed-interface ParticlePropertyAnimation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -14,15 +16,15 @@ Defines the particle property lifecycle.
 curve?: Curve | ICurve
 ```
 
-Animation curve.
-
-Default value: **Curve.Linear**
+Animation curve. Default value: **Curve.Linear**
 
 **Type:** Curve \| ICurve
 
 **Default:** Curve.Linear
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,15 +40,13 @@ Default value: **Curve.Linear**
 endMillis: number
 ```
 
-End time of the animation.
-
-Unit: ms.
-
-Value range: [0, +∞).
+End time of the animation. Unit: ms. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +68,8 @@ Initial value of the property. If the value is invalid, the default value will b
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -82,15 +84,13 @@ Initial value of the property. If the value is invalid, the default value will b
 startMillis: number
 ```
 
-Start time of the animation.
-
-Unit: ms.
-
-Value range: [0, +∞).
+Start time of the animation. Unit: ms. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,6 +111,8 @@ Target value of the property. If the value is invalid, the default value will be
 **Type:** T
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

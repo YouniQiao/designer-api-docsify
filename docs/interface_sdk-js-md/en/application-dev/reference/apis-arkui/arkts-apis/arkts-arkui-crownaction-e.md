@@ -6,6 +6,8 @@ Enumerates the crown actions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum CrownAction--><!--Device-unnamed-declare enum CrownAction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -44,6 +46,8 @@ Rotation crown behavior update.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -63,6 +67,8 @@ The rotation crown behavior ends.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

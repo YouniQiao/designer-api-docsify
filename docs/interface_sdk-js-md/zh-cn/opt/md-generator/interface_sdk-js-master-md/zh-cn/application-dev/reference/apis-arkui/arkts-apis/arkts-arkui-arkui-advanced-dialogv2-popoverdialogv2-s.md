@@ -1,10 +1,10 @@
 # PopoverDialogV2
 
-跟手弹出框，基于目标组件位置弹出，上述的TipsDialogV2、SelectDialogV2、ConfirmDialogV2、AlertDialogV2、LoadingDialogV2、CustomContentDialogV2都可作为弹出框内容。适用于需要跟随目标组件位置显示的场景，如工具提示、操作引导等。
+跟手弹出框，基于目标组件位置弹出，上述的TipsDialogV2、SelectDialogV2、ConfirmDialogV2、AlertDialogV2、 LoadingDialogV2、CustomContentDialogV2都可作为弹出框内容。适用于需要跟随目标组件位置显示的场景，如工具提示、操作引导等。
 
 **起始版本：** 18
 
-**装饰器类型：** @ComponentV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare struct PopoverDialogV2--><!--Device-unnamed-export declare struct PopoverDialogV2-End-->
 
@@ -13,27 +13,32 @@
 ## $visible
 
 ```TypeScript
-$visible?: PopoverDialogV2OnVisibleChange
+@Event
+  $visible?: PopoverDialogV2OnVisibleChange
 ```
 
-修改跟手弹出框的显示状态时触发的回调函数，建议在visible后使用!!语法（如`visible: this.isShow!!`）设置双向同步，当弹出框内部改变显示状态时会同步更新外部变量。
+修改跟手弹出框的显示状态时触发的回调函数，建议在visible后使用!!语法（如`visible: this.isShow!!`）设置双向同步，当弹出框内部改变显示状态时会同步更新外部变量。 默认无事件。
 
-默认无事件。
+**类型：** [PopoverDialogV2OnVisibleChange](arkts-arkui-popoverdialogv2onvisiblechange-t.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PopoverDialogV2-$visible?: PopoverDialogV2OnVisibleChange--><!--Device-PopoverDialogV2-$visible?: PopoverDialogV2OnVisibleChange-End-->
+<!--Device-PopoverDialogV2-@Event  $visible?: PopoverDialogV2OnVisibleChange--><!--Device-PopoverDialogV2-@Event  $visible?: PopoverDialogV2OnVisibleChange-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## popover
 
 ```TypeScript
-popover: PopoverDialogV2Options
+@Require
+  @Param
+  popover: PopoverDialogV2Options
 ```
 
 配置跟手弹出框的参数。
@@ -42,20 +47,21 @@ popover: PopoverDialogV2Options
 
 **起始版本：** 18
 
-**装饰器类型：** @Require、@Param
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PopoverDialogV2-popover: PopoverDialogV2Options--><!--Device-PopoverDialogV2-popover: PopoverDialogV2Options-End-->
+<!--Device-PopoverDialogV2-@Require  @Param  popover: PopoverDialogV2Options--><!--Device-PopoverDialogV2-@Require  @Param  popover: PopoverDialogV2Options-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## targetBuilder
 
 ```TypeScript
-targetBuilder: CustomBuilder
+@BuilderParam
+  targetBuilder: CustomBuilder
 ```
 
 跟手弹出框基于的目标组件。
@@ -64,36 +70,36 @@ targetBuilder: CustomBuilder
 
 **起始版本：** 18
 
-**装饰器类型：** @BuilderParam
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PopoverDialogV2-targetBuilder: CustomBuilder--><!--Device-PopoverDialogV2-targetBuilder: CustomBuilder-End-->
+<!--Device-PopoverDialogV2-@BuilderParam  targetBuilder: CustomBuilder--><!--Device-PopoverDialogV2-@BuilderParam  targetBuilder: CustomBuilder-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## visible
 
 ```TypeScript
-visible: boolean
+@Require
+  @Param
+  visible: boolean
 ```
 
-跟手弹出框的显示状态。
-
-值为true时跟手弹出框显示，为false时隐藏。
+跟手弹出框的显示状态。 值为true时跟手弹出框显示，为false时隐藏。
 
 **类型：** boolean
 
 **起始版本：** 18
 
-**装饰器类型：** @Require、@Param
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-PopoverDialogV2-visible: boolean--><!--Device-PopoverDialogV2-visible: boolean-End-->
+<!--Device-PopoverDialogV2-@Require  @Param  visible: boolean--><!--Device-PopoverDialogV2-@Require  @Param  visible: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

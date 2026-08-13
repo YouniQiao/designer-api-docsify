@@ -2,9 +2,11 @@
 
 音频会话停用事件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioSessionDeactivatedEvent--><!--Device-audio-interface AudioSessionDeactivatedEvent-End-->
 
@@ -20,9 +22,11 @@ reason: AudioSessionDeactivatedReason
 
 **类型：** [AudioSessionDeactivatedReason](arkts-audio-audio-audiosessiondeactivatedreason-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioSessionDeactivatedEvent-reason: AudioSessionDeactivatedReason--><!--Device-AudioSessionDeactivatedEvent-reason: AudioSessionDeactivatedReason-End-->
 

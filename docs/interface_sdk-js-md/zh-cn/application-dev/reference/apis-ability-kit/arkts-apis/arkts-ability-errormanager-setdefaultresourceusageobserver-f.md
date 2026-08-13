@@ -6,15 +6,13 @@
 function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver): ResourceUsageObserver
 ```
 
-设置资源占用观察者，应用资源超基线时，支持链式回调，返回上一次注册的资源占用观察者，仅限主线程调用。
-
-如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。
-
-若接口参数为空，后续注册的观察者将无法与前序已注册的观察者建立关联，从而中断链式调用。
+设置资源占用观察者，应用资源超基线时，支持链式回调，返回上一次注册的资源占用观察者，仅限主线程调用。 如果传入非法参数或在子线程调用，将抛出错误码并返回undefined，因此建议使用try-catch逻辑进行处理。 若接口参数为空，后续注册的观察者将无法与前序已注册的观察者建立关联，从而中断链式调用。
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +38,7 @@ function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000205](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
+| [16000205](../errorcode-ability.md#16000205-当前接口未在主线程中调用) | API未在主线程中调用。 |
 
 ## 示例
 

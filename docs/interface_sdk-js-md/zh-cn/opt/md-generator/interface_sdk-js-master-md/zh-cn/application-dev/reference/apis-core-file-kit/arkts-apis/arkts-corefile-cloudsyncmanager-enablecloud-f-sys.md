@@ -8,7 +8,9 @@ function enableCloud(accountId: string, switches: Record<string, boolean>): Prom
 
 异步方法使能端云协同能力。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -35,9 +37,9 @@ function enableCloud(accountId: string, switches: Record<string, boolean>): Prom
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -69,7 +71,9 @@ function enableCloud(
 
 异步方法使能端云协同能力。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -91,9 +95,9 @@ function enableCloud(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

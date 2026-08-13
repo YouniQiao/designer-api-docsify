@@ -10,6 +10,8 @@ abortSession终止密钥操作。使用callback异步回调。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void--><!--Device-huks-function abortSession(handle: number, options: HuksOptions, callback: AsyncCallback<void>): void-End-->
@@ -28,17 +30,17 @@ abortSession终止密钥操作。使用callback异步回调。
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) |
-| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-安全元件故障) |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 
 ## 示例
 
@@ -427,6 +429,8 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>--><!--Device-huks-function abortSession(handle: number, options: HuksOptions): Promise<void>-End-->
@@ -450,17 +454,17 @@ abortSession终止密钥操作。使用Promise异步回调。
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-算法库操作失败) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-文件错误) |
-| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000026-安全元件故障) |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000004](../errorcode-huks.md#12000004-文件错误) |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000026](../errorcode-huks.md#12000026-安全元件故障) |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 
 ## 示例
 

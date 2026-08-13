@@ -8,7 +8,7 @@ Defines the response of ShowActionMenu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ActionMenuSuccessResponse](ohos.promptAction/promptAction.ActionMenuSuccessResponse)
+**Substitutes:** [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#ActionMenuSuccessResponse)
 
 <!--Device-prompt-interface ActionMenuSuccessResponse--><!--Device-prompt-interface ActionMenuSuccessResponse-End-->
 
@@ -36,7 +36,7 @@ Defines the index of data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [index](ohos.promptAction/promptAction.ActionMenuSuccessResponse#index)
+**Substitutes:** [index](arkts-arkui-promptaction-actionmenusuccessresponse-i.md#index)
 
 <!--Device-ActionMenuSuccessResponse-index: number--><!--Device-ActionMenuSuccessResponse-index: number-End-->
 

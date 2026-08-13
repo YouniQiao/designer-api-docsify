@@ -1,9 +1,10 @@
 # InputClient
 
-You must first use [on('inputStart')](inputMethodEngine.InputMethodAbility. on(type: 'inputStart', callback:(kbController: KeyboardController, inputClient: InputClient) => void): void;) to obtain a   
-**InputClient** instance, and then use this instance to call the following APIs.
+You must first use on('inputStart') to obtain a **InputClient** instance, and then use this instance to call the following APIs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface InputClient--><!--Device-inputMethodEngine-interface InputClient-End-->
 
@@ -23,7 +24,9 @@ deleteBackward(length: number, callback: AsyncCallback<boolean>): void
 
 Deletes the fixed-length text after the cursor. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteBackward(length: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -40,9 +43,9 @@ Deletes the fixed-length text after the cursor. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -71,7 +74,9 @@ deleteBackward(length: number): Promise<boolean>
 
 Deletes the fixed-length text after the cursor. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-deleteBackward(length: int): Promise<boolean>--><!--Device-InputClient-deleteBackward(length: int): Promise<boolean>-End-->
 
@@ -93,9 +98,9 @@ Deletes the fixed-length text after the cursor. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -122,7 +127,9 @@ deleteBackwardSync(length: number): void
 
 Deletes the fixed-length text after the cursor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-deleteBackwardSync(length: int): void--><!--Device-InputClient-deleteBackwardSync(length: int): void-End-->
 
@@ -138,9 +145,9 @@ Deletes the fixed-length text after the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -157,7 +164,9 @@ deleteForward(length: number, callback: AsyncCallback<boolean>): void
 
 Deletes the fixed-length text before the cursor. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-deleteForward(length: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -174,9 +183,9 @@ Deletes the fixed-length text before the cursor. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -205,7 +214,9 @@ deleteForward(length: number): Promise<boolean>
 
 Deletes the fixed-length text before the cursor. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-deleteForward(length: int): Promise<boolean>--><!--Device-InputClient-deleteForward(length: int): Promise<boolean>-End-->
 
@@ -227,9 +238,9 @@ Deletes the fixed-length text before the cursor. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -256,7 +267,9 @@ deleteForwardSync(length: number): void
 
 Deletes the fixed-length text before the cursor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-deleteForwardSync(length: int): void--><!--Device-InputClient-deleteForwardSync(length: int): void-End-->
 
@@ -272,9 +285,9 @@ Deletes the fixed-length text before the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -289,13 +302,11 @@ inputClient.deleteForwardSync(length);
 finishTextPreview(): Promise<void>
 ```
 
-Finishes the text preview. This API uses a promise to return the result.
+Finishes the text preview. This API uses a promise to return the result. > **NOTE：**> > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
-> **NOTE：**
-> 
-> If there is preview text in the current text box, calling this API will display the preview text on the screen.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-InputClient-finishTextPreview(): Promise<void>--><!--Device-InputClient-finishTextPreview(): Promise<void>-End-->
 
@@ -311,8 +322,8 @@ Finishes the text preview. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 
@@ -332,13 +343,11 @@ inputClient.finishTextPreview().then(() => {
 finishTextPreviewSync(): void
 ```
 
-Finishes the text preview.
+Finishes the text preview. > **NOTE：**> > If there is preview text in the current text box, calling this API will display the preview text on the screen.
 
-> **NOTE：**
-> 
-> If there is preview text in the current text box, calling this API will display the preview text on the screen.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-InputClient-finishTextPreviewSync(): void--><!--Device-InputClient-finishTextPreviewSync(): void-End-->
 
@@ -348,8 +357,8 @@ Finishes the text preview.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 
@@ -367,6 +376,8 @@ Obtains the additional options for binding an input method.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-InputClient-getAttachOptions(): AttachOptions--><!--Device-InputClient-getAttachOptions(): AttachOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -381,7 +392,7 @@ Obtains the additional options for binding an input method.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -389,6 +400,28 @@ Obtains the additional options for binding an input method.
 let attachOptions: inputMethodEngine.AttachOptions = inputClient.getAttachOptions();
 console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptions}`);
 ```
+
+## getAttachOptions
+
+```TypeScript
+getAttachOptions(): AttachOptions | null
+```
+
+Get input attachOptions.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-getAttachOptions(): AttachOptions | null--><!--Device-InputClient-getAttachOptions(): AttachOptions | null-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AttachOptions](arkts-ime-inputmethod-attachoptions-i.md) |
 
 ## getBackward
 
@@ -398,7 +431,9 @@ getBackward(length: number, callback: AsyncCallback<string>): void
 
 Obtains the specific-length text after the cursor. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getBackward(length: int, callback: AsyncCallback<string>): void-End-->
 
@@ -415,9 +450,9 @@ Obtains the specific-length text after the cursor. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -442,7 +477,9 @@ getBackward(length: number): Promise<string>
 
 Obtains the specific-length text after the cursor. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getBackward(length: int): Promise<string>--><!--Device-InputClient-getBackward(length: int): Promise<string>-End-->
 
@@ -464,9 +501,9 @@ Obtains the specific-length text after the cursor. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -489,7 +526,9 @@ getBackwardSync(length: number): string
 
 Obtains the specific-length text after the cursor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getBackwardSync(length: int): string--><!--Device-InputClient-getBackwardSync(length: int): string-End-->
 
@@ -511,9 +550,9 @@ Obtains the specific-length text after the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -529,14 +568,11 @@ console.info(`Succeeded in getting backward, text: ${text}`);
 getCallingWindowInfo(): Promise<WindowInfo>
 ```
 
-Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md#Panel) as the
-> soft keyboard window.
+Obtains information about the application window, in which the input box that starts an input method is located. This API uses a promise to return the result. > **NOTE：**> > This API applies only to the input method applications that use [Panel](arkts-ime-inputmethodengine-panel-i.md#Panel) as the > soft keyboard window.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo>-End-->
 
@@ -552,9 +588,9 @@ Obtains information about the application window, in which the input box that st
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
-| [12800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800012](../errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) |
 
 ## Examples
 
@@ -569,6 +605,36 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 });
 ```
 
+## getCallingWindowInfo
+
+```TypeScript
+getCallingWindowInfo(): Promise<WindowInfo | null>
+```
+
+Get info of the calling window.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>--><!--Device-InputClient-getCallingWindowInfo(): Promise<WindowInfo | null>-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;WindowInfo \ | null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) |
+| [12800012](../errorcode-inputmethod-framework.md#12800012-soft-keyboard-panel-not-created) |
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -578,6 +644,8 @@ getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void
 Obtains the attribute of the edit box. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute>): void-End-->
 
@@ -593,7 +661,7 @@ Obtains the attribute of the edit box. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -613,12 +681,42 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 ## getEditorAttribute
 
 ```TypeScript
+getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void
+```
+
+Get attribute about editor.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void--><!--Device-InputClient-getEditorAttribute(callback: AsyncCallback<EditorAttribute | null>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null & gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+
+## getEditorAttribute
+
+```TypeScript
 getEditorAttribute(): Promise<EditorAttribute>
 ```
 
 Obtains the attribute of the edit box. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute>-End-->
 
@@ -634,7 +732,7 @@ Obtains the attribute of the edit box. This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -649,6 +747,34 @@ inputClient.getEditorAttribute().then((editorAttribute: inputMethodEngine.Editor
 });
 ```
 
+## getEditorAttribute
+
+```TypeScript
+getEditorAttribute(): Promise<EditorAttribute | null>
+```
+
+Get attribute about editor.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>--><!--Device-InputClient-getEditorAttribute(): Promise<EditorAttribute | null>-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) \| null & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+
 ## getEditorAttributeSync
 
 ```TypeScript
@@ -658,6 +784,8 @@ getEditorAttributeSync(): EditorAttribute
 Obtains the attribute of the edit box.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getEditorAttributeSync(): EditorAttribute--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute-End-->
 
@@ -673,7 +801,7 @@ Obtains the attribute of the edit box.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
 
 ## Examples
 
@@ -683,6 +811,34 @@ console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
 console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 ```
 
+## getEditorAttributeSync
+
+```TypeScript
+getEditorAttributeSync(): EditorAttribute | null
+```
+
+Get attribute about editor.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null--><!--Device-InputClient-getEditorAttributeSync(): EditorAttribute | null-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+
 ## getForward
 
 ```TypeScript
@@ -691,7 +847,9 @@ getForward(length: number, callback: AsyncCallback<string>): void
 
 Obtains the specific-length text before the cursor. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void--><!--Device-InputClient-getForward(length: int, callback: AsyncCallback<string>): void-End-->
 
@@ -708,9 +866,9 @@ Obtains the specific-length text before the cursor. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -735,7 +893,9 @@ getForward(length: number): Promise<string>
 
 Obtains the specific-length text before the cursor. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getForward(length: int): Promise<string>--><!--Device-InputClient-getForward(length: int): Promise<string>-End-->
 
@@ -757,9 +917,9 @@ Obtains the specific-length text before the cursor. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -782,7 +942,9 @@ getForwardSync(length: number): string
 
 Obtains the specific-length text before the cursor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getForwardSync(length: int): string--><!--Device-InputClient-getForwardSync(length: int): string-End-->
 
@@ -804,9 +966,9 @@ Obtains the specific-length text before the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -824,7 +986,9 @@ getTextIndexAtCursor(callback: AsyncCallback<number>): void
 
 Obtains the index of the text where the cursor is located. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void--><!--Device-InputClient-getTextIndexAtCursor(callback: AsyncCallback<int>): void-End-->
 
@@ -840,8 +1004,8 @@ Obtains the index of the text where the cursor is located. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -865,7 +1029,9 @@ getTextIndexAtCursor(): Promise<number>
 
 Obtains the index of the text where the cursor is located. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getTextIndexAtCursor(): Promise<int>--><!--Device-InputClient-getTextIndexAtCursor(): Promise<int>-End-->
 
@@ -881,8 +1047,8 @@ Obtains the index of the text where the cursor is located. This API uses a promi
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -904,7 +1070,9 @@ getTextIndexAtCursorSync(): number
 
 Obtains the index of the text where the cursor is located.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-getTextIndexAtCursorSync(): int--><!--Device-InputClient-getTextIndexAtCursorSync(): int-End-->
 
@@ -920,8 +1088,8 @@ Obtains the index of the text where the cursor is located.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -938,7 +1106,9 @@ insertText(text: string, callback: AsyncCallback<boolean>): void
 
 Inserts text. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-insertText(text: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -955,9 +1125,9 @@ Inserts text. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -986,7 +1156,9 @@ insertText(text: string): Promise<boolean>
 
 Inserts text. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-insertText(text: string): Promise<boolean>--><!--Device-InputClient-insertText(text: string): Promise<boolean>-End-->
 
@@ -1008,9 +1180,9 @@ Inserts text. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -1036,7 +1208,9 @@ insertTextSync(text: string): void
 
 Inserts text.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-insertTextSync(text: string): void--><!--Device-InputClient-insertTextSync(text: string): void-End-->
 
@@ -1052,9 +1226,9 @@ Inserts text.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) |
 
 ## Examples
 
@@ -1070,7 +1244,9 @@ moveCursor(direction: number, callback: AsyncCallback<void>): void
 
 Moves the cursor. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void--><!--Device-InputClient-moveCursor(direction: int, callback: AsyncCallback<void>): void-End-->
 
@@ -1087,8 +1263,8 @@ Moves the cursor. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1112,7 +1288,9 @@ moveCursor(direction: number): Promise<void>
 
 Moves the cursor. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-moveCursor(direction: int): Promise<void>--><!--Device-InputClient-moveCursor(direction: int): Promise<void>-End-->
 
@@ -1134,8 +1312,8 @@ Moves the cursor. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1157,7 +1335,9 @@ moveCursorSync(direction: number): void
 
 Moves the cursor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-moveCursorSync(direction: int): void--><!--Device-InputClient-moveCursorSync(direction: int): void-End-->
 
@@ -1173,8 +1353,8 @@ Moves the cursor.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1182,7 +1362,29 @@ Moves the cursor.
 inputClient.moveCursorSync(inputMethodEngine.Direction.CURSOR_UP);
 ```
 
-## off('attachOptionsDidChange')
+## offAttachOptionsDidChange
+
+```TypeScript
+offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void
+```
+
+Unsubscribe 'attachOptionsDidChange' event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void--><!--Device-InputClient-offAttachOptionsDidChange(callback?: Callback<AttachOptions>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | No |
+
+## off_attachOptionsDidChange
 
 ```TypeScript
 off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
@@ -1191,6 +1393,8 @@ off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void
 Unsubscribes from the event indicating that additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void--><!--Device-InputClient-off(type: 'attachOptionsDidChange', callback?: Callback<AttachOptions>): void-End-->
 
@@ -1217,7 +1421,29 @@ inputClient.off('attachOptionsDidChange', attachOptionsDidChangeCallback);
 console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 ```
 
-## on('attachOptionsDidChange')
+## onAttachOptionsDidChange
+
+```TypeScript
+onAttachOptionsDidChange(callback: Callback<AttachOptions>): void
+```
+
+Subscribe 'attachOptionsDidChange' event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void--><!--Device-InputClient-onAttachOptionsDidChange(callback: Callback<AttachOptions>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AttachOptions&gt; | Yes |
+
+## on_attachOptionsDidChange
 
 ```TypeScript
 on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
@@ -1226,6 +1452,8 @@ on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void
 Subscribes to the event indicating that the additional options for binding an input method are changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void--><!--Device-InputClient-on(type: 'attachOptionsDidChange', callback: Callback<AttachOptions>): void-End-->
 
@@ -1242,7 +1470,7 @@ Subscribes to the event indicating that the additional options for binding an in
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -1264,19 +1492,11 @@ console.info(`attachOptionsDidChange unsubscribed from attachOptionsDidChange`);
 recvMessage(msgHandler?: MessageHandler): void
 ```
 
-Registers or unregisters MessageHandler.
+Registers or unregisters MessageHandler. > **NOTE：**> > The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler) object is globally unique. After multiple > registrations, only the last registered object is valid and retained, and the > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback of the penultimate registered > object is triggered. > > If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler). Its > [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback will be triggered.
 
-> **NOTE：**
-> 
-> The [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler) object is globally unique. After multiple
-> registrations, only the last registered object is valid and retained, and the
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback of the penultimate registered
-> object is triggered.
-> 
-> If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler). Its
-> [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback will be triggered.
+**Since:** 23
 
-**Since:** 15
+**Deprecated since:** -1
 
 <!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void--><!--Device-InputClient-recvMessage(msgHandler?: MessageHandler): void-End-->
 
@@ -1292,7 +1512,7 @@ Registers or unregisters MessageHandler.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1322,7 +1542,9 @@ selectByMovement(movement: Movement, callback: AsyncCallback<void>): void
 
 Selects text based on the cursor movement direction. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByMovement(movement: Movement, callback: AsyncCallback<void>): void-End-->
 
@@ -1339,8 +1561,8 @@ Selects text based on the cursor movement direction. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1365,7 +1587,9 @@ selectByMovement(movement: Movement): Promise<void>
 
 Selects text based on the cursor movement direction. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>--><!--Device-InputClient-selectByMovement(movement: Movement): Promise<void>-End-->
 
@@ -1387,8 +1611,8 @@ Selects text based on the cursor movement direction. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1411,7 +1635,9 @@ selectByMovementSync(movement: Movement): void
 
 Selects text based on the cursor movement direction.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-selectByMovementSync(movement: Movement): void--><!--Device-InputClient-selectByMovementSync(movement: Movement): void-End-->
 
@@ -1427,8 +1653,8 @@ Selects text based on the cursor movement direction.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1445,7 +1671,9 @@ selectByRange(range: Range, callback: AsyncCallback<void>): void
 
 Selects text based on the specified range. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void--><!--Device-InputClient-selectByRange(range: Range, callback: AsyncCallback<void>): void-End-->
 
@@ -1462,8 +1690,8 @@ Selects text based on the specified range. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1488,7 +1716,9 @@ selectByRange(range: Range): Promise<void>
 
 Selects text based on the specified range. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-selectByRange(range: Range): Promise<void>--><!--Device-InputClient-selectByRange(range: Range): Promise<void>-End-->
 
@@ -1510,8 +1740,8 @@ Selects text based on the specified range. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1534,7 +1764,9 @@ selectByRangeSync(range: Range): void
 
 Selects text based on the specified range.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-selectByRangeSync(range: Range): void--><!--Device-InputClient-selectByRangeSync(range: Range): void-End-->
 
@@ -1550,8 +1782,8 @@ Selects text based on the specified range.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1566,20 +1798,11 @@ inputClient.selectByRangeSync(range);
 sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void
 ```
 
-Sends an extended edit action. This API uses an asynchronous callback to return the result.
+Sends an extended edit action. This API uses an asynchronous callback to return the result. > **NOTE：**> > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > on('handleExtendAction') for further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#ExtendAction), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
 
-> **NOTE：**
-> 
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens
-> for the corresponding event using
-> [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction',callback: (action: ExtendAction) => void): void) for further processing.
-> 
-> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#ExtendAction),
-> the edit box application needs to apply for the
-> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
-> permission.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void--><!--Device-InputClient-sendExtendAction(action: ExtendAction, callback: AsyncCallback<void>): void-End-->
 
@@ -1596,9 +1819,9 @@ Sends an extended edit action. This API uses an asynchronous callback to return 
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -1620,21 +1843,11 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 sendExtendAction(action: ExtendAction): Promise<void>
 ```
 
-Sends an extended edit action. This API uses a promise to return the result.
+Sends an extended edit action. This API uses a promise to return the result. > **NOTE：**> > The input method applications call this API to send extended edit actions to the edit box. The edit box listens > for the corresponding event using > on('handleExtendAction') for > further processing. > > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#ExtendAction), > the edit box application needs to apply for the > [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) > permission.
 
-> **NOTE：**
-> 
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens
-> for the corresponding event using
-> [on('handleExtendAction')](@ohos.inputMethod:inputMethod.InputMethodController.on(type: 'handleExtendAction',callback: (action: ExtendAction) => void): void;) for
-> further processing.
-> 
-> When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md#ExtendAction),
-> the edit box application needs to apply for the
-> [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard)
-> permission.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>--><!--Device-InputClient-sendExtendAction(action: ExtendAction): Promise<void>-End-->
 
@@ -1656,9 +1869,9 @@ Sends an extended edit action. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800006](../errorcode-inputmethod-framework.md#12800006-input-method-controller-error) |
 
 ## Examples
 
@@ -1680,7 +1893,9 @@ sendKeyFunction(action: number, callback: AsyncCallback<boolean>): void
 
 Sends the function key. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void--><!--Device-InputClient-sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void-End-->
 
@@ -1697,8 +1912,8 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1728,7 +1943,9 @@ sendKeyFunction(action: number): Promise<boolean>
 
 Sends the function key. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>--><!--Device-InputClient-sendKeyFunction(action: int): Promise<boolean>-End-->
 
@@ -1750,8 +1967,8 @@ Sends the function key. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1776,16 +1993,11 @@ inputClient.sendKeyFunction(action).then((result: boolean) => {
 sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>
 ```
 
-Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result.
+Sends the custom communication to the edit box application attached to the input method application. This API uses a promise to return the result. > **NOTE：**> > This API can be called only when the edit box is attached to the input method and enter the edit mode, and the > input method application is in full experience mode. > > The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
 
-> **NOTE：**
-> 
-> This API can be called only when the edit box is attached to the input method and enter the edit mode, and the
-> input method application is in full experience mode.
-> 
-> The maximum length of **msgId** is 256 B, and the maximum length of **msgParam** is 128 KB.
+**Since:** 23
 
-**Since:** 15
+**Deprecated since:** -1
 
 <!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>--><!--Device-InputClient-sendMessage(msgId: string, msgParam?: ArrayBuffer): Promise<void>-End-->
 
@@ -1808,12 +2020,12 @@ Sends the custom communication to the edit box application attached to the input
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) |
-| [12800009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
-| [12800015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
-| [12800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800016](../errorcode-inputmethod-framework.md#12800016-input-method-client-not-in-edit-mode) |
+| [12800009](../errorcode-inputmethod-framework.md#12800009-input-method-client-detached) |
+| [12800015](../errorcode-inputmethod-framework.md#12800015-message-receiver-unable-to-receive-custom-communication-data) |
+| [12800014](../errorcode-inputmethod-framework.md#12800014-nonfull-access-mode-of-the-input-method-application) |
 
 ## Examples
 
@@ -1835,17 +2047,11 @@ inputClient.sendMessage(msgId, msgParam).then(() => {
 sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>
 ```
 
-Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result.
+Sends private data to the system component that needs to communicate with the input method application. This API uses a promise to return the result. > **NOTE：**> > - The private data channel allows communication between the system preset input method application and specific > system components (such as a text box or a home screen application). It is usually used to implement custom > input on a specific device. > > - The total size of the private data is 32 KB, and the maximum number of private data records is 5.
 
-> **NOTE：**
-> 
-> - The private data channel allows communication between the system preset input method application and specific
-> system components (such as a text box or a home screen application). It is usually used to implement custom
-> input on a specific device.
-> 
-> - The total size of the private data is 32 KB, and the maximum number of private data records is 5.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>--><!--Device-InputClient-sendPrivateCommand(commandData: Record<string, CommandDataType>): Promise<void>-End-->
 
@@ -1855,7 +2061,7 @@ Sends private data to the system component that needs to communicate with the in
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| commandData | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, CommandDataType&gt; | Yes |
+| commandData | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, CommandDataType&gt; | Yes |
 
 **Return value:**
 
@@ -1867,9 +2073,9 @@ Sends private data to the system component that needs to communicate with the in
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-not-preconfigured-default-input-method) |
 
 ## Examples
 
@@ -1899,7 +2105,9 @@ setPreviewText(text: string, range: Range): Promise<void>
 
 Sets the preview text. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>--><!--Device-InputClient-setPreviewText(text: string, range: Range): Promise<void>-End-->
 
@@ -1922,9 +2130,9 @@ Sets the preview text. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 
@@ -1947,7 +2155,9 @@ setPreviewTextSync(text: string, range: Range): void
 
 Sets the preview text.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void--><!--Device-InputClient-setPreviewTextSync(text: string, range: Range): void-End-->
 
@@ -1964,9 +2174,9 @@ Sets the preview text.
 
 | Error Code ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800011](../errorcode-inputmethod-framework.md#12800011-text-preview-not-supported) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 Material effect parameters, used to control the display properties of the material such as refraction, reflection, perturbation, and overlay color.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-interface LiquidMaterialEffectParam--><!--Device-uiEffect-interface LiquidMaterialEffectParam-End-->
 
@@ -24,13 +26,15 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 distortFactor : double
 ```
 
-The perturbation effect coefficient. The value must be greater than or equal to 0.Values less than 0 indicate no perturbation effect.
+The perturbation effect coefficient. The value must be greater than or equal to 0. Values less than 0 indicate no perturbation effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-distortFactor : double--><!--Device-LiquidMaterialEffectParam-distortFactor : double-End-->
 
@@ -44,13 +48,15 @@ The perturbation effect coefficient. The value must be greater than or equal to 
 distortProgress : double
 ```
 
-The perturbation effect progress. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. 0 indicates the start of perturbation, and 1 indicates the end.
+The perturbation effect progress. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. 0 indicates the start of perturbation, and 1 indicates the end.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-distortProgress : double--><!--Device-LiquidMaterialEffectParam-distortProgress : double-End-->
 
@@ -68,9 +74,11 @@ Whether to enable the material effect. true means enabled, false means disabled.
 
 **Type:** boolean
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-enable : boolean--><!--Device-LiquidMaterialEffectParam-enable : boolean-End-->
 
@@ -84,13 +92,15 @@ Whether to enable the material effect. true means enabled, false means disabled.
 materialFactor : double
 ```
 
-The material coefficient. The value range is [0, 1]. Values less than 0 are treated as 0;values greater than 1 are treated as 1. A value of 0 means no material effect and the overlay color is used for filling; a larger value indicates a more obvious material effect.
+The material coefficient. The value range is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1. A value of 0 means no material effect and the overlay color is used for filling; a larger value indicates a more obvious material effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-materialFactor : double--><!--Device-LiquidMaterialEffectParam-materialFactor : double-End-->
 
@@ -104,13 +114,15 @@ The material coefficient. The value range is [0, 1]. Values less than 0 are trea
 reflectionFactor : double
 ```
 
-The reflection coefficient. The value range is [0, 10]. Values less than 0 are treated as 0;values greater than 10 are treated as 10. A value of 0 means no reflection effect;a larger value indicates stronger reflection.
+The reflection coefficient. The value range is [0, 10]. Values less than 0 are treated as 0; values greater than 10 are treated as 10. A value of 0 means no reflection effect; a larger value indicates stronger reflection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-reflectionFactor : double--><!--Device-LiquidMaterialEffectParam-reflectionFactor : double-End-->
 
@@ -124,13 +136,15 @@ The reflection coefficient. The value range is [0, 10]. Values less than 0 are t
 refractionFactor : double
 ```
 
-The refraction coefficient. The value range is [0, 10]. Values less than 0 are treated as 0;values greater than 10 are treated as 10. A value of 0 means no refraction effect;a larger value indicates stronger refraction.
+The refraction coefficient. The value range is [0, 10]. Values less than 0 are treated as 0; values greater than 10 are treated as 10. A value of 0 means no refraction effect; a larger value indicates stronger refraction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-refractionFactor : double--><!--Device-LiquidMaterialEffectParam-refractionFactor : double-End-->
 
@@ -144,13 +158,15 @@ The refraction coefficient. The value range is [0, 10]. Values less than 0 are t
 ripplePosition?: Array<[double, double]>
 ```
 
-The positions where the ripple effect is applied. Pass this parameter when you need to trigger ripple effects at multiple specified positions simultaneously. If not passed, there are no ripple positions by default,and the ripple effect will not take effect. Each position in the array contains x and y dimensions,using normalized coordinates where [0, 0] represents the top-left corner and [1, 1] represents the bottom-right corner. A maximum of 10 position coordinates are supported; exceeding this will make the entire parameter invalid.
+The positions where the ripple effect is applied. Pass this parameter when you need to trigger ripple effects at multiple specified positions simultaneously. If not passed, there are no ripple positions by default, and the ripple effect will not take effect. Each position in the array contains x and y dimensions, using normalized coordinates where [0, 0] represents the top-left corner and [1, 1] represents the bottom-right corner. A maximum of 10 position coordinates are supported; exceeding this will make the entire parameter invalid.
 
-**Type:** ArkTS-Dyn: Array&lt;[number, number]&gt;  <br>ArkTS-Sta：Array&lt;[double, double]&gt;
+**Type:** Array&lt;[double, double]&gt;
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-ripplePosition?: Array<[double, double]>--><!--Device-LiquidMaterialEffectParam-ripplePosition?: Array<[double, double]>-End-->
 
@@ -164,13 +180,15 @@ The positions where the ripple effect is applied. Pass this parameter when you n
 rippleProgress : double
 ```
 
-The ripple effect progress. The value must be greater than or equal to 0.Values less than 0 indicate no ripple effect.
+The ripple effect progress. The value must be greater than or equal to 0. Values less than 0 indicate no ripple effect.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-rippleProgress : double--><!--Device-LiquidMaterialEffectParam-rippleProgress : double-End-->
 
@@ -184,13 +202,15 @@ The ripple effect progress. The value must be greater than or equal to 0.Values 
 tintColor : [double, double, double, double]
 ```
 
-The overlay color of the material, where the four variables correspond to RGBA respectively.The value range for each is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1.
+The overlay color of the material, where the four variables correspond to RGBA respectively. The value range for each is [0, 1]. Values less than 0 are treated as 0; values greater than 1 are treated as 1.
 
-**Type:** ArkTS-Dyn: [number, number, number, number]  <br>ArkTS-Sta：[double, double, double, double]
+**Type:** [double, double, double, double]
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiquidMaterialEffectParam-tintColor : [double, double, double, double]--><!--Device-LiquidMaterialEffectParam-tintColor : [double, double, double, double]-End-->
 

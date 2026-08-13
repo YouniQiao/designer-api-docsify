@@ -14,9 +14,9 @@ function isSecureMode(callback: AsyncCallback<boolean>): void
 
 Checks whether the screen lock of the current device is secure.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 9
 
@@ -28,7 +28,7 @@ Checks whether the screen lock of the current device is secure.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | the callback of isSecureMode. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | the callback of isSecureMode. |
 
 ## Examples
 
@@ -53,9 +53,9 @@ function isSecureMode(): Promise<boolean>
 
 Checks whether the screen lock of the current device is secure.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 9
 

@@ -2,7 +2,9 @@
 
 Indicates the info of the rtt event.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface RttEventInfo--><!--Device-call-export interface RttEventInfo-End-->
 
@@ -26,7 +28,9 @@ Indicates the id of rtt.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttEventInfo-callId: int--><!--Device-RttEventInfo-callId: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the type of rtt event.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttEventInfo-eventType: int--><!--Device-RttEventInfo-eventType: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the reason of rtt event.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RttEventInfo-reason: int--><!--Device-RttEventInfo-reason: int-End-->
 

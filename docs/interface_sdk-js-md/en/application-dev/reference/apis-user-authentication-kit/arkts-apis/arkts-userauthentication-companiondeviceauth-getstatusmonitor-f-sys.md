@@ -16,7 +16,9 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -32,7 +34,7 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localUserId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Local user ID. User ID on the primary device, which is a positive integer greater than or equal to 0. It is used to obtain the status monitor of the companion device corresponding to the user. |
+| localUserId | int | Yes | Local user ID. User ID on the primary device, which is a positive integer greater than or equal to 0. It is used to obtain the status monitor of the companion device corresponding to the user. |
 
 **Return value:**
 
@@ -44,10 +46,10 @@ Obtains the status monitor. This API is used to obtain the status monitor object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
-| [32600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-template-not-found) | The local user is not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The local user is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 

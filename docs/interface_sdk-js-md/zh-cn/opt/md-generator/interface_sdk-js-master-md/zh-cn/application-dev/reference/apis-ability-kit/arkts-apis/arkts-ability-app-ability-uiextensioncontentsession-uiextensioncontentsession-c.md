@@ -2,7 +2,9 @@
 
 UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
 
@@ -16,7 +18,9 @@ getUIExtensionWindowProxy(): uiExtension.WindowProxy
 
 获取UIExtension窗口代理。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,7 +38,7 @@ getUIExtensionWindowProxy(): uiExtension.WindowProxy
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -82,11 +86,11 @@ struct Extension {
 loadContent(path: string, storage?: LocalStorage): void
 ```
 
-为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件加载页面，支持通过  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)生命周期中加载页面。
+为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件加载页面，支持通过 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)生命周期中加载页面。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,8 +109,8 @@ loadContent(path: string, storage?: LocalStorage): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -140,12 +144,11 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 loadContentByName(name: string, storage?: LocalStorage): void
 ```
 
-为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件加载  
-[命名路由](../../../ui/arkts-routing.md#命名路由)页面，支持通过  
-[LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)生命周期中加载命名路由页面。
+为[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility)组件加载 [命名路由](../../../ui/arkts-routing.md#命名路由)页面，支持通过 [LocalStorage](../../../ui/state-management/arkts-localstorage.md)传递状态属性给被加载的页面。该接口用于开发者在UIExtensionAbility组件的 [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate)生命周期中加载命名路由页面。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,7 +167,7 @@ loadContentByName(name: string, storage?: LocalStorage): void
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -232,7 +235,9 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 设置宿主应用窗口的隐私模式开启或关闭。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
@@ -258,8 +263,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -300,7 +305,9 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 
 设置宿主应用窗口的隐私模式开启或关闭。设置为隐私模式的窗口，窗口内容将无法被截屏或录屏。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PRIVACY_WINDOW
 
@@ -321,8 +328,8 @@ setWindowPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): voi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -366,6 +373,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, Object>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
@@ -385,13 +394,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 | 错误码ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -432,6 +441,40 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 ## startAbilityByType
 
 ```TypeScript
+startAbilityByType(type: string, wantParam: Record<string, RecordData>,
+    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void
+```
+
+通过type隐式启动UIExtensionAbility。使用callback异步回调。仅支持处于前台的应用调用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| wantParam | Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | 是 |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+
+## startAbilityByType
+
+```TypeScript
 startAbilityByType(type: string, wantParam: Record<string, Object>,
     abilityStartCallback: AbilityStartCallback): Promise<void>
 ```
@@ -439,6 +482,8 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 通过type隐式启动UIExtensionAbility组件。使用Promise异步回调。仅支持处于前台的应用调用。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -464,13 +509,13 @@ startAbilityByType(type: string, wantParam: Record<string, Object>,
 
 | 错误码ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -508,6 +553,45 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+## startAbilityByType
+
+```TypeScript
+startAbilityByType(type: string, wantParam: Record<string, RecordData>,
+    abilityStartCallback: AbilityStartCallback): Promise<void>
+```
+
+通过type隐式启动UIExtensionAbility。使用callback异步回调。仅支持处于前台的应用调用。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback): Promise<void>--><!--Device-UIExtensionContentSession-startAbilityByType(type: string, wantParam: Record<string, RecordData>,    abilityStartCallback: AbilityStartCallback): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | string | 是 |
+| wantParam | Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | 是 |
+| abilityStartCallback | [AbilityStartCallback](arkts-ability-abilitystartcallback-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise & lt;void & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+
 ## terminateSelf
 
 ```TypeScript
@@ -516,7 +600,9 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 销毁UIExtensionAbility组件自身，同时关闭对应的宿主应用窗口界面。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -534,7 +620,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -578,7 +664,9 @@ terminateSelf(): Promise<void>
 
 销毁UIExtensionAbility组件自身，同时关闭对应的宿主应用窗口界面。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -634,7 +722,9 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 销毁UIExtensionAbility组件自身，关闭对应的宿主应用窗口界面，并将结果返回给宿主应用。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -653,7 +743,7 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -707,7 +797,9 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 销毁UIExtensionAbility组件自身，关闭对应的宿主应用窗口界面，并将结果返回给宿主应用。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -731,7 +823,7 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

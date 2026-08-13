@@ -2,7 +2,9 @@
 
 设备管理实例，用于获取可信设备和本地设备的相关信息。在调用DeviceManager的方法前，需要先通过createDeviceManager构建一个DeviceManager实例dmInstance。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
 
@@ -17,6 +19,8 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 认证设备。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -36,10 +40,10 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [11600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600103-认证业务不可用) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-认证业务不可用) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -78,6 +82,40 @@ try {
 }
 ```
 
+## bindTarget
+
+```TypeScript
+bindTarget(deviceId: string, bindParam: Record<string, number | string>, callback: AsyncCallback<BindTargetResult>): void
+```
+
+认证设备。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: AsyncCallback<BindTargetResult>): void--><!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: AsyncCallback<BindTargetResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deviceId | string | 是 |
+| bindParam | Record & lt;string, number \ | string & gt; | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-认证业务不可用) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -86,7 +124,9 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 获取所有可信设备列表。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -104,8 +144,8 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -138,7 +178,9 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 获取所有可信设备列表。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -156,8 +198,8 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -188,7 +230,9 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 
 同步获取所有可信设备列表。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -206,8 +250,8 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -234,7 +278,9 @@ getDeviceName(networkId: string): string
 
 通过指定设备的网络标识获取该设备名称。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -258,9 +304,9 @@ getDeviceName(networkId: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -290,7 +336,9 @@ getDeviceType(networkId: string): number
 
 通过指定设备的网络标识获取该设备类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -314,9 +362,9 @@ getDeviceType(networkId: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -346,7 +394,9 @@ getLocalDeviceId(): string
 
 获取本地设备id，实际值为udid-hash与appid和盐值基于sha256方式进行混淆后的值。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -364,8 +414,8 @@ getLocalDeviceId(): string
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -393,7 +443,9 @@ getLocalDeviceName(): string
 
 获取本地设备名称。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -411,8 +463,8 @@ getLocalDeviceName(): string
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -440,7 +492,9 @@ getLocalDeviceNetworkId(): string
 
 获取本地设备网络标识。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -458,8 +512,8 @@ getLocalDeviceNetworkId(): string
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -487,7 +541,9 @@ getLocalDeviceType(): number
 
 获取本地设备类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -505,8 +561,8 @@ getLocalDeviceType(): number
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -526,7 +582,212 @@ try {
 }
 ```
 
-## off('deviceStateChange')
+## offDeviceNameChange
+
+```TypeScript
+offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
+```
+
+取消注册设备名称变更回调监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offDeviceStateChange
+
+```TypeScript
+offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
+```
+
+取消注册设备状态回调。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offDiscoverFailure
+
+```TypeScript
+offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
+```
+
+取消注册设备发现失败回调。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offDiscoverSuccess
+
+```TypeScript
+offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
+```
+
+取消注册设备发现成功回调。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offServiceDie
+
+```TypeScript
+offServiceDie(callback?: Callback<ServiceDieData>): void
+```
+
+取消注册设备管理服务死亡回调。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void--><!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## off_deviceNameChange
+
+```TypeScript
+off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
+```
+
+取消注册设备名称变更回调监听。使用callback异步回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'deviceNameChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class DeviceNameChangeData {
+  deviceName: string = '';
+}
+
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 取消注册设备名称变更回调
+  dmInstance.off('deviceNameChange', (data: DeviceNameChangeData) => {
+    console.info('deviceNameChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister device name change callback. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## off_deviceStateChange
 
 ```TypeScript
 off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -535,6 +796,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 取消注册设备状态回调。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -553,8 +816,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -585,7 +848,62 @@ try {
 }
 ```
 
-## off('discoverSuccess')
+## off_discoverFailure
+
+```TypeScript
+off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
+```
+
+取消注册设备发现失败回调。使用callback异步回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'discoverFailure' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class DiscoverFailureData {
+  reason: number = 0;
+}
+
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 取消注册设备发现失败回调
+  dmInstance.off('discoverFailure', (data: DiscoverFailureData) => {
+    console.info('discoverFailure' + JSON.stringify(data));
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to unregister discover failure callback. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## off_discoverSuccess
 
 ```TypeScript
 off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void
@@ -594,6 +912,8 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 取消注册设备发现成功回调。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -612,8 +932,8 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -643,113 +963,7 @@ try {
 }
 ```
 
-## off('deviceNameChange')
-
-```TypeScript
-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
-```
-
-取消注册设备名称变更回调监听。使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'deviceNameChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class DeviceNameChangeData {
-  deviceName: string = '';
-}
-
-try {
-  // 创建设备管理实例
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  // 取消注册设备名称变更回调
-  dmInstance.off('deviceNameChange', (data: DeviceNameChangeData) => {
-    console.info('deviceNameChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to unregister device name change callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## off('discoverFailure')
-
-```TypeScript
-off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
-```
-
-取消注册设备发现失败回调。使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'discoverFailure' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class DiscoverFailureData {
-  reason: number = 0;
-}
-
-try {
-  // 创建设备管理实例
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  // 取消注册设备发现失败回调
-  dmInstance.off('discoverFailure', (data: DiscoverFailureData) => {
-    console.info('discoverFailure' + JSON.stringify(data));
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to unregister discover failure callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## off('serviceDie')
+## off_serviceDie
 
 ```TypeScript
 off(type: 'serviceDie', callback?: Callback<{}>): void
@@ -758,6 +972,8 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 取消注册设备管理服务死亡回调。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -776,8 +992,8 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -798,7 +1014,212 @@ try {
 }
 ```
 
-## on('deviceStateChange')
+## onDeviceNameChange
+
+```TypeScript
+onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
+```
+
+注册设备名称变更回调，以便在设备名称改变时通知应用程序。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onDeviceStateChange
+
+```TypeScript
+onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
+```
+
+注册设备状态回调，以便在设备状态发生变化时根据应用捆绑包名通知应用。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onDiscoverFailure
+
+```TypeScript
+onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
+```
+
+注册设备发现失败回调监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onDiscoverSuccess
+
+```TypeScript
+onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
+```
+
+注册发现设备成功回调监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onServiceDie
+
+```TypeScript
+onServiceDie(callback: Callback<ServiceDieData>): void
+```
+
+注册设备管理服务死亡回调，以便在服务死亡时通知应用程序。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void--><!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## on_deviceNameChange
+
+```TypeScript
+on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
+```
+
+注册设备名称变更回调，以便在设备名称改变时通知应用程序。使用callback异步回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'deviceNameChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class DeviceNameChangeData {
+  deviceName: string = '';
+}
+
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 注册设备名称变更回调
+  dmInstance.on('deviceNameChange', (data: DeviceNameChangeData) => {
+    console.info('deviceNameChange on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register device name change callback. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## on_deviceStateChange
 
 ```TypeScript
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -807,6 +1228,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 注册设备状态回调，以便在设备状态发生变化时根据应用捆绑包名通知应用。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -825,8 +1248,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -857,7 +1280,62 @@ try {
 }
 ```
 
-## on('discoverSuccess')
+## on_discoverFailure
+
+```TypeScript
+on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
+```
+
+注册设备发现失败回调监听。使用callback异步回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'discoverFailure' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class DiscoverFailureData {
+  reason: number = 0;
+}
+
+try {
+  // 创建设备管理实例
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  // 注册设备发现失败回调
+  dmInstance.on('discoverFailure', (data: DiscoverFailureData) => {
+    console.info('discoverFailure on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to register discover failure callback. Code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## on_discoverSuccess
 
 ```TypeScript
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
@@ -866,6 +1344,8 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 注册发现设备成功回调监听。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -884,8 +1364,8 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -915,113 +1395,7 @@ try {
 }
 ```
 
-## on('deviceNameChange')
-
-```TypeScript
-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
-```
-
-注册设备名称变更回调，以便在设备名称改变时通知应用程序。使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'deviceNameChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class DeviceNameChangeData {
-  deviceName: string = '';
-}
-
-try {
-  // 创建设备管理实例
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  // 注册设备名称变更回调
-  dmInstance.on('deviceNameChange', (data: DeviceNameChangeData) => {
-    console.info('deviceNameChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to register device name change callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## on('discoverFailure')
-
-```TypeScript
-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
-```
-
-注册设备发现失败回调监听。使用callback异步回调。
-
-**起始版本：** 10
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void-End-->
-
-**系统能力：** SystemCapability.DistributedHardware.DeviceManager
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'discoverFailure' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class DiscoverFailureData {
-  reason: number = 0;
-}
-
-try {
-  // 创建设备管理实例
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  // 注册设备发现失败回调
-  dmInstance.on('discoverFailure', (data: DiscoverFailureData) => {
-    console.info('discoverFailure on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let error: BusinessError = err as BusinessError;
-  console.error(`Failed to register discover failure callback. Code: ${error.code}, message: ${error.message}`);
-}
-```
-
-## on('serviceDie')
+## on_serviceDie
 
 ```TypeScript
 on(type: 'serviceDie', callback?: Callback<{}>): void
@@ -1030,6 +1404,8 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 注册设备管理服务死亡回调，以便在服务死亡时通知应用程序。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1048,8 +1424,8 @@ on(type: 'serviceDie', callback?: Callback<{}>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1080,6 +1456,8 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void--><!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void-End-->
@@ -1097,10 +1475,10 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [11600104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
 
 ## 示例
 
@@ -1127,6 +1505,39 @@ try {
 }
 ```
 
+## startDiscovering
+
+```TypeScript
+startDiscovering(discoverParam: Record<string, number | string>, filterOptions?: Record<string, number | string>): void
+```
+
+发现周边设备。发现状态持续两分钟，超过两分钟，会停止发现，最大发现数量99个。wifi场景要求同局域网。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Record<string, int | string>): void--><!--Device-DeviceManager-startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Record<string, int | string>): void-End-->
+
+**系统能力：** SystemCapability.DistributedHardware.DeviceManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| discoverParam | Record & lt;string, number \ | string & gt; | 是 |
+| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | Record & lt;string, number \ | string & gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-发现业务不可用) |
+
 ## stopDiscovering
 
 ```TypeScript
@@ -1135,7 +1546,9 @@ stopDiscovering(): void
 
 停止发现周边设备。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1147,8 +1560,8 @@ stopDiscovering(): void
 
 | 错误码ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -1175,7 +1588,9 @@ unbindTarget(deviceId: string): void
 
 解除认证设备。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1193,9 +1608,9 @@ unbindTarget(deviceId: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

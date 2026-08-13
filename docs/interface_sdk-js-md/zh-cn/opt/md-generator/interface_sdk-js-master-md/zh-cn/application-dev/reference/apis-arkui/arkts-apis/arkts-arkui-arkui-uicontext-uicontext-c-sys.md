@@ -1,22 +1,43 @@
 # UIContext
 
-UIContext实例对象。
-
-> **说明：**
-
-> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
-> 
-> - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的
-> [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定
-> 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext
-> 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getCallingScopeUIContext)获取UIContext实例。本文中
-> UIContext对象以uiContext表示。
+UIContext实例对象。 > **说明：** > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - 以下API需要通过对应的UIContext实例调用。获取UIContext分为三种方式，第一种是使用ohos.window中的 > [getUIContext()](../../../reference/apis-arkui/arkts-apis-window-Window.md#getuicontext10)方法获取UIContext实例，第二种是通过自定 > 义组件内置方法[getUIContext()](../../../reference/apis-arkui/arkui-ts/ts-custom-component-api.md#getuicontext)获取UIContext > 实例，第三种是通过UIContext类的静态方法如[getCallingScopeUIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#getCallingScopeUIContext)获取UIContext实例。本文中 > UIContext对象以uiContext表示。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class UIContext--><!--Device-unnamed-export class UIContext-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## animateToImmediately
+
+```TypeScript
+animateToImmediately(param: AnimateParam, processor: Callback<void>): void
+```
+
+通过UIContext对象指定明确的动画主实例上下文，并触发显式动画立即下发。避免由于找不到实例或实例不对，导致的动画不执行或动画结束回调不执行问题。使用callback异步回调。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void--><!--Device-UIContext-animateToImmediately(param: AnimateParam, processor: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| param | [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) | 是 |
+| processor | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
 
 ## clearResourceCache
 
@@ -27,6 +48,8 @@ clearResourceCache(): void
 清除跨模块（[HSP](../../../quick-start/in-app-hsp.md)包）访问资源时生成的资源对象缓存。清除缓存后，下次访问该模块资源的加载时间会增加。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +65,7 @@ clearResourceCache(): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -72,6 +95,8 @@ freezeUINode(id: string, isFrozen: boolean): void
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UIContext-freezeUINode(id: string, isFrozen: boolean): void--><!--Device-UIContext-freezeUINode(id: string, isFrozen: boolean): void-End-->
@@ -91,7 +116,7 @@ freezeUINode(id: string, isFrozen: boolean): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## freezeUINode
 
@@ -102,6 +127,8 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 通过uniqueId设置组件的冻结状态，防止组件被标记为脏从而触发布局更新。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,7 +149,7 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getLuminanceSampler
 
@@ -130,9 +157,11 @@ freezeUINode(uniqueId: number, isFrozen: boolean): void
 getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 ```
 
-获取[LuminanceSampler](@ohos.arkui.UIContext)取色对象，通过该对象设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。
+获取[LuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)取色对象，通过该对象设置背景亮度取色参数、注册亮度变化监听回调、取消注册监听回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,7 +185,7 @@ getLuminanceSampler(target: TargetInfo): LuminanceSampler | undefined
 
 ## 示例
 
-参考[offBackgroundLuminanceChange](arkts-apis-uicontext-luminancesampler-sys.md#offbackgroundluminancechange23)接口的示例。
+参考[offBackgroundLuminanceChange](arkts-arkui-arkui-uicontext-luminancesampler-c-sys.md#offBackgroundLuminanceChange)接口的示例。
 
 ## recycleInvisibleImageMemory
 
@@ -167,6 +196,8 @@ recycleInvisibleImageMemory(enabled: boolean): void
 设置不可见Image节点内存回收配置开关，由系统应用配置，默认不开启；开启后，在应用退后台不可见页面下挂载的Image节点会进行内存回收。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,13 +243,11 @@ struct ImageRecycleSample {
 setDynamicDimming(id: string, value: number): void
 ```
 
-通过该方法设置组件的压暗程度。
-
-> **说明：**
-> 
-> 设置该属性后设置其他效果类属性会导致效果冲突。
+通过该方法设置组件的压暗程度。 > **说明：** > > 设置该属性后设置其他效果类属性会导致效果冲突。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -267,6 +296,8 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UIContext-setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig): void--><!--Device-UIContext-setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig): void-End-->
@@ -286,4 +317,4 @@ setKeyboardAppearanceConfig(uniqueId: number, config: KeyboardAppearanceConfig):
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

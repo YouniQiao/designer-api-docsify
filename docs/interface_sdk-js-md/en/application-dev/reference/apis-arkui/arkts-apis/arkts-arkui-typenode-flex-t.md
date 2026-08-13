@@ -1,20 +1,24 @@
 # Flex
 
 ```TypeScript
-type Flex = FlexFrameNode
+type Flex = TypedFrameNode<FlexInterface, FlexAttribute>
 ```
 
-Define the FrameNode type for Flex.
+Represents a FrameNode of the Flex type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Flex = FlexFrameNode--><!--Device-typeNode-type Flex = FlexFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Flex = TypedFrameNode<FlexInterface, FlexAttribute>--><!--Device-typeNode-type Flex = TypedFrameNode<FlexInterface, FlexAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** FlexFrameNode
+**Property type:** TypedFrameNode<FlexInterface, FlexAttribute>
 

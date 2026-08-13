@@ -2,9 +2,11 @@
 
 FA模型的使用信息属性集合。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-usageStatistics-interface BundleEvents--><!--Device-usageStatistics-interface BundleEvents-End-->
 
@@ -20,11 +22,13 @@ appGroup?: int
 
 应用程序的使用优先级组。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-appGroup?: int--><!--Device-BundleEvents-appGroup?: int-End-->
 
@@ -42,9 +46,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-bundleName?: string--><!--Device-BundleEvents-bundleName?: string-End-->
 
@@ -60,11 +66,13 @@ eventId?: int
 
 应用事件类型。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-eventId?: int--><!--Device-BundleEvents-eventId?: int-End-->
 
@@ -80,11 +88,13 @@ eventOccurredTime?: long
 
 应用事件发生的时间戳，单位：ms。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-eventOccurredTime?: long--><!--Device-BundleEvents-eventOccurredTime?: long-End-->
 
@@ -102,9 +112,11 @@ indexOfLink?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-indexOfLink?: string--><!--Device-BundleEvents-indexOfLink?: string-End-->
 
@@ -122,9 +134,11 @@ nameOfClass?: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-BundleEvents-nameOfClass?: string--><!--Device-BundleEvents-nameOfClass?: string-End-->
 

@@ -1,17 +1,17 @@
 # RouterItem
 
 ```TypeScript
-export type RouterItem = _HapModuleInfo.RouterItem
+export type RouterItem = _RouterItem
 ```
 
 Defines the router table configuration of the module.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-bundleManager-export type RouterItem = _HapModuleInfo.RouterItem--><!--Device-bundleManager-export type RouterItem = _HapModuleInfo.RouterItem-End-->
+<!--Device-bundleManager-export type RouterItem = _RouterItem--><!--Device-bundleManager-export type RouterItem = _RouterItem-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _HapModuleInfo.RouterItem
+**Property type:** _RouterItem

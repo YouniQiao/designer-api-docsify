@@ -1,10 +1,24 @@
 # @ohos.data.intelligence
 
-Provides methods for intelligent data processing.
+/*
+ Copyright (c) 2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 15
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace intelligence--><!--Device-unnamed-declare namespace intelligence-End-->
 
@@ -22,10 +36,10 @@ import { intelligence } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getimageembeddingmodel) | Obtains an image embedding model. |
-| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getsupportedcloudmodel) | Obtains the supported cloud embedding models. |
-| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#gettextembeddingmodel) | Obtains a text embedding model. |
-| [splitText](arkts-arkdata-intelligence-splittext-f.md#splittext) | Splits text. |
+| [getImageEmbeddingModel](arkts-arkdata-intelligence-getimageembeddingmodel-f.md#getImageEmbeddingModel) | Obtains an image embedding model. |
+| [getSupportedCloudModel](arkts-arkdata-intelligence-getsupportedcloudmodel-f.md#getSupportedCloudModel) | Obtains the supported cloud embedding models. |
+| [getTextEmbeddingModel](arkts-arkdata-intelligence-gettextembeddingmodel-f.md#getTextEmbeddingModel) | Obtains a text embedding model. |
+| [splitText](arkts-arkdata-intelligence-splittext-f.md#splitText) | Splits text. |
 
 ### Interfaces
 
@@ -35,7 +49,7 @@ import { intelligence } from '@kit.ArkData';
 | [ImageEmbedding](arkts-arkdata-intelligence-imageembedding-i.md) | Describes the image embedding functions of the multi-modal embedding model. |
 | [ModelConfig](arkts-arkdata-intelligence-modelconfig-i.md) | Manages configurations of the embedding model. |
 | [SplitConfig](arkts-arkdata-intelligence-splitconfig-i.md) | Manages text chunk process configurations. |
-| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | Describes the text embedding functions of the multi-modal embedding model.Chinese and English are supported. |
+| [TextEmbedding](arkts-arkdata-intelligence-textembedding-i.md) | Describes the text embedding functions of the multi-modal embedding model. Chinese and English are supported. |
 
 ### Enums
 

@@ -1,14 +1,18 @@
-# PrintExtensionAbility
+# PrintExtensionAbility (System API)
 
 class of print extension ability.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -16,53 +20,19 @@ class of print extension ability.
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 ```
 
-## onCancelPrintJob
-
-```TypeScript
-public onCancelPrintJob(jobInfo: print.PrintJob): void
-```
-
-Called once to remove the print job has been started.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
-
 ## onConnectPrinter
 
-ArkTS-Dyn:
-```TypeScript
-onConnectPrinter(printerId: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onConnectPrinter(printerId: int): void
 ```
 
 Called once to connect to the specific printer.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,7 +44,7 @@ Called once to connect to the specific printer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | connect the printerId. |
+| printerId | int | Yes | connect the printerId. |
 
 ## Examples
 
@@ -97,9 +67,11 @@ onCreate(want: Want): void
 
 Called once to initialize the extensionAbility.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,9 +107,11 @@ onDestroy(): void
 
 Called once to finalize the extensionAbility.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,21 +133,17 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 
 ## onDisconnectPrinter
 
-ArkTS-Dyn:
-```TypeScript
-onDisconnectPrinter(printerId: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onDisconnectPrinter(printerId: int): void
 ```
 
 Called once to disconnect to the specific printer.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,7 +155,7 @@ Called once to disconnect to the specific printer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | connect the printerId. |
+| printerId | int | Yes | connect the printerId. |
 
 ## Examples
 
@@ -200,99 +170,6 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 }
 ```
 
-## onRequestPreview
-
-```TypeScript
-onRequestPreview(jobInfo: print.PrintJob): string
-```
-
-Called once to request preview and send result to Print SA.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string--><!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of job. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| string | preview result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
-
-## Examples
-
-```TypeScript
-import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onRequestPreview(jobInfo: print.PrintJob): string {
-        console.info('onRequestPreview enter');
-        // ...
-        let tmp : string = '';
-        return tmp;
-    }
-}
-```
-
-## onRequestPrinterCapability
-
-ArkTS-Dyn:
-```TypeScript
-public onRequestPrinterCapability(printerId: number): print.PrinterCapability
-```
-
-ArkTS-Sta:
-```TypeScript
-public onRequestPrinterCapability(printerId: int): print.PrinterCapability
-```
-
-Called once to request the printer's capabilities.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability--><!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| printerId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the information of printer. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| print.PrinterCapability | printer capability. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
-
 ## onStartDiscoverPrinter
 
 ```TypeScript
@@ -301,9 +178,11 @@ onStartDiscoverPrinter(): void
 
 Called once to start to discover the printers connected with the device.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,36 +203,6 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 }
 ```
 
-## onStartPrintJob
-
-```TypeScript
-public onStartPrintJob(jobInfo: print.PrintJob): void
-```
-
-Called once to start print job.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| jobInfo | print.PrintJob | Yes | Indicates the information of print job. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application<br>**Applicable version:** 10 - 23 |
-
 ## onStopDiscoverPrinter
 
 ```TypeScript
@@ -362,9 +211,11 @@ onStopDiscoverPrinter(): void
 
 Called once to stop discovering the printer.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -397,7 +248,9 @@ Indicates print service extension ability context.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

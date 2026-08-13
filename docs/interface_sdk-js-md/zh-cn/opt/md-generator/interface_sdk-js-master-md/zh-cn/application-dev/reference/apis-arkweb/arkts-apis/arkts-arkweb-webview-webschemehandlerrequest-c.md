@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-class WebSchemeHandlerRequest--><!--Device-webview-class WebSchemeHandlerRequest-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ getFrameUrl(): string
 获取触发此请求的Frame的URL。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-WebSchemeHandlerRequest-getFrameUrl(): string--><!--Device-WebSchemeHandlerRequest-getFrameUrl(): string-End-->
 
@@ -37,6 +41,8 @@ getHeader(): Array<WebHeader>
 获取资源请求头信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -60,6 +66,8 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getHttpBodyStream(): WebHttpBodyStream | null--><!--Device-WebSchemeHandlerRequest-getHttpBodyStream(): WebHttpBodyStream | null-End-->
@@ -81,6 +89,8 @@ getReferrer(): string
 获取referrer。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -104,6 +114,8 @@ getRequestMethod(): string
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-getRequestMethod(): string--><!--Device-WebSchemeHandlerRequest-getRequestMethod(): string-End-->
@@ -126,6 +138,8 @@ getRequestResourceType(): WebResourceType
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType--><!--Device-WebSchemeHandlerRequest-getRequestResourceType(): WebResourceType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -145,6 +159,8 @@ getRequestUrl(): string
 获取资源请求的URL信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -168,6 +184,8 @@ hasGesture(): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerRequest-hasGesture(): boolean--><!--Device-WebSchemeHandlerRequest-hasGesture(): boolean-End-->
@@ -189,6 +207,8 @@ isMainFrame(): boolean
 判断资源请求是否为主frame。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

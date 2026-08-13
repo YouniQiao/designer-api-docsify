@@ -2,7 +2,9 @@
 
 子窗口创建参数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface SubWindowOptions--><!--Device-window-interface SubWindowOptions-End-->
 
@@ -18,7 +20,9 @@ isTopmost?: boolean
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SubWindowOptions-isTopmost?: boolean--><!--Device-SubWindowOptions-isTopmost?: boolean-End-->
 

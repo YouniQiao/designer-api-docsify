@@ -1,13 +1,8 @@
 # Stepper
 
-The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task
-completion process.
+The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task completion process. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Only the child component [StepperItem]{@link stepper_item} is supported.
+## Child Components Only the child component StepperItem is supported.
 
 ## Stepper
 
@@ -15,9 +10,7 @@ Only the child component [StepperItem]{@link stepper_item} is supported.
 Stepper(value?: { index?: number })
 ```
 
-Creates a **Stepper** component.
-
-> **NOTE：**
+Creates a **Stepper** component. > **NOTE：**
 
 **Since:** 8
 
@@ -25,7 +18,7 @@ Creates a **Stepper** component.
 
 **Deprecated since:** 22
 
-**Substitutes:** [index](Swiper.SwiperAttribute#index)
+**Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,7 +30,7 @@ Creates a **Stepper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.<br>Default value: **0**<br> Since API version 10, this parameter supports two-way binding through [\$\$](docroot://ui/state-management/arkts-two-way-sync.md). |
+| value | { index?: number } | No | Index of the **StepperItem** that is currently displayed.<br>Default value: **0**<br> Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md). |
 
 ## Summary
 

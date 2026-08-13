@@ -1,7 +1,6 @@
 # InputMethodEngine
 
-In the following API examples, you must first use   
-[getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getInputMethodEngine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getInputMethodEngine) to obtain an **InputMethodEngine** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -21,7 +20,7 @@ In the following API examples, you must first use
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-## off('inputStart')
+## off_inputStart
 
 ```TypeScript
 off(
@@ -38,7 +37,7 @@ Disables listening for the input method binding event.
 
 **Deprecated since:** 23
 
-**Substitutes:** [off](inputMethodEngine.InputMethodAbility.off(type:)
+**Substitutes:** off(type: 'inputStart', callback?: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
 <!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-off(      type: 'inputStart',      callback?: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -61,7 +60,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## off('keyboardShow' | 'keyboardHide')
+## off_keyboardHide
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -75,7 +74,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Deprecated since:** 23
 
-**Substitutes:** [off](inputMethodEngine.InputMethodAbility.off(type:)
+**Substitutes:** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -95,7 +94,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## off('keyboardShow' | 'keyboardHide')
+## off_keyboardShow
 
 ```TypeScript
 off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
@@ -109,7 +108,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 **Deprecated since:** 23
 
-**Substitutes:** [off](inputMethodEngine.InputMethodAbility.off(type:)
+**Substitutes:** off(type: 'keyboardShow' | 'keyboardHide', callback?: () =&gt; void)
 
 <!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void--><!--Device-InputMethodEngine-off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void-End-->
 
@@ -129,7 +128,7 @@ inputMethodEngine.getInputMethodEngine().off('keyboardShow');
 inputMethodEngine.getInputMethodEngine().off('keyboardHide');
 ```
 
-## on('inputStart')
+## on_inputStart
 
 ```TypeScript
 on(
@@ -146,7 +145,7 @@ Enables listening for the input method binding event. This API uses an asynchron
 
 **Deprecated since:** 23
 
-**Substitutes:** [on](inputMethodEngine.InputMethodAbility.on(type:)
+**Substitutes:** on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) =&gt; void)
 
 <!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void--><!--Device-InputMethodEngine-on(      type: 'inputStart',      callback: (kbController: KeyboardController, textInputClient: TextInputClient) => void    ): void-End-->
 
@@ -170,7 +169,7 @@ inputMethodEngine.getInputMethodEngine()
     });
 ```
 
-## on('keyboardShow' | 'keyboardHide')
+## on_keyboardHide
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -184,7 +183,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Deprecated since:** 23
 
-**Substitutes:** [on](inputMethodEngine.InputMethodAbility.on(type:)
+**Substitutes:** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 
@@ -208,7 +207,7 @@ inputMethodEngine.getInputMethodEngine().on('keyboardHide', () => {
 });
 ```
 
-## on('keyboardShow' | 'keyboardHide')
+## on_keyboardShow
 
 ```TypeScript
 on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
@@ -222,7 +221,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 **Deprecated since:** 23
 
-**Substitutes:** [on](inputMethodEngine.InputMethodAbility.on(type:)
+**Substitutes:** on(type: 'keyboardShow' | 'keyboardHide', callback: () =&gt; void)
 
 <!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void--><!--Device-InputMethodEngine-on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void-End-->
 

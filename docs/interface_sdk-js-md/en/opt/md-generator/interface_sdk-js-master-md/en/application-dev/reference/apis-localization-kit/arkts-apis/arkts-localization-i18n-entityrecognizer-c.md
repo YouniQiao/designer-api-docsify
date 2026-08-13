@@ -2,7 +2,9 @@
 
 Provides entity recognition capabilities, which can be used to obtain the type and start and end positions of an entity in the text. Currently, supported entities include phone numbers, and date and time.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class EntityRecognizer--><!--Device-i18n-export class EntityRecognizer-End-->
 
@@ -22,7 +24,9 @@ constructor(locale?: string)
 
 Creates an **entityRecognizer** object. This object is used to recognize entities in the text for the specified locale.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,8 +44,8 @@ Creates an **entityRecognizer** object. This object is used to recognize entitie
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -65,7 +69,9 @@ findEntityInfo(text: string): Array<EntityInfoItem>
 
 Obtains entity information in the **text** object.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -89,7 +95,7 @@ Obtains entity information in the **text** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

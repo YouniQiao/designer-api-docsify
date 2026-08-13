@@ -4,6 +4,8 @@ Defines the controller of the **XComponent**. You can bind the controller to the
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class XComponentController--><!--Device-unnamed-declare class XComponentController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor()
 A constructor used to create a **XComponentController** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,10 +40,11 @@ xcomponentController: XComponentController = new XComponentController();
 getXComponentContext(): Object
 ```
 
-Obtains the context of an **XComponent** object. This API works only when **type** of the **XComponent** is set to  
-**SURFACE("surface")** or **TEXTURE**.
+Obtains the context of an **XComponent** object. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -59,9 +64,11 @@ Obtains the context of an **XComponent** object. This API works only when **type
 getXComponentSurfaceId(): string
 ```
 
-Obtains the ID of the surface held by the **XComponent**. This API works only when **type** of the **XComponent**is **SURFACE("surface")** or **TEXTURE**.
+Obtains the ID of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,9 +112,11 @@ struct Index {
 getXComponentSurfaceRect(): SurfaceRect
 ```
 
-Obtains the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent**type is **SURFACE("surface")** or **TEXTURE**.
+Obtains the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent** type is **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,6 +142,8 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -145,7 +156,7 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [Required](../../apis-default/arkts-apis/arkts-required-t.md)&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; |
+| [Required](../../apis-na/arkts-apis/arkts-na-required-t.md)&lt;[SurfaceRotationOptions](arkts-arkui-surfacerotationoptions-i.md)&gt; |
 
 ## lockCanvas
 
@@ -153,9 +164,11 @@ Obtains whether the orientation of the surface held by this **XComponent** is lo
 lockCanvas(): DrawingCanvas | null
 ```
 
-Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods,see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#Canvas).
+Obtains a canvas object for drawing content on the **XComponent** component. For details about the drawing methods, see [Canvas](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#Canvas).
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -177,10 +190,11 @@ Obtains a canvas object for drawing content on the **XComponent** component. For
 onSurfaceChanged(surfaceId: string, rect: SurfaceRect): void
 ```
 
-Triggered when the surface held by the **XComponent** has its size changed (including the time when the  
-**XComponent** is created with the specified size). This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
+Triggered when the surface held by the **XComponent** has its size changed (including the time when the **XComponent** is created with the specified size). This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -203,10 +217,11 @@ Triggered when the surface held by the **XComponent** has its size changed (incl
 onSurfaceCreated(surfaceId: string): void
 ```
 
-Triggered when the surface held by the **XComponent** is created. This API works only when **type** of the  
-**XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
+Triggered when the surface held by the **XComponent** is created. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,10 +243,11 @@ Triggered when the surface held by the **XComponent** is created. This API works
 onSurfaceDestroyed(surfaceId: string): void
 ```
 
-Triggered when the surface held by the **XComponent** is destroyed. This API works only when **type** of the  
-**XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
+Triggered when the surface held by the **XComponent** is destroyed. This API works only when **type** of the **XComponent** is set to **SURFACE** (**"surface"**) or **TEXTURE**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -253,14 +269,11 @@ Triggered when the surface held by the **XComponent** is destroyed. This API wor
 setXComponentSurfaceConfig(config: SurfaceConfig):void
 ```
 
-Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the  
-**XComponent** is considered opaque during rendering.
-
-> **NOTE：**
-> 
-> This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
+Sets the options of the surface created by the **XComponent**, which determine whether the surface held by the **XComponent** is considered opaque during rendering. > **NOTE：**> > This API takes effect only when the type of **XComponent** is **TEXTURE** or **SURFACE**.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,9 +295,11 @@ Sets the options of the surface created by the **XComponent**, which determine w
 setXComponentSurfaceRect(rect: SurfaceRect): void
 ```
 
-Sets the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent**type is **SURFACE("surface")** or **TEXTURE**.
+Sets the display area for the surface held by the **XComponent**, including the width, height, and position coordinates relative to the upper left corner of the component. This API is only effective when the **XComponent** type is **SURFACE("surface")** or **TEXTURE**.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,6 +325,8 @@ Sets whether to lock the orientation of the surface held by this **XComponent** 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -333,10 +350,7 @@ setXComponentSurfaceSize(value: {
   }): void
 ```
 
-Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the  
-**XComponent** is set to **SURFACE("surface")** or **TEXTURE**.
-
-Unit: px.
+Sets the width and height of the surface held by the **XComponent**. This API works only when **type** of the **XComponent** is set to **SURFACE("surface")** or **TEXTURE**. Unit: px.
 
 **Since:** 9
 
@@ -360,20 +374,11 @@ Unit: px.
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is  
-[enabled](XComponentAttribute#enableAnalyzer). This API uses a promise to return the result.
-
-Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.
-
-If this API is repeatedly called before the execution is complete, an error callback is triggered.
-
-> **NOTE：**
-
-> The image analysis type cannot be dynamically modified.
-> 
-> This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
+Starts AI image analysis in the given settings. Before calling this API, make sure the AI image analyzer is [enabled](arkts-arkui-xcomponent-attribute.md#enableAnalyzer). This API uses a promise to return the result. Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API. If this API is repeatedly called before the execution is complete, an error callback is triggered. > **NOTE：**> The image analysis type cannot be dynamically modified. > > This API depends on device capabilities. If it is called on an incompatible device, an error code is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -399,9 +404,9 @@ If this API is repeatedly called before the execution is complete, an error call
 
 | Error Code ID |
 | --- |
-| [110001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
-| [110003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
-| [110002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) |
 
 ## stopImageAnalyzer
 
@@ -409,16 +414,11 @@ If this API is repeatedly called before the execution is complete, an error call
 stopImageAnalyzer(): void
 ```
 
-Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed.
-
-> **NOTE：**
-
-> If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is
-> triggered.
-> 
-> This feature depends on device capabilities.
+Stops AI image analysis. The content displayed by the AI image analyzer will be destroyed. > **NOTE：**> If this API is called when the **startImageAnalyzer** API has not yet returned any result, an error callback is > triggered. > > This feature depends on device capabilities.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -437,6 +437,8 @@ unlockCanvasAndPost(canvas: DrawingCanvas):void
 Submits the drawn content from a canvas object to the display area of the **XComponent** component and releases the canvas object.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

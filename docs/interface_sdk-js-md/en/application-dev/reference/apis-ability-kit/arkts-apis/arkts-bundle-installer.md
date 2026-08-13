@@ -1,14 +1,12 @@
 # @ohos.bundle.installer
 
-The module provides APIs for you to install, uninstall, and recover bundles on devices.
+The module provides APIs for you to install, uninstall, and recover bundles on devices. > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace installer--><!--Device-unnamed-declare namespace installer-End-->
 
@@ -29,9 +27,9 @@ import { installer } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller) | Obtains a BundleInstaller object. This API uses an asynchronous callback to return the result. |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller-1) | Obtains a BundleInstaller object. This API uses a promise to return the result. |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getbundleinstallersync) | Obtains a BundleInstaller object. This API is a synchronous API. |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getBundleInstaller) | Obtains a BundleInstaller object. This API uses an asynchronous callback to return the result. |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getBundleInstaller-(System-API)) | Obtains a BundleInstaller object. This API uses a promise to return the result. |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getBundleInstallerSync) | Obtains a BundleInstaller object. This API is a synchronous API. |
 <!--DelEnd-->
 
 <!--Del-->

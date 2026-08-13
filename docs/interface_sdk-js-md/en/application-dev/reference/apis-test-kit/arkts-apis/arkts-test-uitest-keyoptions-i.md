@@ -4,7 +4,9 @@ Represents the options for key operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface KeyOptions--><!--Device-unnamed-declare interface KeyOptions-End-->
 
@@ -22,13 +24,15 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 key1?: int
 ```
 
-The first keyCode to press during the operation.If not set, no key event will be injected.Setting only key2 without key1 will result in a BusinessError 17000007.
+The first keyCode to press during the operation. If not set, no key event will be injected. Setting only key2 without key1 will result in a BusinessError 17000007.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -42,13 +46,15 @@ The first keyCode to press during the operation.If not set, no key event will be
 key2?: int
 ```
 
-The second KeyCode to press during the operation.If not set, no key event will be injected.Setting only key2 without key1 will result in a BusinessError 17000007.
+The second KeyCode to press during the operation. If not set, no key event will be injected. Setting only key2 without key1 will result in a BusinessError 17000007.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

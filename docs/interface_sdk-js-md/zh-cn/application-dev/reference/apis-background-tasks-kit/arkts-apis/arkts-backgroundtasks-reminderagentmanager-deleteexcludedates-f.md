@@ -8,9 +8,11 @@ function deleteExcludeDates(reminderId: int): Promise<void>
 
 为指定id的周期性的日历提醒，删除设置的所有不提醒日期。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>-End-->
 
@@ -20,7 +22,7 @@ function deleteExcludeDates(reminderId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 需要删除不提醒日期的代理提醒id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) 时作为返回值返回。 |
+| reminderId | int | 是 | 需要删除不提醒日期的代理提醒id。 代理提醒id会在 [发布代理提醒](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) 时作为返回值返回。 |
 
 **返回值：**
 
@@ -32,8 +34,8 @@ function deleteExcludeDates(reminderId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied |
-| [1700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) | The reminder does not exist. |
 
 ## 示例
 

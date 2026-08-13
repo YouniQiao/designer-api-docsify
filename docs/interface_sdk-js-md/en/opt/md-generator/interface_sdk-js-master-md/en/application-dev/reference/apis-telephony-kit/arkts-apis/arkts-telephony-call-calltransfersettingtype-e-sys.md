@@ -2,7 +2,9 @@
 
 Enumerates call transfer setting types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum CallTransferSettingType--><!--Device-call-export enum CallTransferSettingType-End-->
 
@@ -18,7 +20,9 @@ CALL_TRANSFER_DISABLE = 0
 
 Disabling of call transfer.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0--><!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0-End-->
 
@@ -34,7 +38,9 @@ CALL_TRANSFER_ENABLE = 1
 
 Enabling of call transfer.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1--><!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1-End-->
 
@@ -50,7 +56,9 @@ CALL_TRANSFER_REGISTRATION = 3
 
 Registration of call transfer.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3--><!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3-End-->
 
@@ -66,7 +74,9 @@ CALL_TRANSFER_ERASURE = 4
 
 Erasing of call transfer.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4--><!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4-End-->
 

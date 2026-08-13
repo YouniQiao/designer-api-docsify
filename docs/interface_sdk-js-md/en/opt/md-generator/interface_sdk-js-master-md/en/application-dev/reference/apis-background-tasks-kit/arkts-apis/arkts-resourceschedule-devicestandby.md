@@ -1,8 +1,10 @@
 # @ohos.resourceschedule.deviceStandby
 
-Provides methods for managing device standby,including the methods for querying standby status and exemption list.
+Provides methods for managing device standby, including the methods for querying standby status and exemption list.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
 
@@ -21,10 +23,10 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps) |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps-1) |
-| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseexemptionresource) |
-| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestexemptionresource) |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps-(System-API)) |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps-(System-API)) |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseExemptionResource-(System-API)) |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestExemptionResource-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

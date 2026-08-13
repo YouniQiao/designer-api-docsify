@@ -14,7 +14,9 @@ function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void
 
 Obtains the storage space (in bytes) of this application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void--><!--Device-storageStatistics-function getCurrentBundleStats(callback: AsyncCallback<BundleStats>): void-End-->
 
@@ -30,7 +32,7 @@ Obtains the storage space (in bytes) of this application. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 | 13900042 |
 
@@ -57,7 +59,9 @@ function getCurrentBundleStats(): Promise<BundleStats>
 
 Obtains the storage space (in bytes) of this application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>--><!--Device-storageStatistics-function getCurrentBundleStats(): Promise<BundleStats>-End-->
 
@@ -73,7 +77,7 @@ Obtains the storage space (in bytes) of this application. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600001 |
 | 13900042 |
 

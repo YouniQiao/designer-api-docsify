@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export class Matrix2D--><!--Device-unnamed-export class Matrix2D-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor()
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -43,6 +47,8 @@ identity(): Matrix2D
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -72,6 +78,8 @@ invert(): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -99,6 +107,8 @@ multiply(other?: Matrix2D): Matrix2D
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -133,6 +143,8 @@ rotate(rx?: number, ry?: number): Matrix2D
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -169,6 +181,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -203,6 +217,8 @@ translate(tx?: number, ty?: number): Matrix2D
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -241,6 +257,8 @@ rotateX?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -264,6 +282,8 @@ rotateY?: number
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -289,6 +309,8 @@ scaleX?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -312,6 +334,8 @@ scaleY?: number
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -337,6 +361,8 @@ translateX?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -360,6 +386,8 @@ translateY?: number
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

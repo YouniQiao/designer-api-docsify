@@ -8,7 +8,9 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 获取所有短时任务信息，如当日剩余总配额等，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>--><!--Device-backgroundTaskManager-function getTransientTaskInfo(): Promise<TransientTaskInfo>-End-->
 
@@ -24,9 +26,9 @@ function getTransientTaskInfo(): Promise<TransientTaskInfo>
 
 | 错误码ID |
 | --- |
-| [9900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900004-系统服务失败) |
-| [9900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900003-parcel读写操作失败) |
-| [9900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) |
+| [9900004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900004-系统服务失败) |
+| [9900003](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900003-parcel读写操作失败) |
+| [9900001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9900001-短时任务调用方信息校验失败) |
 
 ## 示例
 

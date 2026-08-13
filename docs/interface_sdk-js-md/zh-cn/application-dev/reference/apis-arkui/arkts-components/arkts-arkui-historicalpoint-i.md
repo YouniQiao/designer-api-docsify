@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface HistoricalPoint--><!--Device-unnamed-declare interface HistoricalPoint-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@
 force: number
 ```
 
-历史点对应触摸事件的压力大小。
-
-默认值：0
-
-取值范围：[0,65535)，压力越大，值越大。
+历史点对应触摸事件的压力大小。 默认值：0 取值范围：[0,65535)，压力越大，值越大。
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,15 +42,15 @@ force: number
 size: number
 ```
 
-历史点对应触摸事件中手指与屏幕的触摸区域大小。
-
-默认值：0
+历史点对应触摸事件中手指与屏幕的触摸区域大小。 默认值：0
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,15 +66,15 @@ size: number
 timestamp: number
 ```
 
-历史点对应触摸事件的时间戳，表示触发事件时距离系统启动的时间间隔。
-
-单位：ns
+历史点对应触摸事件的时间戳，表示触发事件时距离系统启动的时间间隔。 单位：ns
 
 **类型：** number
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,6 +97,8 @@ touchObject: TouchObject
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

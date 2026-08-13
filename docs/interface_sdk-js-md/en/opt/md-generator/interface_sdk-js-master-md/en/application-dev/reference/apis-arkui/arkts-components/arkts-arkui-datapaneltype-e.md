@@ -4,6 +4,8 @@ Enumerates data panel types.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum DataPanelType--><!--Device-unnamed-declare enum DataPanelType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Line
 Line data panel.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,6 +39,8 @@ Circle
 Circle data panel.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

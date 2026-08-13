@@ -4,6 +4,8 @@ The message received or sent from web message port.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-webview-class WebMessageExt--><!--Device-webview-class WebMessageExt-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Get the array value of the web message.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-getArray(): Array<string | number | boolean>--><!--Device-WebMessageExt-getArray(): Array<string | number | boolean>-End-->
@@ -40,7 +44,7 @@ Get the array value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getArrayBuffer
 
@@ -51,6 +55,8 @@ getArrayBuffer(): ArrayBuffer
 Get the array buffer value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,7 +74,7 @@ Get the array buffer value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getBoolean
 
@@ -79,6 +85,8 @@ getBoolean(): boolean
 Get the boolean value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +104,7 @@ Get the boolean value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getError
 
@@ -107,6 +115,8 @@ getError(): Error
 Get the error value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -124,7 +134,7 @@ Get the error value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getNumber
 
@@ -135,6 +145,8 @@ getNumber(): number
 Get the number value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -152,7 +164,7 @@ Get the number value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getString
 
@@ -163,6 +175,8 @@ getString(): string
 Get the string value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -180,7 +194,7 @@ Get the string value of the web message.
 
 | Error Code ID |
 | --- |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## getType
 
@@ -191,6 +205,8 @@ getType(): WebMessageType
 Get the type of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -214,6 +230,8 @@ Set the array value of the web message.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void--><!--Device-WebMessageExt-setArray(message: Array<string | number | boolean>): void-End-->
@@ -230,8 +248,8 @@ Set the array value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setArrayBuffer
 
@@ -242,6 +260,8 @@ setArrayBuffer(message: ArrayBuffer): void
 Set the array buffer value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -259,8 +279,8 @@ Set the array buffer value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setBoolean
 
@@ -271,6 +291,8 @@ setBoolean(message: boolean): void
 Set the boolean value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -288,8 +310,8 @@ Set the boolean value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setError
 
@@ -300,6 +322,8 @@ setError(message: Error): void
 Set the error value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -317,8 +341,8 @@ Set the error value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setNumber
 
@@ -329,6 +353,8 @@ setNumber(message: number): void
 Set the number value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -346,8 +372,8 @@ Set the number value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setString
 
@@ -358,6 +384,8 @@ setString(message: string): void
 Set the string value of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -375,8 +403,8 @@ Set the string value of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |
 
 ## setType
 
@@ -387,6 +415,8 @@ setType(type: WebMessageType): void
 Set the type of the web message.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -404,5 +434,5 @@ Set the type of the web message.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100014-type-and-value-mismatch) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100014](../errorcode-webview.md#17100014-type-and-value-mismatch) |

@@ -12,14 +12,15 @@ import { bundleManager } from '@kit.AbilityKit';
 function canOpenLink(link: string): boolean
 ```
 
-Checks whether the target application can be accessed based on the provided link. The scheme specified in the link must be configured in the **querySchemes** field of the  
-[module.json5](../../../quick-start/module-configuration-file.md) file.
+Checks whether the target application can be accessed based on the provided link. The scheme specified in the link must be configured in the **querySchemes** field of the [module.json5](../../../quick-start/module-configuration-file.md) file.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function canOpenLink(link: string): boolean--><!--Device-bundleManager-function canOpenLink(link: string): boolean-End-->
 
@@ -41,9 +42,9 @@ Checks whether the target application can be accessed based on the provided link
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700056](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) | The scheme of the specified link is not in the querySchemes. |
-| [17700055](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700055-invalid-link) | The specified link is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700056](../errorcode-bundle.md#17700056-scheme-of-the-link-not-configured-in-queryschemes) | The scheme of the specified link is not in the querySchemes. |
+| [17700055](../errorcode-bundle.md#17700055-invalid-link) | The specified link is invalid. |
 
 ## Examples
 

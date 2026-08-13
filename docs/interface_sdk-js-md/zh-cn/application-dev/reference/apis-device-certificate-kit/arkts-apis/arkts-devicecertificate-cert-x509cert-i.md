@@ -2,9 +2,11 @@
 
 提供用于X.509证书操作的API。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cert-interface X509Cert--><!--Device-cert-interface X509Cert-End-->
 
@@ -18,9 +20,11 @@ checkValidityWithDate(date: string): void
 
 表示校验X.509证书有效期。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,29 +42,25 @@ checkValidityWithDate(date: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19030003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
-| [19030004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-证书过期) | 证书过期。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) | 证书尚未生效。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19030004](../errorcode-cert.md#19030004-证书过期) | 证书过期。 |
 
 ## getBasicConstraints
 
-ArkTS-Dyn:
-```TypeScript
-getBasicConstraints(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBasicConstraints(): int
 ```
 
 表示获取X.509证书基本约束。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +72,7 @@ getBasicConstraints(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 表示X.509证书基本约束。 |
+| int | 表示X.509证书基本约束。 |
 
 ## getCRLDistributionPoint
 
@@ -82,11 +82,13 @@ getCRLDistributionPoint(): DataArray
 
 获取X.509证书CRL的分发点统一资源标识符。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-getCRLDistributionPoint(): DataArray--><!--Device-X509Cert-getCRLDistributionPoint(): DataArray-End-->
 
@@ -102,9 +104,9 @@ getCRLDistributionPoint(): DataArray
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getCertSerialNumber
 
@@ -114,9 +116,11 @@ getCertSerialNumber(): bigint
 
 表示获取X.509证书序列号。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,7 +138,7 @@ getCertSerialNumber(): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
 
 ## getEncoded
 
@@ -144,9 +148,11 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 表示获取X.509证书序列化数据。使用Callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -158,16 +164,16 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为 获取到的X.509证书序列化数据；否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | 是 | 回调函数。当获取X.509证书序列化数据成功时，err为undefined，data为 获取到的X.509证书序列化数据；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getEncoded
 
@@ -177,9 +183,11 @@ getEncoded(): Promise<EncodingBlob>
 
 表示获取X.509证书序列化数据。使用Promise方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -197,10 +205,10 @@ getEncoded(): Promise<EncodingBlob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getExtKeyUsage
 
@@ -210,9 +218,11 @@ getExtKeyUsage(): DataArray
 
 表示获取X.509证书扩展密钥用途。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -230,9 +240,9 @@ getExtKeyUsage(): DataArray
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getExtensionsObject
 
@@ -242,11 +252,13 @@ getExtensionsObject(): CertExtension
 
 获取证书扩展对象。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-getExtensionsObject(): CertExtension--><!--Device-X509Cert-getExtensionsObject(): CertExtension-End-->
 
@@ -262,9 +274,9 @@ getExtensionsObject(): CertExtension
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getIssuerAltNames
 
@@ -272,15 +284,13 @@ getExtensionsObject(): CertExtension
 getIssuerAltNames(): DataArray
 ```
 
-表示获取X.509证书颁发者可选名称。
+表示获取X.509证书颁发者可选名称。 > **说明：** > > 获取到的X.509证书颁发者可选名称数据带字符串结束符。
 
-> **说明：**
-> 
-> 获取到的X.509证书颁发者可选名称数据带字符串结束符。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -298,9 +308,9 @@ getIssuerAltNames(): DataArray
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getIssuerName
 
@@ -308,16 +318,13 @@ getIssuerAltNames(): DataArray
 getIssuerName(): DataBlob
 ```
 
-表示获取X.509证书颁发者名称。
+表示获取X.509证书颁发者名称。 > **说明：** > > - 获取的X.509证书颁发者名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。 > - 获取的证书颁发者名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的可分辨名称字符串。
 
-> **说明：**
-> 
-> - 获取的X.509证书颁发者名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。
-> - 获取的证书颁发者名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的可分辨名称字符串。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -335,9 +342,9 @@ getIssuerName(): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getIssuerName
 
@@ -347,11 +354,13 @@ getIssuerName(encodingType: EncodingType): string
 
 表示根据编码类型获取X.509证书颁发者名称。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string--><!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string-End-->
 
@@ -373,10 +382,10 @@ getIssuerName(encodingType: EncodingType): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getIssuerX500DistinguishedName
 
@@ -386,11 +395,13 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 获取X.509证书颁发者的X.500可分辨名称。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -406,9 +417,9 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getItem
 
@@ -418,9 +429,11 @@ getItem(itemType: CertItemType): DataBlob
 
 表示获取X.509证书对应的字段。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -444,10 +457,10 @@ getItem(itemType: CertItemType): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getKeyUsage
 
@@ -457,9 +470,11 @@ getKeyUsage(): DataBlob
 
 表示获取X.509证书密钥用途。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -477,8 +492,8 @@ getKeyUsage(): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getNotAfterTime
 
@@ -488,9 +503,11 @@ getNotAfterTime(): string
 
 表示获取X.509证书过期时间。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -508,9 +525,9 @@ getNotAfterTime(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getNotBeforeTime
 
@@ -520,9 +537,11 @@ getNotBeforeTime(): string
 
 表示获取X.509证书生效时间。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -540,9 +559,9 @@ getNotBeforeTime(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getPublicKey
 
@@ -552,9 +571,11 @@ getPublicKey(): cryptoFramework.PubKey
 
 表示获取X.509证书公钥。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -572,8 +593,8 @@ getPublicKey(): cryptoFramework.PubKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSerialNumber
 
@@ -581,12 +602,7 @@ getPublicKey(): cryptoFramework.PubKey
 getSerialNumber(): number
 ```
 
-表示获取X.509证书序列号。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 10开始废弃，建议使用
-> [X509Cert.getCertSerialNumber()](#getCertSerialNumber)替代。
+表示获取X.509证书序列号。 > **说明：** > > 从API version 9开始支持，从API version 10开始废弃，建议使用 > [X509Cert.getCertSerialNumber()](#getCertSerialNumber)替代。
 
 **起始版本：** 9
 
@@ -614,9 +630,11 @@ getSignature(): DataBlob
 
 表示获取X.509证书签名数据。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -634,9 +652,9 @@ getSignature(): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSignatureAlgName
 
@@ -646,9 +664,11 @@ getSignatureAlgName(): string
 
 表示获取X.509证书签名算法名称。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -666,9 +686,9 @@ getSignatureAlgName(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSignatureAlgOid
 
@@ -678,9 +698,11 @@ getSignatureAlgOid(): string
 
 表示获取X.509证书签名算法的对象标识符（OID）。OID由国际标准化组织（ISO）分配。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -698,9 +720,9 @@ getSignatureAlgOid(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSignatureAlgParams
 
@@ -710,9 +732,11 @@ getSignatureAlgParams(): DataBlob
 
 表示获取X.509证书签名算法参数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -730,10 +754,10 @@ getSignatureAlgParams(): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | 不支持该操作。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSubjectAltNames
 
@@ -741,15 +765,13 @@ getSignatureAlgParams(): DataBlob
 getSubjectAltNames(): DataArray
 ```
 
-表示获取X.509证书主体可选名称。
+表示获取X.509证书主体可选名称。 > **说明：** > > 获取到的X.509证书主体可选名称数据带字符串结束符。
 
-> **说明：**
-> 
-> 获取到的X.509证书主体可选名称数据带字符串结束符。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -767,9 +789,9 @@ getSubjectAltNames(): DataArray
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSubjectName
 
@@ -777,18 +799,13 @@ getSubjectAltNames(): DataArray
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-表示获取X.509证书主体名称。
+表示获取X.509证书主体名称。 > **说明：** > > - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。 > - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的 > 可分辨名称字符串。 > - 建议设置encodingType参数为EncodingType.ENCODING_UTF8，获取的证书主体名称是以逗号（,）分隔相对可分辨名称的可分辨名称字符串。
 
-> **说明：**
-> 
-> - 若不设置encodingType参数，获取的证书主体名称末尾包含一个NUL终止符（值为0），请根据业务需求决定是否去除该终止符。
-> - 若不设置encodingType参数，获取的证书主体名称为ASCII编码，转换为字符串后，是以斜杠（/）开始，以斜杠（/）分隔相对可分辨名称的
-> 可分辨名称字符串。
-> - 建议设置encodingType参数为EncodingType.ENCODING_UTF8，获取的证书主体名称是以逗号（,）分隔相对可分辨名称的可分辨名称字符串。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -812,10 +829,10 @@ getSubjectName(encodingType?: EncodingType): DataBlob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 参数类型不正确； &lt;br&gt;2. 参数校验失败。<br>**适用版本：** 12+ |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 参数类型不正确； &lt;br&gt;2. 参数校验失败。<br>**适用版本：** 12+ |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getSubjectX500DistinguishedName
 
@@ -825,11 +842,13 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 
 获取X.509证书主体的X.500可分辨名称。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -845,27 +864,23 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## getVersion
 
-ArkTS-Dyn:
-```TypeScript
-getVersion(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getVersion(): int
 ```
 
 表示获取X.509证书版本号。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -877,7 +892,7 @@ getVersion(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 表示X.509证书版本号。 |
+| int | 表示X.509证书版本号。 |
 
 ## hashCode
 
@@ -887,11 +902,13 @@ hashCode(): Uint8Array
 
 获取DER格式数据的哈希值。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-hashCode(): Uint8Array--><!--Device-X509Cert-hashCode(): Uint8Array-End-->
 
@@ -907,9 +924,9 @@ hashCode(): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## match
 
@@ -919,9 +936,11 @@ match(param: X509CertMatchParameters): boolean
 
 判断证书是否与输入参数匹配。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -945,9 +964,9 @@ match(param: X509CertMatchParameters): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## toString
 
@@ -957,11 +976,13 @@ toString(): string
 
 获取对象的字符串类型数据。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-toString(): string--><!--Device-X509Cert-toString(): string-End-->
 
@@ -977,9 +998,9 @@ toString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## toString
 
@@ -989,11 +1010,13 @@ toString(encodingType: EncodingType): string
 
 根据编码类型获取对象的字符串类型数据。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509Cert-toString(encodingType: EncodingType): string--><!--Device-X509Cert-toString(encodingType: EncodingType): string-End-->
 
@@ -1015,10 +1038,10 @@ toString(encodingType: EncodingType): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. encodingType的值不在EncodingType枚举范围内。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## verify
 
@@ -1028,9 +1051,11 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 表示对证书验签。使用Callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1043,14 +1068,14 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | 是 | 用于验签的公钥对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当验签成功时，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## verify
 
@@ -1060,9 +1085,11 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 表示对证书验签。使用Promise方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1086,6 +1113,6 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 

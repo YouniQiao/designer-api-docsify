@@ -24,7 +24,7 @@ import { recent } from '@kit.CoreFileKit';
 readonly ctime: number
 ```
 
-Time when the file was created.&lt;br&gt;Unit: second.
+Time when the file was created. &lt;br&gt;Unit: second.
 
 **Type:** number
 
@@ -90,7 +90,7 @@ readonly mode: number
 readonly mtime: number
 ```
 
-Time when the file was last modified.&lt;br&gt;Unit: ms.
+Time when the file was last modified. &lt;br&gt;Unit: ms.
 
 **Type:** number
 

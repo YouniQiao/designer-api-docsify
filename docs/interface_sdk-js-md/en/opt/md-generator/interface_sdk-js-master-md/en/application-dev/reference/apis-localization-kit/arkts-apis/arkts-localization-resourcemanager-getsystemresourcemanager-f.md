@@ -12,13 +12,7 @@ import { resourceManager } from '@kit.LocalizationKit';
 export function getSystemResourceManager(): ResourceManager
 ```
 
-Obtains a system resource management object for accessing preset system resources.
-
-> **NOTE：**
-> 
-> The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value.
-> The default value is
-> **{"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}**.
+Obtains a system resource management object for accessing preset system resources. > **NOTE：**> > The **Configuration** parameter in the **ResourceManager** object obtained via this API uses the default value. > The default value is > **{"locale": "", "direction": -1, "deviceType": -1, "screenDensity": 0, "colorMode": 1, "mcc": 0, "mnc": 0}**.
 
 **Since:** 10
 
@@ -42,7 +36,7 @@ Obtains a system resource management object for accessing preset system resource
 
 | Error Code ID |
 | --- |
-| [9001009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) |
+| [9001009](../errorcode-resource-manager.md#9001009-failed-to-obtain-the-system-resource-management-object) |
 
 ## Examples
 

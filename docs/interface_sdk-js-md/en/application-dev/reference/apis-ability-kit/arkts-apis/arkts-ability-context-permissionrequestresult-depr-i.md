@@ -4,6 +4,8 @@
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface PermissionRequestResult--><!--Device-unnamed-interface PermissionRequestResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -23,6 +25,8 @@ Permission request result.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,6 +50,8 @@ Permissions requested.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-PermissionRequestResult-permissions: Array<string>--><!--Device-PermissionRequestResult-permissions: Array<string>-End-->
@@ -67,6 +73,8 @@ Request code passed.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

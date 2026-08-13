@@ -4,6 +4,8 @@ HiPlay 设备类型定义
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-avSession-interface HiPlayDeviceInfo--><!--Device-avSession-interface HiPlayDeviceInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
@@ -21,6 +23,8 @@ HiPlay 投播模式，设备级和应用级
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ HiPlay 当前投播uid
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -66,6 +72,8 @@ supportCastMode?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -82,11 +90,13 @@ supportCastMode?: number
 supportMultiDeviceMode?: number
 ```
 
-是否支持多设备连接能力。取值限定为整数。
+是否支持多设备连接能力。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

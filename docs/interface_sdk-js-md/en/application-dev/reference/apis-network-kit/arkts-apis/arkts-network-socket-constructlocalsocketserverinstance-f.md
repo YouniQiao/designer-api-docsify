@@ -18,6 +18,8 @@ Creates a LocalSocketServer object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

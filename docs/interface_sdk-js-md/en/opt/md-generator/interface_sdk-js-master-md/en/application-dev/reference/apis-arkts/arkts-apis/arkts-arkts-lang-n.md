@@ -4,6 +4,8 @@ ArkTS language
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace lang--><!--Device-unnamed-declare namespace lang-End-->
 
 **System capability:** SystemCapability.Utils.Lang

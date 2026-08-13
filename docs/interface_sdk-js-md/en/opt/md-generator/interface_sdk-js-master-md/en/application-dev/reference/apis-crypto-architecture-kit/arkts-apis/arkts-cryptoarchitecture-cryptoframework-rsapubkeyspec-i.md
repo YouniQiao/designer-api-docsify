@@ -1,15 +1,14 @@
 # RSAPubKeySpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec) used to specify the parameters of the public key in the RSA algorithm.
-
-&lt;br&gt;To generate a key based on key parameters, pass it to  
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) to create a key generator.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec) used to specify the parameters of the public key in the RSA algorithm. &lt;br&gt;To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) to create a key generator.
 
 **Inheritance/Implementation:** RSAPubKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-cryptoFramework-interface RSAPubKeySpec extends AsyKeySpec--><!--Device-cryptoFramework-interface RSAPubKeySpec extends AsyKeySpec-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface RSAPubKeySpec--><!--Device-cryptoFramework-interface RSAPubKeySpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -31,7 +30,9 @@ Common parameters of the public and private keys in the RSA algorithm.
 
 **Type:** [RSACommonParamsSpec](arkts-cryptoarchitecture-cryptoframework-rsacommonparamsspec-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -51,7 +52,9 @@ Public key **pk** in the RSA algorithm.
 
 **Type:** bigint
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

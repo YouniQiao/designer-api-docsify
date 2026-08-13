@@ -6,9 +6,11 @@ The definition of Singer/Radio/Banner.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-avMusicTemplate-interface MediaElement extends MediaEntity--><!--Device-avMusicTemplate-interface MediaElement extends MediaEntity-End-->
+<!--Device-avMusicTemplate-interface MediaElement--><!--Device-avMusicTemplate-interface MediaElement-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

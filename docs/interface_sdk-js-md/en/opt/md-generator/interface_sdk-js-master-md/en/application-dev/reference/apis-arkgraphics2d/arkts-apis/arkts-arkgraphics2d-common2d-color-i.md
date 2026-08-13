@@ -2,7 +2,9 @@
 
 Describes a color in ARGB format.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-common2D-interface Color--><!--Device-common2D-interface Color-End-->
 
@@ -24,7 +26,9 @@ Alpha component of the color. The value is an integer ranging from 0 to 255.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Blue component of the color. The value is an integer ranging from 0 to 255.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ Green component of the color. The value is an integer ranging from 0 to 255.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -78,7 +86,9 @@ Red component of the color. The value is an integer ranging from 0 to 255.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

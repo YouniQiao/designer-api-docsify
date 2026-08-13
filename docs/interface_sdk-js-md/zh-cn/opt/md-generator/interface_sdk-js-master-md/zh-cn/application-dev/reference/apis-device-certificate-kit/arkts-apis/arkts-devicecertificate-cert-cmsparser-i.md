@@ -1,13 +1,10 @@
 # CmsParser
 
-提供解析、验签和解封装CMS消息的API。
+提供解析、验签和解封装CMS消息的API。 > **说明：** > > PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
-> **说明：**
-> 
-> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
-> 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
 <!--Device-cert-interface CmsParser--><!--Device-cert-interface CmsParser-End-->
 
@@ -21,9 +18,11 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 用于解密封装数据类型的CMS消息。使用Promise方式返回结果。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>--><!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>-End-->
 
@@ -45,10 +44,10 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -142,9 +141,11 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 传入枚举值，用于从签名数据类型的CMS消息中获取证书。当前支持获取签名者证书或全部证书。使用Promise方式返回结果。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>--><!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>-End-->
 
@@ -166,10 +167,10 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getContentData
 
@@ -179,9 +180,11 @@ getContentData(): Promise<Uint8Array>
 
 用于从签名数据类型的CMS消息中获取内容数据。使用Promise方式返回结果。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsParser-getContentData(): Promise<Uint8Array>--><!--Device-CmsParser-getContentData(): Promise<Uint8Array>-End-->
 
@@ -197,9 +200,9 @@ getContentData(): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -324,9 +327,11 @@ getContentType(): CmsContentType
 
 用于获取CMS内容类型。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsParser-getContentType(): CmsContentType--><!--Device-CmsParser-getContentType(): CmsContentType-End-->
 
@@ -342,9 +347,9 @@ getContentType(): CmsContentType
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -468,15 +473,13 @@ async function testCmsVerifyTest() {
 setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 ```
 
-设置CMS消息数据。使用Promise方式返回结果。
+设置CMS消息数据。使用Promise方式返回结果。 > **说明：** > > 支持PEM和DER格式的CMS消息。**string**对应PEM格式，**Uint8Array**对应DER格式。
 
-> **说明：**
-> 
-> 支持PEM和DER格式的CMS消息。**string**对应PEM格式，**Uint8Array**对应DER格式。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>--><!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>-End-->
 
@@ -499,10 +502,10 @@ setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -626,9 +629,11 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 用于验证签名数据类型的CMS消息。使用Promise方式返回结果。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>--><!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>-End-->
 
@@ -650,13 +655,13 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
-| [19030003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-证书尚未生效) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
-| [19030004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-证书过期) |
-| [19030005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-无法获取证书的颁发者) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
+| [19030003](../errorcode-cert.md#19030003-证书尚未生效) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19030004](../errorcode-cert.md#19030004-证书过期) |
+| [19030005](../errorcode-cert.md#19030005-无法获取证书的颁发者) |
 
 ## 示例
 

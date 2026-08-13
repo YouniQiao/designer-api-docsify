@@ -4,6 +4,8 @@ interface of app lifecycle.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LifecycleApp--><!--Device-unnamed-export declare interface LifecycleApp-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -14,9 +16,11 @@ interface of app lifecycle.
 onWindowDisplayModeChanged?(isShownInMultiWindow: boolean, newConfig: resourceManager.Configuration): void
 ```
 
-Called when the window display mode of this ability changes, for example, from fullscreen mode  to multi-window mode or from multi-window mode to fullscreen mode.
+Called when the window display mode of this ability changes, for example, from fullscreen mode to multi-window mode or from multi-window mode to fullscreen mode.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

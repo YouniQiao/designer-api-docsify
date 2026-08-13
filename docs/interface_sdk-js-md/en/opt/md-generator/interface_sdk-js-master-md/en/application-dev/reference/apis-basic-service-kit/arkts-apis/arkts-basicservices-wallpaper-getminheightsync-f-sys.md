@@ -14,7 +14,9 @@ function getMinHeightSync(): number
 
 Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wallpaper-function getMinHeightSync(): int--><!--Device-wallpaper-function getMinHeightSync(): int-End-->
 
@@ -32,7 +34,7 @@ Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpape
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

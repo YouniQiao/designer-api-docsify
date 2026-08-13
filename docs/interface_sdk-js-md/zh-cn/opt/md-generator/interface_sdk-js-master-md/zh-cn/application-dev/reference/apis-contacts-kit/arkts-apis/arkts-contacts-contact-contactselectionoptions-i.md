@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-contact-interface ContactSelectionOptions--><!--Device-contact-interface ContactSelectionOptions-End-->
 
 **系统能力：** SystemCapability.Applications.Contacts
@@ -14,11 +16,13 @@
 filter?: ContactSelectionFilter
 ```
 
-联系人查询过滤器。从API version 15 开始，该接口支持在原子化服务中使用。
+联系人查询过滤器。 从API version 15 开始，该接口支持在原子化服务中使用。
 
 **类型：** [ContactSelectionFilter](arkts-contacts-contact-contactselectionfilter-i.md)
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ isAutoDismissOnNavigation?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -52,11 +58,13 @@ isAutoDismissOnNavigation?: boolean
 isDisplayedByName?: boolean
 ```
 
-是否按联系人姓名维度展示，true:按联系人姓名维度展示，false:按联系人号码维度展示，默认值为false。从API version 15 开始，该接口支持在原子化服务中使用。
+是否按联系人姓名维度展示，true:按联系人姓名维度展示，false:按联系人号码维度展示，默认值为false。 从API version 15 开始，该接口支持在原子化服务中使用。
 
 **类型：** boolean
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
@@ -76,6 +84,8 @@ isMultiSelect?: boolean
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContactSelectionOptions-isMultiSelect?: boolean--><!--Device-ContactSelectionOptions-isMultiSelect?: boolean-End-->
@@ -88,11 +98,13 @@ isMultiSelect?: boolean
 maxSelectable?: number
 ```
 
-联系人数量上限。默认值为10000，超出上限则以默认值筛选。从API version 15 开始，该接口支持在原子化服务中使用。
+联系人数量上限。默认值为10000，超出上限则以默认值筛选。 从API version 15 开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 

@@ -4,19 +4,13 @@
 declare type OnScrollVisibleContentChangeCallback = (start: VisibleListContentInfo, end: VisibleListContentInfo) => void
 ```
 
-Triggered when a child component enters or leaves the list display area.
-
-When the **List** component changes from having child components to being empty, the values of the reported **start**and **end** parameters remain the same as those when the component had child components last time.
-
-If the values of **start** and **end** are both **0**, the **List** component contains only one child component.
-
-> **NOTE：**
-> 
-> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 14.
+Triggered when a child component enters or leaves the list display area. When the **List** component changes from having child components to being empty, the values of the reported **start** and **end** parameters remain the same as those when the component had child components last time. If the values of **start** and **end** are both **0**, the **List** component contains only one child component. > **NOTE：**> > This API can be called within attributeModifier since API version 14.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

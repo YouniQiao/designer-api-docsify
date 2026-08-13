@@ -4,6 +4,8 @@ Enumerates the input source tool types.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SourceTool--><!--Device-unnamed-declare enum SourceTool-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Unknown
 Unknown input source.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Finger.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SourceTool-Finger--><!--Device-SourceTool-Finger-End-->
@@ -50,6 +56,8 @@ Stylus.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SourceTool-Pen--><!--Device-SourceTool-Pen-End-->
@@ -65,6 +73,8 @@ MOUSE
 Mouse device.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +94,8 @@ Touchpad. Single-finger input on the touchpad is treated as a mouse input operat
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,6 +113,8 @@ JOYSTICK
 Joystick.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

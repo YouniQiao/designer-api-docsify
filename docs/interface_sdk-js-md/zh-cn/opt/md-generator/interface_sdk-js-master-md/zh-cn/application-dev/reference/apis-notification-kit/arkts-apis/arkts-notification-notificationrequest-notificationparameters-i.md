@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface NotificationParameters--><!--Device-unnamed-export interface NotificationParameters-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -20,6 +22,8 @@ wantAction?:string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-NotificationParameters-wantAction?:string--><!--Device-NotificationParameters-wantAction?:string-End-->
@@ -29,18 +33,20 @@ wantAction?:string
 ## wantParameters
 
 ```TypeScript
-wantParameters?:Record<string, Object>
+wantParameters?:Record<string, RecordData>
 ```
 
 应用在创建wantAgent时，传入的want的parameters字段，具体含义请参考[parameters](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-NotificationParameters-wantParameters?:Record<string, Object>--><!--Device-NotificationParameters-wantParameters?:Record<string, Object>-End-->
+<!--Device-NotificationParameters-wantParameters?:Record<string, RecordData>--><!--Device-NotificationParameters-wantParameters?:Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -55,6 +61,8 @@ wantUri?:string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

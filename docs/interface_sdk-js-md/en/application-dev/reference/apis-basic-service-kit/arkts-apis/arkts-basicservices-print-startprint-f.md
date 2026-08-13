@@ -16,7 +16,9 @@ Prints a file or binary data. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRINT
 
@@ -42,5 +44,5 @@ Prints a file or binary data. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
+| [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 

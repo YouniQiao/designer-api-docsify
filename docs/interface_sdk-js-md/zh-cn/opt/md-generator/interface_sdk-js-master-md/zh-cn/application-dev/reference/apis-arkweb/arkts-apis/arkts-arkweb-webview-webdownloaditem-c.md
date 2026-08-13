@@ -1,8 +1,10 @@
 # WebDownloadItem
 
-表示下载任务，您可以使用此对象来操作相应的下载任务。当前WebDownloadItem支持的下载文件名最长长度为255字节。
+表示下载任务，您可以使用此对象来操作相应的下载任务。 当前WebDownloadItem支持的下载文件名最长长度为255字节。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebDownloadItem--><!--Device-webview-class WebDownloadItem-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 取消一个正在下载的下载任务。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 将序列化后的字节数组反序列化为一个WebDownloadItem对象。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,7 +62,7 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## getCurrentSpeed
 
@@ -67,6 +73,8 @@ getCurrentSpeed(): number
 获取下载的速度，单位：字节每秒。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -90,6 +98,8 @@ getFullPath(): string
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getFullPath(): string--><!--Device-WebDownloadItem-getFullPath(): string-End-->
@@ -111,6 +121,8 @@ getGuid(): string
 获取下载任务的唯一ID。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -134,6 +146,8 @@ getLastErrorCode(): WebDownloadErrorCode
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getLastErrorCode(): WebDownloadErrorCode--><!--Device-WebDownloadItem-getLastErrorCode(): WebDownloadErrorCode-End-->
@@ -155,6 +169,8 @@ getMethod(): string
 获取下载任务的请求方式。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -178,6 +194,8 @@ getMimeType(): string
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getMimeType(): string--><!--Device-WebDownloadItem-getMimeType(): string-End-->
@@ -199,6 +217,8 @@ getOriginalUrl(): string
 获取下载文件的原始URL地址。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,6 +242,8 @@ getPercentComplete(): number
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getPercentComplete(): number--><!--Device-WebDownloadItem-getPercentComplete(): number-End-->
@@ -243,6 +265,8 @@ getReceivedBytes(): number
 获取已经接收的字节数。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -266,6 +290,8 @@ getReferrerUrl(): string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebDownloadItem-getReferrerUrl(): string--><!--Device-WebDownloadItem-getReferrerUrl(): string-End-->
@@ -287,6 +313,8 @@ getState(): WebDownloadState
 获取下载的状态。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -310,6 +338,8 @@ getSuggestedFileName(): string
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getSuggestedFileName(): string--><!--Device-WebDownloadItem-getSuggestedFileName(): string-End-->
@@ -331,6 +361,8 @@ getTotalBytes(): number
 获取待下载文件的总长度。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -354,6 +386,8 @@ getUrl(): string
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-getUrl(): string--><!--Device-WebDownloadItem-getUrl(): string-End-->
@@ -376,6 +410,8 @@ pause(): void
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-pause(): void--><!--Device-WebDownloadItem-pause(): void-End-->
@@ -386,7 +422,7 @@ pause(): void
 
 | 错误码ID |
 | --- |
-| [17100019](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100019-下载还没开始) |
+| [17100019](../errorcode-webview.md#17100019-下载还没开始) |
 
 ## resume
 
@@ -398,6 +434,8 @@ resume(): void
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadItem-resume(): void--><!--Device-WebDownloadItem-resume(): void-End-->
@@ -408,7 +446,7 @@ resume(): void
 
 | 错误码ID |
 | --- |
-| [17100016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100016-下载任务没有处于暂停状态) |
+| [17100016](../errorcode-webview.md#17100016-下载任务没有处于暂停状态) |
 
 ## serialize
 
@@ -419,6 +457,8 @@ serialize(): Uint8Array
 将失败的下载序列化到一个字节数组。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -438,16 +478,11 @@ serialize(): Uint8Array
 start(downloadPath: string): void
 ```
 
-开始下载到指定目录，参数为下载文件的磁盘存储路径（包含文件名）。
-
-> **说明：**
-> 
-> 该接口应在WebDownloadDelegate的onBeforeDownload回调中使用。若在WebDownloadDelegate的onBeforeDownload中未调用start('xxx')，则下载任务将保持在
-> PENDING状态。处于PENDING状态的下载会将文件下载到临时目录，临时文件会在WebDownloadItem.start指定目标路径后被重命名为目标路径，未下载完成的部分会在WebDownloadItem.start
-> 指定目标路径后直接下载到目标路径。如果在调用WebDownloadItem.start之前不希望下载到临时文件路径，可以先通过WebDownloadItem.cancel取消当前下载任务，随后通过
-> WebDownloadManager.resumeDownload恢复被取消的下载任务。
+开始下载到指定目录，参数为下载文件的磁盘存储路径（包含文件名）。 > **说明：** > > 该接口应在WebDownloadDelegate的onBeforeDownload回调中使用。若在WebDownloadDelegate的onBeforeDownload中未调用start('xxx')，则下载任务将保持在 > PENDING状态。处于PENDING状态的下载会将文件下载到临时目录，临时文件会在WebDownloadItem.start指定目标路径后被重命名为目标路径，未下载完成的部分会在WebDownloadItem.start > 指定目标路径后直接下载到目标路径。如果在调用WebDownloadItem.start之前不希望下载到临时文件路径，可以先通过WebDownloadItem.cancel取消当前下载任务，随后通过 > WebDownloadManager.resumeDownload恢复被取消的下载任务。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -465,4 +500,4 @@ start(downloadPath: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

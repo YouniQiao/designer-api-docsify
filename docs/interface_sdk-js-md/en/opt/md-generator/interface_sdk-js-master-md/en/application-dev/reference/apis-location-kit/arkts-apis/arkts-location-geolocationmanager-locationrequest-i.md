@@ -2,7 +2,9 @@
 
 Configuring parameters in location requests.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface LocationRequest--><!--Device-geoLocationManager-export interface LocationRequest-End-->
 
@@ -24,7 +26,9 @@ Location report distance interval.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ Accuracy requirements for reporting locations.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,7 +66,9 @@ Priority of the location request.
 
 **Type:** LocationRequestPriority
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,7 +86,9 @@ User scenario of the location request.
 
 **Type:** LocationRequestScenario
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +106,9 @@ Location report interval.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

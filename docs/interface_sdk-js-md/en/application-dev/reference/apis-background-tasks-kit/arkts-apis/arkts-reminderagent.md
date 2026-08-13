@@ -1,8 +1,6 @@
-# @ohos.reminderAgent(Agent-powered Reminder)
+# @ohos.reminderAgent
 
-The **reminderAgent** module provides APIs for publishing scheduled reminders through the reminder agent.
-
-You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. When the created reminders are published, the timing and pop-up notification functions of your application will be taken over by the reminder agent in the background when your application is frozen or exits.
+The **reminderAgent** module provides APIs for publishing scheduled reminders through the reminder agent. You can use the APIs to create scheduled reminders for countdown timers, calendar events, and alarm clocks. When the created reminders are published, the timing and pop-up notification functions of your application will be taken over by the reminder agent in the background when your application is frozen or exits.
 
 **Since:** 7
 
@@ -10,7 +8,7 @@ You can use the APIs to create scheduled reminders for countdown timers, calenda
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderAgentManager](arkts-reminderagentmanager.md#reminderAgentManager)
+**Substitutes:** [reminderAgentManager](arkts-reminderagentmanager.md#@ohos.reminderAgentManager)
 
 <!--Device-unnamed-declare namespace reminderAgent--><!--Device-unnamed-declare namespace reminderAgent-End-->
 
@@ -28,18 +26,18 @@ import { reminderAgent } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addnotificationslot) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
-| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addnotificationslot-1) | Adds a notification slot. This API uses a promise to return the result. |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelallreminders) | Cancels all reminders set by the current application. This API uses an asynchronous callback to return the cancellation result. |
-| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelallreminders-1) | Cancels all reminders set by the current application. This API uses a promise to return the cancellation result. |
-| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder) | Cancels the reminder with the specified ID. This API uses an asynchronous callback to return the cancellation result. |
-| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelreminder-1) | Cancels the reminder with the specified ID. This API uses a promise to return the cancellation result. |
-| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders) | Obtains all valid (not yet expired) reminders set by the current application. This API uses an asynchronous callback to return the result. |
-| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getvalidreminders-1) | Obtains all valid (not yet expired) reminders set by the current application. This API uses a promise to return the reminders. |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder) | Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through  [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) |
-| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishreminder-1) | Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through  [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot) | Removes a notification slot of a specified type. This API uses an asynchronous callback to return the result. |
-| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removenotificationslot-1) | Removes a notification slot of a specified type. This API uses a promise to return the result. |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addNotificationSlot) | Adds a notification slot. This API uses an asynchronous callback to return the result. |
+| [addNotificationSlot](arkts-backgroundtasks-reminderagent-addnotificationslot-f.md#addNotificationSlot) | Adds a notification slot. This API uses a promise to return the result. |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelAllReminders) | Cancels all reminders set by the current application. This API uses an asynchronous callback to return the cancellation result. |
+| [cancelAllReminders](arkts-backgroundtasks-reminderagent-cancelallreminders-f.md#cancelAllReminders) | Cancels all reminders set by the current application. This API uses a promise to return the cancellation result. |
+| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelReminder) | Cancels the reminder with the specified ID. This API uses an asynchronous callback to return the cancellation result. |
+| [cancelReminder](arkts-backgroundtasks-reminderagent-cancelreminder-f.md#cancelReminder) | Cancels the reminder with the specified ID. This API uses a promise to return the cancellation result. |
+| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getValidReminders) | Obtains all valid (not yet expired) reminders set by the current application. This API uses an asynchronous callback to return the result. |
+| [getValidReminders](arkts-backgroundtasks-reminderagent-getvalidreminders-f.md#getValidReminders) | Obtains all valid (not yet expired) reminders set by the current application. This API uses a promise to return the reminders. |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishReminder) | Publishes a reminder through the reminder agent. This API uses an asynchronous callback to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) |
+| [publishReminder](arkts-backgroundtasks-reminderagent-publishreminder-f.md#publishReminder) | Publishes a reminder through the reminder agent. This API uses a promise to return the result. It can be called only when notification is enabled for the application through [Notification.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notification-requestenablenotification-depr-f.md#requestEnableNotification) |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removeNotificationSlot) | Removes a notification slot of a specified type. This API uses an asynchronous callback to return the result. |
+| [removeNotificationSlot](arkts-backgroundtasks-reminderagent-removenotificationslot-f.md#removeNotificationSlot) | Removes a notification slot of a specified type. This API uses a promise to return the result. |
 
 ### Interfaces
 

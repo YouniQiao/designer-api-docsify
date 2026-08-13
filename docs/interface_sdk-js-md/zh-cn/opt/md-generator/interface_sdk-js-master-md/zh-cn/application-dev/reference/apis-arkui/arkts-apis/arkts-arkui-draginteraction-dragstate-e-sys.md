@@ -2,7 +2,9 @@
 
 拖拽状态。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dragInteraction-enum DragState--><!--Device-dragInteraction-enum DragState-End-->
 
@@ -18,7 +20,9 @@ MSG_DRAG_STATE_START = 1
 
 表示开始拖拽。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DragState-MSG_DRAG_STATE_START = 1--><!--Device-DragState-MSG_DRAG_STATE_START = 1-End-->
 
@@ -34,7 +38,9 @@ MSG_DRAG_STATE_STOP = 2
 
 表示结束拖拽。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DragState-MSG_DRAG_STATE_STOP = 2--><!--Device-DragState-MSG_DRAG_STATE_STOP = 2-End-->
 
@@ -50,7 +56,9 @@ MSG_DRAG_STATE_CANCEL = 3
 
 表示取消拖拽。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DragState-MSG_DRAG_STATE_CANCEL = 3--><!--Device-DragState-MSG_DRAG_STATE_CANCEL = 3-End-->
 

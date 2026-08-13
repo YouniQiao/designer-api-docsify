@@ -1,19 +1,14 @@
 # DeviceKVStore
 
-设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。
-
-设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。
-
-比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。
-
-在调用DeviceKVStore的方法前，需要先通过  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个DeviceKVStore实例。
+设备协同数据库，继承自SingleKVStore，提供查询数据和端端同步数据的方法，可以使用SingleKVStore的方法例如：put、putBatch等。 设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。 比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。 在调用DeviceKVStore的方法前，需要先通过 getKVStore 构建一个DeviceKVStore实例。
 
 **继承/实现关系：** DeviceKVStore extends [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore)
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore--><!--Device-distributedKVStore-interface DeviceKVStore extends SingleKVStore-End-->
+**废弃版本：** -1
+
+<!--Device-distributedKVStore-interface DeviceKVStore--><!--Device-distributedKVStore-interface DeviceKVStore-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
@@ -25,7 +20,9 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 
 获取本设备指定键的值，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,10 +41,10 @@ get(key: string, callback: AsyncCallback<boolean | string | number | number | Ui
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## get
 
@@ -57,7 +54,9 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 获取本设备指定键的值，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,10 +80,10 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## get
 
@@ -92,18 +91,11 @@ get(key: string): Promise<boolean | string | number | number | Uint8Array>
 get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | number | number | Uint8Array>): void
 ```
 
-获取与指定设备ID和Key匹配的值，使用callback异步回调。
+获取与指定设备ID和Key匹配的值，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,10 +115,10 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## get
 
@@ -134,18 +126,11 @@ get(deviceId: string, key: string, callback: AsyncCallback<boolean | string | nu
 get(deviceId: string, key: string): Promise<boolean | string | number | number | Uint8Array>
 ```
 
-获取与指定设备ID和Key匹配的值，使用Promise异步回调。
+获取与指定设备ID和Key匹配的值，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -170,10 +155,10 @@ get(deviceId: string, key: string): Promise<boolean | string | number | number |
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## getEntries
 
@@ -183,7 +168,9 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 获取匹配本设备指定键前缀的所有键值对，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -202,9 +189,9 @@ getEntries(keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -257,7 +244,9 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 获取匹配本设备指定键前缀的所有键值对，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -281,9 +270,9 @@ getEntries(keyPrefix: string): Promise<Entry[]>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -329,18 +318,11 @@ try {
 getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。
+获取与指定设备ID和Key前缀匹配的所有键值对，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -360,9 +342,9 @@ getEntries(deviceId: string, keyPrefix: string, callback: AsyncCallback<Entry[]>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -413,18 +395,11 @@ try {
 getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 ```
 
-获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。
+获取与指定设备ID和Key前缀匹配的所有键值对，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -449,9 +424,9 @@ getEntries(deviceId: string, keyPrefix: string): Promise<Entry[]>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -502,7 +477,9 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 获取本设备与指定Query对象匹配的键值对列表，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -521,9 +498,9 @@ getEntries(query: Query, callback: AsyncCallback<Entry[]>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -579,7 +556,9 @@ getEntries(query: Query): Promise<Entry[]>
 
 获取本设备与指定Query对象匹配的键值对列表，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -603,9 +582,9 @@ getEntries(query: Query): Promise<Entry[]>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -654,18 +633,11 @@ try {
 getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): void
 ```
 
-获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。
+获取与指定设备ID和Query对象匹配的键值对列表，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -685,9 +657,9 @@ getEntries(deviceId: string, query: Query, callback: AsyncCallback<Entry[]>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -743,18 +715,11 @@ try {
 getEntries(deviceId: string, query: Query): Promise<Entry[]>
 ```
 
-获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。
+获取与指定设备ID和Query对象匹配的键值对列表，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -779,9 +744,9 @@ getEntries(deviceId: string, query: Query): Promise<Entry[]>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -831,10 +796,11 @@ try {
 getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet)关闭结果集释放资源。
+从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -853,10 +819,10 @@ getResultSet(keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -915,10 +881,11 @@ try {
 getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet)关闭结果集释放资源。
+从DeviceKVStore数据库中获取本设备具有指定前缀的结果集，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -942,10 +909,10 @@ getResultSet(keyPrefix: string): Promise<KVStoreResultSet>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -996,18 +963,11 @@ try {
 getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。
+获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1027,10 +987,10 @@ getResultSet(deviceId: string, keyPrefix: string, callback: AsyncCallback<KVStor
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -1068,18 +1028,11 @@ try {
 getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 ```
 
-获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。
+获取与指定设备ID和Key前缀匹配的KVStoreResultSet对象，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1104,10 +1057,10 @@ getResultSet(deviceId: string, keyPrefix: string): Promise<KVStoreResultSet>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -1143,7 +1096,9 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 获取与本设备指定Query对象匹配的KVStoreResultSet对象，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1162,10 +1117,10 @@ getResultSet(query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -1228,7 +1183,9 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 获取与本设备指定Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1252,10 +1209,10 @@ getResultSet(query: Query): Promise<KVStoreResultSet>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -1301,19 +1258,11 @@ try {
 getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResultSet>): void
 ```
 
-获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet)关闭结果集释放资源。
+获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1333,10 +1282,10 @@ getResultSet(deviceId: string, query: Query, callback: AsyncCallback<KVStoreResu
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -1397,19 +1346,11 @@ try {
 getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 ```
 
-获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用  
-[closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet)关闭结果集释放资源。
+获取与指定设备ID和Query对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，在使用完毕时需调用 [closeResultSet](arkts-arkdata-distributedkvstore-singlekvstore-i.md#closeResultSet) 关闭结果集释放资源。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1434,10 +1375,10 @@ getResultSet(deviceId: string, query: Query): Promise<KVStoreResultSet>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## 示例
 
@@ -1497,7 +1438,9 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 获取与本设备指定Query对象匹配的结果数，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1516,10 +1459,10 @@ getResultSize(query: Query, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -1571,7 +1514,9 @@ getResultSize(query: Query): Promise<number>
 
 获取与本设备指定Query对象匹配的结果数，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1595,10 +1540,10 @@ getResultSize(query: Query): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -1642,18 +1587,11 @@ try {
 getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): void
 ```
 
-获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。
+获取与指定设备ID和Query对象匹配的结果数，使用callback异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1673,10 +1611,10 @@ getResultSize(deviceId: string, query: Query, callback: AsyncCallback<number>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -1726,18 +1664,11 @@ try {
 getResultSize(deviceId: string, query: Query): Promise<number>
 ```
 
-获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。
+获取与指定设备ID和Query对象匹配的结果数，使用Promise异步回调。 > **说明：** > > 其中deviceId通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1762,10 +1693,10 @@ getResultSize(deviceId: string, query: Query): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 

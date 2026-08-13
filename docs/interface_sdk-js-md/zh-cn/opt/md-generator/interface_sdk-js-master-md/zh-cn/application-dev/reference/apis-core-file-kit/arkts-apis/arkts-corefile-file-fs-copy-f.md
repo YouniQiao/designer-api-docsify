@@ -6,13 +6,11 @@
 declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>
 ```
 
-拷贝文件或目录，使用promise异步回调。
-
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
-
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+拷贝文件或目录，使用promise异步回调。 支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。 跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options?: CopyOptions): Promise<void>-End-->
 
@@ -36,7 +34,7 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900038 |
 | 13900034 |
 | 13900044 |
@@ -70,13 +68,11 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void
 ```
 
-拷贝文件或者目录，使用callback异步回调。
-
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
-
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+拷贝文件或者目录，使用callback异步回调。 支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。 跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<void>): void-End-->
 
@@ -94,7 +90,7 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900038 |
 | 13900034 |
 | 13900041 |
@@ -127,13 +123,11 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void
 ```
 
-拷贝文件或者目录，使用callback异步回调。
-
-支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。
-
-跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
+拷贝文件或者目录，使用callback异步回调。 支持跨设备拷贝。强制覆盖拷贝。入参支持文件或目录URI。 跨端拷贝时，最多同时存在10个拷贝任务；单次拷贝的文件数量不得超过500个。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copy(srcUri: string, destUri: string, options: CopyOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -152,7 +146,7 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900038 |
 | 13900034 |
 | 13900041 |

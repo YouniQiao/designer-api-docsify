@@ -4,6 +4,8 @@ Describes the shape mask.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ShapeMask--><!--Device-unnamed-export declare class ShapeMask-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor()
 A constructor used to create a **ShapeMask** instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ setCircleShape(circle: Circle): void
 Sets a round mask.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +112,8 @@ setCommandPath(path: CommandPath): void
 Sets the command for drawing a path.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -179,6 +187,8 @@ Sets an oval mask.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -244,6 +254,8 @@ setRectShape(rect: Rect): void
 Sets a rectangle mask.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -321,6 +333,8 @@ Sets the mask in the shape of a rectangle with rounded corners.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -392,15 +406,15 @@ struct Index {
 fillColor: number
 ```
 
-Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**.
-
-A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode**using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
+Describes the fill color of the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **fillColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
 
 **Type:** number
 
 **Default:** 0XFF000000
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -416,15 +430,15 @@ A color with only the transparency is generated based on the transparency and br
 strokeColor: number
 ```
 
-Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**.
-
-A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode**using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
+Sets the stroke color for the mask, in ARGB format. The default value is **0XFF000000**. A color with only the transparency is generated based on the transparency and brightness of **strokeColor**. The higher the brightness, the more transparent the color. Then, the color is blended with the color of **RenderNode** using the [BlendMode.SRC_IN](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-blendmode-e.md#BlendMode) API to generate the final color.
 
 **Type:** number
 
 **Default:** 0XFF000000
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -447,6 +461,8 @@ Sets the stroke width for the mask, in px. The default value is **0**.
 **Default:** 0
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

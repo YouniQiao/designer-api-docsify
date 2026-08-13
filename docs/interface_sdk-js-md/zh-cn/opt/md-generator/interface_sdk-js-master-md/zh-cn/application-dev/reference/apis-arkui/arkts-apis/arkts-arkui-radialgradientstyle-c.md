@@ -6,7 +6,9 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare class RadialGradientStyle extends ShaderStyle--><!--Device-unnamed-declare class RadialGradientStyle extends ShaderStyle-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class RadialGradientStyle--><!--Device-unnamed-declare class RadialGradientStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options: RadialGradientOptions)
 用于创建RadialGradientStyle对象的构造函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +49,8 @@ options: RadialGradientOptions
 **类型：** [RadialGradientOptions](../arkts-components/arkts-arkui-radialgradientoptions-i.md)
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

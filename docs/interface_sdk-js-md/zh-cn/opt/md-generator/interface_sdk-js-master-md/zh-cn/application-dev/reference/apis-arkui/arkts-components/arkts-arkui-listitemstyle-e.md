@@ -4,6 +4,8 @@ ListItem组件卡片样式枚举。
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ListItemStyle--><!--Device-unnamed-declare enum ListItemStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NONE = 0
 无样式。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ CARD = 1
 显示默认卡片样式。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

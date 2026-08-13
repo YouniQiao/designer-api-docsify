@@ -12,13 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -69,6 +69,8 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void--><!--Device-unnamed-declare function access(path: string, callback: AsyncCallback<boolean>): void-End-->
@@ -80,7 +82,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
 
 **Error codes:**
 
@@ -106,13 +108,13 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>--><!--Device-unnamed-declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>-End-->
 
@@ -137,7 +139,7 @@ If the read, write, or read and write permission verification fails, the error c
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
 | 13900023 | Text file busy |
 | 13900033 | Too many symbolic links encountered |

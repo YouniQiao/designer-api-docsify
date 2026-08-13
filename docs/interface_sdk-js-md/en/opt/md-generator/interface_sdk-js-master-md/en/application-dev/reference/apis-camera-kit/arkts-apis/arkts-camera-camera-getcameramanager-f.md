@@ -14,7 +14,9 @@ function getCameraManager(context: Context): CameraManager
 
 Obtains a CameraManager instance. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -38,8 +40,8 @@ Obtains a CameraManager instance. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## Examples
 

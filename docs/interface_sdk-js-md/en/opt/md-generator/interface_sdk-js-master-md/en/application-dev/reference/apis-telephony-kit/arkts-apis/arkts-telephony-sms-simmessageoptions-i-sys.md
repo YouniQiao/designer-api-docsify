@@ -2,7 +2,9 @@
 
 Defines the SIM message options.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface SimMessageOptions--><!--Device-sms-export interface SimMessageOptions-End-->
 
@@ -26,7 +28,9 @@ Protocol data unit.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimMessageOptions-pdu: string--><!--Device-SimMessageOptions-pdu: string-End-->
 
@@ -44,7 +48,9 @@ Card slot ID.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimMessageOptions-slotId: int--><!--Device-SimMessageOptions-slotId: int-End-->
 
@@ -62,7 +68,9 @@ Short message service center.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimMessageOptions-smsc: string--><!--Device-SimMessageOptions-smsc: string-End-->
 
@@ -80,7 +88,9 @@ Status.
 
 **Type:** [SimMessageStatus](arkts-telephony-sms-simmessagestatus-e-sys.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimMessageOptions-status: SimMessageStatus--><!--Device-SimMessageOptions-status: SimMessageStatus-End-->
 

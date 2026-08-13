@@ -1,18 +1,14 @@
 # ScryptSpec
 
-Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for scrypt key derivation function (KDF).
-
-> **NOTE：**
-> 
-> **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for
-> key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8
-> format. Otherwise, the key derived may be different from the one expected.
+Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec). It is a parameter for scrypt key derivation function (KDF). > **NOTE：**> > **passphrase** specifies the original password. If **passphrase** is of the string type, pass in the data used for > key derivation rather than a string of the HexString or Base64 type. In addition, the string must be in UTF-8 > format. Otherwise, the key derived may be different from the one expected.
 
 **Inheritance/Implementation:** ScryptSpec extends [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md#KdfSpec)
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-cryptoFramework-interface ScryptSpec extends KdfSpec--><!--Device-cryptoFramework-interface ScryptSpec extends KdfSpec-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface ScryptSpec--><!--Device-cryptoFramework-interface ScryptSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Kdf
 
@@ -32,9 +28,11 @@ Length of the derived key, in bytes. The value must be a positive integer.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-keySize: int--><!--Device-ScryptSpec-keySize: int-End-->
 
@@ -50,9 +48,11 @@ Maximum memory size, in bytes. The value must be a positive integer.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-maxMemory: long--><!--Device-ScryptSpec-maxMemory: long-End-->
 
@@ -68,9 +68,11 @@ CPU/memory cost parameter. The value must be a positive integer.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-n: long--><!--Device-ScryptSpec-n: long-End-->
 
@@ -86,9 +88,11 @@ Parallelization parameter. The value must be a positive integer.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-p: long--><!--Device-ScryptSpec-p: long-End-->
 
@@ -104,9 +108,11 @@ Original password entered by the user.
 
 **Type:** string \| Uint8Array
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-passphrase: string | Uint8Array--><!--Device-ScryptSpec-passphrase: string | Uint8Array-End-->
 
@@ -122,9 +128,11 @@ Block size. The value must be a positive integer.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-r: long--><!--Device-ScryptSpec-r: long-End-->
 
@@ -140,9 +148,11 @@ Salt value.
 
 **Type:** Uint8Array
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScryptSpec-salt: Uint8Array--><!--Device-ScryptSpec-salt: Uint8Array-End-->
 

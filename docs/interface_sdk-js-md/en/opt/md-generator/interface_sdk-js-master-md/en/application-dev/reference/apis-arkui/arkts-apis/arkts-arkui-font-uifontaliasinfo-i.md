@@ -4,6 +4,8 @@ UI font configuration of the system.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontAliasInfo--><!--Device-font-interface UIFontAliasInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Alias name.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -40,13 +44,13 @@ Alias name.
 weight: number
 ```
 
-Weight of the fonts included in the font family. If the value is greater than 0, the font family contains only the fonts with the specified weight. If the value is 0, the font family contains all fonts.
-
-Valid values are **0**, **100**, **400**, **700**, and **900**.
+Weight of the fonts included in the font family. If the value is greater than 0, the font family contains only the fonts with the specified weight. If the value is 0, the font family contains all fonts. Valid values are **0**, **100**, **400**, **700**, and **900**.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

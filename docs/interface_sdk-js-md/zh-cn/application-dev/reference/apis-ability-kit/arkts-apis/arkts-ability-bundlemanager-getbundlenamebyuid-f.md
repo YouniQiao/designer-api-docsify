@@ -8,9 +8,11 @@ function getBundleNameByUid(uid: int, callback: AsyncCallback<string>): void
 
 根据给定的uid获取对应应用的bundleName。使用callback异步回调。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -22,16 +24,16 @@ function getBundleNameByUid(uid: int, callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示应用程序的UID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为undefined， data为获取到的BundleName；否则为错误对象。 |
+| uid | int | 是 | 表示应用程序的UID。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)，当获取成功时，err为undefined， data为获取到的BundleName；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
 
 ## 示例
 
@@ -64,9 +66,11 @@ function getBundleNameByUid(uid: int): Promise<string>
 
 根据给定的uid获取对应应用的bundleName。使用Promise异步回调。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -78,7 +82,7 @@ function getBundleNameByUid(uid: int): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示应用程序的UID。 |
+| uid | int | 是 | 表示应用程序的UID。 |
 
 **返回值：**
 
@@ -90,9 +94,9 @@ function getBundleNameByUid(uid: int): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-指定的uid无效) | The uid is not found. |
 
 ## 示例
 

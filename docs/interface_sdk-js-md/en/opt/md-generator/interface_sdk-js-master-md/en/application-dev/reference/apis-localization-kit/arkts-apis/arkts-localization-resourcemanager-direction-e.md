@@ -2,7 +2,9 @@
 
 Enumerates the screen directions.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-resourceManager-export enum Direction--><!--Device-resourceManager-export enum Direction-End-->
 
@@ -16,7 +18,9 @@ DIRECTION_VERTICAL = 0
 
 Portrait
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ DIRECTION_HORIZONTAL = 1
 
 Landscape
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

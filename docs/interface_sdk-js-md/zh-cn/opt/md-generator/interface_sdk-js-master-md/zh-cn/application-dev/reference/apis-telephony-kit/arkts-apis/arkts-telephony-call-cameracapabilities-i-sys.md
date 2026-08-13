@@ -2,7 +2,9 @@
 
 视频通话本端相机画面分辨率信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface CameraCapabilities--><!--Device-call-export interface CameraCapabilities-End-->
 
@@ -20,7 +22,9 @@ callId: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraCapabilities-callId: int--><!--Device-CameraCapabilities-callId: int-End-->
 
@@ -38,7 +42,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraCapabilities-height: int--><!--Device-CameraCapabilities-height: int-End-->
 
@@ -56,7 +62,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraCapabilities-width: int--><!--Device-CameraCapabilities-width: int-End-->
 

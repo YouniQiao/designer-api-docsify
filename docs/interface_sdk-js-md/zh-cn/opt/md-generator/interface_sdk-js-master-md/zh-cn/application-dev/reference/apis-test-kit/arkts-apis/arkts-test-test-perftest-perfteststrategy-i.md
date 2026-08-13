@@ -1,13 +1,10 @@
 # PerfTestStrategy
 
-性能测试执行策略。
+性能测试执行策略。 > **说明：**> > 属性actionCode和resetCode的入参类型为回调函数"Callback\&lt;boolean&gt;"。在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。 > > 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。[代码示例](arkts-test-test-perftest-perftest-c.md#create)。
 
-> **说明：**
-> 
-> 属性actionCode和resetCode的入参类型为回调函数"Callback\&lt;boolean&gt;"。在代码段中需要主动调用此回调函数，通知框架代码段执行完成，否则会导致代码段执行超时。
-> > 其中，回调函数的参数为boolean类型，true代表代码段执行符合预期，false代表代码段执行不符合预期。[代码示例](arkts-test-test-perftest-perftest-c.md#create)。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface PerfTestStrategy--><!--Device-unnamed-declare interface PerfTestStrategy-End-->
 
@@ -23,9 +20,11 @@ actionCode: Callback<Callback<boolean>>
 
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTestStrategy-actionCode: Callback<Callback<boolean>>--><!--Device-PerfTestStrategy-actionCode: Callback<Callback<boolean>>-End-->
 
@@ -41,9 +40,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTestStrategy-bundleName?: string--><!--Device-PerfTestStrategy-bundleName?: string-End-->
 
@@ -59,9 +60,11 @@ iterations?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTestStrategy-iterations?: int--><!--Device-PerfTestStrategy-iterations?: int-End-->
 
@@ -77,9 +80,11 @@ metrics: Array<PerfMetric>
 
 **类型：** Array&lt;[PerfMetric](arkts-test-test-perftest-perfmetric-e.md)&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTestStrategy-metrics: Array<PerfMetric>--><!--Device-PerfTestStrategy-metrics: Array<PerfMetric>-End-->
 
@@ -95,9 +100,11 @@ resetCode?: Callback<Callback<boolean>>
 
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt;&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTestStrategy-resetCode?: Callback<Callback<boolean>>--><!--Device-PerfTestStrategy-resetCode?: Callback<Callback<boolean>>-End-->
 
@@ -109,13 +116,15 @@ resetCode?: Callback<Callback<boolean>>
 timeout?: number
 ```
 
-单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
+单次代码段（actionCode/resetCode）执行的超时时间，取值范围为大于0的整数，单位：ms，默认值为10000ms。 当测试代码段执行耗时较长时，可适当增大此值以避免超时，超时后将触发异常，并终止测试执行。
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTestStrategy-timeout?: int--><!--Device-PerfTestStrategy-timeout?: int-End-->
 

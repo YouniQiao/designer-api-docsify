@@ -6,6 +6,8 @@ Declares the interface for the method of a security component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface SecurityComponentMethod--><!--Device-unnamed-export declare interface SecurityComponentMethod-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Sets the default focus flag of the accessibility feature.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,13 @@ Sets the default focus flag of the accessibility feature.
 accessibilityDescription(description: string | Resource | undefined): this
 ```
 
-Sets the accessibility description.
-
-This property provides additional context or explanation for the component,helping users understand its actions or functions.&lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;:You can provide further explanation for the current component, such as the potential consequences of an operation, especially those not implicitly conveyed by the component's text or role type. If a component includes text information, a role type (other than ROLE_NONE),and an accessibility description, the system reads them when the component is selected.
+Sets the accessibility description. This property provides additional context or explanation for the component, helping users understand its actions or functions. &lt;p&gt;&lt;strong&gt;Note&lt;/strong&gt;: You can provide further explanation for the current component, such as the potential consequences of an operation, especially those not implicitly conveyed by the component's text or role type. If a component includes text information, a role type (other than ROLE_NONE), and an accessibility description, the system reads them when the component is selected.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +88,8 @@ Sets the ID of the next component to receive accessibility focus.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-accessibilityNextFocusId(nextId: string | undefined): this--><!--Device-SecurityComponentMethod-accessibilityNextFocusId(nextId: string | undefined): this-End-->
@@ -113,6 +119,8 @@ Sets the accessibility role, which represents the custom type of the component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,6 +152,8 @@ align
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-align(alignType: Alignment | undefined): this--><!--Device-SecurityComponentMethod-align(alignType: Alignment | undefined): this-End-->
@@ -173,6 +183,8 @@ Specifies the alignRules of relative container
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,6 +216,8 @@ Background color.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-backgroundColor(value: ResourceColor | undefined): this--><!--Device-SecurityComponentMethod-backgroundColor(value: ResourceColor | undefined): this-End-->
@@ -233,6 +247,8 @@ Color of the border.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -264,6 +280,8 @@ Radius of the border.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-borderRadius(radius: Dimension | BorderRadiuses | undefined): this--><!--Device-SecurityComponentMethod-borderRadius(radius: Dimension | BorderRadiuses | undefined): this-End-->
@@ -274,7 +292,7 @@ Radius of the border.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses \| undefined | Yes | Indicates the border radius of the security component. |
+| radius | [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) \| undefined | Yes | Indicates the border radius of the security component. |
 
 **Return value:**
 
@@ -293,6 +311,8 @@ Style of the border.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -324,6 +344,8 @@ Width of the border.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-borderWidth(value: Dimension | undefined): this--><!--Device-SecurityComponentMethod-borderWidth(value: Dimension | undefined): this-End-->
@@ -354,6 +376,8 @@ Specifies the direction and style of chain in relative container
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this--><!--Device-SecurityComponentMethod-chainMode(direction: Axis | undefined, style: ChainStyle | undefined): this-End-->
@@ -379,11 +403,13 @@ Specifies the direction and style of chain in relative container
 constraintSize(value: ConstraintSizeOptions | undefined): this
 ```
 
-constraint Size:minWidth: minimum Width, maxWidth: maximum Width, minHeight: minimum Height, maxHeight: maximum Height.
+constraint Size: minWidth: minimum Width, maxWidth: maximum Width, minHeight: minimum Height, maxHeight: maximum Height.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -415,6 +441,8 @@ If the value is true, the component is available and can respond to operations s
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-enabled(respond: boolean | undefined): this--><!--Device-SecurityComponentMethod-enabled(respond: boolean | undefined): this-End-->
@@ -444,6 +472,8 @@ Whether to include the ascent and descent of fallback fonts to prevent line over
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -475,6 +505,8 @@ Set the focusBox style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-focusBox(style: FocusBoxStyle | undefined): this--><!--Device-SecurityComponentMethod-focusBox(style: FocusBoxStyle | undefined): this-End-->
@@ -504,6 +536,8 @@ Font color of the inner text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -535,6 +569,8 @@ Font family of the inner text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-fontFamily(value: string | Resource | undefined): this--><!--Device-SecurityComponentMethod-fontFamily(value: string | Resource | undefined): this-End-->
@@ -564,6 +600,8 @@ Font size of the inner text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -595,6 +633,8 @@ Font style of the inner text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-fontStyle(value: FontStyle | undefined): this--><!--Device-SecurityComponentMethod-fontStyle(value: FontStyle | undefined): this-End-->
@@ -624,6 +664,8 @@ Font weight of the inner text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -655,6 +697,8 @@ Sets the height of the component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-height(value: Length | undefined): this--><!--Device-SecurityComponentMethod-height(value: Length | undefined): this-End-->
@@ -684,6 +728,8 @@ Called when the height adaptive policy is set.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -715,6 +761,8 @@ Color of the icon.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-iconColor(value: ResourceColor | undefined): this--><!--Device-SecurityComponentMethod-iconColor(value: ResourceColor | undefined): this-End-->
@@ -744,6 +792,8 @@ Icon size.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -775,6 +825,8 @@ Id. User can set an id to the component to identify it.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-id(id: string | undefined): this--><!--Device-SecurityComponentMethod-id(id: string | undefined): this-End-->
@@ -804,6 +856,8 @@ Layout direction of the icon and text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -835,6 +889,8 @@ Anchor of the security component for positioning. The top start edge of the comp
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-markAnchor(value: Position | undefined): this--><!--Device-SecurityComponentMethod-markAnchor(value: Position | undefined): this-End-->
@@ -864,6 +920,8 @@ Sets the maximum font scale factor for text.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -895,6 +953,8 @@ Called when the maximum font size of the font is set.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-maxFontSize(maxSize: double | string | Resource | undefined): this--><!--Device-SecurityComponentMethod-maxFontSize(maxSize: double | string | Resource | undefined): this-End-->
@@ -924,6 +984,8 @@ Called when the maximum number of lines of text is set.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -955,6 +1017,8 @@ Sets the minimum font scale factor for text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-minFontScale(scale: double | Resource | undefined): this--><!--Device-SecurityComponentMethod-minFontScale(scale: double | Resource | undefined): this-End-->
@@ -985,6 +1049,8 @@ Called when the minimum font size of the font is set.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-minFontSize(minSize: double | string | Resource | undefined): this--><!--Device-SecurityComponentMethod-minFontSize(minSize: double | string | Resource | undefined): this-End-->
@@ -1009,11 +1075,13 @@ Called when the minimum font size of the font is set.
 offset(value: Position | Edges | LocalizedEdges | undefined): this
 ```
 
-Coordinate offset relative to the layout completion position.Setting this attribute does not affect the layout of the parent container.The position is adjusted only during drawing.
+Coordinate offset relative to the layout completion position. Setting this attribute does not affect the layout of the parent container. The position is adjusted only during drawing.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1045,6 +1113,8 @@ Padding between the background border and icon/inner text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-padding(value: Padding | Dimension | undefined): this--><!--Device-SecurityComponentMethod-padding(value: Padding | Dimension | undefined): this-End-->
@@ -1055,7 +1125,7 @@ Padding between the background border and icon/inner text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Padding](arkts-arkui-units-padding-i.md) \| [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the padding of the security component. |
+| value | [Padding](arkts-arkui-padding-t.md) \| [Dimension](arkts-arkui-dimension-t.md) \| undefined | Yes | Indicates the padding of the security component. |
 
 **Return value:**
 
@@ -1074,6 +1144,8 @@ Position of the security component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1105,6 +1177,8 @@ The size of the component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-size(value: SizeOptions | undefined): this--><!--Device-SecurityComponentMethod-size(value: SizeOptions | undefined): this-End-->
@@ -1135,6 +1209,8 @@ Space between the inner text and icon.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SecurityComponentMethod-textIconSpace(value: Dimension | undefined): this--><!--Device-SecurityComponentMethod-textIconSpace(value: Dimension | undefined): this-End-->
@@ -1164,6 +1240,8 @@ Sets the width of the component.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

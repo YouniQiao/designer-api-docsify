@@ -3,6 +3,7 @@
 ## Video
 
 ```TypeScript
+@ComponentBuilder
 export declare function Video(
     value: VideoOptions
 ): VideoAttribute
@@ -14,9 +15,11 @@ Video is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Video(    value: VideoOptions): VideoAttribute--><!--Device-unnamed-export declare function Video(    value: VideoOptions): VideoAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Video(    value: VideoOptions): VideoAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Video(    value: VideoOptions): VideoAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Video is returned when the parameter is transferred.
 ## Video
 
 ```TypeScript
+@Builder
 export declare function Video(
     style: CustomBuilderT<VideoAttribute>
 ): VideoAttribute
@@ -47,11 +51,11 @@ Defines Video Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute--><!--Device-unnamed-export declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute--><!--Device-unnamed-@Builderexport declare function Video(    style: CustomBuilderT<VideoAttribute>): VideoAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Video Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[VideoAttribute](arkts-arkui-video-videoattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

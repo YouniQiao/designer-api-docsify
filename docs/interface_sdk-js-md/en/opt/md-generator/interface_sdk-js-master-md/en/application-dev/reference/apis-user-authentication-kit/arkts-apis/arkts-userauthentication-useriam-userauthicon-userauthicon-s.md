@@ -1,16 +1,10 @@
 # UserAuthIcon
 
-The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM)system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes,and tapping the icon launches the system authentication dialog box component.
-
-This module applies to the following scenarios:
-
-- Quickly integrating the face or fingerprint authentication entry into the application UI.  
-- Displaying biometric authentication icons in a unified style.  
-- Tapping the icon to trigger the system-level authentication process.
+The **userAuthIcon** module is a UI component module of the OpenHarmony user identity and access management (UserIAM) system. It provides an out-of-the-box authentication icon component (**UserAuthIcon**). This component is used to display the face or fingerprint authentication icon in the application UI. It supports custom icon colors and sizes, and tapping the icon launches the system authentication dialog box component. This module applies to the following scenarios: - Quickly integrating the face or fingerprint authentication entry into the application UI. - Displaying biometric authentication icons in a unified style. - Tapping the icon to trigger the system-level authentication process.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default struct UserAuthIcon--><!--Device-unnamed-export default struct UserAuthIcon-End-->
 
@@ -22,58 +16,19 @@ This module applies to the following scenarios:
 import { UserAuthIcon } from '@kit.UserAuthenticationKit';
 ```
 
-## onAuthResult
-
-```TypeScript
-onAuthResult: (result: userAuth.UserAuthResult) => void
-```
-
-Result callback. This callback is triggered after a user completes authentication. The callback parameters include the authentication result code (**result**), authentication token (**token**), and authentication type (  
-**authType**). Your application needs to process the authentication result in this callback. For example, if the authentication is successful, your application can obtain the token for subsequent security operations. If the authentication fails, your application can prompt the user to try again.
-
-Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only display the icon and cannot start the authentication component.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void--><!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| result | userAuth.UserAuthResult | Yes |
-
-## onIconClick
-
-```TypeScript
-onIconClick?: () => void
-```
-
-Icon click callback. This callback is triggered when a user taps the authentication icon. You can use this callback to prepare for the tap or record user behavior logs. If this callback is not set, the authentication process is directly triggered after the icon is tapped.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-UserAuthIcon-onIconClick?: () => void--><!--Device-UserAuthIcon-onIconClick?: () => void-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
 ## authParam
 
 ```TypeScript
 authParam: userAuth.AuthParam
 ```
 
-User authentication parameters. The parameters include the **challenge** value, authentication type (**authType**),and authentication trust level (**authTrustLevel**). The challenge value is used to prevent replay attacks. The authentication type specifies the available authentication methods (such as face, fingerprint, and PIN). The authentication trust level determines the security strength of the authentication.
+User authentication parameters. The parameters include the **challenge** value, authentication type (**authType**), and authentication trust level (**authTrustLevel**). The challenge value is used to prevent replay attacks. The authentication type specifies the available authentication methods (such as face, fingerprint, and PIN). The authentication trust level determines the security strength of the authentication.
 
 **Type:** userAuth.AuthParam
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -87,13 +42,15 @@ User authentication parameters. The parameters include the **challenge** value, 
 iconColor?: ResourceColor
 ```
 
-Icon color. Multiple formats are supported, such as color values and resource references. By default, the system accent color is used. You can customize the color based on the application theme, for example, using **Color.Blue**or **\$r('app.color.primary')**.
+Icon color. Multiple formats are supported, such as color values and resource references. By default, the system accent color is used. You can customize the color based on the application theme, for example, using **Color.Blue** or **\$r('app.color.primary')**.
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** $r('sys.color.ohos_id_color_activated')
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,9 +72,51 @@ Icon height, with an aspect ratio of 1:1. Percentage strings are not supported. 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthIcon-iconHeight?: Dimension--><!--Device-UserAuthIcon-iconHeight?: Dimension-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## onAuthResult
+
+```TypeScript
+onAuthResult: (result: userAuth.UserAuthResult) => void
+```
+
+Result callback. This callback is triggered after a user completes authentication. The callback parameters include the authentication result code (**result**), authentication token (**token**), and authentication type ( **authType**). Your application needs to process the authentication result in this callback. For example, if the authentication is successful, your application can obtain the token for subsequent security operations. If the authentication fails, your application can prompt the user to try again. Note:The application must request the **ohos.permission.ACCESS_BIOMETRIC** permission. Otherwise, it will only display the icon and cannot start the authentication component.
+
+**Type:** (result: userAuth.UserAuthResult) =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void--><!--Device-UserAuthIcon-onAuthResult: (result: userAuth.UserAuthResult) => void-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## onIconClick
+
+```TypeScript
+onIconClick?: () => void
+```
+
+Icon click callback. This callback is triggered when a user taps the authentication icon. You can use this callback to prepare for the tap or record user behavior logs. If this callback is not set, the authentication process is directly triggered after the icon is tapped.
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-UserAuthIcon-onIconClick?: () => void--><!--Device-UserAuthIcon-onIconClick?: () => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -132,6 +131,8 @@ Parameters on the user authentication page. The parameters include the authentic
 **Type:** userAuth.WidgetParam
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

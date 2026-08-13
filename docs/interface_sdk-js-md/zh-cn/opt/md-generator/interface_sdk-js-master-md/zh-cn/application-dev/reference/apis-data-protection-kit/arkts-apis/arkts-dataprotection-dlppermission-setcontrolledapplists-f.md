@@ -10,6 +10,8 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DLP_POLICY_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -35,12 +37,12 @@ function setControlledAppLists(appLists: Array<string>, userId?: number): Promis
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100023](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100023-指定的用户id与当前用户id不一致) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [19100024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100024-个人空间用户不支持设置受控应用) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100023](../errorcode-dlp.md#19100023-指定的用户id与当前用户id不一致) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [19100024](../errorcode-dlp.md#19100024-个人空间用户不支持设置受控应用) |
 
 ## 示例
 

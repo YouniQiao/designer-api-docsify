@@ -2,7 +2,9 @@
 
 跳转目标的ability信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-interface WantAgent--><!--Device-reminderAgentManager-interface WantAgent-End-->
 
@@ -18,7 +20,9 @@ abilityName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
 
@@ -27,16 +31,18 @@ abilityName: string
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: RecordData
 ```
 
-需要传递到目标的参数。
+The description of the WantParams object in an Want
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-WantAgent-parameters?: Record<string, Object>--><!--Device-WantAgent-parameters?: Record<string, Object>-End-->
+**废弃版本：** -1
+
+<!--Device-WantAgent-parameters?: RecordData--><!--Device-WantAgent-parameters?: RecordData-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -50,7 +56,9 @@ pkgName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
 
@@ -66,7 +74,9 @@ uri?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WantAgent-uri?: string--><!--Device-WantAgent-uri?: string-End-->
 

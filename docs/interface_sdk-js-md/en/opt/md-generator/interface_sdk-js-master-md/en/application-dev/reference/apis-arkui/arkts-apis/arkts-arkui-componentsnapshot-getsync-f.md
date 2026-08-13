@@ -12,15 +12,11 @@ import { componentSnapshot } from '@kit.ArkUI';
 function getSync(id: string, options?: SnapshotOptions): image.PixelMap
 ```
 
-Obtains the snapshot of a component that has been loaded based on the provided [component ID](common). This API synchronously waits for the snapshot to complete and returns a  
-[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) object.
-
-> **NOTE：**
-> 
-> The snapshot captures content rendered in the last frame. If this API is called when the component triggers an
-> update, the re-rendered content will not be included in the obtained snapshot.
+Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) object. > **NOTE：**> > The snapshot captures content rendered in the last frame. If this API is called when the component triggers an > update, the re-rendered content will not be included in the obtained snapshot.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,10 +43,10 @@ Obtains the snapshot of a component that has been loaded based on the provided [
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [160002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160002-snapshot-timeout) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [160003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [160002](../errorcode-snapshot.md#160002-snapshot-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [160003](../errorcode-snapshot.md#160003-provided-color-space-or-dynamic-range-mode-is-not-supported) |
 
 ## Examples
 

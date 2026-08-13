@@ -2,7 +2,9 @@
 
 Defines a list of data arrays.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface DataArray--><!--Device-cert-interface DataArray-End-->
 
@@ -24,7 +26,9 @@ Indicates the content of the data array.
 
 **Type:** Array&lt;Uint8Array&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

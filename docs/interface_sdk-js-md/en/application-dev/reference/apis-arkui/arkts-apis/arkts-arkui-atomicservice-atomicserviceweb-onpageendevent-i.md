@@ -6,6 +6,8 @@ Represents the callback invoked when the web page loading ends.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface OnPageEndEvent--><!--Device-unnamed-export declare interface OnPageEndEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,6 +31,8 @@ The url of page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

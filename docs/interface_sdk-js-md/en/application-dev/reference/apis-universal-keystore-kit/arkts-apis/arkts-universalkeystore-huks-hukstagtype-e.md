@@ -6,6 +6,8 @@ Enumerates the tag data types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksTagType--><!--Device-huks-export enum HuksTagType-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -21,6 +23,8 @@ Invalid tag type.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Number of the int type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksTagType-HUKS_TAG_TYPE_INT = 1 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_INT = 1 << 28-End-->
@@ -57,6 +63,8 @@ Number of the uint type.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -76,6 +84,8 @@ BigInt.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksTagType-HUKS_TAG_TYPE_ULONG = 3 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_ULONG = 3 << 28-End-->
@@ -94,6 +104,8 @@ Boolean.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksTagType-HUKS_TAG_TYPE_BOOL = 4 << 28--><!--Device-HuksTagType-HUKS_TAG_TYPE_BOOL = 4 << 28-End-->
@@ -111,6 +123,8 @@ Uint8Array.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

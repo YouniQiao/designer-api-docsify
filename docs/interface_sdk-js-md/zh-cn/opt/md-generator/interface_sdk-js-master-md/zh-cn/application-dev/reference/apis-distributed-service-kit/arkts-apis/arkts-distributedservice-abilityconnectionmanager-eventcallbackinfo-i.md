@@ -2,7 +2,9 @@
 
 回调方法的接收信息。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityConnectionManager-interface EventCallbackInfo--><!--Device-abilityConnectionManager-interface EventCallbackInfo-End-->
 
@@ -18,7 +20,9 @@ data?: ArrayBuffer
 
 **类型：** ArrayBuffer
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ msg?: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +60,9 @@ reason?: DisconnectReason
 
 **类型：** [DisconnectReason](arkts-distributedservice-abilityconnectionmanager-disconnectreason-e.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,7 +80,9 @@ sessionId: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

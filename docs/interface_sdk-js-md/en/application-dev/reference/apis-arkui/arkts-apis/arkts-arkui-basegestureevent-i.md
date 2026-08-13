@@ -1,14 +1,16 @@
 # BaseGestureEvent
 
-Defines the basic gesture event type. Inherits from [BaseEvent](BaseEvent).
+Defines the basic gesture event type. Inherits from BaseEvent.
 
-**Inheritance/Implementation:** BaseGestureEvent extends [BaseEvent](BaseEvent)
+**Inheritance/Implementation:** BaseGestureEvent extends BaseEvent
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-interface BaseGestureEvent extends BaseEvent--><!--Device-unnamed-interface BaseGestureEvent extends BaseEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface BaseGestureEvent--><!--Device-unnamed-interface BaseGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,17 +20,15 @@ Defines the basic gesture event type. Inherits from [BaseEvent](BaseEvent).
 fingerInfos?: FingerInfo[]
 ```
 
-Information about touch points of the gesture event. For gesture events initiated by a touchscreen, **fingerInfos**includes information about all touch points. For gesture events initiated by a mouse or touchpad, **fingerInfos** contains only one touch point.
-
-**NOTE：**
-
-**fingerInfos** only records information about effective fingers that participate in the touch. Fingers that are pressed first but do not participate in triggering of the current gesture will not be shown in **fingerInfos**. The default value is an empty array **[]**, and an empty array indicates no effective touch point information.
+Information about touch points of the gesture event. For gesture events initiated by a touchscreen, **fingerInfos** includes information about all touch points. For gesture events initiated by a mouse or touchpad, **fingerInfos** contains only one touch point. **NOTE：****fingerInfos** only records information about effective fingers that participate in the touch. Fingers that are pressed first but do not participate in triggering of the current gesture will not be shown in **fingerInfos**. The default value is an empty array **[]**, and an empty array indicates no effective touch point information.
 
 **Type:** [FingerInfo](arkts-arkui-fingerinfo-i.md)[]
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +51,8 @@ Information about all fingers triggering the event.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

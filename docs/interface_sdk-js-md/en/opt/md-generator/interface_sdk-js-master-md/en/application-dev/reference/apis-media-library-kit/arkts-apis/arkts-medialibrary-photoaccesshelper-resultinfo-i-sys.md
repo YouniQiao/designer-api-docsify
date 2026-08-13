@@ -4,6 +4,8 @@ ResultInfo info of batch operations.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface ResultInfo--><!--Device-photoAccessHelper-interface ResultInfo-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -28,6 +30,8 @@ result code of batch operations.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ResultInfo-readonly code: int--><!--Device-ResultInfo-readonly code: int-End-->
@@ -47,6 +51,8 @@ result info of batch operations.
 **Type:** Array&lt;string \| null&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

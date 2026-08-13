@@ -2,9 +2,11 @@
 
 Enumerates the types of recommended images.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
 
@@ -18,9 +20,11 @@ COLOR_STYLE_PHOTO = 12
 
 Recommended style.
 
-**Since:** 18
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12--><!--Device-RecommendationType-COLOR_STYLE_PHOTO = 12-End-->
 
@@ -36,9 +40,11 @@ CAT = 13
 
 Cat images will be recommended.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +62,11 @@ DOG = 14
 
 Dog images will be recommended.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,9 +84,11 @@ ARCHITECTURE = 15
 
 Architecture images will be recommended.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,9 +106,11 @@ LANDSCAPE = 16
 
 Landscape images will be recommended.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,9 +128,11 @@ GAUSSIAN_SPLAT_3D = 17
 
 Images generated using the 3D Gaussian technology will be recommended.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

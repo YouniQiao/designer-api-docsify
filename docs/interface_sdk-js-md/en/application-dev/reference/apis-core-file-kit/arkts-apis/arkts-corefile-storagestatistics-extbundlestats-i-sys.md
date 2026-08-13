@@ -4,7 +4,9 @@ Details the space usage of system applications or system services.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-storageStatistics-export interface ExtBundleStats--><!--Device-storageStatistics-export interface ExtBundleStats-End-->
 
@@ -30,7 +32,9 @@ System application bundle name or system service name.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,14 +50,15 @@ System application bundle name or system service name.
 flag: boolean
 ```
 
-Whether the space occupied by system applications or system services needs to be displayed separately on the  
-**Settings** > **Storage** page. A value of **true** enables independent display; a value of **false** merges the usage data into the application specified by **businessName**.
+Whether the space occupied by system applications or system services needs to be displayed separately on the **Settings** > **Storage** page. A value of **true** enables independent display; a value of **false** merges the usage data into the application specified by **businessName**.
 
 **Type:** boolean
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,13 +74,15 @@ Whether the space occupied by system applications or system services needs to be
 size: long
 ```
 
-The business size.&lt;br&gt;Unit: Byte.
+The business size. &lt;br&gt;Unit: Byte.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

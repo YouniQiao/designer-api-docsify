@@ -10,6 +10,8 @@ function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBu
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number--><!--Device-fastbuffer-function byteLength(value: string | FastBuffer | TypedArray | DataView | ArrayBuffer | SharedArrayBuffer, encoding?: BufferEncoding): number-End-->

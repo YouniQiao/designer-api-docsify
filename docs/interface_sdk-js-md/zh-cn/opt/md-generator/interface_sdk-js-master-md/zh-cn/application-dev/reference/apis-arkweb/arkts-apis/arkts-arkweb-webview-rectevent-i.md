@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -14,13 +16,13 @@
 height: number
 ```
 
-矩形的高度。
-
-单位：px。
+矩形的高度。 单位：px。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
 
@@ -32,13 +34,13 @@ height: number
 width: number
 ```
 
-矩形的宽度。
-
-单位：px。
+矩形的宽度。 单位：px。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
 
@@ -50,13 +52,13 @@ width: number
 x: number
 ```
 
-矩形区域左上角x坐标。
-
-单位：px。
+矩形区域左上角x坐标。 单位：px。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
 
@@ -68,13 +70,13 @@ x: number
 y: number
 ```
 
-矩形区域左上角y坐标。
-
-单位：px。
+矩形区域左上角y坐标。 单位：px。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
 

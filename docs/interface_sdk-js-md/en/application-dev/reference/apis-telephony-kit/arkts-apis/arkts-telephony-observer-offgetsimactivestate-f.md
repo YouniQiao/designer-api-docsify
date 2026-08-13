@@ -12,13 +12,13 @@ import { observer } from '@kit.TelephonyKit';
 function offGetSimActiveState(callback?: Callback<boolean>): void
 ```
 
-Unregisters an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result.
-
-**Required permission**: ohos.permission.GET_TELEPHONY_STATE
+Unregisters an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result. **Required permission**: ohos.permission.GET_TELEPHONY_STATE
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -30,17 +30,17 @@ Unregisters an observer for SIM card activation state changes. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback function used to return whether the SIM card is activated. &lt;br&gt;- **true**: activated. &lt;br&gt;- **false**: not activated. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback function used to return whether the SIM card is activated. &lt;br&gt;- **true**: activated. &lt;br&gt;- **false**: not activated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) | Unknown error. |
-| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
-| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Service connection failed. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 
 ## Examples
 

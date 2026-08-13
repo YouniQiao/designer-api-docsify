@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-asset-enum SyncType--><!--Device-asset-enum SyncType-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ NEVER = 0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SyncType-NEVER = 0--><!--Device-SyncType-NEVER = 0-End-->
@@ -34,13 +38,13 @@ NEVER = 0
 THIS_DEVICE = 1 << 0
 ```
 
-只在本设备进行同步，如仅在本设备还原的备份场景。
-
-**说明：** 本字段是能力预埋，当前不支持。
+只在本设备进行同步，如仅在本设备还原的备份场景。 **说明：** 本字段是能力预埋，当前不支持。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -60,6 +64,8 @@ TRUSTED_DEVICE = 1 << 1
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SyncType-TRUSTED_DEVICE = 1 << 1--><!--Device-SyncType-TRUSTED_DEVICE = 1 << 1-End-->
@@ -72,13 +78,13 @@ TRUSTED_DEVICE = 1 << 1
 TRUSTED_ACCOUNT = 1 << 2
 ```
 
-只在登录可信账号的设备间进行同步，如云同步场景。
-
-**说明：** 本字段是能力预埋，当前不支持。
+只在登录可信账号的设备间进行同步，如云同步场景。 **说明：** 本字段是能力预埋，当前不支持。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

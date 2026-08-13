@@ -9,9 +9,11 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 设置扩展屏幕的显示模式（镜像/扩展），使用Promise异步回调。primaryScreenId和secondaryScreenId均为0时，仅在扩展屏显示。
 
-**起始版本：** 13
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为13；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,    secondaryScreenMode: MultiScreenMode): Promise<void>--><!--Device-screen-function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,    secondaryScreenMode: MultiScreenMode): Promise<void>-End-->
 
@@ -23,8 +25,8 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| primaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 主屏的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
-| secondaryScreenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 扩展屏幕的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
+| primaryScreenId | long | 是 | 主屏的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
+| secondaryScreenId | long | 是 | 扩展屏幕的id，该参数应为非负整数。如果输入的数字包含小数部分，向下取整。 |
 | secondaryScreenMode | [MultiScreenMode](arkts-arkui-screen-multiscreenmode-e-sys.md) | 是 | 扩展屏幕的显示模式。 |
 
 **返回值：**
@@ -37,9 +39,9 @@ function setMultiScreenMode(primaryScreenId: long, secondaryScreenId: long,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
 ## 示例
 

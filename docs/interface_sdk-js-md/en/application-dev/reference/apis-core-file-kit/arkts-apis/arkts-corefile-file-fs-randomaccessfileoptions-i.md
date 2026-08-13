@@ -2,9 +2,11 @@
 
 Defines the options used in **createRandomAccessFile()**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RandomAccessFileOptions--><!--Device-unnamed-export interface RandomAccessFileOptions-End-->
 
@@ -19,36 +21,40 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 ## end
 
 ```TypeScript
-end?: long
+end?: number
 ```
 
 End position to read the data, in bytes. This parameter is optional. The default value is the end of the file.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-RandomAccessFileOptions-end?: long--><!--Device-RandomAccessFileOptions-end?: long-End-->
+**Deprecated since:** -1
+
+<!--Device-RandomAccessFileOptions-end?: number--><!--Device-RandomAccessFileOptions-end?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
 ## start
 
 ```TypeScript
-start?: long
+start?: number
 ```
 
 Start position to read the data, in bytes. This parameter is optional. By default, data is read from the current position.
 
-**Type:** long
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-RandomAccessFileOptions-start?: long--><!--Device-RandomAccessFileOptions-start?: long-End-->
+**Deprecated since:** -1
+
+<!--Device-RandomAccessFileOptions-start?: number--><!--Device-RandomAccessFileOptions-start?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 

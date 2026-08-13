@@ -14,9 +14,11 @@ function publish(event: string, callback: AsyncCallback<void>): void
 
 Publishes a common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -29,16 +31,16 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the common event is successfully published, **err** is **undefined**; if the event fails to be published, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the common event is successfully published, **err** is **undefined**; if the event fails to be published, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1500007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
-| [1500008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
-| [1500009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
 
 ## Examples
 
@@ -91,9 +93,11 @@ function publish(event: string, options: CommonEventPublishData, callback: Async
 
 Publishes a common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,16 +111,16 @@ Publishes a common event. This API uses an asynchronous callback to return the r
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | options | CommonEventPublishData | Yes | Properties of the common event to publish. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the common event is successfully published, **err** is **undefined**; if the event fails to be published, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the common event is successfully published, **err** is **undefined**; if the event fails to be published, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1500007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
-| [1500003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
-| [1500008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
-| [1500009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
+| [1500003](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500003-common-event-sending-frequency-is-too-high) | The common event sending frequency too high.<br>**Applicable version:** 20 and later |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
+| [1500009](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
 
 ## Examples
 

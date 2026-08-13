@@ -12,13 +12,13 @@ import { WantAgent } from '@kit.AbilityKit';
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-Obtains a WantAgent object.This API uses an asynchronous callback to return the result.If the creation fails, a null WantAgent object is returned.
+Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: &lt;br&gt;Third-party applications can set only their own abilities. &lt;/p&gt;
 
-&lt;p&gt;**NOTE：**:&lt;br&gt;Third-party applications can set only their own abilities.&lt;/p&gt;
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -31,15 +31,15 @@ Obtains a WantAgent object.This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | info | WantAgentInfo | Yes | Information about the WantAgent object to obtain. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](arkts-ability-wantagent-t.md)&gt; | Yes | Callback used to return the WantAgent object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
-| [16000151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
 ## Examples
 
@@ -101,13 +101,13 @@ try {
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-Obtains a WantAgent object.This API uses a promise to return the result.If the creation fails, a null WantAgent object is returned.
+Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: &lt;br&gt;Third-party applications can set only their own abilities. &lt;/p&gt;
 
-&lt;p&gt;**NOTE：**:&lt;br&gt;Third-party applications can set only their own abilities.&lt;/p&gt;
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -131,9 +131,9 @@ Obtains a WantAgent object.This API uses a promise to return the result.If the c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [16000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
-| [16000151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) | Service busy. There are concurrent tasks. Try again later. |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) | Invalid wantAgent object. |
 
 ## Examples
 

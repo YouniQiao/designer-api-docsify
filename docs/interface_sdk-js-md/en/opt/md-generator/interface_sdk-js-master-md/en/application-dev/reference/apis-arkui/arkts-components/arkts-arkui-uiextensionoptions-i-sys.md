@@ -4,6 +4,8 @@ Describes the optional construction parameters during **UIExtensionComponent** c
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface UIExtensionOptions--><!--Device-unnamed-declare interface UIExtensionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,12 +18,13 @@ Describes the optional construction parameters during **UIExtensionComponent** c
 areaChangePlaceholder?: Record<string, ComponentContent>
 ```
 
-Placeholder for size changes, displayed when the UIExtensionComponent's size changes and the internal rendering of  
-**UIExtension** is not completed. The key value can be **FOLD_TO_EXPAND** (size change for folding and expanding)or **UNDEFINED** (default size change).
+Placeholder for size changes, displayed when the UIExtensionComponent's size changes and the internal rendering of **UIExtension** is not completed. The key value can be **FOLD_TO_EXPAND** (size change for folding and expanding) or **UNDEFINED** (default size change).
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, ComponentContent&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, ComponentContent&gt;
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,15 +40,15 @@ Placeholder for size changes, displayed when the UIExtensionComponent's size cha
 dpiFollowStrategy?: DpiFollowStrategy
 ```
 
-Whether the DPI settings follow the host or UIExtensionAbility.
-
-Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
+Whether the DPI settings follow the host or UIExtensionAbility. Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
 
 **Type:** [DpiFollowStrategy](arkts-arkui-dpifollowstrategy-e-sys.md)
 
 **Default:** DpiFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_DPI
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,15 +64,15 @@ Default value: **FOLLOW_UI_EXTENSION_ABILITY_DPI**
 isTransferringCaller?: boolean
 ```
 
-Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting.
-
-Default value: **false**
+Whether the **UIExtensionComponent** forwards the upper-level caller information when it is used for nesting. Default value: **false**
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +94,8 @@ Placeholder to be displayed before the UIExtensionComponent establishes a connec
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIExtensionOptions-placeholder?: ComponentContent--><!--Device-UIExtensionOptions-placeholder?: ComponentContent-End-->
@@ -105,15 +110,15 @@ Placeholder to be displayed before the UIExtensionComponent establishes a connec
 windowModeFollowStrategy?: WindowModeFollowStrategy
 ```
 
-Following strategy of the window mode.
-
-Default value: **FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
+Following strategy of the window mode. Default value: **FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE**
 
 **Type:** [WindowModeFollowStrategy](arkts-arkui-windowmodefollowstrategy-e-sys.md)
 
 **Default:** WindowModeFollowStrategy.FOLLOW_UI_EXTENSION_ABILITY_WINDOW_MODE
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

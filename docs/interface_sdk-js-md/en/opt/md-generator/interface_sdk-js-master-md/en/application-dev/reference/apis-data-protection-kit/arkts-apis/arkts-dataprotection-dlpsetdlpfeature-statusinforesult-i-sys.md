@@ -4,6 +4,8 @@ Describes the DLP settings.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-dlpSetDlpFeature-export interface StatusInfoResult--><!--Device-dlpSetDlpFeature-export interface StatusInfoResult-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -27,6 +29,8 @@ Whether the DLP setting is successful. The value **true** indicates that the set
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

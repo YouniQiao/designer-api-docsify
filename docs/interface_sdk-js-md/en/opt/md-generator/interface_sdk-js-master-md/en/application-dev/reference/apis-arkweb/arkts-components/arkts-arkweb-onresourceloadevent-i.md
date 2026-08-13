@@ -4,6 +4,8 @@ Defines the triggered when the url loading.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnResourceLoadEvent--><!--Device-unnamed-declare interface OnResourceLoadEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ The URL of the loaded resource file.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -4,6 +4,8 @@ The form factors for User-Agent metadata.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum UserAgentFormFactor--><!--Device-webview-enum UserAgentFormFactor-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ AUTOMOTIVE = 'Automotive'
 Form factor option: Automotive.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Form factor option: Desktop.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentFormFactor-DESKTOP = 'Desktop'--><!--Device-UserAgentFormFactor-DESKTOP = 'Desktop'-End-->
@@ -49,6 +55,8 @@ MOBILE = 'Mobile'
 Form factor option: Mobile.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Form factor option: EInk.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentFormFactor-EINK = 'EInk'--><!--Device-UserAgentFormFactor-EINK = 'EInk'-End-->
@@ -81,6 +91,8 @@ TABLET = 'Tablet'
 Form factor option: Tablet.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ Form factor option: Watch.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentFormFactor-WATCH = 'Watch'--><!--Device-UserAgentFormFactor-WATCH = 'Watch'-End-->
@@ -113,6 +127,8 @@ XR = 'XR'
 Form factor option: XR.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

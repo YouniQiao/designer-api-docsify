@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ParticleOptions--><!--Device-unnamed-export interface ParticleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@
 acceleration?: AccelerationOptions
 ```
 
-粒子加速度配置。 
-
-**说明：**
-
-speed表示加速度大小，angle表示加速度方向（单位为角度）。
-
-默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
+粒子加速度配置。 **说明：** speed表示加速度大小，angle表示加速度方向（单位为角度）。 默认值：{ speed:{range:[0.0,0.0]},angle:{range:[0.0,0.0]} }
 
 **类型：** [AccelerationOptions](arkts-arkui-particle-accelerationoptions-i.md)
 
@@ -31,6 +27,8 @@ speed表示加速度大小，angle表示加速度方向（单位为角度）。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,11 +42,7 @@ speed表示加速度大小，angle表示加速度方向（单位为角度）。
 color?: ParticleColorPropertyOptions
 ```
 
-粒子颜色配置。
-
-**说明：**
-
-默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
+粒子颜色配置。 **说明：** 默认值：{ range:[Color.White,Color.White] } 。图片粒子不支持设置颜色。
 
 **类型：** [ParticleColorPropertyOptions](arkts-arkui-particle-particlecolorpropertyoptions-i.md)
 
@@ -57,6 +51,8 @@ color?: ParticleColorPropertyOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,6 +74,8 @@ emitter: EmitterOptions
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ParticleOptions-emitter: EmitterOptions--><!--Device-ParticleOptions-emitter: EmitterOptions-End-->
@@ -90,9 +88,7 @@ emitter: EmitterOptions
 opacity?: ParticlePropertyOptions
 ```
 
-粒子透明度配置。
-
-默认值：{ range:[1.0,1.0] }
+粒子透明度配置。 默认值：{ range:[1.0,1.0] }
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
@@ -101,6 +97,8 @@ opacity?: ParticlePropertyOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,9 +112,7 @@ opacity?: ParticlePropertyOptions
 scale?: ParticlePropertyOptions
 ```
 
-粒子大小配置。
-
-默认值：{ range:[1.0,1.0] }
+粒子大小配置。 默认值：{ range:[1.0,1.0] }
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
@@ -125,6 +121,8 @@ scale?: ParticlePropertyOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,11 +136,7 @@ scale?: ParticlePropertyOptions
 spin?: ParticlePropertyOptions
 ```
 
-粒子自旋角度配置。 
-
-默认值：{range:[0.0,0.0]}
-
-方向：正数表示顺时针旋转，负数表示逆时针旋转。
+粒子自旋角度配置。 默认值：{range:[0.0,0.0]} 方向：正数表示顺时针旋转，负数表示逆时针旋转。
 
 **类型：** [ParticlePropertyOptions](arkts-arkui-particle-particlepropertyoptions-i.md)
 
@@ -151,6 +145,8 @@ spin?: ParticlePropertyOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,13 +160,7 @@ spin?: ParticlePropertyOptions
 velocity?: VelocityOptions
 ```
 
-粒子速度配置。
-
-**说明：**
-
-speed表示速度大小。angle表示速度的方向（单位为角度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。
-
-默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
+粒子速度配置。 **说明：** speed表示速度大小。angle表示速度的方向（单位为角度），以元素几何中心为坐标原点，水平方向为X轴，正数表示顺时针方向旋转角度。 默认值：{ speed:[0.0,0.0],angle:[0.0,0.0] }
 
 **类型：** [VelocityOptions](arkts-arkui-particle-velocityoptions-i.md)
 
@@ -179,6 +169,8 @@ speed表示速度大小。angle表示速度的方向（单位为角度），以�
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

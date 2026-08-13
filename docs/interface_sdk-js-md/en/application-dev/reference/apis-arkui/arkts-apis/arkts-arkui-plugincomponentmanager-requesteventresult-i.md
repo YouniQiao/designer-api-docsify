@@ -1,12 +1,14 @@
 # RequestEventResult
 
-Plugin component request event result value.
+Provides the result returned after the request listener is registered and the requested event is received.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-pluginComponentManager-export interface RequestEventResult--><!--Device-pluginComponentManager-export interface RequestEventResult-End-->
+**Deprecated since:** -1
+
+<!--Device-pluginComponentManager-interface RequestEventResult--><!--Device-pluginComponentManager-interface RequestEventResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,17 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 data?: KVObject
 ```
 
-Defines data.
+Component data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestEventResult-data?: KVObject--><!--Device-RequestEventResult-data?: KVObject-End-->
 
@@ -42,15 +46,17 @@ Defines data.
 extraData?: KVObject
 ```
 
-Defines extraData.
+Extra data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestEventResult-extraData?: KVObject--><!--Device-RequestEventResult-extraData?: KVObject-End-->
 
@@ -62,15 +68,17 @@ Defines extraData.
 template?: string
 ```
 
-Defines template.
+Component template.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestEventResult-template?: string--><!--Device-RequestEventResult-template?: string-End-->
 

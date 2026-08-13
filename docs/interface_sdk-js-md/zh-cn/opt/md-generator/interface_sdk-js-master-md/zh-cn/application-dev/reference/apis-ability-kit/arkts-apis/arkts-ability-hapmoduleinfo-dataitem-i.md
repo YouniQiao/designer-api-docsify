@@ -2,7 +2,9 @@
 
 描述模块配置的路由表中的自定义数据。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DataItem--><!--Device-unnamed-export interface DataItem-End-->
 
@@ -18,9 +20,11 @@ readonly key: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DataItem-readonly key: string--><!--Device-DataItem-readonly key: string-End-->
 
@@ -36,9 +40,11 @@ readonly value: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DataItem-readonly value: string--><!--Device-DataItem-readonly value: string-End-->
 

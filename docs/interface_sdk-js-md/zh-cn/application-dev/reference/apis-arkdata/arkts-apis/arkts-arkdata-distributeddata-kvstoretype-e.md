@@ -8,7 +8,7 @@ KVStore数据库类型枚举。
 
 **废弃版本：** 9
 
-**替代接口：** [KVStoreType](ohos.data.distributedKVStore.KVStoreType)
+**替代接口：** KVStoreType
 
 <!--Device-distributedData-enum KVStoreType--><!--Device-distributedData-enum KVStoreType-End-->
 
@@ -20,9 +20,7 @@ KVStore数据库类型枚举。
 DEVICE_COLLABORATION = 0
 ```
 
-表示多设备协同数据库。
-
-**数据库特点：** 数据以设备的维度管理，不存在冲突；支持按照设备的维度查询数据。
+表示多设备协同数据库。 **数据库特点：** 数据以设备的维度管理，不存在冲突；支持按照设备的维度查询数据。
 
 **起始版本：** 7
 
@@ -30,7 +28,7 @@ DEVICE_COLLABORATION = 0
 
 **废弃版本：** 9
 
-**替代接口：** [DEVICE_COLLABORATION](ohos.data.distributedKVStore.KVStoreType#DEVICE_COLLABORATION)
+**替代接口：** DEVICE_COLLABORATION
 
 <!--Device-KVStoreType-DEVICE_COLLABORATION = 0--><!--Device-KVStoreType-DEVICE_COLLABORATION = 0-End-->
 
@@ -42,9 +40,7 @@ DEVICE_COLLABORATION = 0
 SINGLE_VERSION = 1
 ```
 
-表示单版本数据库。
-
-**数据库特点：** 数据不分设备，设备之间修改相同的key会覆盖。
+表示单版本数据库。 **数据库特点：** 数据不分设备，设备之间修改相同的key会覆盖。
 
 **起始版本：** 7
 
@@ -52,7 +48,7 @@ SINGLE_VERSION = 1
 
 **废弃版本：** 9
 
-**替代接口：** [SINGLE_VERSION](ohos.data.distributedKVStore.KVStoreType#SINGLE_VERSION)
+**替代接口：** SINGLE_VERSION
 
 <!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
 

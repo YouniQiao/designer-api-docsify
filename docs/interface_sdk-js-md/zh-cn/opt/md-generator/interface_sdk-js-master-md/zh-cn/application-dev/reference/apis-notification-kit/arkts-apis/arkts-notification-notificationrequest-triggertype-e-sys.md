@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export enum TriggerType--><!--Device-unnamed-export enum TriggerType-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -19,6 +21,8 @@ TRIGGER_TYPE_GEOFENCE = 1
 地理围栏触发类型。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TriggerType-TRIGGER_TYPE_GEOFENCE = 1--><!--Device-TriggerType-TRIGGER_TYPE_GEOFENCE = 1-End-->
 

@@ -1,12 +1,14 @@
 # ArrayList
 
-ArrayList is a linear data structure that is implemented based on arrays.ArrayList can dynamically adjust the capacity based on project requirements.It increases the capacity by 50% each time.
+ArrayList is a linear data structure that is implemented based on arrays. ArrayList can dynamically adjust the capacity based on project requirements. It increases the capacity by 50% each time.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class ArrayList<T>--><!--Device-unnamed-declare class ArrayList<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ArrayList--><!--Device-unnamed-declare class ArrayList-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +28,9 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,6 +56,8 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>--><!--Device-ArrayList-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -68,7 +74,7 @@ Obtains an iterator, each item of which is a JavaScript object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -109,9 +115,11 @@ add(element: T): boolean
 
 Adds an element at the end of this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -135,7 +143,7 @@ Adds an element at the end of this ArrayList.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -165,9 +173,11 @@ clear(): void
 
 Clears this ArrayList and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -179,7 +189,7 @@ Clears this ArrayList and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -200,9 +210,11 @@ clone(): ArrayList<T>
 
 Clones this ArrayList and returns a copy. The modification to the copy does not affect the original instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -220,7 +232,7 @@ Clones this ArrayList and returns a copy. The modification to the copy does not 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
 ## Examples
 
@@ -242,9 +254,11 @@ constructor()
 
 A constructor used to create an **ArrayList** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -256,7 +270,7 @@ A constructor used to create an **ArrayList** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayList's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The ArrayList's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -272,9 +286,11 @@ convertToArray(): Array<T>
 
 Converts this ArrayList into an array.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -292,7 +308,7 @@ Converts this ArrayList into an array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
 
 ## Examples
 
@@ -318,6 +334,8 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void--><!--Device-ArrayList-forEach(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => void, thisArg?: Object): void-End-->
@@ -335,7 +353,7 @@ Uses a callback to traverse each element in the **ArrayList** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -364,7 +382,9 @@ Iterates over elements in a generic ArrayList and executes a callback function f
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -380,21 +400,17 @@ Iterates over elements in a generic ArrayList and executes a callback function f
 
 ## getCapacity
 
-ArkTS-Dyn:
-```TypeScript
-getCapacity(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCapacity(): int
 ```
 
 Obtains the capacity of this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -406,13 +422,13 @@ Obtains the capacity of this ArrayList.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Capacity obtained. |
+| int | Capacity obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getCapacity method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getCapacity method cannot be bound. |
 
 ## Examples
 
@@ -428,21 +444,17 @@ console.info("result = ", result); // result = 10
 
 ## getIndexOf
 
-ArkTS-Dyn:
-```TypeScript
-getIndexOf(element: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndexOf(element: T): int
 ```
 
 Obtains the index of the first occurrence of the specified element in this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -460,13 +472,13 @@ Obtains the index of the first occurrence of the specified element in this Array
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the position index if obtained; returns **-1** if the specified element is not found. |
+| int | Returns the position index if obtained; returns **-1** if the specified element is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -485,21 +497,17 @@ console.info("result = ", result); // result = 0
 
 ## getLastIndexOf
 
-ArkTS-Dyn:
-```TypeScript
-getLastIndexOf(element: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLastIndexOf(element: T): int
 ```
 
 Obtains the index of the last occurrence of the specified element in this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -517,13 +525,13 @@ Obtains the index of the last occurrence of the specified element in this ArrayL
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the position index if obtained; returns **-1** if the specified element is not found. |
+| int | Returns the position index if obtained; returns **-1** if the specified element is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -548,9 +556,11 @@ has(element: T): boolean
 
 Checks whether this ArrayList has the specified element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -574,7 +584,7 @@ Checks whether this ArrayList has the specified element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -587,21 +597,17 @@ console.info("result:", result);  // result: true
 
 ## increaseCapacityTo
 
-ArkTS-Dyn:
-```TypeScript
-increaseCapacityTo(newCapacity: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 increaseCapacityTo(newCapacity: int): void
 ```
 
 Increases the capacity of this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -613,13 +619,13 @@ Increases the capacity of this ArrayList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| newCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | New capacity. |
+| newCapacity | int | Yes | New capacity. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
 
 ## Examples
 
@@ -636,21 +642,17 @@ console.info("result = ", arrayList.length); // result = 4
 
 ## insert
 
-ArkTS-Dyn:
-```TypeScript
-insert(element: T, index: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 insert(element: T, index: int): void
 ```
 
 Inserts an element at a specified index within the length range. If index is out of range, the insertion fails.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -663,14 +665,14 @@ Inserts an element at a specified index within the length range. If index is out
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | element | T | Yes | Target element. |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -690,9 +692,11 @@ isEmpty(): boolean
 
 Checks whether this ArrayList is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -710,7 +714,7 @@ Checks whether this ArrayList is empty (contains no element).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -732,9 +736,11 @@ remove(element: T): boolean
 
 Removes the first occurrence of the specified element from this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -758,7 +764,7 @@ Removes the first occurrence of the specified element from this ArrayList.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -774,21 +780,17 @@ console.info("result = ", result); // result =  true
 
 ## removeByIndex
 
-ArkTS-Dyn:
-```TypeScript
-removeByIndex(index: number): T
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeByIndex(index: int): T
 ```
 
 Removes an element with the specified position from this ArrayList.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -800,7 +802,7 @@ Removes an element with the specified position from this ArrayList.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
@@ -812,8 +814,8 @@ Removes an element with the specified position from this ArrayList.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. |
 
 ## Examples
 
@@ -830,21 +832,17 @@ console.info("result = ", result); // result = 5
 
 ## removeByRange
 
-ArkTS-Dyn:
-```TypeScript
-removeByRange(fromIndex: number, toIndex: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeByRange(fromIndex: int, toIndex: int): void
 ```
 
 Removes elements within the range [fromIndex, toIndex).
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -856,15 +854,15 @@ Removes elements within the range [fromIndex, toIndex).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the start position. |
-| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the end position. |
+| fromIndex | int | Yes | Index of the start position. |
+| toIndex | int | Yes | Index of the end position. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByRange method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByRange method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## Examples
 
@@ -889,6 +887,8 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void--><!--Device-ArrayList-replaceAllElements(callbackFn: (value: T, index?: number, arrlist?: ArrayList<T>) => T, thisArg?: Object): void-End-->
@@ -906,7 +906,7 @@ Replaces all elements in this ArrayList with new elements, and returns the new o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
 
 ## Examples
 
@@ -932,7 +932,9 @@ Replaces all elements in this container with new elements, and returns the new o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -954,9 +956,11 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 Sorts elements in an ArrayList according to the order defined by the specified comparator.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -974,7 +978,7 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
 
 ## Examples
 
@@ -991,22 +995,17 @@ arrayList.sort();
 
 ## subArrayList
 
-ArkTS-Dyn:
-```TypeScript
-subArrayList(fromIndex: number, toIndex: number): ArrayList<T>
-```
-
-ArkTS-Sta:
 ```TypeScript
 subArrayList(fromIndex: int, toIndex: int): ArrayList<T>
 ```
 
-Obtains elements from this **ArrayList** within the range  
-[fromIndex, toIndex) and returns them as a new ArrayList instance.
+Obtains elements from this **ArrayList** within the range [fromIndex, toIndex) and returns them as a new ArrayList instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1018,8 +1017,8 @@ Obtains elements from this **ArrayList** within the range
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the start position. |
-| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the end position. |
+| fromIndex | int | Yes | Index of the start position. |
+| toIndex | int | Yes | Index of the end position. |
 
 **Return value:**
 
@@ -1031,8 +1030,8 @@ Obtains elements from this **ArrayList** within the range
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subArrayList method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subArrayList method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## Examples
 
@@ -1054,9 +1053,11 @@ trimToCurrentLength(): void
 
 Releases the reserved space in this ArrayList by adjusting the capacity to the actual number of elements in it.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1068,7 +1069,7 @@ Releases the reserved space in this ArrayList by adjusting the capacity to the a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The trimToCurrentLength method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The trimToCurrentLength method cannot be bound. |
 
 ## Examples
 
@@ -1082,26 +1083,6 @@ arrayList.trimToCurrentLength();
 console.info("result = ", arrayList.length); // result = 4
 ```
 
-## [index: int]
-
-```TypeScript
-[index: int]: T
-```
-
-Returns the element at the given index.
-
-**Type:** T
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ArrayList-[index: int]: T--><!--Device-ArrayList-[index: int]: T-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## length
 
 ```TypeScript
@@ -1114,7 +1095,9 @@ Number of elements in an ArrayList.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

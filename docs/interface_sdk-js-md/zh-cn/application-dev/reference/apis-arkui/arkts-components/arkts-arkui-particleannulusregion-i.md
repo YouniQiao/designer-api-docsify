@@ -1,20 +1,12 @@
 # ParticleAnnulusRegion
 
-用于设置环形发射器区域的配置信息。
-
-> **说明：**
-> 
-> - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。
-> 
-> - 当outerRadius小于innerRadius时（即外圆半径小于内圆半径时），会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
-> 
-> - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。
-> 
-> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
+用于设置环形发射器区域的配置信息。 > **说明：** > > - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。 > > - 当outerRadius小于innerRadius时（即外圆半径小于内圆半径时），会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。 > > - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。 > > 
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface ParticleAnnulusRegion--><!--Device-unnamed-declare interface ParticleAnnulusRegion-End-->
 
@@ -35,6 +27,8 @@ The coordinates of the center of the annulus
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,6 +54,8 @@ The end angle of the annulus, in degree
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -82,6 +78,8 @@ The inner radius of the annulus
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -103,6 +101,8 @@ The outer radius of the annulus
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -127,6 +127,8 @@ The start angle of the annulus, in degree
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 域账号管理类。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
 
@@ -18,9 +20,11 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 
 认证指定的域账号。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -42,22 +46,22 @@ static auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
-| [12300112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
-| [12300110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account does not exist. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo or credential. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
 
@@ -119,7 +123,9 @@ static auth(
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_USER_AUTH_INTERNAL
 
@@ -142,21 +148,21 @@ static auth(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
-| [12300112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
-| [12300110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account does not exist. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo or credential. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account does not exist. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo or credential. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
 
@@ -226,9 +232,11 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 弹框认证指定的域账号。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
@@ -249,20 +257,20 @@ static authWithPopup(callback: IUserAuthCallback): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable.<br>**适用版本：** 11+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
-| [12300112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
-| [12300110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | No domain account is bound. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | No domain account is bound. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
 
@@ -302,21 +310,17 @@ try {
 
 ## authWithPopup
 
-ArkTS-Dyn:
-```TypeScript
-static authWithPopup(localId: number, callback: IUserAuthCallback): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static authWithPopup(localId: int, callback: IUserAuthCallback): void
 ```
 
 弹框认证指定的域账号。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本10：ohos.permission.ACCESS_USER_AUTH_INTERNAL
@@ -331,28 +335,28 @@ static authWithPopup(localId: int, callback: IUserAuthCallback): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指示绑定域账号的系统账号的本地标识。 |
+| localId | int | 是 | 指示绑定域账号的系统账号的本地标识。 |
 | callback | IUserAuthCallback | 是 | 指示认证结果回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
 | 12300211 | Server unreachable.<br>**适用版本：** 11+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300113](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
-| [12300112](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
-| [12300110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | No domain account is bound. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied.<br>**适用版本：** 10+ |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The account authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) | The account authentication service does not exist. |
+| [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-认证服务忙) | The authentication service is busy. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The authentication time out. |
+| [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-认证被锁定) | The authentication is locked. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-认证凭据录入更新等操作被取消) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | No domain account is bound. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid localId. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-凭据不正确) | Authentication failed. |
 
 ## 示例
 
@@ -402,6 +406,8 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -413,23 +419,23 @@ static getAccessToken(businessParams: Record<string, Object>, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, Object&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -466,7 +472,9 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -479,22 +487,22 @@ static getAccessToken(businessParams: Record<string, RecordData>, callback: Asyn
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | businessParams | Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt; | 是 | 指示业务参数，具体格式取决于域插件的实现要求。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | 是 | 指示结果回调。如果获取成功，err返回null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -534,6 +542,8 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -556,17 +566,17 @@ static getAccessToken(businessParams: Record<string, Object>): Promise<Uint8Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -601,7 +611,9 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8Array>--><!--Device-DomainAccountManager-static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8Array>-End-->
 
@@ -625,16 +637,16 @@ static getAccessToken(businessParams: Record<string, RecordData>): Promise<Uint8
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | The domain account is not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
 | 12300211 | Server unreachable. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid business parameters. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -669,9 +681,11 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 
 查询指定的域账号信息。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS
 
@@ -686,23 +700,23 @@ static getAccountInfo(options: GetDomainAccountInfoOptions, callback: AsyncCallb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md)&gt; | 是 | 指示查询结果回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | 12300211 | Server unreachable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -764,9 +778,11 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 
 查询指定的域账号信息。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS
 
@@ -792,17 +808,17 @@ static getAccountInfo(options: GetDomainAccountInfoOptions): Promise<DomainAccou
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
 | 12300211 | Server unreachable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -861,9 +877,11 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 
 检查是否存在指定的域账号。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -878,23 +896,23 @@ static hasAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号已存在；false表示指定的域账号不存在。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 指示检查结果回调。true表示指定的域账号已存在；false表示指定的域账号不存在。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
 | 12300211 | Server unreachable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -954,9 +972,11 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 检查是否存在指定的域账号。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -982,17 +1002,17 @@ static hasAccount(domainAccountInfo: DomainAccountInfo): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
-| [12300014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
-| [12300013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-认证超时) | The operation time out. |
+| [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-域账号未认证) | Not authenticated. |
+| [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-网络异常) | Network exception. |
 | 12300211 | Server unreachable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo. |
-| [12300114](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid domainAccountInfo. |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) | The authentication service works abnormally. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1049,9 +1069,11 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 
 判断指定域账号是否登录超期。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1077,12 +1099,12 @@ static isAuthenticationExpired(domainAccountInfo: DomainAccountInfo): Promise<bo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Domain account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1135,9 +1157,11 @@ static registerPlugin(plugin: DomainPlugin): void
 
 注册域插件。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1157,10 +1181,10 @@ static registerPlugin(plugin: DomainPlugin): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
 | 12300201 | The domain plugin has been registered. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -1237,9 +1261,11 @@ static unregisterPlugin(): void
 
 注销域插件。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1253,9 +1279,9 @@ static unregisterPlugin(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported.<br>**适用版本：** 18+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -1296,9 +1322,11 @@ static updateAccountToken(
 
 更新指定域账号的令牌，空令牌表示目标域账号的令牌失效。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1314,18 +1342,18 @@ static updateAccountToken(
 | --- | --- | --- | --- |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | 是 | 指示域账号信息。 |
 | token | Uint8Array | 是 | 指示域账号的令牌。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。如果更新成功，err为null，否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。如果更新成功，err为null，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid token. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid token. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 
@@ -1389,9 +1417,11 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 
 更新指定域账号的令牌，空令牌表示目标域账号的令牌失效。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1418,12 +1448,12 @@ static updateAccountToken(domainAccountInfo: DomainAccountInfo, token: Uint8Arra
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid token. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | Account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | Invalid token. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 ## 示例
 

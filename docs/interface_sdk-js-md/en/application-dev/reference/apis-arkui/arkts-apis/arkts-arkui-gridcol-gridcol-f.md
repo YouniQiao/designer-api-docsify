@@ -3,6 +3,7 @@
 ## GridCol
 
 ```TypeScript
+@ComponentBuilder
 export declare function GridCol(
     option?: GridColOptions, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines GridCol Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-export declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function GridCol(    option?: GridColOptions,     content_?: CustomBuilder,): GridColAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,18 +29,19 @@ Defines GridCol Component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | [GridColOptions](arkts-arkui-gridcol-gridcoloptions-i.md) | No | GridCol options. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container |
+| content_ | CustomBuilder | No | container |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md) |  |
+| GridColAttribute |  |
 
 
 ## GridCol
 
 ```TypeScript
+@Builder
 export declare function GridCol(
     style: CustomBuilderT<GridColAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ Defines GridCol Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-export declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute--><!--Device-unnamed-@Builderexport declare function GridCol(    style: CustomBuilderT<GridColAttribute>,    content_?: CustomBuilder,): GridColAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,12 +66,12 @@ Defines GridCol Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | No | container. |
+| style | CustomBuilderT&lt;GridColAttribute&gt; | Yes | the callback to set up component's attributes. |
+| content_ | CustomBuilder | No | container. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [GridColAttribute](arkts-arkui-gridcol-gridcolattribute-i.md) |  |
+| GridColAttribute |  |
 

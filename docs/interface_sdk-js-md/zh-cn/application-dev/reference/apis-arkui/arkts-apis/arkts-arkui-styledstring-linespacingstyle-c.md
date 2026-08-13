@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class LineSpacingStyle--><!--Device-unnamed-export declare class LineSpacingStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,17 +45,15 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 readonly lineSpacing: double
 ```
 
-文本行间距。
-
-取值范围：[0, +∞)
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+文本行间距。 取值范围：[0, +∞) 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** double
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +74,8 @@ readonly options?: LineSpacingOptions
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Provides the APIs for loading ads.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -24,6 +26,8 @@ Constructor.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-constructor(context: common.Context)--><!--Device-AdLoader-constructor(context: common.Context)-End-->
@@ -38,7 +42,7 @@ Constructor.
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Various Contexts](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Various Contexts](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -60,6 +64,8 @@ Loads an ad.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void--><!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void-End-->
@@ -78,14 +84,14 @@ Loads an ad.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
-| [21800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-ad-loading-failure) |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) |
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Various Contexts](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Various Contexts](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -124,6 +130,8 @@ Loads multiple ads.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
@@ -142,14 +150,14 @@ Loads multiple ads.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
-| [21800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-ad-loading-failure) |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [801](../errorcode-ads.md#801-ad-request-failure) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
+| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) |
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

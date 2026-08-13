@@ -2,7 +2,9 @@
 
 The ServiceExtensionAbility module provides extended capabilities for background services, including lifecycle callbacks for creating, destroying, connecting, and disconnecting background services.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ServiceExtensionAbility--><!--Device-unnamed-declare class ServiceExtensionAbility-End-->
 
@@ -24,7 +26,9 @@ onConfigurationUpdate(newConfig: Configuration): void
 
 Called when the configuration of this ServiceExtensionAbility is updated.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +64,9 @@ onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 
 Called following **onCreate()** when a ServiceExtensionAbility is started by calling **connectAbility()**. A RemoteObject is returned for communication between the server and client.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,7 +143,9 @@ onCreate(want: Want): void
 
 Called to initialize the service logic when a ServiceExtensionAbility is being created.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,7 +181,9 @@ onDestroy(): void
 
 Called to clear resources when this ServiceExtensionAbility is being destroyed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,9 +211,11 @@ class ServiceExt extends ServiceExtensionAbility {
 onDisconnect(want: Want): void | Promise<void>
 ```
 
-Called when a client is disconnected from this ServiceExtensionAbility.This API returns the result synchronously or uses a promise to return the result.
+Called when a client is disconnected from this ServiceExtensionAbility. This API returns the result synchronously or uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,6 +258,38 @@ class ServiceExt extends ServiceExtensionAbility {
 }
 ```
 
+## onDisconnect
+
+```TypeScript
+onDisconnect(want: Want): Promise<void> | undefined
+```
+
+Called when a client is disconnected from this ServiceExtensionAbility. This API returns the result synchronously or uses a promise to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ServiceExtensionAbility-onDisconnect(want: Want): Promise<void> | undefined--><!--Device-ServiceExtensionAbility-onDisconnect(want: Want): Promise<void> | undefined-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
 ## onDump
 
 ```TypeScript
@@ -254,7 +298,9 @@ onDump(params: Array<string>): Array<string>
 
 Dumps the client information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,6 +345,8 @@ Called when a new client attempts to connect to this ServiceExtensionAbility aft
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ServiceExtensionAbility-onReconnect(want: Want): void--><!--Device-ServiceExtensionAbility-onReconnect(want: Want): void-End-->
@@ -331,10 +379,11 @@ class ServiceExt extends ServiceExtensionAbility {
 onRequest(want: Want, startId: number): void
 ```
 
-Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or  
-**startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that is started.
+Called following **onCreate()** when a ServiceExtensionAbility is started by calling **startAbility()** or **startServiceExtensionAbility()**. The value of **startId** is incremented for each ServiceExtensionAbility that is started.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -373,7 +422,9 @@ Context of the ServiceExtensionAbility. This context inherits from **ExtensionCo
 
 **Type:** [ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

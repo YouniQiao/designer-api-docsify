@@ -1,12 +1,6 @@
 # ElementName
 
-The module provides element name information, which can be obtained through  
-[Context.getElementName](./../app/context).
-
-> **NOTE：**
-> 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-ElementName](#ElementName) instead.
+The module provides element name information, which can be obtained through Context.getElementName. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-ElementName](#ElementName) instead.
 
 **Since:** 7
 
@@ -38,7 +32,7 @@ Ability name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [abilityName](ohos.bundle.bundleManager/bundleManager.ElementName#abilityName)
+**Substitutes:** abilityName
 
 <!--Device-ElementName-abilityName: string--><!--Device-ElementName-abilityName: string-End-->
 
@@ -62,7 +56,7 @@ Bundle name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleName](ohos.bundle.bundleManager/bundleManager.ElementName#bundleName)
+**Substitutes:** bundleName
 
 <!--Device-ElementName-bundleName: string--><!--Device-ElementName-bundleName: string-End-->
 
@@ -86,7 +80,7 @@ Device ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.bundle.bundleManager/bundleManager.ElementName#deviceId)
+**Substitutes:** deviceId
 
 <!--Device-ElementName-deviceId?: string--><!--Device-ElementName-deviceId?: string-End-->
 
@@ -110,7 +104,7 @@ Short name of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [shortName](ohos.bundle.bundleManager/bundleManager.ElementName#shortName)
+**Substitutes:** shortName
 
 <!--Device-ElementName-shortName?: string--><!--Device-ElementName-shortName?: string-End-->
 
@@ -134,7 +128,7 @@ Resource ID.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uri](ohos.bundle.bundleManager/bundleManager.ElementName#uri)
+**Substitutes:** uri
 
 <!--Device-ElementName-uri?: string--><!--Device-ElementName-uri?: string-End-->
 

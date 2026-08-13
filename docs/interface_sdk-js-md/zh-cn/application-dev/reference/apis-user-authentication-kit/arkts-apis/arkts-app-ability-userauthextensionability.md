@@ -1,4 +1,4 @@
-# @ohos.app.ability.UserAuthExtensionAbility(用户认证扩展能力组件)
+# @ohos.app.ability.UserAuthExtensionAbility
 
 ## 汇总
 

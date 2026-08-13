@@ -1,12 +1,14 @@
 # Button
 
-Defines Button.
+Describes the menu item button in the action menu.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-promptAction-export interface Button--><!--Device-promptAction-export interface Button-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface Button--><!--Device-promptAction-interface Button-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,15 +24,17 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 color: string | Resource
 ```
 
-The foreground color of button.
+Text color of the button.
 
 **Type:** string \| Resource
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Button-color: string | Resource--><!--Device-Button-color: string | Resource-End-->
 
@@ -42,15 +46,19 @@ The foreground color of button.
 primary?: boolean
 ```
 
-Define whether the button responds to Enter/Space key by default.
+Whether the button responds to the **Enter** key by default when the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation. If there are multiple buttons, set this parameter to **true** for only one button. Otherwise, no button will respond. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. **true**: The button responds to the **Enter** key by default. **false**: The button does not respond to the **Enter** key by default.&lt;br&gt;Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Button-primary?: boolean--><!--Device-Button-primary?: boolean-End-->
 
@@ -62,15 +70,17 @@ Define whether the button responds to Enter/Space key by default.
 text: string | Resource
 ```
 
-The text displayed in the button.
+Button text.
 
 **Type:** string \| Resource
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Button-text: string | Resource--><!--Device-Button-text: string | Resource-End-->
 

@@ -30,7 +30,7 @@ Name of the form element.
 
 **Deprecated since:** 9
 
-**Substitutes:** [name](ohos.request.agent.FormItem.name)
+**Substitutes:** name
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
@@ -50,7 +50,7 @@ Value of the form element.
 
 **Deprecated since:** 9
 
-**Substitutes:** [value](ohos.request.agent.FormItem.value)
+**Substitutes:** value
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 

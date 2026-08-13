@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-asset-enum ErrorCode--><!--Device-asset-enum ErrorCode-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -17,6 +19,8 @@ PERMISSION_DENIED = 201
 调用方无权限。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-ErrorCode-PERMISSION_DENIED = 201--><!--Device-ErrorCode-PERMISSION_DENIED = 201-End-->
 
@@ -32,6 +36,8 @@ NOT_SYSTEM_APPLICATION = 202
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-ErrorCode-NOT_SYSTEM_APPLICATION = 202--><!--Device-ErrorCode-NOT_SYSTEM_APPLICATION = 202-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -45,6 +51,8 @@ INVALID_ARGUMENT = 401
 参数错误。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -62,6 +70,8 @@ SERVICE_UNAVAILABLE = 24000001
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-SERVICE_UNAVAILABLE = 24000001--><!--Device-ErrorCode-SERVICE_UNAVAILABLE = 24000001-End-->
@@ -77,6 +87,8 @@ NOT_FOUND = 24000002
 未找到关键资产。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -94,6 +106,8 @@ DUPLICATED = 24000003
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-DUPLICATED = 24000003--><!--Device-ErrorCode-DUPLICATED = 24000003-End-->
@@ -109,6 +123,8 @@ ACCESS_DENIED = 24000004
 访问被拒绝。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -126,6 +142,8 @@ STATUS_MISMATCH = 24000005
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-STATUS_MISMATCH = 24000005--><!--Device-ErrorCode-STATUS_MISMATCH = 24000005-End-->
@@ -141,6 +159,8 @@ OUT_OF_MEMORY = 24000006
 系统内存不足。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -158,6 +178,8 @@ DATA_CORRUPTED = 24000007
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-DATA_CORRUPTED = 24000007--><!--Device-ErrorCode-DATA_CORRUPTED = 24000007-End-->
@@ -173,6 +195,8 @@ DATABASE_ERROR = 24000008
 数据库操作失败。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -190,6 +214,8 @@ CRYPTO_ERROR = 24000009
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-CRYPTO_ERROR = 24000009--><!--Device-ErrorCode-CRYPTO_ERROR = 24000009-End-->
@@ -205,6 +231,8 @@ IPC_ERROR = 24000010
 进程通信错误。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -222,6 +250,8 @@ BMS_ERROR = 24000011
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-BMS_ERROR = 24000011--><!--Device-ErrorCode-BMS_ERROR = 24000011-End-->
@@ -237,6 +267,8 @@ ACCOUNT_ERROR = 24000012
 账号系统服务异常。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -254,6 +286,8 @@ ACCESS_TOKEN_ERROR = 24000013
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-ACCESS_TOKEN_ERROR = 24000013--><!--Device-ErrorCode-ACCESS_TOKEN_ERROR = 24000013-End-->
@@ -269,6 +303,8 @@ FILE_OPERATION_ERROR = 24000014
 文件操作失败。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -286,6 +322,8 @@ GET_SYSTEM_TIME_ERROR = 24000015
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-GET_SYSTEM_TIME_ERROR = 24000015--><!--Device-ErrorCode-GET_SYSTEM_TIME_ERROR = 24000015-End-->
@@ -301,6 +339,8 @@ LIMIT_EXCEEDED = 24000016
 缓存数量超限。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -318,6 +358,8 @@ UNSUPPORTED = 24000017
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-UNSUPPORTED = 24000017--><!--Device-ErrorCode-UNSUPPORTED = 24000017-End-->
@@ -334,6 +376,8 @@ PARAM_VERIFICATION_FAILED = 24000018
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ErrorCode-PARAM_VERIFICATION_FAILED = 24000018--><!--Device-ErrorCode-PARAM_VERIFICATION_FAILED = 24000018-End-->
@@ -346,11 +390,11 @@ PARAM_VERIFICATION_FAILED = 24000018
 INCONSISTENT_ATTRIBUTE = 24000019
 ```
 
-属性值不一致。
-
-26.0.0
+属性值不一致。 26.0.0
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

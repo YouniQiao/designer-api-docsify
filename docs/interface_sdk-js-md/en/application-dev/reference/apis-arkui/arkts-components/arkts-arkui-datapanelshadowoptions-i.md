@@ -1,14 +1,16 @@
 # DataPanelShadowOptions
 
-Inherits from [MultiShadowOptions](MultiShadowOptions) and has all properties of **MultiShadowOptions**.
+Inherits from MultiShadowOptions and has all properties of **MultiShadowOptions**.
 
-**Inheritance/Implementation:** DataPanelShadowOptions extends [MultiShadowOptions](MultiShadowOptions)
+**Inheritance/Implementation:** DataPanelShadowOptions extends MultiShadowOptions
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface DataPanelShadowOptions extends MultiShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions extends MultiShadowOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface DataPanelShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +20,7 @@ Inherits from [MultiShadowOptions](MultiShadowOptions) and has all properties of
 colors?: Array<ResourceColor | LinearGradient>
 ```
 
-Array of shadow colors for data segments.
-
-Default value: same as the value of **valueColors**
-
-**NOTE：**
-
-If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former.
-
-If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
+Array of shadow colors for data segments. Default value: same as the value of **valueColors** **NOTE：**If the number of the set shadow colors is less than that of the data segments, the number of the displayed shadow colors is the same as the former. If the number of the set shadow colors is greater than that of the data segments, the number of the displayed shadow colors is the same as the latter.
 
 **Type:** Array&lt;ResourceColor \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
 
@@ -35,6 +29,8 @@ If the number of the set shadow colors is greater than that of the data segments
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

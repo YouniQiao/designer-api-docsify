@@ -6,6 +6,8 @@ Enumerated type of the file memory mapping mode, which can be used by the mmap A
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum MappingMode--><!--Device-unnamed-declare enum MappingMode-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -21,6 +23,8 @@ Read-only mode. The file mapping area is not writable. An exception is thrown wh
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Read/Write mode. The modification is written to the file mapping area and then s
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MappingMode-READ_WRITE = 1--><!--Device-MappingMode-READ_WRITE = 1-End-->
@@ -57,6 +63,8 @@ Private mode. It is a copy-on-write mapping mechanism. Modifications to the mapp
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

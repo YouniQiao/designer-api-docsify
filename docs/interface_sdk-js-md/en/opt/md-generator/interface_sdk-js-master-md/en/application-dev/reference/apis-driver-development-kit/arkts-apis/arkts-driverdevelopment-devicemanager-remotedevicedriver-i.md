@@ -2,7 +2,9 @@
 
 Represents information about a remote device driver.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface RemoteDeviceDriver--><!--Device-deviceManager-interface RemoteDeviceDriver-End-->
 
@@ -24,7 +26,9 @@ ID of the peripheral device.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteDeviceDriver-deviceId: long--><!--Device-RemoteDeviceDriver-deviceId: long-End-->
 
@@ -40,7 +44,9 @@ Remote driver object.
 
 **Type:** rpc.IRemoteObject
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteDeviceDriver-remote: rpc.IRemoteObject--><!--Device-RemoteDeviceDriver-remote: rpc.IRemoteObject-End-->
 

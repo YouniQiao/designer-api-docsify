@@ -2,9 +2,11 @@
 
 Enumerates the encoding and container formats used during screen capture.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AVScreenCaptureRecordPreset--><!--Device-media-enum AVScreenCaptureRecordPreset-End-->
 
@@ -18,9 +20,11 @@ SCREEN_RECORD_PRESET_H264_AAC_MP4 = 0
 
 The H.264 video encoding format, AAC audio encoding format, and MP4 container format are used.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordPreset-SCREEN_RECORD_PRESET_H264_AAC_MP4 = 0--><!--Device-AVScreenCaptureRecordPreset-SCREEN_RECORD_PRESET_H264_AAC_MP4 = 0-End-->
 
@@ -34,9 +38,11 @@ SCREEN_RECORD_PRESET_H265_AAC_MP4 = 1
 
 The H.265 video encoding format, AAC audio encoding format, and MP4 container format are used.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVScreenCaptureRecordPreset-SCREEN_RECORD_PRESET_H265_AAC_MP4 = 1--><!--Device-AVScreenCaptureRecordPreset-SCREEN_RECORD_PRESET_H265_AAC_MP4 = 1-End-->
 

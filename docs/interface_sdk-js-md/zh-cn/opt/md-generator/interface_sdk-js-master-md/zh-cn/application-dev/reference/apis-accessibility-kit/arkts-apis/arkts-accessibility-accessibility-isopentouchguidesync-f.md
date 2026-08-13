@@ -8,7 +8,9 @@ function isOpenTouchGuideSync(): boolean
 
 是否开启了触摸浏览模式。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

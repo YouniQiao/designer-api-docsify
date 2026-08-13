@@ -8,7 +8,9 @@ Defines the swipe gesture recognizer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class SwipeRecognizer extends GestureRecognizer--><!--Device-unnamed-export declare class SwipeRecognizer extends GestureRecognizer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class SwipeRecognizer--><!--Device-unnamed-export declare class SwipeRecognizer-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Returns the swipe gesture's direction.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ Returns the swipe gesture's direction.
 getVelocityThreshold(): double
 ```
 
-Returns the swipe gesture's speed.The unit is vp/s.
+Returns the swipe gesture's speed. The unit is vp/s.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

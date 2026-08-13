@@ -2,9 +2,11 @@
 
 Parameters for requesting to report cache location information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface CachedGnssLocationsRequest--><!--Device-geoLocationManager-export interface CachedGnssLocationsRequest-End-->
 
@@ -24,11 +26,13 @@ reportingPeriodSec: int
 
 GNSS cache location report period.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CachedGnssLocationsRequest-reportingPeriodSec: int--><!--Device-CachedGnssLocationsRequest-reportingPeriodSec: int-End-->
 
@@ -44,9 +48,11 @@ Indicates whether to wake up the listener when the GNSS cache location queue is 
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean--><!--Device-CachedGnssLocationsRequest-wakeUpCacheQueueFull: boolean-End-->
 

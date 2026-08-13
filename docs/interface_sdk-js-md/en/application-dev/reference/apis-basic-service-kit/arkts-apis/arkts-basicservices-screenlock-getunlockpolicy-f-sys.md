@@ -16,7 +16,9 @@ Obtains the authentication policy used to unlock the screen.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_SCREEN_LOCK
 
@@ -32,7 +34,7 @@ Obtains the authentication policy used to unlock the screen.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Local user ID of the OS account. |
+| userId | int | Yes | Local user ID of the OS account. |
 
 **Return value:**
 
@@ -44,8 +46,8 @@ Obtains the authentication policy used to unlock the screen.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed: applications that are not system applications cannot use system API. |
-| [13200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | The screen lock management service is abnormal. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed: applications that are not system applications cannot use system API. |
+| [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | The screen lock management service is abnormal. |
 | 13200004 | The userId is not the same as the caller, and the caller is not authorized. |
 

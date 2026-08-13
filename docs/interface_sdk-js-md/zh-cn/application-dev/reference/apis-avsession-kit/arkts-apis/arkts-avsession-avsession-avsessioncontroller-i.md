@@ -1,14 +1,12 @@
 # AVSessionController
 
-AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
+AVSessionController控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 10开始支持。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVSessionController--><!--Device-avSession-interface AVSessionController-End-->
 
@@ -22,9 +20,11 @@ destroy(callback: AsyncCallback<void>): void
 
 销毁当前控制器，销毁后当前控制器不可再用。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-destroy(callback: AsyncCallback<void>): void--><!--Device-AVSessionController-destroy(callback: AsyncCallback<void>): void-End-->
 
@@ -34,14 +34,14 @@ destroy(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当控制器销毁成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当控制器销毁成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## destroy
 
@@ -51,9 +51,11 @@ destroy(): Promise<void>
 
 销毁当前控制器，销毁后当前控制器不可再用。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -71,8 +73,8 @@ destroy(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVCallState
 
@@ -82,9 +84,11 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 获取通话状态数据。结果通过callback异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVCallState(callback: AsyncCallback<AVCallState>): void--><!--Device-AVSessionController-getAVCallState(callback: AsyncCallback<AVCallState>): void-End-->
 
@@ -94,15 +98,15 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，返回通话状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，返回通话状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVCallState
 
@@ -112,9 +116,11 @@ getAVCallState(): Promise<AVCallState>
 
 获取通话状态数据。结果通过Promise异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVCallState(): Promise<AVCallState>--><!--Device-AVSessionController-getAVCallState(): Promise<AVCallState>-End-->
 
@@ -130,9 +136,9 @@ getAVCallState(): Promise<AVCallState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVMetadata
 
@@ -142,9 +148,11 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 获取会话元数据。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVSessionController-getAVMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
 
@@ -154,15 +162,15 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | 是 | 回调函数，返回会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | 是 | 回调函数，返回会话元数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVMetadata
 
@@ -172,9 +180,11 @@ getAVMetadata(): Promise<AVMetadata>
 
 获取会话元数据。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -192,9 +202,9 @@ getAVMetadata(): Promise<AVMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVMetadataSync
 
@@ -204,9 +214,11 @@ getAVMetadataSync(): AVMetadata
 
 使用同步方法获取会话元数据。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -224,9 +236,9 @@ getAVMetadataSync(): AVMetadata
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVPlaybackState
 
@@ -236,9 +248,11 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 获取当前的远端播放状态。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVSessionController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
@@ -248,15 +262,15 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | 回调函数，返回远端播放状态。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | 回调函数，返回远端播放状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVPlaybackState
 
@@ -266,9 +280,11 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 获取当前的远端播放状态。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -286,9 +302,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVPlaybackStateSync
 
@@ -298,9 +314,11 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 使用同步方法获取当前会话的播放状态。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -318,9 +336,9 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueItems
 
@@ -330,9 +348,11 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 获取当前播放列表相关信息。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void-End-->
 
@@ -342,15 +362,15 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | 回调函数，返回播放列表队列。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | 回调函数，返回播放列表队列。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueItems
 
@@ -360,9 +380,11 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 获取当前会话播放列表相关信息。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -380,9 +402,9 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueItemsSync
 
@@ -392,9 +414,11 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 使用同步方法获取当前会话播放列表相关信息。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -412,9 +436,9 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueTitle
 
@@ -424,9 +448,11 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 获取当前播放列表的名称。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getAVQueueTitle(callback: AsyncCallback<string>): void--><!--Device-AVSessionController-getAVQueueTitle(callback: AsyncCallback<string>): void-End-->
 
@@ -436,15 +462,15 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回播放列表名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回播放列表名称。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueTitle
 
@@ -454,9 +480,11 @@ getAVQueueTitle(): Promise<string>
 
 获取当前会话播放列表的名称。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -474,9 +502,9 @@ getAVQueueTitle(): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getAVQueueTitleSync
 
@@ -486,9 +514,11 @@ getAVQueueTitleSync(): string
 
 使用同步方法获取当前会话播放列表的名称。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -506,9 +536,9 @@ getAVQueueTitleSync(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getCallMetadata
 
@@ -518,9 +548,11 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 获取通话会话的元数据。结果通过callback异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getCallMetadata(callback: AsyncCallback<CallMetadata>): void--><!--Device-AVSessionController-getCallMetadata(callback: AsyncCallback<CallMetadata>): void-End-->
 
@@ -530,15 +562,15 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，返回会话元数据。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，返回会话元数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getCallMetadata
 
@@ -548,9 +580,11 @@ getCallMetadata(): Promise<CallMetadata>
 
 获取通话会话的元数据。结果通过Promise异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getCallMetadata(): Promise<CallMetadata>--><!--Device-AVSessionController-getCallMetadata(): Promise<CallMetadata>-End-->
 
@@ -566,9 +600,9 @@ getCallMetadata(): Promise<CallMetadata>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getDesktopLyricState
 
@@ -580,7 +614,9 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -598,11 +634,11 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## getExtras
 
@@ -616,6 +652,8 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-AVSessionController-getExtras(callback: AsyncCallback<{[key: string]: Object}>): void--><!--Device-AVSessionController-getExtras(callback: AsyncCallback<{[key: string]: Object}>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -624,18 +662,18 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{[key: string]: Object}&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{[key: string]: Object}&gt; | 是 |  |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtras
 
@@ -647,7 +685,9 @@ Get custom media packets provided by the corresponding session
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getExtras(callback: AsyncCallback<Record<string, Object>>): void--><!--Device-AVSessionController-getExtras(callback: AsyncCallback<Record<string, Object>>): void-End-->
 
@@ -657,17 +697,17 @@ Get custom media packets provided by the corresponding session
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | The triggered asyncCallback when (getExtras). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | The triggered asyncCallback when (getExtras). |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtras
 
@@ -680,6 +720,8 @@ getExtras(): Promise<{[key: string]: Object}>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -697,12 +739,12 @@ getExtras(): Promise<{[key: string]: Object}>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtras
 
@@ -714,7 +756,9 @@ Get custom media packets provided by the corresponding session
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -732,11 +776,11 @@ Get custom media packets provided by the corresponding session
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## getExtrasWithEvent
 
@@ -746,9 +790,11 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 根据远端分布式事件类型，获取远端分布式媒体提供方设置的自定义媒体数据包。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>--><!--Device-AVSessionController-getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>-End-->
 
@@ -758,7 +804,7 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| extraEvent | string | 是 | 远端分布式事件类型。可获取的事件类型来自于 [setExtras](avSession.AVSession.setExtras(extras: {[key: string]: Object))}。 &lt;br&gt;对Wearable设备类型，额外提供以下预设的事件类型： &lt;br&gt;'AUDIO_GET_VOLUME'：获取远端设备音量。 &lt;br&gt;'AUDIO_GET_AVAILABLE_DEVICES'：获取远端所有可连接设备。 &lt;br&gt;'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO'：获取远端实际发声设备。 |
+| extraEvent | string | 是 | 远端分布式事件类型。可获取的事件类型来自于 setExtras)}。 &lt;br&gt;对Wearable设备类型，额外提供以下预设的事件类型： &lt;br&gt;'AUDIO_GET_VOLUME'：获取远端设备音量。 &lt;br&gt;'AUDIO_GET_AVAILABLE_DEVICES'：获取远端所有可连接设备。 &lt;br&gt;'AUDIO_GET_PREFERRED_OUTPUT_DEVICE_FOR_RENDERER_INFO'：获取远端实际发声设备。 |
 
 **返回值：**
 
@@ -770,10 +816,10 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
 ## getLaunchAbility
 
@@ -783,9 +829,11 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 获取应用在会话中保存的WantAgent对象。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getLaunchAbility(callback: AsyncCallback<WantAgent>): void--><!--Device-AVSessionController-getLaunchAbility(callback: AsyncCallback<WantAgent>): void-End-->
 
@@ -795,15 +843,15 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在 [setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setLaunchAbility-1)保存的对象，包括应用的相关属性信息，如 bundleName，abilityName，deviceId等。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在 [setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setLaunchAbility)保存的对象，包括应用的相关属性信息，如 bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getLaunchAbility
 
@@ -813,9 +861,11 @@ getLaunchAbility(): Promise<WantAgent>
 
 获取应用在会话中保存的WantAgent对象。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -833,9 +883,9 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getMediaCenterControlType
 
@@ -843,13 +893,13 @@ getLaunchAbility(): Promise<WantAgent>
 getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 ```
 
-获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置优先显示的控制类型列表。使用Promise异步回调。
-
-如果应用未设置或者设置为空列表，则返回空列表。
+获取应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置优先显示的控制类型列表。使用Promise异步 回调。 如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -867,8 +917,8 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getOutputDevice
 
@@ -878,9 +928,11 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 获取播放设备信息。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void--><!--Device-AVSessionController-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void-End-->
 
@@ -890,7 +942,7 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 | 回调函数，返回播放设备信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md)&gt; | 是 | 回调函数，返回播放设备信息。 |
 
 **错误码：**
 
@@ -907,9 +959,11 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 获取播放设备信息。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -938,9 +992,11 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 使用同步方法获取当前输出设备信息。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -958,26 +1014,22 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getRealPlaybackPositionSync
 
-ArkTS-Dyn:
-```TypeScript
-getRealPlaybackPositionSync(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getRealPlaybackPositionSync(): long
 ```
 
 使用同步方法获取当前播放位置。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -989,14 +1041,14 @@ getRealPlaybackPositionSync(): long
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 时间节点，毫秒数。 |
+| long | 时间节点，毫秒数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getSupportedLoopModes
 
@@ -1004,13 +1056,13 @@ getRealPlaybackPositionSync(): long
 getSupportedLoopModes(): Promise<Array<LoopMode>>
 ```
 
-获取应用支持的循环模式列表。使用Promise异步回调。
-
-该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+获取应用支持的循环模式列表。使用Promise异步回调。 该列表通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1030,28 +1082,22 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getSupportedPlaySpeeds
 
-ArkTS-Dyn:
-```TypeScript
-getSupportedPlaySpeeds(): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSupportedPlaySpeeds(): Promise<Array<double>>
 ```
 
-获取应用支持的播放倍速列表。使用Promise异步回调。
-
-该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
+获取应用支持的播放倍速列表。使用Promise异步回调。 该列表通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。如果应用未设置或者设置为空列表，则返回空列表。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1065,14 +1111,14 @@ getSupportedPlaySpeeds(): Promise<Array<double>>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;double&gt;&gt; | Promise对象。返回支持的播放倍速列表。 |
+| Promise&lt;Array&lt;double&gt;&gt; | Promise对象。返回支持的播放倍速列表。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getValidCommands
 
@@ -1082,9 +1128,11 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 获取会话支持的有效命令。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void-End-->
 
@@ -1094,15 +1142,15 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数，返回有效命令的集合。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | 回调函数，返回有效命令的集合。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getValidCommands
 
@@ -1112,9 +1160,11 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 获取会话支持的有效命令。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1132,9 +1182,9 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## getValidCommandsSync
 
@@ -1144,9 +1194,11 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 使用同步方法获取会话支持的有效命令。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1164,9 +1216,9 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isActive
 
@@ -1176,9 +1228,11 @@ isActive(callback: AsyncCallback<boolean>): void
 
 判断会话是否被激活。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-isActive(callback: AsyncCallback<boolean>): void--><!--Device-AVSessionController-isActive(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1188,15 +1242,15 @@ isActive(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回会话是否为激活状态，true表示被激活，false表示禁用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回会话是否为激活状态，true表示被激活，false表示禁用。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isActive
 
@@ -1206,9 +1260,11 @@ isActive(): Promise<boolean>
 
 获取会话是否被激活。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1226,9 +1282,9 @@ isActive(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isActiveSync
 
@@ -1238,9 +1294,11 @@ isActiveSync(): boolean
 
 使用同步方法判断会话是否被激活。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1258,9 +1316,9 @@ isActiveSync(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## isDesktopLyricEnabled
 
@@ -1272,7 +1330,9 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1290,10 +1350,10 @@ isDesktopLyricEnabled(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## isDesktopLyricVisible
 
@@ -1305,7 +1365,9 @@ isDesktopLyricVisible(): Promise<boolean>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1323,27 +1385,27 @@ isDesktopLyricVisible(): Promise<boolean>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
-## off('metadataChange')
+## offActiveStateChange
 
 ```TypeScript
-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
+offActiveStateChange(callback?: Callback<boolean>): void
 ```
 
-取消元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the active state of this session changed callback
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)--><!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)-End-->
+<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1351,32 +1413,30 @@ off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'metadataChange' | 是 |  |
-| callback | (data: AVMetadata) =&gt; void | 否 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，并不代表当前全量的元数据。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('playbackStateChange')
+## offCallMetadataChange
 
 ```TypeScript
-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
+offCallMetadataChange(callback?: Callback<CallMetadata>): void
 ```
 
-取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister call metadata changed callback
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)-End-->
+<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1384,32 +1444,30 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'playbackStateChange' | 是 |  |
-| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) parameter. It only contains the properties set in the filter. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('callMetadataChange')
+## offCallStateChange
 
 ```TypeScript
-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
+offCallStateChange(callback?: Callback<AVCallState>): void
 ```
 
-取消设置通话元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister playback state changed callback
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void-End-->
+<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1417,32 +1475,63 @@ off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'callMetadataChange' | 是 | 取消对应的监听事件，支持事件`'callMetadataChange'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | 回调函数，参数calldata是变化后的通话原数据。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) parameter. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('callStateChange')
+## offCustomDataChange
 
 ```TypeScript
-off(type: 'callStateChange', callback?: Callback<AVCallState>): void
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
 ```
 
-取消设置通话状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for custom data.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void-End-->
+<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offDesktopLyricEnabled
+
+```TypeScript
+offDesktopLyricEnabled(callback?: Callback<boolean>): void
+```
+
+取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1450,32 +1539,32 @@ off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'callStateChange' | 是 | 取消对应的监听事件，支持事件`'callStateChange'`。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | 回调函数，参数callstate是变化后的通话状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('sessionDestroy')
+## offDesktopLyricStateChanged
 
 ```TypeScript
-off(type: 'sessionDestroy', callback?: () => void)
+offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 ```
 
-取消监听会话的销毁事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+取消桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)--><!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1483,18 +1572,433 @@ off(type: 'sessionDestroy', callback?: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'sessionDestroy' | 是 | 取消对应的监听事件，支持事件`'sessionDestroy'`。 |
-| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('activeStateChange')
+## offDesktopLyricVisibilityChanged
+
+```TypeScript
+offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
+```
+
+取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offExtrasChange
+
+```TypeScript
+offExtrasChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister the custom media packets change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Used to handle custom media packets changed. The callback provides the new media packets. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offMediaCenterControlTypeChanged
+
+```TypeScript
+offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
+```
+
+取消控制类型列表变化的监听事件。 取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有控制类型列表变化事件取消监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offMetadataChange
+
+```TypeScript
+offMetadataChange(callback?: Callback<AVMetadata>): void
+```
+
+Unregister metadata changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | 否 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offOutputDeviceChange
+
+```TypeScript
+offOutputDeviceChange(callback?: ConnectionEvent): void
+```
+
+Unregister session output device change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 否 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#OutputDeviceInfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#ConnectionState). |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
+
+## offPlaybackStateChange
+
+```TypeScript
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
+```
+
+Unregister playback state changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offQueueItemsChange
+
+```TypeScript
+offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
+```
+
+Unregister session playlist change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 否 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#AVQueueItem) |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offQueueTitleChange
+
+```TypeScript
+offQueueTitleChange(callback?: Callback<string>): void
+```
+
+Unregister the name of session playlist change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 否 | Used to handle name of playlist changed. The callback provides the new name. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offSessionDestroy
+
+```TypeScript
+offSessionDestroy(callback?: NoParamCallback): void
+```
+
+Unregister current session destroyed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | The callback used to handle current session destroyed event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offSessionEvent
+
+```TypeScript
+offSessionEvent(callback?: EventProcess): void
+```
+
+Unregister session event callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 否 | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offSupportedLoopModesChange
+
+```TypeScript
+offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
+```
+
+取消支持的循环模式列表变化事件监听。 取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的循环模式列表变化事件取消监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offSupportedPlaySpeedsChange
+
+```TypeScript
+offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
+```
+
+取消支持的播放倍速列表变化事件监听。 取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void--><!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的播放倍速列表变化事件取消监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## offValidCommandChange
+
+```TypeScript
+offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
+```
+
+Unregister the valid commands of the session changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 否 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_activeStateChange
 
 ```TypeScript
 off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
@@ -1505,6 +2009,8 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1523,25 +2029,27 @@ off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('validCommandChange')
+## off_callMetadataChange
 
 ```TypeScript
-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
+off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 ```
 
-取消监听会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+取消设置通话元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-**起始版本：** 10
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)-End-->
+<!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1549,32 +2057,34 @@ off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 | 回调函数。参数commands是有效命令的集合。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'callMetadataChange' | 是 | 取消对应的监听事件，支持事件`'callMetadataChange'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | 回调函数，参数calldata是变化后的通话原数据。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('outputDeviceChange')
+## off_callStateChange
 
 ```TypeScript
-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 ```
 
-取消监听分布式设备变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+取消设置通话状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-**起始版本：** 10
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+<!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1582,117 +2092,52 @@ off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: Outp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'outputDeviceChange' | 是 | 取消对应的监听事件，支持事件`'outputDeviceChange'`。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 | 回调函数，参数device是设备相关信息。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+| type | 'callStateChange' | 是 | 取消对应的监听事件，支持事件`'callStateChange'`。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | 回调函数，参数callstate是变化后的通话状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('sessionEvent')
+## off_customDataChange
 
 ```TypeScript
-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
+off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 ```
 
-取消会话事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+取消自定义数据监听。
 
-**起始版本：** 10
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
+<!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'sessionEvent' | 是 | 取消对应的监听事件，支持事件`'sessionEvent'`。 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | 否 | 回调函数，参数sessionEvent是变化的事件名，args为事件的参数。 |
+| type | 'customDataChange' | 是 | 取消对应的监听事件，支持的事件是'customDataChange'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('queueItemsChange')
-
-```TypeScript
-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
-```
-
-取消播放列表变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'queueItemsChange' | 是 | 取消对应的监听事件，支持事件`'queueItemsChange'`。 |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 | 回调函数，参数items是变化的播放列表。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## off('queueTitleChange')
-
-```TypeScript
-off(type: 'queueTitleChange', callback?: (title: string) => void): void
-```
-
-取消播放列表名称变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void--><!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'queueTitleChange' | 是 | 取消对应的监听事件，支持事件`'queueTitleChange'`。 |
-| callback | (title: string) =&gt; void | 否 | 回调函数，参数items是变化的播放列表名称。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## off('extrasChange')
+## off_extrasChange
 
 ```TypeScript
 off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
@@ -1703,6 +2148,8 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1721,25 +2168,1147 @@ off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## off('customDataChange')
+## off_metadataChange
 
 ```TypeScript
-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
+off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
 ```
 
-取消自定义数据监听。
+取消元数据变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)--><!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'metadataChange' | 是 |  |
+| callback | (data: AVMetadata) =&gt; void | 否 | 回调函数，参数data是需要更新的元数据。只包含需要更新的元数据属性，并不代表当前全量的元数据。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_outputDeviceChange
+
+```TypeScript
+off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+```
+
+取消监听分布式设备变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'outputDeviceChange' | 是 | 取消对应的监听事件，支持事件`'outputDeviceChange'`。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 否 | 回调函数，参数device是设备相关信息。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
+
+## off_playbackStateChange
+
+```TypeScript
+off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
+```
+
+取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'playbackStateChange' | 是 |  |
+| callback | (state: AVPlaybackState) =&gt; void | 否 | 回调函数，参数state是需要更新的播放状态。只包含需要更新的播放状态属性，并不代表当前全量的播放状态。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_queueItemsChange
+
+```TypeScript
+off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
+```
+
+取消播放列表变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'queueItemsChange' | 是 | 取消对应的监听事件，支持事件`'queueItemsChange'`。 |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | 否 | 回调函数，参数items是变化的播放列表。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_queueTitleChange
+
+```TypeScript
+off(type: 'queueTitleChange', callback?: (title: string) => void): void
+```
+
+取消播放列表名称变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void--><!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'queueTitleChange' | 是 | 取消对应的监听事件，支持事件`'queueTitleChange'`。 |
+| callback | (title: string) =&gt; void | 否 | 回调函数，参数items是变化的播放列表名称。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_sessionDestroy
+
+```TypeScript
+off(type: 'sessionDestroy', callback?: () => void)
+```
+
+取消监听会话的销毁事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)--><!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sessionDestroy' | 是 | 取消对应的监听事件，支持事件`'sessionDestroy'`。 |
+| callback | () =&gt; void | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_sessionEvent
+
+```TypeScript
+off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
+```
+
+取消会话事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'sessionEvent' | 是 | 取消对应的监听事件，支持事件`'sessionEvent'`。 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | 否 | 回调函数，参数sessionEvent是变化的事件名，args为事件的参数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## off_validCommandChange
+
+```TypeScript
+off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
+```
+
+取消监听会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'validCommandChange' | 是 | 取消对应的监听事件，支持事件`'validCommandChange'`。 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 否 | 回调函数。参数commands是有效命令的集合。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有相关会话的事件监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onActiveStateChange
+
+```TypeScript
+onActiveStateChange(callback: Callback<boolean>): void
+```
+
+Register the active state of this session changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onCallMetadataChange
+
+```TypeScript
+onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onCallMetadataChangeAll
+
+```TypeScript
+onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onCallStateChange
+
+```TypeScript
+onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onCallStateChangeAll
+
+```TypeScript
+onCallStateChangeAll(callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onDesktopLyricEnabled
+
+```TypeScript
+onDesktopLyricEnabled(callback: Callback<boolean>): void
+```
+
+桌面歌词功能启用状态变更的监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示桌面歌词功能启用；返回false表示桌面歌词功能未启用。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onDesktopLyricStateChanged
+
+```TypeScript
+onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
+```
+
+桌面歌词状态变更的监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onDesktopLyricVisibilityChanged
+
+```TypeScript
+onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
+```
+
+显示桌面歌词状态变更的监听事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onExtrasChange
+
+```TypeScript
+onExtrasChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register the custom media packets change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Used to handle custom media packets changed. The callback provides the new media packets. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onMediaCenterControlTypeChanged
+
+```TypeScript
+onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
+```
+
+注册控制类型列表变化的监听事件。使用callback异步回调。 其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 | 回调函数。返回变化后的控制类型列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onMetadataChange
+
+```TypeScript
+onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onMetadataChangeAll
+
+```TypeScript
+onMetadataChangeAll(callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) parameter. It only contains the properties set in the filter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: ConnectionEvent): void
+```
+
+Register session output device change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 是 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#OutputDeviceInfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#ConnectionState). |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| filter | Array&lt;string&gt; | 是 | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) that you cared about |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onQueueItemsChange
+
+```TypeScript
+onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+```
+
+Register session playlist change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#AVQueueItem) |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onQueueTitleChange
+
+```TypeScript
+onQueueTitleChange(callback: Callback<string>): void
+```
+
+Register the name of session playlist change callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | Used to handle name of playlist changed. The callback provides the new name. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onSessionDestroy
+
+```TypeScript
+onSessionDestroy(callback: NoParamCallback): void
+```
+
+Register current session destroyed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | The callback used to handle current session destroyed event. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onSessionEvent
+
+```TypeScript
+onSessionEvent(callback: EventProcess): void
+```
+
+Register session event callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onSupportedLoopModesChange
+
+```TypeScript
+onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
+```
+
+注册支持的循环模式列表变化的监听事件。使用callback异步回调。 其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 | 回调函数。返回变化后支持的循环模式列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onSupportedPlaySpeedsChange
+
+```TypeScript
+onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
+```
+
+注册支持的播放倍速列表变化的监听事件。使用callback异步回调。 其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void--><!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数。返回变化后支持的播放倍速列表。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+```
+
+Register the valid commands of the session changed callback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## on_activeStateChange
+
+```TypeScript
+on(type: 'activeStateChange', callback: (isActive: boolean) => void)
+```
+
+会话的激活状态的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)--><!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'activeStateChange' | 是 | 事件回调类型，支持事件`'activeStateChange'`：当检测到会话的激活状态发生改变时，触发该事件。 |
+| callback | (isActive: boolean) =&gt; void | 是 | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## on_callMetadataChange
+
+```TypeScript
+on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
+```
+
+设置通话元数据变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callMetadataChange' | 是 | 事件回调类型，支持事件`'callMetadataChange'`：当通话元数据变化时，触发该事件。 |
+| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array&lt;keyof CallMetadata&gt; 表示关注Array中的字 段变化。\| 'all'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，参数callmetadata是变化后的通话元数据。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## on_callStateChange
+
+```TypeScript
+on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
+```
+
+设置通话状态变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 11
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void--><!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'callStateChange' | 是 | 事件回调类型，支持事件`'callStateChange'`：当通话状态变化时，触发该事件。 |
+| filter | Array&lt;keyof AVCallState&gt; \| 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array&lt;keyof AVCallState&gt;表示关注Array中的字段变 化。\| 'all'。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，参数callstate是变化后的通话状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## on_customDataChange
+
+```TypeScript
+on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
+```
+
+注册从远程设备发送的自定义数据的监听器。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1747,29 +3316,33 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'customDataChange' | 是 | 取消对应的监听事件，支持的事件是'customDataChange'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | 注册监听事件时的回调函数。该参数为可选参数，若不填写该参数，则认为取消会话所有与此事件相关的监听。 |
+| type | 'customDataChange' | 是 | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## offActiveStateChange
+## on_extrasChange
 
 ```TypeScript
-offActiveStateChange(callback?: Callback<boolean>): void
+on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
 ```
 
-Unregister the active state of this session changed callback
+媒体控制器设置自定义媒体数据包事件变化的监听器。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -1777,580 +3350,30 @@ Unregister the active state of this session changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| type | 'extrasChange' | 是 | 事件回调类型，支持事件`'extrasChange'`：当媒体提供方设置自定义媒体数据包时，触发该事件。 |
+| callback | (extras: {[key: string]: Object}) =&gt; void | 是 | 回调函数，extras为媒体提供方新设置的自定义媒体数据包，该自定义媒体数据包与dispatchSessionEvent方法设置的数据包完全一致。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offCallMetadataChange
-
-```TypeScript
-offCallMetadataChange(callback?: Callback<CallMetadata>): void
-```
-
-Unregister call metadata changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 否 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offCallStateChange
-
-```TypeScript
-offCallStateChange(callback?: Callback<AVCallState>): void
-```
-
-Unregister playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 否 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offCustomDataChange
-
-```TypeScript
-offCustomDataChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister listener for custom data.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Callback used to retrieve custom data. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offDesktopLyricEnabled
-
-```TypeScript
-offDesktopLyricEnabled(callback?: Callback<boolean>): void
-```
-
-取消桌面歌词启用状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricEnabled(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词功能启用状态变更事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offDesktopLyricStateChanged
-
-```TypeScript
-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
-```
-
-取消桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有桌面歌词状态变更事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offDesktopLyricVisibilityChanged
-
-```TypeScript
-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
-```
-
-取消显示桌面歌词状态变更事件监听，取消后将不再对该事件进行监听。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 | 回调函数。当监听事件取消成功，err为undefined，否则返回错误对象。 &lt;br&gt;该参数为可选参数，若不填写该参数，则认为取消所有显示桌面歌词状态变更事件监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offExtrasChange
-
-```TypeScript
-offExtrasChange(callback?: Callback<Record<string, Object>>): void
-```
-
-Unregister the custom media packets change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 | Used to handle custom media packets changed. The callback provides the new media packets. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offMediaCenterControlTypeChanged
-
-```TypeScript
-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void
-```
-
-取消控制类型列表变化的监听事件。
-
-取消后将不再对该事件进行监听。其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlType>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有控制类型列表变化事件取消监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offMetadataChange
-
-```TypeScript
-offMetadataChange(callback?: Callback<AVMetadata>): void
-```
-
-Unregister metadata changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 否 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offOutputDeviceChange
-
-```TypeScript
-offOutputDeviceChange(callback?: ConnectionEvent): void
-```
-
-Unregister session output device change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 否 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#OutputDeviceInfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#ConnectionState). |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
-
-## offPlaybackStateChange
-
-```TypeScript
-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
-```
-
-Unregister playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offQueueItemsChange
-
-```TypeScript
-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
-```
-
-Unregister session playlist change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 否 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#AVQueueItem) |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offQueueTitleChange
-
-```TypeScript
-offQueueTitleChange(callback?: Callback<string>): void
-```
-
-Unregister the name of session playlist change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 否 | Used to handle name of playlist changed. The callback provides the new name. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSessionDestroy
-
-```TypeScript
-offSessionDestroy(callback?: NoParamCallback): void
-```
-
-Unregister current session destroyed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 | The callback used to handle current session destroyed event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSessionEvent
-
-```TypeScript
-offSessionEvent(callback?: EventProcess): void
-```
-
-Unregister session event callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 否 | Used to cancel a specific listener The callback function provides the event string and key-value pair parameters. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSupportedLoopModesChange
-
-```TypeScript
-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
-```
-
-取消支持的循环模式列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的循环模式列表变化事件取消监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offSupportedPlaySpeedsChange
-
-ArkTS-Dyn:
-```TypeScript
-offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void
-```
-
-取消支持的播放倍速列表变化事件监听。
-
-取消后将不再对该事件进行监听。其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void--><!--Device-AVSessionController-offSupportedPlaySpeedsChange(callback?: Callback<Array<double>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 否 | 回调函数。该参数为可选参数，若不填写该参数，则认为对所有支持的播放倍速列表变化事件取消监听。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## offValidCommandChange
-
-```TypeScript
-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
-```
-
-Unregister the valid commands of the session changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 否 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('metadataChange')
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## on_metadataChange
 
 ```TypeScript
 on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
 ```
 
-设置元数据变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置元数据变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2370,23 +3393,58 @@ on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (d
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## on('playbackStateChange')
+## on_outputDeviceChange
+
+```TypeScript
+on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+```
+
+设置播放设备变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'outputDeviceChange' | 是 | 事件回调类型，支持事件为`'outputDeviceChange'`：当播放设备变化时，触发该事件）。 |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 是 | 回调函数，参数device是设备相关信息。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
+
+## on_playbackStateChange
 
 ```TypeScript
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
 ```
 
-设置播放状态变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放状态变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2406,270 +3464,23 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('callMetadataChange')
-
-```TypeScript
-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
-```
-
-设置通话元数据变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'callMetadataChange' | 是 | 事件回调类型，支持事件`'callMetadataChange'`：当通话元数据变化时，触发该事件。 |
-| filter | Array&lt;keyof CallMetadata&gt; \| 'all' | 是 | 'all'表示关注通话元数据所有字段变化；Array&lt;keyof CallMetadata&gt; 表示关注Array中的字 段变化。\| 'all'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | 回调函数，参数callmetadata是变化后的通话元数据。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('callStateChange')
-
-```TypeScript
-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
-```
-
-设置通话状态变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 11
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void--><!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'callStateChange' | 是 | 事件回调类型，支持事件`'callStateChange'`：当通话状态变化时，触发该事件。 |
-| filter | Array&lt;keyof AVCallState&gt; \| 'all' | 是 | 'all' 表示关注通话状态所有字段变化；Array&lt;keyof AVCallState&gt;表示关注Array中的字段变 化。\| 'all'。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | 回调函数，参数callstate是变化后的通话状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('sessionDestroy')
-
-```TypeScript
-on(type: 'sessionDestroy', callback: () => void)
-```
-
-会话销毁的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)--><!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'sessionDestroy' | 是 |  |
-| callback | () =&gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('activeStateChange')
-
-```TypeScript
-on(type: 'activeStateChange', callback: (isActive: boolean) => void)
-```
-
-会话的激活状态的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)--><!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'activeStateChange' | 是 | 事件回调类型，支持事件`'activeStateChange'`：当检测到会话的激活状态发生改变时，触发该事件。 |
-| callback | (isActive: boolean) =&gt; void | 是 | 回调函数。参数isActive表示会话是否被激活。true表示被激活，false表示禁用。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('validCommandChange')
-
-```TypeScript
-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
-```
-
-会话支持的有效命令变化监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'validCommandChange' | 是 | 事件回调类型，支持事件`'validCommandChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 | 回调函数。参数commands是有效命令的集合。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('outputDeviceChange')
-
-```TypeScript
-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
-```
-
-设置播放设备变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'outputDeviceChange' | 是 | 事件回调类型，支持事件为`'outputDeviceChange'`：当播放设备变化时，触发该事件）。 |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) =&gt; void | 是 | 回调函数，参数device是设备相关信息。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
-
-## on('sessionEvent')
-
-```TypeScript
-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
-```
-
-媒体控制器设置会话自定义事件变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'sessionEvent' | 是 | 事件回调类型，支持事件`'sessionEvent'`：当会话事件变化时，触发该事件。 |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | 是 | 回调函数，sessionEvent为变化的会话事件名，args为事件的参数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## on('queueItemsChange')
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+
+## on_queueItemsChange
 
 ```TypeScript
 on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
 ```
 
-媒体控制器设置会话自定义播放列表变化的监听器。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+媒体控制器设置会话自定义播放列表变化的监听器。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2688,11 +3499,11 @@ on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## on('queueTitleChange')
+## on_queueTitleChange
 
 ```TypeScript
 on(type: 'queueTitleChange', callback: (title: string) => void): void
@@ -2703,6 +3514,8 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -2721,25 +3534,27 @@ on(type: 'queueTitleChange', callback: (title: string) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## on('extrasChange')
+## on_sessionDestroy
 
 ```TypeScript
-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
+on(type: 'sessionDestroy', callback: () => void)
 ```
 
-媒体控制器设置自定义媒体数据包事件变化的监听器。
+会话销毁的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void-End-->
+<!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)--><!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2747,62 +3562,34 @@ on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'extrasChange' | 是 | 事件回调类型，支持事件`'extrasChange'`：当媒体提供方设置自定义媒体数据包时，触发该事件。 |
-| callback | (extras: {[key: string]: Object}) =&gt; void | 是 | 回调函数，extras为媒体提供方新设置的自定义媒体数据包，该自定义媒体数据包与dispatchSessionEvent方法设置的数据包完全一致。 |
+| type | 'sessionDestroy' | 是 |  |
+| callback | () =&gt; void | 是 | 回调函数。当监听事件注册成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## on('customDataChange')
-
-```TypeScript
-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
-```
-
-注册从远程设备发送的自定义数据的监听器。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'customDataChange' | 是 | 事件回调类型，支持事件'customDataChange'，当媒体提供方发送自定义数据时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数，用于接收自定义数据。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onActiveStateChange
+## on_sessionEvent
 
 ```TypeScript
-onActiveStateChange(callback: Callback<boolean>): void
+on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
 ```
 
-Register the active state of this session changed callback
+媒体控制器设置会话自定义事件变化的监听器。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2810,28 +3597,34 @@ Register the active state of this session changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | The callback used to handle the active state of this session changed event. The callback function provides the changed session state. |
+| type | 'sessionEvent' | 是 | 事件回调类型，支持事件`'sessionEvent'`：当会话事件变化时，触发该事件。 |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) =&gt; void | 是 | 回调函数，sessionEvent为变化的会话事件名，args为事件的参数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
-## onCallMetadataChange
+## on_validCommandChange
 
 ```TypeScript
-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
 ```
 
-Register call metadata changed callback
+会话支持的有效命令变化监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -2839,655 +3632,16 @@ Register call metadata changed callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) parameter. It only contains the properties set in the filter. |
+| type | 'validCommandChange' | 是 | 事件回调类型，支持事件`'validCommandChange'`：当检测到会话的合法命令发生改变时，触发该事件。 |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | 是 | 回调函数。参数commands是有效命令的集合。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onCallMetadataChangeAll
-
-```TypeScript
-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
-```
-
-Register call metadata changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | 是 | The callback used to handle call metadata changed event. The callback function provides the [CallMetadata](arkts-avsession-avsession-callmetadata-i.md#CallMetadata) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onCallStateChange
-
-```TypeScript
-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
-```
-
-Register call state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onCallStateChangeAll
-
-```TypeScript
-onCallStateChangeAll(callback: Callback<AVCallState>): void
-```
-
-Register call state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | 是 | The callback used to handle call state changed event. The callback function provides the [AVCallState](arkts-avsession-avsession-avcallstate-i.md#AVCallState) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onCustomDataChange
-
-```TypeScript
-onCustomDataChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Callback used to retrieve custom data. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onDesktopLyricEnabled
-
-```TypeScript
-onDesktopLyricEnabled(callback: Callback<boolean>): void
-```
-
-桌面歌词功能启用状态变更的监听事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricEnabled(callback: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示桌面歌词功能启用；返回false表示桌面歌词功能未启用。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onDesktopLyricStateChanged
-
-```TypeScript
-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
-```
-
-桌面歌词状态变更的监听事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void--><!--Device-AVSessionController-onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DesktopLyricState](arkts-avsession-avsession-desktoplyricstate-i.md)&gt; | 是 | 回调函数。返回桌面歌词状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onDesktopLyricVisibilityChanged
-
-```TypeScript
-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
-```
-
-显示桌面歌词状态变更的监听事件。使用callback异步回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void--><!--Device-AVSessionController-onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示开启显示桌面歌词状态；返回false表示关闭显示桌面歌词状态。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onExtrasChange
-
-```TypeScript
-onExtrasChange(callback: Callback<Record<string, Object>>): void
-```
-
-Register the custom media packets change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | Used to handle custom media packets changed. The callback provides the new media packets. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onMediaCenterControlTypeChanged
-
-```TypeScript
-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void
-```
-
-注册控制类型列表变化的监听事件。使用callback异步回调。
-
-其中控制类型列表由应用通过[setMediaCenterControlType](arkts-avsession-avsession-avsession-i.md#setMediaCenterControlType)接口设置。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void--><!--Device-AVSessionController-onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlType>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVMediaCenterControlType](arkts-avsession-avsession-avmediacentercontroltype-t.md)&gt;&gt; | 是 | 回调函数。返回变化后的控制类型列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onMetadataChange
-
-```TypeScript
-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
-```
-
-Register metadata changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onMetadataChangeAll
-
-```TypeScript
-onMetadataChangeAll(callback: Callback<AVMetadata>): void
-```
-
-Register metadata changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | 是 | The callback used to handle metadata changed event. The callback function provides the [AVMetadata](arkts-avsession-avsession-avmetadata-i.md#AVMetadata) parameter. It only contains the properties set in the filter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onOutputDeviceChange
-
-```TypeScript
-onOutputDeviceChange(callback: ConnectionEvent): void
-```
-
-Register session output device change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | 是 | Used to handle output device changed. The callback provide the new device info [OutputDeviceInfo](arkts-avsession-avsession-outputdeviceinfo-i.md#OutputDeviceInfo) and related connection state [ConnectionState](arkts-avsession-avsession-connectionstate-e.md#ConnectionState). |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist |
-
-## onPlaybackStateChange
-
-```TypeScript
-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
-```
-
-Register playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| filter | Array&lt;string&gt; | 是 | The properties of [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) that you cared about |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onPlaybackStateChangeAll
-
-```TypeScript
-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
-```
-
-Register playback state changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 | The callback used to handle playback state changed event. The callback function provides the [AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md#AVPlaybackState) parameter. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onQueueItemsChange
-
-```TypeScript
-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
-```
-
-Register session playlist change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | 是 | Used to handle playlist changed. The callback provides the new array of AVQueueItem [AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md#AVQueueItem) |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onQueueTitleChange
-
-```TypeScript
-onQueueTitleChange(callback: Callback<string>): void
-```
-
-Register the name of session playlist change callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | Used to handle name of playlist changed. The callback provides the new name. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onSessionDestroy
-
-```TypeScript
-onSessionDestroy(callback: NoParamCallback): void
-```
-
-Register current session destroyed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 | The callback used to handle current session destroyed event. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onSessionEvent
-
-```TypeScript
-onSessionEvent(callback: EventProcess): void
-```
-
-Register session event callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | 是 | The callback used to handle session event changed event. The callback function provides the event string and key-value pair parameters. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onSupportedLoopModesChange
-
-```TypeScript
-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
-```
-
-注册支持的循环模式列表变化的监听事件。使用callback异步回调。
-
-其中循环模式列表由应用通过[setSupportedLoopModes](arkts-avsession-avsession-avsession-i.md#setSupportedLoopModes)接口设置。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void--><!--Device-AVSessionController-onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[LoopMode](arkts-avsession-avsession-loopmode-e.md)&gt;&gt; | 是 | 回调函数。返回变化后支持的循环模式列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onSupportedPlaySpeedsChange
-
-ArkTS-Dyn:
-```TypeScript
-onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
-```
-
-ArkTS-Sta:
-```TypeScript
-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void
-```
-
-注册支持的播放倍速列表变化的监听事件。使用callback异步回调。
-
-其中播放倍速列表由应用通过[setSupportedPlaySpeeds](arkts-avsession-avsession-avsession-i.md#setSupportedPlaySpeeds)接口设置。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void--><!--Device-AVSessionController-onSupportedPlaySpeedsChange(callback: Callback<Array<double>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：[Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;double&gt;&gt; | 是 | 回调函数。返回变化后支持的播放倍速列表。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-
-## onValidCommandChange
-
-```TypeScript
-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
-```
-
-Register the valid commands of the session changed callback
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | 是 | The callback used to handle the changes. The callback function provides an array of AVControlCommandType. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## sendAVKeyEvent
 
@@ -3497,9 +3651,11 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 
 发送按键事件到会话。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void-End-->
 
@@ -3510,14 +3666,14 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | 是 | 按键事件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当事件发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 600105 | Invalid session command. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | 600106 | The session is not activated. |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
@@ -3531,9 +3687,11 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 发送按键事件到控制器对应的会话。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3558,7 +3716,7 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 600105 | Invalid session command. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | 600106 | The session is not activated. |
 | 600101 | Session service exception. |
 | 600103 | The session controller does not exist. |
@@ -3576,6 +3734,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-AVSessionController-sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -3586,19 +3746,19 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 | --- | --- | --- | --- |
 | command | string | 是 | 需要设置的自定义控制命令的名称。 |
 | args | {[key: string]: Object} | 是 | 需要传递的控制命令键值对。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3610,7 +3770,9 @@ Send common commands to this session
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3624,18 +3786,18 @@ Send common commands to this session
 | --- | --- | --- | --- |
 | command | string | 是 | The command name to be sent. &lt;br&gt;通用控制命令 |
 | args | Record&lt;string, Object&gt; | 是 | The parameters of session event |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3648,6 +3810,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3672,13 +3836,13 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCommonCommand
 
@@ -3690,7 +3854,9 @@ Send common commands to this session
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -3715,12 +3881,12 @@ Send common commands to this session
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendControlCommand
 
@@ -3728,17 +3894,13 @@ Send common commands to this session
 sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void
 ```
 
-通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
+通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。 > **说明：** > > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口 > on('play')、 > on('pause')等。
 
-> **说明：**
-> 
-> 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> [on('play')](avSession.AVSession.on(type: 'play', callback: () => void))、
-> [on('pause')](avSession.AVSession.on(type: 'pause', callback: () => void))等。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AVSessionController-sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -3749,19 +3911,19 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | command | [AVControlCommand](arkts-avsession-avsession-avcontrolcommand-i.md) | 是 | 会话的相关命令和命令相关参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当命令发送成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendControlCommand
 
@@ -3769,17 +3931,13 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 sendControlCommand(command: AVControlCommand): Promise<void>
 ```
 
-通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
+通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。 > **说明：** > > 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口 > on('play')、 > on('pause')等。
 
-> **说明：**
-> 
-> 媒体控制方在使用sendControlCommand命令前，需要确保控制对应的媒体会话注册了对应的监听，注册媒体会话相关监听的方法请参见接口
-> [on('play')](avSession.AVSession.on(type: 'play', callback: () => void))、
-> [on('pause')](avSession.AVSession.on(type: 'pause', callback: () => void))等。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3803,13 +3961,13 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600106](../errorcode-avsession.md#6600106-会话未激活) | The session is not activated. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
 ## sendCustomData
 
@@ -3819,11 +3977,13 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 发送私有数据到远端设备。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVSessionController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVSessionController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
@@ -3845,9 +4005,9 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## setDesktopLyricState
 
@@ -3859,7 +4019,9 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3883,11 +4045,11 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## setDesktopLyricVisible
 
@@ -3899,7 +4061,9 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3923,29 +4087,25 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
-| [6600110](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
-| [6600111](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [6600110](../errorcode-avsession.md#6600110-应用程序的桌面歌词功能未开启) | The desktop lyrics feature of this application is not enabled. |
+| [6600111](../errorcode-avsession.md#6600111-当前设备不支持桌面歌词功能) | The desktop lyrics feature is not supported. |
 
 ## skipToQueueItem
 
-ArkTS-Dyn:
-```TypeScript
-skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void
 ```
 
 设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播放。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVSessionController-skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -3955,35 +4115,31 @@ skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
+| itemId | int | 是 | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当播放状态设置成功，err为undefined，否则返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## skipToQueueItem
 
-ArkTS-Dyn:
-```TypeScript
-skipToQueueItem(itemId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 skipToQueueItem(itemId: int): Promise<void>
 ```
 
 设置指定播放列表单项的ID，发送给session端处理，session端可以选择对这个单项歌曲进行播放。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -3995,7 +4151,7 @@ skipToQueueItem(itemId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| itemId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
+| itemId | int | 是 | 播放列表单项的ID值，用以表示选中的播放列表单项。 |
 
 **返回值：**
 
@@ -4007,10 +4163,10 @@ skipToQueueItem(itemId: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
-| [6600103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) | The session controller does not exist. |
 
 ## sessionId
 
@@ -4022,9 +4178,11 @@ AVSessionController对象唯一的会话标识。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

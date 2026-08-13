@@ -2,7 +2,9 @@
 
 Describes the capture start information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CaptureStartInfo--><!--Device-camera-interface CaptureStartInfo-End-->
 
@@ -24,7 +26,9 @@ ID of this capture action.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -42,7 +46,9 @@ Estimated duration when the sensor captures frames at the bottom layer in a sing
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

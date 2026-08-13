@@ -4,6 +4,8 @@ Week Enum value
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum Week--><!--Device-unnamed-declare enum Week-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Mon
 Monday.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Tuesday.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Week-Tue--><!--Device-Week-Tue-End-->
@@ -49,6 +55,8 @@ Wed
 Wednesday.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ Thursday.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Week-Thur--><!--Device-Week-Thur-End-->
@@ -81,6 +91,8 @@ Fri
 Friday.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ Saturday.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Week-Sat--><!--Device-Week-Sat-End-->
@@ -113,6 +127,8 @@ Sun
 Sunday.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

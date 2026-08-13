@@ -12,12 +12,13 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function disableGwpAsanGrayscale(): void
 ```
 
-Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter  
-[GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md#GwpAsanOptions).
+Disables GWP-ASan. This API is used to cancel the custom configuration and restore the default parameter [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md#GwpAsanOptions).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function disableGwpAsanGrayscale(): void--><!--Device-hidebug-function disableGwpAsanGrayscale(): void-End-->
 

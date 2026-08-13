@@ -2,7 +2,9 @@
 
 系统事件查询规则对象接口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hiSysEvent-interface QueryRule--><!--Device-hiSysEvent-interface QueryRule-End-->
 
@@ -13,22 +15,18 @@
 ## condition
 
 ```TypeScript
-condition?: string
+condition?: string | null | undefined
 ```
 
-事件的额外参数条件，格式：{"version":"V1","condition":{"and":[{"param":"参数","op":"操作符","value":"比较值"}]}}。
+事件的额外参数条件，格式：{"version":"V1","condition":{"and":[{"param":"参数","op":"操作符","value":"比较值"}]}}。 参数：指定事件参数的键值。 操作符支持：=、!=、&lt;、<=、>和&gt;&lt;=、&gt;和>=。 支持在“and”数组中配置多个条件，查询结果取交集。
 
-参数：指定事件参数的键值。
+**类型：** string \| null \| undefined
 
-操作符支持：=、!=、&lt;、<=、>和&gt;&lt;=、&gt;和>=。
+**起始版本：** 23
 
-支持在“and”数组中配置多个条件，查询结果取交集。
+**废弃版本：** -1
 
-**类型：** string
-
-**起始版本：** 10
-
-<!--Device-QueryRule-condition?: string--><!--Device-QueryRule-condition?: string-End-->
+<!--Device-QueryRule-condition?: string | null | undefined--><!--Device-QueryRule-condition?: string | null | undefined-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -44,7 +42,9 @@ domain: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QueryRule-domain: string--><!--Device-QueryRule-domain: string-End-->
 
@@ -62,7 +62,9 @@ names: string[]
 
 **类型：** string[]
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QueryRule-names: string[]--><!--Device-QueryRule-names: string[]-End-->
 

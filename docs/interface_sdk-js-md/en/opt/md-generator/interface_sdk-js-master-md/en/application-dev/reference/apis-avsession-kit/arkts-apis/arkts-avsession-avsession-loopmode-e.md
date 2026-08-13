@@ -2,7 +2,9 @@
 
 Loop Play Mode Definition
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum LoopMode--><!--Device-avSession-enum LoopMode-End-->
 
@@ -16,7 +18,9 @@ LOOP_MODE_SEQUENCE = 0
 
 The default mode is sequential playback
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ LOOP_MODE_SINGLE = 1
 
 Single loop mode
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ LOOP_MODE_LIST = 2
 
 List loop mode
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +72,9 @@ LOOP_MODE_SHUFFLE = 3
 
 Shuffle playback mode
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,7 +90,9 @@ LOOP_MODE_CUSTOM = 4
 
 Custom playback mode supported by application
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

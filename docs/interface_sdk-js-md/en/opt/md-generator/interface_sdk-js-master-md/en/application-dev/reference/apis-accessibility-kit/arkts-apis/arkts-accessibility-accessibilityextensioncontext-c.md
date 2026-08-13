@@ -2,11 +2,13 @@
 
 The accessibility extension context. Used to configure, query information, and inject gestures.
 
-**Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AccessibilityExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -37,8 +39,8 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -91,8 +93,8 @@ Obtains the focus element. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -136,8 +138,8 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -184,8 +186,8 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -238,8 +240,8 @@ Obtains the root element of a window. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -283,8 +285,8 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -331,8 +333,8 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -382,8 +384,8 @@ Obtains the list of windows on a display. This API uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -424,8 +426,8 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -471,8 +473,8 @@ Injects a gesture. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -528,8 +530,8 @@ Injects a gesture. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -576,8 +578,8 @@ Injects a gesture.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [9300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) |
 
 ## Examples
 
@@ -619,7 +621,7 @@ Sets the concerned target bundle. This API uses an asynchronous callback to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -672,7 +674,7 @@ Sets the concerned target bundle. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

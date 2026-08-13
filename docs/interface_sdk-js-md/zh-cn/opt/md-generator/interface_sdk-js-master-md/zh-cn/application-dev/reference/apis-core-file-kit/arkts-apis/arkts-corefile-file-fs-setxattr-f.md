@@ -10,6 +10,8 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -33,7 +35,7 @@ declare function setxattr(path: string, key: string, value: string): Promise<voi
 | 错误码ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900038 |
 | 13900002 |
 | 13900012 |

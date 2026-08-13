@@ -6,6 +6,8 @@ Enumerates the rendering modes of the **Web** component. By default, the asynchr
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum RenderMode--><!--Device-unnamed-declare enum RenderMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ The **Web** component as a graphic surface node is rendered asynchronously and d
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -39,6 +43,8 @@ The **Web** component as a graphic canvas node is rendered synchronously and dis
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

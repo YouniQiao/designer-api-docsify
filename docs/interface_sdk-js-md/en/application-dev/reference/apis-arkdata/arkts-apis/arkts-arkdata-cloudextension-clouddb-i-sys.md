@@ -2,9 +2,11 @@
 
 Provides APIs for performing cloud database operations.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface CloudDB--><!--Device-cloudExtension-export interface CloudDB-End-->
 
@@ -29,9 +31,11 @@ delete(
 
 Deletes data from a cloud database table. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
@@ -70,21 +74,17 @@ class MyCloudDB implements cloudExtension.CloudDB {
 
 ## generateId
 
-ArkTS-Dyn:
-```TypeScript
-generateId(count: number): Promise<Result<Array<string>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 generateId(count: int): Promise<Result<Array<string>>>
 ```
 
-Generates IDs for the data records inserted to the cloud database.The IDs are unique. This API uses a promise to return the result.
+Generates IDs for the data records inserted to the cloud database. The IDs are unique. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>--><!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>-End-->
 
@@ -96,7 +96,7 @@ Generates IDs for the data records inserted to the cloud database.The IDs are un
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of IDs to generate. |
+| count | int | Yes | Number of IDs to generate. |
 
 **Return value:**
 
@@ -124,21 +124,17 @@ class MyCloudDB implements cloudExtension.CloudDB {
 
 ## heartbeat
 
-ArkTS-Dyn:
-```TypeScript
-heartbeat(lockId: number): Promise<Result<LockInfo>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 heartbeat(lockId: int): Promise<Result<LockInfo>>
 ```
 
 Extends the lock period of the database. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>--><!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>-End-->
 
@@ -150,7 +146,7 @@ Extends the lock period of the database. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lockId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Lock ID. |
+| lockId | int | Yes | Lock ID. |
 
 **Return value:**
 
@@ -194,9 +190,11 @@ insert(
 
 Inserts data to a cloud database table. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
@@ -242,9 +240,11 @@ lock(): Promise<Result<LockInfo>>
 
 Locks this cloud database. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-lock(): Promise<Result<LockInfo>>--><!--Device-CloudDB-lock(): Promise<Result<LockInfo>>-End-->
 
@@ -284,21 +284,17 @@ class MyCloudDB implements cloudExtension.CloudDB {
 
 ## query
 
-ArkTS-Dyn:
-```TypeScript
-query(table: string, fields: Array<string>, queryCount: number, queryCursor: string): Promise<Result<CloudData>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>
 ```
 
 Queries data in a cloud database table. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>--><!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>-End-->
 
@@ -312,7 +308,7 @@ Queries data in a cloud database table. This API uses a promise to return the re
 | --- | --- | --- | --- |
 | table | string | Yes | Table name. |
 | fields | Array&lt;string&gt; | Yes | Name of the fields to query. |
-| queryCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of data records to query. |
+| queryCount | int | Yes | Number of data records to query. |
 | queryCursor | string | Yes | Cursor for the query. |
 
 **Return value:**
@@ -346,21 +342,17 @@ class MyCloudDB implements cloudExtension.CloudDB {
 
 ## unlock
 
-ArkTS-Dyn:
-```TypeScript
-unlock(lockId: number): Promise<Result<boolean>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 unlock(lockId: int): Promise<Result<boolean>>
 ```
 
 Unlocks a cloud database. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>--><!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>-End-->
 
@@ -372,7 +364,7 @@ Unlocks a cloud database. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lockId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Lock ID to release. |
+| lockId | int | Yes | Lock ID to release. |
 
 **Return value:**
 
@@ -411,9 +403,11 @@ update(
 
 Updates data in the cloud. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 

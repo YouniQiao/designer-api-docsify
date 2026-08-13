@@ -8,7 +8,7 @@ Enumerates the notification level.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SlotLevel](ohos.notificationManager/notificationManager#SlotLevel)
+**Substitutes:** [SlotLevel](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel)
 
 <!--Device-notification-export enum SlotLevel--><!--Device-notification-export enum SlotLevel-End-->
 
@@ -28,7 +28,7 @@ The notification function is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_NONE](ohos.notificationManager/notificationManager.SlotLevel#LEVEL_NONE)
+**Substitutes:** [LEVEL_NONE](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_NONE)
 
 <!--Device-SlotLevel-LEVEL_NONE = 0--><!--Device-SlotLevel-LEVEL_NONE = 0-End-->
 
@@ -48,7 +48,7 @@ The notification function is enabled, but the notification icon is not displayed
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_MIN](ohos.notificationManager/notificationManager.SlotLevel#LEVEL_MIN)
+**Substitutes:** [LEVEL_MIN](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_MIN)
 
 <!--Device-SlotLevel-LEVEL_MIN = 1--><!--Device-SlotLevel-LEVEL_MIN = 1-End-->
 
@@ -68,7 +68,7 @@ The notification function is enabled, and the notification icon is displayed in 
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_LOW](ohos.notificationManager/notificationManager.SlotLevel#LEVEL_LOW)
+**Substitutes:** [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_LOW)
 
 <!--Device-SlotLevel-LEVEL_LOW = 2--><!--Device-SlotLevel-LEVEL_LOW = 2-End-->
 
@@ -88,7 +88,7 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_DEFAULT](ohos.notificationManager/notificationManager.SlotLevel#LEVEL_DEFAULT)
+**Substitutes:** [LEVEL_DEFAULT](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_DEFAULT)
 
 <!--Device-SlotLevel-LEVEL_DEFAULT = 3--><!--Device-SlotLevel-LEVEL_DEFAULT = 3-End-->
 
@@ -108,7 +108,7 @@ The notification feature is enabled, and the notification icon is displayed in t
 
 **Deprecated since:** 9
 
-**Substitutes:** [LEVEL_HIGH](ohos.notificationManager/notificationManager.SlotLevel#LEVEL_HIGH)
+**Substitutes:** [LEVEL_HIGH](arkts-notification-notificationmanager-slotlevel-e.md#LEVEL_HIGH)
 
 <!--Device-SlotLevel-LEVEL_HIGH = 4--><!--Device-SlotLevel-LEVEL_HIGH = 4-End-->
 

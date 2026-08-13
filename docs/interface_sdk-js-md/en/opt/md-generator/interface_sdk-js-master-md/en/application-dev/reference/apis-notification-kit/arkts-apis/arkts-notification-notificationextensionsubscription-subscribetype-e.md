@@ -2,7 +2,9 @@
 
 Describes the type that enables notification extension subscription.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationExtensionSubscription-export enum SubscribeType--><!--Device-notificationExtensionSubscription-export enum SubscribeType-End-->
 
@@ -16,7 +18,9 @@ BLUETOOTH = 0
 
 Bluetooth.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeType-BLUETOOTH = 0--><!--Device-SubscribeType-BLUETOOTH = 0-End-->
 

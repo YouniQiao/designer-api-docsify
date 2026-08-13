@@ -2,7 +2,9 @@
 
 Enumerates the audio encoding types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioEncodingType--><!--Device-audio-enum AudioEncodingType-End-->
 
@@ -16,7 +18,9 @@ ENCODING_TYPE_INVALID = -1
 
 Invalid.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ ENCODING_TYPE_RAW = 0
 
 PCM encoding.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

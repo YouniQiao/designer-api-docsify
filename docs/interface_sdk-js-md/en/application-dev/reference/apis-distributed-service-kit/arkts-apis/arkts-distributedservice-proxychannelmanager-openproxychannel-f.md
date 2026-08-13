@@ -14,9 +14,11 @@ function openProxyChannel(channelInfo: ChannelInfo): Promise<int>
 
 Opens a proxy channel. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -36,20 +38,20 @@ Opens a proxy channel. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Proxy channel ID. The value range is [1, 2147483647]. The lifecycle of **channelId** is the same as that of the proxy channel. If the proxy is not closed, the returned **channelId** is the same as that passed in the API. |
+| Promise&lt;int&gt; | Proxy channel ID. The value range is [1, 2147483647]. The lifecycle of **channelId** is the same as that of the proxy channel. If the proxy is not closed, the returned **channelId** is the same as that passed in the API. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
-| [32390006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
-| [32390102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) | Operation failed or Connection timed out. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [32390100](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
-| [32390101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
-| [32390002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
-| [32390001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because bluetooth proxy function has been trimmed.<br>**Applicable version:** 26.0.0 and later |
+| [32390006](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390006-parameter-verification-error) | Parameter error. |
+| [32390102](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390102-operation-failed-or-connection-timed-out) | Operation failed or Connection timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390100](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390100-internal-error) | Internal error. |
+| [32390101](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390101-call-restricted) | Call is restricted. |
+| [32390002](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390002-bluetooth-unpaired) | Device not paired. |
+| [32390001](../../apis-distributedservice-kit/errorcode-proxyChannelManager.md#32390001-bluetooth-disabled) | BR is disabled. |
 
 ## Examples
 

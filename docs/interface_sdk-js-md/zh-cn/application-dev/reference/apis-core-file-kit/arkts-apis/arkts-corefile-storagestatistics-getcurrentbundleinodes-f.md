@@ -10,7 +10,9 @@ function getCurrentBundleInodes(): Promise<long>
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -22,7 +24,7 @@ function getCurrentBundleInodes(): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回当前应用的inode占用量。 |
+| Promise&lt;long&gt; | Promise对象，返回当前应用的inode占用量。 |
 
 **错误码：**
 

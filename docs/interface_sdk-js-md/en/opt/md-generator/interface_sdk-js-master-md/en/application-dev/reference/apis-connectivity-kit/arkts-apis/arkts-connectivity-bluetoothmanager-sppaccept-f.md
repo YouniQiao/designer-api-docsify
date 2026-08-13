@@ -18,7 +18,7 @@ Waits for a remote device to connect.
 
 **Deprecated since:** 10
 
-**Substitutes:** [sppAccept](ohos.bluetooth.socket/socket#sppAccept)
+**Substitutes:** [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppAccept)
 
 <!--Device-bluetoothManager-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void--><!--Device-bluetoothManager-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void-End-->
 
@@ -35,8 +35,8 @@ Waits for a remote device to connect.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
 | 2900001 |
 | 2900003 |

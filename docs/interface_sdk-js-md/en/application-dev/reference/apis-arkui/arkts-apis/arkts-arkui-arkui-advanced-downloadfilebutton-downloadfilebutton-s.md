@@ -1,12 +1,12 @@
 # DownloadFileButton
 
-Declare struct DownloadFileButton
+Declare Component DownloadFileButton
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct DownloadFileButton--><!--Device-unnamed-export declare struct DownloadFileButton-End-->
 
@@ -18,63 +18,47 @@ Declare struct DownloadFileButton
 import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from '@kit.ArkUI';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Decorator:** @Builder
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DownloadFileButton-build(): void--><!--Device-DownloadFileButton-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## contentOptions
 
 ```TypeScript
-contentOptions: DownloadContentOptions
+@State contentOptions: DownloadContentOptions
 ```
 
 Set DownloadFileButton Content.
 
-**Type:** [DownloadContentOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
+**Type:** [DownloadContentOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadcontentoptions-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-DownloadFileButton-contentOptions: DownloadContentOptions--><!--Device-DownloadFileButton-contentOptions: DownloadContentOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadFileButton-@State contentOptions: DownloadContentOptions--><!--Device-DownloadFileButton-@State contentOptions: DownloadContentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## styleOptions
 
 ```TypeScript
-styleOptions: DownloadStyleOptions
+@State styleOptions: DownloadStyleOptions
 ```
 
 Set DownloadFileButton Style.
 
-**Type:** [DownloadStyleOptions](arkts-arkui-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
+**Type:** [DownloadStyleOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-downloadfilebutton-downloadstyleoptions-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-DownloadFileButton-styleOptions: DownloadStyleOptions--><!--Device-DownloadFileButton-styleOptions: DownloadStyleOptions-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DownloadFileButton-@State styleOptions: DownloadStyleOptions--><!--Device-DownloadFileButton-@State styleOptions: DownloadStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

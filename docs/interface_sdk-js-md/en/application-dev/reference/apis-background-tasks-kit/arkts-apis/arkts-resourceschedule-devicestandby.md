@@ -1,10 +1,12 @@
 # @ohos.resourceschedule.deviceStandby
 
-Provides methods for managing device standby,including the methods for querying standby status and exemption list.
+Provides methods for managing device standby, including the methods for querying standby status and exemption list.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
 
@@ -23,10 +25,10 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps) | Returns the information about the specified exempted application. |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps-1) | Returns the information about the specified exempted application. |
-| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseexemptionresource) | Releases exemption resources. |
-| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestexemptionresource) | Requests exemption resources. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps) | Returns the information about the specified exempted application. |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps-(System-API)) | Returns the information about the specified exempted application. |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseExemptionResource) | Releases exemption resources. |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestExemptionResource) | Requests exemption resources. |
 <!--DelEnd-->
 
 <!--Del-->

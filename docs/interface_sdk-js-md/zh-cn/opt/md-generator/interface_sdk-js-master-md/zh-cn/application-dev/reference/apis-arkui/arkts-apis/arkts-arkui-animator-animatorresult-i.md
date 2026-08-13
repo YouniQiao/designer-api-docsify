@@ -4,6 +4,8 @@
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface AnimatorResult--><!--Device-unnamed-export interface AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,10 +16,11 @@
 cancel(): void
 ```
 
-取消动画，会触发[onCancel](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。此接口和  
-[finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
+取消动画，会触发[onCancel](../arkts-components/arkts-arkui-imageframeinfo-i.md#ImageFrameInfo)回调。此接口和 [finish](#finish)接口功能上没有区别，仅触发的回调不同，建议使用finish接口结束动画。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -27,7 +30,7 @@ cancel(): void
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 // animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
@@ -40,9 +43,11 @@ animator.cancel();
 finish(): void
 ```
 
-结束动画，会触发[onFinish](../../../reference/apis-arkui/js-apis-animator.md#属性)回调。
+结束动画，会触发[onFinish](../arkts-components/arkts-arkui-imageframeinfo-i.md#ImageFrameInfo)回调。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -52,186 +57,12 @@ finish(): void
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 // animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
 animator.finish();
 ```
-
-## onCancel
-
-```TypeScript
-onCancel: () => void
-```
-
-动画被取消时回调。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onCancel: () => void--><!--Device-AnimatorResult-onCancel: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onFinish
-
-```TypeScript
-onFinish: () => void
-```
-
-动画完成时回调。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onFinish: () => void--><!--Device-AnimatorResult-onFinish: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onFrame
-
-```TypeScript
-onFrame: (progress: number) => void
-```
-
-接收到帧时回调。
-
-progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions)定义的[begin, end]，默认取值范围为[0, 1]。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onFrame: (progress: number) => void--><!--Device-AnimatorResult-onFrame: (progress: number) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| progress | number | 是 |
-
-## onRepeat
-
-```TypeScript
-onRepeat: () => void
-```
-
-动画重复时回调。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onRepeat: () => void--><!--Device-AnimatorResult-onRepeat: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## oncancel
-
-```TypeScript
-oncancel: () => void
-```
-
-动画被取消时回调。
-
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onCancel。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** [onCancel](ohos.animator.onCancel)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-oncancel: () => void--><!--Device-AnimatorResult-oncancel: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onfinish
-
-```TypeScript
-onfinish: () => void
-```
-
-动画完成时回调。
-
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFinish。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** [onFinish](ohos.animator.onFinish)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onfinish: () => void--><!--Device-AnimatorResult-onfinish: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onframe
-
-```TypeScript
-onframe: (progress: number) => void
-```
-
-接收到帧时回调。
-
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFrame。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** [onFrame](ohos.animator.onFrame)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onframe: (progress: number) => void--><!--Device-AnimatorResult-onframe: (progress: number) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| progress | number | 是 |
-
-## onrepeat
-
-```TypeScript
-onrepeat: () => void
-```
-
-动画重复时回调。
-
-**说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onRepeat。
-
-**起始版本：** 6
-
-**废弃版本：** 12
-
-**替代接口：** [onRepeat](ohos.animator.onRepeat)
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AnimatorResult-onrepeat: () => void--><!--Device-AnimatorResult-onrepeat: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## pause
 
@@ -243,6 +74,8 @@ pause(): void
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AnimatorResult-pause(): void--><!--Device-AnimatorResult-pause(): void-End-->
@@ -251,7 +84,7 @@ pause(): void
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 // animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
@@ -268,6 +101,8 @@ play(): void
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AnimatorResult-play(): void--><!--Device-AnimatorResult-play(): void-End-->
@@ -276,7 +111,7 @@ play(): void
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 // animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
@@ -292,6 +127,8 @@ reset(options: AnimatorOptions): void
 重置当前animator动画参数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -309,8 +146,8 @@ reset(options: AnimatorOptions): void
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -357,10 +194,11 @@ struct AnimatorTest {
 reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 ```
 
-重置当前animator动画参数。与[reset](#reset)相比，新增对  
-[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
+重置当前animator动画参数。与[reset](#reset)相比，新增对 [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions)类型入参的支持。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -380,12 +218,12 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { Animator as animator, AnimatorResult, AnimatorOptions, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -418,6 +256,8 @@ reverse(): void
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AnimatorResult-reverse(): void--><!--Device-AnimatorResult-reverse(): void-End-->
@@ -426,7 +266,7 @@ reverse(): void
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 // animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
@@ -442,6 +282,8 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 设置期望的帧率范围。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -499,17 +341,13 @@ struct AnimatorTest {
 update(options: AnimatorOptions): void
 ```
 
-更新当前动画器。
-
-> **说明：**
-> 
-> 从API version 6开始支持，从API version 9开始废弃。建议使用[reset](#reset)替代。
+更新当前动画器。 > **说明：** > > 从API version 6开始支持，从API version 9开始废弃。建议使用[reset](#reset)替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [reset](AnimatorResult.reset(options:)
+**替代接口：** [reset](#reset)(options: AnimatorOptions)
 
 <!--Device-AnimatorResult-update(options: AnimatorOptions): void--><!--Device-AnimatorResult-update(options: AnimatorOptions): void-End-->
 
@@ -523,9 +361,185 @@ update(options: AnimatorOptions): void
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 // animator需先通过this.getUIContext().createAnimator()获取AnimatorResult对象
 animator.update(options);
 ```
+
+## onCancel
+
+```TypeScript
+onCancel: () => void
+```
+
+动画被取消时回调。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onCancel: () => void--><!--Device-AnimatorResult-onCancel: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onFinish
+
+```TypeScript
+onFinish: () => void
+```
+
+动画完成时回调。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onFinish: () => void--><!--Device-AnimatorResult-onFinish: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onFrame
+
+```TypeScript
+onFrame: (progress: number) => void
+```
+
+接收到帧时回调。 progress表示动画的当前值。取值范围为[AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions)定义的[begin, end]，默认取值范围为[0, 1]。
+
+**类型：** (progress: number) =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onFrame: (progress: number) => void--><!--Device-AnimatorResult-onFrame: (progress: number) => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onRepeat
+
+```TypeScript
+onRepeat: () => void
+```
+
+动画重复时回调。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onRepeat: () => void--><!--Device-AnimatorResult-onRepeat: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## oncancel
+
+```TypeScript
+oncancel: () => void
+```
+
+动画被取消时回调。 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onCancel。
+
+**类型：** () =&gt; void
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onCancel
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-oncancel: () => void--><!--Device-AnimatorResult-oncancel: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onfinish
+
+```TypeScript
+onfinish: () => void
+```
+
+动画完成时回调。 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFinish。
+
+**类型：** () =&gt; void
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onFinish
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onfinish: () => void--><!--Device-AnimatorResult-onfinish: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onframe
+
+```TypeScript
+onframe: (progress: number) => void
+```
+
+接收到帧时回调。 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onFrame。
+
+**类型：** (progress: number) =&gt; void
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onFrame
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onframe: (progress: number) => void--><!--Device-AnimatorResult-onframe: (progress: number) => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onrepeat
+
+```TypeScript
+onrepeat: () => void
+```
+
+动画重复时回调。 **说明:** 从API version 6开始支持，从API version 12开始废弃，推荐使用onRepeat。
+
+**类型：** () =&gt; void
+
+**起始版本：** 6
+
+**废弃版本：** 12
+
+**替代接口：** onRepeat
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AnimatorResult-onrepeat: () => void--><!--Device-AnimatorResult-onrepeat: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full

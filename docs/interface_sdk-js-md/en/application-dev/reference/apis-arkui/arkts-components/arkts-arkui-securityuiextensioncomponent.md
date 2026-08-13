@@ -1,16 +1,8 @@
 # SecurityUIExtensionComponent
 
-**SecurityUIExtensionComponent** is used to embed the UI provided by another application on the current page. The
-displayed content runs in another process, and the current application does not participate in its layout and
-rendering.
+**SecurityUIExtensionComponent** is used to embed the UI provided by another application on the current page. The displayed content runs in another process, and the current application does not participate in its layout and rendering. It is typically used in modular development scenarios that require process isolation. Currently, **SecurityUIExtensionComponent** can only start **UIExtensionAbility** of the [PhotoPicker](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-photopickercomponent-s.md#PhotoPickerComponent) type.
 
-It is typically used in modular development scenarios that require process isolation. Currently,
-**SecurityUIExtensionComponent** can only start **UIExtensionAbility** of the
-[PhotoPicker]{@link @ohos.file.PhotoPickerComponent} type.
-
-## Child Components
-
-None
+## Child Components None
 
 ## SecurityUIExtensionComponent
 
@@ -21,12 +13,13 @@ SecurityUIExtensionComponent(
   )
 ```
 
-Creates a **SecurityUIExtensionComponent** component to embed and display the UI provided by a remote  
-[UIExtensionAbility]{@link @ohos.app.ability.UIExtensionAbility:UIExtensionAbility}.
+Creates a **SecurityUIExtensionComponent** component to embed and display the UI provided by a remote [UIExtensionAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility).
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,7 +38,7 @@ Creates a **SecurityUIExtensionComponent** component to embed and display the UI
 
 ## Summary
 
-- [SecurityUIExtensionOptions](arkts-arkui-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md)
-- [SecurityUIExtensionProxy](arkts-arkui-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md)
-- [TerminationInfo](arkts-arkui-securityuiextensioncomponent-terminationinfo-i-sys.md)
-- [SecurityDpiFollowStrategy](arkts-arkui-securityuiextensioncomponent-securitydpifollowstrategy-e-sys.md)
+- [SecurityUIExtensionOptions](arkts-arkui-securityuiextensionoptions-i-sys.md)
+- [SecurityUIExtensionProxy](arkts-arkui-securityuiextensionproxy-i-sys.md)
+- [TerminationInfo](arkts-arkui-terminationinfo-i-sys.md)
+- [SecurityDpiFollowStrategy](arkts-arkui-securitydpifollowstrategy-e-sys.md)

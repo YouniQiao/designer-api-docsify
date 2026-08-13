@@ -2,7 +2,9 @@
 
 Manager OPP server profile.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-opp-interface OppServerProfile--><!--Device-opp-interface OppServerProfile-End-->
 
@@ -22,7 +24,9 @@ cancelTransfer(): Promise<void>
 
 cancel the current file transfer action.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -44,12 +48,12 @@ cancel the current file transfer action.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2903002 |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -75,9 +79,11 @@ try {
 getCurrentTransferInformation(): Promise<OppTransferInformation>
 ```
 
-Obtains the information about the file that is being transferred.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Obtains the information about the file that is being transferred. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -102,30 +108,32 @@ Obtains the information about the file that is being transferred.On API 26.0.0 a
 | Error Code ID |
 | --- |
 | 2903004 |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
 
-## off('transferStateChange')
+## offReceiveIncomingFile
 
 ```TypeScript
-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void
+offReceiveIncomingFile(callback?: Callback<OppTransferInformation>): void
 ```
 
-Unsubscribe the event reported when the file transfer status changes.
+Unsubscribe to the event of receiving a file transfer request.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void-End-->
+<!--Device-OppServerProfile-offReceiveIncomingFile(callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-offReceiveIncomingFile(callback?: Callback<OppTransferInformation>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -135,38 +143,61 @@ Unsubscribe the event reported when the file transfer status changes.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'transferStateChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 
-## Examples
+## offTransferStateChange
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo } from '@kit.CoreFileKit';
-import { opp } from '@kit.ConnectivityKit';
-// Create fileHolders.
-try {
-    let oppProfile = opp.createOppServerProfile();
-    oppProfile.off("transferStateChange");
-} catch (err) {
-      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
+offTransferStateChange(callback?: Callback<OppTransferInformation>): void
 ```
 
-## off('receiveIncomingFile')
+Unsubscribe the event reported when the file transfer status changes.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OppServerProfile-offTransferStateChange(callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-offTransferStateChange(callback?: Callback<OppTransferInformation>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900004 |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| 2900001 |
+| 2900003 |
+
+## off_receiveIncomingFile
 
 ```TypeScript
 off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): void
@@ -175,6 +206,8 @@ off(type: 'receiveIncomingFile', callback?: Callback<OppTransferInformation>): v
 Unsubscribe to the event of receiving a file transfer request.
 
 **Since:** 16
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -197,12 +230,12 @@ Unsubscribe to the event of receiving a file transfer request.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 
@@ -220,23 +253,23 @@ try {
 }
 ```
 
-## on('transferStateChange')
+## off_transferStateChange
 
 ```TypeScript
-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void
+off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void
 ```
 
-Subscribe the event reported when the file transfer status changes.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Unsubscribe the event reported when the file transfer status changes.
 
 **Since:** 16
 
-**Required permissions:** 
-- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
-- API version 16 - 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void-End-->
+<!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-off(type: 'transferStateChange', callback?: Callback<OppTransferInformation>): void-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -247,18 +280,18 @@ Subscribe the event reported when the file transfer status changes.On API 26.0.0
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'transferStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 
@@ -271,29 +304,103 @@ import { opp } from '@kit.ConnectivityKit';
 // Create fileHolders.
 try {
     let oppProfile = opp.createOppServerProfile();
-    oppProfile.on("transferStateChange", (data: opp.OppTransferInformation) => {
-        if (data.status == opp.TransferStatus.PENDING) {
-          console.info("[opp_js] waiting to transfer : " + data.remoteDeviceName);
-        } else if (data.status == opp.TransferStatus.RUNNING){
-          console.info("[opp_js] running data.currentBytes " + data.currentBytes + " data.totalBytes" + data.totalBytes);
-        } else if (data.status == opp.TransferStatus.FINISH){
-          console.info("[opp_js] transfer finished, result is " + data.result);
-        }
-      });
+    oppProfile.off("transferStateChange");
 } catch (err) {
       console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
 
-## on('receiveIncomingFile')
+## onReceiveIncomingFile
+
+```TypeScript
+onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void
+```
+
+Subscribe to the event of receiving a file transfer request. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OppServerProfile-onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-onReceiveIncomingFile(callback: Callback<OppTransferInformation>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900004 |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| 2900001 |
+| 2900003 |
+
+## onTransferStateChange
+
+```TypeScript
+onTransferStateChange(callback: Callback<OppTransferInformation>): void
+```
+
+Subscribe the event reported when the file transfer status changes. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OppServerProfile-onTransferStateChange(callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-onTransferStateChange(callback: Callback<OppTransferInformation>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900004 |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| 2900001 |
+| 2900003 |
+
+## on_receiveIncomingFile
 
 ```TypeScript
 on(type: 'receiveIncomingFile', callback: Callback<OppTransferInformation>): void
 ```
 
-Subscribe to the event of receiving a file transfer request.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+Subscribe to the event of receiving a file transfer request. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 16
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -318,12 +425,12 @@ Subscribe to the event of receiving a file transfer request.On API 26.0.0 and ab
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 
@@ -350,6 +457,73 @@ try {
 }
 ```
 
+## on_transferStateChange
+
+```TypeScript
+on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void
+```
+
+Subscribe the event reported when the file transfer status changes. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+
+**Since:** 16
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API version 16 - 24: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void--><!--Device-OppServerProfile-on(type: 'transferStateChange', callback: Callback<OppTransferInformation>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'transferStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OppTransferInformation](arkts-connectivity-opp-opptransferinformation-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 2900004 |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| 2900001 |
+| 2900003 |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { fileIo } from '@kit.CoreFileKit';
+import { opp } from '@kit.ConnectivityKit';
+// Create fileHolders.
+try {
+    let oppProfile = opp.createOppServerProfile();
+    oppProfile.on("transferStateChange", (data: opp.OppTransferInformation) => {
+        if (data.status == opp.TransferStatus.PENDING) {
+          console.info("[opp_js] waiting to transfer : " + data.remoteDeviceName);
+        } else if (data.status == opp.TransferStatus.RUNNING){
+          console.info("[opp_js] running data.currentBytes " + data.currentBytes + " data.totalBytes" + data.totalBytes);
+        } else if (data.status == opp.TransferStatus.FINISH){
+          console.info("[opp_js] transfer finished, result is " + data.result);
+        }
+      });
+} catch (err) {
+      console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+
 ## sendFile
 
 ```TypeScript
@@ -358,7 +532,9 @@ sendFile(deviceId: string, fileHolds: Array<FileHolder>): Promise<void>
 
 Send files to the remote device.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -387,15 +563,15 @@ Send files to the remote device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2903001 |
 | 2903002 |
 | 2903003 |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -439,7 +615,9 @@ setIncomingFileConfirmation(accept: boolean, fileFd: number): Promise<void>
 
 Set the user confirmation information for incoming files.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -468,14 +646,14 @@ Set the user confirmation information for incoming files.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2903002 |
 | 2903003 |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -511,7 +689,9 @@ setLastReceivedFileUri(uri: string): Promise<void>
 
 Set the URI of the last received file.
 
-**Since:** 16
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.MANAGE_BLUETOOTH
 
@@ -539,12 +719,12 @@ Set the URI of the last received file.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [203](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [203](../../errorcode-universal.md#203-system-function-prohibited-by-enterprise-management-policies) |
 | 2900001 |
 | 2900003 |
 | 2900099 |

@@ -1,16 +1,16 @@
 # GridLayoutAlgorithm
 
-Defines the grid layout algorithm.
+Grid layout algorithm class. > **NOTE：**> > The object of the **GridLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the > input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
+**Inheritance/Implementation:** GridLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class GridLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export declare class GridLayoutAlgorithm implements LayoutAlgorithm-End-->
+<!--Device-unnamed-export class GridLayoutAlgorithm--><!--Device-unnamed-export class GridLayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,13 +20,17 @@ Defines the grid layout algorithm.
 constructor(option?: GridLayoutAlgorithmOptions)
 ```
 
-Constructor.
+Constructs the grid layout algorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)--><!--Device-GridLayoutAlgorithm-constructor(option?: GridLayoutAlgorithmOptions)-End-->
 
@@ -36,71 +40,83 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [GridLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | set properties of grid layout algorithm. |
+| option | [GridLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-gridlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the grid layout algorithm, which are used to set the number of columns, column spacing, and row spacing of the grid layout. |
 
 ## columnsGap
 
 ```TypeScript
-public columnsGap?: LengthMetrics
+@Trace public columnsGap?: LengthMetrics
 ```
 
-The spacing between columns.
+Spacing between columns. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public columnsGap?: LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-GridLayoutAlgorithm-@Trace public columnsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-@Trace public columnsGap?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## columnsTemplate
 
 ```TypeScript
-public columnsTemplate?: string | ItemFillPolicy
+@Trace public columnsTemplate?: string | ItemFillPolicy
 ```
 
-This parameter specifies the number of columns in the current grid layout.
+Number of columns in the grid layout. Default value: **'1fr'** Invalid values are treated as the default value.
 
-**Type:** string \| [ItemFillPolicy](arkts-arkui-units-itemfillpolicy-i.md)
+**Type:** string \| [ItemFillPolicy](../../apis-na/arkts-apis/arkts-na-units-itemfillpolicy-i.md)
 
 **Default:** '1fr'
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithm-public columnsTemplate?: string | ItemFillPolicy-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-GridLayoutAlgorithm-@Trace public columnsTemplate?: string | ItemFillPolicy--><!--Device-GridLayoutAlgorithm-@Trace public columnsTemplate?: string | ItemFillPolicy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## rowsGap
 
 ```TypeScript
-public rowsGap?: LengthMetrics
+@Trace public rowsGap?: LengthMetrics
 ```
 
-The spacing between rows.
+Spacing between rows. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-public rowsGap?: LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-GridLayoutAlgorithm-@Trace public rowsGap?: LengthMetrics--><!--Device-GridLayoutAlgorithm-@Trace public rowsGap?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

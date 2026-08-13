@@ -1,16 +1,14 @@
 # NodeContent
 
-**NodeContent** is the ArkUI-provided manager for [ContentSlot](../@internal/component/ets/content_slot).
+**NodeContent** is the ArkUI-provided manager for ContentSlot. > **NOTE：**> > - **NodeContent** objects do not support JSON serialization.
 
-> **NOTE：**
-> 
-> - **NodeContent** objects do not support JSON serialization.
-
-**Inheritance/Implementation:** NodeContent extends [Content](Content)
+**Inheritance/Implementation:** NodeContent extends Content
 
 **Since:** 12
 
-<!--Device-unnamed-export class NodeContent extends Content--><!--Device-unnamed-export class NodeContent extends Content-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class NodeContent--><!--Device-unnamed-export class NodeContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +21,8 @@ addFrameNode(node: FrameNode): void
 Adds a FrameNode to this **NodeContent** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Adds a FrameNode to this **NodeContent** object.
 
 | Error Code ID |
 | --- |
-| [100025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-node.md#100025-invalid-parameter-value) |
+| [100025](../errorcode-node.md#100025-invalid-parameter-value) |
 
 ## constructor
 
@@ -53,6 +53,8 @@ constructor()
 A constructor used to create a **NodeContent** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,6 +97,8 @@ removeFrameNode(node: FrameNode): void
 Removes a FrameNode from this **NodeContent** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

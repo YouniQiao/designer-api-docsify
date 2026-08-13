@@ -1,10 +1,12 @@
 # CompletedResult
 
-CompletedResult
+Defines the information about the Picker's state from the last exit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class CompletedResult--><!--Device-unnamed-export declare class CompletedResult-End-->
 
@@ -22,15 +24,19 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo
 ```
 
-Contextual information about the PhotoPicker's exit state.
+Context information of the PhotoPicker exit status.
 
 **Type:** photoAccessHelper.ContextRecoveryInfo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CompletedResult-contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo--><!--Device-CompletedResult-contextRecoveryInfo: photoAccessHelper.ContextRecoveryInfo-End-->
 
@@ -42,15 +48,19 @@ Contextual information about the PhotoPicker's exit state.
 movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>
 ```
 
-M?oving photo badge states for the selected media files in the gallery.When isMovingPhotoBadgeShown is true, movingPhotoBadgeStates contains the moving photo states;otherwise, it is empty.
+Moving photo badge states of the selected media files. When **isMovingPhotoBadgeShown** is set to **true**, **movingPhotoBadgeStates** contains the moving photo status. Otherwise, the value is empty.
 
 **Type:** Array&lt;photoAccessHelper.MovingPhotoBadgeStateType&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CompletedResult-movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>--><!--Device-CompletedResult-movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>-End-->
 
@@ -62,15 +72,19 @@ M?oving photo badge states for the selected media files in the gallery.When isMo
 photoUris: Array<string>
 ```
 
-URIs of the images or videos selected. The URI array can be used only by calling photoAccessHelper.getAssets with temporary authorization. For details about how to use the media file URI, see Using a Media File URI.
+URI of the selected image or video. The URI array can be used only by calling **photoAccessHelper.getAssets** in temporary authorization mode.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CompletedResult-photoUris: Array<string>--><!--Device-CompletedResult-photoUris: Array<string>-End-->
 

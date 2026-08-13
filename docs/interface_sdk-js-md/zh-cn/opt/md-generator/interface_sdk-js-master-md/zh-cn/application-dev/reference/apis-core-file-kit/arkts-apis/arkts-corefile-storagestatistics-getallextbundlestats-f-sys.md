@@ -10,6 +10,8 @@ function getAllExtBundleStats(userId: number): Promise<Array<ExtBundleStats>>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -38,8 +40,8 @@ function getAllExtBundleStats(userId: number): Promise<Array<ExtBundleStats>>
 | --- |
 | 13600013 |
 | 13600010 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例

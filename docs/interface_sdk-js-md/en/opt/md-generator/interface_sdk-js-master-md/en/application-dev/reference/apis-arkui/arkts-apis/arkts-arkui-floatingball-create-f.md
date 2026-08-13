@@ -14,7 +14,9 @@ function create(config: FloatingBallConfiguration): Promise<FloatingBallControll
 
 Creates a floating ball controller. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>--><!--Device-floatingBall-function create(config: FloatingBallConfiguration): Promise<FloatingBallController>-End-->
 
@@ -36,9 +38,9 @@ Creates a floating ball controller. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [1300019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) |
 
 ## Examples
 

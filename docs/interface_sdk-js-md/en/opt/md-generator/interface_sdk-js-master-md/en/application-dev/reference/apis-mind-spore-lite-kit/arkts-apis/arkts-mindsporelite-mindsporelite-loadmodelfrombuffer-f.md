@@ -16,7 +16,9 @@ function loadModelFromBuffer(
 
 Create a Model instance from buffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +88,9 @@ function loadModelFromBuffer(
 
 Create a Model instance from buffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,7 +153,9 @@ function loadModelFromBuffer(
 
 Create a Model instance from buffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

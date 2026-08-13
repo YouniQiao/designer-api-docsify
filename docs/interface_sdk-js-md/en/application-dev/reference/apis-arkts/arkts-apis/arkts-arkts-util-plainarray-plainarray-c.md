@@ -1,12 +1,14 @@
 # PlainArray
 
-PlainArray stores key-value (KV) pairs. Each key must be unique, be of the number type, and have only one value.PlainArray is based on generics and uses a lightweight structure.
+PlainArray stores key-value (KV) pairs. Each key must be unique, be of the number type, and have only one value. PlainArray is based on generics and uses a lightweight structure.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class PlainArray<T>--><!--Device-unnamed-declare class PlainArray<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PlainArray--><!--Device-unnamed-declare class PlainArray-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +28,9 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,6 +56,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>--><!--Device-PlainArray-[Symbol.iterator](): IterableIterator<[number, T]>-End-->
@@ -68,7 +74,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -98,21 +104,17 @@ for(let i = 0; i < 10; i++) {
 
 ## add
 
-ArkTS-Dyn:
-```TypeScript
-add(key: number, value: T): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 add(key: int, value: T): void
 ```
 
 Adds an element to this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,14 +126,14 @@ Adds an element to this PlainArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key of the target element. The value must be less than or equal to int32_max, that is, 2147483 647. |
+| key | int | Yes | Key of the target element. The value must be less than or equal to int32_max, that is, 2147483 647. |
 | value | T | Yes | Value of the target element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -149,9 +151,11 @@ clear(): void
 
 Clears this PlainArray and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -163,7 +167,7 @@ Clears this PlainArray and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -184,9 +188,11 @@ clone(): PlainArray<T>
 
 Clones this PlainArray and returns a copy. The modification to the copy does not affect the original instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -204,7 +210,7 @@ Clones this PlainArray and returns a copy. The modification to the copy does not
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clone method cannot be bound. |
 
 ## Examples
 
@@ -224,9 +230,11 @@ constructor()
 
 A constructor used to create a **PlainArray** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -238,7 +246,7 @@ A constructor used to create a **PlainArray** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The PlainArray's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The PlainArray's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -258,6 +266,8 @@ Uses a callback to traverse each element in the **PlainArray** instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void--><!--Device-PlainArray-forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => void, thisArg?: Object): void-End-->
@@ -275,7 +285,7 @@ Uses a callback to traverse each element in the **PlainArray** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -312,7 +322,9 @@ Executes a provided function once for each value in the PlainArray object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -338,6 +350,8 @@ Obtains the value of the specified key in this PlainArray.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlainArray-get(key: number): T--><!--Device-PlainArray-get(key: number): T-End-->
@@ -360,7 +374,7 @@ Obtains the value of the specified key in this PlainArray.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
 
 ## Examples
 
@@ -382,7 +396,9 @@ Queries the value associated with the specified key
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -406,25 +422,21 @@ Queries the value associated with the specified key
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## getIndexOfKey
 
-ArkTS-Dyn:
-```TypeScript
-getIndexOfKey(key: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndexOfKey(key: int): int
 ```
 
 Obtains the index of the element with the specified key in this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -436,19 +448,19 @@ Obtains the index of the element with the specified key in this PlainArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
+| key | int | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
+| int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfKey method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfKey method cannot be bound. |
 
 ## Examples
 
@@ -462,21 +474,17 @@ console.info("result = ", result); // result = 1
 
 ## getIndexOfValue
 
-ArkTS-Dyn:
-```TypeScript
-getIndexOfValue(value: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndexOfValue(value: T): int
 ```
 
 Obtains the index of the first occurrence of an element with the specified value in this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -494,13 +502,13 @@ Obtains the index of the first occurrence of an element with the specified value
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
+| int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOfValue method cannot be bound. |
 
 ## Examples
 
@@ -514,21 +522,17 @@ console.info("result:", result);  // result: 0
 
 ## getKeyAt
 
-ArkTS-Dyn:
-```TypeScript
-getKeyAt(index: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getKeyAt(index: int): int
 ```
 
 Obtains the key of the element at the specified position in this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -540,19 +544,19 @@ Obtains the key of the element at the specified position in this PlainArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Key of the element. If no match is found, **-1** is returned. |
+| int | Key of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getKeyAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getKeyAt method cannot be bound. |
 
 ## Examples
 
@@ -566,21 +570,17 @@ console.info("result = ", result); // result = 2
 
 ## getValueAt
 
-ArkTS-Dyn:
-```TypeScript
-getValueAt(index: number): T
-```
-
-ArkTS-Sta:
 ```TypeScript
 getValueAt(index: int): T
 ```
 
 Obtains the value of an element at the specified position in this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -592,7 +592,7 @@ Obtains the value of an element at the specified position in this PlainArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
@@ -604,8 +604,8 @@ Obtains the value of an element at the specified position in this PlainArray.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -619,21 +619,17 @@ console.info("result:", result);  // result: sparrow
 
 ## has
 
-ArkTS-Dyn:
-```TypeScript
-has(key: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 has(key: int): boolean
 ```
 
 Checks whether PlainArray has the specified key.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -645,7 +641,7 @@ Checks whether PlainArray has the specified key.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
+| key | int | Yes | Target key. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
@@ -657,7 +653,7 @@ Checks whether PlainArray has the specified key.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -676,9 +672,11 @@ isEmpty(): boolean
 
 Checks whether this PlainArray is empty.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -696,7 +694,7 @@ Checks whether this PlainArray is empty.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -717,6 +715,8 @@ Removes a key-value pair with the specified key.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -740,7 +740,7 @@ Removes a key-value pair with the specified key.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -762,7 +762,9 @@ Remove the key-value pair based on a specified key if it exists and return the v
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -786,7 +788,7 @@ Remove the key-value pair based on a specified key if it exists and return the v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## removeAt
 
@@ -799,6 +801,8 @@ Removes an element at the specified position from this PlainArray.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -822,7 +826,7 @@ Removes an element at the specified position from this PlainArray.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
 ## Examples
 
@@ -844,7 +848,9 @@ Remove the key-value pair at a specified index if it exists and return the value
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -868,25 +874,21 @@ Remove the key-value pair at a specified index if it exists and return the value
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## removeRangeFrom
 
-ArkTS-Dyn:
-```TypeScript
-removeRangeFrom(index: number, size: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeRangeFrom(index: int, size: int): int
 ```
 
 Removes elements within the specified range.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -898,21 +900,21 @@ Removes elements within the specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the elements to remove. The value must be less than or equal to int32_max, that is, 2147483647. |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of elements to remove. The value must be less than or equal to int32_max, that is, 214 7483647. |
+| index | int | Yes | Start position of the elements to remove. The value must be less than or equal to int32_max, that is, 2147483647. |
+| size | int | Yes | Number of elements to remove. The value must be less than or equal to int32_max, that is, 214 7483647. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of elements removed. |
+| int | Number of elements removed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeRangeFrom method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeRangeFrom method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -926,21 +928,17 @@ console.info("result:", result);  // result: 1
 
 ## setValueAt
 
-ArkTS-Dyn:
-```TypeScript
-setValueAt(index: number, value: T): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setValueAt(index: int, value: T): void
 ```
 
 Sets a value for an element at the specified position in this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -952,15 +950,15 @@ Sets a value for an element at the specified position in this PlainArray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 | value | T | Yes | Value of the target element. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setValueAt method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The setValueAt method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -981,9 +979,11 @@ toString(): String
 
 Obtains a string that contains all elements in this PlainArray.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1001,7 +1001,7 @@ Obtains a string that contains all elements in this PlainArray.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
 
 ## Examples
 
@@ -1025,7 +1025,9 @@ Number of elements in a PlainArray.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

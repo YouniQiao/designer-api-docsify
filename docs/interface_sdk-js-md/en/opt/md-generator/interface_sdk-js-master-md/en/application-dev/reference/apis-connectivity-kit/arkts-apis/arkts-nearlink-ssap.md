@@ -4,6 +4,8 @@ Provides methods to operate or manage service of NearLink.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace ssap--><!--Device-unnamed-declare namespace ssap-End-->
@@ -22,8 +24,8 @@ import { ssap } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) |
-| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) |
+| [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) |
+| [createServer](arkts-connectivity-ssap-createserver-f.md#createServer) |
 
 ### Interfaces
 

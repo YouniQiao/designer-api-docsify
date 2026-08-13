@@ -2,7 +2,9 @@
 
 Obtains traffic statistics.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace statistics--><!--Device-unnamed-declare namespace statistics-End-->
 
@@ -20,45 +22,47 @@ import { statistics } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getallrxbytes) |
-| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getallrxbytes-1) |
-| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getalltxbytes) |
-| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getalltxbytes-1) |
-| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getcellularrxbytes) |
-| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getcellularrxbytes-1) |
-| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getcellulartxbytes) |
-| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getcellulartxbytes-1) |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getifacerxbytes) |
-| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getifacerxbytes-1) |
-| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getifacetxbytes) |
-| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getifacetxbytes-1) |
-| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md#getselftrafficstats) |
-| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getsockfdrxbytes) |
-| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getsockfdrxbytes-1) |
-| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getsockfdtxbytes) |
-| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getsockfdtxbytes-1) |
-| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getuidrxbytes) |
-| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getuidrxbytes-1) |
-| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getuidtxbytes) |
-| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getuidtxbytes-1) |
+| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getAllRxBytes) |
+| [getAllRxBytes](arkts-network-statistics-getallrxbytes-f.md#getAllRxBytes) |
+| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getAllTxBytes) |
+| [getAllTxBytes](arkts-network-statistics-getalltxbytes-f.md#getAllTxBytes) |
+| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getCellularRxBytes) |
+| [getCellularRxBytes](arkts-network-statistics-getcellularrxbytes-f.md#getCellularRxBytes) |
+| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getCellularTxBytes) |
+| [getCellularTxBytes](arkts-network-statistics-getcellulartxbytes-f.md#getCellularTxBytes) |
+| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getIfaceRxBytes) |
+| [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getIfaceRxBytes) |
+| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getIfaceTxBytes) |
+| [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getIfaceTxBytes) |
+| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md#getSelfTrafficStats) |
+| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getSockfdRxBytes) |
+| [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getSockfdRxBytes) |
+| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getSockfdTxBytes) |
+| [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getSockfdTxBytes) |
+| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getUidRxBytes) |
+| [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md#getUidRxBytes) |
+| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getUidTxBytes) |
+| [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md#getUidTxBytes) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md#getmonthtrafficstats) |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#gettrafficstatsbyiface) |
-| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#gettrafficstatsbyiface-1) |
-| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md#gettrafficstatsbynetwork) |
-| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#gettrafficstatsbyuid) |
-| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#gettrafficstatsbyuid-1) |
-| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md#gettrafficstatsbyuidnetwork) |
-| [off](arkts-network-statistics-off-f-sys.md#off) |
-| [on](arkts-network-statistics-on-f-sys.md#on) |
-| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md#setcalibrationtraffic) |
-| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md#updateifacesstats) |
-| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md#updatestatsdata) |
+| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md#getMonthTrafficStats-(System-API)) |
+| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#getTrafficStatsByIface-(System-API)) |
+| [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#getTrafficStatsByIface-(System-API)) |
+| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md#getTrafficStatsByNetwork-(System-API)) |
+| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#getTrafficStatsByUid-(System-API)) |
+| [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#getTrafficStatsByUid-(System-API)) |
+| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md#getTrafficStatsByUidNetwork-(System-API)) |
+| [offNetStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md#offNetStatsChange-(System-API)) |
+| [off_netStatsChange](arkts-network-statistics-offnetstatschange-f-sys.md) |
+| [onNetStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md#onNetStatsChange-(System-API)) |
+| [on_netStatsChange](arkts-network-statistics-onnetstatschange-f-sys.md) |
+| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md#setCalibrationTraffic-(System-API)) |
+| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md#updateIfacesStats-(System-API)) |
+| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md#updateStatsData-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -75,6 +79,7 @@ import { statistics } from '@kit.NetworkKit';
 | --- |
 | [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md) |
 | [NetStatsChangeInfo](arkts-network-statistics-netstatschangeinfo-i-sys.md) |
+| [NetStatsInfoSequenceItem](arkts-network-statistics-netstatsinfosequenceitem-i-sys.md) |
 | [UidInfo](arkts-network-statistics-uidinfo-i-sys.md) |
 <!--DelEnd-->
 
@@ -89,5 +94,6 @@ import { statistics } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [NetStatsInfoSequence](arkts-network-statistics-netstatsinfosequence-t-sys.md) |
 | [UidNetStatsInfo](arkts-network-statistics-uidnetstatsinfo-t-sys.md) |
 <!--DelEnd-->

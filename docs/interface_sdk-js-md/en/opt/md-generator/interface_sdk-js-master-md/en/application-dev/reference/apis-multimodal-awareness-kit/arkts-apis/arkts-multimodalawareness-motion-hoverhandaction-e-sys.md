@@ -4,6 +4,8 @@ Enum for hover hand actions.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-motion-export enum HoverHandAction--><!--Device-motion-export enum HoverHandAction-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -19,6 +21,8 @@ DOWN = 0
 Indicates the hover hand enters the detection area.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ UP = 1
 Indicates the hover hand leaves the detection area.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

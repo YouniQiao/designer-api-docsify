@@ -8,9 +8,11 @@ function createServer(name: string): Server
 
 在服务端设备上，应用创建服务。通过start()开启后，该设备可作为服务端被其他设备连接。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -36,10 +38,10 @@ function createServer(name: string): Server
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the linkEnhance function has been trimmed.<br>**适用版本：** 26.0.0+ |
-| [32390203](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390203-服务名重复注册) | Duplicate server name. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the linkEnhance function has been trimmed.<br>**适用版本：** 26.0.0+ |
+| [32390203](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390203-服务名重复注册) | Duplicate server name. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

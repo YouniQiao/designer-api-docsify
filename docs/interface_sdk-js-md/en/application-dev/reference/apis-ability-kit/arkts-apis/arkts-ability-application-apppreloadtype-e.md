@@ -2,9 +2,11 @@
 
 Enumerates the preloading types of the current application process.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-application-export enum AppPreloadType--><!--Device-application-export enum AppPreloadType-End-->
 
@@ -18,9 +20,11 @@ UNSPECIFIED = 0
 
 No preloading has taken place, or the preloaded data has been cleared.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +40,11 @@ TYPE_CREATE_PROCESS = 1
 
 Preloads the process up to the point of process creation completion.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,11 +58,13 @@ Preloads the process up to the point of process creation completion.
 TYPE_CREATE_ABILITY_STAGE = 2
 ```
 
-Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage)creation completion.
+Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) creation completion.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +78,13 @@ Preloads the process up to the point of [AbilityStage](arkts-ability-app-ability
 TYPE_CREATE_WINDOW_STAGE = 3
 ```
 
-Preloads the process up to the point of [WindowStage](@ohos.window) creation completion.
+Preloads the process up to the point of [WindowStage](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md#window) creation completion.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,11 +98,13 @@ Preloads the process up to the point of [WindowStage](@ohos.window) creation com
 TYPE_CREATE_BACKGROUND_ABILITY = 4
 ```
 
-Preloads the process up to the point of [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground)execution completion.
+Preloads the process up to the point of [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground) execution completion.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

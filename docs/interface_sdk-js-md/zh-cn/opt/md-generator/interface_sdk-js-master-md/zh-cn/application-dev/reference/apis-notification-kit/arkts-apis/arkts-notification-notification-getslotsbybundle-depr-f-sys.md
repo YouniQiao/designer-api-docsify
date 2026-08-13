@@ -12,7 +12,7 @@ function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<No
 
 **废弃版本：** 9
 
-**替代接口：** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
+**替代接口：** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md#getSlotsByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function getSlotsByBundle(bundle: BundleOption): Promise<Array<NotificationSlot>
 
 **废弃版本：** 9
 
-**替代接口：** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
+**替代接口：** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md#getSlotsByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

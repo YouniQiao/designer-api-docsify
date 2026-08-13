@@ -4,6 +4,8 @@ The **CustomComponentContext** class provides access to component-level services
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface CustomComponentContext--><!--Device-unnamed-export declare interface CustomComponentContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,11 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 getReusePool(): IReusePool | undefined
 ```
 
-Obtains the global reuse pool of the custom component. If the component does not configure the reuse pool through  
-**reusePool** and **poolAccepts**, **undefined** is returned. For details about how to configure the global reuse pool, see  
-[Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
+Obtains the global reuse pool of the custom component. If the component does not configure the reuse pool through **reusePool** and **poolAccepts**, **undefined** is returned. For details about how to configure the global reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

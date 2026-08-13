@@ -4,6 +4,8 @@ Imaging mode query object.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-camera-interface ImagingModeQuery--><!--Device-camera-interface ImagingModeQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -25,6 +27,8 @@ isImagingModeSupported(mode: CameraImagingMode): boolean
 Checks whether a camera imaging mode is supported.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,5 +54,5 @@ Checks whether a camera imaging mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

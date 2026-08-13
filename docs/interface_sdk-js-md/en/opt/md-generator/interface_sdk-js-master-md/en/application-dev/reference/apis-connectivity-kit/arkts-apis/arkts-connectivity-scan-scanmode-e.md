@@ -4,6 +4,8 @@ The enum of scan mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-scan-enum ScanMode--><!--Device-scan-enum ScanMode-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ SCAN_MODE_LOW_POWER = 0
 Low-power mode with a lower scan frequency (default).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ SCAN_MODE_BALANCED = 1
 Medium-power mode with a medium scan frequency.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

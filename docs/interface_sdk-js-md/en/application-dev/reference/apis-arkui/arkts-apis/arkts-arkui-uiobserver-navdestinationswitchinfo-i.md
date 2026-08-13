@@ -1,10 +1,12 @@
 # NavDestinationSwitchInfo
 
-NavDestination switch info
+Provides the information about page switching of the **Navigation** component.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export interface NavDestinationSwitchInfo--><!--Device-uiObserver-export interface NavDestinationSwitchInfo-End-->
 
@@ -22,15 +24,19 @@ import { uiObserver } from '@kit.ArkUI';
 context: UIAbilityContext | UIContext
 ```
 
-The context of the navigation operation.
+Context information corresponding to **Navigation** component that triggers page switching.
 
 **Type:** [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) \| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationSwitchInfo-context: UIAbilityContext | UIContext--><!--Device-NavDestinationSwitchInfo-context: UIAbilityContext | UIContext-End-->
 
@@ -42,15 +48,19 @@ The context of the navigation operation.
 from: NavDestinationInfo | NavBar
 ```
 
-From navigation content info.
+Source page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
+**Type:** NavDestinationInfo \| [NavBar](../../apis-na/arkts-apis/arkts-na-navbar-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationSwitchInfo-from: NavDestinationInfo | NavBar--><!--Device-NavDestinationSwitchInfo-from: NavDestinationInfo | NavBar-End-->
 
@@ -62,15 +72,19 @@ From navigation content info.
 operation: NavigationOperation
 ```
 
-The operation type.
+Page switching operation type.
 
-**Type:** [NavigationOperation](arkts-arkui-navigation-navigationoperation-e.md)
+**Type:** [NavigationOperation](../../apis-na/arkts-apis/arkts-na-navigation-navigationoperation-e.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationSwitchInfo-operation: NavigationOperation--><!--Device-NavDestinationSwitchInfo-operation: NavigationOperation-End-->
 
@@ -82,15 +96,19 @@ The operation type.
 to: NavDestinationInfo | NavBar
 ```
 
-To navigation content info.
+Destination page for page switching.
 
-**Type:** NavDestinationInfo \| [NavBar](arkts-arkui-navbar-t.md)
+**Type:** NavDestinationInfo \| [NavBar](../../apis-na/arkts-apis/arkts-na-navbar-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationSwitchInfo-to: NavDestinationInfo | NavBar--><!--Device-NavDestinationSwitchInfo-to: NavDestinationInfo | NavBar-End-->
 

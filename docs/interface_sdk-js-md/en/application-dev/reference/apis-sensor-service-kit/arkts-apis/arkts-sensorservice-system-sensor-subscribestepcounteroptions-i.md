@@ -8,7 +8,7 @@ Defines the type of data to return for a subscription to data changes of the ste
 
 **Deprecated since:** 8
 
-**Substitutes:** [PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md#PEDOMETER)
+**Substitutes:** PEDOMETER
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -30,13 +30,15 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](ohos.sensor/sensor#on)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -46,13 +48,6 @@ Callback invoked when an API call fails.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
 ## success
 
 ```TypeScript
@@ -61,13 +56,15 @@ success: (data: StepCounterResponse) => void
 
 Defines a **StepCounterResponse** object.
 
+**Type:** (data: StepCounterResponse) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](ohos.sensor/sensor#on)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -76,10 +73,4 @@ Defines a **StepCounterResponse** object.
 <!--Device-SubscribeStepCounterOptions-success: (data: StepCounterResponse) => void--><!--Device-SubscribeStepCounterOptions-success: (data: StepCounterResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [StepCounterResponse](arkts-sensorservice-system-sensor-stepcounterresponse-i.md) | Yes |  |
 

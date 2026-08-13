@@ -6,6 +6,8 @@ Defines LocalSocket connection parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalConnectOptions--><!--Device-socket-export interface LocalConnectOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Bound Local address.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-LocalConnectOptions-address: LocalAddress--><!--Device-LocalConnectOptions-address: LocalAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -47,6 +51,8 @@ Timeout duration of the LocalSocket connection, in milliseconds.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-LocalConnectOptions-timeout?: number--><!--Device-LocalConnectOptions-timeout?: number-End-->
 

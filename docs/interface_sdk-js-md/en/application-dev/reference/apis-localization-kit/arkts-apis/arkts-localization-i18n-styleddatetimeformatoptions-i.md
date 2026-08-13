@@ -1,10 +1,12 @@
 # StyledDateTimeFormatOptions
 
-Represents optional configuration items for the DateTimeFormat object.
+Optional configuration items for creating the time and date formatting object for rich text display.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface StyledDateTimeFormatOptions--><!--Device-i18n-export interface StyledDateTimeFormatOptions-End-->
 
@@ -22,13 +24,15 @@ import { i18n } from '@kit.LocalizationKit';
 day?: TextStyle
 ```
 
-Text style for the day part. The default value is the default text style.
+Specifies the text style of the day. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -42,13 +46,15 @@ Text style for the day part. The default value is the default text style.
 dayPeriod?: TextStyle
 ```
 
-Text style for the day period part. The default value is the default text style.
+Specifies the text style of the period. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -62,13 +68,15 @@ Text style for the day period part. The default value is the default text style.
 era?: TextStyle
 ```
 
-Text style for the era part. The default value is the default text style.
+Specifies the text style of the era. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -82,13 +90,15 @@ Text style for the era part. The default value is the default text style.
 hour?: TextStyle
 ```
 
-Text style for the hour part. The default value is the default text style.
+Specifies the text style of the hour. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -102,13 +112,15 @@ Text style for the hour part. The default value is the default text style.
 minute?: TextStyle
 ```
 
-Text style for the minute part. The default value is the default text style.
+Specifies the text style of the minute. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -122,13 +134,15 @@ Text style for the minute part. The default value is the default text style.
 month?: TextStyle
 ```
 
-Text style for the month part. The default value is the default text style.
+Specifies the text style of the month. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -142,13 +156,15 @@ Text style for the month part. The default value is the default text style.
 second?: TextStyle
 ```
 
-Text style for the second part. The default value is the default text style.
+Specifies the text style of the second. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -162,13 +178,15 @@ Text style for the second part. The default value is the default text style.
 timeZoneName?: TextStyle
 ```
 
-Text style for the timezone name part. The default value is the default text style.
+Specifies the text style of the time zone name. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -182,13 +200,15 @@ Text style for the timezone name part. The default value is the default text sty
 weekday?: TextStyle
 ```
 
-Text style for the weekday part. The default value is the default text style.
+Specifies the text style of the week. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -202,13 +222,15 @@ Text style for the weekday part. The default value is the default text style.
 year?: TextStyle
 ```
 
-Text style for the year part. The default value is the default text style.
+Specifies the text style of the year. The default value is the default text style of StyledString.
 
 **Type:** [TextStyle](../../apis-arkui/arkts-apis/arkts-arkui-styledstring-textstyle-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

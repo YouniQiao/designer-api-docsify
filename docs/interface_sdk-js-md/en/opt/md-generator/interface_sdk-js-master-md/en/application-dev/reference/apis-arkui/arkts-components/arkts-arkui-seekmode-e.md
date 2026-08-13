@@ -4,6 +4,8 @@ Enumerates video seek modes.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SeekMode--><!--Device-unnamed-declare enum SeekMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ PreviousKeyframe
 Seek to the nearest previous keyframe.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Seek to the nearest next keyframe.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SeekMode-NextKeyframe--><!--Device-SeekMode-NextKeyframe-End-->
@@ -50,6 +56,8 @@ Seek to the nearest keyframe.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SeekMode-ClosestKeyframe--><!--Device-SeekMode-ClosestKeyframe-End-->
@@ -65,6 +73,8 @@ Accurate
 Seek to a specific frame, regardless of whether the frame is a keyframe.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

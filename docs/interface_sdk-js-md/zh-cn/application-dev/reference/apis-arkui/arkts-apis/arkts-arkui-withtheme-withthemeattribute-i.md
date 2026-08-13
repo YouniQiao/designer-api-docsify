@@ -1,10 +1,12 @@
 # WithThemeAttribute
 
-不支持[通用属性](./../../@internal/component/ets/common)和[通用事件](./../../@internal/component/ets/common)。
+不支持通用属性和通用事件。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface WithThemeAttribute--><!--Device-unnamed-export declare interface WithThemeAttribute-End-->
 
@@ -13,45 +15,37 @@
 ## applyAttributesFinish
 
 ```TypeScript
-default applyAttributesFinish(): void
+applyAttributesFinish(): void
 ```
 
-通知组件已完成设置其属性。
+**起始版本：** -1
 
-**起始版本：** 26.0.0
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**废弃版本：** -1
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WithThemeAttribute-default applyAttributesFinish(): void--><!--Device-WithThemeAttribute-default applyAttributesFinish(): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-WithThemeAttribute-applyAttributesFinish(): void--><!--Device-WithThemeAttribute-applyAttributesFinish(): void-End-->
 
 ## debugLine
 
 ```TypeScript
-default debugLine(sourceLine: string, moduleName?: string): this
+debugLine(sourceLine: string, moduleName?: string): this
 ```
 
-设置组件的源码跳转信息。
+**起始版本：** -1
 
-**起始版本：** 26.0.0
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**废弃版本：** -1
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WithThemeAttribute-default debugLine(sourceLine: string, moduleName?: string): this--><!--Device-WithThemeAttribute-default debugLine(sourceLine: string, moduleName?: string): this-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-WithThemeAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-WithThemeAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sourceLine | string | 是 | 源代码行。 |
-| moduleName | string | 否 | 组件所属的模块。 |
+| sourceLine | string | 是 |  |
+| moduleName | string | 否 |  |
 
 **返回值：**
 
@@ -62,30 +56,46 @@ default debugLine(sourceLine: string, moduleName?: string): this
 ## setWithThemeOptions
 
 ```TypeScript
-default setWithThemeOptions(options: WithThemeOptions | undefined): this
+setWithThemeOptions(options: WithThemeOptions | undefined): this
 ```
 
-设置WithTheme选项。
+**起始版本：** -1
 
-**起始版本：** 26.0.0
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**废弃版本：** -1
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-WithThemeAttribute-default setWithThemeOptions(options: WithThemeOptions | undefined): this--><!--Device-WithThemeAttribute-default setWithThemeOptions(options: WithThemeOptions | undefined): this-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-WithThemeAttribute-setWithThemeOptions(options: WithThemeOptions | undefined): this--><!--Device-WithThemeAttribute-setWithThemeOptions(options: WithThemeOptions | undefined): this-End-->
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | 是 | 创建WithTheme的选项。 |
+| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | 是 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| this | 返回WithThemeAttribute的实例。 |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+通知组件已完成设置其属性。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WithThemeAttribute-default--><!--Device-WithThemeAttribute-default-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

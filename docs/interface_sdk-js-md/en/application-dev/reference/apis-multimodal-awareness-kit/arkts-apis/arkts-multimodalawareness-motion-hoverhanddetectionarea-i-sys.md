@@ -4,7 +4,9 @@ The basic data structure of the hover hand detection area.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-motion-export interface HoverHandDetectionArea--><!--Device-motion-export interface HoverHandDetectionArea-End-->
 
@@ -24,13 +26,15 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 height: int
 ```
 
-Height of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
+Height of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ Height of the rectangle.Unit: px. The value must be an integer within [1,2147483
 left: int
 ```
 
-Left boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
+Left boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,13 +74,15 @@ Left boundary of the rectangle.Unit: px. The value must be an integer within [-2
 top: int
 ```
 
-Top boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
+Top boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +98,15 @@ Top boundary of the rectangle.Unit: px. The value must be an integer within [-21
 width: int
 ```
 
-Width of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
+Width of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

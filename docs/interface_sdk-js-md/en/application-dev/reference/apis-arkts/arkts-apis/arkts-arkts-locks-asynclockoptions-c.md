@@ -6,7 +6,9 @@ Lock operation's options
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-locks-class AsyncLockOptions<T>--><!--Device-locks-class AsyncLockOptions<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-locks-class AsyncLockOptions--><!--Device-locks-class AsyncLockOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,6 +30,8 @@ Default constructor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockOptions-constructor()--><!--Device-AsyncLockOptions-constructor()-End-->
@@ -47,6 +51,8 @@ If the value is true and lockAsync cannot acquire the lock immediately, the oper
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,6 +74,8 @@ The object used to abort the async operation. If signal.aborted is true, the cal
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockOptions-signal: AbortSignal<T> | null--><!--Device-AsyncLockOptions-signal: AbortSignal<T> | null-End-->
@@ -87,6 +95,8 @@ Lock operation timeout in milliseconds. If it is greater than zero, lockAsync wi
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

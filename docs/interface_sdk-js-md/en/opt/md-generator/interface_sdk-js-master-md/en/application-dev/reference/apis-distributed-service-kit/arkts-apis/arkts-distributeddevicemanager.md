@@ -1,14 +1,10 @@
 # @ohos.distributedDeviceManager
 
-The **distributedDeviceManager** module provides APIs for distributed device management.Applications can call the APIs to:
+The **distributedDeviceManager** module provides APIs for distributed device management. Applications can call the APIs to: - Subscribe to or unsubscribe from device state changes. - Discover devices nearby. - Authenticate or deauthenticate a device. - Query the trusted device list. - Query local device information, including the device name, type, and ID.
 
-- Subscribe to or unsubscribe from device state changes.  
-- Discover devices nearby.  
-- Authenticate or deauthenticate a device.  
-- Query the trusted device list.  
-- Query local device information, including the device name, type, and ID.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace distributedDeviceManager--><!--Device-unnamed-declare namespace distributedDeviceManager-End-->
 
@@ -26,15 +22,21 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createdevicemanager) |
-| [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager) |
+| [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createDeviceManager) |
+| [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releaseDeviceManager) |
 
 ### Interfaces
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md) |
 | [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md) |
 | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) |
+| [DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md) |
+| [DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md) |
+| [DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md) |
+| [DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md) |
+| [ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md) |
 
 <!--Del-->
 ### Interfaces（系统接口）
@@ -48,6 +50,7 @@ import { distributedDeviceManager } from '@kit.DistributedServiceKit';
 | [DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md) |
 | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) |
 | [NetworkIdQueryFilter](arkts-distributedservice-distributeddevicemanager-networkidqueryfilter-i-sys.md) |
+| [ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md) |
 | [ServiceProfileInfo](arkts-distributedservice-distributeddevicemanager-serviceprofileinfo-i-sys.md) |
 <!--DelEnd-->
 

@@ -1,14 +1,12 @@
 # @ohos.batteryStatistics
 
-The **batteryStatistics** module provides APIs for querying software and hardware power consumption statistics.
+The **batteryStatistics** module provides APIs for querying software and hardware power consumption statistics. > **NOTE：**> > - The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> - The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace batteryStats--><!--Device-unnamed-declare namespace batteryStats-End-->
 
@@ -29,12 +27,12 @@ import { batteryStats } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md#getapppowerpercent) | Obtains the proportion of the power consumption of an application. |
-| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md#getapppowervalue) | Obtains the power consumption of an application, in unit of mAh. |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getbatterystats) | Obtains the power consumption information list. This API uses a promise to return the result. |
-| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getbatterystats-1) | Obtains the power consumption information list. This API uses an asynchronous callback to return the result. |
-| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md#gethardwareunitpowerpercent) | Obtains the proportion of the power consumption of a hardware unit according to the power consumption type. |
-| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md#gethardwareunitpowervalue) | Obtains the power consumption of a hardware unit according to the consumption type, in unit of mAh. |
+| [getAppPowerPercent](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md#getAppPowerPercent) | Obtains the proportion of the power consumption of an application. |
+| [getAppPowerValue](arkts-basicservices-batterystats-getapppowervalue-f-sys.md#getAppPowerValue) | Obtains the power consumption of an application, in unit of mAh. |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getBatteryStats) | Obtains the power consumption information list. This API uses a promise to return the result. |
+| [getBatteryStats](arkts-basicservices-batterystats-getbatterystats-f-sys.md#getBatteryStats-(System-API)) | Obtains the power consumption information list. This API uses an asynchronous callback to return the result. |
+| [getHardwareUnitPowerPercent](arkts-basicservices-batterystats-gethardwareunitpowerpercent-f-sys.md#getHardwareUnitPowerPercent) | Obtains the proportion of the power consumption of a hardware unit according to the power consumption type. |
+| [getHardwareUnitPowerValue](arkts-basicservices-batterystats-gethardwareunitpowervalue-f-sys.md#getHardwareUnitPowerValue) | Obtains the power consumption of a hardware unit according to the consumption type, in unit of mAh. |
 <!--DelEnd-->
 
 <!--Del-->

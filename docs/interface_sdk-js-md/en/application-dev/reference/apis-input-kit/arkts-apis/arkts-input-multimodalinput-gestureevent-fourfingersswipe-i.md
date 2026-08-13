@@ -2,9 +2,11 @@
 
 Defines a four-finger swipe gesture event.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface FourFingersSwipe--><!--Device-unnamed-export declare interface FourFingersSwipe-End-->
 
@@ -26,9 +28,11 @@ Gesture event type, for example, gesture start, gesture update, or gesture end.
 
 **Type:** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FourFingersSwipe-type: ActionType--><!--Device-FourFingersSwipe-type: ActionType-End-->
 
@@ -42,11 +46,13 @@ x: int
 
 X coordinate, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FourFingersSwipe-x: int--><!--Device-FourFingersSwipe-x: int-End-->
 
@@ -60,11 +66,13 @@ y: int
 
 Y coordinate, in px.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FourFingersSwipe-y: int--><!--Device-FourFingersSwipe-y: int-End-->
 

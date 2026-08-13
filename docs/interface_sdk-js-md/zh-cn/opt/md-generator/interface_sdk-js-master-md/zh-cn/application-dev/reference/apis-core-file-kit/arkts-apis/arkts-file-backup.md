@@ -2,7 +2,9 @@
 
 提供备份和恢复能力的模块。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace backup--><!--Device-unnamed-declare namespace backup-End-->
 
@@ -17,14 +19,14 @@
 
 | 名称 |
 | --- |
-| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#filesystemservicerequest) |
-| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getbackupinfo) |
-| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getbackupversion) |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities) |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-1) |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-2) |
-| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updatesendrate) |
-| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updatetimer) |
+| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#fileSystemServiceRequest（系统接口）) |
+| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getBackupInfo（系统接口）) |
+| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getBackupVersion（系统接口）) |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities（系统接口）) |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities（系统接口）) |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities（系统接口）) |
+| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updateSendRate（系统接口）) |
+| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updateTimer（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -65,6 +67,9 @@
 
 | 名称 |
 | --- |
+| [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md) |
 | [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md) |
 | [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md) |
+| [OnProcess](arkts-corefile-backup-onprocess-t-sys.md) |
+| [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md) |
 <!--DelEnd-->

@@ -2,7 +2,9 @@
 
 设备的耗电信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-batteryStats-interface BatteryStatsInfo--><!--Device-batteryStats-interface BatteryStatsInfo-End-->
 
@@ -20,7 +22,9 @@ power: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BatteryStatsInfo-power: double--><!--Device-BatteryStatsInfo-power: double-End-->
 
@@ -38,7 +42,9 @@ type: ConsumptionType
 
 **类型：** [ConsumptionType](arkts-basicservices-batterystats-consumptiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BatteryStatsInfo-type: ConsumptionType--><!--Device-BatteryStatsInfo-type: ConsumptionType-End-->
 
@@ -56,7 +62,9 @@ uid: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BatteryStatsInfo-uid: int--><!--Device-BatteryStatsInfo-uid: int-End-->
 

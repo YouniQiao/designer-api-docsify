@@ -2,9 +2,11 @@
 
 Provides methods to operate or manage NFC card emulation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cardEmulation--><!--Device-unnamed-declare namespace cardEmulation-End-->
 
@@ -22,23 +24,23 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability) | Checks whether Host Card Emulation(HCE) capability is supported. |
-| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice) | Checks whether a service is default for given type. |
-| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported) | Checks whether a specified type of card emulation is supported.&lt;p&gt;This method is used to check Whether the host or secure element supports card emulation. |
+| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hasHceCapability) | Checks whether Host Card Emulation(HCE) capability is supported. |
+| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isDefaultService) | Checks whether a service is default for given type. |
+| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#isSupported) | Checks whether a specified type of card emulation is supported. &lt;p&gt;This method is used to check Whether the host or secure element supports card emulation. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md#getpaymentservices) | Gets all payment services. |
+| [getPaymentServices](arkts-connectivity-cardemulation-getpaymentservices-f-sys.md#getPaymentServices) | Gets all payment services. |
 <!--DelEnd-->
 
 ### Classes
 
 | Name | Description |
 | --- | --- |
-| [HceService](arkts-connectivity-cardemulation-hceservice-c.md) | A class for NFC host application.&lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application. |
+| [HceService](arkts-connectivity-cardemulation-hceservice-c.md) | A class for NFC host application. &lt;p&gt;The NFC host application use this class, then Nfc service can access the application installation information and connect to services of the application. |
 
 ### Enums
 

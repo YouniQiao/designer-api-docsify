@@ -6,7 +6,7 @@ Object used for thread synchronization.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
 <!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
 
@@ -30,6 +30,8 @@ Default constructor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ConditionVariable-constructor()--><!--Device-ConditionVariable-constructor()-End-->
@@ -47,6 +49,8 @@ Notify all waiting promise.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -66,6 +70,8 @@ Notify one waiting promise.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ConditionVariable-notifyOne(): void--><!--Device-ConditionVariable-notifyOne(): void-End-->
@@ -83,6 +89,8 @@ Find or create an instance of ConditionVariable using the specified name.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -114,6 +122,8 @@ Waits for the ConditionVariable to be notified.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ConditionVariable-wait(): Promise<void>--><!--Device-ConditionVariable-wait(): Promise<void>-End-->
@@ -137,6 +147,8 @@ Waits for the ConditionVariable to be notified, or until the specified time limi
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

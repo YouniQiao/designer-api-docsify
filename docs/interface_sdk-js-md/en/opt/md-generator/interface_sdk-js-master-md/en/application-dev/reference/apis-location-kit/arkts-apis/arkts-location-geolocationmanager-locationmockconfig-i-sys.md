@@ -2,7 +2,9 @@
 
 Parameters for configuring the location simulation function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface LocationMockConfig--><!--Device-geoLocationManager-export interface LocationMockConfig-End-->
 
@@ -26,7 +28,9 @@ Mock location array.
 
 **Type:** Array&lt;Location&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocationMockConfig-locations: Array<Location>--><!--Device-LocationMockConfig-locations: Array<Location>-End-->
 
@@ -44,7 +48,9 @@ Interval for reporting simulated locations.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocationMockConfig-timeInterval: int--><!--Device-LocationMockConfig-timeInterval: int-End-->
 

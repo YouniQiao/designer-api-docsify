@@ -1,18 +1,20 @@
 # IndexChangedHandler
 
 ```TypeScript
-export type IndexChangedHandler = (index: int) => void
+declare type IndexChangedHandler = (index: number) => void
 ```
 
-Handler of swiper, used in OnChange.
+Defines the callback to notify the application when the index of the currently displayed element changes.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export type IndexChangedHandler = (index: int) => void--><!--Device-unnamed-export type IndexChangedHandler = (index: int) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type IndexChangedHandler = (index: number) => void--><!--Device-unnamed-declare type IndexChangedHandler = (index: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -20,5 +22,5 @@ Handler of swiper, used in OnChange.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index of the current swiper. |
+| index | number | Yes | Index of the currently displayed element. The index is zero-based. |
 

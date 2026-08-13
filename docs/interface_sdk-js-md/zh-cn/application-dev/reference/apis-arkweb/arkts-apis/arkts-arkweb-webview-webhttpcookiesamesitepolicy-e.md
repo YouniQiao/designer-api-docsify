@@ -1,10 +1,12 @@
 # WebHttpCookieSameSitePolicy
 
-Indicates whether to restrict cookies so that only requests sent back to the same site that created them can carry them.
+指示是否将 cookie 限制为仅创建它的同一站点的请求可以携带。指示是否将 cookie 限制为仅创建它的同一站点的请求可以携带。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebHttpCookieSameSitePolicy--><!--Device-webview-enum WebHttpCookieSameSitePolicy-End-->
 
@@ -16,11 +18,13 @@ Indicates whether to restrict cookies so that only requests sent back to the sam
 NONE = 0
 ```
 
-Cookies marked as Secure are allowed to be carried in cross-site requests.
+允许在跨站请求中携带cookie，但必须同时设置secure属性。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-NONE = 0--><!--Device-WebHttpCookieSameSitePolicy-NONE = 0-End-->
 
@@ -32,11 +36,13 @@ Cookies marked as Secure are allowed to be carried in cross-site requests.
 LAX = 1
 ```
 
-Allow specific cross-site requests to carry cookies.
+允许特定的跨站请求携带cookie。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-LAX = 1--><!--Device-WebHttpCookieSameSitePolicy-LAX = 1-End-->
 
@@ -48,11 +54,13 @@ Allow specific cross-site requests to carry cookies.
 STRICT = 2
 ```
 
-Prohibit cross-site requests from carrying cookies.
+禁止在跨站请求中携带cookie。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookieSameSitePolicy-STRICT = 2--><!--Device-WebHttpCookieSameSitePolicy-STRICT = 2-End-->
 

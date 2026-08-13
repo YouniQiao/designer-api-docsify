@@ -6,6 +6,8 @@ Defines the richEditor Image Layout Style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface RichEditorLayoutStyle--><!--Device-unnamed-export interface RichEditorLayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,11 +20,13 @@ borderRadius?: Dimension | BorderRadiuses
 
 Border radius.
 
-**Type:** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
+**Type:** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ Outer Margin.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

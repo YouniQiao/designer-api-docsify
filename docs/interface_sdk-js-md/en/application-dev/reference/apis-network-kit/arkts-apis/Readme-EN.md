@@ -132,9 +132,9 @@
   <!--Del-->
   - [isIfaceActive(system api)](arkts-network-ethernet-isifaceactive-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-network-ethernet-off-f-sys.md)<!--DelEnd-->
+  - [off_interfaceStateChange(system api)](arkts-network-ethernet-offinterfacestatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-network-ethernet-on-f-sys.md)<!--DelEnd-->
+  - [on_interfaceStateChange(system api)](arkts-network-ethernet-oninterfacestatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setIfaceConfig(system api)](arkts-network-ethernet-setifaceconfig-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -265,9 +265,25 @@
   <!--Del-->
   - [isUidNetAllowed(system api)](arkts-network-policy-isuidnetallowed-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-network-policy-off-f-sys.md)<!--DelEnd-->
+  - [off_netBackgroundPolicyChange(system api)](arkts-network-policy-offnetbackgroundpolicychange-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-network-policy-on-f-sys.md)<!--DelEnd-->
+  - [off_netMeteredIfacesChange(system api)](arkts-network-policy-offnetmeteredifaceschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_netQuotaPolicyChange(system api)](arkts-network-policy-offnetquotapolicychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_netUidPolicyChange(system api)](arkts-network-policy-offnetuidpolicychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_netUidRuleChange(system api)](arkts-network-policy-offnetuidrulechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_netBackgroundPolicyChange(system api)](arkts-network-policy-onnetbackgroundpolicychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_netMeteredIfacesChange(system api)](arkts-network-policy-onnetmeteredifaceschange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_netQuotaPolicyChange(system api)](arkts-network-policy-onnetquotapolicychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_netUidPolicyChange(system api)](arkts-network-policy-onnetuidpolicychange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_netUidRuleChange(system api)](arkts-network-policy-onnetuidrulechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [resetPolicies(system api)](arkts-network-policy-resetpolicies-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -300,8 +316,7 @@
   - [NetworkMatchRule(system api)](arkts-network-policy-networkmatchrule-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [QuotaPolicy(system api)](arkts-network-policy-quotapolicy-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [UidNetworkAccessPolicy(system api)](arkts-network-policy-uidnetworkaccesspolicy-i-sys.md)<!--DelEnd-->
+  - [UidNetworkAccessPolicy](arkts-network-policy-uidnetworkaccesspolicy-i.md)
   - [NetBearType](arkts-network-policy-netbeartype-t.md)
   <!--Del-->
   - [LimitAction(system api)](arkts-network-policy-limitaction-e-sys.md)<!--DelEnd-->
@@ -331,9 +346,17 @@
   <!--Del-->
   - [isSharingSupported(system api)](arkts-network-sharing-issharingsupported-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-network-sharing-off-f-sys.md)<!--DelEnd-->
+  - [off_interfaceSharingStateChange(system api)](arkts-network-sharing-offinterfacesharingstatechange-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-network-sharing-on-f-sys.md)<!--DelEnd-->
+  - [off_sharingStateChange(system api)](arkts-network-sharing-offsharingstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_sharingUpstreamChange(system api)](arkts-network-sharing-offsharingupstreamchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_interfaceSharingStateChange(system api)](arkts-network-sharing-oninterfacesharingstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_sharingStateChange(system api)](arkts-network-sharing-onsharingstatechange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_sharingUpstreamChange(system api)](arkts-network-sharing-onsharingupstreamchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [startSharing(system api)](arkts-network-sharing-startsharing-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -407,11 +430,11 @@
   - [getUidRxBytes](arkts-network-statistics-getuidrxbytes-f.md)
   - [getUidTxBytes](arkts-network-statistics-getuidtxbytes-f.md)
   <!--Del-->
-  - [off(system api)](arkts-network-statistics-off-f-sys.md)<!--DelEnd-->
+  - [off_netStatsChange(system api)](arkts-network-statistics-offnetstatschange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offNetStatsChange(system api)](arkts-network-statistics-offnetstatschange-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-network-statistics-on-f-sys.md)<!--DelEnd-->
+  - [on_netStatsChange(system api)](arkts-network-statistics-onnetstatschange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onNetStatsChange(system api)](arkts-network-statistics-onnetstatschange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -451,9 +474,13 @@
   <!--Del-->
   - [getSysVpnConfigList(system api)](arkts-network-vpn-getsysvpnconfiglist-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(system api)](arkts-network-vpn-off-f-sys.md)<!--DelEnd-->
+  - [off_connect(system api)](arkts-network-vpn-offconnect-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-network-vpn-on-f-sys.md)<!--DelEnd-->
+  - [off_connectMulti(system api)](arkts-network-vpn-offconnectmulti-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_connect(system api)](arkts-network-vpn-onconnect-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_connectMulti(system api)](arkts-network-vpn-onconnectmulti-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [IpsecVpnConfig(system api)](arkts-network-vpn-ipsecvpnconfig-i-sys.md)<!--DelEnd-->
   <!--Del-->

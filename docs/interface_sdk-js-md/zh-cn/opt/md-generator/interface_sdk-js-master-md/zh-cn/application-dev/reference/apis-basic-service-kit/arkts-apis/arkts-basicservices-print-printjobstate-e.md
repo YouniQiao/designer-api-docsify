@@ -2,7 +2,9 @@
 
 打印任务状态的枚举。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-enum PrintJobState--><!--Device-print-enum PrintJobState-End-->
 
@@ -16,7 +18,9 @@ PRINT_JOB_PREPARE = 0
 
 表示打印任务的初始状态。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintJobState-PRINT_JOB_PREPARE = 0--><!--Device-PrintJobState-PRINT_JOB_PREPARE = 0-End-->
 
@@ -30,7 +34,9 @@ PRINT_JOB_QUEUED = 1
 
 表示打印任务传送到打印机。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintJobState-PRINT_JOB_QUEUED = 1--><!--Device-PrintJobState-PRINT_JOB_QUEUED = 1-End-->
 
@@ -44,7 +50,9 @@ PRINT_JOB_RUNNING = 2
 
 表示执行打印任务。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintJobState-PRINT_JOB_RUNNING = 2--><!--Device-PrintJobState-PRINT_JOB_RUNNING = 2-End-->
 
@@ -58,7 +66,9 @@ PRINT_JOB_BLOCKED = 3
 
 表示打印任务已被阻止。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3--><!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3-End-->
 
@@ -72,7 +82,9 @@ PRINT_JOB_COMPLETED = 4
 
 表示打印任务完成。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4--><!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4-End-->
 

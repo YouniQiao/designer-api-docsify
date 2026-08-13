@@ -30,7 +30,7 @@ value: boolean
 
 **废弃版本：** 8
 
-**替代接口：** [value](ohos.sensor/sensor#WearDetectionResponse.value)
+**替代接口：** [value](arkts-sensorservice-sensor-weardetectionresponse-i.md#value)
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

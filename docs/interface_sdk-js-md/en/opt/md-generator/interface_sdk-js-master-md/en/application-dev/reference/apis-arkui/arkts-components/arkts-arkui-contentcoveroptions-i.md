@@ -1,14 +1,14 @@
 # ContentCoverOptions
 
-Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions).
-
-Provides content options of the modal.
+Inherited from [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions). Provides content options of the modal.
 
 **Inheritance/Implementation:** ContentCoverOptions extends [BindOptions](arkts-arkui-bindoptions-i.md#BindOptions)
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface ContentCoverOptions extends BindOptions--><!--Device-unnamed-declare interface ContentCoverOptions extends BindOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ContentCoverOptions--><!--Device-unnamed-declare interface ContentCoverOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +26,8 @@ Whether the full-screen modal adapts to the safe area. **true** indicates the fu
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -40,19 +42,15 @@ Whether the full-screen modal adapts to the safe area. **true** indicates the fu
 modalTransition?: ModalTransition
 ```
 
-System transition mode of the modal.
-
-Default value: **ModalTransition.DEFAULT**.
-
-**NOTE：**
-
-This property has no effect when it is set together with **transition**.
+System transition mode of the modal. Default value: **ModalTransition.DEFAULT**. **NOTE：**This property has no effect when it is set together with **transition**.
 
 **Type:** [ModalTransition](arkts-arkui-modaltransition-e.md)
 
 **Default:** ModalTransition.DEFAULT
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,16 +66,13 @@ This property has no effect when it is set together with **transition**.
 onWillDismiss?: Callback<DismissContentCoverAction>
 ```
 
-Callback invoked to prevent a user attempt to dismiss the modal.
-
-**NOTE：**
-
-After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the  
-**reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
+Callback invoked to prevent a user attempt to dismiss the modal. **NOTE：**After this callback is registered, touching the back button does not immediately dismiss the modal. You can use the **reason** parameter to determine the type of operation that triggers the dismiss and decide whether to dismiss the modal based on the reason. Nesting **onWillDismiss** callbacks is not allowed.
 
 **Type:** [Callback](arkts-arkui-callback-i.md)&lt;[DismissContentCoverAction](arkts-arkui-dismisscontentcoveraction-i.md)&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +93,8 @@ Custom transition mode of the modal.
 **Type:** [TransitionEffect](arkts-arkui-transitioneffect-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

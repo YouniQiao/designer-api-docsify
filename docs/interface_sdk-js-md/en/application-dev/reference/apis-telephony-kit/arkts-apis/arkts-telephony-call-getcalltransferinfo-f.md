@@ -16,7 +16,9 @@ Obtains call transfer information with the phone number. This API uses a promise
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_CALL_TRANSFER_INFO
 
@@ -28,24 +30,24 @@ Obtains call transfer information with the phone number. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [CallTransferType](arkts-telephony-call-calltransfertype-e.md) | Yes | Type of call forwarding to be obtained. |
+| type | [CallTransferType](arkts-telephony-call-calltransfertype-e-sys.md) | Yes | Type of call forwarding to be obtained. |
 | number | string | Yes | Number used to obtain the call forwarding status. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i.md)&gt; | Promise used to return the call forwarding result. |
+| Promise&lt;[CallTransferResult](arkts-telephony-call-calltransferresult-i-sys.md)&gt; | Promise used to return the call forwarding result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [8401002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8401002-incorrect-number) | Invalid input call number. |
-| [8401003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8401003-frequent-operations) | Operation too frequent. |
-| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
-| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
-| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8401002](../errorcode-telephony.md#8401002-incorrect-number) | Invalid input call number. |
+| [8401003](../errorcode-telephony.md#8401003-frequent-operations) | Operation too frequent. |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) | Invalid parameter value. |
 

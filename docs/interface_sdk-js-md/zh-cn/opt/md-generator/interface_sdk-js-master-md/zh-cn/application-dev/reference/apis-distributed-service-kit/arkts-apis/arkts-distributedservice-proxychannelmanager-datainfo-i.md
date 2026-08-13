@@ -2,7 +2,9 @@
 
 存放接收的数据信息，包括通道Id和数据。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-proxyChannelManager-interface DataInfo--><!--Device-proxyChannelManager-interface DataInfo-End-->
 
@@ -18,7 +20,9 @@ channelId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ data: ArrayBuffer
 
 **类型：** ArrayBuffer
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

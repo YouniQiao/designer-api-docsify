@@ -6,6 +6,8 @@ Enumerates the digest algorithms.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksKeyDigest--><!--Device-huks-export enum HuksKeyDigest-End-->
 
 **System capability:** 
@@ -23,6 +25,8 @@ No digest algorithm
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +48,8 @@ MD5
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyDigest-HUKS_DIGEST_MD5 = 1--><!--Device-HuksKeyDigest-HUKS_DIGEST_MD5 = 1-End-->
@@ -63,6 +69,8 @@ SM3
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,6 +92,8 @@ SHA-1
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyDigest-HUKS_DIGEST_SHA1 = 10--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA1 = 10-End-->
@@ -103,6 +113,8 @@ SHA-224
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,6 +136,8 @@ SHA-256
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyDigest-HUKS_DIGEST_SHA256 = 12--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA256 = 12-End-->
@@ -144,6 +158,8 @@ SHA-384
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksKeyDigest-HUKS_DIGEST_SHA384 = 13--><!--Device-HuksKeyDigest-HUKS_DIGEST_SHA384 = 13-End-->
@@ -163,6 +179,8 @@ SHA-512
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

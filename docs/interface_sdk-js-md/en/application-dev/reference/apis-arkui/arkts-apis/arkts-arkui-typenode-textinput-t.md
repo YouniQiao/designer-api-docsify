@@ -1,20 +1,24 @@
 # TextInput
 
 ```TypeScript
-type TextInput = TextInputFrameNode
+type TextInput = TypedFrameNode<TextInputInterface, TextInputAttribute>
 ```
 
-Define the FrameNode type for TextInput.
+Represents a FrameNode of the **TextInput** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type TextInput = TextInputFrameNode--><!--Device-typeNode-type TextInput = TextInputFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type TextInput = TypedFrameNode<TextInputInterface, TextInputAttribute>--><!--Device-typeNode-type TextInput = TypedFrameNode<TextInputInterface, TextInputAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TextInputFrameNode
+**Property type:** TypedFrameNode<TextInputInterface, TextInputAttribute>
 

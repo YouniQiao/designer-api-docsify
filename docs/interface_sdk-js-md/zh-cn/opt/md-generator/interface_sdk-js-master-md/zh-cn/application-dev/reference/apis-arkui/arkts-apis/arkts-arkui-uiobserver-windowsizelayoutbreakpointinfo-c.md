@@ -4,6 +4,8 @@
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-uiObserver-export class WindowSizeLayoutBreakpointInfo--><!--Device-uiObserver-export class WindowSizeLayoutBreakpointInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ readonly heightBreakpoint: HeightBreakpoint
 **类型：** [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md)
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +43,8 @@ readonly widthBreakpoint: WidthBreakpoint
 **类型：** [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md)
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

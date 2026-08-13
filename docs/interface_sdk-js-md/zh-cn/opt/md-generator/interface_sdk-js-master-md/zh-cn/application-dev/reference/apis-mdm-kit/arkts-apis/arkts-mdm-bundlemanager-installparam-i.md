@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-bundleManager-interface InstallParam--><!--Device-bundleManager-interface InstallParam-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -19,6 +21,8 @@ installFlag?: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ parameters?: Record<string, string>
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InstallParam-parameters?: Record<string, string>--><!--Device-InstallParam-parameters?: Record<string, string>-End-->
@@ -55,6 +61,8 @@ userId?: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

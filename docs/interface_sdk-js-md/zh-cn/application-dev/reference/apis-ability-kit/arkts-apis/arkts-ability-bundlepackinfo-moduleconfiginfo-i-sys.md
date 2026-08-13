@@ -2,9 +2,11 @@
 
 包的module配置信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ModuleConfigInfo--><!--Device-unnamed-export interface ModuleConfigInfo-End-->
 
@@ -22,9 +24,11 @@ module包含的ability组件信息。
 
 **类型：** Array&lt;[ModuleAbilityInfo](arkts-ability-bundlepackinfo-moduleabilityinfo-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModuleConfigInfo-readonly abilities: Array<ModuleAbilityInfo>--><!--Device-ModuleConfigInfo-readonly abilities: Array<ModuleAbilityInfo>-End-->
 
@@ -42,9 +46,11 @@ module的api版本。
 
 **类型：** [ApiVersion](arkts-ability-bundlepackinfo-apiversion-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModuleConfigInfo-readonly apiVersion: ApiVersion--><!--Device-ModuleConfigInfo-readonly apiVersion: ApiVersion-End-->
 
@@ -62,9 +68,11 @@ module的设备类型。
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModuleConfigInfo-readonly deviceTypes: Array<string>--><!--Device-ModuleConfigInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -82,9 +90,11 @@ module发行版信息。
 
 **类型：** [ModuleDistroInfo](arkts-ability-bundlepackinfo-moduledistroinfo-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModuleConfigInfo-readonly distro: ModuleDistroInfo--><!--Device-ModuleConfigInfo-readonly distro: ModuleDistroInfo-End-->
 
@@ -102,9 +112,11 @@ readonly extensionAbilities: Array<ExtensionAbility>
 
 **类型：** Array&lt;[ExtensionAbility](arkts-ability-bundlepackinfo-extensionability-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModuleConfigInfo-readonly extensionAbilities: Array<ExtensionAbility>--><!--Device-ModuleConfigInfo-readonly extensionAbilities: Array<ExtensionAbility>-End-->
 
@@ -122,9 +134,11 @@ readonly mainAbility: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModuleConfigInfo-readonly mainAbility: string--><!--Device-ModuleConfigInfo-readonly mainAbility: string-End-->
 

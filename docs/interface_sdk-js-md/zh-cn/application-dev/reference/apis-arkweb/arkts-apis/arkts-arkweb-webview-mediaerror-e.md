@@ -2,9 +2,11 @@
 
 播放器的错误类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum MediaError--><!--Device-webview-enum MediaError-End-->
 
@@ -18,9 +20,13 @@ NETWORK_ERROR = 1
 
 网络错误。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaError-NETWORK_ERROR = 1--><!--Device-MediaError-NETWORK_ERROR = 1-End-->
 
@@ -34,9 +40,13 @@ FORMAT_ERROR = 2
 
 媒体格式错误。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaError-FORMAT_ERROR = 2--><!--Device-MediaError-FORMAT_ERROR = 2-End-->
 
@@ -50,9 +60,13 @@ DECODE_ERROR = 3
 
 解码错误。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaError-DECODE_ERROR = 3--><!--Device-MediaError-DECODE_ERROR = 3-End-->
 

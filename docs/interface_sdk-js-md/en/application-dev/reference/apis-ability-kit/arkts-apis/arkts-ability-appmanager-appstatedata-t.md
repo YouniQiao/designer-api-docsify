@@ -1,18 +1,20 @@
 # AppStateData
 
 ```TypeScript
-export type AppStateData = _AppStateData.default
+export type AppStateData = _AppStateData
 ```
 
 Defines the application state data.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-appManager-export type AppStateData = _AppStateData.default--><!--Device-appManager-export type AppStateData = _AppStateData.default-End-->
+**Deprecated since:** -1
+
+<!--Device-appManager-export type AppStateData = _AppStateData--><!--Device-appManager-export type AppStateData = _AppStateData-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _AppStateData.default
+**Property type:** _AppStateData
 

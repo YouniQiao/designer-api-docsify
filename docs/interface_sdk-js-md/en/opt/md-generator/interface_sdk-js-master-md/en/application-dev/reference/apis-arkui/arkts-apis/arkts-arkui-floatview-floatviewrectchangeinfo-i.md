@@ -4,6 +4,8 @@ Provides the rectangle area change information of the float view.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-floatView-interface FloatViewRectChangeInfo--><!--Device-floatView-interface FloatViewRectChangeInfo-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -20,17 +22,13 @@ import { floatView } from '@kit.ArkUI';
 reason: string
 ```
 
-Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows:
-
-**"POSITION_CHANGE"**: The position changes.
-
-**"SIZE_CHANGE"**: The size changes.
-
-**"RECT_CHANGE"**: Both the position and size change.
+Reason for the change of the rectangle area of the float view. The reasons and their meanings are as follows: **"POSITION_CHANGE"**: The position changes. **"SIZE_CHANGE"**: The size changes. **"RECT_CHANGE"**: Both the position and size change.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +48,8 @@ Rectangle area of the float view.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FloatViewRectChangeInfo-windowRect: window.Rect--><!--Device-FloatViewRectChangeInfo-windowRect: window.Rect-End-->
@@ -67,6 +67,8 @@ Scale factor of the float view.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

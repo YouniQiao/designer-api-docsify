@@ -6,13 +6,13 @@
 function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>
 ```
 
-设置同一应用包名下指定moduleName、abilityName对应UIAbility的启动页背景色，使用Promise异步回调。
+设置同一应用包名下指定moduleName、abilityName对应UIAbility的启动页背景色，使用Promise异步回调。 该接口对同一应用包名下的所有进程生效，例如多实例或应用分身场景。
 
-该接口对同一应用包名下的所有进程生效，例如多实例或应用分身场景。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>--><!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>-End-->
 
@@ -24,7 +24,7 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 | --- | --- | --- |
 | moduleName | string | 是 |
 | abilityName | string | 是 |
-| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 |
+| color | [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 是 |
 
 **返回值：**
 
@@ -36,9 +36,9 @@ function setStartWindowBackgroundColor(moduleName: string, abilityName: string, 
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
 ## 示例
 

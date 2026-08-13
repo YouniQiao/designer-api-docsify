@@ -18,6 +18,8 @@ Disconnects this ability from a specific ServiceAbility. This API uses an asynch
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void--><!--Device-featureAbility-function disconnectAbility(connection: number, callback: AsyncCallback<void>): void-End-->
@@ -29,7 +31,7 @@ Disconnects this ability from a specific ServiceAbility. This API uses an asynch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | connection | number | Yes | ID of the ServiceAbility to disconnect. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the disconnection is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -76,6 +78,8 @@ Disconnects this ability from a specific ServiceAbility. This API uses a promise
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

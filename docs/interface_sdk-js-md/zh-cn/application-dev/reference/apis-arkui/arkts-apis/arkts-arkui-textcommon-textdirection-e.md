@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum TextDirection--><!--Device-unnamed-export declare enum TextDirection-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@
 LTR = 0
 ```
 
-文本排版方向从左到右。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。&lt;sup&gt;23+&lt;/sup&gt;
+文本排版方向从左到右。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 22开始，该接口支持在原子化服务中使用。&lt;sup&gt;23+&lt;/sup&gt;
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +44,8 @@ Right to left.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextDirection-RTL = 1--><!--Device-TextDirection-RTL = 1-End-->
@@ -62,6 +64,8 @@ DEFAULT = 2
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextDirection-DEFAULT = 2--><!--Device-TextDirection-DEFAULT = 2-End-->
@@ -79,6 +83,8 @@ AUTO = 3
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

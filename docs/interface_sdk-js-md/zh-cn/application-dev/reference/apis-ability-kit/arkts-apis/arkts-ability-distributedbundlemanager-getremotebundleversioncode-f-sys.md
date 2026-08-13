@@ -10,7 +10,9 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -33,18 +35,18 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，调用成功返回版本信息；调用失败返回错误对象。 |
+| Promise&lt;long&gt; | Promise对象，调用成功返回版本信息；调用失败返回错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [17700027](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [17700007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 
 ## 示例
 

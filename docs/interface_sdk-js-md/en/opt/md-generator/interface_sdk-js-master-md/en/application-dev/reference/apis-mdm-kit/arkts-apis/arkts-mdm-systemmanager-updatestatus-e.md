@@ -4,6 +4,8 @@ Enumerates the system update statuses.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-enum UpdateStatus--><!--Device-systemManager-enum UpdateStatus-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ NO_UPDATE_PACKAGE = -4
 The system update package of the specified version does not exist.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ The system update package is waiting to be installed.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateStatus-UPDATE_WAITING = -3--><!--Device-UpdateStatus-UPDATE_WAITING = -3-End-->
@@ -49,6 +55,8 @@ UPDATING = -2
 The system update is being performed.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ The update failed.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateStatus-UPDATE_FAILURE = -1--><!--Device-UpdateStatus-UPDATE_FAILURE = -1-End-->
@@ -81,6 +91,8 @@ UPDATE_SUCCESS = 0
 The update is successful.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,12 @@
 # OffscreenCanvasRenderingContext2D
 
-Provides a 2D rendering context for the drawing surface of the &lt; Canvas &gt; element.It is used to draw shapes, text, images and other objects.
+Provides a 2D rendering context for the drawing surface of the &lt; Canvas &gt; element. It is used to draw shapes, text, images and other objects.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface OffscreenCanvasRenderingContext2D--><!--Device-unnamed-export interface OffscreenCanvasRenderingContext2D-End-->
 
@@ -21,6 +23,8 @@ Draw an arc.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -51,6 +55,8 @@ Draws an arc from the beginning to the end.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-arcTo(x1: number, x2: number, y1: number, y2: number, radius: number): void--><!--Device-OffscreenCanvasRenderingContext2D-arcTo(x1: number, x2: number, y1: number, y2: number, radius: number): void-End-->
@@ -79,6 +85,8 @@ Creates a drawing path.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-beginPath(): void--><!--Device-OffscreenCanvasRenderingContext2D-beginPath(): void-End-->
@@ -96,6 +104,8 @@ Draw a third order Bezier curve.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -126,6 +136,8 @@ Clears the contents of the specified rectangular area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-clearRect(x: number, y: number, w: number, h: number): void--><!--Device-OffscreenCanvasRenderingContext2D-clearRect(x: number, y: number, w: number, h: number): void-End-->
@@ -153,6 +165,8 @@ Crop the current canvas.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-clip(): void--><!--Device-OffscreenCanvasRenderingContext2D-clip(): void-End-->
@@ -171,6 +185,8 @@ Closing the current path.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-closePath(): void--><!--Device-OffscreenCanvasRenderingContext2D-closePath(): void-End-->
@@ -188,6 +204,8 @@ Create an ImageData object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -220,6 +238,8 @@ Create an ImageData object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-createImageData(imageData: ImageData): ImageData--><!--Device-OffscreenCanvasRenderingContext2D-createImageData(imageData: ImageData): ImageData-End-->
@@ -249,6 +269,8 @@ Creates a linear gradient color.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -283,6 +305,8 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-createPath2D(path?: Path2D): Path2D--><!--Device-OffscreenCanvasRenderingContext2D-createPath2D(path?: Path2D): Path2D-End-->
@@ -312,6 +336,8 @@ Creates a path that is later used by the CanvasRenderingContext2D object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -343,6 +369,8 @@ Create a drawing style template.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-createPattern(image: Image, repetition: string): CanvasPattern--><!--Device-OffscreenCanvasRenderingContext2D-createPattern(image: Image, repetition: string): CanvasPattern-End-->
@@ -373,6 +401,8 @@ Create a radial tween object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -408,6 +438,8 @@ Draw an Image object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -447,6 +479,8 @@ Draw an Image object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-drawImage(    image: Image,    sx: number,    sy: number,    sw: number,    sh: number,    dx: number,    dy: number,    dw: number,    dh: number,  ): void--><!--Device-OffscreenCanvasRenderingContext2D-drawImage(    image: Image,    sx: number,    sy: number,    sw: number,    sh: number,    dx: number,    dy: number,    dw: number,    dh: number,  ): void-End-->
@@ -478,6 +512,8 @@ Draw an Image object.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -516,6 +552,8 @@ Draw an Image object.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -558,6 +596,8 @@ Draw an ellipse.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: boolean,  ): void--><!--Device-OffscreenCanvasRenderingContext2D-ellipse(    x: number,    y: number,    radiusX: number,    radiusY: number,    rotation: number,    startAngle: number,    endAngle: number,    counterclockwise?: boolean,  ): void-End-->
@@ -589,6 +629,8 @@ Fills the current canvas with color.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-fill(): void--><!--Device-OffscreenCanvasRenderingContext2D-fill(): void-End-->
@@ -606,6 +648,8 @@ Fills a rectangular area.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -634,6 +678,8 @@ Stroke a rectangular area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-fillText(text: string, y: number, x: number /*, maxWidth?: number*/): void--><!--Device-OffscreenCanvasRenderingContext2D-fillText(text: string, y: number, x: number /*, maxWidth?: number*/): void-End-->
@@ -659,6 +705,8 @@ Get an ImageData object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -693,6 +741,8 @@ Get an PixelMap object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-getPixelMap(sx: number, sy: number, sw: number, sh: number): image.PixelMap--><!--Device-OffscreenCanvasRenderingContext2D-getPixelMap(sx: number, sy: number, sw: number, sh: number): image.PixelMap-End-->
@@ -726,6 +776,8 @@ Check whether the specified coordinate point is on the Path.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-isPointInPath(x: number, y: number): boolean--><!--Device-OffscreenCanvasRenderingContext2D-isPointInPath(x: number, y: number): boolean-End-->
@@ -756,6 +808,8 @@ Check whether the specified coordinate point is on the Path.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -789,6 +843,8 @@ Checks whether the specified coordinate point is on the stroke edge.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-isPointInStroke(x: number, y: number): boolean--><!--Device-OffscreenCanvasRenderingContext2D-isPointInStroke(x: number, y: number): boolean-End-->
@@ -819,6 +875,8 @@ Checks whether the specified coordinate point is on the stroke edge.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -852,6 +910,8 @@ Draw a straight line.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-lineTo(x: number, y: number): void--><!--Device-OffscreenCanvasRenderingContext2D-lineTo(x: number, y: number): void-End-->
@@ -876,6 +936,8 @@ Returns a TextMetrics object used to obtain the width of specified text.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -907,6 +969,8 @@ Moves the current canvas to the specified coordinate point.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-moveTo(x: number, y: number): void--><!--Device-OffscreenCanvasRenderingContext2D-moveTo(x: number, y: number): void-End-->
@@ -931,6 +995,8 @@ Draws the specified ImageData object to the canvas.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -966,6 +1032,8 @@ Draws the specified ImageData object to the canvas.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-putImageData(    imageData: ImageData,    dx: number,    dy: number,    dirtyX: number,    dirtyY: number,    dirtyWidth: number,    dirtyHeight: number,  ): void--><!--Device-OffscreenCanvasRenderingContext2D-putImageData(    imageData: ImageData,    dx: number,    dy: number,    dirtyX: number,    dirtyY: number,    dirtyWidth: number,    dirtyHeight: number,  ): void-End-->
@@ -996,6 +1064,8 @@ Draw a second order Bezier curve.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void--><!--Device-OffscreenCanvasRenderingContext2D-quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void-End-->
@@ -1022,6 +1092,8 @@ Draw a rectangle.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1050,6 +1122,8 @@ Resets the current matrix transformation effect.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-resetTransform(): void--><!--Device-OffscreenCanvasRenderingContext2D-resetTransform(): void-End-->
@@ -1068,6 +1142,8 @@ Restores the configuration information of the last saved canvas context.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-restore(): void--><!--Device-OffscreenCanvasRenderingContext2D-restore(): void-End-->
@@ -1085,6 +1161,8 @@ Adds a rotation effect to the current canvas.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1110,6 +1188,8 @@ Saves configuration information for the current canvas context.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-save(): void--><!--Device-OffscreenCanvasRenderingContext2D-save(): void-End-->
@@ -1127,6 +1207,8 @@ Adds a zoom effect to the current canvas.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1153,6 +1235,8 @@ Sets the dotted spacing of a line.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-setLineDash(segments: Array<number>): void--><!--Device-OffscreenCanvasRenderingContext2D-setLineDash(segments: Array<number>): void-End-->
@@ -1176,6 +1260,8 @@ Set the rotation, pan, and zoom effects.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1206,6 +1292,8 @@ Stroke draws the current path.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-stroke(): void--><!--Device-OffscreenCanvasRenderingContext2D-stroke(): void-End-->
@@ -1223,6 +1311,8 @@ Stroke draws the current path.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1247,6 +1337,8 @@ Stroke a rectangular area.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1275,6 +1367,8 @@ Draws the stroke of a text string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-strokeText(text: string, x: number, y: number /*, maxWidth?: number*/): void--><!--Device-OffscreenCanvasRenderingContext2D-strokeText(text: string, x: number, y: number /*, maxWidth?: number*/): void-End-->
@@ -1300,6 +1394,8 @@ Set the rotation, pan, and zoom effects.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1330,6 +1426,8 @@ Adds a pan effect to the current canvas.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-OffscreenCanvasRenderingContext2D-translate(x: number, y: number): void--><!--Device-OffscreenCanvasRenderingContext2D-translate(x: number, y: number): void-End-->
@@ -1349,13 +1447,15 @@ Adds a pan effect to the current canvas.
 fillStyle?: string | CanvasGradient | CanvasPattern
 ```
 
-Fill style attribute.Paint color used to fill the area.Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object.Canvas pattern. You can call createPattern() to create a CanvasPattern object.
+Fill style attribute. Paint color used to fill the area. Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object. Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
 **Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1369,13 +1469,15 @@ Fill style attribute.Paint color used to fill the area.Canvas gradient object us
 getLineDash: Array<number>
 ```
 
-Gets the dotted spacing of a line.Returns the current line segment style array containing an even number of non-negative numbers.
+Gets the dotted spacing of a line. Returns the current line segment style array containing an even number of non-negative numbers.
 
 **Type:** Array&lt;number&gt;
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -1389,13 +1491,15 @@ Gets the dotted spacing of a line.Returns the current line segment style array c
 strokeStyle?: string | CanvasGradient | CanvasPattern
 ```
 
-Sets the stroke paint style.Color of the stroke paint.Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object.Canvas pattern. You can call createPattern() to create a CanvasPattern object.
+Sets the stroke paint style. Color of the stroke paint. Canvas gradient object used by the paint. You can call createLinearGradient() to create a CanvasGradient object. Canvas pattern. You can call createPattern() to create a CanvasPattern object.
 
 **Type:** string \| [CanvasGradient](arkts-arkui-viewmodel-canvasgradient-i.md) \| [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

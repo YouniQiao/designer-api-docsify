@@ -8,7 +8,9 @@ function getGwpAsanGrayscaleState(): number
 
 获取当前GWP-ASan剩余使能天数。
 
-**起始版本：** 20
+**起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getGwpAsanGrayscaleState(): number--><!--Device-hidebug-function getGwpAsanGrayscaleState(): number-End-->
 
@@ -44,7 +46,9 @@ function getGwpAsanGrayscaleState(): number
 
 获取当前GWP-ASan剩余使能天数。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getGwpAsanGrayscaleState(): int--><!--Device-hidebug-function getGwpAsanGrayscaleState(): int-End-->
 

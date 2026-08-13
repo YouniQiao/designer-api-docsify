@@ -2,7 +2,9 @@
 
 ColorManagementQuery provides the APIs for color space query.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface ColorManagementQuery--><!--Device-camera-interface ColorManagementQuery-End-->
 
@@ -22,7 +24,9 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 Obtains the supported color spaces.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -40,4 +44,4 @@ Obtains the supported color spaces.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

@@ -1,12 +1,14 @@
 # TreeSet
 
-TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
+TreeSet基于[TreeMap](arkts-arkts-util-treemap-treemap-c.md#TreeMap)实现，在TreeSet中，仅处理元素的值（value），不单独处理键（key）。 TreeSet的每个元素在底层TreeMap中同时作为key和value存储，因此元素中value唯一且有序。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-declare class TreeSet<T>--><!--Device-unnamed-declare class TreeSet<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class TreeSet--><!--Device-unnamed-declare class TreeSet-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -20,7 +22,9 @@ $_iterator(): IterableIterator<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -65,6 +69,8 @@ while(temp != undefined) {
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-TreeSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -81,7 +87,7 @@ while(temp != undefined) {
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -126,9 +132,11 @@ add(value: T): boolean
 
 向容器中添加指定元素。不建议插入null值，可能会影响排序结果；添加自定义类型元素时，需确保TreeSet在构造时已提供比较函数。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -152,7 +160,7 @@ add(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
 
@@ -170,9 +178,11 @@ clear(): void
 
 清除容器中的所有元素，并将length置为0。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -184,7 +194,7 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
@@ -209,6 +219,8 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)--><!--Device-TreeSet-constructor(comparator?: (firstValue: T, secondValue: T) => boolean)-End-->
@@ -225,7 +237,7 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The TreeSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The TreeSet's constructor cannot be directly invoked. |
 
 ## 示例
 
@@ -279,7 +291,9 @@ TreeSet的构造函数，支持通过比较函数对元素进行升序或降序�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -346,9 +360,11 @@ entries(): IterableIterator<[T, T]>
 
 返回包含此容器中元素的新迭代器对象，每个元素以[value, value]的形式返回。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -366,7 +382,7 @@ entries(): IterableIterator<[T, T]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
 ## 示例
 
@@ -436,6 +452,8 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void--><!--Device-TreeSet-forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Object): void-End-->
@@ -453,7 +471,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: TreeSet<T>) => void, thisArg?: Ob
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -490,7 +508,9 @@ forEach(callbackFn: TreeSetForEachCb<T>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -526,9 +546,11 @@ getFirstValue(): T
 
 获取容器中排序第一的元素，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -546,8 +568,8 @@ getFirstValue(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstValue method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getFirstValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -571,6 +593,8 @@ getHigherValue(key: T): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-getHigherValue(key: T): T--><!--Device-TreeSet-getHigherValue(key: T): T-End-->
@@ -593,7 +617,7 @@ getHigherValue(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getHigherValue method cannot be bound. |
 
 ## 示例
 
@@ -616,7 +640,9 @@ getHigherValue(key: T): T | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -640,7 +666,7 @@ getHigherValue(key: T): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
 ## 示例
 
@@ -660,9 +686,11 @@ getLastValue(): T
 
 获取容器中排序最后的数据，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -680,8 +708,8 @@ getLastValue(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastValue method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLastValue method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -705,6 +733,8 @@ getLowerValue(key: T): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TreeSet-getLowerValue(key: T): T--><!--Device-TreeSet-getLowerValue(key: T): T-End-->
@@ -727,7 +757,7 @@ getLowerValue(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerValue method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getLowerValue method cannot be bound. |
 
 ## 示例
 
@@ -750,7 +780,9 @@ getLowerValue(key: T): T | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -774,7 +806,7 @@ getLowerValue(key: T): T | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) | Container is empty. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
 
 ## 示例
 
@@ -794,9 +826,11 @@ has(value: T): boolean
 
 判断容器中是否包含指定元素。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -820,7 +854,7 @@ has(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
 
@@ -851,9 +885,11 @@ isEmpty(): boolean
 
 判断容器是否为空。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -871,7 +907,7 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
 
@@ -900,9 +936,11 @@ popFirst(): T
 
 删除容器中排序最前的数据，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -920,8 +958,8 @@ popFirst(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popFirst method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -941,9 +979,11 @@ popLast(): T
 
 删除容器中排序最后的数据，为空时返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -961,8 +1001,8 @@ popLast(): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popLast method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The popLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty.<br>**适用版本：** 23+  **ArkTS模式：** 该错误码仅适用于ArkTS-Sta。 |
 
 ## 示例
 
@@ -982,9 +1022,11 @@ remove(value: T): boolean
 
 删除指定的元素。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1008,7 +1050,7 @@ remove(value: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
@@ -1028,9 +1070,11 @@ values(): IterableIterator<T>
 
 返回包含此容器中元素值的新迭代器对象。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1048,7 +1092,7 @@ values(): IterableIterator<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
 ## 示例
 
@@ -1077,7 +1121,9 @@ TreeSet的元素个数。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

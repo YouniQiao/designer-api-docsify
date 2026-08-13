@@ -6,9 +6,11 @@ export type NotificationSorting = _NotificationSorting
 
 The **NotificationSorting** module provides APIs for defining the sorting information of active notifications.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationSorting = _NotificationSorting--><!--Device-notificationManager-export type NotificationSorting = _NotificationSorting-End-->
 

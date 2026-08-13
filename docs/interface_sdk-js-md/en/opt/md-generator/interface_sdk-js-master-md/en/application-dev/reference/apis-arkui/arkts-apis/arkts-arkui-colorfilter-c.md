@@ -4,6 +4,8 @@ Defines the ColorFilter object.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ColorFilter--><!--Device-unnamed-declare class ColorFilter-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor(value: number[])
 Creates ColorFilter with 4*5 matrix.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

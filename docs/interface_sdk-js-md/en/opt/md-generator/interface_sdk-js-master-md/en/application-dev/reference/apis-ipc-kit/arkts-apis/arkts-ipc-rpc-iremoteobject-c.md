@@ -1,8 +1,10 @@
 # IRemoteObject
 
-Provides methods to query of obtain interface descriptors, add or delete death notifications, dump object status to  specific files, and send messages.
+Provides methods to query of obtain interface descriptors, add or delete death notifications, dump object status to specific files, and send messages.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-abstract class IRemoteObject--><!--Device-rpc-abstract class IRemoteObject-End-->
 
@@ -26,7 +28,7 @@ Adds a callback for receiving death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [registerDeathRecipient](registerDeathRecipient(recipient:)
+**Substitutes:** registerDeathRecipient(recipient: DeathRecipient, flags: int)
 
 <!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-addDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -53,7 +55,9 @@ getDescriptor(): string
 
 Obtains the interface descriptor (which is a string) of this object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-getDescriptor(): string--><!--Device-IRemoteObject-getDescriptor(): string-End-->
 
@@ -69,7 +73,7 @@ Obtains the interface descriptor (which is a string) of this object.
 
 | Error Code ID |
 | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
 
 ## getInterfaceDescriptor
 
@@ -83,7 +87,7 @@ Obtains the interface descriptor (which is a string) of this object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDescriptor](getDescriptor())
+**Substitutes:** getDescriptor()
 
 <!--Device-IRemoteObject-getInterfaceDescriptor(): string--><!--Device-IRemoteObject-getInterfaceDescriptor(): string-End-->
 
@@ -103,7 +107,9 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 Obtains the string of the interface descriptor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -125,7 +131,7 @@ Obtains the string of the interface descriptor.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## isObjectDead
 
@@ -135,7 +141,9 @@ isObjectDead(): boolean
 
 Checks whether this object is dead.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-isObjectDead(): boolean--><!--Device-IRemoteObject-isObjectDead(): boolean-End-->
 
@@ -159,7 +167,7 @@ Obtains the string of the interface descriptor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLocalInterface](getLocalInterface(descriptor:)
+**Substitutes:** getLocalInterface(descriptor: string)
 
 <!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-IRemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -185,7 +193,9 @@ registerDeathRecipient(recipient: DeathRecipient, flags: number): void
 
 Registers a callback for receiving death notifications of the remote object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-registerDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
@@ -202,9 +212,9 @@ Registers a callback for receiving death notifications of the remote object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900005-ipc-object-permission-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) |
 
 ## removeDeathRecipient
 
@@ -218,7 +228,7 @@ Removes the callback used to receive death notifications of the remote object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unregisterDeathRecipient](unregisterDeathRecipient(recipient:)
+**Substitutes:** unregisterDeathRecipient(recipient: DeathRecipient, flags: int)
 
 <!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean--><!--Device-IRemoteObject-removeDeathRecipient(recipient: DeathRecipient, flags: number): boolean-End-->
 
@@ -248,9 +258,11 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set  in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
@@ -275,7 +287,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## sendMessageRequest
 
@@ -289,10 +301,11 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a callback will be called immediately, and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply  message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-IRemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
 
@@ -312,7 +325,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## sendRequest
 
@@ -320,14 +333,13 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message does not contain any  content. If synchronous mode is set in **options**, a promise will be fulfilled when the response to  
- **sendRequest** is returned, and the reply message contains the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message does not contain any content. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](sendMessageRequest(code:)
+**Substitutes:** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-IRemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -359,13 +371,13 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](sendMessageRequest(code:)
+**Substitutes:** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -398,13 +410,13 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a callback will be called immediately, and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](sendMessageRequest(code:)
+**Substitutes:** sendMessageRequest(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 <!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-IRemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -428,7 +440,9 @@ unregisterDeathRecipient(recipient: DeathRecipient, flags: number): void
 
 Unregisters from the callback used to receive death notifications of the remote object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void--><!--Device-IRemoteObject-unregisterDeathRecipient(recipient: DeathRecipient, flags: int): void-End-->
 
@@ -445,6 +459,6 @@ Unregisters from the callback used to receive death notifications of the remote 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) |
-| [1900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900005-ipc-object-permission-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) |
+| [1900005](../errorcode-rpc.md#1900005-ipc-object-permission-error) |

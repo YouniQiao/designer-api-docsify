@@ -12,7 +12,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **废弃版本：** 12
 
-**替代接口：** [setPortRoleTypes](usbManager.setPortRoleTypes(portId:)
+**替代接口：** [setPortRoleTypes](arkts-basicservices-usbmanager-setportroletypes-f-sys.md#setPortRoleTypes（系统接口）)(portId: int, powerRole: PowerRoleType, dataRole: DataRoleType)
 
 <!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>--><!--Device-usbManager-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<void>-End-->
 
@@ -38,4 +38,4 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

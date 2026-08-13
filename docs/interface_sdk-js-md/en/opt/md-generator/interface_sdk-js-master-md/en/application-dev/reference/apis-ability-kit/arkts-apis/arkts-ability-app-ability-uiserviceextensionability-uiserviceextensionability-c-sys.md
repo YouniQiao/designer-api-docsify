@@ -1,17 +1,14 @@
 # UIServiceExtensionAbility (System API)
 
-UIServiceExtensionAbility provides extended capabilities related to the floating window component. It inherits from   
-[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It is mainly used to provide services with UIs for third-party applications.
+UIServiceExtensionAbility provides extended capabilities related to the floating window component. It inherits from [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility). It is mainly used to provide services with UIs for third-party applications. > **NOTE：**> > The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
-> **NOTE：**
-> 
-> The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+**Inheritance/Implementation:** UIServiceExtensionAbility extends ExtensionAbility
 
-**Inheritance/Implementation:** UIServiceExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
-<!--Device-unnamed-declare class UIServiceExtensionAbility extends ExtensionAbility--><!--Device-unnamed-declare class UIServiceExtensionAbility extends ExtensionAbility-End-->
+<!--Device-unnamed-declare class UIServiceExtensionAbility--><!--Device-unnamed-declare class UIServiceExtensionAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -29,11 +26,11 @@ import { UIServiceExtensionAbility } from '@kit.AbilityKit';
 onConnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
-Called when the connection to a   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility) is established. If the UIServiceExtensionAbility is started by calling   
-[connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectUIServiceExtensionAbility), this callback will be invoked after [onCreate()](#onCreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#UIServiceHostProxy) object for communication between the client and server.
+Called when the connection to a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) is established. If the UIServiceExtensionAbility is started by calling [connectUIServiceExtensionAbility()](arkts-ability-uiextensioncontext-c.md#connectUIServiceExtensionAbility) , this callback will be invoked after [onCreate()](#onCreate). This callback receives a [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md#UIServiceHostProxy-(System-API)) object for communication between the client and server.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +67,9 @@ onCreate(want: Want): void
 
 Called to initialize the service logic.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,6 +108,8 @@ Callback invoked when data is received.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void--><!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, Object>): void-End-->
@@ -122,7 +123,7 @@ Callback invoked when data is received.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 
 ## Examples
 
@@ -136,16 +137,44 @@ class ServiceExt extends UIServiceExtensionAbility {
 }
 ```
 
+## onData
+
+```TypeScript
+onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void
+```
+
+Called back when data is sent.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void--><!--Device-UIServiceExtensionAbility-onData(proxy: UIServiceHostProxy, data: Record<string, RecordData>): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| proxy | [UIServiceHostProxy](arkts-ability-uiservicehostproxy-i-sys.md) | Yes |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+
 ## onDestroy
 
 ```TypeScript
 onDestroy(): void
 ```
 
-Called to clear resources when this   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility) is destroyed.
+Called to clear resources when this [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) is destroyed.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,10 +202,11 @@ class ServiceExt extends UIServiceExtensionAbility {
 onDisconnect(want: Want, proxy: UIServiceHostProxy): void
 ```
 
-Called when the connection to a   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility) is interrupted.
+Called when the connection to a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) is interrupted.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -211,13 +241,11 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onRequest(want: Want, startId: number): void
 ```
 
-Called to request to start a   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility). If the UIServiceExtensionAbility is started by calling   
-[startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) or   
-[startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startUIServiceExtensionAbility), this callback will be invoked after [onCreate](#onCreate). The value of   
-**startId** is incremented for each UIServiceExtensionAbility that is started.
+Called to request to start a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). If the UIServiceExtensionAbility is started by calling [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) or [startUIServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#startUIServiceExtensionAbility) , this callback will be invoked after [onCreate](#onCreate). The value of **startId** is incremented for each UIServiceExtensionAbility that is started.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,11 +280,11 @@ class UIServiceExt extends UIServiceExtensionAbility {
 onWindowDidCreate(window: window.Window): void
 ```
 
-Called when a window is created for the   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility). Through this callback, the   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility) passes the  created window object to the foreground application.
+Called when a window is created for the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). Through this callback, the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)) passes the created window object to the foreground application.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,12 +319,11 @@ class ServiceExt extends UIServiceExtensionAbility {
 onWindowWillCreate(config: window.ExtensionWindowConfig): void
 ```
 
-Called when a window will be created for the   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility). Through   
-**window.ExtensionWindowConfig** in the callback, the foreground application sends the parameters for creating the window to the   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility).
+Called when a window will be created for the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). Through **window.ExtensionWindowConfig** in the callback, the foreground application sends the parameters for creating the window to the [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)).
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -331,12 +358,13 @@ class UIServiceExt extends UIServiceExtensionAbility {
 context: UIServiceExtensionContext
 ```
 
-Context environment for a   
-[UIServiceExtensionAbility](#UIServiceExtensionAbility). This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
+Context environment for a [UIServiceExtensionAbility](#UIServiceExtensionAbility-(System-API)). This context inherits from [ExtensionContext](arkts-ability-extensioncontext-c.md#ExtensionContext).
 
 **Type:** [UIServiceExtensionContext](arkts-ability-uiserviceextensioncontext-c-sys.md)
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

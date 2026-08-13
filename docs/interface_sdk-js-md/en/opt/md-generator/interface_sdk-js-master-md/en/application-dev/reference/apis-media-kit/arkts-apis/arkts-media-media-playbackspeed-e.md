@@ -2,7 +2,9 @@
 
 Enumerates the video playback speeds, which can be passed in the **setSpeed** API.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-enum PlaybackSpeed--><!--Device-media-enum PlaybackSpeed-End-->
 
@@ -16,7 +18,9 @@ SPEED_FORWARD_0_75_X = 0
 
 Plays the video at 0.75 times the normal speed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ SPEED_FORWARD_1_00_X = 1
 
 Plays the video at the normal speed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ SPEED_FORWARD_1_25_X = 2
 
 Plays the video at 1.25 times the normal speed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +72,9 @@ SPEED_FORWARD_1_75_X = 3
 
 Plays the video at 1.75 times the normal speed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,7 +90,9 @@ SPEED_FORWARD_2_00_X = 4
 
 Plays the video at 2.00 times the normal speed.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,9 +108,11 @@ SPEED_FORWARD_0_50_X = 5
 
 Plays the video at 0.50 times the normal speed.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5-End-->
 
@@ -112,9 +126,11 @@ SPEED_FORWARD_1_50_X = 6
 
 Plays the video at 1.50 times the normal speed.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6-End-->
 
@@ -128,9 +144,11 @@ SPEED_FORWARD_3_00_X = 7
 
 Plays the video at 3.00 times the normal speed.
 
-**Since:** 13
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7--><!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7-End-->
 
@@ -144,9 +162,11 @@ SPEED_FORWARD_0_25_X = 8
 
 Plays the video at 0.25 times the normal speed.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8-End-->
 
@@ -160,9 +180,11 @@ SPEED_FORWARD_0_125_X = 9
 
 Plays the video at 0.125 times the normal speed.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9-End-->
 

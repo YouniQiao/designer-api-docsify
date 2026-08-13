@@ -6,7 +6,9 @@ export type UpdateOperation = dataShare.UpdateOperation
 
 批量更新操作的参数结构。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

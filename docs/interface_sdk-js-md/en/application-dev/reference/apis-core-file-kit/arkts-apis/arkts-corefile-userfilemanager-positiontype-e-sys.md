@@ -8,7 +8,7 @@ Enumerates the file location.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#PositionType)
+**Substitutes:** [PositionType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#PositionType-(System-API))
 
 <!--Device-userFileManager-enum PositionType--><!--Device-userFileManager-enum PositionType-End-->
 
@@ -30,7 +30,7 @@ Stored only on a local device.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#LOCAL)
+**Substitutes:** [LOCAL](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#LOCAL)
 
 <!--Device-PositionType-LOCAL = 1--><!--Device-PositionType-LOCAL = 1-End-->
 
@@ -52,7 +52,7 @@ Stored only on the cloud.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e.md#CLOUD)
+**Substitutes:** [CLOUD](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-positiontype-e-sys.md#CLOUD)
 
 <!--Device-PositionType-CLOUD--><!--Device-PositionType-CLOUD-End-->
 

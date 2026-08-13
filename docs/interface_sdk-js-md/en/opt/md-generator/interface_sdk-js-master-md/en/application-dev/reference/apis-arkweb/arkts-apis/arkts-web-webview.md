@@ -4,6 +4,8 @@ This module provides the capability to manage web modules.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace webview--><!--Device-unnamed-declare namespace webview-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,7 +22,7 @@ import { webview } from '@kit.ArkWeb';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [once](arkts-arkweb-webview-once-f.md#once) |
+| [once_string](arkts-arkweb-webview-oncestring-f.md#once_string) |
 
 ### Classes
 
@@ -97,7 +99,7 @@ import { webview } from '@kit.ArkWeb';
 | [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md) |
 | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) |
 | [Preload](arkts-arkweb-webview-preload-e.md) |
-| [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the  **Web** kernel releases the cache based on the memory pressure level.  \| Name\| Value\| Description\|  \| ------------------------------- \| - \| ---------- \|  \| MEMORY_PRESSURE_LEVEL_MODERATE \| 1 \| Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.\|  \| MEMORY_PRESSURE_LEVEL_CRITICAL \| 2 \| Critical memory pressure level. At this level, the **Web** kernel attempts to release all possible memory caches.\|
+| [PressureLevel](arkts-arkweb-webview-pressurelevel-e.md) | Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level. \| Name\| Value\| Description\| \| ------------------------------- \| - \| ---------- \| \| MEMORY_PRESSURE_LEVEL_MODERATE \| 1 \| Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.\| \| MEMORY_PRESSURE_LEVEL_CRITICAL \| 2 \| Critical memory pressure level. At this level, the **Web** kernel attempts to release all possible memory caches.\|
 | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) |
 | [ReadyState](arkts-arkweb-webview-readystate-e.md) |
 | [RenderProcessMode](arkts-arkweb-webview-renderprocessmode-e.md) |

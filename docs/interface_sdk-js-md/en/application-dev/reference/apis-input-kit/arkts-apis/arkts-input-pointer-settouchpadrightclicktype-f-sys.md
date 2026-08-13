@@ -14,9 +14,11 @@ function setTouchpadRightClickType(type: RightClickType, callback: AsyncCallback
 
 Sets the touchpad right-click menu type. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function setTouchpadRightClickType(type: RightClickType, callback: AsyncCallback<void>): void--><!--Device-pointer-function setTouchpadRightClickType(type: RightClickType, callback: AsyncCallback<void>): void-End-->
 
@@ -29,14 +31,14 @@ Sets the touchpad right-click menu type. This API uses an asynchronous callback 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [RightClickType](arkts-input-pointer-rightclicktype-e.md) | Yes | Touchpad right-click menu type. &lt;br&gt;- TOUCHPAD_RIGHT_BUTTON: Tapping the right-button area of the touchpad. &lt;br&gt;- TOUCHPAD_LEFT_BUTTON: Tapping the left-button area of the touchpad. &lt;br&gt;- TOUCHPAD_TWO_FINGER_TAP: Tapping or pressing the touchpad with two fingers. &lt;br&gt;- TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON&lt;sup&gt;20+&lt;/sup&gt;: Tapping or pressing the touchpad with two fingers, or tapping the right-button area of the touchpad. &lt;br&gt;- TOUCHPAD_TWO_FINGER_TAP_OR_LEFT_BUTTON&lt;sup&gt;20+&lt;/sup&gt;: Tapping or pressing the touchpad with two fingers, or tapping the left-button area of the touchpad. &lt;br&gt;The default value is **TOUCHPAD_TWO_FINGER_TAP_OR_RIGHT_BUTTON**. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 
@@ -77,9 +79,11 @@ function setTouchpadRightClickType(type: RightClickType): Promise<void>
 
 Sets the touchpad right-click menu type. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function setTouchpadRightClickType(type: RightClickType): Promise<void>--><!--Device-pointer-function setTouchpadRightClickType(type: RightClickType): Promise<void>-End-->
 
@@ -103,8 +107,8 @@ Sets the touchpad right-click menu type. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | SystemAPI permission error. |
 
 ## Examples
 

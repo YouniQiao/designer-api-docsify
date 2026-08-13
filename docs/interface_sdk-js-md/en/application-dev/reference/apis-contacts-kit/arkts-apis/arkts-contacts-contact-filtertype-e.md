@@ -6,6 +6,8 @@ Enumerates contact filter types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-contact-enum FilterType--><!--Device-contact-enum FilterType-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -21,6 +23,8 @@ Shows only contacts that meet the filter criteria.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -40,6 +44,8 @@ Selects contacts that meet the filter criteria by default.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FilterType-DEFAULT_SELECT = 1--><!--Device-FilterType-DEFAULT_SELECT = 1-End-->
@@ -57,6 +63,8 @@ Shows only contacts that meet the filter criteria and selects these contacts by 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

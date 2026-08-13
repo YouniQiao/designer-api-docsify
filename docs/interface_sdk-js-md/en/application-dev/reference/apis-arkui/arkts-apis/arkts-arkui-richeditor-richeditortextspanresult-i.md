@@ -6,6 +6,8 @@ Defines the text span result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorTextSpanResult--><!--Device-unnamed-export declare interface RichEditorTextSpanResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,6 +29,8 @@ get offset in span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanResult-offsetInSpan: [        int,        int    ]--><!--Device-RichEditorTextSpanResult-offsetInSpan: [        int,        int    ]-End-->
@@ -46,6 +50,8 @@ The Style of paragraph.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,6 +73,8 @@ The preview text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanResult-previewText?: string--><!--Device-RichEditorTextSpanResult-previewText?: string-End-->
@@ -86,6 +94,8 @@ The position of the text span.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -107,6 +117,8 @@ Symbol span style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanResult-symbolSpanStyle?: RichEditorSymbolSpanStyle--><!--Device-RichEditorTextSpanResult-symbolSpanStyle?: RichEditorSymbolSpanStyle-End-->
@@ -126,6 +138,8 @@ text style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,6 +161,8 @@ RichEditor url style.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanResult-urlStyle?: RichEditorUrlStyle--><!--Device-RichEditorTextSpanResult-urlStyle?: RichEditorUrlStyle-End-->
@@ -167,6 +183,8 @@ The content of the text span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorTextSpanResult-value: string--><!--Device-RichEditorTextSpanResult-value: string-End-->
@@ -186,6 +204,8 @@ The resource string of the symbol span.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

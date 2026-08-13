@@ -2,7 +2,9 @@
 
 P2P linked information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface WifiP2pLinkedInfo--><!--Device-wifiManager-interface WifiP2pLinkedInfo-End-->
 
@@ -24,7 +26,9 @@ Connection status
 
 **Type:** P2pConnectState
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState--><!--Device-WifiP2pLinkedInfo-connectState: P2pConnectState-End-->
 
@@ -40,7 +44,9 @@ Group owner address
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string--><!--Device-WifiP2pLinkedInfo-groupOwnerAddr: string-End-->
 
@@ -56,7 +62,9 @@ Indicates whether it is group owner
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean--><!--Device-WifiP2pLinkedInfo-isGroupOwner: boolean-End-->
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare namespace pluginComponentManager--><!--Device-unnamed-declare namespace pluginComponentManager-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@
 | --- |
 | [push](arkts-arkui-plugincomponentmanager-push-f.md#push) |
 | [request](arkts-arkui-plugincomponentmanager-request-f.md#request) |
-| [on](arkts-arkui-plugincomponentmanager-on-f.md#on) |
+| [on_string](arkts-arkui-plugincomponentmanager-onstring-f.md#on_string) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push-1) |
-| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request-1) |
+| [push](arkts-arkui-plugincomponentmanager-push-f-sys.md#push（系统接口）) |
+| [request](arkts-arkui-plugincomponentmanager-request-f-sys.md#request（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

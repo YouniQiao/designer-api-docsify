@@ -6,7 +6,9 @@ Define IMonitorValue interface
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface IMonitorValue<T>--><!--Device-unnamed-declare interface IMonitorValue<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface IMonitorValue--><!--Device-unnamed-declare interface IMonitorValue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Get the previous value.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Get current value.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -71,6 +77,8 @@ Monitored path input by the user.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

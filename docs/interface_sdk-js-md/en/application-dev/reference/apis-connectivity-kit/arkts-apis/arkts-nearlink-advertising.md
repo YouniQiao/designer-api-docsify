@@ -4,7 +4,9 @@ Provides methods related to advertising. Nearby devices can scan and discover th
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -24,10 +26,10 @@ import { advertising } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md#offadvertisingstatechange) | Unsubscribes from the advertising state change event. |
-| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md#onadvertisingstatechange) | Subscribes to the advertising state change event.  This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
-| [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md#startadvertising) | Starts advertising. |
-| [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md#stopadvertising) | Stops advertising with advertising ID. |
+| [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md#offAdvertisingStateChange) | Unsubscribes from the advertising state change event. |
+| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md#onAdvertisingStateChange) | Subscribes to the advertising state change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. |
+| [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md#startAdvertising) | Starts advertising. |
+| [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md#stopAdvertising) | Stops advertising with advertising ID. |
 
 ### Interfaces
 

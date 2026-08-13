@@ -20,7 +20,7 @@ Checks whether a device supports NFC.
 
 **Deprecated since:** 9
 
-**Substitutes:** [canIUse](global#canIUse("SystemCapability.Communication.NFC.Core"))
+**Substitutes:** canIUse("SystemCapability.Communication.NFC.Core")
 
 <!--Device-nfcController-function isNfcAvailable(): boolean--><!--Device-nfcController-function isNfcAvailable(): boolean-End-->
 

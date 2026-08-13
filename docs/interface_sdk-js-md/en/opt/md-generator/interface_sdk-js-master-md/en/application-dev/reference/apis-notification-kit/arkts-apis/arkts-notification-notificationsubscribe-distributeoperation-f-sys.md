@@ -14,7 +14,9 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 
 Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,11 +43,11 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600010-distributed-operation-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600021-crossdevice-communication-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600021](../errorcode-notification.md#1600021-crossdevice-communication-timeout) |
 
 ## Examples
 

@@ -10,6 +10,8 @@ function getWant(callback: AsyncCallback<Want>): void
 
 **起始版本：** 6
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void--><!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void-End-->
@@ -47,6 +49,8 @@ function getWant(): Promise<Want>
 获取要拉起的Ability对应的Want。使用Promise异步回调。
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

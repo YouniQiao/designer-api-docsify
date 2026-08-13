@@ -1,14 +1,10 @@
 # @ohos.distributedDeviceManager
 
-本模块提供分布式设备管理能力。应用可调用接口实现如下功能：
+本模块提供分布式设备管理能力。 应用可调用接口实现如下功能： - 注册和解除注册设备上下线变化监听。 - 发现周边不可信设备。 - 认证和取消认证设备。 - 查询可信设备列表。 - 查询本地设备信息，包括设备名称，设备类型和设备标识等。
 
-- 注册和解除注册设备上下线变化监听。  
-- 发现周边不可信设备。  
-- 认证和取消认证设备。  
-- 查询可信设备列表。  
-- 查询本地设备信息，包括设备名称，设备类型和设备标识等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace distributedDeviceManager--><!--Device-unnamed-declare namespace distributedDeviceManager-End-->
 
@@ -20,15 +16,21 @@
 
 | 名称 |
 | --- |
-| [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createdevicemanager) |
-| [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releasedevicemanager) |
+| [createDeviceManager](arkts-distributedservice-distributeddevicemanager-createdevicemanager-f.md#createDeviceManager) |
+| [releaseDeviceManager](arkts-distributedservice-distributeddevicemanager-releasedevicemanager-f.md#releaseDeviceManager) |
 
 ### 接口
 
 | 名称 |
 | --- |
+| [BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md) |
 | [DeviceBasicInfo](arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md) |
 | [DeviceManager](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md) |
+| [DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md) |
+| [DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md) |
+| [DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md) |
+| [DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md) |
+| [ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md) |
 
 <!--Del-->
 ### 接口（系统接口）
@@ -42,6 +44,7 @@
 | [DeviceProfileInfo](arkts-distributedservice-distributeddevicemanager-deviceprofileinfo-i-sys.md) |
 | [DeviceProfileInfoFilterOptions](arkts-distributedservice-distributeddevicemanager-deviceprofileinfofilteroptions-i-sys.md) |
 | [NetworkIdQueryFilter](arkts-distributedservice-distributeddevicemanager-networkidqueryfilter-i-sys.md) |
+| [ReplyResult](arkts-distributedservice-distributeddevicemanager-replyresult-i-sys.md) |
 | [ServiceProfileInfo](arkts-distributedservice-distributeddevicemanager-serviceprofileinfo-i-sys.md) |
 <!--DelEnd-->
 

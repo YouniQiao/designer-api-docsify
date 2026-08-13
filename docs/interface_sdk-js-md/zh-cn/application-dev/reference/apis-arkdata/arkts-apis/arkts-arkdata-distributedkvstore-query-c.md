@@ -2,9 +2,11 @@
 
 使用谓词表示数据库查询，提供创建Query实例、查询数据库中的数据和添加谓词的方法。Query对象的谓词方法均返回自身，支持链式调用。一个Query对象中谓词数量上限为256个。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
@@ -18,9 +20,11 @@ and(): Query
 
 构造一个带有与条件的查询对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用and()连接多个条件，无前置谓词时调用and()无效。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,9 +65,11 @@ beginGroup(): Query
 
 创建一个带有左括号的查询条件组。必须与[endGroup()](#endGroup)成对使用，以形成完整的查询条件分组。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,9 +110,11 @@ constructor()
 
 用于创建Query实例的构造函数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,21 +128,13 @@ constructor()
 deviceId(deviceId: string): Query
 ```
 
-添加设备ID作为Key的前缀。
+添加设备ID作为Key的前缀。 > **说明：** > > 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的 > networkId，通过调用 > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > 方法得到。 > > deviceId具体获取方式请参考 > [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
 
-> **说明：**
-> 
-> 其中deviceId为[DeviceBasicInfo](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicebasicinfo-i.md#DeviceBasicInfo)中的
-> networkId，通过调用
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> 方法得到。
-> 
-> deviceId具体获取方式请参考
-> [sync接口示例](arkts-arkdata-distributedkvstore-singlekvstore-i.md#sync)。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -158,7 +158,7 @@ deviceId(deviceId: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -185,9 +185,11 @@ endGroup(): Query
 
 创建一个带有右括号的查询条件组。必须与[beginGroup()](#beginGroup)成对使用，以形成完整的查询条件分组。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,28 +224,17 @@ try {
 
 ## equalTo
 
-ArkTS-Dyn:
-```TypeScript
-equalTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。
+构造一个Query对象来查询具有指定字段的条目，其值等于指定的值。 > **说明：** > > 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用equalTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -256,7 +247,7 @@ equalTo(field: string, value: long | double | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | long \| double \| string \| boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -268,7 +259,7 @@ equalTo(field: string, value: long | double | string | boolean): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## getSqlLike
 
@@ -278,9 +269,11 @@ getSqlLike(): string
 
 获取Query对象的查询语句。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -312,28 +305,17 @@ try {
 
 ## greaterThan
 
-ArkTS-Dyn:
-```TypeScript
-greaterThan(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有大于指定值的指定字段的条目。
+构造一个Query对象以查询具有大于指定值的指定字段的条目。 > **说明：** > > 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用greaterThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -346,7 +328,7 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | Indicates the field, which cannot contain ^. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | 是 | Indicates the value to be compared. |
+| value | long \| double \| string \| boolean | 是 | Indicates the value to be compared. |
 
 **返回值：**
 
@@ -358,32 +340,21 @@ greaterThan(field: string, value: long | double | string | boolean): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
-ArkTS-Dyn:
-```TypeScript
-greaterThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。
+构造一个Query对象以查询具有指定字段且值大于或等于指定值的条目。 > **说明：** > > 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用greaterThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -396,7 +367,7 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | long \| double \| string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -408,32 +379,21 @@ greaterThanOrEqualTo(field: string, value: long | double | string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inNumber
 
-ArkTS-Dyn:
-```TypeScript
-inNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的值列表中。 > **说明：** > > 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用inNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -446,7 +406,7 @@ inNumber(field: string, valueList: long[] | double[]): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | 是 | 是 |
+| valueList | long[] \| double[] | 是 | 是 |
 
 **返回值：**
 
@@ -458,7 +418,7 @@ inNumber(field: string, valueList: long[] | double[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inString
 
@@ -466,18 +426,13 @@ inNumber(field: string, valueList: long[] | double[]): Query
 inString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。
+构造一个Query对象以查询具有指定字段的条目，其值在指定的字符串值列表中。 > **说明：** > > 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用inString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -502,7 +457,7 @@ inString(field: string, valueList: string[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -528,18 +483,13 @@ try {
 isNotNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值不为null的指定字段的条目。
+构造一个Query对象以查询具有值不为null的指定字段的条目。 > **说明：** > > 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用isNotNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -563,7 +513,7 @@ isNotNull(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -589,18 +539,13 @@ try {
 isNull(field: string): Query
 ```
 
-构造一个Query对象以查询具有值为null的指定字段的条目。
+构造一个Query对象以查询具有值为null的指定字段的条目。 > **说明：** > > 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用isNull时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -624,7 +569,7 @@ isNull(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -646,28 +591,17 @@ try {
 
 ## lessThan
 
-ArkTS-Dyn:
-```TypeScript
-lessThan(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 lessThan(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有小于指定值的指定字段的条目。
+构造一个Query对象以查询具有小于指定值的指定字段的条目。 > **说明：** > > 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用lessThan时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -680,7 +614,7 @@ lessThan(field: string, value: long | double | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | long \| double \| string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -692,32 +626,21 @@ lessThan(field: string, value: long | double | string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
-ArkTS-Dyn:
-```TypeScript
-lessThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。
+构造一个Query对象以查询具有指定字段且值小于或等于指定值的条目。 > **说明：** > > 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用lessThanOrEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -730,7 +653,7 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | long \| double \| string | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -742,7 +665,7 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## like
 
@@ -750,18 +673,13 @@ lessThanOrEqualTo(field: string, value: long | double | string): Query
 like(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。
+构造一个Query对象以查询具有与指定字符串值相似的指定字段的条目。 > **说明：** > > 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用like时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -786,7 +704,7 @@ like(field: string, value: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -808,21 +726,17 @@ try {
 
 ## limit
 
-ArkTS-Dyn:
-```TypeScript
-limit(total: number, offset: number): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 limit(total: int, offset: int): Query
 ```
 
 构造一个Query对象来指定结果的数量和开始位置。该接口必须要在Query对象查询和升降序等操作之后调用，调用limit接口后，不可再对Query对象进行查询和升降序等操作。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -834,8 +748,8 @@ limit(total: int, offset: int): Query
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示最大数据记录数。&lt;br/&gt;取值为非负整数时表示指定的最大记录数。&lt;br/&gt;取值为负数时，表示查询整个结果集。 |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定查询结果的起始位置。取值为非负整数时表示指定的起始位置；取值为负数时，表示查询整个结果集。当offset超出结果集最后位置时，查询结果为空。 |
+| total | int | 是 | 表示最大数据记录数。&lt;br/&gt;取值为非负整数时表示指定的最大记录数。&lt;br/&gt;取值为负数时，表示查询整个结果集。 |
+| offset | int | 是 | 指定查询结果的起始位置。取值为非负整数时表示指定的起始位置；取值为负数时，表示查询整个结果集。当offset超出结果集最后位置时，查询结果为空。 |
 
 **返回值：**
 
@@ -847,7 +761,7 @@ limit(total: int, offset: int): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -872,28 +786,17 @@ try {
 
 ## notEqualTo
 
-ArkTS-Dyn:
-```TypeScript
-notEqualTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不等于指定值的条目。
+构造一个Query对象以查询具有指定字段且值不等于指定值的条目。 > **说明：** > > 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用notEqualTo时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -906,7 +809,7 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
+| value | long \| double \| string \| boolean | 是 | 表示指定字段要匹配的值，值的类型应与Schema中定义的字段类型一致。 |
 
 **返回值：**
 
@@ -918,32 +821,21 @@ notEqualTo(field: string, value: long | double | string | boolean): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInNumber
 
-ArkTS-Dyn:
-```TypeScript
-notInNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。
+构造一个Query对象以查询具有指定字段的条目，该字段的值不在指定的值列表中。 > **说明：** > > 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用notInNumber时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -956,7 +848,7 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 表示指定字段，不能包含'^'。包含'^'将导致谓词失效，查询结果会返回数据库中的所有数据。 |
-| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | 是 | 是 |
+| valueList | long[] \| double[] | 是 | 是 |
 
 **返回值：**
 
@@ -968,7 +860,7 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInString
 
@@ -976,18 +868,13 @@ notInNumber(field: string, valueList: long[] | double[]): Query
 notInString(field: string, valueList: string[]): Query
 ```
 
-构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。
+构造一个Query对象以查询具有指定字段且值不在指定字符串值列表中的条目。 > **说明：** > > 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用notInString时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1012,7 +899,7 @@ notInString(field: string, valueList: string[]): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1040,9 +927,11 @@ or(): Query
 
 构造一个带有或条件的Query对象。需先通过equalTo、notEqualTo等谓词方法添加查询条件后，再调用or()连接多个条件，无前置谓词时调用or()无效。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1081,18 +970,13 @@ try {
 orderByAsc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按升序排序。
+构造一个Query对象，将查询结果按升序排序。 > **说明：** > > 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用orderByAsc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1116,7 +1000,7 @@ orderByAsc(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1143,18 +1027,13 @@ try {
 orderByDesc(field: string): Query
 ```
 
-构造一个Query对象，将查询结果按降序排序。
+构造一个Query对象，将查询结果按降序排序。 > **说明：** > > 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用orderByDesc时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1178,7 +1057,7 @@ orderByDesc(field: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 
@@ -1207,9 +1086,11 @@ prefixKey(prefix: string): Query
 
 创建具有指定键前缀的查询条件。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1233,7 +1114,7 @@ prefixKey(prefix: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -1262,9 +1143,11 @@ reset(): Query
 
 重置Query对象。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1305,9 +1188,11 @@ setSuggestIndex(index: string): Query
 
 设置一个指定的索引，将优先用于查询。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1331,7 +1216,7 @@ setSuggestIndex(index: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## 示例
 
@@ -1358,18 +1243,13 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。
+构造一个Query对象以查询具有与指定字符串值不相似的指定字段的条目。 > **说明：** > > 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。 > > 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获 > 取键值数据库示例。
 
-> **说明：**
-> 
-> 使用unlike时需要结合[Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema)使用。
-> 
-> 使用Schema创建数据库请参见[通过键值型数据库实现数据持久化](../../../database/data-persistence-by-kv-store.md#开发步骤)中使用getKVStore()方法创建并获
-> 取键值数据库示例。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1394,7 +1274,7 @@ unlike(field: string, value: string): Query
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## 示例
 

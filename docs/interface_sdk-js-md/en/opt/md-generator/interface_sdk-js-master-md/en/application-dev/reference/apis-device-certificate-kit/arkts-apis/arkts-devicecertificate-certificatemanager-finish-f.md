@@ -12,9 +12,11 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function finish(handle: Uint8Array, callback: AsyncCallback<CMResult>): void
 ```
 
-Finishes the signing operation. This is the last step in the signature process. The init and update interfaces need  to be invoked first. This API uses an asynchronous callback to return the result.
+Finishes the signing operation. This is the last step in the signature process. The init and update interfaces need to be invoked first. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -33,9 +35,9 @@ Finishes the signing operation. This is the last step in the signature process. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 
@@ -73,7 +75,9 @@ function finish(handle: Uint8Array, signature: Uint8Array, callback: AsyncCallba
 
 Finishes the signature verification operation. This is the last step in the signature verification process. The init and update interfaces need to be invoked first. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -93,9 +97,9 @@ Finishes the signature verification operation. This is the last step in the sign
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 
@@ -131,7 +135,9 @@ function finish(handle: Uint8Array, signature?: Uint8Array): Promise<CMResult>
 
 Finishes the signing or signature verification operation. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -156,9 +162,9 @@ Finishes the signing or signature verification operation. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 

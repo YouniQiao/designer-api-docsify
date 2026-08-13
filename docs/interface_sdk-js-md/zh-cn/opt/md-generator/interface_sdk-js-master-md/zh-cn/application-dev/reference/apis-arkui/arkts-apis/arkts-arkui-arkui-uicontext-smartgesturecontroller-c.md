@@ -1,13 +1,10 @@
 # SmartGestureController
 
-提供智慧手势使能、监听、选中态控制，以及动态决策智慧手势行为的能力。
-
-> **说明：**
-> 
-> 以下API需先使用UIContext中的[getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getSmartGestureController)方法获取SmartGestureController实例，
-> 再通过该实例调用对应方法。
+提供智慧手势使能、监听、选中态控制，以及动态决策智慧手势行为的能力。 > **说明：** > > 以下API需先使用UIContext中的[getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getSmartGestureController)方法获取SmartGestureController实例， > 再通过该实例调用对应方法。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class SmartGestureController--><!--Device-unnamed-export class SmartGestureController-End-->
 
@@ -22,6 +19,8 @@ clearMonitors(): void
 清空当前UIContext下注册的全部智慧手势监听回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +40,8 @@ clearSelected(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -55,15 +56,11 @@ clearSelected(): void
 enableSmartTapAndSlideGestures(enabled: boolean): void
 ```
 
-设置是否启用智慧手势的敲一敲和划一划操作。
-
-> **说明：**
-> 
-> - 该接口仅影响智慧手势的敲一敲和划一划手势，不影响翻腕手势。
-> 
-> - 关闭后，组件侧[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)配置仍会保留，但不会响应智慧手势的敲一敲和划一划手势。
+设置是否启用智慧手势的敲一敲和划一划操作。 > **说明：** > > - 该接口仅影响智慧手势的敲一敲和划一划手势，不影响翻腕手势。 > > - 关闭后，组件侧[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)配置仍会保留，但不会响应智慧手势的敲一敲和划一划手势。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,22 +82,11 @@ enableSmartTapAndSlideGestures(enabled: boolean): void
 registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-注册智慧手势监听回调。在系统处理当前智慧手势前，应用可接收当前手势的默认动作处理并进行自定义干预。使用callback异步回调。
-
-> **说明：**
-> 
-> - 该接口使应用能够在系统处理当前智慧手势事件前接收其处理意图，并进行自定义干预。
-> 
-> - 用户可通过该回调自定义决策本次智慧手势的行为。
-> 
-> - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution).
-> isConsumed为true时，后续监听回调不再执行。
-> 
-> - 当用户重复注册相同回调时，只会保存首次注册的回调，重复注册不生效。
-> 
-> - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)实例，否则本次改写不生效。
+注册智慧手势监听回调。在系统处理当前智慧手势前，应用可接收当前手势的默认动作处理并进行自定义干预。使用callback异步回调。 > **说明：** > > - 该接口使应用能够在系统处理当前智慧手势事件前接收其处理意图，并进行自定义干预。 > > - 用户可通过该回调自定义决策本次智慧手势的行为。 > > - 用户可注册多个监听回调，按照后注册先执行的顺序触发，当某个监听回调消费智慧手势事件后，即返回值[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution). > isConsumed为true时，后续监听回调不再执行。 > > - 当用户重复注册相同回调时，只会保存首次注册的回调，重复注册不生效。 > > - 回调返回值必须是合法的[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)实例，否则本次改写不生效。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -122,16 +108,11 @@ registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHa
 requestSelected(id: string): void
 ```
 
-请求将指定组件设置为当前智慧手势选中节点。成功选中后会显示选中提示框，选中框样式根据设备有所不同。
-
-> **说明：**
-> 
-> - 仅当目标组件满足以下全部条件时，请求才会生效：组件可以响应智慧手势，且组件在屏幕内可见，且组件绑定了
-> [onClick](CommonMethod#onClick(event: Callback&lt;ClickEvent&gt;, distanceThreshold: number))或绑定了单击手势[TapGesture](arkts-arkui-gesture-con.md#TapGesture)。
-> 
-> - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)中的enabled决定。
+请求将指定组件设置为当前智慧手势选中节点。成功选中后会显示选中提示框，选中框样式根据设备有所不同。 > **说明：** > > - 仅当目标组件满足以下全部条件时，请求才会生效：组件可以响应智慧手势，且组件在屏幕内可见，且组件绑定了 > onClick或绑定了单击手势[TapGesture](arkts-arkui-gesture-con.md#TapGesture)。 > > - 组件能否响应智慧手势由[smartGestureShortcut](../arkts-components/arkts-arkui-commonmethod-c.md#smartGestureShortcut)中的enabled决定。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,6 +137,8 @@ unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, Gesture
 注销智慧手势监听回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,11 +4,13 @@
 
 **起始版本：** 12
 
-<!--Device-unnamed-export interface TypeConstructorWithArgs<T>--><!--Device-unnamed-export interface TypeConstructorWithArgs<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface TypeConstructorWithArgs--><!--Device-unnamed-export interface TypeConstructorWithArgs-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Construct]]
+## constructor
 
 ```TypeScript
 new(...args: any): T
@@ -17,6 +19,8 @@ new(...args: any): T
 创建并返回一个指定类型T的实例。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

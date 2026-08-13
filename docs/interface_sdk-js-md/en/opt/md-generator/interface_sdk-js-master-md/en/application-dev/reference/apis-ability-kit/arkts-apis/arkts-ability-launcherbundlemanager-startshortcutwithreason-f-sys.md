@@ -12,12 +12,11 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string, options?: StartOptions): Promise<void>
 ```
 
-Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result.
+Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result. The launched ability can obtain the launch reason through the **launchReasonMessage** field of [LaunchParam](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam) and handle service logic accordingly.
 
-The launched ability can obtain the launch reason through the **launchReasonMessage** field of  
-[LaunchParam](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam) and handle service logic accordingly.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.START_SHORTCUT and ohos.permission.SET_LAUNCH_REASON_MESSAGE
 
@@ -45,10 +44,10 @@ The launched ability can obtain the launch reason through the **launchReasonMess
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700065](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700065](../errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) |
 
 ## Examples
 

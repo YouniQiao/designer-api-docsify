@@ -4,6 +4,8 @@ Defines the js geolocation request.
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class JsGeolocation--><!--Device-unnamed-declare class JsGeolocation-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ invoke(origin: string, allow: boolean, retain: boolean): void
 Report the geolocation permission status from users.
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

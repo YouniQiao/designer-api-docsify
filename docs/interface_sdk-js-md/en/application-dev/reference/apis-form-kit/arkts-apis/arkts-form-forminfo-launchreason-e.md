@@ -2,9 +2,11 @@
 
 Indicates the launch reason of a form.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum LaunchReason--><!--Device-formInfo-enum LaunchReason-End-->
 
@@ -18,9 +20,11 @@ FORM_DEFAULT = 1
 
 Indicates the launch reason of a form is default.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +40,11 @@ FORM_SHARE = 2
 
 Indicates the launch reason of a form is share.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,11 +60,13 @@ FORM_SIZE_CHANGE = 3
 
 Indicates the launch reason of a form is change size.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchReason-FORM_SIZE_CHANGE = 3--><!--Device-LaunchReason-FORM_SIZE_CHANGE = 3-End-->
 

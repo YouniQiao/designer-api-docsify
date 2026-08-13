@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface TerminationInfo--><!--Device-unnamed-declare interface TerminationInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@
 code: number
 ```
 
-被拉起的EmbeddedUIExtensionAbility退出时返回的结果码，由terminateSelfWithResult或者terminateSelf被调用时传入的数据决定。若通过terminateSelf退出，code取默认值0。
+被拉起的EmbeddedUIExtensionAbility退出时返回的结果码，由terminateSelfWithResult或者terminateSelf被调用时传入的数据决定。 若通过terminateSelf退出，code取默认值0。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +49,8 @@ want?: import('../api/@ohos.app.ability.Want').default
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

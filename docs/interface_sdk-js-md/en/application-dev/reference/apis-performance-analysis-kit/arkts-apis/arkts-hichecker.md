@@ -1,10 +1,24 @@
 # @ohos.hichecker
 
-The HiChecker module allows you to check issues that may be easily ignored during development of applications (including system-built and third-party applications). Such issues include calling of time-consuming functions by key application threads, event distribution and execution timeout in application processes, and ability resource leakage in application processes. The issues are recorded in logs or lead to process crashes explicitly so that you can find and rectify them.
+/*
+ Copyright (c) 2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hichecker--><!--Device-unnamed-declare namespace hichecker-End-->
 
@@ -22,22 +36,22 @@ import { hichecker } from '@kit.PerformanceAnalysisKit';
 
 | Name | Description |
 | --- | --- |
-| [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule) | Adds one or more check rules. HiChecker detects unexpected operations or gives feedback based on the added rules.You can use **grep HiChecker** to check for the application running information in the hilog. |
-| [addRule](arkts-performanceanalysis-hichecker-addrule-f.md#addrule) | Adds one or more rules. HiChecker detects unexpected operations or gives feedback based on the added rules. |
+| [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addCheckRule) | Adds one or more check rules. HiChecker detects unexpected operations or gives feedback based on the added rules. You can use **grep HiChecker** to check for the application running information in the hilog. |
+| [addRule](arkts-performanceanalysis-hichecker-addrule-f.md#addRule) | Adds one or more rules. HiChecker detects unexpected operations or gives feedback based on the added rules. |
 | [contains](arkts-performanceanalysis-hichecker-contains-f.md#contains) | Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread. |
-| [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule) | Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread. |
-| [getRule](arkts-performanceanalysis-hichecker-getrule-f.md#getrule) | Obtains a collection of thread, process, and alarm rules that have been added. |
-| [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule) | Removes one or more rules. The removed rules will become ineffective. |
-| [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md#removerule) | Removes one or more rules. The removed rules will become ineffective. |
+| [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containsCheckRule) | Checks whether the specified rule exists in the collection of added rules. If the rule is of the thread level, this operation is performed only on the current thread. |
+| [getRule](arkts-performanceanalysis-hichecker-getrule-f.md#getRule) | Obtains a collection of thread, process, and alarm rules that have been added. |
+| [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removeCheckRule) | Removes one or more rules. The removed rules will become ineffective. |
+| [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md#removeRule) | Removes one or more rules. The removed rules will become ineffective. |
 
 ### Constants
 
 | Name | Description |
 | --- | --- |
-| [RULE_CAUTION_PRINT_LOG](arkts-performanceanalysis-hichecker-con.md#rule_caution_print_log) | Alarm rule, which is programmed to print a log when an alarm is generated. |
-| [RULE_CAUTION_TRIGGER_CRASH](arkts-performanceanalysis-hichecker-con.md#rule_caution_trigger_crash) | Alarm rule, which is programmed to force the application to exit when an alarm is generated. |
-| [RULE_CHECK_ABILITY_CONNECTION_LEAK](arkts-performanceanalysis-hichecker-con.md#rule_check_ability_connection_leak) | Caution rule, which is programmed to detect whether ability leakage has occurred. |
-| [RULE_CHECK_ARKUI_PERFORMANCE](arkts-performanceanalysis-hichecker-con.md#rule_check_arkui_performance) | Caution rule, which is programmed to detect the ArkUI performance. |
-| [RULE_THREAD_CHECK_NETWORK_USAGE](arkts-performanceanalysis-hichecker-con.md#rule_thread_check_network_usage) | The thread rule check network usage. |
-| [RULE_THREAD_CHECK_SLOW_PROCESS](arkts-performanceanalysis-hichecker-con.md#rule_thread_check_slow_process) | Caution rule, which is programmed to detect whether any time-consuming function is invoked. |
+| [RULE_CAUTION_PRINT_LOG](arkts-performanceanalysis-hichecker-con.md#RULE_CAUTION_PRINT_LOG) | Alarm rule, which is programmed to print a log when an alarm is generated. |
+| [RULE_CAUTION_TRIGGER_CRASH](arkts-performanceanalysis-hichecker-con.md#RULE_CAUTION_TRIGGER_CRASH) | Alarm rule, which is programmed to force the application to exit when an alarm is generated. |
+| [RULE_CHECK_ABILITY_CONNECTION_LEAK](arkts-performanceanalysis-hichecker-con.md#RULE_CHECK_ABILITY_CONNECTION_LEAK) | Caution rule, which is programmed to detect whether ability leakage has occurred. |
+| [RULE_CHECK_ARKUI_PERFORMANCE](arkts-performanceanalysis-hichecker-con.md#RULE_CHECK_ARKUI_PERFORMANCE) | Caution rule, which is programmed to detect the ArkUI performance. |
+| [RULE_THREAD_CHECK_NETWORK_USAGE](arkts-performanceanalysis-hichecker-con.md#RULE_THREAD_CHECK_NETWORK_USAGE) | The thread rule check network usage. |
+| [RULE_THREAD_CHECK_SLOW_PROCESS](arkts-performanceanalysis-hichecker-con.md#RULE_THREAD_CHECK_SLOW_PROCESS) | Caution rule, which is programmed to detect whether any time-consuming function is invoked. |
 

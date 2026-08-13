@@ -2,7 +2,9 @@
 
 Stream from which data can be read. A readable stream is used to read data from a source, such as a file or a network socket.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-stream-export class Readable--><!--Device-stream-export class Readable-End-->
 
@@ -22,9 +24,11 @@ constructor()
 
 A constructor used to create a **Readable** object.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-constructor()--><!--Device-Readable-constructor()-End-->
 
@@ -44,9 +48,11 @@ constructor(options: ReadableOptions)
 
 A constructor used to create a **Readable** object.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-constructor(options: ReadableOptions)--><!--Device-Readable-constructor(options: ReadableOptions)-End-->
 
@@ -73,12 +79,13 @@ let readableStream = new stream.Readable(option);
 doInitialize(callback: Function): void
 ```
 
-You need to implement this API. It is called when the readable stream calls  
-[on](stream.Writable#on(event: string, callback: Callback&lt;emitter.EventData&gt;)) for the first time. This API uses an asynchronous callback to return the result.
+You need to implement this API. It is called when the readable stream calls [on](arkts-arkts-stream-writable-c.md#on_string) for the first time. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-doInitialize(callback: Function): void--><!--Device-Readable-doInitialize(callback: Function): void-End-->
 
@@ -116,9 +123,11 @@ doRead(size: number): void
 
 A data read API that needs to be implemented in child classes.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-doRead(size: int): void--><!--Device-Readable-doRead(size: int): void-End-->
 
@@ -154,11 +163,13 @@ readable.on('data', () => {
 isPaused(): boolean
 ```
 
-Checks whether the readable stream is paused. The stream is paused after [pause()](#pause)is called and resumes from the paused state after [resume()](#resume) is called.
+Checks whether the readable stream is paused. The stream is paused after [pause()](#pause) is called and resumes from the paused state after [resume()](#resume) is called.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-isPaused(): boolean--><!--Device-Readable-isPaused(): boolean-End-->
 
@@ -188,7 +199,7 @@ readableStream.pause();
 console.info("Readable isPaused", readableStream.isPaused()); // Readable isPaused true
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(event: string, callback?: Callback<emitter.EventData>): void
@@ -197,6 +208,8 @@ off(event: string, callback?: Callback<emitter.EventData>): void
 Unregisters an event processing callback used to listen for different events on the readable stream.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -236,7 +249,32 @@ readable.push('test');
 // After off is used to unregister the listening of the readable stream events, the read function is not called and "read() called" is not printed.
 ```
 
-## on
+## off_string
+
+```TypeScript
+off(event: string, callback?: Function): void
+```
+
+Cancel event message.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Readable-off(event: string, callback?: Function): void--><!--Device-Readable-off(event: string, callback?: Function): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
+| callback | Function | No |
+
+## on_string
 
 ```TypeScript
 on(event: string, callback: Callback<emitter.EventData>): void
@@ -245,6 +283,8 @@ on(event: string, callback: Callback<emitter.EventData>): void
 Registers an event processing callback to listen for different events on the readable stream.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -279,6 +319,31 @@ readable.on('error', () => {
 });
 ```
 
+## on_string
+
+```TypeScript
+on(event: string, callback: Function): void
+```
+
+Registering Event Messages.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Readable-on(event: string, callback: Function): void--><!--Device-Readable-on(event: string, callback: Function): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| event | string | Yes |
+| callback | Function | Yes |
+
 ## pause
 
 ```TypeScript
@@ -287,9 +352,11 @@ pause(): Readable
 
 Pauses the readable stream in flowing mode. You can use **isPaused** to check whether the stream is paused.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-pause(): Readable--><!--Device-Readable-pause(): Readable-End-->
 
@@ -326,9 +393,11 @@ pipe(destination: Writable, options?: Object): Writable
 
 Attaches a writable stream to the readable stream to implement automatic data transmission.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-pipe(destination: Writable, options?: Object): Writable--><!--Device-Readable-pipe(destination: Writable, options?: Object): Writable-End-->
 
@@ -385,9 +454,11 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 Pushes data into the buffer of the readable stream.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean--><!--Device-Readable-push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean-End-->
 
@@ -434,6 +505,8 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Readable-read(size?: number): string | null--><!--Device-Readable-read(size?: number): string | null-End-->
@@ -456,7 +529,7 @@ Reads data from the buffer of the readable stream and returns the read data. If 
 
 | Error Code ID |
 | --- |
-| [10200038](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200038-doread-is-not-implemented) |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) |
 
 ## Examples
 
@@ -477,6 +550,42 @@ let dataChunk = readableStream.read();
 console.info('Readable data is', dataChunk); // Readable data is test
 ```
 
+## read
+
+```TypeScript
+read(size?: number): buffer.Buffer | string | null
+```
+
+Reads a buffer of a specified size from the buffer. If the available buffer is sufficient, the result of the specified size is returned. Otherwise, if Readable has ended, all remaining buffers are returned.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Readable-read(size?: int): buffer.Buffer | string | null--><!--Device-Readable-read(size?: int): buffer.Buffer | string | null-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| size | number | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| buffer.Buffer |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200038](../errorcode-utils.md#10200038-doread-is-not-implemented) |
+
 ## resume
 
 ```TypeScript
@@ -485,9 +594,11 @@ resume(): Readable
 
 Resumes an explicitly paused readable stream. You can use **isPaused** to check whether the stream is paused.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-resume(): Readable--><!--Device-Readable-resume(): Readable-End-->
 
@@ -522,11 +633,13 @@ console.info("Readable test resume", !readableStream.isPaused()); // After a suc
 setEncoding(encoding?: string): boolean
 ```
 
-Sets an encoding format for the readable stream.If the buffer contains data, setting the encoding format is not allowed, and **false** is returned.
+Sets an encoding format for the readable stream. If the buffer contains data, setting the encoding format is not allowed, and **false** is returned.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-setEncoding(encoding?: string): boolean--><!--Device-Readable-setEncoding(encoding?: string): boolean-End-->
 
@@ -569,9 +682,11 @@ unpipe(destination?: Writable): Readable
 
 Detaches a writable stream previously attached to the readable stream.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Readable-unpipe(destination?: Writable): Readable--><!--Device-Readable-unpipe(destination?: Writable): Readable-End-->
 
@@ -622,129 +737,3 @@ readable.on('data', () => {
 });
 // After successful detaching, the data event is not triggered and "Readable test unpipe data event triggered" is not printed.
 ```
-
-## readable
-
-```TypeScript
-get readable(): boolean
-```
-
-Is true if it is safe to call readable.read(), which means the stream has not been destroyed or emitted 'error' or 'end'.
-
-**Type:** boolean
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readable(): boolean--><!--Device-Readable-get readable(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableEncoding
-
-```TypeScript
-get readableEncoding(): string | null
-```
-
-Getter for the property encoding of a given Readable stream. The encoding property can be set using the readable.setEncoding() method.
-
-**Type:** string
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableEncoding(): string | null--><!--Device-Readable-get readableEncoding(): string | null-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableEnded
-
-```TypeScript
-get readableEnded(): boolean
-```
-
-Whether all data has been generated.
-
-**Type:** boolean
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableEnded(): boolean--><!--Device-Readable-get readableEnded(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableFlowing
-
-```TypeScript
-get readableFlowing(): boolean | null
-```
-
-This property reflects the current state of the readable stream null/true/false.
-
-**Type:** boolean
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableFlowing(): boolean | null--><!--Device-Readable-get readableFlowing(): boolean | null-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableHighWatermark
-
-```TypeScript
-get readableHighWatermark(): number
-```
-
-Returns the value of highWatermark passed when creating this Readable.
-
-**Type:** number
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableHighWatermark(): int--><!--Device-Readable-get readableHighWatermark(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableLength
-
-```TypeScript
-get readableLength(): number
-```
-
-Size of the data that can be read, in bytes or objects.
-
-**Type:** number
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableLength(): int--><!--Device-Readable-get readableLength(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## readableObjectMode
-
-```TypeScript
-get readableObjectMode(): boolean
-```
-
-Returns boolean indicating whether it is in ObjectMode.
-
-**Type:** boolean
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Readable-get readableObjectMode(): boolean--><!--Device-Readable-get readableObjectMode(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang

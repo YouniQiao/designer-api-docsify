@@ -12,9 +12,7 @@ import { bundleState } from '@kit.BackgroundTasksKit';
 function queryBundleStateInfos(begin: number, end: number, callback: AsyncCallback<BundleActiveInfoResponse>): void
 ```
 
-Queries usage information about each bundle within a specified period.
-
-This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) interval by default.
+Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 7
 
@@ -36,7 +34,7 @@ This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) inter
 | --- | --- | --- | --- |
 | begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
 | end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md#BundleActiveInfoResponse) objects containing the usage information about each bundle. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md#BundleActiveInfoResponse) objects containing the usage information about each bundle. |
 
 ## Examples
 
@@ -61,9 +59,7 @@ bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
 function queryBundleStateInfos(begin: number, end: number): Promise<BundleActiveInfoResponse>
 ```
 
-Queries usage information about each bundle within a specified period.
-
-This method queries usage information at the [BY_OPTIMIZED](#BY_OPTIMIZED) interval by default.
+Queries usage information about each bundle within a specified period. This method queries usage information at the BY_OPTIMIZED interval by default.
 
 **Since:** 7
 

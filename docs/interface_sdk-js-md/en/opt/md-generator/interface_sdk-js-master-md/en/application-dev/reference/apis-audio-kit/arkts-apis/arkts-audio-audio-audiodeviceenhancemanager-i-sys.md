@@ -4,6 +4,8 @@ Provides enhanced audio device management capabilities.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-audio-interface AudioDeviceEnhanceManager--><!--Device-audio-interface AudioDeviceEnhanceManager-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.DeviceEnhance
@@ -24,6 +26,8 @@ Obtains the sound card information. This method uses a Promise to return the que
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioDeviceEnhanceManager-getSoundCardInfo(): Promise<SoundCardInfo>--><!--Device-AudioDeviceEnhanceManager-getSoundCardInfo(): Promise<SoundCardInfo>-End-->
@@ -42,5 +46,5 @@ Obtains the sound card information. This method uses a Promise to return the que
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

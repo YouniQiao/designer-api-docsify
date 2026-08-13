@@ -1,16 +1,6 @@
 # EffectComponent
 
-The **EffectComponent** component defines combined special effects for child components to optimize the special 
-effect drawing performance.
-
-> **NOTE**
-
-> - The APIs provided by this component are system APIs.
->
-> - Currently, this component provides only combined background blur effects for child components.
->
-> - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)** 
-> attribute of the target child components with **useEffect(true)**.
+The **EffectComponent** component defines combined special effects for child components to optimize the special effect drawing performance. > **NOTE** > - The APIs provided by this component are system APIs. > > - Currently, this component provides only combined background blur effects for child components. > > - To use this component for combined background blur effects, first replace the **backgroundBlurStyle(BlurStyle)** > attribute of the target child components with **useEffect(true)**.
 
 ## EffectComponent
 
@@ -21,6 +11,8 @@ EffectComponent()
 Creates an **EffectComponent** component.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +32,8 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EffectComponentInterface-(options?: EffectComponentOptions): EffectComponentAttribute--><!--Device-EffectComponentInterface-(options?: EffectComponentOptions): EffectComponentAttribute-End-->
@@ -56,5 +50,5 @@ Creates an effect drawing and combination component. If no parameter is passed o
 
 ## Summary
 
-- [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md)
-- [EffectLayer](arkts-arkui-effectcomponent-effectlayer-e-sys.md)
+- [EffectComponentOptions](arkts-arkui-effectcomponentoptions-i-sys.md)
+- [EffectLayer](arkts-arkui-effectlayer-e-sys.md)

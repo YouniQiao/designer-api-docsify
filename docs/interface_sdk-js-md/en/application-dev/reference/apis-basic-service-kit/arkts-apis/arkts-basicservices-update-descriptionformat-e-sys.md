@@ -2,9 +2,11 @@
 
 Enumerates description file formats.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum DescriptionFormat--><!--Device-update-export enum DescriptionFormat-End-->
 
@@ -20,9 +22,11 @@ STANDARD = 0
 
 Standard format. This format is applicable to scenarios where complete description is required.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DescriptionFormat-STANDARD = 0--><!--Device-DescriptionFormat-STANDARD = 0-End-->
 
@@ -38,9 +42,11 @@ SIMPLIFIED = 1
 
 Simple format. This format is applicable to scenarios where only simplified description is required.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DescriptionFormat-SIMPLIFIED = 1--><!--Device-DescriptionFormat-SIMPLIFIED = 1-End-->
 

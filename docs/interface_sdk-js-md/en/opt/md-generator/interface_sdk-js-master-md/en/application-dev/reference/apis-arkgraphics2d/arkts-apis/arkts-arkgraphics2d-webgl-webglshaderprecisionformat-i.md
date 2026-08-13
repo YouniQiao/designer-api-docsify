@@ -4,6 +4,8 @@ WebGL 1.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface WebGLShaderPrecisionFormat--><!--Device-unnamed-interface WebGLShaderPrecisionFormat-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.WebGL
@@ -19,6 +21,8 @@ Precision
 **Type:** [GLint](arkts-arkgraphics2d-glint-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -38,6 +42,8 @@ Maximum range
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-WebGLShaderPrecisionFormat-readonly rangeMax: GLint--><!--Device-WebGLShaderPrecisionFormat-readonly rangeMax: GLint-End-->
@@ -55,6 +61,8 @@ Minimum range
 **Type:** [GLint](arkts-arkgraphics2d-glint-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

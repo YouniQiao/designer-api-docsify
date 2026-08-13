@@ -6,9 +6,11 @@
 function queryAtomicServiceStartupRule(context: Context, appId: string): Promise<AtomicServiceStartupRule>
 ```
 
-查询嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)的规则。使用Promise异步回调。该接口仅在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。
+查询嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)的规则。使用Promise异步回调。 该接口仅在Phone和Tablet设备中可正常调用，在其他设备中返回801错误码。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,9 +37,9 @@ function queryAtomicServiceStartupRule(context: Context, appId: string): Promise
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 

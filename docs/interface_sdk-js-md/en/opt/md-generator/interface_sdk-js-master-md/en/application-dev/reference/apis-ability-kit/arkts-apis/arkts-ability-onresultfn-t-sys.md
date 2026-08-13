@@ -6,7 +6,9 @@ type OnResultFn = (parameter: AbilityResult) => void
 
 Defines a onResult function.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

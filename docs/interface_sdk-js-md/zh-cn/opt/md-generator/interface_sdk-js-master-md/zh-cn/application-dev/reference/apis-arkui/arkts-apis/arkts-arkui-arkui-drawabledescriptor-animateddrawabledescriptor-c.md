@@ -1,12 +1,14 @@
 # AnimatedDrawableDescriptor
 
-使用[Image](./@internal/component/ets/image)组件播放PixelMap数组或动图资源时传入AnimatedDrawableDescriptor对象，该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)。
+使用Image组件播放PixelMap数组或动图资源时传入 AnimatedDrawableDescriptor对象， 该对象继承自[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)。
 
 **继承/实现关系：** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **起始版本：** 12
 
-<!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export class AnimatedDrawableDescriptor--><!--Device-unnamed-export class AnimatedDrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)
 AnimatedDrawableDescriptor的构造函数。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ constructor(src: ResourceStr | Array<image.PixelMap>, options?: AnimationOptions
 AnimatedDrawableDescriptor的构造函数。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,6 +108,8 @@ getAnimationController(id?: string): AnimationController | undefined
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
@@ -124,7 +132,7 @@ getAnimationController(id?: string): AnimationController | undefined
 
 ## 示例
 
-[Image](./arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比1持有关系，示例代码如下。
+[Image](../arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比1持有关系，示例代码如下。
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';
@@ -158,7 +166,7 @@ struct Example {
 }
 ```
 
-[Image](./arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比N持有关系，示例代码如下。
+[Image](../arkui-ts/ts-basic-components-image.md)组件与AnimatedDrawableDescriptor保持1比N持有关系，示例代码如下。
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';

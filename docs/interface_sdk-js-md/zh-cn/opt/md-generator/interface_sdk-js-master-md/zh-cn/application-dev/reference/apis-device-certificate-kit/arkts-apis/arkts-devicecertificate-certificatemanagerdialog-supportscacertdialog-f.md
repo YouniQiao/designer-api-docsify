@@ -10,6 +10,8 @@ function supportsCACertDialog(): boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean--><!--Device-certificateManagerDialog-function supportsCACertDialog(): boolean-End-->
@@ -26,7 +28,7 @@ function supportsCACertDialog(): boolean
 
 | 错误码ID |
 | --- |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-内部错误) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
 
 ## 示例
 

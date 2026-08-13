@@ -1,10 +1,12 @@
 # WebDownloadErrorCode
 
-Defines the error code for download.
+下载任务的错误码。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum WebDownloadErrorCode--><!--Device-webview-enum WebDownloadErrorCode-End-->
 
@@ -16,11 +18,15 @@ Defines the error code for download.
 ERROR_UNKNOWN = 0
 ```
 
-Unknown error.
+未知的错误。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-ERROR_UNKNOWN = 0--><!--Device-WebDownloadErrorCode-ERROR_UNKNOWN = 0-End-->
 
@@ -32,11 +38,15 @@ Unknown error.
 FILE_FAILED = 1
 ```
 
-Generic file operation failure.
+常规文件操作失败。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_FAILED = 1--><!--Device-WebDownloadErrorCode-FILE_FAILED = 1-End-->
 
@@ -48,11 +58,15 @@ Generic file operation failure.
 FILE_ACCESS_DENIED = 2
 ```
 
-The file cannot be accessed due to certain restrictions.
+没有权限访问文件。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_ACCESS_DENIED = 2--><!--Device-WebDownloadErrorCode-FILE_ACCESS_DENIED = 2-End-->
 
@@ -64,11 +78,15 @@ The file cannot be accessed due to certain restrictions.
 FILE_NO_SPACE = 3
 ```
 
-There is not enough disk space.
+磁盘没有足够的空间。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_NO_SPACE = 3--><!--Device-WebDownloadErrorCode-FILE_NO_SPACE = 3-End-->
 
@@ -80,11 +98,15 @@ There is not enough disk space.
 FILE_NAME_TOO_LONG = 5
 ```
 
-The file name is too long.
+文件名过长。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_NAME_TOO_LONG = 5--><!--Device-WebDownloadErrorCode-FILE_NAME_TOO_LONG = 5-End-->
 
@@ -96,11 +118,15 @@ The file name is too long.
 FILE_TOO_LARGE = 6
 ```
 
-The file is too large.
+文件太大。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6--><!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6-End-->
 
@@ -112,11 +138,15 @@ The file is too large.
 FILE_TRANSIENT_ERROR = 10
 ```
 
-Some temporary problems occurred, such as not enough memory, files in use, and too many files open at the same time.
+出现了一些临时问题，例如内存不足、文件正在使用以及同时打开的文件过多。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_TRANSIENT_ERROR = 10--><!--Device-WebDownloadErrorCode-FILE_TRANSIENT_ERROR = 10-End-->
 
@@ -128,11 +158,15 @@ Some temporary problems occurred, such as not enough memory, files in use, and t
 FILE_BLOCKED = 11
 ```
 
-The file is blocked from accessing because of some local policy.
+由于某些本地策略，文件被阻止访问。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_BLOCKED = 11--><!--Device-WebDownloadErrorCode-FILE_BLOCKED = 11-End-->
 
@@ -144,11 +178,15 @@ The file is blocked from accessing because of some local policy.
 FILE_TOO_SHORT = 13
 ```
 
-When trying to resume the download, Found that the file is not long enough, maybe the file no longer exists.
+当尝试恢复下载时，发现文件不够长，可能该文件已不存在。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_TOO_SHORT = 13--><!--Device-WebDownloadErrorCode-FILE_TOO_SHORT = 13-End-->
 
@@ -160,11 +198,15 @@ When trying to resume the download, Found that the file is not long enough, mayb
 FILE_HASH_MISMATCH = 14
 ```
 
-Hash mismatch.
+哈希不匹配。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14--><!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14-End-->
 
@@ -176,11 +218,15 @@ Hash mismatch.
 FILE_SAME_AS_SOURCE = 15
 ```
 
-The file already exists.
+文件已存在。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-FILE_SAME_AS_SOURCE = 15--><!--Device-WebDownloadErrorCode-FILE_SAME_AS_SOURCE = 15-End-->
 
@@ -192,11 +238,15 @@ The file already exists.
 NETWORK_FAILED = 20
 ```
 
-Generic network error.
+一般网络错误。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-NETWORK_FAILED = 20--><!--Device-WebDownloadErrorCode-NETWORK_FAILED = 20-End-->
 
@@ -208,11 +258,15 @@ Generic network error.
 NETWORK_TIMEOUT = 21
 ```
 
-The network operation timed out.
+网络超时。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-NETWORK_TIMEOUT = 21--><!--Device-WebDownloadErrorCode-NETWORK_TIMEOUT = 21-End-->
 
@@ -224,11 +278,15 @@ The network operation timed out.
 NETWORK_DISCONNECTED = 22
 ```
 
-The network was disconnected.
+网络断开连接。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-NETWORK_DISCONNECTED = 22--><!--Device-WebDownloadErrorCode-NETWORK_DISCONNECTED = 22-End-->
 
@@ -240,11 +298,15 @@ The network was disconnected.
 NETWORK_SERVER_DOWN = 23
 ```
 
-Server down.
+服务器关闭。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-NETWORK_SERVER_DOWN = 23--><!--Device-WebDownloadErrorCode-NETWORK_SERVER_DOWN = 23-End-->
 
@@ -256,11 +318,15 @@ Server down.
 NETWORK_INVALID_REQUEST = 24
 ```
 
-Invalid network requests，may redirect to unsupported scheme or an invalid URL.
+无效的网络请求，可能重定向到不支持的方案或无效的URL。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-NETWORK_INVALID_REQUEST = 24--><!--Device-WebDownloadErrorCode-NETWORK_INVALID_REQUEST = 24-End-->
 
@@ -272,11 +338,15 @@ Invalid network requests，may redirect to unsupported scheme or an invalid URL.
 SERVER_FAILED = 30
 ```
 
-The server returned a generic error.
+服务器返回了一个一般性错误。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_FAILED = 30--><!--Device-WebDownloadErrorCode-SERVER_FAILED = 30-End-->
 
@@ -288,11 +358,15 @@ The server returned a generic error.
 SERVER_NO_RANGE = 31
 ```
 
-The server does not support range requests.
+服务器不支持范围请求。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_NO_RANGE = 31--><!--Device-WebDownloadErrorCode-SERVER_NO_RANGE = 31-End-->
 
@@ -304,11 +378,15 @@ The server does not support range requests.
 SERVER_BAD_CONTENT = 33
 ```
 
-The server does not have the requested data.
+服务器没有请求的数据。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_BAD_CONTENT = 33--><!--Device-WebDownloadErrorCode-SERVER_BAD_CONTENT = 33-End-->
 
@@ -320,11 +398,15 @@ The server does not have the requested data.
 SERVER_UNAUTHORIZED = 34
 ```
 
-The server does not allow the file to be downloaded.
+服务器不允许下载该文件。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_UNAUTHORIZED = 34--><!--Device-WebDownloadErrorCode-SERVER_UNAUTHORIZED = 34-End-->
 
@@ -336,11 +418,15 @@ The server does not allow the file to be downloaded.
 SERVER_CERT_PROBLEM = 35
 ```
 
-Server certificate error.
+服务器证书错误。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_CERT_PROBLEM = 35--><!--Device-WebDownloadErrorCode-SERVER_CERT_PROBLEM = 35-End-->
 
@@ -352,11 +438,15 @@ Server certificate error.
 SERVER_FORBIDDEN = 36
 ```
 
-Server access forbidden.
+服务器访问被禁止。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_FORBIDDEN = 36--><!--Device-WebDownloadErrorCode-SERVER_FORBIDDEN = 36-End-->
 
@@ -368,11 +458,15 @@ Server access forbidden.
 SERVER_UNREACHABLE = 37
 ```
 
-Server unreachable.
+无法访问服务器。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_UNREACHABLE = 37--><!--Device-WebDownloadErrorCode-SERVER_UNREACHABLE = 37-End-->
 
@@ -384,11 +478,15 @@ Server unreachable.
 SERVER_CONTENT_LENGTH_MISMATCH = 38
 ```
 
-The received data does not match content-length.
+接收到的数据与内容长度不匹配。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_CONTENT_LENGTH_MISMATCH = 38--><!--Device-WebDownloadErrorCode-SERVER_CONTENT_LENGTH_MISMATCH = 38-End-->
 
@@ -400,11 +498,15 @@ The received data does not match content-length.
 SERVER_CROSS_ORIGIN_REDIRECT = 39
 ```
 
-An unexpected cross-origin redirect happened.
+发生意外的跨站重定向。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-SERVER_CROSS_ORIGIN_REDIRECT = 39--><!--Device-WebDownloadErrorCode-SERVER_CROSS_ORIGIN_REDIRECT = 39-End-->
 
@@ -416,11 +518,15 @@ An unexpected cross-origin redirect happened.
 USER_CANCELED = 40
 ```
 
-User cancel.
+用户取消了下载。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-USER_CANCELED = 40--><!--Device-WebDownloadErrorCode-USER_CANCELED = 40-End-->
 
@@ -432,11 +538,15 @@ User cancel.
 USER_SHUTDOWN = 41
 ```
 
-User shut down the application.
+用户关闭了应用。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-USER_SHUTDOWN = 41--><!--Device-WebDownloadErrorCode-USER_SHUTDOWN = 41-End-->
 
@@ -448,11 +558,15 @@ User shut down the application.
 CRASH = 50
 ```
 
-Application crash.
+应用发生了崩溃。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDownloadErrorCode-CRASH = 50--><!--Device-WebDownloadErrorCode-CRASH = 50-End-->
 

@@ -2,9 +2,11 @@
 
 Represents a USB device pipe, which is used to determine a USB device.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBDevicePipe--><!--Device-usbManager-interface USBDevicePipe-End-->
 
@@ -24,11 +26,13 @@ busNum: int
 
 Bus address.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBDevicePipe-busNum: int--><!--Device-USBDevicePipe-busNum: int-End-->
 
@@ -42,11 +46,13 @@ devAddress: int
 
 Device address.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBDevicePipe-devAddress: int--><!--Device-USBDevicePipe-devAddress: int-End-->
 

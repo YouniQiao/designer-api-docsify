@@ -1,4 +1,4 @@
-# @ohos.advertising.AutoAdComponent(轮播广告展示组件)
+# @ohos.advertising.AutoAdComponent
 
 ## 汇总
 

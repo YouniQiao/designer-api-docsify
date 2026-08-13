@@ -18,6 +18,8 @@ Queries the result of the sync operation. This API uses a promise to return the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>--><!--Device-asset-function querySyncResult(query: AssetMap): Promise<SyncResult>-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -38,14 +40,14 @@ Queries the result of the sync operation. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24000014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000014-file-operation-failed) | The file operation failed. |
-| [24000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
-| [24000013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
-| [24000010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
-| [24000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
-| [24000006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
-| [24000018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000018-parameter-check-failed) | Parameter verification failed. |
-| [24000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
+| [24000014](../errorcode-asset.md#24000014-file-operation-failed) | The file operation failed. |
+| [24000012](../errorcode-asset.md#24000012-account-system-service-abnormal) | Calling the OS Account service failed. |
+| [24000013](../errorcode-asset.md#24000013-access-token-service-abnormal) | Calling the Access Token service failed. |
+| [24000010](../errorcode-asset.md#24000010-ipc-failed) | IPC failed. |
+| [24000011](../errorcode-asset.md#24000011-bundle-manager-service-abnormal) | Calling the Bundle Manager service failed. |
+| [24000006](../errorcode-asset.md#24000006-insufficient-memory) | Insufficient memory. |
+| [24000018](../errorcode-asset.md#24000018-parameter-check-failed) | Parameter verification failed. |
+| [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
 
 ## Examples
 

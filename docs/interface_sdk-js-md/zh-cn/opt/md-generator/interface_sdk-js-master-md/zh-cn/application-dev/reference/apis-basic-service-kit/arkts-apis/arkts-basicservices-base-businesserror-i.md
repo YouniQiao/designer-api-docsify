@@ -6,7 +6,9 @@
 
 **起始版本：** 6
 
-<!--Device-unnamed-export interface BusinessError<T = void> extends Error--><!--Device-unnamed-export interface BusinessError<T = void> extends Error-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface BusinessError--><!--Device-unnamed-export interface BusinessError-End-->
 
 **系统能力：** SystemCapability.Base
 
@@ -21,6 +23,8 @@ code: number
 **类型：** number
 
 **起始版本：** 6
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,6 +45,8 @@ data?: T
 **类型：** T
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

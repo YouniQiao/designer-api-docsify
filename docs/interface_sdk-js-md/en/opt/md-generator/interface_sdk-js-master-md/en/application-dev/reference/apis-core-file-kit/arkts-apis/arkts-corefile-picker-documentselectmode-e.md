@@ -2,7 +2,9 @@
 
 Enumerates the types of documents selected.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-picker-export enum DocumentSelectMode--><!--Device-picker-export enum DocumentSelectMode-End-->
 
@@ -16,7 +18,9 @@ FILE = 0
 
 File (default).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ FOLDER = 1
 
 Folder.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ MIXED = 2
 
 Mixed type of files and folders.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

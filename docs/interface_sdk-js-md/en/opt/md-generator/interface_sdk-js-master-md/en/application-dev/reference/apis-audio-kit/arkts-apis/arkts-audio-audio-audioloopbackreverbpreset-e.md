@@ -2,7 +2,9 @@
 
 Enumerates the reverb modes of audio loopback.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioLoopbackReverbPreset--><!--Device-audio-enum AudioLoopbackReverbPreset-End-->
 
@@ -16,7 +18,9 @@ ORIGINAL = 1
 
 Maintains the original reverb without enhancement.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackReverbPreset-ORIGINAL = 1--><!--Device-AudioLoopbackReverbPreset-ORIGINAL = 1-End-->
 
@@ -30,7 +34,9 @@ KTV = 2
 
 Provides a Karaoke-style reverb effect.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackReverbPreset-KTV = 2--><!--Device-AudioLoopbackReverbPreset-KTV = 2-End-->
 
@@ -44,7 +50,9 @@ THEATER = 3
 
 Provides a theater-style reverb effect (default).
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackReverbPreset-THEATER = 3--><!--Device-AudioLoopbackReverbPreset-THEATER = 3-End-->
 
@@ -58,7 +66,9 @@ CONCERT = 4
 
 Provides a concert-style reverb effect.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackReverbPreset-CONCERT = 4--><!--Device-AudioLoopbackReverbPreset-CONCERT = 4-End-->
 

@@ -14,9 +14,11 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 
 Compresses multiple specified files. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-zlib-function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>--><!--Device-zlib-function compressFiles(inFiles: Array<string>, outFile: string, options: Options): Promise<void>-End-->
 
@@ -40,9 +42,9 @@ Compresses multiple specified files. This API uses a promise to return the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 
 ## Examples
 

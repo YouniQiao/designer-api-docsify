@@ -6,6 +6,8 @@ Enum representing the supported types of AI sessions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AISessionType--><!--Device-unnamed-declare enum AISessionType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Translator model
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Language detector model
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AISessionType-LANGUAGE_DETECTOR = 2--><!--Device-AISessionType-LANGUAGE_DETECTOR = 2-End-->
@@ -57,6 +63,8 @@ Summarization generator model
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Writing assistant model
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AISessionType-WRITER = 4--><!--Device-AISessionType-WRITER = 4-End-->
@@ -93,6 +103,8 @@ Rewriting assistant model
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ Prompt engineering model
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AISessionType-PROMPT = 6--><!--Device-AISessionType-PROMPT = 6-End-->
@@ -129,6 +143,8 @@ Proofreading assistant model
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

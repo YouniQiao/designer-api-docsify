@@ -10,6 +10,8 @@ Called when the start, end and center positions of the display change.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void--><!--Device-unnamed-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

@@ -4,7 +4,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [promptAction/promptAction](ohos.promptAction/promptAction)
+**Substitutes:** [promptAction/promptAction](arkts-arkui-promptaction-n.md#promptAction)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
@@ -22,11 +22,11 @@ import { prompt } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu) |
-| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu-1) |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog) |
-| [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog-1) |
-| [showToast](arkts-arkui-prompt-showtoast-f.md#showtoast) |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showActionMenu) |
+| [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showActionMenu) |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showDialog) |
+| [showDialog](arkts-arkui-prompt-showdialog-f.md#showDialog) |
+| [showToast](arkts-arkui-prompt-showtoast-f.md#showToast) |
 
 ### Interfaces
 

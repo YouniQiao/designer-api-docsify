@@ -4,6 +4,8 @@ The basic data structure of the hover hand detection area.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-motion-export interface HoverHandDetectionArea--><!--Device-motion-export interface HoverHandDetectionArea-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -22,11 +24,13 @@ import { motion } from '@kit.MultimodalAwarenessKit';
 height: number
 ```
 
-Height of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
+Height of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ Height of the rectangle.Unit: px. The value must be an integer within [1,2147483
 left: number
 ```
 
-Left boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
+Left boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +68,13 @@ Left boundary of the rectangle.Unit: px. The value must be an integer within [-2
 top: number
 ```
 
-Top boundary of the rectangle.Unit: px. The value must be an integer within [-2147483648,2147483647].
+Top boundary of the rectangle. Unit: px. The value must be an integer within [-2147483648,2147483647].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,11 +90,13 @@ Top boundary of the rectangle.Unit: px. The value must be an integer within [-21
 width: number
 ```
 
-Width of the rectangle.Unit: px. The value must be an integer within [1,2147483647].
+Width of the rectangle. Unit: px. The value must be an integer within [1,2147483647].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -18,6 +18,8 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoRecorder
@@ -28,14 +30,14 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md)&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns null otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -64,7 +66,9 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void--><!--Device-media-function createVideoRecorder(callback: AsyncCallback<VideoRecorder | undefined>): void-End-->
 
@@ -76,14 +80,14 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md) \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[VideoRecorder](arkts-media-media-videorecorder-i-sys.md) \| undefined&gt; | Yes | used to return AudioPlayer instance if the operation is successful; returns undefined otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 
 ## createVideoRecorder
@@ -97,6 +101,8 @@ The maintenance of this interface has been stopped since version api 9. Please u
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder>-End-->
 
@@ -114,8 +120,8 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -146,7 +152,9 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createVideoRecorder(): Promise<VideoRecorder | undefined>--><!--Device-media-function createVideoRecorder(): Promise<VideoRecorder | undefined>-End-->
 
@@ -164,6 +172,6 @@ The maintenance of this interface has been stopped since version api 9. Please u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

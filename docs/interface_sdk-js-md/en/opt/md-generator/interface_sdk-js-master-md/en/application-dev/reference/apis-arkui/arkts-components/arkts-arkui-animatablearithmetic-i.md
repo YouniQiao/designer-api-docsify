@@ -4,7 +4,9 @@ The **AnimatableArithmetic** API defines animation calculation rules for non-num
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface AnimatableArithmetic<T>--><!--Device-unnamed-declare interface AnimatableArithmetic<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AnimatableArithmetic--><!--Device-unnamed-declare interface AnimatableArithmetic-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 Defines the equality check rule for the data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Defines the multiplication rule for the data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -78,6 +84,8 @@ Defines the addition rule for the data type.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -107,6 +115,8 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 Defines the subtraction rule for the data type.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

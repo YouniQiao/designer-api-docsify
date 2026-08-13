@@ -6,7 +6,9 @@ type CaretOffsetsCallback = (offset: number, index: number, leadingEdge: boolean
 
 将文本行中每个字符的偏移量和索引值作为参数的回调方法。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

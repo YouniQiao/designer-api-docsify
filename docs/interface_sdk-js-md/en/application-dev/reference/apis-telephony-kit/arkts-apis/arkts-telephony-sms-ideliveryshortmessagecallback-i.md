@@ -2,9 +2,11 @@
 
 Provides the callback for the SMS message delivery report.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface IDeliveryShortMessageCallback--><!--Device-sms-export interface IDeliveryShortMessageCallback-End-->
 
@@ -24,11 +26,13 @@ pdu: Array<int>
 
 SMS message delivery report.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-IDeliveryShortMessageCallback-pdu: Array<int>--><!--Device-IDeliveryShortMessageCallback-pdu: Array<int>-End-->
 

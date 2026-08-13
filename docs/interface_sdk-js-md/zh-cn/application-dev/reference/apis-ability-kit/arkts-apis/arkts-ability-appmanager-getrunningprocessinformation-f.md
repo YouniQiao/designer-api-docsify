@@ -6,17 +6,13 @@
 function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 ```
 
-获取当前应用运行进程的相关信息。使用Promise异步回调。
+获取当前应用运行进程的相关信息。使用Promise异步回调。 > **说明：** > > - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。 > > - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
-> **说明：**
-> 
-> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
-> 
-> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本9 - 10：ohos.permission.GET_RUNNING_INFO
@@ -37,7 +33,7 @@ function getRunningProcessInformation(): Promise<Array<ProcessInformation>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 
@@ -59,17 +55,13 @@ appManager.getRunningProcessInformation().then((data) => {
 function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void
 ```
 
-获取当前应用运行进程的相关信息。使用callback异步回调。
+获取当前应用运行进程的相关信息。使用callback异步回调。 > **说明：** > > - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。 > > - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
 
-> **说明：**
-> 
-> - 对于API version 11之前的版本，该接口需要申请权限ohos.permission.GET_RUNNING_INFO（该权限仅系统应用可申请）。
-> 
-> - 从API version 11开始，该接口仅用于获取调用方自身的进程信息，不再需要申请权限。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本9 - 10：ohos.permission.GET_RUNNING_INFO
@@ -84,14 +76,14 @@ function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInfor
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误 处理或其他自定义处理。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ProcessInformation&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为当前应用运行进程的信息；否则为错误对象。可进行错误 处理或其他自定义处理。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 ## 示例
 

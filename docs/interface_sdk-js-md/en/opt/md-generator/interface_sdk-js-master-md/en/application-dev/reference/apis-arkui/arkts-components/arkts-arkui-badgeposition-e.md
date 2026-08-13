@@ -4,6 +4,8 @@ Enumerates the display positions of a badge.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum BadgePosition--><!--Device-unnamed-declare enum BadgePosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ RightTop
 The badge is displayed in the upper right corner of the parent component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,6 +40,8 @@ The badge is vertically centered on the right of the parent component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -53,6 +59,8 @@ Left
 The badge is vertically centered on the left of the parent component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

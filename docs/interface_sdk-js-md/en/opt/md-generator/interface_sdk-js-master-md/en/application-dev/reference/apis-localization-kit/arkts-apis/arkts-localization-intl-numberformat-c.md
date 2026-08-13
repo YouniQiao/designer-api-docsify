@@ -4,6 +4,8 @@ Provides the API for formatting number strings.
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 <!--Device-intl-export class NumberFormat--><!--Device-intl-export class NumberFormat-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -23,6 +25,8 @@ constructor()
 Creates a **NumberFormat** object for the current system locale.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,6 +52,8 @@ constructor(locale: string | Array<string>, options?: NumberOptions)
 Creates a **NumberFormat** object based on the specified locale and options.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,6 +86,8 @@ format(num: number): string
 Formats a number.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,6 +134,8 @@ Formats a number range.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string--><!--Device-NumberFormat-formatRange(startRange: double, endRange: double): string-End-->
@@ -163,6 +173,8 @@ resolvedOptions(): NumberOptions
 Obtains the options for creating a **NumberFormat** object.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

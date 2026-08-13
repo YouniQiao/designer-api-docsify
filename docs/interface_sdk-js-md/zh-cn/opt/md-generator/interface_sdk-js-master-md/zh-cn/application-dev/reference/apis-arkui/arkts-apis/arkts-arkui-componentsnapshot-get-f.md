@@ -6,21 +6,13 @@
 function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void
 ```
 
-获取已加载的组件的截图，传入组件的[组件标识](common)，找到对应组件进行截图。通过回调返回结果。
-
-> **说明：**
-> 
-> - 从API version 12开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。
-> 
-> - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
+获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过回调返回结果。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [get](ohos.arkui.UIContext.ComponentSnapshot#get)
+**替代接口：** get
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,8 +34,8 @@ function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: Snap
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -95,21 +87,13 @@ struct SnapshotExample {
 function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-获取已加载的组件的截图，传入组件的[组件标识](common)，找到对应组件进行截图。通过Promise返回结果。
-
-> **说明：**
-> 
-> - 从API version 12开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法
-> 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。
-> 
-> - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
+获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过Promise返回结果。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
 
 **废弃版本：** 18
 
-**替代接口：** [get](ohos.arkui.UIContext.ComponentSnapshot#get)
+**替代接口：** get
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,8 +120,8 @@ function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 
 | 错误码ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

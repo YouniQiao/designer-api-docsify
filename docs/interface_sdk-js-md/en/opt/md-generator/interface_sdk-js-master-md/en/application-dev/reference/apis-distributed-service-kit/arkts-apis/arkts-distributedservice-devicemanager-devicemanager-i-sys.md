@@ -1,8 +1,6 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
 **Since:** 7
 
@@ -36,7 +34,7 @@ Authenticates a device.
 
 **Deprecated since:** 11
 
-**Substitutes:** [bindTarget](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.bindTarget(deviceId:)
+**Substitutes:** [bindTarget](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#bindTarget)(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback&lt;{deviceId: string;}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -51,19 +49,19 @@ Authenticates a device.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | deviceInfo | [DeviceInfo](../../apis-avsession-kit/arkts-apis/arkts-avsession-avsession-deviceinfo-i.md) | Yes |
-| [authParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-useriam-userauthicon-userauthicon-s.md) | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i.md) | Yes |
+| [authParam](../../apis-na/arkts-apis/arkts-na-useriam-userauthicon-userauthicon-s.md) | [AuthParam](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authparam-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{ deviceId: string, pinToken?: number }&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -159,12 +157,12 @@ Deletes credential information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -233,12 +231,12 @@ Obtains the information about a specific device based on the network ID. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -298,12 +296,12 @@ Obtains the information about a specific device based on the network ID. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -350,12 +348,12 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -408,11 +406,11 @@ Obtains local device information. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -457,13 +455,13 @@ Obtains local device information synchronously.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -489,7 +487,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.getAvailableDeviceList(callback:)
+**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceList)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -509,12 +507,12 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -566,11 +564,11 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -615,13 +613,13 @@ Obtains all trusted devices synchronously.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -671,14 +669,14 @@ Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices onl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -723,12 +721,12 @@ Imports credential information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -793,124 +791,7 @@ try {
 }
 ```
 
-## off('uiStateChange')
-
-```TypeScript
-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
-```
-
-Unsubscribes from UI status changes.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'uiStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-try {
-  dmInstance.off('uiStateChange');
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('deviceStateChange')
-
-```TypeScript
-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
-```
-
-Unsubscribes from changes in the device state.
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.off('deviceStateChange', (data: Data) => {
-    console.info('deviceStateChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('deviceFound')
+## off_deviceFound
 
 ```TypeScript
 off(type: 'deviceFound', callback?: Callback<{ subscribeId: number, device: DeviceInfo }>): void
@@ -922,7 +803,7 @@ Unsubscribes from device discovery events.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -943,12 +824,12 @@ Unsubscribes from device discovery events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -976,7 +857,73 @@ try {
 }
 ```
 
-## off('discoverFail')
+## off_deviceStateChange
+
+```TypeScript
+off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
+```
+
+Unsubscribes from changes in the device state.
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'deviceStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  action: deviceManager.DeviceStateChangeAction = 0;
+  device: deviceManager.DeviceInfo = {
+    deviceId: "",
+    deviceName: "",
+    deviceType: 0,
+    networkId: "",
+    range: 0,
+    authForm:0
+  };
+}
+
+try {
+  dmInstance.off('deviceStateChange', (data: Data) => {
+    console.info('deviceStateChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## off_discoverFail
 
 ```TypeScript
 off(type: 'discoverFail', callback?: Callback<{ subscribeId: number, reason: number }>): void
@@ -988,7 +935,7 @@ Unsubscribes from device discovery failures.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1009,12 +956,12 @@ Unsubscribes from device discovery failures.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1034,62 +981,7 @@ try {
 }
 ```
 
-## off('publishSuccess')
-
-```TypeScript
-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
-```
-
-Unsubscribes from device information publication success events.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'publishSuccess' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.off('publishSuccess', (data: Data) => {
-    console.info('publishSuccess' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## off('publishFail')
+## off_publishFail
 
 ```TypeScript
 off(type: 'publishFail', callback?: Callback<{ publishId: number, reason: number }>): void
@@ -1120,12 +1012,12 @@ Unsubscribes from device information publication failures.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1145,7 +1037,62 @@ try {
 }
 ```
 
-## off('serviceDie')
+## off_publishSuccess
+
+```TypeScript
+off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void
+```
+
+Unsubscribes from device information publication success events.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-off(type: 'publishSuccess', callback?: Callback<{ publishId: number }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'publishSuccess' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  publishId: number = 0;
+}
+
+try {
+  dmInstance.off('publishSuccess', (data: Data) => {
+    console.info('publishSuccess' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## off_serviceDie
 
 ```TypeScript
 off(type: 'serviceDie', callback?: () => void): void
@@ -1157,7 +1104,7 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1178,12 +1125,12 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1198,23 +1145,23 @@ try {
 }
 ```
 
-## on('uiStateChange')
+## off_uiStateChange
 
 ```TypeScript
-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
+off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void
 ```
 
-Subscribes to UI status changes.
+Unsubscribes from UI status changes.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [off](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
-<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+<!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void--><!--Device-DeviceManager-off(type: 'uiStateChange', callback?: Callback<{ param: string }>): void-End-->
 
 **System capability:** SystemCapability.DistributedHardware.DeviceManager
 
@@ -1225,110 +1172,31 @@ Subscribes to UI status changes.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'uiStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 
-class Data {
-  param: string = "";
-}
-
-interface TmpStr {
-  verifyFailed: boolean;
-}
-
 try {
-  dmInstance.on('uiStateChange', (data: Data) => {
-    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
-    let tmpStr: TmpStr = JSON.parse(data.param);
-    let isShow = tmpStr.verifyFailed;
-    console.info("uiStateChange executed, dialog closed" + isShow);
-  });
+  dmInstance.off('uiStateChange');
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
 
-## on('deviceStateChange')
-
-```TypeScript
-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
-```
-
-Subscribes to changes in the device state.
-
-**Since:** 7
-
-**Deprecated since:** 11
-
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import deviceManager from '@ohos.distributedHardware.deviceManager';
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  action: deviceManager.DeviceStateChangeAction = 0;
-  device: deviceManager.DeviceInfo = {
-    deviceId: "",
-    deviceName: "",
-    deviceType: 0,
-    networkId: "",
-    range: 0,
-    authForm:0
-  };
-}
-
-try {
-  dmInstance.on('deviceStateChange', (data: Data) => {
-    console.info("deviceStateChange on:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## on('deviceFound')
+## on_deviceFound
 
 ```TypeScript
 on(type: 'deviceFound', callback: Callback<{ subscribeId: number, device: DeviceInfo }>): void
@@ -1340,7 +1208,7 @@ Subscribes to device discovery events.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverSuccess', callback: Callback&lt;{ device: DeviceBasicInfo; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1361,12 +1229,12 @@ Subscribes to device discovery events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import deviceManager from '@ohos.distributedHardware.deviceManager';
@@ -1394,7 +1262,73 @@ try {
 }
 ```
 
-## on('discoverFail')
+## on_deviceStateChange
+
+```TypeScript
+on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void
+```
+
+Subscribes to changes in the device state.
+
+**Since:** 7
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void--><!--Device-DeviceManager-on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChangeAction, device: DeviceInfo }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'deviceStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ action: DeviceStateChangeAction, device: DeviceInfo }&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import deviceManager from '@ohos.distributedHardware.deviceManager';
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  action: deviceManager.DeviceStateChangeAction = 0;
+  device: deviceManager.DeviceInfo = {
+    deviceId: "",
+    deviceName: "",
+    deviceType: 0,
+    networkId: "",
+    range: 0,
+    authForm:0
+  };
+}
+
+try {
+  dmInstance.on('deviceStateChange', (data: Data) => {
+    console.info("deviceStateChange on:" + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_discoverFail
 
 ```TypeScript
 on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: number }>): void
@@ -1406,7 +1340,7 @@ Subscribes to device discovery failures.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'discoverFailure', callback: Callback&lt;{ reason: int; }&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1427,12 +1361,12 @@ Subscribes to device discovery failures.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1452,62 +1386,7 @@ try {
 }
 ```
 
-## on('publishSuccess')
-
-```TypeScript
-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
-```
-
-Subscribes to device information publication success events.
-
-**Since:** 9
-
-**Deprecated since:** 11
-
-**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
-
-<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'publishSuccess' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
-
-```TypeScript
-import { BusinessError } from '@ohos.base';
-
-class Data {
-  publishId: number = 0;
-}
-
-try {
-  dmInstance.on('publishSuccess', (data: Data) => {
-    console.info("publishSuccess:" + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
-}
-```
-
-## on('publishFail')
+## on_publishFail
 
 ```TypeScript
 on(type: 'publishFail', callback: Callback<{ publishId: number, reason: number }>): void
@@ -1538,12 +1417,12 @@ Subscribes to device information publication failures.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1563,7 +1442,62 @@ try {
 }
 ```
 
-## on('serviceDie')
+## on_publishSuccess
+
+```TypeScript
+on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void
+```
+
+Subscribes to device information publication success events.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void--><!--Device-DeviceManager-on(type: 'publishSuccess', callback: Callback<{ publishId: number }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'publishSuccess' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ publishId: number }&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  publishId: number = 0;
+}
+
+try {
+  dmInstance.on('publishSuccess', (data: Data) => {
+    console.info("publishSuccess:" + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_serviceDie
 
 ```TypeScript
 on(type: 'serviceDie', callback: () => void): void
@@ -1575,7 +1509,7 @@ Subscribes to dead events of the **DeviceManager** service.
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'serviceDie', callback?: Callback&lt;{}&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1596,12 +1530,12 @@ Subscribes to dead events of the **DeviceManager** service.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1613,6 +1547,70 @@ try {
 } catch (err) {
   let e: BusinessError = err as BusinessError;
   console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
+}
+```
+
+## on_uiStateChange
+
+```TypeScript
+on(type: 'uiStateChange', callback: Callback<{ param: string }>): void
+```
+
+Subscribes to UI status changes.
+
+**Since:** 9
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'replyResult', callback: Callback&lt;{ param: string; }&gt;)
+
+**Required permissions:** ohos.permission.ACCESS_SERVICE_DM
+
+<!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void--><!--Device-DeviceManager-on(type: 'uiStateChange', callback: Callback<{ param: string }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'uiStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ param: string }&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+
+class Data {
+  param: string = "";
+}
+
+interface TmpStr {
+  verifyFailed: boolean;
+}
+
+try {
+  dmInstance.on('uiStateChange', (data: Data) => {
+    console.info("uiStateChange executed, dialog closed" + JSON.stringify(data));
+    let tmpStr: TmpStr = JSON.parse(data.param);
+    let isShow = tmpStr.verifyFailed;
+    console.info("uiStateChange executed, dialog closed" + isShow);
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
 
@@ -1646,15 +1644,15 @@ Publishes device information for discovery purposes. The publish process lasts 2
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [11600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600105-publish-unavailable) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [11600105](../../apis-distributedservice-kit/errorcode-device-manager.md#11600105-publish-unavailable) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1709,13 +1707,13 @@ Releases this **DeviceManager** instance when it is no longer used.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1759,12 +1757,12 @@ Obtains the registration information of the credential.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1830,13 +1828,13 @@ Sets a user operation.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1870,7 +1868,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1890,15 +1888,15 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [11600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -1944,7 +1942,7 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 **Deprecated since:** 11
 
-**Substitutes:** [startDiscovering](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.startDiscovering(discoverParam:)
+**Substitutes:** [startDiscovering](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#startDiscovering)(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; })
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -1965,15 +1963,15 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [11600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2061,14 +2059,14 @@ Stops device discovery.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2115,14 +2113,14 @@ Deauthenticates a device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2181,14 +2179,14 @@ Stops publishing device information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';
@@ -2234,12 +2232,12 @@ Verifies authentication information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to initialize  in the example, see [deviceManager.createDeviceManager](#devicemanagercreatedevicemanager).
+For details about how to initialize  in the example, see deviceManager.createDeviceManager.
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

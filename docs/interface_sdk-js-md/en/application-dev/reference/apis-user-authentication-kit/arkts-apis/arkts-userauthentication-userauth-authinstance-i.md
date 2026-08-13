@@ -26,13 +26,9 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 cancel: () => void
 ```
 
-Cancels this authentication.
+Cancels this authentication. > **NOTE：**> > Use the obtained [AuthInstance](#AuthInstance) object to call this API to cancel authentication. > This [AuthInstance](#AuthInstance) must be the object that is currently performing > authentication.
 
-> **NOTE：**
-> 
-> Use the obtained [AuthInstance](#AuthInstance) object to call this API to cancel authentication.
-> This [AuthInstance](#AuthInstance) must be the object that is currently performing
-> authentication.
+**Type:** () =&gt; void
 
 **Since:** 9
 
@@ -48,47 +44,15 @@ Cancels this authentication.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
-## Examples
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  auth.cancel();
-  console.info('cancel auth success');
-} catch (error) {
-  console.error(`cancel auth failed, error = ${error}`);
-}
-```
-
 ## off
 
 ```TypeScript
 off: (name: AuthEventKey) => void
 ```
 
-Unsubscribes from the user authentication events of the specified type.
+Unsubscribes from the user authentication events of the specified type. - **name**: indicates the authentication event type. The value **result** means to unsubscribe from the authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey). > **NOTE：**> > The [AuthInstance](#AuthInstance) instance used to invoke this API must be the one used to > subscribe to the event.
 
-- **name**: indicates the authentication event type. The value **result** means to unsubscribe from the  
-authentication result, and the value **tip** means to unsubscribe from the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey).
-
-> **NOTE：**
-> 
-> The [AuthInstance](#AuthInstance) instance used to invoke this API must be the one used to
-> subscribe to the event.
+**Type:** (name: AuthEventKey) =&gt; void
 
 **Since:** 9
 
@@ -96,52 +60,11 @@ authentication result, and the value **tip** means to unsubscribe from the authe
 
 **Deprecated since:** 10
 
-**Substitutes:** [off](#off)
+**Substitutes:** [off](arkts-userauthentication-userauth-userauthinstance-i.md#off_result)
 
 <!--Device-AuthInstance-off: (name: AuthEventKey) => void--><!--Device-AuthInstance-off: (name: AuthEventKey) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
-## Examples
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // Subscribe to the authentication result.
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
-    }
-  });
-  // Unsubscribe from the authentication result.
-  auth.off('result');
-  console.info('cancel subscribe authentication event success');
-} catch (error) {
-  console.error(`cancel subscribe authentication event failed, error = ${error}`);
-  // do error.
-}
-```
 
 ## on
 
@@ -149,16 +72,9 @@ try {
 on: (name: AuthEventKey, callback: AuthEvent) => void
 ```
 
-Subscribes to the user authentication events of the specified type.
+Subscribes to the user authentication events of the specified type. - **name**: indicates the authentication event type. The value **result** means that the callback returns the authentication result, and the value **tip** means that the callback returns the authentication tip information. For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey). - **callback**: callback used to return the authentication result or tip information. For details, see [AuthEvent](arkts-userauthentication-userauth-authevent-i.md#AuthEvent). > **NOTE：**> > Use the [AuthInstance](#AuthInstance) instance obtained to call this API.
 
-- **name**: indicates the authentication event type. The value **result** means that the callback returns the  
-authentication result, and the value **tip** means that the callback returns the authentication tip information.For details, see [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md#AuthEventKey).  
-- **callback**: callback used to return the authentication result or tip information. For details, see  
-[AuthEvent](arkts-userauthentication-userauth-authevent-i.md#AuthEvent).
-
-> **NOTE：**
-> 
-> Use the [AuthInstance](#AuthInstance) instance obtained to call this API.
+**Type:** (name: AuthEventKey, callback: AuthEvent) =&gt; void
 
 **Since:** 9
 
@@ -166,67 +82,11 @@ authentication result, and the value **tip** means that the callback returns the
 
 **Deprecated since:** 10
 
-**Substitutes:** [on](userAuth.UserAuthInstance.on)
+**Substitutes:** [on](arkts-userauthentication-userauth-userauthinstance-i.md#on_result)
 
 <!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void--><!--Device-AuthInstance-on: (name: AuthEventKey, callback: AuthEvent) => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| name | [AuthEventKey](arkts-userauthentication-userauth-autheventkey-t.md) | Yes |  |
-| callback | [AuthEvent](arkts-userauthentication-userauth-authevent-i.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-
-## Examples
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  // Subscribe to the authentication result.
-  auth.on('result', {
-    callback: (result: userAuth.AuthResultInfo) => {
-      console.info(`authV9 result ${result.result}`);
-      console.info(`authV9 token ${result.token}`);
-      console.info(`authV9 remainAttempts ${result.remainAttempts}`);
-      console.info(`authV9 lockoutDuration ${result.lockoutDuration}`);
-    }
-  });
-  // Subscribe to authentication tip information.
-  auth.on('tip', {
-    callback : (result : userAuth.TipInfo) => {
-      switch (result.tip) {
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_BRIGHT:
-          // Do something.
-          break;
-        case userAuth.FaceTips.FACE_AUTH_TIP_TOO_DARK:
-          // Do something.
-          break;
-        default:
-          // do others.
-      }
-    }
-  } as userAuth.AuthEvent);
-  auth.start();
-  console.info('authV9 start success');
-} catch (error) {
-  console.error(`authV9 error = ${error}`);
-  // do error.
-}
-```
 
 ## start
 
@@ -234,11 +94,9 @@ try {
 start: () => void
 ```
 
-Starts authentication.
+Starts authentication. > **NOTE：**> > Use the obtained [AuthInstance](#AuthInstance) object to call this API for authentication.
 
-> **NOTE：**
-> 
-> Use the obtained [AuthInstance](#AuthInstance) object to call this API for authentication.
+**Type:** () =&gt; void
 
 **Since:** 9
 
@@ -253,38 +111,4 @@ Starts authentication.
 <!--Device-AuthInstance-start: () => void--><!--Device-AuthInstance-start: () => void-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [12500010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
-| [12500009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500009-authentication-locked) | The authenticator is locked. |
-| [12500006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12500007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500007-authentication-service-is-busy) | The authentication task is busy. |
-| [12500004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500004-authentication-timed-out) | The operation is time-out. |
-| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
-| [12500003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500003-authentication-canceled) | The operation is canceled. |
-| [12500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500001-authentication-failed) | Authentication failed. |
-
-## Examples
-
-```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
-
-let challenge = new Uint8Array([1, 2, 3, 4, 5, 6, 7, 8]);
-let authType = userAuth.UserAuthType.FACE;
-let authTrustLevel = userAuth.AuthTrustLevel.ATL1;
-
-try {
-  let auth = userAuth.getAuthInstance(challenge, authType, authTrustLevel);
-  auth.start();
-  console.info('authV9 start auth success');
-} catch (error) {
-  console.error(`authV9 start auth failed, error = ${error}`);
-}
-```
 

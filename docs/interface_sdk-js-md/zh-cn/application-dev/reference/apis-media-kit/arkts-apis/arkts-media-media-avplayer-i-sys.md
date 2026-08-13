@@ -1,23 +1,12 @@
 # AVPlayer
 
-播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过  
-[createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer)构建一个AVPlayer实例。
+播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer)构建一个 AVPlayer实例。 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。 应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。 Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。 > **说明：** > > - 本Interface首批API从API version 9开始支持。
 
-在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。  
-[on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))：监听播放状态机AVPlayerState切换。[on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback))：监听错误事件。
+**起始版本：** 23
 
-应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、  
-[视频播放开发指导](../../../media/media/video-playback.md)。
-
-> **说明：**
-> 
-> - 本Interface首批API从API version 9开始支持。
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
 
@@ -33,7 +22,9 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -59,7 +50,7 @@ Specifies whether to forcibly load the video. This API can be called only when t
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
 
 ## 示例
 
@@ -73,12 +64,6 @@ async function test(){
 
 ## getCurrentTrack
 
-ArkTS-Dyn:
-```TypeScript
-getCurrentTrack(trackType: MediaType): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCurrentTrack(trackType: MediaType): Promise<int>
 ```
@@ -87,7 +72,9 @@ Obtains the selected track by the specified media type. This API can be called o
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,21 +88,21 @@ Obtains the selected track by the specified media type. This API can be called o
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | specified media Type, see [MediaType](#MediaType). |
+| trackType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | specified media Type, see MediaType. |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | A Promise instance used to return selected track index. |
+| Promise&lt;int&gt; | A Promise instance used to return selected track index. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
+| [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Called from Non-System applications. Return by promise. |
+| [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 

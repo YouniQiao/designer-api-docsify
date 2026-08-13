@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface IMEClient--><!--Device-unnamed-declare interface IMEClient-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ setExtraConfig(config: InputMethodExtraConfig): void
 设置输入法扩展信息。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,6 +47,8 @@ nodeId: number
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

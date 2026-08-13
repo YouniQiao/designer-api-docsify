@@ -2,9 +2,11 @@
 
 Enumerates the errors codes available for failures in launching an atomic service.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum FailureCode--><!--Device-unnamed-declare enum FailureCode-End-->
 
@@ -18,11 +20,15 @@ FAILURE_CODE_SYSTEM_MALFUNCTION = 0
 
 The atomic service cannot be launched due to a system error (for example, a crash in the transition dialog box).
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FailureCode-FAILURE_CODE_SYSTEM_MALFUNCTION = 0--><!--Device-FailureCode-FAILURE_CODE_SYSTEM_MALFUNCTION = 0-End-->
 
@@ -36,11 +42,15 @@ FAILURE_CODE_USER_CANCEL = 1
 
 The user canceled the operation.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FailureCode-FAILURE_CODE_USER_CANCEL = 1--><!--Device-FailureCode-FAILURE_CODE_USER_CANCEL = 1-End-->
 
@@ -54,11 +64,15 @@ FAILURE_CODE_USER_REFUSE = 2
 
 The user refused the operation.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FailureCode-FAILURE_CODE_USER_REFUSE = 2--><!--Device-FailureCode-FAILURE_CODE_USER_REFUSE = 2-End-->
 

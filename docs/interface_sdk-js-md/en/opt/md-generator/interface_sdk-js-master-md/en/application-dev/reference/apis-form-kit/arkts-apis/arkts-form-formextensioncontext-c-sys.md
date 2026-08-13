@@ -1,18 +1,14 @@
 # FormExtensionContext
 
-The FormExtensionContext module, inherited from   
-[ExtensionContext](./application/ExtensionContext:ExtensionContext), provides the context environment for the   
-[FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md#FormExtensionAbility).You can use the APIs of this module to start a FormExtensionAbility.
+The FormExtensionContext module, inherited from [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext), provides the context environment for the [FormExtensionAbility](arkts-form-app-form-formextensionability-formextensionability-c.md#FormExtensionAbility). You can use the APIs of this module to start a FormExtensionAbility. > **NOTE：**> - The APIs of this module can be used only in the stage model.
 
-> **NOTE：**
+**Inheritance/Implementation:** FormExtensionContext extends ExtensionContext
 
-> - The APIs of this module can be used only in the stage model.
+**Since:** 23
 
-**Inheritance/Implementation:** FormExtensionContext extends [ExtensionContext](ExtensionContext)
+**Deprecated since:** -1
 
-**Since:** 9
-
-<!--Device-unnamed-declare class FormExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class FormExtensionContext extends ExtensionContext-End-->
+<!--Device-unnamed-declare class FormExtensionContext--><!--Device-unnamed-declare class FormExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
@@ -24,7 +20,9 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects this ability to a ServiceExtensionAbility.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,18 +49,18 @@ Connects this ability to a ServiceExtensionAbility.
 
 | Error Code ID |
 | --- |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000004](../../apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../../apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000006](../../apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000001](../../apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16000002](../../apis-ability-kit/errorcode-ability.md#16000002-incorrect-ability-type) |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16000008](../../apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -116,10 +114,11 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-Disconnects this ability from a **ServiceExtensionAbility** and after the successful disconnection, sets the   
-**remote** object returned upon the connection to void. This API uses an asynchronous callback to return the result.
+Disconnects this ability from a **ServiceExtensionAbility** and after the successful disconnection, sets the **remote** object returned upon the connection to void. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,9 +139,9 @@ Disconnects this ability from a **ServiceExtensionAbility** and after the succes
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -187,7 +186,9 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 Disconnects this ability from a ServiceExtensionAbility and after the successful disconnection, sets the remote object returned upon the connection to void. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -213,9 +214,9 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -261,7 +262,9 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts an ability. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -282,12 +285,12 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 16500101 |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 
@@ -327,7 +330,9 @@ startAbility(want: Want): Promise<void>
 
 Starts an ability. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -353,12 +358,12 @@ Starts an ability. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 16500101 |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 Describes the parameters for starting and updating the floating ball.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-floatingBall-interface FloatingBallParams--><!--Device-floatingBall-interface FloatingBallParams-End-->
 
@@ -22,14 +24,15 @@ import { floatingBall } from '@kit.ArkUI';
 backgroundColor?: string
 ```
 
-Background color of the floating ball, in hexadecimal format without opacity (for example, **'#008EF5'** or  
-**'#FF008EF5'**). If this parameter is not specified, the default background color of the system (light or dark mode) is used.
+Background color of the floating ball, in hexadecimal format without opacity (for example, **'#008EF5'** or **'#FF008EF5'**). If this parameter is not specified, the default background color of the system (light or dark mode) is used.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-backgroundColor?: string--><!--Device-FloatingBallParams-backgroundColor?: string-End-->
 
@@ -45,9 +48,11 @@ Content of the floating ball. It cannot exceed 64 bytes. The default value is an
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-content?: string--><!--Device-FloatingBallParams-content?: string-End-->
 
@@ -59,7 +64,7 @@ Content of the floating ball. It cannot exceed 64 bytes. The default value is an
 contentColor?: string
 ```
 
-The color of the floating ball content, in hexadecimal format without opacity(e.g., **'#008EF5'** or **'#FF008EF5'**).Providing contentColor is not allowed if 'backgroundColor' is not provided.
+The color of the floating ball content, in hexadecimal format without opacity (e.g., **'#008EF5'** or **'#FF008EF5'**). Providing contentColor is not allowed if 'backgroundColor' is not provided.
 
 **Type:** string
 
@@ -67,7 +72,9 @@ The color of the floating ball content, in hexadecimal format without opacity(e.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,9 +92,11 @@ Icon of the floating ball. The total number of bytes of the icon pixels cannot e
 
 **Type:** image.PixelMap
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-icon?: image.PixelMap--><!--Device-FloatingBallParams-icon?: image.PixelMap-End-->
 
@@ -103,9 +112,11 @@ Floating ball template.
 
 **Type:** [FloatingBallTemplate](arkts-arkui-floatingball-floatingballtemplate-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-template: FloatingBallTemplate--><!--Device-FloatingBallParams-template: FloatingBallTemplate-End-->
 
@@ -117,8 +128,7 @@ Floating ball template.
 textUpdateAnimationType?: FloatingBallTextUpdateAnimationType
 ```
 
-Animation type used when the floating ball text is updated. The default value is  
-**FloatingBallTextUpdateAnimationType.ANIMATION_NONE**.
+Animation type used when the floating ball text is updated. The default value is **FloatingBallTextUpdateAnimationType.ANIMATION_NONE**.
 
 **Type:** [FloatingBallTextUpdateAnimationType](arkts-arkui-floatingball-floatingballtextupdateanimationtype-e.md)
 
@@ -126,7 +136,9 @@ Animation type used when the floating ball text is updated. The default value is
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,9 +156,11 @@ Title of the floating ball. It cannot be an empty string and cannot exceed 64 by
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FloatingBallParams-title: string--><!--Device-FloatingBallParams-title: string-End-->
 
@@ -158,7 +172,7 @@ Title of the floating ball. It cannot be an empty string and cannot exceed 64 by
 titleColor?: string
 ```
 
-The color of the floating ball title, in hexadecimal format without opacity(e.g., **'#008EF5'** or **'#FF008EF5'**).Providing titleColor is not allowed if 'backgroundColor' is not provided.
+The color of the floating ball title, in hexadecimal format without opacity (e.g., **'#008EF5'** or **'#FF008EF5'**). Providing titleColor is not allowed if 'backgroundColor' is not provided.
 
 **Type:** string
 
@@ -166,7 +180,9 @@ The color of the floating ball title, in hexadecimal format without opacity(e.g.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

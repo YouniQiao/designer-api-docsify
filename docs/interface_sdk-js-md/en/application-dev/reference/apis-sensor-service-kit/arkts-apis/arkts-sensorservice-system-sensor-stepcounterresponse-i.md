@@ -38,7 +38,7 @@ Number of counted steps after the sensor is restarted.
 
 **Deprecated since:** 8
 
-**Substitutes:** [steps](ohos.sensor/sensor#PedometerResponse.steps)
+**Substitutes:** [steps](arkts-sensorservice-sensor-pedometerresponse-i.md#steps)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 

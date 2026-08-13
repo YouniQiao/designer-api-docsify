@@ -1,12 +1,12 @@
 # HistoryVersion
 
-Represents the historical version information of the device-cloud file when the  
-[gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#getHistoryVersionList) method of the  
-[FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion) class is called.
+Represents the historical version information of the device-cloud file when the [gethistoryversionlist](arkts-corefile-cloudsync-fileversion-c.md#getHistoryVersionList) method of the [FileVersion](arkts-corefile-cloudsync-fileversion-c.md#FileVersion) class is called.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-interface HistoryVersion--><!--Device-cloudSync-interface HistoryVersion-End-->
 
@@ -24,17 +24,15 @@ import { cloudSync } from '@kit.CoreFileKit';
 autoResolved: boolean
 ```
 
-Whether the current version is the one where conflicts were automatically resolved.
-
-When the application is set to manually resolve conflicts, **false** is returned by default, which is meaningless.
-
-When the application is set to automatically resolve conflicts, the device side automatically resolves conflicts.The value **true** means conflicts exist in the current version and have been automatically resolved by the device-cloud service; the value **false** means no conflict exists and conflicts are not automatically resolved.
+Whether the current version is the one where conflicts were automatically resolved. When the application is set to manually resolve conflicts, **false** is returned by default, which is meaningless. When the application is set to automatically resolve conflicts, the device side automatically resolves conflicts. The value **true** means conflicts exist in the current version and have been automatically resolved by the device-cloud service; the value **false** means no conflict exists and conflicts are not automatically resolved.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HistoryVersion-autoResolved: boolean--><!--Device-HistoryVersion-autoResolved: boolean-End-->
 
@@ -48,11 +46,13 @@ editedTime: long
 
 File content modification timestamp, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HistoryVersion-editedTime: long--><!--Device-HistoryVersion-editedTime: long-End-->
 
@@ -66,11 +66,13 @@ fileSize: long
 
 File size in bytes.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HistoryVersion-fileSize: long--><!--Device-HistoryVersion-fileSize: long-End-->
 
@@ -86,9 +88,11 @@ File name of the current version.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HistoryVersion-originalFileName: string--><!--Device-HistoryVersion-originalFileName: string-End-->
 
@@ -104,9 +108,11 @@ Hash value of the file content of the current version.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HistoryVersion-sha256: string--><!--Device-HistoryVersion-sha256: string-End-->
 
@@ -122,9 +128,11 @@ File version.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HistoryVersion-versionId: string--><!--Device-HistoryVersion-versionId: string-End-->
 

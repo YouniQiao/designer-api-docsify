@@ -2,7 +2,9 @@
 
 Defines information about the data connection status.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-observer-export interface DataConnectionStateInfo--><!--Device-observer-export interface DataConnectionStateInfo-End-->
 
@@ -24,7 +26,9 @@ Network type.
 
 **Type:** [RatType](arkts-telephony-observer-rattype-t.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectionStateInfo-network: RatType--><!--Device-DataConnectionStateInfo-network: RatType-End-->
 
@@ -40,7 +44,9 @@ Data connection status.
 
 **Type:** DataConnectState
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataConnectionStateInfo-state: DataConnectState--><!--Device-DataConnectionStateInfo-state: DataConnectState-End-->
 

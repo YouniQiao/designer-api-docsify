@@ -1,13 +1,18 @@
 # @ohos.usb(USB Manager)
 
-The **usb** module provides USB device management functions, including USB device list query, bulk data transfer,control transfer, and permission control.
+/*
+ Copyright (c) 2021-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> The initial APIs of this module are supported since API version 8. Newly added APIs will be marked with
-> a superscript to indicate their earliest API version.
-> The APIs provided by this module are no longer maintained since API version 9. You are advised to use
-> [@ohos.usbManager](arkts-usbmanager.md#usbManager).
 
 **Since:** 8
 
@@ -15,7 +20,7 @@ The **usb** module provides USB device management functions, including USB devic
 
 **Deprecated since:** 9
 
-**Substitutes:** [usbManager](arkts-usbmanager.md#usbManager)
+**Substitutes:** [usbManager](arkts-usbmanager.md#@ohos.usbManager)
 
 <!--Device-unnamed-declare namespace usb--><!--Device-unnamed-declare namespace usb-End-->
 
@@ -33,44 +38,44 @@ import { usb } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer) | Performs bulk transfer.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and endpoints, call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call  [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface. |
-| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) | Claims a USB interface.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and USB interfaces,call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
-| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe) | Closes a USB device pipe.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
-| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) | Connects to a USB device.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, and then call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission. |
-| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer) | Performs control transfer.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
-| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) | Obtains the USB device list. |
-| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor) | Obtains the file descriptor.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
-| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor) | Obtains the raw USB descriptor.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
-| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright) | Checks whether the application has the permission to access the device. |
-| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface) | Releases a USB interface.  Before you do this, ensure that you have claimed the interface by calling  [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface). |
-| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright) | Requests the temporary permission for the application to access a USB device. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately. |
-| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration) | Sets the device configuration.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
-| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface) | Sets a USB interface.  Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and interfaces, call  [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call  [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call  [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface. |
+| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulkTransfer) | Performs bulk transfer. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and endpoints, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface. |
+| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) | Claims a USB interface. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and USB interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
+| [closePipe](arkts-basicservices-usb-closepipe-f.md#closePipe) | Closes a USB device pipe. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
+| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) | Connects to a USB device. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, and then call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission. |
+| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controlTransfer) | Performs control transfer. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
+| [getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) | Obtains the USB device list. |
+| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getFileDescriptor) | Obtains the file descriptor. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
+| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getRawDescriptor) | Obtains the raw USB descriptor. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
+| [hasRight](arkts-basicservices-usb-hasright-f.md#hasRight) | Checks whether the application has the permission to access the device. |
+| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseInterface) | Releases a USB interface. Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface). |
+| [requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) | Requests the temporary permission for the application to access a USB device. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately. |
+| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setConfiguration) | Sets the device configuration. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and device configuration, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, and call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter. |
+| [setInterface](arkts-basicservices-usb-setinterface-f.md#setInterface) | Sets a USB interface. Before you do this, call [usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices) to obtain the USB device list and interfaces, call [usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight) to request the device access permission, call [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice) to obtain **devicepipe** as an input parameter, and call [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface) to claim the USB interface. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getCurrentFunctions](arkts-basicservices-usb-getcurrentfunctions-f-sys.md#getcurrentfunctions) | Obtains the numeric mask combination for the USB function list in Device mode. |
-| [getPorts](arkts-basicservices-usb-getports-f-sys.md#getports) | Obtains the list of all physical USB ports. |
-| [getSupportedModes](arkts-basicservices-usb-getsupportedmodes-f-sys.md#getsupportedmodes) | Obtains the mask combination for the supported mode list of a given USB port. |
-| [setCurrentFunctions](arkts-basicservices-usb-setcurrentfunctions-f-sys.md#setcurrentfunctions) | Sets the current USB function list in Device mode. |
-| [setPortRoles](arkts-basicservices-usb-setportroles-f-sys.md#setportroles) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). |
-| [usbFunctionsFromString](arkts-basicservices-usb-usbfunctionsfromstring-f-sys.md#usbfunctionsfromstring) | Converts the USB function list in the string format to a numeric mask in Device mode. |
-| [usbFunctionsToString](arkts-basicservices-usb-usbfunctionstostring-f-sys.md#usbfunctionstostring) | Converts the USB function list in the numeric mask format to a string in Device mode. |
+| [getCurrentFunctions](arkts-basicservices-usb-getcurrentfunctions-f-sys.md#getCurrentFunctions) | Obtains the numeric mask combination for the USB function list in Device mode. |
+| [getPorts](arkts-basicservices-usb-getports-f-sys.md#getPorts) | Obtains the list of all physical USB ports. |
+| [getSupportedModes](arkts-basicservices-usb-getsupportedmodes-f-sys.md#getSupportedModes) | Obtains the mask combination for the supported mode list of a given USB port. |
+| [setCurrentFunctions](arkts-basicservices-usb-setcurrentfunctions-f-sys.md#setCurrentFunctions) | Sets the current USB function list in Device mode. |
+| [setPortRoles](arkts-basicservices-usb-setportroles-f-sys.md#setPortRoles) | Sets the role types supported by a specified port, which can be **powerRole** (for charging) and **dataRole** (for data transfer). |
+| [usbFunctionsFromString](arkts-basicservices-usb-usbfunctionsfromstring-f-sys.md#usbFunctionsFromString) | Converts the USB function list in the string format to a numeric mask in Device mode. |
+| [usbFunctionsToString](arkts-basicservices-usb-usbfunctionstostring-f-sys.md#usbFunctionsToString) | Converts the USB function list in the numeric mask format to a string in Device mode. |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md#USBDevice) can contain multiple **USBConfig**instances. |
+| [USBConfig](arkts-basicservices-usb-usbconfig-i.md) | Represents the USB configuration. One [USBDevice](arkts-basicservices-usb-usbdevice-i.md#USBDevice) can contain multiple **USBConfig** instances. |
 | [USBControlParams](arkts-basicservices-usb-usbcontrolparams-i.md) | Represents control transfer parameters. |
 | [USBDevice](arkts-basicservices-usb-usbdevice-i.md) | Represents the USB device information. |
 | [USBDevicePipe](arkts-basicservices-usb-usbdevicepipe-i.md) | Represents a USB device pipe, which is used to determine a USB device. |
-| [USBEndpoint](arkts-basicservices-usb-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through  [USBInterface](arkts-basicservices-usb-usbinterface-i.md#USBInterface). |
-| [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md#USBConfig) can contain multiple **USBInterface** instances,each providing a specific function. |
+| [USBEndpoint](arkts-basicservices-usb-usbendpoint-i.md) | Represents the USB endpoint from which data is sent or received. You can obtain the USB endpoint through [USBInterface](arkts-basicservices-usb-usbinterface-i.md#USBInterface). |
+| [USBInterface](arkts-basicservices-usb-usbinterface-i.md) | Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.md#USBConfig) can contain multiple **USBInterface** instances, each providing a specific function. |
 
 <!--Del-->
 ### Interfaces（系统接口）

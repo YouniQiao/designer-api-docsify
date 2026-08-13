@@ -4,11 +4,13 @@
 
 **继承/实现关系：** AmbientTemperatureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-sensor-interface AmbientTemperatureResponse extends Response--><!--Device-sensor-interface AmbientTemperatureResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface AmbientTemperatureResponse--><!--Device-sensor-interface AmbientTemperatureResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,11 +22,13 @@ temperature: double
 
 环境温度。单位：℃（摄氏度）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AmbientTemperatureResponse-temperature: double--><!--Device-AmbientTemperatureResponse-temperature: double-End-->
 

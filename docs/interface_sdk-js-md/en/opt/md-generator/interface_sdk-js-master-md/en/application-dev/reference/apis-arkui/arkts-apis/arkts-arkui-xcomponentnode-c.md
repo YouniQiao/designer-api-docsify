@@ -2,15 +2,15 @@
 
 Defines XComponent Node.
 
-**Inheritance/Implementation:** XComponentNode extends [FrameNode](FrameNode)
+**Inheritance/Implementation:** XComponentNode extends FrameNode
 
 **Since:** 11
 
 **Deprecated since:** 12
 
-**Substitutes:** [XComponent](ohos.arkui.node/typeNode#XComponent)
+**Substitutes:** XComponent
 
-<!--Device-unnamed-export declare class XComponentNode extends FrameNode--><!--Device-unnamed-export declare class XComponentNode extends FrameNode-End-->
+<!--Device-unnamed-export declare class XComponentNode--><!--Device-unnamed-export declare class XComponentNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +26,7 @@ Set the render type of the builderNode.
 
 **Deprecated since:** 12
 
-**Substitutes:** [appendChild](ohos.arkui.node/FrameNode#appendChild)
+**Substitutes:** appendChild
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,7 +59,7 @@ constructor.
 
 **Deprecated since:** 12
 
-**Substitutes:** [createNode](ohos.arkui.node/typeNode#createNode)
+**Substitutes:** createNode
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,7 +89,7 @@ Called when the XComponent surface has been created.
 
 **Deprecated since:** 12
 
-**Substitutes:** [onLoad](XComponent/XComponentAttribute#onLoad)
+**Substitutes:** onLoad
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,7 +115,7 @@ Called when the XComponent surface has been destroyed.
 
 **Deprecated since:** 12
 
-**Substitutes:** [onDestroy](XComponent/XComponentAttribute#onDestroy)
+**Substitutes:** onDestroy
 
 **Model restriction:** This API can be used only in the stage model.
 

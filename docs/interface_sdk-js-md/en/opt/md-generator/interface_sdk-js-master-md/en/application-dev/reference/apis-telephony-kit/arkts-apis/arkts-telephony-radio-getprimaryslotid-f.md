@@ -12,11 +12,11 @@ import { radio } from '@kit.TelephonyKit';
 function getPrimarySlotId(callback: AsyncCallback<number>): void
 ```
 
-Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted.
+Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted. The primary card is the SIM card inserted in the card slot that uses data services by default.
 
-The primary card is the SIM card inserted in the card slot that uses data services by default.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-radio-function getPrimarySlotId(callback: AsyncCallback<int>): void--><!--Device-radio-function getPrimarySlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -32,11 +32,11 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -59,11 +59,11 @@ radio.getPrimarySlotId((err: BusinessError, data: number) => {
 function getPrimarySlotId(): Promise<number>
 ```
 
-Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted.
+Obtains the index number of the card slot where the primary card is located if multiple SIM cards are inserted. The primary card is the SIM card inserted in the card slot that uses data services by default.
 
-The primary card is the SIM card inserted in the card slot that uses data services by default.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-radio-function getPrimarySlotId(): Promise<int>--><!--Device-radio-function getPrimarySlotId(): Promise<int>-End-->
 
@@ -79,9 +79,9 @@ The primary card is the SIM card inserted in the card slot that uses data servic
 
 | Error Code ID |
 | --- |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
 
 ## Examples
 

@@ -1,18 +1,20 @@
 # InflateBackInputCallback
 
 ```TypeScript
-type InflateBackInputCallback = (inDesc: object) => ArrayBuffer
+type InflateBackInputCallback = (inDesc: RecordData) => ArrayBuffer
 ```
 
 A callback function for reading input data provided by a user. When the decompression process requires more input data, zlib will call this function. This function should read data from the data source to the buffer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-zlib-type InflateBackInputCallback = (inDesc: object) => ArrayBuffer--><!--Device-zlib-type InflateBackInputCallback = (inDesc: object) => ArrayBuffer-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-zlib-type InflateBackInputCallback = (inDesc: RecordData) => ArrayBuffer--><!--Device-zlib-type InflateBackInputCallback = (inDesc: RecordData) => ArrayBuffer-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
@@ -20,7 +22,7 @@ A callback function for reading input data provided by a user. When the decompre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inDesc | object | Yes | A universal user-defined data object. The specific type and content depend on the actual application scenario, which can include configuration data, file handles, etc. |
+| inDesc | [RecordData](arkts-basicservices-recorddata-t.md) | Yes | A universal user-defined data object. The specific type and content depend on the actual application scenario, which can include configuration data, file handles, etc. |
 
 **Return value:**
 

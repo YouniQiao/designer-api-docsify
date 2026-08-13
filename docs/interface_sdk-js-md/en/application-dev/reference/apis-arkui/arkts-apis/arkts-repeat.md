@@ -1,5 +1,19 @@
 # repeat(Defines Repeat component.)
 
+/*
+ Copyright (c) 2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
+
 ## Summary
 
 ### Interfaces
@@ -7,7 +21,7 @@
 | Name | Description |
 | --- | --- |
 | [RepeatItem](arkts-arkui-repeatitem-i.md) | Construct a new type for each item. |
-| [TemplateOptions](arkts-arkui-templateoptions-i.md) | When **cachedCount** is set to the maximum number of nodes in the display area of the container component for the current template, **Repeat** achieves maximum reuse efficiency. If there are no nodes of the current template in the container component's display area, the cache list is not released, which increases application memory usage. You are advised to set **cachedCount** to the number of nodes within the container component's display area and adjust the value according to the actual situation. Yet, setting **cachedCount** to less than 2 is not recommended, as this may lead to the frequent node creation during rapid scrolling and result in performance degradation.  > **NOTE：** >  > The **.cachedCount()** attribute of the scrollable container component and the **cachedCount** parameter of the > **.template()** method of **Repeat** are used to balance performance and memory, but their meanings are different. >  > - **.cachedCount()** of the scrollable container component: size of the preloading area outside the display area of > the container component. The child component nodes in this area are located in the component tree. The scrollable > container component renders nodes in these preloading areas, improving the list scrolling performance. >  > - cachedCount in .template(): size of the cache pool for each template in the **Repeat** component. When rendering > a new child component, **Repeat** checks whether there are available nodes in the cache pool for the corresponding > template. If yes, the nodes are reused. If no, new nodes are created. |
+| [TemplateOptions](arkts-arkui-templateoptions-i.md) | When **cachedCount** is set to the maximum number of nodes in the display area of the container component for the current template, **Repeat** achieves maximum reuse efficiency. If there are no nodes of the current template in the container component's display area, the cache list is not released, which increases application memory usage. You are advised to set **cachedCount** to the number of nodes within the container component's display area and adjust the value according to the actual situation. Yet, setting **cachedCount** to less than 2 is not recommended, as this may lead to the frequent node creation during rapid scrolling and result in performance degradation. > **NOTE：**> > The **.cachedCount()** attribute of the scrollable container component and the **cachedCount** parameter of the > **.template()** method of **Repeat** are used to balance performance and memory, but their meanings are different. > > - **.cachedCount()** of the scrollable container component: size of the preloading area outside the display area of > the container component. The child component nodes in this area are located in the component tree. The scrollable > container component renders nodes in these preloading areas, improving the list scrolling performance. > > - cachedCount in .template(): size of the cache pool for each template in the **Repeat** component. When rendering > a new child component, **Repeat** checks whether there are available nodes in the cache pool for the corresponding > template. If yes, the nodes are reused. If no, new nodes are created. |
 | [VirtualScrollOptions](arkts-arkui-virtualscrolloptions-i.md) | Configures the expected total number of data items to be loaded in lazy loading mode, the reuse capability, and the precise data lazy loading capability. |
 
 ### Enums

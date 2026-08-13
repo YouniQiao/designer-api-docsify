@@ -12,11 +12,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getOriginalFileName(fileName: string): string
 ```
 
-Obtains the original name of a DLP file. This API returns the result synchronously.
-
-Determine the file type based on the original file name extension and select an application to open the file.
+Obtains the original name of a DLP file. This API returns the result synchronously. Determine the file type based on the original file name extension and select an application to open the file.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getOriginalFileName(fileName: string): string--><!--Device-dlpPermission-function getOriginalFileName(fileName: string): string-End-->
 
@@ -38,9 +38,9 @@ Determine the file type based on the original file name extension and select an 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

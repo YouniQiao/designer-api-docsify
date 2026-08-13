@@ -6,9 +6,11 @@ type NetHandle = connection.NetHandle
 
 Get the handle of the data network.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sharing-type NetHandle = connection.NetHandle--><!--Device-sharing-type NetHandle = connection.NetHandle-End-->
 

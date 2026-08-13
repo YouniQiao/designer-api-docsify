@@ -2,11 +2,13 @@
 
 定义懒加载垂直瀑布流布局属性。
 
-**继承/实现关系：** LazyVWaterFlowLayoutAttribute extends [LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>](LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>)
+**继承/实现关系：** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>--><!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyVWaterFlowLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ columnsTemplate(value: string | ItemFillPolicy | undefined): LazyVWaterFlowLayou
 该参数用于指定当前瀑布流布局中的列数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

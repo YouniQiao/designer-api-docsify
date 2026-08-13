@@ -12,10 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>
 ```
 
-Obtains the memory information of application processes by reading the data of the **\/proc/{pid}/smaps_rollup** and  
-**\/proc/{pid}/statm** nodes. This API uses a promise to return the result.
+Obtains the memory information of application processes by reading the data of the **\/proc/{pid}/smaps_rollup** and **\/proc/{pid}/statm** nodes. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>--><!--Device-hidebug-function getAppNativeMemInfoAsync(): Promise<NativeMemInfo>-End-->
 

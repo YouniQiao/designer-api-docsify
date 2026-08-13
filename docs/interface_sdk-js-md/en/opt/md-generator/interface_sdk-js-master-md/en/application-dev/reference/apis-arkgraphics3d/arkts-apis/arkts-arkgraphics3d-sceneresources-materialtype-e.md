@@ -2,7 +2,9 @@
 
 Enumerates the material types in a scene. The material type defines how materials in a scene are rendered.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum MaterialType--><!--Device-unnamed-export enum MaterialType-End-->
 
@@ -16,7 +18,9 @@ SHADER = 1
 
 Shader-defined.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
 
@@ -30,7 +34,9 @@ METALLIC_ROUGHNESS = 2
 
 Metallic-Roughness model based on Physically Based Rendering (PBR), simulating realistic material lighting effects through metallicity and roughness parameters.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MaterialType-METALLIC_ROUGHNESS = 2--><!--Device-MaterialType-METALLIC_ROUGHNESS = 2-End-->
 
@@ -46,6 +52,8 @@ Material that is not affected by lighting.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -59,6 +67,8 @@ OCCLUSION = 4
 Occlusion material: occludes other objects in the scene but does not occlude the environment.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
 

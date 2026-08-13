@@ -1,0 +1,68 @@
+# CalendarDialogOptions
+
+Defines the DatePickerDialogOptions for Calendar Picker Dialog.
+
+**Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-na-calendarpicker-calendaroptions-i.md#CalendarOptions)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface CalendarDialogOptions--><!--Device-unnamed-export declare interface CalendarDialogOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## distortionMode
+
+```TypeScript
+distortionMode?: DistortionMode
+```
+
+Sets the distortion animation Mode of the dialog.
+
+**Type:** [DistortionMode](../../apis-arkui/arkts-components/arkts-arkui-distortionmode-e-sys.md)
+
+**Default:** DistortionMode.DISTORTION_AUTO
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CalendarDialogOptions-distortionMode?: DistortionMode--><!--Device-CalendarDialogOptions-distortionMode?: DistortionMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## edgeLightMode
+
+```TypeScript
+edgeLightMode?: EdgeLightMode
+```
+
+Sets the edgeLight animation Mode of the dialog.
+
+**Type:** [EdgeLightMode](../../apis-arkui/arkts-components/arkts-arkui-edgelightmode-e-sys.md)
+
+**Default:** EdgeLightMode.EDGELIGHT_AUTO
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CalendarDialogOptions-edgeLightMode?: EdgeLightMode--><!--Device-CalendarDialogOptions-edgeLightMode?: EdgeLightMode-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+

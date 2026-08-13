@@ -2,9 +2,11 @@
 
 提供云数据库操作接口的类。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface CloudDB--><!--Device-cloudExtension-export interface CloudDB-End-->
 
@@ -23,9 +25,11 @@ delete(
 
 删除云数据库表中的指定数据。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-delete(      table: string,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
@@ -104,21 +108,17 @@ export default class MyCloudDB implements cloudExtension.CloudDB {
 
 ## generateId
 
-ArkTS-Dyn:
-```TypeScript
-generateId(count: number): Promise<Result<Array<string>>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 generateId(count: int): Promise<Result<Array<string>>>
 ```
 
 为插入的云数据生成具有唯一性的ID。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>--><!--Device-CloudDB-generateId(count: int): Promise<Result<Array<string>>>-End-->
 
@@ -130,7 +130,7 @@ generateId(count: int): Promise<Result<Array<string>>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示要生成ID的数量。取值范围大于等于1。 |
+| count | int | 是 | 表示要生成ID的数量。取值范围大于等于1。 |
 
 **返回值：**
 
@@ -207,21 +207,17 @@ export default class MyCloudDB implements cloudExtension.CloudDB {
 
 ## heartbeat
 
-ArkTS-Dyn:
-```TypeScript
-heartbeat(lockId: number): Promise<Result<LockInfo>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 heartbeat(lockId: int): Promise<Result<LockInfo>>
 ```
 
 延长数据库的加锁时效。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>--><!--Device-CloudDB-heartbeat(lockId: int): Promise<Result<LockInfo>>-End-->
 
@@ -233,7 +229,7 @@ heartbeat(lockId: int): Promise<Result<LockInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lockId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示需要延时的锁ID，取值为lock方法返回的LockInfo中的lockId。 |
+| lockId | int | 是 | 表示需要延时的锁ID，取值为lock方法返回的LockInfo中的lockId。 |
 
 **返回值：**
 
@@ -325,9 +321,11 @@ insert(
 
 将数据插入云数据库表中。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-insert(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 
@@ -420,9 +418,11 @@ lock(): Promise<Result<LockInfo>>
 
 为云数据库加锁。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-lock(): Promise<Result<LockInfo>>--><!--Device-CloudDB-lock(): Promise<Result<LockInfo>>-End-->
 
@@ -510,21 +510,17 @@ export default class MyCloudDB implements cloudExtension.CloudDB {
 
 ## query
 
-ArkTS-Dyn:
-```TypeScript
-query(table: string, fields: Array<string>, queryCount: number, queryCursor: string): Promise<Result<CloudData>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>
 ```
 
 在云数据库表中查询数据。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>--><!--Device-CloudDB-query(table: string, fields: Array<string>, queryCount: int, queryCursor: string): Promise<Result<CloudData>>-End-->
 
@@ -538,7 +534,7 @@ query(table: string, fields: Array<string>, queryCount: int, queryCursor: string
 | --- | --- | --- | --- |
 | table | string | 是 | 表名。 |
 | fields | Array&lt;string&gt; | 是 | 表示要查询的字段名数组。 |
-| queryCount | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示要查询的数据记录条数。取值范围大于等于1。 |
+| queryCount | int | 是 | 表示要查询的数据记录条数。取值范围大于等于1。 |
 | queryCursor | string | 是 | 表示要查询的游标。 |
 
 **返回值：**
@@ -619,21 +615,17 @@ export default class MyCloudDB implements cloudExtension.CloudDB {
 
 ## unlock
 
-ArkTS-Dyn:
-```TypeScript
-unlock(lockId: number): Promise<Result<boolean>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 unlock(lockId: int): Promise<Result<boolean>>
 ```
 
 为云数据库解锁。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>--><!--Device-CloudDB-unlock(lockId: int): Promise<Result<boolean>>-End-->
 
@@ -645,7 +637,7 @@ unlock(lockId: int): Promise<Result<boolean>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lockId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示锁的ID，取值为lock方法返回的LockInfo中的lockId。 |
+| lockId | int | 是 | 表示锁的ID，取值为lock方法返回的LockInfo中的lockId。 |
 
 **返回值：**
 
@@ -727,9 +719,11 @@ update(
 
 通过该接口更新云上的数据。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>--><!--Device-CloudDB-update(      table: string,      values: Array<Record<string, CloudType>>,      extensions: Array<Record<string, CloudType>>    ): Promise<Array<Result<Record<string, CloudType>>>>-End-->
 

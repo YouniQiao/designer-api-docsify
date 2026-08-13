@@ -1,10 +1,12 @@
 # ResolveStrategy
 
-Enum of strategy of resolved UIContext.
+Enumerates resolution strategies for **UIContext** objects.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export const enum ResolveStrategy--><!--Device-unnamed-export const enum ResolveStrategy-End-->
 
@@ -16,13 +18,17 @@ Enum of strategy of resolved UIContext.
 CALLING_SCOPE = 0
 ```
 
-Get UIContext of calling scope.
+Obtain the UIContext of the current calling scope.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolveStrategy-CALLING_SCOPE = 0--><!--Device-ResolveStrategy-CALLING_SCOPE = 0-End-->
 
@@ -34,13 +40,17 @@ Get UIContext of calling scope.
 LAST_FOCUS = 1
 ```
 
-Get UIContext of last focused instance.
+Obtain the UIContext of the instance that most recently switched to the focused state.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolveStrategy-LAST_FOCUS = 1--><!--Device-ResolveStrategy-LAST_FOCUS = 1-End-->
 
@@ -52,13 +62,17 @@ Get UIContext of last focused instance.
 MAX_INSTANCE_ID = 2
 ```
 
-Get UIContext with maximum instanceId.
+Obtain the UIContext of the instance with the largest instance ID.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolveStrategy-MAX_INSTANCE_ID = 2--><!--Device-ResolveStrategy-MAX_INSTANCE_ID = 2-End-->
 
@@ -70,13 +84,17 @@ Get UIContext with maximum instanceId.
 UNIQUE = 3
 ```
 
-Get UIContext of unique UI instance.
+Obtain the UIContext of the unique UI instance (when only one UI instance exists).
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolveStrategy-UNIQUE = 3--><!--Device-ResolveStrategy-UNIQUE = 3-End-->
 
@@ -88,13 +106,17 @@ Get UIContext of unique UI instance.
 LAST_FOREGROUND = 4
 ```
 
-Get UIContext of last foregrounded instance.
+Obtain the UIContext of the instance that most recently switched to the foreground.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolveStrategy-LAST_FOREGROUND = 4--><!--Device-ResolveStrategy-LAST_FOREGROUND = 4-End-->
 
@@ -106,13 +128,17 @@ Get UIContext of last foregrounded instance.
 UNDEFINED = 5
 ```
 
-Get UIContext of undefined calling scope.
+Obtain a UIContext with an ambiguous calling scope.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolveStrategy-UNDEFINED = 5--><!--Device-ResolveStrategy-UNDEFINED = 5-End-->
 

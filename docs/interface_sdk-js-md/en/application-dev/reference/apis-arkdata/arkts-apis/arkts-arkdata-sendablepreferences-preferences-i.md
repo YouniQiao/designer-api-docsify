@@ -1,16 +1,16 @@
 # Preferences
 
-Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from   
-[ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference.Before calling any API of **Preferences**, obtain a **Preferences** instance by using   
-[sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences).
+Provides APIs for obtaining and modifying **Preferences** instances. **Preferences** inherits from [ISendable](../../../arkts-utils/arkts-sendable.md#isendable) and can be passed between concurrent ArkTS instances (including the main thread and the TaskPool or Worker threads) by reference. Before calling any API of **Preferences**, obtain a **Preferences** instance by using [sendablePreferences.getPreferences](arkts-arkdata-sendablepreferences-getpreferences-f.md#getPreferences).
 
-**Inheritance/Implementation:** Preferences extends [lang.ISendable](lang.ISendable)
+**Inheritance/Implementation:** Preferences extends lang.ISendable
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-sendablePreferences-interface Preferences extends lang.ISendable--><!--Device-sendablePreferences-interface Preferences extends lang.ISendable-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePreferences-interface Preferences--><!--Device-sendablePreferences-interface Preferences-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core
 
@@ -26,12 +26,13 @@ import { sendablePreferences } from '@kit.ArkData';
 clear(): Promise<void>
 ```
 
-Clears this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -49,7 +50,7 @@ Clears this **Preferences** instance. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -70,12 +71,13 @@ promise.then(() => {
 clearSync(): void
 ```
 
-Clears this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -87,7 +89,7 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -101,12 +103,13 @@ preferences.clearSync();
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -118,7 +121,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 
 **Return value:**
 
@@ -130,8 +133,8 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -152,12 +155,13 @@ promise.then(() => {
 deleteSync(key: string): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -169,14 +173,14 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be deleted. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -196,6 +200,8 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-flush(): Promise<void>--><!--Device-Preferences-flush(): Promise<void>-End-->
@@ -212,7 +218,7 @@ Flushes the data in this **Preferences** instance to the persistent file. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -239,6 +245,8 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-Preferences-flushSync(): void--><!--Device-Preferences-flushSync(): void-End-->
@@ -249,7 +257,7 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -269,6 +277,8 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>--><!--Device-Preferences-get(key: string, defValue: lang.ISendable): Promise<lang.ISendable>-End-->
@@ -279,7 +289,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
@@ -292,8 +302,8 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -322,6 +332,8 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-getAll(): Promise<lang.ISendable>--><!--Device-Preferences-getAll(): Promise<lang.ISendable>-End-->
@@ -338,7 +350,7 @@ Obtains all KV pairs from this **Preferences** instance. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -368,6 +380,8 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-getAllSync(): lang.ISendable--><!--Device-Preferences-getAllSync(): lang.ISendable-End-->
@@ -384,7 +398,7 @@ Obtains all KV pairs from this **Preferences** instance. This API returns the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -409,6 +423,8 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable--><!--Device-Preferences-getSync(key: string, defValue: lang.ISendable): lang.ISendable-End-->
@@ -419,7 +435,7 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants) . |
+| key | string | Yes | Key to be obtained. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants) . |
 | defValue | lang.ISendable | Yes | Default value to be returned. |
 
 **Return value:**
@@ -432,8 +448,8 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -454,6 +470,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-has(key: string): Promise<boolean>--><!--Device-Preferences-has(key: string): Promise<boolean>-End-->
@@ -464,7 +482,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 
 **Return value:**
 
@@ -476,8 +494,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -508,6 +526,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Preferences-hasSync(key: string): boolean--><!--Device-Preferences-hasSync(key: string): boolean-End-->
@@ -518,7 +538,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be checked. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 
 **Return value:**
 
@@ -530,8 +550,8 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -544,7 +564,7 @@ if (isExist) {
 }
 ```
 
-## off('change')
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<string>): void
@@ -555,6 +575,8 @@ Unsubscribes from data changes.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -567,14 +589,14 @@ Unsubscribes from data changes.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -594,57 +616,7 @@ preferences.flush().then(() => {
 });
 ```
 
-## off('multiProcessChange')
-
-```TypeScript
-off(type: 'multiProcessChange', callback?: Callback<string>): void
-```
-
-Unsubscribes from inter-process data changes.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'auto');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-  preferences.off('multiProcessChange', observer);
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## off('dataChange')
+## off_dataChange
 
 ```TypeScript
 off(type: 'dataChange', keys: Array<string>, callback?: Callback<lang.ISendable>): void
@@ -655,6 +627,8 @@ Unsubscribes from changes of specific data.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -668,14 +642,14 @@ Unsubscribes from changes of specific data.
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be unsubscribed from. If this parameter is not specified, this API unsubscribes from the changes of all keys. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the changes of the specified data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -698,7 +672,59 @@ preferences.flush().then(() => {
 });
 ```
 
-## on('change')
+## off_multiProcessChange
+
+```TypeScript
+off(type: 'multiProcessChange', callback?: Callback<string>): void
+```
+
+Unsubscribes from inter-process data changes. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void--><!--Device-Preferences-off(type: 'multiProcessChange', callback?: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for data changes. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'auto');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+  preferences.off('multiProcessChange', observer);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
+
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: Callback<string>): void
@@ -709,6 +735,8 @@ Subscribes to data changes. The registered callback will be invoked to return th
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -721,14 +749,14 @@ Subscribes to data changes. The registered callback will be invoked to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'change' | Yes | Event type. The value is **'change'**, which indicates data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -747,58 +775,7 @@ preferences.flush().then(() => {
 });
 ```
 
-## on('multiProcessChange')
-
-```TypeScript
-on(type: 'multiProcessChange', callback: Callback<string>): void
-```
-
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling   
-[flush](#flush) in any process (including the current process) will trigger the callback in this API.This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
-| [15500019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let observer = (key: string) => {
-  console.info("The key " + key + " changed.");
-};
-preferences.on('multiProcessChange', observer);
-preferences.putSync('startup', 'manual');
-preferences.flush().then(() => {
-  console.info("Succeeded in flushing.");
-}).catch((err: BusinessError) => {
-  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
-});
-```
-
-## on('dataChange')
+## on_dataChange
 
 ```TypeScript
 on(type: 'dataChange', keys: Array<string>, callback: Callback<lang.ISendable>): void
@@ -809,6 +786,8 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -822,14 +801,14 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 | --- | --- | --- | --- |
 | type | 'dataChange' | Yes | Event type. The value is **'dataChange'**, which indicates data changes. |
 | keys | Array&lt;string&gt; | Yes | Keys to be observed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;lang.ISendable&gt; | Yes | Callback used to return the KV pairs changed. The keys are the keys observed, and the values are the new values. The values support the following types: number, string, boolean, bigint, and serializable object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -851,18 +830,71 @@ preferences.flush().then(() => {
 });
 ```
 
+## on_multiProcessChange
+
+```TypeScript
+on(type: 'multiProcessChange', callback: Callback<string>): void
+```
+
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-sendablepreferences-options-i.md#Options). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void--><!--Device-Preferences-on(type: 'multiProcessChange', callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'multiProcessChange' | Yes | Event type. The value is **'multiProcessChange'**, which indicates inter- process data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback used to return the key whose value is changed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let observer = (key: string) => {
+  console.info("The key " + key + " changed.");
+};
+preferences.on('multiProcessChange', observer);
+preferences.putSync('startup', 'manual');
+preferences.flush().then(() => {
+  console.info("Succeeded in flushing.");
+}).catch((err: BusinessError) => {
+  console.error(`Failed to flush. code: ${err.code}, message: ${err.message}`);
+});
+```
+
 ## put
 
 ```TypeScript
 put(key: string, value: lang.ISendable): Promise<void>
 ```
 
-Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -874,7 +906,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 | value | lang.ISendable | Yes | Value to write. |
 
 **Return value:**
@@ -887,8 +919,8 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 
@@ -909,12 +941,13 @@ promise.then(() => {
 putSync(key: string, value: lang.ISendable): void
 ```
 
-Writes data to this **Preferences** instance. This API returns the result synchronously. You can use   
-[flush](#flush) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -926,15 +959,15 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](../../../reference/apis-arkdata/js-apis-data-sendablePreferences.md#constants). |
+| key | string | Yes | Key to be modified. The value cannot be empty, and the maximum length is 1024 bytes. For details, see [MAX_KEY_LENGTH](arkts-data-sendablepreferences.md#Constants). |
 | value | lang.ISendable | Yes | Value to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-internal-error) | Inner error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 ## Examples
 

@@ -12,11 +12,13 @@ import { tag } from '@kit.ConnectivityKit';
 function getIsoDep(tagInfo: TagInfo): IsoDepTag
 ```
 
-Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object based on the tag information.During tag reading, if the tag supports the IsoDep technology, an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object will be created based on the tag information.
+Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object based on the tag information. During tag reading, if the tag supports the IsoDep technology, an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object will be created based on the tag information.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-tag-function getIsoDep(tagInfo: TagInfo): IsoDepTag--><!--Device-tag-function getIsoDep(tagInfo: TagInfo): IsoDepTag-End-->
 
@@ -38,6 +40,6 @@ Obtains an [IsoDepTag](arkts-connectivity-tag-isodeptag-t.md#IsoDepTag) object b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |

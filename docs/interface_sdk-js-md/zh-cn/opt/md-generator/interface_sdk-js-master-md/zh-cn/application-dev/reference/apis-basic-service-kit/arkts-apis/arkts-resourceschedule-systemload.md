@@ -1,8 +1,10 @@
-# @ohos.resourceschedule.systemload(性能功耗热融合档位)
+# @ohos.resourceschedule.systemload
 
 系统根据当前温度、负载以及是否处于高负载场景等信息决策出系统负载融合档位，并在档位变化时通知已注册的应用。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace systemLoad--><!--Device-unnamed-declare namespace systemLoad-End-->
 
@@ -14,9 +16,11 @@
 
 | 名称 |
 | --- |
-| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getlevel) |
-| [off](arkts-basicservices-systemload-off-f.md#off) |
-| [on](arkts-basicservices-systemload-on-f.md#on) |
+| [getLevel](arkts-basicservices-systemload-getlevel-f.md#getLevel) |
+| [offSystemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md#offSystemLoadChange) |
+| [off_systemLoadChange](arkts-basicservices-systemload-offsystemloadchange-f.md) |
+| [onSystemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md#onSystemLoadChange) |
+| [on_systemLoadChange](arkts-basicservices-systemload-onsystemloadchange-f.md) |
 
 ### 枚举
 

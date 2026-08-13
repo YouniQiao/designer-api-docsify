@@ -14,7 +14,9 @@ function getDefaultCellularDataSimId(): number
 
 Obtains the default cellular data SIM ID.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-data-function getDefaultCellularDataSimId(): int--><!--Device-data-function getDefaultCellularDataSimId(): int-End-->
 

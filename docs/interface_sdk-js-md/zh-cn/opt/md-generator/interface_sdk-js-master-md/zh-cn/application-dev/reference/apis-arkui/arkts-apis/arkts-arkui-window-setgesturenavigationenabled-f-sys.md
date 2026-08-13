@@ -8,7 +8,9 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 
 设置手势导航启用状态。使用callback异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void--><!--Device-window-function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -27,10 +29,10 @@ function setGestureNavigationEnabled(enable: boolean, callback: AsyncCallback<vo
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -60,7 +62,9 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 
 设置手势导航启用状态。使用Promise异步回调。系统出于安全的考虑，不会干预手势的禁用和恢复。应用调用本接口禁用手势后异常退出的情况下，如果想要恢复手势，需自行实现自动拉起机制并再次调用本接口恢复手势。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function setGestureNavigationEnabled(enable: boolean): Promise<void>--><!--Device-window-function setGestureNavigationEnabled(enable: boolean): Promise<void>-End-->
 
@@ -84,10 +88,10 @@ function setGestureNavigationEnabled(enable: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

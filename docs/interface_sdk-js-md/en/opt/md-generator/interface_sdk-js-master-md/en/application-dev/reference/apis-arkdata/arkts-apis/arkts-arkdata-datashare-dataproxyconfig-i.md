@@ -2,7 +2,9 @@
 
 Defines a struct for the data proxy configuration.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-dataShare-interface DataProxyConfig--><!--Device-dataShare-interface DataProxyConfig-End-->
 
@@ -20,11 +22,13 @@ import { dataShare } from '@kit.ArkData';
 maxValueLength?: DataProxyMaxValueLength
 ```
 
-Sets the maximum length of the data proxy value. The default value is MAX_LENGTH_4K, indicating that the maximum value length is 4096 bytes.If the length of the value that is actually transferred or obtained exceeds the maximum value length specified by this parameter, the publish or get operation will fail.Default value: MAX_LENGTH_4K.
+Sets the maximum length of the data proxy value. The default value is MAX_LENGTH_4K, indicating that the maximum value length is 4096 bytes. If the length of the value that is actually transferred or obtained exceeds the maximum value length specified by this parameter, the publish or get operation will fail. Default value: MAX_LENGTH_4K.
 
 **Type:** [DataProxyMaxValueLength](arkts-arkdata-datashare-dataproxymaxvaluelength-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Type of the data proxy.
 
 **Type:** [DataProxyType](arkts-arkdata-datashare-dataproxytype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Represents chinese calendar time element for the ChineseCalendar object.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-i18n-export interface ChineseCalendarTime--><!--Device-i18n-export interface ChineseCalendarTime-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -20,11 +22,13 @@ import { i18n } from '@kit.LocalizationKit';
 cyclicalYear: number
 ```
 
-The cyclical year of date.If you need to convert between the chinese calendar and the Gregorian calendar,the year range must be set from 1 to 60.The value range is all integers.
+The cyclical year of date. If you need to convert between the chinese calendar and the Gregorian calendar, the year range must be set from 1 to 60. The value range is all integers.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Date of the chinese calendar time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -60,11 +66,13 @@ Date of the chinese calendar time.
 gregorianYear: number
 ```
 
-The gregorian year of date.If you need to convert between the chinese calendar and the Gregorian calendar,the year range must be set from 1900 to 2100.
+The gregorian year of date. If you need to convert between the chinese calendar and the Gregorian calendar, the year range must be set from 1900 to 2100.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +94,8 @@ Hour of the chinese calendar time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -105,6 +115,8 @@ Determines whether the input month is a leap month.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,6 +138,8 @@ Minute of the chinese calendar time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -146,6 +160,8 @@ Month of the chinese calendar time. Note: The month starts from 0. For example, 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -165,6 +181,8 @@ Second of the chinese calendar time.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Defines a contact's organization.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Organization--><!--Device-contact-class Organization-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -26,6 +28,8 @@ Organization name.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Organization-name: string--><!--Device-Organization-name: string-End-->
@@ -43,6 +47,8 @@ Job title.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,6 +4,8 @@ Defines the specific configuration parameters for the rendering context.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RenderingContextOptions--><!--Device-unnamed-declare interface RenderingContextOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ Defines the specific configuration parameters for the rendering context.
 antialias?: boolean
 ```
 
-Indicates whether to enable anti-aliasing for the **RenderingContext**.&lt;br&gt;A value of **undefined** is treated as the default value.&lt;br&gt;**true**: Enable anti-aliasing. **false**: Disable anti-aliasing.&lt;br&gt;Default value: **false**
+Indicates whether to enable anti-aliasing for the **RenderingContext**. &lt;br&gt;A value of **undefined** is treated as the default value. &lt;br&gt;**true**: Enable anti-aliasing. **false**: Disable anti-aliasing. &lt;br&gt;Default value: **false**
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

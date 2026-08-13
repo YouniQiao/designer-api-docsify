@@ -2,13 +2,15 @@
 
 Declare interfaces for the attributes of the paste button.
 
-**Inheritance/Implementation:** PasteButtonAttribute extends [SecurityComponentMethod](SecurityComponentMethod)
+**Inheritance/Implementation:** PasteButtonAttribute extends SecurityComponentMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface PasteButtonAttribute extends SecurityComponentMethod--><!--Device-unnamed-export declare interface PasteButtonAttribute extends SecurityComponentMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface PasteButtonAttribute--><!--Device-unnamed-export declare interface PasteButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Called when the paste button is clicked.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

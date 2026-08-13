@@ -14,7 +14,9 @@ function createEffect(): VisualEffect
 
 Creates a VisualEffect instance for adding multiple VisualEffect effects to a component.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 24.
 

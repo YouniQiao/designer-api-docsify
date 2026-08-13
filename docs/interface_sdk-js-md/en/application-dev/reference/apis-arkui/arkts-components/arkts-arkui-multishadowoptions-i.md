@@ -6,6 +6,8 @@ Defines shadow style properties.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MultiShadowOptions--><!--Device-unnamed-declare interface MultiShadowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,7 @@ Defines shadow style properties.
 offsetX?: number | Resource
 ```
 
-X-axis offset.Unit: vp. Default value: 5.
+X-axis offset. Unit: vp. Default value: 5.
 
 **Type:** number \| Resource
 
@@ -25,6 +27,8 @@ X-axis offset.Unit: vp. Default value: 5.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,7 @@ X-axis offset.Unit: vp. Default value: 5.
 offsetY?: number | Resource
 ```
 
-Y-axis offset.Unit: vp. Default value: 5.
+Y-axis offset. Unit: vp. Default value: 5.
 
 **Type:** number \| Resource
 
@@ -51,6 +55,8 @@ Y-axis offset.Unit: vp. Default value: 5.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,17 +74,7 @@ Y-axis offset.Unit: vp. Default value: 5.
 radius?: number | Resource
 ```
 
-Shadow blur radius.
-
-The default value varies by API version.
-
-API version 10 and earlier versions: **5**
-
-Since API version 11: **20**
-
-Unit: vp.
-
-A value less than or equal to 0 is handled as the default value.
+Shadow blur radius. The default value varies by API version. API version 10 and earlier versions: **5** Since API version 11: **20** Unit: vp. A value less than or equal to 0 is handled as the default value.
 
 **Type:** number \| Resource
 
@@ -87,6 +83,8 @@ A value less than or equal to 0 is handled as the default value.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

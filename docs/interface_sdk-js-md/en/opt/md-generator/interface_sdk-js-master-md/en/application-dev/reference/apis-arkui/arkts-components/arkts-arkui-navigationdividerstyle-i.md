@@ -4,6 +4,8 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationDividerStyle--><!--Device-unnamed-declare interface NavigationDividerStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Color of the navigation divider and the upper and lower margins of the **Navigat
 color?: ResourceColor
 ```
 
-Color of the divider.
-
-Default value: **#33000000**, indicating gray
+Color of the divider. Default value: **#33000000**, indicating gray
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,17 +38,13 @@ Default value: **#33000000**, indicating gray
 endMargin?: Length
 ```
 
-Distance between the divider and the bottom of the sidebar.
-
-Default value: **0**
-
-Unit: vp
-
-Value range: [0, +��)
+Distance between the divider and the bottom of the sidebar. Default value: **0** Unit: vp Value range: [0, +��)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,17 +60,13 @@ Value range: [0, +��)
 startMargin?: Length
 ```
 
-Distance between the divider and the top of the sidebar.
-
-Default value: **0**
-
-Unit: vp
-
-Value range: [0, +��)
+Distance between the divider and the top of the sidebar. Default value: **0** Unit: vp Value range: [0, +��)
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

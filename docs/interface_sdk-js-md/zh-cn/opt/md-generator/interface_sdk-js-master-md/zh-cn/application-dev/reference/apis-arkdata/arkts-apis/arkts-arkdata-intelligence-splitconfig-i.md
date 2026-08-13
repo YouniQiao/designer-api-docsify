@@ -2,7 +2,9 @@
 
 管理文本分块的配置信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-intelligence-interface SplitConfig--><!--Device-intelligence-interface SplitConfig-End-->
 
@@ -18,7 +20,9 @@ overlapRatio: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SplitConfig-overlapRatio: double--><!--Device-SplitConfig-overlapRatio: double-End-->
 
@@ -34,7 +38,9 @@ size: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SplitConfig-size: int--><!--Device-SplitConfig-size: int-End-->
 

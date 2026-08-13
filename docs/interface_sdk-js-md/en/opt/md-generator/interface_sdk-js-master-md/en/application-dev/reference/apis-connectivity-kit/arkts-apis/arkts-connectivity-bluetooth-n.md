@@ -6,7 +6,7 @@ Provides methods to operate or manage Bluetooth.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bluetoothManager](ohos.bluetoothManager)
+**Substitutes:** bluetoothManager
 
 <!--Device-unnamed-declare namespace bluetooth--><!--Device-unnamed-declare namespace bluetooth-End-->
 
@@ -30,46 +30,46 @@ import { bluetooth } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getState](arkts-connectivity-bluetooth-getstate-f.md#getstate) |
-| [getBtConnectionState](arkts-connectivity-bluetooth-getbtconnectionstate-f.md#getbtconnectionstate) |
-| [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md#pairdevice) |
-| [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md#getremotedevicename) |
-| [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md#getremotedeviceclass) |
-| [enableBluetooth](arkts-connectivity-bluetooth-enablebluetooth-f.md#enablebluetooth) |
-| [disableBluetooth](arkts-connectivity-bluetooth-disablebluetooth-f.md#disablebluetooth) |
-| [getLocalName](arkts-connectivity-bluetooth-getlocalname-f.md#getlocalname) |
-| [getPairedDevices](arkts-connectivity-bluetooth-getpaireddevices-f.md#getpaireddevices) |
-| [getProfileConnState](arkts-connectivity-bluetooth-getprofileconnstate-f.md#getprofileconnstate) |
-| [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation) |
-| [setLocalName](arkts-connectivity-bluetooth-setlocalname-f.md#setlocalname) |
-| [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md#setbluetoothscanmode) |
-| [getBluetoothScanMode](arkts-connectivity-bluetooth-getbluetoothscanmode-f.md#getbluetoothscanmode) |
-| [startBluetoothDiscovery](arkts-connectivity-bluetooth-startbluetoothdiscovery-f.md#startbluetoothdiscovery) |
-| [stopBluetoothDiscovery](arkts-connectivity-bluetooth-stopbluetoothdiscovery-f.md#stopbluetoothdiscovery) |
-| [on](arkts-connectivity-bluetooth-on-f.md#on) |
-| [off](arkts-connectivity-bluetooth-off-f.md#off) |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-1) |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-1) |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-2) |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-2) |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-3) |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-3) |
-| [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#spplisten) |
-| [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppaccept) |
-| [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppconnect) |
-| [sppCloseServerSocket](arkts-connectivity-bluetooth-sppcloseserversocket-f.md#sppcloseserversocket) |
-| [sppCloseClientSocket](arkts-connectivity-bluetooth-sppcloseclientsocket-f.md#sppcloseclientsocket) |
-| [sppWrite](arkts-connectivity-bluetooth-sppwrite-f.md#sppwrite) |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-4) |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-4) |
-| [getProfile](arkts-connectivity-bluetooth-getprofile-f.md#getprofile) |
+| [getState](arkts-connectivity-bluetooth-getstate-f.md#getState) |
+| [getBtConnectionState](arkts-connectivity-bluetooth-getbtconnectionstate-f.md#getBtConnectionState) |
+| [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md#pairDevice) |
+| [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md#getRemoteDeviceName) |
+| [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md#getRemoteDeviceClass) |
+| [enableBluetooth](arkts-connectivity-bluetooth-enablebluetooth-f.md#enableBluetooth) |
+| [disableBluetooth](arkts-connectivity-bluetooth-disablebluetooth-f.md#disableBluetooth) |
+| [getLocalName](arkts-connectivity-bluetooth-getlocalname-f.md#getLocalName) |
+| [getPairedDevices](arkts-connectivity-bluetooth-getpaireddevices-f.md#getPairedDevices) |
+| [getProfileConnState](arkts-connectivity-bluetooth-getprofileconnstate-f.md#getProfileConnState) |
+| [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md#setDevicePairingConfirmation) |
+| [setLocalName](arkts-connectivity-bluetooth-setlocalname-f.md#setLocalName) |
+| [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md#setBluetoothScanMode) |
+| [getBluetoothScanMode](arkts-connectivity-bluetooth-getbluetoothscanmode-f.md#getBluetoothScanMode) |
+| [startBluetoothDiscovery](arkts-connectivity-bluetooth-startbluetoothdiscovery-f.md#startBluetoothDiscovery) |
+| [stopBluetoothDiscovery](arkts-connectivity-bluetooth-stopbluetoothdiscovery-f.md#stopBluetoothDiscovery) |
+| [on_bluetoothDeviceFind](arkts-connectivity-bluetooth-onbluetoothdevicefind-f.md#on_bluetoothDeviceFind) |
+| [off_bluetoothDeviceFind](arkts-connectivity-bluetooth-offbluetoothdevicefind-f.md#off_bluetoothDeviceFind) |
+| [on_bondStateChange](arkts-connectivity-bluetooth-onbondstatechange-f.md#on_bondStateChange) |
+| [off_bondStateChange](arkts-connectivity-bluetooth-offbondstatechange-f.md#off_bondStateChange) |
+| [on_pinRequired](arkts-connectivity-bluetooth-onpinrequired-f.md#on_pinRequired) |
+| [off_pinRequired](arkts-connectivity-bluetooth-offpinrequired-f.md#off_pinRequired) |
+| [on_stateChange](arkts-connectivity-bluetooth-onstatechange-f.md#on_stateChange) |
+| [off_stateChange](arkts-connectivity-bluetooth-offstatechange-f.md#off_stateChange) |
+| [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#sppListen) |
+| [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppAccept) |
+| [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppConnect) |
+| [sppCloseServerSocket](arkts-connectivity-bluetooth-sppcloseserversocket-f.md#sppCloseServerSocket) |
+| [sppCloseClientSocket](arkts-connectivity-bluetooth-sppcloseclientsocket-f.md#sppCloseClientSocket) |
+| [sppWrite](arkts-connectivity-bluetooth-sppwrite-f.md#sppWrite) |
+| [on_sppRead](arkts-connectivity-bluetooth-onsppread-f.md#on_sppRead) |
+| [off_sppRead](arkts-connectivity-bluetooth-offsppread-f.md#off_sppRead) |
+| [getProfile](arkts-connectivity-bluetooth-getprofile-f.md#getProfile) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [cancelPairedDevice](arkts-connectivity-bluetooth-cancelpaireddevice-f-sys.md#cancelpaireddevice) |
+| [cancelPairedDevice](arkts-connectivity-bluetooth-cancelpaireddevice-f-sys.md#cancelPairedDevice-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

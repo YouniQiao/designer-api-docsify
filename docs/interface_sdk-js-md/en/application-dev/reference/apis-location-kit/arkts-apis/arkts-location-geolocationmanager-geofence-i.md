@@ -2,9 +2,11 @@
 
 Circular fence information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface Geofence--><!--Device-geoLocationManager-export interface Geofence-End-->
 
@@ -26,9 +28,11 @@ Coordinate system type.
 
 **Type:** CoordinateSystemType
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-coordinateSystemType?: CoordinateSystemType--><!--Device-Geofence-coordinateSystemType?: CoordinateSystemType-End-->
 
@@ -42,11 +46,13 @@ expiration: double
 
 Expiration of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-expiration: double--><!--Device-Geofence-expiration: double-End-->
 
@@ -60,11 +66,13 @@ latitude: double
 
 Latitude of the center point of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-latitude: double--><!--Device-Geofence-latitude: double-End-->
 
@@ -78,11 +86,13 @@ longitude: double
 
 Longitude of the center point of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-longitude: double--><!--Device-Geofence-longitude: double-End-->
 
@@ -96,11 +106,13 @@ radius: double
 
 Radius of the circular fence.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geofence-radius: double--><!--Device-Geofence-radius: double-End-->
 

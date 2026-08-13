@@ -8,9 +8,11 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 
 解析图片中携带的信息。通过对应的解码算法从图片中提取嵌入的metadata信息。使用promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>--><!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>-End-->
 
@@ -34,7 +36,7 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
-| [32100003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100003-解码程序执行失败) | Decode process fail. Possible causes: &lt;br&gt;1. Image is not an encoded Image. &lt;br&gt;2. Image destroyed, decoding failed. |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) | Internal handling failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission check failed. A non-system application uses the system API. |
+| [32100003](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100003-解码程序执行失败) | Decode process fail. Possible causes: &lt;br&gt;1. Image is not an encoded Image. &lt;br&gt;2. Image destroyed, decoding failed. |
 

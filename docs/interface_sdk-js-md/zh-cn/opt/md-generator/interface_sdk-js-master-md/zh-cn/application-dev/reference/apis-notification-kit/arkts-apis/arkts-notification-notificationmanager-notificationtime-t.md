@@ -6,7 +6,9 @@ export type NotificationTime = _NotificationTime
 
 通知计时信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationTime = _NotificationTime--><!--Device-notificationManager-export type NotificationTime = _NotificationTime-End-->
 

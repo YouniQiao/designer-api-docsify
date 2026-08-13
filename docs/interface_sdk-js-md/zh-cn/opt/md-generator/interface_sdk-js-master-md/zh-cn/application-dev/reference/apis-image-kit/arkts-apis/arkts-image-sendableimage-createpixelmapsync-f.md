@@ -10,6 +10,8 @@ Create PixelMap by data buffer.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap--><!--Device-sendableImage-function createPixelMapSync(colors: ArrayBuffer, options: image.InitializationOptions): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -25,13 +27,13 @@ Create PixelMap by data buffer.
 
 | 类型 |
 | --- |
-| [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) |
+| [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

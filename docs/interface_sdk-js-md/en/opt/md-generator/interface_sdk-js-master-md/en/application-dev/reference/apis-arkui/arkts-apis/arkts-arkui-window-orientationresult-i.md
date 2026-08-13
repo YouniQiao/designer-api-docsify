@@ -4,6 +4,8 @@ Result of setting preferred orientation
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-window-interface OrientationResult--><!--Device-window-interface OrientationResult-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -25,6 +27,8 @@ Execution result of setting preferred orientation.
 **Type:** [OrientationExecutionResult](arkts-arkui-window-orientationexecutionresult-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

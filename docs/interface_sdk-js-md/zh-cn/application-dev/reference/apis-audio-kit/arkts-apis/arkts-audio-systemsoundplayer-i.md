@@ -1,13 +1,12 @@
 # SystemSoundPlayer
 
-音效播放器提供了加载、卸载和播放系统声音的功能。
-
-SystemSoundPlayer需要和  
-[@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md#systemSoundManager)配合使用，才能完成管理系统音效的功能。
+音效播放器提供了加载、卸载和播放系统声音的功能。 SystemSoundPlayer需要和 [@ohos.multimedia.systemSoundManager](arkts-multimedia-systemsoundmanager.md#@ohos.multimedia.systemSoundManager)配合使用， 才能完成管理系统音效的功能。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SystemSoundPlayer--><!--Device-unnamed-export interface SystemSoundPlayer-End-->
 
@@ -23,7 +22,9 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,9 +48,9 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## 示例
 
@@ -73,7 +74,9 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -97,9 +100,9 @@ play(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## 示例
 
@@ -123,7 +126,9 @@ release(): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,7 +146,7 @@ release(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
 
 ## 示例
 
@@ -165,7 +170,9 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -189,8 +196,8 @@ unload(soundType: systemSoundManager.SystemSoundType): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-参数超过取值范围) | Parameter check failed. Returned by promise. |
 
 ## 示例
 

@@ -8,7 +8,9 @@ function removeBackupBundleData(bundleName: string, userId: number, appIndex: nu
 
 删除指定用户下指定应用或分身应用的备份数据。使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -36,11 +38,11 @@ function removeBackupBundleData(bundleName: string, userId: number, appIndex: nu
 
 | 错误码ID |
 | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

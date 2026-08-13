@@ -8,7 +8,9 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<number>): vo
 
 获取一个WantAgent实例的OperationType信息，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -27,10 +29,10 @@ function getOperationType(agent: WantAgent, callback: AsyncCallback<number>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
-| [16000015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000015-服务超时) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000007](../errorcode-ability.md#16000007-服务未响应) |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
+| [16000015](../errorcode-ability.md#16000015-服务超时) |
 
 ## 示例
 
@@ -110,7 +112,9 @@ function getOperationType(agent: WantAgent): Promise<number>
 
 获取一个WantAgent实例的OperationType信息。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -134,10 +138,10 @@ function getOperationType(agent: WantAgent): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-服务未响应) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-无效wantagent对象) |
-| [16000015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000015-服务超时) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000007](../errorcode-ability.md#16000007-服务未响应) |
+| [16000151](../errorcode-ability.md#16000151-无效wantagent对象) |
+| [16000015](../errorcode-ability.md#16000015-服务超时) |
 
 ## 示例
 

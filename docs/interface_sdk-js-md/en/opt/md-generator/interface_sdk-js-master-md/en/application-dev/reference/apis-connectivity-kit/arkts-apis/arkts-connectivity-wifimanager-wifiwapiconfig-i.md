@@ -2,7 +2,9 @@
 
 Wi-Fi WAPI config.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface WifiWapiConfig--><!--Device-wifiManager-interface WifiWapiConfig-End-->
 
@@ -24,7 +26,9 @@ WAPI AS certification.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiWapiConfig-wapiAsCert: string--><!--Device-WifiWapiConfig-wapiAsCert: string-End-->
 
@@ -40,7 +44,9 @@ WAPI pre-shared key type.
 
 **Type:** [WapiPskType](arkts-connectivity-wifimanager-wapipsktype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiWapiConfig-wapiPskType: WapiPskType--><!--Device-WifiWapiConfig-wapiPskType: WapiPskType-End-->
 
@@ -56,7 +62,9 @@ WAPI user certification.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiWapiConfig-wapiUserCert: string--><!--Device-WifiWapiConfig-wapiUserCert: string-End-->
 

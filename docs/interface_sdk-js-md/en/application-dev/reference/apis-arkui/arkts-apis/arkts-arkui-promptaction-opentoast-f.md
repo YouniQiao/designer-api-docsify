@@ -9,18 +9,22 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ## openToast
 
 ```TypeScript
-export function openToast(options: ShowToastOptions): Promise<int>
+function openToast(options: ShowToastOptions): Promise<number>
 ```
 
-Displays the notification text.
+Shows a toast. This API uses a promise to return the toast ID. > **NOTE：**> > - Subwindows with **showMode** set to **TOP_MOST** or **SYSTEM_TOP_MOST** do not support **openToast** in input > method type windows. For details, see the constraints in the input method framework > [createPanel](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) > . > > - Directly using **openToast** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the > [openToast](arkts-arkui-arkui-uicontext-promptaction-c.md#openToast) API through this object.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-promptAction-export function openToast(options: ShowToastOptions): Promise<int>--><!--Device-promptAction-export function openToast(options: ShowToastOptions): Promise<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-promptAction-function openToast(options: ShowToastOptions): Promise<number>--><!--Device-promptAction-function openToast(options: ShowToastOptions): Promise<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,18 +32,65 @@ Displays the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ShowToastOptions | Yes | Options. |
+| options | ShowToastOptions | Yes | Toast configuration options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | return the toast id that will be used by closeToast. |
+| Promise&lt;number&gt; | Promise that returns the toast ID for use with **closeToast**. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { PromptAction, UIContext } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct toastExample {
+  @State toastId: number = 0;
+  uiContext: UIContext = this.getUIContext();
+  promptAction: PromptAction = this.uiContext.getPromptAction();
+
+  build() {
+    Column() {
+      Button('Open Toast')
+        .height(100)
+        .type(ButtonType.Capsule)
+        .onClick(() => {
+          this.promptAction.openToast({
+            message: 'Toast Message',
+            duration: 10000,
+          }).then((toastId: number) => {
+            this.toastId = toastId;
+          })
+            .catch((error: BusinessError) => {
+              console.error(`openToast error code is ${error.code}, message is ${error.message}`);
+            })
+        })
+      Blank().height(50)
+      Button('Close Toast')
+        .height(100)
+        .type(ButtonType.Capsule)
+        .onClick(() => {
+          try {
+            this.promptAction.closeToast(this.toastId);
+          } catch (error) {
+            let message = (error as BusinessError).message;
+            let code = (error as BusinessError).code;
+            console.error(`CloseToast error code is ${code}, message is ${message}`);
+          }
+        })
+    }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+  }
+}
+```
 

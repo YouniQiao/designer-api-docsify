@@ -16,6 +16,8 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor-End-->
@@ -26,7 +28,7 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [typeId](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) | string | Yes |
+| typeId | string | Yes |
 
 **Return value:**
 
@@ -38,7 +40,7 @@ Obtains the **TypeDescriptor** object based on the uniform data type ID.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -65,3 +67,40 @@ try {
     console.error(`getTypeDescriptor throws an exception. code is ${error.code}, message is ${error.message} `);
 }
 ```
+
+
+## getTypeDescriptor
+
+```TypeScript
+function getTypeDescriptor(typeId: string): TypeDescriptor | null
+```
+
+Queries and returns the uniform type descriptor by the given uniform data type ID.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor | null--><!--Device-uniformTypeDescriptor-function getTypeDescriptor(typeId: string): TypeDescriptor | null-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| typeId | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TypeDescriptor](arkts-arkdata-uniformtypedescriptor-typedescriptor-c.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

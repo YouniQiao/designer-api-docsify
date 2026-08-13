@@ -1,9 +1,10 @@
 # PasteDataProperty
 
-Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range,and additional data. The defined properties can be applied to the pasteboard only with the  
-[setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setProperty) method.
+Defines the properties of PasteData in the pasteboard, including the timestamp, data types, pasteable range, and additional data. The defined properties can be applied to the pasteboard only with the [setProperty](arkts-basicservices-pasteboard-pastedata-i.md#setProperty) method.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-interface PasteDataProperty--><!--Device-pasteboard-interface PasteDataProperty-End-->
 
@@ -18,18 +19,18 @@ import { pasteboard } from '@kit.BasicServicesKit';
 ## additions
 
 ```TypeScript
-additions: Record<string, object>
+additions: Record<string, RecordData>
 ```
 
-Additional property data. It does not allow for dynamic adding of properties. Properties can be added only by re-assigning values. This parameter is left empty by default. For details, see the example of **setProperty**.
+additional property data. key-value pairs.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 7
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-PasteDataProperty-additions: Record<string, object>--><!--Device-PasteDataProperty-additions: Record<string, object>-End-->
+<!--Device-PasteDataProperty-additions: Record<string, RecordData>--><!--Device-PasteDataProperty-additions: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -39,12 +40,13 @@ Additional property data. It does not allow for dynamic adding of properties. Pr
 localOnly: boolean
 ```
 
-Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the  
-[ShareOption](arkts-basicservices-pasteboard-shareoption-e.md#ShareOption) attribute instead.
+Whether the pasteboard content is for local access only. The default value is **false**. The value will be overwritten by the value of the **shareOption** attribute. You are advised to use the [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md#ShareOption) attribute instead.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,7 +64,9 @@ Data types of all records in PasteData.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,7 +84,9 @@ Pasteable ranges of PasteData. The default value is **CROSSDEVICE**.
 
 **Type:** [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,7 +104,9 @@ Custom tag. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,7 +124,9 @@ Timestamp when data is written to the pasteboard (unit: nanoseconds since the de
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

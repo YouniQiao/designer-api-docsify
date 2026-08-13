@@ -4,9 +4,11 @@ Manager HID device profile.
 
 **Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md#BaseProfile)
 
-**Since:** 23
+**Since:** 26.0.0
 
-<!--Device-hid-interface HidDeviceProfile extends BaseProfile--><!--Device-hid-interface HidDeviceProfile extends BaseProfile-End-->
+**Deprecated since:** -1
+
+<!--Device-hid-interface HidDeviceProfile--><!--Device-hid-interface HidDeviceProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -24,7 +26,9 @@ connect(deviceId: BluetoothAddress): void
 
 Initiate an HID connection to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -44,10 +48,10 @@ Initiate an HID connection to a remote HID host device.
 
 | Error Code ID |
 | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -76,7 +80,9 @@ disconnect(): void
 
 Disconnect the HID connection with the remote device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -90,9 +96,9 @@ Disconnect the HID connection with the remote device.
 
 | Error Code ID |
 | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -115,7 +121,9 @@ offGetReport(callback?: Callback<GetReportData>): void
 
 Unsubscribe from the event that a GET_REPORT message is received from the peer device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -135,8 +143,8 @@ Unsubscribe from the event that a GET_REPORT message is received from the peer d
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -161,7 +169,9 @@ offInterruptDataReceived(callback?: Callback<InterruptData>): void
 
 Unsubscribe from the event reported when InterruptData is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -181,8 +191,8 @@ Unsubscribe from the event reported when InterruptData is received from the remo
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -207,7 +217,9 @@ offSetProtocol(callback?: Callback<ProtocolData>): void
 
 Unsubscribe from the event that a SET_PROTOCOL message is received from the peer device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -227,8 +239,8 @@ Unsubscribe from the event that a SET_PROTOCOL message is received from the peer
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -253,7 +265,9 @@ offSetReport(callback?: Callback<SetReportData>): void
 
 Unsubscribe from the event that a SET_REPORT message is received from the peer device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -273,8 +287,8 @@ Unsubscribe from the event that a SET_REPORT message is received from the peer d
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -299,7 +313,9 @@ offVirtualCableUnplug(callback?: Callback<void>): void
 
 Unsubscribe from the event reported when virtual Cable is removed.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -319,8 +335,8 @@ Unsubscribe from the event reported when virtual Cable is removed.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -345,7 +361,9 @@ onGetReport(callback: Callback<GetReportData>): void
 
 Subscribe to the event reported when GET_REPORT message is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -365,8 +383,8 @@ Subscribe to the event reported when GET_REPORT message is received from the rem
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -390,7 +408,9 @@ onInterruptDataReceived(callback: Callback<InterruptData>): void
 
 Subscribe to the event reported when InterruptData is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -410,8 +430,8 @@ Subscribe to the event reported when InterruptData is received from the remote.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -435,7 +455,9 @@ onSetProtocol(callback: Callback<ProtocolData>): void
 
 Subscribe to the event reported when SET_PROTOCOL message is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -455,8 +477,8 @@ Subscribe to the event reported when SET_PROTOCOL message is received from the r
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -480,7 +502,9 @@ onSetReport(callback: Callback<SetReportData>): void
 
 Subscribe to the event reported when SET_REPORT message is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -500,8 +524,8 @@ Subscribe to the event reported when SET_REPORT message is received from the rem
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -525,7 +549,9 @@ onVirtualCableUnplug(callback: Callback<void>): void
 
 Subscribe to the event reported when virtual Cable is removed.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -545,8 +571,8 @@ Subscribe to the event reported when virtual Cable is removed.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -568,9 +594,11 @@ try {
 registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void
 ```
 
-Application registers the HID Device capability.The application will only successfully call this API when it's in the foreground.If the application that has registered the HID Device capability is switched to the background, the system automatically cancels the HID Device capability registration. The application can listen to the appStatusChange callback to detect the status change.
+Application registers the HID Device capability. The application will only successfully call this API when it's in the foreground. If the application that has registered the HID Device capability is switched to the background, the system automatically cancels the HID Device capability registration. The application can listen to the appStatusChange callback to detect the status change.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -593,10 +621,10 @@ Application registers the HID Device capability.The application will only succes
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2903050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903050-hid-is-not-in-the-foreground) |
-| [2903051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903051-hid-has-been-registered) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2903050](../errorcode-bluetoothManager.md#2903050-hid-is-not-in-the-foreground) |
+| [2903051](../errorcode-bluetoothManager.md#2903051-hid-has-been-registered) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -659,7 +687,9 @@ replyReport(type: ReportType, id: number, reportData: Uint8Array): void
 
 Reply report to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -681,10 +711,10 @@ Reply report to a remote HID host device.
 
 | Error Code ID |
 | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2903053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903053-hid-not-connected) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -710,7 +740,9 @@ reportError(error: ErrorReason): void
 
 Report error to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -730,10 +762,10 @@ Report error to a remote HID host device.
 
 | Error Code ID |
 | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2903053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903053-hid-not-connected) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -757,7 +789,9 @@ sendReport(id: number, reportData: Uint8Array): void
 
 Send report to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -778,10 +812,10 @@ Send report to a remote HID host device.
 
 | Error Code ID |
 | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2903053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903053-hid-not-connected) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 
@@ -806,7 +840,9 @@ unregisterHidDevice(): void
 
 Application unregisters the HID Device capability.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -820,8 +856,8 @@ Application unregisters the HID Device capability.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 

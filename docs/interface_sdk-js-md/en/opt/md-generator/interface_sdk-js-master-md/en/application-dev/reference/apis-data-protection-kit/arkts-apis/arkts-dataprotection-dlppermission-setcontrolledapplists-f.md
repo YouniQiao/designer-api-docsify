@@ -16,6 +16,8 @@ Sets the list of applications controlled by enterprise DLP. This API uses a prom
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DLP_POLICY_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,12 +43,12 @@ Sets the list of applications controlled by enterprise DLP. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100023-specified-user-id-inconsistent-with-the-current-user-id) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [19100024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100024-personal-space-users-cannot-set-controlled-apps) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100023](../errorcode-dlp.md#19100023-specified-user-id-inconsistent-with-the-current-user-id) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [19100024](../errorcode-dlp.md#19100024-personal-space-users-cannot-set-controlled-apps) |
 
 ## Examples
 

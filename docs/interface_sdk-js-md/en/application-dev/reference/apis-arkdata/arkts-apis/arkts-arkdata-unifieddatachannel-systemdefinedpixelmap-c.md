@@ -1,14 +1,20 @@
 # SystemDefinedPixelMap
 
-Represents the image data type corresponding to [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image) defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#SystemDefinedRecord) and holds only binary data of **PixelMap**.
+Represents the image data type corresponding to [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image) defined by the system. It is a child class of [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#SystemDefinedRecord) and holds only binary data of **PixelMap**.
 
 **Inheritance/Implementation:** SystemDefinedPixelMap extends [SystemDefinedRecord](arkts-arkdata-unifieddatachannel-systemdefinedrecord-c.md#SystemDefinedRecord)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unifiedDataChannel-class SystemDefinedPixelMap extends SystemDefinedRecord--><!--Device-unifiedDataChannel-class SystemDefinedPixelMap extends SystemDefinedRecord-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-unifiedDataChannel-class SystemDefinedPixelMap--><!--Device-unifiedDataChannel-class SystemDefinedPixelMap-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -17,26 +23,4 @@ Represents the image data type corresponding to [PixelMap](../../apis-image-kit/
 ```TypeScript
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
-
-## rawData
-
-```TypeScript
-set rawData(value: Uint8Array)
-```
-
-Indicates the raw data of pixel map
-
-**Type:** Uint8Array
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SystemDefinedPixelMap-set rawData(value: Uint8Array)--><!--Device-SystemDefinedPixelMap-set rawData(value: Uint8Array)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 

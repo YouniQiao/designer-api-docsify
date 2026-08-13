@@ -6,6 +6,8 @@ Defines a contact's organization.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-contact-class Organization--><!--Device-contact-class Organization-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -30,6 +32,8 @@ Organization name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Organization-name: string--><!--Device-Organization-name: string-End-->
@@ -49,6 +53,8 @@ Job title.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

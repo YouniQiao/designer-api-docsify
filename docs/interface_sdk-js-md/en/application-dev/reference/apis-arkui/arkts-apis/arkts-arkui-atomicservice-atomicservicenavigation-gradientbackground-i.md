@@ -6,6 +6,8 @@ Provides options for setting gradient colors for branding.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface GradientBackground--><!--Device-unnamed-export interface GradientBackground-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ the opacity of background colors.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-GradientBackground-alpha?: GradientAlpha--><!--Device-GradientBackground-alpha?: GradientAlpha-End-->
@@ -49,6 +53,8 @@ the theme color of Background.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -70,6 +76,8 @@ the blend mode of background color.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-GradientBackground-mixMode?: MixMode--><!--Device-GradientBackground-mixMode?: MixMode-End-->
@@ -90,6 +98,8 @@ the primaryColor of Background.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-GradientBackground-primaryColor: ResourceColor--><!--Device-GradientBackground-primaryColor: ResourceColor-End-->
@@ -109,6 +119,8 @@ the secondaryColor of Background.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

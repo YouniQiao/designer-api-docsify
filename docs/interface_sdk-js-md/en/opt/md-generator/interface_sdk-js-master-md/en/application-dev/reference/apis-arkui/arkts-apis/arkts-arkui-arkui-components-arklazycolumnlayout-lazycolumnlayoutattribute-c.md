@@ -2,11 +2,13 @@
 
 Defines the lazy column layout attribute.
 
-**Inheritance/Implementation:** LazyColumnLayoutAttribute extends [CommonMethod<LazyColumnLayoutAttribute>](CommonMethod<LazyColumnLayoutAttribute>)
+**Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class LazyColumnLayoutAttribute--><!--Device-unnamed-export declare class LazyColumnLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 Sets the horizontal alignment of the row content.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,6 +60,8 @@ Sets the footer of the lazy column layout.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -85,6 +91,8 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 Sets the header of the lazy column layout.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +124,8 @@ Triggered when the index of child components in the visible area changes.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -146,6 +156,8 @@ The spacing between rows.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -175,6 +187,8 @@ sticky(sticky: StickyStyle | undefined): LazyColumnLayoutAttribute
 Sets sticky style for header and footer.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

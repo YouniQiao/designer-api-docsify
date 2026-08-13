@@ -1,12 +1,12 @@
 # KeyboardController
 
-Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements:
-
-1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released.2. A key can only be released after it has been pressed.3. A maximum of five keys can be pressed and held simultaneously.
+Provides the capability of simulating key operations. The simulated key operation sequence must meet the following requirements: 1. A key can only be pressed when it is in the released state, or when it is the most recently pressed key and has not been released. 2. A key can only be released after it has been pressed. 3. A maximum of five keys can be pressed and held simultaneously.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-inputEventClient-interface KeyboardController--><!--Device-inputEventClient-interface KeyboardController-End-->
 
@@ -28,7 +28,9 @@ Presses a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -54,9 +56,9 @@ Presses a key. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The key is already pressed and is not the most recently pressed key. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The key is already pressed and is not the most recently pressed key. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## releaseKey
 
@@ -68,7 +70,9 @@ Releases a key. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -94,7 +98,7 @@ Releases a key. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The key is not pressed. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The key is not pressed. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

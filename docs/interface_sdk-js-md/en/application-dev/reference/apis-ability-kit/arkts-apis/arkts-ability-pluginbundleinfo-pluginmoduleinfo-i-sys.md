@@ -1,0 +1,82 @@
+# PluginModuleInfo (System API)
+
+Defines the module information of a plugin.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface PluginModuleInfo--><!--Device-unnamed-export interface PluginModuleInfo-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## description
+
+```TypeScript
+readonly description: string
+```
+
+Description of the module.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-PluginModuleInfo-readonly description: string--><!--Device-PluginModuleInfo-readonly description: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## descriptionId
+
+```TypeScript
+readonly descriptionId: long
+```
+
+Resource ID of the module description.
+
+**Type:** long
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-PluginModuleInfo-readonly descriptionId: long--><!--Device-PluginModuleInfo-readonly descriptionId: long-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## moduleName
+
+```TypeScript
+readonly moduleName: string
+```
+
+Module name of the plugin.
+
+**Type:** string
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-PluginModuleInfo-readonly moduleName: string--><!--Device-PluginModuleInfo-readonly moduleName: string-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+

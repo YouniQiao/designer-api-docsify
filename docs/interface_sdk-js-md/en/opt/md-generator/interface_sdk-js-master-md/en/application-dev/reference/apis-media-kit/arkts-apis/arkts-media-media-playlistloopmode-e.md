@@ -4,6 +4,8 @@ Enumerates loop mode keys for playback.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-media-enum PlaylistLoopMode--><!--Device-media-enum PlaylistLoopMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -17,6 +19,8 @@ PLAYLIST_LOOP_MODE_ALL = 1
 loops all items in the playlist
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Loops a single playback item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -54,6 +60,8 @@ Loops shuffle playback item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -71,6 +79,8 @@ PLAYLIST_LOOP_MODE_NONE = 4
 No looping
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

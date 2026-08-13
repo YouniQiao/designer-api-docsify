@@ -2,9 +2,11 @@
 
 Implements audio collaborative management.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCollaborativeManager--><!--Device-audio-interface AudioCollaborativeManager-End-->
 
@@ -20,9 +22,11 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 
 检查指定设备的协同播放状态
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioCollaborativeManager-isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor): boolean-End-->
 
@@ -46,8 +50,8 @@ isCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -87,9 +91,11 @@ isCollaborativePlaybackSupported(): boolean
 
 Checks whether the collaborative playback is supported by system.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupported(): boolean--><!--Device-AudioCollaborativeManager-isCollaborativePlaybackSupported(): boolean-End-->
 
@@ -107,7 +113,7 @@ Checks whether the collaborative playback is supported by system.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 
@@ -134,7 +140,9 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,7 +168,7 @@ isCollaborativePlaybackSupportedForDevice(deviceDescriptor: AudioDeviceDescripto
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## setCollaborativePlaybackEnabledForDevice
 
@@ -170,9 +178,11 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 
 设置使能或者关闭与指定设备协同播放。当前仅A2DP音频设备支持协同播放。如果系统当前正在使用指定的设备发声，调用此接口后，声音将从本地speaker和指定的设备上协同播放出来。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioCollaborativeManager-setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>--><!--Device-AudioCollaborativeManager-setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise<void>-End-->
 
@@ -197,9 +207,9 @@ setCollaborativePlaybackEnabledForDevice(deviceDescriptor: AudioDeviceDescriptor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Possible causes: 1. The specified device is not an A2DP device. 2. The specified device is not connected. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application. |
 
 ## 示例
 

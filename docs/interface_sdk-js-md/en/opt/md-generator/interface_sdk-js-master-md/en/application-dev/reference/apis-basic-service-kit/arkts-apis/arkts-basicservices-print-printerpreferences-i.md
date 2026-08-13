@@ -2,7 +2,9 @@
 
 Defines the printer preferences.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrinterPreferences--><!--Device-print-interface PrinterPreferences-End-->
 
@@ -24,7 +26,9 @@ Whether to print without margins. The value **true** means to print without marg
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-borderless?: boolean--><!--Device-PrinterPreferences-borderless?: boolean-End-->
 
@@ -41,6 +45,8 @@ Default collate.
 **Type:** boolean
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,6 +66,8 @@ Default color mode.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode--><!--Device-PrinterPreferences-defaultColorMode?: PrintColorMode-End-->
@@ -76,7 +84,9 @@ Default duplex mode.
 
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode--><!--Device-PrinterPreferences-defaultDuplexMode?: PrintDuplexMode-End-->
 
@@ -92,7 +102,9 @@ Default paper type.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-defaultMediaType?: string--><!--Device-PrinterPreferences-defaultMediaType?: string-End-->
 
@@ -108,7 +120,9 @@ Default print orientation.
 
 **Type:** [PrintOrientationMode](arkts-basicservices-print-printorientationmode-e.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode--><!--Device-PrinterPreferences-defaultOrientation?: PrintOrientationMode-End-->
 
@@ -120,11 +134,13 @@ Default print orientation.
 defaultPageSizeId?: string
 ```
 
-ID of the default paper size. The value can be a standard paper size defined by the International Organization for Standardization (ISO), for example, ISO_A4, or a non-standard paper size defined in the system, for example,Custom.178 × 254 mm.
+ID of the default paper size. The value can be a standard paper size defined by the International Organization for Standardization (ISO), for example, ISO_A4, or a non-standard paper size defined in the system, for example, Custom.178 × 254 mm.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-defaultPageSizeId?: string--><!--Device-PrinterPreferences-defaultPageSizeId?: string-End-->
 
@@ -140,7 +156,9 @@ Default print quality.
 
 **Type:** [PrintQuality](arkts-basicservices-print-printquality-e.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality--><!--Device-PrinterPreferences-defaultPrintQuality?: PrintQuality-End-->
 
@@ -158,6 +176,8 @@ Default reverse.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PrinterPreferences-defaultReverse?: boolean--><!--Device-PrinterPreferences-defaultReverse?: boolean-End-->
@@ -174,7 +194,9 @@ Other fields in the printer preferences. The fields are queried from the printer
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrinterPreferences-options?: string--><!--Device-PrinterPreferences-options?: string-End-->
 
@@ -191,6 +213,8 @@ Vendor-specific printer preferences in JSON format.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

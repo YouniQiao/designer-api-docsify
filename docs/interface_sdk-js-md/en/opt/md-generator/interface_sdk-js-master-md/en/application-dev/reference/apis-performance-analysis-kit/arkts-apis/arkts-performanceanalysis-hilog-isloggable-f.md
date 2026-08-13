@@ -14,7 +14,9 @@ function isLoggable(domain: number, tag: string, level: LogLevel): boolean
 
 Checks whether logs are printable based on the specified service domain, log tag, and log level.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

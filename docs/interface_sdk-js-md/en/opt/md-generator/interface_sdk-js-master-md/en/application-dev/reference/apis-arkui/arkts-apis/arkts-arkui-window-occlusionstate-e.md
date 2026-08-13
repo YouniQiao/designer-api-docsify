@@ -2,7 +2,9 @@
 
 Enumerates the window visibility states.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum OcclusionState--><!--Device-window-enum OcclusionState-End-->
 
@@ -16,7 +18,9 @@ NO_OCCLUSION = 0
 
 The window is entirely visible, with no parts obscured by other non-transparent windows.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OcclusionState-NO_OCCLUSION = 0--><!--Device-OcclusionState-NO_OCCLUSION = 0-End-->
 
@@ -30,7 +34,9 @@ PARTIAL_OCCLUSION = 1
 
 The window is partially visible, with some parts obscured by other non-transparent windows.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OcclusionState-PARTIAL_OCCLUSION = 1--><!--Device-OcclusionState-PARTIAL_OCCLUSION = 1-End-->
 
@@ -44,7 +50,9 @@ FULL_OCCLUSION = 2
 
 The window is completely invisible, either fully obscured by other non-transparent windows, minimized, or hidden.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OcclusionState-FULL_OCCLUSION = 2--><!--Device-OcclusionState-FULL_OCCLUSION = 2-End-->
 

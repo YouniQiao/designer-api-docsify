@@ -2,7 +2,9 @@
 
 跨设备协同操作信息。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export interface OperationInfo--><!--Device-notificationSubscribe-export interface OperationInfo-End-->
 
@@ -22,12 +24,13 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 actionName?: string
 ```
 
-描述通知中显示的操作按钮（与通知  
-[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton)中title字段保持一致）。
+描述通知中显示的操作按钮（与通知 [NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md#NotificationActionButton)中title字段保持一致）。
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperationInfo-actionName?: string--><!--Device-OperationInfo-actionName?: string-End-->
 
@@ -45,7 +48,9 @@ buttonIndex?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperationInfo-buttonIndex?: int--><!--Device-OperationInfo-buttonIndex?: int-End-->
 
@@ -59,16 +64,13 @@ buttonIndex?: number
 operationType?: number
 ```
 
-用户点击操作类型。
-
-- 0：用户点击非实况通知本体。  
-- 1：用户点击非实况通知按钮。  
-- 32：用户点击实况通知本体。  
-- 33：用户点击实况通知辅助区
+用户点击操作类型。 - 0：用户点击非实况通知本体。 - 1：用户点击非实况通知按钮。 - 32：用户点击实况通知本体。 - 33：用户点击实况通知辅助区
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperationInfo-operationType?: int--><!--Device-OperationInfo-operationType?: int-End-->
 
@@ -82,12 +84,13 @@ operationType?: number
 userInput?: string
 ```
 
-用户输入（用于通知跨设备快捷回复场景传递用户输入，与通知  
-[NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#NotificationUserInput)中inputKey字段保持一致）。
+用户输入（用于通知跨设备快捷回复场景传递用户输入，与通知 [NotificationUserInput](arkts-notification-notificationuserinput-notificationuserinput-i.md#NotificationUserInput)中inputKey字段保持一致）。
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OperationInfo-userInput?: string--><!--Device-OperationInfo-userInput?: string-End-->
 

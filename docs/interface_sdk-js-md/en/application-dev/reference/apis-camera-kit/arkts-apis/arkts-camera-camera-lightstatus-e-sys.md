@@ -1,11 +1,12 @@
 # LightStatus (System API)
 
-Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys.  
-[on('lightStatusChange')](camera.VideoSession.on(type: 'lightStatusChange', callback: AsyncCallback&lt;LightStatus&gt;)).
+Enumerates the camera light statuses, which are obtained by calling VideoSessionForSys. [on('lightStatusChange')](arkts-camera-camera-videosession-i.md#on_error).
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum LightStatus--><!--Device-camera-enum LightStatus-End-->
 
@@ -21,9 +22,11 @@ NORMAL = 0
 
 Normal lighting conditions.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LightStatus-NORMAL = 0--><!--Device-LightStatus-NORMAL = 0-End-->
 
@@ -39,9 +42,11 @@ INSUFFICIENT = 1
 
 Insufficient lighting (too dark).
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LightStatus-INSUFFICIENT = 1--><!--Device-LightStatus-INSUFFICIENT = 1-End-->
 

@@ -1,17 +1,12 @@
 # OnscreenAwarenessCap（系统接口）
 
-屏上感知能力（包括但不限于阅读场景感知、OCR识别等功能）。
-
-参数约束说明：
-
-用户可通过能力项（capList）或分组 ID（groupId）使用屏上感知功能。
-
-* 逻辑关系：capList 与 groupId 互为补充必填项, 至少需提供其一，且不为空。  
-* 校验规则：调用接口时，系统会单独检测capList和groupId。
+屏上感知能力（包括但不限于阅读场景感知、OCR识别等功能）。 参数约束说明： 用户可通过能力项（capList）或分组 ID（groupId）使用屏上感知功能。 * 逻辑关系：capList 与 groupId 互为补充必填项, 至少需提供其一，且不为空。 * 校验规则：调用接口时，系统会单独检测capList和groupId。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-onScreen-export interface OnscreenAwarenessCap--><!--Device-onScreen-export interface OnscreenAwarenessCap-End-->
 
@@ -31,7 +26,9 @@ capList?: string[]
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,7 +50,9 @@ groupId?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

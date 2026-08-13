@@ -4,6 +4,8 @@ Defines the parameters for an image-like particle.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ImageParticleParameters--><!--Device-unnamed-interface ImageParticleParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Image display mode.
 **Default:** ImageFit.Cover
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Particle image size.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -56,16 +62,13 @@ Particle image size.
 src: ResourceStr
 ```
 
-Path to the image. Local and online sources are supported. For details about how to reference an image, see   
-[Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources).
-
-SVG images are not supported.
-
-If the value of src does not change, the cached resource is preferentially used. As a result, resources cannot be dynamically switched. If you want to dynamically switch resources, you are advised to switch to different src values.
+Path to the image. Local and online sources are supported. For details about how to reference an image, see [Loading Image Resources](../../../ui/arkts-graphics-display.md#loading-image-resources). SVG images are not supported. If the value of src does not change, the cached resource is preferentially used. As a result, resources cannot be dynamically switched. If you want to dynamically switch resources, you are advised to switch to different src values.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

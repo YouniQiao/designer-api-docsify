@@ -2,7 +2,9 @@
 
 dialogSession模块用于支持系统应用弹框功能。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -19,9 +21,10 @@ dialogSession模块用于支持系统应用弹框功能。
 
 | 名称 |
 | --- |
-| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getdialogsessioninfo) |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult) |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult-1) |
+| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getDialogSessionInfo（系统接口）) |
+| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getDialogSessionInfo（系统接口）) |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#sendDialogResult（系统接口）) |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#sendDialogResult（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

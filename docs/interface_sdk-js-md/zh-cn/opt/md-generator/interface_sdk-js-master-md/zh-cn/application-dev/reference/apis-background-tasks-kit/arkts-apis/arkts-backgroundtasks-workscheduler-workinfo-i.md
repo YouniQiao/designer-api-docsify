@@ -2,7 +2,9 @@
 
 延迟任务的具体信息, 用于设置延迟任务的触发条件等。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-workScheduler-export interface WorkInfo--><!--Device-workScheduler-export interface WorkInfo-End-->
 
@@ -18,7 +20,9 @@ abilityName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,13 +36,13 @@ abilityName: string
 batteryLevel?: number
 ```
 
-电量。
-
-取值范围：[0, 100]
+电量。 取值范围：[0, 100]
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,7 +60,9 @@ batteryStatus?: BatteryStatus
 
 **类型：** [BatteryStatus](arkts-backgroundtasks-workscheduler-batterystatus-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,7 +80,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,7 +100,9 @@ chargerType?: ChargingType
 
 **类型：** [ChargingType](arkts-backgroundtasks-workscheduler-chargingtype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,11 +116,13 @@ chargerType?: ChargingType
 earliestStartTime?: number
 ```
 
-任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。取值范围为全体整数。
+任务首次执行时间距离任务申请时间的间隔，单位：ms，默认为0，范围大于等于0。 取值范围为全体整数。
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,7 +140,9 @@ idleWaitTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,14 +156,13 @@ idleWaitTime?: number
 isCharging?: boolean
 ```
 
-是否充电，默认为false。
-
-- true表示充电触发延迟任务回调。  
-- false表示不充电触发延迟任务回调。
+是否充电，默认为false。 - true表示充电触发延迟任务回调。 - false表示不充电触发延迟任务回调。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -163,14 +176,13 @@ isCharging?: boolean
 isDeepIdle?: boolean
 ```
 
-是否要求设备进入空闲状态，默认为false。
-
-- true表示需要。  
-- false表示不需要。
+是否要求设备进入空闲状态，默认为false。 - true表示需要。 - false表示不需要。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,14 +196,13 @@ isDeepIdle?: boolean
 isPersisted?: boolean
 ```
 
-注册的延迟任务是否可保存在系统中，默认为false。
-
-- true表示可保存，即系统重启后，任务可恢复。  
-- false表示不可保存。
+注册的延迟任务是否可保存在系统中，默认为false。 - true表示可保存，即系统重启后，任务可恢复。 - false表示不可保存。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -205,14 +216,13 @@ isPersisted?: boolean
 isRepeat?: boolean
 ```
 
-是否循环任务，默认为false。
-
-- true表示循环任务。  
-- false表示非循环任务。
+是否循环任务，默认为false。 - true表示循环任务。 - false表示非循环任务。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -230,7 +240,9 @@ networkType?: NetworkType
 
 **类型：** [NetworkType](arkts-backgroundtasks-workscheduler-networktype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -248,7 +260,9 @@ parameters?: Record<string, number | number | string | boolean>
 
 **类型：** Record&lt;string, number \| number \| string \| boolean&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,7 +280,9 @@ repeatCount?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,7 +300,9 @@ repeatCycleTime?: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,7 +320,9 @@ storageRequest?: StorageRequest
 
 **类型：** [StorageRequest](arkts-backgroundtasks-workscheduler-storagerequest-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -320,7 +340,9 @@ workId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

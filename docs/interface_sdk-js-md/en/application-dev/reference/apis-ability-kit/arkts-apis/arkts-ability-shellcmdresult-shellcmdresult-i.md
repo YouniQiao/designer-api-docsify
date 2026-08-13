@@ -1,14 +1,12 @@
 # ShellCmdResult
 
-The **ShellCmdResult** module provides the shell command execution result.
+The **ShellCmdResult** module provides the shell command execution result. > **NOTE：**> > The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
 
-> **NOTE：**
-> 
-> The APIs of this module can be used only in [JsUnit](../../../application-test/unittest-guidelines.md).
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ShellCmdResult--><!--Device-unnamed-export interface ShellCmdResult-End-->
 
@@ -22,11 +20,13 @@ exitCode: int
 
 Result code of the shell command.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,9 +44,11 @@ Standard output of the shell command.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

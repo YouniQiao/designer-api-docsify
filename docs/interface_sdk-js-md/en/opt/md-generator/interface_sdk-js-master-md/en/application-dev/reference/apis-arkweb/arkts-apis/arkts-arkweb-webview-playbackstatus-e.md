@@ -1,9 +1,10 @@
 # PlaybackStatus
 
-Enumerates the playback statuses of the player, which is an input parameter of the  
-[handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handleStatusChanged) API.
+Enumerates the playback statuses of the player, which is an input parameter of the [handleStatusChanged](arkts-arkweb-webview-nativemediaplayerhandler-i.md#handleStatusChanged) API.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum PlaybackStatus--><!--Device-webview-enum PlaybackStatus-End-->
 
@@ -18,6 +19,8 @@ PAUSED = 0
 Playing.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +37,8 @@ PLAYING = 1
 Paused.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

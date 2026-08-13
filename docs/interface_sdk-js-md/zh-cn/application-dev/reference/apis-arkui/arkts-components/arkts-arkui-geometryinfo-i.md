@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare interface GeometryInfo extends SizeResult--><!--Device-unnamed-declare interface GeometryInfo extends SizeResult-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface GeometryInfo--><!--Device-unnamed-declare interface GeometryInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@
 borderWidth: EdgeWidth
 ```
 
-父组件（自定义组件）边框宽度。单位为： vp。
+父组件（自定义组件）边框宽度。 单位为： vp。
 
 **类型：** EdgeWidth
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,13 +44,15 @@ borderWidth: EdgeWidth
 margin: Margin
 ```
 
-父组件（自定义组件）margin信息。单位为： vp。
+父组件（自定义组件）margin信息。 单位为： vp。
 
 **类型：** Margin
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,13 +68,15 @@ margin: Margin
 padding: Padding
 ```
 
-父组件（自定义组件）padding信息。单位为： vp。
+父组件（自定义组件）padding信息。 单位为： vp。
 
-**类型：** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**类型：** Padding
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

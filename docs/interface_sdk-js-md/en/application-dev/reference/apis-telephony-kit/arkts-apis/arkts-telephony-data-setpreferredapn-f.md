@@ -14,9 +14,11 @@ function setPreferredApn(apnId: int): Promise<boolean>
 
 Set preferred APN.
 
-**Since:** 16
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
@@ -28,7 +30,7 @@ Set preferred APN.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| apnId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The APN ID which is used to be set. |
+| apnId | int | Yes | The APN ID which is used to be set. |
 
 **Return value:**
 
@@ -40,7 +42,7 @@ Set preferred APN.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

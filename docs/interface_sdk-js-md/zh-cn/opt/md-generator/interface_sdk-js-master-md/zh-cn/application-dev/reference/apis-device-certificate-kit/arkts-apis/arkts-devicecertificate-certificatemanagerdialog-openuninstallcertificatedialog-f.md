@@ -8,7 +8,9 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 
 打开证书管理卸载证书向导，显示相应的页面。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -36,13 +38,13 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 
 | 错误码ID |
 | --- |
-| [29700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700005-操作不符合设备安全策略) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [29700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700004-设备类型不支持) |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-内部错误) |
-| [29700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-证书安装失败错误) |
-| [29700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700002-操作取消) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [29700005](../errorcode-certManagerDialog.md#29700005-操作不符合设备安全策略) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) |
+| [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) |
+| [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

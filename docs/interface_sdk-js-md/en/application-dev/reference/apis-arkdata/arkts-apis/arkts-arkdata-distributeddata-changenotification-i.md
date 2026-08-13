@@ -8,7 +8,7 @@ Defines the content of data change notifications, including inserted data, updat
 
 **Deprecated since:** 9
 
-**Substitutes:** [ChangeNotification](ohos.data.distributedKVStore.ChangeNotification)
+**Substitutes:** ChangeNotification
 
 <!--Device-distributedData-interface ChangeNotification--><!--Device-distributedData-interface ChangeNotification-End-->
 
@@ -30,7 +30,7 @@ Data deleted.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteEntries](ohos.data.distributedKVStore.ChangeNotification#deleteEntries)
+**Substitutes:** deleteEntries
 
 <!--Device-ChangeNotification-deleteEntries: Entry[]--><!--Device-ChangeNotification-deleteEntries: Entry[]-End-->
 
@@ -52,7 +52,7 @@ UUID of the device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.data.distributedKVStore.ChangeNotification#deviceId)
+**Substitutes:** deviceId
 
 <!--Device-ChangeNotification-deviceId: string--><!--Device-ChangeNotification-deviceId: string-End-->
 
@@ -74,7 +74,7 @@ Data inserted.
 
 **Deprecated since:** 9
 
-**Substitutes:** [insertEntries](ohos.data.distributedKVStore.ChangeNotification#insertEntries)
+**Substitutes:** insertEntries
 
 <!--Device-ChangeNotification-insertEntries: Entry[]--><!--Device-ChangeNotification-insertEntries: Entry[]-End-->
 
@@ -96,7 +96,7 @@ Data updated.
 
 **Deprecated since:** 9
 
-**Substitutes:** [updateEntries](ohos.data.distributedKVStore.ChangeNotification#updateEntries)
+**Substitutes:** updateEntries
 
 <!--Device-ChangeNotification-updateEntries: Entry[]--><!--Device-ChangeNotification-updateEntries: Entry[]-End-->
 

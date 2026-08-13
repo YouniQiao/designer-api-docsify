@@ -7,9 +7,7 @@ function queryAbilityByWant(want: Want,
     bundleFlags: number, userId: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-根据给定的意图获取指定用户下Ability信息，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的意图获取指定用户下Ability信息，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -59,9 +57,7 @@ bundle.queryAbilityByWant(want, bundleFlags, userId, (err, data) => {
 function queryAbilityByWant(want: Want, bundleFlags: number, callback: AsyncCallback<Array<AbilityInfo>>): void
 ```
 
-根据给定的意图获取Ability信息，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的意图获取Ability信息，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 
@@ -109,9 +105,7 @@ bundle.queryAbilityByWant(want, bundleFlags, (err, data) => {
 function queryAbilityByWant(want: Want, bundleFlags: number, userId?: number): Promise<Array<AbilityInfo>>
 ```
 
-根据给定的意图获取Ability组件信息，使用Promise异步回调。
-
-获取调用方自己的信息时不需要权限。
+根据给定的意图获取Ability组件信息，使用Promise异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 7
 

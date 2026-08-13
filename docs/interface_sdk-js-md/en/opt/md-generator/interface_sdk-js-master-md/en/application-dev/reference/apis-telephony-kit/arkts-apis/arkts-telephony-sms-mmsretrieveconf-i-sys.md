@@ -2,7 +2,9 @@
 
 Defines the MMS message retrieval configuration.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsRetrieveConf--><!--Device-sms-export interface MmsRetrieveConf-End-->
 
@@ -26,7 +28,9 @@ Carbon copy.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-cc?: Array<MmsAddress>--><!--Device-MmsRetrieveConf-cc?: Array<MmsAddress>-End-->
 
@@ -44,7 +48,9 @@ Content type.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-contentType: string--><!--Device-MmsRetrieveConf-contentType: string-End-->
 
@@ -62,7 +68,9 @@ Date.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-date: long--><!--Device-MmsRetrieveConf-date: long-End-->
 
@@ -80,7 +88,9 @@ Status report.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-deliveryReport?: int--><!--Device-MmsRetrieveConf-deliveryReport?: int-End-->
 
@@ -98,7 +108,9 @@ Source address.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-from?: MmsAddress--><!--Device-MmsRetrieveConf-from?: MmsAddress-End-->
 
@@ -116,7 +128,9 @@ Message ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-messageId: string--><!--Device-MmsRetrieveConf-messageId: string-End-->
 
@@ -134,7 +148,9 @@ Priority.
 
 **Type:** [MmsPriorityType](arkts-telephony-sms-mmsprioritytype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-priority?: MmsPriorityType--><!--Device-MmsRetrieveConf-priority?: MmsPriorityType-End-->
 
@@ -152,7 +168,9 @@ Read report.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-readReport?: int--><!--Device-MmsRetrieveConf-readReport?: int-End-->
 
@@ -170,7 +188,9 @@ Retrieval status.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-retrieveStatus?: int--><!--Device-MmsRetrieveConf-retrieveStatus?: int-End-->
 
@@ -188,7 +208,9 @@ Retrieval text.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-retrieveText?: string--><!--Device-MmsRetrieveConf-retrieveText?: string-End-->
 
@@ -206,7 +228,9 @@ Subject.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-subject?: string--><!--Device-MmsRetrieveConf-subject?: string-End-->
 
@@ -224,7 +248,9 @@ Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-to: Array<MmsAddress>--><!--Device-MmsRetrieveConf-to: Array<MmsAddress>-End-->
 
@@ -242,7 +268,9 @@ Transaction ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-transactionId: string--><!--Device-MmsRetrieveConf-transactionId: string-End-->
 
@@ -260,7 +288,9 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsRetrieveConf-version: MmsVersionType--><!--Device-MmsRetrieveConf-version: MmsVersionType-End-->
 

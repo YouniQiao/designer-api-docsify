@@ -2,7 +2,9 @@
 
 Enumerates the shadow drawing behaviors.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum ShadowFlag--><!--Device-drawing-enum ShadowFlag-End-->
 
@@ -16,7 +18,9 @@ NONE = 0
 
 No shadow effect is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ShadowFlag-NONE = 0--><!--Device-ShadowFlag-NONE = 0-End-->
 
@@ -30,7 +34,9 @@ TRANSPARENT_OCCLUDER = 1
 
 The occluder is translucent.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ShadowFlag-TRANSPARENT_OCCLUDER = 1--><!--Device-ShadowFlag-TRANSPARENT_OCCLUDER = 1-End-->
 
@@ -44,7 +50,9 @@ GEOMETRIC_ONLY = 2
 
 Only the geometric shadow effect is used.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ShadowFlag-GEOMETRIC_ONLY = 2--><!--Device-ShadowFlag-GEOMETRIC_ONLY = 2-End-->
 
@@ -58,7 +66,9 @@ ALL = 3
 
 Shadow effects are combined, including the translucent occluder and geometric shadow.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ShadowFlag-ALL = 3--><!--Device-ShadowFlag-ALL = 3-End-->
 

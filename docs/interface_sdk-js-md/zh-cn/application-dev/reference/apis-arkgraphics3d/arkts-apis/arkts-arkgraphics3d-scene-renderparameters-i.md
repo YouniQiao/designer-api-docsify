@@ -2,9 +2,11 @@
 
 定义手动渲染的参数.
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RenderParameters--><!--Device-unnamed-export interface RenderParameters-End-->
 
@@ -16,13 +18,15 @@
 alwaysRender?: boolean
 ```
 
-如果为true，即使场景没有变化也始终渲染自上一帧以来. 如果为false，则场景没有变化时可以省略渲染.
+如果为true，即使场景没有变化也始终渲染 自上一帧以来. 如果为false，则场景没有变化时可以省略渲染.
 
 **类型：** boolean
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RenderParameters-alwaysRender?: boolean--><!--Device-RenderParameters-alwaysRender?: boolean-End-->
 

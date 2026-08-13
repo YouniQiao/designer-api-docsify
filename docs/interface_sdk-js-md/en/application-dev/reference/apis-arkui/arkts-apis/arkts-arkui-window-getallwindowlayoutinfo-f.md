@@ -14,11 +14,13 @@ function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo
 
 Obtains the layout information array of all windows visible on a display. The layout information is arranged based on the current window stacking order, and the topmost window in the hierarchy is at index 0 of the array. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>--><!--Device-window-function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>-End-->
 
@@ -28,7 +30,7 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#WindowProperties). |
+| displayId | long | Yes | ID of the display where the windows are located. The value must be an integer and can be obtained from [WindowProperties](arkts-arkui-window-windowproperties-i.md#WindowProperties). |
 
 **Return value:**
 
@@ -40,10 +42,10 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.<br>**Applicable version:** 15 - 18 |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal.<br>**Applicable version:** 15 - 18 |
 
 
 ## getAllWindowLayoutInfo
@@ -52,11 +54,13 @@ Obtains the layout information array of all windows visible on a display. The la
 function getAllWindowLayoutInfo(displayId: long, option?: WindowInfoOptions): Promise<Array<WindowLayoutInfo>>
 ```
 
-Obtains the array of window layout info visible on a specified screen.The width and height of each rect are calculated after scaling. The array is sorted by the current window level.The index of the array corresponding to the highest level is 0.
+Obtains the array of window layout info visible on a specified screen. The width and height of each rect are calculated after scaling. The array is sorted by the current window level. The index of the array corresponding to the highest level is 0.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +74,7 @@ Obtains the array of window layout info visible on a specified screen.The width 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Indicate the id of display. |
+| displayId | long | Yes | Indicate the id of display. |
 | option | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | No | Filter criteria for window information. |
 
 **Return value:**
@@ -83,7 +87,7 @@ Obtains the array of window layout info visible on a specified screen.The width 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
-| [1300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function getAllWindowLayoutInfo can not work correctly due to limited device capabilities. |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 

@@ -1,12 +1,14 @@
 # BackupExtensionContext
 
-BackupExtensionAbility的上下文环境，继承自ExtensionContext。用于在备份恢复过程中获取EL1（设备级加密区）或EL2（用户级加密区）对应的临时目录。
+BackupExtensionAbility的上下文环境，继承自ExtensionContext。 用于在备份恢复过程中获取EL1（设备级加密区）或EL2（用户级加密区）对应的临时目录。
 
-**继承/实现关系：** BackupExtensionContext extends [ExtensionContext](ExtensionContext)
+**继承/实现关系：** BackupExtensionContext extends ExtensionContext
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext extends ExtensionContext-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class BackupExtensionContext--><!--Device-unnamed-declare class BackupExtensionContext-End-->
 
 **系统能力：** SystemCapability.FileManagement.StorageService.Backup
 
@@ -21,6 +23,8 @@ readonly backupDir: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

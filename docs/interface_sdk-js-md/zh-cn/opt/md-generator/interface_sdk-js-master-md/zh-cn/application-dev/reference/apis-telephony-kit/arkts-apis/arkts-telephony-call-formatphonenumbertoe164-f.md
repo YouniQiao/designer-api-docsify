@@ -6,11 +6,11 @@
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void
 ```
 
-将电话号码格式化为E.164表示形式，使用callback异步回调。
+将电话号码格式化为E.164表示形式，使用callback异步回调。 待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
 
-待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
+**起始版本：** 23
 
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void--><!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callback: AsyncCallback<string>): void-End-->
 
@@ -28,11 +28,11 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string, callb
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 
@@ -55,13 +55,11 @@ call.formatPhoneNumberToE164("138xxxxxxxx", "CN", (err: BusinessError, data: str
 function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>
 ```
 
-将电话号码格式化为E.164表示形式，使用Promise异步回调。
+将电话号码格式化为E.164表示形式，使用Promise异步回调。 待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。 支持所有国家码。
 
-待格式化的电话号码需要与传入的国家码相匹配，如中国电话号码需要传入国家码CN，否则格式化后的电话号码为null。
+**起始版本：** 23
 
-支持所有国家码。
-
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>--><!--Device-call-function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Promise<string>-End-->
 
@@ -84,11 +82,11 @@ function formatPhoneNumberToE164(phoneNumber: string, countryCode: string): Prom
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

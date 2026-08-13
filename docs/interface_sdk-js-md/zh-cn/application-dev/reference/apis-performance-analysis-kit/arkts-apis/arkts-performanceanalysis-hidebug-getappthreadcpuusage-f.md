@@ -6,15 +6,13 @@
 function getAppThreadCpuUsage(): ThreadCpuUsage[]
 ```
 
-获取应用线程CPU使用情况。
+获取应用线程CPU使用情况。 > **注意** > > 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。
 
-> **注意**
-> 
-> 由于该接口涉及跨进程通信，耗时较长，为了避免引入性能问题，建议不要在主线程中直接调用该接口。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]--><!--Device-hidebug-function getAppThreadCpuUsage(): ThreadCpuUsage[]-End-->
 

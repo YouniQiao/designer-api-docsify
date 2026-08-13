@@ -6,6 +6,8 @@ Enum type supplied to [PinVerifyResult](#PinVerifyResult) when VerifyPinHandler#
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum PinVerifyResult--><!--Device-unnamed-declare enum PinVerifyResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -22,6 +24,8 @@ SUCCESS.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0--><!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -37,6 +41,8 @@ FAILED.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1--><!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1-End-->
 

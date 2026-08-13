@@ -2,7 +2,9 @@
 
 Defines the network capability.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export enum NetCap--><!--Device-connection-export enum NetCap-End-->
 
@@ -16,9 +18,11 @@ NET_CAPABILITY_MMS = 0
 
 Indicates that the network can access the carrier's MMSC to send and receive multimedia messages.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_MMS = 0--><!--Device-NetCap-NET_CAPABILITY_MMS = 0-End-->
 
@@ -32,9 +36,11 @@ NET_CAPABILITY_NOT_METERED = 11
 
 Indicates that the network traffic is not metered.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11--><!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11-End-->
 
@@ -48,9 +54,11 @@ NET_CAPABILITY_INTERNET = 12
 
 Indicates that the network can access the Internet.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_INTERNET = 12--><!--Device-NetCap-NET_CAPABILITY_INTERNET = 12-End-->
 
@@ -64,9 +72,11 @@ NET_CAPABILITY_NOT_VPN = 15
 
 Indicates that the network does not use a VPN.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15--><!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15-End-->
 
@@ -80,9 +90,11 @@ NET_CAPABILITY_VALIDATED = 16
 
 Indicates that the network is available.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16--><!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16-End-->
 
@@ -96,9 +108,11 @@ NET_CAPABILITY_PORTAL = 17
 
 Indicates that the network is portal.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_PORTAL = 17--><!--Device-NetCap-NET_CAPABILITY_PORTAL = 17-End-->
 
@@ -112,9 +126,11 @@ NET_CAPABILITY_CHECKING_CONNECTIVITY = 31
 
 Indicates that the network is checking connectivity.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31--><!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31-End-->
 

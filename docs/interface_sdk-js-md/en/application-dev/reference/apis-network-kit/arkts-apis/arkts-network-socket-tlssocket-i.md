@@ -6,6 +6,8 @@ Defines a TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface TLSSocket--><!--Device-socket-export interface TLSSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -28,6 +30,8 @@ Binds the IP address and port number. The port number can be specified or random
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TLSSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-bind(address: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -38,17 +42,17 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. [NetAddress](NetAddress) |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of bind. |
+| address | NetAddress | Yes | Destination address. NetAddress |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of bind. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2303198](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
 
 ## Examples
 
@@ -82,6 +86,8 @@ Binds the IP address and port number. The port number can be specified or random
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-TLSSocket-bind(address: NetAddress): Promise<void>--><!--Device-TLSSocket-bind(address: NetAddress): Promise<void>-End-->
@@ -92,7 +98,7 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | NetAddress | Yes | Destination address. [NetAddress](NetAddress) |
+| address | NetAddress | Yes | Destination address. NetAddress |
 
 **Return value:**
 
@@ -104,10 +110,10 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [2303198](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
 
 ## Examples
 
@@ -139,6 +145,8 @@ Closes a TLSSocket connection
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-close(callback: AsyncCallback<void>): void--><!--Device-TLSSocket-close(callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -147,17 +155,17 @@ Closes a TLSSocket connection
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of close. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of close. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303506](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -187,6 +195,8 @@ Closes a TLSSocket connection
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-close(): Promise<void>--><!--Device-TLSSocket-close(): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -201,11 +211,11 @@ Closes a TLSSocket connection
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303506](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -227,11 +237,13 @@ tls.close().then(() => {
 connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void
 ```
 
-Sets up a connection to the specified IP address and port number.Only TCP is supported.
+Sets up a connection to the specified IP address and port number. Only TCP is supported.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-connect(options: TLSConnectOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -242,35 +254,35 @@ Sets up a connection to the specified IP address and port number.Only TCP is sup
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md) | Yes | Optional parameters [TLSConnectOptions](arkts-network-socket-tlsconnectoptions-i.md#TLSConnectOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of connect. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of connect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
-| [2303111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303210](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
-| [2303503](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303502](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303506](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303191](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
-| [2301207](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
-| [2301206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
-| [2301211](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
-| [2301210](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
-| [2301209](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
-| [2301208](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
-| [2303199](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
-| [2303198](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2301213](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
-| [2301212](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
+| [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
 ## Examples
 
@@ -430,11 +442,13 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
 connect(options: TLSConnectOptions): Promise<void>
 ```
 
-Sets up a connection to the specified IP address and port number.Only TCP is supported.
+Sets up a connection to the specified IP address and port number. Only TCP is supported.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>--><!--Device-TLSSocket-connect(options: TLSConnectOptions): Promise<void>-End-->
 
@@ -456,29 +470,29 @@ Sets up a connection to the specified IP address and port number.Only TCP is sup
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
-| [2303111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
-| [2303109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
-| [2303210](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
-| [2303503](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303502](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303506](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303191](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
-| [2301207](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
-| [2301206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
-| [2301211](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
-| [2301210](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
-| [2301209](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
-| [2301208](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
-| [2303199](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
-| [2303198](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
-| [2301213](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
-| [2301212](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303104](../errorcode-net-socket.md#2303104-system-call-interrupted) | Interrupted system call. |
+| [2303111](../errorcode-net-socket.md#2303111-requested-resource-temporarily-unavailable) | Resource temporarily unavailable. Try again. |
+| [2303109](../errorcode-net-socket.md#2303109-error-file-number) | Bad file number. |
+| [2303210](../errorcode-net-socket.md#2303210-connection-timeout) | Connection timed out. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303191](../errorcode-net-socket.md#2303191-incorrect-socket-protocol-type) | Incorrect socket protocol type. |
+| [2301207](../errorcode-net-socket.md#2301207-invalid-user-name-or-password-for-socks5-authentication) | Socks5 username or password is invalid. |
+| [2301206](../errorcode-net-socket.md#2301206-failed-to-connect-to-the-proxy-server-via-socks5) | Socks5 failed to connect to the proxy server. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2301211](../errorcode-net-socket.md#2301211-failed-to-receive-messages-via-socks5) | Socks5 failed to receive the message. |
+| [2301210](../errorcode-net-socket.md#2301210-failed-to-send-messages-via-socks5) | Socks5 failed to send the message. |
+| [2301209](../errorcode-net-socket.md#2301209-authentication-mode-negotiation-failed-for-socks5) | Socks5 failed to negotiate the authentication method. |
+| [2301208](../errorcode-net-socket.md#2301208-failed-to-connect-to-the-remote-server-via-socks5) | Socks5 failed to connect to the remote server. |
+| [2303199](../errorcode-net-socket.md#2303199-failed-to-assign-the-requested-address) | Cannot assign requested address. |
+| [2303198](../errorcode-net-socket.md#2303198-network-address-already-in-use) | Address already in use. |
+| [2301213](../errorcode-net-socket.md#2301213-failed-to-deserialize-messages-for-socks5) | Socks5 deserialization error. |
+| [2301212](../errorcode-net-socket.md#2301212-failed-to-serialize-messages-for-socks5) | Socks5 serialization error. |
 
 ## Examples
 
@@ -652,6 +666,8 @@ Returns an object representing a local certificate.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-getCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocket-getCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -660,15 +676,15 @@ Returns an object representing a local certificate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | the callback of getCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | the callback of getCertificate. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303504](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## getCertificate
 
@@ -681,6 +697,8 @@ Returns an object representing a local certificate.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocket-getCertificate(): Promise<X509CertRawData>-End-->
 
@@ -696,9 +714,9 @@ Returns an object representing a local certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303504](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303504](../errorcode-net-socket.md#2303504-x509-failed-to-look-up-the-x509-certificate) | An error occurred when verifying the X.509 certificate. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## getCipherSuite
 
@@ -706,11 +724,13 @@ Returns an object representing a local certificate.
 getCipherSuite(callback: AsyncCallback<Array<string>>): void
 ```
 
-Returns a list containing the negotiated cipher suite information.For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Returns a list containing the negotiated cipher suite information. For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getCipherSuite(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocket-getCipherSuite(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -720,16 +740,16 @@ Returns a list containing the negotiated cipher suite information.For example:{"
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getCipherSuite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getCipherSuite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303502](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -753,11 +773,13 @@ tls.getCipherSuite((err: BusinessError, data: Array<string>) => {
 getCipherSuite(): Promise<Array<string>>
 ```
 
-Returns a list containing the negotiated cipher suite information.For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Returns a list containing the negotiated cipher suite information. For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getCipherSuite(): Promise<Array<string>>--><!--Device-TLSSocket-getCipherSuite(): Promise<Array<string>>-End-->
 
@@ -773,10 +795,10 @@ Returns a list containing the negotiated cipher suite information.For example:{"
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303502](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) | An error occurred when reading data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -800,9 +822,11 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local address of a TLSSocket connection.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocket-getLocalAddress(): Promise<NetAddress>-End-->
 
@@ -818,9 +842,9 @@ Obtains the local address of a TLSSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2301009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) | Bad file descriptor. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -842,11 +866,13 @@ tls.getLocalAddress().then((localAddress: socket.NetAddress) => {
 getProtocol(callback: AsyncCallback<string>): void
 ```
 
-Returns a string containing the negotiated SSL/TLS protocol version of the current connection.For connected sockets that have not completed the handshake process, the value 'unknown' will be returned.Server sockets or disconnected client sockets will return a value of null.
+Returns a string containing the negotiated SSL/TLS protocol version of the current connection. For connected sockets that have not completed the handshake process, the value 'unknown' will be returned. Server sockets or disconnected client sockets will return a value of null.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getProtocol(callback: AsyncCallback<string>): void--><!--Device-TLSSocket-getProtocol(callback: AsyncCallback<string>): void-End-->
 
@@ -856,15 +882,15 @@ Returns a string containing the negotiated SSL/TLS protocol version of the curre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | the callback of getProtocol. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | the callback of getProtocol. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -888,11 +914,13 @@ tls.getProtocol((err: BusinessError, data: string) => {
 getProtocol(): Promise<string>
 ```
 
-Returns a string containing the negotiated SSL/TLS protocol version of the current connection.For connected sockets that have not completed the handshake process, the value 'unknown' will be returned.Server sockets or disconnected client sockets will return a value of null.
+Returns a string containing the negotiated SSL/TLS protocol version of the current connection. For connected sockets that have not completed the handshake process, the value 'unknown' will be returned. Server sockets or disconnected client sockets will return a value of null.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getProtocol(): Promise<string>--><!--Device-TLSSocket-getProtocol(): Promise<string>-End-->
 
@@ -908,9 +936,9 @@ Returns a string containing the negotiated SSL/TLS protocol version of the curre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -938,6 +966,8 @@ Obtains the peer address of a TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TLSSocket-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -946,14 +976,14 @@ Obtains the peer address of a TLSSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;NetAddress&gt; | Yes | the callback of getRemoteAddress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;NetAddress&gt; | Yes | the callback of getRemoteAddress. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -983,6 +1013,8 @@ Obtains the peer address of a TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-getRemoteAddress(): Promise<NetAddress>--><!--Device-TLSSocket-getRemoteAddress(): Promise<NetAddress>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -997,8 +1029,8 @@ Obtains the peer address of a TLSSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -1020,11 +1052,13 @@ tls.getRemoteAddress().then(() => {
 getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate,&lt;p&gt;an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt;It only contains the peer's certificate.
+&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate, &lt;p&gt;an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt; It only contains the peer's certificate.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocket-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
@@ -1034,14 +1068,14 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | the callback of getRemoteCertificate. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[X509CertRawData](arkts-network-socket-x509certrawdata-t.md)&gt; | Yes | the callback of getRemoteCertificate. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## getRemoteCertificate
 
@@ -1049,11 +1083,13 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 getRemoteCertificate(): Promise<X509CertRawData>
 ```
 
-&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate,&lt;p&gt;an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt;It only contains the peer's certificate.
+&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate, &lt;p&gt;an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt; It only contains the peer's certificate.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getRemoteCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocket-getRemoteCertificate(): Promise<X509CertRawData>-End-->
 
@@ -1069,8 +1105,8 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## getSignatureAlgorithms
 
@@ -1078,11 +1114,13 @@ getRemoteCertificate(): Promise<X509CertRawData>
 getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 ```
 
-&lt;p&gt;The list of signature algorithms shared between the server and the client,in descending order of priority.&lt;/p&gt;
+&lt;p&gt;The list of signature algorithms shared between the server and the client, in descending order of priority.&lt;/p&gt;
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocket-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -1092,14 +1130,14 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getSignatureAlgorithms.@see https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getSignatureAlgorithms.@see https://www.openssl.org/docs/man1.1.1/man3/SSL_get_shared_sigalgs.html |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -1123,11 +1161,13 @@ tls.getSignatureAlgorithms((err: BusinessError, data: Array<string>) => {
 getSignatureAlgorithms(): Promise<Array<string>>
 ```
 
-&lt;p&gt;The list of signature algorithms shared between the server and the client,in descending order of priority.&lt;/p&gt;
+&lt;p&gt;The list of signature algorithms shared between the server and the client, in descending order of priority.&lt;/p&gt;
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getSignatureAlgorithms(): Promise<Array<string>>--><!--Device-TLSSocket-getSignatureAlgorithms(): Promise<Array<string>>-End-->
 
@@ -1143,8 +1183,8 @@ getSignatureAlgorithms(): Promise<Array<string>>
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -1162,21 +1202,17 @@ tls.getSignatureAlgorithms().then((data: Array<string>) => {
 
 ## getSocketFd
 
-ArkTS-Dyn:
-```TypeScript
-getSocketFd(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSocketFd(): Promise<int>
 ```
 
 Obtains the file descriptor of the TLSSocket connection.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocket-getSocketFd(): Promise<int>--><!--Device-TLSSocket-getSocketFd(): Promise<int>-End-->
 
@@ -1186,7 +1222,7 @@ Obtains the file descriptor of the TLSSocket connection.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the TLSSocket connection. |
+| Promise&lt;int&gt; | The promise returns the file descriptor of the TLSSocket connection. |
 
 ## Examples
 
@@ -1222,6 +1258,8 @@ Obtains the status of the TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-getState(callback: AsyncCallback<SocketStateBase>): void--><!--Device-TLSSocket-getState(callback: AsyncCallback<SocketStateBase>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1230,14 +1268,14 @@ Obtains the status of the TLSSocket connection.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SocketStateBase](arkts-network-socket-socketstatebase-i.md)&gt; | Yes | the callback of getState. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -1278,6 +1316,8 @@ Obtains the status of the TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-getState(): Promise<SocketStateBase>--><!--Device-TLSSocket-getState(): Promise<SocketStateBase>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1292,8 +1332,8 @@ Obtains the status of the TLSSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -1320,7 +1360,159 @@ tls.getState().then(() => {
 });
 ```
 
-## off('message')
+## off_close
+
+```TypeScript
+off(type: 'connect' | 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for connection or close events of the TLSSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'connect' \| 'close' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let callback1 = () => {
+  console.info("on connect success");
+}
+tls.on('connect', callback1);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tls.off('connect', callback1);
+tls.off('connect');
+let callback2 = () => {
+  console.info("on close success");
+}
+tls.on('close', callback2);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tls.off('close', callback2);
+```
+
+## off_connect
+
+```TypeScript
+off(type: 'connect' | 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for connection or close events of the TLSSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'connect' \| 'close' | Yes | Indicates Event name. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let callback1 = () => {
+  console.info("on connect success");
+}
+tls.on('connect', callback1);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tls.off('connect', callback1);
+tls.off('connect');
+let callback2 = () => {
+  console.info("on close success");
+}
+tls.on('close', callback2);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tls.off('close', callback2);
+```
+
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Cancels listening for error events of the TLSSocket connection.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'error' | Yes | Indicates Event name. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | the callback used to return the result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
+let callback = (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+tls.on('error', callback);
+// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+tls.off('error', callback);
+```
+
+## off_message
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
@@ -1332,6 +1524,8 @@ Cancels listening for message receiving events of the TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TLSSocket-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1341,13 +1535,13 @@ Cancels listening for message receiving events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | No | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -1372,19 +1566,21 @@ tls.on('message', callback);
 tls.off('message', callback);
 ```
 
-## off('connect' | 'close')
+## on_close
 
 ```TypeScript
-off(type: 'connect' | 'close', callback?: Callback<void>): void
+on(type: 'connect' | 'close', callback: Callback<void>): void
 ```
 
-Cancels listening for connection or close events of the TLSSocket connection.
+Listens for connection or close events of the TLSSocket connection.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1393,13 +1589,13 @@ Cancels listening for connection or close events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -1408,34 +1604,40 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let callback1 = () => {
-  console.info("on connect success");
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
 }
-tls.on('connect', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('connect', callback1);
-tls.off('connect');
-let callback2 = () => {
-  console.info("on close success");
-}
-tls.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('close', callback2);
+tls.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  tls.on('connect', () => {
+    console.info("on connect success")
+  });
+  tls.on('close', () => {
+    console.info("on close success")
+  });
+});
 ```
 
-## off('connect' | 'close')
+## on_connect
 
 ```TypeScript
-off(type: 'connect' | 'close', callback?: Callback<void>): void
+on(type: 'connect' | 'close', callback: Callback<void>): void
 ```
 
-Cancels listening for connection or close events of the TLSSocket connection.
+Listens for connection or close events of the TLSSocket connection.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void--><!--Device-TLSSocket-off(type: 'connect' | 'close', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1444,13 +1646,13 @@ Cancels listening for connection or close events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -1459,34 +1661,40 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let callback1 = () => {
-  console.info("on connect success");
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
 }
-tls.on('connect', callback1);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('connect', callback1);
-tls.off('connect');
-let callback2 = () => {
-  console.info("on close success");
-}
-tls.on('close', callback2);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('close', callback2);
+tls.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  tls.on('connect', () => {
+    console.info("on connect success")
+  });
+  tls.on('close', () => {
+    console.info("on close success")
+  });
+});
 ```
 
-## off('error')
+## on_error
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-Cancels listening for error events of the TLSSocket connection.
+Listens for error events of the TLSSocket connection.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocket-off(type: 'error', callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -1495,13 +1703,13 @@ Cancels listening for error events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | the callback used to return the result. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -1510,15 +1718,23 @@ import { socket } from '@kit.NetworkKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let callback = (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err));
+let bindAddr: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
 }
-tls.on('error', callback);
-// You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-tls.off('error', callback);
+tls.bind(bindAddr, (err: BusinessError) => {
+  if (err) {
+    console.error('bind fail');
+    return;
+  }
+  console.info('bind success');
+  tls.on('error', (err: BusinessError) => {
+    console.error("on error, err:" + JSON.stringify(err))
+  });
+});
 ```
 
-## on('message')
+## on_message
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
@@ -1530,6 +1746,8 @@ Listens for message receiving events of the TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TLSSocket-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1539,13 +1757,13 @@ Listens for message receiving events of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'message' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SocketMessageInfo](arkts-network-socket-socketmessageinfo-i.md)&gt; | Yes | the callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
 ## Examples
 
@@ -1578,168 +1796,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
-## on('connect' | 'close')
-
-```TypeScript
-on(type: 'connect' | 'close', callback: Callback<void>): void
-```
-
-Listens for connection or close events of the TLSSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-  tls.on('connect', () => {
-    console.info("on connect success")
-  });
-  tls.on('close', () => {
-    console.info("on close success")
-  });
-});
-```
-
-## on('connect' | 'close')
-
-```TypeScript
-on(type: 'connect' | 'close', callback: Callback<void>): void
-```
-
-Listens for connection or close events of the TLSSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void--><!--Device-TLSSocket-on(type: 'connect' | 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'connect' \| 'close' | Yes | Indicates Event name. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-  tls.on('connect', () => {
-    console.info("on connect success")
-  });
-  tls.on('close', () => {
-    console.info("on close success")
-  });
-});
-```
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Listens for error events of the TLSSocket connection.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocket-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'error' | Yes | Indicates Event name. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | the callback used to return the result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tls: socket.TLSSocket = socket.constructTLSSocketInstance();
-let bindAddr: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-tls.bind(bindAddr, (err: BusinessError) => {
-  if (err) {
-    console.error('bind fail');
-    return;
-  }
-  console.info('bind success');
-  tls.on('error', (err: BusinessError) => {
-    console.error("on error, err:" + JSON.stringify(err))
-  });
-});
-```
-
 ## send
 
 ```TypeScript
@@ -1752,6 +1808,8 @@ Sends data over a TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1761,18 +1819,18 @@ Sends data over a TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | data | string \| ArrayBuffer | Yes | Parameters for sending data. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of send. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of send. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303506](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303503](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -1802,6 +1860,8 @@ Sends data over a TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-send(data: string | ArrayBuffer): Promise<void>--><!--Device-TLSSocket-send(data: string | ArrayBuffer): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1822,12 +1882,12 @@ Sends data over a TLSSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2303506](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303505](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
-| [2303503](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
-| [2303501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) | Failed to close the TLS connection. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) | An error occurred in the TLS system call. |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) | An error occurred when writing data on the TLS socket. |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) | SSL is null. |
 
 ## Examples
 
@@ -1855,6 +1915,8 @@ Sets other attributes of the TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1864,15 +1926,15 @@ Sets other attributes of the TLSSocket connection.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md) | Yes | Optional parameters [TCPExtraOptions](arkts-network-socket-tcpextraoptions-i.md#TCPExtraOptions). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setExtraOptions. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setExtraOptions. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 
@@ -1930,6 +1992,8 @@ Sets other attributes of the TLSSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>--><!--Device-TLSSocket-setExtraOptions(options: TCPExtraOptions): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -1950,9 +2014,9 @@ Sets other attributes of the TLSSocket connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
-| [2303188](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) | System internal error. |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) | Socket operation on non-socket. |
 
 ## Examples
 

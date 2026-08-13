@@ -6,6 +6,8 @@ Provides configuration options for text insertion operations in text input compo
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextContentControllerOptions--><!--Device-unnamed-declare interface TextContentControllerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Insertion position for the text.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

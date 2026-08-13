@@ -6,6 +6,8 @@ Sets the DLP status.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-dlpSetDlpFeature-export interface DLPFeatureInfo--><!--Device-dlpSetDlpFeature-export interface DLPFeatureInfo-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -31,6 +33,8 @@ DLP status, which can be set to **NOT_ENABLED_FEATURE** or **ENABLED_FEATURE**.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

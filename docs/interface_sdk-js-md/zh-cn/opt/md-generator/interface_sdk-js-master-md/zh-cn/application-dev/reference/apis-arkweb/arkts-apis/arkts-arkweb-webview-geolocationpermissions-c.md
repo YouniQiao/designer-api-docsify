@@ -4,6 +4,8 @@ Provides a method for managing web geographic location permissions.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-webview-class GeolocationPermissions--><!--Device-webview-class GeolocationPermissions-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ static allowGeolocation(origin: string, incognito?: boolean): void
 Allow geolocation permissions for specifies source.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -35,8 +39,8 @@ Allow geolocation permissions for specifies source.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
 ## deleteAllGeolocation
 
@@ -47,6 +51,8 @@ static deleteAllGeolocation(incognito?: boolean): void
 Delete all geolocation permissions.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -70,6 +76,8 @@ Delete geolocation permissions for specifies source.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void--><!--Device-GeolocationPermissions-static deleteGeolocation(origin: string, incognito?: boolean): void-End-->
@@ -87,8 +95,8 @@ Delete geolocation permissions for specifies source.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
 ## getAccessibleGeolocation
 
@@ -99,6 +107,8 @@ static getAccessibleGeolocation(origin: string, incognito?: boolean): Promise<bo
 Gets the geolocation permission status of the specified source.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -123,8 +133,8 @@ Gets the geolocation permission status of the specified source.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
 ## getAccessibleGeolocation
 
@@ -135,6 +145,8 @@ static getAccessibleGeolocation(origin: string, callback: AsyncCallback<boolean>
 Gets the geolocation permission status of the specified source.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -154,8 +166,8 @@ Gets the geolocation permission status of the specified source.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-输入参数origin错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100011](../errorcode-webview.md#17100011-输入参数origin错误) |
 
 ## getStoredGeolocation
 
@@ -166,6 +178,8 @@ static getStoredGeolocation(incognito?: boolean): Promise<Array<string>>
 Get all stored geolocation permission url source.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -189,7 +203,7 @@ Get all stored geolocation permission url source.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## getStoredGeolocation
 
@@ -200,6 +214,8 @@ static getStoredGeolocation(callback: AsyncCallback<Array<string>>, incognito?: 
 Get all stored geolocation permission url source.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -218,4 +234,4 @@ Get all stored geolocation permission url source.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

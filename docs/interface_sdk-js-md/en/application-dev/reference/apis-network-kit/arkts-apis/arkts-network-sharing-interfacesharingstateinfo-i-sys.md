@@ -2,9 +2,11 @@
 
 The interface is used to notify listeners of changes in shared interface status.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sharing-export interface InterfaceSharingStateInfo--><!--Device-sharing-export interface InterfaceSharingStateInfo-End-->
 
@@ -28,9 +30,11 @@ The specified network interface name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceSharingStateInfo-iface: string--><!--Device-InterfaceSharingStateInfo-iface: string-End-->
 
@@ -48,9 +52,11 @@ Network card sharing status.
 
 **Type:** [SharingIfaceState](arkts-network-sharing-sharingifacestate-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceSharingStateInfo-state: SharingIfaceState--><!--Device-InterfaceSharingStateInfo-state: SharingIfaceState-End-->
 
@@ -68,9 +74,11 @@ Enumerates the network sharing types of an NIC.
 
 **Type:** [SharingIfaceType](arkts-network-sharing-sharingifacetype-e-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-InterfaceSharingStateInfo-type: SharingIfaceType--><!--Device-InterfaceSharingStateInfo-type: SharingIfaceType-End-->
 

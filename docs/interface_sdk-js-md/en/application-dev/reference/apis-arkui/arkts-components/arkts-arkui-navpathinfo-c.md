@@ -6,6 +6,8 @@ Provides the navigation page information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class NavPathInfo--><!--Device-unnamed-declare class NavPathInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Creates a **NavPathInfo** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -34,9 +38,9 @@ Creates a **NavPathInfo** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:&lt;br&gt;1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.&lt;br&gt;2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis). |
+| name | string | Yes | Name of the navigation destination page. The name matches the name in the following route tables:&lt;br&gt;1. Custom route table, which is passed via the navDestination method.&lt;br&gt;2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis). |
 | param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No | Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop-1), [popToName](arkts-arkui-navpathstack-c.md#popToName-1), or [popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop-1), [popToName](arkts-arkui-navpathstack-c.md#popToName-1), or [popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1).<br>**Since:** 11 |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt; | No | Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#popToName), or [popToIndex](arkts-arkui-navpathstack-c.md#popToIndex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#popToName), or [popToIndex](arkts-arkui-navpathstack-c.md#popToIndex).<br>**Since:** 11 |
 | isEntry | boolean | No | Whether the navigation destination page is the entry page.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt;Default value: **false**&lt;br&gt;The value of this parameter is reviewed or reset under the following conditions:&lt;br&gt;1. A global return event is triggered on the current navigation destination page.&lt;br&gt; 2. The application is switched to the background.&lt;br&gt;**NOTE：**&lt;br&gt;The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.<br>**Since:** 12 |
 
 ## isEntry
@@ -45,25 +49,15 @@ Creates a **NavPathInfo** object.
 isEntry?: boolean
 ```
 
-Whether the navigation destination page is the entry page.
-
-**true**: yes; **false**: no
-
-Default value: **false**
-
-The value of this parameter is reviewed or reset under the following conditions:
-
-1. A global back event is triggered on the current navigation destination page.2. The application is switched to the background.
-
-**NOTE：**
-
-The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.
+Whether the navigation destination page is the entry page. **true**: yes; **false**: no Default value: **false** The value of this parameter is reviewed or reset under the following conditions: 1. A global back event is triggered on the current navigation destination page. 2. The application is switched to the background. **NOTE：**The navigation destination page serving as an entry does not respond to the in-app global back events; instead, it directly triggers the global back event between applications.
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,15 +73,15 @@ The navigation destination page serving as an entry does not respond to the in-a
 name: string
 ```
 
-Name of the navigation destination page. The name matches the name in the following route tables:
-
-1. Custom route table, which is passed via the [navDestination](NavigationAttribute#navDestination) method.2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis).
+Name of the navigation destination page. The name matches the name in the following route tables: 1. Custom route table, which is passed via the navDestination method. 2. System route table, which is set by **name** in **routerMap**. For details, please refer to [Example 2: Using NavPathStack APIs](../../../reference/apis-arkui/arkui-ts/ts-basic-components-navigation.md#example-2-using-navpathstack-apis).
 
 **Type:** string
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,6 +105,8 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -125,18 +121,15 @@ Unique ID of the navigation destination page. This ID is system-generated and gl
 onPop?: import('../api/@ohos.base').Callback<PopInfo>
 ```
 
-Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop-1),  
-[popToName](arkts-arkui-navpathstack-c.md#popToName-1), or  
-[popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1) is called on the navigation destination page. It is triggered only when the **result** parameter is set in  
-[pop](arkts-arkui-navpathstack-c.md#pop-1),  
-[popToName](arkts-arkui-navpathstack-c.md#popToName-1), or  
-[popToIndex](arkts-arkui-navpathstack-c.md#popToIndex-1).
+Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#popToName), or [popToIndex](arkts-arkui-navpathstack-c.md#popToIndex) is called on the navigation destination page. It is triggered only when the **result** parameter is set in [pop](arkts-arkui-navpathstack-c.md#pop), [popToName](arkts-arkui-navpathstack-c.md#popToName), or [popToIndex](arkts-arkui-navpathstack-c.md#popToIndex).
 
 **Type:** import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-popinfo-i.md)&gt;
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,13 +145,15 @@ Callback returned when [pop](arkts-arkui-navpathstack-c.md#pop-1),
 param?: unknown
 ```
 
-Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type.
+Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user- defined type.
 
 **Type:** unknown
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

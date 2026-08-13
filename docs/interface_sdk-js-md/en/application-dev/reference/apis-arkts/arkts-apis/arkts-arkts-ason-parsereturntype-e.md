@@ -6,6 +6,8 @@ The return types for parsing.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-ASON-const enum ParseReturnType--><!--Device-ASON-const enum ParseReturnType-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -21,6 +23,8 @@ Return type is object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -39,6 +43,8 @@ Return type is map.
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

@@ -2,7 +2,9 @@
 
 The event types represented by XML elements.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-xml-enum EventType--><!--Device-xml-enum EventType-End-->
 
@@ -16,7 +18,9 @@ START_DOCUMENT
 
 Start a document.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ END_DOCUMENT
 
 End a document.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ START_TAG
 
 Start a tag.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,7 +72,9 @@ END_TAG
 
 End a tag.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,7 +90,9 @@ TEXT
 
 Character data.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,7 +108,9 @@ CDSECT
 
 A CDATA sections.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -112,7 +126,9 @@ COMMENT
 
 An XML comment.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -128,7 +144,9 @@ DOCDECL
 
 An XML document type declaration.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,7 +162,9 @@ INSTRUCTION
 
 An XML processing instruction declaration.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,7 +180,9 @@ ENTITY_REFERENCE
 
 An entity reference.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -176,7 +198,9 @@ WHITESPACE
 
 A whitespace.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

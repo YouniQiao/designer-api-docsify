@@ -2,9 +2,11 @@
 
 Enumerates the text displayed on the complete button.
 
-**Since:** 14
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CompleteButtonText--><!--Device-photoAccessHelper-enum CompleteButtonText-End-->
 
@@ -18,11 +20,13 @@ TEXT_DONE = 0
 
 The text "Done" is displayed.
 
-**Since:** 14
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CompleteButtonText-TEXT_DONE = 0--><!--Device-CompleteButtonText-TEXT_DONE = 0-End-->
 
@@ -36,11 +40,13 @@ TEXT_SEND = 1
 
 The text "Send" is displayed.
 
-**Since:** 14
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CompleteButtonText-TEXT_SEND = 1--><!--Device-CompleteButtonText-TEXT_SEND = 1-End-->
 
@@ -54,11 +60,13 @@ TEXT_ADD = 2
 
 The text "Add" is displayed.
 
-**Since:** 14
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CompleteButtonText-TEXT_ADD = 2--><!--Device-CompleteButtonText-TEXT_ADD = 2-End-->
 

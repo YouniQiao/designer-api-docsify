@@ -2,11 +2,13 @@
 
 用户情绪数据。
 
-**继承/实现关系：** UserEmotionData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**继承/实现关系：** UserEmotionData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData（系统接口）)
 
 **起始版本：** 26.0.0
 
-<!--Device-userStatus-export interface UserEmotionData extends UserStatusData--><!--Device-userStatus-export interface UserEmotionData extends UserStatusData-End-->
+**废弃版本：** -1
+
+<!--Device-userStatus-export interface UserEmotionData--><!--Device-userStatus-export interface UserEmotionData-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -23,6 +25,8 @@ confidence?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ emotionNonRealTime ?: number[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserEmotionData-emotionNonRealTime ?: int[]--><!--Device-UserEmotionData-emotionNonRealTime ?: int[]-End-->
@@ -63,6 +69,8 @@ emotionRealTime ?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ gravityAcceleration?: number[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserEmotionData-gravityAcceleration?: double[]--><!--Device-UserEmotionData-gravityAcceleration?: double[]-End-->
@@ -104,6 +114,8 @@ isRealTime?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserEmotionData-isRealTime?: boolean--><!--Device-UserEmotionData-isRealTime?: boolean-End-->
@@ -123,6 +135,8 @@ linearAcceleration?: number[][]
 **类型：** number[][]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

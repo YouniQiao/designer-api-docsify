@@ -8,7 +8,9 @@ function deleteExcludeDates(reminderId: number): Promise<void>
 
 为指定id的周期性的日历提醒，删除设置的所有不提醒日期。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>--><!--Device-reminderAgentManager-function deleteExcludeDates(reminderId: int): Promise<void>-End-->
 
@@ -30,8 +32,8 @@ function deleteExcludeDates(reminderId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-提醒不存在) |
 
 ## 示例
 

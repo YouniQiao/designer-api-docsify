@@ -14,7 +14,9 @@ function unlock(callback: AsyncCallback<boolean>): void
 
 Unlock the screen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenLock-function unlock(callback: AsyncCallback<boolean>): void--><!--Device-screenLock-function unlock(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,10 +34,10 @@ Unlock the screen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) |
-| [13200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13200003](../../apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) |
+| [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
 
 ## Examples
 
@@ -60,7 +62,9 @@ function unlock(): Promise<boolean>
 
 Unlock the screen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenLock-function unlock(): Promise<boolean>--><!--Device-screenLock-function unlock(): Promise<boolean>-End-->
 
@@ -78,9 +82,9 @@ Unlock the screen.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [13200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) |
-| [13200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [13200003](../../apis-basic-services-kit/errorcode-screenlock.md#13200003-invalid-use) |
+| [13200002](../../apis-basic-services-kit/errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) |
 
 ## Examples
 

@@ -4,7 +4,9 @@ Enumerates the metric events supported by the media service.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AVMetricsEventType--><!--Device-media-enum AVMetricsEventType-End-->
 
@@ -20,7 +22,9 @@ Metric event indicating playback stalling.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetricsEventType-AV_METRICS_EVENT_STALLING = 1--><!--Device-AVMetricsEventType-AV_METRICS_EVENT_STALLING = 1-End-->
 
@@ -32,11 +36,13 @@ Metric event indicating playback stalling.
 AV_METRICS_EVENT_LIP_ASYNC = 2
 ```
 
-It is reported when the video sending and rendering time deviation is greater than expected,for example, video frame alignment or display in advance.
+It is reported when the video sending and rendering time deviation is greater than expected, for example, video frame alignment or display in advance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +60,9 @@ Load rate change event. This event is triggered when the difference between the 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,11 +76,13 @@ Load rate change event. This event is triggered when the difference between the 
 AV_METRICS_EVENT_LOADING_ERROR = 4
 ```
 
-Data loading failure event, which carries the error information returned during data loading,such as connection timeout, access error, and server rejection.
+Data loading failure event, which carries the error information returned during data loading, such as connection timeout, access error, and server rejection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +100,9 @@ Reported when the played media content changes, for example, advertisement inser
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,11 +116,13 @@ Reported when the played media content changes, for example, advertisement inser
 AV_METRICS_EVENT_CONTENT_DISCONTINUITY = 6
 ```
 
-Content discontinuity event.This event is triggered when audio and video parameter changes are detected.
+Content discontinuity event. This event is triggered when audio and video parameter changes are detected.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +140,9 @@ Audio device status change event, including underload or out-of-focus.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

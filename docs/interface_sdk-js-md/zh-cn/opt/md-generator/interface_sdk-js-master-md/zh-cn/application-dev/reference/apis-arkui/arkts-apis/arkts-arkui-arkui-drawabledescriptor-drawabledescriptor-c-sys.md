@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor()
 Creates a new DrawableDescriptor.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

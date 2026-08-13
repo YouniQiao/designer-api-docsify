@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-scan-enum ScanMode--><!--Device-scan-enum ScanMode-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ SCAN_MODE_LOW_LATENCY = 2
 高功率模式，扫描频率高。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Represents a **Schema** instance, which provides the methods for defining the values stored in a KV store.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-class FieldNode--><!--Device-distributedKVStore-class FieldNode-End-->
 
@@ -22,7 +24,9 @@ appendChild(child: FieldNode): boolean
 
 Appends a child node to this **FieldNode**.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,7 @@ Appends a child node to this **FieldNode**.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -78,7 +82,9 @@ constructor(name: string)
 
 Defines a constructor used to create a **FieldNode** instance with a string field.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,7 +102,7 @@ Defines a constructor used to create a **FieldNode** instance with a string fiel
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## default
 
@@ -110,42 +116,8 @@ Indicates the default value of field node.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-FieldNode-default: string--><!--Device-FieldNode-default: string-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## nullable
-
-```TypeScript
-set nullable(isnullable: boolean)
-```
-
-Set the nullable of database field.
-
-**Type:** boolean
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FieldNode-set nullable(isnullable: boolean)--><!--Device-FieldNode-set nullable(isnullable: boolean)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## type
-
-```TypeScript
-set type(type: number)
-```
-
-Set the type of value.
-
-**Type:** number
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FieldNode-set type(type: int)--><!--Device-FieldNode-set type(type: int)-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

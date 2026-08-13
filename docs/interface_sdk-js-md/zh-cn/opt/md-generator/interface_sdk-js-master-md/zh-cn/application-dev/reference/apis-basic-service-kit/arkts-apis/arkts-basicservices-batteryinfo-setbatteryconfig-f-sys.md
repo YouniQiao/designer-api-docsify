@@ -10,6 +10,8 @@ function setBatteryConfig(sceneName: string, sceneValue: string): number
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number--><!--Device-batteryInfo-function setBatteryConfig(sceneName: string, sceneValue: string): number-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core
@@ -33,9 +35,9 @@ function setBatteryConfig(sceneName: string, sceneValue: string): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5100101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-battery-info.md#5100101-连接服务失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5100101](../../apis-basic-services-kit/errorcode-battery-info.md#5100101-连接服务失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

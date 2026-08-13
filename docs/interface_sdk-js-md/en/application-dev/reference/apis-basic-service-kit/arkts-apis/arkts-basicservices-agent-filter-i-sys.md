@@ -2,9 +2,11 @@
 
 Defines the filter criteria.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface Filter--><!--Device-agent-interface Filter-End-->
 
@@ -22,13 +24,15 @@ import { request } from '@kit.BasicServicesKit';
 bundle?: string
 ```
 
-Specify the package name of an application.Only for advanced search, common search will be fixed to the caller.A "*" means any bundle.
+Specify the package name of an application. Only for advanced search, common search will be fixed to the caller. A "*" means any bundle.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Filter-bundle?: string--><!--Device-Filter-bundle?: string-End-->
 

@@ -2,7 +2,9 @@
 
 Get the user storage statistics.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-storageStatistics-export interface StorageStats--><!--Device-storageStatistics-export interface StorageStats-End-->
 
@@ -22,11 +24,13 @@ import { storageStatistics } from '@kit.CoreFileKit';
 app: number
 ```
 
-The size of application.&lt;br&gt;Unit: Byte.
+The size of application. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StorageStats-app: long--><!--Device-StorageStats-app: long-End-->
 
@@ -40,11 +44,13 @@ The size of application.&lt;br&gt;Unit: Byte.
 audio: number
 ```
 
-The size of audio file.&lt;br&gt;Unit: Byte.
+The size of audio file. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StorageStats-audio: long--><!--Device-StorageStats-audio: long-End-->
 
@@ -58,11 +64,13 @@ The size of audio file.&lt;br&gt;Unit: Byte.
 file: number
 ```
 
-The size of other file.&lt;br&gt;Unit: Byte.
+The size of other file. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StorageStats-file: long--><!--Device-StorageStats-file: long-End-->
 
@@ -76,11 +84,13 @@ The size of other file.&lt;br&gt;Unit: Byte.
 image: number
 ```
 
-The size of image file.&lt;br&gt;Unit: Byte.
+The size of image file. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StorageStats-image: long--><!--Device-StorageStats-image: long-End-->
 
@@ -94,11 +104,13 @@ The size of image file.&lt;br&gt;Unit: Byte.
 total: number
 ```
 
-The total size of device.&lt;br&gt;Unit: Byte.
+The total size of device. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StorageStats-total: long--><!--Device-StorageStats-total: long-End-->
 
@@ -112,11 +124,13 @@ The total size of device.&lt;br&gt;Unit: Byte.
 video: number
 ```
 
-The size of video file.&lt;br&gt;Unit: Byte.
+The size of video file. &lt;br&gt;Unit: Byte.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StorageStats-video: long--><!--Device-StorageStats-video: long-End-->
 

@@ -6,7 +6,9 @@ type ProgressObserver = (sessionId: string, progress: number) => void
 
 定义传输进度的监听回调函数。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void--><!--Device-distributedDataObject-type ProgressObserver = (sessionId: string, progress: int) => void-End-->
 

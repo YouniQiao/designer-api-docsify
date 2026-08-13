@@ -2,9 +2,11 @@
 
 The **vibrator** module allows precise control over the vibration of device vibrators. With the APIs provided by this module, you can start vibration in various modes such as specified duration, preset effect, and custom effect and stop any or all of them.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace vibrator--><!--Device-unnamed-declare namespace vibrator-End-->
 
@@ -22,30 +24,30 @@ import { vibrator } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md#geteffectinfosync) | Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset vibration effect is supported. |
-| [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getvibratorinfosync) | Queries the vibrator list of one or all devices. |
-| [isHdHapticSupported](arkts-sensorservice-vibrator-ishdhapticsupported-f.md#ishdhapticsupported) | Checks whether HD vibration is supported. |
-| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect) | Checks whether an effect ID is supported. This API uses an asynchronous callback to return the result. |
-| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect-1) | Checks whether an effect ID is supported. This API uses a promise to return the result. |
-| [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync) | Checks whether the preset vibration effect is supported. |
-| [off](arkts-sensorservice-vibrator-off-f.md#off) | Disables listening for vibrator status changes. |
-| [offVibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md#offvibratorstatechange) | Unregister a callback function for vibrator plugin or unplug events. |
-| [on](arkts-sensorservice-vibrator-on-f.md#on) | Enables listening for vibrator status changes. |
-| [onVibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md#onvibratorstatechange) | Register a callback function to be called when a vibrator plugin or unplug event occurs. |
-| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration) | Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result. |
-| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration-1) | Starts vibration based on a specified effect and attribute. This API uses a promise to return the result. |
+| [getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md#getEffectInfoSync) | Obtains the preset vibration effect based on the device ID and vibrator ID to determine whether the preset vibration effect is supported. |
+| [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync) | Queries the vibrator list of one or all devices. |
+| [isHdHapticSupported](arkts-sensorservice-vibrator-ishdhapticsupported-f.md#isHdHapticSupported) | Checks whether HD vibration is supported. |
+| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect) | Checks whether an effect ID is supported. This API uses an asynchronous callback to return the result. |
+| [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect) | Checks whether an effect ID is supported. This API uses a promise to return the result. |
+| [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#isSupportEffectSync) | Checks whether the preset vibration effect is supported. |
+| [offVibratorStateChange](arkts-sensorservice-vibrator-offvibratorstatechange-f.md#offVibratorStateChange) | Unregister a callback function for vibrator plugin or unplug events. |
+| off_vibratorStateChange | Disables listening for vibrator status changes. |
+| [onVibratorStateChange](arkts-sensorservice-vibrator-onvibratorstatechange-f.md#onVibratorStateChange) | Register a callback function to be called when a vibrator plugin or unplug event occurs. |
+| on_vibratorStateChange | Enables listening for vibrator status changes. |
+| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) | Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result. |
+| [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) | Starts vibration based on a specified effect and attribute. This API uses a promise to return the result. |
 | [stop](arkts-sensorservice-vibrator-stop-f.md#stop) | Stops vibration in the specified mode. This API uses a promise to return the result. |
-| [stop](arkts-sensorservice-vibrator-stop-f.md#stop-1) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration) | Stops vibration in the specified mode. This API uses a promise to return the result. |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-1) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-2) | Stops vibration in all modes. This API uses an asynchronous callback to return the result. |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-3) | Stops vibration in all modes. This API uses a promise to return the result. |
-| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration-4) | Stops vibration based on the specified vibrator parameters. If no parameters are passed, this API stops all vibrators of the local device by default. This API uses a promise to return the result. |
-| [stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md#stopvibrationsync) | Stops any form of motor vibration. |
+| [stop](arkts-sensorservice-vibrator-stop-f.md#stop) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) | Stops vibration in the specified mode. This API uses a promise to return the result. |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) | Stops vibration in all modes. This API uses an asynchronous callback to return the result. |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) | Stops vibration in all modes. This API uses a promise to return the result. |
+| [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) | Stops vibration based on the specified vibrator parameters. If no parameters are passed, this API stops all vibrators of the local device by default. This API uses a promise to return the result. |
+| [stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md#stopVibrationSync) | Stops any form of motor vibration. |
 | [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) | Triggers vibration based on a specified duration. This API uses an asynchronous callback to return the result. |
-| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate-1) | Triggers vibration based on a specified duration. This API uses a promise to return the result. |
-| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate-2) | Triggers vibration based on a specified effect. This API uses a promise to return the result. |
-| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate-3) | Triggers vibration based on a specified effect. This API uses an asynchronous callback to return the result. |
+| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) | Triggers vibration based on a specified duration. This API uses a promise to return the result. |
+| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) | Triggers vibration based on a specified effect. This API uses a promise to return the result. |
+| [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate) | Triggers vibration based on a specified effect. This API uses an asynchronous callback to return the result. |
 
 ### Classes
 
@@ -59,12 +61,12 @@ import { vibrator } from '@kit.SensorServiceKit';
 | --- | --- |
 | [ContinuousParam](arkts-sensorservice-vibrator-continuousparam-i.md) | Defines the parameters for continuous vibration. |
 | [EffectInfo](arkts-sensorservice-vibrator-effectinfo-i.md) | Defines the preset effect. |
-| [HapticFileDescriptor](arkts-sensorservice-vibrator-hapticfiledescriptor-i.md) | Describes the FD of a custom vibration configuration file. Ensure that the file is available, and the parameters in it can be obtained from the sandbox path through the  [fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen) API or from the HAP resource through the  [getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd)API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see  [Vibration Effect Description](../../../device/sensor/vibrator-guidelines.md#vibration-effect-description). |
+| [HapticFileDescriptor](arkts-sensorservice-vibrator-hapticfiledescriptor-i.md) | Describes the FD of a custom vibration configuration file. Ensure that the file is available, and the parameters in it can be obtained from the sandbox path through the fileIo.open API or from the HAP resource through the [getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd) API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see [Vibration Effect Description](../../../device/sensor/vibrator-guidelines.md#vibration-effect-description). |
 | [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md) | Defines the parameters for transient vibration. |
 | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md) | Describes the vibration attribute. |
-| [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md) | Represents a custom vibration pattern. It is supported only by certain devices. An error code will be returned if a device does not support this vibration mode. You can pass **VibrateFromFile** to  [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a custom vibration pattern when calling  [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1). |
+| [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md) | Represents a custom vibration pattern. It is supported only by certain devices. An error code will be returned if a device does not support this vibration mode. You can pass **VibrateFromFile** to [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a custom vibration pattern when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration). |
 | [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md) | Defines the custom vibration effect. |
-| [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) | Represents the preset vibration effect. You can pass **VibratePreset** to  [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a preset vibration effect when calling  [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1). |
+| [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) | Represents the preset vibration effect. You can pass **VibratePreset** to [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect) to specify a preset vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration). |
 | [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md) | Represents vibration of the specified duration. |
 | [VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md) | Defines the gain relative to the vibration intensity. |
 | [VibratorEvent](arkts-sensorservice-vibrator-vibratorevent-i.md) | Vibration event. |
@@ -85,15 +87,15 @@ import { vibrator } from '@kit.SensorServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | Enumerates the preset vibration effect IDs. This parameter is needed when you call  [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) to deliver the vibration effect specified by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset). This parameter supports a variety of values,such as **haptic.clock.timer**. [HapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](arkts-sensorservice-vibrator-hapticfeedback-e.md#HapticFeedback) provides several frequently used **EffectId** values.  > **NOTE：** >  > Preset effects vary according to devices. You are advised to call > [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect-1)&lt;sup&gt;10+&lt;/sup&gt; to check whether the > device supports the preset effect before use. |
-| [HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md) | Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects correspond to the specific **EffectId** values. For details, see the sample code that demonstrates how to use  [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) to deliver the vibration effect defined by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset). |
+| [EffectId](arkts-sensorservice-vibrator-effectid-e.md) | Enumerates the preset vibration effect IDs. This parameter is needed when you call [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) to deliver the vibration effect specified by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset). This parameter supports a variety of values, such as **haptic.clock.timer**. [HapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](arkts-sensorservice-vibrator-hapticfeedback-e.md#HapticFeedback) provides several frequently used **EffectId** values. > **NOTE：**> > Preset effects vary according to devices. You are advised to call > [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#isSupportEffect)&lt;sup&gt;10+&lt;/sup&gt; to check whether the > device supports the preset effect before use. |
+| [HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md) | Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects correspond to the specific **EffectId** values. For details, see the sample code that demonstrates how to use [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) to deliver the vibration effect defined by [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset). |
 | [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md) | Vibration event type. |
-| [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Enumerates vibration stop modes. This parameter is required for  [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration)or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect). |
+| [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | Enumerates vibration stop modes. This parameter is required for [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration) or [vibrator.stopVibration9+](arkts-sensorservice-vibrator-stopvibration-f.md#stopVibration). The stop mode must match that delivered in [VibrateEffect9+](arkts-sensorservice-vibrator-vibrateeffect-t.md#VibrateEffect). |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios.  &lt;!--RP1End--&gt; |
-| [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling  [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1). |
+| [Usage](arkts-sensorservice-vibrator-usage-t.md) | Enumerates the vibration scenarios. &lt;!--RP1End--&gt; |
+| [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Enumerates vibration effects of the vibrator. You can specify the vibration effect when calling [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) or [vibrator.startVibration9+](arkts-sensorservice-vibrator-startvibration-f.md#startVibration). |
 

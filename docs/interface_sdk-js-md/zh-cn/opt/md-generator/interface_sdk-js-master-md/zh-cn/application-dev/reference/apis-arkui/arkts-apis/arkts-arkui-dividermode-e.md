@@ -4,6 +4,8 @@ Menu divider mode.
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum DividerMode--><!--Device-unnamed-declare enum DividerMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ FLOATING_ABOVE_MENU = 0
 Menu divider mode floating above menu.
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ EMBEDDED_IN_MENU = 1
 Menu divider mode embedded in menu.
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -12,14 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllBundleCacheSize(): Promise<long>
 ```
 
-Obtains the global cache size. This API uses a promise to return the result.
+Obtains the global cache size. This API uses a promise to return the result. It is not possible to obtain the cache of applications that are currently running or have been granted the " AllowAppDataNotCleared" privilege as specified in the [application configuration guide](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
 
-It is not possible to obtain the cache of applications that are currently running or have been granted the "AllowAppDataNotCleared" privilege as specified in the  
-[application configuration guide](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md).
+**Since:** 23
 
-**Since:** 15
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -33,14 +32,14 @@ It is not possible to obtain the cache of applications that are currently runnin
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the size of the global cache, in bytes. |
+| Promise&lt;long&gt; | Promise used to return the size of the global cache, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

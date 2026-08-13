@@ -2,7 +2,9 @@
 
 云盘文件缓存对象，用来支撑文件管理应用原文件下载流程。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-class CloudFileCache--><!--Device-cloudSync-class CloudFileCache-End-->
 
@@ -16,7 +18,9 @@ cleanCache(uri: string): void
 
 同步方法删除文件缓存。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -36,11 +40,11 @@ cleanCache(uri: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 | 13900002 |
 | 14000002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13600001 |
 
 ## 示例
@@ -71,6 +75,8 @@ A constructor used to create a CloudFileCache object.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CloudFileCache-constructor(bundleName: string)--><!--Device-CloudFileCache-constructor(bundleName: string)-End-->
@@ -89,7 +95,7 @@ A constructor used to create a CloudFileCache object.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -106,6 +112,8 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 获取文件下载进度列表。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -134,8 +142,8 @@ getDownloadList(uris: Array<string>): Promise<Array<DownloadProgress>>
 | 错误码ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900010 |
 
 ## 示例

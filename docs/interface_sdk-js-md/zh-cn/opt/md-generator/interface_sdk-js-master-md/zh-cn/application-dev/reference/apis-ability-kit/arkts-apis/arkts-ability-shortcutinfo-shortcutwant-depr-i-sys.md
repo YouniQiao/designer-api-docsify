@@ -1,14 +1,12 @@
 # ShortcutWant（系统接口）
 
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](#ShortcutWant)替代。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutWant](#ShortcutWant（系统接口）)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [ShortcutWant](#ShortcutWant)
+**替代接口：** [ShortcutWant](#ShortcutWant（系统接口）)
 
 <!--Device-unnamed-export interface ShortcutWant--><!--Device-unnamed-export interface ShortcutWant-End-->
 
@@ -30,7 +28,7 @@ readonly targetBundle: string
 
 **废弃版本：** 9
 
-**替代接口：** [targetBundle](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetBundle)
+**替代接口：** targetBundle
 
 <!--Device-ShortcutWant-readonly targetBundle: string--><!--Device-ShortcutWant-readonly targetBundle: string-End-->
 
@@ -52,7 +50,7 @@ readonly targetClass: string
 
 **废弃版本：** 9
 
-**替代接口：** [targetAbility](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutWant#targetAbility)
+**替代接口：** targetAbility
 
 <!--Device-ShortcutWant-readonly targetClass: string--><!--Device-ShortcutWant-readonly targetClass: string-End-->
 

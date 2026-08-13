@@ -1,8 +1,12 @@
 # RouterState
 
-**Since:** 23
+Describes the page routing state.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-router-interface RouterState--><!--Device-router-interface RouterState-End-->
 
@@ -17,20 +21,22 @@ import { router } from '@kit.ArkUI';
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-Index of the current page in the stack.NOTE: The index starts from 1 from the bottom to the top of the stack.The value range is all integers.
+Index of the current page in the stack. The index starts from 1 from the bottom to the top of the stack.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-RouterState-index: int--><!--Device-RouterState-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-RouterState-index: number--><!--Device-RouterState-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -44,11 +50,13 @@ Name of the current page, that is, the file name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouterState-name: string--><!--Device-RouterState-name: string-End-->
 
@@ -60,15 +68,19 @@ Name of the current page, that is, the file name.
 params: Object
 ```
 
-Data that passed to the destination page during navigation.
+Parameters carried on the current page.
 
 **Type:** Object
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterState-params: Object--><!--Device-RouterState-params: Object-End-->
 
@@ -84,11 +96,13 @@ Path of the current page.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouterState-path: string--><!--Device-RouterState-path: string-End-->
 

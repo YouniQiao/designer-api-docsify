@@ -4,6 +4,8 @@ Implements an AI image analysis controller, which provides control for image ana
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ImageAnalyzerController--><!--Device-unnamed-declare class ImageAnalyzerController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor()
 A constructor used to create an **ImageAnalyzerController** instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ getImageAnalyzerSupportTypes(): ImageAnalyzerType[]
 Obtains the analysis types supported by the corresponding component.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

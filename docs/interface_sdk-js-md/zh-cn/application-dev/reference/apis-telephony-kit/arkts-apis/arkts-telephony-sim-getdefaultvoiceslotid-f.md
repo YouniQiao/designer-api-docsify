@@ -8,9 +8,11 @@ function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void
 
 Obtains the default card slot for the voice service.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -20,7 +22,7 @@ Obtains the default card slot for the voice service.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | Indicates the callback for getting the default card slot for the voice service. Returns {@code 0} if card 1 is used as the default card slot for the voice service; returns {@code 1} if card 2 is used as the default card slot for the voice service; returns {@code -1} if no card is available for the voice service. |
 
 ## 示例
 
@@ -42,9 +44,11 @@ function getDefaultVoiceSlotId(): Promise<int>
 
 Obtains the default card slot for the voice service.
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>-End-->
 
@@ -54,7 +58,7 @@ Obtains the default card slot for the voice service.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Returns { |
+| Promise&lt;int&gt; | Returns { |
 
 ## 示例
 

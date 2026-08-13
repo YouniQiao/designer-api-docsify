@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare struct TipsDialog--><!--Device-unnamed-export declare struct TipsDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ checkAction?: (isChecked: boolean) => void
 
 checkbox的选中状态改变事件。isChecked为true时，表示checkbox已选中，isChecked为false时，表示checkbox未选中。现推荐使用onCheckedChange&lt;sup&gt;12+&lt;/sup&gt;。
 
+**类型：** (isChecked: boolean) =&gt; void
+
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,25 +32,19 @@ checkbox的选中状态改变事件。isChecked为true时，表示checkbox已选
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [isChecked](#ischecked) | boolean | 是 |
-
 ## checkTips
 
 ```TypeScript
 checkTips?: ResourceStr
 ```
 
-checkbox的提示内容。
-
-默认不设置或设置为undefined，提示内容不显示。
+checkbox的提示内容。 默认不设置或设置为undefined，提示内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,13 +60,13 @@ checkbox的提示内容。
 content?: ResourceStr
 ```
 
-提示弹出框内容。
-
-默认不设置或设置为undefined，弹出框内容不显示。
+提示弹出框内容。 默认不设置或设置为undefined，弹出框内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,13 +82,13 @@ content?: ResourceStr
 controller: CustomDialogController
 ```
 
-提示弹出框控制器，用于控制弹出框的显示和隐藏。
-
-**说明：** 未使用@Require装饰，构造时不强制校验参数。
+提示弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +110,8 @@ imageRes: ResourceStr | PixelMap
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -124,13 +126,13 @@ imageRes: ResourceStr | PixelMap
 imageSize?: SizeOptions
 ```
 
-自定义图片尺寸。
-
-默认值：64*64vp
+自定义图片尺寸。 默认值：64*64vp
 
 **类型：** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,24 +145,22 @@ imageSize?: SizeOptions
 ## isChecked
 
 ```TypeScript
-isChecked?: boolean
+@Prop isChecked?: boolean
 ```
 
-value为true时，表示checkbox已选中，value为false时，表示未选中。
-
-默认值：false
+value为true时，表示checkbox已选中，value为false时，表示未选中。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 10
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-TipsDialog-isChecked?: boolean--><!--Device-TipsDialog-isChecked?: boolean-End-->
+<!--Device-TipsDialog-@Prop isChecked?: boolean--><!--Device-TipsDialog-@Prop isChecked?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -176,6 +176,8 @@ checkbox的选中状态改变事件回调。回调参数类型为boolean，true�
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -190,13 +192,13 @@ checkbox的选中状态改变事件回调。回调参数类型为boolean，true�
 primaryButton?: ButtonOptions
 ```
 
-提示弹出框左侧按钮。
-
-默认不设置或设置为undefined，左侧按钮不显示。
+提示弹出框左侧按钮。 默认不设置或设置为undefined，左侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,13 +214,13 @@ primaryButton?: ButtonOptions
 secondaryButton?: ButtonOptions
 ```
 
-提示弹出框右侧按钮。
-
-默认不设置或设置为undefined，右侧按钮不显示。
+提示弹出框右侧按钮。 默认不设置或设置为undefined，右侧按钮不显示。
 
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,6 +242,8 @@ theme?: Theme | CustomTheme
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -254,13 +258,13 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -276,15 +280,13 @@ themeColorMode?: ThemeColorMode
 title?: ResourceStr
 ```
 
-提示弹出框标题。
-
-默认不设置或设置为undefined，弹出框标题不显示。
-
-**说明：** 标题超过两行会显示“...”。
+提示弹出框标题。 默认不设置或设置为undefined，弹出框标题不显示。 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

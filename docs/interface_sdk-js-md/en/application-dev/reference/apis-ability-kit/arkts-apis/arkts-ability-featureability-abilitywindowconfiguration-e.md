@@ -1,11 +1,12 @@
 # AbilityWindowConfiguration
 
-Defines the window configuration corresponding to this ability. The configuration is obtained through  
-**featureAbility.AbilityWindowConfiguration**.
+Defines the window configuration corresponding to this ability. The configuration is obtained through **featureAbility.AbilityWindowConfiguration**.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-featureAbility-export enum AbilityWindowConfiguration--><!--Device-featureAbility-export enum AbilityWindowConfiguration-End-->
 
@@ -22,6 +23,8 @@ The PageAbility is in an undefined window display mode.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -41,6 +44,8 @@ The PageAbility is in full screen mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1-End-->
@@ -58,6 +63,8 @@ The left screen in horizontal direction or the upper screen in vertical directio
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -77,6 +84,8 @@ The right screen in horizontal direction or the lower screen in vertical directi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101-End-->
@@ -94,6 +103,8 @@ The PageAbility is displayed in floating window mode.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

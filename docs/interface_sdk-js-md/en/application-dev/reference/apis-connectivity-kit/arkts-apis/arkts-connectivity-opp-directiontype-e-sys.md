@@ -2,9 +2,11 @@
 
 Enum for file transfer direction.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-opp-enum DirectionType--><!--Device-opp-enum DirectionType-End-->
 
@@ -20,9 +22,11 @@ OUTBOUND = 0
 
 The file transfer direction to send.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +44,11 @@ INBOUND = 1
 
 The file transfer direction to receive.
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

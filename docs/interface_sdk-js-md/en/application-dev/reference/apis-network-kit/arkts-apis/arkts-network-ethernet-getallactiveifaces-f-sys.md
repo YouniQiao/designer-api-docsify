@@ -18,6 +18,8 @@ Gets the names of all active network interfaces.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void--><!--Device-ethernet-function getAllActiveIfaces(callback: AsyncCallback<Array<string>>): void-End-->
@@ -30,16 +32,16 @@ Gets the names of all active network interfaces.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getAllActiveIfaces. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | the callback of getAllActiveIfaces. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 
@@ -72,6 +74,8 @@ Gets the names of all active network interfaces.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
 <!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>--><!--Device-ethernet-function getAllActiveIfaces(): Promise<Array<string>>-End-->
@@ -90,10 +94,10 @@ Gets the names of all active network interfaces.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 
 ## Examples
 

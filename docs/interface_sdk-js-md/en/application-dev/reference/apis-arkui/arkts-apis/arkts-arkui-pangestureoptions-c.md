@@ -6,6 +6,8 @@ Defines the PanGesture options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class PanGestureOptions--><!--Device-unnamed-declare class PanGestureOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanGestureOptions-constructor(value?: { fingers?: number; direction?: PanDirection; distance?: number })--><!--Device-PanGestureOptions-constructor(value?: { fingers?: number; direction?: PanDirection; distance?: number })-End-->
@@ -32,7 +36,7 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. &lt;br&gt;**fingers**: minimum number of fingers required. The value ranges from 1 to 10.&lt;br&gt;Default value: **1** &lt;br&gt;**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.&lt;br&gt;Default value: **PanDirection.All** &lt;br&gt;**distance**: minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources. &lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the [scale](CommonMethod#scale(value: ScaleOptions)) attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. &lt;br&gt;**fingers**: minimum number of fingers required. The value ranges from 1 to 10.&lt;br&gt;Default value: **1** &lt;br&gt;**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.&lt;br&gt;Default value: **PanDirection.All** &lt;br&gt;**distance**: minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources. &lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## getDirection
 
@@ -45,6 +49,8 @@ Obtains the pan direction.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +78,8 @@ Obtains the minimum pan distance to trigger the gesture. The unit is vp.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -98,6 +106,8 @@ Sets the pan direction.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanGestureOptions-setDirection(value: PanDirection)--><!--Device-PanGestureOptions-setDirection(value: PanDirection)-End-->
@@ -116,12 +126,13 @@ Sets the pan direction.
 setDistance(value: number)
 ```
 
-Sets the minimum pan distance to trigger the gesture, in vp. To avoid performance degradation due to excessive response delays or accidental releases, avoid excessively large values. For best practices, see   
-[Reducing the Pan Distance for Gesture Recognition](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286).
+Sets the minimum pan distance to trigger the gesture, in vp. To avoid performance degradation due to excessive response delays or accidental releases, avoid excessively large values. For best practices, see [Reducing the Pan Distance for Gesture Recognition](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-application-latency-optimization-cases#section1116134115286).
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -133,7 +144,7 @@ Sets the minimum pan distance to trigger the gesture, in vp. To avoid performanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources.&lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the [scale](CommonMethod#scale(value: ScaleOptions)) attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
+| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources.&lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## setFingers
 
@@ -146,6 +157,8 @@ Sets the minimum number of fingers to trigger the gesture.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

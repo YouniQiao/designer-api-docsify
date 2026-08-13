@@ -2,9 +2,11 @@
 
 提示音参数选项。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SystemToneOptions--><!--Device-unnamed-export interface SystemToneOptions-End-->
 
@@ -22,9 +24,11 @@ muteAudio?: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SystemToneOptions-muteAudio?: boolean--><!--Device-SystemToneOptions-muteAudio?: boolean-End-->
 
@@ -42,9 +46,11 @@ muteHaptics?: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SystemToneOptions-muteHaptics?: boolean--><!--Device-SystemToneOptions-muteHaptics?: boolean-End-->
 

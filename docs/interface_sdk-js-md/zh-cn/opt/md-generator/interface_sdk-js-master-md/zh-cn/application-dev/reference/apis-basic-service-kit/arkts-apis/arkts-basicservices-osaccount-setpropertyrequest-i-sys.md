@@ -2,7 +2,9 @@
 
 提供设置属性请求的信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface SetPropertyRequest--><!--Device-osAccount-interface SetPropertyRequest-End-->
 
@@ -20,7 +22,9 @@ authType: AuthType
 
 **类型：** AuthType
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SetPropertyRequest-authType: AuthType--><!--Device-SetPropertyRequest-authType: AuthType-End-->
 
@@ -38,7 +42,9 @@ key: SetPropertyType
 
 **类型：** [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SetPropertyRequest-key: SetPropertyType--><!--Device-SetPropertyRequest-key: SetPropertyType-End-->
 
@@ -56,7 +62,9 @@ setInfo: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SetPropertyRequest-setInfo: Uint8Array--><!--Device-SetPropertyRequest-setInfo: Uint8Array-End-->
 

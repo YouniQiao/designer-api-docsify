@@ -6,7 +6,9 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 
 **Since:** 10
 
-<!--Device-unnamed-declare interface MenuOptions extends ContextMenuOptions--><!--Device-unnamed-declare interface MenuOptions extends ContextMenuOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface MenuOptions--><!--Device-unnamed-declare interface MenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,21 +18,15 @@ Configues menu item information, which is inherited from [ContextMenuOptions](ar
 showInSubWindow?: boolean
 ```
 
-Whether to show the menu in a subwindow.
-
-**true**: yes; **false**: no
-
-Default value: **true** for 2-in-1 devices and **false** for other devices
-
-**NOTE：**
-
-This parameter takes effect only for 2-in-1 devices.
+Whether to show the menu in a subwindow. **true**: yes; **false**: no Default value: **true** for 2-in-1 devices and **false** for other devices **NOTE：**This parameter takes effect only for 2-in-1 devices.
 
 **Type:** boolean
 
 **Default:** true for 2-in-1 devices [since 12]
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +42,13 @@ This parameter takes effect only for 2-in-1 devices.
 title?: ResourceStr
 ```
 
-Menu title.
-
-**NOTE：**
-
-This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt;.
+Menu title. **NOTE：**This parameter is effective only when **content** is set to Array&lt;[MenuElement](arkts-arkui-menuelement-i.md#MenuElement)&gt;.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

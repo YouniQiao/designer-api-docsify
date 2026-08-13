@@ -1,20 +1,24 @@
 # GridCol
 
 ```TypeScript
-type GridCol = GridColFrameNode
+type GridCol = TypedFrameNode<GridColInterface, GridColAttribute>
 ```
 
-Define the FrameNode type for GridCol.
+Represents a FrameNode of the **GridCol** type. This type of node does not allow child components to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type GridCol = GridColFrameNode--><!--Device-typeNode-type GridCol = GridColFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type GridCol = TypedFrameNode<GridColInterface, GridColAttribute>--><!--Device-typeNode-type GridCol = TypedFrameNode<GridColInterface, GridColAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** GridColFrameNode
+**Property type:** TypedFrameNode<GridColInterface, GridColAttribute>
 

@@ -6,13 +6,11 @@
 declare function moveDir(src: string, dest: string, mode?: number): Promise<void>
 ```
 
-移动源目录至目标路径下，使用promise异步回调。
-
-> **说明：**
-> 
-> 该接口不支持在分布式文件路径下操作。
+移动源目录至目标路径下，使用promise异步回调。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function moveDir(src: string, dest: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function moveDir(src: string, dest: string, mode?: number): Promise<void>-End-->
 
@@ -67,6 +65,8 @@ Moves the source directory to the destination directory. This API uses an asynch
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -109,15 +109,11 @@ Moves the source directory to the destination directory. This API uses an asynch
 declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-移动源目录至目标路径下。使用callback异步回调。
-
-移动模式为目录级别抛异常。当目标目录下存在与源目录名冲突的目录，则抛出异常。
-
-> **说明：**
-> 
-> 该接口不支持在分布式文件路径下操作。
+移动源目录至目标路径下。使用callback异步回调。 移动模式为目录级别抛异常。当目标目录下存在与源目录名冲突的目录，则抛出异常。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
 
@@ -147,6 +143,8 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 移动源目录至目标路径下，支持设置移动模式。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
@@ -191,13 +189,11 @@ declare function moveDir(src: string, dest: string, mode: number, callback: Asyn
 declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-移动源目录至目标路径下，支持设置移动模式。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口不支持在分布式文件路径下操作。
+移动源目录至目标路径下，支持设置移动模式。使用callback异步回调。 > **说明：** > > 该接口不支持在分布式文件路径下操作。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-unnamed-declare function moveDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
 

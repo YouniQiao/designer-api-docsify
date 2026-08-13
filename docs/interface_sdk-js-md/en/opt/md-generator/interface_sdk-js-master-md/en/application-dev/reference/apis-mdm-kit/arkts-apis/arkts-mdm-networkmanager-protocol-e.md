@@ -4,6 +4,8 @@ Enumerates network protocols.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-networkManager-enum Protocol--><!--Device-networkManager-enum Protocol-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ ALL = 0
 All network protocols.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ TCP.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Protocol-TCP = 1--><!--Device-Protocol-TCP = 1-End-->
@@ -50,6 +56,8 @@ UDP.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Protocol-UDP = 2--><!--Device-Protocol-UDP = 2-End-->
@@ -65,6 +73,8 @@ ICMP = 3
 ICMP.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

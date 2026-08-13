@@ -1,8 +1,10 @@
 # CacheMode
 
-Enum type supplied to [cacheMode](cacheMode) for setting the Web cache mode.
+Enum type supplied to cacheMode for setting the Web cache mode.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum CacheMode--><!--Device-unnamed-declare enum CacheMode-End-->
 
@@ -17,6 +19,8 @@ Default = 0
 load cache when they are available and not expired, otherwise load online.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ load cache when they are available, otherwise load online.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CacheMode-None = 1--><!--Device-CacheMode-None = 1-End-->
@@ -50,6 +56,8 @@ Load online and not cache.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CacheMode-Online = 2--><!--Device-CacheMode-Online = 2-End-->
@@ -65,6 +73,8 @@ Only = 3
 load cache and not online.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

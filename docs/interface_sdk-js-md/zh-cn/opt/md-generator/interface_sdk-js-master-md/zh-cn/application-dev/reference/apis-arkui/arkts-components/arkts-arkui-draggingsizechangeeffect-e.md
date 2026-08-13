@@ -4,6 +4,8 @@
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum DraggingSizeChangeEffect--><!--Device-unnamed-declare enum DraggingSizeChangeEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 发起拖拽时直接从菜单预览图切换为最终尺寸的拖拽预览图。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ SIZE_TRANSITION = 1
 
 **起始版本：** 19
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ SIZE_CONTENT_TRANSITION = 2
 发起拖拽时，由菜单预览图逐步过渡切换为最终拖拽预览图，设置DragPreviewMode中的DISABLE_SCALE时尺寸过渡不生效。 这常用于菜单预览图与拖拽预览图差异较大时使用，过渡效果包含内容透明度及尺寸变化。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

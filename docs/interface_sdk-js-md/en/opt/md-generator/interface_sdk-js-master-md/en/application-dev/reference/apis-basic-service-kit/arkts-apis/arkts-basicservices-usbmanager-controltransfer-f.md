@@ -18,7 +18,7 @@ Performs control transfer. This API uses a promise to return the result.
 
 **Deprecated since:** 12
 
-**Substitutes:** [usbControlTransfer](usbManager.usbControlTransfer(pipe:)
+**Substitutes:** [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md#usbControlTransfer)(pipe: USBDevicePipe, requestparam: USBDeviceRequestParams, timeout?: int)
 
 <!--Device-usbManager-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>--><!--Device-usbManager-function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>-End-->
 
@@ -42,7 +42,7 @@ Performs control transfer. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cloudData-interface SwitchConfig--><!--Device-cloudData-interface SwitchConfig-End-->
 
@@ -24,7 +26,9 @@ dbInfo: Record<string, DBSwitchInfo>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>--><!--Device-SwitchConfig-dbInfo: Record<string, DBSwitchInfo>-End-->
 

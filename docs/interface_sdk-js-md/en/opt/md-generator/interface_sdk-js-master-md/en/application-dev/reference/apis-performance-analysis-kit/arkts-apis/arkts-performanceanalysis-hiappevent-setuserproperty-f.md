@@ -14,7 +14,9 @@ function setUserProperty(name: string, value: string): void
 
 Sets a user property, which is used for association when a [Processor](arkts-performanceanalysis-hiappevent-processor-i.md#Processor) is configured.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,7 +35,7 @@ Sets a user property, which is used for association when a [Processor](arkts-per
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

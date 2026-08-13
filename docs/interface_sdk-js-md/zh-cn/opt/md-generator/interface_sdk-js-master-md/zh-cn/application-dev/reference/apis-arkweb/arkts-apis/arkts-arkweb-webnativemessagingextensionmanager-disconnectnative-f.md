@@ -10,6 +10,8 @@ function disconnectNative(connectionId: number): Promise<void>
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.WEB_NATIVE_MESSAGING
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -34,10 +36,10 @@ function disconnectNative(connectionId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 

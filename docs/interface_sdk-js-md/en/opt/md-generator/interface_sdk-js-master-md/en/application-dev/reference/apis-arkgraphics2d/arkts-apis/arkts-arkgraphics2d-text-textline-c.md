@@ -1,12 +1,10 @@
 # TextLine
 
-Implements a carrier that describes the basic text line structure of a paragraph.
+Implements a carrier that describes the basic text line structure of a paragraph. Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine) of the [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset) class to create a **TextLine** object.
 
-Before calling any of the following APIs, you must use [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the  
-[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) class or [createLine()](arkts-arkgraphics2d-text-linetypeset-c.md#createLine) of the  
-[LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset) class to create a **TextLine** object.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-text-class TextLine--><!--Device-text-class TextLine-End-->
 
@@ -28,6 +26,8 @@ Creates a truncated text line object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine--><!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine-End-->
@@ -39,7 +39,7 @@ Creates a truncated text line object.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | width | number | Yes |
-| ellipsisMode | [EllipsisMode](../../apis-arkui/arkts-apis/arkts-arkui-enums-ellipsismode-e.md) | Yes |
+| ellipsisMode | [EllipsisMode](../../apis-na/arkts-apis/arkts-na-enums-ellipsismode-e.md) | Yes |
 | [ellipsis](arkts-arkgraphics2d-text-textstyle-i.md) | string | Yes |
 
 **Return value:**
@@ -81,6 +81,36 @@ struct Index {
 }
 ```
 
+## createTruncatedLine
+
+```TypeScript
+createTruncatedLine(width: number, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined
+```
+
+Creates a truncated text line object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined--><!--Device-TextLine-createTruncatedLine(width: double, ellipsisMode: EllipsisMode, ellipsis: string): TextLine | undefined-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| width | number | Yes |
+| ellipsisMode | [EllipsisMode](../../apis-na/arkts-apis/arkts-na-enums-ellipsismode-e.md) | Yes |
+| [ellipsis](arkts-arkgraphics2d-text-textstyle-i.md) | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [TextLine](arkts-arkgraphics2d-text-textline-c.md) |
+
 ## enumerateCaretOffsets
 
 ```TypeScript
@@ -89,7 +119,9 @@ enumerateCaretOffsets(callback: CaretOffsetsCallback): void
 
 Enumerates the offset and index of each character in a text line.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -120,7 +152,9 @@ getAlignmentOffset(alignmentFactor: number, alignmentWidth: number): number
 
 Obtains the offset of this text line after alignment based on the alignment factor and alignment width.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -155,7 +189,9 @@ getGlyphCount(): number
 
 Obtains the number of glyphs in this text line.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -183,7 +219,9 @@ getGlyphRuns(): Array<Run>
 
 Obtains the array of glyph runs in the text line.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -209,19 +247,11 @@ let runs = lines[0].getGlyphRuns();
 getImageBounds(): common2D.Rect
 ```
 
-Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different.Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for"j" is taller than that for "E".
+Obtains the image boundaries of this text line. The image boundaries, equivalent to visual boundaries, depend on the font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. For the strings "j" and "E", their image boundaries are different. Specifically, the width of the boundary for "j" is narrower than that for "E", and the height of the boundary for "j" is taller than that for "E". > **NOTE：**> > The figure shows the image boundaries for the string " a b ". > >  > > The figure shows the image boundaries for the string "j" or "E". > > 
 
-> **NOTE：**
-> 
-> The figure shows the image boundaries for the string " a b ".
-> 
-> ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
-> 
-> The figure shows the image boundaries for the string "j" or "E".
-> 
-> ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -249,7 +279,9 @@ getOffsetForStringIndex(index: number): number
 
 Obtains the offset of a character with the specified index in this text line.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -283,7 +315,9 @@ getStringIndexForPosition(point: common2D.Point): number
 
 Obtains the index of a character at the specified position in the original string.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -318,7 +352,9 @@ getTextRange(): Range
 
 Obtains the range of the text in this text line in the entire paragraph.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -346,7 +382,9 @@ getTrailingSpaceWidth(): number
 
 Obtains the width of the spaces at the end of this text line.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -372,20 +410,11 @@ let trailingSpaceWidth = lines[0].getTrailingSpaceWidth();
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves.
+Obtains the typographic boundaries of the text line. These boundaries depend on the typographic font and font size, but not on the characters themselves. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. Similarly, the strings "j" and "E" have identical typographic boundaries, independent of the characters themselves. > **NOTE：**> > The figure shows the typesetting boundaries for the string " a b ". > >  > > The figure shows the typesetting boundaries for the string "j" or "E". > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-> **NOTE：**
-> 
-> The figure shows the typesetting boundaries for the string " a b ".
-> 
-> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
-> 
-> The figure shows the typesetting boundaries for the string "j" or "E".
-> 
-> !
-> [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -414,7 +443,9 @@ paint(canvas: drawing.Canvas, x: number, y: number): void
 
 Paints this text line on the canvas with the coordinate point (x, y) as the upper left corner.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

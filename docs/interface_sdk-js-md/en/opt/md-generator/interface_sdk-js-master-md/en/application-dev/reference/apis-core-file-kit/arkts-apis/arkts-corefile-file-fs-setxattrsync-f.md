@@ -16,6 +16,8 @@ Sets an extended attribute of a file or directory.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function setxattrSync(path: string, key: string, value: string): void--><!--Device-unnamed-declare function setxattrSync(path: string, key: string, value: string): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -33,7 +35,7 @@ Sets an extended attribute of a file or directory.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900038 |
 | 13900002 |
 | 13900012 |

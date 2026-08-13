@@ -595,13 +595,7 @@ predicates.inAllDevices()
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-同步分布式数据库时连接到组网内指定的远程设备。
-
-> **说明：**
-> 
-> 其中devices通过调用&lt;!--RP2--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
-> 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
+同步分布式数据库时连接到组网内指定的远程设备。 > **说明：** > > 其中devices通过调用&lt;!--RP2--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > 方法得到。&lt;!--RP2End--&gt;deviceManager模块的接口均为系统接口，仅系统应用可用。
 
 **起始版本：** 8
 
@@ -721,7 +715,7 @@ isNotNull(field: string): RdbPredicates
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -1039,7 +1033,7 @@ predicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): RdbPredicates
 ```
 
-配置RdbPredicates以指定返回结果的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口调用需传参数-1。该方法等同于SQL语句中的"OFFSET"。
+配置RdbPredicates以指定返回结果的起始位置。需要同步调用limitAs接口指定查询数量，否则将无查询结果。如需查询指定偏移位置后的所有行，limitAs接口调用需传参数-1。该方法等同于SQL语句中的"OFFSET "。
 
 **起始版本：** 7
 

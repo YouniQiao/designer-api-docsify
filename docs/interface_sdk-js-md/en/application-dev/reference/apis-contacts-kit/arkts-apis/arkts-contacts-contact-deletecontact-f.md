@@ -20,7 +20,7 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [deleteContact](contact.deleteContact(context:)
+**Substitutes:** [deleteContact](#deleteContact)(context: Context, key: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -33,7 +33,7 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey](arkts-contacts-contact-querykey-f.md#queryKey). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
 
 ## Examples
 
@@ -70,6 +70,8 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 <!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void-End-->
@@ -82,18 +84,18 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 | --- | --- | --- | --- |
 | context | Context | Yes | Indicates the context of application or capability. |
 | key | string | Yes | Unique query key of a contact. One contact corresponds to one key, which can be obtained through [queryKey](arkts-contacts-contact-querykey-f.md#queryKey). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Indicates the callback for getting the result of the call. If the operation is successful, the ID of the deleted contact is returned. If the operation fails, an error code is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -131,7 +133,7 @@ Deletes a contact. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [deleteContact](contact.deleteContact(context:)
+**Substitutes:** [deleteContact](#deleteContact)(context: Context, key: string)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -183,6 +185,8 @@ Deletes a contact. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 <!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>--><!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>-End-->
@@ -206,12 +210,12 @@ Deletes a contact. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) | Parameter error. Possible causes: Mandatory parameters are left unspecified. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';

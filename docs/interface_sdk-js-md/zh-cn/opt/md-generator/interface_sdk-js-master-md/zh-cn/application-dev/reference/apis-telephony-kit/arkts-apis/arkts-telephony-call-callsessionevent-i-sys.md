@@ -2,7 +2,9 @@
 
 视频通话事件信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface CallSessionEvent--><!--Device-call-export interface CallSessionEvent-End-->
 
@@ -20,7 +22,9 @@ callId: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallSessionEvent-callId: int--><!--Device-CallSessionEvent-callId: int-End-->
 
@@ -38,7 +42,9 @@ eventId: CallSessionEventId
 
 **类型：** [CallSessionEventId](arkts-telephony-call-callsessioneventid-e-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallSessionEvent-eventId: CallSessionEventId--><!--Device-CallSessionEvent-eventId: CallSessionEventId-End-->
 

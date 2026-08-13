@@ -2,7 +2,9 @@
 
 Queries portrait parameters.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface PortraitQuery--><!--Device-camera-interface PortraitQuery-End-->
 
@@ -24,7 +26,9 @@ getSupportedPortraitEffects(): Array<PortraitEffect>
 
 Obtains the supported portrait effects.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>--><!--Device-PortraitQuery-getSupportedPortraitEffects(): Array<PortraitEffect>-End-->
 
@@ -42,8 +46,8 @@ Obtains the supported portrait effects.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

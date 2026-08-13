@@ -2,9 +2,11 @@
 
 Represents information about the current version.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface CurrentVersionInfo--><!--Device-update-export interface CurrentVersionInfo-End-->
 
@@ -28,9 +30,11 @@ Device name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CurrentVersionInfo-deviceName: string--><!--Device-CurrentVersionInfo-deviceName: string-End-->
 
@@ -48,9 +52,11 @@ System version number.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CurrentVersionInfo-osVersion: string--><!--Device-CurrentVersionInfo-osVersion: string-End-->
 
@@ -68,9 +74,11 @@ Version components.
 
 **Type:** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>--><!--Device-CurrentVersionInfo-versionComponents: Array<VersionComponent>-End-->
 

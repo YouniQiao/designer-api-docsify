@@ -1,0 +1,21 @@
+# OnAbilitySaveStateFn
+
+```TypeScript
+type OnAbilitySaveStateFn = (ability: UIAbility) => void
+```
+
+注册监听应用上下文的生命周期后，在UIAbility的onSaveState触发后回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-unnamed-type OnAbilitySaveStateFn = (ability: UIAbility) => void--><!--Device-unnamed-type OnAbilitySaveStateFn = (ability: UIAbility) => void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| ability | [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 是 |

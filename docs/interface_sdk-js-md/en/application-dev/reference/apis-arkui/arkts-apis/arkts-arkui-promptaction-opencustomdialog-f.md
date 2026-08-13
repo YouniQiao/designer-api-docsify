@@ -12,19 +12,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 function openCustomDialog(options: CustomDialogOptions): Promise<number>
 ```
 
-Opens a custom dialog box. This API uses a promise to return the result.
-
-&lt;!--Del--&gt;This API cannot be used in **ServiceExtension**.&lt;!--DelEnd--&gt;
-
-By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp.
-
-> **NOTE：**
-> 
-> - This API is supported since API version 11 and deprecated since API version 18.
-You are advised to use [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **openCustomDialog** can lead to the issue of [ambiguous UI context](../../ui/arkts-global-interface.md#ambiguous-ui-context).  
-> 
-> - Since API version 12, you can use the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API
-in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
+Opens a custom dialog box. This API uses a promise to return the result. &lt;!--Del--&gt;This API cannot be used in **ServiceExtension**.&lt;!--DelEnd--&gt; By default, the width of the dialog box in portrait mode is the width of the window where it is located minus the left and right margins (40 vp for 2-in-1 devices and 16 vp for other devices), and the maximum width is 400 vp. > **NOTE：**> > - This API is supported since API version 11 and deprecated since API version 18. You are advised to use openCustomDialog instead. Before calling this API, you need to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) method in [UIContext](arkts-apis-uicontext-uicontext.md). Directly using **openCustomDialog** can lead to the issue of [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). > > - Since API version 12, you can use the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) API in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object associated with the current UI context.
 
 **Since:** 11
 
@@ -32,7 +20,7 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 **Deprecated since:** 18
 
-**Substitutes:** [openCustomDialog](ohos.arkui.UIContext.PromptAction#openCustomDialog)
+**Substitutes:** openCustomDialog
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +34,7 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box. &lt;br&gt;Note: If both [isModal](js-apis-promptAction.md#basedialogoptions11) and [showInSubWindow](js-apis-promptAction.md#basedialogoptions11) in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box. &lt;br&gt;Note: If both isModal and showInSubWindow in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -58,8 +46,8 @@ in [UIContext](arkts-apis-uicontext-uicontext.md) to obtain the [PromptAction](a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -205,7 +193,7 @@ struct Index {
 }
 ```
 
-Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) API through this object.
+Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
 
 ```TypeScript
 import { LevelMode, ImmersiveMode } from '@kit.ArkUI';
@@ -282,7 +270,7 @@ struct Index {
 }
 ```
 
-Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) API through this object.
+Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
 
 ```TypeScript
 import { LevelMode, ImmersiveMode } from '@kit.ArkUI';
@@ -359,7 +347,7 @@ struct Index {
 }
 ```
 
-Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) API through this object.
+Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
 
 ```TypeScript
 // Index.ets
@@ -421,7 +409,7 @@ struct Index {
 }
 ```
 
-Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-apis-uicontext-uicontext.md#getpromptaction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the [openCustomDialog](arkts-apis-uicontext-promptaction.md#opencustomdialog12-1) API through this object.
+Directly using openCustomDialog can lead to the issue of ambiguous UI context. To avoid this, obtain the [PromptAction](arkts-apis-uicontext-promptaction.md) object using the [getPromptAction](arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction) API in [UIContext](arkts-apis-uicontext-uicontext.md) and then call the openCustomDialog API through this object.
 
 ```TypeScript
 // Index.ets

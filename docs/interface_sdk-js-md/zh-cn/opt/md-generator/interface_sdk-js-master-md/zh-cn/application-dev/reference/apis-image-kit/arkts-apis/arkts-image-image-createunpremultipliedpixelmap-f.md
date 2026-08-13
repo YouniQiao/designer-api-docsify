@@ -8,7 +8,9 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: A
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
 
@@ -18,18 +20,18 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
-| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| src | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
-| [62980246](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-读取pixelmap失败) |
-| [62980248](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-pixelmap不允许修改) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) |
 
 ## 示例
 
@@ -68,7 +70,9 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<vo
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
 
@@ -78,8 +82,8 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| src | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
-| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](../../apis-arkui/arkts-apis/arkts-arkui-pixelmap-t.md) | 是 |
+| src | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
+| [dst](../../apis-arkui/arkts-apis/arkts-arkui-matrix4-polytopolyoptions-i.md) | [PixelMap](../../apis-na/arkts-apis/arkts-na-pixelmap-t.md) | 是 |
 
 **返回值：**
 
@@ -91,10 +95,10 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [62980103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-图片类型不支持) |
-| [62980246](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-读取pixelmap失败) |
-| [62980248](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-pixelmap不允许修改) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [62980103](../errorcode-image.md#62980103-图片类型不支持) |
+| [62980246](../errorcode-image.md#62980246-读取pixelmap失败) |
+| [62980248](../errorcode-image.md#62980248-pixelmap不允许修改) |
 
 ## 示例
 

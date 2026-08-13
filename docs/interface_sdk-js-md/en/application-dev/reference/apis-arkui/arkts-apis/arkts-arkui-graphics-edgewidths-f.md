@@ -3,18 +3,22 @@
 ## edgeWidths
 
 ```TypeScript
-export declare function edgeWidths(all: double): NodeEdges<double>
+export function edgeWidths(all: number): Edges<number>
 ```
 
-Obtain an object with all edges are set to the same width.
+Generates an **edgeWidths** object with the specified edge width for all edges.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function edgeWidths(all: double): NodeEdges<double>--><!--Device-unnamed-export declare function edgeWidths(all: double): NodeEdges<double>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export function edgeWidths(all: number): Edges<number>--><!--Device-unnamed-export function edgeWidths(all: number): Edges<number>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +26,61 @@ Obtain an object with all edges are set to the same width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | double | Yes | The edge width will be set. |
+| all | number | Yes | Edge width, in vp. &lt;br&gt;Value range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md)&lt;double&gt; | The object with all edges are set to the same width. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;number&gt; | edgeWidths** object whose edge widths are all at the specified value. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, edgeWidths } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0xffd5d5d5;
+renderNode.borderWidth = edgeWidths(8);
+renderNode.borderColor = {
+  left: 0xff519db4,
+  top: 0xff519db4,
+  right: 0xff519db4,
+  bottom: 0xff519db4
+};
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }.margin(30)
+  }
+}
+```
 

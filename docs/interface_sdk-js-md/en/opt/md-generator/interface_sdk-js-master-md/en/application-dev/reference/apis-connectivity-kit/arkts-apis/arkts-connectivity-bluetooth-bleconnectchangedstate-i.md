@@ -6,7 +6,7 @@ Describes the Gatt profile connection state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLEConnectChangedState](ohos.bluetoothManager/bluetoothManager.BLEConnectChangedState)
+**Substitutes:** [BLEConnectChangedState](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#BLEConnectChangedState)
 
 <!--Device-bluetooth-interface BLEConnectChangedState--><!--Device-bluetooth-interface BLEConnectChangedState-End-->
 
@@ -32,7 +32,7 @@ Indicates the peer device address
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.BLEConnectChangedState.deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#deviceId)
 
 <!--Device-BLEConnectChangedState-deviceId: string--><!--Device-BLEConnectChangedState-deviceId: string-End-->
 
@@ -52,7 +52,7 @@ Connection state of the Gatt profile
 
 **Deprecated since:** 9
 
-**Substitutes:** [state](ohos.bluetoothManager/bluetoothManager.BLEConnectChangedState.state)
+**Substitutes:** [state](arkts-connectivity-bluetoothmanager-bleconnectchangedstate-i.md#state)
 
 <!--Device-BLEConnectChangedState-state: ProfileConnectionState--><!--Device-BLEConnectChangedState-state: ProfileConnectionState-End-->
 

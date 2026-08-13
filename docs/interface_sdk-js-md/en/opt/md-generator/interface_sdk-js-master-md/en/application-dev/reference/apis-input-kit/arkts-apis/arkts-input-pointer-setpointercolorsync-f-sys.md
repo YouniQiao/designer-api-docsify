@@ -12,13 +12,11 @@ import { pointer } from '@kit.InputKit';
 function setPointerColorSync(color: number): void
 ```
 
-Sets the pointer color. This API returns the result synchronously.
+Sets the pointer color. This API returns the result synchronously. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
-> **NOTE：**
-> 
-> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-pointer-function setPointerColorSync(color: int): void--><!--Device-pointer-function setPointerColorSync(color: int): void-End-->
 
@@ -36,8 +34,8 @@ Sets the pointer color. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

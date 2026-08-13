@@ -1,20 +1,24 @@
 # Text
 
 ```TypeScript
-type Text = TextFrameNode
+type Text = TypedFrameNode<TextInterface, TextAttribute>
 ```
 
-Define the FrameNode type for Text.
+Represents a FrameNode of the **Text** type. This type of node does not allow child components to be added.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Text = TextFrameNode--><!--Device-typeNode-type Text = TextFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type Text = TypedFrameNode<TextInterface, TextAttribute>--><!--Device-typeNode-type Text = TypedFrameNode<TextInterface, TextAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** TextFrameNode
+**Property type:** TypedFrameNode<TextInterface, TextAttribute>
 

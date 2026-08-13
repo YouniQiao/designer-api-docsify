@@ -14,7 +14,9 @@ function getSandboxDataDir(bundleName: string, appIndex: number): string
 
 Obtains the sandbox directory of an application based on the given bundle name and clone index.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -41,10 +43,10 @@ Obtains the sandbox directory of an application based on the given bundle name a
 
 | Error Code ID |
 | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

@@ -1,12 +1,14 @@
 # MeasureUtils
 
-class MeasureUtils
+Provides APIs for measuring text metrics, such as text height and width. > **NOTE：**> > - In the following API examples, you must first use [getMeasureUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getMeasureUtils) in > **UIContext** to obtain a **MeasureUtils** instance, and then call the APIs using the obtained instance. > > - To perform more complex text measurements, use the [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) API. > > - Avoid using > [ApplicationContext.setFontSizeScale](../../apis-ability-kit/arkts-apis/arkts-ability-applicationcontext-c.md#setFontSizeScale) > during text measurement API calls. To ensure timing correctness and the accuracy of measurement results, manually > listen for font scale changes. > > - For measuring text after truncation, direct use of the string length for truncation may lead to inaccuracies. > This is because certain Unicode characters (for example, emojis) have code points with a length greater than 1, and > truncating by string length can split these multi-code-point characters, resulting in incorrect text display or > measurement errors. As such, you are advised to perform iterative truncation processing based on Unicode code > points. For details, see [Example 2 in measureTextSize](#measureTextSize).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class MeasureUtils--><!--Device-unnamed-export declare class MeasureUtils-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class MeasureUtils--><!--Device-unnamed-export class MeasureUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +24,13 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 getParagraphs(styledString: StyledString, options?: TextLayoutOptions): Array<Paragraph>
 ```
 
-Get layout info of the styled string.
+Converts a styled string into an array of corresponding [Paragraph](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-paragraph-c.md#Paragraph) objects based on text layout options.
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,30 +42,34 @@ Get layout info of the styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | The styled string value. |
-| options | TextLayoutOptions | No | The layout options. |
+| styledString | StyledString | Yes | Styled string to be converted. |
+| options | TextLayoutOptions | No | Text layout options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Array&lt;Paragraph&gt; | paragraph result |
+| Array&lt;Paragraph&gt; | Array of [Paragraph]{ |
 
 ## measureText
 
 ```TypeScript
-measureText(options: MeasureOptions): double
+measureText(options: MeasureOptions): number
 ```
 
-Obtains the width of the specified text in a single line layout.
+Measures the single-line display width of the specified text. For multi-line text (separated by newline characters **\n**), this API returns the width of the longest line. > **NOTE：**> > **measureText** always measures single-line text width. Layout constraints in **options** (**constraintWidth**, > **maxLines**, and more) do not affect results. For layout-constrained width measurement, use > [measureTextSize](#measureTextSize).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-MeasureUtils-measureText(options: MeasureOptions): double--><!--Device-MeasureUtils-measureText(options: MeasureOptions): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MeasureUtils-measureText(options: MeasureOptions): number--><!--Device-MeasureUtils-measureText(options: MeasureOptions): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -69,13 +77,13 @@ Obtains the width of the specified text in a single line layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Options. |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Options of the target text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| double |  |
+| number | Text width. &lt;br&gt;**NOTE：**&lt;br&gt;Floating-point results are rounded up. &lt;br&gt;Unit: px. |
 
 ## measureTextSize
 
@@ -83,13 +91,17 @@ Obtains the width of the specified text in a single line layout.
 measureTextSize(options: MeasureOptions): SizeOptions
 ```
 
-Obtains the width and height of the specified text in a single line layout.
+Measures the width and height of the given single-line text. > **NOTE：**> > When calling this MPI, do not use ApplicationContext.setFontSizeScale to set the font size scaling ratio. To > ensure the correctness of the time sequence, you are advised to monitor the font scaling changes by yourself to > ensure the accuracy of the calculation result.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MeasureUtils-measureTextSize(options: MeasureOptions): SizeOptions--><!--Device-MeasureUtils-measureTextSize(options: MeasureOptions): SizeOptions-End-->
 
@@ -99,11 +111,11 @@ Obtains the width and height of the specified text in a single line layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Options of measure area occupied by text. |
+| options | [MeasureOptions](arkts-arkui-measure-measureoptions-i.md) | Yes | Options of the target text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| SizeOptions | width and height for text to display |
+| SizeOptions | Width and height of the text. &lt;br&gt;**NOTE：**&lt;br&gt;If **constraintWidth** is not specified, the floating-point value of the text width will be rounded up. &lt;br&gt;The return values for text width and height are both in px. |
 

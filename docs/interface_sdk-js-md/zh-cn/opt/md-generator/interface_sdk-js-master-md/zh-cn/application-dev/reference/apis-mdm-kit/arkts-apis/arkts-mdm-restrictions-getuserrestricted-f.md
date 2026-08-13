@@ -12,7 +12,7 @@ function getUserRestricted(admin: Want, settingsItem: string): boolean
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [getUserRestricted](restrictions.getUserRestricted(admin:)
+**替代接口：** [getUserRestricted](#getUserRestricted)(admin: Want, settingsItem: SettingsForDevice)
 
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
@@ -39,9 +39,9 @@ function getUserRestricted(admin: Want, settingsItem: string): boolean
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 
@@ -75,6 +75,8 @@ function getUserRestricted(admin: Want | null, settingsItem: SettingsForDevice):
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ENTERPRISE_SET_USER_RESTRICTION
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -100,10 +102,10 @@ function getUserRestricted(admin: Want | null, settingsItem: SettingsForDevice):
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

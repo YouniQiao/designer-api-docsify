@@ -1,10 +1,12 @@
 # DecodeToStringOptions
 
-Defines the decode with stream related options parameters.
+Describes the behavioral parameters for the **decodeToString** method when decoding byte streams.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-util-interface DecodeToStringOptions--><!--Device-util-interface DecodeToStringOptions-End-->
 
@@ -22,13 +24,17 @@ import { util } from '@kit.ArkTS';
 stream?: boolean
 ```
 
-Stream option controls stream processing in decoding. The default value is false.
+Whether the incomplete byte sequence at the end of the input needs to be appended to the parameter for the next call of **decodeToString**. The value **true** means that the incomplete byte sequence is stored in the internal buffer until the function is called next time. If the value is false, the byte sequence is directly decoded when the function is called currently. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DecodeToStringOptions-stream?: boolean--><!--Device-DecodeToStringOptions-stream?: boolean-End-->
 

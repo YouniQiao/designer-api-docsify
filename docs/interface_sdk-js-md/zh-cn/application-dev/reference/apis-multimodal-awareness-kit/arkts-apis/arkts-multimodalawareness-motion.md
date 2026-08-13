@@ -1,10 +1,12 @@
-# @ohos.multimodalAwareness.motion(动作感知能力)
+# @ohos.multimodalAwareness.motion
 
 **motion**模块提供用户动作感知能力，包括用户手势和动作。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace motion--><!--Device-unnamed-declare namespace motion-End-->
 
@@ -16,30 +18,30 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md#getrecentoperatinghandstatus) | 获取最新触控操作手状态。 |
-| [off](arkts-multimodalawareness-motion-off-f.md#off) | 取消订阅触控操作手感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('operatingHandChanged')：订阅触控操作手感知事件。 |
-| [off](arkts-multimodalawareness-motion-off-f.md#off-1) | 取消订阅握持手状态变化感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('holdingHandChanged')：订阅握持手状态变化感知事件。 |
-| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md#offholdinghandchanged) | 取消订阅握持手状态变化事件。 |
-| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md#offoperatinghandchanged) | 取消订阅触控操作手变化事件。 |
-| [on](arkts-multimodalawareness-motion-on-f.md#on) | 订阅触控操作手感知事件。调用on()订阅事件后，建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。  如果设备不支持此功能，将返回801错误码。 |
-| [on](arkts-multimodalawareness-motion-on-f.md#on-1) | 订阅握持手状态变化感知事件。调用on()订阅事件后，建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。 |
-| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md#onholdinghandchanged) | 订阅握持手状态变化事件。 |
-| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md#onoperatinghandchanged) | 订阅触控操作手变化事件。 |
+| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md#getRecentOperatingHandStatus) | 获取最新触控操作手状态。 |
+| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md#offHoldingHandChanged) | 取消订阅握持手状态变化事件。 |
+| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md#offOperatingHandChanged) | 取消订阅触控操作手变化事件。 |
+| off_holdingHandChanged | 取消订阅握持手状态变化感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('holdingHandChanged')：订阅握持手状态变化感知事件。 |
+| off_operatingHandChanged | 取消订阅触控操作手感知事件。若未调用on()就调用off()，该方法会抛出异常。相关方法：on('operatingHandChanged')：订阅触控操作手感知事件。 |
+| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md#onHoldingHandChanged) | 订阅握持手状态变化事件。 |
+| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md#onOperatingHandChanged) | 订阅触控操作手变化事件。 |
+| on_holdingHandChanged | 订阅握持手状态变化感知事件。调用on()订阅事件后，建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('holdingHandChanged')：取消订阅握持手状态变化感知事件。 |
+| on_operatingHandChanged | 订阅触控操作手感知事件。调用on()订阅事件后，建议在使用完毕后调用off()取消订阅以释放资源，避免多余的性能功耗开销。相关方法：off('operatingHandChanged')：取消订阅触控操作手感知事件。 如果设备不支持此功能，将返回801错误码。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md#offhoverhandchange) | 取消订阅悬停手势事件。 |
-| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md#offpickupchange) | 取消订阅拾起传感器事件。 |
-| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md#offrotatechange) | 取消订阅旋转传感器事件。 |
-| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md#offsmartrotatechange) | 取消订阅智能旋转传感器事件。 |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange) | 订阅悬停手势事件，并立即开始5秒检测。 |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange-1) | 订阅悬停手势事件，并立即开始检测。 |
-| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md#onpickupchange) | 订阅拾起传感器事件。 |
-| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md#onrotatechange) | 订阅旋转传感器事件。 |
-| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md#onsmartrotatechange) | 订阅智能旋转传感器事件。 |
+| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md#offHoverHandChange) | 取消订阅悬停手势事件。 |
+| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md#offPickupChange) | 取消订阅拾起传感器事件。 |
+| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md#offRotateChange) | 取消订阅旋转传感器事件。 |
+| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md#offSmartRotateChange) | 取消订阅智能旋转传感器事件。 |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onHoverHandChange) | 订阅悬停手势事件，并立即开始5秒检测。 |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onHoverHandChange（系统接口）) | 订阅悬停手势事件，并立即开始检测。 |
+| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md#onPickupChange) | 订阅拾起传感器事件。 |
+| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md#onRotateChange) | 订阅旋转传感器事件。 |
+| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md#onSmartRotateChange) | 订阅智能旋转传感器事件。 |
 <!--DelEnd-->
 
 <!--Del-->

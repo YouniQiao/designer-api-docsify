@@ -16,9 +16,11 @@ function enableAbilityWithCallback(
   ): Promise<void>
 ```
 
-Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md#ConnectCallback) to be invoked when the state of an auxiliary extension ability changes. This API uses a promise to return the result.
+Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md#ConnectCallback-(System-API)) to be invoked when the state of an auxiliary extension ability changes. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -48,10 +50,10 @@ Enables the auxiliary extension ability and specifies [ConnectCallback](arkts-ac
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [9300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) |
-| [9300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300002-target-ability-already-enabled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [9300001](../errorcode-accessibility.md#9300001-invalid-bundle-name-or-ability-name) |
+| [9300002](../errorcode-accessibility.md#9300002-target-ability-already-enabled) |
 
 ## Examples
 

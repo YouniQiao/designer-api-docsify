@@ -2,7 +2,9 @@
 
 场景资源参数类型.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SceneResourceParameters--><!--Device-unnamed-export interface SceneResourceParameters-End-->
 
@@ -18,7 +20,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceParameters-name: string--><!--Device-SceneResourceParameters-name: string-End-->
 
@@ -34,7 +38,9 @@ uri?: ResourceStr
 
 **类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneResourceParameters-uri?: ResourceStr--><!--Device-SceneResourceParameters-uri?: ResourceStr-End-->
 

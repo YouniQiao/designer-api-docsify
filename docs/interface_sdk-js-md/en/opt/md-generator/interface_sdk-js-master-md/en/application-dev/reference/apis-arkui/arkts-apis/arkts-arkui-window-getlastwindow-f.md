@@ -12,12 +12,11 @@ import { window } from '@kit.ArkUI';
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result.
+Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result. If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showWindow), the main window of the application is returned.
 
-If no child window exists or the child window is not displayed by calling  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow), the main window of the application is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,9 +35,9 @@ If no child window exists or the child window is not displayed by calling
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300006-abnormal-window-context) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300006](../errorcode-window.md#1300006-abnormal-window-context) |
 
 ## Examples
 
@@ -92,12 +91,11 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-Obtains the topmost layer child window of the current application. This API uses a promise to return the result.
+Obtains the topmost layer child window of the current application. This API uses a promise to return the result. If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showWindow), the main window of the application is returned.
 
-If no child window exists or the child window is not displayed by calling  
-[showWindow()](arkts-arkui-window-window-i.md#showWindow), the main window of the application is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -121,9 +119,9 @@ If no child window exists or the child window is not displayed by calling
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300006-abnormal-window-context) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300006](../errorcode-window.md#1300006-abnormal-window-context) |
 
 ## Examples
 

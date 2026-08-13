@@ -4,6 +4,8 @@ Information about a lock.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-locks-class AsyncLockInfo--><!--Device-locks-class AsyncLockInfo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -26,6 +28,8 @@ lockAsync caller's execution context identifier.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockInfo-contextId: number--><!--Device-AsyncLockInfo-contextId: number-End-->
@@ -44,6 +48,8 @@ Lock operation mode.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockInfo-mode: AsyncLockMode--><!--Device-AsyncLockInfo-mode: AsyncLockMode-End-->
@@ -61,6 +67,8 @@ Name of the lock.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,14 +1,10 @@
 # AudioStreamManager
 
-音频流管理。
+音频流管理。 在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager)获取AudioStreamManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-在使用AudioStreamManager的接口之前，需先通过[getStreamManager](arkts-audio-audio-audiomanager-i.md#getStreamManager)获取AudioStreamManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioStreamManager--><!--Device-audio-interface AudioStreamManager-End-->
 
@@ -22,7 +18,9 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 获取当前音效模式的信息。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectInfoArray>): void-End-->
 
@@ -39,8 +37,8 @@ getAudioEffectInfoArray(usage: StreamUsage, callback: AsyncCallback<AudioEffectI
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## getAudioEffectInfoArray
 
@@ -50,7 +48,9 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 获取当前音效模式的信息。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>--><!--Device-AudioStreamManager-getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>-End-->
 
@@ -72,8 +72,8 @@ getAudioEffectInfoArray(usage: StreamUsage): Promise<AudioEffectInfoArray>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## getAudioEffectInfoArraySync
 
@@ -83,7 +83,9 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 获取当前音效模式的信息。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray--><!--Device-AudioStreamManager-getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray-End-->
 
@@ -105,8 +107,8 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -114,13 +116,11 @@ getAudioEffectInfoArraySync(usage: StreamUsage): AudioEffectInfoArray
 getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void
 ```
 
-获取当前音频采集器的信息。使用callback异步回调。
+获取当前音频采集器的信息。使用callback异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -138,13 +138,11 @@ getCurrentAudioCapturerInfoArray(callback: AsyncCallback<AudioCapturerChangeInfo
 getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 ```
 
-获取当前音频采集器的信息。使用Promise异步回调。
+获取当前音频采集器的信息。使用Promise异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>-End-->
 
@@ -162,13 +160,11 @@ getCurrentAudioCapturerInfoArray(): Promise<AudioCapturerChangeInfoArray>
 getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 ```
 
-获取当前音频采集器的信息。同步返回结果。
+获取当前音频采集器的信息。同步返回结果。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray-End-->
 
@@ -186,13 +182,11 @@ getCurrentAudioCapturerInfoArraySync(): AudioCapturerChangeInfoArray
 getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void
 ```
 
-获取当前音频渲染器的信息。使用callback异步回调。
+获取当前音频渲染器的信息。使用callback异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfoArray>): void-End-->
 
@@ -210,13 +204,11 @@ getCurrentAudioRendererInfoArray(callback: AsyncCallback<AudioRendererChangeInfo
 getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 ```
 
-获取当前音频渲染器的信息。使用Promise异步回调。
+获取当前音频渲染器的信息。使用Promise异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>-End-->
 
@@ -234,13 +226,11 @@ getCurrentAudioRendererInfoArray(): Promise<AudioRendererChangeInfoArray>
 getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray
 ```
 
-获取当前音频渲染器的信息。同步返回结果。
+获取当前音频渲染器的信息。同步返回结果。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray--><!--Device-AudioStreamManager-getCurrentAudioRendererInfoArraySync(): AudioRendererChangeInfoArray-End-->
 
@@ -260,7 +250,9 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 查询指定的音源类型是否支持回声消除。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isAcousticEchoCancelerSupported(sourceType: SourceType): boolean-End-->
 
@@ -282,7 +274,7 @@ isAcousticEchoCancelerSupported(sourceType: SourceType): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isActive
 
@@ -292,7 +284,7 @@ isActive(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 获取指定音频流活跃状态。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -317,7 +309,7 @@ isActive(volumeType: AudioVolumeType): Promise<boolean>
 
 获取指定音频流是否为活跃状态。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -347,7 +339,7 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 获取指定音频流是否为活跃状态。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
 **废弃版本：** 20
 
@@ -373,8 +365,8 @@ isActiveSync(volumeType: AudioVolumeType): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isAudioLoopbackSupported
 
@@ -384,7 +376,9 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 查询当前系统是否支持指定的音频返听模式。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean--><!--Device-AudioStreamManager-isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean-End-->
 
@@ -406,7 +400,7 @@ isAudioLoopbackSupported(mode: AudioLoopbackMode): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isDirectPlaybackSupported
 
@@ -417,6 +411,8 @@ isDirectPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): bool
 查询指定音频流信息和使用场景下是否支持直通播放。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -447,6 +443,8 @@ isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolea
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isFastPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
@@ -476,6 +474,8 @@ isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boole
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean--><!--Device-AudioStreamManager-isFastRecordingSupported(streamInfo: AudioStreamInfo, source: SourceType): boolean-End-->
@@ -503,7 +503,9 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 查询指定的音源类型智能降噪开关是否打开。
 
-**起始版本：** 21
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean--><!--Device-AudioStreamManager-isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): boolean-End-->
 
@@ -525,7 +527,7 @@ isIntelligentNoiseReductionEnabledForCurrentDevice(sourceType: SourceType): bool
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isMultichannelPlaybackSupported
 
@@ -536,6 +538,8 @@ isMultichannelPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage)
 查询指定音频流信息和使用场景下是否支持多声道播放。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -566,6 +570,8 @@ isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boo
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean--><!--Device-AudioStreamManager-isOffloadPlaybackSupported(streamInfo: AudioStreamInfo, usage: StreamUsage): boolean-End-->
@@ -593,7 +599,9 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 检查传入的音频采集器信息中音源类型的录制是否可以启动成功。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean--><!--Device-AudioStreamManager-isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean-End-->
 
@@ -615,7 +623,7 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## isStreamActive
 
@@ -625,7 +633,9 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 获取指定音频流是否为活跃状态。同步返回结果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean--><!--Device-AudioStreamManager-isStreamActive(streamUsage: StreamUsage): boolean-End-->
 
@@ -647,23 +657,49 @@ isStreamActive(streamUsage: StreamUsage): boolean
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## off('audioRendererChange')
+## offAudioCapturerChange
 
 ```TypeScript
-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-取消监听音频渲染器更改事件。使用callback异步回调。
+Unsubscribes to audio capturer change events.
 
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
-<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
+<!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## offAudioRendererChange
+
+```TypeScript
+offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Unsubscribes to audio renderer change events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-offAudioRendererChange(callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -671,28 +707,25 @@ off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArra
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'audioRendererChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## off('audioCapturerChange')
+## off_audioCapturerChange
 
 ```TypeScript
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-取消监听音频采集器更改事件。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+取消监听音频采集器更改事件。使用callback异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -709,23 +742,21 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfoArra
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('audioRendererChange')
+## off_audioRendererChange
 
 ```TypeScript
-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
+off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void
 ```
 
-监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+取消监听音频渲染器更改事件。使用callback异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
 
 **起始版本：** 9
 
-<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-off(type: 'audioRendererChange', callback?: Callback<AudioRendererChangeInfoArray>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Renderer
 
@@ -734,28 +765,81 @@ on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'audioRendererChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onAudioCapturerChange
+
+```TypeScript
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void
+```
+
+Listens for audio capturer change events. When there is any audio capturer change, registered clients will receive the callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onAudioRendererChange
+
+```TypeScript
+onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+Listens for audio renderer change events. When there is any audio renderer change, registered clients will receive the callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-onAudioRendererChange(callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('audioCapturerChange')
+## on_audioCapturerChange
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void
 ```
 
-监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。
-
-> **说明：**
-> 
-> 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
+监听音频采集器更改事件（当音频录制流状态变化或设备变化时触发）。使用callback异步回调。 > **说明：** > > 该接口返回的音频采集器信息，可能包含系统内部音频录制流，如语音唤醒、蜂窝通话等。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>): void-End-->
 
@@ -772,5 +856,35 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfoArray>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_audioRendererChange
+
+```TypeScript
+on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void
+```
+
+监听音频渲染器更改事件（当音频播放流状态变化或设备变化时触发）。使用callback异步回调。 > **说明：** > > 该接口返回的音频渲染器信息，可能包含系统内部音频播放流，如蜂窝通话、超声波等。
+
+**起始版本：** 9
+
+**废弃版本：** -1
+
+<!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void--><!--Device-AudioStreamManager-on(type: 'audioRendererChange', callback: Callback<AudioRendererChangeInfoArray>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Renderer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'audioRendererChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |

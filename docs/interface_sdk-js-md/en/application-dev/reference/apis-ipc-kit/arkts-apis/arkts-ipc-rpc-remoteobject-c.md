@@ -4,11 +4,13 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 
 **Inheritance/Implementation:** RemoteObject extends [IRemoteObject](arkts-ipc-rpc-iremoteobject-c.md#IRemoteObject)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-rpc-class RemoteObject extends IRemoteObject--><!--Device-rpc-class RemoteObject extends IRemoteObject-End-->
+**Deprecated since:** -1
+
+<!--Device-rpc-class RemoteObject--><!--Device-rpc-class RemoteObject-End-->
 
 **System capability:** SystemCapability.Communication.IPC.Core
 
@@ -32,7 +34,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [modifyLocalInterface](modifyLocalInterface(localInterface:)
+**Substitutes:** [modifyLocalInterface](#modifyLocalInterface)(localInterface: IRemoteBroker, descriptor: string)
 
 <!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-attachLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -81,9 +83,11 @@ constructor(descriptor: string)
 
 A constructor used to create a **RemoteObject** object.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-constructor(descriptor: string)--><!--Device-RemoteObject-constructor(descriptor: string)-End-->
 
@@ -109,21 +113,17 @@ class TestRemoteObject extends rpc.RemoteObject {
 
 ## getCallingPid
 
-ArkTS-Dyn:
-```TypeScript
-getCallingPid(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCallingPid(): int
 ```
 
 Obtains the PID of the remote process.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getCallingPid(): int--><!--Device-RemoteObject-getCallingPid(): int-End-->
 
@@ -133,7 +133,7 @@ Obtains the PID of the remote process.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | PID of the remote process obtained. |
+| int | PID of the remote process obtained. |
 
 ## Examples
 
@@ -161,21 +161,17 @@ try {
 
 ## getCallingUid
 
-ArkTS-Dyn:
-```TypeScript
-getCallingUid(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCallingUid(): int
 ```
 
 Obtains the UID of the remote process.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getCallingUid(): int--><!--Device-RemoteObject-getCallingUid(): int-End-->
 
@@ -185,7 +181,7 @@ Obtains the UID of the remote process.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Return the UID of the { |
+| int | Return the UID of the { |
 
 ## Examples
 
@@ -219,9 +215,11 @@ getDescriptor(): string
 
 Obtains the interface descriptor of this object. The interface descriptor is a string.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getDescriptor(): string--><!--Device-RemoteObject-getDescriptor(): string-End-->
 
@@ -237,7 +235,7 @@ Obtains the interface descriptor of this object. The interface descriptor is a s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
 
 ## Examples
 
@@ -327,9 +325,11 @@ getLocalInterface(descriptor: string): IRemoteBroker
 
 Obtains the string of the interface descriptor.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-getLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -351,7 +351,7 @@ Obtains the string of the interface descriptor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## Examples
 
@@ -388,9 +388,11 @@ modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void
 
 Binds an interface descriptor to an **IRemoteBroker** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void--><!--Device-RemoteObject-modifyLocalInterface(localInterface: IRemoteBroker, descriptor: string): void-End-->
 
@@ -407,7 +409,7 @@ Binds an interface descriptor to an **IRemoteBroker** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
 
 ## Examples
 
@@ -444,17 +446,6 @@ let testRemoteObject = new TestRemoteObject("testObject");
 
 ## onRemoteMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-onRemoteMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption
-    ): boolean | Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 onRemoteMessageRequest(
       code: int,
@@ -464,19 +455,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or  asynchronously and returns the result in this API.
+Called to return a response to **sendMessageRequest()**. The server processes the request synchronously or asynchronously and returns the result in this API. > **NOTE：**> > - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and > asynchronous message processing. > > - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only > **onRemoteMessageRequest()** takes effect.
 
-> **NOTE：**
-> 
-> - You are advised to overload **onRemoteMessageRequest** preferentially, which implements synchronous and
-> asynchronous message processing.
-> 
-> - If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
-> **onRemoteMessageRequest()** takes effect.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -488,7 +473,7 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service request code sent by the remote end. |
+| code | int | Yes | Service request code sent by the remote end. |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that holds the parameters called by the client. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the result is written. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
@@ -501,18 +486,6 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 ## onRemoteMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-onRemoteMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption,
-      callingInfo?: CallingInfo
-    ): boolean | Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 onRemoteMessageRequest(
       code: int,
@@ -523,18 +496,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this  API. The IPC context can be obtained from the input parameter **callingInfo**.
-
-> **NOTE：**
-> 
-> You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to
-> implement synchronous and asynchronous message processing.
-> If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only
-> **onRemoteMessageRequest()** takes effect.
+Provides a response to **sendMessageRequest()**. The server processes the request and returns a response in this API. The IPC context can be obtained from the input parameter **callingInfo**. > **NOTE：**> > You are advised to overload the **onRemoteMessageRequest** method with the **CallingInfo** parameter to > implement synchronous and asynchronous message processing. > If both **onRemoteRequest()** and **onRemoteMessageRequest()** are overloaded, only > **onRemoteMessageRequest()** takes effect.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>--><!--Device-RemoteObject-onRemoteMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callingInfo?: CallingInfo    ): boolean | Promise<boolean>-End-->
 
@@ -544,7 +512,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Service request code sent by the remote end. |
+| code | int | Yes | Service request code sent by the remote end. |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that holds the parameters called by the client. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object to which the result is written. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Whether the operation is synchronous or asynchronous. |
@@ -562,7 +530,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Called to return a response to **sendRequest()**. The server processes the request and returns a response in this  function.
+Called to return a response to **sendRequest()**. The server processes the request and returns a response in this function.
 
 **Since:** 7
 
@@ -570,7 +538,7 @@ Called to return a response to **sendRequest()**. The server processes the reque
 
 **Deprecated since:** 9
 
-**Substitutes:** [onRemoteMessageRequest](onRemoteMessageRequest(code:)
+**Substitutes:** [onRemoteMessageRequest](#onRemoteMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-onRemoteRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -627,7 +595,7 @@ Checks whether the remote object corresponding to the specified interface token 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLocalInterface](rpc.IRemoteObject#getLocalInterface(descriptor:)
+**Substitutes:** [getLocalInterface](arkts-ipc-rpc-iremoteobject-c.md#getLocalInterface)(descriptor: string)
 
 <!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker--><!--Device-RemoteObject-queryLocalInterface(descriptor: string): IRemoteBroker-End-->
 
@@ -671,17 +639,6 @@ try {
 
 ## sendMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-sendMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption
-    ): Promise<RequestResult>
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendMessageRequest(
       code: int,
@@ -691,12 +648,13 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption    ): Promise<RequestResult>-End-->
 
@@ -706,7 +664,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| code | int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
@@ -721,7 +679,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## Examples
 
@@ -771,18 +729,6 @@ try {
 
 ## sendMessageRequest
 
-ArkTS-Dyn:
-```TypeScript
-sendMessageRequest(
-      code: number,
-      data: MessageSequence,
-      reply: MessageSequence,
-      options: MessageOption,
-      callback: AsyncCallback<RequestResult>
-    ): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendMessageRequest(
       code: int,
@@ -793,12 +739,13 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous  mode is set in **options**, a callback will be called immediately, and the reply message is empty. The  specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in  
- **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the  reply message contains the returned information.
+Sends a **MessageSequence** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendMessageRequest** is returned, and the reply message contains the returned information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void--><!--Device-RemoteObject-sendMessageRequest(      code: int,      data: MessageSequence,      reply: MessageSequence,      options: MessageOption,      callback: AsyncCallback<RequestResult>    ): void-End-->
 
@@ -808,17 +755,17 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
+| code | int | Yes | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
 | data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object holding the data to send. |
 | reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | Yes | MessageSequence** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;RequestResult&gt; | Yes | Callback for receiving the sending result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain the passed object instance. |
 
 ## sendRequest
 
@@ -826,7 +773,7 @@ Sends a **MessageSequence** message to the remote process in synchronous or asyn
 sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 7
 
@@ -834,7 +781,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 8
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean--><!--Device-RemoteObject-sendRequest(code: number, data: MessageParcel, reply: MessageParcel, options: MessageOption): boolean-End-->
 
@@ -902,7 +849,7 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a promise will be fulfilled immediately and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a promise will be fulfilled when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
@@ -910,7 +857,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption    ): Promise<SendRequestResult>-End-->
 
@@ -989,7 +936,7 @@ sendRequest(
     ): void
 ```
 
-Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode  is set in **options**, a callback will be called immediately, and the reply message is empty. The specific  reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains  the returned information.
+Sends a **MessageParcel** message to the remote process in synchronous or asynchronous mode. If asynchronous mode is set in **options**, a callback will be called immediately, and the reply message is empty. The specific reply needs to be obtained from the callback on the service side. If synchronous mode is set in **options**, a callback will be invoked when the response to **sendRequest** is returned, and the reply message contains the returned information.
 
 **Since:** 8
 
@@ -997,7 +944,7 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendMessageRequest](rpc.IRemoteObject#sendMessageRequest(code:)
+**Substitutes:** [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)(code: int, data: MessageSequence, reply: MessageSequence, options: MessageOption, callback: AsyncCallback&lt;RequestResult&gt;)
 
 <!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void--><!--Device-RemoteObject-sendRequest(      code: number,      data: MessageParcel,      reply: MessageParcel,      options: MessageOption,      callback: AsyncCallback<SendRequestResult>    ): void-End-->
 
@@ -1011,5 +958,5 @@ Sends a **MessageParcel** message to the remote process in synchronous or asynch
 | data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object holding the data to send. |
 | reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | Yes | MessageParcel** object that receives the response. |
 | options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | Yes | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Yes | Callback for receiving the sending result. |
 

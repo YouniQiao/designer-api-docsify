@@ -2,7 +2,9 @@
 
 Enumerates tool types.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ToolType--><!--Device-unnamed-export declare enum ToolType-End-->
 
@@ -16,7 +18,9 @@ UNKNOWN = 0
 
 Unknown type.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-UNKNOWN = 0--><!--Device-ToolType-UNKNOWN = 0-End-->
 
@@ -30,7 +34,9 @@ MOUSE = 1
 
 Mouse.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-MOUSE = 1--><!--Device-ToolType-MOUSE = 1-End-->
 
@@ -44,7 +50,9 @@ JOYSTICK = 2
 
 Joystick.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-JOYSTICK = 2--><!--Device-ToolType-JOYSTICK = 2-End-->
 
@@ -58,7 +66,9 @@ TOUCHPAD = 3
 
 Touchpad.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToolType-TOUCHPAD = 3--><!--Device-ToolType-TOUCHPAD = 3-End-->
 

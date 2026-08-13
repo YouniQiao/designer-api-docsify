@@ -1,8 +1,10 @@
 # DragSpringLoadingState
 
-Enumerates hover detection states during drag operations.Under default system configuration, if no CANCEL occurs, the state reporting is as follows:Hover still-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END
+Enumerates hover detection states during drag operations. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-dragController-const enum DragSpringLoadingState--><!--Device-dragController-const enum DragSpringLoadingState-End-->
 
@@ -17,6 +19,8 @@ BEGIN
 Initial state when a dragged item enters the component boundary and remains stationary for the specified duration. This state enables preparation operations.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Periodic notification state during sustained hover detection. In this state, per
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -50,9 +56,11 @@ Periodic notification state during sustained hover detection. In this state, per
 END
 ```
 
-Final state indicating completion of the hover detection cycle, which is triggered when the dragged item remains stationary after the last update notification. Hover detection will only restart after the dragged item exits and re-enters the component boundary or enters a child component. In this state, the application can perform cleanup,navigation, or view switching operations.
+Final state indicating completion of the hover detection cycle, which is triggered when the dragged item remains stationary after the last update notification. Hover detection will only restart after the dragged item exits and re-enters the component boundary or enters a child component. In this state, the application can perform cleanup, navigation, or view switching operations.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,6 +79,8 @@ CANCEL
 Interruption state of hover detection triggered by termination events, which include the following: finger or mouse release, window switching, screen off, exiting the component boundary, entering child components, or exceeding the movement threshold within the component. The application will restore the UI style and cancel pending navigation and view switching operations.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

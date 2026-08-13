@@ -2,7 +2,7 @@
 
 Provides APIs to manage albums.
 
-**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#AbsAlbum)
+**Inheritance/Implementation:** Album extends [AbsAlbum](arkts-corefile-userfilemanager-absalbum-i-sys.md#AbsAlbum-(System-API))
 
 **Since:** 9
 
@@ -10,7 +10,7 @@ Provides APIs to manage albums.
 
 **Substitutes:** [Album](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-album-i.md#Album)
 
-<!--Device-userFileManager-interface Album extends AbsAlbum--><!--Device-userFileManager-interface Album extends AbsAlbum-End-->
+<!--Device-userFileManager-interface Album--><!--Device-userFileManager-interface Album-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileManager.Core
 
@@ -59,7 +59,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -131,7 +131,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -190,7 +190,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -244,7 +244,7 @@ Commits the modification on the album attributes to the database. This API uses 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -277,12 +277,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>, callback: AsyncCallback<void>): void
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses an asynchronous callback to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
 **Since:** 10
 
@@ -313,7 +308,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -349,12 +344,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 deletePhotoAssets(assets: Array<FileAsset>): Promise<void>
 ```
 
-Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+Deletes image or video assets from the recycle bin. Before the operation, ensure that the image or video assets exist in the recycle bin. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
 **Since:** 10
 
@@ -390,7 +380,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -456,7 +446,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -528,7 +518,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -594,7 +584,7 @@ Removes image and video assets from an album. The album and file resources must 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -666,7 +656,7 @@ Removes image and video assets from an album. The album and file resources must 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';

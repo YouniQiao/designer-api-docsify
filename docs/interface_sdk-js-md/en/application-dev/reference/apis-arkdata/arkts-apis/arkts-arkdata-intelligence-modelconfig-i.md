@@ -2,9 +2,11 @@
 
 Manages configurations of the embedding model.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-interface ModelConfig--><!--Device-intelligence-interface ModelConfig-End-->
 
@@ -26,9 +28,11 @@ If NPU is used for accelerating, a local path is required for model caching.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ModelConfig-cachePath?: string--><!--Device-ModelConfig-cachePath?: string-End-->
 
@@ -44,9 +48,11 @@ Indicates whether NPU is used.
 
 **Type:** boolean
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ModelConfig-isNpuAvailable: boolean--><!--Device-ModelConfig-isNpuAvailable: boolean-End-->
 
@@ -64,7 +70,9 @@ Indicates cloud embedding model information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +92,9 @@ Indicates cloud embedding model network policy.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,13 +108,15 @@ Indicates cloud embedding model network policy.
 version: ModelVersion
 ```
 
-Version of the model.The outputs of text or image embedding models with the same version are in the same vector space.
+Version of the model. The outputs of text or image embedding models with the same version are in the same vector space.
 
 **Type:** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ModelConfig-version: ModelVersion--><!--Device-ModelConfig-version: ModelVersion-End-->
 

@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface BLEFoundResponse--><!--Device-unnamed-export interface BLEFoundResponse-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Lite
@@ -23,6 +25,8 @@ The devices of BLEFoundResponse
 **Type:** Array&lt;[BluetoothDevice](arkts-connectivity-system-bluetooth-bluetoothdevice-i.md)&gt;
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

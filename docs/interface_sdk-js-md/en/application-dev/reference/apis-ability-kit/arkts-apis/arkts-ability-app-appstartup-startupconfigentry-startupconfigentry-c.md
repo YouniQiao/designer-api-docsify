@@ -2,9 +2,11 @@
 
 The module provides the capability to configure [AppStartup](../../../application-models/app-startup.md).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StartupConfigEntry--><!--Device-unnamed-declare class StartupConfigEntry-End-->
 
@@ -22,16 +24,13 @@ import { StartupConfigEntry } from '@kit.AbilityKit';
 onConfig?(): StartupConfig
 ```
 
-Called if the HAP of the AbilityStage has  
-[defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered before  
-[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate).
-
-You can set the AppStartup configuration within this callback. For details, see  
-[Setting Startup Parameters](../../../application-models/app-startup.md#setting-startup-parameters).
+Called if the HAP of the AbilityStage has [defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration) . This callback is triggered before [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate). You can set the AppStartup configuration within this callback. For details, see [Setting Startup Parameters](../../../application-models/app-startup.md#setting-startup-parameters).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +85,9 @@ Called when startup initialization to configure startup mode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,19 +107,13 @@ Called when startup initialization to configure startup mode.
 onRequestCustomMatchRule(want: Want): string
 ```
 
-Called if the HAP of the AbilityStage has  
-[defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration). This callback is triggered after [StartupConfigEntry.onConfig](StartupConfigEntry#onConfig?()) but before  
-[AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate).
+Called if the HAP of the AbilityStage has [defined the AppStartup configuration file](../../../application-models/app-startup.md#defining-startup-parameter-configuration) . This callback is triggered after StartupConfigEntry.onConfig but before [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate). You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in **matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see [Adding Task Matching Rules](../../../application-models/app-startup.md#adding-task-matching-rules). This API is typically used in scenarios where tasks cannot be matched directly using URI, action, or intent name rules. It allows for further refinement of matching rules.
 
-You can use this callback to return different custom matching rules based on parameters in the Want object passed by the caller to start the UIAbility. . AppStartup matches these rules with the **customization** field in  
-**matchRules** of the startup task configuration. If a match is successful, the task is executed automatically. For details about the matching rules, see  
-[Adding Task Matching Rules](../../../application-models/app-startup.md#adding-task-matching-rules).
+**Since:** 23
 
-This API is typically used in scenarios where tasks cannot be matched directly using URI, action, or intent name rules. It allows for further refinement of matching rules.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

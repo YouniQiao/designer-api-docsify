@@ -18,7 +18,7 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 **Deprecated since:** 12
 
-**Substitutes:** [setDeviceFunctions](usbManager.setDeviceFunctions(funcs:)
+**Substitutes:** [setDeviceFunctions](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md#setDeviceFunctions-(System-API))(funcs: FunctionType)
 
 <!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>--><!--Device-usbManager-function setCurrentFunctions(funcs: FunctionType): Promise<void>-End-->
 
@@ -42,5 +42,5 @@ Sets the current USB function list in Device mode. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400002-hdc-disabled) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14400002](../../apis-basic-services-kit/errorcode-usb.md#14400002-hdc-disabled) |

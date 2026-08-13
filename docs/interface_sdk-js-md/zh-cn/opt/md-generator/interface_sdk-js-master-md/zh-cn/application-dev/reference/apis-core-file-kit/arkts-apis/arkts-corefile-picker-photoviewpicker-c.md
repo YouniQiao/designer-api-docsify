@@ -1,13 +1,12 @@
 # PhotoViewPicker
 
-图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用  
-[PhotoAccessHelper的PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper)。在使用前，需要先创建PhotoViewPicker实例。
+图库选择器对象，用来支撑选择图片/视频和保存图片/视频等用户场景。选择文件推荐使用 PhotoAccessHelper的PhotoViewPicker。 在使用前，需要先创建PhotoViewPicker实例。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker)
+**替代接口：** PhotoViewPicker
 
 <!--Device-picker-class PhotoViewPicker--><!--Device-picker-class PhotoViewPicker-End-->
 
@@ -23,7 +22,7 @@ constructor()
 
 **废弃版本：** 18
 
-**替代接口：** [PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker)
+**替代接口：** PhotoViewPicker
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -47,7 +46,7 @@ constructor(context: Context)
 
 **废弃版本：** 18
 
-**替代接口：** [PhotoViewPicker](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker)
+**替代接口：** PhotoViewPicker
 
 <!--Device-PhotoViewPicker-constructor(context: Context)--><!--Device-PhotoViewPicker-constructor(context: Context)-End-->
 
@@ -93,13 +92,13 @@ struct Index {
 save(option?: PhotoSaveOptions): Promise<Array<string>>
 ```
 
-通过保存模式拉起photoPicker界面，用户可以保存一个或多个图片/视频。接口采用Promise异步返回形式，传入可选参数PhotoSaveOptions对象，返回保存文件的uri数组。
+通过保存模式拉起photoPicker界面，用户可以保存一个或多个图片/视频。接口采用Promise异步返回形式， 传入可选参数PhotoSaveOptions对象，返回保存文件的uri数组。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButton](SaveButton)
+**替代接口：** SaveButton
 
 <!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>--><!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>-End-->
 
@@ -146,13 +145,13 @@ async function example04(context: common.UIAbilityContext) { // 需确保 contex
 save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void
 ```
 
-通过保存模式拉起photoPicker界面，用户可以保存一个或多个图片/视频。接口采用callback异步返回形式，传入参数PhotoSaveOptions对象，返回保存文件的uri数组。
+通过保存模式拉起photoPicker界面，用户可以保存一个或多个图片/视频。接口采用callback异步返回形式， 传入参数PhotoSaveOptions对象，返回保存文件的uri数组。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButton](SaveButton)
+**替代接口：** SaveButton
 
 <!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -202,7 +201,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 **废弃版本：** 12
 
-**替代接口：** [SaveButton](SaveButton)
+**替代接口：** SaveButton
 
 <!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -243,13 +242,13 @@ async function example06(context: common.UIAbilityContext) { // 需确保 contex
 select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 ```
 
-通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用Promise异步返回形式，传入可选参数PhotoSelectOptions对象，返回PhotoSelectResult对象。
+通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用Promise异步返回形式， 传入可选参数PhotoSelectOptions对象，返回PhotoSelectResult对象。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option?:)
+**替代接口：** select(option?: PhotoSelectOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -299,13 +298,13 @@ async function example01(context: common.UIAbilityContext) { // 需确保 contex
 select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，传入参数PhotoSelectOptions对象，返回PhotoSelectResult对象。
+通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式， 传入参数PhotoSelectOptions对象，返回PhotoSelectResult对象。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option:)
+**替代接口：** select(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -352,13 +351,13 @@ async function example02(context: common.UIAbilityContext) { // 需确保 contex
 select(callback: AsyncCallback<PhotoSelectResult>): void
 ```
 
-通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式，返回PhotoSelectResult对象。
+通过选择模式拉起photoPicker界面，用户可以选择一个或多个图片/视频。接口采用callback异步返回形式， 返回PhotoSelectResult对象。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(callback:)
+**替代接口：** select(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

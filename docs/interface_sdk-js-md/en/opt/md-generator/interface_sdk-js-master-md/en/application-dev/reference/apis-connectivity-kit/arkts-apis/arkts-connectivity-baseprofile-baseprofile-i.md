@@ -2,7 +2,9 @@
 
 Base interface of profile.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-baseProfile-export interface BaseProfile--><!--Device-baseProfile-export interface BaseProfile-End-->
 
@@ -20,9 +22,11 @@ import { baseProfile } from '@kit.ConnectivityKit';
 getConnectedDevices(): Array<string>
 ```
 
-Obtains the connected devices list of profile.On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
+Obtains the connected devices list of profile. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -44,9 +48,9 @@ Obtains the connected devices list of profile.On API 26.0.0 and above, if the ap
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -73,7 +77,9 @@ getConnectionState(deviceId: string): ProfileConnectionState
 
 Obtains the profile connection state.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -99,10 +105,10 @@ Obtains the profile connection state.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -121,7 +127,40 @@ try {
 }
 ```
 
-## off('connectionStateChange')
+## offConnectionStateChange
+
+```TypeScript
+offConnectionStateChange(callback?: Callback<StateChangeParam>): void
+```
+
+Unsubscribe the event reported when the profile connection state changes .
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BaseProfile-offConnectionStateChange(callback?: Callback<StateChangeParam>): void--><!--Device-BaseProfile-offConnectionStateChange(callback?: Callback<StateChangeParam>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## off_connectionStateChange
 
 ```TypeScript
 off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
@@ -130,6 +169,8 @@ off(type: 'connectionStateChange', callback?: Callback<StateChangeParam>): void
 Unsubscribe the event reported when the profile connection state changes .
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -150,19 +191,56 @@ Unsubscribe the event reported when the profile connection state changes .
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
-## on('connectionStateChange')
+## onConnectionStateChange
+
+```TypeScript
+onConnectionStateChange(callback: Callback<StateChangeParam>): void
+```
+
+Subscribe the event reported when the profile connection state changes . On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
+- API version 23 - 24: ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BaseProfile-onConnectionStateChange(callback: Callback<StateChangeParam>): void--><!--Device-BaseProfile-onConnectionStateChange(callback: Callback<StateChangeParam>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;StateChangeParam&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## on_connectionStateChange
 
 ```TypeScript
 on(type: 'connectionStateChange', callback: Callback<StateChangeParam>): void
 ```
 
-Subscribe the event reported when the profile connection state changes .On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC,the type of the peer device address is real.Otherwise, the type of the peer device address is virtual.
+Subscribe the event reported when the profile connection state changes . On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 26.0.0+: ohos.permission.ACCESS_BLUETOOTH or (ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC)
@@ -185,9 +263,9 @@ Subscribe the event reported when the profile connection state changes .On API 2
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

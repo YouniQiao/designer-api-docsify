@@ -2,9 +2,11 @@
 
 Provides vertical type definition.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-verticalPanelManager-export enum VerticalType--><!--Device-verticalPanelManager-export enum VerticalType-End-->
 
@@ -20,9 +22,11 @@ NAVIGATION = 'navigation'
 
 Indicates the type for Navigation.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

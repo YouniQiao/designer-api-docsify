@@ -1,11 +1,12 @@
 # ErrorObserver
 
-The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in   
-[ErrorManager.on](./../@ohos.app.ability.errorManager:errorManager.on(type: 'error', observer: ErrorObserver)) to listen for errors that occur in the current application.
+The ErrorObserver module defines an observer to listen for application errors. It can be used as an input parameter in [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#on_error) to listen for errors that occur in the current application.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default class ErrorObserver--><!--Device-unnamed-export default class ErrorObserver-End-->
 
@@ -22,6 +23,8 @@ Called when the application encounters an exception and reports it to the JavaSc
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,6 +75,8 @@ Called when an uncaught exception occurs in the application.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

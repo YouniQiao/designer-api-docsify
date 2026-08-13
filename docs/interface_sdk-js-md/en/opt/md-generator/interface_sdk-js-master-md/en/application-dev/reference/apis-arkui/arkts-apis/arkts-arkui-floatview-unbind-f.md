@@ -13,11 +13,11 @@ function unbind(floatViewController: FloatViewController,
     floatingBallController: floatingBall.FloatingBallController): Promise<void>
 ```
 
-Unbinds the float view and floating ball. The unbinding can be performed only after both the  
-[float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and  
-[floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) are stopped. This API uses a promise to return the result.
+Unbinds the float view and floating ball. The unbinding can be performed only after both the [float view controller](arkts-arkui-floatview-floatviewcontroller-i.md#FloatViewController) and [floating ball controller](arkts-arkui-floatingball-floatingballcontroller-i.md#FloatingBallController) are stopped. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,9 +42,9 @@ Unbinds the float view and floating ball. The unbinding can be performed only af
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300025](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
-| [1300031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300025](../errorcode-window.md#1300025-unsupported-operation-in-the-current-floating-ball-state) |
+| [1300031](../errorcode-window.md#1300031-operation-not-supported-in-the-current-float-view-state) |
 
 ## Examples
 

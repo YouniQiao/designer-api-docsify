@@ -1,6 +1,18 @@
 # @ohos.inputMethod.ExtraConfig(输入法扩展信息)
 
-**@ohos.inputMethod.ExtraConfig**模块提供输入法扩展信息的数据定义，支持ArkUI编辑框在拉起输入法时传递自定义配置信息给输入法应用。
+/*
+ Copyright (c) 2025 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+ **@ohos.inputMethod.ExtraConfig**模块提供输入法扩展信息的数据定义，支持ArkUI编辑框在拉起输入法时传递自定义配置信息给输入法应用。
  本模块是输入法框架的扩展信息数据模块，定义了`InputMethodExtraConfig`接口和`CustomValueType`联合类型，用于承载编辑框应用向输入法应用传递的自定义键值对配置数据。
  本模块提供编辑框应用向输入法应用传递个性化配置的能力。编辑框应用可将用户的输入习惯、快捷键设置、主题颜色、输入模式偏好等自定义信息以键值对形式封装，在绑定输入法时一并传递给输入法应用，使输入法应用据此提供个性化体验。信息总长度不超过3
  2KB。

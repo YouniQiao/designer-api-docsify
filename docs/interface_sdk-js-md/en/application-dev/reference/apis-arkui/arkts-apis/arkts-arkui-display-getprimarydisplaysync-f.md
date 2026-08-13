@@ -14,11 +14,13 @@ function getPrimaryDisplaySync(): Display
 
 Obtains the information about the primary display. For devices other than 2-in-1 devices, the Display object obtained is the built-in screen. For 2-in-1 devices with an external screen, the Display object obtained is the primary screen. For 2-in-1 devices without an external screen, the Display object obtained is the built-in screen.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function getPrimaryDisplaySync(): Display--><!--Device-display-function getPrimaryDisplaySync(): Display-End-->
 
@@ -34,7 +36,7 @@ Obtains the information about the primary display. For devices other than 2-in-1
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: Invalid display id. |
 
 ## Examples
 

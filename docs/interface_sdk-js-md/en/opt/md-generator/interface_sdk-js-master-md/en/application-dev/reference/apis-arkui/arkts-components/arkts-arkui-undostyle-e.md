@@ -4,6 +4,8 @@ Enumerates the options for whether to retain the original style during undo/redo
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum UndoStyle--><!--Device-unnamed-declare enum UndoStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ CLEAR_STYLE = 0
 Undo/Redo operations do not retain the original style.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ KEEP_STYLE = 1
 Undo/Redo operations retain the original style.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

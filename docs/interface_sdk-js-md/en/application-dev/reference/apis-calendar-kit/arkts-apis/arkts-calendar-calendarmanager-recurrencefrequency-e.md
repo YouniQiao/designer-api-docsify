@@ -6,6 +6,8 @@ Enumerates the types of the event recurrence rule.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export enum RecurrenceFrequency--><!--Device-calendarManager-export enum RecurrenceFrequency-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -21,6 +23,8 @@ Yearly.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Monthly.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RecurrenceFrequency-MONTHLY = 1--><!--Device-RecurrenceFrequency-MONTHLY = 1-End-->
@@ -58,6 +64,8 @@ Weekly.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RecurrenceFrequency-WEEKLY = 2--><!--Device-RecurrenceFrequency-WEEKLY = 2-End-->
@@ -75,6 +83,8 @@ Daily.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

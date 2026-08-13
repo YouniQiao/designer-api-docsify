@@ -1,10 +1,12 @@
 # PressureLevel
 
-The memory pressure level that can be set.
+内存压力等级。在应用主动清理Web组件占用的缓存时，Web内核会根据内存压力等级，进行缓存释放。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum PressureLevel--><!--Device-webview-enum PressureLevel-End-->
 
@@ -16,11 +18,15 @@ The memory pressure level that can be set.
 MEMORY_PRESSURE_LEVEL_MODERATE = 1
 ```
 
-Modules are advised to free buffers that are cheap to re-allocate and not immediately needed.
+中等内存压力等级。这个等级下，Web内核会尝试释放重新分配开销较小且不需要立即使用的缓存。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_MODERATE = 1--><!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_MODERATE = 1-End-->
 
@@ -32,11 +38,15 @@ Modules are advised to free buffers that are cheap to re-allocate and not immedi
 MEMORY_PRESSURE_LEVEL_CRITICAL = 2
 ```
 
-At this level, modules are advised to free all possible memory.
+严重内存压力等级。这个等级下，Web内核会尝试释放所有可能的内存缓存。
 
-**起始版本：** 23
+**起始版本：** 14
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_CRITICAL = 2--><!--Device-PressureLevel-MEMORY_PRESSURE_LEVEL_CRITICAL = 2-End-->
 

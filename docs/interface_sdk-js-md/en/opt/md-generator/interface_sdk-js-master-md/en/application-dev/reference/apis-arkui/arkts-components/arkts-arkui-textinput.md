@@ -1,14 +1,8 @@
 # TextInput
 
-The **TextInput** component provides single-line text input.
+The **TextInput** component provides single-line text input. > **NOTE** > > This component supports plain text only. For rich text, use the RichEditor component.
 
-> **NOTE**
->
-> This component supports plain text only. For rich text, use the [RichEditor]{@link ./rich_editor} component.
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## TextInput
 
@@ -19,6 +13,8 @@ TextInput(value?: TextInputOptions)
 Defines the constructor of TextInput.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,15 +30,15 @@ Defines the constructor of TextInput.
 
 ## Summary
 
-- [PasswordIcon](arkts-arkui-textinput-passwordicon-i.md)
-- [SubmitEvent](arkts-arkui-textinput-submitevent-i.md)
-- [TextInputOptions](arkts-arkui-textinput-textinputoptions-i.md)
-- [UnderlineColor](arkts-arkui-textinput-underlinecolor-i.md)
-- [OnContentScrollCallback](arkts-arkui-textinput-oncontentscrollcallback-t.md)
-- [OnPasteCallback](arkts-arkui-textinput-onpastecallback-t.md)
-- [OnSubmitCallback](arkts-arkui-textinput-onsubmitcallback-t.md)
-- [OnTextSelectionChangeCallback](arkts-arkui-textinput-ontextselectionchangecallback-t.md)
-- [ContentType](arkts-arkui-textinput-contenttype-e.md)
-- [EnterKeyType](arkts-arkui-textinput-enterkeytype-e.md)
-- [InputType](arkts-arkui-textinput-inputtype-e.md)
-- [TextInputStyle](arkts-arkui-textinput-textinputstyle-e.md)
+- [PasswordIcon](arkts-arkui-passwordicon-i.md)
+- [SubmitEvent](arkts-arkui-submitevent-i.md)
+- [TextInputOptions](arkts-arkui-textinputoptions-i.md)
+- [UnderlineColor](arkts-arkui-underlinecolor-i.md)
+- [OnContentScrollCallback](arkts-arkui-oncontentscrollcallback-t.md)
+- [OnPasteCallback](arkts-arkui-onpastecallback-t.md)
+- [OnSubmitCallback](arkts-arkui-onsubmitcallback-t.md)
+- [OnTextSelectionChangeCallback](arkts-arkui-ontextselectionchangecallback-t.md)
+- [ContentType](arkts-arkui-contenttype-e.md)
+- [EnterKeyType](arkts-arkui-enterkeytype-e.md)
+- [InputType](arkts-arkui-inputtype-e.md)
+- [TextInputStyle](arkts-arkui-textinputstyle-e.md)

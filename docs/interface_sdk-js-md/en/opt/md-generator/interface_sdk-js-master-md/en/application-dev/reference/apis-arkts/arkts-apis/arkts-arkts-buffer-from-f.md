@@ -14,7 +14,9 @@ function from(array: number[]): Buffer
 
 Creates a **Buffer** object with the specified array.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,6 +57,8 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer-End-->
@@ -65,7 +69,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| SharedArrayBuffer | Yes |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer \| [SharedArrayBuffer](../../apis-na/arkts-apis/arkts-na-lib-es2017-sharedmemory-sharedarraybuffer-i.md) | Yes |
 | byteOffset | number | No |
 | length | number | No |
 
@@ -79,7 +83,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -95,12 +99,53 @@ console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
 ## from
 
 ```TypeScript
+function from(arrayBuffer: ArrayBuffer, byteOffset?: number, length?: number): Buffer
+```
+
+This creates a view of the ArrayBuffer without copying the underlying memory.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-buffer-function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [arrayBuffer](arkts-arkts-buffer-blob-c.md) | ArrayBuffer | Yes |
+| byteOffset | number | No |
+| length | number | No |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [Buffer](arkts-arkts-buffer-buffer-c.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+
+
+## from
+
+```TypeScript
 function from(buffer: Buffer | Uint8Array): Buffer
 ```
 
-Copies the data of a passed **Buffer** object to create a new **Buffer** object and returns the new one.Creates a **Buffer** object based on the memory of a passed **Uint8Array** object and returns the new object,maintaining the memory association of the data.
+Copies the data of a passed **Buffer** object to create a new **Buffer** object and returns the new one. Creates a **Buffer** object based on the memory of a passed **Uint8Array** object and returns the new object, maintaining the memory association of the data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -146,7 +191,9 @@ function from(object: Object, offsetOrEncoding: number | string, length: number)
 
 Creates a **Buffer** object based on the specified object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -186,7 +233,9 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 Creates a **Buffer** object based on a string in the given encoding format.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

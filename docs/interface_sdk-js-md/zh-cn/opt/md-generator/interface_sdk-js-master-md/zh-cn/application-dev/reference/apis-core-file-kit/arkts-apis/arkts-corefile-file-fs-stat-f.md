@@ -10,6 +10,8 @@ declare function stat(file: string | number): Promise<Stat>
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function stat(file: string | number): Promise<Stat>--><!--Device-unnamed-declare function stat(file: string | number): Promise<Stat>-End-->
@@ -56,6 +58,8 @@ declare function stat(file: string | number, callback: AsyncCallback<Stat>): voi
 获取文件或目录的详细属性信息，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

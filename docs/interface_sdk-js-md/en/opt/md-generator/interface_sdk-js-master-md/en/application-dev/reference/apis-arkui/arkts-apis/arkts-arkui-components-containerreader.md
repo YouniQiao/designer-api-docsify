@@ -26,5 +26,5 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#containerreader) |
-| [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#containerreaderinstance) |
+| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#ContainerReader) |
+| [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#ContainerReaderInstance) |

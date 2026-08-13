@@ -1,9 +1,10 @@
 # @ohos.file.picker
 
-The **Picker** module encapsulates APIs such as **DocumentViewPicker**, **AudioViewPicker**, and **PhotoViewPicker**to provide capabilities of selecting and saving files of different types. An application can select the API as required. The APIs of this module must be called in UIAbility. Otherwise, the **FilePicker**, **AudioPicker**, or  
-**PhotoPicker** cannot be started.Chinese characters and non-digit characters in the URI are compiled into the corresponding ASCII code and concatenated to the URI returned by calling these APIs.
+The **Picker** module encapsulates APIs such as **DocumentViewPicker**, **AudioViewPicker**, and **PhotoViewPicker** to provide capabilities of selecting and saving files of different types. An application can select the API as required. The APIs of this module must be called in UIAbility. Otherwise, the **FilePicker**, **AudioPicker**, or **PhotoPicker** cannot be started. Chinese characters and non-digit characters in the URI are compiled into the corresponding ASCII code and concatenated to the URI returned by calling these APIs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace picker--><!--Device-unnamed-declare namespace picker-End-->
 
@@ -40,6 +41,15 @@ import { picker } from '@kit.CoreFileKit';
 | [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-c-sys.md) |
 | [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-c-sys.md) |
 <!--DelEnd-->
+
+### Interfaces
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [AudioSaveOptions](arkts-corefile-picker-audiosaveoptions-i.md) |
+| [AudioSelectOptions](arkts-corefile-picker-audioselectoptions-i.md) |
+| [DocumentSaveOptions](arkts-corefile-picker-documentsaveoptions-i.md) |
+| [DocumentSelectOptions](arkts-corefile-picker-documentselectoptions-i.md) |
 
 ### Enums
 

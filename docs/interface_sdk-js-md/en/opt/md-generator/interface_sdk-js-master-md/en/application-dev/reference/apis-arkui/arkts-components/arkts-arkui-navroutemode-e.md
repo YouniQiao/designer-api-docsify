@@ -1,14 +1,12 @@
 # NavRouteMode
 
-Defines the routing policy.
-
-> **NOTE：**
+Defines the routing policy. > **NOTE：**
 
 **Since:** 10
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavPathStack](arkts-arkui-navpathstack-c.md#NavPathStack)
+**Substitutes:** NavPathStack and navDestination
 
 <!--Device-unnamed-declare enum NavRouteMode--><!--Device-unnamed-declare enum NavRouteMode-End-->
 
@@ -26,7 +24,7 @@ The new navigation destination page replaces the current one. The current page i
 
 **Deprecated since:** 13
 
-**Substitutes:** [LaunchMode](Navigation#LaunchMode)
+**Substitutes:** LaunchMode
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +46,7 @@ The new navigation destination page overwrites the current one. The current page
 
 **Deprecated since:** 13
 
-**Substitutes:** [LaunchMode](Navigation#LaunchMode)
+**Substitutes:** LaunchMode
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +68,7 @@ The new navigation destination page replaces the current one. The current page i
 
 **Deprecated since:** 13
 
-**Substitutes:** [LaunchMode](Navigation#LaunchMode)
+**Substitutes:** LaunchMode
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,4 +1,4 @@
-# @ohos.InputMethodExtensionAbility(InputMethodExtensionAbility)
+# @ohos.InputMethodExtensionAbility
 
 ## 汇总
 

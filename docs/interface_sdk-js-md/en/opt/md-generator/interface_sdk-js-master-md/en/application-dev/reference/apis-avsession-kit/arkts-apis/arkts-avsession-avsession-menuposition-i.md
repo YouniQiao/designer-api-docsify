@@ -2,7 +2,9 @@
 
 Position definition of one component on which the menu will bind and popup.
 
-**Since:** 22
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
 
@@ -24,9 +26,11 @@ Component height, uint is vp.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
 
@@ -42,9 +46,11 @@ Component width, uint is vp.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-width: int--><!--Device-MenuPosition-width: int-End-->
 
@@ -60,9 +66,11 @@ Coordinate x of the position of the component, uint is vp.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
 
@@ -78,9 +86,11 @@ Coordinate y of the position of the component, uint is vp.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 24
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-y: int--><!--Device-MenuPosition-y: int-End-->
 

@@ -6,7 +6,9 @@
 
 **起始版本：** 19
 
-<!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,11 +18,11 @@
 setOnReachEnd(callback: Callback<void> | undefined): void
 ```
 
-设置[onReachEnd](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachend11)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置[onReachEnd](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachend11)事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,11 +44,11 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 setOnReachStart(callback: Callback<void> | undefined): void
 ```
 
-设置[onReachStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachstart11)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置[onReachStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onreachstart11)事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,11 +70,11 @@ setOnReachStart(callback: Callback<void> | undefined): void
 setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 ```
 
-设置[onScrollFrameBegin](ScrollAttribute#onScrollFrameBegin)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置onScrollFrameBegin事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,11 +96,11 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 setOnScrollStart(callback: Callback<void> | undefined): void
 ```
 
-设置[onScrollStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstart11)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置[onScrollStart](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstart11)事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -120,11 +122,11 @@ setOnScrollStart(callback: Callback<void> | undefined): void
 setOnScrollStop(callback: Callback<void> | undefined): void
 ```
 
-设置[onScrollStop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstop11)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置[onScrollStop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onscrollstop11)事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

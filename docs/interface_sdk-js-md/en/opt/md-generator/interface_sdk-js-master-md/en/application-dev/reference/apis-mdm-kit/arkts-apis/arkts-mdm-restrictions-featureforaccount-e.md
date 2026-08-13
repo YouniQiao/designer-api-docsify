@@ -4,6 +4,8 @@ Enumerates the features that can be disabled or enabled for a specified user.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-restrictions-enum FeatureForAccount--><!--Device-restrictions-enum FeatureForAccount-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -18,6 +20,8 @@ System multi-window. Currently, this feature is available only on phones and tab
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForAccount-MULTI_WINDOW = 0--><!--Device-FeatureForAccount-MULTI_WINDOW = 0-End-->
@@ -30,9 +34,11 @@ System multi-window. Currently, this feature is available only on phones and tab
 DISTRIBUTED_TRANSMISSION = 1
 ```
 
-[Distributed management service](../../../distributedservice/distributedservice-kit-intro.md#working-principles).Once disabled, functions such as discovery, authentication, query, and listening in the distributed device management service cannot be used.
+[Distributed management service](../../../distributedservice/distributedservice-kit-intro.md#working-principles). Once disabled, functions such as discovery, authentication, query, and listening in the distributed device management service cannot be used.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +56,8 @@ SuperHub. Currently, this feature is available only on phones and tablets. Once 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForAccount-SUPER_HUB = 2--><!--Device-FeatureForAccount-SUPER_HUB = 2-End-->
@@ -62,11 +70,11 @@ SuperHub. Currently, this feature is available only on phones and tablets. Once 
 FINGERPRINT = 3
 ```
 
-Device fingerprint authentication capability. Currently, this feature is supported only on PCs/2-in-1 devices.The rules for using this capability are as follows:
-
-1. After the device fingerprint authentication capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice))is disabled, disabling this capability for a specific user will result in a policy conflict.2. After the device fingerprint authentication capability is disabled or enabled for a specific user, disabling this capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) globally will override the user-specific policy. Subsequently, re-enabling this capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice))globally will allow all users to use device fingerprint authentication.
+Device fingerprint authentication capability. Currently, this feature is supported only on PCs/2-in-1 devices. The rules for using this capability are as follows: 1. After the device fingerprint authentication capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) is disabled, disabling this capability for a specific user will result in a policy conflict. 2. After the device fingerprint authentication capability is disabled or enabled for a specific user, disabling this capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) globally will override the user-specific policy. Subsequently, re-enabling this capability ([FeatureForDevice.FINGERPRINT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) globally will allow all users to use device fingerprint authentication.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,10 +88,11 @@ Device fingerprint authentication capability. Currently, this feature is support
 PRINT = 4
 ```
 
-Device printing capability. If the device printing capability is disabled for a specific user, it remains disabled for that user even if the device printing capability (  
-[FeatureForDevice.PRINTER](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) capability is enabled globally.
+Device printing capability. If the device printing capability is disabled for a specific user, it remains disabled for that user even if the device printing capability ( [FeatureForDevice.PRINTER](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) capability is enabled globally.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,9 +106,11 @@ Device printing capability. If the device printing capability is disabled for a 
 MTP_CLIENT = 5
 ```
 
-MTP client capability (including read and write capabilities). Currently, it is supported only on PC/2-in-1devices. MTP allows users to linearly access media files on mobile devices. After the device MTP client capability ([FeatureForDevice.MTP_CLIENT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) is disabled, disabling the MTP client write capability for a specific user will result in a policy conflict.
+MTP client capability (including read and write capabilities). Currently, it is supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. After the device MTP client capability ([FeatureForDevice.MTP_CLIENT](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) is disabled, disabling the MTP client write capability for a specific user will result in a policy conflict.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,14 +124,11 @@ MTP client capability (including read and write capabilities). Currently, it is 
 USB_STORAGE_DEVICE_WRITE = 6
 ```
 
-USB storage device write capability. Currently, it is supported only on enterprise PCs/2-in-1 devices.
-
-Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict:
-
-1. The device USB capability ([FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) has been disabled.2. USB storage device access policy has been set to read-only or disabled via the  
-[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setUsbStorageDeviceAccessPolicy) API.3. Storage USB devices have been disabled via the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#addDisallowedUsbDevices) API.
+USB storage device write capability. Currently, it is supported only on enterprise PCs/2-in-1 devices. Disabling the USB storage device write capability for a specific user in any of the following scenarios will result in a policy conflict: 1. The device USB capability ([FeatureForDevice.USB](arkts-mdm-restrictions-featurefordevice-e.md#FeatureForDevice)) has been disabled. 2. USB storage device access policy has been set to read-only or disabled via the [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setUsbStorageDeviceAccessPolicy) API. 3. Storage USB devices have been disabled via the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#addDisallowedUsbDevices) API.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,6 +146,8 @@ DISK_RECOVERY_KEY = 7
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForAccount-DISK_RECOVERY_KEY = 7--><!--Device-FeatureForAccount-DISK_RECOVERY_KEY = 7-End-->
@@ -154,6 +164,8 @@ superuser do (execution with superuser privileges). Currently, it is supported o
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForAccount-SUDO = 8--><!--Device-FeatureForAccount-SUDO = 8-End-->
@@ -166,9 +178,11 @@ superuser do (execution with superuser privileges). Currently, it is supported o
 DISTRIBUTED_TRANSMISSION_OUTGOING = 9
 ```
 
-Distributed one-way data transmission between devices (only data transmission to other devices is supported).Disabling distributed one-way data transmission capability between devices after the distributed management service ([DISTRIBUTED_TRANSMISSION](#FeatureForAccount)) has been disabled will result in a policy conflict.
+Distributed one-way data transmission between devices (only data transmission to other devices is supported). Disabling distributed one-way data transmission capability between devices after the distributed management service ([DISTRIBUTED_TRANSMISSION](#FeatureForAccount)) has been disabled will result in a policy conflict.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,6 +199,8 @@ OPEN_FILE_BOOST = 10
 File open acceleration capability, providing applications with the ability to sense the file open acceleration status. By integrating the corresponding APIs, apps can detect the acceleration status of files, and further implement features such as displaying unique UI identifiers for accelerated files, thereby optimizing user experience of file opening. Currently, this feature is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

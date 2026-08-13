@@ -2,7 +2,9 @@
 
 本模块提供了系统事件打点能力，包括系统事件的埋点、落盘系统事件的订阅及已落盘的系统事件的查询能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace hiSysEvent--><!--Device-unnamed-declare namespace hiSysEvent-End-->
 
@@ -17,14 +19,14 @@
 
 | 名称 |
 | --- |
-| [addWatcher](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md#addwatcher) |
-| [exportSysEvents](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md#exportsysevents) |
-| [query](arkts-performanceanalysis-hisysevent-query-f-sys.md#query) |
-| [removeWatcher](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md#removewatcher) |
-| [subscribe](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md#subscribe) |
-| [unsubscribe](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md#unsubscribe) |
-| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write) |
-| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write-1) |
+| [addWatcher](arkts-performanceanalysis-hisysevent-addwatcher-f-sys.md#addWatcher（系统接口）) |
+| [exportSysEvents](arkts-performanceanalysis-hisysevent-exportsysevents-f-sys.md#exportSysEvents（系统接口）) |
+| [query](arkts-performanceanalysis-hisysevent-query-f-sys.md#query（系统接口）) |
+| [removeWatcher](arkts-performanceanalysis-hisysevent-removewatcher-f-sys.md#removeWatcher（系统接口）) |
+| [subscribe](arkts-performanceanalysis-hisysevent-subscribe-f-sys.md#subscribe（系统接口）) |
+| [unsubscribe](arkts-performanceanalysis-hisysevent-unsubscribe-f-sys.md#unsubscribe（系统接口）) |
+| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write（系统接口）) |
+| [write](arkts-performanceanalysis-hisysevent-write-f-sys.md#write（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

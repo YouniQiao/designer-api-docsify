@@ -16,6 +16,8 @@ Disables the dynamic icon based on the given bundle name. This API uses a promis
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON
 
 <!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>--><!--Device-bundleManager-function disableDynamicIcon(bundleName: string): Promise<void>-End-->
@@ -40,11 +42,11 @@ Disables the dynamic icon based on the given bundle name. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-| [17700305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700305](../errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) |
 
 ## Examples
 
@@ -74,13 +76,11 @@ try {
 function disableDynamicIcon(bundleName: string, option?: BundleOptions): Promise<void>
 ```
 
-Disables the dynamic icon based on the given bundle name and bundle options. This API uses a promise to return the result.
+Disables the dynamic icon based on the given bundle name and bundle options. This API uses a promise to return the result. To disable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission. To disable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
-To disable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission.
+**Since:** 23
 
-To disable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
-
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -107,12 +107,12 @@ To disable the dynamic icon for another user, you must request the ohos.permissi
 
 | Error Code ID |
 | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
-| [17700305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700305](../errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) |
 
 ## Examples
 

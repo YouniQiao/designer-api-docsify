@@ -2,7 +2,9 @@
 
 Control class for restore procedure.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backup-class SessionRestore--><!--Device-backup-class SessionRestore-End-->
 
@@ -24,7 +26,9 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: s
 
 Append new bundles and restoreInfos to be restore up during the restore.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -161,7 +165,9 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], callback:
 
 Append new bundles to be restore up during the restore.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -272,7 +278,9 @@ cancel(bundleName: string): number
 
 cancel the application being restore.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -298,9 +306,9 @@ cancel the application being restore.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -370,7 +378,9 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 
 Provides an interface for the tool to clear temporary directories
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -396,8 +406,8 @@ Provides an interface for the tool to clear temporary directories
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -473,7 +483,9 @@ constructor(callbacks: GeneralCallbacks)
 
 Constructor for obtaining the instance of the SessionBackup class.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -548,6 +560,8 @@ Get the file handle of an APK file.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.BACKUP
 
 **Model restriction:** This API can be used only in the stage model.
@@ -577,8 +591,8 @@ Get the file handle of an APK file.
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## getCompatibilityInfo
@@ -589,7 +603,9 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 
 Provides an interface for the tool to get compatibility info.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -616,8 +632,8 @@ Provides an interface for the tool to get compatibility info.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -690,9 +706,11 @@ async function getRestoreCompatibilityInfo() {
 getFileHandle(fileMeta: FileMeta): Promise<void>
 ```
 
-Request to get a shared file from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReady callback.When the client accomplished the file, use publishFile to publish.
+Request to get a shared file from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReady callback. When the client accomplished the file, use publishFile to publish.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -791,9 +809,11 @@ async function getFileHandle() {
 getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-Request to get a shared file from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReady callback.When the client accomplished the file, use publishFile to publish.
+Request to get a shared file from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReady callback. When the client accomplished the file, use publishFile to publish.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -884,9 +904,11 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 getFileHandles(fileMeta: FileMeta): Promise<void>
 ```
 
-Request to get shared files from the service. This interface is part of the zero-copy feature.Developers could get the file through onFileReadyBatch callback.When the client accomplished the file, use publishFile to publish.
+Request to get shared files from the service. This interface is part of the zero-copy feature. Developers could get the file through onFileReadyBatch callback. When the client accomplished the file, use publishFile to publish.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -916,8 +938,8 @@ Request to get shared files from the service. This interface is part of the zero
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## getLocalCapabilities
@@ -928,7 +950,9 @@ getLocalCapabilities(): Promise<FileData>
 
 Obtain a Json file that describes local capabilities.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -950,8 +974,8 @@ Obtain a Json file that describes local capabilities.
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13900042 |
 
@@ -1063,7 +1087,7 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
-The capability file can be obtained by using [fileIo.stat](js-apis-file-fs.md#fileiostat-1) of the [@ohos.file.fs](js-apis-file-fs.md) module. The following is an example of the capability file.
+The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](arkts-corefile-fileio-n.md#fileIo) module. The following is an example of the capability file.
 
 ```TypeScript
 {
@@ -1091,6 +1115,8 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 Migrate file from source path to destination path.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -1121,8 +1147,8 @@ Migrate file from source path to destination path.
 | --- |
 | 13900020 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## publishFile
@@ -1131,9 +1157,11 @@ Migrate file from source path to destination path.
 publishFile(fileMeta: FileMeta): Promise<void>
 ```
 
-Publish the file handle to the backup service to make the service aware that the file's content is ready.This interface is part of the zero-copy feature.
+Publish the file handle to the backup service to make the service aware that the file's content is ready. This interface is part of the zero-copy feature.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -1244,9 +1272,11 @@ g_session = createSessionRestore();
 publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 ```
 
-Publish the file handle to the backup service to make the service aware that the file's content is ready.This interface is part of the zero-copy feature.
+Publish the file handle to the backup service to make the service aware that the file's content is ready. This interface is part of the zero-copy feature.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -1356,7 +1386,9 @@ release(): Promise<void>
 
 End restore process
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.BACKUP
 
@@ -1376,11 +1408,11 @@ End restore process
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900005 |
 | 13900001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 | 13900042 |
 

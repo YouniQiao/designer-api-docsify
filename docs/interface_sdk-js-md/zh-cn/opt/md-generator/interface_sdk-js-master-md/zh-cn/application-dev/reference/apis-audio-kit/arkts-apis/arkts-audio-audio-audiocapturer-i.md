@@ -1,14 +1,10 @@
 # AudioCapturer
 
-提供音频采集的相关接口。
+提供音频采集的相关接口。 在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer)获取AudioCapturer实例。 > **说明：** > > - 本Interface首批接口从API version 8开始支持。
 
-在使用AudioCapturer的接口之前，需先通过[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer)获取AudioCapturer实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 8开始支持。
-
-**起始版本：** 8
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
 
@@ -22,7 +18,9 @@ getAudioStreamId(callback: AsyncCallback<number>): void
 
 获取音频流id。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioStreamId(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getAudioStreamId(callback: AsyncCallback<long>): void-End-->
 
@@ -42,7 +40,9 @@ getAudioStreamId(): Promise<number>
 
 获取音频流id。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioStreamId(): Promise<long>--><!--Device-AudioCapturer-getAudioStreamId(): Promise<long>-End-->
 
@@ -62,7 +62,9 @@ getAudioStreamIdSync(): number
 
 获取音频流id。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioStreamIdSync(): long--><!--Device-AudioCapturer-getAudioStreamIdSync(): long-End-->
 
@@ -82,7 +84,9 @@ getAudioTime(callback: AsyncCallback<number>): void
 
 获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioTime(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getAudioTime(callback: AsyncCallback<long>): void-End-->
 
@@ -102,7 +106,9 @@ getAudioTime(): Promise<number>
 
 获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioTime(): Promise<long>--><!--Device-AudioCapturer-getAudioTime(): Promise<long>-End-->
 
@@ -122,7 +128,9 @@ getAudioTimeSync(): number
 
 获取当前录制位置的时间戳（从1970年1月1日开始），单位为纳秒。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioTimeSync(): long--><!--Device-AudioCapturer-getAudioTimeSync(): long-End-->
 
@@ -140,11 +148,11 @@ getAudioTimeSync(): number
 getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 ```
 
-获取输入音频流时间戳和当前数据帧位置信息。
+获取输入音频流时间戳和当前数据帧位置信息。 该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒。
 
-该接口可以获取到音频通道实际录制位置（framePos）以及录制到该位置时候的时间戳（timestamp），时间戳单位为纳秒。
+**起始版本：** 23
 
-**起始版本：** 19
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>--><!--Device-AudioCapturer-getAudioTimestampInfo(): Promise<AudioTimestampInfo>-End-->
 
@@ -160,7 +168,7 @@ getAudioTimestampInfo(): Promise<AudioTimestampInfo>
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
 
 ## getAudioTimestampInfoSync
 
@@ -170,7 +178,9 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 
 获取音频流时间戳和当前数据帧位置信息。同步返回结果。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getAudioTimestampInfoSync(): AudioTimestampInfo--><!--Device-AudioCapturer-getAudioTimestampInfoSync(): AudioTimestampInfo-End-->
 
@@ -186,7 +196,7 @@ getAudioTimestampInfoSync(): AudioTimestampInfo
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
 
 ## getBufferSize
 
@@ -196,7 +206,9 @@ getBufferSize(callback: AsyncCallback<number>): void
 
 获取采集器合理的最小缓冲区大小。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getBufferSize(callback: AsyncCallback<long>): void--><!--Device-AudioCapturer-getBufferSize(callback: AsyncCallback<long>): void-End-->
 
@@ -216,7 +228,9 @@ getBufferSize(): Promise<number>
 
 获取采集器合理的最小缓冲区大小。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getBufferSize(): Promise<long>--><!--Device-AudioCapturer-getBufferSize(): Promise<long>-End-->
 
@@ -236,7 +250,9 @@ getBufferSizeSync(): number
 
 获取采集器合理的最小缓冲区大小。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getBufferSizeSync(): long--><!--Device-AudioCapturer-getBufferSizeSync(): long-End-->
 
@@ -256,7 +272,9 @@ getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void
 
 获取音频采集器信息。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void--><!--Device-AudioCapturer-getCapturerInfo(callback: AsyncCallback<AudioCapturerInfo>): void-End-->
 
@@ -276,7 +294,9 @@ getCapturerInfo(): Promise<AudioCapturerInfo>
 
 获取音频采集器信息。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getCapturerInfo(): Promise<AudioCapturerInfo>--><!--Device-AudioCapturer-getCapturerInfo(): Promise<AudioCapturerInfo>-End-->
 
@@ -296,7 +316,9 @@ getCapturerInfoSync(): AudioCapturerInfo
 
 获取音频采集器信息。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getCapturerInfoSync(): AudioCapturerInfo--><!--Device-AudioCapturer-getCapturerInfoSync(): AudioCapturerInfo-End-->
 
@@ -316,7 +338,9 @@ getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo
 
 获取录音流配置。同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo--><!--Device-AudioCapturer-getCurrentAudioCapturerChangeInfo(): AudioCapturerChangeInfo-End-->
 
@@ -336,7 +360,9 @@ getCurrentInputDevices(): AudioDeviceDescriptors
 
 获取录音流输入设备信息。同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getCurrentInputDevices(): AudioDeviceDescriptors--><!--Device-AudioCapturer-getCurrentInputDevices(): AudioDeviceDescriptors-End-->
 
@@ -354,9 +380,11 @@ getCurrentInputDevices(): AudioDeviceDescriptors
 getNoiseReductionMode(): NoiseReductionMode
 ```
 
-获取当前音频捕获器的降噪模式。模式将只考虑默认和设置的状态，音频输入设备和流并发将不被视为。
+获取当前音频捕获器的降噪模式。 模式将只考虑默认和设置的状态，音频输入设备和流并发将 不被视为。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -378,7 +406,9 @@ getOverflowCount(): Promise<number>
 
 获取当前录制音频流的过载音频帧数量。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getOverflowCount(): Promise<long>--><!--Device-AudioCapturer-getOverflowCount(): Promise<long>-End-->
 
@@ -398,7 +428,9 @@ getOverflowCountSync(): number
 
 获取当前录制音频流的过载音频帧数量。同步返回数据。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getOverflowCountSync(): long--><!--Device-AudioCapturer-getOverflowCountSync(): long-End-->
 
@@ -418,7 +450,9 @@ getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void
 
 获取音频采集器流信息。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void--><!--Device-AudioCapturer-getStreamInfo(callback: AsyncCallback<AudioStreamInfo>): void-End-->
 
@@ -438,7 +472,9 @@ getStreamInfo(): Promise<AudioStreamInfo>
 
 获取音频采集器流信息。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getStreamInfo(): Promise<AudioStreamInfo>--><!--Device-AudioCapturer-getStreamInfo(): Promise<AudioStreamInfo>-End-->
 
@@ -458,7 +494,9 @@ getStreamInfoSync(): AudioStreamInfo
 
 获取音频采集器流信息。同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-getStreamInfoSync(): AudioStreamInfo--><!--Device-AudioCapturer-getStreamInfoSync(): AudioStreamInfo-End-->
 
@@ -476,9 +514,11 @@ getStreamInfoSync(): AudioStreamInfo
 getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 ```
 
-获取当前设备平台支持的所有降噪模式。目前，降噪效果仅在使用[Stream_USAGE_VOICE_MESSAGE](StreamUsage#Stream_USAGE_VOICE_MESSAGE)，其他支持的用法可能会在以后扩展。支持的模式只考虑音频格式和设备平台。不会考虑音频输入设备和流并发。
+获取当前设备平台支持的所有降噪模式。 目前，降噪效果仅在使用 Stream_USAGE_VOICE_MESSAGE，其他支持的用法可能会在以后扩展。 支持的模式只考虑音频格式和设备平台。 不会考虑音频输入设备和流并发。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -496,19 +536,21 @@ getSupportedNoiseReductionModes(): Array<NoiseReductionMode>
 
 | 错误码ID |
 | --- |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
-## off('markReach')
+## offAudioCapturerChange
 
 ```TypeScript
-off(type: 'markReach', callback?: Callback<number>): void
+offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void
 ```
 
-取消监听标记到达事件。使用callback异步回调。
+Unsubscribes audio capturer info change event callback.
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-offAudioCapturerChange(callback?: Callback<AudioCapturerChangeInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -516,95 +558,43 @@ off(type: 'markReach', callback?: Callback<number>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'markReach' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
-
-## off('periodReach')
-
-```TypeScript
-off(type: 'periodReach', callback?: Callback<number>): void
-```
-
-取消监听标记到达事件。使用callback异步回调。
-
-**起始版本：** 8
-
-<!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'periodReach' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
-
-## off('stateChange')
-
-```TypeScript
-off(type: 'stateChange', callback?: Callback<AudioState>): void
-```
-
-取消监听状态变化事件。使用callback异步回调。
-
-**起始版本：** 18
-
-<!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'stateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## off('audioInterrupt')
+## offAudioInterrupt
 
 ```TypeScript
-off(type: 'audioInterrupt'): void
+offAudioInterrupt(): void
 ```
 
-取消监听音频中断事件。
+UnSubscribes to audio interrupt events.
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-AudioCapturer-off(type: 'audioInterrupt'): void--><!--Device-AudioCapturer-off(type: 'audioInterrupt'): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offAudioInterrupt(): void--><!--Device-AudioCapturer-offAudioInterrupt(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'audioInterrupt' | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-
-## off('inputDeviceChange')
+## offInputDeviceChange
 
 ```TypeScript
-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
+offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void
 ```
 
-取消监听音频输入设备更改事件。使用callback异步回调。
+Unsubscribes input device change event callback.
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-offInputDeviceChange(callback?: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -612,17 +602,115 @@ off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): voi
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'inputDeviceChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## off('audioCapturerChange')
+## offMarkReach
+
+```TypeScript
+offMarkReach(callback?: Callback<number>): void
+```
+
+Unsubscribes from the mark reached events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offMarkReach(callback?: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+## offPeriodReach
+
+```TypeScript
+offPeriodReach(callback?: Callback<number>): void
+```
+
+Unsubscribes from period reached events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void--><!--Device-AudioCapturer-offPeriodReach(callback?: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+## offReadData
+
+```TypeScript
+offReadData(callback?: Callback<ArrayBuffer>): void
+```
+
+Unsubscribes audio data callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-offReadData(callback?: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## offStateChange
+
+```TypeScript
+offStateChange(callback?: Callback<AudioState>): void
+```
+
+Unsubscribes audio state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-offStateChange(callback?: Callback<AudioState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## off_audioCapturerChange
 
 ```TypeScript
 off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void
@@ -631,6 +719,8 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): 
 取消监听录音流配置变化事件。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): void-End-->
 
@@ -647,10 +737,115 @@ off(type: 'audioCapturerChange', callback?: Callback<AudioCapturerChangeInfo>): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## off('readData')
+## off_audioInterrupt
+
+```TypeScript
+off(type: 'audioInterrupt'): void
+```
+
+取消监听音频中断事件。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-off(type: 'audioInterrupt'): void--><!--Device-AudioCapturer-off(type: 'audioInterrupt'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Interrupt
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'audioInterrupt' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## off_inputDeviceChange
+
+```TypeScript
+off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void
+```
+
+取消监听音频输入设备更改事件。使用callback异步回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-off(type: 'inputDeviceChange', callback?: Callback<AudioDeviceDescriptors>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'inputDeviceChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## off_markReach
+
+```TypeScript
+off(type: 'markReach', callback?: Callback<number>): void
+```
+
+取消监听标记到达事件。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'markReach', callback?: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'markReach' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+## off_periodReach
+
+```TypeScript
+off(type: 'periodReach', callback?: Callback<number>): void
+```
+
+取消监听标记到达事件。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void--><!--Device-AudioCapturer-off(type: 'periodReach', callback?: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'periodReach' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+## off_readData
 
 ```TypeScript
 off(type: 'readData', callback?: Callback<ArrayBuffer>): void
@@ -659,6 +854,8 @@ off(type: 'readData', callback?: Callback<ArrayBuffer>): void
 取消监听音频数据读取回调事件。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-off(type: 'readData', callback?: Callback<ArrayBuffer>): void-End-->
 
@@ -675,68 +872,22 @@ off(type: 'readData', callback?: Callback<ArrayBuffer>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('markReach')
-
-```TypeScript
-on(type: 'markReach', frame: number, callback: Callback<number>): void
-```
-
-监听标记到达事件（当采集的帧数达到frame参数的值时触发，仅调用一次）。使用callback异步回调。
-
-如果将frame设置为100，当采集帧数到达第100帧时，系统将上报信息。
-
-**起始版本：** 8
-
-<!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'markReach' | 是 |
-| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
-
-## on('periodReach')
+## off_stateChange
 
 ```TypeScript
-on(type: 'periodReach', frame: number, callback: Callback<number>): void
+off(type: 'stateChange', callback?: Callback<AudioState>): void
 ```
 
-监听标记到达事件（当采集的帧数达到frame参数的值时触发，即按周期上报信息）。使用callback异步回调。
+取消监听状态变化事件。使用callback异步回调。
 
-如果将frame设置为10，每渲染10帧数据均会上报信息（例如：第10帧、第20帧、第30帧......）。
+**起始版本：** 18
 
-**起始版本：** 8
+**废弃版本：** -1
 
-<!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.Capturer
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'periodReach' | 是 |
-| [frame](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | number | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
-
-## on('stateChange')
-
-```TypeScript
-on(type: 'stateChange', callback: Callback<AudioState>): void
-```
-
-监听状态变化事件（当AudioCapturer状态发生变化时触发）。使用callback异步回调。
-
-**起始版本：** 8
-
-<!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
+<!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void--><!--Device-AudioCapturer-off(type: 'stateChange', callback?: Callback<AudioState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
 
@@ -745,23 +896,55 @@ on(type: 'stateChange', callback: Callback<AudioState>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'stateChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 否 |
 
-## on('audioInterrupt')
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onAudioCapturerChange
 
 ```TypeScript
-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
+onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void
 ```
 
-监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。
+Subscribes audio capturer info change event callback. The event is triggered when input device change for this stream.
 
-AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。
+**起始版本：** 23
 
-调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent)。建议应用根据InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
+**废弃版本：** -1
 
-**起始版本：** 10
+<!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-onAudioCapturerChange(callback: Callback<AudioCapturerChangeInfo>): void-End-->
 
-<!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioCapturerChangeInfo](arkts-audio-audio-audiocapturerchangeinfo-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<InterruptEvent>): void
+```
+
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio recording is interrupted.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-onAudioInterrupt(callback: Callback<InterruptEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Interrupt
 
@@ -769,27 +952,27 @@ AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时�
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'audioInterrupt' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('inputDeviceChange')
+## onInputDeviceChange
 
 ```TypeScript
-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
+onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void
 ```
 
-监听音频输入设备变化事件（当音频输入设备发生变化时触发）。使用callback异步回调。
+Subscribes input device change event callback. The event is triggered when input device change for this stream.
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-onInputDeviceChange(callback: Callback<AudioDeviceDescriptors>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
 
@@ -797,17 +980,111 @@ on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'inputDeviceChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('audioCapturerChange')
+## onMarkReach
+
+```TypeScript
+onMarkReach(frame: number, callback: Callback<number>): void
+```
+
+Subscribes to mark reached events. When the number of frames captured reaches the value of the frame parameter, the callback is invoked.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onMarkReach(frame: long, callback: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| frame | number | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## onPeriodReach
+
+```TypeScript
+onPeriodReach(frame: number, callback: Callback<number>): void
+```
+
+Subscribes to period reached events. When the period of frame capturing reaches the value of frame parameter, the callback is invoked.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-onPeriodReach(frame: long, callback: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| frame | number | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## onReadData
+
+```TypeScript
+onReadData(callback: Callback<ArrayBuffer>): void
+```
+
+Subscribes audio data callback. The event is triggered when audio buffer is available for reading more data.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-onReadData(callback: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## onStateChange
+
+```TypeScript
+onStateChange(callback: Callback<AudioState>): void
+```
+
+Subscribes audio state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void--><!--Device-AudioCapturer-onStateChange(callback: Callback<AudioState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 |
+
+## on_audioCapturerChange
 
 ```TypeScript
 on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void
@@ -816,6 +1093,8 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): vo
 监听录音流配置变化事件（当音频录制流状态变化、设备变化时触发）。使用callback异步回调。订阅内部是异步实现，是非精确回调，在录音流配置变化的同时注册回调，收到的返回结果存在变化可能性。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void--><!--Device-AudioCapturer-on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): void-End-->
 
@@ -832,22 +1111,128 @@ on(type: 'audioCapturerChange', callback: Callback<AudioCapturerChangeInfo>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('readData')
+## on_audioInterrupt
+
+```TypeScript
+on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void
+```
+
+监听音频中断事件（当音频焦点发生变化时触发）。使用callback异步回调。 AudioCapturer对象在start事件时获取焦点，在pause、stop等事件时释放焦点，无需开发者主动申请。 调用此方法后，如果AudioCapturer对象获取焦点失败或发生中断事件（如被其他音频打断等），会收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md#InterruptEvent)。建议应用根据 InterruptEvent的信息进行进一步处理。更多信息请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void--><!--Device-AudioCapturer-on(type: 'audioInterrupt', callback: Callback<InterruptEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Interrupt
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'audioInterrupt' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptEvent](arkts-audio-audio-interruptevent-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_inputDeviceChange
+
+```TypeScript
+on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void
+```
+
+监听音频输入设备变化事件（当音频输入设备发生变化时触发）。使用callback异步回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void--><!--Device-AudioCapturer-on(type: 'inputDeviceChange', callback: Callback<AudioDeviceDescriptors>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Device
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'inputDeviceChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_markReach
+
+```TypeScript
+on(type: 'markReach', frame: number, callback: Callback<number>): void
+```
+
+监听标记到达事件（当采集的帧数达到frame参数的值时触发，仅调用一次）。使用callback异步回调。 如果将frame设置为100，当采集帧数到达第100帧时，系统将上报信息。
+
+**起始版本：** 8
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'markReach', frame: long, callback: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'markReach' | 是 |
+| frame | number | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## on_periodReach
+
+```TypeScript
+on(type: 'periodReach', frame: number, callback: Callback<number>): void
+```
+
+监听标记到达事件（当采集的帧数达到frame参数的值时触发，即按周期上报信息）。使用callback异步回调。 如果将frame设置为10，每渲染10帧数据均会上报信息（例如：第10帧、第20帧、第30帧......）。
+
+**起始版本：** 8
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void--><!--Device-AudioCapturer-on(type: 'periodReach', frame: long, callback: Callback<long>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'periodReach' | 是 |
+| frame | number | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+## on_readData
 
 ```TypeScript
 on(type: 'readData', callback: Callback<ArrayBuffer>): void
 ```
 
-监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。
-
-回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。
-
-为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100ms数据进行静音。
+监听音频数据读取回调事件（当需要读取音频流数据时触发）。使用callback异步回调。 回调函数仅用来读取音频数据，请勿在回调函数中调用AudioCapturer相关接口。 为了消除麦克风硬件设计带来的上电杂音，通常会对录音启动后的前100ms数据进行静音。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void--><!--Device-AudioCapturer-on(type: 'readData', callback: Callback<ArrayBuffer>): void-End-->
 
@@ -864,8 +1249,31 @@ on(type: 'readData', callback: Callback<ArrayBuffer>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_stateChange
+
+```TypeScript
+on(type: 'stateChange', callback: Callback<AudioState>): void
+```
+
+监听状态变化事件（当AudioCapturer状态发生变化时触发）。使用callback异步回调。
+
+**起始版本：** 8
+
+**废弃版本：** -1
+
+<!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void--><!--Device-AudioCapturer-on(type: 'stateChange', callback: Callback<AudioState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'stateChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AudioState&gt; | 是 |
 
 ## read
 
@@ -879,7 +1287,7 @@ read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>
 
 **废弃版本：** 11
 
-**替代接口：** [readData](ohos.multimedia.audio.AudioCapturer#event:readData)
+**替代接口：** readData
 
 <!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void--><!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>): void-End-->
 
@@ -905,7 +1313,7 @@ read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 
 **废弃版本：** 11
 
-**替代接口：** [readData](ohos.multimedia.audio.AudioCapturer#event:readData)
+**替代接口：** readData
 
 <!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>--><!--Device-AudioCapturer-read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>-End-->
 
@@ -932,7 +1340,9 @@ release(callback: AsyncCallback<void>): void
 
 释放音频采集器。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -952,7 +1362,9 @@ release(): Promise<void>
 
 释放音频采集器。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-release(): Promise<void>--><!--Device-AudioCapturer-release(): Promise<void>-End-->
 
@@ -970,13 +1382,11 @@ release(): Promise<void>
 requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 ```
 
-请求启动内录流接口，内录流只能通过该接口触发启动。使用callback异步回调。
-
-内录是指以系统内部音频数据作为音频源的输入类型，简称为内录，对应的流称为内录流。常用于录制目标设备应用发送到系统以供播放的音频。
-
-该接口为非阻塞接口，系统接收到内录启动请求后，会继续处理用户授权检查和内录流启动，最终结果通过回调函数返回。
+请求启动内录流接口，内录流只能通过该接口触发启动。使用callback异步回调。 内录是指以系统内部音频数据作为音频源的输入类型，简称为内录，对应的流称为内录流。常用于录制目标设备应用发送到系统以供播放的音频。 该接口为非阻塞接口，系统接收到内录启动请求后，会继续处理用户授权检查和内录流启动，最终结果通过回调函数返回。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -996,13 +1406,11 @@ requestPlaybackCaptureStart(callback: Callback<PlaybackCaptureStartState>): void
 setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: number): void
 ```
 
-设置独立的音频会话策略和行为参数。
-
-> **说明：**
-> 
-> 当音频采集器在运行状态时调用此接口后，必须重新调用接口[start](#start)使其生效。
+设置独立的音频会话策略和行为参数。 > **说明：** > > 当音频采集器在运行状态时调用此接口后，必须重新调用接口[start](#start)使其生效。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1021,8 +1429,8 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
 ## setMuteHint
 
@@ -1030,19 +1438,11 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 setMuteHint(mute: boolean): Promise<void>
 ```
 
-应用将当前录音流的自身静音状态传递给系统音频模块。&lt;!--RP1--&gt;该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。&lt;!--RP1End--&gt;使用Promise异步回调。
-
-> **说明：**
-> 
-> - 该接口用于向系统音频模块上报应用自身的静音状态，不会改变录音流的实际静音状态。
-> 
-> - 该接口仅在录音流处于运行态时允许调用，否则返回错误码6800103。
-> 
-> - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口
-> [AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setCapturerMuteHint)时，流级
-> [setMuteHint](#setMuteHint)优先级更高，数值以流级设置值为准。
+应用将当前录音流的自身静音状态传递给系统音频模块。&lt;!--RP1--&gt;该接口不会触发录音流静音，当前仅在部分PC/2in1设备上用于优化设备功耗。&lt;!--RP1End--&gt;使用Promise异步回调。 > **说明：** > > - 该接口用于向系统音频模块上报应用自身的静音状态，不会改变录音流的实际静音状态。 > > - 该接口仅在录音流处于运行态时允许调用，否则返回错误码6800103。 > > - 同一录音流同时设置流级静音提示接口（本接口）和会话级静音提示接口 > [AudioSessionManager.setCapturerMuteHint](arkts-audio-audio-audiosessionmanager-i.md#setCapturerMuteHint)时，流级 > [setMuteHint](#setMuteHint)优先级更高，数值以流级设置值为准。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1066,7 +1466,7 @@ setMuteHint(mute: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
 
 ## setNoiseReductionMode
 
@@ -1074,9 +1474,11 @@ setMuteHint(mute: boolean): Promise<void>
 setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 ```
 
-设置当前音频捕获器的降噪模式。支持的模式需要通过{@link#getSupportedNoiseReduceModes}获取。实际效果可能因不同的音频设备而异，当有多个时将无效同时运行的录制流。只能在已创建和已停止状态下更改模式。
+设置当前音频捕获器的降噪模式。 支持的模式需要通过{@link#getSupportedNoiseReduceModes}获取。 实际效果可能因不同的音频设备而异，当有多个时将无效 同时运行的录制流。 只能在已创建和已停止状态下更改模式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1094,10 +1496,10 @@ setNoiseReductionMode(noiseReductionMode: NoiseReductionMode): void
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 ## setWillMuteWhenInterrupted
 
@@ -1107,7 +1509,9 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 设置当前录制音频流是否启用[静音打断模式](../../../media/audio/using-audiocapturer-for-recording.md#设置静音打断模式)。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>--><!--Device-AudioCapturer-setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>-End-->
 
@@ -1129,7 +1533,7 @@ setWillMuteWhenInterrupted(muteWhenInterrupted: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-状态不支持) |
+| [6800103](../errorcode-audio.md#6800103-状态不支持) |
 
 ## start
 
@@ -1139,7 +1543,9 @@ start(callback: AsyncCallback<void>): void
 
 启动音频采集器，开始获取音频数据。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-start(callback: AsyncCallback<void>): void-End-->
 
@@ -1159,7 +1565,9 @@ start(): Promise<void>
 
 启动音频采集器，开始获取音频数据。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-start(): Promise<void>--><!--Device-AudioCapturer-start(): Promise<void>-End-->
 
@@ -1179,7 +1587,9 @@ stop(callback: AsyncCallback<void>): void
 
 停止音频采集器，停止输入音频流。使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void--><!--Device-AudioCapturer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -1199,7 +1609,9 @@ stop(): Promise<void>
 
 停止音频采集器，停止输入音频流。使用Promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-stop(): Promise<void>--><!--Device-AudioCapturer-stop(): Promise<void>-End-->
 
@@ -1221,7 +1633,9 @@ readonly state: AudioState
 
 **类型：** AudioState
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturer-readonly state: AudioState--><!--Device-AudioCapturer-readonly state: AudioState-End-->
 

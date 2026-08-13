@@ -4,6 +4,8 @@ Describes the dialog box response result.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-promptAction-interface ShowDialogSuccessResponse--><!--Device-promptAction-interface ShowDialogSuccessResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Index of the selected button in the **buttons** array, starting from **0**.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

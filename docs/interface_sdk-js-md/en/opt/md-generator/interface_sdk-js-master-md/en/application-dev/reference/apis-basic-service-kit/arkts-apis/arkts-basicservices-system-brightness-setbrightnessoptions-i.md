@@ -24,6 +24,8 @@ complete?: () => void
 
 Called when an API call is complete.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 7
@@ -40,6 +42,8 @@ fail?: (data: string, code: number) => void
 
 Called when an API call has failed. **data** indicates the error information, and **code** indicates the error code.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 7
@@ -48,13 +52,6 @@ Called when an API call has failed. **data** indicates the error information, an
 
 **System capability:** SystemCapability.PowerManager.DisplayPowerManager.Lite
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
 ## success
 
 ```TypeScript
@@ -62,6 +59,8 @@ success?: () => void
 ```
 
 Called when an API call is successful.
+
+**Type:** () =&gt; void
 
 **Since:** 3
 
@@ -77,12 +76,7 @@ Called when an API call is successful.
 value: number
 ```
 
-Screen brightness. The value is an integer ranging from **1** to **255**.
-
-- If the value is less than or equal to **0**, value **1** will be used.  
-- If the value is greater than **255**, value **255** will be used.  
-- If the value contains decimals, the integral part of the value will be used. For example, if value **8.1** is set  
-, value **8** will be used.
+Screen brightness. The value is an integer ranging from **1** to **255**. - If the value is less than or equal to **0**, value **1** will be used. - If the value is greater than **255**, value **255** will be used. - If the value contains decimals, the integral part of the value will be used. For example, if value **8.1** is set , value **8** will be used.
 
 **Type:** number
 

@@ -1,11 +1,6 @@
 # AbilityType
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md#AbilityType) instead.
-
-Enumerates the ability types.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.AbilityType](arkts-ability-bundlemanager-abilitytype-e.md#AbilityType) instead. Enumerates the ability types.
 
 **Since:** 7
 
@@ -51,7 +46,7 @@ FA developed using the Page template to provide the capability of interacting wi
 
 **Deprecated since:** 9
 
-**Substitutes:** [PAGE](ohos.bundle.bundleManager/bundleManager.AbilityType#PAGE)
+**Substitutes:** [PAGE](arkts-ability-bundlemanager-abilitytype-e.md#PAGE)
 
 <!--Device-AbilityType-PAGE = 1--><!--Device-AbilityType-PAGE = 1-End-->
 
@@ -71,7 +66,7 @@ PA developed using the Service template to provide the capability of running tas
 
 **Deprecated since:** 9
 
-**Substitutes:** [SERVICE](ohos.bundle.bundleManager/bundleManager.AbilityType#SERVICE)
+**Substitutes:** [SERVICE](arkts-ability-bundlemanager-abilitytype-e.md#SERVICE)
 
 <!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
 
@@ -91,7 +86,7 @@ PA developed using the Data template to provide unified data access for external
 
 **Deprecated since:** 9
 
-**Substitutes:** [DATA](ohos.bundle.bundleManager/bundleManager.AbilityType#DATA)
+**Substitutes:** [DATA](arkts-ability-bundlemanager-abilitytype-e.md#DATA)
 
 <!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
 

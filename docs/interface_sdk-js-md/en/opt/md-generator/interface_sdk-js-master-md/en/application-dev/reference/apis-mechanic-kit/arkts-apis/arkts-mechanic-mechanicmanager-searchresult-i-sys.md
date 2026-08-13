@@ -2,7 +2,9 @@
 
 Search result.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface SearchResult--><!--Device-mechanicManager-export interface SearchResult-End-->
 
@@ -26,7 +28,9 @@ Search result. Returns the number of targets found.0 means not found.
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SearchResult-targetCount: int--><!--Device-SearchResult-targetCount: int-End-->
 

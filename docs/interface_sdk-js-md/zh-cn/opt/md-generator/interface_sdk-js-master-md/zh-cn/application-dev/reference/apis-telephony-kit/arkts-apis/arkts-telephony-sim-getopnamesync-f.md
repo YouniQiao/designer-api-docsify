@@ -8,7 +8,9 @@ function getOpNameSync(slotId: number): string
 
 Obtains the operator name of the SIM card in a specified slot.
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-function getOpNameSync(slotId: int): string--><!--Device-sim-function getOpNameSync(slotId: int): string-End-->
 

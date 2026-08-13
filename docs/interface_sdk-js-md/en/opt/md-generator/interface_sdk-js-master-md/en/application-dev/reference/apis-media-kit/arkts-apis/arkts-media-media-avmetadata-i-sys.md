@@ -1,10 +1,10 @@
 # AVMetadata
 
-Defines the audio and video metadata. Parameters that are not declared as read-only in  
-[AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of  
-[AVRecorder](arkts-media-media-avrecorder-i.md#AVRecorder).
+Defines the audio and video metadata. Parameters that are not declared as read-only in [AVRecorderConfig](arkts-media-media-avrecorderconfig-i.md#AVRecorderConfig) can be used as input parameters for recording of [AVRecorder](arkts-media-media-avrecorder-i.md#AVRecorder).
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVMetadata--><!--Device-media-interface AVMetadata-End-->
 
@@ -22,11 +22,13 @@ import { media } from '@kit.MediaKit';
 gltf_offset?: string
 ```
 
-The offset value of GLTF 3D model in media file. This parameter is not supported in AVRecorder settings.If the media file has no GLTF 3D model, gltf_offset is undefined.
+The offset value of GLTF 3D model in media file. This parameter is not supported in AVRecorder settings. If the media file has no GLTF 3D model, gltf_offset is undefined.
 
 **Type:** string
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadata-gltf_offset?: string--><!--Device-AVMetadata-gltf_offset?: string-End-->
 

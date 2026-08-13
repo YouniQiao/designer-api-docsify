@@ -14,9 +14,11 @@ function getAllWindowLayoutInfo(displayId: number): Promise<Array<WindowLayoutIn
 
 Obtains the layout information array of all windows visible on a display. The layout information is arranged based on the current window stacking order, and the topmost window in the hierarchy is at index 0 of the array. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>--><!--Device-window-function getAllWindowLayoutInfo(displayId: long): Promise<Array<WindowLayoutInfo>>-End-->
 
@@ -38,10 +40,10 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
 
 
 ## getAllWindowLayoutInfo
@@ -50,9 +52,11 @@ Obtains the layout information array of all windows visible on a display. The la
 function getAllWindowLayoutInfo(displayId: number, option?: WindowInfoOptions): Promise<Array<WindowLayoutInfo>>
 ```
 
-Obtains the array of window layout info visible on a specified screen.The width and height of each rect are calculated after scaling. The array is sorted by the current window level.The index of the array corresponding to the highest level is 0.
+Obtains the array of window layout info visible on a specified screen. The width and height of each rect are calculated after scaling. The array is sorted by the current window level. The index of the array corresponding to the highest level is 0.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +83,6 @@ Obtains the array of window layout info visible on a specified screen.The width 
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |

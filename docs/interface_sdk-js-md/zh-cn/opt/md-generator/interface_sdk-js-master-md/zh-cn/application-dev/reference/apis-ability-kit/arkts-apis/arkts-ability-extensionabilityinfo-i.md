@@ -1,9 +1,10 @@
 # ExtensionAbilityInfo
 
-ExtensionAbility信息，可以通过  
-[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)获取自身的ExtensionAbility信息，其中参数[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)至少包含GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY。
+ExtensionAbility信息，可以通过 [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) 获取自身的ExtensionAbility信息，其中参数[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag)至少包含 GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ExtensionAbilityInfo--><!--Device-unnamed-export interface ExtensionAbilityInfo-End-->
 
@@ -19,7 +20,9 @@ readonly appIndex: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExtensionAbilityInfo-readonly appIndex: int--><!--Device-ExtensionAbilityInfo-readonly appIndex: int-End-->
 
@@ -28,22 +31,18 @@ readonly appIndex: number
 ## applicationInfo
 
 ```TypeScript
-readonly applicationInfo: ApplicationInfo
+readonly applicationInfo: ApplicationInfo | null
 ```
 
-应用程序的配置信息&lt;!--Del--&gt;，可以通过调用  
-[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md#queryExtensionAbilityInfo)接口，extensionAbilityFlags参数传入GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION获取&lt;!--DelEnd--&gt;。
+Obtains configuration information about an application
 
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)或者  
-[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getBundleInfo)接口获取ExtensionAbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md#BundleInfo).appInfo对象来获取相关信息。
+**类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md) \| null
 
-**类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
+<!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo | null--><!--Device-ExtensionAbilityInfo-readonly applicationInfo: ApplicationInfo | null-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -57,7 +56,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -75,7 +76,9 @@ ExtensionAbility的描述资源ID。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -93,7 +96,9 @@ ExtensionAbility是否可用，取值为true表示ExtensionAbility可用，取�
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -111,7 +116,9 @@ readonly exported: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -129,7 +136,9 @@ ExtensionAbility类型。
 
 **类型：** bundleManager.ExtensionAbilityType
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -143,14 +152,15 @@ ExtensionAbility类型。
 readonly extensionAbilityTypeName: string
 ```
 
-ExtensionAbility的类型名称，取值请参考  
-[extensionabilities标签下的type字段](../../../quick-start/module-configuration-file.md#extensionabilities标签)。
+ExtensionAbility的类型名称，取值请参考 [extensionabilities标签下的type字段](../../../quick-start/module-configuration-file.md#extensionabilities标签)。
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ExtensionAbilityInfo-readonly extensionAbilityTypeName: string--><!--Device-ExtensionAbilityInfo-readonly extensionAbilityTypeName: string-End-->
 
@@ -166,7 +176,9 @@ ExtensionAbility的图标资源ID。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -184,7 +196,9 @@ ExtensionAbility的标签资源ID。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -198,12 +212,13 @@ ExtensionAbility的标签资源ID。
 readonly metadata: Array<Metadata>
 ```
 
-ExtensionAbility的元信息。通过调用  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY和GET_BUNDLE_INFO_WITH_METADATA获取。
+ExtensionAbility的元信息。通过调用 [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf)接 口，bundleFlags参数传入GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY和 GET_BUNDLE_INFO_WITH_METADATA获取。
 
 **类型：** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -221,7 +236,9 @@ ExtensionAbility所属的HAP的名称。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -239,7 +256,9 @@ ExtensionAbility名称。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -257,7 +276,9 @@ readonly permissions: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -275,7 +296,9 @@ readonly readPermission: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -293,9 +316,11 @@ ExtensionAbility的Skills信息。
 
 **类型：** Array&lt;[Skill](arkts-ability-skill-i.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ExtensionAbilityInfo-readonly skills: Array<Skill>--><!--Device-ExtensionAbilityInfo-readonly skills: Array<Skill>-End-->
 
@@ -311,7 +336,9 @@ readonly writePermission: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

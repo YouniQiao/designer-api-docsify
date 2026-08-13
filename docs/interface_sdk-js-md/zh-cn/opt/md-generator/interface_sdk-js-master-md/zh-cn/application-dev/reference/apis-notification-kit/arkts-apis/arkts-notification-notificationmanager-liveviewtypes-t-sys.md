@@ -6,7 +6,9 @@ export type LiveViewTypes = _LiveViewTypes
 
 描述实况通知的类型。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type LiveViewTypes = _LiveViewTypes--><!--Device-notificationManager-export type LiveViewTypes = _LiveViewTypes-End-->
 

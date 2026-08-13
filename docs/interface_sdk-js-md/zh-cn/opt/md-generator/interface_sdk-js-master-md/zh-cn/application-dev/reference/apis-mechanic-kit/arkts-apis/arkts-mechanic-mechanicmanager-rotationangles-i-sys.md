@@ -2,7 +2,9 @@
 
 The rotion angles, relative to the current position.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface RotationAngles--><!--Device-mechanicManager-export interface RotationAngles-End-->
 
@@ -20,7 +22,9 @@ pitch?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAngles-pitch?: double--><!--Device-RotationAngles-pitch?: double-End-->
 
@@ -38,7 +42,9 @@ roll?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAngles-roll?: double--><!--Device-RotationAngles-roll?: double-End-->
 
@@ -56,7 +62,9 @@ yaw?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAngles-yaw?: double--><!--Device-RotationAngles-yaw?: double-End-->
 

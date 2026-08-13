@@ -2,7 +2,9 @@
 
 Enumerates the permission states.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityAccessCtrl-export enum PermissionStatus--><!--Device-abilityAccessCtrl-export enum PermissionStatus-End-->
 
@@ -16,9 +18,11 @@ DENIED = -1
 
 The permission is not granted.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-DENIED = -1--><!--Device-PermissionStatus-DENIED = -1-End-->
 
@@ -32,9 +36,11 @@ GRANTED = 0
 
 The permission is granted.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-GRANTED = 0--><!--Device-PermissionStatus-GRANTED = 0-End-->
 
@@ -46,11 +52,13 @@ The permission is granted.
 NOT_DETERMINED = 1
 ```
 
-Indicates not operated. The app declares a [user authorization permission](arkts-ability-permissions-t.md#Permissions) but has not yet called the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser)API to request authorization, or the user has changed the permission status to asking eve this value is returned when querying the permission status.
+Indicates not operated. The app declares a [user authorization permission](arkts-ability-permissions-t.md#Permissions) but has not yet called the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) API to request authorization, or the user has changed the permission status to asking eve this value is returned when querying the permission status.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-NOT_DETERMINED = 1--><!--Device-PermissionStatus-NOT_DETERMINED = 1-End-->
 
@@ -62,12 +70,13 @@ Indicates not operated. The app declares a [user authorization permission](arkts
 INVALID = 2
 ```
 
-The permission is invalid. The application does not  
-[declare permissions](../../../security/AccessToken/declare-permissions.md) or cannot process the request. For example, if the status of the approximate location permission is **NOT_DETERMINED**, this value will be returned when the status of the precise location permission is queried.
+The permission is invalid. The application does not [declare permissions](../../../security/AccessToken/declare-permissions.md) or cannot process the request. For example, if the status of the approximate location permission is **NOT_DETERMINED**, this value will be returned when the status of the precise location permission is queried.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-INVALID = 2--><!--Device-PermissionStatus-INVALID = 2-End-->
 
@@ -79,12 +88,13 @@ The permission is invalid. The application does not
 RESTRICTED = 3
 ```
 
-Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the  
-[requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) API. &lt;!--RP2End--&gt;
+Indicates restricted. &lt;!--RP2--&gt;The app is prohibited from requesting user authorization through the [requestPermissionsFromUser](arkts-ability-abilityaccessctrl-atmanager-i.md#requestPermissionsFromUser) API. &lt;!--RP2End--&gt;
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PermissionStatus-RESTRICTED = 3--><!--Device-PermissionStatus-RESTRICTED = 3-End-->
 

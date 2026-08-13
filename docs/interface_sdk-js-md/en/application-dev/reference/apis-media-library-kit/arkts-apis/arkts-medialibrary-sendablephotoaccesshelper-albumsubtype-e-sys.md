@@ -6,6 +6,8 @@ Enumerate the album subtypes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype--><!--Device-sendablePhotoAccessHelper-const enum AlbumSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -21,6 +23,8 @@ Hidden album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-HIDDEN--><!--Device-AlbumSubtype-HIDDEN-End-->
 
@@ -40,6 +44,8 @@ Trash.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-TRASH--><!--Device-AlbumSubtype-TRASH-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -57,6 +63,8 @@ Album for screenshots and screen recording files.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-SCREENSHOT--><!--Device-AlbumSubtype-SCREENSHOT-End-->
 
@@ -76,6 +84,8 @@ Album for photos and videos taken by the camera.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-CAMERA--><!--Device-AlbumSubtype-CAMERA-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -93,6 +103,8 @@ Source album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
 
@@ -112,6 +124,8 @@ Classified album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -129,6 +143,8 @@ Geographic location album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
 
@@ -148,6 +164,8 @@ City album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-GEOGRAPHY_CITY--><!--Device-AlbumSubtype-GEOGRAPHY_CITY-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -165,6 +183,8 @@ Shooting mode album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-SHOOTING_MODE--><!--Device-AlbumSubtype-SHOOTING_MODE-End-->
 
@@ -184,6 +204,8 @@ Portrait album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-PORTRAIT--><!--Device-AlbumSubtype-PORTRAIT-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -201,6 +223,8 @@ Group photo album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-GROUP_PHOTO--><!--Device-AlbumSubtype-GROUP_PHOTO-End-->
 
@@ -220,6 +244,8 @@ Highlights album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -237,6 +263,8 @@ Highlights suggestion album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS-End-->
 

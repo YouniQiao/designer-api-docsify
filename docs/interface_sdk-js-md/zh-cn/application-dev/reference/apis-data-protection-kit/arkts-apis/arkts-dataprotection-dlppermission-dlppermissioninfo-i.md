@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-dlpPermission-export interface DLPPermissionInfo--><!--Device-dlpPermission-export interface DLPPermissionInfo-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -24,6 +26,8 @@ dlpFileAccess: DLPFileAccess
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-DLPPermissionInfo-dlpFileAccess: DLPFileAccess--><!--Device-DLPPermissionInfo-dlpFileAccess: DLPFileAccess-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -41,6 +45,8 @@ flags: number
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-DLPPermissionInfo-flags: number--><!--Device-DLPPermissionInfo-flags: number-End-->
 

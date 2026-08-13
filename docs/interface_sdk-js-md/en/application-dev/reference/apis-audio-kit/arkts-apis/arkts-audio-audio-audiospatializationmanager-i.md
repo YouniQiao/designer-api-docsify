@@ -2,9 +2,11 @@
 
 Implements audio spatialization management.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
 
@@ -24,9 +26,11 @@ isSpatializationEnabledForCurrentDevice(): boolean
 
 Checks whether spatial audio rendering is enabled for the current device. This API returns the result synchronously.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean-End-->
 
@@ -38,7 +42,37 @@ Checks whether spatial audio rendering is enabled for the current device. This A
 | --- | --- |
 | boolean | Check result for whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
 
-## off('spatializationEnabledChangeForCurrentDevice')
+## offSpatializationEnabledChangeForCurrentDevice
+
+```TypeScript
+offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void
+```
+
+Unsubscribes to the spatialization enable state change events by the current device.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Spatialization
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+
+## off_spatializationEnabledChangeForCurrentDevice
 
 ```TypeScript
 off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
@@ -50,6 +84,8 @@ Unsubscribes from the spatial audio rendering status change event of the current
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -59,27 +95,29 @@ Unsubscribes from the spatial audio rendering status change event of the current
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForCurrentDevice' | Yes | Event type. The event **'spatializationEnabledChangeForCurrentDevice'** is triggered when the spatial audio rendering status is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to return the result, indicating whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to return the result, indicating whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## offSpatializationEnabledChangeForCurrentDevice
+## onSpatializationEnabledChangeForCurrentDevice
 
 ```TypeScript
-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void
+onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void
 ```
 
-Unsubscribes to the spatialization enable state change events by the current device.
+Subscribes to the spatialization enable state change events by the current device. When the spatialization enable state changes, registered clients will receive the callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
 
@@ -87,15 +125,15 @@ Unsubscribes to the spatialization enable state change events by the current dev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to get the spatialization enable state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 
-## on('spatializationEnabledChangeForCurrentDevice')
+## on_spatializationEnabledChangeForCurrentDevice
 
 ```TypeScript
 on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void
@@ -107,6 +145,8 @@ Subscribes to the spatial audio rendering status change event of the current dev
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Spatialization
@@ -116,39 +156,11 @@ Subscribes to the spatial audio rendering status change event of the current dev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'spatializationEnabledChangeForCurrentDevice' | Yes | Event type. The event **'spatializationEnabledChangeForCurrentDevice'** is triggered when the spatial audio rendering status is changed. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result, indicating whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result, indicating whether spatial audio rendering is enabled. **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-
-## onSpatializationEnabledChangeForCurrentDevice
-
-```TypeScript
-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void
-```
-
-Subscribes to the spatialization enable state change events by the current device.When the spatialization enable state changes, registered clients will receive the callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Spatialization
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback used to get the spatialization enable state. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 

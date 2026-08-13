@@ -2,9 +2,11 @@
 
 Enumerates the touch event types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum Action--><!--Device-unnamed-export declare enum Action-End-->
 
@@ -18,9 +20,11 @@ CANCEL = 0
 
 Touch canceled. The **DOWN** event of the touchscreen is interrupted unexpectedly and does not close normally. For example, the **CANCEL** event is triggered when the finger is pressed but not lifted, the screen is rotated or folded, or a new hover occurs.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Action-CANCEL = 0--><!--Device-Action-CANCEL = 0-End-->
 
@@ -34,9 +38,11 @@ DOWN = 1
 
 Touch down.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Action-DOWN = 1--><!--Device-Action-DOWN = 1-End-->
 
@@ -50,9 +56,11 @@ MOVE = 2
 
 Touch moved.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Action-MOVE = 2--><!--Device-Action-MOVE = 2-End-->
 
@@ -66,9 +74,11 @@ UP = 3
 
 Touch up.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Action-UP = 3--><!--Device-Action-UP = 3-End-->
 
@@ -80,13 +90,13 @@ Touch up.
 PULL_DOWN = 4
 ```
 
-Drag started.
-
-**Since**: 26.0.0
+Drag started. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,13 +110,13 @@ Drag started.
 PULL_MOVE = 5
 ```
 
-Dragging.
-
-**Since**: 26.0.0
+Dragging. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,13 +130,13 @@ Dragging.
 PULL_UP = 6
 ```
 
-Drag ended.
-
-**Since**: 26.0.0
+Drag ended. **Since**: 26.0.0
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

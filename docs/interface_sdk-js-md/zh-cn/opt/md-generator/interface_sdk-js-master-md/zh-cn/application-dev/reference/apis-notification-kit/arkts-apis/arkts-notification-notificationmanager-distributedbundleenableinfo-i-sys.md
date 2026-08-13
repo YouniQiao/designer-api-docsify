@@ -2,7 +2,9 @@
 
 描述多设备协同的包信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export interface DistributedBundleEnableInfo--><!--Device-notificationManager-export interface DistributedBundleEnableInfo-End-->
 
@@ -26,7 +28,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedBundleEnableInfo-bundleName: string--><!--Device-DistributedBundleEnableInfo-bundleName: string-End-->
 
@@ -44,7 +48,9 @@ enable?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedBundleEnableInfo-enable?: boolean--><!--Device-DistributedBundleEnableInfo-enable?: boolean-End-->
 
@@ -62,7 +68,9 @@ uid: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DistributedBundleEnableInfo-uid: int--><!--Device-DistributedBundleEnableInfo-uid: int-End-->
 

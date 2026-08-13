@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void
 ```
 
-Removes a notification slot of a specified type for this application. This API uses an asynchronous callback to return the result.
+Removes a notification slot of a specified type for this application. This API uses an asynchronous callback to return the result. After deletion, the corresponding type of notification slot and its configuration will be permanently removed. When a notification of this type is published subsequently, the system will automatically create a default slot. Notifications already published through this slot are not affected and can still be viewed in the notification center. This is suitable for scenarios where a slot needs to be deleted and then recreated for reconfiguration.
 
-After deletion, the corresponding type of notification slot and its configuration will be permanently removed. When a notification of this type is published subsequently, the system will automatically create a default slot. Notifications already published through this slot are not affected and can still be viewed in the notification center. This is suitable for scenarios where a slot needs to be deleted and then recreated for reconfiguration.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -24,11 +24,11 @@ After deletion, the corresponding type of notification slot and its configuratio
 
 **See also:**
 
-[addSlot](notificationManager.addSlot(slotType: SlotType,callback: AsyncCallback<void>): void) adds a notification slot of
+addSlot adds a notification slot of
 
-[getSlot](notificationManager.getSlot(slotType: SlotType,callback: AsyncCallback<NotificationSlot>): void) obtains a
+getSlot obtains a
 
-[removeAllSlots](notificationManager.removeAllSlots(callback: AsyncCallback): void) removes all notification
+removeAllSlots removes all notification
 
 **Parameters:**
 
@@ -41,10 +41,10 @@ After deletion, the corresponding type of notification slot and its configuratio
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -70,11 +70,11 @@ notificationManager.removeSlot(slotType, removeSlotCallback);
 function removeSlot(slotType: SlotType): Promise<void>
 ```
 
-Removes a notification slot of a specified type for this application. This API uses a promise to return the result.
+Removes a notification slot of a specified type for this application. This API uses a promise to return the result. After deletion, the corresponding notification slot and its configuration will be permanently removed. When a notification of this type is published subsequently, the system will automatically create a default slot. Notifications already published through this slot are not affected and can still be viewed in the notification center. This is suitable for scenarios where a slot needs to be deleted and then recreated for reconfiguration.
 
-After deletion, the corresponding notification slot and its configuration will be permanently removed.When a notification of this type is published subsequently, the system will automatically create a default slot. Notifications already published through this slot are not affected and can still be viewed in the notification center. This is suitable for scenarios where a slot needs to be deleted and then recreated for reconfiguration.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function removeSlot(slotType: SlotType): Promise<void>--><!--Device-notificationManager-function removeSlot(slotType: SlotType): Promise<void>-End-->
 
@@ -82,11 +82,11 @@ After deletion, the corresponding notification slot and its configuration will b
 
 **See also:**
 
-[addSlot](notificationManager.addSlot(slotType: SlotType): Promise<void>) adds a notification slot of
+addSlot adds a notification slot of
 
-[getSlot](notificationManager.getSlot(slotType: SlotType,): Promise<NotificationSlot>) obtains a notification slot of a
+getSlot obtains a notification slot of a
 
-[removeAllSlots](notificationManager.removeAllSlots(): Promise<void>) removes all notification
+removeAllSlots removes all notification
 
 **Parameters:**
 
@@ -104,10 +104,10 @@ After deletion, the corresponding notification slot and its configuration will b
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

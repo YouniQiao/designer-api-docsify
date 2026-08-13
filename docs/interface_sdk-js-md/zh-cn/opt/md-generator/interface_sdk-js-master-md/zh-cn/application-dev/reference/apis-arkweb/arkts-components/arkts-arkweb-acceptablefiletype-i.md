@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface AcceptableFileType--><!--Device-unnamed-declare interface AcceptableFileType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ acceptableType: Array<string>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-AcceptableFileType-acceptableType: Array<string>--><!--Device-AcceptableFileType-acceptableType: Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ mimeType: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AcceptableFileType-mimeType: string--><!--Device-AcceptableFileType-mimeType: string-End-->
 

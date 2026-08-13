@@ -1,10 +1,10 @@
 # @ohos.multimedia.audioHaptic
 
-Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages.
+Audio-haptic enables users to get rhythmic auditory and haptic feedback while having incoming calls or messages. **Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
 
-**Device behavior difference**: For a device without a vibration component, no vibration effect is generated.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace audioHaptic--><!--Device-unnamed-declare namespace audioHaptic-End-->
 
@@ -22,7 +22,7 @@ import { audioHaptic } from '@kit.AudioKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getaudiohapticmanager) |
+| [getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager) |
 
 ### Interfaces
 

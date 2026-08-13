@@ -2,7 +2,9 @@
 
 Represents an encoded binary data block.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface EncodingBlob--><!--Device-cert-interface EncodingBlob-End-->
 
@@ -24,7 +26,9 @@ Encoded data.
 
 **Type:** Uint8Array
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Encoding format.
 
 **Type:** [EncodingFormat](arkts-devicecertificate-cert-encodingformat-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

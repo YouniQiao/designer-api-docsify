@@ -1,8 +1,22 @@
 # @ohos.graphics.colorSpaceManager(Color Space Management)
 
-This module provides basic capabilities for managing abstract color space objects, including creating criterion color space objects (such as sRGB, DCI-P3, and BT2020) and custom color space objects, as well as obtaining attributes such as the color space type, white point value, and gamma value. It is suitable for scenarios where color consistency needs to be ensured, such as image processing, video rendering, and cross-device color display. It helps you implement accurate color management and conversion, improving user experience in color display.
+/*
+ Copyright (C) 2022-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 9
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace colorSpaceManager--><!--Device-unnamed-declare namespace colorSpaceManager-End-->
 
@@ -21,7 +35,7 @@ import { colorSpaceManager } from '@kit.ArkGraphics2D';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) |
-| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create-1) |
+| [create](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) |
 
 ### Interfaces
 

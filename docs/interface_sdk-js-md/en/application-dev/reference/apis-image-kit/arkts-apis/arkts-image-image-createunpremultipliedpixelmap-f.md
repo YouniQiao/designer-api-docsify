@@ -14,9 +14,11 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: A
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
 
@@ -28,16 +30,16 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 | --- | --- | --- | --- |
 | src | PixelMap | Yes | The source pixelmap. |
 | dst | PixelMap | Yes | The destination pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation fails, an error message is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980246](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
-| [62980248](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
+| [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
 ## Examples
 
@@ -77,9 +79,11 @@ function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<vo
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createUnpremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
 
@@ -102,10 +106,10 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
-| [62980246](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
-| [62980248](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) | Failed to read the pixelMap. |
+| [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) | Pixelmap not allow modify. |
 
 ## Examples
 

@@ -16,6 +16,8 @@ Obtains the Want corresponding to the ability to start. This API uses an asynchr
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void--><!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void-End-->
@@ -52,6 +54,8 @@ function getWant(): Promise<Want>
 Obtains the Want corresponding to the ability to start. This API uses a promise to return the result.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

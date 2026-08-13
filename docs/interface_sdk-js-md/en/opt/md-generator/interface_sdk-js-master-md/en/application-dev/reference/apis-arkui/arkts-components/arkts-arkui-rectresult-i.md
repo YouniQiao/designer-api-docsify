@@ -4,6 +4,8 @@ Describes the position, width, and height of a component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RectResult--><!--Device-unnamed-declare interface RectResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Describes the position, width, and height of a component.
 height: number
 ```
 
-Content height.
-
-Unit: vp.
+Content height. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Unit: vp.
 width: number
 ```
 
-Content width.
-
-Unit: vp.
+Content width. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,13 +60,13 @@ Unit: vp.
 x: number
 ```
 
-X-coordinate.
-
-Unit: vp.
+X-coordinate. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,13 +82,13 @@ Unit: vp.
 y: number
 ```
 
-Y-coordinate.
-
-Unit: vp.
+Y-coordinate. Unit: vp.
 
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

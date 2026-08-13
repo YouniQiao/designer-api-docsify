@@ -2,7 +2,9 @@
 
 Enumerates gesture event types.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ActionType--><!--Device-unnamed-export declare enum ActionType-End-->
 
@@ -16,7 +18,9 @@ CANCEL = 0
 
 Canceled.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionType-CANCEL = 0--><!--Device-ActionType-CANCEL = 0-End-->
 
@@ -30,7 +34,9 @@ BEGIN = 1
 
 Started.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionType-BEGIN = 1--><!--Device-ActionType-BEGIN = 1-End-->
 
@@ -44,7 +50,9 @@ UPDATE = 2
 
 Updated.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionType-UPDATE = 2--><!--Device-ActionType-UPDATE = 2-End-->
 
@@ -58,7 +66,9 @@ END = 3
 
 Ended.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ActionType-END = 3--><!--Device-ActionType-END = 3-End-->
 

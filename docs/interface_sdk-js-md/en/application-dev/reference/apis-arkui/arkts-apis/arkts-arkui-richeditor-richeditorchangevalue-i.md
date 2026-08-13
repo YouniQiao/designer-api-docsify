@@ -6,6 +6,8 @@ Provides an interface for changes in the text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorChangeValue--><!--Device-unnamed-export declare interface RichEditorChangeValue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Range of content that will be replaced.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Image spans to replace.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorChangeValue-replacedImageSpans: Array<RichEditorImageSpanResult>--><!--Device-RichEditorChangeValue-replacedImageSpans: Array<RichEditorImageSpanResult>-End-->
@@ -64,6 +70,8 @@ Text spans to replace.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorChangeValue-replacedSpans: Array<RichEditorTextSpanResult>--><!--Device-RichEditorChangeValue-replacedSpans: Array<RichEditorTextSpanResult>-End-->
@@ -83,6 +91,8 @@ Symbol spans to replace.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

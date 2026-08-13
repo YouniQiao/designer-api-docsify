@@ -6,6 +6,8 @@ Enumerates the Ukey PIN authentication states.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-huksExternalCrypto-export enum HuksExternalPinAuthState--><!--Device-huksExternalCrypto-export enum HuksExternalPinAuthState-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -21,6 +23,8 @@ The Ukey PIN is not authenticated.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0--><!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_NO_AUTH = 0-End-->
 
@@ -38,6 +42,8 @@ The Ukey PIN is authenticated successfully.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1--><!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED = 1-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
@@ -53,6 +59,8 @@ The Ukey PIN is locked.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_LOCKED = 2--><!--Device-HuksExternalPinAuthState-HUKS_EXT_CRYPTO_PIN_LOCKED = 2-End-->
 

@@ -4,6 +4,8 @@ Enumerates the directions of barriers with mirror mode support.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LocalizedBarrierDirection--><!--Device-unnamed-declare enum LocalizedBarrierDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ START = 0
 The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#LocalizedBarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ The barrier is on the right (for left-to-right scripts) or left (for right-to-le
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -50,10 +56,11 @@ The barrier is on the right (for left-to-right scripts) or left (for right-to-le
 TOP = 2
 ```
 
-The barrier is at the top of all the referenced components specified by   
-[referencedId](arkts-arkui-localizedbarrierstyle-i.md#LocalizedBarrierStyle).
+The barrier is at the top of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#LocalizedBarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,10 +76,11 @@ The barrier is at the top of all the referenced components specified by
 BOTTOM = 3
 ```
 
-The barrier is at the bottom of all the referenced components specified by   
-[referencedId](arkts-arkui-localizedbarrierstyle-i.md#LocalizedBarrierStyle).
+The barrier is at the bottom of all the referenced components specified by [referencedId](arkts-arkui-localizedbarrierstyle-i.md#LocalizedBarrierStyle).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

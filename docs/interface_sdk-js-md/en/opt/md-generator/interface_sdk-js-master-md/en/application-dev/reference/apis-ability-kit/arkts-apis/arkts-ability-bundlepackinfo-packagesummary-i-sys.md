@@ -2,7 +2,9 @@
 
 PackageSummary: the package summary class.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PackageSummary--><!--Device-unnamed-export interface PackageSummary-End-->
 
@@ -20,7 +22,9 @@ Bundle configuration information.
 
 **Type:** [BundleConfigInfo](arkts-ability-bundlepackinfo-bundleconfiginfo-i-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PackageSummary-readonly app: BundleConfigInfo--><!--Device-PackageSummary-readonly app: BundleConfigInfo-End-->
 
@@ -38,7 +42,9 @@ Module configuration information of the bundle.
 
 **Type:** Array&lt;[ModuleConfigInfo](arkts-ability-bundlepackinfo-moduleconfiginfo-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PackageSummary-readonly modules: Array<ModuleConfigInfo>--><!--Device-PackageSummary-readonly modules: Array<ModuleConfigInfo>-End-->
 

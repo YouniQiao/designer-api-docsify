@@ -8,7 +8,9 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 系统应用调用此接口，可以获取当前用户的权限使用记录开关状态，例如在权限管理界面展示当前开关设置状态。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -28,10 +30,10 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -63,6 +65,8 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -89,11 +93,11 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 

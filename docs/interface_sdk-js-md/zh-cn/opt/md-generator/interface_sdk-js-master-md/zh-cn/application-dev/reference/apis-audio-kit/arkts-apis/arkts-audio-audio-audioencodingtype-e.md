@@ -2,7 +2,9 @@
 
 表示音频编码类型的枚举。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum AudioEncodingType--><!--Device-audio-enum AudioEncodingType-End-->
 
@@ -16,7 +18,9 @@ ENCODING_TYPE_INVALID = -1
 
 无效。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +36,9 @@ ENCODING_TYPE_RAW = 0
 
 PCM编码。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -2,13 +2,35 @@
 
 Enumerates the album keys.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum AlbumKeys--><!--Device-photoAccessHelper-enum AlbumKeys-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## ALBUM_LPATH
+
+```TypeScript
+ALBUM_LPATH = 'lpath'
+```
+
+Virtual path of the album. Albums and their virtual path values: - Camera application album: '/DCIM/Camera' - Screenshot application album: '/Pictures/Screenshots' - Screen recording application album: '/Pictures/Screenrecords' - User-created album: '/Pictures/Users/{Custom album name}'
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'--><!--Device-AlbumKeys-ALBUM_LPATH = 'lpath'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
 
 ## BUNDLE_NAME
 
@@ -18,9 +40,11 @@ BUNDLE_NAME = 'bundle_name'
 
 Bundle name of the album.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumKeys-BUNDLE_NAME = 'bundle_name'--><!--Device-AlbumKeys-BUNDLE_NAME = 'bundle_name'-End-->
 
@@ -36,9 +60,11 @@ DATE_MODIFIED = 'date_modified'
 
 Timestamp when the album was modified, in milliseconds.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumKeys-DATE_MODIFIED = 'date_modified'--><!--Device-AlbumKeys-DATE_MODIFIED = 'date_modified'-End-->
 
@@ -54,9 +80,11 @@ COVER_URI_SOURCE = 'cover_uri_source'
 
 Source URI of the album cover.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumKeys-COVER_URI_SOURCE = 'cover_uri_source'--><!--Device-AlbumKeys-COVER_URI_SOURCE = 'cover_uri_source'-End-->
 
@@ -72,9 +100,11 @@ UPLOAD_STATUS = 'upload_status'
 
 Synchronization status of the album.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumKeys-UPLOAD_STATUS = 'upload_status'--><!--Device-AlbumKeys-UPLOAD_STATUS = 'upload_status'-End-->
 
@@ -92,7 +122,9 @@ Hidden status.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,7 +144,9 @@ directory hidden state of filemanager
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

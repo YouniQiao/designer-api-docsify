@@ -4,7 +4,9 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 <!--Device-backgroundLoader-export enum StopCode--><!--Device-backgroundLoader-export enum StopCode-End-->
 
@@ -20,7 +22,9 @@ SUCCESS = 0
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +42,9 @@ SYSTEM_ERROR = 1
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,7 +62,9 @@ PERCEPTIBLE_ERROR = 2
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,7 +82,9 @@ TIMEOUT_ERROR = 3
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,7 +102,9 @@ EXECUTE_ERROR = 4
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

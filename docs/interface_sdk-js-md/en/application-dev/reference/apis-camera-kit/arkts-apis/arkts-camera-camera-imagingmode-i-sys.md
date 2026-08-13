@@ -2,13 +2,15 @@
 
 Implements imaging mode.
 
-**Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#ImagingModeQuery)
+**Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#ImagingModeQuery-(System-API))
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-camera-interface ImagingMode extends ImagingModeQuery--><!--Device-camera-interface ImagingMode extends ImagingModeQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface ImagingMode--><!--Device-camera-interface ImagingMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -30,7 +32,9 @@ Gets current imaging mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,8 +54,8 @@ Gets current imaging mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## setImagingMode
 
@@ -63,7 +67,9 @@ Sets imaging mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,6 +89,6 @@ Sets imaging mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 

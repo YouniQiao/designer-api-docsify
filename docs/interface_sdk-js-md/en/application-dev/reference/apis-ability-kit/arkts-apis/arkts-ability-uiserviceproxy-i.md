@@ -1,14 +1,12 @@
 # UIServiceProxy
 
-UIServiceProxy functions as a proxy to send data from the UIServiceExtensionAbility client to the server.
+UIServiceProxy functions as a proxy to send data from the UIServiceExtensionAbility client to the server. > **NOTE：**> > - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
 
-> **NOTE：**
-> 
-> - The APIs of this module must be used in the main thread, but not in child threads such as Worker and TaskPool.
+**Since:** 23
 
-**Since:** 14
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default interface UIServiceProxy--><!--Device-unnamed-export default interface UIServiceProxy-End-->
 
@@ -20,16 +18,13 @@ UIServiceProxy functions as a proxy to send data from the UIServiceExtensionAbil
 sendData(data: Record<string, Object>): void
 ```
 
-Sends data to the UIServiceExtensionAbility server.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Sends data to the UIServiceExtensionAbility server. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,8 +44,8 @@ Sends data to the UIServiceExtensionAbility server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples
 
@@ -145,16 +140,13 @@ struct UIServiceExtensionAbility {
 sendData(data: Record<string, RecordData>): void
 ```
 
-Sends data to the UIServiceExtensionAbility server.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the stage model, see
-> [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
+Sends data to the UIServiceExtensionAbility server. > **NOTE：**> > For details about the startup rules for the components in the stage model, see > [Component Startup Rules (Stage Model)](../../../application-models/component-startup-rules.md).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,5 +164,5 @@ Sends data to the UIServiceExtensionAbility server.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible cause: Connect to stub failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible cause: Connect to stub failed. |
 

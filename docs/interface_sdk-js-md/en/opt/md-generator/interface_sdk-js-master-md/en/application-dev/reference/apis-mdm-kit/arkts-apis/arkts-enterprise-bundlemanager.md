@@ -1,17 +1,16 @@
-# @ohos.enterprise.bundleManager(Bundle Management)
+# @ohos.enterprise.bundleManager
 
-This module provides package management capabilities, including installing and uninstalling application packages, and managing the installation trustlist, installation blocklist, uninstallation blocklist, and distribution types of installable applications. In enterprise device management scenarios, these capabilities enable fine-grained control over application installation and uninstallation, preventing unauthorized installations and uninstallations, thereby safeguarding enterprise device security and reducing security risks.
+This module provides package management capabilities, including installing and uninstalling application packages, and managing the installation trustlist, installation blocklist, uninstallation blocklist, and distribution types of installable applications. In enterprise device management scenarios, these capabilities enable fine-grained control over application installation and uninstallation, preventing unauthorized installations and uninstallations, thereby safeguarding enterprise device security and reducing security risks. > **NOTE：**> > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
-> **NOTE：**
-> 
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
-> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+**Since:** 10
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace bundleManager--><!--Device-unnamed-declare namespace bundleManager-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -25,62 +24,69 @@ import { bundleManager } from '@kit.MDMKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles) |
-| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles-1) |
-| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f.md#addallowedinstallbundles-2) |
-| [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addallowedinstallbundlessync) |
-| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles) |
-| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles-1) |
-| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f.md#adddisallowedinstallbundles-2) |
-| [addDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-adddisallowedinstallbundlessync-f.md#adddisallowedinstallbundlessync) |
-| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles) |
-| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles-1) |
-| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f.md#adddisalloweduninstallbundles-2) |
-| [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#adddisalloweduninstallbundlessync) |
-| [addInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-addinstallationallowedappdistributiontypes-f.md#addinstallationallowedappdistributiontypes) |
-| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles) |
-| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles-1) |
-| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f.md#getallowedinstallbundles-2) |
-| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync) |
-| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getallowedinstallbundlessync-1) |
-| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles) |
-| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles-1) |
-| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f.md#getdisallowedinstallbundles-2) |
-| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getdisallowedinstallbundlessync) |
-| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getdisallowedinstallbundlessync-1) |
-| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles) |
-| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles-1) |
-| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f.md#getdisalloweduninstallbundles-2) |
-| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync) |
-| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getdisalloweduninstallbundlessync-1) |
-| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getinstallationallowedappdistributiontypes) |
-| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getinstallationallowedappdistributiontypes-1) |
-| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist) |
-| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getinstalledbundlelist-1) |
-| [getInstalledBundleStorageStats](arkts-mdm-bundlemanager-getinstalledbundlestoragestats-f.md#getinstalledbundlestoragestats) |
+| [addAllowedInstallBundlesSync](arkts-mdm-bundlemanager-addallowedinstallbundlessync-f.md#addAllowedInstallBundlesSync) |
+| [addDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-adddisallowedinstallbundlessync-f.md#addDisallowedInstallBundlesSync) |
+| [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md#addDisallowedUninstallBundlesSync) |
+| [addInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-addinstallationallowedappdistributiontypes-f.md#addInstallationAllowedAppDistributionTypes) |
+| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getAllowedInstallBundlesSync) |
+| [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md#getAllowedInstallBundlesSync) |
+| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getDisallowedInstallBundlesSync) |
+| [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md#getDisallowedInstallBundlesSync) |
+| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getDisallowedUninstallBundlesSync) |
+| [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md#getDisallowedUninstallBundlesSync) |
+| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getInstallationAllowedAppDistributionTypes) |
+| [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md#getInstallationAllowedAppDistributionTypes) |
+| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getInstalledBundleList) |
+| [getInstalledBundleList](arkts-mdm-bundlemanager-getinstalledbundlelist-f.md#getInstalledBundleList) |
+| [getInstalledBundleStorageStats](arkts-mdm-bundlemanager-getinstalledbundlestoragestats-f.md#getInstalledBundleStorageStats) |
 | [install](arkts-mdm-bundlemanager-install-f.md#install) |
-| [install](arkts-mdm-bundlemanager-install-f.md#install-1) |
-| [install](arkts-mdm-bundlemanager-install-f.md#install-2) |
-| [installForResult](arkts-mdm-bundlemanager-installforresult-f.md#installforresult) |
-| [installMarketApps](arkts-mdm-bundlemanager-installmarketapps-f.md#installmarketapps) |
-| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles) |
-| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles-1) |
-| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f.md#removeallowedinstallbundles-2) |
-| [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeallowedinstallbundlessync) |
-| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles) |
-| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles-1) |
-| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f.md#removedisallowedinstallbundles-2) |
-| [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removedisallowedinstallbundlessync) |
-| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles) |
-| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles-1) |
-| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f.md#removedisalloweduninstallbundles-2) |
-| [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removedisalloweduninstallbundlessync) |
-| [removeInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-removeinstallationallowedappdistributiontypes-f.md#removeinstallationallowedappdistributiontypes) |
+| [installForResult](arkts-mdm-bundlemanager-installforresult-f.md#installForResult) |
+| [installMarketApps](arkts-mdm-bundlemanager-installmarketapps-f.md#installMarketApps) |
+| [removeAllowedInstallBundlesSync](arkts-mdm-bundlemanager-removeallowedinstallbundlessync-f.md#removeAllowedInstallBundlesSync) |
+| [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md#removeDisallowedInstallBundlesSync) |
+| [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md#removeDisallowedUninstallBundlesSync) |
+| [removeInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-removeinstallationallowedappdistributiontypes-f.md#removeInstallationAllowedAppDistributionTypes) |
 | [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall) |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-1) |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-2) |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-3) |
-| [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4) |
+
+<!--Del-->
+### Functions（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f-sys.md#addAllowedInstallBundles-(System-API)) |
+| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f-sys.md#addAllowedInstallBundles-(System-API)) |
+| [addAllowedInstallBundles](arkts-mdm-bundlemanager-addallowedinstallbundles-f-sys.md#addAllowedInstallBundles-(System-API)) |
+| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f-sys.md#addDisallowedInstallBundles-(System-API)) |
+| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f-sys.md#addDisallowedInstallBundles-(System-API)) |
+| [addDisallowedInstallBundles](arkts-mdm-bundlemanager-adddisallowedinstallbundles-f-sys.md#addDisallowedInstallBundles-(System-API)) |
+| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f-sys.md#addDisallowedUninstallBundles-(System-API)) |
+| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f-sys.md#addDisallowedUninstallBundles-(System-API)) |
+| [addDisallowedUninstallBundles](arkts-mdm-bundlemanager-adddisalloweduninstallbundles-f-sys.md#addDisallowedUninstallBundles-(System-API)) |
+| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f-sys.md#getAllowedInstallBundles-(System-API)) |
+| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f-sys.md#getAllowedInstallBundles-(System-API)) |
+| [getAllowedInstallBundles](arkts-mdm-bundlemanager-getallowedinstallbundles-f-sys.md#getAllowedInstallBundles-(System-API)) |
+| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f-sys.md#getDisallowedInstallBundles-(System-API)) |
+| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f-sys.md#getDisallowedInstallBundles-(System-API)) |
+| [getDisallowedInstallBundles](arkts-mdm-bundlemanager-getdisallowedinstallbundles-f-sys.md#getDisallowedInstallBundles-(System-API)) |
+| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f-sys.md#getDisallowedUninstallBundles-(System-API)) |
+| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f-sys.md#getDisallowedUninstallBundles-(System-API)) |
+| [getDisallowedUninstallBundles](arkts-mdm-bundlemanager-getdisalloweduninstallbundles-f-sys.md#getDisallowedUninstallBundles-(System-API)) |
+| [install](arkts-mdm-bundlemanager-install-f-sys.md#install-(System-API)) |
+| [install](arkts-mdm-bundlemanager-install-f-sys.md#install-(System-API)) |
+| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f-sys.md#removeAllowedInstallBundles-(System-API)) |
+| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f-sys.md#removeAllowedInstallBundles-(System-API)) |
+| [removeAllowedInstallBundles](arkts-mdm-bundlemanager-removeallowedinstallbundles-f-sys.md#removeAllowedInstallBundles-(System-API)) |
+| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f-sys.md#removeDisallowedInstallBundles-(System-API)) |
+| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f-sys.md#removeDisallowedInstallBundles-(System-API)) |
+| [removeDisallowedInstallBundles](arkts-mdm-bundlemanager-removedisallowedinstallbundles-f-sys.md#removeDisallowedInstallBundles-(System-API)) |
+| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f-sys.md#removeDisallowedUninstallBundles-(System-API)) |
+| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f-sys.md#removeDisallowedUninstallBundles-(System-API)) |
+| [removeDisallowedUninstallBundles](arkts-mdm-bundlemanager-removedisalloweduninstallbundles-f-sys.md#removeDisallowedUninstallBundles-(System-API)) |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f-sys.md#uninstall-(System-API)) |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f-sys.md#uninstall-(System-API)) |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f-sys.md#uninstall-(System-API)) |
+| [uninstall](arkts-mdm-bundlemanager-uninstall-f-sys.md#uninstall-(System-API)) |
+<!--DelEnd-->
 
 ### Interfaces
 

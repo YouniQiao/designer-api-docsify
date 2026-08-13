@@ -1,10 +1,12 @@
 # ISO8601DateTimeFormatOptions
 
-Represents optional configuration items for the ISO8601DateTimeFormat object.These options determine which elements need to be displayed after formatting and the corresponding format.
+Represents optional configuration items for the ISO8601DateTimeFormat object. These options determine which elements need to be displayed after formatting and the corresponding format.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface ISO8601DateTimeFormatOptions--><!--Device-i18n-export interface ISO8601DateTimeFormatOptions-End-->
 
@@ -22,13 +24,15 @@ import { i18n } from '@kit.LocalizationKit';
 dateFormat?: 'calendar' | 'ordinal' | 'week'
 ```
 
-The ISO 8601 date format to format. The value can be: "calendar", the format is yyyy-MM-dd; "ordinal",the format is yyyy-DDD; "week", the format is YYYY-Www-e. Default value is "calendar".
+The ISO 8601 date format to format. The value can be: "calendar", the format is yyyy-MM-dd; "ordinal", the format is yyyy-DDD; "week", the format is YYYY-Www-e. Default value is "calendar".
 
 **Type:** 'calendar' \| 'ordinal' \| 'week'
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +54,9 @@ Check if need to show time zone part. Default value is true that show time zone.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +72,15 @@ Check if need to show time zone part. Default value is true that show time zone.
 separatorStyle?: 'extended' | 'basic'
 ```
 
-The date time separator style. The value can be: "extended": with -/:, "basic": compact mode.Default separator style is "extended".
+The date time separator style. The value can be: "extended": with -/:, "basic": compact mode. Default separator style is "extended".
 
 **Type:** 'extended' \| 'basic'
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,7 +102,9 @@ The ISO 8601 time precision to format. The value can be: "dateOnly", "hours", "m
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,11 +122,13 @@ timeZone?: TimeZone
 
 TimeZone object used to format date, default value UTC.
 
-**Type:** [TimeZone](arkts-localization-i18n-timezone-c.md)
+**Type:** [TimeZone](../../apis-na/arkts-apis/arkts-na-i18n-timezone-c.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

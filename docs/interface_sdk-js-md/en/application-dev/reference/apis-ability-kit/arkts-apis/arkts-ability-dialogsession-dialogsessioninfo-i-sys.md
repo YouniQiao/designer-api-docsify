@@ -2,9 +2,11 @@
 
 Provides session information, including the requester information, target ability information list, and other parameters.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-dialogSession-export interface DialogSessionInfo--><!--Device-dialogSession-export interface DialogSessionInfo-End-->
 
@@ -28,9 +30,11 @@ Ability information of the requester.
 
 **Type:** [DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,20 +47,22 @@ Ability information of the requester.
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: Record<string, RecordData>
 ```
 
 Other parameters.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DialogSessionInfo-parameters?: Record<string, Object>--><!--Device-DialogSessionInfo-parameters?: Record<string, Object>-End-->
+<!--Device-DialogSessionInfo-parameters?: Record<string, RecordData>--><!--Device-DialogSessionInfo-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -72,9 +78,11 @@ List of target ability information.
 
 **Type:** Array&lt;[DialogAbilityInfo](arkts-ability-dialogsession-dialogabilityinfo-i-sys.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

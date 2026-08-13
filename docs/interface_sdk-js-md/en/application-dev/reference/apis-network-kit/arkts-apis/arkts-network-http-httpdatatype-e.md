@@ -2,9 +2,11 @@
 
 Indicates the type of the returned data.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-http-export enum HttpDataType--><!--Device-http-export enum HttpDataType-End-->
 
@@ -18,11 +20,13 @@ STRING
 
 The returned type is string.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpDataType-STRING--><!--Device-HttpDataType-STRING-End-->
 
@@ -36,11 +40,13 @@ OBJECT = 1
 
 The returned type is Object.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpDataType-OBJECT = 1--><!--Device-HttpDataType-OBJECT = 1-End-->
 
@@ -54,11 +60,13 @@ ARRAY_BUFFER = 2
 
 The returned type is ArrayBuffer.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpDataType-ARRAY_BUFFER = 2--><!--Device-HttpDataType-ARRAY_BUFFER = 2-End-->
 

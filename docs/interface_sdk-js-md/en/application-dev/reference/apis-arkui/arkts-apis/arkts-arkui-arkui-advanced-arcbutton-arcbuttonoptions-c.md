@@ -1,12 +1,12 @@
 # ArcButtonOptions
 
-The class for ArcButtonOptions.
+Defines the default or custom style parameters for the **ArcButton** component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ArcButtonOptions--><!--Device-unnamed-export declare class ArcButtonOptions-End-->
 
@@ -24,11 +24,15 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 constructor(options: CommonArcButtonOptions)
 ```
 
-Constructor of the CommonArcButtonOptions.
+A constructor used to create an **ArcButton** component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonOptions-constructor(options: CommonArcButtonOptions)--><!--Device-ArcButtonOptions-constructor(options: CommonArcButtonOptions)-End-->
 
@@ -38,313 +42,381 @@ Constructor of the CommonArcButtonOptions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CommonArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Yes |  |
+| options | [CommonArcButtonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Yes | Text, background color, shadow, and other parameters of the **ArcButton** component. |
 
 ## backgroundBlurStyle
 
 ```TypeScript
-public backgroundBlurStyle: BlurStyle
+backgroundBlurStyle: BlurStyle
 ```
 
-Describe the blurred background style of the arc-shaped button.
+Background blur style of the arc button. Default value: **BlurStyle.NONE**
 
 **Type:** BlurStyle
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public backgroundBlurStyle: BlurStyle--><!--Device-ArcButtonOptions-public backgroundBlurStyle: BlurStyle-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-backgroundBlurStyle: BlurStyle--><!--Device-ArcButtonOptions-backgroundBlurStyle: BlurStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## backgroundColor
 
 ```TypeScript
-public backgroundColor: ColorMetrics
+backgroundColor: ColorMetrics
 ```
 
-Describes the arc button background color.
+Background color of the arc button. This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**. Default value: **Color.Black**
 
 **Type:** ColorMetrics
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public backgroundColor: ColorMetrics--><!--Device-ArcButtonOptions-public backgroundColor: ColorMetrics-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-backgroundColor: ColorMetrics--><!--Device-ArcButtonOptions-backgroundColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontColor
 
 ```TypeScript
-public fontColor: ColorMetrics
+fontColor: ColorMetrics
 ```
 
-Describes the arc button text color.
+Font color of the arc button. This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**. Default value: **Color.White**
 
 **Type:** ColorMetrics
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public fontColor: ColorMetrics--><!--Device-ArcButtonOptions-public fontColor: ColorMetrics-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-fontColor: ColorMetrics--><!--Device-ArcButtonOptions-fontColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontFamily
 
 ```TypeScript
-public fontFamily: string | Resource
+fontFamily: string | Resource
 ```
 
-Describes the arc button text family.
+Font family of the arc button.
 
 **Type:** string \| Resource
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public fontFamily: string | Resource--><!--Device-ArcButtonOptions-public fontFamily: string | Resource-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-fontFamily: string | Resource--><!--Device-ArcButtonOptions-fontFamily: string | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontMargin
 
 ```TypeScript
-public fontMargin: LocalizedMargin
+fontMargin: LocalizedMargin
 ```
 
-Describes the arc button text margin.
+Margin of the arc button text. Default value: **{start:24vp, top: 10vp,end: 24vp, bottom:16vp }**
 
 **Type:** LocalizedMargin
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public fontMargin: LocalizedMargin--><!--Device-ArcButtonOptions-public fontMargin: LocalizedMargin-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-fontMargin: LocalizedMargin--><!--Device-ArcButtonOptions-fontMargin: LocalizedMargin-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontSize
 
 ```TypeScript
-public fontSize: LengthMetrics
+fontSize: LengthMetrics
 ```
 
-Describes the arc button text size.
+Font size of the arc button. Default value: **19fp**
 
 **Type:** LengthMetrics
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public fontSize: LengthMetrics--><!--Device-ArcButtonOptions-public fontSize: LengthMetrics-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-fontSize: LengthMetrics--><!--Device-ArcButtonOptions-fontSize: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## fontStyle
 
 ```TypeScript
-public fontStyle: FontStyle
+fontStyle: FontStyle
 ```
 
-Describes the arc button text style.
+Font style of the arc button. Default value: **FontStyle.Normal**
 
 **Type:** FontStyle
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public fontStyle: FontStyle--><!--Device-ArcButtonOptions-public fontStyle: FontStyle-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-fontStyle: FontStyle--><!--Device-ArcButtonOptions-fontStyle: FontStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## label
 
 ```TypeScript
-public label: ResourceStr
+label: ResourceStr
 ```
 
-Describes the arc button displays text.
+Text displayed on the arc button.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public label: ResourceStr--><!--Device-ArcButtonOptions-public label: ResourceStr-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-label: ResourceStr--><!--Device-ArcButtonOptions-label: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## onClick
 
 ```TypeScript
-public onClick?: Callback<ClickEvent>
+onClick?: Callback<ClickEvent>
 ```
 
-Describes the arc button click event.
+Callback triggered by click actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public onClick?: Callback<ClickEvent>--><!--Device-ArcButtonOptions-public onClick?: Callback<ClickEvent>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-onClick?: Callback<ClickEvent>--><!--Device-ArcButtonOptions-onClick?: Callback<ClickEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## onTouch
 
 ```TypeScript
-public onTouch?: Callback<TouchEvent>
+onTouch?: Callback<TouchEvent>
 ```
 
-Describes the arc button touch event.
+Callback triggered by touch actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public onTouch?: Callback<TouchEvent>--><!--Device-ArcButtonOptions-public onTouch?: Callback<TouchEvent>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-onTouch?: Callback<TouchEvent>--><!--Device-ArcButtonOptions-onTouch?: Callback<TouchEvent>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## position
 
 ```TypeScript
-public position: ArcButtonPosition
+position: ArcButtonPosition
 ```
 
-Describes the position of button on screen.
+Type of the arc button. Default value: **ArcButtonPosition.BOTTOM_EDGE**
 
-**Type:** [ArcButtonPosition](arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
+**Type:** [ArcButtonPosition](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public position: ArcButtonPosition--><!--Device-ArcButtonOptions-public position: ArcButtonPosition-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-position: ArcButtonPosition--><!--Device-ArcButtonOptions-position: ArcButtonPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## pressedFontColor
 
 ```TypeScript
-public pressedFontColor: ColorMetrics
+pressedFontColor: ColorMetrics
 ```
 
-Describes the arc button pressed text color.
+Font color of the arc button when pressed. This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**. Default value: **Color.White**
 
 **Type:** ColorMetrics
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public pressedFontColor: ColorMetrics--><!--Device-ArcButtonOptions-public pressedFontColor: ColorMetrics-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-pressedFontColor: ColorMetrics--><!--Device-ArcButtonOptions-pressedFontColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## progressConfig
 
 ```TypeScript
-public progressConfig?: ArcButtonProgressConfig
+progressConfig?: ArcButtonProgressConfig
 ```
 
-Sets the ArcButton progress bar parameters.When not set, the button style is used.When set, the progress style is used.
+Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button) ). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button) ). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode) attribute. Default value: default values of all properties of [ArcButtonProgressConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig)
 
-**Type:** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+**Type:** [ArcButtonProgressConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ArcButtonOptions-public progressConfig?: ArcButtonProgressConfig--><!--Device-ArcButtonOptions-public progressConfig?: ArcButtonProgressConfig-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArcButtonOptions-progressConfig?: ArcButtonProgressConfig--><!--Device-ArcButtonOptions-progressConfig?: ArcButtonProgressConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## shadowColor
 
 ```TypeScript
-public shadowColor: ColorMetrics
+shadowColor: ColorMetrics
 ```
 
-Describes the arc button shadow color.
+Shadow color of the arc button. Default value: **Color.Black**
 
 **Type:** ColorMetrics
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public shadowColor: ColorMetrics--><!--Device-ArcButtonOptions-public shadowColor: ColorMetrics-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-shadowColor: ColorMetrics--><!--Device-ArcButtonOptions-shadowColor: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## shadowEnabled
 
 ```TypeScript
-public shadowEnabled: boolean
+shadowEnabled: boolean
 ```
 
-Describes the arc button shadow switch.
+Whether to enable the shadow for the arc button. Default value: **false** The value **true** means to enable the shadow, and **false** means the opposite.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public shadowEnabled: boolean--><!--Device-ArcButtonOptions-public shadowEnabled: boolean-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-shadowEnabled: boolean--><!--Device-ArcButtonOptions-shadowEnabled: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## status
 
 ```TypeScript
-public status: ArcButtonStatus
+status: ArcButtonStatus
 ```
 
-Describes the arc button status.
+Status of the arc button. Default value: **ArcButtonStatus.NORMAL**
 
-**Type:** [ArcButtonStatus](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
+**Type:** [ArcButtonStatus](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public status: ArcButtonStatus--><!--Device-ArcButtonOptions-public status: ArcButtonStatus-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-status: ArcButtonStatus--><!--Device-ArcButtonOptions-status: ArcButtonStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## styleMode
 
 ```TypeScript
-public styleMode: ArcButtonStyleMode
+styleMode: ArcButtonStyleMode
 ```
 
-Describes the arc button style mode.
+Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig) style. Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 
-**Type:** [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
+**Type:** [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-ArcButtonOptions-public styleMode: ArcButtonStyleMode--><!--Device-ArcButtonOptions-public styleMode: ArcButtonStyleMode-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcButtonOptions-styleMode: ArcButtonStyleMode--><!--Device-ArcButtonOptions-styleMode: ArcButtonStyleMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

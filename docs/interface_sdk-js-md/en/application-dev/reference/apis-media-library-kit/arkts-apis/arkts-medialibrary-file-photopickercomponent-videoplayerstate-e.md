@@ -1,10 +1,12 @@
 # VideoPlayerState
 
-VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
+Enumerates the video playback states.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum VideoPlayerState--><!--Device-unnamed-export declare enum VideoPlayerState-End-->
 
@@ -16,13 +18,15 @@ VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
 PLAYING = 0
 ```
 
-PLAYING. video is playing
+The video is being played.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-PLAYING = 0--><!--Device-VideoPlayerState-PLAYING = 0-End-->
 
@@ -34,13 +38,15 @@ PLAYING. video is playing
 PAUSED = 1
 ```
 
-PAUSED. video is paused
+Video playback is paused.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-PAUSED = 1--><!--Device-VideoPlayerState-PAUSED = 1-End-->
 
@@ -52,13 +58,15 @@ PAUSED. video is paused
 STOPPED = 2
 ```
 
-STOPPED. video is stopped
+Video playback is stopped.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-STOPPED = 2--><!--Device-VideoPlayerState-STOPPED = 2-End-->
 
@@ -70,13 +78,15 @@ STOPPED. video is stopped
 SEEK_START = 3
 ```
 
-SEEK_START. seek drag is start
+Started dragging the progress bar.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-SEEK_START = 3--><!--Device-VideoPlayerState-SEEK_START = 3-End-->
 
@@ -88,13 +98,15 @@ SEEK_START. seek drag is start
 SEEK_FINISH = 4
 ```
 
-SEEK_FINISH. seek drag is finish
+Finished dragging the progress bar.
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-VideoPlayerState-SEEK_FINISH = 4--><!--Device-VideoPlayerState-SEEK_FINISH = 4-End-->
 

@@ -2,7 +2,9 @@
 
 Defines the touch point information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Touch--><!--Device-unnamed-export declare interface Touch-End-->
 
@@ -26,6 +28,8 @@ Touch point attribute ID. Currently, only single-finger touch is supported. The 
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Touch-blobId?: int--><!--Device-Touch-blobId?: int-End-->
@@ -44,7 +48,9 @@ Corrected value of the screenX coordinate in one-hand mode, in px.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-fixedDisplayX?: int--><!--Device-Touch-fixedDisplayX?: int-End-->
 
@@ -62,7 +68,9 @@ Corrected value of the screenY coordinate in one-hand mode, in px.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-fixedDisplayY?: int--><!--Device-Touch-fixedDisplayY?: int-End-->
 

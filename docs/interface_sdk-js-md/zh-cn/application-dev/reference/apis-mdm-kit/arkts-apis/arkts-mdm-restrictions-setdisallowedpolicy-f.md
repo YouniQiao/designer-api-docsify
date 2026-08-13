@@ -6,12 +6,7 @@
 function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): void
 ```
 
-设置禁用/启用某特性。
-
-> **说明：**
-> 
-> 本接口为设备级禁用策略，影响设备所有用户。如需针对特定用户设置禁用策略，请使用
-> [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount)接口。
+设置禁用/启用某特性。 > **说明：** > > 本接口为设备级禁用策略，影响设备所有用户。如需针对特定用户设置禁用策略，请使用 > [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount)接口。
 
 **起始版本：** 12
 
@@ -19,7 +14,7 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [setDisallowedPolicy](restrictions.setDisallowedPolicy(admin:)
+**替代接口：** [setDisallowedPolicy](#setDisallowedPolicy)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **需要权限：** 
 - API版本20+：ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS or ohos.permission.ENTERPRISE_MANAGE_NETWORK
@@ -44,10 +39,10 @@ function setDisallowedPolicy(admin: Want, feature: string, disallow: boolean): v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) | The enterprise management policy has been successfully set, but the function has not taken effect in real time.<br>**适用版本：** 21+ |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) | The enterprise management policy has been successfully set, but the function has not taken effect in real time.<br>**适用版本：** 21+ |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 
@@ -83,6 +78,8 @@ function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: b
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS or ohos.permission.PERSONAL_MANAGE_RESTRICTIONS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -103,12 +100,12 @@ function setDisallowedPolicy(admin: Want, feature: FeatureForDevice, disallow: b
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9200013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [9200010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200010-策略冲突) | A conflict policy has been configured. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
-| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
+| [9200013](../errorcode-enterpriseDeviceManager.md#9200013-管控未实时生效) | The enterprise management policy has been successfully set, but the function has not taken effect in real time. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) | A conflict policy has been configured. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 
 ## 示例
 

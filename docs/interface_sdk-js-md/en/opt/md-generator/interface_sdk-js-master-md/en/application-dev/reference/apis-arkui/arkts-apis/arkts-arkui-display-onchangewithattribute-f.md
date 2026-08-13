@@ -16,6 +16,8 @@ Subscribes to changes of specified attributes of a display.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: Callback<long>): void--><!--Device-display-function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: Callback<long>): void-End-->
@@ -33,8 +35,8 @@ Subscribes to changes of specified attributes of a display.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

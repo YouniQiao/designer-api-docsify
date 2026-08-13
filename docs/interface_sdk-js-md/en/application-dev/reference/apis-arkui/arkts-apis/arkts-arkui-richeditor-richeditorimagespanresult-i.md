@@ -6,6 +6,8 @@ Defines the image span result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorImageSpanResult--><!--Device-unnamed-export declare interface RichEditorImageSpanResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ image attribute.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ get offset in span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorImageSpanResult-offsetInSpan: [        int,        int    ]--><!--Device-RichEditorImageSpanResult-offsetInSpan: [        int,        int    ]-End-->
@@ -66,6 +72,8 @@ The position of the image span.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,6 +95,8 @@ The pixel map of the image span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorImageSpanResult-valuePixelMap?: PixelMap--><!--Device-RichEditorImageSpanResult-valuePixelMap?: PixelMap-End-->
@@ -106,6 +116,8 @@ The resource string of the image span.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

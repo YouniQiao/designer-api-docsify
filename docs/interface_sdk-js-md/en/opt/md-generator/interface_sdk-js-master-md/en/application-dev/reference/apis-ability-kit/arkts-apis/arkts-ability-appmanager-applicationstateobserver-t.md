@@ -1,15 +1,17 @@
 # ApplicationStateObserver
 
 ```TypeScript
-export type ApplicationStateObserver = _ApplicationStateObserver.default
+export type ApplicationStateObserver = _ApplicationStateObserver
 ```
 
 Defines the observer used to listen for application state changes.
 
-**Since:** 14
+**Since:** 23
 
-<!--Device-appManager-export type ApplicationStateObserver = _ApplicationStateObserver.default--><!--Device-appManager-export type ApplicationStateObserver = _ApplicationStateObserver.default-End-->
+**Deprecated since:** -1
+
+<!--Device-appManager-export type ApplicationStateObserver = _ApplicationStateObserver--><!--Device-appManager-export type ApplicationStateObserver = _ApplicationStateObserver-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _ApplicationStateObserver.default
+**Property type:** _ApplicationStateObserver

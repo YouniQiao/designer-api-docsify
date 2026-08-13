@@ -1,15 +1,12 @@
 # SyncState
 
-Enumerates the device-cloud sync states.
+Enumerates the device-cloud sync states. > **NOTE：**> > If a sync progress event listener is registered for an application, a callback will be invoked to notify the > application when the device-cloud sync state is changed.
 
-> **NOTE：**
-> 
-> If a sync progress event listener is registered for an application, a callback will be invoked to notify the
-> application when the device-cloud sync state is changed.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum SyncState--><!--Device-cloudSync-enum SyncState-End-->
 
@@ -23,9 +20,11 @@ UPLOADING = 0
 
 The file is being uploaded.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncState-UPLOADING = 0--><!--Device-SyncState-UPLOADING = 0-End-->
 
@@ -39,9 +38,11 @@ UPLOAD_FAILED = 1
 
 Upload failed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncState-UPLOAD_FAILED = 1--><!--Device-SyncState-UPLOAD_FAILED = 1-End-->
 
@@ -55,9 +56,11 @@ DOWNLOADING = 2
 
 The file is being downloaded.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncState-DOWNLOADING = 2--><!--Device-SyncState-DOWNLOADING = 2-End-->
 
@@ -71,9 +74,11 @@ DOWNLOAD_FAILED = 3
 
 Download failed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncState-DOWNLOAD_FAILED = 3--><!--Device-SyncState-DOWNLOAD_FAILED = 3-End-->
 
@@ -87,9 +92,11 @@ COMPLETED = 4
 
 Sync completed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncState-COMPLETED = 4--><!--Device-SyncState-COMPLETED = 4-End-->
 
@@ -103,9 +110,11 @@ STOPPED = 5
 
 Sync stopped.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncState-STOPPED = 5--><!--Device-SyncState-STOPPED = 5-End-->
 

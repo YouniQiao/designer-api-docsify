@@ -14,7 +14,9 @@ function isVectorSupported(): boolean
 
 Checks whether the system supports vector stores.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function isVectorSupported(): boolean--><!--Device-relationalStore-function isVectorSupported(): boolean-End-->
 

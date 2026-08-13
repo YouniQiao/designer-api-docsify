@@ -1,10 +1,12 @@
 # IntentResult
 
-意图执行的返回结果，支持[泛型类型](../../../quick-start/introduction-to-arkts.md#泛型类和接口)。
+意图执行的返回结果，支持泛型类型。
 
-**起始版本：** 20
+**起始版本：** 26.0.0
 
-<!--Device-insightIntent-interface IntentResult<T>--><!--Device-insightIntent-interface IntentResult<T>-End-->
+**废弃版本：** -1
+
+<!--Device-insightIntent-interface IntentResult--><!--Device-insightIntent-interface IntentResult-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,6 +21,8 @@ interactionInfo?: InteractionInfo
 **类型：** [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

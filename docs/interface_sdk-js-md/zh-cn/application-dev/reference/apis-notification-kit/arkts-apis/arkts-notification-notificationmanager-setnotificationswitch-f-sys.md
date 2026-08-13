@@ -16,7 +16,9 @@ function setNotificationSwitch(switchName: string, switchState: boolean, userId:
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -34,7 +36,7 @@ function setNotificationSwitch(switchName: string, switchState: boolean, userId:
 | --- | --- | --- | --- |
 | switchName | string | 是 | 通知开关名称。取值为：DEAL（交易类通知聚合开关）、LOGISTICS（物流类通知聚合开关）。 |
 | switchState | boolean | 是 | 是否开启通知开关。 - true：表示开启。 - false：表示关闭。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 用户ID。 |
+| userId | int | 是 | 用户ID。 |
 
 **返回值：**
 
@@ -46,13 +48,13 @@ function setNotificationSwitch(switchName: string, switchState: boolean, userId:
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1600008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
-| [1600012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-内存空间不足) | No memory space. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. Database operation failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
+| [1600012](../errorcode-notification.md#1600012-内存空间不足) | No memory space. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. Database operation failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
 

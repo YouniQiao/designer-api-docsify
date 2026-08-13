@@ -12,12 +12,13 @@ import { pointer } from '@kit.InputKit';
 function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>
 ```
 
-Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor). This API uses a promise to return the result.
+Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor). This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>--><!--Device-pointer-function setCustomCursor(windowId: int, pixelMap: image.PixelMap, focusX?: int, focusY?: int): Promise<void>-End-->
 
@@ -27,10 +28,10 @@ Sets a custom pointer style for a specified window. This API can set only the cu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. |
+| windowId | int | Yes | Window ID. |
 | pixelMap | image.PixelMap | Yes | Custom cursor resource. |
-| focusX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Custom cursor focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
-| focusY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Custom cursor focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusX | int | No | Custom cursor focus X, in px. The value must be greater than or equal to 0. The default value is **0**. |
+| focusY | int | No | Custom cursor focus Y, in px. The value must be greater than or equal to 0. The default value is **0**. |
 
 **Return value:**
 
@@ -42,7 +43,7 @@ Sets a custom pointer style for a specified window. This API can set only the cu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -93,14 +94,13 @@ struct Index {
 function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>
 ```
 
-Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see  
-[setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor). This API uses a promise to return the result.
+Sets a custom pointer style for a specified window. This API can set only the custom pointer style of windows within the current application process. For details about how to set the custom pointer style of the host window through the **UIExtensionAbility** process, see [setCustomCursor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-cursorcontroller-c.md#setCustomCursor). This API uses a promise to return the result. The cursor may be switched back to the system style in the following cases: application window layout change, hot zone switching, page redirection, moving of the cursor out of the window and then back to the window, or moving of the cursor in different areas of the window. In this case, you need to reset the cursor style.
 
-The cursor may be switched back to the system style in the following cases: application window layout change, hot zone switching, page redirection, moving of the cursor out of the window and then back to the window, or moving of the cursor in different areas of the window. In this case, you need to reset the cursor style.
+**Since:** 23
 
-**Since:** 15
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>--><!--Device-pointer-function setCustomCursor(windowId: int, cursor: CustomCursor, config: CursorConfig): Promise<void>-End-->
 
@@ -110,7 +110,7 @@ The cursor may be switched back to the system style in the following cases: appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Window ID. |
+| windowId | int | Yes | Window ID. |
 | cursor | [CustomCursor](arkts-input-pointer-customcursor-i.md) | Yes | Custom cursor resource. |
 | config | [CursorConfig](arkts-input-pointer-cursorconfig-i.md) | Yes | Custom cursor configuration, which specifies whether to adjust the cursor size based on system settings. If **followSystem** in **CursorConfig** is set to **true**, the supported adjustment range is [size of the cursor image, 256 x 256]. |
 
@@ -124,8 +124,8 @@ The cursor may be switched back to the system style in the following cases: appl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; &lt;br&gt;2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; &lt;br&gt;4. Abnormal focusY parameter passed in. |
-| [26500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-pointer.md#26500001-invalid-window-id) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Abnormal windowId parameter passed in; &lt;br&gt;2. Abnormal pixelMap parameter passed in; 3. Abnormal focusX parameter passed in; &lt;br&gt;4. Abnormal focusY parameter passed in. |
+| [26500001](../errorcode-pointer.md#26500001-invalid-window-id) | Invalid windowId. Possible causes: The window id does not belong to the current process. |
 
 ## Examples
 

@@ -1,8 +1,10 @@
 # Priority
 
-Enumerates the priorities available for EventHandler.For details about the mappings between priorities and EventHandler levels, see EventHandler Level.
+Enumerates the priorities available for EventHandler. For details about the mappings between priorities and EventHandler levels, see EventHandler Level.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum Priority--><!--Device-unnamed-export enum Priority-End-->
 
@@ -17,6 +19,8 @@ IMMEDIATE = 1
 IMMEDIATE priority, corresponding to EventHandler IMMEDIATE priority.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ HIGH priority, corresponding to EventHandler HIGH priority.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -54,6 +60,8 @@ Low priority, corresponding to EventHandler LOW priority.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -71,6 +79,8 @@ IDLE = 4
 IDLE priority, corresponding to EventHandler IDLE priority.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

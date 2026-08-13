@@ -2,7 +2,9 @@
 
 Describe the GET_REPORT data is received from remote host.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-hid-interface GetReportData--><!--Device-hid-interface GetReportData-End-->
 
@@ -24,7 +26,9 @@ bufferSize of GET_REPORT data, maximum number of octets to transfer during data 
 
 **Type:** number
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ id of GET_REPORT data.
 
 **Type:** number
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ reportType of GET_REPORT data.
 
 **Type:** ReportType
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

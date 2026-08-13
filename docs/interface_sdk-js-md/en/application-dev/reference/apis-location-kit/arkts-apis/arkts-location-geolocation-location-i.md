@@ -8,7 +8,7 @@ Provides information about geographic locations
 
 **Deprecated since:** 9
 
-**Substitutes:** [Location](ohos.geoLocationManager/geoLocationManager.Location)
+**Substitutes:** [Location](arkts-location-geolocationmanager-location-i.md#Location)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -38,7 +38,7 @@ Indicates location accuracy, in meters.
 
 **Deprecated since:** 9
 
-**Substitutes:** [accuracy](ohos.geoLocationManager/geoLocationManager.Location#accuracy)
+**Substitutes:** [accuracy](arkts-location-geolocationmanager-location-i.md#accuracy)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -62,7 +62,7 @@ Indicates the amount of additional descriptive information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [additionSize](ohos.geoLocationManager/geoLocationManager.Location#additionSize)
+**Substitutes:** [additionSize](arkts-location-geolocationmanager-location-i.md#additionSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -86,7 +86,7 @@ Indicates additional information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [additions](ohos.geoLocationManager/geoLocationManager.Location#additions)
+**Substitutes:** [additions](arkts-location-geolocationmanager-location-i.md#additions)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -110,7 +110,7 @@ Indicates location altitude, in meters.
 
 **Deprecated since:** 9
 
-**Substitutes:** [altitude](ohos.geoLocationManager/geoLocationManager.Location#altitude)
+**Substitutes:** [altitude](arkts-location-geolocationmanager-location-i.md#altitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -134,7 +134,7 @@ Indicates direction information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [direction](ohos.geoLocationManager/geoLocationManager.Location#direction)
+**Substitutes:** [direction](arkts-location-geolocationmanager-location-i.md#direction)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -148,7 +148,7 @@ Indicates direction information.
 latitude: number
 ```
 
-Indicates latitude information.A positive value indicates north latitude,and a negative value indicates south latitude.
+Indicates latitude information. A positive value indicates north latitude, and a negative value indicates south latitude.
 
 **Type:** number
 
@@ -158,7 +158,7 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 
 **Deprecated since:** 9
 
-**Substitutes:** [latitude](ohos.geoLocationManager/geoLocationManager.Location#latitude)
+**Substitutes:** [latitude](arkts-location-geolocationmanager-location-i.md#latitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -172,7 +172,7 @@ Indicates latitude information.A positive value indicates north latitude,and a n
 longitude: number
 ```
 
-Indicates Longitude information.A positive value indicates east longitude ,and a negative value indicates west longitude .
+Indicates Longitude information. A positive value indicates east longitude , and a negative value indicates west longitude .
 
 **Type:** number
 
@@ -182,7 +182,7 @@ Indicates Longitude information.A positive value indicates east longitude ,and a
 
 **Deprecated since:** 9
 
-**Substitutes:** [longitude](ohos.geoLocationManager/geoLocationManager.Location#longitude)
+**Substitutes:** [longitude](arkts-location-geolocationmanager-location-i.md#longitude)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -206,7 +206,7 @@ Indicates speed, in m/s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [speed](ohos.geoLocationManager/geoLocationManager.Location#speed)
+**Substitutes:** [speed](arkts-location-geolocationmanager-location-i.md#speed)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -230,7 +230,7 @@ Indicates location timestamp since boot.
 
 **Deprecated since:** 9
 
-**Substitutes:** [timeSinceBoot](ohos.geoLocationManager/geoLocationManager.Location#timeSinceBoot)
+**Substitutes:** [timeSinceBoot](arkts-location-geolocationmanager-location-i.md#timeSinceBoot)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -254,7 +254,7 @@ Indicates location timestamp in the UTC format.
 
 **Deprecated since:** 9
 
-**Substitutes:** [timeStamp](ohos.geoLocationManager/geoLocationManager.Location#timeStamp)
+**Substitutes:** [timeStamp](arkts-location-geolocationmanager-location-i.md#timeStamp)
 
 **Required permissions:** ohos.permission.LOCATION
 

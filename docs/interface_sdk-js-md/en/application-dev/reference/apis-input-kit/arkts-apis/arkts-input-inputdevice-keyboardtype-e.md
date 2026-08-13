@@ -2,9 +2,11 @@
 
 Enumerates keyboard types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-enum KeyboardType--><!--Device-inputDevice-enum KeyboardType-End-->
 
@@ -18,9 +20,11 @@ NONE = 0
 
 Keyboard without keys.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardType-NONE = 0--><!--Device-KeyboardType-NONE = 0-End-->
 
@@ -34,9 +38,11 @@ UNKNOWN = 1
 
 Keyboard with unknown keys.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardType-UNKNOWN = 1--><!--Device-KeyboardType-UNKNOWN = 1-End-->
 
@@ -50,9 +56,11 @@ ALPHABETIC_KEYBOARD = 2
 
 Full keyboard.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2--><!--Device-KeyboardType-ALPHABETIC_KEYBOARD = 2-End-->
 
@@ -66,9 +74,11 @@ DIGITAL_KEYBOARD = 3
 
 Keypad.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardType-DIGITAL_KEYBOARD = 3--><!--Device-KeyboardType-DIGITAL_KEYBOARD = 3-End-->
 
@@ -82,9 +92,11 @@ HANDWRITING_PEN = 4
 
 Stylus.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardType-HANDWRITING_PEN = 4--><!--Device-KeyboardType-HANDWRITING_PEN = 4-End-->
 
@@ -98,9 +110,11 @@ REMOTE_CONTROL = 5
 
 Remote control.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeyboardType-REMOTE_CONTROL = 5--><!--Device-KeyboardType-REMOTE_CONTROL = 5-End-->
 

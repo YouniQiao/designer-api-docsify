@@ -2,9 +2,11 @@
 
 This filter value is used to filter business ability info
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-businessAbilityRouter-export interface BusinessAbilityFilter--><!--Device-businessAbilityRouter-export interface BusinessAbilityFilter-End-->
 
@@ -28,9 +30,11 @@ Indicates the type of business ability info
 
 **Type:** BusinessType
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityFilter-businessType: BusinessType--><!--Device-BusinessAbilityFilter-businessType: BusinessType-End-->
 
@@ -48,9 +52,11 @@ Indicates the supported mime type of business ability info
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityFilter-mimeType?: string--><!--Device-BusinessAbilityFilter-mimeType?: string-End-->
 
@@ -68,9 +74,11 @@ Indicates the supported uri of business ability info
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessAbilityFilter-uri?: string--><!--Device-BusinessAbilityFilter-uri?: string-End-->
 

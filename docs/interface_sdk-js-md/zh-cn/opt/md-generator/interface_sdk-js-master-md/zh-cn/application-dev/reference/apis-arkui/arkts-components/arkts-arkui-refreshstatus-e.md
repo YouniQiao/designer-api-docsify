@@ -4,6 +4,8 @@ RefreshStatus刷新状态枚举。
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum RefreshStatus--><!--Device-unnamed-declare enum RefreshStatus-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ Inactive
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RefreshStatus-Inactive--><!--Device-RefreshStatus-Inactive-End-->
@@ -30,11 +34,11 @@ Inactive
 Drag
 ```
 
-下拉中，下拉距离小于刷新距离。
-
-若此时松手，组件进入Inactive状态；若此时继续下拉使下拉距离超过刷新距离，组件进入OverDrag状态。
+下拉中，下拉距离小于刷新距离。 若此时松手，组件进入Inactive状态；若此时继续下拉使下拉距离超过刷新距离，组件进入OverDrag状态。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -48,11 +52,11 @@ Drag
 OverDrag
 ```
 
-下拉中，下拉距离超过刷新距离。
-
-若此时松手，组件进入Refresh状态；若此时上滑使下拉距离小于刷新距离，组件进入Drag状态。
+下拉中，下拉距离超过刷新距离。 若此时松手，组件进入Refresh状态；若此时上滑使下拉距离小于刷新距离，组件进入Drag状态。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -70,6 +74,8 @@ After the pull-down, it rebounds to the refresh distance and enters the refresh 
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RefreshStatus-Refresh--><!--Device-RefreshStatus-Refresh-End-->
@@ -85,6 +91,8 @@ Done
 刷新结束，返回初始状态（顶部）。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

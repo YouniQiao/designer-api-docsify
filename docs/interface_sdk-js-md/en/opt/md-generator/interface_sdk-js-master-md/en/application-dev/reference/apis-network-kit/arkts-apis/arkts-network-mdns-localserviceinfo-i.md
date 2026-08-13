@@ -4,6 +4,8 @@ Defines the mDNS service information.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-mdns-export interface LocalServiceInfo--><!--Device-mdns-export interface LocalServiceInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -26,6 +28,8 @@ IP address of the host.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocalServiceInfo-host?: NetAddress--><!--Device-LocalServiceInfo-host?: NetAddress-End-->
@@ -43,6 +47,8 @@ Port number.
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ DNS-SD TXT record pairs.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocalServiceInfo-serviceAttribute?: Array<ServiceAttribute>--><!--Device-LocalServiceInfo-serviceAttribute?: Array<ServiceAttribute>-End-->
@@ -80,6 +88,8 @@ Service name.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocalServiceInfo-serviceName: string--><!--Device-LocalServiceInfo-serviceName: string-End-->
@@ -97,6 +107,8 @@ Service type. Use an underscore (_) as the prefix, for example, _http._tcp.
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

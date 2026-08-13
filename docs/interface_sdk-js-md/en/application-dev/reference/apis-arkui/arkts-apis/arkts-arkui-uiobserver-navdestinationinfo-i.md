@@ -1,10 +1,12 @@
 # NavDestinationInfo
 
-NavDestination info.
+Information about the **NavDestination** component, returned by the system to developers.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export interface NavDestinationInfo--><!--Device-uiObserver-export interface NavDestinationInfo-End-->
 
@@ -19,20 +21,24 @@ import { uiObserver } from '@kit.ArkUI';
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-NavDestination index.The value should be an integer.
+Index of the **NavDestination** component in the navigation stack. The value must be greater than or equal to 0.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NavDestinationInfo-index: int--><!--Device-NavDestinationInfo-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NavDestinationInfo-index: number--><!--Device-NavDestinationInfo-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,15 +48,19 @@ NavDestination index.The value should be an integer.
 mode?: NavDestinationMode
 ```
 
-NavDestination mode.
+Mode of the **NavDestination** component. Default value: NavDestinationMode.Standard.
 
 **Type:** NavDestinationMode
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-NavDestinationInfo-mode?: NavDestinationMode--><!--Device-NavDestinationInfo-mode?: NavDestinationMode-End-->
 
@@ -62,15 +72,19 @@ NavDestination mode.
 name: ResourceStr
 ```
 
-Changed NavDestination name.
+Name of the **NavDestination** component.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationInfo-name: ResourceStr--><!--Device-NavDestinationInfo-name: ResourceStr-End-->
 
@@ -82,15 +96,19 @@ Changed NavDestination name.
 navDestinationId: string
 ```
 
-Auto-generated navDestination id, which is different from common property id of Component.
+Unique ID of the **NavDestination** component.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationInfo-navDestinationId: string--><!--Device-NavDestinationInfo-navDestinationId: string-End-->
 
@@ -102,15 +120,19 @@ Auto-generated navDestination id, which is different from common property id of 
 navigationId: ResourceStr
 ```
 
-Navigation id.
+ID of the **Navigation** component that contains the target **NavDestination** component.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationInfo-navigationId: ResourceStr--><!--Device-NavDestinationInfo-navigationId: ResourceStr-End-->
 
@@ -122,15 +144,19 @@ Navigation id.
 param?: Object
 ```
 
-The detailed parameter of NavDestination.
+Parameters of the **NavDestination** component.
 
 **Type:** Object
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationInfo-param?: Object--><!--Device-NavDestinationInfo-param?: Object-End-->
 
@@ -142,15 +168,19 @@ The detailed parameter of NavDestination.
 size?: Size
 ```
 
-NavDestination size.
+Size of the **NavDestination** component, in vp.
 
 **Type:** Size
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NavDestinationInfo-size?: Size--><!--Device-NavDestinationInfo-size?: Size-End-->
 
@@ -162,15 +192,19 @@ NavDestination size.
 state: NavDestinationState
 ```
 
-Changed NavDestination state.
+State of the **NavDestination** component.
 
 **Type:** [NavDestinationState](arkts-arkui-uiobserver-navdestinationstate-e.md)
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NavDestinationInfo-state: NavDestinationState--><!--Device-NavDestinationInfo-state: NavDestinationState-End-->
 
@@ -179,20 +213,24 @@ Changed NavDestination state.
 ## uniqueId
 
 ```TypeScript
-uniqueId?: int
+uniqueId?: number
 ```
 
-NavDestination uniqueId.The value should be an integer.
+Unique ID of the **NavDestination** component.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NavDestinationInfo-uniqueId?: int--><!--Device-NavDestinationInfo-uniqueId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 15.
+
+<!--Device-NavDestinationInfo-uniqueId?: number--><!--Device-NavDestinationInfo-uniqueId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

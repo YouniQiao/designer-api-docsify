@@ -12,17 +12,11 @@ import { childProcessManager } from '@kit.AbilityKit';
 function startNativeChildProcess(entryPoint: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<number>
 ```
 
-Starts a [native child process](../../../application-models/ability-terminology.md#native-child-process). This API  uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.
+Starts a [native child process](../../../application-models/ability-terminology.md#native-child-process). This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned. > **NOTE：**> > The child process started by calling this API does not inherit the resources of the parent process. After the > child process is created, its PID is returned, the dynamic link library file specified in the parameters is > loaded, and the entry function of the child process is executed. Once the entry function is done, the child > process is automatically destroyed. After the process that calls this API is destroyed, the created child process > is also destroyed.
 
-> **NOTE：**
-> 
-> The child process started by calling this API does not inherit the resources of the parent process. After the
-> child process is created, its PID is returned, the dynamic link library file specified in the parameters is
-> loaded, and the entry function of the child process is executed. Once the entry function is done, the child
-> process is automatically destroyed. After the process that calls this API is destroyed, the created child process
-> is also destroyed.
+**Since:** 23
 
-**Since:** 13
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,15 +42,15 @@ Starts a [native child process](../../../application-models/ability-terminology.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
-| [16000062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-too-many-child-processes) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
+| [16000062](../errorcode-ability.md#16000062-too-many-child-processes) |
 
 ## Examples
 
-Sample code for the child process is provided below. For details, see [Native Child Process Development (C/C++) - Creating a Native Child Process That Supports Pass-by-Parameter](../../application-models/capi_nativechildprocess_development_guideline.md#creating-a-native-child-process-that-supports-pass-by-parameter).
+Sample code for the child process is provided below. For details, see Native Child Process Development (C/C++) - Creating a Native Child Process That Supports Pass-by-Parameter.
 
 ```TypeScript
 #include <AbilityKit/native_child_process.h>
@@ -84,7 +78,7 @@ void Main(NativeChildProcess_Args args)
 } // extern "C"
 ```
 
-Sample code for the main process is provided below. For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+Sample code for the main process is provided below. For details about how to obtain the context in the example, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // Main process:

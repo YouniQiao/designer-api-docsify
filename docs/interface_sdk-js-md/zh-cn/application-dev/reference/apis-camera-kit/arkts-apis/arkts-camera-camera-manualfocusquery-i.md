@@ -4,7 +4,9 @@ Manual Focus Query object.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-camera-interface ManualFocusQuery--><!--Device-camera-interface ManualFocusQuery-End-->
 
@@ -20,7 +22,9 @@ Checks whether a focus distance is supported.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -38,5 +42,5 @@ Checks whether a focus distance is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
 

@@ -4,6 +4,8 @@ Result of an analysis tool execution.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface AnalysisToolResult--><!--Device-photoAccessHelper-interface AnalysisToolResult-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,11 +24,13 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 errCode: number
 ```
 
-Error code of the tool execution. The value 0 indicates success.Possible error codes:&lt;br&gt;23800203 - Temperature is too high.&lt;br&gt;23800204 - Battery level is too low.&lt;br&gt;23800205 - Storage space is insufficient.&lt;br&gt;23800206 - Power saving mode is enabled.&lt;br&gt;23800207 - Intelligent analysis service is already running.&lt;br&gt;23800208 - Intelligent analysis switch is disabled.&lt;br&gt;23800209 - Analysis service error. Check the logs for details.&lt;br&gt;23800301 - Internal system error.
+Error code of the tool execution. The value 0 indicates success. Possible error codes: &lt;br&gt;23800203 - Temperature is too high. &lt;br&gt;23800204 - Battery level is too low. &lt;br&gt;23800205 - Storage space is insufficient. &lt;br&gt;23800206 - Power saving mode is enabled. &lt;br&gt;23800207 - Intelligent analysis service is already running. &lt;br&gt;23800208 - Intelligent analysis switch is disabled. &lt;br&gt;23800209 - Analysis service error. Check the logs for details. &lt;br&gt;23800301 - Internal system error.
 
 **Type:** number
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ Result of the tool execution, in JSON string format.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

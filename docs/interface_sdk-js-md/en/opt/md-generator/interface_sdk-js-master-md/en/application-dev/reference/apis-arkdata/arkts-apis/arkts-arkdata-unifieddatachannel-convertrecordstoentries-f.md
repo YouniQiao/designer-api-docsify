@@ -12,17 +12,15 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function convertRecordsToEntries(data: UnifiedData): void
 ```
 
-Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.
+Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data. This API is used only when the following rules are met: 1. The number of records in data is greater than 1. 2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
 
-This API is used only when the following rules are met:
+**Since:** 23
 
-1. The number of records in data is greater than 1.2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
-
-**Since:** 17
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void--><!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void-End-->
 
@@ -38,7 +36,7 @@ This API is used only when the following rules are met:
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace remoteDevice--><!--Device-unnamed-declare namespace remoteDevice-End-->
@@ -16,21 +18,21 @@
 
 | 名称 |
 | --- |
-| [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md#createremotedevice) |
-| [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md#offacbstatechange) |
-| [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md#offconnectionstatechange) |
-| [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md#offpairingstatechange) |
-| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md#onacbstatechange) |
-| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md#onconnectionstatechange) |
-| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md#onpairingstatechange) |
+| [createRemoteDevice](arkts-connectivity-remotedevice-createremotedevice-f.md#createRemoteDevice) |
+| [offAcbStateChange](arkts-connectivity-remotedevice-offacbstatechange-f.md#offAcbStateChange) |
+| [offConnectionStateChange](arkts-connectivity-remotedevice-offconnectionstatechange-f.md#offConnectionStateChange) |
+| [offPairingStateChange](arkts-connectivity-remotedevice-offpairingstatechange-f.md#offPairingStateChange) |
+| [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md#onAcbStateChange) |
+| [onConnectionStateChange](arkts-connectivity-remotedevice-onconnectionstatechange-f.md#onConnectionStateChange) |
+| [onPairingStateChange](arkts-connectivity-remotedevice-onpairingstatechange-f.md#onPairingStateChange) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md#offpairingrequest) |
-| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onpairingrequest) |
+| [offPairingRequest](arkts-connectivity-remotedevice-offpairingrequest-f-sys.md#offPairingRequest（系统接口）) |
+| [onPairingRequest](arkts-connectivity-remotedevice-onpairingrequest-f-sys.md#onPairingRequest（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

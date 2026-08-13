@@ -1,16 +1,12 @@
 # TextOverflowOptions
 
-Defines the configuration object for text overflow behavior.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Defines the configuration object for text overflow behavior. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface TextOverflowOptions--><!--Device-unnamed-declare interface TextOverflowOptions-End-->
 
@@ -22,9 +18,7 @@ Defines the configuration object for text overflow behavior.
 overflow: TextOverflow
 ```
 
-Display mode of overflowing text.
-
-Default value: **TextOverflow.Clip**
+Display mode of overflowing text. Default value: **TextOverflow.Clip**
 
 **Type:** TextOverflow
 
@@ -33,6 +27,8 @@ Default value: **TextOverflow.Clip**
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

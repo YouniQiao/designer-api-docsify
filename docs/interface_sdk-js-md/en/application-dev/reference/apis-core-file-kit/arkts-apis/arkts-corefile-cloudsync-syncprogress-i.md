@@ -2,9 +2,11 @@
 
 Represents information about the device-cloud sync progress.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-interface SyncProgress--><!--Device-cloudSync-interface SyncProgress-End-->
 
@@ -26,9 +28,11 @@ Sync error.
 
 **Type:** ErrorType
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncProgress-error: ErrorType--><!--Device-SyncProgress-error: ErrorType-End-->
 
@@ -44,9 +48,11 @@ Device-cloud sync state.
 
 **Type:** [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncProgress-state: SyncState--><!--Device-SyncProgress-state: SyncState-End-->
 

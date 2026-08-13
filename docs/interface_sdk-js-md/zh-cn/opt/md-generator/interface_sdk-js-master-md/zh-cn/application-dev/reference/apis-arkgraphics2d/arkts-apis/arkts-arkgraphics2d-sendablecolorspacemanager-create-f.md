@@ -10,6 +10,8 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -30,8 +32,8 @@ function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 
@@ -52,6 +54,8 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 创建用户自定义可共享的色彩管理实例。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager-End-->
 
@@ -74,8 +78,8 @@ function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-参数值异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-参数值异常) |
 
 ## 示例
 

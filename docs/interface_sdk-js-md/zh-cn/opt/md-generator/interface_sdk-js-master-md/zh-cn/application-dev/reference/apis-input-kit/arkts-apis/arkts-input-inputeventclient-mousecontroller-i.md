@@ -1,10 +1,10 @@
 # MouseController
 
-提供模拟鼠标操作的功能。模拟鼠标操作序列必须满足以下要求：
-
-1. 鼠标按键只能在抬起状态下被按下。2. 鼠标按键只能在被按下后才能抬起。3. 有效的轴事件序列必须先调用beginAxis开始事件，然后调用零次或多次updateAxis更新事件，最后调用endAxis结束事件。4. 同一时间只能有一个进行中的轴事件序列。
+提供模拟鼠标操作的功能。模拟鼠标操作序列必须满足以下要求： 1. 鼠标按键只能在抬起状态下被按下。 2. 鼠标按键只能在被按下后才能抬起。 3. 有效的轴事件序列必须先调用beginAxis开始事件，然后调用零次或多次updateAxis更新事件，最后调用endAxis结束事件。 4. 同一时间只能有一个进行中的轴事件序列。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
 
@@ -19,6 +19,8 @@ beginAxis(axis: Axis, value: number): Promise<void>
 开始轴事件。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -45,9 +47,9 @@ beginAxis(axis: Axis, value: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -96,6 +98,8 @@ endAxis(axis: Axis): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -120,13 +124,13 @@ endAxis(axis: Axis): Promise<void>
 
 | 错误码ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-参见[beginAxis](#beginaxis)示例。
+参见[beginAxis](#beginAxis)示例。
 
 ## moveTo
 
@@ -137,6 +141,8 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 将鼠标光标移动到指定的显示器坐标。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -164,9 +170,9 @@ moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [4300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-显示器不存在) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [4300002](../errorcode-inputeventclient.md#4300002-显示器不存在) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -207,6 +213,8 @@ pressButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -231,9 +239,9 @@ pressButton(button: Button): Promise<void>
 
 | 错误码ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -278,6 +286,8 @@ releaseButton(button: Button): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -302,13 +312,13 @@ releaseButton(button: Button): Promise<void>
 
 | 错误码ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-参见[pressButton](#pressbutton)示例。
+参见[pressButton](#pressButton)示例。
 
 ## updateAxis
 
@@ -319,6 +329,8 @@ updateAxis(axis: Axis, value: number): Promise<void>
 更新轴事件。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -345,10 +357,10 @@ updateAxis(axis: Axis, value: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-状态错误) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [4300001](../errorcode-inputeventclient.md#4300001-状态错误) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
-参见[beginAxis](#beginaxis)示例。
+参见[beginAxis](#beginAxis)示例。

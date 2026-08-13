@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
@@ -16,10 +18,10 @@
 
 | 名称 |
 | --- |
-| [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md#offadvertisingstatechange) |
-| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md#onadvertisingstatechange) |
-| [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md#startadvertising) |
-| [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md#stopadvertising) |
+| [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md#offAdvertisingStateChange) |
+| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md#onAdvertisingStateChange) |
+| [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md#startAdvertising) |
+| [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md#stopAdvertising) |
 
 ### 接口
 

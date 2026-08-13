@@ -2,7 +2,9 @@
 
 表示音频设备是否被堵塞的枚举。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum DeviceBlockStatus--><!--Device-audio-enum DeviceBlockStatus-End-->
 
@@ -16,7 +18,9 @@ UNBLOCKED = 0
 
 音频设备正常。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceBlockStatus-UNBLOCKED = 0--><!--Device-DeviceBlockStatus-UNBLOCKED = 0-End-->
 
@@ -30,7 +34,9 @@ BLOCKED = 1
 
 音频设备被堵塞。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceBlockStatus-BLOCKED = 1--><!--Device-DeviceBlockStatus-BLOCKED = 1-End-->
 

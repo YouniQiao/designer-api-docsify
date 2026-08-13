@@ -2,9 +2,11 @@
 
 Enumerates the types of applications to be kept alive.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export enum KeepAliveAppType--><!--Device-appManager-export enum KeepAliveAppType-End-->
 
@@ -18,12 +20,13 @@ Enumerates the types of applications to be kept alive.
 ALL = 0
 ```
 
-Third-party and system applications. This value can be called only as an input parameter of  
-[getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getKeepAliveBundles).
+Third-party and system applications. This value can be called only as an input parameter of [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getKeepAliveBundles-(System-API)).
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeepAliveAppType-ALL = 0--><!--Device-KeepAliveAppType-ALL = 0-End-->
 
@@ -39,9 +42,11 @@ THIRD_PARTY = 1
 
 Third-party application.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeepAliveAppType-THIRD_PARTY = 1--><!--Device-KeepAliveAppType-THIRD_PARTY = 1-End-->
 
@@ -57,9 +62,11 @@ SYSTEM = 2
 
 System application.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-KeepAliveAppType-SYSTEM = 2--><!--Device-KeepAliveAppType-SYSTEM = 2-End-->
 

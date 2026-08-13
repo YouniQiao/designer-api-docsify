@@ -11,7 +11,9 @@ Callback function called when updating multiple data records in the database.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -26,5 +28,5 @@ Callback function called when updating multiple data records in the database.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | operations | Record&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | Yes | Indicates the data to update. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Record&lt;string, Array&lt;int&gt;&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Array&lt;int&gt;&gt;&gt; | Yes | Callback used to return the result. |
 

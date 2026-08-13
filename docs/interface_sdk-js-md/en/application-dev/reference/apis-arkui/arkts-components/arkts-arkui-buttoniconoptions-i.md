@@ -1,16 +1,12 @@
 # ButtonIconOptions
 
-Describes the icons of the sidebar control button.
-
-> **NOTE：**
-
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Describes the icons of the sidebar control button. > **NOTE：**> To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ButtonIconOptions--><!--Device-unnamed-declare interface ButtonIconOptions-End-->
 
@@ -29,6 +25,8 @@ Icon of the control button when the sidebar is hidden.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,6 +48,8 @@ Icon of the control button when the sidebar is displayed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ButtonIconOptions-shown: string | PixelMap | Resource--><!--Device-ButtonIconOptions-shown: string | PixelMap | Resource-End-->
@@ -69,6 +69,8 @@ Icon of the control button when the sidebar is switching between the shown and h
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,7 +6,9 @@ export type BundleOption = _BundleOption
 
 Describes the bundle information of an application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type BundleOption = _BundleOption--><!--Device-notificationManager-export type BundleOption = _BundleOption-End-->
 

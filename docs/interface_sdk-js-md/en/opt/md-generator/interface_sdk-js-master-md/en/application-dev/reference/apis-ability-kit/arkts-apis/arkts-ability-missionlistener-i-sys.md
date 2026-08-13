@@ -1,9 +1,10 @@
 # MissionListener (System API)
 
-The module defines the listeners used to observe the mission status. The listeners can be registered by using  
-[on](arkts-ability-missionmanager-on-f-sys.md#on).
+The module defines the listeners used to observe the mission status. The listeners can be registered by using on.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionListener--><!--Device-unnamed-export interface MissionListener-End-->
 
@@ -19,7 +20,9 @@ onMissionClosed(mission: number): void
 
 Called when the system closes a mission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionClosed(mission: int): void--><!--Device-MissionListener-onMissionClosed(mission: int): void-End-->
 
@@ -79,7 +82,9 @@ onMissionCreated(mission: number): void
 
 Called when the system creates a mission.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionCreated(mission: int): void--><!--Device-MissionListener-onMissionCreated(mission: int): void-End-->
 
@@ -95,7 +100,7 @@ Called when the system creates a mission.
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionDestroyed
 
@@ -105,7 +110,9 @@ onMissionDestroyed(mission: number): void
 
 Called when the system destroys a mission.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionDestroyed(mission: int): void--><!--Device-MissionListener-onMissionDestroyed(mission: int): void-End-->
 
@@ -121,7 +128,7 @@ Called when the system destroys a mission.
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionIconUpdated
 
@@ -131,7 +138,9 @@ onMissionIconUpdated(mission: number, icon: image.PixelMap): void
 
 Called when the system updates the icon of a mission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void--><!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void-End-->
 
@@ -148,7 +157,7 @@ Called when the system updates the icon of a mission.
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionLabelUpdated
 
@@ -158,7 +167,9 @@ onMissionLabelUpdated(mission: number): void
 
 Called when the system updates the label of a mission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionLabelUpdated(mission: int): void--><!--Device-MissionListener-onMissionLabelUpdated(mission: int): void-End-->
 
@@ -174,7 +185,7 @@ Called when the system updates the label of a mission.
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionMovedToFront
 
@@ -184,7 +195,9 @@ onMissionMovedToFront(mission: number): void
 
 Called when the system moves a mission to the foreground.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionMovedToFront(mission: int): void--><!--Device-MissionListener-onMissionMovedToFront(mission: int): void-End-->
 
@@ -200,7 +213,7 @@ Called when the system moves a mission to the foreground.
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionSnapshotChanged
 
@@ -210,7 +223,9 @@ onMissionSnapshotChanged(mission: number): void
 
 Called when the system updates the snapshot of a mission.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void--><!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void-End-->
 
@@ -226,4 +241,4 @@ Called when the system updates the snapshot of a mission.
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).

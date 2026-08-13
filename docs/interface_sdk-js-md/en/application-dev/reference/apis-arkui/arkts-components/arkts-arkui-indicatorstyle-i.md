@@ -6,6 +6,8 @@ Represents an indicator style object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface IndicatorStyle--><!--Device-unnamed-interface IndicatorStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@ Represents an indicator style object.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the indicator. It cannot be set in percentage.
-
-Default value: **0.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Rounded corner radius of the indicator. It cannot be set in percentage. Default value: **0.0** Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
@@ -31,6 +27,8 @@ Value range: [0, +∞)
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,15 +44,15 @@ Value range: [0, +∞)
 color?: ResourceColor
 ```
 
-Color of the indicator and board.
-
-Default value: **#FF007DFF**
+Color of the indicator and board. Default value: **#FF007DFF**
 
 **Type:** ResourceColor
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,19 +68,15 @@ Default value: **#FF007DFF**
 height?: Length
 ```
 
-Height of the indicator. It cannot be set in percentage.
-
-Default value: **2.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Height of the indicator. It cannot be set in percentage. Default value: **2.0** Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,13 +92,7 @@ Value range: [0, +∞)
 marginTop?: Length
 ```
 
-Spacing between the indicator and text. It cannot be set in percentage.
-
-Default value: **8.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Spacing between the indicator and text. It cannot be set in percentage. Default value: **8.0** Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
@@ -113,6 +101,8 @@ Value range: [0, +∞)
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,17 +118,7 @@ Value range: [0, +∞)
 width?: Length
 ```
 
-Width of the indicator. It cannot be set in percentage.
-
-Default value: **0.0**
-
-Unit: vp
-
-Value range: [0, +∞)
-
-**NOTE：**
-
-If this parameter is set to **0**, the tab text width will be used instead.
+Width of the indicator. It cannot be set in percentage. Default value: **0.0** Unit: vp Value range: [0, +∞) **NOTE：**If this parameter is set to **0**, the tab text width will be used instead.
 
 **Type:** Length
 
@@ -147,6 +127,8 @@ If this parameter is set to **0**, the tab text width will be used instead.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

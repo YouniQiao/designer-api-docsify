@@ -4,6 +4,8 @@ Describes the prediction information about blankless loading, including the firs
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface BlanklessInfo--><!--Device-webview-interface BlanklessInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -20,12 +22,13 @@ import { webview } from '@kit.ArkWeb';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see  
-[WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#WebBlanklessErrorCode).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#WebBlanklessErrorCode).
 
 **Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode--><!--Device-BlanklessInfo-errCode: WebBlanklessErrorCode-End-->
 
@@ -43,6 +46,8 @@ Loading duration estimated based on the historical first screen loading duration
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-BlanklessInfo-loadingTime: number--><!--Device-BlanklessInfo-loadingTime: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -53,11 +58,13 @@ Loading duration estimated based on the historical first screen loading duration
 similarity: number
 ```
 
-First screen similarity, which is calculated based on the historical first screen content. The value ranges from0 to 1.0. 1.0 indicates that the content is the same. A value closer to 1 indicates a higher similarity. This value is lagging, and the similarity of local loading is displayed in the next loading. You are advised not to enable the blankless loading solution when the similarity is low.
+First screen similarity, which is calculated based on the historical first screen content. The value ranges from 0 to 1.0. 1.0 indicates that the content is the same. A value closer to 1 indicates a higher similarity. This value is lagging, and the similarity of local loading is displayed in the next loading. You are advised not to enable the blankless loading solution when the similarity is low.
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-BlanklessInfo-similarity: number--><!--Device-BlanklessInfo-similarity: number-End-->
 

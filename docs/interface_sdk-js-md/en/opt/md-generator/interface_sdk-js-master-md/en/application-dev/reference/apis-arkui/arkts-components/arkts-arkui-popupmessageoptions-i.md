@@ -4,6 +4,8 @@ Describes the popup message text style.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PopupMessageOptions--><!--Device-unnamed-declare interface PopupMessageOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@ Describes the popup message text style.
 font?: Font
 ```
 
-Font settings of the popup message.
-
-**NOTE：**
-
-1. Setting **family** is not supported.2. The **weight** attribute in **Font** does not support the number type.
+Font settings of the popup message. **NOTE：**1. Setting **family** is not supported. 2. The **weight** attribute in **Font** does not support the number type.
 
 **Type:** Font
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +43,8 @@ Text color of the popup message.
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

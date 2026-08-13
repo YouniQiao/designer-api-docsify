@@ -2,9 +2,11 @@
 
 Enum for location error code.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum LocationError--><!--Device-geoLocationManager-export enum LocationError-End-->
 
@@ -18,11 +20,13 @@ LOCATING_FAILED_DEFAULT = -1
 
 Default cause for location failure.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LocationError-LOCATING_FAILED_DEFAULT = -1--><!--Device-LocationError-LOCATING_FAILED_DEFAULT = -1-End-->
 
@@ -36,11 +40,13 @@ LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2
 
 Locating failed because the location permission fails to be verified.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LocationError-LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2--><!--Device-LocationError-LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2-End-->
 
@@ -54,11 +60,13 @@ LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3
 
 Locating failed because the app is in the background and the background location permission verification failed.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LocationError-LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3--><!--Device-LocationError-LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3-End-->
 
@@ -72,11 +80,13 @@ LOCATING_FAILED_LOCATION_SWITCH_OFF = -4
 
 Locating failed because the location switch is turned off.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LocationError-LOCATING_FAILED_LOCATION_SWITCH_OFF = -4--><!--Device-LocationError-LOCATING_FAILED_LOCATION_SWITCH_OFF = -4-End-->
 
@@ -90,11 +100,13 @@ LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5
 
 Locating failed because internet access failure.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LocationError-LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5--><!--Device-LocationError-LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5-End-->
 

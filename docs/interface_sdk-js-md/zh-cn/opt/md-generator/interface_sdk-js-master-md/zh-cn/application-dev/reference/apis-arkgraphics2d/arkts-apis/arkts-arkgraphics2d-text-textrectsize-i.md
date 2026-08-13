@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-text-interface TextRectSize--><!--Device-text-interface TextRectSize-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
@@ -19,6 +21,8 @@ height: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +43,8 @@ width: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

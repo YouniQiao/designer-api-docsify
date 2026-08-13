@@ -2,7 +2,9 @@
 
 Describes the data structure of the task response header.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface HttpResponse--><!--Device-agent-interface HttpResponse-End-->
 
@@ -24,9 +26,11 @@ HTTP response header.
 
 **Type:** Map&lt;string, Array&lt;string&gt;&gt;
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-readonly headers: Map<string, Array<string>>--><!--Device-HttpResponse-readonly headers: Map<string, Array<string>>-End-->
 
@@ -42,9 +46,11 @@ HTTP response cause.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-readonly reason: string--><!--Device-HttpResponse-readonly reason: string-End-->
 
@@ -60,9 +66,11 @@ HTTP response status code.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-readonly statusCode: int--><!--Device-HttpResponse-readonly statusCode: int-End-->
 
@@ -78,9 +86,11 @@ HTTP version.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HttpResponse-readonly version: string--><!--Device-HttpResponse-readonly version: string-End-->
 

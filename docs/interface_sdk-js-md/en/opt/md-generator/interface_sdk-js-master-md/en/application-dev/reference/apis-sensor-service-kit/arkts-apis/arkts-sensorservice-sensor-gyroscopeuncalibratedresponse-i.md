@@ -4,9 +4,11 @@ Describes the uncalibrated gyroscope sensor data. It extends from [Response](ark
 
 **Inheritance/Implementation:** GyroscopeUncalibratedResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response--><!--Device-sensor-interface GyroscopeUncalibratedResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface GyroscopeUncalibratedResponse--><!--Device-sensor-interface GyroscopeUncalibratedResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Uncalibrated angular velocity bias of rotation around the x-axis of the device, 
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasX: double--><!--Device-GyroscopeUncalibratedResponse-biasX: double-End-->
 
@@ -42,7 +46,9 @@ Uncalibrated angular velocity bias of rotation around the y-axis of the device, 
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasY: double--><!--Device-GyroscopeUncalibratedResponse-biasY: double-End-->
 
@@ -58,7 +64,9 @@ Uncalibrated angular velocity bias of rotation around the z-axis of the device, 
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-biasZ: double--><!--Device-GyroscopeUncalibratedResponse-biasZ: double-End-->
 
@@ -74,7 +82,9 @@ Uncalibrated angular velocity of rotation around the x-axis of the device, in ra
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-x: double--><!--Device-GyroscopeUncalibratedResponse-x: double-End-->
 
@@ -90,7 +100,9 @@ Uncalibrated angular velocity of rotation around the y-axis of the device, in ra
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-y: double--><!--Device-GyroscopeUncalibratedResponse-y: double-End-->
 
@@ -106,7 +118,9 @@ Uncalibrated angular velocity of rotation around the z-axis of the device, in ra
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GyroscopeUncalibratedResponse-z: double--><!--Device-GyroscopeUncalibratedResponse-z: double-End-->
 

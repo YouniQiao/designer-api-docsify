@@ -1,8 +1,10 @@
 # @ohos.secureElement
 
-Provides APIs for mobile applications to access different SEs in mobile devices, such as SIMs or embedded SEs.See "Open Mobile API Specification".
+Provides APIs for mobile applications to access different SEs in mobile devices, such as SIMs or embedded SEs. See "Open Mobile API Specification".
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace omapi--><!--Device-unnamed-declare namespace omapi-End-->
 
@@ -20,10 +22,10 @@ import { omapi } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createService](arkts-connectivity-omapi-createservice-f.md#createservice) |
-| [newSEService](arkts-connectivity-omapi-newseservice-f.md#newseservice) |
-| [off](arkts-connectivity-omapi-off-f.md#off) |
-| [on](arkts-connectivity-omapi-on-f.md#on) |
+| [createService](arkts-connectivity-omapi-createservice-f.md#createService) |
+| [newSEService](arkts-connectivity-omapi-newseservice-f.md#newSEService) |
+| [off_stateChanged](arkts-connectivity-omapi-offstatechanged-f.md#off_stateChanged) |
+| [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md#on_stateChanged) |
 
 ### Interfaces
 

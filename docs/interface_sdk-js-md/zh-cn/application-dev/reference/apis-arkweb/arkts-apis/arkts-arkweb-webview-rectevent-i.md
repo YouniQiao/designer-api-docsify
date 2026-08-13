@@ -2,9 +2,11 @@
 
 矩形定义。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface RectEvent--><!--Device-webview-interface RectEvent-End-->
 
@@ -13,80 +15,80 @@
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-矩形的高度。
+矩形的高度。 单位：px。
 
-单位：px。
+**类型：** number
 
-**类型：** double
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-<!--Device-RectEvent-height: double--><!--Device-RectEvent-height: double-End-->
+<!--Device-RectEvent-height: number--><!--Device-RectEvent-height: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-矩形的宽度。
+矩形的宽度。 单位：px。
 
-单位：px。
+**类型：** number
 
-**类型：** double
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-<!--Device-RectEvent-width: double--><!--Device-RectEvent-width: double-End-->
+<!--Device-RectEvent-width: number--><!--Device-RectEvent-width: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-矩形区域左上角x坐标。
+矩形区域左上角x坐标。 单位：px。
 
-单位：px。
+**类型：** number
 
-**类型：** double
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-<!--Device-RectEvent-x: double--><!--Device-RectEvent-x: double-End-->
+<!--Device-RectEvent-x: number--><!--Device-RectEvent-x: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-矩形区域左上角y坐标。
+矩形区域左上角y坐标。 单位：px。
 
-单位：px。
+**类型：** number
 
-**类型：** double
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-<!--Device-RectEvent-y: double--><!--Device-RectEvent-y: double-End-->
+<!--Device-RectEvent-y: number--><!--Device-RectEvent-y: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

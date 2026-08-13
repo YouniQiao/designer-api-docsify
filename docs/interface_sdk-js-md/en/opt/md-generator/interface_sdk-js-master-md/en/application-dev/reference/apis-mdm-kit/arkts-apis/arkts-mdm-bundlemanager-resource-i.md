@@ -4,6 +4,8 @@ Describes application resource information, including the bundle name, module na
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-interface Resource--><!--Device-bundleManager-interface Resource-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ Bundle name of the application.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Resource-bundleName: string--><!--Device-Resource-bundleName: string-End-->
@@ -44,6 +48,8 @@ Resource ID.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Resource-id: number--><!--Device-Resource-id: number-End-->
@@ -61,6 +67,8 @@ Module name of the application.
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

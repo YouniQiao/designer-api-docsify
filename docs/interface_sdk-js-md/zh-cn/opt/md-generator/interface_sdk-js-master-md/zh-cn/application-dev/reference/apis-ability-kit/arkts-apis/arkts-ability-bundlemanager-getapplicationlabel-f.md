@@ -10,6 +10,8 @@ function getApplicationLabel(bundleName: string, appIndex: number): Promise<stri
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -35,9 +37,9 @@ function getApplicationLabel(bundleName: string, appIndex: number): Promise<stri
 
 | 错误码ID |
 | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-指定的应用分身索引无效) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

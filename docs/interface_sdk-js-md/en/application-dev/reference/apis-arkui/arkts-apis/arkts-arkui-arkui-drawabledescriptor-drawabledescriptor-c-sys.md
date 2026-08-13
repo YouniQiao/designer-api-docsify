@@ -1,12 +1,14 @@
 # DrawableDescriptor
 
-Use the DrawableDescriptor class to get drawable image.
+Represents the base class providing overridable methods for [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) acquisition and image resource loading.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-export declare class DrawableDescriptor--><!--Device-unnamed-export declare class DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class DrawableDescriptor--><!--Device-unnamed-export class DrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,9 +26,11 @@ constructor()
 
 Creates a new DrawableDescriptor.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

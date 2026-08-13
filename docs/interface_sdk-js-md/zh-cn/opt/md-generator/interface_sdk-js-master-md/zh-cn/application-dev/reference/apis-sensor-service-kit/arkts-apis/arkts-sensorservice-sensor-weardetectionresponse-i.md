@@ -4,9 +4,11 @@
 
 **继承/实现关系：** WearDetectionResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface WearDetectionResponse extends Response--><!--Device-sensor-interface WearDetectionResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface WearDetectionResponse--><!--Device-sensor-interface WearDetectionResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ value: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-WearDetectionResponse-value: double--><!--Device-WearDetectionResponse-value: double-End-->
 

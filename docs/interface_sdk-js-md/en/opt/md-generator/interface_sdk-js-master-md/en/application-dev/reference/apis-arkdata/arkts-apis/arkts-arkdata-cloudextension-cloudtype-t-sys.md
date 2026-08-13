@@ -6,7 +6,9 @@ type CloudType = null | number | number | string | boolean | Uint8Array | CloudA
 
 Enumerates the types of the cloud data field. The specific type is determined by the parameter function.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets--><!--Device-cloudExtension-type CloudType = null | long | double | string | boolean | Uint8Array | CloudAsset | CloudAssets-End-->
 

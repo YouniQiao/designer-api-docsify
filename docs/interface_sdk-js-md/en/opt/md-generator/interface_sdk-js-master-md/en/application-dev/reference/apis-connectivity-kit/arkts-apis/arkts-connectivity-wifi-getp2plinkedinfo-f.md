@@ -18,7 +18,7 @@ Obtains information about a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getP2pLinkedInfo](ohos.wifiManager/wifiManager.getP2pLinkedInfo)
+**Substitutes:** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getP2pLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
@@ -45,7 +45,7 @@ Obtains information about a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getP2pLinkedInfo](ohos.wifiManager/wifiManager.getP2pLinkedInfo)
+**Substitutes:** [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getP2pLinkedInfo)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

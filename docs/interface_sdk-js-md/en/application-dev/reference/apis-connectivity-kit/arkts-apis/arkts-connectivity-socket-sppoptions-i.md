@@ -2,9 +2,11 @@
 
 Describes the spp parameters.
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-socket-interface SppOptions--><!--Device-socket-interface SppOptions-End-->
 
@@ -24,11 +26,13 @@ psm?: int
 
 l2cap protocol service multiplexer
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SppOptions-psm?: int--><!--Device-SppOptions-psm?: int-End-->
 
@@ -44,9 +48,11 @@ Indicates secure channel or not
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SppOptions-secure: boolean--><!--Device-SppOptions-secure: boolean-End-->
 
@@ -62,9 +68,11 @@ Spp link type
 
 **Type:** SppType
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SppOptions-type: SppType--><!--Device-SppOptions-type: SppType-End-->
 
@@ -80,9 +88,11 @@ Indicates the UUID in the SDP record.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-SppOptions-uuid: string--><!--Device-SppOptions-uuid: string-End-->
 

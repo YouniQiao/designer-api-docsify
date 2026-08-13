@@ -2,9 +2,11 @@
 
 rtt通话错误报告
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface RttErrorInfo--><!--Device-call-export interface RttErrorInfo-End-->
 
@@ -20,11 +22,13 @@ callId: int
 
 rtt通话id
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-callId: int--><!--Device-RttErrorInfo-callId: int-End-->
 
@@ -40,11 +44,13 @@ causeCode: int
 
 rtt失败原因值
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-causeCode: int--><!--Device-RttErrorInfo-causeCode: int-End-->
 
@@ -60,11 +66,13 @@ operationType: int
 
 rtt操作类型
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-operationType: int--><!--Device-RttErrorInfo-operationType: int-End-->
 
@@ -82,9 +90,11 @@ rtt失败原因
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-reasonText: string--><!--Device-RttErrorInfo-reasonText: string-End-->
 

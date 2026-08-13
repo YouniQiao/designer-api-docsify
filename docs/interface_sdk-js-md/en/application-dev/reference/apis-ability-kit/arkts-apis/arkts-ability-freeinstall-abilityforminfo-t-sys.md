@@ -1,20 +1,22 @@
 # AbilityFormInfo (System API)
 
 ```TypeScript
-export type AbilityFormInfo = _PackInfo.AbilityFormInfo
+export type AbilityFormInfo = _AbilityFormInfo
 ```
 
 Defines the widget information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-freeInstall-export type AbilityFormInfo = _PackInfo.AbilityFormInfo--><!--Device-freeInstall-export type AbilityFormInfo = _PackInfo.AbilityFormInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-freeInstall-export type AbilityFormInfo = _AbilityFormInfo--><!--Device-freeInstall-export type AbilityFormInfo = _AbilityFormInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.AbilityFormInfo
+**Property type:** _AbilityFormInfo
 

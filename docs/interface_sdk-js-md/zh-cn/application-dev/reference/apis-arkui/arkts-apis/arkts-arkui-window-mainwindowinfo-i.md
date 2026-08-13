@@ -2,9 +2,11 @@
 
 主窗口信息。
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-window-interface MainWindowInfo--><!--Device-window-interface MainWindowInfo-End-->
 
@@ -18,11 +20,13 @@ displayId: long
 
 ID of the display to which the main window belongs.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MainWindowInfo-displayId: long--><!--Device-MainWindowInfo-displayId: long-End-->
 
@@ -38,9 +42,11 @@ label: string
 
 **类型：** string
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MainWindowInfo-label: string--><!--Device-MainWindowInfo-label: string-End-->
 
@@ -52,13 +58,15 @@ label: string
 showing: boolean
 ```
 
-Foreground/Background status of the main window. **true** if the main window is in the foreground, **false**otherwise.
+Foreground/Background status of the main window. **true** if the main window is in the foreground, **false** otherwise.
 
 **类型：** boolean
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MainWindowInfo-showing: boolean--><!--Device-MainWindowInfo-showing: boolean-End-->
 
@@ -72,11 +80,13 @@ windowId: int
 
 ID of the main window.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 21
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MainWindowInfo-windowId: int--><!--Device-MainWindowInfo-windowId: int-End-->
 

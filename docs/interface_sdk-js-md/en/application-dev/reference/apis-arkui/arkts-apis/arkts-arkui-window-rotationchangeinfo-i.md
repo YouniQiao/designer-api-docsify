@@ -2,9 +2,11 @@
 
 Describes the window information obtained during window rotation changes.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface RotationChangeInfo--><!--Device-window-interface RotationChangeInfo-End-->
 
@@ -24,13 +26,15 @@ displayId: long
 
 ID of the screen where the window is located.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeInfo-displayId: long--><!--Device-RotationChangeInfo-displayId: long-End-->
 
@@ -46,11 +50,13 @@ Size of the rectangle after the screen where the window is located is rotated.
 
 **Type:** Rect
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeInfo-displayRect: Rect--><!--Device-RotationChangeInfo-displayRect: Rect-End-->
 
@@ -62,22 +68,17 @@ Size of the rectangle after the screen where the window is located is rotated.
 orientation: int
 ```
 
-Display orientation of the window.
+Display orientation of the window. - **0**: portrait. - **1**: reverse landscape. - **2**: reverse portrait. - **3**: landscape. Note that the orientation here is different from the orientation property of the display object.
 
-- **0**: portrait.  
-- **1**: reverse landscape.  
-- **2**: reverse portrait.  
-- **3**: landscape.
+**Type:** int
 
-Note that the orientation here is different from the orientation property of the display object.
+**Since:** 23
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 19
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeInfo-orientation: int--><!--Device-RotationChangeInfo-orientation: int-End-->
 
@@ -93,11 +94,13 @@ Type of window rotation event.
 
 **Type:** [RotationChangeType](arkts-arkui-window-rotationchangetype-e.md)
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RotationChangeInfo-type: RotationChangeType--><!--Device-RotationChangeInfo-type: RotationChangeType-End-->
 

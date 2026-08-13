@@ -4,7 +4,9 @@ OIS (Optical Image Stabilization) query interface.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface OISQuery--><!--Device-camera-interface OISQuery-End-->
 
@@ -18,12 +20,6 @@ import { camera } from '@kit.CameraKit';
 
 ## getCurrentCustomOISBias
 
-ArkTS-Dyn:
-```TypeScript
-getCurrentCustomOISBias(oisAxis: OISAxes): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCurrentCustomOISBias(oisAxis: OISAxes): double
 ```
@@ -32,7 +28,9 @@ Gets the current custom bias value for the specified OIS axis.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,14 +50,14 @@ Gets the current custom bias value for the specified OIS axis.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current bias value. |
+| double | The current bias value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getCurrentOISMode
 
@@ -71,7 +69,9 @@ Gets the current OIS mode.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,17 +91,11 @@ Gets the current OIS mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getSupportedOISBiasRange
 
-ArkTS-Dyn:
-```TypeScript
-getSupportedOISBiasRange(oisAxis: OISAxes): Array<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSupportedOISBiasRange(oisAxis: OISAxes): Array<double>
 ```
@@ -110,7 +104,9 @@ Gets the supported bias range for the specified OIS axis.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,23 +126,17 @@ Gets the supported bias range for the specified OIS axis.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | The bias range. |
+| Array&lt;double&gt; | The bias range. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getSupportedOISBiasStep
 
-ArkTS-Dyn:
-```TypeScript
-getSupportedOISBiasStep(oisAxis: OISAxes): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSupportedOISBiasStep(oisAxis: OISAxes): double
 ```
@@ -155,7 +145,9 @@ Gets the bias step for the specified OIS axis.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -175,14 +167,14 @@ Gets the bias step for the specified OIS axis.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The bias step value. |
+| double | The bias step value. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isOISModeSupported
 
@@ -194,7 +186,9 @@ Checks if the specified OIS mode is supported.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +214,6 @@ Checks if the specified OIS mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

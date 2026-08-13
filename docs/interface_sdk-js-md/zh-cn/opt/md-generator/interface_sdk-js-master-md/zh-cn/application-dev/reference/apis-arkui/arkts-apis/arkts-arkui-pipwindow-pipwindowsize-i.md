@@ -2,7 +2,9 @@
 
 画中画窗口大小。
 
-**起始版本：** 15
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-PiPWindow-interface PiPWindowSize--><!--Device-PiPWindow-interface PiPWindowSize-End-->
 
@@ -18,9 +20,11 @@ height: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPWindowSize-height: int--><!--Device-PiPWindowSize-height: int-End-->
 
@@ -36,9 +40,11 @@ scale: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPWindowSize-scale: double--><!--Device-PiPWindowSize-scale: double-End-->
 
@@ -54,9 +60,11 @@ width: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 26.0.0
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PiPWindowSize-width: int--><!--Device-PiPWindowSize-width: int-End-->
 

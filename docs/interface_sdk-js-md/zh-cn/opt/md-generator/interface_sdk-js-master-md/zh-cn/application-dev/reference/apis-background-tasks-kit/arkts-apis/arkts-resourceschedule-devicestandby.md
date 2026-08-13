@@ -1,12 +1,10 @@
-# @ohos.resourceschedule.deviceStandby(设备待机模块)
+# @ohos.resourceschedule.deviceStandby
 
-当设备长时间未被使用，或通过按键操作时，可以使设备进入待机模式。待机模式不影响应用使用，还可以延长电池续航时间。通过本模块接口，可查询设备或应用是否为待机模式，以及为应用申请或取消待机资源管控。
+当设备长时间未被使用，或通过按键操作时，可以使设备进入待机模式。待机模式不影响应用使用，还可以延长电池续航时间。通过本模块接口，可查询设备或应用是否为待机模式，以及为应用申请或取消待机资源管控。 > **说明：**: > > 本模块接口为系统接口。
 
-> **说明：**:
-> 
-> 本模块接口为系统接口。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace deviceStandby--><!--Device-unnamed-declare namespace deviceStandby-End-->
 
@@ -19,10 +17,10 @@
 
 | 名称 |
 | --- |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps) |
-| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getexemptedapps-1) |
-| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseexemptionresource) |
-| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestexemptionresource) |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps（系统接口）) |
+| [getExemptedApps](arkts-backgroundtasks-devicestandby-getexemptedapps-f-sys.md#getExemptedApps（系统接口）) |
+| [releaseExemptionResource](arkts-backgroundtasks-devicestandby-releaseexemptionresource-f-sys.md#releaseExemptionResource（系统接口）) |
+| [requestExemptionResource](arkts-backgroundtasks-devicestandby-requestexemptionresource-f-sys.md#requestExemptionResource（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

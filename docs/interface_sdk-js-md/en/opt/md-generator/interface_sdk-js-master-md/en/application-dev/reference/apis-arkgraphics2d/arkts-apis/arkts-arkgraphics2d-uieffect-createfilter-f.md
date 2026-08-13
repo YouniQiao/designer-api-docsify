@@ -14,7 +14,9 @@ function createFilter(): Filter
 
 Creates a Filter instance for adding multiple filter effects to a component.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
 

@@ -8,7 +8,9 @@ function getAutoTimeStatus(): boolean
 
 获取自动设置时间开关状态，使用同步方式。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getAutoTimeStatus(): boolean--><!--Device-systemDateTime-function getAutoTimeStatus(): boolean-End-->
 
@@ -24,7 +26,7 @@ function getAutoTimeStatus(): boolean
 
 | 错误码ID |
 | --- |
-| [13000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) |
+| [13000001](../../apis-basic-services-kit/errorcode-time.md#13000001-网络或操作系统异常) |
 
 ## 示例
 

@@ -1,12 +1,14 @@
 # ArcAlphabetIndexerInitInfo
 
-Define the initialization parameters of the arc alphabet index bar
+Initialization parameters for the **ArcAlphabetIndexer** component.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare interface ArcAlphabetIndexerInitInfo--><!--Device-unnamed-export declare interface ArcAlphabetIndexerInitInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface ArcAlphabetIndexerInitInfo--><!--Device-unnamed-declare interface ArcAlphabetIndexerInitInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,15 +24,17 @@ import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
 arrayValue: string[]
 ```
 
-Array of alphabetic indexed strings, cannot be set to empty.
+Array of alphabet index strings. It cannot be set to empty.
 
 **Type:** string[]
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcAlphabetIndexerInitInfo-arrayValue: string[]--><!--Device-ArcAlphabetIndexerInitInfo-arrayValue: string[]-End-->
 
@@ -39,20 +43,22 @@ Array of alphabetic indexed strings, cannot be set to empty.
 ## selected
 
 ```TypeScript
-selected: int | Bindable<int>
+selected: number
 ```
 
-The index value of the initial selected item.If it is out of the index range, the default value is 0
+Index of the initial selected item. If the value is out of range, the default value **0** is used. This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md).
 
-**Type:** int \| [Bindable](arkts-arkui-common-bindable-i.md)&lt;int&gt;
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ArcAlphabetIndexerInitInfo-selected: int | Bindable<int>--><!--Device-ArcAlphabetIndexerInitInfo-selected: int | Bindable<int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcAlphabetIndexerInitInfo-selected: number--><!--Device-ArcAlphabetIndexerInitInfo-selected: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

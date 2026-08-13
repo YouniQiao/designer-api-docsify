@@ -2,9 +2,11 @@
 
 Provides methods to accessing bluetooth MAP(Message Access Profile)-related capabilities.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace map--><!--Device-unnamed-declare namespace map-End-->
 
@@ -22,7 +24,7 @@ import { map } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md#createmapmseprofile) | create the instance of MAP MSE profile. |
+| [createMapMseProfile](arkts-connectivity-map-createmapmseprofile-f.md#createMapMseProfile) | create the instance of MAP MSE profile. |
 
 <!--Del-->
 ### Interfaces（系统接口）

@@ -1,24 +1,8 @@
 # SideBarContainer
 
-提供侧边栏可以显示和隐藏的容器，通过子组件定义侧边栏和内容区，第一个子组件表示侧边栏，第二个子组件表示内容区。
+提供侧边栏可以显示和隐藏的容器，通过子组件定义侧边栏和内容区，第一个子组件表示侧边栏，第二个子组件表示内容区。 > **说明：**
 
-> **说明：**
-
-## 子组件
-
-可以包含子组件。
-
-> **说明：**
-> 
-> - 子组件类型：系统组件和自定义组件，不支持渲染控制类型（[if/else](docroot://ui/rendering-control/arkts-rendering-control-ifelse.md)、
-> [ForEach](docroot://ui/rendering-control/arkts-rendering-control-foreach.md)和
-> [LazyForEach](docroot://ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。
-> 
-> - 子组件个数：必须且仅包含2个子组件。
-> 
-> - 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。
-> 
-> - SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。
+## 子组件 可以包含子组件。 > **说明：** > > - 子组件类型：系统组件和自定义组件，不支持渲染控制类型（[if/else](../../../ui/rendering-control/arkts-rendering-control-ifelse.md)、 > [ForEach](../../../ui/rendering-control/arkts-rendering-control-foreach.md)和 > [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)）。 > > - 子组件个数：必须且仅包含2个子组件。 > > - 子组件个数异常时：3个或以上子组件，显示第一个和第二个。1个子组件，显示侧边栏，内容区为空白。 > > - SideBarContainer走焦时，先在内容区走焦，再在侧边栏走焦。
 
 ## SideBarContainer
 
@@ -31,6 +15,8 @@ SideBarContainer(type?: SideBarContainerType)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -46,8 +32,7 @@ SideBarContainer(type?: SideBarContainerType)
 
 ## 汇总
 
-- [ButtonIconOptions](arkts-arkui-sidebarcontainer-buttoniconoptions-i.md)
-- [ButtonStyle](arkts-arkui-sidebarcontainer-buttonstyle-i.md)
-- [DividerStyle](arkts-arkui-sidebarcontainer-dividerstyle-i.md)
-- [SideBarContainerType](arkts-arkui-sidebarcontainer-sidebarcontainertype-e.md)
-- [SideBarPosition](arkts-arkui-sidebarcontainer-sidebarposition-e.md)
+- [ButtonIconOptions](arkts-arkui-buttoniconoptions-i.md)
+- [ButtonStyle](arkts-arkui-buttonstyle-i.md)
+- [SideBarContainerType](arkts-arkui-sidebarcontainertype-e.md)
+- [SideBarPosition](arkts-arkui-sidebarposition-e.md)

@@ -2,7 +2,9 @@
 
 Enumerates the battery status that triggers the deferred task callback.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-workScheduler-export enum BatteryStatus--><!--Device-workScheduler-export enum BatteryStatus-End-->
 
@@ -16,7 +18,9 @@ BATTERY_STATUS_LOW = 0
 
 A low battery alert is displayed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ BATTERY_STATUS_OKAY = 1
 
 The battery level is restored from low to normal.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ BATTERY_STATUS_LOW_OR_OKAY = 2
 
 The battery level is restored from low to normal, or a low battery alert is displayed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

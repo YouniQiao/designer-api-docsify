@@ -4,6 +4,8 @@ Enumerates the types of the relative offset position used in **lseek()**.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum WhenceType--><!--Device-unnamed-declare enum WhenceType-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ SEEK_SET = 0
 Beginning of the file.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-WhenceType-SEEK_SET = 0--><!--Device-WhenceType-SEEK_SET = 0-End-->
 
@@ -32,6 +36,8 @@ Current offset position.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-WhenceType-SEEK_CUR = 1--><!--Device-WhenceType-SEEK_CUR = 1-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -45,6 +51,8 @@ SEEK_END = 2
 End of the file.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-WhenceType-SEEK_END = 2--><!--Device-WhenceType-SEEK_END = 2-End-->
 

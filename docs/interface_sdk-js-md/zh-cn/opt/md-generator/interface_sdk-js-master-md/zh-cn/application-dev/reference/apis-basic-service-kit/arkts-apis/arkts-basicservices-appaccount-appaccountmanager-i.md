@@ -2,7 +2,9 @@
 
 应用账号管理器，可用于管理应用自身的账号信息。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appAccount-interface AppAccountManager--><!--Device-appAccount-interface AppAccountManager-End-->
 
@@ -14,19 +16,13 @@
 addAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名添加应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createAccount)替
-> 代。
+根据账号名添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [createAccount](#createAccount)替 > 代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**替代接口：** [createAccount](#createAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -55,19 +51,13 @@ appAccountManager.addAccount('WangWu', (err: BusinessError) => {
 addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-根据账号名和额外信息添加应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createAccount)
-> 替代。
+根据账号名和额外信息添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [createAccount](#createAccount) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**替代接口：** [createAccount](#createAccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -97,18 +87,13 @@ appAccountManager.addAccount('LiSi', 'token101', (err: BusinessError) => {
 addAccount(name: string, extraInfo?: string): Promise<void>
 ```
 
-根据账号名和额外信息添加应用账号。使用Promise异步回调。
-
-> **说明：**
-> > 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [createAccount](#createAccount-2)
-> 替代。
+根据账号名和额外信息添加应用账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [createAccount](#createAccount) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [createAccount](appAccount.AppAccountManager.createAccount(name:)
+**替代接口：** [createAccount](#createAccount)(name: string, options?: CreateAccountOptions)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
@@ -150,19 +135,13 @@ addAccountImplicitly(
     ): void
 ```
 
-根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [createAccountImplicitly](#createAccountImplicitly)
-> 替代。
+根据指定的账号所有者隐式地添加应用账号。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [createAccountImplicitly](#createAccountImplicitly) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [createAccountImplicitly](appAccount.AppAccountManager.createAccountImplicitly(owner:)
+**替代接口：** [createAccountImplicitly](#createAccountImplicitly)(owner: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-addAccountImplicitly(      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -226,7 +205,9 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void--><!--Device-AppAccountManager-auth(name: string, owner: string, authType: string, callback: AuthCallback): void-End-->
 
@@ -245,13 +226,13 @@ auth(name: string, owner: string, authType: string, callback: AuthCallback): voi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -315,6 +296,8 @@ auth(
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, Object>,      callback: AuthCallback    ): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
@@ -333,13 +316,13 @@ auth(
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -390,6 +373,49 @@ struct Index {
 }
 ```
 
+## auth
+
+```TypeScript
+auth(
+      name: string,
+      owner: string,
+      authType: string,
+      options: Record<string, RecordData>,
+      callback: AuthCallback
+    ): void
+```
+
+对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void--><!--Device-AppAccountManager-auth(      name: string,      owner: string,      authType: string,      options: Record<string, RecordData>,      callback: AuthCallback    ): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| name | string | 是 |
+| owner | string | 是 |
+| authType | string | 是 |
+| options | Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | 是 |
+| callback | [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+
 ## authenticate
 
 ```TypeScript
@@ -402,19 +428,13 @@ authenticate(
     ): void
 ```
 
-对应用账号进行鉴权以获取授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [auth](#auth)
-> 替代。
+对应用账号进行鉴权以获取授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [auth](#auth) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [auth](appAccount.AppAccountManager.auth(name:)
+**替代接口：** [auth](#auth)(name: string, owner: string, authType: string, callback: AuthCallback)
 
 <!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void--><!--Device-AppAccountManager-authenticate(      name: string,      owner: string,      authType: string,      options: { [key: string]: any },      callback: AuthenticatorCallback    ): void-End-->
 
@@ -479,7 +499,9 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 检查指定应用账号是否满足特定的标签集合。使用callback异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>, callback: AsyncCallback<boolean>): void-End-->
 
@@ -498,13 +520,13 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>, callback:
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -535,7 +557,9 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 检查指定应用账号是否满足特定的标签集合。使用Promise异步回调。该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>--><!--Device-AppAccountManager-checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<boolean>-End-->
 
@@ -559,13 +583,13 @@ checkAccountLabels(name: string, owner: string, labels: Array<string>): Promise<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -594,7 +618,9 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 检查指定应用对特定账号的数据是否可访问。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -612,10 +638,10 @@ checkAppAccess(name: string, bundleName: string, callback: AsyncCallback<boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -645,7 +671,9 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 检查指定应用对特定账号的数据是否可访问。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAppAccess(name: string, bundleName: string): Promise<boolean>-End-->
 
@@ -668,10 +696,10 @@ checkAppAccess(name: string, bundleName: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -696,19 +724,13 @@ try {
 checkAppAccountSyncEnable(name: string, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定应用账号是否开启数据同步功能。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkDataSyncEnabled)
-> 替代。
+检查指定应用账号是否开启数据同步功能。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkDataSyncEnabled](#checkDataSyncEnabled) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**替代接口：** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -743,18 +765,13 @@ appAccountManager.checkAppAccountSyncEnable('ZhangSan', (err: BusinessError, res
 checkAppAccountSyncEnable(name: string): Promise<boolean>
 ```
 
-检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkDataSyncEnabled](#checkDataSyncEnabled-1)替代。
+检查指定应用账号是否开启数据同步功能。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkDataSyncEnabled](#checkDataSyncEnabled)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkDataSyncEnabled](appAccount.AppAccountManager.checkDataSyncEnabled(name:)
+**替代接口：** [checkDataSyncEnabled](#checkDataSyncEnabled)(name: string)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -794,7 +811,9 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -813,11 +832,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string, cal
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -847,7 +866,9 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -871,11 +892,11 @@ checkAuthTokenVisibility(name: string, authType: string, bundleName: string): Pr
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -903,7 +924,9 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 检查指定应用账号是否开启数据同步功能。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -922,11 +945,11 @@ checkDataSyncEnabled(name: string, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -955,7 +978,9 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 检查指定应用账号是否开启数据同步功能。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -979,11 +1004,11 @@ checkDataSyncEnabled(name: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1013,19 +1038,13 @@ checkOAuthTokenVisibility(
     ): void
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility)
-> 替代。
+检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**替代接口：** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void--><!--Device-AppAccountManager-checkOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      callback: AsyncCallback<boolean>    ): void-End-->
 
@@ -1061,19 +1080,13 @@ appAccountManager.checkOAuthTokenVisibility('LiSi', 'getSocialData', 'com.exampl
 checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>
 ```
 
-检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [checkAuthTokenVisibility](#checkAuthTokenVisibility-1)
-> 替代。
+检查指定应用账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [checkAuthTokenVisibility](#checkAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [checkAuthTokenVisibility](appAccount.AppAccountManager.checkAuthTokenVisibility(name:)
+**替代接口：** [checkAuthTokenVisibility](#checkAuthTokenVisibility)(name: string, authType: string, bundleName: string)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -1114,7 +1127,9 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 根据账号名创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1131,11 +1146,11 @@ createAccount(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
 
 ## 示例
 
@@ -1164,7 +1179,9 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 根据账号名和可选项创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -1182,11 +1199,11 @@ createAccount(name: string, options: CreateAccountOptions, callback: AsyncCallba
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
 
 ## 示例
 
@@ -1220,7 +1237,9 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 根据账号名和可选项创建应用账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>--><!--Device-AppAccountManager-createAccount(name: string, options?: CreateAccountOptions): Promise<void>-End-->
 
@@ -1243,11 +1262,11 @@ createAccount(name: string, options?: CreateAccountOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
 
 ## 示例
 
@@ -1279,7 +1298,9 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 根据指定的账号所有者隐式地创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, callback: AuthCallback): void-End-->
 
@@ -1296,13 +1317,13 @@ createAccountImplicitly(owner: string, callback: AuthCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
 
 ## 示例
 
@@ -1357,7 +1378,9 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 根据指定的账号所有者和可选项隐式地创建应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, callback: AuthCallback): void-End-->
 
@@ -1375,13 +1398,13 @@ createAccountImplicitly(owner: string, options: CreateAccountImplicitlyOptions, 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
-| [12300007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-账号数量已达上限) |
 
 ## 示例
 
@@ -1438,19 +1461,13 @@ struct Index {
 deleteAccount(name: string, callback: AsyncCallback<void>): void
 ```
 
-删除应用账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeAccount)替
-> 代。
+删除应用账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [removeAccount](#removeAccount)替 > 代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**替代接口：** [removeAccount](#removeAccount)(name: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1479,19 +1496,13 @@ appAccountManager.deleteAccount('ZhaoLiu', (err: BusinessError) => {
 deleteAccount(name: string): Promise<void>
 ```
 
-删除应用账号。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [removeAccount](#removeAccount-1)替
-> 代。
+删除应用账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [removeAccount](#removeAccount)替 > 代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [removeAccount](appAccount.AppAccountManager.removeAccount(name:)
+**替代接口：** [removeAccount](#removeAccount)(name: string)
 
 <!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
@@ -1529,7 +1540,9 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1549,11 +1562,11 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string, ca
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1583,7 +1596,9 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1608,11 +1623,11 @@ deleteAuthToken(name: string, owner: string, authType: string, token: string): P
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1639,7 +1654,9 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 删除指定应用账号的特定类型的凭据信息。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1657,11 +1674,11 @@ deleteCredential(name: string, credentialType: string, callback: AsyncCallback<v
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
 
 ## 示例
 
@@ -1690,7 +1707,9 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 删除指定应用账号的特定类型的凭据信息。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>--><!--Device-AppAccountManager-deleteCredential(name: string, credentialType: string): Promise<void>-End-->
 
@@ -1713,11 +1732,11 @@ deleteCredential(name: string, credentialType: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
 
 ## 示例
 
@@ -1742,19 +1761,13 @@ try {
 deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteAuthToken)
-> 替代。
+删除指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [deleteAuthToken](#deleteAuthToken) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**替代接口：** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1791,19 +1804,13 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>
 ```
 
-删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [deleteAuthToken](#deleteAuthToken-1)
-> 替代。
+删除指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [deleteAuthToken](#deleteAuthToken) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [deleteAuthToken](appAccount.AppAccountManager.deleteAuthToken(name:)
+**替代接口：** [deleteAuthToken](#deleteAuthToken)(name: string, owner: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -1842,19 +1849,13 @@ appAccountManager.deleteOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSoci
 disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-禁止指定第三方应用账号名称对指定的第三方应用进行访问。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess)
-> 替代。
+禁止指定第三方应用账号名称对指定的第三方应用进行访问。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1884,19 +1885,13 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err
 disableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess-1)
-> 替代。
+禁止指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -1933,19 +1928,13 @@ appAccountManager.disableAppAccess('ZhangSan', 'com.example.accountjsdemo').then
 enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void
 ```
 
-允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess)
-> 替代。
+允许指定第三方应用账号名称对指定包名称的第三方应用进行访问。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1979,19 +1968,13 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo', (err:
 enableAppAccess(name: string, bundleName: string): Promise<void>
 ```
 
-允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setAppAccess](#setAppAccess-1)
-> 替代。
+允许指定第三方应用账号的名称对指定包名称的第三方应用进行访问。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setAppAccess](#setAppAccess) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setAppAccess](appAccount.AppAccountManager.setAppAccess(name:)
+**替代接口：** [setAppAccess](#setAppAccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -2028,19 +2011,13 @@ appAccountManager.enableAppAccess('ZhangSan', 'com.example.accountjsdemo').then(
 getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的凭据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getCredential)
-> 替代。
+获取指定应用账号的凭据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCredential](#getCredential) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**替代接口：** [getCredential](#getCredential)(name: string, credentialType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2074,18 +2051,13 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001', (err: Bu
 getAccountCredential(name: string, credentialType: string): Promise<string>
 ```
 
-获取指定应用账号的凭据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCredential](#getCredential-1)替代。
+获取指定应用账号的凭据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCredential](#getCredential)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCredential](appAccount.AppAccountManager.getCredential(name:)
+**替代接口：** [getCredential](#getCredential)(name: string, credentialType: string)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -2122,19 +2094,13 @@ appAccountManager.getAccountCredential('ZhangSan', 'credentialType001').then((da
 getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData)
-> 替代。
+获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAccountExtraInfo(name: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2167,18 +2133,13 @@ appAccountManager.getAccountExtraInfo('ZhangSan', (err: BusinessError, result: s
 getAccountExtraInfo(name: string): Promise<string>
 ```
 
-获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData-1)替代。
+获取指定应用账号的额外信息（能转换成string类型的其它信息）。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
@@ -2214,9 +2175,11 @@ appAccountManager.getAccountExtraInfo('ZhangSan').then((data: string) => {
 getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2233,9 +2196,9 @@ getAccountsByOwner(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>
 
 | 错误码ID |
 | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -2263,9 +2226,11 @@ try {
 getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>-End-->
 
@@ -2287,9 +2252,9 @@ getAccountsByOwner(owner: string): Promise<Array<AppAccountInfo>>
 
 | 错误码ID |
 | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -2315,19 +2280,13 @@ try {
 getAllAccessibleAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAllAccounts](#getAllAccounts)
-> 替代。
+获取所有可访问的应用账号信息。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getAllAccounts](#getAllAccounts) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAccounts](appAccount.AppAccountManager.getAllAccounts(callback:)
+**替代接口：** [getAllAccounts](#getAllAccounts)(callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2361,12 +2320,7 @@ appAccountManager.getAllAccessibleAccounts((err: BusinessError, data: appAccount
 getAllAccessibleAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getAllAccounts)
-> 替代。
+获取所有可访问的应用账号信息。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用[getAllAccounts](#getAllAccounts) > 替代。
 
 **起始版本：** 7
 
@@ -2404,9 +2358,11 @@ appAccountManager.getAllAccessibleAccounts().then((data: appAccount.AppAccountIn
 getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-获取所有可访问的应用账号信息。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+获取所有可访问的应用账号信息。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -2422,8 +2378,8 @@ getAllAccounts(callback: AsyncCallback<Array<AppAccountInfo>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2450,9 +2406,11 @@ try {
 getAllAccounts(): Promise<Array<AppAccountInfo>>
 ```
 
-获取所有可访问的应用账号信息。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权，或&lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
+获取所有可访问的应用账号信息。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权，或 &lt;br&gt; 已获得ohos.permission.GET_ALL_APP_ACCOUNTS权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-getAllAccounts(): Promise<Array<AppAccountInfo>>-End-->
 
@@ -2468,7 +2426,7 @@ getAllAccounts(): Promise<Array<AppAccountInfo>>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2493,19 +2451,13 @@ try {
 getAllAccounts(owner: string, callback: AsyncCallback<Array<AppAccountInfo>>): void
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAccountsByOwner](#getAccountsByOwner)
-> 替代。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用callback异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getAccountsByOwner](#getAccountsByOwner) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**替代接口：** [getAccountsByOwner](#getAccountsByOwner)(owner: string, callback: AsyncCallback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2541,18 +2493,13 @@ appAccountManager.getAllAccounts(selfBundle, (err: BusinessError, data: appAccou
 getAllAccounts(owner: string): Promise<Array<AppAccountInfo>>
 ```
 
-根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。此方法适用于以下账户：&lt;br&gt; 本应用的账户。&lt;br&gt; 第三方应用的账户。要获取此类信息，&lt;br&gt; 您的应用必须已获得第三方应用的授权。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getAccountsByOwner](#getAccountsByOwner-1)替代。
+根据应用账号所有者获取调用方可访问的应用账号列表。使用Promise异步回调。 此方法适用于以下账户： &lt;br&gt; 本应用的账户。 &lt;br&gt; 第三方应用的账户。要获取此类信息， &lt;br&gt; 您的应用必须已获得第三方应用的授权。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getAccountsByOwner](#getAccountsByOwner)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getAccountsByOwner](appAccount.AppAccountManager.getAccountsByOwner(owner:)
+**替代接口：** [getAccountsByOwner](#getAccountsByOwner)(owner: string)
 
 **需要权限：** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -2593,7 +2540,9 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<AuthTokenInfo>>): void-End-->
 
@@ -2611,10 +2560,10 @@ getAllAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<Auth
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2644,7 +2593,9 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>--><!--Device-AppAccountManager-getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>-End-->
 
@@ -2667,10 +2618,10 @@ getAllAuthTokens(name: string, owner: string): Promise<Array<AuthTokenInfo>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2696,19 +2647,13 @@ try {
 getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getAllAuthTokens)
-> 替代。
+获取指定账号对调用方可见的所有授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAllAuthTokens](#getAllAuthTokens) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**替代接口：** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string, callback: AsyncCallback&lt;Array&lt;AuthTokenInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string, callback: AsyncCallback<Array<OAuthTokenInfo>>): void-End-->
 
@@ -2743,18 +2688,13 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo',
 getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>
 ```
 
-获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAllAuthTokens](#getAllAuthTokens-1)替代。
+获取指定账号对调用方可见的所有授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAllAuthTokens](#getAllAuthTokens)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAllAuthTokens](appAccount.AppAccountManager.getAllAuthTokens(name:)
+**替代接口：** [getAllAuthTokens](#getAllAuthTokens)(name: string, owner: string)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
@@ -2792,19 +2732,13 @@ appAccountManager.getAllOAuthTokens('LiSi', 'com.example.accountjsdemo').then((
 getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void
 ```
 
-根据指定键名获取特定应用账号的关联数据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData)
-> 替代。
+根据指定键名获取特定应用账号的关联数据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -2838,18 +2772,13 @@ appAccountManager.getAssociatedData('ZhangSan', 'k001', (err: BusinessError, res
 getAssociatedData(name: string, key: string): Promise<string>
 ```
 
-获取与此应用程序账号关联的数据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getCustomData](#getCustomData-1)替代。
+获取与此应用程序账号关联的数据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getCustomData](#getCustomData)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCustomData](appAccount.AppAccountManager.getCustomData(name:)
+**替代接口：** [getCustomData](#getCustomData)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
@@ -2888,7 +2817,9 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 获取鉴权会话的认证器回调对象。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void--><!--Device-AppAccountManager-getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void-End-->
 
@@ -2905,10 +2836,10 @@ getAuthCallback(sessionId: string, callback: AsyncCallback<AuthCallback>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2953,7 +2884,9 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 获取鉴权会话的认证器回调对象。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>--><!--Device-AppAccountManager-getAuthCallback(sessionId: string): Promise<AuthCallback>-End-->
 
@@ -2975,10 +2908,10 @@ getAuthCallback(sessionId: string): Promise<AuthCallback>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300108](../../apis-basic-services-kit/errorcode-account.md#12300108-认证会话不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3019,10 +2952,11 @@ export default class EntryAbility extends UIAbility {
 getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setAuthTokenVisibility](#setAuthTokenVisibility)来设置）。使用callback异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setAuthTokenVisibility](#setAuthTokenVisibility) 来设置）。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3040,11 +2974,11 @@ getAuthList(name: string, authType: string, callback: AsyncCallback<Array<string
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3071,10 +3005,11 @@ try {
 getAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setAuthTokenVisibility](#setAuthTokenVisibility)来设置）。使用Promise异步回调。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setAuthTokenVisibility](#setAuthTokenVisibility) 来设置）。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3097,11 +3032,11 @@ getAuthList(name: string, authType: string): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3128,7 +3063,9 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 
 获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3147,11 +3084,11 @@ getAuthToken(name: string, owner: string, authType: string, callback: AsyncCallb
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3181,7 +3118,9 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -3205,11 +3144,11 @@ getAuthToken(name: string, owner: string, authType: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3234,19 +3173,13 @@ try {
 getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void
 ```
 
-获取鉴权会话的认证器回调。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getAuthCallback)
-> 替代。
+获取鉴权会话的认证器回调。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthCallback](#getAuthCallback) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**替代接口：** [getAuthCallback](#getAuthCallback)(sessionId: string, callback: AsyncCallback&lt;AuthCallback&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string, callback: AsyncCallback<AuthenticatorCallback>): void-End-->
 
@@ -3291,18 +3224,13 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>
 ```
 
-获取鉴权会话的认证器回调。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthCallback](#getAuthCallback-1)替代。
+获取鉴权会话的认证器回调。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthCallback](#getAuthCallback)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthCallback](appAccount.AppAccountManager.getAuthCallback(sessionId:)
+**替代接口：** [getAuthCallback](#getAuthCallback)(sessionId: string)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
@@ -3350,19 +3278,13 @@ export default class EntryAbility extends UIAbility {
 getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void
 ```
 
-获取指定应用的认证器信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo)
-> 替代。
+获取指定应用的认证器信息。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [queryAuthenticatorInfo](#queryAuthenticatorInfo) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**替代接口：** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string, callback: AsyncCallback&lt;AuthenticatorInfo&gt;)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -3396,18 +3318,13 @@ appAccountManager.getAuthenticatorInfo('com.example.accountjsdemo',
 getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 ```
 
-获取指定应用的认证器信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [queryAuthenticatorInfo](#queryAuthenticatorInfo-1)替代。
+获取指定应用的认证器信息。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [queryAuthenticatorInfo](#queryAuthenticatorInfo)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [queryAuthenticatorInfo](appAccount.AppAccountManager.queryAuthenticatorInfo(owner:)
+**替代接口：** [queryAuthenticatorInfo](#queryAuthenticatorInfo)(owner: string)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -3446,7 +3363,9 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 获取指定应用账号的凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3464,11 +3383,11 @@ getCredential(name: string, credentialType: string, callback: AsyncCallback<stri
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
 
 ## 示例
 
@@ -3497,7 +3416,9 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 获取指定应用账号的凭据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -3520,11 +3441,11 @@ getCredential(name: string, credentialType: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-凭据不存在) |
 
 ## 示例
 
@@ -3551,7 +3472,9 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 根据指定键名获取特定应用账号的自定义数据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getCustomData(name: string, key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3569,11 +3492,11 @@ getCustomData(name: string, key: string, callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) |
 
 ## 示例
 
@@ -3602,7 +3525,9 @@ getCustomData(name: string, key: string): Promise<string>
 
 根据指定键名获取特定应用账号的自定义数据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getCustomData(name: string, key: string): Promise<string>-End-->
 
@@ -3625,11 +3550,11 @@ getCustomData(name: string, key: string): Promise<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) |
 
 ## 示例
 
@@ -3656,7 +3581,9 @@ getCustomDataSync(name: string, key: string): string
 
 根据指定键名获取特定应用账号的自定义数据。使用同步方式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string--><!--Device-AppAccountManager-getCustomDataSync(name: string, key: string): string-End-->
 
@@ -3679,11 +3606,11 @@ getCustomDataSync(name: string, key: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400002](../../apis-basic-services-kit/errorcode-account.md#12400002-自定义数据不存在) |
 
 ## 示例
 
@@ -3705,20 +3632,13 @@ try {
 getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility)来设置）。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getAuthList)
-> 替代。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setOAuthTokenVisibility](#setOAuthTokenVisibility) 来设置）。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthList](#getAuthList) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**替代接口：** [getAuthList](#getAuthList)(name: string, authType: string, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -3752,19 +3672,13 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData', (err: BusinessError, dat
 getOAuthList(name: string, authType: string): Promise<Array<string>>
 ```
 
-获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过  
-[setOAuthTokenVisibility](#setOAuthTokenVisibility)来设置）。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthList](#getAuthList-1)替代。
+获取指定应用账号的特定鉴权类型的授权列表，即被授权的包名数组（令牌的授权列表通过 [setOAuthTokenVisibility](#setOAuthTokenVisibility) 来设置）。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthList](#getAuthList)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthList](appAccount.AppAccountManager.getAuthList(name:)
+**替代接口：** [getAuthList](#getAuthList)(name: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -3801,19 +3715,13 @@ appAccountManager.getOAuthList('LiSi', 'getSocialData').then((data: string[]) =>
 getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getAuthToken)
-> 替代。
+获取指定应用账号的特定鉴权类型的授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthToken](#getAuthToken) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**替代接口：** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string, callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string, callback: AsyncCallback<string>): void-End-->
 
@@ -3849,19 +3757,13 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 getOAuthToken(name: string, owner: string, authType: string): Promise<string>
 ```
 
-获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getAuthToken](#getAuthToken-1)替
-> 代。
+获取指定应用账号的特定鉴权类型的授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getAuthToken](#getAuthToken)替 > 代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getAuthToken](appAccount.AppAccountManager.getAuthToken(name:)
+**替代接口：** [getAuthToken](#getAuthToken)(name: string, owner: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -3893,25 +3795,101 @@ appAccountManager.getOAuthToken('LiSi', 'com.example.accountjsdemo', 'getSocialD
 });
 ```
 
-## off('change')
+## offAccountChange
+
+```TypeScript
+offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void
+```
+
+取消订阅账号信息变更事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-offAccountChange(callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+
+## off_accountChange
+
+```TypeScript
+off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
+```
+
+取消订阅账号信息变更事件。
+
+**起始版本：** 9
+
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'accountChange' | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
+  console.info('receive change data:' + JSON.stringify(data));
+}
+
+try {
+  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+try {
+  appAccountManager.off('accountChange', changeOnCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void
 ```
 
-取消订阅账号信息变更事件。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [off('accountChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-> 替代。
+取消订阅账号信息变更事件。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [off('accountChange')](#off_change) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [off](appAccount.AppAccountManager.off(type:)
+**替代接口：** [off](#off_change)(type: 'accountChange', callback?: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'change', callback?: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -3944,17 +3922,49 @@ try {
 }
 ```
 
-## off('accountChange')
+## onAccountChange
 
 ```TypeScript
-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
+onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-取消订阅账号信息变更事件。
+订阅指定应用的账号信息变更事件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-onAccountChange(owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
+
+**系统能力：** SystemCapability.Account.AppAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| owners | Array & lt;string & gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+
+## on_accountChange
+
+```TypeScript
+on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
+```
+
+订阅指定应用的账号信息变更事件。
 
 **起始版本：** 9
 
-<!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
 **系统能力：** SystemCapability.Account.AppAccount
 
@@ -3963,15 +3973,16 @@ off(type: 'accountChange', callback?: Callback<Array<AppAccountInfo>>): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'accountChange' | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 否 |
+| owners | Array & lt;string & gt; | 是 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -3988,33 +3999,21 @@ try {
   const err = e as BusinessError;
   console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
 }
-try {
-  appAccountManager.off('accountChange', changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
 ```
 
-## on('change')
+## on_change
 
 ```TypeScript
 on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
 ```
 
-订阅指定应用的账号信息变更事件。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [on('accountChange')](appAccount.AppAccountManager.on(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array<AppAccountInfo>&gt;&lt;AppAccountInfo&gt;>))
-> 替代。
+订阅指定应用的账号信息变更事件。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [on('accountChange')](#on_change) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [on](appAccount.AppAccountManager.on(type:)
+**替代接口：** [on](#on_change)(type: 'accountChange', owners: Array&lt;string&gt;, callback: Callback&lt;Array&lt;AppAccountInfo&gt;&gt;)
 
 <!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'change', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
 
@@ -4045,53 +4044,6 @@ try {
 }
 ```
 
-## on('accountChange')
-
-```TypeScript
-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void
-```
-
-订阅指定应用的账号信息变更事件。
-
-**起始版本：** 9
-
-<!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-on(type: 'accountChange', owners: Array<string>, callback: Callback<Array<AppAccountInfo>>): void-End-->
-
-**系统能力：** SystemCapability.Account.AppAccount
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'accountChange' | 是 |
-| owners | Array & lt;string & gt; | 是 |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)&gt;&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function changeOnCallback(data: appAccount.AppAccountInfo[]): void {
-  console.info('receive change data:' + JSON.stringify(data));
-}
-
-try {
-  appAccountManager.on('accountChange', ['com.example.actsaccounttest'], changeOnCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`on accountChange failed, code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## queryAuthenticatorInfo
 
 ```TypeScript
@@ -4100,7 +4052,9 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 获取指定应用的认证器信息。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>): void-End-->
 
@@ -4117,10 +4071,10 @@ queryAuthenticatorInfo(owner: string, callback: AsyncCallback<AuthenticatorInfo>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -4150,7 +4104,9 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 获取指定应用的认证器信息。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -4172,10 +4128,10 @@ queryAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -4203,7 +4159,9 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 删除应用账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-removeAccount(name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4220,10 +4178,10 @@ removeAccount(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -4252,7 +4210,9 @@ removeAccount(name: string): Promise<void>
 
 删除应用账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-removeAccount(name: string): Promise<void>--><!--Device-AppAccountManager-removeAccount(name: string): Promise<void>-End-->
 
@@ -4274,10 +4234,10 @@ removeAccount(name: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -4304,7 +4264,9 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 根据选项选择调用方可访问的账号列表。使用callback异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<Array<AppAccountInfo>>): void-End-->
 
@@ -4321,11 +4283,11 @@ selectAccountsByOptions(options: SelectAccountsOptions, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -4359,7 +4321,9 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 根据选项选择调用方可访问的账号列表。使用Promise异步回调。如果选项中包含标签约束，则该方法依赖目标应用的认证器提供标签检查的能力。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>--><!--Device-AppAccountManager-selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccountInfo>>-End-->
 
@@ -4381,11 +4345,11 @@ selectAccountsByOptions(options: SelectAccountsOptions): Promise<Array<AppAccoun
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -4413,19 +4377,13 @@ try {
 setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的凭据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setCredential)
-> 替代。
+设置指定应用账号的凭据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setCredential](#setCredential) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**替代接口：** [setCredential](#setCredential)(name: string, credentialType: string, credential: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4460,19 +4418,13 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>
 ```
 
-设置指定应用账号的凭据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setCredential](#setCredential-1)
-> 替代。
+设置指定应用账号的凭据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用 > [setCredential](#setCredential) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCredential](appAccount.AppAccountManager.setCredential(name:)
+**替代接口：** [setCredential](#setCredential)(name: string, credentialType: string, credential: string)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -4510,19 +4462,13 @@ appAccountManager.setAccountCredential('ZhangSan', 'credentialType001', 'credent
 setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的额外信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData)
-> 替代。
+设置指定应用账号的额外信息。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4556,18 +4502,13 @@ appAccountManager.setAccountExtraInfo('ZhangSan', 'Tk002', (err: BusinessError) 
 setAccountExtraInfo(name: string, extraInfo: string): Promise<void>
 ```
 
-设置此应用程序账号的额外信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData-1)替代。
+设置此应用程序账号的额外信息。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
@@ -4606,7 +4547,9 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 设置指定应用对特定账号的访问权限。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -4625,11 +4568,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean, callback: 
 
 | 错误码ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -4658,7 +4601,9 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 设置指定应用对特定账号的数据访问权限。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>--><!--Device-AppAccountManager-setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<void>-End-->
 
@@ -4682,11 +4627,11 @@ setAppAccess(name: string, bundleName: string, isAccessible: boolean): Promise<v
 
 | 错误码ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -4711,19 +4656,13 @@ try {
 setAppAccountSyncEnable(name: string, isEnable: boolean, callback: AsyncCallback<void>): void
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setDataSyncEnabled)
-> 替代。
+开启或禁止指定应用账号的数据同步功能。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setDataSyncEnabled](#setDataSyncEnabled) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**替代接口：** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean, callback: AsyncCallback&lt;void&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4759,19 +4698,13 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true, (err: BusinessError)
 setAppAccountSyncEnable(name: string, isEnable: boolean): Promise<void>
 ```
 
-开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setDataSyncEnabled](#setDataSyncEnabled-1)替代
-> 。
+开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setDataSyncEnabled](#setDataSyncEnabled)替代 > 。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setDataSyncEnabled](appAccount.AppAccountManager.setDataSyncEnabled(name:)
+**替代接口：** [setDataSyncEnabled](#setDataSyncEnabled)(name: string, isEnabled: boolean)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4810,19 +4743,13 @@ appAccountManager.setAppAccountSyncEnable('ZhangSan', true).then(() => {
 setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void
 ```
 
-设置指定应用账号的关联数据。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData)
-> 替代。
+设置指定应用账号的关联数据。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4857,18 +4784,13 @@ appAccountManager.setAssociatedData('ZhangSan', 'k001', 'v001', (err: BusinessEr
 setAssociatedData(name: string, key: string, value: string): Promise<void>
 ```
 
-设置指定应用账号的关联数据。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [setCustomData](#setCustomData-1)替代。
+设置指定应用账号的关联数据。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [setCustomData](#setCustomData)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setCustomData](appAccount.AppAccountManager.setCustomData(name:)
+**替代接口：** [setCustomData](#setCustomData)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -4908,7 +4830,9 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -4927,11 +4851,11 @@ setAuthToken(name: string, authType: string, token: string, callback: AsyncCallb
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -4960,7 +4884,9 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -4984,11 +4910,11 @@ setAuthToken(name: string, authType: string, token: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12400004](../../apis-basic-services-kit/errorcode-account.md#12400004-令牌数量已达上限) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -5021,7 +4947,9 @@ setAuthTokenVisibility(
 
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5041,12 +4969,12 @@ setAuthTokenVisibility(
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -5076,7 +5004,9 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -5101,12 +5031,12 @@ setAuthTokenVisibility(name: string, authType: string, bundleName: string, isVis
 
 | 错误码ID |
 | --- |
-| [12300107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
+| [12300107](../../apis-basic-services-kit/errorcode-account.md#12300107-认证类型不存在) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12400005](../../apis-basic-services-kit/errorcode-account.md#12400005-授权列表已达上限) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400001](../../apis-basic-services-kit/errorcode-account.md#12400001-应用不存在) |
 
 ## 示例
 
@@ -5133,7 +5063,9 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 设置指定应用的认证器属性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, callback: AuthCallback): void-End-->
 
@@ -5150,12 +5082,12 @@ setAuthenticatorProperties(owner: string, callback: AuthCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -5187,7 +5119,9 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 设置认证器属性。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callback: AuthCallback): void-End-->
 
@@ -5205,12 +5139,12 @@ setAuthenticatorProperties(owner: string, options: SetPropertiesOptions, callbac
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -5246,7 +5180,9 @@ setCredential(name: string, credentialType: string, credential: string,
 
 设置指定应用账号的凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string,                             callback: AsyncCallback<void>): void-End-->
 
@@ -5265,10 +5201,10 @@ setCredential(name: string, credentialType: string, credential: string,
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -5297,7 +5233,9 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 设置指定应用账号的凭据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -5321,10 +5259,10 @@ setCredential(name: string, credentialType: string, credential: string): Promise
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -5351,7 +5289,9 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 设置指定应用账号的自定义数据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5370,11 +5310,11 @@ setCustomData(name: string, key: string, value: string, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) |
 
 ## 示例
 
@@ -5403,7 +5343,9 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 设置指定应用账号的自定义数据。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setCustomData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -5427,11 +5369,11 @@ setCustomData(name: string, key: string, value: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12400003](../../apis-basic-services-kit/errorcode-account.md#12400003-自定义数据的数量已达上限) |
 
 ## 示例
 
@@ -5458,7 +5400,9 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 开启或禁止指定应用账号的数据同步功能。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5478,11 +5422,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean, callback: AsyncCallback<voi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -5507,7 +5451,9 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 开启或禁止指定应用账号的数据同步功能。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5532,11 +5478,11 @@ setDataSyncEnabled(name: string, isEnabled: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -5561,19 +5507,13 @@ try {
 setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthToken](#setAuthToken)
-> 替代。
+为指定应用账号设置特定鉴权类型的授权令牌。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthToken](#setAuthToken) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**替代接口：** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string, callback: AsyncCallback<void>): void-End-->
 
@@ -5608,19 +5548,13 @@ appAccountManager.setOAuthToken('LiSi', 'getSocialData', 'xxxx', (err: BusinessE
 setOAuthToken(name: string, authType: string, token: string): Promise<void>
 ```
 
-为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthToken](#setAuthToken-1)替
-> 代。
+为指定应用账号设置特定鉴权类型的授权令牌。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthToken](#setAuthToken)替 > 代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthToken](appAccount.AppAccountManager.setAuthToken(name:)
+**替代接口：** [setAuthToken](#setAuthToken)(name: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -5664,19 +5598,13 @@ setOAuthTokenVisibility(
     ): void
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthTokenVisibility](#setAuthTokenVisibility)
-> 替代。
+设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthTokenVisibility](#setAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility()
+**替代接口：** [setAuthTokenVisibility](#setAuthTokenVisibility)( name: string, authType: string, bundleName: string, isVisible: boolean, callback: AsyncCallback&lt;void&gt; )
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-AppAccountManager-setOAuthTokenVisibility(      name: string,      authType: string,      bundleName: string,      isVisible: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -5713,19 +5641,13 @@ appAccountManager.setOAuthTokenVisibility('LiSi', 'getSocialData', 'com.example.
 setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>
 ```
 
-设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [setAuthTokenVisibility](#setAuthTokenVisibility-1)
-> 替代。
+设置指定账号的特定鉴权类型的授权令牌对指定应用的可见性。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [setAuthTokenVisibility](#setAuthTokenVisibility) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setAuthTokenVisibility](appAccount.AppAccountManager.setAuthTokenVisibility(name:)
+**替代接口：** [setAuthTokenVisibility](#setAuthTokenVisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 
@@ -5766,7 +5688,9 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 验证指定账号的凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, callback: AuthCallback): void-End-->
 
@@ -5784,13 +5708,13 @@ verifyCredential(name: string, owner: string, callback: AuthCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 
@@ -5822,7 +5746,9 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 验证用户凭据。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void--><!--Device-AppAccountManager-verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, callback: AuthCallback): void-End-->
 
@@ -5841,13 +5767,13 @@ verifyCredential(name: string, owner: string, options: VerifyCredentialOptions, 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300114](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300113](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300114](../../apis-basic-services-kit/errorcode-account.md#12300114-认证服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-认证服务不存在) |
 
 ## 示例
 

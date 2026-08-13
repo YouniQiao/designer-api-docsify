@@ -2,9 +2,11 @@
 
 Provides APIs for managing the **Highlights** album, which is an automatically generated collection of memorable photos or videos.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class HighlightAlbum--><!--Device-photoAccessHelper-class HighlightAlbum-End-->
 
@@ -26,9 +28,11 @@ constructor(album: Album)
 
 Constructor.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HighlightAlbum-constructor(album: Album)--><!--Device-HighlightAlbum-constructor(album: Album)-End-->
 
@@ -46,8 +50,8 @@ Constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -72,21 +76,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ## deleteHighlightAlbums
 
-ArkTS-Dyn:
-```TypeScript
-static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 static deleteHighlightAlbums(context: Context, albums: Array<Album>): Promise<int>
 ```
 
 Deletes highlight albums.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -107,15 +107,15 @@ Deletes highlight albums.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the operation result. The value **0** means that the operation is successful, and **1** means the opposite. |
+| Promise&lt;int&gt; | Promise used to return the operation result. The value **0** means that the operation is successful, and **1** means the opposite. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## Examples
@@ -155,9 +155,11 @@ getHighlightAlbumInfo(type: HighlightAlbumInfoType): Promise<string>
 
 Obtains specific information about the **Highlights** album.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -183,9 +185,9 @@ Obtains specific information about the **Highlights** album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -225,9 +227,11 @@ getHighlightResource(resourceUri: string): Promise<ArrayBuffer>
 
 Obtains the ArrayBuffer for caching the specified asset.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -253,9 +257,9 @@ Obtains the ArrayBuffer for caching the specified asset.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. Possible causes: &lt;br&gt;1. The database is corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## Examples
@@ -287,21 +291,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 
 ## setHighlightUserActionData
 
-ArkTS-Dyn:
-```TypeScript
-setHighlightUserActionData(type: HighlightUserActionType, actionData: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setHighlightUserActionData(type: HighlightUserActionType, actionData: int): Promise<void>
 ```
 
 Sets the user behavior data for the **Highlights** album.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -316,7 +316,7 @@ Sets the user behavior data for the **Highlights** album.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [HighlightUserActionType](arkts-medialibrary-photoaccesshelper-highlightuseractiontype-e-sys.md) | Yes | Type of the user behavior data to set. |
-| actionData | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Behavior data. |
+| actionData | int | Yes | Behavior data. |
 
 **Return value:**
 
@@ -328,9 +328,9 @@ Sets the user behavior data for the **Highlights** album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error |
 
 ## Examples
@@ -365,20 +365,13 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setSubTitle(subTitle: string): Promise<void>
 ```
 
-Sets the subtitle for this **Highlights** album instance.
+Sets the subtitle for this **Highlights** album instance. The subtitle must meet the following requirements: - The total length of the subtitle must be between 0 and 255 characters. - It must not contain any invalid characters, which are: . \ / : * ? " ' ` &lt; &gt; | { } [ ] - The characters are case insensitive.
 
-The subtitle must meet the following requirements:
+**Since:** 23
 
-- The total length of the subtitle must be between 0 and 255 characters.  
-- It must not contain any invalid characters, which are:
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-- The characters are case insensitive.
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -404,8 +397,8 @@ The subtitle must meet the following requirements:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 

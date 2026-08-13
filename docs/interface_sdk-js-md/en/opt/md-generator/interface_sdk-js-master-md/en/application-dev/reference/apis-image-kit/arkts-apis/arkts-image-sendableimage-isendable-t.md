@@ -8,6 +8,8 @@ ISendable is the parent type of all sendable types except null and undefined. It
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableImage-type ISendable = lang.ISendable--><!--Device-sendableImage-type ISendable = lang.ISendable-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core

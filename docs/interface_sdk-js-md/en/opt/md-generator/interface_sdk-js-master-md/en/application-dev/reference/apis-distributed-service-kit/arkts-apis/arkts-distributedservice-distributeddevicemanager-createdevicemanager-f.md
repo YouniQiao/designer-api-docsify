@@ -14,7 +14,9 @@ function createDeviceManager(bundleName: string): DeviceManager
 
 Creates a **DeviceManager** instance. The **DeviceManager** instance is the entry for invoking the APIs for distributed device management. It can be used to obtain information about trusted devices and local devices.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager--><!--Device-distributedDeviceManager-function createDeviceManager(bundleName: string): DeviceManager-End-->
 
@@ -36,7 +38,7 @@ Creates a **DeviceManager** instance. The **DeviceManager** instance is the entr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

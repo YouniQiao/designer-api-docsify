@@ -2,7 +2,9 @@
 
 Enumerates request target types.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-export enum USBRequestTargetType--><!--Device-usbManager-export enum USBRequestTargetType-End-->
 
@@ -16,7 +18,9 @@ USB_REQUEST_TARGET_DEVICE = 0
 
 设备。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_DEVICE = 0-End-->
 
@@ -30,7 +34,9 @@ USB_REQUEST_TARGET_INTERFACE = 1
 
 接口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_INTERFACE = 1-End-->
 
@@ -44,7 +50,9 @@ USB_REQUEST_TARGET_ENDPOINT = 2
 
 端点。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_ENDPOINT = 2-End-->
 
@@ -58,7 +66,9 @@ USB_REQUEST_TARGET_OTHER = 3
 
 其他。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3--><!--Device-USBRequestTargetType-USB_REQUEST_TARGET_OTHER = 3-End-->
 

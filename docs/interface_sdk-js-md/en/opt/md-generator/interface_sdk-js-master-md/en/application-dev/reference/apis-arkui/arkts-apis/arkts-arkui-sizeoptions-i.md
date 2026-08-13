@@ -4,6 +4,8 @@ Defines the size options.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SizeOptions--><!--Device-unnamed-declare interface SizeOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Defines the height.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Defines the width.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,10 +1,12 @@
 # UIState
 
-Enum for the UI state of one component, which is used for handling of state style.
+Enumerates polymorphic style states, which are used to process polymorphic styles.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum UIState--><!--Device-unnamed-export enum UIState-End-->
 
@@ -16,13 +18,17 @@ Enum for the UI state of one component, which is used for handling of state styl
 NORMAL = 0
 ```
 
-The normal state.
+Normal state.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIState-NORMAL = 0--><!--Device-UIState-NORMAL = 0-End-->
 
@@ -34,13 +40,17 @@ The normal state.
 PRESSED = 1 << 0
 ```
 
-The pressed state.
+Pressed state.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIState-PRESSED = 1 << 0--><!--Device-UIState-PRESSED = 1 << 0-End-->
 
@@ -52,13 +62,17 @@ The pressed state.
 FOCUSED = 1 << 1
 ```
 
-The focused state.
+Focused state.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIState-FOCUSED = 1 << 1--><!--Device-UIState-FOCUSED = 1 << 1-End-->
 
@@ -70,13 +84,17 @@ The focused state.
 DISABLED = 1 << 2
 ```
 
-The disabled state.
+Disabled state.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIState-DISABLED = 1 << 2--><!--Device-UIState-DISABLED = 1 << 2-End-->
 
@@ -88,13 +106,17 @@ The disabled state.
 SELECTED = 1 << 3
 ```
 
-The selected state, this state is only supported by some specific kind of component,they are Checkbox, Radio, Toggle and List/Grid/MenuItem, please check the StateStyles docs for details.
+Selected state. Only supported by specific components: **Checkbox**, **Radio**, **Toggle**, **List**, **Grid**, **MenuItem**.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIState-SELECTED = 1 << 3--><!--Device-UIState-SELECTED = 1 << 3-End-->
 
@@ -106,13 +128,17 @@ The selected state, this state is only supported by some specific kind of compon
 HOVERED = 1 << 4
 ```
 
-The hovered state.
+Hovered state.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-UIState-HOVERED = 1 << 4--><!--Device-UIState-HOVERED = 1 << 4-End-->
 

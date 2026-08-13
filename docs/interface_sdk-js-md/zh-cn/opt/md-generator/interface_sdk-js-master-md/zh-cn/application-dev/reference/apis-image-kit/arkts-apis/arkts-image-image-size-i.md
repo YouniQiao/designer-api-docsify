@@ -2,7 +2,9 @@
 
 表示图片尺寸。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-image-interface Size--><!--Device-image-interface Size-End-->
 
@@ -14,13 +16,13 @@
 height: number
 ```
 
-Height
-
-Unit:px.
+Height Unit:px.
 
 **类型：** number
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,13 +38,13 @@ Unit:px.
 width: number
 ```
 
-Width
-
-Unit:px.
+Width Unit:px.
 
 **类型：** number
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

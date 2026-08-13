@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SpanStyle--><!--Device-unnamed-declare interface SpanStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 length: number
 ```
 
-设置属性字符串样式的长度。
-
-当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
+设置属性字符串样式的长度。 当length的值小于0或超出字符串长度与start的差值时，按字符串长度与start的差值处理。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +44,8 @@ start: number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -62,6 +66,8 @@ styledKey: StyledStringKey
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -81,6 +87,8 @@ styledValue: StyledStringValue
 **类型：** [StyledStringValue](arkts-arkui-styledstringvalue-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

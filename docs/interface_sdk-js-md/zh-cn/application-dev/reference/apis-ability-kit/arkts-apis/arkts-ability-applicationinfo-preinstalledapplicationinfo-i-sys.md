@@ -2,9 +2,11 @@
 
 预装应用的信息。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PreinstalledApplicationInfo--><!--Device-unnamed-export interface PreinstalledApplicationInfo-End-->
 
@@ -22,9 +24,11 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly bundleName: string--><!--Device-PreinstalledApplicationInfo-readonly bundleName: string-End-->
 
@@ -38,15 +42,15 @@ readonly bundleName: string
 readonly descriptionId?: long
 ```
 
-应用描述Id。
+应用描述Id。 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,11 +68,13 @@ readonly iconId: long
 
 应用图标Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly iconId: long--><!--Device-PreinstalledApplicationInfo-readonly iconId: long-End-->
 
@@ -84,11 +90,13 @@ readonly labelId: long
 
 应用标签Id。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly labelId: long--><!--Device-PreinstalledApplicationInfo-readonly labelId: long-End-->
 
@@ -106,9 +114,11 @@ readonly moduleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly moduleName: string--><!--Device-PreinstalledApplicationInfo-readonly moduleName: string-End-->
 

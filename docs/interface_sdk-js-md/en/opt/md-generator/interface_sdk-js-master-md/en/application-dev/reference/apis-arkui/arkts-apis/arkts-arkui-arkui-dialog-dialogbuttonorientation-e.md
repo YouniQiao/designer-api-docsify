@@ -4,6 +4,8 @@ The arrangement of buttons in dialog.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export enum DialogButtonOrientation--><!--Device-unnamed-export enum DialogButtonOrientation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,9 +16,11 @@ The arrangement of buttons in dialog.
 AUTO = 0
 ```
 
-Two or fewer buttons are arranged horizontally,and two or more buttons are arranged vertically.
+Two or fewer buttons are arranged horizontally, and two or more buttons are arranged vertically.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Buttons are arranged horizontally.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -53,6 +59,8 @@ VERTICAL = 2
 Buttons are arranged vertically.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

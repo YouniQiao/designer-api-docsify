@@ -14,7 +14,9 @@ function getMediaKeySystemUuid(name: string): string
 
 Obtains the UUID of the DRM content protection system supported by the specified DRM solution.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -38,9 +40,9 @@ Obtains the UUID of the DRM content protection system supported by the specified
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## Examples
 

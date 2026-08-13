@@ -1,12 +1,4 @@
-# @ohos.arkui.advanced.FullScreenLaunchComponent(Defines the fullScreen launch component)
-
-###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
- ###### Events
- The [universal events](./@internal/component/ets/common) are not supported.
-
+# @ohos.arkui.advanced.FullScreenLaunchComponent
 
 ## Modules to Import
 

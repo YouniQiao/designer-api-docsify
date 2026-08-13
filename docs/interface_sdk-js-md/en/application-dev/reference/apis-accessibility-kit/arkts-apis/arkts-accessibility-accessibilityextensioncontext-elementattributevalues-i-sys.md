@@ -6,6 +6,8 @@ Provides attribute names and value types of a node element.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -23,6 +25,8 @@ Custom accessibility state broadcast text of an element.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Whether the element is accessibility visible. **true** means the element is acce
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-accessibilityVisible?: boolean--><!--Device-ElementAttributeValues-accessibilityVisible?: boolean-End-->
@@ -67,6 +73,8 @@ Component tree ID that the element belongs to. The default value is **-1**.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ ID of the child component of the element.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-childrenIds?: Array<long>--><!--Device-ElementAttributeValues-childrenIds?: Array<long>-End-->
@@ -111,6 +121,8 @@ Child component tree ID of the element. The default value is **-1**.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +146,8 @@ Position of the current element in the grid.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid--><!--Device-ElementAttributeValues-currentItem?: AccessibilityGrid-End-->
@@ -155,6 +169,8 @@ Indicates the custom actions supported by the component.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,6 +194,8 @@ Whether the element is mandatory for the user. The value **true** indicates that
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-isEssential?: boolean--><!--Device-ElementAttributeValues-isEssential?: boolean-End-->
@@ -199,6 +217,8 @@ ID of the main window of the element. The default value is **-1**.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,6 +242,8 @@ ID of the navigation target associated with the element. The default value is **
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-navDestinationId?: long--><!--Device-ElementAttributeValues-navDestinationId?: long-End-->
@@ -244,6 +266,8 @@ ID of the parent component of the element. The default value is **-1**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ElementAttributeValues-parentId?: long--><!--Device-ElementAttributeValues-parentId?: long-End-->
@@ -264,7 +288,9 @@ Indicates the source of this element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -287,6 +313,8 @@ Array of the row and column ranges spanned by the element in the grid layout.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

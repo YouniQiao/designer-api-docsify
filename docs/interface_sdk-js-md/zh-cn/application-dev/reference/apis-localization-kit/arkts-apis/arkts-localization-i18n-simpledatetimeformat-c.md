@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class SimpleDateTimeFormat--><!--Device-i18n-export class SimpleDateTimeFormat-End-->
 
@@ -20,7 +22,9 @@ format(date: Date): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -39,4 +43,29 @@ format(date: Date): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 格式化后的时间日期字符串。 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale : Intl.Locale = new Intl.Locale("zh-Hans-CN");
+  let date : Date = new Date(2024, 11, 13); // 时间日期为2024.12.13
+
+  let formatterWithText: i18n.SimpleDateTimeFormat =
+    i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
+  let formattedDate: string = formatterWithText.format(date); // formattedDate = 'month(12)'
+
+  let patternFormatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern('yMd', locale);
+  formattedDate = patternFormatter.format(date); // formattedDate = '20241213'
+
+  let skeletonFormatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatBySkeleton('yMd', locale);
+  formattedDate = skeletonFormatter.format(date); // formattedDate = '2024/12/13'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleDateTimeFormat.format failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

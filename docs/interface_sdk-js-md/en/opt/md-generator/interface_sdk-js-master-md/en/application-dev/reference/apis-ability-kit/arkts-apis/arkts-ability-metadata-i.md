@@ -1,14 +1,10 @@
 # Metadata
 
-The module defines a metadata object. An application can obtain the metadata through  
-[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf), with **GET_BUNDLE_INFO_WITH_METADATA** passed in for  
-[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag). This object is contained in  
-[ApplicationInfo](ApplicationInfo), [HapModuleInfo](HapModuleInfo), [AbilityInfo](AbilityInfo), and  
-[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md#ExtensionAbilityInfo).
+The module defines a metadata object. An application can obtain the metadata through [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf) , with **GET_BUNDLE_INFO_WITH_METADATA** passed in for [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag). This object is contained in ApplicationInfo, HapModuleInfo, AbilityInfo, and [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md#ExtensionAbilityInfo). The module provides the configuration about the module, UIAbility, and ExtensionAbility. The value is of the array type. The configuration is valid only for the current module, UIAbility, or ExtensionAbility.
 
-The module provides the configuration about the module, UIAbility, and ExtensionAbility. The value is of the array type. The configuration is valid only for the current module, UIAbility, or ExtensionAbility.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Metadata--><!--Device-unnamed-export interface Metadata-End-->
 
@@ -24,7 +20,9 @@ Indicates the metadata name
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +40,9 @@ Indicates the metadata resource
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,7 +60,9 @@ Indicates the metadata value
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,9 +80,11 @@ Indicates the value id of the metadata
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Metadata-readonly valueId?: long--><!--Device-Metadata-readonly valueId?: long-End-->
 

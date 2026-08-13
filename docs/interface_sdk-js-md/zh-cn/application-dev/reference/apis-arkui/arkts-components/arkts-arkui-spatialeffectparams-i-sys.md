@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SpatialEffectParams--><!--Device-unnamed-declare interface SpatialEffectParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -18,13 +20,15 @@
 occlusionWeight?: double
 ```
 
-空间效果的遮挡权重。&lt;br&gt;取值范围:[0, 1]。默认值:0。
+空间效果的遮挡权重。 &lt;br&gt;取值范围:[0, 1]。默认值:0。
 
 **类型：** double
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +53,8 @@ position: SpatialPosition | double
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

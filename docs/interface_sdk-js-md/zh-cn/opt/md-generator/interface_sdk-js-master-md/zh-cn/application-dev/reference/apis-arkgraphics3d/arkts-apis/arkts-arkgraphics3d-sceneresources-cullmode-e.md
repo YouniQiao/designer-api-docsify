@@ -2,7 +2,9 @@
 
 PBR材质剔除模式枚举.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum CullMode--><!--Device-unnamed-export enum CullMode-End-->
 
@@ -16,7 +18,9 @@ NONE = 0
 
 禁用剔除.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
 
@@ -30,7 +34,9 @@ FRONT = 1
 
 剔除正面.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CullMode-FRONT = 1--><!--Device-CullMode-FRONT = 1-End-->
 
@@ -44,7 +50,9 @@ BACK = 2
 
 剔除背面.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
 

@@ -6,13 +6,13 @@
 function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 ```
 
-查询调用应用程序正在进行的联系人同步信息。
-
-如果返回的联系人同步信息为空，则调用方不进行联系人同步或联系人同步已完成。
+查询调用应用程序正在进行的联系人同步信息。 如果返回的联系人同步信息为空，则调用方不进行联系人同步或联系人同步已完成。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_CONTACTS
 
@@ -40,12 +40,12 @@ function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

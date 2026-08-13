@@ -2,9 +2,11 @@
 
 ASR processing controller.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AsrProcessingController--><!--Device-audio-interface AsrProcessingController-End-->
 
@@ -26,9 +28,11 @@ getAsrAecMode(): AsrAecMode
 
 Get ASR AEC mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode--><!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode-End-->
 
@@ -46,8 +50,8 @@ Get ASR AEC mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -63,9 +67,11 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 
 Get ASR noise suppression mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode--><!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode-End-->
 
@@ -83,8 +89,8 @@ Get ASR noise suppression mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -100,9 +106,11 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 
 Get ASR whisper detection mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode--><!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode-End-->
 
@@ -120,8 +128,8 @@ Get ASR whisper detection mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -137,9 +145,11 @@ isWhispering(): boolean
 
 Query whether user is whispering.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-isWhispering(): boolean--><!--Device-AsrProcessingController-isWhispering(): boolean-End-->
 
@@ -157,8 +167,8 @@ Query whether user is whispering.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -174,9 +184,11 @@ setAsrAecMode(mode: AsrAecMode): boolean
 
 Set ASR AEC mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean--><!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean-End-->
 
@@ -200,10 +212,10 @@ Set ASR AEC mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -219,9 +231,11 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 
 Set ASR noise suppression mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean--><!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean-End-->
 
@@ -245,10 +259,10 @@ Set ASR noise suppression mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -264,9 +278,11 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 
 Set ASR voice control mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean-End-->
 
@@ -291,10 +307,10 @@ Set ASR voice control mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -310,9 +326,11 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 
 Set ASR voice mute mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean-End-->
 
@@ -337,10 +355,10 @@ Set ASR voice mute mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 
@@ -356,9 +374,11 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 
 Set ASR whisper detection mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean--><!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean-End-->
 
@@ -382,10 +402,10 @@ Set ASR whisper detection mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Operation not allowed. |
 
 ## Examples
 

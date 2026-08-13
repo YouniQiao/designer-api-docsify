@@ -4,6 +4,8 @@ Describes compose parameters.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-image-interface HdrComposeOptions--><!--Device-image-interface HdrComposeOptions-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -25,6 +27,8 @@ Pixel format used for composite image, RGBA_1010102\YCBCR_P010\YCRCB_P010 are su
 **Type:** PixelMapFormat
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

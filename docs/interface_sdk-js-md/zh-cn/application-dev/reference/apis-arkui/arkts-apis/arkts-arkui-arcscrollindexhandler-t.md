@@ -10,6 +10,8 @@ export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void--><!--Device-unnamed-export type ArcScrollIndexHandler = (start: int, end: int, center: int) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle

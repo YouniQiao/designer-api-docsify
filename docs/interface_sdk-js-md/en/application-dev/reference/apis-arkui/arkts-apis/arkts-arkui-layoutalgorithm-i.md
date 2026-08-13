@@ -1,14 +1,20 @@
 # LayoutAlgorithm
 
-Defines layout algorithm.
+Basic layout algorithm of the [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) container. > **NOTE：**> > This type of variable can be assigned a specific layout algorithm class object, such as an object of the > CustomLayoutAlgorithm or RowLayoutAlgorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare interface LayoutAlgorithm--><!--Device-unnamed-export declare interface LayoutAlgorithm-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-unnamed-export interface LayoutAlgorithm--><!--Device-unnamed-export interface LayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -8,7 +8,9 @@ The query play list event.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,7 +22,7 @@ The query play list event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | page index |
+| pageIndex | int | Yes | page index |
 | sort | [Sort](arkts-avsession-avmusictemplate-sort-e.md) | Yes | sort |
 
 **Return value:**

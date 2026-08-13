@@ -1,12 +1,12 @@
 # WebDataBase
 
-Implements a WebDataBase object.
+Web组件数据库管理对象。 > **说明：** > > - 本Class首批接口从API version 9开始支持。 > > - 示例效果请以真机运行为准。 > > - 目前调用WebDataBase下的方法，都需要先加载Web组件。
 
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;You must load the Web component before calling the APIs in WebDataBase.&lt;/p&gt;
+**起始版本：** 9
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 <!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
@@ -18,11 +18,15 @@ Implements a WebDataBase object.
 static deleteHttpAuthCredentials(): void
 ```
 
-Deletes all HTTP authentication credentials saved in the cache. This API returns the result synchronously.
+清除所有已保存的HTTP身份验证凭据，该方法为同步方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
 
@@ -34,11 +38,15 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 static existHttpAuthCredentials(): boolean
 ```
 
-Get whether instances holds any http authentication credentials.
+判断是否存在任何已保存的HTTP身份验证凭据，该方法为同步方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDataBase-static existHttpAuthCredentials(): boolean--><!--Device-WebDataBase-static existHttpAuthCredentials(): boolean-End-->
 
@@ -48,7 +56,7 @@ Get whether instances holds any http authentication credentials.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true if instances saved any http authentication credentials otherwise false. |
+| boolean | 是否存在任何已保存的HTTP身份验证凭据。 &lt;br&gt;存在返回true，不存在返回false。 |
 
 ## getHttpAuthCredentials
 
@@ -56,11 +64,15 @@ Get whether instances holds any http authentication credentials.
 static getHttpAuthCredentials(host: string, realm: string): Array<string>
 ```
 
-Get http authentication credentials.
+检索给定主机和域的HTTP身份验证凭据，该方法为同步方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>--><!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>-End-->
 
@@ -70,20 +82,20 @@ Get http authentication credentials.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| host | string | 是 | The host to which the credentials apply. |
-| realm | string | 是 | The realm to which the credentials apply. |
+| host | string | 是 | HTTP身份验证凭据应用的主机。 |
+| realm | string | 是 | HTTP身份验证凭据应用的域。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | Return an array containing username and password. |
+| Array&lt;string&gt; | 包含用户名和密码的数组，检索失败返回空数组。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveHttpAuthCredentials
 
@@ -91,11 +103,15 @@ Get http authentication credentials.
 static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void
 ```
 
-Saves HTTP authentication credentials for a given host and realm. This API returns the result synchronously.
+保存给定主机和域的HTTP身份验证凭据，该方法为同步方法。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void--><!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void-End-->
 
@@ -105,14 +121,14 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| host | string | 是 | Host to which HTTP authentication credentials apply. |
-| realm | string | 是 | Realm to which HTTP authentication credentials apply. |
-| username | string | 是 | User name. |
-| password | string | 是 | Password. |
+| host | string | 是 | HTTP身份验证凭据应用的主机。 |
+| realm | string | 是 | HTTP身份验证凭据应用的域。 |
+| username | string | 是 | 用户名。 |
+| password | string | 是 | 密码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

@@ -3,6 +3,7 @@
 ## Canvas
 
 ```TypeScript
+@ComponentBuilder
 export declare function Canvas(
   context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions
 ): CanvasAttribute
@@ -14,9 +15,11 @@ Canvas is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute--><!--Device-unnamed-export declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  context?: CanvasRenderingContext2D | DrawingRenderingContext, imageAIOptions?: ImageAIOptions): CanvasAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,32 +28,35 @@ Canvas is returned when the parameter is transferred.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [CanvasRenderingContext2D](arkts-arkui-canvas-canvasrenderingcontext2d-c.md) \| [DrawingRenderingContext](arkts-arkui-canvas-drawingrenderingcontext-c.md) | No | Canvas context object. |
-| imageAIOptions | [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
+| imageAIOptions | [ImageAIOptions](../../apis-na/arkts-apis/arkts-na-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvas-canvasattribute-i.md) | The attribute of the Canvas. |
+| CanvasAttribute | The attribute of the Canvas. |
 
 
 ## Canvas
 
 ```TypeScript
+@ComponentBuilder
 export declare function Canvas(
   params: CanvasParams
 ): CanvasAttribute
 ```
 
-Create a canvas component using { @link CanvasParams }.This canvas component will not respond to drawing commands when invisible for memory optimization,You can get a rendering context in { @link onReady }.
+Create a canvas component using { @link CanvasParams }. This canvas component will not respond to drawing commands when invisible for memory optimization, You can get a rendering context in { @link onReady }.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Canvas(  params: CanvasParams): CanvasAttribute--><!--Device-unnamed-export declare function Canvas(  params: CanvasParams): CanvasAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  params: CanvasParams): CanvasAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Canvas(  params: CanvasParams): CanvasAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -64,12 +70,13 @@ Create a canvas component using { @link CanvasParams }.This canvas component wil
 
 | Type | Description |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvas-canvasattribute-i.md) | The attribute of the Canvas. |
+| CanvasAttribute | The attribute of the Canvas. |
 
 
 ## Canvas
 
 ```TypeScript
+@Builder
 export declare function Canvas(
     style_: CustomBuilderT<CanvasAttribute>
 ): CanvasAttribute
@@ -81,11 +88,11 @@ Defines Canvas Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Canvas(    style_: CustomBuilderT<CanvasAttribute>): CanvasAttribute--><!--Device-unnamed-export declare function Canvas(    style_: CustomBuilderT<CanvasAttribute>): CanvasAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Canvas(    style_: CustomBuilderT<CanvasAttribute>): CanvasAttribute--><!--Device-unnamed-@Builderexport declare function Canvas(    style_: CustomBuilderT<CanvasAttribute>): CanvasAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -93,11 +100,11 @@ Defines Canvas Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[CanvasAttribute](arkts-arkui-canvas-canvasattribute-i.md)&gt; | Yes | Canvas attribute instance. |
+| style_ | CustomBuilderT&lt;CanvasAttribute&gt; | Yes | Canvas attribute instance. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [CanvasAttribute](arkts-arkui-canvas-canvasattribute-i.md) |  |
+| CanvasAttribute |  |
 

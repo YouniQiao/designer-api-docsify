@@ -6,6 +6,8 @@ Defines the SearchButton options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface SearchButtonOptions--><!--Device-unnamed-interface SearchButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,7 @@ Defines the SearchButton options.
 autoDisable?: Boolean
 ```
 
-Whether to disable the search button when there is no text input.
-
-Default value: **false**
-
-**true**: The search button is disabled when there is no text input. **false**: The search button remains enabled regardless of the text input.
+Whether to disable the search button when there is no text input. Default value: **false** **true**: The search button is disabled when there is no text input. **false**: The search button remains enabled regardless of the text input.
 
 **Type:** Boolean
 
@@ -29,6 +27,8 @@ Default value: **false**
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +52,8 @@ Font color of the button.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -73,6 +75,8 @@ Font size of the button. It cannot be set in percentage.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

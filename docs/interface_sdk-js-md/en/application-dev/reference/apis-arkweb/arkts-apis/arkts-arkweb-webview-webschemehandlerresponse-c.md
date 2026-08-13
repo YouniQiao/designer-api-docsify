@@ -2,9 +2,11 @@
 
 Defines the Web resource response used for scheme handler.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebSchemeHandlerResponse--><!--Device-webview-class WebSchemeHandlerResponse-End-->
 
@@ -24,9 +26,13 @@ constructor()
 
 Constructor.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-constructor()--><!--Device-WebSchemeHandlerResponse-constructor()-End-->
 
@@ -35,18 +41,20 @@ Constructor.
 ## getCustomErrorCode
 
 ```TypeScript
-getCustomErrorCode(): int
+getCustomErrorCode(): number
 ```
 
 Get the custom error code of the Web response.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): int--><!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): int-End-->
+<!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number--><!--Device-WebSchemeHandlerResponse-getCustomErrorCode(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -54,7 +62,7 @@ Get the custom error code of the Web response.
 
 | Type | Description |
 | --- | --- |
-| int | Return the custom error code that was set for this response. |
+| number | Return the custom error code that was set for this response. |
 
 ## getEncoding
 
@@ -64,9 +72,13 @@ getEncoding(): string
 
 Get the response encoding.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-getEncoding(): string--><!--Device-WebSchemeHandlerResponse-getEncoding(): string-End-->
 
@@ -86,9 +98,13 @@ getHeaderByName(name: string): string
 
 Get the header value by name from the response.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string--><!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string-End-->
 
@@ -114,9 +130,13 @@ getMimeType(): string
 
 Get mime type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-getMimeType(): string--><!--Device-WebSchemeHandlerResponse-getMimeType(): string-End-->
 
@@ -136,9 +156,13 @@ getNetErrorCode(): WebNetErrorList
 
 Get net error code.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList--><!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList-End-->
 
@@ -153,16 +177,20 @@ Get net error code.
 ## getStatus
 
 ```TypeScript
-getStatus(): int
+getStatus(): number
 ```
 
 Get http status code.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-WebSchemeHandlerResponse-getStatus(): int--><!--Device-WebSchemeHandlerResponse-getStatus(): int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-getStatus(): number--><!--Device-WebSchemeHandlerResponse-getStatus(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -170,7 +198,7 @@ Get http status code.
 
 | Type | Description |
 | --- | --- |
-| int | Return http status code. |
+| number | Return http status code. |
 
 ## getStatusText
 
@@ -180,9 +208,13 @@ getStatusText(): string
 
 Get status text.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-getStatusText(): string--><!--Device-WebSchemeHandlerResponse-getStatusText(): string-End-->
 
@@ -202,9 +234,13 @@ getUrl(): string
 
 Get the resolved URL after redirects or changed as a result of HSTS.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-getUrl(): string--><!--Device-WebSchemeHandlerResponse-getUrl(): string-End-->
 
@@ -219,18 +255,20 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 ## setCustomErrorCode
 
 ```TypeScript
-setCustomErrorCode(customErrorCode: int): void
+setCustomErrorCode(customErrorCode: number): void
 ```
 
 Set the custom error code for the Web response.
 
 **Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: int): void--><!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: int): void-End-->
+<!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void--><!--Device-WebSchemeHandlerResponse-setCustomErrorCode(customErrorCode: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -238,7 +276,7 @@ Set the custom error code for the Web response.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customErrorCode | int | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. &lt;br&gt;The value should be an integer. |
+| customErrorCode | number | Yes | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
 
 ## setEncoding
 
@@ -248,9 +286,13 @@ setEncoding(encoding: string): void
 
 Set the response encoding.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void--><!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void-End-->
 
@@ -266,7 +308,7 @@ Set the response encoding.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setHeaderByName
 
@@ -276,9 +318,13 @@ setHeaderByName(name: string, value: string, overwrite: boolean): void
 
 Set response hander value by name.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void--><!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void-End-->
 
@@ -296,7 +342,7 @@ Set response hander value by name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMimeType
 
@@ -306,9 +352,13 @@ setMimeType(type: string): void
 
 Set mime type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void--><!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void-End-->
 
@@ -324,7 +374,7 @@ Set mime type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setNetErrorCode
 
@@ -334,9 +384,13 @@ setNetErrorCode(code: WebNetErrorList): void
 
 Set net error code.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void--><!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void-End-->
 
@@ -352,21 +406,25 @@ Set net error code.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## setStatus
 
 ```TypeScript
-setStatus(code: int): void
+setStatus(code: number): void
 ```
 
 Set http status code.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-WebSchemeHandlerResponse-setStatus(code: int): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: int): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebSchemeHandlerResponse-setStatus(code: number): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -374,13 +432,13 @@ Set http status code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | Http status code. |
+| code | number | Yes | Http status code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setStatusText
 
@@ -390,9 +448,13 @@ setStatusText(text: string): void
 
 Set status text.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void--><!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void-End-->
 
@@ -408,7 +470,7 @@ Set status text.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setUrl
 
@@ -418,9 +480,13 @@ setUrl(url: string): void
 
 Set the resolved URL after redirects or changed as a result of HSTS.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebSchemeHandlerResponse-setUrl(url: string): void--><!--Device-WebSchemeHandlerResponse-setUrl(url: string): void-End-->
 
@@ -436,5 +502,5 @@ Set the resolved URL after redirects or changed as a result of HSTS.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 

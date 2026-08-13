@@ -1,10 +1,12 @@
 # LengthMetricsUnit
 
-Enumerates the length metrics unit.
+Enumerates length units.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum LengthMetricsUnit--><!--Device-unnamed-export enum LengthMetricsUnit-End-->
 
@@ -16,13 +18,17 @@ Enumerates the length metrics unit.
 DEFAULT = 0
 ```
 
-The default length metrics unit.
+Length in vp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthMetricsUnit-DEFAULT = 0--><!--Device-LengthMetricsUnit-DEFAULT = 0-End-->
 
@@ -34,13 +40,17 @@ The default length metrics unit.
 PX = 1
 ```
 
-The pixel length metrics unit.
+Length in px.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthMetricsUnit-PX = 1--><!--Device-LengthMetricsUnit-PX = 1-End-->
 

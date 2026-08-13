@@ -8,7 +8,9 @@ function isRamConstrainedDevice(): Promise<boolean>
 
 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +28,7 @@ function isRamConstrainedDevice(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 
@@ -50,7 +52,9 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 
 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,8 +72,8 @@ function isRamConstrainedDevice(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 

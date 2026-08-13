@@ -1,12 +1,14 @@
 # LengthUnit
 
-Defines the Length Unit.
+Enumerates length units.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare enum LengthUnit--><!--Device-unnamed-export declare enum LengthUnit-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare enum LengthUnit--><!--Device-unnamed-declare enum LengthUnit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,13 +18,17 @@ Defines the Length Unit.
 PX = 0
 ```
 
-Logical pixel used in Ace1.0. It's based on frontend design width.For example, when a frontend with 750px design width running on a device with 1080 pixels width, 1px represents 1.44 pixels.
+Length in px.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthUnit-PX = 0--><!--Device-LengthUnit-PX = 0-End-->
 
@@ -34,13 +40,17 @@ Logical pixel used in Ace1.0. It's based on frontend design width.For example, w
 VP = 1
 ```
 
-Density independent pixels, one vp is one pixel on a 160 dpi screen.
+Length in vp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthUnit-VP = 1--><!--Device-LengthUnit-VP = 1-End-->
 
@@ -52,13 +62,17 @@ Density independent pixels, one vp is one pixel on a 160 dpi screen.
 FP = 2
 ```
 
-Scale independent pixels. This is like VP but will be scaled by user's font size preference.
+Length in fp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthUnit-FP = 2--><!--Device-LengthUnit-FP = 2-End-->
 
@@ -70,13 +84,17 @@ Scale independent pixels. This is like VP but will be scaled by user's font size
 PERCENT = 3
 ```
 
-The percentage of either a value from the element's parent or from another property of the element itself.
+Length in percentage.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthUnit-PERCENT = 3--><!--Device-LengthUnit-PERCENT = 3-End-->
 
@@ -88,13 +106,17 @@ The percentage of either a value from the element's parent or from another prope
 LPX = 4
 ```
 
-Logic pixels used in ACE2.0 instead of PX, and PX is the physical pixels in ACE2.0.
+Length in lpx.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthUnit-LPX = 4--><!--Device-LengthUnit-LPX = 4-End-->
 

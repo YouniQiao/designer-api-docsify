@@ -12,9 +12,11 @@ import { taskpool } from '@kit.ArkTS';
 function execute(func: Function, ...args: Object[]): Promise<Object>
 ```
 
-Places a function to be executed in the internal queue of the task pool. The function is not executed immediately.It waits to be distributed to the worker thread for execution. In this mode, the function cannot be canceled. This API uses a promise to return the result.
+Places a function to be executed in the internal queue of the task pool. The function is not executed immediately. It waits to be distributed to the worker thread for execution. In this mode, the function cannot be canceled. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,9 +42,9 @@ Places a function to be executed in the internal queue of the task pool. The fun
 
 | Error Code ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -69,6 +71,8 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>--><!--Device-taskpool-function execute<A extends Array<Object>, R>(func: (...args: A) => R | Promise<R>, ...args: A): Promise<R>-End-->
@@ -92,8 +96,8 @@ Verifies the passed-in parameter types and return value type of a concurrent fun
 
 | Error Code ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -138,6 +142,8 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>--><!--Device-taskpool-function execute(task: Task, priority?: Priority): Promise<Object>-End-->
@@ -162,11 +168,11 @@ Places a task in the internal queue of the task pool. The task will not be execu
 
 | Error Code ID |
 | --- |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -198,9 +204,11 @@ taskpool.execute(task3, taskpool.Priority.HIGH).then((value: Object) => {
 function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, priority?: Priority): Promise<R>
 ```
 
-Places the generic task in the internal queue of the task pool. The parameter type and return value type of the task are not verified. This API uses a promise to return the result.The verification of the **execute** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
+Places the generic task in the internal queue of the task pool. The parameter type and return value type of the task are not verified. This API uses a promise to return the result. The verification of the **execute** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -225,10 +233,10 @@ Places the generic task in the internal queue of the task pool. The parameter ty
 
 | Error Code ID |
 | --- |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -264,6 +272,8 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>--><!--Device-taskpool-function execute(group: TaskGroup, priority?: Priority): Promise<Object[]>-End-->
@@ -288,7 +298,7 @@ Places a task group in the internal queue of the task pool. The tasks in the tas
 | Error Code ID |
 | --- |
 | 10200059 |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -330,6 +340,8 @@ Execute a concurrent task with Configs.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>--><!--Device-taskpool-function execute(task: Task, configs: Configs): Promise<Object>-End-->
@@ -354,10 +366,10 @@ Execute a concurrent task with Configs.
 | Error Code ID |
 | --- |
 | 10200058 |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 
 ## execute
@@ -369,6 +381,8 @@ function execute<A extends Array<Object>, R>(task: GenericsTask<A, R>, configs: 
 Execute a concurrent generics task with Configs.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -394,10 +408,10 @@ Execute a concurrent generics task with Configs.
 | Error Code ID |
 | --- |
 | 10200058 |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200051](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200051](../errorcode-utils.md#10200051-periodic-task-cannot-be-executed-again) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 
 ## execute
@@ -409,6 +423,8 @@ function execute(group: TaskGroup, configs: Configs): Promise<Object[]>
 Execute a concurrent task group with Configs.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -434,5 +450,5 @@ Execute a concurrent task group with Configs.
 | Error Code ID |
 | --- |
 | 10200059 |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 | 10200070 |

@@ -12,6 +12,8 @@ function hasWindowFocus(callback: AsyncCallback<boolean>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
@@ -22,7 +24,7 @@ function hasWindowFocus(callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。&lt;br&gt;如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。&lt;br&gt;如果此Ability当前具有视窗焦点，则返回true；否则返回false。 |
 
 ## 示例
 
@@ -51,6 +53,8 @@ function hasWindowFocus(): Promise<boolean>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

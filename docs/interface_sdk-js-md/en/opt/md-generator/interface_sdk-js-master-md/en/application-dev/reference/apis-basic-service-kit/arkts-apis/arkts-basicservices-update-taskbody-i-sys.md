@@ -2,7 +2,9 @@
 
 Represents task data.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export interface TaskBody--><!--Device-update-export interface TaskBody-End-->
 
@@ -26,7 +28,9 @@ Error message.
 
 **Type:** Array&lt;[ErrorMessage](arkts-basicservices-update-errormessage-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-errorMessages: Array<ErrorMessage>--><!--Device-TaskBody-errorMessages: Array<ErrorMessage>-End-->
 
@@ -44,7 +48,9 @@ Install mode. The value range is [0, 2]. The value **0** indicates the regular u
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-installMode: int--><!--Device-TaskBody-installMode: int-End-->
 
@@ -62,7 +68,9 @@ Progress, in percentage. The value range is [0, 100]. If the value is out of the
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-progress: int--><!--Device-TaskBody-progress: int-End-->
 
@@ -76,13 +84,13 @@ Progress, in percentage. The value range is [0, 100]. If the value is out of the
 status: UpgradeStatus
 ```
 
-Upgrade status, which indicates the current execution phase of the upgrade task. The value can be a download status (from **WAITING_DOWNLOAD** to **DOWNLOAD_FAIL**), installation status (from **WAITING_INSTALL** to   
-**UPDATING**), effective status (from **WAITING_APPLY** to **APPLYING**), or the final result (  
-**UPGRADE_SUCCESS** or **UPGRADE_FAIL**). This parameter is used for status monitoring, progress display, and exception handling.
+Upgrade status, which indicates the current execution phase of the upgrade task. The value can be a download status (from **WAITING_DOWNLOAD** to **DOWNLOAD_FAIL**), installation status (from **WAITING_INSTALL** to **UPDATING**), effective status (from **WAITING_APPLY** to **APPLYING**), or the final result ( **UPGRADE_SUCCESS** or **UPGRADE_FAIL**). This parameter is used for status monitoring, progress display, and exception handling.
 
 **Type:** [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-status: UpgradeStatus--><!--Device-TaskBody-status: UpgradeStatus-End-->
 
@@ -96,11 +104,13 @@ Upgrade status, which indicates the current execution phase of the upgrade task.
 subStatus: number
 ```
 
-Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#UpgradeStatus).
+Sub-status. For details about the value range, see [UpgradeStatus](arkts-basicservices-update-upgradestatus-e-sys.md#UpgradeStatus-(System-API)).
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-subStatus: int--><!--Device-TaskBody-subStatus: int-End-->
 
@@ -118,7 +128,9 @@ Version components.
 
 **Type:** Array&lt;[VersionComponent](arkts-basicservices-update-versioncomponent-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-versionComponents: Array<VersionComponent>--><!--Device-TaskBody-versionComponents: Array<VersionComponent>-End-->
 
@@ -136,7 +148,9 @@ Version digest information.
 
 **Type:** [VersionDigestInfo](arkts-basicservices-update-versiondigestinfo-i-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TaskBody-versionDigestInfo: VersionDigestInfo--><!--Device-TaskBody-versionDigestInfo: VersionDigestInfo-End-->
 

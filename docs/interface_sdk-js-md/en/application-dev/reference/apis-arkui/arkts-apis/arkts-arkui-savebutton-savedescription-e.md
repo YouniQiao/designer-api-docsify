@@ -6,6 +6,8 @@ Enumerates the text that can be displayed on the save button.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum SaveDescription--><!--Device-unnamed-export declare enum SaveDescription-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Download
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Download File
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveDescription-DOWNLOAD_FILE = 1--><!--Device-SaveDescription-DOWNLOAD_FILE = 1-End-->
@@ -57,6 +63,8 @@ Save
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Save Image
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveDescription-SAVE_IMAGE = 3--><!--Device-SaveDescription-SAVE_IMAGE = 3-End-->
@@ -93,6 +103,8 @@ Save File
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ Download and Share
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveDescription-DOWNLOAD_AND_SHARE = 5--><!--Device-SaveDescription-DOWNLOAD_AND_SHARE = 5-End-->
@@ -129,6 +143,8 @@ Receive
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +164,8 @@ Continue to Receive
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveDescription-CONTINUE_TO_RECEIVE = 7--><!--Device-SaveDescription-CONTINUE_TO_RECEIVE = 7-End-->
@@ -165,6 +183,8 @@ Save to gallery
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -184,6 +204,8 @@ Export to gallery
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveDescription-EXPORT_TO_GALLERY = 9--><!--Device-SaveDescription-EXPORT_TO_GALLERY = 9-End-->
@@ -201,6 +223,8 @@ Quick save to gallery
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +244,8 @@ Resave to gallery
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveDescription-RESAVE_TO_GALLERY = 11--><!--Device-SaveDescription-RESAVE_TO_GALLERY = 11-End-->
@@ -237,6 +263,8 @@ Save all
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

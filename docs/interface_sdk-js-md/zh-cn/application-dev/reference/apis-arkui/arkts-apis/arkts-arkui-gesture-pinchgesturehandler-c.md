@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class PinchGestureHandler extends GestureHandler--><!--Device-unnamed-export declare class PinchGestureHandler extends GestureHandler-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class PinchGestureHandler--><!--Device-unnamed-export declare class PinchGestureHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ constructor(options?: PinchGestureHandlerOptions)
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +51,8 @@ onActionCancel(event: Callback<GestureEvent>): this
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,6 +84,8 @@ onActionEnd(event: Callback<GestureEvent>): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PinchGestureHandler-onActionEnd(event: Callback<GestureEvent>): this--><!--Device-PinchGestureHandler-onActionEnd(event: Callback<GestureEvent>): this-End-->
@@ -108,6 +116,8 @@ onActionStart(event: Callback<GestureEvent>): this
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PinchGestureHandler-onActionStart(event: Callback<GestureEvent>): this--><!--Device-PinchGestureHandler-onActionStart(event: Callback<GestureEvent>): this-End-->
@@ -137,6 +147,8 @@ onActionUpdate(event: Callback<GestureEvent>): this
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

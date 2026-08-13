@@ -6,19 +6,7 @@
 function hideAlertBeforeBackPage(): void
 ```
 
-禁用页面返回询问对话框。调用此方法后，将关闭由[showAlertBeforeBackPage](#routershowalertbeforebackpagedeprecated)开启的返回询问对话框，[back](#routerbackdeprecated)操作将不再弹出确认对话框，直接执行页面返回。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 18开始废弃，建议使用
-> [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hideAlertBeforeBackPage)替代。hideAlertBeforeBackPage需先
-> 通过[UIContext](@ohos.arkui.UIContext)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取
-> [Router](@ohos.arkui.UIContext)实例，然后通过该实例进行调用。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的
-> [Router](@ohos.arkui.UIContext)对象。
+禁用页面返回询问对话框。调用此方法后，将关闭由showAlertBeforeBackPage 开启的返回询问对话框，back操作将不再弹出确认对话框，直接执行页面返回。 > **说明：** > > - 从API version 9开始支持，从API version 18开始废弃，建议使用 > [hideAlertBeforeBackPage](arkts-arkui-arkui-uicontext-router-c.md#hideAlertBeforeBackPage)替代。hideAlertBeforeBackPage需先 > 通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象。
 
 **起始版本：** 9
 

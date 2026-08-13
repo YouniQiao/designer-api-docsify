@@ -8,7 +8,9 @@ function getIntervalSinceLastInput(): Promise<number>
 
 获取距离上次系统输入事件的时间间隔（包含设备休眠时间），使用Promise异步回调。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>--><!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>-End-->
 

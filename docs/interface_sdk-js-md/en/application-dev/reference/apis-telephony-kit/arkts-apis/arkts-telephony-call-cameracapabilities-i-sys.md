@@ -2,9 +2,11 @@
 
 Defines the local image resolution in a video call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface CameraCapabilities--><!--Device-call-export interface CameraCapabilities-End-->
 
@@ -26,11 +28,13 @@ callId: int
 
 Call ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-callId: int--><!--Device-CameraCapabilities-callId: int-End-->
 
@@ -46,11 +50,13 @@ height: int
 
 Height of the local image, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-height: int--><!--Device-CameraCapabilities-height: int-End-->
 
@@ -66,11 +72,13 @@ width: int
 
 Width of the local image, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-width: int--><!--Device-CameraCapabilities-width: int-End-->
 

@@ -1,8 +1,10 @@
 # FilterResult
 
-This parameter specifies the selection result of a filtering dimension.The index starts from 0.
+This parameter specifies the selection result of a filtering dimension. The index starts from 0.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class FilterResult--><!--Device-unnamed-export declare class FilterResult-End-->
 
@@ -26,6 +28,8 @@ result index.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -46,6 +50,8 @@ result name.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -65,6 +71,8 @@ result value.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

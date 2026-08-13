@@ -1,10 +1,12 @@
 # ReminderMode
 
-ReminderMode, include NONE, TOAST and MASK
+Enumerates the types of the reminder when the number of selected items reaches the maximum.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ReminderMode--><!--Device-unnamed-export declare enum ReminderMode-End-->
 
@@ -16,13 +18,15 @@ ReminderMode, include NONE, TOAST and MASK
 NONE = 0
 ```
 
-NONE. no need to remind
+No reminder.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReminderMode-NONE = 0--><!--Device-ReminderMode-NONE = 0-End-->
 
@@ -34,13 +38,15 @@ NONE. no need to remind
 TOAST = 1
 ```
 
-TOAST. remind by toast
+Toast message.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReminderMode-TOAST = 1--><!--Device-ReminderMode-TOAST = 1-End-->
 
@@ -52,13 +58,15 @@ TOAST. remind by toast
 MASK = 2
 ```
 
-MASK. remind by mask
+Grayed-out hint.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReminderMode-MASK = 2--><!--Device-ReminderMode-MASK = 2-End-->
 

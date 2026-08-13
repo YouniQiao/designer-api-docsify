@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface DragEvent--><!--Device-unnamed-declare interface DragEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,12 +18,13 @@
 executeDropAnimation(customDropAnimation: Callback<void>): void
 ```
 
-设置自定义落位动效的执行函数，仅在  
-[useCustomDropAnimation](#useCustomDropAnimation)为true时有效。
+设置自定义落位动效的执行函数，仅在 [useCustomDropAnimation](#useCustomDropAnimation)为true时有效。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +52,8 @@ getData(): UnifiedData
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -67,8 +72,8 @@ getData(): UnifiedData
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [190002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190002-获取数据错误) | Data error. |
-| [190001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190001-数据未找到) | Data not found. |
+| [190002](../errorcode-drag-event.md#190002-获取数据错误) | Data error. |
+| [190001](../errorcode-drag-event.md#190001-数据未找到) | Data not found. |
 
 ## getDisplayId
 
@@ -81,6 +86,8 @@ getDisplayId(): number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,6 +115,8 @@ getDisplayX(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -133,6 +142,8 @@ getDisplayY(): number
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,6 +171,8 @@ getDragSource(): string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -185,6 +198,8 @@ getGlobalDisplayX(): number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,6 +227,8 @@ getGlobalDisplayY(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -238,6 +255,8 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -262,7 +281,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
 
 ## getPreviewRect
 
@@ -275,6 +294,8 @@ getPreviewRect(): Rectangle
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,6 +323,8 @@ getResult(): DragResult
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -327,6 +350,8 @@ getSummary(): Summary
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -354,6 +379,8 @@ getVelocity(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -379,6 +406,8 @@ getVelocityX(): number
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -406,6 +435,8 @@ getVelocityY(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -431,6 +462,8 @@ getWindowX(): number
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -458,6 +491,8 @@ getWindowY(): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -478,9 +513,7 @@ getWindowY(): number
 getX(): number
 ```
 
-当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。
-
-> **说明：**
+当前拖拽点相对于窗口左上角的x轴坐标，单位为vp。 > **说明：**
 
 **起始版本：** 7
 
@@ -506,9 +539,7 @@ getX(): number
 getY(): number
 ```
 
-当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。
-
-> **说明：**
+当前拖拽点相对于窗口左上角的y轴坐标，单位为vp。 > **说明：**
 
 **起始版本：** 7
 
@@ -540,6 +571,8 @@ isRemote(): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -566,6 +599,8 @@ setData(unifiedData: UnifiedData): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -586,11 +621,13 @@ setData(unifiedData: UnifiedData): void
 setDataLoadParams(dataLoadParams: DataLoadParams): void
 ```
 
-设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](#setData)方法同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中生效。
+设置起拖方延迟提供数据。使用此方法向系统提供数据加载参数，而不是直接提供完整的数据对象。当用户在目标应用程序上落入时，系统将使用此参数从起拖方请求实际数据。与[setData](#setData)方法 同时使用，以最后调用的方法为准。该接口仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中生效。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -618,6 +655,8 @@ setResult(dragResult: DragResult): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -644,6 +683,8 @@ startDataLoading(options: DataSyncOptions): string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -668,8 +709,8 @@ startDataLoading(options: DataSyncOptions): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. |
-| [190003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. |
+| [190003](../errorcode-drag-event.md#190003-当前阶段不允许操作) | Operation not allowed for current phase. |
 
 ## autoHideComponentUniqueIds
 
@@ -677,22 +718,15 @@ startDataLoading(options: DataSyncOptions): string
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
-
-仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。
-
-若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。
-
-组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById)配合[FrameNode.getUniqueId()](../arkts-apis/arkts-arkui-framenode-c.md#getUniqueId)获取。
-
-开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或  
-[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void))中恢复组件显示状态。
+设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById) 配合[FrameNode.getUniqueId()](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getUniqueId)获取。 开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或 onDrop中恢复组件显示状态。
 
 **类型：** int \| int[]
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -708,9 +742,7 @@ autoHideComponentUniqueIds?: int | int[]
 dragBehavior: DragBehavior
 ```
 
-切换复制和剪贴模式的角标显示状态。
-
-默认值：DragBehavior.COPY。
+切换复制和剪贴模式的角标显示状态。 默认值：DragBehavior.COPY。
 
 **类型：** [DragBehavior](arkts-arkui-dragbehavior-e.md)
 
@@ -719,6 +751,8 @@ dragBehavior: DragBehavior
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -734,21 +768,15 @@ dragBehavior: DragBehavior
 useCustomDropAnimation: boolean
 ```
 
-当拖拽结束时，是否禁用系统默认落位动效。
-
-应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。
-
-当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setResult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则为放大消失动效。
-
-当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。
-
-默认值：false
+当拖拽结束时，是否禁用系统默认落位动效。 应用可将该值设定为true来禁用系统默认落位动效，并实现自己的自定义落位动效。 当不配置或设置为false时，系统默认落位动效生效，当[setResult](#setResult)设置为DRAG_SUCCESSFUL时，落位为缩小消失动效，不为DRAG_SUCCESSFUL时，则 为放大消失动效。 当未禁用系统默认落位动效时，应用不应再实现自定义动效，以避免动效上的冲突。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

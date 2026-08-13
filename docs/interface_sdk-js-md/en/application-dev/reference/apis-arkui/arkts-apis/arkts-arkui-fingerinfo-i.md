@@ -6,6 +6,8 @@ Defines the finger information type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface FingerInfo--><!--Device-unnamed-interface FingerInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Gets the coordinates of the top-left corner of the current component based on it
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,15 +46,15 @@ Gets the coordinates of the top-left corner of the current component based on it
 displayX: number
 ```
 
-X-coordinate relative to the upper left corner of the screen, in vp.
-
-Value range: [0, +∞)
+X-coordinate relative to the upper left corner of the screen, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,15 +70,15 @@ Value range: [0, +∞)
 displayY: number
 ```
 
-Y-coordinate relative to the upper left corner of the screen, in vp.
-
-Value range: [0, +∞)
+Y-coordinate relative to the upper left corner of the screen, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,15 +94,15 @@ Value range: [0, +∞)
 globalDisplayX?: number
 ```
 
-X-coordinate relative to the upper left corner of the global display, in vp.
-
-Value range: [0, +∞)
+X-coordinate relative to the upper left corner of the global display, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,15 +118,15 @@ Value range: [0, +∞)
 globalDisplayY?: number
 ```
 
-Y-coordinate relative to the upper left corner of the global display, in vp.
-
-Value range: [0, +∞)
+Y-coordinate relative to the upper left corner of the global display, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,15 +142,15 @@ Value range: [0, +∞)
 globalX: number
 ```
 
-X-coordinate relative to the upper left corner of the application window, in vp.
-
-Value range: [0, +∞)
+X-coordinate relative to the upper left corner of the application window, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -160,15 +164,15 @@ Value range: [0, +∞)
 globalY: number
 ```
 
-Y-coordinate relative to the upper left corner of the application window, in vp.
-
-Value range: [0, +∞)
+Y-coordinate relative to the upper left corner of the application window, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,6 +194,8 @@ Whether the event is triggered by a left-hand or right-hand tap.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -204,19 +210,15 @@ Whether the event is triggered by a left-hand or right-hand tap.
 id: number
 ```
 
-Index of the finger, determined by the number of fingers pressed. The first pressed finger is assigned 0, with the index incrementing by one for each subsequent finger.
-
-**NOTE：**
-
-Indexes for other input sources (mouse: 1001, stylus: 102, mouse wheel: 0, two-finger trackpad slide: 0) are also converted to finger indexes.
-
-Value range: [0, 9)
+Index of the finger, determined by the number of fingers pressed. The first pressed finger is assigned 0, with the index incrementing by one for each subsequent finger. **NOTE：**Indexes for other input sources (mouse: 1001, stylus: 102, mouse wheel: 0, two-finger trackpad slide: 0) are also converted to finger indexes. Value range: [0, 9)
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -230,15 +232,15 @@ Value range: [0, 9)
 localX: number
 ```
 
-X-coordinate relative to the upper left corner of the current component's original area, in vp.
-
-Value range: [0, +∞)
+X-coordinate relative to the upper left corner of the current component's original area, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -252,15 +254,15 @@ Value range: [0, +∞)
 localY: number
 ```
 
-Y-coordinate relative to the upper left corner of the current component's original area, in vp.
-
-Value range: [0, +∞)
+Y-coordinate relative to the upper left corner of the current component's original area, in vp. Value range: [0, +∞)
 
 **Type:** number
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

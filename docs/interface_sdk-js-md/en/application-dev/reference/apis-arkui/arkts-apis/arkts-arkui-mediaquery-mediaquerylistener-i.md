@@ -8,7 +8,9 @@ Defines the Listener of mediaquery.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-mediaquery-export interface MediaQueryListener extends MediaQueryResult--><!--Device-mediaquery-export interface MediaQueryListener extends MediaQueryResult-End-->
+**Deprecated since:** -1
+
+<!--Device-mediaquery-export interface MediaQueryListener--><!--Device-mediaquery-export interface MediaQueryListener-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,11 +26,13 @@ import { mediaquery } from '@kit.ArkUI';
 offChange(callback?: Callback<MediaQueryResult>): void
 ```
 
-Deregisters a callback with the corresponding query condition by using the handle.This callback is not triggered when the media attributes chang.
+Deregisters a callback with the corresponding query condition by using the handle. This callback is not triggered when the media attributes chang.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +44,7 @@ Deregisters a callback with the corresponding query condition by using the handl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | No |  |
 
 ## onChange
 
@@ -48,11 +52,13 @@ Deregisters a callback with the corresponding query condition by using the handl
 onChange(callback: Callback<MediaQueryResult>): void
 ```
 
-Registers a callback with the corresponding query condition by using the handle.This callback is triggered when the media attributes change.
+Registers a callback with the corresponding query condition by using the handle. This callback is triggered when the media attributes change.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,5 +70,5 @@ Registers a callback with the corresponding query condition by using the handle.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MediaQueryResult](arkts-arkui-mediaquery-mediaqueryresult-i.md)&gt; | Yes |  |
 

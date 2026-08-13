@@ -1,10 +1,5 @@
 # ContinueCallback
 
-The ContinueCallback module defines the callback function that indicates the result of mission continuation. For
- details about mission continuation, see
- [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission)
-
-
 ## Summary
 
 <!--Del-->

@@ -2,13 +2,15 @@
 
 Corresponds to an incremental application, including its last incremental time and incremental list.
 
-**Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md#IncrementalBackupTime), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md#FileManifestData), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md#BackupParams), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md#BackupPriority)
+**Inheritance/Implementation:** IncrementalBackupData extends [IncrementalBackupTime](arkts-corefile-backup-incrementalbackuptime-i-sys.md#IncrementalBackupTime-(System-API)), [FileManifestData](arkts-corefile-backup-filemanifestdata-i-sys.md#FileManifestData-(System-API)), [BackupParams](arkts-corefile-backup-backupparams-i-sys.md#BackupParams-(System-API)), [BackupPriority](arkts-corefile-backup-backuppriority-i-sys.md#BackupPriority-(System-API))
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-backup-interface IncrementalBackupData extends IncrementalBackupTime, FileManifestData, BackupParams, BackupPriority--><!--Device-backup-interface IncrementalBackupData extends IncrementalBackupTime, FileManifestData, BackupParams, BackupPriority-End-->
+**Deprecated since:** -1
+
+<!--Device-backup-interface IncrementalBackupData--><!--Device-backup-interface IncrementalBackupData-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
 

@@ -6,6 +6,8 @@ Remote authorization package.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-interface RemoteAuthPackage--><!--Device-abilityToolAccessCtrl-interface RemoteAuthPackage-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -25,6 +27,8 @@ Challenge value.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAuthPackage-challenge: string--><!--Device-RemoteAuthPackage-challenge: string-End-->
 
@@ -46,6 +50,8 @@ Remote message.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-RemoteAuthPackage-remoteMessage: string--><!--Device-RemoteAuthPackage-remoteMessage: string-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -65,6 +71,8 @@ Ticket string.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAuthPackage-ticket: string--><!--Device-RemoteAuthPackage-ticket: string-End-->
 

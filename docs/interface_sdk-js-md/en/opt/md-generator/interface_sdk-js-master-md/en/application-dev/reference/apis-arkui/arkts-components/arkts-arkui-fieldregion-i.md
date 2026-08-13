@@ -4,6 +4,8 @@ Defines the area information of the particle field.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FieldRegion--><!--Device-unnamed-declare interface FieldRegion-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The coordinates of the center position of the field. The top-left corner of the 
 **Default:** {x:0,y:0}
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The shape of the field
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -65,6 +71,8 @@ The size of the field. The unit of value is vp.
 **Default:** {width:0,height:0}
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,12 @@
 # Queue
 
-Queue follows the principle of First In First Out (FIFO).It supports insertion of elements at the end and removal from the front of the queue.Queue is implemented based on the queue data structure.
+Queue follows the principle of First In First Out (FIFO). It supports insertion of elements at the end and removal from the front of the queue. Queue is implemented based on the queue data structure.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class Queue<T>--><!--Device-unnamed-declare class Queue<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Queue--><!--Device-unnamed-declare class Queue-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ Queue follows the principle of First In First Out (FIFO).It supports insertion o
 ```TypeScript
 import { Queue } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+returns an iterator. Each item of the iterator is a ArkTS Object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Queue-$_iterator(): IterableIterator<T>--><!--Device-Queue-$_iterator(): IterableIterator<T>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-[Symbol.iterator](): IterableIterator<T>--><!--Device-Queue-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -34,13 +62,13 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -81,7 +109,9 @@ add(element: T): boolean
 
 Adds an element at the end of this Queue.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,7 +135,7 @@ Adds an element at the end of this Queue.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -132,7 +162,9 @@ constructor()
 
 A constructor used to create a **Queue** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,7 +176,7 @@ A constructor used to create a **Queue** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -161,6 +193,8 @@ forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisAr
 Uses a callback to traverse each element in the **Queue** instance.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -179,7 +213,7 @@ Uses a callback to traverse each element in the **Queue** instance.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -198,6 +232,32 @@ queue.forEach((value: number, index: number): void => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: QueueForEachCb<T>): void
+```
+
+Executes a provided function once for each value in the queue object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Queue-forEach(callbackFn: QueueForEachCb<T>): void--><!--Device-Queue-forEach(callbackFn: QueueForEachCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [QueueForEachCb](arkts-arkts-queueforeachcb-t.md)&lt;T&gt; | Yes |
+
 ## getFirst
 
 ```TypeScript
@@ -206,7 +266,9 @@ getFirst(): T
 
 Obtains the first element of this Queue.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -224,8 +286,8 @@ Obtains the first element of this Queue.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -247,7 +309,9 @@ pop(): T
 
 Removes the first element from this Queue.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -265,8 +329,8 @@ Removes the first element from this Queue.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -292,6 +356,8 @@ Number of elements in a Queue.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

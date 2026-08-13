@@ -14,9 +14,11 @@ function getGlobalWindowMode(displayId?: number): Promise<number>
 
 Obtains the window mode of the window that is in the foreground lifecycle on the specified screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-function getGlobalWindowMode(displayId?: long): Promise<int>--><!--Device-window-function getGlobalWindowMode(displayId?: long): Promise<int>-End-->
 
@@ -38,9 +40,9 @@ Obtains the window mode of the window that is in the foreground lifecycle on the
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 

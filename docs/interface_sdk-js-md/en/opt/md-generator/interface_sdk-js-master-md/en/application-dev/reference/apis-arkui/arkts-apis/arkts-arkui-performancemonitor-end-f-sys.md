@@ -16,6 +16,8 @@ Marks the end of a user scene. Call this API when the scene ends.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-performanceMonitor-function end(scene: string): void--><!--Device-performanceMonitor-function end(scene: string): void-End-->

@@ -1,18 +1,16 @@
 # HmacSpec
 
-Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md#MacSpec). It is used as an input parameter for HMAC computation.
-
-> **NOTE：**
-> 
-> **mdName** specifies the HMAC message digest algorithm. It is mandatory.
+Represents the child class of [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md#MacSpec). It is used as an input parameter for HMAC computation. > **NOTE：**> > **mdName** specifies the HMAC message digest algorithm. It is mandatory.
 
 **Inheritance/Implementation:** HmacSpec extends [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md#MacSpec)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-cryptoFramework-interface HmacSpec extends MacSpec--><!--Device-cryptoFramework-interface HmacSpec extends MacSpec-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface HmacSpec--><!--Device-cryptoFramework-interface HmacSpec-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework.Mac
 
@@ -32,11 +30,13 @@ Message digest algorithm.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-HmacSpec-mdName: string--><!--Device-HmacSpec-mdName: string-End-->
 

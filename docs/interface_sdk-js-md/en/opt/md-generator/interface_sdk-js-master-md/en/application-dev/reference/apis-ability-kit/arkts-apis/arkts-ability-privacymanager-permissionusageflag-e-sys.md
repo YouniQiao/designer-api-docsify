@@ -2,7 +2,9 @@
 
 Enumerates the modes for querying the permission usage records.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-enum PermissionUsageFlag--><!--Device-privacyManager-enum PermissionUsageFlag-End-->
 
@@ -18,7 +20,9 @@ FLAG_PERMISSION_USAGE_SUMMARY = 0
 
 Query the permission usage summary.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_SUMMARY = 0--><!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_SUMMARY = 0-End-->
 
@@ -34,7 +38,9 @@ FLAG_PERMISSION_USAGE_DETAIL = 1
 
 Query detailed permission usage records.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_DETAIL = 1--><!--Device-PermissionUsageFlag-FLAG_PERMISSION_USAGE_DETAIL = 1-End-->
 

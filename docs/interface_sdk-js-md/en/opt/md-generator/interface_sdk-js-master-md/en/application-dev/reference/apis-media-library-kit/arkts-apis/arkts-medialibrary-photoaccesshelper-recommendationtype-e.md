@@ -2,7 +2,9 @@
 
 Enumerates the types of recommended images.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum RecommendationType--><!--Device-photoAccessHelper-enum RecommendationType-End-->
 
@@ -16,9 +18,11 @@ QR_OR_BAR_CODE = 1
 
 QR code or barcode.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-QR_OR_BAR_CODE = 1--><!--Device-RecommendationType-QR_OR_BAR_CODE = 1-End-->
 
@@ -32,9 +36,11 @@ QR_CODE = 2
 
 QR code.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-QR_CODE = 2--><!--Device-RecommendationType-QR_CODE = 2-End-->
 
@@ -48,9 +54,11 @@ BAR_CODE = 3
 
 Barcode.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-BAR_CODE = 3--><!--Device-RecommendationType-BAR_CODE = 3-End-->
 
@@ -64,9 +72,11 @@ ID_CARD = 4
 
 ID card.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-ID_CARD = 4--><!--Device-RecommendationType-ID_CARD = 4-End-->
 
@@ -80,9 +90,11 @@ PROFILE_PICTURE = 5
 
 Profile.
 
-**Since:** 11
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-PROFILE_PICTURE = 5--><!--Device-RecommendationType-PROFILE_PICTURE = 5-End-->
 
@@ -96,9 +108,11 @@ PASSPORT = 6
 
 Passport.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-PASSPORT = 6--><!--Device-RecommendationType-PASSPORT = 6-End-->
 
@@ -112,9 +126,11 @@ BANK_CARD = 7
 
 Bank card.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-BANK_CARD = 7--><!--Device-RecommendationType-BANK_CARD = 7-End-->
 
@@ -128,9 +144,11 @@ DRIVER_LICENSE = 8
 
 Driver license.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-DRIVER_LICENSE = 8--><!--Device-RecommendationType-DRIVER_LICENSE = 8-End-->
 
@@ -144,9 +162,11 @@ DRIVING_LICENSE = 9
 
 Vehicle license.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-DRIVING_LICENSE = 9--><!--Device-RecommendationType-DRIVING_LICENSE = 9-End-->
 
@@ -160,9 +180,11 @@ FEATURED_SINGLE_PORTRAIT = 10
 
 Recommended portrait.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RecommendationType-FEATURED_SINGLE_PORTRAIT = 10--><!--Device-RecommendationType-FEATURED_SINGLE_PORTRAIT = 10-End-->
 

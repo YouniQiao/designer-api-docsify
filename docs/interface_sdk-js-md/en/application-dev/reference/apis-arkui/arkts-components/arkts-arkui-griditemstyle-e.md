@@ -1,15 +1,12 @@
 # GridItemStyle
 
-Enumerates styles of grid items.
-
-> **NOTE：**
-> 
-> To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for
-> accommodating the focus frame of the grid item.
+Enumerates styles of grid items. > **NOTE：**> > To set the focused style for the grid item, the grid container must have paddings of greater than 4 vp for > accommodating the focus frame of the grid item.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum GridItemStyle--><!--Device-unnamed-declare enum GridItemStyle-End-->
 
@@ -26,6 +23,8 @@ No style.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +45,8 @@ Hover or press style.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

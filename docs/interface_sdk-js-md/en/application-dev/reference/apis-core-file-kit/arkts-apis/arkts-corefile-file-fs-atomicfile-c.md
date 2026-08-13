@@ -1,14 +1,12 @@
 # AtomicFile
 
-AtomicFile is a class used to perform atomic read and write operations on files.
-
-A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content.
-
-You can call **finishWrite()** or **failWrite()** to write or roll back file content.
+AtomicFile is a class used to perform atomic read and write operations on files. A temporary file is written and renamed to the original file location, which ensures file integrity. If the write operation fails, the temporary file is deleted without modifying the original file content. You can call **finishWrite()** or **failWrite()** to write or roll back file content.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
 
@@ -32,6 +30,8 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -46,7 +46,7 @@ Creates an **AtomicFile** class for a file in a specified path.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -59,6 +59,8 @@ Deletes the **AtomicFile** class, including the original files and temporary fil
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
@@ -115,6 +117,8 @@ Rolls back the file after the file fails to be written.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -159,6 +163,8 @@ Finishes writing file data when the write operation is complete.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -196,13 +202,13 @@ try {
 getBaseFile(): File
 ```
 
-Obtains the file object through the **AtomicFile** object.
-
-The FD needs to be closed by calling **close()**.
+Obtains the file object through the **AtomicFile** object. The FD needs to be closed by calling **close()**.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
 
@@ -257,6 +263,8 @@ Creates a **ReadStream** instance.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
 
@@ -321,6 +329,8 @@ Reads all content of a file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -372,15 +382,13 @@ try {
 startWrite(): WriteStream
 ```
 
-Starts to write new file data in the **WriteStream** object returned.
-
-If the file does not exist, create a file.
-
-Call **finishWrite()** if the write operation is successful; call **failWrite()** if the write operation fails.
+Starts to write new file data in the **WriteStream** object returned. If the file does not exist, create a file. Call **finishWrite()** if the write operation is successful; call **failWrite()** if the write operation fails.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
 

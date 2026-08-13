@@ -4,7 +4,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** [vibrator/vibrator](ohos.vibrator/vibrator)
+**Substitutes:** [vibrator/vibrator](arkts-vibrator.md#@ohos.vibrator)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -24,18 +24,13 @@ import { VibrateOptions } from '@kit.SensorServiceKit';
 static vibrate(options?: VibrateOptions): void
 ```
 
-Triggers device vibration.
-
-> **NOTE：**
-> 
-> Except for lite wearables. You are advised to use
-> [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) since API version 8.
+Triggers device vibration. > **NOTE：**> > Except for lite wearables. You are advised to use > [vibrator.startVibration()](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) since API version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [startVibration](@ohos.vibrator:vibrator.startVibration(effect:)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
 

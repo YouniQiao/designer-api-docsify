@@ -16,6 +16,8 @@ Creates a readable stream. This API returns the result synchronously.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream--><!--Device-unnamed-declare function createReadStream(path: string, options?: ReadStreamOptions): ReadStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -44,7 +46,7 @@ Creates a readable stream. This API returns the result synchronously.
 | 13900030 |
 | 13900024 |
 | 13900004 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900038 |
 | 13900001 |
 | 13900002 |

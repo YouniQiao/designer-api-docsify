@@ -14,7 +14,9 @@ function getBundleNameByUid(uid: number, callback: AsyncCallback<string>): void
 
 Obtains the bundle name based on the given UID. This API uses an asynchronous callback to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -33,9 +35,9 @@ Obtains the bundle name based on the given UID. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17700021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-invalid-uid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17700021](../errorcode-bundle.md#17700021-invalid-uid) |
 
 ## Examples
 
@@ -68,7 +70,9 @@ function getBundleNameByUid(uid: number): Promise<string>
 
 Obtains the bundle name based on the given UID. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -92,9 +96,9 @@ Obtains the bundle name based on the given UID. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17700021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-invalid-uid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17700021](../errorcode-bundle.md#17700021-invalid-uid) |
 
 ## Examples
 

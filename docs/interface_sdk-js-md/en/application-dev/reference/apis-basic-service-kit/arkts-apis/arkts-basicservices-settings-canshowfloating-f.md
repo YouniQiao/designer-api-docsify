@@ -14,9 +14,9 @@ function canShowFloating(callback: AsyncCallback<boolean>): void
 
 Checks whether a specified application can show as a floating window.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -28,7 +28,7 @@ Checks whether a specified application can show as a floating window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of canShowFloating result. |
 
 ## Examples
 
@@ -51,9 +51,9 @@ function canShowFloating(): Promise<boolean>
 
 Checks whether a specified application can show as a floating window.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 

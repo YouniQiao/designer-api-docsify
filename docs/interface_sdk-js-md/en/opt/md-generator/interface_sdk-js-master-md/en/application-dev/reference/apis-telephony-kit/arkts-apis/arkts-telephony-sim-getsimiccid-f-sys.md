@@ -12,11 +12,11 @@ import { sim } from '@kit.TelephonyKit';
 function getSimIccId(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the ICCID of the SIM card in a specified slot.
+Obtains the ICCID of the SIM card in a specified slot. &lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
-&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -37,14 +37,14 @@ Obtains the ICCID of the SIM card in a specified slot.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-sim-card-not-detected) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -64,11 +64,11 @@ sim.getSimIccId(0, (err: BusinessError, data: string) => {
 function getSimIccId(slotId: number): Promise<string>
 ```
 
-Obtains the ICCID of the SIM card in a specified slot.
+Obtains the ICCID of the SIM card in a specified slot. &lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
 
-&lt;p&gt;The ICCID is a unique identifier of a SIM card. It consists of 20 digits and is recorded in the EFICCID file of the SIM card.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -94,14 +94,14 @@ Obtains the ICCID of the SIM card in a specified slot.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-sim-card-not-detected) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 

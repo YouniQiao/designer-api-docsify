@@ -1,12 +1,12 @@
 # ArcButtonProgressConfig
 
-The class used for configuring ArcButton to support progress bar display.
+Defines the progress indicator configuration options of the **ArcButton** component.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ArcButtonProgressConfig--><!--Device-unnamed-export declare class ArcButtonProgressConfig-End-->
 
@@ -18,95 +18,77 @@ The class used for configuring ArcButton to support progress bar display.
 import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcButtonOptions, ArcButtonProgressConfig } from '@kit.ArkUI';
 ```
 
-## constructor
-
-```TypeScript
-constructor(value: double, total?: double, color?: ResourceColor)
-```
-
-Constructor of the ArcButtonProgressConfig.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ArcButtonProgressConfig-constructor(value: double, total?: double, color?: ResourceColor)--><!--Device-ArcButtonProgressConfig-constructor(value: double, total?: double, color?: ResourceColor)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | double | Yes | sets the value of progress. &lt;br&gt;Value range:[0, total] &lt;br&gt;When setting a value less than 0, it is set to 0; when setting a value greater than total, it is set to total. |
-| total | double | No | sets the total of progress. |
-| color | ResourceColor | No | sets the foreground color of progress. |
-
 ## color
 
 ```TypeScript
-public color?: ResourceColor
+color?: ResourceColor
 ```
 
-Sets the foreground color of Progress.
+Foreground color of the progress indicator. If the component's background color ( [backgroundColor](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md#ArcButtonOptions)) is set, it is used as the default foreground color of the progress indicator. The foreground color of the progress indicator is not affected by the button style ( [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode)). The progress indicator's background color is derived solely from its foreground color, with an opacity value of 25%. Default value: **"#1F71FF"**, which is blue.
 
 **Type:** ResourceColor
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ArcButtonProgressConfig-public color?: ResourceColor--><!--Device-ArcButtonProgressConfig-public color?: ResourceColor-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArcButtonProgressConfig-color?: ResourceColor--><!--Device-ArcButtonProgressConfig-color?: ResourceColor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## total
 
 ```TypeScript
-public total?: double
+total?: number
 ```
 
-Sets the total of Progress.
+Maximum progress value. Default value: **100** Value range: [0, 2147483647]. If the value is 0 or out of the range, the default value 100 is used.
 
-Range value: [0, 2147483647].
-
-**Type:** double
+**Type:** number
 
 **Default:** 100
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ArcButtonProgressConfig-public total?: double--><!--Device-ArcButtonProgressConfig-public total?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArcButtonProgressConfig-total?: number--><!--Device-ArcButtonProgressConfig-total?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## value
 
 ```TypeScript
-public value: double
+value: number
 ```
 
-Sets the value of Progress.
+Current progress value. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value. Default value: **0**. Value range: [0, total]
 
-Range value: [0, total].
-
-**Type:** double
+**Type:** number
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ArcButtonProgressConfig-public value: double--><!--Device-ArcButtonProgressConfig-public value: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-ArcButtonProgressConfig-value: number--><!--Device-ArcButtonProgressConfig-value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

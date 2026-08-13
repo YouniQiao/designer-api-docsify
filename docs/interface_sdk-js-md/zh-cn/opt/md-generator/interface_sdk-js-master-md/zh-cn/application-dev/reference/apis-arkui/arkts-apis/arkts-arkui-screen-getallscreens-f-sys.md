@@ -8,7 +8,9 @@ function getAllScreens(callback: AsyncCallback<Array<Screen>>): void
 
 获取所有的屏幕，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void--><!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void-End-->
 
@@ -26,8 +28,8 @@ function getAllScreens(callback: AsyncCallback<Array<Screen>>): void
 
 | 错误码ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -58,7 +60,9 @@ function getAllScreens(): Promise<Array<Screen>>
 
 获取所有的屏幕，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-function getAllScreens(): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(): Promise<Array<Screen>>-End-->
 
@@ -76,8 +80,8 @@ function getAllScreens(): Promise<Array<Screen>>
 
 | 错误码ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

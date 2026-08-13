@@ -4,76 +4,11 @@
 
 **起始版本：** 3
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ShowDialogOptions--><!--Device-unnamed-export interface ShowDialogOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## cancel
-
-```TypeScript
-cancel?: (data: string, code: string) => void
-```
-
-接口调用失败的回调函数。
-
-**起始版本：** 3
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShowDialogOptions-cancel?: (data: string, code: string) => void--><!--Device-ShowDialogOptions-cancel?: (data: string, code: string) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-| code | string | 是 |
-
-## complete
-
-```TypeScript
-complete?: (data: string) => void
-```
-
-接口调用结束的回调函数。
-
-**起始版本：** 3
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShowDialogOptions-complete?: (data: string) => void--><!--Device-ShowDialogOptions-complete?: (data: string) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | string | 是 |
-
-## success
-
-```TypeScript
-success?: (data: ShowDialogSuccessResponse) => void
-```
-
-接口调用成功的回调函数。
-
-**起始版本：** 3
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
-
-<!--Device-ShowDialogOptions-success?: (data: ShowDialogSuccessResponse) => void--><!--Device-ShowDialogOptions-success?: (data: ShowDialogSuccessResponse) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| data | [ShowDialogSuccessResponse](arkts-arkui-system-prompt-showdialogsuccessresponse-i.md) | 是 |
 
 ## buttons
 
@@ -87,9 +22,51 @@ buttons?: [Button, Button?, Button?]
 
 **起始版本：** 3
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## cancel
+
+```TypeScript
+cancel?: (data: string, code: string) => void
+```
+
+接口调用失败的回调函数。
+
+**类型：** (data: string, code: string) =&gt; void
+
+**起始版本：** 3
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShowDialogOptions-cancel?: (data: string, code: string) => void--><!--Device-ShowDialogOptions-cancel?: (data: string, code: string) => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## complete
+
+```TypeScript
+complete?: (data: string) => void
+```
+
+接口调用结束的回调函数。
+
+**类型：** (data: string) =&gt; void
+
+**起始版本：** 3
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShowDialogOptions-complete?: (data: string) => void--><!--Device-ShowDialogOptions-complete?: (data: string) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -105,9 +82,31 @@ message?: string
 
 **起始版本：** 3
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## success
+
+```TypeScript
+success?: (data: ShowDialogSuccessResponse) => void
+```
+
+接口调用成功的回调函数。
+
+**类型：** (data: ShowDialogSuccessResponse) =&gt; void
+
+**起始版本：** 3
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+
+<!--Device-ShowDialogOptions-success?: (data: ShowDialogSuccessResponse) => void--><!--Device-ShowDialogOptions-success?: (data: ShowDialogSuccessResponse) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -122,6 +121,8 @@ title?: string
 **类型：** string
 
 **起始版本：** 3
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

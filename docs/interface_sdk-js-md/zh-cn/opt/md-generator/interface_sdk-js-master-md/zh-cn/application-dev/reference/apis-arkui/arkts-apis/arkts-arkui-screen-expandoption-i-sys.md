@@ -2,7 +2,9 @@
 
 扩展屏幕的参数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-interface ExpandOption--><!--Device-screen-interface ExpandOption-End-->
 
@@ -20,7 +22,9 @@ screenId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExpandOption-screenId: long--><!--Device-ExpandOption-screenId: long-End-->
 
@@ -38,7 +42,9 @@ startX: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExpandOption-startX: long--><!--Device-ExpandOption-startX: long-End-->
 
@@ -56,7 +62,9 @@ startY: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ExpandOption-startY: long--><!--Device-ExpandOption-startY: long-End-->
 

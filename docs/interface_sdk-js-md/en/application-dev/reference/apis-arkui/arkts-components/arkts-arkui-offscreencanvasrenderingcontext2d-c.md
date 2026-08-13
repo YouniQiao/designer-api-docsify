@@ -1,21 +1,6 @@
 # OffscreenCanvasRenderingContext2D
 
-Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Rendering offscreen onto a canvas is a process where content to draw onto the canvas is first drawn in the buffer, and then converted into a picture, and finally the picture is drawn on the canvas. Since off-screen rendering utilizes the CPU, its performance is relatively slow.Therefore, it should be avoided in scenarios where drawing speed is a critical requirement.
-
-> **NOTE：**
-> 
-> **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is
-> recommended that you use the
-> [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> for offscreen rendering in **ServiceExtensionAbility**.
-> 
-> The following path-related APIs apply only to paths created within
-> **OffscreenCanvasRenderingContext2D** and do not affect paths defined in
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
-> or [Path2D](arkts-arkui-path2d-c.md#Path2D):
-> [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath),
-> [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc),
-> [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
+Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offscreen onto a canvas. Rendering offscreen onto a canvas is a process where content to draw onto the canvas is first drawn in the buffer, and then converted into a picture, and finally the picture is drawn on the canvas. Since off-screen rendering utilizes the CPU, its performance is relatively slow. Therefore, it should be avoided in scenarios where drawing speed is a critical requirement. > **NOTE：**> > **OffscreenCanvasRenderingContext2D** cannot be used in **ServiceExtensionAbility**. It is > recommended that you use the > [drawing module](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) > for offscreen rendering in **ServiceExtensionAbility**. > > The following path-related APIs apply only to paths created within > **OffscreenCanvasRenderingContext2D** and do not affect paths defined in > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D) > or [Path2D](arkts-arkui-path2d-c.md#Path2D): > [beginPath](#beginpath), [moveTo](#moveto), [lineTo](#lineto), [closePath](#closepath), > [bezierCurveTo](#beziercurveto), [quadraticCurveTo](#quadraticcurveto), [arc](#arc), > [arcTo](#arcto), [ellipse](#ellipse), [rect](#rect), and [roundRect](#roundrect20).
 
 **Inheritance/Implementation:** OffscreenCanvasRenderingContext2D extends [CanvasRenderer](arkts-arkui-canvasrenderer-c.md#CanvasRenderer)
 
@@ -23,7 +8,9 @@ Use **OffscreenCanvasRenderingContext2D** to draw shapes, images, and text offsc
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer--><!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D--><!--Device-unnamed-declare class OffscreenCanvasRenderingContext2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,6 +25,8 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +55,8 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,6 +88,8 @@ Creates a data URL that contains a representation of an image. This API involves
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,6 +123,8 @@ Creates an **ImageBitmap** object from the most recently rendered image of the o
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

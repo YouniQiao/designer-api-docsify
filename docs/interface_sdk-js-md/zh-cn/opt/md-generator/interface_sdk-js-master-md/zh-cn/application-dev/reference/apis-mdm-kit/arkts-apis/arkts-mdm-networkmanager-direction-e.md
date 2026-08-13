@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-networkManager-enum Direction--><!--Device-networkManager-enum Direction-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ INPUT = 0
 输入链。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ OUTPUT = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Direction-OUTPUT = 1--><!--Device-Direction-OUTPUT = 1-End-->
@@ -49,6 +55,8 @@ FORWARD = 2
 转发链。
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

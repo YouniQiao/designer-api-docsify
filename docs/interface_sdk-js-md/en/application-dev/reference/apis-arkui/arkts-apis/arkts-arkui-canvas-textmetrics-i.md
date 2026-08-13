@@ -6,6 +6,8 @@ Size information of the text
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextMetrics--><!--Device-unnamed-export declare interface TextMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Size information of the text
 readonly actualBoundingBoxAscent: double
 ```
 
-Double, the distance from the horizontal line indicated by the textBaseline property to the top of  the rectangular boundary of the rendered text.
+Double, the distance from the horizontal line indicated by the textBaseline property to the top of the rectangular boundary of the rendered text.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ Double, the distance from the horizontal line indicated by the textBaseline prop
 readonly actualBoundingBoxDescent: double
 ```
 
-Double, the distance from the horizontal line indicated by the textBaseline property to the bottom of  the rectangular boundary of the rendered text.
+Double, the distance from the horizontal line indicated by the textBaseline property to the bottom of the rectangular boundary of the rendered text.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,13 +62,15 @@ Double, the distance from the horizontal line indicated by the textBaseline prop
 readonly actualBoundingBoxLeft: double
 ```
 
-Double, parallel to the baseline, distance from the alignment point determined by the textAlign property to  the left of the text rectangle boundary.
+Double, parallel to the baseline, distance from the alignment point determined by the textAlign property to the left of the text rectangle boundary.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,13 +84,15 @@ Double, parallel to the baseline, distance from the alignment point determined b
 readonly actualBoundingBoxRight: double
 ```
 
-Double, parallel to the baseline, distance from the alignment point determined by the textAlign property to  the right of the text rectangle boundary.
+Double, parallel to the baseline, distance from the alignment point determined by the textAlign property to the right of the text rectangle boundary.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,13 +106,15 @@ Double, parallel to the baseline, distance from the alignment point determined b
 readonly alphabeticBaseline: double
 ```
 
-Double, the distance from the horizontal line indicated by the textBaseline property to the alphabetic baseline of  the wireframe.
+Double, the distance from the horizontal line indicated by the textBaseline property to the alphabetic baseline of the wireframe.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,13 +128,15 @@ Double, the distance from the horizontal line indicated by the textBaseline prop
 readonly emHeightAscent: double
 ```
 
-Double, the distance from the horizontal line indicated by the textBaseline property to the top of the  em square in the wireframe.
+Double, the distance from the horizontal line indicated by the textBaseline property to the top of the em square in the wireframe.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +150,15 @@ Double, the distance from the horizontal line indicated by the textBaseline prop
 readonly emHeightDescent: double
 ```
 
-Double, distance from the horizontal line indicated by the textBaseline property to the bottom of the  em box in the wireframe.
+Double, distance from the horizontal line indicated by the textBaseline property to the bottom of the em box in the wireframe.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,13 +172,15 @@ Double, distance from the horizontal line indicated by the textBaseline property
 readonly fontBoundingBoxAscent: double
 ```
 
-Double, distance from the horizontal line indicated by the textBaseline property to the top of the  highest rectangle boundary of all fonts rendering text.
+Double, distance from the horizontal line indicated by the textBaseline property to the top of the highest rectangle boundary of all fonts rendering text.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,13 +194,15 @@ Double, distance from the horizontal line indicated by the textBaseline property
 readonly fontBoundingBoxDescent: double
 ```
 
-Double, distance from the horizontal line indicated by the textBaseline property to the bottom of the  rectangular boundary of all fonts rendering text.
+Double, distance from the horizontal line indicated by the textBaseline property to the bottom of the rectangular boundary of all fonts rendering text.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,13 +216,15 @@ Double, distance from the horizontal line indicated by the textBaseline property
 readonly hangingBaseline: double
 ```
 
-Double, distance from the horizontal line indicated by the textBaseline property to  the hanging baseline of the wireframe.
+Double, distance from the horizontal line indicated by the textBaseline property to the hanging baseline of the wireframe.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,6 +246,8 @@ Indicates the height of a character string. The value is of the double type.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextMetrics-readonly height: double--><!--Device-TextMetrics-readonly height: double-End-->
@@ -236,13 +260,15 @@ Indicates the height of a character string. The value is of the double type.
 readonly ideographicBaseline: double
 ```
 
-Double, distance from the horizontal line indicated by the textBaseline property to  the ideographic baseline of the wireframe.
+Double, distance from the horizontal line indicated by the textBaseline property to the ideographic baseline of the wireframe.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -263,6 +289,8 @@ Indicates the width of a character string. The value is of the double type.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

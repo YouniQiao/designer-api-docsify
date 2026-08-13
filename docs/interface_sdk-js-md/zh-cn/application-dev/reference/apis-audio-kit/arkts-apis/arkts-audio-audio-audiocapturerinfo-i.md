@@ -2,9 +2,11 @@
 
 描述音频采集器信息。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCapturerInfo--><!--Device-audio-interface AudioCapturerInfo-End-->
 
@@ -16,15 +18,15 @@
 capturerFlags: int
 ```
 
-录制流行为标志。
+录制流行为标志。 设置为0即可。
 
-设置为0即可。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioCapturerInfo-capturerFlags: int--><!--Device-AudioCapturerInfo-capturerFlags: int-End-->
 
@@ -40,9 +42,11 @@ source: SourceType
 
 **类型：** SourceType
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerInfo-source: SourceType--><!--Device-AudioCapturerInfo-source: SourceType-End-->
 

@@ -16,6 +16,8 @@ Converts a key-value (KV) pair that cannot be passed across threads into the dat
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket--><!--Device-sendableRelationalStore-function toSendableValuesBucket(valuesBucket: NonSendableBucket): ValuesBucket-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -36,8 +38,8 @@ Converts a key-value (KV) pair that cannot be passed across threads into the dat
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
 
 ## Examples
 

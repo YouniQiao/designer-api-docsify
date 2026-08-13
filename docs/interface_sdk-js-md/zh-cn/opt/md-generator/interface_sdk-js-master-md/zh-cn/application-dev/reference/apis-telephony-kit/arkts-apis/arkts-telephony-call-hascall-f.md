@@ -8,7 +8,9 @@ function hasCall(callback: AsyncCallback<boolean>): void
 
 判断是否存在通话。使用callback异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void--><!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void-End-->
 
@@ -43,7 +45,9 @@ function hasCall(): Promise<boolean>
 
 判断是否存在通话。使用Promise异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function hasCall(): Promise<boolean>--><!--Device-call-function hasCall(): Promise<boolean>-End-->
 

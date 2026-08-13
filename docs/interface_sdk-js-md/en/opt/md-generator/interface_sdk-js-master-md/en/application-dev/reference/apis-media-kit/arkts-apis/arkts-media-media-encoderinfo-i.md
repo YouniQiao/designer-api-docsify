@@ -2,7 +2,9 @@
 
 Describes the information about an encoder.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface EncoderInfo--><!--Device-media-interface EncoderInfo-End-->
 
@@ -24,7 +26,9 @@ Bit rate range of the encoder, with the minimum and maximum bit rates specified,
 
 **Type:** Range
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
 
@@ -36,11 +40,13 @@ Bit rate range of the encoder, with the minimum and maximum bit rates specified,
 channels?: Range
 ```
 
-Number of audio channels for the audio capturer, with the minimum and maximum numbers of audio channels specified.This parameter is available only for audio encoders.
+Number of audio channels for the audio capturer, with the minimum and maximum numbers of audio channels specified. This parameter is available only for audio encoders.
 
 **Type:** Range
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
 
@@ -52,11 +58,13 @@ Number of audio channels for the audio capturer, with the minimum and maximum nu
 frameRate?: Range
 ```
 
-Video frame rate range, with the minimum and maximum frame rates specified, in fps.This parameter is available only for video encoders.
+Video frame rate range, with the minimum and maximum frame rates specified, in fps. This parameter is available only for video encoders.
 
 **Type:** Range
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
 
@@ -68,11 +76,13 @@ Video frame rate range, with the minimum and maximum frame rates specified, in f
 height?: Range
 ```
 
-Video frame height range, with the minimum and maximum heights specified, in px.This parameter is available only for video encoders.
+Video frame height range, with the minimum and maximum heights specified, in px. This parameter is available only for video encoders.
 
 **Type:** Range
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
 
@@ -88,7 +98,9 @@ MIME type of the encoder.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
 
@@ -100,11 +112,13 @@ MIME type of the encoder.
 sampleRate?: Array<number>
 ```
 
-Audio sampling rate, including all available audio sampling rates, in Hz. The value depends on the encoder type,and this parameter is available only for audio encoders.
+Audio sampling rate, including all available audio sampling rates, in Hz. The value depends on the encoder type, and this parameter is available only for audio encoders.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
 
@@ -120,7 +134,9 @@ Encoder type. The value **audio** means an audio encoder, and **video** means a 
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
 
@@ -132,11 +148,13 @@ Encoder type. The value **audio** means an audio encoder, and **video** means a 
 width?: Range
 ```
 
-Video frame width range, with the minimum and maximum widths specified, in px.This parameter is available only for video encoders.
+Video frame width range, with the minimum and maximum widths specified, in px. This parameter is available only for video encoders.
 
 **Type:** Range
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
 

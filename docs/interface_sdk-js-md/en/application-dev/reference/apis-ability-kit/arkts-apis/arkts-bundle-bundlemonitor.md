@@ -2,9 +2,11 @@
 
 Bundle monitor
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace bundleMonitor--><!--Device-unnamed-declare namespace bundleMonitor-End-->
 
@@ -25,14 +27,14 @@ import { bundleMonitor } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-bundlemonitor-off-f-sys.md#off) | Unregister to monitor the installation status |
-| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md#offadd) | Unregister installation listener. |
-| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md#offremove) | Unregister uninstallation listener. |
-| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md#offupdate) | Unregister update listener. |
-| [on](arkts-ability-bundlemonitor-on-f-sys.md#on) | Register to monitor the installation status |
-| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md#onadd) | Register installation listener. |
-| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md#onremove) | Register uninstallation listener. |
-| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md#onupdate) | Register update listener. |
+| [offAdd](arkts-ability-bundlemonitor-offadd-f-sys.md#offAdd) | Unregister installation listener. |
+| [offRemove](arkts-ability-bundlemonitor-offremove-f-sys.md#offRemove) | Unregister uninstallation listener. |
+| [offUpdate](arkts-ability-bundlemonitor-offupdate-f-sys.md#offUpdate) | Unregister update listener. |
+| [off_BundleChangedEvent](arkts-ability-bundlemonitor-offbundlechangedevent-f-sys.md#off_BundleChangedEvent) | Unregister to monitor the installation status |
+| [onAdd](arkts-ability-bundlemonitor-onadd-f-sys.md#onAdd) | Register installation listener. |
+| [onRemove](arkts-ability-bundlemonitor-onremove-f-sys.md#onRemove) | Register uninstallation listener. |
+| [onUpdate](arkts-ability-bundlemonitor-onupdate-f-sys.md#onUpdate) | Register update listener. |
+| [on_BundleChangedEvent](arkts-ability-bundlemonitor-onbundlechangedevent-f-sys.md#on_BundleChangedEvent) | Register to monitor the installation status |
 <!--DelEnd-->
 
 <!--Del-->

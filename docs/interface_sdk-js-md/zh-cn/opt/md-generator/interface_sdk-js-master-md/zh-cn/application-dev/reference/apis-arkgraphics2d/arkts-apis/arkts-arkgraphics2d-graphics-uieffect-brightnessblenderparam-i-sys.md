@@ -2,7 +2,9 @@
 
 BrightnessBlender的参数列表，用于配置提亮效果的各项属性，包括灰度调整系数、饱和度和混合比例等参数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface BrightnessBlenderParam--><!--Device-unnamed-export declare interface BrightnessBlenderParam-End-->
 
@@ -20,7 +22,9 @@ cubicRate: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -40,7 +44,9 @@ degree: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -60,7 +66,9 @@ fraction: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -80,7 +88,9 @@ linearRate: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -100,7 +110,9 @@ negativeCoefficient: [number, number, number]
 
 **类型：** [number, number, number]
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -120,7 +132,9 @@ positiveCoefficient: [number, number, number]
 
 **类型：** [number, number, number]
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -140,7 +154,9 @@ quadraticRate: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
@@ -160,7 +176,9 @@ saturation: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 

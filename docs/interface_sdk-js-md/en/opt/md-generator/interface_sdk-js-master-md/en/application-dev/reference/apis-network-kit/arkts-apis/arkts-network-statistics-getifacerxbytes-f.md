@@ -14,7 +14,9 @@ function getIfaceRxBytes(nic: string, callback: AsyncCallback<number>): void
 
 Queries the data traffic (including all TCP and UDP data packets) received through a specified NIC.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statistics-function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void--><!--Device-statistics-function getIfaceRxBytes(nic: string, callback: AsyncCallback<long>): void-End-->
 
@@ -31,12 +33,12 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [2103011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) |
-| [2103012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) |
-| [2103005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) |
+| [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) |
 
 ## Examples
 
@@ -62,7 +64,9 @@ function getIfaceRxBytes(nic: string): Promise<number>
 
 Queries the data traffic (including all TCP and UDP data packets) received through a specified NIC.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statistics-function getIfaceRxBytes(nic: string): Promise<long>--><!--Device-statistics-function getIfaceRxBytes(nic: string): Promise<long>-End-->
 
@@ -84,12 +88,12 @@ Queries the data traffic (including all TCP and UDP data packets) received throu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [2103011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) |
-| [2103012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) |
-| [2103005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2103011](../errorcode-net-statistics.md#2103011-failed-to-create-a-system-map) |
+| [2103012](../errorcode-net-statistics.md#2103012-failed-to-obtain-the-nic-name) |
+| [2103005](../errorcode-net-statistics.md#2103005-failed-to-read-the-system-map) |
 
 ## Examples
 

@@ -6,13 +6,13 @@
 function createEmptyPixelMap(param: InitializationOptions): PixelMap
 ```
 
-Creates an empty PixelMap.
-
-The following pixel format is not supported for PixelMap creation: ASTC_4x4.
+Creates an empty PixelMap. The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,9 +40,9 @@ The following pixel format is not supported for PixelMap creation: ASTC_4x4.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600305](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
+| [7600305](../errorcode-image.md#7600305-创建pixelmap失败) | Failed to create the PixelMap. Possible cause: Internal data is corrupted. Please check the logs for detailed information. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) | Failed to allocate memory. Possible causes: 1. The resulting PixelMap size is too large. 2. The system is out of memory. |
 
 ## 示例
 

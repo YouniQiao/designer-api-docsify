@@ -4,6 +4,8 @@ Represents the base controller for **TextInput**, **TextArea**, and **Search** c
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare abstract class TextContentControllerBase--><!--Device-unnamed-declare abstract class TextContentControllerBase-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getText(range?: TextRange): string
 Obtains the text content within a specified range.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

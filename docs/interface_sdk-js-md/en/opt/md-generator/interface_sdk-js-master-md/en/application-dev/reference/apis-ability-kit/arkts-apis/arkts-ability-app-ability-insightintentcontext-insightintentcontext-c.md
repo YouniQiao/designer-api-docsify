@@ -1,11 +1,10 @@
 # InsightIntentContext
 
-The module provides the context for intent execution. It is used as a property in both the  
-[intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor) and  
-[base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor), offering essential capabilities for intent implementation, for example, starting  
-[UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) within the same application.
+The module provides the context for intent execution. It is used as a property in both the [intent execution base class](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#InsightIntentExecutor) and [base class decorated with @InsightIntentEntry](arkts-ability-app-ability-insightintententryexecutor-insightintententryexecutor-c.md#InsightIntentEntryExecutor) , offering essential capabilities for intent implementation, for example, starting [UIAbility components](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) within the same application.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class InsightIntentContext--><!--Device-unnamed-declare class InsightIntentContext-End-->
 
@@ -27,6 +26,8 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -45,7 +46,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 | Error Code ID |
 | --- |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -100,6 +101,8 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -118,7 +121,7 @@ Sets the return mode of the intent execution result. This API is applicable to i
 
 | Error Code ID |
 | --- |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -170,11 +173,13 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void--><!--Device-InsightIntentContext-startAbility(want: Want, callback: AsyncCallback<void>): void-End-->
 
@@ -191,21 +196,21 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -254,11 +259,13 @@ startAbility(want: Want): Promise<void>
 
 Starts a UIAbility. This API can only be used to start UIAbility components within the same application. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>--><!--Device-InsightIntentContext-startAbility(want: Want): Promise<void>-End-->
 
@@ -280,21 +287,21 @@ Starts a UIAbility. This API can only be used to start UIAbility components with
 
 | Error Code ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-installationfree-timeout) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-unsupported-operation) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-visibility-verification-failure) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-process-permission-verification-failure) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-ability-name-does-not-exist) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-caller-released) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-application-under-control) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-application-controlled-by-edm) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-crowdtesting-application-expires) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) |
+| [16000053](../errorcode-ability.md#16000053-ability-is-not-on-top-of-ui) |
+| [16000055](../errorcode-ability.md#16000055-installationfree-timeout) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000061](../errorcode-ability.md#16000061-unsupported-operation) |
+| [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000005](../errorcode-ability.md#16000005-process-permission-verification-failure) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) |
+| [16200001](../errorcode-ability.md#16200001-caller-released) |
+| [16000012](../errorcode-ability.md#16000012-application-under-control) |
+| [16000013](../errorcode-ability.md#16000013-application-controlled-by-edm) |
+| [16000008](../errorcode-ability.md#16000008-crowdtesting-application-expires) |
+| [16000009](../errorcode-ability.md#16000009-ability-start-or-stop-failure-in-wukong-mode) |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) |
 
 ## Examples
 
@@ -336,13 +343,13 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-Unique ID of an intent instance. Its execution result can be returned through  
-[insightIntentProvider.sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) and  
-[insightIntentProvider.sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult).
+Unique ID of an intent instance. Its execution result can be returned through [insightIntentProvider.sendExecuteResult] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md#sendExecuteResult) and [insightIntentProvider.sendIntentResult] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md#sendIntentResult).
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Enumerates the modes for processing BigInt.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-json-const enum BigIntMode--><!--Device-json-const enum BigIntMode-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ DEFAULT = 0
 BigInt is not supported.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +38,8 @@ Parses an integer that is less than -(2^53-1) or greater than (2^53-1) as BigInt
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BigIntMode-PARSE_AS_BIGINT = 1--><!--Device-BigIntMode-PARSE_AS_BIGINT = 1-End-->
@@ -49,6 +55,8 @@ ALWAYS_PARSE_AS_BIGINT = 2
 Parses all integers as BigInt.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

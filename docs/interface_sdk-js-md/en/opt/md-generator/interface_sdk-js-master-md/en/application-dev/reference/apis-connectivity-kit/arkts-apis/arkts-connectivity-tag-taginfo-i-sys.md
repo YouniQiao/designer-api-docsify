@@ -1,8 +1,10 @@
 # TagInfo
 
-Provides tag information.&lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
+Provides tag information. &lt;p&gt;This class provides the technology a tag supports, for example, NFC-A. Applications can create different tags based on the supported technology.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-tag-export interface TagInfo--><!--Device-tag-export interface TagInfo-End-->
 
@@ -24,7 +26,9 @@ The extra data for each technology of this tag.
 
 **Type:** [PacMap](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-pacmap-i.md)[]
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -44,7 +48,9 @@ The extra data for the technology of this tag.
 
 **Type:** rpc.RemoteObject
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
@@ -64,7 +70,9 @@ The the RF discovery id of this tag.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 

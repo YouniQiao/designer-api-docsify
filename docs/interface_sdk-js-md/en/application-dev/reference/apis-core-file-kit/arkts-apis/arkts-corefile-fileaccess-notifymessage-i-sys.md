@@ -8,7 +8,7 @@ Represents the notification message.
 
 **Deprecated since:** 23
 
-**Substitutes:** [WatchEvent](@ohos.file.fs:fileIo.WatchEvent)
+**Substitutes:** WatchEvent
 
 <!--Device-fileAccess-interface NotifyMessage--><!--Device-fileAccess-interface NotifyMessage-End-->
 

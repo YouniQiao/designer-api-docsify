@@ -14,9 +14,9 @@ function getUriSync(name: string): string
 
 Get settingsdata uri (synchronous method)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 

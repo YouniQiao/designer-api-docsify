@@ -14,7 +14,9 @@ function isBuffer(obj: Object): boolean
 
 Checks whether the specified object is a **Buffer** object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

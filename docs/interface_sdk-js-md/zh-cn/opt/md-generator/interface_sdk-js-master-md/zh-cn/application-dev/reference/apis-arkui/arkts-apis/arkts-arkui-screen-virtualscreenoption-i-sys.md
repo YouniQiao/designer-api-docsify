@@ -2,7 +2,9 @@
 
 创建虚拟屏幕的参数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-interface VirtualScreenOption--><!--Device-screen-interface VirtualScreenOption-End-->
 
@@ -20,7 +22,9 @@ density: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-density: double--><!--Device-VirtualScreenOption-density: double-End-->
 
@@ -38,7 +42,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-height: long--><!--Device-VirtualScreenOption-height: long-End-->
 
@@ -56,7 +62,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-name: string--><!--Device-VirtualScreenOption-name: string-End-->
 
@@ -74,7 +82,9 @@ supportsFocus?: boolean
 
 **类型：** boolean
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-supportsFocus?: boolean--><!--Device-VirtualScreenOption-supportsFocus?: boolean-End-->
 
@@ -92,7 +102,9 @@ surfaceId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-surfaceId: string--><!--Device-VirtualScreenOption-surfaceId: string-End-->
 
@@ -112,6 +124,8 @@ userId?: number
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-VirtualScreenOption-userId?: int--><!--Device-VirtualScreenOption-userId?: int-End-->
@@ -130,7 +144,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenOption-width: long--><!--Device-VirtualScreenOption-width: long-End-->
 

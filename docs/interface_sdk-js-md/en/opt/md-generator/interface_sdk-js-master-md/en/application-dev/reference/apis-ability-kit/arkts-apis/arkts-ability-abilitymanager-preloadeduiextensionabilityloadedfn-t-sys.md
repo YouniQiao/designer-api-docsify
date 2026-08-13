@@ -4,10 +4,11 @@
 export type PreloadedUIExtensionAbilityLoadedFn = (preloadId: number) => void
 ```
 
-Defines the callback function when the preloaded  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance is loaded.
+Defines the callback function when the preloaded [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) instance is loaded.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

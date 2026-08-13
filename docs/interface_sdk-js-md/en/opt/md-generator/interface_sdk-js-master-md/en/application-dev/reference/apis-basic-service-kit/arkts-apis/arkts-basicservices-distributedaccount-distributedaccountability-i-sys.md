@@ -1,9 +1,10 @@
 # DistributedAccountAbility
 
-Provides APIs for querying and updating the login state of a distributed account. You must obtain a  
-**DistributedAccountAbility** instance first.
+Provides APIs for querying and updating the login state of a distributed account. You must obtain a **DistributedAccountAbility** instance first.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedAccount-interface DistributedAccountAbility--><!--Device-distributedAccount-interface DistributedAccountAbility-End-->
 
@@ -23,7 +24,9 @@ getOsAccountDistributedInfoByLocalId(localId: number, callback: AsyncCallback<Di
 
 Obtains distributed information about an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
@@ -46,10 +49,10 @@ Obtains distributed information about an OS account. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -81,7 +84,9 @@ getOsAccountDistributedInfoByLocalId(localId: number): Promise<DistributedInfo>
 
 Obtains distributed information about an OS account. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 20+: ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS or (ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS and ohos.permission.GET_DISTRIBUTED_ACCOUNTS)
@@ -109,10 +114,10 @@ Obtains distributed information about an OS account. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -142,7 +147,9 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 
 Sets the distributed information for an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -164,13 +171,13 @@ Sets the distributed information for an OS account. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300406 |
 
 ## Examples
@@ -204,7 +211,9 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 
 Sets the distributed information for an OS account. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DISTRIBUTED_ACCOUNTS
 
@@ -231,13 +240,13 @@ Sets the distributed information for an OS account. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300406 |
 
 ## Examples

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RichEditorTextStyle--><!--Device-unnamed-export declare interface RichEditorTextStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ decoration?: DecorationStyleInterface
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ fontColor?: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-fontColor?: ResourceColor--><!--Device-RichEditorTextStyle-fontColor?: ResourceColor-End-->
@@ -63,6 +69,8 @@ fontFamily?: ResourceStr
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ fontFeature?: string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-fontFeature?: string--><!--Device-RichEditorTextStyle-fontFeature?: string-End-->
@@ -103,6 +113,8 @@ fontSize?: Length | double
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,6 +136,8 @@ fontStyle?: FontStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-fontStyle?: FontStyle--><!--Device-RichEditorTextStyle-fontStyle?: FontStyle-End-->
@@ -144,6 +158,8 @@ fontWeight?: int | FontWeight | string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-fontWeight?: int | FontWeight | string--><!--Device-RichEditorTextStyle-fontWeight?: int | FontWeight | string-End-->
@@ -156,17 +172,15 @@ fontWeight?: int | FontWeight | string
 halfLeading?: boolean
 ```
 
-文本是否将行间距平分至行的顶部与底部。
-
-true表示将行间距平分至行的顶部与底部，false则不平分。
-
-默认值：false。
+文本是否将行间距平分至行的顶部与底部。 true表示将行间距平分至行的顶部与底部，false则不平分。 默认值：false。
 
 **类型：** boolean
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,6 +202,8 @@ letterSpacing?: double | string
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-letterSpacing?: double | string--><!--Device-RichEditorTextStyle-letterSpacing?: double | string-End-->
@@ -208,6 +224,8 @@ lineHeight?: double | string | Resource
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-lineHeight?: double | string | Resource--><!--Device-RichEditorTextStyle-lineHeight?: double | string | Resource-End-->
@@ -220,17 +238,15 @@ lineHeight?: double | string | Resource
 strokeColor?: ResourceColor
 ```
 
-文本描边颜色。
-
-默认值：跟随字体颜色。
-
-设置异常值时跟随字体颜色。
+文本描边颜色。 默认值：跟随字体颜色。 设置异常值时跟随字体颜色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -244,17 +260,15 @@ strokeColor?: ResourceColor
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+文本描边拐角样式。 默认值：StrokeJoinStyle.MITER_JOIN。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -268,23 +282,15 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | double
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](arkts-arkui-graphics-lengthunit-e.md#LengthUnit)，当前设置不生效，作为0处理。
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md#LengthUnit)，当前设置不生效，作为0处理。 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。 默认值：0vp。 单位：LengthMetrics类型时跟随LengthMetrics，number或double类型时是vp。 取值范围：(-∞, +∞) **模型约束：** 此接口仅可在Stage模型下使用。
 
-值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。
-
-默认值：0vp。
-
-单位：LengthMetrics类型时跟随LengthMetrics，number或double类型时是vp。
-
-取值范围：(-∞, +∞)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| double
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -306,6 +312,8 @@ textBackgroundStyle?: TextBackgroundStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorTextStyle-textBackgroundStyle?: TextBackgroundStyle--><!--Device-RichEditorTextStyle-textBackgroundStyle?: TextBackgroundStyle-End-->
@@ -318,17 +326,15 @@ textBackgroundStyle?: TextBackgroundStyle
 textShadow?: ShadowOptions | Array<ShadowOptions>
 ```
 
-文字阴影效果。
-
-**说明：**
-
-仅支持查询阴影模糊半径、颜色和偏移量。
+文字阴影效果。 **说明：** 仅支持查询阴影模糊半径、颜色和偏移量。
 
 **类型：** [ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md) \| Array&lt;[ShadowOptions](../arkts-components/arkts-arkui-shadowoptions-i.md)&gt;
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

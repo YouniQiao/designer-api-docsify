@@ -6,14 +6,11 @@
 function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void
 ```
 
-删除数据库文件，使用callback异步回调。
+删除数据库文件，使用callback异步回调。 删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则调用此接口进行删库无效，必须使用 [deleteRdbStore](#deleteRdbStore) 接口进行删库。 当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 
-删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则调用此接口进行删库无效，必须使用   
-[deleteRdbStore](#deleteRdbStore) 接口进行删库。
+**起始版本：** 23
 
-当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -31,9 +28,9 @@ function deleteRdbStore(context: Context, name: string, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-数据库路径不合法) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
+| [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) |
 
 ## 示例
 
@@ -85,14 +82,11 @@ class EntryAbility extends UIAbility {
 function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void
 ```
 
-使用指定的数据库文件配置删除数据库，使用callback异步回调。
+使用指定的数据库文件配置删除数据库，使用callback异步回调。 删除成功后，建议将数据库对象置为null。若数据库文件处于公共沙箱目录下，则删除数据库时必须使用该接口，当存在多个进程操作同一个数据库的情况，建议向其他进程发送数据库删除通知使其感知并处理。建立数据库时，若在 [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则必须调用此接口进行删库。 当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 
-删除成功后，建议将数据库对象置为null。若数据库文件处于公共沙箱目录下，则删除数据库时必须使用该接口，当存在多个进程操作同一个数据库的情况，建议向其他进程发送数据库删除通知使其感知并处理。建立数据库时，若在  
-[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则必须调用此接口进行删库。
+**起始版本：** 23
 
-当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<void>): void-End-->
 
@@ -110,11 +104,11 @@ function deleteRdbStore(context: Context, config: StoreConfig, callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-上下文环境非stage模型) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-数据库路径不合法) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) |
+| [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) |
 
 ## 示例
 
@@ -175,14 +169,11 @@ class EntryAbility extends UIAbility {
 function deleteRdbStore(context: Context, name: string): Promise<void>
 ```
 
-删除数据库文件，使用Promise异步回调。
+删除数据库文件，使用Promise异步回调。 删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则调用此接口进行删库无效，必须使用 [deleteRdbStore](#deleteRdbStore) 接口进行删库。 当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 
-删除成功后，建议将数据库对象置为null。建立数据库时，若在[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则调用此接口进行删库无效，必须使用   
-[deleteRdbStore](#deleteRdbStore) 接口进行删库。
+**起始版本：** 23
 
-当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, name: string): Promise<void>--><!--Device-relationalStore-function deleteRdbStore(context: Context, name: string): Promise<void>-End-->
 
@@ -205,9 +196,9 @@ function deleteRdbStore(context: Context, name: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-数据库路径不合法) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
+| [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) |
 
 ## 示例
 
@@ -255,14 +246,11 @@ class EntryAbility extends UIAbility {
 function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>
 ```
 
-使用指定的数据库文件配置删除数据库，使用Promise异步回调。
+使用指定的数据库文件配置删除数据库，使用Promise异步回调。 删除成功后，建议将数据库对象置为null。若数据库文件处于公共沙箱目录下，则删除数据库时必须使用该接口，当存在多个进程操作同一个数据库的情况，建议向其他进程发送数据库删除通知使其感知并处理。建立数据库时，若在 [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则必须调用此接口进行删库。 当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
 
-删除成功后，建议将数据库对象置为null。若数据库文件处于公共沙箱目录下，则删除数据库时必须使用该接口，当存在多个进程操作同一个数据库的情况，建议向其他进程发送数据库删除通知使其感知并处理。建立数据库时，若在  
-[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig)中配置了自定义路径，则必须调用此接口进行删库。
+**起始版本：** 23
 
-当使用向量数据库时，在调用deleteRdbStore接口前，应当确保向量数据库已打开的RdbStore和ResultSet均已成功关闭。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>--><!--Device-relationalStore-function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>-End-->
 
@@ -285,12 +273,12 @@ function deleteRdbStore(context: Context, config: StoreConfig): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-上下文环境非stage模型) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-数据库路径不合法) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14801001](../errorcode-data-rdb.md#14801001-上下文环境非stage模型) |
+| [14800010](../errorcode-data-rdb.md#14800010-数据库路径不合法) |
+| [14801002](../errorcode-data-rdb.md#14801002-storeconfig中传入的datagroupid参数非法) |
 
 ## 示例
 

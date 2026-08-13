@@ -8,161 +8,9 @@ Defines the TextPickerDialogOptions for Text Picker Dialog.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
-<!--Device-unnamed-declare interface TextPickerDialogOptions extends TextPickerOptions--><!--Device-unnamed-declare interface TextPickerDialogOptions extends TextPickerOptions-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onAccept
-
-```TypeScript
-onAccept?: (value: TextPickerResult) => void
-```
-
-Callback invoked when the OK button in the dialog box is clicked.
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [TextPickerResult](arkts-arkui-textpickerresult-i.md) | Yes |  |
-
-## onCancel
-
-```TypeScript
-onCancel?: () => void
-```
-
-Callback invoked when the Cancel button in the dialog box is clicked.
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TextPickerDialogOptions-onCancel?: () => void--><!--Device-TextPickerDialogOptions-onCancel?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-onChange?: (value: TextPickerResult) => void
-```
-
-Callback invoked when the text picker in the dialog box snaps to the selected item.
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | [TextPickerResult](arkts-arkui-textpickerresult-i.md) | Yes |  |
-
-## onDidAppear
-
-```TypeScript
-onDidAppear?: () => void
-```
-
-Event callback when the dialog box appears.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;1. The normal timing sequence is as follows:onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear.&lt;br&gt;2. You can set the callback event for changing the dialog box display effect in onDidAppear.The settings take effect next time the dialog box appears.&lt;br&gt;3. If the user closes the dialog box immediately after it appears,onWillDisappearis invoked before onDidAppear.&lt;br&gt;4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.&lt;/p&gt;
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextPickerDialogOptions-onDidAppear?: () => void--><!--Device-TextPickerDialogOptions-onDidAppear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: () => void
-```
-
-Event callback when the dialog box disappears.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The normal timing sequence is as follows:&lt;br&gt;onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear.&lt;/p&gt;
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextPickerDialogOptions-onDidDisappear?: () => void--><!--Device-TextPickerDialogOptions-onDidDisappear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: () => void
-```
-
-Event callback when the dialog box is about to appear.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;1. The normal timing sequence is as follows:&lt;br&gt;onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear.&lt;br&gt;2. You can set the callback event for changing the dialog box display effect in onWillAppear.&lt;br&gt;the settings take effect next time the dialog box appears.&lt;/p&gt;
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextPickerDialogOptions-onWillAppear?: () => void--><!--Device-TextPickerDialogOptions-onWillAppear?: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: () => void
-```
-
-Event callback when the dialog box is about to disappear.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;1. The normal timing sequence is as follows:onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear.&lt;br&gt;2. If the user closes the dialog box immediately after it appears,onWillDisappear is invoked before onDidAppear.&lt;/p&gt;
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TextPickerDialogOptions-onWillDisappear?: () => void--><!--Device-TextPickerDialogOptions-onWillDisappear?: () => void-End-->
+<!--Device-unnamed-declare interface TextPickerDialogOptions--><!--Device-unnamed-declare interface TextPickerDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -172,15 +20,15 @@ Event callback when the dialog box is about to disappear.
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of accept button.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In the acceptButtonStyle and cancelButtonStyle configurations,&lt;br&gt;only one primary field can be set to true at most.&lt;br&gt;If both the primary fields are set to true, neither will take effect.&lt;/p&gt;
+Style of accept button. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;In the acceptButtonStyle and cancelButtonStyle configurations, &lt;br&gt;only one primary field can be set to true at most. &lt;br&gt;If both the primary fields are set to true, neither will take effect. &lt;/p&gt;
 
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,6 +54,8 @@ Alignment mode of the dialog box in the vertical direction.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -230,6 +80,8 @@ Background blur style of the dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -251,6 +103,8 @@ Options for customizing the background blur style.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,6 +130,8 @@ Backplane color of the dialog box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -298,6 +154,8 @@ Options for customizing the background effect.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -312,9 +170,7 @@ Options for customizing the background effect.
 canLoop?: boolean
 ```
 
-Whether to support scroll looping.The value true means to support scroll looping, and false means the opposite.
-
-Default Value: true
+Whether to support scroll looping. The value true means to support scroll looping, and false means the opposite. Default Value: true
 
 **Type:** boolean
 
@@ -323,6 +179,8 @@ Default Value: true
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -338,15 +196,15 @@ Default Value: true
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of cancel button.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In the acceptButtonStyle and cancelButtonStyle configurations,&lt;br&gt;only one primary field can be set to true at most.&lt;br&gt;If both the primary fields are set to true, neither will take effect.&lt;/p&gt;
+Style of cancel button. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;In the acceptButtonStyle and cancelButtonStyle configurations, &lt;br&gt;only one primary field can be set to true at most. &lt;br&gt;If both the primary fields are set to true, neither will take effect. &lt;/p&gt;
 
 **Type:** PickerDialogButtonStyle
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -372,6 +230,8 @@ Height of the picker item.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerDialogOptions-defaultPickerItemHeight?: number | string--><!--Device-TextPickerDialogOptions-defaultPickerItemHeight?: number | string-End-->
@@ -384,15 +244,15 @@ Height of the picker item.
 defaultTextStyle?: TextPickerTextStyle
 ```
 
-Style of the text items when the text style change animation during the scrolling process is disabled.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It is effective only when disableTextStyleAnimation is true.&lt;/p&gt;
+Style of the text items when the text style change animation during the scrolling process is disabled. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;It is effective only when disableTextStyleAnimation is true. &lt;/p&gt;
 
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,7 +268,7 @@ Style of the text items when the text style change animation during the scrollin
 disableTextStyleAnimation?: boolean
 ```
 
-Sets whether to enable the text style change animation during the scrolling process.true: Disable the text style change animation.false: Enable the text style change animation.
+Sets whether to enable the text style change animation during the scrolling process. true: Disable the text style change animation. false: Enable the text style change animation.
 
 **Type:** boolean
 
@@ -417,6 +277,8 @@ Sets whether to enable the text style change animation during the scrolling proc
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,9 +294,7 @@ Sets whether to enable the text style change animation during the scrolling proc
 disappearTextStyle?: PickerTextStyle
 ```
 
-Font color, font size, and font weight of the top and bottom items.
-
-Default Value：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
+Font color, font size, and font weight of the top and bottom items. Default Value：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **Type:** PickerTextStyle
 
@@ -443,6 +303,8 @@ Default Value：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.R
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -458,9 +320,7 @@ Default Value：{ color: '#ff182431', font: { size: '14fp', weight: FontWeight.R
 enableHapticFeedback?: boolean
 ```
 
-Whether to enable haptic feedback.true (default): Haptic feedback is enabled.false: Haptic feedback is disabled.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;To enable haptic feedback, you must declare the ohos.permission.VIBRATE permission&lt;br&gt;under requestPermissions in the module.json5 file of the project.&lt;br&gt;"requestPermissions": [{"name": "ohos.permission.VIBRATE"}].&lt;/p&gt;
+Whether to enable haptic feedback. true (default): Haptic feedback is enabled. false: Haptic feedback is disabled. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;To enable haptic feedback, you must declare the ohos.permission.VIBRATE permission &lt;br&gt;under requestPermissions in the module.json5 file of the project. &lt;br&gt;"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]. &lt;/p&gt;
 
 **Type:** boolean
 
@@ -469,6 +329,8 @@ Whether to enable haptic feedback.true (default): Haptic feedback is enabled.fal
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -484,9 +346,7 @@ Whether to enable haptic feedback.true (default): Haptic feedback is enabled.fal
 enableHoverMode?: boolean
 ```
 
-Whether to enable the hover mode.
-
-Default Value: false
+Whether to enable the hover mode. Default Value: false
 
 **Type:** boolean
 
@@ -495,6 +355,8 @@ Default Value: false
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -510,9 +372,7 @@ Default Value: false
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box in hover mode.
-
-Default Value: HoverModeAreaType.BOTTOM_SCREEN
+Display area of the dialog box in hover mode. Default Value: HoverModeAreaType.BOTTOM_SCREEN
 
 **Type:** HoverModeAreaType
 
@@ -521,6 +381,8 @@ Default Value: HoverModeAreaType.BOTTOM_SCREEN
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -536,7 +398,7 @@ Default Value: HoverModeAreaType.BOTTOM_SCREEN
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box.Events outside the mask area are transparently transmitted, and events within the mask area are not.
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
 
 **Type:** Rectangle
 
@@ -545,6 +407,8 @@ Mask area of the dialog box.Events outside the mask area are transparently trans
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -570,11 +434,127 @@ Offset of the dialog box based on the alignment settings.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextPickerDialogOptions-offset?: Offset--><!--Device-TextPickerDialogOptions-offset?: Offset-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onAccept
+
+```TypeScript
+onAccept?: (value: TextPickerResult) => void
+```
+
+Callback invoked when the OK button in the dialog box is clicked.
+
+**Type:** (value: TextPickerResult) =&gt; void
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onAccept?: (value: TextPickerResult) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onCancel
+
+```TypeScript
+onCancel?: () => void
+```
+
+Callback invoked when the Cancel button in the dialog box is clicked.
+
+**Type:** () =&gt; void
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-onCancel?: () => void--><!--Device-TextPickerDialogOptions-onCancel?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onChange
+
+```TypeScript
+onChange?: (value: TextPickerResult) => void
+```
+
+Callback invoked when the text picker in the dialog box snaps to the selected item.
+
+**Type:** (value: TextPickerResult) =&gt; void
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void--><!--Device-TextPickerDialogOptions-onChange?: (value: TextPickerResult) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidAppear
+
+```TypeScript
+onDidAppear?: () => void
+```
+
+Event callback when the dialog box appears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in onDidAppear. The settings take effect next time the dialog box appears. &lt;br&gt;3. If the user closes the dialog box immediately after it appears, onWillDisappearis invoked before onDidAppear. &lt;br&gt;4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked. &lt;/p&gt;
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-onDidAppear?: () => void--><!--Device-TextPickerDialogOptions-onDidAppear?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: () => void
+```
+
+Event callback when the dialog box disappears. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The normal timing sequence is as follows: &lt;br&gt;onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. &lt;/p&gt;
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-onDidDisappear?: () => void--><!--Device-TextPickerDialogOptions-onDidDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -584,15 +564,15 @@ Offset of the dialog box based on the alignment settings.
 onEnterSelectedArea?: Callback<TextPickerResult>
 ```
 
-Represents the callback triggered during the scrolling of the text picker when an item enters the divider area.Compared to the onChange event, this event is triggered earlier,specifically when the scroll distance of the current column exceeds half the height of the selected item,which indicates that the item has entered the divider area.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;In scenarios where the picker contains linked columns,&lt;br&gt;the use of this callback is not recommended.&lt;br&gt;The reason is that it identifies nodes where items enter the divider area during scrolling.&lt;br&gt;However, items that change in response to the scrolling do not themselves scroll. As a result,&lt;br&gt;he callback's return values will only reflect changes for the currently scrolling column,&lt;br&gt;while other non-scrolling columns will remain unchanged.&lt;/p&gt;
+Represents the callback triggered during the scrolling of the text picker when an item enters the divider area. Compared to the onChange event, this event is triggered earlier, specifically when the scroll distance of the current column exceeds half the height of the selected item, which indicates that the item has entered the divider area. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;In scenarios where the picker contains linked columns, &lt;br&gt;the use of this callback is not recommended. &lt;br&gt;The reason is that it identifies nodes where items enter the divider area during scrolling. &lt;br&gt;However, items that change in response to the scrolling do not themselves scroll. As a result, &lt;br&gt;he callback's return values will only reflect changes for the currently scrolling column, &lt;br&gt;while other non-scrolling columns will remain unchanged. &lt;/p&gt;
 
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -616,11 +596,61 @@ Callback invoked when the scrolling in the text picker of the dialog box stops.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-TextPickerDialogOptions-onScrollStop?: Callback<TextPickerResult>--><!--Device-TextPickerDialogOptions-onScrollStop?: Callback<TextPickerResult>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: () => void
+```
+
+Event callback when the dialog box is about to appear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;1. The normal timing sequence is as follows: &lt;br&gt;onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in onWillAppear. &lt;br&gt;the settings take effect next time the dialog box appears. &lt;/p&gt;
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-onWillAppear?: () => void--><!--Device-TextPickerDialogOptions-onWillAppear?: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: () => void
+```
+
+Event callback when the dialog box is about to disappear. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onAccept/onCancel/onChange/onScrollStop) > onWillDisappear > onDidDisappear. &lt;br&gt;2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear. &lt;/p&gt;
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TextPickerDialogOptions-onWillDisappear?: () => void--><!--Device-TextPickerDialogOptions-onWillDisappear?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -630,9 +660,7 @@ Callback invoked when the scrolling in the text picker of the dialog box stops.
 selectedBackgroundStyle?: PickerBackgroundStyle
 ```
 
-Background style of selected items.
-
-Default Value: { color: \$r('sys.color.comp_background_tertiary'),borderRadius: \$r('sys.float.corner_radius_level12') }
+Background style of selected items. Default Value: { color: \$r('sys.color.comp_background_tertiary'), borderRadius: \$r('sys.float.corner_radius_level12') }
 
 **Type:** [PickerBackgroundStyle](arkts-arkui-pickerbackgroundstyle-i.md)
 
@@ -641,6 +669,8 @@ Default Value: { color: \$r('sys.color.comp_background_tertiary'),borderRadius: 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -664,6 +694,8 @@ Font color, font size, and font weight of the selected item.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -678,13 +710,15 @@ Font color, font size, and font weight of the selected item.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
+Shadow of the dialog box. Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOATING_MD when the dialog box is focused and ShadowStyle.OUTER_FLOATING_SM otherwise.
 
 **Type:** ShadowOptions \| ShadowStyle
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -700,9 +734,7 @@ Shadow of the dialog box.Default value on 2-in-1 devices: ShadowStyle.OUTER_FLOA
 textStyle?: PickerTextStyle
 ```
 
-Font color, font size, and font weight of all items except the top, bottom, and selected items.
-
-Default Value：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
+Font color, font size, and font weight of all items except the top, bottom, and selected items. Default Value：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **Type:** PickerTextStyle
 
@@ -711,6 +743,8 @@ Default Value：{ color: '#ff182431', font: { size: '16fp', weight: FontWeight.R
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

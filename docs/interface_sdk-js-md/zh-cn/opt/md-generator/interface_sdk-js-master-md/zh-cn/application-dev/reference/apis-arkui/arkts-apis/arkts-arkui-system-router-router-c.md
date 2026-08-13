@@ -6,7 +6,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [router](arkts-router.md#router)
+**替代接口：** [router](arkts-router.md#@ohos.router)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
@@ -24,7 +24,7 @@ static back(options?: BackRouterOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** [back](ohos.router.router#back)
+**替代接口：** back
 
 <!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
 
@@ -48,7 +48,7 @@ static clear(): void
 
 **废弃版本：** 8
 
-**替代接口：** [clear](ohos.router.router#clear)
+**替代接口：** clear
 
 <!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
@@ -66,7 +66,7 @@ static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): 
 
 **废弃版本：** 8
 
-**替代接口：** [hideAlertBeforeBackPage](ohos.router.router#hideAlertBeforeBackPage)
+**替代接口：** hideAlertBeforeBackPage
 
 <!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
 
@@ -90,7 +90,7 @@ static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): voi
 
 **废弃版本：** 8
 
-**替代接口：** [showAlertBeforeBackPage](ohos.router.router#showAlertBeforeBackPage)
+**替代接口：** showAlertBeforeBackPage
 
 <!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
 
@@ -114,7 +114,7 @@ static getLength(): string
 
 **废弃版本：** 8
 
-**替代接口：** [getLength](ohos.router.router#getLength)
+**替代接口：** getLength
 
 <!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
@@ -138,7 +138,7 @@ static getParams(): ParamsInterface
 
 **废弃版本：** 8
 
-**替代接口：** [getParams](ohos.router.router#getParams)
+**替代接口：** getParams
 
 <!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
 
@@ -162,7 +162,7 @@ static getState(): RouterState
 
 **废弃版本：** 8
 
-**替代接口：** [getState](ohos.router.router#getState)
+**替代接口：** getState
 
 <!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
 
@@ -180,17 +180,13 @@ static getState(): RouterState
 static push(options: RouterOptions): void
 ```
 
-跳转到应用内的指定页面。
-
-> **说明：**
-> 
-> 页面路由栈支持的最大Page数量为32。
+跳转到应用内的指定页面。 > **说明：** > > 页面路由栈支持的最大Page数量为32。
 
 **起始版本：** 3
 
 **废弃版本：** 8
 
-**替代接口：** [push](ohos.router.router#push)
+**替代接口：** push
 
 <!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
 
@@ -214,7 +210,7 @@ static replace(options: RouterOptions): void
 
 **废弃版本：** 8
 
-**替代接口：** [replace](ohos.router.router#replace)
+**替代接口：** replace
 
 <!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
 

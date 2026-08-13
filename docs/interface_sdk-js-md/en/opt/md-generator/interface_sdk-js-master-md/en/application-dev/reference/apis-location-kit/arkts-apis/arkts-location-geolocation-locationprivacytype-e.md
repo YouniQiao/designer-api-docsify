@@ -6,7 +6,7 @@ Enum for location privacy type
 
 **Deprecated since:** 9
 
-**Substitutes:** [LocationPrivacyType](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType)
+**Substitutes:** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#LocationPrivacyType-(System-API))
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -24,7 +24,7 @@ OTHERS = 0
 
 **Deprecated since:** 9
 
-**Substitutes:** [OTHERS](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#OTHERS)
+**Substitutes:** [OTHERS](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#OTHERS)
 
 <!--Device-LocationPrivacyType-OTHERS = 0--><!--Device-LocationPrivacyType-OTHERS = 0-End-->
 
@@ -40,7 +40,7 @@ STARTUP
 
 **Deprecated since:** 9
 
-**Substitutes:** [STARTUP](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#STARTUP)
+**Substitutes:** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#STARTUP)
 
 <!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
 
@@ -56,7 +56,7 @@ CORE_LOCATION
 
 **Deprecated since:** 9
 
-**Substitutes:** [CORE_LOCATION](ohos.geoLocationManager/geoLocationManager.LocationPrivacyType#CORE_LOCATION)
+**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#CORE_LOCATION)
 
 <!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 

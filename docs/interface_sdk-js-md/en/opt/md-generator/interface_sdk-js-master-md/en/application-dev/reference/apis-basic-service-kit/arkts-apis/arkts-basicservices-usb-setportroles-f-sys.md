@@ -18,7 +18,7 @@ Sets the role types supported by a specified port, which can be **powerRole** (f
 
 **Deprecated since:** 9
 
-**Substitutes:** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setPortRoles)
+**Substitutes:** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setPortRoles-(System-API))
 
 <!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>--><!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>-End-->
 

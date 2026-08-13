@@ -14,9 +14,11 @@ function getFormRect(formId: string): Promise<formInfo.Rect>
 
 Obtains the position and dimension of a widget. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function getFormRect(formId: string): Promise<formInfo.Rect>--><!--Device-formProvider-function getFormRect(formId: string): Promise<formInfo.Rect>-End-->
 
@@ -38,13 +40,13 @@ Obtains the position and dimension of a widget. This API uses a promise to retur
 
 | Error Code ID |
 | --- |
-| [16501003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501003-widget-not-operatable) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501001-widget-id-not-exist) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [16501003](../errorcode-form.md#16501003-widget-not-operatable) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16501001](../errorcode-form.md#16501001-widget-id-not-exist) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

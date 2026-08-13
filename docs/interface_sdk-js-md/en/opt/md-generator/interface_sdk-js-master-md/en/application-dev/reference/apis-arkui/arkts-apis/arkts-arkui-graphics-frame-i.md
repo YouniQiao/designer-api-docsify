@@ -4,6 +4,8 @@ Sets or returns the layout size and position of the component.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface Frame--><!--Device-unnamed-export declare interface Frame-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@ Sets or returns the layout size and position of the component.
 height: number
 ```
 
-Component height.
-
-Unit: vp.
-
-Value range: [0, +∞).
+Component height. Unit: vp. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,15 +38,13 @@ Value range: [0, +∞).
 width: number
 ```
 
-Component width.
-
-Unit: vp.
-
-Value range: [0, +∞).
+Component width. Unit: vp. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,15 +60,13 @@ Value range: [0, +∞).
 x: number
 ```
 
-Horizontal position.
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+Horizontal position. Unit: vp. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,15 +82,13 @@ Value range: (-∞, +∞).
 y: number
 ```
 
-Vertical position.
-
-Unit: vp.
-
-Value range: (-∞, +∞).
+Vertical position. Unit: vp. Value range: (-∞, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,7 +4,9 @@ The result for connect status a WebSocket connection.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-webSocket-export interface OpenResult--><!--Device-webSocket-export interface OpenResult-End-->
 
@@ -28,7 +30,9 @@ result message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OpenResult-message: string--><!--Device-OpenResult-message: string-End-->
 
@@ -46,7 +50,9 @@ result status.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-OpenResult-status: int--><!--Device-OpenResult-status: int-End-->
 

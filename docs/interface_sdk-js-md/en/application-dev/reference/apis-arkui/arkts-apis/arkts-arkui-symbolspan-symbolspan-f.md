@@ -3,6 +3,7 @@
 ## SymbolSpan
 
 ```TypeScript
+@ComponentBuilder
 export declare function SymbolSpan(
     value: Resource
 ): SymbolSpanAttribute
@@ -14,9 +15,11 @@ Defines SymbolSpan Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function SymbolSpan(    value: Resource): SymbolSpanAttribute--><!--Device-unnamed-export declare function SymbolSpan(    value: Resource): SymbolSpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function SymbolSpan(    value: Resource): SymbolSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function SymbolSpan(    value: Resource): SymbolSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines SymbolSpan Component.
 
 | Type | Description |
 | --- | --- |
-| [SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md) |  |
+| SymbolSpanAttribute |  |
 
 
 ## SymbolSpan
 
 ```TypeScript
+@Builder
 export declare function SymbolSpan(
     style: CustomBuilderT<SymbolSpanAttribute>,
 ): SymbolSpanAttribute
@@ -47,11 +51,11 @@ Defines SymbolSpan Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute--><!--Device-unnamed-export declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute--><!--Device-unnamed-@Builderexport declare function SymbolSpan(    style: CustomBuilderT<SymbolSpanAttribute>,): SymbolSpanAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines SymbolSpan Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md)&gt; | Yes | SymbolSpan attribute instance |
+| style | CustomBuilderT&lt;SymbolSpanAttribute&gt; | Yes | SymbolSpan attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SymbolSpanAttribute](arkts-arkui-symbolspan-symbolspanattribute-i.md) |  |
+| SymbolSpanAttribute |  |
 

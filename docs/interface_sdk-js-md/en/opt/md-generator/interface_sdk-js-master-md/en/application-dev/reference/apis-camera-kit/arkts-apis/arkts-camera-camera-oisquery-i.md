@@ -4,6 +4,8 @@ OIS (Optical Image Stabilization) query interface.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-camera-interface OISQuery--><!--Device-camera-interface OISQuery-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
@@ -23,6 +25,8 @@ getCurrentCustomOISBias(oisAxis: OISAxes): number
 Gets the current custom bias value for the specified OIS axis.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,8 +52,8 @@ Gets the current custom bias value for the specified OIS axis.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## getCurrentOISMode
 
@@ -60,6 +64,8 @@ getCurrentOISMode(): OISMode
 Gets the current OIS mode.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,8 +85,8 @@ Gets the current OIS mode.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## getSupportedOISBiasRange
 
@@ -91,6 +97,8 @@ getSupportedOISBiasRange(oisAxis: OISAxes): Array<number>
 Gets the supported bias range for the specified OIS axis.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,8 +124,8 @@ Gets the supported bias range for the specified OIS axis.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## getSupportedOISBiasStep
 
@@ -128,6 +136,8 @@ getSupportedOISBiasStep(oisAxis: OISAxes): number
 Gets the bias step for the specified OIS axis.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,8 +163,8 @@ Gets the bias step for the specified OIS axis.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## isOISModeSupported
 
@@ -165,6 +175,8 @@ isOISModeSupported(mode: OISMode): boolean
 Checks if the specified OIS mode is supported.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -190,5 +202,5 @@ Checks if the specified OIS mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

@@ -8,7 +8,9 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 表示创建X.509证书链对象。使用Promise方式返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -32,9 +34,9 @@ function createX509CertChain(inStream: EncodingBlob): Promise<X509CertChain>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -135,7 +137,9 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 表示创建X.509证书链对象。使用Callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -154,9 +158,9 @@ function createX509CertChain(inStream: EncodingBlob, callback: AsyncCallback<X50
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -252,7 +256,9 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 表示使用X509Cert数组方式创建X.509证书链对象，并同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -276,9 +282,9 @@ function createX509CertChain(certs: Array<X509Cert>): X509CertChain
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 

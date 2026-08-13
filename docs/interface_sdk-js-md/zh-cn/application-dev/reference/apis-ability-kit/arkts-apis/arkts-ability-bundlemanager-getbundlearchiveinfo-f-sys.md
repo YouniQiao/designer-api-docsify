@@ -8,9 +8,11 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: int, callback: A
 
 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -25,17 +27,17 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: int, callback: A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)，当获取成功时，err为 undefined，data为获取到的BundleInfo；否则为错误对象。 |
+| bundleFlags | int | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;BundleInfo&gt; | 是 | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)，当获取成功时，err为 undefined，data为获取到的BundleInfo；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700022](../errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 
@@ -70,9 +72,11 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<B
 
 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -87,7 +91,7 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<B
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
+| bundleFlags | int | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
 
 **返回值：**
 
@@ -99,10 +103,10 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: int): Promise<B
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [17700022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [17700022](../errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 
 ## 示例
 

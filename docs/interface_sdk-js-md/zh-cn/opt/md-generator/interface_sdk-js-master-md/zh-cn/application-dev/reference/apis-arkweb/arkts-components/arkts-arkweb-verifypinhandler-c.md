@@ -4,6 +4,8 @@ Handle the result of PIN verification.
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class VerifyPinHandler--><!--Device-unnamed-declare class VerifyPinHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ confirm(result: PinVerifyResult): void
 Passes the PIN verify result.
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void--><!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void-End-->
 
@@ -37,6 +41,8 @@ constructor()
 Constructor.
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-VerifyPinHandler-constructor()--><!--Device-VerifyPinHandler-constructor()-End-->
 

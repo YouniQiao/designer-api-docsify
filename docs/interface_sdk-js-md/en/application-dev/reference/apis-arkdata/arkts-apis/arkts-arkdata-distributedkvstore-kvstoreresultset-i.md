@@ -1,16 +1,12 @@
 # KVStoreResultSet
 
-Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a  time.The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.Before calling any API in **KVStoreResultSet**, you must use **  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))  
-** to construct a **SingleKVStore** or **DeviceKVStore** instance.
+Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a time. The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data. Before calling any API in **KVStoreResultSet**, you must use ** getKVStore ** to construct a **SingleKVStore** or **DeviceKVStore** instance. > **NOTE：**> > The cursor start position of **KVStoreResultSet** is **-1**.
 
-> **NOTE：**
-> 
-> The cursor start position of **KVStoreResultSet** is **-1**.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
@@ -24,21 +20,17 @@ import { distributedKVStore } from '@kit.ArkData';
 
 ## getCount
 
-ArkTS-Dyn:
-```TypeScript
-getCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCount(): int
 ```
 
 Obtains the total number of rows in the result set.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +42,7 @@ Obtains the total number of rows in the result set.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Total number of rows obtained. |
+| int | Total number of rows obtained. |
 
 ## Examples
 
@@ -81,9 +73,11 @@ getEntry(): Entry
 
 Obtains the KV pair from the current position.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,22 +113,17 @@ try {
 
 ## getPosition
 
-ArkTS-Dyn:
-```TypeScript
-getPosition(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getPosition(): int
 ```
 
-Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#moveToFirst) and  
-[moveToLast](#moveToLast).
+Obtains the current data read position (position from which data is read) in the result set. The read position changes with the operations, such as [moveToFirst](#moveToFirst) and [moveToLast](#moveToLast).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,7 +135,7 @@ Obtains the current data read position (position from which data is read) in the
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Current data read position obtained. The value must be greater than or equal to **-1**. The value **-1 ** means no data is read; the value **0** indicates the first row. |
+| int | Current data read position obtained. The value must be greater than or equal to **-1**. The value **-1 ** means no data is read; the value **0** indicates the first row. |
 
 ## Examples
 
@@ -177,9 +166,11 @@ isAfterLast(): boolean
 
 Checks whether the data read position is after the last row.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -221,9 +212,11 @@ isBeforeFirst(): boolean
 
 Checks whether the data read position is before the first row.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -265,9 +258,11 @@ isFirst(): boolean
 
 Checks whether the data read position is the first row.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,9 +305,11 @@ isLast(): boolean
 
 Checks whether the data read position is the last row.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -349,21 +346,17 @@ try {
 
 ## move
 
-ArkTS-Dyn:
-```TypeScript
-move(offset: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 move(offset: int): boolean
 ```
 
 Moves the data read position with the specified offset from the current position. That is, moves the number of rows specified by **offset** from the current position.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -375,7 +368,7 @@ Moves the data read position with the specified offset from the current position
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Offset to move the data read position. A positive value means to move forward; a negative value means to move backward. If the cursor is beyond the start or end position of the result set, **false** is returned. |
+| offset | int | Yes | Offset to move the data read position. A positive value means to move forward; a negative value means to move backward. If the cursor is beyond the start or end position of the result set, **false** is returned. |
 
 **Return value:**
 
@@ -387,7 +380,7 @@ Moves the data read position with the specified offset from the current position
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -419,9 +412,11 @@ moveToFirst(): boolean
 
 Moves the data read position to the first row. If the result set is empty, **false** will be returned.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -464,9 +459,11 @@ moveToLast(): boolean
 
 Moves the data read position to the last row. If the result set is empty, **false** will be returned.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -509,9 +506,11 @@ moveToNext(): boolean
 
 Moves the data read position to the next row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -550,21 +549,17 @@ try {
 
 ## moveToPosition
 
-ArkTS-Dyn:
-```TypeScript
-moveToPosition(position: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveToPosition(position: int): boolean
 ```
 
 Moves the data read position from 0 to an absolute position.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -576,7 +571,7 @@ Moves the data read position from 0 to an absolute position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Absolute position to move to. If the absolute position exceeds the start or end position of the result set, **false** is returned. |
+| position | int | Yes | Absolute position to move to. If the absolute position exceeds the start or end position of the result set, **false** is returned. |
 
 **Return value:**
 
@@ -588,7 +583,7 @@ Moves the data read position from 0 to an absolute position.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -620,9 +615,11 @@ moveToPrevious(): boolean
 
 Moves the data read position to the previous row. If the result set is empty, **false** will be returned. This API applies when the whole result set is obtained.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

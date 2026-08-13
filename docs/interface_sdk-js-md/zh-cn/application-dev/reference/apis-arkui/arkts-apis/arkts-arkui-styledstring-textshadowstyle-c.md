@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class TextShadowStyle--><!--Device-unnamed-export declare class TextShadowStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@
 constructor(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-文本阴影对象的构造函数。
-
-ShadowOptions对象中不支持fill字段。
+文本阴影对象的构造函数。 ShadowOptions对象中不支持fill字段。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +51,8 @@ readonly textShadow: Array<ShadowOptions>
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

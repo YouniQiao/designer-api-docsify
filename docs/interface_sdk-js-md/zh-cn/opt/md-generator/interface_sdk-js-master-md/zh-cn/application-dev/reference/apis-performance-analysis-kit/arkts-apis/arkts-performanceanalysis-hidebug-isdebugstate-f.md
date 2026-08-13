@@ -8,7 +8,9 @@ function isDebugState(): boolean
 
 获取应用进程的调试状态。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function isDebugState(): boolean--><!--Device-hidebug-function isDebugState(): boolean-End-->
 

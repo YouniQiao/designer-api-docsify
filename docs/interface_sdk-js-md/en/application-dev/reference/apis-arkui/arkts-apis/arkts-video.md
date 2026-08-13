@@ -7,7 +7,7 @@
 | Name | Description |
 | --- | --- |
 | [VideoController](arkts-arkui-video-videocontroller-c.md) | Defines the video controller. |
-| [VideoControllerAsync](arkts-arkui-video-videocontrollerasync-c.md) | Video playback controller class for asynchronous operations.Provides methods to control video playback, timing, and display mode. |
+| [VideoControllerAsync](arkts-arkui-video-videocontrollerasync-c.md) | Video playback controller class for asynchronous operations. Provides methods to control video playback, timing, and display mode. |
 
 ### Interfaces
 
@@ -19,14 +19,6 @@
 | [PreparedInfo](arkts-arkui-video-preparedinfo-i.md) | Prepared information of the video. |
 | [VideoAttribute](arkts-arkui-video-videoattribute-i.md) | Defines the Video attribute. |
 | [VideoOptions](arkts-arkui-video-videooptions-i.md) | Defines the video options. |
-
-<!--Del-->
-### Interfaces（系统接口）
-
-| Name | Description |
-| --- | --- |
-| [VideoAttribute](arkts-arkui-video-videoattribute-i-sys.md) | Defines the Video attribute. |
-<!--DelEnd-->
 
 ### Enums
 

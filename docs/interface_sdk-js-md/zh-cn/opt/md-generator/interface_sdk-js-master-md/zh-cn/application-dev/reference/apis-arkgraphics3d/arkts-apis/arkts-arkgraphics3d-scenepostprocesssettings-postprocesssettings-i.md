@@ -2,7 +2,9 @@
 
 定义后处理设置.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PostProcessSettings--><!--Device-unnamed-export interface PostProcessSettings-End-->
 
@@ -18,7 +20,9 @@ bloom?: BloomSettings
 
 **类型：** [BloomSettings](arkts-arkgraphics3d-scenepostprocesssettings-bloomsettings-i.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PostProcessSettings-bloom?: BloomSettings--><!--Device-PostProcessSettings-bloom?: BloomSettings-End-->
 
@@ -36,7 +40,9 @@ colorFringe?: ColorFringeSettings
 
 **默认值：** 色晕默认启用
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings--><!--Device-PostProcessSettings-colorFringe?: ColorFringeSettings-End-->
 
@@ -52,7 +58,9 @@ toneMapping?: ToneMappingSettings
 
 **类型：** [ToneMappingSettings](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingsettings-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings--><!--Device-PostProcessSettings-toneMapping?: ToneMappingSettings-End-->
 
@@ -70,7 +78,9 @@ vignette?: VignetteSettings
 
 **默认值：** 暗角默认启用
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PostProcessSettings-vignette?: VignetteSettings--><!--Device-PostProcessSettings-vignette?: VignetteSettings-End-->
 

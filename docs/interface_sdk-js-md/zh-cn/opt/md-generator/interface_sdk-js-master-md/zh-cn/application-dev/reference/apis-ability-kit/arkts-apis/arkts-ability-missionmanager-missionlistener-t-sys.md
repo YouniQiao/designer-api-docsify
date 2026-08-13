@@ -6,7 +6,9 @@ export type MissionListener = _MissionListener
 
 定义系统任务状态监听。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-missionManager-export type MissionListener = _MissionListener--><!--Device-missionManager-export type MissionListener = _MissionListener-End-->
 

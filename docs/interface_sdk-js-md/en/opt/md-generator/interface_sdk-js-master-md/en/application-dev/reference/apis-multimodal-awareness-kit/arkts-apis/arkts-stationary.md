@@ -1,12 +1,10 @@
 # @ohos.stationary
 
-The **stationary** module provides APIs to report the device status, including absolute still and relative still.
-
-> **NOTE：**
-> 
-> This module does not support x86 emulators.
+The **stationary** module provides APIs to report the device status, including absolute still and relative still. > **NOTE：**> > This module does not support x86 emulators.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace stationary--><!--Device-unnamed-declare namespace stationary-End-->
 
@@ -24,9 +22,9 @@ import { stationary } from '@kit.MultimodalAwarenessKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [off](arkts-multimodalawareness-stationary-off-f.md#off) |
-| [on](arkts-multimodalawareness-stationary-on-f.md#on) |
-| [once](arkts-multimodalawareness-stationary-once-f.md#once) |
+| [off_ActivityType](arkts-multimodalawareness-stationary-offactivitytype-f.md#off_ActivityType) |
+| [on_ActivityType](arkts-multimodalawareness-stationary-onactivitytype-f.md#on_ActivityType) |
+| [once_ActivityType](arkts-multimodalawareness-stationary-onceactivitytype-f.md#once_ActivityType) |
 
 ### Interfaces
 

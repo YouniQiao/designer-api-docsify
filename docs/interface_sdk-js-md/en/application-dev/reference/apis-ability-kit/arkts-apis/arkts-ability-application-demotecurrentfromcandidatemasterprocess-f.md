@@ -12,12 +12,13 @@ import { application } from '@kit.AbilityKit';
 export function demoteCurrentFromCandidateMasterProcess(): Promise<void>
 ```
 
-Removes the current process from the candidate master process list. This API uses a promise to return the result.This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned.  
-**System capability**: SystemCapability.Ability.AbilityRuntime.Core
+Removes the current process from the candidate master process list. This API uses a promise to return the result. This API can be properly called on PCs/2-in-1 devices and tablets. If it is called on other devices, error code 801 is returned. **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,9 +36,9 @@ Removes the current process from the candidate master process list. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000116-process-is-already-a-master-process) | The current process is already a master process and does not support cancellation. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [16000117](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
+| [16000116](../errorcode-ability.md#16000116-process-is-already-a-master-process) | The current process is already a master process and does not support cancellation. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [16000117](../errorcode-ability.md#16000117-process-is-not-a-candidate-master-process) | The current process is not a candidate master process and does not support cancellation. |
 
 ## Examples
 

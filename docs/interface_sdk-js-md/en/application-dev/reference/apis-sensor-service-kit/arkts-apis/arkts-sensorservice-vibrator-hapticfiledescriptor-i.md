@@ -1,13 +1,12 @@
 # HapticFileDescriptor
 
-Describes the FD of a custom vibration configuration file. Ensure that the file is available, and the parameters in it can be obtained from the sandbox path through the  
-[fileIo.open](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioopen) API or from the HAP resource through the  
-[getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd)API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see  
-[Vibration Effect Description](../../../device/sensor/vibrator-guidelines.md#vibration-effect-description).
+Describes the FD of a custom vibration configuration file. Ensure that the file is available, and the parameters in it can be obtained from the sandbox path through the fileIo.open API or from the HAP resource through the [getRawFd](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getRawFd) API. The application scenario is as follows: The vibration sequence is stored in a file and vibration needs to be triggered based on the offset and length. For details about the storage format of the vibration sequence, see [Vibration Effect Description](../../../device/sensor/vibrator-guidelines.md#vibration-effect-description).
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface HapticFileDescriptor--><!--Device-vibrator-interface HapticFileDescriptor-End-->
 
@@ -27,11 +26,13 @@ fd: int
 
 FD of the custom vibration configuration file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapticFileDescriptor-fd: int--><!--Device-HapticFileDescriptor-fd: int-End-->
 
@@ -45,11 +46,13 @@ length?: long
 
 Resource length, in bytes. The default value is the length from the offset position to the end of the file, and the value cannot exceed the valid range of the file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapticFileDescriptor-length?: long--><!--Device-HapticFileDescriptor-length?: long-End-->
 
@@ -63,11 +66,13 @@ offset?: long
 
 Offset from the start position of the file, in bytes. The default value is the start position of the file, and the value cannot exceed the valid range of the file.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapticFileDescriptor-offset?: long--><!--Device-HapticFileDescriptor-offset?: long-End-->
 

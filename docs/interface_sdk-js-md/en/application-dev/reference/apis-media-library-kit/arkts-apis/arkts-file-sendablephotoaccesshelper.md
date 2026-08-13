@@ -1,10 +1,12 @@
-# @ohos.file.sendablePhotoAccessHelper(Helper functions to access image and video assets)
+# @ohos.file.sendablePhotoAccessHelper
 
 The module provides APIs for album management, including creating an album and accessing and modifying media data in an album, based on a [Sendable](../../../arkts-utils/arkts-sendable.md) object.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace sendablePhotoAccessHelper--><!--Device-unnamed-declare namespace sendablePhotoAccessHelper-End-->
 
@@ -22,14 +24,14 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | Obtains a PhotoAccessHelper instance, which can be used for accessing and modifying media files in an album. |
+| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f.md#getPhotoAccessHelper) | Obtains a PhotoAccessHelper instance, which can be used for accessing and modifying media files in an album. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md#getphotoaccesshelper-1) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
+| [getPhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-getphotoaccesshelper-f-sys.md#getPhotoAccessHelper-(System-API)) | Obtains a PhotoAccessHelper instance for the specified user, letting you access and modify media files in an album. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -4,6 +4,8 @@ Sets the offset and style of the **SymbolSpan** component.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorSymbolSpanOptions--><!--Device-unnamed-declare interface RichEditorSymbolSpanOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Sets the offset and style of the **SymbolSpan** component.
 offset?: number
 ```
 
-Position of the symbol span to be added. If this parameter is omitted, the span is added to the end of all content.
-
-If the value is less than 0, the span is added to the beginning of all content. If the value is greater than the length of all content, the span is added to the end of all content.
+Position of the symbol span to be added. If this parameter is omitted, the span is added to the end of all content. If the value is less than 0, the span is added to the beginning of all content. If the value is greater than the length of all content, the span is added to the end of all content.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +43,8 @@ Style of the symbol span. If this parameter is left empty, the default style wil
 **Type:** [RichEditorSymbolSpanStyle](arkts-arkui-richeditorsymbolspanstyle-i.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

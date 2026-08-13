@@ -1,13 +1,10 @@
 # ArcScrollBarOptions
 
-Represents the parameters used to construct an **ArcScrollBar** component.
-
-> **NOTE：**
-> 
-> **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a
-> one-to-one binding is allowed between **ArcScrollBar** and a scrollable component.
+Represents the parameters used to construct an **ArcScrollBar** component. > **NOTE：**> > **ArcScrollBar** must be bound to a scrollable component through **scroller** to achieve synchronization. Only a > one-to-one binding is allowed between **ArcScrollBar** and a scrollable component.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface ArcScrollBarOptions--><!--Device-unnamed-declare interface ArcScrollBarOptions-End-->
 
@@ -31,6 +28,8 @@ Scroller, which can be bound to scrollable components for scrolling control.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcScrollBarOptions-scroller: Scroller--><!--Device-ArcScrollBarOptions-scroller: Scroller-End-->
@@ -48,6 +47,8 @@ State of the scrollbar.&lt;br/&gt;Default value: **BarState.Auto**
 **Type:** [BarState](arkts-arkui-barstate-e.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

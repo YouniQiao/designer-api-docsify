@@ -12,12 +12,13 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function unregisterTraceListener(index: number): number
 ```
 
-Unregisters the callback function used to notify whether the trace capture is enabled, which is registered using  
-**registerTraceListener()**.
+Unregisters the callback function used to notify whether the trace capture is enabled, which is registered using **registerTraceListener()**.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function unregisterTraceListener(index: int): int--><!--Device-hiTraceMeter-function unregisterTraceListener(index: int): int-End-->
 

@@ -12,15 +12,11 @@ import { usbManager } from '@kit.BasicServicesKit';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Releases the claimed communication interface.
+Releases the claimed communication interface. > **NOTE：**> > Before calling this API, call the > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > API to claim a communication interface.
 
-> **NOTE：**
-> 
-> Before calling this API, call the
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
-> API to claim a communication interface.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-usbManager-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int--><!--Device-usbManager-function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): int-End-->
 
@@ -43,8 +39,8 @@ Releases the claimed communication interface.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

@@ -1,13 +1,12 @@
 # Matrix2D
 
-用于画布绘制[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、  
-[OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、  
-[CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和  
-[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
+用于画布绘制[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、 [OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、 [CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和 [Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象， 可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class Matrix2D--><!--Device-unnamed-export declare class Matrix2D-End-->
 
@@ -25,6 +24,8 @@ constructor(unit?: LengthMetricsUnit)
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Matrix2D-constructor(unit?: LengthMetricsUnit)--><!--Device-Matrix2D-constructor(unit?: LengthMetricsUnit)-End-->
@@ -35,7 +36,7 @@ constructor(unit?: LengthMetricsUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| unit | [LengthMetricsUnit](arkts-arkui-graphics-lengthmetricsunit-e.md) | 否 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改。&lt;br&gt; 异常值NaN和Infinity按默认值处理。&lt;br&gt; 默认值：DEFAULT。 |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetricsunit-e.md) | 否 | 用来配置Matrix2D对象的单位模式，配置后无法动态更改。&lt;br&gt; 异常值NaN和Infinity按默认值处理。&lt;br&gt; 默认值：DEFAULT。 |
 
 ## identity
 
@@ -48,6 +49,8 @@ identity(): Matrix2D
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,6 +76,8 @@ invert(): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Matrix2D-invert(): Matrix2D--><!--Device-Matrix2D-invert(): Matrix2D-End-->
@@ -96,6 +101,8 @@ rotate(degree: double, rx?: double, ry?: double): Matrix2D
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,6 +136,8 @@ scale(sx?: double, sy?: double): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Matrix2D-scale(sx?: double, sy?: double): Matrix2D--><!--Device-Matrix2D-scale(sx?: double, sy?: double): Matrix2D-End-->
@@ -160,6 +169,8 @@ translate(tx?: double, ty?: double): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Matrix2D-translate(tx?: double, ty?: double): Matrix2D--><!--Device-Matrix2D-translate(tx?: double, ty?: double): Matrix2D-End-->
@@ -178,124 +189,4 @@ translate(tx?: double, ty?: double): Matrix2D
 | 类型 | 说明 |
 | --- | --- |
 | [Matrix2D](arkts-arkui-matrix2d-matrix2d-c.md) | 平移后结果矩阵对象。 |
-
-## rotateX
-
-```TypeScript
-set rotateX(rotateX: double | undefined)
-```
-
-水平倾斜系数，取值范围无限制。
-
-**类型：** double
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Matrix2D-set rotateX(rotateX: double | undefined)--><!--Device-Matrix2D-set rotateX(rotateX: double | undefined)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## rotateY
-
-```TypeScript
-set rotateY(rotateY: double | undefined)
-```
-
-垂直倾斜系数，取值范围无限制。
-
-**类型：** double
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Matrix2D-set rotateY(rotateY: double | undefined)--><!--Device-Matrix2D-set rotateY(rotateY: double | undefined)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## scaleX
-
-```TypeScript
-set scaleX(scaleX: double | undefined)
-```
-
-水平缩放系数，取值范围无限制。
-
-**类型：** double
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Matrix2D-set scaleX(scaleX: double | undefined)--><!--Device-Matrix2D-set scaleX(scaleX: double | undefined)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## scaleY
-
-```TypeScript
-set scaleY(scaleY: double | undefined)
-```
-
-垂直缩放系数，取值范围无限制。
-
-**类型：** double
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Matrix2D-set scaleY(scaleY: double | undefined)--><!--Device-Matrix2D-set scaleY(scaleY: double | undefined)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## translateX
-
-```TypeScript
-set translateX(translateX: double | undefined)
-```
-
-水平平移距离，取值范围无限制。
-
-**类型：** double
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Matrix2D-set translateX(translateX: double | undefined)--><!--Device-Matrix2D-set translateX(translateX: double | undefined)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## translateY
-
-```TypeScript
-set translateY(translateY: double | undefined)
-```
-
-垂直平移距离，取值范围无限制。
-
-**类型：** double
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Matrix2D-set translateY(translateY: double | undefined)--><!--Device-Matrix2D-set translateY(translateY: double | undefined)-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

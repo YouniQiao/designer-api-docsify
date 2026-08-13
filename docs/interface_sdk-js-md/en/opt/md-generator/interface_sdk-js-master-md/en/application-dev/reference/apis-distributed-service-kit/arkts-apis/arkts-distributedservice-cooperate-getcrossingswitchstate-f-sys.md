@@ -12,13 +12,13 @@ import { cooperate } from '@kit.DistributedServiceKit';
 function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void
 ```
 
-Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the  result.
+Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](getCooperateSwitchState(networkId:)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState-(System-API))(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -37,8 +37,8 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -72,7 +72,7 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](getCooperateSwitchState(networkId:)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getCooperateSwitchState-(System-API))(networkId: string)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
 
@@ -96,8 +96,8 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

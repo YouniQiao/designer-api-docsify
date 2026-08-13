@@ -2,9 +2,11 @@
 
 Defines the quick fix information at the HAP file level.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-quickFixManager-export interface HapModuleQuickFixInfo--><!--Device-quickFixManager-export interface HapModuleQuickFixInfo-End-->
 
@@ -28,9 +30,11 @@ Name of the HAP file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleQuickFixInfo-readonly moduleName: string--><!--Device-HapModuleQuickFixInfo-readonly moduleName: string-End-->
 
@@ -48,9 +52,11 @@ Hash value of the HAP file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleQuickFixInfo-readonly originHapHash: string--><!--Device-HapModuleQuickFixInfo-readonly originHapHash: string-End-->
 
@@ -68,9 +74,11 @@ Installation path of the quick fix patch file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleQuickFixInfo-readonly quickFixFilePath: string--><!--Device-HapModuleQuickFixInfo-readonly quickFixFilePath: string-End-->
 

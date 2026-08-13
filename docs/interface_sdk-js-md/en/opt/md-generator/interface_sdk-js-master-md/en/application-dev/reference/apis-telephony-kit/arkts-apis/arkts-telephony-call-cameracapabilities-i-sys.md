@@ -2,7 +2,9 @@
 
 Defines the local image resolution in a video call.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface CameraCapabilities--><!--Device-call-export interface CameraCapabilities-End-->
 
@@ -26,7 +28,9 @@ Call ID.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-callId: int--><!--Device-CameraCapabilities-callId: int-End-->
 
@@ -44,7 +48,9 @@ Height of the local image, in pixels.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-height: int--><!--Device-CameraCapabilities-height: int-End-->
 
@@ -62,7 +68,9 @@ Width of the local image, in pixels.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraCapabilities-width: int--><!--Device-CameraCapabilities-width: int-End-->
 

@@ -8,9 +8,11 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 
 获取所有长时任务信息，如长时任务ID、长时任务类型等，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -22,7 +24,7 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。 &lt;br&gt;FA模型的应用Context定义见[Context](./app/context)。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。 &lt;br&gt;FA模型的应用Context定义见Context。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 
 **返回值：**
 
@@ -34,10 +36,10 @@ function getAllContinuousTasks(context: Context): Promise<ContinuousTaskInfo[]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
-| [9800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
+| [9800002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -96,9 +98,11 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 
 获取所有长时任务信息，如长时任务ID、长时任务类型等。可选择是否获取暂停的长时任务信息，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -110,7 +114,7 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。 &lt;br&gt;FA模型的应用Context定义见[Context](./app/context)。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文。 &lt;br&gt;FA模型的应用Context定义见Context。&lt;br&gt;Stage模型的应用Context定义见 [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility申请。 |
 | includeSuspended | boolean | 是 | 是否获取暂停的长时任务信息， true表示获取， false表示不获取。 |
 
 **返回值：**
@@ -123,10 +127,10 @@ function getAllContinuousTasks(context: Context, includeSuspended: boolean): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
-| [9800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
+| [9800002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800002-parcel读写操作失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; 2. Failed to apply for memory. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

@@ -6,6 +6,8 @@ Represents a board style object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface BoardStyle--><!--Device-unnamed-interface BoardStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@ Represents a board style object.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the board. It cannot be set in percentage.
-
-Default value: **8.0**
-
-Unit: vp
-
-Value range: [0, +∞)
+Rounded corner radius of the board. It cannot be set in percentage. Default value: **8.0** Unit: vp Value range: [0, +∞)
 
 **Type:** Length
 
@@ -31,6 +27,8 @@ Value range: [0, +∞)
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

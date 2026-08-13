@@ -2,7 +2,9 @@
 
 Provides the geographical location definitions for media resources.
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface Location--><!--Device-unnamed-interface Location-End-->
 
@@ -18,7 +20,9 @@ Latitude.
 
 **类型：** number
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Location-latitude: double--><!--Device-Location-latitude: double-End-->
 
@@ -34,7 +38,9 @@ Longitude.
 
 **类型：** number
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Location-longitude: double--><!--Device-Location-longitude: double-End-->
 

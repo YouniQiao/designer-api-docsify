@@ -1,21 +1,22 @@
 # AppProvisionInfo (System API)
 
 ```TypeScript
-export type AppProvisionInfo = _AppProvisionInfo.AppProvisionInfo
+export type AppProvisionInfo = _AppProvisionInfo
 ```
 
-Defines the information in the  
-[HarmonyAppProvision configuration file](../../../security/app-provision-structure.md).
+Defines the information in the [HarmonyAppProvision configuration file](../../../security/app-provision-structure.md).
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-bundleManager-export type AppProvisionInfo = _AppProvisionInfo.AppProvisionInfo--><!--Device-bundleManager-export type AppProvisionInfo = _AppProvisionInfo.AppProvisionInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-bundleManager-export type AppProvisionInfo = _AppProvisionInfo--><!--Device-bundleManager-export type AppProvisionInfo = _AppProvisionInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
 **System API:** This is a system API.
 
-**Property type:** _AppProvisionInfo.AppProvisionInfo
+**Property type:** _AppProvisionInfo
 

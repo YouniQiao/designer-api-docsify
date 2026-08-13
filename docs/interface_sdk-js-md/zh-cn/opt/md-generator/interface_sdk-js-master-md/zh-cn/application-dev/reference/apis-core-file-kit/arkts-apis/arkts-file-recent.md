@@ -1,10 +1,18 @@
 # @ohos.file.recent
 
-该模块提供最近访问列表插入、移除、查询等常用能力。
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **说明：**
-> 
-> - 当前只支持文件管理器调用。
 
 **起始版本：** 10
 
@@ -25,9 +33,9 @@
 
 | 名称 |
 | --- |
-| [add](arkts-corefile-recent-add-f-sys.md#add) |
-| [listFile](arkts-corefile-recent-listfile-f-sys.md#listfile) |
-| [remove](arkts-corefile-recent-remove-f-sys.md#remove) |
+| [add](arkts-corefile-recent-add-f-sys.md#add（系统接口）) |
+| [listFile](arkts-corefile-recent-listfile-f-sys.md#listFile（系统接口）) |
+| [remove](arkts-corefile-recent-remove-f-sys.md#remove（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

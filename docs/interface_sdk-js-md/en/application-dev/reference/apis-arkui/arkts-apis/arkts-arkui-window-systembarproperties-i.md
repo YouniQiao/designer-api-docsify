@@ -2,9 +2,11 @@
 
 Describes the properties of the status bar&lt;!--Del--&gt; and three-button navigation bar&lt;!--DelEnd--&gt;.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface SystemBarProperties--><!--Device-window-interface SystemBarProperties-End-->
 
@@ -22,17 +24,17 @@ import { window } from '@kit.ArkUI';
 enableNavigationBarAnimation?: boolean
 ```
 
-Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false**otherwise. The default value is **false**.
-
-&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
+Whether to enable animation for a three-button navigation bar property change. **true** to enable, **false** otherwise. The default value is **false**. &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemBarProperties-enableNavigationBarAnimation?: boolean--><!--Device-SystemBarProperties-enableNavigationBarAnimation?: boolean-End-->
 
@@ -48,11 +50,13 @@ Whether to enable animation for a status bar property change. **true** to enable
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemBarProperties-enableStatusBarAnimation?: boolean--><!--Device-SystemBarProperties-enableStatusBarAnimation?: boolean-End-->
 
@@ -64,15 +68,15 @@ Whether to enable animation for a status bar property change. **true** to enable
 isNavigationBarLightIcon?: boolean
 ```
 
-Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise.The default value is **false**.
-
-&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
+Whether any icon on the three-button navigation bar is highlighted. **true** if highlighted, **false** otherwise. The default value is **false**. &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,9 +94,11 @@ Whether any icon on the status bar is highlighted. **true** if highlighted, **fa
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -106,15 +112,15 @@ Whether any icon on the status bar is highlighted. **true** if highlighted, **fa
 navigationBarColor?: string
 ```
 
-Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
-
-&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
+Background color of the three-button navigation bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**. &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -128,16 +134,15 @@ Background color of the three-button navigation bar. The value is a hexadecimal 
 navigationBarContentColor?: string
 ```
 
-Color of the text on the three-button navigation bar. After this property is set, the setting of  
-**isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**.
-
-&lt;!--RP13--&gt;&lt;!--RP13End--&gt;
+Color of the text on the three-button navigation bar. After this property is set, the setting of **isNavigationBarLightIcon** is invalid. The default value is **'#E5FFFFFF'**. &lt;!--RP13--&gt;&lt;!--RP13End--&gt;
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -151,13 +156,15 @@ Color of the text on the three-button navigation bar. After this property is set
 statusBarColor?: string
 ```
 
-Background color of the status bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive,for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
+Background color of the status bar. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **'#00FF00'** or **'#FF00FF00'**. The default value is **'#66000000'**.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -175,9 +182,11 @@ Color of the text on the status bar. After this property is set, the setting of 
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

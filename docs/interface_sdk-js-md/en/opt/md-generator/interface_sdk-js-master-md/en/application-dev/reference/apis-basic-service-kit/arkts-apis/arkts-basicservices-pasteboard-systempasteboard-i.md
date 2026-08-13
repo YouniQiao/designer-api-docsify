@@ -1,9 +1,10 @@
 # SystemPasteboard
 
-Provides **SystemPasteboard** APIs.Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using  
-[getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getSystemPasteboard).
+Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API, you must obtain a **SystemPasteboard** object using [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getSystemPasteboard).
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-interface SystemPasteboard--><!--Device-pasteboard-interface SystemPasteboard-End-->
 
@@ -27,7 +28,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearData](pasteboard.SystemPasteboard.clearData(callback:)
+**Substitutes:** [clearData](#clearData)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -43,7 +44,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -103,7 +104,9 @@ clearData(callback: AsyncCallback<void>): void
 
 Clears the system pasteboard. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -121,7 +124,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -146,7 +149,9 @@ clearData(): Promise<void>
 
 Clears the system pasteboard. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -181,9 +186,11 @@ clearDataSync(): void
 
 Clears the system pasteboard. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-clearDataSync(): void--><!--Device-SystemPasteboard-clearDataSync(): void-End-->
 
@@ -193,7 +200,7 @@ Clears the system pasteboard. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -215,7 +222,9 @@ detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>
 
 Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md#Pattern) in the system pasteboard. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>--><!--Device-SystemPasteboard-detectPatterns(patterns: Array<Pattern>): Promise<Array<Pattern>>-End-->
 
@@ -237,7 +246,7 @@ Detects [patterns](arkts-basicservices-pasteboard-pattern-e.md#Pattern) in the s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -268,12 +277,13 @@ systemPasteboard.detectPatterns(patterns).then((data: Array<pasteboard.Pattern>)
 getChangeCount(): number
 ```
 
-Obtains the number of pasteboard content changes.Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise.Even though the PasteData expires, or the data becomes empty because of the called  
-[clearDataSync](#clearDataSync) API, the number of data changes remains.When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
+Obtains the number of pasteboard content changes. Returns the number of pasteboard content changes if this API is called successfully; returns **0** otherwise. Even though the PasteData expires, or the data becomes empty because of the called [clearDataSync](#clearDataSync) API, the number of data changes remains. When the system is restarted, or the pasteboard service is restarted due to an exception, the number of PasteData changes counts from 0. In addition, copying the same data repeatedly is considered to change the data for multiple times. Therefore, each time the data is copied, the number of data changes increases.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getChangeCount(): long--><!--Device-SystemPasteboard-getChangeCount(): long-End-->
 
@@ -307,7 +317,9 @@ getData(callback: AsyncCallback<PasteData>): void
 
 Obtains a **PasteData** object from the pasteboard. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.READ_PASTEBOARD
@@ -328,9 +340,9 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -358,7 +370,9 @@ getData(): Promise<PasteData>
 
 Obtains a **PasteData** object from the pasteboard. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.READ_PASTEBOARD
@@ -379,8 +393,8 @@ Obtains a **PasteData** object from the pasteboard. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -406,9 +420,11 @@ getDataSource(): string
 
 Obtains the name of the application that provides data.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getDataSource(): string--><!--Device-SystemPasteboard-getDataSource(): string-End-->
 
@@ -424,7 +440,7 @@ Obtains the name of the application that provides data.
 
 | Error Code ID |
 | --- |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -446,12 +462,14 @@ getDataSync(): PasteData
 
 Obtains a **PasteData** object from the pasteboard. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getDataSync(): PasteData--><!--Device-SystemPasteboard-getDataSync(): PasteData-End-->
 
@@ -467,8 +485,8 @@ Obtains a **PasteData** object from the pasteboard. This API returns the result 
 
 | Error Code ID |
 | --- |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -488,13 +506,15 @@ try {
 getDataWithProgress(params: GetDataParams): Promise<PasteData>
 ```
 
-Obtains the PasteData from the system pasteboard with system progress.This API uses a promise to return the result. Folders cannot be copied.
+Obtains the PasteData from the system pasteboard with system progress. This API uses a promise to return the result. Folders cannot be copied.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>--><!--Device-SystemPasteboard-getDataWithProgress(params: GetDataParams): Promise<PasteData>-End-->
 
@@ -516,13 +536,13 @@ Obtains the PasteData from the system pasteboard with system progress.This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900007-file-copying-failure) |
-| [12900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12900008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900008-progress-startup-failure) |
-| [12900009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900009-progress-reporting-exception) |
-| [12900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900010-data-obtaining-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900007](../../apis-basic-services-kit/errorcode-pasteboard.md#12900007-file-copying-failure) |
+| [12900003](../../apis-basic-services-kit/errorcode-pasteboard.md#12900003-another-copy-or-paste-operation-in-progress) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12900008](../../apis-basic-services-kit/errorcode-pasteboard.md#12900008-progress-startup-failure) |
+| [12900009](../../apis-basic-services-kit/errorcode-pasteboard.md#12900009-progress-reporting-exception) |
+| [12900010](../../apis-basic-services-kit/errorcode-pasteboard.md#12900010-data-obtaining-failure) |
 
 ## Examples
 
@@ -574,9 +594,11 @@ getMimeTypes(): Promise<Array<string>>
 
 Obtains the types of PasteData in the system pasteboard. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>--><!--Device-SystemPasteboard-getMimeTypes(): Promise<Array<string>>-End-->
 
@@ -613,7 +635,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [getData](pasteboard.SystemPasteboard.getData(callback:)
+**Substitutes:** [getData](#getData)(callback: AsyncCallback&lt;PasteData&gt;)
 
 <!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
@@ -629,7 +651,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -697,11 +719,13 @@ getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 
 Obtains a **PasteData** object from the system pasteboard. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>--><!--Device-SystemPasteboard-getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>-End-->
 
@@ -717,8 +741,8 @@ Obtains a **PasteData** object from the system pasteboard. This API uses a promi
 
 | Error Code ID |
 | --- |
-| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -748,11 +772,13 @@ getUnifiedDataSync(): unifiedDataChannel.UnifiedData
 
 Obtains a **UnifiedData** object from the system pasteboard. This API returns the result synchronously.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_PASTEBOARD
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData--><!--Device-SystemPasteboard-getUnifiedDataSync(): unifiedDataChannel.UnifiedData-End-->
 
@@ -768,8 +794,8 @@ Obtains a **UnifiedData** object from the system pasteboard. This API returns th
 
 | Error Code ID |
 | --- |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -793,7 +819,9 @@ hasData(callback: AsyncCallback<boolean>): void
 
 Checks whether the system pasteboard contains data. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -811,7 +839,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -836,7 +864,9 @@ hasData(): Promise<boolean>
 
 Checks whether the system pasteboard contains data. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -871,9 +901,11 @@ hasDataSync(): boolean
 
 Checks whether the system pasteboard contains data. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-hasDataSync(): boolean--><!--Device-SystemPasteboard-hasDataSync(): boolean-End-->
 
@@ -889,7 +921,7 @@ Checks whether the system pasteboard contains data. This API returns the result 
 
 | Error Code ID |
 | --- |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -911,9 +943,11 @@ hasDataType(mimeType: string): boolean
 
 Checks whether the pasteboard contains data of the specified type.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean--><!--Device-SystemPasteboard-hasDataType(mimeType: string): boolean-End-->
 
@@ -935,8 +969,8 @@ Checks whether the pasteboard contains data of the specified type.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -962,7 +996,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [hasData](pasteboard.SystemPasteboard.hasData(callback:)
+**Substitutes:** [hasData](#hasData)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
@@ -978,7 +1012,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1042,6 +1076,8 @@ Checks whether the PasteData is on a remote device. Transferring data across dev
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-SystemPasteboard-hasRemoteData(): boolean--><!--Device-SystemPasteboard-hasRemoteData(): boolean-End-->
@@ -1071,9 +1107,11 @@ isRemoteData(): boolean
 
 Checks whether the data in the pasteboard is from another device.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-isRemoteData(): boolean--><!--Device-SystemPasteboard-isRemoteData(): boolean-End-->
 
@@ -1089,7 +1127,7 @@ Checks whether the data in the pasteboard is from another device.
 
 | Error Code ID |
 | --- |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -1103,46 +1141,6 @@ try {
 };
 ```
 
-## off('update')
-
-```TypeScript
-off(type: 'update', callback?: () => void): void
-```
-
-Unsubscribes the content change event of the system pasteboard.
-
-**Since:** 7
-
-<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Pasteboard
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'update' | Yes |
-| callback | () = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-// Obtain the SystemPasteboard object.
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-// Define a callback to be invoked when the pasteboard content changes.
-let listener = () => {
-    console.info('The system pasteboard has changed.');
-};
-// Subscribe to the pasteboard content change event.
-systemPasteboard.off('update', listener);
-```
-
 ## offRemoteUpdate
 
 ```TypeScript
@@ -1151,7 +1149,9 @@ offRemoteUpdate(callback?: UpdateCallback): void
 
 Remove a callback invoked when remote pasteboard content changes.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offRemoteUpdate(callback?: UpdateCallback): void-End-->
 
@@ -1173,17 +1173,41 @@ let listener = () => {
 systemPasteboard.offRemoteUpdate(listener);
 ```
 
-## on('update')
+## offUpdate
 
 ```TypeScript
-on(type: 'update', callback: () => void): void
+offUpdate(callback?: UpdateCallback): void
 ```
 
-Subscribes the content change event of the system pasteboard.
+Remove a callback invoked when pasteboard content changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-SystemPasteboard-offUpdate(callback?: UpdateCallback): void--><!--Device-SystemPasteboard-offUpdate(callback?: UpdateCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Pasteboard
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No |
+
+## off_update
+
+```TypeScript
+off(type: 'update', callback?: () => void): void
+```
+
+Unsubscribes the content change event of the system pasteboard.
 
 **Since:** 7
 
-<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void--><!--Device-SystemPasteboard-off(type: 'update', callback?: () => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1192,13 +1216,13 @@ Subscribes the content change event of the system pasteboard.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'update' | Yes |
-| callback | () = & gt; void | Yes |
+| callback | () = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1210,7 +1234,7 @@ let listener = () => {
     console.info('The system pasteboard has changed.');
 };
 // Subscribe to the pasteboard content change event.
-systemPasteboard.on('update', listener);
+systemPasteboard.off('update', listener);
 ```
 
 ## onRemoteUpdate
@@ -1221,7 +1245,9 @@ onRemoteUpdate(callback: UpdateCallback): void
 
 Add a callback invoked when remote pasteboard content changes.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onRemoteUpdate(callback: UpdateCallback): void-End-->
 
@@ -1243,56 +1269,19 @@ let listener = () => {
 systemPasteboard.onRemoteUpdate(listener);
 ```
 
-## removeAppShareOptions
+## onUpdate
 
 ```TypeScript
-removeAppShareOptions(): void
+onUpdate(callback: UpdateCallback): void
 ```
 
-Deletes the global pasteable range of the application.
+Add a callback invoked when pasteboard content changes.
 
-**Since:** 14
+**Since:** 23
 
-**Required permissions:** 
-- API version 14+: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
+**Deprecated since:** -1
 
-<!--Device-SystemPasteboard-removeAppShareOptions(): void--><!--Device-SystemPasteboard-removeAppShareOptions(): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Pasteboard
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-try {
-  systemPasteboard.removeAppShareOptions();
-  console.info('Remove app share options success.');
-} catch (error) {
-  console.error(`Remove app share options failed, errorCode: ${error.code}, errorMessage: ${error.message}.`);
-}
-```
-
-## setAppShareOptions
-
-```TypeScript
-setAppShareOptions(shareOptions: ShareOption): void
-```
-
-Sets pasteable range of PasteData for application.
-
-**Since:** 14
-
-**Required permissions:** 
-- API version 14+: ohos.permission.MANAGE_PASTEBOARD_APP_SHARE_OPTION
-
-<!--Device-SystemPasteboard-setAppShareOptions(shareOptions: ShareOption): void--><!--Device-SystemPasteboard-setAppShareOptions(shareOptions: ShareOption): void-End-->
+<!--Device-SystemPasteboard-onUpdate(callback: UpdateCallback): void--><!--Device-SystemPasteboard-onUpdate(callback: UpdateCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -1300,27 +1289,48 @@ Sets pasteable range of PasteData for application.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [shareOptions](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddataproperties-c.md) | [ShareOption](arkts-basicservices-pasteboard-shareoption-e.md) | Yes |
+| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | Yes |
+
+## on_update
+
+```TypeScript
+on(type: 'update', callback: () => void): void
+```
+
+Subscribes the content change event of the system pasteboard.
+
+**Since:** 7
+
+**Deprecated since:** -1
+
+<!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void--><!--Device-SystemPasteboard-on(type: 'update', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Pasteboard
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'update' | Yes |
+| callback | () = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900006-settings-already-exists) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
 ```TypeScript
+// Obtain the SystemPasteboard object.
 const systemPasteboard: pasteboard.SystemPasteboard = pasteboard.getSystemPasteboard();
-try {
-  systemPasteboard.setAppShareOptions(pasteboard.ShareOption.INAPP);
-  console.info('Set app share options success.');
-} catch (error) {
-  console.error(`Set app share options failed, errorCode: ${error.code}, errorMessage: ${error.message}.`);
-}
+// Define a callback to be invoked when the pasteboard content changes.
+let listener = () => {
+    console.info('The system pasteboard has changed.');
+};
+// Subscribe to the pasteboard content change event.
+systemPasteboard.on('update', listener);
 ```
 
 ## setData
@@ -1331,7 +1341,9 @@ setData(data: PasteData, callback: AsyncCallback<void>): void
 
 Writes a **PasteData** object to the pasteboard. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1350,9 +1362,9 @@ Writes a **PasteData** object to the pasteboard. This API uses an asynchronous c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [27787278](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
 
 ## Examples
 
@@ -1379,7 +1391,9 @@ setData(data: PasteData): Promise<void>
 
 Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1403,9 +1417,9 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [27787278](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
 
 ## Examples
 
@@ -1432,9 +1446,11 @@ setDataSync(data: PasteData): void
 
 Writes data to the system system pasteboard. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-setDataSync(data: PasteData): void--><!--Device-SystemPasteboard-setDataSync(data: PasteData): void-End-->
 
@@ -1450,8 +1466,8 @@ Writes data to the system system pasteboard. This API returns the result synchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 
@@ -1478,7 +1494,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [setData](pasteboard.SystemPasteboard.setData(data:)
+**Substitutes:** [setData](#setData)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
@@ -1495,7 +1511,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1523,7 +1539,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setData](pasteboard.SystemPasteboard.setData(data:)
+**Substitutes:** [setData](#setData)(data: PasteData)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 
@@ -1563,9 +1579,11 @@ setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>
 
 Writes a **PasteData** object to the system pasteboard. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>--><!--Device-SystemPasteboard-setUnifiedData(data: unifiedDataChannel.UnifiedData): Promise<void>-End-->
 
@@ -1587,9 +1605,9 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [27787277](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
-| [27787278](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [27787277](../../apis-basic-services-kit/errorcode-pasteboard.md#27787277-another-copy-or-paste-operation-in-progress) |
+| [27787278](../../apis-basic-services-kit/errorcode-pasteboard.md#27787278-copy-prohibited) |
 
 ## Examples
 
@@ -1626,9 +1644,11 @@ setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void
 
 Writes data to the system pasteboard. This API returns the result synchronously.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void--><!--Device-SystemPasteboard-setUnifiedDataSync(data: unifiedDataChannel.UnifiedData): void-End-->
 
@@ -1644,8 +1664,8 @@ Writes data to the system pasteboard. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12900005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12900005](../../apis-basic-services-kit/errorcode-pasteboard.md#12900005-request-timeout) |
 
 ## Examples
 

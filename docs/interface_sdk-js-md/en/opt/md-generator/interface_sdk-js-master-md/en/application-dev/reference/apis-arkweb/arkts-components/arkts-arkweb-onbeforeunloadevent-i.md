@@ -4,6 +4,8 @@ Defines the triggered function when the web page wants to confirm navigation fro
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnBeforeUnloadEvent--><!--Device-unnamed-declare interface OnBeforeUnloadEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -14,11 +16,13 @@ Defines the triggered function when the web page wants to confirm navigation fro
 isReload?: boolean
 ```
 
-The isReload parameter is set to true when the page is refreshed;otherwise, it remains false. Default is false.
+The isReload parameter is set to true when the page is refreshed; otherwise, it remains false. Default is false.
 
 **Type:** boolean
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-OnBeforeUnloadEvent-isReload?: boolean--><!--Device-OnBeforeUnloadEvent-isReload?: boolean-End-->
 
@@ -35,6 +39,8 @@ The message of confirm dialog.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,6 +60,8 @@ Handle the user's JavaScript result.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnBeforeUnloadEvent-result: JsResult--><!--Device-OnBeforeUnloadEvent-result: JsResult-End-->
@@ -71,6 +79,8 @@ The url of the page.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

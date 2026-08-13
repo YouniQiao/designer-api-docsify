@@ -1,16 +1,10 @@
 # LocalizedSnapshotRegion
 
-Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL).
-
-> **NOTE：**
-> 
-> Directly using **componentSnapshot** can lead to the issue of
-> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a
-> **UIContext** instance using **getUIContext()**, and then obtain the associated **componentSnapshot** object
-> using
-> [getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getcomponentsnapshot12).
+Defines the rectangular region for capturing the component snapshot, with coordinates adjusted based on the layout direction (LTR or RTL). > **NOTE：**> > Directly using **componentSnapshot** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain a > **UIContext** instance using **getUIContext()**, and then obtain the associated **componentSnapshot** object > using > [getComponentSnapshot](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getComponentSnapshot).
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-componentSnapshot-interface LocalizedSnapshotRegion--><!--Device-componentSnapshot-interface LocalizedSnapshotRegion-End-->
 
@@ -28,15 +22,13 @@ import { componentSnapshot } from '@kit.ArkUI';
 bottom: number
 ```
 
-Y-coordinate of the lower right corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component height].
+Y-coordinate of the lower right corner of the rectangular region. Unit: px. Value range: [0, Component height].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,17 +44,13 @@ Value range: [0, Component height].
 end: number
 ```
 
-For LTR layouts: X-coordinate of the lower right corner of the rectangular region.
-
-For RTL layouts: X-coordinate of the lower left corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component width].
+For LTR layouts: X-coordinate of the lower right corner of the rectangular region. For RTL layouts: X-coordinate of the lower left corner of the rectangular region. Unit: px. Value range: [0, Component width].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,17 +66,13 @@ Value range: [0, Component width].
 start: number
 ```
 
-For LTR layouts: X-coordinate of the upper left corner of the rectangular region.
-
-For RTL layouts: X-coordinate of the upper right corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component width].
+For LTR layouts: X-coordinate of the upper left corner of the rectangular region. For RTL layouts: X-coordinate of the upper right corner of the rectangular region. Unit: px. Value range: [0, Component width].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,17 +88,13 @@ Value range: [0, Component width].
 top: number
 ```
 
-For LTR layouts: Y-coordinate of the upper left corner of the rectangular region.
-
-For RTL layouts: Y-coordinate of the upper right corner of the rectangular region.
-
-Unit: px.
-
-Value range: [0, Component height].
+For LTR layouts: Y-coordinate of the upper left corner of the rectangular region. For RTL layouts: Y-coordinate of the upper right corner of the rectangular region. Unit: px. Value range: [0, Component height].
 
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

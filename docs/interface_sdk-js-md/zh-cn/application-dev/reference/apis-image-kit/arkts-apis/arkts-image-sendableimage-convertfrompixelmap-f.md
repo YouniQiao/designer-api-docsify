@@ -12,6 +12,8 @@ Creates a sendable image PixelMap from image PixelMap.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-sendableImage-function convertFromPixelMap(pixelmap: image.PixelMap): PixelMap--><!--Device-sendableImage-function convertFromPixelMap(pixelmap: image.PixelMap): PixelMap-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -32,8 +34,8 @@ Creates a sendable image PixelMap from image PixelMap.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [62980104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | If the image parameter invalid. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [62980104](../errorcode-image.md#62980104-图片初始化错误) | Failed to initialize the internal object. |
 
 ## 示例
 

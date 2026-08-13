@@ -12,7 +12,7 @@ function unregisterApplicationStateObserver(observerId: number, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**替代接口：** [off](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -60,7 +60,7 @@ function unregisterApplicationStateObserver(observerId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**替代接口：** [off](arkts-ability-appmanager-offapplicationstate-f.md#off_applicationState)
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 

@@ -6,7 +6,9 @@ type UTCTime = Date
 
 用于表示UTC时间的数据类型。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-type UTCTime = Date--><!--Device-relationalStore-type UTCTime = Date-End-->
 

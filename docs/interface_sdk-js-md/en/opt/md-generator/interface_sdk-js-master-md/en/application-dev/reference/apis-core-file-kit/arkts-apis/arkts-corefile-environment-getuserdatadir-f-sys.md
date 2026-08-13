@@ -14,7 +14,9 @@ function getUserDataDir(): Promise<string>
 
 Obtains the root directory of user files. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-function getUserDataDir(): Promise<string>--><!--Device-Environment-function getUserDataDir(): Promise<string>-End-->
 
@@ -33,7 +35,7 @@ Obtains the root directory of user files. This API uses a promise to return the 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900042 |
 
 
@@ -45,7 +47,9 @@ function getUserDataDir(callback: AsyncCallback<string>): void
 
 Obtains the root directory of user files. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Environment-function getUserDataDir(callback: AsyncCallback<string>): void--><!--Device-Environment-function getUserDataDir(callback: AsyncCallback<string>): void-End-->
 
@@ -64,5 +68,5 @@ Obtains the root directory of user files. This API uses an asynchronous callback
 | Error Code ID |
 | --- |
 | 13900020 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900042 |

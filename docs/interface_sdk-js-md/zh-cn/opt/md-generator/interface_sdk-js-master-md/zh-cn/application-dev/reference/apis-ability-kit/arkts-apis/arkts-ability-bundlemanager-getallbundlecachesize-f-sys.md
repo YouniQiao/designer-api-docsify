@@ -6,11 +6,11 @@
 function getAllBundleCacheSize(): Promise<number>
 ```
 
-获取全局缓存大小，单位：字节。使用Promise异步回调。
+获取全局缓存大小，单位：字节。使用Promise异步回调。 有程序运行时的应用的缓存、或者在[应用配置指南](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md)中已配置“ AllowAppDataNotCleared”特权的应用的缓存，无法被获取。
 
-有程序运行时的应用的缓存、或者在[应用配置指南](../../../../device-dev/subsystems/subsys-app-privilege-config-guide.md)中已配置“AllowAppDataNotCleared”特权的应用的缓存，无法被获取。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -30,8 +30,8 @@ function getAllBundleCacheSize(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 编辑框属性值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
 
@@ -18,7 +20,9 @@ readonly abilityName?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly abilityName?: string--><!--Device-EditorAttribute-readonly abilityName?: string-End-->
 
@@ -34,7 +38,9 @@ readonly bundleName?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly bundleName?: string--><!--Device-EditorAttribute-readonly bundleName?: string-End-->
 
@@ -50,7 +56,9 @@ readonly capitalizeMode?: CapitalizeMode
 
 **类型：** CapitalizeMode
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly capitalizeMode?: CapitalizeMode--><!--Device-EditorAttribute-readonly capitalizeMode?: CapitalizeMode-End-->
 
@@ -62,14 +70,13 @@ readonly capitalizeMode?: CapitalizeMode
 readonly consumeKeyEvents?: boolean
 ```
 
-编辑框是否具有完整处理字母、字符、功能等按键的能力。
-
-- 值为true，表示具备此能力。  
-- 值为false，表示不具备此能力。
+编辑框是否具有完整处理字母、字符、功能等按键的能力。 - 值为true，表示具备此能力。 - 值为false，表示不具备此能力。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -87,7 +94,9 @@ readonly displayId?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly displayId?: long--><!--Device-EditorAttribute-readonly displayId?: long-End-->
 
@@ -103,7 +112,9 @@ readonly enterKeyType: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly enterKeyType: int--><!--Device-EditorAttribute-readonly enterKeyType: int-End-->
 
@@ -119,7 +130,9 @@ readonly extraConfig?: InputMethodExtraConfig
 
 **类型：** [InputMethodExtraConfig](arkts-ime-inputmethod-extraconfig-inputmethodextraconfig-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly extraConfig?: InputMethodExtraConfig--><!--Device-EditorAttribute-readonly extraConfig?: InputMethodExtraConfig-End-->
 
@@ -135,7 +148,9 @@ readonly gradientMode?: GradientMode
 
 **类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly gradientMode?: GradientMode--><!--Device-EditorAttribute-readonly gradientMode?: GradientMode-End-->
 
@@ -151,7 +166,9 @@ readonly immersiveMode?: ImmersiveMode
 
 **类型：** ImmersiveMode
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly immersiveMode?: ImmersiveMode--><!--Device-EditorAttribute-readonly immersiveMode?: ImmersiveMode-End-->
 
@@ -167,7 +184,9 @@ readonly inputPattern: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly inputPattern: int--><!--Device-EditorAttribute-readonly inputPattern: int-End-->
 
@@ -179,14 +198,13 @@ readonly inputPattern: number
 isTextPreviewSupported: boolean
 ```
 
-编辑框是否支持预上屏。
-
-- 值为true，表示支持。  
-- 值为false，表示不支持。
+编辑框是否支持预上屏。 - 值为true，表示支持。 - 值为false，表示不支持。
 
 **类型：** boolean
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-isTextPreviewSupported: boolean--><!--Device-EditorAttribute-isTextPreviewSupported: boolean-End-->
 
@@ -202,7 +220,9 @@ readonly placeholder?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly placeholder?: string--><!--Device-EditorAttribute-readonly placeholder?: string-End-->
 
@@ -218,7 +238,9 @@ readonly windowId?: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EditorAttribute-readonly windowId?: int--><!--Device-EditorAttribute-readonly windowId?: int-End-->
 

@@ -2,9 +2,11 @@
 
 Defines the application information provided to create assets on behalf of the application.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoCreationSource--><!--Device-photoAccessHelper-interface PhotoCreationSource-End-->
 
@@ -28,9 +30,11 @@ ID of the target application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreationSource-appId?: string--><!--Device-PhotoCreationSource-appId?: string-End-->
 
@@ -48,9 +52,11 @@ Name of the target application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreationSource-appName?: string--><!--Device-PhotoCreationSource-appName?: string-End-->
 
@@ -68,9 +74,11 @@ Bundle name of the target application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreationSource-bundleName?: string--><!--Device-PhotoCreationSource-bundleName?: string-End-->
 
@@ -86,11 +94,13 @@ tokenId?: long
 
 Token ID of the target application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoCreationSource-tokenId?: long--><!--Device-PhotoCreationSource-tokenId?: long-End-->
 

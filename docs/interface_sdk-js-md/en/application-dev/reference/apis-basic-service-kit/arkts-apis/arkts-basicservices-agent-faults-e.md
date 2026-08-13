@@ -1,16 +1,12 @@
 # Faults
 
-Defines the cause of a task failure.
+Defines the cause of a task failure. > **NOTE：**> > In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain > name is supported, and the connection time for a single IP address is not controllable. If the first IP address > returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error.
 
-> **NOTE：**
-> 
-> In API version 12 or earlier, only serial connection to the IP addresses associated with the specified domain
-> name is supported, and the connection time for a single IP address is not controllable. If the first IP address
-> returned by the DNS is blocked, a handshake timeout may occur, leading to a **TIMEOUT** error.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-agent-enum Faults--><!--Device-agent-enum Faults-End-->
 
@@ -24,9 +20,11 @@ OTHERS = 0xFF
 
 Other fault.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,9 +40,11 @@ DISCONNECTED = 0x00
 
 Network disconnection.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,9 +60,11 @@ TIMEOUT = 0x10
 
 Timeout.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -78,9 +80,11 @@ PROTOCOL = 0x20
 
 Protocol error, for example, an internal server error (500) or a data range that cannot be processed (416).
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -96,11 +100,13 @@ PARAM = 0x30
 
 Parameter error, for example, incorrect URL format.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-PARAM = 0x30--><!--Device-Faults-PARAM = 0x30-End-->
 
@@ -114,9 +120,11 @@ FSIO = 0x40
 
 File system I/O error, for example, an error that occurs during the open, search, read, write, or close operation.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -132,11 +140,13 @@ DNS = 0x50
 
 DNS resolution error.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-DNS = 0x50--><!--Device-Faults-DNS = 0x50-End-->
 
@@ -150,11 +160,13 @@ TCP = 0x60
 
 TCP connection error.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-TCP = 0x60--><!--Device-Faults-TCP = 0x60-End-->
 
@@ -168,11 +180,13 @@ SSL = 0x70
 
 SSL connection error, for example, a certificate error or certificate verification failure.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-SSL = 0x70--><!--Device-Faults-SSL = 0x70-End-->
 
@@ -186,11 +200,13 @@ REDIRECT = 0x80
 
 Redirection error.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Faults-REDIRECT = 0x80--><!--Device-Faults-REDIRECT = 0x80-End-->
 
@@ -204,9 +220,11 @@ LOW_SPEED = 0x90
 
 Low speed.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Faults-LOW_SPEED = 0x90--><!--Device-Faults-LOW_SPEED = 0x90-End-->
 

@@ -6,6 +6,8 @@ Describes visible area change configuration options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface VisibleAreaEventOptions--><!--Device-unnamed-declare interface VisibleAreaEventOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Describes visible area change configuration options.
 expectedUpdateInterval?: number
 ```
 
-Expected calculation interval, in ms. If the value is less than 100 or set to **NaN**, the default value **100** is used. If the value is greater than 2^31-1, the default value **2^31-1** is used.
-
-Default value: **1000**.
+Expected calculation interval, in ms. If the value is less than 100 or set to **NaN**, the default value **100** is used. If the value is greater than 2^31-1, the default value **2^31-1** is used. Default value: **1000**.
 
 **Type:** number
 
@@ -27,6 +27,8 @@ Default value: **1000**.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,15 +44,7 @@ Default value: **1000**.
 measureFromViewport?: boolean
 ```
 
-Visible area calculation mode.
-
-**true**: considers the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute. If  
-[clip](arkts-arkui-commonmethod-c.md#clip) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](arkts-arkui-commonmethod-c.md#clip) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute,treating areas beyond the parent's bounds as invisible.
-
-Default value: **false**.
-
-When **measureFromViewport** is set to **true**, and an ancestor node has the  
-[scale](arkts-arkui-commonmethod-c.md#scale) attribute set, the component's visible ratio will be correctly calculated.
+Visible area calculation mode. **true**: considers the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute. If [clip](arkts-arkui-commonmethod-c.md#clip) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](arkts-arkui-commonmethod-c.md#clip) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](arkts-arkui-commonmethod-c.md#clip) attribute, treating areas beyond the parent's bounds as invisible. Default value: **false**. When **measureFromViewport** is set to **true**, and an ancestor node has the [scale](arkts-arkui-commonmethod-c.md#scale) attribute set, the component's visible ratio will be correctly calculated.
 
 **Type:** boolean
 
@@ -59,6 +53,8 @@ When **measureFromViewport** is set to **true**, and an ancestor node has the
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,13 +70,15 @@ When **measureFromViewport** is set to **true**, and an ancestor node has the
 ratios: Array<number>
 ```
 
-Threshold array. Each threshold represents a ratio of the component's visible area (that is, the area of the component that is visible on screen; only the area within the parent component is counted) to the component's total area. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.
+Threshold array. Each threshold represents a ratio of the component's visible area (that is, the area of the component that is visible on screen; only the area within the parent component is counted) to the component's total area. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0 .0; if it is greater than 1.0, it is clamped to 1.0.
 
 **Type:** Array&lt;number&gt;
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,11 +6,13 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-avMusicTemplate-interface MediaElement extends MediaEntity--><!--Device-avMusicTemplate-interface MediaElement extends MediaEntity-End-->
+<!--Device-avMusicTemplate-interface MediaElement--><!--Device-avMusicTemplate-interface MediaElement-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 

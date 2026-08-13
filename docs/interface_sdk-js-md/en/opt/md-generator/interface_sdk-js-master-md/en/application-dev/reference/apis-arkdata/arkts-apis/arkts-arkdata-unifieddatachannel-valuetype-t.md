@@ -1,18 +1,18 @@
 # ValueType
 
 ```TypeScript
-type ValueType = number | number | number | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined
+type ValueType = number | number | number | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined
 ```
 
-Enumerates the data field types allowed in a unified data record.
+Indicates type of value.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | object | null | undefined-End-->
+<!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined--><!--Device-unifiedDataChannel-type ValueType = int | long | double | string | boolean | image.PixelMap | Want | ArrayBuffer | RecordData | null | undefined-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -26,6 +26,6 @@ Enumerates the data field types allowed in a unified data record.
 | image.PixelMap |
 | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) |
 | ArrayBuffer |
-| object |
+| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) |
 | null |
 | undefined |

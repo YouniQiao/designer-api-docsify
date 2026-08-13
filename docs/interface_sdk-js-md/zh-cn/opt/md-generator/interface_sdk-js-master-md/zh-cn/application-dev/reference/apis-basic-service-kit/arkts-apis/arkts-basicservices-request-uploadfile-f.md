@@ -6,14 +6,11 @@
 function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncCallback<UploadTask>): void
 ```
 
-创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过  
-[on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))可获取任务上传时的成功信息或错误信息。
+创建并启动一个上传任务，使用callback异步回调，支持HTTP协议。通过 [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) 可获取任务上传时的成功信息或错误信息。 > **说明：** > > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-> **说明：**
-> 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -33,9 +30,9 @@ function uploadFile(context: BaseContext, config: UploadConfig, callback: AsyncC
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [13400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
 
 ## 示例
 
@@ -73,14 +70,11 @@ try {
 function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadTask>
 ```
 
-创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过  
-[on('complete'|'fail')](request.UploadTask.on(type: 'complete' | 'fail', callback: Callback&lt;Array<TaskState>&gt;&lt;TaskState&gt;>))可获取任务上传时的成功信息或错误信息。
+创建并启动一个上传任务，使用Promise异步回调，支持HTTP协议。通过 [on('complete'|'fail')](arkts-basicservices-request-uploadtask-i.md#on_progress) 可获取任务上传时的成功信息或错误信息。 > **说明：** > > 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
-> **说明：**
-> 
-> 示例中context的获取方式请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -105,9 +99,9 @@ function uploadFile(context: BaseContext, config: UploadConfig): Promise<UploadT
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [13400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-文件路径异常) |
 
 ## 示例
 

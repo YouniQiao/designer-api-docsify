@@ -4,6 +4,8 @@ Parameters required to perform garbage collection (GC).
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-backup-interface FileSystemRequestConfig--><!--Device-backup-interface FileSystemRequestConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.StorageService.Backup
@@ -28,6 +30,8 @@ Specifies the trigger type for garbage collection (0-default Device GC).
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileSystemRequestConfig-triggerType: int--><!--Device-FileSystemRequestConfig-triggerType: int-End-->
@@ -48,6 +52,8 @@ Sets the maximum wait time (in seconds) for GC operation.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FileSystemRequestConfig-waitTime: int--><!--Device-FileSystemRequestConfig-waitTime: int-End-->
@@ -67,6 +73,8 @@ Defines the target size (in MBytes) for garbage collection.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ The validation context of [ValidationCallback](arkts-network-http-validationcall
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-http-export interface ValidationContext--><!--Device-http-export interface ValidationContext-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -26,6 +28,8 @@ The host of this request.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ValidationContext-host: string--><!--Device-ValidationContext-host: string-End-->
@@ -43,6 +47,8 @@ The real IP which this request connect to.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ The raw data which in PEM format of certificate.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ValidationContext-pemCerts: string[]--><!--Device-ValidationContext-pemCerts: string[]-End-->
@@ -79,6 +87,8 @@ X509 certificate chain.
 **Type:** X509Cert[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

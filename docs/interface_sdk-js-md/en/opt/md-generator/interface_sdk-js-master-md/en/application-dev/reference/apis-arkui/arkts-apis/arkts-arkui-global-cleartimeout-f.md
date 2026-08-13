@@ -10,6 +10,8 @@ Cancels the timer set by " setTimeout()".
 
 **Since:** 5
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-export declare function clearTimeout(timeoutID?: number): void--><!--Device-unnamed-export declare function clearTimeout(timeoutID?: number): void-End-->

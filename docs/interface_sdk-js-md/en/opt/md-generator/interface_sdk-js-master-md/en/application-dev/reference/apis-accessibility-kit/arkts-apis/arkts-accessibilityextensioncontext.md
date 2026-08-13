@@ -1,10 +1,4 @@
-# AccessibilityExtensionContext(Provides accessibility extension context)
-
-The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for
- **AccessibilityExtensionAbility**.
- You can use the APIs of this module to configure the concerned information, obtain root information, and inject
- gestures.
-
+# AccessibilityExtensionContext
 
 ## Summary
 

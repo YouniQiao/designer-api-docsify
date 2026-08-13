@@ -2,7 +2,9 @@
 
 Helper functions to access photos and albums.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAccessHelper--><!--Device-photoAccessHelper-interface PhotoAccessHelper-End-->
 
@@ -23,6 +25,8 @@ acquireDebugDatabase(betaIssueId: string, betaScenario: string): Promise<Map<str
 Start medialibrary database backup and wait for returning with backup information which only works on beta device.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAccessHelper-acquireDebugDatabase(betaIssueId: string, betaScenario: string): Promise<Map<string, string>>--><!--Device-PhotoAccessHelper-acquireDebugDatabase(betaIssueId: string, betaScenario: string): Promise<Map<string, string>>-End-->
 
@@ -47,10 +51,10 @@ Start medialibrary database backup and wait for returning with backup informatio
 
 | Error Code ID |
 | --- |
-| [23800201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800201-unsupported-operation-type) |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## batchGetPhotoAssetParams
 
@@ -58,10 +62,11 @@ Start medialibrary database backup and wait for returning with backup informatio
 batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetParams
 ```
 
-Obtains the values of specified properties for an array of   
-[PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset) objects in batches.
+Obtains the values of specified properties for an array of [PhotoAsset](arkts-medialibrary-photoaccesshelper-photoasset-i.md#PhotoAsset) objects in batches.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAccessHelper-batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetParams--><!--Device-PhotoAccessHelper-batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetParams-End-->
 
@@ -86,9 +91,9 @@ Obtains the values of specified properties for an array of
 
 | Error Code ID |
 | --- |
-| [23800104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800104-input-parameter-verification-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800104](../errorcode-medialibrary.md#23800104-input-parameter-verification-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -158,6 +163,8 @@ Whether deep storage space optimization can be performed.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -178,9 +185,9 @@ Whether deep storage space optimization can be performed.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -206,6 +213,8 @@ cancelAnalysisTool(config: ToolCancelConfig): Promise<void>
 Cancels the execution of an intelligent analysis tool.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_IMAGEVIDEO_ANALYSIS
 
@@ -233,10 +242,10 @@ Cancels the execution of an intelligent analysis tool.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## cancelPhotoUriPermission
 
@@ -246,7 +255,9 @@ cancelPhotoUriPermission(tokenId: number, uri: string, photoPermissionType: Phot
 
 Cancels the permission for accessing a URI from an application. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -275,8 +286,8 @@ Cancels the permission for accessing a URI from an application. This API uses a 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -310,6 +321,8 @@ clone assets of filemanager to Album.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -338,10 +351,10 @@ clone assets of filemanager to Album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -371,6 +384,8 @@ clone assets to Album.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -399,10 +414,10 @@ clone assets to Album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -443,6 +458,8 @@ clone assets of medialibrary sandbox to directory of filemanager.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -471,10 +488,10 @@ clone assets of medialibrary sandbox to directory of filemanager.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -512,6 +529,8 @@ Convert Asset Attributes to Compatibility Attributes
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoAccessHelper-convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAsset>>--><!--Device-PhotoAccessHelper-convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAsset>>-End-->
@@ -536,8 +555,8 @@ Convert Asset Attributes to Compatibility Attributes
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## convertToAsset
 
@@ -548,6 +567,8 @@ convertToAsset(path: string): Promise<PhotoAsset>
 Convert to PhotoAsset from path of filemanagerr.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -575,10 +596,10 @@ Convert to PhotoAsset from path of filemanagerr.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -602,16 +623,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAlbum(name: string, callback: AsyncCallback<Album>): void
 ```
 
-Creates an album. This API uses an asynchronous callback to return the result.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters.  
-- It must not contain any invalid characters, which are:
-
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-- Duplicate album names are not allowed.
+Creates an album. This API uses an asynchronous callback to return the result. The album name must meet the following requirements: - The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ] - Duplicate album names are not allowed.
 
 **Since:** 10
 
@@ -639,9 +651,9 @@ The album name must meet the following requirements:
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900015 |
 | 14000011 |
 
@@ -669,16 +681,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAlbum(name: string): Promise<Album>
 ```
 
-Creates an album. This API uses a promise to return the result.
-
-The album name must meet the following requirements:
-
-- The total length of the album name must be between 1 and 255 characters.  
-- It must not contain any invalid characters, which are:
-
-. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-- Duplicate album names are not allowed.
+Creates an album. This API uses a promise to return the result. The album name must meet the following requirements: - The total length of the album name must be between 1 and 255 characters. - It must not contain any invalid characters, which are: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ] - Duplicate album names are not allowed.
 
 **Since:** 10
 
@@ -711,9 +714,9 @@ The album name must meet the following requirements:
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13900015 |
 | 14000011 |
 
@@ -741,19 +744,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result.
+Creates an image or video asset with the specified file name. This API uses an asynchronous callback to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
-The file name must meet the following requirements:
+**Since:** 23
 
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | 
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -775,10 +770,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -806,19 +801,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string): Promise<PhotoAsset>
 ```
 
-Creates an image or video asset with the specified file name. This API uses a promise to return the result.
+Creates an image or video asset with the specified file name. This API uses a promise to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
-The file name must meet the following requirements:
+**Since:** 23
 
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | 
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -845,10 +832,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -875,19 +862,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string, options: PhotoCreateOptions): Promise<PhotoAsset>
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses a promise to return the result.
+Creates an image or video asset with the specified file name and options. This API uses a promise to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
-The file name must meet the following requirements:
+**Since:** 23
 
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | 
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -915,10 +894,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -948,19 +927,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 createAsset(displayName: string, options: PhotoCreateOptions, callback: AsyncCallback<PhotoAsset>): void
 ```
 
-Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result.
+Creates an image or video asset with the specified file name and options. This API uses an asynchronous callback to return the result. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
-The file name must meet the following requirements:
+**Since:** 23
 
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | 
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -983,10 +954,10 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1019,7 +990,9 @@ createAssetsForApp(bundleName: string, appName: string, tokenId: number, photoCr
 
 Creates media assets for an application with the specified token ID. The returned URIs have been granted with the permission for writing the media assets (images or videos).
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1049,8 +1022,8 @@ Creates media assets for an application with the specified token ID. The returne
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1090,7 +1063,9 @@ createAssetsForAppWithAlbum(source: PhotoCreationSource, albumUri: string, isAut
 
 Creates assets for the current application or other applications in the specified source or user album. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1119,9 +1094,9 @@ Creates assets for the current application or other applications in the specifie
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1172,7 +1147,9 @@ createAssetsForAppWithMode(
 
 Creates assets with a temporary permission. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1203,9 +1180,9 @@ Creates assets with a temporary permission. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1248,9 +1225,11 @@ createAssetsWithAlbum(
       albumUri?: string): Promise<string[]>
 ```
 
-Batch create assets,which also support to choose whether specifying an album and whether generating thumbnails in real time.
+Batch create assets, which also support to choose whether specifying an album and whether generating thumbnails in real time.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -1280,10 +1259,10 @@ Batch create assets,which also support to choose whether specifying an album and
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1351,9 +1330,9 @@ Deletes user albums. This API uses an asynchronous callback to return the result
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1424,9 +1403,9 @@ Deletes user albums. This API uses a promise to return the result.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1491,10 +1470,10 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000002 |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1570,10 +1549,10 @@ Deletes media assets. The deleted assets are moved to the trash. This API uses a
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000002 |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1613,7 +1592,9 @@ getAlbumIdByBundleName(bundleName: string): Promise<number>
 
 Get the corresponding albumId of a bundleName.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1641,10 +1622,10 @@ Get the corresponding albumId of a bundleName.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1674,7 +1655,9 @@ getAlbumsByIds(albumIds: Array<number>): Promise<Map<number, Album>>
 
 Obtains album information by album IDs. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1700,9 +1683,9 @@ Obtains album information by album IDs. This API uses a promise to return the re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1736,6 +1719,8 @@ Obtains the asset compatibility capability based on the bundle name. When an app
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoAccessHelper-getAssetCompatibleCapability(bundleName: string): Promise<AssetCompatibleCapability>--><!--Device-PhotoAccessHelper-getAssetCompatibleCapability(bundleName: string): Promise<AssetCompatibleCapability>-End-->
@@ -1760,9 +1745,9 @@ Obtains the asset compatibility capability based on the bundle name. When an app
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1785,9 +1770,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatibleFlag?: number): Promise<Array<string>>
 ```
 
-Obtain the URI list to be transcoded based on bundleName, photoAsset list, and compatibleFlag.compatibleFlags description. Bit 0 indicates a large image, and bit 1 indicates a Heif image.
+Obtain the URI list to be transcoded based on bundleName, photoAsset list, and compatibleFlag. compatibleFlags description. Bit 0 indicates a large image, and bit 1 indicates a Heif image.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1815,9 +1802,9 @@ Obtain the URI list to be transcoded based on bundleName, photoAsset list, and c
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1852,11 +1839,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-Obtains the current URIs of cloned albums. This API uses a promise to return the result.
+Obtains the current URIs of cloned albums. This API uses a promise to return the result. To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
 
-To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
+**Since:** 26.0.0
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1882,10 +1869,10 @@ To control the size of the database table space, the system automatically delete
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1915,11 +1902,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>
 ```
 
-Obtains the current URIs of cloned assets. This API uses a promise to return the result.
+Obtains the current URIs of cloned assets. This API uses a promise to return the result. To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
 
-To control the size of the database table space, the system automatically deletes the previously stored clone data during each clone operation. As a result, this API only keeps the mapping between the user's new and old device URIs from the latest clone operation.
+**Since:** 26.0.0
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -1945,10 +1932,10 @@ To control the size of the database table space, the system automatically delete
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1980,7 +1967,9 @@ getDataAnalysisProgress(analysisType?: AnalysisType): Promise<string>
 
 Obtains the asset analysis progress. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2006,9 +1995,9 @@ Obtains the asset analysis progress. This API uses a promise to return the resul
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2035,11 +2024,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getDeepOptimizeSpace(): Promise<number>
 ```
 
-Obtains the size of the deep storage space.&lt;br&gt;Unit:Byte{s}.
-
-This API is time-consuming. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()](#canPerformDeepOptimizeSpace) and call this API only when true is returned.
+Obtains the size of the deep storage space. &lt;br&gt;Unit:Byte{s}. This API is time-consuming. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canPerformDeepOptimizeSpace) and call this API only when true is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2061,9 +2050,9 @@ This API is time-consuming. Before using this API, you are advised to call [canP
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2091,7 +2080,9 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: 
 
 Obtains hidden albums based on the specified display mode and retrieval options. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
@@ -2113,9 +2104,9 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2164,7 +2155,9 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResu
 
 Obtains hidden albums based on the specified display mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
@@ -2185,9 +2178,9 @@ Obtains hidden albums based on the specified display mode. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2260,7 +2253,9 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<
 
 Obtains hidden albums based on the specified display mode and retrieval options. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
@@ -2287,9 +2282,9 @@ Obtains hidden albums based on the specified display mode and retrieval options.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2356,7 +2351,9 @@ getIndexConstructProgress(): Promise<string>
 
 Obtains the index construction progress. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2376,8 +2373,8 @@ Obtains the index construction progress. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2415,7 +2412,9 @@ getPhotoAlbumOrder(orderStyle: number, options?: FetchOptions): Promise<FetchRes
 
 Obtains the sorting order for system, user, and source albums. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2442,10 +2441,10 @@ Obtains the sorting order for system, user, and source albums. This API uses a p
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -2483,11 +2482,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getPhotoAlbums(options?: FetchOptions): Promise<FetchResult<Album>>
 ```
 
-Obtains system, user, and source albums based on the specified options. This API uses a promise to return the result.
+Obtains system, user, and source albums based on the specified options. This API uses a promise to return the result. Before the operation, ensure that the albums to obtain exist.
 
-Before the operation, ensure that the albums to obtain exist.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2513,9 +2512,9 @@ Before the operation, ensure that the albums to obtain exist.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -2556,6 +2555,8 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>--><!--Device-PhotoAccessHelper-getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>-End-->
@@ -2580,9 +2581,9 @@ Converts the **ValuesBucket** record to a **PhotoAsset** object.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -2619,7 +2620,9 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callbac
 
 Obtains the index of an image or video in an album. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2643,9 +2646,9 @@ Obtains the index of an image or video in an album. This API uses an asynchronou
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2698,7 +2701,9 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promis
 
 Obtains the index of an image or video in an album. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2727,9 +2732,9 @@ Obtains the index of an image or video in an album. This API uses a promise to r
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2778,9 +2783,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 getPreferredCompatibleMode(bundleName: string): Promise<PreferredCompatibleMode>
 ```
 
-Obtains the preferred compatible mode configured by the application based on bundleName.There are three types of applications. For details, see PreferredCompatibleMode.
+Obtains the preferred compatible mode configured by the application based on bundleName. There are three types of applications. For details, see PreferredCompatibleMode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2806,9 +2813,9 @@ Obtains the preferred compatible mode configured by the application based on bun
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -2843,7 +2850,9 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 
 Obtains the shared photo assets.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -2869,9 +2878,9 @@ Obtains the shared photo assets.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2911,7 +2920,9 @@ grantPhotoUriPermission(
 
 Grants an application the permission to access a URI. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -2941,8 +2952,8 @@ Grants an application the permission to access a URI. This API uses a promise to
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -2980,7 +2991,9 @@ grantPhotoUrisPermission(
 
 Grants an application the permission to access multiple URIs. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -3010,8 +3023,8 @@ Grants an application the permission to access multiple URIs. This API uses a pr
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -3049,6 +3062,8 @@ Triggers the execution of an analysis tool. This API uses an asynchronous callba
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CONTROL_IMAGEVIDEO_ANALYSIS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3076,10 +3091,10 @@ Triggers the execution of an analysis tool. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## isCompatibleDuplicateSupported
 
@@ -3089,7 +3104,9 @@ isCompatibleDuplicateSupported(bundleName: string): Promise<boolean>
 
 Checks whether a temporary JPEG copy should be created for an application. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -3115,9 +3132,9 @@ Checks whether a temporary JPEG copy should be created for an application. This 
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -3145,6 +3162,8 @@ Checks whether the specified media data is ready.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3171,10 +3190,10 @@ Checks whether the specified media data is ready.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3209,6 +3228,8 @@ modify the default cover order of album.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3237,10 +3258,10 @@ modify the default cover order of album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3281,6 +3302,8 @@ modify the default cover order of hidden album.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3309,10 +3332,10 @@ modify the default cover order of hidden album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3350,6 +3373,8 @@ move assets of filemanager to Album.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3378,10 +3403,10 @@ move assets of filemanager to Album.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3411,6 +3436,8 @@ move assets of medialibrary sandbox to directory of filemanager.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3439,10 +3466,10 @@ move assets of medialibrary sandbox to directory of filemanager.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3470,284 +3497,17 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-## off('hiddenPhotoChange')
-
-```TypeScript
-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
-```
-
-Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring hidden media asset changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hiddenPhotoChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('offHiddenPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenPhotoChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('hiddenPhotoChange', onCallback1);
-  } catch (error) {
-    console.error('offHiddenPhotoChange failed, errCode is', error);
-  }
-}
-```
-
-## off('trashedPhotoChange')
-
-```TypeScript
-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
-```
-
-Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring media asset changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'trashedPhotoChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('offTrashedPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedPhotoChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('trashedPhotoChange', onCallback1);
-  } catch (error) {
-    console.error('offTrashedPhotoChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## off('hiddenAlbumChange')
-
-```TypeScript
-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
-```
-
-Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring hidden album changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
-
-<!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'hiddenAlbumChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenAlbumChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('hiddenAlbumChange', onCallback1);
-  } catch (error) {
-    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
-## off('trashedAlbumChange')
-
-```TypeScript
-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
-```
-
-Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring album changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
-
-**Since:** 20
-
-**Required permissions:** ohos.permission.READ_IMAGEVIDEO
-
-<!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'trashedAlbumChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
-
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
-
-```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedAlbumChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedAlbumChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedAlbumChange', onCallback2);
-
-    // Unregister the listening of onCallback1.
-    phAccessHelper.off('trashedAlbumChange', onCallback1);
-  } catch (error) {
-    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
-  }
-}
-```
-
 ## offAnalysisAlbumChange
 
 ```TypeScript
 offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 ```
 
-Cancels the listener for the smart analysis album. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying   
-**callback**. This API uses an asynchronous callback to return the result.
+Cancels the listener for the smart analysis album. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -3769,10 +3529,10 @@ Cancels the listener for the smart analysis album. If multiple listeners are reg
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3817,6 +3577,8 @@ Cancels the listening for the media asset changes related to the smart analysis 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3837,10 +3599,10 @@ Cancels the listening for the media asset changes related to the smart analysis 
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -3875,19 +3637,21 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
-## on('hiddenPhotoChange')
+## offHiddenPhotoChange
 
 ```TypeScript
-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
+offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 ```
 
-Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden media asset changes. This API uses a callback to return the result, and it accepts multiple callbacks.
+Unsubscribes from changes of hidden photos and videos.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
-<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offHiddenPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3897,61 +3661,32 @@ Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden med
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'hiddenPhotoChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+## offTrashedAlbumChange
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
-  console.info('onHiddenPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('hiddenPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('hiddenPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onHiddenPhotoChange failed, errCode is', error);
-  }
-}
+offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 ```
 
-## on('trashedPhotoChange')
+Unsubscribes from changes in the trashed album.
 
-```TypeScript
-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
-```
+**Since:** 23
 
-Registers a listener for the **'trashedPhotoChange'** event to monitor media asset changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
-
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offTrashedAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -3961,61 +3696,67 @@ Registers a listener for the **'trashedPhotoChange'** event to monitor media ass
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'trashedPhotoChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
-## Examples
-
-For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+## offTrashedPhotoChange
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData'
-
-let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
-    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
-  // file had changed, do something.
-}
-
-async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
-  console.info('onTrashedPhotoChangeDemo.');
-
-  try {
-    // Register onCallback1.
-    phAccessHelper.on('trashedPhotoChange', onCallback1);
-    // Register onCallback2.
-    phAccessHelper.on('trashedPhotoChange', onCallback2);
-  } catch (error) {
-    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
-  }
-}
+offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 ```
 
-## on('hiddenAlbumChange')
+Unsubscribes from changes of trashed photos and videos.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-offTrashedPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## off_hiddenAlbumChange
 
 ```TypeScript
-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
+off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 ```
 
-Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden album changes. This API uses a callback to return the result, and it accepts multiple callbacks.
+Unregisters a listener for the **'hiddenAlbumChange'** event to stop monitoring hidden album changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
-<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4026,16 +3767,16 @@ Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden alb
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'hiddenAlbumChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4061,25 +3802,99 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
     phAccessHelper.on('hiddenAlbumChange', onCallback1);
     // Register onCallback2.
     phAccessHelper.on('hiddenAlbumChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('hiddenAlbumChange', onCallback1);
   } catch (error) {
     console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
   }
 }
 ```
 
-## on('trashedAlbumChange')
+## off_hiddenPhotoChange
 
 ```TypeScript
-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
+off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 ```
 
-Registers a listener for the **'trashedAlbumChange'** event to monitor album changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
+Unregisters a listener for the **'hiddenPhotoChange'** event to stop monitoring hidden media asset changes. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'hiddenPhotoChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('offHiddenPhotoChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('hiddenPhotoChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('hiddenPhotoChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('hiddenPhotoChange', onCallback1);
+  } catch (error) {
+    console.error('offHiddenPhotoChange failed, errCode is', error);
+  }
+}
+```
+
+## off_trashedAlbumChange
+
+```TypeScript
+off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unregisters a listener for the **'trashedAlbumChange'** event to stop monitoring album changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
-<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+<!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -4090,16 +3905,16 @@ Registers a listener for the **'trashedAlbumChange'** event to monitor album cha
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'trashedAlbumChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4125,11 +3940,118 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
     phAccessHelper.on('trashedAlbumChange', onCallback1);
     // Register onCallback2.
     phAccessHelper.on('trashedAlbumChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('trashedAlbumChange', onCallback1);
   } catch (error) {
     console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
   }
 }
 ```
+
+## off_trashedPhotoChange
+
+```TypeScript
+off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
+```
+
+Unregisters a listener for the **'trashedPhotoChange'** event to stop monitoring media asset changes in the trash. If multiple listeners are registered, you can unregister a specific listener by specifying **callback**. Alternatively, you can unregister all of them without specifying **callback**.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'trashedPhotoChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('offTrashedPhotoChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('trashedPhotoChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('trashedPhotoChange', onCallback2);
+
+    // Unregister the listening of onCallback1.
+    phAccessHelper.off('trashedPhotoChange', onCallback1);
+  } catch (error) {
+    console.error('offTrashedPhotoChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## offhiddenAlbumChange
+
+```TypeScript
+offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void
+```
+
+Unsubscribes from changes of hidden albums.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-offhiddenAlbumChange(callback?: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## onAnalysisAlbumChange
 
@@ -4140,6 +4062,8 @@ onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void
 Listens for the smart analysis album and returns the album change result using a callback. You can register multiple callbacks. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -4161,10 +4085,10 @@ Listens for the smart analysis album and returns the album change result using a
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4206,6 +4130,8 @@ Listens for the changes of media assets associated with the smart analysis album
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -4226,10 +4152,10 @@ Listens for the changes of media assets associated with the smart analysis album
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4261,6 +4187,410 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+## onHiddenAlbumChange
+
+```TypeScript
+onHiddenAlbumChange(callback: Callback<AlbumChangeInfos>): void
+```
+
+Subscribes to changes of hidden albums.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-onHiddenAlbumChange(callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-onHiddenAlbumChange(callback: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## onHiddenPhotoChange
+
+```TypeScript
+onHiddenPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+Subscribes to changes of hidden photos and videos.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-onHiddenPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-onHiddenPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## onTrashedAlbumChange
+
+```TypeScript
+onTrashedAlbumChange(callback: Callback<AlbumChangeInfos>): void
+```
+
+Subscribes to changes of the trashed album.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-onTrashedAlbumChange(callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-onTrashedAlbumChange(callback: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## onTrashedPhotoChange
+
+```TypeScript
+onTrashedPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+Subscribes to changes of trashed photos and videos.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-onTrashedPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-onTrashedPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## on_hiddenAlbumChange
+
+```TypeScript
+on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
+```
+
+Registers a listener for the **'hiddenAlbumChange'** event to monitor hidden album changes. This API uses a callback to return the result, and it accepts multiple callbacks.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'hiddenAlbumChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('onHiddenAlbumChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('hiddenAlbumChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('hiddenAlbumChange', onCallback2);
+  } catch (error) {
+    console.error('onHiddenAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## on_hiddenPhotoChange
+
+```TypeScript
+on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+Registers a listener for the **'hiddenPhotoChange'** event to monitor hidden media asset changes. This API uses a callback to return the result, and it accepts multiple callbacks.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO and ohos.permission.MANAGE_PRIVATE_PHOTOS
+
+<!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'hiddenPhotoChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
+  console.info('onHiddenPhotoChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('hiddenPhotoChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('hiddenPhotoChange', onCallback2);
+  } catch (error) {
+    console.error('onHiddenPhotoChange failed, errCode is', error);
+  }
+}
+```
+
+## on_trashedAlbumChange
+
+```TypeScript
+on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
+```
+
+Registers a listener for the **'trashedAlbumChange'** event to monitor album changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'trashedAlbumChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AlbumChangeInfos](arkts-medialibrary-photoaccesshelper-albumchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback1 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.AlbumChangeInfos) => {
+    console.info('onCallback2 success, changeData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('onTrashedAlbumChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('trashedAlbumChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('trashedAlbumChange', onCallback2);
+  } catch (error) {
+    console.error('onTrashedAlbumChangeDemo failed, errCode is', error);
+  }
+}
+```
+
+## on_trashedPhotoChange
+
+```TypeScript
+on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
+```
+
+Registers a listener for the **'trashedPhotoChange'** event to monitor media asset changes in the trash. This API uses a callback to return the result, and it accepts multiple callbacks.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.READ_IMAGEVIDEO
+
+<!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void--><!--Device-PhotoAccessHelper-on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'trashedPhotoChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PhotoAssetChangeInfos](arkts-medialibrary-photoaccesshelper-photoassetchangeinfos-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData'
+
+let onCallback1 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback1 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+let onCallback2 = (changeData: photoAccessHelper.PhotoAssetChangeInfos) => {
+    console.info('onCallback2 success, changData: ' + JSON.stringify(changeData));
+  // file had changed, do something.
+}
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, context: Context){
+  console.info('onTrashedPhotoChangeDemo.');
+
+  try {
+    // Register onCallback1.
+    phAccessHelper.on('trashedPhotoChange', onCallback1);
+    // Register onCallback2.
+    phAccessHelper.on('trashedPhotoChange', onCallback2);
+  } catch (error) {
+    console.error('onTrashedPhotoChangeDemo failed, errCode is', error);
+  }
+}
+```
+
 ## query
 
 ```TypeScript
@@ -4269,7 +4599,9 @@ query(sql: string): Promise<ResultSet>
 
 Queries data in the database using the specified SQL statement. This API does not support write operations or multi-level queries. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -4295,10 +4627,10 @@ Queries data in the database using the specified SQL statement. This API does no
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4333,6 +4665,8 @@ Release medialibrary database backup resources incluses closing backup database 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAccessHelper-releaseDebugDatabase(betaIssueId: string, dbFd: int): Promise<void>--><!--Device-PhotoAccessHelper-releaseDebugDatabase(betaIssueId: string, dbFd: int): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -4356,10 +4690,10 @@ Release medialibrary database backup resources incluses closing backup database 
 
 | Error Code ID |
 | --- |
-| [23800201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800201-unsupported-operation-type) |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## removeFormInfo
 
@@ -4369,7 +4703,9 @@ removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 
 Removes the Gallery widget information bound to a single image from the database. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4390,9 +4726,9 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -4428,7 +4764,9 @@ removeFormInfo(info: FormInfo): Promise<void>
 
 Removes the Gallery widget information bound to a single image from the database. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4454,9 +4792,9 @@ Removes the Gallery widget information bound to a single image from the database
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -4490,7 +4828,9 @@ removeGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 
 Removes the Gallery widget information bound to a group of images from the database. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4516,9 +4856,9 @@ Removes the Gallery widget information bound to a group of images from the datab
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -4549,7 +4889,9 @@ saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 
 Saves the Gallery widget information bound to a single image to the database. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4570,9 +4912,9 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -4617,7 +4959,9 @@ saveFormInfo(info: FormInfo): Promise<void>
 
 Saves the Gallery widget information bound to a single image to the database. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4643,9 +4987,9 @@ Saves the Gallery widget information bound to a single image to the database. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -4688,7 +5032,9 @@ saveGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 
 Saves the Gallery widget information bound to a group of images to the database. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4714,9 +5060,9 @@ Saves the Gallery widget information bound to a group of images to the database.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -4769,6 +5115,8 @@ Sets the asset compatibility capability based on the bundle name. You can obtain
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhotoAccessHelper-setAssetCompatibleCapability(bundleName: string, capability: AssetCompatibleCapability): Promise<void>--><!--Device-PhotoAccessHelper-setAssetCompatibleCapability(bundleName: string, capability: AssetCompatibleCapability): Promise<void>-End-->
@@ -4794,9 +5142,9 @@ Sets the asset compatibility capability based on the bundle name. You can obtain
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4824,7 +5172,9 @@ setPhotoAlbumOrder(orderStyle: number, albumOrders: Array<AlbumOrder>): Promise<
 
 Sets the sorting order for system, user, and source albums. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4851,10 +5201,10 @@ Sets the sorting order for system, user, and source albums. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4897,9 +5247,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 setPreferredCompatibleMode(bundleName: string, compatibleMode: PreferredCompatibleMode): Promise<void>
 ```
 
-Configure the preferred compatible mode configured by the application based on bundleName.There are three types of applications. For details, see PreferredCompatibleMode.
+Configure the preferred compatible mode configured by the application based on bundleName. There are three types of applications. For details, see PreferredCompatibleMode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4926,9 +5278,9 @@ Configure the preferred compatible mode configured by the application based on b
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -4961,7 +5313,9 @@ startAssetAnalysis(type: AnalysisType, assetUris?: Array<string>): Promise<numbe
 
 Starts asset analysis.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -4988,9 +5342,9 @@ Starts asset analysis.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -5022,6 +5376,8 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5049,10 +5405,10 @@ Starts asynchronous asset analysis. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -5086,11 +5442,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<void>
 ```
 
-Start deep optimize storage space.
-
-Before using this API, you are advised to call [canPerformDeepOptimizeSpace()](#canPerformDeepOptimizeSpace) and call this API only when true is returned.
+Start deep optimize storage space. Before using this API, you are advised to call [canPerformDeepOptimizeSpace()] [canPerformDeepOptimizeSpace](#canPerformDeepOptimizeSpace) and call this API only when true is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -5118,10 +5474,10 @@ Before using this API, you are advised to call [canPerformDeepOptimizeSpace()](#
 
 | Error Code ID |
 | --- |
-| [23800201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800201-unsupported-operation-type) |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -5148,7 +5504,9 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 
 Generates a thumbnail based on the specified rule.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -5175,9 +5533,9 @@ Generates a thumbnail based on the specified rule.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -5213,6 +5571,8 @@ Generates a thumbnail based on the specified rule. This API uses an asynchronous
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5241,10 +5601,10 @@ Generates a thumbnail based on the specified rule. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -5286,6 +5646,8 @@ Stops asset analysis.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5306,10 +5668,10 @@ Stops asset analysis.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -5342,6 +5704,8 @@ Stop deep optimize storage space.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5362,9 +5726,9 @@ Stop deep optimize storage space.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -5389,7 +5753,9 @@ stopThumbnailCreationTask(taskId: number): void
 
 Stops generating a thumbnail.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO
 
@@ -5409,9 +5775,9 @@ Stops generating a thumbnail.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -5438,7 +5804,9 @@ updateGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 
 Updates the information about a Gallery widget and saves the information to the database. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -5464,9 +5832,9 @@ Updates the information about a Gallery widget and saves the information to the 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples

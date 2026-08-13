@@ -12,9 +12,11 @@ import { settings } from '@kit.BasicServicesKit';
 function openDoubleClickSettingsPage(context: Context): void
 ```
 
-1. Opens the settings page for double-pressing the Down key.2. This API is used to set the default application started by double-pressing the Down key.
+1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,8 +34,8 @@ function openDoubleClickSettingsPage(context: Context): void
 
 | Error Code ID |
 | --- |
-| [16900020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) |
-| [16900010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) |
+| [16900020](../../apis-basic-services-kit/errorcode-settings.md#16900020-failed-to-open-the-settings-page) |
+| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) |
 
 ## Examples
 

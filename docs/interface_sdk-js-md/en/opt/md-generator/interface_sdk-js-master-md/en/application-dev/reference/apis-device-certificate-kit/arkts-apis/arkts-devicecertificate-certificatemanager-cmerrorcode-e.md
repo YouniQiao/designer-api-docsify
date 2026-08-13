@@ -2,7 +2,9 @@
 
 Enumerates the error codes used in the certificate management APIs.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CMErrorCode--><!--Device-certificateManager-export enum CMErrorCode-End-->
 
@@ -16,7 +18,9 @@ CM_ERROR_NO_PERMISSION = 201
 
 The application does not have the permission to call the API.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_NO_PERMISSION = 201--><!--Device-CMErrorCode-CM_ERROR_NO_PERMISSION = 201-End-->
 
@@ -30,7 +34,9 @@ CM_ERROR_INVALID_PARAMS = 401
 
 Invalid input parameter is found.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_INVALID_PARAMS = 401--><!--Device-CMErrorCode-CM_ERROR_INVALID_PARAMS = 401-End-->
 
@@ -44,7 +50,9 @@ CM_ERROR_GENERIC = 17500001
 
 An internal error occurs when the interface is called.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_GENERIC = 17500001--><!--Device-CMErrorCode-CM_ERROR_GENERIC = 17500001-End-->
 
@@ -58,7 +66,9 @@ CM_ERROR_NO_FOUND = 17500002
 
 The certificate or credential does not exist.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_NO_FOUND = 17500002--><!--Device-CMErrorCode-CM_ERROR_NO_FOUND = 17500002-End-->
 
@@ -72,7 +82,9 @@ CM_ERROR_INCORRECT_FORMAT = 17500003
 
 The certificate or credential is in invalid format.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_INCORRECT_FORMAT = 17500003--><!--Device-CMErrorCode-CM_ERROR_INCORRECT_FORMAT = 17500003-End-->
 
@@ -86,7 +98,9 @@ CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004
 
 The number of certificates or credentials has reached the limit.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004--><!--Device-CMErrorCode-CM_ERROR_MAX_CERT_COUNT_REACHED = 17500004-End-->
 
@@ -100,7 +114,9 @@ CM_ERROR_NO_AUTHORIZATION = 17500005
 
 The application has not obtained user authorization.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_NO_AUTHORIZATION = 17500005--><!--Device-CMErrorCode-CM_ERROR_NO_AUTHORIZATION = 17500005-End-->
 
@@ -114,7 +130,9 @@ CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007
 
 The device enters the advanced security mode. In this mode, CA certificate installation is restricted.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007--><!--Device-CMErrorCode-CM_ERROR_DEVICE_ENTER_ADVSECMODE = 17500007-End-->
 
@@ -128,7 +146,9 @@ CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009
 
 The device does not support the specified certificate storage path.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009--><!--Device-CMErrorCode-CM_ERROR_STORE_PATH_NOT_SUPPORTED = 17500009-End-->
 
@@ -142,7 +162,9 @@ CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010
 
 The USB Key service fails to be accessed.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010--><!--Device-CMErrorCode-CM_ERROR_ACCESS_UKEY_SERVICE_FAILED = 17500010-End-->
 
@@ -154,11 +176,11 @@ The USB Key service fails to be accessed.
 CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011
 ```
 
-The input parameter validation fails.
+The input parameter validation fails. For example, the parameter format is incorrect or the parameter range is invalid.
 
-For example, the parameter format is incorrect or the parameter range is invalid.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-CMErrorCode-CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011--><!--Device-CMErrorCode-CM_ERROR_PARAMETER_VALIDATION_FAILED = 17500011-End-->
 

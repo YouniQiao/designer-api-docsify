@@ -4,9 +4,11 @@ Represents a media asset change request.
 
 **Inheritance/Implementation:** MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photoaccesshelper-mediachangerequest-i.md#MediaChangeRequest)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest implements MediaChangeRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class MediaAssetChangeRequest--><!--Device-photoAccessHelper-class MediaAssetChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -22,13 +24,11 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 addResource(type: ResourceType, proxy: PhotoProxy): void
 ```
 
-Adds resources using **PhotoProxy** data.
+Adds resources using **PhotoProxy** data. > **NOTE：**> > For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
 
-> **NOTE：**
-> 
-> For the same asset change request, this API cannot be repeatedly called after resources are successfully added.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void--><!--Device-MediaAssetChangeRequest-addResource(type: ResourceType, proxy: PhotoProxy): void-End-->
 
@@ -47,9 +47,9 @@ Adds resources using **PhotoProxy** data.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000016 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -85,7 +85,9 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 
 Adds a resource using fileUri from file management directory
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_MEDIALIB_THUMB_DB
 
@@ -106,10 +108,10 @@ Adds a resource using fileUri from file management directory
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## createAssetRequest
 
@@ -117,19 +119,11 @@ Adds a resource using fileUri from file management directory
 static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest
 ```
 
-Creates an asset change request with the specified file name.
-
-The file name must meet the following requirements:
-
-- A valid file name must include a base name and a supported image or video extension.  
-- The total length of the file name must be between 1 and 255 characters.  
-- The base name must not contain any invalid characters.
-
-Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | 
-
-For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates an asset change request with the specified file name. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The total length of the file name must be between 1 and 255 characters. - The base name must not contain any invalid characters. Starting from API version 18, the following characters are considered invalid: \ / : * ? " &lt; &gt; | For API versions 10 to 17, the following characters are considered invalid: . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest-End-->
 
@@ -155,9 +149,9 @@ For API versions 10 to 17, the following characters are considered invalid: . ..
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000001 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -181,23 +175,58 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+## createAssetRequest
+
+```TypeScript
+static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest | null
+```
+
+Creates an asset change request with the specified file name.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest | null--><!--Device-MediaAssetChangeRequest-static createAssetRequest(context: Context, displayName: string, options?: PhotoCreateOptions): MediaAssetChangeRequest | null-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| displayName | string | Yes |
+| options | [PhotoCreateOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-userfilemanager-photocreateoptions-i-sys.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaAssetChangeRequest](arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 23800102 |
+
 ## deleteAssetsPermanentlyWithUri
 
 ```TypeScript
 static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be
-> permanently deleted. The deleted assets are not stored in the recycle bin.
-> 
-> - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this
-> operation.
+Permanently deletes images or videos in batches by URI. The deleted images or videos are not stored in the recycle bin. This API uses a promise to return the result. > **NOTE：**> > - Assets that exist only on the local device, on the cloud, or on both the local device and the cloud can be > permanently deleted. The deleted assets are not stored in the recycle bin. > > - This operation is irreversible. The deleted assets cannot be restored. Exercise caution when performing this > operation.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -226,10 +255,10 @@ Permanently deletes images or videos in batches by URI. The deleted images or vi
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -251,18 +280,11 @@ async function example(context: Context, assetUri: string) {
 static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes cloud media assets to the trash in batches. This API uses a promise to return the result.
+Deletes cloud media assets to the trash in batches. This API uses a promise to return the result. > **NOTE：**> > - If the assets are only on the local device, no changes are made. > > - If the assets are only in the cloud, they are moved directly to the trash. > > - If the assets are on both the local device and the cloud, after deletion, they only remain on the local > device, and the cloud copies are moved in the trash.
 
-> **NOTE：**
-> 
-> - If the assets are only on the local device, no changes are made.
-> 
-> - If the assets are only in the cloud, they are moved directly to the trash.
-> 
-> - If the assets are on both the local device and the cloud, after deletion, they only remain on the local
-> device, and the cloud copies are moved in the trash.
+**Since:** 26.0.0
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -289,10 +311,10 @@ Deletes cloud media assets to the trash in batches. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -313,14 +335,11 @@ async function example(context: Context, assetUri: string) {
 static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>): Promise<void>
 ```
 
-Permanently deletes images or videos in batches. This API uses a promise to return the result.
+Permanently deletes images or videos in batches. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -347,9 +366,9 @@ Permanently deletes images or videos in batches. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -381,14 +400,11 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<string>): Promise<void>
 ```
 
-Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result.
+Permanently deletes images or video assets in batches by URI. This API uses a promise to return the result. > **NOTE：**> > This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this > operation.
 
-> **NOTE：**
-> 
-> This operation is irreversible. The assets deleted cannot be restored. Exercise caution when performing this
-> operation.
+**Since:** 23
 
-**Since:** 19
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -416,8 +432,8 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## deleteLocalAssetsWithUri
@@ -426,18 +442,11 @@ Permanently deletes images or video assets in batches by URI. This API uses a pr
 static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<void>
 ```
 
-Deletes local media assets to the trash in batches. This API uses a promise to return the result.
+Deletes local media assets to the trash in batches. This API uses a promise to return the result. > **NOTE：**> > - If the assets are only on the local device, they are moved directly to the trash. > > - If the assets are only in the cloud, no changes are made. > > - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and > the local copies are moved in the trash.
 
-> **NOTE：**
-> 
-> - If the assets are only on the local device, they are moved directly to the trash.
-> 
-> - If the assets are only in the cloud, no changes are made.
-> 
-> - If the assets are on both the local device and the cloud, after deletion, they only remain in the cloud, and
-> the local copies are moved in the trash.
+**Since:** 26.0.0
 
-**Since:** 22
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -464,10 +473,10 @@ Deletes local media assets to the trash in batches. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -490,7 +499,9 @@ setAppLinkInfo(appLink: string): void
 
 Sets the information about the app link association.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void--><!--Device-MediaAssetChangeRequest-setAppLinkInfo(appLink: string): void-End-->
 
@@ -508,9 +519,9 @@ Sets the information about the app link association.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -543,6 +554,8 @@ Sets the status of the app link association.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void--><!--Device-MediaAssetChangeRequest-setAppLinkState(appLinkState: AppLinkState): void-End-->
@@ -561,9 +574,9 @@ Sets the status of the app link association.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -595,6 +608,8 @@ Saves the camera edited data of an asset.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setCameraEditData(editData: MediaAssetEditData): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -611,9 +626,9 @@ Saves the camera edited data of an asset.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## setCameraShotKey
 
@@ -623,7 +638,9 @@ setCameraShotKey(cameraShotKey: string): void
 
 Sets the Key for the Ultra Snapshot feature, which allows the camera to take photos or record videos with the screen off.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void--><!--Device-MediaAssetChangeRequest-setCameraShotKey(cameraShotKey: string): void-End-->
 
@@ -641,8 +658,8 @@ Sets the Key for the Ultra Snapshot feature, which allows the camera to take pho
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -674,6 +691,8 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>--><!--Device-MediaAssetChangeRequest-setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -696,9 +715,9 @@ Sets the display mode of the composite image. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -733,7 +752,9 @@ setEditData(editData: MediaAssetEditData): void
 
 Saves the edited data of an asset.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void--><!--Device-MediaAssetChangeRequest-setEditData(editData: MediaAssetEditData): void-End-->
 
@@ -751,8 +772,8 @@ Saves the edited data of an asset.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -795,7 +816,9 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 
 Sets the effect of this moving photo.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void--><!--Device-MediaAssetChangeRequest-setEffectMode(mode: MovingPhotoEffectMode): void-End-->
 
@@ -813,9 +836,9 @@ Sets the effect of this moving photo.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000016 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -841,6 +864,63 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
 }
 ```
 
+## setFavorite
+
+```TypeScript
+setFavorite(favoriteState: boolean): void
+```
+
+Favorites or unfavorites this file asset.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void--><!--Device-MediaAssetChangeRequest-setFavorite(favoriteState: boolean): void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| favoriteState | boolean | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| 14000011 |
+
+## Examples
+
+For details about how to create a phAccessHelper instance, see the example provided in [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper).
+
+```TypeScript
+import { dataSharePredicates } from '@kit.ArkData';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
+  console.info('setFavoriteDemo');
+  let predicates: dataSharePredicates.DataSharePredicates = new dataSharePredicates.DataSharePredicates();
+  let fetchOption: photoAccessHelper.FetchOptions = {
+    fetchColumns: [],
+    predicates: predicates
+  };
+  let fetchResult: photoAccessHelper.FetchResult<photoAccessHelper.PhotoAsset> = await phAccessHelper.getAssets(fetchOption);
+  let asset = await fetchResult.getFirstObject();
+  let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
+  assetChangeRequest.setFavorite(true);
+  phAccessHelper.applyChanges(assetChangeRequest).then(() => {
+    console.info('apply setFavorite successfully');
+  }).catch((err: BusinessError) => {
+    console.error(`apply setFavorite failed with error: ${err.code}, ${err.message}`);
+  });
+}
+```
+
 ## setHasAppLink
 
 ```TypeScript
@@ -849,7 +929,9 @@ setHasAppLink(hasAppLink: number): void
 
 Sets the status of the app link association.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void--><!--Device-MediaAssetChangeRequest-setHasAppLink(hasAppLink: int): void-End-->
 
@@ -867,9 +949,9 @@ Sets the status of the app link association.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -905,7 +987,9 @@ setHidden(hiddenState: boolean): void
 
 Hides this file.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHidden(hiddenState: boolean): void-End-->
 
@@ -923,8 +1007,8 @@ Hides this file.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -964,6 +1048,8 @@ Set hidden state of asset.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void--><!--Device-MediaAssetChangeRequest-setHiddenAttribute(hiddenState: boolean): void-End-->
@@ -982,9 +1068,9 @@ Set hidden state of asset.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1021,7 +1107,9 @@ setLocation(longitude: number, latitude: number): void
 
 Sets location information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void--><!--Device-MediaAssetChangeRequest-setLocation(longitude: double, latitude: double): void-End-->
 
@@ -1040,8 +1128,8 @@ Sets location information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1081,6 +1169,8 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void--><!--Device-MediaAssetChangeRequest-setMovingPhotoVersion(version: int): void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -1097,9 +1187,9 @@ Saves MovingPhoto version which is used to determine what special efficacy is su
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1136,7 +1226,9 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 
 Sets the watermark type supported by photos.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void--><!--Device-MediaAssetChangeRequest-setSupportedWatermarkType(watermarkType: WatermarkType): void-End-->
 
@@ -1154,8 +1246,8 @@ Sets the watermark type supported by photos.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1193,6 +1285,8 @@ Set title by filemanger.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void--><!--Device-MediaAssetChangeRequest-setTitleByFile(name: string): void-End-->
@@ -1211,9 +1305,9 @@ Set title by filemanger.
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -1249,7 +1343,9 @@ setUserComment(userComment: string): void
 
 Sets the user comment information of this media asset.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void--><!--Device-MediaAssetChangeRequest-setUserComment(userComment: string): void-End-->
 
@@ -1267,8 +1363,8 @@ Sets the user comment information of this media asset.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |
 
 ## Examples
@@ -1307,7 +1403,9 @@ setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: str
 
 Set video enhancement attribute
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void--><!--Device-MediaAssetChangeRequest-setVideoEnhancementAttr(videoEnhancementType: VideoEnhancementType, photoId: string): void-End-->
 
@@ -1326,7 +1424,7 @@ Set video enhancement attribute
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 14000016 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 14000011 |

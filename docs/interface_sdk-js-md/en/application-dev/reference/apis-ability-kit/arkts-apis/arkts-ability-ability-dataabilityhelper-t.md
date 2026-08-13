@@ -10,6 +10,8 @@ Defines the level-2 module DataAbilityHelper.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ability-export type DataAbilityHelper = _DataAbilityHelper--><!--Device-ability-export type DataAbilityHelper = _DataAbilityHelper-End-->

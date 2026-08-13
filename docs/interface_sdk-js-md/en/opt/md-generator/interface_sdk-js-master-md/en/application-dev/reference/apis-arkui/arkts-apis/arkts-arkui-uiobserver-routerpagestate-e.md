@@ -1,10 +1,10 @@
 # RouterPageState
 
-Enumerates the states of a page during routing. **RouterPageState** is used in  
-[RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo) as the callback parameter for passive observation via  
-[routerPageUpdate](uiObserver.on(type: 'routerPageUpdate', context: UIAbilityContext | UIContext, callback: Callback&lt;RouterPageInfo&gt;)).
+Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#on_navDestinationUpdate).
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export enum RouterPageState--><!--Device-uiObserver-export enum RouterPageState-End-->
 
@@ -19,6 +19,8 @@ ABOUT_TO_APPEAR = 0
 The page is about to be displayed.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +40,8 @@ The page is about to be destroyed.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -55,6 +59,8 @@ ON_PAGE_SHOW = 2
 The page is displayed.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +80,8 @@ The page is hidden.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -91,6 +99,8 @@ ON_BACK_PRESS = 4
 The page is returned.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

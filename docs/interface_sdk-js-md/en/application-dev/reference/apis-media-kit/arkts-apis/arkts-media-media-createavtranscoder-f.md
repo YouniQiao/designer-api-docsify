@@ -12,15 +12,13 @@ import { media } from '@kit.MediaKit';
 function createAVTranscoder(): Promise<AVTranscoder>
 ```
 
-Creates an AVTranscoder instance. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> A maximum of 2 AVTranscoder instances can be created.
+Creates an AVTranscoder instance. This API uses a promise to return the result. > **NOTE：**> > A maximum of 2 AVTranscoder instances can be created.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -38,7 +36,7 @@ Creates an AVTranscoder instance. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
 ## Examples
 
@@ -65,15 +63,13 @@ media.createAVTranscoder().then((transcoder: media.AVTranscoder) => {
 function createAVTranscoder(): Promise<AVTranscoder | undefined>
 ```
 
-Creates an **AVTranscoder** instance. This API uses a promise to return the result.
-
-**NOTE：**
-
-A maximum of 2 **AVTranscoder** instances can be created.
+Creates an **AVTranscoder** instance. This API uses a promise to return the result. **NOTE：**A maximum of 2 **AVTranscoder** instances can be created.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-function createAVTranscoder(): Promise<AVTranscoder | undefined>--><!--Device-media-function createAVTranscoder(): Promise<AVTranscoder | undefined>-End-->
 
@@ -89,5 +85,5 @@ A maximum of 2 **AVTranscoder** instances can be created.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 

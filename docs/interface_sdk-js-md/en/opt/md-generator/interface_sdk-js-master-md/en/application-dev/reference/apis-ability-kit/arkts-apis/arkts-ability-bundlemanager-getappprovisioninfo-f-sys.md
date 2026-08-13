@@ -12,11 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAppProvisionInfo(bundleName: string, callback: AsyncCallback<AppProvisionInfo>): void
 ```
 
-Obtains the provision profile based on the given bundle name. This API uses an asynchronous callback to return the result.
+Obtains the provision profile based on the given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
-No permission is required for obtaining the caller's own information.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -37,10 +37,10 @@ No permission is required for obtaining the caller's own information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 
@@ -72,11 +72,11 @@ try {
 function getAppProvisionInfo(bundleName: string, userId: number, callback: AsyncCallback<AppProvisionInfo>): void
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API uses an asynchronous callback to return the result.
+Obtains the provision profile based on the given bundle name and user ID. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
-No permission is required for obtaining the caller's own information.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -98,11 +98,11 @@ No permission is required for obtaining the caller's own information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 
@@ -135,11 +135,11 @@ try {
 function getAppProvisionInfo(bundleName: string, userId?: number): Promise<AppProvisionInfo>
 ```
 
-Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the result.
+Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
-No permission is required for obtaining the caller's own information.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -166,11 +166,11 @@ No permission is required for obtaining the caller's own information.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

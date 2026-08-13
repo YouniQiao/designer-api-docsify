@@ -2,9 +2,11 @@
 
 Defines a subscription data holder for processing event information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
 
@@ -24,9 +26,11 @@ constructor(watcherName: string)
 
 Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -59,21 +63,17 @@ let holder1: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHo
 
 ## setRow
 
-ArkTS-Dyn:
-```TypeScript
-setRow(size: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRow(size: int): void
 ```
 
 Sets the number of data records of the event package obtained each time. When **setRow()** and **setSize()** are called at the same time, only **setRow()** takes effect.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -85,14 +85,14 @@ Sets the number of data records of the event package obtained each time. When **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of events. The value range is (0, 2^31-1]. If the value is out of the range, an exception is thrown. |
+| size | int | Yes | Number of events. The value range is (0, 2^31-1]. If the value is out of the range, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 ## Examples
 
@@ -105,21 +105,17 @@ holder3.setRow(1000);
 
 ## setSize
 
-ArkTS-Dyn:
-```TypeScript
-setSize(size: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setSize(size: int): void
 ```
 
 Sets the threshold for the data size of the event package obtained each time.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -131,14 +127,14 @@ Sets the threshold for the data size of the event package obtained each time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Data size threshold, in bytes. The value range is [0, 2^31-1]. If the value is out of the range, an exception is thrown. |
+| size | int | Yes | Data size threshold, in bytes. The value range is [0, 2^31-1]. If the value is out of the range, an exception is thrown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [11104001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) | Invalid size value. Possibly caused by the size value is less than or equal to zero. |
 
 ## Examples
 
@@ -155,15 +151,13 @@ holder2.setSize(1000);
 takeNext(): AppEventPackage
 ```
 
-Obtains the subscription event.
-
-The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned.
-
-When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
+Obtains the subscription event. The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned. When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -192,11 +186,13 @@ let eventPkg: hiAppEvent.AppEventPackage | null = holder4.takeNext();
 takeNext(): AppEventPackage | null
 ```
 
-Obtains the subscription event.&lt;br&gt;The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned.&lt;br&gt;When setRow and setSize are called at the same time, only setRow takes effect.
+Obtains the subscription event. &lt;br&gt;The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned. &lt;br&gt;When setRow and setSize are called at the same time, only setRow takes effect.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

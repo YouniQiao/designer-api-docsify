@@ -2,7 +2,9 @@
 
 Enumerates the operations that can be performed on a database. Use the enum name rather than the enum value.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export enum Flag--><!--Device-cloudExtension-export enum Flag-End-->
 
@@ -18,7 +20,9 @@ INSERT = 0
 
 Insert data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Flag-INSERT = 0--><!--Device-Flag-INSERT = 0-End-->
 
@@ -34,7 +38,9 @@ UPDATE = 1
 
 Update data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Flag-UPDATE = 1--><!--Device-Flag-UPDATE = 1-End-->
 
@@ -50,7 +56,9 @@ DELETE = 2
 
 Delete data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Flag-DELETE = 2--><!--Device-Flag-DELETE = 2-End-->
 

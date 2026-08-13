@@ -2,7 +2,9 @@
 
 Provides the options (including callbacks) for sending SMS messages. For example, you can specify the SMS message type by the optional parameter **content**.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface SendMessageOptions--><!--Device-sms-export interface SendMessageOptions-End-->
 
@@ -24,7 +26,9 @@ SMS message type. If the content is composed of character strings, the SMS messa
 
 **Type:** string \| Array&lt;number&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-content: string | Array<int>--><!--Device-SendMessageOptions-content: string | Array<int>-End-->
 
@@ -36,12 +40,13 @@ SMS message type. If the content is composed of character strings, the SMS messa
 deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 ```
 
-Callback used to return the SMS message delivery report. For details, see  
-[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md#IDeliveryShortMessageCallback). This parameter is mandatory for sending an SMS message.
+Callback used to return the SMS message delivery report. For details, see [IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md#IDeliveryShortMessageCallback). This parameter is mandatory for sending an SMS message.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>--><!--Device-SendMessageOptions-deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>-End-->
 
@@ -57,7 +62,9 @@ Destination address of the SMS message.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-destinationHost: string--><!--Device-SendMessageOptions-destinationHost: string-End-->
 
@@ -73,7 +80,9 @@ Destination port of the SMS message. This field is mandatory only for a data mes
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-destinationPort?: int--><!--Device-SendMessageOptions-destinationPort?: int-End-->
 
@@ -85,12 +94,13 @@ Destination port of the SMS message. This field is mandatory only for a data mes
 sendCallback?: AsyncCallback<ISendShortMessageCallback>
 ```
 
-Callback used to return the SMS message sending result. For details, see  
-[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md#ISendShortMessageCallback). This parameter is mandatory for sending an SMS message.
+Callback used to return the SMS message sending result. For details, see [ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md#ISendShortMessageCallback). This parameter is mandatory for sending an SMS message.
 
 **Type:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>--><!--Device-SendMessageOptions-sendCallback?: AsyncCallback<ISendShortMessageCallback>-End-->
 
@@ -106,7 +116,9 @@ SMSC address. By default, the SMSC address in the SIM card is used.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-serviceCenter?: string--><!--Device-SendMessageOptions-serviceCenter?: string-End-->
 
@@ -118,14 +130,13 @@ SMSC address. By default, the SMSC address in the SIM card is used.
 slotId: number
 ```
 
-Slot ID of the SIM card used for sending SMS messages.
-
-- **0**: card slot 1.  
-- **1**: card slot 2
+Slot ID of the SIM card used for sending SMS messages. - **0**: card slot 1. - **1**: card slot 2
 
 **Type:** number
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SendMessageOptions-slotId: int--><!--Device-SendMessageOptions-slotId: int-End-->
 

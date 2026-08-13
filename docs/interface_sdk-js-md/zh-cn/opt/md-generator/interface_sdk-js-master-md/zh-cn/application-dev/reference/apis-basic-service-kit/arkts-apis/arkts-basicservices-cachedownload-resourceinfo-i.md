@@ -2,7 +2,9 @@
 
 预下载的资源信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cacheDownload-interface ResourceInfo--><!--Device-cacheDownload-interface ResourceInfo-End-->
 
@@ -18,7 +20,9 @@ readonly size: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResourceInfo-readonly size: long--><!--Device-ResourceInfo-readonly size: long-End-->
 

@@ -20,7 +20,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)(keyAlias: string, options: HuksOptions, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,7 +32,7 @@ Checks whether a key exists. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | keyAlias | string | Yes | Alias of the key to check. |
 | options | [HuksOptions](arkts-universalkeystore-huks-huksoptions-i.md) | Yes | Options for checking the key. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the key exists; the value **false** means the opposite. |
 
 ## Examples
 
@@ -63,7 +63,7 @@ Checks whether a key exists. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isKeyItemExist](huks.isKeyItemExist(keyAlias:)
+**Substitutes:** [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#isKeyItemExist)(keyAlias: string, options: HuksOptions)
 
 <!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>--><!--Device-huks-function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>-End-->
 

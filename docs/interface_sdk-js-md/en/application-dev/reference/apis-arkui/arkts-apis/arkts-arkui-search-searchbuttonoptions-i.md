@@ -6,6 +6,8 @@ Defines the SearchButton options
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SearchButtonOptions--><!--Device-unnamed-export interface SearchButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@ Defines the SearchButton options
 autoDisable?: boolean
 ```
 
-Automatically disables the search button before the user enters text
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;&lt;em&gt;true&lt;/em&gt;: The search button is disabled when there is no text input.&lt;br&gt;&lt;em&gt;false&lt;/em&gt;: The search button remains enabled regardless of the text input.&lt;/p&gt;
+Automatically disables the search button before the user enters text &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;&lt;em&gt;true&lt;/em&gt;: The search button is disabled when there is no text input. &lt;br&gt;&lt;em&gt;false&lt;/em&gt;: The search button remains enabled regardless of the text input. &lt;/p&gt;
 
 **Type:** boolean
 
@@ -27,6 +27,8 @@ Automatically disables the search button before the user enters text
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +50,8 @@ Set the SearchButton fontColor
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SearchButtonOptions-fontColor?: ResourceColor--><!--Device-SearchButtonOptions-fontColor?: ResourceColor-End-->
@@ -60,15 +64,15 @@ Set the SearchButton fontColor
 fontSize?: Length
 ```
 
-Set the SearchButton fontSize
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;It cannot be set in percentage.&lt;/p&gt;
+Set the SearchButton fontSize &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;It cannot be set in percentage. &lt;/p&gt;
 
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

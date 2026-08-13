@@ -1,20 +1,24 @@
 # Radio
 
 ```TypeScript
-type Radio = RadioFrameNode
+type Radio = TypedFrameNode<RadioInterface, RadioAttribute>
 ```
 
-Define the FrameNode type for Radio.
+Represents a FrameNode of the **Radio** type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Radio = RadioFrameNode--><!--Device-typeNode-type Radio = RadioFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type Radio = TypedFrameNode<RadioInterface, RadioAttribute>--><!--Device-typeNode-type Radio = TypedFrameNode<RadioInterface, RadioAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** RadioFrameNode
+**Property type:** TypedFrameNode<RadioInterface, RadioAttribute>
 

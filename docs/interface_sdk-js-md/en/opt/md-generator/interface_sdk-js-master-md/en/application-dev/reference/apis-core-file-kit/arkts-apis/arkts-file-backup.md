@@ -2,7 +2,9 @@
 
 Module providing backup and restore capabilities.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace backup--><!--Device-unnamed-declare namespace backup-End-->
 
@@ -23,14 +25,14 @@ import { backup } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#filesystemservicerequest) |
-| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getbackupinfo) |
-| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getbackupversion) |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities) |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-1) |
-| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getlocalcapabilities-2) |
-| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updatesendrate) |
-| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updatetimer) |
+| [fileSystemServiceRequest](arkts-corefile-backup-filesystemservicerequest-f-sys.md#fileSystemServiceRequest-(System-API)) |
+| [getBackupInfo](arkts-corefile-backup-getbackupinfo-f-sys.md#getBackupInfo-(System-API)) |
+| [getBackupVersion](arkts-corefile-backup-getbackupversion-f-sys.md#getBackupVersion-(System-API)) |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities-(System-API)) |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities-(System-API)) |
+| [getLocalCapabilities](arkts-corefile-backup-getlocalcapabilities-f-sys.md#getLocalCapabilities-(System-API)) |
+| [updateSendRate](arkts-corefile-backup-updatesendrate-f-sys.md#updateSendRate-(System-API)) |
+| [updateTimer](arkts-corefile-backup-updatetimer-f-sys.md#updateTimer-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -71,6 +73,9 @@ import { backup } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [BundlePara](arkts-corefile-backup-bundlepara-t-sys.md) |
 | [OnBackupSizeReport](arkts-corefile-backup-onbackupsizereport-t-sys.md) |
 | [OnFileReadyBatch](arkts-corefile-backup-onfilereadybatch-t-sys.md) |
+| [OnProcess](arkts-corefile-backup-onprocess-t-sys.md) |
+| [OnResultReport](arkts-corefile-backup-onresultreport-t-sys.md) |
 <!--DelEnd-->

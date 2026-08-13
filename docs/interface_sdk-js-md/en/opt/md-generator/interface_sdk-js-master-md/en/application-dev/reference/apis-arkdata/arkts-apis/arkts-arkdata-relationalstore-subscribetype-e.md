@@ -2,7 +2,9 @@
 
 Enumerates the subscription types. Use the enum name rather than the enum value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-enum SubscribeType--><!--Device-relationalStore-enum SubscribeType-End-->
 
@@ -16,7 +18,9 @@ SUBSCRIBE_TYPE_REMOTE = 0
 
 Subscribe to remote data changes.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 0-End-->
 
@@ -30,7 +34,9 @@ SUBSCRIBE_TYPE_CLOUD = 1
 
 Subscribe to cloud data changes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
@@ -47,7 +53,9 @@ SUBSCRIBE_TYPE_CLOUD_DETAILS = 2
 
 Subscribe to detailed information about cloud data changes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
@@ -64,7 +72,9 @@ SUBSCRIBE_TYPE_LOCAL_DETAILS
 
 Subscribe to detailed information about local data changes.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL_DETAILS--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL_DETAILS-End-->
 

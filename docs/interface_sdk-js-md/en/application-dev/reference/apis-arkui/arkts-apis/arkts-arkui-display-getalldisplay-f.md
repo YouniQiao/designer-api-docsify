@@ -20,7 +20,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllDisplays](display.getAllDisplays(callback:)
+**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;)
 
 <!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
 
@@ -30,7 +30,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes | Callback used to return all the Display objects. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[Display](arkts-arkui-display-display-i.md)&gt;&gt; | Yes | Callback used to return all the Display objects. |
 
 ## Examples
 

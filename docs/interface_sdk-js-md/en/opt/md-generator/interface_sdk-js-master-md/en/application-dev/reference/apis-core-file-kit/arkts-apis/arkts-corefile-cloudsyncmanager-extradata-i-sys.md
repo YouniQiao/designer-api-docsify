@@ -2,7 +2,9 @@
 
 Represents the cloud data change information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-interface ExtraData--><!--Device-cloudSyncManager-interface ExtraData-End-->
 
@@ -26,7 +28,9 @@ Change event ID.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExtraData-eventId: string--><!--Device-ExtraData-eventId: string-End-->
 
@@ -44,7 +48,9 @@ Represents the cloud data change information.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExtraData-extraData: string--><!--Device-ExtraData-extraData: string-End-->
 

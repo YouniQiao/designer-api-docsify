@@ -2,7 +2,9 @@
 
 Describes an event to subscribe to or emit. The **EventPriority** settings do not take effect under event subscription.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-emitter-export interface InnerEvent--><!--Device-emitter-export interface InnerEvent-End-->
 
@@ -24,7 +26,9 @@ Event ID.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,7 +46,9 @@ Event priority. The default value is **EventPriority.LOW**.
 
 **Type:** [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

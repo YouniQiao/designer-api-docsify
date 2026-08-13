@@ -14,7 +14,9 @@ function getTotalSizeSync(path: string): number
 
 Obtains the total size of the specified file system, in bytes. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getTotalSizeSync(path: string): long--><!--Device-statfs-function getTotalSizeSync(path: string): long-End-->
 

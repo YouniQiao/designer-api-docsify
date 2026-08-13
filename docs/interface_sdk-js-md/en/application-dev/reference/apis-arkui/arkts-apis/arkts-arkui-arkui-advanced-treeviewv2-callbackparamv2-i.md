@@ -4,7 +4,9 @@ Declare CallbackParamV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CallbackParamV2--><!--Device-unnamed-export interface CallbackParamV2-End-->
 
@@ -19,60 +21,72 @@ import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, 
 ## childIndex
 
 ```TypeScript
-childIndex?: int
+childIndex?: number
 ```
 
 Get the childIndex.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CallbackParamV2-childIndex?: int--><!--Device-CallbackParamV2-childIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CallbackParamV2-childIndex?: number--><!--Device-CallbackParamV2-childIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## currentNodeId
 
 ```TypeScript
-currentNodeId: int
+currentNodeId: number
 ```
 
 Get the currentNodeId.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CallbackParamV2-currentNodeId: int--><!--Device-CallbackParamV2-currentNodeId: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CallbackParamV2-currentNodeId: number--><!--Device-CallbackParamV2-currentNodeId: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## parentNodeId
 
 ```TypeScript
-parentNodeId?: int
+parentNodeId?: number
 ```
 
-ID of the current parent node.
+Get the parentNodeId.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-CallbackParamV2-parentNodeId?: int--><!--Device-CallbackParamV2-parentNodeId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-CallbackParamV2-parentNodeId?: number--><!--Device-CallbackParamV2-parentNodeId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

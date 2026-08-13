@@ -1,16 +1,16 @@
 # HeifsMetadata
 
-HeifsMetadata implements Metadata
-
-HEIF序列图像元数据类，用于存储图像的元数据。
+HeifsMetadata implements Metadata HEIF序列图像元数据类，用于存储图像的元数据。
 
 **继承/实现关系：** HeifsMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-image-class HeifsMetadata implements Metadata--><!--Device-image-class HeifsMetadata implements Metadata-End-->
+**废弃版本：** -1
+
+<!--Device-image-class HeifsMetadata--><!--Device-image-class HeifsMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -24,7 +24,9 @@ clone(): Promise<HeifsMetadata>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +50,9 @@ static createInstance(): HeifsMetadata
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,13 +72,13 @@ static createInstance(): HeifsMetadata
 getAllProperties(): Promise<Record<string, string | null>>
 ```
 
-获取图片中所有元数据的属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
+获取图片中所有元数据的属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,7 +102,9 @@ getBlob(): Promise<ArrayBuffer>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,13 +124,13 @@ getBlob(): Promise<ArrayBuffer>
 getProperties(key: Array<string>): Promise<Record<string, string | null>>
 ```
 
-获取图像元数据的属性值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
+获取图像元数据的属性值。使用Promise异步回调。 要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,7 +154,7 @@ getProperties(key: Array<string>): Promise<Record<string, string | null>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type |
 
 ## setBlob
 
@@ -160,7 +166,9 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,7 +192,7 @@ setBlob(blob: ArrayBuffer): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../errorcode-image.md#7600206-无效参数) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -192,13 +200,13 @@ setBlob(blob: ArrayBuffer): Promise<void>
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-批量设置图片元数据中的指定属性的值。使用Promise异步回调。
-
-要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
+批量设置图片元数据中的指定属性的值。使用Promise异步回调。 要查询的属性的具体信息请参考[HeifsPropertyKey](arkts-image-image-heifspropertykey-e.md#HeifsPropertyKey)。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,7 +230,7 @@ setProperties(records: Record<string, string | null>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-不支持的元数据读写) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## heifsCanvasHeight
 
@@ -230,17 +238,15 @@ setProperties(records: Record<string, string | null>): Promise<void>
 readonly heifsCanvasHeight?: int
 ```
 
-HEIF序列图片的画布高度。
+HEIF序列图片的画布高度。 单位为像素（px）。 该值为正整数。
 
-单位为像素（px）。
-
-该值为正整数。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,17 +260,15 @@ HEIF序列图片的画布高度。
 readonly heifsCanvasWidth?: int
 ```
 
-HEIF序列图片的画布宽度。
+HEIF序列图片的画布宽度。 单位为像素（px）。 该值为正整数。
 
-单位为像素（px）。
-
-该值为正整数。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -280,11 +284,13 @@ readonly heifsDelayTime?: int
 
 HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -298,17 +304,15 @@ HEIF序列图片的每帧播放时长。单位为毫秒（ms）。
 readonly heifsUnclampedDelayTime?: int
 ```
 
-HEIF序列图片每帧未钳制的延迟时长。
+HEIF序列图片每帧未钳制的延迟时长。 单位为毫秒（ms）。 该值为正整数。
 
-单位为毫秒（ms）。
-
-该值为正整数。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

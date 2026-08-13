@@ -4,7 +4,7 @@ Defines toolBarV2 symbolGlyph.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class ToolBarV2SymbolGlyph--><!--Device-unnamed-export class ToolBarV2SymbolGlyph-End-->
 
@@ -26,6 +26,8 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -43,7 +45,8 @@ The constructor used to create a ToolBarV2SymbolGlyph object.
 ## activated
 
 ```TypeScript
-activated?: SymbolGlyphModifier
+@Trace
+  activated?: SymbolGlyphModifier
 ```
 
 Modifier of toolbarV2's activated symbol.
@@ -52,18 +55,21 @@ Modifier of toolbarV2's activated symbol.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2SymbolGlyph-activated?: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-activated?: SymbolGlyphModifier-End-->
+<!--Device-ToolBarV2SymbolGlyph-@Trace  activated?: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-@Trace  activated?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## normal
 
 ```TypeScript
-normal: SymbolGlyphModifier
+@Trace
+  normal: SymbolGlyphModifier
 ```
 
 Modifier of toolbarV2's normal symbol.
@@ -72,10 +78,12 @@ Modifier of toolbarV2's normal symbol.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2SymbolGlyph-normal: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-normal: SymbolGlyphModifier-End-->
+<!--Device-ToolBarV2SymbolGlyph-@Trace  normal: SymbolGlyphModifier--><!--Device-ToolBarV2SymbolGlyph-@Trace  normal: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

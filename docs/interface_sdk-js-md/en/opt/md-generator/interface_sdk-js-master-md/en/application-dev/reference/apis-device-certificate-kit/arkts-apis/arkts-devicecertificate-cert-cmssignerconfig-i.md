@@ -2,7 +2,9 @@
 
 Represents the configuration of the CMS signer.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface CmsSignerConfig--><!--Device-cert-interface CmsSignerConfig-End-->
 
@@ -26,9 +28,11 @@ Whether to add the signature attribute. The default value is **true**. **true**:
 
 **Default:** true
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-addAttr?: boolean--><!--Device-CmsSignerConfig-addAttr?: boolean-End-->
 
@@ -46,9 +50,11 @@ Whether to add a certificate. The default value is **true**. **true**: yes; **fa
 
 **Default:** true
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-addCert?: boolean--><!--Device-CmsSignerConfig-addCert?: boolean-End-->
 
@@ -60,15 +66,17 @@ Whether to add a certificate. The default value is **true**. **true**: yes; **fa
 addSmimeCapAttr?: boolean
 ```
 
-Whether to add the SMIME capability to the CMS object. The default value is **true**. **true**: yes; **false**:no.
+Whether to add the SMIME capability to the CMS object. The default value is **true**. **true**: yes; **false**: no.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-addSmimeCapAttr?: boolean--><!--Device-CmsSignerConfig-addSmimeCapAttr?: boolean-End-->
 
@@ -80,13 +88,15 @@ Whether to add the SMIME capability to the CMS object. The default value is **tr
 mdName: string
 ```
 
-Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256**, **SHA384**, and **SHA512**are supported.
+Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256**, **SHA384**, and **SHA512** are supported.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-mdName: string--><!--Device-CmsSignerConfig-mdName: string-End-->
 
@@ -98,20 +108,17 @@ Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256
 rsaSignaturePadding?: CmsRsaSignaturePadding
 ```
 
-Padding mode for an RSA signature. The default value is **PKCS1_PADDING**.&lt;br&gt;When **PKCS1_PSS_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or  
-**SHA512**.
-
-> **NOTE：**
-> 
-> This parameter is valid only when the private key type of the signature is RSA.
+Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. &lt;br&gt;When **PKCS1_PSS_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or **SHA512**. > **NOTE：**> > This parameter is valid only when the private key type of the signature is RSA.
 
 **Type:** [CmsRsaSignaturePadding](arkts-devicecertificate-cert-cmsrsasignaturepadding-e.md)
 
 **Default:** CmsRsaSignaturePadding.PKCS1_PADDING
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsSignerConfig-rsaSignaturePadding?: CmsRsaSignaturePadding--><!--Device-CmsSignerConfig-rsaSignaturePadding?: CmsRsaSignaturePadding-End-->
 

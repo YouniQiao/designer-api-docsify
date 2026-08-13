@@ -12,11 +12,13 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getExtensionAbilityResourceInfo(bundleName: string, extensionAbilityType: bundleManager.ExtensionAbilityType, resourceFlags: int, appIndex?: int): Array<LauncherAbilityResourceInfo>
 ```
 
-Obtains the ExtensionAbility resource information of an application based on the bundle name, ExtensionAbility type, resource flags, and clone ID. This API returns the result synchronously.
+Obtains the ExtensionAbility resource information of an application based on the bundle name, ExtensionAbility type , resource flags, and clone ID. This API returns the result synchronously.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -32,8 +34,8 @@ Obtains the ExtensionAbility resource information of an application based on the
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. |
 | extensionAbilityType | bundleManager.ExtensionAbilityType | Yes | ExtensionAbility type. Only **ExtensionAbilityType.INPUT_METHOD**, **ExtensionAbilityType.SHARE** and **ExtensionAbilityType.ACTION** are supported. |
-| resourceFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Resource information flags, which indicate the type of resource information to obtain. |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | ID of the application clone. The default value is **0**. The value ranges from 0 to 5. The value **0** indicates the main application. |
+| resourceFlags | int | Yes | Resource information flags, which indicate the type of resource information to obtain. |
+| appIndex | int | No | ID of the application clone. The default value is **0**. The value ranges from 0 to 5. The value **0** indicates the main application. |
 
 **Return value:**
 
@@ -45,10 +47,10 @@ Obtains the ExtensionAbility resource information of an application based on the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range or not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range or not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 

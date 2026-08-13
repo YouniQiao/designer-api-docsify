@@ -1,10 +1,10 @@
 # DeviceManager
 
-Provides APIs to obtain information about trusted devices and local devices. Before calling any API in  
-**DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example,  
-**dmInstance**.
+Provides APIs to obtain information about trusted devices and local devices. Before calling any API in **DeviceManager**, you must use **createDeviceManager** to create a **DeviceManager** instance, for example, **dmInstance**.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceManager--><!--Device-distributedDeviceManager-interface DeviceManager-End-->
 
@@ -26,6 +26,8 @@ Binds a device. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void--><!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: AsyncCallback<{deviceId: string;}>): void-End-->
@@ -44,10 +46,10 @@ Binds a device. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [11600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600103-authentication-unavailable) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-authentication-unavailable) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -84,6 +86,40 @@ try {
 }
 ```
 
+## bindTarget
+
+```TypeScript
+bindTarget(deviceId: string, bindParam: Record<string, number | string>, callback: AsyncCallback<BindTargetResult>): void
+```
+
+Binds a device. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: AsyncCallback<BindTargetResult>): void--><!--Device-DeviceManager-bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: AsyncCallback<BindTargetResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| deviceId | string | Yes |
+| bindParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number \| string & gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [11600103](../../apis-distributedservice-kit/errorcode-device-manager.md#11600103-authentication-unavailable) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -92,7 +128,9 @@ getAvailableDeviceList(callback: AsyncCallback<Array<DeviceBasicInfo>>): void
 
 Obtains all trusted devices. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -110,8 +148,8 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -142,7 +180,9 @@ getAvailableDeviceList(): Promise<Array<DeviceBasicInfo>>
 
 Obtains all trusted devices. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -160,8 +200,8 @@ Obtains all trusted devices. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -185,7 +225,9 @@ getAvailableDeviceListSync(): Array<DeviceBasicInfo>
 
 Obtains all trusted devices synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -203,8 +245,8 @@ Obtains all trusted devices synchronously.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -229,7 +271,9 @@ getDeviceName(networkId: string): string
 
 Obtains the device name based on the network ID of the specified device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -253,9 +297,9 @@ Obtains the device name based on the network ID of the specified device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -283,7 +327,9 @@ getDeviceType(networkId: string): number
 
 Obtains the device type based on the network ID of the specified device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -307,9 +353,9 @@ Obtains the device type based on the network ID of the specified device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -335,10 +381,11 @@ try {
 getLocalDeviceId(): string
 ```
 
-Obtains the local device ID. The value is the result of obfuscating the udid-hash (hash value of the UDID),  
-**appid**, and salt using the SHA-256 algorithm.
+Obtains the local device ID. The value is the result of obfuscating the udid-hash (hash value of the UDID), **appid**, and salt using the SHA-256 algorithm.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -356,8 +403,8 @@ Obtains the local device ID. The value is the result of obfuscating the udid-has
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -383,7 +430,9 @@ getLocalDeviceName(): string
 
 Obtains the local device name.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -401,8 +450,8 @@ Obtains the local device name.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -428,7 +477,9 @@ getLocalDeviceNetworkId(): string
 
 Obtains the network ID of the local device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -446,8 +497,8 @@ Obtains the network ID of the local device.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -473,7 +524,9 @@ getLocalDeviceType(): number
 
 Obtains the local device type.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -491,8 +544,8 @@ Obtains the local device type.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -510,7 +563,210 @@ try {
 }
 ```
 
-## off('deviceStateChange')
+## offDeviceNameChange
+
+```TypeScript
+offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void
+```
+
+UnRegister the device name change result callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-offDeviceNameChange(callback?: Callback<DeviceNameChangeResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offDeviceStateChange
+
+```TypeScript
+offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void
+```
+
+UnRegister device state callback based on the application bundle name.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-offDeviceStateChange(callback?: Callback<DeviceStateChangeResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offDiscoverFailure
+
+```TypeScript
+offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void
+```
+
+UnRegister the device discovery result callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-offDiscoverFailure(callback?: Callback<DiscoveryFailureResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offDiscoverSuccess
+
+```TypeScript
+offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void
+```
+
+UnRegister the device discovery result callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-offDiscoverSuccess(callback?: Callback<DiscoverySuccessResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## offServiceDie
+
+```TypeScript
+offServiceDie(callback?: Callback<ServiceDieData>): void
+```
+
+UnRegister the service error callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void--><!--Device-DeviceManager-offServiceDie(callback?: Callback<ServiceDieData>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## off_deviceNameChange
+
+```TypeScript
+off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
+```
+
+Unsubscribes from the device name changes. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'deviceNameChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Data {
+  deviceName: string = '';
+}
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.off('deviceNameChange', (data: Data) => {
+    console.info('deviceNameChange' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
+
+## off_deviceStateChange
 
 ```TypeScript
 off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -519,6 +775,8 @@ off(type: 'deviceStateChange', callback?: Callback<{ action: DeviceStateChange; 
 Unsubscribes from the device state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -537,8 +795,8 @@ Unsubscribes from the device state changes. This API uses an asynchronous callba
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -567,7 +825,60 @@ try {
 }
 ```
 
-## off('discoverSuccess')
+## off_discoverFailure
+
+```TypeScript
+off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
+```
+
+Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'discoverFailure' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Data {
+  reason: number = 0;
+}
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.off('discoverFailure', (data: Data) => {
+    console.info('discoverFailure' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
+
+## off_discoverSuccess
 
 ```TypeScript
 off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>): void
@@ -576,6 +887,8 @@ off(type: 'discoverSuccess', callback?: Callback<{ device: DeviceBasicInfo; }>):
 Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -594,8 +907,8 @@ Unsubscribes from the **'discoverSuccess'** event. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -623,109 +936,7 @@ try {
 }
 ```
 
-## off('deviceNameChange')
-
-```TypeScript
-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void
-```
-
-Unsubscribes from the device name changes. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-off(type: 'deviceNameChange', callback?: Callback<{ deviceName: string; }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceNameChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-
-## Examples
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceName: string = '';
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('deviceNameChange', (data: Data) => {
-    console.info('deviceNameChange' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## off('discoverFailure')
-
-```TypeScript
-off(type: 'discoverFailure', callback?: Callback<{ reason: number; }>): void
-```
-
-Unsubscribes from the **'discoverFailure'** event. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-off(type: 'discoverFailure', callback?: Callback<{ reason: int; }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discoverFailure' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-
-## Examples
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  reason: number = 0;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.off('discoverFailure', (data: Data) => {
-    console.info('discoverFailure' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## off('serviceDie')
+## off_serviceDie
 
 ```TypeScript
 off(type: 'serviceDie', callback?: Callback<{}>): void
@@ -734,6 +945,8 @@ off(type: 'serviceDie', callback?: Callback<{}>): void
 Unsubscribes from the dead events of the **DeviceManager** service. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -752,8 +965,8 @@ Unsubscribes from the dead events of the **DeviceManager** service. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -772,7 +985,210 @@ try {
 }
 ```
 
-## on('deviceStateChange')
+## onDeviceNameChange
+
+```TypeScript
+onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void
+```
+
+Register a device name change callback so that the application can be notified when discovery success.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void--><!--Device-DeviceManager-onDeviceNameChange(callback: Callback<DeviceNameChangeResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceNameChangeResult](arkts-distributedservice-distributeddevicemanager-devicenamechangeresult-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onDeviceStateChange
+
+```TypeScript
+onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void
+```
+
+Register a device state callback so that the application can be notified upon device state changes based on the application bundle name.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void--><!--Device-DeviceManager-onDeviceStateChange(callback: Callback<DeviceStateChangeResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceStateChangeResult](arkts-distributedservice-distributeddevicemanager-devicestatechangeresult-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onDiscoverFailure
+
+```TypeScript
+onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void
+```
+
+Register a device discovery result callback so that the application can be notified when discover failed.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void--><!--Device-DeviceManager-onDiscoverFailure(callback: Callback<DiscoveryFailureResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoveryFailureResult](arkts-distributedservice-distributeddevicemanager-discoveryfailureresult-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onDiscoverSuccess
+
+```TypeScript
+onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void
+```
+
+Register a device discovery result callback so that the application can be notified when discovery success.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void--><!--Device-DeviceManager-onDiscoverSuccess(callback: Callback<DiscoverySuccessResult>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DiscoverySuccessResult](arkts-distributedservice-distributeddevicemanager-discoverysuccessresult-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## onServiceDie
+
+```TypeScript
+onServiceDie(callback: Callback<ServiceDieData>): void
+```
+
+Register a serviceError callback so that the application can be notified when devicemanager service died
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void--><!--Device-DeviceManager-onServiceDie(callback: Callback<ServiceDieData>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ServiceDieData](arkts-distributedservice-distributeddevicemanager-servicediedata-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## on_deviceNameChange
+
+```TypeScript
+on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
+```
+
+Subscribes to device name changes. The application will be notified when the name of a device is changed. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'deviceNameChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Data {
+  deviceName: string = '';
+}
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.on('deviceNameChange', (data: Data) => {
+    console.info('deviceNameChange on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
+
+## on_deviceStateChange
 
 ```TypeScript
 on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; device: DeviceBasicInfo; }>): void
@@ -781,6 +1197,8 @@ on(type: 'deviceStateChange', callback: Callback<{ action: DeviceStateChange; de
 Subscribes to the device state changes. The application (identified by the bundle name) will be notified when the device state changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -799,8 +1217,8 @@ Subscribes to the device state changes. The application (identified by the bundl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -829,7 +1247,60 @@ try {
 }
 ```
 
-## on('discoverSuccess')
+## on_discoverFailure
+
+```TypeScript
+on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
+```
+
+Subscribes to the **'discoverFailure'** event. The application will be notified when a device fails to be discovered. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'discoverFailure' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+
+## Examples
+
+```TypeScript
+import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+class Data {
+  reason: number = 0;
+}
+
+try {
+  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
+  dmInstance.on('discoverFailure', (data: Data) => {
+    console.info('discoverFailure on:' + JSON.stringify(data));
+  });
+} catch (err) {
+  let e: BusinessError = err as BusinessError;
+  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
+}
+```
+
+## on_discoverSuccess
 
 ```TypeScript
 on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): void
@@ -838,6 +1309,8 @@ on(type: 'discoverSuccess', callback: Callback<{ device: DeviceBasicInfo; }>): v
 Subscribes to the **'discoverSuccess'** event. The application will be notified when a device is successfully discovered. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -856,8 +1329,8 @@ Subscribes to the **'discoverSuccess'** event. The application will be notified 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -885,118 +1358,17 @@ try {
 }
 ```
 
-## on('deviceNameChange')
-
-```TypeScript
-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void
-```
-
-Subscribes to device name changes. The application will be notified when the name of a device is changed. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void--><!--Device-DeviceManager-on(type: 'deviceNameChange', callback: Callback<{ deviceName: string; }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'deviceNameChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ deviceName: string; }&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-
-## Examples
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  deviceName: string = '';
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('deviceNameChange', (data: Data) => {
-    console.info('deviceNameChange on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('deviceNameChange errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## on('discoverFailure')
-
-```TypeScript
-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
-```
-
-Subscribes to the **'discoverFailure'** event. The application will be notified when a device fails to be discovered. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void-End-->
-
-**System capability:** SystemCapability.DistributedHardware.DeviceManager
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'discoverFailure' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ reason: number; }&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-
-## Examples
-
-```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-class Data {
-  reason: number = 0;
-}
-
-try {
-  let dmInstance = distributedDeviceManager.createDeviceManager('ohos.samples.jsHelloWorld');
-  dmInstance.on('discoverFailure', (data: Data) => {
-    console.info('discoverFailure on:' + JSON.stringify(data));
-  });
-} catch (err) {
-  let e: BusinessError = err as BusinessError;
-  console.error('discoverFailure errCode:' + e.code + ',errMessage:' + e.message);
-}
-```
-
-## on('serviceDie')
+## on_serviceDie
 
 ```TypeScript
 on(type: 'serviceDie', callback?: Callback<{}>): void
 ```
 
-Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the  
-**DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the result.
+Subscribes to the dead events of the **DeviceManager** service. The application will be notified when the **DeviceManager** service is terminated unexpectedly. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1015,8 +1387,8 @@ Subscribes to the dead events of the **DeviceManager** service. The application 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1045,6 +1417,8 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 <!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void--><!--Device-DeviceManager-startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [key: string]: Object; }): void-End-->
@@ -1062,10 +1436,10 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [11600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
 
 ## Examples
 
@@ -1100,6 +1474,39 @@ try {
 }
 ```
 
+## startDiscovering
+
+```TypeScript
+startDiscovering(discoverParam: Record<string, number | string>, filterOptions?: Record<string, number | string>): void
+```
+
+Starts to discover devices nearby. The discovery process takes 2 minutes. A maximum of 99 devices can be discovered. In Wi-Fi scenarios, only the devices in the same LAN can be discovered.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+<!--Device-DeviceManager-startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Record<string, int | string>): void--><!--Device-DeviceManager-startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Record<string, int | string>): void-End-->
+
+**System capability:** SystemCapability.DistributedHardware.DeviceManager
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| discoverParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number \| string & gt; | Yes |
+| [filterOptions](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audioplaybackcaptureconfig-i.md) | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number \| string & gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [11600104](../../apis-distributedservice-kit/errorcode-device-manager.md#11600104-discovery-unavailable) |
+
 ## stopDiscovering
 
 ```TypeScript
@@ -1108,7 +1515,9 @@ stopDiscovering(): void
 
 Stops device discovery.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1120,8 +1529,8 @@ Stops device discovery.
 
 | Error Code ID |
 | --- |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1146,7 +1555,9 @@ unbindTarget(deviceId: string): void
 
 Unbinds a device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -1164,9 +1575,9 @@ Unbinds a device.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

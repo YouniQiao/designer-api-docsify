@@ -8,7 +8,9 @@ function setSimpleKeyboardEnabled(enable: boolean): void
 
 编辑框应用设置简单键盘标志。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void--><!--Device-inputMethod-function setSimpleKeyboardEnabled(enable: boolean): void-End-->
 

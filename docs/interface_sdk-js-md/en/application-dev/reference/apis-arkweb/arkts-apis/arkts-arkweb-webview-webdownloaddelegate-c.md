@@ -2,9 +2,11 @@
 
 The download state is notified through this delegate.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebDownloadDelegate--><!--Device-webview-class WebDownloadDelegate-End-->
 
@@ -24,9 +26,13 @@ onBeforeDownload(callback: Callback<WebDownloadItem>): void
 
 Callback will be triggered before web download start.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadDelegate-onBeforeDownload(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onBeforeDownload(callback: Callback<WebDownloadItem>): void-End-->
 
@@ -36,7 +42,7 @@ Callback will be triggered before web download start.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download will be start. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download will be start. |
 
 ## onDownloadFailed
 
@@ -46,9 +52,13 @@ onDownloadFailed(callback: Callback<WebDownloadItem>): void
 
 Callback will be triggered when web download is interrupted or canceled.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadDelegate-onDownloadFailed(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadFailed(callback: Callback<WebDownloadItem>): void-End-->
 
@@ -58,7 +68,7 @@ Callback will be triggered when web download is interrupted or canceled.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did fail. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did fail. |
 
 ## onDownloadFinish
 
@@ -68,9 +78,13 @@ onDownloadFinish(callback: Callback<WebDownloadItem>): void
 
 Callback will be triggered when web download is completed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadDelegate-onDownloadFinish(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadFinish(callback: Callback<WebDownloadItem>): void-End-->
 
@@ -80,7 +94,7 @@ Callback will be triggered when web download is completed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did finish. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did finish. |
 
 ## onDownloadUpdated
 
@@ -90,9 +104,13 @@ onDownloadUpdated(callback: Callback<WebDownloadItem>): void
 
 Callback will be triggered when web download is processing.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadDelegate-onDownloadUpdated(callback: Callback<WebDownloadItem>): void--><!--Device-WebDownloadDelegate-onDownloadUpdated(callback: Callback<WebDownloadItem>): void-End-->
 
@@ -102,5 +120,5 @@ Callback will be triggered when web download is processing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did update. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md)&gt; | Yes | The callback of download did update. |
 

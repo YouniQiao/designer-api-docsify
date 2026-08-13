@@ -4,6 +4,8 @@ Provides interfaces to discover DNS based services on a local network over Multi
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace mdns--><!--Device-unnamed-declare namespace mdns-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -20,13 +22,13 @@ import { mdns } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice) |
-| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice-1) |
-| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#creatediscoveryservice) |
-| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice) |
-| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice-1) |
-| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice) |
-| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice-1) |
+| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addLocalService) |
+| [addLocalService](arkts-network-mdns-addlocalservice-f.md#addLocalService) |
+| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#createDiscoveryService) |
+| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removeLocalService) |
+| [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removeLocalService) |
+| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolveLocalService) |
+| [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolveLocalService) |
 
 ### Interfaces
 

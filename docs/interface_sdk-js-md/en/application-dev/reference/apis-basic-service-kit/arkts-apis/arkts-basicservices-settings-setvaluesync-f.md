@@ -64,9 +64,11 @@ function setValueSync(context: Context, name: string, value: string): boolean
 
 Set settingsdata value(synchronous method)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
@@ -109,13 +111,13 @@ let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STAT
 function setValueSync(context: Context, name: string, value: string, domainName: string): boolean
 ```
 
-Set settingsdata value(synchronous method).  
-[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.  
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS or ohos.permission.MANAGE_SETTINGS
 
@@ -144,7 +146,7 @@ Set settingsdata value(synchronous method).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

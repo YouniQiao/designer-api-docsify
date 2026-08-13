@@ -4,11 +4,13 @@
 
 **继承/实现关系：** MouseEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-export declare interface MouseEvent extends InputEvent--><!--Device-unnamed-export declare interface MouseEvent extends InputEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare interface MouseEvent--><!--Device-unnamed-export declare interface MouseEvent-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
@@ -22,9 +24,11 @@ action: Action
 
 **类型：** [Action](arkts-input-multimodalinput-mouseevent-action-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-action: Action--><!--Device-MouseEvent-action: Action-End-->
 
@@ -36,15 +40,15 @@ action: Action
 altKey: boolean
 ```
 
-当前altKey是否处于按下状态。 
-
-true表示处于按下状态，false表示处于抬起状态。
+当前altKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-altKey: boolean--><!--Device-MouseEvent-altKey: boolean-End-->
 
@@ -60,9 +64,11 @@ axes: AxisValue[]
 
 **类型：** [AxisValue](arkts-input-multimodalinput-mouseevent-axisvalue-i.md)[]
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-axes: AxisValue[]--><!--Device-MouseEvent-axes: AxisValue[]-End-->
 
@@ -78,9 +84,11 @@ button: Button
 
 **类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-button: Button--><!--Device-MouseEvent-button: Button-End-->
 
@@ -92,15 +100,15 @@ button: Button
 capsLock: boolean
 ```
 
-当前capsLock是否处于使能状态。 
-
-true表示使能状态，false表示处于未使能状态。
+当前capsLock是否处于使能状态。 true表示使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-capsLock: boolean--><!--Device-MouseEvent-capsLock: boolean-End-->
 
@@ -112,15 +120,15 @@ true表示使能状态，false表示处于未使能状态。
 ctrlKey: boolean
 ```
 
-当前ctrlKey是否处于按下状态。 
-
-true表示处于按下状态，false表示处于抬起状态。
+当前ctrlKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-ctrlKey: boolean--><!--Device-MouseEvent-ctrlKey: boolean-End-->
 
@@ -132,15 +140,15 @@ true表示处于按下状态，false表示处于抬起状态。
 fnKey: boolean
 ```
 
-当前fnKey是否处于按下状态。 
-
-true表示处于按下状态，false表示处于抬起状态。
+当前fnKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-fnKey: boolean--><!--Device-MouseEvent-fnKey: boolean-End-->
 
@@ -152,14 +160,15 @@ true表示处于按下状态，false表示处于抬起状态。
 globalX?: int
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+该鼠标事件以主屏左上角为原点的全局坐标系的X坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的 [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#MouseEventData（系统接口）)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的X坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-globalX?: int--><!--Device-MouseEvent-globalX?: int-End-->
 
@@ -171,14 +180,15 @@ globalX?: int
 globalY?: int
 ```
 
-该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的  
-[MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i.md#MouseEventData)为true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
+该鼠标事件以主屏左上角为原点的全局坐标系的Y坐标，单位为像素（px）。&lt;!--Del--&gt;作为入参时，若接口参数中的 [MouseEventData.useGlobalCoordinate](arkts-input-inputeventclient-mouseeventdata-i-sys.md#MouseEventData（系统接口）)为 true，该值必填，当前仅支持整数。若为false，该值无需填写，使用指定屏幕左上角为原点的相对坐标系的Y坐标计算注入事件。&lt;!--DelEnd--&gt;作为出参时，由系统上报。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-globalY?: int--><!--Device-MouseEvent-globalY?: int-End-->
 
@@ -190,15 +200,15 @@ globalY?: int
 logoKey: boolean
 ```
 
-当前logoKey是否处于按下状态。 
-
-true表示处于按下状态，false表示处于抬起状态。
+当前logoKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-logoKey: boolean--><!--Device-MouseEvent-logoKey: boolean-End-->
 
@@ -210,15 +220,15 @@ true表示处于按下状态，false表示处于抬起状态。
 numLock: boolean
 ```
 
-当前numLock是否处于使能状态。 
-
-true表示使能状态，false表示处于未使能状态。
+当前numLock是否处于使能状态。 true表示使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-numLock: boolean--><!--Device-MouseEvent-numLock: boolean-End-->
 
@@ -234,9 +244,11 @@ pressedButtons: Button[]
 
 **类型：** [Button](arkts-input-multimodalinput-mouseevent-button-e.md)[]
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-pressedButtons: Button[]--><!--Device-MouseEvent-pressedButtons: Button[]-End-->
 
@@ -252,9 +264,11 @@ pressedKeys: KeyCode[]
 
 **类型：** [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)[]
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-pressedKeys: KeyCode[]--><!--Device-MouseEvent-pressedKeys: KeyCode[]-End-->
 
@@ -268,11 +282,13 @@ rawDeltaX: int
 
 鼠标当前事件相对于上次事件的X坐标偏移值。当前仅支持整数，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-rawDeltaX: int--><!--Device-MouseEvent-rawDeltaX: int-End-->
 
@@ -286,11 +302,13 @@ rawDeltaY: int
 
 鼠标当前事件相对于上次事件的Y坐标偏移值。当前仅支持整数，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-rawDeltaY: int--><!--Device-MouseEvent-rawDeltaY: int-End-->
 
@@ -304,11 +322,13 @@ screenX: int
 
 该鼠标事件以指定屏幕左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-screenX: int--><!--Device-MouseEvent-screenX: int-End-->
 
@@ -322,11 +342,13 @@ screenY: int
 
 该鼠标事件以指定屏幕左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-screenY: int--><!--Device-MouseEvent-screenY: int-End-->
 
@@ -338,15 +360,15 @@ screenY: int
 scrollLock: boolean
 ```
 
-当前scrollLock是否处于使能状态。 
-
-true表示使能状态，false表示处于未使能状态。
+当前scrollLock是否处于使能状态。 true表示使能状态，false表示处于未使能状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-scrollLock: boolean--><!--Device-MouseEvent-scrollLock: boolean-End-->
 
@@ -358,15 +380,15 @@ true表示使能状态，false表示处于未使能状态。
 shiftKey: boolean
 ```
 
-当前shiftKey是否处于按下状态。 
-
-true表示处于按下状态，false表示处于抬起状态。
+当前shiftKey是否处于按下状态。 true表示处于按下状态，false表示处于抬起状态。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-shiftKey: boolean--><!--Device-MouseEvent-shiftKey: boolean-End-->
 
@@ -382,9 +404,11 @@ toolType: ToolType
 
 **类型：** [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-toolType: ToolType--><!--Device-MouseEvent-toolType: ToolType-End-->
 
@@ -398,11 +422,13 @@ windowX: int
 
 鼠标所在窗口左上角为原点的相对坐标系的X坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-windowX: int--><!--Device-MouseEvent-windowX: int-End-->
 
@@ -416,11 +442,13 @@ windowY: int
 
 鼠标所在窗口左上角为原点的相对坐标系的Y坐标。当前仅支持整数，单位为像素（px）。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MouseEvent-windowY: int--><!--Device-MouseEvent-windowY: int-End-->
 

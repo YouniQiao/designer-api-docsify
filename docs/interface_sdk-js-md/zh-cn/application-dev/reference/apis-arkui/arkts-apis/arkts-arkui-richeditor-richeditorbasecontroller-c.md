@@ -2,13 +2,15 @@
 
 RichEditor组件控制器基类。
 
-**继承/实现关系：** RichEditorBaseController implements [TextEditControllerEx](TextEditControllerEx)
+**继承/实现关系：** RichEditorBaseController implements TextEditControllerEx
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class RichEditorBaseController implements TextEditControllerEx--><!--Device-unnamed-export declare class RichEditorBaseController implements TextEditControllerEx-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class RichEditorBaseController--><!--Device-unnamed-export declare class RichEditorBaseController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +26,8 @@ closeSelectionMenu(): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorBaseController-closeSelectionMenu(): void--><!--Device-RichEditorBaseController-closeSelectionMenu(): void-End-->
@@ -36,13 +40,13 @@ closeSelectionMenu(): void
 deleteBackward(): void
 ```
 
-提供删除字符能力。没有内容被选中时，删除当前光标位置前的1个字符。有内容被选中时，删除选中内容。
-
-该接口不支持预上屏场景使用。
+提供删除字符能力。没有内容被选中时，删除当前光标位置前的1个字符。有内容被选中时，删除选中内容。 该接口不支持预上屏场景使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,13 +60,13 @@ deleteBackward(): void
 getCaretOffset(): int | undefined
 ```
 
-返回当前光标所在位置。
-
-当无法获取光标位置时（例如controller未与组件绑定时），该接口返回-1。
+返回当前光标所在位置。 当无法获取光标位置时（例如controller未与组件绑定时），该接口返回-1。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,6 +92,8 @@ getCaretRect(): RectResult | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorBaseController-getCaretRect(): RectResult | undefined--><!--Device-RichEditorBaseController-getCaretRect(): RectResult | undefined-End-->
@@ -111,6 +117,8 @@ getLayoutManager(): LayoutManager | undefined
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,6 +144,8 @@ getPreviewText(): PreviewText | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorBaseController-getPreviewText(): PreviewText | undefined--><!--Device-RichEditorBaseController-getPreviewText(): PreviewText | undefined-End-->
@@ -159,6 +169,8 @@ getTypingStyle(): RichEditorTextStyle | undefined
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,6 +196,8 @@ isEditing(): boolean | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorBaseController-isEditing(): boolean | undefined--><!--Device-RichEditorBaseController-isEditing(): boolean | undefined-End-->
@@ -208,6 +222,8 @@ scrollToVisible(range?: TextRange): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-RichEditorBaseController-scrollToVisible(range?: TextRange): void--><!--Device-RichEditorBaseController-scrollToVisible(range?: TextRange): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -229,6 +245,8 @@ setCaretOffset(offset: int): boolean | undefined
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,25 +272,13 @@ setCaretOffset(offset: int): boolean | undefined
 setSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-支持设置组件内的内容选中，选中部分背板高亮。
-
-selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选中区。
-
-未获焦时调用该接口不产生选中效果。
-
-从API version 12开始，在2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。
-
-在非2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则：
-
-1. 组件内有手柄菜单时，接口调用后不关闭菜单，并且调整菜单位置。
-
-2. 组件内有不带手柄的菜单时，接口调用后不关闭菜单，并且菜单位置不变。
-
-3. 组件内无菜单时，接口调用后也无菜单显示。
+支持设置组件内的内容选中，选中部分背板高亮。 selectionStart和selectionEnd均为-1时表示全选，均为0时可以清空选中区。 未获焦时调用该接口不产生选中效果。 从API version 12开始，在2in1设备中，无论options取何值，调用setSelection接口都不会弹出菜单，此外，如果组件中已经存在菜单，调用setSelection接口会关闭菜单。 在非2in1设备中，options取值为MenuPolicy.DEFAULT时，遵循以下规则： 1. 组件内有手柄菜单时，接口调用后不关闭菜单，并且调整菜单位置。 2. 组件内有不带手柄的菜单时，接口调用后不关闭菜单，并且菜单位置不变。 3. 组件内无菜单时，接口调用后也无菜单显示。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -300,6 +306,8 @@ setStyledPlaceholder(styledString: StyledString): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorBaseController-setStyledPlaceholder(styledString: StyledString): void--><!--Device-RichEditorBaseController-setStyledPlaceholder(styledString: StyledString): void-End-->
@@ -310,7 +318,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于[placeholder](arkts-arkui-richeditor-richeditorattribute-i.md#placeholder)属 性设置的提示文本。&lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-gesturestyle-c.md#GestureStyle)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-urlstyle-c.md#UrlStyle)样式的超链接跳转能力。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 设置属性字符串样式的提示文本，其优先级高于placeholder属 性设置的提示文本。&lt;br&gt;提示文本不支持触发属性字符串[GestureStyle](arkts-arkui-gesturestyle-c.md#GestureStyle)样式 绑定的手势事件，以及[UrlStyle](arkts-arkui-urlstyle-c.md#UrlStyle)样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 
@@ -323,6 +331,8 @@ setTypingParagraphStyle(style: RichEditorParagraphStyle | undefined): void
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -348,6 +358,8 @@ setTypingStyle(value: RichEditorTextStyle): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorBaseController-setTypingStyle(value: RichEditorTextStyle): void--><!--Device-RichEditorBaseController-setTypingStyle(value: RichEditorTextStyle): void-End-->
@@ -371,6 +383,8 @@ stopEditing(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

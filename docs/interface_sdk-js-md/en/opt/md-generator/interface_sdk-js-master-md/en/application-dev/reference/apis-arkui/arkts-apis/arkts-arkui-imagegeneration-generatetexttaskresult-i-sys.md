@@ -4,6 +4,8 @@ Configuration result for AI-generated text tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GenerateTextTaskResult--><!--Device-imageGeneration-interface GenerateTextTaskResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Final data in AI-generated text task.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateTextTaskResult-content: string--><!--Device-GenerateTextTaskResult-content: string-End-->
@@ -47,6 +51,8 @@ Think information in AI-generated text task.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Represents the proxy channel information, including the MAC address and service UUID of the peer device.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-proxyChannelManager-interface ChannelInfo--><!--Device-proxyChannelManager-interface ChannelInfo-End-->
 
@@ -24,7 +26,9 @@ Link type of the proxy channel.
 
 **Type:** [LinkType](arkts-distributedservice-proxychannelmanager-linktype-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ MAC address of the peer device.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Service UUID of the peer device.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

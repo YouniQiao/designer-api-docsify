@@ -4,6 +4,8 @@ Implements a **TreeListenerManager** object, which can be bound to a **TreeView*
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class TreeListenerManager--><!--Device-unnamed-export declare class TreeListenerManager-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ static getInstance(): TreeListenerManager
 Obtains a **TreeListenerManager** singleton object.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ getTreeListener(): TreeListener
 Obtains a listener.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

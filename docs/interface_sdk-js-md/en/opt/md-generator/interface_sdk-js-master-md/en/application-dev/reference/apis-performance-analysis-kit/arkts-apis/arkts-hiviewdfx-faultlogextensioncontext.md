@@ -1,4 +1,4 @@
-# @ohos.hiviewdfx.FaultLogExtensionContext(Delayed Fault Notification Context)
+# @ohos.hiviewdfx.FaultLogExtensionContext
 
 ## Modules to Import
 

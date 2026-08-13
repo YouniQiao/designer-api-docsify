@@ -8,7 +8,9 @@ Inherited from [AlertDialogParam](arkts-arkui-alertdialogparam-i.md#AlertDialogP
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface AlertDialogParamWithOptions extends AlertDialogParam--><!--Device-unnamed-declare interface AlertDialogParamWithOptions extends AlertDialogParam-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface AlertDialogParamWithOptions--><!--Device-unnamed-declare interface AlertDialogParamWithOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +29,8 @@ Button layout direction. The default value is **DialogButtonDirection.AUTO**. Yo
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Buttons in the dialog box.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

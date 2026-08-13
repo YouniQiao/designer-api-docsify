@@ -4,6 +4,8 @@ Enum for physical orientation detected by the sensor.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-motion-export enum PhysicalOrientation--><!--Device-motion-export enum PhysicalOrientation-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.Motion
@@ -19,6 +21,8 @@ UPRIGHT = 0
 Indicates upright.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates left.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhysicalOrientation-LEFT = 1--><!--Device-PhysicalOrientation-LEFT = 1-End-->
@@ -55,6 +61,8 @@ INVERTED = 2
 Indicates the physical orientation is inverted.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Indicates right.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhysicalOrientation-RIGHT = 3--><!--Device-PhysicalOrientation-RIGHT = 3-End-->
@@ -92,6 +102,8 @@ Indicates face up.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PhysicalOrientation-FACE_UP = 4--><!--Device-PhysicalOrientation-FACE_UP = 4-End-->
@@ -109,6 +121,8 @@ FACE_DOWN = 5
 Indicates face down.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

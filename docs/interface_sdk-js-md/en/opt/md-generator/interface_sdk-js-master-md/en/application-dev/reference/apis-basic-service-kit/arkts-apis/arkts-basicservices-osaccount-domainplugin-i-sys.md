@@ -2,7 +2,9 @@
 
 Provides APIs for domain account authentication.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface DomainPlugin--><!--Device-osAccount-interface DomainPlugin-End-->
 
@@ -25,6 +27,8 @@ auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUs
 Authenticates a domain account.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-auth(domainAccountInfo: DomainAccountInfo, credential: Uint8Array, callback: IUserAuthCallback): void-End-->
 
@@ -100,6 +104,8 @@ Authenticates a domain account in a pop-up window.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithPopup(domainAccountInfo: DomainAccountInfo, callback: IUserAuthCallback): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -157,6 +163,8 @@ authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback:
 Authenticates a domain account by the authorization token.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void--><!--Device-DomainPlugin-authWithToken(domainAccountInfo: DomainAccountInfo, token: Uint8Array, callback: IUserAuthCallback): void-End-->
 
@@ -217,6 +225,8 @@ Binds a domain account.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-bindAccount(domainAccountInfo: DomainAccountInfo, localId: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -276,6 +286,8 @@ Obtains the domain access token based on the specified conditions. This API uses
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void--><!--Device-DomainPlugin-getAccessToken(options: GetDomainAccessTokenOptions, callback: AsyncCallback<Uint8Array>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -334,6 +346,8 @@ getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallba
 Obtains information about a domain account. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void--><!--Device-DomainPlugin-getAccountInfo(options: GetDomainAccountInfoPluginOptions, callback: AsyncCallback<DomainAccountInfo>): void-End-->
 
@@ -397,6 +411,8 @@ getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<
 Obtains the authentication status of a domain account.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void--><!--Device-DomainPlugin-getAuthStatusInfo(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<AuthStatusInfo>): void-End-->
 
@@ -462,6 +478,8 @@ Checks whether the specified domain account token is valid.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-DomainPlugin-isAccountTokenValid(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<boolean>    ): void--><!--Device-DomainPlugin-isAccountTokenValid(      domainAccountInfo: DomainAccountInfo,      token: Uint8Array,      callback: AsyncCallback<boolean>    ): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -521,6 +539,8 @@ Unbinds a domain account.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void--><!--Device-DomainPlugin-unbindAccount(domainAccountInfo: DomainAccountInfo, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -568,3 +588,183 @@ let plugin: osAccount.DomainPlugin = {
 }
 osAccount.DomainAccountManager.registerPlugin(plugin)
 ```
+
+## auth
+
+```TypeScript
+auth: DomainPluginAuthFunc
+```
+
+Authenticates the specified domain account.
+
+**Type:** [DomainPluginAuthFunc](arkts-basicservices-osaccount-domainpluginauthfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-auth: DomainPluginAuthFunc--><!--Device-DomainPlugin-auth: DomainPluginAuthFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## authWithPopup
+
+```TypeScript
+authWithPopup: DomainPluginAuthWithPopupFunc
+```
+
+Authenticates the specified domain account with a popup.
+
+**Type:** [DomainPluginAuthWithPopupFunc](arkts-basicservices-osaccount-domainpluginauthwithpopupfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-authWithPopup: DomainPluginAuthWithPopupFunc--><!--Device-DomainPlugin-authWithPopup: DomainPluginAuthWithPopupFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## authWithToken
+
+```TypeScript
+authWithToken: DomainPluginAuthWithTokenFunc
+```
+
+Authenticates the specified domain account with an authorization token.
+
+**Type:** [DomainPluginAuthWithTokenFunc](arkts-basicservices-osaccount-domainpluginauthwithtokenfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-authWithToken: DomainPluginAuthWithTokenFunc--><!--Device-DomainPlugin-authWithToken: DomainPluginAuthWithTokenFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## bindAccount
+
+```TypeScript
+bindAccount: DomainPluginBindAccountFunc
+```
+
+Binds the specified domain account with an OS account.
+
+**Type:** [DomainPluginBindAccountFunc](arkts-basicservices-osaccount-domainpluginbindaccountfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-bindAccount: DomainPluginBindAccountFunc--><!--Device-DomainPlugin-bindAccount: DomainPluginBindAccountFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## getAccessToken
+
+```TypeScript
+getAccessToken: DomainPluginGetAccessTokenFunc
+```
+
+Gets the access token based on the specified options.
+
+**Type:** [DomainPluginGetAccessTokenFunc](arkts-basicservices-osaccount-domainplugingetaccesstokenfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-getAccessToken: DomainPluginGetAccessTokenFunc--><!--Device-DomainPlugin-getAccessToken: DomainPluginGetAccessTokenFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## getAccountInfo
+
+```TypeScript
+getAccountInfo: DomainPluginGetAccountInfoFunc
+```
+
+Gets the domain account information with the specified options.
+
+**Type:** [DomainPluginGetAccountInfoFunc](arkts-basicservices-osaccount-domainplugingetaccountinfofunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-getAccountInfo: DomainPluginGetAccountInfoFunc--><!--Device-DomainPlugin-getAccountInfo: DomainPluginGetAccountInfoFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## getAuthStatusInfo
+
+```TypeScript
+getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc
+```
+
+Gets the domain authentication property for the specified domain account.
+
+**Type:** [DomainPluginGetAuthStatusInfoFunc](arkts-basicservices-osaccount-domainplugingetauthstatusinfofunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc--><!--Device-DomainPlugin-getAuthStatusInfo: DomainPluginGetAuthStatusInfoFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## isAccountTokenValid
+
+```TypeScript
+isAccountTokenValid: DomainPluginIsAccountTokenValidFunc
+```
+
+Checks whether the token of specified domain account is valid.
+
+**Type:** [DomainPluginIsAccountTokenValidFunc](arkts-basicservices-osaccount-domainpluginisaccounttokenvalidfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-isAccountTokenValid: DomainPluginIsAccountTokenValidFunc--><!--Device-DomainPlugin-isAccountTokenValid: DomainPluginIsAccountTokenValidFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+## unbindAccount
+
+```TypeScript
+unbindAccount: DomainPluginUnbindAccountFunc
+```
+
+Unbind the specified domain account.
+
+**Type:** [DomainPluginUnbindAccountFunc](arkts-basicservices-osaccount-domainpluginunbindaccountfunc-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DomainPlugin-unbindAccount: DomainPluginUnbindAccountFunc--><!--Device-DomainPlugin-unbindAccount: DomainPluginUnbindAccountFunc-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.

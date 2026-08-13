@@ -4,7 +4,9 @@ Parameters for checking certificate revocation status.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface X509CertRevokedParams--><!--Device-cert-interface X509CertRevokedParams-End-->
 
@@ -22,11 +24,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 allowDownloadCrl?: boolean
 ```
 
-Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL.
-
-> **NOTE：**
-> 
-> Skip download if matching CRL exists in crls.
+Indicates whether to allow CRL download. The default value is false. true: The CDP extension of the certificate is used to download the CRL. false: Do not attempt to download the CRL. > **NOTE：**> > Skip download if matching CRL exists in crls.
 
 **Type:** boolean
 
@@ -34,7 +32,9 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,14 +50,7 @@ Indicates whether to allow CRL download. The default value is false. true: The C
 allowOcspCheckOnline?: boolean
 ```
 
-Indicates whether to allow online OCSP check. The default value is false.  
-- **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the  
-certificate and send a request to obtain a response;  
-- **false**: does not perform online OCSP check.
-
-> **NOTE：**
-> 
-> Skip online OCSP check if a matching OCSP response is found in ocspResponses.
+Indicates whether to allow online OCSP check. The default value is false. - **true**: performs online OCSP check, that is, attempts to obtain the OCSP URL from the AIA extension of the certificate and send a request to obtain a response; - **false**: does not perform online OCSP check. > **NOTE：**> > Skip online OCSP check if a matching OCSP response is found in ocspResponses.
 
 **Type:** boolean
 
@@ -65,7 +58,9 @@ certificate and send a request to obtain a response;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,7 +82,9 @@ CRL list. Maximum count: 100.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,7 +108,9 @@ Digest algorithm used by OCSP requests. The default value is SHA256.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,7 +132,9 @@ Preconfigured OCSP response data. Maximum count: 100.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,7 +156,9 @@ Revocation check flag. Array length range: [1,4]. The array must contain either 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

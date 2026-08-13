@@ -14,7 +14,9 @@ function openUninstallCertificateDialog(context: common.Context, certType: Certi
 
 Open the Certificate Management Uninstall Certificate dialog. The corresponding page is displayed. Use Promise asynchronous callbacks.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -42,13 +44,13 @@ Open the Certificate Management Uninstall Certificate dialog. The corresponding 
 
 | Error Code ID |
 | --- |
-| [29700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700005-nonsecure-operation) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [29700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-internal-error) |
-| [29700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
-| [29700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700002-operation-canceled) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [29700005](../errorcode-certManagerDialog.md#29700005-nonsecure-operation) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
+| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
+| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Represents the details of a single access record.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-interface UsedRecordDetail--><!--Device-privacyManager-interface UsedRecordDetail-End-->
 
@@ -22,11 +24,13 @@ import { privacyManager } from '@kit.AbilityKit';
 accessDuration: number
 ```
 
-Access duration.Unit: milliseconds.
+Access duration. Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsedRecordDetail-accessDuration: long--><!--Device-UsedRecordDetail-accessDuration: long-End-->
 
@@ -40,13 +44,13 @@ Access duration.Unit: milliseconds.
 count?: number
 ```
 
-Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections.
-
-Default value: 0.
+Number of accesses. In accessRecords, it indicates the number of successful accesses; in rejectRecords, it indicates the number of failures or rejections. Default value: 0.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsedRecordDetail-count?: int--><!--Device-UsedRecordDetail-count?: int-End-->
 
@@ -60,16 +64,13 @@ Default value: 0.
 lockScreenStatus?: number
 ```
 
-Lock screen status at the time of access.
-
-- 1: Indicates permission usage in a non-lock-screen scenario.  
-- 2: Indicates permission usage in a lock-screen scenario.
-
-Default value: 1.
+Lock screen status at the time of access. - 1: Indicates permission usage in a non-lock-screen scenario. - 2: Indicates permission usage in a lock-screen scenario. Default value: 1.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsedRecordDetail-lockScreenStatus?: int--><!--Device-UsedRecordDetail-lockScreenStatus?: int-End-->
 
@@ -87,7 +88,9 @@ Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 in
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsedRecordDetail-status: int--><!--Device-UsedRecordDetail-status: int-End-->
 
@@ -101,11 +104,13 @@ Access status. 0 indicates stopped usage, 1 indicates foreground usage, and 2 in
 timestamp: number
 ```
 
-Access timestamp.Unit: milliseconds.
+Access timestamp. Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsedRecordDetail-timestamp: long--><!--Device-UsedRecordDetail-timestamp: long-End-->
 
@@ -119,13 +124,13 @@ Access timestamp.Unit: milliseconds.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission access method.
-
-Default value: NORMAL_TYPE.
+Sensitive permission access method. Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UsedRecordDetail-usedType?: PermissionUsedType--><!--Device-UsedRecordDetail-usedType?: PermissionUsedType-End-->
 

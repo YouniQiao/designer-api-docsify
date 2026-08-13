@@ -16,7 +16,9 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -44,10 +46,10 @@ Obtains the list of widget IDs at a specified location on the device. This API u
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501016-invalid-widget-location-information) | The location of the widget is invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permissions denied. |
-| [16500050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
+| [16501016](../errorcode-form.md#16501016-invalid-widget-location-information) | The location of the widget is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permissions denied. |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 
 ## Examples
 

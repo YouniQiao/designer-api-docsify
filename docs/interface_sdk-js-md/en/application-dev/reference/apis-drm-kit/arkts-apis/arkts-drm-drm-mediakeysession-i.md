@@ -1,11 +1,12 @@
 # MediaKeySession
 
-MediaKeySession implements media key management. Before calling any API in MediaKeySession, you must use   
-[createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession-1)to create a MediaKeySession instance.
+MediaKeySession implements media key management. Before calling any API in MediaKeySession, you must use [createMediaKeySession](arkts-drm-drm-mediakeysystem-i.md#createMediaKeySession) to create a MediaKeySession instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drm-interface MediaKeySession--><!--Device-drm-interface MediaKeySession-End-->
 
@@ -25,9 +26,11 @@ checkMediaKeyStatus(): MediaKeyStatus[]
 
 Checks the status of the media keys in use.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -45,8 +48,8 @@ Checks the status of the media keys in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## clearMediaKeys
 
@@ -56,9 +59,11 @@ clearMediaKeys(): void
 
 Clears the media keys in use.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -70,8 +75,8 @@ Clears the media keys in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## destroy
 
@@ -81,9 +86,11 @@ destroy(): void
 
 Destroys this MediaKeySession instance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -95,26 +102,22 @@ Destroys this MediaKeySession instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## generateMediaKeyRequest
 
-ArkTS-Dyn:
-```TypeScript
-generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: number, options?: OptionsData[]): Promise<MediaKeyRequest>
-```
-
-ArkTS-Sta:
 ```TypeScript
 generateMediaKeyRequest(mimeType: string, initData: Uint8Array, mediaKeyType: int, options?: OptionsData[]): Promise<MediaKeyRequest>
 ```
 
 Generates a media key request. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -126,9 +129,9 @@ Generates a media key request. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | MIME type. The supported DRM solution names can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-1) . |
+| mimeType | string | Yes | MIME type. The supported DRM solution names can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) . |
 | initData | Uint8Array | Yes | Initial data. |
-| mediaKeyType | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Type of the media key. The value **0** means an online media key, and **1** means an offline media key. |
+| mediaKeyType | int | Yes | Type of the media key. The value **0** means an online media key, and **1** means an offline media key. |
 | options | [OptionsData](arkts-drm-drm-optionsdata-i.md)[] | No | Optional data. |
 
 **Return value:**
@@ -141,9 +144,9 @@ Generates a media key request. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## generateOfflineReleaseRequest
 
@@ -153,9 +156,11 @@ generateOfflineReleaseRequest(mediaKeyId: Uint8Array): Promise<Uint8Array>
 
 Generates a request to release offline media keys. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -179,9 +184,9 @@ Generates a request to release offline media keys. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## getContentProtectionLevel
 
@@ -191,9 +196,11 @@ getContentProtectionLevel(): ContentProtectionLevel
 
 Obtains the content protection level of this media key session.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -211,24 +218,24 @@ Obtains the content protection level of this media key session.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off('keyRequired')
+## offExpirationUpdate
 
 ```TypeScript
-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
+offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unsubscribes from events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
+Unregister expirationUpdate event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -236,31 +243,29 @@ Unsubscribes from events indicating that the application requests a media key. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for expiration update event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off('keyExpired')
+## offKeyExpired
 
 ```TypeScript
-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
+offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unsubscribes from events indicating that a media key expires. This API uses an asynchronous callback to return the result.
+Unregister keyExpired event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -268,31 +273,29 @@ Unsubscribes from events indicating that a media key expires. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key required event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off('vendorDefined')
+## offKeyRequired
 
 ```TypeScript
-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
+offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unsubscribes from vendor-defined events. This API uses an asynchronous callback to return the result.
+Unregister keyRequired event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -300,17 +303,75 @@ Unsubscribes from vendor-defined events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**. |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | used to listen for the key required event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off('expirationUpdate')
+## offKeysChange
+
+```TypeScript
+offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+Unregister keysChange event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Used to listen for keys change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## offVendorDefined
+
+```TypeScript
+offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
+```
+
+Unregister vendorDefined event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the vendor defined event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## off_expirationUpdate
 
 ```TypeScript
 off(type: 'expirationUpdate', callback?: (eventInfo: EventInfo) => void): void
@@ -321,6 +382,8 @@ Unsubscribes from events indicating that a media key is updated upon expiry. Thi
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -339,10 +402,78 @@ Unsubscribes from events indicating that a media key is updated upon expiry. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## off('keysChange')
+## off_keyExpired
+
+```TypeScript
+off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void
+```
+
+Unsubscribes from events indicating that a media key expires. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyExpired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## off_keyRequired
+
+```TypeScript
+off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void
+```
+
+Unsubscribes from events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'keyRequired', callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## off_keysChange
 
 ```TypeScript
 off(type: 'keysChange', callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -353,6 +484,8 @@ Unsubscribes from events indicating that a media key changes. This API uses an a
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -371,164 +504,26 @@ Unsubscribes from events indicating that a media key changes. This API uses an a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## offExpirationUpdate
-
-```TypeScript
-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister expirationUpdate event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offExpirationUpdate(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for expiration update event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offKeyExpired
+## off_vendorDefined
 
 ```TypeScript
-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void
+off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void
 ```
 
-Unregister keyExpired event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyExpired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the key required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offKeyRequired
-
-```TypeScript
-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister keyRequired event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offKeyRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | used to listen for the key required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offKeysChange
-
-```TypeScript
-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
-```
-
-Unregister keysChange event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-offKeysChange(callback?: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | No | Used to listen for keys change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## offVendorDefined
-
-```TypeScript
-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void
-```
-
-Unregister vendorDefined event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-offVendorDefined(callback?: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | No | Used to listen for the vendor defined event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## on('keyRequired')
-
-```TypeScript
-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
-```
-
-Subscribes to events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
+Unsubscribes from vendor-defined events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-off(type: 'vendorDefined', callback?: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -536,31 +531,31 @@ Subscribes to events indicating that the application requests a media key. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**, which is triggered when the application requires a media key. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
+| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**. |
+| callback | (eventInfo: EventInfo) =&gt; void | No | Callback used to return the event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on('keyExpired')
+## onExpirationUpdate
 
 ```TypeScript
-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
+onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Subscribes to events indicating that a media key expires. This API uses an asynchronous callback to return the result.
+Register expirationUpdate event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -568,31 +563,29 @@ Subscribes to events indicating that a media key expires. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**, which is triggered when a media key expires. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for expiration update event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on('vendorDefined')
+## onKeyExpired
 
 ```TypeScript
-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
+onKeyExpired(callback: (eventInfo: EventInfo) => void): void
 ```
 
-Subscribes to vendor-defined events. This API uses an asynchronous callback to return the result.
+Register keyExpired event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void-End-->
+<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -600,17 +593,105 @@ Subscribes to vendor-defined events. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**, which is triggered when a vendor-defined event occurs. |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key required event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on('expirationUpdate')
+## onKeyRequired
+
+```TypeScript
+onKeyRequired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keyRequired event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | used to listen for the key required event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onKeysChange
+
+```TypeScript
+onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
+```
+
+Register keysChange event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Used to listen for keys change event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## onVendorDefined
+
+```TypeScript
+onVendorDefined(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register vendorDefined event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the vendor defined event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## on_expirationUpdate
 
 ```TypeScript
 on(type: 'expirationUpdate', callback: (eventInfo: EventInfo) => void): void
@@ -621,6 +702,8 @@ Subscribes to events indicating that a media key is updated upon expiry. This AP
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -639,10 +722,78 @@ Subscribes to events indicating that a media key is updated upon expiry. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## on('keysChange')
+## on_keyExpired
+
+```TypeScript
+on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void
+```
+
+Subscribes to events indicating that a media key expires. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyExpired', callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyExpired' | Yes | Event type. The value is fixed at **'keyExpired'**, which is triggered when a media key expires. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## on_keyRequired
+
+```TypeScript
+on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void
+```
+
+Subscribes to events indicating that the application requests a media key. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'keyRequired', callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'keyRequired' | Yes | Event type. The value is fixed at **'keyRequired'**, which is triggered when the application requires a media key. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+
+## on_keysChange
 
 ```TypeScript
 on(type: 'keysChange', callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
@@ -653,6 +804,8 @@ Subscribes to events indicating that a media key changes. This API uses an async
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -671,22 +824,26 @@ Subscribes to events indicating that a media key changes. This API uses an async
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
-## onExpirationUpdate
+## on_vendorDefined
 
 ```TypeScript
-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void
+on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void
 ```
 
-Register expirationUpdate event.
+Subscribes to vendor-defined events. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onExpirationUpdate(callback: (eventInfo: EventInfo) => void): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-on(type: 'vendorDefined', callback: (eventInfo: EventInfo) => void): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -694,125 +851,15 @@ Register expirationUpdate event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for expiration update event. |
+| type | 'vendorDefined' | Yes | Event type. The value is fixed at **'vendorDefined'**, which is triggered when a vendor-defined event occurs. |
+| callback | (eventInfo: EventInfo) =&gt; void | Yes | Callback used to return the event information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## onKeyExpired
-
-```TypeScript
-onKeyExpired(callback: (eventInfo: EventInfo) => void): void
-```
-
-Register keyExpired event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyExpired(callback: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the key required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## onKeyRequired
-
-```TypeScript
-onKeyRequired(callback: (eventInfo: EventInfo) => void): void
-```
-
-Register keyRequired event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onKeyRequired(callback: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | used to listen for the key required event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## onKeysChange
-
-```TypeScript
-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void
-```
-
-Register keysChange event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void--><!--Device-MediaKeySession-onKeysChange(callback: (keyInfo: KeysInfo[], newKeyAvailable: boolean) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (keyInfo: KeysInfo[], newKeyAvailable: boolean) =&gt; void | Yes | Used to listen for keys change event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
-
-## onVendorDefined
-
-```TypeScript
-onVendorDefined(callback: (eventInfo: EventInfo) => void): void
-```
-
-Register vendorDefined event.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySession-onVendorDefined(callback: (eventInfo: EventInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | (eventInfo: EventInfo) =&gt; void | Yes | Used to listen for the vendor defined event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processMediaKeyResponse
 
@@ -822,9 +869,11 @@ processMediaKeyResponse(response: Uint8Array): Promise<Uint8Array>
 
 Processes a media key response. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -848,9 +897,9 @@ Processes a media key response. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## processOfflineReleaseResponse
 
@@ -860,9 +909,11 @@ processOfflineReleaseResponse(mediaKeyId: Uint8Array, response: Uint8Array): Pro
 
 Processes a response to a request for releasing offline media keys. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -887,9 +938,9 @@ Processes a response to a request for releasing offline media keys. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## requireSecureDecoderModule
 
@@ -899,9 +950,11 @@ requireSecureDecoderModule(mimeType: string): boolean
 
 Checks whether secure decoding is required.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -913,7 +966,7 @@ Checks whether secure decoding is required.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution and can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported-1) . |
+| mimeType | string | Yes | MIME type. The supported MIME types depend on the DRM solution and can be obtained by calling [isMediaKeySystemSupported](arkts-drm-drm-ismediakeysystemsupported-f.md#isMediaKeySystemSupported) . |
 
 **Return value:**
 
@@ -925,9 +978,9 @@ Checks whether secure decoding is required.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 
 ## restoreOfflineMediaKeys
 
@@ -937,9 +990,11 @@ restoreOfflineMediaKeys(mediaKeyId: Uint8Array): Promise<void>
 
 Restores offline media keys. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -963,7 +1018,7 @@ Restores offline media keys. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [24700201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
-| [24700101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possibly because: 1.Mandatory parameters are left unspecified or too many parameters. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [24700201](../errorcode-drm.md#24700201-service-exception) | Fatal service error, for example, service died. |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) | All unknown errors. |
 

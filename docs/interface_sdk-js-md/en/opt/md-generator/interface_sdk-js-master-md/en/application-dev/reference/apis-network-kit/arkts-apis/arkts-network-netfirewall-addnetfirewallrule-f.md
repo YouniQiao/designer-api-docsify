@@ -16,6 +16,8 @@ Add a firewall rule.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_NET_FIREWALL
 
 <!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<number>--><!--Device-netFirewall-function addNetFirewallRule(rule: NetFirewallRule): Promise<number>-End-->
@@ -38,18 +40,18 @@ Add a firewall rule.
 
 | Error Code ID |
 | --- |
-| [29400000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [29400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400001-number-of-firewall-rules-exceeds-the-maximum) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [29400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400002-number-of-ip-address-rules-in-the-firewall-rule-exceeds-the-maximum) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [29400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400003-number-of-port-rules-in-the-firewall-rule-exceeds-the-maximum) |
-| [29400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400004-number-of-domain-name-rules-in-the-firewall-rule-exceeds-the-maximum) |
-| [29400005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400005-number-of-fuzzy-domain-name-rules-exceeds-the-maximum) |
-| [29400007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-netfirewall.md#29400007-dns-rule-duplication) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [29400000](../errorcode-net-netfirewall.md#29400000-specified-user-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [29400001](../errorcode-net-netfirewall.md#29400001-number-of-firewall-rules-exceeds-the-maximum) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [29400002](../errorcode-net-netfirewall.md#29400002-number-of-ip-address-rules-in-the-firewall-rule-exceeds-the-maximum) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [29400003](../errorcode-net-netfirewall.md#29400003-number-of-port-rules-in-the-firewall-rule-exceeds-the-maximum) |
+| [29400004](../errorcode-net-netfirewall.md#29400004-number-of-domain-name-rules-in-the-firewall-rule-exceeds-the-maximum) |
+| [29400005](../errorcode-net-netfirewall.md#29400005-number-of-fuzzy-domain-name-rules-exceeds-the-maximum) |
+| [29400007](../errorcode-net-netfirewall.md#29400007-dns-rule-duplication) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

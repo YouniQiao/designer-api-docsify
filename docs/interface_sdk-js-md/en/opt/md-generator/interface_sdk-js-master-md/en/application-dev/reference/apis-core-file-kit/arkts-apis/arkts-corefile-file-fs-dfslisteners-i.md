@@ -4,6 +4,8 @@ Provides APIs for observing events. listening for the distributed file system st
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface DfsListeners--><!--Device-unnamed-export interface DfsListeners-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -20,10 +22,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 onStatus(networkId: string, status: number): void
 ```
 
-Called to return the specified status. Its parameters are passed in by  
-[connectDfs](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileioconnectdfs12).
+Called to return the specified status. Its parameters are passed in by [connectDfs](arkts-corefile-file-fs-connectdfs-f.md#connectDfs).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-DfsListeners-onStatus(networkId: string, status: number): void--><!--Device-DfsListeners-onStatus(networkId: string, status: number): void-End-->
 

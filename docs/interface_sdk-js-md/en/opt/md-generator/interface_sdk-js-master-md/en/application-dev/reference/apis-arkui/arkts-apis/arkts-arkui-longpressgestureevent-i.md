@@ -1,13 +1,14 @@
 # LongPressGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of   
-[onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#onGestureJudgeBegin).
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of [onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#onGestureJudgeBegin).
 
 **Inheritance/Implementation:** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
 
 **Since:** 11
 
-<!--Device-unnamed-interface LongPressGestureEvent extends BaseGestureEvent--><!--Device-unnamed-interface LongPressGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface LongPressGestureEvent--><!--Device-unnamed-interface LongPressGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +23,8 @@ Whether the event is a repeated trigger event. **true**: The event is repeated. 
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

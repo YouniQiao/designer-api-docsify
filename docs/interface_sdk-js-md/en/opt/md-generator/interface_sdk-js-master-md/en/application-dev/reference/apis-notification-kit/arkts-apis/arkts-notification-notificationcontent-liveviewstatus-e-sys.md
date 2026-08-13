@@ -2,7 +2,9 @@
 
 Enumerates the statuses of the common live view.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum LiveViewStatus--><!--Device-unnamed-export enum LiveViewStatus-End-->
 
@@ -18,7 +20,9 @@ LIVE_VIEW_CREATE = 0
 
 The live view is created.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_CREATE = 0--><!--Device-LiveViewStatus-LIVE_VIEW_CREATE = 0-End-->
 
@@ -34,7 +38,9 @@ LIVE_VIEW_INCREMENTAL_UPDATE = 1
 
 The live view is updated in incremental mode.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_INCREMENTAL_UPDATE = 1--><!--Device-LiveViewStatus-LIVE_VIEW_INCREMENTAL_UPDATE = 1-End-->
 
@@ -50,7 +56,9 @@ LIVE_VIEW_END = 2
 
 The live view is ended.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_END = 2--><!--Device-LiveViewStatus-LIVE_VIEW_END = 2-End-->
 
@@ -66,7 +74,9 @@ LIVE_VIEW_FULL_UPDATE = 3
 
 The live view is updated in full mode.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewStatus-LIVE_VIEW_FULL_UPDATE = 3--><!--Device-LiveViewStatus-LIVE_VIEW_FULL_UPDATE = 3-End-->
 
@@ -83,6 +93,8 @@ LIVE_VIEW_PENDING_CREATE = 4
 The live view is created by condition.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,6 +113,8 @@ LIVE_VIEW_PENDING_END = 6
 The live view is terminated by condition.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

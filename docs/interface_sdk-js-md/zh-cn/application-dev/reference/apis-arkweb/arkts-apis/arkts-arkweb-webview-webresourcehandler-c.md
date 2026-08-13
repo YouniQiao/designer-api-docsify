@@ -2,9 +2,11 @@
 
 Used to intercept url requests. Response headers and body can be sent through WebResourceHandler.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebResourceHandler--><!--Device-webview-class WebResourceHandler-End-->
 
@@ -16,11 +18,15 @@ Used to intercept url requests. Response headers and body can be sent through We
 didFail(code: WebNetErrorList): void
 ```
 
-Notify that this request should be failed.
+通知ArkWeb内核被拦截请求应该返回失败。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList): void-End-->
 
@@ -30,14 +36,14 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didFail
 
@@ -47,9 +53,11 @@ didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void
 
 Notify that this request should be failed.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean): void-End-->
 
@@ -66,8 +74,40 @@ Notify that this request should be failed.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| [17100101](../errorcode-webview.md#17100101-使用了错误的网络错误码) | The errorCode is either ARKWEB_NET_OK or outside the range of error codes in WebNetErrorList. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+
+## didFail
+
+```TypeScript
+didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void
+```
+
+Notify that this request should be failed.
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+<!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void--><!--Device-WebResourceHandler-didFail(code: WebNetErrorList, completeIfNoResponse: boolean, customErrorCode: number): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
+| customErrorCode | number | 是 | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didFinish
 
@@ -75,11 +115,15 @@ Notify that this request should be failed.
 didFinish(): void
 ```
 
-Notify that this request should be finished and there is no more data available.
+通知Web组件被拦截的请求已经完成，并且没有更多的数据可用。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceHandler-didFinish(): void--><!--Device-WebResourceHandler-didFinish(): void-End-->
 
@@ -89,7 +133,7 @@ Notify that this request should be finished and there is no more data available.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didReceiveResponse
 
@@ -97,11 +141,15 @@ Notify that this request should be finished and there is no more data available.
 didReceiveResponse(response: WebSchemeHandlerResponse): void
 ```
 
-Pass response headers to intercepted requests.
+将构造的响应头传递给被拦截的请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void--><!--Device-WebResourceHandler-didReceiveResponse(response: WebSchemeHandlerResponse): void-End-->
 
@@ -111,14 +159,14 @@ Pass response headers to intercepted requests.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | [WebSchemeHandlerResponse](arkts-arkweb-webview-webschemehandlerresponse-c.md) | 是 | Set response header to intercept. |
+| response | [WebSchemeHandlerResponse](../../apis-na/arkts-apis/arkts-na-webview-webschemehandlerresponse-c.md) | 是 | 该拦截请求的响应。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 
 ## didReceiveResponseBody
 
@@ -126,11 +174,15 @@ Pass response headers to intercepted requests.
 didReceiveResponseBody(data: ArrayBuffer): void
 ```
 
-Pass response body data to intercepted requests.
+将构造的响应体传递给被拦截的请求。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void--><!--Device-WebResourceHandler-didReceiveResponseBody(data: ArrayBuffer): void-End-->
 
@@ -140,12 +192,12 @@ Pass response body data to intercepted requests.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| data | ArrayBuffer | 是 | Set response body to intercept. |
+| data | ArrayBuffer | 是 | 响应体数据。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
-| [17100021](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. |
+| [17100021](../errorcode-webview.md#17100021-webresourcehandler已经失效) | The resource handler is invalid. |
 

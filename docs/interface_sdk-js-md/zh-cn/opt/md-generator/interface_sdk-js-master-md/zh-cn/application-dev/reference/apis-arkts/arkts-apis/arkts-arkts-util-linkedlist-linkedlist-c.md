@@ -2,11 +2,37 @@
 
 LinkedList底层通过双向链表实现，每个节点都包含对前一个元素和后一个元素的引用。查询元素时，可以从头或从尾部遍历，插入和删除效率高，查询效率低。LinkedList允许元素为null。
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-unnamed-declare class LinkedList<T>--><!--Device-unnamed-declare class LinkedList<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class LinkedList--><!--Device-unnamed-declare class LinkedList-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+返回一个迭代器，每一项都是一个ArkTS对象。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinkedList-$_iterator(): IterableIterator<T>--><!--Device-LinkedList-$_iterator(): IterableIterator<T>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;T & gt; |
 
 ## [Symbol.iterator]
 
@@ -17,6 +43,8 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 返回一个迭代器，用于遍历LinkedList中的元素。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +62,7 @@ LinkedList底层通过双向链表实现，每个节点都包含对前一个元�
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -75,7 +103,9 @@ add(element: T): boolean
 
 在LinkedList尾部插入元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -99,7 +129,7 @@ add(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -131,7 +161,9 @@ addFirst(element: T): void
 
 在LinkedList头部插入元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -149,7 +181,7 @@ addFirst(element: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -178,7 +210,9 @@ clear(): void
 
 清除LinkedList中的所有元素，并将length置为0。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -190,7 +224,7 @@ clear(): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -213,7 +247,9 @@ clone(): LinkedList<T>
 
 克隆一个与LinkedList相同的实例并返回。修改克隆后的实例并不会影响原实例。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -231,7 +267,7 @@ clone(): LinkedList<T>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -253,7 +289,9 @@ constructor()
 
 LinkedList的构造函数。调用后，创建一个空的LinkedList实例。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -265,7 +303,7 @@ LinkedList的构造函数。调用后，创建一个空的LinkedList实例。
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -281,7 +319,9 @@ convertToArray(): Array<T>
 
 将当前LinkedList实例转换成数组并返回。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -299,7 +339,7 @@ convertToArray(): Array<T>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -323,6 +363,8 @@ forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => vo
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void--><!--Device-LinkedList-forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => void, thisArg?: Object): void-End-->
@@ -340,7 +382,7 @@ forEach(callbackFn: (value: T, index?: number, LinkedList?: LinkedList<T>) => vo
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -359,6 +401,32 @@ linkedList.forEach((value: number, index: number) => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: LinkedListForEachCb<T>): void
+```
+
+用对该元素应用操作符的结果替换linkedList中的每个元素。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinkedList-forEach(callbackFn: LinkedListForEachCb<T>): void--><!--Device-LinkedList-forEach(callbackFn: LinkedListForEachCb<T>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [LinkedListForEachCb](arkts-arkts-linkedlistforeachcb-t.md)&lt;T&gt; | 是 |
+
 ## get
 
 ```TypeScript
@@ -367,7 +435,9 @@ get(index: number): T
 
 根据下标获取LinkedList中的元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -391,8 +461,8 @@ get(index: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -417,7 +487,9 @@ getFirst(): T
 
 获取LinkedList实例中的第一个元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -435,8 +507,8 @@ getFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -458,7 +530,9 @@ getIndexOf(element: T): number
 
 查找指定元素第一次出现时的下标值，查找失败返回-1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -482,7 +556,7 @@ getIndexOf(element: T): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -507,7 +581,9 @@ getLast(): T
 
 获取LinkedList实例中的最后一个元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -525,8 +601,8 @@ getLast(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -548,7 +624,9 @@ getLastIndexOf(element: T): number
 
 查找指定元素最后一次出现时的下标值，查找失败返回-1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -572,7 +650,7 @@ getLastIndexOf(element: T): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -597,7 +675,9 @@ has(element: T): boolean
 
 判断LinkedList中是否包含指定元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -621,7 +701,7 @@ has(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -640,7 +720,9 @@ insert(index: number, element: T): void
 
 在长度范围内任意位置插入指定元素，可插入位置区间为[0, LinkedList.length]，在linkedList.length处插入时即在linkedList尾部添加元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -659,8 +741,8 @@ insert(index: number, element: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -681,7 +763,9 @@ remove(element: T): boolean
 
 删除查找到的第一个指定元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -705,7 +789,7 @@ remove(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -729,6 +813,8 @@ removeByIndex(index: number): T
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinkedList-removeByIndex(index: number): T--><!--Device-LinkedList-removeByIndex(index: number): T-End-->
@@ -751,8 +837,8 @@ removeByIndex(index: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -767,6 +853,43 @@ let result = linkedList.removeByIndex(2);
 console.info("result:", result);  // result: 5
 ```
 
+## removeByIndex
+
+```TypeScript
+removeByIndex(index: number): T | undefined
+```
+
+删除并返回此linkedList中指定下标位置的元素。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinkedList-removeByIndex(index: int): T | undefined--><!--Device-LinkedList-removeByIndex(index: int): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## removeFirst
 
 ```TypeScript
@@ -776,6 +899,8 @@ removeFirst(): T
 删除并返回LinkedList的第一个元素。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -793,8 +918,8 @@ removeFirst(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -809,6 +934,36 @@ let result = linkedList.removeFirst();
 console.info("result:", result);  // result: 2
 ```
 
+## removeFirst
+
+```TypeScript
+removeFirst(): T | undefined
+```
+
+获取并删除此linkedList的头部元素（第一个元素）。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinkedList-removeFirst(): T | undefined--><!--Device-LinkedList-removeFirst(): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
 ## removeFirstFound
 
 ```TypeScript
@@ -817,7 +972,9 @@ removeFirstFound(element: T): boolean
 
 删除第一次出现的指定元素。如果LinkedList中不存在指定元素，会抛出错误。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -841,9 +998,9 @@ removeFirstFound(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
-| [10200017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200017-删除不存在的元素错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| [10200017](../errorcode-utils.md#10200017-删除不存在的元素错误) |
 
 ## 示例
 
@@ -867,6 +1024,8 @@ removeLast(): T
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LinkedList-removeLast(): T--><!--Device-LinkedList-removeLast(): T-End-->
@@ -883,8 +1042,8 @@ removeLast(): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
 
 ## 示例
 
@@ -899,6 +1058,36 @@ let result = linkedList.removeLast();
 console.info("result:", result);  // result: 4
 ```
 
+## removeLast
+
+```TypeScript
+removeLast(): T | undefined
+```
+
+删除并返回此linkedList的最后一个元素。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LinkedList-removeLast(): T | undefined--><!--Device-LinkedList-removeLast(): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+
 ## removeLastFound
 
 ```TypeScript
@@ -907,7 +1096,9 @@ removeLastFound(element: T): boolean
 
 删除最后一次出现的指定元素。如果LinkedList中不存在指定元素，会抛出错误。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -931,9 +1122,9 @@ removeLastFound(element: T): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
-| [10200017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200017-删除不存在的元素错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| [10200017](../errorcode-utils.md#10200017-删除不存在的元素错误) |
 
 ## 示例
 
@@ -955,7 +1146,9 @@ set(index: number, element: T): T
 
 替换LinkedList指定位置的元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -980,9 +1173,9 @@ set(index: number, element: T): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-容器为空) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200010](../errorcode-utils.md#10200010-容器为空) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -1007,6 +1200,8 @@ LinkedList的元素个数。
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

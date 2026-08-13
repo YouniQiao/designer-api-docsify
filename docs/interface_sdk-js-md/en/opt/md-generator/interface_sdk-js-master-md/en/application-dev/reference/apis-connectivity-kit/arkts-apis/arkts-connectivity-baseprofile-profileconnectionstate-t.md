@@ -6,7 +6,9 @@ type ProfileConnectionState = constant.ProfileConnectionState
 
 Indicate the profile connection state.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

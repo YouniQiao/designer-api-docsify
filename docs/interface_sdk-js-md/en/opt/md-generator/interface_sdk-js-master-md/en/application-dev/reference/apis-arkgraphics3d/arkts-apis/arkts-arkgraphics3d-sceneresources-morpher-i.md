@@ -2,7 +2,9 @@
 
 Defines the deformation of 3D models by adjusting the weights of different deformation targets to create dynamic effects.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Morpher--><!--Device-unnamed-export interface Morpher-End-->
 
@@ -14,11 +16,13 @@ Defines the deformation of 3D models by adjusting the weights of different defor
 readonly targets: Record<string, number>
 ```
 
-Used to store the names and weights of deformation targets.The weight value is usually within the range of [0.0, 1.0].
+Used to store the names and weights of deformation targets. The weight value is usually within the range of [0.0, 1.0].
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Morpher-readonly targets: Record<string, double>--><!--Device-Morpher-readonly targets: Record<string, double>-End-->
 

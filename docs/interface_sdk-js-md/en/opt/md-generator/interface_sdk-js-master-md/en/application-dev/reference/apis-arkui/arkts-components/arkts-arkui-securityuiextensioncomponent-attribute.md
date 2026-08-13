@@ -1,14 +1,14 @@
 # SecurityUIExtensionComponent properties/events
 
-The [universal attributes](./common) are supported.
+The universal attributes are supported. The following events are supported:
 
-The following events are supported:
-
-**Inheritance/Implementation:** SecurityUIExtensionComponentAttribute extends [CommonMethod<SecurityUIExtensionComponentAttribute>](CommonMethod<SecurityUIExtensionComponentAttribute>)
+**Inheritance/Implementation:** SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>--><!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute extends CommonMethod<SecurityUIExtensionComponentAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute--><!--Device-unnamed-declare class SecurityUIExtensionComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

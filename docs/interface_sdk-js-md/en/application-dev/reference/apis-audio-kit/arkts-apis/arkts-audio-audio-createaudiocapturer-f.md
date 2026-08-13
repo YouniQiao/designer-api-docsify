@@ -18,6 +18,8 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Capturer
@@ -27,7 +29,7 @@ Creates an AudioCapturer instance. This API uses an asynchronous callback to ret
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:&lt;br&gt; Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.&lt;br&gt;Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the AudioCapturer instance obtained; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:&lt;br&gt; Error code 6800301: indicates a parameter verification exception, permission verification exception, or system processing exception. For details, see system logs.&lt;br&gt;Error code 6800101: indicates that a mandatory parameter is null or the parameter type is incorrect. |
 
 ## Examples
 
@@ -70,11 +72,13 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
 function createAudioCapturer(options: AudioCapturerOptions, callback: AsyncCallback<AudioCapturer | null>): void
 ```
 
-Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses an asynchronous callback to return the capturer instance.Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different [Sourcetype](#Sourcetype)in options parameter, like [MICROPHONE](#ohos.permission.MICROPHONE) for the most microphone recording cases.
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses an asynchronous callback to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,14 +91,14 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [AudioCapturerOptions](arkts-audio-audio-audiocaptureroptions-i.md) | Yes | Capturer configurations. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AudioCapturer](arkts-audio-audio-audiocapturer-i.md) \| null&gt; | Yes | Callback used to return the audio capturer instance, or null if any error occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
 
 
 ## createAudioCapturer
@@ -108,6 +112,8 @@ Creates an AudioCapturer instance. This API uses a promise to return the result.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>--><!--Device-audio-function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer>-End-->
 
@@ -165,11 +171,13 @@ audio.createAudioCapturer(audioCapturerOptions).then((data) => {
 function createAudioCapturer(options: AudioCapturerOptions): Promise<AudioCapturer | null>
 ```
 
-Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance.Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different [Sourcetype](#Sourcetype)in options parameter, like [MICROPHONE](#ohos.permission.MICROPHONE) for the most microphone recording cases.
+Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) instance. This method uses a promise to return the capturer instance. Using [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) to record audio will need permission according to different Sourcetype in options parameter, like MICROPHONE for the most microphone recording cases.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -193,6 +201,6 @@ Obtains an [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapturer) i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
-| [6800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
+| [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system crash. |
 

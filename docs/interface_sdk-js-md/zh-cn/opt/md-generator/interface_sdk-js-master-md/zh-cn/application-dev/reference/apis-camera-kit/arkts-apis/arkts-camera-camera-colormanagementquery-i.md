@@ -2,7 +2,9 @@
 
 色彩管理类，用于查询色彩空间参数。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface ColorManagementQuery--><!--Device-camera-interface ColorManagementQuery-End-->
 
@@ -16,7 +18,9 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 获取支持的色彩空间列表。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -34,4 +38,4 @@ getSupportedColorSpaces(): Array<colorSpaceManager.ColorSpace>
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

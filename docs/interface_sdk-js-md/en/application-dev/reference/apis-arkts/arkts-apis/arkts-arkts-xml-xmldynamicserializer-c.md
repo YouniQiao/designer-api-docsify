@@ -2,9 +2,11 @@
 
 The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
 
@@ -24,11 +26,13 @@ addEmptyElement(name: string): void
 
 Add an empty element.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
 
@@ -44,8 +48,8 @@ Add an empty element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -66,13 +70,15 @@ console.info(result); // <d/>
 constructor(encoding?: string)
 ```
 
-A parameterized constructor used to create a new XmlDynamicSerializer instance.The input parameter is an encoding format of string type.
+A parameterized constructor used to create a new XmlDynamicSerializer instance. The input parameter is an encoding format of string type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
 
@@ -88,7 +94,7 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance.T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200066](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
+| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) | Incorrect encoding format, only support utf-8. |
 
 ## Examples
 
@@ -104,11 +110,13 @@ endElement(): void
 
 Writes end tag of the element.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
 
@@ -118,8 +126,8 @@ Writes end tag of the element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200065](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) | There is no match between the startElement and the endElement. |
 
 ## Examples
 
@@ -144,11 +152,13 @@ getOutput(): ArrayBuffer
 
 Get an ArrayBuffer from a XmlDynamicSerializer instance.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
 
@@ -183,11 +193,13 @@ setAttributes(name: string, value: string): void
 
 Write an attribute to xml element.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
 
@@ -204,9 +216,9 @@ Write an attribute to xml element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -231,11 +243,13 @@ setCdata(text: string): void
 
 Writes the CDATA.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
 
@@ -251,8 +265,8 @@ Writes the CDATA.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -275,11 +289,13 @@ setComment(text: string): void
 
 Writes the comment to xml.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
 
@@ -295,8 +311,8 @@ Writes the comment to xml.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -319,11 +335,13 @@ setDeclaration(): void
 
 Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encoding="utf-8"?&gt;.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
 
@@ -333,8 +351,8 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200063](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) | Illegal position for xml. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
 
 ## Examples
 
@@ -357,11 +375,13 @@ setDocType(text: string): void
 
 Writes the DOCTYPE.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
 
@@ -377,8 +397,8 @@ Writes the DOCTYPE.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -401,11 +421,13 @@ setNamespace(prefix: string, namespace: string): void
 
 Writes the namespace of the current element tag.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
 
@@ -422,8 +444,8 @@ Writes the namespace of the current element tag.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -448,11 +470,13 @@ setText(text: string): void
 
 Writes the text to xml element.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
 
@@ -468,8 +492,8 @@ Writes the text to xml element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 
@@ -495,11 +519,13 @@ startElement(name: string): void
 
 Writes a element start tag with the given name.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
 
@@ -515,8 +541,8 @@ Writes a element start tag with the given name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
-| [10200064](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) | The cumulative length of xml has exceeded the upper limit 100000. |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) | Cannot be an empty string. |
 
 ## Examples
 

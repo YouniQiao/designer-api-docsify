@@ -2,7 +2,9 @@
 
 Describes wakeup intelligent voice engine.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineDescriptor--><!--Device-intelligentVoice-interface WakeupIntelligentVoiceEngineDescriptor-End-->
 
@@ -26,7 +28,9 @@ Need reconfirm.
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEngineDescriptor-needReconfirm: boolean--><!--Device-WakeupIntelligentVoiceEngineDescriptor-needReconfirm: boolean-End-->
 
@@ -44,7 +48,9 @@ Wakeup phrase.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WakeupIntelligentVoiceEngineDescriptor-wakeupPhrase: string--><!--Device-WakeupIntelligentVoiceEngineDescriptor-wakeupPhrase: string-End-->
 

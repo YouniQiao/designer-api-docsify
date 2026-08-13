@@ -4,6 +4,8 @@ Describes the parsing options, which can define the mode for processing BigInt.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-json-interface ParseOptions--><!--Device-json-interface ParseOptions-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -25,6 +27,8 @@ Mode for processing BigInt.
 **Type:** BigIntMode
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

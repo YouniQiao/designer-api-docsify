@@ -1,13 +1,14 @@
 # MediaHighlightAlbumChangeRequest (System API)
 
-Provides APIs for managing the media album change request. It inherits from   
-[MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#MediaAnalysisAlbumChangeRequest).
+Provides APIs for managing the media album change request. It inherits from [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#MediaAnalysisAlbumChangeRequest-(System-API)).
 
-**Inheritance/Implementation:** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#MediaAnalysisAlbumChangeRequest)
+**Inheritance/Implementation:** MediaHighlightAlbumChangeRequest extends [MediaAnalysisAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaanalysisalbumchangerequest-c-sys.md#MediaAnalysisAlbumChangeRequest-(System-API))
 
-**Since:** 21
+**Since:** 26.0.0
 
-<!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest extends MediaAnalysisAlbumChangeRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaHighlightAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -27,7 +28,9 @@ constructor(album: Album)
 
 Constructor.
 
-**Since:** 21
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaHighlightAlbumChangeRequest-constructor(album: Album)-End-->
 
@@ -45,8 +48,8 @@ Constructor.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 
@@ -81,7 +84,9 @@ setHighlightAttribute(attribute: HighlightAlbumChangeAttribute, value: string): 
 
 Sets the specified attribute value in the highlights album.
 
-**Since:** 21
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -95,17 +100,17 @@ Sets the specified attribute value in the highlights album.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| attribute | [HighlightAlbumChangeAttribute](arkts-medialibrary-photoaccesshelper-highlightalbumchangeattribute-e-sys.md) | Yes |
+| [attribute](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md) | [HighlightAlbumChangeAttribute](arkts-medialibrary-photoaccesshelper-highlightalbumchangeattribute-e-sys.md) | Yes |
 | value | string | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [23800151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |
 
 ## Examples
 

@@ -12,15 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function rename(oldPath: string, newPath: string): Promise<void>
 ```
 
-Renames a file or directory. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is not supported in a distributed directory.
+Renames a file or directory. This API uses a promise to return the result. > **NOTE：**> > This API is not supported in a distributed directory.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,15 +70,13 @@ Renames a file or directory. This API uses a promise to return the result.
 declare function rename(oldPath: string, newPath: string, callback: AsyncCallback<void>): void
 ```
 
-Renames a file or directory. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is not supported in a distributed directory.
+Renames a file or directory. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is not supported in a distributed directory.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,7 +90,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | --- | --- | --- | --- |
 | oldPath | string | Yes | Application sandbox path of the file or directory to rename. |
 | newPath | string | Yes | Application sandbox path of the renamed file or directory. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 

@@ -1,14 +1,10 @@
 # USBEndpoint
 
-通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface)获取。
+通过USB发送和接收数据的端口。通过[USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md#USBInterface)获取。 > **说明：** > > 主机控制器按照Endpoint类型调度。 > > 协议层打包时依赖type决定传输特性。
 
-> **说明：**
-> 
-> 主机控制器按照Endpoint类型调度。
-> 
-> 协议层打包时依赖type决定传输特性。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-usbManager-interface USBEndpoint--><!--Device-usbManager-interface USBEndpoint-End-->
 
@@ -24,7 +20,9 @@ address: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-address: int--><!--Device-USBEndpoint-address: int-End-->
 
@@ -40,7 +38,9 @@ attributes: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-attributes: int--><!--Device-USBEndpoint-attributes: int-End-->
 
@@ -56,9 +56,29 @@ direction: USBRequestDirection
 
 **类型：** USBRequestDirection
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-direction: USBRequestDirection--><!--Device-USBEndpoint-direction: USBRequestDirection-End-->
+
+**系统能力：** SystemCapability.USB.USBManager
+
+## endpointAddr
+
+```TypeScript
+endpointAddr: number
+```
+
+Endpoint address
+
+**类型：** number
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-USBEndpoint-endpointAddr: int--><!--Device-USBEndpoint-endpointAddr: int-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
 
@@ -72,7 +92,9 @@ interfaceId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-interfaceId: int--><!--Device-USBEndpoint-interfaceId: int-End-->
 
@@ -88,7 +110,9 @@ interval: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-interval: int--><!--Device-USBEndpoint-interval: int-End-->
 
@@ -104,7 +128,9 @@ maxPacketSize: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-maxPacketSize: int--><!--Device-USBEndpoint-maxPacketSize: int-End-->
 
@@ -122,6 +148,8 @@ number: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-USBEndpoint-number: number--><!--Device-USBEndpoint-number: number-End-->
 
 **系统能力：** SystemCapability.USB.USBManager
@@ -136,7 +164,9 @@ type: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBEndpoint-type: int--><!--Device-USBEndpoint-type: int-End-->
 

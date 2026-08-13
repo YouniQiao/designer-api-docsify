@@ -2,9 +2,11 @@
 
 Web原生消息连接的信息对象。
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ConnectionInfo--><!--Device-unnamed-export interface ConnectionInfo-End-->
 
@@ -20,9 +22,11 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-ConnectionInfo-bundleName: string--><!--Device-ConnectionInfo-bundleName: string-End-->
 
@@ -31,18 +35,20 @@ bundleName: string
 ## connectionId
 
 ```TypeScript
-connectionId: int
+connectionId: number
 ```
 
 连接的唯一标识符，用于区分和管理不同的Web原生消息连接，可用于在日志、状态跟踪或资源清理时定位特定连接。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
 
-<!--Device-ConnectionInfo-connectionId: int--><!--Device-ConnectionInfo-connectionId: int-End-->
+**废弃版本：** -1
+
+<!--Device-ConnectionInfo-connectionId: number--><!--Device-ConnectionInfo-connectionId: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -56,9 +62,11 @@ extensionOrigin: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 <!--Device-ConnectionInfo-extensionOrigin: string--><!--Device-ConnectionInfo-extensionOrigin: string-End-->
 
@@ -67,36 +75,40 @@ extensionOrigin: string
 ## fdRead
 
 ```TypeScript
-fdRead: int
+fdRead: number
 ```
 
 用于读取数据的管道文件描述符，可通过此文件描述符从Web端读取消息数据。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
 
-<!--Device-ConnectionInfo-fdRead: int--><!--Device-ConnectionInfo-fdRead: int-End-->
+**废弃版本：** -1
+
+<!--Device-ConnectionInfo-fdRead: number--><!--Device-ConnectionInfo-fdRead: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
 ## fdWrite
 
 ```TypeScript
-fdWrite: int
+fdWrite: number
 ```
 
 用于写入数据的管道文件描述符，可通过此文件描述符向Web端发送消息数据。
 
-**类型：** int
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 21
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
 
-<!--Device-ConnectionInfo-fdWrite: int--><!--Device-ConnectionInfo-fdWrite: int-End-->
+**废弃版本：** -1
+
+<!--Device-ConnectionInfo-fdWrite: number--><!--Device-ConnectionInfo-fdWrite: number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

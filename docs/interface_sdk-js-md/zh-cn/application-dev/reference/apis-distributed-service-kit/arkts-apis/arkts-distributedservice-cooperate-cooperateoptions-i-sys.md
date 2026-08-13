@@ -2,9 +2,11 @@
 
 键鼠穿越可选控制参数，控制穿出点位置。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cooperate-interface CooperateOptions--><!--Device-cooperate-interface CooperateOptions-End-->
 
@@ -20,11 +22,13 @@ displayId: long
 
 对端设备屏幕标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CooperateOptions-displayId: long--><!--Device-CooperateOptions-displayId: long-End-->
 
@@ -40,11 +44,13 @@ displayX: int
 
 鼠标X坐标位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CooperateOptions-displayX: int--><!--Device-CooperateOptions-displayX: int-End-->
 
@@ -60,11 +66,13 @@ displayY: int
 
 鼠标Y坐标位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CooperateOptions-displayY: int--><!--Device-CooperateOptions-displayY: int-End-->
 

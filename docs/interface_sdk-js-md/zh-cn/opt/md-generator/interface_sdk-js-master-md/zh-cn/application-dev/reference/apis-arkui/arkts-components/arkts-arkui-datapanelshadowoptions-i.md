@@ -6,7 +6,9 @@ DataPanelShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptio
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface DataPanelShadowOptions extends MultiShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions extends MultiShadowOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface DataPanelShadowOptions--><!--Device-unnamed-declare interface DataPanelShadowOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,21 +18,15 @@ DataPanelShadowOptions继承自[MultiShadowOptions](arkts-arkui-multishadowoptio
 colors?: Array<ResourceColor | LinearGradient>
 ```
 
-各数据段投影的颜色。
-
-默认值：与valueColors值相同
-
-**说明：**
-
-若设置的投影颜色的个数少于数据段个数时，则显示的投影颜色的个数和设置的投影颜色个数一致。
-
-若设置的投影颜色的个数多于数据段个数时，则显示的投影颜色的个数和数据段个数一致。
+各数据段投影的颜色。 默认值：与valueColors值相同 **说明：** 若设置的投影颜色的个数少于数据段个数时，则显示的投影颜色的个数和设置的投影颜色个数一致。 若设置的投影颜色的个数多于数据段个数时，则显示的投影颜色的个数和数据段个数一致。
 
 **类型：** Array&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) \| [LinearGradient](arkts-arkui-lineargradient-c.md)&gt;
 
 **默认值：** Consistent with valueColors
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

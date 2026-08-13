@@ -2,11 +2,13 @@
 
 用于设置Stage模型下使用pluginComponentManager.request方法时需要传递的参数。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-<!--Device-pluginComponentManager-export interface RequestParameterForStage--><!--Device-pluginComponentManager-export interface RequestParameterForStage-End-->
+**废弃版本：** -1
+
+<!--Device-pluginComponentManager-interface RequestParameterForStage--><!--Device-pluginComponentManager-interface RequestParameterForStage-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,13 +22,13 @@ data: KVObject
 
 附加数据，以键值对形式存储。用于向组件提供方传递请求时的自定义业务参数，以便提供方根据这些数据返回合适的组件模板。
 
-**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-RequestParameterForStage-data: KVObject--><!--Device-RequestParameterForStage-data: KVObject-End-->
 
@@ -40,15 +42,15 @@ data: KVObject
 jsonPath?: string
 ```
 
-存放模板路径的external.json文件的路径。当需要从external.json文件加载模板路径而非通过Request通信获取模板时传入此参数。当jsonPath字段不为空时不触发Request通信；当jsonPath为空（默认）时，通过Request通信向组件提供方请求组件模板。
+存放模板路径的external.json文件的路径。当需要从external.json文件加载模板路径而非通过Request通信获取模板时传入此参数。 当jsonPath字段不为空时不触发Request通信；当jsonPath为空（默认）时，通过Request通信向组件提供方请求组件模板。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-RequestParameterForStage-jsonPath?: string--><!--Device-RequestParameterForStage-jsonPath?: string-End-->
 
@@ -66,11 +68,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-RequestParameterForStage-name: string--><!--Device-RequestParameterForStage-name: string-End-->
 
@@ -88,11 +90,11 @@ owner: Want
 
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-RequestParameterForStage-owner: Want--><!--Device-RequestParameterForStage-owner: Want-End-->
 
@@ -110,11 +112,11 @@ target: Want
 
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
 <!--Device-RequestParameterForStage-target: Want--><!--Device-RequestParameterForStage-target: Want-End-->
 

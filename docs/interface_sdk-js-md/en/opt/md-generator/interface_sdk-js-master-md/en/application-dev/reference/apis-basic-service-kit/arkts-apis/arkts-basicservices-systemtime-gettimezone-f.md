@@ -18,7 +18,7 @@ Obtains the system time zone. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTimezone](@ohos.systemDateTime:systemDateTime.getTimezone(callback:)
+**Substitutes:** [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md#getTimezone)(callback: AsyncCallback&lt;string&gt;)
 
 <!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void--><!--Device-systemTime-function getTimezone(callback: AsyncCallback<string>): void-End-->
 

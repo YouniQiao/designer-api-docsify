@@ -8,7 +8,9 @@ function getAppVMMemoryInfo(): VMMemoryInfo
 
 获取VM内存相关信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo--><!--Device-hidebug-function getAppVMMemoryInfo(): VMMemoryInfo-End-->
 

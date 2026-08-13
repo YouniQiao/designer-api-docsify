@@ -3,6 +3,7 @@
 ## Marquee
 
 ```TypeScript
+@ComponentBuilder
 export declare function Marquee(
     options: MarqueeOptions
 ): MarqueeAttribute
@@ -14,9 +15,11 @@ Defines Marquee Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Marquee(    options: MarqueeOptions): MarqueeAttribute--><!--Device-unnamed-export declare function Marquee(    options: MarqueeOptions): MarqueeAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Marquee(    options: MarqueeOptions): MarqueeAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Marquee(    options: MarqueeOptions): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines Marquee Component.
 
 | Type | Description |
 | --- | --- |
-| [MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md) |  |
+| MarqueeAttribute |  |
 
 
 ## Marquee
 
 ```TypeScript
+@Builder
 export declare function Marquee(
     style: CustomBuilderT<MarqueeAttribute>,
 ): MarqueeAttribute
@@ -47,11 +51,11 @@ Defines Marquee Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Marquee(    style: CustomBuilderT<MarqueeAttribute>,): MarqueeAttribute--><!--Device-unnamed-export declare function Marquee(    style: CustomBuilderT<MarqueeAttribute>,): MarqueeAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Marquee(    style: CustomBuilderT<MarqueeAttribute>,): MarqueeAttribute--><!--Device-unnamed-@Builderexport declare function Marquee(    style: CustomBuilderT<MarqueeAttribute>,): MarqueeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines Marquee Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md)&gt; | Yes | Marquee attribute instance |
+| style | CustomBuilderT&lt;MarqueeAttribute&gt; | Yes | Marquee attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [MarqueeAttribute](arkts-arkui-marquee-marqueeattribute-i.md) |  |
+| MarqueeAttribute |  |
 

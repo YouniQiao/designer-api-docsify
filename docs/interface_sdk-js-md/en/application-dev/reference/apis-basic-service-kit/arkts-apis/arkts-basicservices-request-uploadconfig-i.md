@@ -2,9 +2,11 @@
 
 Describes the configuration of an upload task.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-request-interface UploadConfig--><!--Device-request-interface UploadConfig-End-->
 
@@ -24,11 +26,13 @@ begins?: long
 
 File start point to read when the upload task begins, in bytes. The default value is **0**. The value is a closed interval, indicating that the file is read from the beginning.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-begins?: long--><!--Device-UploadConfig-begins?: long-End-->
 
@@ -44,9 +48,11 @@ Form data in the request body.
 
 **Type:** Array&lt;RequestData&gt;
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-data: Array<RequestData>--><!--Device-UploadConfig-data: Array<RequestData>-End-->
 
@@ -60,11 +66,13 @@ ends?: long
 
 File end point to read when the upload task ends, in bytes. The default value is **-1**. The value is a closed interval, indicating that the file is read till the end.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-ends?: long--><!--Device-UploadConfig-ends?: long-End-->
 
@@ -80,9 +88,11 @@ List of files to upload. The files are submitted in multipart/form-data format.
 
 **Type:** Array&lt;File&gt;
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-files: Array<File>--><!--Device-UploadConfig-files: Array<File>-End-->
 
@@ -91,18 +101,20 @@ List of files to upload. The files are submitted in multipart/form-data format.
 ## header
 
 ```TypeScript
-header: Object
+header: Record<string, string>
 ```
 
-HTTP or HTTPS header added to an upload request.
+Adds an HTTP or HTTPS header to be included with the upload request.
 
-**Type:** Object
+**Type:** Record&lt;string, string&gt;
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-UploadConfig-header: Object--><!--Device-UploadConfig-header: Object-End-->
+**Deprecated since:** -1
+
+<!--Device-UploadConfig-header: Record<string, string>--><!--Device-UploadConfig-header: Record<string, string>-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -114,11 +126,13 @@ index?: int
 
 Path index of the task. The default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-index?: int--><!--Device-UploadConfig-index?: int-End-->
 
@@ -134,9 +148,11 @@ HTTP request method. The value can be **POST** or **PUT**. The default value is 
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-method: string--><!--Device-UploadConfig-method: string-End-->
 
@@ -148,14 +164,15 @@ HTTP request method. The value can be **POST** or **PUT**. The default value is 
 url: string
 ```
 
-Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15, the value contains a maximum of 8192 characters.   
-[Intercepting HTTP](../../../basic-services/request/app-file-upload-download.md#intercepting-http) is supported.
+Resource URL. From API version 6 to 14, the value contains a maximum of 2048 characters; since API version 15, the value contains a maximum of 8192 characters. [Intercepting HTTP](../../../basic-services/request/app-file-upload-download.md#intercepting-http) is supported.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UploadConfig-url: string--><!--Device-UploadConfig-url: string-End-->
 

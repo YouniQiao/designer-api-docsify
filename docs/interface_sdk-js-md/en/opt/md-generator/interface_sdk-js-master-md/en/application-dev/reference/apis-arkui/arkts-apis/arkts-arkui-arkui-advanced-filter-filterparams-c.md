@@ -4,6 +4,8 @@ This parameter is used to define the input of each filtering dimension.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class FilterParams--><!--Device-unnamed-export declare class FilterParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ filter item name.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -45,6 +49,8 @@ filter options.
 **Type:** Array&lt;[ResourceStr](arkts-arkui-resourcestr-t.md)&gt;
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

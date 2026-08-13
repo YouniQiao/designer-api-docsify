@@ -6,6 +6,8 @@ Defines the options for selecting audio clips.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-picker-class AudioSelectOptions--><!--Device-picker-class AudioSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
@@ -19,24 +21,22 @@ import { picker } from '@kit.CoreFileKit';
 ## maxSelectNumber
 
 ```TypeScript
-maxSelectNumber?: number
+maxSelectNumber?: int
 ```
 
-Maximum number of audio clips that can be selected.
+Maximum number of audio clips that can be selected. Default value: 1. Value range: 1 to 500
 
-Default value: **1**
+**Type:** int
 
-Value range: 1 to 500
+**Since:** 23
 
-**Type:** number
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AudioSelectOptions-maxSelectNumber?: number--><!--Device-AudioSelectOptions-maxSelectNumber?: number-End-->
+<!--Device-AudioSelectOptions-maxSelectNumber?: int--><!--Device-AudioSelectOptions-maxSelectNumber?: int-End-->
 
 **System capability:** SystemCapability.FileManagement.UserFileService
 

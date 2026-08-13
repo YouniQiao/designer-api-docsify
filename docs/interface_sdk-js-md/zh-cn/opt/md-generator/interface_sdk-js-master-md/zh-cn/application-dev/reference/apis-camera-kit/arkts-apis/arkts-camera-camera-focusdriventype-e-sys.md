@@ -2,7 +2,9 @@
 
 Enumerates the focus drive types.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum FocusDrivenType--><!--Device-camera-enum FocusDrivenType-End-->
 
@@ -18,7 +20,9 @@ AUTO = 0
 
 Automatic.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusDrivenType-AUTO = 0--><!--Device-FocusDrivenType-AUTO = 0-End-->
 
@@ -34,7 +38,9 @@ FACE = 1
 
 Face-driven.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FocusDrivenType-FACE = 1--><!--Device-FocusDrivenType-FACE = 1-End-->
 

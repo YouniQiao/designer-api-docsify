@@ -1,12 +1,5 @@
 # @ohos.app.ability.AbilityLifecycleCallback
 
-[UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)从创建到销毁过程其生命周期是动态变化的。AbilityLifecycleCallback模块提供监听
- [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)生命周期变化的能力，可用于统计每个UIAbility的运行时长、执行与UIAbility业务逻辑解耦的数据加载等场景。
- > **说明**
- >
- > 本模块接口只能监听进程内UIAbility生命周期变化。
-
-
 ## 汇总
 
 ### 类
@@ -14,3 +7,21 @@
 | 名称 |
 | --- |
 | [AbilityLifecycleCallback](arkts-ability-app-ability-abilitylifecyclecallback-abilitylifecyclecallback-c.md) |
+
+### 类型
+
+| 名称 |
+| --- |
+| [OnAbilitySaveStateFn](arkts-ability-onabilitysavestatefn-t.md) |
+| [OnAbilityWillBackgroundFn](arkts-ability-onabilitywillbackgroundfn-t.md) |
+| [OnAbilityWillContinueFn](arkts-ability-onabilitywillcontinuefn-t.md) |
+| [OnAbilityWillCreateFn](arkts-ability-onabilitywillcreatefn-t.md) |
+| [OnAbilityWillDestroyFn](arkts-ability-onabilitywilldestroyfn-t.md) |
+| [OnAbilityWillForegroundFn](arkts-ability-onabilitywillforegroundfn-t.md) |
+| [OnAbilityWillSaveStateFn](arkts-ability-onabilitywillsavestatefn-t.md) |
+| [OnNewWantFn](arkts-ability-onnewwantfn-t.md) |
+| [OnWillNewWantFn](arkts-ability-onwillnewwantfn-t.md) |
+| [OnWindowStageRestoreFn](arkts-ability-onwindowstagerestorefn-t.md) |
+| [OnWindowStageWillCreateFn](arkts-ability-onwindowstagewillcreatefn-t.md) |
+| [OnWindowStageWillDestroyFn](arkts-ability-onwindowstagewilldestroyfn-t.md) |
+| [OnWindowStageWillRestoreFn](arkts-ability-onwindowstagewillrestorefn-t.md) |

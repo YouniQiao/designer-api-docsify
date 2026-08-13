@@ -2,9 +2,11 @@
 
 Wi-Fi Category.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-enum WifiCategory--><!--Device-wifiManager-enum WifiCategory-End-->
 
@@ -18,9 +20,11 @@ DEFAULT = 1
 
 Default.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiCategory-DEFAULT = 1--><!--Device-WifiCategory-DEFAULT = 1-End-->
 
@@ -34,9 +38,11 @@ WIFI6 = 2
 
 Wifi6.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiCategory-WIFI6 = 2--><!--Device-WifiCategory-WIFI6 = 2-End-->
 
@@ -50,9 +56,11 @@ WIFI6_PLUS = 3
 
 Wifi6+.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiCategory-WIFI6_PLUS = 3--><!--Device-WifiCategory-WIFI6_PLUS = 3-End-->
 
@@ -66,9 +74,11 @@ WIFI7 = 4
 
 Wifi7.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiCategory-WIFI7 = 4--><!--Device-WifiCategory-WIFI7 = 4-End-->
 
@@ -82,9 +92,11 @@ WIFI7_PLUS = 5
 
 Wifi7+.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WifiCategory-WIFI7_PLUS = 5--><!--Device-WifiCategory-WIFI7_PLUS = 5-End-->
 

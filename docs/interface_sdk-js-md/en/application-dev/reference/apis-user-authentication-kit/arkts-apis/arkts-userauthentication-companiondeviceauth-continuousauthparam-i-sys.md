@@ -4,7 +4,9 @@ Defines continuous authentication parameters. They are used to configure paramet
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-interface ContinuousAuthParam--><!--Device-companionDeviceAuth-interface ContinuousAuthParam-End-->
 
@@ -24,13 +26,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 templateId?: Uint8Array
 ```
 
-Template ID. It is used to specify the target template to be subscribed to. If this parameter is not specified,the continuous authentication status of all templates of the current user is subscribed to by default. If a specific template ID is specified, only the authentication status change of the template is subscribed to.
+Template ID. It is used to specify the target template to be subscribed to. If this parameter is not specified, the continuous authentication status of all templates of the current user is subscribed to by default. If a specific template ID is specified, only the authentication status change of the template is subscribed to.
 
 **Type:** Uint8Array
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Gainmap图单个通道的数据内容，参考ISO 21496-1。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-image-interface GainmapChannel--><!--Device-image-interface GainmapChannel-End-->
 
@@ -18,11 +20,13 @@ alternateOffset: double
 
 The per-component alternate offset.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GainmapChannel-alternateOffset: double--><!--Device-GainmapChannel-alternateOffset: double-End-->
 
@@ -36,11 +40,13 @@ baseOffset: double
 
 The per-component baseline offset.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GainmapChannel-baseOffset: double--><!--Device-GainmapChannel-baseOffset: double-End-->
 
@@ -54,11 +60,13 @@ gainmapMax: double
 
 The per-component max gain map values.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GainmapChannel-gainmapMax: double--><!--Device-GainmapChannel-gainmapMax: double-End-->
 
@@ -72,11 +80,13 @@ gainmapMin: double
 
 The per-component min gain map values.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GainmapChannel-gainmapMin: double--><!--Device-GainmapChannel-gainmapMin: double-End-->
 
@@ -90,11 +100,13 @@ gamma: double
 
 The per-component gamma values.
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**类型：** double
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GainmapChannel-gamma: double--><!--Device-GainmapChannel-gamma: double-End-->
 

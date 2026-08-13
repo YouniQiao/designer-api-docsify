@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-systemManager-export interface UpdatePackageInfo--><!--Device-systemManager-export interface UpdatePackageInfo-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -23,6 +25,8 @@ authInfo?: string
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ description?: PackageDescription
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UpdatePackageInfo-description?: PackageDescription--><!--Device-UpdatePackageInfo-description?: PackageDescription-End-->
@@ -64,6 +70,8 @@ packages: Array<Package>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UpdatePackageInfo-packages: Array<Package>--><!--Device-UpdatePackageInfo-packages: Array<Package>-End-->
@@ -83,6 +91,8 @@ version: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 Enumerates the media types.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-media-enum MediaType--><!--Device-media-enum MediaType-End-->
 
@@ -18,11 +20,13 @@ MEDIA_TYPE_UNSUPPORTED = -1
 
 The media type is not supported.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1--><!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1-End-->
 
@@ -36,9 +40,11 @@ MEDIA_TYPE_AUD = 0
 
 Media.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,9 +60,11 @@ MEDIA_TYPE_VID = 1
 
 Video.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,11 +80,13 @@ MEDIA_TYPE_SUBTITLE = 2
 
 Subtitle.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2--><!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2-End-->
 
@@ -90,11 +100,13 @@ MEDIA_TYPE_ATTACHMENT = 3
 
 Attachment information (for example, an embedded external file).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3--><!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3-End-->
 
@@ -108,11 +120,13 @@ MEDIA_TYPE_DATA = 4
 
 Data.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaType-MEDIA_TYPE_DATA = 4--><!--Device-MediaType-MEDIA_TYPE_DATA = 4-End-->
 
@@ -126,11 +140,13 @@ MEDIA_TYPE_TIMED_METADATA = 5
 
 Metadata with a timestamp.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5--><!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5-End-->
 
@@ -144,11 +160,13 @@ MEDIA_TYPE_AUXILIARY = 6
 
 Auxiliary (track) information.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6--><!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6-End-->
 

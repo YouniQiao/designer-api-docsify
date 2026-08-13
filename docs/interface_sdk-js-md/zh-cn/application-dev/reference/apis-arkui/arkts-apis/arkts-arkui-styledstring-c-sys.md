@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class StyledString--><!--Device-unnamed-declare class StyledString-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@
 static marshalling(styledString: StyledString, callback: StyledStringMarshallCallback): ArrayBuffer
 ```
 
-序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)。
-
-当属性字符串包含UserDataSpan等自定义样式，需要自定义序列化逻辑时使用此方法；不包含自定义样式时使用基础版marshalling方法即可。
+序列化属性字符串，通过定义回调来序列化属性字符串的[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue（系统接口）)。 当属性字符串包含UserDataSpan等自定义样式，需要自定义序列化逻辑时使用此方法；不包含自定义样式时使用基础版marshalling方法即可。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,7 +39,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | styledString | [StyledString](arkts-arkui-styledstring-c.md) | 是 | 待序列化的属性字符串对象，包含文本内容及样式信息。 |
-| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 用于序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)的回调函数。回调函数签名： (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer，其中marshallableVal为需要序列化的对象，返回值为序列化后的ArrayBuffer数 据。 |
+| callback | [StyledStringMarshallCallback](arkts-arkui-styledstringmarshallcallback-t-sys.md) | 是 | 用于序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue（系统接口）)的回调函数。回调函数签名： (marshallableVal: StyledStringMarshallingValue) => ArrayBuffer，其中marshallableVal为需要序列化的对象，返回值为序列化后的ArrayBuffer数 据。 |
 
 **返回值：**
 
@@ -56,6 +58,8 @@ static marshalling(styledString: StyledString): ArrayBuffer
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -83,13 +87,13 @@ static marshalling(styledString: StyledString): ArrayBuffer
 static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallback): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue)。
-
-当需要从序列化数据中恢复包含UserDataSpan等自定义样式的属性字符串时使用此方法；恢复不含自定义样式的属性字符串时使用基础版unmarshalling方法即可。
+反序列化后得到属性字符串，通过定义回调来反序列化[StyledStringMarshallingValue](arkts-arkui-styledstringmarshallingvalue-t-sys.md#StyledStringMarshallingValue（系统接口）)。 当需要从序列化数据中恢复包含UserDataSpan等自定义样式的属性字符串时使用此方法；恢复不含自定义样式的属性字符串时使用基础版unmarshalling方法即可。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,8 +120,8 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -125,13 +129,13 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 ```
 
-反序列化后得到属性字符串。
-
-适用于从已序列化的数据中恢复属性字符串时使用，如从本地存储读取或接收跨进程传递的数据后恢复属性字符串。
+反序列化后得到属性字符串。 适用于从已序列化的数据中恢复属性字符串时使用，如从本地存储读取或接收跨进程传递的数据后恢复属性字符串。
 
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -157,6 +161,6 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [170002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 

@@ -4,6 +4,8 @@ global dom
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class dom--><!--Device-unnamed-export declare class dom-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ static createElement(tag: string): Element
 create a dynamic dom by tag, return element
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

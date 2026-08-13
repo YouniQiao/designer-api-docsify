@@ -4,6 +4,8 @@ Attach options.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-inputMethod-export interface AttachOptions--><!--Device-inputMethod-export interface AttachOptions-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -28,6 +30,8 @@ The reason for request keyboard.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
@@ -47,6 +51,8 @@ Whether to show the keyboard when attaching.
 **Default:** true
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

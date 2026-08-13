@@ -2,7 +2,9 @@
 
 Enumerates the tile modes of the shader effect.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum TileMode--><!--Device-drawing-enum TileMode-End-->
 
@@ -16,7 +18,9 @@ CLAMP = 0
 
 Replicates the edge color if the shader effect draws outside of its original boundary.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TileMode-CLAMP = 0--><!--Device-TileMode-CLAMP = 0-End-->
 
@@ -30,7 +34,9 @@ REPEAT = 1
 
 Repeats the shader effect in both horizontal and vertical directions.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TileMode-REPEAT = 1--><!--Device-TileMode-REPEAT = 1-End-->
 
@@ -44,7 +50,9 @@ MIRROR = 2
 
 Repeats the shader effect in both horizontal and vertical directions, alternating mirror images.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TileMode-MIRROR = 2--><!--Device-TileMode-MIRROR = 2-End-->
 
@@ -58,7 +66,9 @@ DECAL = 3
 
 Renders the shader effect only within the original boundary.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TileMode-DECAL = 3--><!--Device-TileMode-DECAL = 3-End-->
 

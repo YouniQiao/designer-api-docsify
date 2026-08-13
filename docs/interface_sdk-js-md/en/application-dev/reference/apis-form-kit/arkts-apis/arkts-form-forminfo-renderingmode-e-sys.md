@@ -2,9 +2,11 @@
 
 Enumerates the rendering modes supported by the widget.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum RenderingMode--><!--Device-formInfo-enum RenderingMode-End-->
 
@@ -20,9 +22,11 @@ AUTO_COLOR = 0
 
 Auto mode.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RenderingMode-AUTO_COLOR = 0--><!--Device-RenderingMode-AUTO_COLOR = 0-End-->
 
@@ -38,9 +42,11 @@ FULL_COLOR = 1
 
 Full-color mode.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RenderingMode-FULL_COLOR = 1--><!--Device-RenderingMode-FULL_COLOR = 1-End-->
 
@@ -56,9 +62,11 @@ SINGLE_COLOR = 2
 
 Single-color mode.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RenderingMode-SINGLE_COLOR = 2--><!--Device-RenderingMode-SINGLE_COLOR = 2-End-->
 

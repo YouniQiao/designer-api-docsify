@@ -10,6 +10,8 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>--><!--Device-advertising-function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -31,9 +33,9 @@ function getAdRequestBody(adParams: AdRequestParams[], adOptions: AdOptions): Pr
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 
 ## 示例
 

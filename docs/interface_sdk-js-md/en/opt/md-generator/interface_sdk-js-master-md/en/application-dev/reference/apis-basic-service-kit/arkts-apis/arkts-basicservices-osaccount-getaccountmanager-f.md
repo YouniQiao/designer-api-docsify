@@ -14,7 +14,9 @@ function getAccountManager(): AccountManager
 
 Obtains an **AccountManager** instance.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-function getAccountManager(): AccountManager--><!--Device-osAccount-function getAccountManager(): AccountManager-End-->
 

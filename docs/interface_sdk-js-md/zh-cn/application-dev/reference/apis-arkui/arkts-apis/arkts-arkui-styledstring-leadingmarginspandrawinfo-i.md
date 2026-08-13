@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo--><!--Device-unnamed-export declare interface LeadingMarginSpanDrawInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@
 baseline: double
 ```
 
-当前行的基线与组件上边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+当前行的基线与组件上边缘的距离。 单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 取值范围：大于等于0。
 
 **类型：** double
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +40,15 @@ baseline: double
 bottom: double
 ```
 
-行底与组件上边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+行底与组件上边缘的距离。 单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 取值范围：大于等于0。
 
 **类型：** double
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +70,8 @@ direction: TextDirection
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection--><!--Device-LeadingMarginSpanDrawInfo-direction: TextDirection-End-->
@@ -84,15 +84,15 @@ direction: TextDirection
 end: int
 ```
 
-当前行的结束索引。
-
-取值范围：大于等于0。
+当前行的结束索引。 取值范围：大于等于0。
 
 **类型：** int
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,15 +106,15 @@ end: int
 first: boolean
 ```
 
-当前行是否是段落的首行。
-
-true：首行；false：非首行。
+当前行是否是段落的首行。 true：首行；false：非首行。
 
 **类型：** boolean
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,15 +128,15 @@ true：首行；false：非首行。
 start: int
 ```
 
-当前行的起始索引。
-
-取值范围：大于等于0。
+当前行的起始索引。 取值范围：大于等于0。
 
 **类型：** int
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,17 +150,15 @@ start: int
 top: double
 ```
 
-行顶与组件上边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+行顶与组件上边缘的距离。 单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 取值范围：大于等于0。
 
 **类型：** double
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -174,17 +172,15 @@ top: double
 x: double
 ```
 
-当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。
-
-单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
-
-取值范围：大于等于0。
+当前行相对于组件的水平偏移。direction为RTL时，返回当前行右侧与组件右边缘的距离。 单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) 取值范围：大于等于0。
 
 **类型：** double
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

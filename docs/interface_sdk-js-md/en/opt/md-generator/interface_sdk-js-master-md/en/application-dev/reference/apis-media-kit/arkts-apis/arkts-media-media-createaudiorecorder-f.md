@@ -18,7 +18,7 @@ Creates an AudioRecorder instance to control audio recording. Only one AudioReco
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAVRecorder](media.createAVRecorder(callback:)
+**Substitutes:** [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder)(callback: AsyncCallback&lt;AVRecorder&gt;)
 
 <!--Device-media-function createAudioRecorder(): AudioRecorder--><!--Device-media-function createAudioRecorder(): AudioRecorder-End-->
 

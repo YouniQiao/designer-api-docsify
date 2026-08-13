@@ -8,7 +8,9 @@ function startDeviceLogging(url: string, maxSize?: number): Promise<void>
 
 开始将设备日志写入文件。结果通过Promise异步回调方式返回。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-function startDeviceLogging(url: string, maxSize?: int): Promise<void>--><!--Device-avSession-function startDeviceLogging(url: string, maxSize?: int): Promise<void>-End-->
 
@@ -33,10 +35,10 @@ function startDeviceLogging(url: string, maxSize?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-会话不存在) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600102](../errorcode-avsession.md#6600102-会话不存在) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

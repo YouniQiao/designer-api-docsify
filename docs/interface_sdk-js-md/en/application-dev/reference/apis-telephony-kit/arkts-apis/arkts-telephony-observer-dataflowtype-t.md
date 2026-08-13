@@ -6,9 +6,11 @@ type DataFlowType = data.DataFlowType
 
 Defines the cellular data flow type.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-observer-type DataFlowType = data.DataFlowType--><!--Device-observer-type DataFlowType = data.DataFlowType-End-->
 

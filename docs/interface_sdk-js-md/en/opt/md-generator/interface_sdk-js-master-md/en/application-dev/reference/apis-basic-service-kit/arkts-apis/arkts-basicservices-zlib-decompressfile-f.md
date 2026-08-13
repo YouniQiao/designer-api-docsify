@@ -12,17 +12,11 @@ import { zlib } from '@kit.BasicServicesKit';
 function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-Decompresses a file. This API uses an asynchronous callback to return the result.
+Decompresses a file. This API uses an asynchronous callback to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. > > The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, > the error code 900003 is returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
-> 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
-> the error code 900003 is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,10 +37,10 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
-| [900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
+| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 
 ## Examples
 
@@ -83,17 +77,11 @@ try {
 function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void
 ```
 
-Decompresses a file. This API uses an asynchronous callback to return the result.
+Decompresses a file. This API uses an asynchronous callback to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. > > The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, > the error code 900003 is returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
-> 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
-> the error code 900003 is returned.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -113,10 +101,10 @@ Decompresses a file. This API uses an asynchronous callback to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
-| [900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
+| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 
 ## Examples
 
@@ -149,17 +137,11 @@ try {
 function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>
 ```
 
-Decompresses a file. This API uses a promise to return the result.
+Decompresses a file. This API uses a promise to return the result. > **NOTE：**> > To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive > periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned. > > The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise, > the error code 900003 is returned.
 
-> **NOTE：**
-> 
-> To avoid path traversal, the input parameters of **inFile** and **outFile** cannot contain two consecutive
-> periods and a slash (../) since API version 13. Otherwise, error codes 900001 and 900002 are returned.
-> 
-> The name of the zipped file or zipped folder cannot contain two consecutive periods and a slash (../). Otherwise,
-> the error code 900003 is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -185,10 +167,10 @@ Decompresses a file. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
-| [900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-invalid-source-file) |
+| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-source-file-in-incorrect-format-or-damaged) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-invalid-destination-file) |
 
 ## Examples
 

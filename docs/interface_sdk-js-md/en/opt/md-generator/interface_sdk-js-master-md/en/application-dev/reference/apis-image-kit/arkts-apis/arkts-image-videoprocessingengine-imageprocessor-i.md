@@ -2,7 +2,9 @@
 
 Provides the ImageProcessor type, including the processing function.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-videoProcessingEngine-interface ImageProcessor--><!--Device-videoProcessingEngine-interface ImageProcessor-End-->
 
@@ -20,11 +22,13 @@ import { videoProcessingEngine } from '@kit.ImageKit';
 enhanceDetail(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to width and height. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to width and height. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
@@ -49,9 +53,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 
@@ -73,11 +77,13 @@ async function enhanceDetail(sourceImage: image.PixelMap, width: number, height:
 enhanceDetail(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): Promise<image.PixelMap>
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality. This method uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
@@ -101,9 +107,9 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 
@@ -125,11 +131,13 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
 enhanceDetailSync(sourceImage: image.PixelMap, width: number, height: number, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to width and height. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to width and height. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality.
 
-**Since:** 18
+**Since:** 23
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
 
@@ -154,10 +162,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 
@@ -179,11 +187,13 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, width: number, hei
 enhanceDetailSync(sourceImage: image.PixelMap, scale: number, level?: QualityLevel): image.PixelMap
 ```
 
-The function generate the destinationImage from sourceImage with necessary scaling operation&lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to&lt;br&gt;balance performance and image quality.
+The function generate the destinationImage from sourceImage with necessary scaling operation &lt;br&gt;according to the zoom ratio. Different levels of scaling methods are provided to &lt;br&gt;balance performance and image quality.
 
-**Since:** 18
+**Since:** 23
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
 
@@ -207,10 +217,10 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200009-invalid-value) |
-| [29200004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200004-processing-failure) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200009](../errorcode-videoprocessingengine.md#29200009-invalid-value) |
+| [29200004](../errorcode-videoprocessingengine.md#29200004-processing-failure) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
 
 ## Examples
 

@@ -12,9 +12,11 @@ import { serial } from '@kit.BasicServicesKit';
 function addPortAuthorization(tokenId: string, deviceId: string): Promise<void>
 ```
 
-Adds the permission for applications to access the serial port.This API is open only to system applications that display a pop-up window for serial port authorization.
+Adds the permission for applications to access the serial port. This API is open only to system applications that display a pop-up window for serial port authorization.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +43,7 @@ Adds the permission for applications to access the serial port.This API is open 
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) |
-| [35700008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700008-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) |
+| [35700008](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700008-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

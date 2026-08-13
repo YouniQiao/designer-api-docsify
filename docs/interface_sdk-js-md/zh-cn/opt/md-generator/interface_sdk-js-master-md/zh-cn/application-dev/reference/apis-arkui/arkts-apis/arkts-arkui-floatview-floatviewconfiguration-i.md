@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-floatView-interface FloatViewConfiguration--><!--Device-floatView-interface FloatViewConfiguration-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -20,6 +22,8 @@ context: BaseContext
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewConfiguration-context: BaseContext--><!--Device-FloatViewConfiguration-context: BaseContext-End-->
@@ -32,11 +36,13 @@ context: BaseContext
 isConfirmOnClose?: boolean
 ```
 
-控制关闭窗口时是否弹出确认对话框.如果为 true，则点击关闭按钮时需要用户确认；如果为 false，则不需要确认，直接关闭。默认值： 默认值为false。
+控制关闭窗口时是否弹出确认对话框.如果为 true，则点击关闭按钮时需要用户确认；如果为 false，则不需要确认，直接关闭。 默认值： 默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -55,6 +61,8 @@ templateType: FloatViewTemplateType
 **类型：** [FloatViewTemplateType](arkts-arkui-floatview-floatviewtemplatetype-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

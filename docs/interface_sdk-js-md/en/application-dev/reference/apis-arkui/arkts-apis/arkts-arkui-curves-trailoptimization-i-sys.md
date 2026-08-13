@@ -6,6 +6,8 @@ Trail optimization configuration for spring animations.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-curves-interface TrailOptimization--><!--Device-curves-interface TrailOptimization-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,7 +26,7 @@ import { curves } from '@kit.ArkUI';
 progressThreshold?: number
 ```
 
-Animation progress threshold.&lt;br&gt;Value range: &lt;0, 1&gt;.
+Animation progress threshold. &lt;br&gt;Value range: &lt;0, 1&gt;.
 
 **Type:** number
 
@@ -33,6 +35,8 @@ Animation progress threshold.&lt;br&gt;Value range: &lt;0, 1&gt;.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +52,7 @@ Animation progress threshold.&lt;br&gt;Value range: &lt;0, 1&gt;.
 responseDecayFactor?: number
 ```
 
-Response decay factor.Value range: &lt;0, 1&gt;.
+Response decay factor. Value range: &lt;0, 1&gt;.
 
 **Type:** number
 
@@ -57,6 +61,8 @@ Response decay factor.Value range: &lt;0, 1&gt;.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

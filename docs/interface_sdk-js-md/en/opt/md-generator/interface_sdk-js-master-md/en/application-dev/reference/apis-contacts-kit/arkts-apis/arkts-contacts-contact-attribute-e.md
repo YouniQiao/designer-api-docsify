@@ -1,8 +1,10 @@
 # Attribute
 
-Enumerates contact attributes. The enumerated value is of the number type.Create contact data in JSON format:
+Enumerates contact attributes. The enumerated value is of the number type. Create contact data in JSON format:
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-contact-enum Attribute--><!--Device-contact-enum Attribute-End-->
 
@@ -17,6 +19,8 @@ ATTR_CONTACT_EVENT = 0
 Important dates such as birthday and anniversaries of the contact.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Email address of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_EMAIL = 1--><!--Device-Attribute-ATTR_EMAIL = 1-End-->
@@ -49,6 +55,8 @@ ATTR_GROUP_MEMBERSHIP = 2
 Groups of the contact.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ IM addresses of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_IM = 3--><!--Device-Attribute-ATTR_IM = 3-End-->
@@ -81,6 +91,8 @@ ATTR_NAME = 4
 Contact name.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ Contact nickname.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_NICKNAME = 5--><!--Device-Attribute-ATTR_NICKNAME = 5-End-->
@@ -113,6 +127,8 @@ ATTR_NOTE = 6
 Contact notes.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,6 +146,8 @@ Organization of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_ORGANIZATION = 7--><!--Device-Attribute-ATTR_ORGANIZATION = 7-End-->
@@ -142,9 +160,11 @@ Organization of the contact.
 ATTR_PHONE = 8
 ```
 
-Phone number of a contact. Only full match is supported, and wildcards are not  supported.
+Phone number of a contact. Only full match is supported, and wildcards are not supported.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,6 +182,8 @@ Contact portrait.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_PORTRAIT = 9--><!--Device-Attribute-ATTR_PORTRAIT = 9-End-->
@@ -177,6 +199,8 @@ ATTR_POSTAL_ADDRESS = 10
 Postal address of the contact.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -194,6 +218,8 @@ Relationship with the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_RELATION = 11--><!--Device-Attribute-ATTR_RELATION = 11-End-->
@@ -210,6 +236,8 @@ SIP addresses of the contact.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attribute-ATTR_SIP_ADDRESS = 12--><!--Device-Attribute-ATTR_SIP_ADDRESS = 12-End-->
@@ -225,6 +253,8 @@ ATTR_WEBSITE = 13
 Website that stores the contact information.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

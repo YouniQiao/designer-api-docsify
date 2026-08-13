@@ -9,20 +9,23 @@ import { SuffixIconOptions, CloseOptions, ChipSymbolGlyphOptions, Chip, Accessib
 ## Chip
 
 ```TypeScript
+@Builder
 export declare function Chip(options: ChipOptions): void
 ```
 
 Build function of Chip.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Chip(options: ChipOptions): void--><!--Device-unnamed-export declare function Chip(options: ChipOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-@Builderexport declare function Chip(options: ChipOptions): void--><!--Device-unnamed-@Builderexport declare function Chip(options: ChipOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,5 +33,5 @@ Build function of Chip.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ChipOptions](arkts-arkui-arkui-advanced-chip-chipoptions-i.md) | Yes | chip option. |
+| options | ChipOptions | Yes | Parameters of the chip. |
 

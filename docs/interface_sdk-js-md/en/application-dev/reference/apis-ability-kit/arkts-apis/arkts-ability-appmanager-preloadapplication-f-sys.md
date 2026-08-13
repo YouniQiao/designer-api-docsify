@@ -12,11 +12,13 @@ import { appManager } from '@kit.AbilityKit';
 function preloadApplication(bundleName: string, userId: int, mode: PreloadMode, appIndex?: int): Promise<void>
 ```
 
-Preloads an application process. A successful call does not always mean that the preloading is successful. In other  words, the target application process may not be created even if the API is successfully called. This API uses a promise to return the result.
+Preloads an application process. A successful call does not always mean that the preloading is successful. In other words, the target application process may not be created even if the API is successfully called. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRELOAD_APPLICATION
 
@@ -33,9 +35,9 @@ Preloads an application process. A successful call does not always mean that the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to preload. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | User ID. |
+| userId | int | Yes | User ID. |
 | mode | [PreloadMode](arkts-ability-appmanager-preloadmode-e-sys.md) | Yes | Mode used for preloading. |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Application index of the twin application to be preloaded. |
+| appIndex | int | No | Application index of the twin application to be preloaded. |
 
 **Return value:**
 
@@ -47,11 +49,11 @@ Preloads an application process. A successful call does not always mean that the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [16300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300005-bundle-information-does-not-exist) | The target bundle does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [16300005](../errorcode-ability.md#16300005-bundle-information-does-not-exist) | The target bundle does not exist. |
 
 ## Examples
 

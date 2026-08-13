@@ -2,7 +2,9 @@
 
 Enumerates the content-encryption algorithms for CMS enveloped data.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum CmsRecipientEncryptionAlgorithm--><!--Device-cert-enum CmsRecipientEncryptionAlgorithm-End-->
 
@@ -16,9 +18,11 @@ AES_128_CBC = 0
 
 AES_128_CBC.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0-End-->
 
@@ -32,9 +36,11 @@ AES_192_CBC = 1
 
 AES_192_CBC.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
 
@@ -48,9 +54,11 @@ AES_256_CBC = 2
 
 AES_256_CBC.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
 
@@ -64,9 +72,11 @@ AES_128_GCM = 3
 
 AES_128_GCM.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3-End-->
 
@@ -80,9 +90,11 @@ AES_192_GCM = 4
 
 AES_192_GCM.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4-End-->
 
@@ -96,9 +108,11 @@ AES_256_GCM = 5
 
 AES_256_GCM.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5-End-->
 

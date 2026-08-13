@@ -6,6 +6,8 @@ Style of the placeholder text.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface PlaceholderStyle--><!--Device-unnamed-declare interface PlaceholderStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Style of the placeholder text.
 font?: Font
 ```
 
-Style of the placeholder text.
-
-The default value follows the theme.
+Style of the placeholder text. The default value follows the theme.
 
 **Type:** Font
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ The default value follows the theme.
 fontColor?: ResourceColor
 ```
 
-Color of the placeholder text.
-
-The default value follows the theme.
+Color of the placeholder text. The default value follows the theme.
 
 **Type:** ResourceColor
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

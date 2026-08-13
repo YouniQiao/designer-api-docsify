@@ -10,6 +10,8 @@ function hasWindowFocus(callback: AsyncCallback<boolean>): void
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
@@ -47,6 +49,8 @@ function hasWindowFocus(): Promise<boolean>
 检查Ability的主窗口是否具有窗口焦点。使用Promise异步回调。
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

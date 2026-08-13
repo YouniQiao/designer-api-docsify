@@ -4,6 +4,8 @@ Blinking Mode Enumeration
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-config-export enum BlinkingMode--><!--Device-config-export enum BlinkingMode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ SINGLE_BLINK = 1
 Indicates a single blink.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ CONTINUOUS_BLINK = 2
 Indicates continuous blink.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

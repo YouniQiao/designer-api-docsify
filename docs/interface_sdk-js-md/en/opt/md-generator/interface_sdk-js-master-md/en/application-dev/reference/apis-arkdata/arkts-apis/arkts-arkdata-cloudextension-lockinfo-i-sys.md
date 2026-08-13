@@ -2,7 +2,9 @@
 
 Represents the cloud database lock information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface LockInfo--><!--Device-cloudExtension-export interface LockInfo-End-->
 
@@ -26,7 +28,9 @@ Lock period of the cloud database, in seconds.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockInfo-interval: int--><!--Device-LockInfo-interval: int-End-->
 
@@ -44,7 +48,9 @@ Lock ID.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LockInfo-lockId: int--><!--Device-LockInfo-lockId: int-End-->
 

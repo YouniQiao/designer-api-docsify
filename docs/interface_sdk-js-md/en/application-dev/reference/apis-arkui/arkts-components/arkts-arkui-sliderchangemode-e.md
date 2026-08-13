@@ -6,6 +6,8 @@ Enumerates the slider states.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SliderChangeMode--><!--Device-unnamed-declare enum SliderChangeMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ The user touches or clicks the thumb.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,6 +46,8 @@ The user is dragging the slider.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -56,15 +62,13 @@ The user is dragging the slider.
 End
 ```
 
-The user stops dragging the slider by lifting their finger or releasing the mouse device.
-
-**NOTE：**
-
-The trigger occurs when an invalid value is restored to the default value, that is, when the value is set to less than **min** or greater than **max**.
+The user stops dragging the slider by lifting their finger or releasing the mouse device. **NOTE：**The trigger occurs when an invalid value is restored to the default value, that is, when the value is set to less than **min** or greater than **max**.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -85,6 +89,8 @@ The user moves the thumb by touching or clicking the track.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

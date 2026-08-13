@@ -12,6 +12,8 @@ Creates a FrameNode of the **Text** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -82,6 +84,8 @@ Creates a FrameNode of the **Column** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -151,6 +155,8 @@ Creates a FrameNode of the Row type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -219,6 +225,8 @@ Creates a FrameNode of the **Stack** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -292,6 +300,8 @@ Creates a FrameNode of the **GridRow** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -369,6 +379,8 @@ Creates a FrameNode of the **GridCol** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -445,6 +457,8 @@ Creates a FrameNode of the Flex type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -513,6 +527,8 @@ Creates a FrameNode of the **Swiper** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,6 +618,8 @@ Creates a FrameNode of the **Progress** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -673,6 +691,8 @@ Creates a FrameNode of the **Scroll** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -760,6 +780,8 @@ Creates a FrameNode of the **RelativeContainer** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -828,6 +850,8 @@ Creates a FrameNode of the **Divider** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -904,6 +928,8 @@ Creates a FrameNode of the **LoadingProgress** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -973,6 +999,8 @@ Creates a FrameNode of the **Search** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1044,6 +1072,8 @@ Creates a FrameNode of the **Blank** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1120,6 +1150,8 @@ Creates a FrameNode of the **Image** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1200,6 +1232,8 @@ Creates a FrameNode of the **List** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1294,6 +1328,8 @@ Creates a FrameNode of the **ListItem** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1317,7 +1353,7 @@ Creates a FrameNode of the **ListItem** type.
 
 ## Examples
 
-See the example for [createNode('List')](#createnodelist12).
+See the example for createNode('List').
 
 
 ## createNode
@@ -1331,6 +1367,8 @@ Creates a FrameNode of the **TextInput** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1400,6 +1438,8 @@ Creates a FrameNode of the **Button** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1477,6 +1517,8 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1500,7 +1542,7 @@ Creates a FrameNode of the **ListItemGroup** type.
 
 ## Examples
 
-See the example for [createNode('List')](#createnodelist12).
+See the example for createNode('List').
 
 
 ## createNode
@@ -1514,6 +1556,8 @@ Creates a FrameNode of the **WaterFlow** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1612,6 +1656,8 @@ Creates a FrameNode of the **FlowItem** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -1635,7 +1681,7 @@ Creates a FrameNode of the **FlowItem** type.
 
 ## Examples
 
-See the example for [createNode('WaterFlow')](#createnodewaterflow12).
+See the example for createNode('WaterFlow').
 
 
 ## createNode
@@ -1649,6 +1695,8 @@ Creates a FrameNode of the **XComponent** type.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1719,6 +1767,8 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1797,6 +1847,8 @@ Creates a FrameNode of the **XComponent** type based on the settings specified i
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -1871,6 +1923,8 @@ Creates a FrameNode of the **Checkbox** type.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1949,6 +2003,8 @@ Creates a FrameNode of the **CheckboxGroup** type.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2030,6 +2086,8 @@ Creates a FrameNode of the **Radio** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2107,6 +2165,8 @@ Creates a FrameNode of the **Rating** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2180,6 +2240,8 @@ Creates a FrameNode of the **Select** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -2250,6 +2312,8 @@ Creates a FrameNode of the **Slider** type.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2322,6 +2386,8 @@ Creates a FrameNode of the **Toggle** type.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2397,6 +2463,8 @@ Creates a FrameNode of the **Marquee** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2467,6 +2535,8 @@ Creates a FrameNode of the **TextArea** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2535,6 +2605,8 @@ Creates a FrameNode of the **SymbolGlyph** type.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2605,6 +2677,8 @@ Creates a FrameNode of the **QRCode** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2644,6 +2718,8 @@ Creates a FrameNode of the **Badge** type.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2685,6 +2761,8 @@ Creates a FrameNode of the **TextClock** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2725,6 +2803,8 @@ Creates a FrameNode of the **TextTimer** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2764,6 +2844,8 @@ Creates a FrameNode of the **Grid** type.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2857,6 +2939,8 @@ Creates a FrameNode of the **GridItem** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -2880,5 +2964,5 @@ Creates a FrameNode of the **GridItem** type.
 
 ## Examples
 
-See the example for [createNode('Grid')](#createnodegrid14).
+See the example for createNode('Grid').
 

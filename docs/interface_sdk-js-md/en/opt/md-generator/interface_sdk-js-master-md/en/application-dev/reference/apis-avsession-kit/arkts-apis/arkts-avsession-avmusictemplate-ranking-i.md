@@ -6,7 +6,9 @@ The definition of Ranking.
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface Ranking extends MediaEntity--><!--Device-avMusicTemplate-interface Ranking extends MediaEntity-End-->
+**Deprecated since:** -1
+
+<!--Device-avMusicTemplate-interface Ranking--><!--Device-avMusicTemplate-interface Ranking-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -27,6 +29,8 @@ Recommended songs under the chart.
 **Type:** [MediaEntity](arkts-avsession-avmusictemplate-mediaentity-i.md)[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

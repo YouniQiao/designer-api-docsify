@@ -1,0 +1,29 @@
+# Chip
+
+## Chip
+
+```TypeScript
+@Builder
+export declare function Chip(options: ChipOptions): void
+```
+
+Build function of Chip.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-@Builderexport declare function Chip(options: ChipOptions): void--><!--Device-unnamed-@Builderexport declare function Chip(options: ChipOptions): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | ChipOptions | Yes | chip option. |
+

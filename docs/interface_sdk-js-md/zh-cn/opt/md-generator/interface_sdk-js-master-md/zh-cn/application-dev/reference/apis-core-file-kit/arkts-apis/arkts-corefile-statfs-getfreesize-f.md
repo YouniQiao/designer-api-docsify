@@ -8,7 +8,9 @@ function getFreeSize(path: string): Promise<number>
 
 异步方法获取指定文件系统空闲字节数，以Promise形式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getFreeSize(path: string): Promise<long>--><!--Device-statfs-function getFreeSize(path: string): Promise<long>-End-->
 
@@ -69,7 +71,9 @@ function getFreeSize(path: string, callback: AsyncCallback<number>): void
 
 异步方法获取指定文件系统空闲字节数，使用callback形式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void--><!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void-End-->
 

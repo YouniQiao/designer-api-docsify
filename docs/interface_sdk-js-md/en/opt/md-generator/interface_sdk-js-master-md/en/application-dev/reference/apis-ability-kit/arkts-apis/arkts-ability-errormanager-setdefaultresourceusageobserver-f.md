@@ -12,9 +12,11 @@ import { errorManager } from '@kit.AbilityKit';
 function setDefaultResourceUsageObserver(defaultObserver?: ResourceUsageObserver): ResourceUsageObserver
 ```
 
-Set the default resource usage observer. You can use it to implement chain calls.If an empty observer is set for a certain module, it will cause the call chain to be interrupted.This API must be called on the main thread.
+Set the default resource usage observer. You can use it to implement chain calls. If an empty observer is set for a certain module, it will cause the call chain to be interrupted. This API must be called on the main thread.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,4 +42,4 @@ Set the default resource usage observer. You can use it to implement chain calls
 
 | Error Code ID |
 | --- |
-| [16000205](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-api-not-called-in-main-thread) |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) |

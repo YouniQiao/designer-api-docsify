@@ -2,7 +2,9 @@
 
 触屏来源的设备类型，当前仅支持触摸屏、触控板类型上报。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum SourceType--><!--Device-unnamed-export declare enum SourceType-End-->
 
@@ -16,7 +18,9 @@ TOUCH_SCREEN = 0
 
 触摸屏。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
 
@@ -30,7 +34,9 @@ PEN = 1
 
 笔。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SourceType-PEN = 1--><!--Device-SourceType-PEN = 1-End-->
 
@@ -44,7 +50,9 @@ TOUCH_PAD = 2
 
 触控板。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SourceType-TOUCH_PAD = 2--><!--Device-SourceType-TOUCH_PAD = 2-End-->
 

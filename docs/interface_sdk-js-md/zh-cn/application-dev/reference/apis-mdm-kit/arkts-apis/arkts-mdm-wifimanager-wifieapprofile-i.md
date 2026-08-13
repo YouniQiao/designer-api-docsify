@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-wifiManager-interface WifiEapProfile--><!--Device-wifiManager-interface WifiEapProfile-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -23,6 +25,8 @@ altSubjectMatch: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ anonymousIdentity: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-anonymousIdentity: string--><!--Device-WifiEapProfile-anonymousIdentity: string-End-->
@@ -63,6 +69,8 @@ CA 证书别名。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ CA 证书路径。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-caPath: string--><!--Device-WifiEapProfile-caPath: string-End-->
@@ -103,6 +113,8 @@ certEntry: Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,6 +136,8 @@ CA证书密码。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-certPassword: string--><!--Device-WifiEapProfile-certPassword: string-End-->
@@ -143,6 +157,8 @@ clientCertAliases: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,6 +180,8 @@ domainSuffixMatch: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-domainSuffixMatch: string--><!--Device-WifiEapProfile-domainSuffixMatch: string-End-->
@@ -183,6 +201,8 @@ EAP认证方式。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -204,6 +224,8 @@ SIM卡的子ID。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-eapSubId: number--><!--Device-WifiEapProfile-eapSubId: number-End-->
@@ -223,6 +245,8 @@ identity: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -244,6 +268,8 @@ PWD类型，密码认证。无需服务器证书。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-password: string--><!--Device-WifiEapProfile-password: string-End-->
@@ -263,6 +289,8 @@ phase2Method: Phase2Method
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -284,6 +312,8 @@ plmn: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiEapProfile-plmn: string--><!--Device-WifiEapProfile-plmn: string-End-->
@@ -303,6 +333,8 @@ realm: string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

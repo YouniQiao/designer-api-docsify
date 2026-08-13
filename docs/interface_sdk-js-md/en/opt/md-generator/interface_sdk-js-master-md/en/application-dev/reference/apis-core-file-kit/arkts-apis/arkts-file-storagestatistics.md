@@ -2,7 +2,9 @@
 
 The **storageStatistics** module provides APIs for obtaining storage space information, including the space of built-in and plug-in memory cards, space occupied by different types of data, and space of application data.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace storageStatistics--><!--Device-unnamed-declare namespace storageStatistics-End-->
 
@@ -20,40 +22,40 @@ import { storageStatistics } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getCurrentBundleInodes](arkts-corefile-storagestatistics-getcurrentbundleinodes-f.md#getcurrentbundleinodes) |
-| [getCurrentBundleStats](arkts-corefile-storagestatistics-getcurrentbundlestats-f.md#getcurrentbundlestats) |
-| [getCurrentBundleStats](arkts-corefile-storagestatistics-getcurrentbundlestats-f.md#getcurrentbundlestats-1) |
-| [getFreeInodes](arkts-corefile-storagestatistics-getfreeinodes-f.md#getfreeinodes) |
-| [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f.md#getfreesize) |
-| [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f.md#getfreesize-1) |
-| [getFreeSizeSync](arkts-corefile-storagestatistics-getfreesizesync-f.md#getfreesizesync) |
-| [getTotalInodes](arkts-corefile-storagestatistics-gettotalinodes-f.md#gettotalinodes) |
-| [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f.md#gettotalsize) |
-| [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f.md#gettotalsize-1) |
-| [getTotalSizeSync](arkts-corefile-storagestatistics-gettotalsizesync-f.md#gettotalsizesync) |
+| [getCurrentBundleInodes](arkts-corefile-storagestatistics-getcurrentbundleinodes-f.md#getCurrentBundleInodes) |
+| [getCurrentBundleStats](arkts-corefile-storagestatistics-getcurrentbundlestats-f.md#getCurrentBundleStats) |
+| [getCurrentBundleStats](arkts-corefile-storagestatistics-getcurrentbundlestats-f.md#getCurrentBundleStats) |
+| [getFreeInodes](arkts-corefile-storagestatistics-getfreeinodes-f.md#getFreeInodes) |
+| [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f.md#getFreeSize) |
+| [getTotalInodes](arkts-corefile-storagestatistics-gettotalinodes-f.md#getTotalInodes) |
+| [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f.md#getTotalSize) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllExtBundleStats](arkts-corefile-storagestatistics-getallextbundlestats-f-sys.md#getallextbundlestats) |
-| [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md#getbundlestats) |
-| [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md#getbundlestats-1) |
-| [getExtBundleStats](arkts-corefile-storagestatistics-getextbundlestats-f-sys.md#getextbundlestats) |
-| [getFreeSizeOfVolume](arkts-corefile-storagestatistics-getfreesizeofvolume-f-sys.md#getfreesizeofvolume) |
-| [getFreeSizeOfVolume](arkts-corefile-storagestatistics-getfreesizeofvolume-f-sys.md#getfreesizeofvolume-1) |
-| [getSystemDataSize](arkts-corefile-storagestatistics-getsystemdatasize-f-sys.md#getsystemdatasize) |
-| [getSystemSize](arkts-corefile-storagestatistics-getsystemsize-f-sys.md#getsystemsize) |
-| [getSystemSize](arkts-corefile-storagestatistics-getsystemsize-f-sys.md#getsystemsize-1) |
-| [getTotalSizeOfVolume](arkts-corefile-storagestatistics-gettotalsizeofvolume-f-sys.md#gettotalsizeofvolume) |
-| [getTotalSizeOfVolume](arkts-corefile-storagestatistics-gettotalsizeofvolume-f-sys.md#gettotalsizeofvolume-1) |
-| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getuserstoragestats) |
-| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getuserstoragestats-1) |
-| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getuserstoragestats-2) |
-| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getuserstoragestats-3) |
-| [listUserdataDirInfo](arkts-corefile-storagestatistics-listuserdatadirinfo-f-sys.md#listuserdatadirinfo) |
-| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md#setextbundlestats) |
+| [getAllExtBundleStats](arkts-corefile-storagestatistics-getallextbundlestats-f-sys.md#getAllExtBundleStats-(System-API)) |
+| [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md#getBundleStats-(System-API)) |
+| [getBundleStats](arkts-corefile-storagestatistics-getbundlestats-f-sys.md#getBundleStats-(System-API)) |
+| [getExtBundleStats](arkts-corefile-storagestatistics-getextbundlestats-f-sys.md#getExtBundleStats-(System-API)) |
+| [getFreeSize](arkts-corefile-storagestatistics-getfreesize-f-sys.md#getFreeSize-(System-API)) |
+| [getFreeSizeOfVolume](arkts-corefile-storagestatistics-getfreesizeofvolume-f-sys.md#getFreeSizeOfVolume-(System-API)) |
+| [getFreeSizeOfVolume](arkts-corefile-storagestatistics-getfreesizeofvolume-f-sys.md#getFreeSizeOfVolume-(System-API)) |
+| [getFreeSizeSync](arkts-corefile-storagestatistics-getfreesizesync-f-sys.md#getFreeSizeSync-(System-API)) |
+| [getSystemDataSize](arkts-corefile-storagestatistics-getsystemdatasize-f-sys.md#getSystemDataSize-(System-API)) |
+| [getSystemSize](arkts-corefile-storagestatistics-getsystemsize-f-sys.md#getSystemSize-(System-API)) |
+| [getSystemSize](arkts-corefile-storagestatistics-getsystemsize-f-sys.md#getSystemSize-(System-API)) |
+| [getTotalSize](arkts-corefile-storagestatistics-gettotalsize-f-sys.md#getTotalSize-(System-API)) |
+| [getTotalSizeOfVolume](arkts-corefile-storagestatistics-gettotalsizeofvolume-f-sys.md#getTotalSizeOfVolume-(System-API)) |
+| [getTotalSizeOfVolume](arkts-corefile-storagestatistics-gettotalsizeofvolume-f-sys.md#getTotalSizeOfVolume-(System-API)) |
+| [getTotalSizeSync](arkts-corefile-storagestatistics-gettotalsizesync-f-sys.md#getTotalSizeSync-(System-API)) |
+| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getUserStorageStats-(System-API)) |
+| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getUserStorageStats-(System-API)) |
+| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getUserStorageStats-(System-API)) |
+| [getUserStorageStats](arkts-corefile-storagestatistics-getuserstoragestats-f-sys.md#getUserStorageStats-(System-API)) |
+| [listUserdataDirInfo](arkts-corefile-storagestatistics-listuserdatadirinfo-f-sys.md#listUserdataDirInfo-(System-API)) |
+| [setExtBundleStats](arkts-corefile-storagestatistics-setextbundlestats-f-sys.md#setExtBundleStats-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

@@ -6,6 +6,8 @@ The module describes the callback invoked to return the UIExtensionAbility start
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export default class AbilityStartCallback--><!--Device-unnamed-export default class AbilityStartCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -21,6 +23,8 @@ Called when the UIExtensionAbility fails to start.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Called when the UIExtensionAbility is terminated.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -77,6 +83,8 @@ Callback invoked when the ability of a specified type is started.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,11 +4,13 @@ Describes the fusion pressure sensor data. It extends from [Response](arkts-sens
 
 **Inheritance/Implementation:** FusionPressureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-sensor-interface FusionPressureResponse extends Response--><!--Device-sensor-interface FusionPressureResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface FusionPressureResponse--><!--Device-sensor-interface FusionPressureResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,11 +28,13 @@ fusionPressure: double
 
 Pressure percentage on the fused pressure sensor, in percentage (%)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FusionPressureResponse-fusionPressure: double--><!--Device-FusionPressureResponse-fusionPressure: double-End-->
 

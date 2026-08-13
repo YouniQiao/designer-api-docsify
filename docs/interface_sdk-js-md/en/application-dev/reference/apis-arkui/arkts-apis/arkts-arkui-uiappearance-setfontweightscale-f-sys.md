@@ -9,18 +9,20 @@ import { uiAppearance } from '@kit.ArkUI';
 ## setFontWeightScale
 
 ```TypeScript
-function setFontWeightScale(fontWeightScale: double): Promise<void>
+function setFontWeightScale(fontWeightScale: number): Promise<void>
 ```
 
-Set the system font-weight-scale.
+Sets the system font weight scale. **Permission required**: ohos.permission.UPDATE_CONFIGURATION
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UPDATE_CONFIGURATION
 
-<!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: double): Promise<void>--><!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: double): Promise<void>-End-->
+<!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: number): Promise<void>--><!--Device-uiAppearance-function setFontWeightScale(fontWeightScale: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.UiAppearance
 
@@ -30,7 +32,7 @@ Set the system font-weight-scale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeightScale | double | Yes | indicates the font-weight-scale to set |
+| fontWeightScale | number | Yes | indicates the font-weight-scale to set |
 
 **Return value:**
 
@@ -42,7 +44,27 @@ Set the system font-weight-scale.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [500001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-uiappearance.md#500001-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
+## Examples
+
+```TypeScript
+import { uiAppearance } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let fontWeightScale = 1;
+
+try {
+    uiAppearance.setFontWeightScale(fontWeightScale).then(() => {
+      console.info('Set fontWeightScale successfully.');
+    }).catch((error:Error) => {
+      console.error('Set fontWeightScale failed, ' + error.message);
+    });
+} catch (error) {
+    let message = (error as BusinessError).message;
+    console.error('Set fontWeightScale failed, ' + message);
+}
+```
 

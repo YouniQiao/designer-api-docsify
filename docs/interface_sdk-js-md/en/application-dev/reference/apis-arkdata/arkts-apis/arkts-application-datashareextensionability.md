@@ -1,8 +1,5 @@
 # @ohos.application.DataShareExtensionAbility
 
-The **DataShareExtensionAbility** module provides data share services based on the ExtensionAbility.
-
-
 ## Modules to Import
 
 ```TypeScript

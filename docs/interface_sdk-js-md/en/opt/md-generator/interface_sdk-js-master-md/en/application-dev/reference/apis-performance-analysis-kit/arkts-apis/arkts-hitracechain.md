@@ -1,8 +1,22 @@
 # @ohos.hiTraceChain(Distributed Tracing)
 
-The **hiTraceChain** module implements call chain trace throughout a service process. It provides functions such as starting and stopping call chain trace and configuring trace points.
+/*
+ Copyright (c) 2021 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 8
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hiTraceChain--><!--Device-unnamed-declare namespace hiTraceChain-End-->
 
@@ -21,14 +35,14 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [begin](arkts-performanceanalysis-hitracechain-begin-f.md#begin) |
-| [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md#clearid) |
-| [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md#createspan) |
-| [enableFlag](arkts-performanceanalysis-hitracechain-enableflag-f.md#enableflag) |
+| [clearId](arkts-performanceanalysis-hitracechain-clearid-f.md#clearId) |
+| [createSpan](arkts-performanceanalysis-hitracechain-createspan-f.md#createSpan) |
+| [enableFlag](arkts-performanceanalysis-hitracechain-enableflag-f.md#enableFlag) |
 | [end](arkts-performanceanalysis-hitracechain-end-f.md#end) |
-| [getId](arkts-performanceanalysis-hitracechain-getid-f.md#getid) |
-| [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md#isflagenabled) |
-| [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md#isvalid) |
-| [setId](arkts-performanceanalysis-hitracechain-setid-f.md#setid) |
+| [getId](arkts-performanceanalysis-hitracechain-getid-f.md#getId) |
+| [isFlagEnabled](arkts-performanceanalysis-hitracechain-isflagenabled-f.md#isFlagEnabled) |
+| [isValid](arkts-performanceanalysis-hitracechain-isvalid-f.md#isValid) |
+| [setId](arkts-performanceanalysis-hitracechain-setid-f.md#setId) |
 | [tracepoint](arkts-performanceanalysis-hitracechain-tracepoint-f.md#tracepoint) |
 
 ### Interfaces

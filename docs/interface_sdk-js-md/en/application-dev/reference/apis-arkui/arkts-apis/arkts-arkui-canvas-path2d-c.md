@@ -8,7 +8,9 @@
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class Path2D extends CanvasPath--><!--Device-unnamed-export declare class Path2D extends CanvasPath-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class Path2D--><!--Device-unnamed-export declare class Path2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Adds a path according to the specified path variable.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Create an empty path object.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path2D-constructor()--><!--Device-Path2D-constructor()-End-->
@@ -66,6 +72,8 @@ Create an empty path object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +99,8 @@ Create a copy of a path object
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path2D-constructor(path: Path2D)--><!--Device-Path2D-constructor(path: Path2D)-End-->
@@ -114,6 +124,8 @@ Create a copy of a path object
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,6 +152,8 @@ Create a new path according to the description.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Path2D-constructor(d: string)--><!--Device-Path2D-constructor(d: string)-End-->
@@ -163,6 +177,8 @@ Create a new path according to the description.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

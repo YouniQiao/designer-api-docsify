@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-inputMethod-export interface AttachOptions--><!--Device-inputMethod-export interface AttachOptions-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -22,6 +24,8 @@ requestKeyboardReason?: RequestKeyboardReason
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason--><!--Device-AttachOptions-requestKeyboardReason?: RequestKeyboardReason-End-->
@@ -34,16 +38,15 @@ requestKeyboardReason?: RequestKeyboardReason
 showKeyboard?: boolean
 ```
 
-绑定输入法成功后，是否拉起输入法键盘。
-
-- true表示拉起。  
-- false表示不拉起。
+绑定输入法成功后，是否拉起输入法键盘。 - true表示拉起。 - false表示不拉起。
 
 **类型：** boolean
 
 **默认值：** true
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

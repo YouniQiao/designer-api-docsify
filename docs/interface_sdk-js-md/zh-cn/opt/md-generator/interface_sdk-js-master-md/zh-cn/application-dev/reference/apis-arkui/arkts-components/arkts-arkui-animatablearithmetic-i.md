@@ -1,10 +1,12 @@
 # AnimatableArithmetic
 
-该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。
+该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算 和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare interface AnimatableArithmetic<T>--><!--Device-unnamed-declare interface AnimatableArithmetic<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface AnimatableArithmetic--><!--Device-unnamed-declare interface AnimatableArithmetic-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,6 +19,8 @@ equals(rhs: AnimatableArithmetic<T>): boolean
 定义该数据类型的相等判断规则。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ multiply(scale: number): AnimatableArithmetic<T>
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -78,6 +84,8 @@ plus(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -107,6 +115,8 @@ subtract(rhs: AnimatableArithmetic<T>): AnimatableArithmetic<T>
 定义该数据类型的减法运算规则。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

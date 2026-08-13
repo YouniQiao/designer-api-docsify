@@ -1,10 +1,12 @@
 # AlbumPickerOptions
 
-AlbumPickerOptions Object
+Represents the **AlbumPicker** configuration.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class AlbumPickerOptions--><!--Device-unnamed-export declare class AlbumPickerOptions-End-->
 
@@ -19,60 +21,66 @@ import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOpt
 ## filterType
 
 ```TypeScript
-public filterType?: photoAccessHelper.PhotoViewMIMETypes
+filterType?: photoAccessHelper.PhotoViewMIMETypes
 ```
 
-The type of the content displayed in the album
+Type of the filter. You can use it to display images, videos, or both. If this parameter is not specified, images and videos are displayed in a specific album.
 
 **Type:** photoAccessHelper.PhotoViewMIMETypes
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AlbumPickerOptions-public filterType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-AlbumPickerOptions-public filterType?: photoAccessHelper.PhotoViewMIMETypes-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-AlbumPickerOptions-filterType?: photoAccessHelper.PhotoViewMIMETypes--><!--Device-AlbumPickerOptions-filterType?: photoAccessHelper.PhotoViewMIMETypes-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## fontSize
 
 ```TypeScript
-public fontSize?: int | string
+fontSize?: number | string
 ```
 
-The size of the font displayed in the album. When `fontSize` is an int type, must use 'fp' unit
+Font size. For details about the value range, see fontSize.
 
-**Type:** int \| string
+**Type:** number \| string
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AlbumPickerOptions-public fontSize?: int | string--><!--Device-AlbumPickerOptions-public fontSize?: int | string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AlbumPickerOptions-fontSize?: number | string--><!--Device-AlbumPickerOptions-fontSize?: number | string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## themeColorMode
 
 ```TypeScript
-public themeColorMode?: PickerColorMode
+themeColorMode?: PickerColorMode
 ```
 
-AlbumPickerComponent theme color
+Theme color of the album page. The options are **AUTO**, **Light**, and **Dark**. The default value is **AUTO**.
 
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-AlbumPickerOptions-public themeColorMode?: PickerColorMode--><!--Device-AlbumPickerOptions-public themeColorMode?: PickerColorMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AlbumPickerOptions-themeColorMode?: PickerColorMode--><!--Device-AlbumPickerOptions-themeColorMode?: PickerColorMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

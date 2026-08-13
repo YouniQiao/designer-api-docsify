@@ -12,11 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAlternateIcons(): Promise<Array<AlternateIconInfo>>
 ```
 
-Queries the alternate icon information configured in the alternateIcons in the app.json5of the current application. This API uses a promise to return the result.
+Queries the alternate icon information configured in the alternateIcons in the app.json5 of the current application. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

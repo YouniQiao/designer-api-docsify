@@ -2,7 +2,9 @@
 
 订阅ID。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface SubscribeId--><!--Device-cloudExtension-export interface SubscribeId-End-->
 
@@ -20,7 +22,9 @@ databaseAlias: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SubscribeId-databaseAlias: string--><!--Device-SubscribeId-databaseAlias: string-End-->
 
@@ -38,7 +42,9 @@ id: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SubscribeId-id: string--><!--Device-SubscribeId-id: string-End-->
 

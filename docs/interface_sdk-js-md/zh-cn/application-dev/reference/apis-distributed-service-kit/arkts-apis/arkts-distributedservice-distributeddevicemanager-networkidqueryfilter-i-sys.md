@@ -2,9 +2,11 @@
 
 设备网络ID过滤器选项。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-interface NetworkIdQueryFilter--><!--Device-distributedDeviceManager-interface NetworkIdQueryFilter-End-->
 
@@ -18,16 +20,15 @@
 onlineStatus : int
 ```
 
-设备在线状态，包括
+设备在线状态，包括 - 0：表示设备处于离线状态。 - 1：表示设备处于在线状态。
 
-- 0：表示设备处于离线状态。  
-- 1：表示设备处于在线状态。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-NetworkIdQueryFilter-onlineStatus : int--><!--Device-NetworkIdQueryFilter-onlineStatus : int-End-->
 
@@ -45,9 +46,11 @@ wiseDeviceId : string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NetworkIdQueryFilter-wiseDeviceId : string--><!--Device-NetworkIdQueryFilter-wiseDeviceId : string-End-->
 

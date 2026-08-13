@@ -6,7 +6,7 @@ typedef struct OH_Drawing_RunBuffer {...} OH_Drawing_RunBuffer
 
 ## 概述
 
-结构体用于描述一块内存，描述文字和位置信息。
+结构体用于描述一块内存，该内存用于存储文字和位置信息。
 
 **起始版本：** 11
 

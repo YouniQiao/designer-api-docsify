@@ -1,0 +1,56 @@
+# MapConstructor
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface MapConstructor--><!--Device-unnamed-interface MapConstructor-End-->
+
+## constructor
+
+```TypeScript
+new(): Map<any, any>
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-MapConstructor-new(): Map<any, any>--><!--Device-MapConstructor-new(): Map<any, any>-End-->
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Map&lt;any, any&gt; |  |
+
+## constructor
+
+```TypeScript
+new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-MapConstructor-new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>--><!--Device-MapConstructor-new <K, V>(iterable?: Iterable<readonly [K, V]> | null): Map<K, V>-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| iterable | Iterable&lt;readonly [K, V]&gt; \| null | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Map&lt;K, V&gt; |  |
+

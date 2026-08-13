@@ -1,15 +1,12 @@
 # DispatchInfo (System API)
 
-The module provides version information about the dispatchInfo struct and dispatch API. The information can be obtained through  
-[freeInstall.getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo).
+The module provides version information about the dispatchInfo struct and dispatch API. The information can be obtained through [freeInstall.getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo-(System-API)) . > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DispatchInfo--><!--Device-unnamed-export interface DispatchInfo-End-->
 
@@ -27,9 +24,11 @@ Version of the dispatch API.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DispatchInfo-readonly dispatchAPIVersion: string--><!--Device-DispatchInfo-readonly dispatchAPIVersion: string-End-->
 
@@ -47,9 +46,11 @@ Version of the dispatchInfo struct.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DispatchInfo-readonly version: string--><!--Device-DispatchInfo-readonly version: string-End-->
 

@@ -1,10 +1,12 @@
 # ExpandMode
 
-Enum for the expand mode.
+Enumerates the expansion mode of child nodes.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum ExpandMode--><!--Device-unnamed-export enum ExpandMode-End-->
 
@@ -16,13 +18,17 @@ Enum for the expand mode.
 NOT_EXPAND = 0
 ```
 
-Do not expand the children of node.
+The child nodes of the current FrameNode are not expanded. If the FrameNode contains LazyForEach child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained. The child node sequence numbers are calculated based on the nodes in the main tree.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ExpandMode-NOT_EXPAND = 0--><!--Device-ExpandMode-NOT_EXPAND = 0-End-->
 
@@ -34,13 +40,17 @@ Do not expand the children of node.
 EXPAND = 1
 ```
 
-Expand the children of node.
+The child nodes of the current FrameNode are expanded. If the FrameNode contains LazyForEach child nodes, all child nodes are expanded when being obtained. The child node sequence numbers are calculated based on all child nodes.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ExpandMode-EXPAND = 1--><!--Device-ExpandMode-EXPAND = 1-End-->
 
@@ -52,13 +62,17 @@ Expand the children of node.
 LAZY_EXPAND = 2
 ```
 
-Expand the children of node if needed.
+The child nodes of the current FrameNode are expanded on demand. If the FrameNode contains LazyForEach child nodes, the child nodes are not expanded when the nodes in the main tree are being obtained, but are expanded when nodes not in the main tree are being obtained. The child node sequence numbers are calculated based on all child nodes.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ExpandMode-LAZY_EXPAND = 2--><!--Device-ExpandMode-LAZY_EXPAND = 2-End-->
 
@@ -70,13 +84,17 @@ Expand the children of node if needed.
 LAZY_NOT_EXPAND = 3
 ```
 
-Do not expand children of node.If the FrameNode contains LazyForEach child nodes, child nodes can be obtained directly when nodes in main tree.When nodes are not in main tree, only a node at corresponding position will be created,rather than expanding all child nodes.The child node sequence numbers are calculated based on all child nodes.
+The child nodes of the current FrameNode are not expanded. If the FrameNode contains LazyForEach child nodes, expanded child nodes can be obtained directly. To obtain the child nodes that are not expanded, only the nodes at the corresponding positions are created, and all child nodes are not expanded. The child node sequence numbers are calculated based on all child nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ExpandMode-LAZY_NOT_EXPAND = 3--><!--Device-ExpandMode-LAZY_NOT_EXPAND = 3-End-->
 

@@ -1,19 +1,12 @@
 # LayoutManager
 
-布局管理器对象。
+布局管理器对象。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
-
-## 导入对象
-
-以Text组件为例，完整示例请参考Text组件的  
-[示例10（获取文本信息）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例10获取文本信息)。
-
-```ts controller: TextController = new TextController();let layoutManager: LayoutManager = this.controller.getLayoutManager();```
+## 导入对象 以Text组件为例，完整示例请参考Text组件的 [示例10（获取文本信息）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例10获取文本信息)。 ```ts controller: TextController = new TextController(); let layoutManager: LayoutManager = this.controller.getLayoutManager(); ```
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
 
@@ -25,16 +18,11 @@
 getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | undefined
 ```
 
-获取距离指定坐标最近的字符的位置信息。
-
-> **说明：**
-> 
-> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用
-> [getGlyphPositionAtCoordinate](#getGlyphPositionAtCoordinate)方法。
-> 
-> - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
+获取距离指定坐标最近的字符的位置信息。 > **说明：** > > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字形级别的位置信息，可使用 > [getGlyphPositionAtCoordinate](#getGlyphPositionAtCoordinate)方法。 > > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,6 +56,8 @@ getCharacterPositionAtCoordinate(
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -96,21 +86,11 @@ getCharacterPositionAtCoordinate(
 getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefined
 ```
 
-根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。
-
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。
-> 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
-
-| 文本 | 世 | 界 | H | [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | o |
-|---|---|---|---|---|---|---|---|
-| 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] |
-| 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] |
-
-其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 11]。如果指定的字形索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。
+根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的字符范围信息。 > 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下： | 文本 | 世 | 界 | H | e | l | l | o | |---|---|---|---|---|---|---|---| | 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] | | 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] | [10, 11] | 其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 11]。如果指定的字形索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,6 +122,8 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -169,16 +151,11 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 ```
 
-获取较为接近给定坐标的字形的位置信息。
-
-> **说明：**
-> 
-> - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用
-> [getCharacterPositionAtCoordinate](#getCharacterPositionAtCoordinate)方法。
-> 
-> - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
+获取较为接近给定坐标的字形的位置信息。 > **说明：** > > - 字形（Glyph）是文本渲染的基本单元，与字符（Character）可能存在一对多关系。如需获取字符级别的位置信息，可使用 > [getCharacterPositionAtCoordinate](#getCharacterPositionAtCoordinate)方法。 > > - 文本内容变更后，需等待布局完成才可获取到最新的位置信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -207,21 +184,11 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefined
 ```
 
-根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。
-
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。
-> 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下：
-
-| 文本 | 世 | 界 | H | [e](../../apis-arkts/arkts-apis/arkts-arkts-math-decimal-decimal-c.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | [l](../../apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-cryptoframework-dhcommonparamsspec-i.md) | o |
-|---|---|---|---|---|---|---|---|
-| 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] |
-| 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] |
-
-其中文本“世”的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。
+根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的字形范围信息。 > 以文本“世界Hello”为例，其字形索引与字符索引的对应关系如下： | 文本 | 世 | 界 | H | e | l | l | o | |---|---|---|---|---|---|---|---| | 字形索引范围 | [0, 1] | [1, 2] | [2, 3] | [3, 4] | [4, 5] | [5, 6] | [6, 7] | | 字符索引范围 | [0, 3] | [3, 6] | [6, 7] | [7, 8] | [8, 9] | [9, 10] | [10, 11] | 其中文本“世”的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -253,6 +220,8 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -280,13 +249,11 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 getLineCount(): number
 ```
 
-获取组件内容的总行数。
-
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的总行数。
+获取组件内容的总行数。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的总行数。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -308,13 +275,11 @@ getLineCount(): number
 getLineMetrics(lineNumber: number): LineMetrics
 ```
 
-获取指定行的行信息、文本样式信息、以及字体属性信息。
-
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的行信息。
+获取指定行的行信息、文本样式信息、以及字体属性信息。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的行信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -342,13 +307,11 @@ getLineMetrics(lineNumber: number): LineMetrics
 getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: RectHeightStyle): Array<TextBox>
 ```
 
-根据给定的矩形区域宽度样式和高度样式，获取文本中任意区间范围内的字符或占位符所占的绘制区域信息。
-
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
+根据给定的矩形区域宽度样式和高度样式，获取文本中任意区间范围内的字符或占位符所占的绘制区域信息。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的绘制区域信息。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

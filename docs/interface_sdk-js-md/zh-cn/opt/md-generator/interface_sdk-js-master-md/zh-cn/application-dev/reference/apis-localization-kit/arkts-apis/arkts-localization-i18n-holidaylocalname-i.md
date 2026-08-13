@@ -2,7 +2,9 @@
 
 节假日名称在不同语言下的翻译。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export interface HolidayLocalName--><!--Device-i18n-export interface HolidayLocalName-End-->
 
@@ -18,7 +20,9 @@ language: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

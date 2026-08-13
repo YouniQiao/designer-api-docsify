@@ -2,7 +2,9 @@
 
 获取捆绑包统计信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-storageStatistics-export interface BundleStats--><!--Device-storageStatistics-export interface BundleStats-End-->
 
@@ -18,7 +20,9 @@ appSize: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStats-appSize: long--><!--Device-BundleStats-appSize: long-End-->
 
@@ -34,7 +38,9 @@ cacheSize: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStats-cacheSize: long--><!--Device-BundleStats-cacheSize: long-End-->
 
@@ -50,7 +56,9 @@ dataSize: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundleStats-dataSize: long--><!--Device-BundleStats-dataSize: long-End-->
 

@@ -8,7 +8,9 @@ const MAX_TYPE_NUM: number
 
 Keyboard max number. Max value is 128.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-const MAX_TYPE_NUM: int--><!--Device-inputMethod-const MAX_TYPE_NUM: int-End-->
 

@@ -6,6 +6,8 @@ Defines LineSpacingStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class LineSpacingStyle--><!--Device-unnamed-export declare class LineSpacingStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,13 +45,15 @@ constructor.
 readonly lineSpacing: double
 ```
 
-Get the lineSpacing value of the StyledString.The unit is vp.
+Get the lineSpacing value of the StyledString. The unit is vp.
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Get the lineSpacing options value of the StyledString.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

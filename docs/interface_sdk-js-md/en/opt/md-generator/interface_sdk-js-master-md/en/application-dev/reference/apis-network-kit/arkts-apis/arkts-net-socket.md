@@ -4,6 +4,8 @@ Provides TCP and UDP Socket APIs.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace socket--><!--Device-unnamed-declare namespace socket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -20,15 +22,15 @@ import { socket } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md#constructlocalsocketinstance) |
-| [constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md#constructlocalsocketserverinstance) |
-| [constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md#constructmulticastsocketinstance) |
-| [constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md#constructtcpsocketinstance) |
-| [constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md#constructtcpsocketserverinstance) |
-| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructtlssocketinstance) |
-| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructtlssocketinstance-1) |
-| [constructTLSSocketServerInstance](arkts-network-socket-constructtlssocketserverinstance-f.md#constructtlssocketserverinstance) |
-| [constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md#constructudpsocketinstance) |
+| [constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md#constructLocalSocketInstance) |
+| [constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md#constructLocalSocketServerInstance) |
+| [constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md#constructMulticastSocketInstance) |
+| [constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md#constructTCPSocketInstance) |
+| [constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md#constructTCPSocketServerInstance) |
+| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructTLSSocketInstance) |
+| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructTLSSocketInstance) |
+| [constructTLSSocketServerInstance](arkts-network-socket-constructtlssocketserverinstance-f.md#constructTLSSocketServerInstance) |
+| [constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md#constructUDPSocketInstance) |
 
 ### Interfaces
 

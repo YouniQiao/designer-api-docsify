@@ -1,12 +1,12 @@
 # UrlStyle
 
-超链接对象说明。
-
-默认颜色、字号、字重分别是'#ff0a59f7'、'16fp'、'FontWeight.Regular'，若属性字符串设置TextStyle，则TextStyle优先级更高。
+超链接对象说明。 默认颜色、字号、字重分别是'#ff0a59f7'、'16fp'、'FontWeight.Regular'，若属性字符串设置TextStyle，则TextStyle优先级更高。
 
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class UrlStyle--><!--Device-unnamed-declare class UrlStyle-End-->
 
@@ -23,6 +23,8 @@ constructor(url: string)
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,6 +53,8 @@ readonly url: string
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

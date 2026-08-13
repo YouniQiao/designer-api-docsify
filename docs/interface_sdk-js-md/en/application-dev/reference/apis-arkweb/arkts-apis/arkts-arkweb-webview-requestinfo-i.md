@@ -1,10 +1,12 @@
 # RequestInfo
 
-Defines the Web's request info.
+Describes the information about the resource request sent by the **Web** component.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface RequestInfo--><!--Device-webview-interface RequestInfo-End-->
 
@@ -22,13 +24,17 @@ import { webview } from '@kit.ArkWeb';
 formData: string
 ```
 
-Gets the form data of the request.
+Form data in the request body.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestInfo-formData: string--><!--Device-RequestInfo-formData: string-End-->
 
@@ -40,13 +46,17 @@ Gets the form data of the request.
 method: string
 ```
 
-Gets the method of the request.
+Method of the request.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestInfo-method: string--><!--Device-RequestInfo-method: string-End-->
 
@@ -58,13 +68,17 @@ Gets the method of the request.
 url: string
 ```
 
-Gets the url of the request.
+URL of the request.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestInfo-url: string--><!--Device-RequestInfo-url: string-End-->
 

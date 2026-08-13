@@ -2,9 +2,9 @@
 
 表示用户年龄群组分类检测结果。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 24
 
@@ -22,9 +22,9 @@ ageGroup?: UserAgeGroup
 
 **类型：** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 24
 
@@ -42,9 +42,9 @@ confidence?: float
 
 **类型：** float
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
 **废弃版本：** 24
 

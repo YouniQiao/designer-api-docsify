@@ -12,13 +12,13 @@ import { selectionManager } from '@kit.BasicServicesKit';
 function offSelectionComplete(callback?: Callback<SelectionInfo>): void
 ```
 
-Unregisters the callback used to listen for the word selection completion event. This API uses an asynchronous callback to return the result.
-
-**ArkTS mode:** This API applies only to ArkTS-Sta.
+Unregisters the callback used to listen for the word selection completion event. This API uses an asynchronous callback to return the result. **ArkTS mode:** This API applies only to ArkTS-Sta.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -30,7 +30,7 @@ Unregisters the callback used to listen for the word selection completion event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | No | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md#SelectionInfo). If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | No | Callback used to return [SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md#SelectionInfo-(System-API)). If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
 

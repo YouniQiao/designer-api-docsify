@@ -1,14 +1,6 @@
 # CalendarDialogOptions
 
-Defines the configuration options of the calendar picker dialog box.
-
-Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions).
-
-> **NOTE：**
-> 
-> When the application window is resized, the width of the dialog box is continuously compressed. If the window width
-> is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the
-> content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
+Defines the configuration options of the calendar picker dialog box. Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions). > **NOTE：**> > When the application window is resized, the width of the dialog box is continuously compressed. If the window width > is reduced below a certain threshold, the content of the dialog box may not be fully visible. To ensure that the > content of the **CalendarPickerDialog** component is fully displayed, the minimum window width required is 386 vp.
 
 **Inheritance/Implementation:** CalendarDialogOptions extends [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions)
 
@@ -16,7 +8,9 @@ Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface CalendarDialogOptions extends CalendarOptions--><!--Device-unnamed-declare interface CalendarDialogOptions extends CalendarOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface CalendarDialogOptions--><!--Device-unnamed-declare interface CalendarDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,9 +20,7 @@ Inherits from [CalendarOptions](arkts-arkui-calendaroptions-i.md#CalendarOptions
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation mode for the dialog.
-
-Default Value: DistortionMode.DISTORTION_AUTO
+Sets the distortion animation mode for the dialog. Default Value: DistortionMode.DISTORTION_AUTO
 
 **Type:** DistortionMode
 
@@ -37,6 +29,8 @@ Default Value: DistortionMode.DISTORTION_AUTO
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,9 +46,7 @@ Default Value: DistortionMode.DISTORTION_AUTO
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edge light animation mode for the dialog.
-
-Default value: EdgeLightMode.EDGELIGHT_AUTO
+Sets the edge light animation mode for the dialog. Default value: EdgeLightMode.EDGELIGHT_AUTO
 
 **Type:** EdgeLightMode
 
@@ -63,6 +55,8 @@ Default value: EdgeLightMode.EDGELIGHT_AUTO
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

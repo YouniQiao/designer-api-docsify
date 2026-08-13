@@ -14,7 +14,9 @@ function isNRSupported(): boolean
 
 Checks whether the device supports 5G New Radio (NR).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-function isNRSupported(): boolean--><!--Device-radio-function isNRSupported(): boolean-End-->
 
@@ -42,7 +44,9 @@ function isNRSupported(slotId: number): boolean
 
 Checks whether the device supports 5G New Radio (NR) by according card slot.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-function isNRSupported(slotId: int): boolean--><!--Device-radio-function isNRSupported(slotId: int): boolean-End-->
 

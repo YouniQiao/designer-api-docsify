@@ -1,10 +1,12 @@
 # ScrollOffset
 
-Defines the scroll offset of the webpage in view port, the unit is virtual pixel.Related to [getScrollOffset](arkts-arkweb-webview-webviewcontroller-c.md#getScrollOffset) method.
+Represents the current scrolling offset of a web page.
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface ScrollOffset--><!--Device-webview-interface ScrollOffset-End-->
 
@@ -19,36 +21,44 @@ import { webview } from '@kit.ArkWeb';
 ## x
 
 ```TypeScript
-x: double
+x: number
 ```
 
-Get the horizontal offset. The unit is vp
+Horizontal scrolling offset of a web page. The value is the difference between the x-coordinate of the left boundary of the web page and that of the left boundary of the **Web** component. When the web page is scrolled rightwards, the value is negative. When the web page is not scrolled or scrolled leftwards, the value is **0** or positive. Unit: vp
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-<!--Device-ScrollOffset-x: double--><!--Device-ScrollOffset-x: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-ScrollOffset-x: number--><!--Device-ScrollOffset-x: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## y
 
 ```TypeScript
-y: double
+y: number
 ```
 
-Get the vertical offset. The unit is vp
+Vertical scrolling offset of a web page. The value is the difference between the y-coordinate of the upper boundary of the web page and that of the upper boundary of the **Web** component. When the web page is scrolled downwards, the value is negative. When the web page is not scrolled or scrolled upwards, the value is **0** or positive. Unit: vp
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-<!--Device-ScrollOffset-y: double--><!--Device-ScrollOffset-y: double-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-ScrollOffset-y: number--><!--Device-ScrollOffset-y: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

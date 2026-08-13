@@ -12,7 +12,7 @@ function getForegroundApplications(callback: AsyncCallback<Array<AppStateData>>)
 
 **废弃版本：** 9
 
-**替代接口：** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
+**替代接口：** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications（系统接口）)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -55,7 +55,7 @@ function getForegroundApplications(): Promise<Array<AppStateData>>
 
 **废弃版本：** 9
 
-**替代接口：** [getForegroundApplications](ohos.app.ability.appManager/appManager#getForegroundApplications)
+**替代接口：** [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getForegroundApplications（系统接口）)
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 

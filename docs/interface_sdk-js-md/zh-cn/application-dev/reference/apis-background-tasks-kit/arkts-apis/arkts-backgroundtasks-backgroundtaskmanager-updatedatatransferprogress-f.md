@@ -10,7 +10,9 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -31,11 +33,11 @@ function updateDataTransferProgress(context: Context, progressInfo: DataTransfer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
-| [9800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
-| [9800007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) | Continuous task storage failed. |
-| [9800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) | Notification verification failed for a continuous task. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [9800005](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800005-长时任务校验失败) | Continuous task verification failed. |
+| [9800004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800004-系统服务失败) | System service operation failed. |
+| [9800007](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800007-长时任务信息存储失败) | Continuous task storage failed. |
+| [9800006](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#9800006-长时任务通知信息校验失败) | Notification verification failed for a continuous task. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

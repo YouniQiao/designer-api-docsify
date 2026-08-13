@@ -1,13 +1,10 @@
-# @ohos.multimodalInput.inputConsumer(Global Shortcut Keys)
+# @ohos.multimodalInput.inputConsumer
 
-The **inputConsumer** module implements listening for combination key events as well as listening and interception for volume key events.
+The **inputConsumer** module implements listening for combination key events as well as listening and interception for volume key events. > **NOTE：**> > - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined > by the system, and application shortcut keys are defined by applications.
 
-> **NOTE：**
-> 
-> - Global shortcut keys are combination keys defined by the system or application. System shortcut keys are defined
-> by the system, and application shortcut keys are defined by applications.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace inputConsumer--><!--Device-unnamed-declare namespace inputConsumer-End-->
 
@@ -25,23 +22,29 @@ import { inputConsumer } from '@kit.InputKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys) |
-| [off](arkts-input-inputconsumer-off-f.md#off-1) |
-| [off](arkts-input-inputconsumer-off-f.md#off-2) |
-| [on](arkts-input-inputconsumer-on-f.md#on-1) |
-| [on](arkts-input-inputconsumer-on-f.md#on-2) |
+| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getAllSystemHotkeys) |
+| [offHotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md#offHotkeyChange) |
+| [offKeyPressed](arkts-input-inputconsumer-offkeypressed-f.md#offKeyPressed) |
+| [off_hotkeyChange](arkts-input-inputconsumer-offhotkeychange-f.md) |
+| off_keyPressed |
+| [onHotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md#onHotkeyChange) |
+| [onKeyPressed](arkts-input-inputconsumer-onkeypressed-f.md#onKeyPressed) |
+| [on_hotkeyChange](arkts-input-inputconsumer-onhotkeychange-f.md) |
+| on_keyPressed |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md#getshieldstatus) |
-| [off](arkts-input-inputconsumer-off-f-sys.md#off) |
-| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offkey) |
-| [on](arkts-input-inputconsumer-on-f-sys.md#on) |
-| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onkey) |
-| [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md#setshieldstatus) |
+| [getShieldStatus](arkts-input-inputconsumer-getshieldstatus-f-sys.md#getShieldStatus-(System-API)) |
+| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offKey-(System-API)) |
+| [offKey](arkts-input-inputconsumer-offkey-f-sys.md#offKey-(System-API)) |
+| [off_key](arkts-input-inputconsumer-offkey-f-sys.md) |
+| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onKey-(System-API)) |
+| [onKey](arkts-input-inputconsumer-onkey-f-sys.md#onKey-(System-API)) |
+| [on_key](arkts-input-inputconsumer-onkey-f-sys.md) |
+| [setShieldStatus](arkts-input-inputconsumer-setshieldstatus-f-sys.md#setShieldStatus-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

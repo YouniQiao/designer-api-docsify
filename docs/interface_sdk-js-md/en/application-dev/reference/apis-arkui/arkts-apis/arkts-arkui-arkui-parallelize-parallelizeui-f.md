@@ -3,6 +3,7 @@
 ## ParallelizeUI
 
 ```TypeScript
+@Builder
 export declare function ParallelizeUI(
   options: ParallelOption | undefined,
   content_: CustomBuilder,
@@ -15,11 +16,11 @@ Define the constructor of ParallelizeUI.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void--><!--Device-unnamed-export declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void-End-->
+<!--Device-unnamed-@Builderexport declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI(  options: ParallelOption | undefined,  content_: CustomBuilder,): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,12 +29,13 @@ Define the constructor of ParallelizeUI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | Yes | ParallelizeUI Option |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Parallel creation of content |
+| content_ | CustomBuilder | Yes | Parallel creation of content |
 
 
 ## ParallelizeUI
 
 ```TypeScript
+@Builder
 export declare function ParallelizeUI<T>(
   options: ParallelOption | undefined,
   param: () => T,
@@ -47,11 +49,11 @@ Define the constructor of ParallelizeUI.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ParallelizeUI<T>(  options: ParallelOption | undefined,  param: () => T,  content_: CustomBuilderT<T>,): void--><!--Device-unnamed-export declare function ParallelizeUI<T>(  options: ParallelOption | undefined,  param: () => T,  content_: CustomBuilderT<T>,): void-End-->
+<!--Device-unnamed-@Builderexport declare function ParallelizeUI<T>(  options: ParallelOption | undefined,  param: () => T,  content_: CustomBuilderT<T>,): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI<T>(  options: ParallelOption | undefined,  param: () => T,  content_: CustomBuilderT<T>,): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -61,12 +63,13 @@ Define the constructor of ParallelizeUI.
 | --- | --- | --- | --- |
 | options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | Yes | ParallelizeUI Option |
 | param | () =&gt; T | Yes | ParallelizeUI parameter |
-| content_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes | Parallel creation of content |
+| content_ | CustomBuilderT&lt;T&gt; | Yes | Parallel creation of content |
 
 
 ## ParallelizeUI
 
 ```TypeScript
+@Builder
 export declare function ParallelizeUI<V, T>(
   options: ParallelOption | undefined,
   arr: Array<V>,
@@ -81,11 +84,11 @@ On-demand parallel item creation for List and Grid.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function ParallelizeUI<V, T>(  options: ParallelOption | undefined,  arr: Array<V>,  param: (item: V, index: int) => T,  content_: CustomBuilderT<T>): void--><!--Device-unnamed-export declare function ParallelizeUI<V, T>(  options: ParallelOption | undefined,  arr: Array<V>,  param: (item: V, index: int) => T,  content_: CustomBuilderT<T>): void-End-->
+<!--Device-unnamed-@Builderexport declare function ParallelizeUI<V, T>(  options: ParallelOption | undefined,  arr: Array<V>,  param: (item: V, index: int) => T,  content_: CustomBuilderT<T>): void--><!--Device-unnamed-@Builderexport declare function ParallelizeUI<V, T>(  options: ParallelOption | undefined,  arr: Array<V>,  param: (item: V, index: int) => T,  content_: CustomBuilderT<T>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -96,5 +99,5 @@ On-demand parallel item creation for List and Grid.
 | options | [ParallelOption](arkts-arkui-arkui-parallelize-paralleloption-i.md) \| undefined | Yes | ParallelizeUI Option |
 | arr | Array&lt;V&gt; | Yes | The array collection to be used in UI |
 | param | (item: V, index: int) =&gt; T | Yes | Define item generator function |
-| content_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | Yes | Parallel creation of content |
+| content_ | CustomBuilderT&lt;T&gt; | Yes | Parallel creation of content |
 

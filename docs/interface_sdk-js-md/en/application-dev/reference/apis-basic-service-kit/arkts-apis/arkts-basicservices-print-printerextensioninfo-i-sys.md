@@ -2,9 +2,11 @@
 
 Provides the printer extension information.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrinterExtensionInfo--><!--Device-print-interface PrinterExtensionInfo-End-->
 
@@ -28,9 +30,11 @@ ID of the printer extension.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-extensionId: string--><!--Device-PrinterExtensionInfo-extensionId: string-End-->
 
@@ -46,11 +50,13 @@ vendorIcon: int
 
 Vendor icon of the printer extension.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-vendorIcon: int--><!--Device-PrinterExtensionInfo-vendorIcon: int-End-->
 
@@ -68,9 +74,11 @@ Vendor ID of the printer extension.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-vendorId: string--><!--Device-PrinterExtensionInfo-vendorId: string-End-->
 
@@ -88,9 +96,11 @@ Vendor name of the printer extension.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-vendorName: string--><!--Device-PrinterExtensionInfo-vendorName: string-End-->
 
@@ -108,9 +118,11 @@ Version of the printer extension.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrinterExtensionInfo-version: string--><!--Device-PrinterExtensionInfo-version: string-End-->
 

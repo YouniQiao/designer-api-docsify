@@ -6,6 +6,8 @@ AI Text Model Abstract Interface.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface TextGenerationModel--><!--Device-imageGeneration-interface TextGenerationModel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -29,6 +31,8 @@ Cancel AI text generation task.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,6 +59,8 @@ User use complaint menu to complain the result of an AI-generated text task.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,6 +91,8 @@ Request AI text generation task to get the generated text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,      callback: Callback<GenerateTextTaskPartialResult>): void--><!--Device-TextGenerationModel-requestTextGeneration(sessionId: int, value: string,      callback: Callback<GenerateTextTaskPartialResult>): void-End-->
@@ -99,5 +107,5 @@ Request AI text generation task to get the generated text.
 | --- | --- | --- | --- |
 | sessionId | int | Yes | The session id for requesting an AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
 | value | string | Yes | Parameters for requesting an AI text generation task. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GenerateTextTaskPartialResult](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md)&gt; | Yes | the callback used to return the GenerateTextTaskPartialResult. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GenerateTextTaskPartialResult](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md)&gt; | Yes | the callback used to return the GenerateTextTaskPartialResult. |
 

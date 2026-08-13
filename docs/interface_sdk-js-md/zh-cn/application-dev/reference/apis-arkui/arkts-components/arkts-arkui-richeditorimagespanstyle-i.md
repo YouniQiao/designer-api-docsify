@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface RichEditorImageSpanStyle--><!--Device-unnamed-declare interface RichEditorImageSpanStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ layoutStyle?: RichEditorLayoutStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -38,15 +42,15 @@ layoutStyle?: RichEditorLayoutStyle
 objectFit?: ImageFit
 ```
 
-图片缩放类型。
-
-默认值：ImageFit.Cover。
+图片缩放类型。 默认值：ImageFit.Cover。
 
 **类型：** ImageFit
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,13 +66,15 @@ objectFit?: ImageFit
 size?: [Dimension, Dimension]
 ```
 
-图片宽度和高度，默认单位为vp。默认值：与objectFit的值相关，不同的objectFit值有不同的默认尺寸。objectFit的值为Cover时，图片高度为组件高度减去组件上下内边距，宽度为组件宽度减去组件左右内边距。不支持以Percentage形式设置。
+图片宽度和高度，默认单位为vp。默认值：与objectFit的值相关，不同的objectFit值有不同的默认尺寸。objectFit的值为Cover时，图片高度为组件高度减去组件上下内边距，宽度为组件宽度减去组件左右内边距。不支持 以Percentage形式设置。
 
 **类型：** [Dimension, Dimension]
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,15 +90,15 @@ size?: [Dimension, Dimension]
 verticalAlign?: ImageSpanAlignment
 ```
 
-图片垂直对齐方式。
-
-默认值：ImageSpanAlignment.BOTTOM
+图片垂直对齐方式。 默认值：ImageSpanAlignment.BOTTOM
 
 **类型：** ImageSpanAlignment
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

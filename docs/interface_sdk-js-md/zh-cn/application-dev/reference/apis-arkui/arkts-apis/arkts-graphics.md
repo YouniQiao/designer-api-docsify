@@ -6,41 +6,41 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderradiuses) | 获取所有边都设置为相同半径的BorderRadiuses对象。 |
-| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderstyles) |  |
-| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgecolors) |  |
-| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgewidths) |  |
+| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderRadiuses) | 用于生成边框圆角均设置为传入值的边框圆角对象。 |
+| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderStyles) | 用于生成边框样式均设置为传入值的边框样式对象。 |
+| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgeColors) | 用于生成边框颜色均设置为传入值的边框颜色对象。 |
+| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgeWidths) | 用于生成边框宽度均设置为传入值的边框宽度对象。 |
 
 ### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 用于混合颜色。 |
-| [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 图形绘制上下文，提供绘制所需的画布宽度和高度。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 提供颜色的统一表示与封装，支持颜色混合以及 RGB、Alpha 分量的获取。 |
+| [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 图形绘制上下文，提供绘制所需的画布及其宽度和高度。 |
 | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 用于设置长度属性，当长度单位为PERCENT时，值为1表示100%。 |
-| [ShapeClip](arkts-arkui-graphics-shapeclip-c.md) | 用于设置图形裁剪。 |
-| [ShapeMask](arkts-arkui-graphics-shapemask-c.md) | 用于设置图形遮罩。 |
+| [ShapeClip](arkts-arkui-graphics-shapeclip-c.md) | 用于设置图形裁剪，支持矩形、圆角矩形、圆形、椭圆及自定义路径等多种形状，可对RenderNode进行形状裁剪，仅显示裁剪区域内的内容。 |
+| [ShapeMask](arkts-arkui-graphics-shapemask-c.md) | 用于设置图形遮罩，支持矩形、圆角矩形、圆形、椭圆及自定义路径等多种形状，可作用于RenderNode实现形状遮罩效果。 |
 
 <!--Del-->
 ### 类（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 用于混合颜色。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c-sys.md) | 提供颜色的统一表示与封装，支持颜色混合以及 RGB、Alpha 分量的获取。 |
 <!--DelEnd-->
 
 ### 接口
 
 | 名称 | 说明 |
 | --- | --- |
-| [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md) | 设置背景模糊效果。  .0.0  .0.0 |
+| [BackgroundBlur](arkts-arkui-graphics-backgroundblur-i.md) | 设置背景模糊效果，支持通过模糊半径控制模糊程度，并可通过灰阶参数对图像黑白像素进行色阶调整。 |
 | [Circle](arkts-arkui-graphics-circle-i.md) | 用于设置圆形的属性。 |
 | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | 用于设置路径绘制的指令。 |
-| [ContentBlur](arkts-arkui-graphics-contentblur-i.md) | 设置内容模糊效果。  .0.0  .0.0 |
+| [ContentBlur](arkts-arkui-graphics-contentblur-i.md) | 设置内容模糊效果，支持通过模糊半径控制模糊程度，并可通过灰阶参数对图像黑白像素进行色阶调整。 |
 | [Corners](arkts-arkui-graphics-corners-i.md) | 用于设置四个角的圆角属性。 |
-| [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md) | 设置前景模糊效果。  .0.0  .0.0 |
+| [Edges](arkts-arkui-graphics-edges-i.md) | 用于设置边框的属性。 |
+| [ForegroundBlur](arkts-arkui-graphics-foregroundblur-i.md) | 设置前景模糊效果，支持通过模糊半径控制模糊程度。 |
 | [Frame](arkts-arkui-graphics-frame-i.md) | 用于设置或返回组件的布局大小和位置。 |
-| [NodeEdges](arkts-arkui-graphics-nodeedges-i.md) | 用于设置边框的属性，属性包括边框风格、边框颜色、边框宽度、边框长度等。 |
 | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | 用于设置带有圆角的矩形。 |
 | [Size](arkts-arkui-graphics-size-i.md) | 用于返回组件布局大小的宽和高。默认单位为vp，不同的接口使用Size类型时会再定义单位，以接口定义的单位为准。 |
 | [SizeT](arkts-arkui-graphics-sizet-i.md) | 用于设置宽高的属性。 |
@@ -60,12 +60,12 @@
 
 | 名称 | 说明 |
 | --- | --- |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | 设置四个角的圆角半径。 |
 | [CornerRadius](arkts-arkui-cornerradius-t.md) | 设置四个角的圆角x轴与y轴的半轴长。 |
-| [Matrix4](arkts-arkui-matrix4-t.md) | 设置四阶矩阵。用于设置组件的变换信息，该类型为一个 4x4 矩阵，使用一个长度为16的`number[]`进行表示，各number取值范围：(-∞, +∞)。例如：```const transform: Matrix4 = [1, 0, 45, 0,0, 1, 0, 0,0, 0, 1, 0,0, 0, 0, 1]```。 |
-| [NodeBorderRadiuses](arkts-arkui-nodeborderradiuses-t.md) | 设置四个角的圆角度数。 |
-| [NodeOffset](arkts-arkui-nodeoffset-t.md) | 用于设置组件或效果的偏移。 |
-| [NodePosition](arkts-arkui-nodeposition-t.md) | 用于设置或返回组件的位置。 |
-| [Pivot](arkts-arkui-pivot-t.md) | 用于设置组件的轴心坐标，轴心会作为组件的旋转/缩放中心点，影响旋转和缩放效果。轴心的x和y轴坐标为浮点数，默认值为0.5， 取值范围为[0.0, 1.0]。 |
+| [Matrix4](arkts-arkui-matrix4-t.md) | 用于设置四阶矩阵。 用于设置组件的变换信息，该类型为一个 4x4 矩阵，使用一个长度为16的`number[]`进行表示，例如： ``` const transform: Matrix4 = [ 1, 0, 45, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ]。 ``` |
+| [Offset](arkts-arkui-offset-t.md) | 用于设置组件或效果的偏移。 |
+| [Pivot](arkts-arkui-pivot-t.md) | 用于设置组件的轴心坐标，轴心会作为组件的旋转/缩放中心点，影响旋转和缩放效果。 |
+| [Position](arkts-arkui-position-t.md) | 用于设置或返回组件的位置。 |
 | [PositionT](arkts-arkui-positiont-t.md) | 用于设置或返回组件的位置。 |
 | [Rect](arkts-arkui-rect-t.md) | 用于设置矩形的形状。 |
 | [Rotation](arkts-arkui-rotation-t.md) | 用于设置组件的旋转角度。 |

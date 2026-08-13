@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-audio-interface SoundCardInfo--><!--Device-audio-interface SoundCardInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
@@ -21,6 +23,8 @@ busAddress: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ driver: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SoundCardInfo-driver: string--><!--Device-SoundCardInfo-driver: string-End-->
@@ -61,6 +67,8 @@ model: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +90,8 @@ name: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SoundCardInfo-name: string--><!--Device-SoundCardInfo-name: string-End-->
@@ -101,6 +111,8 @@ vendor: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

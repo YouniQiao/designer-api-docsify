@@ -14,9 +14,11 @@ function getVMRuntimeStat(item: string): long
 
 Obtains the specified system GC statistics based on parameters.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getVMRuntimeStat(item: string): long--><!--Device-hidebug-function getVMRuntimeStat(item: string): long-End-->
 
@@ -32,13 +34,13 @@ Obtains the specified system GC statistics based on parameters.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | System GC statistics returned based on the input parameters. |
+| long | System GC statistics returned based on the input parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Possible causes: 1. Invalid parameter, a string parameter required. 2. Invalid parameter, unknown property. |
 
 ## Examples
 

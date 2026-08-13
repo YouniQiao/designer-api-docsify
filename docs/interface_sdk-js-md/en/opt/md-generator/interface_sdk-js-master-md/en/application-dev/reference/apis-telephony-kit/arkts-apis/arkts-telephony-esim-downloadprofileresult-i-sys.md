@@ -2,7 +2,9 @@
 
 Result of the given downloadable Profile.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface DownloadProfileResult--><!--Device-eSIM-export interface DownloadProfileResult-End-->
 
@@ -26,7 +28,9 @@ Gets the card Id. This value comes from EuiccService and is used when resolving 
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProfileResult-cardId: int--><!--Device-DownloadProfileResult-cardId: int-End-->
 
@@ -44,7 +48,9 @@ Gets the result of the operation.
 
 **Type:** ResultCode
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProfileResult-responseResult: ResultCode--><!--Device-DownloadProfileResult-responseResult: ResultCode-End-->
 
@@ -62,7 +68,9 @@ Gets the solvable errors.
 
 **Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadProfileResult-solvableErrors: SolvableErrors--><!--Device-DownloadProfileResult-solvableErrors: SolvableErrors-End-->
 

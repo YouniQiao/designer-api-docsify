@@ -4,6 +4,8 @@ Enumerates the reference sizes of the available layout area when the preview ima
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AvailableLayoutArea--><!--Device-unnamed-declare enum AvailableLayoutArea-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ SAFE_AREA = 0
 The reference size of the available layout area is the window size minus the safe margins on all sides.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

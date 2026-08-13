@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ElementAttributeValues--><!--Device-unnamed-export interface ElementAttributeValues-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ accessibilityFocused: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-accessibilityFocused: boolean--><!--Device-ElementAttributeValues-accessibilityFocused: boolean-End-->
 
@@ -36,6 +40,8 @@ accessibilityNextFocusId?: number
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-accessibilityNextFocusId?: long--><!--Device-ElementAttributeValues-accessibilityNextFocusId?: long-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -51,6 +57,8 @@ accessibilityPreviousFocusId?: number
 **类型：** number
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long--><!--Device-ElementAttributeValues-accessibilityPreviousFocusId?: long-End-->
 
@@ -68,6 +76,8 @@ accessibilityScrollable?: boolean
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-accessibilityScrollable?: boolean--><!--Device-ElementAttributeValues-accessibilityScrollable?: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -83,6 +93,8 @@ accessibilityText: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-accessibilityText: string--><!--Device-ElementAttributeValues-accessibilityText: string-End-->
 
@@ -100,6 +112,8 @@ bundleName: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-bundleName: string--><!--Device-ElementAttributeValues-bundleName: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -115,6 +129,8 @@ checkable: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-checkable: boolean--><!--Device-ElementAttributeValues-checkable: boolean-End-->
 
@@ -132,6 +148,8 @@ checked: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-checked: boolean--><!--Device-ElementAttributeValues-checked: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -147,6 +165,8 @@ children: Array<AccessibilityElement>
 **类型：** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-children: Array<AccessibilityElement>--><!--Device-ElementAttributeValues-children: Array<AccessibilityElement>-End-->
 
@@ -164,6 +184,8 @@ clickable: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-clickable: boolean--><!--Device-ElementAttributeValues-clickable: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -179,6 +201,8 @@ componentId: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-componentId: long--><!--Device-ElementAttributeValues-componentId: long-End-->
 
@@ -196,6 +220,8 @@ componentType: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-componentType: string--><!--Device-ElementAttributeValues-componentType: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -211,6 +237,8 @@ contents: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-contents: Array<string>--><!--Device-ElementAttributeValues-contents: Array<string>-End-->
 
@@ -228,6 +256,8 @@ currentIndex: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-currentIndex: int--><!--Device-ElementAttributeValues-currentIndex: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -243,6 +273,8 @@ customComponentType?: string
 **类型：** string
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-customComponentType?: string--><!--Device-ElementAttributeValues-customComponentType?: string-End-->
 
@@ -260,6 +292,8 @@ description: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-description: string--><!--Device-ElementAttributeValues-description: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -275,6 +309,8 @@ editable: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-editable: boolean--><!--Device-ElementAttributeValues-editable: boolean-End-->
 
@@ -292,6 +328,8 @@ endIndex: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-endIndex: int--><!--Device-ElementAttributeValues-endIndex: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -308,6 +346,8 @@ error: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-error: string--><!--Device-ElementAttributeValues-error: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -318,23 +358,13 @@ error: string
 extraInfo?: string
 ```
 
-扩展属性，用于定义一些特定组件的属性，包含：
-
-- CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。  
-- Row：Grid组件中聚焦item的行信息，表示该item在第几行。  
-- Column：Grid组件中聚焦的item的列，表示该item在第几列。  
-- ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。  
-- SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。  
-- ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。  
-- BindSheet：表示BindSheet组件的状态，其中取值0表示状态高，取值1表示状态中，取值2表示状态低。  
-- hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。  
-- direction：表示list组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。  
-- expandedState：表示list组件中listItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。  
-- componentTypeDescription：组件类型详细信息，对componentType的补充描述。
+扩展属性，用于定义一些特定组件的属性，包含： - CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。 - Row：Grid组件中聚焦item的行信息，表示该item在第几行。 - Column：Grid组件中聚焦的item的列，表示该item在第几列。 - ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。 - SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。 - ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。 - BindSheet：表示BindSheet组件的状态，其中取值0表示状态高，取值1表示状态中，取值2表示状态低。 - hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。 - direction：表示list组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。 - expandedState：表示list组件中listItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。 - componentTypeDescription：组件类型详细信息，对componentType的补充描述。
 
 **类型：** string
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-extraInfo?: string--><!--Device-ElementAttributeValues-extraInfo?: string-End-->
 
@@ -352,6 +382,8 @@ focusable: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-focusable: boolean--><!--Device-ElementAttributeValues-focusable: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -367,6 +399,8 @@ hintText: string
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-hintText: string--><!--Device-ElementAttributeValues-hintText: string-End-->
 
@@ -384,6 +418,8 @@ hotArea: Rect
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-hotArea: Rect--><!--Device-ElementAttributeValues-hotArea: Rect-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -399,6 +435,8 @@ inputType: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-inputType: int--><!--Device-ElementAttributeValues-inputType: int-End-->
 
@@ -416,6 +454,8 @@ inspectorKey: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-inspectorKey: string--><!--Device-ElementAttributeValues-inspectorKey: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -431,6 +471,8 @@ isActive: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-isActive: boolean--><!--Device-ElementAttributeValues-isActive: boolean-End-->
 
@@ -448,6 +490,8 @@ isEnable: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-isEnable: boolean--><!--Device-ElementAttributeValues-isEnable: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -463,6 +507,8 @@ isFocused: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-isFocused: boolean--><!--Device-ElementAttributeValues-isFocused: boolean-End-->
 
@@ -480,6 +526,8 @@ isHint: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-isHint: boolean--><!--Device-ElementAttributeValues-isHint: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -495,6 +543,8 @@ isPassword: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-isPassword: boolean--><!--Device-ElementAttributeValues-isPassword: boolean-End-->
 
@@ -512,6 +562,8 @@ isVisible: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-isVisible: boolean--><!--Device-ElementAttributeValues-isVisible: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -527,6 +579,8 @@ itemCount: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-itemCount: int--><!--Device-ElementAttributeValues-itemCount: int-End-->
 
@@ -544,6 +598,8 @@ lastContent: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-lastContent: string--><!--Device-ElementAttributeValues-lastContent: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -559,6 +615,8 @@ layer: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-layer: int--><!--Device-ElementAttributeValues-layer: int-End-->
 
@@ -576,6 +634,8 @@ longClickable: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-longClickable: boolean--><!--Device-ElementAttributeValues-longClickable: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -591,6 +651,8 @@ offset: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-offset: double--><!--Device-ElementAttributeValues-offset: double-End-->
 
@@ -608,6 +670,8 @@ pageId: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-pageId: int--><!--Device-ElementAttributeValues-pageId: int-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -623,6 +687,8 @@ parent: AccessibilityElement
 **类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-parent: AccessibilityElement--><!--Device-ElementAttributeValues-parent: AccessibilityElement-End-->
 
@@ -640,6 +706,8 @@ pluralLineSupported: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-pluralLineSupported: boolean--><!--Device-ElementAttributeValues-pluralLineSupported: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -655,6 +723,8 @@ rect: Rect
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-rect: Rect--><!--Device-ElementAttributeValues-rect: Rect-End-->
 
@@ -672,6 +742,8 @@ resourceName: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-resourceName: string--><!--Device-ElementAttributeValues-resourceName: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -687,6 +759,8 @@ rootElement: AccessibilityElement
 **类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-rootElement: AccessibilityElement--><!--Device-ElementAttributeValues-rootElement: AccessibilityElement-End-->
 
@@ -704,6 +778,8 @@ screenRect: Rect
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-screenRect: Rect--><!--Device-ElementAttributeValues-screenRect: Rect-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -719,6 +795,8 @@ scrollable: boolean
 **类型：** boolean
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-scrollable: boolean--><!--Device-ElementAttributeValues-scrollable: boolean-End-->
 
@@ -736,6 +814,8 @@ selected: boolean
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-selected: boolean--><!--Device-ElementAttributeValues-selected: boolean-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -751,6 +831,8 @@ startIndex: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-startIndex: int--><!--Device-ElementAttributeValues-startIndex: int-End-->
 
@@ -768,6 +850,8 @@ text: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-text: string--><!--Device-ElementAttributeValues-text: string-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -783,6 +867,8 @@ textLengthLimit: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-textLengthLimit: int--><!--Device-ElementAttributeValues-textLengthLimit: int-End-->
 
@@ -800,6 +886,8 @@ textMoveUnit: accessibility.TextMoveUnit
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit--><!--Device-ElementAttributeValues-textMoveUnit: accessibility.TextMoveUnit-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -815,6 +903,8 @@ textType: string
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-textType: string--><!--Device-ElementAttributeValues-textType: string-End-->
 
@@ -832,6 +922,8 @@ triggerAction: accessibility.Action
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-triggerAction: accessibility.Action--><!--Device-ElementAttributeValues-triggerAction: accessibility.Action-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -847,6 +939,8 @@ type: WindowType
 **类型：** [WindowType](arkts-accessibility-windowtype-t.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-type: WindowType--><!--Device-ElementAttributeValues-type: WindowType-End-->
 
@@ -864,6 +958,8 @@ valueMax: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-valueMax: double--><!--Device-ElementAttributeValues-valueMax: double-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -879,6 +975,8 @@ valueMin: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-valueMin: double--><!--Device-ElementAttributeValues-valueMin: double-End-->
 
@@ -896,6 +994,8 @@ valueNow: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-ElementAttributeValues-valueNow: double--><!--Device-ElementAttributeValues-valueNow: double-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -911,6 +1011,8 @@ windowId: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ElementAttributeValues-windowId: int--><!--Device-ElementAttributeValues-windowId: int-End-->
 

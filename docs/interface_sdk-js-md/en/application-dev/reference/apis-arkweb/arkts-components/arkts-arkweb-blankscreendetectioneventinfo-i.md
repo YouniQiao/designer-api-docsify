@@ -6,6 +6,8 @@ Defines the event information when a blank screen is detected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BlankScreenDetectionEventInfo--><!--Device-unnamed-declare interface BlankScreenDetectionEventInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,13 +18,15 @@ Defines the event information when a blank screen is detected.
 blankScreenDetails?: BlankScreenDetails
 ```
 
-Details of the blank screen issue detected.For example, if a near-blank screen issue is detected, the details contain the number of points that match the blank screen issue. Otherwise, this attribute does not exist.
+Details of the blank screen issue detected. For example, if a near-blank screen issue is detected, the details contain the number of points that match the blank screen issue. Otherwise, this attribute does not exist.
 
 **Type:** [BlankScreenDetails](arkts-arkweb-blankscreendetails-i.md)
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails--><!--Device-BlankScreenDetectionEventInfo-blankScreenDetails?: BlankScreenDetails-End-->
 
@@ -42,6 +46,8 @@ Reason for the blank screen issue, which depends on the detection method.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason--><!--Device-BlankScreenDetectionEventInfo-blankScreenReason: DetectedBlankScreenReason-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -59,6 +65,8 @@ URL of the page when a blank screen is detected.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-BlankScreenDetectionEventInfo-url: string--><!--Device-BlankScreenDetectionEventInfo-url: string-End-->
 

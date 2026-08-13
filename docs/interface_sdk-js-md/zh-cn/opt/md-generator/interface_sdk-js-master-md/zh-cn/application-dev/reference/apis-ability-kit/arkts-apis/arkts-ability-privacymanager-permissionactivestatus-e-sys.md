@@ -1,8 +1,10 @@
 # PermissionActiveStatus（系统接口）
 
-表示权限使用状态变化类型的枚举。用于描述权限使用[on)](privacyManager.on)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。
+表示权限使用状态变化类型的枚举。用于描述权限使用on)）的回调中返回，帮助应用感知权限从未使用到前台使用、后台使用的状态切换。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-privacyManager-enum PermissionActiveStatus--><!--Device-privacyManager-enum PermissionActiveStatus-End-->
 
@@ -18,7 +20,9 @@ PERM_INACTIVE = 0
 
 表示未使用权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionActiveStatus-PERM_INACTIVE = 0--><!--Device-PermissionActiveStatus-PERM_INACTIVE = 0-End-->
 
@@ -34,7 +38,9 @@ PERM_ACTIVE_IN_FOREGROUND = 1
 
 表示前台使用权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1-End-->
 
@@ -50,7 +56,9 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 
 表示后台使用权限。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2-End-->
 

@@ -2,7 +2,9 @@
 
 module发行版信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ModuleDistroInfo--><!--Device-unnamed-export interface ModuleDistroInfo-End-->
 
@@ -20,7 +22,9 @@ readonly deliveryWithInstall: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean--><!--Device-ModuleDistroInfo-readonly deliveryWithInstall: boolean-End-->
 
@@ -38,7 +42,9 @@ readonly installationFree: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModuleDistroInfo-readonly installationFree: boolean--><!--Device-ModuleDistroInfo-readonly installationFree: boolean-End-->
 
@@ -56,7 +62,9 @@ module名称。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModuleDistroInfo-readonly moduleName: string--><!--Device-ModuleDistroInfo-readonly moduleName: string-End-->
 
@@ -74,7 +82,9 @@ module类型。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModuleDistroInfo-readonly moduleType: string--><!--Device-ModuleDistroInfo-readonly moduleType: string-End-->
 

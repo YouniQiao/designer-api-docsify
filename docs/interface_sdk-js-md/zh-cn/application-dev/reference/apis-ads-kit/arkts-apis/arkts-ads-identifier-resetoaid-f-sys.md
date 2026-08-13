@@ -12,6 +12,8 @@ function resetOAID(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-identifier-function resetOAID(): void--><!--Device-identifier-function resetOAID(): void-End-->
 
 **系统能力：** SystemCapability.Advertising.OAID
@@ -23,8 +25,8 @@ function resetOAID(): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 17300002 | Not in the trust list.<br>**适用版本：** 12+ |
-| [17300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-系统内部错误) | System internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [17300001](../errorcode-oaid.md#17300001-系统内部错误) | System internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 

@@ -25,5 +25,5 @@ import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayou
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#lazyvwaterflowlayout) |
-| [LazyVWaterFlowLayoutInstance](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#lazyvwaterflowlayoutinstance) |
+| [LazyVWaterFlowLayout](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#LazyVWaterFlowLayout) |
+| [LazyVWaterFlowLayoutInstance](arkts-arkui-arkui-components-arklazywaterflowlayout-con.md#LazyVWaterFlowLayoutInstance) |

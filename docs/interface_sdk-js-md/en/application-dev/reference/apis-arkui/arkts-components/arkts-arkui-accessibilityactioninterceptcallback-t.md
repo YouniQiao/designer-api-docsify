@@ -4,11 +4,13 @@
 declare type AccessibilityActionInterceptCallback = (action: AccessibilityAction) => AccessibilityActionInterceptResult
 ```
 
-Defines the callback type used in accessibility action intercept.The value of action indicates the accessibility action type.
+Defines the callback type used in accessibility action intercept. The value of action indicates the accessibility action type.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,9 +14,11 @@ function getPortList(): Readonly<SerialPort>[]
 
 Obtains the serial port device list, including the device name and port number.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
 
@@ -26,7 +28,7 @@ Obtains the serial port device list, including the device name and port number.
 
 | Type | Description |
 | --- | --- |
-| [Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;SerialPort&gt;[] | Serial port information list. |
+| [Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;SerialPort&gt;[] | Serial port information list. |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Defines an MMS notification index.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsNotificationInd--><!--Device-sms-export interface MmsNotificationInd-End-->
 
@@ -26,7 +28,9 @@ Content class.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-contentClass?: int--><!--Device-MmsNotificationInd-contentClass?: int-End-->
 
@@ -44,7 +48,9 @@ Content location.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-contentLocation: string--><!--Device-MmsNotificationInd-contentLocation: string-End-->
 
@@ -62,7 +68,9 @@ Status report.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-deliveryReport?: int--><!--Device-MmsNotificationInd-deliveryReport?: int-End-->
 
@@ -80,7 +88,9 @@ Expiration.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-expiry: int--><!--Device-MmsNotificationInd-expiry: int-End-->
 
@@ -98,7 +108,9 @@ Source address.
 
 **Type:** [MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-from?: MmsAddress--><!--Device-MmsNotificationInd-from?: MmsAddress-End-->
 
@@ -116,7 +128,9 @@ Message class.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-messageClass: int--><!--Device-MmsNotificationInd-messageClass: int-End-->
 
@@ -134,7 +148,9 @@ Message size.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-messageSize: long--><!--Device-MmsNotificationInd-messageSize: long-End-->
 
@@ -152,7 +168,9 @@ Subject.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-subject?: string--><!--Device-MmsNotificationInd-subject?: string-End-->
 
@@ -170,7 +188,9 @@ Transaction ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-transactionId: string--><!--Device-MmsNotificationInd-transactionId: string-End-->
 
@@ -188,7 +208,9 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsNotificationInd-version: MmsVersionType--><!--Device-MmsNotificationInd-version: MmsVersionType-End-->
 

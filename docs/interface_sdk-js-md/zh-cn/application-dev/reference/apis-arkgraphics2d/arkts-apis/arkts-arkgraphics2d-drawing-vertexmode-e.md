@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-drawing-enum VertexMode--><!--Device-drawing-enum VertexMode-End-->
 
@@ -20,7 +22,9 @@ TRIANGLES_VERTEXMODE = 0
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VertexMode-TRIANGLES_VERTEXMODE = 0--><!--Device-VertexMode-TRIANGLES_VERTEXMODE = 0-End-->
 
@@ -36,7 +40,9 @@ TRIANGLESSTRIP_VERTEXMODE = 1
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VertexMode-TRIANGLESSTRIP_VERTEXMODE = 1--><!--Device-VertexMode-TRIANGLESSTRIP_VERTEXMODE = 1-End-->
 
@@ -52,7 +58,9 @@ TRIANGLESFAN_VERTEXMODE = 2
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-VertexMode-TRIANGLESFAN_VERTEXMODE = 2--><!--Device-VertexMode-TRIANGLESFAN_VERTEXMODE = 2-End-->
 

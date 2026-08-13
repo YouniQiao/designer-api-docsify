@@ -2,7 +2,9 @@
 
 表示所有应用或设备的访问记录。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-privacyManager-interface PermissionUsedResponse--><!--Device-privacyManager-interface PermissionUsedResponse-End-->
 
@@ -16,11 +18,13 @@
 beginTime: number
 ```
 
-查询记录的起始时间。单位为：毫秒。
+查询记录的起始时间。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedResponse-beginTime: long--><!--Device-PermissionUsedResponse-beginTime: long-End-->
 
@@ -38,7 +42,9 @@ bundleRecords: Array<BundleUsedRecord>
 
 **类型：** Array&lt;[BundleUsedRecord](arkts-ability-privacymanager-bundleusedrecord-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedResponse-bundleRecords: Array<BundleUsedRecord>--><!--Device-PermissionUsedResponse-bundleRecords: Array<BundleUsedRecord>-End-->
 
@@ -52,11 +58,13 @@ bundleRecords: Array<BundleUsedRecord>
 endTime: number
 ```
 
-查询记录的终止时间。单位为：毫秒。
+查询记录的终止时间。 单位为：毫秒。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PermissionUsedResponse-endTime: long--><!--Device-PermissionUsedResponse-endTime: long-End-->
 

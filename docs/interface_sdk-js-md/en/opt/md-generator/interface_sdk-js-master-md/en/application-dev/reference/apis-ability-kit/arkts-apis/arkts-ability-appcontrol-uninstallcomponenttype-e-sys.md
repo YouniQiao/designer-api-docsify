@@ -2,7 +2,9 @@
 
 Enumerates the types of abilities during uninstallation.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appControl-export enum UninstallComponentType--><!--Device-appControl-export enum UninstallComponentType-End-->
 
@@ -16,12 +18,11 @@ Enumerates the types of abilities during uninstallation.
 EXTENSION = 1
 ```
 
-ExtensionAbility component. Only  
-[ExtensionAbility](../../../quick-start/module-configuration-file.md#extensionabilities) components of the service type is supported.
+ExtensionAbility component. Only [ExtensionAbility](../../../quick-start/module-configuration-file.md#extensionabilities) components of the service type is supported. The ExtensionAbility component is determined by bundleName, moduleName, and abilityName in want.
 
-The ExtensionAbility component is determined by bundleName, moduleName, and abilityName in want.
+**Since:** 23
 
-**Since:** 15
+**Deprecated since:** -1
 
 <!--Device-UninstallComponentType-EXTENSION = 1--><!--Device-UninstallComponentType-EXTENSION = 1-End-->
 
@@ -35,13 +36,11 @@ The ExtensionAbility component is determined by bundleName, moduleName, and abil
 UI_EXTENSION = 2
 ```
 
-UIExtensionAbility component.
+UIExtensionAbility component. The UIExtensionAbility is determined by bundleName, moduleName, and abilityName in want, and the **ability.want.params.uiExtensionType** field in **want.parameters** is set to [UIExtensionAbility](../../../application-models/uiextensionability-sys.md).
 
-The UIExtensionAbility is determined by bundleName, moduleName, and abilityName in want, and the  
-**ability.want.params.uiExtensionType** field in **want.parameters** is set to  
-[UIExtensionAbility](../../../application-models/uiextensionability-sys.md).
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-UninstallComponentType-UI_EXTENSION = 2--><!--Device-UninstallComponentType-UI_EXTENSION = 2-End-->
 

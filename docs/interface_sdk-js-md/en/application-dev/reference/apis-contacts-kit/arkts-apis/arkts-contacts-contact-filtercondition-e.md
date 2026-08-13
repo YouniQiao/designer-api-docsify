@@ -6,6 +6,8 @@ Enumerates filter criteria.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-contact-enum FilterCondition--><!--Device-contact-enum FilterCondition-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -21,6 +23,8 @@ The corresponding field is equal to a value.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -40,6 +44,8 @@ The corresponding field is not equal to a value.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FilterCondition-NOT_EQUAL_TO = 2--><!--Device-FilterCondition-NOT_EQUAL_TO = 2-End-->
@@ -57,6 +63,8 @@ The value of the corresponding field is in an array.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
@@ -76,6 +84,8 @@ The corresponding field is not empty.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FilterCondition-IS_NOT_NULL = 0--><!--Device-FilterCondition-IS_NOT_NULL = 0-End-->
@@ -94,6 +104,8 @@ The value of the corresponding field is not in an array.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FilterCondition-NOT_IN = 4--><!--Device-FilterCondition-NOT_IN = 4-End-->
@@ -111,6 +123,8 @@ The value of the corresponding field contains a certain value.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

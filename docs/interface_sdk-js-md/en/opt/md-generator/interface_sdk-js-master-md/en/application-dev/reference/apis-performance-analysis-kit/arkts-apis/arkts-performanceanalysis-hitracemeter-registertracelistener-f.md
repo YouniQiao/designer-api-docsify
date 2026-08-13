@@ -12,23 +12,13 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function registerTraceListener(callback: TraceEventListener): number
 ```
 
-Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result.
+Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result. After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes. Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process. > **NOTE：**> > If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting > for the callback execution to complete) when the callback is executed. > > Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the > main thread of the application to avoid application freeze.
 
-After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes.
+**Since:** 23
 
-Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process.
+**Deprecated since:** -1
 
-> **NOTE：**
-> 
-> If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting
-> for the callback execution to complete) when the callback is executed.
-> 
-> Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the
-> main thread of the application to avoid application freeze.
-
-**Since:** 22
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int--><!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int-End-->
 

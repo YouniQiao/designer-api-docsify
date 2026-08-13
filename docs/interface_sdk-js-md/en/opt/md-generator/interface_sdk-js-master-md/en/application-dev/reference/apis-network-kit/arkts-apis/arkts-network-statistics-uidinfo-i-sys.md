@@ -2,7 +2,9 @@
 
 Parameters for obtaining detailed information on application traffic usage.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface UidInfo--><!--Device-statistics-export interface UidInfo-End-->
 
@@ -22,11 +24,13 @@ import { statistics } from '@kit.NetworkKit';
 ifaceInfo: IfaceInfo
 ```
 
-See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#IfaceInfo)
+See [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md#IfaceInfo-(System-API))
 
 **Type:** [IfaceInfo](arkts-network-statistics-ifaceinfo-i-sys.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UidInfo-ifaceInfo: IfaceInfo--><!--Device-UidInfo-ifaceInfo: IfaceInfo-End-->
 
@@ -44,7 +48,9 @@ Uid of app for querying traffic.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UidInfo-uid: int--><!--Device-UidInfo-uid: int-End-->
 

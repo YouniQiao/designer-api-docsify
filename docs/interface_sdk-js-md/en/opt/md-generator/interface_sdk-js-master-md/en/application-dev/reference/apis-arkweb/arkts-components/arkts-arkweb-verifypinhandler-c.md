@@ -4,6 +4,8 @@ Handle the result of PIN verification.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class VerifyPinHandler--><!--Device-unnamed-declare class VerifyPinHandler-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ confirm(result: PinVerifyResult): void
 Passes the PIN verify result.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void--><!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void-End-->
 
@@ -37,6 +41,8 @@ constructor()
 Constructor.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-VerifyPinHandler-constructor()--><!--Device-VerifyPinHandler-constructor()-End-->
 

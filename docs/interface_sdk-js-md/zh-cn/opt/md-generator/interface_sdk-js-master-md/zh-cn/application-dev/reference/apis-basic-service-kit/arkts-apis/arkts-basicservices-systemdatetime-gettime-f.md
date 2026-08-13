@@ -8,7 +8,9 @@ function getTime(isNanoseconds?: boolean): number
 
 使用同步方式获取自Unix纪元以来到当前系统时间所经过的时间。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long--><!--Device-systemDateTime-function getTime(isNanoseconds?: boolean): long-End-->
 

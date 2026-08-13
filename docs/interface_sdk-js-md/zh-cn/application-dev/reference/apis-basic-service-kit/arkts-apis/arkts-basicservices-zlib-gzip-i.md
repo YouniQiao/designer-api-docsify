@@ -2,9 +2,11 @@
 
 Gzip相关接口。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-zlib-interface GZip--><!--Device-zlib-interface GZip-End-->
 
@@ -12,23 +14,19 @@ Gzip相关接口。
 
 ## gzbuffer
 
-ArkTS-Dyn:
-```TypeScript
-gzbuffer(size: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzbuffer(size: long): Promise<int>
 ```
 
 为当前库函数设置内部缓冲区尺寸。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzbuffer(size: long): Promise<int>--><!--Device-GZip-gzbuffer(size: long): Promise<int>-End-->
 
@@ -38,20 +36,20 @@ gzbuffer(size: long): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 需要设置的内部缓冲区尺寸。 |
+| size | long | 是 | 需要设置的内部缓冲区尺寸。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，成功时，返回0。 |
+| Promise&lt;int&gt; | Promise对象，成功时，返回0。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -102,11 +100,13 @@ gzclearerr(): Promise<void>
 
 清除文件的错误和文件结束标志。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclearerr(): Promise<void>--><!--Device-GZip-gzclearerr(): Promise<void>-End-->
 
@@ -177,11 +177,13 @@ gzclose(): Promise<ReturnStatus>
 
 清除文件的所有挂起输出，如有必要，关闭文件和释放（解）压缩状态。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclose(): Promise<ReturnStatus>--><!--Device-GZip-gzclose(): Promise<ReturnStatus>-End-->
 
@@ -197,8 +199,8 @@ gzclose(): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -246,11 +248,13 @@ gzcloser(): Promise<ReturnStatus>
 
 与gzclose()功能相同，仅适用于读取时。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzcloser(): Promise<ReturnStatus>--><!--Device-GZip-gzcloser(): Promise<ReturnStatus>-End-->
 
@@ -266,7 +270,7 @@ gzcloser(): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -316,11 +320,13 @@ gzclosew(): Promise<ReturnStatus>
 
 与gzclose()功能相同，仅适用于写入或追加时。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzclosew(): Promise<ReturnStatus>--><!--Device-GZip-gzclosew(): Promise<ReturnStatus>-End-->
 
@@ -336,8 +342,8 @@ gzclosew(): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800006](../../apis-basic-services-kit/errorcode-zlib.md#17800006-内存分配失败错误) | Memory allocation failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -379,23 +385,19 @@ struct Index {
 
 ## gzdirect
 
-ArkTS-Dyn:
-```TypeScript
-gzdirect(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzdirect(): Promise<int>
 ```
 
 检查指定的gzip文件句柄文件是否直接访问原始未压缩数据，重新分配缓冲区。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzdirect(): Promise<int>--><!--Device-GZip-gzdirect(): Promise<int>-End-->
 
@@ -405,7 +407,7 @@ gzdirect(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，如果直接访问原始未压缩数据，则返回1。 |
+| Promise&lt;int&gt; | Promise对象，如果直接访问原始未压缩数据，则返回1。 |
 
 ## 示例
 
@@ -448,23 +450,19 @@ struct Index {
 
 ## gzdopen
 
-ArkTS-Dyn:
-```TypeScript
-gzdopen(fd: number, mode: string): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzdopen(fd: int, mode: string): Promise<void>
 ```
 
 将gzFile与文件描述符fd相关联，打开文件，用于进行读取并解压缩，或者压缩并写入。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>--><!--Device-GZip-gzdopen(fd: int, mode: string): Promise<void>-End-->
 
@@ -474,7 +472,7 @@ gzdopen(fd: int, mode: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 文件描述符。通常情况下，通过系统调用“open”或其他方法获得的。 |
+| fd | int | 是 | 文件描述符。通常情况下，通过系统调用“open”或其他方法获得的。 |
 | mode | string | 是 | 用于指定访问模式。详情与[gzopen](#gzopen)一致。 |
 
 **返回值：**
@@ -487,8 +485,8 @@ gzdopen(fd: int, mode: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
 
 ## 示例
 
@@ -531,23 +529,19 @@ struct Index {
 
 ## gzeof
 
-ArkTS-Dyn:
-```TypeScript
-gzeof(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzeof(): Promise<int>
 ```
 
 检查gzip压缩文件的读取位置是否已到达文件的末尾。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzeof(): Promise<int>--><!--Device-GZip-gzeof(): Promise<int>-End-->
 
@@ -557,7 +551,7 @@ gzeof(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，如果在读取时设置了文件的文件结束指示符，则返回1。 |
+| Promise&lt;int&gt; | Promise对象，如果在读取时设置了文件的文件结束指示符，则返回1。 |
 
 ## 示例
 
@@ -616,11 +610,13 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 文件上发生的最后一个错误的错误消息。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>--><!--Device-GZip-gzerror(): Promise<GzErrorOutputInfo>-End-->
 
@@ -636,7 +632,7 @@ gzerror(): Promise<GzErrorOutputInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -697,11 +693,13 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 将所有挂起的输出刷新到文件中。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-GZip-gzflush(flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
@@ -723,8 +721,8 @@ gzflush(flush: CompressFlushMode): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -767,23 +765,19 @@ struct Index {
 
 ## gzfread
 
-ArkTS-Dyn:
-```TypeScript
-gzfread(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 ```
 
 从gzip压缩文件中解压缩并读取数据。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
@@ -794,21 +788,21 @@ gzfread(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | 是 | 用于存储读取结果的目标缓冲区。 |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 单个数据块中的字节数。 |
-| nitems | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 要写入的数据块数。 |
+| size | long | 是 | 单个数据块中的字节数。 |
+| nitems | long | 是 | 要写入的数据块数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回读取大小为size的完整数据块的数目。 |
+| Promise&lt;long&gt; | Promise对象，返回读取大小为size的完整数据块的数目。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -860,23 +854,19 @@ struct Index {
 
 ## gzfwrite
 
-ArkTS-Dyn:
-```TypeScript
-gzfwrite(buf: ArrayBuffer, size: number, nitems: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 ```
 
 将大小为size，数量为nitems的数据块从buf压缩并写入文件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>--><!--Device-GZip-gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>-End-->
 
@@ -887,21 +877,21 @@ gzfwrite(buf: ArrayBuffer, size: long, nitems: long): Promise<long>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | 是 | 要将数据写入的缓冲区。 |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 单个数据块中的字节数。 |
-| nitems | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 要写入的数据块数。 |
+| size | long | 是 | 单个数据块中的字节数。 |
+| nitems | long | 是 | 要写入的数据块数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回写入大小为size的完整数据块的数目。 |
+| Promise&lt;long&gt; | Promise对象，返回写入大小为size的完整数据块的数目。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -949,23 +939,19 @@ struct Index {
 
 ## gzgetc
 
-ArkTS-Dyn:
-```TypeScript
-gzgetc(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzgetc(): Promise<int>
 ```
 
 从文件中读取并解压缩一个字节。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzgetc(): Promise<int>--><!--Device-GZip-gzgetc(): Promise<int>-End-->
 
@@ -975,13 +961,13 @@ gzgetc(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回读取字符的ASCII值。 |
+| Promise&lt;int&gt; | Promise对象，返回读取字符的ASCII值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1033,11 +1019,13 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 从文件中读取字节并将其解压缩到buf中，直到读取len-1字符，或者直到读取换行符并将其传输到buf，或者遇到文件结束条件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>--><!--Device-GZip-gzgets(buf: ArrayBuffer): Promise<string>-End-->
 
@@ -1059,8 +1047,8 @@ gzgets(buf: ArrayBuffer): Promise<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1107,23 +1095,19 @@ struct Index {
 
 ## gzoffset
 
-ArkTS-Dyn:
-```TypeScript
-gzoffset(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzoffset(): Promise<long>
 ```
 
 返回文件的当前压缩（实际）读或写偏移量。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzoffset(): Promise<long>--><!--Device-GZip-gzoffset(): Promise<long>-End-->
 
@@ -1133,13 +1117,13 @@ gzoffset(): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件的当前压缩（实际）读或写偏移量。 |
+| Promise&lt;long&gt; | Promise对象，返回文件的当前压缩（实际）读或写偏移量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1188,11 +1172,13 @@ gzopen(path: string, mode: string): Promise<void>
 
 打开位于指定路径的gzip(.gz)文件，用于进行读取并解压缩，或者压缩并写入。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzopen(path: string, mode: string): Promise<void>--><!--Device-GZip-gzopen(path: string, mode: string): Promise<void>-End-->
 
@@ -1215,8 +1201,8 @@ gzopen(path: string, mode: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800002](../../apis-basic-services-kit/errorcode-zlib.md#17800002-传入的文件或访问模式错误) | No such file or access mode error. |
 
 ## 示例
 
@@ -1258,23 +1244,19 @@ struct Index {
 
 ## gzprintf
 
-ArkTS-Dyn:
-```TypeScript
-gzprintf(format: string, ...args: Array<string | number>): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzprintf(format: string, ...args: Array<string | double>): Promise<int>
 ```
 
 在字符串格式的控制下，将参数转换和格式化后，压缩并写入文件，如fprintf中所示。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>--><!--Device-GZip-gzprintf(format: string, ...args: Array<string | double>): Promise<int>-End-->
 
@@ -1285,21 +1267,21 @@ gzprintf(format: string, ...args: Array<string | double>): Promise<int>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | format | string | 是 | 格式化描述符和纯文本。 |
-| args | ArkTS-Dyn: Array&lt;string \| number&gt;  <br>ArkTS-Sta：Array&lt;string \| double&gt; | 是 | 可变参数列表。传入可变参数，例如gzprintf("name is %s, age is %d", "Tom", 23)，写入内容为“name is Tom, age is 23”。不传可变参数，例如gzprintf("name is %s, age is %d")，写入内容为“name is %s, age is %d”。 |
+| args | Array&lt;string \| double&gt; | 是 | 可变参数列表。传入可变参数，例如gzprintf("name is %s, age is %d", "Tom", 23)，写入内容为“name is Tom, age is 23”。不传可变参数，例如gzprintf("name is %s, age is %d")，写入内容为“name is %s, age is %d”。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回实际写入的未压缩字节数。 |
+| Promise&lt;int&gt; | Promise对象，返回实际写入的未压缩字节数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1342,23 +1324,19 @@ struct Index {
 
 ## gzputc
 
-ArkTS-Dyn:
-```TypeScript
-gzputc(ch: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzputc(ch: int): Promise<int>
 ```
 
 将转换为无符号字符的c压缩并写入文件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzputc(ch: int): Promise<int>--><!--Device-GZip-gzputc(ch: int): Promise<int>-End-->
 
@@ -1368,20 +1346,20 @@ gzputc(ch: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| ch | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 写入字符ASCII。 |
+| ch | int | 是 | 写入字符ASCII。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回已写入的值。 |
+| Promise&lt;int&gt; | Promise对象，返回已写入的值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1424,23 +1402,19 @@ struct Index {
 
 ## gzputs
 
-ArkTS-Dyn:
-```TypeScript
-gzputs(str: string): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzputs(str: string): Promise<int>
 ```
 
 压缩给定的以null结尾的字符串并将其写入文件，不包括终止的null字符。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzputs(str: string): Promise<int>--><!--Device-GZip-gzputs(str: string): Promise<int>-End-->
 
@@ -1456,14 +1430,14 @@ gzputs(str: string): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回写入的字符数。 |
+| Promise&lt;int&gt; | Promise对象，返回写入的字符数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1506,23 +1480,19 @@ struct Index {
 
 ## gzread
 
-ArkTS-Dyn:
-```TypeScript
-gzread(buf: ArrayBuffer): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzread(buf: ArrayBuffer): Promise<long>
 ```
 
 从文件中读取最多len个未压缩字节并将其解压缩到buf中。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>--><!--Device-GZip-gzread(buf: ArrayBuffer): Promise<long>-End-->
 
@@ -1538,14 +1508,14 @@ gzread(buf: ArrayBuffer): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回实际读取的未压缩字节数。 |
+| Promise&lt;long&gt; | Promise对象，返回实际读取的未压缩字节数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1603,11 +1573,13 @@ gzrewind(): Promise<ReturnStatus>
 
 将文件指针重新定位到文件的开头，此功能仅用于读取。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzrewind(): Promise<ReturnStatus>--><!--Device-GZip-gzrewind(): Promise<ReturnStatus>-End-->
 
@@ -1623,7 +1595,7 @@ gzrewind(): Promise<ReturnStatus>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1668,23 +1640,19 @@ struct Index {
 
 ## gzseek
 
-ArkTS-Dyn:
-```TypeScript
-gzseek(offset: number, whence: OffsetReferencePoint): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 ```
 
 将起始位置设置为相对于文件中下一个gzread或gzwrite的偏移位置。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>--><!--Device-GZip-gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>-End-->
 
@@ -1694,21 +1662,21 @@ gzseek(offset: long, whence: OffsetReferencePoint): Promise<long>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 目标偏移位置。 |
+| offset | long | 是 | 目标偏移位置。 |
 | whence | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | 是 | 定义偏移的参考点，参考[OffsetReferencePoint枚举定义](arkts-basicservices-zlib-offsetreferencepoint-e.md#OffsetReferencePoint)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回从未压缩流开始以字节为单位测量的结果偏移位置。 |
+| Promise&lt;long&gt; | Promise对象，返回从未压缩流开始以字节为单位测量的结果偏移位置。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1757,11 +1725,13 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 动态更新文件的压缩级别和压缩策略。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-GZip-gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
@@ -1784,8 +1754,8 @@ gzsetparams(level: CompressLevel, strategy: CompressStrategy): Promise<ReturnSta
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-压缩流或解压流错误) | Compression or decompression stream error, which may be caused by an initialization error in the zlib stream structure or a modified structure. |
 
 ## 示例
 
@@ -1829,23 +1799,19 @@ struct Index {
 
 ## gztell
 
-ArkTS-Dyn:
-```TypeScript
-gztell(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gztell(): Promise<long>
 ```
 
 返回文件中下一个gzread或gzwrite的起始位置。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gztell(): Promise<long>--><!--Device-GZip-gztell(): Promise<long>-End-->
 
@@ -1855,13 +1821,13 @@ gztell(): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回文件种下一个gzread或gzwrite的起始位置。 |
+| Promise&lt;long&gt; | Promise对象，返回文件种下一个gzread或gzwrite的起始位置。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1904,23 +1870,19 @@ struct Index {
 
 ## gzungetc
 
-ArkTS-Dyn:
-```TypeScript
-gzungetc(c: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzungetc(c: int): Promise<int>
 ```
 
 将c推回到流中，以便在下次读取文件时将作为第一个字符读取。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzungetc(c: int): Promise<int>--><!--Device-GZip-gzungetc(c: int): Promise<int>-End-->
 
@@ -1930,20 +1892,20 @@ gzungetc(c: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| c | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 回退到输入流之前的字符。 |
+| c | int | 是 | 回退到输入流之前的字符。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回推送的字符。 |
+| Promise&lt;int&gt; | Promise对象，返回推送的字符。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 
@@ -1989,23 +1951,19 @@ struct Index {
 
 ## gzwrite
 
-ArkTS-Dyn:
-```TypeScript
-gzwrite(buf: ArrayBuffer, len: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 gzwrite(buf: ArrayBuffer, len: long): Promise<long>
 ```
 
 将buf中的len长度的未压缩字节进行压缩并将其写入文件。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>--><!--Device-GZip-gzwrite(buf: ArrayBuffer, len: long): Promise<long>-End-->
 
@@ -2016,20 +1974,20 @@ gzwrite(buf: ArrayBuffer, len: long): Promise<long>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | 是 | 对象指向要写入的数据缓冲区。 |
-| len | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 未压缩字节长度。 |
+| len | long | 是 | 未压缩字节长度。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回写入的未压缩字节数。 |
+| Promise&lt;long&gt; | Promise对象，返回写入的未压缩字节数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17800009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17800009](../../apis-basic-services-kit/errorcode-zlib.md#17800009-内部结构错误) | Internal structure error. |
 
 ## 示例
 

@@ -1,12 +1,14 @@
 # ColorMetrics
 
-Defines the ColorMetrics class.
+Used to mix colors.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class ColorMetrics--><!--Device-unnamed-export declare class ColorMetrics-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ColorMetrics--><!--Device-unnamed-declare class ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,11 +18,13 @@ Defines the ColorMetrics class.
 static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with default exposure.Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear).When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness.This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
+Create ColorMetrics class using HDR color with default exposure. Create an HDR color value with default exposure (0.0 for logarithmic, 1.0 for linear). When no exposure value is specified, RGB channel values can exceed 1.0 to achieve HDR brightness. This matches iOS UIColor behavior where RGB values > 1.0 enable HDR rendering.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,24 +48,26 @@ Create ColorMetrics class using HDR color with default exposure.Create an HDR co
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLinearExposure
 
 ```TypeScript
 static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,
-      red: double, green: double, blue: double, alpha?: double): ColorMetrics
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with linear exposure.Create an HDR color value with specified linear exposure.The exposure value controls the brightness of the color in a linear color space.When using linear exposure, RGB channel values are typically in the range [0, 1].
+Create ColorMetrics class using HDR color with linear exposure. Create an HDR color value with specified linear exposure. The exposure value controls the brightness of the color in a linear color space. When using linear exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+<!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -82,24 +88,26 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## createHDRColorWithLogExposure
 
 ```TypeScript
 static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
-      red: double, green: double, blue: double, alpha?: double): ColorMetrics
+    red: double, green: double, blue: double, alpha?: double): ColorMetrics
 ```
 
-Create ColorMetrics class using HDR color with linear exposure.Create an HDR color value with specified logarithmic exposure (stops).The exposure value controls the brightness in a logarithmic (perceptual) color space.When using logarithmic exposure, RGB channel values are typically in the range [0, 1].
+Create ColorMetrics class using HDR color with linear exposure. Create an HDR color value with specified logarithmic exposure (stops). The exposure value controls the brightness in a logarithmic (perceptual) color space. When using logarithmic exposure, RGB channel values are typically in the range [0, 1].
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,      red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
+<!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics--><!--Device-ColorMetrics-static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,    red: double, green: double, blue: double, alpha?: double): ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -120,7 +128,7 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 
 | Type | Description |
 | --- | --- |
-| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
+| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | ColorMetrics class instance with HDR color. |
 
 ## getBlueValue
 
@@ -128,11 +136,13 @@ Create ColorMetrics class using HDR color with linear exposure.Create an HDR col
 getBlueValue(): double
 ```
 
-Get blue value.Returns blue channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get blue value. Returns blue channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,7 +156,7 @@ Get blue value.Returns blue channel value as a floating-point number.For SDR col
 
 | Type | Description |
 | --- | --- |
-| double | The blue value. Valid range: [0, +∞). For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
+| double | The blue value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
 ## getColorSpace
 
@@ -154,11 +164,13 @@ Get blue value.Returns blue channel value as a floating-point number.For SDR col
 getColorSpace(): ColorSpace
 ```
 
-Get color space of the ColorMetrics.Returns the color space used when creating this color.
+Get color space of the ColorMetrics. Returns the color space used when creating this color.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,11 +192,13 @@ Get color space of the ColorMetrics.Returns the color space used when creating t
 getGreenValue(): double
 ```
 
-Get green value.Returns green channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get green value. Returns green channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,7 +212,7 @@ Get green value.Returns green channel value as a floating-point number.For SDR c
 
 | Type | Description |
 | --- | --- |
-| double | The green value. Valid range: [0, +∞). For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
+| double | The green value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
 ## getRedValue
 
@@ -206,11 +220,13 @@ Get green value.Returns green channel value as a floating-point number.For SDR c
 getRedValue(): double
 ```
 
-Get red value.Returns red channel value as a floating-point number.For SDR colors, value is in range [0, 1].For HDR colors, value can be greater than 1.0 to represent extended brightness.
+Get red value. Returns red channel value as a floating-point number. For SDR colors, value is in range [0, 1]. For HDR colors, value can be greater than 1.0 to represent extended brightness.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,7 +240,7 @@ Get red value.Returns red channel value as a floating-point number.For SDR color
 
 | Type | Description |
 | --- | --- |
-| double | The red value. Valid range: [0, +∞). For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
+| double | The red value. Valid range: For SDR colors: [0, 1]. Fro HDR colors: [0, +∞), values > 1.0 indicate HDR brightness. |
 
 ## isHDR
 
@@ -232,11 +248,13 @@ Get red value.Returns red channel value as a floating-point number.For SDR color
 isHDR(): boolean
 ```
 
-Check if ColorMetrics represents an HDR color.Returns true if color was created using createHDRColorWithXx or has RGB values > 1.0.
+Check if ColorMetrics represents an HDR color. Returns true if color was created using createHDRColorWithXx or has RGB values > 1.0.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

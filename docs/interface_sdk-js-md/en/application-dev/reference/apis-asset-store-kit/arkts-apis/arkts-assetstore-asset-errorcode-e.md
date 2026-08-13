@@ -6,6 +6,8 @@ Enumerates the error codes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-asset-enum ErrorCode--><!--Device-asset-enum ErrorCode-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -21,6 +23,8 @@ The caller does not have the permission.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorCode-PERMISSION_DENIED = 201--><!--Device-ErrorCode-PERMISSION_DENIED = 201-End-->
 
@@ -38,6 +42,8 @@ The caller is not a system application.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-ErrorCode-NOT_SYSTEM_APPLICATION = 202--><!--Device-ErrorCode-NOT_SYSTEM_APPLICATION = 202-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -53,6 +59,8 @@ The argument is invalid.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -72,6 +80,8 @@ The ASSET service is unavailable.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-SERVICE_UNAVAILABLE = 24000001--><!--Device-ErrorCode-SERVICE_UNAVAILABLE = 24000001-End-->
@@ -89,6 +99,8 @@ Failed to find the asset.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -108,6 +120,8 @@ The specified asset already exists.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-DUPLICATED = 24000003--><!--Device-ErrorCode-DUPLICATED = 24000003-End-->
@@ -125,6 +139,8 @@ The access to the asset is denied.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -144,6 +160,8 @@ The screen lock status does not match.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-STATUS_MISMATCH = 24000005--><!--Device-ErrorCode-STATUS_MISMATCH = 24000005-End-->
@@ -161,6 +179,8 @@ The system memory is insufficient.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -180,6 +200,8 @@ The asset is corrupted.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-DATA_CORRUPTED = 24000007--><!--Device-ErrorCode-DATA_CORRUPTED = 24000007-End-->
@@ -197,6 +219,8 @@ The database operation failed.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -216,6 +240,8 @@ The crypto operation failed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-CRYPTO_ERROR = 24000009--><!--Device-ErrorCode-CRYPTO_ERROR = 24000009-End-->
@@ -233,6 +259,8 @@ IPC failed.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -252,6 +280,8 @@ The Bundle Manager service is abnormal.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-BMS_ERROR = 24000011--><!--Device-ErrorCode-BMS_ERROR = 24000011-End-->
@@ -269,6 +299,8 @@ The account service is abnormal.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -288,6 +320,8 @@ The Access Token service is abnormal.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-ACCESS_TOKEN_ERROR = 24000013--><!--Device-ErrorCode-ACCESS_TOKEN_ERROR = 24000013-End-->
@@ -305,6 +339,8 @@ The file operation failed.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -324,6 +360,8 @@ Failed to obtain the system time.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-GET_SYSTEM_TIME_ERROR = 24000015--><!--Device-ErrorCode-GET_SYSTEM_TIME_ERROR = 24000015-End-->
@@ -341,6 +379,8 @@ The number of cached records exceeds the upper limit.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -360,6 +400,8 @@ The feature is not supported.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ErrorCode-UNSUPPORTED = 24000017--><!--Device-ErrorCode-UNSUPPORTED = 24000017-End-->
@@ -378,6 +420,8 @@ Parameter verification failed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ErrorCode-PARAM_VERIFICATION_FAILED = 24000018--><!--Device-ErrorCode-PARAM_VERIFICATION_FAILED = 24000018-End-->
@@ -395,6 +439,8 @@ The error code indicates that the attributes required to be consistent are incon
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

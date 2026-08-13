@@ -14,7 +14,7 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
+**替代接口：** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -30,7 +30,7 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备ID，本机默认为空字符串。 |
 | missionId | number | 是 | 任务ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | 是 | 回调函数，返回任务快照信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | 是 | 回调函数，返回任务快照信息。 |
 
 ## 示例
 
@@ -69,7 +69,7 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 
 **废弃版本：** 9
 
-**替代接口：** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
+**替代接口：** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

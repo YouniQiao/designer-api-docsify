@@ -1,4 +1,4 @@
-# DriverExtensionContext(Defines the context of driver extension)
+# DriverExtensionContext
 
 ## Summary
 

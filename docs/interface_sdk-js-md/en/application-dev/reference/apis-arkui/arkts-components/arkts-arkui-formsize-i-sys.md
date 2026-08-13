@@ -6,6 +6,8 @@ Provides the widget size information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface FormSize--><!--Device-unnamed-interface FormSize-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Height of the widget, in vp.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-FormSize-height: number--><!--Device-FormSize-height: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -45,6 +49,8 @@ Width of the widget, in vp.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-FormSize-width: number--><!--Device-FormSize-width: number-End-->
 

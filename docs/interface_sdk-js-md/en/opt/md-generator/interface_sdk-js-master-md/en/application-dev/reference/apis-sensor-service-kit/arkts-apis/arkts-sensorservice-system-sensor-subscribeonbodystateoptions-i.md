@@ -26,24 +26,19 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](ohos.sensor/sensor#on)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-SubscribeOnBodyStateOptions-fail?: (data: string, code: number) => void--><!--Device-SubscribeOnBodyStateOptions-fail?: (data: string, code: number) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
 
 ## success
 
@@ -53,20 +48,16 @@ success: (data: OnBodyStateResponse) => void
 
 Callback invoked when the wearing state of the device that houses the sensor is successfully obtained.
 
+**Type:** (data: OnBodyStateResponse) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](ohos.sensor/sensor#on)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-SubscribeOnBodyStateOptions-success: (data: OnBodyStateResponse) => void--><!--Device-SubscribeOnBodyStateOptions-success: (data: OnBodyStateResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | [OnBodyStateResponse](arkts-sensorservice-system-sensor-onbodystateresponse-i.md) | Yes |

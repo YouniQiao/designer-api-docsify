@@ -8,6 +8,8 @@ Defines the allowed data types for specifying the background border color of a d
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -19,4 +21,4 @@ Defines the allowed data types for specifying the background border color of a d
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) |
-| [EdgeColors](arkts-arkui-units-edgecolors-i.md) |
+| [EdgeColors](../../apis-na/arkts-apis/arkts-na-units-edgecolors-i.md) |

@@ -4,6 +4,8 @@ The definition of MediaEntity.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface MediaEntity--><!--Device-avMusicTemplate-interface MediaEntity-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ Description of the media resource.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaEntity-desc?: string--><!--Device-MediaEntity-desc?: string-End-->
@@ -43,6 +47,8 @@ Cover image url of the media resource.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Unique ID of the media resource.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaEntity-mediaId: string--><!--Device-MediaEntity-mediaId: string-End-->
@@ -79,6 +87,8 @@ Type of the media resource.
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +108,8 @@ Parent id of the media resource.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaEntity-parentId: string--><!--Device-MediaEntity-parentId: string-End-->
@@ -115,6 +127,8 @@ Parent media type of the media resource.
 **Type:** [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +148,8 @@ Play state of the media resource.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaEntity-playState: PlaybackState--><!--Device-MediaEntity-playState: PlaybackState-End-->
@@ -151,6 +167,8 @@ Title of the media resource.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

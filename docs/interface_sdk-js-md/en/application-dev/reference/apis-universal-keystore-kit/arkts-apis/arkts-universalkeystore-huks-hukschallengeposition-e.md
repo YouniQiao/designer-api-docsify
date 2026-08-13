@@ -6,6 +6,8 @@ Enumerates the positions of the 8-byte valid value in a custom challenge generat
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export enum HuksChallengePosition--><!--Device-huks-export enum HuksChallengePosition-End-->
 
 **System capability:** SystemCapability.Security.Huks.Extension
@@ -21,6 +23,8 @@ Bytes 0 to 7.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,6 +44,8 @@ Bytes 8 to 15.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_1 = 1--><!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_1 = 1-End-->
@@ -58,6 +64,8 @@ Bytes 16 to 23.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_2 = 2--><!--Device-HuksChallengePosition-HUKS_CHALLENGE_POS_2 = 2-End-->
@@ -75,6 +83,8 @@ Bytes 24 to 31.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

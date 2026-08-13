@@ -4,6 +4,8 @@ Optional configuration for maximizing.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-window-interface MaximizeOptions--><!--Device-window-interface MaximizeOptions-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -20,13 +22,15 @@ import { window } from '@kit.ArkUI';
 acrossDisplayPresentation?: AcrossDisplayPresentation
 ```
 
-The parameter controls the across-display mode policy of main windows.This parameter can be called properly only on 2-in-1 devices with folding capabilities.If it is called on other device types, it has no effect.
+The parameter controls the across-display mode policy of main windows. This parameter can be called properly only on 2-in-1 devices with folding capabilities. If it is called on other device types, it has no effect.
 
 **Type:** [AcrossDisplayPresentation](arkts-arkui-window-acrossdisplaypresentation-e.md)
 
 **Default:** AcrossDisplayPresentation.FOLLOW_ACROSS_DISPLAY_SETTING
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Layout when the window is maximized.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MaximizeOptions-maximizePresentation?: MaximizePresentation--><!--Device-MaximizeOptions-maximizePresentation?: MaximizePresentation-End-->
@@ -60,11 +66,13 @@ Layout when the window is maximized.
 snapshotAnimationConfig?: WindowSnapshotAnimationConfig
 ```
 
-The configuration of snapshot animation. If not specified, the system default animation will be used.When both the duration and delay parameters are set to 0, it means the snapshot animation is canceled.
+The configuration of snapshot animation. If not specified, the system default animation will be used. When both the duration and delay parameters are set to 0, it means the snapshot animation is canceled.
 
 **Type:** [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

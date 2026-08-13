@@ -2,7 +2,9 @@
 
 The **NotificationUserInput** module provides APIs for defining the notification user input.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationUserInput--><!--Device-unnamed-export interface NotificationUserInput-End-->
 
@@ -18,7 +20,9 @@ Key to identify the user input.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationUserInput-inputKey: string--><!--Device-NotificationUserInput-inputKey: string-End-->
 

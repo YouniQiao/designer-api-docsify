@@ -1,10 +1,12 @@
 # TreeMap
 
-TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value.TreeMap is implemented using a red-black tree, which is a binary search tree where keys are stored in sorted order for efficient insertion and removal.
+TreeMap stores key-value (KV) pairs. Each key must be unique and have only one value. TreeMap is implemented using a red-black tree, which is a binary search tree where keys are stored in sorted order for efficient insertion and removal.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class TreeMap<K, V>--><!--Device-unnamed-declare class TreeMap<K, V>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class TreeMap--><!--Device-unnamed-declare class TreeMap-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ TreeMap stores key-value (KV) pairs. Each key must be unique and have only one v
 ```TypeScript
 import { TreeMap } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<[K, V]>
+```
+
+returns an ES6 iterator.Each item of the iterator is a Javascript Object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-$_iterator(): IterableIterator<[K, V]>--><!--Device-TreeMap-$_iterator(): IterableIterator<[K, V]>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-TreeMap-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -34,13 +62,13 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -91,7 +119,9 @@ clear(): void
 
 Clear all element groups in the map
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -103,7 +133,7 @@ Clear all element groups in the map
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -126,6 +156,8 @@ A constructor used to create a TreeMap object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)--><!--Device-TreeMap-constructor(comparator?: (firstValue: K, secondValue: K) => boolean)-End-->
@@ -142,7 +174,7 @@ A constructor used to create a TreeMap object.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -190,6 +222,30 @@ ts1.set(entry2, "1");
 console.info("length:", ts1.length); // length: 2
 ```
 
+## constructor
+
+```TypeScript
+constructor(comparator?: TreeMapComparator<K>)
+```
+
+A constructor used to create a TreeMap object.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-constructor(comparator?: TreeMapComparator<K>)--><!--Device-TreeMap-constructor(comparator?: TreeMapComparator<K>)-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| comparator | [TreeMapComparator](arkts-arkts-treemapcomparator-t.md)&lt;K&gt; | No |
+
 ## entries
 
 ```TypeScript
@@ -198,7 +254,9 @@ entries(): IterableIterator<[K, V]>
 
 Returns a new Iterator object that contains the [key, value] pairs for each element in the Map object in insertion order
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -210,13 +268,13 @@ Returns a new Iterator object that contains the [key, value] pairs for each elem
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -252,9 +310,11 @@ while(!t.done) {
 forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void
 ```
 
-Executes the given callback function once for each real key in the map.It does not perform functions on deleted keys
+Executes the given callback function once for each real key in the map. It does not perform functions on deleted keys
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -273,7 +333,7 @@ Executes the given callback function once for each real key in the map.It does n
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -300,6 +360,30 @@ treeMap.forEach((value: number, key: string): void => {
  }
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: TreeMapForEachCb<K, V>): void
+```
+
+Executes the given callback function once for each real key in the map. It does not perform functions on deleted keys
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-forEach(callbackFn: TreeMapForEachCb<K, V>): void--><!--Device-TreeMap-forEach(callbackFn: TreeMapForEachCb<K, V>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [TreeMapForEachCb](arkts-arkts-treemapforeachcb-t.md)&lt;K, V&gt; | Yes |
+
 ## get
 
 ```TypeScript
@@ -309,6 +393,8 @@ get(key: K): V
 Returns a specified element in a Map object, or undefined if there is no corresponding element
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -332,7 +418,7 @@ Returns a specified element in a Map object, or undefined if there is no corresp
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -344,15 +430,47 @@ let result = treeMap.get("sparrow");
 console.info("result:", result); // result: 356
 ```
 
+## get
+
+```TypeScript
+get(key: K): V | undefined
+```
+
+Returns a specified element in a Map object, or undefined if there is no corresponding element
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-get(key: K): V | undefined--><!--Device-TreeMap-get(key: K): V | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
+
 ## getFirstKey
 
 ```TypeScript
 getFirstKey(): K
 ```
 
-Obtains the first sorted key in the treemap.Or returns undefined if tree map is empty
+Obtains the first sorted key in the treemap. Or returns undefined if tree map is empty
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -370,8 +488,8 @@ Obtains the first sorted key in the treemap.Or returns undefined if tree map is 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -392,6 +510,8 @@ getHigherKey(key: K): K
 Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -415,7 +535,7 @@ Returns the least element greater than or equal to the specified key if the key 
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -429,15 +549,54 @@ let result = treeMap.getHigherKey(3);
 console.info("result:", result); // result: 4
 ```
 
+## getHigherKey
+
+```TypeScript
+getHigherKey(key: K): K | undefined
+```
+
+Returns the least element greater than or equal to the specified key if the key does not exist, undefined is returned
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-getHigherKey(key: K): K | undefined--><!--Device-TreeMap-getHigherKey(key: K): K | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| K |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+
 ## getLastKey
 
 ```TypeScript
 getLastKey(): K
 ```
 
-Obtains the last sorted key in the treemap.Or returns undefined if tree map is empty
+Obtains the last sorted key in the treemap. Or returns undefined if tree map is empty
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -455,8 +614,8 @@ Obtains the last sorted key in the treemap.Or returns undefined if tree map is e
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -477,6 +636,8 @@ getLowerKey(key: K): K
 Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -500,7 +661,7 @@ Returns the greatest element smaller than or equal to the specified key if the k
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -514,6 +675,43 @@ let result = treeMap.getLowerKey(3);
 console.info("result:", result); // result: 2
 ```
 
+## getLowerKey
+
+```TypeScript
+getLowerKey(key: K): K | undefined
+```
+
+Returns the greatest element smaller than or equal to the specified key if the key does not exist, undefined is returned
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-getLowerKey(key: K): K | undefined--><!--Device-TreeMap-getLowerKey(key: K): K | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| K |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
+
 ## hasKey
 
 ```TypeScript
@@ -522,7 +720,9 @@ hasKey(key: K): boolean
 
 Returns whether a key is contained in this map
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -546,7 +746,7 @@ Returns whether a key is contained in this map
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -565,7 +765,9 @@ hasValue(value: V): boolean
 
 Returns whether a value is contained in this map
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -589,7 +791,7 @@ Returns whether a value is contained in this map
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -608,7 +810,9 @@ isEmpty(): boolean
 
 Returns whether the Map object contains elements
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -626,7 +830,7 @@ Returns whether the Map object contains elements
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -644,7 +848,9 @@ keys(): IterableIterator<K>
 
 Returns a new Iterator object that contains the keys contained in this map
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -656,13 +862,13 @@ Returns a new Iterator object that contains the keys contained in this map
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -689,6 +895,8 @@ Remove a specified element from a Map object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TreeMap-remove(key: K): V--><!--Device-TreeMap-remove(key: K): V-End-->
@@ -711,7 +919,7 @@ Remove a specified element from a Map object
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -723,6 +931,36 @@ let result = treeMap.remove("sparrow"); // Delete data.
 console.info("result = " + result); // result = 356
 ```
 
+## remove
+
+```TypeScript
+remove(key: K): V | undefined
+```
+
+Remove a specified element from a Map object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-TreeMap-remove(key: K): V | undefined--><!--Device-TreeMap-remove(key: K): V | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| key | K | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| V |
+
 ## replace
 
 ```TypeScript
@@ -731,7 +969,9 @@ replace(key: K, newValue: V): boolean
 
 Replace the old value by new value corresponding to the specified key
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -756,7 +996,7 @@ Replace the old value by new value corresponding to the specified key
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -775,7 +1015,9 @@ set(key: K, value: V): Object
 
 Adds or updates a(new) key-value pair with a key and value specified for the Map object
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -800,7 +1042,7 @@ Adds or updates a(new) key-value pair with a key and value specified for the Map
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -818,7 +1060,9 @@ setAll(map: TreeMap<K, V>): void
 
 Adds all element groups in one map to another map
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -836,7 +1080,7 @@ Adds all element groups in one map to another map
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -864,7 +1108,9 @@ values(): IterableIterator<V>
 
 Returns a new Iterator object that contains the values contained in this map
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -876,13 +1122,13 @@ Returns a new Iterator object that contains the values contained in this map
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -909,6 +1155,8 @@ Gets the element number of the TreeMap.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

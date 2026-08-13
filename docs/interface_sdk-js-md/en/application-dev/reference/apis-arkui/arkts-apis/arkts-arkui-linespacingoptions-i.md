@@ -6,6 +6,8 @@ Configures the line spacing of text and whether it applies only between lines.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LineSpacingOptions--><!--Device-unnamed-declare interface LineSpacingOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@ Configures the line spacing of text and whether it applies only between lines.
 onlyBetweenLines?: boolean
 ```
 
-Whether line spacing applies only between lines.
-
-**true**: Line spacing applies only between lines; no extra spacing is added above the first line or below the last line. **false**: Extra line spacing is added both above the first line and below the last line.
-
-Default value: **false**
+Whether line spacing applies only between lines. **true**: Line spacing applies only between lines; no extra spacing is added above the first line or below the last line. **false**: Extra line spacing is added both above the first line and below the last line. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

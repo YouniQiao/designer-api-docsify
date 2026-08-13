@@ -2,7 +2,9 @@
 
 Provides methods to manage the wearing detection function.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace wearDetection--><!--Device-unnamed-declare namespace wearDetection-End-->
 
@@ -21,12 +23,12 @@ import { wearDetection } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableweardetection) |
-| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableweardetection-1) |
-| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableweardetection) |
-| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableweardetection-1) |
-| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isweardetectionenabled) |
-| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isweardetectionenabled-1) |
-| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isweardetectionsupported) |
-| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isweardetectionsupported-1) |
+| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableWearDetection-(System-API)) |
+| [disableWearDetection](arkts-connectivity-weardetection-disableweardetection-f-sys.md#disableWearDetection-(System-API)) |
+| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableWearDetection-(System-API)) |
+| [enableWearDetection](arkts-connectivity-weardetection-enableweardetection-f-sys.md#enableWearDetection-(System-API)) |
+| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isWearDetectionEnabled-(System-API)) |
+| [isWearDetectionEnabled](arkts-connectivity-weardetection-isweardetectionenabled-f-sys.md#isWearDetectionEnabled-(System-API)) |
+| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isWearDetectionSupported-(System-API)) |
+| [isWearDetectionSupported](arkts-connectivity-weardetection-isweardetectionsupported-f-sys.md#isWearDetectionSupported-(System-API)) |
 <!--DelEnd-->

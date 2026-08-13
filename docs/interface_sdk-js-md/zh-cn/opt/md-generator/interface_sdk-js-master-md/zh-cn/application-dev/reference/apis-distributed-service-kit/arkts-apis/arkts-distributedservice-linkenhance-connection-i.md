@@ -2,7 +2,9 @@
 
 连接对象，提供连接、断连、获取对端设备ID、发送数据、注册/取消注册回调等方法。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-linkEnhance-interface Connection--><!--Device-linkEnhance-interface Connection-End-->
 
@@ -16,7 +18,9 @@ close(): void
 
 业务执行完毕后，任意设备可调用该接口销毁connection对象，释放资源。若需再次与对端设备交互，必须重新创建connection对象并调用`connect()`发起连接。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -30,7 +34,7 @@ close(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -66,7 +70,9 @@ connect(): void
 
 在客户端执行，向服务端设备发起连接，最大连接个数限制为10。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -80,9 +86,9 @@ connect(): void
 
 | 错误码ID |
 | --- |
-| [32390204](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390204-连接个数超出限制) |
-| [32390300](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390204](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390204-连接个数超出限制) |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -119,7 +125,9 @@ disconnect(): void
 
 业务执行完毕后，双端任意设备可调用该接口断开连接。创建的connection对象仍有效，需要时可调用connect()重新连接。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -133,7 +141,7 @@ disconnect(): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -169,7 +177,9 @@ getPeerDeviceId(): string
 
 获取对端设备的deviceId，作为对端设备的标识符，连接成功后或者被连接成功后调用。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -189,7 +199,7 @@ getPeerDeviceId(): string
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -211,7 +221,106 @@ try {
 }
 ```
 
-## off('connectResult')
+## offConnectResult
+
+```TypeScript
+offConnectResult(callback?: Callback<ConnectResult>): void
+```
+
+取消connect事件的回调监听，使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void--><!--Device-Connection-offConnectResult(callback?: Callback<ConnectResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offDataReceived
+
+```TypeScript
+offDataReceived(callback?: Callback<ArrayBuffer>): void
+```
+
+取消dataReceived事件的回调监听，使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-offDataReceived(callback?: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## offDisconnected
+
+```TypeScript
+offDisconnected(callback?: Callback<number>): void
+```
+
+取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-offDisconnected(callback?: Callback<int>): void--><!--Device-Connection-offDisconnected(callback?: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## off_connectResult
 
 ```TypeScript
 off(type: 'connectResult', callback?: Callback<ConnectResult>): void
@@ -220,6 +329,8 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 取消connect事件的回调监听，使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -240,8 +351,8 @@ off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -269,65 +380,7 @@ try {
 }
 ```
 
-## off('disconnected')
-
-```TypeScript
-off(type: 'disconnected', callback?: Callback<number>): void
-```
-
-取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
-
-**起始版本：** 20
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'disconnected' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-  // 取消订阅断连通知
-  connection.off('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## off('dataReceived')
+## off_dataReceived
 
 ```TypeScript
 off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
@@ -336,6 +389,8 @@ off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 取消dataReceived事件的回调监听，使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -356,8 +411,8 @@ off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -386,7 +441,166 @@ try {
 }
 ```
 
-## on('connectResult')
+## off_disconnected
+
+```TypeScript
+off(type: 'disconnected', callback?: Callback<number>): void
+```
+
+取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'disconnected' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.on('disconnected', (number: number) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+  // 取消订阅断连通知
+  connection.off('disconnected', (number: number) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## onConnectResult
+
+```TypeScript
+onConnectResult(callback: Callback<ConnectResult>): void
+```
+
+注册connect事件的回调监听，通过回调函数获取连接结果。使用callback进行异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void--><!--Device-Connection-onConnectResult(callback: Callback<ConnectResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onDataReceived
+
+```TypeScript
+onDataReceived(callback: Callback<ArrayBuffer>): void
+```
+
+注册dataReceived事件的回调监听。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void--><!--Device-Connection-onDataReceived(callback: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## onDisconnected
+
+```TypeScript
+onDisconnected(callback: Callback<number>): void
+```
+
+注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-onDisconnected(callback: Callback<int>): void--><!--Device-Connection-onDisconnected(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## on_connectResult
 
 ```TypeScript
 on(type: 'connectResult', callback: Callback<ConnectResult>): void
@@ -395,6 +609,8 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 注册connect事件的回调监听，通过回调函数获取连接结果。使用callback进行异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -415,8 +631,8 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -444,62 +660,7 @@ try {
 }
 ```
 
-## on('disconnected')
-
-```TypeScript
-on(type: 'disconnected', callback: Callback<number>): void
-```
-
-注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
-
-**起始版本：** 20
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'disconnected' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // 订阅断连通知
-  connection.on('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## on('dataReceived')
+## on_dataReceived
 
 ```TypeScript
 on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
@@ -508,6 +669,8 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 注册dataReceived事件的回调监听。使用callback异步回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -528,8 +691,8 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 
@@ -556,6 +719,63 @@ try {
 }
 ```
 
+## on_disconnected
+
+```TypeScript
+on(type: 'disconnected', callback: Callback<number>): void
+```
+
+注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'disconnected' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅断连通知
+  connection.on('disconnected', (number: number) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
 ## sendData
 
 ```TypeScript
@@ -564,7 +784,9 @@ sendData(data: ArrayBuffer): void
 
 客户端连接成功后，可以向服务端发送数据。服务端接收到连接回调时，也可以向客户端发送数据。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -584,10 +806,10 @@ sendData(data: ArrayBuffer): void
 
 | 错误码ID |
 | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
-| [32390300](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
-| [32390205](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390205-连接状态不可用) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) |
+| [32390205](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390205-连接状态不可用) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

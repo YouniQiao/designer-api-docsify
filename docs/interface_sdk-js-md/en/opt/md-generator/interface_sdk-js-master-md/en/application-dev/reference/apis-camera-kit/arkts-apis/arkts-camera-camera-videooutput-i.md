@@ -1,13 +1,14 @@
 # VideoOutput
 
-VideoOutput implements output information used in a video session. It inherits from   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
+VideoOutput implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface VideoOutput--><!--Device-camera-interface VideoOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -17,53 +18,17 @@ VideoOutput implements output information used in a video session. It inherits f
 import { camera } from '@kit.CameraKit';
 ```
 
-## enableMirror
-
-```TypeScript
-enableMirror(enabled: boolean): void
-```
-
-Enables or disables mirror recording.
-
-- Before calling this API, check whether mirror recording is supported by using   
-[isMirrorSupported](#isMirrorSupported).  
-- After enabling or disabling mirror recording, call   
-[getVideoRotation](#getVideoRotation) to obtain the rotation angle and   
-[updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updateRotation) to update the rotation angle.
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-enableMirror(enabled: boolean): void--><!--Device-VideoOutput-enableMirror(enabled: boolean): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| enabled | boolean | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## getActiveFrameRate
 
 ```TypeScript
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.
+Obtains the configured frame rate range. This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for video streams.
 
-This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for video streams.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -85,7 +50,9 @@ getActiveProfile(): VideoProfile
 
 Obtains the profile that takes effect currently.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -103,7 +70,7 @@ Obtains the profile that takes effect currently.
 
 | Error Code ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## getSupportedFrameRates
 
@@ -113,7 +80,9 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 Obtains the supported frame rates.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -133,14 +102,11 @@ Obtains the supported frame rates.
 getVideoRotation(deviceDegree?: number): ImageRotation
 ```
 
-Obtains the video rotation angle.
+Obtains the video rotation angle. - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
-- Device' natural orientation: the default orientation for using a device. For example, the default orientation   
-of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's   
-natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,54 +132,22 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
-## isMirrorSupported
-
-```TypeScript
-isMirrorSupported(): boolean
-```
-
-Checks whether mirror recording is supported.
-
-**Since:** 15
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-isMirrorSupported(): boolean--><!--Device-VideoOutput-isMirrorSupported(): boolean-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| boolean |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## off('frameStart')
+## offError
 
 ```TypeScript
-off(type: 'frameStart', callback?: AsyncCallback<void>): void
+offError(callback?: ErrorCallback): void
 ```
 
-Unsubscribes from video recording start events.
+Unsubscribes from error events.
 
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-offError(callback?: ErrorCallback): void--><!--Device-VideoOutput-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -221,22 +155,21 @@ Unsubscribes from video recording start events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'frameStart' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
-## off('frameEnd')
+## offFrameEnd
 
 ```TypeScript
-off(type: 'frameEnd', callback?: AsyncCallback<void>): void
+offFrameEnd(callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from video recording stop events.
+Unsubscribes from frame end event callback.
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
 
-<!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -244,10 +177,31 @@ Unsubscribes from video recording stop events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'frameEnd' | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
 
-## off('error')
+## offFrameStart
+
+```TypeScript
+offFrameStart(callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from frame start event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -256,6 +210,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from VideoOutput error events.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -270,46 +226,21 @@ Unsubscribes from VideoOutput error events.
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
 
-## on('frameStart')
+## off_frameEnd
 
 ```TypeScript
-on(type: 'frameStart', callback: AsyncCallback<void>): void
+off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-Subscribes to video recording start events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Unsubscribes from video recording stop events.
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'frameStart' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
-
-## on('frameEnd')
-
-```TypeScript
-on(type: 'frameEnd', callback: AsyncCallback<void>): void
-```
-
-Subscribes to video recording stop events. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -318,21 +249,110 @@ Subscribes to video recording stop events. This API uses an asynchronous callbac
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'frameEnd' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+## off_frameStart
+
+```TypeScript
+off(type: 'frameStart', callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from video recording start events. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'frameStart' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-onError(callback: ErrorCallback): void--><!--Device-VideoOutput-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+## onFrameEnd
+
+```TypeScript
+onFrameEnd(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame end event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
-## on('error')
+## onFrameStart
+
+```TypeScript
+onFrameStart(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame start event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -347,26 +367,67 @@ Subscribes to VideoOutput error events. This API uses an asynchronous callback t
 | type | 'error' | Yes |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
+## on_frameEnd
+
+```TypeScript
+on(type: 'frameEnd', callback: AsyncCallback<void>): void
+```
+
+Subscribes to video recording stop events. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'frameEnd' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+## on_frameStart
+
+```TypeScript
+on(type: 'frameStart', callback: AsyncCallback<void>): void
+```
+
+Subscribes to video recording start events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'frameStart' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
 ## setFrameRate
 
 ```TypeScript
 setFrameRate(minFps: number, maxFps: number): void
 ```
 
-Sets a frame rate range for video streams. The range must be within the supported frame rate range,
+Sets a frame rate range for video streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates). > **NOTE：**> > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or > [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode. > > Before calling this API, call [getActiveFrameRate](#getActiveFrameRate) to obtain the > current frame rate of the video session. If the delivered frame rate matches the current frame rate, the > delivered frame rate is not applied.
 
-which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates).
+**Since:** 23
 
-> **NOTE：**
-> 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or
-> [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
-> 
-> Before calling this API, call [getActiveFrameRate](#getActiveFrameRate) to obtain the
-> current frame rate of the video session. If the delivered frame rate matches the current frame rate, the
-> delivered frame rate is not applied.
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -385,8 +446,8 @@ which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRate
 
 | Error Code ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) |
-| [7400110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-configuration-conflicts) |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) |
+| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) |
 
 ## start
 
@@ -396,7 +457,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts video recording. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -414,8 +477,8 @@ Starts video recording. This API uses an asynchronous callback to return the res
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## start
 
@@ -425,7 +488,9 @@ start(): Promise<void>
 
 Starts video recording. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -443,8 +508,8 @@ Starts video recording. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) |
 
 ## stop
 
@@ -454,7 +519,9 @@ stop(callback: AsyncCallback<void>): void
 
 Stops video recording. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -476,7 +543,9 @@ stop(): Promise<void>
 
 Stops video recording. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

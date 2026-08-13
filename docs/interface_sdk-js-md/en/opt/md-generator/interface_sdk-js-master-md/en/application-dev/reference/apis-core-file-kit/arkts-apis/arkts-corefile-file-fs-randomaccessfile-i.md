@@ -4,6 +4,8 @@ Provides APIs for randomly reading and writing a stream. Before invoking any API
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RandomAccessFile--><!--Device-unnamed-declare interface RandomAccessFile-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -23,6 +25,8 @@ close(): void
 Closes the **RandomAccessFile** instance. This API returns the result synchronously.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RandomAccessFile-close(): void--><!--Device-RandomAccessFile-close(): void-End-->
 
@@ -57,6 +61,8 @@ Obtains a **ReadStream** instance of this **RandomAccessFile**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-getReadStream(): ReadStream--><!--Device-RandomAccessFile-getReadStream(): ReadStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -72,7 +78,7 @@ Obtains a **ReadStream** instance of this **RandomAccessFile**.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
 | 13900008 |
 | 13900042 |
@@ -98,6 +104,8 @@ Obtains a **WriteStream** instance of this **RandomAccessFile**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-getWriteStream(): WriteStream--><!--Device-RandomAccessFile-getWriteStream(): WriteStream-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -113,7 +121,7 @@ Obtains a **WriteStream** instance of this **RandomAccessFile**.
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900012 |
 | 13900008 |
 | 13900042 |
@@ -141,6 +149,8 @@ read(
 Reads data from a file. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<number>--><!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options?: ReadOptions  ): Promise<number>-End-->
 
@@ -209,6 +219,8 @@ Reads data from a file. This API uses an asynchronous callback to return the res
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -271,6 +283,8 @@ read(
 Reads data from a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<number>  ): void--><!--Device-RandomAccessFile-read(    buffer: ArrayBuffer,    options: ReadOptions,    callback: AsyncCallback<number>  ): void-End-->
 
@@ -339,6 +353,8 @@ Reads data from a file. This API returns the result synchronously.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): number--><!--Device-RandomAccessFile-readSync(    buffer: ArrayBuffer,    options?: ReadOptions  ): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -394,6 +410,8 @@ Sets the file offset pointer.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-setFilePointer(filePointer: number): void--><!--Device-RandomAccessFile-setFilePointer(filePointer: number): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -402,7 +420,7 @@ Sets the file offset pointer.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [filePointer](#filepointer) | number | Yes |
+| [filePointer](#filePointer) | number | Yes |
 
 **Error codes:**
 
@@ -435,6 +453,8 @@ write(
 Writes data into a file. This API uses a promise to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<number>--><!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): Promise<number>-End-->
 
@@ -506,6 +526,8 @@ Writes data to a file. This API uses an asynchronous callback to return the resu
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-RandomAccessFile-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -570,6 +592,8 @@ write(
 Writes data to a file. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<number>  ): void--><!--Device-RandomAccessFile-write(    buffer: ArrayBuffer | string,    options: WriteOptions,    callback: AsyncCallback<number>  ): void-End-->
 
@@ -642,6 +666,8 @@ Writes data to a file. This API returns the result synchronously.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): number--><!--Device-RandomAccessFile-writeSync(    buffer: ArrayBuffer | string,    options?: WriteOptions  ): number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -704,6 +730,8 @@ FD of the file.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-RandomAccessFile-readonly fd: number--><!--Device-RandomAccessFile-readonly fd: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -719,6 +747,8 @@ Offset pointer to the **RandomAccessFile** instance, in bytes.
 **Type:** number
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RandomAccessFile-readonly filePointer: number--><!--Device-RandomAccessFile-readonly filePointer: number-End-->
 

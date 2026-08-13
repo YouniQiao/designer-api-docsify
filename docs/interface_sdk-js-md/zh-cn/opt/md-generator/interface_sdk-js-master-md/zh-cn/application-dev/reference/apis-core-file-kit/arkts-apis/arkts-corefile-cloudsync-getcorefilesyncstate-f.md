@@ -8,7 +8,9 @@ function getCoreFileSyncState(uri: string): FileState
 
 同步方法获取云盘文件同步上行状态。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState--><!--Device-cloudSync-function getCoreFileSyncState(uri: string): FileState-End-->
 

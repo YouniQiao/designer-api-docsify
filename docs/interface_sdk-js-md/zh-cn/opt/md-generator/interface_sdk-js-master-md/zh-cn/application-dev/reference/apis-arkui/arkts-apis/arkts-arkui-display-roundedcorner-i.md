@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-display-interface RoundedCorner--><!--Device-display-interface RoundedCorner-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -19,6 +21,8 @@ readonly position: Position
 **类型：** Position
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ readonly radius: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -59,6 +65,8 @@ readonly type: CornerType
 **类型：** [CornerType](arkts-arkui-display-cornertype-e.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

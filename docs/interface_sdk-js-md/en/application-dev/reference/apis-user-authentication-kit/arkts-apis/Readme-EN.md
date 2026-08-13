@@ -123,6 +123,3 @@
   - [Constants](arkts-userauthentication-userauth-con.md)
 - [@ohos.userIAM.userAuthIcon](arkts-useriam-userauthicon.md)
   - [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md)
-- [@ohos.userIAM.userAuthIcon](arkts-useriam-userauthicon.md)
-  - [UserAuthIcon](arkts-userauthentication-useriam-userauthicon-userauthicon-s.md)
-  - [ClickCallbackFunc](arkts-userauthentication-clickcallbackfunc-t.md)

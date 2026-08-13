@@ -1,25 +1,10 @@
 # @ohos.i18n
 
-This module provides system-related and enhanced [i18n](../../../internationalization/i18n-l10n.md) capabilities,such as locale management, phone number formatting, and calendar, through supplementary i18n APIs that are not defined in [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/). The  
-[intl](arkts-intl.md#intl) module provides basic i18n capabilities through the standard i18n APIs defined in ECMA402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs are defined as follows:
+This module provides system-related and enhanced [i18n](../../../internationalization/i18n-l10n.md) capabilities, such as locale management, phone number formatting, and calendar, through supplementary i18n APIs that are not defined in [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/). The [intl](arkts-intl.md#@ohos.intl) module provides basic i18n capabilities through the standard i18n APIs defined in ECMA 402. It works with the **i18n** module to provide a complete suite of i18n capabilities. The terms used in the APIs are defined as follows: - Pattern string, which is a string consisting of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks. - Skeleton string: a string that consists of [Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text. > **NOTE：**> > - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The > processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the > [date and time formatting API](arkts-localization-i18n-simplenumberformat-c.md#SimpleNumberFormat) is used only for UI display. Do not hardcode the > return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API > version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data > changes, see the official CLDR documentation. > > - Since API version 11, some APIs of this module are supported in ArkTS widgets.
 
-- Pattern string, which is a string consisting of  
-[Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and custom text enclosed by single quotation marks.  
-- Skeleton string: a string that consists of  
-[Unicode date field symbols](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table) and does not support custom text.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The APIs of this module are based on the [CLDR](https://cldr.unicode.org) internationalization database. The
-> processing results of the APIs may be adjusted as the CLDR standard evolves. For example, the return value of the
-> [date and time formatting API](arkts-localization-i18n-simplenumberformat-c.md#SimpleNumberFormat) is used only for UI display. Do not hardcode the
-> return value or make assumptions about the return value. Otherwise, version compatibility problems may occur. API
-> version 12 corresponds to [CLDR 42](https://cldr.unicode.org/index/downloads/cldr-42). For details about data
-> changes, see the official CLDR documentation.
-> 
-> - Since API version 11, some APIs of this module are supported in ArkTS widgets.
-
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
 
@@ -37,29 +22,29 @@ import { i18n } from '@kit.LocalizationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md#addpreferredlanguage) |
-| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) |
-| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) |
-| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md#getdisplaycountry) |
-| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md#getdisplaylanguage) |
-| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md#getfirstpreferredlanguage) |
-| [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) |
-| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) |
-| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md#getpreferredlanguagelist) |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1) |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton-1) |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton-1) |
-| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md#getsystemlanguage) |
-| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md#getsystemlocale) |
-| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md#getsystemregion) |
-| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#gettimezone) |
-| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md#is24hourclock) |
-| [isRTL](arkts-localization-i18n-isrtl-f.md#isrtl) |
-| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md#removepreferredlanguage) |
-| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md#set24hourclock) |
+| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md#addPreferredLanguage) |
+| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getCalendar) |
+| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getChineseCalendar) |
+| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md#getDisplayCountry) |
+| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md#getDisplayLanguage) |
+| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md#getFirstPreferredLanguage) |
+| [getInstance](arkts-localization-i18n-getinstance-f.md#getInstance) |
+| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getLineInstance) |
+| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md#getPreferredLanguageList) |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) |
+| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md#getSystemLanguage) |
+| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md#getSystemLocale) |
+| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md#getSystemRegion) |
+| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#getTimeZone) |
+| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md#is24HourClock) |
+| [isRTL](arkts-localization-i18n-isrtl-f.md#isRTL) |
+| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md#removePreferredLanguage) |
+| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md#set24HourClock) |
 
 ### Classes
 

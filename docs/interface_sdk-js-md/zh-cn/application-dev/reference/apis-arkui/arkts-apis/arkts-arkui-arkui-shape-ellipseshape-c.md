@@ -1,8 +1,6 @@
 # EllipseShape
 
-用于clipShape和maskShape接口的椭圆形状。
-
-继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
+用于clipShape和maskShape接口的椭圆形状。 继承自[BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)。
 
 **继承/实现关系：** EllipseShape extends [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape)
 
@@ -10,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class EllipseShape extends BaseShape--><!--Device-unnamed-export declare class EllipseShape extends BaseShape-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class EllipseShape--><!--Device-unnamed-export declare class EllipseShape-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +25,8 @@ constructor(options?: ShapeSize)
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

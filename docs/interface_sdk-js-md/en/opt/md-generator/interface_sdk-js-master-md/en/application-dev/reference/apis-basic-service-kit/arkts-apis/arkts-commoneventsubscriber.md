@@ -1,4 +1,4 @@
-# commonEventSubscriber(The subscriber of common event)
+# commonEventSubscriber
 
 ## Summary
 

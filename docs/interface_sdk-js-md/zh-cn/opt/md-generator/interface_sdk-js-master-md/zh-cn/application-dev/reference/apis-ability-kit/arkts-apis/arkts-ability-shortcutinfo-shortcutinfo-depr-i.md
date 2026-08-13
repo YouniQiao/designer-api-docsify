@@ -1,8 +1,6 @@
 # ShortcutInfo
 
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutInfo](#ShortcutInfo)替代。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutInfo](#ShortcutInfo)替代。
 
 **起始版本：** 7
 
@@ -28,7 +26,7 @@ readonly bundleName: string
 
 **废弃版本：** 9
 
-**替代接口：** [bundleName](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#bundleName)
+**替代接口：** bundleName
 
 <!--Device-ShortcutInfo-readonly bundleName: string--><!--Device-ShortcutInfo-readonly bundleName: string-End-->
 
@@ -66,7 +64,7 @@ readonly hostAbility: string
 
 **废弃版本：** 9
 
-**替代接口：** [hostAbility](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#hostAbility)
+**替代接口：** hostAbility
 
 <!--Device-ShortcutInfo-readonly hostAbility: string--><!--Device-ShortcutInfo-readonly hostAbility: string-End-->
 
@@ -86,7 +84,7 @@ readonly icon: string
 
 **废弃版本：** 9
 
-**替代接口：** [icon](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#icon)
+**替代接口：** icon
 
 <!--Device-ShortcutInfo-readonly icon: string--><!--Device-ShortcutInfo-readonly icon: string-End-->
 
@@ -106,7 +104,7 @@ readonly iconId: number
 
 **废弃版本：** 9
 
-**替代接口：** [iconId](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#iconId)
+**替代接口：** iconId
 
 <!--Device-ShortcutInfo-readonly iconId: number--><!--Device-ShortcutInfo-readonly iconId: number-End-->
 
@@ -126,7 +124,7 @@ readonly id: string
 
 **废弃版本：** 9
 
-**替代接口：** [id](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#id)
+**替代接口：** id
 
 <!--Device-ShortcutInfo-readonly id: string--><!--Device-ShortcutInfo-readonly id: string-End-->
 
@@ -148,7 +146,7 @@ readonly isEnabled?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [visible](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#visible)
+**替代接口：** visible
 
 <!--Device-ShortcutInfo-readonly isEnabled?: boolean--><!--Device-ShortcutInfo-readonly isEnabled?: boolean-End-->
 
@@ -170,7 +168,7 @@ readonly isHomeShortcut?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [sourceType](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#sourceType)
+**替代接口：** sourceType
 
 <!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean--><!--Device-ShortcutInfo-readonly isHomeShortcut?: boolean-End-->
 
@@ -192,7 +190,7 @@ readonly isStatic?: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [sourceType](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#sourceType)
+**替代接口：** sourceType
 
 <!--Device-ShortcutInfo-readonly isStatic?: boolean--><!--Device-ShortcutInfo-readonly isStatic?: boolean-End-->
 
@@ -212,7 +210,7 @@ readonly label: string
 
 **废弃版本：** 9
 
-**替代接口：** [label](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#label)
+**替代接口：** label
 
 <!--Device-ShortcutInfo-readonly label: string--><!--Device-ShortcutInfo-readonly label: string-End-->
 
@@ -232,7 +230,7 @@ readonly labelId: number
 
 **废弃版本：** 9
 
-**替代接口：** [labelId](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#labelId)
+**替代接口：** labelId
 
 <!--Device-ShortcutInfo-readonly labelId: number--><!--Device-ShortcutInfo-readonly labelId: number-End-->
 
@@ -252,7 +250,7 @@ readonly wants: Array<ShortcutWant>
 
 **废弃版本：** 9
 
-**替代接口：** [wants](ohos.bundle.launcherBundleManager/launcherBundleManager.ShortcutInfo#wants)
+**替代接口：** wants
 
 <!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>--><!--Device-ShortcutInfo-readonly wants: Array<ShortcutWant>-End-->
 

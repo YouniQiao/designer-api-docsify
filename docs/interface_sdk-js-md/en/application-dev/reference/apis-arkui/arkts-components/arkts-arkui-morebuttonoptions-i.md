@@ -6,6 +6,8 @@ Defines the options for the more button menu.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MoreButtonOptions--><!--Device-unnamed-declare interface MoreButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Background blur style of the more button menu. If this parameter is not set, bac
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -38,19 +42,15 @@ Background blur style of the more button menu. If this parameter is not set, bac
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for the title bar background blur style.
-
-**NOTE：**
-
-This parameter is only effective when **backgroundBlurStyle** is set.
-
-Avoid using this API in conjunction with **backgroundEffect**.
+Options for the title bar background blur style. **NOTE：**This parameter is only effective when **backgroundBlurStyle** is set. Avoid using this API in conjunction with **backgroundEffect**.
 
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,17 +66,15 @@ Avoid using this API in conjunction with **backgroundEffect**.
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Title bar background properties, including blur radius, brightness, saturation, and color.
-
-**NOTE：**
-
-Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
+Title bar background properties, including blur radius, brightness, saturation, and color. **NOTE：**Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

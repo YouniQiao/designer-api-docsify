@@ -1,20 +1,24 @@
 # Toggle
 
 ```TypeScript
-type Toggle = ToggleFrameNode
+type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>
 ```
 
-Define the FrameNode type for Toggle.
+FrameNode of the Toggle type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Toggle = ToggleFrameNode--><!--Device-typeNode-type Toggle = ToggleFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>--><!--Device-typeNode-type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ToggleFrameNode
+**Property type:** TypedFrameNode<ToggleInterface, ToggleAttribute>
 

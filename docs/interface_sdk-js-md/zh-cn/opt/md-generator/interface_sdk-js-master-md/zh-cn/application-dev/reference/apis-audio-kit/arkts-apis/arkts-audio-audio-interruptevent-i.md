@@ -2,7 +2,9 @@
 
 音频中断时，应用接收的中断事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface InterruptEvent--><!--Device-audio-interface InterruptEvent-End-->
 
@@ -18,7 +20,9 @@ eventType: InterruptType
 
 **类型：** [InterruptType](arkts-audio-audio-interrupttype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ forceType: InterruptForceType
 
 **类型：** [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ hintType: InterruptHint
 
 **类型：** [InterruptHint](arkts-audio-audio-interrupthint-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

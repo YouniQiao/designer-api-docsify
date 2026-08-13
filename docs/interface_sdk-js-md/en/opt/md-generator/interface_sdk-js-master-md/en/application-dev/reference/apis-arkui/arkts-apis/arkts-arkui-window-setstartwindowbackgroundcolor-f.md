@@ -12,13 +12,13 @@ import { window } from '@kit.ArkUI';
 function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>
 ```
 
-Sets the background color of the splash screen of the UIAbility based on the specified module name and ability name within the same bundle name. This API uses a promise to return the result.
+Sets the background color of the splash screen of the UIAbility based on the specified module name and ability name within the same bundle name. This API uses a promise to return the result. This API takes effect for all processes of the same bundle name, for example, in multi-instance or clone scenarios.
 
-This API takes effect for all processes of the same bundle name, for example, in multi-instance or clone scenarios.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>--><!--Device-window-function setStartWindowBackgroundColor(moduleName: string, abilityName: string, color: ColorMetrics): Promise<void>-End-->
 
@@ -30,7 +30,7 @@ This API takes effect for all processes of the same bundle name, for example, in
 | --- | --- | --- |
 | moduleName | string | Yes |
 | abilityName | string | Yes |
-| color | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes |
+| color | [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -42,9 +42,9 @@ This API takes effect for all processes of the same bundle name, for example, in
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
 
 ## Examples
 

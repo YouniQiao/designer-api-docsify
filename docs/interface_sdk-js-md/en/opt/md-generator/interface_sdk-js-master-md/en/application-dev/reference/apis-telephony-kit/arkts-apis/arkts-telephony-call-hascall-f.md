@@ -14,7 +14,9 @@ function hasCall(callback: AsyncCallback<boolean>): void
 
 Checks whether a call is in progress. This API uses an asynchronous callback to return the result.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void--><!--Device-call-function hasCall(callback: AsyncCallback<boolean>): void-End-->
 
@@ -49,7 +51,9 @@ function hasCall(): Promise<boolean>
 
 Checks whether a call is in progress. This API uses a promise to return the result.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-call-function hasCall(): Promise<boolean>--><!--Device-call-function hasCall(): Promise<boolean>-End-->
 

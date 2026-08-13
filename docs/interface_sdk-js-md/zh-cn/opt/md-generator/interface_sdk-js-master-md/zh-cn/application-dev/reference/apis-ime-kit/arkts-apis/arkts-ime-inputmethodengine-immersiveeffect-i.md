@@ -2,7 +2,9 @@
 
 沉浸效果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
 
@@ -18,7 +20,9 @@ gradientHeight: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImmersiveEffect-gradientHeight: int--><!--Device-ImmersiveEffect-gradientHeight: int-End-->
 
@@ -34,7 +38,9 @@ gradientMode: GradientMode
 
 **类型：** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImmersiveEffect-gradientMode: GradientMode--><!--Device-ImmersiveEffect-gradientMode: GradientMode-End-->
 

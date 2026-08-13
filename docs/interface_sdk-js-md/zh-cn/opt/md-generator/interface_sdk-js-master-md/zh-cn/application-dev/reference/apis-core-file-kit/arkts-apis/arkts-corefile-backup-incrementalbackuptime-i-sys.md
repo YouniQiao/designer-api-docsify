@@ -2,7 +2,9 @@
 
 记录最后一次增量备份时间，用于描述备份增量的时间点。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backup-interface IncrementalBackupTime--><!--Device-backup-interface IncrementalBackupTime-End-->
 
@@ -20,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IncrementalBackupTime-bundleName: string--><!--Device-IncrementalBackupTime-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ lastIncrementalTime: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IncrementalBackupTime-lastIncrementalTime: long--><!--Device-IncrementalBackupTime-lastIncrementalTime: long-End-->
 

@@ -1,11 +1,12 @@
 # LinkIntentInfo（系统接口）
 
-LinkIntentInfo用于描述  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。
+LinkIntentInfo用于描述 @InsightIntentLink 装饰器支持的参数，例如应用间跳转需要的uri信息。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-insightIntentDriver-interface LinkIntentInfo--><!--Device-insightIntentDriver-interface LinkIntentInfo-End-->
 
@@ -23,9 +24,11 @@ readonly uri: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

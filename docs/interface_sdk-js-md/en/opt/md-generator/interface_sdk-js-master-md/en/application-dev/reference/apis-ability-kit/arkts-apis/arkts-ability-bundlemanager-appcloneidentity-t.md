@@ -1,15 +1,17 @@
 # AppCloneIdentity
 
 ```TypeScript
-export type AppCloneIdentity = _BundleInfo.AppCloneIdentity
+export type AppCloneIdentity = _AppCloneIdentity
 ```
 
 Describes the identity information of an application clone.
 
-**Since:** 15
+**Since:** 23
 
-<!--Device-bundleManager-export type AppCloneIdentity = _BundleInfo.AppCloneIdentity--><!--Device-bundleManager-export type AppCloneIdentity = _BundleInfo.AppCloneIdentity-End-->
+**Deprecated since:** -1
+
+<!--Device-bundleManager-export type AppCloneIdentity = _AppCloneIdentity--><!--Device-bundleManager-export type AppCloneIdentity = _AppCloneIdentity-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-**Property type:** _BundleInfo.AppCloneIdentity
+**Property type:** _AppCloneIdentity

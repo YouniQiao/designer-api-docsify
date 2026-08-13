@@ -4,6 +4,8 @@ Provides backup config to backup or restore KVStore.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-distributedKVStore-interface BackupConfig--><!--Device-distributedKVStore-interface BackupConfig-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
@@ -26,6 +28,8 @@ Specifies the file name to the backup database
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackupConfig-fileName: string--><!--Device-BackupConfig-fileName: string-End-->
@@ -43,6 +47,8 @@ Specifies the root directory relative to the backup database
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

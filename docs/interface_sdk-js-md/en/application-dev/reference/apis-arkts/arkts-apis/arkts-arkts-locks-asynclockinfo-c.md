@@ -6,6 +6,8 @@ Information about a lock.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-locks-class AsyncLockInfo--><!--Device-locks-class AsyncLockInfo-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,6 +32,8 @@ lockAsync caller's execution context identifier.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockInfo-contextId: number--><!--Device-AsyncLockInfo-contextId: number-End-->
@@ -50,6 +54,8 @@ Lock operation mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyncLockInfo-mode: AsyncLockMode--><!--Device-AsyncLockInfo-mode: AsyncLockMode-End-->
@@ -69,6 +75,8 @@ Name of the lock.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

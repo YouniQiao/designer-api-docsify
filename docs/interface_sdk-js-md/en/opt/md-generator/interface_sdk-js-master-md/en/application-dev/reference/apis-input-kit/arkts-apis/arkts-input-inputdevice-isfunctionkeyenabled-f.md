@@ -14,7 +14,9 @@ function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>
 
 Checks whether the specified function key (for example, **CapsLock**) is enabled. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>--><!--Device-inputDevice-function isFunctionKeyEnabled(functionKey: FunctionKey): Promise<boolean>-End-->
 
@@ -36,8 +38,8 @@ Checks whether the specified function key (for example, **CapsLock**) is enabled
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [3900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-keyboard-not-connected) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) |
 
 ## Examples
 

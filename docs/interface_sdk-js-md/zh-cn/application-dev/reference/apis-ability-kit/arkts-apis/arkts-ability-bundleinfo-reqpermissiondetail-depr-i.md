@@ -1,10 +1,6 @@
 # ReqPermissionDetail
 
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[ReqPermissionDetail](#ReqPermissionDetail)替代。
-
-应用运行时需向系统申请的权限集合的详细信息。
+> **说明：** > > 从API version 7开始支持，从API version 9开始废弃，建议使用[ReqPermissionDetail](#ReqPermissionDetail)替代。 应用运行时需向系统申请的权限集合的详细信息。
 
 **起始版本：** 7
 
@@ -12,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [bundleInfo](bundleInfo)
+**替代接口：** bundleInfo
 
 <!--Device-unnamed-export interface ReqPermissionDetail--><!--Device-unnamed-export interface ReqPermissionDetail-End-->
 
@@ -36,7 +32,7 @@ name: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#name)
+**替代接口：** name
 
 <!--Device-ReqPermissionDetail-name: string--><!--Device-ReqPermissionDetail-name: string-End-->
 
@@ -60,7 +56,7 @@ reason: string
 
 **废弃版本：** 9
 
-**替代接口：** [reason](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#reason)
+**替代接口：** reason
 
 <!--Device-ReqPermissionDetail-reason: string--><!--Device-ReqPermissionDetail-reason: string-End-->
 
@@ -84,7 +80,7 @@ usedScene: UsedScene
 
 **废弃版本：** 9
 
-**替代接口：** [usedScene](ohos.bundle.bundleManager/bundleManager.ReqPermissionDetail#usedScene)
+**替代接口：** usedScene
 
 <!--Device-ReqPermissionDetail-usedScene: UsedScene--><!--Device-ReqPermissionDetail-usedScene: UsedScene-End-->
 

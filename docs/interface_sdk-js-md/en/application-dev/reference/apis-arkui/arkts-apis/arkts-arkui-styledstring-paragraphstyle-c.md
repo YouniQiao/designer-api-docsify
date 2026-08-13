@@ -6,6 +6,8 @@ Defines ParagraphStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ParagraphStyle--><!--Device-unnamed-export declare class ParagraphStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Get the leading margin of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly leadingMargin?: double | LeadingMarginPlaceholder--><!--Device-ParagraphStyle-readonly leadingMargin?: double | LeadingMarginPlaceholder-End-->
@@ -68,6 +74,8 @@ Get the leading margin span of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly leadingMarginSpan?: LeadingMarginSpan--><!--Device-ParagraphStyle-readonly leadingMarginSpan?: LeadingMarginSpan-End-->
@@ -80,13 +88,15 @@ Get the leading margin span of the StyledString.
 readonly maxLines?: int
 ```
 
-Get the maximum number of lines of the StyledString.The value should be an integer.
+Get the maximum number of lines of the StyledString. The value should be an integer.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +118,8 @@ Get the overflow mode of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly overflow?: TextOverflow--><!--Device-ParagraphStyle-readonly overflow?: TextOverflow-End-->
@@ -120,13 +132,15 @@ Get the overflow mode of the StyledString.
 readonly paragraphSpacing?: double
 ```
 
-Get the paragraph spacing of the StyledString.The unit is vp.
+Get the paragraph spacing of the StyledString. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +162,8 @@ Get the shader style of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly shaderStyle?: ShaderStyle--><!--Device-ParagraphStyle-readonly shaderStyle?: ShaderStyle-End-->
@@ -160,13 +176,15 @@ Get the shader style of the StyledString.
 readonly tailIndents?: Array<double>
 ```
 
-Get the tail indentation of the StyledString.The unit is vp.
+Get the tail indentation of the StyledString. The unit is vp.
 
 **Type:** Array&lt;double&gt;
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,6 +206,8 @@ Get the text alignment of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly textAlign?: TextAlign--><!--Device-ParagraphStyle-readonly textAlign?: TextAlign-End-->
@@ -208,6 +228,8 @@ Get the text direction of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly textDirection?: TextDirection--><!--Device-ParagraphStyle-readonly textDirection?: TextDirection-End-->
@@ -220,13 +242,15 @@ Get the text direction of the StyledString.
 readonly textIndent?: double
 ```
 
-Get the first line indentation of the StyledString.The unit is vp.
+Get the first line indentation of the StyledString. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -248,6 +272,8 @@ Get the text vertical alignment of the StyledString.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ParagraphStyle-readonly textVerticalAlign?: TextVerticalAlign--><!--Device-ParagraphStyle-readonly textVerticalAlign?: TextVerticalAlign-End-->
@@ -267,6 +293,8 @@ Get the wordBreak mode of the StyledString.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

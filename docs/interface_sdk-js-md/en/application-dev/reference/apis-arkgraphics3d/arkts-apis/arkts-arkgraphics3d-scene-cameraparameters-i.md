@@ -2,9 +2,11 @@
 
 Describes the camera parameters, which are used to define additional configuration options for camera initialization.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CameraParameters--><!--Device-unnamed-export interface CameraParameters-End-->
 
@@ -16,15 +18,17 @@ Describes the camera parameters, which are used to define additional configurati
 msaa?: boolean
 ```
 
-Whether Multisample Anti-Aliasing (MSAA) is enabled for the camera. true if enabled, false otherwise.The default value is false.
+Whether Multisample Anti-Aliasing (MSAA) is enabled for the camera. true if enabled, false otherwise. The default value is false.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CameraParameters-msaa?: boolean--><!--Device-CameraParameters-msaa?: boolean-End-->
 
@@ -36,15 +40,17 @@ Whether Multisample Anti-Aliasing (MSAA) is enabled for the camera. true if enab
 renderingPipeline?: RenderingPipelineType
 ```
 
-Initial rendering pipeline type.The default value is FORWARD_LIGHTWEIGHT.
+Initial rendering pipeline type. The default value is FORWARD_LIGHTWEIGHT.
 
 **Type:** [RenderingPipelineType](arkts-arkgraphics3d-scenetypes-renderingpipelinetype-e.md)
 
 **Default:** RenderingPipelineType.FORWARD_LIGHTWEIGHT
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType--><!--Device-CameraParameters-renderingPipeline?: RenderingPipelineType-End-->
 

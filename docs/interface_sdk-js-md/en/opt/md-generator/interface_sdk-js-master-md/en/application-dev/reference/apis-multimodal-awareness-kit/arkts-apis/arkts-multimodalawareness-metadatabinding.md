@@ -2,7 +2,9 @@
 
 The **metadataBinding** module provides metadata binding–specific functions such as metadata transfer, event subscription, and event unsubscription.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace metadataBinding--><!--Device-unnamed-declare namespace metadataBinding-End-->
 
@@ -20,16 +22,18 @@ import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [off](arkts-multimodalawareness-metadatabinding-off-f.md#off) |
-| [on](arkts-multimodalawareness-metadatabinding-on-f.md#on) |
-| [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md#submitmetadata) |
+| [offOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md#offOperationSubmitMetadata) |
+| [off_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-offoperationsubmitmetadata-f.md) |
+| [onOperationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md#onOperationSubmitMetadata) |
+| [on_operationSubmitMetadata](arkts-multimodalawareness-metadatabinding-onoperationsubmitmetadata-f.md) |
+| [submitMetadata](arkts-multimodalawareness-metadatabinding-submitmetadata-f.md#submitMetadata) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [decodeImage](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md#decodeimage) |
-| [encodeImage](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md#encodeimage) |
-| [notifyMetadataBindingEvent](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md#notifymetadatabindingevent) |
+| [decodeImage](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md#decodeImage-(System-API)) |
+| [encodeImage](arkts-multimodalawareness-metadatabinding-encodeimage-f-sys.md#encodeImage-(System-API)) |
+| [notifyMetadataBindingEvent](arkts-multimodalawareness-metadatabinding-notifymetadatabindingevent-f-sys.md#notifyMetadataBindingEvent-(System-API)) |
 <!--DelEnd-->

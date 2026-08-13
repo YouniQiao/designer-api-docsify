@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-GestureControl-enum GestureType--><!--Device-GestureControl-enum GestureType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TAP_GESTURE = 0
 点击手势。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ LONG_PRESS_GESTURE = 1
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GestureType-LONG_PRESS_GESTURE = 1--><!--Device-GestureType-LONG_PRESS_GESTURE = 1-End-->
@@ -49,6 +55,8 @@ PAN_GESTURE = 2
 滑动手势。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ PINCH_GESTURE = 3
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GestureType-PINCH_GESTURE = 3--><!--Device-GestureType-PINCH_GESTURE = 3-End-->
@@ -81,6 +91,8 @@ SWIPE_GESTURE = 4
 快滑手势。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +110,8 @@ ROTATION_GESTURE = 5
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GestureType-ROTATION_GESTURE = 5--><!--Device-GestureType-ROTATION_GESTURE = 5-End-->
@@ -113,6 +127,8 @@ DRAG = 6
 拖拽。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -130,6 +146,8 @@ CLICK = 7
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GestureType-CLICK = 7--><!--Device-GestureType-CLICK = 7-End-->
@@ -145,6 +163,8 @@ BOX_SELECT_GESTURE = 8
 滚动类容器鼠标框选手势，是一种特殊的滑动手势，用于在滚动容器中通过鼠标拖拽创建选择区域，批量选择多个元素。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,6 +184,8 @@ Web组件滚动手势，是一种特殊的滑动手势，用于控制Web组件�
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -182,6 +204,8 @@ TEXT_FIELD_SELECT_GESTURE = 10
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -196,10 +220,11 @@ TEXT_FIELD_SELECT_GESTURE = 10
 CONTEXT_MENU_HOVER_GESTURE = 11
 ```
 
-上下文菜单悬停手势是一种特殊的长按手势，用于在长按过程中触发菜单的hoverScale动画效果（需启用  
-[ContextMenuAnimationOptions](../arkts-components/arkts-arkui-contextmenuanimationoptions-i.md#ContextMenuAnimationOptions)的hoverScaleInterruption属性以支持该行为）。
+上下文菜单悬停手势是一种特殊的长按手势，用于在长按过程中触发菜单的hoverScale动画效果（需启用 [ContextMenuAnimationOptions](../arkts-components/arkts-arkui-contextmenuanimationoptions-i.md#ContextMenuAnimationOptions)的hoverScaleInterruption属性以支持该行为）。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

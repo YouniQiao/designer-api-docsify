@@ -8,7 +8,9 @@ function isScreenRotationLocked(callback: AsyncCallback<boolean>): void
 
 查询当前自动转屏是否锁定，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-function isScreenRotationLocked(callback: AsyncCallback<boolean>): void--><!--Device-screen-function isScreenRotationLocked(callback: AsyncCallback<boolean>): void-End-->
 
@@ -26,7 +28,7 @@ function isScreenRotationLocked(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -53,7 +55,9 @@ function isScreenRotationLocked(): Promise<boolean>
 
 查询当前自动转屏是否锁定，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-function isScreenRotationLocked(): Promise<boolean>--><!--Device-screen-function isScreenRotationLocked(): Promise<boolean>-End-->
 
@@ -71,7 +75,7 @@ function isScreenRotationLocked(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

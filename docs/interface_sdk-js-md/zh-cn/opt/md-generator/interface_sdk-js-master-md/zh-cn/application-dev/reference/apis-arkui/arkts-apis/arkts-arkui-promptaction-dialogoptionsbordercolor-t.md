@@ -8,6 +8,8 @@ declare type DialogOptionsBorderColor = ResourceColor | EdgeColors
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -19,4 +21,4 @@ declare type DialogOptionsBorderColor = ResourceColor | EdgeColors
 | 类型 |
 | --- |
 | [ResourceColor](arkts-arkui-resourcecolor-t.md) |
-| [EdgeColors](arkts-arkui-units-edgecolors-i.md) |
+| [EdgeColors](../../apis-na/arkts-apis/arkts-na-units-edgecolors-i.md) |

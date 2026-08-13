@@ -2,13 +2,15 @@
 
 TypedArray inherits the features and methods of Int8Array
 
-**Inheritance/Implementation:** TypedArray extends [Int8Array](Int8Array)
+**Inheritance/Implementation:** TypedArray extends Int8Array
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-buffer-interface TypedArray extends Int8Array--><!--Device-buffer-interface TypedArray extends Int8Array-End-->
+<!--Device-buffer-interface TypedArray--><!--Device-buffer-interface TypedArray-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

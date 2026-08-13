@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnErrorReceiveEvent--><!--Device-unnamed-declare interface OnErrorReceiveEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ error: WebResourceError
 **类型：** [WebResourceError](arkts-arkweb-webresourceerror-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ request: WebResourceRequest
 **类型：** [WebResourceRequest](arkts-arkweb-webresourcerequest-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

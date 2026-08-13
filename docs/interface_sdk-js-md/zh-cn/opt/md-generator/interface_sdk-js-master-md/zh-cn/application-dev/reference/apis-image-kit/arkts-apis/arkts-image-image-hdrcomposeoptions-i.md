@@ -4,6 +4,8 @@ Picture合成HDR时可配置的参数选项。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-image-interface HdrComposeOptions--><!--Device-image-interface HdrComposeOptions-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -19,6 +21,8 @@ desiredPixelFormat?: PixelMapFormat
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

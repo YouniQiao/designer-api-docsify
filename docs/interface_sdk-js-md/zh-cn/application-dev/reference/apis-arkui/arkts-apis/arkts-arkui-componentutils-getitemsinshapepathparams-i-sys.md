@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-componentUtils-interface GetItemsInShapePathParams--><!--Device-componentUtils-interface GetItemsInShapePathParams-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ images: Array<ImageItem>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-GetItemsInShapePathParams-images: Array<ImageItem>--><!--Device-GetItemsInShapePathParams-images: Array<ImageItem>-End-->
@@ -40,13 +44,15 @@ images: Array<ImageItem>
 ratio?: double
 ```
 
-所选区域中非透明空白像素的比例相对于图像总像素的比例。默认值为0.15。
+所选区域中非透明空白像素的比例 相对于图像总像素的比例。默认值为0.15。
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,6 +75,8 @@ shapePath: Array<common2D.Point>
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

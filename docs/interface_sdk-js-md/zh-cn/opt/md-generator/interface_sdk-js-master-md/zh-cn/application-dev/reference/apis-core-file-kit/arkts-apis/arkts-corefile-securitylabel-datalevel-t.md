@@ -6,7 +6,9 @@ type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'
 
 数据安全等级。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-securityLabel-type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'--><!--Device-securityLabel-type DataLevel = 's0' | 's1' | 's2' | 's3' | 's4'-End-->
 

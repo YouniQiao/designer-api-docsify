@@ -1,18 +1,22 @@
 # ClickEventListenerCallback
 
 ```TypeScript
-type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void
+declare type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void
 ```
 
-Defines the callback type used in UIObserver watch click event.The value of event indicates the information of ClickEvent.The value of node indicates the frameNode which will receive the event.
+Defines the callback type for listening for click events in **UIObserver**.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void--><!--Device-unnamed-type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-declare type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void--><!--Device-unnamed-declare type ClickEventListenerCallback = (event: ClickEvent, node?: FrameNode) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +24,6 @@ Defines the callback type used in UIObserver watch click event.The value of even
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | ClickEvent | Yes | the information of ClickEvent |
-| node | FrameNode | No | the information of frameNode |
+| event | ClickEvent | Yes | Information about the click event that triggers the callback. |
+| node | FrameNode | No | Component bound to the click event. |
 

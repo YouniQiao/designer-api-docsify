@@ -9,20 +9,23 @@ import { EditorMenuOptions, SelectionMenuOptions, EditorEventInfo, SelectionMenu
 ## SelectionMenu
 
 ```TypeScript
+@Builder
 export declare function SelectionMenu(options: SelectionMenuOptions): void
 ```
 
-Declare Builder SelectionMenu.
+Defines a **SelectionMenu** component. When the input parameter is empty, both the component and its content area have a zero size, making the component invisible. For example, when a **SelectionMenu** component activated via right -click is bound to a RichEditor component using bindSelectionMenu, it will not be displayed when the **RichEditor** component receives a right-click event.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function SelectionMenu(options: SelectionMenuOptions): void--><!--Device-unnamed-export declare function SelectionMenu(options: SelectionMenuOptions): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-@Builderexport declare function SelectionMenu(options: SelectionMenuOptions): void--><!--Device-unnamed-@Builderexport declare function SelectionMenu(options: SelectionMenuOptions): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,5 +33,5 @@ Declare Builder SelectionMenu.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SelectionMenuOptions](arkts-arkui-arkui-advanced-selectionmenu-selectionmenuoptions-i.md) | Yes | Selection menu options. |
+| options | SelectionMenuOptions | Yes | Configuration options of the **SelectionMenu** component. |
 

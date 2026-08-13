@@ -1,8 +1,10 @@
 # PageInfo
 
-Represents the page information of the router or navigation destination.If there is no related page information, **undefined** is returned.
+Represents the page information of the router or navigation destination. If there is no related page information, **undefined** is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PageInfo--><!--Device-unnamed-export interface PageInfo-End-->
 
@@ -26,6 +28,8 @@ the property of navDestination information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,6 +49,8 @@ Router information.
 **Type:** observer.RouterPageInfo
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

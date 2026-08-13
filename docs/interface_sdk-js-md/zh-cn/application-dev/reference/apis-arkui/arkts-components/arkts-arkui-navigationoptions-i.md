@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NavigationOptions--><!--Device-unnamed-declare interface NavigationOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,15 @@
 animated?: boolean
 ```
 
-是否支持转场动画。
-
-true：支持转场动画；false：不支持转场动画。
-
-默认值：true
+是否支持转场动画。 true：支持转场动画；false：不支持转场动画。 默认值：true
 
 **类型：** boolean
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,15 +42,15 @@ true：支持转场动画；false：不支持转场动画。
 launchMode?: LaunchMode
 ```
 
-路由栈的操作模式。
-
-默认值：LaunchMode.STANDARD
+路由栈的操作模式。 默认值：LaunchMode.STANDARD
 
 **类型：** [LaunchMode](arkts-arkui-launchmode-e.md)
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -12,7 +12,7 @@ function trigger(agent: WantAgent, triggerInfo: TriggerInfo, callback?: Callback
 
 **废弃版本：** 9
 
-**替代接口：** [trigger](ohos.app.ability.wantAgent/wantAgent#trigger)
+**替代接口：** [trigger](arkts-ability-wantagent-trigger-f.md#trigger)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

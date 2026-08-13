@@ -4,6 +4,8 @@ Enum type supplied to [PinVerifyResult](#PinVerifyResult) when VerifyPinHandler#
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum PinVerifyResult--><!--Device-unnamed-declare enum PinVerifyResult-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -18,6 +20,8 @@ SUCCESS.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0--><!--Device-PinVerifyResult-PIN_VERIFICATION_SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -31,6 +35,8 @@ PIN_VERIFICATION_FAILED = 1
 FAILED.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1--><!--Device-PinVerifyResult-PIN_VERIFICATION_FAILED = 1-End-->
 

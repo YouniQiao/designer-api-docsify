@@ -6,13 +6,11 @@
 function setPointerColor(color: number, callback: AsyncCallback<void>): void
 ```
 
-设置鼠标光标颜色，使用callback异步回调。
+设置鼠标光标颜色，使用callback异步回调。 > **说明：** > > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
-> **说明：**
-> 
-> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void-End-->
 
@@ -31,8 +29,8 @@ function setPointerColor(color: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -72,13 +70,11 @@ struct Index {
 function setPointerColor(color: number): Promise<void>
 ```
 
-设置鼠标光标颜色，使用Promise异步回调。
+设置鼠标光标颜色，使用Promise异步回调。 > **说明：** > > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
-> **说明：**
-> 
-> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-pointer-function setPointerColor(color: int): Promise<void>--><!--Device-pointer-function setPointerColor(color: int): Promise<void>-End-->
 
@@ -102,8 +98,8 @@ function setPointerColor(color: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

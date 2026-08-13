@@ -4,6 +4,8 @@ Describes the ranging state change information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-ranging-interface RangingStateChangeInfo--><!--Device-ranging-interface RangingStateChangeInfo-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -26,6 +28,8 @@ Cause of ranging stop.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingStateChangeInfo-cause: RangingStoppedCause--><!--Device-RangingStateChangeInfo-cause: RangingStoppedCause-End-->
@@ -44,6 +48,8 @@ Address of the ranging device.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingStateChangeInfo-deviceId?: string--><!--Device-RangingStateChangeInfo-deviceId?: string-End-->
@@ -56,11 +62,13 @@ Address of the ranging device.
 handle?: number
 ```
 
-Indicates the handle number of ranging monitoring.The value should be an integer.
+Indicates the handle number of ranging monitoring. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +87,8 @@ Ranging state.
 **Type:** [RangingState](arkts-connectivity-ranging-rangingstate-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-asset-enum WrapType--><!--Device-asset-enum WrapType-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -18,6 +20,8 @@ NEVER = 0
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-WrapType-NEVER = 0--><!--Device-WrapType-NEVER = 0-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -31,6 +35,8 @@ TRUSTED_ACCOUNT = 1
 只在登录可信账号的设备进行加密导入导出关键资产。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-WrapType-TRUSTED_ACCOUNT = 1--><!--Device-WrapType-TRUSTED_ACCOUNT = 1-End-->
 

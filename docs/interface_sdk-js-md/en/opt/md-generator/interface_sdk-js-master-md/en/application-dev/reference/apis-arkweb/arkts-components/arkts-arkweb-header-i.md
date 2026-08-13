@@ -4,6 +4,8 @@ Defines the Web's request/response header.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface Header--><!--Device-unnamed-declare interface Header-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Gets the key of the request/response header.
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,6 +41,8 @@ Gets the value of the request/response header.
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

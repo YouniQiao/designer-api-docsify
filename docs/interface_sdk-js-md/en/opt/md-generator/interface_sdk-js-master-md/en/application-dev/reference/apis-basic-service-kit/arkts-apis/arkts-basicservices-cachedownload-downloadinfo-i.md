@@ -2,7 +2,9 @@
 
 Describes the pre-downloaded download information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-interface DownloadInfo--><!--Device-cacheDownload-interface DownloadInfo-End-->
 
@@ -24,7 +26,9 @@ Pre-downloaded network information.
 
 **Type:** NetworkInfo
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-readonly network: NetworkInfo--><!--Device-DownloadInfo-readonly network: NetworkInfo-End-->
 
@@ -40,7 +44,9 @@ Pre-downloaded performance information.
 
 **Type:** [PerformanceInfo](arkts-basicservices-cachedownload-performanceinfo-i.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-readonly performance: PerformanceInfo--><!--Device-DownloadInfo-readonly performance: PerformanceInfo-End-->
 
@@ -56,7 +62,9 @@ Pre-downloaded resource information.
 
 **Type:** [ResourceInfo](arkts-basicservices-cachedownload-resourceinfo-i.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DownloadInfo-readonly resource: ResourceInfo--><!--Device-DownloadInfo-readonly resource: ResourceInfo-End-->
 

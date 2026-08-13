@@ -4,7 +4,9 @@ Boids simulation repulsion field parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BoidsSimRepulsionParameters--><!--Device-unnamed-export interface BoidsSimRepulsionParameters-End-->
 
@@ -18,13 +20,15 @@ Boids simulation repulsion field parameters.
 accelerationMag?: double
 ```
 
-Magnitude of repulsion acceleration applied away from the entity. Range: [0, +inf). Default: 0.0If a value exceeding the valid range is assigned, it will be clamped.
+Magnitude of repulsion acceleration applied away from the entity. Range: [0, +inf). Default: 0.0 If a value exceeding the valid range is assigned, it will be clamped.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ Magnitude of repulsion acceleration applied away from the entity. Range: [0, +in
 radius?: double
 ```
 
-Radius of influence. Boids strictly within this distance from the entity are pushed away(force is zero at the boundary). Range: [0, +inf). Default: 0.0If a value exceeding the valid range is assigned, it will be clamped.
+Radius of influence. Boids strictly within this distance from the entity are pushed away (force is zero at the boundary). Range: [0, +inf). Default: 0.0 If a value exceeding the valid range is assigned, it will be clamped.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

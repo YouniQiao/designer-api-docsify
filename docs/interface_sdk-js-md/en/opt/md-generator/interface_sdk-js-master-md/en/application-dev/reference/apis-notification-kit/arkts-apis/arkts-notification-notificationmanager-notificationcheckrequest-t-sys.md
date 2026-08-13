@@ -6,7 +6,9 @@ export type NotificationCheckRequest = _NotificationCheckRequest
 
 Describes the notification authentication information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest--><!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest-End-->
 

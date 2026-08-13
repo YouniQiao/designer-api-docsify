@@ -2,7 +2,9 @@
 
 Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a specified year.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class HolidayManager--><!--Device-i18n-export class HolidayManager-End-->
 
@@ -22,7 +24,9 @@ constructor(icsPath: String)
 
 Creates a **HolidayManager** object for parsing holiday data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,8 +44,8 @@ Creates a **HolidayManager** object for parsing holiday data.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -66,7 +70,9 @@ getHolidayInfoItemArray(year?: number): Array<HolidayInfoItem>
 
 Obtains the holiday information list of the specified year.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,8 +96,8 @@ Obtains the holiday information list of the specified year.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## isHoliday
 
@@ -101,7 +107,9 @@ isHoliday(date?: Date): boolean
 
 Determines whether the specified date is a holiday.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -125,7 +133,7 @@ Determines whether the specified date is a holiday.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

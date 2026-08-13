@@ -1,18 +1,18 @@
 # EventHub
 
-EventHub is an event communication mechanism based on the publish-subscribe pattern. It decouples senders and subscribers through event names, supporting efficient data transfer and state synchronization between different service modules.It is primarily used for  
-[data communication between UIAbility components and UI pages](../../../application-models/uiability-data-sync-with-ui.md).Different Context objects have different EventHub objects, and different EventHub objects cannot communicate directly  with each other. Event subscription, unsubscription, and triggering all take place on a specific EventHub object.Since Worker and TaskPool implement  
-[multithreaded concurrency](../../../arkts-utils/multi-thread-concurrency-overview.md#multithreaded-concurrency-models) through the actor model, where different virtual machine instances have exclusive memory, EventHub objects cannot be  used for inter-thread data communication.
+EventHub is an event communication mechanism based on the publish-subscribe pattern. It decouples senders and subscribers through event names, supporting efficient data transfer and state synchronization between different service modules. It is primarily used for [data communication between UIAbility components and UI pages](../../../application-models/uiability-data-sync-with-ui.md) . Different Context objects have different EventHub objects, and different EventHub objects cannot communicate directly with each other. Event subscription, unsubscription, and triggering all take place on a specific EventHub object. Since Worker and TaskPool implement [multithreaded concurrency](../../../arkts-utils/multi-thread-concurrency-overview.md#multithreaded-concurrency-models) through the actor model, where different virtual machine instances have exclusive memory, EventHub objects cannot be used for inter-thread data communication.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class EventHub--><!--Device-unnamed-declare class EventHub-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## emit
+## emit_string
 
 ```TypeScript
 emit(event: string, ...args: Object[]): void
@@ -23,6 +23,8 @@ Trigger the event callbacks.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,7 +45,7 @@ Trigger the event callbacks.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -80,7 +82,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## emit
+## emit_string
 
 ```TypeScript
 emit(event: string, ...args: (Object|null|undefined)[]): void
@@ -90,7 +92,9 @@ Trigger the event callbacks.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,20 +109,19 @@ Trigger the event callbacks.
 | event | string | Yes | Indicates the event. |
 | args | (Object \| null \| undefined)[] | Yes | Indicates the callback arguments. |
 
-## off
+## off_string
 
 ```TypeScript
 off(event: string, callback?: Function): void
 ```
 
-Unsubscribes from an event.
+Unsubscribes from an event. - If **callback** is specified, this API unsubscribes from the given event with the specified callback. - If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
 
-- If **callback** is specified, this API unsubscribes from the given event with the specified callback.  
-- If **callback** is not specified, this API unsubscribes from the given event with all callbacks.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,7 +142,7 @@ Unsubscribes from an event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -172,22 +175,19 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(event: string, callback: Function): void
 ```
 
-Subscribes to an event.
+Subscribes to an event. > **NOTE：**> > When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of > **this** in **callback**, use an arrow function.
 
-> **NOTE：**
-> 
-> When the callback is triggered by **emit**, the invoker is the EventHub object. To change the direction of
-> **this** in **callback**, use an arrow function.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -208,5 +208,5 @@ Subscribes to an event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 

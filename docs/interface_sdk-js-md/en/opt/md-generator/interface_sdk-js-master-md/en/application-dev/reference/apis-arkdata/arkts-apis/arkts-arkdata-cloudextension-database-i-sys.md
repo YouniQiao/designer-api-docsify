@@ -2,7 +2,9 @@
 
 Represents the database information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface Database--><!--Device-cloudExtension-export interface Database-End-->
 
@@ -26,7 +28,9 @@ Alias of the database on the server.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Database-alias: string--><!--Device-Database-alias: string-End-->
 
@@ -44,7 +48,9 @@ Name of the database.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Database-name: string--><!--Device-Database-name: string-End-->
 
@@ -62,7 +68,9 @@ Table in the database, including the detailed data information.
 
 **Type:** Array&lt;[Table](arkts-arkdata-cloudextension-table-i-sys.md)&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Database-tables: Array<Table>--><!--Device-Database-tables: Array<Table>-End-->
 

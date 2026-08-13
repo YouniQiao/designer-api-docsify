@@ -6,6 +6,8 @@ Class to be override for external crypto extension ability.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class CryptoExtensionAbility--><!--Device-unnamed-declare class CryptoExtensionAbility-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -22,6 +24,8 @@ onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCrypt
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onAuthUkeyPin(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -72,6 +76,8 @@ onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExt
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onClearUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -118,6 +124,8 @@ onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCry
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onCloseResource(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -167,6 +175,8 @@ onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | 
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onEnumCertificates(params?: Array<huksExternalCrypto.HuksExternalCryptoParam> | HuksCryptoExtensionParam[]):      Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -214,6 +224,8 @@ onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksEx
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onExportCertificate(resourceId: string, params?: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -263,6 +275,8 @@ onExportKeyItem(handle: string, params: HuksCryptoExtensionParam[]): Promise<Huk
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -324,6 +338,8 @@ onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onFinishSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -371,6 +387,8 @@ onGenerateKeyItem(handle: string, params:HuksCryptoExtensionParam[]): Promise<Hu
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -440,6 +458,8 @@ onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCryp
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onGetProperty(handle: string, propertyId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -490,6 +510,8 @@ onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtension
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CryptoExtensionAbility-onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onGetResourceId(params: HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
@@ -539,6 +561,8 @@ onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExter
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onGetUkeyPinAuthState(handle: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |      HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -587,6 +611,8 @@ onImportCertificate(handle: string, params: HuksCryptoExtensionParam[],
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -639,6 +665,8 @@ onImportWrappedKeyItem(handle: string, wrappingHandle: string, params: HuksCrypt
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -709,6 +737,8 @@ onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionPara
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-CryptoExtensionAbility-onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onInitSession(handle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>-End-->
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
@@ -756,6 +786,8 @@ onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternal
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |     HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onOpenResource(resourceId: string, params: Array<huksExternalCrypto.HuksExternalCryptoParam> |     HuksCryptoExtensionParam[]): Promise<HuksCryptoExtensionResult>-End-->
 
@@ -805,6 +837,8 @@ onSetProperty(handle: string, propertyId: string, params: HuksCryptoExtensionPar
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -856,6 +890,8 @@ onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensi
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-CryptoExtensionAbility-onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>--><!--Device-CryptoExtensionAbility-onUpdateSession(initHandle: string, params: huks.HuksOptions | HuksCryptoExtensionParams):      Promise<HuksCryptoExtensionResult>-End-->
 

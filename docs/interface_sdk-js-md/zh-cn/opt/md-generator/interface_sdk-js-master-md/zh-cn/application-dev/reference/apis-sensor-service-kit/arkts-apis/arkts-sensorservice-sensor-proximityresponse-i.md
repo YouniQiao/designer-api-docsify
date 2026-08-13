@@ -4,9 +4,11 @@
 
 **继承/实现关系：** ProximityResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface ProximityResponse extends Response--><!--Device-sensor-interface ProximityResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface ProximityResponse--><!--Device-sensor-interface ProximityResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ distance: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ProximityResponse-distance: double--><!--Device-ProximityResponse-distance: double-End-->
 

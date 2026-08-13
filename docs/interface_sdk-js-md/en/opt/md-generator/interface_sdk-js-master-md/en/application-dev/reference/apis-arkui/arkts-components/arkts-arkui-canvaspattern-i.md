@@ -1,9 +1,10 @@
 # CanvasPattern
 
-**CanvasPattern** represents an object, created by the  
-[createPattern](arkts-arkui-canvasrenderer-c.md#createPattern)API, describing an image filling pattern based on the image and repetition mode.
+**CanvasPattern** represents an object, created by the [createPattern](arkts-arkui-canvasrenderer-c.md#createPattern) API, describing an image filling pattern based on the image and repetition mode.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface CanvasPattern--><!--Device-unnamed-declare interface CanvasPattern-End-->
 
@@ -15,10 +16,11 @@
 setTransform(transform?: Matrix2D): void
 ```
 
-Uses a **Matrix2D** object as a parameter to perform matrix transformation on the current  
-**CanvasPattern** object.
+Uses a **Matrix2D** object as a parameter to perform matrix transformation on the current **CanvasPattern** object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

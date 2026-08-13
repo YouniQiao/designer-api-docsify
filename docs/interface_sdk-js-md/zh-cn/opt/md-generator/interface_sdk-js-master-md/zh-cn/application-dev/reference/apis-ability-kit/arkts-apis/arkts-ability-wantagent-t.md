@@ -6,7 +6,9 @@ export type WantAgent = object
 
 WantAgent对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export type WantAgent = object--><!--Device-unnamed-export type WantAgent = object-End-->
 

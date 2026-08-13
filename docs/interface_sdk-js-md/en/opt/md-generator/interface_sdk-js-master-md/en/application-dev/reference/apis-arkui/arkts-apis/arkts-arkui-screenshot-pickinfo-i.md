@@ -2,7 +2,9 @@
 
 Describes the screenshot options.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screenshot-interface PickInfo--><!--Device-screenshot-interface PickInfo-End-->
 
@@ -24,9 +26,11 @@ Region of the screen to capture.
 
 **Type:** Rect
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PickInfo-pickRect: Rect--><!--Device-PickInfo-pickRect: Rect-End-->
 
@@ -42,9 +46,11 @@ PixelMap object of the captured image.
 
 **Type:** image.PixelMap
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PickInfo-pixelMap: image.PixelMap--><!--Device-PickInfo-pixelMap: image.PixelMap-End-->
 

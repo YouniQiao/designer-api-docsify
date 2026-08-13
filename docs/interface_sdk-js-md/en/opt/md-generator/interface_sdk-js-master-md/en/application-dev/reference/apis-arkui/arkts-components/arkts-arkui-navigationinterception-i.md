@@ -4,6 +4,8 @@ Describes the object to be intercepted during navigation redirection.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationInterception--><!--Device-unnamed-declare interface NavigationInterception-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ didShow?: InterceptionShowCallback
 
 Callback after page redirection. The setting takes effect in the next redirection.
 
+**Type:** [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md)
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +40,11 @@ interception?: InterceptionCallback
 
 Callback invoked before a page transition, allowing for stack operations, which take effect immediately for the current transition. The intercepted page will not be created.
 
+**Type:** [InterceptionCallback](arkts-arkui-interceptioncallback-t.md)
+
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +60,13 @@ Callback invoked before a page transition, allowing for stack operations, which 
 modeChange?: InterceptionModeCallback
 ```
 
-Callback invoked when the display mode of the **Navigation** component switches between single-column and split-column.
+Callback invoked when the display mode of the **Navigation** component switches between single-column and split- column.
+
+**Type:** [InterceptionModeCallback](arkts-arkui-interceptionmodecallback-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +84,11 @@ willShow?: InterceptionShowCallback
 
 Callback invoked before a page transition, allowing for stack operations, which take effect immediately for the current transition. The intercepted page will be created.
 
+**Type:** [InterceptionShowCallback](arkts-arkui-interceptionshowcallback-t.md)
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

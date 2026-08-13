@@ -1,8 +1,22 @@
 # @ohos.process
 
-获取进程相关的信息，提供进程管理的相关功能。
+/*
+ Copyright (c) 2021-2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace process--><!--Device-unnamed-declare namespace process-End-->
 
@@ -16,15 +30,15 @@
 | --- |
 | [abort](arkts-arkts-process-abort-f.md#abort) |
 | [exit](arkts-arkts-process-exit-f.md#exit) |
-| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getenvironmentvar) |
-| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getpastcputime) |
-| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getstartrealtime) |
-| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getsystemconfig) |
-| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getthreadpriority) |
-| [getUidForName](arkts-arkts-process-getuidforname-f.md#getuidforname) |
-| [is64Bit](arkts-arkts-process-is64bit-f.md#is64bit) |
-| [isAppUid](arkts-arkts-process-isappuid-f.md#isappuid) |
-| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isisolatedprocess) |
+| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md#getEnvironmentVar) |
+| [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md#getPastCpuTime) |
+| [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md#getStartRealtime) |
+| [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md#getSystemConfig) |
+| [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md#getThreadPriority) |
+| [getUidForName](arkts-arkts-process-getuidforname-f.md#getUidForName) |
+| [is64Bit](arkts-arkts-process-is64bit-f.md#is64Bit) |
+| [isAppUid](arkts-arkts-process-isappuid-f.md#isAppUid) |
+| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md#isIsolatedProcess) |
 | [kill](arkts-arkts-process-kill-f.md#kill) |
 | [uptime](arkts-arkts-process-uptime-f.md#uptime) |
 
@@ -33,11 +47,11 @@
 
 | 名称 |
 | --- |
-| [chdir](arkts-arkts-process-chdir-f-sys.md#chdir) |
-| [cwd](arkts-arkts-process-cwd-f-sys.md#cwd) |
-| [off](arkts-arkts-process-off-f-sys.md#off) |
-| [on](arkts-arkts-process-on-f-sys.md#on) |
-| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runcmd) |
+| [chdir](arkts-arkts-process-chdir-f-sys.md#chdir（系统接口）) |
+| [cwd](arkts-arkts-process-cwd-f-sys.md#cwd（系统接口）) |
+| [off_string](arkts-arkts-process-offstring-f-sys.md#off_string) |
+| [on_string](arkts-arkts-process-onstring-f-sys.md#on_string) |
+| [runCmd](arkts-arkts-process-runcmd-f-sys.md#runCmd（系统接口）) |
 <!--DelEnd-->
 
 ### 类

@@ -2,7 +2,9 @@
 
 The interface of URL is used to parse, construct, normalize, and encode URLs.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-url-class URL--><!--Device-url-class URL-End-->
 
@@ -20,7 +22,7 @@ import { url } from '@kit.ArkTS';
 constructor(url: string, base?: string | URL)
 ```
 
-URL constructor, which is used to instantiate a URL object.url: Absolute or relative input URL to resolve. Base is required if input is relative.If input is an absolute value, base ignores the value.base: Base URL to parse if input is not absolute.
+URL constructor, which is used to instantiate a URL object. url: Absolute or relative input URL to resolve. Base is required if input is relative. If input is an absolute value, base ignores the value. base: Base URL to parse if input is not absolute.
 
 **Since:** 7
 
@@ -45,9 +47,11 @@ URL constructor, which is used to instantiate a URL object.url: Absolute or rela
 constructor()
 ```
 
-A no-argument constructor used to create a URL. It returns a URL object after parseURL is called.It is not used independently.
+A no-argument constructor used to create a URL. It returns a URL object after parseURL is called. It is not used independently.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,7 +67,9 @@ static parseURL(url: string, base?: string | URL): URL
 
 Parses a URL.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,7 +94,7 @@ Parses a URL.
 
 | Error Code ID |
 | --- |
-| [10200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200002-parameter-parsing-error) |
+| [10200002](../errorcode-utils.md#10200002-parameter-parsing-error) |
 
 ## Examples
 
@@ -115,7 +121,9 @@ toJSON(): string
 
 Converts the parsed URL into a JSON string.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -144,7 +152,9 @@ toString(): string
 
 Converts the parsed URL into a string.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -177,6 +187,8 @@ Gets and sets the fragment portion of the URL.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-hash: string--><!--Device-URL-hash: string-End-->
@@ -194,6 +206,8 @@ Gets and sets the host portion of the URL.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -213,6 +227,8 @@ Gets and sets the host name portion of the URL，not include the port.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-hostname: string--><!--Device-URL-hostname: string-End-->
@@ -230,6 +246,8 @@ Gets and sets the serialized URL.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -249,6 +267,8 @@ Gets the read-only serialization of the URL's origin.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-readonly origin: string--><!--Device-URL-readonly origin: string-End-->
@@ -261,11 +281,13 @@ Gets the read-only serialization of the URL's origin.
 readonly params: URLParams
 ```
 
-Gets the URLParams object that represents the URL query parameter.This property is read-only, but URLParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
+Gets the URLParams object that represents the URL query parameter. This property is read-only, but URLParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
 
 **Type:** [URLParams](arkts-arkts-url-urlparams-c.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -285,6 +307,8 @@ Gets and sets the password portion of the URL.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-password: string--><!--Device-URL-password: string-End-->
@@ -302,6 +326,8 @@ Gets and sets the path portion of the URL.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -321,6 +347,8 @@ Gets and sets the port portion of the URL.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-port: string--><!--Device-URL-port: string-End-->
@@ -338,6 +366,8 @@ Gets and sets the protocol portion of the URL.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -357,6 +387,8 @@ Gets and sets the serialized query portion of the URL.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-search: string--><!--Device-URL-search: string-End-->
@@ -369,7 +401,7 @@ Gets and sets the serialized query portion of the URL.
 readonly searchParams: URLSearchParams
 ```
 
-Gets the URLSearchParams object that represents the URL query parameter.This property is read-only, but URLSearchParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
+Gets the URLSearchParams object that represents the URL query parameter. This property is read-only, but URLSearchParams provides an object that can be used to change the URL instance. To replace the entire query parameter for a URL, use url.searchsetter.
 
 **Type:** [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)
 
@@ -377,7 +409,7 @@ Gets the URLSearchParams object that represents the URL query parameter.This pro
 
 **Deprecated since:** 9
 
-**Substitutes:** [params](ohos.url.URL.params)
+**Substitutes:** params
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 
@@ -394,6 +426,8 @@ Gets and sets the username portion of the URL.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

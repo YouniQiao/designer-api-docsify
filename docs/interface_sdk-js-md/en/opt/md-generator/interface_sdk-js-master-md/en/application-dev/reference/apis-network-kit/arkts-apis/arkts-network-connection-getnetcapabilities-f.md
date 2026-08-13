@@ -12,13 +12,15 @@ import { connection } from '@kit.NetworkKit';
 function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void
 ```
 
-Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void--><!--Device-connection-function getNetCapabilities(netHandle: NetHandle, callback: AsyncCallback<NetCapabilities>): void-End-->
 
@@ -35,11 +37,11 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapab
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -71,13 +73,15 @@ connection.getDefaultNet().then((netHandle: connection.NetHandle) => {
 function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>
 ```
 
-Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object.To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
+Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapabilities) of a [NetHandle](arkts-network-connection-nethandle-i.md#NetHandle) object. To invoke this method, you must have the {@code ohos.permission.GET_NETWORK_INFO} permission.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-connection-function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>--><!--Device-connection-function getNetCapabilities(netHandle: NetHandle): Promise<NetCapabilities>-End-->
 
@@ -99,11 +103,11 @@ Obtains [NetCapabilities](arkts-network-connection-netcapabilities-i.md#NetCapab
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

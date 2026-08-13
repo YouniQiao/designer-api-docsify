@@ -14,9 +14,9 @@ function enableAirplaneMode(enable: boolean, callback: AsyncCallback<void>): voi
 
 Enables or disables airplane mode.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 
@@ -29,7 +29,7 @@ Enables or disables airplane mode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enable | boolean | Yes | Specifies whether to enable airplane mode. The value {@code true} means to enable airplane mode, and {@code false} means to disable airplane mode. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of enableAirplaneMode result. |
 
 ## Examples
 
@@ -53,9 +53,9 @@ function enableAirplaneMode(enable: boolean): Promise<void>
 
 Enables or disables airplane mode.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 26.0.0
 

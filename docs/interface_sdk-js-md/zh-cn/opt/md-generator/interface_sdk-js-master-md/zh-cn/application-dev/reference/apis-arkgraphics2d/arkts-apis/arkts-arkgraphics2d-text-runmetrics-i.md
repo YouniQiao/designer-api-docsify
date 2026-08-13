@@ -2,7 +2,9 @@
 
 描述文本行中连续文本块的布局信息和度量数据。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface RunMetrics--><!--Device-text-interface RunMetrics-End-->
 
@@ -18,7 +20,9 @@ fontMetrics: drawing.FontMetrics
 
 **类型：** drawing.FontMetrics
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ textStyle: TextStyle
 
 **类型：** TextStyle
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

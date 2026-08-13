@@ -12,9 +12,11 @@ import { volumeManager } from '@kit.CoreFileKit';
 function mount(volumeId: string, callback: AsyncCallback<void>): void
 ```
 
-Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4and NTFS file systems are supported.
+Mounts a volume. This API uses an asynchronous callback to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -35,10 +37,10 @@ Mounts a volume. This API uses an asynchronous callback to return the result. Cu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600008 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600005 |
 | 13600003 |
 | 13600002 |
@@ -54,7 +56,9 @@ function mount(volumeId: string): Promise<void>
 
 Mounts a volume. This API uses a promise to return the result. Currently, only the FAT, exFAT, ext4 and NTFS file systems are supported.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -80,10 +84,10 @@ Mounts a volume. This API uses a promise to return the result. Currently, only t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13600008 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600005 |
 | 13600003 |
 | 13600002 |

@@ -12,11 +12,11 @@ import { privacyManager } from '@kit.AbilityKit';
 function startUsingPermission(tokenID: number, permissionName: Permissions): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the result.
-
-After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission) must be called to stop using the permission when the usage ends.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)) must be called to stop using the permission when the usage ends.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -43,15 +43,15 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 
 | Error Code ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -80,11 +80,11 @@ function startUsingPermission(
   ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the result.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)) must be called to stop using the permission when the usage ends.
 
-After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission) must be called to stop using the permission when the usage ends.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -113,14 +113,14 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 
 | Error Code ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -172,14 +172,11 @@ function startUsingPermission(
    ): Promise<void>
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](privacyManager.on) for the subscription method). This API uses a promise to return the result.
-
-After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission) must be called to stop using the permission when the usage ends.
-
-When a pid is passed in, the pid must be the same as the pid passed into  
-[stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission). If the pairing relationship is not satisfied,error code 12100004 is returned.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses a promise to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)) must be called to stop using the permission when the usage ends. When a pid is passed in, the pid must be the same as the pid passed into [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)). If the pairing relationship is not satisfied, error code 12100004 is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -211,13 +208,13 @@ When a pid is passed in, the pid must be the same as the pid passed into
 
 | Error Code ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 
@@ -273,11 +270,11 @@ function startUsingPermission(
   ): void
 ```
 
-A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to [on](privacyManager.on) for the subscription method). This API uses an asynchronous callback to return the result.
+A system application can call this API to report the application's permission usage status in the foreground or background to the system. The privacy service notifies all subscribers of this permission usage status change event (refer to on for the subscription method). This API uses an asynchronous callback to return the result. After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission-(System-API)) must be called to stop using the permission when the usage ends.
 
-After starting to use a permission, [stopUsingPermission](arkts-ability-privacymanager-stopusingpermission-f-sys.md#stopUsingPermission) must be called to stop using the permission when the usage ends.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -299,15 +296,15 @@ After starting to use a permission, [stopUsingPermission](arkts-ability-privacym
 
 | Error Code ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid-not-exist) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid-not-exist) |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) |
 
 ## Examples
 

@@ -1,8 +1,10 @@
-# @ohos.systemTimer(系统定时器)
+# @ohos.systemTimer
 
 本模块主要由系统定时器功能组成。开发者可以使用定时功能实现定时服务，如闹钟等。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace systemTimer--><!--Device-unnamed-declare namespace systemTimer-End-->
 
@@ -17,14 +19,14 @@
 
 | 名称 |
 | --- |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer) |
-| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createtimer-1) |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer) |
-| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroytimer-1) |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer) |
-| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#starttimer-1) |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer) |
-| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stoptimer-1) |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createTimer（系统接口）) |
+| [createTimer](arkts-basicservices-systemtimer-createtimer-f-sys.md#createTimer（系统接口）) |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer（系统接口）) |
+| [destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer（系统接口）) |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#startTimer（系统接口）) |
+| [startTimer](arkts-basicservices-systemtimer-starttimer-f-sys.md#startTimer（系统接口）) |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stopTimer（系统接口）) |
+| [stopTimer](arkts-basicservices-systemtimer-stoptimer-f-sys.md#stopTimer（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -40,8 +42,8 @@
 
 | 名称 |
 | --- |
-| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#timer_type_exact) |
-| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#timer_type_idle) |
-| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#timer_type_realtime) |
-| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#timer_type_wakeup) |
+| [TIMER_TYPE_EXACT](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_EXACT) |
+| [TIMER_TYPE_IDLE](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_IDLE) |
+| [TIMER_TYPE_REALTIME](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_REALTIME) |
+| [TIMER_TYPE_WAKEUP](arkts-basicservices-systemtimer-con-sys.md#TIMER_TYPE_WAKEUP) |
 <!--DelEnd-->

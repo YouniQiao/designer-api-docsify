@@ -2,7 +2,9 @@
 
 Defines the DRM information for encrypted content.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drm-interface MediaKeySystemInfo--><!--Device-drm-interface MediaKeySystemInfo-End-->
 
@@ -24,7 +26,9 @@ PSSH(protection scheme specific header) contain drm info.
 
 **Type:** Uint8Array
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Drm system ID.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

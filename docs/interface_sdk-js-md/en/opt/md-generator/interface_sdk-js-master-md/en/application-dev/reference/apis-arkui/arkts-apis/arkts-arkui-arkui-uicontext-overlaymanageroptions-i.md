@@ -1,8 +1,10 @@
 # OverlayManagerOptions
 
-Provides the parameters used for initializing [OverlayManager](@ohos.arkui.UIContext).
+Provides the parameters used for initializing [OverlayManager](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext).
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface OverlayManagerOptions--><!--Device-unnamed-export interface OverlayManagerOptions-End-->
 
@@ -14,40 +16,21 @@ Provides the parameters used for initializing [OverlayManager](@ohos.arkui.UICon
 import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
 ```
 
-## onBackPress
-
-```TypeScript
-onBackPress?: OnOverlayBackPressCallback
-```
-
-Callback for intercepting back-press events on an overlay.
-
-**NOTE：**1. When this callback is registered and **enableBackPressedEvent** is set to **true**, the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback  to decide whether the event should be propagated to the underlying components.2. Return **true** to intercept the event (the event is consumed and will not be passed  to lower layers), or **false** to allow the event to propagate through to the components  below the overlay.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback--><!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## enableBackPressedEvent
 
 ```TypeScript
 enableBackPressedEvent?: boolean
 ```
 
-hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **OverlayManager**.The value **true** means to enable the swipe-to-dismiss gesture, and **false** means the opposite. Default value: **false**.&lt;br&gt;  
-**Atomic service API**: This API can be used in atomic services since API version 19.
+hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **OverlayManager**. The value **true** means to enable the swipe-to-dismiss gesture, and **false** means the opposite. Default value: **false**.&lt;br&gt; **Atomic service API**: This API can be used in atomic services since API version 19.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,20 +40,43 @@ hether to enable the swipe-to-dismiss gesture for **ComponentContent** under **O
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## onBackPress
+
+```TypeScript
+onBackPress?: OnOverlayBackPressCallback
+```
+
+Callback for intercepting back-press events on an overlay. **NOTE：**1. When this callback is registered and **enableBackPressedEvent** is set to **true**, the back-press event will not close the overlay automatically. Instead, the overlay invokes this callback to decide whether the event should be propagated to the underlying components. 2. Return **true** to intercept the event (the event is consumed and will not be passed to lower layers), or **false** to allow the event to propagate through to the components below the overlay.
+
+**Type:** [OnOverlayBackPressCallback](arkts-arkui-onoverlaybackpresscallback-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback--><!--Device-OverlayManagerOptions-onBackPress?: OnOverlayBackPressCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## renderRootOverlay
 
 ```TypeScript
 renderRootOverlay?: boolean
 ```
 
-Whether to render the overlay root node. The value **true** means to render the overlay root node,and **false** means the opposite. The default value is **true**.&lt;br&gt;  
-**Atomic service API**: This API can be used in atomic services since API version 15.
+Whether to render the overlay root node. The value **true** means to render the overlay root node, and **false** means the opposite. The default value is **true**.&lt;br&gt; **Atomic service API**: This API can be used in atomic services since API version 15.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

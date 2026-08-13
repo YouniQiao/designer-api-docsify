@@ -8,7 +8,9 @@ function unbindDriverWithDeviceId(deviceId: number): Promise<number>
 
 解除设备绑定。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DDK_DRIVERS
 
@@ -32,9 +34,9 @@ function unbindDriverWithDeviceId(deviceId: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [26300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) |
-| [26300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-驱动客户端未绑定任何驱动服务端) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [26300001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300001-扩展外设驱动服务异常) |
+| [26300003](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#26300003-驱动客户端未绑定任何驱动服务端) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

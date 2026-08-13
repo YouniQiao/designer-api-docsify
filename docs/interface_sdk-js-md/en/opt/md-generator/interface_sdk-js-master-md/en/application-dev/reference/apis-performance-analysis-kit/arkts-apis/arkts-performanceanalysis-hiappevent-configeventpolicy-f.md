@@ -12,13 +12,13 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 function configEventPolicy(policy: EventPolicy): Promise<void>
 ```
 
-Sets a system event configuration policy. This API uses a promise to return the result.
+Sets a system event configuration policy. This API uses a promise to return the result. In the same lifecycle, you can set system event configuration by policy.
 
-In the same lifecycle, you can set system event configuration by policy.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>--><!--Device-hiAppEvent-function configEventPolicy(policy: EventPolicy): Promise<void>-End-->
 

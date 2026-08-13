@@ -1,16 +1,10 @@
 # WebDataBase
 
-Web组件数据库管理对象。
-
-> **说明：**
-> 
-> - 本Class首批接口从API version 9开始支持。
-> 
-> - 示例效果请以真机运行为准。
-> 
-> - 目前调用WebDataBase下的方法，都需要先加载Web组件。
+Web组件数据库管理对象。 > **说明：** > > - 本Class首批接口从API version 9开始支持。 > > - 示例效果请以真机运行为准。 > > - 目前调用WebDataBase下的方法，都需要先加载Web组件。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
@@ -25,6 +19,8 @@ static deleteHttpAuthCredentials(): void
 清除所有已保存的HTTP身份验证凭据，该方法为同步方法。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,6 +37,8 @@ static existHttpAuthCredentials(): boolean
 判断是否存在任何已保存的HTTP身份验证凭据，该方法为同步方法。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -63,6 +61,8 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 检索给定主机和域的HTTP身份验证凭据，该方法为同步方法。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -87,7 +87,7 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## saveHttpAuthCredentials
 
@@ -98,6 +98,8 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 保存给定主机和域的HTTP身份验证凭据，该方法为同步方法。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -118,4 +120,4 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

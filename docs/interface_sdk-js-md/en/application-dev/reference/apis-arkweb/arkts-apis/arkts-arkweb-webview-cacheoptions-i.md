@@ -1,10 +1,12 @@
 # CacheOptions
 
-Options of generating code cache
+Represents a configuration object for precompiling JavaScript in the **Web** component to generate bytecode cache, which is designed to control the updating of the bytecode cache.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface CacheOptions--><!--Device-webview-interface CacheOptions-End-->
 
@@ -22,13 +24,15 @@ import { webview } from '@kit.ArkWeb';
 responseHeaders: Array<WebHeader>
 ```
 
-Response headers used to configure the validation key of code cache.Currently only support E-Tag and Last-Modified.
+Array of response headers from the server when a JavaScript file is requested. They include information such as E -Tag or Last-Modified to identify the file version and determine whether the bytecode cache needs to be refreshed.
 
 **Type:** Array&lt;WebHeader&gt;
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-CacheOptions-responseHeaders: Array<WebHeader>--><!--Device-CacheOptions-responseHeaders: Array<WebHeader>-End-->
 

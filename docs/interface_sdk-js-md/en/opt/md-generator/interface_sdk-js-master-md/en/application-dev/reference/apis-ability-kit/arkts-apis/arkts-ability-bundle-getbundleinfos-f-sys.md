@@ -12,13 +12,13 @@ import { bundle } from '@kit.AbilityKit';
 function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncCallback<Array<BundleInfo>>): void
 ```
 
-Obtains all BundleInfo for a specified user in the system.This API uses an asynchronous callback to return the result.
+Obtains all BundleInfo for a specified user in the system. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAllBundleInfo](ohos.bundle.bundleManager#getAllBundleInfo)
+**Substitutes:** getAllBundleInfo
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -66,7 +66,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAllBundleInfo](ohos.bundle.bundleManager#getAllBundleInfo)
+**Substitutes:** getAllBundleInfo
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -112,7 +112,7 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 
 **Deprecated since:** 8
 
-**Substitutes:** [getAllBundleInfo](ohos.bundle.bundleManager#getAllBundleInfo)
+**Substitutes:** getAllBundleInfo
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

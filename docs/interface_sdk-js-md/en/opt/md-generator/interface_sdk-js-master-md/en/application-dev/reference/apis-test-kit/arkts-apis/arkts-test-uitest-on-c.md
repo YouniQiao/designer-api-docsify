@@ -1,15 +1,10 @@
 # On
 
-Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the  
-**On** class to filter and match components.
+Since API version 9, the UiTest framework provides a wide range of UI component feature description APIs in the **On** class to filter and match components. The APIs provided by the **On** class exhibit the following features: 1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component. 2. Provide multiple match patterns for component attributes. 3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isBefore) and [ON.isAfter](#isAfter) can be used to specify the features of adjacent components to assist positioning. All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
 
-The APIs provided by the **On** class exhibit the following features:
+**Since:** 23
 
-1. Allow one or more attributes as the match conditions. For example, you can specify both the **text** and **id** attributes to find the target component.2. Provide multiple match patterns for component attributes.3. Support absolute positioning and relative positioning for components. APIs such as [ON.isBefore](#isBefore) and [ON.isAfter](#isAfter) can be used to specify  the features of adjacent components to assist positioning.
-
-All APIs provided in the **On** class are synchronous. You are advised to use the static constructor **ON** to create an **On** object in chain mode.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class On--><!--Device-unnamed-declare class On-End-->
 
@@ -27,9 +22,11 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 afterComponent(com: Component): On
 ```
 
-Requires that the target Component which is after another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
+Requires that the target Component which is after another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -53,7 +50,7 @@ Requires that the target Component which is after another Component that specifi
 
 | Error Code ID |
 | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -74,9 +71,11 @@ async function demo() {
 beforeComponent(com: Component): On
 ```
 
-Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
+Requires that the target Component which is before another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -100,7 +99,7 @@ Requires that the target Component which is before another Component that specif
 
 | Error Code ID |
 | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -123,9 +122,11 @@ belongingDisplay(displayId: number): On
 
 Specifies the display to which the target component belongs.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-belongingDisplay(displayId: int): On--><!--Device-On-belongingDisplay(displayId: int): On-End-->
 
@@ -147,7 +148,7 @@ Specifies the display to which the target component belongs.
 
 | Error Code ID |
 | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -166,7 +167,9 @@ checkable(b?: boolean): On
 
 Specifies the checkable attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -190,7 +193,7 @@ Specifies the checkable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -209,7 +212,9 @@ checked(b?: boolean): On
 
 Specifies the checked attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -233,7 +238,7 @@ Specifies the checked attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -252,7 +257,9 @@ clickable(b?: boolean): On
 
 Specifies the clickable attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -276,7 +283,7 @@ Specifies the clickable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -295,9 +302,11 @@ description(val: string, pattern?: MatchPattern): On
 
 Specifies the description of the target component. Multiple match patterns are supported.
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-description(val: string, pattern?: MatchPattern): On--><!--Device-On-description(val: string, pattern?: MatchPattern): On-End-->
 
@@ -320,7 +329,7 @@ Specifies the description of the target component. Multiple match patterns are s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -339,7 +348,9 @@ enabled(b?: boolean): On
 
 Specifies the enabled attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -363,7 +374,7 @@ Specifies the enabled attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -382,7 +393,9 @@ focused(b?: boolean): On
 
 Specifies the focused attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -406,7 +419,7 @@ Specifies the focused attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -425,9 +438,11 @@ hint(val: string, pattern?: MatchPattern): On
 
 Specifies the hint text attribute of the target component.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-hint(val: string, pattern?: MatchPattern): On--><!--Device-On-hint(val: string, pattern?: MatchPattern): On-End-->
 
@@ -450,7 +465,7 @@ Specifies the hint text attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -469,7 +484,9 @@ id(id: string): On
 
 Specifies the ID attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -493,7 +510,7 @@ Specifies the ID attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -512,9 +529,11 @@ id(id: string, pattern: MatchPattern): On
 
 Specifies the **id** attribute and match pattern of the target component.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-id(id: string, pattern: MatchPattern): On--><!--Device-On-id(id: string, pattern: MatchPattern): On-End-->
 
@@ -537,7 +556,7 @@ Specifies the **id** attribute and match pattern of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -556,7 +575,9 @@ inWindow(bundleName: string): On
 
 Specifies that the target component is located within the given application window.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -580,7 +601,7 @@ Specifies that the target component is located within the given application wind
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -599,7 +620,9 @@ isAfter(on: On): On
 
 Specifies that the target component is located after the given attribute component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -623,7 +646,7 @@ Specifies that the target component is located after the given attribute compone
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -643,7 +666,9 @@ isBefore(on: On): On
 
 Specifies that the target component is located before the given attribute component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -667,7 +692,7 @@ Specifies that the target component is located before the given attribute compon
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -687,7 +712,9 @@ longClickable(b?: boolean): On
 
 Specifies the long-clickable attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -711,7 +738,7 @@ Specifies the long-clickable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -728,18 +755,13 @@ let on: On = ON.longClickable(true); // Use the static constructor ON to create 
 originalText(text: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text content and text matching pattern of the component.
+Specifies the text content and text matching pattern of the component. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) > of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of > the target component for searching for the component. In this case, the [On.text()](#text) API does not > take effect.
 
-> **NOTE：**
-> 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
-> of a component is set to **no** or **no-hide-descendants**, this API can be used to specify the text attribute of
-> the target component for searching for the component. In this case, the [On.text()](#text) API does not
-> take effect.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-originalText(text: string, pattern?: MatchPattern): On--><!--Device-On-originalText(text: string, pattern?: MatchPattern): On-End-->
 
@@ -762,7 +784,7 @@ Specifies the text content and text matching pattern of the component.
 
 | Error Code ID |
 | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 
@@ -781,7 +803,9 @@ scrollable(b?: boolean): On
 
 Specifies the scrollable attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -805,7 +829,7 @@ Specifies the scrollable attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -824,7 +848,9 @@ selected(b?: boolean): On
 
 Specifies the selected attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -848,7 +874,7 @@ Specifies the selected attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -865,16 +891,11 @@ let on: On = ON.selected(true); // Use the static constructor ON to create an On
 text(txt: string, pattern?: MatchPattern): On
 ```
 
-Specifies the text attribute of the target component. Multiple match patterns are supported.
+Specifies the text attribute of the target component. Multiple match patterns are supported. > **NOTE：**> > If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel) > of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute > of the target component for searching for the component. In this case, you can use the > [On.originalText()](#originalText) API.
 
-> **NOTE：**
-> 
-> If the [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#accessibilityLevel)
-> of a component is set to **no** or **no-hide-descendants**, this API cannot be used to specify the text attribute
-> of the target component for searching for the component. In this case, you can use the
-> [On.originalText()](#originalText) API.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -899,7 +920,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -918,7 +939,9 @@ type(tp: string): On
 
 Specifies the type attribute of the target component.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -942,7 +965,7 @@ Specifies the type attribute of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -961,9 +984,11 @@ type(tp: string, pattern: MatchPattern): On
 
 Specifies the **type** attribute and match pattern of the target component.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-On-type(tp: string, pattern: MatchPattern): On--><!--Device-On-type(tp: string, pattern: MatchPattern): On-End-->
 
@@ -986,7 +1011,7 @@ Specifies the **type** attribute and match pattern of the target component.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1005,7 +1030,9 @@ within(on: On): On
 
 Specifies that the target component is located within the given attribute component.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1029,7 +1056,7 @@ Specifies that the target component is located within the given attribute compon
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1047,9 +1074,11 @@ let on: On = ON.text('java').within(ON.type('Scroll')); // Search for the child 
 withinComponent(com: Component): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -1073,7 +1102,7 @@ Requires that the target Component which is inside of another Component that spe
 
 | Error Code ID |
 | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) |
 
 ## Examples
 

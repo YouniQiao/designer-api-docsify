@@ -16,6 +16,8 @@ Obtains the duration (excluding the system sleep time), in milliseconds, from th
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-process-function getStartRealtime(): number--><!--Device-process-function getStartRealtime(): number-End-->

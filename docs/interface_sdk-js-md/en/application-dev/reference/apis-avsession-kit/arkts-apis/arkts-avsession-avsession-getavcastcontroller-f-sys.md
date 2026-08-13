@@ -12,11 +12,13 @@ import { avSession } from '@kit.AVSessionKit';
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController>): void
 ```
 
-Register a callback to retrieve an avsession cast controller.This function can be used at both side to get the same controller to do the playback control.
+Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -31,17 +33,17 @@ Register a callback to retrieve an avsession cast controller.This function can b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md)&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -87,11 +89,13 @@ struct Index {
 function getAVCastController(sessionId: string, callback: AsyncCallback<AVCastController | undefined>): void
 ```
 
-Register a callback to retrieve an avsession cast controller.This function can be used at both side to get the same controller to do the playback control.
+Register a callback to retrieve an avsession cast controller. This function can be used at both side to get the same controller to do the playback control.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -106,16 +110,16 @@ Register a callback to retrieve an avsession cast controller.This function can b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | sessionId | string | Yes | Specifies the sessionId to get controller. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVCastController](arkts-avsession-avsession-avcastcontroller-i.md) \| undefined&gt; | Yes | async callback for the AVCastController. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 
 ## getAVCastController
@@ -124,11 +128,13 @@ Register a callback to retrieve an avsession cast controller.This function can b
 function getAVCastController(sessionId: string): Promise<AVCastController>
 ```
 
-Get the current session's remote controller client.If the avsession is not under casting state, the controller will return null.
+Get the current session's remote controller client. If the avsession is not under casting state, the controller will return null.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -154,11 +160,11 @@ Get the current session's remote controller client.If the avsession is not under
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | server exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
 
@@ -202,11 +208,13 @@ struct Index {
 function getAVCastController(sessionId: string): Promise<AVCastController | undefined>
 ```
 
-Get the current session's remote controller client.If the avsession is not under casting state, the controller will return undefined.
+Get the current session's remote controller client. If the avsession is not under casting state, the controller will return undefined.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -232,8 +240,8 @@ Get the current session's remote controller client.If the avsession is not under
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | server exception |
-| [6600102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | server exception |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | session does not exist |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 

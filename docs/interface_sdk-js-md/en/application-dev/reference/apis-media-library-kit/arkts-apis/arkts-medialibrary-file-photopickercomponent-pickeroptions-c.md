@@ -1,14 +1,16 @@
 # PickerOptions
 
-PickerOptions Object
+Describes the configuration of a Picker. It inherits from [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions).
 
 **Inheritance/Implementation:** PickerOptions extends [photoAccessHelper.BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class PickerOptions extends photoAccessHelper.BaseSelectOptions--><!--Device-unnamed-export declare class PickerOptions extends photoAccessHelper.BaseSelectOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PickerOptions--><!--Device-unnamed-export declare class PickerOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -18,446 +20,589 @@ PickerOptions Object
 import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, SelectMode, PhotoBrowserUIElement, ItemType, PinchGridSwitchedCallback, SingleLineConfig, ClickResult, ClickType, UpdatablePickerConfigs, DataType, VideoPlayerState, ItemDisplayRatio, ScrollStopAtStartCallback, ScrollStopAtEndCallback, PickerOrientation, videoPlayStateChangedCallback, PhotoBrowserChangeStartCallback, MovingPhotoBadgeStateChangedCallback, ErrorCallback, PickerOptions, ItemsDeletedCallback, PhotoBrowserRange, SaveMode, MaxSelected, PickerController, PickerError, PhotoPickerComponent, ExceedMaxSelectedCallback, ReminderMode, ItemClickedNotifyCallback, PickerColorMode, BadgeConfig, BadgeType, PhotoBrowserInfo, CurrentAlbumDeletedCallback } from '@kit.MediaLibraryKit';
 ```
 
-## backgroundColor
+## appAlbumFilters
 
 ```TypeScript
-public backgroundColor?: string
+appAlbumFilters?: Array<string>
 ```
 
-Support set backgroundColor
+Used to display only the album content corresponding to the specified bundle name.
 
-**Type:** string
+**Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PickerOptions-public backgroundColor?: string--><!--Device-PickerOptions-public backgroundColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickerOptions-appAlbumFilters?: Array<string>--><!--Device-PickerOptions-appAlbumFilters?: Array<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## backgroundColor
+
+```TypeScript
+backgroundColor?: string
+```
+
+Background color of the Picker grid page. The value is an 8-digit hexadecimal color code.
+
+**Type:** string
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-backgroundColor?: string--><!--Device-PickerOptions-backgroundColor?: string-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## backgroundOpacity
+
+```TypeScript
+backgroundOpacity?: number
+```
+
+Background opacity of the picker. The value range is [0, 1]. **0** indicates completely transparent, and **1** indicates completely opaque.
+
+**Type:** number
+
+**Since:** 24
+
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+<!--Device-PickerOptions-backgroundOpacity?: number--><!--Device-PickerOptions-backgroundOpacity?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## badgeConfig
 
 ```TypeScript
-public badgeConfig?: BadgeConfig
+badgeConfig?: BadgeConfig
 ```
 
-Support to config special badge display.The picker component supports only one type of badge
+Badge configuration. Currently, the **PhotoPickerComponent** supports only one type of badge. For details, see [BadgeType](arkts-medialibrary-file-photopickercomponent-badgetype-e.md#BadgeType).
 
 **Type:** [BadgeConfig](arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public badgeConfig?: BadgeConfig--><!--Device-PickerOptions-public badgeConfig?: BadgeConfig-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PickerOptions-badgeConfig?: BadgeConfig--><!--Device-PickerOptions-badgeConfig?: BadgeConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## checkBoxColor
 
 ```TypeScript
-public checkBoxColor?: string
+checkBoxColor?: string
 ```
 
-Support set checkBox color
+Background color of the check box. The value is an 8-digit hexadecimal color code. The first two digits indicate the transparency, and the last six digits indicate the RGB color value. For example, '#FFFFFFFF' indicates a white opaque background, and '#80FF0000' indicates a semi-transparent red background.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public checkBoxColor?: string--><!--Device-PickerOptions-public checkBoxColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-checkBoxColor?: string--><!--Device-PickerOptions-checkBoxColor?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## checkboxTextColor
 
 ```TypeScript
-public checkboxTextColor?: string
+checkboxTextColor?: string
 ```
 
-Support to set checkbox text color
+Text color in the check box. The value is an 8-digit hexadecimal color code. (This parameter is supported since API version 19. In earlier versions, the system defaults to white.)
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public checkboxTextColor?: string--><!--Device-PickerOptions-public checkboxTextColor?: string-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-checkboxTextColor?: string--><!--Device-PickerOptions-checkboxTextColor?: string-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## contextRecoveryInfo
 
 ```TypeScript
-public contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo
+contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo
 ```
 
-Context recovery information for restoring the last selection session.
+Information for restoring the PhotoPicker's state from the last exit.
 
 **Type:** photoAccessHelper.ContextRecoveryInfo
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PickerOptions-public contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo--><!--Device-PickerOptions-public contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-PickerOptions-contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo--><!--Device-PickerOptions-contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## edgeEffect
+
+```TypeScript
+edgeEffect?: EdgeEffect
+```
+
+Scrolling effect when the Picker grid page reaches the edge. The default value is EdgeEffect.Spring.
+
+**Type:** EdgeEffect
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickerOptions-edgeEffect?: EdgeEffect--><!--Device-PickerOptions-edgeEffect?: EdgeEffect-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## gridEndOffset
 
 ```TypeScript
-public gridEndOffset?: int
+gridEndOffset?: number
 ```
 
-Support to set offset between last grid item and the bottom of the grid
+Space between the bottom of the component and the last row of the grid thumbnail. The default value is **0**, in vp.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public gridEndOffset?: int--><!--Device-PickerOptions-public gridEndOffset?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PickerOptions-gridEndOffset?: number--><!--Device-PickerOptions-gridEndOffset?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## gridMargin
 
 ```TypeScript
-public gridMargin?: Margin
+gridMargin?: Margin
 ```
 
-Support set gridMargin
+Margin of the component on a grid page.
 
 **Type:** Margin
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public gridMargin?: Margin--><!--Device-PickerOptions-public gridMargin?: Margin-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PickerOptions-gridMargin?: Margin--><!--Device-PickerOptions-gridMargin?: Margin-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## gridStartOffset
 
 ```TypeScript
-public gridStartOffset?: int
+gridStartOffset?: number
 ```
 
-Support to set offset between first grid item and the top of the grid
+Space between the top of the component and the first row of the grid thumbnail. The default value is **0**, in vp.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public gridStartOffset?: int--><!--Device-PickerOptions-public gridStartOffset?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PickerOptions-gridStartOffset?: number--><!--Device-PickerOptions-gridStartOffset?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isRepeatSelectSupported
 
 ```TypeScript
-public isRepeatSelectSupported?: boolean
+isRepeatSelectSupported?: boolean
 ```
 
-Support repeat select
+Whether a single image can be repeatedly selected. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public isRepeatSelectSupported?: boolean--><!--Device-PickerOptions-public isRepeatSelectSupported?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-isRepeatSelectSupported?: boolean--><!--Device-PickerOptions-isRepeatSelectSupported?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## isSlidingSelectionSupported
 
 ```TypeScript
-public isSlidingSelectionSupported?: boolean
+isSlidingSelectionSupported?: boolean
 ```
 
-Support to set sliding selection
+Whether to support multiple selections by sliding. **true**: yes; **false**: no. The default value is **false**. This parameter is not available for repeat selection.
 
 **Type:** boolean
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-PickerOptions-isSlidingSelectionSupported?: boolean--><!--Device-PickerOptions-isSlidingSelectionSupported?: boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## isSlidingSupported
+
+```TypeScript
+isSlidingSupported?: boolean
+```
+
+Whether scrolling in the **PhotoPickerComponent** is enabled. The value **true** means that scrolling is not blocked and the component responds to user scroll gestures. The value **false** means that scrolling is blocked and the component does not respond to user scroll gestures. The default value is **true**.
+
+**Type:** boolean
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PickerOptions-public isSlidingSelectionSupported?: boolean--><!--Device-PickerOptions-public isSlidingSelectionSupported?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-PickerOptions-isSlidingSupported?: boolean--><!--Device-PickerOptions-isSlidingSupported?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## maxPhotoSelectNumber
 
 ```TypeScript
-public maxPhotoSelectNumber?: int
+maxPhotoSelectNumber?: number
 ```
 
-Support to set max photo select number
+Maximum number of images that can be selected. The maximum value is **500**, which is limited by **MaxSelected**. The default value is **500**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PickerOptions-public maxPhotoSelectNumber?: int--><!--Device-PickerOptions-public maxPhotoSelectNumber?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-maxPhotoSelectNumber?: number--><!--Device-PickerOptions-maxPhotoSelectNumber?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## maxSelectedReminderMode
 
 ```TypeScript
-public maxSelectedReminderMode?: ReminderMode
+maxSelectedReminderMode?: ReminderMode
 ```
 
-Support to set max select number remind mode.
+Mode of the reminder when the number of selected items reaches the maximum. The options are **NONE**, **TOAST**, and **MASK**. The default value **TOAST**.
 
 **Type:** [ReminderMode](arkts-medialibrary-file-photopickercomponent-remindermode-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public maxSelectedReminderMode?: ReminderMode--><!--Device-PickerOptions-public maxSelectedReminderMode?: ReminderMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-maxSelectedReminderMode?: ReminderMode--><!--Device-PickerOptions-maxSelectedReminderMode?: ReminderMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## maxVideoSelectNumber
 
 ```TypeScript
-public maxVideoSelectNumber?: int
+maxVideoSelectNumber?: number
 ```
 
-Support to set max video select number
+Maximum number of videos that can be selected. The maximum value is **500**, and it is restricted by the maximum number of media files that can be selected in the system. The default value is **500**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PickerOptions-public maxVideoSelectNumber?: int--><!--Device-PickerOptions-public maxVideoSelectNumber?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-maxVideoSelectNumber?: number--><!--Device-PickerOptions-maxVideoSelectNumber?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## orientation
 
 ```TypeScript
-public orientation?: PickerOrientation
+orientation?: PickerOrientation
 ```
 
-Support to set display orientation
+Sliding preview direction of the grid page. The options are **HORIZONTAL** and **VERTICAL**. The default value is **VERTICAL**. (This parameter is supported since API version 20. In earlier versions, the system defaults to vertical.)
 
 **Type:** [PickerOrientation](arkts-medialibrary-file-photopickercomponent-pickerorientation-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public orientation?: PickerOrientation--><!--Device-PickerOptions-public orientation?: PickerOrientation-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-orientation?: PickerOrientation--><!--Device-PickerOptions-orientation?: PickerOrientation-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoBrowserBackgroundColorMode
 
 ```TypeScript
-public photoBrowserBackgroundColorMode?: PickerColorMode
+photoBrowserBackgroundColorMode?: PickerColorMode
 ```
 
-Support to set photo browser background color mode
+Background color of the photo browser page. The options are **AUTO**, **LIGHT**, and **DARK**. The default value is **AUTO**.
 
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public photoBrowserBackgroundColorMode?: PickerColorMode--><!--Device-PickerOptions-public photoBrowserBackgroundColorMode?: PickerColorMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-photoBrowserBackgroundColorMode?: PickerColorMode--><!--Device-PickerOptions-photoBrowserBackgroundColorMode?: PickerColorMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoBrowserCheckboxPosition
 
 ```TypeScript
-public photoBrowserCheckboxPosition?: [
-        double,
-        double
-    ]
+photoBrowserCheckboxPosition?: [number, number]
 ```
 
-Support to set photo browser checkbox position
+Position of the check box on the photo browser page. The first parameter specifies the offset in the X direction, and the second parameter specifies the offset in the Y direction. The value range is [0, 1], which indicates the offset (from 0% to 100%) to the upper-left corner of the component. The default value is [0, 0].
 
-**Type:** [         double,         double     ]
+**Type:** [number, number]
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public photoBrowserCheckboxPosition?: [        double,        double    ]--><!--Device-PickerOptions-public photoBrowserCheckboxPosition?: [        double,        double    ]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-PickerOptions-photoBrowserCheckboxPosition?: [number, number]--><!--Device-PickerOptions-photoBrowserCheckboxPosition?: [number, number]-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## photoBrowserMargin
 
 ```TypeScript
-public photoBrowserMargin?: Margin
+photoBrowserMargin?: Margin
 ```
 
-Support set photoBrowserMargin
+Margin of the component on a photo browser page.
 
 **Type:** Margin
 
-**Since:** 26.0.0
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public photoBrowserMargin?: Margin--><!--Device-PickerOptions-public photoBrowserMargin?: Margin-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-PickerOptions-photoBrowserMargin?: Margin--><!--Device-PickerOptions-photoBrowserMargin?: Margin-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## pickerIndex
 
 ```TypeScript
-public pickerIndex?: int
+pickerIndex?: number
 ```
 
-Support to set a serial number to distinguish different picker components. Default value is -1.
+Unique serial number used to distinguish different picker components. The default value is **-1**, indicating that no distinction is made.
 
-**Type:** int
+**Type:** number
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public pickerIndex?: int--><!--Device-PickerOptions-public pickerIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PickerOptions-pickerIndex?: number--><!--Device-PickerOptions-pickerIndex?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## preselectedInfos
 
 ```TypeScript
-public preselectedInfos?: PreselectedInfo[]
+preselectedInfos?: Array<PreselectedInfo>
 ```
 
-Support automatically selecting the user-selected image/video on the PhotoPickerComponent at the specified picker index.
+Array of information previously selected by the user, so that the PhotoPickerComponent identified by **pickerIndex** can display the information.
 
-**Type:** [PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)[]
+**Type:** Array&lt;[PreselectedInfo](arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)&gt;
 
-**Since:** 26.0.0
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public preselectedInfos?: PreselectedInfo[]--><!--Device-PickerOptions-public preselectedInfos?: PreselectedInfo[]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-PickerOptions-preselectedInfos?: Array<PreselectedInfo>--><!--Device-PickerOptions-preselectedInfos?: Array<PreselectedInfo>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## selectMode
 
 ```TypeScript
-public selectMode?: SelectMode
+selectMode?: SelectMode
 ```
 
-Support to set select mode
+Select mode, which can be **SINGLE_SELECT** or **MULTI_SELECT**. The default value is **MULTI_SELECT**.
 
 **Type:** [SelectMode](arkts-medialibrary-file-photopickercomponent-selectmode-e.md)
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public selectMode?: SelectMode--><!--Device-PickerOptions-public selectMode?: SelectMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PickerOptions-selectMode?: SelectMode--><!--Device-PickerOptions-selectMode?: SelectMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## singleLineConfig
 
 ```TypeScript
-public singleLineConfig?: SingleLineConfig
+singleLineConfig?: SingleLineConfig
 ```
 
-Single-line display mode for the PhotoPickerComponent.
+Single-line display mode of a grid page. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective.
 
 **Type:** [SingleLineConfig](arkts-medialibrary-file-photopickercomponent-singlelineconfig-c.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public singleLineConfig?: SingleLineConfig--><!--Device-PickerOptions-public singleLineConfig?: SingleLineConfig-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PickerOptions-singleLineConfig?: SingleLineConfig--><!--Device-PickerOptions-singleLineConfig?: SingleLineConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## uiComponentColorMode
 
 ```TypeScript
-public uiComponentColorMode?: PickerColorMode
+uiComponentColorMode?: PickerColorMode
 ```
 
-Support to set UIComponent color mode.
+Picker color mode. Dark/Light color mode (excluding the background color) of other components on the Picker grid page, including the search box, camera entry, safety tips for using Gallery, and recommendation bubble. This attribute is usually used together with **backgroundColor**. The default value is **PickerColorMode.AUTO**, which follows the system's dark/light color mode. When setting this attribute, avoid using **PickerColorMode.LIGHT** with a dark backgroundColor, as it may make components or text hard to see. Avoid using **PickerColorMode.DARK** with a light backgroundColor for the same reason.
 
 **Type:** [PickerColorMode](arkts-medialibrary-file-photopickercomponent-pickercolormode-e.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-PickerOptions-public uiComponentColorMode?: PickerColorMode--><!--Device-PickerOptions-public uiComponentColorMode?: PickerColorMode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-PickerOptions-uiComponentColorMode?: PickerColorMode--><!--Device-PickerOptions-uiComponentColorMode?: PickerColorMode-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

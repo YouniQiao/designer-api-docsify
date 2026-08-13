@@ -1,14 +1,12 @@
 # Display
 
-Implements a Display instance, with attributes and APIs defined.
+Implements a Display instance, with attributes and APIs defined. Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync) to obtain a Display instance.
 
-Before calling any API in Display, you must use  
-[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getAllDisplays) or  
-[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync) to obtain a Display instance.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-display-interface Display--><!--Device-display-interface Display-End-->
 
@@ -26,17 +24,15 @@ import { display } from '@kit.ArkUI';
 getAvailableArea(): Promise<Rect>
 ```
 
-Obtains the available area of the display of the current device. This API uses a promise to return the result.
+Obtains the available area of the display of the current device. This API uses a promise to return the result. The available area is the space left for applications after the system UI (such as the status bar and dock bar) is accounted for. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the available area on the current device screen, you can use the width and height attributes in Display.
 
-The available area is the space left for applications after the system UI (such as the status bar and dock bar)is accounted for.
+**Since:** 23
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types. To obtain the available area on the current device screen,you can use the width and height attributes in Display.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-getAvailableArea(): Promise<Rect>--><!--Device-Display-getAvailableArea(): Promise<Rect>-End-->
 
@@ -52,8 +48,8 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later.Fo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
 ## Examples
 
@@ -83,9 +79,11 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 Obtains the cutout information of the display. This API uses an asynchronous callback to return the result. You are advised not to use the cutout area during application layout.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -97,13 +95,13 @@ Obtains the cutout information of the display. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CutoutInfo](arkts-arkui-display-cutoutinfo-i.md)&gt; | Yes | Callback used to return the **CutoutInfo** object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CutoutInfo](arkts-arkui-display-cutoutinfo-i.md)&gt; | Yes | Callback used to return the **CutoutInfo** object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
 
 ## Examples
 
@@ -131,9 +129,11 @@ getCutoutInfo(): Promise<CutoutInfo>
 
 Obtains the cutout information of the display. This API uses a promise to return the result. You are advised not to use the cutout area during application layout.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -151,7 +151,7 @@ Obtains the cutout information of the display. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
 ## Examples
 
@@ -176,11 +176,13 @@ getDisplayCapability(): string
 
 Get current display capability, including foldstatus, displaymode, rotation, and orientation information.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-getDisplayCapability(): string--><!--Device-Display-getDisplayCapability(): string-End-->
 
@@ -196,9 +198,9 @@ Get current display capability, including foldstatus, displaymode, rotation, and
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.Function getDisplayCapability can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## getLiveCreaseRegion
 
@@ -208,9 +210,11 @@ getLiveCreaseRegion(): FoldCreaseRegion
 
 Obtains the live crease region of the foldable device in the current display mode.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion--><!--Device-Display-getLiveCreaseRegion(): FoldCreaseRegion-End-->
 
@@ -226,8 +230,8 @@ Obtains the live crease region of the foldable device in the current display mod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -254,7 +258,9 @@ Obtains the rounded corner information of the display. The rounded corner inform
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -272,9 +278,9 @@ Obtains the rounded corner information of the display. The rounded corner inform
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Function getRoundedCorner can not work correctly due to limited device capabilities. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function getRoundedCorner can not work correctly due to limited device capabilities. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -291,19 +297,49 @@ try {
 }
 ```
 
-## off('availableAreaChange')
+## offAvailableAreaChange
+
+```TypeScript
+offAvailableAreaChange(callback?: Callback<Rect>): void
+```
+
+Unregister the callback for available area changes. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void--><!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+
+## off_availableAreaChange
 
 ```TypeScript
 off(type: 'availableAreaChange', callback?: Callback<Rect>): void
 ```
 
-Unsubscribes from changes of the available area on the display of the current device.
-
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
+Unsubscribes from changes of the available area on the display of the current device. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -316,14 +352,14 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later.Fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | No | Callback used to return the new available area. If this parameter is not specified, all subscriptions to the specified event are canceled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -343,21 +379,21 @@ try {
 }
 ```
 
-## offAvailableAreaChange
+## onAvailableAreaChange
 
 ```TypeScript
-offAvailableAreaChange(callback?: Callback<Rect>): void
+onAvailableAreaChange(callback: Callback<Rect>): void
 ```
 
-Unregister the callback for available area changes.
-
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
+Register the callback for available area changes. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void--><!--Device-Display-offAvailableAreaChange(callback?: Callback<Rect>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void--><!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -365,27 +401,27 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later.Fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | No | Unregister the callback function. If not provided, all callbacks for the given event type will be removed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | Callback used to return the available area |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
-## on('availableAreaChange')
+## on_availableAreaChange
 
 ```TypeScript
 on(type: 'availableAreaChange', callback: Callback<Rect>): void
 ```
 
-Subscribes to changes of the available area on the display of the current device. This callback function is triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system components such as the dock bar and status bar changes, and returns the available area information.
-
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
+Subscribes to changes of the available area on the display of the current device. This callback function is triggered when the screen rotates, the freeform mode is enabled or disabled, or the visibility of system components such as the dock bar and status bar changes, and returns the available area information. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets. If being called on other device types, it does not take effect and no error is reported.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -398,14 +434,14 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later.Fo
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableAreaChange' | Yes | Event type. The event **'availableAreaChange'** is triggered when the available area of the display changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | Yes | Callback used to return the new available area. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Rect&gt; | Yes | Callback used to return the new available area. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
 ## Examples
 
@@ -425,36 +461,6 @@ try {
 }
 ```
 
-## onAvailableAreaChange
-
-```TypeScript
-onAvailableAreaChange(callback: Callback<Rect>): void
-```
-
-Register the callback for available area changes.
-
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets.If being called on other device types, it does not take effect and no error is reported.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void--><!--Device-Display-onAvailableAreaChange(callback: Callback<Rect>): void-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Rect&gt; | Yes | Callback used to return the available area |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-
 ## alive
 
 ```TypeScript
@@ -465,9 +471,11 @@ Whether the display is alive. The value **true** indicates that the display is a
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -481,17 +489,17 @@ Whether the display is alive. The value **true** indicates that the display is a
 availableHeight: long
 ```
 
-eight of the available area, in px. The value is an integer greater than 0.
+eight of the available area, in px. The value is an integer greater than 0. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the height of the available area on the current device screen, you can use the height attribute.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types.To obtain the height of the available area on the current device screen, you can use the height attribute.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-availableHeight: long--><!--Device-Display-availableHeight: long-End-->
 
@@ -503,17 +511,17 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later.Fo
 availableWidth: long
 ```
 
-Width of the available area, in px. The value is an integer greater than 0.
+Width of the available area, in px. The value is an integer greater than 0. This API can be properly called on devices running OpenHarmony 7.0.0 or later. For devices running versions earlier than OpenHarmony 7.0.0, this API can be properly called on PCs/2-in-1 devices and tablets, but does not work for other device types. To obtain the width of the available area on the current device screen, you can use the width attribute.
 
-This API can be properly called on devices running OpenHarmony 7.0.0 or later.For devices running versions earlier than OpenHarmony 7.0.0,this API can be properly called on PCs/2-in-1 devices and tablets,but does not work for other device types.To obtain the width of the available area on the current device screen, you can use the width attribute.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-availableWidth: long--><!--Device-Display-availableWidth: long-End-->
 
@@ -529,9 +537,11 @@ All color spaces supported by the display.
 
 **Type:** Array&lt;colorSpaceManager.ColorSpace&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -547,11 +557,13 @@ densityDPI: double
 
 Physical pixel density of the display, that is, the number of pixels per inch. The value is a floating-point number. Generally, the value is **160.0** or **480.0**. The actual value depends on the optional values provided by the device in use.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -565,14 +577,15 @@ Physical pixel density of the display, that is, the number of pixels per inch. T
 densityPixels: double
 ```
 
-Logical pixel density of the display, which is the scaling coefficient between physical pixels and logical pixels. The calculation method is as follows:&lt;br&gt;!  
-[densityPixels](figures/densityPixels.jpg)&lt;br&gt;The value is a floating-point number and is restricted by the range of **densityDPI**. The value range is [0.5, 4.0]. Generally, the value is **1.0** or **3.0**. The actual value depends on the density DPI provided by the device in use.
+Logical pixel density of the display, which is the scaling coefficient between physical pixels and logical pixels. The calculation method is as follows:&lt;br&gt;! [densityPixels](../figures/densityPixels.jpg)&lt;br&gt;The value is a floating-point number and is restricted by the range of **densityDPI**. The value range is [0.5, 4.0]. Generally, the value is **1.0** or **3.0**. The actual value depends on the density DPI provided by the device in use.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -590,9 +603,11 @@ All HDR formats supported by the display.
 
 **Type:** Array&lt;hdrCapability.HDRFormat&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -608,11 +623,13 @@ height: long
 
 Height of the display, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -628,11 +645,13 @@ id: long
 
 Display ID, which is an integer greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -650,9 +669,11 @@ Name of the display.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -670,9 +691,11 @@ Orientation of the display.
 
 **Type:** Orientation
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -688,11 +711,13 @@ refreshRate: int
 
 Refresh rate of the display, in Hz. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -706,13 +731,15 @@ Refresh rate of the display, in Hz. The value is an integer.
 rotation: int
 ```
 
-Clockwise rotation angle of the display.The value **0** indicates that the display rotates clockwise by 0��, which is the standard display direction.The value **1** indicates that the display rotates clockwise by 90��.The value **2** indicates that the display rotates clockwise by 180��.The value **3** indicates that the display rotates clockwise by 270��.
+Clockwise rotation angle of the display. The value **0** indicates that the display rotates clockwise by 0��, which is the standard display direction. The value **1** indicates that the display rotates clockwise by 90��. The value **2** indicates that the display rotates clockwise by 180��. The value **3** indicates that the display rotates clockwise by 270��.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -726,14 +753,15 @@ Clockwise rotation angle of the display.The value **0** indicates that the displ
 scaledDensity: double
 ```
 
-Scaling factor for fonts displayed on the display. The value must be a floating  
--point number. Generally, the value is the same as that of **densityPixels**.
+Scaling factor for fonts displayed on the display. The value must be a floating -point number. Generally, the value is the same as that of **densityPixels**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -751,11 +779,13 @@ Screen shape of the display. The default value is **ScreenShape.RECTANGLE**.
 
 **Type:** [ScreenShape](arkts-arkui-display-screenshape-e.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-screenShape?: ScreenShape--><!--Device-Display-screenShape?: ScreenShape-End-->
 
@@ -771,11 +801,13 @@ Display mode for screen content. The default value is **DisplaySourceMode.NONE**
 
 **Type:** [DisplaySourceMode](arkts-arkui-display-displaysourcemode-e.md)
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-sourceMode?: DisplaySourceMode--><!--Device-Display-sourceMode?: DisplaySourceMode-End-->
 
@@ -791,9 +823,11 @@ State of the display.
 
 **Type:** [DisplayState](arkts-arkui-display-displaystate-e.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -807,15 +841,17 @@ State of the display.
 supportedRefreshRates?: Array<int>
 ```
 
-All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer,in Hz. The default value is empty array.
+All refresh rates supported by the display, sorted in ascending order. The refresh rate is a positive integer, in Hz. The default value is empty array.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-supportedRefreshRates?: Array<int>--><!--Device-Display-supportedRefreshRates?: Array<int>-End-->
 
@@ -829,11 +865,13 @@ width: long
 
 Width of the display, in px. The value is an integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -847,16 +885,17 @@ Width of the display, in px. The value is an integer.
 x?: long
 ```
 
-X coordinate of the top-left corner of the display relative to the origin,which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is  
-**0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,the default value **0** is returned.
+X coordinate of the top-left corner of the display relative to the origin, which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is **0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise, the default value **0** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-x?: long--><!--Device-Display-x?: long-End-->
 
@@ -870,11 +909,13 @@ xDPI: double
 
 Exact physical pixels per inch of the display in the X axis. The value must be a floating-point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -888,16 +929,17 @@ Exact physical pixels per inch of the display in the X axis. The value must be a
 y?: long
 ```
 
-Y coordinate of the top-left corner of the display relative to the origin,which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is  
-**0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise,the default value **0** is returned.
+Y coordinate of the top-left corner of the display relative to the origin, which is the top-left corner of the primary screen, measured in px. The value is an integer. The default value is **0**. The actual value is returned only when **DisplaySourceMode** is set to **MAIN** or **EXTEND**; otherwise, the default value **0** is returned.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Display-y?: long--><!--Device-Display-y?: long-End-->
 
@@ -911,11 +953,13 @@ yDPI: double
 
 Exact physical pixels per inch of the display in the Y axis. The value must be a floating-point number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

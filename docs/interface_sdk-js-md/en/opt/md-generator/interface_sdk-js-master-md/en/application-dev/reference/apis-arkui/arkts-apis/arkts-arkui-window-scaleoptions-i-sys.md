@@ -2,7 +2,9 @@
 
 Describes the scale parameters.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface ScaleOptions--><!--Device-window-interface ScaleOptions-End-->
 
@@ -26,7 +28,9 @@ X coordinate of the scale center. The value is a floating-point number in the ra
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-pivotX?: double--><!--Device-ScaleOptions-pivotX?: double-End-->
 
@@ -44,7 +48,9 @@ Y coordinate of the scale center. The value is a floating-point number in the ra
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-pivotY?: double--><!--Device-ScaleOptions-pivotY?: double-End-->
 
@@ -62,7 +68,9 @@ Scale factor along the x-axis. The value is a floating-point number, and the def
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-x?: double--><!--Device-ScaleOptions-x?: double-End-->
 
@@ -80,7 +88,9 @@ Scale factor along the y-axis. The value is a floating-point number, and the def
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScaleOptions-y?: double--><!--Device-ScaleOptions-y?: double-End-->
 

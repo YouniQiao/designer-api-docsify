@@ -2,7 +2,9 @@
 
 Define different protocol capability
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum ProtocolType--><!--Device-avSession-enum ProtocolType-End-->
 
@@ -16,7 +18,9 @@ TYPE_CAST_PLUS_MIRROR = 1
 
 Cast+ mirror capability
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProtocolType-TYPE_CAST_PLUS_MIRROR = 1--><!--Device-ProtocolType-TYPE_CAST_PLUS_MIRROR = 1-End-->
 

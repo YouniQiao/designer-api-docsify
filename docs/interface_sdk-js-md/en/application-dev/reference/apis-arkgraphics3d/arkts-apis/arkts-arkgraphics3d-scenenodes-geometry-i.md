@@ -4,11 +4,13 @@ Geometric node type that holds renderable mesh data and supports optional deform
 
 **Inheritance/Implementation:** Geometry extends [Node](arkts-arkgraphics3d-scenenodes-node-i.md#Node)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface Geometry extends Node--><!--Device-unnamed-export interface Geometry extends Node-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Geometry--><!--Device-unnamed-export interface Geometry-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -22,9 +24,11 @@ Mesh property.
 
 **Type:** [Mesh](arkts-arkgraphics3d-sceneresources-mesh-i.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geometry-readonly mesh: Mesh--><!--Device-Geometry-readonly mesh: Mesh-End-->
 
@@ -36,13 +40,15 @@ Mesh property.
 readonly morpher?: Morpher
 ```
 
-Optional morpher that adds vertex-based deformation or animation effects to the geometry.If this parameter is not specified, the geometry does not support deformation.
+Optional morpher that adds vertex-based deformation or animation effects to the geometry. If this parameter is not specified, the geometry does not support deformation.
 
 **Type:** [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Geometry-readonly morpher?: Morpher--><!--Device-Geometry-readonly morpher?: Morpher-End-->
 

@@ -14,7 +14,7 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 **废弃版本：** 9
 
-**替代接口：** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**替代接口：** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void-End-->
 
@@ -25,7 +25,7 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | ActionMenuOptions | 是 | 操作菜单选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ActionMenuSuccessResponse&gt; | 是 | 菜单响应结果回调。 |
 
 ## 示例
 
@@ -67,7 +67,7 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 **废弃版本：** 9
 
-**替代接口：** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**替代接口：** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>-End-->
 

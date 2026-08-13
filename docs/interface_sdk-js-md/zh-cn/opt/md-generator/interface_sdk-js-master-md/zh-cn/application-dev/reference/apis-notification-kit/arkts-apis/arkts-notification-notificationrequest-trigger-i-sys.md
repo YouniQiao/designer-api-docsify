@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Trigger--><!--Device-unnamed-export interface Trigger-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -21,6 +23,8 @@ condition:Geofence
 **类型：** [Geofence](arkts-notification-notificationrequest-geofence-i-sys.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Trigger-condition:Geofence--><!--Device-Trigger-condition:Geofence-End-->
 
@@ -40,6 +44,8 @@ displayTime?:number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-Trigger-displayTime?:int--><!--Device-Trigger-displayTime?:int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
@@ -57,6 +63,8 @@ type:TriggerType
 **类型：** [TriggerType](arkts-notification-notificationrequest-triggertype-e-sys.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Trigger-type:TriggerType--><!--Device-Trigger-type:TriggerType-End-->
 

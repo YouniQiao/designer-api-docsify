@@ -1,10 +1,12 @@
 # MaxSelected
 
-MaxSelected
+Represents the maximum number of media assets that can be selected at a time.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class MaxSelected--><!--Device-unnamed-export declare class MaxSelected-End-->
 
@@ -19,20 +21,22 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 ## data
 
 ```TypeScript
-public data?: Map<MaxCountType, int>
+data?: Map<MaxCountType, number>
 ```
 
-data. support to set max_total_count, max_photo_count and max_video_count.
+Maximum number of media assets (images, videos, or both) that can be selected at a time.
 
-**Type:** Map&lt;[MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md), int&gt;
+**Type:** Map&lt;[MaxCountType](arkts-medialibrary-file-photopickercomponent-maxcounttype-e.md), number&gt;
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-MaxSelected-public data?: Map<MaxCountType, int>--><!--Device-MaxSelected-public data?: Map<MaxCountType, int>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-MaxSelected-data?: Map<MaxCountType, number>--><!--Device-MaxSelected-data?: Map<MaxCountType, number>-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

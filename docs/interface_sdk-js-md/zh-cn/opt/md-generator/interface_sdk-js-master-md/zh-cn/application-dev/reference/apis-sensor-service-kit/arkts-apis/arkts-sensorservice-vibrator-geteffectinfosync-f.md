@@ -6,9 +6,11 @@
 function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo
 ```
 
-通过设备ID和马达ID获取预置振动效果信息，用于判断该预置振动效果是否受指定设备的指定马达支持。用于多设备多马达场景下确认指定设备的指定马达是否支持某个预置振动效果，不传param时默认查询本地设备。适用于触发振动前确认效果可用性，避免在不支持的设备或马达上触发振动效果不佳。返回EffectInfo对象，isEffectSupported字段指示是否支持该预置振动效果：返回true时可直接用于startVibration (#vibratorstartvibration9)，返回false时使用该effectId触发振动可能效果不佳。
+通过设备ID和马达ID获取预置振动效果信息，用于判断该预置振动效果是否受指定设备的指定马达支持。 用于多设备多马达场景下确认指定设备的指定马达是否支持某个预置振动效果，不传param时默认查询本地设备。适用于触发振动前确认效果可用性，避免在不支持的设备或马达上触发振动效果不佳。返回EffectInfo对象， isEffectSupported字段指示是否支持该预置振动效果：返回true时可直接用于startVibration (#vibratorstartvibration9)，返回false时使用该effectId触发振动可能效果不 佳。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo--><!--Device-vibrator-function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectInfo-End-->
 
@@ -31,7 +33,7 @@ function getEffectInfoSync(effectId: string, param?: VibratorInfoParam): EffectI
 
 | 错误码ID |
 | --- |
-| [14600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-操作设备失败) |
+| [14600101](../errorcode-vibrator.md#14600101-操作设备失败) |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 帧率指标。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface FrameMetrics--><!--Device-window-interface FrameMetrics-End-->
 
@@ -18,7 +20,9 @@ firstDrawFrame: boolean
 
 **类型：** boolean
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FrameMetrics-firstDrawFrame: boolean--><!--Device-FrameMetrics-firstDrawFrame: boolean-End-->
 
@@ -34,7 +38,9 @@ inputHandlingDuration: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FrameMetrics-inputHandlingDuration: long--><!--Device-FrameMetrics-inputHandlingDuration: long-End-->
 
@@ -50,7 +56,9 @@ layoutMeasureDuration: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FrameMetrics-layoutMeasureDuration: long--><!--Device-FrameMetrics-layoutMeasureDuration: long-End-->
 
@@ -66,7 +74,9 @@ vsyncTimestamp: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FrameMetrics-vsyncTimestamp: long--><!--Device-FrameMetrics-vsyncTimestamp: long-End-->
 

@@ -1,13 +1,14 @@
 # Indicator
 
-Sets the distance between the navigation indicator and the **Swiper** component. Note that due to its default interaction area height of 32 vp, the navigation indicator cannot be placed flush against the bottom edge. To implement the function of completely attaching to the bottom, you can use the  
-[IndicatorComponent](IndicatorComponentInterface) component to adjust the position more flexibly.
+Sets the distance between the navigation indicator and the **Swiper** component. Note that due to its default interaction area height of 32 vp, the navigation indicator cannot be placed flush against the bottom edge. To implement the function of completely attaching to the bottom, you can use the IndicatorComponent component to adjust the position more flexibly.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare class Indicator<T>--><!--Device-unnamed-declare class Indicator<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Indicator--><!--Device-unnamed-declare class Indicator-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,6 +23,8 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,6 +60,8 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -72,7 +77,7 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bottom | LengthMetrics \| Length | Yes | Position of the navigation indicator relative to the bottom edge of the **Swiper** component.&lt;br&gt;If neither **top** nor **bottom** is set, the navigation indicator is aligned at the bottom along the cross axis based on its own size and the size of the **Swiper** component, which is the same effect as setting **bottom=0**.&lt;br&gt;If the value specified is **0**, the navigation indicator is placed at the position 0.&lt;br&gt;Priority: lower than the **top** property&lt;br&gt;Value range: [0, Swiper height - Navigation indicator area height]. Values outside this range are adjusted to the nearest boundary. |
-| ignoreSize | boolean | Yes | Whether to ignore the size of the navigation indicator.&lt;br&gt;Default value: **false**.&lt;br&gt;Setting **true** positions the indicator closer to the **Swiper** component's bottom. For the usage, see [Example 9: Using the space and bottom APIs on the Navigation Indicator](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-9-using-the-space-and-bottom-apis-on-the-navigation-indicator). &lt;br&gt; **NOTE：**&lt;br&gt;The **ignoreSize** property does not apply to the digit-style navigation indicator in the following scenarios:&lt;br&gt; ? [vertical](SwiperAttribute#vertical) is set to **false** and the value of **bottom** is greater than 0.&lt;br&gt; ? When [vertical](SwiperAttribute#vertical) is set to **true**:&lt;br&gt;1. The value of **bottom** is greater than 0.&lt;br&gt; 2. The value of **bottom** is **undefined**.&lt;br&gt; 3. **isSidebarMiddle** is set to **false**. |
+| ignoreSize | boolean | Yes | Whether to ignore the size of the navigation indicator.&lt;br&gt;Default value: **false**.&lt;br&gt;Setting **true** positions the indicator closer to the **Swiper** component's bottom. For the usage, see [Example 9: Using the space and bottom APIs on the Navigation Indicator](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-9-using-the-space-and-bottom-apis-on-the-navigation-indicator). &lt;br&gt; **NOTE：**&lt;br&gt;The **ignoreSize** property does not apply to the digit-style navigation indicator in the following scenarios:&lt;br&gt; ? vertical is set to **false** and the value of **bottom** is greater than 0.&lt;br&gt; ? When vertical is set to **true**:&lt;br&gt;1. The value of **bottom** is greater than 0.&lt;br&gt; 2. The value of **bottom** is **undefined**.&lt;br&gt; 3. **isSidebarMiddle** is set to **false**. |
 
 **Return value:**
 
@@ -91,6 +96,8 @@ Returns a **DigitIndicator** object.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,6 +127,8 @@ Returns a **DotIndicator** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -147,6 +156,8 @@ Sets the distance between the navigation point indicator and the left edge (in r
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,6 +193,8 @@ Sets the position of the navigation indicator relative to the left edge of the *
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -216,6 +229,8 @@ Sets the position of the navigation indicator relative to the right edge of the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -244,11 +259,13 @@ Sets the position of the navigation indicator relative to the right edge of the 
 start(value: LengthMetrics): T
 ```
 
-Sets the distance between the navigation indicator and the right edge (in [RTL](LayoutDirection) scripts) or the left edge (in [LTR](LayoutDirection) scripts) of the **Swiper** component.
+Sets the distance between the navigation indicator and the right edge (in RTL scripts) or the left edge (in LTR scripts) of the **Swiper** component.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -283,6 +300,8 @@ Sets the position of the navigation indicator relative to the top edge of the **
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

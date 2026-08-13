@@ -2,7 +2,9 @@
 
 Describes the screen brightness information. The information comes from the underlying screen data.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-display-interface BrightnessInfo--><!--Device-display-interface BrightnessInfo-End-->
 
@@ -20,11 +22,13 @@ import { display } from '@kit.ArkUI';
 readonly brightnessPosition?: number
 ```
 
-Position of the brightness bar corresponding to the current screen brightness. The value is a floating-point number ranging from 0.0 to 1.0. The default value is 0.0. The value 0.0 indicates the lowest screen brightness,and 1.0 indicates the highest screen brightness. The returned brightness bar position may have an error of 0.01compared with the actual brightness bar position.Value range: [0.0,1.0]. Default value: 0.0.
+Position of the brightness bar corresponding to the current screen brightness. The value is a floating-point number ranging from 0.0 to 1.0. The default value is 0.0. The value 0.0 indicates the lowest screen brightness, and 1.0 indicates the highest screen brightness. The returned brightness bar position may have an error of 0.01 compared with the actual brightness bar position. Value range: [0.0,1.0]. Default value: 0.0.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,9 +48,11 @@ Dynamic brightness headroom. The value is a floating-point number greater than 0
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BrightnessInfo-readonly currentHeadroom: double--><!--Device-BrightnessInfo-readonly currentHeadroom: double-End-->
 
@@ -62,9 +68,11 @@ Maximum brightness headroom. The value is a floating-point number greater than 0
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BrightnessInfo-readonly maxHeadroom: double--><!--Device-BrightnessInfo-readonly maxHeadroom: double-End-->
 
@@ -80,9 +88,11 @@ Screen brightness, in nit. The value is a floating-point number greater than 0. 
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BrightnessInfo-readonly sdrNits: double--><!--Device-BrightnessInfo-readonly sdrNits: double-End-->
 

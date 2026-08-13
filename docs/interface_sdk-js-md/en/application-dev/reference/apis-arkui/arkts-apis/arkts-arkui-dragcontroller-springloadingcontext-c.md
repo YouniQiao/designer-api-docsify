@@ -1,10 +1,12 @@
 # SpringLoadingContext
 
-Context information for the current spring loading trigger. This object is passed to the application in the spring loading callback, allowing it to obtain the current state, dynamically refresh UI effects,and access drag data to determine whether to handle the drag operation.
+Context information for the current spring loading trigger. This object is passed to the application in the spring loading callback, allowing it to obtain the current state, dynamically refresh UI effects, and access drag data to determine whether to handle the drag operation.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-dragController-export class SpringLoadingContext--><!--Device-dragController-export class SpringLoadingContext-End-->
 
@@ -22,11 +24,13 @@ import { dragController } from '@kit.ArkUI';
 abort(): void
 ```
 
-Aborts subsequent spring loading triggers.Note: Aborting does not trigger a CANCEL notification, the application must handle state cleanup when aborting.
+Aborts subsequent spring loading triggers. Note: Aborting does not trigger a CANCEL notification, the application must handle state cleanup when aborting.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,11 +44,13 @@ Aborts subsequent spring loading triggers.Note: Aborting does not trigger a CANC
 updateConfiguration(config: DragSpringLoadingConfiguration): void
 ```
 
-Updates the spring loading configuration for the current trigger. Only effective during the BEGIN state.This method does not modify the original configuration set during onDragSpringLoading binding.It provides an opportunity for dynamic configuration updates during the current trigger.Typically, applications should use default configurations or set them once during binding.Use this method sparingly, e.g., for different drag data types requiring varied UX timing.
+Updates the spring loading configuration for the current trigger. Only effective during the BEGIN state. This method does not modify the original configuration set during onDragSpringLoading binding. It provides an opportunity for dynamic configuration updates during the current trigger. Typically, applications should use default configurations or set them once during binding. Use this method sparingly, e.g., for different drag data types requiring varied UX timing.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +78,8 @@ Current spring loading configuration. Absent when the state is CANCEL.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration--><!--Device-SpringLoadingContext-currentConfig?: DragSpringLoadingConfiguration-End-->
@@ -91,6 +99,8 @@ Sequence number of the current spring loading state notification. Begins at 0 fo
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +122,8 @@ Drag-related information. Absent when the state is CANCEL.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos--><!--Device-SpringLoadingContext-dragInfos?: SpringLoadingDragInfos-End-->
@@ -131,6 +143,8 @@ Current spring loading state. Refer to the DragSpringLoadingState enum for detai
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Provides methods related to cellular data services.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace data--><!--Device-unnamed-declare namespace data-End-->
 
@@ -20,41 +22,41 @@ import { data } from '@kit.TelephonyKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getActiveApnName](arkts-telephony-data-getactiveapnname-f.md#getactiveapnname) |
-| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getcellulardataflowtype) |
-| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getcellulardataflowtype-1) |
-| [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md#getcellulardatastate) |
-| [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md#getcellulardatastate-1) |
-| [getDefaultCellularDataSimId](arkts-telephony-data-getdefaultcellulardatasimid-f.md#getdefaultcellulardatasimid) |
-| [getDefaultCellularDataSlotId](arkts-telephony-data-getdefaultcellulardataslotid-f.md#getdefaultcellulardataslotid) |
-| [getDefaultCellularDataSlotId](arkts-telephony-data-getdefaultcellulardataslotid-f.md#getdefaultcellulardataslotid-1) |
-| [getDefaultCellularDataSlotIdSync](arkts-telephony-data-getdefaultcellulardataslotidsync-f.md#getdefaultcellulardataslotidsync) |
-| [isCellularDataEnabled](arkts-telephony-data-iscellulardataenabled-f.md#iscellulardataenabled) |
-| [isCellularDataEnabled](arkts-telephony-data-iscellulardataenabled-f.md#iscellulardataenabled-1) |
-| [isCellularDataEnabledSync](arkts-telephony-data-iscellulardataenabledsync-f.md#iscellulardataenabledsync) |
-| [isCellularDataRoamingEnabled](arkts-telephony-data-iscellulardataroamingenabled-f.md#iscellulardataroamingenabled) |
-| [isCellularDataRoamingEnabled](arkts-telephony-data-iscellulardataroamingenabled-f.md#iscellulardataroamingenabled-1) |
-| [isCellularDataRoamingEnabledSync](arkts-telephony-data-iscellulardataroamingenabledsync-f.md#iscellulardataroamingenabledsync) |
-| [queryAllApns](arkts-telephony-data-queryallapns-f.md#queryallapns) |
-| [queryApnIds](arkts-telephony-data-queryapnids-f.md#queryapnids) |
-| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md#setpreferredapn) |
-| [showSystemApnSettings](arkts-telephony-data-showsystemapnsettings-f.md#showsystemapnsettings) |
+| [getActiveApnName](arkts-telephony-data-getactiveapnname-f.md#getActiveApnName) |
+| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getCellularDataFlowType) |
+| [getCellularDataFlowType](arkts-telephony-data-getcellulardataflowtype-f.md#getCellularDataFlowType) |
+| [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md#getCellularDataState) |
+| [getCellularDataState](arkts-telephony-data-getcellulardatastate-f.md#getCellularDataState) |
+| [getDefaultCellularDataSimId](arkts-telephony-data-getdefaultcellulardatasimid-f.md#getDefaultCellularDataSimId) |
+| [getDefaultCellularDataSlotId](arkts-telephony-data-getdefaultcellulardataslotid-f.md#getDefaultCellularDataSlotId) |
+| [getDefaultCellularDataSlotId](arkts-telephony-data-getdefaultcellulardataslotid-f.md#getDefaultCellularDataSlotId) |
+| [getDefaultCellularDataSlotIdSync](arkts-telephony-data-getdefaultcellulardataslotidsync-f.md#getDefaultCellularDataSlotIdSync) |
+| [isCellularDataEnabled](arkts-telephony-data-iscellulardataenabled-f.md#isCellularDataEnabled) |
+| [isCellularDataEnabled](arkts-telephony-data-iscellulardataenabled-f.md#isCellularDataEnabled) |
+| [isCellularDataEnabledSync](arkts-telephony-data-iscellulardataenabledsync-f.md#isCellularDataEnabledSync) |
+| [isCellularDataRoamingEnabled](arkts-telephony-data-iscellulardataroamingenabled-f.md#isCellularDataRoamingEnabled) |
+| [isCellularDataRoamingEnabled](arkts-telephony-data-iscellulardataroamingenabled-f.md#isCellularDataRoamingEnabled) |
+| [isCellularDataRoamingEnabledSync](arkts-telephony-data-iscellulardataroamingenabledsync-f.md#isCellularDataRoamingEnabledSync) |
+| [queryAllApns](arkts-telephony-data-queryallapns-f.md#queryAllApns) |
+| [queryApnIds](arkts-telephony-data-queryapnids-f.md#queryApnIds) |
+| [setPreferredApn](arkts-telephony-data-setpreferredapn-f.md#setPreferredApn) |
+| [showSystemApnSettings](arkts-telephony-data-showsystemapnsettings-f.md#showSystemApnSettings) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [disableCellularData](arkts-telephony-data-disablecellulardata-f-sys.md#disablecellulardata) |
-| [disableCellularData](arkts-telephony-data-disablecellulardata-f-sys.md#disablecellulardata-1) |
-| [disableCellularDataRoaming](arkts-telephony-data-disablecellulardataroaming-f-sys.md#disablecellulardataroaming) |
-| [disableCellularDataRoaming](arkts-telephony-data-disablecellulardataroaming-f-sys.md#disablecellulardataroaming-1) |
-| [enableCellularData](arkts-telephony-data-enablecellulardata-f-sys.md#enablecellulardata) |
-| [enableCellularData](arkts-telephony-data-enablecellulardata-f-sys.md#enablecellulardata-1) |
-| [enableCellularDataRoaming](arkts-telephony-data-enablecellulardataroaming-f-sys.md#enablecellulardataroaming) |
-| [enableCellularDataRoaming](arkts-telephony-data-enablecellulardataroaming-f-sys.md#enablecellulardataroaming-1) |
-| [setDefaultCellularDataSlotId](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md#setdefaultcellulardataslotid) |
-| [setDefaultCellularDataSlotId](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md#setdefaultcellulardataslotid-1) |
+| [disableCellularData](arkts-telephony-data-disablecellulardata-f-sys.md#disableCellularData-(System-API)) |
+| [disableCellularData](arkts-telephony-data-disablecellulardata-f-sys.md#disableCellularData-(System-API)) |
+| [disableCellularDataRoaming](arkts-telephony-data-disablecellulardataroaming-f-sys.md#disableCellularDataRoaming-(System-API)) |
+| [disableCellularDataRoaming](arkts-telephony-data-disablecellulardataroaming-f-sys.md#disableCellularDataRoaming-(System-API)) |
+| [enableCellularData](arkts-telephony-data-enablecellulardata-f-sys.md#enableCellularData-(System-API)) |
+| [enableCellularData](arkts-telephony-data-enablecellulardata-f-sys.md#enableCellularData-(System-API)) |
+| [enableCellularDataRoaming](arkts-telephony-data-enablecellulardataroaming-f-sys.md#enableCellularDataRoaming-(System-API)) |
+| [enableCellularDataRoaming](arkts-telephony-data-enablecellulardataroaming-f-sys.md#enableCellularDataRoaming-(System-API)) |
+| [setDefaultCellularDataSlotId](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md#setDefaultCellularDataSlotId-(System-API)) |
+| [setDefaultCellularDataSlotId](arkts-telephony-data-setdefaultcellulardataslotid-f-sys.md#setDefaultCellularDataSlotId-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

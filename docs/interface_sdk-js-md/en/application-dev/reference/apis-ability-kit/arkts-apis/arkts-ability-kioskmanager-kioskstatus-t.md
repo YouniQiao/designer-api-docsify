@@ -6,9 +6,11 @@ export type KioskStatus = _KioskStatus
 
 Defines the kiosk status information, including whether the system is in kiosk mode and the information about the application in kiosk mode.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

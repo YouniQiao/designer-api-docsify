@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType)
+**替代接口：** [PowerRoleType](arkts-basicservices-usbmanager-powerroletype-e-sys.md#PowerRoleType（系统接口）)
 
 <!--Device-usb-export enum PowerRoleType--><!--Device-usb-export enum PowerRoleType-End-->
 

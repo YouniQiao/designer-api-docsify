@@ -1,10 +1,12 @@
 # PromptOptionsV2Config
 
-Configuration information interface for PromptOptionsV2.Used to construct PromptOptionsV2 object.
+PromptOptionsV2Config定义用于构造PromptOptionsV2对象的配置信息接口。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PromptOptionsV2Config--><!--Device-unnamed-export interface PromptOptionsV2Config-End-->
 
@@ -16,15 +18,19 @@ Configuration information interface for PromptOptionsV2.Used to construct Prompt
 actionText?: ResourceStr
 ```
 
-Text of the icon on the right of the ExceptionPromptV2.If this parameter is not set or is set to undefined, the text is not displayed.
+指定当前异常提示的右侧图标按钮的文字内容。 默认不设置或设置为undefined，文字内容不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-actionText?: ResourceStr--><!--Device-PromptOptionsV2Config-actionText?: ResourceStr-End-->
 
@@ -36,15 +42,19 @@ Text of the icon on the right of the ExceptionPromptV2.If this parameter is not 
 icon?: ResourceStr
 ```
 
-Icon style of the ExceptionPromptV2.If this parameter is not set or is set to undefined, the icon is not displayed.
+指定当前异常提示的异常图标样式。 默认不设置或设置为undefined，不显示异常图标。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-icon?: ResourceStr--><!--Device-PromptOptionsV2Config-icon?: ResourceStr-End-->
 
@@ -56,15 +66,19 @@ Icon style of the ExceptionPromptV2.If this parameter is not set or is set to un
 isShown?: boolean
 ```
 
-Whether the ExceptionPromptV2 is displayed.true: The exception prompt is displayed.false: The exception prompt is hidden.Default value: false.
+指定当前异常提示的显隐状态。 true：显示状态。 false：隐藏状态。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-isShown?: boolean--><!--Device-PromptOptionsV2Config-isShown?: boolean-End-->
 
@@ -76,15 +90,19 @@ Whether the ExceptionPromptV2 is displayed.true: The exception prompt is display
 marginTop: Dimension
 ```
 
-Top margin of the ExceptionPromptV2.Distance from the top to the content area of ExceptionPromptV2.
+指定当前异常提示的距离顶部的位置。
 
 **类型：** Dimension
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-marginTop: Dimension--><!--Device-PromptOptionsV2Config-marginTop: Dimension-End-->
 
@@ -96,15 +114,19 @@ Top margin of the ExceptionPromptV2.Distance from the top to the content area of
 marginType: MarginTypeV2
 ```
 
-Margin Type of ExceptionPromptV2.Margin from the content area to the edge of the container
+指定当前异常提示的边距样式。
 
 **类型：** [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-marginType: MarginTypeV2--><!--Device-PromptOptionsV2Config-marginType: MarginTypeV2-End-->
 
@@ -116,15 +138,19 @@ Margin Type of ExceptionPromptV2.Margin from the content area to the edge of the
 symbolStyle?: SymbolGlyphModifier
 ```
 
-Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.If this parameter is not set or is set to undefined, the symbol icon is not displayed.
+指定当前异常提示的异常Symbol图标样式，优先级大于icon。 默认不设置或设置为undefined，Symbol图标不显示。
 
 **类型：** [SymbolGlyphModifier](../arkts-components/arkts-arkui-symbolglyphmodifier-t.md)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-symbolStyle?: SymbolGlyphModifier--><!--Device-PromptOptionsV2Config-symbolStyle?: SymbolGlyphModifier-End-->
 
@@ -136,17 +162,19 @@ Symbol icon style of the ExceptionPromptV2, which has higher priority than icon.
 tip?: ResourceStr
 ```
 
-Text content of the ExceptionPromptV2.By default, the following text resources are provided:
-
-1. ohos_network_not_connected: displayed when no Internet connection.2. ohos_network_connected_unstable: displayed when the Internet connection is unstable.3. ohos_unstable_connect_server: displayed when the server fails to be connected.4. ohos_custom_network_tips_left: displayed when an Internet connection is available but the location fails to be obtained.If this parameter is not set or is set to undefined, the text content is not displayed.
+指定当前异常提示的文字提示内容。 支持自定义资源，或如下四种状态文字系统资源。 1. 无网络状态：显示网络未连接，引用\$r('sys.string.ohos_network_not_connected')。 2. 网络差状态：显示网络连接不稳定，请点击重试，引用\$r('sys.string.ohos_network_connected_unstable')。 3. 连不上服务器状态：显示无法连接到服务器，请点击重试，引用\$r('sys.string.ohos_unstable_connect_server')。 4. 有网但是获取不到位置状态：显示无法获取位置，请点击重试，引用\$r('sys.string.ohos_custom_network_tips_left')。 默认不设置或设置为undefined，文字提示内容不显示。
 
 **类型：** ResourceStr
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PromptOptionsV2Config-tip?: ResourceStr--><!--Device-PromptOptionsV2Config-tip?: ResourceStr-End-->
 

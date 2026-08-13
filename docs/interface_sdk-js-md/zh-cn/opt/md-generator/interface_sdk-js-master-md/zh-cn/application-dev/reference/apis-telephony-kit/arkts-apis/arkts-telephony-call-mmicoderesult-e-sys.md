@@ -2,7 +2,9 @@
 
 MMI码结果。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export enum MmiCodeResult--><!--Device-call-export enum MmiCodeResult-End-->
 
@@ -18,7 +20,9 @@ MMI_CODE_SUCCESS = 0
 
 表示MMI码成功。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmiCodeResult-MMI_CODE_SUCCESS = 0--><!--Device-MmiCodeResult-MMI_CODE_SUCCESS = 0-End-->
 
@@ -34,7 +38,9 @@ MMI_CODE_FAILED = 1
 
 表示MMI码失败。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmiCodeResult-MMI_CODE_FAILED = 1--><!--Device-MmiCodeResult-MMI_CODE_FAILED = 1-End-->
 

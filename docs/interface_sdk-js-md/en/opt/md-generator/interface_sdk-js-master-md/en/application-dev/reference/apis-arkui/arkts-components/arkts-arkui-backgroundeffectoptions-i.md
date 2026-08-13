@@ -4,6 +4,8 @@ Defines the options of BackgroundEffect
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BackgroundEffectOptions--><!--Device-unnamed-declare interface BackgroundEffectOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Adaptive color mode used for the background blur effect. Default value: **DEFAUL
 **Default:** AdaptiveColor.DEFAULT
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Grayscale blur.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -58,13 +64,15 @@ Grayscale blur.
 brightness?: number
 ```
 
-Brightness.&lt;br&gt;Value range: [0, +∞).&lt;br&gt;Default value: **1** Recommended value range: [0, 2].
+Brightness. &lt;br&gt;Value range: [0, +∞). &lt;br&gt;Default value: **1** Recommended value range: [0, 2].
 
 **Type:** number
 
 **Default:** 1
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,6 +96,8 @@ Color.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -102,14 +112,15 @@ Color.
 inactiveColor?: ResourceColor
 ```
 
-Background color when the blur effect does not take effect. This parameter must be used together with the   
-**policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
+Background color when the blur effect does not take effect. This parameter must be used together with the **policy** parameter. When **policy** is set to a value that disables the blur effect, the blur effect on the components is removed. If **inactiveColor** is specified, it is applied as the component background color.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -133,6 +144,8 @@ Blur activation policy.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -147,11 +160,13 @@ Blur activation policy.
 radius: number
 ```
 
-Blur radius.Value range: [0, +∞).Default value: **0**.
+Blur radius. Value range: [0, +∞). Default value: **0**.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,13 +182,15 @@ Blur radius.Value range: [0, +∞).Default value: **0**.
 saturation?: number
 ```
 
-Saturation.Value range: [0, +∞).Recommended value range: [0, 50].
+Saturation. Value range: [0, +∞). Recommended value range: [0, 50].
 
 **Type:** number
 
 **Default:** 1
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

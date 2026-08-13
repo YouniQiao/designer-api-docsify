@@ -8,9 +8,11 @@ function getPortList(): Readonly<SerialPort>[]
 
 查询串口设备清单，包括设备名称和对应的端口号。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]--><!--Device-serialManager-function getPortList(): Readonly<SerialPort>[]-End-->
 

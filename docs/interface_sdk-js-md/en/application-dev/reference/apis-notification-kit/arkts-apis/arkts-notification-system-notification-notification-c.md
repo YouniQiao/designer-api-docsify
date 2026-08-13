@@ -8,7 +8,7 @@ Manages notifications.
 
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](ohos.notification/notification)
+**Substitutes:** [notification/notification](arkts-notification.md#@ohos.notification)
 
 <!--Device-unnamed-declare class Notification--><!--Device-unnamed-declare class Notification-End-->
 
@@ -34,7 +34,7 @@ Displays the notification.
 
 **Deprecated since:** 7
 
-**Substitutes:** [notification/notification](ohos.notification/notification)
+**Substitutes:** [notification/notification](arkts-notification.md#@ohos.notification)
 
 <!--Device-Notification-static show(options?: ShowNotificationOptions): void--><!--Device-Notification-static show(options?: ShowNotificationOptions): void-End-->
 

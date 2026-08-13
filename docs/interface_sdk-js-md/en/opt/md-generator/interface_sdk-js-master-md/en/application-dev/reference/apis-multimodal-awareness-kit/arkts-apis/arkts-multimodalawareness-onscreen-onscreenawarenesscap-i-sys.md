@@ -4,6 +4,8 @@ Defines onscreen awareness capabilities (including but not limited to awareness 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-onScreen-export interface OnscreenAwarenessCap--><!--Device-onScreen-export interface OnscreenAwarenessCap-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -28,6 +30,8 @@ Capability list, including the capabilities for obtaining page content, page lin
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OnscreenAwarenessCap-capList?: string[]--><!--Device-OnscreenAwarenessCap-capList?: string[]-End-->
@@ -47,6 +51,8 @@ Service group ID.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -16,6 +16,8 @@ Enables the dynamic icon based on the given bundle name and module name. This AP
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON
 
 <!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>--><!--Device-bundleManager-function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void>-End-->
@@ -41,13 +43,13 @@ Enables the dynamic icon based on the given bundle name and module name. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700307](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) |
-| [17700304](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) |
+| [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 
@@ -78,13 +80,11 @@ try {
 function enableDynamicIcon(bundleName: string, moduleName: string, option?: BundleOptions): Promise<void>
 ```
 
-Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result.
+Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result. To enable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission. To enable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
 
-To enable the dynamic icon for the current user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON permission.
+**Since:** 23
 
-To enable the dynamic icon for another user, you must request the ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permissions.
-
-**Since:** 20
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DYNAMIC_ICON or (ohos.permission.ACCESS_DYNAMIC_ICON and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -112,14 +112,14 @@ To enable the dynamic icon for another user, you must request the ohos.permissio
 
 | Error Code ID |
 | --- |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700307](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) |
-| [17700304](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) |
+| [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

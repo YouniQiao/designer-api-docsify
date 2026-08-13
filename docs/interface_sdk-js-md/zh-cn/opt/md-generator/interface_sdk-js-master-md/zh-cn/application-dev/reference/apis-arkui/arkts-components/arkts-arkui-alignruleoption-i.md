@@ -4,6 +4,8 @@ Defines the align rule options of relative container.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface AlignRuleOption--><!--Device-unnamed-declare interface AlignRuleOption-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ bias?: Bias
 **默认值：** {horizontal:0.5,vertical:0.5}
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ bottom?: VerticalAlignParam
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -63,6 +69,8 @@ center?: VerticalAlignParam
 **类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,6 +92,8 @@ left?: HorizontalAlignParam
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -103,6 +113,8 @@ middle?: HorizontalAlignParam
 **类型：** [HorizontalAlignParam](arkts-arkui-horizontalalignparam-i.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -124,6 +136,8 @@ right?: HorizontalAlignParam
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -143,6 +157,8 @@ top?: VerticalAlignParam
 **类型：** [VerticalAlignParam](arkts-arkui-verticalalignparam-i.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

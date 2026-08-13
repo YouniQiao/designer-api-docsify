@@ -4,6 +4,8 @@ xts_device_attest authResult information
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace deviceAttest--><!--Device-unnamed-declare namespace deviceAttest-End-->
 
 **System capability:** SystemCapability.XTS.DeviceAttest
@@ -21,9 +23,9 @@ import { deviceAttest } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md#getatteststatus) |
-| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md#getatteststatus-1) |
-| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md#getatteststatussync) |
+| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md#getAttestStatus-(System-API)) |
+| [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md#getAttestStatus-(System-API)) |
+| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md#getAttestStatusSync-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

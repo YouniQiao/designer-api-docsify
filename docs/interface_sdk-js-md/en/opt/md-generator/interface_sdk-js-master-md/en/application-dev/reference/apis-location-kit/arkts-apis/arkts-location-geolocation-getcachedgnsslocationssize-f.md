@@ -18,7 +18,7 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCachedGnssLocationsSize](ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize)
+**Substitutes:** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -59,7 +59,7 @@ Obtain the number of cached GNSS locations reported at a time
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCachedGnssLocationsSize](ohos.geoLocationManager/geoLocationManager.getCachedGnssLocationsSize)
+**Substitutes:** [getCachedGnssLocationsSize](arkts-location-geolocationmanager-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -1,8 +1,5 @@
 # SystemSoundPlayer
 
-音效播放器
-
-
 ## 汇总
 
 ### 接口

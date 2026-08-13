@@ -32,7 +32,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](@ohos.file.fs:fileIo.close)
+**Substitutes:** close
 
 <!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void--><!--Device-FileAsset-close(fd: number, callback: AsyncCallback<void>): void-End-->
 
@@ -49,7 +49,7 @@ Closes a file. This API uses an asynchronous callback to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -91,7 +91,7 @@ Closes this file. This API uses a promise to return the result.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [close](@ohos.file.fs:fileIo.close)
+**Substitutes:** close
 
 <!--Device-FileAsset-close(fd: number): Promise<void>--><!--Device-FileAsset-close(fd: number): Promise<void>-End-->
 
@@ -113,7 +113,7 @@ Closes this file. This API uses a promise to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -168,7 +168,7 @@ Commits the modification on the file metadata to the database. This API uses an 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -229,7 +229,7 @@ Commits the modification on the file metadata to the database. This API uses a p
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -271,7 +271,7 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setFavorite)
+**Substitutes:** [setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setFavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -290,7 +290,7 @@ Favorites or unfavorites a file. This API uses an asynchronous callback to retur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -326,7 +326,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c.md#setFavorite)
+**Substitutes:** [setFavorite](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-mediaassetchangerequest-c-sys.md#setFavorite)
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -350,7 +350,7 @@ Favorites or unfavorites this file asset. This API uses a promise to return the 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -407,7 +407,7 @@ Obtains the value of a **FileAsset** parameter.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -437,53 +437,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getExif(callback: AsyncCallback<string>): void
 ```
 
-Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result.
-
-For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey).
-
-| Key Value | Description |
-| --------------------------------------- | ----------------- |
-| BitsPerSample | Number of bits per sample.|
-| [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md) | Image orientation.|
-| ImageLength | Image length.|
-| ImageWidth | Image width.|
-| GPSLatitude | GPS latitude of the image.|
-| GPSLongitude | GPS longitude of the image.|
-| GPSLatitudeRef | Longitude reference, for example, W or E.|
-| GPSLongitudeRef | Latitude reference, for example, N or S.|
-| DateTimeOriginal | Shooting time.|
-| ExposureTime | Exposure time.|
-| [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.|
-| ISOSpeedRatings | ISO sensitivity or speed.|
-| FNumber | f-number.|
-| DateTime | Modification time.|
-| GPSTimeStamp | GPS timestamp.|
-| GPSDateStamp | GPS date stamp.|
-| ImageDescription | Image description.|
-| Make | Manufacturer.|
-| MakeNote | Manufacturer.|
-| [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.|
-| PhotoMode | Photo mode.|
-| SensitivityType | Sensitivity type.|
-| StandardOutputSensitivity | Standard output sensitivity.|
-| RecommendedExposureIndex | Recommended exposure index.|
-| ApertureValue | Aperture value.|
-| MeteringMode | Metering mode.|
-| [LightSource](../../apis-arkui/arkts-apis/arkts-arkui-common-lightsource-i-sys.md) | Light source.|
-| [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.|
-| FocalLength | Focal length.|
-| UserComment | User comments.|
-| PixelXDimension | Pixel X dimension.|
-| PixelYDimension | Pixel Y dimension.|
-| [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.|
-| FocalLengthIn35mmFilm | Focal length in 35 mm film.|
-| ExposureBiasValue |
-
-> **NOTE：**
-> 
-> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
-> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#ImageVideoKey).USER_COMMENT. The two fields need to be passed to
-> **fetchColumns**.
+Obtains the EXIF data from a JPG image and returns a JSON string. This API uses an asynchronous callback to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| > **NOTE：**> > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#ImageVideoKey-(System-API)).USER_COMMENT. The two fields need to be passed to > **fetchColumns**.
 
 **Since:** 10
 
@@ -509,11 +463,11 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -557,53 +511,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 getExif(): Promise<string>
 ```
 
-Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result.
-
-For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey).
-
-| Key Value | Description |
-| --------------------------------------- | ----------------- |
-| BitsPerSample | Number of bits per sample.|
-| [Orientation](../../apis-arkui/arkts-apis/arkts-arkui-window-orientation-e.md) | Image orientation.|
-| ImageLength | Image length.|
-| ImageWidth | Image width.|
-| GPSLatitude | GPS latitude of the image.|
-| GPSLongitude | GPS longitude of the image.|
-| GPSLatitudeRef | Longitude reference, for example, W or E.|
-| GPSLongitudeRef | Latitude reference, for example, N or S.|
-| DateTimeOriginal | Shooting time.|
-| ExposureTime | Exposure time.|
-| [SceneType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-scenetype-e.md) | Scene type.|
-| ISOSpeedRatings | ISO sensitivity or speed.|
-| FNumber | f-number.|
-| DateTime | Modification time.|
-| GPSTimeStamp | GPS timestamp.|
-| GPSDateStamp | GPS date stamp.|
-| ImageDescription | Image description.|
-| Make | Manufacturer.|
-| MakeNote | Manufacturer.|
-| [Model](../../apis-mind-spore-lite-kit/arkts-apis/arkts-mindsporelite-mindsporelite-model-i.md) | Model.|
-| PhotoMode | Photo mode.|
-| SensitivityType | Sensitivity type.|
-| StandardOutputSensitivity | Standard output sensitivity.|
-| RecommendedExposureIndex | Recommended exposure index.|
-| ApertureValue | Aperture value.|
-| MeteringMode | Metering mode.|
-| [LightSource](../../apis-arkui/arkts-apis/arkts-arkui-common-lightsource-i-sys.md) | Light source.|
-| [Flash](../../apis-camera-kit/arkts-apis/arkts-camera-camera-flash-i.md) | Flash status.|
-| FocalLength | Focal length.|
-| UserComment | User comments.|
-| PixelXDimension | Pixel X dimension.|
-| PixelYDimension | Pixel Y dimension.|
-| [WhiteBalance](../../apis-camera-kit/arkts-apis/arkts-camera-camera-whitebalance-i.md) | White balance.|
-| FocalLengthIn35mmFilm | Focal length in 35 mm film.|
-| ExposureBiasValue |
-
-> **NOTE：**
-> 
-> This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and
-> [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#ImageVideoKey).USER_COMMENT. The two fields need to be passed to
-> **fetchColumns**.
+Obtains the EXIF data from a JPG image and returns a JSON string. This API uses a promise to return the result. For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/arkts-apis/arkts-image-image-propertykey-e.md#PropertyKey). | Key Value | Description | | --------------------------------------- | ----------------- | | BitsPerSample | Number of bits per sample.| | Orientation | Image orientation.| | ImageLength | Image length.| | ImageWidth | Image width.| | GPSLatitude | GPS latitude of the image.| | GPSLongitude | GPS longitude of the image.| | GPSLatitudeRef | Longitude reference, for example, W or E.| | GPSLongitudeRef | Latitude reference, for example, N or S.| | DateTimeOriginal | Shooting time.| | ExposureTime | Exposure time.| | SceneType | Scene type.| | ISOSpeedRatings | ISO sensitivity or speed.| | FNumber | f-number.| | DateTime | Modification time.| | GPSTimeStamp | GPS timestamp.| | GPSDateStamp | GPS date stamp.| | ImageDescription | Image description.| | Make | Manufacturer.| | MakeNote | Manufacturer.| | Model | Model.| | PhotoMode | Photo mode.| | SensitivityType | Sensitivity type.| | StandardOutputSensitivity | Standard output sensitivity.| | RecommendedExposureIndex | Recommended exposure index.| | ApertureValue | Aperture value.| | MeteringMode | Metering mode.| | LightSource | Light source.| | Flash | Flash status.| | FocalLength | Focal length.| | UserComment | User comments.| | PixelXDimension | Pixel X dimension.| | PixelYDimension | Pixel Y dimension.| | WhiteBalance | White balance.| | FocalLengthIn35mmFilm | Focal length in 35 mm film.| | ExposureBiasValue | Exposure compensation.| > **NOTE：**> > This API returns a JSON string that contains EXIF tags. The complete Exif information consists of all_exif and > [ImageVideoKey](arkts-corefile-userfilemanager-imagevideokey-e-sys.md#ImageVideoKey-(System-API)).USER_COMMENT. The two fields need to be passed to > **fetchColumns**.
 
 **Since:** 10
 
@@ -629,11 +537,11 @@ For details about the EXIF tags, see [image.PropertyKey](../../apis-image-kit/ar
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -691,7 +599,7 @@ Obtains the thumbnail of a file. This API uses an asynchronous callback to retur
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -747,7 +655,7 @@ Obtains the file thumbnail of the given size. This API uses an asynchronous call
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -810,7 +718,7 @@ Obtains the file thumbnail of the given size. This API uses a promise to return 
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -842,18 +750,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 open(mode: string, callback: AsyncCallback<number>): void
 ```
 
-Opens this file asset. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
-> close the file.
+Opens this file asset. This API uses an asynchronous callback to return the result. > **NOTE：**> > The write operations are mutually exclusive. After a write operation is complete, you must call **close** to > close the file.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -872,7 +775,7 @@ Opens this file asset. This API uses an asynchronous callback to return the resu
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -896,18 +799,13 @@ async function example(mgr: userFileManager.UserFileManager) {
 open(mode: string): Promise<number>
 ```
 
-Opens this file asset. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> The write operations are mutually exclusive. After a write operation is complete, you must call **close** to
-> close the file.
+Opens this file asset. This API uses a promise to return the result. > **NOTE：**> > The write operations are mutually exclusive. After a write operation is complete, you must call **close** to > close the file.
 
 **Since:** 9
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [open](@ohos.file.fs:fileIo.open)
+**Substitutes:** open
 
 **Required permissions:** ohos.permission.READ_IMAGEVIDEO or ohos.permission.READ_AUDIO or ohos.permission.WRITE_IMAGEVIDEO or ohos.permission.WRITE_AUDIO
 
@@ -931,7 +829,7 @@ Opens this file asset. This API uses a promise to return the result.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 async function example(mgr: userFileManager.UserFileManager) {
@@ -981,7 +879,7 @@ Sets a **FileAsset** parameter.
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1010,10 +908,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 setHidden(hiddenState: boolean, callback: AsyncCallback<void>): void
 ```
 
-Sets a file to hidden state. This API uses an asynchronous callback to return the result.
-
-The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to   
-**false** to remove them from the private album.
+Sets a file to hidden state. This API uses an asynchronous callback to return the result. The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1041,11 +936,11 @@ The private files set to hidden state are located in the private album (in hidde
 | Error Code ID |
 | --- |
 | 13900020 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1075,10 +970,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 setHidden(hiddenState: boolean): Promise<void>
 ```
 
-Sets this file asset to the hidden state. This API uses a promise to return the result.
-
-The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to   
-**false** to remove them from the private album.
+Sets this file asset to the hidden state. This API uses a promise to return the result. The private files set to hidden state are located in the private album (in hidden state) and are not open to third-party applications. After obtaining private files from the private album, users can set **hiddenState** to **false** to remove them from the private album.
 
 **Since:** 10
 
@@ -1111,11 +1003,11 @@ The private files set to hidden state are located in the private album (in hidde
 | Error Code ID |
 | --- |
 | 13900020 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1147,11 +1039,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 setUserComment(userComment: string, callback: AsyncCallback<void>): void
 ```
 
-Sets user comment information of an image or video. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API can only be used to set user comment information of an image or video.
+Sets user comment information of an image or video. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
 
@@ -1178,12 +1066,12 @@ Sets user comment information of an image or video. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1218,11 +1106,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 setUserComment(userComment: string): Promise<void>
 ```
 
-Sets user comment information of an image or video. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API can only be used to set user comment information of an image or video.
+Sets user comment information of an image or video. This API uses a promise to return the result. > **NOTE：**> > This API can only be used to set user comment information of an image or video.
 
 **Since:** 10
 
@@ -1254,12 +1138,12 @@ Sets user comment information of an image or video. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
-For details about how to create a userFileManager instance, see the example in [userFileManager.getUserFileMgr](#userfilemanagergetuserfilemgr).
+For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -1332,8 +1216,7 @@ Type of the file.
 readonly uri: string
 ```
 
-Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayName.jpg**. For details, see   
-[Media File URI](../../../file-management/user-file-uri-intro.md#media-file-uri).
+Media asset URI, for example, **file://media/Photo/1/IMG_datetime_0001/displayName.jpg**. For details, see [Media File URI](../../../file-management/user-file-uri-intro.md#media-file-uri).
 
 **Type:** string
 

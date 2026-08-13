@@ -4,11 +4,13 @@
 type OnNativeEmbedObjectParamChangeCallback = (event: NativeEmbedParamDataInfo) => void
 ```
 
-Defines a callback triggered when the **param** element embedded in the same-layer rendered **object** tag is added,modified, or deleted.
+Defines a callback triggered when the **param** element embedded in the same-layer rendered **object** tag is added, modified, or deleted.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-type OnNativeEmbedObjectParamChangeCallback = (event: NativeEmbedParamDataInfo) => void--><!--Device-unnamed-type OnNativeEmbedObjectParamChangeCallback = (event: NativeEmbedParamDataInfo) => void-End-->
 

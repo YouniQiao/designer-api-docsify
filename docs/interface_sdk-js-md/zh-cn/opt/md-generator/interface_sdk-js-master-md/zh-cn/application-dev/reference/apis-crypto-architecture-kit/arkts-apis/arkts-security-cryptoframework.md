@@ -2,7 +2,9 @@
 
 提供统一的密码算法库加解密接口，以屏蔽底层硬件和算法库。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。
@@ -18,19 +20,19 @@
 
 | 名称 |
 | --- |
-| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator) |
-| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) |
-| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) |
-| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf) |
-| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem) |
-| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement) |
-| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac) |
-| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac-1) |
-| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd) |
-| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom) |
-| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign) |
-| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator) |
-| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) |
+| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createAsyKeyGenerator) |
+| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) |
+| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createCipher) |
+| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createKdf) |
+| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createKem) |
+| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createKeyAgreement) |
+| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createMac) |
+| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createMac) |
+| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createMd) |
+| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createRandom) |
+| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createSign) |
+| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator) |
+| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createVerify) |
 
 ### 类
 

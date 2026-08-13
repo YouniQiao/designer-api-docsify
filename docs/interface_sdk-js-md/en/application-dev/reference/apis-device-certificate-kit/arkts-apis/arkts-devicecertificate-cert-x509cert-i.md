@@ -2,9 +2,11 @@
 
 Provides APIs for X.509 certificate operations.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface X509Cert--><!--Device-cert-interface X509Cert-End-->
 
@@ -24,9 +26,11 @@ checkValidityWithDate(date: string): void
 
 Checks the validity period of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,29 +48,25 @@ Checks the validity period of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19030003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
-| [19030004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
 
 ## getBasicConstraints
 
-ArkTS-Dyn:
-```TypeScript
-getBasicConstraints(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBasicConstraints(): int
 ```
 
 Obtains the basic constraints of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -78,7 +78,7 @@ Obtains the basic constraints of this X.509 certificate.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Basic constraints obtained. |
+| int | Basic constraints obtained. |
 
 ## getCRLDistributionPoint
 
@@ -88,11 +88,13 @@ getCRLDistributionPoint(): DataArray
 
 Obtains the CRL distribution points of this X.509 certificate.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getCRLDistributionPoint(): DataArray--><!--Device-X509Cert-getCRLDistributionPoint(): DataArray-End-->
 
@@ -108,9 +110,9 @@ Obtains the CRL distribution points of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getCertSerialNumber
 
@@ -120,9 +122,11 @@ getCertSerialNumber(): bigint
 
 Obtains the X.509 certificate serial number.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -140,7 +144,7 @@ Obtains the X.509 certificate serial number.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
 
 ## getEncoded
 
@@ -150,9 +154,11 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 Obtains the serialized X.509 certificate data. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -164,16 +170,16 @@ Obtains the serialized X.509 certificate data. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 certificate data obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EncodingBlob](arkts-devicecertificate-cert-encodingblob-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**, and **data** is the serialized X.509 certificate data obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getEncoded
 
@@ -183,9 +189,11 @@ getEncoded(): Promise<EncodingBlob>
 
 Obtains the serialized X.509 certificate data. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -203,10 +211,10 @@ Obtains the serialized X.509 certificate data. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getExtKeyUsage
 
@@ -216,9 +224,11 @@ getExtKeyUsage(): DataArray
 
 Obtains the usage of the extended key of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -236,9 +246,9 @@ Obtains the usage of the extended key of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getExtensionsObject
 
@@ -248,11 +258,13 @@ getExtensionsObject(): CertExtension
 
 Obtains the certificate extension object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getExtensionsObject(): CertExtension--><!--Device-X509Cert-getExtensionsObject(): CertExtension-End-->
 
@@ -268,9 +280,9 @@ Obtains the certificate extension object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerAltNames
 
@@ -278,15 +290,13 @@ Obtains the certificate extension object.
 getIssuerAltNames(): DataArray
 ```
 
-Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
+Obtains the Issuer Alternative Names (IANs) of this X.509 certificate. > **NOTE：**> > The obtained IANs contain a string terminator.
 
-> **NOTE：**
-> 
-> The obtained IANs contain a string terminator.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -304,9 +314,9 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerName
 
@@ -314,18 +324,13 @@ Obtains the Issuer Alternative Names (IANs) of this X.509 certificate.
 getIssuerName(): DataBlob
 ```
 
-Obtains the issuer name of this X.509 certificate.
+Obtains the issuer name of this X.509 certificate. > **NOTE：**> > - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove > this terminator based on your business requirements. > - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name > string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
 
-> **NOTE：**
-> 
-> - The obtained X.509 certificate issuer name ends with a NUL terminator (value 0). Determine whether to remove
-> this terminator based on your business requirements.
-> - The obtained certificate issuer name is ASCII-encoded. When converted to a string, it is a distinguished name
-> string that starts with a slash (/) and uses slashes (/) to separate relative distinguished names.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -343,9 +348,9 @@ Obtains the issuer name of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerName
 
@@ -355,11 +360,13 @@ getIssuerName(encodingType: EncodingType): string
 
 Obtains the issuer name of this X.509 certificate based on the encoding type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string--><!--Device-X509Cert-getIssuerName(encodingType: EncodingType): string-End-->
 
@@ -381,10 +388,10 @@ Obtains the issuer name of this X.509 certificate based on the encoding type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getIssuerX500DistinguishedName
 
@@ -394,11 +401,13 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 
 Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -414,9 +423,9 @@ Obtains the X.500 distinguished name object of the X.509 certificate issuer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getItem
 
@@ -426,9 +435,11 @@ getItem(itemType: CertItemType): DataBlob
 
 Obtains the fields in the X.509 certificate.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -452,10 +463,10 @@ Obtains the fields in the X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getKeyUsage
 
@@ -465,9 +476,11 @@ getKeyUsage(): DataBlob
 
 Obtains the key usage of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -485,8 +498,8 @@ Obtains the key usage of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getNotAfterTime
 
@@ -496,9 +509,11 @@ getNotAfterTime(): string
 
 Obtains the expiration time of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -516,9 +531,9 @@ Obtains the expiration time of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getNotBeforeTime
 
@@ -528,9 +543,11 @@ getNotBeforeTime(): string
 
 Obtains the start time of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -548,9 +565,9 @@ Obtains the start time of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getPublicKey
 
@@ -560,9 +577,11 @@ getPublicKey(): cryptoFramework.PubKey
 
 Obtains the public key of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -580,8 +599,8 @@ Obtains the public key of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSerialNumber
 
@@ -589,12 +608,7 @@ Obtains the public key of this X.509 certificate.
 getSerialNumber(): number
 ```
 
-Obtains the X.509 certificate serial number.
-
-> **NOTE：**
-> 
-> This API is supported since API version 9 and deprecated since API version 10. Use
-> [X509Cert.getCertSerialNumber()](#getCertSerialNumber) instead.
+Obtains the X.509 certificate serial number. > **NOTE：**> > This API is supported since API version 9 and deprecated since API version 10. Use > [X509Cert.getCertSerialNumber()](#getCertSerialNumber) instead.
 
 **Since:** 9
 
@@ -622,9 +636,11 @@ getSignature(): DataBlob
 
 Obtains the signature data of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -642,9 +658,9 @@ Obtains the signature data of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignatureAlgName
 
@@ -654,9 +670,11 @@ getSignatureAlgName(): string
 
 Obtains the signing algorithm of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -674,9 +692,9 @@ Obtains the signing algorithm of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignatureAlgOid
 
@@ -686,9 +704,11 @@ getSignatureAlgOid(): string
 
 Obtains the object identifier (OID) of the X.509 certificate signing algorithm. OIDs are allocated by the International Organization for Standardization (ISO).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -706,9 +726,9 @@ Obtains the object identifier (OID) of the X.509 certificate signing algorithm. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSignatureAlgParams
 
@@ -718,9 +738,11 @@ getSignatureAlgParams(): DataBlob
 
 Obtains the signing algorithm parameters of this X.509 certificate.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -738,10 +760,10 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | This operation is not supported. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSubjectAltNames
 
@@ -749,15 +771,13 @@ Obtains the signing algorithm parameters of this X.509 certificate.
 getSubjectAltNames(): DataArray
 ```
 
-Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
+Obtains the Subject Alternative Names (SANs) of this X.509 certificate. > **NOTE：**> > The obtained SANs contain a string terminator.
 
-> **NOTE：**
-> 
-> The obtained SANs contain a string terminator.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -775,9 +795,9 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSubjectName
 
@@ -785,21 +805,13 @@ Obtains the Subject Alternative Names (SANs) of this X.509 certificate.
 getSubjectName(encodingType?: EncodingType): DataBlob
 ```
 
-Obtains the subject name of this X.509 certificate.
+Obtains the subject name of this X.509 certificate. > **NOTE：**> > - If the encodingType parameter is not set, the obtained certificate subject name ends with a > NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements. > - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When > converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to > separate relative distinguished names. > - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate > subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
 
-> **NOTE：**
-> 
-> - If the encodingType parameter is not set, the obtained certificate subject name ends with a
-> NUL terminator (value 0). Determine whether to remove this terminator based on your business requirements.
-> - If the encodingType parameter is not set, the obtained certificate subject name is ASCII-encoded. When
-> converted to a string, it is a distinguished name string that starts with a slash (/) and uses slashes (/) to
-> separate relative distinguished names.
-> - It is recommended to set the encodingType parameter to EncodingType.ENCODING_UTF8. The obtained certificate
-> subject name is a distinguished name string that uses commas (,) to separate relative distinguished names.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -823,10 +835,10 @@ Obtains the subject name of this X.509 certificate.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed.<br>**Applicable version:** 12 and later |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Incorrect parameter types; &lt;br&gt;2. Parameter verification failed.<br>**Applicable version:** 12 and later |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getSubjectX500DistinguishedName
 
@@ -836,11 +848,13 @@ getSubjectX500DistinguishedName(): X500DistinguishedName
 
 Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName--><!--Device-X509Cert-getSubjectX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -856,27 +870,23 @@ Obtains the X.500 distinguished name object of the X.509 certificate subject.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getVersion
 
-ArkTS-Dyn:
-```TypeScript
-getVersion(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getVersion(): int
 ```
 
 Obtains the X.509 certificate version.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -888,7 +898,7 @@ Obtains the X.509 certificate version.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | X.509 certificate version obtained. |
+| int | X.509 certificate version obtained. |
 
 ## hashCode
 
@@ -898,11 +908,13 @@ hashCode(): Uint8Array
 
 Obtains the hash value of the data in DER format.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-hashCode(): Uint8Array--><!--Device-X509Cert-hashCode(): Uint8Array-End-->
 
@@ -918,9 +930,9 @@ Obtains the hash value of the data in DER format.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## match
 
@@ -930,9 +942,11 @@ match(param: X509CertMatchParameters): boolean
 
 Checks whether this certificate matches the specified parameters.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -956,9 +970,9 @@ Checks whether this certificate matches the specified parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## toString
 
@@ -968,11 +982,13 @@ toString(): string
 
 Converts the object data into a string.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-toString(): string--><!--Device-X509Cert-toString(): string-End-->
 
@@ -988,9 +1004,9 @@ Converts the object data into a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## toString
 
@@ -1000,11 +1016,13 @@ toString(encodingType: EncodingType): string
 
 Converts this object into a string in the specified encoding format.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X509Cert-toString(encodingType: EncodingType): string--><!--Device-X509Cert-toString(encodingType: EncodingType): string-End-->
 
@@ -1026,10 +1044,10 @@ Converts this object into a string in the specified encoding format.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## verify
 
@@ -1039,9 +1057,11 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 Verifies the certificate signature. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1054,14 +1074,14 @@ Verifies the certificate signature. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | cryptoFramework.PubKey | Yes | Public key used for signature verification. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## verify
 
@@ -1071,9 +1091,11 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 Verifies the certificate signature. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1097,6 +1119,6 @@ Verifies the certificate signature. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 

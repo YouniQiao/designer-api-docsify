@@ -1,10 +1,12 @@
 # ZoneRules
 
-Provides the API for obtaining timezone offset changing rules information.
+Queries the time zone transition rule.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class ZoneRules--><!--Device-i18n-export class ZoneRules-End-->
 
@@ -22,11 +24,13 @@ import { i18n } from '@kit.LocalizationKit';
 public nextTransition(date?: double): ZoneOffsetTransition
 ```
 
-Get the next timezone offset transition after date.
+Obtains the **nextTransition** object for the specified time.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -38,11 +42,11 @@ Get the next timezone offset transition after date.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| date | double | No | Indicates milliseconds. |
+| date | double | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](arkts-localization-i18n-zoneoffsettransition-c.md) | Returns a timezone offset transition after date. |
+| [ZoneOffsetTransition](../../apis-na/arkts-apis/arkts-na-i18n-zoneoffsettransition-c.md) | ZoneOffsetTransition** object for next transition. |
 

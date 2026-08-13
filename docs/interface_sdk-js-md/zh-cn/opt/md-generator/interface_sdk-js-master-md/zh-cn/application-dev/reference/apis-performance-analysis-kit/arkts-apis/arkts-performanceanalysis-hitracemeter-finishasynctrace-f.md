@@ -6,13 +6,13 @@
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: number): void
 ```
 
-标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。
+标记一个异步跟踪耗时任务的结束，分级控制跟踪输出。 finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)对应参数值一致。
 
-finishAsyncTrace的level、name和taskId必须与流程开始的[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace)对应参数值一致。
+**起始版本：** 23
 
-**起始版本：** 19
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void--><!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void-End-->
 

@@ -1,18 +1,8 @@
 # WindowExtensionContext（系统接口）
 
-WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext)。
+WindowExtensionContext模块是WindowExtensionAbility的上下文环境，继承自[ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md#ExtensionContext)。 WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility（系统接口）)具有的能力，包括启动 Ability。 > **说明：** > > - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext)。 > > - 本模块接口为系统接口。 > > - 本模块接口仅可在Stage模型下使用。
 
-WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md#WindowExtensionAbility)具有的能力，包括启动Ability。
-
-> **说明：**
-> 
-> - 从API version 21开始废弃，推荐使用[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext)。
-> 
-> - 本模块接口为系统接口。
-> 
-> - 本模块接口仅可在Stage模型下使用。
-
-**继承/实现关系：** WindowExtensionContext extends [ExtensionContext](ExtensionContext)
+**继承/实现关系：** WindowExtensionContext extends ExtensionContext
 
 **起始版本：** 9
 
@@ -20,7 +10,7 @@ WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-applicati
 
 **废弃版本：** 21
 
-<!--Device-unnamed-declare class WindowExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class WindowExtensionContext extends ExtensionContext-End-->
+<!--Device-unnamed-declare class WindowExtensionContext--><!--Device-unnamed-declare class WindowExtensionContext-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -32,13 +22,7 @@ WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-applicati
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-启动Ability，使用callback异步回调。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用
-> [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startAbility)
-> 。
+启动Ability，使用callback异步回调。 > **说明：** > > - 从API version 9开始支持，从API version 21开始废弃，推荐使用 > [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startAbility) > 。
 
 **起始版本：** 9
 
@@ -60,14 +44,14 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-application-want-want-depr-c.md) | 是 | 启动Ability的want信息。 |
 | options | [StartOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | callback形式返回启动结果。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -115,13 +99,7 @@ class WindowExtAbility extends WindowExtensionAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-启动Ability，使用Promise异步回调。
-
-> **说明：**
-> 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用
-> [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startAbility-2)
-> 。
+启动Ability，使用Promise异步回调。 > **说明：** > > - 从API version 9开始支持，从API version 21开始废弃，推荐使用 > [UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startAbility) > 。
 
 **起始版本：** 9
 
@@ -154,8 +132,8 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 
 ## 示例
 

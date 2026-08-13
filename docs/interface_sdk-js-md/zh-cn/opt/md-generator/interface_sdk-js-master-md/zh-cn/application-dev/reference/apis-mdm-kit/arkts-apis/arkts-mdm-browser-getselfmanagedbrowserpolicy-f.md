@@ -10,6 +10,8 @@ function getSelfManagedBrowserPolicy(): ArrayBuffer
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer--><!--Device-browser-function getSelfManagedBrowserPolicy(): ArrayBuffer-End-->

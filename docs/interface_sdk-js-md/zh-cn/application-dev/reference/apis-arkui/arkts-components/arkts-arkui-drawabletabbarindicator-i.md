@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface DrawableTabBarIndicator--><!--Device-unnamed-declare interface DrawableTabBarIndicator-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@
 borderRadius?: Length
 ```
 
-下划线的圆角半径（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞)。异常值时取默认值。
+下划线的圆角半径（不支持百分比设置）。 默认值：0.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -31,6 +27,8 @@ borderRadius?: Length
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,16 +44,15 @@ borderRadius?: Length
 drawable?: DrawableDescriptor
 ```
 
-下划线的图源。支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)、  
-[PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md#PixelMapDrawableDescriptor)、  
-[LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#LayeredDrawableDescriptor)和  
-[AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor)类型。当传入无效图源时将显示默认的实线型下划线。
+下划线的图源。 支持[DrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult)、 [PixelMapDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-pixelmapdrawabledescriptor-c.md#PixelMapDrawableDescriptor)、 [LayeredDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#LayeredDrawableDescriptor)和 [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor)类型。当传入无效图源时将显示默认的实线型下划 线。
 
 **类型：** [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md)
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,13 +68,7 @@ drawable?: DrawableDescriptor
 height?: Length
 ```
 
-下划线的高度（不支持百分比设置）。
-
-默认值：2.0
-
-单位：vp
-
-取值范围：[0, +∞)。异常值时取默认值。
+下划线的高度（不支持百分比设置）。 默认值：2.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -86,6 +77,8 @@ height?: Length
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,13 +94,7 @@ height?: Length
 marginTop?: Length
 ```
 
-下划线与文字的间距（不支持百分比设置）。
-
-默认值：8.0
-
-单位：vp
-
-取值范围：[0, +∞)。异常值时取默认值。
+下划线与文字的间距（不支持百分比设置）。 默认值：8.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。
 
 **类型：** Length
 
@@ -116,6 +103,8 @@ marginTop?: Length
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,15 +120,7 @@ marginTop?: Length
 width?: Length
 ```
 
-下划线的宽度（不支持百分比设置）。
-
-默认值：0.0
-
-单位：vp
-
-取值范围：[0, +∞)。异常值时取默认值。
-
-宽度设置为0时，按页签文本宽度显示。
+下划线的宽度（不支持百分比设置）。 默认值：0.0 单位：vp 取值范围：[0, +∞)。异常值时取默认值。 宽度设置为0时，按页签文本宽度显示。
 
 **类型：** Length
 
@@ -148,6 +129,8 @@ width?: Length
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

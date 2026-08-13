@@ -1,12 +1,12 @@
 # MouseController
 
-Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements:
-
-1. A mouse button can be pressed only when it is in the released state.2. A mouse button can only be released after it has been pressed.3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls,and end with an **endAxis** call.4. Only one axis event sequence can be in progress at a time.
+Provides the capability of simulating mouse operations. The simulated mouse operation sequence must meet the following requirements: 1. A mouse button can be pressed only when it is in the released state. 2. A mouse button can only be released after it has been pressed. 3. A valid axis event sequence must begin with a **beginAxis** call, followed by zero or more **updateAxis** calls, and end with an **endAxis** call. 4. Only one axis event sequence can be in progress at a time.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-inputEventClient-interface MouseController--><!--Device-inputEventClient-interface MouseController-End-->
 
@@ -20,12 +20,6 @@ import { inputEventClient } from '@kit.InputKit';
 
 ## beginAxis
 
-ArkTS-Dyn:
-```TypeScript
-beginAxis(axis: Axis, value: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 beginAxis(axis: Axis, value: int): Promise<void>
 ```
@@ -34,7 +28,9 @@ Starts an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -49,7 +45,7 @@ Starts an axis event. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes | Axis type. |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Axis value. |
+| value | int | Yes | Axis value. |
 
 **Return value:**
 
@@ -61,9 +57,9 @@ Starts an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The axis event is in progress. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is in progress. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## endAxis
 
@@ -75,7 +71,9 @@ Ends an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -101,18 +99,12 @@ Ends an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## moveTo
 
-ArkTS-Dyn:
-```TypeScript
-moveTo(displayId: number, displayX: number, displayY: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveTo(displayId: int, displayX: int, displayY: int): Promise<void>
 ```
@@ -121,7 +113,9 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -135,9 +129,9 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target display. |
-| displayX | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | X coordinate relative to the left edge of the display, in px. If the value exceeds the valid range of the display, the actual coordinate will be clamped to the valid range [0, display width - 1]. |
-| displayY | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Y coordinate relative to the top edge of the display, in px. If the value exceeds the valid range of the display, the actual coordinate will be clamped to the valid range [0, display height - 1]. |
+| displayId | int | Yes | ID of the target display. |
+| displayX | int | Yes | X coordinate relative to the left edge of the display, in px. If the value exceeds the valid range of the display, the actual coordinate will be clamped to the valid range [0, display width - 1]. |
+| displayY | int | Yes | Y coordinate relative to the top edge of the display, in px. If the value exceeds the valid range of the display, the actual coordinate will be clamped to the valid range [0, display height - 1]. |
 
 **Return value:**
 
@@ -149,9 +143,9 @@ Moves the mouse cursor to the specified display coordinates. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) | The display does not exist. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## pressButton
 
@@ -163,7 +157,9 @@ Presses a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -189,9 +185,9 @@ Presses a mouse button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The mouse button is already pressed. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The mouse button is already pressed. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## releaseButton
 
@@ -203,7 +199,9 @@ Release a mouse button. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -229,18 +227,12 @@ Release a mouse button. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The mouse button is not pressed. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The mouse button is not pressed. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## updateAxis
 
-ArkTS-Dyn:
-```TypeScript
-updateAxis(axis: Axis, value: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 updateAxis(axis: Axis, value: int): Promise<void>
 ```
@@ -249,7 +241,9 @@ Updates an axis event. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -264,7 +258,7 @@ Updates an axis event. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | axis | [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md) | Yes | Axis type. |
-| value | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Axis value. |
+| value | int | Yes | Axis value. |
 
 **Return value:**
 
@@ -276,7 +270,7 @@ Updates an axis event. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) | The axis event is not in progress. |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 

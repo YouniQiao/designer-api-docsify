@@ -2,7 +2,9 @@
 
 Enumerates the default application types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-defaultAppManager-export enum ApplicationType--><!--Device-defaultAppManager-export enum ApplicationType-End-->
 
@@ -16,7 +18,9 @@ BROWSER = "Web Browser"
 
 Default browser.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-BROWSER = "Web Browser"--><!--Device-ApplicationType-BROWSER = "Web Browser"-End-->
 
@@ -30,7 +34,9 @@ IMAGE = "Image Gallery"
 
 Default image viewer.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-IMAGE = "Image Gallery"--><!--Device-ApplicationType-IMAGE = "Image Gallery"-End-->
 
@@ -44,7 +50,9 @@ AUDIO = "Audio Player"
 
 Default audio player.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-AUDIO = "Audio Player"--><!--Device-ApplicationType-AUDIO = "Audio Player"-End-->
 
@@ -58,7 +66,9 @@ VIDEO = "Video Player"
 
 Default video player.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-VIDEO = "Video Player"--><!--Device-ApplicationType-VIDEO = "Video Player"-End-->
 
@@ -72,7 +82,9 @@ PDF = "PDF Viewer"
 
 Default PDF reader.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-PDF = "PDF Viewer"--><!--Device-ApplicationType-PDF = "PDF Viewer"-End-->
 
@@ -86,7 +98,9 @@ WORD = "Word Viewer"
 
 Default Word viewer.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-WORD = "Word Viewer"--><!--Device-ApplicationType-WORD = "Word Viewer"-End-->
 
@@ -100,7 +114,9 @@ EXCEL = "Excel Viewer"
 
 Default Excel viewer.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-EXCEL = "Excel Viewer"--><!--Device-ApplicationType-EXCEL = "Excel Viewer"-End-->
 
@@ -114,7 +130,9 @@ PPT = "PPT Viewer"
 
 Default PowerPoint viewer.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-PPT = "PPT Viewer"--><!--Device-ApplicationType-PPT = "PPT Viewer"-End-->
 
@@ -128,7 +146,9 @@ EMAIL = 'Email'
 
 Default email.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationType-EMAIL = 'Email'--><!--Device-ApplicationType-EMAIL = 'Email'-End-->
 

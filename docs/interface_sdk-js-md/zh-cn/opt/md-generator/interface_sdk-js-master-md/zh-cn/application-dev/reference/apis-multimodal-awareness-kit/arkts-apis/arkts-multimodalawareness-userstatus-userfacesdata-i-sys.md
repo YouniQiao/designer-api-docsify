@@ -2,11 +2,13 @@
 
 用户面部数据。
 
-**继承/实现关系：** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**继承/实现关系：** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData（系统接口）)
 
 **起始版本：** 26.0.0
 
-<!--Device-userStatus-export interface UserFacesData extends UserStatusData--><!--Device-userStatus-export interface UserFacesData extends UserStatusData-End-->
+**废弃版本：** -1
+
+<!--Device-userStatus-export interface UserFacesData--><!--Device-userStatus-export interface UserFacesData-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -23,6 +25,8 @@ angularVelocity?: number[]
 **类型：** number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ azimuth?: number[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserFacesData-azimuth?: double[]--><!--Device-UserFacesData-azimuth?: double[]-End-->
@@ -63,6 +69,8 @@ faceNum?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ gravityAcceleration?: number[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserFacesData-gravityAcceleration?: double[]--><!--Device-UserFacesData-gravityAcceleration?: double[]-End-->
@@ -104,6 +114,8 @@ linearAcceleration?: number[][]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UserFacesData-linearAcceleration?: double[][]--><!--Device-UserFacesData-linearAcceleration?: double[][]-End-->
@@ -123,6 +135,8 @@ visualAngle?: number[]
 **类型：** number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

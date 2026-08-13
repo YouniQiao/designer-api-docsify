@@ -4,7 +4,9 @@ Construct a new type for each item.
 
 **Since:** 12
 
-<!--Device-unnamed-interface RepeatItem<T>--><!--Device-unnamed-interface RepeatItem<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface RepeatItem--><!--Device-unnamed-interface RepeatItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ Index corresponding to the current data item.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ Each data item in the **arr** array. **T** indicates the data type passed in.
 **Type:** T
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

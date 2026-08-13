@@ -1,0 +1,54 @@
+# LazyForEachReleaseStrategy
+
+Enumerates the release strategies for LazyForEach discarded nodes.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export enum LazyForEachReleaseStrategy--><!--Device-unnamed-export enum LazyForEachReleaseStrategy-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## BATCH
+
+```TypeScript
+BATCH = 0
+```
+
+Release all discarded nodes during the next idle period.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LazyForEachReleaseStrategy-BATCH = 0--><!--Device-LazyForEachReleaseStrategy-BATCH = 0-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## PROGRESSIVE
+
+```TypeScript
+PROGRESSIVE = 1
+```
+
+Release discarded nodes one by one during the next idle period based on the remaining time of the current frame. Unreleased nodes will continue to be released in subsequent idle periods based on the available idle time.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LazyForEachReleaseStrategy-PROGRESSIVE = 1--><!--Device-LazyForEachReleaseStrategy-PROGRESSIVE = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

@@ -2,7 +2,9 @@
 
 Describes the contents of the bluetooth scan results.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface BluetoothScanResult--><!--Device-geoLocationManager-export interface BluetoothScanResult-End-->
 
@@ -24,7 +26,9 @@ Connectable of the scanned device
 
 **Type:** boolean
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-connectable: boolean--><!--Device-BluetoothScanResult-connectable: boolean-End-->
 
@@ -40,7 +44,9 @@ The raw data of broadcast packet
 
 **Type:** ArrayBuffer
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-data?: ArrayBuffer--><!--Device-BluetoothScanResult-data?: ArrayBuffer-End-->
 
@@ -56,7 +62,9 @@ Address of the scanned device
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-deviceId: string--><!--Device-BluetoothScanResult-deviceId: string-End-->
 
@@ -72,7 +80,9 @@ The local name of the scanned device
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-deviceName: string--><!--Device-BluetoothScanResult-deviceName: string-End-->
 
@@ -88,7 +98,9 @@ RSSI of the scanned device
 
 **Type:** number
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothScanResult-rssi: int--><!--Device-BluetoothScanResult-rssi: int-End-->
 

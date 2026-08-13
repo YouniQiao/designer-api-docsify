@@ -20,7 +20,7 @@ Sets a value for the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSync](ohos.systemParameterEnhance.setSync)
+**Substitutes:** setSync
 
 <!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
 

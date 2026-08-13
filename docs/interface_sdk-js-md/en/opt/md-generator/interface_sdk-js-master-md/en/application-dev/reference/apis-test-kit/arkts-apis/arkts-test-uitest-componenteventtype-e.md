@@ -2,7 +2,9 @@
 
 Enumerates the component operation event types that can be listened for.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ComponentEventType--><!--Device-unnamed-declare enum ComponentEventType-End-->
 
@@ -14,13 +16,13 @@ Enumerates the component operation event types that can be listened for.
 COMPONENT_UNDEFINED = 0
 ```
 
-Non-component operation event.
+Non-component operation event. Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
 
-Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0--><!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0-End-->
 
@@ -34,9 +36,11 @@ COMPONENT_CLICKED = 1
 
 Component clicked event.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventType-COMPONENT_CLICKED = 1--><!--Device-ComponentEventType-COMPONENT_CLICKED = 1-End-->
 
@@ -50,9 +54,11 @@ COMPONENT_LONG_CLICKED = 2
 
 Component long-clicked event.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventType-COMPONENT_LONG_CLICKED = 2--><!--Device-ComponentEventType-COMPONENT_LONG_CLICKED = 2-End-->
 
@@ -66,9 +72,11 @@ COMPONENT_SCROLL_START = 3
 
 Component scroll start event.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3--><!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3-End-->
 
@@ -82,9 +90,11 @@ COMPONENT_SCROLL_END = 4
 
 Component scroll end event.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventType-COMPONENT_SCROLL_END = 4--><!--Device-ComponentEventType-COMPONENT_SCROLL_END = 4-End-->
 
@@ -98,9 +108,11 @@ COMPONENT_TEXT_CHANGED = 5
 
 Text change event of the [text input component](../../../ui/arkts-common-components-text-input.md).
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ComponentEventType-COMPONENT_TEXT_CHANGED = 5--><!--Device-ComponentEventType-COMPONENT_TEXT_CHANGED = 5-End-->
 

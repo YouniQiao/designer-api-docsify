@@ -4,6 +4,8 @@ TextStyleInterface
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextStyleInterface--><!--Device-unnamed-declare interface TextStyleInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ TextStyleInterface
 fontColor?: ResourceColor
 ```
 
-Font color.
-
-Default value: theme color.
+Font color. Default value: theme color.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +44,8 @@ Font configuration. The default value is inherited from [FontConfigs](arkts-arku
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -56,13 +60,13 @@ Font configuration. The default value is inherited from [FontConfigs](arkts-arku
 fontFamily?: ResourceStr
 ```
 
-Font family.
-
-Default value: theme font.
+Font family. Default value: theme font.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,17 +82,13 @@ Default value: theme font.
 fontSize?: LengthMetrics
 ```
 
-Font size.
-
-Default value: 16 fp.
-
-If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead.
-
-Unit: [fp](common)
+Font size. Default value: 16 fp. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 16 fp is used instead. Unit: fp
 
 **Type:** LengthMetrics
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,13 +104,13 @@ Unit: [fp](common)
 fontStyle?: FontStyle
 ```
 
-Font style.
-
-Default value: **FontStyle.Normal**.
+Font style. Default value: **FontStyle.Normal**.
 
 **Type:** FontStyle
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,17 +126,13 @@ Default value: **FontStyle.Normal**.
 fontVariations?: Array<FontVariation>
 ```
 
-Variable font attributes.
-
-Default value: **undefined**, indicating that variable font attributes are not set.
-
-The priority of **fontVariations** is higher than that of **fontWeight**.
-
-**Since**: 26.0.0
+Variable font attributes. Default value: **undefined**, indicating that variable font attributes are not set. The priority of **fontVariations** is higher than that of **fontWeight**. **Since**: 26.0.0
 
 **Type:** Array&lt;FontVariation&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -152,15 +148,13 @@ The priority of **fontVariations** is higher than that of **fontWeight**.
 fontWeight?: number | FontWeight | string
 ```
 
-Font weight.
-
-For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example,  
-**400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**,  
-**regular**, and **medium**.
+Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.
 
 **Type:** number \| FontWeight \| string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,13 +170,13 @@ For the number type, the value ranges from 100 to 900, at an interval of 100. A 
 strokeColor?: ResourceColor
 ```
 
-Text stroke color.
-
-Default value: text color. If invalid values are provided, the text color is used.
+Text stroke color. Default value: text color. If invalid values are provided, the text color is used.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,15 +192,13 @@ Default value: text color. If invalid values are provided, the text color is use
 strokeJoinStyle?: StrokeJoinStyle
 ```
 
-Text stroke join style.
-
-Default value: **StrokeJoinStyle.MITER_JOIN**.
-
-**Since**: 26.0.0.
+Text stroke join style. Default value: **StrokeJoinStyle.MITER_JOIN**. **Since**: 26.0.0.
 
 **Type:** [StrokeJoinStyle](arkts-arkui-strokejoinstyle-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,15 +214,13 @@ Default value: **StrokeJoinStyle.MITER_JOIN**.
 strokeWidth?: LengthMetrics
 ```
 
-Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 0 is used instead.
-
-If the value is less than 0, the text is solid. If the value is greater than 0, the text is hollow.
-
-Default value: **0**.
+Text stroke width. If **unit** of **LengthMetrics** is percent, the setting does not take effect, and 0 is used instead. If the value is less than 0, the text is solid. If the value is greater than 0, the text is hollow. Default value: **0**.
 
 **Type:** LengthMetrics
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,13 +236,13 @@ Default value: **0**.
 superscript?: SuperscriptStyle
 ```
 
-Superscript or subscript for the text.
-
-Default value: **SuperscriptStyle.NORMAL**.
+Superscript or subscript for the text. Default value: **SuperscriptStyle.NORMAL**.
 
 **Type:** [SuperscriptStyle](arkts-arkui-superscriptstyle-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

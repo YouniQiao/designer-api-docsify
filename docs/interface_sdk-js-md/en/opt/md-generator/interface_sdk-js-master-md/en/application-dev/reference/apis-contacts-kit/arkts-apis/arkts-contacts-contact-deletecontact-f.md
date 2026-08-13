@@ -18,7 +18,7 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [deleteContact](contact.deleteContact(context:)
+**Substitutes:** [deleteContact](#deleteContact)(context: Context, key: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -65,6 +65,8 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 <!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void--><!--Device-contact-function deleteContact(context: Context, key: string, callback: AsyncCallback<void>): void-End-->
@@ -83,12 +85,12 @@ Deletes a contact. This API uses an asynchronous callback to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -123,7 +125,7 @@ Deletes a contact. This API uses a promise to return the result.
 
 **Deprecated since:** 10
 
-**Substitutes:** [deleteContact](contact.deleteContact(context:)
+**Substitutes:** [deleteContact](#deleteContact)(context: Context, key: string)
 
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
@@ -169,6 +171,8 @@ Deletes a contact. This API uses a promise to return the result.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 <!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>--><!--Device-contact-function deleteContact(context: Context, key: string): Promise<void>-End-->
@@ -192,12 +196,12 @@ Deletes a contact. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

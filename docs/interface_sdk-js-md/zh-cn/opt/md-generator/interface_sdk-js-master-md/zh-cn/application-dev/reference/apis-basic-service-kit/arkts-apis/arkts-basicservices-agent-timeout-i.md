@@ -1,9 +1,10 @@
 # Timeout
 
-任务的超时配置。任务处于等待状态的时间不参与计算，上传下载任务会存在以下任务等待的原因:  
-[WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#WaitingReason)。
+任务的超时配置。任务处于等待状态的时间不参与计算，上传下载任务会存在以下任务等待的原因: [WaitingReason&lt;sup&gt;20+&lt;/sup&gt;](arkts-basicservices-agent-waitingreason-e.md#WaitingReason) 。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-agent-interface Timeout--><!--Device-agent-interface Timeout-End-->
 
@@ -19,7 +20,9 @@ connectionTimeout?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Timeout-connectionTimeout?: int--><!--Device-Timeout-connectionTimeout?: int-End-->
 
@@ -35,7 +38,9 @@ totalTimeout?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Timeout-totalTimeout?: int--><!--Device-Timeout-totalTimeout?: int-End-->
 

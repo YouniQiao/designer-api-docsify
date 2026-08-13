@@ -2,7 +2,9 @@
 
 打印应用事件的枚举。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-enum ApplicationEvent--><!--Device-print-enum ApplicationEvent-End-->
 
@@ -16,7 +18,9 @@ APPLICATION_CREATED = 0
 
 表示打印应用被拉起的事件。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationEvent-APPLICATION_CREATED = 0--><!--Device-ApplicationEvent-APPLICATION_CREATED = 0-End-->
 
@@ -30,7 +34,9 @@ APPLICATION_CLOSED_FOR_STARTED = 1
 
 表示由于点击打印而关闭打印应用的事件。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationEvent-APPLICATION_CLOSED_FOR_STARTED = 1--><!--Device-ApplicationEvent-APPLICATION_CLOSED_FOR_STARTED = 1-End-->
 
@@ -44,7 +50,9 @@ APPLICATION_CLOSED_FOR_CANCELED = 2
 
 表示由于点击取消而关闭打印应用的事件。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApplicationEvent-APPLICATION_CLOSED_FOR_CANCELED = 2--><!--Device-ApplicationEvent-APPLICATION_CLOSED_FOR_CANCELED = 2-End-->
 

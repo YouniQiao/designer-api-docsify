@@ -6,6 +6,8 @@ Defines the options of grid-row component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface GridRowOptions--><!--Device-unnamed-export declare interface GridRowOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ grid-row layout breakpoints.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Sets the total number of columns in the current layout.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridRowOptions-columns?: int | GridRowColumnOption--><!--Device-GridRowOptions-columns?: int | GridRowColumnOption-End-->
@@ -64,6 +70,8 @@ grid-row layout direction.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GridRowOptions-direction?: GridRowDirection--><!--Device-GridRowOptions-direction?: GridRowDirection-End-->
@@ -83,6 +91,8 @@ layout spacing between sub-components
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

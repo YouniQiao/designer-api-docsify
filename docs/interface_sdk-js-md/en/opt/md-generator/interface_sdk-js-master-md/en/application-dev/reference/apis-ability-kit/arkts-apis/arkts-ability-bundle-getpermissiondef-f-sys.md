@@ -18,7 +18,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -48,7 +48,7 @@ Obtains the permission details by permission name. This API uses a promise to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

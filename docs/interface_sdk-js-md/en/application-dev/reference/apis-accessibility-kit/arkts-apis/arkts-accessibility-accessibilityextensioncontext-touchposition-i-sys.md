@@ -4,7 +4,9 @@ Indicates touch position of accessibility virtual node.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface TouchPosition--><!--Device-unnamed-export declare interface TouchPosition-End-->
 
@@ -18,13 +20,15 @@ Indicates touch position of accessibility virtual node.
 x: int
 ```
 
-X coordinate of the touch position on the virtual accessibility node, in pixels (px).Unit: px, The value range is all integers.
+X coordinate of the touch position on the virtual accessibility node, in pixels (px). Unit: px, The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ X coordinate of the touch position on the virtual accessibility node, in pixels 
 y: int
 ```
 
-Y coordinate of the touch position on the virtual accessibility node, in pixels (px).Unit: px, The value range is all integers.
+Y coordinate of the touch position on the virtual accessibility node, in pixels (px). Unit: px, The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

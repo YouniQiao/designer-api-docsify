@@ -6,6 +6,8 @@ Defines the features of the kiosk mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-applicationManager-enum KioskFeature--><!--Device-applicationManager-enum KioskFeature-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Allow access to the notification center (by swiping down from the upper left cor
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Allow access to the control panel (by swiping down from the upper right corner w
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KioskFeature-ALLOW_CONTROL_CENTER = 2--><!--Device-KioskFeature-ALLOW_CONTROL_CENTER = 2-End-->
@@ -58,6 +64,8 @@ Allow access to the recent task bar (by swiping up from the bottom with one fing
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KioskFeature-ALLOW_GESTURE_CONTROL = 3--><!--Device-KioskFeature-ALLOW_GESTURE_CONTROL = 3-End-->
@@ -75,6 +83,8 @@ Allow access to the side dock (by swiping inward from the edge with one finger a
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

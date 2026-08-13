@@ -1,12 +1,14 @@
 # Queue
 
-Queue follows the principle of First In First Out (FIFO).It supports insertion of elements at the end and removal from the front of the queue.Queue is implemented based on the queue data structure.
+Queue follows the principle of First In First Out (FIFO). It supports insertion of elements at the end and removal from the front of the queue. Queue is implemented based on the queue data structure.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class Queue<T>--><!--Device-unnamed-declare class Queue<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Queue--><!--Device-unnamed-declare class Queue-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +28,9 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,6 +56,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-[Symbol.iterator](): IterableIterator<T>--><!--Device-Queue-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -68,7 +74,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -109,9 +115,11 @@ add(element: T): boolean
 
 Adds an element at the end of this Queue.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -135,7 +143,7 @@ Adds an element at the end of this Queue.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -162,9 +170,11 @@ constructor()
 
 A constructor used to create a **Queue** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -176,7 +186,7 @@ A constructor used to create a **Queue** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Queue's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Queue's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -196,6 +206,8 @@ Uses a callback to traverse each element in the **Queue** instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void--><!--Device-Queue-forEach(callbackFn: (value: T, index?: number, Queue?: Queue<T>) => void, thisArg?: Object): void-End-->
@@ -213,7 +225,7 @@ Uses a callback to traverse each element in the **Queue** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -242,7 +254,9 @@ Executes a provided function once for each value in the queue object.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,9 +280,11 @@ getFirst(): T
 
 Obtains the first element of this Queue.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -286,8 +302,8 @@ Obtains the first element of this Queue.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -309,9 +325,11 @@ pop(): T
 
 Removes the first element from this Queue.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -329,8 +347,8 @@ Removes the first element from this Queue.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The pop method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -357,7 +375,9 @@ Number of elements in a Queue.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

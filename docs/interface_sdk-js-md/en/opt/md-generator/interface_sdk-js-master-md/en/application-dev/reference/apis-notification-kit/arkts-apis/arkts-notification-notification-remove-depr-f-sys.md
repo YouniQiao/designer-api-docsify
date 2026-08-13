@@ -17,7 +17,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -49,7 +49,7 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -86,7 +86,7 @@ Removes a notification for a specified bundle. This API uses an asynchronous cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -117,7 +117,7 @@ Removes a notification for a specified bundle. This API uses a promise to return
 
 **Deprecated since:** 9
 
-**Substitutes:** [remove](ohos.notificationSubscribe/notificationSubscribe#remove)
+**Substitutes:** [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

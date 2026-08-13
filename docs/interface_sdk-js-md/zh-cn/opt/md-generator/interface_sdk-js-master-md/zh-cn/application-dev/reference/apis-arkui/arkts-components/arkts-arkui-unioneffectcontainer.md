@@ -12,6 +12,8 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UnionEffectContainerInterface-(options?: UnionEffectContainerOptions): UnionEffectContainerAttribute--><!--Device-UnionEffectContainerInterface-(options?: UnionEffectContainerOptions): UnionEffectContainerAttribute-End-->
@@ -28,5 +30,5 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 ## 汇总
 
-- [UnionEffectContainerOptions](arkts-arkui-unioneffectcontainer-unioneffectcontaineroptions-i-sys.md)
-- [UnionMode](arkts-arkui-unioneffectcontainer-unionmode-e-sys.md)
+- [UnionEffectContainerOptions](arkts-arkui-unioneffectcontaineroptions-i-sys.md)
+- [UnionMode](arkts-arkui-unionmode-e-sys.md)

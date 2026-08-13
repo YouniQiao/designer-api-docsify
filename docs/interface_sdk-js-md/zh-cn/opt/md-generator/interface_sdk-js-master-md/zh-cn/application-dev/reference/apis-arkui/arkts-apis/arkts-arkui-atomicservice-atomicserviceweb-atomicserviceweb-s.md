@@ -1,41 +1,20 @@
 # AtomicServiceWeb
 
-为开发者提供满足定制化诉求的Web高阶组件，屏蔽原生Web组件中无需关注的接口，并提供JS扩展能力。
-
-> **说明：**
-> 
-> - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
+为开发者提供满足定制化诉求的Web高阶组件，屏蔽原生Web组件中无需关注的接口，并提供JS扩展能力。 > **说明：** > > - 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。
 
 **起始版本：** 12
 
-**装饰器类型：** @Component
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare struct AtomicServiceWeb--><!--Device-unnamed-export declare struct AtomicServiceWeb-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onLoadIntercept
-
-```TypeScript
-onLoadIntercept?: OnLoadInterceptCallback
-```
-
-当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。默认允许加载。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback--><!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## controller
 
 ```TypeScript
-controller: AtomicServiceWebController
+@ObjectLink
+  controller: AtomicServiceWebController
 ```
 
 通过AtomicServiceWebController可以控制AtomicServiceWeb组件各种行为。
@@ -44,18 +23,19 @@ controller: AtomicServiceWebController
 
 **起始版本：** 12
 
-**装饰器类型：** @ObjectLink
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AtomicServiceWeb-controller: AtomicServiceWebController--><!--Device-AtomicServiceWeb-controller: AtomicServiceWebController-End-->
+<!--Device-AtomicServiceWeb-@ObjectLink  controller: AtomicServiceWebController--><!--Device-AtomicServiceWeb-@ObjectLink  controller: AtomicServiceWebController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## darkMode
 
 ```TypeScript
-darkMode?: WebDarkMode
+@Prop
+  darkMode?: WebDarkMode
 ```
 
 设置Web深色模式，默认关闭。
@@ -64,38 +44,40 @@ darkMode?: WebDarkMode
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AtomicServiceWeb-darkMode?: WebDarkMode--><!--Device-AtomicServiceWeb-darkMode?: WebDarkMode-End-->
+<!--Device-AtomicServiceWeb-@Prop  darkMode?: WebDarkMode--><!--Device-AtomicServiceWeb-@Prop  darkMode?: WebDarkMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## forceDarkAccess
 
 ```TypeScript
-forceDarkAccess?: boolean
+@Prop
+  forceDarkAccess?: boolean
 ```
 
-设置网页是否开启强制深色模式。true表示设置网页开启强制深色模式，false表示设置网页不开启强制深色模式。默认值：false。该属性仅在darkMode开启深色模式时生效。
+设置网页是否开启强制深色模式。true表示设置网页开启强制深色模式，false表示设置网页不开启强制深色模式。默认值：false。 该属性仅在darkMode开启深色模式时生效。
 
 **类型：** boolean
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AtomicServiceWeb-forceDarkAccess?: boolean--><!--Device-AtomicServiceWeb-forceDarkAccess?: boolean-End-->
+<!--Device-AtomicServiceWeb-@Prop  forceDarkAccess?: boolean--><!--Device-AtomicServiceWeb-@Prop  forceDarkAccess?: boolean-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## mixedMode
 
 ```TypeScript
-mixedMode?: MixedMode
+@Prop
+  mixedMode?: MixedMode
 ```
 
 设置是否允许加载超文本传输协议（HTTP）和超文本传输安全协议（HTTPS）混合内容，默认不允许加载HTTP和HTTPS混合内容。
@@ -104,11 +86,11 @@ mixedMode?: MixedMode
 
 **起始版本：** 12
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AtomicServiceWeb-mixedMode?: MixedMode--><!--Device-AtomicServiceWeb-mixedMode?: MixedMode-End-->
+<!--Device-AtomicServiceWeb-@Prop  mixedMode?: MixedMode--><!--Device-AtomicServiceWeb-@Prop  mixedMode?: MixedMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -124,6 +106,8 @@ navPathStack?: NavPathStack
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWeb-navPathStack?: NavPathStack--><!--Device-AtomicServiceWeb-navPathStack?: NavPathStack-End-->
@@ -133,20 +117,21 @@ navPathStack?: NavPathStack
 ## nestedScroll
 
 ```TypeScript
-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
+@Prop
+  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 ```
 
-设置嵌套滚动选项。nestedScroll为NestedScrollOptions（向前、向后两个方向）类型时，scrollForward、scrollBackward默认滚动选项为NestedScrollMode.SELF_FIRST。nestedScroll为NestedScrollOptionsExt（上下左右四个方向）类型时，scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为NestedScrollMode.SELF_FIRST。
+设置嵌套滚动选项。nestedScroll为NestedScrollOptions（向前、向后两个方向）类型时， scrollForward、scrollBackward默认滚动选项为NestedScrollMode.SELF_FIRST。 nestedScroll为NestedScrollOptionsExt（上下左右四个方向）类型时， scrollUp、scrollDown、scrollLeft、scrollRight默认滚动选项为NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollOptions](../arkts-components/arkts-arkui-nestedscrolloptions-i.md) \| [NestedScrollOptionsExt](../../apis-arkweb/arkts-components/arkts-arkweb-nestedscrolloptionsext-i.md)
 
 **起始版本：** 15
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
 
-<!--Device-AtomicServiceWeb-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt--><!--Device-AtomicServiceWeb-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt-End-->
+<!--Device-AtomicServiceWeb-@Prop  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt--><!--Device-AtomicServiceWeb-@Prop  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -161,6 +146,8 @@ onControllerAttached?: Callback<void>
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -180,6 +167,8 @@ onErrorReceive?: Callback<OnErrorReceiveEvent>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWeb-onErrorReceive?: Callback<OnErrorReceiveEvent>--><!--Device-AtomicServiceWeb-onErrorReceive?: Callback<OnErrorReceiveEvent>-End-->
@@ -198,9 +187,31 @@ onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWeb-onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>--><!--Device-AtomicServiceWeb-onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onLoadIntercept
+
+```TypeScript
+onLoadIntercept?: OnLoadInterceptCallback
+```
+
+当Web组件加载url之前触发该回调，用于判断是否阻止此次访问。默认允许加载。
+
+**类型：** [OnLoadInterceptCallback](arkts-arkui-onloadinterceptcallback-t.md)
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback--><!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -215,6 +226,8 @@ H5页面通过JS SDK的postMessage()发送消息后，Web组件对应的页面�
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md)&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -234,6 +247,8 @@ onPageBegin?: Callback<OnPageBeginEvent>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWeb-onPageBegin?: Callback<OnPageBeginEvent>--><!--Device-AtomicServiceWeb-onPageBegin?: Callback<OnPageBeginEvent>-End-->
@@ -251,6 +266,8 @@ onPageEnd?: Callback<OnPageEndEvent>
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md)&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -270,6 +287,8 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AtomicServiceWeb-onProgressChange?: Callback<OnProgressChangeEvent>--><!--Device-AtomicServiceWeb-onProgressChange?: Callback<OnProgressChangeEvent>-End-->
@@ -282,11 +301,13 @@ onProgressChange?: Callback<OnProgressChangeEvent>
 src: ResourceStr
 ```
 
-网页资源地址，访问网络资源需要在AGC（AppGallery Connect）配置业务域名，访问本地资源仅支持包内文件（\$rawfile）。不支持通过状态变量（例如@State）动态更新地址。加载的网页中支持通过JS SDK提供的接口调用系统能力，具体以JS SDK为准。
+网页资源地址，访问网络资源需要在AGC（AppGallery Connect）配置业务域名，访问本地资源仅支持包内文件（\$rawfile）。 不支持通过状态变量（例如@State）动态更新地址。加载的网页中支持通过JS SDK提供的接口调用系统能力，具体以JS SDK为准。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -1,11 +1,12 @@
 # PermissionActiveStatus (System API)
 
-Enumerates the types of permission usage status changes. It is used to describe the change type of permission usage status, returned in the callback of subscribing to permission usage status change events (via  
-[on('activeStateChange')](privacyManager.on)), helping system applications sense the status switch of a permission from unused to foreground use and background use.
+Enumerates the types of permission usage status changes. It is used to describe the change type of permission usage status, returned in the callback of subscribing to permission usage status change events (via on('activeStateChange')), helping system applications sense the status switch of a permission from unused to foreground use and background use.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-enum PermissionActiveStatus--><!--Device-privacyManager-enum PermissionActiveStatus-End-->
 
@@ -21,9 +22,11 @@ PERM_INACTIVE = 0
 
 The permission is not used.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PermissionActiveStatus-PERM_INACTIVE = 0--><!--Device-PermissionActiveStatus-PERM_INACTIVE = 0-End-->
 
@@ -39,9 +42,11 @@ PERM_ACTIVE_IN_FOREGROUND = 1
 
 The permission is being used by an application running in the foreground.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_FOREGROUND = 1-End-->
 
@@ -57,9 +62,11 @@ PERM_ACTIVE_IN_BACKGROUND = 2
 
 The permission is being used by an application running in the background.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2--><!--Device-PermissionActiveStatus-PERM_ACTIVE_IN_BACKGROUND = 2-End-->
 

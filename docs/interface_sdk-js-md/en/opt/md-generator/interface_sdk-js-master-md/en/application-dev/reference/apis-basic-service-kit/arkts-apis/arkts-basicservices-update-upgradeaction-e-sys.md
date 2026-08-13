@@ -2,7 +2,9 @@
 
 Represents an update mode.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-update-export enum UpgradeAction--><!--Device-update-export enum UpgradeAction-End-->
 
@@ -16,10 +18,11 @@ Represents an update mode.
 UPGRADE = 'upgrade'
 ```
 
-Difference package, which contains only the different parts between the current version and the target version. It is applicable to the incremental upgrade when the basic version has been installed. For details, see   
-[Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
+Difference package, which contains only the different parts between the current version and the target version. It is applicable to the incremental upgrade when the basic version has been installed. For details, see Upgrading Service Terms
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeAction-UPGRADE = 'upgrade'--><!--Device-UpgradeAction-UPGRADE = 'upgrade'-End-->
 
@@ -33,9 +36,11 @@ Difference package, which contains only the different parts between the current 
 RECOVERY = 'recovery'
 ```
 
-Repair package, which is a special upgrade package used to fix system errors or restore system functions. It is applicable to repair in case of system failure. For details, see [Upgrading Service Terms](../../../basic-services/update/update-kit-term.md)
+Repair package, which is a special upgrade package used to fix system errors or restore system functions. It is applicable to repair in case of system failure. For details, see [Upgrading Service Terms] (../../../basic-services/update/update-kit-term.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UpgradeAction-RECOVERY = 'recovery'--><!--Device-UpgradeAction-RECOVERY = 'recovery'-End-->
 

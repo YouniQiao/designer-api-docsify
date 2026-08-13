@@ -6,9 +6,7 @@
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image)，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 
@@ -16,7 +14,7 @@ function getAbilityIcon(bundleName: string, abilityName: string, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -30,7 +28,7 @@ function getAbilityIcon(bundleName: string, abilityName: string, callback: Async
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | abilityName | string | 是 | 要查询的Ability组件名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | 是 | 程序启动作为入参的回调函数，返回指定 [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | 是 | 程序启动作为入参的回调函数，返回指定 [PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image)。 |
 
 ## 示例
 
@@ -56,9 +54,7 @@ bundle.getAbilityIcon(bundleName, abilityName, (err, data) => {
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)，使用Promise异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image)，使用Promise异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 
@@ -66,7 +62,7 @@ function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 

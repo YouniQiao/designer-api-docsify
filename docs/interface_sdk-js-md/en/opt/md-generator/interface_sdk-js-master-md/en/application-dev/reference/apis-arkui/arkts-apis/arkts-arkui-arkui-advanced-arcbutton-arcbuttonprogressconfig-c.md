@@ -4,6 +4,8 @@ Defines the progress indicator configuration options of the **ArcButton** compon
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ArcButtonProgressConfig--><!--Device-unnamed-export declare class ArcButtonProgressConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -20,15 +22,13 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 color?: ResourceColor
 ```
 
-Foreground color of the progress indicator. If the component's background color (  
-[backgroundColor](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md#ArcButtonOptions)) is set, it is used as the default foreground color of the progress indicator. The foreground color of the progress indicator is not affected by the button style (  
-[ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode)). The progress indicator's background color is derived solely from its foreground color, with an opacity value of 25%.
-
-Default value: **"#1F71FF"**, which is blue.
+Foreground color of the progress indicator. If the component's background color ( [backgroundColor](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md#ArcButtonOptions)) is set, it is used as the default foreground color of the progress indicator. The foreground color of the progress indicator is not affected by the button style ( [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode)). The progress indicator's background color is derived solely from its foreground color, with an opacity value of 25%. Default value: **"#1F71FF"**, which is blue.
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,17 +44,15 @@ Default value: **"#1F71FF"**, which is blue.
 total?: number
 ```
 
-Maximum progress value.
-
-Default value: **100**
-
-Value range: [0, 2147483647]. If the value is 0 or out of the range, the default value 100 is used.
+Maximum progress value. Default value: **100** Value range: [0, 2147483647]. If the value is 0 or out of the range, the default value 100 is used.
 
 **Type:** number
 
 **Default:** 100
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,15 +68,13 @@ Value range: [0, 2147483647]. If the value is 0 or out of the range, the default
 value: number
 ```
 
-Current progress value. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value.
-
-Default value: **0**.
-
-Value range: [0, total]
+Current progress value. Values less than 0 are adjusted to **0**, and values greater than the **total** value are capped at the **total** value. Default value: **0**. Value range: [0, total]
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

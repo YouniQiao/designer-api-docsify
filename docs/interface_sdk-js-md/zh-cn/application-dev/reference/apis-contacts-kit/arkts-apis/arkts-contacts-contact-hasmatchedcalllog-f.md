@@ -12,6 +12,8 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CHECK_CALL_LOG
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -40,13 +42,13 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';
@@ -75,6 +77,8 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CHECK_CALL_LOG
 
@@ -105,13 +109,13 @@ function hasMatchedCallLog(context: Context, phoneNumber: string, minDuration: i
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-系统内部错误) | General error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-参数检查失败) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-系统内部错误) | General error. |
 
 ## 示例
 
-在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.context来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在界面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

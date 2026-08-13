@@ -2,7 +2,9 @@
 
 通知内容。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
 
@@ -34,11 +36,13 @@ contentType?: notification.ContentType
 longText?: NotificationLongTextContent
 ```
 
-长文本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_LONG_TEXT时使用，通知展开后可展示完整长文本内容。
+长文本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_LONG_TEXT时使用， 通知展开后可展示完整长文本内容。
 
 **类型：** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-longText?: NotificationLongTextContent--><!--Device-NotificationContent-longText?: NotificationLongTextContent-End-->
 
@@ -50,11 +54,13 @@ longText?: NotificationLongTextContent
 multiLine?: NotificationMultiLineContent
 ```
 
-多行类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_MULTILINE时使用，通知展开后以多行列表样式展示。
+多行类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_MULTILINE时使用， 通知展开后以多行列表样式展示。
 
 **类型：** [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-multiLine?: NotificationMultiLineContent--><!--Device-NotificationContent-multiLine?: NotificationMultiLineContent-End-->
 
@@ -66,11 +72,13 @@ multiLine?: NotificationMultiLineContent
 normal?: NotificationBasicContent
 ```
 
-基本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_BASIC_TEXT时使用，通知以普通文本样式展示标题和正文。
+基本类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_BASIC_TEXT时使用， 通知以普通文本样式展示标题和正文。
 
 **类型：** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-normal?: NotificationBasicContent--><!--Device-NotificationContent-normal?: NotificationBasicContent-End-->
 
@@ -82,11 +90,13 @@ normal?: NotificationBasicContent
 notificationContentType?: notificationManager.ContentType
 ```
 
-通知内容类型，用于指定通知的内容布局类型，决定了通知在通知中心中的展示样式。需与对应类型的通知内容对象配合使用，例如设置为NOTIFICATION_CONTENT_BASIC_TEXT时需同时填充normal字段。
+通知内容类型，用于指定通知的内容布局类型，决定了通知在通知中心中的展示样式。 需与对应类型的通知内容对象配合使用，例如设置为NOTIFICATION_CONTENT_BASIC_TEXT时 需同时填充normal字段。
 
 **类型：** notificationManager.ContentType
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType--><!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType-End-->
 
@@ -98,11 +108,13 @@ notificationContentType?: notificationManager.ContentType
 picture?: NotificationPictureContent
 ```
 
-图片类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_PICTURE时使用。通知展开后可展示图片。
+图片类型通知内容。当notificationContentType为NOTIFICATION_CONTENT_PICTURE时使用。 通知展开后可展示图片。
 
 **类型：** [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md)
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-picture?: NotificationPictureContent--><!--Device-NotificationContent-picture?: NotificationPictureContent-End-->
 
@@ -118,7 +130,9 @@ systemLiveView?: NotificationSystemLiveViewContent
 
 **类型：** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent--><!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent-End-->
 

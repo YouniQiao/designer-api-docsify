@@ -6,7 +6,9 @@ export type LocalWantAgentInfo = _LocalWantAgentInfo
 
 LocalWantAgentInfo对象。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo--><!--Device-wantAgent-export type LocalWantAgentInfo = _LocalWantAgentInfo-End-->
 

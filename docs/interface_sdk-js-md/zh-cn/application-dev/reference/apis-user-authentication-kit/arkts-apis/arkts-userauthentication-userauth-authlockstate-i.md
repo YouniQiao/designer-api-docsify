@@ -2,9 +2,11 @@
 
 认证类型的身份认证冻结状态。该接口用于查询指定认证类型（如人脸、指纹、PIN）当前的冻结状态，包括是否被冻结、剩余尝试次数和冻结时长等信息。当用户多次认证不通过后，认证器可能进入临时冻结或永久冻结状态，应用可根据冻结信息提示用户。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-userAuth-interface AuthLockState--><!--Device-userAuth-interface AuthLockState-End-->
 
@@ -20,11 +22,13 @@ isLocked: boolean
 
 **类型：** boolean
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AuthLockState-isLocked: boolean--><!--Device-AuthLockState-isLocked: boolean-End-->
 
@@ -36,18 +40,17 @@ isLocked: boolean
 lockoutDuration: int
 ```
 
-认证被冻结时的剩余冻结时间，单位为毫秒。此字段仅在isLocked为true时有效。
+认证被冻结时的剩余冻结时间，单位为毫秒。此字段仅在isLocked为true时有效。 当永久冻结时，值为 [PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION)， 表示认证器已永久锁定，需要用户通过PIN认证解锁后才能继续使用该认证类型。临时冻结时，该值为实际的剩余冻结时长，冻结结束后用户可继续尝试认证。
 
-当永久冻结时，值为  
-[PERMANENT_LOCKOUT_DURATION](arkts-userauthentication-userauth-con.md#PERMANENT_LOCKOUT_DURATION)，表示认证器已永久锁定，需要用户通过PIN认证解锁后才能继续使用该认证类型。临时冻结时，该值为实际的剩余冻结时长，冻结结束后用户可继续尝试认证。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AuthLockState-lockoutDuration: int--><!--Device-AuthLockState-lockoutDuration: int-End-->
 
@@ -61,13 +64,15 @@ remainingAuthAttempts: int
 
 认证未被冻结时的剩余尝试次数，最大为5次。每次认证不通过后该值会递减，当降为0时认证器将进入冻结状态。此字段仅在isLocked为false时有效。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AuthLockState-remainingAuthAttempts: int--><!--Device-AuthLockState-remainingAuthAttempts: int-End-->
 

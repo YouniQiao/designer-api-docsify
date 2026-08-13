@@ -6,7 +6,9 @@ Provides the parameters of the pinch gesture handler. Inherits from [BaseHandler
 
 **Since:** 12
 
-<!--Device-unnamed-interface PinchGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-interface PinchGestureHandlerOptions extends BaseHandlerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface PinchGestureHandlerOptions--><!--Device-unnamed-interface PinchGestureHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,17 +18,13 @@ Provides the parameters of the pinch gesture handler. Inherits from [BaseHandler
 distance?: number
 ```
 
-Minimum recognition distance, in vp.
-
-Default value: **5**
-
-**NOTE：**
-
-If the value is less than or equal to 0, it will be converted to the default value.
+Minimum recognition distance, in vp. Default value: **5** **NOTE：**If the value is less than or equal to 0, it will be converted to the default value.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,17 +40,13 @@ If the value is less than or equal to 0, it will be converted to the default val
 fingers?: number
 ```
 
-Minimum number of fingers required to trigger the pinch gesture. The value ranges from 2 to 5.
-
-Default value: **2**
-
-Value range: [2, 5]
-
-While more fingers than the minimum number can be pressed to trigger the gesture, only the first fingers of the minimum number participate in gesture calculation.
+Minimum number of fingers required to trigger the pinch gesture. The value ranges from 2 to 5. Default value: **2** Value range: [2, 5] While more fingers than the minimum number can be pressed to trigger the gesture, only the first fingers of the minimum number participate in gesture calculation.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface PermissionQueryResult--><!--Device-abilityToolAccessCtrl-interface PermissionQueryResult-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -21,6 +23,8 @@ needDialog: boolean
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-PermissionQueryResult-needDialog: boolean--><!--Device-PermissionQueryResult-needDialog: boolean-End-->
 
@@ -40,6 +44,8 @@ permissionResults: PermissionInfo[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]--><!--Device-PermissionQueryResult-permissionResults: PermissionInfo[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -57,6 +63,8 @@ ticket?: TicketInfo
 **类型：** [TicketInfo](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-PermissionQueryResult-ticket?: TicketInfo--><!--Device-PermissionQueryResult-ticket?: TicketInfo-End-->
 

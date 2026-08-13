@@ -2,11 +2,13 @@
 
 Defines a type of gesture handler object for pinch gestures.
 
-**Inheritance/Implementation:** PinchGestureHandler extends [GestureHandler<PinchGestureHandler>](GestureHandler<PinchGestureHandler>)
+**Inheritance/Implementation:** PinchGestureHandler extends GestureHandler<PinchGestureHandler>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class PinchGestureHandler extends GestureHandler<PinchGestureHandler>--><!--Device-unnamed-declare class PinchGestureHandler extends GestureHandler<PinchGestureHandler>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PinchGestureHandler--><!--Device-unnamed-declare class PinchGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: PinchGestureHandlerOptions)
 Constructor used to create a pinch gesture handler instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ onActionCancel(event: Callback<void>): PinchGestureHandler
 Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. No gesture event information is returned.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,10 +76,11 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with   
-[onActionCancel](#onActionCancel), this API returns gesture event information.
+Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onActionCancel), this API returns gesture event information.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,6 +112,8 @@ Sets the callback for pinch gesture recognition completion. This callback is tri
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -135,6 +144,8 @@ Sets the callback for successful pinch gesture recognition.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -164,6 +175,8 @@ onActionUpdate(event: Callback<GestureEvent>): PinchGestureHandler
 Sets the callback for pinch gesture movement updates. The callback is triggered when the pinch gesture moves.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

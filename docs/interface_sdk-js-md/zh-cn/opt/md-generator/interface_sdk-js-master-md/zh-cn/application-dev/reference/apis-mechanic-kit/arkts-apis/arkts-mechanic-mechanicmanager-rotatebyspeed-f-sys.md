@@ -8,7 +8,9 @@ function rotateBySpeed(mechId: number, speed: RotationSpeed, duration: number): 
 
 以指定的速度旋转机械设备
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>--><!--Device-mechanicManager-function rotateBySpeed(mechId: int, speed: RotationSpeed, duration: int): Promise<Result>-End-->
 
@@ -34,9 +36,9 @@ function rotateBySpeed(mechId: number, speed: RotationSpeed, duration: number): 
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
 
 ## 示例
 

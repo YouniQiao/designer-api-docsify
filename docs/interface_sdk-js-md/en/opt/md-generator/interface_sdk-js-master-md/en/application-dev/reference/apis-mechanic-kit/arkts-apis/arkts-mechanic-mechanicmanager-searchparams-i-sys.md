@@ -2,7 +2,9 @@
 
 Parameters for target searching.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface SearchParams--><!--Device-mechanicManager-export interface SearchParams-End-->
 
@@ -26,7 +28,9 @@ Search direction.
 
 **Type:** [SearchDirection](arkts-mechanic-mechanicmanager-searchdirection-e-sys.md)
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SearchParams-direction: SearchDirection--><!--Device-SearchParams-direction: SearchDirection-End-->
 

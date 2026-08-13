@@ -1,24 +1,12 @@
 # StorageType
 
-Enumerates the storage types of preferences.
+Enumerates the storage types of preferences. > **NOTE：**> > - Before using this mode, you are advised to call **isStorageTypeSupported** to check whether this storage type > is supported. > > - Once the storage type is selected and data instances are obtained via **getPreferences()**, the storage type > cannot be changed. > > - Data cannot be directly migrated between the **Preferences** instances that use different storage types. To > migrate data between them, you need to read the data to be migrated and then write the data. > > - If you need to change the storage directory of preferences, you cannot move or overwrite files. Instead, you > need to read the data and then write the data.
 
-> **NOTE：**
-> 
-> - Before using this mode, you are advised to call **isStorageTypeSupported** to check whether this storage type
-> is supported.
-> 
-> - Once the storage type is selected and data instances are obtained via **getPreferences()**, the storage type
-> cannot be changed.
-> 
-> - Data cannot be directly migrated between the **Preferences** instances that use different storage types. To
-> migrate data between them, you need to read the data to be migrated and then write the data.
-> 
-> - If you need to change the storage directory of preferences, you cannot move or overwrite files. Instead, you
-> need to read the data and then write the data.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-preferences-enum StorageType--><!--Device-preferences-enum StorageType-End-->
 
@@ -30,17 +18,15 @@ Enumerates the storage types of preferences.
 XML = 0
 ```
 
-[XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of   
-**Preferences**.
+[XML](../../../database/data-persistence-by-preferences.md#xml) format, which is the default storage type of **Preferences**. In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call **flush()**.
 
-In this mode, data is stored in XML format. Data operations are performed in the memory. To persist data, call   
-**flush()**.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StorageType-XML = 0--><!--Device-StorageType-XML = 0-End-->
 
@@ -52,15 +38,15 @@ In this mode, data is stored in XML format. Data operations are performed in the
 GSKV
 ```
 
-[GSKV](../../../database/data-persistence-by-preferences.md#gskv) format.
+[GSKV](../../../database/data-persistence-by-preferences.md#gskv) format. Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
 
-Data is stored in GSKV mode. Data operations are flushed on a real-time basis without calling **flush()**.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StorageType-GSKV--><!--Device-StorageType-GSKV-End-->
 

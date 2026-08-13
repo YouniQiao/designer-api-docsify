@@ -2,9 +2,11 @@
 
 Enumerates call types.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum CallType--><!--Device-call-export enum CallType-End-->
 
@@ -20,9 +22,11 @@ TYPE_CS = 0
 
 CS call.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_CS = 0--><!--Device-CallType-TYPE_CS = 0-End-->
 
@@ -38,9 +42,11 @@ TYPE_IMS = 1
 
 IMS call.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_IMS = 1--><!--Device-CallType-TYPE_IMS = 1-End-->
 
@@ -56,9 +62,11 @@ TYPE_OTT = 2
 
 OTT call.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_OTT = 2--><!--Device-CallType-TYPE_OTT = 2-End-->
 
@@ -74,9 +82,11 @@ TYPE_ERR_CALL = 3
 
 Error call type.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_ERR_CALL = 3--><!--Device-CallType-TYPE_ERR_CALL = 3-End-->
 
@@ -92,9 +102,11 @@ TYPE_VOIP = 4
 
 VoIP call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_VOIP = 4--><!--Device-CallType-TYPE_VOIP = 4-End-->
 
@@ -112,7 +124,9 @@ X-Call.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CallType-TYPE_XCALL = 5--><!--Device-CallType-TYPE_XCALL = 5-End-->
 

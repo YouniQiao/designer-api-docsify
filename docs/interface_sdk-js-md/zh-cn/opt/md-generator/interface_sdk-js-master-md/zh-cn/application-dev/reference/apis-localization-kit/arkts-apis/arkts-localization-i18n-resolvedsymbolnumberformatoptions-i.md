@@ -1,12 +1,14 @@
 # ResolvedSymbolNumberFormatOptions
 
-自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions，支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
+自定义符号数字格式化对象配置项的解析结果。继承自Intl.ResolvedNumberFormatOptions， 支持Intl.ResolvedNumberFormatOptions的所有配置项，并且功能与其一致。
 
-**继承/实现关系：** ResolvedSymbolNumberFormatOptions extends [Intl.ResolvedNumberFormatOptions](Intl.ResolvedNumberFormatOptions)
+**继承/实现关系：** ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions
 
 **起始版本：** 26.0.0
 
-<!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions--><!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions extends Intl.ResolvedNumberFormatOptions-End-->
+**废弃版本：** -1
+
+<!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions--><!--Device-i18n-export interface ResolvedSymbolNumberFormatOptions-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -21,6 +23,8 @@ groupingSeparator?: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ infinity?: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -61,6 +67,8 @@ minusSign?: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,6 +90,8 @@ NaN符号。默认值：区域默认的符号。例如："null"。
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -102,6 +112,8 @@ plusSign?: string
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -121,6 +133,8 @@ zero?: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

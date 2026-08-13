@@ -14,9 +14,11 @@ function killProcessesByBundleName(bundleName: string, clearPageStack: boolean, 
 
 Kills a process by bundle name. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.KILL_APP_PROCESSES or ohos.permission.CLEAN_BACKGROUND_PROCESSES
 
@@ -30,7 +32,7 @@ Kills a process by bundle name. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
 | clearPageStack | boolean | Yes | Whether to clear the page stack. **true** to clear, **false** otherwise. |
-| appIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | ID of an application clone. The default value is **0**. If the value is **0**, all processes of the main application are terminated. If the value is greater than 0, all processes of the specified application clone are terminated. |
+| appIndex | int | No | ID of an application clone. The default value is **0**. If the value is **0**, all processes of the main application are terminated. If the value is greater than 0, all processes of the specified application clone are terminated. |
 
 **Return value:**
 
@@ -42,9 +44,9 @@ Kills a process by bundle name. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

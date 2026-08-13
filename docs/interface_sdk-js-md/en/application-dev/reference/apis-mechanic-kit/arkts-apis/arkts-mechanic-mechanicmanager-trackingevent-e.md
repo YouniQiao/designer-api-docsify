@@ -2,9 +2,11 @@
 
 Enumerates the tracking events.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum TrackingEvent--><!--Device-mechanicManager-export enum TrackingEvent-End-->
 
@@ -18,9 +20,11 @@ CAMERA_TRACKING_USER_ENABLED = 0
 
 Camera tracking enabled by user.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TrackingEvent-CAMERA_TRACKING_USER_ENABLED = 0--><!--Device-TrackingEvent-CAMERA_TRACKING_USER_ENABLED = 0-End-->
 
@@ -34,9 +38,11 @@ CAMERA_TRACKING_USER_DISABLED = 1
 
 Camera tracking disabled by user.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TrackingEvent-CAMERA_TRACKING_USER_DISABLED = 1--><!--Device-TrackingEvent-CAMERA_TRACKING_USER_DISABLED = 1-End-->
 
@@ -50,9 +56,11 @@ CAMERA_TRACKING_LAYOUT_CHANGED = 2
 
 Camera tracking layout changed. You can call getCameraTrackingLayout to obtain the new layout.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-TrackingEvent-CAMERA_TRACKING_LAYOUT_CHANGED = 2--><!--Device-TrackingEvent-CAMERA_TRACKING_LAYOUT_CHANGED = 2-End-->
 

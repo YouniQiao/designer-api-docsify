@@ -4,9 +4,11 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-<!--Device-uiMaterial-export enum ImmersiveStyle--><!--Device-uiMaterial-export enum ImmersiveStyle-End-->
+**废弃版本：** -1
+
+<!--Device-uiMaterial-enum ImmersiveStyle--><!--Device-uiMaterial-enum ImmersiveStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +22,13 @@ ULTRA_THIN = 0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ImmersiveStyle-ULTRA_THIN = 0--><!--Device-ImmersiveStyle-ULTRA_THIN = 0-End-->
 
@@ -38,9 +44,13 @@ THIN = 1
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ImmersiveStyle-THIN = 1--><!--Device-ImmersiveStyle-THIN = 1-End-->
 
@@ -56,9 +66,13 @@ REGULAR = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ImmersiveStyle-REGULAR = 2--><!--Device-ImmersiveStyle-REGULAR = 2-End-->
 
@@ -74,9 +88,13 @@ THICK = 3
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ImmersiveStyle-THICK = 3--><!--Device-ImmersiveStyle-THICK = 3-End-->
 
@@ -92,9 +110,13 @@ ULTRA_THICK = 4
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ImmersiveStyle-ULTRA_THICK = 4--><!--Device-ImmersiveStyle-ULTRA_THICK = 4-End-->
 

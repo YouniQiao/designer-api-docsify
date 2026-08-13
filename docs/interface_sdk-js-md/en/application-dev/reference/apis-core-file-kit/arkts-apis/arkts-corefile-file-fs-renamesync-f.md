@@ -12,15 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function renameSync(oldPath: string, newPath: string): void
 ```
 
-Renames a file or directory. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> This API is not supported in a distributed directory.
+Renames a file or directory. This API returns the result synchronously. > **NOTE：**> > This API is not supported in a distributed directory.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

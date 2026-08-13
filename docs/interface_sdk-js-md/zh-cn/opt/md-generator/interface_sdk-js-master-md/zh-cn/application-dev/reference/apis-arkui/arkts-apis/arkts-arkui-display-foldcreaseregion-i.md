@@ -2,7 +2,9 @@
 
 折叠折痕区域。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-display-interface FoldCreaseRegion--><!--Device-display-interface FoldCreaseRegion-End-->
 
@@ -18,7 +20,9 @@ readonly creaseRects: Array<Rect>
 
 **类型：** Array&lt;Rect&gt;
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ readonly displayId: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

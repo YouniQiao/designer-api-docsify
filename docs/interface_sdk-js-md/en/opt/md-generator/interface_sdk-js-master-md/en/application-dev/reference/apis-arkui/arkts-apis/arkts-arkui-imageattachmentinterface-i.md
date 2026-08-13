@@ -4,6 +4,8 @@ Defines the ImageAttachmentInterface.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ImageAttachmentInterface--><!--Device-unnamed-declare interface ImageAttachmentInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Image color filter of the styled string.
 **Type:** [ColorFilterType](arkts-arkui-colorfiltertype-t.md)
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Image layout.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -54,13 +60,13 @@ Image layout.
 objectFit?: ImageFit
 ```
 
-Image scaling type. The **ImageFit.MATRIX** enum value is not supported.
-
-Default value: **ImageFit.Cover**
+Image scaling type. The **ImageFit.MATRIX** enum value is not supported. Default value: **ImageFit.Cover**
 
 **Type:** [ImageFit](arkts-arkui-imagefit-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,14 +82,13 @@ Default value: **ImageFit.Cover**
 size?: SizeOptions
 ```
 
-Image size, which does not support percentage values.
-
-The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is  
-**Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
+Image size, which does not support percentage values. The default value of **size** depends on the value of **objectFit**. For example, if the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,6 +110,8 @@ Image data source.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -119,13 +126,13 @@ Image data source.
 verticalAlign?: ImageSpanAlignment
 ```
 
-Alignment mode of the image with the text.
-
-Default value: **ImageSpanAlignment.BOTTOM**
+Alignment mode of the image with the text. Default value: **ImageSpanAlignment.BOTTOM**
 
 **Type:** [ImageSpanAlignment](arkts-arkui-imagespanalignment-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,15 +6,13 @@
 function getAbilityIcon(bundleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)，使用callback异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image)，使用callback异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -54,15 +52,13 @@ bundle.getAbilityIcon(bundleName, abilityName, (err, data) => {
 function getAbilityIcon(bundleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#image)，使用Promise异步回调。
-
-获取调用方自己的信息时不需要权限。
+通过bundleName和abilityName获取对应Icon的[PixelMap](../../apis-image-kit/arkts-apis/arkts-multimedia-image.md#@ohos.multimedia.image)，使用Promise异步回调。 获取调用方自己的信息时不需要权限。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 

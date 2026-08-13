@@ -1,12 +1,12 @@
 # AccessibilityElement
 
-Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call   
-[AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement-1)or   
-[AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement-1)to obtain an **AccessibilityElement** instance.
+Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
@@ -20,9 +20,11 @@ enableScreenCurtain(isEnable: boolean): void
 
 Enables or disables the screen curtain.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-enableScreenCurtain(isEnable: boolean): void--><!--Device-AccessibilityElement-enableScreenCurtain(isEnable: boolean): void-End-->
 
@@ -40,9 +42,9 @@ Enables or disables the screen curtain.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
 ## Examples
 
@@ -97,9 +99,11 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 Executes a specific action based on the specified action type and input parameters. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -126,9 +130,9 @@ Executes a specific action based on the specified action type and input paramete
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -192,6 +196,8 @@ Finds all node elements based on the **accessibilityTextHint** text type configu
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AccessibilityElement-findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -215,7 +221,7 @@ Finds all node elements based on the **accessibilityTextHint** text type configu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -246,6 +252,8 @@ Finds the node element of the current active window based on the element ID. Thi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AccessibilityElement-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -269,7 +277,7 @@ Finds the node element of the current active window based on the element ID. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -296,9 +304,11 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 Finds elements based on the content. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -324,9 +334,9 @@ Finds elements based on the content. This API uses a promise to return the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## Examples
 
@@ -365,7 +375,9 @@ Find elements that match the condition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-findElementByElementId(condition: long): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementByElementId(condition: long): Promise<AccessibilityElement>-End-->
 
@@ -389,7 +401,7 @@ Find elements that match the condition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## findElementByFocusDirection
 
@@ -399,9 +411,11 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 Finds elements based on the focus direction. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -427,9 +441,9 @@ Finds elements based on the focus direction. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## Examples
 
@@ -471,7 +485,9 @@ Finds elements based on the focus direction. This API uses a promise to return t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -500,27 +516,23 @@ Finds elements based on the focus direction. This API uses a promise to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## findElementById
 
-ArkTS-Dyn:
-```TypeScript
-findElementById(condition: number): Promise<AccessibilityElement>
-```
-
-ArkTS-Sta:
 ```TypeScript
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
 Finds elements based on element ID. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -534,7 +546,7 @@ Finds elements based on element ID. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Element ID. |
+| condition | long | Yes | Element ID. |
 
 **Return value:**
 
@@ -546,9 +558,9 @@ Finds elements based on element ID. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## Examples
 
@@ -590,7 +602,9 @@ Find elements that match the condition.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-findElementByTextType(condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElementByTextType(condition: string): Promise<Array<AccessibilityElement>>-End-->
 
@@ -614,7 +628,7 @@ Find elements that match the condition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## findElementsByAccessibilityHintText
 
@@ -624,9 +638,11 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 Finds elements based on the hint text. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -652,9 +668,9 @@ Finds elements based on the hint text. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
 ## Examples
 
@@ -698,7 +714,9 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -725,8 +743,8 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -754,7 +772,9 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -784,8 +804,8 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## getChildren
 
@@ -795,9 +815,11 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 Obtains the child elements of an element. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -817,8 +839,8 @@ Obtains the child elements of an element. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -839,21 +861,17 @@ axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) 
 
 ## getCursorPosition
 
-ArkTS-Dyn:
-```TypeScript
-getCursorPosition(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCursorPosition(callback: AsyncCallback<int>): void
 ```
 
 Obtains the cursor position in the **Text** component. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-getCursorPosition(callback: AsyncCallback<int>): void--><!--Device-AccessibilityElement-getCursorPosition(callback: AsyncCallback<int>): void-End-->
 
@@ -865,7 +883,7 @@ Obtains the cursor position in the **Text** component. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback function used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback function used to return the result. |
 
 ## Examples
 
@@ -884,21 +902,17 @@ rootElement.getCursorPosition((err: BusinessError, data: number) => {
 
 ## getCursorPosition
 
-ArkTS-Dyn:
-```TypeScript
-getCursorPosition(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCursorPosition(): Promise<int>
 ```
 
 Obtains the cursor position in the **Text** component. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-getCursorPosition(): Promise<int>--><!--Device-AccessibilityElement-getCursorPosition(): Promise<int>-End-->
 
@@ -910,7 +924,7 @@ Obtains the cursor position in the **Text** component. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| Promise&lt;int&gt; | Promise used to return the result. |
 
 ## Examples
 
@@ -933,9 +947,11 @@ getParent(): Promise<AccessibilityElement>
 
 Obtains the parent element of an accessibility node. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -955,8 +971,8 @@ Obtains the parent element of an accessibility node. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -983,9 +999,11 @@ getRoot(): Promise<AccessibilityElement>
 
 Obtains the root element of an active window. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -1005,8 +1023,8 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -1030,15 +1048,15 @@ for (let window of windows) {
 accessibilityFocused?: boolean
 ```
 
-Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused , and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityFocused?: boolean--><!--Device-AccessibilityElement-accessibilityFocused?: boolean-End-->
 
@@ -1052,15 +1070,15 @@ Default value: **false**.
 accessibilityGroup?: boolean
 ```
 
-Whether the element is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityGroup?: boolean--><!--Device-AccessibilityElement-accessibilityGroup?: boolean-End-->
 
@@ -1074,21 +1092,15 @@ Default value: **false**.
 accessibilityLevel?: string
 ```
 
-Accessibility level of a component.
-
-**auto**: The accessibility grouping service and ArkUI jointly determine whether the current component can be identified by accessibility services.
-
-**yes**: The component can be identified by accessibility services.
-
-**no**: The component cannot be identified by accessibility services.
-
-**no-hide-descendants**: The current component and all its child components cannot be identified by accessibility services.
+Accessibility level of a component. **auto**: The accessibility grouping service and ArkUI jointly determine whether the current component can be identified by accessibility services. **yes**: The component can be identified by accessibility services. **no**: The component cannot be identified by accessibility services. **no-hide-descendants**: The current component and all its child components cannot be identified by accessibility services.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityLevel?: string--><!--Device-AccessibilityElement-accessibilityLevel?: string-End-->
 
@@ -1102,15 +1114,15 @@ Accessibility level of a component.
 accessibilityNextFocusId?: long
 ```
 
-ID of the next component to obtain the focus.
+ID of the next component to obtain the focus. Default value: **-1**.
 
-Default value: **-1**.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityNextFocusId?: long--><!--Device-AccessibilityElement-accessibilityNextFocusId?: long-End-->
 
@@ -1124,15 +1136,15 @@ Default value: **-1**.
 accessibilityPreviousFocusId?: long
 ```
 
-ID of the previous component to obtain the focus.
+ID of the previous component to obtain the focus. Default value: **-1**.
 
-Default value: **-1**.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityPreviousFocusId?: long--><!--Device-AccessibilityElement-accessibilityPreviousFocusId?: long-End-->
 
@@ -1146,18 +1158,15 @@ Default value: **-1**.
 accessibilityScrollable?: boolean
 ```
 
-Whether the element can be scrolled for accessibility purposes. This attribute has a higher priority than   
-**scrollable**.
-
-The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
-
-Default value: **true**.
+Whether the element can be scrolled for accessibility purposes. This attribute has a higher priority than **scrollable**. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. Default value: **true**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityScrollable?: boolean--><!--Device-AccessibilityElement-accessibilityScrollable?: boolean-End-->
 
@@ -1177,7 +1186,9 @@ Custom accessibility state broadcast text of an element.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1197,9 +1208,11 @@ Accessibility text information of an element.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityText?: string--><!--Device-AccessibilityElement-accessibilityText?: string-End-->
 
@@ -1217,9 +1230,11 @@ Whether the component is visible for accessibility purposes. The value **true** 
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-accessibilityVisible?: boolean--><!--Device-AccessibilityElement-accessibilityVisible?: boolean-End-->
 
@@ -1235,11 +1250,13 @@ belongTreeId?: int
 
 Component tree ID that the element belongs to. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1259,9 +1276,11 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-bundleName?: string--><!--Device-AccessibilityElement-bundleName?: string-End-->
 
@@ -1275,15 +1294,15 @@ Bundle name.
 checkable?: boolean
 ```
 
-Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-checkable?: boolean--><!--Device-AccessibilityElement-checkable?: boolean-End-->
 
@@ -1297,15 +1316,15 @@ Default value: **false**.
 checked?: boolean
 ```
 
-Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-checked?: boolean--><!--Device-AccessibilityElement-checked?: boolean-End-->
 
@@ -1321,11 +1340,13 @@ childrenIds?: Array<long>
 
 List of child element IDs of a component.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**Type:** Array&lt;long&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-childrenIds?: Array<long>--><!--Device-AccessibilityElement-childrenIds?: Array<long>-End-->
 
@@ -1341,11 +1362,13 @@ childrenTreeId?: int
 
 Child component tree ID of the element. The default value is **-1**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1361,15 +1384,15 @@ Child component tree ID of the element. The default value is **-1**.
 clickable?: boolean
 ```
 
-Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is clickable. The value **true** indicates that the element is clickable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-clickable?: boolean--><!--Device-AccessibilityElement-clickable?: boolean-End-->
 
@@ -1383,14 +1406,15 @@ Default value: **false**.
 clip?: boolean
 ```
 
-Whether the component needs to be clipped. The value **true** indicates that the component needs to be clipped, and  
-**false** indicates the opposite.
+Whether the component needs to be clipped. The value **true** indicates that the component needs to be clipped, and **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-clip?: boolean--><!--Device-AccessibilityElement-clip?: boolean-End-->
 
@@ -1404,15 +1428,15 @@ Whether the component needs to be clipped. The value **true** indicates that the
 componentId?: long
 ```
 
-ID of the component to which the element belongs.
+ID of the component to which the element belongs. Default value: **-1**.
 
-Default value: **-1**.
+**Type:** long
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-componentId?: long--><!--Device-AccessibilityElement-componentId?: long-End-->
 
@@ -1430,9 +1454,11 @@ Type of the component to which the element belongs.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-componentType?: string--><!--Device-AccessibilityElement-componentType?: string-End-->
 
@@ -1450,9 +1476,11 @@ Content displayed in the element.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-contents?: Array<string>--><!--Device-AccessibilityElement-contents?: Array<string>-End-->
 
@@ -1466,15 +1494,15 @@ Content displayed in the element.
 currentIndex?: int
 ```
 
-Index of the current item.
+Index of the current item. Default value: **0**.
 
-Default value: **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-currentIndex?: int--><!--Device-AccessibilityElement-currentIndex?: int-End-->
 
@@ -1492,9 +1520,11 @@ Current item in the component grid.
 
 **Type:** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-currentItem?: AccessibilityGrid--><!--Device-AccessibilityElement-currentItem?: AccessibilityGrid-End-->
 
@@ -1514,7 +1544,9 @@ Indicates the custom actions supported by the component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1534,9 +1566,11 @@ Custom component type.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-customComponentType?: string--><!--Device-AccessibilityElement-customComponentType?: string-End-->
 
@@ -1554,9 +1588,11 @@ Description of the element.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-description?: string--><!--Device-AccessibilityElement-description?: string-End-->
 
@@ -1570,15 +1606,15 @@ Description of the element.
 editable?: boolean
 ```
 
-Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is editable. The value **true** indicates that the element is editable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-editable?: boolean--><!--Device-AccessibilityElement-editable?: boolean-End-->
 
@@ -1592,15 +1628,15 @@ Default value: **false**.
 endIndex?: int
 ```
 
-Index of the last list item displayed on the screen.
+Index of the last list item displayed on the screen. Default value: **0**.
 
-Default value: **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-endIndex?: int--><!--Device-AccessibilityElement-endIndex?: int-End-->
 
@@ -1618,9 +1654,11 @@ Error status of the element.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-error?: string--><!--Device-AccessibilityElement-error?: string-End-->
 
@@ -1638,9 +1676,11 @@ Additional information about an element. The value is a JSON string.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-extraInfo?: string--><!--Device-AccessibilityElement-extraInfo?: string-End-->
 
@@ -1654,15 +1694,15 @@ Additional information about an element. The value is a JSON string.
 focusable?: boolean
 ```
 
-Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-focusable?: boolean--><!--Device-AccessibilityElement-focusable?: boolean-End-->
 
@@ -1680,9 +1720,11 @@ Hint text.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-hintText?: string--><!--Device-AccessibilityElement-hintText?: string-End-->
 
@@ -1700,9 +1742,11 @@ Hot area of an element.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-hotArea?: Rect--><!--Device-AccessibilityElement-hotArea?: Rect-End-->
 
@@ -1716,15 +1760,15 @@ Hot area of an element.
 inputType?: int
 ```
 
-Type of the input text.
+Type of the input text. Default value: **0**.
 
-Default value: **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-inputType?: int--><!--Device-AccessibilityElement-inputType?: int-End-->
 
@@ -1742,9 +1786,11 @@ Inspector key.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-inspectorKey?: string--><!--Device-AccessibilityElement-inspectorKey?: string-End-->
 
@@ -1758,15 +1804,15 @@ Inspector key.
 isActive?: boolean
 ```
 
-Whether the element is active. The value **true** indicates that the element is active, and **false** indicates the opposite.
-
-Default value: **true**.
+Whether the element is active. The value **true** indicates that the element is active, and **false** indicates the opposite. Default value: **true**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-isActive?: boolean--><!--Device-AccessibilityElement-isActive?: boolean-End-->
 
@@ -1780,15 +1826,15 @@ Default value: **true**.
 isEnable?: boolean
 ```
 
-Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is enabled. The value **true** indicates that the element is enabled, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-isEnable?: boolean--><!--Device-AccessibilityElement-isEnable?: boolean-End-->
 
@@ -1808,7 +1854,9 @@ Whether the element is mandatory for the user. The value **true** indicates that
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1824,15 +1872,15 @@ Whether the element is mandatory for the user. The value **true** indicates that
 isFocused?: boolean
 ```
 
-Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-isFocused?: boolean--><!--Device-AccessibilityElement-isFocused?: boolean-End-->
 
@@ -1846,15 +1894,15 @@ Default value: **false**.
 isHint?: boolean
 ```
 
-Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is a hint. The value **true** indicates that the element is a hint, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-isHint?: boolean--><!--Device-AccessibilityElement-isHint?: boolean-End-->
 
@@ -1868,15 +1916,15 @@ Default value: **false**.
 isPassword?: boolean
 ```
 
-Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is a password. The value **true** indicates that the element is a password, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-isPassword?: boolean--><!--Device-AccessibilityElement-isPassword?: boolean-End-->
 
@@ -1890,15 +1938,15 @@ Default value: **false**.
 isVisible?: boolean
 ```
 
-Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is visible. The value **true** indicates that the element is visible, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-isVisible?: boolean--><!--Device-AccessibilityElement-isVisible?: boolean-End-->
 
@@ -1912,15 +1960,15 @@ Default value: **false**.
 itemCount?: int
 ```
 
-Total number of items.
+Total number of items. Default value: **0**.
 
-Default value: **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-itemCount?: int--><!--Device-AccessibilityElement-itemCount?: int-End-->
 
@@ -1938,9 +1986,11 @@ Last item.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-lastContent?: string--><!--Device-AccessibilityElement-lastContent?: string-End-->
 
@@ -1956,11 +2006,13 @@ layer?: int
 
 Display layer of the element.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-layer?: int--><!--Device-AccessibilityElement-layer?: int-End-->
 
@@ -1974,16 +2026,15 @@ Display layer of the element.
 longClickable?: boolean
 ```
 
-Whether the element can be long-pressed. The value **true** indicates that the element can be long-pressed, and   
-**false** indicates the opposite.
-
-Default value: **false**.
+Whether the element can be long-pressed. The value **true** indicates that the element can be long-pressed, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-longClickable?: boolean--><!--Device-AccessibilityElement-longClickable?: boolean-End-->
 
@@ -1999,11 +2050,13 @@ mainWindowId?: int
 
 Main window ID of a component.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-mainWindowId?: int--><!--Device-AccessibilityElement-mainWindowId?: int-End-->
 
@@ -2019,11 +2072,13 @@ navDestinationId?: long
 
 Destination ID of a component for navigation.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-navDestinationId?: long--><!--Device-AccessibilityElement-navDestinationId?: long-End-->
 
@@ -2037,15 +2092,15 @@ Destination ID of a component for navigation.
 offset?: double
 ```
 
-Pixel offset of the content area relative to the top coordinate of a scrollable component (such as List and Grid). The unit is pixel (px).
+Pixel offset of the content area relative to the top coordinate of a scrollable component (such as List and Grid). The unit is pixel (px). Default value: **0**.
 
-Default value: **0**.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-offset?: double--><!--Device-AccessibilityElement-offset?: double-End-->
 
@@ -2059,15 +2114,15 @@ Default value: **0**.
 pageId?: int
 ```
 
-Page ID.
+Page ID. Default value: **-1**.
 
-Default value: **-1**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-pageId?: int--><!--Device-AccessibilityElement-pageId?: int-End-->
 
@@ -2083,11 +2138,13 @@ parentId?: long
 
 Parent element ID of a component.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-parentId?: long--><!--Device-AccessibilityElement-parentId?: long-End-->
 
@@ -2101,15 +2158,15 @@ Parent element ID of a component.
 pluralLineSupported?: boolean
 ```
 
-Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-pluralLineSupported?: boolean--><!--Device-AccessibilityElement-pluralLineSupported?: boolean-End-->
 
@@ -2127,9 +2184,11 @@ Rectangular area for the element.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-rect?: Rect--><!--Device-AccessibilityElement-rect?: Rect-End-->
 
@@ -2147,9 +2206,11 @@ Resource name of the element.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-resourceName?: string--><!--Device-AccessibilityElement-resourceName?: string-End-->
 
@@ -2167,9 +2228,11 @@ Rectangular area for the element to display.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-screenRect?: Rect--><!--Device-AccessibilityElement-screenRect?: Rect-End-->
 
@@ -2183,15 +2246,15 @@ Rectangular area for the element to display.
 scrollable?: boolean
 ```
 
-Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-scrollable?: boolean--><!--Device-AccessibilityElement-scrollable?: boolean-End-->
 
@@ -2205,15 +2268,15 @@ Default value: **false**.
 selected?: boolean
 ```
 
-Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite.
-
-Default value: **false**.
+Whether the element is selected. The value **true** indicates that the element is selected, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-selected?: boolean--><!--Device-AccessibilityElement-selected?: boolean-End-->
 
@@ -2233,7 +2296,9 @@ Indicates the source of this element.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2253,9 +2318,11 @@ Span array of a component.
 
 **Type:** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-spans?: AccessibilitySpan[]--><!--Device-AccessibilityElement-spans?: AccessibilitySpan[]-End-->
 
@@ -2269,15 +2336,15 @@ Span array of a component.
 startIndex?: int
 ```
 
-Index of the first item on the screen.
+Index of the first item on the screen. Default value: **0**.
 
-Default value: **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-startIndex?: int--><!--Device-AccessibilityElement-startIndex?: int-End-->
 
@@ -2295,9 +2362,11 @@ Supported action names.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-supportedActionNames?: Array<string>--><!--Device-AccessibilityElement-supportedActionNames?: Array<string>-End-->
 
@@ -2315,9 +2384,11 @@ Text content of an element.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-text?: string--><!--Device-AccessibilityElement-text?: string-End-->
 
@@ -2333,11 +2404,13 @@ textLengthLimit?: int
 
 Maximum text length of an element.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-textLengthLimit?: int--><!--Device-AccessibilityElement-textLengthLimit?: int-End-->
 
@@ -2351,15 +2424,15 @@ Maximum text length of an element.
 textMoveUnit?: accessibility.TextMoveUnit
 ```
 
-Movement unit for traversing and reading text.
-
-Default value: **char**.
+Movement unit for traversing and reading text. Default value: **char**.
 
 **Type:** accessibility.TextMoveUnit
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-textMoveUnit?: accessibility.TextMoveUnit--><!--Device-AccessibilityElement-textMoveUnit?: accessibility.TextMoveUnit-End-->
 
@@ -2377,9 +2450,11 @@ Accessibility text type of an element, which is configured by the **accessibilit
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-textType?: string--><!--Device-AccessibilityElement-textType?: string-End-->
 
@@ -2397,9 +2472,11 @@ Action that triggers the element event.
 
 **Type:** [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-triggerAction?: AccessibilityAction--><!--Device-AccessibilityElement-triggerAction?: AccessibilityAction-End-->
 
@@ -2417,9 +2494,11 @@ Window type of an element.
 
 **Type:** [WindowType](arkts-accessibility-windowtype-t.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-type?: WindowType--><!--Device-AccessibilityElement-type?: WindowType-End-->
 
@@ -2433,15 +2512,15 @@ Window type of an element.
 valueMax?: double
 ```
 
-Maximum value.
+Maximum value. Default value: **0**.
 
-Default value: **0**.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-valueMax?: double--><!--Device-AccessibilityElement-valueMax?: double-End-->
 
@@ -2455,15 +2534,15 @@ Default value: **0**.
 valueMin?: double
 ```
 
-Minimum value.
+Minimum value. Default value: **0**.
 
-Default value: **0**.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-valueMin?: double--><!--Device-AccessibilityElement-valueMin?: double-End-->
 
@@ -2477,15 +2556,15 @@ Default value: **0**.
 valueNow?: double
 ```
 
-Current value.
+Current value. Default value: **0**.
 
-Default value: **0**.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-valueNow?: double--><!--Device-AccessibilityElement-valueNow?: double-End-->
 
@@ -2499,15 +2578,15 @@ Default value: **0**.
 windowId?: int
 ```
 
-Window ID.
+Window ID. Default value: **-1**.
 
-Default value: **-1**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AccessibilityElement-windowId?: int--><!--Device-AccessibilityElement-windowId?: int-End-->
 

@@ -1,9 +1,10 @@
 # ProcessInfo
 
-The module defines process information. You can use  
-[getProcessInfo](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetprocessinfo7) to obtain information about the processes running on the current ability.
+The module defines process information. You can use getProcessInfo to obtain information about the processes running on the current ability.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ProcessInfo--><!--Device-unnamed-export interface ProcessInfo-End-->
 
@@ -19,7 +20,9 @@ The id of the current process
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessInfo-pid: int--><!--Device-ProcessInfo-pid: int-End-->
 
@@ -35,7 +38,9 @@ The name of the current process
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessInfo-processName: string--><!--Device-ProcessInfo-processName: string-End-->
 

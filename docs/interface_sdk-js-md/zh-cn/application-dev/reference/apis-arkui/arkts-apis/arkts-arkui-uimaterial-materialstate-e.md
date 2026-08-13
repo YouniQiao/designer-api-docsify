@@ -4,9 +4,11 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-<!--Device-uiMaterial-export enum MaterialState--><!--Device-uiMaterial-export enum MaterialState-End-->
+**废弃版本：** -1
+
+<!--Device-uiMaterial-enum MaterialState--><!--Device-uiMaterial-enum MaterialState-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,17 @@
 DEFAULT = 0
 ```
 
-默认模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、  
-[AlphabetIndexer](alphabet_indexer)在组件本身未设置背景颜色、模糊参数和阴影参数时默认开启沉浸式系统材质；[Text](text)设置  
-[copyOption](TextAttribute#copyOption)后长按或双击触发的文本菜单默认开启沉浸式系统材质；其他组件由应用主动设置。
+默认模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、 AlphabetIndexer在组件本身未设置背景颜色、模糊参数和阴影参数时默认开启沉浸式系统材质；Text设置 copyOption后长按或双击触发的文本菜单默认开启沉浸式系统材质；其他组件由应用主动设置。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MaterialState-DEFAULT = 0--><!--Device-MaterialState-DEFAULT = 0-End-->
 
@@ -36,19 +40,17 @@ DEFAULT = 0
 ENABLE = 1
 ```
 
-使能模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、  
-[AlphabetIndexer](alphabet_indexer)、[ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md#ChipGroup)、  
-[Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)、[Select](select)、[菜单控制](common)、[Toggle](toggle)、  
-[SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md#SegmentButton)、  
-[SegmentButtonV2](@ohos.arkui.advanced.SegmentButtonV2)、[Slider](slider)、  
-[bindSheet](CommonMethod#bindSheet)、[SelectionMenu](arkts-arkui-arkui-advanced-selectionmenu-selectionmenu-f.md#SelectionMenu)组件默认开启沉浸式系统材质；  
-[Text](text)设置[copyOption](TextAttribute#copyOption)后长按或双击触发的文本菜单默认开启沉浸式系统材质。此模式下，沉浸式系统材质样式生效的优先级高于组件本身设置的背景色、模糊、阴影和边框样式。其他组件需开发者主动设置。
+使能模式。[弹出框Dialog](../../../ui/arkts-base-dialog-overview.md)、[即时反馈（Toast）](../../../ui/arkts-create-toast.md)、 AlphabetIndexer、ChipGroup、 [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#Chip)、Select、菜单控制、Toggle、 [SegmentButton](arkts-arkui-arkui-advanced-segmentbutton-segmentbutton-s.md#SegmentButton)、 SegmentButtonV2、Slider、 bindSheet、[SelectionMenu](arkts-arkui-arkui-advanced-selectionmenu-selectionmenu-f.md#SelectionMenu)组件默认开启沉浸式系统材质； Text设置copyOption后长按或双击触发的文本菜单默认开启沉浸式系统材质。此模式下，沉浸式系统材质样式生效的优先级高于组件 本身设置的背景色、模糊、阴影和边框样式。其他组件需开发者主动设置。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MaterialState-ENABLE = 1--><!--Device-MaterialState-ENABLE = 1-End-->
 
@@ -64,9 +66,13 @@ DISABLE = 2
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MaterialState-DISABLE = 2--><!--Device-MaterialState-DISABLE = 2-End-->
 

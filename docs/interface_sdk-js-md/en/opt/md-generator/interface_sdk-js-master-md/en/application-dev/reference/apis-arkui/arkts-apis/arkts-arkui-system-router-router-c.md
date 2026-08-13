@@ -6,7 +6,7 @@ The **Router** module provides APIs to access pages through URIs.
 
 **Deprecated since:** 8
 
-**Substitutes:** [router](arkts-router.md#router)
+**Substitutes:** [router](arkts-router.md#@ohos.router)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 
@@ -24,18 +24,13 @@ import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, Ro
 static back(options?: BackRouterOptions): void
 ```
 
-Returns to the previous or a specified page.
-
-> **NOTE：**
-> 
-> In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the
-> configuration file.
+Returns to the previous or a specified page. > **NOTE：**> > In the example, the **uri** field indicates the page route, which is specified by the **pages** list in the > configuration file.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [back](ohos.router.router#back)
+**Substitutes:** back
 
 <!--Device-Router-static back(options?: BackRouterOptions): void--><!--Device-Router-static back(options?: BackRouterOptions): void-End-->
 
@@ -59,7 +54,7 @@ Clears all historical pages in the stack and retains only the current page at th
 
 **Deprecated since:** 8
 
-**Substitutes:** [clear](ohos.router.router#clear)
+**Substitutes:** clear
 
 <!--Device-Router-static clear(): void--><!--Device-Router-static clear(): void-End-->
 
@@ -77,7 +72,7 @@ Disables the display of a confirm dialog box before returning to the previous pa
 
 **Deprecated since:** 8
 
-**Substitutes:** [hideAlertBeforeBackPage](ohos.router.router#hideAlertBeforeBackPage)
+**Substitutes:** hideAlertBeforeBackPage
 
 <!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void--><!--Device-Router-static disableAlertBeforeBackPage(options?: DisableAlertBeforeBackPageOptions): void-End-->
 
@@ -101,7 +96,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 **Deprecated since:** 8
 
-**Substitutes:** [showAlertBeforeBackPage](ohos.router.router#showAlertBeforeBackPage)
+**Substitutes:** showAlertBeforeBackPage
 
 <!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void--><!--Device-Router-static enableAlertBeforeBackPage(options: EnableAlertBeforeBackPageOptions): void-End-->
 
@@ -125,7 +120,7 @@ Obtains the number of pages in the current stack.
 
 **Deprecated since:** 8
 
-**Substitutes:** [getLength](ohos.router.router#getLength)
+**Substitutes:** getLength
 
 <!--Device-Router-static getLength(): string--><!--Device-Router-static getLength(): string-End-->
 
@@ -149,7 +144,7 @@ Obtains parameter information about the current page.
 
 **Deprecated since:** 8
 
-**Substitutes:** [getParams](ohos.router.router#getParams)
+**Substitutes:** getParams
 
 <!--Device-Router-static getParams(): ParamsInterface--><!--Device-Router-static getParams(): ParamsInterface-End-->
 
@@ -173,7 +168,7 @@ Obtains state information about the current page.
 
 **Deprecated since:** 8
 
-**Substitutes:** [getState](ohos.router.router#getState)
+**Substitutes:** getState
 
 <!--Device-Router-static getState(): RouterState--><!--Device-Router-static getState(): RouterState-End-->
 
@@ -191,17 +186,13 @@ Obtains state information about the current page.
 static push(options: RouterOptions): void
 ```
 
-Navigates to a specified page in the application.
-
-> **NOTE：**
-> 
-> The page routing stack supports a maximum of 32 pages.
+Navigates to a specified page in the application. > **NOTE：**> > The page routing stack supports a maximum of 32 pages.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [push](ohos.router.router#push)
+**Substitutes:** push
 
 <!--Device-Router-static push(options: RouterOptions): void--><!--Device-Router-static push(options: RouterOptions): void-End-->
 
@@ -225,7 +216,7 @@ Replaces the current page with another one in the application and destroys the c
 
 **Deprecated since:** 8
 
-**Substitutes:** [replace](ohos.router.router#replace)
+**Substitutes:** replace
 
 <!--Device-Router-static replace(options: RouterOptions): void--><!--Device-Router-static replace(options: RouterOptions): void-End-->
 

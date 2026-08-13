@@ -4,6 +4,8 @@ Enumerates the result codes returned by the focusable node query.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export enum FocusMoveResultCode--><!--Device-unnamed-export enum FocusMoveResultCode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -19,6 +21,8 @@ NOT_SUPPORTED = -1
 Query is not supported.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-NOT_SUPPORTED = -1--><!--Device-FocusMoveResultCode-NOT_SUPPORTED = -1-End-->
 
@@ -36,6 +40,8 @@ The node is queried successfully.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FocusMoveResultCode-SEARCH_SUCCESS = 0--><!--Device-FocusMoveResultCode-SEARCH_SUCCESS = 0-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -51,6 +57,8 @@ SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1
 The node is queried successfully. Use the **bypassSelfDescendants** parameter to quickly obtain the result in the next query.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1--><!--Device-FocusMoveResultCode-SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1-End-->
 
@@ -68,6 +76,8 @@ Failed to query the node. The current page has no focusable node.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE = 2--><!--Device-FocusMoveResultCode-SEARCH_FAILURE = 2-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -83,6 +93,8 @@ SEARCH_FAILURE_IN_CHILD_TREE = 3
 Failed to query the node. The current container has no focusable node.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_CHILD_TREE = 3--><!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_CHILD_TREE = 3-End-->
 
@@ -100,6 +112,8 @@ Failed to query the node. The start node is not found.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE_LOST_NODE = 4--><!--Device-FocusMoveResultCode-SEARCH_FAILURE_LOST_NODE = 4-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -115,6 +129,8 @@ SEARCH_NEXT = 5
 The returned node is not focusable. Continue to query from the returned node.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_NEXT = 5--><!--Device-FocusMoveResultCode-SEARCH_NEXT = 5-End-->
 
@@ -132,6 +148,8 @@ The returned node is not focusable. Continue to query from all descendants of th
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY = 6--><!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY = 6-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -148,6 +166,8 @@ The returned node is not focusable. Continue to query from the last child node o
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY_AND_GET_LAST = 7--><!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY_AND_GET_LAST = 7-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -163,6 +183,8 @@ SEARCH_FAILURE_IN_SCROLL = 8
 Failed to query the node in the scrollable component.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_SCROLL = 8--><!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_SCROLL = 8-End-->
 

@@ -2,7 +2,9 @@
 
 设置旋转矩阵响应对象，用于描述旋转矩阵和倾斜矩阵的计算结果。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sensor-interface RotationMatrixResponse--><!--Device-sensor-interface RotationMatrixResponse-End-->
 
@@ -18,7 +20,9 @@ inclination: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationMatrixResponse-inclination: Array<double>--><!--Device-RotationMatrixResponse-inclination: Array<double>-End-->
 
@@ -34,7 +38,9 @@ rotation: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationMatrixResponse-rotation: Array<double>--><!--Device-RotationMatrixResponse-rotation: Array<double>-End-->
 

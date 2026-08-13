@@ -2,7 +2,9 @@
 
 Enumerates the portrait effects.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum PortraitEffect--><!--Device-camera-enum PortraitEffect-End-->
 
@@ -18,7 +20,9 @@ OFF = 0
 
 Disabled.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitEffect-OFF = 0--><!--Device-PortraitEffect-OFF = 0-End-->
 
@@ -34,7 +38,9 @@ CIRCLES = 1
 
 Circles.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitEffect-CIRCLES = 1--><!--Device-PortraitEffect-CIRCLES = 1-End-->
 
@@ -50,7 +56,9 @@ HEART = 2
 
 Heart-shaped.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitEffect-HEART = 2--><!--Device-PortraitEffect-HEART = 2-End-->
 
@@ -66,7 +74,9 @@ ROTATED = 3
 
 Rotated.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitEffect-ROTATED = 3--><!--Device-PortraitEffect-ROTATED = 3-End-->
 
@@ -82,7 +92,9 @@ STUDIO = 4
 
 Studio light.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitEffect-STUDIO = 4--><!--Device-PortraitEffect-STUDIO = 4-End-->
 
@@ -98,7 +110,9 @@ THEATER = 5
 
 Theater light.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitEffect-THEATER = 5--><!--Device-PortraitEffect-THEATER = 5-End-->
 

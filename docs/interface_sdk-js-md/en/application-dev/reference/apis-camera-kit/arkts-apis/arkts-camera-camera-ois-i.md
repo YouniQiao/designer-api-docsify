@@ -6,9 +6,11 @@ OIS (Optical Image Stabilization) interface.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-<!--Device-camera-interface OIS extends OISQuery--><!--Device-camera-interface OIS extends OISQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface OIS--><!--Device-camera-interface OIS-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,7 +30,9 @@ Sets the OIS mode.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,17 +52,11 @@ Sets the OIS mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setOISModeCustom
 
-ArkTS-Dyn:
-```TypeScript
-setOISModeCustom(pitch: number, yaw: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOISModeCustom(pitch: double, yaw: double): void
 ```
@@ -67,7 +65,9 @@ Sets custom OIS bias values for each axis.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,13 +81,13 @@ Sets custom OIS bias values for each axis.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pitch | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Bias value for pitch axis. |
-| yaw | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Bias value for yaw axis. |
+| pitch | double | Yes | Bias value for pitch axis. |
+| yaw | double | Yes | Bias value for yaw axis. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 

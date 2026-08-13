@@ -1,11 +1,12 @@
 # DataProxyHandle
 
-Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using  
-[createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle).
+Defines the data proxy handle, which can be used to access or manage shared configuration information. Before calling an API provided by **DataProxyHandle**, you must create a **DataProxyHandle** instance using [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createDataProxyHandle).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-dataShare-interface DataProxyHandle--><!--Device-dataShare-interface DataProxyHandle-End-->
 
@@ -23,11 +24,13 @@ import { dataShare } from '@kit.ArkData';
 delete(uris: string[], config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-Deletes the specified shared configuration items based on URIs. This API uses a promise to return the result.Only the publisher is allowed to delete shared configuration items.
+Deletes the specified shared configuration items based on URIs. This API uses a promise to return the result. Only the publisher is allowed to delete shared configuration items.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,8 +55,8 @@ Deletes the specified shared configuration items based on URIs. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -78,11 +81,13 @@ dataProxyHandle.delete(urisToDelete, config).then((results: dataShare.DataProxyR
 deleteMyPublishedData(config: DataProxyConfig): Promise<DataProxyResult[]>
 ```
 
-Deletes all the data published by the publisher.Only the data publisher can delete the data.
+Deletes all the data published by the publisher. Only the data publisher can delete the data.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,8 +111,8 @@ Deletes all the data published by the publisher.Only the data publisher can dele
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## get
 
@@ -115,11 +120,13 @@ Deletes all the data published by the publisher.Only the data publisher can dele
 get(uris: string[], config: DataProxyConfig): Promise<DataProxyGetResult[]>
 ```
 
-Obtains a specified shared configuration item based on the URI. This API uses a promise to return the result.Only the publisher and applications in the allowed list can access the shared configuration item.
+Obtains a specified shared configuration item based on the URI. This API uses a promise to return the result. Only the publisher and applications in the allowed list can access the shared configuration item.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,8 +151,8 @@ Obtains a specified shared configuration item based on the URI. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -170,12 +177,13 @@ dataProxyHandle.get(urisToGet, config).then((results: dataShare.DataProxyGetResu
 getValues(uri: string, config: DataProxyConfig): Promise<ValueType[]>
 ```
 
-Obtains all multi-value data under a specified URI. Only the publisher and the applications in the  
-[allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) can obtain the data. This API uses a promise to return the result.
+Obtains all multi-value data under a specified URI. Only the publisher and the applications in the [allowList](arkts-arkdata-datashare-proxydata-i.md#allowList) can obtain the data. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,11 +209,56 @@ Obtains all multi-value data under a specified URI. Only the publisher and the a
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
-## off
+## offDataChange
+
+```TypeScript
+offDataChange(
+      uris: string[],
+      config: DataProxyConfig,
+      callback?: Callback<DataProxyChangeInfo[]>
+    ): DataProxyResult[]
+```
+
+Deregisters observers to observe proxy data change specified by the given URIs.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| uris | string[] | Yes | Indicates the uris of the data to operate. |
+| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+
+## off_dataChange
 
 ```TypeScript
 off(
@@ -222,6 +275,8 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-off(      event: 'dataChange',      uris: string[],      config: DataProxyConfig,      callback?: AsyncCallback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
@@ -235,7 +290,7 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. |
 | uris | string[] | Yes | Array of URIs to be unsubscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | Callback function. If the value is empty, undefined, or null, all notifications of the URIs are unsubscribed. |
 
 **Return value:**
 
@@ -247,8 +302,8 @@ Unsubscribes from the change event of the proxy data corresponding to a specifie
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -273,25 +328,27 @@ results.forEach((result) => {
 });
 ```
 
-## offDataChange
+## onDataChange
 
 ```TypeScript
-offDataChange(
+onDataChange(
       uris: string[],
       config: DataProxyConfig,
-      callback?: Callback<DataProxyChangeInfo[]>
+      callback: Callback<DataProxyChangeInfo[]>
     ): DataProxyResult[]
 ```
 
-Deregisters observers to observe proxy data change specified by the given URIs.
+Registers observers to observe proxy data change specified by the given URIs.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-offDataChange(      uris: string[],      config: DataProxyConfig,      callback?: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
+<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
 
@@ -301,7 +358,7 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 | --- | --- | --- | --- |
 | uris | string[] | Yes | Indicates the uris of the data to operate. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | No | The callback function when data changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
 
 **Return value:**
 
@@ -313,10 +370,10 @@ Deregisters observers to observe proxy data change specified by the given URIs.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
-## on
+## on_dataChange
 
 ```TypeScript
 on(
@@ -327,14 +384,13 @@ on(
     ): DataProxyResult[]
 ```
 
-Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI, and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently.
-
-When the publisher calls the [publish](#publish) or  
-[delete](#delete) API to publish or delete a configuration, a notification is automatically triggered.
+Subscribes to the change event of the shared configuration corresponding to a specified URI. If the change event is subscribed, the subscriber will receive a callback notification that carries the data change type, changed URI , and changed content when the publisher modifies the configuration. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription or subscription to unpublished configurations. If the permission is revoked after the subscription is successful, the subscriber will not be notified consequently. When the publisher calls the [publish](#publish) or [delete](#delete) API to publish or delete a configuration, a notification is automatically triggered.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -349,7 +405,7 @@ When the publisher calls the [publish](#publish) or
 | event | 'dataChange' | Yes | Event or callback type. The value is **dataChange**, which indicates the data change. This event is triggered when the publisher modifies the configuration. |
 | uris | string[] | Yes | Array of URIs to be subscribed, with a maximum of 32 URIs. The URI value is fixed at the format of **"datashareproxy://{*bundleName*}/{*path*}"**, in which **bundleName** indicates the bundle name of the publisher application, and **path** can be set to any value but must be unique in the same application. The value contains a maximum of 256 bytes. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Data proxy configuration. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | Callback triggered when the publisher modifies the configuration. |
 
 **Return value:**
 
@@ -361,8 +417,8 @@ When the publisher calls the [publish](#publish) or
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -387,49 +443,6 @@ results.forEach((result) => {
 });
 ```
 
-## onDataChange
-
-```TypeScript
-onDataChange(
-      uris: string[],
-      config: DataProxyConfig,
-      callback: Callback<DataProxyChangeInfo[]>
-    ): DataProxyResult[]
-```
-
-Registers observers to observe proxy data change specified by the given URIs.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]--><!--Device-DataProxyHandle-onDataChange(      uris: string[],      config: DataProxyConfig,      callback: Callback<DataProxyChangeInfo[]>    ): DataProxyResult[]-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| uris | string[] | Yes | Indicates the uris of the data to operate. |
-| config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Indicates the configuration of the data proxy operation. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DataProxyChangeInfo](arkts-arkdata-datashare-dataproxychangeinfo-i.md)[]&gt; | Yes | The callback function when data changes. |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [DataProxyResult](arkts-arkdata-datashare-dataproxyresult-i.md)[] | : The operation result. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
-
 ## publish
 
 ```TypeScript
@@ -438,9 +451,11 @@ publish(data: ProxyData[], config: DataProxyConfig): Promise<DataProxyResult[]>
 
 Publishes shared configuration items. This API uses a promise to return the result. After shared configuration items are published, the publisher and the applications in the allowlist can access these items. If the URI to be published already exists, the corresponding shared configuration item is updated. If any URI in the configuration item to be published exceeds the maximum length or fails the format verification, the current publish operation fails. Only the publisher can update shared configuration items. Each application supports a maximum of 32 shared configurations.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -465,8 +480,8 @@ Publishes shared configuration items. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## Examples
 
@@ -494,21 +509,17 @@ dataProxyHandle.publish(newConfigData, config).then((results: dataShare.DataProx
 
 ## putValue
 
-ArkTS-Dyn:
-```TypeScript
-putValue(uri: string, key: number, value: ValueType, config: DataProxyConfig): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Promise<void>
 ```
 
-Puts a value into the published data. This operation can be performed only on multi-value type data. If the input **key** does not exist, a new value is added. If the input **key** already exists, the value corresponding to the key is updated. By default, a maximum of 10 values can be added to a single data record (that is, a URI)for a single application, and the maximum length of each value is 4096 bytes. In addition, the total length of all values in a single data record is limited by the value of the **maxValueLength** parameter that is specified during data publishing. Note that the **maxValueLength** parameter does not take effect in this API. This API uses a promise to return the result.
+Puts a value into the published data. This operation can be performed only on multi-value type data. If the input **key** does not exist, a new value is added. If the input **key** already exists, the value corresponding to the key is updated. By default, a maximum of 10 values can be added to a single data record (that is, a URI) for a single application, and the maximum length of each value is 4096 bytes. In addition, the total length of all values in a single data record is limited by the value of the **maxValueLength** parameter that is specified during data publishing. Note that the **maxValueLength** parameter does not take effect in this API. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -521,7 +532,7 @@ Puts a value into the published data. This operation can be performed only on mu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the URI of the data to operate. |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The key corresponding to the added value. It is unique for the same application. &lt;br&gt;The value range is all integers. |
+| key | int | Yes | The key corresponding to the added value. It is unique for the same application. &lt;br&gt;The value range is all integers. |
 | value | [ValueType](arkts-arkdata-valuetype-t.md) | Yes | The value to be put. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
@@ -536,18 +547,12 @@ Puts a value into the published data. This operation can be performed only on mu
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 
 ## removeValue
 
-ArkTS-Dyn:
-```TypeScript
-removeValue(uri: string, key: number, config: DataProxyConfig): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 ```
@@ -556,7 +561,9 @@ Removes the value corresponding to the key. This operation can be performed only
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -569,7 +576,7 @@ Removes the value corresponding to the key. This operation can be performed only
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Indicates the URI of the data to operate. |
-| key | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | The key corresponding to the added value. &lt;br&gt;The value range is all integers. |
+| key | int | Yes | The key corresponding to the added value. &lt;br&gt;The value range is all integers. |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | Yes | Configuration of the data proxy operation. |
 
 **Return value:**
@@ -583,7 +590,7 @@ Removes the value corresponding to the key. This operation can be performed only
 | Error Code ID | Error Message |
 | --- | --- |
 | 15700015 | No permission to access the data specified by the URI. |
-| [15700014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
-| [15700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
-| [15700000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
+| [15700014](../errorcode-datashare.md#15700014-incorrect-parameters-for-shared-configuration) | The parameter format is incorrect or the value range is invalid. |
+| [15700011](../errorcode-datashare.md#15700011-uri-not-exist) | The URI does not exist. |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) | Inner error. Possible causes: The service is not ready or is being restarted abnormally. |
 

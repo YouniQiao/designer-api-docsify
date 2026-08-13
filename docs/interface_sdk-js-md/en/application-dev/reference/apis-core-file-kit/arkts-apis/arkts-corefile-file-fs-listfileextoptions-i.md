@@ -1,10 +1,12 @@
 # ListFileExtOptions
 
-Defines the options used in **listFileExt**.
+Defines the options used in listFileExt().
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
 
@@ -22,13 +24,15 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 fileFilter?: FileFilter
 ```
 
-File name filtering rule. The default value is empty, indicating that no filtering is performed.
+File name filtering interface. This parameter is optional. Filtering rules can be defined based on file names.
 
-**Type:** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
+**Type:** [FileFilter](../../apis-na/arkts-apis/arkts-na-file-fs-filefilter-i.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,20 +43,22 @@ File name filtering rule. The default value is empty, indicating that no filteri
 ## listNum
 
 ```TypeScript
-listNum?: long
+listNum?: number
 ```
 
-Number of file names to be listed. The default value is **0**, indicating that all files are listed.
+Number of file names to list. This parameter is optional. The default value is 0, which means to list all files. The value should be an integer.
 
-**Type:** long
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ListFileExtOptions-listNum?: long--><!--Device-ListFileExtOptions-listNum?: long-End-->
+<!--Device-ListFileExtOptions-listNum?: number--><!--Device-ListFileExtOptions-listNum?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
 
@@ -62,17 +68,15 @@ Number of file names to be listed. The default value is **0**, indicating that a
 recursion?: boolean
 ```
 
-Whether to list all files in subfolders recursively. The default value is **false**.
-
-**false**: The names of files and directories that meet the filtering requirements in the current directory are returned.
-
-**true**: Relative paths (starting with /) of all files that meet the filtering requirements in the directory are returned.
+Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is false. If recursion is false, the names of files and directories that meet the filtering requirements in the current directory are returned. If recursion is true, relative paths (starting with"/") of all files that meet the specified conditions in the current directory are returned.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,6 +14,8 @@ SceneOptions used by constructor
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Component3DInterface-(sceneOptions?: SceneOptions): Component3DAttribute--><!--Device-Component3DInterface-(sceneOptions?: SceneOptions): Component3DAttribute-End-->
@@ -28,6 +30,6 @@ SceneOptions used by constructor
 
 ## Summary
 
-- [SceneOptions](arkts-arkui-component3d-sceneoptions-i.md)
-- [Scene](arkts-arkui-component3d-scene-t.md)
-- [ModelType](arkts-arkui-component3d-modeltype-e.md)
+- [SceneOptions](arkts-arkui-sceneoptions-i.md)
+- [Scene](arkts-arkui-scene-t.md)
+- [ModelType](arkts-arkui-modeltype-e.md)

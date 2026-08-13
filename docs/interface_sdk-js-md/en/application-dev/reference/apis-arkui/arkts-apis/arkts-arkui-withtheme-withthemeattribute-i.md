@@ -6,6 +6,8 @@ Defines the WithTheme attribute functions..
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface WithThemeAttribute--><!--Device-unnamed-export declare interface WithThemeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -13,45 +15,37 @@ Defines the WithTheme attribute functions..
 ## applyAttributesFinish
 
 ```TypeScript
-default applyAttributesFinish(): void
+applyAttributesFinish(): void
 ```
 
-Notify the component is finished setting up its attributes.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WithThemeAttribute-default applyAttributesFinish(): void--><!--Device-WithThemeAttribute-default applyAttributesFinish(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-WithThemeAttribute-applyAttributesFinish(): void--><!--Device-WithThemeAttribute-applyAttributesFinish(): void-End-->
 
 ## debugLine
 
 ```TypeScript
-default debugLine(sourceLine: string, moduleName?: string): this
+debugLine(sourceLine: string, moduleName?: string): this
 ```
 
-Set the component's source code redirection information.
+**Since:** -1
 
-**Since:** 26.0.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WithThemeAttribute-default debugLine(sourceLine: string, moduleName?: string): this--><!--Device-WithThemeAttribute-default debugLine(sourceLine: string, moduleName?: string): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-WithThemeAttribute-debugLine(sourceLine: string, moduleName?: string): this--><!--Device-WithThemeAttribute-debugLine(sourceLine: string, moduleName?: string): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceLine | string | Yes | the source code line. |
-| moduleName | string | No | module to which the component belongs. |
+| sourceLine | string | Yes |  |
+| moduleName | string | No |  |
 
 **Return value:**
 
@@ -62,30 +56,46 @@ Set the component's source code redirection information.
 ## setWithThemeOptions
 
 ```TypeScript
-default setWithThemeOptions(options: WithThemeOptions | undefined): this
+setWithThemeOptions(options: WithThemeOptions | undefined): this
 ```
 
-Sets the WithTheme options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WithThemeAttribute-default setWithThemeOptions(options: WithThemeOptions | undefined): this--><!--Device-WithThemeAttribute-default setWithThemeOptions(options: WithThemeOptions | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-WithThemeAttribute-setWithThemeOptions(options: WithThemeOptions | undefined): this--><!--Device-WithThemeAttribute-setWithThemeOptions(options: WithThemeOptions | undefined): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | Yes | The options to create a WithTheme. |
+| options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns instance of WithThemeAttribute. |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Notify the component is finished setting up its attributes.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WithThemeAttribute-default--><!--Device-WithThemeAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CachedCountOptions--><!--Device-unnamed-declare interface CachedCountOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@
 independent?: boolean
 ```
 
-[cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))是否按实际子组件个数计算。
-
-设置为true时，cachedCount按实际子组件个数计算，不按组计算。
-
-设置为false时，如果displayCount.swipeByGroup=true，则cachedCount按组计算，否则按实际子组件个数计算。
-
-默认值：false
+cachedCount是否按实际子组件个数计算。 设置为true时，cachedCount按实际子组件个数计算，不按组计算。 设置为false时，如果displayCount.swipeByGroup=true，则cachedCount按组计算，否则按实际子组件个数计算。 默认值：false
 
 **类型：** boolean
 
@@ -31,6 +27,8 @@ independent?: boolean
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,13 +46,7 @@ independent?: boolean
 isShown?: boolean
 ```
 
-预加载范围内的节点是否进行绘制。
-
-设置为true时，预加载范围内的节点进行绘制。
-
-设置为false时，预加载范围内的节点不进行绘制。
-
-默认值：false
+预加载范围内的节点是否进行绘制。 设置为true时，预加载范围内的节点进行绘制。 设置为false时，预加载范围内的节点不进行绘制。 默认值：false
 
 **类型：** boolean
 
@@ -63,6 +55,8 @@ isShown?: boolean
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

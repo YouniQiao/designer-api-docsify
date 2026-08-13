@@ -4,11 +4,13 @@
 type ExtInfoChangeCallback = (extensionId: string, info: string) => void
 ```
 
-Defines the callback type used in registering to listen for extension change.The value of extensionId indicates the print extension id.The value of info indicates the connect info.
+Defines the callback type used in registering to listen for extension change. The value of extensionId indicates the print extension id. The value of info indicates the connect info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-type ExtInfoChangeCallback = (extensionId: string, info: string) => void--><!--Device-print-type ExtInfoChangeCallback = (extensionId: string, info: string) => void-End-->
 

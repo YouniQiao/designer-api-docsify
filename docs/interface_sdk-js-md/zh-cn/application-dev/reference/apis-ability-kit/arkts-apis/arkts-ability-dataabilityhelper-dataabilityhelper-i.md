@@ -1,10 +1,12 @@
 # DataAbilityHelper
 
-可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper)接口获取DataAbilityHelper对象。
+可以通过[acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquireDataAbilityHelper)接口获取 DataAbilityHelper对象。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DataAbilityHelper--><!--Device-unnamed-export interface DataAbilityHelper-End-->
 
@@ -22,6 +24,8 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: AsyncCallback<number>): void-End-->
@@ -34,7 +38,7 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>, callback: Async
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要插入数据的uri。 |
 | valuesBuckets | Array&lt;rdb.ValuesBucket&gt; | 是 | 表示要插入的数据记录数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回插入的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回插入的数据记录数。 |
 
 ## 示例
 
@@ -69,6 +73,8 @@ batchInsert(uri: string, valuesBuckets: Array<rdb.ValuesBucket>): Promise<number
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -119,6 +125,8 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void--><!--Device-DataAbilityHelper-call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCallback<PacMap>): void-End-->
@@ -133,7 +141,7 @@ call(uri: string, method: string, arg: string, extras: PacMap, callback: AsyncCa
 | method | string | 是 | 表示被调用的方法名。 |
 | arg | string | 是 | 表示需传入的参数。 |
 | extras | [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md) | 是 | 表示扩展的键值对参数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | 是 | 回调函数，返回扩展的键值对参数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)&gt; | 是 | 回调函数，返回扩展的键值对参数。 |
 
 ## 示例
 
@@ -165,6 +173,8 @@ call(uri: string, method: string, arg: string, extras: PacMap): Promise<PacMap>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -217,6 +227,8 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<number>): void-End-->
@@ -229,7 +241,7 @@ delete(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asy
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要删除数据的uri。 |
 | predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回已删除的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回已删除的数据记录数。 |
 
 ## 示例
 
@@ -262,6 +274,8 @@ delete(uri: string, predicates?: dataAbility.DataAbilityPredicates): Promise<num
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -310,6 +324,8 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-delete(uri: string, callback: AsyncCallback<number>): void-End-->
@@ -321,7 +337,7 @@ predicates筛选条件为空，自定义数据库删除数据记录的处理逻�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要删除数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回已删除的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回已删除的数据记录数。 |
 
 ## 示例
 
@@ -353,6 +369,8 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-denormalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -364,7 +382,7 @@ denormalizeUri(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要反规范化的uri对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回反规范化uri对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回反规范化uri对象。 |
 
 ## 示例
 
@@ -395,6 +413,8 @@ denormalizeUri(uri: string): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -444,6 +464,8 @@ executeBatch(
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void--><!--Device-DataAbilityHelper-executeBatch(    uri: string,    operations: Array<DataAbilityOperation>,    callback: AsyncCallback<Array<DataAbilityResult>>  ): void-End-->
@@ -456,7 +478,7 @@ executeBatch(
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示待处理的DataAbility。例：'dataability:///com.example.xxx.xxxx'。 |
 | operations | Array&lt;[DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)&gt; | 是 | 表示数据操作数组，其中可以包含对数据库的多个不同操作。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | 是 | 回调函数，在DataAbilityResult数组中返回每个操作的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)&gt;&gt; | 是 | 回调函数，在DataAbilityResult数组中返回每个操作的结果。 |
 
 ## 示例
 
@@ -489,6 +511,8 @@ executeBatch(uri: string, operations: Array<DataAbilityOperation>): Promise<Arra
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -540,6 +564,8 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void--><!--Device-DataAbilityHelper-getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<string>>): void-End-->
@@ -552,7 +578,7 @@ getFileTypes(uri: string, mimeTypeFilter: string, callback: AsyncCallback<Array<
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示待获取文件的uri。 |
 | mimeTypeFilter | string | 是 | 表示待获取文件的媒体资源类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回匹配的媒体资源类型数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回匹配的媒体资源类型数组。 |
 
 ## 示例
 
@@ -583,6 +609,8 @@ getFileTypes(uri: string, mimeTypeFilter: string): Promise<Array<string>>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -629,6 +657,8 @@ getType(uri: string, callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-getType(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -640,7 +670,7 @@ getType(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示待获取数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，返回与uri指向数据匹配的媒体资源类型。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，返回与uri指向数据匹配的媒体资源类型。 |
 
 ## 示例
 
@@ -671,6 +701,8 @@ getType(uri: string): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -716,6 +748,8 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
@@ -728,7 +762,7 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<numb
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要插入数据的uri。 |
 | valuesBucket | rdb.ValuesBucket | 是 | 表示要插入的数据记录。如果此参数为空，将插入一个空行。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回插入数据记录的索引。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回插入数据记录的索引。 |
 
 ## insert
 
@@ -741,6 +775,8 @@ insert(uri: string, valuesBucket: rdb.ValuesBucket): Promise<number>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -773,6 +809,8 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataAbilityHelper-normalizeUri(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -784,7 +822,7 @@ normalizeUri(uri: string, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要规范化的uri对象。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，如果数据功能支持uri规范化，则返回规范化uri对象；否则返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 回调函数，如果数据功能支持uri规范化，则返回规范化uri对象；否则返回null。 |
 
 ## 示例
 
@@ -815,6 +853,8 @@ normalizeUri(uri: string): Promise<string>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -860,6 +900,8 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void--><!--Device-DataAbilityHelper-notifyChange(uri: string, callback: AsyncCallback<void>): void-End-->
@@ -871,7 +913,7 @@ notifyChange(uri: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示数据变化的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知注册的观察者成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当通知注册的观察者成功，err为undefined，否则为错误对象。 |
 
 ## 示例
 
@@ -902,6 +944,8 @@ notifyChange(uri: string): Promise<void>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -935,7 +979,7 @@ DAHelper.notifyChange('dataability:///com.example.DataAbility').then(() => {
 });
 ```
 
-## off('dataChange')
+## off_dataChange
 
 ```TypeScript
 off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
@@ -946,6 +990,8 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -959,7 +1005,7 @@ off(type: 'dataChange', uri: string, callback?: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 表示监听操作类型，'dataChange'表示数据变化操作。 |
 | uri | string | 是 | 表示待取消监听数据变化的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数。当注销观察者以停止监听uri指定数据的数据变化通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 回调函数。当注销观察者以停止监听uri指定数据的数据变化通知成功，err为undefined，否则为错误对象。 |
 
 ## 示例
 
@@ -984,7 +1030,7 @@ DAHelper.off(
 );
 ```
 
-## on('dataChange')
+## on_dataChange
 
 ```TypeScript
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
@@ -995,6 +1041,8 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1008,7 +1056,7 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | type | 'dataChange' | 是 | 表示监听操作类型，'dataChange'表示数据变化操作。 |
 | uri | string | 是 | 表示待监听数据变化的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当注册观察者以监听uri指定数据的数据变化通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当注册观察者以监听uri指定数据的数据变化通知成功，err为undefined，否则为错误对象。 |
 
 ## 示例
 
@@ -1041,6 +1089,8 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-openFile(uri: string, mode: string, callback: AsyncCallback<number>): void-End-->
@@ -1053,7 +1103,7 @@ openFile(uri: string, mode: string, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示待打开文件的uri。 |
 | mode | string | 是 | 表示文件打开模式，可以设置为‘r’表示只读访问，‘w’表示只写访问，‘rw’表示读写访问等。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回文件描述符。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回文件描述符。 |
 
 ## 示例
 
@@ -1085,6 +1135,8 @@ openFile(uri: string, mode: string): Promise<number>
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1137,6 +1189,8 @@ query(
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void--><!--Device-DataAbilityHelper-query(    uri: string,    columns: Array<string>,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<ResultSet>  ): void-End-->
@@ -1150,7 +1204,7 @@ query(
 | uri | string | 是 | 表示要查询数据的uri。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果此参数为空，则查询所有列。 |
 | predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 ## 示例
 
@@ -1185,6 +1239,8 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1196,7 +1252,7 @@ query(uri: string, callback: AsyncCallback<ResultSet>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 ## 示例
 
@@ -1228,6 +1284,8 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1240,7 +1298,7 @@ query(uri: string, columns: Array<string>, callback: AsyncCallback<ResultSet>): 
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
 | columns | Array&lt;string&gt; | 是 | 表示要查询的列。如果此参数为空，则查询所有列。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 ## 示例
 
@@ -1273,6 +1331,8 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void--><!--Device-DataAbilityHelper-query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: AsyncCallback<ResultSet>): void-End-->
@@ -1285,7 +1345,7 @@ query(uri: string, predicates: dataAbility.DataAbilityPredicates, callback: Asyn
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要查询数据的uri。 |
 | predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，自定义查询数据库中数据的处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ResultSet](../../apis-arkdata/arkts-apis/arkts-arkdata-resultset-resultset-depr-i.md)&gt; | 是 | 回调函数，返回查询结果。 |
 
 ## 示例
 
@@ -1318,6 +1378,8 @@ query(uri: string, columns?: Array<string>, predicates?: dataAbility.DataAbility
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1373,6 +1435,8 @@ update(
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void--><!--Device-DataAbilityHelper-update(    uri: string,    valuesBucket: rdb.ValuesBucket,    predicates: dataAbility.DataAbilityPredicates,    callback: AsyncCallback<number>  ): void-End-->
@@ -1386,7 +1450,7 @@ update(
 | uri | string | 是 | 表示要更新数据的uri。 |
 | valuesBucket | rdb.ValuesBucket | 是 | 表示要更新的数据。 |
 | predicates | dataAbility.DataAbilityPredicates | 是 | 表示筛选条件。当此参数为null时，应定义处理逻辑。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回更新的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回更新的数据记录数。 |
 
 ## 示例
 
@@ -1426,6 +1490,8 @@ update(uri: string, valuesBucket: rdb.ValuesBucket, predicates?: dataAbility.Dat
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -1482,6 +1548,8 @@ predicates筛选条件为空，自定义更新数据库的处理逻辑。使用c
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void--><!--Device-DataAbilityHelper-update(uri: string, valuesBucket: rdb.ValuesBucket, callback: AsyncCallback<number>): void-End-->
@@ -1494,7 +1562,7 @@ predicates筛选条件为空，自定义更新数据库的处理逻辑。使用c
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要更新数据的uri。 |
 | valuesBucket | rdb.ValuesBucket | 是 | 表示要更新的数据。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数，返回更新的数据记录数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 回调函数，返回更新的数据记录数。 |
 
 ## 示例
 

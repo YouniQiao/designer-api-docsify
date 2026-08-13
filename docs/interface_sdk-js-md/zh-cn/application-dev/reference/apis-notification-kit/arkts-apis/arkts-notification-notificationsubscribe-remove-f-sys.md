@@ -19,9 +19,11 @@ function remove(
 
 根据应用的包信息和通知键值，删除指定通知。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -38,20 +40,20 @@ function remove(
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
 | notificationKey | NotificationKey | 是 | 通知键值。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
 ## 示例
 
@@ -113,9 +115,11 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 根据应用的包信息和通知键值，删除指定通知。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -143,14 +147,14 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name was not found. |
 
 ## 示例
 
@@ -206,9 +210,11 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 通过通知的唯一ID，删除指定通知。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -222,21 +228,21 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hashCode | string | 是 | 通知唯一ID。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象中的hashCode。 |
+| hashCode | string | 是 | 通知唯一ID。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData（系统接口）)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象中的hashCode。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
 ## 示例
 
@@ -283,9 +289,11 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 
 批量删除指定通知。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -299,20 +307,20 @@ function remove(hashCodes: Array<String>, reason: RemoveReason, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hashCodes | Array&lt;String&gt; | 是 | 通知唯一ID数组集合。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象中的hashCode。 |
+| hashCodes | Array&lt;String&gt; | 是 | 通知唯一ID数组集合。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData（系统接口）)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象中的hashCode。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
 
@@ -359,9 +367,11 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 通过通知的唯一ID，删除指定通知。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -375,7 +385,7 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hashCode | string | 是 | 通知唯一ID。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象中的hashCode。 |
+| hashCode | string | 是 | 通知唯一ID。可以通过 [onConsume](arkts-notification-notificationsubscriber-notificationsubscriber-i-sys.md#onConsume)回调的入参 [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md#SubscribeCallbackData（系统接口）)获取其内部 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象中的hashCode。 |
 | reason | RemoveReason | 是 | 通知删除原因。 |
 
 **返回值：**
@@ -388,13 +398,13 @@ function remove(hashCode: string, reason: RemoveReason): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
-| [1600007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [1600007](../errorcode-notification.md#1600007-通知不存在) | The notification does not exist. |
 
 ## 示例
 
@@ -434,9 +444,11 @@ function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>
 
 批量删除指定通知。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -463,12 +475,12 @@ function remove(hashCodes: Array<String>, reason: RemoveReason): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not system application to call the interface. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
 

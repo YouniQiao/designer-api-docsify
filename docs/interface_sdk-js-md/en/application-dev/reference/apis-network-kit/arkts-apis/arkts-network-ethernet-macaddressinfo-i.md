@@ -6,6 +6,8 @@ Defines the mac address info of the Ethernet.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-ethernet-export interface MacAddressInfo--><!--Device-ethernet-export interface MacAddressInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -30,6 +32,8 @@ Ethernet interface name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-MacAddressInfo-iface: string--><!--Device-MacAddressInfo-iface: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Ethernet
@@ -47,6 +51,8 @@ Ethernet specific mac address.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-MacAddressInfo-macAddress: string--><!--Device-MacAddressInfo-macAddress: string-End-->
 

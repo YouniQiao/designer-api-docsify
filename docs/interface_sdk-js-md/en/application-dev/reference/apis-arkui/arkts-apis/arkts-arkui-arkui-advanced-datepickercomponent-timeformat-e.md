@@ -4,7 +4,9 @@ TimeFormat enum defines the format of the time picker.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum TimeFormat--><!--Device-unnamed-export declare enum TimeFormat-End-->
 
@@ -20,9 +22,13 @@ Displays hour and minute.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TimeFormat-HOUR_MINUTE = 0--><!--Device-TimeFormat-HOUR_MINUTE = 0-End-->
 
@@ -38,9 +44,13 @@ Displays hour, minute, and second.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TimeFormat-HOUR_MINUTE_SECOND = 1--><!--Device-TimeFormat-HOUR_MINUTE_SECOND = 1-End-->
 

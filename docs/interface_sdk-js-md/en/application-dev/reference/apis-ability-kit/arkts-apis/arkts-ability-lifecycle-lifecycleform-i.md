@@ -6,6 +6,8 @@ interface of form lifecycle.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LifecycleForm--><!--Device-unnamed-export declare interface LifecycleForm-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -16,11 +18,13 @@ interface of form lifecycle.
 onAcquireFormState?(want: Want): formInfo.FormState
 ```
 
-Called to return a [FormState](FormState) object.&lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise,this method returns [DEFAULT](FormState#DEFAULT) by default.&lt;/p&gt;
+Called to return a FormState object. &lt;p&gt;You must override this callback if you want this ability to return the actual form state. Otherwise, this method returns DEFAULT by default.&lt;/p&gt;
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -32,7 +36,7 @@ Called to return a [FormState](FormState) object.&lt;p&gt;You must override this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the [FormState](formInfo#FormState) is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the description of the form for which the FormState is obtained. The description covers the bundle name, ability name, module name, form name, form dimensions. |
 
 **Return value:**
 
@@ -52,6 +56,8 @@ Called when the form provider is notified that a temporary form is successfully 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleForm-onCastToNormal?(formId: string): void--><!--Device-LifecycleForm-onCastToNormal?(formId: string): void-End-->
@@ -70,11 +76,13 @@ Called when the form provider is notified that a temporary form is successfully 
 onCreate?(want: Want): formBindingData.FormBindingData
 ```
 
-Called to return a [FormBindingData](formBindingData.FormBindingData) object.
+Called to return a FormBindingData object.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -86,7 +94,7 @@ Called to return a [FormBindingData](formBindingData.FormBindingData) object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a [FormBindingData](formBindingData#FormBindingData). The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from [IDENTITY_KEY](formInfo#FormParam#IDENTITY_KEY), [NAME_KEY](formInfo#FormParam#NAME_KEY), and [DIMENSION_KEY](formInfo#FormParam#DIMENSION_KEY), respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the detailed information for creating a FormBindingData. The {@code Want} object must include the form ID, form name, and grid style of the form, which can be obtained from IDENTITY_KEY, NAME_KEY, and DIMENSION_KEY, respectively. Such form information must be managed as persistent data for further form acquisition, update, and deletion. |
 
 **Return value:**
 
@@ -105,6 +113,8 @@ Called to notify the form provider that a specified form has been deleted. Overr
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -129,6 +139,8 @@ Called when a specified message event defined by the form provider is triggered.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -155,6 +167,8 @@ Called to notify the form provider to update a specified form.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleForm-onUpdate?(formId: string): void--><!--Device-LifecycleForm-onUpdate?(formId: string): void-End-->
@@ -178,6 +192,8 @@ Called when the form provider receives form events from the system.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

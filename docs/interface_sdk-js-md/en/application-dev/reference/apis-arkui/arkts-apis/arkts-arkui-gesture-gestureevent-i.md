@@ -2,13 +2,15 @@
 
 Defines event info for gesture.
 
-**Inheritance/Implementation:** GestureEvent extends [BaseEvent](BaseEvent)
+**Inheritance/Implementation:** GestureEvent extends BaseEvent
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface GestureEvent extends BaseEvent--><!--Device-unnamed-export interface GestureEvent extends BaseEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface GestureEvent--><!--Device-unnamed-export interface GestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Defines event info for gesture.
 angle: double
 ```
 
-Gesture event direction angle.The unit is deg.Used in RotationGesture and SwipeGesture.
+Gesture event direction angle. The unit is deg. Used in RotationGesture and SwipeGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ All finger information when the gesture event is triggered, the return value is 
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureEvent-fingerInfos?: FingerInfo[]--><!--Device-GestureEvent-fingerInfos?: FingerInfo[]-End-->
@@ -58,13 +64,15 @@ All finger information when the gesture event is triggered, the return value is 
 fingerList: FingerInfo[]
 ```
 
-All finger information.Used in LongPressGesture and TapGesture.
+All finger information. Used in LongPressGesture and TapGesture.
 
 **Type:** [FingerInfo](arkts-arkui-gesture-fingerinfo-i.md)[]
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,13 +86,15 @@ All finger information.Used in LongPressGesture and TapGesture.
 offsetX: double
 ```
 
-Gesture event offset X.The unit is vp.Used in PanGesture.
+Gesture event offset X. The unit is vp. Used in PanGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,13 +108,15 @@ Gesture event offset X.The unit is vp.Used in PanGesture.
 offsetY: double
 ```
 
-Gesture event offset Y.The unit is vp.Used in PanGesture.
+Gesture event offset Y. The unit is vp. Used in PanGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,13 +130,15 @@ Gesture event offset Y.The unit is vp.Used in PanGesture.
 pinchCenterX: double
 ```
 
-X-axis coordinate of the kneading center point.The unit is vp.Used in PinchGesture.
+X-axis coordinate of the kneading center point. The unit is vp. Used in PinchGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -138,13 +152,15 @@ X-axis coordinate of the kneading center point.The unit is vp.Used in PinchGestu
 pinchCenterY: double
 ```
 
-Y-axis coordinate of the kneading center point.The unit is vp.Used in PinchGesture.
+Y-axis coordinate of the kneading center point. The unit is vp. Used in PinchGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,13 +174,15 @@ Y-axis coordinate of the kneading center point.The unit is vp.Used in PinchGestu
 repeat: boolean
 ```
 
-Indicates whether an event is triggered repeatedly.Used in LongPressGesture.
+Indicates whether an event is triggered repeatedly. Used in LongPressGesture.
 
 **Type:** boolean
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,13 +196,15 @@ Indicates whether an event is triggered repeatedly.Used in LongPressGesture.
 scale: double
 ```
 
-Scaling ratio.Used in PinchGesture.
+Scaling ratio. Used in PinchGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -198,13 +218,15 @@ Scaling ratio.Used in PinchGesture.
 speed: double
 ```
 
-Gesture event slide speed.The unit is vp.Used in SwipeGesture.
+Gesture event slide speed. The unit is vp. Used in SwipeGesture.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,6 +248,8 @@ The tap location info used in tap gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureEvent-tapLocation?: EventLocationInfo--><!--Device-GestureEvent-tapLocation?: EventLocationInfo-End-->
@@ -245,6 +269,8 @@ velocity of the gesture.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,6 +292,8 @@ X-axis velocity of the gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GestureEvent-velocityX: double--><!--Device-GestureEvent-velocityX: double-End-->
@@ -285,6 +313,8 @@ Y-axis velocity of the gesture.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

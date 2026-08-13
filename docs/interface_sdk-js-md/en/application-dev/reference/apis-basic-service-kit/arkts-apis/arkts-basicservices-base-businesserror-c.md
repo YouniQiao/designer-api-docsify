@@ -2,13 +2,15 @@
 
 Defines the error parameter.
 
-**Inheritance/Implementation:** BusinessError extends [Error](Error)
+**Inheritance/Implementation:** BusinessError extends Error
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class BusinessError<T = void> extends Error--><!--Device-unnamed-export declare class BusinessError<T = void> extends Error-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class BusinessError--><!--Device-unnamed-export declare class BusinessError-End-->
 
 **System capability:** SystemCapability.Base
 
@@ -30,6 +32,8 @@ Defines a constructor used to create a BusinessError object.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-BusinessError-constructor()--><!--Device-BusinessError-constructor()-End-->
 
 **System capability:** SystemCapability.Base
@@ -45,6 +49,8 @@ Defines a constructor used to create a **BusinessError** object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessError-constructor(code: int, error: Error)--><!--Device-BusinessError-constructor(code: int, error: Error)-End-->
 
@@ -69,6 +75,8 @@ Defines a constructor used to create a **BusinessError** object.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-BusinessError-constructor(code: int, data: T, error: Error)--><!--Device-BusinessError-constructor(code: int, data: T, error: Error)-End-->
 
 **System capability:** SystemCapability.Base
@@ -92,6 +100,8 @@ Defines a constructor used to create a **BusinessError** object.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessError-constructor(code: int, message: string, data?: T)--><!--Device-BusinessError-constructor(code: int, message: string, data?: T)-End-->
 
@@ -118,6 +128,8 @@ Common callback information. If this parameter is left empty, no related informa
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BusinessError-public data?: T--><!--Device-BusinessError-public data?: T-End-->
 

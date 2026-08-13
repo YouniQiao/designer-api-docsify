@@ -18,7 +18,7 @@ Obtain last known location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLastLocation](ohos.geoLocationManager/geoLocationManager.getLastLocation)
+**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getLastLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -59,7 +59,7 @@ Obtain last known location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLastLocation](ohos.geoLocationManager/geoLocationManager.getLastLocation)
+**Substitutes:** [getLastLocation](arkts-location-geolocationmanager-getlastlocation-f.md#getLastLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 

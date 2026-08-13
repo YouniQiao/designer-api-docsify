@@ -6,6 +6,8 @@ Enumerates the modes for processing BigInt.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-json-const enum BigIntMode--><!--Device-json-const enum BigIntMode-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -21,6 +23,8 @@ BigInt is not supported.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,6 +44,8 @@ Parses an integer that is less than -(2^53-1) or greater than (2^53-1) as BigInt
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-BigIntMode-PARSE_AS_BIGINT = 1--><!--Device-BigIntMode-PARSE_AS_BIGINT = 1-End-->
@@ -57,6 +63,8 @@ Parses all integers as BigInt.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

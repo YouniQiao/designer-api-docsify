@@ -2,13 +2,13 @@
 
 Defines the controller of the **Text** component.
 
-## Objects to Import
-
-```ts controller: TextController = new TextController()```
+## Objects to Import ```ts controller: TextController = new TextController() ```
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class TextController--><!--Device-unnamed-declare class TextController-End-->
 
@@ -25,6 +25,8 @@ Closes the custom or default text selection menu.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +47,8 @@ Obtains the **LayoutManager** object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +76,8 @@ Binds to or updates the specified styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -84,7 +90,7 @@ Binds to or updates the specified styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | StyledString | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](MutableStyledString) of **StyledString** can also serve as the argument. |
+| value | StyledString | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class MutableStyledString of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -93,33 +99,13 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
                    options?: SelectionOptions): void
 ```
 
-Sets the text selection area, which will be highlighted.
-
-> **NOTE：**
-> 
-> If [copyOption](TextAttribute#copyOption) is set to **CopyOptions.None**, the setting of
-> **setTextSelection** does not take effect.
-> 
-> If [textOverflow](TextAttribute#textOverflow) is set to **TextOverflow.MARQUEE**, the setting of
-> **setTextSelection** does not take effect.
-> 
-> If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be
-> selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the
-> text content. If the value is less than 0, the value **0** will be used. If the value is greater than
-> **textSize**, **textSize** will be used.
-> 
-> If the selection range falls within a truncated or invisible area, selection is ignored. When truncation is
-> disabled, selection can extend beyond the parent component's bounds.
-> 
-> On PC or 2-in-1 devices, calling **setTextSelection** does not show the menu even if **options** is set to
-> **MenuPolicy.SHOW**.
-> 
-> When an emoji is truncated by the selection range, the emoji is selected if its start position is within the
-> specified text selection range.
+Sets the text selection area, which will be highlighted. > **NOTE：**> > If [copyOption](arkts-arkui-text-attribute.md#copyOption) is set to **CopyOptions.None**, the setting of > **setTextSelection** does not take effect. > > If [textOverflow](arkts-arkui-text-attribute.md#textOverflow) is set to **TextOverflow.MARQUEE**, the setting of > **setTextSelection** does not take effect. > > If the value of **selectionStart** is greater than or equal to that of **selectionEnd**, no text will be > selected. The value range is [0, textSize], where **textSize** indicates the maximum number of characters in the > text content. If the value is less than 0, the value **0** will be used. If the value is greater than > **textSize**, **textSize** will be used. > > If the selection range falls within a truncated or invisible area, selection is ignored. When truncation is > disabled, selection can extend beyond the parent component's bounds. > > On PC or 2-in-1 devices, calling **setTextSelection** does not show the menu even if **options** is set to > **MenuPolicy.SHOW**. > > When an emoji is truncated by the selection range, the emoji is selected if its start position is within the > specified text selection range.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

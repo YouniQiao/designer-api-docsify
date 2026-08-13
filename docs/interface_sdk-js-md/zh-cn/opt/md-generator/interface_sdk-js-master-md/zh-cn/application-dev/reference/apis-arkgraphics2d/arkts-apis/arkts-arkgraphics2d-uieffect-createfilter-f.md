@@ -8,7 +8,9 @@ function createFilter(): Filter
 
 创建Filter实例用于给组件添加多种Filter效果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-function createFilter(): Filter--><!--Device-uiEffect-function createFilter(): Filter-End-->
 

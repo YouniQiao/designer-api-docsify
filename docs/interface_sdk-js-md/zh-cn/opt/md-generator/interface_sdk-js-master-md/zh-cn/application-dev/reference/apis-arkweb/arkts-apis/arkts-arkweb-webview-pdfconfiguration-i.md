@@ -4,6 +4,8 @@ Defines the configuration of creating pdf, related to {@Link createPdf} method.
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-webview-interface PdfConfiguration--><!--Device-webview-interface PdfConfiguration-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Number of the height.
 **类型：** number
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ Number of the marginBottom.
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PdfConfiguration-marginBottom: number--><!--Device-PdfConfiguration-marginBottom: number-End-->
@@ -55,6 +61,8 @@ Number of the marginLeft.
 **类型：** number
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ Number of the marginRight.
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PdfConfiguration-marginRight: number--><!--Device-PdfConfiguration-marginRight: number-End-->
@@ -91,6 +101,8 @@ Number of the marginTop.
 **类型：** number
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -110,6 +122,8 @@ Number of the scaling.
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PdfConfiguration-scale?: number--><!--Device-PdfConfiguration-scale?: number-End-->
@@ -128,6 +142,8 @@ Whether background should be printed when creating pdf.
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PdfConfiguration-shouldPrintBackground?: boolean--><!--Device-PdfConfiguration-shouldPrintBackground?: boolean-End-->
@@ -145,6 +161,8 @@ Number of the width.
 **类型：** number
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 

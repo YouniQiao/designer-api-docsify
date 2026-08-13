@@ -1,13 +1,10 @@
-# @ohos.enterprise.systemManager(System Management)
+# @ohos.enterprise.systemManager
 
-This module provides system management capabilities, including NTP time server settings, OTA update policy management, system update management, key event handling policies, log collection, and device activation lock management. It is suitable for enterprise device management scenarios, helping enterprise administrators uniformly manage device system configurations, update policies, and security policies, thereby improving enterprise device management efficiency and security.
-
-> **NOTE：**
-> 
-> The APIs of this module can be called only by a device administrator application that is enabled. For details, see
-> [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
+This module provides system management capabilities, including NTP time server settings, OTA update policy management, system update management, key event handling policies, log collection, and device activation lock management. It is suitable for enterprise device management scenarios, helping enterprise administrators uniformly manage device system configurations, update policies, and security policies, thereby improving enterprise device management efficiency and security. > **NOTE：**> > The APIs of this module can be called only by a device administrator application that is enabled. For details, see > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -27,35 +24,35 @@ import { systemManager } from '@kit.MDMKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md#adddisallowednearlinkprotocols) |
-| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addkeyeventpolicies) |
-| [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md#finishlogcollected) |
-| [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md#getautounlockafterreboot) |
-| [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md#getautounlockafterreboot-1) |
-| [getDisallowedNearLinkProtocols](arkts-mdm-systemmanager-getdisallowednearlinkprotocols-f.md#getdisallowednearlinkprotocols) |
-| [getInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabled-f.md#getinstalllocalenterpriseappenabled) |
-| [getInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabledforaccount-f.md#getinstalllocalenterpriseappenabledforaccount) |
-| [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies) |
-| [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getkeyeventpolicies-1) |
-| [getLocalHotaDomain](arkts-mdm-systemmanager-getlocalhotadomain-f.md#getlocalhotadomain) |
-| [getNTPServer](arkts-mdm-systemmanager-getntpserver-f.md#getntpserver) |
-| [getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getotaupdatepolicy) |
-| [getUpdateAuthData](arkts-mdm-systemmanager-getupdateauthdata-f.md#getupdateauthdata) |
-| [getUpdateResult](arkts-mdm-systemmanager-getupdateresult-f.md#getupdateresult) |
-| [isActivationLockDisabled](arkts-mdm-systemmanager-isactivationlockdisabled-f.md#isactivationlockdisabled) |
-| [isOtaUpdateNonceEnable](arkts-mdm-systemmanager-isotaupdatenonceenable-f.md#isotaupdatenonceenable) |
-| [notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyupdatepackages) |
-| [removeDisallowedNearLinkProtocols](arkts-mdm-systemmanager-removedisallowednearlinkprotocols-f.md#removedisallowednearlinkprotocols) |
-| [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removekeyeventpolicies) |
-| [setActivationLockDisabled](arkts-mdm-systemmanager-setactivationlockdisabled-f.md#setactivationlockdisabled) |
-| [setAutoUnlockAfterReboot](arkts-mdm-systemmanager-setautounlockafterreboot-f.md#setautounlockafterreboot) |
-| [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md#setinstalllocalenterpriseappenabled) |
-| [setInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabledforaccount-f.md#setinstalllocalenterpriseappenabledforaccount) |
-| [setLocalHotaDomain](arkts-mdm-systemmanager-setlocalhotadomain-f.md#setlocalhotadomain) |
-| [setNTPServer](arkts-mdm-systemmanager-setntpserver-f.md#setntpserver) |
-| [setOtaUpdateNonceEnable](arkts-mdm-systemmanager-setotaupdatenonceenable-f.md#setotaupdatenonceenable) |
-| [setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setotaupdatepolicy) |
-| [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startcollectlog) |
+| [addDisallowedNearLinkProtocols](arkts-mdm-systemmanager-adddisallowednearlinkprotocols-f.md#addDisallowedNearLinkProtocols) |
+| [addKeyEventPolicies](arkts-mdm-systemmanager-addkeyeventpolicies-f.md#addKeyEventPolicies) |
+| [finishLogCollected](arkts-mdm-systemmanager-finishlogcollected-f.md#finishLogCollected) |
+| [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md#getAutoUnlockAfterReboot) |
+| [getAutoUnlockAfterReboot](arkts-mdm-systemmanager-getautounlockafterreboot-f.md#getAutoUnlockAfterReboot) |
+| [getDisallowedNearLinkProtocols](arkts-mdm-systemmanager-getdisallowednearlinkprotocols-f.md#getDisallowedNearLinkProtocols) |
+| [getInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabled-f.md#getInstallLocalEnterpriseAppEnabled) |
+| [getInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabledforaccount-f.md#getInstallLocalEnterpriseAppEnabledForAccount) |
+| [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getKeyEventPolicies) |
+| [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md#getKeyEventPolicies) |
+| [getLocalHotaDomain](arkts-mdm-systemmanager-getlocalhotadomain-f.md#getLocalHotaDomain) |
+| [getNTPServer](arkts-mdm-systemmanager-getntpserver-f.md#getNTPServer) |
+| [getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md#getOtaUpdatePolicy) |
+| [getUpdateAuthData](arkts-mdm-systemmanager-getupdateauthdata-f.md#getUpdateAuthData) |
+| [getUpdateResult](arkts-mdm-systemmanager-getupdateresult-f.md#getUpdateResult) |
+| [isActivationLockDisabled](arkts-mdm-systemmanager-isactivationlockdisabled-f.md#isActivationLockDisabled) |
+| [isOtaUpdateNonceEnable](arkts-mdm-systemmanager-isotaupdatenonceenable-f.md#isOtaUpdateNonceEnable) |
+| [notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md#notifyUpdatePackages) |
+| [removeDisallowedNearLinkProtocols](arkts-mdm-systemmanager-removedisallowednearlinkprotocols-f.md#removeDisallowedNearLinkProtocols) |
+| [removeKeyEventPolicies](arkts-mdm-systemmanager-removekeyeventpolicies-f.md#removeKeyEventPolicies) |
+| [setActivationLockDisabled](arkts-mdm-systemmanager-setactivationlockdisabled-f.md#setActivationLockDisabled) |
+| [setAutoUnlockAfterReboot](arkts-mdm-systemmanager-setautounlockafterreboot-f.md#setAutoUnlockAfterReboot) |
+| [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md#setInstallLocalEnterpriseAppEnabled) |
+| [setInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabledforaccount-f.md#setInstallLocalEnterpriseAppEnabledForAccount) |
+| [setLocalHotaDomain](arkts-mdm-systemmanager-setlocalhotadomain-f.md#setLocalHotaDomain) |
+| [setNTPServer](arkts-mdm-systemmanager-setntpserver-f.md#setNTPServer) |
+| [setOtaUpdateNonceEnable](arkts-mdm-systemmanager-setotaupdatenonceenable-f.md#setOtaUpdateNonceEnable) |
+| [setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md#setOtaUpdatePolicy) |
+| [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md#startCollectLog) |
 
 ### Interfaces
 

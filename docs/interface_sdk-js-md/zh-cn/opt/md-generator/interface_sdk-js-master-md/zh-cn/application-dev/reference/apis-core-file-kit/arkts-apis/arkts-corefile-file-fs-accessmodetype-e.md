@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum AccessModeType--><!--Device-unnamed-declare enum AccessModeType-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -17,6 +19,8 @@ EXIST = 0
 文件是否存在。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ WRITE = 2
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AccessModeType-WRITE = 2--><!--Device-AccessModeType-WRITE = 2-End-->
@@ -50,6 +56,8 @@ READ = 4
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AccessModeType-READ = 4--><!--Device-AccessModeType-READ = 4-End-->
@@ -65,6 +73,8 @@ READ_WRITE = 6
 文件是否具有读写权限。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -12,11 +12,13 @@ import { errorManager } from '@kit.AbilityKit';
 function setDefaultFreezeObserver(defaultObserver?: FreezeObserver) : FreezeObserver
 ```
 
-Set the default freeze observer, This function will be executed right after the callback function registered through errorManager.on is executed. You can use it to implement chain calls instead of errorManager.on.If an empty observer is set for a certain module, it will cause the call chain to be interrupted.This API must be called in the main thread.
+Set the default freeze observer, This function will be executed right after the callback function registered through errorManager.on is executed. You can use it to implement chain calls instead of errorManager.on. If an empty observer is set for a certain module, it will cause the call chain to be interrupted. This API must be called in the main thread.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,5 +44,5 @@ Set the default freeze observer, This function will be executed right after the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000205](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 

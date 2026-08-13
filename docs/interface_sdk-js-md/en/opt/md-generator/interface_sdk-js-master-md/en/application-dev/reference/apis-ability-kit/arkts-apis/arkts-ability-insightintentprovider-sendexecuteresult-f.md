@@ -16,6 +16,8 @@ Send execute result.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -41,8 +43,8 @@ Send execute result.
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000003-id-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) |
 
 ## Examples
 

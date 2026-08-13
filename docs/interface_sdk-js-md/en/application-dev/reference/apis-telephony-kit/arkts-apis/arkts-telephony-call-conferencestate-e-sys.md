@@ -2,9 +2,11 @@
 
 Enumerates conference states.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum ConferenceState--><!--Device-call-export enum ConferenceState-End-->
 
@@ -20,9 +22,11 @@ TEL_CONFERENCE_IDLE = 0
 
 Idle state.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0--><!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0-End-->
 
@@ -38,9 +42,11 @@ TEL_CONFERENCE_ACTIVE = 1
 
 Active state.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1--><!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1-End-->
 
@@ -56,9 +62,11 @@ TEL_CONFERENCE_DISCONNECTING = 2
 
 Disconnecting state.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2-End-->
 
@@ -74,9 +82,11 @@ TEL_CONFERENCE_DISCONNECTED = 3
 
 Disconnected state.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3-End-->
 

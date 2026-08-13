@@ -14,9 +14,11 @@ function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void
 
 Sets the raw heap snapshot trimming level for the current process.
 
-**Since:** 20
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void--><!--Device-hidebug-function setJsRawHeapTrimLevel(level: JsRawHeapTrimLevel): void-End-->
 

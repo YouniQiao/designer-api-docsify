@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avMusicTemplate-interface PlayInfo--><!--Device-avMusicTemplate-interface PlayInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -19,6 +21,8 @@ currentPlayDuration: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ currentPlayRate: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-currentPlayRate: string--><!--Device-PlayInfo-currentPlayRate: string-End-->
@@ -55,6 +61,8 @@ isSupportNext: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ isSupportPlayMode: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-isSupportPlayMode: boolean--><!--Device-PlayInfo-isSupportPlayMode: boolean-End-->
@@ -91,6 +101,8 @@ isSupportPlayRate: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,6 +122,8 @@ isSupportPrev: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-isSupportPrev: boolean--><!--Device-PlayInfo-isSupportPrev: boolean-End-->
@@ -127,6 +141,8 @@ isSupportProgress: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +162,8 @@ isSupportQuickBackward: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-isSupportQuickBackward: boolean--><!--Device-PlayInfo-isSupportQuickBackward: boolean-End-->
@@ -163,6 +181,8 @@ isSupportQuickForward: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,6 +202,8 @@ isSupportSkipHead: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-isSupportSkipHead: boolean--><!--Device-PlayInfo-isSupportSkipHead: boolean-End-->
@@ -199,6 +221,8 @@ isSupportSkipTail: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -218,6 +242,8 @@ isSupportSoundEffect: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-isSupportSoundEffect: boolean--><!--Device-PlayInfo-isSupportSoundEffect: boolean-End-->
@@ -235,6 +261,8 @@ isSupportSoundQuality: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,6 +282,8 @@ playCounts: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-playCounts: string--><!--Device-PlayInfo-playCounts: string-End-->
@@ -271,6 +301,8 @@ quickBackwardStep: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,6 +322,8 @@ quickForwardStep: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-quickForwardStep: int--><!--Device-PlayInfo-quickForwardStep: int-End-->
@@ -308,6 +342,8 @@ supportedPlayRate: string[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlayInfo-supportedPlayRate: string[]--><!--Device-PlayInfo-supportedPlayRate: string[]-End-->
@@ -325,6 +361,8 @@ totalDuration: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

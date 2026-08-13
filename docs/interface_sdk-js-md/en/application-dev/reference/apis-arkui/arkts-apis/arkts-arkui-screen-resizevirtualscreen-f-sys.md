@@ -16,7 +16,9 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-screen-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>--><!--Device-screen-function resizeVirtualScreen(screenId:long, width: long, height: long): Promise<void>-End-->
 
@@ -28,9 +30,9 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| screenId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | ID of the virtual screen to be resized. The value is a positive integer within the range of [1000, 2147483647]. If the value is not within the valid range, error code 1400004 is returned. |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | New width of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | New height of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
+| screenId | long | Yes | ID of the virtual screen to be resized. The value is a positive integer within the range of [1000, 2147483647]. If the value is not within the valid range, error code 1400004 is returned. |
+| width | long | Yes | New width of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
+| height | long | Yes | New height of the virtual screen, in px. The value is a positive integer within the range of [1, 65536]. If the value is not within the valid range, error code 1400004 is returned. |
 
 **Return value:**
 
@@ -42,11 +44,11 @@ Resizes the virtual screen. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
-| [1400001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1400004](../errorcode-display.md#1400004-parameter-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

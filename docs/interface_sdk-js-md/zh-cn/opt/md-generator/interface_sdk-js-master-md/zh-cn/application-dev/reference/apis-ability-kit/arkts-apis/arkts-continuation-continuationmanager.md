@@ -6,7 +6,7 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 
 **废弃版本：** 22
 
-**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#distributedDeviceManager)
+**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#@ohos.distributedDeviceManager)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -20,34 +20,34 @@ continuationManager模块提供了流转/协同入口管理服务能力，包括
 
 | 名称 |
 | --- |
-| [off](arkts-ability-continuationmanager-off-f.md#off) |
-| [off](arkts-ability-continuationmanager-off-f.md#off-1) |
-| [off](arkts-ability-continuationmanager-off-f.md#off-2) |
-| [off](arkts-ability-continuationmanager-off-f.md#off-3) |
-| [on](arkts-ability-continuationmanager-on-f.md#on) |
-| [on](arkts-ability-continuationmanager-on-f.md#on-1) |
-| [on](arkts-ability-continuationmanager-on-f.md#on-2) |
-| [on](arkts-ability-continuationmanager-on-f.md#on-3) |
+| [off_deviceConnect](arkts-ability-continuationmanager-offdeviceconnect-f.md#off_deviceConnect) |
+| [off_deviceDisconnect](arkts-ability-continuationmanager-offdevicedisconnect-f.md#off_deviceDisconnect) |
+| [off_deviceSelected](arkts-ability-continuationmanager-offdeviceselected-f.md#off_deviceSelected) |
+| [off_deviceUnselected](arkts-ability-continuationmanager-offdeviceunselected-f.md#off_deviceUnselected) |
+| [on_deviceConnect](arkts-ability-continuationmanager-ondeviceconnect-f.md#on_deviceConnect) |
+| [on_deviceDisconnect](arkts-ability-continuationmanager-ondevicedisconnect-f.md#on_deviceDisconnect) |
+| [on_deviceSelected](arkts-ability-continuationmanager-ondeviceselected-f.md#on_deviceSelected) |
+| [on_deviceUnselected](arkts-ability-continuationmanager-ondeviceunselected-f.md#on_deviceUnselected) |
 | [register](arkts-ability-continuationmanager-register-f.md#register) |
-| [register](arkts-ability-continuationmanager-register-f.md#register-1) |
-| [register](arkts-ability-continuationmanager-register-f.md#register-2) |
-| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md#registercontinuation) |
-| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md#registercontinuation-1) |
-| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md#registercontinuation-2) |
-| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager) |
-| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager-1) |
-| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startcontinuationdevicemanager-2) |
-| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md#startdevicemanager) |
-| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md#startdevicemanager-1) |
-| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md#startdevicemanager-2) |
+| [register](arkts-ability-continuationmanager-register-f.md#register) |
+| [register](arkts-ability-continuationmanager-register-f.md#register) |
+| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md#registerContinuation) |
+| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md#registerContinuation) |
+| [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md#registerContinuation) |
+| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startContinuationDeviceManager) |
+| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startContinuationDeviceManager) |
+| [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md#startContinuationDeviceManager) |
+| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md#startDeviceManager) |
+| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md#startDeviceManager) |
+| [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md#startDeviceManager) |
 | [unregister](arkts-ability-continuationmanager-unregister-f.md#unregister) |
-| [unregister](arkts-ability-continuationmanager-unregister-f.md#unregister-1) |
-| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md#unregistercontinuation) |
-| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md#unregistercontinuation-1) |
-| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md#updateconnectstatus) |
-| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md#updateconnectstatus-1) |
-| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md#updatecontinuationstate) |
-| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md#updatecontinuationstate-1) |
+| [unregister](arkts-ability-continuationmanager-unregister-f.md#unregister) |
+| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md#unregisterContinuation) |
+| [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md#unregisterContinuation) |
+| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md#updateConnectStatus) |
+| [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md#updateConnectStatus) |
+| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md#updateContinuationState) |
+| [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md#updateContinuationState) |
 
 ### 枚举
 

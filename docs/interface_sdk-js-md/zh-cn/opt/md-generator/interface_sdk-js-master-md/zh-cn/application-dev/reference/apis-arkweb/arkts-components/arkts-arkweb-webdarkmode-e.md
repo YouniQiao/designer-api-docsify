@@ -4,6 +4,8 @@ Web深色模式的配置
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum WebDarkMode--><!--Device-unnamed-declare enum WebDarkMode-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ Off = 0
 Web深色模式关闭。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ Web深色模式开启。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebDarkMode-On = 1--><!--Device-WebDarkMode-On = 1-End-->
@@ -49,6 +55,8 @@ Auto = 2
 Web深色模式跟随系统。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

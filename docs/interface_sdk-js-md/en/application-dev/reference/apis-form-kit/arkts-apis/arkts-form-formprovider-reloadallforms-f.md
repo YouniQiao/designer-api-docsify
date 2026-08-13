@@ -12,16 +12,17 @@ import { formProvider } from '@kit.FormKit';
 function reloadAllForms(context: UIAbilityContext): Promise<int>
 ```
 
-Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to  perform batch updates of all widgets added to the current application. It can only be called within a   
-[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
+Reloads all widgets. Invoked in the main process of the application, this API notifies the FormExtension process to perform batch updates of all widgets added to the current application. It can only be called within a [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) and uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-formProvider-function reloadAllForms(context: UIAbilityContext): Promise<int>--><!--Device-formProvider-function reloadAllForms(context: UIAbilityContext): Promise<int>-End-->
 
@@ -37,13 +38,13 @@ Reloads all widgets. Invoked in the main process of the application, this API no
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the number of widgets requested for update. |
+| Promise&lt;int&gt; | Promise used to return the number of widgets requested for update. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16501000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 ## Examples
 

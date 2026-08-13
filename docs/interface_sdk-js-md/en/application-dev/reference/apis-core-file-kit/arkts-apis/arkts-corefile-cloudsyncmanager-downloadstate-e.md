@@ -2,9 +2,11 @@
 
 Enumerates the full download states.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSyncManager-enum DownloadState--><!--Device-cloudSyncManager-enum DownloadState-End-->
 
@@ -18,9 +20,11 @@ RUNNING = 0
 
 Downloading.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadState-RUNNING = 0--><!--Device-DownloadState-RUNNING = 0-End-->
 
@@ -34,9 +38,11 @@ COMPLETED = 1
 
 Downloaded.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadState-COMPLETED = 1--><!--Device-DownloadState-COMPLETED = 1-End-->
 
@@ -50,9 +56,11 @@ STOPPED = 2
 
 Downloading stopped.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DownloadState-STOPPED = 2--><!--Device-DownloadState-STOPPED = 2-End-->
 

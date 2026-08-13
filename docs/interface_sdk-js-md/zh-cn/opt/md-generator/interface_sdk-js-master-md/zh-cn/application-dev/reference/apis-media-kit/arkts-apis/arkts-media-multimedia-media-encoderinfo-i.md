@@ -2,7 +2,9 @@
 
 编码器信息描述。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface EncoderInfo--><!--Device-unnamed-interface EncoderInfo-End-->
 
@@ -18,7 +20,9 @@ bitRate?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-bitRate?: Range--><!--Device-EncoderInfo-bitRate?: Range-End-->
 
@@ -34,7 +38,9 @@ channels?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-channels?: Range--><!--Device-EncoderInfo-channels?: Range-End-->
 
@@ -50,7 +56,9 @@ frameRate?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-frameRate?: Range--><!--Device-EncoderInfo-frameRate?: Range-End-->
 
@@ -66,7 +74,9 @@ height?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-height?: Range--><!--Device-EncoderInfo-height?: Range-End-->
 
@@ -82,7 +92,9 @@ mimeType: CodecMimeType
 
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-mimeType: CodecMimeType--><!--Device-EncoderInfo-mimeType: CodecMimeType-End-->
 
@@ -98,7 +110,9 @@ sampleRate?: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-sampleRate?: Array<int>--><!--Device-EncoderInfo-sampleRate?: Array<int>-End-->
 
@@ -114,7 +128,9 @@ type: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-type: string--><!--Device-EncoderInfo-type: string-End-->
 
@@ -130,7 +146,9 @@ width?: Range
 
 **类型：** [Range](arkts-media-multimedia-media-range-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EncoderInfo-width?: Range--><!--Device-EncoderInfo-width?: Range-End-->
 

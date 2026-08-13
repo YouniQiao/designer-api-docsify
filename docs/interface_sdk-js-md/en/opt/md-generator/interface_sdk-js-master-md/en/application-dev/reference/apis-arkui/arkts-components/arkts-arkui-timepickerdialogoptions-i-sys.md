@@ -1,14 +1,14 @@
 # TimePickerDialogOptions
 
-Defines the configuration options of the time picker dialog box.
-
-Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions).
+Defines the configuration options of the time picker dialog box. Inherited from [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions).
 
 **Inheritance/Implementation:** TimePickerDialogOptions extends [TimePickerOptions](arkts-arkui-timepickeroptions-i.md#TimePickerOptions)
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface TimePickerDialogOptions extends TimePickerOptions--><!--Device-unnamed-declare interface TimePickerDialogOptions extends TimePickerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface TimePickerDialogOptions--><!--Device-unnamed-declare interface TimePickerDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +25,8 @@ Sets the distortion animation mode for the dialog.
 **Default:** DistortionMode.DISTORTION_AUTO
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +49,8 @@ Sets the edge light animation mode for the dialog.
 **Default:** EdgeLightMode.EDGELIGHT_AUTO
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

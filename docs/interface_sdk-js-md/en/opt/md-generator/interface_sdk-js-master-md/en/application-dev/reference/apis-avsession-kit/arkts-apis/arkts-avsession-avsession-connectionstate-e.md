@@ -2,7 +2,9 @@
 
 Define the device connection state.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum ConnectionState--><!--Device-avSession-enum ConnectionState-End-->
 
@@ -16,7 +18,9 @@ STATE_CONNECTING = 0
 
 A connection state indicating the device is in the process of connecting.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ STATE_CONNECTED = 1
 
 A connection state indicating the device is connected.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ STATE_DISCONNECTED = 6
 
 The default connection state indicating the device is disconnected.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

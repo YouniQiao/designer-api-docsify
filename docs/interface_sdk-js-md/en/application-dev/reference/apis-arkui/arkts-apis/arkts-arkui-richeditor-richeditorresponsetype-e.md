@@ -6,6 +6,8 @@ ResponseType for contextMenu
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum RichEditorResponseType--><!--Device-unnamed-export declare enum RichEditorResponseType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Right click.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Long press.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorResponseType-LONG_PRESS = 1--><!--Device-RichEditorResponseType-LONG_PRESS = 1-End-->
@@ -58,6 +64,8 @@ Selected by mouse.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorResponseType-SELECT = 2--><!--Device-RichEditorResponseType-SELECT = 2-End-->
@@ -75,6 +83,8 @@ When no other types are explicitly specified, this type will be matched.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

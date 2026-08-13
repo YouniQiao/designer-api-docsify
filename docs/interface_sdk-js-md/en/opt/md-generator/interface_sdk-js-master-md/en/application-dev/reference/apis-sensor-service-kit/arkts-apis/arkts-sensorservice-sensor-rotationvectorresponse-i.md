@@ -4,9 +4,11 @@ Describes the rotation vector sensor data. It extends from [Response](arkts-sens
 
 **Inheritance/Implementation:** RotationVectorResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface RotationVectorResponse extends Response--><!--Device-sensor-interface RotationVectorResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface RotationVectorResponse--><!--Device-sensor-interface RotationVectorResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Scalar, which describes the rotation status of the device relative to a referenc
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-w: double--><!--Device-RotationVectorResponse-w: double-End-->
 
@@ -42,7 +46,9 @@ X-component of the rotation vector.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-x: double--><!--Device-RotationVectorResponse-x: double-End-->
 
@@ -58,7 +64,9 @@ Y-component of the rotation vector.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-y: double--><!--Device-RotationVectorResponse-y: double-End-->
 
@@ -74,7 +82,9 @@ Z-component of the rotation vector.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationVectorResponse-z: double--><!--Device-RotationVectorResponse-z: double-End-->
 

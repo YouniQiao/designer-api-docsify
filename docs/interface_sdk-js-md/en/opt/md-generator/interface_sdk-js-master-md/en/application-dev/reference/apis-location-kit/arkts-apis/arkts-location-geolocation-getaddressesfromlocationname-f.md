@@ -18,7 +18,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocationName](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName)
+**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -61,7 +61,7 @@ Obtain latitude and longitude info from location address
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAddressesFromLocationName](ohos.geoLocationManager/geoLocationManager.getAddressesFromLocationName)
+**Substitutes:** [getAddressesFromLocationName](arkts-location-geolocationmanager-getaddressesfromlocationname-f.md#getAddressesFromLocationName)
 
 **Required permissions:** ohos.permission.LOCATION
 

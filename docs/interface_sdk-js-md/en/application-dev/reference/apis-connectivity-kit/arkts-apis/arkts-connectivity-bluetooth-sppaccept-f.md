@@ -20,7 +20,7 @@ Waits for a remote device to connect.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppAccept](ohos.bluetoothManager/bluetoothManager.sppAccept)
+**Substitutes:** [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppAccept)
 
 <!--Device-bluetooth-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void--><!--Device-bluetooth-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void-End-->
 
@@ -31,7 +31,7 @@ Waits for a remote device to connect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | serverSocket | number | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#sppListen). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return a client socket ID. |
 
 ## Examples
 

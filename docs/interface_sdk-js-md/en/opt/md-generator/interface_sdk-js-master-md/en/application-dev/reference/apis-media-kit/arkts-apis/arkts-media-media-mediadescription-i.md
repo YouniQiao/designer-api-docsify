@@ -4,6 +4,10 @@ Provides the container definition for media description key-value pairs.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
 <!--Device-media-interface MediaDescription--><!--Device-media-interface MediaDescription-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
@@ -13,21 +17,3 @@ Provides the container definition for media description key-value pairs.
 ```TypeScript
 import { media } from '@kit.MediaKit';
 ```
-
-## [key: string]
-
-```TypeScript
-[key: string]: Object
-```
-
-key:value pair, key see @MediaDescriptionKey .
-
-**Type:** Object
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-MediaDescription-[key: string]: Object--><!--Device-MediaDescription-[key: string]: Object-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core

@@ -1,19 +1,19 @@
 # UIServiceExtensionConnectCallback
 
 ```TypeScript
-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default
+export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback
 ```
 
-Defines the connection callback. It is used as an input parameter for connection to a UIServiceExtensionAbility, to  provide the callback for the connection.
+Defines the connection callback. It is used as an input parameter for connection to a UIServiceExtensionAbility, to provide the callback for the connection.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-common-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default--><!--Device-common-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback.default-End-->
+<!--Device-common-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback--><!--Device-common-export type UIServiceExtensionConnectCallback = _UIServiceExtensionConnectCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Property type:** _UIServiceExtensionConnectCallback.default
+**Property type:** _UIServiceExtensionConnectCallback

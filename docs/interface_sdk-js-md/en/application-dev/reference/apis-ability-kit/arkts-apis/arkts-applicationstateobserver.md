@@ -2,11 +2,11 @@
 
 ## Summary
 
-### Interfaces
+### Classes
 
 | Name | Description |
 | --- | --- |
-| [ApplicationStateObserver](arkts-ability-applicationstateobserver-i.md) | The module defines an observer to listen for application state changes. It can be used as an input parameter in  [on('applicationState')](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer:ApplicationStateObserver))to listen for lifecycle changes of the application. |
+| [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | The module defines an observer to listen for application state changes. It can be used as an input parameter in [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) to listen for lifecycle changes of the application. |
 
 ### Types
 

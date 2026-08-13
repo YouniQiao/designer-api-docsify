@@ -1,15 +1,12 @@
 # CmsGenerator
 
-提供生成CMS（Cryptographic Message Syntax）消息的API。
+提供生成CMS（Cryptographic Message Syntax）消息的API。 > **说明：** > > PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、 > 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
 
-> **说明：**
-> 
-> PKCS #7是用于存储签名或加密数据的标准语法。注意CMS是PKCS #7的扩展，PKCS #7支持的数据类型包括数据、签名数据、封装数据、
-> 签名和封装数据、摘要数据、加密数据。常用于保护数据的完整性和机密性。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-cert-interface CmsGenerator--><!--Device-cert-interface CmsGenerator-End-->
 
@@ -21,15 +18,15 @@
 addCert(cert: X509Cert): void
 ```
 
-用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。
+用于添加内容类型为SIGNED_DATA的CMS的证书，例如签名证书的颁发者证书。 &lt;br&gt;如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
 
-&lt;br&gt;如果未调用addSigner接口，并且仅添加证书后，生成的CMS签名数据将只包含证书。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-addCert(cert: X509Cert): void--><!--Device-CmsGenerator-addCert(cert: X509Cert): void-End-->
 
@@ -45,10 +42,10 @@ addCert(cert: X509Cert): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 
@@ -174,15 +171,15 @@ function testAddCert() {
 addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 ```
 
-为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。
+为内容类型为ENVELOPED_DATA的CMS添加接收者信息。使用Promise方式返回结果。 &lt;br&gt;该方法至少需要设置一个接收者。
 
-&lt;br&gt;该方法至少需要设置一个接收者。
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>--><!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>-End-->
 
@@ -204,10 +201,10 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 接收者证书类型无效或不支持； &lt;br&gt;2. CmsKeyAgreeRecipientInfo的digestAlgorithm无效或不支持； &lt;br&gt;3. recipientInfo中无接收者信息。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 接收者证书类型无效或不支持； &lt;br&gt;2. CmsKeyAgreeRecipientInfo的digestAlgorithm无效或不支持； &lt;br&gt;3. recipientInfo中无接收者信息。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 
@@ -300,11 +297,13 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 用于为内容类型为SIGNED_DATA的CMS添加签名者信息。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void--><!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void-End-->
 
@@ -322,11 +321,11 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
-| [19030008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030008-私钥密码错误) | 私钥密码错误。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19030008](../errorcode-cert.md#19030008-私钥密码错误) | 私钥密码错误。 |
 
 ## 示例
 
@@ -512,11 +511,13 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 用于获取CMS最终数据，例如CMS签名数据或CMS封装数据。使用Promise方式返回结果。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>--><!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>-End-->
 
@@ -539,10 +540,10 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 
@@ -746,11 +747,13 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 用于获取CMS消息，例如CMS签名数据或CMS封装数据。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string--><!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string-End-->
 
@@ -773,10 +776,10 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 
@@ -980,15 +983,15 @@ function testDoFinalSync() {
 getEncryptedContentData(): Promise<Uint8Array>
 ```
 
-用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。
+用于获取内容类型为ENVELOPED_DATA的CMS的加密内容数据。使用Promise方式返回结果。 &lt;br&gt;如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
 
-&lt;br&gt;如果创建了类型为ENVELOPED_DATA的CmsGenerator并使用了数据分离来生成CMS封装数据，使用此方法来获取加密的内容数据。
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>--><!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>-End-->
 
@@ -1004,9 +1007,9 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 
@@ -1111,15 +1114,15 @@ async function testGetEncryptedContentData() {
 setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void
 ```
 
-为内容类型为ENVELOPED_DATA的CMS设置加密算法。
+为内容类型为ENVELOPED_DATA的CMS设置加密算法。 &lt;br&gt;该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
 
-&lt;br&gt;该方法应在创建ENVELOPED_DATA类型的CmsGenerator后立即调用。如果未调用此方法，则默认使用AES_256_GCM作为加密算法。
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void--><!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void-End-->
 
@@ -1135,10 +1138,10 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 算法类型无效或不支持。 |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) | 内存错误。 |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 算法类型无效或不支持。 |
+| [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 
 ## 示例
 

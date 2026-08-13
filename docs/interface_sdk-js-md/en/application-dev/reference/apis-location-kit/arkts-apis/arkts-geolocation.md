@@ -1,6 +1,6 @@
 # @ohos.geolocation
 
-Provides interfaces for initiating location requests, ending the location service,and obtaining the location result cached by the system.
+Provides interfaces for initiating location requests, ending the location service, and obtaining the location result cached by the system.
 
 **Since:** 7
 
@@ -8,7 +8,7 @@ Provides interfaces for initiating location requests, ending the location servic
 
 **Deprecated since:** 9
 
-**Substitutes:** [geoLocationManager](arkts-geolocationmanager.md#geoLocationManager)
+**Substitutes:** [geoLocationManager](arkts-geolocationmanager.md#@ohos.geoLocationManager)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -28,39 +28,39 @@ import { geolocation } from '@kit.LocationKit';
 
 | Name | Description |
 | --- | --- |
-| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushcachedgnsslocations) | All prepared GNSS locations are returned to the application through the callback function,and the bottom-layer buffer is cleared. |
-| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushcachedgnsslocations-1) | All prepared GNSS locations are returned to the application through the callback function,and the bottom-layer buffer is cleared. |
-| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getaddressesfromlocation) | Obtain address info from location |
-| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getaddressesfromlocation-1) | Obtain address info from location |
-| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getaddressesfromlocationname) | Obtain latitude and longitude info from location address |
-| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getaddressesfromlocationname-1) | Obtain latitude and longitude info from location address |
-| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize) | Obtain the number of cached GNSS locations reported at a time |
-| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize-1) | Obtain the number of cached GNSS locations reported at a time |
-| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getcurrentlocation) | Obtain current location |
-| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getcurrentlocation-1) | Obtain current location |
-| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getcurrentlocation-2) | Obtain current location |
-| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getlastlocation) | Obtain last known location |
-| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getlastlocation-1) | Obtain last known location |
-| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isgeoserviceavailable) | Obtain geocode service status |
-| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isgeoserviceavailable-1) | Obtain geocode service status |
-| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled) | Obtain current location switch status |
-| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled-1) | Obtain current location switch status |
-| [off](arkts-location-geolocation-off-f.md#off) | Unsubscribe location changed |
-| [off](arkts-location-geolocation-off-f.md#off-1) | Unsubscribe location switch changed |
-| [off](arkts-location-geolocation-off-f.md#off-2) | Unsubscribe to cache GNSS locations update messages |
-| [off](arkts-location-geolocation-off-f.md#off-3) | Unsubscribe gnss status changed |
-| [off](arkts-location-geolocation-off-f.md#off-4) | Unsubscribe nmea message changed |
-| [off](arkts-location-geolocation-off-f.md#off-5) | Remove a geofence and unsubscribe geo fence status changed |
-| [on](arkts-location-geolocation-on-f.md#on) | Subscribe location changed |
-| [on](arkts-location-geolocation-on-f.md#on-1) | Subscribe location switch changed |
-| [on](arkts-location-geolocation-on-f.md#on-2) | Subscribe to cache GNSS locations update messages |
-| [on](arkts-location-geolocation-on-f.md#on-3) | Subscribe gnss status changed |
-| [on](arkts-location-geolocation-on-f.md#on-4) | Subscribe nmea message changed |
-| [on](arkts-location-geolocation-on-f.md#on-5) | Add a geofence and subscribe geo fence status changed |
-| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation) | Request enable location |
-| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation-1) | Request enable location |
-| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendcommand) | Send extended commands to location subsystem. |
-| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendcommand-1) | Send extended commands to location subsystem. |
+| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushCachedGnssLocations) | All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared. |
+| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushCachedGnssLocations) | All prepared GNSS locations are returned to the application through the callback function, and the bottom-layer buffer is cleared. |
+| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getAddressesFromLocation) | Obtain address info from location |
+| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getAddressesFromLocation) | Obtain address info from location |
+| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getAddressesFromLocationName) | Obtain latitude and longitude info from location address |
+| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getAddressesFromLocationName) | Obtain latitude and longitude info from location address |
+| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) | Obtain the number of cached GNSS locations reported at a time |
+| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) | Obtain the number of cached GNSS locations reported at a time |
+| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getCurrentLocation) | Obtain current location |
+| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getCurrentLocation) | Obtain current location |
+| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getCurrentLocation) | Obtain current location |
+| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getLastLocation) | Obtain last known location |
+| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getLastLocation) | Obtain last known location |
+| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isGeoServiceAvailable) | Obtain geocode service status |
+| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isGeoServiceAvailable) | Obtain geocode service status |
+| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#isLocationEnabled) | Obtain current location switch status |
+| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#isLocationEnabled) | Obtain current location switch status |
+| [off_cachedGnssLocationsReporting](arkts-location-geolocation-offcachedgnsslocationsreporting-f.md#off_cachedGnssLocationsReporting) | Unsubscribe to cache GNSS locations update messages |
+| [off_fenceStatusChange](arkts-location-geolocation-offfencestatuschange-f.md#off_fenceStatusChange) | Remove a geofence and unsubscribe geo fence status changed |
+| [off_gnssStatusChange](arkts-location-geolocation-offgnssstatuschange-f.md#off_gnssStatusChange) | Unsubscribe gnss status changed |
+| [off_locationChange](arkts-location-geolocation-offlocationchange-f.md#off_locationChange) | Unsubscribe location changed |
+| [off_locationServiceState](arkts-location-geolocation-offlocationservicestate-f.md#off_locationServiceState) | Unsubscribe location switch changed |
+| [off_nmeaMessageChange](arkts-location-geolocation-offnmeamessagechange-f.md#off_nmeaMessageChange) | Unsubscribe nmea message changed |
+| [on_cachedGnssLocationsReporting](arkts-location-geolocation-oncachedgnsslocationsreporting-f.md#on_cachedGnssLocationsReporting) | Subscribe to cache GNSS locations update messages |
+| [on_fenceStatusChange](arkts-location-geolocation-onfencestatuschange-f.md#on_fenceStatusChange) | Add a geofence and subscribe geo fence status changed |
+| [on_gnssStatusChange](arkts-location-geolocation-ongnssstatuschange-f.md#on_gnssStatusChange) | Subscribe gnss status changed |
+| [on_locationChange](arkts-location-geolocation-onlocationchange-f.md#on_locationChange) | Subscribe location changed |
+| [on_locationServiceState](arkts-location-geolocation-onlocationservicestate-f.md#on_locationServiceState) | Subscribe location switch changed |
+| [on_nmeaMessageChange](arkts-location-geolocation-onnmeamessagechange-f.md#on_nmeaMessageChange) | Subscribe nmea message changed |
+| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestEnableLocation) | Request enable location |
+| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestEnableLocation) | Request enable location |
+| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendCommand) | Send extended commands to location subsystem. |
+| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendCommand) | Send extended commands to location subsystem. |
 
 ### Interfaces
 

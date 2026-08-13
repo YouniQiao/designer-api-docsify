@@ -14,9 +14,11 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 Adds the configuration information of the data processor. The configuration file contains information such as the name of the event received by the data processor. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>--><!--Device-hiAppEvent-function addProcessorFromConfig(processorName: string, configName?: string): Promise<long>-End-->
 
@@ -39,7 +41,7 @@ Adds the configuration information of the data processor. The configuration file
 
 | Error Code ID |
 | --- |
-| [11105001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11105001-invalid-parameter-value) |
+| [11105001](../errorcode-hiappevent.md#11105001-invalid-parameter-value) |
 
 ## Examples
 

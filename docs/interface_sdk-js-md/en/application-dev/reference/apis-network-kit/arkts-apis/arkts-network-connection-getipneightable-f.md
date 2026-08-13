@@ -14,9 +14,11 @@ function getIpNeighTable(): Promise<Array<NetIpMacInfo>>
 
 Obtain the IP and MAC address correspondence table of the neighboring network.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO and ohos.permission.GET_IP_MAC_INFO
 
@@ -34,9 +36,9 @@ Obtain the IP and MAC address correspondence table of the neighboring network.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2100002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
-| [2100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

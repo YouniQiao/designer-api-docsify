@@ -2,13 +2,15 @@
 
 Describes the object related to the exception event name, message, error stack information, exception thread name, and exception thread type.
 
-**Inheritance/Implementation:** GlobalError extends [Error](Error)
+**Inheritance/Implementation:** GlobalError extends Error
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-errorManager-export interface GlobalError extends Error--><!--Device-errorManager-export interface GlobalError extends Error-End-->
+**Deprecated since:** -1
+
+<!--Device-errorManager-export interface GlobalError--><!--Device-errorManager-export interface GlobalError-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -24,21 +26,15 @@ import { errorManager } from '@kit.AbilityKit';
 instanceName: string
 ```
 
-Name of a VM instance.
-
-**NOTE：**
-
-Rules for the **instanceName** field in exceptions in the TaskPool thread:
-
-- **globalErrorOccurred** events: identified as "TaskPool Thread + method name".  
-- **globalUnhandledRejectionDetected** events: identified as "TaskPool Thread + task name".  
-- If identified as "TaskPool Thread" only, the exception occurs within an asynchronous callback.
+Name of a VM instance. **NOTE：**Rules for the **instanceName** field in exceptions in the TaskPool thread: - **globalErrorOccurred** events: identified as "TaskPool Thread + method name". - **globalUnhandledRejectionDetected** events: identified as "TaskPool Thread + task name". - If identified as "TaskPool Thread" only, the exception occurs within an asynchronous callback.
 
 **Type:** string
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -59,6 +55,8 @@ Type of the VM instance.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

@@ -2,7 +2,9 @@
 
 系统账号管理类。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
 
@@ -16,7 +18,9 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 判断是否支持多系统账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,8 +36,8 @@ checkMultiOsAccountEnabled(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -63,7 +67,9 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 判断是否支持多系统账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>--><!--Device-AccountManager-checkMultiOsAccountEnabled(): Promise<boolean>-End-->
 
@@ -79,7 +85,7 @@ checkMultiOsAccountEnabled(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -105,11 +111,7 @@ try {
 checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否处于激活状态。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -132,11 +134,11 @@ checkOsAccountActivated(localId: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -168,11 +170,7 @@ try {
 checkOsAccountActivated(localId: number): Promise<boolean>
 ```
 
-判断指定系统账号是否处于激活状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -200,11 +198,11 @@ checkOsAccountActivated(localId: number): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -234,11 +232,7 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否具有指定约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -262,11 +256,11 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string, callback: A
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -299,11 +293,7 @@ try {
 checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
 ```
 
-判断指定系统账号是否具有指定约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -332,11 +322,11 @@ checkOsAccountConstraintEnabled(localId: number, constraint: string): Promise<bo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -369,7 +359,9 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 检查当前系统账号是否为测试账号。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-checkOsAccountTestable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -385,8 +377,8 @@ checkOsAccountTestable(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -416,7 +408,9 @@ checkOsAccountTestable(): Promise<boolean>
 
 检查当前系统账号是否为测试账号。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>--><!--Device-AccountManager-checkOsAccountTestable(): Promise<boolean>-End-->
 
@@ -432,7 +426,7 @@ checkOsAccountTestable(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -458,12 +452,7 @@ try {
 checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前系统账号是否已认证解锁。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。建议使用
-> [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
+检查当前系统账号是否已认证解锁。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。建议使用 > [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
 
 **起始版本：** 9
 
@@ -485,7 +474,7 @@ checkOsAccountVerified(callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -513,12 +502,7 @@ try {
 checkOsAccountVerified(): Promise<boolean>
 ```
 
-检查当前系统账号是否已认证解锁。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。建议使用
-> [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
+检查当前系统账号是否已认证解锁。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。建议使用 > [isOsAccountUnlocked](#isOsAccountUnlocked)替代。
 
 **起始版本：** 9
 
@@ -540,7 +524,7 @@ checkOsAccountVerified(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -566,11 +550,7 @@ try {
 checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定系统账号是否已验证。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -593,11 +573,11 @@ checkOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -627,11 +607,7 @@ try {
 checkOsAccountVerified(localId: number): Promise<boolean>
 ```
 
-检查指定系统账号是否已验证。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -659,11 +635,11 @@ checkOsAccountVerified(localId: number): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -693,7 +669,9 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 
 查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void--><!--Device-AccountManager-getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<int>>): void-End-->
 
@@ -709,8 +687,8 @@ getActivatedOsAccountLocalIds(callback: AsyncCallback<Array<number>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -743,7 +721,9 @@ getActivatedOsAccountLocalIds(): Promise<Array<number>>
 
 查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>--><!--Device-AccountManager-getActivatedOsAccountLocalIds(): Promise<Array<int>>-End-->
 
@@ -759,7 +739,7 @@ getActivatedOsAccountLocalIds(): Promise<Array<number>>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -785,18 +765,13 @@ try {
 getCreatedOsAccountsCount(callback: AsyncCallback<number>): void
 ```
 
-获取已创建的系统账号数量。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountCount](#getOsAccountCount)替代。
+获取已创建的系统账号数量。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountCount](#getOsAccountCount)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountCount](osAccount.AccountManager.getOsAccountCount(callback:)
+**替代接口：** [getOsAccountCount](#getOsAccountCount)(callback: AsyncCallback&lt;int&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -831,12 +806,7 @@ accountManager.getCreatedOsAccountsCount((err: BusinessError, count: number)=>{
 getCreatedOsAccountsCount(): Promise<number>
 ```
 
-获取已创建的系统账号数量。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountCount](#getOsAccountCount)替代。
+获取已创建的系统账号数量。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountCount](#getOsAccountCount)替代。
 
 **起始版本：** 7
 
@@ -875,11 +845,7 @@ accountManager.getCreatedOsAccountsCount().then((count: number) => {
 getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-查询当前进程所属的系统账号的信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -903,8 +869,8 @@ getCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -932,11 +898,7 @@ try {
 getCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-查询当前进程所属的系统账号的信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -960,8 +922,8 @@ getCurrentOsAccount(): Promise<OsAccountInfo>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -987,19 +949,13 @@ try {
 getDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 ```
 
-获取分布式虚拟设备ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)
-> 替代。
+获取分布式虚拟设备ID。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [queryDistributedVirtualDeviceId](osAccount.AccountManager.queryDistributedVirtualDeviceId(callback:)
+**替代接口：** [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)(callback: AsyncCallback&lt;string&gt;)
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1034,12 +990,7 @@ accountManager.getDistributedVirtualDeviceId((err: BusinessError, virtualID: str
 getDistributedVirtualDeviceId(): Promise<string>
 ```
 
-获取分布式虚拟设备ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)替代。
+获取分布式虚拟设备ID。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [queryDistributedVirtualDeviceId](#queryDistributedVirtualDeviceId)替代。
 
 **起始版本：** 7
 
@@ -1080,7 +1031,9 @@ getForegroundOsAccountLocalId(): Promise<number>
 
 获取前台系统账号的ID。使用Promise异步回调。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getForegroundOsAccountLocalId(): Promise<int>-End-->
 
@@ -1096,7 +1049,7 @@ getForegroundOsAccountLocalId(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1122,17 +1075,13 @@ try {
 getOsAccountAllConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定系统账号的全部约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**替代接口：** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number, callback: AsyncCallback&lt;Array&lt;string&gt;&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1172,17 +1121,13 @@ accountManager.getOsAccountAllConstraints(localId, (err: BusinessError, constrai
 getOsAccountAllConstraints(localId: number): Promise<Array<string>>
 ```
 
-获取指定系统账号的全部约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountConstraints](osAccount.AccountManager.getOsAccountConstraints(localId:)
+**替代接口：** [getOsAccountConstraints](#getOsAccountConstraints)(localId: number)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1225,11 +1170,7 @@ accountManager.getOsAccountAllConstraints(localId).then((constraints: string[]) 
 getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>): void
 ```
 
-获取指定系统账号的全部约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用callback异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -1252,11 +1193,11 @@ getOsAccountConstraints(localId: number, callback: AsyncCallback<Array<string>>)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1288,11 +1229,7 @@ try {
 getOsAccountConstraints(localId: number): Promise<Array<string>>
 ```
 
-获取指定系统账号的全部约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
+获取指定系统账号的全部约束。使用Promise异步回调。 > **说明：** > > 从API version 9开始支持，从API version 11开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 9
 
@@ -1320,11 +1257,11 @@ getOsAccountConstraints(localId: number): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1354,9 +1291,11 @@ try {
 getOsAccountCount(callback: AsyncCallback<number>): void
 ```
 
-获取已创建的系统账号数量。使用callback异步回调。该接口仅限系统应用调用。
+获取已创建的系统账号数量。使用callback异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1374,9 +1313,9 @@ getOsAccountCount(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1404,9 +1343,11 @@ try {
 getOsAccountCount(): Promise<number>
 ```
 
-获取已创建的系统账号数量。使用Promise异步回调。该接口仅限系统应用调用。
+获取已创建的系统账号数量。使用Promise异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1424,8 +1365,8 @@ getOsAccountCount(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1455,6 +1396,8 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 <!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>-End-->
@@ -1477,10 +1420,10 @@ getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1502,6 +1445,44 @@ accountManager.getOsAccountDomainInfo(localId).then((domainAccountInfo: osAccoun
 })
 ```
 
+## getOsAccountDomainInfo
+
+```TypeScript
+getOsAccountDomainInfo(localId: number): Promise<DomainAccountInfo | null>
+```
+
+获取指定系统账号关联的域账号信息。使用Promise异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.GET_DOMAIN_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>--><!--Device-AccountManager-getOsAccountDomainInfo(localId: int): Promise<DomainAccountInfo | null>-End-->
+
+**系统能力：** SystemCapability.Account.OsAccount
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| localId | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) \| null & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+
 ## getOsAccountLocalId
 
 ```TypeScript
@@ -1510,7 +1491,9 @@ getOsAccountLocalId(callback: AsyncCallback<number>): void
 
 获取当前进程所属的系统账号ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalId(callback: AsyncCallback<int>): void-End-->
 
@@ -1526,8 +1509,8 @@ getOsAccountLocalId(callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1557,7 +1540,9 @@ getOsAccountLocalId(): Promise<number>
 
 获取当前进程所属的系统账号ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalId(): Promise<int>--><!--Device-AccountManager-getOsAccountLocalId(): Promise<int>-End-->
 
@@ -1573,7 +1558,7 @@ getOsAccountLocalId(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1599,19 +1584,13 @@ try {
 getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void
 ```
 
-通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)
-> 替代。
+通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number, callback: AsyncCallback<number>): void-End-->
 
@@ -1648,19 +1627,13 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber, (err: BusinessErr
 getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>
 ```
 
-通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber-1)
-> 替代。
+通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForSerialNumber](osAccount.AccountManager.getOsAccountLocalIdForSerialNumber(serialNumber:)
+**替代接口：** [getOsAccountLocalIdForSerialNumber](#getOsAccountLocalIdForSerialNumber)(serialNumber: long)
 
 <!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdBySerialNumber(serialNumber: number): Promise<number>-End-->
 
@@ -1700,9 +1673,11 @@ accountManager.getOsAccountLocalIdBySerialNumber(serialNumber).then((localId: nu
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-根据域账号信息，获取与其关联的系统账号ID。使用callback异步回调。该接口仅限系统应用调用。
+根据域账号信息，获取与其关联的系统账号ID。使用callback异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1721,10 +1696,10 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo, callback: AsyncCallb
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1753,9 +1728,11 @@ try {
 getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。该接口仅限系统应用调用。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。 该接口仅限系统应用调用。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1779,10 +1756,10 @@ getOsAccountLocalIdForDomain(domainInfo: DomainAccountInfo): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1811,7 +1788,9 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 
 通过SN码查询与其关联的系统账号的账号ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long, callback: AsyncCallback<int>): void-End-->
 
@@ -1828,10 +1807,10 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1865,7 +1844,9 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 
 通过SN码查询与其关联的系统账号的账号ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForSerialNumber(serialNumber: long): Promise<int>-End-->
 
@@ -1887,10 +1868,10 @@ getOsAccountLocalIdForSerialNumber(serialNumber: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1922,7 +1903,9 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 根据uid查询对应的系统账号ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
 
@@ -1939,9 +1922,9 @@ getOsAccountLocalIdForUid(uid: number, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -1975,7 +1958,9 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 
 根据uid查询对应的系统账号ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getOsAccountLocalIdForUid(uid: int): Promise<int>-End-->
 
@@ -1997,9 +1982,9 @@ getOsAccountLocalIdForUid(uid: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2031,7 +2016,9 @@ getOsAccountLocalIdForUidSync(uid: number): number
 
 根据uid查询对应的系统账号ID。使用同步方式返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int--><!--Device-AccountManager-getOsAccountLocalIdForUidSync(uid: int): int-End-->
 
@@ -2053,8 +2040,8 @@ getOsAccountLocalIdForUidSync(uid: number): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
 
 ## 示例
 
@@ -2081,19 +2068,13 @@ try {
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo, callback: AsyncCallback<number>): void
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)
-> 替代。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**替代接口：** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo, callback: AsyncCallback&lt;int&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2130,19 +2111,13 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo, (err: BusinessError, lo
 getOsAccountLocalIdFromDomain(domainInfo: DomainAccountInfo): Promise<number>
 ```
 
-根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain-1)
-> 替代。
+根据域账号信息，获取与其关联的系统账号的账号ID。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForDomain](osAccount.AccountManager.getOsAccountLocalIdForDomain(domainInfo:)
+**替代接口：** [getOsAccountLocalIdForDomain](#getOsAccountLocalIdForDomain)(domainInfo: DomainAccountInfo)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2182,18 +2157,13 @@ accountManager.getOsAccountLocalIdFromDomain(domainInfo).then((localId: number) 
 getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void
 ```
 
-获取当前进程所属的系统账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalId](#getOsAccountLocalId)替代。
+获取当前进程所属的系统账号ID。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalId](#getOsAccountLocalId)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalId](osAccount.AccountManager.getOsAccountLocalId(callback:)
+**替代接口：** [getOsAccountLocalId](#getOsAccountLocalId)(callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromProcess(callback: AsyncCallback<number>): void-End-->
 
@@ -2226,12 +2196,7 @@ accountManager.getOsAccountLocalIdFromProcess((err: BusinessError, localId: numb
 getOsAccountLocalIdFromProcess(): Promise<number>
 ```
 
-获取当前进程所属的系统账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalId](#getOsAccountLocalId)替代。
+获取当前进程所属的系统账号ID。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalId](#getOsAccountLocalId)替代。
 
 **起始版本：** 7
 
@@ -2268,19 +2233,13 @@ accountManager.getOsAccountLocalIdFromProcess().then((localId: number) => {
 getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void
 ```
 
-根据uid查询对应的系统账号ID。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)
-> 替代。
+根据uid查询对应的系统账号ID。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**替代接口：** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int, callback: AsyncCallback&lt;int&gt;)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2317,18 +2276,13 @@ accountManager.getOsAccountLocalIdFromUid(uid, (err: BusinessError, localId: num
 getOsAccountLocalIdFromUid(uid: number): Promise<number>
 ```
 
-根据uid查询对应的系统账号ID。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid-1)替代。
+根据uid查询对应的系统账号ID。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountLocalIdForUid](osAccount.AccountManager.getOsAccountLocalIdForUid(uid:)
+**替代接口：** [getOsAccountLocalIdForUid](#getOsAccountLocalIdForUid)(uid: int)
 
 <!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>--><!--Device-AccountManager-getOsAccountLocalIdFromUid(uid: number): Promise<number>-End-->
 
@@ -2372,6 +2326,8 @@ getOsAccountLocalIds(): Promise<number[]>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -2390,8 +2346,8 @@ getOsAccountLocalIds(): Promise<number[]>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2419,7 +2375,9 @@ getOsAccountName(): Promise<string>
 
 查询调用方所属系统账号的名称。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountName(): Promise<string>--><!--Device-AccountManager-getOsAccountName(): Promise<string>-End-->
 
@@ -2435,7 +2393,7 @@ getOsAccountName(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2465,6 +2423,8 @@ getOsAccountNameByLocalId(localId: number): Promise<string>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -2489,10 +2449,10 @@ getOsAccountNameByLocalId(localId: number): Promise<string>
 
 | 错误码ID |
 | --- |
-| [12300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2520,7 +2480,9 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 查询当前进程所属的系统账号的账号类型。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountType(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -2536,8 +2498,8 @@ getOsAccountType(callback: AsyncCallback<OsAccountType>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2567,7 +2529,9 @@ getOsAccountType(): Promise<OsAccountType>
 
 查询当前进程所属的系统账号的账号类型。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>--><!--Device-AccountManager-getOsAccountType(): Promise<OsAccountType>-End-->
 
@@ -2583,7 +2547,7 @@ getOsAccountType(): Promise<OsAccountType>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2609,18 +2573,13 @@ try {
 getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void
 ```
 
-查询当前进程所属的系统账号的账号类型。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [getOsAccountType](#getOsAccountType)替代。
+查询当前进程所属的系统账号的账号类型。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [getOsAccountType](#getOsAccountType)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getOsAccountType](osAccount.AccountManager.getOsAccountType(callback:)
+**替代接口：** [getOsAccountType](#getOsAccountType)(callback: AsyncCallback&lt;OsAccountType&gt;)
 
 <!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void--><!--Device-AccountManager-getOsAccountTypeFromProcess(callback: AsyncCallback<OsAccountType>): void-End-->
 
@@ -2653,12 +2612,7 @@ accountManager.getOsAccountTypeFromProcess((err: BusinessError, accountType: osA
 getOsAccountTypeFromProcess(): Promise<OsAccountType>
 ```
 
-查询当前进程所属的系统账号的账号类型。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getOsAccountType)
-> 替代。
+查询当前进程所属的系统账号的账号类型。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用[getOsAccountType](#getOsAccountType) > 替代。
 
 **起始版本：** 7
 
@@ -2695,19 +2649,13 @@ accountManager.getOsAccountTypeFromProcess().then((accountType: osAccount.OsAcco
 getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void
 ```
 
-通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)
-> 替代。
+通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int, callback: AsyncCallback&lt;long&gt;)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number, callback: AsyncCallback<number>): void-End-->
 
@@ -2745,19 +2693,13 @@ accountManager.getSerialNumberByOsAccountLocalId(localId, (err: BusinessError, s
 getSerialNumberByOsAccountLocalId(localId: number): Promise<number>
 ```
 
-通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId-1)
-> 替代。
+通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getSerialNumberForOsAccountLocalId](osAccount.AccountManager.getSerialNumberForOsAccountLocalId(localId:)
+**替代接口：** [getSerialNumberForOsAccountLocalId](#getSerialNumberForOsAccountLocalId)(localId: int)
 
 <!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>--><!--Device-AccountManager-getSerialNumberByOsAccountLocalId(localId: number): Promise<number>-End-->
 
@@ -2800,7 +2742,9 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 
 通过系统账号ID获取与该系统账号关联的SN码。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int, callback: AsyncCallback<long>): void-End-->
 
@@ -2817,10 +2761,10 @@ getSerialNumberForOsAccountLocalId(localId: number, callback: AsyncCallback<numb
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2854,7 +2798,9 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 
 通过系统账号ID获取与该系统账号关联的SN码。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>--><!--Device-AccountManager-getSerialNumberForOsAccountLocalId(localId: int): Promise<long>-End-->
 
@@ -2876,10 +2822,10 @@ getSerialNumberForOsAccountLocalId(localId: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -2909,19 +2855,13 @@ try {
 isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void
 ```
 
-判断是否支持多系统账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)
-> 替代。
+判断是否支持多系统账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkMultiOsAccountEnabled](osAccount.AccountManager.checkMultiOsAccountEnabled(callback:)
+**替代接口：** [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isMultiOsAccountEnable(callback: AsyncCallback<boolean>): void-End-->
 
@@ -2954,12 +2894,7 @@ accountManager.isMultiOsAccountEnable((err: BusinessError, isEnabled: boolean) =
 isMultiOsAccountEnable(): Promise<boolean>
 ```
 
-判断是否支持多系统账号。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)替代。
+判断是否支持多系统账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkMultiOsAccountEnabled](#checkMultiOsAccountEnabled)替代。
 
 **起始版本：** 7
 
@@ -2996,17 +2931,13 @@ accountManager.isMultiOsAccountEnable().then((isEnabled: boolean) => {
 isOsAccountActived(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否处于激活状态。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**替代接口：** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3046,17 +2977,13 @@ accountManager.isOsAccountActived(localId, (err: BusinessError, isActived: boole
 isOsAccountActived(localId: number): Promise<boolean>
 ```
 
-判断指定系统账号是否处于激活状态。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否处于激活状态。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountActivated](osAccount.AccountManager.checkOsAccountActivated(localId:)
+**替代接口：** [checkOsAccountActivated](#checkOsAccountActivated)(localId: number)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3099,17 +3026,13 @@ accountManager.isOsAccountActived(localId).then((isActived: boolean) => {
 isOsAccountConstraintEnable(localId: number, constraint: string, callback: AsyncCallback<boolean>): void
 ```
 
-判断指定系统账号是否具有指定约束。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**替代接口：** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3151,17 +3074,13 @@ accountManager.isOsAccountConstraintEnable(localId, constraint, (err: BusinessEr
 isOsAccountConstraintEnable(localId: number, constraint: string): Promise<boolean>
 ```
 
-判断指定系统账号是否具有指定约束。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+判断指定系统账号是否具有指定约束。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountConstraintEnabled](osAccount.AccountManager.checkOsAccountConstraintEnabled(localId:)
+**替代接口：** [checkOsAccountConstraintEnabled](#checkOsAccountConstraintEnabled)(localId: number, constraint: string)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3208,7 +3127,9 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 判断当前系统账号是否使能指定约束。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>--><!--Device-AccountManager-isOsAccountConstraintEnabled(constraint: string): Promise<boolean>-End-->
 
@@ -3230,8 +3151,8 @@ isOsAccountConstraintEnabled(constraint: string): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3262,7 +3183,9 @@ isOsAccountUnlocked(): Promise<boolean>
 
 检查当前系统账号是否已认证解锁。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>--><!--Device-AccountManager-isOsAccountUnlocked(): Promise<boolean>-End-->
 
@@ -3278,7 +3201,7 @@ isOsAccountUnlocked(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3304,19 +3227,13 @@ try {
 isOsAccountVerified(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前系统账号是否已验证。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountVerified](#checkOsAccountVerified)
-> 替代。
+检查当前系统账号是否已验证。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkOsAccountVerified](#checkOsAccountVerified) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(callback:)
+**替代接口：** [checkOsAccountVerified](#checkOsAccountVerified)(callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3351,17 +3268,13 @@ accountManager.isOsAccountVerified((err: BusinessError, isVerified: boolean) => 
 isOsAccountVerified(localId: number, callback: AsyncCallback<boolean>): void
 ```
 
-检查指定系统账号是否已验证。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**替代接口：** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number, callback: AsyncCallback&lt;boolean&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3399,17 +3312,13 @@ accountManager.isOsAccountVerified(localId, (err: BusinessError, isVerified: boo
 isOsAccountVerified(localId?: number): Promise<boolean>
 ```
 
-检查指定系统账号是否已验证。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+检查指定系统账号是否已验证。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountVerified](osAccount.AccountManager.checkOsAccountVerified(localId:)
+**替代接口：** [checkOsAccountVerified](#checkOsAccountVerified)(localId: number)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -3448,19 +3357,13 @@ accountManager.isOsAccountVerified().then((isVerified: boolean) => {
 isTestOsAccount(callback: AsyncCallback<boolean>): void
 ```
 
-检查当前系统账号是否为测试账号。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](#checkOsAccountTestable)
-> 替代。
+检查当前系统账号是否为测试账号。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkOsAccountTestable](#checkOsAccountTestable) > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [checkOsAccountTestable](osAccount.AccountManager.checkOsAccountTestable(callback:)
+**替代接口：** [checkOsAccountTestable](#checkOsAccountTestable)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void--><!--Device-AccountManager-isTestOsAccount(callback: AsyncCallback<boolean>): void-End-->
 
@@ -3493,12 +3396,7 @@ accountManager.isTestOsAccount((err: BusinessError, isTestable: boolean) => {
 isTestOsAccount(): Promise<boolean>
 ```
 
-检查当前系统账号是否为测试账号。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。建议使用
-> [checkOsAccountTestable](#checkOsAccountTestable)替代。
+检查当前系统账号是否为测试账号。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。建议使用 > [checkOsAccountTestable](#checkOsAccountTestable)替代。
 
 **起始版本：** 7
 
@@ -3535,19 +3433,13 @@ let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void
 ```
 
-查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)
-> 替代。
+查询当前处于激活状态的系统账号的ID列表。使用callback异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getActivatedOsAccountLocalIds](osAccount.AccountManager.getActivatedOsAccountLocalIds(callback:)
+**替代接口：** [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)(callback: AsyncCallback&lt;Array&lt;int&gt;&gt;)
 
 <!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void--><!--Device-AccountManager-queryActivatedOsAccountIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -3583,12 +3475,7 @@ accountManager.queryActivatedOsAccountIds((err: BusinessError, idArray: number[]
 queryActivatedOsAccountIds(): Promise<Array<number>>
 ```
 
-查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 8开始支持，从API version 9开始废弃。建议使用
-> [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)替代。
+查询当前处于激活状态的系统账号的ID列表。使用Promise异步回调。 > **说明：** > > 从API version 8开始支持，从API version 9开始废弃。建议使用 > [getActivatedOsAccountLocalIds](#getActivatedOsAccountLocalIds)替代。
 
 **起始版本：** 8
 
@@ -3625,17 +3512,13 @@ accountManager.queryActivatedOsAccountIds().then((idArray: number[]) => {
 queryCurrentOsAccount(callback: AsyncCallback<OsAccountInfo>): void
 ```
 
-查询当前进程所属的系统账号的信息。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用callback异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [getCurrentOsAccount](osAccount.AccountManager.getCurrentOsAccount(callback:)
+**替代接口：** [getCurrentOsAccount](#getCurrentOsAccount)(callback: AsyncCallback&lt;OsAccountInfo&gt;)
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3670,11 +3553,7 @@ accountManager.queryCurrentOsAccount((err: BusinessError, curAccountInfo: osAcco
 queryCurrentOsAccount(): Promise<OsAccountInfo>
 ```
 
-查询当前进程所属的系统账号的信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
+查询当前进程所属的系统账号的信息。使用Promise异步回调。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。替代方法仅向系统应用开放。
 
 **起始版本：** 7
 
@@ -3715,7 +3594,9 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 获取分布式虚拟设备ID。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3733,9 +3614,9 @@ queryDistributedVirtualDeviceId(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -3765,7 +3646,9 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 获取分布式虚拟设备ID。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC or ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3783,8 +3666,8 @@ queryDistributedVirtualDeviceId(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 

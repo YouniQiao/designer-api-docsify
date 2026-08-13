@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CameraCaptureStateChangeInfo--><!--Device-unnamed-declare interface CameraCaptureStateChangeInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ newState: CameraCaptureState
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-CameraCaptureStateChangeInfo-newState: CameraCaptureState--><!--Device-CameraCaptureStateChangeInfo-newState: CameraCaptureState-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ originalState: CameraCaptureState
 **类型：** [CameraCaptureState](arkts-arkweb-cameracapturestate-e.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraCaptureStateChangeInfo-originalState: CameraCaptureState--><!--Device-CameraCaptureStateChangeInfo-originalState: CameraCaptureState-End-->
 

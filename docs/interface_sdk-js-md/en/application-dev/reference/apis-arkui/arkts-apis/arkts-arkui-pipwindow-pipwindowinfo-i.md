@@ -2,9 +2,11 @@
 
 Describes the PiP window information.
 
-**Since:** 15
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-interface PiPWindowInfo--><!--Device-PiPWindow-interface PiPWindowInfo-End-->
 
@@ -26,11 +28,13 @@ Size of the PiP window.
 
 **Type:** [PiPWindowSize](arkts-arkui-pipwindow-pipwindowsize-i.md)
 
-**Since:** 15
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowInfo-size: PiPWindowSize--><!--Device-PiPWindowInfo-size: PiPWindowSize-End-->
 
@@ -44,13 +48,15 @@ windowId: int
 
 ID of the PiP window.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPWindowInfo-windowId: int--><!--Device-PiPWindowInfo-windowId: int-End-->
 

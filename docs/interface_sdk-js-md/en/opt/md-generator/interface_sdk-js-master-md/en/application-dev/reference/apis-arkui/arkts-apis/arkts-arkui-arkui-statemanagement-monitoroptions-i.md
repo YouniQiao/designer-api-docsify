@@ -4,6 +4,8 @@ Defines the optional parameters for [addMonitor](arkts-arkui-arkui-statemanageme
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface MonitorOptions--><!--Device-unnamed-export interface MonitorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,14 +22,15 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 enableWildcard?: boolean
 ```
 
-Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and  
-**false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path contains wildcards, the path is considered invalid.
+Whether to enable the wildcard capability for this **addMonitor**. **true** to enable the wildcard capability, and **false** means the opposite. The default value is **false**. If the wildcard capability is disabled but the path contains wildcards, the path is considered invalid.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,14 +46,15 @@ Whether to enable the wildcard capability for this **addMonitor**. **true** to e
 isSynchronous?: boolean
 ```
 
-Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback.  
-**false** (default value): The current callback is an asynchronous callback.
+Whether the current callback is a synchronous callback. **true**: The current callback is a synchronous callback. **false** (default value): The current callback is an asynchronous callback.
 
 **Type:** boolean
 
 **Default:** false
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

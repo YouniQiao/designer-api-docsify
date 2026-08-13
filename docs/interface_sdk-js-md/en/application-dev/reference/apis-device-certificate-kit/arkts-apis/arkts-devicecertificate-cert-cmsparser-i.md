@@ -1,16 +1,12 @@
 # CmsParser
 
-Provides APIs for parsing, verifying, and decrypting CMS messages.
+Provides APIs for parsing, verifying, and decrypting CMS messages. > **NOTE：**> > PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7 > supports data types including data, signed data, enveloped data, signed and enveloped data, digested > data, and encrypted data. It is often used to protect data integrity and confidentiality.
 
-> **NOTE：**
-> 
-> PKCS #7 is a standard syntax for storing signed or encrypted data. CMS is an extension of PKCS #7. PKCS #7
-> supports data types including data, signed data, enveloped data, signed and enveloped data, digested
-> data, and encrypted data. It is often used to protect data integrity and confidentiality.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cert-interface CmsParser--><!--Device-cert-interface CmsParser-End-->
 
@@ -30,11 +26,13 @@ decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>
 
 Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>--><!--Device-CmsParser-decryptEnvelopedData(config: CmsEnvelopedDecryptionConfig): Promise<Uint8Array>-End-->
 
@@ -56,10 +54,10 @@ Decrypts the CMS message of the **ENVELOPED_DATA** content type. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The private key is invalid or not supported; &lt;br&gt;2. The recipient certificate is invalid or not supported. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The private key is invalid or not supported; &lt;br&gt;2. The recipient certificate is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -153,11 +151,13 @@ getCerts(type: CmsCertType): Promise<Array<X509Cert>>
 
 Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing enumerated values. The signer certificates or all certificates can be obtained. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>--><!--Device-CmsParser-getCerts(type: CmsCertType): Promise<Array<X509Cert>>-End-->
 
@@ -179,10 +179,10 @@ Obtains the certificate from CMS message of the **SIGNED_DATA** type by passing 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of type is invalid or not supported. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The value of type is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## getContentData
 
@@ -192,11 +192,13 @@ getContentData(): Promise<Uint8Array>
 
 Obtains the content data from CMS message of the **SIGNED_DATA** type. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-getContentData(): Promise<Uint8Array>--><!--Device-CmsParser-getContentData(): Promise<Uint8Array>-End-->
 
@@ -212,9 +214,9 @@ Obtains the content data from CMS message of the **SIGNED_DATA** type. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -339,11 +341,13 @@ getContentType(): CmsContentType
 
 Obtains the CMS content type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-getContentType(): CmsContentType--><!--Device-CmsParser-getContentType(): CmsContentType-End-->
 
@@ -359,9 +363,9 @@ Obtains the CMS content type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -485,18 +489,15 @@ async function testCmsVerifyTest() {
 setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>
 ```
 
-Set the CMS message data. This API uses a promise to return the result.
+Set the CMS message data. This API uses a promise to return the result. > **NOTE：**> > CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array** > corresponds to the DER format.
 
-> **NOTE：**
-> 
-> CMS message in PEM and DER formats is supported. **string** corresponds to the PEM format, and **Uint8Array**
-> corresponds to the DER format.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>--><!--Device-CmsParser-setRawData(data: Uint8Array | string, cmsFormat: CmsFormat): Promise<void>-End-->
 
@@ -519,10 +520,10 @@ Set the CMS message data. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data is zero or too large; &lt;br&gt;2. The type of the cmsFormat is invalid or not supported. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The length of the data is zero or too large; &lt;br&gt;2. The type of the cmsFormat is invalid or not supported. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
 
 ## Examples
 
@@ -646,11 +647,13 @@ verifySignedData(config: CmsVerificationConfig): Promise<void>
 
 Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>--><!--Device-CmsParser-verifySignedData(config: CmsVerificationConfig): Promise<void>-End-->
 
@@ -672,13 +675,13 @@ Verifies the CMS message of the **SIGNED_DATA** content type. This API uses a pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
-| [19020003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The trustCerts of config is empty; &lt;br&gt;2. The length of the contentData of config is zero or too large; &lt;br&gt;3. The contentDataFormat of config is invalid or not supported. |
-| [19030003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
-| [19020001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
-| [19030001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
-| [19030004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
-| [19030005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) | Runtime error. Possible causes: &lt;br&gt;1. Memory copy failed; &lt;br&gt;2. A null pointer occurs inside the system; &lt;br&gt;3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) | Parameter check failed. Possible causes: &lt;br&gt;1. The trustCerts of config is empty; &lt;br&gt;2. The length of the contentData of config is zero or too large; &lt;br&gt;3. The contentDataFormat of config is invalid or not supported. |
+| [19030003](../errorcode-cert.md#19030003-certificate-has-not-taken-effect) | The certificate has not taken effect. |
+| [19020001](../errorcode-cert.md#19020001-memory-error) | Memory malloc failed. |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) | Crypto operation error. |
+| [19030004](../errorcode-cert.md#19030004-certificate-expired) | The certificate has expired. |
+| [19030005](../errorcode-cert.md#19030005-failed-to-obtain-the-certificate-issuer) | Failed to obtain the certificate issuer. |
 
 ## Examples
 

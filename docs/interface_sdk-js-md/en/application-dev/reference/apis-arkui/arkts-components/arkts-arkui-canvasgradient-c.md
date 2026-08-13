@@ -6,6 +6,8 @@
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class CanvasGradient--><!--Device-unnamed-declare class CanvasGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -35,7 +39,7 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative position of the gradient stop along the gradient vector, represented by the ratio of the distance between the gradient stop and the start point to the total length. The value ranges from 0 to 1.&lt;br&gt; If the value of **offset** is less than 0 or greater than 1, there is no gradient effect.&lt;br&gt; **undefined** and **null** are treated as invalid values, and the current stop is ignored. **NaN** causes a **CanvasGradient** exception, and **Infinity** causes **CanvasGradient** to be invalid. |
-| color | string | Yes | Gradient color to set. For details about the color notation, see the description of the string type in [ResourceColor](ResourceColor).&lt;br&gt; Invalid values result in no gradient effect being displayed. |
+| color | string | Yes | Gradient color to set. For details about the color notation, see the description of the string type in ResourceColor.&lt;br&gt; Invalid values result in no gradient effect being displayed. |
 
 ## Examples
 
@@ -76,26 +80,13 @@ struct AddColorStop {
 addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
-Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the  
-[ColorMetrics](ColorMetrics)type, which can achieve richer color reproduction on devices that support high color gamut.
-
-> **NOTE：**
-> 
-> Only the
-> [fillStyle](CanvasRenderingContext2D#fillStyle)
-> and
-> [strokeStyle](CanvasRenderingContext2D#strokeStyle)
-> attributes of the
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
-> object support the **CanvasGradient** object with the P3 wide color gamut. In addition,
-> the color gamut mode of the window where the **Canvas** component is located must be set
-> to wide color gamut mode **WIDE_GAMUT** via the
-> [setWindowColorSpace](../arkts-apis/arkts-arkui-window-window-i.md#setWindowColorSpace)
-> method.
+Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the ColorMetrics type, which can achieve richer color reproduction on devices that support high color gamut. > **NOTE：**> > Only the > fillStyle > and > strokeStyle > attributes of the > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D) > object support the **CanvasGradient** object with the P3 wide color gamut. In addition, > the color gamut mode of the window where the **Canvas** component is located must be set > to wide color gamut mode **WIDE_GAMUT** via the > [setWindowColorSpace](../arkts-apis/arkts-arkui-window-window-i.md#setWindowColorSpace) > method.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,17 +103,17 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative position of the gradient stop along the gradient vector, represented by the ratio of the distance between the gradient stop and the start point to the total length. The value ranges from 0 to 1.&lt;br&gt; If the value of **offset** is less than 0 or greater than 1, there is no gradient effect.&lt;br&gt; **undefined** and **null** are treated as invalid values and are not applied. **NaN** causes a **CanvasGradient** exception, and **Infinity** causes **CanvasGradient** to be invalid. |
-| color | string \| ColorMetrics | Yes | Color of the gradient fill.&lt;br&gt; You can use the [colorWithSpace](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md#colorWithSpace) method to construct a color with the color gamut attribute [ColorSpace](ColorSpace) set to **SRGB** or **DISPLAY_P3**. The color gamut attributes of each gradient ColorMetrics must be the same. If different color gamut attributes are set, an exception is thrown, and the error code is 103701.&lt;br&gt; **undefined** and **null** are treated as invalid values, and the current stop is ignored. |
+| color | string \| ColorMetrics | Yes | Color of the gradient fill.&lt;br&gt; You can use the [colorWithSpace](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#colorWithSpace) method to construct a color with the color gamut attribute ColorSpace set to **SRGB** or **DISPLAY_P3**. The color gamut attributes of each gradient ColorMetrics must be the same. If different color gamut attributes are set, an exception is thrown, and the error code is 103701.&lt;br&gt; **undefined** and **null** are treated as invalid values, and the current stop is ignored. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103701](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) | The color's ColorSpace is not the same as the last color's. |
+| [103701](../errorcode-canvas.md#103701-parameter-error) | The color's ColorSpace is not the same as the last color's. |
 
 ## Examples
 
-Sets the gradient breakpoint value of a specified color gamut, including the offset and color. Set the color gamut mode of the window to wide color gamut. For details, see [setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace9).
+Sets the gradient breakpoint value of a specified color gamut, including the offset and color. Set the color gamut mode of the window to wide color gamut. For details, see [setWindowColorSpace](../arkts-apis-window-Window.md#setWindowColorSpace).
 
 ```TypeScript
 // xxx.ets

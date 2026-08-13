@@ -8,7 +8,9 @@ Defines event info for pinch gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface PinchGestureEvent extends BaseGestureEvent--><!--Device-unnamed-export interface PinchGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface PinchGestureEvent--><!--Device-unnamed-export interface PinchGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Defines event info for pinch gesture.
 pinchCenterX: double
 ```
 
-X-axis coordinate of the kneading center point.The unit is vp.
+X-axis coordinate of the kneading center point. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +42,15 @@ X-axis coordinate of the kneading center point.The unit is vp.
 pinchCenterY: double
 ```
 
-Y-axis coordinate of the kneading center point.The unit is vp.
+Y-axis coordinate of the kneading center point. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,6 +71,8 @@ Scaling ratio.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

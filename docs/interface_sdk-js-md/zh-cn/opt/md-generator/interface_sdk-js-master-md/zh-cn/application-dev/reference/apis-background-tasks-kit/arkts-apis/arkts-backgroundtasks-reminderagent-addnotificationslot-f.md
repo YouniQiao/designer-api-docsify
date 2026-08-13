@@ -12,7 +12,7 @@ function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<voi
 
 **废弃版本：** 9
 
-**替代接口：** [addNotificationSlot](reminderAgentManager.addNotificationSlot)
+**替代接口：** addNotificationSlot
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
 
@@ -54,7 +54,7 @@ function addNotificationSlot(slot: NotificationSlot): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [addNotificationSlot](reminderAgentManager.addNotificationSlot)
+**替代接口：** addNotificationSlot
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 

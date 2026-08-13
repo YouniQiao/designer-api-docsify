@@ -4,6 +4,8 @@ Represents the callback invoked to notify the file selector result.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnShowFileSelectorEvent--><!--Device-unnamed-declare interface OnShowFileSelectorEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Information about the file selector.
 **Type:** [FileSelectorParam](arkts-arkweb-fileselectorparam-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,6 +41,8 @@ File selection result to be sent to the **Web** component.
 **Type:** [FileSelectorResult](arkts-arkweb-fileselectorresult-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

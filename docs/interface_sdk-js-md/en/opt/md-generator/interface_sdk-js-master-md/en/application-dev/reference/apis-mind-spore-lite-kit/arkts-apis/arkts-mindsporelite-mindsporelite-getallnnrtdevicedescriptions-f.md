@@ -14,7 +14,9 @@ function getAllNNRTDeviceDescriptions() : NNRTDeviceDescription[]
 
 Obtain the all device descriptions in NNRT.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

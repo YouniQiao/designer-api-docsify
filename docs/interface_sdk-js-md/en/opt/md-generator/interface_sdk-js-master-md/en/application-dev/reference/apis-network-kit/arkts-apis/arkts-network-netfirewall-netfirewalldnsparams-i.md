@@ -4,6 +4,8 @@ Firewall DNS parameters.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-interface NetFirewallDnsParams--><!--Device-netFirewall-interface NetFirewallDnsParams-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -26,6 +28,8 @@ Primary DNS.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallDnsParams-primaryDns: string--><!--Device-NetFirewallDnsParams-primaryDns: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -41,6 +45,8 @@ Backup DNS.
 **Type:** string
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallDnsParams-standbyDns?: string--><!--Device-NetFirewallDnsParams-standbyDns?: string-End-->
 

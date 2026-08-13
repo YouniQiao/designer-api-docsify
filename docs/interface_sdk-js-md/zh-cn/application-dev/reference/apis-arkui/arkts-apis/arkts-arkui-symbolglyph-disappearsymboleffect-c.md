@@ -8,7 +8,9 @@ DisappearSymbolEffect继承自父类SymbolEffect。
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class DisappearSymbolEffect extends SymbolEffect--><!--Device-unnamed-export declare class DisappearSymbolEffect extends SymbolEffect-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class DisappearSymbolEffect--><!--Device-unnamed-export declare class DisappearSymbolEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ AppearSymbolEffect的构造函数，出现动效。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,15 +46,15 @@ AppearSymbolEffect的构造函数，出现动效。
 scope?: EffectScope
 ```
 
-动效范围。
-
-默认值：EffectScope.LAYER
+动效范围。 默认值：EffectScope.LAYER
 
 **类型：** [EffectScope](arkts-arkui-symbolglyph-effectscope-e.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

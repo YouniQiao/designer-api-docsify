@@ -4,6 +4,8 @@ Represents the font variable axis information.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-text-interface FontVariationAxis--><!--Device-text-interface FontVariationAxis-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
@@ -26,6 +28,8 @@ Default value of the font variable axis.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-defaultValue: double--><!--Device-FontVariationAxis-defaultValue: double-End-->
@@ -38,11 +42,13 @@ Default value of the font variable axis.
 flags: number
 ```
 
-Flag of the font variable axis, which is used to indicate whether a variable axis should be hidden from users.The value can be **0** or **1**. The value **0** indicates that the axis is visible to users, and the value **1**indicates that the axis should be hidden.
+Flag of the font variable axis, which is used to indicate whether a variable axis should be hidden from users. The value can be **0** or **1**. The value **0** indicates that the axis is visible to users, and the value **1** indicates that the axis should be hidden.
 
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -62,6 +68,8 @@ Keyword identifier of the font variable axis.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-key: string--><!--Device-FontVariationAxis-key: string-End-->
@@ -79,6 +87,8 @@ Localized name of the font variable axis, which can be empty.
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -98,6 +108,8 @@ Maximum value of the font variable axis.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-maxValue: double--><!--Device-FontVariationAxis-maxValue: double-End-->
@@ -116,6 +128,8 @@ Minimum value of the font variable axis.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FontVariationAxis-minValue: double--><!--Device-FontVariationAxis-minValue: double-End-->
@@ -133,6 +147,8 @@ English name of the font variable axis.
 **Type:** string
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 

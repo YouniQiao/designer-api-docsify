@@ -4,6 +4,8 @@ Network policies that limit the specified UID of application to access the netwo
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-policy-export interface NetAccessPolicy--><!--Device-policy-export interface NetAccessPolicy-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -26,6 +28,8 @@ Indicate whether the application can be allowed to access the network by cellula
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-NetAccessPolicy-allowCellular: boolean--><!--Device-NetAccessPolicy-allowCellular: boolean-End-->
@@ -43,6 +47,8 @@ Indicate whether the application can be allowed to access the network by wifi.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

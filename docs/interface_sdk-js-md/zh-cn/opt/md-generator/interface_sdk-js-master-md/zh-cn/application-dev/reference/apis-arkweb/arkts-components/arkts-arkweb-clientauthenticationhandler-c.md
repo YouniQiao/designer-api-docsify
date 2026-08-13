@@ -1,8 +1,10 @@
 # ClientAuthenticationHandler
 
-Defines the client certificate request result, related to [onClientAuthenticationRequest](onClientAuthenticationRequest) method.
+Defines the client certificate request result, related to onClientAuthenticationRequest method.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ClientAuthenticationHandler--><!--Device-unnamed-declare class ClientAuthenticationHandler-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 取消证书请求事件。同时，相同host和port服务器的请求，不重复上报该事件。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ confirm(priKeyFile: string, certChainFile: string): void
 确认使用指定的私钥和客户端证书链。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -57,6 +63,8 @@ confirm(authUri: string): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ClientAuthenticationHandler-confirm(authUri: string): void--><!--Device-ClientAuthenticationHandler-confirm(authUri: string): void-End-->
@@ -79,6 +87,8 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void--><!--Device-ClientAuthenticationHandler-confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -94,7 +104,7 @@ confirm(identity: string, credentialTypeOrCertChainFile: CredentialType | string
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## constructor
 
@@ -105,6 +115,8 @@ constructor()
 Constructor.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -121,6 +133,8 @@ ignore(): void
 Ignore this certificate request temporarily.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

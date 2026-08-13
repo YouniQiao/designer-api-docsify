@@ -6,6 +6,8 @@ Enumerates key policies. This refers to the system behavior triggered after the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-enum KeyPolicy--><!--Device-systemManager-enum KeyPolicy-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -22,6 +24,8 @@ Intercepts messages. After this parameter is set, only the current key event is 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyPolicy-INTERCEPTION = 0--><!--Device-KeyPolicy-INTERCEPTION = 0-End-->
@@ -34,12 +38,13 @@ Intercepts messages. After this parameter is set, only the current key event is 
 CUSTOM = 1
 ```
 
-Intercepts and forwards messages. When this policy is configured, the system intercepts the current key event and does not process the event. In addition, the  
-[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent)callback API is used to notify the MDM app of the key event, which does not block the processing of other events.
+Intercepts and forwards messages. When this policy is configured, the system intercepts the current key event and does not process the event. In addition, the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent) callback API is used to notify the MDM app of the key event, which does not block the processing of other events.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

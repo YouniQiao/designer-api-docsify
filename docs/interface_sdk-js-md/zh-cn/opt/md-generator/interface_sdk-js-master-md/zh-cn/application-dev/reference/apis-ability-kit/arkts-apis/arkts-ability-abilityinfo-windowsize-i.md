@@ -1,10 +1,10 @@
 # WindowSize
 
-描述窗口尺寸。
+描述窗口尺寸。 **原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
 
@@ -20,7 +20,9 @@ readonly maxWindowHeight: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +40,9 @@ readonly maxWindowRatio: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,7 +60,9 @@ readonly maxWindowWidth: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,7 +80,9 @@ readonly minWindowHeight: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -92,7 +100,9 @@ readonly minWindowRatio: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,7 +120,9 @@ readonly minWindowWidth: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

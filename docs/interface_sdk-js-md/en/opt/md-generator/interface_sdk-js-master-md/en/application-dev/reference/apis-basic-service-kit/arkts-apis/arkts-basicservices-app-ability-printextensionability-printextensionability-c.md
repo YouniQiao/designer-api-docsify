@@ -1,46 +1,22 @@
-# PrintExtensionAbility
+# PrintExtensionAbility (System API)
 
 class of print extension ability.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
+
+**System API:** This is a system API.
 
 ## Modules to Import
 
 ```TypeScript
 import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 ```
-
-## onCancelPrintJob
-
-```TypeScript
-public onCancelPrintJob(jobInfo: print.PrintJob): void
-```
-
-Called once to remove the print job has been started.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onCancelPrintJob(jobInfo: print.PrintJob): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onConnectPrinter
 
@@ -50,7 +26,9 @@ onConnectPrinter(printerId: number): void
 
 Called once to connect to the specific printer.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,7 +63,9 @@ onCreate(want: Want): void
 
 Called once to initialize the extensionAbility.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,7 +101,9 @@ onDestroy(): void
 
 Called once to finalize the extensionAbility.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,7 +131,9 @@ onDisconnectPrinter(printerId: number): void
 
 Called once to disconnect to the specific printer.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,89 +160,6 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 }
 ```
 
-## onRequestPreview
-
-```TypeScript
-onRequestPreview(jobInfo: print.PrintJob): string
-```
-
-Called once to request preview and send result to Print SA.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string--><!--Device-PrintExtensionAbility-onRequestPreview(jobInfo: print.PrintJob): string-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| string |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { print, PrintExtensionAbility } from '@kit.BasicServicesKit';
-
-export default class HWPrintExtension extends PrintExtensionAbility {
-    onRequestPreview(jobInfo: print.PrintJob): string {
-        console.info('onRequestPreview enter');
-        // ...
-        let tmp : string = '';
-        return tmp;
-    }
-}
-```
-
-## onRequestPrinterCapability
-
-```TypeScript
-public onRequestPrinterCapability(printerId: number): print.PrinterCapability
-```
-
-Called once to request the printer's capabilities.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability--><!--Device-PrintExtensionAbility-public onRequestPrinterCapability(printerId: int): print.PrinterCapability-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| printerId | number | Yes |
-
-**Return value:**
-
-| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
-| --- |
-| print.PrinterCapability |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## onStartDiscoverPrinter
 
 ```TypeScript
@@ -267,7 +168,9 @@ onStartDiscoverPrinter(): void
 
 Called once to start to discover the printers connected with the device.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -288,34 +191,6 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 }
 ```
 
-## onStartPrintJob
-
-```TypeScript
-public onStartPrintJob(jobInfo: print.PrintJob): void
-```
-
-Called once to start print job.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void--><!--Device-PrintExtensionAbility-public onStartPrintJob(jobInfo: print.PrintJob): void-End-->
-
-**System capability:** SystemCapability.Print.PrintFramework
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| jobInfo | print.PrintJob | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
 ## onStopDiscoverPrinter
 
 ```TypeScript
@@ -324,7 +199,9 @@ onStopDiscoverPrinter(): void
 
 Called once to stop discovering the printer.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,6 +233,8 @@ Indicates print service extension ability context.
 **Type:** [PrintExtensionContext](arkts-basicservices-printextensioncontext-c.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

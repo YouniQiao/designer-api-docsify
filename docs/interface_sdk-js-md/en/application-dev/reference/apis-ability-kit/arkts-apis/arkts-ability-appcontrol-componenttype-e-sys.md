@@ -2,9 +2,11 @@
 
 Enumerates the types of application components that function as the displayed page.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appControl-export enum ComponentType--><!--Device-appControl-export enum ComponentType-End-->
 
@@ -20,9 +22,11 @@ UI_ABILITY = 1
 
 UIAbility component.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-UI_ABILITY = 1--><!--Device-ComponentType-UI_ABILITY = 1-End-->
 
@@ -38,9 +42,11 @@ UI_EXTENSION = 2
 
 UIExtensionAbility component.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ComponentType-UI_EXTENSION = 2--><!--Device-ComponentType-UI_EXTENSION = 2-End-->
 

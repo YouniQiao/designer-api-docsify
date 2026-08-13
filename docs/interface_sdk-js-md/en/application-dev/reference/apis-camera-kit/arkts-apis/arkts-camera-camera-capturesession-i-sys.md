@@ -1,7 +1,6 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
@@ -59,7 +58,7 @@ Obtains the level of the beauty type in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 
@@ -86,13 +85,7 @@ function getBeauty(captureSession: camera.CaptureSession): number {
 getSupportedBeautyRange(type: BeautyType): Array<number>
 ```
 
-Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example.  
-| Input Parameter | Example Return Value | Return Value Description |  
-| ----------------| ---- | ---------|  
-| AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |  
-| SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |  
-| FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |  
-| SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,&lt;br&gt; for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
+Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example. | Input Parameter | Example Return Value | Return Value Description | | ----------------| ---- | ---------| | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. | | SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. | | FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. | | SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,&lt;br&gt; for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
 
 **Since:** 10
 
@@ -124,7 +117,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 
@@ -171,7 +164,7 @@ Obtains the supported beauty types.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 
@@ -188,9 +181,7 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the  
-[beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType) obtained through  
-[getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType-(System-API)) obtained through [getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
 
 **Since:** 10
 
@@ -217,7 +208,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## Examples
 

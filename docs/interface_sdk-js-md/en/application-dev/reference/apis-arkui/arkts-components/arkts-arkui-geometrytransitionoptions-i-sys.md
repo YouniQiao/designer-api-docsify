@@ -6,6 +6,8 @@ Defines the options of geometry transition.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GeometryTransitionOptions--><!--Device-unnamed-declare interface GeometryTransitionOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,7 @@ Defines the options of geometry transition.
 hierarchyStrategy?: TransitionHierarchyStrategy
 ```
 
-Strategy for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process. Default value: **TransitionHierarchyStrategy.ADAPTIVE**.
-
-The setting significantly affects the front-to-back overlap relationship of the **in** / **out** components in comparison to other components. Exercise caution with it under normal conditions.
-
-You are advised to adjust this setting only when there is an error in the component overlap relationship observed during the shared element transition process.
+Strategy for the hierarchical position movement of **in** / **out** components in the component tree during the shared element transition process. Default value: **TransitionHierarchyStrategy.ADAPTIVE**. The setting significantly affects the front-to-back overlap relationship of the **in** / **out** components in comparison to other components. Exercise caution with it under normal conditions. You are advised to adjust this setting only when there is an error in the component overlap relationship observed during the shared element transition process.
 
 **Type:** [TransitionHierarchyStrategy](arkts-arkui-transitionhierarchystrategy-e-sys.md)
 
@@ -29,6 +27,8 @@ You are advised to adjust this setting only when there is an error in the compon
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

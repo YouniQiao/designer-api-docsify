@@ -6,15 +6,11 @@
 function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void
 ```
 
-解压文件，解压的结果。使用callback异步回调。
+解压文件，解压的结果。使用callback异步回调。 > **说明：** > > 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。 > > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
 
-> **说明：**
-> 
-> 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。
-> 
-> 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -35,10 +31,10 @@ function decompressFile(inFile: string, outFile: string, options: Options, callb
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 
@@ -75,15 +71,11 @@ try {
 function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void
 ```
 
-解压文件，解压的结果。使用callback异步回调。
+解压文件，解压的结果。使用callback异步回调。 > **说明：** > > 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。 > > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
 
-> **说明：**
-> 
-> 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。
-> 
-> 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -103,10 +95,10 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 
@@ -139,15 +131,11 @@ try {
 function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>
 ```
 
-解压文件，解压的结果。使用Promise异步回调。
+解压文件，解压的结果。使用Promise异步回调。 > **说明：** > > 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。 > > 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
 
-> **说明：**
-> 
-> 为了避免路径穿越，从API version 13开始，inFile和outFile传入的参数不允许包含“../”，否则会返回900001、900002错误码。
-> 
-> 传入的压缩包内部文件或者文件夹名称不能包含“../”，否则会返回900003错误码。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -173,10 +161,10 @@ function decompressFile(inFile: string, outFile: string, options?: Options): Pro
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
-| [900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
-| [900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [900001](../../apis-basic-services-kit/errorcode-zlib.md#900001-传入的源文件错误) |
+| [900003](../../apis-basic-services-kit/errorcode-zlib.md#900003-传入的源文件格式错误或者已损坏) |
+| [900002](../../apis-basic-services-kit/errorcode-zlib.md#900002-传入的目标文件错误) |
 
 ## 示例
 

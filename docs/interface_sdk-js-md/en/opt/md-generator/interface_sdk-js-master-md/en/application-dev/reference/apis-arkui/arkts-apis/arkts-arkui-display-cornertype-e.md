@@ -4,6 +4,8 @@ Enumerates the types of corners on the screen.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-display-enum CornerType--><!--Device-display-enum CornerType-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -17,6 +19,8 @@ TOP_LEFT = 0
 Top-left corner of the screen.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -34,6 +38,8 @@ Top-right corner of the screen.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CornerType-TOP_RIGHT = 1--><!--Device-CornerType-TOP_RIGHT = 1-End-->
@@ -50,6 +56,8 @@ Bottom-right corner of the screen.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CornerType-BOTTOM_RIGHT  = 2--><!--Device-CornerType-BOTTOM_RIGHT  = 2-End-->
@@ -65,6 +73,8 @@ BOTTOM_LEFT  = 3
 Bottom-left corner of the screen.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

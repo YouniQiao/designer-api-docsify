@@ -6,6 +6,8 @@ Keyboard fluid light mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum KeyboardFluidLightMode--><!--Device-unnamed-export declare enum KeyboardFluidLightMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Disable fluid light mode.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ Background fluid light mode.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

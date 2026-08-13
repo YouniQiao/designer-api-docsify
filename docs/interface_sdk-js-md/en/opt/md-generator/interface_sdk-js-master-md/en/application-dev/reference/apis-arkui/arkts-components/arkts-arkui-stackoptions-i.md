@@ -1,13 +1,10 @@
 # StackOptions
 
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The
-> initial version information of the historical anonymous objects has been retained, which may result in the outer
-> element's @since version number being later than the inner element's version number. However, this does not affect
-> the use of the API.
+> **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. The > initial version information of the historical anonymous objects has been retained, which may result in the outer > element's @since version number being later than the inner element's version number. However, this does not affect > the use of the API.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface StackOptions--><!--Device-unnamed-declare interface StackOptions-End-->
 
@@ -19,11 +16,13 @@
 alignContent?: Alignment
 ```
 
-Alignment of child components in the container.Default value: Alignment.Center.&lt;br&gt;Invalid values are treated as the default value.
+Alignment of child components in the container. Default value: Alignment.Center. &lt;br&gt;Invalid values are treated as the default value.
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

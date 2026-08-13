@@ -4,6 +4,8 @@
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NestedScrollOptionsExt--><!--Device-unnamed-declare interface NestedScrollOptionsExt-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -14,13 +16,13 @@
 scrollDown?: NestedScrollMode
 ```
 
-可滚动组件往下滚动时的嵌套滚动选项。
-
-默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往下滚动时的嵌套滚动选项。 默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollDown?: NestedScrollMode-End-->
 
@@ -32,13 +34,13 @@ scrollDown?: NestedScrollMode
 scrollLeft?: NestedScrollMode
 ```
 
-可滚动组件往左滚动时的嵌套滚动选项。
-
-默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往左滚动时的嵌套滚动选项。 默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollLeft?: NestedScrollMode-End-->
 
@@ -50,13 +52,13 @@ scrollLeft?: NestedScrollMode
 scrollRight?: NestedScrollMode
 ```
 
-可滚动组件往右滚动时的嵌套滚动选项。
-
-默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往右滚动时的嵌套滚动选项。 默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollRight?: NestedScrollMode-End-->
 
@@ -68,13 +70,13 @@ scrollRight?: NestedScrollMode
 scrollUp?: NestedScrollMode
 ```
 
-可滚动组件往上滚动时的嵌套滚动选项。
-
-默认值：NestedScrollMode.SELF_FIRST。
+可滚动组件往上滚动时的嵌套滚动选项。 默认值：NestedScrollMode.SELF_FIRST。
 
 **类型：** [NestedScrollMode](../../apis-arkui/arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode--><!--Device-NestedScrollOptionsExt-scrollUp?: NestedScrollMode-End-->
 

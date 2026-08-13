@@ -2,7 +2,9 @@
 
 Get network status information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface NetBlockStatusInfo--><!--Device-connection-export interface NetBlockStatusInfo-End-->
 
@@ -24,7 +26,9 @@ Check whether the current state is blocked.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetBlockStatusInfo-blocked: boolean--><!--Device-NetBlockStatusInfo-blocked: boolean-End-->
 
@@ -40,7 +44,9 @@ Defines the handle of the data network.
 
 **Type:** NetHandle
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetBlockStatusInfo-netHandle: NetHandle--><!--Device-NetBlockStatusInfo-netHandle: NetHandle-End-->
 

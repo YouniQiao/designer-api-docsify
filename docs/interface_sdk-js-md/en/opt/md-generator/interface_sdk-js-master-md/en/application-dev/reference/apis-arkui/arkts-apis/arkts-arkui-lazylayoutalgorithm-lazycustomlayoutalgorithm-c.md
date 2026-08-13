@@ -6,7 +6,9 @@ Defines the lazy custom layout algorithm.
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class LazyCustomLayoutAlgorithm implements LazyLayoutAlgorithm--><!--Device-unnamed-export class LazyCustomLayoutAlgorithm implements LazyLayoutAlgorithm-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class LazyCustomLayoutAlgorithm--><!--Device-unnamed-export class LazyCustomLayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 Constructor.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,9 +44,11 @@ Constructor.
 onLayout(self: FrameNode, position: Position): void
 ```
 
-Method to assign a position to the DynamicLayout FrameNode and each of its children.It can be used to specify the layout location of DynamicLayout FrameNode and its children.
+Method to assign a position to the DynamicLayout FrameNode and each of its children. It can be used to specify the layout location of DynamicLayout FrameNode and its children.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 Method to measure the DynamicLayout FrameNode and its content to determine the measured size.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

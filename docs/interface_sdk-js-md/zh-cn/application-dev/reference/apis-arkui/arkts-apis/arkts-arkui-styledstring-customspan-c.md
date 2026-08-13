@@ -1,12 +1,12 @@
 # CustomSpan
 
-自定义绘制Span，仅提供基类，具体实现由开发者定义。
-
-自定义绘制Span拖拽显示的缩略图为空白。
+自定义绘制Span，仅提供基类，具体实现由开发者定义。 自定义绘制Span拖拽显示的缩略图为空白。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare abstract class CustomSpan--><!--Device-unnamed-export declare abstract class CustomSpan-End-->
 
@@ -23,6 +23,8 @@ invalidate(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +44,8 @@ abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CustomSpan-abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void--><!--Device-CustomSpan-abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void-End-->
@@ -52,7 +56,7 @@ abstract onDraw(context: DrawContext, drawInfo: CustomSpanDrawInfo): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | 是 |  |
+| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | 是 |  |
 | drawInfo | [CustomSpanDrawInfo](arkts-arkui-styledstring-customspandrawinfo-i.md) | 是 |  |
 
 ## onMeasure
@@ -66,6 +70,8 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo): CustomSpanMetrics
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

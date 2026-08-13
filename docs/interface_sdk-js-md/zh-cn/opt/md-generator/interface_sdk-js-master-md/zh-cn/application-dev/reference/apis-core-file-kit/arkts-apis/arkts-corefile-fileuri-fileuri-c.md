@@ -2,11 +2,13 @@
 
 FileUri表示文件的URI，继承自uri.URI。
 
-**继承/实现关系：** FileUri extends [uri.URI](uri.URI)
+**继承/实现关系：** FileUri extends uri.URI
 
-**起始版本：** 15
+**起始版本：** 23
 
-<!--Device-fileUri-class FileUri extends uri.URI--><!--Device-fileUri-class FileUri extends uri.URI-End-->
+**废弃版本：** -1
+
+<!--Device-fileUri-class FileUri--><!--Device-fileUri-class FileUri-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService
 
@@ -18,9 +20,11 @@ constructor(uriOrPath: string)
 
 FileUri的构造函数，用于创建FileUri实例。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FileUri-constructor(uriOrPath: string)--><!--Device-FileUri-constructor(uriOrPath: string)-End-->
 
@@ -59,9 +63,11 @@ getFullDirectoryUri(): string
 
 获取当前文件URI所在路径的完整目录URI。URI指向目录时直接返回原URI。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FileUri-getFullDirectoryUri(): string--><!--Device-FileUri-getFullDirectoryUri(): string-End-->
 
@@ -104,9 +110,11 @@ isRemoteUri(): boolean
 
 判断当前URI是否为包含远端标识networkid的远端URI。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FileUri-isRemoteUri(): boolean--><!--Device-FileUri-isRemoteUri(): boolean-End-->
 
@@ -137,20 +145,26 @@ function isRemoteUriExample() {
 }
 ```
 
-## name
+## toString
 
 ```TypeScript
-get name(): string
+toString(): string
 ```
 
-通过传入的URI获取文件名称。如果文件名中存在百分号编码字符，将解码后拼接在原处。
+将当前URI转换为序列化字符串。
 
-**类型：** string
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-FileUri-get name(): string--><!--Device-FileUri-get name(): string-End-->
+<!--Device-FileUri-toString(): string--><!--Device-FileUri-toString(): string-End-->
 
-**系统能力：** SystemCapability.FileManagement.AppFileService
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| string |

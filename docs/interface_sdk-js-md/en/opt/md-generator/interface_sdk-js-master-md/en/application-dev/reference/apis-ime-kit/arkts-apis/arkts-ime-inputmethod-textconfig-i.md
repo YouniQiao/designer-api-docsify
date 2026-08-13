@@ -2,7 +2,9 @@
 
 Config of editor.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export interface TextConfig--><!--Device-inputMethod-export interface TextConfig-End-->
 
@@ -26,7 +28,9 @@ Indicates the capitalize mode of the edit box.
 
 **Default:** CapitalizeMode.NONE
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextConfig-capitalizeMode?: CapitalizeMode--><!--Device-TextConfig-capitalizeMode?: CapitalizeMode-End-->
 
@@ -42,7 +46,9 @@ Cursor information.
 
 **Type:** [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextConfig-cursorInfo?: CursorInfo--><!--Device-TextConfig-cursorInfo?: CursorInfo-End-->
 
@@ -58,7 +64,9 @@ Attribute of Input.
 
 **Type:** [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextConfig-inputAttribute: InputAttribute--><!--Device-TextConfig-inputAttribute: InputAttribute-End-->
 
@@ -74,7 +82,9 @@ Indicates that this is a new edit box.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextConfig-newEditBox?: boolean--><!--Device-TextConfig-newEditBox?: boolean-End-->
 
@@ -90,7 +100,9 @@ Selection information.
 
 **Type:** Range
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextConfig-selection?: Range--><!--Device-TextConfig-selection?: Range-End-->
 
@@ -106,7 +118,9 @@ The window ID of the application currently bound to the input method.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TextConfig-windowId?: int--><!--Device-TextConfig-windowId?: int-End-->
 

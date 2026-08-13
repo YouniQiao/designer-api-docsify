@@ -1,8 +1,10 @@
 # VolumeFlag (System API)
 
-Enumerates volume related operations.Flags should be powers of 2!
+Enumerates volume related operations. Flags should be powers of 2!
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum VolumeFlag--><!--Device-audio-enum VolumeFlag-End-->
 
@@ -18,7 +20,9 @@ FLAG_SHOW_SYSTEM_UI = 1
 
 Show system volume bar.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VolumeFlag-FLAG_SHOW_SYSTEM_UI = 1--><!--Device-VolumeFlag-FLAG_SHOW_SYSTEM_UI = 1-End-->
 

@@ -14,7 +14,7 @@ function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRo
 
 **废弃版本：** 9
 
-**替代接口：** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setPortRoles)
+**替代接口：** [setPortRoles](arkts-basicservices-usbmanager-setportroles-f-sys.md#setPortRoles（系统接口）)
 
 <!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>--><!--Device-usb-function setPortRoles(portId: number, powerRole: PowerRoleType, dataRole: DataRoleType): Promise<boolean>-End-->
 

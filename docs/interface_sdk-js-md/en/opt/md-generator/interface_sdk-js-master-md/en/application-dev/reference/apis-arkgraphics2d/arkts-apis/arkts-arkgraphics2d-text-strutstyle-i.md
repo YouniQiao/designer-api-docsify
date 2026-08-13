@@ -2,7 +2,9 @@
 
 Describes the strut style, which determines the line spacing, baseline alignment mode, and other properties related to the line height when drawing texts. The strut style is disabled by default.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface StrutStyle--><!--Device-text-interface StrutStyle-End-->
 
@@ -24,7 +26,9 @@ Whether to enable the strut style. The value **true** means to enable the strut 
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Array of font families. By default, the array is empty, indicating that all syst
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -60,7 +66,9 @@ Font size, a floating-point value with a default value of **14.0**, measured in 
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -78,7 +86,9 @@ Font style. The default value is **NORMAL**.
 
 **Type:** FontStyle
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -96,7 +106,9 @@ Font weight. The default value is **W400**. Before &lt;!--RP1--&gt;OpenHarmony 6
 
 **Type:** FontWeight
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -114,7 +126,9 @@ Font width. The default value is **NORMAL**.
 
 **Type:** [FontWidth](arkts-arkgraphics2d-text-fontwidth-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -132,7 +146,9 @@ Whether to forcibly use the strut height for all lines. The value **true** means
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -150,7 +166,9 @@ Whether half leading is enabled. Half leading is the leading split in half and a
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -168,7 +186,9 @@ Scale factor of the line height. The value is a floating point number. The defau
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -186,7 +206,9 @@ Whether to override the height. The value **true** means to override the height,
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -200,12 +222,13 @@ Whether to override the height. The value **true** means to override the height,
 leading?: number
 ```
 
-Custom line spacing applied to the strut, a floating-point value in physical pixels (px), with a default value of  
-**-1.0**.
+Custom line spacing applied to the strut, a floating-point value in physical pixels (px), with a default value of **-1.0**.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

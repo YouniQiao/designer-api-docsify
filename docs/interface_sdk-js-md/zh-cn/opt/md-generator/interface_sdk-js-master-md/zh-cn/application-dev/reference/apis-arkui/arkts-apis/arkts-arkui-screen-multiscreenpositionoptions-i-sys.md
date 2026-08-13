@@ -2,7 +2,9 @@
 
 屏幕位置信息。
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-interface MultiScreenPositionOptions--><!--Device-screen-interface MultiScreenPositionOptions-End-->
 
@@ -20,7 +22,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiScreenPositionOptions-id: long--><!--Device-MultiScreenPositionOptions-id: long-End-->
 
@@ -38,7 +42,9 @@ startX: number
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiScreenPositionOptions-startX: long--><!--Device-MultiScreenPositionOptions-startX: long-End-->
 
@@ -56,7 +62,9 @@ startY: number
 
 **类型：** number
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MultiScreenPositionOptions-startY: long--><!--Device-MultiScreenPositionOptions-startY: long-End-->
 

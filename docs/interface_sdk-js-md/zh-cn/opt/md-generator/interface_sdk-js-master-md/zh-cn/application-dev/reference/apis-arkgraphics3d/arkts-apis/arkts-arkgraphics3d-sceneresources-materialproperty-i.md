@@ -2,7 +2,9 @@
 
 材质属性接口.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface MaterialProperty--><!--Device-unnamed-export interface MaterialProperty-End-->
 
@@ -18,7 +20,9 @@ factor: Vec4
 
 **类型：** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MaterialProperty-factor: Vec4--><!--Device-MaterialProperty-factor: Vec4-End-->
 
@@ -34,7 +38,9 @@ image: Image | null
 
 **类型：** [Image](arkts-arkgraphics3d-sceneresources-image-i.md) \| null
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MaterialProperty-image: Image | null--><!--Device-MaterialProperty-image: Image | null-End-->
 
@@ -50,7 +56,9 @@ sampler?: Sampler
 
 **类型：** [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MaterialProperty-sampler?: Sampler--><!--Device-MaterialProperty-sampler?: Sampler-End-->
 

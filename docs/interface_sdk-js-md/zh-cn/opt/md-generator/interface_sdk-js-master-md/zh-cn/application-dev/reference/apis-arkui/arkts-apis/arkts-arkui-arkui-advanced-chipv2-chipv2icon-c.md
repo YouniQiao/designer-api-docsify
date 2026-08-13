@@ -4,7 +4,7 @@ ChipV2Icon定义图标的基类。
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export abstract class ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2Icon-End-->
 
@@ -19,6 +19,8 @@ constructor()
 ChipV2Icon的构造函数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

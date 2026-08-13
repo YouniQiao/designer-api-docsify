@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare class SwipeGesture extends Gesture--><!--Device-unnamed-export declare class SwipeGesture extends Gesture-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class SwipeGesture--><!--Device-unnamed-export declare class SwipeGesture-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ static $_instantiate(factory: () => SwipeGesture, value?: SwipeGestureHandlerOpt
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,6 +58,8 @@ Swipe手势识别成功时触发回调。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

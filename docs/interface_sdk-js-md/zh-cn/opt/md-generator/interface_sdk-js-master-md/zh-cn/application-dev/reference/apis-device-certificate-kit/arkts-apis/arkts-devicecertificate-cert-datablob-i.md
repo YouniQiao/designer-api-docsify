@@ -2,7 +2,9 @@
 
 二进制数据的封装接口，核心字段data为Uint8Array类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-interface DataBlob--><!--Device-cert-interface DataBlob-End-->
 
@@ -18,7 +20,9 @@ data: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

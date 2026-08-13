@@ -1,36 +1,32 @@
 # Focus
 
-Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)。
-
-对焦类，对设备对焦操作。
+Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)。 对焦类，对设备对焦操作。
 
 **继承/实现关系：** Focus extends [FocusQuery](arkts-camera-camera-focusquery-i.md#FocusQuery)
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-camera-interface Focus extends FocusQuery--><!--Device-camera-interface Focus extends FocusQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface Focus--><!--Device-camera-interface Focus-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 ## getFocalLength
 
-ArkTS-Dyn:
-```TypeScript
-getFocalLength(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getFocalLength(): double
 ```
 
 查询当前的焦距值。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -42,13 +38,13 @@ getFocalLength(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | 用于获取当前焦距，单位mm。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| double | 用于获取当前焦距，单位mm。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocusMode
 
@@ -58,9 +54,11 @@ getFocusMode(): FocusMode
 
 获取当前的对焦模式。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +76,7 @@ getFocusMode(): FocusMode
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getFocusPoint
 
@@ -88,9 +86,11 @@ getFocusPoint(): Point
 
 查询当前的焦点。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -108,7 +108,7 @@ getFocusPoint(): Point
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## lockFocusTracking
 
@@ -120,7 +120,9 @@ lockFocusTracking(focusPoint: Point): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,8 +142,8 @@ lockFocusTracking(focusPoint: Point): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setFocusMode
 
@@ -149,13 +151,13 @@ lockFocusTracking(focusPoint: Point): void
 setFocusMode(afMode: FocusMode): void
 ```
 
-设置对焦模式。
+设置对焦模式。 进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported)。
 
-进行设置之前，需要先检查设备是否支持指定的焦距模式，可使用方法[isFocusModeSupported](arkts-camera-camera-focusquery-i.md#isFocusModeSupported)。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -173,7 +175,7 @@ setFocusMode(afMode: FocusMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setFocusPoint
 
@@ -181,13 +183,13 @@ setFocusMode(afMode: FocusMode): void
 setFocusPoint(point: Point): void
 ```
 
-设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。
+设置焦点，焦点应在0-1坐标系内，该坐标系左上角为{0，0}，右下角为{1，1}。 此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
 
-此坐标系是以设备充电口在右侧时的横向设备方向为基准的，例如应用的预览界面布局以设备充电口在下侧时的竖向方向为基准，布局宽高为{w，h}，且触碰点为{x，y}，则转换后的坐标点为{y/h，1-x/w}。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -205,7 +207,7 @@ setFocusPoint(point: Point): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## unlockFocusTracking
 
@@ -217,7 +219,9 @@ unlockFocusTracking(): void
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -231,6 +235,6 @@ unlockFocusTracking(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config, only throw in session usage. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 

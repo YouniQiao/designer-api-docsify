@@ -1,4 +1,4 @@
-# SceneResources(Defines 3D resource related interfaces)
+# SceneResources
 
 ## 汇总
 
@@ -19,7 +19,7 @@
 | [MetallicRoughnessMaterial](arkts-arkgraphics3d-sceneresources-metallicroughnessmaterial-i.md) | 基于物理的金属粗糙度材质资源. |
 | [Morpher](arkts-arkgraphics3d-sceneresources-morpher-i.md) | 定义用于指定节点几何体形变目标的Morpher接口. |
 | [OcclusionMaterial](arkts-arkgraphics3d-sceneresources-occlusionmaterial-i.md) | 遮挡材质资源 |
-| [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md) | 渲染排序层。在渲染槽中，层可以定义排序层顺序。可用值为0-63（0最先，63最后）。默认id值为32。典型用法：1. 将渲染排序层设置为对使用深度测试但未写入深度的对象进行渲染。2. 始终首先渲染角色和/或相机对象以剔除大部分视图。3. 对平面层进行排序。 |
+| [RenderSort](arkts-arkgraphics3d-sceneresources-rendersort-i.md) | 渲染排序层。在渲染槽中，层可以定义排序层顺序。 可用值为0-63（0最先，63最后）。默认id值为32。 典型用法：1. 将渲染排序层设置为对使用深度测试但未写入深度的对象进行渲染。 2. 始终首先渲染角色和/或相机对象以剔除大部分视图。 3. 对平面层进行排序。 |
 | [Sampler](arkts-arkgraphics3d-sceneresources-sampler-i.md) | 采样器接口 |
 | [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) | 定义被其他3D资源扩展的场景资源. |
 | [Shader](arkts-arkgraphics3d-sceneresources-shader-i.md) | 着色器资源. |
@@ -32,7 +32,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) | 无光照阴影透明度材质资源。此材质继承自[Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)，仅绘制材质表面阴影。材质启用[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md#Blend)属性时，可与背景融合模拟透明效果。 |
+| [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) | 无光照阴影透明度材质资源。 此材质继承自[Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)，仅绘制材质表面阴影。材质启用[Blend](arkts-arkgraphics3d-sceneresources-blend-i.md#Blend)属性时，可与背景融合模拟透明效果。 |
 <!--DelEnd-->
 
 ### 枚举

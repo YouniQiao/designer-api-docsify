@@ -12,16 +12,15 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function finishSyncTrace(level: HiTraceOutputLevel): void
 ```
 
-Stops a synchronous trace with the trace output level specified.
+Stops a synchronous trace with the trace output level specified. The **level** used in **finishSyncTrace** must be the same as that of [startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startSyncTrace).
 
-The **level** used in **finishSyncTrace** must be the same as that of  
-[startSyncTrace()](arkts-performanceanalysis-hitracemeter-startsynctrace-f.md#startSyncTrace).
+**Since:** 23
 
-**Since:** 19
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function finishSyncTrace(level: HiTraceOutputLevel): void--><!--Device-hiTraceMeter-function finishSyncTrace(level: HiTraceOutputLevel): void-End-->
 

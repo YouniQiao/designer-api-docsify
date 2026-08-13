@@ -2,7 +2,9 @@
 
 枚举，录像质量优先级。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum QualityPrioritization--><!--Device-camera-enum QualityPrioritization-End-->
 
@@ -16,7 +18,9 @@ HIGH_QUALITY = 0
 
 高录像质量。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -32,7 +36,9 @@ POWER_BALANCE = 1
 
 功耗平衡的录像质量。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

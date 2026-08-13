@@ -6,17 +6,11 @@
 function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 ```
 
-获取在线升级对象，可用于在线检查新版本、下载升级包、安装升级包等操作。适用于设备厂商的OTA(详见[术语](../../../basic-services/update/update-kit-term.md))升级客户端应用、在线系统升级等场景，帮助用户及时获取系统更新，提升升级效率和用户体验。
+获取在线升级对象，可用于在线检查新版本、下载升级包、安装升级包等操作。适用于设备厂商的OTA(详见[术语](../../../basic-services/update/update-kit-term.md))升级客户端应用、在 线系统升级等场景，帮助用户及时获取系统更新，提升升级效率和用户体验。 **原理说明**： 该方法通过系统服务接口获取在线升级对象，该对象提供检查新版本、下载升级包、安装升级包等核心功能。 **约束和限制**： - 检查新版本和下载升级包都必须依赖设备厂商部署的升级包管理服务器。
 
-**原理说明**：
+**起始版本：** 23
 
-该方法通过系统服务接口获取在线升级对象，该对象提供检查新版本、下载升级包、安装升级包等核心功能。
-
-**约束和限制**：
-
-- 检查新版本和下载升级包都必须依赖设备厂商部署的升级包管理服务器。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater--><!--Device-update-function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater-End-->
 
@@ -40,7 +34,7 @@ function getOnlineUpdater(upgradeInfo: UpgradeInfo): Updater
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -1,8 +1,10 @@
-# @ohos.multimodalAwareness.deviceStatus(设备状态感知)
+# @ohos.multimodalAwareness.deviceStatus
 
 **deviceStatus**模块提供设备状态感知能力。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace deviceStatus--><!--Device-unnamed-declare namespace deviceStatus-End-->
 
@@ -14,15 +16,17 @@
 
 | 名称 |
 | --- |
-| [off](arkts-multimodalawareness-devicestatus-off-f.md#off) |
-| [on](arkts-multimodalawareness-devicestatus-on-f.md#on) |
+| [offSteadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md#offSteadyStandingDetect) |
+| [off_steadyStandingDetect](arkts-multimodalawareness-devicestatus-offsteadystandingdetect-f.md) |
+| [onSteadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md#onSteadyStandingDetect) |
+| [on_steadyStandingDetect](arkts-multimodalawareness-devicestatus-onsteadystandingdetect-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getDeviceRotationRadian](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md#getdevicerotationradian) |
+| [getDeviceRotationRadian](arkts-multimodalawareness-devicestatus-getdevicerotationradian-f-sys.md#getDeviceRotationRadian（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

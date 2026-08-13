@@ -1,9 +1,10 @@
 # AbilityRunningInfo
 
-AbilityRunningInfo是记录Ability运行信息和状态的数据结构，通过  
-[getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)方法获取。
+AbilityRunningInfo是记录Ability运行信息和状态的数据结构，通过 [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)方法获取。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AbilityRunningInfo--><!--Device-unnamed-export interface AbilityRunningInfo-End-->
 
@@ -21,7 +22,9 @@ Ability的ElementName信息。
 
 **默认值：** the ohos.bundleManager.ElementName object of the ability.
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityRunningInfo-ability: ElementName--><!--Device-AbilityRunningInfo-ability: ElementName-End-->
 
@@ -39,7 +42,9 @@ Ability的状态。
 
 **默认值：** Enumerates state of the ability state info
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityRunningInfo-abilityState: abilityManager.AbilityState--><!--Device-AbilityRunningInfo-abilityState: abilityManager.AbilityState-End-->
 
@@ -57,7 +62,9 @@ pid: number
 
 **默认值：** process id
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityRunningInfo-pid: int--><!--Device-AbilityRunningInfo-pid: int-End-->
 
@@ -75,7 +82,9 @@ processName: string
 
 **默认值：** the name of the process
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityRunningInfo-processName: string--><!--Device-AbilityRunningInfo-processName: string-End-->
 
@@ -93,7 +102,9 @@ Ability的启动时间。
 
 **默认值：** ability start time
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityRunningInfo-startTime: long--><!--Device-AbilityRunningInfo-startTime: long-End-->
 
@@ -111,7 +122,9 @@ uid: number
 
 **默认值：** user id
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AbilityRunningInfo-uid: int--><!--Device-AbilityRunningInfo-uid: int-End-->
 

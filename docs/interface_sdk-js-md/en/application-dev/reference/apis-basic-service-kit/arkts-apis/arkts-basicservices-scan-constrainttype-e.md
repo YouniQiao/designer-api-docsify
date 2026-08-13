@@ -2,9 +2,11 @@
 
 Enumerates the parameter constraint types.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-scan-enum ConstraintType--><!--Device-scan-enum ConstraintType-End-->
 
@@ -18,9 +20,11 @@ SCAN_CONSTRAINT_NONE = 0
 
 No constraint.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintType-SCAN_CONSTRAINT_NONE = 0--><!--Device-ConstraintType-SCAN_CONSTRAINT_NONE = 0-End-->
 
@@ -34,9 +38,11 @@ SCAN_CONSTRAINT_RANGE = 1
 
 Range.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintType-SCAN_CONSTRAINT_RANGE = 1--><!--Device-ConstraintType-SCAN_CONSTRAINT_RANGE = 1-End-->
 
@@ -50,9 +56,11 @@ SCAN_CONSTRAINT_WORD_LIST = 2
 
 Number list.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintType-SCAN_CONSTRAINT_WORD_LIST = 2--><!--Device-ConstraintType-SCAN_CONSTRAINT_WORD_LIST = 2-End-->
 
@@ -66,9 +74,11 @@ SCAN_CONSTRAINT_STRING_LIST = 3
 
 String list.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintType-SCAN_CONSTRAINT_STRING_LIST = 3--><!--Device-ConstraintType-SCAN_CONSTRAINT_STRING_LIST = 3-End-->
 

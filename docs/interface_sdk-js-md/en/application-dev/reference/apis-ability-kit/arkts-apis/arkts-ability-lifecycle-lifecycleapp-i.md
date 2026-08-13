@@ -6,6 +6,8 @@ interface of app lifecycle.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface LifecycleApp--><!--Device-unnamed-export declare interface LifecycleApp-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -22,6 +24,8 @@ Called back when an ability enters the &lt;b&gt;ACTIVE&lt;/b&gt; state.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onActive?(): void--><!--Device-LifecycleApp-onActive?(): void-End-->
@@ -34,11 +38,13 @@ Called back when an ability enters the &lt;b&gt;ACTIVE&lt;/b&gt; state.
 onCompleteContinuation?(result: number): void
 ```
 
-Called back when a local ability migration is complete.&lt;p&gt;You can define the processing logic after the migration is complete. For example, you can display a prompt to notify the user of the successful migration and then exit the local ability.&lt;/p&gt;
+Called back when a local ability migration is complete. &lt;p&gt;You can define the processing logic after the migration is complete. For example, you can display a prompt to notify the user of the successful migration and then exit the local ability.&lt;/p&gt;
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -64,6 +70,8 @@ Called back when an ability is started for initialization.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onCreate?(): void--><!--Device-LifecycleApp-onCreate?(): void-End-->
@@ -81,6 +89,8 @@ Called back before an ability is destroyed.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -100,6 +110,8 @@ Called back when an ability enters the &lt;b&gt;BACKGROUND&lt;/b&gt; state.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onHide?(): void--><!--Device-LifecycleApp-onHide?(): void-End-->
@@ -118,6 +130,8 @@ Called back when an ability enters the &lt;b&gt;INACTIVE&lt;/b&gt; state (an abi
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onInactive?(): void--><!--Device-LifecycleApp-onInactive?(): void-End-->
@@ -135,6 +149,8 @@ Called when the system has determined to trim the memory, for example, when the 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -160,6 +176,8 @@ Called when the launch mode of an ability is set to singleton.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onNewWant?(want: Want): void--><!--Device-LifecycleApp-onNewWant?(want: Want): void-End-->
@@ -184,6 +202,8 @@ Called to notify the local device when a running ability on the remote device is
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onRemoteTerminated?(): void--><!--Device-LifecycleApp-onRemoteTerminated?(): void-End-->
@@ -196,11 +216,13 @@ Called to notify the local device when a running ability on the remote device is
 onRestoreAbilityState?(inState: PacMap): void
 ```
 
-This method is called if an ability was destroyed at a certain time due to resource reclaim or was unexpectedly destroyed and the [onSaveAbilityState](#onSaveAbilityState) method was called to save its user data and states. Generally, this method is called after the [onStart](#onStart(Want)) method.
+This method is called if an ability was destroyed at a certain time due to resource reclaim or was unexpectedly destroyed and the [onSaveAbilityState](#onSaveAbilityState) method was called to save its user data and states. Generally, this method is called after the onStart method.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -226,6 +248,8 @@ Restores the user data saved during the migration for an ability on the remote d
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onRestoreData?(data: Object): void--><!--Device-LifecycleApp-onRestoreData?(data: Object): void-End-->
@@ -244,11 +268,13 @@ Restores the user data saved during the migration for an ability on the remote d
 onSaveAbilityState?(outState: PacMap): void
 ```
 
-This method is called when the system determines that the ability may be destroyed in an unexpected situation, for example, when the screen orientation changes or the user touches the Home key. Generally,this method is used only to save temporary states.
+This method is called when the system determines that the ability may be destroyed in an unexpected situation, for example, when the screen orientation changes or the user touches the Home key. Generally, this method is used only to save temporary states.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -268,11 +294,13 @@ This method is called when the system determines that the ability may be destroy
 onSaveData?(data: Object): boolean
 ```
 
-Saves the user data of a local ability generated during runtime.After the migration is triggered and the local ability is ready, this method is called when the Distributed Scheduler Service requests data from the local ability.
+Saves the user data of a local ability generated during runtime. After the migration is triggered and the local ability is ready, this method is called when the Distributed Scheduler Service requests data from the local ability.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -304,6 +332,8 @@ Called back when the state of an ability changes from &lt;b&gt;BACKGROUND&lt;/b&
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-LifecycleApp-onShow?(): void--><!--Device-LifecycleApp-onShow?(): void-End-->
@@ -321,6 +351,8 @@ Asks a user whether to start the migration.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

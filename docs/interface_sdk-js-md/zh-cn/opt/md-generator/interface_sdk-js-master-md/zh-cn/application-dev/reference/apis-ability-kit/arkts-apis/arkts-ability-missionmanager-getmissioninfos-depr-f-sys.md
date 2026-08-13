@@ -12,7 +12,7 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 
 **废弃版本：** 9
 
-**替代接口：** [getMissionInfos](ohos.app.ability.missionManager/missionManager#getMissionInfos)
+**替代接口：** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -59,7 +59,7 @@ function getMissionInfos(deviceId: string, numMax: number): Promise<Array<Missio
 
 **废弃版本：** 9
 
-**替代接口：** [getMissionInfos](ohos.app.ability.missionManager/missionManager#getMissionInfos)
+**替代接口：** [getMissionInfos](arkts-ability-missionmanager-getmissioninfos-f-sys.md#getMissionInfos（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

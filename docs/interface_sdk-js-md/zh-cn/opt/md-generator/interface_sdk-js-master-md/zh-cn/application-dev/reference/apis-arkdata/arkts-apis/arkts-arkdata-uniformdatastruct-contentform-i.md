@@ -2,7 +2,9 @@
 
 内容卡片类型数据，用于跨应用共享内容卡片信息。典型使用场景包括：资讯应用分享文章卡片、电商应用分享商品卡片、社交应用分享内容预览等。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uniformDataStruct-interface ContentForm--><!--Device-uniformDataStruct-interface ContentForm-End-->
 
@@ -18,7 +20,9 @@ appIcon?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ appName?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,7 +60,9 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,7 +80,9 @@ linkUri?: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,7 +100,9 @@ thumbData?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,7 +120,9 @@ title: string
 
 **类型：** string
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,7 +140,9 @@ readonly uniformDataType: 'general.content-form'
 
 **类型：** 'general.content-form'
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,9 +2,11 @@
 
 As an input parameter when connecting a web native messaging extension, it is used to receive state changes during the connection.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback--><!--Device-webNativeMessagingExtensionManager-interface WebExtensionConnectionCallback-End-->
 
@@ -24,9 +26,11 @@ onConnect(connection: ConnectionNativeInfo): void
 
 Called when a connection is set up.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +42,52 @@ Called when a connection is set up.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
+| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application bundle name, browser extension source URL, and extension process ID. |
+
+## Examples
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { common } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+        let context: common.UIAbilityContext = this.context; // Obtain UIAbilityContext.
+        let want:Want = {
+          bundleName: 'com.example.app',
+          abilityName: 'MyWebNativeMessageExtAbility',
+          parameters: {
+            'ohos.arkweb.messageReadPipe': { 'type': 'FD', 'value': 333 }, // Assume that the pipefd is valid.
+            'ohos.arkweb.messageWritePipe': { 'type': 'FD', 'value': 444 }, // Assume that the pipefd is valid.
+            'ohos.arkweb.extensionOrigin': 'chrome-extension://knldjmfmopnpolahpmmgbagdohdnhkik/' // The plug-in URI is required.
+          },
+        };
+
+        let callback: webNativeMessagingExtensionManager.WebExtensionConnectionCallback = {
+            onConnect(connection) {
+                console.info('onConnect, connectionId:' + connection.connectionId);
+            },
+            onDisconnect(connection) {
+                console.info('onDisconnect');
+            },
+            onFailed(code, errMsg) {
+                console.info(`onFailed, code:${code} errMsg:${errMsg}`);
+            }
+        };
+
+        let connectionId = webNativeMessagingExtensionManager.connectNative(context, want, callback);
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`connectNative failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 
 ## onDisconnect
 
@@ -48,9 +97,11 @@ onDisconnect(connection: ConnectionNativeInfo): void
 
 Called when a connection is interrupted.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +113,52 @@ Called when a connection is interrupted.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| connection | [ConnectionNativeInfo](arkts-arkweb-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | The remote connection info |
+| connection | [ConnectionNativeInfo](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-connectionnativeinfo-i.md) | Yes | Connection information, including the connection ID, extension application package name, browser extension source URL, and extension process ID. |
+
+## Examples
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { common } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+        let context: common.UIAbilityContext = this.context; // Obtain UIAbilityContext.
+        let want:Want = {
+          bundleName: 'com.example.app',
+          abilityName: 'MyWebNativeMessageExtAbility',
+          parameters: {
+            'ohos.arkweb.messageReadPipe': { 'type': 'FD', 'value': 333 }, // Assume that the pipefd is valid.
+            'ohos.arkweb.messageWritePipe': { 'type': 'FD', 'value': 444 }, // Assume that the pipefd is valid.
+            'ohos.arkweb.extensionOrigin': 'chrome-extension://knldjmfmopnpolahpmmgbagdohdnhkik/' // The plug-in URI is required.
+          },
+        };
+
+        let callback: webNativeMessagingExtensionManager.WebExtensionConnectionCallback = {
+            onConnect(connection) {
+                console.info('onConnect, connectionId:' + connection.connectionId);
+            },
+            onDisconnect(connection) {
+                console.info('onDisconnect');
+            },
+            onFailed(code, errMsg) {
+                console.info(`onFailed, code:${code} errMsg:${errMsg}`);
+            }
+        };
+
+        let connectionId = webNativeMessagingExtensionManager.connectNative(context, want, callback);
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`connectNative failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 
 ## onFailed
 
@@ -72,9 +168,11 @@ onFailed(code: NmErrorCode, errMsg: string): void
 
 Called when the connection fails.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +184,51 @@ Called when the connection fails.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [NmErrorCode](arkts-arkweb-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | The error code of the failure. |
-| errMsg | string | Yes | The error message of the failure. |
+| code | [NmErrorCode](../../apis-na/arkts-apis/arkts-na-webnativemessagingextensionmanager-nmerrorcode-e.md) | Yes | Error code. |
+| errMsg | string | Yes | Error message. |
+
+## Examples
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { common } from '@kit.AbilityKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    try {
+        let context: common.UIAbilityContext = this.context; // Obtain UIAbilityContext.
+        let want:Want = {
+          bundleName: 'com.example.app',
+          abilityName: 'MyWebNativeMessageExtAbility',
+          parameters: {
+            'ohos.arkweb.messageReadPipe': { 'type': 'FD', 'value': 333 }, // Assume that the pipefd is valid.
+            'ohos.arkweb.messageWritePipe': { 'type': 'FD', 'value': 444 }, // Assume that the pipefd is valid.
+            'ohos.arkweb.extensionOrigin': 'chrome-extension://knldjmfmopnpolahpmmgbagdohdnhkik/' // The plug-in URI is required.
+          },
+        };
+
+        let callback: webNativeMessagingExtensionManager.WebExtensionConnectionCallback = {
+            onConnect(connection) {
+                console.info('onConnect, connectionId:' + connection.connectionId);
+            },
+            onDisconnect(connection) {
+                console.info('onDisconnect');
+            },
+            onFailed(code, errMsg) {
+                console.info(`onFailed, code:${code} errMsg:${errMsg}`);
+            }
+        };
+
+        let connectionId = webNativeMessagingExtensionManager.connectNative(context, want, callback);
+    } catch (err) {
+      // Process input parameter errors.
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`connectNative failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
 

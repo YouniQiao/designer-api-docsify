@@ -14,9 +14,11 @@ function create(): ImageProcessor
 
 Create an image processing instance.
 
-**Since:** 18
+**Since:** 23
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-videoProcessingEngine-function create(): ImageProcessor--><!--Device-videoProcessingEngine-function create(): ImageProcessor-End-->
 
@@ -32,9 +34,9 @@ Create an image processing instance.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
-| [29200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200003-creation-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) |
+| [29200003](../errorcode-videoprocessingengine.md#29200003-creation-failure) |
 
 ## Examples
 

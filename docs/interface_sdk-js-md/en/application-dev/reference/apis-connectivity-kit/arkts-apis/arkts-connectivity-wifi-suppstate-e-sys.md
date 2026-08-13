@@ -8,7 +8,7 @@ The state of the supplicant enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SuppState](ohos.wifiManager/wifiManager.SuppState)
+**Substitutes:** [SuppState](arkts-connectivity-wifimanager-suppstate-e-sys.md#SuppState-(System-API))
 
 <!--Device-wifi-export enum SuppState--><!--Device-wifi-export enum SuppState-End-->
 
@@ -30,7 +30,7 @@ The supplicant is not associated with or is disconnected from the AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DISCONNECTED](ohos.wifiManager/wifiManager.SuppState.DISCONNECTED)
+**Substitutes:** [DISCONNECTED](arkts-connectivity-wifimanager-suppstate-e-sys.md#DISCONNECTED)
 
 <!--Device-SuppState-DISCONNECTED--><!--Device-SuppState-DISCONNECTED-End-->
 
@@ -52,7 +52,7 @@ The network interface is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [INTERFACE_DISABLED](ohos.wifiManager/wifiManager.SuppState.INTERFACE_DISABLED)
+**Substitutes:** [INTERFACE_DISABLED](arkts-connectivity-wifimanager-suppstate-e-sys.md#INTERFACE_DISABLED)
 
 <!--Device-SuppState-INTERFACE_DISABLED--><!--Device-SuppState-INTERFACE_DISABLED-End-->
 
@@ -74,7 +74,7 @@ The supplicant is disabled.
 
 **Deprecated since:** 9
 
-**Substitutes:** [INACTIVE](ohos.wifiManager/wifiManager.SuppState.INACTIVE)
+**Substitutes:** [INACTIVE](arkts-connectivity-wifimanager-suppstate-e-sys.md#INACTIVE)
 
 <!--Device-SuppState-INACTIVE--><!--Device-SuppState-INACTIVE-End-->
 
@@ -96,7 +96,7 @@ The supplicant is scanning for a Wi-Fi connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SCANNING](ohos.wifiManager/wifiManager.SuppState.SCANNING)
+**Substitutes:** [SCANNING](arkts-connectivity-wifimanager-suppstate-e-sys.md#SCANNING)
 
 <!--Device-SuppState-SCANNING--><!--Device-SuppState-SCANNING-End-->
 
@@ -118,7 +118,7 @@ The supplicant is authenticating with a specified AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AUTHENTICATING](ohos.wifiManager/wifiManager.SuppState.AUTHENTICATING)
+**Substitutes:** [AUTHENTICATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#AUTHENTICATING)
 
 <!--Device-SuppState-AUTHENTICATING--><!--Device-SuppState-AUTHENTICATING-End-->
 
@@ -140,7 +140,7 @@ The supplicant is associating with a specified AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ASSOCIATING](ohos.wifiManager/wifiManager.SuppState.ASSOCIATING)
+**Substitutes:** [ASSOCIATING](arkts-connectivity-wifimanager-suppstate-e-sys.md#ASSOCIATING)
 
 <!--Device-SuppState-ASSOCIATING--><!--Device-SuppState-ASSOCIATING-End-->
 
@@ -162,7 +162,7 @@ The supplicant is associated with a specified AP.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ASSOCIATED](ohos.wifiManager/wifiManager.SuppState.ASSOCIATED)
+**Substitutes:** [ASSOCIATED](arkts-connectivity-wifimanager-suppstate-e-sys.md#ASSOCIATED)
 
 <!--Device-SuppState-ASSOCIATED--><!--Device-SuppState-ASSOCIATED-End-->
 
@@ -184,7 +184,7 @@ The four-way handshake is ongoing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [FOUR_WAY_HANDSHAKE](ohos.wifiManager/wifiManager.SuppState.FOUR_WAY_HANDSHAKE)
+**Substitutes:** [FOUR_WAY_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#FOUR_WAY_HANDSHAKE)
 
 <!--Device-SuppState-FOUR_WAY_HANDSHAKE--><!--Device-SuppState-FOUR_WAY_HANDSHAKE-End-->
 
@@ -206,7 +206,7 @@ The group handshake is ongoing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GROUP_HANDSHAKE](ohos.wifiManager/wifiManager.SuppState.GROUP_HANDSHAKE)
+**Substitutes:** [GROUP_HANDSHAKE](arkts-connectivity-wifimanager-suppstate-e-sys.md#GROUP_HANDSHAKE)
 
 <!--Device-SuppState-GROUP_HANDSHAKE--><!--Device-SuppState-GROUP_HANDSHAKE-End-->
 
@@ -228,7 +228,7 @@ All authentication is completed.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COMPLETED](ohos.wifiManager/wifiManager.SuppState.COMPLETED)
+**Substitutes:** [COMPLETED](arkts-connectivity-wifimanager-suppstate-e-sys.md#COMPLETED)
 
 <!--Device-SuppState-COMPLETED--><!--Device-SuppState-COMPLETED-End-->
 
@@ -250,7 +250,7 @@ Failed to establish a connection to the supplicant.
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNINITIALIZED](ohos.wifiManager/wifiManager.SuppState.UNINITIALIZED)
+**Substitutes:** [UNINITIALIZED](arkts-connectivity-wifimanager-suppstate-e-sys.md#UNINITIALIZED)
 
 <!--Device-SuppState-UNINITIALIZED--><!--Device-SuppState-UNINITIALIZED-End-->
 
@@ -272,7 +272,7 @@ The supplicant is in an unknown or invalid state.
 
 **Deprecated since:** 9
 
-**Substitutes:** [INVALID](ohos.wifiManager/wifiManager.SuppState.INVALID)
+**Substitutes:** [INVALID](arkts-connectivity-wifimanager-suppstate-e-sys.md#INVALID)
 
 <!--Device-SuppState-INVALID--><!--Device-SuppState-INVALID-End-->
 

@@ -17,6 +17,8 @@ Adds an mDNS service.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo,    callback: AsyncCallback<LocalServiceInfo>): void-End-->
@@ -35,12 +37,12 @@ Adds an mDNS service.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2204003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204003-repeated-registration) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [2204008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204008-service-deletion-failure) |
-| [2204010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204010-message-sending-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2204003](../errorcode-net-mdns.md#2204003-repeated-registration) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2204008](../errorcode-net-mdns.md#2204008-service-deletion-failure) |
+| [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) |
 
 ## Examples
 
@@ -81,6 +83,8 @@ Adds an mDNS service.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>--><!--Device-mdns-function addLocalService(context: Context, serviceInfo: LocalServiceInfo): Promise<LocalServiceInfo>-End-->
@@ -104,12 +108,12 @@ Adds an mDNS service.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2204003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204003-repeated-registration) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [2204008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204008-service-deletion-failure) |
-| [2204010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-mdns.md#2204010-message-sending-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2204003](../errorcode-net-mdns.md#2204003-repeated-registration) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2204008](../errorcode-net-mdns.md#2204008-service-deletion-failure) |
+| [2204010](../errorcode-net-mdns.md#2204010-message-sending-failure) |
 
 ## Examples
 

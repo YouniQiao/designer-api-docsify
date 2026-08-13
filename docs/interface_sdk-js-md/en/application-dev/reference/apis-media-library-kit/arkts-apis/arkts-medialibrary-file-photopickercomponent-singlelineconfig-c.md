@@ -1,10 +1,12 @@
 # SingleLineConfig
 
-Single-Line display mode.
+Represents the single-line display mode. In single-line mode, the component does not provide functions for viewing a larger image. The component does not support callbacks related to large images, and the PickerController does not support APIs related to large images, making API calls ineffective.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class SingleLineConfig--><!--Device-unnamed-export declare class SingleLineConfig-End-->
 
@@ -19,60 +21,66 @@ import { MaxCountType, PreselectedInfo, BaseItemInfo, ItemInfo, AnimatorParams, 
 ## itemBorderRadius
 
 ```TypeScript
-public itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
+itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Rounded corner radius of grid items.
+Rounded corner radius for grid items.
 
 **Type:** Length \| BorderRadiuses \| LocalizedBorderRadiuses
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-SingleLineConfig-public itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-SingleLineConfig-public itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SingleLineConfig-itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses--><!--Device-SingleLineConfig-itemBorderRadius?: Length | BorderRadiuses | LocalizedBorderRadiuses-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## itemDisplayRatio
 
 ```TypeScript
-public itemDisplayRatio?: ItemDisplayRatio
+itemDisplayRatio?: ItemDisplayRatio
 ```
 
-item display ratio
+Aspect ratio for grid display. Both 1:1 and the original image aspect ratio are supported. The default value is 1: 1.
 
 **Type:** [ItemDisplayRatio](arkts-medialibrary-file-photopickercomponent-itemdisplayratio-e.md)
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-SingleLineConfig-public itemDisplayRatio?: ItemDisplayRatio--><!--Device-SingleLineConfig-public itemDisplayRatio?: ItemDisplayRatio-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SingleLineConfig-itemDisplayRatio?: ItemDisplayRatio--><!--Device-SingleLineConfig-itemDisplayRatio?: ItemDisplayRatio-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 ## itemGap
 
 ```TypeScript
-public itemGap?: Length
+itemGap?: Length
 ```
 
-item gap
+Spacing between grid items.
 
 **Type:** Length
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-SingleLineConfig-public itemGap?: Length--><!--Device-SingleLineConfig-public itemGap?: Length-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SingleLineConfig-itemGap?: Length--><!--Device-SingleLineConfig-itemGap?: Length-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

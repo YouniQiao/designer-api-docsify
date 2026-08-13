@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-util-class RationalNumber--><!--Device-util-class RationalNumber-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ compare(another: RationalNumber): number
 将当前的 RationalNumber 对象与给定对象进行比较。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,7 +52,7 @@ compareTo(another: RationalNumber): number
 
 **废弃版本：** 9
 
-**替代接口：** [compare](ohos.util.compare)
+**替代接口：** compare
 
 <!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
 
@@ -107,6 +111,8 @@ constructor()
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RationalNumber-constructor()--><!--Device-RationalNumber-constructor()-End-->
@@ -125,14 +131,11 @@ let rationalNumber = new util.RationalNumber();
 static createRationalFromString(rationalString: string): RationalNumber
 ```
 
-根据给定的字符串创建一个 **RationalNumber** 对象。
-
-> **NOTE：**
-> 
-> **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息
-> "createRationalFromString: The type of Parameter must be integer string"。
+根据给定的字符串创建一个 **RationalNumber** 对象。 > **NOTE：**> > **rationalString** 参数必须为字符串。如果传入小数字符串，该函数不会被拦截，但会显示错误信息 > "createRationalFromString: The type of Parameter must be integer string"。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -167,6 +170,8 @@ equals(obj: Object): boolean
 判断此 **RationalNumber** 对象与给定对象是否相等。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -243,14 +248,11 @@ static getCommonDivisor(number1: number, number2: number): number
 static getCommonFactor(number1: number, number2: number): number
 ```
 
-获取两个指定整数的最大公约数。
-
-> **NOTE：**
-> 
-> **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息
-> "getCommonFactor: The type of Parameter must be integer"。
+获取两个指定整数的最大公约数。 > **NOTE：**> > **number1** 和 **number2** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 > "getCommonFactor: The type of Parameter must be integer"。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -288,6 +290,8 @@ getDenominator(): number
 获取此 **RationalNumber** 对象的分母。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -329,6 +333,8 @@ getNumerator(): number
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RationalNumber-getNumerator(): number--><!--Device-RationalNumber-getNumerator(): number-End-->
@@ -368,6 +374,8 @@ isFinite(): boolean
 判断此 **RationalNumber** 对象表示的是否为有限值。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -409,6 +417,8 @@ isNaN(): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RationalNumber-isNaN(): boolean--><!--Device-RationalNumber-isNaN(): boolean-End-->
@@ -449,6 +459,8 @@ isZero(): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-RationalNumber-isZero(): boolean--><!--Device-RationalNumber-isZero(): boolean-End-->
@@ -485,14 +497,11 @@ console.info("result = " + result);
 static parseRationalNumber(numerator: number, denominator: number): RationalNumber
 ```
 
-根据给定的分子和分母创建一个 **RationalNumber** 实例。
-
-> **NOTE：**
-> 
-> **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息
-> "parseRationalNumber: The type of Parameter must be integer"。
+根据给定的分子和分母创建一个 **RationalNumber** 实例。 > **NOTE：**> > **numerator** 和 **denominator** 参数必须为整数。如果传入小数，该函数不会被拦截，但会显示错误信息 > "parseRationalNumber: The type of Parameter must be integer"。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -528,6 +537,8 @@ toString(): string
 获取此 **RationalNumber** 对象的字符串表示形式。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -568,6 +579,8 @@ valueOf(): number
 获取此 **RationalNumber** 对象的整数或浮点数值。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -1,10 +1,12 @@
 # ContactAttributes
 
-联系人属性列表，一般作为入参用来标识希望查询的联系人属性。当传入为null时，默认查询全部属性。
+联系人属性列表，一般作为入参用来标识希望查询的联系人属性。 当传入为null时，默认查询全部属性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-contact-class ContactAttributes--><!--Device-contact-class ContactAttributes-End-->
 
@@ -23,6 +25,8 @@ attributes: Attribute[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

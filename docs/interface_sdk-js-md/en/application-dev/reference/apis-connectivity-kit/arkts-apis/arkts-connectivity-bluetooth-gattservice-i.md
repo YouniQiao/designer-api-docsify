@@ -8,7 +8,7 @@ Describes the Gatt service.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GattService](ohos.bluetoothManager/bluetoothManager.GattService)
+**Substitutes:** [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.md#GattService)
 
 <!--Device-bluetooth-interface GattService--><!--Device-bluetooth-interface GattService-End-->
 
@@ -36,7 +36,7 @@ The [BLECharacteristic](arkts-connectivity-bluetooth-blecharacteristic-i.md#BLEC
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristics](ohos.bluetoothManager/bluetoothManager.GattService.characteristics)
+**Substitutes:** [characteristics](arkts-connectivity-bluetoothmanager-gattservice-i.md#characteristics)
 
 <!--Device-GattService-characteristics: Array<BLECharacteristic>--><!--Device-GattService-characteristics: Array<BLECharacteristic>-End-->
 
@@ -58,7 +58,7 @@ The list of GATT services contained in the service
 
 **Deprecated since:** 9
 
-**Substitutes:** [includeServices](ohos.bluetoothManager/bluetoothManager.GattService.includeServices)
+**Substitutes:** [includeServices](arkts-connectivity-bluetoothmanager-gattservice-i.md#includeServices)
 
 <!--Device-GattService-includeServices?: Array<GattService>--><!--Device-GattService-includeServices?: Array<GattService>-End-->
 
@@ -80,7 +80,7 @@ Indicates whether the GattService instance is primary or secondary.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isPrimary](ohos.bluetoothManager/bluetoothManager.GattService.isPrimary)
+**Substitutes:** [isPrimary](arkts-connectivity-bluetoothmanager-gattservice-i.md#isPrimary)
 
 <!--Device-GattService-isPrimary: boolean--><!--Device-GattService-isPrimary: boolean-End-->
 
@@ -102,7 +102,7 @@ The UUID of a GattService instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.GattService.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-gattservice-i.md#serviceUuid)
 
 <!--Device-GattService-serviceUuid: string--><!--Device-GattService-serviceUuid: string-End-->
 

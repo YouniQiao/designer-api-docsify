@@ -6,9 +6,11 @@ The definition of Banner.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-avMusicTemplate-interface Banner extends MediaEntity--><!--Device-avMusicTemplate-interface Banner extends MediaEntity-End-->
+**Deprecated since:** -1
+
+<!--Device-avMusicTemplate-interface Banner--><!--Device-avMusicTemplate-interface Banner-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -30,7 +32,9 @@ Is support one play
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

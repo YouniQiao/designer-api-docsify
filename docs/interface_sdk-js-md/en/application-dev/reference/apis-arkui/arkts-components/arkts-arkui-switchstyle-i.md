@@ -6,6 +6,8 @@ Sets the style for the component of the **Switch** type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SwitchStyle--><!--Device-unnamed-declare interface SwitchStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Sets the style for the component of the **Switch** type.
 pointColor?: ResourceColor
 ```
 
-Color of the circular slider when the component is of the **Switch** type.
-
-Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
+Color of the circular slider when the component is of the **Switch** type. Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 
 **Type:** ResourceColor
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,21 +42,15 @@ Default value: **\$r('sys.color.ohos_id_color_foreground_contrary')**
 pointRadius?: number | Resource
 ```
 
-Radius of the circular slider when the component is of the **Switch** type. The unit is vp.
-
-**NOTE：**
-
-Percentage values are not supported. The value specified is used only when it is greater than or equal to 0.
-
-If the value is not specified or the specified one is less than 0, the radius is set using the following formula:
-
-(Component height (in vp)/2) - (2 vp x Component height (in vp)/20 vp)
+Radius of the circular slider when the component is of the **Switch** type. The unit is vp. **NOTE：**Percentage values are not supported. The value specified is used only when it is greater than or equal to 0. If the value is not specified or the specified one is less than 0, the radius is set using the following formula: (Component height (in vp)/2) - (2 vp x Component height (in vp)/20 vp)
 
 **Type:** number \| Resource
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,21 +66,15 @@ If the value is not specified or the specified one is less than 0, the radius is
 trackBorderRadius?: number | Resource
 ```
 
-Radius of the slider track border corners when the component is of the **Switch** type. The unit is vp.
-
-**NOTE：**
-
-This parameter cannot be set in percentage. If the value specified is less than 0, the radius is set using the default value formula. If the value specified is greater than half of the component height, the latter is used. In other cases, the value specified is used.
-
-If the value is not specified or the specified one is less than 0, the radius is set using the default value formula.
-
-Default value formula: Component height (in vp)/2
+Radius of the slider track border corners when the component is of the **Switch** type. The unit is vp. **NOTE：**This parameter cannot be set in percentage. If the value specified is less than 0, the radius is set using the default value formula. If the value specified is greater than half of the component height, the latter is used. In other cases, the value specified is used. If the value is not specified or the specified one is less than 0, the radius is set using the default value formula. Default value formula: Component height (in vp)/2
 
 **Type:** number \| Resource
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,16 +90,15 @@ Default value formula: Component height (in vp)/2
 unselectedColor?: ResourceColor
 ```
 
-Background color of the component when it is of the **Switch** type and is disabled.
-
-Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when   
-[optimizing color mode switching overhead](../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead)is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
+Background color of the component when it is of the **Switch** type and is disabled. Default value: **0x337F7F7F** (applies to both dark and light modes). Since API version 20, when [optimizing color mode switching overhead](../../../ui/ui-dark-light-color-adaptation.md#optimizing-color-mode-switching-overhead) is enabled, the default value is **0x19000000** (black with 10% opacity) in light mode and **0x19FFFFFF** (white with 10% opacity) in dark mode.
 
 **Type:** ResourceColor
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

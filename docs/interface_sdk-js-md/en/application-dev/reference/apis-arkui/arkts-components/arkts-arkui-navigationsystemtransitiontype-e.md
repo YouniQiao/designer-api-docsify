@@ -1,20 +1,12 @@
 # NavigationSystemTransitionType
 
-Type of the system transition animation.
-
-> **NOTE：**
-
-> System transition animations for the title bar and content area can be configured separately.
-
-> The system transition animation of the title bar is only available for the push and pop animations of navigation
-> destination pages in STANDARD mode, with the following constraints:
-
-> When **NONE** or **TITLE** is set, no system transition animation is displayed. When **CONTENT** or **DEFAULT** is
-> set, the system transition animation is displayed by default.
+Type of the system transition animation. > **NOTE：**> System transition animations for the title bar and content area can be configured separately. > The system transition animation of the title bar is only available for the push and pop animations of navigation > destination pages in STANDARD mode, with the following constraints: > When **NONE** or **TITLE** is set, no system transition animation is displayed. When **CONTENT** or **DEFAULT** is > set, the system transition animation is displayed by default.
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum NavigationSystemTransitionType--><!--Device-unnamed-declare enum NavigationSystemTransitionType-End-->
 
@@ -31,6 +23,8 @@ Default system transition animation.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +46,8 @@ No system transition animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -71,6 +67,8 @@ System transition animation of the title bar.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +90,8 @@ System transition animation of the content area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -111,6 +111,8 @@ Fade-type system transition animation.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,6 +134,8 @@ Center-scale type system transition animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -152,6 +156,8 @@ Right-slide type system transition animation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -171,6 +177,8 @@ Bottom-slide type system transition animation.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

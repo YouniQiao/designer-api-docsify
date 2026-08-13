@@ -16,7 +16,9 @@ Set this application's senior mode.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,5 +42,5 @@ Set this application's senior mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9300000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
 

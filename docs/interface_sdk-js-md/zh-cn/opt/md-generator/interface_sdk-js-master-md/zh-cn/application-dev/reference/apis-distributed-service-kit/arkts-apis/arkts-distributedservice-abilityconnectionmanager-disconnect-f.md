@@ -8,7 +8,9 @@ function disconnect(sessionId: number): void
 
 当协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

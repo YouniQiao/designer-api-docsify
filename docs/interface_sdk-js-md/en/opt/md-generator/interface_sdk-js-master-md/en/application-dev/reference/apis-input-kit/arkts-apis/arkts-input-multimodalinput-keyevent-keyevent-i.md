@@ -4,9 +4,11 @@ Key event.
 
 **Inheritance/Implementation:** KeyEvent extends [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-unnamed-export declare interface KeyEvent extends InputEvent--><!--Device-unnamed-export declare interface KeyEvent extends InputEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface KeyEvent--><!--Device-unnamed-export declare interface KeyEvent-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -26,7 +28,9 @@ Key event type.
 
 **Type:** [Action](arkts-input-multimodalinput-keyevent-action-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -40,13 +44,13 @@ Key event type.
 altKey: boolean
 ```
 
-Whether altKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether altKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -60,13 +64,13 @@ The value **true** indicates that the key is pressed, and the value **false** in
 capsLock: boolean
 ```
 
-Whether capsLock is enabled.
-
-The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
+Whether capsLock is enabled. The value **true** indicates that capsLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -80,13 +84,13 @@ The value **true** indicates that capsLock is enabled, and the value **false** i
 ctrlKey: boolean
 ```
 
-Whether ctrlKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether ctrlKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -100,13 +104,13 @@ The value **true** indicates that the key is pressed, and the value **false** in
 fnKey: boolean
 ```
 
-Whether fnKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether fnKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -124,7 +128,9 @@ Defines a key.
 
 **Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -142,7 +148,9 @@ List of pressed keys.
 
 **Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)[]
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -156,13 +164,13 @@ List of pressed keys.
 logoKey: boolean
 ```
 
-Whether logoKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether logoKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -176,13 +184,13 @@ The value **true** indicates that the key is pressed, and the value **false** in
 numLock: boolean
 ```
 
-Whether numLock is enabled.
-
-The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
+Whether numLock is enabled. The value **true** indicates that numLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -196,13 +204,13 @@ The value **true** indicates that numLock is enabled, and the value **false** in
 scrollLock: boolean
 ```
 
-Whether scrollLock is enabled.
-
-The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
+Whether scrollLock is enabled. The value **true** indicates that scrollLock is enabled, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -216,13 +224,13 @@ The value **true** indicates that scrollLock is enabled, and the value **false**
 shiftKey: boolean
 ```
 
-Whether shiftKey is being pressed.
-
-The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
+Whether shiftKey is being pressed. The value **true** indicates that the key is pressed, and the value **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -240,7 +248,9 @@ Unicode character corresponding to the key.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

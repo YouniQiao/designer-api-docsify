@@ -4,6 +4,8 @@ Defines the triggered function at the end of web page loading.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnLoadFinishedEvent--><!--Device-unnamed-declare interface OnLoadFinishedEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ The url to be loaded.
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-OnLoadFinishedEvent-url: string--><!--Device-OnLoadFinishedEvent-url: string-End-->
 

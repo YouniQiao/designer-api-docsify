@@ -16,6 +16,8 @@ Add a printer to system.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_PRINT_JOB or ohos.permission.PRINTER_DRIVER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,8 +45,8 @@ Add a printer to system.
 
 | Error Code ID |
 | --- |
-| [13100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [13100003](../../apis-basic-services-kit/errorcode-print.md#13100003-print-service-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

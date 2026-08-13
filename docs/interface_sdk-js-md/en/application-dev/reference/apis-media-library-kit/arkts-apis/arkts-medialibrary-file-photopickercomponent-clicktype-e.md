@@ -1,10 +1,12 @@
 # ClickType
 
-ClickType. include SELECTED and DESELECTED
+Enumerates the click operation types.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ClickType--><!--Device-unnamed-export declare enum ClickType-End-->
 
@@ -16,13 +18,15 @@ ClickType. include SELECTED and DESELECTED
 SELECTED = 0
 ```
 
-SELECTED. click to select photos or videos, if click camera item, the clickType is SELECTED.
+Select (select an image or click a camera item).
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ClickType-SELECTED = 0--><!--Device-ClickType-SELECTED = 0-End-->
 
@@ -34,13 +38,15 @@ SELECTED. click to select photos or videos, if click camera item, the clickType 
 DESELECTED = 1
 ```
 
-DESELECTED. click to deselect photos or videos
+Deselect (deselect an image).
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ClickType-DESELECTED = 1--><!--Device-ClickType-DESELECTED = 1-End-->
 

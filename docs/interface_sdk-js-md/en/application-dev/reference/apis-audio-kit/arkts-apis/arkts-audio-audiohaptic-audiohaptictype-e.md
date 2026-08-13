@@ -2,9 +2,11 @@
 
 Enumerates the audio haptic types.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-enum AudioHapticType--><!--Device-audioHaptic-enum AudioHapticType-End-->
 
@@ -18,9 +20,11 @@ AUDIO_HAPTIC_TYPE_AUDIO = 0
 
 Audio.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticType-AUDIO_HAPTIC_TYPE_AUDIO = 0--><!--Device-AudioHapticType-AUDIO_HAPTIC_TYPE_AUDIO = 0-End-->
 
@@ -34,9 +38,11 @@ AUDIO_HAPTIC_TYPE_HAPTIC = 1
 
 Haptic.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticType-AUDIO_HAPTIC_TYPE_HAPTIC = 1--><!--Device-AudioHapticType-AUDIO_HAPTIC_TYPE_HAPTIC = 1-End-->
 

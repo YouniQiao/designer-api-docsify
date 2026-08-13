@@ -4,6 +4,8 @@ Configuration for canceling an analysis tool.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-interface ToolCancelConfig--><!--Device-photoAccessHelper-interface ToolCancelConfig-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -28,6 +30,8 @@ Parameters for canceling the analysis tool, in JSON string format. The total len
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ToolCancelConfig-param?: string--><!--Device-ToolCancelConfig-param?: string-End-->
@@ -47,6 +51,8 @@ Task ID to cancel. It is a valid ID returned by **invokeAnalysisTool**.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

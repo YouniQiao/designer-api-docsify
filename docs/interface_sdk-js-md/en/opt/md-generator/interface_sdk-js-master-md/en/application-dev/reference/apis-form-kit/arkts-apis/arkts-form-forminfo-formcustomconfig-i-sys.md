@@ -4,6 +4,8 @@ FormCustomConfig
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-formInfo-interface FormCustomConfig--><!--Device-formInfo-interface FormCustomConfig-End-->
 
 **System capability:** SystemCapability.Ability.Form
@@ -28,6 +30,8 @@ Obtains the ability name of the form.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormCustomConfig-abilityName: string--><!--Device-FormCustomConfig-abilityName: string-End-->
@@ -47,6 +51,8 @@ Obtains the bundle name of the form.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Obtains the form name of the form.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormCustomConfig-formName: string--><!--Device-FormCustomConfig-formName: string-End-->
@@ -87,6 +95,8 @@ Obtains whether the form can be added repeatedly.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +118,8 @@ Obtains whether the form shows in form center.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormCustomConfig-isShowInFormCenter: boolean--><!--Device-FormCustomConfig-isShowInFormCenter: boolean-End-->
@@ -128,6 +140,8 @@ Obtains the module name of the form.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FormCustomConfig-moduleName: string--><!--Device-FormCustomConfig-moduleName: string-End-->
@@ -147,6 +161,8 @@ Obtains the related bundle name.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

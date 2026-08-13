@@ -2,7 +2,9 @@
 
 Enumerates the application information flag, which describes the status between an application and user.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export enum ApplicationInfoFlag--><!--Device-bundleManager-export enum ApplicationInfoFlag-End-->
 
@@ -18,7 +20,9 @@ FLAG_INSTALLED = 0x00000001
 
 The application is installed for the specified user.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfoFlag-FLAG_INSTALLED = 0x00000001--><!--Device-ApplicationInfoFlag-FLAG_INSTALLED = 0x00000001-End-->
 
@@ -34,7 +38,9 @@ FLAG_OTHER_INSTALLED = 0x00000010
 
 The application is installed for users other than the specified user.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfoFlag-FLAG_OTHER_INSTALLED = 0x00000010--><!--Device-ApplicationInfoFlag-FLAG_OTHER_INSTALLED = 0x00000010-End-->
 
@@ -50,7 +56,9 @@ FLAG_PREINSTALLED_APP = 0x00000020
 
 The application is a preinstalled application.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP = 0x00000020--><!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP = 0x00000020-End-->
 
@@ -66,7 +74,9 @@ FLAG_PREINSTALLED_APP_UPDATE = 0x00000040
 
 The preinstalled application is updated.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP_UPDATE = 0x00000040--><!--Device-ApplicationInfoFlag-FLAG_PREINSTALLED_APP_UPDATE = 0x00000040-End-->
 

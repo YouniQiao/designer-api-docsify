@@ -4,6 +4,8 @@ Description of the AVMusicTemplate.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface AVMusicTemplateDescriptor--><!--Device-avMusicTemplate-interface AVMusicTemplateDescriptor-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -28,6 +30,8 @@ App package name.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateDescriptor-bundleName: string--><!--Device-AVMusicTemplateDescriptor-bundleName: string-End-->
@@ -48,6 +52,8 @@ Unique id of the AVMusicTemplate.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateDescriptor-sessionId: string--><!--Device-AVMusicTemplateDescriptor-sessionId: string-End-->
@@ -67,6 +73,8 @@ The user id.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

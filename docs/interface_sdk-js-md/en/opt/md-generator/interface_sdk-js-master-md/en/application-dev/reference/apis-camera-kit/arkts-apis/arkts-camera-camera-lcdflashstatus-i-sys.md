@@ -2,7 +2,9 @@
 
 Describes the LCD flash information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface LcdFlashStatus--><!--Device-camera-interface LcdFlashStatus-End-->
 
@@ -26,7 +28,9 @@ Whether the LCD flash is required. **true** if required, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean--><!--Device-LcdFlashStatus-readonly isLcdFlashNeeded: boolean-End-->
 
@@ -44,7 +48,9 @@ LCD flash compensation.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LcdFlashStatus-readonly lcdCompensation: int--><!--Device-LcdFlashStatus-readonly lcdCompensation: int-End-->
 

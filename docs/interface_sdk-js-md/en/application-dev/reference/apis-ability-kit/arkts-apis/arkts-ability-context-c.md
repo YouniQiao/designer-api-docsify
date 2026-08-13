@@ -1,14 +1,16 @@
 # Context
 
-Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.../../../
+Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../
 
-**Inheritance/Implementation:** Context extends [BaseContext](BaseContext)
+**Inheritance/Implementation:** Context extends BaseContext
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class Context extends BaseContext--><!--Device-unnamed-declare class Context extends BaseContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Context--><!--Device-unnamed-declare class Context-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -20,13 +22,15 @@ createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 
 Creates an application context with a specific data encryption level. You can call this API to create contexts with different encryption levels, thereby obtaining the corresponding sandbox paths.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Context-createAreaModeContext(areaMode: contextConstant.AreaMode): Context--><!--Device-Context-createAreaModeContext(areaMode: contextConstant.AreaMode): Context-End-->
 
@@ -66,27 +70,21 @@ export default class EntryAbility extends UIAbility {
 
 ## createDisplayContext
 
-ArkTS-Dyn:
-```TypeScript
-createDisplayContext(displayId: number): Context
-```
-
-ArkTS-Sta:
 ```TypeScript
 createDisplayContext(displayId: long): Context
 ```
 
-Creates an application context based on the specified display ID with screen information (including  
-[ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity) and  
-[Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md#Direction)).
+Creates an application context based on the specified display ID with screen information (including [ScreenDensity](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity) and [Direction](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-direction-e.md#Direction)).
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Context-createDisplayContext(displayId: long): Context--><!--Device-Context-createDisplayContext(displayId: long): Context-End-->
 
@@ -96,7 +94,7 @@ Creates an application context based on the specified display ID with screen inf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Display ID. |
+| displayId | long | Yes | Display ID. |
 
 **Return value:**
 
@@ -108,7 +106,7 @@ Creates an application context based on the specified display ID with screen inf
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -135,20 +133,7 @@ export default class EntryAbility extends UIAbility {
 createModuleContext(moduleName: string): Context
 ```
 
-Creates the context based on the module name.
-
-> **NOTE：**
-> 
-> - Only the context of other modules in the current application and the context of the intra-application HSP can
-> be obtained. The context of other applications cannot be obtained.
-> 
-> - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use
-> [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext)
-> instead. Otherwise, resource acquisition may fail.
-> 
-> - Creating a module context involves resource querying and initialization, which can be time-consuming. In
-> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
-> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+Creates the context based on the module name. > **NOTE：**> > - Only the context of other modules in the current application and the context of the intra-application HSP can > be obtained. The context of other applications cannot be obtained. > > - This API has been supported since API version 9 and deprecated since API version 12. You are advised to use > [application.createModuleContext](arkts-ability-application-createmodulecontext-f.md#createModuleContext) > instead. Otherwise, resource acquisition may fail. > > - Creating a module context involves resource querying and initialization, which can be time-consuming. In > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
 **Since:** 9
 
@@ -182,7 +167,7 @@ Creates the context based on the module name.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -211,9 +196,11 @@ getApplicationContext(): ApplicationContext
 
 Obtains the application context.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -233,7 +220,7 @@ Obtains the application context.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
 
 ## Examples
 
@@ -262,9 +249,11 @@ getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void
 
 Obtains the shared directory based on a group ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -279,14 +268,14 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | dataGroupID | string | Yes | Group ID, which is assigned by the system when an application of the atomic service type is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.&lt;br&gt;Note: Only the EL2 encryption level is supported. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared directory obtained (or empty if or is empty if non-existent ). Otherwise, an error object is returned.&lt;br&gt;Note: Only the EL2 encryption level is supported. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## Examples
 
@@ -318,9 +307,11 @@ getGroupDir(dataGroupID: string): Promise<string>
 
 Obtains the shared directory based on a group ID. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -346,8 +337,8 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
-| [16000011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 
 ## Examples
 
@@ -381,7 +372,9 @@ Checks if the current instance is associated with the specified context type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -413,9 +406,11 @@ Application information.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -431,14 +426,15 @@ Application information.
 area: contextConstant.AreaMode
 ```
 
-Information about file partitions, which are divided according to the encryption level specified by  
-[AreaMode](./../@ohos.app.ability.contextConstant:contextConstant.areaMode).
+Information about file partitions, which are divided according to the encryption level specified by AreaMode.
 
 **Type:** contextConstant.AreaMode
 
 **Since:** 9
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -454,13 +450,15 @@ Information about file partitions, which are divided according to the encryption
 bundleCodeDir: string
 ```
 
-Bundle code directory. Do not access resource files using concatenated paths.Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager) instead.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Bundle code directory. Do not access resource files using concatenated paths. Use [resource manager APIs](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager) instead. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -476,13 +474,15 @@ Bundle code directory. Do not access resource files using concatenated paths.Use
 cacheDir: string
 ```
 
-Cache directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Cache directory. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -502,13 +502,15 @@ Cloud file directory.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Context-cloudFileDir: string--><!--Device-Context-cloudFileDir: string-End-->
 
@@ -520,13 +522,15 @@ Cloud file directory.
 databaseDir: string
 ```
 
-Database directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Database directory. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -542,13 +546,15 @@ Database directory.For details, see [Application Sandbox](../../../file-manageme
 distributedFilesDir: string
 ```
 
-Distributed file directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Distributed file directory. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -568,9 +574,11 @@ Event hub that implements event subscription, unsubscription, and triggering.
 
 **Type:** [EventHub](arkts-ability-eventhub-c.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -586,13 +594,15 @@ Event hub that implements event subscription, unsubscription, and triggering.
 filesDir: string
 ```
 
-File directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+File directory. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,41 +612,21 @@ File directory.For details, see [Application Sandbox](../../../file-management/a
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## logFileDir
-
-```TypeScript
-get logFileDir(): string
-```
-
-Directory for storing log files.
-
-**Type:** string
-
-**Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-Context-get logFileDir(): string--><!--Device-Context-get logFileDir(): string-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## preferencesDir
 
 ```TypeScript
 preferencesDir: string
 ```
 
-Preferences directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Preferences directory. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -656,13 +646,15 @@ Process name of the current application.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Context-processName: string--><!--Device-Context-processName: string-End-->
 
@@ -674,22 +666,19 @@ Process name of the current application.
 resourceDir: string
 ```
 
-Resource directory.
-
-> **NOTE: **
-> 
-> You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
-> The **resfile** directory can be accessed only in read-only mode.
+Resource directory. > **NOTE: ** > > You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**. > The **resfile** directory can be accessed only in read-only mode.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Context-resourceDir: string--><!--Device-Context-resourceDir: string-End-->
 
@@ -705,9 +694,11 @@ Object for resource management.
 
 **Type:** resmgr.ResourceManager
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -723,13 +714,15 @@ Object for resource management.
 tempDir: string
 ```
 
-Temporary directory.For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
+Temporary directory. For details, see [Application Sandbox](../../../file-management/app-sandbox-directory.md).
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

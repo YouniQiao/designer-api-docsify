@@ -2,9 +2,11 @@
 
 Enum of SwiperDynamicSyncSceneType
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export const enum SwiperDynamicSyncSceneType--><!--Device-unnamed-export const enum SwiperDynamicSyncSceneType-End-->
 
@@ -18,11 +20,15 @@ GESTURE = 0
 
 Scene type is GESTURE.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SwiperDynamicSyncSceneType-GESTURE = 0--><!--Device-SwiperDynamicSyncSceneType-GESTURE = 0-End-->
 
@@ -36,11 +42,15 @@ ANIMATION = 1
 
 Scene type is ANIMATION.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SwiperDynamicSyncSceneType-ANIMATION = 1--><!--Device-SwiperDynamicSyncSceneType-ANIMATION = 1-End-->
 

@@ -12,22 +12,13 @@ import { window } from '@kit.ArkUI';
 function shiftAppWindowFocus(sourceWindowId: int, targetWindowId: int): Promise<void>
 ```
 
-Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result.
+Shifts the window focus from the source window to the target window in the same application. The window focus can be shifted within the main window and child windows. This API uses a promise to return the result. Ensure that the target window can gain focus (configurable by calling [setWindowFocusable()](arkts-arkui-window-window-i.md#setWindowFocusable) ) and that [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed. > **NOTE：**> > Before calling **shiftAppWindowFocus()**, ensure that the target window has called > [loadContent()](arkts-arkui-window-window-i.md#loadContent) > or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent) > and these operations have been effective. Otherwise, an invisible window may gain focus, causing function > exceptions or affecting user experience.
 
-Ensure that the target window can gain focus (configurable by calling  
-[setWindowFocusable()](arkts-arkui-window-window-i.md#setWindowFocusable)) and that [showWindow()](arkts-arkui-window-window-i.md#showWindow) has been successfully executed.
+**Since:** 23
 
-> **NOTE：**
-> 
-> Before calling **shiftAppWindowFocus()**, ensure that the target window has called
-> [loadContent()](arkts-arkui-window-window-i.md#loadContent)
-> or [setUIContent()](arkts-arkui-window-window-i.md#setUIContent)
-> and these operations have been effective. Otherwise, an invisible window may gain focus, causing function
-> exceptions or affecting user experience.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -39,8 +30,8 @@ Ensure that the target window can gain focus (configurable by calling
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the source window, which is having the focus. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getWindowProperties) to obtain the window ID. |
-| targetWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getWindowProperties) to obtain the window ID. |
+| sourceWindowId | int | Yes | ID of the source window, which is having the focus. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getWindowProperties) to obtain the window ID. |
+| targetWindowId | int | Yes | ID of the target window. You are advised to call [getWindowProperties()](arkts-arkui-window-window-i.md#getWindowProperties) to obtain the window ID. |
 
 **Return value:**
 
@@ -52,11 +43,11 @@ Ensure that the target window can gain focus (configurable by calling
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
-| [1300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and subwindows are supported. 2. The two windows are not from the same process. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window is not created or destroyed; 2. Internal task error. |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: 1. Invalid window type. Only main windows and subwindows are supported. 2. The two windows are not from the same process. |
 
 ## Examples
 

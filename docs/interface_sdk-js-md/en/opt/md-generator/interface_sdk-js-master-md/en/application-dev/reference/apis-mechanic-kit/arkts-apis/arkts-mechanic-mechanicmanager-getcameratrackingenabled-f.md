@@ -14,7 +14,9 @@ function getCameraTrackingEnabled(): boolean
 
 Checks whether camera tracking is enabled for this mechanical device.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean--><!--Device-mechanicManager-function getCameraTrackingEnabled(): boolean-End-->
 
@@ -30,8 +32,8 @@ Checks whether camera tracking is enabled for this mechanical device.
 
 | Error Code ID |
 | --- |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
 
 ## Examples
 

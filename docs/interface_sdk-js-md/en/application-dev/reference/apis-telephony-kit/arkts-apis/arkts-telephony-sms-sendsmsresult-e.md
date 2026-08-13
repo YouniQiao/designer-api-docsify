@@ -2,9 +2,11 @@
 
 Enumerates SMS message sending results.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export enum SendSmsResult--><!--Device-sms-export enum SendSmsResult-End-->
 
@@ -18,9 +20,11 @@ SEND_SMS_SUCCESS = 0
 
 The SMS message is sent successfully.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SendSmsResult-SEND_SMS_SUCCESS = 0--><!--Device-SendSmsResult-SEND_SMS_SUCCESS = 0-End-->
 
@@ -34,9 +38,11 @@ SEND_SMS_FAILURE_UNKNOWN = 1
 
 Failed to send the SMS message due to an unknown reason.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SendSmsResult-SEND_SMS_FAILURE_UNKNOWN = 1--><!--Device-SendSmsResult-SEND_SMS_FAILURE_UNKNOWN = 1-End-->
 
@@ -50,9 +56,11 @@ SEND_SMS_FAILURE_RADIO_OFF = 2
 
 Failed to send the SMS message because the modem is shut down.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SendSmsResult-SEND_SMS_FAILURE_RADIO_OFF = 2--><!--Device-SendSmsResult-SEND_SMS_FAILURE_RADIO_OFF = 2-End-->
 
@@ -66,9 +74,11 @@ SEND_SMS_FAILURE_SERVICE_UNAVAILABLE = 3
 
 Failed to send the SMS message because the network is unavailable or SMS message sending or receiving is not supported.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SendSmsResult-SEND_SMS_FAILURE_SERVICE_UNAVAILABLE = 3--><!--Device-SendSmsResult-SEND_SMS_FAILURE_SERVICE_UNAVAILABLE = 3-End-->
 

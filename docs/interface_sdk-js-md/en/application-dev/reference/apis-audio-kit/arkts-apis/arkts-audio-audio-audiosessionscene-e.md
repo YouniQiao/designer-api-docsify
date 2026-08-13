@@ -2,9 +2,11 @@
 
 Enumerates the audio session scenes.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioSessionScene--><!--Device-audio-enum AudioSessionScene-End-->
 
@@ -18,9 +20,11 @@ AUDIO_SESSION_SCENE_MEDIA = 0
 
 Scene for media.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_MEDIA = 0--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_MEDIA = 0-End-->
 
@@ -34,9 +38,11 @@ AUDIO_SESSION_SCENE_GAME = 1
 
 Scene for game.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_GAME = 1--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_GAME = 1-End-->
 
@@ -50,9 +56,11 @@ AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2
 
 Scene for voice communication.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2-End-->
 

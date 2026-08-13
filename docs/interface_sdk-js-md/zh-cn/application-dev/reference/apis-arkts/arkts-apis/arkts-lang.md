@@ -1,6 +1,18 @@
 # @arkts.lang
 
-本模块提供ArkTS语言的基础类型定义，支持跨线程传递数据结构、注解保留策略控制等功能。当前提供ISendable类型、RetentionPolicy枚举类型和Retention注解。
+/*
+ Copyright (c) 2024-2025 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 ## 汇总
 
@@ -9,12 +21,6 @@
 | 名称 | 说明 |
 | --- | --- |
 | [lang](arkts-arkts-lang-n.md) | 本模块提供ArkTS语言的基础类型定义，支持跨线程传递数据结构、注解保留策略控制等功能。当前提供ISendable类型、RetentionPolicy枚举类型和Retention注解。 |
-
-### 接口
-
-| 名称 | 说明 |
-| --- | --- |
-| [Retention](arkts-arkts-lang-retention-i.md) | 系统提供的API注解能力，可用于指定自定义注解的生命周期。此注解只能标注在其他注解声明上。在自定义注解上标注Retention注解后，根据policy的不同取值，编译器会对自定义注解执行不同的保留策略。 |
 
 ### 枚举
 

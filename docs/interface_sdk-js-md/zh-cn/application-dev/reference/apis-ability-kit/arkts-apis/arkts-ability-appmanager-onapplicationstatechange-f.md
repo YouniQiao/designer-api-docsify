@@ -10,7 +10,9 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -34,8 +36,8 @@ function onApplicationStateChange(observer: ApplicationStateObserver): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -102,7 +104,9 @@ function onApplicationStateChange(observer: ApplicationStateObserver, bundleName
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.RUNNING_STATE_OBSERVER
 
@@ -127,8 +131,8 @@ function onApplicationStateChange(observer: ApplicationStateObserver, bundleName
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

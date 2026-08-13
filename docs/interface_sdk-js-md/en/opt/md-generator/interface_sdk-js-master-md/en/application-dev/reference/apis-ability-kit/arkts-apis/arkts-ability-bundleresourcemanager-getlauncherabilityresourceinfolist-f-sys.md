@@ -12,9 +12,11 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, resourceFlags: number): Promise<Array<LauncherAbilityResourceInfo>>
 ```
 
-Obtains the launcher ability resource information of each application corresponding to the **BundleOptions**element in **optionsList**. This API uses a promise to return the result.
+Obtains the launcher ability resource information of each application corresponding to the **BundleOptions** element in **optionsList**. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_INSTALLED_BUNDLE_LIST and ohos.permission.GET_BUNDLE_RESOURCES
 
@@ -43,13 +45,13 @@ Obtains the launcher ability resource information of each application correspond
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17700061](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-module-name-does-not-exist) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700002](../errorcode-bundle.md#17700002-module-name-does-not-exist) |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) |
 
 ## Examples
 

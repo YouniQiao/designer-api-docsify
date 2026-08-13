@@ -14,9 +14,11 @@ function pauseDistributedHardware(description: HardwareDescriptor): Promise<void
 
 Pauses the distributed hardware service on the controlled device. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_DISTRIBUTED_HARDWARE
 
@@ -42,11 +44,11 @@ Pauses the distributed hardware service on the controlled device. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. |
 | 24200101 | The specified distributed hardware is not started. |
 | 24200102 | The specified source device is not connected. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## Examples
 

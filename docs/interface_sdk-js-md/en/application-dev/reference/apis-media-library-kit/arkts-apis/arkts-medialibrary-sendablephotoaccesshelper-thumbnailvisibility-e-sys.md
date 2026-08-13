@@ -6,6 +6,8 @@ Ability to access thumbnail
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-enum ThumbnailVisibility--><!--Device-sendablePhotoAccessHelper-enum ThumbnailVisibility-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,6 +26,8 @@ Unable to access thumbnail
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-ThumbnailVisibility-INVISIBLE = 0--><!--Device-ThumbnailVisibility-INVISIBLE = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -41,6 +45,8 @@ able to access thumbnail
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-ThumbnailVisibility-VISIBLE = 1--><!--Device-ThumbnailVisibility-VISIBLE = 1-End-->
 

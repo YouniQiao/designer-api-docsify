@@ -4,6 +4,8 @@ Text content style.
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum TextContentStyle--><!--Device-unnamed-declare enum TextContentStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 Text content default style.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ INLINE = 1
 Text content inline style.
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

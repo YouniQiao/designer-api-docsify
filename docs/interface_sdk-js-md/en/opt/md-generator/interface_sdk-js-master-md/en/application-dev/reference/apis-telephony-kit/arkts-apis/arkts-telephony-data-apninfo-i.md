@@ -2,7 +2,9 @@
 
 Defines the APN info.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-data-interface ApnInfo--><!--Device-data-interface ApnInfo-End-->
 
@@ -24,7 +26,9 @@ Indicates APN.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-apn: string--><!--Device-ApnInfo-apn: string-End-->
 
@@ -40,7 +44,9 @@ Indicates APN name.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-apnName: string--><!--Device-ApnInfo-apnName: string-End-->
 
@@ -56,7 +62,9 @@ Indicates APN mcc.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-mcc: string--><!--Device-ApnInfo-mcc: string-End-->
 
@@ -72,7 +80,9 @@ Indicates APN mmsproxy.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-mmsproxy?: string--><!--Device-ApnInfo-mmsproxy?: string-End-->
 
@@ -88,7 +98,9 @@ Indicates APN mcc.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-mnc: string--><!--Device-ApnInfo-mnc: string-End-->
 
@@ -104,7 +116,9 @@ Indicates APN proxy.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-proxy?: string--><!--Device-ApnInfo-proxy?: string-End-->
 
@@ -120,7 +134,9 @@ Indicates APN type.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-type?: string--><!--Device-ApnInfo-type?: string-End-->
 
@@ -136,7 +152,9 @@ Indicates APN user.
 
 **Type:** string
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApnInfo-user?: string--><!--Device-ApnInfo-user?: string-End-->
 

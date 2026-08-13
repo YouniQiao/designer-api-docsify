@@ -8,7 +8,9 @@ Defines text span style option of RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface RichEditorUpdateTextSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateTextSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface RichEditorUpdateTextSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateTextSpanStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ text style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,6 +49,8 @@ RichEditor url style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

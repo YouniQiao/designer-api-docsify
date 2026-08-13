@@ -2,7 +2,9 @@
 
 Defines a subscription data holder for processing event information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiAppEvent-class AppEventPackageHolder--><!--Device-hiAppEvent-class AppEventPackageHolder-End-->
 
@@ -22,7 +24,9 @@ constructor(watcherName: string)
 
 Constructs an **AppEventPackageHolder** instance. You can call [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher) to add an event watcher, and then associate the **AppEventPackageHolder** instance with the watcher added in the application based on the watcher name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -61,7 +65,9 @@ setRow(size: number): void
 
 Sets the number of data records of the event package obtained each time. When **setRow()** and **setSize()** are called at the same time, only **setRow()** takes effect.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -79,8 +85,8 @@ Sets the number of data records of the event package obtained each time. When **
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11104001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-invalid-event-package-size) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) |
 
 ## Examples
 
@@ -99,7 +105,9 @@ setSize(size: number): void
 
 Sets the threshold for the data size of the event package obtained each time.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -117,8 +125,8 @@ Sets the threshold for the data size of the event package obtained each time.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11104001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11104001-invalid-event-package-size) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11104001](../errorcode-hiappevent.md#11104001-invalid-event-package-size) |
 
 ## Examples
 
@@ -135,13 +143,11 @@ holder2.setSize(1000);
 takeNext(): AppEventPackage
 ```
 
-Obtains the subscription event.
-
-The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned.
-
-When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
+Obtains the subscription event. The system obtains the subscription event data based on the data size threshold specified by **setSize** or the number of data records specified by **setRow**. By default, one subscription event data record is obtained. When all subscription event data is obtained, **null** is returned. When **setRow** and **setSize** are called at the same time, only **setRow** takes effect.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -163,3 +169,27 @@ let holder4: hiAppEvent.AppEventPackageHolder = new hiAppEvent.AppEventPackageHo
 // Obtain the subscribed event.
 let eventPkg: hiAppEvent.AppEventPackage | null = holder4.takeNext();
 ```
+
+## takeNext
+
+```TypeScript
+takeNext(): AppEventPackage | null
+```
+
+Obtains the subscription event. &lt;br&gt;The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned. &lt;br&gt;When setRow and setSize are called at the same time, only setRow takes effect.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AppEventPackageHolder-takeNext(): AppEventPackage | null--><!--Device-AppEventPackageHolder-takeNext(): AppEventPackage | null-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AppEventPackage](arkts-performanceanalysis-hiappevent-appeventpackage-i.md) |

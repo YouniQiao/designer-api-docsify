@@ -2,7 +2,9 @@
 
 Enum for user activity scenario.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum UserActivityScenario--><!--Device-geoLocationManager-export enum UserActivityScenario-End-->
 
@@ -16,9 +18,11 @@ NAVIGATION = 0x401
 
 Navigation scenario. High positioning precision and real-time performance are required.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserActivityScenario-NAVIGATION = 0x401--><!--Device-UserActivityScenario-NAVIGATION = 0x401-End-->
 
@@ -32,9 +36,11 @@ SPORT = 0x402
 
 Sport scenario. High positioning precision is required.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserActivityScenario-SPORT = 0x402--><!--Device-UserActivityScenario-SPORT = 0x402-End-->
 
@@ -48,9 +54,11 @@ TRANSPORT = 0x403
 
 Transport scenario. High positioning precision and real-time performance are required.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserActivityScenario-TRANSPORT = 0x403--><!--Device-UserActivityScenario-TRANSPORT = 0x403-End-->
 
@@ -64,9 +72,11 @@ DAILY_LIFE_SERVICE = 0x404
 
 Daily life scenarios. Low requirements on positioning precision.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404--><!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404-End-->
 

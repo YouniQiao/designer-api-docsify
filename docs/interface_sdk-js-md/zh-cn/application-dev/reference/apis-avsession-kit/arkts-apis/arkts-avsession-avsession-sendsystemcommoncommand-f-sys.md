@@ -10,7 +10,9 @@ function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<stri
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -39,9 +41,9 @@ function sendSystemCommonCommand(command: string, args: ExtraInfo): Promise<stri
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-| [6600105](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
-| [6600107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permission denied |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
+| [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 

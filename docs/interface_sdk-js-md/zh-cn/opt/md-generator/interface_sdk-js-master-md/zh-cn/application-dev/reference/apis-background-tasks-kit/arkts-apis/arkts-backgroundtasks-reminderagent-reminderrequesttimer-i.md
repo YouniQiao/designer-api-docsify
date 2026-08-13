@@ -10,7 +10,7 @@
 
 **替代接口：** [ReminderRequestTimer](arkts-backgroundtasks-reminderagentmanager-reminderrequesttimer-i.md#ReminderRequestTimer)
 
-<!--Device-reminderAgent-interface ReminderRequestTimer extends ReminderRequest--><!--Device-reminderAgent-interface ReminderRequestTimer extends ReminderRequest-End-->
+<!--Device-reminderAgent-interface ReminderRequestTimer--><!--Device-reminderAgent-interface ReminderRequestTimer-End-->
 
 **系统能力：** SystemCapability.Notification.ReminderAgent
 
@@ -28,7 +28,7 @@ triggerTimeInSeconds: number
 
 **废弃版本：** 9
 
-**替代接口：** [triggerTimeInSeconds](reminderAgentManager.ReminderRequestTimer.triggerTimeInSeconds)
+**替代接口：** triggerTimeInSeconds
 
 <!--Device-ReminderRequestTimer-triggerTimeInSeconds: number--><!--Device-ReminderRequestTimer-triggerTimeInSeconds: number-End-->
 

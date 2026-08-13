@@ -4,16 +4,13 @@
 type SourceReadCallback = (uuid: number, requestedOffset: number, requestedLength: number) => void
 ```
 
-This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the   
-[respondData](arkts-media-media-mediasourceloadingrequest-i.md#respondData)API of the corresponding MediaSourceLoadingRequest object.
+This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the [respondData](arkts-media-media-mediasourceloadingrequest-i.md#respondData) API of the corresponding MediaSourceLoadingRequest object. > **NOTE：**> > The client must return the handle immediately after processing the request.
 
-> **NOTE：**
-> 
-> The client must return the handle immediately after processing the request.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-media-type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: long) => void--><!--Device-media-type SourceReadCallback = (uuid: long, requestedOffset: long, requestedLength: long) => void-End-->
 

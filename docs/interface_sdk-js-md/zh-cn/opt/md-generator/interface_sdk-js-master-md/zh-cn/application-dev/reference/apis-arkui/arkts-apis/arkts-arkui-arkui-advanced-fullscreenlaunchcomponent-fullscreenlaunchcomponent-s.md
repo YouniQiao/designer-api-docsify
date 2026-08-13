@@ -1,17 +1,10 @@
 # FullScreenLaunchComponent
 
-全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。
-
-> **说明：**
-> 
-> 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
-> 当需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)。
-> 否则，系统无法保证原子化服务功能正常。
+全屏启动原子化服务组件，当提供方授权使用方嵌入式运行原子化服务时，使用方全屏嵌入式运行原子化服务；未授权时，使用方跳出式拉起原子化服务。 > **说明：** > > 该组件从API version 12开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。 > > 当需要在该组件中实现可嵌入式运行的原子化服务，必须继承自[EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility)。 > 否则，系统无法保证原子化服务功能正常。
 
 **起始版本：** 12
 
-**装饰器类型：** @Component
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare struct FullScreenLaunchComponent--><!--Device-unnamed-export declare struct FullScreenLaunchComponent-End-->
 
@@ -29,6 +22,8 @@ appId: string
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FullScreenLaunchComponent-appId: string--><!--Device-FullScreenLaunchComponent-appId: string-End-->
@@ -38,7 +33,8 @@ appId: string
 ## content
 
 ```TypeScript
-content: Callback<void>
+@BuilderParam
+  content: Callback<void>
 ```
 
 可以使用组件组合来自定义拉起原子化服务前的占位图标，实现类似大桌面应用图标的效果。点击占位组件后，将拉起原子化服务。
@@ -47,11 +43,11 @@ content: Callback<void>
 
 **起始版本：** 12
 
-**装饰器类型：** @BuilderParam
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-<!--Device-FullScreenLaunchComponent-content: Callback<void>--><!--Device-FullScreenLaunchComponent-content: Callback<void>-End-->
+<!--Device-FullScreenLaunchComponent-@BuilderParam  content: Callback<void>--><!--Device-FullScreenLaunchComponent-@BuilderParam  content: Callback<void>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -67,6 +63,8 @@ onError?: ErrorCallback
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FullScreenLaunchComponent-onError?: ErrorCallback--><!--Device-FullScreenLaunchComponent-onError?: ErrorCallback-End-->
@@ -79,11 +77,13 @@ onError?: ErrorCallback
 onReceive?: Callback<Record<string, Object>>
 ```
 
-被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](@ohos.window)调用相关API时，触发本回调。
+被拉起的嵌入式运行原子化服务通过[@ohos.window (窗口)](arkts-arkui-window-n.md#window)调用相关API时，触发本回调。
 
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt;
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -97,13 +97,13 @@ onReceive?: Callback<Record<string, Object>>
 onTerminated?: Callback<TerminationInfo>
 ```
 
-被拉起的嵌入式运行原子化服务通过点击原子化服务退出按钮、手势侧滑、调用  
-[terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)或者  
-[terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf)正常退出时，触发本回调函数。
+被拉起的嵌入式运行原子化服务通过点击原子化服务退出按钮、手势侧滑、调用 terminateSelfWithResult 或者 [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#terminateSelf) 正常退出时，触发本回调函数。
 
 **类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -122,6 +122,8 @@ options?: AtomicServiceOptions
 **类型：** [AtomicServiceOptions](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-atomicserviceoptions-atomicserviceoptions-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

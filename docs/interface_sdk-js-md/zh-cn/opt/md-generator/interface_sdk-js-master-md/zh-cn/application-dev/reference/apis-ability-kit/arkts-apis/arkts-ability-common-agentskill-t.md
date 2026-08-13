@@ -4,9 +4,11 @@
 export type AgentSkill = _AgentSkill
 ```
 
-AgentCard中的技能表示特定的 skills、专业知识和熟练程度用于执行任务或解决问题的代理。
+AgentCard中的技能表示特定的 skills、专业知识和熟练程度 用于执行任务或解决问题的代理。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

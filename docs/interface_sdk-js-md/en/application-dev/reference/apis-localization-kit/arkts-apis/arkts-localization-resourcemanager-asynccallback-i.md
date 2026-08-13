@@ -8,9 +8,9 @@ Asynchronous callback interface.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)
+**Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)
 
-<!--Device-resourceManager-export interface AsyncCallback<T>--><!--Device-resourceManager-export interface AsyncCallback<T>-End-->
+<!--Device-resourceManager-export interface AsyncCallback--><!--Device-resourceManager-export interface AsyncCallback-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -20,7 +20,7 @@ Asynchronous callback interface.
 import { resourceManager } from '@kit.LocalizationKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (err: Error, data: T): void
@@ -34,7 +34,7 @@ Defines an asynchronous callback that carries an error parameter and asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)
+**Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)
 
 <!--Device-AsyncCallback-(err: Error, data: T): void--><!--Device-AsyncCallback-(err: Error, data: T): void-End-->
 

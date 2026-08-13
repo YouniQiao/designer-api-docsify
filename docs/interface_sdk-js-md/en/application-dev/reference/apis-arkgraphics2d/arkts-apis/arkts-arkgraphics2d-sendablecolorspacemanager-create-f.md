@@ -18,6 +18,8 @@ Creates a criterion color space management instance that is sendable.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(colorSpaceName: colorSpaceManager.ColorSpace): ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -38,8 +40,8 @@ Creates a criterion color space management instance that is sendable.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
 
 ## Examples
 
@@ -62,6 +64,8 @@ Creates a custom color space object that is sendable.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager--><!--Device-sendableColorSpaceManager-function create(primaries: colorSpaceManager.ColorSpacePrimaries, gamma: number): ColorSpaceManager-End-->
 
 **System capability:** SystemCapability.Graphic.Graphic2D.ColorManager.Core
@@ -83,8 +87,8 @@ Creates a custom color space object that is sendable.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Incorrect parameter type. 2.Parameter verification failed. |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal. |
 
 ## Examples
 

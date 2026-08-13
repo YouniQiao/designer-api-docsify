@@ -12,19 +12,11 @@ import { applicationManager } from '@kit.MDMKit';
 function addHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-Adds applications to the home screen icon hide list.
-
-> **NOTE：**
-> 
-> 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are
-> not supported.
-> 
-> 2. If a hidden application has clones, the clones are hidden synchronously.
-> 
-> 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will
-> still be displayed on the home screen.
+Adds applications to the home screen icon hide list. > **NOTE：**> > 1. This API can only hide home screen icons for applications of the current user. Hiding application widgets are > not supported. > > 2. If a hidden application has clones, the clones are hidden synchronously. > > 3. Not all applications on the home screen can be added to the hidden list. Otherwise, all applications will > still be displayed on the home screen.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -45,11 +37,11 @@ Adds applications to the home screen icon hide list.
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Enumerates the camera tracking layouts.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum CameraTrackingLayout--><!--Device-mechanicManager-export enum CameraTrackingLayout-End-->
 
@@ -16,7 +18,9 @@ DEFAULT = 0
 
 Default layout.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraTrackingLayout-DEFAULT = 0--><!--Device-CameraTrackingLayout-DEFAULT = 0-End-->
 
@@ -30,7 +34,9 @@ LEFT = 1
 
 Left-side layout.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraTrackingLayout-LEFT = 1--><!--Device-CameraTrackingLayout-LEFT = 1-End-->
 
@@ -44,7 +50,9 @@ MIDDLE = 2
 
 Middle layout.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraTrackingLayout-MIDDLE = 2--><!--Device-CameraTrackingLayout-MIDDLE = 2-End-->
 
@@ -58,7 +66,9 @@ RIGHT = 3
 
 Right-side layout.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CameraTrackingLayout-RIGHT = 3--><!--Device-CameraTrackingLayout-RIGHT = 3-End-->
 

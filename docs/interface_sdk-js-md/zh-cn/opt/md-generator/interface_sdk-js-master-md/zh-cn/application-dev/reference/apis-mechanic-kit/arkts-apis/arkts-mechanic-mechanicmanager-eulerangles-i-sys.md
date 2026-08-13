@@ -2,7 +2,9 @@
 
 Absolute euler angles relative to the home position.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface EulerAngles--><!--Device-mechanicManager-export interface EulerAngles-End-->
 
@@ -20,7 +22,9 @@ pitch?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EulerAngles-pitch?: double--><!--Device-EulerAngles-pitch?: double-End-->
 
@@ -38,7 +42,9 @@ roll?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EulerAngles-roll?: double--><!--Device-EulerAngles-roll?: double-End-->
 
@@ -56,7 +62,9 @@ yaw?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EulerAngles-yaw?: double--><!--Device-EulerAngles-yaw?: double-End-->
 

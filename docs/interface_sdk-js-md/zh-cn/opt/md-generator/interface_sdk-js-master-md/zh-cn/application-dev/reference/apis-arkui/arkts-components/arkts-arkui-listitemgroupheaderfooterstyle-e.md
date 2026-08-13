@@ -4,6 +4,8 @@ ListItemGroup头部和尾部样式枚举。
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ListItemGroupHeaderFooterStyle--><!--Device-unnamed-declare enum ListItemGroupHeaderFooterStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NONE = 0
 无样式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ FLOATING = 1
 悬浮样式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

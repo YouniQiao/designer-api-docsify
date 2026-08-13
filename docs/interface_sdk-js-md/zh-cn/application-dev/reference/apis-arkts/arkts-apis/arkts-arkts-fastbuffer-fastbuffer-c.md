@@ -6,6 +6,8 @@ FastBuffer对象是比Buffer性能更优的Buffer容器，用于表示固定长�
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-fastbuffer-class FastBuffer--><!--Device-fastbuffer-class FastBuffer-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,6 +23,8 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -48,8 +52,8 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 
@@ -76,13 +80,13 @@ console.info(buf1.compare(buf2, 5, 6, 5).toString());
 copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number, sourceEnd?: number): number
 ```
 
-将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。
-
-如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
+将`this`实例中指定位置的数据复制到`target`的指定位置上，并返回复制的字节总长度。 如果sourceEnd大于target的长度，则以target的长度为准，超出部分不会被覆盖。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -109,8 +113,8 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 
@@ -145,6 +149,8 @@ entries(): IterableIterator<[
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -196,6 +202,8 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean--><!--Device-FastBuffer-equals(otherBuffer: Uint8Array | FastBuffer): boolean-End-->
@@ -218,7 +226,7 @@ equals(otherBuffer: Uint8Array | FastBuffer): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 
@@ -247,6 +255,8 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer--><!--Device-FastBuffer-fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: number, encoding?: BufferEncoding): FastBuffer-End-->
@@ -272,8 +282,8 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 
@@ -296,6 +306,8 @@ includes(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -341,6 +353,8 @@ indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, e
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-indexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -384,6 +398,8 @@ keys(): IterableIterator<number>
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -429,6 +445,8 @@ lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: numbe
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number--><!--Device-FastBuffer-lastIndexOf(value: string | number | FastBuffer | Uint8Array, byteOffset?: number, encoding?: BufferEncoding): number-End-->
@@ -473,6 +491,8 @@ readBigInt64BE(offset?: number): bigint
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64BE(offset?: number): bigint-End-->
@@ -495,7 +515,7 @@ readBigInt64BE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -520,6 +540,8 @@ readBigInt64LE(offset?: number): bigint
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigInt64LE(offset?: number): bigint-End-->
@@ -542,7 +564,7 @@ readBigInt64LE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -567,6 +589,8 @@ readBigUInt64BE(offset?: number): bigint
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64BE(offset?: number): bigint-End-->
@@ -589,7 +613,7 @@ readBigUInt64BE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -614,6 +638,8 @@ readBigUInt64LE(offset?: number): bigint
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint--><!--Device-FastBuffer-readBigUInt64LE(offset?: number): bigint-End-->
@@ -636,7 +662,7 @@ readBigUInt64LE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -661,6 +687,8 @@ readDoubleBE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readDoubleBE(offset?: number): number--><!--Device-FastBuffer-readDoubleBE(offset?: number): number-End-->
@@ -683,7 +711,7 @@ readDoubleBE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -707,6 +735,8 @@ readDoubleLE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readDoubleLE(offset?: number): number--><!--Device-FastBuffer-readDoubleLE(offset?: number): number-End-->
@@ -729,7 +759,7 @@ readDoubleLE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -753,6 +783,8 @@ readFloatBE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readFloatBE(offset?: number): number--><!--Device-FastBuffer-readFloatBE(offset?: number): number-End-->
@@ -775,7 +807,7 @@ readFloatBE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -799,6 +831,8 @@ readFloatLE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readFloatLE(offset?: number): number--><!--Device-FastBuffer-readFloatLE(offset?: number): number-End-->
@@ -821,7 +855,7 @@ readFloatLE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -845,6 +879,8 @@ readInt16BE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readInt16BE(offset?: number): number--><!--Device-FastBuffer-readInt16BE(offset?: number): number-End-->
@@ -867,7 +903,7 @@ readInt16BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -891,6 +927,8 @@ readInt16LE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readInt16LE(offset?: number): number--><!--Device-FastBuffer-readInt16LE(offset?: number): number-End-->
@@ -913,7 +951,7 @@ readInt16LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -937,6 +975,8 @@ readInt32BE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readInt32BE(offset?: number): number--><!--Device-FastBuffer-readInt32BE(offset?: number): number-End-->
@@ -959,7 +999,7 @@ readInt32BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -983,6 +1023,8 @@ readInt32LE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readInt32LE(offset?: number): number--><!--Device-FastBuffer-readInt32LE(offset?: number): number-End-->
@@ -1005,7 +1047,7 @@ readInt32LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1029,6 +1071,8 @@ readInt8(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readInt8(offset?: number): number--><!--Device-FastBuffer-readInt8(offset?: number): number-End-->
@@ -1051,7 +1095,7 @@ readInt8(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
 ## 示例
 
@@ -1077,6 +1121,8 @@ readIntBE(offset: number, byteLength: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntBE(offset: number, byteLength: number): number-End-->
@@ -1100,7 +1146,7 @@ readIntBE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1125,6 +1171,8 @@ readIntLE(offset: number, byteLength: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readIntLE(offset: number, byteLength: number): number-End-->
@@ -1148,7 +1196,7 @@ readIntLE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1172,6 +1220,8 @@ readUInt16BE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readUInt16BE(offset?: number): number--><!--Device-FastBuffer-readUInt16BE(offset?: number): number-End-->
@@ -1194,7 +1244,7 @@ readUInt16BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -1220,6 +1270,8 @@ readUInt16LE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readUInt16LE(offset?: number): number--><!--Device-FastBuffer-readUInt16LE(offset?: number): number-End-->
@@ -1242,7 +1294,7 @@ readUInt16LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -1268,6 +1320,8 @@ readUInt32BE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readUInt32BE(offset?: number): number--><!--Device-FastBuffer-readUInt32BE(offset?: number): number-End-->
@@ -1290,7 +1344,7 @@ readUInt32BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1314,6 +1368,8 @@ readUInt32LE(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readUInt32LE(offset?: number): number--><!--Device-FastBuffer-readUInt32LE(offset?: number): number-End-->
@@ -1336,7 +1392,7 @@ readUInt32LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1360,6 +1416,8 @@ readUInt8(offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readUInt8(offset?: number): number--><!--Device-FastBuffer-readUInt8(offset?: number): number-End-->
@@ -1382,7 +1440,7 @@ readUInt8(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
 
 ## 示例
 
@@ -1408,6 +1466,8 @@ readUIntBE(offset: number, byteLength: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number--><!--Device-FastBuffer-readUIntBE(offset: number, byteLength: number): number-End-->
@@ -1431,7 +1491,7 @@ readUIntBE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1454,6 +1514,8 @@ readUIntLE(offset: number, byteLength: number): number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1478,7 +1540,7 @@ readUIntLE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1501,6 +1563,8 @@ subarray(start?: number, end?: number): FastBuffer
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1548,6 +1612,8 @@ swap16(): FastBuffer
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-swap16(): FastBuffer--><!--Device-FastBuffer-swap16(): FastBuffer-End-->
@@ -1564,7 +1630,7 @@ swap16(): FastBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 16-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 16-bits |
 
 ## 示例
 
@@ -1591,6 +1657,8 @@ swap32(): FastBuffer
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-swap32(): FastBuffer--><!--Device-FastBuffer-swap32(): FastBuffer-End-->
@@ -1607,7 +1675,7 @@ swap32(): FastBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 32-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 32-bits |
 
 ## 示例
 
@@ -1634,6 +1702,8 @@ swap64(): FastBuffer
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-swap64(): FastBuffer--><!--Device-FastBuffer-swap64(): FastBuffer-End-->
@@ -1650,7 +1720,7 @@ swap64(): FastBuffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200009](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 64-bits |
+| [10200009](../errorcode-utils.md#10200009-buffer的长度错误) | The fastbuffer size must be a multiple of 64-bits |
 
 ## 示例
 
@@ -1676,6 +1746,8 @@ toJSON(): Object
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1712,6 +1784,8 @@ toString(encoding?: string, start?: number, end?: number): string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string--><!--Device-FastBuffer-toString(encoding?: string, start?: number, end?: number): string-End-->
@@ -1736,7 +1810,7 @@ toString(encoding?: string, start?: number, end?: number): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 
@@ -1762,6 +1836,8 @@ values(): IterableIterator<number>
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -1809,6 +1885,8 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number--><!--Device-FastBuffer-write(str: string, offset?: number, length?: number, encoding?: string): number-End-->
@@ -1834,8 +1912,8 @@ write(str: string, offset?: number, length?: number, encoding?: string): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
-| [10200068](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | Range error. Possible causes: The value of the parameter is not within the specified range. |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) | The underlying ArrayBuffer is null or detach. |
 
 ## 示例
 
@@ -1865,6 +1943,8 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64BE(value: bigint, offset?: number): number-End-->
@@ -1888,7 +1968,7 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1913,6 +1993,8 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigInt64LE(value: bigint, offset?: number): number-End-->
@@ -1936,7 +2018,7 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1961,6 +2043,8 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64BE(value: bigint, offset?: number): number-End-->
@@ -1984,7 +2068,7 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2009,6 +2093,8 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number--><!--Device-FastBuffer-writeBigUInt64LE(value: bigint, offset?: number): number-End-->
@@ -2032,7 +2118,7 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2057,6 +2143,8 @@ writeDoubleBE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleBE(value: number, offset?: number): number-End-->
@@ -2080,7 +2168,7 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -2105,6 +2193,8 @@ writeDoubleLE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeDoubleLE(value: number, offset?: number): number-End-->
@@ -2128,7 +2218,7 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -2153,6 +2243,8 @@ writeFloatBE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatBE(value: number, offset?: number): number-End-->
@@ -2176,7 +2268,7 @@ writeFloatBE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -2201,6 +2293,8 @@ writeFloatLE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number--><!--Device-FastBuffer-writeFloatLE(value: number, offset?: number): number-End-->
@@ -2224,7 +2318,7 @@ writeFloatLE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -2249,6 +2343,8 @@ writeInt16BE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16BE(value: number, offset?: number): number-End-->
@@ -2272,7 +2368,7 @@ writeInt16BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2297,6 +2393,8 @@ writeInt16LE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt16LE(value: number, offset?: number): number-End-->
@@ -2320,7 +2418,7 @@ writeInt16LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2345,6 +2443,8 @@ writeInt32BE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32BE(value: number, offset?: number): number-End-->
@@ -2368,7 +2468,7 @@ writeInt32BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2393,6 +2493,8 @@ writeInt32LE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt32LE(value: number, offset?: number): number-End-->
@@ -2416,7 +2518,7 @@ writeInt32LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2441,6 +2543,8 @@ writeInt8(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeInt8(value: number, offset?: number): number-End-->
@@ -2464,7 +2568,7 @@ writeInt8(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2492,6 +2596,8 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2516,7 +2622,7 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2540,6 +2646,8 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -2565,7 +2673,7 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2590,6 +2698,8 @@ writeUInt16BE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16BE(value: number, offset?: number): number-End-->
@@ -2613,7 +2723,7 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2641,6 +2751,8 @@ writeUInt16LE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt16LE(value: number, offset?: number): number-End-->
@@ -2664,7 +2776,7 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2692,6 +2804,8 @@ writeUInt32BE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32BE(value: number, offset?: number): number-End-->
@@ -2715,7 +2829,7 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2740,6 +2854,8 @@ writeUInt32LE(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt32LE(value: number, offset?: number): number-End-->
@@ -2763,7 +2879,7 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2788,6 +2904,8 @@ writeUInt8(value: number, offset?: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number--><!--Device-FastBuffer-writeUInt8(value: number, offset?: number): number-End-->
@@ -2811,7 +2929,7 @@ writeUInt8(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2845,6 +2963,8 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number--><!--Device-FastBuffer-writeUIntBE(value: number, offset: number, byteLength: number): number-End-->
@@ -2869,7 +2989,7 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2893,6 +3013,8 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -2918,7 +3040,7 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2945,6 +3067,8 @@ FastBuffer底层对应的ArrayBuffer对象。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-buffer: ArrayBuffer--><!--Device-FastBuffer-buffer: ArrayBuffer-End-->
@@ -2965,6 +3089,8 @@ byteOffset: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-FastBuffer-byteOffset: number--><!--Device-FastBuffer-byteOffset: number-End-->
@@ -2984,6 +3110,8 @@ FastBuffer对象的字节长度。
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-export interface AttachOptions--><!--Device-inputMethod-export interface AttachOptions-End-->
 
@@ -24,7 +26,9 @@ requestKeyboardReason?: RequestKeyboardReason
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,10 +42,7 @@ requestKeyboardReason?: RequestKeyboardReason
 showKeyboard?: boolean
 ```
 
-绑定输入法成功后，是否拉起输入法键盘。
-
-- true表示拉起。  
-- false表示不拉起。
+绑定输入法成功后，是否拉起输入法键盘。 - true表示拉起。 - false表示不拉起。
 
 **类型：** boolean
 
@@ -49,7 +50,9 @@ showKeyboard?: boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

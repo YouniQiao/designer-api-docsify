@@ -13,17 +13,15 @@ function startAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int, c
       customArgs?: string): void
 ```
 
-Starts an asynchronous trace with the trace output level specified.
+Starts an asynchronous trace with the trace output level specified. If multiple trace tasks with the same name need to be performed at the same time or a trace needs to be performed multiple times concurrently, different task IDs must be specified in **startAsyncTrace**. If the trace tasks with the same name are not performed at the same time, the same taskId can be used. For details, see [finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishAsyncTrace).
 
-If multiple trace tasks with the same name need to be performed at the same time or a trace needs to be performed multiple times concurrently, different task IDs must be specified in **startAsyncTrace**.
+**Since:** 23
 
-If the trace tasks with the same name are not performed at the same time, the same taskId can be used. For details,see [finishAsyncTrace()](arkts-performanceanalysis-hitracemeter-finishasynctrace-f.md#finishAsyncTrace).
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 19
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function startAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int, customCategory: string,      customArgs?: string): void--><!--Device-hiTraceMeter-function startAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int, customCategory: string,      customArgs?: string): void-End-->
 
@@ -35,7 +33,7 @@ If the trace tasks with the same name are not performed at the same time, the sa
 | --- | --- | --- | --- |
 | level | [HiTraceOutputLevel](arkts-performanceanalysis-hitracemeter-hitraceoutputlevel-e.md) | Yes | Trace output level. |
 | name | string | Yes | Name of the trace to start. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
-| taskId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Task ID. It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
+| taskId | int | Yes | Task ID. It is used to distinguish multiple tasks with the same name. Ensure that the task IDs of concurrently executed tasks with the same name are unique. |
 | customCategory | string | Yes | Custom category name, which is used to collect asynchronous trace data of the same type. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
 | customArgs | string | No | Custom key-value pair. The format is key=value. Multiple key-value pairs are separated by commas (,). The default value is an empty string. The maximum length of a trace record is 512 bytes. The excess part will be truncated. It is recommended that the total length of **name**, **customCategory**, and **customArgs** be less than or equal to 420 bytes. |
 

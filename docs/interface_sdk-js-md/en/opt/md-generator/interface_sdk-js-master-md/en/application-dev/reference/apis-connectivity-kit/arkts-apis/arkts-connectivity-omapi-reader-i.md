@@ -4,6 +4,8 @@ Reader represents the SE readers supported by this device.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -24,6 +26,8 @@ Close all the sessions opened on this reader. All the channels opened by all the
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -32,8 +36,8 @@ Close all the sessions opened on this reader. All the channels opened by all the
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -73,9 +77,11 @@ function secureElementDemo() {
 getName(): string
 ```
 
-Returns the name of this reader.If this reader is a SIM reader, then its name must be "SIM[slot]".If the reader is an embedded SE reader, then its name must be "eSE[slot]".
+Returns the name of this reader. If this reader is a SIM reader, then its name must be "SIM[slot]". If the reader is an embedded SE reader, then its name must be "eSE[slot]".
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
 
@@ -91,7 +97,7 @@ Returns the name of this reader.If this reader is a SIM reader, then its name mu
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -122,6 +128,8 @@ Checks if a SE is present in this reader.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -136,8 +144,8 @@ Checks if a SE is present in this reader.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
 
 ## Examples
 
@@ -164,9 +172,11 @@ try {
 openSession(): Session
 ```
 
-Connects to a SE in this reader.This method prepares (initializes) the SE for communication before the session object is returned.There might be multiple sessions opened at the same time on the same reader.
+Connects to a SE in this reader. This method prepares (initializes) the SE for communication before the session object is returned. There might be multiple sessions opened at the same time on the same reader.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
 
@@ -182,9 +192,9 @@ Connects to a SE in this reader.This method prepares (initializes) the SE for co
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3300101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) |
-| [3300104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) |
 
 ## Examples
 

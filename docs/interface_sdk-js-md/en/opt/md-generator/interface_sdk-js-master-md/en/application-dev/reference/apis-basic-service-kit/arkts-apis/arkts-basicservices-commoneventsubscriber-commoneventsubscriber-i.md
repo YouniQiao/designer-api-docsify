@@ -2,7 +2,9 @@
 
 Represents the subscriber of a common event. The **CommonEventSubscriber** module provides the capabilities for processing ordered common events, including obtaining and setting the data and code transferred by events, checking whether the current common event is an ordered or sticky event, terminating an ordered common event or clearing the termination status, ending the processing of the current ordered common event, and obtaining subscription information of a subscriber. This module is applicable to data processing and process control of the received common event by the subscriber.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface CommonEventSubscriber--><!--Device-unnamed-export interface CommonEventSubscriber-End-->
 
@@ -14,10 +16,11 @@ Represents the subscriber of a common event. The **CommonEventSubscriber** modul
 abortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-Aborts an ordered common event. This API is used with   
-[finishCommonEvent](#finishCommonEvent). After the abort,the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
+Aborts an ordered common event. This API is used with [finishCommonEvent](#finishCommonEvent). After the abort, the common event is not sent to the next subscriber. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-abortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -33,7 +36,7 @@ Aborts an ordered common event. This API is used with
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -60,10 +63,11 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 abortCommonEvent(): Promise<void>
 ```
 
-Aborts an ordered common event. This API is used with  
-[finishCommonEvent](#finishCommonEvent). After the abort,the common event is not sent to the next subscriber. This API uses a promise to return the result.
+Aborts an ordered common event. This API is used with [finishCommonEvent](#finishCommonEvent). After the abort, the common event is not sent to the next subscriber. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-abortCommonEvent(): Promise<void>-End-->
 
@@ -96,10 +100,11 @@ subscriber.finishCommonEvent().then(() => {
 abortCommonEventSync(): void
 ```
 
-Aborts an ordered common event when used with  
-[finishCommonEvent](#finishCommonEvent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
+Aborts an ordered common event when used with [finishCommonEvent](#finishCommonEvent). With the abort state, the common event is not sent to the next subscriber. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-abortCommonEventSync(): void--><!--Device-CommonEventSubscriber-abortCommonEventSync(): void-End-->
 
@@ -122,10 +127,11 @@ subscriber.finishCommonEvent().then(() => {
 clearAbortCommonEvent(callback: AsyncCallback<void>): void
 ```
 
-Clears the abort state of an ordered common event. Use this API together with   
-[finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
+Clears the abort state of an ordered common event. Use this API together with [finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -141,7 +147,7 @@ Clears the abort state of an ordered common event. Use this API together with
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -168,10 +174,11 @@ subscriber.finishCommonEvent((err: BusinessError) => {
 clearAbortCommonEvent(): Promise<void>
 ```
 
-Clears the abort state of this ordered common event. Use this API together with   
-[finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
+Clears the abort state of this ordered common event. Use this API together with [finishCommonEvent](#finishCommonEvent), and the common event can be passed to the next subscriber. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-clearAbortCommonEvent(): Promise<void>-End-->
 
@@ -204,10 +211,11 @@ subscriber.finishCommonEvent().then(() => {
 clearAbortCommonEventSync(): void
 ```
 
-Clears the abort state of an ordered common event when used with  
-[finishCommonEvent](#finishCommonEvent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
+Clears the abort state of an ordered common event when used with [finishCommonEvent](#finishCommonEvent). After the clearance, the common event is sent to the next subscriber. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void--><!--Device-CommonEventSubscriber-clearAbortCommonEventSync(): void-End-->
 
@@ -232,7 +240,9 @@ finishCommonEvent(callback: AsyncCallback<void>): void
 
 Finishes this ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void--><!--Device-CommonEventSubscriber-finishCommonEvent(callback: AsyncCallback<void>): void-End-->
 
@@ -248,7 +258,7 @@ Finishes this ordered common event. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -270,7 +280,9 @@ finishCommonEvent(): Promise<void>
 
 Finishes this ordered common event. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>--><!--Device-CommonEventSubscriber-finishCommonEvent(): Promise<void>-End-->
 
@@ -300,7 +312,9 @@ getAbortCommonEvent(callback: AsyncCallback<boolean>): void
 
 Checks whether this ordered common event should be aborted. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-getAbortCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -316,7 +330,7 @@ Checks whether this ordered common event should be aborted. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -338,7 +352,9 @@ getAbortCommonEvent(): Promise<boolean>
 
 Checks whether this ordered common event should be aborted. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-getAbortCommonEvent(): Promise<boolean>-End-->
 
@@ -368,7 +384,9 @@ getAbortCommonEventSync(): boolean
 
 Checks whether an ordered common event is aborted. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-getAbortCommonEventSync(): boolean-End-->
 
@@ -395,7 +413,9 @@ getCode(callback: AsyncCallback<number>): void
 
 Obtains the result code of an ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -413,7 +433,7 @@ Obtains the result code of an ordered common event. This API uses an asynchronou
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -435,7 +455,9 @@ getCode(): Promise<number>
 
 Obtains the result code of an ordered common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -467,7 +489,9 @@ getCodeSync(): number
 
 Obtains the result code of an ordered common event. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -496,7 +520,9 @@ getData(callback: AsyncCallback<string>): void
 
 Obtains the data of an ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -514,7 +540,7 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -537,7 +563,9 @@ getData(): Promise<string>
 
 Obtains the data of an ordered common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -569,7 +597,9 @@ getDataSync(): string
 
 Obtains the data of an ordered common event. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -600,6 +630,8 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo>): void-End-->
@@ -616,7 +648,7 @@ Obtains the subscriber information. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -633,12 +665,42 @@ subscriber.getSubscribeInfo((err: BusinessError, subscribeInfo: commonEventManag
 ## getSubscribeInfo
 
 ```TypeScript
+getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void
+```
+
+Obtains the subscriber information. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void--><!--Device-CommonEventSubscriber-getSubscribeInfo(callback: AsyncCallback<CommonEventSubscribeInfo|null>): void-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null & gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## getSubscribeInfo
+
+```TypeScript
 getSubscribeInfo(): Promise<CommonEventSubscribeInfo>
 ```
 
 Obtains the subscriber information. This API uses a promise to return the result.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -662,6 +724,28 @@ subscriber.getSubscribeInfo().then((subscribeInfo: commonEventManager.CommonEven
 });
 ```
 
+## getSubscribeInfo
+
+```TypeScript
+getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>
+```
+
+Obtains the subscriber information. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>--><!--Device-CommonEventSubscriber-getSubscribeInfo(): Promise<CommonEventSubscribeInfo|null>-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) \| null & gt; |
+
 ## getSubscribeInfoSync
 
 ```TypeScript
@@ -671,6 +755,8 @@ getSubscribeInfoSync(): CommonEventSubscribeInfo
 Obtains the subscriber information. This API returns the result synchronously.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -691,6 +777,28 @@ let subscribeInfo: commonEventManager.CommonEventSubscribeInfo = subscriber.getS
 console.info(`Succeeded in getting subscribe info, subscribe info is ${JSON.stringify(subscribeInfo)}`);
 ```
 
+## getSubscribeInfoSync
+
+```TypeScript
+getSubscribeInfoSync(): CommonEventSubscribeInfo|null
+```
+
+Obtains the subscriber information. This API returns the result synchronously.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo|null--><!--Device-CommonEventSubscriber-getSubscribeInfoSync(): CommonEventSubscribeInfo|null-End-->
+
+**System capability:** SystemCapability.Notification.CommonEvent
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [CommonEventSubscribeInfo](arkts-basicservices-commoneventsubscribeinfo-commoneventsubscribeinfo-i.md) |
+
 ## isOrderedCommonEvent
 
 ```TypeScript
@@ -699,7 +807,9 @@ isOrderedCommonEvent(callback: AsyncCallback<boolean>): void
 
 Checks whether the current common event is an ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -715,7 +825,7 @@ Checks whether the current common event is an ordered common event. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -737,7 +847,9 @@ isOrderedCommonEvent(): Promise<boolean>
 
 Checks whether the current common event is an ordered common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isOrderedCommonEvent(): Promise<boolean>-End-->
 
@@ -767,7 +879,9 @@ isOrderedCommonEventSync(): boolean
 
 Checks whether a common event is an ordered one. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isOrderedCommonEventSync(): boolean-End-->
 
@@ -794,7 +908,9 @@ isStickyCommonEvent(callback: AsyncCallback<boolean>): void
 
 Checks whether the current common event is a sticky common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void--><!--Device-CommonEventSubscriber-isStickyCommonEvent(callback: AsyncCallback<boolean>): void-End-->
 
@@ -810,7 +926,7 @@ Checks whether the current common event is a sticky common event. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -832,7 +948,9 @@ isStickyCommonEvent(): Promise<boolean>
 
 Checks whether the current common event is a sticky common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>--><!--Device-CommonEventSubscriber-isStickyCommonEvent(): Promise<boolean>-End-->
 
@@ -862,7 +980,9 @@ isStickyCommonEventSync(): boolean
 
 Checks whether the current common event is a sticky common event. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean--><!--Device-CommonEventSubscriber-isStickyCommonEventSync(): boolean-End-->
 
@@ -889,7 +1009,9 @@ setCode(code: number, callback: AsyncCallback<void>): void
 
 Sets the code of an ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -908,7 +1030,7 @@ Sets the code of an ordered common event. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -930,7 +1052,9 @@ setCode(code: number): Promise<void>
 
 Sets the result code of an ordered common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -954,7 +1078,7 @@ Sets the result code of an ordered common event. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -974,7 +1098,9 @@ setCodeAndData(code: number, data: string, callback: AsyncCallback<void>): void
 
 Sets the result code and data of an ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -994,7 +1120,7 @@ Sets the result code and data of an ordered common event. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1016,7 +1142,9 @@ setCodeAndData(code: number, data: string): Promise<void>
 
 Sets the result code and data of an ordered common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1041,7 +1169,7 @@ Sets the result code and data of an ordered common event. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1061,7 +1189,9 @@ setCodeAndDataSync(code: number, data: string): void
 
 Sets the code and data of an ordered common event. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1080,7 +1210,7 @@ Sets the code and data of an ordered common event. This API returns the result s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1101,7 +1231,9 @@ setCodeSync(code: number): void
 
 Sets the result code of an ordered common event. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1119,7 +1251,7 @@ Sets the result code of an ordered common event. This API returns the result syn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1140,7 +1272,9 @@ setData(data: string, callback: AsyncCallback<void>): void
 
 Sets the data of an ordered common event. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1159,7 +1293,7 @@ Sets the data of an ordered common event. This API uses an asynchronous callback
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1181,7 +1315,9 @@ setData(data: string): Promise<void>
 
 Sets the result data of an ordered common event. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1205,7 +1341,7 @@ Sets the result data of an ordered common event. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1225,7 +1361,9 @@ setDataSync(data: string): void
 
 Sets the result data of an ordered common event. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1243,7 +1381,7 @@ Sets the result data of an ordered common event. This API returns the result syn
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

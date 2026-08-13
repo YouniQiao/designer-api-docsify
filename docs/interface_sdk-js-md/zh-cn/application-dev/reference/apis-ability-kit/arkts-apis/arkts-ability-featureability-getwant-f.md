@@ -12,6 +12,8 @@ function getWant(callback: AsyncCallback<Want>): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在FA模型下使用。
 
 <!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void--><!--Device-featureAbility-function getWant(callback: AsyncCallback<Want>): void-End-->
@@ -22,7 +24,7 @@ function getWant(callback: AsyncCallback<Want>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数，返回want信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 回调函数，返回want信息。 |
 
 ## 示例
 
@@ -51,6 +53,8 @@ function getWant(): Promise<Want>
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

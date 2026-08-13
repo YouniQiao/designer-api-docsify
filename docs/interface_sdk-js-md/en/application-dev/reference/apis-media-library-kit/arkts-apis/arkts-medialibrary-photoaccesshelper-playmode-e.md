@@ -2,9 +2,11 @@
 
 Enumerates whether to support automatic playback of the moving photo.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum PlayMode--><!--Device-photoAccessHelper-export enum PlayMode-End-->
 
@@ -18,13 +20,15 @@ DEFAULT = 0
 
 The automatic playback of the moving photo is not supported.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PlayMode-DEFAULT = 0--><!--Device-PlayMode-DEFAULT = 0-End-->
 
@@ -38,13 +42,15 @@ AUTO_PLAY = 1
 
 The automatic playback of the moving photo is supported.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PlayMode-AUTO_PLAY = 1--><!--Device-PlayMode-AUTO_PLAY = 1-End-->
 

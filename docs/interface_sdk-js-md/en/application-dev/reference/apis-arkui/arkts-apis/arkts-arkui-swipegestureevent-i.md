@@ -1,7 +1,6 @@
 # SwipeGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of   
-[onGestureJudgeBegin](CommonMethod#onGestureJudgeBegin).
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of onGestureJudgeBegin.
 
 **Inheritance/Implementation:** SwipeGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
 
@@ -9,7 +8,9 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEv
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-interface SwipeGestureEvent extends BaseGestureEvent--><!--Device-unnamed-interface SwipeGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface SwipeGestureEvent--><!--Device-unnamed-interface SwipeGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,17 +20,15 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEv
 angle: number
 ```
 
-Angle of the swipe gesture, that is, the angle between the instantaneous direction of finger sliding and the positive horizontal direction. The unit is deg.
-
-**NOTE：**
-
-With the positive horizontal direction as the reference, when the sliding direction is on the clockwise side of the positive horizontal direction, the angle ranges from 0 to 180 degrees; when on the counterclockwise side, the angle ranges from 0 to –180 degrees.
+Angle of the swipe gesture, that is, the angle between the instantaneous direction of finger sliding and the positive horizontal direction. The unit is deg. **NOTE：**With the positive horizontal direction as the reference, when the sliding direction is on the clockwise side of the positive horizontal direction, the angle ranges from 0 to 180 degrees; when on the counterclockwise side, the angle ranges from 0 to –180 degrees.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +51,8 @@ Swipe gesture speed, defined as the average swipe speed of all fingers relative 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

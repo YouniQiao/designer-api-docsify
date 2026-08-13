@@ -2,11 +2,37 @@
 
 LightWeightMap可用于存储具有关联关系的key-value键值对，其中key值唯一，每个key对应一个value。
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-unnamed-declare class LightWeightMap<K, V>--><!--Device-unnamed-declare class LightWeightMap<K, V>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class LightWeightMap--><!--Device-unnamed-declare class LightWeightMap-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<[K, V]>
+```
+
+返回一个迭代器，迭代器的每一项都是一个包含键和值的[K, V]数组。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-$_iterator(): IterableIterator<[K, V]>--><!--Device-LightWeightMap-$_iterator(): IterableIterator<[K, V]>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;[K, V] & gt; |
 
 ## [Symbol.iterator]
 
@@ -17,6 +43,8 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 返回一个迭代器，迭代器的每一项都是一个包含键和值的[K, V]数组。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +62,7 @@ LightWeightMap可用于存储具有关联关系的key-value键值对，其中key
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -86,7 +114,9 @@ clear(): void
 
 清除LightWeightMap中的所有元素，并将length置为0。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -98,7 +128,7 @@ clear(): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -119,7 +149,9 @@ constructor()
 
 LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -131,7 +163,7 @@ LightWeightMap的构造函数，创建一个空的LightWeightMap实例。
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -147,7 +179,9 @@ entries(): IterableIterator<[K, V]>
 
 返回包含此映射中所有键值对的新迭代器对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -165,7 +199,7 @@ entries(): IterableIterator<[K, V]>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -203,6 +237,8 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void--><!--Device-LightWeightMap-forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, thisArg?: Object): void-End-->
@@ -220,7 +256,7 @@ forEach(callbackFn: (value?: V, key?: K, map?: LightWeightMap<K, V>) => void, th
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -246,6 +282,30 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: LightWeightMapCbFn<K, V>): void
+```
+
+通过回调函数来遍历实例对象上的元素及其键值对信息。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-forEach(callbackFn: LightWeightMapCbFn<K, V>): void--><!--Device-LightWeightMap-forEach(callbackFn: LightWeightMapCbFn<K, V>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [LightWeightMapCbFn](arkts-arkts-lightweightmapcbfn-t.md)&lt;K, V&gt; | 是 |
+
 ## get
 
 ```TypeScript
@@ -255,6 +315,8 @@ get(key: K): V
 获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -278,7 +340,7 @@ get(key: K): V
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -290,6 +352,36 @@ let result = lightWeightMap.get("sparrow");
 console.info("result:", result);  // result: 356
 ```
 
+## get
+
+```TypeScript
+get(key: K): V | undefined
+```
+
+获取指定key所对应的value。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-get(key: K): V | undefined--><!--Device-LightWeightMap-get(key: K): V | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| V |
+
 ## getIndexOfKey
 
 ```TypeScript
@@ -298,7 +390,9 @@ getIndexOfKey(key: K): number
 
 查找key元素首次出现的下标值，如果未找到返回-1。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -322,7 +416,7 @@ getIndexOfKey(key: K): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -342,7 +436,9 @@ getIndexOfValue(value: V): number
 
 查找指定value元素首次出现的下标值，如果未找到则返回-1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -366,7 +462,7 @@ getIndexOfValue(value: V): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -387,6 +483,8 @@ getKeyAt(index: number): K
 查找指定下标的元素键值对中key值，如果未找到则返回undefined。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -410,8 +508,8 @@ getKeyAt(index: number): K
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -423,6 +521,42 @@ let result = lightWeightMap.getKeyAt(1);
 console.info("result:", result);  // result: squirrel
 ```
 
+## getKeyAt
+
+```TypeScript
+getKeyAt(index: number): K | undefined
+```
+
+查找指定下标的元素键值对中key值，如果未找到则返回undefined。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-getKeyAt(index: int): K | undefined--><!--Device-LightWeightMap-getKeyAt(index: int): K | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| K |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## getValueAt
 
 ```TypeScript
@@ -432,6 +566,8 @@ getValueAt(index: number): V
 获取指定下标对应键值对中的值。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -455,8 +591,8 @@ getValueAt(index: number): V
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -468,6 +604,42 @@ let result = lightWeightMap.getValueAt(1);
 console.info("result:", result);  // result: 123
 ```
 
+## getValueAt
+
+```TypeScript
+getValueAt(index: number): V | undefined
+```
+
+获取指定下标对应键值对中的值。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-getValueAt(index: int): V | undefined--><!--Device-LightWeightMap-getValueAt(index: int): V | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| V |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## hasAll
 
 ```TypeScript
@@ -476,7 +648,9 @@ hasAll(map: LightWeightMap<K, V>): boolean
 
 判断LightWeightMap中是否包含指定map中的所有元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -500,7 +674,7 @@ hasAll(map: LightWeightMap<K, V>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -522,7 +696,9 @@ hasKey(key: K): boolean
 
 判断LightWeightMap中是否包含指定key。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致，详见规格限制。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -546,7 +722,7 @@ hasKey(key: K): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -565,7 +741,9 @@ hasValue(value: V): boolean
 
 判断LightWeightMap中是否包含指定value。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -589,7 +767,7 @@ hasValue(value: V): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -608,7 +786,9 @@ increaseCapacityTo(minimumCapacity: number): void
 
 将当前LightWeightMap扩容至指定容量。如果传入的容量值大于或等于当前LightWeightMap中的元素个数，将容量扩容至新容量，小于则不会变更。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -626,7 +806,7 @@ increaseCapacityTo(minimumCapacity: number): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -643,7 +823,9 @@ isEmpty(): boolean
 
 判断LightWeightMap是否为空。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -661,7 +843,7 @@ isEmpty(): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -679,7 +861,9 @@ keys(): IterableIterator<K>
 
 返回包含此映射中所有的键的新迭代器对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -697,7 +881,7 @@ keys(): IterableIterator<K>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -724,6 +908,8 @@ remove(key: K): V
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LightWeightMap-remove(key: K): V--><!--Device-LightWeightMap-remove(key: K): V-End-->
@@ -746,7 +932,7 @@ remove(key: K): V
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -757,6 +943,36 @@ let result = lightWeightMap.remove("sparrow");
 console.info("result:", result);  // result: 356
 ```
 
+## remove
+
+```TypeScript
+remove(key: K): V | undefined
+```
+
+删除指定key映射的元素。当key为number类型且值大于INT32_MAX或小于INT32_MIN时，结果可能与预期不一致。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-LightWeightMap-remove(key: K): V | undefined--><!--Device-LightWeightMap-remove(key: K): V | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | K | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| V |
+
 ## removeAt
 
 ```TypeScript
@@ -765,7 +981,9 @@ removeAt(index: number): boolean
 
 删除指定下标对应的元素。调用成功后，若下标有效则该位置的键值对从LightWeightMap中移除且length减少。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -789,7 +1007,7 @@ removeAt(index: number): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -809,7 +1027,9 @@ set(key: K, value: V): Object
 
 向LightWeightMap中添加或更新一组数据。调用成功后，若key不存在则新增键值对且length增加，若key已存在则更新对应value值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -834,7 +1054,7 @@ set(key: K, value: V): Object
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -852,7 +1072,9 @@ setAll(map: LightWeightMap<K, V>): void
 
 将一个LightWeightMap中的所有元素添加到另一个LightWeightMap中，如果目标LightWeightMap中已存在相同的key，则会更新其对应的value。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -870,7 +1092,7 @@ setAll(map: LightWeightMap<K, V>): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -892,7 +1114,9 @@ setValueAt(index: number, newValue: V): boolean
 
 替换指定下标对应键值对中的值。调用成功后，指定下标处键值对的值将被替换为newValue。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -917,8 +1141,8 @@ setValueAt(index: number, newValue: V): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -938,7 +1162,9 @@ toString(): String
 
 将此映射中包含的键值对拼接成字符串并返回。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -956,7 +1182,7 @@ toString(): String
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -976,7 +1202,9 @@ values(): IterableIterator<V>
 
 返回包含此映射中所有值的新迭代器对象。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -994,7 +1222,7 @@ values(): IterableIterator<V>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -1022,6 +1250,8 @@ LightWeightMap的元素个数。
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

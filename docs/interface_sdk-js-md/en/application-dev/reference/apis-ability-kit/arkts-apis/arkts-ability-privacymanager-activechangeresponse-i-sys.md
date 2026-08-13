@@ -2,9 +2,11 @@
 
 Defines the detailed permission usage information.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-privacyManager-interface ActiveChangeResponse--><!--Device-privacyManager-interface ActiveChangeResponse-End-->
 
@@ -28,9 +30,11 @@ Permission usage status.
 
 **Type:** [PermissionActiveStatus](arkts-ability-privacymanager-permissionactivestatus-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus--><!--Device-ActiveChangeResponse-activeStatus: PermissionActiveStatus-End-->
 
@@ -44,15 +48,15 @@ Permission usage status.
 callingTokenId?: int
 ```
 
-Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**.
+Identity of the caller application. This field is invalid when **activeStatus** is **INACTIVE**. Default value: **0**.
 
-Default value: **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-callingTokenId?: int--><!--Device-ActiveChangeResponse-callingTokenId?: int-End-->
 
@@ -70,9 +74,11 @@ ID of the device where the permission usage status change occurred.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-deviceId: string--><!--Device-ActiveChangeResponse-deviceId: string-End-->
 
@@ -86,13 +92,15 @@ ID of the device where the permission usage status change occurred.
 enhancedIdentity?: string
 ```
 
-Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application.The maximum length is 48. Default value: Empty string.
+Extension identity, used to identify additional identity information of the caller. This field is returned when it is necessary to distinguish permission usage records from different call sources within the same application. The maximum length is 48. Default value: Empty string.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,9 +120,11 @@ Name of the permission whose usage status has changed.
 
 **Type:** [Permissions](arkts-ability-permissions-t.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-permissionName: Permissions--><!--Device-ActiveChangeResponse-permissionName: Permissions-End-->
 
@@ -130,11 +140,13 @@ tokenId: int
 
 Token ID of the application whose permission usage changes are subscribed to.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-tokenId: int--><!--Device-ActiveChangeResponse-tokenId: int-End-->
 
@@ -148,15 +160,15 @@ Token ID of the application whose permission usage changes are subscribed to.
 usedType?: PermissionUsedType
 ```
 
-Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE.
-
-Default value: NORMAL_TYPE.
+Sensitive permission usage type. This value is invalid when activeStatus is INACTIVE. Default value: NORMAL_TYPE.
 
 **Type:** [PermissionUsedType](arkts-ability-privacymanager-permissionusedtype-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ActiveChangeResponse-usedType?: PermissionUsedType--><!--Device-ActiveChangeResponse-usedType?: PermissionUsedType-End-->
 

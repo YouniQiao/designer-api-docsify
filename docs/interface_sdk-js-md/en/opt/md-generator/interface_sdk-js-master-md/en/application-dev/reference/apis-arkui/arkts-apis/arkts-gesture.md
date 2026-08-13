@@ -89,10 +89,10 @@ Enumerates gesture competition results.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [GestureGroup](arkts-arkui-gesture-con.md#gesturegroup) |
-| [LongPressGesture](arkts-arkui-gesture-con.md#longpressgesture) |
-| [PanGesture](arkts-arkui-gesture-con.md#pangesture) |
-| [PinchGesture](arkts-arkui-gesture-con.md#pinchgesture) |
-| [RotationGesture](arkts-arkui-gesture-con.md#rotationgesture) |
-| [SwipeGesture](arkts-arkui-gesture-con.md#swipegesture) |
-| [TapGesture](arkts-arkui-gesture-con.md#tapgesture) |
+| [GestureGroup](arkts-arkui-gesture-con.md#GestureGroup) |
+| [LongPressGesture](arkts-arkui-gesture-con.md#LongPressGesture) |
+| [PanGesture](arkts-arkui-gesture-con.md#PanGesture) |
+| [PinchGesture](arkts-arkui-gesture-con.md#PinchGesture) |
+| [RotationGesture](arkts-arkui-gesture-con.md#RotationGesture) |
+| [SwipeGesture](arkts-arkui-gesture-con.md#SwipeGesture) |
+| [TapGesture](arkts-arkui-gesture-con.md#TapGesture) |

@@ -2,9 +2,11 @@
 
 Beacon fence details.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface BeaconFence--><!--Device-geoLocationManager-export interface BeaconFence-End-->
 
@@ -26,11 +28,13 @@ Beacon fence information type.
 
 **Type:** [BeaconFenceInfoType](arkts-location-geolocationmanager-beaconfenceinfotype-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconFence-beaconFenceInfoType: BeaconFenceInfoType--><!--Device-BeaconFence-beaconFenceInfoType: BeaconFenceInfoType-End-->
 
@@ -46,11 +50,13 @@ Identifier of the beacon fence.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconFence-identifier: string--><!--Device-BeaconFence-identifier: string-End-->
 
@@ -66,11 +72,13 @@ Beacon equipment manufacture data.
 
 **Type:** [BeaconManufactureData](arkts-location-geolocationmanager-beaconmanufacturedata-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BeaconFence-manufactureData?: BeaconManufactureData--><!--Device-BeaconFence-manufactureData?: BeaconManufactureData-End-->
 

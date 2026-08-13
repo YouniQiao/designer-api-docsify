@@ -8,7 +8,9 @@ function disableAbility(name: string): Promise<void>
 
 关闭辅助扩展。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -34,10 +36,10 @@ function disableAbility(name: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
 
 ## 示例
 
@@ -63,7 +65,9 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 
 关闭辅助扩展，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.WRITE_ACCESSIBILITY_CONFIG
 
@@ -84,10 +88,10 @@ function disableAbility(name: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [9300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) |
 
 ## 示例
 

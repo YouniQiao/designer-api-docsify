@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum TextInputStyle--><!--Device-unnamed-export declare enum TextInputStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@
 Default = 0
 ```
 
-默认风格
-
-光标宽1.5vp，光标高度与文本选中底板高度和字体大小相关。
+默认风格 光标宽1.5vp，光标高度与文本选中底板高度和字体大小相关。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ Default = 0
 Inline = 1
 ```
 
-内联输入风格，也称内联模式。文本选中底板高度与输入框高度相同。
-
-&lt;br/&gt;内联输入是在有明显的编辑态/非编辑态的区分场景下使用，例如：文件列表视图中的重命名。&lt;br/&gt;不支持showError属性。&lt;br/&gt;内联模式下，不支持拖入文本。
+内联输入风格，也称内联模式。文本选中底板高度与输入框高度相同。 &lt;br/&gt;内联输入是在有明显的编辑态/非编辑态的区分场景下使用，例如：文件列表视图中的重命名。&lt;br/&gt;不支持showError属性。&lt;br/&gt;内联模式下，不支持拖入文本。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

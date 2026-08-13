@@ -2,7 +2,9 @@
 
 The **FormAgent** module provides APIs related to the widget agent. Currently, you can use the APIs to request to publish widgets only.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace formAgent--><!--Device-unnamed-declare namespace formAgent-End-->
 
@@ -23,7 +25,7 @@ import { formAgent } from '@kit.FormKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestpublishform) |
-| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestpublishform-1) |
-| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md#updateformcrossbundle) |
+| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestPublishForm-(System-API)) |
+| [requestPublishForm](arkts-form-formagent-requestpublishform-f-sys.md#requestPublishForm-(System-API)) |
+| [updateFormCrossBundle](arkts-form-formagent-updateformcrossbundle-f-sys.md#updateFormCrossBundle-(System-API)) |
 <!--DelEnd-->

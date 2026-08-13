@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [Configuration/Configuration](ohos.app.ability.Configuration/Configuration)
+**替代接口：** [Configuration/Configuration](arkts-ability-app-ability-configuration-configuration-i.md#Configuration)
 
 <!--Device-unnamed-export interface Configuration--><!--Device-unnamed-export interface Configuration-End-->
 
@@ -26,7 +26,7 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **废弃版本：** 9
 
-**替代接口：** [colorMode](ohos.app.ability.Configuration/Configuration#colorMode)
+**替代接口：** [colorMode](arkts-ability-app-ability-configuration-configuration-i.md#colorMode)
 
 <!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode--><!--Device-Configuration-colorMode?: ConfigurationConstant.ColorMode-End-->
 
@@ -46,7 +46,7 @@ language?: string
 
 **废弃版本：** 9
 
-**替代接口：** [language](ohos.app.ability.Configuration/Configuration#language)
+**替代接口：** [language](arkts-ability-app-ability-configuration-configuration-i.md#language)
 
 <!--Device-Configuration-language?: string--><!--Device-Configuration-language?: string-End-->
 

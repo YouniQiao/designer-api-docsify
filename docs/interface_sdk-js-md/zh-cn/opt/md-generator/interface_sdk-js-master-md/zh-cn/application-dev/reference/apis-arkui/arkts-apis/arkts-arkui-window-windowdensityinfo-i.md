@@ -2,7 +2,9 @@
 
 窗口所在显示设备和窗口自定义的显示密度信息，是与像素单位无关的缩放系数，即显示大小缩放系数。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface WindowDensityInfo--><!--Device-window-interface WindowDensityInfo-End-->
 
@@ -18,9 +20,11 @@ customDensity: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowDensityInfo-customDensity: double--><!--Device-WindowDensityInfo-customDensity: double-End-->
 
@@ -36,9 +40,11 @@ defaultDensity: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowDensityInfo-defaultDensity: double--><!--Device-WindowDensityInfo-defaultDensity: double-End-->
 
@@ -54,9 +60,11 @@ systemDensity: number
 
 **类型：** number
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WindowDensityInfo-systemDensity: double--><!--Device-WindowDensityInfo-systemDensity: double-End-->
 

@@ -16,6 +16,8 @@ Subscribes to the carrier call state changes and obtains the call number. This m
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
 <!--Device-observer-function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: ObserverOptions): void--><!--Device-observer-function onCCallStateChange(callback: Callback<CCallStateInfo>, options?: ObserverOptions): void-End-->
@@ -33,11 +35,11 @@ Subscribes to the carrier call state changes and obtains the call number. This m
 
 | Error Code ID |
 | --- |
-| [8800999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800999-internal-error) |
-| [8800002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800002-service-connection-error) |
-| [8800003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800003-system-internal-error) |
-| [8800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [8800999](../errorcode-telephony.md#8800999-internal-error) |
+| [8800002](../errorcode-telephony.md#8800002-service-connection-error) |
+| [8800003](../errorcode-telephony.md#8800003-system-internal-error) |
+| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

@@ -1,14 +1,6 @@
 # @ohos.bundle.innerBundleManager
 
-The module provides APIs for the Home Screen application.
- > **NOTE**
- >
- > This module is deprecated since API version 9. You are advised to use
- > [launcherBundleManager](arkts-bundle-launcherbundlemanager.md#launcherBundleManager) and
- > [bundleMonitor](arkts-bundle-bundlemonitor.md#bundleMonitor) instead.
- >
- > The APIs provided by this module are system APIs.
-
+The module provides APIs for the Home Screen application. > **NOTE：**> > This module is deprecated since API version 9. You are advised to use > [launcherBundleManager](arkts-bundle-launcherbundlemanager.md#@ohos.bundle.launcherBundleManager) and > [bundleMonitor](arkts-bundle-bundlemonitor.md#@ohos.bundle.bundleMonitor) instead. > > The APIs provided by this module are system APIs.
 
 ## Modules to Import
 
@@ -22,7 +14,7 @@ import { BundleStatusCallback } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [innerBundleManager](arkts-ability-innerbundlemanager-n.md) | The module provides APIs for the Home Screen application.  > **NOTE：** >  > This module is deprecated since API version 9. You are advised to use > [launcherBundleManager](arkts-bundle-launcherbundlemanager.md#launcherBundleManager) and > [bundleMonitor](arkts-bundle-bundlemonitor.md#bundleMonitor) instead. >  > The APIs provided by this module are system APIs. |
+| [innerBundleManager](arkts-ability-innerbundlemanager-n.md) | The module provides APIs for the Home Screen application. > **NOTE：**> > This module is deprecated since API version 9. You are advised to use > [launcherBundleManager](arkts-bundle-launcherbundlemanager.md#@ohos.bundle.launcherBundleManager) and > [bundleMonitor](arkts-bundle-bundlemonitor.md#@ohos.bundle.bundleMonitor) instead. > > The APIs provided by this module are system APIs. |
 
 <!--Del-->
 ### Types（系统接口）

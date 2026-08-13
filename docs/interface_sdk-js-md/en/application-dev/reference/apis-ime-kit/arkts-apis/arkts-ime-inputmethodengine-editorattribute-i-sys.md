@@ -1,11 +1,12 @@
 # EditorAttribute
 
-In the following API examples, you must first use   
-[getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getKeyboardDelegate) to obtain a **KeyboardDelegate** instance, and then call the APIs using the obtained instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface EditorAttribute--><!--Device-inputMethodEngine-interface EditorAttribute-End-->
 
@@ -23,15 +24,15 @@ import { inputMethodEngine } from '@kit.IMEKit';
 readonly fluidLightMode?: FluidLightMode
 ```
 
-Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default.
-
-This attribute is available only to system applications.
+Fluid light mode. If this attribute is not specified or is set to an invalid value, the fluid light mode is not used by default. This attribute is available only to system applications.
 
 **Type:** [FluidLightMode](arkts-ime-inputmethodengine-fluidlightmode-e-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EditorAttribute-readonly fluidLightMode?: FluidLightMode--><!--Device-EditorAttribute-readonly fluidLightMode?: FluidLightMode-End-->
 

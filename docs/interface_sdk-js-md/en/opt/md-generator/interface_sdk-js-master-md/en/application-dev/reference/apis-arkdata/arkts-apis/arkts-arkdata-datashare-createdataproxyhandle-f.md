@@ -14,7 +14,9 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 Creates a **DataProxyHandle** instance. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +34,7 @@ Creates a **DataProxyHandle** instance. This API uses a promise to return the re
 
 | Error Code ID |
 | --- |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-internal-error) |
+| [15700000](../errorcode-datashare.md#15700000-internal-error) |
 
 ## Examples
 

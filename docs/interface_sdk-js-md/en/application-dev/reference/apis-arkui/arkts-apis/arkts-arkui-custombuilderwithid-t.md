@@ -1,18 +1,22 @@
 # CustomBuilderWithId
 
 ```TypeScript
-declare type CustomBuilderWithId = (id: int) => void
+declare type CustomBuilderWithId = (id: number) => void
 ```
 
-Defines the custom builder with id.
+Defines a type that can be used for component attributes and method parameters to customize the UI description and generate custom components with a specific component ID.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-declare type CustomBuilderWithId = (id: int) => void--><!--Device-unnamed-declare type CustomBuilderWithId = (id: int) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type CustomBuilderWithId = (id: number) => void--><!--Device-unnamed-declare type CustomBuilderWithId = (id: number) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,5 +24,5 @@ Defines the custom builder with id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | int | Yes |  |
+| id | number | Yes |  |
 

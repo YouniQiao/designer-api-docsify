@@ -1,10 +1,22 @@
 # @ohos.multimodalInput.infraredEmitter(IR Management)
 
-红外管理模块提供产生特定频率和大小的红外信号，以及查询设备支持的频率范围等功能。
+/*
+ Copyright (c) 2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **说明：**
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace infraredEmitter--><!--Device-unnamed-declare namespace infraredEmitter-End-->
 
@@ -16,12 +28,21 @@
 
 | 名称 |
 | --- |
-| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f.md#getinfraredfrequencies) |
-| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasiremitter) |
-| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md#transmitinfrared) |
+| [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md#hasIrEmitter) |
 
-### 接口
+<!--Del-->
+### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md) |
+| [getInfraredFrequencies](arkts-input-infraredemitter-getinfraredfrequencies-f-sys.md#getInfraredFrequencies（系统接口）) |
+| [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f-sys.md#transmitInfrared（系统接口）) |
+<!--DelEnd-->
+
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 |
+| --- |
+| [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i-sys.md) |
+<!--DelEnd-->

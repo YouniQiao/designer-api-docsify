@@ -6,6 +6,8 @@ Defines the paragraph result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorParagraphResult--><!--Device-unnamed-export declare interface RichEditorParagraphResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,6 +29,8 @@ The range of paragraph based on character indices.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorParagraphResult-range: [        int,        int    ]--><!--Device-RichEditorParagraphResult-range: [        int,        int    ]-End-->
@@ -46,6 +50,8 @@ The paragraph style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

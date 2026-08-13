@@ -1,16 +1,12 @@
 # Typeface
 
-Typeface类用于表示和管理字体对象。支持的字体操作包括：获取字体族名、从字体文件或rawfile资源构造字体、结合字体属性构造新字体，以及检查字体的加粗、斜体状态等。
+Typeface类用于表示和管理字体对象。支持的字体操作包括：获取字体族名、从字体文件或rawfile资源构造字体、结合字体属性构造新字体，以及检查字体的加粗、斜体状态等。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-> **说明：**
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-drawing-class Typeface--><!--Device-drawing-class Typeface-End-->
 
@@ -27,6 +23,8 @@ getFamilyName(): string
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-getFamilyName(): string--><!--Device-Typeface-getFamilyName(): string-End-->
 
@@ -48,7 +46,9 @@ getFamilyName(): string | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-getFamilyName(): string | undefined--><!--Device-Typeface-getFamilyName(): string | undefined-End-->
 
@@ -70,7 +70,9 @@ isBold(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-isBold(): boolean--><!--Device-Typeface-isBold(): boolean-End-->
 
@@ -92,7 +94,9 @@ isItalic(): boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-isItalic(): boolean--><!--Device-Typeface-isItalic(): boolean-End-->
 
@@ -115,6 +119,8 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface--><!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface-End-->
 
@@ -142,7 +148,9 @@ makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined--><!--Device-Typeface-makeFromCurrent(typefaceArguments: TypefaceArguments): Typeface | undefined-End-->
 
@@ -172,6 +180,8 @@ static makeFromFile(filePath: string): Typeface
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Typeface-static makeFromFile(filePath: string): Typeface--><!--Device-Typeface-static makeFromFile(filePath: string): Typeface-End-->
@@ -194,7 +204,7 @@ static makeFromFile(filePath: string): Typeface
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromFile
 
@@ -206,7 +216,9 @@ static makeFromFile(filePath: string): Typeface | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-static makeFromFile(filePath: string): Typeface | undefined--><!--Device-Typeface-static makeFromFile(filePath: string): Typeface | undefined-End-->
 
@@ -228,7 +240,7 @@ static makeFromFile(filePath: string): Typeface | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## makeFromFileWithArguments
 
@@ -241,6 +253,8 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -271,7 +285,9 @@ static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceAr
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface | undefined--><!--Device-Typeface-static makeFromFileWithArguments(filePath: string, typefaceArguments: TypefaceArguments): Typeface | undefined-End-->
 
@@ -302,6 +318,8 @@ static makeFromRawFile(rawfile: Resource): Typeface
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface--><!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface-End-->
@@ -330,7 +348,9 @@ static makeFromRawFile(rawfile: Resource): Typeface | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface | undefined--><!--Device-Typeface-static makeFromRawFile(rawfile: Resource): Typeface | undefined-End-->
 
@@ -359,6 +379,8 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -389,7 +411,9 @@ static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: Typefa
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface | undefined--><!--Device-Typeface-static makeFromRawFileWithArguments(rawfile: Resource, typefaceArguments: TypefaceArguments): Typeface | undefined-End-->
 

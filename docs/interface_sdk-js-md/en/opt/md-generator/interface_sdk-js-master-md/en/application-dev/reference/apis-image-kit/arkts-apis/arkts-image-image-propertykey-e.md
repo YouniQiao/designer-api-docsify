@@ -1,17 +1,10 @@
 # PropertyKey
 
-Enumerates the types of Exchangeable Image File Format (Exif) data of an image.
+Enumerates the types of Exchangeable Image File Format (Exif) data of an image. - The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for example, **image.PropertyKey.NEW_SUBFILE_TYPE**). - The format example is used only to show how to modify values and read results. For details about how to use them, see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty) (to modify a single Exif field), [modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties) (to modify multiple Exif fields), [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty) (to read a single Exif field), and [getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) ( to read multiple Exif fields).
 
-- The key in the format example is **image.PropertyKey.*XXX*** (where *XXX* is the name of an enumeration name, for  
-example, **image.PropertyKey.NEW_SUBFILE_TYPE**).  
-- The format example is used only to show how to modify values and read results. For details about how to use them,  
-see   
-[modifyImageProperty](arkts-image-image-imagesource-i.md#modifyImageProperty)(to modify a single Exif field),   
-[modifyImageProperties](arkts-image-image-imagesource-i.md#modifyImageProperties)(to modify multiple Exif fields),   
-[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)(to read a single Exif field), and   
-[getImageProperties](arkts-image-image-imagesource-i.md#getImageProperties) (to read multiple Exif fields).
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-image-enum PropertyKey--><!--Device-image-enum PropertyKey-End-->
 
@@ -23,11 +16,11 @@ see
 BITS_PER_SAMPLE = 'BitsPerSample'
 ```
 
-Number of bits per sample. For example, for RGB, which has three components, the format is 8,8,8.
+Number of bits per sample. For example, for RGB, which has three components, the format is 8,8,8. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-BITS_PER_SAMPLE = 'BitsPerSample'--><!--Device-PropertyKey-BITS_PER_SAMPLE = 'BitsPerSample'-End-->
 
@@ -39,32 +32,11 @@ Number of bits per sample. For example, for RGB, which has three components, the
 ORIENTATION = 'Orientation'
 ```
 
-Image orientation.
+Image orientation. 1: **Top-left**: The image is not rotated. 2: **Top-right**: The image is flipped horizontally. 3: **Bottom-right**: The image is rotated by 180°. 4: **Bottom-left**: The image is flipped vertically. 5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°. 6: **Right-top**: The image is rotated clockwise by 90°. 7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°. 8: **Left-bottom**: The image is rotated clockwise by 270°. If an undefined value x is read, **Unknown Value x** is returned. The value of the property obtained is returned as a string. When modifying the property, you can specify the property either in the form of a number or a string. For details about the image rotation angle, see [Obtaining the Rotation Angle of an Image](../../../media/image/image-faqs/image-rotate-faq.md). **Read/Write capability**: readable and writable.
 
-1: **Top-left**: The image is not rotated.
+**Since:** 23
 
-2: **Top-right**: The image is flipped horizontally.
-
-3: **Bottom-right**: The image is rotated by 180°.
-
-4: **Bottom-left**: The image is flipped vertically.
-
-5: **Left-top**: The image is flipped horizontally and then rotated clockwise by 270°.
-
-6: **Right-top**: The image is rotated clockwise by 90°.
-
-7: **Right-bottom**: The image is vertically flipped and then rotated clockwise by 90°.
-
-8: **Left-bottom**: The image is rotated clockwise by 270°.
-
-If an undefined value x is read, **Unknown Value x** is returned. The value of the property obtained is returned as a string. When modifying the property, you can specify the property either in the form of a number or a string.
-
-For details about the image rotation angle, see   
-[Obtaining the Rotation Angle of an Image](../../../media/image/image-faqs/image-rotate-faq.md).
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ORIENTATION = 'Orientation'--><!--Device-PropertyKey-ORIENTATION = 'Orientation'-End-->
 
@@ -76,11 +48,11 @@ For details about the image rotation angle, see
 IMAGE_LENGTH = 'ImageLength'
 ```
 
-Image length.
+Image length. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-IMAGE_LENGTH = 'ImageLength'--><!--Device-PropertyKey-IMAGE_LENGTH = 'ImageLength'-End-->
 
@@ -92,11 +64,11 @@ Image length.
 IMAGE_WIDTH = 'ImageWidth'
 ```
 
-Image width.
+Image width. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-IMAGE_WIDTH = 'ImageWidth'--><!--Device-PropertyKey-IMAGE_WIDTH = 'ImageWidth'-End-->
 
@@ -108,11 +80,11 @@ Image width.
 GPS_LATITUDE = 'GPSLatitude'
 ```
 
-Image latitude. The value must be in the format of degree,minute,second, for example, 39,54,7.542.
+Image latitude. The value must be in the format of degree,minute,second, for example, 39,54,7.542. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_LATITUDE = 'GPSLatitude'--><!--Device-PropertyKey-GPS_LATITUDE = 'GPSLatitude'-End-->
 
@@ -124,11 +96,11 @@ Image latitude. The value must be in the format of degree,minute,second, for exa
 GPS_LONGITUDE = 'GPSLongitude'
 ```
 
-Image longitude. The value must be in the format of degree,minute,second, for example, 116,19,42.16.
+Image longitude. The value must be in the format of degree,minute,second, for example, 116,19,42.16. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_LONGITUDE = 'GPSLongitude'--><!--Device-PropertyKey-GPS_LONGITUDE = 'GPSLongitude'-End-->
 
@@ -140,15 +112,11 @@ Image longitude. The value must be in the format of degree,minute,second, for ex
 GPS_LATITUDE_REF = 'GPSLatitudeRef'
 ```
 
-Latitude reference (Northern or Southern Hemisphere) of the image capture location.
+Latitude reference (Northern or Southern Hemisphere) of the image capture location. 78: "North". 83: "South". **Read/Write capability**: readable and writable.
 
-78: "North".
+**Since:** 23
 
-83: "South".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_LATITUDE_REF = 'GPSLatitudeRef'--><!--Device-PropertyKey-GPS_LATITUDE_REF = 'GPSLatitudeRef'-End-->
 
@@ -160,15 +128,11 @@ Latitude reference (Northern or Southern Hemisphere) of the image capture locati
 GPS_LONGITUDE_REF = 'GPSLongitudeRef'
 ```
 
-Longitude reference (Eastern or Western Hemisphere) of the image capture location.
+Longitude reference (Eastern or Western Hemisphere) of the image capture location. 69: "East". 87: "West". **Read/Write capability**: readable and writable.
 
-69: "East".
+**Since:** 23
 
-87: "West".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_LONGITUDE_REF = 'GPSLongitudeRef'--><!--Device-PropertyKey-GPS_LONGITUDE_REF = 'GPSLongitudeRef'-End-->
 
@@ -180,11 +144,11 @@ Longitude reference (Eastern or Western Hemisphere) of the image capture locatio
 DATE_TIME_ORIGINAL = 'DateTimeOriginal'
 ```
 
-Time when the original image data was generated, for example, 2022:09:06 15:48:00.
+Time when the original image data was generated, for example, 2022:09:06 15:48:00. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DATE_TIME_ORIGINAL = 'DateTimeOriginal'--><!--Device-PropertyKey-DATE_TIME_ORIGINAL = 'DateTimeOriginal'-End-->
 
@@ -196,11 +160,11 @@ Time when the original image data was generated, for example, 2022:09:06 15:48:0
 EXPOSURE_TIME = 'ExposureTime'
 ```
 
-Exposure time, for example, 1/33 seconds.
+Exposure time, for example, 1/33 seconds. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-EXPOSURE_TIME = 'ExposureTime'--><!--Device-PropertyKey-EXPOSURE_TIME = 'ExposureTime'-End-->
 
@@ -212,13 +176,11 @@ Exposure time, for example, 1/33 seconds.
 SCENE_TYPE = 'SceneType'
 ```
 
-Type of the scene, for example, portrait, scenery, motion, and night.
+Type of the scene, for example, portrait, scenery, motion, and night. 1: "Directly photographed", indicating that the image is directly captured by the image sensor. **Read/Write capability**: readable and writable.
 
-1: "Directly photographed", indicating that the image is directly captured by the image sensor.
+**Since:** 23
 
-**Read/Write capability**: readable and writable.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_TYPE = 'SceneType'--><!--Device-PropertyKey-SCENE_TYPE = 'SceneType'-End-->
 
@@ -230,11 +192,11 @@ Type of the scene, for example, portrait, scenery, motion, and night.
 ISO_SPEED_RATINGS = 'ISOSpeedRatings'
 ```
 
-ISO sensitivity or ISO speed, for example, 400.
+ISO sensitivity or ISO speed, for example, 400. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ISO_SPEED_RATINGS = 'ISOSpeedRatings'--><!--Device-PropertyKey-ISO_SPEED_RATINGS = 'ISOSpeedRatings'-End-->
 
@@ -246,11 +208,11 @@ ISO sensitivity or ISO speed, for example, 400.
 F_NUMBER = 'FNumber'
 ```
 
-F number, for example, f/1.8.
+F number, for example, f/1.8. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-F_NUMBER = 'FNumber'--><!--Device-PropertyKey-F_NUMBER = 'FNumber'-End-->
 
@@ -262,11 +224,11 @@ F number, for example, f/1.8.
 DATE_TIME = 'DateTime'
 ```
 
-Date and time of image creation.
+Date and time of image creation. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DATE_TIME = 'DateTime'--><!--Device-PropertyKey-DATE_TIME = 'DateTime'-End-->
 
@@ -278,11 +240,11 @@ Date and time of image creation.
 GPS_TIME_STAMP = 'GPSTimeStamp'
 ```
 
-GPS timestamp.
+GPS timestamp. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_TIME_STAMP = 'GPSTimeStamp'--><!--Device-PropertyKey-GPS_TIME_STAMP = 'GPSTimeStamp'-End-->
 
@@ -294,11 +256,11 @@ GPS timestamp.
 GPS_DATE_STAMP = 'GPSDateStamp'
 ```
 
-GPS date stamp.
+GPS date stamp. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DATE_STAMP = 'GPSDateStamp'--><!--Device-PropertyKey-GPS_DATE_STAMP = 'GPSDateStamp'-End-->
 
@@ -310,11 +272,11 @@ GPS date stamp.
 IMAGE_DESCRIPTION = 'ImageDescription'
 ```
 
-Image description.
+Image description. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-IMAGE_DESCRIPTION = 'ImageDescription'--><!--Device-PropertyKey-IMAGE_DESCRIPTION = 'ImageDescription'-End-->
 
@@ -326,11 +288,11 @@ Image description.
 MAKE = 'Make'
 ```
 
-Manufacturer.
+Manufacturer. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-MAKE = 'Make'--><!--Device-PropertyKey-MAKE = 'Make'-End-->
 
@@ -342,11 +304,11 @@ Manufacturer.
 MODEL = 'Model'
 ```
 
-Device model.
+Device model. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-MODEL = 'Model'--><!--Device-PropertyKey-MODEL = 'Model'-End-->
 
@@ -358,11 +320,11 @@ Device model.
 PHOTO_MODE = 'PhotoMode'
 ```
 
-Photographing mode.
+Photographing mode. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PHOTO_MODE = 'PhotoMode'--><!--Device-PropertyKey-PHOTO_MODE = 'PhotoMode'-End-->
 
@@ -374,11 +336,11 @@ Photographing mode.
 SENSITIVITY_TYPE = 'SensitivityType'
 ```
 
-Sensitivity type.
+Sensitivity type. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SENSITIVITY_TYPE = 'SensitivityType'--><!--Device-PropertyKey-SENSITIVITY_TYPE = 'SensitivityType'-End-->
 
@@ -390,11 +352,11 @@ Sensitivity type.
 STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'
 ```
 
-Standard output sensitivity.
+Standard output sensitivity. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'--><!--Device-PropertyKey-STANDARD_OUTPUT_SENSITIVITY = 'StandardOutputSensitivity'-End-->
 
@@ -406,11 +368,11 @@ Standard output sensitivity.
 RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'
 ```
 
-Recommended exposure index.
+Recommended exposure index. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'--><!--Device-PropertyKey-RECOMMENDED_EXPOSURE_INDEX = 'RecommendedExposureIndex'-End-->
 
@@ -422,11 +384,11 @@ Recommended exposure index.
 ISO_SPEED = 'ISOSpeedRatings'
 ```
 
-ISO speed.
+ISO speed. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ISO_SPEED = 'ISOSpeedRatings'--><!--Device-PropertyKey-ISO_SPEED = 'ISOSpeedRatings'-End-->
 
@@ -438,11 +400,11 @@ ISO speed.
 APERTURE_VALUE = 'ApertureValue'
 ```
 
-Lens aperture. An example in the correct format is 4/1.
+Lens aperture. An example in the correct format is 4/1. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-APERTURE_VALUE = 'ApertureValue'--><!--Device-PropertyKey-APERTURE_VALUE = 'ApertureValue'-End-->
 
@@ -454,11 +416,11 @@ Lens aperture. An example in the correct format is 4/1.
 EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'
 ```
 
-Exposure bias.
+Exposure bias. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'--><!--Device-PropertyKey-EXPOSURE_BIAS_VALUE = 'ExposureBiasValue'-End-->
 
@@ -470,11 +432,11 @@ Exposure bias.
 METERING_MODE = 'MeteringMode'
 ```
 
-Metering mode.
+Metering mode. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-METERING_MODE = 'MeteringMode'--><!--Device-PropertyKey-METERING_MODE = 'MeteringMode'-End-->
 
@@ -486,11 +448,11 @@ Metering mode.
 LIGHT_SOURCE = 'LightSource'
 ```
 
-Light source. An example value is **Fluorescent**.
+Light source. An example value is **Fluorescent**. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-LIGHT_SOURCE = 'LightSource'--><!--Device-PropertyKey-LIGHT_SOURCE = 'LightSource'-End-->
 
@@ -502,11 +464,11 @@ Light source. An example value is **Fluorescent**.
 FLASH = 'Flash'
 ```
 
-Flash status.
+Flash status. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FLASH = 'Flash'--><!--Device-PropertyKey-FLASH = 'Flash'-End-->
 
@@ -518,11 +480,11 @@ Flash status.
 FOCAL_LENGTH = 'FocalLength'
 ```
 
-Focal length of the lens.
+Focal length of the lens. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FOCAL_LENGTH = 'FocalLength'--><!--Device-PropertyKey-FOCAL_LENGTH = 'FocalLength'-End-->
 
@@ -534,11 +496,11 @@ Focal length of the lens.
 USER_COMMENT = 'UserComment'
 ```
 
-User comments.
+User comments. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-USER_COMMENT = 'UserComment'--><!--Device-PropertyKey-USER_COMMENT = 'UserComment'-End-->
 
@@ -550,11 +512,11 @@ User comments.
 PIXEL_X_DIMENSION = 'PixelXDimension'
 ```
 
-Pixel X dimension.
+Pixel X dimension. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PIXEL_X_DIMENSION = 'PixelXDimension'--><!--Device-PropertyKey-PIXEL_X_DIMENSION = 'PixelXDimension'-End-->
 
@@ -566,11 +528,11 @@ Pixel X dimension.
 PIXEL_Y_DIMENSION = 'PixelYDimension'
 ```
 
-Pixel Y dimension.
+Pixel Y dimension. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PIXEL_Y_DIMENSION = 'PixelYDimension'--><!--Device-PropertyKey-PIXEL_Y_DIMENSION = 'PixelYDimension'-End-->
 
@@ -582,15 +544,11 @@ Pixel Y dimension.
 WHITE_BALANCE = 'WhiteBalance'
 ```
 
-White balance.
+White balance. 0: "Auto white balance." 1: "Manual white balance." **Read/Write capability**: readable and writable.
 
-0: "Auto white balance."
+**Since:** 23
 
-1: "Manual white balance."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-WHITE_BALANCE = 'WhiteBalance'--><!--Device-PropertyKey-WHITE_BALANCE = 'WhiteBalance'-End-->
 
@@ -602,11 +560,11 @@ White balance.
 FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'
 ```
 
-Focal length in 35mm film.
+Focal length in 35mm film. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'--><!--Device-PropertyKey-FOCAL_LENGTH_IN_35_MM_FILM = 'FocalLengthIn35mmFilm'-End-->
 
@@ -618,11 +576,11 @@ Focal length in 35mm film.
 CAPTURE_MODE = 'HwMnoteCaptureMode'
 ```
 
-Capture mode.
+Capture mode. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-CAPTURE_MODE = 'HwMnoteCaptureMode'--><!--Device-PropertyKey-CAPTURE_MODE = 'HwMnoteCaptureMode'-End-->
 
@@ -634,11 +592,11 @@ Capture mode.
 PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'
 ```
 
-Physical aperture.
+Physical aperture. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'--><!--Device-PropertyKey-PHYSICAL_APERTURE = 'HwMnotePhysicalAperture'-End-->
 
@@ -650,11 +608,11 @@ Physical aperture.
 ROLL_ANGLE = 'HwMnoteRollAngle'
 ```
 
-Roll angle.
+Roll angle. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ROLL_ANGLE = 'HwMnoteRollAngle'--><!--Device-PropertyKey-ROLL_ANGLE = 'HwMnoteRollAngle'-End-->
 
@@ -666,11 +624,11 @@ Roll angle.
 PITCH_ANGLE = 'HwMnotePitchAngle'
 ```
 
-Pitch angle.
+Pitch angle. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PITCH_ANGLE = 'HwMnotePitchAngle'--><!--Device-PropertyKey-PITCH_ANGLE = 'HwMnotePitchAngle'-End-->
 
@@ -682,11 +640,11 @@ Pitch angle.
 SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'
 ```
 
-Photographing scene: food.
+Photographing scene: food. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'--><!--Device-PropertyKey-SCENE_FOOD_CONF = 'HwMnoteSceneFoodConf'-End-->
 
@@ -698,11 +656,11 @@ Photographing scene: food.
 SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'
 ```
 
-Photographing scene: stage.
+Photographing scene: stage. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'--><!--Device-PropertyKey-SCENE_STAGE_CONF = 'HwMnoteSceneStageConf'-End-->
 
@@ -714,11 +672,11 @@ Photographing scene: stage.
 SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'
 ```
 
-Photographing scene: blue sky.
+Photographing scene: blue sky. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'--><!--Device-PropertyKey-SCENE_BLUE_SKY_CONF = 'HwMnoteSceneBlueSkyConf'-End-->
 
@@ -730,11 +688,11 @@ Photographing scene: blue sky.
 SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'
 ```
 
-Photographing scene: green plant.
+Photographing scene: green plant. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'--><!--Device-PropertyKey-SCENE_GREEN_PLANT_CONF = 'HwMnoteSceneGreenPlantConf'-End-->
 
@@ -746,11 +704,11 @@ Photographing scene: green plant.
 SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'
 ```
 
-Photographing scene: beach.
+Photographing scene: beach. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'--><!--Device-PropertyKey-SCENE_BEACH_CONF = 'HwMnoteSceneBeachConf'-End-->
 
@@ -762,11 +720,11 @@ Photographing scene: beach.
 SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'
 ```
 
-Photographing scene: snow.
+Photographing scene: snow. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'--><!--Device-PropertyKey-SCENE_SNOW_CONF = 'HwMnoteSceneSnowConf'-End-->
 
@@ -778,11 +736,11 @@ Photographing scene: snow.
 SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'
 ```
 
-Photographing scene: sunset.
+Photographing scene: sunset. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'--><!--Device-PropertyKey-SCENE_SUNSET_CONF = 'HwMnoteSceneSunsetConf'-End-->
 
@@ -794,11 +752,11 @@ Photographing scene: sunset.
 SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'
 ```
 
-Photographing scene: flowers.
+Photographing scene: flowers. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'--><!--Device-PropertyKey-SCENE_FLOWERS_CONF = 'HwMnoteSceneFlowersConf'-End-->
 
@@ -810,11 +768,11 @@ Photographing scene: flowers.
 SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'
 ```
 
-Photographing scene: night.
+Photographing scene: night. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'--><!--Device-PropertyKey-SCENE_NIGHT_CONF = 'HwMnoteSceneNightConf'-End-->
 
@@ -826,11 +784,11 @@ Photographing scene: night.
 SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'
 ```
 
-Photographing scene: text.
+Photographing scene: text. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'--><!--Device-PropertyKey-SCENE_TEXT_CONF = 'HwMnoteSceneTextConf'-End-->
 
@@ -842,11 +800,11 @@ Photographing scene: text.
 FACE_COUNT = 'HwMnoteFaceCount'
 ```
 
-Number of faces.
+Number of faces. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_COUNT = 'HwMnoteFaceCount'--><!--Device-PropertyKey-FACE_COUNT = 'HwMnoteFaceCount'-End-->
 
@@ -858,11 +816,11 @@ Number of faces.
 FOCUS_MODE = 'HwMnoteFocusMode'
 ```
 
-Focus mode.
+Focus mode. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FOCUS_MODE = 'HwMnoteFocusMode'--><!--Device-PropertyKey-FOCUS_MODE = 'HwMnoteFocusMode'-End-->
 
@@ -874,17 +832,11 @@ Focus mode.
 COMPRESSION = 'Compression'
 ```
 
-Compression scheme used on the image data.
+Compression scheme used on the image data. 1: "Uncompressed". 2: "CCITT RLE". 3: "T4/Group 3 Fax". **Read/Write capability**: readable and writable.
 
-1: "Uncompressed".
+**Since:** 23
 
-2: "CCITT RLE".
-
-3: "T4/Group 3 Fax".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-COMPRESSION = 'Compression'--><!--Device-PropertyKey-COMPRESSION = 'Compression'-End-->
 
@@ -896,25 +848,11 @@ Compression scheme used on the image data.
 PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'
 ```
 
-Color space of the image data, for example, RGB or YCbCr.
+Color space of the image data, for example, RGB or YCbCr. 0: "Reversed mono". 1: "Normal mono". 2: "RGB". 3: "Palette". 5: "CMYK". 6: "YCbCr". 8: "CieLAB". **Read/Write capability**: readable and writable.
 
-0: "Reversed mono".
+**Since:** 23
 
-1: "Normal mono".
-
-2: "RGB".
-
-3: "Palette".
-
-5: "CMYK".
-
-6: "YCbCr".
-
-8: "CieLAB".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'--><!--Device-PropertyKey-PHOTOMETRIC_INTERPRETATION = 'PhotometricInterpretation'-End-->
 
@@ -926,11 +864,11 @@ Color space of the image data, for example, RGB or YCbCr.
 STRIP_OFFSETS = 'StripOffsets'
 ```
 
-Byte offset of each strip.
+Byte offset of each strip. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-STRIP_OFFSETS = 'StripOffsets'--><!--Device-PropertyKey-STRIP_OFFSETS = 'StripOffsets'-End-->
 
@@ -942,11 +880,11 @@ Byte offset of each strip.
 SAMPLES_PER_PIXEL = 'SamplesPerPixel'
 ```
 
-Number of components per pixel. The value is **3** for RGB and YCbCr images. The **JPEG** key is used in JPEG compressed data.
+Number of components per pixel. The value is **3** for RGB and YCbCr images. The **JPEG** key is used in JPEG compressed data. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SAMPLES_PER_PIXEL = 'SamplesPerPixel'--><!--Device-PropertyKey-SAMPLES_PER_PIXEL = 'SamplesPerPixel'-End-->
 
@@ -958,11 +896,11 @@ Number of components per pixel. The value is **3** for RGB and YCbCr images. The
 ROWS_PER_STRIP = 'RowsPerStrip'
 ```
 
-Number of rows per strip.
+Number of rows per strip. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ROWS_PER_STRIP = 'RowsPerStrip'--><!--Device-PropertyKey-ROWS_PER_STRIP = 'RowsPerStrip'-End-->
 
@@ -974,11 +912,11 @@ Number of rows per strip.
 STRIP_BYTE_COUNTS = 'StripByteCounts'
 ```
 
-Number of bytes in each strip after compression.
+Number of bytes in each strip after compression. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-STRIP_BYTE_COUNTS = 'StripByteCounts'--><!--Device-PropertyKey-STRIP_BYTE_COUNTS = 'StripByteCounts'-End-->
 
@@ -990,11 +928,11 @@ Number of bytes in each strip after compression.
 X_RESOLUTION = 'XResolution'
 ```
 
-Number of pixels per ResolutionUnit in the image width (X) direction.
+Number of pixels per ResolutionUnit in the image width (X) direction. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-X_RESOLUTION = 'XResolution'--><!--Device-PropertyKey-X_RESOLUTION = 'XResolution'-End-->
 
@@ -1006,11 +944,11 @@ Number of pixels per ResolutionUnit in the image width (X) direction.
 Y_RESOLUTION = 'YResolution'
 ```
 
-Number of pixels per ResolutionUnit in the image height (Y) direction.
+Number of pixels per ResolutionUnit in the image height (Y) direction. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-Y_RESOLUTION = 'YResolution'--><!--Device-PropertyKey-Y_RESOLUTION = 'YResolution'-End-->
 
@@ -1022,15 +960,11 @@ Number of pixels per ResolutionUnit in the image height (Y) direction.
 PLANAR_CONFIGURATION = 'PlanarConfiguration'
 ```
 
-Storage format of components of each pixel, which can be chunky or planar.
+Storage format of components of each pixel, which can be chunky or planar. 1: "Chunky format": chunky format. 2: "Planar format": planar format. **Read/Write capability**: readable and writable.
 
-1: "Chunky format": chunky format.
+**Since:** 23
 
-2: "Planar format": planar format.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PLANAR_CONFIGURATION = 'PlanarConfiguration'--><!--Device-PropertyKey-PLANAR_CONFIGURATION = 'PlanarConfiguration'-End-->
 
@@ -1042,15 +976,11 @@ Storage format of components of each pixel, which can be chunky or planar.
 RESOLUTION_UNIT = 'ResolutionUnit'
 ```
 
-Unit of measurement for XResolution and YResolution, in inches or centimeters.
+Unit of measurement for XResolution and YResolution, in inches or centimeters. 2: "Inch": measured in inches. 3: "Centimeter": measured in centimeters. **Read/Write capability**: readable and writable.
 
-2: "Inch": measured in inches.
+**Since:** 23
 
-3: "Centimeter": measured in centimeters.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-RESOLUTION_UNIT = 'ResolutionUnit'--><!--Device-PropertyKey-RESOLUTION_UNIT = 'ResolutionUnit'-End-->
 
@@ -1062,11 +992,11 @@ Unit of measurement for XResolution and YResolution, in inches or centimeters.
 TRANSFER_FUNCTION = 'TransferFunction'
 ```
 
-Transfer function for the image, which is usually used for color correction.
+Transfer function for the image, which is usually used for color correction. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-TRANSFER_FUNCTION = 'TransferFunction'--><!--Device-PropertyKey-TRANSFER_FUNCTION = 'TransferFunction'-End-->
 
@@ -1078,11 +1008,11 @@ Transfer function for the image, which is usually used for color correction.
 SOFTWARE = 'Software'
 ```
 
-Name and version number of the software used to create the image.
+Name and version number of the software used to create the image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SOFTWARE = 'Software'--><!--Device-PropertyKey-SOFTWARE = 'Software'-End-->
 
@@ -1094,11 +1024,11 @@ Name and version number of the software used to create the image.
 ARTIST = 'Artist'
 ```
 
-Person who created the image.
+Person who created the image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ARTIST = 'Artist'--><!--Device-PropertyKey-ARTIST = 'Artist'-End-->
 
@@ -1110,11 +1040,11 @@ Person who created the image.
 WHITE_POINT = 'WhitePoint'
 ```
 
-Chromaticity coordinates of the white point, the reference for "white", in the color space of the image.
+Chromaticity coordinates of the white point, the reference for "white", in the color space of the image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-WHITE_POINT = 'WhitePoint'--><!--Device-PropertyKey-WHITE_POINT = 'WhitePoint'-End-->
 
@@ -1126,11 +1056,11 @@ Chromaticity coordinates of the white point, the reference for "white", in the c
 PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'
 ```
 
-Chromaticities of the primaries of the image.
+Chromaticities of the primaries of the image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'--><!--Device-PropertyKey-PRIMARY_CHROMATICITIES = 'PrimaryChromaticities'-End-->
 
@@ -1142,11 +1072,11 @@ Chromaticities of the primaries of the image.
 YCBCR_COEFFICIENTS = 'YCbCrCoefficients'
 ```
 
-Coefficients for the conversion matrix that transforms image data from RGB to YCbCr.
+Coefficients for the conversion matrix that transforms image data from RGB to YCbCr. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-YCBCR_COEFFICIENTS = 'YCbCrCoefficients'--><!--Device-PropertyKey-YCBCR_COEFFICIENTS = 'YCbCrCoefficients'-End-->
 
@@ -1158,11 +1088,11 @@ Coefficients for the conversion matrix that transforms image data from RGB to YC
 YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'
 ```
 
-Subsampling factors used for the chrominance components of a YCbCr image.
+Subsampling factors used for the chrominance components of a YCbCr image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'--><!--Device-PropertyKey-YCBCR_SUB_SAMPLING = 'YCbCrSubSampling'-End-->
 
@@ -1174,15 +1104,11 @@ Subsampling factors used for the chrominance components of a YCbCr image.
 YCBCR_POSITIONING = 'YCbCrPositioning'
 ```
 
-Positioning of subsampled chrominance components relative to luminance samples.
+Positioning of subsampled chrominance components relative to luminance samples. 1: "Centered": Cb/Cr chrominance components are centered relative to the luminance pixels (common practice). 2: "Co-sited": Cb/Cr and Y sampling points align at the top-left corner. **Read/Write capability**: readable and writable.
 
-1: "Centered": Cb/Cr chrominance components are centered relative to the luminance pixels (common practice).
+**Since:** 23
 
-2: "Co-sited": Cb/Cr and Y sampling points align at the top-left corner.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-YCBCR_POSITIONING = 'YCbCrPositioning'--><!--Device-PropertyKey-YCBCR_POSITIONING = 'YCbCrPositioning'-End-->
 
@@ -1194,11 +1120,11 @@ Positioning of subsampled chrominance components relative to luminance samples.
 REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'
 ```
 
-Reference values for black and white points.
+Reference values for black and white points. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'--><!--Device-PropertyKey-REFERENCE_BLACK_WHITE = 'ReferenceBlackWhite'-End-->
 
@@ -1210,11 +1136,11 @@ Reference values for black and white points.
 COPYRIGHT = 'Copyright'
 ```
 
-Copyright notice of the image.
+Copyright notice of the image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-COPYRIGHT = 'Copyright'--><!--Device-PropertyKey-COPYRIGHT = 'Copyright'-End-->
 
@@ -1226,11 +1152,11 @@ Copyright notice of the image.
 JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'
 ```
 
-Offset of the SOI marker of a JPEG interchange format bitstream.
+Offset of the SOI marker of a JPEG interchange format bitstream. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'--><!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT = 'JPEGInterchangeFormat'-End-->
 
@@ -1242,11 +1168,11 @@ Offset of the SOI marker of a JPEG interchange format bitstream.
 JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'
 ```
 
-Number of bytes of the JPEG stream.
+Number of bytes of the JPEG stream. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'--><!--Device-PropertyKey-JPEG_INTERCHANGE_FORMAT_LENGTH = 'JPEGInterchangeFormatLength'-End-->
 
@@ -1258,29 +1184,11 @@ Number of bytes of the JPEG stream.
 EXPOSURE_PROGRAM = 'ExposureProgram'
 ```
 
-Class of the program used by the camera to set exposure when the image was captured.
+Class of the program used by the camera to set exposure when the image was captured. 0: "Not defined". 1: "Manual". 2: "Normal program". 3: "Aperture priority". 4: "Shutter priority". 5: "Creative program (biased toward depth of field)". 6: "Creative program (biased toward fast shutter speed)". 7: "Portrait mode (for closeup photos with the background out of focus)". 8: "Landscape mode (for landscape photos with the background in focus)". **Read/Write capability**: readable and writable.
 
-0: "Not defined".
+**Since:** 23
 
-1: "Manual".
-
-2: "Normal program".
-
-3: "Aperture priority".
-
-4: "Shutter priority".
-
-5: "Creative program (biased toward depth of field)".
-
-6: "Creative program (biased toward fast shutter speed)".
-
-7: "Portrait mode (for closeup photos with the background out of focus)".
-
-8: "Landscape mode (for landscape photos with the background in focus)".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-EXPOSURE_PROGRAM = 'ExposureProgram'--><!--Device-PropertyKey-EXPOSURE_PROGRAM = 'ExposureProgram'-End-->
 
@@ -1292,11 +1200,11 @@ Class of the program used by the camera to set exposure when the image was captu
 SPECTRAL_SENSITIVITY = 'SpectralSensitivity'
 ```
 
-Spectral sensitivity of each channel of the camera.
+Spectral sensitivity of each channel of the camera. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SPECTRAL_SENSITIVITY = 'SpectralSensitivity'--><!--Device-PropertyKey-SPECTRAL_SENSITIVITY = 'SpectralSensitivity'-End-->
 
@@ -1308,11 +1216,11 @@ Spectral sensitivity of each channel of the camera.
 OECF = 'OECF'
 ```
 
-Opto-Electric Conversion Function (OECF) specified in ISO 14524.
+Opto-Electric Conversion Function (OECF) specified in ISO 14524. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-OECF = 'OECF'--><!--Device-PropertyKey-OECF = 'OECF'-End-->
 
@@ -1324,11 +1232,11 @@ Opto-Electric Conversion Function (OECF) specified in ISO 14524.
 EXIF_VERSION = 'ExifVersion'
 ```
 
-Version of the supported Exif standard.
+Version of the supported Exif standard. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-EXIF_VERSION = 'ExifVersion'--><!--Device-PropertyKey-EXIF_VERSION = 'ExifVersion'-End-->
 
@@ -1340,11 +1248,11 @@ Version of the supported Exif standard.
 DATE_TIME_DIGITIZED = 'DateTimeDigitized'
 ```
 
-Date and time when the image was stored as digital data, in the format of YYYY:MM:DD HH:mm:ss.
+Date and time when the image was stored as digital data, in the format of YYYY:MM:DD HH:mm:ss. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DATE_TIME_DIGITIZED = 'DateTimeDigitized'--><!--Device-PropertyKey-DATE_TIME_DIGITIZED = 'DateTimeDigitized'-End-->
 
@@ -1356,11 +1264,11 @@ Date and time when the image was stored as digital data, in the format of YYYY:M
 COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'
 ```
 
-Specific information about compressed data.
+Specific information about compressed data. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'--><!--Device-PropertyKey-COMPONENTS_CONFIGURATION = 'ComponentsConfiguration'-End-->
 
@@ -1372,11 +1280,11 @@ Specific information about compressed data.
 SHUTTER_SPEED = 'ShutterSpeedValue'
 ```
 
-Shutter speed, expressed in Additive System of Photographic Exposure (APEX) values.
+Shutter speed, expressed in Additive System of Photographic Exposure (APEX) values. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SHUTTER_SPEED = 'ShutterSpeedValue'--><!--Device-PropertyKey-SHUTTER_SPEED = 'ShutterSpeedValue'-End-->
 
@@ -1388,11 +1296,11 @@ Shutter speed, expressed in Additive System of Photographic Exposure (APEX) valu
 BRIGHTNESS_VALUE = 'BrightnessValue'
 ```
 
-Value of brightness, expressed in APEX values.
+Value of brightness, expressed in APEX values. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-BRIGHTNESS_VALUE = 'BrightnessValue'--><!--Device-PropertyKey-BRIGHTNESS_VALUE = 'BrightnessValue'-End-->
 
@@ -1404,11 +1312,11 @@ Value of brightness, expressed in APEX values.
 MAX_APERTURE_VALUE = 'MaxApertureValue'
 ```
 
-Smallest F number of the lens.
+Smallest F number of the lens. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-MAX_APERTURE_VALUE = 'MaxApertureValue'--><!--Device-PropertyKey-MAX_APERTURE_VALUE = 'MaxApertureValue'-End-->
 
@@ -1420,11 +1328,11 @@ Smallest F number of the lens.
 SUBJECT_DISTANCE = 'SubjectDistance'
 ```
 
-Distance to the subject, in meters.
+Distance to the subject, in meters. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBJECT_DISTANCE = 'SubjectDistance'--><!--Device-PropertyKey-SUBJECT_DISTANCE = 'SubjectDistance'-End-->
 
@@ -1436,11 +1344,11 @@ Distance to the subject, in meters.
 SUBJECT_AREA = 'SubjectArea'
 ```
 
-Location and area of the main subject in the entire scene.
+Location and area of the main subject in the entire scene. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBJECT_AREA = 'SubjectArea'--><!--Device-PropertyKey-SUBJECT_AREA = 'SubjectArea'-End-->
 
@@ -1452,13 +1360,11 @@ Location and area of the main subject in the entire scene.
 MAKER_NOTE = 'MakerNote'
 ```
 
-Marker used by Exif/DCF manufacturers to record any required information.
+Marker used by Exif/DCF manufacturers to record any required information. This field is read-only in API versions 12 to 19 and is readable and writable in API version 20 and later. **Read/Write capability**: readable and writable.
 
-This field is read-only in API versions 12 to 19 and is readable and writable in API version 20 and later.
+**Since:** 23
 
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-MAKER_NOTE = 'MakerNote'--><!--Device-PropertyKey-MAKER_NOTE = 'MakerNote'-End-->
 
@@ -1470,11 +1376,11 @@ This field is read-only in API versions 12 to 19 and is readable and writable in
 SUBSEC_TIME = 'SubsecTime'
 ```
 
-Tag used to record fractions of seconds for the **DateTime** tag.
+Tag used to record fractions of seconds for the **DateTime** tag. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBSEC_TIME = 'SubsecTime'--><!--Device-PropertyKey-SUBSEC_TIME = 'SubsecTime'-End-->
 
@@ -1486,11 +1392,11 @@ Tag used to record fractions of seconds for the **DateTime** tag.
 SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'
 ```
 
-Tag used to record fractions of seconds for the **DateTimeOriginal** tag.
+Tag used to record fractions of seconds for the **DateTimeOriginal** tag. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'--><!--Device-PropertyKey-SUBSEC_TIME_ORIGINAL = 'SubsecTimeOriginal'-End-->
 
@@ -1502,11 +1408,11 @@ Tag used to record fractions of seconds for the **DateTimeOriginal** tag.
 SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'
 ```
 
-Tag used to record fractions of seconds for the **DateTimeDigitized** tag.
+Tag used to record fractions of seconds for the **DateTimeDigitized** tag. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'--><!--Device-PropertyKey-SUBSEC_TIME_DIGITIZED = 'SubsecTimeDigitized'-End-->
 
@@ -1518,11 +1424,11 @@ Tag used to record fractions of seconds for the **DateTimeDigitized** tag.
 FLASHPIX_VERSION = 'FlashpixVersion'
 ```
 
-FlashPix format version supported by an FPXR file. It is used to enhance device compatibility.
+FlashPix format version supported by an FPXR file. It is used to enhance device compatibility. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FLASHPIX_VERSION = 'FlashpixVersion'--><!--Device-PropertyKey-FLASHPIX_VERSION = 'FlashpixVersion'-End-->
 
@@ -1534,17 +1440,11 @@ FlashPix format version supported by an FPXR file. It is used to enhance device 
 COLOR_SPACE = 'ColorSpace'
 ```
 
-Color space information, which is usually recorded as a color space specifier.
+Color space information, which is usually recorded as a color space specifier. 1: "sRGB", indicating the standard sRGB color space. It is the typical default value. 2: "Adobe RGB", indicating the Adobe RGB color space. It is not formally defined in Exif, but commonly used in practice. 0xffff: "Uncalibrated", indicating that the color space is uncalibrated and unknown. **Read/Write capability**: readable and writable.
 
-1: "sRGB", indicating the standard sRGB color space. It is the typical default value.
+**Since:** 23
 
-2: "Adobe RGB", indicating the Adobe RGB color space. It is not formally defined in Exif, but commonly used in practice.
-
-0xffff: "Uncalibrated", indicating that the color space is uncalibrated and unknown.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-COLOR_SPACE = 'ColorSpace'--><!--Device-PropertyKey-COLOR_SPACE = 'ColorSpace'-End-->
 
@@ -1556,11 +1456,11 @@ Color space information, which is usually recorded as a color space specifier.
 RELATED_SOUND_FILE = 'RelatedSoundFile'
 ```
 
-Name of an audio file related to the image data.
+Name of an audio file related to the image data. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-RELATED_SOUND_FILE = 'RelatedSoundFile'--><!--Device-PropertyKey-RELATED_SOUND_FILE = 'RelatedSoundFile'-End-->
 
@@ -1572,11 +1472,11 @@ Name of an audio file related to the image data.
 FLASH_ENERGY = 'FlashEnergy'
 ```
 
-Strobe energy at the time the image was captured, in Beam Candle Power Seconds (BCPS).
+Strobe energy at the time the image was captured, in Beam Candle Power Seconds (BCPS). **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FLASH_ENERGY = 'FlashEnergy'--><!--Device-PropertyKey-FLASH_ENERGY = 'FlashEnergy'-End-->
 
@@ -1588,11 +1488,11 @@ Strobe energy at the time the image was captured, in Beam Candle Power Seconds (
 SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'
 ```
 
-Spatial frequency table of the camera or input device.
+Spatial frequency table of the camera or input device. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'--><!--Device-PropertyKey-SPATIAL_FREQUENCY_RESPONSE = 'SpatialFrequencyResponse'-End-->
 
@@ -1604,11 +1504,11 @@ Spatial frequency table of the camera or input device.
 FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'
 ```
 
-Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit.
+Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'--><!--Device-PropertyKey-FOCAL_PLANE_X_RESOLUTION = 'FocalPlaneXResolution'-End-->
 
@@ -1620,11 +1520,11 @@ Number of pixels in the image width (X) direction per FocalPlaneResolutionUnit.
 FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'
 ```
 
-Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit.
+Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'--><!--Device-PropertyKey-FOCAL_PLANE_Y_RESOLUTION = 'FocalPlaneYResolution'-End-->
 
@@ -1636,15 +1536,11 @@ Number of pixels in the image height (Y) direction per FocalPlaneResolutionUnit.
 FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'
 ```
 
-Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution.
+Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution. 2: "Inch": measured in inches. 3: "Centimeter": measured in centimeters. **Read/Write capability**: readable and writable.
 
-2: "Inch": measured in inches.
+**Since:** 23
 
-3: "Centimeter": measured in centimeters.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'--><!--Device-PropertyKey-FOCAL_PLANE_RESOLUTION_UNIT = 'FocalPlaneResolutionUnit'-End-->
 
@@ -1656,11 +1552,11 @@ Unit for measuring FocalPlaneXResolution and FocalPlaneYResolution.
 SUBJECT_LOCATION = 'SubjectLocation'
 ```
 
-Location of the main subject relative to the left edge.
+Location of the main subject relative to the left edge. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBJECT_LOCATION = 'SubjectLocation'--><!--Device-PropertyKey-SUBJECT_LOCATION = 'SubjectLocation'-End-->
 
@@ -1672,11 +1568,11 @@ Location of the main subject relative to the left edge.
 EXPOSURE_INDEX = 'ExposureIndex'
 ```
 
-Exposure index selected at the time the image is captured.
+Exposure index selected at the time the image is captured. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-EXPOSURE_INDEX = 'ExposureIndex'--><!--Device-PropertyKey-EXPOSURE_INDEX = 'ExposureIndex'-End-->
 
@@ -1688,11 +1584,11 @@ Exposure index selected at the time the image is captured.
 SENSING_METHOD = 'SensingMethod'
 ```
 
-Type of the image sensor on the camera.
+Type of the image sensor on the camera. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SENSING_METHOD = 'SensingMethod'--><!--Device-PropertyKey-SENSING_METHOD = 'SensingMethod'-End-->
 
@@ -1704,11 +1600,11 @@ Type of the image sensor on the camera.
 FILE_SOURCE = 'FileSource'
 ```
 
-Image source.
+Image source. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FILE_SOURCE = 'FileSource'--><!--Device-PropertyKey-FILE_SOURCE = 'FileSource'-End-->
 
@@ -1720,11 +1616,11 @@ Image source.
 CFA_PATTERN = 'CFAPattern'
 ```
 
-Color Filter Array (CFA) geometric pattern of the image sensor.
+Color Filter Array (CFA) geometric pattern of the image sensor. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-CFA_PATTERN = 'CFAPattern'--><!--Device-PropertyKey-CFA_PATTERN = 'CFAPattern'-End-->
 
@@ -1736,15 +1632,11 @@ Color Filter Array (CFA) geometric pattern of the image sensor.
 CUSTOM_RENDERED = 'CustomRendered'
 ```
 
-Special processing on image data.
+Special processing on image data. 0: "Normal process", indicating normal processing (no custom rendering). 1: "Custom process", indicating custom processing (such as artistic effect, beauty, and HDR). **Read/Write capability**: readable and writable.
 
-0: "Normal process", indicating normal processing (no custom rendering).
+**Since:** 23
 
-1: "Custom process", indicating custom processing (such as artistic effect, beauty, and HDR).
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-CUSTOM_RENDERED = 'CustomRendered'--><!--Device-PropertyKey-CUSTOM_RENDERED = 'CustomRendered'-End-->
 
@@ -1756,17 +1648,11 @@ Special processing on image data.
 EXPOSURE_MODE = 'ExposureMode'
 ```
 
-Exposure mode set when the image was captured.
+Exposure mode set when the image was captured. 0: "Auto exposure." 1: "Manual exposure." 2: "Auto bracket." **Read/Write capability**: readable and writable.
 
-0: "Auto exposure."
+**Since:** 23
 
-1: "Manual exposure."
-
-2: "Auto bracket."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-EXPOSURE_MODE = 'ExposureMode'--><!--Device-PropertyKey-EXPOSURE_MODE = 'ExposureMode'-End-->
 
@@ -1778,11 +1664,11 @@ Exposure mode set when the image was captured.
 DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'
 ```
 
-Digital zoom ratio when the image was captured.
+Digital zoom ratio when the image was captured. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'--><!--Device-PropertyKey-DIGITAL_ZOOM_RATIO = 'DigitalZoomRatio'-End-->
 
@@ -1794,19 +1680,11 @@ Digital zoom ratio when the image was captured.
 SCENE_CAPTURE_TYPE = 'SceneCaptureType'
 ```
 
-Type of the scene that was captured.
+Type of the scene that was captured. 0: "Standard." 1: "Landscape." 2: "Portrait." 3: "Night scene." **Read/Write capability**: readable and writable.
 
-0: "Standard."
+**Since:** 23
 
-1: "Landscape."
-
-2: "Portrait."
-
-3: "Night scene."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_CAPTURE_TYPE = 'SceneCaptureType'--><!--Device-PropertyKey-SCENE_CAPTURE_TYPE = 'SceneCaptureType'-End-->
 
@@ -1818,21 +1696,11 @@ Type of the scene that was captured.
 GAIN_CONTROL = 'GainControl'
 ```
 
-Degree of overall image gain adjustment.
+Degree of overall image gain adjustment. 0: "Normal", no gain control. 1: "Low gain up." 2: "High gain up." 3: "Low gain down." 4: "High gain down." **Read/Write capability**: readable and writable.
 
-0: "Normal", no gain control.
+**Since:** 23
 
-1: "Low gain up."
-
-2: "High gain up."
-
-3: "Low gain down."
-
-4: "High gain down."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GAIN_CONTROL = 'GainControl'--><!--Device-PropertyKey-GAIN_CONTROL = 'GainControl'-End-->
 
@@ -1844,17 +1712,11 @@ Degree of overall image gain adjustment.
 CONTRAST = 'Contrast'
 ```
 
-Direction of contrast processing used by the camera.
+Direction of contrast processing used by the camera. 0: "Normal", normal contrast. 1: "Soft", soft contrast. 2: "Hard", hard contrast. **Read/Write capability**: readable and writable.
 
-0: "Normal", normal contrast.
+**Since:** 23
 
-1: "Soft", soft contrast.
-
-2: "Hard", hard contrast.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-CONTRAST = 'Contrast'--><!--Device-PropertyKey-CONTRAST = 'Contrast'-End-->
 
@@ -1866,17 +1728,11 @@ Direction of contrast processing used by the camera.
 SATURATION = 'Saturation'
 ```
 
-Direction of saturation processing used by the camera.
+Direction of saturation processing used by the camera. 0:"Normal": normal saturation. 1: "Low saturation." 2: "High saturation." **Read/Write capability**: readable and writable.
 
-0:"Normal": normal saturation.
+**Since:** 23
 
-1: "Low saturation."
-
-2: "High saturation."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SATURATION = 'Saturation'--><!--Device-PropertyKey-SATURATION = 'Saturation'-End-->
 
@@ -1888,17 +1744,11 @@ Direction of saturation processing used by the camera.
 SHARPNESS = 'Sharpness'
 ```
 
-Direction of sharpness processing used by the camera.
+Direction of sharpness processing used by the camera. 0:"Normal": normal sharpness. 1: "Soft." 2: "Hard." **Read/Write capability**: readable and writable.
 
-0:"Normal": normal sharpness.
+**Since:** 23
 
-1: "Soft."
-
-2: "Hard."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SHARPNESS = 'Sharpness'--><!--Device-PropertyKey-SHARPNESS = 'Sharpness'-End-->
 
@@ -1910,11 +1760,11 @@ Direction of sharpness processing used by the camera.
 DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'
 ```
 
-Information about the photographing conditions of a specific camera model.
+Information about the photographing conditions of a specific camera model. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'--><!--Device-PropertyKey-DEVICE_SETTING_DESCRIPTION = 'DeviceSettingDescription'-End-->
 
@@ -1926,19 +1776,11 @@ Information about the photographing conditions of a specific camera model.
 SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'
 ```
 
-Distance to the subject.
+Distance to the subject. 0: "Unknown." 1: "Macro." 2: "Close view." 3: "Distant view." **Read/Write capability**: readable and writable.
 
-0: "Unknown."
+**Since:** 23
 
-1: "Macro."
-
-2: "Close view."
-
-3: "Distant view."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'--><!--Device-PropertyKey-SUBJECT_DISTANCE_RANGE = 'SubjectDistanceRange'-End-->
 
@@ -1950,11 +1792,11 @@ Distance to the subject.
 IMAGE_UNIQUE_ID = 'ImageUniqueID'
 ```
 
-Unique identifier assigned to each image.
+Unique identifier assigned to each image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-IMAGE_UNIQUE_ID = 'ImageUniqueID'--><!--Device-PropertyKey-IMAGE_UNIQUE_ID = 'ImageUniqueID'-End-->
 
@@ -1966,11 +1808,11 @@ Unique identifier assigned to each image.
 GPS_VERSION_ID = 'GPSVersionID'
 ```
 
-GPS information version.
+GPS information version. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_VERSION_ID = 'GPSVersionID'--><!--Device-PropertyKey-GPS_VERSION_ID = 'GPSVersionID'-End-->
 
@@ -1982,15 +1824,11 @@ GPS information version.
 GPS_ALTITUDE_REF = 'GPSAltitudeRef'
 ```
 
-Whether the latitude is north or south latitude.
+Whether the latitude is north or south latitude. 0: Sea level, which is above sea level. 1: "Sea level reference," which is below the sea level. **Read/Write capability**: readable and writable.
 
-0: Sea level, which is above sea level.
+**Since:** 23
 
-1: "Sea level reference," which is below the sea level.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_ALTITUDE_REF = 'GPSAltitudeRef'--><!--Device-PropertyKey-GPS_ALTITUDE_REF = 'GPSAltitudeRef'-End-->
 
@@ -2002,11 +1840,11 @@ Whether the latitude is north or south latitude.
 GPS_ALTITUDE = 'GPSAltitude'
 ```
 
-Altitude based on the reference in GPSAltitudeRef.
+Altitude based on the reference in GPSAltitudeRef. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_ALTITUDE = 'GPSAltitude'--><!--Device-PropertyKey-GPS_ALTITUDE = 'GPSAltitude'-End-->
 
@@ -2018,11 +1856,11 @@ Altitude based on the reference in GPSAltitudeRef.
 GPS_SATELLITES = 'GPSSatellites'
 ```
 
-GPS satellites used for measurement.
+GPS satellites used for measurement. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_SATELLITES = 'GPSSatellites'--><!--Device-PropertyKey-GPS_SATELLITES = 'GPSSatellites'-End-->
 
@@ -2034,15 +1872,11 @@ GPS satellites used for measurement.
 GPS_STATUS = 'GPSStatus'
 ```
 
-Status of the GPS receiver when the image was recorded.
+Status of the GPS receiver when the image was recorded. 'A': "Measurement in progress", GPS is working, satellite signals are locked, and location data is trustworthy. 'V': "Measurement interrupted", GPS is not working, current positioning is unavailable, and location data may be missing or incorrect. **Read/Write capability**: readable and writable.
 
-'A': "Measurement in progress", GPS is working, satellite signals are locked, and location data is trustworthy.
+**Since:** 23
 
-'V': "Measurement interrupted", GPS is not working, current positioning is unavailable, and location data may be missing or incorrect.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_STATUS = 'GPSStatus'--><!--Device-PropertyKey-GPS_STATUS = 'GPSStatus'-End-->
 
@@ -2054,15 +1888,11 @@ Status of the GPS receiver when the image was recorded.
 GPS_MEASURE_MODE = 'GPSMeasureMode'
 ```
 
-GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement mode is used for GPS positioning.
+GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement mode is used for GPS positioning. 2: "2-dimensional measurement", (latitude+longitude). 3: "3-dimensional measurement", (latitude + longitude + height). **Read/Write capability**: readable and writable.
 
-2: "2-dimensional measurement", (latitude+longitude).
+**Since:** 23
 
-3: "3-dimensional measurement", (latitude + longitude + height).
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_MEASURE_MODE = 'GPSMeasureMode'--><!--Device-PropertyKey-GPS_MEASURE_MODE = 'GPSMeasureMode'-End-->
 
@@ -2074,11 +1904,11 @@ GPS measurement pmode. Whether the 2D (planar) or 3D (with height) measurement m
 GPS_DOP = 'GPSDOP'
 ```
 
-GPS Dilution of Precision (DOP), which reflects the precision of GPS measurements taken when the photo was captured.
+GPS Dilution of Precision (DOP), which reflects the precision of GPS measurements taken when the photo was captured. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DOP = 'GPSDOP'--><!--Device-PropertyKey-GPS_DOP = 'GPSDOP'-End-->
 
@@ -2090,17 +1920,11 @@ GPS Dilution of Precision (DOP), which reflects the precision of GPS measurement
 GPS_SPEED_REF = 'GPSSpeedRef'
 ```
 
-Unit used to express the movement speed of the GPS receiver.
+Unit used to express the movement speed of the GPS receiver. 'K': "km/h". 'M': "mph". 'N': "knots". **Read/Write capability**: readable and writable.
 
-'K': "km/h".
+**Since:** 23
 
-'M': "mph".
-
-'N': "knots".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_SPEED_REF = 'GPSSpeedRef'--><!--Device-PropertyKey-GPS_SPEED_REF = 'GPSSpeedRef'-End-->
 
@@ -2112,11 +1936,11 @@ Unit used to express the movement speed of the GPS receiver.
 GPS_SPEED = 'GPSSpeed'
 ```
 
-Movement speed of the GPS receiver.
+Movement speed of the GPS receiver. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_SPEED = 'GPSSpeed'--><!--Device-PropertyKey-GPS_SPEED = 'GPSSpeed'-End-->
 
@@ -2128,15 +1952,11 @@ Movement speed of the GPS receiver.
 GPS_TRACK_REF = 'GPSTrackRef'
 ```
 
-Which type of "North" is used as the reference for the direction angle.
+Which type of "North" is used as the reference for the direction angle. 'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems. 'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time. **Read/Write capability**: readable and writable.
 
-'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems.
+**Since:** 23
 
-'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_TRACK_REF = 'GPSTrackRef'--><!--Device-PropertyKey-GPS_TRACK_REF = 'GPSTrackRef'-End-->
 
@@ -2148,11 +1968,11 @@ Which type of "North" is used as the reference for the direction angle.
 GPS_TRACK = 'GPSTrack'
 ```
 
-Movement direction of the GPS receiver. Direction of movement (heading) of the camera at the moment the photo was taken, measured in degrees.
+Movement direction of the GPS receiver. Direction of movement (heading) of the camera at the moment the photo was taken, measured in degrees. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_TRACK = 'GPSTrack'--><!--Device-PropertyKey-GPS_TRACK = 'GPSTrack'-End-->
 
@@ -2164,15 +1984,11 @@ Movement direction of the GPS receiver. Direction of movement (heading) of the c
 GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'
 ```
 
-Reference of the direction of the image when it was captured.
+Reference of the direction of the image when it was captured. 'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems. 'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time. **Read/Write capability**: readable and writable.
 
-'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems.
+**Since:** 23
 
-'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'--><!--Device-PropertyKey-GPS_IMG_DIRECTION_REF = 'GPSImgDirectionRef'-End-->
 
@@ -2184,11 +2000,11 @@ Reference of the direction of the image when it was captured.
 GPS_IMG_DIRECTION = 'GPSImgDirection'
 ```
 
-Direction of the image when it was captured.
+Direction of the image when it was captured. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_IMG_DIRECTION = 'GPSImgDirection'--><!--Device-PropertyKey-GPS_IMG_DIRECTION = 'GPSImgDirection'-End-->
 
@@ -2200,11 +2016,11 @@ Direction of the image when it was captured.
 GPS_MAP_DATUM = 'GPSMapDatum'
 ```
 
-Geodetic survey data used by the GPS receiver.
+Geodetic survey data used by the GPS receiver. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_MAP_DATUM = 'GPSMapDatum'--><!--Device-PropertyKey-GPS_MAP_DATUM = 'GPSMapDatum'-End-->
 
@@ -2216,15 +2032,11 @@ Geodetic survey data used by the GPS receiver.
 GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'
 ```
 
-Whether the latitude of the destination point is north or south latitude.
+Whether the latitude of the destination point is north or south latitude. 78: "North". 83: "South". **Read/Write capability**: readable and writable.
 
-78: "North".
+**Since:** 23
 
-83: "South".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'--><!--Device-PropertyKey-GPS_DEST_LATITUDE_REF = 'GPSDestLatitudeRef'-End-->
 
@@ -2236,11 +2048,11 @@ Whether the latitude of the destination point is north or south latitude.
 GPS_DEST_LATITUDE = 'GPSDestLatitude'
 ```
 
-Latitude of the destination point.
+Latitude of the destination point. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_LATITUDE = 'GPSDestLatitude'--><!--Device-PropertyKey-GPS_DEST_LATITUDE = 'GPSDestLatitude'-End-->
 
@@ -2252,15 +2064,11 @@ Latitude of the destination point.
 GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'
 ```
 
-Whether the longitude of the destination point is east or west longitude.
+Whether the longitude of the destination point is east or west longitude. 69: "East". 87: "West". **Read/Write capability**: readable and writable.
 
-69: "East".
+**Since:** 23
 
-87: "West".
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'--><!--Device-PropertyKey-GPS_DEST_LONGITUDE_REF = 'GPSDestLongitudeRef'-End-->
 
@@ -2272,11 +2080,11 @@ Whether the longitude of the destination point is east or west longitude.
 GPS_DEST_LONGITUDE = 'GPSDestLongitude'
 ```
 
-Longitude of the destination point.
+Longitude of the destination point. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_LONGITUDE = 'GPSDestLongitude'--><!--Device-PropertyKey-GPS_DEST_LONGITUDE = 'GPSDestLongitude'-End-->
 
@@ -2288,15 +2096,11 @@ Longitude of the destination point.
 GPS_DEST_BEARING_REF = 'GPSDestBearingRef'
 ```
 
-Reference of the bearing to the destination point.
+Reference of the bearing to the destination point. 'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems. 'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time. **Read/Write capability**: readable and writable.
 
-'T': "True direction", which is the geographic North Pole direction. This is the standard used for maps and navigation systems.
+**Since:** 23
 
-'M': "Magnetic direction", which is the direction pointed to by the Earth's magnetic field. Note that magnetic declination varies by location and changes over time.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_BEARING_REF = 'GPSDestBearingRef'--><!--Device-PropertyKey-GPS_DEST_BEARING_REF = 'GPSDestBearingRef'-End-->
 
@@ -2308,11 +2112,11 @@ Reference of the bearing to the destination point.
 GPS_DEST_BEARING = 'GPSDestBearing'
 ```
 
-Bearing to the destination point.
+Bearing to the destination point. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_BEARING = 'GPSDestBearing'--><!--Device-PropertyKey-GPS_DEST_BEARING = 'GPSDestBearing'-End-->
 
@@ -2324,17 +2128,11 @@ Bearing to the destination point.
 GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'
 ```
 
-Unit used to express the distance to the destination point.
+Unit used to express the distance to the destination point. 'K': "km." 'M': "miles." 'N': "nautical miles." **Read/Write capability**: readable and writable.
 
-'K': "km."
+**Since:** 23
 
-'M': "miles."
-
-'N': "nautical miles."
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'--><!--Device-PropertyKey-GPS_DEST_DISTANCE_REF = 'GPSDestDistanceRef'-End-->
 
@@ -2346,11 +2144,11 @@ Unit used to express the distance to the destination point.
 GPS_DEST_DISTANCE = 'GPSDestDistance'
 ```
 
-Distance to the destination point.
+Distance to the destination point. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DEST_DISTANCE = 'GPSDestDistance'--><!--Device-PropertyKey-GPS_DEST_DISTANCE = 'GPSDestDistance'-End-->
 
@@ -2362,11 +2160,11 @@ Distance to the destination point.
 GPS_PROCESSING_METHOD = 'GPSProcessingMethod'
 ```
 
-String that records the name of the method used for positioning.
+String that records the name of the method used for positioning. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_PROCESSING_METHOD = 'GPSProcessingMethod'--><!--Device-PropertyKey-GPS_PROCESSING_METHOD = 'GPSProcessingMethod'-End-->
 
@@ -2378,11 +2176,11 @@ String that records the name of the method used for positioning.
 GPS_AREA_INFORMATION = 'GPSAreaInformation'
 ```
 
-String that records the name of the GPS area.
+String that records the name of the GPS area. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_AREA_INFORMATION = 'GPSAreaInformation'--><!--Device-PropertyKey-GPS_AREA_INFORMATION = 'GPSAreaInformation'-End-->
 
@@ -2394,15 +2192,11 @@ String that records the name of the GPS area.
 GPS_DIFFERENTIAL = 'GPSDifferential'
 ```
 
-Whether differential correction is applied to the GPS receiver. It is critical to accurate location accuracy.
+Whether differential correction is applied to the GPS receiver. It is critical to accurate location accuracy. 0: "Without correction", which indicates that no differential correction is used. 1:"Correction applied", which indicates that differential correction is used. **Read/Write capability**: readable and writable.
 
-0: "Without correction", which indicates that no differential correction is used.
+**Since:** 23
 
-1:"Correction applied", which indicates that differential correction is used.
-
-**Read/Write capability**: readable and writable.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_DIFFERENTIAL = 'GPSDifferential'--><!--Device-PropertyKey-GPS_DIFFERENTIAL = 'GPSDifferential'-End-->
 
@@ -2414,11 +2208,11 @@ Whether differential correction is applied to the GPS receiver. It is critical t
 BODY_SERIAL_NUMBER = 'BodySerialNumber'
 ```
 
-Serial number of the camera body.
+Serial number of the camera body. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-BODY_SERIAL_NUMBER = 'BodySerialNumber'--><!--Device-PropertyKey-BODY_SERIAL_NUMBER = 'BodySerialNumber'-End-->
 
@@ -2430,11 +2224,11 @@ Serial number of the camera body.
 CAMERA_OWNER_NAME = 'CameraOwnerName'
 ```
 
-Name of the camera owner.
+Name of the camera owner. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-CAMERA_OWNER_NAME = 'CameraOwnerName'--><!--Device-PropertyKey-CAMERA_OWNER_NAME = 'CameraOwnerName'-End-->
 
@@ -2446,11 +2240,11 @@ Name of the camera owner.
 COMPOSITE_IMAGE = 'CompositeImage'
 ```
 
-Whether the image is a composite image.
+Whether the image is a composite image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-COMPOSITE_IMAGE = 'CompositeImage'--><!--Device-PropertyKey-COMPOSITE_IMAGE = 'CompositeImage'-End-->
 
@@ -2462,11 +2256,11 @@ Whether the image is a composite image.
 COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'
 ```
 
-Number of bits per pixel. It is specific to compressed data.
+Number of bits per pixel. It is specific to compressed data. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'--><!--Device-PropertyKey-COMPRESSED_BITS_PER_PIXEL = 'CompressedBitsPerPixel'-End-->
 
@@ -2478,11 +2272,11 @@ Number of bits per pixel. It is specific to compressed data.
 DNG_VERSION = 'DNGVersion'
 ```
 
-DNG version. It encodes the DNG 4-tier version number.
+DNG version. It encodes the DNG 4-tier version number. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DNG_VERSION = 'DNGVersion'--><!--Device-PropertyKey-DNG_VERSION = 'DNGVersion'-End-->
 
@@ -2494,11 +2288,11 @@ DNG version. It encodes the DNG 4-tier version number.
 DEFAULT_CROP_SIZE = 'DefaultCropSize'
 ```
 
-Size of the final image area, in raw image coordinates, taking into account extra pixels around the edges of the final image.
+Size of the final image area, in raw image coordinates, taking into account extra pixels around the edges of the final image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'--><!--Device-PropertyKey-DEFAULT_CROP_SIZE = 'DefaultCropSize'-End-->
 
@@ -2510,11 +2304,11 @@ Size of the final image area, in raw image coordinates, taking into account extr
 GAMMA = 'Gamma'
 ```
 
-Gamma value.
+Gamma value. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GAMMA = 'Gamma'--><!--Device-PropertyKey-GAMMA = 'Gamma'-End-->
 
@@ -2526,11 +2320,11 @@ Gamma value.
 ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'
 ```
 
-ISO speed latitude yyy value of the camera or input device, which is defined in ISO 12232.
+ISO speed latitude yyy value of the camera or input device, which is defined in ISO 12232. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'--><!--Device-PropertyKey-ISO_SPEED_LATITUDE_YYY = 'ISOSpeedLatitudeyyy'-End-->
 
@@ -2542,11 +2336,11 @@ ISO speed latitude yyy value of the camera or input device, which is defined in 
 ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'
 ```
 
-ISO speed latitude zzz value of the camera or input device, which is defined in ISO 12232.
+ISO speed latitude zzz value of the camera or input device, which is defined in ISO 12232. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'--><!--Device-PropertyKey-ISO_SPEED_LATITUDE_ZZZ = 'ISOSpeedLatitudezzz'-End-->
 
@@ -2558,11 +2352,11 @@ ISO speed latitude zzz value of the camera or input device, which is defined in 
 LENS_MAKE = 'LensMake'
 ```
 
-Manufacturer of the lens.
+Manufacturer of the lens. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-LENS_MAKE = 'LensMake'--><!--Device-PropertyKey-LENS_MAKE = 'LensMake'-End-->
 
@@ -2574,11 +2368,11 @@ Manufacturer of the lens.
 LENS_MODEL = 'LensModel'
 ```
 
-Model of the lens.
+Model of the lens. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-LENS_MODEL = 'LensModel'--><!--Device-PropertyKey-LENS_MODEL = 'LensModel'-End-->
 
@@ -2590,11 +2384,11 @@ Model of the lens.
 LENS_SERIAL_NUMBER = 'LensSerialNumber'
 ```
 
-Serial number of the lens.
+Serial number of the lens. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-LENS_SERIAL_NUMBER = 'LensSerialNumber'--><!--Device-PropertyKey-LENS_SERIAL_NUMBER = 'LensSerialNumber'-End-->
 
@@ -2606,11 +2400,11 @@ Serial number of the lens.
 LENS_SPECIFICATION = 'LensSpecification'
 ```
 
-Specifications of the lens.
+Specifications of the lens. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-LENS_SPECIFICATION = 'LensSpecification'--><!--Device-PropertyKey-LENS_SPECIFICATION = 'LensSpecification'-End-->
 
@@ -2622,11 +2416,11 @@ Specifications of the lens.
 NEW_SUBFILE_TYPE = 'NewSubfileType'
 ```
 
-Data type of a subfile, such as a full-resolution image, a thumbnail, or a part of a multi-frame image. The value is a bit mask. The value 0 indicates a full-resolution image, **1** indicates a thumbnail, and **2** indicates a part of a multi-frame image.
+Data type of a subfile, such as a full-resolution image, a thumbnail, or a part of a multi-frame image. The value is a bit mask. The value 0 indicates a full-resolution image, **1** indicates a thumbnail, and **2** indicates a part of a multi-frame image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-NEW_SUBFILE_TYPE = 'NewSubfileType'--><!--Device-PropertyKey-NEW_SUBFILE_TYPE = 'NewSubfileType'-End-->
 
@@ -2638,11 +2432,11 @@ Data type of a subfile, such as a full-resolution image, a thumbnail, or a part 
 OFFSET_TIME = 'OffsetTime'
 ```
 
-Time with an offset from UTC when the image was captured.
+Time with an offset from UTC when the image was captured. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-OFFSET_TIME = 'OffsetTime'--><!--Device-PropertyKey-OFFSET_TIME = 'OffsetTime'-End-->
 
@@ -2654,11 +2448,11 @@ Time with an offset from UTC when the image was captured.
 OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'
 ```
 
-Time with an offset from UTC when the image was digitized. It helps to accurately adjust the timestamp.
+Time with an offset from UTC when the image was digitized. It helps to accurately adjust the timestamp. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'--><!--Device-PropertyKey-OFFSET_TIME_DIGITIZED = 'OffsetTimeDigitized'-End-->
 
@@ -2670,11 +2464,11 @@ Time with an offset from UTC when the image was digitized. It helps to accuratel
 OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'
 ```
 
-Time with an offset from UTC when the original image was created. It is critical for time-sensitive applications.
+Time with an offset from UTC when the original image was created. It is critical for time-sensitive applications. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'--><!--Device-PropertyKey-OFFSET_TIME_ORIGINAL = 'OffsetTimeOriginal'-End-->
 
@@ -2686,11 +2480,11 @@ Time with an offset from UTC when the original image was created. It is critical
 SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'
 ```
 
-Exposure time of source images of the composite image.
+Exposure time of source images of the composite image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'--><!--Device-PropertyKey-SOURCE_EXPOSURE_TIMES_OF_COMPOSITE_IMAGE = 'SourceExposureTimesOfCompositeImage'-End-->
 
@@ -2702,11 +2496,11 @@ Exposure time of source images of the composite image.
 SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'
 ```
 
-Number of source images of the composite image.
+Number of source images of the composite image. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'--><!--Device-PropertyKey-SOURCE_IMAGE_NUMBER_OF_COMPOSITE_IMAGE = 'SourceImageNumberOfCompositeImage'-End-->
 
@@ -2718,11 +2512,11 @@ Number of source images of the composite image.
 SUBFILE_TYPE = 'SubfileType'
 ```
 
-Type of data contained in this subfile. This tag has been deprecated. Use **NewSubfileType** instead.
+Type of data contained in this subfile. This tag has been deprecated. Use **NewSubfileType** instead. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SUBFILE_TYPE = 'SubfileType'--><!--Device-PropertyKey-SUBFILE_TYPE = 'SubfileType'-End-->
 
@@ -2734,11 +2528,11 @@ Type of data contained in this subfile. This tag has been deprecated. Use **NewS
 GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'
 ```
 
-Horizontal positioning error, in meters.
+Horizontal positioning error, in meters. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'--><!--Device-PropertyKey-GPS_H_POSITIONING_ERROR = 'GPSHPositioningError'-End-->
 
@@ -2750,11 +2544,11 @@ Horizontal positioning error, in meters.
 PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'
 ```
 
-ISO sensitivity (ISO speed) used when the image was captured. It is the recommended field in Exif 2.3 and later. The earlier field, ISOSpeedRatings (Tag 0x8827), has the same data type and meaning. However, if both fields are present, the **PhotographicSensitivity** value should be used.
+ISO sensitivity (ISO speed) used when the image was captured. It is the recommended field in Exif 2.3 and later. The earlier field, ISOSpeedRatings (Tag 0x8827), has the same data type and meaning. However, if both fields are present, the **PhotographicSensitivity** value should be used. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'--><!--Device-PropertyKey-PHOTOGRAPHIC_SENSITIVITY = 'PhotographicSensitivity'-End-->
 
@@ -2766,11 +2560,11 @@ ISO sensitivity (ISO speed) used when the image was captured. It is the recommen
 BURST_NUMBER = 'HwMnoteBurstNumber'
 ```
 
-Number of burst shooting times.
+Number of burst shooting times. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-BURST_NUMBER = 'HwMnoteBurstNumber'--><!--Device-PropertyKey-BURST_NUMBER = 'HwMnoteBurstNumber'-End-->
 
@@ -2782,11 +2576,11 @@ Number of burst shooting times.
 FACE_CONF = 'HwMnoteFaceConf'
 ```
 
-Face confidence.
+Face confidence. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_CONF = 'HwMnoteFaceConf'--><!--Device-PropertyKey-FACE_CONF = 'HwMnoteFaceConf'-End-->
 
@@ -2798,11 +2592,11 @@ Face confidence.
 FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'
 ```
 
-Left eye centered.
+Left eye centered. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'--><!--Device-PropertyKey-FACE_LEYE_CENTER = 'HwMnoteFaceLeyeCenter'-End-->
 
@@ -2814,11 +2608,11 @@ Left eye centered.
 FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'
 ```
 
-Mouth centered.
+Mouth centered. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'--><!--Device-PropertyKey-FACE_MOUTH_CENTER = 'HwMnoteFaceMouthCenter'-End-->
 
@@ -2830,11 +2624,11 @@ Mouth centered.
 FACE_POINTER = 'HwMnoteFacePointer'
 ```
 
-Face pointer.
+Face pointer. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_POINTER = 'HwMnoteFacePointer'--><!--Device-PropertyKey-FACE_POINTER = 'HwMnoteFacePointer'-End-->
 
@@ -2846,11 +2640,11 @@ Face pointer.
 FACE_RECT = 'HwMnoteFaceRect'
 ```
 
-Face rectangle.
+Face rectangle. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_RECT = 'HwMnoteFaceRect'--><!--Device-PropertyKey-FACE_RECT = 'HwMnoteFaceRect'-End-->
 
@@ -2862,11 +2656,11 @@ Face rectangle.
 FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'
 ```
 
-Right eye centered.
+Right eye centered. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'--><!--Device-PropertyKey-FACE_REYE_CENTER = 'HwMnoteFaceReyeCenter'-End-->
 
@@ -2878,11 +2672,11 @@ Right eye centered.
 FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'
 ```
 
-Smile score of for faces.
+Smile score of for faces. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'--><!--Device-PropertyKey-FACE_SMILE_SCORE = 'HwMnoteFaceSmileScore'-End-->
 
@@ -2894,11 +2688,11 @@ Smile score of for faces.
 FACE_VERSION = 'HwMnoteFaceVersion'
 ```
 
-Facial recognition algorithm version.
+Facial recognition algorithm version. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FACE_VERSION = 'HwMnoteFaceVersion'--><!--Device-PropertyKey-FACE_VERSION = 'HwMnoteFaceVersion'-End-->
 
@@ -2910,11 +2704,11 @@ Facial recognition algorithm version.
 FRONT_CAMERA = 'HwMnoteFrontCamera'
 ```
 
-Whether the front camera is used to take a selfie.
+Whether the front camera is used to take a selfie. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-FRONT_CAMERA = 'HwMnoteFrontCamera'--><!--Device-PropertyKey-FRONT_CAMERA = 'HwMnoteFrontCamera'-End-->
 
@@ -2926,11 +2720,11 @@ Whether the front camera is used to take a selfie.
 SCENE_POINTER = 'HwMnoteScenePointer'
 ```
 
-Pointer to the scene.
+Pointer to the scene. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_POINTER = 'HwMnoteScenePointer'--><!--Device-PropertyKey-SCENE_POINTER = 'HwMnoteScenePointer'-End-->
 
@@ -2942,11 +2736,11 @@ Pointer to the scene.
 SCENE_VERSION = 'HwMnoteSceneVersion'
 ```
 
-Scene algorithm version.
+Scene algorithm version. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-SCENE_VERSION = 'HwMnoteSceneVersion'--><!--Device-PropertyKey-SCENE_VERSION = 'HwMnoteSceneVersion'-End-->
 
@@ -2958,11 +2752,11 @@ Scene algorithm version.
 IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'
 ```
 
-Whether XMAGE is supported.
+Whether XMAGE is supported. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'--><!--Device-PropertyKey-IS_XMAGE_SUPPORTED = 'HwMnoteIsXmageSupported'-End-->
 
@@ -2974,11 +2768,11 @@ Whether XMAGE is supported.
 XMAGE_MODE = 'HwMnoteXmageMode'
 ```
 
-XMAGE watermark mode.
+XMAGE watermark mode. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-XMAGE_MODE = 'HwMnoteXmageMode'--><!--Device-PropertyKey-XMAGE_MODE = 'HwMnoteXmageMode'-End-->
 
@@ -2990,11 +2784,11 @@ XMAGE watermark mode.
 XMAGE_LEFT = 'HwMnoteXmageLeft'
 ```
 
-X1 coordinate of the watermark region.
+X1 coordinate of the watermark region. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-XMAGE_LEFT = 'HwMnoteXmageLeft'--><!--Device-PropertyKey-XMAGE_LEFT = 'HwMnoteXmageLeft'-End-->
 
@@ -3006,11 +2800,11 @@ X1 coordinate of the watermark region.
 XMAGE_TOP = 'HwMnoteXmageTop'
 ```
 
-Y1 coordinate of the watermark region.
+Y1 coordinate of the watermark region. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-XMAGE_TOP = 'HwMnoteXmageTop'--><!--Device-PropertyKey-XMAGE_TOP = 'HwMnoteXmageTop'-End-->
 
@@ -3022,11 +2816,11 @@ Y1 coordinate of the watermark region.
 XMAGE_RIGHT = 'HwMnoteXmageRight'
 ```
 
-X2 coordinate of the watermark region.
+X2 coordinate of the watermark region. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-XMAGE_RIGHT = 'HwMnoteXmageRight'--><!--Device-PropertyKey-XMAGE_RIGHT = 'HwMnoteXmageRight'-End-->
 
@@ -3038,11 +2832,11 @@ X2 coordinate of the watermark region.
 XMAGE_BOTTOM = 'HwMnoteXmageBottom'
 ```
 
-Y2 coordinate of the watermark region.
+Y2 coordinate of the watermark region. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-XMAGE_BOTTOM = 'HwMnoteXmageBottom'--><!--Device-PropertyKey-XMAGE_BOTTOM = 'HwMnoteXmageBottom'-End-->
 
@@ -3054,11 +2848,11 @@ Y2 coordinate of the watermark region.
 CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'
 ```
 
-Cloud enhancement mode.
+Cloud enhancement mode. **Read/Write capability**: readable and writable.
 
-**Read/Write capability**: readable and writable.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'--><!--Device-PropertyKey-CLOUD_ENHANCEMENT_MODE = 'HwMnoteCloudEnhancementMode'-End-->
 
@@ -3070,11 +2864,11 @@ Cloud enhancement mode.
 WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'
 ```
 
-Motion snapshot mode.
+Motion snapshot mode. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'--><!--Device-PropertyKey-WIND_SNAPSHOT_MODE = 'HwMnoteWindSnapshotMode'-End-->
 
@@ -3086,11 +2880,11 @@ Motion snapshot mode.
 GIF_LOOP_COUNT = 'GIFLoopCount'
 ```
 
-Number of GIF loops. The value **0** means an infinite loop, and other values means the number of loops.
+Number of GIF loops. The value **0** means an infinite loop, and other values means the number of loops. **Read/Write capability**: read-only
 
-**Read/Write capability**: read-only
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-PropertyKey-GIF_LOOP_COUNT = 'GIFLoopCount'--><!--Device-PropertyKey-GIF_LOOP_COUNT = 'GIFLoopCount'-End-->
 

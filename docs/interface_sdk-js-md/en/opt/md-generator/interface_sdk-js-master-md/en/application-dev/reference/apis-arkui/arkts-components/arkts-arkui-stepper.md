@@ -1,13 +1,8 @@
 # Stepper
 
-The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task
-completion process.
+The **Stepper** component provides a step navigator, suitable for guiding users through a step-by-step task completion process. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Only the child component [StepperItem]{@link stepper_item} is supported.
+## Child Components Only the child component StepperItem is supported.
 
 ## Stepper
 
@@ -15,15 +10,13 @@ Only the child component [StepperItem]{@link stepper_item} is supported.
 Stepper(value?: { index?: number })
 ```
 
-Creates a **Stepper** component.
-
-> **NOTE：**
+Creates a **Stepper** component. > **NOTE：**
 
 **Since:** 8
 
 **Deprecated since:** 22
 
-**Substitutes:** [index](Swiper.SwiperAttribute#index)
+**Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,11 +1,12 @@
 # WindowMode
 
-Enumerates the window modes in which a UIAbility can be displayed at startup. It can be used in  
-[startAbility](arkts-ability-uiabilitycontext-c.md#startAbility-2).
+Enumerates the window modes in which a UIAbility can be displayed at startup. It can be used in [startAbility](arkts-ability-uiabilitycontext-c.md#startAbility) .
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum WindowMode--><!--Device-AbilityConstant-export enum WindowMode-End-->
 
@@ -19,9 +20,11 @@ WINDOW_MODE_FULLSCREEN = 1
 
 Full-screen mode. It takes effect only on 2-in-1 devices and tablets.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,9 +40,11 @@ WINDOW_MODE_SPLIT_PRIMARY = 100
 
 Primary screen (left screen in the case of horizontal orientation) in split-screen mode. It is valid only in intra-app redirection scenarios. It takes effect only on foldable devices and tablets.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,9 +60,11 @@ WINDOW_MODE_SPLIT_SECONDARY = 101
 
 Secondary screen (right screen in the case of horizontal orientation) in split-screen mode. It is valid only in intra-app redirection scenarios. It takes effect only on foldable devices and tablets.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,11 +78,13 @@ Secondary screen (right screen in the case of horizontal orientation) in split-s
 WINDOW_MODE_SPLIT = 105
 ```
 
-The ability is displayed in split-screen mode. It is valid only in intra-app redirection scenarios.It takes effect only on foldable devices and tablets.
+The ability is displayed in split-screen mode. It is valid only in intra-app redirection scenarios. It takes effect only on foldable devices and tablets.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

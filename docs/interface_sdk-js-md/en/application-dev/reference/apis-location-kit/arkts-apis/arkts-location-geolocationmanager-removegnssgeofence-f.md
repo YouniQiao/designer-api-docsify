@@ -14,9 +14,11 @@ function removeGnssGeofence(geofenceId: int): Promise<void>
 
 Remove a geofence.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12 - 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
@@ -29,7 +31,7 @@ Remove a geofence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| geofenceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the ID of geofence. |
+| geofenceId | int | Yes | Indicates the ID of geofence. |
 
 **Return value:**
 
@@ -41,11 +43,11 @@ Remove a geofence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [3301602](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301602-failed-to-delete-a-geofence-due-to-an-incorrect-id) | Failed to delete a geofence due to an incorrect ID. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.removeGnssGeofence} due to limited device capabilities. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 - 24 |
-| [3301000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
+| [3301602](../errorcode-geoLocationManager.md#3301602-failed-to-delete-a-geofence-due-to-an-incorrect-id) | Failed to delete a geofence due to an incorrect ID. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.removeGnssGeofence} due to limited device capabilities. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 12 - 24 |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) | The location service is unavailable. |
 
 ## Examples
 

@@ -16,6 +16,8 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-image-function createPixelMapFromSurfaceWithTransformationSync(surfaceId: string, transformEnabled: boolean): PixelMap--><!--Device-image-function createPixelMapFromSurfaceWithTransformationSync(surfaceId: string, transformEnabled: boolean): PixelMap-End-->
@@ -39,10 +41,10 @@ Creates a PixelMap object based on the ID of a Surface with transformation.
 
 | Error Code ID |
 | --- |
-| [7600305](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
-| [7600201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) |
-| [7600104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600104-failed-to-obtain-image-data) |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
+| [7600305](../errorcode-image.md#7600305-failed-to-create-the-pixelmap) |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) |
+| [7600104](../errorcode-image.md#7600104-failed-to-obtain-image-data) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
 
 ## Examples
 

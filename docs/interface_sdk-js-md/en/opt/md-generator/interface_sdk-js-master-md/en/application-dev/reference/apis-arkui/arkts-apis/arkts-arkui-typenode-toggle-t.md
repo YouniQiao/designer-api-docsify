@@ -4,9 +4,11 @@
 type Toggle = TypedFrameNode<ToggleInterface, ToggleAttribute>
 ```
 
-FrameNode of the [Toggle](../@internal/component/ets/toggle) type.
+FrameNode of the Toggle type.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

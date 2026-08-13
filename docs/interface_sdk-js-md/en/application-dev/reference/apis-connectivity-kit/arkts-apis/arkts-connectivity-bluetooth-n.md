@@ -8,7 +8,7 @@ Provides methods to operate or manage Bluetooth.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bluetoothManager](ohos.bluetoothManager)
+**Substitutes:** bluetoothManager
 
 <!--Device-unnamed-declare namespace bluetooth--><!--Device-unnamed-declare namespace bluetooth-End-->
 
@@ -32,46 +32,46 @@ import { bluetooth } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [getState](arkts-connectivity-bluetooth-getstate-f.md#getstate) | Obtains the Bluetooth status of a device. |
-| [getBtConnectionState](arkts-connectivity-bluetooth-getbtconnectionstate-f.md#getbtconnectionstate) | Get the local device connection state to any profile of any remote device. |
-| [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md#pairdevice) | Starts pairing with a remote Bluetooth device. |
-| [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md#getremotedevicename) | Obtains the name of a peer Bluetooth device. |
-| [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md#getremotedeviceclass) | Obtains the class of a peer Bluetooth device. |
-| [enableBluetooth](arkts-connectivity-bluetooth-enablebluetooth-f.md#enablebluetooth) | Enables Bluetooth on a device. |
-| [disableBluetooth](arkts-connectivity-bluetooth-disablebluetooth-f.md#disablebluetooth) | Disables Bluetooth on a device. |
-| [getLocalName](arkts-connectivity-bluetooth-getlocalname-f.md#getlocalname) | Obtains the Bluetooth local name of a device. |
-| [getPairedDevices](arkts-connectivity-bluetooth-getpaireddevices-f.md#getpaireddevices) | Obtains the list of Bluetooth devices that have been paired with the current device. |
-| [getProfileConnState](arkts-connectivity-bluetooth-getprofileconnstate-f.md#getprofileconnstate) | Obtains the connection state of profile. |
-| [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation) | Sets the confirmation of pairing with a certain device. |
-| [setLocalName](arkts-connectivity-bluetooth-setlocalname-f.md#setlocalname) | Sets the Bluetooth friendly name of a device. |
-| [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md#setbluetoothscanmode) | Sets the Bluetooth scan mode for a device. |
-| [getBluetoothScanMode](arkts-connectivity-bluetooth-getbluetoothscanmode-f.md#getbluetoothscanmode) | Obtains the Bluetooth scanning mode of a device. |
-| [startBluetoothDiscovery](arkts-connectivity-bluetooth-startbluetoothdiscovery-f.md#startbluetoothdiscovery) | Starts scanning Bluetooth devices. |
-| [stopBluetoothDiscovery](arkts-connectivity-bluetooth-stopbluetoothdiscovery-f.md#stopbluetoothdiscovery) | Stops Bluetooth device scanning. |
-| [on](arkts-connectivity-bluetooth-on-f.md#on) | Subscribe the event reported when a remote Bluetooth device is discovered. |
-| [off](arkts-connectivity-bluetooth-off-f.md#off) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-1) | Subscribe the event reported when a remote Bluetooth device is bonded. |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-1) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-2) | Subscribe the event of a pairing request from a remote Bluetooth device. |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-2) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-3) | Subscribe the event reported when the Bluetooth state changes. |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-3) | Unsubscribe the event reported when the Bluetooth state changes. |
-| [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#spplisten) | Creates a Bluetooth server listening socket. |
-| [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppaccept) | Waits for a remote device to connect. |
-| [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppconnect) | Connects to a remote device over the socket. |
-| [sppCloseServerSocket](arkts-connectivity-bluetooth-sppcloseserversocket-f.md#sppcloseserversocket) | Disables an spp server socket and releases related resources. |
-| [sppCloseClientSocket](arkts-connectivity-bluetooth-sppcloseclientsocket-f.md#sppcloseclientsocket) | Disables an spp client socket and releases related resources. |
-| [sppWrite](arkts-connectivity-bluetooth-sppwrite-f.md#sppwrite) | Write data through the socket. |
-| [on](arkts-connectivity-bluetooth-on-f.md#on-4) | Subscribe the event reported when data is read from the socket. |
-| [off](arkts-connectivity-bluetooth-off-f.md#off-4) | Unsubscribe the event reported when data is read from the socket. |
-| [getProfile](arkts-connectivity-bluetooth-getprofile-f.md#getprofile) | Obtains the instance of profile. |
+| [getState](arkts-connectivity-bluetooth-getstate-f.md#getState) | Obtains the Bluetooth status of a device. |
+| [getBtConnectionState](arkts-connectivity-bluetooth-getbtconnectionstate-f.md#getBtConnectionState) | Get the local device connection state to any profile of any remote device. |
+| [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md#pairDevice) | Starts pairing with a remote Bluetooth device. |
+| [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md#getRemoteDeviceName) | Obtains the name of a peer Bluetooth device. |
+| [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md#getRemoteDeviceClass) | Obtains the class of a peer Bluetooth device. |
+| [enableBluetooth](arkts-connectivity-bluetooth-enablebluetooth-f.md#enableBluetooth) | Enables Bluetooth on a device. |
+| [disableBluetooth](arkts-connectivity-bluetooth-disablebluetooth-f.md#disableBluetooth) | Disables Bluetooth on a device. |
+| [getLocalName](arkts-connectivity-bluetooth-getlocalname-f.md#getLocalName) | Obtains the Bluetooth local name of a device. |
+| [getPairedDevices](arkts-connectivity-bluetooth-getpaireddevices-f.md#getPairedDevices) | Obtains the list of Bluetooth devices that have been paired with the current device. |
+| [getProfileConnState](arkts-connectivity-bluetooth-getprofileconnstate-f.md#getProfileConnState) | Obtains the connection state of profile. |
+| [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md#setDevicePairingConfirmation) | Sets the confirmation of pairing with a certain device. |
+| [setLocalName](arkts-connectivity-bluetooth-setlocalname-f.md#setLocalName) | Sets the Bluetooth friendly name of a device. |
+| [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md#setBluetoothScanMode) | Sets the Bluetooth scan mode for a device. |
+| [getBluetoothScanMode](arkts-connectivity-bluetooth-getbluetoothscanmode-f.md#getBluetoothScanMode) | Obtains the Bluetooth scanning mode of a device. |
+| [startBluetoothDiscovery](arkts-connectivity-bluetooth-startbluetoothdiscovery-f.md#startBluetoothDiscovery) | Starts scanning Bluetooth devices. |
+| [stopBluetoothDiscovery](arkts-connectivity-bluetooth-stopbluetoothdiscovery-f.md#stopBluetoothDiscovery) | Stops Bluetooth device scanning. |
+| [on_bluetoothDeviceFind](arkts-connectivity-bluetooth-onbluetoothdevicefind-f.md#on_bluetoothDeviceFind) | Subscribe the event reported when a remote Bluetooth device is discovered. |
+| [off_bluetoothDeviceFind](arkts-connectivity-bluetooth-offbluetoothdevicefind-f.md#off_bluetoothDeviceFind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
+| [on_bondStateChange](arkts-connectivity-bluetooth-onbondstatechange-f.md#on_bondStateChange) | Subscribe the event reported when a remote Bluetooth device is bonded. |
+| [off_bondStateChange](arkts-connectivity-bluetooth-offbondstatechange-f.md#off_bondStateChange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
+| [on_pinRequired](arkts-connectivity-bluetooth-onpinrequired-f.md#on_pinRequired) | Subscribe the event of a pairing request from a remote Bluetooth device. |
+| [off_pinRequired](arkts-connectivity-bluetooth-offpinrequired-f.md#off_pinRequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
+| [on_stateChange](arkts-connectivity-bluetooth-onstatechange-f.md#on_stateChange) | Subscribe the event reported when the Bluetooth state changes. |
+| [off_stateChange](arkts-connectivity-bluetooth-offstatechange-f.md#off_stateChange) | Unsubscribe the event reported when the Bluetooth state changes. |
+| [sppListen](arkts-connectivity-bluetooth-spplisten-f.md#sppListen) | Creates a Bluetooth server listening socket. |
+| [sppAccept](arkts-connectivity-bluetooth-sppaccept-f.md#sppAccept) | Waits for a remote device to connect. |
+| [sppConnect](arkts-connectivity-bluetooth-sppconnect-f.md#sppConnect) | Connects to a remote device over the socket. |
+| [sppCloseServerSocket](arkts-connectivity-bluetooth-sppcloseserversocket-f.md#sppCloseServerSocket) | Disables an spp server socket and releases related resources. |
+| [sppCloseClientSocket](arkts-connectivity-bluetooth-sppcloseclientsocket-f.md#sppCloseClientSocket) | Disables an spp client socket and releases related resources. |
+| [sppWrite](arkts-connectivity-bluetooth-sppwrite-f.md#sppWrite) | Write data through the socket. |
+| [on_sppRead](arkts-connectivity-bluetooth-onsppread-f.md#on_sppRead) | Subscribe the event reported when data is read from the socket. |
+| [off_sppRead](arkts-connectivity-bluetooth-offsppread-f.md#off_sppRead) | Unsubscribe the event reported when data is read from the socket. |
+| [getProfile](arkts-connectivity-bluetooth-getprofile-f.md#getProfile) | Obtains the instance of profile. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [cancelPairedDevice](arkts-connectivity-bluetooth-cancelpaireddevice-f-sys.md#cancelpaireddevice) | Remove a paired remote device. |
+| [cancelPairedDevice](arkts-connectivity-bluetooth-cancelpaireddevice-f-sys.md#cancelPairedDevice) | Remove a paired remote device. |
 <!--DelEnd-->
 
 ### Interfaces

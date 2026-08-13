@@ -8,7 +8,9 @@ Defines a UDP MulticastSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-socket-export interface MulticastSocket extends UDPSocket--><!--Device-socket-export interface MulticastSocket extends UDPSocket-End-->
+**Deprecated since:** -1
+
+<!--Device-socket-export interface MulticastSocket--><!--Device-socket-export interface MulticastSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -30,6 +32,8 @@ Add the socket to the multicast group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -40,16 +44,16 @@ Add the socket to the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. [NetAddress](NetAddress). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of addMembership. |
+| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of addMembership. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 | 2301022 | Invalid argument. |
 
@@ -84,6 +88,8 @@ Add the socket to the multicast group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>-End-->
@@ -94,7 +100,7 @@ Add the socket to the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. [NetAddress](NetAddress). |
+| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
 
 **Return value:**
 
@@ -106,9 +112,9 @@ Add the socket to the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
 ## Examples
@@ -140,6 +146,8 @@ Drop the socket from the multicast group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -150,16 +158,16 @@ Drop the socket from the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. [NetAddress](NetAddress). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of dropMembership. |
+| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of dropMembership. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
 ## Examples
@@ -193,6 +201,8 @@ Drop the socket from the multicast group.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>-End-->
@@ -203,7 +213,7 @@ Drop the socket from the multicast group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| multicastAddress | NetAddress | Yes | Multicast address information. [NetAddress](NetAddress). |
+| multicastAddress | NetAddress | Yes | Multicast address information. NetAddress. |
 
 **Return value:**
 
@@ -215,9 +225,9 @@ Drop the socket from the multicast group.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2301098 | Address in use. |
 
 ## Examples
@@ -249,6 +259,8 @@ Get the loopback mode of the socket.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -257,13 +269,13 @@ Get the loopback mode of the socket.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | The callback of getLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of getLoopbackMode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -293,6 +305,8 @@ Get the loopback mode of the socket.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -307,7 +321,7 @@ Get the loopback mode of the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -335,6 +349,8 @@ Get the TTL value of socket multicast packet.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -343,13 +359,13 @@ Get the TTL value of socket multicast packet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | The callback of getMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | The callback of getMulticastTTL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -379,6 +395,8 @@ Get the TTL value of socket multicast packet.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getMulticastTTL(): Promise<number>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -393,7 +411,7 @@ Get the TTL value of socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -411,21 +429,17 @@ multicast.getMulticastTTL().then((value: Number) => {
 
 ## getSocketFd
 
-ArkTS-Dyn:
-```TypeScript
-getSocketFd(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSocketFd(): Promise<int>
 ```
 
 Obtains the file descriptor of the MulticastSocket.
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -439,13 +453,13 @@ Obtains the file descriptor of the MulticastSocket.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | The promise returns the file descriptor of the Multicast socket. |
+| Promise&lt;int&gt; | The promise returns the file descriptor of the Multicast socket. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -483,6 +497,8 @@ Set the loopback mode for the socket.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -492,13 +508,13 @@ Set the loopback mode for the socket.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | flag | boolean | Yes | Whether to enable loopback mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setLoopbackMode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setLoopbackMode. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -528,6 +544,8 @@ Set the loopback mode for the socket.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -548,7 +566,7 @@ Set the loopback mode for the socket.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 
 ## Examples
@@ -576,6 +594,8 @@ Set the TTL value for socket multicast packets.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -585,13 +605,13 @@ Set the TTL value for socket multicast packets.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ttl | number | Yes | The TTL value to set. Valid range is typically 0 to 255. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | The callback of setMulticastTTL. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | The callback of setMulticastTTL. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 | 2301022 | Invalid argument. |
 
@@ -623,6 +643,8 @@ Set the TTL value for socket multicast packet.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -643,7 +665,7 @@ Set the TTL value for socket multicast packet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 | 2301088 | Not a socket. |
 | 2301022 | Invalid argument. |
 
@@ -670,7 +692,9 @@ Sets whether the multicast socket supports address reuse.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

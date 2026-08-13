@@ -8,9 +8,11 @@ export declare function canIUse(syscap: string): boolean
 
 查询系统是否具备某个系统能力。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-export declare function canIUse(syscap: string): boolean--><!--Device-unnamed-export declare function canIUse(syscap: string): boolean-End-->
 

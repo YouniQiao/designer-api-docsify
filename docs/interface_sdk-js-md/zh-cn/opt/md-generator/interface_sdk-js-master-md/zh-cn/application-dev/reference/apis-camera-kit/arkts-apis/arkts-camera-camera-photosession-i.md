@@ -1,24 +1,14 @@
 # PhotoSession
 
-PhotoSession继承自[Session](arkts-camera-camera-session-i.md#Session)、[Flash](arkts-camera-camera-flash-i.md#Flash)、  
-[AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance)、[Focus](arkts-camera-camera-focus-i.md#Focus)、  
-[Zoom](arkts-camera-camera-zoom-i.md#Zoom)、[ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement)、  
-[AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#AutoDeviceSwitch)、[Macro](arkts-camera-camera-macro-i.md#Macro)、  
-[ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md)、  
-[ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md)、  
-[ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md)、  
-[OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md)、  
-[Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md)。
+PhotoSession继承自[Session](arkts-camera-camera-session-i.md#Session)、[Flash](arkts-camera-camera-flash-i.md#Flash)、 [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance（系统接口）)、[Focus](arkts-camera-camera-focus-i.md#Focus)、 [Zoom](arkts-camera-camera-zoom-i.md#Zoom)、[ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement)、 [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#AutoDeviceSwitch)、[Macro](arkts-camera-camera-macro-i-sys.md#Macro（系统接口）)、 [ManualExposure](../../../reference/apis-camera-kit/arkts-apis-camera-ManualExposure.md)、 [ManualFocus](../../../reference/apis-camera-kit/arkts-apis-camera-ManualFocus.md)、 [ManualIso](../../../reference/apis-camera-kit/arkts-apis-camera-ManualIso.md)、 [OIS](../../../reference/apis-camera-kit/arkts-apis-camera-OIS.md)、 [Aperture](../../../reference/apis-camera-kit/arkts-apis-camera-Aperture.md)。 普通拍照模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、色彩空间、微距、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。 默认的拍照模式，用于拍摄标准照片。支持多种照片格式和分辨率，适合大多数日常拍摄场景。
 
-普通拍照模式会话类，提供了对闪光灯、曝光、白平衡、对焦、变焦、色彩空间、微距、手动曝光、手动对焦、手动ISO、光学防抖及光圈的操作。
+**继承/实现关系：** PhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance（系统接口）), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#AutoDeviceSwitch), [Macro](arkts-camera-camera-macro-i-sys.md#Macro（系统接口）), [ManualExposure](arkts-camera-camera-manualexposure-i.md#ManualExposure（系统接口）), [ManualFocus](arkts-camera-camera-manualfocus-i-sys.md#ManualFocus（系统接口）), [ManualIso](arkts-camera-camera-manualiso-i-sys.md#ManualIso（系统接口）), [OIS](arkts-camera-camera-ois-i.md#OIS), [Aperture](arkts-camera-camera-aperture-i-sys.md#Aperture（系统接口）)
 
-默认的拍照模式，用于拍摄标准照片。支持多种照片格式和分辨率，适合大多数日常拍摄场景。
+**起始版本：** 23
 
-**继承/实现关系：** PhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [WhiteBalance](arkts-camera-camera-whitebalance-i.md#WhiteBalance), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md#AutoDeviceSwitch), [Macro](arkts-camera-camera-macro-i.md#Macro), [ManualExposure](arkts-camera-camera-manualexposure-i.md#ManualExposure), [ManualFocus](arkts-camera-camera-manualfocus-i.md#ManualFocus), [ManualIso](arkts-camera-camera-manualiso-i.md#ManualIso), [OIS](arkts-camera-camera-ois-i.md#OIS), [Aperture](arkts-camera-camera-aperture-i.md#Aperture)
+**废弃版本：** -1
 
-**起始版本：** 11
-
-<!--Device-camera-interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement,      AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture--><!--Device-camera-interface PhotoSession extends Session, Flash, AutoExposure, WhiteBalance, Focus, Zoom, ColorManagement,      AutoDeviceSwitch, Macro, ManualExposure, ManualFocus, ManualIso, OIS, Aperture-End-->
+<!--Device-camera-interface PhotoSession--><!--Device-camera-interface PhotoSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -30,7 +20,9 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 
 查询当前Session是否支持指定的预配置类型。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -55,21 +47,21 @@ canPreconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): boo
 
 | 错误码ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
-## off('error')
+## offAutoDeviceSwitchStatusChange
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
+offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-注销监听普通拍照会话的错误事件，通过注册回调函数获取结果。
+Unsubscribes to auto device switch status event callback.
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+<!--Device-PhotoSession-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-PhotoSession-offAutoDeviceSwitchStatusChange(callback?: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -77,22 +69,47 @@ off(type: 'error', callback?: ErrorCallback): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'error' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 |
+
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PhotoSession-offError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
-## off('focusStateChange')
+## offExposureInfoChange
 
 ```TypeScript
-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
+offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 ```
 
-注销监听相机聚焦的状态变化。
+取消订阅曝光信息变化事件回调。如果订阅了曝光信息，请在释放相机前取消订阅。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 24
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void--><!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -100,22 +117,47 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'focusStateChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 否 |
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
 
-## off('smoothZoomInfoAvailable')
+## offIsoInfoChange
 
 ```TypeScript
-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
+offIsoInfoChange(callback?: Callback<IsoInfo>): void
 ```
 
-注销监听相机平滑变焦的状态变化。
+取消订阅ISO信息变化事件回调。
 
-**起始版本：** 11
+**起始版本：** 24
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void--><!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -123,22 +165,21 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 否 |
 
-## off('macroStatusChanged')
+## offMacroStatusChanged
 
 ```TypeScript
-off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
+offMacroStatusChanged(callback?: AsyncCallback<boolean>): void
 ```
 
-注销相机微距状态变化的监听。
+Unsubscribes camera macro status event callback.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PhotoSession-off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void--><!--Device-PhotoSession-off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void-End-->
+<!--Device-PhotoSession-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void--><!--Device-PhotoSession-offMacroStatusChanged(callback?: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -146,16 +187,53 @@ off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'macroStatusChanged' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 |
 
-**错误码：**
+## offSmoothZoomInfoAvailable
 
-| 错误码ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+```TypeScript
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
+```
 
-## off('autoDeviceSwitchStatusChange')
+Unsubscribes from zoom info event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 |
+
+## offSystemPressureLevelChange
+
+```TypeScript
+offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void
+```
+
+Unsubscribes to system pressure level event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void--><!--Device-PhotoSession-offSystemPressureLevelChange(callback?: AsyncCallback<SystemPressureLevel>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 |
+
+## off_autoDeviceSwitchStatusChange
 
 ```TypeScript
 off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwitchStatus>): void
@@ -164,6 +242,8 @@ off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwi
 注销监听相机自动切换镜头状态变化。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -178,7 +258,82 @@ off(type: 'autoDeviceSwitchStatusChange', callback?: AsyncCallback<AutoDeviceSwi
 | type | 'autoDeviceSwitchStatusChange' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 否 |
 
-## off('systemPressureLevelChange')
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+注销监听普通拍照会话的错误事件，通过注册回调函数获取结果。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## off_focusStateChange
+
+```TypeScript
+off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
+```
+
+注销监听相机聚焦的状态变化。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'focusStateChange' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
+
+## off_smoothZoomInfoAvailable
+
+```TypeScript
+off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
+```
+
+注销监听相机平滑变焦的状态变化。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'smoothZoomInfoAvailable' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 |
+
+## off_systemPressureLevelChange
 
 ```TypeScript
 off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLevel>): void
@@ -187,6 +342,8 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 注销监听系统压力状态变化。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -201,21 +358,19 @@ off(type: 'systemPressureLevelChange', callback?: AsyncCallback<SystemPressureLe
 | type | 'systemPressureLevelChange' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 否 |
 
-## offExposureInfoChange
+## onAutoDeviceSwitchStatusChange
 
 ```TypeScript
-offExposureInfoChange(callback?: Callback<ExposureInfo>): void
+onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-取消订阅曝光信息变化事件回调。如果订阅了曝光信息，请在释放相机前取消订阅。使用callback异步回调。
+Subscribes to auto device switch status event callback.
 
-**起始版本：** 24
+**起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void--><!--Device-PhotoSession-offExposureInfoChange(callback?: Callback<ExposureInfo>): void-End-->
+<!--Device-PhotoSession-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void--><!--Device-PhotoSession-onAutoDeviceSwitchStatusChange(callback: AsyncCallback<AutoDeviceSwitchStatus>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -223,23 +378,21 @@ offExposureInfoChange(callback?: Callback<ExposureInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | 否 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 |
 
-## offIsoInfoChange
+## onError
 
 ```TypeScript
-offIsoInfoChange(callback?: Callback<IsoInfo>): void
+onError(callback: ErrorCallback): void
 ```
 
-取消订阅ISO信息变化事件回调。
+Subscribes to error events.
 
-**起始版本：** 24
+**起始版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void--><!--Device-PhotoSession-offIsoInfoChange(callback?: Callback<IsoInfo>): void-End-->
+<!--Device-PhotoSession-onError(callback: ErrorCallback): void--><!--Device-PhotoSession-onError(callback: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -247,52 +400,25 @@ offIsoInfoChange(callback?: Callback<IsoInfo>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 否 |
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-监听普通拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
-
-**起始版本：** 11
-
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'error' | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
-## on('focusStateChange')
+## onExposureInfoChange
 
 ```TypeScript
-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
+onExposureInfoChange(callback: Callback<ExposureInfo>): void
 ```
 
-监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
+订阅曝光信息变化事件回调。曝光参数更改后，系统将返回更新后的曝光信息。使用callback异步回调。
 
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+**起始版本：** 24
 
-**起始版本：** 11
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void--><!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -300,26 +426,47 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'focusStateChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i-sys.md)&gt; | 是 |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
 
-## on('smoothZoomInfoAvailable')
+## onIsoInfoChange
 
 ```TypeScript
-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
+onIsoInfoChange(callback: Callback<IsoInfo>): void
 ```
 
-监听相机平滑变焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。
+订阅ISO信息变化事件回调。
 
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+**起始版本：** 24
 
-**起始版本：** 11
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void--><!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -327,22 +474,21 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'smoothZoomInfoAvailable' | 是 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | 是 |
 
-## on('macroStatusChanged')
+## onMacroStatusChanged
 
 ```TypeScript
-on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
+onMacroStatusChanged(callback: AsyncCallback<boolean>): void
 ```
 
-监听相机微距状态变化，通过注册回调函数获取结果。使用callback异步回调。
+Subscribes camera macro status event callback.
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-PhotoSession-on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void--><!--Device-PhotoSession-on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void-End-->
+<!--Device-PhotoSession-onMacroStatusChanged(callback: AsyncCallback<boolean>): void--><!--Device-PhotoSession-onMacroStatusChanged(callback: AsyncCallback<boolean>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -350,28 +496,63 @@ on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'macroStatusChanged' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 |
 
-**错误码：**
+## onSmoothZoomInfoAvailable
 
-| 错误码ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+```TypeScript
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+```
 
-## on('autoDeviceSwitchStatusChange')
+Subscribes zoom info event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 |
+
+## onSystemPressureLevelChange
+
+```TypeScript
+onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void
+```
+
+Subscribes to system pressure level event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-PhotoSession-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void--><!--Device-PhotoSession-onSystemPressureLevelChange(callback: AsyncCallback<SystemPressureLevel>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 |
+
+## on_autoDeviceSwitchStatusChange
 
 ```TypeScript
 on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitchStatus>): void
 ```
 
-监听相机自动切换镜头状态变化，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听相机自动切换镜头状态变化，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -386,19 +567,92 @@ on(type: 'autoDeviceSwitchStatusChange', callback: AsyncCallback<AutoDeviceSwitc
 | type | 'autoDeviceSwitchStatusChange' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AutoDeviceSwitchStatus](arkts-camera-camera-autodeviceswitchstatus-i.md)&gt; | 是 |
 
-## on('systemPressureLevelChange')
+## on_error
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+监听普通拍照会话的错误事件，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+## on_focusStateChange
+
+```TypeScript
+on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
+```
+
+监听相机聚焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'focusStateChange' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
+
+## on_smoothZoomInfoAvailable
+
+```TypeScript
+on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
+```
+
+监听相机平滑变焦的状态变化，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'smoothZoomInfoAvailable' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 |
+
+## on_systemPressureLevelChange
 
 ```TypeScript
 on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLevel>): void
 ```
 
-监听系统压力状态变化，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听系统压力状态变化，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -413,54 +667,6 @@ on(type: 'systemPressureLevelChange', callback: AsyncCallback<SystemPressureLeve
 | type | 'systemPressureLevelChange' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SystemPressureLevel](arkts-camera-camera-systempressurelevel-e.md)&gt; | 是 |
 
-## onExposureInfoChange
-
-```TypeScript
-onExposureInfoChange(callback: Callback<ExposureInfo>): void
-```
-
-订阅曝光信息变化事件回调。曝光参数更改后，系统将返回更新后的曝光信息。使用callback异步回调。
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void--><!--Device-PhotoSession-onExposureInfoChange(callback: Callback<ExposureInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ExposureInfo](arkts-camera-camera-exposureinfo-i.md)&gt; | 是 |
-
-## onIsoInfoChange
-
-```TypeScript
-onIsoInfoChange(callback: Callback<IsoInfo>): void
-```
-
-订阅ISO信息变化事件回调。
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void--><!--Device-PhotoSession-onIsoInfoChange(callback: Callback<IsoInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i.md)&gt; | 是 |
-
 ## preconfig
 
 ```TypeScript
@@ -469,7 +675,9 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 
 对当前Session进行预配置。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -488,4 +696,4 @@ preconfig(preconfigType: PreconfigType, preconfigRatio?: PreconfigRatio): void
 
 | 错误码ID |
 | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |

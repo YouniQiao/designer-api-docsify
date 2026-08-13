@@ -12,12 +12,7 @@ import { call } from '@kit.TelephonyKit';
 function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
-> only for system applications.
+Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications.
 
 **Since:** 6
 
@@ -25,7 +20,7 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -39,7 +34,7 @@ Initiates a call. You can set call options as needed. This API uses an asynchron
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
 | options | [DialOptions](arkts-telephony-call-dialoptions-i.md) | Yes | Call option, which indicates whether the call is a voice call or video call. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 ## Examples
 
@@ -61,12 +56,7 @@ call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
 function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 ```
 
-Initiates a call. You can set call options as needed. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
-> only for system applications.
+Initiates a call. You can set call options as needed. This API uses a promise to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications.
 
 **Since:** 6
 
@@ -74,7 +64,7 @@ Initiates a call. You can set call options as needed. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -117,12 +107,7 @@ call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
 function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 ```
 
-Initiates a call. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API is supported since API version 6 and deprecated since API version 9. The substitute API is available
-> only for system applications.
+Initiates a call. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API is supported since API version 6 and deprecated since API version 9. The substitute API is available > only for system applications.
 
 **Since:** 6
 
@@ -130,7 +115,7 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**Substitutes:** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall-(System-API))
 
 **Required permissions:** ohos.permission.PLACE_CALL
 
@@ -143,7 +128,7 @@ Initiates a call. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | phoneNumber | string | Yes | Phone number. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
 
 ## Examples
 

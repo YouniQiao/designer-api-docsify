@@ -2,20 +2,23 @@
 
 Defines the Extendable Stack.
 
-**继承/实现关系：** ExtendableStack implements [StackAttribute](arkts-arkui-stack-stackattribute-i.md#StackAttribute)
+**继承/实现关系：** ExtendableStack implements StackAttribute
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-<!--Device-unnamed-export declare abstract class ExtendableStack implements StackAttribute--><!--Device-unnamed-export declare abstract class ExtendableStack implements StackAttribute-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare abstract class ExtendableStack--><!--Device-unnamed-export declare abstract class ExtendableStack-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## $_instantiate
 
 ```TypeScript
-static $_instantiate<T extends ExtendableStack>(
+@ComponentBuilder
+    static $_instantiate<T extends ExtendableStack>(
         factory: ConstructorT<T>,
         options?: StackOptions,
         content_?: CustomBuilder
@@ -28,9 +31,11 @@ Constructor of Extendable Stack.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,        options?: StackOptions,        content_?: CustomBuilder    ): T--><!--Device-ExtendableStack-static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,        options?: StackOptions,        content_?: CustomBuilder    ): T-End-->
+<!--Device-ExtendableStack-@ComponentBuilder    static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,        options?: StackOptions,        content_?: CustomBuilder    ): T--><!--Device-ExtendableStack-@ComponentBuilder    static $_instantiate<T extends ExtendableStack>(        factory: ConstructorT<T>,        options?: StackOptions,        content_?: CustomBuilder    ): T-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,9 +43,9 @@ Constructor of Extendable Stack.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | 是 |  |
 | options | [StackOptions](arkts-arkui-stack-stackoptions-i.md) | 否 |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
@@ -51,7 +56,8 @@ Constructor of Extendable Stack.
 ## _instantiateImpl
 
 ```TypeScript
-static _instantiateImpl<T extends ExtendableStack>(
+@Builder
+    static _instantiateImpl<T extends ExtendableStack>(
         styles: CustomBuilderT<T>,
         factory: ConstructorT<T>,
         content_?: CustomBuilder
@@ -64,11 +70,11 @@ Entry of Extendable Stack.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void--><!--Device-ExtendableStack-static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void-End-->
+<!--Device-ExtendableStack-@Builder    static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void--><!--Device-ExtendableStack-@Builder    static _instantiateImpl<T extends ExtendableStack>(        styles: CustomBuilderT<T>,        factory: ConstructorT<T>,        content_?: CustomBuilder    ): void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -76,9 +82,9 @@ Entry of Extendable Stack.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styles | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;T&gt; | 是 |  |
-| factory | [ConstructorT](arkts-arkui-constructort-t.md)&lt;T&gt; | 是 |  |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
+| styles | CustomBuilderT&lt;T&gt; | 是 |  |
+| factory | [ConstructorT](../../apis-na/arkts-apis/arkts-na-constructort-t.md)&lt;T&gt; | 是 |  |
+| content_ | CustomBuilder | 否 |  |
 
 ## setStackOptions
 
@@ -91,6 +97,8 @@ Set the Stack Options.
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

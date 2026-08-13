@@ -6,6 +6,8 @@ The EnvironmentCallback module provides capabilities to listen for system enviro
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export default class EnvironmentCallback--><!--Device-unnamed-export default class EnvironmentCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -22,12 +24,13 @@ import { EnvironmentCallback } from '@kit.AbilityKit';
 onConfigurationUpdated(config: Configuration): void
 ```
 
-Called when the system configuration changes, after   
-[a listener has been registered for such events](./application/ApplicationContext:ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)).
+Called when the system configuration changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on_abilityLifecycle) .
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,7 +48,7 @@ Called when the system configuration changes, after
 
 ## Examples
 
-See [Usage of EnvironmentCallback](#usage-of-environmentcallback).
+See Usage of EnvironmentCallback.
 
 ## onMemoryLevel
 
@@ -53,12 +56,13 @@ See [Usage of EnvironmentCallback](#usage-of-environmentcallback).
 onMemoryLevel(level: AbilityConstant.MemoryLevel): void
 ```
 
-Called when the system memory level changes, after   
-[a listener has been registered for such events](./application/ApplicationContext:ApplicationContext#on(type: 'environment', callback: EnvironmentCallback)).
+Called when the system memory level changes, after [a listener has been registered for such events](arkts-ability-applicationcontext-c.md#on_abilityLifecycle) .
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,5 +80,5 @@ Called when the system memory level changes, after
 
 ## Examples
 
-See [Usage of EnvironmentCallback](#usage-of-environmentcallback).
+See Usage of EnvironmentCallback.
 

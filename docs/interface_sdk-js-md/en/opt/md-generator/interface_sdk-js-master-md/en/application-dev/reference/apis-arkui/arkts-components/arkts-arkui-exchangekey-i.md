@@ -4,6 +4,8 @@ Defines new key of exchange data.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ExchangeKey--><!--Device-unnamed-interface ExchangeKey-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ New key to assign to the second position in the exchange. The original key is us
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ New key to assign to the first position in the exchange. The original key is use
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

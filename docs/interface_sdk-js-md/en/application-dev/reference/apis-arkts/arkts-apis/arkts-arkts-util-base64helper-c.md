@@ -1,10 +1,12 @@
 # Base64Helper
 
-Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 array using the Base64 encoding scheme.
+Provides encoding and decoding for Base64 and Base64URL. The Base64 encoding table contains 64 characters, which are the uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the special characters plus sign (+) and slash (/). During encoding, the original data is divided into groups of three bytes, and each group contains a 6-bit number. Then, the corresponding characters in the Base64 encoding table are used to represent these numbers. If the last group contains only one or two bytes, the equal sign (=) is used for padding. The Base64URL encoding table contains 64 characters, which are the uppercase letters (A-Z), lowercase letters (a-z), digits (0-9), and the special characters plus sign (+) and slash (/). The Base64URL encoding result does not contain equal signs (=).
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-util-class Base64Helper--><!--Device-util-class Base64Helper-End-->
 
@@ -22,11 +24,15 @@ import { util } from '@kit.ArkTS';
 constructor()
 ```
 
-Constructor for creating base64 encoding and decoding
+A constructor used to create a **Base64Helper** instance.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-constructor()--><!--Device-Base64Helper-constructor()-End-->
 
@@ -38,11 +44,15 @@ Constructor for creating base64 encoding and decoding
 decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>
 ```
 
-Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string or input u8 array into a newly allocated u8 array.
+Decodes the input content into a Uint8Array object. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-decode(src: Uint8Array | string, options?: Type): Promise<Uint8Array>-End-->
 
@@ -52,14 +62,14 @@ Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | A Uint8Array value or a string value |
-| options | [Type](arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Decoding format.&lt;br&gt;The following values are available:&lt;br&gt;- **util.Type.BASIC** ( default): Base64 decoding.&lt;br&gt;- **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.&lt;br&gt;- **util.Type.BASIC_URL_SAFE**: Base64URL decoding.&lt;br&gt; - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return characters and newline characters.<br>**Since:** 10 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Return the decoded asynchronous Uint8Array. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
 ## decodeSync
 
@@ -67,11 +77,15 @@ Use the Base64 encoding scheme to asynchronously decode a Base64-encoded string 
 decodeSync(src: Uint8Array | string, options?: Type): Uint8Array
 ```
 
-Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 array using the Base64 encoding scheme.
+Decodes a string into a Uint8Array object. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array--><!--Device-Base64Helper-decodeSync(src: Uint8Array | string, options?: Type): Uint8Array-End-->
 
@@ -81,14 +95,14 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array \| string | Yes | A Uint8Array value or a string value |
-| options | [Type](arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| src | Uint8Array \| string | Yes | Uint8Array object or string to decode. |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Decoding format.&lt;br&gt;The following values are available:&lt;br&gt;- **util.Type.BASIC** ( default): Base64 decoding.&lt;br&gt;- **util.Type.MIME**: Base64 decoding. The input parameter **src** contains carriage return characters and newline characters.&lt;br&gt;- **util.Type.BASIC_URL_SAFE**: Base64URL decoding.&lt;br&gt; - **util.Type.MIME_URL_SAFE**: Base64 URL decoding. The input parameter **src** contains carriage return characters and newline characters.<br>**Since:** 10 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Return the decoded Uint8Array. |
+| Uint8Array | Uint8Array object obtained. |
 
 ## encode
 
@@ -96,11 +110,15 @@ Decodes a Base64 encoded String or input u8 array into a newly-allocated u8 arra
 encode(src: Uint8Array, options?: Type): Promise<Uint8Array>
 ```
 
-Asynchronously encodes all bytes in the specified u8 array into the newly allocated u8 array using the Base64 encoding scheme.
+Encodes the input content into a Uint8Array object. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>--><!--Device-Base64Helper-encode(src: Uint8Array, options?: Type): Promise<Uint8Array>-End-->
 
@@ -110,14 +128,14 @@ Asynchronously encodes all bytes in the specified u8 array into the newly alloca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC_URL_SAFE |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.&lt;br&gt;The following values are available:&lt;br&gt;- **util.Type.BASIC** ( default): Base64 encoding.&lt;br&gt;- **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Uint8Array&gt; | Return the encodes asynchronous new Uint8Array. |
+| Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
 ## encodeSync
 
@@ -125,11 +143,15 @@ Asynchronously encodes all bytes in the specified u8 array into the newly alloca
 encodeSync(src: Uint8Array, options?: Type): Uint8Array
 ```
 
-Encodes all bytes from the specified u8 array into a newly-allocated u8 array using the Base64 encoding scheme.
+Encodes the input content into a Uint8Array object.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array--><!--Device-Base64Helper-encodeSync(src: Uint8Array, options?: Type): Uint8Array-End-->
 
@@ -139,14 +161,14 @@ Encodes all bytes from the specified u8 array into a newly-allocated u8 array us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](arkts-arkts-util-type-e.md) | No | Enumerating input parameters includes two encoding formats: BASIC and BASIC_URL_SAFE |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.&lt;br&gt;The following values are available:&lt;br&gt;- **util.Type.BASIC** ( default): Base64 encoding.&lt;br&gt;- **util.Type.BASIC_URL_SAFE**: Base64URL encoding.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Return the encoded new Uint8Array. |
+| Uint8Array | Uint8Array object obtained. |
 
 ## encodeToString
 
@@ -154,11 +176,15 @@ Encodes all bytes from the specified u8 array into a newly-allocated u8 array us
 encodeToString(src: Uint8Array, options?: Type): Promise<string>
 ```
 
-Asynchronously encodes the specified byte array into a String using the Base64 encoding scheme.
+Encodes the input content into a string. This API uses a promise to return the result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>-End-->
 
@@ -168,14 +194,14 @@ Asynchronously encodes the specified byte array into a String using the Base64 e
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.&lt;br&gt;The following values are available:&lt;br&gt;- **util.Type.BASIC** ( default): Base64 encoding. The return value does not contain carriage return characters or newline characters.&lt;br&gt;- **util.Type.MIME**: Base64 encoding. Each line of the return value contains a maximum of 76 characters and ends with '\r\n'.&lt;br&gt;- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.&lt;br&gt;- **util.Type.MIME_URL_SAFE**: Base64URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 10 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the encoded asynchronous string. |
+| Promise&lt;string&gt; | Promise used to return the string obtained. |
 
 ## encodeToStringSync
 
@@ -183,11 +209,15 @@ Asynchronously encodes the specified byte array into a String using the Base64 e
 encodeToStringSync(src: Uint8Array, options?: Type): string
 ```
 
-Encodes the specified byte array into a String using the Base64 encoding scheme.
+Performs Base64 encoding on the input Uint8Array byte array and returns a string. This method supports multiple encoding formats, including standard Base64 encoding, MIME-compliant Base64 encoding (with line breaks), and URL- safe Base64 encoding.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
 
@@ -197,12 +227,12 @@ Encodes the specified byte array into a String using the Base64 encoding scheme.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | A Uint8Array value |
-| options | [Type](arkts-arkts-util-type-e.md) | No | one of the Type enumeration |
+| src | Uint8Array | Yes | Uint8Array object to encode. |
+| options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.&lt;br&gt;The following values are available:&lt;br&gt;- **util.Type.BASIC** ( default): Base64 encoding. The return value does not contain carriage return characters or newline characters.&lt;br&gt;- **util.Type.MIME**: Base64 encoding. If the return value exceeds 76 characters, a line break is inserted every 76 characters, and each line ends with '\r\n'. If the return value is fewer than 76 characters, an exception is thrown.&lt;br&gt;- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.&lt;br&gt;- **util.Type.MIME_URL_SAFE**: Base64 URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 12 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return the encoded string. |
+| string | String obtained. |
 

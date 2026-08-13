@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Filter--><!--Device-unnamed-export interface Filter-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -19,6 +21,8 @@ displayName?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ excludeMedia?: boolean
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Filter-excludeMedia?: boolean--><!--Device-Filter-excludeMedia?: boolean-End-->
@@ -55,6 +61,8 @@ fileSizeOver?: number
 **类型：** number
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -74,6 +82,8 @@ lastModifiedAfter?: number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Filter-lastModifiedAfter?: number--><!--Device-Filter-lastModifiedAfter?: number-End-->
@@ -92,6 +102,8 @@ mime类型完全匹配，各个关键词OR关系。预留字段，暂不支持�
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Filter-mimeType?: Array<string>--><!--Device-Filter-mimeType?: Array<string>-End-->
@@ -109,6 +121,8 @@ suffix?: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

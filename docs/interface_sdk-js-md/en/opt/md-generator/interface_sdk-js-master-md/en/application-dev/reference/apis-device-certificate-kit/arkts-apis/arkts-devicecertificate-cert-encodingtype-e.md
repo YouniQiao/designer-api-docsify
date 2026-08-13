@@ -2,7 +2,9 @@
 
 Enumerates the encoding formats.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum EncodingType--><!--Device-cert-enum EncodingType-End-->
 
@@ -16,9 +18,11 @@ ENCODING_UTF8 = 0
 
 UTF-8.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-EncodingType-ENCODING_UTF8 = 0--><!--Device-EncodingType-ENCODING_UTF8 = 0-End-->
 

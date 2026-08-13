@@ -6,6 +6,8 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ SimpleAnimatorOptions的构造函数。
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,6 +50,8 @@ delay(delay: int): SimpleAnimatorOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -77,6 +83,8 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-direction(direction: PlayMode): SimpleAnimatorOptions-End-->
@@ -87,7 +95,7 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | [PlayMode](arkts-arkui-enums-playmode-e.md) | 是 | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
+| direction | [PlayMode](../../apis-na/arkts-apis/arkts-na-enums-playmode-e.md) | 是 | 设置animator动画播放方向，默认值：PlayMode.Normal。 |
 
 **返回值：**
 
@@ -106,6 +114,8 @@ duration(duration: int): SimpleAnimatorOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -137,6 +147,8 @@ easing(curve: string): SimpleAnimatorOptions
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-easing(curve: string): SimpleAnimatorOptions-End-->
@@ -167,6 +179,8 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions--><!--Device-SimpleAnimatorOptions-fill(fillMode: FillMode): SimpleAnimatorOptions-End-->
@@ -177,7 +191,7 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillMode | [FillMode](arkts-arkui-enums-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
+| fillMode | [FillMode](../../apis-na/arkts-apis/arkts-na-enums-fillmode-e.md) | 是 | 设置animator动画填充方式，影响动画delay期间和结束时的表现，默认值：FillMode.Forwards。 |
 
 **返回值：**
 
@@ -196,6 +210,8 @@ iterations(iterations: int): SimpleAnimatorOptions
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

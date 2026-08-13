@@ -8,7 +8,9 @@ Defines a onWindowStageWillRestore function.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-type OnWindowStageWillRestoreFn = (ability: UIAbility, windowStage: window.WindowStage) => void--><!--Device-unnamed-type OnWindowStageWillRestoreFn = (ability: UIAbility, windowStage: window.WindowStage) => void-End-->
 

@@ -2,7 +2,9 @@
 
 Represents the parameters of a serial port.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-serialManager-interface SerialPort--><!--Device-serialManager-interface SerialPort-End-->
 
@@ -24,7 +26,9 @@ Serial port device name.
 
 **Type:** string
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SerialPort-deviceName: string--><!--Device-SerialPort-deviceName: string-End-->
 
@@ -40,7 +44,9 @@ Port number.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SerialPort-portId: int--><!--Device-SerialPort-portId: int-End-->
 

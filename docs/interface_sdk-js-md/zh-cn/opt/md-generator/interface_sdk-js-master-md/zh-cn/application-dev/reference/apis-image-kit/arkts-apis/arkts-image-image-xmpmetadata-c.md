@@ -4,6 +4,8 @@ XMPMetadata instance.
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-image-class XMPMetadata--><!--Device-image-class XMPMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -21,6 +23,8 @@ public enumerateTags(
 Enumerate the XMP tags from specified path and uses a callback to return the result.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +44,7 @@ Enumerate the XMP tags from specified path and uses a callback to return the res
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## getBlob
 
@@ -51,6 +55,8 @@ public getBlob(): Promise<ArrayBuffer>
 Obtains the XMP metadata as a blob.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,8 +74,8 @@ Obtains the XMP metadata as a blob.
 
 | 错误码ID |
 | --- |
-| [7600302](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-内存拷贝失败) |
-| [7600301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-申请内存失败) |
+| [7600302](../errorcode-image.md#7600302-内存拷贝失败) |
+| [7600301](../errorcode-image.md#7600301-申请内存失败) |
 
 ## getTag
 
@@ -80,6 +86,8 @@ public getTag(path: string): Promise<XMPTag | null>
 Get a single XMP tag from specified path.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -103,7 +111,7 @@ Get a single XMP tag from specified path.
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## getTags
 
@@ -114,6 +122,8 @@ public getTags(rootPath?: string, options?: XMPEnumerateOptions): Promise<Record
 Get all XMP tags from specified path.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,7 +148,7 @@ Get all XMP tags from specified path.
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## registerXMPNamespace
 
@@ -149,6 +159,8 @@ public registerXMPNamespace(xmpNamespace: XMPNamespace): Promise<void>
 Register a new namespace according to the xml namespace and prefix.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,7 +184,7 @@ Register a new namespace according to the xml namespace and prefix.
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## removeTag
 
@@ -183,6 +195,8 @@ public removeTag(path: string): Promise<void>
 Remove the XMP tag from specified path.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -206,7 +220,7 @@ Remove the XMP tag from specified path.
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## setBlob
 
@@ -217,6 +231,8 @@ public setBlob(buffer: ArrayBuffer): Promise<void>
 Set a blob into the XMP metadata.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -240,7 +256,7 @@ Set a blob into the XMP metadata.
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |
 
 ## setValue
 
@@ -251,6 +267,8 @@ public setValue(path: string, type: XMPTagType, value?: string): Promise<void>
 Set the XMP type and value of the XMP tag in the specified path.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -276,4 +294,4 @@ Set the XMP type and value of the XMP tag in the specified path.
 
 | 错误码ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-无效参数) |
+| [7600206](../errorcode-image.md#7600206-无效参数) |

@@ -1,11 +1,12 @@
 # ImageBitmap
 
-ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建  
-[Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。
+ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开始，当应用创建 [Worker线程](../../../arkts-utils/worker-introduction.md)，支持使用postMessage将ImageBitmap实例传到 Worker中进行绘制，并使用onmessage接收Worker线程发送的绘制结果进行显示。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ImageBitmap--><!--Device-unnamed-declare class ImageBitmap-End-->
 
@@ -17,18 +18,13 @@ ImageBitmap对象可以存储canvas渲染的像素数据。从API version 11开�
 close(): void
 ```
 
-释放ImageBitmap对象相关联的所有图形资源，并将ImageBitmap对象的宽高置为0。
-
-> **说明：**
-> 
-> - 必须与[constructor()](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-imagebitmap.md#constructor)方法配对
-> 使用，创建ImageBitmap对象后，应在使用完毕时调用close()释放资源。未调用close()可能导致图形资源泄漏，影响应用性能。
-> 
-> - 建议在Canvas绘制完成后调用，如在[onReady](arkts-arkui-canvasattribute-c.md#onReady)回调的最后调用close()。
+释放ImageBitmap对象相关联的所有图形资源，并将ImageBitmap对象的宽高置为0。 > **说明：** > > - 必须与[constructor()](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-imagebitmap.md#constructor)方法配对 > 使用，创建ImageBitmap对象后，应在使用完毕时调用close()释放资源。未调用close()可能导致图形资源泄漏，影响应用性能。 > > - 建议在Canvas绘制完成后调用，如在onReady回调的最后调用close()。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -49,6 +45,8 @@ constructor(src: string)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -75,6 +73,8 @@ constructor(src: string, unit: LengthMetricsUnit)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,6 +105,8 @@ constructor(data: PixelMap)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ImageBitmap-constructor(data: PixelMap)--><!--Device-ImageBitmap-constructor(data: PixelMap)-End-->
@@ -128,6 +130,8 @@ constructor(data: PixelMap, unit: LengthMetricsUnit)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,6 +160,8 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -177,13 +183,15 @@ constructor(data: Resource, unit?: LengthMetricsUnit)
 readonly height: number
 ```
 
-ImageBitmap的像素高度。&lt;br&gt;默认单位为vp。
+ImageBitmap的像素高度。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -199,13 +207,15 @@ ImageBitmap的像素高度。&lt;br&gt;默认单位为vp。
 readonly width: number
 ```
 
-ImageBitmap的像素宽度。&lt;br&gt;默认单位为vp。
+ImageBitmap的像素宽度。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

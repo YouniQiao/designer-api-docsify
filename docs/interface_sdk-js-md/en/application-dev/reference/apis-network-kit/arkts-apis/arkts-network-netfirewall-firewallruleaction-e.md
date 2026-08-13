@@ -6,6 +6,8 @@ Firewall rule behavior enumeration.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-enum FirewallRuleAction--><!--Device-netFirewall-enum FirewallRuleAction-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -22,6 +24,8 @@ Allow access.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-FirewallRuleAction-RULE_ALLOW = 0--><!--Device-FirewallRuleAction-RULE_ALLOW = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -37,6 +41,8 @@ Deny access.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-FirewallRuleAction-RULE_DENY = 1--><!--Device-FirewallRuleAction-RULE_DENY = 1-End-->
 

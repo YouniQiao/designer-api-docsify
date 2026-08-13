@@ -2,9 +2,11 @@
 
 Describes audio renderer information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRendererInfo--><!--Device-audio-interface AudioRendererInfo-End-->
 
@@ -32,7 +34,7 @@ Audio content type.
 
 **Deprecated since:** 10
 
-**Substitutes:** [usage](ohos.multimedia.audio.AudioRendererInfo#usage)
+**Substitutes:** usage
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 
@@ -44,15 +46,15 @@ Audio content type.
 rendererFlags: int
 ```
 
-Flags that control the renderer behavior.
+Flags that control the renderer behavior. Set this parameter to **0**.
 
-Set this parameter to **0**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -70,9 +72,11 @@ Audio stream usage.
 
 **Type:** [StreamUsage](arkts-audio-audio-streamusage-e.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -90,9 +94,11 @@ Audio volume mode config. If volumeMode is set to [APP_INDIVIDUAL](arkts-audio-a
 
 **Type:** [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode--><!--Device-AudioRendererInfo-volumeMode?: AudioVolumeMode-End-->
 

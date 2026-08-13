@@ -2,7 +2,9 @@
 
 定义图片扫描进度的接口。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-scan-interface PictureScanProgress--><!--Device-scan-interface PictureScanProgress-End-->
 
@@ -18,7 +20,9 @@ isFinal: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureScanProgress-isFinal: boolean--><!--Device-PictureScanProgress-isFinal: boolean-End-->
 
@@ -34,7 +38,9 @@ pictureFd: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureScanProgress-pictureFd: int--><!--Device-PictureScanProgress-pictureFd: int-End-->
 
@@ -50,7 +56,9 @@ progress: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PictureScanProgress-progress: int--><!--Device-PictureScanProgress-progress: int-End-->
 

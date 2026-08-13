@@ -16,6 +16,8 @@ Snoozes a notification. The notification will be reminded again after the specif
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -43,12 +45,12 @@ Snoozes a notification. The notification will be reminded again after the specif
 
 | Error Code ID |
 | --- |
-| [1600028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600028-current-notification-does-not-support-this-api) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
-| [1600007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600007-notification-not-found) |
+| [1600028](../errorcode-notification.md#1600028-current-notification-does-not-support-this-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600007](../errorcode-notification.md#1600007-notification-not-found) |
 
 ## Examples
 

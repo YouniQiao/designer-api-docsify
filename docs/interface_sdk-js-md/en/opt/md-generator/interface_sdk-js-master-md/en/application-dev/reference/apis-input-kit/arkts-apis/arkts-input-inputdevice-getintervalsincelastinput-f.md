@@ -14,7 +14,9 @@ function getIntervalSinceLastInput(): Promise<number>
 
 Obtains the interval (including the device sleep time) elapsed since the last system input event. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>--><!--Device-inputDevice-function getIntervalSinceLastInput(): Promise<long>-End-->
 

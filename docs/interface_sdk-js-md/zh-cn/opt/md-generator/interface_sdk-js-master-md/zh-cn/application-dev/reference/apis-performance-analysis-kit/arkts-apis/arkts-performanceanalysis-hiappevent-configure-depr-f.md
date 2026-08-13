@@ -12,7 +12,7 @@ function configure(config: ConfigOption): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [configure](ohos.hiviewdfx.hiAppEvent/hiAppEvent#configure)
+**替代接口：** [configure](arkts-performanceanalysis-hiappevent-configure-f.md#configure)
 
 <!--Device-hiAppEvent-function configure(config: ConfigOption): boolean--><!--Device-hiAppEvent-function configure(config: ConfigOption): boolean-End-->
 

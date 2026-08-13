@@ -2,7 +2,9 @@
 
 Provides vertical type definition.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-verticalPanelManager-export enum VerticalType--><!--Device-verticalPanelManager-export enum VerticalType-End-->
 
@@ -18,7 +20,9 @@ NAVIGATION = 'navigation'
 
 Indicates the type for Navigation.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

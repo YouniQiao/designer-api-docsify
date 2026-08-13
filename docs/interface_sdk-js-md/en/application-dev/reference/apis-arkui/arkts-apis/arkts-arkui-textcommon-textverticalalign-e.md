@@ -6,6 +6,8 @@ Vertical Alignment of text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum TextVerticalAlign--><!--Device-unnamed-export declare enum TextVerticalAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Baseline alignment, the default value.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Bottom alignment.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextVerticalAlign-BOTTOM = 1--><!--Device-TextVerticalAlign-BOTTOM = 1-End-->
@@ -58,6 +64,8 @@ Center alignment.
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextVerticalAlign-CENTER = 2--><!--Device-TextVerticalAlign-CENTER = 2-End-->
@@ -75,6 +83,8 @@ Top alignment.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

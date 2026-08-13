@@ -2,9 +2,11 @@
 
 Enumerates the GIF image information.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-enum GifPropertyKey--><!--Device-image-enum GifPropertyKey-End-->
 
@@ -18,9 +20,11 @@ GIF_DELAY_TIME = 'GifDelayTime'
 
 Duration for playing each frame of a GIF image, in milliseconds.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GifPropertyKey-GIF_DELAY_TIME = 'GifDelayTime'--><!--Device-GifPropertyKey-GIF_DELAY_TIME = 'GifDelayTime'-End-->
 
@@ -34,9 +38,11 @@ GIF_DISPOSAL_TYPE = 'GifDisposalType'
 
 Disposal type of each frame in a GIF image.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GifPropertyKey-GIF_DISPOSAL_TYPE = 'GifDisposalType'--><!--Device-GifPropertyKey-GIF_DISPOSAL_TYPE = 'GifDisposalType'-End-->
 
@@ -52,7 +58,9 @@ Whether the GIF image has a global color map.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +78,9 @@ Canvas width.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,7 +98,9 @@ Canvas height.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +118,9 @@ Loop count.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -124,7 +138,9 @@ Unclamped delay of each frame in milliseconds.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Describe audio capturer filter.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturerFilter--><!--Device-audio-interface AudioCapturerFilter-End-->
 
@@ -26,7 +28,9 @@ Capturer information.
 
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerFilter-capturerInfo?: AudioCapturerInfo--><!--Device-AudioCapturerFilter-capturerInfo?: AudioCapturerInfo-End-->
 
@@ -44,7 +48,9 @@ Application uid.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerFilter-uid?: int--><!--Device-AudioCapturerFilter-uid?: int-End-->
 

@@ -2,9 +2,11 @@
 
 Provides APIs for user IDM.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-class UserIdentityManager--><!--Device-osAccount-class UserIdentityManager-End-->
 
@@ -24,11 +26,13 @@ import { osAccount } from '@kit.BasicServicesKit';
 addCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 ```
 
-Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added).
+Adds credential information, including the credential type, subtype, and token (if a non-PIN credential is added) .
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -51,19 +55,19 @@ Adds credential information, including the credential type, subtype, and token (
 | --- | --- |
 | 12300091 | Cross-device communication failed.<br>**Applicable version:** 23 and later |
 | 12300090 | Cross-device capability not supported.<br>**Applicable version:** 23 and later |
-| [12300115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300115](../../apis-basic-services-kit/errorcode-account.md#12300115-user-authentication-passwords-reached-the-limit) | The number of credentials reaches the upper limit. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
-| [12300116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
-| [12300106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
-| [12300109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation timeout. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
 ## Examples
 
@@ -107,9 +111,11 @@ cancel(challenge: Uint8Array): void
 
 Cancels an entry based on the challenge value.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -129,11 +135,11 @@ Cancels an entry based on the challenge value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid challenge. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid challenge. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -152,21 +158,17 @@ try {
 
 ## closeSession
 
-ArkTS-Dyn:
-```TypeScript
-closeSession(accountId?: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 closeSession(accountId?: int): void
 ```
 
 Closes this session to terminate IDM.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -180,18 +182,18 @@ Closes this session to terminate IDM.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | OS account ID, which is left blank by default. |
+| accountId | int | No | OS account ID, which is left blank by default. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: Incorrect parameter types.<br>**Applicable version:** 12 and later |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -209,9 +211,11 @@ constructor()
 
 A **constructor()** used to create an instance for user IDM.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UserIdentityManager-constructor()--><!--Device-UserIdentityManager-constructor()-End-->
 
@@ -223,7 +227,7 @@ A **constructor()** used to create an instance for user IDM.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -239,9 +243,11 @@ delCred(credentialId: Uint8Array, token: Uint8Array, callback: IIdmCallback): vo
 
 Deletes user credential information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -263,13 +269,13 @@ Deletes user credential information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
 ## Examples
 
@@ -300,9 +306,11 @@ delUser(token: Uint8Array, callback: IIdmCallback): void
 
 Deletes a user with an authentication token. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -323,11 +331,11 @@ Deletes a user with an authentication token. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
 
 ## Examples
 
@@ -357,9 +365,11 @@ getAuthInfo(callback: AsyncCallback<Array<EnrolledCredInfo>>): void
 
 Obtains authentication information. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -373,15 +383,15 @@ Obtains authentication information. This API uses an asynchronous callback to re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is information about all registered credentials of the user. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -412,9 +422,11 @@ getAuthInfo(authType: AuthType, callback: AsyncCallback<Array<EnrolledCredInfo>>
 
 Obtains authentication information of the specified type. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -429,16 +441,16 @@ Obtains authentication information of the specified type. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | AuthType | Yes | Authentication credential type. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[EnrolledCredInfo](arkts-basicservices-osaccount-enrolledcredinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the information about all enrolled credentials of the specified type. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -470,9 +482,11 @@ getAuthInfo(authType: AuthType): Promise<Array<EnrolledCredInfo>>
 
 Obtains authentication information. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -498,10 +512,10 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -530,9 +544,11 @@ getAuthInfo(options?: GetAuthInfoOptions): Promise<Array<EnrolledCredInfo>>
 
 Obtains authentication information. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -558,11 +574,11 @@ Obtains authentication information. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -589,21 +605,17 @@ try {
 
 ## getEnrolledId
 
-ArkTS-Dyn:
-```TypeScript
-getEnrolledId(authType: AuthType, accountId?: number): Promise<Uint8Array>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getEnrolledId(authType: AuthType, accountId?: int): Promise<Uint8Array>
 ```
 
-Obtains the ID of the enrolled credential based on the credential type and account ID (optional). This API uses a  promise to return the result.
+Obtains the ID of the enrolled credential based on the credential type and account ID (optional). This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -618,7 +630,7 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | authType | AuthType | Yes | Credential type. |
-| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | OS account ID, which is left blank by default. |
+| accountId | int | No | OS account ID, which is left blank by default. |
 
 **Return value:**
 
@@ -630,13 +642,13 @@ Obtains the ID of the enrolled credential based on the credential type and accou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
 | 12300020 | Device hardware abnormal.<br>**Applicable version:** 23 and later |
 
 ## Examples
@@ -669,7 +681,9 @@ Unsubscribes from credential change events. If no callback is not specified, thi
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -683,15 +697,15 @@ Unsubscribes from credential change events. If no callback is not specified, thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | No | Callback used to listen for the credential change events. The default value is **undefined**, indicating that all subscription records are unregistered. If the value is not undefined, only the subscription records related to the specified callback are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -737,7 +751,9 @@ Subscribes to one or more credential change events. This API uses a callback to 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -752,17 +768,17 @@ Subscribes to one or more credential change events. This API uses a callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | credentialTypes | AuthType[] | Yes | Credential types subscribed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[CredentialChangeInfo](arkts-basicservices-osaccount-credentialchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the credential change events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | One or more credential types are not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | One or more credential types are invalid. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | One or more credential types are not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | One or more credential types are invalid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -798,9 +814,11 @@ openSession(callback: AsyncCallback<Uint8Array>): void
 
 Opens a session to obtain the challenge value. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -814,16 +832,16 @@ Opens a session to obtain the challenge value. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Uint8Array&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the challenge value obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -847,21 +865,17 @@ try {
 
 ## openSession
 
-ArkTS-Dyn:
-```TypeScript
-openSession(accountId?: number): Promise<Uint8Array>
-```
-
-ArkTS-Sta:
 ```TypeScript
 openSession(accountId?: int): Promise<Uint8Array>
 ```
 
 Opens a session. This API returns a challenge value, which can be used to determine whether the subsequent identity authentication is in this session. This can prevent replay attacks. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -875,7 +889,7 @@ Opens a session. This API returns a challenge value, which can be used to determ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| accountId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | OS account ID, which is left blank by default. |
+| accountId | int | No | OS account ID, which is left blank by default. |
 
 **Return value:**
 
@@ -887,11 +901,11 @@ Opens a session. This API returns a challenge value, which can be used to determ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted account.<br>**Applicable version:** 12 and later |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -920,9 +934,11 @@ updateCredential(credentialInfo: CredentialInfo, callback: IIdmCallback): void
 
 Updates credential information. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_USER_IDM
 
@@ -943,17 +959,17 @@ Updates credential information. This API uses an asynchronous callback to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
-| [12300111](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
-| [12300109](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
-| [12300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
-| [12300116](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
+| [12300106](../../apis-basic-services-kit/errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
+| [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
+| [12300109](../../apis-basic-services-kit/errorcode-account.md#12300109-authentication-credential-enrollment-or-update-canceled) | The authentication, enrollment, or update operation is canceled. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid credentialInfo, i.e. authType or authSubType. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300102](../../apis-basic-services-kit/errorcode-account.md#12300102-credential-not-found) | The credential does not exist. |
+| [12300101](../../apis-basic-services-kit/errorcode-account.md#12300101-incorrect-credential) | The token is invalid. |
+| [12300116](../../apis-basic-services-kit/errorcode-account.md#12300116-failed-to-verify-the-credential-complexity) | Credential complexity verification failed.<br>**Applicable version:** 12 and later |
 
 ## Examples
 

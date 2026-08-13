@@ -2,7 +2,9 @@
 
 Defines the **value** object in a KV store.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface Value--><!--Device-distributedKVStore-interface Value-End-->
 
@@ -24,7 +26,9 @@ Type of the value.
 
 **Type:** ValueType
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Value of the KV pair.
 
 **Type:** Uint8Array \| string \| number \| number \| boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

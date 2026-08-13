@@ -2,9 +2,11 @@
 
 管理音振协同功能。在调用AudioHapticManager的接口前，需要先通过[getAudioHapticManager](arkts-audio-audiohaptic-getaudiohapticmanager-f.md#getAudioHapticManager)创建实例。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audioHaptic-interface AudioHapticManager--><!--Device-audioHaptic-interface AudioHapticManager-End-->
 
@@ -21,6 +23,8 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -45,11 +49,11 @@ createPlayer(id: number, options?: AudioHapticPlayerOptions): Promise<AudioHapti
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -79,7 +83,9 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.VIBRATE
 
@@ -104,32 +110,24 @@ Create an audio haptic player. This method uses a promise to return the result. 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) | Unsupport format. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## registerSource
 
-ArkTS-Dyn:
-```TypeScript
-registerSource(audioUri: string, hapticUri: string): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 registerSource(audioUri: string, hapticUri: string): Promise<int>
 ```
 
-通过Uri注册音频和振动资源。使用Promise异步回调。
+通过Uri注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
-> **注意：**
-> 
-> 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>--><!--Device-AudioHapticManager-registerSource(audioUri: string, hapticUri: string): Promise<int>-End-->
 
@@ -146,13 +144,13 @@ registerSource(audioUri: string, hapticUri: string): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 &lt;br&gt;正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
+| Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 &lt;br&gt;正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 
@@ -173,25 +171,17 @@ audioHapticManagerInstance.registerSource(audioUri, hapticUri).then((value) => {
 
 ## registerSourceFromFd
 
-ArkTS-Dyn:
-```TypeScript
-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>
 ```
 
-通过文件描述符注册音频和振动资源。使用Promise异步回调。
+通过文件描述符注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
 
-> **注意：**
-> 
-> 单个应用最多支持同时注册128个资源，超过之后将会注册失败（返回注册的资源ID为负数）。推荐应用合理控制注册资源数量，对于不再需要使用的资源，建议及时取消注册。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>--><!--Device-AudioHapticManager-registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFileDescriptor): Promise<int>-End-->
 
@@ -208,7 +198,7 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 &lt;br&gt;正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
+| Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 &lt;br&gt;正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
 
 ## 示例
 
@@ -244,21 +234,17 @@ audioHapticManagerInstance.registerSourceFromFd(audioFd, hapticFd).then((value) 
 
 ## setAudioLatencyMode
 
-ArkTS-Dyn:
-```TypeScript
-setAudioLatencyMode(id:number, latencyMode: AudioLatencyMode): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void
 ```
 
 设置音频时延模式。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void--><!--Device-AudioHapticManager-setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void-End-->
 
@@ -268,15 +254,15 @@ setAudioLatencyMode(id:int, latencyMode: AudioLatencyMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 已注册资源的source id。 |
+| id | int | 是 | 已注册资源的source id。 |
 | latencyMode | [AudioLatencyMode](arkts-audio-audiohaptic-audiolatencymode-e.md) | 是 | 音频时延模式。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## 示例
 
@@ -292,21 +278,17 @@ audioHapticManagerInstance.setAudioLatencyMode(id, latencyMode);
 
 ## setStreamUsage
 
-ArkTS-Dyn:
-```TypeScript
-setStreamUsage(id: number, usage: audio.StreamUsage): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setStreamUsage(id: int, usage: audio.StreamUsage): void
 ```
 
 设置音频流使用类型。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void--><!--Device-AudioHapticManager-setStreamUsage(id: int, usage: audio.StreamUsage): void-End-->
 
@@ -316,15 +298,15 @@ setStreamUsage(id: int, usage: audio.StreamUsage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 已注册资源的source id。 |
+| id | int | 是 | 已注册资源的source id。 |
 | usage | audio.StreamUsage | 是 | 音频流使用类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
 ## 示例
 
@@ -341,25 +323,17 @@ audioHapticManagerInstance.setStreamUsage(id, usage);
 
 ## unregisterSource
 
-ArkTS-Dyn:
-```TypeScript
-unregisterSource(id: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 unregisterSource(id: int): Promise<void>
 ```
 
-取消注册音频和振动资源。使用Promise异步回调。
+取消注册音频和振动资源。使用Promise异步回调。 > **注意：** > > 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
 
-> **注意：**
-> 
-> 对于不再需要使用的资源，建议应用及时取消注册，避免出现资源泄漏或资源数量超上限等问题。
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>--><!--Device-AudioHapticManager-unregisterSource(id: int): Promise<void>-End-->
 
@@ -369,7 +343,7 @@ unregisterSource(id: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 已注册资源的source id。 |
+| id | int | 是 | 已注册资源的source id。 |
 
 **返回值：**
 
@@ -381,7 +355,7 @@ unregisterSource(id: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## 示例
 

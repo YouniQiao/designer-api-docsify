@@ -6,7 +6,7 @@ Describes the value of the indication or notification sent by the Gatt server.
 
 **Deprecated since:** 9
 
-**Substitutes:** [NotifyCharacteristic](ohos.bluetoothManager/bluetoothManager.NotifyCharacteristic)
+**Substitutes:** [NotifyCharacteristic](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#NotifyCharacteristic)
 
 <!--Device-bluetooth-interface NotifyCharacteristic--><!--Device-bluetooth-interface NotifyCharacteristic-End-->
 
@@ -32,7 +32,7 @@ The UUID of a NotifyCharacteristic instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicUuid](ohos.bluetoothManager/bluetoothManager.NotifyCharacteristic.characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#characteristicUuid)
 
 <!--Device-NotifyCharacteristic-characteristicUuid: string--><!--Device-NotifyCharacteristic-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The value of a NotifyCharacteristic instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicValue](ohos.bluetoothManager/bluetoothManager.NotifyCharacteristic.characteristicValue)
+**Substitutes:** [characteristicValue](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#characteristicValue)
 
 <!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer--><!--Device-NotifyCharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -72,7 +72,7 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 
 **Deprecated since:** 9
 
-**Substitutes:** [confirm](ohos.bluetoothManager/bluetoothManager.NotifyCharacteristic.confirm)
+**Substitutes:** [confirm](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#confirm)
 
 <!--Device-NotifyCharacteristic-confirm: boolean--><!--Device-NotifyCharacteristic-confirm: boolean-End-->
 
@@ -92,7 +92,7 @@ The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#Gatt
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.NotifyCharacteristic.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-notifycharacteristic-i.md#serviceUuid)
 
 <!--Device-NotifyCharacteristic-serviceUuid: string--><!--Device-NotifyCharacteristic-serviceUuid: string-End-->
 

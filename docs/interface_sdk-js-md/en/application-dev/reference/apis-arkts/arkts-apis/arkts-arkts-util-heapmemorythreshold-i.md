@@ -6,6 +6,8 @@ Describes the heap memory threshold at which the registered callback is triggere
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-util-interface HeapMemoryThreshold--><!--Device-util-interface HeapMemoryThreshold-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -22,13 +24,15 @@ import { util } from '@kit.ArkTS';
 localHeapThreshold?: number
 ```
 
-This number is on a scale of 70 to 95, representing the percentage threshold of the local heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range.If not set, the callback will not be triggered by local heap memory pressure.
+This number is on a scale of 70 to 95, representing the percentage threshold of the local heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range. If not set, the callback will not be triggered by local heap memory pressure.
 
 **Type:** number
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ This number is on a scale of 70 to 95, representing the percentage threshold of 
 processHeapThreshold?: number
 ```
 
-This number is on a scale of 70 to 95, representing the percentage threshold of the process's total heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range.If not set, the callback will not be triggered by process heap memory pressure.
+This number is on a scale of 70 to 95, representing the percentage threshold of the process's total heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range. If not set, the callback will not be triggered by process heap memory pressure.
 
 **Type:** number
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +68,15 @@ This number is on a scale of 70 to 95, representing the percentage threshold of 
 sharedHeapThreshold?: number
 ```
 
-This number is on a scale of 70 to 95, representing the percentage threshold of the shared heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range.If not set, the callback will not be triggered by shared heap memory pressure.
+This number is on a scale of 70 to 95, representing the percentage threshold of the shared heap memory at which the callback is triggered after a GC. Values outside this range are automatically clamped to the valid range. If not set, the callback will not be triggered by shared heap memory pressure.
 
 **Type:** number
 
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

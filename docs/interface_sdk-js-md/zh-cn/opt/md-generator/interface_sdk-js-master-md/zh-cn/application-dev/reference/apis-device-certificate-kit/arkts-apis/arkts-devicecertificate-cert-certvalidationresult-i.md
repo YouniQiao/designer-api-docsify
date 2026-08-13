@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-cert-interface CertValidationResult--><!--Device-cert-interface CertValidationResult-End-->
 
 **系统能力：** SystemCapability.Security.Cert
@@ -19,6 +21,8 @@ readonly certChain: Array<X509Cert>
 **类型：** Array&lt;[X509Cert](arkts-devicecertificate-cert-x509cert-i.md)&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

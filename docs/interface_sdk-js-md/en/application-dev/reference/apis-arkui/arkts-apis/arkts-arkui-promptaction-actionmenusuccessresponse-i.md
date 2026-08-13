@@ -1,12 +1,14 @@
 # ActionMenuSuccessResponse
 
-Success response.
+Describes the action menu response result.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-promptAction-export interface ActionMenuSuccessResponse--><!--Device-promptAction-export interface ActionMenuSuccessResponse-End-->
+**Deprecated since:** -1
+
+<!--Device-promptAction-interface ActionMenuSuccessResponse--><!--Device-promptAction-interface ActionMenuSuccessResponse-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,20 +21,22 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ## index
 
 ```TypeScript
-index: int
+index: number
 ```
 
-Index of the selected button, starting from 0.
+Index of the selected button in the **buttons** array, starting from **0**.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ActionMenuSuccessResponse-index: int--><!--Device-ActionMenuSuccessResponse-index: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionMenuSuccessResponse-index: number--><!--Device-ActionMenuSuccessResponse-index: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

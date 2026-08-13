@@ -1,12 +1,10 @@
 # domain
 
-Provides domain name constants.
+Provides domain name constants. | Name| Type | Read Only | Description | | --- | ------ | ------ | ---------- | | OS | string | Yes| System domain.|
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Read Only | Description |
-| --- | ------ | ------ | ---------- |
-| [OS](arkts-performanceanalysis-domain-con.md) | string | Yes|
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-hiAppEvent-namespace domain--><!--Device-hiAppEvent-namespace domain-End-->
 
@@ -24,4 +22,4 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [OS](arkts-performanceanalysis-domain-con.md#os) |
+| [OS](arkts-performanceanalysis-domain-con.md#OS) |

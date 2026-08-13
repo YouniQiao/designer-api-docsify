@@ -2,7 +2,9 @@
 
 回调方法的接收信息。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityConnectionManager-interface EventCallbackInfo--><!--Device-abilityConnectionManager-interface EventCallbackInfo-End-->
 
@@ -18,7 +20,9 @@ image?: image.PixelMap
 
 **类型：** image.PixelMap
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,12 +1,38 @@
 # PlainArray
 
-PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。PlainArray依据泛型定义，采用轻量级结构。
+PlainArray可用于存储具有关联关系的key-value键值对集合，其中key值唯一且类型为number，每个key对应一个value。 PlainArray依据泛型定义，采用轻量级结构。
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-unnamed-declare class PlainArray<T>--><!--Device-unnamed-declare class PlainArray<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class PlainArray--><!--Device-unnamed-declare class PlainArray-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<[number, T]>
+```
+
+返回一个迭代器，每一项都是一个ArkTS对象。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-$_iterator(): IterableIterator<[int, T]>--><!--Device-PlainArray-$_iterator(): IterableIterator<[int, T]>-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**返回值：**
+
+| 类型 |
+| --- |
+| IterableIterator & lt;[number, T] & gt; |
 
 ## [Symbol.iterator]
 
@@ -17,6 +43,8 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 返回一个包含key-value键值对的迭代器对象，其中key是number类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,7 +62,7 @@ PlainArray可用于存储具有关联关系的key-value键值对集合，其中k
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -70,7 +98,9 @@ add(key: number, value: T): void
 
 向容器中添加一组数据。若指定的key不存在，则新增键值对，且length增加；若指定的key存在，则替换该key对应的value值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -89,7 +119,7 @@ add(key: number, value: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -107,7 +137,9 @@ clear(): void
 
 清除容器中的所有元素，并将length置为0。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -119,7 +151,7 @@ clear(): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -140,7 +172,9 @@ clone(): PlainArray<T>
 
 克隆一个实例，并返回克隆后的实例。修改克隆后的实例并不会影响原实例。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -158,7 +192,7 @@ clone(): PlainArray<T>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -178,7 +212,9 @@ constructor()
 
 PlainArray的构造函数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -190,7 +226,7 @@ PlainArray的构造函数。
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## 示例
 
@@ -207,6 +243,8 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 在遍历PlainArray实例对象中每一个元素的过程中，对每个元素执行回调函数。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -225,7 +263,7 @@ forEach(callbackFn: (value: T, index?: number, PlainArray?: PlainArray<T>) => vo
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -252,6 +290,30 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: PlainArrayForEachCb<T>): void
+```
+
+在遍历PlainArray实例对象中每一个元素的过程中，对每个元素执行回调函数。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-forEach(callbackFn: PlainArrayForEachCb<T>): void--><!--Device-PlainArray-forEach(callbackFn: PlainArrayForEachCb<T>): void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callbackFn | [PlainArrayForEachCb](arkts-arkts-plainarrayforeachcb-t.md)&lt;T&gt; | 是 |
+
 ## get
 
 ```TypeScript
@@ -261,6 +323,8 @@ get(key: number): T
 获取指定key所对应的value。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -284,7 +348,7 @@ get(key: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -296,6 +360,42 @@ let result = plainArray.get(1);
 console.info("result:", result);  // result: squirrel
 ```
 
+## get
+
+```TypeScript
+get(key: number): T | undefined
+```
+
+查询与指定key关联的value。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-get(key: int): T | undefined--><!--Device-PlainArray-get(key: int): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## getIndexOfKey
 
 ```TypeScript
@@ -304,7 +404,9 @@ getIndexOfKey(key: number): number
 
 查找指定key对应的下标值，如果未找到则返回-1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -328,7 +430,7 @@ getIndexOfKey(key: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -348,7 +450,9 @@ getIndexOfValue(value: T): number
 
 查找指定value元素第一次出现的下标值，如果未找到则返回-1。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -372,7 +476,7 @@ getIndexOfValue(value: T): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -392,7 +496,9 @@ getKeyAt(index: number): number
 
 查找指定下标元素键值对中的key值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -416,7 +522,7 @@ getKeyAt(index: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -436,7 +542,9 @@ getValueAt(index: number): T
 
 查找指定下标元素键值对中的value值，失败则返回undefined。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -460,8 +568,8 @@ getValueAt(index: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -481,7 +589,9 @@ has(key: number): boolean
 
 判断容器中是否包含指定key。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -505,7 +615,7 @@ has(key: number): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -524,7 +634,9 @@ isEmpty(): boolean
 
 判断容器是否为空。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -542,7 +654,7 @@ isEmpty(): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -561,6 +673,8 @@ remove(key: number): T
 删除指定key对应的键值对。指定key不存在时，返回undefined。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -584,7 +698,7 @@ remove(key: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -596,6 +710,42 @@ let result = plainArray.remove(2);
 console.info("result:", result);  // result: sparrow
 ```
 
+## remove
+
+```TypeScript
+remove(key: number): T | undefined
+```
+
+如果存在指定key对应的键值对，则删除并返回该值。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-remove(key: int): T | undefined--><!--Device-PlainArray-remove(key: int): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| key | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## removeAt
 
 ```TypeScript
@@ -605,6 +755,8 @@ removeAt(index: number): T
 删除指定下标对应的元素。指定[0, PlainArray.length-1]以外的值时会返回undefined。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -628,7 +780,7 @@ removeAt(index: number): T
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -640,6 +792,42 @@ let result = plainArray.removeAt(1);
 console.info("result:", result);  // result: sparrow
 ```
 
+## removeAt
+
+```TypeScript
+removeAt(index: number): T | undefined
+```
+
+如果存在指定下标的键值对，则删除并返回该值。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-PlainArray-removeAt(index: int): T | undefined--><!--Device-PlainArray-removeAt(index: int): T | undefined-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| index | number | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| T |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
+
 ## removeRangeFrom
 
 ```TypeScript
@@ -648,7 +836,9 @@ removeRangeFrom(index: number, size: number): number
 
 删除指定范围内的元素。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -673,8 +863,8 @@ removeRangeFrom(index: number, size: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -695,7 +885,9 @@ setValueAt(index: number, value: T): void
 
 替换容器中指定下标对应键值对中的value值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -714,8 +906,8 @@ setValueAt(index: number, value: T): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) |
 
 ## 示例
 
@@ -738,7 +930,9 @@ toString(): String
 
 获取包含容器中所有键和值的字符串。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -756,7 +950,7 @@ toString(): String
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## 示例
 
@@ -779,6 +973,8 @@ PlainArray的元素个数。
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

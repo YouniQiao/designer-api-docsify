@@ -2,7 +2,9 @@
 
 Describes a font feature.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface FontFeature--><!--Device-text-interface FontFeature-End-->
 
@@ -24,7 +26,9 @@ Keyword identifier in the font feature key-value pair, such as 'liga' (standard 
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Value in the font feature key-value pair.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

@@ -4,7 +4,9 @@ Describes the app backup icon information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AlternateIconInfo--><!--Device-unnamed-export interface AlternateIconInfo-End-->
 
@@ -16,13 +18,15 @@ Describes the app backup icon information.
 readonly enabled: boolean
 ```
 
-Whether the backup icon is enabled.true: The current backup icon is enabled.false: The current backup icon is not enabled.
+Whether the backup icon is enabled. true: The current backup icon is enabled. false: The current backup icon is not enabled.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ readonly iconId: long
 
 Resource ID of the backup icon, which is automatically generated during compilation and build based on the icon configured in the app.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,7 +68,9 @@ Name of the backup icon.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Define nested scroll options
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NestedScrollOptions--><!--Device-unnamed-declare interface NestedScrollOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Set NestedScrollMode when the scrollable component scrolls backward
 **Type:** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Set NestedScrollMode when the scrollable component scrolls forward
 **Type:** [NestedScrollMode](../arkts-apis/arkts-arkui-nestedscrollmode-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

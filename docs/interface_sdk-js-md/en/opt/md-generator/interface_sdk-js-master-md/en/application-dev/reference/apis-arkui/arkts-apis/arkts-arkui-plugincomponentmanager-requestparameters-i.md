@@ -4,6 +4,8 @@ Defines the parameters required when using the **PluginManager.Request** API.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-pluginComponentManager-interface RequestParameters--><!--Device-pluginComponentManager-interface RequestParameters-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Component data.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestParameters-data: KVObject--><!--Device-RequestParameters-data: KVObject-End-->
@@ -38,12 +42,13 @@ Component data.
 jsonPath?: string
 ```
 
-Path to the  
-[external.json](../../../reference/apis-arkui/js-apis-plugincomponent.md#about-the-externaljson-file) file that stores the template path.
+Path to the external.json file that stores the template path.
 
 **Type:** string
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -63,6 +68,8 @@ Component name.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RequestParameters-name: string--><!--Device-RequestParameters-name: string-End-->
@@ -80,6 +87,8 @@ Ability information of the component user.
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -10,7 +10,7 @@ Specifies the worker thread running environment, which is isolated from the host
 
 **Substitutes:** [GlobalScope](arkts-arkts-worker-globalscope-i.md#GlobalScope)
 
-<!--Device-unnamed-declare interface WorkerGlobalScope extends EventTarget--><!--Device-unnamed-declare interface WorkerGlobalScope extends EventTarget-End-->
+<!--Device-unnamed-declare interface WorkerGlobalScope--><!--Device-unnamed-declare interface WorkerGlobalScope-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -19,30 +19,6 @@ Specifies the worker thread running environment, which is isolated from the host
 ```TypeScript
 import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
 ```
-
-## onerror
-
-```TypeScript
-onerror?: (ev: ErrorEvent) => void
-```
-
-The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution.The event handler is executed in the worker thread.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [onerror](ohos.worker.GlobalScope.onerror)
-
-<!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| ev | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |
 
 ## name
 
@@ -58,9 +34,29 @@ Worker name specified when there is a new worker.
 
 **Deprecated since:** 9
 
-**Substitutes:** [name](ohos.worker.GlobalScope.name)
+**Substitutes:** name
 
 <!--Device-WorkerGlobalScope-readonly name: string--><!--Device-WorkerGlobalScope-readonly name: string-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onerror
+
+```TypeScript
+onerror?: (ev: ErrorEvent) => void
+```
+
+The onerror attribute of parentPort specifies the event handler to be called when an exception occurs during worker execution. The event handler is executed in the worker thread.
+
+**Type:** (ev: ErrorEvent) =&gt; void
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** onerror
+
+<!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void--><!--Device-WorkerGlobalScope-onerror?: (ev: ErrorEvent) => void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -78,7 +74,7 @@ Specify the type attribute for self.
 
 **Deprecated since:** 9
 
-**Substitutes:** [self](ohos.worker.GlobalScope.self)
+**Substitutes:** self
 
 <!--Device-WorkerGlobalScope-readonly self: WorkerGlobalScope & typeof globalThis--><!--Device-WorkerGlobalScope-readonly self: WorkerGlobalScope & typeof globalThis-End-->
 

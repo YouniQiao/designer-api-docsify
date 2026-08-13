@@ -2,7 +2,9 @@
 
 手电筒回调返回的接口实例，表示手电筒状态信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface TorchStatusInfo--><!--Device-camera-interface TorchStatusInfo-End-->
 
@@ -18,7 +20,9 @@ readonly isTorchActive: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ readonly isTorchAvailable: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ readonly torchLevel: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

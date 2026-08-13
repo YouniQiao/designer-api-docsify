@@ -1,9 +1,10 @@
 # AuthOptions (System API)
 
-Represents a set of optional parameters for  
-[auth](arkts-basicservices-osaccount-userauth-c-sys.md#auth-1).
+Represents a set of optional parameters for [auth](arkts-basicservices-osaccount-userauth-c-sys.md#auth).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AuthOptions--><!--Device-osAccount-interface AuthOptions-End-->
 
@@ -27,7 +28,9 @@ OS account ID, which is **undefined** by default.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthOptions-accountId?: int--><!--Device-AuthOptions-accountId?: int-End-->
 
@@ -47,6 +50,8 @@ Indicates the additional information about the authentication options.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AuthOptions-additionalInfo?: string--><!--Device-AuthOptions-additionalInfo?: string-End-->
@@ -65,7 +70,9 @@ Authentication intent, which is **undefined** by default.
 
 **Type:** [AuthIntent](arkts-basicservices-osaccount-authintent-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthOptions-authIntent?: AuthIntent--><!--Device-AuthOptions-authIntent?: AuthIntent-End-->
 
@@ -83,7 +90,9 @@ Remote authentication options, which is **undefined** by default.
 
 **Type:** [RemoteAuthOptions](arkts-basicservices-osaccount-remoteauthoptions-i-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions--><!--Device-AuthOptions-remoteAuthOptions?: RemoteAuthOptions-End-->
 

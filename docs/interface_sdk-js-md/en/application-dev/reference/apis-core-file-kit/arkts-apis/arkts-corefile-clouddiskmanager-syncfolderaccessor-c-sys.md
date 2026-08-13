@@ -1,10 +1,12 @@
 # SyncFolderAccessor (System API)
 
-A sync root management class that enables the File Manager to access the sync root information registered by third-party cloud disks.
+A sync root management class that enables the File Manager to access the sync root information registered by third- party cloud disks.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudDiskManager-class SyncFolderAccessor--><!--Device-cloudDiskManager-class SyncFolderAccessor-End-->
 
@@ -26,9 +28,11 @@ constructor()
 
 A constructor used to create a **SyncFolderAccessor** instance.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
@@ -42,8 +46,8 @@ A constructor used to create a **SyncFolderAccessor** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed, |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. application which is not a system application uses system API. |
 
 ## Examples
 
@@ -77,9 +81,11 @@ getAllSyncFolders(): Promise<Array<SyncFolder>>
 
 Obtains information about all registered sync roots. This API uses a promise to return the result.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CLOUD_DISK_INFO
 
@@ -99,12 +105,12 @@ Obtains information about all registered sync roots. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported. |
-| [34400014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) | Temporary failure. Retry is recommended (e.g., network issues). |
-| [34400015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) | Cloud disk is not allowed on this device. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
-| [34400003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-core-file-kit/errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) | IPC communication failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Device not supported. |
+| [34400014](../errorcode-clouddiskmanager-sys.md#34400014-system-internal-error) | Temporary failure. Retry is recommended (e.g., network issues). |
+| [34400015](../errorcode-clouddiskmanager-sys.md#34400015-cloud-disk-not-allowed) | Cloud disk is not allowed on this device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
+| [34400003](../errorcode-clouddiskmanager-sys.md#34400003-ipc-failed) | IPC communication failed. |
 
 ## Examples
 

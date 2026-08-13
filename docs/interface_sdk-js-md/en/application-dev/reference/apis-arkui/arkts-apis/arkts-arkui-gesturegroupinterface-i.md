@@ -6,11 +6,13 @@ Combined gestures integrate two or more gestures into a compound gesture, suppor
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface GestureGroupInterface--><!--Device-unnamed-interface GestureGroupInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (mode: GestureMode, ...gesture: GestureType[]): GestureGroupInterface
@@ -21,6 +23,8 @@ Return to Obtain GestureGroup.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,6 +56,8 @@ Triggered when a tap cancellation event is received after a gesture is recognize
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

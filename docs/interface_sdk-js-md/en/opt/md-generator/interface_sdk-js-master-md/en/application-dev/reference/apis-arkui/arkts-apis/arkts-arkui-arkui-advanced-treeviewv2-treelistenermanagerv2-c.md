@@ -4,6 +4,8 @@ Declare class TreeListenerManagerV2
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class TreeListenerManagerV2--><!--Device-unnamed-export declare class TreeListenerManagerV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ static getInstance(): TreeListenerManagerV2
 Get instance of treeListenerManagerV2.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ getTreeListener(): TreeListenerV2
 Get treeListenerV2.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

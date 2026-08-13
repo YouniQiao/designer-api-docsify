@@ -4,6 +4,8 @@ Provides the conditions of querySecurityEvent.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-securityGuard-interface SecurityEventRule--><!--Device-securityGuard-interface SecurityEventRule-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -28,6 +30,8 @@ The begin time, format is YYYYMMDDHHMMSS.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-SecurityEventRule-beginTime?: string--><!--Device-SecurityEventRule-beginTime?: string-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -45,6 +49,8 @@ The end time, format is YYYYMMDDHHMMSS.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-SecurityEventRule-endTime?: string--><!--Device-SecurityEventRule-endTime?: string-End-->
 
@@ -64,6 +70,8 @@ The security event ids.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-SecurityEventRule-eventId: number--><!--Device-SecurityEventRule-eventId: number-End-->
 
 **System capability:** SystemCapability.Security.SecurityGuard
@@ -81,6 +89,8 @@ The query condition.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-SecurityEventRule-param?: string--><!--Device-SecurityEventRule-param?: string-End-->
 

@@ -10,6 +10,8 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -24,7 +26,7 @@ function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder>
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 
@@ -43,3 +45,32 @@ media.createAVScreenCaptureRecorder().then((captureRecorder: media.AVScreenCaptu
   console.error(`createAVScreenCaptureRecorder catchCallback, error message:${error.message}`);
 });
 ```
+
+
+## createAVScreenCaptureRecorder
+
+```TypeScript
+function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>
+```
+
+Creates an **AVScreenCaptureRecorder** instance. This API uses a promise to return the result.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>--><!--Device-media-function createAVScreenCaptureRecorder(): Promise<AVScreenCaptureRecorder | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[AVScreenCaptureRecorder](arkts-media-multimedia-media-avscreencapturerecorder-i.md) \| undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |

@@ -1,10 +1,12 @@
 # Driver
 
-The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**.
+The **Driver** class is the main entrance of the UiTest framework. This class provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot. All APIs provided by this class, except **Driver.create()** and **Driver.createUIEventObserver()**, use an asynchronous method (promise) to return the result and must be invoked using **await**.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class Driver--><!--Device-unnamed-declare class Driver-End-->
 
@@ -22,11 +24,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 assertComponentExist(on: On): Promise<void>
 ```
 
-Asserts whether a component matches the specified attributes exists on the current page. If the assertion fails,a JS exception is thrown, causing the test case to fail. This API uses a promise to return the result.
+Asserts whether a component matches the specified attributes exists on the current page. If the assertion fails, a JS exception is thrown, causing the test case to fail. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,9 +54,9 @@ Asserts whether a component matches the specified attributes exists on the curre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | Assertion failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -68,21 +72,17 @@ async function demo() {
 
 ## click
 
-ArkTS-Dyn:
-```TypeScript
-click(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 click(x: int, y: int): Promise<void>
 ```
 
 Clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [clickAt](#clickAt). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -94,8 +94,8 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| x | int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| y | int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
@@ -107,8 +107,8 @@ Clicks the target coordinate point. This method can be used only on the default 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -130,11 +130,13 @@ clickAt(point: Point): Promise<void>
 
 Clicks the target coordinate point. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-clickAt(point: Point): Promise<void>--><!--Device-Driver-clickAt(point: Point): Promise<void>-End-->
 
@@ -156,8 +158,8 @@ Clicks the target coordinate point. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -181,7 +183,9 @@ Click on the specified location on the screen, with optional touch options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -206,8 +210,8 @@ Click on the specified location on the screen, with optional touch options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## create
 
@@ -217,9 +221,11 @@ static create(): Driver
 
 Creates a **Driver** object and returns the object created. This API is a static API.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -237,7 +243,7 @@ Creates a **Driver** object and returns the object created. This API is a static
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000001-initialization-failure) | Initialization failed. |
+| [17000001](../errorcode-uitest.md#17000001-initialization-failure) | Initialization failed. |
 
 ## Examples
 
@@ -258,9 +264,11 @@ createUIEventObserver(): UIEventObserver
 
 Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-i.md#UIEventObserver).
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,7 +286,7 @@ Creates a UI event listener [UIEventObserver](arkts-test-uitest-uieventobserver-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -294,23 +302,19 @@ async function demo() {
 
 ## crownRotate
 
-ArkTS-Dyn:
-```TypeScript
-crownRotate(d: number, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 crownRotate(d: int, speed?: int): Promise<void>
 ```
 
 Injects a crown rotation event. You can specify the rotation speed. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>--><!--Device-Driver-crownRotate(d: int, speed?: int): Promise<void>-End-->
 
@@ -320,8 +324,8 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of rotation ticks. A positive value indicates rotation, and a negative value indicates counterclockwise rotation. The value must be an integer. If the value is not an integer, error code 401 is returned. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Rotation speed. &lt;br&gt;Unit: ticks/s. &lt;br&gt;Value range: [1, 500] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 20 |
+| d | int | Yes | Number of rotation ticks. A positive value indicates rotation, and a negative value indicates counterclockwise rotation. The value must be an integer. If the value is not an integer, error code 401 is returned. |
+| speed | int | No | Rotation speed. &lt;br&gt;Unit: ticks/s. &lt;br&gt;Value range: [1, 500] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 20 |
 
 **Return value:**
 
@@ -333,9 +337,9 @@ Injects a crown rotation event. You can specify the rotation speed. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -354,21 +358,17 @@ async function demo() {
 
 ## delayMs
 
-ArkTS-Dyn:
-```TypeScript
-delayMs(duration: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 delayMs(duration: int): Promise<void>
 ```
 
 Delays a duration of time. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -380,7 +380,7 @@ Delays a duration of time. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Specified time, in ms. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
+| duration | int | Yes | Specified time, in ms. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
 
 **Return value:**
 
@@ -392,8 +392,8 @@ Delays a duration of time. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -409,21 +409,17 @@ async function demo() {
 
 ## doubleClick
 
-ArkTS-Dyn:
-```TypeScript
-doubleClick(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 doubleClick(x: int, y: int): Promise<void>
 ```
 
 Double-clicks the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [doubleClickAt](#doubleClickAt). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -435,8 +431,8 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| x | int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| y | int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
@@ -448,8 +444,8 @@ Double-clicks the target coordinate point. This method can be used only on the d
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -471,11 +467,13 @@ doubleClickAt(point: Point): Promise<void>
 
 Double-clicks the target coordinate point. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-doubleClickAt(point: Point): Promise<void>--><!--Device-Driver-doubleClickAt(point: Point): Promise<void>-End-->
 
@@ -497,8 +495,8 @@ Double-clicks the target coordinate point. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -514,21 +512,17 @@ async function demo() {
 
 ## drag
 
-ArkTS-Dyn:
-```TypeScript
-drag(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 drag(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
 Drags from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration before dragging cannot be customized. To specify a screen or long-click duration, use [dragBetween](#dragBetween). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -540,11 +534,11 @@ Drags from the start coordinate point to the target coordinate point. This metho
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
-| starty | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
-| endx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
-| endy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| startx | int | Yes | Horizontal coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
+| starty | int | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. |
+| endx | int | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
+| endy | int | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. |
+| speed | int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -556,8 +550,8 @@ Drags from the start coordinate point to the target coordinate point. This metho
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -573,23 +567,19 @@ async function demo() {
 
 ## dragBetween
 
-ArkTS-Dyn:
-```TypeScript
-dragBetween(from: Point, to: Point, speed?: number, duration?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 ```
 
 Drags from the start point to the target point. You can specify the drag speed and the click duration before dragging. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-dragBetween(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
@@ -601,8 +591,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
+| speed | int | No | Drag speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
+| duration | int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
@@ -614,8 +604,8 @@ Drags from the start point to the target point. You can specify the drag speed a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -639,7 +629,9 @@ Drag on the screen between the specified points with optional settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -665,17 +657,11 @@ Drag on the screen between the specified points with optional settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## dumpLayout
 
-ArkTS-Dyn:
-```TypeScript
-dumpLayout(savePath: string, displayId?: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 dumpLayout(savePath: string, displayId?: int): Promise<boolean>
 ```
@@ -684,7 +670,9 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -697,7 +685,7 @@ Dumps the current layout information and saves it as a JSON file. This method is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | savePath | string | Yes | the path where to store the json, must be in the application sandbox directory. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default screen ID of the device. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -709,8 +697,8 @@ Dumps the current layout information and saves it as a JSON file. This method is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## findComponent
 
@@ -723,6 +711,8 @@ Searches for the target component based on the specified attributes. This API us
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -746,8 +736,8 @@ Searches for the target component based on the specified attributes. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -771,7 +761,9 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#Component) o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Driver-findComponent(on: On): Promise<Component | null>--><!--Device-Driver-findComponent(on: On): Promise<Component | null>-End-->
 
@@ -793,8 +785,8 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#Component) o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## findComponents
 
@@ -807,6 +799,8 @@ Searches for all matched components based on the specified attributes and saves 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -830,8 +824,8 @@ Searches for all matched components based on the specified attributes and saves 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -855,7 +849,9 @@ Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>--><!--Device-Driver-findComponents(on: On): Promise<Array<Component> | null>-End-->
 
@@ -877,8 +873,8 @@ Find all the matched [Component](arkts-test-uitest-component-c.md#Component)s on
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## findWindow
 
@@ -891,6 +887,8 @@ Searches for a window based on the specified attributes. This API uses a promise
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -914,8 +912,8 @@ Searches for a window based on the specified attributes. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -939,7 +937,9 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) wind
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>--><!--Device-Driver-findWindow(filter: WindowFilter): Promise<UiWindow | null>-End-->
 
@@ -961,26 +961,22 @@ Find the first matched [UiWindow](arkts-test-uitest-uiwindow-c.md#UiWindow) wind
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## fling
 
-ArkTS-Dyn:
-```TypeScript
-fling(from: Point, to: Point, stepLen: number, speed: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 fling(from: Point, to: Point, stepLen: int, speed: int): Promise<void>
 ```
 
 Simulates a fling operation. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -994,8 +990,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger touches the screen. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the point where the finger leaves the screen. |
-| stepLen | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Sliding step length, in pixels. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. &lt;br&gt;Unit: px |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
+| stepLen | int | Yes | Sliding step length, in pixels. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. &lt;br&gt;Unit: px |
+| speed | int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1007,8 +1003,8 @@ Simulates a fling operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1024,21 +1020,17 @@ async function demo() {
 
 ## fling
 
-ArkTS-Dyn:
-```TypeScript
-fling(direction: UiDirection, speed: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 fling(direction: UiDirection, speed: int): Promise<void>
 ```
 
 Simulates a fling operation with the specified direction and speed. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1051,7 +1043,7 @@ Simulates a fling operation with the specified direction and speed. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of the fling operation. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | Yes | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1063,8 +1055,8 @@ Simulates a fling operation with the specified direction and speed. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1080,23 +1072,19 @@ async function demo() {
 
 ## fling
 
-ArkTS-Dyn:
-```TypeScript
-fling(direction: UiDirection, speed: number, displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 fling(direction: UiDirection, speed: int, displayId: int): Promise<void>
 ```
 
-Simulates a fling operation on a specified display with the specified direction and speed. This API uses a promise  to return the result.
+Simulates a fling operation on a specified display with the specified direction and speed. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>--><!--Device-Driver-fling(direction: UiDirection, speed: int, displayId: int): Promise<void>-End-->
 
@@ -1107,8 +1095,8 @@ Simulates a fling operation on a specified display with the specified direction 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of the fling operation. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
+| speed | int | Yes | Fling speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range, the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
 
@@ -1120,8 +1108,8 @@ Simulates a fling operation on a specified display with the specified direction 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1141,16 +1129,13 @@ async function demo() {
 getDisplayDensity(): Promise<Point>
 ```
 
-Obtains the display density of the current device. This API uses a promise to return the result.
+Obtains the display density of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display density of the home screen. To obtain the display density > of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
 
-> **NOTE：**
-> 
-> This method can only be used to obtain the display density of the home screen. To obtain the display density
-> of a specified screen, use [getDisplayDensity](#getDisplayDensity)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1168,7 +1153,7 @@ Obtains the display density of the current device. This API uses a promise to re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1184,23 +1169,19 @@ async function demo() {
 
 ## getDisplayDensity
 
-ArkTS-Dyn:
-```TypeScript
-getDisplayDensity(displayId: number): Promise<Point>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDisplayDensity(displayId: int): Promise<Point>
 ```
 
 Obtains the density of the specified display of the current device. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>--><!--Device-Driver-getDisplayDensity(displayId: int): Promise<Point>-End-->
 
@@ -1210,7 +1191,7 @@ Obtains the density of the specified display of the current device. This API use
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -1222,8 +1203,8 @@ Obtains the density of the specified display of the current device. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1243,16 +1224,13 @@ async function demo() {
 getDisplayRotation(): Promise<DisplayRotation>
 ```
 
-Obtains the display rotation of the current device. This API uses a promise to return the result.
+Obtains the display rotation of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation > of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
 
-> **NOTE：**
-> 
-> This method can only be used to obtain the display rotation of the home screen. To obtain the display rotation
-> of a specified screen, use [getDisplayRotation](#getDisplayRotation)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1270,7 +1248,7 @@ Obtains the display rotation of the current device. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1286,23 +1264,19 @@ async function demo() {
 
 ## getDisplayRotation
 
-ArkTS-Dyn:
-```TypeScript
-getDisplayRotation(displayId: number): Promise<DisplayRotation>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDisplayRotation(displayId: int): Promise<DisplayRotation>
 ```
 
 Obtains the display rotation of the specified device. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>--><!--Device-Driver-getDisplayRotation(displayId: int): Promise<DisplayRotation>-End-->
 
@@ -1312,7 +1286,7 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -1324,8 +1298,8 @@ Obtains the display rotation of the specified device. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1345,16 +1319,13 @@ async function demo() {
 getDisplaySize(): Promise<Point>
 ```
 
-Obtains the display size of the current device. This API uses a promise to return the result.
+Obtains the display size of the current device. This API uses a promise to return the result. > **NOTE：**> > This method can only be used to obtain the display size of the home screen. To obtain the display size of a > specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
 
-> **NOTE：**
-> 
-> This method can only be used to obtain the display size of the home screen. To obtain the display size of a
-> specified screen, use [getDisplaySize](#getDisplaySize)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1372,7 +1343,7 @@ Obtains the display size of the current device. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1388,23 +1359,19 @@ async function demo() {
 
 ## getDisplaySize
 
-ArkTS-Dyn:
-```TypeScript
-getDisplaySize(displayId: number): Promise<Point>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDisplaySize(displayId: int): Promise<Point>
 ```
 
 Obtains the size of the specified display on the current device. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>--><!--Device-Driver-getDisplaySize(displayId: int): Promise<Point>-End-->
 
@@ -1414,7 +1381,7 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -1426,8 +1393,8 @@ Obtains the size of the specified display on the current device. This API uses a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1443,27 +1410,19 @@ async function demo() {
 
 ## injectKnucklePointerAction
 
-ArkTS-Dyn:
-```TypeScript
-injectKnucklePointerAction(pointers: PointerMatrix, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>
 ```
 
-Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result.
+Simulates a multi-point knuckle scrolling operation. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
 
-> **NOTE：**
-> 
-> If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>--><!--Device-Driver-injectKnucklePointerAction(pointers: PointerMatrix, speed?: int): Promise<void>-End-->
 
@@ -1474,7 +1433,7 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory.  **Note：**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Knuckle pointer action speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Knuckle pointer action speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1486,9 +1445,9 @@ Simulates a multi-point knuckle scrolling operation. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -1512,21 +1471,17 @@ async function demo() {
 
 ## injectMultiPointerAction
 
-ArkTS-Dyn:
-```TypeScript
-injectMultiPointerAction(pointers: PointerMatrix, speed?: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 injectMultiPointerAction(pointers: PointerMatrix, speed?: int): Promise<boolean>
 ```
 
 Injects a multi-finger operation into a device. This method applies to test scenarios where multi-finger gestures need to be simulated, such as pinching or spreading two fingers to zoom in or out on the image or swiping with multiple fingers to switch between pages. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -1539,7 +1494,7 @@ Injects a multi-finger operation into a device. This method applies to test scen
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Pointer action speed, in px/s. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Pointer action speed, in px/s. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1551,8 +1506,8 @@ Injects a multi-finger operation into a device. This method applies to test scen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1579,23 +1534,19 @@ async function demo() {
 
 ## injectPenPointerAction
 
-ArkTS-Dyn:
-```TypeScript
-injectPenPointerAction(pointers: PointerMatrix, speed?: number, pressure?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>
 ```
 
 Simulates a continuous multi-point pen injection operation. This method is applicable to test scenarios where custom track operations, such as continuous writing and drawing with a pen, need to be simulated. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-injectPenPointerAction(pointers: PointerMatrix, speed?: int, pressure?: double): Promise<void>-End-->
 
@@ -1606,8 +1557,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pointers | [PointerMatrix](arkts-test-uitest-pointermatrix-c.md) | Yes | Scroll trajectory, including the number of fingers and an array of coordinates along the trajectory. **Note：**: Currently, only the single-finger operation is supported. The value of **fingers** in **PointerMatrix** must be set to **1**. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Pen pointer action speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
-| pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Injection pressure. The value range is [0.0, 1.0]. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
+| speed | int | No | Pen pointer action speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| pressure | double | No | Injection pressure. The value range is [0.0, 1.0]. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
 
@@ -1619,8 +1570,8 @@ Simulates a continuous multi-point pen injection operation. This method is appli
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1644,13 +1595,15 @@ async function demo() {
 inputText(p: Point, text: string): Promise<void>
 ```
 
-Inputs text at a specified coordinate without clearing the original text in the component. This API uses a promise  to return the result.
+Inputs text at a specified coordinate without clearing the original text in the component. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-inputText(p: Point, text: string): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string): Promise<void>-End-->
 
@@ -1673,8 +1626,8 @@ Inputs text at a specified coordinate without clearing the original text in the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1698,11 +1651,13 @@ inputText(p: Point, text: string, mode: InputTextMode): Promise<void>
 
 Inputs text at a specified coordinate point in a specified input mode. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>--><!--Device-Driver-inputText(p: Point, text: string, mode: InputTextMode): Promise<void>-End-->
 
@@ -1726,9 +1681,9 @@ Inputs text at a specified coordinate point in a specified input mode. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. function can not work correctly due to limited device capabilities. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. function can not work correctly due to limited device capabilities. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -1754,23 +1709,19 @@ async function demo_Chinese() {
 
 ## isComponentPresentWhenDrag
 
-ArkTS-Dyn:
-```TypeScript
-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: number, duration?: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>
 ```
 
 Drags from the start point to the end point and checks whether the target component exists. This method is applicable to verifying the dynamic UI elements that appear during the drag operation. For example, when dragging a file to a target folder, you can use this API to verify the highlight effect of the folder. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenDrag(on: On, from: Point, to: Point, speed?: int, duration?: int): Promise<boolean>-End-->
 
@@ -1783,8 +1734,8 @@ Drags from the start point to the end point and checks whether the target compon
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Drag speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
+| speed | int | No | Drag speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
+| duration | int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
@@ -1796,8 +1747,8 @@ Drags from the start point to the end point and checks whether the target compon
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1813,23 +1764,19 @@ async function demo() {
 
 ## isComponentPresentWhenLongClick
 
-ArkTS-Dyn:
-```TypeScript
-isComponentPresentWhenLongClick(on: On, point: Point, duration?: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>
 ```
 
 Long-clicks at the specified coordinates and checks whether the target component exists. This method is applicable to verifying the UI elements that dynamically appear after a long-click, such as the context menu or edit button. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenLongClick(on: On, point: Point, duration?: int): Promise<boolean>-End-->
 
@@ -1841,7 +1788,7 @@ Long-clicks at the specified coordinates and checks whether the target component
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target [Component](arkts-test-uitest-component-c.md#Component). |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
+| duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
@@ -1853,8 +1800,8 @@ Long-clicks at the specified coordinates and checks whether the target component
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1870,23 +1817,19 @@ async function demo() {
 
 ## isComponentPresentWhenSwipe
 
-ArkTS-Dyn:
-```TypeScript
-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>
 ```
 
 Swipes from the start point to the end point and checks whether the target component exists. This method is applicable to verifying the dynamic UI elements that appear during the swipe operation, for example, verifying whether the delete button appears when swiping is used to delete a list item. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>--><!--Device-Driver-isComponentPresentWhenSwipe(on: On, from: Point, to: Point, speed?: int): Promise<boolean>-End-->
 
@@ -1899,7 +1842,7 @@ Swipes from the start point to the end point and checks whether the target compo
 | on | [On](arkts-test-uitest-on-c.md) | Yes | Attributes of the target component. |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -1911,8 +1854,8 @@ Swipes from the start point to the end point and checks whether the target compo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -1928,27 +1871,19 @@ async function demo() {
 
 ## knuckleKnock
 
-ArkTS-Dyn:
-```TypeScript
-knuckleKnock(pointers: Array<Point>, times: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 knuckleKnock(pointers: Array<Point>, times: int): Promise<void>
 ```
 
-Simulates a knuckle knock on the display. This API uses a promise to return the result.
+Simulates a knuckle knock on the display. This API uses a promise to return the result. > **NOTE：**> > If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
 
-> **NOTE：**
-> 
-> If the knuckle gesture is disabled on the device&lt;!--RP4--&gt;&lt;!--RP4End--&gt;, 17000005 is returned.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>--><!--Device-Driver-knuckleKnock(pointers: Array<Point>, times: int): Promise<void>-End-->
 
@@ -1959,7 +1894,7 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pointers | Array&lt;[Point](arkts-test-uitest-point-i.md)&gt; | Yes | Array of knuckle knock coordinates on the display. The array length can be 1 or 2. If the value is out of range, error code 17000007 is thrown. |
-| times | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of consecutive knocks on the display. The value can be 1 or 2. If the value is out of range, error code 17000007 is thrown. |
+| times | int | Yes | Number of consecutive knocks on the display. The value can be 1 or 2. If the value is out of range, error code 17000007 is thrown. |
 
 **Return value:**
 
@@ -1971,9 +1906,9 @@ Simulates a knuckle knock on the display. This API uses a promise to return the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -1991,21 +1926,17 @@ async function demo() {
 
 ## longClick
 
-ArkTS-Dyn:
-```TypeScript
-longClick(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 longClick(x: int, y: int): Promise<void>
 ```
 
-Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt).This API uses a promise to return the result.
+Long-clicks the target coordinate point. This method can be used only on the default screen of the device, and the long-click duration cannot be customized. To specify a screen or long-click duration, use [longClickAt](#longClickAt). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2017,8 +1948,8 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| x | int | Yes | Horizontal coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| y | int | Yes | Vertical coordinate of the target point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 
 **Return value:**
 
@@ -2030,8 +1961,8 @@ Long-clicks the target coordinate point. This method can be used only on the def
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2047,23 +1978,19 @@ async function demo() {
 
 ## longClickAt
 
-ArkTS-Dyn:
-```TypeScript
-longClickAt(point: Point, duration?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 longClickAt(point: Point, duration?: int): Promise<void>
 ```
 
 Long-clicks the target coordinate point for a specified duration. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>--><!--Device-Driver-longClickAt(point: Point, duration?: int): Promise<void>-End-->
 
@@ -2074,7 +2001,7 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which is used to transfer the target point information. |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
+| duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, the 17000007 error code is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
@@ -2086,8 +2013,8 @@ Long-clicks the target coordinate point for a specified duration. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -2111,7 +2038,9 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2136,26 +2065,22 @@ LongClick on the specified location on the screen, with optional touch settings.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## mouseClick
 
-ArkTS-Dyn:
-```TypeScript
-mouseClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 mouseClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 ```
 
-Injects a mouse click action at the specified coordinates, with the optional key or key combination. This API uses  a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed  with the mouse click.
+Injects a mouse click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the mouse click.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2169,8 +2094,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of the mouse click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -2182,8 +2107,8 @@ Injects a mouse click action at the specified coordinates, with the optional key
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2199,23 +2124,19 @@ async function demo() {
 
 ## mouseDoubleClick
 
-ArkTS-Dyn:
-```TypeScript
-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>
 ```
 
 Injects a double-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the double-click.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>--><!--Device-Driver-mouseDoubleClick(p: Point, btnId: MouseButton, key1?: int, key2?: int): Promise<void>-End-->
 
@@ -2227,8 +2148,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the double-click. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
 
 **Return value:**
 
@@ -2240,8 +2161,8 @@ Injects a double-click action at the specified coordinates, with the optional ke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2267,6 +2188,8 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: number): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: number): Promise<void>-End-->
@@ -2291,8 +2214,8 @@ Drags the mouse pointer from the start point to the end point. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2308,23 +2231,19 @@ async function demo() {
 
 ## mouseDrag
 
-ArkTS-Dyn:
-```TypeScript
-mouseDrag(from: Point, to: Point, speed?: number, duration?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>
 ```
 
 Drags the mouse from the start point to the end point. You can specify the dragging speed and the duration before dragging. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseDrag(from: Point, to: Point, speed?: int, duration?: int): Promise<void>-End-->
 
@@ -2336,8 +2255,8 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Speed of mouse drag. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
+| speed | int | No | Speed of mouse drag. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| duration | int | No | Click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
@@ -2349,8 +2268,8 @@ Drags the mouse from the start point to the end point. You can specify the dragg
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2370,11 +2289,13 @@ async function demo() {
 mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOptions?: KeyOptions): Promise<void>
 ```
 
-Hold down the left mouse button and drag on the screen between the specified points,with optional touch and key settings.
+Hold down the left mouse button and drag on the screen between the specified points, with optional touch and key settings.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2401,8 +2322,8 @@ Hold down the left mouse button and drag on the screen between the specified poi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## mouseLongClick
 
@@ -2410,11 +2331,13 @@ Hold down the left mouse button and drag on the screen between the specified poi
 mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination. This API  uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is long-clicked with the mouse device.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is long-clicked with the mouse device.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2441,8 +2364,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2458,23 +2381,19 @@ async function demo() {
 
 ## mouseLongClick
 
-ArkTS-Dyn:
-```TypeScript
-mouseLongClick(p: Point, btnId: MouseButton, key1?: number, key2?: number, duration?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>
 ```
 
-Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072**, the **Ctrl** button is pressed with the long-click.
+Injects a mouse long-click action at the specified coordinates, with the optional key or key combination and the specified duration. This API uses a promise to return the result. For example, if the key code value is **2072** , the **Ctrl** button is pressed with the long-click.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>--><!--Device-Driver-mouseLongClick(p: Point, btnId: MouseButton, key1?: int, key2?: int, duration?: int): Promise<void>-End-->
 
@@ -2486,9 +2405,9 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-click of the mouse device. |
 | btnId | [MouseButton](arkts-test-uitest-mousebutton-e.md) | Yes | Mouse button pressed. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| duration | int | No | Long-click duration, in ms. The value is an integer greater than or equal to 1500. The default value is 1500. If the value is less than 1500, error code 401 is thrown. If the value is **null** or **undefined**, the default value is used. |
 
 **Return value:**
 
@@ -2500,8 +2419,8 @@ Injects a mouse long-click action at the specified coordinates, with the optiona
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2523,9 +2442,11 @@ mouseMoveTo(p: Point): Promise<void>
 
 Moves the mouse cursor to the target point. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2549,8 +2470,8 @@ Moves the mouse cursor to the target point. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2566,23 +2487,19 @@ async function demo() {
 
 ## mouseMoveWithTrack
 
-ArkTS-Dyn:
-```TypeScript
-mouseMoveWithTrack(from: Point, to: Point, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>
 ```
 
 Moves the mouse pointer from the start point to the end point, with a visible movement track. This method is applicable to test scenarios that depend on the mouse movement track, such as verification of the mouse hover effect and selecting an area by dragging with the mouse. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-mouseMoveWithTrack(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
@@ -2594,7 +2511,7 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Mouse move speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Mouse move speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -2606,8 +2523,8 @@ Moves the mouse pointer from the start point to the end point, with a visible mo
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2632,6 +2549,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2659,8 +2578,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2676,23 +2595,19 @@ async function demo() {
 
 ## mouseScroll
 
-ArkTS-Dyn:
-```TypeScript
-mouseScroll(p: Point, down: boolean, d: number, key1?: number, key2?: number, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>
 ```
 
 Injects a mouse scroll action at the specified coordinates, with the optional key or key combination and the specified scroll speed. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>--><!--Device-Driver-mouseScroll(p: Point, down: boolean, d: int, key1?: int, key2?: int, speed?: int): Promise<void>-End-->
 
@@ -2704,10 +2619,10 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 | --- | --- | --- | --- |
 | p | [Point](arkts-test-uitest-point-i.md) | Yes | Target coordinates of mouse scrolling. |
 | down | boolean | Yes | Whether the mouse wheel scrolls downward. The value **true** indicates the mouse wheel scrolls downward, and **false** indicates the mouse wheel scrolls upward. |
-| d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Scroll speed of the mouse wheel. &lt;br&gt;Value range:[1, 500] &lt;br&gt;Unit: ticks/s &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 20 |
+| d | int | Yes | Number of ticks scrolled by the mouse wheel. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
+| key1 | int | No | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| key2 | int | No | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| speed | int | No | Scroll speed of the mouse wheel. &lt;br&gt;Value range:[1, 500] &lt;br&gt;Unit: ticks/s &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 20 |
 
 **Return value:**
 
@@ -2719,8 +2634,8 @@ Injects a mouse scroll action at the specified coordinates, with the optional ke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2742,11 +2657,13 @@ penClick(point: Point): Promise<void>
 
 Simulates a pen click operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penClick(point: Point): Promise<void>--><!--Device-Driver-penClick(point: Point): Promise<void>-End-->
 
@@ -2768,8 +2685,8 @@ Simulates a pen click operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2791,11 +2708,13 @@ penDoubleClick(point: Point): Promise<void>
 
 Simulates a pen double-click operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penDoubleClick(point: Point): Promise<void>--><!--Device-Driver-penDoubleClick(point: Point): Promise<void>-End-->
 
@@ -2817,8 +2736,8 @@ Simulates a pen double-click operation. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2834,23 +2753,19 @@ async function demo() {
 
 ## penLongClick
 
-ArkTS-Dyn:
-```TypeScript
-penLongClick(point: Point, pressure?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 penLongClick(point: Point, pressure?: double): Promise<void>
 ```
 
 Simulates a pen long-click operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>--><!--Device-Driver-penLongClick(point: Point, pressure?: double): Promise<void>-End-->
 
@@ -2861,7 +2776,7 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the long-clicked point. |
-| pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Long-click pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
+| pressure | double | No | Long-click pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
 
@@ -2873,8 +2788,8 @@ Simulates a pen long-click operation. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2890,23 +2805,19 @@ async function demo() {
 
 ## penSwipe
 
-ArkTS-Dyn:
-```TypeScript
-penSwipe(startPoint: Point, endPoint: Point, speed?: number, pressure?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>
 ```
 
 Simulates a pen swipe operation. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>--><!--Device-Driver-penSwipe(startPoint: Point, endPoint: Point, speed?: int, pressure?: double): Promise<void>-End-->
 
@@ -2918,8 +2829,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | startPoint | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the start point. |
 | endPoint | [Point](arkts-test-uitest-point-i.md) | Yes | Coordinates of the end point. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Speed of pen swipe. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
-| pressure | ArkTS-Dyn: number  <br>ArkTS-Sta：double | No | Swipe pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
+| speed | int | No | Speed of pen swipe. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| pressure | double | No | Swipe pressure of the pen. The value ranges from 0.0 to 1.0. The default value is **1.0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, error code 401 is thrown. |
 
 **Return value:**
 
@@ -2931,8 +2842,8 @@ Simulates a pen swipe operation. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2952,16 +2863,13 @@ async function demo() {
 pressBack(): Promise<void>
 ```
 
-Simulates pressing the Back button. This API uses a promise to return the result.
+Simulates pressing the Back button. This API uses a promise to return the result. > **NOTE：**> > This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button > on a specified screen, use pressBack(displayId: number).
 
-> **NOTE：**
-> 
-> This method only simulates pressing the Back button on the home screen. To simulate pressing the Back button
-> on a specified screen, use [pressBack](pressBack)(displayId: number).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -2979,7 +2887,7 @@ Simulates pressing the Back button. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -2995,23 +2903,19 @@ async function demo() {
 
 ## pressBack
 
-ArkTS-Dyn:
-```TypeScript
-pressBack(displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 pressBack(displayId: int): Promise<void>
 ```
 
 Simulates pressing the Back button on a specified screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-pressBack(displayId: int): Promise<void>--><!--Device-Driver-pressBack(displayId: int): Promise<void>-End-->
 
@@ -3021,7 +2925,7 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -3033,8 +2937,8 @@ Simulates pressing the Back button on a specified screen. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -3056,9 +2960,11 @@ pressHome(): Promise<void>
 
 Injects an operation of returning to the home screen on the device. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3076,7 +2982,7 @@ Injects an operation of returning to the home screen on the device. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3092,23 +2998,19 @@ async function demo() {
 
 ## pressHome
 
-ArkTS-Dyn:
-```TypeScript
-pressHome(displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 pressHome(displayId: int): Promise<void>
 ```
 
 Injects an operation of returning to the home screen on the specified display. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-pressHome(displayId: int): Promise<void>--><!--Device-Driver-pressHome(displayId: int): Promise<void>-End-->
 
@@ -3118,7 +3020,7 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. |
 
 **Return value:**
 
@@ -3130,8 +3032,8 @@ Injects an operation of returning to the home screen on the specified display. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -3153,9 +3055,11 @@ screenCap(savePath: string): Promise<boolean>
 
 Captures the current screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3179,8 +3083,8 @@ Captures the current screen and saves it as a PNG image to the given save path. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3196,23 +3100,19 @@ async function demo() {
 
 ## screenCap
 
-ArkTS-Dyn:
-```TypeScript
-screenCap(savePath: string, displayId: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 screenCap(savePath: string, displayId: int): Promise<boolean>
 ```
 
 Captures the specified screen and saves it as a PNG image to the given save path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>--><!--Device-Driver-screenCap(savePath: string, displayId: int): Promise<boolean>-End-->
 
@@ -3223,7 +3123,7 @@ Captures the specified screen and saves it as a PNG image to the given save path
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | savePath | string | Yes | File save path. The path must be the [sandbox path](../../../file-management/app-sandbox-directory.md) of the current application. |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
 
@@ -3235,8 +3135,8 @@ Captures the specified screen and saves it as a PNG image to the given save path
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3256,11 +3156,13 @@ async function demo() {
 screenCapture(savePath: string, rect?: Rect): Promise<boolean>
 ```
 
-Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike [screenCap](screenCap), this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
+Captures the specified area of the current screen and saves the captured screenshot as a PNG image to the specified path. This API uses a promise to return the result. This API can be used in scenarios where screenshots are supported. Unlike screenCap, this API allows you to specify the screenshot area using the **rect** parameter instead of capturing the entire screen.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3285,8 +3187,8 @@ Captures the specified area of the current screen and saves the captured screens
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3311,12 +3213,13 @@ async function demo() {
 setDisplayRotation(rotation: DisplayRotation): Promise<void>
 ```
 
-Sets the display rotation of the current scene. This API uses a promise to return the result. This API is applicable to scenarios where rotation is allowed. The rotation function can be enabled by setting  
-**orientation=** to **auto_rotation** in the module.json5 configuration file.
+Sets the display rotation of the current scene. This API uses a promise to return the result. This API is applicable to scenarios where rotation is allowed. The rotation function can be enabled by setting **orientation=** to **auto_rotation** in the module.json5 configuration file.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3340,8 +3243,8 @@ Sets the display rotation of the current scene. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3363,9 +3266,11 @@ setDisplayRotationEnabled(enabled: boolean): Promise<void>
 
 Enables or disables display rotation. This method is applicable to scenarios where the screen orientation needs to be locked during the test to maintain a specific display state, for example, testing the layout stability in landscape or portrait mode. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3389,8 +3294,8 @@ Enables or disables display rotation. This method is applicable to scenarios whe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3406,21 +3311,17 @@ async function demo() {
 
 ## swipe
 
-ArkTS-Dyn:
-```TypeScript
-swipe(startx: number, starty: number, endx: number, endy: number, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 swipe(startx: int, starty: int, endx: int, endy: int, speed?: int): Promise<void>
 ```
 
 Swipes from the start coordinate point to the target coordinate point. This method can be used only on the default screen of the device. To specify a screen, use [swipeBetween](#swipeBetween). This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3432,11 +3333,11 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| starty | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| endx | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| endy | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| startx | int | Yes | Horizontal coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| starty | int | Yes | Vertical coordinate of the start point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| endx | int | Yes | Horizontal coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| endy | int | Yes | Vertical coordinate of the end point, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| speed | int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -3448,8 +3349,8 @@ Swipes from the start coordinate point to the target coordinate point. This meth
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3465,23 +3366,19 @@ async function demo() {
 
 ## swipeBetween
 
-ArkTS-Dyn:
-```TypeScript
-swipeBetween(from: Point, to: Point, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 swipeBetween(from: Point, to: Point, speed?: int): Promise<void>
 ```
 
 Swipes from the start coordinate point to the target coordinate point. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>--><!--Device-Driver-swipeBetween(from: Point, to: Point, speed?: int): Promise<void>-End-->
 
@@ -3493,7 +3390,7 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the start point and the ID of the display to which the start point belongs. |
 | to | [Point](arkts-test-uitest-point-i.md) | Yes | Point object, which transfers the coordinates of the target point and the ID of the display to which it belongs. &lt;br&gt; **Note：**: The target point and the start point must be on the same screen. Otherwise, the **17000007** exception is thrown. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Swipe speed, in px/s. The value ranges from 200 to 40000. If the set value is not in the range , the default value **600** is used. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 600 |
 
 **Return value:**
 
@@ -3505,8 +3402,8 @@ Swipes from the start coordinate point to the target coordinate point. This API 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## Examples
 
@@ -3530,7 +3427,9 @@ Swipe on the screen between the specified points with optional touch options.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3556,28 +3455,24 @@ Swipe on the screen between the specified points with optional touch options.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 
 ## touchPadMultiFingerSwipe
 
-ArkTS-Dyn:
-```TypeScript
-touchPadMultiFingerSwipe(fingers: number, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>
 ```
 
 Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>--><!--Device-Driver-touchPadMultiFingerSwipe(fingers: int, direction: UiDirection, options?: TouchPadSwipeOptions): Promise<void>-End-->
 
@@ -3587,7 +3482,7 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fingers | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of fingers. The value can be 3 or 4. If the value is out of range, error code 401 is thrown. |
+| fingers | int | Yes | Number of fingers. The value can be 3 or 4. If the value is out of range, error code 401 is thrown. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Swipe direction. |
 | options | [TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md) | No | Additional options for the multi-finger swipe gesture on the touchpad. The default values of the attributes in **[TouchPadSwipeOptions](arkts-test-uitest-touchpadswipeoptions-i.md#TouchPadSwipeOptions)** are used by default. This parameter is used to specify whether the multi-finger swipe gesture ends with a pause and the swipe speed. It is applicable to scenarios where multi-finger swipe gestures are simulated on the touchpad, for example, swiping up with three fingers to switch the task view. |
 
@@ -3601,9 +3496,9 @@ Simulates a multi-finger swipe gesture on the touchpad. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -3619,23 +3514,19 @@ async function demo() {
 
 ## touchPadTwoFingersScroll
 
-ArkTS-Dyn:
-```TypeScript
-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: number, speed?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>
 ```
 
 Simulates a two-finger scroll gesture on the touchpad. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>--><!--Device-Driver-touchPadTwoFingersScroll(point: Point, direction: UiDirection, d: int, speed?: int): Promise<void>-End-->
 
@@ -3647,8 +3538,8 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 | --- | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | Yes | Point of the mouse cursor when the two-finger scrolling is performed on the touchpad. |
 | direction | [UiDirection](arkts-test-uitest-uidirection-e.md) | Yes | Direction of two-finger scrolling on the touchpad. |
-| d | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Number of grids scrolled by two fingers on the touchpad. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, the 17000007 error code is returned. |
-| speed | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Speed of two-finger scrolling on the touchpad. &lt;br&gt;Unit: ticks/s. &lt;br&gt;Value range: [1, 500] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 20 |
+| d | int | Yes | Number of grids scrolled by two fingers on the touchpad. A tick indicates a 120 px scroll at the mouse cursor position. The value is an integer greater than or equal to 0. If the value is a negative number, the 17000007 error code is returned. |
+| speed | int | No | Speed of two-finger scrolling on the touchpad. &lt;br&gt;Unit: ticks/s. &lt;br&gt;Value range: [1, 500] &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 20 |
 
 **Return value:**
 
@@ -3660,9 +3551,9 @@ Simulates a two-finger scroll gesture on the touchpad. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
-| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## Examples
 
@@ -3688,6 +3579,8 @@ Triggers a combination key event based on the specified key code values. This AP
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: number, key1: number, key2?: number): Promise<void>-End-->
@@ -3712,8 +3605,8 @@ Triggers a combination key event based on the specified key code values. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3729,23 +3622,19 @@ async function demo() {
 
 ## triggerCombineKeys
 
-ArkTS-Dyn:
-```TypeScript
-triggerCombineKeys(key0: number, key1: number, key2?: number, displayId?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>
 ```
 
 Triggers a combination key event based on the specified key code values on the specified screen. This API uses a promise to return the result. For example, if the key code value is (2072, 2019), the module finds and clicks the key combination that matches the value, for example, **Ctrl+C**.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>--><!--Device-Driver-triggerCombineKeys(key0: int, key1: int, key2?: int, displayId?: int): Promise<void>-End-->
 
@@ -3755,10 +3644,10 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key0 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| key1 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| key2 | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
+| key0 | int | Yes | First key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| key1 | int | Yes | Second key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| key2 | int | No | Third key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). &lt;br&gt;Default value: 0 |
+| displayId | int | No | Display ID. The value is an integer greater than or equal to 0. The default value is the default display ID of the device. |
 
 **Return value:**
 
@@ -3770,8 +3659,8 @@ Triggers a combination key event based on the specified key code values on the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3787,21 +3676,17 @@ async function demo() {
 
 ## triggerKey
 
-ArkTS-Dyn:
-```TypeScript
-triggerKey(keyCode: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 triggerKey(keyCode: int): Promise<void>
 ```
 
 Triggers a key event by passing the key code value. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3813,7 +3698,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
 
 **Return value:**
 
@@ -3825,8 +3710,8 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3843,23 +3728,19 @@ async function demo() {
 
 ## triggerKey
 
-ArkTS-Dyn:
-```TypeScript
-triggerKey(keyCode: number, displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 triggerKey(keyCode: int, displayId: int): Promise<void>
 ```
 
 Triggers a key event by passing the key code value on the specified screen. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>--><!--Device-Driver-triggerKey(keyCode: int, displayId: int): Promise<void>-End-->
 
@@ -3869,8 +3750,8 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyCode | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
+| keyCode | int | Yes | Key code value. The value is an integer greater than or equal to 0. For details, see [KeyCode](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keycode-keycode-e.md#KeyCode). |
+| displayId | int | Yes | Display ID. The value is an integer greater than or equal to 0. &lt;br&gt; **Note：**: If the input **displayId** does not exist, the exception **401** is reported. |
 
 **Return value:**
 
@@ -3882,8 +3763,8 @@ Triggers a key event by passing the key code value on the specified screen. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -3904,17 +3785,13 @@ async function demo() {
 triggerPenKey(key: PenKey, mode: PenMode, operation: PenKeyOperation, options?: PenKeyOperationOptions): Promise<void>
 ```
 
-Trigger pen key operation.
-
-Supported combinations:
-
-- HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation.  
-- AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options),  
- HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation.Other combinations will result in a BusinessError 17000007.
+Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITING key with CLICK or DOUBLE_CLICK operation. - AIR_MOUSE mode: AIR_MOUSE key with CLICK or DOUBLE_CLICK operation (requires point in options), HANDWRITING key with CLICK or DOUBLE_CLICK operation, SMART key with CLICK operation. Other combinations will result in a BusinessError 17000007.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3941,9 +3818,9 @@ Supported combinations:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
-| [17000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. Unsupported key, mode, and operation combination. |
+| [17000005](../errorcode-uitest.md#17000005-operation-not-supported) | This operation is not supported. |
 
 ## waitForComponent
 
@@ -3956,6 +3833,8 @@ Searches for the target component based on the attributes within a specified tim
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -3980,8 +3859,8 @@ Searches for the target component based on the attributes within a specified tim
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -4005,7 +3884,9 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#Component) o
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>--><!--Device-Driver-waitForComponent(on: On, time: int): Promise<Component | null>-End-->
 
@@ -4028,26 +3909,22 @@ Find the first matched [Component](arkts-test-uitest-component-c.md#Component) o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## waitForIdle
 
-ArkTS-Dyn:
-```TypeScript
-waitForIdle(idleTime: number, timeout: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 waitForIdle(idleTime: int, timeout: int): Promise<boolean>
 ```
 
 Checks whether all components on the current UI are idle. This method is applicable to scenarios such as page redirection, animation playback, and loading. After calling this method, you can perform subsequent test operations only after the UI becomes stable. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4059,8 +3936,8 @@ Checks whether all components on the current UI are idle. This method is applica
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| idleTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Idle time threshold, in ms. If the duration for which a component remains inactive reaches this threshold, it is considered as idle. The value must be an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum waiting time, in ms. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
+| idleTime | int | Yes | Idle time threshold, in ms. If the duration for which a component remains inactive reaches this threshold, it is considered as idle. The value must be an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
+| timeout | int | Yes | Maximum waiting time, in ms. The value is an integer greater than or equal to 0. If the value is a negative number, error code 401 is returned. |
 
 **Return value:**
 
@@ -4072,8 +3949,8 @@ Checks whether all components on the current UI are idle. This method is applica
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -4095,9 +3972,11 @@ wakeUpDisplay(): Promise<void>
 
 Wakes up the current display. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -4115,7 +3994,7 @@ Wakes up the current display. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 

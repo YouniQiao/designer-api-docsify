@@ -2,9 +2,11 @@
 
 Device Information Definition
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
 
@@ -22,13 +24,15 @@ import { avSession } from '@kit.AVSessionKit';
 authenticationStatus?: int
 ```
 
-Define different authentication status.0: Device not authenticated.1: Device already authenticated.
+Define different authentication status. 0: Device not authenticated. 1: Device already authenticated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-authenticationStatus?: int--><!--Device-DeviceInfo-authenticationStatus?: int-End-->
 
@@ -42,13 +46,15 @@ Define different authentication status.0: Device not authenticated.1: Device alr
 hiPlayDeviceInfo?: HiPlayDeviceInfo
 ```
 
-HiPlayDeviceInfo is used to obtain device-specific information for HiPlay.transmit info during casting.
+HiPlayDeviceInfo is used to obtain device-specific information for HiPlay. transmit info during casting.
 
 **Type:** [HiPlayDeviceInfo](arkts-avsession-avsession-hiplaydeviceinfo-i-sys.md)
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,9 +74,11 @@ device ip address if available.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-ipAddress?: string--><!--Device-DeviceInfo-ipAddress?: string-End-->
 
@@ -88,9 +96,11 @@ Indicates the current device is legacy or not.
 
 **Type:** boolean
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-isLegacy?: boolean--><!--Device-DeviceInfo-isLegacy?: boolean-End-->
 
@@ -104,13 +114,15 @@ Indicates the current device is legacy or not.
 mediumTypes?: int
 ```
 
-Medium types used to discover devices.1: BLE2: COAP
+Medium types used to discover devices. 1: BLE 2: COAP
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-mediumTypes?: int--><!--Device-DeviceInfo-mediumTypes?: int-End-->
 
@@ -128,9 +140,11 @@ Network id.
 
 **Type:** string
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-networkId?: string--><!--Device-DeviceInfo-networkId?: string-End-->
 
@@ -146,11 +160,13 @@ providerId?: int
 
 device provider which supplies the route capability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceInfo-providerId?: int--><!--Device-DeviceInfo-providerId?: int-End-->
 

@@ -10,6 +10,8 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_TELEPHONY_STATE
 
 <!--Device-observer-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void--><!--Device-observer-function onGetSimActiveState(slotId: int, callback: Callback<boolean>): void-End-->
@@ -27,11 +29,11 @@ SIM卡激活状态变化的监听，使用callback方式作为异步方法。
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

@@ -6,8 +6,10 @@ TypedArray继承Int8Array的特性与方法。
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
-<!--Device-buffer-interface TypedArray extends Int8Array--><!--Device-buffer-interface TypedArray extends Int8Array-End-->
+<!--Device-buffer-interface TypedArray--><!--Device-buffer-interface TypedArray-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

@@ -1,27 +1,31 @@
 # ValueType
 
 ```TypeScript
-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint
+type ValueType = number | number | string | boolean | Array<number> | Array<number> | Array<string> | Array<boolean>
+    | Uint8Array | RecordData | bigint
 ```
 
-Enumerates the value types.
+Indicates possible value types
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-preferences-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint--><!--Device-preferences-type ValueType = number | string | boolean | Array<number> | Array<string> | Array<boolean> | Uint8Array | object | bigint-End-->
+<!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint--><!--Device-preferences-type ValueType = long | double | string | boolean | Array<long> | Array<double> | Array<string> | Array<boolean>    | Uint8Array | RecordData | bigint-End-->
 
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core
+**System capability:** 
+- API version 23 and later: SystemCapability.DistributedDataManager.Preferences.Core
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| number |
+| long |
+| double |
 | string |
 | boolean |
-| Array & lt;number & gt; |
+| Array & lt;long & gt; |
+| Array & lt;double & gt; |
 | Array & lt;string & gt; |
 | Array & lt;boolean & gt; |
 | Uint8Array |
-| object |
+| [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md) |
 | bigint |

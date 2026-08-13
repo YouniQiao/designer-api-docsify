@@ -4,6 +4,8 @@ Defines the properties for controlling the automatic playback behavior.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface AutoPlayOptions--><!--Device-unnamed-declare interface AutoPlayOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,15 @@ Defines the properties for controlling the automatic playback behavior.
 stopWhenTouched: boolean
 ```
 
-Whether the automatic playback stops immediately when the component is touched.
-
-The value **true** means that the automatic playback stops immediately when the component is touched, and **false**means the opposite.
-
-Default value: **true**.
+Whether the automatic playback stops immediately when the component is touched. The value **true** means that the automatic playback stops immediately when the component is touched, and **false** means the opposite. Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

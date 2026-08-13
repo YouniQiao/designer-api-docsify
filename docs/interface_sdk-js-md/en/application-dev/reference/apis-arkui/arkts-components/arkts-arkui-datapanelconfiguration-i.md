@@ -1,15 +1,16 @@
 # DataPanelConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration](CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration.
 
-**Inheritance/Implementation:** DataPanelConfiguration extends [CommonConfiguration<DataPanelConfiguration>](CommonConfiguration<DataPanelConfiguration>)
+**Inheritance/Implementation:** DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>--><!--Device-unnamed-declare interface DataPanelConfiguration extends CommonConfiguration<DataPanelConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface DataPanelConfiguration--><!--Device-unnamed-declare interface DataPanelConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,19 +20,15 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 maxValue: number
 ```
 
-Maximum value displayed in the data panel.
-
-Default value: **100**
-
-**NOTE：**
-
-If the value is less than or equal to 0, **maxValue** is set to the sum of all items in the **values** array and displayed proportionally.
+Maximum value displayed in the data panel. Default value: **100** **NOTE：**If the value is less than or equal to 0, **maxValue** is set to the sum of all items in the **values** array and displayed proportionally.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,19 +44,15 @@ If the value is less than or equal to 0, **maxValue** is set to the sum of all i
 values: number[]
 ```
 
-Current values of the data panel.
-
-The length of the array should be within the range of [0, 9].
-
-**NOTE：**
-
-If the array length is greater than 9, the first nine items are used.
+Current values of the data panel. The length of the array should be within the range of [0, 9]. **NOTE：**If the array length is greater than 9, the first nine items are used.
 
 **Type:** number[]
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

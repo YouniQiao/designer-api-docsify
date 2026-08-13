@@ -1,10 +1,12 @@
 # MaxCountType
 
-MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT
+Enumerates the types of the maximum count.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum MaxCountType--><!--Device-unnamed-export declare enum MaxCountType-End-->
 
@@ -16,13 +18,15 @@ MaxCountType. include TOTAL_MAX_COUNT, PHOTO_MAX_COUNT and VIDEO_MAX_COUNT
 TOTAL_MAX_COUNT = 0
 ```
 
-TOTAL_MAX_COUNT. total max count
+Total number of media assets (images and videos) that can be selected.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MaxCountType-TOTAL_MAX_COUNT = 0--><!--Device-MaxCountType-TOTAL_MAX_COUNT = 0-End-->
 
@@ -34,13 +38,15 @@ TOTAL_MAX_COUNT. total max count
 PHOTO_MAX_COUNT = 1
 ```
 
-PHOTO_MAX_COUNT. photo max count
+Total number of images that can be selected. The value cannot be greater than **Total_MAX_Count**.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MaxCountType-PHOTO_MAX_COUNT = 1--><!--Device-MaxCountType-PHOTO_MAX_COUNT = 1-End-->
 
@@ -52,13 +58,15 @@ PHOTO_MAX_COUNT. photo max count
 VIDEO_MAX_COUNT = 2
 ```
 
-VIDEO_MAX_COUNT. video max count
+Total number of videos that can be selected. The value cannot be greater than **Total_MAX_Count**.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MaxCountType-VIDEO_MAX_COUNT = 2--><!--Device-MaxCountType-VIDEO_MAX_COUNT = 2-End-->
 

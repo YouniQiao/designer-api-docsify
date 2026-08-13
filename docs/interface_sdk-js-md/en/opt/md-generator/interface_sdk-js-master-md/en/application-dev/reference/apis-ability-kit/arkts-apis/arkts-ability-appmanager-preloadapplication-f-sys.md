@@ -12,9 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function preloadApplication(bundleName: string, userId: number, mode: PreloadMode, appIndex?: number): Promise<void>
 ```
 
-Preloads an application process. A successful call does not always mean that the preloading is successful. In other  words, the target application process may not be created even if the API is successfully called. This API uses a promise to return the result.
+Preloads an application process. A successful call does not always mean that the preloading is successful. In other words, the target application process may not be created even if the API is successfully called. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRELOAD_APPLICATION
 
@@ -45,11 +47,11 @@ Preloads an application process. A successful call does not always mean that the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16300005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16300005-bundle-information-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16300005](../errorcode-ability.md#16300005-bundle-information-does-not-exist) |
 
 ## Examples
 

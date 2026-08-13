@@ -4,9 +4,11 @@
 
 **继承/实现关系：** SarResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-sensor-interface SarResponse extends Response--><!--Device-sensor-interface SarResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface SarResponse--><!--Device-sensor-interface SarResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -22,7 +24,9 @@ absorptionRatio: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SarResponse-absorptionRatio: double--><!--Device-SarResponse-absorptionRatio: double-End-->
 

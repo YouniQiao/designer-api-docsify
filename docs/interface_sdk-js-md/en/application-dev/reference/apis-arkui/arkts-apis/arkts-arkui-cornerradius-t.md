@@ -4,13 +4,17 @@
 export type CornerRadius = Corners<Vector2>
 ```
 
-Defines the Corner radius.
+Sets the semi-axis lengths for the x-axis and y-axis of the rounded corners.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type CornerRadius = Corners<Vector2>--><!--Device-unnamed-export type CornerRadius = Corners<Vector2>-End-->
 

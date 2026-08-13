@@ -1,0 +1,41 @@
+# on_cooperate (System API)
+
+## Modules to Import
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
+
+## on_cooperate
+
+```TypeScript
+function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void
+```
+
+Enables listening for screen hopping status change events.
+
+**Since:** 10
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](#on_cooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
+
+<!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void--><!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void-End-->
+
+**System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'cooperate' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

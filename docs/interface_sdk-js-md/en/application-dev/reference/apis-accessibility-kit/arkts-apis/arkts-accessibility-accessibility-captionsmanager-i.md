@@ -1,11 +1,12 @@
 # CaptionsManager
 
-Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the   
-[accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getCaptionsManager) API to obtain a **CaptionsManager** instance.
+Implements configuration management for captions. Before calling any API of **CaptionsManager**, you must use the [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md#getCaptionsManager) API to obtain a **CaptionsManager** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-accessibility-interface CaptionsManager--><!--Device-accessibility-interface CaptionsManager-End-->
 
@@ -17,7 +18,55 @@ Implements configuration management for captions. Before calling any API of **Ca
 import { accessibility } from '@kit.AccessibilityKit';
 ```
 
-## off('enableChange')
+## offEnableChange
+
+```TypeScript
+offEnableChange(callback?: Callback<boolean>): void
+```
+
+Unregister the observe of the enable state.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void--><!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |  |
+
+## offStyleChange
+
+```TypeScript
+offStyleChange(callback?: Callback<CaptionsStyle>): void
+```
+
+Unregister the observer of the style.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
+
+## off_enableChange
 
 ```TypeScript
 off(type: 'enableChange', callback?: Callback<boolean>): void
@@ -40,13 +89,13 @@ Unsubscribes from the state changes of captions configuration. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](accessibility.CaptionsManager.on(type: 'enableChange', callback: Callback&lt;boolean&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('enableChange')](#on_enableChange) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -78,7 +127,7 @@ struct Index {
 }
 ```
 
-## off('styleChange')
+## off_styleChange
 
 ```TypeScript
 off(type: 'styleChange', callback?: Callback<CaptionsStyle>): void
@@ -101,13 +150,13 @@ Unsubscribes from the captions style changes. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](accessibility.CaptionsManager.on(type: 'styleChange', callback: Callback&lt;CaptionsStyle&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No | Callback used to unregister. It must be consistent with the callback used in [on('styleChange')](#on_enableChange) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -139,19 +188,21 @@ struct Index {
 }
 ```
 
-## offEnableChange
+## onEnableChange
 
 ```TypeScript
-offEnableChange(callback?: Callback<boolean>): void
+onEnableChange(callback: Callback<boolean>): void
 ```
 
-Unregister the observe of the enable state.
+Register the observe of the enable state.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void--><!--Device-CaptionsManager-offEnableChange(callback?: Callback<boolean>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void--><!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -159,21 +210,23 @@ Unregister the observe of the enable state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |  |
 
-## offStyleChange
+## onStyleChange
 
 ```TypeScript
-offStyleChange(callback?: Callback<CaptionsStyle>): void
+onStyleChange(callback: Callback<CaptionsStyle>): void
 ```
 
-Unregister the observer of the style.
+Register the observer of the style.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-offStyleChange(callback?: Callback<CaptionsStyle>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
 
@@ -181,24 +234,15 @@ Unregister the observer of the style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | No |  |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
 
-## on('enableChange')
+## on_enableChange
 
 ```TypeScript
 on(type: 'enableChange', callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
-> - After calling this method, you must use
-> [off('enableChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+Subscribes to the state changes of captions configuration. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, you must use > [off('enableChange')](#off_enableChange) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -215,13 +259,13 @@ Subscribes to the state changes of captions configuration. This API uses an asyn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'enableChange' | Yes | Event type, which is set to **'enableChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback invoked when the enabled status of captions configuration changes. The value **true** indicates that the subtitle configuration is enabled, and the value **false** indicates that the subtitle configuration is disabled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback invoked when the enabled status of captions configuration changes. The value **true** indicates that the subtitle configuration is enabled, and the value **false** indicates that the subtitle configuration is disabled. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -248,22 +292,13 @@ struct Index {
 }
 ```
 
-## on('styleChange')
+## on_styleChange
 
 ```TypeScript
 on(type: 'styleChange', callback: Callback<CaptionsStyle>): void
 ```
 
-Subscribes to captions style changes. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
-> - After calling this method, you must use
-> [off('styleChange')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
-> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+Subscribes to captions style changes. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, you must use > [off('styleChange')](#off_enableChange) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 8
 
@@ -280,13 +315,13 @@ Subscribes to captions style changes. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'styleChange' | Yes | Event type, which is set to **'styleChange'** in this API. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes | Callback invoked when the style of captions changes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 
@@ -313,63 +348,21 @@ struct Index {
 }
 ```
 
-## onEnableChange
-
-```TypeScript
-onEnableChange(callback: Callback<boolean>): void
-```
-
-Register the observe of the enable state.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void--><!--Device-CaptionsManager-onEnableChange(callback: Callback<boolean>): void-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes |  |
-
-## onStyleChange
-
-```TypeScript
-onStyleChange(callback: Callback<CaptionsStyle>): void
-```
-
-Register the observer of the style.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void--><!--Device-CaptionsManager-onStyleChange(callback: Callback<CaptionsStyle>): void-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Hearing
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)&gt; | Yes |  |
-
 ## enabled
 
 ```TypeScript
 enabled: boolean
 ```
 
-Whether to enable captions configuration. The value **true** indicates that the caption configuration is enabled,and **false** indicates the opposite.
+Whether to enable captions configuration. The value **true** indicates that the caption configuration is enabled, and **false** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -389,9 +382,11 @@ Style of captions.
 
 **Type:** [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

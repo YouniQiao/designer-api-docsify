@@ -4,11 +4,13 @@ Describes the ambient temperature sensor data. It extends from [Response](arkts-
 
 **Inheritance/Implementation:** AmbientTemperatureResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-sensor-interface AmbientTemperatureResponse extends Response--><!--Device-sensor-interface AmbientTemperatureResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface AmbientTemperatureResponse--><!--Device-sensor-interface AmbientTemperatureResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,11 +28,13 @@ temperature: double
 
 Ambient temperature, in degree Celsius.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AmbientTemperatureResponse-temperature: double--><!--Device-AmbientTemperatureResponse-temperature: double-End-->
 

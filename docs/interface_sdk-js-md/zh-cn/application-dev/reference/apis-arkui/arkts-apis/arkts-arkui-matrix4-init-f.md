@@ -29,6 +29,8 @@ Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，�
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-matrix4-function init(options: [        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double    ]): Matrix4Transit--><!--Device-matrix4-function init(options: [        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double,        double    ]): Matrix4Transit-End-->

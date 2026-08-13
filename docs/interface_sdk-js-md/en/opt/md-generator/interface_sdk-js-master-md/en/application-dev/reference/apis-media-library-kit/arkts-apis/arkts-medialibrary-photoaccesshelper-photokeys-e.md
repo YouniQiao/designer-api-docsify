@@ -2,7 +2,9 @@
 
 Defines the key information about an image or video file.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum PhotoKeys--><!--Device-photoAccessHelper-enum PhotoKeys-End-->
 
@@ -14,14 +16,11 @@ Defines the key information about an image or video file.
 URI = 'uri'
 ```
 
-URI of the file.
+URI of the file. **Note：**: Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalTo) predicate can be used for this field during photo query.
 
-**Note：**:
+**Since:** 23
 
-Only the   
-[DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkdata-datasharepredicates-datasharepredicates-c.md#equalTo)predicate can be used for this field during photo query.
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -37,7 +36,9 @@ PHOTO_TYPE = 'media_type'
 
 Type of the file.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -51,13 +52,11 @@ Type of the file.
 DISPLAY_NAME = 'display_name'
 ```
 
-File name displayed. The file name must meet the following requirements:
+File name displayed. The file name must meet the following requirements: - A valid file name must include a base name and a supported image or video extension. - The file name length ranges from 1 to 255. - The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
-- A valid file name must include a base name and a supported image or video extension.  
-- The file name length ranges from 1 to 255.  
-- The base name must not contain any invalid characters, which are:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -73,7 +72,9 @@ SIZE = 'size'
 
 File size, in bytes. The size of a moving photo includes the total size of the image and video.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -89,7 +90,9 @@ DATE_ADDED = 'date_added'
 
 Unix timestamp when the file was created, in seconds.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -105,7 +108,9 @@ DATE_MODIFIED = 'date_modified'
 
 Unix timestamp when the file content (not the file name) was last modified, in seconds. This value is updated when the file content is modified, but not when the file name is modified.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -121,7 +126,9 @@ DURATION = 'duration'
 
 Duration, in ms.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -137,7 +144,9 @@ WIDTH = 'width'
 
 Image width, in pixels.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -153,7 +162,9 @@ HEIGHT = 'height'
 
 Image height, in pixels.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -169,7 +180,9 @@ DATE_TAKEN = 'date_taken'
 
 Unix timestamp when the photo was taken, in seconds.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -185,7 +198,9 @@ ORIENTATION = 'orientation'
 
 Orientation of the file, in degrees.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -201,7 +216,9 @@ FAVORITE = 'is_favorite'
 
 Whether the file is marked as favorites.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -217,27 +234,13 @@ TITLE = 'title'
 
 Title of the file.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-TITLE = 'title'--><!--Device-PhotoKeys-TITLE = 'title'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## POSITION
-
-```TypeScript
-POSITION = 'position'
-```
-
-File location type.
-
-**Since:** 16
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -247,13 +250,11 @@ File location type.
 DATE_ADDED_MS = 'date_added_ms'
 ```
 
-Unix timestamp when the file was created, in milliseconds.
+Unix timestamp when the file was created, in milliseconds. **Note：**: The photos queried cannot be sorted based on this field.
 
-**Note：**:
+**Since:** 23
 
-The photos queried cannot be sorted based on this field.
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -267,13 +268,11 @@ The photos queried cannot be sorted based on this field.
 DATE_MODIFIED_MS = 'date_modified_ms'
 ```
 
-Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified.
+Unix timestamp when the file was modified, in milliseconds. This value is updated when the file content is modified, but not when the file name is modified. **Note：**: The photos queried cannot be sorted based on this field.
 
-**Note：**:
+**Since:** 23
 
-The photos queried cannot be sorted based on this field.
-
-**Since:** 12
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -289,7 +288,9 @@ PHOTO_SUBTYPE = 'subtype'
 
 Subtype of the media file.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -305,7 +306,9 @@ DYNAMIC_RANGE_TYPE = 'dynamic_range_type'
 
 Dynamic range type of the media asset.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -321,7 +324,9 @@ COVER_POSITION = 'cover_position'
 
 Position of the moving photo cover, which is the video timestamp (in μs) corresponding to the cover frame.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -337,7 +342,9 @@ BURST_KEY = 'burst_key'
 
 Unique ID of a group of burst photos.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -353,7 +360,9 @@ LCD_SIZE = 'lcd_size'
 
 Width and height of an LCD image, in the format of a **width:height** string.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -369,7 +378,9 @@ THM_SIZE = 'thm_size'
 
 Width and height of a thumbnail image, in the format of a **width:height** string.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -385,7 +396,9 @@ DETAIL_TIME = 'detail_time'
 
 Detailed time. The value is a string of time when the image or video was taken in the time zone and does not change with the time zone.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -401,25 +414,13 @@ DATE_TAKEN_MS = 'date_taken_ms'
 
 Unix timestamp when the image was captured, in milliseconds.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_TAKEN_MS = 'date_taken_ms'--><!--Device-PhotoKeys-DATE_TAKEN_MS = 'date_taken_ms'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## OWNER_ALBUM_ID
-
-```TypeScript
-OWNER_ALBUM_ID = 'owner_album_id'
-```
-
-ID of the album to which the photo belongs.
-
-**Since:** 22
-
-<!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'--><!--Device-PhotoKeys-OWNER_ALBUM_ID = 'owner_album_id'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -431,7 +432,9 @@ MEDIA_SUFFIX = 'media_suffix'
 
 File name extension.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoKeys-MEDIA_SUFFIX = 'media_suffix'--><!--Device-PhotoKeys-MEDIA_SUFFIX = 'media_suffix'-End-->
 
@@ -445,7 +448,9 @@ ASPECT_RATIO = 'aspect_ratio'
 
 Aspect ratio of the image or video.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -463,6 +468,8 @@ Time when the photo is changed.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-PhotoKeys-CHANGE_TIME = 'change_time'--><!--Device-PhotoKeys-CHANGE_TIME = 'change_time'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -476,6 +483,8 @@ LOCAL_ASSET_SIZE = 'local_asset_size'
 Size of local asset, which well matched the content read by the application.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

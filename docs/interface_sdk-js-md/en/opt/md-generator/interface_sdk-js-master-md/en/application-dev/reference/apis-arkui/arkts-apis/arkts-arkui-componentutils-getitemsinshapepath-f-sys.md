@@ -16,6 +16,8 @@ Get the image objects located within the selected area.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-componentUtils-function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>--><!--Device-componentUtils-function getItemsInShapePath(value: GetItemsInShapePathParams): Array<ImageItem>-End-->

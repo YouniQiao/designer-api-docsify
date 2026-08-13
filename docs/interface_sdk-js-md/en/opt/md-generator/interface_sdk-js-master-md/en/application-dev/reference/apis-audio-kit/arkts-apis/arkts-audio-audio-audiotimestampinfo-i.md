@@ -2,7 +2,9 @@
 
 Describes the information about the audio stream timestamp and the current data frame position.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioTimestampInfo--><!--Device-audio-interface AudioTimestampInfo-End-->
 
@@ -24,7 +26,9 @@ Position of the current data frame for playback or recording.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioTimestampInfo-readonly framePos: long--><!--Device-AudioTimestampInfo-readonly framePos: long-End-->
 
@@ -40,7 +44,9 @@ Timestamp corresponding to the current data frame position during playback or re
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioTimestampInfo-readonly timestamp: long--><!--Device-AudioTimestampInfo-readonly timestamp: long-End-->
 

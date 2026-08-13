@@ -2,7 +2,9 @@
 
 Describes the parameters of a response send by the server to a specified read or write request.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface ServerResponse--><!--Device-ble-interface ServerResponse-End-->
 
@@ -24,7 +26,9 @@ Indicates the address of the client to which to send the response
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ Indicates the byte offset of the start position for reading or writing operation
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +70,9 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +92,9 @@ The Id of the write request
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,7 +114,9 @@ Indicates the value to be sent
 
 **Type:** ArrayBuffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

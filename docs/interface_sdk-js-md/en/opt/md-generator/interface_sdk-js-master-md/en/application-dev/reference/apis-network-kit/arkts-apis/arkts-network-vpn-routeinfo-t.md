@@ -8,6 +8,8 @@ Get network route information.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-vpn-export type RouteInfo = connection.RouteInfo--><!--Device-vpn-export type RouteInfo = connection.RouteInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core

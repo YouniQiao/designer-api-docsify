@@ -6,11 +6,13 @@ Defines PopoverDialog Options
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-unnamed-export declare interface PopoverOptions extends CustomPopupOptions--><!--Device-unnamed-export declare interface PopoverOptions extends CustomPopupOptions-End-->
+<!--Device-unnamed-export declare interface PopoverOptions--><!--Device-unnamed-export declare interface PopoverOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

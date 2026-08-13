@@ -6,6 +6,8 @@ Provide console
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class console--><!--Device-unnamed-export declare class console-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -21,6 +23,8 @@ Prints "debug" logs.
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,6 +50,8 @@ Prints "error" logs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-console-static error(message: string): void--><!--Device-console-static error(message: string): void-End-->
@@ -69,6 +75,8 @@ Prints "info" logs.
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -94,6 +102,8 @@ Prints "log" logs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-console-static log(message: string): void--><!--Device-console-static log(message: string): void-End-->
@@ -117,6 +127,8 @@ Prints "warn" logs.
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

@@ -4,6 +4,8 @@ DrawingRenderingContext的尺寸信息。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface Size--><!--Device-unnamed-declare interface Size-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ DrawingRenderingContext的尺寸信息。
 height: number
 ```
 
-获取DrawingRenderingContext的高度，其值为关联的Canvas组件的高度。&lt;br&gt;支持单位：vp、px。&lt;br&gt;默认单位为vp。
+获取DrawingRenderingContext的高度，其值为关联的Canvas组件的高度。 &lt;br&gt;支持单位：vp、px。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,11 +38,13 @@ height: number
 width: number
 ```
 
-获取DrawingRenderingContext的宽度，其值为关联的Canvas组件的宽度。&lt;br&gt;支持单位：vp、px。&lt;br&gt;默认单位为vp。
+获取DrawingRenderingContext的宽度，其值为关联的Canvas组件的宽度。 &lt;br&gt;支持单位：vp、px。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

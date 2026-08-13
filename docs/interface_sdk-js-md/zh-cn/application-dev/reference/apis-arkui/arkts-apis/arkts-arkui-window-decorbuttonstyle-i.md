@@ -2,9 +2,11 @@
 
 系统装饰栏按钮样式。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-window-interface DecorButtonStyle--><!--Device-window-interface DecorButtonStyle-End-->
 
@@ -18,13 +20,15 @@ buttonBackgroundCornerRadius? : int
 
 按键背板圆角半径，取值范围4vp-8vp，默认值4vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecorButtonStyle-buttonBackgroundCornerRadius? : int--><!--Device-DecorButtonStyle-buttonBackgroundCornerRadius? : int-End-->
 
@@ -38,13 +42,15 @@ buttonBackgroundSize? : int
 
 按钮高亮显示时的大小，取值范围20vp-40vp，默认值28vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecorButtonStyle-buttonBackgroundSize? : int--><!--Device-DecorButtonStyle-buttonBackgroundSize? : int-End-->
 
@@ -58,13 +64,15 @@ buttonIconSize? : int
 
 按键icon的大小，取值范围16vp-24vp，默认值20vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecorButtonStyle-buttonIconSize? : int--><!--Device-DecorButtonStyle-buttonIconSize? : int-End-->
 
@@ -78,13 +86,15 @@ closeButtonRightMargin? : int
 
 关闭按钮右侧距窗口边距，取值范围6vp-22vp，默认值20vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecorButtonStyle-closeButtonRightMargin? : int--><!--Device-DecorButtonStyle-closeButtonRightMargin? : int-End-->
 
@@ -100,11 +110,13 @@ colorMode?: ConfigurationConstant.ColorMode
 
 **类型：** ConfigurationConstant.ColorMode
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecorButtonStyle-colorMode?: ConfigurationConstant.ColorMode--><!--Device-DecorButtonStyle-colorMode?: ConfigurationConstant.ColorMode-End-->
 
@@ -118,13 +130,15 @@ spacingBetweenButtons? : int
 
 按钮间距，取值范围8vp-24vp，默认值12vp。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DecorButtonStyle-spacingBetweenButtons? : int--><!--Device-DecorButtonStyle-spacingBetweenButtons? : int-End-->
 

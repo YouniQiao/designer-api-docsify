@@ -2,13 +2,15 @@
 
 Defines the lazy waterflow layout attribute.
 
-**Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends [CommonMethod<T>](CommonMethod<T>)
+**Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends CommonMethod<T>
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>--><!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +32,8 @@ The spacing between columns.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -42,7 +46,7 @@ The spacing between columns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. &lt;br&gt;Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. &lt;br&gt;Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -61,6 +65,8 @@ Sets the footer of the lazy waterflow layout.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,6 +100,8 @@ Sets the header of the lazy waterflow layout.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -120,11 +128,13 @@ Sets the header of the lazy waterflow layout.
 onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 ```
 
-Called when the first or last item displayed in the component changes.It is triggered once when the component is initialized.
+Called when the first or last item displayed in the component changes. It is triggered once when the component is initialized.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,6 +168,8 @@ The spacing between rows.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -170,7 +182,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. &lt;br&gt;Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. &lt;br&gt;Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -189,6 +201,8 @@ Sets the sticky style for header and footer.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

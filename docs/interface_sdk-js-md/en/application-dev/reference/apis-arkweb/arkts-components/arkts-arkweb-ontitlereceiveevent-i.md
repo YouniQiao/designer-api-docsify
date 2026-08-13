@@ -6,6 +6,8 @@ Defines the triggered function when the title of the main application document c
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnTitleReceiveEvent--><!--Device-unnamed-declare interface OnTitleReceiveEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,13 +18,15 @@ Defines the triggered function when the title of the main application document c
 isRealTitle?: boolean
 ```
 
-Mark the source of the title. If it is true, the title is derived from the H5 title element;If it is false, it is calculated from the URL. By default, it is calculated from the URL.
+Mark the source of the title. If it is true, the title is derived from the H5 title element; If it is false, it is calculated from the URL. By default, it is calculated from the URL.
 
 **Type:** boolean
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-OnTitleReceiveEvent-isRealTitle?: boolean--><!--Device-OnTitleReceiveEvent-isRealTitle?: boolean-End-->
 
@@ -41,6 +45,8 @@ The title of the page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

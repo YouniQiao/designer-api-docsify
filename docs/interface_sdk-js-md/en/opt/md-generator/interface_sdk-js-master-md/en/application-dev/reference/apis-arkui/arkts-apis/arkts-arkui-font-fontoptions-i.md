@@ -1,16 +1,10 @@
 # FontOptions
 
-Information about the custom font to register.
-
-> **NOTE：**
-> 
-> Directly using **font** can lead to the issue of
-> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> [Font](@ohos.arkui.UIContext) object associated with the current UI context by using the
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](@ohos.arkui.UIContext).
+Information about the custom font to register. > **NOTE：**> > Directly using **font** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > [Font](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated with the current UI context by using the > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-font-interface FontOptions--><!--Device-font-interface FontOptions-End-->
 
@@ -34,6 +28,8 @@ Name of the custom font to register.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FontOptions-familyName: string | Resource--><!--Device-FontOptions-familyName: string | Resource-End-->
@@ -46,15 +42,13 @@ Name of the custom font to register.
 familySrc: string | Resource
 ```
 
-Path of the custom font file to register.
-
-**NOTE：**
-
-If the font file to specify is a resource located within the system sandbox directory, you are advised to use a string with the **file://** path prefix. Ensure the target file exists in the sandbox path and has read permissions granted.
+Path of the custom font file to register. **NOTE：**If the font file to specify is a resource located within the system sandbox directory, you are advised to use a string with the **file://** path prefix. Ensure the target file exists in the sandbox path and has read permissions granted.
 
 **Type:** string \| Resource
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,7 +2,9 @@
 
 表示签名、验签使用的摘要算法的枚举。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-certificateManager-export enum CmKeyDigest--><!--Device-certificateManager-export enum CmKeyDigest-End-->
 
@@ -16,7 +18,9 @@ CM_DIGEST_NONE = 0
 
 选用此项时，表示由应用程序对待签名、验签的数据进行摘要计算。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_NONE = 0--><!--Device-CmKeyDigest-CM_DIGEST_NONE = 0-End-->
 
@@ -30,7 +34,9 @@ CM_DIGEST_MD5 = 1
 
 MD5摘要算法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_MD5 = 1--><!--Device-CmKeyDigest-CM_DIGEST_MD5 = 1-End-->
 
@@ -44,7 +50,9 @@ CM_DIGEST_SHA1 = 2
 
 SHA1摘要算法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_SHA1 = 2--><!--Device-CmKeyDigest-CM_DIGEST_SHA1 = 2-End-->
 
@@ -58,7 +66,9 @@ CM_DIGEST_SHA224 = 3
 
 SHA224摘要算法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_SHA224 = 3--><!--Device-CmKeyDigest-CM_DIGEST_SHA224 = 3-End-->
 
@@ -72,7 +82,9 @@ CM_DIGEST_SHA256 = 4
 
 SHA256摘要算法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_SHA256 = 4--><!--Device-CmKeyDigest-CM_DIGEST_SHA256 = 4-End-->
 
@@ -86,7 +98,9 @@ CM_DIGEST_SHA384 = 5
 
 SHA384摘要算法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_SHA384 = 5--><!--Device-CmKeyDigest-CM_DIGEST_SHA384 = 5-End-->
 
@@ -100,7 +114,9 @@ CM_DIGEST_SHA512 = 6
 
 SHA512摘要算法。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_SHA512 = 6--><!--Device-CmKeyDigest-CM_DIGEST_SHA512 = 6-End-->
 
@@ -114,7 +130,9 @@ CM_DIGEST_SM3 = 7
 
 SM3摘要算法。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CmKeyDigest-CM_DIGEST_SM3 = 7--><!--Device-CmKeyDigest-CM_DIGEST_SM3 = 7-End-->
 

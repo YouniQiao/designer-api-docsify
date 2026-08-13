@@ -2,7 +2,9 @@
 
 Enumerates the effect types supported by the camera controller.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum ControlCenterEffectType--><!--Device-camera-enum ControlCenterEffectType-End-->
 
@@ -16,9 +18,11 @@ BEAUTY = 0
 
 Beauty effect.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ControlCenterEffectType-BEAUTY = 0--><!--Device-ControlCenterEffectType-BEAUTY = 0-End-->
 
@@ -32,9 +36,11 @@ PORTRAIT = 1
 
 Portrait blur effect.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ControlCenterEffectType-PORTRAIT = 1--><!--Device-ControlCenterEffectType-PORTRAIT = 1-End-->
 
@@ -49,6 +55,8 @@ AUTO_FRAMING = 2
 Auto focus.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
@@ -65,6 +73,8 @@ COLOR_EFFECT = 3
 Color effect
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,9 @@ export type ContinueMissionInfo = _ContinueMissionInfo
 
 Parameters corresponding to continue mission.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

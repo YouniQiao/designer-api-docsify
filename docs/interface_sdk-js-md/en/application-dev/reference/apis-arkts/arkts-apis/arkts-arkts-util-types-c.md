@@ -1,10 +1,12 @@
 # types
 
-Check the type of parameter.
+Provides APIs to check different types of built-in objects, such as ArrayBuffer, Map, and Set, so as to avoid exceptions caused by type errors.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-util-class types--><!--Device-util-class types-End-->
 
@@ -22,15 +24,25 @@ import { util } from '@kit.ArkTS';
 constructor()
 ```
 
-The types constructor
+A constructor used to create a **Types** object.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-constructor()--><!--Device-types-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+```
 
 ## isAnyArrayBuffer
 
@@ -38,11 +50,15 @@ The types constructor
 isAnyArrayBuffer(value: Object): boolean
 ```
 
-Check whether the entered value is of arraybuffer or sharedarraybuffer type.
+Checks whether the value is of the ArrayBuffer or SharedArrayBuffer type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isAnyArrayBuffer(value: Object): boolean--><!--Device-types-isAnyArrayBuffer(value: Object): boolean-End-->
 
@@ -52,13 +68,66 @@ Check whether the entered value is of arraybuffer or sharedarraybuffer type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A ArrayBuffer or SharedArrayBuffer value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in ArrayBuffer or SharedArrayBuffer instance. |
+| boolean | Check result. The value **true** is returned if the value is of the ArrayBuffer or SharedArrayBuffer type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isAnyArrayBuffer(new ArrayBuffer(0));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isArgumentsObject
+
+```TypeScript
+isArgumentsObject(value: Object): boolean
+```
+
+Checks whether the value is an **arguments** object.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isArgumentsObject(value: Object): boolean--><!--Device-types-isArgumentsObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is an **arguments** object; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+function foo() {
+    let result = type.isArgumentsObject(arguments);
+    console.info("result = " + result);
+}
+let f = foo();
+// Output: result = true
+```
 
 ## isArrayBuffer
 
@@ -66,11 +135,15 @@ Check whether the entered value is of arraybuffer or sharedarraybuffer type.
 isArrayBuffer(value: Object): boolean
 ```
 
-Check whether the entered value is of arraybuffer type.
+Checks whether the value is of the ArrayBuffer type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isArrayBuffer(value: Object): boolean--><!--Device-types-isArrayBuffer(value: Object): boolean-End-->
 
@@ -80,13 +153,22 @@ Check whether the entered value is of arraybuffer type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A arraybuffer value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in ArrayBuffer instance. This does not include SharedArrayBuffer instances. Usually, it is desirable to test for both; See isAnyArrayBuffer() for that. |
+| boolean | Check result. The value **true** is returned if the value is of the ArrayBuffer type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isArrayBuffer(new ArrayBuffer(0));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isArrayBufferView
 
@@ -94,11 +176,15 @@ Check whether the entered value is of arraybuffer type.
 isArrayBufferView(value: Object): boolean
 ```
 
-Check whether the type is included in the isAnyArrayBuffer.
+Checks whether the value is of the ArrayBufferView type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isArrayBufferView(value: Object): boolean--><!--Device-types-isArrayBufferView(value: Object): boolean-End-->
 
@@ -108,13 +194,22 @@ Check whether the type is included in the isAnyArrayBuffer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A included in the isAnyArrayBuffer value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is an instance of one of the ArrayBuffer views, such as typed array objects or DataView. |
+| boolean | Check result. The value **true** is returned if the value is of the ArrayBufferView type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isArrayBufferView(new Int8Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isAsyncFunction
 
@@ -122,11 +217,15 @@ Check whether the type is included in the isAnyArrayBuffer.
 isAsyncFunction(value: Object): boolean
 ```
 
-Check whether the value entered is an asynchronous function type.
+Checks whether the value is an asynchronous function.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isAsyncFunction(value: Object): boolean--><!--Device-types-isAsyncFunction(value: Object): boolean-End-->
 
@@ -136,13 +235,22 @@ Check whether the value entered is an asynchronous function type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A async function value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is an async function. This only reports back what the JavaScript engine is seeing; in particular, the return value may not match the original source code if a transpilation tool was used. |
+| boolean | Check result. The value **true** is returned if the value is an asynchronous function; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isAsyncFunction(async () => {});
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isBigInt64Array
 
@@ -150,11 +258,15 @@ Check whether the value entered is an asynchronous function type.
 isBigInt64Array(value: Object): boolean
 ```
 
-Check whether the entered value is of bigint64array array type.
+Checks whether the value is of the BigInt64Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isBigInt64Array(value: Object): boolean--><!--Device-types-isBigInt64Array(value: Object): boolean-End-->
 
@@ -164,13 +276,22 @@ Check whether the entered value is of bigint64array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A BigInt64Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a BigInt64Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the BigInt64Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isBigInt64Array(new BigInt64Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isBigUint64Array
 
@@ -178,11 +299,15 @@ Check whether the entered value is of bigint64array array type.
 isBigUint64Array(value: Object): boolean
 ```
 
-Check whether the entered value is of biguint64array array array type.
+Checks whether the value is of the BigUint64Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isBigUint64Array(value: Object): boolean--><!--Device-types-isBigUint64Array(value: Object): boolean-End-->
 
@@ -192,13 +317,104 @@ Check whether the entered value is of biguint64array array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A BigUint64Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a BigUint64Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the BigUint64Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isBigUint64Array(new BigUint64Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isBooleanObject
+
+```TypeScript
+isBooleanObject(value: Object): boolean
+```
+
+Checks whether the value is of the Boolean type. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isBooleanObject(value: Object): boolean--><!--Device-types-isBooleanObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the Boolean type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isBooleanObject(new Boolean(true));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isBoxedPrimitive
+
+```TypeScript
+isBoxedPrimitive(value: Object): boolean
+```
+
+Checks whether the value is of the Boolean, Number, String, or Symbol type. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isBoxedPrimitive(value: Object): boolean--><!--Device-types-isBoxedPrimitive(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the Boolean, Number, String, or Symbol type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isBoxedPrimitive(new Boolean(false));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isDataView
 
@@ -206,11 +422,15 @@ Check whether the entered value is of biguint64array array array type.
 isDataView(value: Object): boolean
 ```
 
-Check whether the entered value is of DataView type.
+Checks whether the value is of the DataView type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isDataView(value: Object): boolean--><!--Device-types-isDataView(value: Object): boolean-End-->
 
@@ -220,13 +440,23 @@ Check whether the entered value is of DataView type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A DataView value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in DataView instance. |
+| boolean | Check result. The value **true** is returned if the value is of the DataView type; otherwise , **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+const ab = new ArrayBuffer(20);
+let result = type.isDataView(new DataView(ab));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isDate
 
@@ -234,11 +464,15 @@ Check whether the entered value is of DataView type.
 isDate(value: Object): boolean
 ```
 
-Check whether the entered value is of type date.
+Checks whether the value is of the Date type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isDate(value: Object): boolean--><!--Device-types-isDate(value: Object): boolean-End-->
 
@@ -248,13 +482,101 @@ Check whether the entered value is of type date.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Date value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Date instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Date type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isDate(new Date());
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isExternal
+
+```TypeScript
+isExternal(value: Object): boolean
+```
+
+Checks whether the value is of the native external type.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isExternal(value: Object): boolean--><!--Device-types-isExternal(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the native external type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+// /entry/src/main/cpp/napi_init.cpp
+#include "napi/native_api.h"
+#include <js_native_api.h>
+#include <stdlib.h>
+
+napi_value result;
+static napi_value Testexternal(napi_env env, napi_callback_info info) {
+    int* raw = (int*) malloc(1024);
+    napi_status status = napi_create_external(env, (void*) raw, NULL, NULL, &result);
+    if (status != napi_ok) {
+        napi_throw_error(env, NULL, "create external failed");
+        return NULL;
+    }
+    return result;
+}
+
+EXTERN_C_START
+static napi_value Init(napi_env env, napi_value exports)
+{
+    napi_property_descriptor desc[] = {
+        {"testexternal", nullptr, Testexternal, nullptr, nullptr, nullptr, napi_default, nullptr},
+    };
+    napi_define_properties(env, exports, sizeof(desc) / sizeof(desc[0]), desc);
+    return exports;
+}
+EXTERN_C_END
+// The code for module registration is omitted here. You may need to register the Testexternal method.
+...
+```
+
+```TypeScript
+import testNapi from 'libentry.so';
+
+let type = new util.types();
+const data = testNapi.testexternal();
+let result = type.isExternal(data);
+
+let result01 = type.isExternal(true);
+console.info("result = " + result);
+console.info("result01 = " + result01);
+// Output: result = true
+// Output: result01 = false
+```
 
 ## isFloat32Array
 
@@ -262,11 +584,15 @@ Check whether the entered value is of type date.
 isFloat32Array(value: Object): boolean
 ```
 
-Check whether the entered value is of float32array array type.
+Checks whether the value is of the Float32Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isFloat32Array(value: Object): boolean--><!--Device-types-isFloat32Array(value: Object): boolean-End-->
 
@@ -276,13 +602,22 @@ Check whether the entered value is of float32array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Float32Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Float32Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Float32Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isFloat32Array(new Float32Array());
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isFloat64Array
 
@@ -290,11 +625,15 @@ Check whether the entered value is of float32array array type.
 isFloat64Array(value: Object): boolean
 ```
 
-Check whether the entered value is of float64array array type.
+Checks whether the value is of the Float64Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isFloat64Array(value: Object): boolean--><!--Device-types-isFloat64Array(value: Object): boolean-End-->
 
@@ -304,13 +643,119 @@ Check whether the entered value is of float64array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Float64Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Float64Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Float64Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isFloat64Array(new Float64Array());
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isGeneratorFunction
+
+```TypeScript
+isGeneratorFunction(value: Object): boolean
+```
+
+Checks whether the value is a generator function.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isGeneratorFunction(value: Object): boolean--><!--Device-types-isGeneratorFunction(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a generator function; otherwise , **false** is returned. |
+
+## Examples
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export function* foo() {}
+```
+
+```TypeScript
+import { foo } from './test'
+
+let type = new util.types();
+let result = type.isGeneratorFunction(foo);
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isGeneratorObject
+
+```TypeScript
+isGeneratorObject(value: Object): boolean
+```
+
+Checks whether the value is a generator object.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isGeneratorObject(value: Object): boolean--><!--Device-types-isGeneratorObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a generator object; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+function* foo() {}
+export const generator = foo();
+```
+
+```TypeScript
+import { generator } from './test'
+
+let type = new util.types();
+let result = type.isGeneratorObject(generator);
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isInt16Array
 
@@ -318,11 +763,15 @@ Check whether the entered value is of float64array array type.
 isInt16Array(value: Object): boolean
 ```
 
-Check whether the entered value is the int16array type.
+Checks whether the value is of the Int16Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isInt16Array(value: Object): boolean--><!--Device-types-isInt16Array(value: Object): boolean-End-->
 
@@ -332,13 +781,22 @@ Check whether the entered value is the int16array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Int16Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Int16Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Int16Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isInt16Array(new Int16Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isInt32Array
 
@@ -346,11 +804,15 @@ Check whether the entered value is the int16array type.
 isInt32Array(value: Object): boolean
 ```
 
-Check whether the entered value is the int32array array type.
+Checks whether the value is of the Int32Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isInt32Array(value: Object): boolean--><!--Device-types-isInt32Array(value: Object): boolean-End-->
 
@@ -360,13 +822,22 @@ Check whether the entered value is the int32array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Int32Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Int32Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Int32Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isInt32Array(new Int32Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isInt8Array
 
@@ -374,11 +845,15 @@ Check whether the entered value is the int32array array type.
 isInt8Array(value: Object): boolean
 ```
 
-Check whether the entered value is of int8array array type.
+Checks whether the value is of the Int8Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isInt8Array(value: Object): boolean--><!--Device-types-isInt8Array(value: Object): boolean-End-->
 
@@ -388,13 +863,22 @@ Check whether the entered value is of int8array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Int8Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Int8Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Int8Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isInt8Array(new Int8Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isMap
 
@@ -402,11 +886,15 @@ Check whether the entered value is of int8array array type.
 isMap(value: Object): boolean
 ```
 
-Check whether the entered value is of map type.
+Checks whether the value is of the Map type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isMap(value: Object): boolean--><!--Device-types-isMap(value: Object): boolean-End-->
 
@@ -416,13 +904,22 @@ Check whether the entered value is of map type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Map value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Map instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Map type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isMap(new Map());
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isMapIterator
 
@@ -430,11 +927,15 @@ Check whether the entered value is of map type.
 isMapIterator(value: Object): boolean
 ```
 
-Check whether the entered value is the iterator type of map.
+Checks whether the value is of the MapIterator type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isMapIterator(value: Object): boolean--><!--Device-types-isMapIterator(value: Object): boolean-End-->
 
@@ -444,13 +945,73 @@ Check whether the entered value is the iterator type of map.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Map iterator value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is an iterator returned for a built-in Map instance. |
+| boolean | Check result. The value **true** is returned if the value is of the MapIterator type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+const map : Map<number,number> = new Map();
+let result = type.isMapIterator(map.keys());
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isModuleNamespaceObject
+
+```TypeScript
+isModuleNamespaceObject(value: Object): boolean
+```
+
+Checks whether the value is a module namespace object.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isModuleNamespaceObject(value: Object): boolean--><!--Device-types-isModuleNamespaceObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a module namespace object; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export function func() {
+  console.info("hello world");
+}
+```
+
+```TypeScript
+import * as nameSpace from './test';
+
+let type = new util.types();
+let result = type.isModuleNamespaceObject(nameSpace);
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isNativeError
 
@@ -458,11 +1019,15 @@ Check whether the entered value is the iterator type of map.
 isNativeError(value: Object): boolean
 ```
 
-Check whether the value entered is of type error.
+Checks whether the value is of the Error type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isNativeError(value: Object): boolean--><!--Device-types-isNativeError(value: Object): boolean-End-->
 
@@ -472,13 +1037,63 @@ Check whether the value entered is of type error.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Error value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is an instance of a built-in Error type. |
+| boolean | Check result. The value **true** is returned if the value is of the Error type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isNativeError(new TypeError());
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isNumberObject
+
+```TypeScript
+isNumberObject(value: Object): boolean
+```
+
+Checks whether the value is of the Number type. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isNumberObject(value: Object): boolean--><!--Device-types-isNumberObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the Number type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isNumberObject(new Number(0));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isPromise
 
@@ -486,11 +1101,15 @@ Check whether the value entered is of type error.
 isPromise(value: Object): boolean
 ```
 
-Check whether the entered value is of promise type.
+Checks whether the value is a promise.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isPromise(value: Object): boolean--><!--Device-types-isPromise(value: Object): boolean-End-->
 
@@ -500,13 +1119,67 @@ Check whether the entered value is of promise type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Promise value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Promise. |
+| boolean | Check result. The value **true** is returned if the value is a promise; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isPromise(Promise.resolve(1));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isProxy
+
+```TypeScript
+isProxy(value: Object): boolean
+```
+
+Checks whether the value is a proxy.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isProxy(value: Object): boolean--><!--Device-types-isProxy(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a proxy; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+class Target{
+}
+let type = new util.types();
+const target : Target = {};
+const proxy = new Proxy(target, target);
+let result = type.isProxy(proxy);
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isRegExp
 
@@ -514,11 +1187,15 @@ Check whether the entered value is of promise type.
 isRegExp(value: Object): boolean
 ```
 
-Check whether the entered value is of type regexp.
+Checks whether the value is of the RegExp type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isRegExp(value: Object): boolean--><!--Device-types-isRegExp(value: Object): boolean-End-->
 
@@ -528,13 +1205,22 @@ Check whether the entered value is of type regexp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A regular expression object value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a regular expression object. |
+| boolean | Check result. The value **true** is returned if the value is of the RegExp type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isRegExp(new RegExp('abc'));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isSet
 
@@ -542,11 +1228,15 @@ Check whether the entered value is of type regexp.
 isSet(value: Object): boolean
 ```
 
-Check whether the entered value is of type set.
+Checks whether the value is of the Set type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isSet(value: Object): boolean--><!--Device-types-isSet(value: Object): boolean-End-->
 
@@ -556,13 +1246,23 @@ Check whether the entered value is of type set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Set instance value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Set instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Set type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let set : Set<number> = new Set();
+let result = type.isSet(set);
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isSetIterator
 
@@ -570,11 +1270,15 @@ Check whether the entered value is of type set.
 isSetIterator(value: Object): boolean
 ```
 
-Check whether the entered value is the iterator type of set.
+Checks whether the value is of the SetIterator type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isSetIterator(value: Object): boolean--><!--Device-types-isSetIterator(value: Object): boolean-End-->
 
@@ -584,13 +1288,153 @@ Check whether the entered value is the iterator type of set.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Set iterator value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is an iterator returned for a built-in Set instance. |
+| boolean | Check result. The value **true** is returned if the value is of the SetIterator type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+const set : Set<number> = new Set();
+let result = type.isSetIterator(set.keys());
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isSharedArrayBuffer
+
+```TypeScript
+isSharedArrayBuffer(value: Object): boolean
+```
+
+Checks whether the value is of the SharedArrayBuffer type.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isSharedArrayBuffer(value: Object): boolean--><!--Device-types-isSharedArrayBuffer(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is of the SharedArrayBuffer type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isSharedArrayBuffer(new SharedArrayBuffer(0));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isStringObject
+
+```TypeScript
+isStringObject(value: Object): boolean
+```
+
+Checks whether the value is a string object. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isStringObject(value: Object): boolean--><!--Device-types-isStringObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a string object; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isStringObject(new String('foo'));
+console.info("result = " + result);
+// Output: result = true
+```
+
+## isSymbolObject
+
+```TypeScript
+isSymbolObject(value: Object): boolean
+```
+
+Checks whether the value is a symbol object. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 14. No substitute is provided.
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** 14
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-types-isSymbolObject(value: Object): boolean--><!--Device-types-isSymbolObject(value: Object): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | Object | Yes | Object to check. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result. The value **true** is returned if the value is a symbol object; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+// /entry/src/main/ets/pages/test.ts
+export const symbols = Symbol('foo');
+```
+
+```TypeScript
+import { symbols } from './test'
+
+let type = new util.types();
+let result = type.isSymbolObject(Object(symbols));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isTypedArray
 
@@ -598,11 +1442,15 @@ Check whether the entered value is the iterator type of set.
 isTypedArray(value: Object): boolean
 ```
 
-Check whether the entered value is a type contained in typedarray.
+Checks whether the value is of the TypedArray type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isTypedArray(value: Object): boolean--><!--Device-types-isTypedArray(value: Object): boolean-End-->
 
@@ -612,13 +1460,22 @@ Check whether the entered value is a type contained in typedarray.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A TypedArray instance value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in TypedArray instance. |
+| boolean | Check result. The value **true** is returned if the value is of the TypedArray type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isTypedArray(new Float64Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isUint16Array
 
@@ -626,11 +1483,15 @@ Check whether the entered value is a type contained in typedarray.
 isUint16Array(value: Object): boolean
 ```
 
-Check whether the entered value is the uint16array array array type.
+Checks whether the value is of the Uint16Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isUint16Array(value: Object): boolean--><!--Device-types-isUint16Array(value: Object): boolean-End-->
 
@@ -640,13 +1501,22 @@ Check whether the entered value is the uint16array array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Uint16Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Uint16Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Uint16Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint16Array(new Uint16Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isUint32Array
 
@@ -654,11 +1524,15 @@ Check whether the entered value is the uint16array array array type.
 isUint32Array(value: Object): boolean
 ```
 
-Check whether the entered value is the uint32array array type.
+Checks whether the value is of the Uint32Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isUint32Array(value: Object): boolean--><!--Device-types-isUint32Array(value: Object): boolean-End-->
 
@@ -668,13 +1542,22 @@ Check whether the entered value is the uint32array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Uint32Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Uint32Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Uint32Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint32Array(new Uint32Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isUint8Array
 
@@ -682,11 +1565,15 @@ Check whether the entered value is the uint32array array type.
 isUint8Array(value: Object): boolean
 ```
 
-Check whether the entered value is the uint8array array type.
+Checks whether the value is of the Uint8Array type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isUint8Array(value: Object): boolean--><!--Device-types-isUint8Array(value: Object): boolean-End-->
 
@@ -696,13 +1583,22 @@ Check whether the entered value is the uint8array array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Uint8Array value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Uint8Array instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Uint8Array type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint8Array(new Uint8Array([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isUint8ClampedArray
 
@@ -710,11 +1606,15 @@ Check whether the entered value is the uint8array array type.
 isUint8ClampedArray(value: Object): boolean
 ```
 
-Check whether the entered value is the uint8clapedarray array type.
+Checks whether the value is of the Uint8ClampedArray type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isUint8ClampedArray(value: Object): boolean--><!--Device-types-isUint8ClampedArray(value: Object): boolean-End-->
 
@@ -724,13 +1624,22 @@ Check whether the entered value is the uint8clapedarray array type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A Uint8ClampedArray value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in Uint8ClampedArray instance. |
+| boolean | Check result. The value **true** is returned if the value is of the Uint8ClampedArray type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isUint8ClampedArray(new Uint8ClampedArray([]));
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isWeakMap
 
@@ -738,11 +1647,15 @@ Check whether the entered value is the uint8clapedarray array type.
 isWeakMap(value: Object): boolean
 ```
 
-Check whether the entered value is of type weakmap.
+Checks whether the value is of the WeakMap type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isWeakMap(value: Object): boolean--><!--Device-types-isWeakMap(value: Object): boolean-End-->
 
@@ -752,13 +1665,23 @@ Check whether the entered value is of type weakmap.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A WeakMap value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in WeakMap instance. |
+| boolean | Check result. The value **true** is returned if the value is of the WeakMap type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let value : WeakMap<object, number> = new WeakMap();
+let result = type.isWeakMap(value);
+console.info("result = " + result);
+// Output: result = true
+```
 
 ## isWeakSet
 
@@ -766,11 +1689,15 @@ Check whether the entered value is of type weakmap.
 isWeakSet(value: Object): boolean
 ```
 
-Check whether the entered value is of type weakset.
+Checks whether the value is of the WeakSet type.
 
-**Since:** 23
+**Since:** 8
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-types-isWeakSet(value: Object): boolean--><!--Device-types-isWeakSet(value: Object): boolean-End-->
 
@@ -780,11 +1707,20 @@ Check whether the entered value is of type weakset.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Object | Yes | A WeakSet value |
+| value | Object | Yes | Object to check. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if the value is a built-in WeakSet instance. |
+| boolean | Check result. The value **true** is returned if the value is of the WeakSet type; otherwise, **false** is returned. |
+
+## Examples
+
+```TypeScript
+let type = new util.types();
+let result = type.isWeakSet(new WeakSet());
+console.info("result = " + result);
+// Output: result = true
+```
 

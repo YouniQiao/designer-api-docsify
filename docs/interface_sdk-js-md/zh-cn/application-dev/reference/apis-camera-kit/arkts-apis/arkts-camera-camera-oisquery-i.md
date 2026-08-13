@@ -4,7 +4,9 @@ OIS (Optical Image Stabilization) query interface.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 <!--Device-camera-interface OISQuery--><!--Device-camera-interface OISQuery-End-->
 
@@ -12,12 +14,6 @@ OIS (Optical Image Stabilization) query interface.
 
 ## getCurrentCustomOISBias
 
-ArkTS-Dyn:
-```TypeScript
-getCurrentCustomOISBias(oisAxis: OISAxes): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCurrentCustomOISBias(oisAxis: OISAxes): double
 ```
@@ -26,7 +22,9 @@ Gets the current custom bias value for the specified OIS axis.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,14 +44,14 @@ Gets the current custom bias value for the specified OIS axis.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The current bias value. |
+| double | The current bias value. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getCurrentOISMode
 
@@ -65,7 +63,9 @@ Gets the current OIS mode.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -85,17 +85,11 @@ Gets the current OIS mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getSupportedOISBiasRange
 
-ArkTS-Dyn:
-```TypeScript
-getSupportedOISBiasRange(oisAxis: OISAxes): Array<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSupportedOISBiasRange(oisAxis: OISAxes): Array<double>
 ```
@@ -104,7 +98,9 @@ Gets the supported bias range for the specified OIS axis.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,23 +120,17 @@ Gets the supported bias range for the specified OIS axis.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | The bias range. |
+| Array&lt;double&gt; | The bias range. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## getSupportedOISBiasStep
 
-ArkTS-Dyn:
-```TypeScript
-getSupportedOISBiasStep(oisAxis: OISAxes): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSupportedOISBiasStep(oisAxis: OISAxes): double
 ```
@@ -149,7 +139,9 @@ Gets the bias step for the specified OIS axis.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -169,14 +161,14 @@ Gets the bias step for the specified OIS axis.
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | The bias step value. |
+| double | The bias step value. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## isOISModeSupported
 
@@ -188,7 +180,9 @@ Checks if the specified OIS mode is supported.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -214,6 +208,6 @@ Checks if the specified OIS mode is supported.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

@@ -4,6 +4,8 @@ Enumerates the emitter shapes of a particle.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ParticleEmitterShape--><!--Device-unnamed-declare enum ParticleEmitterShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ RECTANGLE = 'rectangle'
 Rectangle.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Circle.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -54,6 +60,8 @@ Ellipse.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,6 +79,8 @@ ANNULUS = 'annulus'
 Annulus.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

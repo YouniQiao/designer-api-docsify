@@ -4,6 +4,8 @@ Enumeration of AVMusicTemplate type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-enum AVMusicTemplateType--><!--Device-avMusicTemplate-enum AVMusicTemplateType-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ DEFAULT = 'smartCar'
 Smart_car.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

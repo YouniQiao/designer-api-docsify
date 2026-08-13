@@ -14,9 +14,11 @@ function clean(accountId: string, appActions: Record<string, Action>): Promise<v
 
 Callback used to clear the cloud data locally. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -31,7 +33,7 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#Action) specifies the action to perform. |
+| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#Action-(System-API)) specifies the action to perform. |
 
 **Return value:**
 
@@ -43,9 +45,9 @@ Callback used to clear the cloud data locally. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 
@@ -73,9 +75,11 @@ function clean(accountId: string, appActions: Record<string, Action>, callback: 
 
 Callback used to clear the cloud data locally. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -90,16 +94,16 @@ Callback used to clear the cloud data locally. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | accountId | string | Yes | Account ID. |
-| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#Action) specifies the action to perform. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
+| appActions | Record&lt;string, Action&gt; | Yes | Action to perform. The bundle name of the application whose data is to be cleared is a string. [Action](arkts-corefile-cloudsyncmanager-action-e-sys.md#Action-(System-API)) specifies the action to perform. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to clear the cloud data locally. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 
 ## Examples
 

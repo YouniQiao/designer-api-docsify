@@ -2,7 +2,9 @@
 
 FunctionKey of Input.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export interface FunctionKey--><!--Device-inputMethod-export interface FunctionKey-End-->
 
@@ -24,7 +26,9 @@ Indicates the enter key type of the input method.
 
 **Type:** EnterKeyType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionKey-enterKeyType: EnterKeyType--><!--Device-FunctionKey-enterKeyType: EnterKeyType-End-->
 

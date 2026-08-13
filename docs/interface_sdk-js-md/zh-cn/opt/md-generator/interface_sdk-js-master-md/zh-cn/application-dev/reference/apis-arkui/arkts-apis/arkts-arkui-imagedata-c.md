@@ -1,13 +1,10 @@
 # ImageData
 
-ImageData对象可以存储canvas渲染的像素数据。
-
-> **说明：**
-> 
-> 创建ImageData时，宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。
-> 当创建面积超过536870911px时，返回值的width和height均为0px，data为undefined。
+ImageData对象可以存储canvas渲染的像素数据。 > **说明：** > > 创建ImageData时，宽高不超过16384px，最大面积不超过16000px*16000px，超过最大面积则无法正常绘制。 > 当创建面积超过536870911px时，返回值的width和height均为0px，data为undefined。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class ImageData--><!--Device-unnamed-declare class ImageData-End-->
 
@@ -22,6 +19,8 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 创建宽为width，高为height，像素为data的ImageData，如果data未定义，则填充值全为0的一维数组。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -45,9 +44,11 @@ constructor(width: number, height: number, data?: Uint8ClampedArray)
 constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: LengthMetricsUnit)
 ```
 
-创建宽为width，高为height，像素为data的ImageData，如果data未定义，则填充值全为0的一维数组，支持使用unit配置ImageData对象的单位模式。
+创建宽为width，高为height，像素为data的ImageData，如果data未定义，则填充值全为0的一维数组， 支持使用unit配置ImageData对象的单位模式。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,7 +67,7 @@ constructor(width: number, height: number, data?: Uint8ClampedArray, unit?: Leng
 | [width](#width) | number | 是 |
 | [height](#height) | number | 是 |
 | [data](#data) | [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md) | 否 |
-| unit | [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md) | 否 |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-lengthmetricsunit-t.md) | 否 |
 
 ## data
 
@@ -79,6 +80,8 @@ readonly data: Uint8ClampedArray
 **类型：** [Uint8ClampedArray](../../apis-arkts/arkts-apis/arkts-arkts-collections-uint8clampedarray-c.md)
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -94,11 +97,13 @@ readonly data: Uint8ClampedArray
 readonly height: number
 ```
 
-矩形区域实际像素高度。&lt;br&gt;单位为px。
+矩形区域实际像素高度。 &lt;br&gt;单位为px。
 
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -114,16 +119,13 @@ readonly height: number
 readonly width: number
 ```
 
-矩形区域实际像素宽度。&lt;br&gt;单位为px。
-
-> **说明：**
-> 
-> 可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12)
-> 接口进行单位转换。
+矩形区域实际像素宽度。 &lt;br&gt;单位为px。 > **说明：** > > 可使用[px2vp](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#px2vp12) > 接口进行单位转换。
 
 **类型：** number
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

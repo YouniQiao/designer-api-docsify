@@ -2,9 +2,11 @@
 
 Position definition of one component on which the menu will bind and popup.
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
 
@@ -24,13 +26,15 @@ height: int
 
 Component height, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
 
@@ -44,13 +48,15 @@ width: int
 
 Component width, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-width: int--><!--Device-MenuPosition-width: int-End-->
 
@@ -64,13 +70,15 @@ x: int
 
 Coordinate x of the position of the component, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
 
@@ -84,13 +92,15 @@ y: int
 
 Coordinate y of the position of the component, uint is vp.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-MenuPosition-y: int--><!--Device-MenuPosition-y: int-End-->
 

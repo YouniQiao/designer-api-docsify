@@ -2,7 +2,9 @@
 
 相机输出能力项。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface CameraOutputCapability--><!--Device-camera-interface CameraOutputCapability-End-->
 
@@ -18,7 +20,9 @@ Supported depth stream profiles.
 
 **类型：** Array&lt;[DepthProfile](arkts-camera-camera-depthprofile-i-sys.md)&gt;
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CameraOutputCapability-readonly depthProfiles: Array<DepthProfile>--><!--Device-CameraOutputCapability-readonly depthProfiles: Array<DepthProfile>-End-->
 

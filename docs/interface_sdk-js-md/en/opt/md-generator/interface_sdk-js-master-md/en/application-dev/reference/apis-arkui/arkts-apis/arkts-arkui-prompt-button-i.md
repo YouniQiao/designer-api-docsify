@@ -6,7 +6,7 @@ Defines the prompt info of button.
 
 **Deprecated since:** 9
 
-**Substitutes:** [Button](ohos.promptAction/promptAction.Button)
+**Substitutes:** [Button](arkts-arkui-promptaction-button-i.md#Button)
 
 <!--Device-prompt-interface Button--><!--Device-prompt-interface Button-End-->
 
@@ -32,7 +32,7 @@ Defines the color of button.
 
 **Deprecated since:** 9
 
-**Substitutes:** [color](ohos.promptAction/promptAction.Button#color)
+**Substitutes:** [color](arkts-arkui-promptaction-button-i.md#color)
 
 <!--Device-Button-color: string--><!--Device-Button-color: string-End-->
 
@@ -52,7 +52,7 @@ Defines the button info.
 
 **Deprecated since:** 9
 
-**Substitutes:** [text](ohos.promptAction/promptAction.Button#text)
+**Substitutes:** [text](arkts-arkui-promptaction-button-i.md#text)
 
 <!--Device-Button-text: string--><!--Device-Button-text: string-End-->
 

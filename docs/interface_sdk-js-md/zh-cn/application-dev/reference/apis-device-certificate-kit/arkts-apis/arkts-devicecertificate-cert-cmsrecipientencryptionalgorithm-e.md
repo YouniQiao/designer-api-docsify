@@ -2,9 +2,11 @@
 
 CMS封装数据的内容加密算法的枚举。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cert-enum CmsRecipientEncryptionAlgorithm--><!--Device-cert-enum CmsRecipientEncryptionAlgorithm-End-->
 
@@ -18,11 +20,13 @@ AES_128_CBC = 0
 
 AES_128_CBC算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0-End-->
 
@@ -36,11 +40,13 @@ AES_192_CBC = 1
 
 AES_192_CBC算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
 
@@ -54,11 +60,13 @@ AES_256_CBC = 2
 
 AES_256_CBC算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
 
@@ -72,11 +80,13 @@ AES_128_GCM = 3
 
 AES_128_GCM算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3-End-->
 
@@ -90,11 +100,13 @@ AES_192_GCM = 4
 
 AES_192_GCM算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4-End-->
 
@@ -108,11 +120,13 @@ AES_256_GCM = 5
 
 AES_256_GCM算法。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5-End-->
 

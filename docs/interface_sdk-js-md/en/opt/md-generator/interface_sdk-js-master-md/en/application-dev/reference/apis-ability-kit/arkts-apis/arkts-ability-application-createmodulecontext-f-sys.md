@@ -12,21 +12,11 @@ import { application } from '@kit.AbilityKit';
 export function createModuleContext(context: Context, bundleName: string, moduleName: string): Promise<Context>
 ```
 
-Creates the context for a module. This API uses a promise to return the result.
+Creates the context for a module. This API uses a promise to return the result. > **NOTE：**> > - Starting from API version 18, the context can obtain the > [process name](arkts-ability-context-c.md#Context) of the current > application. The **processName** property in the context created by **createModuleContext** is the same as the > **processName** property in the input parameter **Context**. The values of other properties are obtained based on > the input parameters **Context**, **bundleName**, and **moduleName**. > > - Creating a module context involves resource querying and initialization, which can be time-consuming. In > scenarios where application fluidity is critical, avoid frequently or repeatedly calling the > **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
 
-> **NOTE：**
-> 
-> - Starting from API version 18, the context can obtain the
-> [process name](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context) of the current
-> application. The **processName** property in the context created by **createModuleContext** is the same as the
-> **processName** property in the input parameter **Context**. The values of other properties are obtained based on
-> the input parameters **Context**, **bundleName**, and **moduleName**.
-> 
-> - Creating a module context involves resource querying and initialization, which can be time-consuming. In
-> scenarios where application fluidity is critical, avoid frequently or repeatedly calling the
-> **createModuleContext** API to create multiple context instances, as this may negatively impact user experience.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -56,9 +46,9 @@ Creates the context for a module. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

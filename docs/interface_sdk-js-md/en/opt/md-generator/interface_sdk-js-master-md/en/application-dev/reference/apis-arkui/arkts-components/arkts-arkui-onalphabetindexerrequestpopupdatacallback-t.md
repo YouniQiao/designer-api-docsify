@@ -4,10 +4,11 @@
 declare type OnAlphabetIndexerRequestPopupDataCallback  = (index: number) => Array<string>
 ```
 
-Represents the callback invoked when an index item is selected and  
-[usingPopup](AlphabetIndexerAttribute#usingPopup) is set to **true**.
+Represents the callback invoked when an index item is selected and [usingPopup](arkts-arkui-alphabetindexer-attribute.md#usingPopup) is set to **true**.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,23 +1,14 @@
 # Path2D
 
-**Path2D** allows you to describe a path through an existing path. This path can be drawn through the **stroke** or **fill** API of **Canvas**.
-
-> **NOTE：**
-> 
-> The Path2D object does not support the resetting of an existing path. If a new path
-> is required, you can create an empty Path2D object.
-> 
-> The methods of the Path2D object do not take effect for the paths set in the
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
-> and
-> [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D)
-> objects.
+**Path2D** allows you to describe a path through an existing path. This path can be drawn through the **stroke** or **fill** API of **Canvas**. > **NOTE：**> > The Path2D object does not support the resetting of an existing path. If a new path > is required, you can create an empty Path2D object. > > The methods of the Path2D object do not take effect for the paths set in the > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D) > and > [OffscreenCanvasRenderingContext2D](arkts-arkui-offscreencanvasrenderingcontext2d-c.md#OffscreenCanvasRenderingContext2D) > objects.
 
 **Inheritance/Implementation:** Path2D extends [CanvasPath](arkts-arkui-canvaspath-c.md#CanvasPath)
 
 **Since:** 8
 
-<!--Device-unnamed-declare class Path2D extends CanvasPath--><!--Device-unnamed-declare class Path2D extends CanvasPath-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class Path2D--><!--Device-unnamed-declare class Path2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +21,8 @@ addPath(path: Path2D, transform?: Matrix2D): void
 Adds a path to this path.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +49,8 @@ Constructs an empty **Path2D** object.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -74,6 +69,8 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -88,7 +85,7 @@ Constructs an empty Path2D object. The unit mode of the Path2D object can be con
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-lengthmetricsunit-t.md) | Yes |
 
 ## constructor
 
@@ -99,6 +96,8 @@ constructor(path: Path2D)
 Constructs a Path2D object using a path object.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -124,6 +123,8 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -139,7 +140,7 @@ When a path object is used to construct a Path2D object, the unit mode of the Pa
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | path | [Path2D](arkts-arkui-path2d-c.md) | Yes |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-lengthmetricsunit-t.md) | Yes |
 
 ## constructor
 
@@ -150,6 +151,8 @@ constructor(d: string)
 Constructs a Path2D object using a path string that complies with the SVG path description specifications.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -175,6 +178,8 @@ Constructs a Path2D object using a path string that complies with the SVG path s
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -190,4 +195,4 @@ Constructs a Path2D object using a path string that complies with the SVG path s
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | description | string | Yes |
-| unit | [LengthMetricsUnit](../arkts-apis/arkts-arkui-lengthmetricsunit-t.md) | Yes |
+| unit | [LengthMetricsUnit](../../apis-na/arkts-apis/arkts-na-lengthmetricsunit-t.md) | Yes |

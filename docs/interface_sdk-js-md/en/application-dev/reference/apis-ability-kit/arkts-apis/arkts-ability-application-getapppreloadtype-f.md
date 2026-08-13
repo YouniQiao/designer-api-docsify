@@ -12,19 +12,13 @@ import { application } from '@kit.AbilityKit';
 export function getAppPreloadType(): AppPreloadType
 ```
 
-Obtains the preloading type of the current application process.
+Obtains the preloading type of the current application process. > **NOTE：**> > - This API can return the actual preloading type only if it is called before the first execution of > [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate). > > - Once the AbilityStage creation finishes, the preloaded data of the application is cleared. Any subsequent calls > will return **UNSPECIFIED** instead of the original preloading type.
 
-> **NOTE：**
-> 
-> - This API can return the actual preloading type only if it is called before the first execution of
-> [AbilityStage.onCreate](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onCreate).
-> 
-> - Once the AbilityStage creation finishes, the preloaded data of the application is cleared. Any subsequent calls
-> will return **UNSPECIFIED** instead of the original preloading type.
+**Since:** 23
 
-**Since:** 22
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

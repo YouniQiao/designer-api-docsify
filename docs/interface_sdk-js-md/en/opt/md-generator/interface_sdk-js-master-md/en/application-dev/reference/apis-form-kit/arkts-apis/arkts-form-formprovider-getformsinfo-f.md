@@ -14,7 +14,9 @@ function getFormsInfo(filter: formInfo.FormInfoFilter, callback: AsyncCallback<A
 
 Obtains the application's widget information that meets a filter criterion on the device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,10 +35,10 @@ Obtains the application's widget information that meets a filter criterion on th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 
@@ -70,7 +72,9 @@ function getFormsInfo(callback: AsyncCallback<Array<formInfo.FormInfo>>): void
 
 Obtains the application's widget information on the device. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -88,10 +92,10 @@ Obtains the application's widget information on the device. This API uses an asy
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 
@@ -121,7 +125,9 @@ function getFormsInfo(filter?: formInfo.FormInfoFilter): Promise<Array<formInfo.
 
 Obtains information about widgets that meet the criteria of the current application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -145,10 +151,10 @@ Obtains information about widgets that meet the criteria of the current applicat
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 ## Examples
 

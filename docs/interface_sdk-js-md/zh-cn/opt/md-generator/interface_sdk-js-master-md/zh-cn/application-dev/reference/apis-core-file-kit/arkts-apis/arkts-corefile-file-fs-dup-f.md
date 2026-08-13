@@ -10,6 +10,8 @@ declare function dup(fd: number): File
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function dup(fd: number): File--><!--Device-unnamed-declare function dup(fd: number): File-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

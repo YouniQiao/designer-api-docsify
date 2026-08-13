@@ -12,6 +12,8 @@ function totalEnergy(): int
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-batteryInfo-function totalEnergy(): int--><!--Device-batteryInfo-function totalEnergy(): int-End-->
 
 **系统能力：** SystemCapability.PowerManager.BatteryManager.Core

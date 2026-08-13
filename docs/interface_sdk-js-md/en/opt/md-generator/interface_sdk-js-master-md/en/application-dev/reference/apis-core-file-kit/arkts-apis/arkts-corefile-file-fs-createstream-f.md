@@ -12,10 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function createStream(path: string, mode: string): Promise<Stream>
 ```
 
-Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use  
-**close()** of [Stream](arkts-corefile-file-fs-stream-i.md#Stream).
+Creates a stream based on a file path. This API uses a promise to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md#Stream).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -78,6 +79,8 @@ declare function createStream(path: string, mode: string, callback: AsyncCallbac
 Creates a stream based on a file path. This API uses an asynchronous callback to return the result. To close the stream, use **close()** of [Stream](arkts-corefile-file-fs-stream-i.md#Stream).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

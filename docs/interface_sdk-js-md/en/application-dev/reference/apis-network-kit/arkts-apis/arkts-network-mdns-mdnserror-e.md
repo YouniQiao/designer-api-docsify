@@ -6,6 +6,8 @@ Defines the mDNS error information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-mdns-export enum MdnsError--><!--Device-mdns-export enum MdnsError-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.MDNS
@@ -21,6 +23,8 @@ Indicates that the operation failed due to internal error.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Indicates that the operation failed because it is already active.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MdnsError-ALREADY_ACTIVE = 1--><!--Device-MdnsError-ALREADY_ACTIVE = 1-End-->
@@ -57,6 +63,8 @@ MAX_LIMIT = 2
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

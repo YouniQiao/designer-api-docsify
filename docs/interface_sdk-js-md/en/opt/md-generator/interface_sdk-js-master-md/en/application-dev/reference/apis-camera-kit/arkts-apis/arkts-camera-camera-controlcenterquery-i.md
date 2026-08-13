@@ -2,7 +2,9 @@
 
 ControlCenterQuery is used to check whether the camera controller is supported.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface ControlCenterQuery--><!--Device-camera-interface ControlCenterQuery-End-->
 
@@ -22,9 +24,11 @@ getSupportedEffectTypes(): Array<ControlCenterEffectType>
 
 Obtains the effect types supported by the camera controller.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ControlCenterQuery-getSupportedEffectTypes(): Array<ControlCenterEffectType>--><!--Device-ControlCenterQuery-getSupportedEffectTypes(): Array<ControlCenterEffectType>-End-->
 
@@ -44,9 +48,11 @@ isControlCenterSupported(): boolean
 
 Checks whether the camera controller is supported.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ControlCenterQuery-isControlCenterSupported(): boolean--><!--Device-ControlCenterQuery-isControlCenterSupported(): boolean-End-->
 

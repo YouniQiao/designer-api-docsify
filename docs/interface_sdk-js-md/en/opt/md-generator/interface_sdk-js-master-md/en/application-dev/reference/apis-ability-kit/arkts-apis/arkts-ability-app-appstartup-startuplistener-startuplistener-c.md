@@ -2,7 +2,9 @@
 
 The module defines the task listener used in [App Startup](../../../application-models/app-startup.md).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class StartupListener--><!--Device-unnamed-declare class StartupListener-End-->
 
@@ -23,6 +25,8 @@ onCompleted?(error: BusinessError<void>): void
 Called when all startup tasks complete.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,3 +70,23 @@ export default class MyStartupConfigEntry extends StartupConfigEntry {
   }
 }
 ```
+
+## onCompleted
+
+```TypeScript
+onCompleted?: OnCompletedFn
+```
+
+Called when all startup tasks complete.
+
+**Type:** [OnCompletedFn](arkts-ability-oncompletedfn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-StartupListener-onCompleted?: OnCompletedFn--><!--Device-StartupListener-onCompleted?: OnCompletedFn-End-->
+
+**System capability:** SystemCapability.Ability.AppStartup

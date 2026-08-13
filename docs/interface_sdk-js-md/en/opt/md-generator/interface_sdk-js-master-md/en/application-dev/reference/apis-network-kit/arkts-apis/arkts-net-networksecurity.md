@@ -2,7 +2,9 @@
 
 Provides networkSecurity related APIs.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace networkSecurity--><!--Device-unnamed-declare namespace networkSecurity-End-->
 
@@ -20,11 +22,11 @@ import { networkSecurity } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [certVerification](arkts-network-networksecurity-certverification-f.md#certverification) |
-| [certVerificationSync](arkts-network-networksecurity-certverificationsync-f.md#certverificationsync) |
-| [isCleartextPermitted](arkts-network-networksecurity-iscleartextpermitted-f.md#iscleartextpermitted) |
-| [isCleartextPermittedByHostName](arkts-network-networksecurity-iscleartextpermittedbyhostname-f.md#iscleartextpermittedbyhostname) |
-| [verifyCertChain](arkts-network-networksecurity-verifycertchain-f.md#verifycertchain) |
+| [certVerification](arkts-network-networksecurity-certverification-f.md#certVerification) |
+| [certVerificationSync](arkts-network-networksecurity-certverificationsync-f.md#certVerificationSync) |
+| [isCleartextPermitted](arkts-network-networksecurity-iscleartextpermitted-f.md#isCleartextPermitted) |
+| [isCleartextPermittedByHostName](arkts-network-networksecurity-iscleartextpermittedbyhostname-f.md#isCleartextPermittedByHostName) |
+| [verifyCertChain](arkts-network-networksecurity-verifycertchain-f.md#verifyCertChain) |
 
 ### Interfaces
 

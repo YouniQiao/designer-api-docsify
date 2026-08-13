@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
 
 **系统能力：** SystemCapability.Global.I18n
@@ -17,6 +19,8 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 创建数字格式化对象。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -53,6 +57,8 @@ format(num: number): string
 对数字进行格式化。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

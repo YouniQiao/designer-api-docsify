@@ -6,6 +6,8 @@ Provides detailed information about the changes of the same-layer tag lifecycle.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NativeEmbedDataInfo--><!--Device-unnamed-declare interface NativeEmbedDataInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ ID of the same-layer tag.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,6 +48,8 @@ Detailed information about the same-layer tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedDataInfo-info?: NativeEmbedInfo--><!--Device-NativeEmbedDataInfo-info?: NativeEmbedInfo-End-->
@@ -64,6 +70,8 @@ Lifecycle status of the same-layer tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedDataInfo-status?: NativeEmbedStatus--><!--Device-NativeEmbedDataInfo-status?: NativeEmbedStatus-End-->
@@ -83,6 +91,8 @@ Surface ID of the native image.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

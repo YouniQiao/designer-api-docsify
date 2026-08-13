@@ -6,9 +6,11 @@
 export function exitMasterProcessRole(): Promise<void>
 ```
 
-放弃当前进程的[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)身份。使用Promise异步回调。该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
+放弃当前进程的[主控进程](../../../application-models/ability-terminology.md#masterprocess主控进程)身份。使用Promise异步回调。 该接口仅在2in1、Tablet设备中可正常调用，在其他设备中返回801错误码。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,9 +28,9 @@ export function exitMasterProcessRole(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [16000118](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000118-当前进程非主控进程) |
-| [16000119](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000119-存在未完成的请求) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [16000118](../errorcode-ability.md#16000118-当前进程非主控进程) |
+| [16000119](../errorcode-ability.md#16000119-存在未完成的请求) |
 
 ## 示例
 

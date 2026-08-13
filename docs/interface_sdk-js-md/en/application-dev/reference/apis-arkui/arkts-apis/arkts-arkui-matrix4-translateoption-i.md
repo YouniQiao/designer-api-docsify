@@ -1,12 +1,14 @@
 # TranslateOption
 
-Set translation parameters
+Describes the translation parameters.
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-matrix4-export interface TranslateOption--><!--Device-matrix4-export interface TranslateOption-End-->
+**Deprecated since:** -1
+
+<!--Device-matrix4-interface TranslateOption--><!--Device-matrix4-interface TranslateOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,60 +21,66 @@ import { matrix4 } from '@kit.ArkUI';
 ## x
 
 ```TypeScript
-x?: double
+x?: number
 ```
 
-Indicates the translation distance of the x-axis, in px.
+Translation distance along the x-axis. Unit: px Default value: **0** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-TranslateOption-x?: double--><!--Device-TranslateOption-x?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TranslateOption-x?: number--><!--Device-TranslateOption-x?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## y
 
 ```TypeScript
-y?: double
+y?: number
 ```
 
-Indicates the translation distance of the y-axis, in px.
+Translation distance along the y-axis. Unit: px Default value: **0** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-TranslateOption-y?: double--><!--Device-TranslateOption-y?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TranslateOption-y?: number--><!--Device-TranslateOption-y?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## z
 
 ```TypeScript
-z?: double
+z?: number
 ```
 
-Indicates the translation distance of the z-axis, in px.
+Translation distance along the z-axis. Unit: px Default value: **0** Value range: (-∞, +∞)
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 7
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-TranslateOption-z?: double--><!--Device-TranslateOption-z?: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TranslateOption-z?: number--><!--Device-TranslateOption-z?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

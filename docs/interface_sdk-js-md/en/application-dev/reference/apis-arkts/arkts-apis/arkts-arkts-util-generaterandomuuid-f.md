@@ -12,11 +12,15 @@ import { util } from '@kit.ArkTS';
 function generateRandomUUID(entropyCache?: boolean): string
 ```
 
-Generate a random RFC 4122 version 4 UUID using a cryptographically secure random number generator.
+Uses a secure random number generator to generate a random universally unique identifier (UUID) of the string type in RFC 4122 version 4. To improve performance, this API uses cached UUIDs by default, in which **entropyCache** is set to **true**. A maximum of 128 random UUIDs can be cached. After all the 128 UUIDs in the cache are used, a new set of UUIDs is generated to maintain their random distribution. If you do not need to use the cached UUID, set **entropyCache** to **false**.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-util-function generateRandomUUID(entropyCache?: boolean): string--><!--Device-util-function generateRandomUUID(entropyCache?: boolean): string-End-->
 
@@ -26,17 +30,19 @@ Generate a random RFC 4122 version 4 UUID using a cryptographically secure rando
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| entropyCache | boolean | No | Whether to generate the UUID with using the cache. Default: true. |
+| entropyCache | boolean | No | Whether to use a cached UUID. The value **true** means to use a cached UUID, and **false** means the opposite. The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return a string representing this UUID. |
+| string | A string representing the UUID generated. |
 
-**Error codes:**
+## Examples
 
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types. |
+```TypeScript
+let uuid = util.generateRandomUUID(true);
+console.info("RFC 4122 Version 4 UUID:" + uuid);
+// Output a random UUID.
+```
 

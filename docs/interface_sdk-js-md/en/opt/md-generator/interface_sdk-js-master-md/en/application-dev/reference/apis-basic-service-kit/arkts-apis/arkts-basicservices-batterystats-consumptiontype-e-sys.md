@@ -2,7 +2,9 @@
 
 Enumerates power consumption types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-batteryStats-export enum ConsumptionType--><!--Device-batteryStats-export enum ConsumptionType-End-->
 
@@ -18,7 +20,9 @@ CONSUMPTION_TYPE_INVALID = -17
 
 Unknown type.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_INVALID = -17--><!--Device-ConsumptionType-CONSUMPTION_TYPE_INVALID = -17-End-->
 
@@ -34,7 +38,9 @@ CONSUMPTION_TYPE_APP
 
 Power consumption of an application.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_APP--><!--Device-ConsumptionType-CONSUMPTION_TYPE_APP-End-->
 
@@ -50,7 +56,9 @@ CONSUMPTION_TYPE_BLUETOOTH
 
 Power consumption of Bluetooth.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_BLUETOOTH--><!--Device-ConsumptionType-CONSUMPTION_TYPE_BLUETOOTH-End-->
 
@@ -66,7 +74,9 @@ CONSUMPTION_TYPE_IDLE
 
 Power consumption when the CPU is idle.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_IDLE--><!--Device-ConsumptionType-CONSUMPTION_TYPE_IDLE-End-->
 
@@ -82,7 +92,9 @@ CONSUMPTION_TYPE_PHONE
 
 Power consumption of a phone call.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_PHONE--><!--Device-ConsumptionType-CONSUMPTION_TYPE_PHONE-End-->
 
@@ -98,7 +110,9 @@ CONSUMPTION_TYPE_RADIO
 
 Power consumption of wireless communication.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_RADIO--><!--Device-ConsumptionType-CONSUMPTION_TYPE_RADIO-End-->
 
@@ -114,7 +128,9 @@ CONSUMPTION_TYPE_SCREEN
 
 Power consumption of the screen.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_SCREEN--><!--Device-ConsumptionType-CONSUMPTION_TYPE_SCREEN-End-->
 
@@ -130,7 +146,9 @@ CONSUMPTION_TYPE_USER
 
 Power consumption of the user.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_USER--><!--Device-ConsumptionType-CONSUMPTION_TYPE_USER-End-->
 
@@ -146,7 +164,9 @@ CONSUMPTION_TYPE_WIFI
 
 Power consumption of Wi-Fi.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConsumptionType-CONSUMPTION_TYPE_WIFI--><!--Device-ConsumptionType-CONSUMPTION_TYPE_WIFI-End-->
 

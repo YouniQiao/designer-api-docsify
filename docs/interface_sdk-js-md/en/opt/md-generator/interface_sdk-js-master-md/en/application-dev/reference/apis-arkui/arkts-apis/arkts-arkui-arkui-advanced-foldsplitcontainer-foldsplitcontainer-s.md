@@ -1,19 +1,10 @@
 # FoldSplitContainer
 
-**FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state,and the folded state.
-
-> **NOTE：**
-> 
-> By default, a two-panel layout is used when the window width is less than or equal to 600 vp.
-> When the window width exceeds 600 vp, an extended area is supported alongside the top-bottom split layout.
-> A semi-folded state layout can be triggered when the window width is greater than 600 vp and the device
-> is in a horizontal, half-folded posture. In the semi-folded layout, visual avoidance for the screen
-> crease area is applied, and the extended area cannot span across the crease. The extended area can also
-> be configured not to display in the semi-folded state.
+**FoldSplitContainer** is a layout container designed to manage regions for two-panel and three-panel arrangements on a foldable device across various states, including the expanded state, the semi-folded state, and the folded state. > **NOTE：**> > By default, a two-panel layout is used when the window width is less than or equal to 600 vp. > When the window width exceeds 600 vp, an extended area is supported alongside the top-bottom split layout. > A semi-folded state layout can be triggered when the window width is greater than 600 vp and the device > is in a horizontal, half-folded posture. In the semi-folded layout, visual avoidance for the screen > crease area is applied, and the extended area cannot span across the crease. The extended area can also > be configured not to display in the semi-folded state.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct FoldSplitContainer--><!--Device-unnamed-export declare struct FoldSplitContainer-End-->
 
@@ -25,6 +16,121 @@
 import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from '@kit.ArkUI';
 ```
 
+## animationOptions
+
+```TypeScript
+@Prop
+    animationOptions?: AnimateParam | null
+```
+
+Animation settings. The value **null** indicates that the animation is disabled.
+
+**Type:** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| null
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FoldSplitContainer-@Prop    animationOptions?: AnimateParam | null--><!--Device-FoldSplitContainer-@Prop    animationOptions?: AnimateParam | null-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## expandedLayoutOptions
+
+```TypeScript
+@Prop
+    expandedLayoutOptions: ExpandedRegionLayoutOptions
+```
+
+Layout information for the expanded state.
+
+**Type:** [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FoldSplitContainer-@Prop    expandedLayoutOptions: ExpandedRegionLayoutOptions--><!--Device-FoldSplitContainer-@Prop    expandedLayoutOptions: ExpandedRegionLayoutOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## extra
+
+```TypeScript
+@BuilderParam
+    extra?: Callback<void>
+```
+
+Callback function for the extra region. If this parameter is not provided, there is no corresponding region.
+
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FoldSplitContainer-@BuilderParam    extra?: Callback<void>--><!--Device-FoldSplitContainer-@BuilderParam    extra?: Callback<void>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## foldedLayoutOptions
+
+```TypeScript
+@Prop
+    foldedLayoutOptions: FoldedRegionLayoutOptions
+```
+
+Layout information for the folded state.
+
+**Type:** [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FoldSplitContainer-@Prop    foldedLayoutOptions: FoldedRegionLayoutOptions--><!--Device-FoldSplitContainer-@Prop    foldedLayoutOptions: FoldedRegionLayoutOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## hoverModeLayoutOptions
+
+```TypeScript
+@Prop
+    hoverModeLayoutOptions: HoverModeRegionLayoutOptions
+```
+
+Layout information for the semi-folded state.
+
+**Type:** [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FoldSplitContainer-@Prop    hoverModeLayoutOptions: HoverModeRegionLayoutOptions--><!--Device-FoldSplitContainer-@Prop    hoverModeLayoutOptions: HoverModeRegionLayoutOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## onHoverStatusChange
 
 ```TypeScript
@@ -33,7 +139,11 @@ onHoverStatusChange?: OnHoverStatusChangeHandler
 
 Callback function triggered when the foldable device enters or exits the semi-folded state.
 
+**Type:** [OnHoverStatusChangeHandler](arkts-arkui-onhoverstatuschangehandler-t.md)
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,120 +153,11 @@ Callback function triggered when the foldable device enters or exits the semi-fo
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## animationOptions
-
-```TypeScript
-animationOptions?: AnimateParam | null
-```
-
-Animation settings. The value **null** indicates that the animation is disabled.
-
-**Type:** [AnimateParam](../arkts-components/arkts-arkui-animateparam-i.md) \| null
-
-**Since:** 12
-
-**Decorator:** @Prop
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-animationOptions?: AnimateParam | null--><!--Device-FoldSplitContainer-animationOptions?: AnimateParam | null-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## expandedLayoutOptions
-
-```TypeScript
-expandedLayoutOptions: ExpandedRegionLayoutOptions
-```
-
-Layout information for the expanded state.
-
-**Type:** [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
-
-**Since:** 12
-
-**Decorator:** @Prop
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-expandedLayoutOptions: ExpandedRegionLayoutOptions--><!--Device-FoldSplitContainer-expandedLayoutOptions: ExpandedRegionLayoutOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## extra
-
-```TypeScript
-extra?: Callback<void>
-```
-
-Callback function for the extra region. If this parameter is not provided,there is no corresponding region.
-
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
-
-**Since:** 12
-
-**Decorator:** @BuilderParam
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-extra?: Callback<void>--><!--Device-FoldSplitContainer-extra?: Callback<void>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## foldedLayoutOptions
-
-```TypeScript
-foldedLayoutOptions: FoldedRegionLayoutOptions
-```
-
-Layout information for the folded state.
-
-**Type:** [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)
-
-**Since:** 12
-
-**Decorator:** @Prop
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-foldedLayoutOptions: FoldedRegionLayoutOptions--><!--Device-FoldSplitContainer-foldedLayoutOptions: FoldedRegionLayoutOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## hoverModeLayoutOptions
-
-```TypeScript
-hoverModeLayoutOptions: HoverModeRegionLayoutOptions
-```
-
-Layout information for the semi-folded state.
-
-**Type:** [HoverModeRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-hovermoderegionlayoutoptions-i.md)
-
-**Since:** 12
-
-**Decorator:** @Prop
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-FoldSplitContainer-hoverModeLayoutOptions: HoverModeRegionLayoutOptions--><!--Device-FoldSplitContainer-hoverModeLayoutOptions: HoverModeRegionLayoutOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## primary
 
 ```TypeScript
-primary: Callback<void>
+@BuilderParam
+    primary: Callback<void>
 ```
 
 Callback function for the primary region.
@@ -165,20 +166,21 @@ Callback function for the primary region.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FoldSplitContainer-primary: Callback<void>--><!--Device-FoldSplitContainer-primary: Callback<void>-End-->
+<!--Device-FoldSplitContainer-@BuilderParam    primary: Callback<void>--><!--Device-FoldSplitContainer-@BuilderParam    primary: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondary
 
 ```TypeScript
-secondary: Callback<void>
+@BuilderParam
+    secondary: Callback<void>
 ```
 
 Callback function for the extra region.
@@ -187,12 +189,12 @@ Callback function for the extra region.
 
 **Since:** 12
 
-**Decorator:** @BuilderParam
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-FoldSplitContainer-secondary: Callback<void>--><!--Device-FoldSplitContainer-secondary: Callback<void>-End-->
+<!--Device-FoldSplitContainer-@BuilderParam    secondary: Callback<void>--><!--Device-FoldSplitContainer-@BuilderParam    secondary: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

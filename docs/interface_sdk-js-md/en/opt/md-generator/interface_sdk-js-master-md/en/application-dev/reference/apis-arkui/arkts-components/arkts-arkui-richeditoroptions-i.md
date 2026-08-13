@@ -4,6 +4,8 @@ Defines the options for initializing the **RichEditor** component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorOptions--><!--Device-unnamed-declare interface RichEditorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Controller for the **RichEditor** component.
 **Type:** [RichEditorController](arkts-arkui-richeditorcontroller-c.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -12,7 +12,7 @@ Obtains a WantAgent object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getWantAgent](ohos.app.ability.wantAgent/wantAgent#getWantAgent)
+**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -83,7 +83,7 @@ Obtains a WantAgent object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getWantAgent](ohos.app.ability.wantAgent/wantAgent#getWantAgent)
+**Substitutes:** [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

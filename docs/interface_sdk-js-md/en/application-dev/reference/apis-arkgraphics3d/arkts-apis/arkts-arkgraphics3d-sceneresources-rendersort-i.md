@@ -2,9 +2,11 @@
 
 Describes the order in which materials are rendered, controlling the sequence of drawing in the rendering pipeline.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderSort--><!--Device-unnamed-export interface RenderSort-End-->
 
@@ -16,15 +18,17 @@ Describes the order in which materials are rendered, controlling the sequence of
 renderSortLayer?: int
 ```
 
-Rendering layer ID. A smaller value indicates an earlier rendering order.The value range is [0, 63]. The default layer ID is 32.
+Rendering layer ID. A smaller value indicates an earlier rendering order. The value range is [0, 63]. The default layer ID is 32.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Default:** 32 Default render sort layer id.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RenderSort-renderSortLayer?: int--><!--Device-RenderSort-renderSortLayer?: int-End-->
 
@@ -36,15 +40,17 @@ Rendering layer ID. A smaller value indicates an earlier rendering order.The val
 renderSortLayerOrder?: int
 ```
 
-Rendering order of different objects within the same rendering layer. A smaller value indicates an earlier rendering order.The value range is [0, 255]. The default value is 0.
+Rendering order of different objects within the same rendering layer. A smaller value indicates an earlier rendering order. The value range is [0, 255]. The default value is 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Default:** 0 Default render sort layer order.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RenderSort-renderSortLayerOrder?: int--><!--Device-RenderSort-renderSortLayerOrder?: int-End-->
 

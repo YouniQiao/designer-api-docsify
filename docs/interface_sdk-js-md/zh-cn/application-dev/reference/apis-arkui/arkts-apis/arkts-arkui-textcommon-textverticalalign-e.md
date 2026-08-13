@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum TextVerticalAlign--><!--Device-unnamed-export declare enum TextVerticalAlign-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ BASELINE = 0
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ BOTTOM = 1
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextVerticalAlign-BOTTOM = 1--><!--Device-TextVerticalAlign-BOTTOM = 1-End-->
@@ -58,6 +64,8 @@ CENTER = 2
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextVerticalAlign-CENTER = 2--><!--Device-TextVerticalAlign-CENTER = 2-End-->
@@ -75,6 +83,8 @@ TOP = 3
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

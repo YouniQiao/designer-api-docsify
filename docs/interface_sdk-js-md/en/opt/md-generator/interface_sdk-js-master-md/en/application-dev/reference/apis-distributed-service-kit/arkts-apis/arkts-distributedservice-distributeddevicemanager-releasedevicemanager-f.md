@@ -14,7 +14,9 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 Releases a **DeviceManager** instance that is no longer used.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void--><!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void-End-->
 
@@ -30,8 +32,8 @@ Releases a **DeviceManager** instance that is no longer used.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-service-invoking-exception) |
 
 ## Examples
 

@@ -14,7 +14,9 @@ function getRotationLimits(mechId: number): RotationLimits
 
 Obtains the maximum rotation angles relative to the reference point for the specified mechanical device.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits--><!--Device-mechanicManager-function getRotationLimits(mechId: int): RotationLimits-End-->
 
@@ -38,9 +40,9 @@ Obtains the maximum rotation angles relative to the reference point for the spec
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-system-error) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-device-not-connected) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [33300001](../errorcode-mechanic.md#33300001-system-error) |
+| [33300002](../errorcode-mechanic.md#33300002-device-not-connected) |
 
 ## Examples
 

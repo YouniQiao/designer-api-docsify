@@ -12,7 +12,7 @@ function deleteStorageSync(path: string): void
 
 **废弃版本：** 9
 
-**替代接口：** [deletePreferences](ohos.preferences.preferences.deletePreferences)
+**替代接口：** deletePreferences
 
 <!--Device-storage-function deleteStorageSync(path: string): void--><!--Device-storage-function deleteStorageSync(path: string): void-End-->
 

@@ -4,6 +4,8 @@ UI font configuration of the system.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontFallbackGroupInfo--><!--Device-font-interface UIFontFallbackGroupInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Fallback fonts for the font family. If **fontSetName** is **""**, it indicates t
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,6 +49,8 @@ Name of the font family corresponding to the fallback fonts.
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

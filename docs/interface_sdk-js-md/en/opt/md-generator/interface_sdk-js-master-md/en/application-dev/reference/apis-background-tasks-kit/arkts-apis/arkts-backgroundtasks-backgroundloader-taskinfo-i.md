@@ -4,6 +4,8 @@ Represents the background load task information, which is used to register task.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-backgroundLoader-export interface TaskInfo--><!--Device-backgroundLoader-export interface TaskInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -26,6 +28,8 @@ Ability name in the bundle.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TaskInfo-abilityName: string--><!--Device-TaskInfo-abilityName: string-End-->
@@ -43,6 +47,8 @@ Id of the background load task.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

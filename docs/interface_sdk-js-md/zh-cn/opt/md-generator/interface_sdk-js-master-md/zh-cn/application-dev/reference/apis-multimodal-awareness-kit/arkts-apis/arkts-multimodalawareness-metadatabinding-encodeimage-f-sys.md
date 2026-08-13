@@ -8,7 +8,9 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 在图片中加入信息。通过特定的编码算法将metadata信息嵌入到图片中。可用于防伪、版权保护等场景。使用promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>--><!--Device-metadataBinding-function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>-End-->
 
@@ -33,9 +35,9 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 | 错误码ID |
 | --- |
-| [32100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [32100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-编码程序执行失败) |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-文件创建失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [32100002](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100002-编码程序执行失败) |
 
 ## 示例
 

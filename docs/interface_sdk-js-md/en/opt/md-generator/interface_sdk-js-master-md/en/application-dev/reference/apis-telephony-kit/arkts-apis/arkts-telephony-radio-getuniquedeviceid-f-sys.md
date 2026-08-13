@@ -12,11 +12,11 @@ import { radio } from '@kit.TelephonyKit';
 function getUniqueDeviceId(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the unique device ID of a specified card slot of the device.
+Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned.
 
-If the device is registered with a 3GPP-compliant network, the international mobile equipment identity(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier(MEID) is returned.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -37,13 +37,13 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -67,11 +67,11 @@ radio.getUniqueDeviceId(slotId, (err: BusinessError, data: string) => {
 function getUniqueDeviceId(slotId?: number): Promise<string>
 ```
 
-Obtains the unique device ID of a specified card slot of the device.
+Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned.
 
-If the device is registered with a 3GPP-compliant network, the international mobile equipment identity(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier(MEID) is returned.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -97,13 +97,13 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -125,11 +125,11 @@ radio.getUniqueDeviceId(slotId).then((data: string) => {
 function getUniqueDeviceId(callback: AsyncCallback<string>): void
 ```
 
-Obtains the unique device ID of a specified card slot of the device.
+Obtains the unique device ID of a specified card slot of the device. If the device is registered with a 3GPP-compliant network, the international mobile equipment identity (IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier (MEID) is returned.
 
-If the device is registered with a 3GPP-compliant network, the international mobile equipment identity(IMEI) is returned. If the device is registered with a 3GPP2-compliant network, the mobile equipment identifier(MEID) is returned.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_TELEPHONY_STATE
 
@@ -149,13 +149,13 @@ If the device is registered with a 3GPP-compliant network, the international mob
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 

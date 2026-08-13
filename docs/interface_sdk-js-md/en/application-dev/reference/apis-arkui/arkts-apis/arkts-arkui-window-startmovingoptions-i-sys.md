@@ -4,7 +4,9 @@ Optional configuration for startMovingWithOptions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface StartMovingOptions--><!--Device-window-interface StartMovingOptions-End-->
 
@@ -24,13 +26,15 @@ import { window } from '@kit.ArkUI';
 avoidRect?: Rect
 ```
 
-The avoidance rect of window during drag-moving.If unspecified, the system defaults to the following avoidance behavior:Free window state:1.Main windows, subWindows and dialog windows can be dragged beyond the screen bounds and will spring back on release.2.Other windows can be dragged beyond the screen bounds without springing back.Non-free window state:1.System windows can be dragged beyond the main window bounds and the screen bounds without springing back.2.When the main window is fullscreen,subWindows and dialog windows can be dragged beyond it without springing back.3.When the main window is not fullscreen,subWindows and dialog windows can be dragged beyond it and will spring back on release.
+The avoidance rect of window during drag-moving. If unspecified, the system defaults to the following avoidance behavior: Free window state: 1.Main windows, subWindows and dialog windows can be dragged beyond the screen bounds and will spring back on release. 2.Other windows can be dragged beyond the screen bounds without springing back. Non-free window state: 1.System windows can be dragged beyond the main window bounds and the screen bounds without springing back. 2.When the main window is fullscreen, subWindows and dialog windows can be dragged beyond it without springing back. 3.When the main window is not fullscreen, subWindows and dialog windows can be dragged beyond it and will spring back on release.
 
 **Type:** Rect
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +58,9 @@ Indicates whether the window needs to be focused when moving starts.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

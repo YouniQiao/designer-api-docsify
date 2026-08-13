@@ -8,7 +8,9 @@ function getDistributedAccountAbility(): DistributedAccountAbility
 
 获取分布式账号单实例对象。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility--><!--Device-distributedAccount-function getDistributedAccountAbility(): DistributedAccountAbility-End-->
 

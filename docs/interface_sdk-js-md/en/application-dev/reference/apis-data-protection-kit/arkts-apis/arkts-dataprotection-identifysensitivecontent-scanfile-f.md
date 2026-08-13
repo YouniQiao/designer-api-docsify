@@ -12,11 +12,13 @@ import { identifySensitiveContent } from '@kit.DataProtectionKit';
 function scanFile(filePath: string, identifyPolicies: Array<Policy>): Promise<Array<MatchResult>>
 ```
 
-Identifies sensitive content in a specified file based on the configured policy and returns the identified result array,including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result.
+Identifies sensitive content in a specified file based on the configured policy and returns the identified result array, including the matched sensitivity labels, matched content, and number of matched items. This API uses a promise to return the result.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_DATA_IDENTIFY_FILE
 
@@ -41,12 +43,12 @@ Identifies sensitive content in a specified file based on the configured policy 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [19110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [19110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
-| [19110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
-| [19110004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied. |
+| [19110003](../errorcode-dlp.md#19110003-file-not-supported) | The file is not supported. Possible causes: 1. The file path does not exist. 2. The file type is not supported. 3. The file permission is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [19110002](../errorcode-dlp.md#19110002-file-sensitive-content-identification-timed-out) | Sensitive file content identification timed out. |
+| [19110001](../errorcode-dlp.md#19110001-invalid-parameter) | Parameter error. Possible causes: 1. Incorrect policy format. 2. Invalid parameter range. |
+| [19110004](../errorcode-dlp.md#19110004-system-function-abnormal) | A system error has occurred. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 
 ## Examples
 

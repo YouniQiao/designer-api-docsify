@@ -1,19 +1,23 @@
 # PersistenceErrorCallback
 
 ```TypeScript
-export declare type PersistenceErrorCallback = (key: string, reason: string, message: string, 
-    oldValue?: string) => void
+export declare type PersistenceErrorCallback = (key: string, reason: 'quota' | 'serialization' | 'unknown', 
+    message: string, oldValue?: string) => void
 ```
 
-Function that returns the reason type when an error occurs.
+Defines a callback used to return the cause of the persistence failure.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare type PersistenceErrorCallback = (key: string, reason: string, message: string,     oldValue?: string) => void--><!--Device-unnamed-export declare type PersistenceErrorCallback = (key: string, reason: string, message: string,     oldValue?: string) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export declare type PersistenceErrorCallback = (key: string, reason: 'quota' | 'serialization' | 'unknown',     message: string, oldValue?: string) => void--><!--Device-unnamed-export declare type PersistenceErrorCallback = (key: string, reason: 'quota' | 'serialization' | 'unknown',     message: string, oldValue?: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,8 +25,8 @@ Function that returns the reason type when an error occurs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | persisted key when an error occurs |
-| reason | string | Yes | reason type when an error occurs, possible values are 'quota', 'serialization', 'unknown' |
-| message | string | Yes | Additional message when an error occurs. |
-| oldValue | string | No | value in storage that cannot be deserialized. |
+| key | string | Yes | Key of the error. |
+| reason | 'quota' \| 'serialization' \| 'unknown' | Yes | Reason of the error. |
+| message | string | Yes | Extra information about the error. |
+| oldValue | string | No | Old serialized data stored on the disk when deserialization fails. |
 

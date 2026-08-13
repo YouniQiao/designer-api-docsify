@@ -1,9 +1,10 @@
 # WebHitTestType
 
-Enumerates the cursor node types for the  
-[getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) API.
+Enumerates the cursor node types for the [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) API.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebHitTestType--><!--Device-webview-enum WebHitTestType-End-->
 
@@ -18,6 +19,8 @@ EditText = 0
 Editable area.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,6 +38,8 @@ Email address.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebHitTestType-Email = 1--><!--Device-WebHitTestType-Email = 1-End-->
@@ -50,6 +55,8 @@ HttpAnchor = 2
 Hyperlink, where **src** is **http**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,6 +74,8 @@ Image with a hyperlink, where **src** is http + HTML::img.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebHitTestType-HttpAnchorImg = 3--><!--Device-WebHitTestType-HttpAnchorImg = 3-End-->
@@ -82,6 +91,8 @@ Img = 4
 HTML::img tag.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -99,6 +110,8 @@ Geographical address.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebHitTestType-Map = 5--><!--Device-WebHitTestType-Map = 5-End-->
@@ -115,6 +128,8 @@ Phone number.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebHitTestType-Phone = 6--><!--Device-WebHitTestType-Phone = 6-End-->
@@ -130,6 +145,8 @@ Unknown = 7
 Unknown content.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

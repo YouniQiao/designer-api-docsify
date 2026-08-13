@@ -2,11 +2,13 @@
 
 Implements imaging mode.
 
-**Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#ImagingModeQuery)
+**Inheritance/Implementation:** ImagingMode extends [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md#ImagingModeQuery-(System-API))
 
 **Since:** 26.0.0
 
-<!--Device-camera-interface ImagingMode extends ImagingModeQuery--><!--Device-camera-interface ImagingMode extends ImagingModeQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface ImagingMode--><!--Device-camera-interface ImagingMode-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,6 +30,8 @@ Gets current imaging mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImagingMode-getImagingMode(): CameraImagingMode--><!--Device-ImagingMode-getImagingMode(): CameraImagingMode-End-->
@@ -46,8 +50,8 @@ Gets current imaging mode.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setImagingMode
 
@@ -58,6 +62,8 @@ setImagingMode(mode: CameraImagingMode): void
 Sets imaging mode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,5 +83,5 @@ Sets imaging mode.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

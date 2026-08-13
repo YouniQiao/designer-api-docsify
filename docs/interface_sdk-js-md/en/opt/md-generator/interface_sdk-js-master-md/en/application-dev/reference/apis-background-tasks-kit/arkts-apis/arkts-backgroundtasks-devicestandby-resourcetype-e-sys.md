@@ -2,7 +2,9 @@
 
 The type of exemption resources requested by the application.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceStandby-export enum ResourceType--><!--Device-deviceStandby-export enum ResourceType-End-->
 
@@ -18,7 +20,9 @@ NETWORK = 1
 
 The resource for non-standby network access.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-NETWORK = 1--><!--Device-ResourceType-NETWORK = 1-End-->
 
@@ -34,7 +38,9 @@ RUNNING_LOCK = 1 << 1
 
 The resource for non-standby cpu running-lock.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-RUNNING_LOCK = 1 << 1--><!--Device-ResourceType-RUNNING_LOCK = 1 << 1-End-->
 
@@ -50,7 +56,9 @@ TIMER = 1 << 2
 
 The resource for non-standby timer.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-TIMER = 1 << 2--><!--Device-ResourceType-TIMER = 1 << 2-End-->
 
@@ -66,7 +74,9 @@ WORK_SCHEDULER = 1 << 3
 
 The resource for non-standby workscheduler.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-WORK_SCHEDULER = 1 << 3--><!--Device-ResourceType-WORK_SCHEDULER = 1 << 3-End-->
 
@@ -82,7 +92,9 @@ AUTO_SYNC = 1 << 4
 
 The resource for non-standby automatic synchronization.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-AUTO_SYNC = 1 << 4--><!--Device-ResourceType-AUTO_SYNC = 1 << 4-End-->
 
@@ -98,7 +110,9 @@ PUSH = 1 << 5
 
 The resource for non-standby push-kit.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-PUSH = 1 << 5--><!--Device-ResourceType-PUSH = 1 << 5-End-->
 
@@ -114,7 +128,9 @@ FREEZE = 1 << 6
 
 The resource for non-standby freezing application.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-FREEZE = 1 << 6--><!--Device-ResourceType-FREEZE = 1 << 6-End-->
 

@@ -6,7 +6,9 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 
 **Since:** 19
 
-<!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ setOnReachEnd(callback: Callback<void> | undefined): void
 Set or reset the callback which is triggered when the scrolling reaches the end position.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -67,6 +73,8 @@ setOnScrollFrameBegin(callback: OnScrollFrameBeginCallback | undefined): void
 Set or reset the callback which is triggered when scrolling begin each frame.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +100,8 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -115,6 +125,8 @@ setOnScrollStop(callback: Callback<void> | undefined): void
 Set or reset the callback which is triggered when the scrolling stoped.
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@ Describes the Gatt characteristic.
 
 **Deprecated since:** 10
 
-**Substitutes:** [BLECharacteristic](ohos.bluetooth.ble/ble.BLECharacteristic)
+**Substitutes:** [BLECharacteristic](arkts-connectivity-ble-blecharacteristic-i.md#BLECharacteristic)
 
 <!--Device-bluetoothManager-interface BLECharacteristic--><!--Device-bluetoothManager-interface BLECharacteristic-End-->
 
@@ -32,7 +32,7 @@ The UUID of a BLECharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.BLECharacteristic#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-blecharacteristic-i.md#characteristicUuid)
 
 <!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The value of a BLECharacteristic instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicValue](ohos.bluetooth.ble/ble.BLECharacteristic#characteristicValue)
+**Substitutes:** [characteristicValue](arkts-connectivity-ble-blecharacteristic-i.md#characteristicValue)
 
 <!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -72,7 +72,7 @@ The list of [BLEDescriptor](arkts-connectivity-bluetoothmanager-bledescriptor-i.
 
 **Deprecated since:** 10
 
-**Substitutes:** [descriptors](ohos.bluetooth.ble/ble.BLECharacteristic#descriptors)
+**Substitutes:** [descriptors](arkts-connectivity-ble-blecharacteristic-i.md#descriptors)
 
 <!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>--><!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>-End-->
 
@@ -92,7 +92,7 @@ The UUID of the [GattService](arkts-connectivity-bluetoothmanager-gattservice-i.
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.BLECharacteristic#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-blecharacteristic-i.md#serviceUuid)
 
 <!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
 

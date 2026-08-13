@@ -12,11 +12,11 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function setId(id: HiTraceId): void
 ```
 
-Sets a trace ID. This API returns the result synchronously.
+Sets a trace ID. This API returns the result synchronously. Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is performed.
 
-Sets the given HiTrace ID to the TLS of the current thread. If the given HiTrace ID is invalid, no operation is performed.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function setId(id: HiTraceId): void--><!--Device-hiTraceChain-function setId(id: HiTraceId): void-End-->
 

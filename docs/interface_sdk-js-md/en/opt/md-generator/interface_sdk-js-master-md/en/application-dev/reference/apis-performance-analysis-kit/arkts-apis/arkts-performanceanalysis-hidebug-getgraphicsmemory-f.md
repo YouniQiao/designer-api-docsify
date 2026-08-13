@@ -14,9 +14,11 @@ function getGraphicsMemory(): Promise<number>
 
 Obtains the total GPU memory size (**gl** + **graph**) of the application. This API uses a promise to return the result.
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hidebug-function getGraphicsMemory(): Promise<int>--><!--Device-hidebug-function getGraphicsMemory(): Promise<int>-End-->
 
@@ -32,7 +34,7 @@ Obtains the total GPU memory size (**gl** + **graph**) of the application. This 
 
 | Error Code ID |
 | --- |
-| [11400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
 
 ## Examples
 

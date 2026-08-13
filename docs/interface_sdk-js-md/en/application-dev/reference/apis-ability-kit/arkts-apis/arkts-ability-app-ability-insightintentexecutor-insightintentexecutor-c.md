@@ -1,12 +1,12 @@
 # InsightIntentExecutor
 
-The module provides the base class for intent execution. You can use this module to interface with the  
-[InsightIntent framework](../../../application-models/insight-intent-overview.md) on the device side and implement intent service logic through [configuration files](../../../application-models/insight-intent-config-development.md).In addition to developing intents via configuration files, intents can also be developed using decorators. For API version 20 and later, you are advised to  
-[develop intents using decorators](../../../application-models/insight-intent-decorator-development.md).
+The module provides the base class for intent execution. You can use this module to interface with the [InsightIntent framework](../../../application-models/insight-intent-overview.md) on the device side and implement intent service logic through [configuration files](../../../application-models/insight-intent-config-development.md) . In addition to developing intents via configuration files, intents can also be developed using decorators. For API version 20 and later, you are advised to [develop intents using decorators](../../../application-models/insight-intent-decorator-development.md).
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class InsightIntentExecutor--><!--Device-unnamed-declare class InsightIntentExecutor-End-->
 
@@ -25,14 +25,13 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-**onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
+Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported. - The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution: **onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -135,14 +134,13 @@ onExecuteInServiceExtensionAbility(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-**onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
+Called during the ServiceExtensionAbility lifecycle when the ServiceExtensionAbility that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported. - The ServiceExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution: **onCreate**, **onRequest**, and **onExecuteInServiceExtensionAbility**.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,16 +168,13 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, Object>):
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground).  
-- If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
- intent execution: onExecuteInUIAbilityBackgroundMode.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported. - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate), onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground). - If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: onExecuteInUIAbilityBackgroundMode.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -256,16 +251,13 @@ onExecuteInUIAbilityBackgroundMode(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground).  
-- If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during  
- intent execution: onExecuteInUIAbilityBackgroundMode.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the background. Both synchronous calls and asynchronous calls using Promise are supported. - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate), onExecuteInUIAbilityBackgroundMode, and [onBackground](arkts-ability-app-ability-uiability-uiability-c.md#onBackground). - If the UIAbility is hot started, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: onExecuteInUIAbilityBackgroundMode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -293,19 +285,13 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, Object>, 
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
-- If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
-following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
-- If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the  
-following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported. - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate), [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate), onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground). - If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant), onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground). - If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -423,19 +409,13 @@ onExecuteInUIAbilityForegroundMode(name: string, param: Record<string, RecordDat
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence  
-during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate),  
-[onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
-- If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the  
-following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant),onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground).  
-- If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the  
-following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
+Called during the UIAbility lifecycle when the [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md#UIAbility) that the intent execution depends on is started in the foreground. Both synchronous calls and asynchronous calls using Promise are supported. - If the UIAbility is cold started, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-app-ability-uiability-uiability-c.md#onCreate), [onWindowStageCreate](arkts-ability-app-ability-uiability-uiability-c.md#onWindowStageCreate), onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground). - If the UIAbility is hot started in the background, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onNewWant](arkts-ability-app-ability-uiability-uiability-c.md#onNewWant), onExecuteInUIAbilityForegroundMode, and [onForeground](arkts-ability-app-ability-uiability-uiability-c.md#onForeground). - If the UIAbility is hot started in the foreground, the UIAbility lifecycle callbacks are triggered in the following sequence during intent execution: onExecuteInUIAbilityForegroundMode.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -464,17 +444,13 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, Object>, pageL
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIExtensionAbility lifecycle when the  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate),  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate),onExecuteInUIExtensionAbility, and  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground).
+Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported. - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate), [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground).
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -582,17 +558,13 @@ onExecuteInUIExtensionAbility(name: string, param: Record<string, RecordData>, p
     insightIntent.ExecuteResult | Promise<insightIntent.ExecuteResult>
 ```
 
-Called during the UIExtensionAbility lifecycle when the  
-[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported.
-
-- The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution:  
-[onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate),  
-[onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate),onExecuteInUIExtensionAbility, and  
-[onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground).
+Called during the UIExtensionAbility lifecycle when the [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#UIExtensionAbility) that the intent execution depends on is started. Both synchronous calls and asynchronous calls using Promise are supported. - The UIExtensionAbility lifecycle callbacks are triggered in the following sequence during intent execution: [onCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onCreate), [onSessionCreate](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onSessionCreate), onExecuteInUIExtensionAbility, and [onForeground](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md#onForeground).
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -624,13 +596,15 @@ Context for intent execution.
 
 **Type:** [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-InsightIntentExecutor-context: InsightIntentContext--><!--Device-InsightIntentExecutor-context: InsightIntentContext-End-->
 

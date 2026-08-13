@@ -4,6 +4,8 @@ Configuration parameter of ExceptionPrompt.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface PromptOptions--><!--Device-unnamed-export interface PromptOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Right icon button text of PromptOptions.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -45,6 +49,8 @@ Icon of PromptOptions.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Control concealment of PromptOptions.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -85,6 +93,8 @@ Distance from the top of PromptOptions.
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,6 +116,8 @@ Margin Type of ExceptionPrompt.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -126,6 +138,8 @@ SymbolGlyphModifier of PromptOptions.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -145,6 +159,8 @@ Tip text of PromptOptions.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

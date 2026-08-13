@@ -16,7 +16,9 @@ function getRunningFormInfosByFilter(
 
 Obtains the RunningFormInfo objects by FormProviderFilter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -44,12 +46,12 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
 
 
 ## getRunningFormInfosByFilter
@@ -63,7 +65,9 @@ function getRunningFormInfosByFilter(
 
 Obtains the RunningFormInfo objects by FormProviderFilter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -86,9 +90,9 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16501000-internal-function-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16500100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16501000](../errorcode-form.md#16501000-internal-function-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) |

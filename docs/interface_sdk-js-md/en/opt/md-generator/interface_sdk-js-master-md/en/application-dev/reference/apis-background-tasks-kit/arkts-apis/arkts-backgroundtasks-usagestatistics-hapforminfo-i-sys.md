@@ -1,6 +1,8 @@
 # HapFormInfo (System API)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface HapFormInfo--><!--Device-usageStatistics-interface HapFormInfo-End-->
 
@@ -24,7 +26,9 @@ The click count of module.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-count: int--><!--Device-HapFormInfo-count: int-End-->
 
@@ -42,7 +46,9 @@ The form dimension.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formDimension: int--><!--Device-HapFormInfo-formDimension: int-End-->
 
@@ -60,7 +66,9 @@ The form id.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formId: long--><!--Device-HapFormInfo-formId: long-End-->
 
@@ -74,11 +82,13 @@ The form id.
 formLastUsedTime: number
 ```
 
-The last time when the form was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the form was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formLastUsedTime: long--><!--Device-HapFormInfo-formLastUsedTime: long-End-->
 
@@ -96,7 +106,9 @@ The form name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formName: string--><!--Device-HapFormInfo-formName: string-End-->
 

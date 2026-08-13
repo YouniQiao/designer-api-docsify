@@ -4,6 +4,8 @@ Configuration parameter options for AI-generated image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GenerateImageTaskParams--><!--Device-imageGeneration-interface GenerateImageTaskParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ the number of AI-generated image in one task.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskParams-imageCount?: int--><!--Device-GenerateImageTaskParams-imageCount?: int-End-->
@@ -47,6 +51,8 @@ the size information of AI-generated image in one task.
 **Type:** image.Size
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ image information used for AI-generated image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskParams-images: Array<ImageItem>--><!--Device-GenerateImageTaskParams-images: Array<ImageItem>-End-->
@@ -87,6 +95,8 @@ Location reference map for multi-image generated tasks.
 **Type:** image.PixelMap
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -108,6 +118,8 @@ Description information for AI-generated image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskParams-prompt: string--><!--Device-GenerateImageTaskParams-prompt: string-End-->
@@ -128,6 +140,8 @@ Path information for lasso selection in AI-generated image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GenerateImageTaskParams-selectPath?: Array<common2D.Point>--><!--Device-GenerateImageTaskParams-selectPath?: Array<common2D.Point>-End-->
@@ -147,6 +161,8 @@ the style of AI-generated image in one task.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

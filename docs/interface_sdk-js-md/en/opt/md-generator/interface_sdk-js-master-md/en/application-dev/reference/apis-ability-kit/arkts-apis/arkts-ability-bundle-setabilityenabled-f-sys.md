@@ -18,7 +18,7 @@ Sets whether to enable an ability. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 
@@ -49,7 +49,7 @@ Sets whether to enable an ability. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.CHANGE_ABILITY_ENABLED_STATE
 

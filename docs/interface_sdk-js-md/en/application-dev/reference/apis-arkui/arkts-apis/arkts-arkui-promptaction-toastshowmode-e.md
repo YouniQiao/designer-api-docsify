@@ -1,10 +1,12 @@
 # ToastShowMode
 
-Enum for the toast showMode.
+Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-promptAction-export enum ToastShowMode--><!--Device-promptAction-export enum ToastShowMode-End-->
 
@@ -16,13 +18,17 @@ Enum for the toast showMode.
 DEFAULT = 0
 ```
 
-Toast shows in app.
+The toast is displayed within the application.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ToastShowMode-DEFAULT = 0--><!--Device-ToastShowMode-DEFAULT = 0-End-->
 
@@ -34,13 +40,17 @@ Toast shows in app.
 TOP_MOST = 1
 ```
 
-Toast shows at the top.
+The toast is displayed in a subwindow.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ToastShowMode-TOP_MOST = 1--><!--Device-ToastShowMode-TOP_MOST = 1-End-->
 

@@ -1,11 +1,12 @@
 # LoopObserver
 
-定义异常监听，可以作为  
-[ErrorManager.on](./../@ohos.app.ability.errorManager:errorManager.on(type: 'loopObserver', timeout: number, observer: LoopObserver))的入参监听当前应用主线程事件处理事件。
+定义异常监听，可以作为 [ErrorManager.on](arkts-ability-errormanager-onerror-f.md#on_error) 的入参监听当前应用主线程事件处理事件。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface LoopObserver--><!--Device-unnamed-export interface LoopObserver-End-->
 
@@ -22,6 +23,8 @@ onLoopTimeOut?(timeout: int): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

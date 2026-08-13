@@ -1,8 +1,10 @@
 # HapModuleInfo (System API)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface HapModuleInfo--><!--Device-usageStatistics-interface HapModuleInfo-End-->
 
@@ -24,11 +26,13 @@ abilityDescriptionId?: long
 
 The description id of main ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-abilityDescriptionId?: long--><!--Device-HapModuleInfo-abilityDescriptionId?: long-End-->
 
@@ -44,11 +48,13 @@ abilityIconId?: long
 
 The icon id of main ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-abilityIconId?: long--><!--Device-HapModuleInfo-abilityIconId?: long-End-->
 
@@ -64,11 +70,13 @@ abilityLableId?: long
 
 The ability id of main ability.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-abilityLableId?: long--><!--Device-HapModuleInfo-abilityLableId?: long-End-->
 
@@ -86,9 +94,11 @@ The main ability name of module.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-abilityName?: string--><!--Device-HapModuleInfo-abilityName?: string-End-->
 
@@ -104,11 +114,13 @@ appLabelId?: long
 
 The label id of application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-appLabelId?: long--><!--Device-HapModuleInfo-appLabelId?: long-End-->
 
@@ -126,9 +138,11 @@ The bundle name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-bundleName: string--><!--Device-HapModuleInfo-bundleName: string-End-->
 
@@ -144,11 +158,13 @@ descriptionId?: long
 
 The description id of application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-descriptionId?: long--><!--Device-HapModuleInfo-descriptionId?: long-End-->
 
@@ -166,9 +182,11 @@ The device id of module.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-deviceId?: string--><!--Device-HapModuleInfo-deviceId?: string-End-->
 
@@ -186,9 +204,11 @@ The form usage record list of current module.
 
 **Type:** Array&lt;[HapFormInfo](arkts-backgroundtasks-usagestatistics-hapforminfo-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-formRecords: Array<HapFormInfo>--><!--Device-HapModuleInfo-formRecords: Array<HapFormInfo>-End-->
 
@@ -204,11 +224,13 @@ labelId?: long
 
 The label id of module.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-labelId?: long--><!--Device-HapModuleInfo-labelId?: long-End-->
 
@@ -222,13 +244,15 @@ The label id of module.
 lastModuleUsedTime: long
 ```
 
-The last time when the module was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the module was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-lastModuleUsedTime: long--><!--Device-HapModuleInfo-lastModuleUsedTime: long-End-->
 
@@ -244,11 +268,13 @@ launchedCount: int
 
 The launch count of module.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-launchedCount: int--><!--Device-HapModuleInfo-launchedCount: int-End-->
 
@@ -266,9 +292,11 @@ The module name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapModuleInfo-moduleName: string--><!--Device-HapModuleInfo-moduleName: string-End-->
 

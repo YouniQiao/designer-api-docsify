@@ -1,10 +1,12 @@
 # DrawableDescriptorLoadedResult
 
-The result of loading image.
+Represents the result of loading an image resource or URI.
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface DrawableDescriptorLoadedResult--><!--Device-unnamed-export interface DrawableDescriptorLoadedResult-End-->
 
@@ -19,40 +21,48 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 ## imageHeight
 
 ```TypeScript
-imageHeight: int
+imageHeight: number
 ```
 
-The height of the image, in px.
+Image height. Unit: px.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DrawableDescriptorLoadedResult-imageHeight: int--><!--Device-DrawableDescriptorLoadedResult-imageHeight: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-DrawableDescriptorLoadedResult-imageHeight: number--><!--Device-DrawableDescriptorLoadedResult-imageHeight: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## imageWidth
 
 ```TypeScript
-imageWidth: int
+imageWidth: number
 ```
 
-The width of the image, in px.
+Image width. Unit: px.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 21
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DrawableDescriptorLoadedResult-imageWidth: int--><!--Device-DrawableDescriptorLoadedResult-imageWidth: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 21.
+
+<!--Device-DrawableDescriptorLoadedResult-imageWidth: number--><!--Device-DrawableDescriptorLoadedResult-imageWidth: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

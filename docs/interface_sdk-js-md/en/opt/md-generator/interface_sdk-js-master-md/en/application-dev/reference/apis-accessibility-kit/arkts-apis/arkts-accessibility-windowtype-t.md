@@ -6,7 +6,9 @@ export type WindowType = 'application' | 'system'
 
 Enumerates the window types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export type WindowType = 'application' | 'system'--><!--Device-unnamed-export type WindowType = 'application' | 'system'-End-->
 

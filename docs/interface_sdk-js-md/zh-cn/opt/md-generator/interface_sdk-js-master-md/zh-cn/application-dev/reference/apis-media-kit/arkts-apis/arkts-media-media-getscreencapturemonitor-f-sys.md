@@ -10,6 +10,8 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
@@ -26,8 +28,8 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -39,3 +41,35 @@ try {
   console.error(`getScreenCaptureMonitor failed, error message:${err.message}`);
 }
 ```
+
+
+## getScreenCaptureMonitor
+
+```TypeScript
+function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>
+```
+
+Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>--><!--Device-media-function getScreenCaptureMonitor(): Promise<ScreenCaptureMonitor | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-multimedia-media-screencapturemonitor-i-sys.md) \| undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

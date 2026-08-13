@@ -4,7 +4,7 @@
 
 **起始版本：** 20
 
-**装饰器类型：** @Component
+**废弃版本：** -1
 
 <!--Device-unnamed-declare struct ContentFormCard--><!--Device-unnamed-declare struct ContentFormCard-End-->
 
@@ -22,6 +22,8 @@ contentFormData: uniformDataStruct.ContentForm
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm--><!--Device-ContentFormCard-contentFormData: uniformDataStruct.ContentForm-End-->
@@ -31,27 +33,29 @@ contentFormData: uniformDataStruct.ContentForm
 ## formHeight
 
 ```TypeScript
-formHeight?: number
+@Prop
+  formHeight?: number
 ```
 
-卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认高度。
+卡片高度，当contentFormData中的title为空字符串时，卡片高度为传入的值，否则其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认 宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认高度。
 
 **类型：** number
 
 **起始版本：** 20
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ContentFormCard-formHeight?: double--><!--Device-ContentFormCard-formHeight?: double-End-->
+<!--Device-ContentFormCard-@Prop  formHeight?: double--><!--Device-ContentFormCard-@Prop  formHeight?: double-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formType
 
 ```TypeScript
-formType: FormType
+@Prop
+  formType: FormType
 ```
 
 内容卡片类型，影响内容卡片的大小。
@@ -60,18 +64,19 @@ formType: FormType
 
 **起始版本：** 20
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ContentFormCard-formType: FormType--><!--Device-ContentFormCard-formType: FormType-End-->
+<!--Device-ContentFormCard-@Prop  formType: FormType--><!--Device-ContentFormCard-@Prop  formType: FormType-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
 ## formWidth
 
 ```TypeScript
-formWidth?: number
+@Prop
+  formWidth?: number
 ```
 
 卡片宽度，其范围在设置的内容卡片类型默认宽度的0.8 ~ 1.2倍之间，当formType为TYPE_SMALL时，其范围在设置的内容卡片类型默认宽度的0.4 ~ 1.2倍之间。单位为vp。省略时使用内容卡片类型的默认宽度。
@@ -80,11 +85,11 @@ formWidth?: number
 
 **起始版本：** 20
 
-**装饰器类型：** @Prop
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-ContentFormCard-formWidth?: double--><!--Device-ContentFormCard-formWidth?: double-End-->
+<!--Device-ContentFormCard-@Prop  formWidth?: double--><!--Device-ContentFormCard-@Prop  formWidth?: double-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -99,6 +104,8 @@ handleOnClick?: Function
 **类型：** Function
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

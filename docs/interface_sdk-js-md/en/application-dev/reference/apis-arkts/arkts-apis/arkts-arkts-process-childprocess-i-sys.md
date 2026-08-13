@@ -6,6 +6,8 @@ The childprocess object can be used to create a new process.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-process-export interface ChildProcess--><!--Device-process-export interface ChildProcess-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -30,6 +32,8 @@ Close the target process
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-ChildProcess-close(): void--><!--Device-ChildProcess-close(): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -47,6 +51,8 @@ Return it as 'Uint8Array of the stderr until EOF
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-ChildProcess-getErrorOutput(): Promise<Uint8Array>--><!--Device-ChildProcess-getErrorOutput(): Promise<Uint8Array>-End-->
 
@@ -72,6 +78,8 @@ Return it as 'Uint8Array' of the stdout until EOF
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-ChildProcess-getOutput(): Promise<Uint8Array>--><!--Device-ChildProcess-getOutput(): Promise<Uint8Array>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -96,6 +104,8 @@ Send a signal to process
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-ChildProcess-kill(signal: number | string): void--><!--Device-ChildProcess-kill(signal: number | string): void-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -119,6 +129,8 @@ Return 'number' is the target process exit code
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-ChildProcess-wait(): Promise<number>--><!--Device-ChildProcess-wait(): Promise<number>-End-->
 
@@ -146,6 +158,8 @@ Return exitCode is the exit code of the current child process
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-ChildProcess-readonly exitCode: number--><!--Device-ChildProcess-readonly exitCode: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -165,6 +179,8 @@ Return boolean is whether the current process signal is sent successfully
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-ChildProcess-readonly killed: boolean--><!--Device-ChildProcess-readonly killed: boolean-End-->
 
@@ -186,6 +202,8 @@ Return pid is the pid of the current process
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-ChildProcess-readonly pid: number--><!--Device-ChildProcess-readonly pid: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -205,6 +223,8 @@ Return ppid is the pid of the current child process
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-ChildProcess-readonly ppid: number--><!--Device-ChildProcess-readonly ppid: number-End-->
 

@@ -2,11 +2,13 @@
 
 Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios.
 
-**Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md#InteractionUI)
+**Inheritance/Implementation:** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md#InteractionUI-(System-API))
 
 **Since:** 26.1.0
 
-<!--Device-insightIntent-interface InteractionModalUIExtension extends InteractionUI--><!--Device-insightIntent-interface InteractionModalUIExtension extends InteractionUI-End-->
+**Deprecated since:** -1
+
+<!--Device-insightIntent-interface InteractionModalUIExtension--><!--Device-insightIntent-interface InteractionModalUIExtension-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -30,6 +32,8 @@ Ability name of the target UIExtension ability.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InteractionModalUIExtension-abilityName: string--><!--Device-InteractionModalUIExtension-abilityName: string-End-->
@@ -49,6 +53,8 @@ Bundle name of the target UIExtension ability.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Type of the interaction UI. The value is fixed to 'MODAL_UIEXTENSION'.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InteractionModalUIExtension-interactionUIType: 'MODAL_UIEXTENSION'--><!--Device-InteractionModalUIExtension-interactionUIType: 'MODAL_UIEXTENSION'-End-->
@@ -90,6 +98,8 @@ Module name of the target UIExtension ability.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InteractionModalUIExtension-moduleName: string--><!--Device-InteractionModalUIExtension-moduleName: string-End-->
@@ -101,18 +111,20 @@ Module name of the target UIExtension ability.
 ## parameters
 
 ```TypeScript
-parameters: Record<string, Object>
+parameters: Record<string, RecordData>
 ```
 
 Parameters passed to the target UIExtension ability.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-InteractionModalUIExtension-parameters: Record<string, Object>--><!--Device-InteractionModalUIExtension-parameters: Record<string, Object>-End-->
+<!--Device-InteractionModalUIExtension-parameters: Record<string, RecordData>--><!--Device-InteractionModalUIExtension-parameters: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -129,6 +141,8 @@ Type of the UIExtension ability.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,6 +163,8 @@ URI information passed to the target UIExtension ability for data processing.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

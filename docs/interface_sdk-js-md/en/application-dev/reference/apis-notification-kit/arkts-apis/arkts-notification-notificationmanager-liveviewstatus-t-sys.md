@@ -6,9 +6,11 @@ export type LiveViewStatus = _LiveViewStatus
 
 Enumerates the statuses of the common live view.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus--><!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus-End-->
 

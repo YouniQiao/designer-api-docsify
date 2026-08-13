@@ -2,7 +2,9 @@
 
 Describes the button style of the system decoration bar.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface DecorButtonStyle--><!--Device-window-interface DecorButtonStyle-End-->
 
@@ -24,9 +26,11 @@ Radius of the button background rounded corner. The value ranges from 4 vp to 8 
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecorButtonStyle-buttonBackgroundCornerRadius? : int--><!--Device-DecorButtonStyle-buttonBackgroundCornerRadius? : int-End-->
 
@@ -42,9 +46,11 @@ Size of the button when it is highlighted. The value ranges from 20 vp to 40 vp.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecorButtonStyle-buttonBackgroundSize? : int--><!--Device-DecorButtonStyle-buttonBackgroundSize? : int-End-->
 
@@ -60,9 +66,11 @@ Size of the button icon. The value ranges from 16 vp to 24 vp. The default value
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecorButtonStyle-buttonIconSize? : int--><!--Device-DecorButtonStyle-buttonIconSize? : int-End-->
 
@@ -78,9 +86,11 @@ Margin between the rightmost edge of the close button and the window. The value 
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecorButtonStyle-closeButtonRightMargin? : int--><!--Device-DecorButtonStyle-closeButtonRightMargin? : int-End-->
 
@@ -96,9 +106,11 @@ Color mode. Buttons automatically adapt to light colors in dark mode and to dark
 
 **Type:** ConfigurationConstant.ColorMode
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecorButtonStyle-colorMode?: ConfigurationConstant.ColorMode--><!--Device-DecorButtonStyle-colorMode?: ConfigurationConstant.ColorMode-End-->
 
@@ -114,9 +126,11 @@ Spacing between buttons. The value ranges from 8 vp to 24 vp. The default value 
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-DecorButtonStyle-spacingBetweenButtons? : int--><!--Device-DecorButtonStyle-spacingBetweenButtons? : int-End-->
 

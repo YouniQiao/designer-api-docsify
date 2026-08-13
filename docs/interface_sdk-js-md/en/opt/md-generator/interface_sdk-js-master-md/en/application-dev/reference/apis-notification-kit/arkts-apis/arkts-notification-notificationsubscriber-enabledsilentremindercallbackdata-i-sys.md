@@ -4,6 +4,8 @@ Returns the application notification silent reminder switch state.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface EnabledSilentReminderCallbackData--><!--Device-unnamed-export interface EnabledSilentReminderCallbackData-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -22,6 +24,8 @@ Bundle name of the application.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EnabledSilentReminderCallbackData-readonly bundle: string--><!--Device-EnabledSilentReminderCallbackData-readonly bundle: string-End-->
@@ -36,15 +40,13 @@ Bundle name of the application.
 readonly enableStatus: notificationManager.SwitchState
 ```
 
-Enabling state of the application's silent reminder.  
-- **USER_MODIFIED_OFF**: disabled state set by the user.  
-- **USER_MODIFIED_ON**: enabled state set by the user.  
-- **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting.  
-- **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
+Enabling state of the application's silent reminder. - **USER_MODIFIED_OFF**: disabled state set by the user. - **USER_MODIFIED_ON**: enabled state set by the user. - **SYSTEM_DEFAULT_OFF**: initial disabled state before user setting. - **SYSTEM_DEFAULT_ON**: initial enabled state before user setting.
 
 **Type:** notificationManager.SwitchState
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -65,6 +67,8 @@ UID of the application.
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

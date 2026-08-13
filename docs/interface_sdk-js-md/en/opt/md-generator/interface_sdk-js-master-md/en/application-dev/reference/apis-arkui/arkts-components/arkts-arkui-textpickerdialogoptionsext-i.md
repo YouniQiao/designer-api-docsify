@@ -6,97 +6,9 @@ Defines the TextPickerDialogOptionsExt for Text Picker Dialog.
 
 **Since:** 20
 
-<!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions--><!--Device-unnamed-declare interface TextPickerDialogOptionsExt extends TextPickerOptions-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onCancel
-
-```TypeScript
-onCancel?: VoidCallback
-```
-
-Called when the Cancel button in the dialog is clicked.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextPickerDialogOptionsExt-onCancel?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onCancel?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidAppear
-
-```TypeScript
-onDidAppear?: VoidCallback
-```
-
-Callback function when the dialog appears.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextPickerDialogOptionsExt-onDidAppear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onDidAppear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: VoidCallback
-```
-
-Callback function when the dialog disappears.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextPickerDialogOptionsExt-onDidDisappear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onDidDisappear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: VoidCallback
-```
-
-Callback function before the dialog openAnimation starts.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextPickerDialogOptionsExt-onWillAppear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onWillAppear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: VoidCallback
-```
-
-Callback function before the dialog closeAnimation starts.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-TextPickerDialogOptionsExt-onWillDisappear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onWillDisappear?: VoidCallback-End-->
+<!--Device-unnamed-declare interface TextPickerDialogOptionsExt--><!--Device-unnamed-declare interface TextPickerDialogOptionsExt-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -111,6 +23,8 @@ Style of accept button.
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,6 +45,8 @@ Defines the dialog alignment of the screen.
 **Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,6 +70,8 @@ Defines the textPickerDialog's background blur Style
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -173,6 +91,8 @@ Defines the textPickerDialog's background blur style with options
 **Type:** [BackgroundBlurStyleOptions](arkts-arkui-backgroundblurstyleoptions-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,6 +116,8 @@ Defines the textPickerDialog's background color
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -216,6 +138,8 @@ Defines the textPickerDialog's background effect with options
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -230,15 +154,15 @@ Defines the textPickerDialog's background effect with options
 canLoop?: boolean
 ```
 
-Can scroll loop if true is set, on the contrary it can not.
-
-Default Value: true
+Can scroll loop if true is set, on the contrary it can not. Default Value: true
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,6 +184,8 @@ Style of cancel button.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -279,6 +205,8 @@ Called when the default height of the selected element is set.
 **Type:** number \| string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,6 +228,8 @@ Defines to set the default text style for options.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -320,6 +250,8 @@ Defines whether to disable the text style animation.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -339,6 +271,8 @@ Text style of disappearing items.
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,6 +296,8 @@ Enable or disable haptic feedback.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -383,6 +319,8 @@ Defines whether to respond to the hover mode.
 **Default:** false
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -406,6 +344,8 @@ Defines the dialog's display area in hover mode.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -425,6 +365,8 @@ Mask Region of dialog. The size cannot exceed the main window.
 **Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -446,6 +388,8 @@ Defines the dialog offset.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -466,11 +410,35 @@ Called when the OK button in the dialog is clicked.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-TextPickerDialogOptionsExt-onAccept?: Callback<TextPickerResult>--><!--Device-TextPickerDialogOptionsExt-onAccept?: Callback<TextPickerResult>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onCancel
+
+```TypeScript
+onCancel?: VoidCallback
+```
+
+Called when the Cancel button in the dialog is clicked.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptionsExt-onCancel?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onCancel?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -486,11 +454,57 @@ This event is triggered when a TextPicker text is selected in dialog.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-TextPickerDialogOptionsExt-onChange?: Callback<TextPickerResult>--><!--Device-TextPickerDialogOptionsExt-onChange?: Callback<TextPickerResult>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidAppear
+
+```TypeScript
+onDidAppear?: VoidCallback
+```
+
+Callback function when the dialog appears.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptionsExt-onDidAppear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onDidAppear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: VoidCallback
+```
+
+Callback function when the dialog disappears.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptionsExt-onDidDisappear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onDidDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -505,6 +519,8 @@ This event is triggered when an item enters the selected area in dialog.
 **Type:** Callback&lt;[TextPickerResult](arkts-arkui-textpickerresult-i.md)&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -526,11 +542,57 @@ This event is triggered when a TextPicker text is selected and scrolling has sto
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-TextPickerDialogOptionsExt-onScrollStop?: Callback<TextPickerResult>--><!--Device-TextPickerDialogOptionsExt-onScrollStop?: Callback<TextPickerResult>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: VoidCallback
+```
+
+Callback function before the dialog openAnimation starts.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptionsExt-onWillAppear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onWillAppear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: VoidCallback
+```
+
+Callback function before the dialog closeAnimation starts.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-TextPickerDialogOptionsExt-onWillDisappear?: VoidCallback--><!--Device-TextPickerDialogOptionsExt-onWillDisappear?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -547,6 +609,8 @@ Background style of selected items.
 **Default:** { color: $r('sys.color.comp_background_tertiary'), borderRadius: $r('sys.float.corner_radius_level12') }
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -568,6 +632,8 @@ Text style of selected items
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -588,6 +654,8 @@ Defines the dialog's shadow.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -602,11 +670,13 @@ Defines the dialog's shadow.
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -627,6 +697,8 @@ Text style of normal items
 **Type:** [TextPickerTextStyle](arkts-arkui-textpickertextstyle-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

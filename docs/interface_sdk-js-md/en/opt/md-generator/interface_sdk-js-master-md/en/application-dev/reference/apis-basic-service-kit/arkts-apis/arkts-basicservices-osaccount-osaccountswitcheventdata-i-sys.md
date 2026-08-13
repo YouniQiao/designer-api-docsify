@@ -2,7 +2,9 @@
 
 Defines the event that indicates the start or end of a foreground-background OS account switchover.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface OsAccountSwitchEventData--><!--Device-osAccount-interface OsAccountSwitchEventData-End-->
 
@@ -28,6 +30,8 @@ ID of the logical display where the switchover occurs. The default value is **0*
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-OsAccountSwitchEventData-displayId?: long--><!--Device-OsAccountSwitchEventData-displayId?: long-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -44,7 +48,9 @@ ID of the source OS account.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountSwitchEventData-fromAccountId: int--><!--Device-OsAccountSwitchEventData-fromAccountId: int-End-->
 
@@ -62,7 +68,9 @@ ID of the target OS account.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OsAccountSwitchEventData-toAccountId: int--><!--Device-OsAccountSwitchEventData-toAccountId: int-End-->
 

@@ -1,10 +1,12 @@
 # RouterPageState
 
-Router page state.
+Enumerates the states of a page during routing. **RouterPageState** is used in [RouterPageInfo](arkts-arkui-uiobserver-routerpageinfo-c.md#RouterPageInfo) as the callback parameter for passive observation via [routerPageUpdate](arkts-arkui-uiobserver-onnavdestinationupdate-f.md#on_navDestinationUpdate).
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-uiObserver-export enum RouterPageState--><!--Device-uiObserver-export enum RouterPageState-End-->
 
@@ -16,13 +18,17 @@ Router page state.
 ABOUT_TO_APPEAR = 0
 ```
 
-When the router page create.
+The page is about to be displayed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageState-ABOUT_TO_APPEAR = 0--><!--Device-RouterPageState-ABOUT_TO_APPEAR = 0-End-->
 
@@ -34,13 +40,17 @@ When the router page create.
 ABOUT_TO_DISAPPEAR = 1
 ```
 
-When the router page destroy.
+The page is about to be destroyed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageState-ABOUT_TO_DISAPPEAR = 1--><!--Device-RouterPageState-ABOUT_TO_DISAPPEAR = 1-End-->
 
@@ -52,13 +62,17 @@ When the router page destroy.
 ON_PAGE_SHOW = 2
 ```
 
-When the router page show.
+The page is displayed.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageState-ON_PAGE_SHOW = 2--><!--Device-RouterPageState-ON_PAGE_SHOW = 2-End-->
 
@@ -70,13 +84,17 @@ When the router page show.
 ON_PAGE_HIDE = 3
 ```
 
-When the router page hide.
+The page is hidden.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageState-ON_PAGE_HIDE = 3--><!--Device-RouterPageState-ON_PAGE_HIDE = 3-End-->
 
@@ -88,13 +106,17 @@ When the router page hide.
 ON_BACK_PRESS = 4
 ```
 
-When back press event happened in the router page.
+The page is returned.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RouterPageState-ON_BACK_PRESS = 4--><!--Device-RouterPageState-ON_BACK_PRESS = 4-End-->
 

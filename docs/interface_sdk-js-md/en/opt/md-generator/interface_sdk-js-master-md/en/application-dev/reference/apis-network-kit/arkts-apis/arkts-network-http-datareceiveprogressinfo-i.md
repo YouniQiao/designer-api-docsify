@@ -2,7 +2,9 @@
 
 This interface is used to obtain the progress information of file upload or download.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-http-export interface DataReceiveProgressInfo--><!--Device-http-export interface DataReceiveProgressInfo-End-->
 
@@ -24,9 +26,11 @@ Number of data bytes received.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DataReceiveProgressInfo-receiveSize: int--><!--Device-DataReceiveProgressInfo-receiveSize: int-End-->
 
@@ -42,9 +46,11 @@ Total number of bytes to receive.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-DataReceiveProgressInfo-totalSize: int--><!--Device-DataReceiveProgressInfo-totalSize: int-End-->
 

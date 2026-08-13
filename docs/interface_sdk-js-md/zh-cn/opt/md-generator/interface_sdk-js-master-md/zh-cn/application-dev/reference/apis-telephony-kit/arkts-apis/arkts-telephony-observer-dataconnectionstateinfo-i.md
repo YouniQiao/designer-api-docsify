@@ -2,7 +2,9 @@
 
 数据连接状态相关信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-observer-export interface DataConnectionStateInfo--><!--Device-observer-export interface DataConnectionStateInfo-End-->
 
@@ -18,7 +20,9 @@ network: RatType
 
 **类型：** [RatType](arkts-telephony-observer-rattype-t.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataConnectionStateInfo-network: RatType--><!--Device-DataConnectionStateInfo-network: RatType-End-->
 
@@ -34,7 +38,9 @@ state: DataConnectState
 
 **类型：** [DataConnectState](arkts-telephony-observer-dataconnectstate-t.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DataConnectionStateInfo-state: DataConnectState--><!--Device-DataConnectionStateInfo-state: DataConnectState-End-->
 

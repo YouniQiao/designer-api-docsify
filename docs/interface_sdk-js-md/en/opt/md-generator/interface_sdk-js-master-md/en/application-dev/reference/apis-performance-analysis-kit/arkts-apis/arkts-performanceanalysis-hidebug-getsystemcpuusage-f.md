@@ -12,14 +12,11 @@ import { hidebug } from '@kit.PerformanceAnalysisKit';
 function getSystemCpuUsage(): number
 ```
 
-Obtains the CPU usage of the system.
+Obtains the CPU usage of the system. > **NOTE：**> > This API involves cross-process communication and takes a long time. To avoid performance problems, you are > advised not to call this API in the main thread.
 
-> **NOTE：**
-> 
-> This API involves cross-process communication and takes a long time. To avoid performance problems, you are
-> advised not to call this API in the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-hidebug-function getSystemCpuUsage(): double--><!--Device-hidebug-function getSystemCpuUsage(): double-End-->
 
@@ -35,7 +32,7 @@ Obtains the CPU usage of the system.
 
 | Error Code ID |
 | --- |
-| [11400104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
+| [11400104](../errorcode-hiviewdfx-hidebug-cpuusage.md#11400104-abnormal-cpu-usage) |
 
 ## Examples
 

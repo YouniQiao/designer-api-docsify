@@ -10,6 +10,8 @@ function offPickupChange(callback?: Callback<PickupEvent>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-motion-function offPickupChange(callback?: Callback<PickupEvent>): void--><!--Device-motion-function offPickupChange(callback?: Callback<PickupEvent>): void-End-->
@@ -28,5 +30,5 @@ function offPickupChange(callback?: Callback<PickupEvent>): void
 
 | 错误码ID |
 | --- |
-| [31500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [31500001](../../apis-multimodalawareness-kit/errorcode-motion.md#31500001-服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

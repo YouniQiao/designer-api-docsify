@@ -2,9 +2,11 @@
 
 Enumerates the network sharing types of an NIC.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sharing-export enum SharingIfaceType--><!--Device-sharing-export enum SharingIfaceType-End-->
 
@@ -20,9 +22,11 @@ SHARING_WIFI = 0
 
 Network sharing type for Wi-Fi.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharingIfaceType-SHARING_WIFI = 0--><!--Device-SharingIfaceType-SHARING_WIFI = 0-End-->
 
@@ -38,9 +42,11 @@ SHARING_USB = 1
 
 Network sharing type for USB.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharingIfaceType-SHARING_USB = 1--><!--Device-SharingIfaceType-SHARING_USB = 1-End-->
 
@@ -56,9 +62,11 @@ SHARING_BLUETOOTH = 2
 
 Network sharing type for BLUETOOTH.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharingIfaceType-SHARING_BLUETOOTH = 2--><!--Device-SharingIfaceType-SHARING_BLUETOOTH = 2-End-->
 

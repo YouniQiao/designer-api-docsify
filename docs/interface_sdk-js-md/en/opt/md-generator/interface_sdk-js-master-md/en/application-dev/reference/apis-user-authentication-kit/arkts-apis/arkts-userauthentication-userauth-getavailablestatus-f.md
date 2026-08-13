@@ -14,7 +14,9 @@ function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLev
 
 Checks whether the specified authentication capability is supported. This API is used to check whether the current device supports the specified authentication type and authentication trust level. It helps an application determine whether the authentication capability is available before initiating authentication, thereby avoiding unnecessary authentication failures. If the query is successful (no error is thrown), the authentication capability is available. If an error is thrown, the application should determine the cause based on the error code and take appropriate measures.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
@@ -35,13 +37,13 @@ Checks whether the specified authentication capability is supported. This API is
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500013-password-expired) |
-| [12500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-credential-not-enrolled) |
-| [12500006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500013](../errorcode-useriam.md#12500013-password-expired) |
+| [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

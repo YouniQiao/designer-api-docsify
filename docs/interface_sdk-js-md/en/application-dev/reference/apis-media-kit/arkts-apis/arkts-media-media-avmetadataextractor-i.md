@@ -1,14 +1,12 @@
 # AVMetadataExtractor
 
-AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use   
-[media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor)to create an AVMetadataExtractor instance.
+AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtain metadata and thumbnails from media assets. Before calling any API of AVMetadataExtractor, you must use [media.createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) to create an AVMetadataExtractor instance. For details about the demo of obtaining audio or video metadata and video thumbnails, see [Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
 
-For details about the demo of obtaining audio or video metadata and video thumbnails, see   
-[Using AVMetadataExtractor to Extract Audio and Video Metadata (ArkTS)](../../../media/media/avmetadataextractor.md).
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-media-interface AVMetadataExtractor--><!--Device-media-interface AVMetadataExtractor-End-->
 
@@ -30,7 +28,9 @@ Cancels the ongoing task of obtaining thumbnails in batches. (The thumbnails tha
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +50,8 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void--><!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -58,14 +60,14 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap&gt; | Yes | Callback used to return the album cover. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -77,7 +79,9 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap | undefined>): void--><!--Device-AVMetadataExtractor-fetchAlbumCover(callback: AsyncCallback<image.PixelMap | undefined>): void-End-->
 
@@ -87,14 +91,14 @@ Obtains the cover of the audio album. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;image.PixelMap \| undefined&gt; | Yes | Callback used to return the album cover. to return when fetchAlbumCover completed. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;image.PixelMap \| undefined&gt; | Yes | Callback used to return the album cover. to return when fetchAlbumCover completed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by callback. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchAlbumCover
 
@@ -107,6 +111,8 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap>-End-->
 
@@ -122,8 +128,8 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchAlbumCover
 
@@ -135,7 +141,9 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchAlbumCover(): Promise<image.PixelMap | undefined>-End-->
 
@@ -151,8 +159,8 @@ Obtains the cover of the audio album. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -165,6 +173,8 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>--><!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap>-End-->
 
@@ -188,10 +198,10 @@ Obtains a video thumbnail. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTime
 
@@ -203,7 +213,9 @@ It will decode the given video resource. Then fetch a picture at @timeUs accordi
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap | undefined>--><!--Device-AVMetadataExtractor-fetchFrameByTime(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams): Promise<image.PixelMap | undefined>-End-->
 
@@ -227,20 +239,13 @@ It will decode the given video resource. Then fetch a picture at @timeUs accordi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## fetchFrameByTimeWithTimeout
 
-ArkTS-Dyn:
-```TypeScript
-fetchFrameByTimeWithTimeout(timeUs: number, options: AVImageQueryOptions, param: PixelMapParams,
-      timeoutMs: number): Promise<image.PixelMap | undefined>
-```
-
-ArkTS-Sta:
 ```TypeScript
 fetchFrameByTimeWithTimeout(timeUs: long, options: AVImageQueryOptions, param: PixelMapParams,
       timeoutMs: long): Promise<image.PixelMap | undefined>
@@ -250,7 +255,9 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,10 +269,10 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeUs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
+| timeUs | long | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | long | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
@@ -277,40 +284,26 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## fetchFramesByTimes
 
-ArkTS-Dyn:
-```TypeScript
-fetchFramesByTimes(timesUs: number[], queryOption: AVImageQueryOptions, param: PixelMapParams,
-        callback: OnFrameFetched): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 fetchFramesByTimes(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
         callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - The given video resource is decoded first, and then image frames are extracted from each time point in the
-> **timesUs** array based on the provided **options** and **param**.
-> 
-> - When each image extraction is complete, the system calls the callback function and passes the extraction
-> result. Note that the execution order of the callback function may be inconsistent with the time points in the
-> **timesUs** array.
+Obtains video thumbnails in batches. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The given video resource is decoded first, and then image frames are extracted from each time point in the > **timesUs** array based on the provided **options** and **param**. > > - When each image extraction is complete, the system calls the callback function and passes the extraction > result. Note that the execution order of the callback function may be inconsistent with the time points in the > **timesUs** array.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -322,7 +315,7 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| timesUs | long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
 | callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.&lt;br&gt;For details about the exception types, see the returned error code information. |
@@ -331,44 +324,27 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchFramesByTimesWithTimeout
 
-ArkTS-Dyn:
-```TypeScript
-fetchFramesByTimesWithTimeout(timesUs: number[], queryOption: AVImageQueryOptions, param: PixelMapParams,
-      timeoutMs: number, callback: OnFrameFetched): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 fetchFramesByTimesWithTimeout(timesUs: long[], queryOption: AVImageQueryOptions, param: PixelMapParams,
       timeoutMs: long, callback: OnFrameFetched): void
 ```
 
-Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - The given video resource is decoded first, and then image frames are extracted from each time point in the
-> **timesUs** array based on the provided **options** and **param**.
-> 
-> - When each image extraction is complete, the system calls the callback function and passes the extraction
-> result. Note that the execution order of the callback function may be inconsistent with the time points in the
-> **timesUs** array.
-> 
-> - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not
-> the entire batch thumbnail extraction process.
+Obtains video thumbnails in batches. You can set the maximum timeout interval (**timeoutMs**) for obtaining each thumbnail. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The given video resource is decoded first, and then image frames are extracted from each time point in the > **timesUs** array based on the provided **options** and **param**. > > - When each image extraction is complete, the system calls the callback function and passes the extraction > result. Note that the execution order of the callback function may be inconsistent with the time points in the > **timesUs** array. > > - The **timeoutMs** parameter indicates the maximum timeout interval for obtaining each thumbnail frame, not > the entire batch thumbnail extraction process.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,22 +356,22 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| timesUs | long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | long | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
 | callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.&lt;br&gt;For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Service died. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Fetch timeout, Returned by callback. |
+| [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. e.g. The size of timesUs is larger than 4096. |
 
 ## fetchMetadata
 
@@ -409,6 +385,8 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
@@ -417,15 +395,15 @@ Obtains the media metadata. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata&gt; | Yes | Callback used to return the result, which is an AVMetadata instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -437,7 +415,9 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata | undefined>): void--><!--Device-AVMetadataExtractor-fetchMetadata(callback: AsyncCallback<AVMetadata | undefined>): void-End-->
 
@@ -447,15 +427,15 @@ Obtains media metadata. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;AVMetadata \| undefined&gt; | Yes | Callback used to return the result, which is an **AVMetadata** instance. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;AVMetadata \| undefined&gt; | Yes | Callback used to return the result, which is an **AVMetadata** instance. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by callback. |
 
 ## fetchMetadata
 
@@ -468,6 +448,8 @@ Obtains the media metadata. This API uses a promise to return the result.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>--><!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata>-End-->
 
@@ -483,9 +465,9 @@ Obtains the media metadata. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted.<br>**Applicable version:** 23 and later |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchMetadata
 
@@ -497,7 +479,9 @@ Obtains media metadata. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata | undefined>--><!--Device-AVMetadataExtractor-fetchMetadata(): Promise<AVMetadata | undefined>-End-->
 
@@ -513,18 +497,12 @@ Obtains media metadata. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 ## fetchMetadataWithTimeout
 
-ArkTS-Dyn:
-```TypeScript
-fetchMetadataWithTimeout(timeoutMs: number): Promise<AVMetadata | undefined>
-```
-
-ArkTS-Sta:
 ```TypeScript
 fetchMetadataWithTimeout(timeoutMs: long): Promise<AVMetadata | undefined>
 ```
@@ -533,7 +511,9 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -545,7 +525,7 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeoutMs | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.&lt;br&gt;If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | long | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.&lt;br&gt;If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
@@ -557,11 +537,11 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
-| [5411012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
-| [5400106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [5400104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5411012](../errorcode-media.md#5411012-request-not-supported-due-to-http-plaintext-interception) | Http cleartext traffic is not permitted. |
+| [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
+| [5400104](../errorcode-media.md#5400104-operation-timeout) | Operation timeout. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## release
 
@@ -571,9 +551,11 @@ release(callback: AsyncCallback<void>): void
 
 Releases this AVMetadataExtractor instance. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void--><!--Device-AVMetadataExtractor-release(callback: AsyncCallback<void>): void-End-->
 
@@ -583,13 +565,13 @@ Releases this AVMetadataExtractor instance. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by callback. |
 
 ## release
 
@@ -599,9 +581,11 @@ release(): Promise<void>
 
 Releases this AVMetadataExtractor instance. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-release(): Promise<void>--><!--Device-AVMetadataExtractor-release(): Promise<void>-End-->
 
@@ -617,7 +601,7 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 
 ## setUrlSource
 
@@ -625,13 +609,13 @@ Releases this AVMetadataExtractor instance. This API uses a promise to return th
 setUrlSource(url: string, headers?: Record<string, string>): void
 ```
 
-Sets the data source for a network on-demand resource. Only network metadata (  
-[fetchMetadata](#fetchMetadata)) and thumbnails (  
-[fetchFrameByTime](#fetchFrameByTime)) can be obtained. The media resource URL must be set before the retrieval.
+Sets the data source for a network on-demand resource. Only network metadata ( [fetchMetadata](#fetchMetadata)) and thumbnails ( [fetchFrameByTime](#fetchFrameByTime) ) can be obtained. The media resource URL must be set before the retrieval.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void--><!--Device-AVMetadataExtractor-setUrlSource(url: string, headers?: Record<string, string>): void-End-->
 
@@ -650,15 +634,15 @@ Sets the data source for a network on-demand resource. Only network metadata (
 dataSrc ?: AVDataSrcDescriptor
 ```
 
-Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
-
-When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
+Streaming media resource descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**. When an application obtains a media file from the remote, you can set **dataSrc** to obtain the metadata before the application finishes the downloading.
 
 **Type:** [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor--><!--Device-AVMetadataExtractor-dataSrc ?: AVDataSrcDescriptor-End-->
 
@@ -670,19 +654,15 @@ When an application obtains a media file from the remote, you can set **dataSrc*
 fdSrc ?: AVFileDescriptor
 ```
 
-Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**.
-
-There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**.
-
-**NOTE：**
-
-After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
+Media file descriptor, which specifies the data source. Before obtaining metadata, you must set the data source through either **fdSrc** or **dataSrc**. There is a media file that stores continuous assets, the address offset is 0, and the byte length is 100. Its file descriptor is **AVFileDescriptor { fd = resourceHandle; offset = 0; length = 100; }**. **NOTE：**After the resource handle (FD) is transferred to an AVMetadataExtractor instance, do not use the resource handle to perform other read and write operations, including but not limited to transferring this handle to other AVPlayer, AVMetadataExtractor, AVImageGenerator, or AVTranscoder instance. Competition occurs when multiple AVMetadataExtractor use the same resource handle to read and write files at the same time, resulting in errors in obtaining data.
 
 **Type:** [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor--><!--Device-AVMetadataExtractor-fdSrc ?: AVFileDescriptor-End-->
 

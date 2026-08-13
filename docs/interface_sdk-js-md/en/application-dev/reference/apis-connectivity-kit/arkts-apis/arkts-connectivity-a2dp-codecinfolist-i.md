@@ -2,9 +2,11 @@
 
 Describes the codec information.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-a2dp-interface CodecInfoList--><!--Device-a2dp-interface CodecInfoList-End-->
 
@@ -26,9 +28,11 @@ codec bit rate list.
 
 **Type:** [CodecBitRate](arkts-connectivity-a2dp-codecbitrate-e.md)[]
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]--><!--Device-CodecInfoList-codecBitRateArray: CodecBitRate[]-End-->
 
@@ -44,9 +48,11 @@ codec bits per sample list.
 
 **Type:** [CodecBitsPerSample](arkts-connectivity-a2dp-codecbitspersample-e.md)[]
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]--><!--Device-CodecInfoList-codecBitsPerSampleArray: CodecBitsPerSample[]-End-->
 
@@ -62,9 +68,11 @@ codec channel mode list.
 
 **Type:** [CodecChannelMode](arkts-connectivity-a2dp-codecchannelmode-e.md)[]
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]--><!--Device-CodecInfoList-codecChannelModeArray: CodecChannelMode[]-End-->
 
@@ -80,9 +88,11 @@ codec frame length list.
 
 **Type:** [CodecFrameLength](arkts-connectivity-a2dp-codecframelength-e.md)[]
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]--><!--Device-CodecInfoList-codecFrameLengthArray: CodecFrameLength[]-End-->
 
@@ -98,9 +108,11 @@ codec sample rate list.
 
 **Type:** [CodecSampleRate](arkts-connectivity-a2dp-codecsamplerate-e.md)[]
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]--><!--Device-CodecInfoList-codecSampleRateArray: CodecSampleRate[]-End-->
 
@@ -116,9 +128,11 @@ codec type
 
 **Type:** [CodecType](arkts-connectivity-a2dp-codectype-e.md)
 
-**Since:** 19
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-CodecInfoList-codecType: CodecType--><!--Device-CodecInfoList-codecType: CodecType-End-->
 

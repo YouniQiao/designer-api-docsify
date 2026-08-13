@@ -14,7 +14,9 @@ function openUkeyAuthDialog(context: common.Context, ukeyAuthRequest: UkeyAuthRe
 
 Opens the PIN authentication dialog box of the USB Key credential. On the displayed page, the user can enter the PIN to authorize the USB credential. After the call is successful, the USB key credential will be unlocked. The app can use the credential to perform operations such as signing and encryption. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -41,12 +43,12 @@ Opens the PIN authentication dialog box of the USB Key credential. On the displa
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [29700006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-internal-error) |
-| [29700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
-| [29700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700002-operation-canceled) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [29700006](../errorcode-certManagerDialog.md#29700006-failed-to-validate-the-input-parameter) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
+| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
+| [29700002](../errorcode-certManagerDialog.md#29700002-operation-canceled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

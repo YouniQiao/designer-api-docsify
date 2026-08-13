@@ -1,12 +1,14 @@
 # LinkParamCategory
 
-Enum definition of the paramCategory [paramCategory](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md#paramCategory),paramCategory is an attribute of LinkIntentParamMapping and used in InsightIntentLink [InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-i.md#InsightIntentLink).
+Enumerates the intent parameter categories available for the @InsightIntentLink decorator. The enum is used to define how intent parameters should be passed.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-<!--Device-unnamed-export declare enum LinkParamCategory--><!--Device-unnamed-export declare enum LinkParamCategory-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare enum LinkParamCategory--><!--Device-unnamed-declare enum LinkParamCategory-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -16,13 +18,17 @@ Enum definition of the paramCategory [paramCategory](arkts-ability-app-ability-i
 LINK = 'link'
 ```
 
-The parameter will added to the end of link uri.
+Category of link. Intent parameters are appended to the end of a URI link and passed to the application via the URI.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-LinkParamCategory-LINK = 'link'--><!--Device-LinkParamCategory-LINK = 'link'-End-->
 
@@ -34,13 +40,17 @@ The parameter will added to the end of link uri.
 WANT = 'want'
 ```
 
-The parameter will transferred to the application as parameters of want.
+Category of want. Intent parameters are passed to the application through the **parameters** field in [Want](arkts-ability-app-ability-want-want-c.md#Want).
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-LinkParamCategory-WANT = 'want'--><!--Device-LinkParamCategory-WANT = 'want'-End-->
 

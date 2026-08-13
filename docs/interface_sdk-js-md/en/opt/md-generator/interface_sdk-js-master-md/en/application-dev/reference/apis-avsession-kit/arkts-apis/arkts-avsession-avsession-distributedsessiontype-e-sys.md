@@ -2,7 +2,9 @@
 
 Define different distributed session type
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum DistributedSessionType--><!--Device-avSession-enum DistributedSessionType-End-->
 
@@ -18,7 +20,9 @@ TYPE_SESSION_REMOTE = 0
 
 Remote session sensed from remote device.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedSessionType-TYPE_SESSION_REMOTE = 0--><!--Device-DistributedSessionType-TYPE_SESSION_REMOTE = 0-End-->
 
@@ -34,7 +38,9 @@ TYPE_SESSION_MIGRATE_IN = 1
 
 Migrated session from remote device to this device.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_IN = 1--><!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_IN = 1-End-->
 
@@ -50,7 +56,9 @@ TYPE_SESSION_MIGRATE_OUT = 2
 
 Migrated session from this device to remote device.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_OUT = 2--><!--Device-DistributedSessionType-TYPE_SESSION_MIGRATE_OUT = 2-End-->
 

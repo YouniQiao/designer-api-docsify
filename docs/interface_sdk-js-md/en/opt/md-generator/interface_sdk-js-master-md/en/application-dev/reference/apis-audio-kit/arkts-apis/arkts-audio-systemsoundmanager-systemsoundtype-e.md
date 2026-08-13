@@ -4,6 +4,8 @@ Enumerates the system sound effect types.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-systemSoundManager-enum SystemSoundType--><!--Device-systemSoundManager-enum SystemSoundType-End-->
 
 **System capability:** SystemCapability.Multimedia.SystemSound.Core
@@ -17,6 +19,8 @@ PHOTO_SHUTTER = 0
 The sound indicates image capture.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ The sound indicates the beginning of video recording.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemSoundType-VIDEO_RECORDING_BEGIN = 1--><!--Device-SystemSoundType-VIDEO_RECORDING_BEGIN = 1-End-->
@@ -49,6 +55,8 @@ VIDEO_RECORDING_END = 2
 The sound indicates the end of video recording.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -18,6 +18,8 @@ Battery level of the device.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function batteryCapacityLevel(): BatteryCapacityLevel--><!--Device-batteryInfo-function batteryCapacityLevel(): BatteryCapacityLevel-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

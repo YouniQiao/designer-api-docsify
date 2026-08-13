@@ -8,7 +8,9 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 获取用于删除数据的SQL语句，此为同步接口。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo--><!--Device-relationalStore-function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo-End-->
 
@@ -30,7 +32,7 @@ function getDeleteSqlInfo(predicates: RdbPredicates):SqlInfo
 
 | 错误码ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-无效的参数) |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) |
 
 ## 示例
 

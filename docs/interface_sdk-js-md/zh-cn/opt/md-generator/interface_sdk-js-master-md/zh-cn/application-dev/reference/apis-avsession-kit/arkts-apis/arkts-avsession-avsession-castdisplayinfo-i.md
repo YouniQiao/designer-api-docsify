@@ -2,7 +2,9 @@
 
 扩展屏投播显示设备相关属性。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface CastDisplayInfo--><!--Device-avSession-interface CastDisplayInfo-End-->
 
@@ -18,9 +20,11 @@ height: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CastDisplayInfo-height: int--><!--Device-CastDisplayInfo-height: int-End-->
 
@@ -36,9 +40,11 @@ id: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CastDisplayInfo-id: long--><!--Device-CastDisplayInfo-id: long-End-->
 
@@ -54,9 +60,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CastDisplayInfo-name: string--><!--Device-CastDisplayInfo-name: string-End-->
 
@@ -72,9 +80,11 @@ state: CastDisplayState
 
 **类型：** [CastDisplayState](arkts-avsession-avsession-castdisplaystate-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CastDisplayInfo-state: CastDisplayState--><!--Device-CastDisplayInfo-state: CastDisplayState-End-->
 
@@ -90,9 +100,11 @@ width: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CastDisplayInfo-width: int--><!--Device-CastDisplayInfo-width: int-End-->
 

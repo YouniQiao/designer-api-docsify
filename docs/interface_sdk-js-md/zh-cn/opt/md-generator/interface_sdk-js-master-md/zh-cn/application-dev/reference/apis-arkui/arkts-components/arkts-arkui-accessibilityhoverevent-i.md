@@ -6,7 +6,9 @@ The accessibility hover action triggers this method invocation.
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface AccessibilityHoverEvent extends BaseEvent--><!--Device-unnamed-declare interface AccessibilityHoverEvent extends BaseEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface AccessibilityHoverEvent--><!--Device-unnamed-declare interface AccessibilityHoverEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ X coordinate of the accessibility hover point relative to the left edge of the d
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ Y coordinate of the accessibility hover point relative to the upper edge of the 
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -62,6 +68,8 @@ globalDisplayX?: number
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -76,15 +84,13 @@ globalDisplayX?: number
 globalDisplayY?: number
 ```
 
-鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。
-
-单位：vp
-
-取值范围：[0, +∞)
+鼠标位置在[全局坐标系](../../../windowmanager/window-terminology.md#全局坐标系)中的Y坐标。 单位：vp 取值范围：[0, +∞)
 
 **类型：** number
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,6 +112,8 @@ Type of the accessibility hover event.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -125,6 +133,8 @@ X coordinate of the accessibility hover point relative to the left edge of the c
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +156,8 @@ Y coordinate of the accessibility hover point relative to the upper edge of the 
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -166,6 +178,8 @@ X coordinate of the accessibility hover point relative to the left edge of the e
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -185,6 +199,8 @@ Y coordinate of the accessibility hover point relative to the upper edge of the 
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -4,6 +4,8 @@ Describes the desired display orientation for image content.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ImageRotateOrientation--><!--Device-unnamed-declare enum ImageRotateOrientation-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,14 +16,11 @@ Describes the desired display orientation for image content.
 AUTO = 0
 ```
 
-Use EXIF metadata for display orientation, with support for rotation and mirroring.
-
-Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) and  
-[DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md#DrawableDescriptor) types do not contain header information. When this API is called,the image display effect remains unchanged.
-
-![imageRotateOrientation_0](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_0.png)
+Use EXIF metadata for display orientation, with support for rotation and mirroring. Images of the [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap) and [DrawableDescriptor](arkts-arkui-drawabledescriptor-t.md#DrawableDescriptor) types do not contain header information. When this API is called, the image display effect remains unchanged. 
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +42,8 @@ Display original pixel data without transformation.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
@@ -59,11 +60,11 @@ Display original pixel data without transformation.
 RIGHT = 2
 ```
 
-Display the image after rotating it 90 degrees clockwise.
-
-![imageRotateOrientation_2](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_2.png)
+Display the image after rotating it 90 degrees clockwise. 
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,11 +82,11 @@ Display the image after rotating it 90 degrees clockwise.
 DOWN = 3
 ```
 
-Display the image after rotating it 180 degrees clockwise.
-
-![imageRotateOrientation_3](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_3.png)
+Display the image after rotating it 180 degrees clockwise. 
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -103,11 +104,11 @@ Display the image after rotating it 180 degrees clockwise.
 LEFT = 4
 ```
 
-Display the image after rotating it 270 degrees clockwise.
-
-![imageRotateOrientation_4](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_4.png)
+Display the image after rotating it 270 degrees clockwise. 
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,11 +126,11 @@ Display the image after rotating it 270 degrees clockwise.
 UP_MIRRORED = 5
 ```
 
-Display the image after flipping it horizontally.
-
-![imageRotateOrientation_5](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_5.png)
+Display the image after flipping it horizontally. 
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,11 +148,11 @@ Display the image after flipping it horizontally.
 RIGHT_MIRRORED = 6
 ```
 
-Display the image after flipping it horizontally and then rotating it 90 degrees clockwise.
-
-![imageRotateOrientation_6](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_6.png)
+Display the image after flipping it horizontally and then rotating it 90 degrees clockwise. 
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -169,11 +170,11 @@ Display the image after flipping it horizontally and then rotating it 90 degrees
 DOWN_MIRRORED = 7
 ```
 
-Display the image after flipping it vertically.
-
-![imageRotateOrientation_7](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_7.png)
+Display the image after flipping it vertically. 
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,11 +192,11 @@ Display the image after flipping it vertically.
 LEFT_MIRRORED = 8
 ```
 
-Display the image after flipping it horizontally and then rotating it 270 degrees clockwise.
-
-![imageRotateOrientation_8](../../../reference/apis-arkui/arkui-ts/figures/imageRotateOrientation_8.png)
+Display the image after flipping it horizontally and then rotating it 270 degrees clockwise. 
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

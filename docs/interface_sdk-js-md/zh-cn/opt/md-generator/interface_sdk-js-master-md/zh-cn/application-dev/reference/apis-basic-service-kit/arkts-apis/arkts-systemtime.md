@@ -1,4 +1,4 @@
-# @ohos.systemTime(系统时间、时区)
+# @ohos.systemTime
 
 本模块主要由系统时间和系统时区功能组成。开发者可以设置、获取系统时间及系统时区。
 
@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [systemDateTime](arkts-systemdatetime.md#systemDateTime)
+**替代接口：** [systemDateTime](arkts-systemdatetime.md#@ohos.systemDateTime)
 
 <!--Device-unnamed-declare namespace systemTime--><!--Device-unnamed-declare namespace systemTime-End-->
 
@@ -18,22 +18,22 @@
 
 | 名称 |
 | --- |
-| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime) |
-| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime-1) |
-| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getcurrenttime-2) |
-| [getDate](arkts-basicservices-systemtime-getdate-f.md#getdate) |
-| [getDate](arkts-basicservices-systemtime-getdate-f.md#getdate-1) |
-| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime) |
-| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime-1) |
-| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getrealactivetime-2) |
-| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime) |
-| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime-1) |
-| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getrealtime-2) |
-| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#gettimezone) |
-| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#gettimezone-1) |
-| [setDate](arkts-basicservices-systemtime-setdate-f.md#setdate) |
-| [setDate](arkts-basicservices-systemtime-setdate-f.md#setdate-1) |
-| [setTime](arkts-basicservices-systemtime-settime-f.md#settime) |
-| [setTime](arkts-basicservices-systemtime-settime-f.md#settime-1) |
-| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#settimezone) |
-| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#settimezone-1) |
+| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getCurrentTime) |
+| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getCurrentTime) |
+| [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md#getCurrentTime) |
+| [getDate](arkts-basicservices-systemtime-getdate-f.md#getDate) |
+| [getDate](arkts-basicservices-systemtime-getdate-f.md#getDate) |
+| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getRealActiveTime) |
+| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getRealActiveTime) |
+| [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md#getRealActiveTime) |
+| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getRealTime) |
+| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getRealTime) |
+| [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md#getRealTime) |
+| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#getTimezone) |
+| [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md#getTimezone) |
+| [setDate](arkts-basicservices-systemtime-setdate-f.md#setDate) |
+| [setDate](arkts-basicservices-systemtime-setdate-f.md#setDate) |
+| [setTime](arkts-basicservices-systemtime-settime-f.md#setTime) |
+| [setTime](arkts-basicservices-systemtime-settime-f.md#setTime) |
+| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#setTimezone) |
+| [setTimezone](arkts-basicservices-systemtime-settimezone-f.md#setTimezone) |

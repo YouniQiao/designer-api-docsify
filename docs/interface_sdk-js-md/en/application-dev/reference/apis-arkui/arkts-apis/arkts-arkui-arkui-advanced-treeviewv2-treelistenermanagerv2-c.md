@@ -4,7 +4,9 @@ Declare class TreeListenerManagerV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class TreeListenerManagerV2--><!--Device-unnamed-export declare class TreeListenerManagerV2-End-->
 
@@ -26,9 +28,13 @@ Get instance of treeListenerManagerV2.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerManagerV2-static getInstance(): TreeListenerManagerV2--><!--Device-TreeListenerManagerV2-static getInstance(): TreeListenerManagerV2-End-->
 
@@ -50,9 +56,13 @@ Get treeListenerV2.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TreeListenerManagerV2-getTreeListener(): TreeListenerV2--><!--Device-TreeListenerManagerV2-getTreeListener(): TreeListenerV2-End-->
 

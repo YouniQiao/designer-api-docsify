@@ -8,9 +8,11 @@ function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, p
 
 打开证书管理对话框显示证书的详情。调用成功后，将显示证书的基本信息、有效期、颁发者、使用者等详细信息。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -38,11 +40,11 @@ function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, p
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [29700004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700004-设备类型不支持) | The API is not supported on this device. |
-| [29700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
-| [29700003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-证书安装失败错误) | Show the certificate detail dialog failed, such as the certificate is in an invalid format. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [29700004](../errorcode-certManagerDialog.md#29700004-设备类型不支持) | The API is not supported on this device. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. Please try again. |
+| [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | Show the certificate detail dialog failed, such as the certificate is in an invalid format. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 

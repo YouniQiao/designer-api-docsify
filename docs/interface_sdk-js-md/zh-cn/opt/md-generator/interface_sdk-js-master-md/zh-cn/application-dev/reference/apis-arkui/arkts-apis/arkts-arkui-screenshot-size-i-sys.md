@@ -2,7 +2,9 @@
 
 表示截取图像的大小。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screenshot-interface Size--><!--Device-screenshot-interface Size-End-->
 
@@ -20,7 +22,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Size-height: long--><!--Device-Size-height: long-End-->
 
@@ -38,7 +42,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Size-width: long--><!--Device-Size-width: long-End-->
 

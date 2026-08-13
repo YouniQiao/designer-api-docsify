@@ -4,6 +4,8 @@ Defines the information provided when a specific gesture callback is triggered.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface GestureTriggerInfo--><!--Device-unnamed-export interface GestureTriggerInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Gesture recognizer object. Detailed gesture information can be obtained from thi
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -45,6 +49,8 @@ Phase of the gesture action callback.
 **Type:** [GestureActionPhase](arkts-arkui-arkui-uicontext-gestureactionphase-e.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Gesture event object.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -85,6 +93,8 @@ Node that triggers the gesture. The default value is **null**, indicating that n
 **Type:** FrameNode
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

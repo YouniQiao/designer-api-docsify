@@ -1,12 +1,22 @@
 # @ohos.distributedSoftBus.conversation(Cross-Device Wakeup and Message Transfer)
 
-The DSoftBus module **conversation** provides APIs for cross-device interaction of apps, including obtaining the trusted device list, and sending and receiving session data. With this module, your app can obtain trusted devices under the same account, register a listener to receive cross-device data, and send data to a specified device through a session channel. This module is applicable to scenarios that require cross-device collaboration and multi-device data transfer, simplifying the development of cross-device interaction.
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs and can be used only in the stage model.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -29,10 +39,10 @@ import { conversation } from '@kit.DistributedServiceKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getTrustedDevices](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#gettrusteddevices) |
-| [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postconversationdata) |
-| [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerconversationlistener) |
-| [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterconversationlistener) |
+| [getTrustedDevices](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md#getTrustedDevices-(System-API)) |
+| [postConversationData](arkts-distributedservice-conversation-postconversationdata-f-sys.md#postConversationData-(System-API)) |
+| [registerConversationListener](arkts-distributedservice-conversation-registerconversationlistener-f-sys.md#registerConversationListener-(System-API)) |
+| [unregisterConversationListener](arkts-distributedservice-conversation-unregisterconversationlistener-f-sys.md#unregisterConversationListener-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

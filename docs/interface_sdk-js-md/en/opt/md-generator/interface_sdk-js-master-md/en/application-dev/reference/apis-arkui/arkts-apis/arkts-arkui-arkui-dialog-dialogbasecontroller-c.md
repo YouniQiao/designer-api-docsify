@@ -4,6 +4,8 @@ The class used to control dialog.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class DialogBaseController--><!--Device-unnamed-export class DialogBaseController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Close the corresponding dialog.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -42,6 +46,8 @@ The constructor.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -59,6 +65,8 @@ getState(): DialogState
 Get the state.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

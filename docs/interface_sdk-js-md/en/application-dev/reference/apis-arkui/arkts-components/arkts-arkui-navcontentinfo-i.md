@@ -6,6 +6,8 @@ Provides the destination information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavContentInfo--><!--Device-unnamed-declare interface NavContentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Provides the destination information.
 index: number
 ```
 
-Index of the navigation destination in the routing stack. If the view is a root view (**NavBar**), the return value is **-1**.
-
-Value range: [-1, +��)
+Index of the navigation destination in the routing stack. If the view is a root view (**NavBar**), the return value is **-1**. Value range: [-1, +��)
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +50,8 @@ Mode of the navigation destination. If the view is a root view (**NavBar**), the
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -69,6 +73,8 @@ Name of the navigation destination. If the view is a root view (**NavBar**), the
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,6 +98,8 @@ Unique identifier of the navigation destination page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -113,6 +121,8 @@ Parameters loaded on the navigation destination page.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

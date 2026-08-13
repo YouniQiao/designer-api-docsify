@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
 <!--Device-locks-class ConditionVariable--><!--Device-locks-class ConditionVariable-End-->
 
@@ -19,6 +19,8 @@ constructor()
 默认构造函数。创建一个异步等待通知操作的对象。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -36,6 +38,8 @@ notifyAll(): void
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConditionVariable-notifyAll(): void--><!--Device-ConditionVariable-notifyAll(): void-End-->
@@ -52,6 +56,8 @@ notifyOne(): void
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConditionVariable-notifyOne(): void--><!--Device-ConditionVariable-notifyOne(): void-End-->
@@ -67,6 +73,8 @@ static request(name: string): ConditionVariable
 使用指定的名称查找或创建（如果未找到）异步等待通知操作的对象。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -96,6 +104,8 @@ wait(): Promise<void>
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ConditionVariable-wait(): Promise<void>--><!--Device-ConditionVariable-wait(): Promise<void>-End-->
@@ -117,6 +127,8 @@ waitFor(timeout: number): Promise<void>
 异步调用进入等待中，将在被唤醒或者等待时间结束后继续执行。使用Promise异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

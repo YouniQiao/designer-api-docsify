@@ -12,9 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application.This API uses an asynchronous callback to return the result.
+Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,7 +36,7 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -111,9 +113,11 @@ try {
 function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 ```
 
-Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application.This API uses a promise to return the result.
+Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -138,7 +142,7 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

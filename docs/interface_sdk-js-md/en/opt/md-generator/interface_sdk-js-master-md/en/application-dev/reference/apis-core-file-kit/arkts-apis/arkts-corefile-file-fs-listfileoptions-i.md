@@ -4,6 +4,8 @@ Defines the options used in **listFile()**.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ListFileOptions--><!--Device-unnamed-export interface ListFileOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -26,6 +28,8 @@ File filtering configuration. This parameter is optional. It specifies the file 
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ListFileOptions-filter?: Filter--><!--Device-ListFileOptions-filter?: Filter-End-->
@@ -44,6 +48,8 @@ Number of file names to list. This parameter is optional. The default value is *
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ListFileOptions-listNum?: number--><!--Device-ListFileOptions-listNum?: number-End-->
@@ -56,12 +62,13 @@ Number of file names to list. This parameter is optional. The default value is *
 recursion?: boolean
 ```
 
-Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is  
-**false**. If **recursion** is **false**, the names of files and directories that meet the filtering requirements in the current directory are returned. If **recursion** is **true**, relative paths (starting with"/") of all files that meet the specified conditions in the current directory are returned.
+Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is **false**. If **recursion** is **false**, the names of files and directories that meet the filtering requirements in the current directory are returned. If **recursion** is **true**, relative paths (starting with"/") of all files that meet the specified conditions in the current directory are returned.
 
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

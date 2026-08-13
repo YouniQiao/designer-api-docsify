@@ -12,7 +12,7 @@ Unlocks a given mission. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
+**Substitutes:** [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 
@@ -61,7 +61,7 @@ Unlocks a given mission. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unlockMission](ohos.app.ability.missionManager/missionManager#unlockMission)
+**Substitutes:** [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockMission-(System-API))
 
 **Required permissions:** ohos.permission.MANAGE_MISSIONS
 

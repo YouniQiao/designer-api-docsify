@@ -10,6 +10,8 @@ function error(domain: number, tag: string, format: string, ...args: any[]): voi
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hilog-function error(domain: number, tag: string, format: string, ...args: any[]): void--><!--Device-hilog-function error(domain: number, tag: string, format: string, ...args: any[]): void-End-->
@@ -38,3 +40,31 @@ hilog.error(0x0001, "testTag", "%{public}s World %{private}d", "hello", 3);
 ```TypeScript
 08-05 12:21:47.579  2695-2703  A00001/testTag  com.example.hilogDemo  E     hello World <private>
 ```
+
+
+## error
+
+```TypeScript
+function error(domain: number, tag: string, format: string, ...args: RecordData[]): void
+```
+
+打印ERROR级别的日志。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+
+<!--Device-hilog-function error(domain: int, tag: string, format: string, ...args: RecordData[]): void--><!--Device-hilog-function error(domain: int, tag: string, format: string, ...args: RecordData[]): void-End-->
+
+**系统能力：** SystemCapability.HiviewDFX.HiLog
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| domain | number | 是 |
+| tag | string | 是 |
+| format | string | 是 |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)[] | 是 |

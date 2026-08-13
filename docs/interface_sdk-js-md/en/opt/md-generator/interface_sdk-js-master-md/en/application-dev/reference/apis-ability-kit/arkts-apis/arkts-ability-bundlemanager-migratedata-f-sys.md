@@ -14,7 +14,9 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 
 Migrates files from the source path to the destination path. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MIGRATE_DATA
 
@@ -41,15 +43,15 @@ Migrates files from the source path to the destination path. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [17700086](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700086-system-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700084](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) |
-| [17700085](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) |
-| [17700082](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700082-user-authentication-failed) |
-| [17700083](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700083-user-authentication-times-out) |
-| [17700080](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700080-invalid-source-paths) |
-| [17700081](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700081-invalid-destination-path) |
+| [17700086](../errorcode-bundle.md#17700086-system-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700084](../errorcode-bundle.md#17700084-no-read-permissions-for-source-paths) |
+| [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) |
+| [17700082](../errorcode-bundle.md#17700082-user-authentication-failed) |
+| [17700083](../errorcode-bundle.md#17700083-user-authentication-times-out) |
+| [17700080](../errorcode-bundle.md#17700080-invalid-source-paths) |
+| [17700081](../errorcode-bundle.md#17700081-invalid-destination-path) |
 
 ## Examples
 

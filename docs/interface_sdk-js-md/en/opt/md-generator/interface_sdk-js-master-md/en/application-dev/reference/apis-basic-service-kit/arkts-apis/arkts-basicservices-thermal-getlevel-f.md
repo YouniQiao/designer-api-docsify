@@ -14,7 +14,9 @@ function getLevel(): ThermalLevel
 
 Obtains the current thermal level.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-thermal-function getLevel(): ThermalLevel--><!--Device-thermal-function getLevel(): ThermalLevel-End-->
 

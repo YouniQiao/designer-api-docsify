@@ -20,7 +20,7 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 **Deprecated since:** 12
 
-**Substitutes:** [getStringFromFunctions](usbManager.getStringFromFunctions(funcs:)
+**Substitutes:** [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md#getStringFromFunctions)(funcs: FunctionType)
 
 <!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string-End-->
 
@@ -44,5 +44,5 @@ Converts the USB function list in the numeric mask format to a string in Device 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:  &lt;br&gt;1.Mandatory parameters are left unspecified.  &lt;br&gt;2.Incorrect parameter types. |
 

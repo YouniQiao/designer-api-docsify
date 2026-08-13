@@ -62,7 +62,9 @@ function setValueSync(context: Context, name: string, value: string): boolean
 
 Set settingsdata value(synchronous method)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SETTINGS
 
@@ -105,11 +107,11 @@ let ret = settings.setValueSync(context, settings.display.SCREEN_BRIGHTNESS_STAT
 function setValueSync(context: Context, name: string, value: string, domainName: string): boolean
 ```
 
-Set settingsdata value(synchronous method).  
-[DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission.  
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_SECURE_SETTINGS or ohos.permission.MANAGE_SETTINGS
 
@@ -138,7 +140,7 @@ Set settingsdata value(synchronous method).
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

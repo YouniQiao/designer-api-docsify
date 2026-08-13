@@ -2,7 +2,9 @@
 
 Enumerates data change types. Use the enum name rather than the enum value.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-enum ChangeType--><!--Device-relationalStore-enum ChangeType-End-->
 
@@ -16,7 +18,9 @@ DATA_CHANGE = 0
 
 Data change.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC
@@ -33,7 +37,9 @@ ASSET_CHANGE = 1
 
 Asset change.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 10 - 11: ohos.permission.DISTRIBUTED_DATASYNC

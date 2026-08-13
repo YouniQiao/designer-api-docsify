@@ -8,7 +8,9 @@ Defines the TapGesture handler.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class TapGestureHandler extends GestureHandler--><!--Device-unnamed-export declare class TapGestureHandler extends GestureHandler-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class TapGestureHandler--><!--Device-unnamed-export declare class TapGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ Tap gesture recognition success callback.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

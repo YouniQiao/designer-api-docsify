@@ -30,13 +30,15 @@ fail?: (data: string, code: number) => void
 
 Callback invoked when an API call fails.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **ArkTS mode:** ArkTS-Dyn only, since version 3.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](ohos.sensor/sensor#on)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -46,56 +48,13 @@ Callback invoked when an API call fails.
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | string | Yes |  |
-| code | number | Yes |  |
-
-## success
-
-```TypeScript
-success: (data: AccelerometerResponse) => void
-```
-
-Callback invoked when the acceleration sensor data changes.
-
-**Since:** 3
-
-**ArkTS mode:** ArkTS-Dyn only, since version 3.
-
-**Deprecated since:** 8
-
-**Substitutes:** [on](ohos.sensor/sensor#on)
-
-**Required permissions:** ohos.permission.ACCELEROMETER
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void--><!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor.Lite
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| data | [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md) | Yes |  |
-
 ## interval
 
 ```TypeScript
 interval: string
 ```
 
-Execution frequency of the callback for returning the acceleration sensor data.
-
-The default value is **normal**. The options are as follows:
-
-- **game**: called at an interval of 20 ms, which is applicable to gaming scenarios.  
-- **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios.  
-- **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
+Execution frequency of the callback for returning the acceleration sensor data. The default value is **normal**. The options are as follows: - **game**: called at an interval of 20 ms, which is applicable to gaming scenarios. - **ui**: called at an interval of 60 ms, which is applicable to UI updating scenarios. - **normal**: called at an interval of 200 ms, which is applicable to power-saving scenarios.
 
 **Type:** string
 
@@ -105,13 +64,39 @@ The default value is **normal**. The options are as follows:
 
 **Deprecated since:** 8
 
-**Substitutes:** [interval](ohos.sensor/sensor#Options.interval)
+**Substitutes:** [interval](arkts-sensorservice-sensor-options-i.md#interval)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-subscribeAccelerometerOptions-interval: string--><!--Device-subscribeAccelerometerOptions-interval: string-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor.Lite
+
+## success
+
+```TypeScript
+success: (data: AccelerometerResponse) => void
+```
+
+Callback invoked when the acceleration sensor data changes.
+
+**Type:** (data: AccelerometerResponse) =&gt; void
+
+**Since:** 3
+
+**ArkTS mode:** ArkTS-Dyn only, since version 3.
+
+**Deprecated since:** 8
+
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)
+
+**Required permissions:** ohos.permission.ACCELEROMETER
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void--><!--Device-subscribeAccelerometerOptions-success: (data: AccelerometerResponse) => void-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor.Lite
 

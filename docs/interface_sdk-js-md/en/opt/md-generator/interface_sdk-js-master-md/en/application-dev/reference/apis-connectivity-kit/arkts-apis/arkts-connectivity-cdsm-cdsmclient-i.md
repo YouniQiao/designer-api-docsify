@@ -1,8 +1,10 @@
 # CdsmClient
 
-Manages a CDSM client instance. Before invoking any CDSM client method,you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createCdsmClient) to create a CDSM client instance.
+Manages a CDSM client instance. Before invoking any CDSM client method, you must use [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createCdsmClient) to create a CDSM client instance.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-cdsm-interface CdsmClient--><!--Device-cdsm-interface CdsmClient-End-->
 
@@ -24,6 +26,8 @@ Gets the coordinated devices set information.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,7 +48,7 @@ Gets the coordinated devices set information.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## offCdsmInfoChange
 
@@ -55,6 +59,8 @@ offCdsmInfoChange(callback?: Callback<CdsmInfo>): void
 Unsubscribes from coordinated devices set information change event.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +80,11 @@ Unsubscribes from coordinated devices set information change event.
 onCdsmInfoChange(callback: Callback<CdsmInfo>): void
 ```
 
-Subscribes to coordinated devices set information change event.
-
-This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to coordinated devices set information change event. This event is accessible only to applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

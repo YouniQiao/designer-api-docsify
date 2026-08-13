@@ -2,9 +2,11 @@
 
 Enumerates disposition types.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export enum DispositionType--><!--Device-sms-export enum DispositionType-End-->
 
@@ -20,9 +22,11 @@ FROM_DATA = 0
 
 Data source.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DispositionType-FROM_DATA = 0--><!--Device-DispositionType-FROM_DATA = 0-End-->
 
@@ -38,9 +42,11 @@ ATTACHMENT = 1
 
 Attachment.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DispositionType-ATTACHMENT = 1--><!--Device-DispositionType-ATTACHMENT = 1-End-->
 
@@ -56,9 +62,11 @@ INLINE = 2
 
 Inlining.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DispositionType-INLINE = 2--><!--Device-DispositionType-INLINE = 2-End-->
 

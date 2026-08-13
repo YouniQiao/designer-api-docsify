@@ -12,25 +12,13 @@ import { bundleManager } from '@kit.MDMKit';
 function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>
 ```
 
-Obtains the storage usage of installed applications of a specified user on a device. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> 1. Only the storage usage of installed applications can be obtained.
-> 
-> 2. If **bundleNames** is empty or all bundle names passed are of uninstalled applications, error code 9200012
-> will be returned.
-> 
-> 3. If some of the applications specified in the **bundleNames** parameter are installed and some are not, the API
-> returns normally. For installed applications, their actual storage usage information is returned. For uninstalled
-> applications, **0** is returned as their storage usage.
-> 
-> 4. This API supports cross-user queries. For example, user 100 can query the storage usage of some applications
-> of user 101.
+Obtains the storage usage of installed applications of a specified user on a device. This API uses a promise to return the result. > **NOTE：**> > 1. Only the storage usage of installed applications can be obtained. > > 2. If **bundleNames** is empty or all bundle names passed are of uninstalled applications, error code 9200012 > will be returned. > > 3. If some of the applications specified in the **bundleNames** parameter are installed and some are not, the API > returns normally. For installed applications, their actual storage usage information is returned. For uninstalled > applications, **0** is returned as their storage usage. > > 4. This API supports cross-user queries. For example, user 100 can query the storage usage of some applications > of user 101.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 
@@ -58,8 +46,8 @@ Obtains the storage usage of installed applications of a specified user on a dev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

@@ -8,7 +8,9 @@ function getDataSummary(): Array<Summary>
 
 获取所有拖拽对象的摘要。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dragInteraction-function getDataSummary(): Array<Summary>--><!--Device-dragInteraction-function getDataSummary(): Array<Summary>-End-->
 
@@ -26,7 +28,7 @@ function getDataSummary(): Array<Summary>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

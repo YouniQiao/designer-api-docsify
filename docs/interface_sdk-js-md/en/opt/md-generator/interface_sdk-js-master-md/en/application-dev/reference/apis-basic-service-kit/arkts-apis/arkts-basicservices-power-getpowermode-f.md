@@ -14,7 +14,9 @@ function getPowerMode(): DevicePowerMode
 
 Obtains the power mode of this device.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-power-function getPowerMode(): DevicePowerMode--><!--Device-power-function getPowerMode(): DevicePowerMode-End-->
 

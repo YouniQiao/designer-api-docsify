@@ -12,20 +12,13 @@ import { accountManager } from '@kit.MDMKit';
 function createNormalOsAccount(admin: Want, name: string): Promise<osAccount.OsAccountInfo>
 ```
 
-Creates a normal system account. A maximum of two normal system accounts (  
-[osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) can be created.
-
-> **NOTE：**
-> 
-> The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application
-> main thread must wait for the asynchronous return of this API.
-> 
-> Creating a system account has a significant impact on device performance. This API is supported only on phones
-> and tablets with 12 GB or more of RAM.
+Creates a normal system account. A maximum of two normal system accounts ( [osAccount.OsAccountType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccounttype-e.md#OsAccountType)) can be created. > **NOTE：**> > The account creation process is time-consuming. Subsequent calls to other synchronous APIs in the application > main thread must wait for the asynchronous return of this API. > > Creating a system account has a significant impact on device performance. This API is supported only on phones > and tablets with 12 GB or more of RAM.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCAL_ACCOUNTS
 
@@ -52,12 +45,12 @@ Creates a normal system account. A maximum of two normal system accounts (
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [9201003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201003-failed-to-add-an-account) | Failed to add an OS account. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [9201040](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9201040-system-account-count-has-reached-the-upper-limit) | The number of accounts reaches the upper limit. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| [9200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
-| [9200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) | Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [9201003](../errorcode-enterpriseDeviceManager.md#9201003-failed-to-add-an-account) | Failed to add an OS account. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [9201040](../errorcode-enterpriseDeviceManager.md#9201040-system-account-count-has-reached-the-upper-limit) | The number of accounts reaches the upper limit. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) | The administrator application does not have permission to manage the device. |
 

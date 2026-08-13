@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export interface BundleNotificationStatistics--><!--Device-notificationManager-export interface BundleNotificationStatistics-End-->
 
@@ -30,7 +32,9 @@ bundle: BundleOption
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-BundleNotificationStatistics-bundle: BundleOption--><!--Device-BundleNotificationStatistics-bundle: BundleOption-End-->
 
@@ -41,18 +45,20 @@ bundle: BundleOption
 ## lastTime
 
 ```TypeScript
-lastTime: number
+lastTime: long
 ```
 
 应用最后一次发布通知的时间。数据格式：时间戳。单位：ms。
 
-**类型：** number
+**类型：** long
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-<!--Device-BundleNotificationStatistics-lastTime: number--><!--Device-BundleNotificationStatistics-lastTime: number-End-->
+**废弃版本：** -1
+
+<!--Device-BundleNotificationStatistics-lastTime: long--><!--Device-BundleNotificationStatistics-lastTime: long-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -61,18 +67,20 @@ lastTime: number
 ## recentCount
 
 ```TypeScript
-recentCount: number
+recentCount: int
 ```
 
 应用最近7天发布的通知总量。
 
-**类型：** number
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-<!--Device-BundleNotificationStatistics-recentCount: number--><!--Device-BundleNotificationStatistics-recentCount: number-End-->
+**废弃版本：** -1
+
+<!--Device-BundleNotificationStatistics-recentCount: int--><!--Device-BundleNotificationStatistics-recentCount: int-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 

@@ -6,6 +6,8 @@ ScrollParam
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ScrollParam--><!--Device-unnamed-export interface ScrollParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Offset for scrolling in the horizontal direction, in px.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -44,6 +48,8 @@ Offset for scrolling in the vertical direction, in px.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollParam-dy?: number--><!--Device-ScrollParam-dy?: number-End-->
@@ -63,6 +69,8 @@ Whether a sliding animation is displayed when scroll position is changed.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

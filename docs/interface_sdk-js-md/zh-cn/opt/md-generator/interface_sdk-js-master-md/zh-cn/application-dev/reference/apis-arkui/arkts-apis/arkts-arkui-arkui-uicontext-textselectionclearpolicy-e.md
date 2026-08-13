@@ -4,6 +4,8 @@ TextSelectionClearPolicy的枚举
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export const enum TextSelectionClearPolicy--><!--Device-unnamed-export const enum TextSelectionClearPolicy-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 0
 在文本组件之外单击时，保留选定文本。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,6 +39,8 @@ CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 1
 在文本组件外部单击时清除选定的文本。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

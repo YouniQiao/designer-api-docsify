@@ -1,10 +1,12 @@
 # CommonState
 
-Enum for state.
+Enumerates states of the custom dialog box.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-promptAction-enum CommonState--><!--Device-promptAction-enum CommonState-End-->
 
@@ -16,13 +18,17 @@ Enum for state.
 UNINITIALIZED = 0
 ```
 
-Indicates it is uninitialized.
+State before the controller is bound to the dialog box.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonState-UNINITIALIZED = 0--><!--Device-CommonState-UNINITIALIZED = 0-End-->
 
@@ -34,13 +40,17 @@ Indicates it is uninitialized.
 INITIALIZED = 1
 ```
 
-Indicates it is initialized.
+State after the controller is bound to the dialog box.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonState-INITIALIZED = 1--><!--Device-CommonState-INITIALIZED = 1-End-->
 
@@ -52,13 +62,17 @@ Indicates it is initialized.
 APPEARING = 2
 ```
 
-Indicates it is appearing.
+State during the dialog box appearance animation.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonState-APPEARING = 2--><!--Device-CommonState-APPEARING = 2-End-->
 
@@ -70,13 +84,17 @@ Indicates it is appearing.
 APPEARED = 3
 ```
 
-Indicates it is appeared.
+State after the dialog display appearance ends.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonState-APPEARED = 3--><!--Device-CommonState-APPEARED = 3-End-->
 
@@ -88,13 +106,17 @@ Indicates it is appeared.
 DISAPPEARING = 4
 ```
 
-Indicates it is disappearing.
+State during the dialog box disappearance animation.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonState-DISAPPEARING = 4--><!--Device-CommonState-DISAPPEARING = 4-End-->
 
@@ -106,13 +128,17 @@ Indicates it is disappearing.
 DISAPPEARED = 5
 ```
 
-Indicates it is disappeared.
+State after the dialog box disappearance animation ends.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CommonState-DISAPPEARED = 5--><!--Device-CommonState-DISAPPEARED = 5-End-->
 

@@ -4,6 +4,8 @@ Image display mode.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ImageFit--><!--Device-unnamed-declare enum ImageFit-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Contain
 Keep the aspect ratio to zoom out or zoom in so that the image is completely displayed within the display boundary.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,6 +40,8 @@ Keep the aspect ratio to zoom out or zoom in so that both sides of the image are
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -53,6 +59,8 @@ Auto
 Adaptive display
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -72,6 +80,8 @@ Zoom in or out without maintaining the aspect ratio so that the image fills the 
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -89,6 +99,8 @@ ScaleDown
 Keep the aspect ratio displayed, and the image zooms out or remains unchanged.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -108,6 +120,8 @@ Keep the original size and display it in the center.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -125,6 +139,8 @@ TOP_START = 7
 Top Start.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,6 +162,8 @@ The top is centered horizontally.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -165,6 +183,8 @@ TOP_END = 9
 Top tail end.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,6 +206,8 @@ The starting end is centered longitudinally.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -205,6 +227,8 @@ CENTER = 11
 Center horizontal and vertical.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,6 +250,8 @@ The tail end is centered longitudinally.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -245,6 +271,8 @@ BOTTOM_START = 13
 Bottom starting end.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -266,6 +294,8 @@ The bottom is centered horizontally.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -286,6 +316,8 @@ Bottom end.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -305,6 +337,8 @@ MATRIX = 16
 Matrix of Image.
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,6 +10,8 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.START_PROVISIONING_MESSAGE
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -31,8 +33,8 @@ function startAdminProvision(admin: Want, type: AdminType, context: common.Conte
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
 
 ## 示例
 

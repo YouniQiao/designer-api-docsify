@@ -4,13 +4,13 @@
 export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo
 ```
 
-Defines the entry icon and name of an application.
+Defines the entry icon and name of an application. &lt;!--no_check--&gt;
 
-&lt;!--no_check--&gt;
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-bundleResourceManager-export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo--><!--Device-bundleResourceManager-export type LauncherAbilityResourceInfo = _LauncherAbilityResourceInfo-End-->
 

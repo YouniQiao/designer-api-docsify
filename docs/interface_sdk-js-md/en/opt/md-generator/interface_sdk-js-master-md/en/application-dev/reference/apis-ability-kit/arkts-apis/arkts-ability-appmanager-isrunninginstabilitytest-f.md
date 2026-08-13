@@ -12,14 +12,11 @@ import { appManager } from '@kit.AbilityKit';
 function isRunningInStabilityTest(callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result.
+Checks whether the system is undergoing a stability test. This API uses an asynchronous callback to return the result. > **NOTE：**> > A stability test scenario refers to a specific testing environment designed to verify application reliability > under complex, extreme, or long-term operating conditions.
 
-> **NOTE：**
-> 
-> A stability test scenario refers to a specific testing environment designed to verify application reliability
-> under complex, extreme, or long-term operating conditions.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,8 +34,8 @@ Checks whether the system is undergoing a stability test. This API uses an async
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -61,14 +58,11 @@ appManager.isRunningInStabilityTest((err, flag) => {
 function isRunningInStabilityTest(): Promise<boolean>
 ```
 
-Checks whether the system is undergoing a stability test. This API uses a promise to return the result.
+Checks whether the system is undergoing a stability test. This API uses a promise to return the result. > **NOTE：**> > A stability test scenario refers to a specific testing environment designed to verify application reliability > under complex, extreme, or long-term operating conditions.
 
-> **NOTE：**
-> 
-> A stability test scenario refers to a specific testing environment designed to verify application reliability
-> under complex, extreme, or long-term operating conditions.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -86,7 +80,7 @@ Checks whether the system is undergoing a stability test. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 

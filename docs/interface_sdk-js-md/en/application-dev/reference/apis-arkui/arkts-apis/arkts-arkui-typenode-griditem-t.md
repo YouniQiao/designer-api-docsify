@@ -1,20 +1,24 @@
 # GridItem
 
 ```TypeScript
-type GridItem = GridItemFrameNode
+type GridItem = TypedFrameNode<GridItemInterface, GridItemAttribute>
 ```
 
-Define the FrameNode type for GridItem.
+Represents a FrameNode of the **GridItem** type.
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type GridItem = GridItemFrameNode--><!--Device-typeNode-type GridItem = GridItemFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-typeNode-type GridItem = TypedFrameNode<GridItemInterface, GridItemAttribute>--><!--Device-typeNode-type GridItem = TypedFrameNode<GridItemInterface, GridItemAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** GridItemFrameNode
+**Property type:** TypedFrameNode<GridItemInterface, GridItemAttribute>
 

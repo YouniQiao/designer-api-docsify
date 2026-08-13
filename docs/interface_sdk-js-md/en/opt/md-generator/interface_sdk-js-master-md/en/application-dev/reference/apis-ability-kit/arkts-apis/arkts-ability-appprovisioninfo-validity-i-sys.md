@@ -2,7 +2,9 @@
 
 Validity period in the configuration file.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Validity--><!--Device-unnamed-export interface Validity-End-->
 
@@ -20,7 +22,9 @@ End time of the validity period of the configuration file.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Validity-readonly notAfter: long--><!--Device-Validity-readonly notAfter: long-End-->
 
@@ -38,7 +42,9 @@ Start time of the validity period of the configuration file.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Validity-readonly notBefore: long--><!--Device-Validity-readonly notBefore: long-End-->
 

@@ -6,6 +6,8 @@ Image layout information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface RichEditorLayoutStyle--><!--Device-unnamed-interface RichEditorLayoutStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Image layout information.
 borderRadius?: Dimension | BorderRadiuses
 ```
 
-Radius of the rounded corners of the component.
-
-If of the **Dimension** type, this parameter cannot be set in percentage.
+Radius of the rounded corners of the component. If of the **Dimension** type, this parameter cannot be set in percentage.
 
 **Type:** Dimension \| BorderRadiuses
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,15 +42,15 @@ If of the **Dimension** type, this parameter cannot be set in percentage.
 margin?: Dimension | Margin
 ```
 
-Margins in different directions of the component.
-
-When the parameter is of the **Dimension** type, the four margins take effect.
+Margins in different directions of the component. When the parameter is of the **Dimension** type, the four margins take effect.
 
 **Type:** Dimension \| Margin
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

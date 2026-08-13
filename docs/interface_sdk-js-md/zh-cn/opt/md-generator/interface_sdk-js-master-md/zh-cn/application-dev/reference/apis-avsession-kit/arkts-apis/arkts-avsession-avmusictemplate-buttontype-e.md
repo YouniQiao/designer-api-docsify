@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avMusicTemplate-enum ButtonType--><!--Device-avMusicTemplate-enum ButtonType-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ NORMAL = 0
 普通按钮。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ EMPHASIZE = 1
 强调按钮。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

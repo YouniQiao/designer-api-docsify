@@ -4,6 +4,8 @@ Holds User-Agent metadata information and uses to generate User-Agent client hin
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-webview-class UserAgentMetadata--><!--Device-webview-class UserAgentMetadata-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ getArchitecture(): string
 Gets the value for sec-ch-ua-architecture.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ Gets the value for the sec-ch-ua-bitness.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-getBitness(): string--><!--Device-UserAgentMetadata-getBitness(): string-End-->
@@ -67,6 +73,8 @@ getBrandVersionList(): Array<UserAgentBrandVersion>
 Returns the current list of UserAgentBrandVersion which are used to generate the User-Agent client hints sec-ch-ua and sec-ch-ua-full-version-list.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Gets the value for the sec-ch-ua-form-factors.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-getFormFactors(): Array<UserAgentFormFactor>--><!--Device-UserAgentMetadata-getFormFactors(): Array<UserAgentFormFactor>-End-->
@@ -111,6 +121,8 @@ getFullVersion(): string
 Gets the value for the sec-ch-ua-full-version.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,6 +146,8 @@ Gets the value for the sec-ch-ua-mobile.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-getMobile(): boolean--><!--Device-UserAgentMetadata-getMobile(): boolean-End-->
@@ -155,6 +169,8 @@ getModel(): string
 Gets the value for the sec-ch-ua-model.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -178,6 +194,8 @@ Gets the value for the sec-ch-ua-platform.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-getPlatform(): string--><!--Device-UserAgentMetadata-getPlatform(): string-End-->
@@ -199,6 +217,8 @@ getPlatformVersion(): string
 Gets the value for the sec-ch-ua-platform-version.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -222,6 +242,8 @@ Gets the value for the sec-ch-ua-wow64.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-getWow64(): boolean--><!--Device-UserAgentMetadata-getWow64(): boolean-End-->
@@ -240,11 +262,11 @@ Gets the value for the sec-ch-ua-wow64.
 setArchitecture(arch: string): void
 ```
 
-Sets User-Agent metadata architecture.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
+Sets User-Agent metadata architecture. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -268,6 +290,8 @@ Sets User-Agent metadata bitness default is "".
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-setBitness(bitness: string): void--><!--Device-UserAgentMetadata-setBitness(bitness: string): void-End-->
@@ -286,11 +310,11 @@ Sets User-Agent metadata bitness default is "".
 setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 ```
 
-Sets User-Agent metadata brands and their versions.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints.&lt;/p&gt;
+Sets User-Agent metadata brands and their versions. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -310,11 +334,11 @@ Sets User-Agent metadata brands and their versions.
 setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 ```
 
-Sets User-Agent metadata form factors.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty list which means the system default value will be used.Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH.&lt;/p&gt;
+Sets User-Agent metadata form factors. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty list which means the system default value will be used. Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,11 +358,11 @@ Sets User-Agent metadata form factors.
 setFullVersion(fullVersion: string): void
 ```
 
-Sets User-Agent metadata full version.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
+Sets User-Agent metadata full version. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,6 +386,8 @@ Sets User-Agent metadata mobile, default is true.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserAgentMetadata-setMobile(isMobile: boolean): void--><!--Device-UserAgentMetadata-setMobile(isMobile: boolean): void-End-->
@@ -380,11 +406,11 @@ Sets User-Agent metadata mobile, default is true.
 setModel(model: string): void
 ```
 
-Sets User-Agent metadata model.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
+Sets User-Agent metadata model. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,11 +430,11 @@ Sets User-Agent metadata model.
 setPlatform(platform: string): void
 ```
 
-Sets User-Agent metadata platform.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
+Sets User-Agent metadata platform. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -428,11 +454,11 @@ Sets User-Agent metadata platform.
 setPlatformVersion(platformVersion: string): void
 ```
 
-Sets User-Agent metadata platform version.
-
-&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The default value is empty string which means the system default value will be used.&lt;/p&gt;
+Sets User-Agent metadata platform version. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -455,6 +481,8 @@ setWow64(isWow64: boolean): void
 Sets User-Agent metadata wow64, default is false.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

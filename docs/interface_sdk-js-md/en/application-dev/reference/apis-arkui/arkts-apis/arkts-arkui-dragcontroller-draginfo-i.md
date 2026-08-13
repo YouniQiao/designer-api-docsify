@@ -6,6 +6,8 @@ DragInfo object description
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-dragController-interface DragInfo--><!--Device-dragController-interface DragInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,13 +24,15 @@ import { dragController } from '@kit.ArkUI';
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-Components to be automatically hidden during drag by uniqueId.You can pass a single uniqueId or an array. If the drag source itself also needs to be hidden,pass its uniqueId as well.
+Components to be automatically hidden during drag by uniqueId. You can pass a single uniqueId or an array. If the drag source itself also needs to be hidden, pass its uniqueId as well.
 
 **Type:** int \| int[]
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Drag data.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DragInfo-data?: unifiedDataChannel.UnifiedData--><!--Device-DragInfo-data?: unifiedDataChannel.UnifiedData-End-->
@@ -69,6 +75,8 @@ Provide a data representation to the system instead of providing a complete data
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Additional information about the drag info.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DragInfo-extraParams?: string--><!--Device-DragInfo-extraParams?: string-End-->
@@ -109,6 +119,8 @@ A unique identifier to identify which touch point.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +142,8 @@ Drag preview options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DragInfo-previewOptions?: DragPreviewOptions--><!--Device-DragInfo-previewOptions?: DragPreviewOptions-End-->
@@ -149,6 +163,8 @@ Touch point coordinates.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

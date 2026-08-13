@@ -2,7 +2,9 @@
 
 Attribute of Input.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export interface InputAttribute--><!--Device-inputMethod-export interface InputAttribute-End-->
 
@@ -24,7 +26,9 @@ The name of the ability where the edit box is located.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputAttribute-abilityName?: string--><!--Device-InputAttribute-abilityName?: string-End-->
 
@@ -44,6 +48,8 @@ Whether the editor supports consuming key events.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputAttribute-consumeKeyEvents?: boolean--><!--Device-InputAttribute-consumeKeyEvents?: boolean-End-->
@@ -60,7 +66,9 @@ Indicates the enter key type of the input method.
 
 **Type:** EnterKeyType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputAttribute-enterKeyType: EnterKeyType--><!--Device-InputAttribute-enterKeyType: EnterKeyType-End-->
 
@@ -76,7 +84,9 @@ Placeholder text in the edit box.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputAttribute-placeholder?: string--><!--Device-InputAttribute-placeholder?: string-End-->
 
@@ -92,7 +102,9 @@ Indicates the text input type of the input method.
 
 **Type:** [TextInputType](arkts-ime-inputmethod-textinputtype-e.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputAttribute-textInputType: TextInputType--><!--Device-InputAttribute-textInputType: TextInputType-End-->
 

@@ -1,8 +1,10 @@
 # AsrProcessingController（系统接口）
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AsrProcessingController--><!--Device-audio-interface AsrProcessingController-End-->
 
@@ -18,9 +20,11 @@ getAsrAecMode(): AsrAecMode
 
 Get ASR AEC mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode--><!--Device-AsrProcessingController-getAsrAecMode(): AsrAecMode-End-->
 
@@ -38,8 +42,8 @@ Get ASR AEC mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -55,9 +59,11 @@ getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode
 
 Get ASR noise suppression mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode--><!--Device-AsrProcessingController-getAsrNoiseSuppressionMode(): AsrNoiseSuppressionMode-End-->
 
@@ -75,8 +81,8 @@ Get ASR noise suppression mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -92,9 +98,11 @@ getAsrWhisperDetectionMode(): AsrWhisperDetectionMode
 
 Get ASR whisper detection mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode--><!--Device-AsrProcessingController-getAsrWhisperDetectionMode(): AsrWhisperDetectionMode-End-->
 
@@ -112,8 +120,8 @@ Get ASR whisper detection mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -129,9 +137,11 @@ isWhispering(): boolean
 
 Query whether user is whispering.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-isWhispering(): boolean--><!--Device-AsrProcessingController-isWhispering(): boolean-End-->
 
@@ -149,8 +159,8 @@ Query whether user is whispering.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -166,9 +176,11 @@ setAsrAecMode(mode: AsrAecMode): boolean
 
 Set ASR AEC mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean--><!--Device-AsrProcessingController-setAsrAecMode(mode: AsrAecMode): boolean-End-->
 
@@ -192,10 +204,10 @@ Set ASR AEC mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -211,9 +223,11 @@ setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean
 
 Set ASR noise suppression mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean--><!--Device-AsrProcessingController-setAsrNoiseSuppressionMode(mode: AsrNoiseSuppressionMode): boolean-End-->
 
@@ -237,10 +251,10 @@ Set ASR noise suppression mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -256,9 +270,11 @@ setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean
 
 Set ASR voice control mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceControlMode(mode: AsrVoiceControlMode, enable: boolean): boolean-End-->
 
@@ -283,10 +299,10 @@ Set ASR voice control mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -302,9 +318,11 @@ setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean
 
 Set ASR voice mute mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean--><!--Device-AsrProcessingController-setAsrVoiceMuteMode(mode: AsrVoiceMuteMode, enable: boolean): boolean-End-->
 
@@ -329,10 +347,10 @@ Set ASR voice mute mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 
@@ -348,9 +366,11 @@ setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean
 
 Set ASR whisper detection mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean--><!--Device-AsrProcessingController-setAsrWhisperDetectionMode(mode: AsrWhisperDetectionMode): boolean-End-->
 
@@ -374,10 +394,10 @@ Set ASR whisper detection mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
-| [6800101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
-| [6800104](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
+| [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Caller is not a system application. |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Operation not allowed. |
 
 ## 示例
 

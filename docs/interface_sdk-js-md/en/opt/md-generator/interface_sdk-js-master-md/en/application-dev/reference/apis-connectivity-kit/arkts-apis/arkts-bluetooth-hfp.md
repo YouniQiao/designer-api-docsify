@@ -2,7 +2,9 @@
 
 Provides methods to accessing bluetooth call-related capabilities.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hfp--><!--Device-unnamed-declare namespace hfp-End-->
 
@@ -20,8 +22,8 @@ import { hfp } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md#createhfpagprofile) |
-| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md#createhfphfprofile) |
+| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md#createHfpAgProfile) |
+| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md#createHfpHfProfile) |
 
 <!--Del-->
 ### Interfaces（系统接口）

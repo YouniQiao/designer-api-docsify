@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NativeEmbedParamDataInfo--><!--Device-unnamed-declare interface NativeEmbedParamDataInfo-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ embedId: string
 **类型：** string
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 <!--Device-NativeEmbedParamDataInfo-embedId: string--><!--Device-NativeEmbedParamDataInfo-embedId: string-End-->
 
@@ -36,6 +40,8 @@ objectAttributeId?: string
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-NativeEmbedParamDataInfo-objectAttributeId?: string--><!--Device-NativeEmbedParamDataInfo-objectAttributeId?: string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -51,6 +57,8 @@ paramItems?: Array<NativeEmbedParamItem>
 **类型：** Array&lt;[NativeEmbedParamItem](arkts-arkweb-nativeembedparamitem-i.md)&gt;
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 <!--Device-NativeEmbedParamDataInfo-paramItems?: Array<NativeEmbedParamItem>--><!--Device-NativeEmbedParamDataInfo-paramItems?: Array<NativeEmbedParamItem>-End-->
 

@@ -6,7 +6,7 @@
 
 **废弃版本：** 20
 
-**替代接口：** [Locale]]([Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale))
+**替代接口：** [Intl.Locale](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)
 
 <!--Device-intl-export class Locale--><!--Device-intl-export class Locale-End-->
 
@@ -24,7 +24,7 @@ constructor()
 
 **废弃版本：** 20
 
-**替代接口：** [constructor]]([Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale))
+**替代接口：** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -57,7 +57,7 @@ constructor(locale: string, options?: LocaleOptions)
 
 **废弃版本：** 20
 
-**替代接口：** [constructor]]([Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale))
+**替代接口：** [Intl.Locale.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/Locale)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -96,7 +96,7 @@ maximize(): Locale
 
 **废弃版本：** 20
 
-**替代接口：** [maximize]]([Intl.Locale.maximize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize))
+**替代接口：** [Intl.Locale.maximize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/maximize)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -142,7 +142,7 @@ minimize(): Locale
 
 **废弃版本：** 20
 
-**替代接口：** [minimize]]([Intl.Locale.minimize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize))
+**替代接口：** [Intl.Locale.minimize](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/minimize)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -188,7 +188,7 @@ toString(): string
 
 **废弃版本：** 20
 
-**替代接口：** [toString]]([Intl.Locale.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString))
+**替代接口：** [Intl.Locale.toString](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/toString)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -228,7 +228,7 @@ baseName: string
 
 **废弃版本：** 20
 
-**替代接口：** [baseName]]([Intl.LocaleOptions.baseName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName))
+**替代接口：** [Intl.LocaleOptions.baseName](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/baseName)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -244,11 +244,7 @@ baseName: string
 calendar: string
 ```
 
-区域的日历信息，取值包括：
-
-"buddhist", "chinese", "coptic","dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic","islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc","islamicc"。
-
-不同取值表示的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
+区域的日历信息，取值包括： "buddhist", "chinese", "coptic","dangi", "ethioaa", "ethiopic", "gregory", "hebrew", "indian", "islamic", "islamic-umalqura", "islamic-tbla", "islamic-civil", "islamic-rgsa", "iso8601", "japanese", "persian", "roc", "islamicc"。 不同取值表示的含义请参考[设置日历和历法表1](../../../internationalization/i18n-calendar.md)。
 
 **类型：** string
 
@@ -256,7 +252,7 @@ calendar: string
 
 **废弃版本：** 20
 
-**替代接口：** [calendar]]([Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar))
+**替代接口：** [Intl.LocaleOptions.calendar](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/calendar)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -272,13 +268,7 @@ calendar: string
 caseFirst: string
 ```
 
-区域的排序规则是否考虑大小写，取值包括：
-
-"upper"：大写排前面。
-
-"lower"：小写排前面。
-
-"false"：使用区域默认的大小写排序规则。
+区域的排序规则是否考虑大小写，取值包括： "upper"：大写排前面。 "lower"：小写排前面。 "false"：使用区域默认的大小写排序规则。
 
 **类型：** string
 
@@ -286,7 +276,7 @@ caseFirst: string
 
 **废弃版本：** 20
 
-**替代接口：** [caseFirst]]([Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst))
+**替代接口：** [Intl.LocaleOptions.caseFirst](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/caseFirst)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -302,39 +292,7 @@ caseFirst: string
 collation: string
 ```
 
-区域的排序规则，取值包括：
-
-"big5han"：拉丁字母使用的拼音排序。
-
-"compat"：兼容性排序，仅用于阿拉伯语。
-
-"dict"：词典风格排序，仅用于僧伽罗语。
-
-"direct"：二进制码点排序。
-
-"ducet"：按Unicode排序元素表排序。
-
-"eor"：按欧洲排序规则排序。
-
-"gb2312"：拼音排序，仅用于中文排序。
-
-"phonebk"：电话本风格排序。
-
-"phonetic"：发音排序。
-
-"pinyin"：拼音排序。
-
-"reformed"：瑞典语排序。
-
-"searchjl"：韩语初始辅音搜索的特殊排序。
-
-"stroke"：汉语的笔画排序。
-
-"trad"：传统风格排序，如西班牙语。
-
-"unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。
-
-"zhuyin"：注音排序，仅用于中文排序。
+区域的排序规则，取值包括： "big5han"：拉丁字母使用的拼音排序。 "compat"：兼容性排序，仅用于阿拉伯语。 "dict"：词典风格排序，仅用于僧伽罗语。 "direct"：二进制码点排序。 "ducet"：按Unicode排序元素表排序。 "eor"：按欧洲排序规则排序。 "gb2312"：拼音排序，仅用于中文排序。 "phonebk"：电话本风格排序。 "phonetic"：发音排序。 "pinyin"：拼音排序。 "reformed"：瑞典语排序。 "searchjl"：韩语初始辅音搜索的特殊排序。 "stroke"：汉语的笔画排序。 "trad"：传统风格排序，如西班牙语。 "unihan"：统一汉字排序，用于日语、韩语、中文等汉字排序。 "zhuyin"：注音排序，仅用于中文排序。
 
 **类型：** string
 
@@ -342,7 +300,7 @@ collation: string
 
 **废弃版本：** 20
 
-**替代接口：** [collation]]([Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation))
+**替代接口：** [Intl.LocaleOptions.collation](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/collation)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -358,11 +316,7 @@ collation: string
 hourCycle: string
 ```
 
-区域的时制信息，取值包括：
-
-"h11"、"h12"、"h23"、"h24"。
-
-不同取值的显示效果可参考[附录表5](../../../reference/apis-localization-kit/js-apis-intl.md#附录)。
+区域的时制信息，取值包括： "h11"、"h12"、"h23"、"h24"。 不同取值的显示效果可参考附录表5。
 
 **类型：** string
 
@@ -370,7 +324,7 @@ hourCycle: string
 
 **废弃版本：** 20
 
-**替代接口：** [hourCycle]]([Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle))
+**替代接口：** [Intl.LocaleOptions.hourCycle](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/hourCycle)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -394,7 +348,7 @@ language: string
 
 **废弃版本：** 20
 
-**替代接口：** [language]]([Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language))
+**替代接口：** [Intl.LocaleOptions.language](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/language)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -410,9 +364,7 @@ language: string
 numberingSystem: string
 ```
 
-区域使用的数字系统，取值包括：
-
-"adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide","gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham","laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong","mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment","shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii","wara", "wcho"。
+区域使用的数字系统，取值包括： "adlm", "ahom", "arab", "arabext", "bali", "beng", "bhks", "brah", "cakm", "cham", "deva", "diak", "fullwide", "gong", "gonm", "gujr", "guru", "hanidec", "hmng", "hmnp", "java", "kali", "khmr", "knda", "lana", "lanatham", "laoo", "latn", "lepc", "limb", "mathbold", "mathdbl", "mathmono", "mathsanb", "mathsans", "mlym", "modi", "mong", "mroo", "mtei", "mymr", "mymrshan", "mymrtlng", "newa", "nkoo", "olck", "orya", "osma", "rohg", "saur", "segment", "shrd", "sind", "sinh", "sora", "sund", "takr", "talu", "tamldec", "telu", "thai", "tibt", "tirh", "vaii", "wara", "wcho"。
 
 **类型：** string
 
@@ -420,7 +372,7 @@ numberingSystem: string
 
 **废弃版本：** 20
 
-**替代接口：** [numberingSystem]]([Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem))
+**替代接口：** [Intl.LocaleOptions.numberingSystem](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -436,9 +388,7 @@ numberingSystem: string
 numeric: boolean
 ```
 
-true表示对数字字符进行特殊的排序规则处理（把数字字符作为数值进行排序），false表示不对数字字符进行特殊的排序规则处理。
-
-默认值：false。
+true表示对数字字符进行特殊的排序规则处理（把数字字符作为数值进行排序），false表示不对数字字符进行特殊的排序规则处理。 默认值：false。
 
 **类型：** boolean
 
@@ -446,7 +396,7 @@ true表示对数字字符进行特殊的排序规则处理（把数字字符作�
 
 **废弃版本：** 20
 
-**替代接口：** [numeric]]([Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric))
+**替代接口：** [Intl.LocaleOptions.numeric](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numeric)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -470,7 +420,7 @@ region: string
 
 **废弃版本：** 20
 
-**替代接口：** [region]]([Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region))
+**替代接口：** [Intl.LocaleOptions.region](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/region)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -494,7 +444,7 @@ script: string
 
 **废弃版本：** 20
 
-**替代接口：** [script]]([Intl.LocaleOptions.script](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script))
+**替代接口：** [Intl.LocaleOptions.script](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/script)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

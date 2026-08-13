@@ -2,9 +2,11 @@
 
 Defines the efficiency resource information.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-interface EfficiencyResourcesInfo--><!--Device-backgroundTaskManager-interface EfficiencyResourcesInfo-End-->
 
@@ -30,7 +32,9 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ Whether the resource is requested by a process or an application. The value **tr
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-isForProcess: boolean--><!--Device-EfficiencyResourcesInfo-isForProcess: boolean-End-->
 
@@ -70,9 +76,11 @@ Whether the resource is permanently held. The default value is **false**. The va
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-isPersistent: boolean--><!--Device-EfficiencyResourcesInfo-isPersistent: boolean-End-->
 
@@ -88,11 +96,13 @@ pid: int
 
 Application PID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-pid: int--><!--Device-EfficiencyResourcesInfo-pid: int-End-->
 
@@ -110,9 +120,11 @@ Reason for requesting the resource.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-reason: string--><!--Device-EfficiencyResourcesInfo-reason: string-End-->
 
@@ -128,11 +140,13 @@ resourceTypes: int
 
 Enumerates the efficiency resource types.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-resourceTypes: int--><!--Device-EfficiencyResourcesInfo-resourceTypes: int-End-->
 
@@ -148,11 +162,13 @@ timeout: int
 
 Timeout, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-timeout: int--><!--Device-EfficiencyResourcesInfo-timeout: int-End-->
 
@@ -168,11 +184,13 @@ uid: int
 
 Application UID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesInfo-uid: int--><!--Device-EfficiencyResourcesInfo-uid: int-End-->
 

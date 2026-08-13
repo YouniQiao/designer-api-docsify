@@ -12,13 +12,13 @@ import { contact } from '@kit.ContactsKit';
 function queryContactSyncInfo(context: Context): Promise<Array<ContactSyncInfo>>
 ```
 
-Queries information about ongoing contact synchronization for the calling application.
-
-If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
+Queries information about ongoing contact synchronization for the calling application. If the returned contact synchronization information is empty, the invoking party does not synchronize contacts or the contact synchronization is complete.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -46,6 +46,6 @@ If the returned contact synchronization information is empty, the invoking party
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 

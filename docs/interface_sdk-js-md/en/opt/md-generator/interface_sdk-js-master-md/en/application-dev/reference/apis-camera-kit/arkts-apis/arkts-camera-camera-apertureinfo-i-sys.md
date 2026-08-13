@@ -2,7 +2,9 @@
 
 Describes the aperture information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface ApertureInfo--><!--Device-camera-interface ApertureInfo-End-->
 
@@ -26,7 +28,9 @@ Aperture.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ApertureInfo-readonly aperture?: double--><!--Device-ApertureInfo-readonly aperture?: double-End-->
 

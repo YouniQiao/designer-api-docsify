@@ -6,6 +6,8 @@ Defines the CustomSpanDrawInfo interface.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface CustomSpanDrawInfo--><!--Device-unnamed-export declare interface CustomSpanDrawInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the CustomSpanDrawInfo interface.
 baseline: double
 ```
 
-The baseline offset of the line where customSpan is located.The unit is px.
+The baseline offset of the line where customSpan is located. The unit is px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ The baseline offset of the line where customSpan is located.The unit is px.
 lineBottom: double
 ```
 
-The bottom position of the line where customSpan is located.The unit is px.
+The bottom position of the line where customSpan is located. The unit is px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,13 +62,15 @@ The bottom position of the line where customSpan is located.The unit is px.
 lineTop: double
 ```
 
-The top position of the line where customSpan is located.The unit is px.
+The top position of the line where customSpan is located. The unit is px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,13 +84,15 @@ The top position of the line where customSpan is located.The unit is px.
 x: double
 ```
 
-CustomSpan's offset relative to the parent component.The unit is px.
+CustomSpan's offset relative to the parent component. The unit is px.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

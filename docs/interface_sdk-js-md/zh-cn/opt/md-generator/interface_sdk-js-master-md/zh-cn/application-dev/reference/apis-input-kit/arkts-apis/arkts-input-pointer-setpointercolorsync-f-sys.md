@@ -6,13 +6,11 @@
 function setPointerColorSync(color: number): void
 ```
 
-设置鼠标光标颜色，使用同步方式进行设置。
+设置鼠标光标颜色，使用同步方式进行设置。 > **说明：** > > 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
 
-> **说明：**
-> 
-> 设置和调试时，需连接外部设备，如鼠标、蓝牙等。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-pointer-function setPointerColorSync(color: int): void--><!--Device-pointer-function setPointerColorSync(color: int): void-End-->
 
@@ -30,8 +28,8 @@ function setPointerColorSync(color: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

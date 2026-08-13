@@ -16,7 +16,9 @@ Creates an ISO image from a volume. This API uses a promise to return the result
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MOUNT_UNMOUNT_MANAGER
 
@@ -48,8 +50,8 @@ Creates an ISO image from a volume. This API uses a promise to return the result
 | 13600010 | The input parameter is invalid. |
 | 13600025 | Failed to write the ISO file. |
 | 13600024 | Empty disc. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600005 | Incorrect volume state. |
 | 13600002 | Not supported filesystem. |
 | 13600001 | IPC error. |

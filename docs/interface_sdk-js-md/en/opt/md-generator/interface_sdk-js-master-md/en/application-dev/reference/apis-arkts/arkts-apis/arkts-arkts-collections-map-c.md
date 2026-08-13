@@ -1,23 +1,12 @@
 # Map
 
-A non-linear data structure.
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> This section uses the following to identify the use of generics:
-
-- K: key.  
-- V: value.  
-The K and V types must be any of the  
-[sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types).  
-**Decorator**: \@Sendable
+A non-linear data structure. > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > This section uses the following to identify the use of generics: - K: key. - V: value. The K and V types must be any of the [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types). **Decorator**: \@Sendable
 
 **Since:** 12
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
-<!--Device-collections-class Map<K, V>--><!--Device-collections-class Map<K, V>-End-->
+<!--Device-collections-class Map--><!--Device-collections-class Map-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -33,9 +22,11 @@ import { collections } from '@kit.ArkTS';
 [Symbol.iterator](): IterableIterator<[K, V]>
 ```
 
-Returns an iterator, each item of which is a JavaScript object.NOTE:This API cannot be used in .ets files.
+Returns an iterator, each item of which is a JavaScript object. NOTE: This API cannot be used in .ets files.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,13 +38,13 @@ Returns an iterator, each item of which is a JavaScript object.NOTE:This API can
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## clear
 
@@ -65,6 +56,8 @@ Removes all elements from this ArkTS map.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Map-clear(): void--><!--Device-Map-clear(): void-End-->
@@ -75,8 +68,8 @@ Removes all elements from this ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## constructor
 
@@ -87,6 +80,8 @@ constructor(entries?: readonly (readonly [K, V])[] | null)
 A constructor used to create an ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,7 +99,7 @@ A constructor used to create an ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## constructor
 
@@ -115,6 +110,8 @@ constructor(iterable: Iterable<readonly [K, V]>)
 A constructor used to create an ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -132,7 +129,7 @@ A constructor used to create an ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## delete
 
@@ -143,6 +140,8 @@ delete(key: K): boolean
 Deletes a specified key from this ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -166,8 +165,8 @@ Deletes a specified key from this ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## entries
 
@@ -179,6 +178,8 @@ Returns a map iterator object that contains the key-value pair of each element i
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Map-entries(): IterableIterator<[K, V]>--><!--Device-Map-entries(): IterableIterator<[K, V]>-End-->
@@ -189,14 +190,14 @@ Returns a map iterator object that contains the key-value pair of each element i
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## forEach
 
@@ -207,6 +208,8 @@ forEach(callbackFn: (value: V, key: K, map: Map<K, V>) => void): void
 Calls a callback function for each key-value pair in this ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -224,8 +227,8 @@ Calls a callback function for each key-value pair in this ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## get
 
@@ -236,6 +239,8 @@ get(key: K): V | undefined
 Obtains the value of the specified key in this ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -259,8 +264,8 @@ Obtains the value of the specified key in this ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## has
 
@@ -271,6 +276,8 @@ has(key: K): boolean
 Checks whether a key exists in this ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -294,8 +301,8 @@ Checks whether a key exists in this ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## keys
 
@@ -307,6 +314,8 @@ Returns a map iterator object that contains the key of each element in this ArkT
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Map-keys(): IterableIterator<K>--><!--Device-Map-keys(): IterableIterator<K>-End-->
@@ -317,14 +326,14 @@ Returns a map iterator object that contains the key of each element in this ArkT
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;K&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## set
 
@@ -335,6 +344,8 @@ set(key: K, value: V): Map<K, V>
 Adds or updates a key-value pair to this ArkTS map.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -359,8 +370,8 @@ Adds or updates a key-value pair to this ArkTS map.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## values
 
@@ -372,6 +383,8 @@ Returns a map iterator object that contains the value of each element in this Ar
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Map-values(): IterableIterator<V>--><!--Device-Map-values(): IterableIterator<V>-End-->
@@ -382,14 +395,14 @@ Returns a map iterator object that contains the value of each element in this Ar
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;V&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) |
 
 ## size
 
@@ -402,6 +415,8 @@ Number of elements in a map.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

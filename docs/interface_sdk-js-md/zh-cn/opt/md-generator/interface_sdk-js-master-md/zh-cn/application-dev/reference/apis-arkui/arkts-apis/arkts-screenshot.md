@@ -2,7 +2,9 @@
 
 本模块提供屏幕截图的能力。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace screenshot--><!--Device-unnamed-declare namespace screenshot-End-->
 
@@ -22,10 +24,10 @@
 
 | 名称 |
 | --- |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save) |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save-1) |
-| [save](arkts-arkui-screenshot-save-f-sys.md#save-2) |
-| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#savehdrpicture) |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save（系统接口）) |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save（系统接口）) |
+| [save](arkts-arkui-screenshot-save-f-sys.md#save（系统接口）) |
+| [saveHdrPicture](arkts-arkui-screenshot-savehdrpicture-f-sys.md#saveHdrPicture（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

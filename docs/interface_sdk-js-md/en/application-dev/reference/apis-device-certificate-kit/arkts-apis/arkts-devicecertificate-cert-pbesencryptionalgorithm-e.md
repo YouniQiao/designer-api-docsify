@@ -2,9 +2,11 @@
 
 Enumerates password-based encryption scheme (PBES) algorithms.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum PbesEncryptionAlgorithm--><!--Device-cert-enum PbesEncryptionAlgorithm-End-->
 
@@ -18,11 +20,13 @@ AES_128_CBC = 0
 
 AES-128-CBC.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesEncryptionAlgorithm-AES_128_CBC = 0--><!--Device-PbesEncryptionAlgorithm-AES_128_CBC = 0-End-->
 
@@ -36,11 +40,13 @@ AES_192_CBC = 1
 
 AES-192-CBC.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-PbesEncryptionAlgorithm-AES_192_CBC = 1-End-->
 
@@ -54,11 +60,13 @@ AES_256_CBC = 2
 
 AES-256-CBC.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-PbesEncryptionAlgorithm-AES_256_CBC = 2-End-->
 

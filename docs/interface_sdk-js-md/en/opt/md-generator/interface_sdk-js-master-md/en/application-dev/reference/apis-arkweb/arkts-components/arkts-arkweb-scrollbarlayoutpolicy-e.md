@@ -1,8 +1,10 @@
 # ScrollbarLayoutPolicy
 
-Defines the layout policy for scrollbars, used with [scrollbarLayoutPolicy](scrollbarLayoutPolicy).
+Defines the layout policy for scrollbars, used with scrollbarLayoutPolicy.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ScrollbarLayoutPolicy--><!--Device-unnamed-declare enum ScrollbarLayoutPolicy-End-->
 
@@ -17,6 +19,8 @@ CONTENT = 0
 Adheres to W3C standards (CSS/HTML/XHTML) for scrollbar layout.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ SYSTEM = 1
 Follows the system UI conventions for scrollbar layout in the system language.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

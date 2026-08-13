@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-hidebug-interface RequestTraceConfig--><!--Device-hidebug-interface RequestTraceConfig-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -19,6 +21,8 @@ trace文件的缓存大小，以KB为单位。数值为32位无符号整型数�
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ trace采集时长，以ms为单位。数值为32位无符号整型数字，超�
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -60,6 +66,8 @@ identifier: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -79,6 +87,8 @@ reserved: number
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

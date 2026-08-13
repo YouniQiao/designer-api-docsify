@@ -6,6 +6,8 @@ Describes the configuration options for child components to be preloaded.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface CachedCountOptions--><!--Device-unnamed-declare interface CachedCountOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,7 @@ Describes the configuration options for child components to be preloaded.
 independent?: boolean
 ```
 
-Whether to calculate [cachedCount](SwiperAttribute#cachedCount(count: number, options: CachedCountOptions))by group.
-
-**true**: **cachedCount** is calculated based on the actual number of child components, not by group.
-
-**false**: If **displayCount.swipeByGroup=true**, **cachedCount** is calculated by group. Otherwise, it is calculated based on the actual number of child components.
-
-Default value: **false**.
+Whether to calculate cachedCount by group. **true**: **cachedCount** is calculated based on the actual number of child components, not by group. **false**: If **displayCount.swipeByGroup=true**, **cachedCount** is calculated by group. Otherwise, it is calculated based on the actual number of child components. Default value: **false**.
 
 **Type:** boolean
 
@@ -31,6 +27,8 @@ Default value: **false**.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,13 +46,7 @@ Default value: **false**.
 isShown?: boolean
 ```
 
-Whether to draw nodes within the preloading range.
-
-**true**: yes.
-
-**false**: no.
-
-Default value: **false**.
+Whether to draw nodes within the preloading range. **true**: yes. **false**: no. Default value: **false**.
 
 **Type:** boolean
 
@@ -63,6 +55,8 @@ Default value: **false**.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

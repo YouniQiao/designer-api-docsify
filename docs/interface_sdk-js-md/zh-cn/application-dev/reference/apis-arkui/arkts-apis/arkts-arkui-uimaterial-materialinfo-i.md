@@ -4,9 +4,11 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
-<!--Device-uiMaterial-export interface MaterialInfo--><!--Device-uiMaterial-export interface MaterialInfo-End-->
+**废弃版本：** -1
+
+<!--Device-uiMaterial-interface MaterialInfo--><!--Device-uiMaterial-interface MaterialInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,19 @@ state: MaterialState
 
 材质使能状态配置。
 
-**类型：** [MaterialState](arkts-arkui-uimaterial-materialstate-e.md)
+**类型：** [MaterialState](../../apis-na/arkts-apis/arkts-na-uimaterial-materialstate-e.md)
+
+**默认值：** MaterialState.DEFAULT
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MaterialInfo-state: MaterialState--><!--Device-MaterialInfo-state: MaterialState-End-->
 
@@ -40,11 +48,17 @@ type: MaterialType
 
 **类型：** MaterialType
 
+**默认值：** MaterialType.IMMERSIVE
+
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MaterialInfo-type: MaterialType--><!--Device-MaterialInfo-type: MaterialType-End-->
 

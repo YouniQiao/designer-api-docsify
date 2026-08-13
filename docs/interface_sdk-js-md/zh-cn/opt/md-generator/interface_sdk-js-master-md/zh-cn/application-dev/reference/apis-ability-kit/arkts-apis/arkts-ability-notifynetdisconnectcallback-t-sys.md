@@ -6,7 +6,9 @@ type NotifyNetDisconnectCallback = (deviceId: string, state: number) => void
 
 断开连接时的回调函数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

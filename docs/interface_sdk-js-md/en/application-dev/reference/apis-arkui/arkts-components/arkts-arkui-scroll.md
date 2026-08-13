@@ -14,6 +14,8 @@ Called when a scrollable container is set.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute--><!--Device-ScrollInterface-(scroller?: Scroller): ScrollAttribute-End-->
@@ -28,20 +30,20 @@ Called when a scrollable container is set.
 
 ## Summary
 
-- [OffsetOptions](arkts-arkui-scroll-offsetoptions-i.md)
-- [OffsetResult](arkts-arkui-scroll-offsetresult-i.md)
-- [OnScrollFrameBeginHandlerResult](arkts-arkui-scroll-onscrollframebeginhandlerresult-i.md)
-- [ScrollAnimationOptions](arkts-arkui-scroll-scrollanimationoptions-i.md)
-- [ScrollEdgeOptions](arkts-arkui-scroll-scrolledgeoptions-i.md)
-- [ScrollOptions](arkts-arkui-scroll-scrolloptions-i.md)
-- [ScrollPageOptions](arkts-arkui-scroll-scrollpageoptions-i.md)
-- [ScrollSnapOptions](arkts-arkui-scroll-scrollsnapoptions-i.md)
-- [ScrollToIndexOptions](arkts-arkui-scroll-scrolltoindexoptions-i.md)
-- [UIScrollEvent](arkts-arkui-scroll-uiscrollevent-i.md)
-- [OnScrollEdgeCallback](arkts-arkui-scroll-onscrolledgecallback-t.md)
-- [OnScrollFrameBeginCallback](arkts-arkui-scroll-onscrollframebegincallback-t.md)
-- [ScrollOnDidZoomCallback](arkts-arkui-scroll-scrollondidzoomcallback-t.md)
-- [ScrollOnScrollCallback](arkts-arkui-scroll-scrollonscrollcallback-t.md)
-- [ScrollOnWillScrollCallback](arkts-arkui-scroll-scrollonwillscrollcallback-t.md)
-- [ScrollAlign](arkts-arkui-scroll-scrollalign-e.md)
-- [ScrollDirection](arkts-arkui-scroll-scrolldirection-e.md)
+- [OffsetOptions](arkts-arkui-offsetoptions-i.md)
+- [OffsetResult](arkts-arkui-offsetresult-i.md)
+- [OnScrollFrameBeginHandlerResult](arkts-arkui-onscrollframebeginhandlerresult-i.md)
+- [ScrollAnimationOptions](arkts-arkui-scrollanimationoptions-i.md)
+- [ScrollEdgeOptions](arkts-arkui-scrolledgeoptions-i.md)
+- [ScrollOptions](arkts-arkui-scrolloptions-i.md)
+- [ScrollPageOptions](arkts-arkui-scrollpageoptions-i.md)
+- [ScrollSnapOptions](arkts-arkui-scrollsnapoptions-i.md)
+- [ScrollToIndexOptions](arkts-arkui-scrolltoindexoptions-i.md)
+- [UIScrollEvent](arkts-arkui-uiscrollevent-i.md)
+- [OnScrollEdgeCallback](arkts-arkui-onscrolledgecallback-t.md)
+- [OnScrollFrameBeginCallback](arkts-arkui-onscrollframebegincallback-t.md)
+- [ScrollOnDidZoomCallback](arkts-arkui-scrollondidzoomcallback-t.md)
+- [ScrollOnScrollCallback](arkts-arkui-scrollonscrollcallback-t.md)
+- [ScrollOnWillScrollCallback](arkts-arkui-scrollonwillscrollcallback-t.md)
+- [ScrollAlign](arkts-arkui-scrollalign-e.md)
+- [ScrollDirection](arkts-arkui-scrolldirection-e.md)

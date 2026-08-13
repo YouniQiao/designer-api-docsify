@@ -18,7 +18,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate)
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -34,7 +34,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | isEnableUpdate | boolean | Yes | Whether to make the widgets updatable. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## notifyFormsEnableUpdate
@@ -51,7 +51,7 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate)
+**Substitutes:** [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyFormsEnableUpdate-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

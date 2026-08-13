@@ -2,7 +2,9 @@
 
 Enumerates the camera connection types.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum ConnectionType--><!--Device-camera-enum ConnectionType-End-->
 
@@ -16,7 +18,9 @@ CAMERA_CONNECTION_BUILT_IN = 0
 
 Built-in camera.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ CAMERA_CONNECTION_USB_PLUGIN = 1
 
 Camera connected using USB.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -48,7 +54,9 @@ CAMERA_CONNECTION_REMOTE = 2
 
 Remote camera.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

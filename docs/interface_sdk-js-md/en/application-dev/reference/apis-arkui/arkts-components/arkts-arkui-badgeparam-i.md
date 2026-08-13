@@ -6,6 +6,8 @@ Provides basic parameters for creating a badge.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BadgeParam--><!--Device-unnamed-declare interface BadgeParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,16 +18,7 @@ Provides basic parameters for creating a badge.
 position?: BadgePosition | Position
 ```
 
-Position to display the badge relative to the parent component.
-
-Default value: **BadgePosition.RightTop**
-
-**NOTE：**
-
-With the **Position** type, percentage values are not supported. If an invalid value is set, the default value  
-**(0,0)**, which indicates the upper left corner of the component, will be used.
-
-With the **BadgePosition** type, the position is mirrored based on the [Direction](Direction) property.
+Position to display the badge relative to the parent component. Default value: **BadgePosition.RightTop** **NOTE：**With the **Position** type, percentage values are not supported. If an invalid value is set, the default value **(0,0)**, which indicates the upper left corner of the component, will be used. With the **BadgePosition** type, the position is mirrored based on the Direction property.
 
 **Type:** [BadgePosition](arkts-arkui-badgeposition-e.md) \| Position
 
@@ -34,6 +27,8 @@ With the **BadgePosition** type, the position is mirrored based on the [Directio
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +51,8 @@ Style of the badge, including the font color, font size, badge color, and badge 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -2,7 +2,9 @@
 
 EffectSuggestion object.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface EffectSuggestion--><!--Device-camera-interface EffectSuggestion-End-->
 
@@ -18,7 +20,9 @@ enableEffectSuggestion(enabled: boolean): void
 
 Enable effect suggestion for session.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void--><!--Device-EffectSuggestion-enableEffectSuggestion(enabled: boolean): void-End-->
 
@@ -36,9 +40,9 @@ Enable effect suggestion for session.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getSupportedEffectSuggestionTypes
 
@@ -48,7 +52,9 @@ getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>
 
 Gets supported effect suggestion types.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>--><!--Device-EffectSuggestion-getSupportedEffectSuggestionTypes(): Array<EffectSuggestionType>-End-->
 
@@ -66,8 +72,8 @@ Gets supported effect suggestion types.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isEffectSuggestionSupported
 
@@ -77,7 +83,9 @@ isEffectSuggestionSupported(): boolean
 
 Checks whether effect suggestion is supported.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean--><!--Device-EffectSuggestion-isEffectSuggestionSupported(): boolean-End-->
 
@@ -95,8 +103,8 @@ Checks whether effect suggestion is supported.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## setEffectSuggestionStatus
 
@@ -104,9 +112,11 @@ Checks whether effect suggestion is supported.
 setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void
 ```
 
-Set the range of effect suggestion type and enable status.The application should fully set all data when it starts up.
+Set the range of effect suggestion type and enable status. The application should fully set all data when it starts up.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void--><!--Device-EffectSuggestion-setEffectSuggestionStatus(status: Array<EffectSuggestionStatus>): void-End-->
 
@@ -124,9 +134,9 @@ Set the range of effect suggestion type and enable status.The application should
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## updateEffectSuggestion
 
@@ -136,7 +146,9 @@ updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void
 
 Update the enable status of the effect suggestion type.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void--><!--Device-EffectSuggestion-updateEffectSuggestion(type: EffectSuggestionType, enabled: boolean): void-End-->
 
@@ -155,6 +167,6 @@ Update the enable status of the effect suggestion type.
 
 | 错误码ID |
 | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400101](../errorcode-camera.md#7400101-无效入参) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

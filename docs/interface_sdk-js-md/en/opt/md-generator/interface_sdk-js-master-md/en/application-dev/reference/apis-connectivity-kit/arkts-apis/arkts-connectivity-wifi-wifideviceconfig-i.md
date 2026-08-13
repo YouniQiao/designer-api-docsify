@@ -6,7 +6,7 @@ Wi-Fi device configuration information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiDeviceConfig](ohos.wifiManager/wifiManager.WifiDeviceConfig)
+**Substitutes:** [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md#WifiDeviceConfig)
 
 <!--Device-wifi-interface WifiDeviceConfig--><!--Device-wifi-interface WifiDeviceConfig-End-->
 
@@ -32,7 +32,7 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [bssid](ohos.wifiManager/wifiManager.WifiDeviceConfig.bssid)
+**Substitutes:** [bssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#bssid)
 
 <!--Device-WifiDeviceConfig-bssid: string--><!--Device-WifiDeviceConfig-bssid: string-End-->
 
@@ -52,7 +52,7 @@ Hide SSID or not, false(default): not hide
 
 **Deprecated since:** 9
 
-**Substitutes:** [isHiddenSsid](ohos.wifiManager/wifiManager.WifiDeviceConfig.isHiddenSsid)
+**Substitutes:** [isHiddenSsid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#isHiddenSsid)
 
 <!--Device-WifiDeviceConfig-isHiddenSsid: boolean--><!--Device-WifiDeviceConfig-isHiddenSsid: boolean-End-->
 
@@ -72,7 +72,7 @@ Wi-Fi key: maximum length is 64
 
 **Deprecated since:** 9
 
-**Substitutes:** [preSharedKey](ohos.wifiManager/wifiManager.WifiDeviceConfig.preSharedKey)
+**Substitutes:** [preSharedKey](arkts-connectivity-wifimanager-wifideviceconfig-i.md#preSharedKey)
 
 <!--Device-WifiDeviceConfig-preSharedKey: string--><!--Device-WifiDeviceConfig-preSharedKey: string-End-->
 
@@ -92,7 +92,7 @@ Security type: reference definition of WifiSecurityType
 
 **Deprecated since:** 9
 
-**Substitutes:** [securityType](ohos.wifiManager/wifiManager.WifiDeviceConfig.securityType)
+**Substitutes:** [securityType](arkts-connectivity-wifimanager-wifideviceconfig-i.md#securityType)
 
 <!--Device-WifiDeviceConfig-securityType: WifiSecurityType--><!--Device-WifiDeviceConfig-securityType: WifiSecurityType-End-->
 
@@ -112,7 +112,7 @@ Wi-Fi SSID: the maximum length is 32
 
 **Deprecated since:** 9
 
-**Substitutes:** [ssid](ohos.wifiManager/wifiManager.WifiDeviceConfig.ssid)
+**Substitutes:** [ssid](arkts-connectivity-wifimanager-wifideviceconfig-i.md#ssid)
 
 <!--Device-WifiDeviceConfig-ssid: string--><!--Device-WifiDeviceConfig-ssid: string-End-->
 

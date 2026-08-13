@@ -4,12 +4,13 @@
 export type OnChangeType<T> = (propertyName: string, newValue: T) => void
 ```
 
-注册[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性变化事件的回调函数类型。
+注册AppStorage/ LocalStorage中所引用属性变化事件的回调函数类型。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

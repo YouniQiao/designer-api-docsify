@@ -12,7 +12,7 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceRemindType](ohos.notificationManager/notificationManager#getDeviceRemindType)
+**Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md#getDeviceRemindType-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ Obtains the notification reminder type. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDeviceRemindType](ohos.notificationManager/notificationManager#getDeviceRemindType)
+**Substitutes:** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md#getDeviceRemindType-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

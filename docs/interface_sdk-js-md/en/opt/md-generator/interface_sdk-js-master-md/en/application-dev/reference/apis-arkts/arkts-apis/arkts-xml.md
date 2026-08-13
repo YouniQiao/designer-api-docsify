@@ -2,7 +2,9 @@
 
 The xml module provides utilities for converting XML text to Javascript object, XML generation and parsing.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace xml--><!--Device-unnamed-declare namespace xml-End-->
 

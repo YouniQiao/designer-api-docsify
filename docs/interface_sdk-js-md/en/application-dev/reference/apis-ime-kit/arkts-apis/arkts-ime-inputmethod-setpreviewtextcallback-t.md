@@ -6,9 +6,11 @@ export type SetPreviewTextCallback = (text: string, range: Range) => void
 
 The callback of 'setPreviewText' event.
 
-**Since:** 17
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void--><!--Device-inputMethod-export type SetPreviewTextCallback = (text: string, range: Range) => void-End-->
 

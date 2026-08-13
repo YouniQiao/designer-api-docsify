@@ -4,6 +4,8 @@
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-identifySensitiveContent-export interface MatchResult--><!--Device-identifySensitiveContent-export interface MatchResult-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -19,6 +21,8 @@ readonly matchContent: string
 **类型：** string
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 <!--Device-MatchResult-readonly matchContent: string--><!--Device-MatchResult-readonly matchContent: string-End-->
 
@@ -36,6 +40,8 @@ readonly matchNumber: number
 
 **起始版本：** 21
 
+**废弃版本：** -1
+
 <!--Device-MatchResult-readonly matchNumber: number--><!--Device-MatchResult-readonly matchNumber: number-End-->
 
 **系统能力：** SystemCapability.Security.DataLossPrevention
@@ -51,6 +57,8 @@ readonly sensitiveLabel: string
 **类型：** string
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 <!--Device-MatchResult-readonly sensitiveLabel: string--><!--Device-MatchResult-readonly sensitiveLabel: string-End-->
 

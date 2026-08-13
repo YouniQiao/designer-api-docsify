@@ -2,6 +2,12 @@
 
 ## Summary
 
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i.md) | Define the EffectComponentAttribute. |
+
 <!--Del-->
 ### Interfaces（系统接口）
 

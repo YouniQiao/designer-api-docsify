@@ -13,11 +13,13 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
     allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture
 ```
 
-Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType [IMAGE_ALLOCATOR_TYPE](IMAGE_ALLOCATOR_TYPE). By default, the system selects the memory type based on the image type,image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
+Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType IMAGE_ALLOCATOR_TYPE. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,7 +45,7 @@ Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter, size.height or size.width is less than or equal to 0. |
-| [7600205](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter, size.height or size.width is less than or equal to 0. |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) | Unsupported allocator type, e.g., use shared memory to create a gainmap as only DMA supported hdr metadata. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Alloc memory failed. |
 

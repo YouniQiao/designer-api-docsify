@@ -6,6 +6,8 @@ Defines the Media Options.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface WebMediaOptions--><!--Device-unnamed-declare interface WebMediaOptions-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Whether the audio of each web is exclusive.
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +48,8 @@ audioSessionType?: AudioSessionType
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-WebMediaOptions-audioSessionType?: AudioSessionType--><!--Device-WebMediaOptions-audioSessionType?: AudioSessionType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -61,6 +67,8 @@ The time interval for audio playback to resume.
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

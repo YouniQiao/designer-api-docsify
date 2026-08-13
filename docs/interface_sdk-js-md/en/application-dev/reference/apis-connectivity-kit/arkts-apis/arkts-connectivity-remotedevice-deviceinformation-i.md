@@ -4,7 +4,9 @@ Describes the remote device information.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-remoteDevice-interface DeviceInformation--><!--Device-remoteDevice-interface DeviceInformation-End-->
 
@@ -22,13 +24,15 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 manufacturerData: string
 ```
 
-The manufacturer data of the remote device.The maximum length is 255.
+The manufacturer data of the remote device. The maximum length is 255.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ The manufacturer data of the remote device.The maximum length is 255.
 modelData: string
 ```
 
-The model data of the remote device.The maximum length is 255.
+The model data of the remote device. The maximum length is 255.
 
 **Type:** string
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

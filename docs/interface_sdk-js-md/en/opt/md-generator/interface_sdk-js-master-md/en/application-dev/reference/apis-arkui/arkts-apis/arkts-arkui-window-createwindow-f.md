@@ -12,14 +12,11 @@ import { window } from '@kit.ArkUI';
 function createWindow(config: Configuration, callback: AsyncCallback<Window>): void
 ```
 
-Creates a child window or system window. This API uses an asynchronous callback to return the result.
+Creates a child window or system window. This API uses an asynchronous callback to return the result. In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default. In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md#Configuration) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
 
-In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+**Since:** 23
 
-In freeform window mode, the child window created uses an immersive layout when  
-[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -41,15 +38,15 @@ In freeform window mode, the child window created uses an immersive layout when
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
-| [1300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300006-abnormal-window-context) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../errorcode-window.md#1300001-repeated-operation) |
+| [1300006](../errorcode-window.md#1300006-abnormal-window-context) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 
@@ -91,14 +88,11 @@ export default class EntryAbility extends UIAbility {
 function createWindow(config: Configuration): Promise<Window>
 ```
 
-Creates a child window or system window. This API uses a promise to return the result.
+Creates a child window or system window. This API uses a promise to return the result. In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default. In freeform window mode, the child window created uses an immersive layout when [decorEnabled](arkts-arkui-window-configuration-i.md#Configuration) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
 
-In non-[freeform window](../../../windowmanager/window-terminology.md#freeform-window) mode, the child window created uses an [immersive layout](../../../windowmanager/window-terminology.md#immersive-layout) by default.
+**Since:** 23
 
-In freeform window mode, the child window created uses an immersive layout when  
-[decorEnabled](arkts-arkui-window-configuration-i.md#Configuration) is set to **false**, and it uses a non-immersive layout when this parameter is set to **true**.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 12+: ohos.permission.SYSTEM_FLOAT_WINDOW
@@ -125,15 +119,15 @@ In freeform window mode, the child window created uses an immersive layout when
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) |
-| [1300006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300006-abnormal-window-context) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1300009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300001](../errorcode-window.md#1300001-repeated-operation) |
+| [1300006](../errorcode-window.md#1300006-abnormal-window-context) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 

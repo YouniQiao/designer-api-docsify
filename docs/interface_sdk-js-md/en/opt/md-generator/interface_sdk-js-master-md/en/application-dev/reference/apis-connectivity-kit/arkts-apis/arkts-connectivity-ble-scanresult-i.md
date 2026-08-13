@@ -2,7 +2,9 @@
 
 Describes the contents of the scan results.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface ScanResult--><!--Device-ble-interface ScanResult-End-->
 
@@ -24,7 +26,9 @@ The address object of a BLE peripheral device, including the address type.
 
 **Type:** BluetoothAddress
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ This field is used to identify the discovery mode and supported capabilities of 
 
 **Type:** number
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ScanResult-advertiseFlags?: int--><!--Device-ScanResult-advertiseFlags?: int-End-->
 
@@ -62,11 +68,13 @@ Map of advertising data fields.
 
 **Type:** Map&lt;number, Uint8Array&gt;
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ScanResult-advertisingDataMap?: Map<int, Uint8Array>--><!--Device-ScanResult-advertisingDataMap?: Map<int, Uint8Array>-End-->
 
@@ -82,7 +90,9 @@ Connectable of the remote device
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +112,9 @@ The raw data of broadcast packet
 
 **Type:** ArrayBuffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,7 +134,9 @@ Address of the scanned device
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,7 +156,9 @@ The local name of the BLE device
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,11 +178,13 @@ Map of manufacturer data.
 
 **Type:** Map&lt;number, Uint8Array&gt;
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ScanResult-manufacturerDataMap?: Map<int, Uint8Array>--><!--Device-ScanResult-manufacturerDataMap?: Map<int, Uint8Array>-End-->
 
@@ -182,7 +200,9 @@ RSSI of the remote device
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -202,11 +222,13 @@ Map of service data.
 
 **Type:** Map&lt;string, Uint8Array&gt;
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ScanResult-serviceDataMap?: Map<string, Uint8Array>--><!--Device-ScanResult-serviceDataMap?: Map<string, Uint8Array>-End-->
 
@@ -222,11 +244,13 @@ The list of service uuid.
 
 **Type:** string[]
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ScanResult-serviceUuids?: string[]--><!--Device-ScanResult-serviceUuids?: string[]-End-->
 
@@ -242,11 +266,13 @@ The tx power level of the packet in dBm.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ScanResult-txPowerLevel?: int--><!--Device-ScanResult-txPowerLevel?: int-End-->
 

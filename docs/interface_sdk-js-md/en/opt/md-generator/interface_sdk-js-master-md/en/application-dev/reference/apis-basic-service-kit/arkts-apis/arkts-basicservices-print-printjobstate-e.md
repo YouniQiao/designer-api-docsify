@@ -2,7 +2,9 @@
 
 Enumerates the print job states.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintJobState--><!--Device-print-enum PrintJobState-End-->
 
@@ -16,7 +18,9 @@ PRINT_JOB_PREPARE = 0
 
 The printer is prepared for the print job.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_PREPARE = 0--><!--Device-PrintJobState-PRINT_JOB_PREPARE = 0-End-->
 
@@ -30,7 +34,9 @@ PRINT_JOB_QUEUED = 1
 
 The print job is on the print queue of the printer.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_QUEUED = 1--><!--Device-PrintJobState-PRINT_JOB_QUEUED = 1-End-->
 
@@ -44,7 +50,9 @@ PRINT_JOB_RUNNING = 2
 
 The print job is being executed.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_RUNNING = 2--><!--Device-PrintJobState-PRINT_JOB_RUNNING = 2-End-->
 
@@ -58,7 +66,9 @@ PRINT_JOB_BLOCKED = 3
 
 The print job is blocked.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3--><!--Device-PrintJobState-PRINT_JOB_BLOCKED = 3-End-->
 
@@ -72,7 +82,9 @@ PRINT_JOB_COMPLETED = 4
 
 The print job is complete.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4--><!--Device-PrintJobState-PRINT_JOB_COMPLETED = 4-End-->
 

@@ -12,7 +12,7 @@ Obtains a notification slot of a specified type. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlot](ohos.notificationManager/notificationManager#getSlot)
+**Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md#getSlot)
 
 <!--Device-notification-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void--><!--Device-notification-function getSlot(slotType: SlotType, callback: AsyncCallback<NotificationSlot>): void-End-->
 
@@ -38,7 +38,7 @@ Obtains a notification slot of a specified type. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlot](ohos.notificationManager/notificationManager#getSlot)
+**Substitutes:** [getSlot](arkts-notification-notificationmanager-getslot-f.md#getSlot)
 
 <!--Device-notification-function getSlot(slotType: SlotType): Promise<NotificationSlot>--><!--Device-notification-function getSlot(slotType: SlotType): Promise<NotificationSlot>-End-->
 

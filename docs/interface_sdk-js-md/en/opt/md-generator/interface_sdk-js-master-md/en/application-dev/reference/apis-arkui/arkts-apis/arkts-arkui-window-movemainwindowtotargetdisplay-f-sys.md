@@ -16,6 +16,8 @@ Move a window to the target display. The window must be a main window.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-window-function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: int): Promise<void>--><!--Device-window-function moveMainWindowToTargetDisplay(displayId: long, windowId: int, userId?: int): Promise<void>-End-->
@@ -42,13 +44,13 @@ Move a window to the target display. The window must be a main window.
 
 | Error Code ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300016-parameter-verification-error) |
-| [1300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300004-unauthorized-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300008-display-device-exception) |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) |
+| [1300016](../errorcode-window.md#1300016-parameter-verification-error) |
+| [1300004](../errorcode-window.md#1300004-unauthorized-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300008](../errorcode-window.md#1300008-display-device-exception) |
 
 ## Examples
 

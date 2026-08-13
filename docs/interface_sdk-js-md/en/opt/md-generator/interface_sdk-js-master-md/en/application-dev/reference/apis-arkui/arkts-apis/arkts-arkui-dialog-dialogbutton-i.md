@@ -4,6 +4,8 @@ Button configuration for fixed-style dialog.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-dialog-declare interface DialogButton--><!--Device-dialog-declare interface DialogButton-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,11 @@ action: VoidCallback
 
 Callback executed when the button is clicked.
 
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +49,8 @@ Background color of the button.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Whether the button is the default focus.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -88,6 +98,8 @@ Whether to respond when the button is clicked.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -108,6 +120,8 @@ Text color of the button.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -127,6 +141,8 @@ Define whether the button responds to Enter/Space key by default.
 **Type:** boolean
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,6 +166,8 @@ Style of the button.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -169,6 +187,8 @@ Text content of the button.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

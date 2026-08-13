@@ -2,7 +2,9 @@
 
 圆角矩形。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-windowAnimationManager-export interface RRect--><!--Device-windowAnimationManager-export interface RRect-End-->
 
@@ -20,7 +22,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RRect-height: double--><!--Device-RRect-height: double-End-->
 
@@ -38,7 +42,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RRect-left: double--><!--Device-RRect-left: double-End-->
 
@@ -56,7 +62,9 @@ radius: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RRect-radius: double--><!--Device-RRect-radius: double-End-->
 
@@ -74,7 +82,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RRect-top: double--><!--Device-RRect-top: double-End-->
 
@@ -92,7 +102,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RRect-width: double--><!--Device-RRect-width: double-End-->
 

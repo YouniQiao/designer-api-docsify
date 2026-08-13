@@ -2,9 +2,11 @@
 
 Describes the CPU usage of a thread.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-interface ThreadCpuUsage--><!--Device-hidebug-interface ThreadCpuUsage-End-->
 
@@ -24,11 +26,13 @@ cpuUsage: double
 
 CPU usage of the thread.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThreadCpuUsage-cpuUsage: double--><!--Device-ThreadCpuUsage-cpuUsage: double-End-->
 
@@ -42,11 +46,13 @@ threadId: long
 
 Thread ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ThreadCpuUsage-threadId: long--><!--Device-ThreadCpuUsage-threadId: long-End-->
 

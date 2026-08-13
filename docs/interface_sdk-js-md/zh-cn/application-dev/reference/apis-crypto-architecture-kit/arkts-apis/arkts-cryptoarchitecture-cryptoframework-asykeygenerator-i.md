@@ -1,11 +1,12 @@
 # AsyKeyGenerator
 
-非对称密钥生成器接口，定义生成非对称密钥的方法。调用前，需通过  
-[createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createAsyKeyGenerator)方法创建一个AsyKeyGenerator实例。
+非对称密钥生成器接口，定义生成非对称密钥的方法。调用前，需通过 [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createAsyKeyGenerator)方法创建一个AsyKeyGenerator实例。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface AsyKeyGenerator--><!--Device-cryptoFramework-interface AsyKeyGenerator-End-->
 
@@ -25,6 +26,8 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void-End-->
@@ -39,16 +42,16 @@ convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>)
 | --- | --- | --- | --- |
 | pubKey | DataBlob | 是 | 公钥材料。 |
 | priKey | DataBlob | 是 | 私钥材料。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## convertKey
 
@@ -58,9 +61,11 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 
 获取指定数据生成非对称密钥。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -76,16 +81,16 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 | --- | --- | --- | --- |
 | pubKey | DataBlob \| null | 是 | 指定的公钥材料。如果公钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
 | priKey | DataBlob \| null | 是 | 指定的私钥材料。如果私钥不需要转换，请传入null。API 10之前只支持DataBlob， API 10之后增 加支持null。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
 
@@ -124,6 +129,8 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
@@ -149,10 +156,10 @@ convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## convertKey
 
@@ -162,9 +169,11 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 获取指定数据生成非对称密钥。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -191,10 +200,10 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
 
@@ -257,15 +266,15 @@ async function TestConvertKey() {
 convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 ```
 
-同步获取指定数据生成非对称密钥。
+同步获取指定数据生成非对称密钥。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[convertKey](convertKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair--><!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair-End-->
 
@@ -288,10 +297,10 @@ convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
 
@@ -327,22 +336,15 @@ try {
 convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 ```
 
-获取指定数据生成非对称密钥。使用Promise异步回调。
+获取指定数据生成非对称密钥。使用Promise异步回调。 > **说明：** > > 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需 > 满足ASN.1语法、PKCS#8规范和PEM编码格式。 > 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传 > 入数据转换而来的密钥。 > 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指 > 定的密钥规格相同。
 
-> **说明：**
-> 
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
-> 定的密钥规格相同。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>-End-->
 
@@ -365,10 +367,10 @@ convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
 
@@ -458,23 +460,15 @@ async function TestConvertPemKeyByPromise() {
 convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
 ```
 
-获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。
+获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。使用Promise异步回调。 > **说明：** > > 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需 > 满足ASN.1语法、PKCS#8规范和PEM编码格式。 > 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传 > 入数据转换而来的密钥。 > 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指 > 定的密钥规格相同。 > 4. 如果传入了password参数，可用于解密加密的私钥。
 
-> **说明：**
-> 
-> 1. 使用convertPemKey()将外部字符串转换为Crypto框架定义的非对称密钥对象时，公钥需满足ASN.1语法、X.509规范和PEM编码格式，私钥需
-> 满足ASN.1语法、PKCS#8规范和PEM编码格式。
-> 2. 在convertPemKey()中，可以只传入pubKey或priKey中的一个，也可以两个都传入。如果只传入其中一个，返回的KeyPair实例中只包含从传
-> 入数据转换而来的密钥。
-> 3. 使用convertPemKey将外部字符串转换为Crypto框架定义的非对称密钥对象时，系统不会校验生成的密钥对象规格是否与为非对称密钥生成器指
-> 定的密钥规格相同。
-> 4. 如果传入了password参数，可用于解密加密的私钥。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
 
@@ -498,9 +492,9 @@ convertPemKey(pubKey: string | null, priKey: string | null, password: string): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -583,20 +577,15 @@ async function TestConvertPemKeyByPromise() {
 convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 ```
 
-同步获取指定数据，生成非对称密钥。
+同步获取指定数据，生成非对称密钥。 > **说明：** > convertPemKeySync接口与convertPemKey接口注意事项相同，见 > [convertPemKey](#convertPemKey) > 接口说明。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，[convertPemKey](#convertPemKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-> **说明：**
-> convertPemKeySync接口与convertPemKey接口注意事项相同，见
-> [convertPemKey](#convertPemKey)
-> 接口说明。
+**起始版本：** 23
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[convertPemKey](#convertPemKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair-End-->
 
@@ -619,10 +608,10 @@ convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。<br>**适用版本：** 26.0.0+ |
 
 ## 示例
 
@@ -673,20 +662,15 @@ function TestConvertPemKeyBySync() {
 convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair
 ```
 
-获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。
+获取指定数据生成非对称密钥。支持加密的私钥，同步传入私钥口令解密私钥。 > **说明：** > convertPemKeySync接口与convertPemKey接口注意事项相同，见 > [convertPemKey](#convertPemKey) > 接口说明。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，[convertPemKey](#convertPemKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-> **说明：**
-> convertPemKeySync接口与convertPemKey接口注意事项相同，见
-> [convertPemKey](#convertPemKey-1)
-> 接口说明。
+**起始版本：** 23
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[convertPemKey](#convertPemKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 18
+**废弃版本：** -1
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair-End-->
 
@@ -710,9 +694,9 @@ convertPemKeySync(pubKey: string | null, priKey: string | null, password: string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -761,9 +745,11 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 获取非对称密钥生成器随机生成的密钥。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -777,15 +763,15 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md)&gt; | 是 | 回调函数。当生成非对称密钥成功时，err为undefined，data为获取到的KeyPair；否则 为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因：参数类型不正确。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因：参数类型不正确。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -810,9 +796,11 @@ generateKeyPair(): Promise<KeyPair>
 
 获取非对称密钥生成器随机生成的密钥。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -832,9 +820,9 @@ generateKeyPair(): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -877,15 +865,15 @@ async function TestGenerateKeyPair() {
 generateKeyPairSync(): KeyPair
 ```
 
-同步获取非对称密钥生成器随机生成的密钥。
+同步获取非对称密钥生成器随机生成的密钥。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[generateKeyPair](generateKeyPair)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair-End-->
 
@@ -901,9 +889,9 @@ generateKeyPairSync(): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -933,9 +921,11 @@ readonly algName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

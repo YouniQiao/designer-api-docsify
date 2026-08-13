@@ -1,10 +1,10 @@
 # WatchEventListener
 
-(event: WatchEvent): void
-
-Provides APIs for observing events.
+(event: WatchEvent): void Provides APIs for observing events.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface WatchEventListener--><!--Device-unnamed-export interface WatchEventListener-End-->
 
@@ -16,7 +16,7 @@ Provides APIs for observing events.
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (event: WatchEvent): void
@@ -25,6 +25,8 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 Specifies the callback function to be invoked.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-WatchEventListener-(event: WatchEvent): void--><!--Device-WatchEventListener-(event: WatchEvent): void-End-->
 

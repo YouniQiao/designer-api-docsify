@@ -4,11 +4,13 @@ Defines the basic callback.
 
 **Since:** 12
 
-<!--Device-unnamed-declare interface Callback<T, V = void>--><!--Device-unnamed-declare interface Callback<T, V = void>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface Callback--><!--Device-unnamed-declare interface Callback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (data: T): V
@@ -17,6 +19,8 @@ Defines the basic callback.
 Defines the callback info.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,9 +6,11 @@
 function getMaxSimCount(): number
 ```
 
-Obtains the maximum number of SIM cards that can be used simultaneously on the device,that is, the maximum number of SIM card slots.
+Obtains the maximum number of SIM cards that can be used simultaneously on the device, that is, the maximum number of SIM card slots.
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-function getMaxSimCount(): int--><!--Device-sim-function getMaxSimCount(): int-End-->
 

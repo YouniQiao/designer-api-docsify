@@ -8,6 +8,8 @@ Called when the current album is deleted.
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-unnamed-export type CurrentAlbumDeletedCallback = () => void--><!--Device-unnamed-export type CurrentAlbumDeletedCallback = () => void-End-->

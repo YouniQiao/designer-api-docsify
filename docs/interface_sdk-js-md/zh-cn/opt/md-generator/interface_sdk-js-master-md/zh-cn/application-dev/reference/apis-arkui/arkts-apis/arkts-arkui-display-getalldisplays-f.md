@@ -8,7 +8,9 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 获取当前所有的Display对象，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -26,7 +28,7 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 | 错误码ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
 ## 示例
 
@@ -54,7 +56,9 @@ function getAllDisplays(): Promise<Array<Display>>
 
 获取当前所有的Display对象，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +76,7 @@ function getAllDisplays(): Promise<Array<Display>>
 
 | 错误码ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
 
 ## 示例
 

@@ -6,6 +6,8 @@ NavDestination类型。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum NavDestinationMode--><!--Device-unnamed-declare enum NavDestinationMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ STANDARD = 0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -36,13 +40,13 @@ STANDARD = 0
 DIALOG = 1
 ```
 
-默认透明。进出路由栈不影响下层NavDestination的可见性（onShown、onHidden等生命周期），只触发onActive、onInactive生命周期。适合需要透明背景或悬浮效果的场景，如弹窗式页面、浮层提示、操作确认对话框等。
-
-API version 13之前，默认无系统转场动画。从API version 13开始，支持系统转场动画。
+默认透明。进出路由栈不影响下层NavDestination的可见性（onShown、onHidden等生命周期），只触发onActive、onInactive生命周期。 适合需要透明背景或悬浮效果的场景，如弹窗式页面、浮层提示、操作确认对话框等。 API version 13之前，默认无系统转场动画。从API version 13开始，支持系统转场动画。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

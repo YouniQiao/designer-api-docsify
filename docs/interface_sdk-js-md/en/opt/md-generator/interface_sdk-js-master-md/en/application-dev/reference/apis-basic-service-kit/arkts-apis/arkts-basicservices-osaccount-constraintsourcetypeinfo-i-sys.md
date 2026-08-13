@@ -2,7 +2,9 @@
 
 Defines the constraint source type.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface ConstraintSourceTypeInfo--><!--Device-osAccount-interface ConstraintSourceTypeInfo-End-->
 
@@ -26,7 +28,9 @@ ID of the target OS account.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintSourceTypeInfo-localId: int--><!--Device-ConstraintSourceTypeInfo-localId: int-End-->
 
@@ -44,7 +48,9 @@ Type of the constraint source.
 
 **Type:** [ConstraintSourceType](arkts-basicservices-osaccount-constraintsourcetype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType--><!--Device-ConstraintSourceTypeInfo-type: ConstraintSourceType-End-->
 

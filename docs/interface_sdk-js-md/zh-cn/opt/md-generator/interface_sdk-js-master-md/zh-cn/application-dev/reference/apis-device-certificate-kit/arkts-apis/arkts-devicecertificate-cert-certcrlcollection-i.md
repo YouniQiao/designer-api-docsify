@@ -2,7 +2,9 @@
 
 证书和证书吊销列表集合。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-interface CertCRLCollection--><!--Device-cert-interface CertCRLCollection-End-->
 
@@ -16,7 +18,9 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 
 查找证书和证书吊销列表集合中所有与参数匹配的证书吊销列表对象。使用Promise方式返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,9 +44,9 @@ selectCRLs(param: X509CRLMatchParameters): Promise<Array<X509CRL>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -151,7 +155,9 @@ selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>
 
 查找证书和证书吊销列表集合中所有与参数匹配的证书吊销列表对象。使用Callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -170,9 +176,9 @@ selectCRLs(param: X509CRLMatchParameters, callback: AsyncCallback<Array<X509CRL>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -281,7 +287,9 @@ selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
 
 查找证书和证书吊销列表集合中所有与参数匹配的证书对象。使用Promise方式返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -305,9 +313,9 @@ selectCerts(param: X509CertMatchParameters): Promise<Array<X509Cert>>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 
@@ -380,7 +388,9 @@ selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Ce
 
 查找证书和证书吊销列表集合中所有与参数匹配的证书对象。使用Callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -399,9 +409,9 @@ selectCerts(param: X509CertMatchParameters, callback: AsyncCallback<Array<X509Ce
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## 示例
 

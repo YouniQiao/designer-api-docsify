@@ -1,8 +1,4 @@
-# @ohos.multimodalInput.mouseEvent(Mouse Event)
-
-The **mouseEvent** module provides mouse events reported by a device. It is inherited from
- [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent).
-
+# @ohos.multimodalInput.mouseEvent
 
 ## 汇总
 

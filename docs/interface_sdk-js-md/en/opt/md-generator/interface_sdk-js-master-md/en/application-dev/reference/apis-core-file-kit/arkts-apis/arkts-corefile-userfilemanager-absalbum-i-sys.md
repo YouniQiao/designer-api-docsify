@@ -101,11 +101,7 @@ Obtains image and video assets. This API uses a promise to return the result.
 albumName: string
 ```
 
-Name of the album.
-
-> **NOTE：**
-> 
-> The user album is writable, but the system album is not writable.
+Name of the album. > **NOTE：**> > The user album is writable, but the system album is not writable.
 
 **Type:** string
 
@@ -135,7 +131,7 @@ Subtype of the album.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [albumSubType](@ohos.file.photoAccessHelper:photoAccessHelper.AbsAlbum.albumSubType)
+**Substitutes:** albumSubType
 
 <!--Device-AbsAlbum-readonly albumSubType: AlbumSubType--><!--Device-AbsAlbum-readonly albumSubType: AlbumSubType-End-->
 
@@ -215,11 +211,7 @@ Number of files in the album.
 coverUri: string
 ```
 
-URI of the cover file of the album.
-
-> **NOTE：**
-> 
-> The user album is writable, but the system album is not writable.
+URI of the cover file of the album. > **NOTE：**> > The user album is writable, but the system album is not writable.
 
 **Type:** string
 
@@ -241,7 +233,7 @@ URI of the cover file of the album.
 readonly dateModified: number
 ```
 
-Time when the album was modified.Unit: ms, The value must be an integer greater than or equal to 0.
+Time when the album was modified. Unit: ms, The value must be an integer greater than or equal to 0.
 
 **Type:** number
 

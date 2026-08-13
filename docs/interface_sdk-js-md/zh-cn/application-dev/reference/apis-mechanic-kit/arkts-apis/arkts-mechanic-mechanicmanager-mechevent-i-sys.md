@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface MechEvent--><!--Device-mechanicManager-export interface MechEvent-End-->
 
@@ -24,7 +26,9 @@ event: MechEventType
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-MechEvent-event: MechEventType--><!--Device-MechEvent-event: MechEventType-End-->
 
@@ -38,13 +42,15 @@ event: MechEventType
 mechId: int
 ```
 
-具身设备ID。取值限定为整数。
+具身设备ID。 取值限定为整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-MechEvent-mechId: int--><!--Device-MechEvent-mechId: int-End-->
 

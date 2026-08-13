@@ -2,11 +2,13 @@
 
 LightWeightSet可用于存储一系列值，存储元素中value唯一。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-unnamed-declare class LightWeightSet<T>--><!--Device-unnamed-declare class LightWeightSet<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class LightWeightSet--><!--Device-unnamed-declare class LightWeightSet-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -20,7 +22,9 @@ $_iterator(): IterableIterator<T>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -51,11 +55,13 @@ for (let item of lightWeightSet) {
 [Symbol.iterator](): IterableIterator<T>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个JavaScript对象。不建议在Symbol.iterator中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+返回一个迭代器，迭代器的每一项都是一个JavaScript对象。 不建议在Symbol.iterator中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -73,7 +79,7 @@ for (let item of lightWeightSet) {
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## 示例
 
@@ -119,9 +125,11 @@ add(obj: T): boolean
 
 向容器中添加数据。若添加的元素已存在于容器中，则不会重复添加，返回false。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -145,7 +153,7 @@ add(obj: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The add method cannot be bound. |
 
 ## 示例
 
@@ -164,9 +172,11 @@ addAll(set: LightWeightSet<T>): boolean
 
 将另一个容器的所有元素添加到当前容器。若源容器中的元素已存在于当前容器中，则跳过该元素不重复添加。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -190,7 +200,7 @@ addAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The addAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The addAll method cannot be bound. |
 
 ## 示例
 
@@ -214,9 +224,11 @@ clear(): void
 
 清除容器中的所有元素，并将length置为0。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -228,7 +240,7 @@ clear(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The clear method cannot be bound. |
 
 ## 示例
 
@@ -250,9 +262,11 @@ constructor()
 
 LightWeightSet的构造函数。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -264,7 +278,7 @@ LightWeightSet的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The LightWeightSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The LightWeightSet's constructor cannot be directly invoked. |
 
 ## 示例
 
@@ -279,11 +293,13 @@ let lightWeightSet = new LightWeightSet<number | string>();
 entries(): IterableIterator<[T, T]>
 ```
 
-返回包含此容器中所有元素对的新迭代器对象，每个元素对由相同值组成[value, value]。不建议在entries中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+返回包含此容器中所有元素对的新迭代器对象，每个元素对由相同值组成[value, value]。 不建议在entries中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -301,7 +317,7 @@ entries(): IterableIterator<[T, T]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
 
 ## 示例
 
@@ -334,11 +350,7 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-判断此容器与obj的构成元素是否相同。
-
-> **说明：**
-> 
-> 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
+判断此容器与obj的构成元素是否相同。 > **说明：** > > 此接口从API version 8开始支持，从API version 12开始废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -366,7 +378,7 @@ equal(obj: Object): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The equal method cannot be bound. |
 
 ## 示例
 
@@ -386,11 +398,13 @@ console.info("result:", result);  // result: true
 forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历LightWeightSet实例对象上的元素。不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
+通过回调函数来遍历LightWeightSet实例对象上的元素。 不建议在forEach函数中使用add、remove、removeAt方法，会导致死循环等不可预知的风险，可使用for循环来进行插入和删除。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -409,7 +423,7 @@ forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisA
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
 
 ## 示例
 
@@ -442,11 +456,13 @@ for (let i = 0; i < 10; i++) {
 forEach(callbackFn: LightWeightSetForEachCb<T>): void
 ```
 
-通过回调函数遍历实例对象中实际的key。不会对已删除的key执行回调。
+通过回调函数遍历实例对象中实际的key。 不会对已删除的key执行回调。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -476,21 +492,17 @@ lightWeightSet.forEach(lightWeightSetCb);
 
 ## getIndexOf
 
-ArkTS-Dyn:
-```TypeScript
-getIndexOf(key: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndexOf(key: T): int
 ```
 
 获取指定元素所对应的下标。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -508,13 +520,13 @@ getIndexOf(key: T): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。 表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
+| int | 在LightWeightSet中指定数据的下标。若LightWeightSet中没有要查找的元素，则返回一个负值。 表示目标哈希值应该插入的位置，插入位置是从1开始计数的，负号表示这是一个插入位置而不是索引。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getIndexOf method cannot be bound. |
 
 ## 示例
 
@@ -539,6 +551,8 @@ getValueAt(index: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-LightWeightSet-getValueAt(index: number): T--><!--Device-LightWeightSet-getValueAt(index: number): T-End-->
@@ -561,7 +575,7 @@ getValueAt(index: number): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getValueAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The getValueAt method cannot be bound. |
 
 ## 示例
 
@@ -584,7 +598,9 @@ getValueAt(index: int): T | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -612,9 +628,11 @@ has(key: T): boolean
 
 判断容器中是否包含指定元素。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -638,7 +656,7 @@ has(key: T): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The has method cannot be bound. |
 
 ## 示例
 
@@ -658,9 +676,11 @@ hasAll(set: LightWeightSet<T>): boolean
 
 判断容器中是否包含指定set中的所有元素。当容器中存储的value为number类型且值大于INT32_MAX(2147483647)或小于INT32_MIN(-2147483648)时，判断结果可能与预期不一致，详见规格限制。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -684,7 +704,7 @@ hasAll(set: LightWeightSet<T>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The hasAll method cannot be bound. |
 
 ## 示例
 
@@ -701,21 +721,17 @@ console.info("result:", result);  // result: true
 
 ## increaseCapacityTo
 
-ArkTS-Dyn:
-```TypeScript
-increaseCapacityTo(minimumCapacity: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 increaseCapacityTo(minimumCapacity: int): void
 ```
 
 将当前LightWeightSet扩容至指定容量。如果传入的容量值大于或等于当前LightWeightSet中的元素个数，将容量变更为新容量，小于则不会变更。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -727,14 +743,14 @@ increaseCapacityTo(minimumCapacity: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 需要容纳的元素数量。若传入值小于当前元素个数，则不会变更容量。 |
+| minimumCapacity | int | 是 | 需要容纳的元素数量。若传入值小于当前元素个数，则不会变更容量。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The increaseCapacityTo method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of minimumCapacity is out of range. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The increaseCapacityTo method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of minimumCapacity is out of range. |
 
 ## 示例
 
@@ -752,9 +768,11 @@ isEmpty(): boolean
 
 判断容器是否为空。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -772,7 +790,7 @@ isEmpty(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The isEmpty method cannot be bound. |
 
 ## 示例
 
@@ -794,6 +812,8 @@ remove(key: T): T
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -817,7 +837,7 @@ remove(key: T): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The remove method cannot be bound. |
 
 ## 示例
 
@@ -840,7 +860,9 @@ remove(key: T): T | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -871,21 +893,17 @@ let result = lightWeightSet.remove("sparrow");
 
 ## removeAt
 
-ArkTS-Dyn:
-```TypeScript
-removeAt(index: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeAt(index: int): boolean
 ```
 
 删除指定下标所对应的元素。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -897,7 +915,7 @@ removeAt(index: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定下标，取值范围[0, length-1]，且需要小于等于INT32_MAX即2147483647。超出有效下标范围时返回false。 |
+| index | int | 是 | 指定下标，取值范围[0, length-1]，且需要小于等于INT32_MAX即2147483647。超出有效下标范围时返回false。 |
 
 **返回值：**
 
@@ -909,7 +927,7 @@ removeAt(index: int): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The removeAt method cannot be bound. |
 
 ## 示例
 
@@ -930,9 +948,11 @@ toArray(): Array<T>
 
 获取包含此容器中所有元素的数组。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -950,7 +970,7 @@ toArray(): Array<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toArray method cannot be bound. |
 
 ## 示例
 
@@ -972,9 +992,11 @@ toString(): String
 
 获取包含容器中所有元素的字符串。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1007,9 +1029,11 @@ values(): IterableIterator<T>
 
 返回包含此集合中所有值的新迭代器对象。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1027,7 +1051,7 @@ values(): IterableIterator<T>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
 
 ## 示例
 
@@ -1056,7 +1080,9 @@ LightWeightSet的元素个数。
 
 **起始版本：** 8
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

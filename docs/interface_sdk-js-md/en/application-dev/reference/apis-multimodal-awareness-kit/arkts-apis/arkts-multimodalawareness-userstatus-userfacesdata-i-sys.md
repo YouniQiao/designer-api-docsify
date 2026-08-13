@@ -2,13 +2,15 @@
 
 Defines user face data.
 
-**Inheritance/Implementation:** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**Inheritance/Implementation:** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData-(System-API))
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-userStatus-export interface UserFacesData extends UserStatusData--><!--Device-userStatus-export interface UserFacesData extends UserStatusData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserFacesData--><!--Device-userStatus-export interface UserFacesData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -28,11 +30,13 @@ angularVelocity?: double[]
 
 Angular velocity of user motion status, in rad/s.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,13 +52,15 @@ Angular velocity of user motion status, in rad/s.
 azimuth?: double[]
 ```
 
-Azimuth of user motion status.The value ranges from 0 to 360, in degrees.
+Azimuth of user motion status. The value ranges from 0 to 360, in degrees.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,13 +76,15 @@ Azimuth of user motion status.The value ranges from 0 to 360, in degrees.
 faceNum?: int
 ```
 
-Number of faces detected.The value must be an integer within [0,3].
+Number of faces detected. The value must be an integer within [0,3].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,11 +102,13 @@ gravityAcceleration?: double[]
 
 Gravity acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,11 +126,13 @@ linearAcceleration?: double[][]
 
 Linear acceleration of user motion status, in m/s².
 
-**Type:** ArkTS-Dyn: number[][]  <br>ArkTS-Sta：double[][]
+**Type:** double[][]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,13 +148,15 @@ Linear acceleration of user motion status, in m/s².
 visualAngle?: double[]
 ```
 
-User visual angle.The value ranges from 0 to 90, in degrees.
+User visual angle. The value ranges from 0 to 90, in degrees.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[]
+**Type:** double[]
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

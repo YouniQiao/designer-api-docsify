@@ -6,6 +6,8 @@ Provides the functions of setting color or updating animation.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-dragController-export class DragPreview--><!--Device-dragController-export class DragPreview-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -27,6 +29,8 @@ update preview style with animation
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -52,6 +56,8 @@ change foreground color of preview
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

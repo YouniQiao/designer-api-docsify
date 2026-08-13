@@ -1,10 +1,10 @@
 # TouchController
 
-Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements:
-
-1. All touch points must share the same **displayId**.2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
+Provides the capability of simulating touch operations. The simulated touch operation sequence must meet the following requirements: 1. All touch points must share the same **displayId**. 2. Each touch point must begin with a **touchDown()** call, followed by zero or more **touchMove()** calls, and end with an **touchUp()** call.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-inputEventClient-interface TouchController--><!--Device-inputEventClient-interface TouchController-End-->
 
@@ -25,6 +25,8 @@ touchDown(touch: TouchPoint): Promise<void>
 Presses down a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -50,10 +52,10 @@ Presses down a touch point. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
-| [4300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300002-display-does-not-exist) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
+| [4300002](../errorcode-inputeventclient.md#4300002-display-does-not-exist) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -118,6 +120,8 @@ Moves a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
 **Model restriction:** This API can be used only in the stage model.
@@ -142,13 +146,13 @@ Moves a touch point. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-For details, see [touchDown](#touchdown).
+For details, see [touchDown](#touchDown).
 
 ## touchUp
 
@@ -159,6 +163,8 @@ touchUp(touch: TouchPoint): Promise<void>
 Releases a touch point. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 
@@ -184,10 +190,10 @@ Releases a touch point. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [4300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputeventclient.md#4300001-status-error) |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [4300001](../errorcode-inputeventclient.md#4300001-status-error) |
+| [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-For details, see [touchDown](#touchdown).
+For details, see [touchDown](#touchDown).

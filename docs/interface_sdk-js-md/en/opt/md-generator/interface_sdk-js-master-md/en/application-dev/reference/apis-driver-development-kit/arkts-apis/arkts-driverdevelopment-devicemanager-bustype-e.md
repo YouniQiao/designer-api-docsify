@@ -2,7 +2,9 @@
 
 Enumerates the device bus types.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-export enum BusType--><!--Device-deviceManager-export enum BusType-End-->
 
@@ -16,7 +18,9 @@ USB = 1
 
 USB bus.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BusType-USB = 1--><!--Device-BusType-USB = 1-End-->
 

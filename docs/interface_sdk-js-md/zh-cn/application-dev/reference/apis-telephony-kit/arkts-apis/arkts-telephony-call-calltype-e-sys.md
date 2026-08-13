@@ -2,9 +2,11 @@
 
 通话类型。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum CallType--><!--Device-call-export enum CallType-End-->
 
@@ -20,9 +22,11 @@ TYPE_CS = 0
 
 CS通话。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallType-TYPE_CS = 0--><!--Device-CallType-TYPE_CS = 0-End-->
 
@@ -38,9 +42,11 @@ TYPE_IMS = 1
 
 IMS通话。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallType-TYPE_IMS = 1--><!--Device-CallType-TYPE_IMS = 1-End-->
 
@@ -56,9 +62,11 @@ TYPE_OTT = 2
 
 OTT通话。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallType-TYPE_OTT = 2--><!--Device-CallType-TYPE_OTT = 2-End-->
 
@@ -74,9 +82,11 @@ TYPE_ERR_CALL = 3
 
 其他类型通话。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallType-TYPE_ERR_CALL = 3--><!--Device-CallType-TYPE_ERR_CALL = 3-End-->
 
@@ -92,9 +102,11 @@ TYPE_VOIP = 4
 
 VoIP通话。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallType-TYPE_VOIP = 4--><!--Device-CallType-TYPE_VOIP = 4-End-->
 
@@ -108,13 +120,13 @@ VoIP通话。
 TYPE_XCALL = 5
 ```
 
-XCALL通话。 
-
-**起始版本:** 26.0.0
+XCALL通话。 **起始版本:** 26.0.0
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-CallType-TYPE_XCALL = 5--><!--Device-CallType-TYPE_XCALL = 5-End-->
 

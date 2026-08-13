@@ -2,7 +2,9 @@
 
 Provides the NNRT device info
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-interface NNRTDevice--><!--Device-mindSporeLite-interface NNRTDevice-End-->
 
@@ -24,7 +26,9 @@ NNRT device id.
 
 **Type:** bigint
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ NNRT device extension array.
 
 **Type:** [Extension](arkts-mindsporelite-mindsporelite-extension-i.md)[]
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ NNRT device performance mode.
 
 **Type:** [PerformanceMode](arkts-mindsporelite-mindsporelite-performancemode-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ NNRT device priority.
 
 **Type:** Priority
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

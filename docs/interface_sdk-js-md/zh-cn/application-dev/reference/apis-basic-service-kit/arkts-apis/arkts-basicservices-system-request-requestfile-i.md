@@ -28,7 +28,7 @@ multipart 提交时，请求头中的文件名。
 
 **废弃版本：** 9
 
-**替代接口：** [filename](ohos.request.agent.FileSpec.filename)
+**替代接口：** filename
 
 <!--Device-RequestFile-filename?: string--><!--Device-RequestFile-filename?: string-End-->
 
@@ -50,7 +50,7 @@ multipart 提交时，表单项目的名称，缺省为file。
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.request.agent.FormItem.name)
+**替代接口：** name
 
 <!--Device-RequestFile-name?: string--><!--Device-RequestFile-name?: string-End-->
 
@@ -72,7 +72,7 @@ type?: string
 
 **废弃版本：** 9
 
-**替代接口：** [contentType](ohos.request.agent.FileSpec.contentType)
+**替代接口：** contentType
 
 <!--Device-RequestFile-type?: string--><!--Device-RequestFile-type?: string-End-->
 
@@ -94,7 +94,7 @@ uri: string
 
 **废弃版本：** 9
 
-**替代接口：** [path](ohos.request.agent.FileSpec.path)
+**替代接口：** path
 
 <!--Device-RequestFile-uri: string--><!--Device-RequestFile-uri: string-End-->
 

@@ -1,10 +1,12 @@
 # WebSchemeHandlerResponse
 
-Defines the Web resource response used for scheme handler.
+请求的响应，可以为被拦截的请求创建一个Response并填充自定义的内容返回给Web组件。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-webview-class WebSchemeHandlerResponse--><!--Device-webview-class WebSchemeHandlerResponse-End-->
 
@@ -18,9 +20,13 @@ constructor()
 
 Constructor.
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-constructor()--><!--Device-WebSchemeHandlerResponse-constructor()-End-->
 
@@ -32,11 +38,15 @@ Constructor.
 getEncoding(): string
 ```
 
-Get the response encoding.
+获取Response的字符集。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getEncoding(): string--><!--Device-WebSchemeHandlerResponse-getEncoding(): string-End-->
 
@@ -46,7 +56,7 @@ Get the response encoding.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return encoding of response. |
+| string | 字符集。 |
 
 ## getHeaderByName
 
@@ -54,11 +64,15 @@ Get the response encoding.
 getHeaderByName(name: string): string
 ```
 
-Get the header value by name from the response.
+按名称获取Response头部字段值。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string--><!--Device-WebSchemeHandlerResponse-getHeaderByName(name: string): string-End-->
 
@@ -68,13 +82,13 @@ Get the header value by name from the response.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Header name. |
+| name | string | 是 | 头部（header）的名称。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return header value by name. |
+| string | 头部（header）的值。 |
 
 ## getMimeType
 
@@ -82,11 +96,15 @@ Get the header value by name from the response.
 getMimeType(): string
 ```
 
-Get mime type.
+获取Response的媒体类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getMimeType(): string--><!--Device-WebSchemeHandlerResponse-getMimeType(): string-End-->
 
@@ -96,7 +114,7 @@ Get mime type.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return mime type of response. |
+| string | 媒体类型。 |
 
 ## getNetErrorCode
 
@@ -104,11 +122,15 @@ Get mime type.
 getNetErrorCode(): WebNetErrorList
 ```
 
-Get net error code.
+获取Response的网络错误码。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList--><!--Device-WebSchemeHandlerResponse-getNetErrorCode(): WebNetErrorList-End-->
 
@@ -118,21 +140,25 @@ Get net error code.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
+| [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 获取Response的网络错误码。 |
 
 ## getStatus
 
 ```TypeScript
-getStatus(): int
+getStatus(): number
 ```
 
-Get http status code.
+获取Response的Http状态码。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebSchemeHandlerResponse-getStatus(): int--><!--Device-WebSchemeHandlerResponse-getStatus(): int-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSchemeHandlerResponse-getStatus(): number--><!--Device-WebSchemeHandlerResponse-getStatus(): number-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -140,7 +166,7 @@ Get http status code.
 
 | 类型 | 说明 |
 | --- | --- |
-| int | Return http status code. |
+| number | 获取Response的Http状态码。 |
 
 ## getStatusText
 
@@ -148,11 +174,15 @@ Get http status code.
 getStatusText(): string
 ```
 
-Get status text.
+获取Response的状态文本。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getStatusText(): string--><!--Device-WebSchemeHandlerResponse-getStatusText(): string-End-->
 
@@ -162,7 +192,7 @@ Get status text.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return http status text. |
+| string | 状态文本。 |
 
 ## getUrl
 
@@ -170,11 +200,15 @@ Get status text.
 getUrl(): string
 ```
 
-Get the resolved URL after redirects or changed as a result of HSTS.
+获取重定向或由于HSTS而更改后的URL。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-getUrl(): string--><!--Device-WebSchemeHandlerResponse-getUrl(): string-End-->
 
@@ -184,7 +218,7 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 
 | 类型 | 说明 |
 | --- | --- |
-| string | Return response url for redirects. |
+| string | 获取经过重定向或由于HSTS而更改后的URL。 |
 
 ## setEncoding
 
@@ -192,11 +226,15 @@ Get the resolved URL after redirects or changed as a result of HSTS.
 setEncoding(encoding: string): void
 ```
 
-Set the response encoding.
+给当前的Response设置字符集。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void--><!--Device-WebSchemeHandlerResponse-setEncoding(encoding: string): void-End-->
 
@@ -206,13 +244,13 @@ Set the response encoding.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| encoding | string | 是 | Encoding. |
+| encoding | string | 是 | 字符集。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setHeaderByName
 
@@ -220,11 +258,15 @@ Set the response encoding.
 setHeaderByName(name: string, value: string, overwrite: boolean): void
 ```
 
-Set response hander value by name.
+给当前的Response设置头信息。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void--><!--Device-WebSchemeHandlerResponse-setHeaderByName(name: string, value: string, overwrite: boolean): void-End-->
 
@@ -234,15 +276,15 @@ Set response hander value by name.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Header name. |
-| value | string | 是 | Header value. |
-| overwrite | boolean | 是 | Whether to overwrite. |
+| name | string | 是 | 头部（header）的名称。 |
+| value | string | 是 | 头部（header）的值。 |
+| overwrite | boolean | 是 | 如果为true，将覆盖现有的头部，否则不覆盖。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## setMimeType
 
@@ -250,11 +292,15 @@ Set response hander value by name.
 setMimeType(type: string): void
 ```
 
-Set mime type.
+给当前的Response设置媒体类型。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void--><!--Device-WebSchemeHandlerResponse-setMimeType(type: string): void-End-->
 
@@ -264,13 +310,13 @@ Set mime type.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | string | 是 | Mime type. |
+| type | string | 是 | 媒体类型。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setNetErrorCode
 
@@ -278,11 +324,15 @@ Set mime type.
 setNetErrorCode(code: WebNetErrorList): void
 ```
 
-Set net error code.
+给当前的Response设置网络错误码。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void--><!--Device-WebSchemeHandlerResponse-setNetErrorCode(code: WebNetErrorList): void-End-->
 
@@ -292,27 +342,31 @@ Set net error code.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set net error code. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
 
 ## setStatus
 
 ```TypeScript
-setStatus(code: int): void
+setStatus(code: number): void
 ```
 
-Set http status code.
+给当前的Response设置HTTP状态码。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-WebSchemeHandlerResponse-setStatus(code: int): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: int): void-End-->
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-WebSchemeHandlerResponse-setStatus(code: number): void--><!--Device-WebSchemeHandlerResponse-setStatus(code: number): void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -320,13 +374,13 @@ Set http status code.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | int | 是 | Http status code. |
+| code | number | 是 | Http状态码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setStatusText
 
@@ -334,11 +388,15 @@ Set http status code.
 setStatusText(text: string): void
 ```
 
-Set status text.
+给当前的Response设置状态文本。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void--><!--Device-WebSchemeHandlerResponse-setStatusText(text: string): void-End-->
 
@@ -348,13 +406,13 @@ Set status text.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| text | string | 是 | Status text. |
+| text | string | 是 | 状态文本。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 ## setUrl
 
@@ -362,11 +420,15 @@ Set status text.
 setUrl(url: string): void
 ```
 
-Set the resolved URL after redirects or changed as a result of HSTS.
+给当前的Response设置重定向或因HSTS而更改后的URL，设置了url后会触发请求的跳转。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebSchemeHandlerResponse-setUrl(url: string): void--><!--Device-WebSchemeHandlerResponse-setUrl(url: string): void-End-->
 
@@ -376,11 +438,11 @@ Set the resolved URL after redirects or changed as a result of HSTS.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| url | string | 是 | Set response url for redirects. |
+| url | string | 是 | 即将要跳转的URL。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 

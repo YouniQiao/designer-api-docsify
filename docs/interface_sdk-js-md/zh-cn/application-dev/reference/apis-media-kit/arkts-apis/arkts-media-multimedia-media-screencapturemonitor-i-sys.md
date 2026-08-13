@@ -1,10 +1,12 @@
 # ScreenCaptureMonitor（系统接口）
 
-A class that provides APIs to query and monitor the system screen recorder status. Before calling any API,you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
+A class that provides APIs to query and monitor the system screen recorder status. Before calling any API, you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface ScreenCaptureMonitor--><!--Device-unnamed-interface ScreenCaptureMonitor-End-->
 
@@ -12,7 +14,39 @@ A class that provides APIs to query and monitor the system screen recorder statu
 
 **系统接口：** 此接口为系统接口。
 
-## off('systemScreenRecorder')
+## offSystemScreenRecorder
+
+```TypeScript
+offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void
+```
+
+Unsubscribes from state change events of the system screen recorder. This event is triggered when the state of the system screen recorder changes.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 否 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+
+## off_systemScreenRecorder
 
 ```TypeScript
 off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
@@ -23,6 +57,8 @@ Unsubscribes from state change events of the system screen recorder.
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void-End-->
 
@@ -35,13 +71,13 @@ Unsubscribes from state change events of the system screen recorder.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | 是 | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 否 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 否 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -49,19 +85,21 @@ Unsubscribes from state change events of the system screen recorder.
 screenCaptureMonitor.off('systemScreenRecorder');
 ```
 
-## offSystemScreenRecorder
+## onSystemScreenRecorder
 
 ```TypeScript
-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void
+onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void
 ```
 
-Unsubscribes from state change events of the system screen recorder.This event is triggered when the state of the system screen recorder changes.
+Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working. This event is triggered when the state of the system screen recorder changes.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void-End-->
+**废弃版本：** -1
+
+<!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
 
@@ -71,23 +109,27 @@ Unsubscribes from state change events of the system screen recorder.This event i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 否 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. If this parameter is not specified, the last subscription event is canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 是 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
-## on('systemScreenRecorder')
+## on_systemScreenRecorder
 
 ```TypeScript
 on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
 ```
 
-Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported,you can determine whether the system screen recorder is working.
+Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working.
 
-**ArkTS模式：** 仅支持ArkTS-Dyn
+**起始版本：** 18
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void-End-->
 
@@ -100,13 +142,13 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'systemScreenRecorder' | 是 | Event type, which is **'systemScreenRecorder'** in this case. This event is triggered when the state of the system screen recorder changes. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 是 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 是 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
 
 ## 示例
 
@@ -118,36 +160,6 @@ screenCaptureMonitor.on('systemScreenRecorder', (event: media.ScreenCaptureEvent
 })
 ```
 
-## onSystemScreenRecorder
-
-```TypeScript
-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void
-```
-
-Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported,you can determine whether the system screen recorder is working.This event is triggered when the state of the system screen recorder changes.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 是 | Callback invoked when the event is triggered, where ScreenCaptureEvent indicates the new state. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System App. |
-
 ## isSystemScreenRecorderWorking
 
 ```TypeScript
@@ -158,9 +170,11 @@ Whether the system screen recorder is working.
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean--><!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean-End-->
 

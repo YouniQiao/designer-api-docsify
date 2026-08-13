@@ -2,9 +2,11 @@
 
 Represents the table information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface Table--><!--Device-cloudExtension-export interface Table-End-->
 
@@ -28,9 +30,11 @@ Alias of the table in the database.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Table-alias: string--><!--Device-Table-alias: string-End-->
 
@@ -48,9 +52,11 @@ Field information in the table.
 
 **Type:** Array&lt;Field&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Table-fields: Array<Field>--><!--Device-Table-fields: Array<Field>-End-->
 
@@ -68,9 +74,11 @@ Table name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Table-name: string--><!--Device-Table-name: string-End-->
 

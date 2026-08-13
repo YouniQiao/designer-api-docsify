@@ -4,6 +4,8 @@ Enumerates automatic capitalization modes. This only provides API capabilities; 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum AutoCapitalizationMode--><!--Device-unnamed-declare enum AutoCapitalizationMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NONE = 0
 Default state; automatic capitalization is disabled.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Automatic capitalization is applied per word: The first character of each word i
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -54,6 +60,8 @@ Automatic capitalization is applied per sentence: The first character of each se
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -71,6 +79,8 @@ ALL_CHARACTERS = 3
 Automatic capitalization applied to all characters.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

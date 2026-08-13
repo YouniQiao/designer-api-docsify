@@ -10,6 +10,8 @@ Obtains the attributes of a **Text** node. If the node is not created using ArkT
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -83,6 +85,8 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -102,7 +106,7 @@ Obtains the attributes of a **Column** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ColumnAttribute](../arkts-components/arkts-arkui-column-attribute.md) |
+| ColumnAttribute |
 
 ## Examples
 
@@ -155,6 +159,8 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -174,7 +180,7 @@ Obtains the attributes of a **Row** node. If the node is not created using ArkTS
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RowAttribute](../arkts-components/arkts-arkui-row-attribute.md) |
+| RowAttribute |
 
 ## Examples
 
@@ -227,6 +233,8 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -246,7 +254,7 @@ Obtains the attributes of a **Stack** node. If the node is not created using Ark
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [StackAttribute](../arkts-components/arkts-arkui-stack-attribute.md) |
+| StackAttribute |
 
 ## Examples
 
@@ -295,9 +303,11 @@ struct FrameNodeTypeTest {
 export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute | undefined
 ```
 
-Obtains the Flex node attributes. If the node is not created using ArkTS, cross-language access must be enabled;otherwise, **undefined** is returned. This API does not support declaratively created nodes.
+Obtains the Flex node attributes. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -318,7 +328,7 @@ Obtains the Flex node attributes. If the node is not created using ArkTS, cross-
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FlexAttribute](../arkts-components/arkts-arkui-flex-attribute.md) |
+| FlexAttribute |
 
 ## Examples
 
@@ -371,6 +381,8 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -390,11 +402,11 @@ Obtains the attributes of a **Swiper** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [SwiperAttribute](../arkts-components/arkts-arkui-swiper-attribute.md) |
+| [SwiperAttribute](../../apis-na/arkts-apis/arkts-na-swiper-swiperattribute-i.md) |
 
 ## Examples
 
-See the example for [createNode('Swiper')12+](#createnodeswiper12).
+See the example for createNode('Swiper')12+.
 
 
 ## getAttribute
@@ -406,6 +418,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 Obtains the attributes of a **Progress** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -426,7 +440,7 @@ Obtains the attributes of a **Progress** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ProgressAttribute](../arkts-components/arkts-arkui-progress-attribute.md) |
+| ProgressAttribute |
 
 ## Examples
 
@@ -478,6 +492,8 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -497,11 +513,11 @@ Obtains the attributes of a **Scroll** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ScrollAttribute](../arkts-components/arkts-arkui-scroll-attribute.md) |
+| ScrollAttribute |
 
 ## Examples
 
-See the example for [createNode('Scroll')](#createnodescroll12).
+See the example for createNode('Scroll').
 
 
 ## getAttribute
@@ -513,6 +529,8 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 Obtains the attributes of a **RelativeContainer** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -533,7 +551,7 @@ Obtains the attributes of a **RelativeContainer** node. If the node is not creat
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RelativeContainerAttribute](../arkts-components/arkts-arkui-relativecontainer-attribute.md) |
+| RelativeContainerAttribute |
 
 ## Examples
 
@@ -582,9 +600,11 @@ struct FrameNodeTypeTest {
 export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): LoadingProgressAttribute | undefined
 ```
 
-Obtains the attributes of a [LoadingProgress](../@internal/component/ets/loading_progress) node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
+Obtains the attributes of a LoadingProgress node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -605,7 +625,7 @@ Obtains the attributes of a [LoadingProgress](../@internal/component/ets/loading
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [LoadingProgressAttribute](../arkts-components/arkts-arkui-loadingprogress-attribute.md) |
+| LoadingProgressAttribute |
 
 ## Examples
 
@@ -655,6 +675,8 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -674,7 +696,7 @@ Obtains the attributes of an **Image** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ImageAttribute](../arkts-components/arkts-arkui-image-attribute.md) |
+| ImageAttribute |
 
 ## Examples
 
@@ -733,6 +755,8 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -752,11 +776,11 @@ Obtains the attributes of a **List** node. If the node is not created using ArkT
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ListAttribute](../arkts-components/arkts-arkui-list-attribute.md) |
+| ListAttribute |
 
 ## Examples
 
-See the example for [createNode('List')](#createnodelist12).
+See the example for createNode('List').
 
 
 ## getAttribute
@@ -768,6 +792,8 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 Obtains the attributes of a **ListItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -788,11 +814,11 @@ Obtains the attributes of a **ListItem** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ListItemAttribute](../arkts-components/arkts-arkui-listitem-attribute.md) |
+| ListItemAttribute |
 
 ## Examples
 
-See the example for [createNode('List')](#createnodelist12).
+See the example for createNode('List').
 
 
 ## getAttribute
@@ -804,6 +830,8 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 Obtains the attributes of a **TextInput** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -824,7 +852,7 @@ Obtains the attributes of a **TextInput** node. If the node is not created using
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [TextInputAttribute](../arkts-components/arkts-arkui-textinput-attribute.md) |
+| TextInputAttribute |
 
 ## Examples
 
@@ -873,6 +901,8 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 Obtains the attributes of a **Button** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -949,6 +979,8 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -968,7 +1000,7 @@ Obtains the attributes of a **ListItemGroup** node. If the node is not created u
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ListItemGroupAttribute](../arkts-components/arkts-arkui-listitemgroup-attribute.md) |
+| ListItemGroupAttribute |
 
 ## Examples
 
@@ -986,6 +1018,8 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 Obtains the attributes of a **WaterFlow** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1006,11 +1040,11 @@ Obtains the attributes of a **WaterFlow** node. If the node is not created using
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [WaterFlowAttribute](../arkts-components/arkts-arkui-waterflow-attribute.md) |
+| WaterFlowAttribute |
 
 ## Examples
 
-See the example for [createNode('WaterFlow')](#createnodewaterflow12).
+See the example for createNode('WaterFlow').
 
 
 ## getAttribute
@@ -1022,6 +1056,8 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 Obtains the attributes of a **FlowItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1042,11 +1078,11 @@ Obtains the attributes of a **FlowItem** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [FlowItemAttribute](../arkts-components/arkts-arkui-flowitem-attribute.md) |
+| FlowItemAttribute |
 
 ## Examples
 
-See the example for [createNode('WaterFlow')](#createnodewaterflow12).
+See the example for createNode('WaterFlow').
 
 
 ## getAttribute
@@ -1058,6 +1094,8 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 Obtain the attributes of an **XComponent** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1097,6 +1135,8 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1116,7 +1156,7 @@ Obtains the attributes of a **Checkbox** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [CheckboxAttribute](../arkts-components/arkts-arkui-checkbox-attribute.md) |
+| [CheckboxAttribute](../../apis-na/arkts-apis/arkts-na-checkbox-checkboxattribute-i.md) |
 
 ## Examples
 
@@ -1174,6 +1214,8 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1193,7 +1235,7 @@ Obtains the attributes of a **Radio** node. If the node is not created using Ark
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [RadioAttribute](../arkts-components/arkts-arkui-radio-attribute.md) |
+| [RadioAttribute](../../apis-na/arkts-apis/arkts-na-radio-radioattribute-i.md) |
 
 ## Examples
 
@@ -1250,6 +1292,8 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1269,7 +1313,7 @@ Obtains the attributes of a **Slider** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [SliderAttribute](../arkts-components/arkts-arkui-slider-attribute.md) |
+| SliderAttribute |
 
 ## Examples
 
@@ -1321,6 +1365,8 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1340,7 +1386,7 @@ Obtains the attributes of a **Toggle** node. If the node is not created using Ar
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [ToggleAttribute](../arkts-components/arkts-arkui-toggle-attribute.md) |
+| [ToggleAttribute](../../apis-na/arkts-apis/arkts-na-toggle-toggleattribute-i.md) |
 
 ## Examples
 
@@ -1392,6 +1438,8 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1411,7 +1459,7 @@ Obtains the attributes of a **TextArea** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [TextAreaAttribute](../arkts-components/arkts-arkui-textarea-attribute.md) |
+| TextAreaAttribute |
 
 ## Examples
 
@@ -1461,6 +1509,8 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -1480,11 +1530,11 @@ Obtains the attributes of a **Grid** node. If the node is not created using ArkT
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GridAttribute](../arkts-components/arkts-arkui-grid-attribute.md) |
+| GridAttribute |
 
 ## Examples
 
-See the example for [createNode('Grid')](#createnodegrid14).
+See the example for createNode('Grid').
 
 
 ## getAttribute
@@ -1496,6 +1546,8 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 Obtains the attributes of a **GridItem** node. If the node is not created using ArkTS, cross-language access must be enabled; otherwise, **undefined** is returned. This API does not support declaratively created nodes.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1516,8 +1568,8 @@ Obtains the attributes of a **GridItem** node. If the node is not created using 
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [GridItemAttribute](../arkts-components/arkts-arkui-griditem-attribute.md) |
+| GridItemAttribute |
 
 ## Examples
 
-See the example for [createNode('Grid')](#createnodegrid14).
+See the example for createNode('Grid').

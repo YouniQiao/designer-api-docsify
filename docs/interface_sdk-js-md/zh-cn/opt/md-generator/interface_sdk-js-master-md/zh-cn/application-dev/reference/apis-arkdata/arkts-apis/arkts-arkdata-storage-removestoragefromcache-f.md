@@ -12,7 +12,7 @@ function removeStorageFromCache(path: string, callback: AsyncCallback<void>): vo
 
 **废弃版本：** 9
 
-**替代接口：** [removePreferencesFromCache](ohos.preferences.preferences.removePreferencesFromCache)
+**替代接口：** removePreferencesFromCache
 
 <!--Device-storage-function removeStorageFromCache(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function removeStorageFromCache(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -36,7 +36,7 @@ function removeStorageFromCache(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removePreferencesFromCache](ohos.preferences.preferences.removePreferencesFromCache)
+**替代接口：** removePreferencesFromCache
 
 <!--Device-storage-function removeStorageFromCache(path: string): Promise<void>--><!--Device-storage-function removeStorageFromCache(path: string): Promise<void>-End-->
 

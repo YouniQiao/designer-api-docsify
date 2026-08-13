@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface WorkerEventTarget--><!--Device-unnamed-export interface WorkerEventTarget-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,6 +23,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -39,8 +43,8 @@ addEventListener(type: string, listener: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-worker不支持某api) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -69,6 +73,8 @@ dispatchEvent(event: Event): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean--><!--Device-WorkerEventTarget-dispatchEvent(event: Event): boolean-End-->
@@ -91,7 +97,7 @@ dispatchEvent(event: Event): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -122,6 +128,8 @@ removeAllListener(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WorkerEventTarget-removeAllListener(): void--><!--Device-WorkerEventTarget-removeAllListener(): void-End-->
@@ -132,7 +140,7 @@ removeAllListener(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 
@@ -163,6 +171,8 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-WorkerEventTarget-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
@@ -180,7 +190,7 @@ removeEventListener(type: string, callback?: WorkerEventListener): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker处于非运行状态) | The Worker instance is not running. |
 
 ## 示例
 

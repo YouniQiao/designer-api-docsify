@@ -6,9 +6,11 @@
 function setGlobalRetryOptions(options?: RetryOptions): void
 ```
 
-Sets retry options for all tasks.Used when task-specific retry configuration is not configured.
+Sets retry options for all tasks. Used when task-specific retry configuration is not configured.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,0 +1,42 @@
+# on_SensorType.SENSOR_TYPE_ID_PEDOMETER
+
+## on_SensorType.SENSOR_TYPE_ID_PEDOMETER
+
+```TypeScript
+function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,
+    options?: Options): void
+```
+
+监听计步传感器的数据变化。适用于需要获取用户步数数据的场景。如果多次调用该接口，仅最后一次调用生效。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
+
+**需要权限：** ohos.permission.ACTIVITY_MOTION
+
+<!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,    options?: Options): void-End-->
+
+**系统能力：** SystemCapability.Sensors.Sensor
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | SensorType.SENSOR_TYPE_ID_PEDOMETER | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 |
+| options | [Options](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-zlib-options-i.md) | 否 |
+
+## 示例
+
+```TypeScript
+import { sensor } from '@kit.SensorServiceKit';
+
+sensor.on(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerResponse) => {
+  console.info('Succeeded in invoking on. Steps: ' + data.steps);
+},
+  { interval: 100000000 }
+);
+```

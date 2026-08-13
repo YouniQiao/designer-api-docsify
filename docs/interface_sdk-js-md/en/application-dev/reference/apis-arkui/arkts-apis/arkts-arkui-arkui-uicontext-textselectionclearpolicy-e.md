@@ -4,7 +4,9 @@ Enum of TextSelectionClearPolicy
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export const enum TextSelectionClearPolicy--><!--Device-unnamed-export const enum TextSelectionClearPolicy-End-->
 
@@ -20,9 +22,13 @@ Keep the selected text when touch outside of text component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextSelectionClearPolicy-KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 0--><!--Device-TextSelectionClearPolicy-KEEP_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 0-End-->
 
@@ -38,9 +44,13 @@ Clear the selected text when touch outside of text component.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextSelectionClearPolicy-CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 1--><!--Device-TextSelectionClearPolicy-CLEAR_SELECTED_TEXT_ON_EXTERNAL_TOUCH = 1-End-->
 

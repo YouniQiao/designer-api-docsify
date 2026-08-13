@@ -6,7 +6,9 @@ export type Rotation3 = Vec3
 
 3D旋转信息（欧拉角）, 单位为弧度.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export type Rotation3 = Vec3--><!--Device-unnamed-export type Rotation3 = Vec3-End-->
 

@@ -10,7 +10,7 @@ Worker线程自身的运行环境，与宿主线程环境隔离。
 
 **替代接口：** [ThreadWorkerGlobalScope](arkts-arkts-worker-threadworkerglobalscope-i.md#ThreadWorkerGlobalScope)
 
-<!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope extends WorkerGlobalScope-End-->
+<!--Device-unnamed-export interface DedicatedWorkerGlobalScope--><!--Device-unnamed-export interface DedicatedWorkerGlobalScope-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -26,7 +26,7 @@ close(): void
 
 **废弃版本：** 9
 
-**替代接口：** [close](ohos.worker.ThreadWorkerGlobalScope.close)
+**替代接口：** close
 
 <!--Device-DedicatedWorkerGlobalScope-close(): void--><!--Device-DedicatedWorkerGlobalScope-close(): void-End-->
 
@@ -52,56 +52,6 @@ parentPort.onmessage = (): void => {
 }
 ```
 
-## onmessage
-
-```TypeScript
-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
-```
-
-回调函数，表示Worker线程收到来自其宿主线程通过postMessage接口发送的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身DedicatedWorkerGlobalScope，ev类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [onmessage](ohos.worker.ThreadWorkerGlobalScope.onmessage)
-
-<!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | 是 |
-| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | 是 |
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
-```
-
-回调函数，表示当Worker对象接收到一条无法被反序列化的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身DedicatedWorkerGlobalScope，ev类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [onmessageerror](ohos.worker.ThreadWorkerGlobalScope.onmessageerror)
-
-<!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| this | [DedicatedWorkerGlobalScope](arkts-arkts-worker-dedicatedworkerglobalscope-i.md) | 是 |
-| ev | [MessageEvent](arkts-arkts-worker-messageevent-i.md) | 是 |
-
 ## postMessage
 
 ```TypeScript
@@ -114,7 +64,7 @@ Worker线程向宿主线程发送消息。
 
 **废弃版本：** 9
 
-**替代接口：** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
+**替代接口：** postMessage
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: Transferable[]): void-End-->
 
@@ -139,7 +89,7 @@ Worker线程向宿主线程发送消息。
 
 **废弃版本：** 9
 
-**替代接口：** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
+**替代接口：** postMessage
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, options?: PostMessageOptions): void-End-->
 
@@ -187,7 +137,7 @@ Worker线程向宿主线程发送消息。
 
 **废弃版本：** 9
 
-**替代接口：** [postMessage](ohos.worker.ThreadWorkerGlobalScope.postMessage)
+**替代接口：** postMessage
 
 <!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void--><!--Device-DedicatedWorkerGlobalScope-postMessage(messageObject: Object, transfer: ArrayBuffer[]): void-End-->
 
@@ -226,3 +176,43 @@ workerPort.onmessage = (): void => {
     workerPort.postMessage(buffer, [buffer]);
 }
 ```
+
+## onmessage
+
+```TypeScript
+onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
+```
+
+回调函数，表示Worker线程收到来自其宿主线程通过postMessage接口发送的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身DedicatedWorkerGlobalScope， ev类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
+
+**类型：** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) =&gt; void
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** onmessage
+
+<!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessage?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void
+```
+
+回调函数，表示当Worker对象接收到一条无法被反序列化的消息时被调用的事件处理程序，处理程序在Worker线程中执行。其中this指调用者对象本身DedicatedWorkerGlobalScope， ev类型为MessageEvent，表示收到的Worker消息数据。默认值为undefined。
+
+**类型：** (this: DedicatedWorkerGlobalScope, ev: MessageEvent) =&gt; void
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** onmessageerror
+
+<!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void--><!--Device-DedicatedWorkerGlobalScope-onmessageerror?: (this: DedicatedWorkerGlobalScope, ev: MessageEvent) => void-End-->
+
+**系统能力：** SystemCapability.Utils.Lang

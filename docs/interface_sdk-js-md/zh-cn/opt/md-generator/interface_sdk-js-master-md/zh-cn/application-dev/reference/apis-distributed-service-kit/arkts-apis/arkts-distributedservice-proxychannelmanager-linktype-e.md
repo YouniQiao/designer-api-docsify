@@ -2,7 +2,9 @@
 
 链路类型。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-proxyChannelManager-enum LinkType--><!--Device-proxyChannelManager-enum LinkType-End-->
 
@@ -16,7 +18,9 @@ LINK_BR = 0
 
 蓝牙。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

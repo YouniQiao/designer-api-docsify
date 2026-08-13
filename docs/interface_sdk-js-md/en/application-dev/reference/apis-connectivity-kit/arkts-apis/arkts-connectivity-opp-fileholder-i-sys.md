@@ -2,9 +2,11 @@
 
 Describes the file info for transfer
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-opp-interface FileHolder--><!--Device-opp-interface FileHolder-End-->
 
@@ -26,11 +28,13 @@ fileFd: int
 
 The file fd
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +54,11 @@ The file path
 
 **Type:** string
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,11 +76,13 @@ fileSize: long
 
 The file size
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 16
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 16; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

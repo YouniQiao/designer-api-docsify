@@ -2,9 +2,11 @@
 
 本模块提供压缩解压缩文件的能力。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace zlib--><!--Device-unnamed-declare namespace zlib-End-->
 
@@ -16,21 +18,21 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile) | 压缩文件，压缩的结果。使用callback异步回调。 |
-| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressfile-1) | 压缩文件，压缩的结果。使用Promise异步回调。 |
-| [compressFiles](arkts-basicservices-zlib-compressfiles-f.md#compressfiles) | 压缩指定的多个文件。使用Promise异步回调。 |
-| [createChecksum](arkts-basicservices-zlib-createchecksum-f.md#createchecksum) | 创建校验对象。使用Promise异步回调。 |
-| [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md#createchecksumsync) | 创建校验对象。成功时返回Checksum对象实例。 |
-| [createGZip](arkts-basicservices-zlib-creategzip-f.md#creategzip) | 创建GZip对象。使用Promise异步回调。 |
-| [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md#creategzipsync) | 创建GZip对象。成功时返回GZip对象实例。 |
-| [createZip](arkts-basicservices-zlib-createzip-f.md#createzip) | 创建压缩解压缩对象实例。使用Promise异步回调。 |
-| [createZipSync](arkts-basicservices-zlib-createzipsync-f.md#createzipsync) | 创建压缩解压缩对象实例，成功时返回压缩解压缩对象实例。 |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile) | 解压文件，解压的结果。使用callback异步回调。 |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile-1) | 解压文件，解压的结果。使用callback异步回调。 |
-| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressfile-2) | 解压文件，解压的结果。使用Promise异步回调。 |
-| [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md#getoriginalsize) | 获取压缩文件的原始大小。使用Promise异步回调。 |
-| [unzipFile](arkts-basicservices-zlib-unzipfile-f.md#unzipfile) | 解压文件，解压完成后返回执行结果。使用Promise异步回调。 |
-| [zipFile](arkts-basicservices-zlib-zipfile-f.md#zipfile) | 压缩接口，压缩完成后返回执行结果。使用Promise异步回调。 |
+| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile) | 压缩文件，压缩的结果。使用callback异步回调。 |
+| [compressFile](arkts-basicservices-zlib-compressfile-f.md#compressFile) | 压缩文件，压缩的结果。使用Promise异步回调。 |
+| [compressFiles](arkts-basicservices-zlib-compressfiles-f.md#compressFiles) | 压缩指定的多个文件。使用Promise异步回调。 |
+| [createChecksum](arkts-basicservices-zlib-createchecksum-f.md#createChecksum) | 创建校验对象。使用Promise异步回调。 |
+| [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md#createChecksumSync) | 创建校验对象。成功时返回Checksum对象实例。 |
+| [createGZip](arkts-basicservices-zlib-creategzip-f.md#createGZip) | 创建GZip对象。使用Promise异步回调。 |
+| [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md#createGZipSync) | 创建GZip对象。成功时返回GZip对象实例。 |
+| [createZip](arkts-basicservices-zlib-createzip-f.md#createZip) | 创建压缩解压缩对象实例。使用Promise异步回调。 |
+| [createZipSync](arkts-basicservices-zlib-createzipsync-f.md#createZipSync) | 创建压缩解压缩对象实例，成功时返回压缩解压缩对象实例。 |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) | 解压文件，解压的结果。使用callback异步回调。 |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) | 解压文件，解压的结果。使用callback异步回调。 |
+| [decompressFile](arkts-basicservices-zlib-decompressfile-f.md#decompressFile) | 解压文件，解压的结果。使用Promise异步回调。 |
+| [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md#getOriginalSize) | 获取压缩文件的原始大小。使用Promise异步回调。 |
+| [unzipFile](arkts-basicservices-zlib-unzipfile-f.md#unzipFile) | 解压文件，解压完成后返回执行结果。使用Promise异步回调。 |
+| [zipFile](arkts-basicservices-zlib-zipfile-f.md#zipFile) | 压缩接口，压缩完成后返回执行结果。使用Promise异步回调。 |
 
 ### 接口
 

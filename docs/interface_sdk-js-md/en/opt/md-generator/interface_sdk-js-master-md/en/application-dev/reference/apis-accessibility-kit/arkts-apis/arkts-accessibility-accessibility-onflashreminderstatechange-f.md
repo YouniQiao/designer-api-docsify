@@ -12,18 +12,11 @@ import { accessibility } from '@kit.AccessibilityKit';
 function onFlashReminderStateChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes in flash alerts mode. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - The callback parameter for registering a listener must use a named function instead of an anonymous function.
-> Otherwise, a new underlying object is created each time the function is called, causing memory leakage.
-> 
-> - After calling this method, you must use
-> [accessibility.offFlashReminderStateChange](accessibility.offFlashReminderStateChange(callback?: Callback&lt;boolean&gt;))
-> to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+Subscribes to the state changes in flash alerts mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, you must use > [accessibility.offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offFlashReminderStateChange) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

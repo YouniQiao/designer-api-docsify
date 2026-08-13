@@ -10,7 +10,9 @@ function createTouchController(): Promise<TouchController>
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -30,9 +32,9 @@ function createTouchController(): Promise<TouchController>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [3800001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) | Input service exception. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 
 ## 示例
 

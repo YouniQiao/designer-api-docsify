@@ -1,12 +1,10 @@
 # @ohos.bundle.installer
 
-在设备上安装、升级和卸载应用。
+在设备上安装、升级和卸载应用。 > **说明：** > > 本模块为系统接口。
 
-> **说明：**
-> 
-> 本模块为系统接口。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace installer--><!--Device-unnamed-declare namespace installer-End-->
 
@@ -21,9 +19,9 @@
 
 | 名称 |
 | --- |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller) |
-| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller-1) |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getbundleinstallersync) |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getBundleInstaller（系统接口）) |
+| [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getBundleInstaller（系统接口）) |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getBundleInstallerSync（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

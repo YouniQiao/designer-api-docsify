@@ -4,6 +4,8 @@ Describes the text decorative line style.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class DecorationStyle--><!--Device-unnamed-declare class DecorationStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor(value: DecorationStyleInterface)
 A constructor used to create a text decorative line style.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +45,8 @@ constructor(value: DecorationStyleInterface, options?: DecorationOptions)
 Constructor of a text decoration line style, including additional configuration options.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,6 +75,8 @@ Color of the text decorative line.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -88,6 +96,8 @@ Additional configuration options for the text decoration line style.
 **Type:** [DecorationOptions](arkts-arkui-decorationoptions-i.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,6 +119,8 @@ Style of the text decorative line.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -129,6 +141,8 @@ Scale factor for the thickness of the text decoration line.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -148,6 +162,8 @@ Type of the text decorative line.
 **Type:** TextDecorationType
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

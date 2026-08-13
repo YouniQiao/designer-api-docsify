@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface AnimatorResult--><!--Device-unnamed-export interface AnimatorResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ cancel(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,87 +44,11 @@ finish(): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AnimatorResult-finish(): void--><!--Device-AnimatorResult-finish(): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onCancel
-
-```TypeScript
-onCancel: () => void
-```
-
-动画被取消时回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AnimatorResult-onCancel: () => void--><!--Device-AnimatorResult-onCancel: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onFinish
-
-```TypeScript
-onFinish: () => void
-```
-
-动画完成时回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AnimatorResult-onFinish: () => void--><!--Device-AnimatorResult-onFinish: () => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onFrame
-
-```TypeScript
-onFrame: (progress: double) => void
-```
-
-接收到帧时回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AnimatorResult-onFrame: (progress: double) => void--><!--Device-AnimatorResult-onFrame: (progress: double) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| progress | double | 是 |  |
-
-## onRepeat
-
-```TypeScript
-onRepeat: () => void
-```
-
-动画重复时回调。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AnimatorResult-onRepeat: () => void--><!--Device-AnimatorResult-onRepeat: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -135,6 +63,8 @@ pause(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -154,6 +84,8 @@ play(): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AnimatorResult-play(): void--><!--Device-AnimatorResult-play(): void-End-->
@@ -172,6 +104,8 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AnimatorResult-reset(options: AnimatorOptions | SimpleAnimatorOptions): void--><!--Device-AnimatorResult-reset(options: AnimatorOptions | SimpleAnimatorOptions): void-End-->
@@ -188,8 +122,8 @@ reset(options: AnimatorOptions | SimpleAnimatorOptions): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | The specified page is not found or the object property list is not obtained. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | The specified page is not found or the object property list is not obtained. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## reverse
 
@@ -202,6 +136,8 @@ reverse(): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -221,6 +157,8 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AnimatorResult-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void--><!--Device-AnimatorResult-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void-End-->
@@ -231,5 +169,93 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rateRange | [ExpectedFrameRateRange](arkts-arkui-common-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
+| rateRange | [ExpectedFrameRateRange](../../apis-na/arkts-apis/arkts-na-common-expectedframeraterange-i.md) | 是 | 设置期望的帧率范围。 |
+
+## onCancel
+
+```TypeScript
+onCancel: () => void
+```
+
+动画被取消时回调。
+
+**类型：** () =&gt; void
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AnimatorResult-onCancel: () => void--><!--Device-AnimatorResult-onCancel: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onFinish
+
+```TypeScript
+onFinish: () => void
+```
+
+动画完成时回调。
+
+**类型：** () =&gt; void
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AnimatorResult-onFinish: () => void--><!--Device-AnimatorResult-onFinish: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onFrame
+
+```TypeScript
+onFrame: (progress: double) => void
+```
+
+接收到帧时回调。
+
+**类型：** (progress: double) =&gt; void
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AnimatorResult-onFrame: (progress: double) => void--><!--Device-AnimatorResult-onFrame: (progress: double) => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onRepeat
+
+```TypeScript
+onRepeat: () => void
+```
+
+动画重复时回调。
+
+**类型：** () =&gt; void
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AnimatorResult-onRepeat: () => void--><!--Device-AnimatorResult-onRepeat: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

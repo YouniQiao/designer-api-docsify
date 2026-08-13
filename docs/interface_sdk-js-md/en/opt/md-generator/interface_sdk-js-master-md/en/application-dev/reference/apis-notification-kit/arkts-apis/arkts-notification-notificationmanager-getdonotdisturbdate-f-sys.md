@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-Obtains the DND time. This API uses an asynchronous callback to return the result.
+Obtains the DND time. This API uses an asynchronous callback to return the result. This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -36,14 +36,14 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -68,11 +68,11 @@ notificationManager.getDoNotDisturbDate(getDoNotDisturbDateCallback);
 function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 ```
 
-Obtains the DND time. This API uses a promise to return the result.
+Obtains the DND time. This API uses a promise to return the result. This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -92,13 +92,13 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -119,11 +119,11 @@ notificationManager.getDoNotDisturbDate().then((data: notificationManager.DoNotD
 function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDisturbDate>): void
 ```
 
-Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result.
+Obtains the DND time of a specified user. This API uses an asynchronous callback to return the result. This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -144,15 +144,15 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Error Code ID |
 | --- |
-| [1600008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600008-user-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -180,11 +180,11 @@ notificationManager.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
 function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 ```
 
-Obtains the DND time of a specified user. This API uses a promise to return the result.
+Obtains the DND time of a specified user. This API uses a promise to return the result. This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs, error code 801 is returned.
 
-This API can be properly called on devices other than wearables and TVs. If it is called on wearables and TVs,error code 801 is returned.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -210,15 +210,15 @@ This API can be properly called on devices other than wearables and TVs. If it i
 
 | Error Code ID |
 | --- |
-| [1600008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600008-user-not-found) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1600012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600012-insufficient-memory-space) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [1600008](../errorcode-notification.md#1600008-user-not-found) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

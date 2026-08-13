@@ -4,6 +4,8 @@ Subcommand information
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SubCommandInfo--><!--Device-unnamed-export interface SubCommandInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -22,6 +24,8 @@ The description of the subcommand.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubCommandInfo-readonly description: string--><!--Device-SubCommandInfo-readonly description: string-End-->
@@ -38,9 +42,11 @@ readonly eventSchemas?: Record<string, Record<string, Object>>
 
 Schemas about event for subcommand.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Supported event types for custom event.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubCommandInfo-readonly eventTypes?: Array<string>--><!--Device-SubCommandInfo-readonly eventTypes?: Array<string>-End-->
@@ -78,9 +86,11 @@ readonly inputSchema: Record<string, Object>
 
 The input schema of the subcommand.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,9 +108,11 @@ readonly outputSchema: Record<string, Object>
 
 The output schema of the subcommand.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -121,6 +133,8 @@ The require permissions of the subcommand.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

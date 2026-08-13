@@ -4,7 +4,9 @@ Declare NodeParamV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NodeParamV2--><!--Device-unnamed-export interface NodeParamV2-End-->
 
@@ -24,11 +26,17 @@ container?: OnContainerCallback
 
 set subcomponent binded on tree item.
 
+**Type:** [OnContainerCallback](arkts-arkui-oncontainercallback-t.md)
+
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-container?: OnContainerCallback--><!--Device-NodeParamV2-container?: OnContainerCallback-End-->
 
@@ -37,20 +45,24 @@ set subcomponent binded on tree item.
 ## currentNodeId
 
 ```TypeScript
-currentNodeId?: int
+currentNodeId?: number
 ```
 
 Set currentNodeId.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeParamV2-currentNodeId?: int--><!--Device-NodeParamV2-currentNodeId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-NodeParamV2-currentNodeId?: number--><!--Device-NodeParamV2-currentNodeId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,13 +74,17 @@ editIcon?: ResourceStr
 
 Set edit icon resource.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-editIcon?: ResourceStr--><!--Device-NodeParamV2-editIcon?: ResourceStr-End-->
 
@@ -82,13 +98,17 @@ icon?: ResourceStr
 
 Set the icon resource.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-icon?: ResourceStr--><!--Device-NodeParamV2-icon?: ResourceStr-End-->
 
@@ -100,15 +120,19 @@ Set the icon resource.
 isFolder?: boolean
 ```
 
-Set catalog whether is floder.
+Whether the node is a directory. Default value: false. true: The node is a directory. false: The node is not a directory.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-isFolder?: boolean--><!--Device-NodeParamV2-isFolder?: boolean-End-->
 
@@ -117,20 +141,24 @@ Set catalog whether is floder.
 ## parentNodeId
 
 ```TypeScript
-parentNodeId?: int
+parentNodeId?: number
 ```
 
 Set the parentNodeId.
 
-**Type:** int
+**Type:** number
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-NodeParamV2-parentNodeId?: int--><!--Device-NodeParamV2-parentNodeId?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-NodeParamV2-parentNodeId?: number--><!--Device-NodeParamV2-parentNodeId?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -142,13 +170,17 @@ primaryTitle?: ResourceStr
 
 Set primary title content.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-primaryTitle?: ResourceStr--><!--Device-NodeParamV2-primaryTitle?: ResourceStr-End-->
 
@@ -162,13 +194,17 @@ secondaryTitle?: ResourceStr
 
 Set secondary title content.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-secondaryTitle?: ResourceStr--><!--Device-NodeParamV2-secondaryTitle?: ResourceStr-End-->
 
@@ -182,13 +218,17 @@ selectedIcon?: ResourceStr
 
 Set selected icon resource.
 
-**Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
+**Type:** [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-selectedIcon?: ResourceStr--><!--Device-NodeParamV2-selectedIcon?: ResourceStr-End-->
 
@@ -206,9 +246,13 @@ Set edit symbol resource.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-symbolEditIconStyle?: SymbolGlyphModifier--><!--Device-NodeParamV2-symbolEditIconStyle?: SymbolGlyphModifier-End-->
 
@@ -226,9 +270,13 @@ Set the symbol resource.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-symbolIconStyle?: SymbolGlyphModifier--><!--Device-NodeParamV2-symbolIconStyle?: SymbolGlyphModifier-End-->
 
@@ -246,9 +294,13 @@ Set selected symbol resource.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NodeParamV2-symbolSelectedIconStyle?: SymbolGlyphModifier--><!--Device-NodeParamV2-symbolSelectedIconStyle?: SymbolGlyphModifier-End-->
 

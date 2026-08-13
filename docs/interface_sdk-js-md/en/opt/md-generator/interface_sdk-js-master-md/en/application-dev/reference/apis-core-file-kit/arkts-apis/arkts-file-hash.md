@@ -2,7 +2,9 @@
 
 The **FileHash** module implements hash processing on files.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hash--><!--Device-unnamed-declare namespace hash-End-->
 
@@ -20,9 +22,9 @@ import { hash } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createHash](arkts-corefile-hash-createhash-f.md#createhash) |
+| [createHash](arkts-corefile-hash-createhash-f.md#createHash) |
 | [hash](arkts-corefile-hash-f.md#hash) |
-| [hash](arkts-corefile-hash-f.md#hash-1) |
+| [hash](arkts-corefile-hash-f.md#hash) |
 
 ### Classes
 

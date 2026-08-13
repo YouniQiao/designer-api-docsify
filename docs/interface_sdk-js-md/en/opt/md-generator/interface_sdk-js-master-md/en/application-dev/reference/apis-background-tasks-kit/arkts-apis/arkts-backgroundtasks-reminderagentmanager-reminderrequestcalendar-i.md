@@ -1,14 +1,14 @@
 # ReminderRequestCalendar
 
-ReminderRequestCalendar extends ReminderRequest
-
-Defines a reminder for a calendar event.
+ReminderRequestCalendar extends ReminderRequest Defines a reminder for a calendar event.
 
 **Inheritance/Implementation:** ReminderRequestCalendar extends [ReminderRequest](arkts-backgroundtasks-reminderagentmanager-reminderrequest-i.md#ReminderRequest)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest--><!--Device-reminderAgentManager-interface ReminderRequestCalendar extends ReminderRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-reminderAgentManager-interface ReminderRequestCalendar--><!--Device-reminderAgentManager-interface ReminderRequestCalendar-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -28,7 +28,9 @@ Reminder time.
 
 **Type:** LocalDateTime
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestCalendar-dateTime: LocalDateTime--><!--Device-ReminderRequestCalendar-dateTime: LocalDateTime-End-->
 
@@ -44,7 +46,9 @@ Days of a week when the reminder repeats. The value ranges from 1 to 7, correspo
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestCalendar-daysOfWeek?: Array<int>--><!--Device-ReminderRequestCalendar-daysOfWeek?: Array<int>-End-->
 
@@ -60,7 +64,9 @@ End time of the reminder.
 
 **Type:** LocalDateTime
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestCalendar-endDateTime?: LocalDateTime--><!--Device-ReminderRequestCalendar-endDateTime?: LocalDateTime-End-->
 
@@ -76,7 +82,9 @@ Day in which the reminder repeats. The value range is [1, 31]. This parameter is
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestCalendar-repeatDays?: Array<int>--><!--Device-ReminderRequestCalendar-repeatDays?: Array<int>-End-->
 
@@ -92,7 +100,9 @@ Month in which the reminder repeats. The value range is [1, 12]. This parameter 
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReminderRequestCalendar-repeatMonths?: Array<int>--><!--Device-ReminderRequestCalendar-repeatMonths?: Array<int>-End-->
 

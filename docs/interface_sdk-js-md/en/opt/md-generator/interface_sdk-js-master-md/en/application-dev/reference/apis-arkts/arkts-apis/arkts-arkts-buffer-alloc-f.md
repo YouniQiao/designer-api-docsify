@@ -14,7 +14,9 @@ function alloc(size: number, fill?: string | Buffer | number | number | number, 
 
 Creates and initializes a **Buffer** object of the specified length.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

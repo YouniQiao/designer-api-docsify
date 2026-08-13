@@ -8,9 +8,11 @@ function createMessage(pdu: Array<int>, specification: string, callback: AsyncCa
 
 根据协议数据单元(PDU)和指定的短信协议创建短信实例。使用callback异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void--><!--Device-sms-function createMessage(pdu: Array<int>, specification: string, callback: AsyncCallback<ShortMessage>): void-End-->
 
@@ -20,19 +22,19 @@ function createMessage(pdu: Array<int>, specification: string, callback: AsyncCa
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 是 | 协议数据单元，从收到的信息中获取。 |
+| pdu | Array&lt;int&gt; | 是 | 协议数据单元，从收到的信息中获取。 |
 | specification | string | 是 | 短信协议类型。&lt;br/&gt;- 3gpp：表示GSM/UMTS/LTE SMS。&lt;br/&gt;- 3gpp2：表示CDMA SMS。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | 是 | 获取短信实例的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ShortMessage](arkts-telephony-sms-shortmessage-i.md)&gt; | 是 | 获取短信实例的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 
@@ -57,9 +59,11 @@ function createMessage(pdu: Array<int>, specification: string): Promise<ShortMes
 
 根据协议数据单元(PDU)和指定的短信协议创建短信实例。使用Promise异步回调。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>--><!--Device-sms-function createMessage(pdu: Array<int>, specification: string): Promise<ShortMessage>-End-->
 
@@ -69,7 +73,7 @@ function createMessage(pdu: Array<int>, specification: string): Promise<ShortMes
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pdu | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 是 | 协议数据单元，从收到的信息中获取。 |
+| pdu | Array&lt;int&gt; | 是 | 协议数据单元，从收到的信息中获取。 |
 | specification | string | 是 | 短信协议类型。&lt;br/&gt;- 3gpp：表示GSM/UMTS/LTE SMS。&lt;br/&gt;- 3gpp2：表示CDMA SMS。 |
 
 **返回值：**
@@ -82,11 +86,11 @@ function createMessage(pdu: Array<int>, specification: string): Promise<ShortMes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
-| [8300999](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
-| [8300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
-| [8300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
-| [8300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) | Operation failed. Cannot connect to service. |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) | Invalid parameter value. |
 
 ## 示例
 

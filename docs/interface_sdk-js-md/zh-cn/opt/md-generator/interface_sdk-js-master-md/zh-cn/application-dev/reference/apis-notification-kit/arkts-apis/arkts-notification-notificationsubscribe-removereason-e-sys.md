@@ -2,7 +2,9 @@
 
 通知删除原因。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationSubscribe-export enum RemoveReason--><!--Device-notificationSubscribe-export enum RemoveReason-End-->
 
@@ -18,7 +20,9 @@ CLICK_REASON_REMOVE = 1
 
 点击通知后删除通知。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RemoveReason-CLICK_REASON_REMOVE = 1--><!--Device-RemoveReason-CLICK_REASON_REMOVE = 1-End-->
 
@@ -34,7 +38,9 @@ CANCEL_REASON_REMOVE = 2
 
 用户删除通知。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2--><!--Device-RemoveReason-CANCEL_REASON_REMOVE = 2-End-->
 

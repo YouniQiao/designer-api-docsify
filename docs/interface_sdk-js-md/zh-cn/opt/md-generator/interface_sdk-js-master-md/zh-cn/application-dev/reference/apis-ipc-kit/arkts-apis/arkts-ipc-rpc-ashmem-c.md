@@ -1,17 +1,10 @@
 # Ashmem
 
-提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。
+提供与匿名共享内存对象相关的方法，包括创建、关闭、映射和取消映射Ashmem、从Ashmem读取数据和写入数据、获取Ashmem大小、设置Ashmem保护。 共享内存只适用与本设备内跨进程通信。 - 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。 - 跨进程数据共享：多个进程需要共享访问同一块内存数据。 - 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。 - 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。 - 提升传输性能：共享内存机制大幅提升大数据传输效率。 - 减少内存占用：避免数据多次拷贝，节省内存资源。
 
-共享内存只适用与本设备内跨进程通信。
+**起始版本：** 23
 
-- 大数据传输：传输大量数据(如图片、文件)时使用共享内存提升效率。  
-- 跨进程数据共享：多个进程需要共享访问同一块内存数据。  
-- 传输效率问题：大数据通过共享内存传输避免序列化开销，提升传输效率。  
-- 内存复用问题：多进程可共享访问同一内存，避免数据拷贝。  
-- 提升传输性能：共享内存机制大幅提升大数据传输效率。  
-- 减少内存占用：避免数据多次拷贝，节省内存资源。
-
-**起始版本：** 8
+**废弃版本：** -1
 
 <!--Device-rpc-class Ashmem--><!--Device-rpc-class Ashmem-End-->
 
@@ -23,13 +16,11 @@
 closeAshmem(): void
 ```
 
-关闭这个Ashmem。
+关闭这个Ashmem。 > **说明：** > > 关闭Ashmem对象前需要先解除地址映射。
 
-> **说明：**
-> 
-> 关闭Ashmem对象前需要先解除地址映射。
+**起始版本：** 23
 
-**起始版本：** 8
+**废弃版本：** -1
 
 <!--Device-Ashmem-closeAshmem(): void--><!--Device-Ashmem-closeAshmem(): void-End-->
 
@@ -57,7 +48,9 @@ static create(name: string, size: number): Ashmem
 
 静态方法，根据指定的名称和大小创建Ashmem对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-static create(name: string, size: int): Ashmem--><!--Device-Ashmem-static create(name: string, size: int): Ashmem-End-->
 
@@ -80,7 +73,7 @@ static create(name: string, size: number): Ashmem
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -109,7 +102,9 @@ static create(ashmem: Ashmem): Ashmem
 
 静态方法，通过复制现有Ashmem对象的文件描述符(fd)来创建Ashmem对象。两个Ashmem对象指向同一个共享内存区域。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static create(ashmem: Ashmem): Ashmem-End-->
 
@@ -131,7 +126,7 @@ static create(ashmem: Ashmem): Ashmem
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -164,7 +159,7 @@ static createAshmem(name: string, size: number): Ashmem
 
 **废弃版本：** 9
 
-**替代接口：** [create](create())
+**替代接口：** create()
 
 <!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem--><!--Device-Ashmem-static createAshmem(name: string, size: number): Ashmem-End-->
 
@@ -211,7 +206,7 @@ static createAshmemFromExisting(ashmem: Ashmem): Ashmem
 
 **废弃版本：** 9
 
-**替代接口：** [create](create())
+**替代接口：** create()
 
 <!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem--><!--Device-Ashmem-static createAshmemFromExisting(ashmem: Ashmem): Ashmem-End-->
 
@@ -253,7 +248,9 @@ getAshmemSize(): number
 
 获取Ashmem对象的内存大小。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-getAshmemSize(): int--><!--Device-Ashmem-getAshmemSize(): int-End-->
 
@@ -292,7 +289,7 @@ mapAshmem(mapType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapTypedAshmem](mapTypedAshmem(mapType:)
+**替代接口：** [mapTypedAshmem](#mapTypedAshmem)(mapType: int)
 
 <!--Device-Ashmem-mapAshmem(mapType: number): boolean--><!--Device-Ashmem-mapAshmem(mapType: number): boolean-End-->
 
@@ -376,7 +373,7 @@ mapReadOnlyAshmem(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [mapReadonlyAshmem](#mapReadonlyAshmem)()
+**替代接口：** mapReadonlyAshmem()
 
 <!--Device-Ashmem-mapReadOnlyAshmem(): boolean--><!--Device-Ashmem-mapReadOnlyAshmem(): boolean-End-->
 
@@ -411,7 +408,9 @@ mapReadWriteAshmem(): void
 
 在此进程虚拟地址空间上创建可读写的共享文件映射。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-mapReadWriteAshmem(): void--><!--Device-Ashmem-mapReadWriteAshmem(): void-End-->
 
@@ -421,7 +420,7 @@ mapReadWriteAshmem(): void
 
 | 错误码ID |
 | --- |
-| [1900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) |
+| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
 
 ## 示例
 
@@ -448,7 +447,9 @@ mapReadonlyAshmem(): void
 
 在此进程虚拟地址空间上创建只读的共享文件映射。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-mapReadonlyAshmem(): void--><!--Device-Ashmem-mapReadonlyAshmem(): void-End-->
 
@@ -458,7 +459,7 @@ mapReadonlyAshmem(): void
 
 | 错误码ID |
 | --- |
-| [1900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) |
+| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
 
 ## 示例
 
@@ -485,7 +486,9 @@ mapTypedAshmem(mapType: number): void
 
 在此进程的虚拟地址空间上创建共享文件映射，映射区域大小由此Ashmem对象指定。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-mapTypedAshmem(mapType: int): void--><!--Device-Ashmem-mapTypedAshmem(mapType: int): void-End-->
 
@@ -501,8 +504,8 @@ mapTypedAshmem(mapType: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900001-系统调用mmap失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1900001](../errorcode-rpc.md#1900001-系统调用mmap失败) |
 
 ## 示例
 
@@ -527,17 +530,13 @@ try {
 readAshmem(size: number, offset: number): number[]
 ```
 
-从此Ashmem对象关联的共享文件中读取数据。
-
-> **说明：**
-> 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
+从此Ashmem对象关联的共享文件中读取数据。 > **说明：** > > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [readDataFromAshmem](readDataFromAshmem(size:)
+**替代接口：** [readDataFromAshmem](#readDataFromAshmem)(size: int, offset: int)
 
 <!--Device-Ashmem-readAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readAshmem(size: number, offset: number): number[]-End-->
 
@@ -560,8 +559,8 @@ readAshmem(size: number, offset: number): number[]
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-共享内存读数据失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) |
 
 ## 示例
 
@@ -590,13 +589,11 @@ try {
 readDataFromAshmem(size: number, offset: number): ArrayBuffer
 ```
 
-从此Ashmem对象关联的共享文件中读取数据。
+从此Ashmem对象关联的共享文件中读取数据。 > **说明：** > > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
-> **说明：**
-> 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer--><!--Device-Ashmem-readDataFromAshmem(size: int, offset: int): ArrayBuffer-End-->
 
@@ -619,8 +616,8 @@ readDataFromAshmem(size: number, offset: number): ArrayBuffer
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1900004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900004-共享内存读数据失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1900004](../errorcode-rpc.md#1900004-共享内存读数据失败) |
 
 ## 示例
 
@@ -655,17 +652,13 @@ try {
 readFromAshmem(size: number, offset: number): number[]
 ```
 
-从此Ashmem对象关联的共享文件中读取数据。
-
-> **说明：**
-> 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
+从此Ashmem对象关联的共享文件中读取数据。 > **说明：** > > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [readDataFromAshmem](readDataFromAshmem(size:)
+**替代接口：** [readDataFromAshmem](#readDataFromAshmem)(size: int, offset: int)
 
 <!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]--><!--Device-Ashmem-readFromAshmem(size: number, offset: number): number[]-End-->
 
@@ -716,7 +709,7 @@ setProtection(protectionType: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setProtectionType](setProtectionType(protectionType:)
+**替代接口：** [setProtectionType](#setProtectionType)(protectionType: int)
 
 <!--Device-Ashmem-setProtection(protectionType: number): boolean--><!--Device-Ashmem-setProtection(protectionType: number): boolean-End-->
 
@@ -758,7 +751,9 @@ setProtectionType(protectionType: number): void
 
 设置映射内存区域的保护等级。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-setProtectionType(protectionType: int): void--><!--Device-Ashmem-setProtectionType(protectionType: int): void-End-->
 
@@ -774,8 +769,8 @@ setProtectionType(protectionType: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1900002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900002-系统调用ioctl失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1900002](../errorcode-rpc.md#1900002-系统调用ioctl失败) |
 
 ## 示例
 
@@ -802,7 +797,9 @@ unmapAshmem(): void
 
 删除该Ashmem对象的地址映射。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-unmapAshmem(): void--><!--Device-Ashmem-unmapAshmem(): void-End-->
 
@@ -828,17 +825,13 @@ try {
 writeAshmem(buf: number[], size: number, offset: number): void
 ```
 
-将数据写入此Ashmem对象关联的共享文件。
-
-> **说明：**
-> 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
+将数据写入此Ashmem对象关联的共享文件。 > **说明：** > > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** [writeDataToAshmem](writeDataToAshmem(buf:)
+**替代接口：** [writeDataToAshmem](#writeDataToAshmem)(buf: ArrayBuffer, size: int, offset: int)
 
 <!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void--><!--Device-Ashmem-writeAshmem(buf: number[], size: number, offset: number): void-End-->
 
@@ -856,8 +849,8 @@ writeAshmem(buf: number[], size: number, offset: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-共享内存写数据失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) |
 
 ## 示例
 
@@ -884,13 +877,11 @@ try {
 writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 ```
 
-将数据写入此Ashmem对象关联的共享文件。
+将数据写入此Ashmem对象关联的共享文件。 > **说明：** > > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
-> **说明：**
-> 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void--><!--Device-Ashmem-writeDataToAshmem(buf: ArrayBuffer, size: int, offset: int): void-End-->
 
@@ -908,8 +899,8 @@ writeDataToAshmem(buf: ArrayBuffer, size: number, offset: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1900003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900003-共享内存写数据失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1900003](../errorcode-rpc.md#1900003-共享内存写数据失败) |
 
 ## 示例
 
@@ -941,17 +932,13 @@ try {
 writeToAshmem(buf: number[], size: number, offset: number): boolean
 ```
 
-将数据写入此Ashmem对象关联的共享文件。
-
-> **说明：**
-> 
-> 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
+将数据写入此Ashmem对象关联的共享文件。 > **说明：** > > 对Ashmem对象进行写操作时，需要先调用[mapReadWriteAshmem](#mapReadWriteAshmem)进行映射。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [writeDataToAshmem](writeDataToAshmem(buf:)
+**替代接口：** [writeDataToAshmem](#writeDataToAshmem)(buf: ArrayBuffer, size: int, offset: int)
 
 <!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean--><!--Device-Ashmem-writeToAshmem(buf: number[], size: number, offset: number): boolean-End-->
 
@@ -1003,6 +990,8 @@ static readonly PROT_EXEC: number
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-Ashmem-static readonly PROT_EXEC: number--><!--Device-Ashmem-static readonly PROT_EXEC: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1020,6 +1009,8 @@ static readonly PROT_NONE: number
 **默认值：** 0
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-static readonly PROT_NONE: number--><!--Device-Ashmem-static readonly PROT_NONE: number-End-->
 
@@ -1039,6 +1030,8 @@ static readonly PROT_READ: number
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-Ashmem-static readonly PROT_READ: number--><!--Device-Ashmem-static readonly PROT_READ: number-End-->
 
 **系统能力：** SystemCapability.Communication.IPC.Core
@@ -1056,6 +1049,8 @@ static readonly PROT_WRITE: number
 **默认值：** 2
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 <!--Device-Ashmem-static readonly PROT_WRITE: number--><!--Device-Ashmem-static readonly PROT_WRITE: number-End-->
 

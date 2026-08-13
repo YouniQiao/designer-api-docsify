@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-contact-class Contact--><!--Device-contact-class Contact-End-->
 
 **系统能力：** SystemCapability.Applications.ContactsData
@@ -23,6 +25,8 @@ static readonly INVALID_CONTACT_ID: -1
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +48,8 @@ contactAttributes?: ContactAttributes
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-contactAttributes?: ContactAttributes--><!--Device-Contact-contactAttributes?: ContactAttributes-End-->
@@ -63,6 +69,8 @@ emails?: Email[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -84,6 +92,8 @@ events?: Event[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-events?: Event[]--><!--Device-Contact-events?: Event[]-End-->
@@ -103,6 +113,8 @@ groups?: Group[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -124,6 +136,8 @@ readonly id?: number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-readonly id?: number--><!--Device-Contact-readonly id?: number-End-->
@@ -143,6 +157,8 @@ imAddresses?: ImAddress[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -164,6 +180,8 @@ readonly key?: string
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-readonly key?: string--><!--Device-Contact-readonly key?: string-End-->
@@ -183,6 +201,8 @@ name?: Name
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -204,6 +224,8 @@ nickName?: NickName
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-nickName?: NickName--><!--Device-Contact-nickName?: NickName-End-->
@@ -223,6 +245,8 @@ note?: Note
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -244,6 +268,8 @@ organization?: Organization
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-organization?: Organization--><!--Device-Contact-organization?: Organization-End-->
@@ -263,6 +289,8 @@ phoneNumbers?: PhoneNumber[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -284,6 +312,8 @@ portrait?: Portrait
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-portrait?: Portrait--><!--Device-Contact-portrait?: Portrait-End-->
@@ -303,6 +333,8 @@ postalAddresses?: PostalAddress[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -324,6 +356,8 @@ relations?: Relation[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-relations?: Relation[]--><!--Device-Contact-relations?: Relation[]-End-->
@@ -344,6 +378,8 @@ sipAddresses?: SipAddress[]
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Contact-sipAddresses?: SipAddress[]--><!--Device-Contact-sipAddresses?: SipAddress[]-End-->
@@ -363,6 +399,8 @@ websites?: Website[]
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -14,9 +14,11 @@ function getL2capPsm(serverSocket: int): int
 
 Get l2cap socket psm.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-socket-function getL2capPsm(serverSocket: int): int--><!--Device-socket-function getL2capPsm(serverSocket: int): int-End-->
 
@@ -26,13 +28,13 @@ Get l2cap socket psm.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serverSocket | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#sppListen). |
+| serverSocket | int | Yes | Indicates the server socket ID, returned by [sppListen](arkts-connectivity-socket-spplisten-f.md#sppListen). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Returns the l2cap socket psm |
+| int | Returns the l2cap socket psm |
 
 ## Examples
 

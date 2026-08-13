@@ -4,6 +4,8 @@ DatePickerComponentResult defines the selection result of the date time picker.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class DatePickerComponentResult--><!--Device-unnamed-export declare class DatePickerComponentResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,11 +22,13 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 day?: number
 ```
 
-Day of the selected date.The value should be an integer.
+Day of the selected date. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,11 +44,13 @@ Day of the selected date.The value should be an integer.
 hour?: number
 ```
 
-Hour part of the selected time.The value should be an integer.
+Hour part of the selected time. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,11 +66,13 @@ Hour part of the selected time.The value should be an integer.
 minute?: number
 ```
 
-Minute part of the selected time.The value should be an integer.
+Minute part of the selected time. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,11 +88,13 @@ Minute part of the selected time.The value should be an integer.
 month?: number
 ```
 
-Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December.The value should be an integer.
+Month index of the selected date, starting from 0, where 0 indicates January and 11 indicates December. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,11 +110,13 @@ Month index of the selected date, starting from 0, where 0 indicates January and
 second?: number
 ```
 
-Second part of the selected time.The value should be an integer.
+Second part of the selected time. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,11 +132,13 @@ Second part of the selected time.The value should be an integer.
 year?: number
 ```
 
-Year of the selected date.The value should be an integer.
+Year of the selected date. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

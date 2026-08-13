@@ -12,7 +12,7 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash](arkts-file-hash.md#hash)
+**Substitutes:** [hash](arkts-file-hash.md#@ohos.file.hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
 
@@ -44,7 +44,7 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash](arkts-file-hash.md#hash)
+**Substitutes:** [hash](arkts-file-hash.md#@ohos.file.hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 

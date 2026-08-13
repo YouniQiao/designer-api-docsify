@@ -4,6 +4,8 @@ arkTS script info.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-scriptManager-interface ArkTSScriptInfo--><!--Device-scriptManager-interface ArkTSScriptInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -26,6 +28,8 @@ The context of the bound ability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,6 +49,8 @@ Request code for identifying the current operation
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

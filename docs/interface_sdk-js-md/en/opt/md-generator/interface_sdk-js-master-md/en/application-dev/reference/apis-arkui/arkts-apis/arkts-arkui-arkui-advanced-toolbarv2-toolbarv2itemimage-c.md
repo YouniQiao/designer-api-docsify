@@ -4,7 +4,7 @@ Declare type ToolBarV2ItemImage
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ToolBarV2ItemImage--><!--Device-unnamed-export declare class ToolBarV2ItemImage-End-->
 
@@ -26,6 +26,8 @@ The constructor used to create a ToolBarV2ItemImage object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -43,7 +45,8 @@ The constructor used to create a ToolBarV2ItemImage object.
 ## activatedColor
 
 ```TypeScript
-activatedColor?: ColorMetrics
+@Trace
+  activatedColor?: ColorMetrics
 ```
 
 Icon fillColor when the item is activated.
@@ -52,18 +55,21 @@ Icon fillColor when the item is activated.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2ItemImage-activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemImage-activatedColor?: ColorMetrics-End-->
+<!--Device-ToolBarV2ItemImage-@Trace  activatedColor?: ColorMetrics--><!--Device-ToolBarV2ItemImage-@Trace  activatedColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## color
 
 ```TypeScript
-color?: ColorMetrics
+@Trace
+  color?: ColorMetrics
 ```
 
 Define icon fillColor.
@@ -72,18 +78,21 @@ Define icon fillColor.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2ItemImage-color?: ColorMetrics--><!--Device-ToolBarV2ItemImage-color?: ColorMetrics-End-->
+<!--Device-ToolBarV2ItemImage-@Trace  color?: ColorMetrics--><!--Device-ToolBarV2ItemImage-@Trace  color?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
 
 ```TypeScript
-src: ResourceStr
+@Trace
+  src: ResourceStr
 ```
 
 Define icon resource.
@@ -92,10 +101,12 @@ Define icon resource.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ToolBarV2ItemImage-src: ResourceStr--><!--Device-ToolBarV2ItemImage-src: ResourceStr-End-->
+<!--Device-ToolBarV2ItemImage-@Trace  src: ResourceStr--><!--Device-ToolBarV2ItemImage-@Trace  src: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

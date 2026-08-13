@@ -4,11 +4,13 @@
 export type Resource = _Resource
 ```
 
-Describes the resource information, including the application package name, application module name, resource ID,resource type, and formatting parameters.
+Describes the resource information, including the application package name, application module name, resource ID, resource type, and formatting parameters.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

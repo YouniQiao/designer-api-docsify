@@ -2,7 +2,9 @@
 
 Describes the audio capturer change event.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturerChangeInfo--><!--Device-audio-interface AudioCapturerChangeInfo-End-->
 
@@ -24,7 +26,9 @@ Audio capturer information.
 
 **Type:** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo-End-->
 
@@ -40,7 +44,9 @@ Audio device information.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors--><!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors-End-->
 
@@ -56,7 +62,9 @@ Whether the audio capturer is muted. **true** if muted, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly muted?: boolean--><!--Device-AudioCapturerChangeInfo-readonly muted?: boolean-End-->
 
@@ -72,7 +80,9 @@ Unique ID of an audio stream.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly streamId: int--><!--Device-AudioCapturerChangeInfo-readonly streamId: int-End-->
 

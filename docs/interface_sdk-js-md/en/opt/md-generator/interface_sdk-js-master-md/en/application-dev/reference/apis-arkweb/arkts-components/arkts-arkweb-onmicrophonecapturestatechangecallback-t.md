@@ -8,6 +8,8 @@ Defines a callback triggered when the microphone state of the page changes.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChangeInfo) => void--><!--Device-unnamed-type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChangeInfo) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

@@ -12,7 +12,7 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 
 **废弃版本：** 11
 
-**替代接口：** [activateCooperate](activateCooperate(targetNetworkId:)
+**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate（系统接口）)(targetNetworkId: string, inputDeviceId: int, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -32,9 +32,9 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [20900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) |
 
 ## 示例
 
@@ -69,7 +69,7 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 
 **废弃版本：** 11
 
-**替代接口：** [activateCooperate](activateCooperate(targetNetworkId:)
+**替代接口：** [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate（系统接口）)(targetNetworkId: string, inputDeviceId: int)
 
 <!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>--><!--Device-cooperate-function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>-End-->
 
@@ -94,9 +94,9 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [20900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) |
 
 ## 示例
 

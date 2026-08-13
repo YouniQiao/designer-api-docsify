@@ -14,7 +14,9 @@ function enable(isEnable: boolean): void
 
 Enables the detection for JS object leaks. This function is disabled by default.
 
-**Since:** 12
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-jsLeakWatcher-function enable(isEnable: boolean): void--><!--Device-jsLeakWatcher-function enable(isEnable: boolean): void-End-->
 

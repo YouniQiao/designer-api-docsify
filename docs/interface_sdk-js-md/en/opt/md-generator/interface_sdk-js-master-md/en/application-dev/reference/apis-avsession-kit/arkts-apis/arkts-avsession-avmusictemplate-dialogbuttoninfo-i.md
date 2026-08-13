@@ -4,6 +4,8 @@ The definition of dialog button information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface DialogButtonInfo--><!--Device-avMusicTemplate-interface DialogButtonInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ Button id.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogButtonInfo-buttonId: string--><!--Device-DialogButtonInfo-buttonId: string-End-->
@@ -44,6 +48,8 @@ Button text.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogButtonInfo-buttonText: string--><!--Device-DialogButtonInfo-buttonText: string-End-->
@@ -61,6 +67,8 @@ Button type.
 **Type:** ButtonType
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

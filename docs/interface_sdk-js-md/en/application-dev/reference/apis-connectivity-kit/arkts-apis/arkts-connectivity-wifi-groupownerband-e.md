@@ -8,7 +8,7 @@ P2P group owner band.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GroupOwnerBand](ohos.wifiManager/wifiManager.GroupOwnerBand)
+**Substitutes:** [GroupOwnerBand](arkts-connectivity-wifimanager-groupownerband-e.md#GroupOwnerBand)
 
 <!--Device-wifi-enum GroupOwnerBand--><!--Device-wifi-enum GroupOwnerBand-End-->
 
@@ -28,7 +28,7 @@ default band.
 
 **Deprecated since:** 9
 
-**Substitutes:** [GO_BAND_AUTO](ohos.wifiManager/wifiManager.GroupOwnerBand.GO_BAND_AUTO)
+**Substitutes:** [GO_BAND_AUTO](arkts-connectivity-wifimanager-groupownerband-e.md#GO_BAND_AUTO)
 
 <!--Device-GroupOwnerBand-GO_BAND_AUTO = 0--><!--Device-GroupOwnerBand-GO_BAND_AUTO = 0-End-->
 
@@ -48,7 +48,7 @@ GO_BAND_2GHZ = 1
 
 **Deprecated since:** 9
 
-**Substitutes:** [GO_BAND_2GHZ](ohos.wifiManager/wifiManager.GroupOwnerBand.GO_BAND_2GHZ)
+**Substitutes:** [GO_BAND_2GHZ](arkts-connectivity-wifimanager-groupownerband-e.md#GO_BAND_2GHZ)
 
 <!--Device-GroupOwnerBand-GO_BAND_2GHZ = 1--><!--Device-GroupOwnerBand-GO_BAND_2GHZ = 1-End-->
 
@@ -68,7 +68,7 @@ GO_BAND_5GHZ = 2
 
 **Deprecated since:** 9
 
-**Substitutes:** [GO_BAND_5GHZ](ohos.wifiManager/wifiManager.GroupOwnerBand.GO_BAND_5GHZ)
+**Substitutes:** [GO_BAND_5GHZ](arkts-connectivity-wifimanager-groupownerband-e.md#GO_BAND_5GHZ)
 
 <!--Device-GroupOwnerBand-GO_BAND_5GHZ = 2--><!--Device-GroupOwnerBand-GO_BAND_5GHZ = 2-End-->
 

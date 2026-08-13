@@ -14,7 +14,9 @@ function setPreferredApn(apnId: number): Promise<boolean>
 
 Set preferred APN.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_APN_SETTING
 
@@ -38,7 +40,7 @@ Set preferred APN.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

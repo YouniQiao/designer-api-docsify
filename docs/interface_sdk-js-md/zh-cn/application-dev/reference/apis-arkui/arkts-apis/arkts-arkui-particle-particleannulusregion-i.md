@@ -1,20 +1,12 @@
 # ParticleAnnulusRegion
 
-用于设置环形发射器区域的配置信息。
-
-> **说明：**
-> 
-> - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。
-> 
-> - 当outerRadius小于innerRadius时（即外圆半径小于内圆半径时），会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。
-> 
-> - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。
-> 
-> ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
+用于设置环形发射器区域的配置信息。 > **说明：** > > - outerRadius、innerRadius小于零或使用百分比单位时，会按零进行处理。 > > - 当outerRadius小于innerRadius时（即外圆半径小于内圆半径时），会将当前较小的值作为新的内圆半径，将较大的值作为新的外圆半径。 > > - 当endAngle小于startAngle时（即结束角度小于起始角度时），会将当前较小的值作为新的起始角度，将较大的值作为新的结束角度。 > > 
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface ParticleAnnulusRegion--><!--Device-unnamed-export declare interface ParticleAnnulusRegion-End-->
 
@@ -28,13 +20,15 @@ center?: PositionT<LengthMetrics>
 
 The coordinates of the center of the annulus
 
-**类型：** [PositionT](arkts-arkui-positiont-t.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt;
+**类型：** [PositionT](../../apis-na/arkts-apis/arkts-na-positiont-t.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt;
 
 **默认值：** {x:LengthMetrics.percent(0.5),y:LengthMetrics.percent(0.5)}
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,6 +52,8 @@ The end angle of the annulus, in degree
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ParticleAnnulusRegion-endAngle?: double--><!--Device-ParticleAnnulusRegion-endAngle?: double-End-->
@@ -72,11 +68,13 @@ innerRadius: LengthMetrics
 
 The inner radius of the annulus
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,11 +90,13 @@ outerRadius: LengthMetrics
 
 The outer radius of the annulus
 
-**类型：** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -119,6 +119,8 @@ The start angle of the annulus, in degree
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

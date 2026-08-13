@@ -6,6 +6,8 @@ ScrollOptions
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ScrollOptions--><!--Device-unnamed-export interface ScrollOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,69 +20,19 @@ complete?: (result: Object) => void
 
 Callback function at the end of the interface invoking (executed both successfully and unsuccessfully).
 
+**Type:** (result: Object) =&gt; void
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollOptions-complete?: (result: Object) => void--><!--Device-ScrollOptions-complete?: (result: Object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | Object | Yes |  |
-
-## fail
-
-```TypeScript
-fail?: (result: Object) => void
-```
-
-Callback function for interface invocation failure.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-ScrollOptions-fail?: (result: Object) => void--><!--Device-ScrollOptions-fail?: (result: Object) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | Object | Yes |  |
-
-## success
-
-```TypeScript
-success?: (result: Object) => void
-```
-
-Callback function for successful interface invocation.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-ScrollOptions-success?: (result: Object) => void--><!--Device-ScrollOptions-success?: (result: Object) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | Object | Yes |  |
 
 ## duration
 
@@ -96,9 +48,33 @@ Duration of the scrolling animation, in ms.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollOptions-duration: number--><!--Device-ScrollOptions-duration: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## fail
+
+```TypeScript
+fail?: (result: Object) => void
+```
+
+Callback function for interface invocation failure.
+
+**Type:** (result: Object) =&gt; void
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ScrollOptions-fail?: (result: Object) => void--><!--Device-ScrollOptions-fail?: (result: Object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -115,6 +91,8 @@ The selector for current scroll.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -136,9 +114,33 @@ Scroll to the target position of the page. Unit: px
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-ScrollOptions-position: number--><!--Device-ScrollOptions-position: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## success
+
+```TypeScript
+success?: (result: Object) => void
+```
+
+Callback function for successful interface invocation.
+
+**Type:** (result: Object) =&gt; void
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-ScrollOptions-success?: (result: Object) => void--><!--Device-ScrollOptions-success?: (result: Object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -155,6 +157,8 @@ The timing function for current scroll animation.
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

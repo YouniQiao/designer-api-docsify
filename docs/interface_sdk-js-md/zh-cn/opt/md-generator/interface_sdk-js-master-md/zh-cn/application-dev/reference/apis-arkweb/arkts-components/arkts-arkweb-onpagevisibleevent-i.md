@@ -4,6 +4,8 @@ Defines the triggered callback when previous page will no longer be drawn and ne
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnPageVisibleEvent--><!--Device-unnamed-declare interface OnPageVisibleEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ The URL of page.
 **类型：** string
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface RemoteUserAuthItem--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthItem-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ authResult: string
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-RemoteUserAuthItem-authResult: string--><!--Device-RemoteUserAuthItem-authResult: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -39,6 +43,8 @@ permission: string
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-RemoteUserAuthItem-permission: string--><!--Device-RemoteUserAuthItem-permission: string-End-->
 

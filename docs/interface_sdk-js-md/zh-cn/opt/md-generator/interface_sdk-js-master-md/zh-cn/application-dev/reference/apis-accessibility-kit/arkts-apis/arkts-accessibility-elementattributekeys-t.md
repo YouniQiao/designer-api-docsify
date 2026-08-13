@@ -8,6 +8,8 @@ export type ElementAttributeKeys = keyof ElementAttributeValues
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export type ElementAttributeKeys = keyof ElementAttributeValues--><!--Device-unnamed-export type ElementAttributeKeys = keyof ElementAttributeValues-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

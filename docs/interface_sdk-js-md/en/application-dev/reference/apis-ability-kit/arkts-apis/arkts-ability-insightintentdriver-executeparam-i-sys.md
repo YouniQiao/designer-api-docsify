@@ -2,9 +2,11 @@
 
 Defines the parameter used to execute an intent call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface ExecuteParam--><!--Device-insightIntentDriver-interface ExecuteParam-End-->
 
@@ -24,14 +26,15 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 abilityName: string
 ```
 
-Name of the ability to be called. If an intent defined by the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this parameter can be left empty.
+Name of the ability to be called. If an intent defined by the @InsightIntentLink decorator is used to implement application redirection, this parameter can be left empty.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,9 +54,11 @@ Name of the bundle to which the ability to be called belongs.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +80,9 @@ Indicates the device identifier. Obtained from [getAvailableDeviceListSync](../.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,14 +98,15 @@ Indicates the device identifier. Obtained from [getAvailableDeviceListSync](../.
 displayId?: long
 ```
 
-Physical screen ID specified during intent call. The value must be an integer. This parameter is valid only when  
-**executeMode** is set to **UI_ABILITY_FOREGROUND**.
+Physical screen ID specified during intent call. The value must be an integer. This parameter is valid only when **executeMode** is set to **UI_ABILITY_FOREGROUND**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,14 +122,15 @@ Physical screen ID specified during intent call. The value must be an integer. T
 executeMode: insightIntent.ExecuteMode
 ```
 
-Intent execution mode. If an intent defined by the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this parameter must be filled (with any value that conforms to the definition), although it will not actually take effect.
+Intent execution mode. If an intent defined by the @InsightIntentLink decorator is used to implement application redirection, this parameter must be filled (with any value that conforms to the definition), although it will not actually take effect.
 
 **Type:** insightIntent.ExecuteMode
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,17 +146,15 @@ Intent execution mode. If an intent defined by the
 flags?: int
 ```
 
-[Flags](arkts-ability-wantconstant-flags-e.md#Flags) of the URIs authorized by the intent caller to the intent executor during the call.
+[Flags](arkts-ability-wantconstant-flags-e.md#Flags) of the URIs authorized by the intent caller to the intent executor during the call. **NOTE：**This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
 
-**NOTE：**
+**Type:** int
 
-This parameter supports only **FLAG_AUTH_READ_URI_PERMISSION**, **FLAG_AUTH_WRITE_URI_PERMISSION**, and FLAG_AUTH_READ_URI_PERMISSION|
+**Since:** 23
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -167,9 +174,11 @@ Intent name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,20 +191,22 @@ Intent name.
 ## insightIntentParam
 
 ```TypeScript
-insightIntentParam: Record<string, Object>
+insightIntentParam: Record<string, RecordData>
 ```
 
-Intent call parameter.
+Indicates the insight intent param.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ExecuteParam-insightIntentParam: Record<string, Object>--><!--Device-ExecuteParam-insightIntentParam: Record<string, Object>-End-->
+<!--Device-ExecuteParam-insightIntentParam: Record<string, RecordData>--><!--Device-ExecuteParam-insightIntentParam: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -211,9 +222,11 @@ Name of the module to which the ability belongs.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,14 +242,15 @@ Name of the module to which the ability belongs.
 uris?: Array<string>
 ```
 
-List of URIs authorized by the intent caller to the intent executor during the call. If an intent defined by the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) decorator is used to implement application redirection, this field is mandatory. Only the first element in the array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openLink).
+List of URIs authorized by the intent caller to the intent executor during the call. If an intent defined by the @InsightIntentLink decorator is used to implement application redirection, this field is mandatory. Only the first element in the array is read as the URI of [openLink](arkts-ability-uiabilitycontext-c.md#openLink).
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,17 +266,15 @@ List of URIs authorized by the intent caller to the intent executor during the c
 userId?: int
 ```
 
-ID of the user to which the intent belongs.
+ID of the user to which the intent belongs. **NOTE：**If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
-**NOTE：**
-
-If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

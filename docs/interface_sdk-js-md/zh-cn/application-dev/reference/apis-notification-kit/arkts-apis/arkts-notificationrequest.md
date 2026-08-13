@@ -1,4 +1,4 @@
-# notificationRequest(Information carried when a notification is sent)
+# notificationRequest
 
 ## 汇总
 

@@ -6,6 +6,8 @@ Enumerates the permissions on a DLP file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export enum DLPFileAccess--><!--Device-dlpPermission-export enum DLPFileAccess-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -21,6 +23,8 @@ The user has no permission on the file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-DLPFileAccess-NO_PERMISSION = 0--><!--Device-DLPFileAccess-NO_PERMISSION = 0-End-->
 
@@ -38,6 +42,8 @@ The user has only the permission to read the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-DLPFileAccess-READ_ONLY = 1--><!--Device-DLPFileAccess-READ_ONLY = 1-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -54,6 +60,8 @@ Edit the file.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-DLPFileAccess-CONTENT_EDIT = 2--><!--Device-DLPFileAccess-CONTENT_EDIT = 2-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -69,6 +77,8 @@ The user has full control on the file.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-DLPFileAccess-FULL_CONTROL = 3--><!--Device-DLPFileAccess-FULL_CONTROL = 3-End-->
 

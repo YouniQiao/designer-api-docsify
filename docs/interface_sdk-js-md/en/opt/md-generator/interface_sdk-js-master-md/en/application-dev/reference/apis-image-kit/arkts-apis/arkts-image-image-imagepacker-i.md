@@ -1,16 +1,10 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images.
+The **ImagePacker** class provides APIs to compress and encode images. Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
-Before calling any API in ImagePacker, you must use   
-[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+**Since:** 23
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call   
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
-
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-image-interface ImagePacker--><!--Device-image-interface ImagePacker-End-->
 
@@ -31,6 +25,8 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 Compresses or packs an image into a file and uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -55,8 +51,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
-| [7800202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) |
+| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) |
 
 ## packBinaryImageToTiffFile
 
@@ -67,6 +63,8 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: number, options?: Pa
 Compresses or packs an image into a file and uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,8 +90,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
-| [7800202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) |
+| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) |
 
 ## packToData
 
@@ -103,9 +101,11 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -128,15 +128,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToData
 
@@ -144,17 +144,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
+Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE：**> > If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is > released in advance. You need to check the code and ensure that the PixelMap object is released after this API > is called.
 
-> **NOTE：**
-> 
-> If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is
-> released in advance. You need to check the code and ensure that the PixelMap object is released after this API
-> is called.
+**Since:** 23
 
-**Since:** 13
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -177,15 +173,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToDataFromPixelmapSequence
 
@@ -195,7 +191,9 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 Encodes multiple PixelMap objects into GIF data. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>-End-->
 
@@ -218,8 +216,8 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) |
 
 ## packToFile
 
@@ -229,7 +227,9 @@ packToFile(source: ImageSource, fd: number, options: PackingOption, callback: As
 
 Encodes the image source into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
@@ -248,15 +248,15 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID |
 | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -266,7 +266,9 @@ packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<voi
 
 Encodes the image source into a file based on the specified encoding parameters. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -290,15 +292,15 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID |
 | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -306,15 +308,11 @@ Encodes the image source into a file based on the specified encoding parameters.
 packToFile(source: PixelMap, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
 
-> **NOTE：**
-> 
-> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
-> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
-> this API is called.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
@@ -333,15 +331,15 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID |
 | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -349,15 +347,11 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
 
-> **NOTE：**
-> 
-> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
-> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
-> this API is called.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -381,15 +375,15 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID |
 | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) |
-| [62980096](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) |
-| [62980115](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) |
-| [62980101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) |
-| [62980119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) |
-| [62980120](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
-| [62980106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) |
-| [62980172](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) |
-| [62980252](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) |
+| [62980096](../errorcode-image.md#62980096-operation-failed) |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) |
 
 ## packToFile
 
@@ -399,7 +393,9 @@ packToFile(picture: Picture, fd: number, options: PackingOption): Promise<void>
 
 Encodes the Picture into a file based on the specified encoding parameters. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -423,8 +419,8 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) |
 
 ## packToFileFromPixelmapSequence
 
@@ -434,7 +430,9 @@ packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: number, op
 
 Encodes multiple PixelMaps into a GIF file. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>--><!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>-End-->
 
@@ -458,8 +456,8 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) |
 
 ## packing
 
@@ -528,13 +526,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
-> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
-> released after this API is called.
+Compresses or re-encodes an image. This API uses an asynchronous callback to return the result. > **NOTE：**> > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
 
 **Since:** 8
 
@@ -562,13 +554,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
-> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
-> released after this API is called.
+Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE：**> > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
 
 **Since:** 8
 
@@ -603,7 +589,9 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -626,8 +614,8 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [7800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) |
 
 ## release
 
@@ -635,13 +623,11 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.
+Releases this ImagePacker instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-release(callback: AsyncCallback<void>): void--><!--Device-ImagePacker-release(callback: AsyncCallback<void>): void-End-->
 
@@ -659,13 +645,11 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImagePacker instance. This API uses a promise to return the result.
+Releases this ImagePacker instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-release(): Promise<void>--><!--Device-ImagePacker-release(): Promise<void>-End-->
 
@@ -687,7 +671,9 @@ Supported formats for image encoding, including jpeg, webp, png, heic&lt;sup&gt;
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-readonly supportedFormats: Array<string>--><!--Device-ImagePacker-readonly supportedFormats: Array<string>-End-->
 

@@ -12,13 +12,13 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-取消当前应用指定组下的通知。使用callback异步回调。
+取消当前应用指定组下的通知。使用callback异步回调。 通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。 取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
-通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -29,16 +29,16 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | groupName | string | 是 | 通知组名称，此名称需要在发布通知时通过 [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md#NotificationRequest)对象指定。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当取消当前应用指定组下的通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当取消当前应用指定组下的通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
 
@@ -81,13 +81,13 @@ notificationManager.cancelGroup(groupName, cancelGroupCallback);
 function cancelGroup(groupName: string): Promise<void>
 ```
 
-取消当前应用指定组下的通知。使用Promise异步回调。
+取消当前应用指定组下的通知。使用Promise异步回调。 通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。 取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
-通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
@@ -109,10 +109,10 @@ function cancelGroup(groupName: string): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [1600001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) | Internal error. |
-| [1600002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
-| [1600003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
 ## 示例
 

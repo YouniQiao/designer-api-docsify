@@ -8,7 +8,9 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 
 设置串口的配置参数。如果未调用该方法，使用默认配置参数（波特率：9600bps；数据位：8；校验位：0；停止位：1）。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void--><!--Device-serialManager-function setAttribute(portId: int, attribute: SerialAttribute): void-End-->
 
@@ -19,16 +21,16 @@ function setAttribute(portId: number, attribute: SerialAttribute): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [portId](arkts-basicservices-serialmanager-serialport-i.md) | number | 是 |
-| attribute | [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | 是 |
+| [attribute](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md) | [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [31400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [31400005](../../apis-basic-services-kit/errorcode-usb.md#31400005-设备未打开) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
 
 ## 示例
 

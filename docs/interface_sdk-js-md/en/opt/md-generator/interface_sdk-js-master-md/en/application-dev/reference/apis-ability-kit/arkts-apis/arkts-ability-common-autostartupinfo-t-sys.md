@@ -6,7 +6,9 @@ export type AutoStartupInfo = _AutoStartupInfo
 
 Level-2 module AutoStartupInfo.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

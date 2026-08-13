@@ -6,11 +6,13 @@
 function offSelectionComplete(callback?: Callback<SelectionInfo>): void
 ```
 
-取消订阅划词完成事件，与[onSelectionComplete](selectionManager.onSelectionComplete(callback: Callback&lt;SelectionInfo&gt;))搭配使用。
+取消订阅划词完成事件，与[onSelectionComplete](arkts-basicservices-selectionmanager-onselectioncomplete-f.md#onSelectionComplete)搭配使 用。
 
 **起始版本：** 24
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -22,7 +24,7 @@ function offSelectionComplete(callback?: Callback<SelectionInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i.md)&gt; | 否 | 需要取消的回调函数（即之前通过onSelectionComplete方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
+| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[SelectionInfo](arkts-basicservices-selectionmanager-selectioninfo-i-sys.md)&gt; | 否 | 需要取消的回调函数（即之前通过onSelectionComplete方法订阅时的回调实例）。参数不填写时，取消订阅对应的所有回调事件。 |
 
 ## 示例
 

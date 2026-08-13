@@ -10,6 +10,8 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void-End-->
@@ -27,8 +29,8 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 
 ## 示例
 
@@ -71,6 +73,8 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 **起始版本：** 16
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本16开始，该接口支持在原子化服务API中使用。
 
 <!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void--><!--Device-advertising-function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext,     needRefresh: boolean): void-End-->
@@ -89,8 +93,8 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 
 ## 示例
 

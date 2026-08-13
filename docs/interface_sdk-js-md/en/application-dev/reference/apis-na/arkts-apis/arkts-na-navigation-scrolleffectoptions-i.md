@@ -1,0 +1,80 @@
+# ScrollEffectOptions
+
+Defines the scroll effect options for the title bar.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface ScrollEffectOptions--><!--Device-unnamed-export declare interface ScrollEffectOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## blurEffectiveEndOffset
+
+```TypeScript
+blurEffectiveEndOffset?: LengthMetrics
+```
+
+The maximum sliding distance of the content area to enable the final blur style of the title bar. Default value: 8vp.
+
+**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ScrollEffectOptions-blurEffectiveEndOffset?: LengthMetrics--><!--Device-ScrollEffectOptions-blurEffectiveEndOffset?: LengthMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## blurEffectiveStartOffset
+
+```TypeScript
+blurEffectiveStartOffset?: LengthMetrics
+```
+
+The minimum sliding distance of the content area to enable the title bar sliding blur effect. Default value: 0vp.
+
+**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ScrollEffectOptions-blurEffectiveStartOffset?: LengthMetrics--><!--Device-ScrollEffectOptions-blurEffectiveStartOffset?: LengthMetrics-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## scrollEffectType
+
+```TypeScript
+scrollEffectType?: ScrollEffectType
+```
+
+Title bar scroll blur style. Default value: ScrollEffectType.COMMON_BLUR.
+
+**Type:** [ScrollEffectType](arkts-na-navigation-scrolleffecttype-e.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ScrollEffectOptions-scrollEffectType?: ScrollEffectType--><!--Device-ScrollEffectOptions-scrollEffectType?: ScrollEffectType-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+

@@ -1,15 +1,10 @@
 # AudioCapturer
 
-This interface provides APIs for audio capture.
+This interface provides APIs for audio capture. Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer) to create an AudioCapturer instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 8.
 
-Before calling any API in AudioCapturer, you must use  
-[createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createAudioCapturer)to create an AudioCapturer instance.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The initial APIs of this interface are supported since API version 8.
-
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioCapturer--><!--Device-audio-interface AudioCapturer-End-->
 
@@ -31,6 +26,8 @@ Unsubscribes from micIn audio data callback.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AudioCapturer-offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void--><!--Device-AudioCapturer-offReadMicInData(callback?: Callback<AudioCapturerMicInData>): void-End-->
@@ -49,9 +46,9 @@ Unsubscribes from micIn audio data callback.
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## onReadMicInData
 
@@ -59,9 +56,11 @@ Unsubscribes from micIn audio data callback.
 onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 ```
 
-Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback.If this callback and 'readData' callback are both subscribed, only this callback will be triggered.See [onReadData](#onReadData) for more details.The event is triggered when an audio buffer is available for reading more data.
+Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback. If this callback and 'readData' callback are both subscribed, only this callback will be triggered. See onReadData for more details. The event is triggered when an audio buffer is available for reading more data.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,8 +80,8 @@ Subscribes to micIn audio data callback. This callback has higher priority than 
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setInputDeviceToAccessory
 
@@ -90,9 +89,11 @@ Subscribes to micIn audio data callback. This callback has higher priority than 
 setInputDeviceToAccessory(): void
 ```
 
-Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other capturers' devices will not be affected by this method.This method can only be used before the capture stream starts. Besides,if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
+Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY. Other capturers' devices will not be affected by this method. This method can only be used before the capture stream starts. Besides, if audio accessory is not connected, this method will report fail. After calling this function, the input device of this capturer will not be affected by other interfaces.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioCapturer-setInputDeviceToAccessory(): void--><!--Device-AudioCapturer-setInputDeviceToAccessory(): void-End-->
 
@@ -104,5 +105,5 @@ Sets default input device of this Capturer to DEVICE_TYPE_ACCESSORY.Other captur
 
 | Error Code ID |
 | --- |
-| [6800103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800103-unsupported-state) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [6800103](../errorcode-audio.md#6800103-unsupported-state) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

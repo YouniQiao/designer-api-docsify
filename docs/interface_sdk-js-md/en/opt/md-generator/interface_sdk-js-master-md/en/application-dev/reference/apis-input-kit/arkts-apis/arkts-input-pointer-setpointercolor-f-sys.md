@@ -12,13 +12,11 @@ import { pointer } from '@kit.InputKit';
 function setPointerColor(color: number, callback: AsyncCallback<void>): void
 ```
 
-Sets the mouse pointer color. This API uses an asynchronous callback to return the result.
+Sets the mouse pointer color. This API uses an asynchronous callback to return the result. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
-> **NOTE：**
-> 
-> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void--><!--Device-pointer-function setPointerColor(color: int, callback: AsyncCallback<void>): void-End-->
 
@@ -37,8 +35,8 @@ Sets the mouse pointer color. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -78,13 +76,11 @@ struct Index {
 function setPointerColor(color: number): Promise<void>
 ```
 
-Sets the mouse pointer color. This API uses a promise to return the result.
+Sets the mouse pointer color. This API uses a promise to return the result. > **NOTE：**> > When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
 
-> **NOTE：**
-> 
-> When performing this operation, you need to connect an external device, such as a mouse or Bluetooth device.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 <!--Device-pointer-function setPointerColor(color: int): Promise<void>--><!--Device-pointer-function setPointerColor(color: int): Promise<void>-End-->
 
@@ -108,8 +104,8 @@ Sets the mouse pointer color. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

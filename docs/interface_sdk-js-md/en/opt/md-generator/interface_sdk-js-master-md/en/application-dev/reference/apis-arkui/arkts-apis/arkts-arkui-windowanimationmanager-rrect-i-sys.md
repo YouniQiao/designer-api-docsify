@@ -2,7 +2,9 @@
 
 Round rect.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-export interface RRect--><!--Device-windowAnimationManager-export interface RRect-End-->
 
@@ -26,7 +28,9 @@ Height of the round rect, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RRect-height: double--><!--Device-RRect-height: double-End-->
 
@@ -44,7 +48,9 @@ The X-axis coordinate of the upper left vertex of the round rect, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RRect-left: double--><!--Device-RRect-left: double-End-->
 
@@ -62,7 +68,9 @@ Radius of the round corner of the round rect, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RRect-radius: double--><!--Device-RRect-radius: double-End-->
 
@@ -80,7 +88,9 @@ The Y-axis coordinate of the upper left vertex of the round rect, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RRect-top: double--><!--Device-RRect-top: double-End-->
 
@@ -98,7 +108,9 @@ Width of the round rect, in pixels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RRect-width: double--><!--Device-RRect-width: double-End-->
 

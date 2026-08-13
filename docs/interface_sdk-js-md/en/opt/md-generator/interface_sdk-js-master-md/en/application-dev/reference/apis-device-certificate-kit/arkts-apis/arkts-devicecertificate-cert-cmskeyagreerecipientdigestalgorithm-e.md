@@ -2,7 +2,9 @@
 
 Enumerates the digest algorithms of the CMS KeyAgree type.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm--><!--Device-cert-enum CmsKeyAgreeRecipientDigestAlgorithm-End-->
 
@@ -16,9 +18,11 @@ SHA256 = 0
 
 SHA-256.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA256 = 0-End-->
 
@@ -32,9 +36,11 @@ SHA384 = 1
 
 SHA-384.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA384 = 1-End-->
 
@@ -48,9 +54,11 @@ SHA512 = 2
 
 SHA-512.
 
-**Since:** 22
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2--><!--Device-CmsKeyAgreeRecipientDigestAlgorithm-SHA512 = 2-End-->
 

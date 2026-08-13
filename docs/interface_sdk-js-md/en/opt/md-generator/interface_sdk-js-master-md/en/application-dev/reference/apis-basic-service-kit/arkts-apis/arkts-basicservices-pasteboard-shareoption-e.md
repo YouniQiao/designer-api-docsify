@@ -2,7 +2,9 @@
 
 Enumerates the pasteable ranges of PasteData.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-enum ShareOption--><!--Device-pasteboard-enum ShareOption-End-->
 
@@ -16,7 +18,9 @@ INAPP = 0
 
 Only intra-application pasting is allowed.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ LOCALDEVICE = 1
 
 Paste is allowed in any application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,9 +52,7 @@ Paste is allowed in any application.
 CROSSDEVICE = 2
 ```
 
-Paste is allowed in any application across devices.
-
-This API is deprecated since API version 12 without any alternative API or method.
+Paste is allowed in any application across devices. This API is deprecated since API version 12 without any alternative API or method.
 
 **Since:** 9
 

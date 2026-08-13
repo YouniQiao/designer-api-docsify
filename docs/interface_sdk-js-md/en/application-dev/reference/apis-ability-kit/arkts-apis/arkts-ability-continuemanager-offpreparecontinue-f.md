@@ -16,7 +16,9 @@ Unregister prepareContinue event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -29,11 +31,11 @@ Unregister prepareContinue event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | Yes | the ability context. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | No | Used to handle ('prepareContinue') command. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | No | Used to handle ('prepareContinue') command. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16300501](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-the-system-ability-works-abnormally) | the system ability work abnormally. |
 

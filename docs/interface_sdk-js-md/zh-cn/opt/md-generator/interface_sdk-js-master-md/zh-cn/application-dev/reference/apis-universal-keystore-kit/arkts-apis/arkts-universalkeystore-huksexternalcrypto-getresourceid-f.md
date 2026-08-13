@@ -10,6 +10,8 @@ function getResourceId(providerName: string, params: HuksExternalCryptoParam[]):
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-huksExternalCrypto-function getResourceId(providerName: string, params: HuksExternalCryptoParam[]): Promise<string>--><!--Device-huksExternalCrypto-function getResourceId(providerName: string, params: HuksExternalCryptoParam[]): Promise<string>-End-->
@@ -33,15 +35,15 @@ function getResourceId(providerName: string, params: HuksExternalCryptoParam[]):
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000020](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-依赖的模块报错) |
-| [12000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000002-缺少密钥算法参数) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-设备或资源繁忙) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) |
+| [12000002](../errorcode-huks.md#12000002-缺少密钥算法参数) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
+| [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) |
 
 ## 示例
 

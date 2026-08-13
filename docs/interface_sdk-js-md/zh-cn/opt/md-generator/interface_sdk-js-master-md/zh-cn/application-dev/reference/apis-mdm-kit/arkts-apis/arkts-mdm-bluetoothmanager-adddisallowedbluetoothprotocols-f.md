@@ -10,6 +10,8 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number,  protoc
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,9 +32,9 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number,  protoc
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 
@@ -66,18 +68,11 @@ try {
 function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array<Protocol>, policy: TransferPolicy): void
 ```
 
-添加蓝牙协议至禁用名单。添加后，指定用户将无法根据指定的传输策略使用该禁用名单中的蓝牙协议。
-
-> **说明：**
-> 
-> 1. 通过该接口禁用GATT或SPP协议，对系统服务和系统应用不生效。
-> 
-> 2. 当传入SPP协议时，policy参数只能传入TransferPolicy.RECEIVE_SEND，否则会返回错误码9200012。
-> 
-> 3. 本接口与[addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#addDisallowedBluetoothProtocols)接口为
-> 重载接口。本接口增加了policy参数用于指定传输策略，可以更精细地控制蓝牙协议的禁用行为（如仅禁止发送、仅禁止接收或同时禁止发送和接收）。如果同时使用两个接口配置了禁用策略，策略会合并生效。
+添加蓝牙协议至禁用名单。添加后，指定用户将无法根据指定的传输策略使用该禁用名单中的蓝牙协议。 > **说明：** > > 1. 通过该接口禁用GATT或SPP协议，对系统服务和系统应用不生效。 > > 2. 当传入SPP协议时，policy参数只能传入TransferPolicy.RECEIVE_SEND，否则会返回错误码9200012。 > > 3. 本接口与[addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#addDisallowedBluetoothProtocols)接口为 > 重载接口。本接口增加了policy参数用于指定传输策略，可以更精细地控制蓝牙协议的禁用行为（如仅禁止发送、仅禁止接收或同时禁止发送和接收）。如果同时使用两个接口配置了禁用策略，策略会合并生效。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -100,10 +95,10 @@ function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protoco
 
 | 错误码ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

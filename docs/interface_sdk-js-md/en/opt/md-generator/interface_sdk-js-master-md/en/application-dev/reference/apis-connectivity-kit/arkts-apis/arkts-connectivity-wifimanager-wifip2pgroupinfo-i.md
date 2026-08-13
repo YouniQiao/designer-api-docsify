@@ -2,7 +2,9 @@
 
 P2P group information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface WifiP2pGroupInfo--><!--Device-wifiManager-interface WifiP2pGroupInfo-End-->
 
@@ -24,7 +26,9 @@ Client list
 
 **Type:** WifiP2pDevice[]
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]--><!--Device-WifiP2pGroupInfo-clientDevices: WifiP2pDevice[]-End-->
 
@@ -40,7 +44,9 @@ Frequency
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-frequency: int--><!--Device-WifiP2pGroupInfo-frequency: int-End-->
 
@@ -56,7 +62,9 @@ Group owner IP address
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-goIpAddress: string--><!--Device-WifiP2pGroupInfo-goIpAddress: string-End-->
 
@@ -72,7 +80,9 @@ Group name
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-groupName: string--><!--Device-WifiP2pGroupInfo-groupName: string-End-->
 
@@ -90,7 +100,27 @@ Interface name
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-WifiP2pGroupInfo-interface: string--><!--Device-WifiP2pGroupInfo-interface: string-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.P2P
+
+## interfaceName
+
+```TypeScript
+interfaceName: string
+```
+
+Interface name
+
+**Type:** string
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-WifiP2pGroupInfo-interfaceName: string--><!--Device-WifiP2pGroupInfo-interfaceName: string-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.P2P
 
@@ -104,7 +134,9 @@ Indicates whether it is group owner
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-isP2pGo: boolean--><!--Device-WifiP2pGroupInfo-isP2pGo: boolean-End-->
 
@@ -120,7 +152,9 @@ Network ID
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-networkId: int--><!--Device-WifiP2pGroupInfo-networkId: int-End-->
 
@@ -136,7 +170,9 @@ Group owner information
 
 **Type:** WifiP2pDevice
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice--><!--Device-WifiP2pGroupInfo-ownerInfo: WifiP2pDevice-End-->
 
@@ -152,7 +188,9 @@ The group passphrase
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiP2pGroupInfo-passphrase: string--><!--Device-WifiP2pGroupInfo-passphrase: string-End-->
 

@@ -4,6 +4,8 @@ animator简易动画参数对象。与AnimatorOptions相比，部分动画参数
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ constructor(begin: number, end: number)
 SimpleAnimatorOptions的构造函数。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,7 +39,7 @@ SimpleAnimatorOptions的构造函数。
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -66,6 +70,8 @@ delay(delay: number): SimpleAnimatorOptions
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -88,7 +94,7 @@ delay(delay: number): SimpleAnimatorOptions
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -119,6 +125,8 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -141,7 +149,7 @@ direction(direction: PlayMode): SimpleAnimatorOptions
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -172,6 +180,8 @@ duration(duration: number): SimpleAnimatorOptions
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -194,7 +204,7 @@ duration(duration: number): SimpleAnimatorOptions
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -225,6 +235,8 @@ easing(curve: string): SimpleAnimatorOptions
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -247,7 +259,7 @@ easing(curve: string): SimpleAnimatorOptions
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -278,6 +290,8 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -300,7 +314,7 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -331,6 +345,8 @@ iterations(iterations: number): SimpleAnimatorOptions
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -353,7 +369,7 @@ iterations(iterations: number): SimpleAnimatorOptions
 
 ## 示例
 
-完整示例请参考[基于ArkTS扩展的声明式开发范式](#基于arkts扩展的声明式开发范式)。
+完整示例请参考基于ArkTS扩展的声明式开发范式。
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';

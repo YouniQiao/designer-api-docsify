@@ -1,11 +1,12 @@
 # RestartFlag
 
-Enumerates the application restart flags. This enum is used as an input parameter of   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery).
+Enumerates the application restart flags. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appRecovery-enum RestartFlag--><!--Device-appRecovery-enum RestartFlag-End-->
 
@@ -19,9 +20,11 @@ ALWAYS_RESTART = 0
 
 The application is restarted in all cases.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,9 +40,11 @@ RESTART_WHEN_JS_CRASH = 0x0001
 
 The application is restarted in the case of JS_CRASH.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -55,9 +60,11 @@ RESTART_WHEN_APP_FREEZE = 0x0002
 
 The application is restarted in the case of APP_FREEZE.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -73,9 +80,11 @@ NO_RESTART = 0xFFFF
 
 The application is not restarted in any case.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,7 +102,9 @@ Restart if the current app process encounters a cppcrash
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

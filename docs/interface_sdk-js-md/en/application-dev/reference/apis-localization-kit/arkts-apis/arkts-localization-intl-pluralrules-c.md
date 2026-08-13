@@ -8,7 +8,7 @@ Provides the capability for obtaining the plural rule type.
 
 **Deprecated since:** 20
 
-**Substitutes:** [PluralRules]]([Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules))
+**Substitutes:** [Intl.PluralRules](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules)
 
 <!--Device-intl-export class PluralRules--><!--Device-intl-export class PluralRules-End-->
 
@@ -34,7 +34,7 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor]]([Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules))
+**Substitutes:** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -65,7 +65,7 @@ Creates a **PluralRules** object to obtain the singular-plural type of numbers.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor]]([Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules))
+**Substitutes:** [Intl.PluralRules.constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/PluralRules)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -103,7 +103,7 @@ Obtains the singular-plural type of the specified number.
 
 **Deprecated since:** 20
 
-**Substitutes:** [select]]([Intl.PluralRules.select](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select))
+**Substitutes:** [Intl.PluralRules.select](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/PluralRules/select)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

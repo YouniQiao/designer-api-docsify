@@ -4,6 +4,8 @@ Enumerates the VM instance types.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-errorManager-export enum InstanceType--><!--Device-errorManager-export enum InstanceType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
@@ -17,6 +19,8 @@ TASKPOOL = 2
 TaskPool VM instance.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -34,6 +38,8 @@ Worker VM instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-InstanceType-WORKER = 1--><!--Device-InstanceType-WORKER = 1-End-->
@@ -50,6 +56,8 @@ Main VM instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-InstanceType-MAIN = 0--><!--Device-InstanceType-MAIN = 0-End-->
@@ -62,10 +70,11 @@ Main VM instance.
 CUSTOM = 3
 ```
 
-VM instance created from the local code using   
-[napi_create_ark_runtime](../../../reference/native-lib/napi.md#napi_create_ark_runtime).
+VM instance created from the local code using [napi_create_ark_runtime](../../../reference/native-lib/napi.md#napi_create_ark_runtime).
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

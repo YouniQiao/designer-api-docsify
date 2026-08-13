@@ -1,13 +1,10 @@
 # PersistentStorage
 
-For details about how to use PersistentStorage on the UI, see  
-[PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md).
-
-> **NOTE：**
-
-> Since API version 12, PersistentStorage supports **null** and **undefined**.
+For details about how to use PersistentStorage on the UI, see [PersistentStorage: Persisting Application State](../../../ui/state-management/arkts-persiststorage.md). > **NOTE：**> Since API version 12, PersistentStorage supports **null** and **undefined**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class PersistentStorage--><!--Device-unnamed-declare class PersistentStorage-End-->
 
@@ -19,15 +16,13 @@ For details about how to use PersistentStorage on the UI, see
 static DeleteProp(key: string): void
 ```
 
-Performs the reverse operation of [PersistProp](#PersistProp). Specifically, this API deletes the property corresponding to the specified key from  
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on  
-[AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage.
+Performs the reverse operation of PersistProp. Specifically, this API deletes the property corresponding to the specified key from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [deleteProp](#deleteProp)
+**Substitutes:** deleteProp
 
 <!--Device-PersistentStorage-static DeleteProp(key: string): void--><!--Device-PersistentStorage-static DeleteProp(key: string): void-End-->
 
@@ -57,7 +52,7 @@ Returns an array of all persisted property names.
 
 **Deprecated since:** 10
 
-**Substitutes:** [keys](#keys)
+**Substitutes:** keys
 
 <!--Device-PersistentStorage-static Keys(): Array<string>--><!--Device-PersistentStorage-static Keys(): Array<string>-End-->
 
@@ -81,25 +76,13 @@ let keys: Array<string> = PersistentStorage.Keys();
 static PersistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md)to a file. This API is usually called before access to AppStorage.
-
-The order for determining the type and value of a property is as follows:
-
-1. If the property with the specified key is found in the  
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
-
-2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
-
-3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
-**defaultValue**, and persisted.
-
-According to the preceding initialization process, if the property exists in AppStorage, its value will be used,overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage. The order for determining the type and value of a property is as follows: 1. If the property with the specified key is found in the [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage. 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted. 3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of **defaultValue**, and persisted. According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [persistProp](#persistProp)
+**Substitutes:** persistProp
 
 <!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void--><!--Device-PersistentStorage-static PersistProp<T>(key: string, defaultValue: T): void-End-->
 
@@ -129,13 +112,13 @@ static PersistProps(
   ): void
 ```
 
-Persists multiple properties. This API is similar to [PersistProp](#PersistProp), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+Persists multiple properties. This API is similar to PersistProp, but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [PersistProps](#PersistProps)
+**Substitutes:** PersistProps
 
 <!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void--><!--Device-PersistentStorage-static PersistProps(    properties: {      key: string;      defaultValue: any;    }[],  ): void-End-->
 
@@ -156,12 +139,11 @@ Persists multiple properties. This API is similar to [PersistProp](#PersistProp)
 static deleteProp(key: string): void
 ```
 
-Performs the reverse operation of [persistProp](#persistProp). Specifically, this API deletes the property corresponding to the specified **key** from  
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on  
-[AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the  
-[persistProp](#persistProp) API.
+Performs the reverse operation of persistProp. Specifically, this API deletes the property corresponding to the specified **key** from [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md). Subsequent operations on [AppStorage](../../../ui/state-management/arkts-appstorage.md) do not affect data in PersistentStorage. This operation removes the corresponding key from the persistence file. To persist the property again, you can call the persistProp API.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -191,6 +173,8 @@ Returns an array of all persisted property names.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PersistentStorage-static keys(): Array<string>--><!--Device-PersistentStorage-static keys(): Array<string>-End-->
@@ -215,21 +199,11 @@ let keys: Array<string> = PersistentStorage.keys();
 static persistProp<T>(key: string, defaultValue: T): void
 ```
 
-Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md)to a file. This API is usually called before access to AppStorage.
-
-The order for determining the type and value of a property is as follows:
-
-1. If the property with the specified key is found in the  
-[PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage.
-
-2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted.
-
-3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of  
-**defaultValue**, and persisted.
-
-According to the preceding initialization process, if the property exists in AppStorage, its value will be used,overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
+Persists the property corresponding to **key** from [AppStorage](../../../ui/state-management/arkts-appstorage.md) to a file. This API is usually called before access to AppStorage. The order for determining the type and value of a property is as follows: 1. If the property with the specified key is found in the [PersistentStorage](../../../ui/state-management/arkts-persiststorage.md) file, the corresponding property is created in AppStorage and initialized with the value found in PersistentStorage. 2. If the property with the specified key is not found in the PersistentStorage file, AppStorage is searched for the property. If the property is found, it is persisted. 3. If no matching property is found in AppStorage, it is created in AppStorage, initialized with the value of **defaultValue**, and persisted. According to the preceding initialization process, if the property exists in AppStorage, its value will be used, overriding the value in the PersistentStorage file. Because AppStorage stores data in the memory, the property value becomes nonpersistent.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -254,9 +228,11 @@ For details about how to use persistProp, see [Accessing a PersistentStorage-Ini
 static persistProps(props: PersistPropsOptions[]): void
 ```
 
-Persists multiple properties. This API is similar to [persistProp](#persistProp), but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
+Persists multiple properties. This API is similar to persistProp, but allows multiple properties to be persisted at once, making it suitable for initializing during application startup.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

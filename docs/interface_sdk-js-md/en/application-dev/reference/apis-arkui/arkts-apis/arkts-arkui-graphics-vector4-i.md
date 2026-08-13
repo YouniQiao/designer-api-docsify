@@ -1,12 +1,14 @@
 # Vector4
 
-Defined a vector with four number values.
+Defines a vector that contains the x, y, z, and w coordinate values.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export interface Vector4--><!--Device-unnamed-export interface Vector4-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Vector4--><!--Device-unnamed-interface Vector4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,19 @@ Defined a vector with four number values.
 w: double
 ```
 
-Value for w-axis of the vector.Value range: (-∞, +∞).
+W coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Vector4-w: double--><!--Device-Vector4-w: double-End-->
 
@@ -36,15 +42,19 @@ Value for w-axis of the vector.Value range: (-∞, +∞).
 x: double
 ```
 
-Value for x-axis of the vector.Value range:(-∞, +∞).
+X coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Vector4-x: double--><!--Device-Vector4-x: double-End-->
 
@@ -56,15 +66,19 @@ Value for x-axis of the vector.Value range:(-∞, +∞).
 y: double
 ```
 
-Value for y-axis of the vector.Value range: (-∞, +∞).
+Y coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Vector4-y: double--><!--Device-Vector4-y: double-End-->
 
@@ -76,15 +90,19 @@ Value for y-axis of the vector.Value range: (-∞, +∞).
 z: double
 ```
 
-Value for z-axis of the vector.Value range: (-∞, +∞).
+Z coordinate value of the vector. Value range: (-∞, +∞).
 
 **Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Vector4-z: double--><!--Device-Vector4-z: double-End-->
 

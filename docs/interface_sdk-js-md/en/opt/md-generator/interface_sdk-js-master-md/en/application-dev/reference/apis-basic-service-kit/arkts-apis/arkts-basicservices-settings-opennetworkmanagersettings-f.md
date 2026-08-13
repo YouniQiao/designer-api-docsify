@@ -14,9 +14,11 @@ function openNetworkManagerSettings(context: Context): Promise<boolean>
 
 Open the network manager settings page.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-settings-function openNetworkManagerSettings(context: Context): Promise<boolean>--><!--Device-settings-function openNetworkManagerSettings(context: Context): Promise<boolean>-End-->
 
@@ -36,8 +38,8 @@ Open the network manager settings page.
 
 | Error Code ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14800000](../../apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
+| [14800010](../../apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
 
 ## Examples
 

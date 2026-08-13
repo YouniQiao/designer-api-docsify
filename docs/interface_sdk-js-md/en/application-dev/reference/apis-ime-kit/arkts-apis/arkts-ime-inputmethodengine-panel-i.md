@@ -1,11 +1,12 @@
 # Panel
 
-In the following API examples, you must first use   
-[createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel)to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createPanel) to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface Panel--><!--Device-inputMethodEngine-interface Panel-End-->
 
@@ -23,23 +24,13 @@ import { inputMethodEngine } from '@kit.IMEKit';
 adjustPanelRect(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete.
+Adjusts the panel rectangle. After the API is called, the adjust request is submitted to the input method framework, but the execution is not complete. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. > > This API returns the result synchronously. The return only indicates that the system receives the setting > request, not that the setting is complete. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> This API returns the result synchronously. The return only indicates that the system receives the setting
-> request, not that the setting is complete.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: PanelRect): void-End-->
 
@@ -56,8 +47,8 @@ Adjusts the panel rectangle. After the API is called, the adjust request is subm
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -92,27 +83,13 @@ panel.adjustPanelRect(panelFlag, panelRect);
 adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Adjusts the panel rectangle, and customizes the avoid area and touch area.
+Adjusts the panel rectangle, and customizes the avoid area and touch area. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. This API is compatible with > [adjustPanelRect](#adjustPanelRect). If the > input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, > [adjustPanelRect](#adjustPanelRect) is called by > default. > > This API returns the result synchronously. The return only indicates that the system receives the setting > request, not that the setting is complete. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with
-> [adjustPanelRect](#adjustPanelRect). If the
-> input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [adjustPanelRect](#adjustPanelRect) is called by
-> default.
-> 
-> This API returns the result synchronously. The return only indicates that the system receives the setting
-> request, not that the setting is complete.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+**Since:** 23
 
-**Since:** 15
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void--><!--Device-Panel-adjustPanelRect(flag: PanelFlag, rect: EnhancedPanelRect): void-End-->
 
@@ -129,9 +106,9 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -173,9 +150,11 @@ changeFlag(flag: PanelFlag): void
 
 Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag)) of this input method panel. This API only works for [SOFT_KEYBOARD](arkts-ime-inputmethodengine-paneltype-e.md#PanelType) panels.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-changeFlag(flag: PanelFlag): void--><!--Device-Panel-changeFlag(flag: PanelFlag): void-End-->
 
@@ -191,7 +170,7 @@ Changes the state type ([PanelFlag](arkts-ime-inputmethodengine-panelflag-e.md#P
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -202,21 +181,17 @@ panel.changeFlag(panelFlag);
 
 ## getDisplayId
 
-ArkTS-Dyn:
-```TypeScript
-getDisplayId(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDisplayId(): Promise<long>
 ```
 
 Obtains the window ID. This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-getDisplayId(): Promise<long>--><!--Device-Panel-getDisplayId(): Promise<long>-End-->
 
@@ -226,14 +201,14 @@ Obtains the window ID. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the result. It returns **displayId** of the window. |
+| Promise&lt;long&gt; | Promise used to return the result. It returns **displayId** of the window. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -255,9 +230,11 @@ getImmersiveMode(): ImmersiveMode
 
 Obtains the immersive mode of the input method application.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-getImmersiveMode(): ImmersiveMode--><!--Device-Panel-getImmersiveMode(): ImmersiveMode-End-->
 
@@ -287,6 +264,8 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>--><!--Device-Panel-getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
@@ -307,9 +286,9 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
-| [12800022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -340,13 +319,13 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>
 ```
 
-Get the current insets of the system panel of a specified display.
-
-&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt;&lt;p&gt;This interface only supports obtaining the current insets values of a display.When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
+Get the current insets of the system panel of a specified display. &lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED or FLG_FLOATING.&lt;/p&gt; &lt;p&gt;This interface only supports obtaining the current insets values of a display. When the display undergoes orientation changes, or is folded or unfolded, it is necessary to reinvoke this interface to get the latest values.&lt;/p&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>--><!--Device-Panel-getSystemPanelCurrentInsets(displayId: long): Promise<SystemPanelInsets | null>-End-->
 
@@ -368,9 +347,9 @@ Get the current insets of the system panel of a specified display.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
-| [12800022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## hide
 
@@ -380,9 +359,11 @@ hide(callback: AsyncCallback<void>): void
 
 Hides this panel. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-hide(callback: AsyncCallback<void>): void--><!--Device-Panel-hide(callback: AsyncCallback<void>): void-End-->
 
@@ -392,7 +373,7 @@ Hides this panel. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -416,9 +397,11 @@ hide(): Promise<void>
 
 Hides this panel. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-hide(): Promise<void>--><!--Device-Panel-hide(): Promise<void>-End-->
 
@@ -444,21 +427,17 @@ panel.hide().then(() => {
 
 ## moveTo
 
-ArkTS-Dyn:
-```TypeScript
-moveTo(x: number, y: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveTo(x: int, y: int, callback: AsyncCallback<void>): void
 ```
 
 Moves this input method panel to the specified position. This API uses an asynchronous callback to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) state.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void--><!--Device-Panel-moveTo(x: int, y: int, callback: AsyncCallback<void>): void-End-->
 
@@ -468,15 +447,15 @@ Moves this input method panel to the specified position. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| x | int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
+| y | int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -494,21 +473,17 @@ panel.moveTo(300, 300, (err: BusinessError) => {
 
 ## moveTo
 
-ArkTS-Dyn:
-```TypeScript
-moveTo(x: number, y: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 moveTo(x: int, y: int): Promise<void>
 ```
 
 Moves this input method panel to the specified position. This API uses a promise to return the result. This API does not work on panels in the [FLG_FIXED](arkts-ime-inputmethodengine-panelflag-e.md#PanelFlag) state.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-moveTo(x: int, y: int): Promise<void>--><!--Device-Panel-moveTo(x: int, y: int): Promise<void>-End-->
 
@@ -518,8 +493,8 @@ Moves this input method panel to the specified position. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
+| x | int | Yes | Distance to move along the horizontal axis, in px. A positive value indicates moving rightwards. The value must be an integer. |
+| y | int | Yes | Distance to move along the vertical axis, in px. A positive value indicates moving downwards. The value must be an integer. |
 
 **Return value:**
 
@@ -531,7 +506,7 @@ Moves this input method panel to the specified position. This API uses a promise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
 ## Examples
 
@@ -545,19 +520,21 @@ panel.moveTo(300, 300).then(() => {
 });
 ```
 
-## off('show')
+## offHide
 
 ```TypeScript
-off(type: 'show', callback?: () => void): void
+offHide(callback?: Callback<void>): void
 ```
 
-Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+Unregisters panel hide event.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-Panel-off(type: 'show', callback?: () => void): void--><!--Device-Panel-off(type: 'show', callback?: () => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-Panel-offHide(callback?: Callback<void>): void--><!--Device-Panel-offHide(callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -565,22 +542,57 @@ Disables listening for the show event of this panel. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'show' | Yes | Event type, which is **'show'**. |
-| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | the callback to Unregister. |
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-
-## Examples
+## offShow
 
 ```TypeScript
-panel.off('show');
+offShow(callback?: Callback<void>): void
 ```
 
-## off('hide')
+Unregisters panel show event.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-Panel-offShow(callback?: Callback<void>): void--><!--Device-Panel-offShow(callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
+
+## offSizeChange
+
+```TypeScript
+offSizeChange(callback?: SizeChangeCallback): void
+```
+
+Unsubscribe 'sizeChange' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void--><!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | SizeChangeCallback | No | optional, the callback called when the panel size changes. |
+
+## off_hide
 
 ```TypeScript
 off(type: 'hide', callback?: () => void): void
@@ -591,6 +603,8 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-off(type: 'hide', callback?: () => void): void--><!--Device-Panel-off(type: 'hide', callback?: () => void): void-End-->
 
@@ -607,7 +621,7 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -615,32 +629,56 @@ Disables listening for the hide event of this panel. This API uses an asynchrono
 panel.off('hide');
 ```
 
-## off('sizeChange')
+## off_show
+
+```TypeScript
+off(type: 'show', callback?: () => void): void
+```
+
+Disables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-Panel-off(type: 'show', callback?: () => void): void--><!--Device-Panel-off(type: 'show', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'show' | Yes | Event type, which is **'show'**. |
+| callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+panel.off('show');
+```
+
+## off_sizeChange
 
 ```TypeScript
 off(type: 'sizeChange', callback?: SizeChangeCallback): void
 ```
 
-Disables listening for the panel size change. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
-> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
-> the actual panel size to refresh the panel layout.
-> 
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](window.Size) type.
-> 
-> - Since API version 15, after the
-> [adjustPanelRect](#adjustPanelRect-1) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to
-> the callback function of this API.
+Disables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the window.Size type. > > - Since API version 15, after the > [adjustPanelRect](#adjustPanelRect) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to > the callback function of this API.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void--><!--Device-Panel-off(type: 'sizeChange', callback?: SizeChangeCallback): void-End-->
 
@@ -663,19 +701,21 @@ panel.off('sizeChange', (windowSize: window.Size) => {
 });
 ```
 
-## offHide
+## onHide
 
 ```TypeScript
-offHide(callback?: Callback<void>): void
+onHide(callback: Callback<void>): void
 ```
 
-Unregisters panel hide event.
+Registers panel hide event. &lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-Panel-offHide(callback?: Callback<void>): void--><!--Device-Panel-offHide(callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-Panel-onHide(callback: Callback<void>): void--><!--Device-Panel-onHide(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -683,21 +723,23 @@ Unregisters panel hide event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | the callback to Unregister. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
 
-## offShow
+## onShow
 
 ```TypeScript
-offShow(callback?: Callback<void>): void
+onShow(callback: Callback<void>): void
 ```
 
-Unregisters panel show event.
+Registers panel show event. &lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-Panel-offShow(callback?: Callback<void>): void--><!--Device-Panel-offShow(callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-Panel-onShow(callback: Callback<void>): void--><!--Device-Panel-onShow(callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -705,45 +747,23 @@ Unregisters panel show event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | optional, the callback called when the panel shows. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
 
-## offSizeChange
+## onSizeChange
 
 ```TypeScript
-offSizeChange(callback?: SizeChangeCallback): void
+onSizeChange(callback: SizeChangeCallback): void
 ```
 
-Unsubscribe 'sizeChange' event.
-
-&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
+Subscribe 'sizeChange' event. &lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void--><!--Device-Panel-offSizeChange(callback?: SizeChangeCallback): void-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | SizeChangeCallback | No | optional, the callback called when the panel size changes. |
-
-## on('show')
-
-```TypeScript
-on(type: 'show', callback: () => void): void
-```
-
-Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-<!--Device-Panel-on(type: 'show', callback: () => void): void--><!--Device-Panel-on(type: 'show', callback: () => void): void-End-->
+<!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void--><!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
@@ -751,18 +771,9 @@ Enables listening for the show event of this panel. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'show' | Yes | Event type, which is **'show'**. |
-| callback | () =&gt; void | Yes | Callback used to return the result. |
+| callback | SizeChangeCallback | Yes | the callback called when the panel size changes. |
 
-## Examples
-
-```TypeScript
-panel.on('show', () => {
-  console.info('Panel is showing.');
-});
-```
-
-## on('hide')
+## on_hide
 
 ```TypeScript
 on(type: 'hide', callback: () => void): void
@@ -773,6 +784,8 @@ Enables listening for the hide event of this panel. This API uses an asynchronou
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-on(type: 'hide', callback: () => void): void--><!--Device-Panel-on(type: 'hide', callback: () => void): void-End-->
 
@@ -793,32 +806,52 @@ panel.on('hide', () => {
 });
 ```
 
-## on('sizeChange')
+## on_show
+
+```TypeScript
+on(type: 'show', callback: () => void): void
+```
+
+Enables listening for the show event of this panel. This API uses an asynchronous callback to return the result.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
+
+<!--Device-Panel-on(type: 'show', callback: () => void): void--><!--Device-Panel-on(type: 'show', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'show' | Yes | Event type, which is **'show'**. |
+| callback | () =&gt; void | Yes | Callback used to return the result. |
+
+## Examples
+
+```TypeScript
+panel.on('show', () => {
+  console.info('Panel is showing.');
+});
+```
+
+## on_sizeChange
 
 ```TypeScript
 on(type: 'sizeChange', callback: SizeChangeCallback): void
 ```
 
-Enables listening for the panel size change. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based
-> on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain
-> the actual panel size to refresh the panel layout.
-> 
-> - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory
-> parameters of the [window.Size](window.Size) type.
-> 
-> - Since API version 15, after the
-> [adjustPanelRect](#adjustPanelRect-1) API
-> is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to
-> the callback function of this API.
+Enables listening for the panel size change. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. When you call **adjustPanelRect** to adjust the panel size, the system calculates the final value based > on certain rules (for example, whether the panel size exceeds the screen). This callback can be used to obtain > the actual panel size to refresh the panel layout. > > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory > parameters of the window.Size type. > > - Since API version 15, after the > [adjustPanelRect](#adjustPanelRect) API > is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md#KeyboardArea) type is added to > the callback function of this API.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void--><!--Device-Panel-on(type: 'sizeChange', callback: SizeChangeCallback): void-End-->
 
@@ -846,104 +879,19 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
 });
 ```
 
-## onHide
-
-```TypeScript
-onHide(callback: Callback<void>): void
-```
-
-Registers panel hide event.
-
-&lt;p&gt;The "hide" events are triggered when the panel is hidden.&lt;/p&gt;
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-Panel-onHide(callback: Callback<void>): void--><!--Device-Panel-onHide(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel hides. |
-
-## onShow
-
-```TypeScript
-onShow(callback: Callback<void>): void
-```
-
-Registers panel show event.
-
-&lt;p&gt;The "show" events are triggered when the panel is shown.&lt;/p&gt;
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-Panel-onShow(callback: Callback<void>): void--><!--Device-Panel-onShow(callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | the callback called when the panel shows. |
-
-## onSizeChange
-
-```TypeScript
-onSizeChange(callback: SizeChangeCallback): void
-```
-
-Subscribe 'sizeChange' event.
-
-&lt;p&gt;It's only used for SOFT_KEYBOARD panel with FLG_FIXED and FLG_FLOATING.&lt;/p&gt;
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void--><!--Device-Panel-onSizeChange(callback: SizeChangeCallback): void-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | SizeChangeCallback | Yes | the callback called when the panel size changes. |
-
 ## resize
 
-ArkTS-Dyn:
-```TypeScript
-resize(width: number, height: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 resize(width: long, height: long, callback: AsyncCallback<void>): void
 ```
 
-Resizes this input method panel. This API uses an asynchronous callback to return the result.
+Resizes this input method panel. This API uses an asynchronous callback to return the result. > **NOTE：**> > The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen > height. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
-> **NOTE：**
-> 
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen
-> height.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void--><!--Device-Panel-resize(width: long, height: long, callback: AsyncCallback<void>): void-End-->
 
@@ -953,15 +901,15 @@ Resizes this input method panel. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| width | long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
+| height | long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -979,30 +927,17 @@ panel.resize(500, 1000, (err: BusinessError) => {
 
 ## resize
 
-ArkTS-Dyn:
-```TypeScript
-resize(width: number, height: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 resize(width: long, height: long): Promise<void>
 ```
 
-Resizes this input method panel. This API uses a promise to return the result.
+Resizes this input method panel. This API uses a promise to return the result. > **NOTE：**> > The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen > height. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
-> **NOTE：**
-> 
-> The panel width cannot exceed the screen width, and the panel height cannot be 0.7 times higher than the screen
-> height.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically adjust their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-resize(width: long, height: long): Promise<void>--><!--Device-Panel-resize(width: long, height: long): Promise<void>-End-->
 
@@ -1012,8 +947,8 @@ Resizes this input method panel. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
-| height | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
+| width | long | Yes | Target width of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than the screen width. |
+| height | long | Yes | Target height of the panel, in px. The value is an integer greater than or equal to 0, and cannot be greater than 0.7 times the screen height. |
 
 **Return value:**
 
@@ -1025,7 +960,7 @@ Resizes this input method panel. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1045,24 +980,13 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-Sets the immersive effect of the input method application.
+Sets the immersive effect of the input method application. - Gradient mode and fluid light mode can be used only when the [immersive mode](#setImmersiveMode) is enabled. - The fluid light mode can be used only when the gradient mode is enabled. - If the gradient mode is disabled, the gradient height must be 0 px. - Only system applications can set the fluid light mode. - The current API can be called only after any of the following APIs is called: - [adjustPanelRect](#adjustPanelRect) (available since API version 12) - [adjustPanelRect](#adjustPanelRect) ( available since API version 15) - [resize](#resize) ( available since API version 10)
 
-- Gradient mode and fluid light mode can be used only when the   
-[immersive mode](#setImmersiveMode) is enabled.  
-- The fluid light mode can be used only when the gradient mode is enabled.  
-- If the gradient mode is disabled, the gradient height must be 0 px.  
-- Only system applications can set the fluid light mode.  
-- The current API can be called only after any of the following APIs is called:  
- - [adjustPanelRect](#adjustPanelRect) (available   
-since API version 12)  
- - [adjustPanelRect](#adjustPanelRect-1) (  
-available since API version 15)  
- - [resize](#resize) (  
-available since API version 10)
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void--><!--Device-Panel-setImmersiveEffect(effect: ImmersiveEffect): void-End-->
 
@@ -1078,11 +1002,11 @@ available since API version 10)
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
-| [12800021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
-| [12800020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [12800021](../errorcode-inputmethod-framework.md#12800021-unsupported-operation-by-default-input-method) | this operation is allowed only after adjustPanelRect or resize is called. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-invalid-immersive-effect) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1100,12 +1024,13 @@ panel.setImmersiveEffect(effect);
 setImmersiveMode(mode: ImmersiveMode): void
 ```
 
-Sets the immersive mode of the input method application. You can only set the immersion mode to   
-**NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
+Sets the immersive mode of the input method application. You can only set the immersion mode to **NONE_IMMERSIVE**, **LIGHT_IMMERSIVE**, or **DARK_IMMERSIVE**. **IMMERSIVE** cannot be set.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void--><!--Device-Panel-setImmersiveMode(mode: ImmersiveMode): void-End-->
 
@@ -1121,9 +1046,9 @@ Sets the immersive mode of the input method application. You can only set the im
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Incorrect parameter types; 2.Parameter verification failed. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1137,19 +1062,13 @@ panel.setImmersiveMode(inputMethodEngine.ImmersiveMode.LIGHT_IMMERSIVE);
 setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>
 ```
 
-Sets to keep the screen always on. This API uses a promise to return the result.
+Sets to keep the screen always on. This API uses a promise to return the result. > **NOTE：**> > - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off. > > - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice > input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use > this API.
 
-> **NOTE：**
-> 
-> - When the keyboard is displayed, the screen stays on. When the keyboard is hidden, the screen turns off.
-> 
-> - You need to use this API properly. Set the attribute to **true** in necessary scenarios (for example, voice
-> input) and reset this attribute to **false** after exiting necessary scenarios. In other scenarios, do not use
-> this API.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>--><!--Device-Panel-setKeepScreenOn(isKeepScreenOn: boolean): Promise<void>-End-->
 
@@ -1171,7 +1090,7 @@ Sets to keep the screen always on. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1193,9 +1112,11 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 Sets the input method panel to privacy mode. In privacy mode, screenshot and screen recording are blocked.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PRIVACY_WINDOW
 
@@ -1213,8 +1134,8 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permissions check fails. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permissions check fails. |
 
 ## Examples
 
@@ -1231,9 +1152,11 @@ setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string
 
 Sets the color of the function buttons and their background color on the current panel. This API uses a promise to return the result.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>--><!--Device-Panel-setSystemPanelButtonColor(fillColor: string | undefined, backgroundColor: string | undefined): Promise<void>-End-->
 
@@ -1279,9 +1202,11 @@ setUiContent(path: string, callback: AsyncCallback<void>): void
 
 Loads content from a page to this input method panel. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -1292,13 +1217,13 @@ Loads content from a page to this input method panel. This API uses an asynchron
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page from which the content will be loaded. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1322,9 +1247,11 @@ setUiContent(path: string): Promise<void>
 
 Loads content from a page to this input method panel. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-setUiContent(path: string): Promise<void>--><!--Device-Panel-setUiContent(path: string): Promise<void>-End-->
 
@@ -1346,7 +1273,7 @@ Loads content from a page to this input method panel. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1368,9 +1295,11 @@ setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>)
 
 Loads content from a page linked to LocalStorage to this input method panel. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage, callback: AsyncCallback<void>): void-End-->
 
@@ -1382,13 +1311,13 @@ Loads content from a page linked to LocalStorage to this input method panel. Thi
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the page linked to LocalStorage. |
 | storage | LocalStorage | Yes | Storage unit that provides storage for mutable and immutable state variables in the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1414,9 +1343,11 @@ setUiContent(path: string, storage: LocalStorage): Promise<void>
 
 Loads content from a page linked to LocalStorage to this panel. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>--><!--Device-Panel-setUiContent(path: string, storage: LocalStorage): Promise<void>-End-->
 
@@ -1439,7 +1370,7 @@ Loads content from a page linked to LocalStorage to this panel. This API uses a 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 
@@ -1463,9 +1394,11 @@ show(callback: AsyncCallback<void>): void
 
 Shows this input method panel. This API uses an asynchronous callback to return the result. It can be called when the input method is bound to the edit box.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-show(callback: AsyncCallback<void>): void--><!--Device-Panel-show(callback: AsyncCallback<void>): void-End-->
 
@@ -1475,7 +1408,7 @@ Shows this input method panel. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -1499,9 +1432,11 @@ show(): Promise<void>
 
 Shows this input method panel. This API uses a promise to return the result. It can be called when the input method is bound to the edit box.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-show(): Promise<void>--><!--Device-Panel-show(): Promise<void>-End-->
 
@@ -1533,9 +1468,11 @@ startMoving(): void
 
 Sends a command to start moving the window. The window can be moved only when the mouse is clicked.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Panel-startMoving(): void--><!--Device-Panel-startMoving(): void-End-->
 
@@ -1545,10 +1482,10 @@ Sends a command to start moving the window. The window can be moved only when th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | capability not supported.<br>**Applicable version:** 18 and later |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | capability not supported.<br>**Applicable version:** 18 and later |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 
@@ -1562,19 +1499,13 @@ panel.startMoving();
 updatePanelRect(flag: PanelFlag, rect: PanelRect): Promise<void>
 ```
 
-Update the panel rectangle. This API uses a promise to return the result.  
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle. This API uses a promise to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically update their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1599,7 +1530,7 @@ Update the panel rectangle. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRect
 
@@ -1607,23 +1538,13 @@ Update the panel rectangle. This API uses a promise to return the result.
 updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result.  
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with
-> [updatePanelRect](#updatePanelRect).
-> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRect](#updatePanelRect)
-> is called by default.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. This API is compatible with > [updatePanelRect](#updatePanelRect). > If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, > [updatePanelRect](#updatePanelRect) > is called by default. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically update their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1648,8 +1569,8 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRectSync
 
@@ -1657,19 +1578,13 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 updatePanelRectSync(flag: PanelFlag, rect: PanelRect): void
 ```
 
-Update the panel rectangle.  
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically update their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1688,7 +1603,7 @@ Update the panel rectangle.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updatePanelRectSync
 
@@ -1696,23 +1611,13 @@ Update the panel rectangle.
 updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 ```
 
-Update the panel rectangle, and customizes the avoid area and touch area.  
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state. This API is compatible with
-> [updatePanelRectSync](#updatePanelRectSync).
-> If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes,
-> [updatePanelRectSync](#updatePanelRectSync)
-> is called by default.
-> 
-> When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the
-> function buttons at the bottom of the panel will dynamically update their size according to the panel width. To
-> ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
+Update the panel rectangle, and customizes the avoid area and touch area. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. This API is compatible with > [updatePanelRectSync](#updatePanelRectSync). > If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, > [updatePanelRectSync](#updatePanelRectSync) > is called by default. > > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the > function buttons at the bottom of the panel will dynamically update their size according to the panel width. To > ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1731,8 +1636,8 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## updateRegion
 
@@ -1740,19 +1645,13 @@ Update the panel rectangle, and customizes the avoid area and touch area.
 updateRegion(inputRegion: Array<window.Rect>): void
 ```
 
-Updates the hot zone on the input method panel in the current state.
+Updates the hot zone on the input method panel in the current state. > **NOTE：**> > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** > state. > > This API returns the result synchronously. The return only indicates that the system has received the request > for updating the hot zone, not that the hot zone has been updated.
 
-> **NOTE：**
-> 
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING**
-> state.
-> 
-> This API returns the result synchronously. The return only indicates that the system has received the request
-> for updating the hot zone, not that the hot zone has been updated.
+**Since:** 23
 
-**Since:** 15
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void--><!--Device-Panel-updateRegion(inputRegion: Array<window.Rect>): void-End-->
 
@@ -1768,9 +1667,9 @@ Updates the hot zone on the input method panel in the current state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [12800017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [12800013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
+| [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
 ## Examples
 

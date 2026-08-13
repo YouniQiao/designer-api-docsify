@@ -12,7 +12,7 @@ function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<
 
 **废弃版本：** 9
 
-**替代接口：** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
+**替代接口：** [equal](arkts-ability-wantagent-equal-f.md#equal)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -97,7 +97,7 @@ function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
+**替代接口：** [equal](arkts-ability-wantagent-equal-f.md#equal)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

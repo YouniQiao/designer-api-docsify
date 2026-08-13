@@ -2,7 +2,9 @@
 
 Definition of av cast picker state
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum AVCastPickerState--><!--Device-unnamed-export declare enum AVCastPickerState-End-->
 
@@ -16,7 +18,9 @@ STATE_APPEARING
 
 The picker starts showing.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ STATE_DISAPPEARING
 
 The picker finishes presenting.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

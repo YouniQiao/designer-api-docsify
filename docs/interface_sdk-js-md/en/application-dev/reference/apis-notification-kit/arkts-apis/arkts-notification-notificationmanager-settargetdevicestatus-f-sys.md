@@ -14,9 +14,11 @@ function setTargetDeviceStatus(deviceType: string, status: long): Promise<void>
 
 Sets the status of a device after it is successfully connected. Device status determines the notification mode of the current device when a notification is published.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -31,7 +33,7 @@ Sets the status of a device after it is successfully connected. Device status de
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceType | string | Yes | Device type. Currently, only **headset**, **liteWearable**, **wearable**, **glasses**, and **current** are supported. |
-| status | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Device status.&lt;br&gt;- Bit 0: whether the device is in use. The value **0** indicates that the device is available; **1** indicates that the device is in use.&lt;br&gt;- Bit 1: whether the device user is the owner. The value **0** indicates that the user is not the owner; **1** indicates the opposite.&lt;br&gt;- Bit 2: whether the device is in the Do Not Disturb mode. The value **0** indicates that the device is not in the Do Not Disturb mode; **1** indicates the opposite. |
+| status | long | Yes | Device status.&lt;br&gt;- Bit 0: whether the device is in use. The value **0** indicates that the device is available; **1** indicates that the device is in use.&lt;br&gt;- Bit 1: whether the device user is the owner. The value **0** indicates that the user is not the owner; **1** indicates the opposite.&lt;br&gt;- Bit 2: whether the device is in the Do Not Disturb mode. The value **0** indicates that the device is not in the Do Not Disturb mode; **1** indicates the opposite. |
 
 **Return value:**
 
@@ -43,9 +45,9 @@ Sets the status of a device after it is successfully connected. Device status de
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application to call the interface. |
 
 ## Examples
 

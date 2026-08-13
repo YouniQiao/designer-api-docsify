@@ -12,9 +12,11 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 ```
 
-Reads the text content of a file line by line. This API uses a promise to return the result. Only the files in UTF-8format are supported.
+Reads the text content of a file line by line. This API uses a promise to return the result. Only the files in UTF-8 format are supported.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function readLines(filePath: string, options?: Options): Promise<ReaderIterator>--><!--Device-unnamed-declare function readLines(filePath: string, options?: Options): Promise<ReaderIterator>-End-->
 
@@ -58,9 +60,11 @@ Reads the text content of a file line by line. This API uses a promise to return
 declare function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void
 ```
 
-Reads a file text line by line. This API uses an asynchronous callback to return the result. Only the files in UTF-8format are supported.
+Reads a file text line by line. This API uses an asynchronous callback to return the result. Only the files in UTF-8 format are supported.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void--><!--Device-unnamed-declare function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void-End-->
 
@@ -97,9 +101,11 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 declare function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void
 ```
 
-Reads a file text line by line. This API uses an asynchronous callback to return the result. Only the files in UTF-8format are supported.
+Reads a file text line by line. This API uses an asynchronous callback to return the result. Only the files in UTF-8 format are supported.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void--><!--Device-unnamed-declare function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void-End-->
 

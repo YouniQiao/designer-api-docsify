@@ -2,7 +2,9 @@
 
 播放设备的相关信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface DeviceInfo--><!--Device-avSession-interface DeviceInfo-End-->
 
@@ -18,9 +20,11 @@ audioCapabilities?: AudioCapabilities
 
 **类型：** [AudioCapabilities](arkts-avsession-avsession-audiocapabilities-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities--><!--Device-DeviceInfo-audioCapabilities?: AudioCapabilities-End-->
 
@@ -36,7 +40,9 @@ castCategory: AVCastCategory
 
 **类型：** [AVCastCategory](arkts-avsession-avsession-avcastcategory-e.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ deviceId: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -72,7 +80,9 @@ deviceName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -90,7 +100,9 @@ deviceType: DeviceType
 
 **类型：** DeviceType
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -108,9 +120,11 @@ manufacturer?: string
 
 **类型：** string
 
-**起始版本：** 13
+**起始版本：** 23
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceInfo-manufacturer?: string--><!--Device-DeviceInfo-manufacturer?: string-End-->
 
@@ -126,9 +140,11 @@ modelName?: string
 
 **类型：** string
 
-**起始版本：** 13
+**起始版本：** 23
 
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceInfo-modelName?: string--><!--Device-DeviceInfo-modelName?: string-End-->
 
@@ -144,9 +160,11 @@ supportedDrmCapabilities?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>--><!--Device-DeviceInfo-supportedDrmCapabilities?: Array<string>-End-->
 
@@ -158,15 +176,13 @@ supportedDrmCapabilities?: Array<string>
 supportedProtocols?: number
 ```
 
-播放设备支持的协议。
-
-默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType)，可以是ProtocolType中的某个协议或者多个协议的组合。
-
-设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
+播放设备支持的协议。 默认为TYPE_LOCAL,具体取值来自[ProtocolType](arkts-avsession-avsession-protocoltype-e.md#ProtocolType)，可以是ProtocolType中的某个协议或者多个协议的组合。 设备仅支持一种协议，返回对应枚举值；设备支持多种协议，返回对应枚举值之和。
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -184,9 +200,11 @@ supportedPullClients?: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-DeviceInfo-supportedPullClients?: Array<int>--><!--Device-DeviceInfo-supportedPullClients?: Array<int>-End-->
 

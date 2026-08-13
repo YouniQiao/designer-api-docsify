@@ -8,13 +8,13 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)
+**替代接口：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)
 
-<!--Device-resourceManager-export interface AsyncCallback<T>--><!--Device-resourceManager-export interface AsyncCallback<T>-End-->
+<!--Device-resourceManager-export interface AsyncCallback--><!--Device-resourceManager-export interface AsyncCallback-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (err: Error, data: T): void
@@ -28,7 +28,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)
+**替代接口：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback)
 
 <!--Device-AsyncCallback-(err: Error, data: T): void--><!--Device-AsyncCallback-(err: Error, data: T): void-End-->
 

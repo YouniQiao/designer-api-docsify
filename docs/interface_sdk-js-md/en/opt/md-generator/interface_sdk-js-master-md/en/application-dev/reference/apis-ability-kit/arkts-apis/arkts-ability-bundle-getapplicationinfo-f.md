@@ -13,9 +13,7 @@ function getApplicationInfo(bundleName: string,
     bundleFlags: number, userId: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information of the specified user based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the application information of the specified user based on a given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -43,9 +41,7 @@ No permission is required for obtaining the caller's own information.
 function getApplicationInfo(bundleName: string, bundleFlags: number, callback: AsyncCallback<ApplicationInfo>): void
 ```
 
-Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the application information based on a given bundle name. This API uses an asynchronous callback to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 
@@ -72,9 +68,7 @@ No permission is required for obtaining the caller's own information.
 function getApplicationInfo(bundleName: string, bundleFlags: number, userId?: number): Promise<ApplicationInfo>
 ```
 
-Obtains the application information based on a given bundle name. This API uses a promise to return the result.
-
-No permission is required for obtaining the caller's own information.
+Obtains the application information based on a given bundle name. This API uses a promise to return the result. No permission is required for obtaining the caller's own information.
 
 **Since:** 7
 

@@ -1,9 +1,10 @@
 # Stream
 
-Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or  
-[fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
+Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using fileIo.createStream or fileIo.fdopenStream.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface Stream--><!--Device-unnamed-declare interface Stream-End-->
 
@@ -24,6 +25,8 @@ close(): Promise<void>
 Closes the file stream. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -71,6 +74,8 @@ close(callback: AsyncCallback<void>): void
 Closes the file stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -121,6 +126,8 @@ Closes the file stream. This API returns the result synchronously.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Stream-closeSync(): void--><!--Device-Stream-closeSync(): void-End-->
@@ -155,6 +162,8 @@ flush(): Promise<void>
 Flushes the file stream. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -209,6 +218,8 @@ flush(callback: AsyncCallback<void>): void
 Flushes the file stream. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -266,6 +277,8 @@ Flushes the file stream. This API returns the result synchronously.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Stream-flushSync(): void--><!--Device-Stream-flushSync(): void-End-->
@@ -310,6 +323,8 @@ read(
 Reads data from a stream file. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -378,6 +393,8 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-Stream-read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
@@ -438,6 +455,8 @@ read(
 Reads data from a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -505,6 +524,8 @@ Reads data from a stream file. This API returns the result synchronously.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number--><!--Device-Stream-readSync(      buffer: ArrayBuffer,      options?: ReadOptions  ): number-End-->
@@ -567,6 +588,8 @@ write(
 Writes data to a stream file. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -635,6 +658,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void--><!--Device-Stream-write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void-End-->
@@ -697,6 +722,8 @@ write(
 Writes data to a stream file. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -766,6 +793,8 @@ writeSync(
 Writes data to a stream file. This API returns the result synchronously.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

@@ -2,13 +2,15 @@
 
 The context of Photo Editor extension. It allows access to PhotoEditorExtension-specific resources.
 
-**Inheritance/Implementation:** PhotoEditorExtensionContext extends [ExtensionContext](ExtensionContext)
+**Inheritance/Implementation:** PhotoEditorExtensionContext extends ExtensionContext
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class PhotoEditorExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class PhotoEditorExtensionContext extends ExtensionContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class PhotoEditorExtensionContext--><!--Device-unnamed-declare class PhotoEditorExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AppExtension.PhotoEditorExtension
 
@@ -20,9 +22,11 @@ saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption)
 
 Save image data by image pixmap.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoEditorExtensionContext-saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption): Promise<AbilityResult>--><!--Device-PhotoEditorExtensionContext-saveEditedContentWithImage(pixeMap: image.PixelMap, option: image.PackingOption): Promise<AbilityResult>-End-->
 
@@ -45,10 +49,10 @@ Save image data by image pixmap.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600003-image-too-large) | Image too big. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
-| [29600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
-| [29600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
+| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
 
 ## Examples
 
@@ -100,9 +104,11 @@ saveEditedContentWithUri(uri: string): Promise<AbilityResult>
 
 Save image data by uri.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoEditorExtensionContext-saveEditedContentWithUri(uri: string): Promise<AbilityResult>--><!--Device-PhotoEditorExtensionContext-saveEditedContentWithUri(uri: string): Promise<AbilityResult>-End-->
 
@@ -124,10 +130,10 @@ Save image data by uri.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [29600003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600003-image-too-large) | Image too big. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
-| [29600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
-| [29600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
+| [29600003](../errorcode-ability.md#29600003-image-too-large) | Image too big. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Params error. Possible causes: 1.Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types. |
+| [29600002](../errorcode-ability.md#29600002-internal-error-during-image-editing) | Image input error. |
+| [29600001](../errorcode-ability.md#29600001-internal-error-during-image-editing) | Internal error. |
 
 ## Examples
 

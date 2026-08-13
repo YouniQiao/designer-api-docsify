@@ -2,7 +2,9 @@
 
 事件信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-drm-interface EventInfo--><!--Device-drm-interface EventInfo-End-->
 
@@ -18,7 +20,9 @@ extraInfo: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ info: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

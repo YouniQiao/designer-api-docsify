@@ -6,7 +6,9 @@
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare class LinearGradientStyle extends ShaderStyle--><!--Device-unnamed-declare class LinearGradientStyle extends ShaderStyle-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class LinearGradientStyle--><!--Device-unnamed-declare class LinearGradientStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options: LinearGradientOptions)
 用于创建LinearGradientStyle对象的构造函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +49,8 @@ options: LinearGradientOptions
 **类型：** [LinearGradientOptions](../arkts-components/arkts-arkui-lineargradientoptions-i.md)
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

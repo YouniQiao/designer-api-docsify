@@ -8,9 +8,11 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 
 将数组中的内容复制（默认复制全部内容，或复制指定字节长度）到新的Buffer对象中并返回。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -23,7 +25,7 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | list | [Buffer](arkts-arkts-buffer-buffer-c.md)[] \| Uint8Array[] | 是 | Buffer或Uint8Array实例数组，用于拼接合并创建新的Buffer对象。 |
-| totalLength | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 需要复制的总字节长度，默认值：0。 |
+| totalLength | int | 否 | 需要复制的总字节长度，默认值：0。 |
 
 **返回值：**
 
@@ -35,7 +37,7 @@ function concat(list: Buffer[] | Uint8Array[], totalLength?: int): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "length" is out of range. It must be >= 0 and <= uint32 max. Received value is: [length] |
 
 ## 示例
 

@@ -1,10 +1,10 @@
 # FloatViewController
 
-标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。
-
-下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md#create)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
+标准悬浮窗控制器实例。用于启动、停止标准悬浮窗以及注册回调等操作。 下列API示例中都需先使用[floatView.create()](arkts-arkui-floatview-create-f.md#create)方法获取到标准悬浮窗控制器实例（即floatViewController），再通过此实例调用对应方法。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-floatView-interface FloatViewController--><!--Device-floatView-interface FloatViewController-End-->
 
@@ -19,6 +19,8 @@ getWindowProperties(): FloatViewProperties
 获取标准悬浮窗窗口的属性。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +38,8 @@ getWindowProperties(): FloatViewProperties
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300031-闪控窗状态不支持该操作) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 
 ## 示例
 
@@ -61,6 +63,8 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-offLimitsChange(callback?: Callback<FloatViewLimits>): void--><!--Device-FloatViewController-offLimitsChange(callback?: Callback<FloatViewLimits>): void-End-->
@@ -77,7 +81,7 @@ offLimitsChange(callback?: Callback<FloatViewLimits>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -104,6 +108,8 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void--><!--Device-FloatViewController-offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void-End-->
@@ -120,7 +126,7 @@ offRectChange(callback?: Callback<FloatViewRectChangeInfo>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -147,6 +153,8 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void--><!--Device-FloatViewController-offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void-End-->
@@ -163,7 +171,7 @@ offStateChange(callback?: Callback<FloatViewStateChangeInfo>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -190,6 +198,8 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-onLimitsChange(callback: Callback<FloatViewLimits>): void--><!--Device-FloatViewController-onLimitsChange(callback: Callback<FloatViewLimits>): void-End-->
@@ -206,8 +216,8 @@ onLimitsChange(callback: Callback<FloatViewLimits>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300030-重复操作闪控窗) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
 ## 示例
 
@@ -234,6 +244,8 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-onRectChange(callback: Callback<FloatViewRectChangeInfo>): void--><!--Device-FloatViewController-onRectChange(callback: Callback<FloatViewRectChangeInfo>): void-End-->
@@ -250,8 +262,8 @@ onRectChange(callback: Callback<FloatViewRectChangeInfo>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300030-重复操作闪控窗) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
 ## 示例
 
@@ -278,6 +290,8 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-onStateChange(callback: Callback<FloatViewStateChangeInfo>): void--><!--Device-FloatViewController-onStateChange(callback: Callback<FloatViewStateChangeInfo>): void-End-->
@@ -294,8 +308,8 @@ onStateChange(callback: Callback<FloatViewStateChangeInfo>): void
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300030-重复操作闪控窗) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
 ## 示例
 
@@ -318,9 +332,11 @@ try {
 restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 ```
 
-恢复标准悬浮窗的主窗口到前台显示。如果主窗口已处于前台时调用，将抬升主窗口层级。此接口只能在标准悬浮窗窗口被点击后使用。当主窗口处于PAUSED生命周期或处于多任务状态时，调用接口将抛出错误码1300032。使用Promise异步回调。
+恢复标准悬浮窗的主窗口到前台显示。如果主窗口已处于前台时调用，将抬升主窗口层级。此接口只能在标准悬浮窗窗口被点击后使用。当主窗口处于PAUSED生命周期或处于多任务状态时，调用接口将抛出错误码1300032。使用Promise 异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -344,10 +360,10 @@ restoreMainWindow(wantParameters?: Record<string, Object>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300032](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300032-恢复主窗口失败) |
-| [1300031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300031-闪控窗状态不支持该操作) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300032](../errorcode-window.md#1300032-恢复主窗口失败) |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
 
 ## 示例
 
@@ -378,11 +394,11 @@ try {
 setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 ```
 
-设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。
-
-创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
+设置应用在前台时标准悬浮窗窗口是否可见。使用Promise异步回调。 创建标准悬浮窗后未调用此接口前，默认其在应用处于前台时为可见状态。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -406,8 +422,8 @@ setFloatViewVisibilityInApp(isVisible: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
 
 ## 示例
 
@@ -437,6 +453,8 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-setUIContext(path: string, storage?: LocalStorage): Promise<void>--><!--Device-FloatViewController-setUIContext(path: string, storage?: LocalStorage): Promise<void>-End-->
@@ -460,8 +478,8 @@ setUIContext(path: string, storage?: LocalStorage): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
 ## 示例
 
@@ -492,6 +510,8 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-FloatViewController-setUIContextByName(name: string, storage?: LocalStorage): Promise<void>--><!--Device-FloatViewController-setUIContextByName(name: string, storage?: LocalStorage): Promise<void>-End-->
@@ -515,8 +535,8 @@ setUIContextByName(name: string, storage?: LocalStorage): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
 ## 示例
 
@@ -572,9 +592,11 @@ export struct Hello {
 setWindowSize(size: window.Size): Promise<void>
 ```
 
-设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过[onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))接口监听。使用Promise异步回调。
+设置标准悬浮窗窗口大小。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits)接口获取推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通 过[onRectChange](#onRectChange)接口监 听。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -598,9 +620,9 @@ setWindowSize(size: window.Size): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
 ## 示例
 
@@ -631,11 +653,11 @@ try {
 start(): Promise<void>
 ```
 
-启动标准悬浮窗窗口。接口返回不表示start流程结束，需要通过  
-[onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))接口监听到STARTED回调时判断启动成功。建议在调用[setUIContext()](#setUIContext)或  
-[setUIContextByName()](#setUIContextByName)后调用start()。使用Promise异步回调。
+启动标准悬浮窗窗口。接口返回不表示start流程结束，需要通过 [onStateChange](#onStateChange)接 口监听到STARTED回调时判断启动成功。建议在调用[setUIContext()](#setUIContext)或 [setUIContextByName()](#setUIContextByName)后调用start()。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.FLOAT_VIEW
 
@@ -655,13 +677,13 @@ start(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300034](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) |
-| [1300033](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300033-启动闪控窗失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [1300031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300031-闪控窗状态不支持该操作) |
-| [1300030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300030-重复操作闪控窗) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300034](../errorcode-window.md#1300034-闪控窗与其他悬浮窗口操作冲突) |
+| [1300033](../errorcode-window.md#1300033-启动闪控窗失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
+| [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
 ## 示例
 
@@ -687,10 +709,11 @@ try {
 stop(): Promise<void>
 ```
 
-停止标准悬浮窗窗口。接口返回不表示stop流程结束，需要通过  
-[onStateChange](floatView.FloatViewController.onStateChange(callback: Callback&lt;FloatViewStateChangeInfo&gt;))接口监听到STOPPED回调时判断停止成功。使用Promise异步回调。
+停止标准悬浮窗窗口。接口返回不表示stop流程结束，需要通过 [onStateChange](#onStateChange)接 口监听到STOPPED回调时判断停止成功。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -708,10 +731,10 @@ stop(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300031](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300031-闪控窗状态不支持该操作) |
-| [1300030](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300030-重复操作闪控窗) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300031](../errorcode-window.md#1300031-闪控窗状态不支持该操作) |
+| [1300030](../errorcode-window.md#1300030-重复操作闪控窗) |
 
 ## 示例
 
@@ -737,10 +760,11 @@ try {
 switchTemplate(templateProperty: TemplateProperty): Promise<void>
 ```
 
-切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本接口。窗口实际大小变化可通过  
-[onRectChange](floatView.FloatViewController.onRectChange(callback: Callback&lt;FloatViewRectChangeInfo&gt;))接口监听。使用Promise异步回调。
+切换标准悬浮窗的模板并改变其窗口尺寸。建议先调用[getFloatViewLimits](arkts-arkui-floatview-getfloatviewlimits-f.md#getFloatViewLimits)接口获取目标模板类型推荐的宽高范围和宽高比范围，再根据推荐值调用本 接口。窗口实际大小变化可通过 [onRectChange](#onRectChange)接口监听 。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -764,9 +788,9 @@ switchTemplate(templateProperty: TemplateProperty): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) |
 
 ## 示例
 

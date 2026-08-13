@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface PlaybackInfo--><!--Device-unnamed-export interface PlaybackInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@
 time: int
 ```
 
-当前视频播放的进度。单位：秒，取值范围：[0,+∞)
+当前视频播放的进度。 单位：秒，取值范围：[0,+∞)
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

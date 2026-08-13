@@ -1,9 +1,10 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use   
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
@@ -21,9 +22,11 @@ import { audioHaptic } from '@kit.AudioKit';
 enableHapticsInSilentMode(enable: boolean): void
 ```
 
-Enable haptics when the ringer mode is silent mode.This function should be called before player start or after stop, and before release.
+Enable haptics when the ringer mode is silent mode. This function should be called before player start or after stop, and before release.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void--><!--Device-AudioHapticPlayer-enableHapticsInSilentMode(enable: boolean): void-End-->
 
@@ -41,8 +44,8 @@ Enable haptics when the ringer mode is silent mode.This function should be calle
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isHapticsIntensityAdjustmentSupported
 
@@ -52,7 +55,9 @@ isHapticsIntensityAdjustmentSupported(): boolean
 
 Check whether the device supports haptics intensity adjustment.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsIntensityAdjustmentSupported(): boolean-End-->
 
@@ -70,7 +75,7 @@ Check whether the device supports haptics intensity adjustment.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## isHapticsRampSupported
 
@@ -80,7 +85,9 @@ isHapticsRampSupported(): boolean
 
 Check whether the device supports haptics intensity ramp effect.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean--><!--Device-AudioHapticPlayer-isHapticsRampSupported(): boolean-End-->
 
@@ -98,7 +105,7 @@ Check whether the device supports haptics intensity ramp effect.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## setHapticsIntensity
 
@@ -106,9 +113,11 @@ Check whether the device supports haptics intensity ramp effect.
 setHapticsIntensity(intensity: number): Promise<void>
 ```
 
-Set haptics intensity for this player. This method uses a promise to return the result.This function should be called before player release, and can only set once for each starting process.
+Set haptics intensity for this player. This method uses a promise to return the result. This function should be called before player release, and can only set once for each starting process.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsIntensity(intensity: double): Promise<void>-End-->
 
@@ -132,10 +141,10 @@ Set haptics intensity for this player. This method uses a promise to return the 
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## setHapticsRamp
 
@@ -143,9 +152,11 @@ Set haptics intensity for this player. This method uses a promise to return the 
 setHapticsRamp(duration: number, startIntensity: number, endIntensity: number): Promise<void>
 ```
 
-Set haptics intensity ramp effect for this player. This method uses a promise to return the result.This function should be called before player start or after stop, and before release.
+Set haptics intensity ramp effect for this player. This method uses a promise to return the result. This function should be called before player start or after stop, and before release.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>--><!--Device-AudioHapticPlayer-setHapticsRamp(duration: int, startIntensity: double, endIntensity: double): Promise<void>-End-->
 
@@ -171,7 +182,7 @@ Set haptics intensity ramp effect for this player. This method uses a promise to
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |

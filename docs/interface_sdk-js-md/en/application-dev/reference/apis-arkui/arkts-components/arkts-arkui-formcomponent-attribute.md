@@ -1,12 +1,14 @@
 # FormComponent properties/events
 
-**Inheritance/Implementation:** FormComponentAttribute extends [CommonMethod<FormComponentAttribute>](CommonMethod<FormComponentAttribute>)
+**Inheritance/Implementation:** FormComponentAttribute extends CommonMethod<FormComponentAttribute>
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-declare class FormComponentAttribute extends CommonMethod<FormComponentAttribute>--><!--Device-unnamed-declare class FormComponentAttribute extends CommonMethod<FormComponentAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class FormComponentAttribute--><!--Device-unnamed-declare class FormComponentAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,7 +4,9 @@ Defines the device service ID. It uniquely identifies a device and its user, inc
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-interface DeviceKey--><!--Device-companionDeviceAuth-interface DeviceKey-End-->
 
@@ -24,14 +26,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceId: string
 ```
 
-Device ID. It is a string that uniquely identifies a device. The format is determined by the value of  
-**deviceIdType**.
+Device ID. It is a string that uniquely identifies a device. The format is determined by the value of **deviceIdType**.
 
 **Type:** string
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,13 +50,15 @@ Device ID. It is a string that uniquely identifies a device. The format is deter
 deviceIdType: int
 ```
 
-Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md#DeviceIdType). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
+Enumerates device ID types. They are used to specify the type of the device service ID and can be extended based on [DeviceIdType](arkts-userauthentication-companiondeviceauth-deviceidtype-e-sys.md#DeviceIdType-(System-API)). For example, you can use **UNIFIED_DEVICE_ID(1)** to indicate the unified device ID or use the vendor-defined value (≥ 10000).
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,11 +76,13 @@ deviceUserId: int
 
 Device user ID. It is an integer greater than or equal to 0 and is used to distinguish different users on the device.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

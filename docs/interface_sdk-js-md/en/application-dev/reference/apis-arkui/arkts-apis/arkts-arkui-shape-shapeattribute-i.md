@@ -2,33 +2,31 @@
 
 Provides attribute for Shape.
 
-**Inheritance/Implementation:** ShapeAttribute extends [CommonMethod](CommonMethod)
+**Inheritance/Implementation:** ShapeAttribute extends CommonMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface ShapeAttribute extends CommonMethod--><!--Device-unnamed-export declare interface ShapeAttribute extends CommonMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface ShapeAttribute--><!--Device-unnamed-export declare interface ShapeAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## antiAlias
 
 ```TypeScript
-default antiAlias(value: boolean | undefined): this
+antiAlias(value: boolean | undefined): this
 ```
 
-Called when setting whether anti aliasing is on.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default antiAlias(value: boolean | undefined): this--><!--Device-ShapeAttribute-default antiAlias(value: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-antiAlias(value: boolean | undefined): this--><!--Device-ShapeAttribute-antiAlias(value: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -45,20 +43,16 @@ Called when setting whether anti aliasing is on.
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ShapeAttribute-default attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-ShapeAttribute-attributeModifier(modifier: AttributeModifier<ShapeAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,20 +69,16 @@ Call attributeModifier.
 ## fill
 
 ```TypeScript
-default fill(value: ResourceColor | undefined): this
+fill(value: ResourceColor | undefined): this
 ```
 
-Called when the fill color is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default fill(value: ResourceColor | undefined): this--><!--Device-ShapeAttribute-default fill(value: ResourceColor | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-fill(value: ResourceColor | undefined): this--><!--Device-ShapeAttribute-fill(value: ResourceColor | undefined): this-End-->
 
 **Parameters:**
 
@@ -105,20 +95,16 @@ Called when the fill color is set.
 ## fillOpacity
 
 ```TypeScript
-default fillOpacity(value: double | string | Resource | undefined): this
+fillOpacity(value: double | string | Resource | undefined): this
 ```
 
-Called when the transparency of the border is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default fillOpacity(value: double | string | Resource | undefined): this--><!--Device-ShapeAttribute-default fillOpacity(value: double | string | Resource | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-fillOpacity(value: double | string | Resource | undefined): this--><!--Device-ShapeAttribute-fillOpacity(value: double | string | Resource | undefined): this-End-->
 
 **Parameters:**
 
@@ -135,20 +121,16 @@ Called when the transparency of the border is set.
 ## mesh
 
 ```TypeScript
-default mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this
+mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this
 ```
 
-Called when shape mesh.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this--><!--Device-ShapeAttribute-default mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this--><!--Device-ShapeAttribute-mesh(value: Array<double> | undefined, column: int | undefined, row: int | undefined): this-End-->
 
 **Parameters:**
 
@@ -167,50 +149,42 @@ Called when shape mesh.
 ## setShapeOptions
 
 ```TypeScript
-default setShapeOptions(value?: PixelMap): this
+setShapeOptions(value?: PixelMap): this
 ```
 
-Set Shape options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default setShapeOptions(value?: PixelMap): this--><!--Device-ShapeAttribute-default setShapeOptions(value?: PixelMap): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-setShapeOptions(value?: PixelMap): this--><!--Device-ShapeAttribute-setShapeOptions(value?: PixelMap): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | No | Shape constructor options. |
+| value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) | No |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the ShapeAttribute. |
+| this |  |
 
 ## stroke
 
 ```TypeScript
-default stroke(value: ResourceColor | undefined): this
+stroke(value: ResourceColor | undefined): this
 ```
 
-Called when the border color is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default stroke(value: ResourceColor | undefined): this--><!--Device-ShapeAttribute-default stroke(value: ResourceColor | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-stroke(value: ResourceColor | undefined): this--><!--Device-ShapeAttribute-stroke(value: ResourceColor | undefined): this-End-->
 
 **Parameters:**
 
@@ -227,20 +201,16 @@ Called when the border color is set.
 ## strokeDashArray
 
 ```TypeScript
-default strokeDashArray(value: Array<Length> | undefined): this
+strokeDashArray(value: Array<Length> | undefined): this
 ```
 
-Called when the gap of the border is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeDashArray(value: Array<Length> | undefined): this--><!--Device-ShapeAttribute-default strokeDashArray(value: Array<Length> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeDashArray(value: Array<Length> | undefined): this--><!--Device-ShapeAttribute-strokeDashArray(value: Array<Length> | undefined): this-End-->
 
 **Parameters:**
 
@@ -257,20 +227,16 @@ Called when the gap of the border is set.
 ## strokeDashOffset
 
 ```TypeScript
-default strokeDashOffset(value: Length | undefined): this
+strokeDashOffset(value: Length | undefined): this
 ```
 
-Called when the offset of the starting point of border drawing is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeDashOffset(value: Length | undefined): this--><!--Device-ShapeAttribute-default strokeDashOffset(value: Length | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeDashOffset(value: Length | undefined): this--><!--Device-ShapeAttribute-strokeDashOffset(value: Length | undefined): this-End-->
 
 **Parameters:**
 
@@ -287,20 +253,16 @@ Called when the offset of the starting point of border drawing is set.
 ## strokeLineCap
 
 ```TypeScript
-default strokeLineCap(value: LineCapStyle | undefined): this
+strokeLineCap(value: LineCapStyle | undefined): this
 ```
 
-Called when the path endpoint drawing style is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeLineCap(value: LineCapStyle | undefined): this--><!--Device-ShapeAttribute-default strokeLineCap(value: LineCapStyle | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeLineCap(value: LineCapStyle | undefined): this--><!--Device-ShapeAttribute-strokeLineCap(value: LineCapStyle | undefined): this-End-->
 
 **Parameters:**
 
@@ -317,20 +279,16 @@ Called when the path endpoint drawing style is set.
 ## strokeLineJoin
 
 ```TypeScript
-default strokeLineJoin(value: LineJoinStyle | undefined): this
+strokeLineJoin(value: LineJoinStyle | undefined): this
 ```
 
-Called when the border corner drawing style is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeLineJoin(value: LineJoinStyle | undefined): this--><!--Device-ShapeAttribute-default strokeLineJoin(value: LineJoinStyle | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeLineJoin(value: LineJoinStyle | undefined): this--><!--Device-ShapeAttribute-strokeLineJoin(value: LineJoinStyle | undefined): this-End-->
 
 **Parameters:**
 
@@ -347,20 +305,16 @@ Called when the border corner drawing style is set.
 ## strokeMiterLimit
 
 ```TypeScript
-default strokeMiterLimit(value: Length | undefined): this
+strokeMiterLimit(value: Length | undefined): this
 ```
 
-Called when the limit value for drawing acute angles as oblique angles is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeMiterLimit(value: Length | undefined): this--><!--Device-ShapeAttribute-default strokeMiterLimit(value: Length | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeMiterLimit(value: Length | undefined): this--><!--Device-ShapeAttribute-strokeMiterLimit(value: Length | undefined): this-End-->
 
 **Parameters:**
 
@@ -377,20 +331,16 @@ Called when the limit value for drawing acute angles as oblique angles is set.
 ## strokeOpacity
 
 ```TypeScript
-default strokeOpacity(value: double | string | Resource | undefined): this
+strokeOpacity(value: double | string | Resource | undefined): this
 ```
 
-Called when the opacity of the border is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeOpacity(value: double | string | Resource | undefined): this--><!--Device-ShapeAttribute-default strokeOpacity(value: double | string | Resource | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeOpacity(value: double | string | Resource | undefined): this--><!--Device-ShapeAttribute-strokeOpacity(value: double | string | Resource | undefined): this-End-->
 
 **Parameters:**
 
@@ -407,20 +357,16 @@ Called when the opacity of the border is set.
 ## strokeWidth
 
 ```TypeScript
-default strokeWidth(value: Length | undefined): this
+strokeWidth(value: Length | undefined): this
 ```
 
-Called when the width of the border is set.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default strokeWidth(value: Length | undefined): this--><!--Device-ShapeAttribute-default strokeWidth(value: Length | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-strokeWidth(value: Length | undefined): this--><!--Device-ShapeAttribute-strokeWidth(value: Length | undefined): this-End-->
 
 **Parameters:**
 
@@ -437,20 +383,16 @@ Called when the width of the border is set.
 ## viewPort
 
 ```TypeScript
-default viewPort(value: ViewportRect | undefined): this
+viewPort(value: ViewportRect | undefined): this
 ```
 
-Viewport of shape
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ShapeAttribute-default viewPort(value: ViewportRect | undefined): this--><!--Device-ShapeAttribute-default viewPort(value: ViewportRect | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-ShapeAttribute-viewPort(value: ViewportRect | undefined): this--><!--Device-ShapeAttribute-viewPort(value: ViewportRect | undefined): this-End-->
 
 **Parameters:**
 
@@ -463,4 +405,24 @@ Viewport of shape
 | Type | Description |
 | --- | --- |
 | this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ShapeAttribute-default--><!--Device-ShapeAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -2,7 +2,9 @@
 
 Describes the Try AE parameters. Try AE indicates that the hardware reports the status based on the ambient illumination change during time-lapse photographing.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface TryAEInfo--><!--Device-camera-interface TryAEInfo-End-->
 
@@ -26,7 +28,9 @@ Timelapse capture interval.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TryAEInfo-readonly captureInterval?: int--><!--Device-TryAEInfo-readonly captureInterval?: int-End-->
 
@@ -44,7 +48,9 @@ Determine whether try AE is done.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TryAEInfo-readonly isTryAEDone: boolean--><!--Device-TryAEInfo-readonly isTryAEDone: boolean-End-->
 
@@ -62,7 +68,9 @@ Determine whether AE hint is needed.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean--><!--Device-TryAEInfo-readonly isTryAEHintNeeded?: boolean-End-->
 
@@ -80,7 +88,9 @@ Timelapse preview type.
 
 **Type:** [TimeLapsePreviewType](arkts-camera-camera-timelapsepreviewtype-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType--><!--Device-TryAEInfo-readonly previewType?: TimeLapsePreviewType-End-->
 

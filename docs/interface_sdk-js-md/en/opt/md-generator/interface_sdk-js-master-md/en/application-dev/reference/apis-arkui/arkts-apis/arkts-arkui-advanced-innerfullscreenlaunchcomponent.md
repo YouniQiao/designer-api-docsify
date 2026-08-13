@@ -1,12 +1,4 @@
-# @ohos.arkui.advanced.InnerFullScreenLaunchComponent(System API)
-
-###### Child Components
- Not supported
- ###### Attributes
- The [universal attributes](./@internal/component/ets/common) are not supported.
- ###### Events
- The [universal events](./@internal/component/ets/common) are not supported.
-
+# @ohos.arkui.advanced.InnerFullScreenLaunchComponent
 
 ## Modules to Import
 

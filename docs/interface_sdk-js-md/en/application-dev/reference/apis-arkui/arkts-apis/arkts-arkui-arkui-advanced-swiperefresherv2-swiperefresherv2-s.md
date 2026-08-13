@@ -4,9 +4,9 @@ Declare component SwipeRefresherV2
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct SwipeRefresherV2--><!--Device-unnamed-export declare struct SwipeRefresherV2-End-->
 
@@ -18,30 +18,11 @@ Declare component SwipeRefresherV2
 import { SwipeRefresherV2 } from '@kit.ArkUI';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Decorator:** @Builder
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-SwipeRefresherV2-build(): void--><!--Device-SwipeRefresherV2-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## content
 
 ```TypeScript
-content?: ResourceStr
+@Param
+  content?: ResourceStr
 ```
 
 Sets the content when loading.
@@ -50,20 +31,24 @@ Sets the content when loading.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwipeRefresherV2-content?: ResourceStr--><!--Device-SwipeRefresherV2-content?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SwipeRefresherV2-@Param  content?: ResourceStr--><!--Device-SwipeRefresherV2-@Param  content?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isLoading
 
 ```TypeScript
-isLoading: boolean
+@Require
+  @Param
+  isLoading: boolean
 ```
 
 Whether the component is loading.
@@ -72,13 +57,15 @@ Whether the component is loading.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SwipeRefresherV2-isLoading: boolean--><!--Device-SwipeRefresherV2-isLoading: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SwipeRefresherV2-@Require  @Param  isLoading: boolean--><!--Device-SwipeRefresherV2-@Require  @Param  isLoading: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

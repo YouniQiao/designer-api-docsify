@@ -6,9 +6,9 @@
 
 | Name | Description |
 | --- | --- |
-| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md#parallelizeui) | Define the constructor of ParallelizeUI. |
-| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md#parallelizeui-1) | Define the constructor of ParallelizeUI. |
-| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md#parallelizeui-2) | On-demand parallel item creation for List and Grid. |
+| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md#ParallelizeUI) | Define the constructor of ParallelizeUI. |
+| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md#ParallelizeUI) | Define the constructor of ParallelizeUI. |
+| [ParallelizeUI](arkts-arkui-arkui-parallelize-parallelizeui-f.md#ParallelizeUI) | On-demand parallel item creation for List and Grid. |
 
 ### Interfaces
 

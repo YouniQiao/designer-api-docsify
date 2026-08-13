@@ -12,11 +12,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 export function within(on: On): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given [On](arkts-test-uitest-on-c.md#On)object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given [On](arkts-test-uitest-on-c.md#On) object,used to locate Component relatively.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ON-export function within(on: On): On--><!--Device-ON-export function within(on: On): On-End-->
 

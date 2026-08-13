@@ -1,8 +1,6 @@
 # TextEditControllerEx
 
-文本扩展编辑控制器。
-
-继承自[TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController)。
+文本扩展编辑控制器。 继承自[TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController)。
 
 **继承/实现关系：** TextEditControllerEx extends [TextBaseController](arkts-arkui-textbasecontroller-i.md#TextBaseController)
 
@@ -10,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare interface TextEditControllerEx extends TextBaseController--><!--Device-unnamed-declare interface TextEditControllerEx extends TextBaseController-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface TextEditControllerEx--><!--Device-unnamed-declare interface TextEditControllerEx-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +25,8 @@ getCaretOffset(): number
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,6 +54,8 @@ getPreviewText?(): PreviewText
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -78,6 +82,8 @@ isEditing(): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -103,6 +109,8 @@ setCaretOffset(offset: number): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -135,6 +143,8 @@ stopEditing(): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

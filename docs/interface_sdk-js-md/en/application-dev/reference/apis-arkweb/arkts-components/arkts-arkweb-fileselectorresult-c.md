@@ -1,10 +1,12 @@
 # FileSelectorResult
 
-Defines the file selector result, related to [onFileSelectorShow](onFileSelectorShow) method.
+Defines the file selector result, related to onFileSelectorShow method.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class FileSelectorResult--><!--Device-unnamed-declare class FileSelectorResult-End-->
 
@@ -21,6 +23,8 @@ Constructor.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ select a list of files.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

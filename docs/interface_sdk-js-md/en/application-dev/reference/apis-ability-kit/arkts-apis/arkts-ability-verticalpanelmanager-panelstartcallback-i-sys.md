@@ -2,9 +2,11 @@
 
 The callback of start vertical panel.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-verticalPanelManager-interface PanelStartCallback--><!--Device-verticalPanelManager-interface PanelStartCallback-End-->
 
@@ -26,9 +28,13 @@ onError: OnErrorFn
 
 Called when some error occurred except disconnected from UIAbility or UIExtensionAbility.
 
-**Since:** 20
+**Type:** [OnErrorFn](arkts-ability-onerrorfn-t-sys.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,9 +52,13 @@ onResult?: OnResultFn
 
 Called when UIExtensionAbility terminate with result.
 
-**Since:** 20
+**Type:** [OnResultFn](arkts-ability-onresultfn-t-sys.md)
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

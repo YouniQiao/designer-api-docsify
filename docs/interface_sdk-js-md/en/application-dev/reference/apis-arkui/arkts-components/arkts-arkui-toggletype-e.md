@@ -6,6 +6,8 @@ Enumerates toggle types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ToggleType--><!--Device-unnamed-declare enum ToggleType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,33 +18,13 @@ Enumerates toggle types.
 Checkbox
 ```
 
-Checkbox type.
-
-**NOTE：**
-
-Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle.
-
-The default value of the universal attribute [margin](CommonMethod#margin) is as follows:
-
-{
-
- top: '14px',
-
- right: '14px',
-
- bottom: '14px',
-
- left: '14px'
-
-}.
-
-Default size:
-
-{width:'20vp', height:'20vp'}
+Checkbox type. **NOTE：**Since API version 11, the default style of the **Checkbox** component is changed from rounded square to circle. The default value of the universal attribute margin is as follows: { top: '14px', right: '14px', bottom: '14px', left: '14px' }. Default size: {width:'20vp', height:'20vp'}
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -58,31 +40,13 @@ Default size:
 Switch
 ```
 
-Switch type.
-
-**NOTE：**
-
-The default value of the universal attribute [margin](CommonMethod#margin) is as follows:
-
-{
-
- top: '6px',
-
- right: '14px',
-
- bottom: '6px',
-
- left: '14px'
-
-}.
-
-Default size:
-
-{width:'36vp', height:'20vp'}
+Switch type. **NOTE：**The default value of the universal attribute margin is as follows: { top: '6px', right: '14px', bottom: '6px', left: '14px' }. Default size: {width:'36vp', height:'20vp'}
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -103,6 +67,8 @@ Status button type. If child content contains text, the text is displayed on the
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

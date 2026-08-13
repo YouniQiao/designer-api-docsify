@@ -2,7 +2,9 @@
 
 Session token. Used to judge the legitimacy of the session.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface SessionToken--><!--Device-avSession-interface SessionToken-End-->
 
@@ -26,7 +28,9 @@ Process id of session
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -46,7 +50,9 @@ The unique session id of the avsession object
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 
@@ -66,7 +72,9 @@ User id
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES
 

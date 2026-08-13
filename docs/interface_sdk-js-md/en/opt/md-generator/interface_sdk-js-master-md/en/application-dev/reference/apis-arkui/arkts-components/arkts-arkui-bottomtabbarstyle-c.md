@@ -4,6 +4,8 @@ Implements the bottom and side tab style.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class BottomTabBarStyle--><!--Device-unnamed-declare class BottomTabBarStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)--><!--Device-BottomTabBarStyle-constructor(icon: ResourceStr | TabBarSymbol, text: ResourceStr)-End-->
@@ -28,7 +32,7 @@ A constructor used to create a **BottomTabBarStyle** instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
 
 ## iconStyle
@@ -40,6 +44,8 @@ iconStyle(style: TabBarIconStyle): BottomTabBarStyle
 Sets the style of the label icon on the bottom tab.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,6 +77,8 @@ Sets the ID of the bottom tab.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -100,6 +108,8 @@ labelStyle(value: LabelStyle): BottomTabBarStyle
 Sets the style of the label text and font for the bottom tab.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,6 +141,8 @@ Sets the layout mode of the images and texts on the bottom tab.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -161,6 +173,8 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -173,7 +187,7 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| [TabBarSymbol](arkts-arkui-tabbarsymbol-c.md) | Yes |
+| icon | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) \| TabBarSymbol | Yes |
 | text | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | Yes |
 
 **Return value:**
@@ -188,9 +202,11 @@ Static constructor used to create a **BottomTabBarStyle** instance.
 padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 ```
 
-Sets the padding of the bottom tab. It cannot be set in percentage. When the parameter is of the Dimension type,the value applies to all sides.
+Sets the padding of the bottom tab. It cannot be set in percentage. When the parameter is of the Dimension type, the value applies to all sides.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,7 +220,7 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| value | Padding \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
+| value | [Padding](../arkts-apis/arkts-arkui-padding-t.md) \| [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [LocalizedPadding](../arkts-apis/arkts-arkui-localizedpadding-i.md) | Yes |
 
 **Return value:**
 
@@ -221,6 +237,8 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. This parameter is valid only between bottom tabs in fixed horizontal mode.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,6 +269,8 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 Sets the vertical alignment mode of the images and text on the bottom tab.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

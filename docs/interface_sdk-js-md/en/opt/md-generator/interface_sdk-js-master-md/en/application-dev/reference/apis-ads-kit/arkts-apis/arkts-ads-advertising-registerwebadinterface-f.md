@@ -12,9 +12,11 @@ import { advertising } from '@kit.AdsKit';
 function registerWebAdInterface(controller: web_webview.WebviewController, context: common.UIAbilityContext): void
 ```
 
-Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
+Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,8 +35,8 @@ Injects an ad JavaScript object to the **Web** component(this API is only open t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 
 ## Examples
 
@@ -73,9 +75,11 @@ function registerWebAdInterface(controller: web_webview.WebviewController, conte
     needRefresh: boolean): void
 ```
 
-Injects an ad JavaScript object to the **Web** component(this API is only open to some pre-installed system applications).
+Injects an ad JavaScript object to the **Web** component (this API is only open to some pre-installed system applications).
 
 **Since:** 16
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 16.
 
@@ -95,8 +99,8 @@ Injects an ad JavaScript object to the **Web** component(this API is only open t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) |
 
 ## Examples
 

@@ -1,12 +1,12 @@
 # @ohos.geolocation
 
-Provides interfaces for initiating location requests, ending the location service,and obtaining the location result cached by the system.
+Provides interfaces for initiating location requests, ending the location service, and obtaining the location result cached by the system.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [geoLocationManager](arkts-geolocationmanager.md#geoLocationManager)
+**Substitutes:** [geoLocationManager](arkts-geolocationmanager.md#@ohos.geoLocationManager)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -26,39 +26,39 @@ import { geolocation } from '@kit.LocationKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushcachedgnsslocations) |
-| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushcachedgnsslocations-1) |
-| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getaddressesfromlocation) |
-| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getaddressesfromlocation-1) |
-| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getaddressesfromlocationname) |
-| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getaddressesfromlocationname-1) |
-| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize) |
-| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getcachedgnsslocationssize-1) |
-| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getcurrentlocation) |
-| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getcurrentlocation-1) |
-| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getcurrentlocation-2) |
-| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getlastlocation) |
-| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getlastlocation-1) |
-| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isgeoserviceavailable) |
-| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isgeoserviceavailable-1) |
-| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled) |
-| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled-1) |
-| [off](arkts-location-geolocation-off-f.md#off) |
-| [off](arkts-location-geolocation-off-f.md#off-1) |
-| [off](arkts-location-geolocation-off-f.md#off-2) |
-| [off](arkts-location-geolocation-off-f.md#off-3) |
-| [off](arkts-location-geolocation-off-f.md#off-4) |
-| [off](arkts-location-geolocation-off-f.md#off-5) |
-| [on](arkts-location-geolocation-on-f.md#on) |
-| [on](arkts-location-geolocation-on-f.md#on-1) |
-| [on](arkts-location-geolocation-on-f.md#on-2) |
-| [on](arkts-location-geolocation-on-f.md#on-3) |
-| [on](arkts-location-geolocation-on-f.md#on-4) |
-| [on](arkts-location-geolocation-on-f.md#on-5) |
-| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation) |
-| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation-1) |
-| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendcommand) |
-| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendcommand-1) |
+| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushCachedGnssLocations) |
+| [flushCachedGnssLocations](arkts-location-geolocation-flushcachedgnsslocations-f.md#flushCachedGnssLocations) |
+| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getAddressesFromLocation) |
+| [getAddressesFromLocation](arkts-location-geolocation-getaddressesfromlocation-f.md#getAddressesFromLocation) |
+| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getAddressesFromLocationName) |
+| [getAddressesFromLocationName](arkts-location-geolocation-getaddressesfromlocationname-f.md#getAddressesFromLocationName) |
+| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) |
+| [getCachedGnssLocationsSize](arkts-location-geolocation-getcachedgnsslocationssize-f.md#getCachedGnssLocationsSize) |
+| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getCurrentLocation) |
+| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getCurrentLocation) |
+| [getCurrentLocation](arkts-location-geolocation-getcurrentlocation-f.md#getCurrentLocation) |
+| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getLastLocation) |
+| [getLastLocation](arkts-location-geolocation-getlastlocation-f.md#getLastLocation) |
+| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isGeoServiceAvailable) |
+| [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isGeoServiceAvailable) |
+| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#isLocationEnabled) |
+| [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#isLocationEnabled) |
+| [off_cachedGnssLocationsReporting](arkts-location-geolocation-offcachedgnsslocationsreporting-f.md#off_cachedGnssLocationsReporting) |
+| [off_fenceStatusChange](arkts-location-geolocation-offfencestatuschange-f.md#off_fenceStatusChange) |
+| [off_gnssStatusChange](arkts-location-geolocation-offgnssstatuschange-f.md#off_gnssStatusChange) |
+| [off_locationChange](arkts-location-geolocation-offlocationchange-f.md#off_locationChange) |
+| [off_locationServiceState](arkts-location-geolocation-offlocationservicestate-f.md#off_locationServiceState) |
+| [off_nmeaMessageChange](arkts-location-geolocation-offnmeamessagechange-f.md#off_nmeaMessageChange) |
+| [on_cachedGnssLocationsReporting](arkts-location-geolocation-oncachedgnsslocationsreporting-f.md#on_cachedGnssLocationsReporting) |
+| [on_fenceStatusChange](arkts-location-geolocation-onfencestatuschange-f.md#on_fenceStatusChange) |
+| [on_gnssStatusChange](arkts-location-geolocation-ongnssstatuschange-f.md#on_gnssStatusChange) |
+| [on_locationChange](arkts-location-geolocation-onlocationchange-f.md#on_locationChange) |
+| [on_locationServiceState](arkts-location-geolocation-onlocationservicestate-f.md#on_locationServiceState) |
+| [on_nmeaMessageChange](arkts-location-geolocation-onnmeamessagechange-f.md#on_nmeaMessageChange) |
+| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestEnableLocation) |
+| [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestEnableLocation) |
+| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendCommand) |
+| [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendCommand) |
 
 ### Interfaces
 

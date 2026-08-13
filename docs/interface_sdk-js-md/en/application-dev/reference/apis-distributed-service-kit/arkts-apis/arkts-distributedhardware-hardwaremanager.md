@@ -1,14 +1,12 @@
 # @ohos.distributedHardware.hardwareManager
 
-The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing,resuming, and stopping the distributed hardware service on the controlled device.
+The **hardwareManager** module provides the capability of controlling distributed hardware, including pausing, resuming, and stopping the distributed hardware service on the controlled device. > **NOTE：**> The APIs provided by this module are system APIs.
 
-> **NOTE：**
+**Since:** 23
 
-> The APIs provided by this module are system APIs.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hardwareManager--><!--Device-unnamed-declare namespace hardwareManager-End-->
 
@@ -29,9 +27,9 @@ import { hardwareManager } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pausedistributedhardware) | Pauses the distributed hardware service on the controlled device. This API uses a promise to return the result. |
-| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumedistributedhardware) | Resumes the distributed hardware service on the controlled device. This API uses a promise to return the result. |
-| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopdistributedhardware) | Stops the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [pauseDistributedHardware](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md#pauseDistributedHardware) | Pauses the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [resumeDistributedHardware](arkts-distributedservice-hardwaremanager-resumedistributedhardware-f-sys.md#resumeDistributedHardware) | Resumes the distributed hardware service on the controlled device. This API uses a promise to return the result. |
+| [stopDistributedHardware](arkts-distributedservice-hardwaremanager-stopdistributedhardware-f-sys.md#stopDistributedHardware) | Stops the distributed hardware service on the controlled device. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

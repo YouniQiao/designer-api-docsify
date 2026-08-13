@@ -2,11 +2,13 @@
 
 使用pluginComponentManager.push方法时需要传递的参数。
 
-**起始版本：** 23
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-<!--Device-pluginComponentManager-export interface PushParameters--><!--Device-pluginComponentManager-export interface PushParameters-End-->
+**废弃版本：** -1
+
+<!--Device-pluginComponentManager-interface PushParameters--><!--Device-pluginComponentManager-interface PushParameters-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ data: KVObject
 
 组件数据，以键值对形式存储，用于传递给组件使用方的业务数据，键和值类型由业务定义。
 
-**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PushParameters-data: KVObject--><!--Device-PushParameters-data: KVObject-End-->
 
@@ -38,13 +42,15 @@ extraData: KVObject
 
 附加数据，以键值对形式存储，用于传递额外的业务信息，键和值类型由业务定义。
 
-**类型：** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**类型：** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PushParameters-extraData: KVObject--><!--Device-PushParameters-extraData: KVObject-End-->
 
@@ -56,15 +62,17 @@ extraData: KVObject
 jsonPath?: string
 ```
 
-存放模板路径的external.json文件的路径。当需要通过外部配置文件直接加载模板而非通过push通信发送时传入此参数；当jsonPath字段不为空时不触发push通信，直接从external.json中读取模板路径进行加载。不传入或为空时，触发push通信向组件使用方推送组件和数据。
+存放模板路径的external.json文件的路径。 当需要通过外部配置文件直接加载模板而非通过push通信发送时传入此参数；当jsonPath字段不为空时不触发push通信，直接从external.json中读取模板路径进行加载。 不传入或为空时，触发push通信向组件使用方推送组件和数据。
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PushParameters-jsonPath?: string--><!--Device-PushParameters-jsonPath?: string-End-->
 
@@ -80,11 +88,13 @@ name: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PushParameters-name: string--><!--Device-PushParameters-name: string-End-->
 
@@ -100,11 +110,13 @@ want: Want
 
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**起始版本：** 23
+**起始版本：** 8
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PushParameters-want: Want--><!--Device-PushParameters-want: Want-End-->
 

@@ -1,0 +1,64 @@
+# off_discoveryResult (System API)
+
+## Modules to Import
+
+```TypeScript
+import { connection } from '@kit.ConnectivityKit';
+```
+
+## off_discoveryResult
+
+```TypeScript
+function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>>): void
+```
+
+Unsubscribe the event reported when a remote Bluetooth device is discovered.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 18+: ohos.permission.ACCESS_BLUETOOTH
+- API version 12 - 17: ohos.permission.ACCESS_BLUETOOTH and ohos.permission.GET_BLUETOOTH_PEERS_MAC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-connection-function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>>): void--><!--Device-connection-function off(type: 'discoveryResult', callback?: Callback<Array<DiscoveryResult>>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'discoveryResult' | Yes | Type of the discovering event to listen for. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[DiscoveryResult](arkts-connectivity-connection-discoveryresult-i-sys.md)&gt;&gt; | No | Callback used to listen for the discovering event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| 2900099 | Operation failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let onReceiveEvent: (data: Array<connection.DiscoveryResult>) => void = (data: Array<connection.DiscoveryResult>) => { // data is an array of Bluetooth devices discovered.
+    console.info('bluetooth device find = '+ JSON.stringify(data));
+}
+try {
+    connection.on('discoveryResult', onReceiveEvent);
+    connection.off('discoveryResult', onReceiveEvent);
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
+

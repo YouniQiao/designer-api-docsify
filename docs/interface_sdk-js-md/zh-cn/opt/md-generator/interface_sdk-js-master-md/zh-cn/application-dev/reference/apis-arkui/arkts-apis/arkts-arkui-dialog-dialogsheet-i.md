@@ -4,6 +4,8 @@ Dialog sheet的配置项。
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-dialog-declare interface DialogSheet--><!--Device-dialog-declare interface DialogSheet-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ action: VoidCallback
 
 单击选项时执行的回调。
 
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +44,8 @@ icon?: ResourceStr
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
@@ -57,6 +65,8 @@ title: ResourceStr
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

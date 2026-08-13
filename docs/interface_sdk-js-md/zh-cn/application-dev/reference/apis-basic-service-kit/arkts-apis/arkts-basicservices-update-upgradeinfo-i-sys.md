@@ -2,9 +2,11 @@
 
 升级信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-update-export interface UpgradeInfo--><!--Device-update-export interface UpgradeInfo-End-->
 
@@ -22,9 +24,11 @@ businessType: BusinessType
 
 **类型：** [BusinessType](arkts-basicservices-update-businesstype-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UpgradeInfo-businessType: BusinessType--><!--Device-UpgradeInfo-businessType: BusinessType-End-->
 
@@ -38,13 +42,15 @@ businessType: BusinessType
 upgradeApp: string
 ```
 
-调用方包名，用于标识调用此升级接口的应用身份。格式为com.xxx.xxx.xxx，由点号分隔的多段组成。长度范围[1，255]，单位：字符，每段长度范围[1，64]，单位：字符，仅支持字母、数字和点号。每段必须以字母开头，不能包含连续点号或以点号开头结尾。超出范围或格式错误时抛出异常。
+调用方包名，用于标识调用此升级接口的应用身份。格式为com.xxx.xxx.xxx，由点号分隔的多段组成。长度范围[1，255]，单位：字符，每段长度范围[1，64]，单位：字符，仅支持字母、数字和点号。每段必须以字母开头，不 能包含连续点号或以点号开头结尾。超出范围或格式错误时抛出异常。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-UpgradeInfo-upgradeApp: string--><!--Device-UpgradeInfo-upgradeApp: string-End-->
 

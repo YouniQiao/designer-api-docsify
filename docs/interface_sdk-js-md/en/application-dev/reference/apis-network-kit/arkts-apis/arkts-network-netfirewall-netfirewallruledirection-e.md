@@ -6,6 +6,8 @@ Firewall rule direction enumeration.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-enum NetFirewallRuleDirection--><!--Device-netFirewall-enum NetFirewallRuleDirection-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -22,6 +24,8 @@ Inbound.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallRuleDirection-RULE_IN = 1--><!--Device-NetFirewallRuleDirection-RULE_IN = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -37,6 +41,8 @@ Outbound.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallRuleDirection-RULE_OUT = 2--><!--Device-NetFirewallRuleDirection-RULE_OUT = 2-End-->
 

@@ -2,7 +2,9 @@
 
 The **accessibility.config** module provides APIs for configuring system accessibility features, including accessibility extension, high-contrast text, mouse buttons, and captions.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace config--><!--Device-unnamed-declare namespace config-End-->
 
@@ -23,22 +25,26 @@ import { config } from '@kit.AccessibilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability) |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-1) |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability) |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-1) |
-| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) |
-| [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md#getseniormodestateforapp) |
-| [off](arkts-accessibility-config-off-f-sys.md#off) |
-| [off](arkts-accessibility-config-off-f-sys.md#off-1) |
-| [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp) |
-| [on](arkts-accessibility-config-on-f-sys.md#on) |
-| [on](arkts-accessibility-config-on-f-sys.md#on-1) |
-| [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onseniormodestatechangeforapp) |
-| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setmagnificationstate) |
-| [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md#setseniormodestateforapp) |
-| [startBlinking](arkts-accessibility-config-startblinking-f-sys.md#startblinking) |
-| [stopBlinking](arkts-accessibility-config-stopblinking-f-sys.md#stopblinking) |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableAbility-(System-API)) |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableAbility-(System-API)) |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableAbility-(System-API)) |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableAbility-(System-API)) |
+| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableAbilityWithCallback-(System-API)) |
+| [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md#getSeniorModeStateForApp-(System-API)) |
+| [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offEnabledAccessibilityExtensionListChange-(System-API)) |
+| [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md#offInstalledAccessibilityListChange-(System-API)) |
+| [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offSeniorModeStateChangeForApp-(System-API)) |
+| [off_enabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) |
+| [off_installedAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) |
+| [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md#onEnabledAccessibilityExtensionListChange-(System-API)) |
+| [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md#onInstalledAccessibilityListChange-(System-API)) |
+| [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onSeniorModeStateChangeForApp-(System-API)) |
+| [on_enabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) |
+| [on_installedAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) |
+| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setMagnificationState-(System-API)) |
+| [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md#setSeniorModeStateForApp-(System-API)) |
+| [startBlinking](arkts-accessibility-config-startblinking-f-sys.md#startBlinking-(System-API)) |
+| [stopBlinking](arkts-accessibility-config-stopblinking-f-sys.md#stopBlinking-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -77,12 +83,12 @@ import { config } from '@kit.AccessibilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [audioBalance](arkts-accessibility-config-con-sys.md#audiobalance) |
-| [audioMono](arkts-accessibility-config-con-sys.md#audiomono) |
-| [clickResponseTime](arkts-accessibility-config-con-sys.md#clickresponsetime) |
-| [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) |
-| [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) |
-| [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatclickinterval) |
-| [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) |
-| [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeymultitargets) |
+| [audioBalance](arkts-accessibility-config-con-sys.md#audioBalance) |
+| [audioMono](arkts-accessibility-config-con-sys.md#audioMono) |
+| [clickResponseTime](arkts-accessibility-config-con-sys.md#clickResponseTime) |
+| [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationState) |
+| [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) |
+| [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatClickInterval) |
+| [screenMagnification](arkts-accessibility-config-con-sys.md#screenMagnification) |
+| [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeyMultiTargets) |
 <!--DelEnd-->

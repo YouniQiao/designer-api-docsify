@@ -12,7 +12,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Deprecated since:** 9
 
-**Substitutes:** [deletePreferences](ohos.preferences.preferences.deletePreferences)
+**Substitutes:** deletePreferences
 
 <!--Device-storage-function deleteStorageSync(path: string): void--><!--Device-storage-function deleteStorageSync(path: string): void-End-->
 

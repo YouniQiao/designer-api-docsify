@@ -2,7 +2,9 @@
 
 Target information.
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface TargetInfo--><!--Device-mechanicManager-export interface TargetInfo-End-->
 
@@ -20,7 +22,9 @@ Target type.
 
 **类型：** [TargetType](arkts-mechanic-mechanicmanager-targettype-e-sys.md)
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TargetInfo-targetType: TargetType--><!--Device-TargetInfo-targetType: TargetType-End-->
 

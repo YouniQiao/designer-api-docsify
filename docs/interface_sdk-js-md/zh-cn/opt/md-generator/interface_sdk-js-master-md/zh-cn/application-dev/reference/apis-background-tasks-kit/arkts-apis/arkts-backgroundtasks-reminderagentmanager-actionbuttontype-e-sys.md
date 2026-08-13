@@ -2,7 +2,9 @@
 
 提醒上的按钮的类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-reminderAgentManager-export enum ActionButtonType--><!--Device-reminderAgentManager-export enum ActionButtonType-End-->
 
@@ -16,7 +18,9 @@ ACTION_BUTTON_TYPE_CUSTOM = 2
 
 表示自定义的按钮。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CUSTOM = 2--><!--Device-ActionButtonType-ACTION_BUTTON_TYPE_CUSTOM = 2-End-->
 

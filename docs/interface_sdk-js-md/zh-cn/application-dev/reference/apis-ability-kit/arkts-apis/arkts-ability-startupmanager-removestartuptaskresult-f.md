@@ -6,14 +6,13 @@
 function removeStartupTaskResult(startupTask: string): void
 ```
 
-删除指定启动任务或so预加载任务的初始化结果。
+删除指定启动任务或so预加载任务的初始化结果。 - 输入为启动任务名时，删除指定启动任务的初始化结果。 - 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。
 
-- 输入为启动任务名时，删除指定启动任务的初始化结果。  
-- 输入为so文件时，将该so文件置为未加载，缓存中已加载的so文件不会被移除。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -31,7 +30,7 @@ function removeStartupTaskResult(startupTask: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
 ## 示例
 

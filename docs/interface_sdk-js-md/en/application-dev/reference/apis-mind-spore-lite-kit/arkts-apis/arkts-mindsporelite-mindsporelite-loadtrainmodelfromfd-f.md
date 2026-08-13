@@ -17,9 +17,11 @@ function loadTrainModelFromFd(
 
 Load train model from file description
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -31,7 +33,7 @@ Load train model from file description
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| model | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | model file description |
+| model | int | Yes | model file description |
 | trainCfg | [TrainCfg](arkts-mindsporelite-mindsporelite-traincfg-i.md) | No | model train configuration |
 | context | Context | No | model build context |
 

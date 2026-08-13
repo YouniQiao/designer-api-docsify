@@ -2,7 +2,9 @@
 
 版本摘要。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export interface VersionDigestInfo--><!--Device-update-export interface VersionDigestInfo-End-->
 
@@ -20,7 +22,9 @@ versionDigest: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VersionDigestInfo-versionDigest: string--><!--Device-VersionDigestInfo-versionDigest: string-End-->
 

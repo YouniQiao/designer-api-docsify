@@ -12,7 +12,7 @@
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (evt: Event): void | Promise<void>
@@ -24,7 +24,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ohos.worker.WorkerEventListener.](ohos.worker.WorkerEventListener.(event:)
+**替代接口：** ohos.worker.WorkerEventListener.(event: Event)
 
 <!--Device-EventListener-(evt: Event): void | Promise<void>--><!--Device-EventListener-(evt: Event): void | Promise<void>-End-->
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnSslErrorEventReceiveEvent--><!--Device-unnamed-declare interface OnSslErrorEventReceiveEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ certChainData?: Array<Uint8Array>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 <!--Device-OnSslErrorEventReceiveEvent-certChainData?: Array<Uint8Array>--><!--Device-OnSslErrorEventReceiveEvent-certChainData?: Array<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -41,6 +45,8 @@ error: SslError
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -61,6 +67,8 @@ handler: SslErrorHandler
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

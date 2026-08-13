@@ -8,7 +8,9 @@ function cancelSerialRight(portId: number): void
 
 移除应用程序运行时访问串口设备的权限。此接口会调用close关闭已打开的串口。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-function cancelSerialRight(portId: int): void--><!--Device-serialManager-function cancelSerialRight(portId: int): void-End-->
 
@@ -24,11 +26,11 @@ function cancelSerialRight(portId: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [31400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
-| [31400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400002-没有串口设备访问权限) |
-| [14400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400005-数据库操作异常) |
-| [31400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [31400003](../../apis-basic-services-kit/errorcode-usb.md#31400003-端口号不存在) |
+| [31400002](../../apis-basic-services-kit/errorcode-usb.md#31400002-没有串口设备访问权限) |
+| [14400005](../../apis-basic-services-kit/errorcode-usb.md#14400005-数据库操作异常) |
+| [31400001](../../apis-basic-services-kit/errorcode-usb.md#31400001-串口服务异常) |
 
 ## 示例
 

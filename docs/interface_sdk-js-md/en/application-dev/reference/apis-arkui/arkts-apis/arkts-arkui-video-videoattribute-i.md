@@ -2,39 +2,37 @@
 
 Defines the Video attribute.
 
-**Inheritance/Implementation:** VideoAttribute extends [CommonMethod](CommonMethod)
+**Inheritance/Implementation:** VideoAttribute extends CommonMethod
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare interface VideoAttribute extends CommonMethod--><!--Device-unnamed-export declare interface VideoAttribute extends CommonMethod-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface VideoAttribute--><!--Device-unnamed-export declare interface VideoAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## analyzerConfig
 
 ```TypeScript
-default analyzerConfig(config: ImageAnalyzerConfig | undefined): this
+analyzerConfig(config: ImageAnalyzerConfig | undefined): this
 ```
 
-Set image analyzer with config.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default analyzerConfig(config: ImageAnalyzerConfig | undefined): this--><!--Device-VideoAttribute-default analyzerConfig(config: ImageAnalyzerConfig | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-analyzerConfig(config: ImageAnalyzerConfig | undefined): this--><!--Device-VideoAttribute-analyzerConfig(config: ImageAnalyzerConfig | undefined): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) \| undefined | Yes |  |
+| config | [ImageAnalyzerConfig](../../apis-na/arkts-apis/arkts-na-imagecommon-imageanalyzerconfig-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -45,20 +43,16 @@ Set image analyzer with config.
 ## attributeModifier
 
 ```TypeScript
-default attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this
+attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this
 ```
 
-Call attributeModifier.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-VideoAttribute-default attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this--><!--Device-VideoAttribute-attributeModifier(modifier: AttributeModifier<VideoAttribute> | AttributeModifier<CommonMethod> | undefined): this-End-->
 
 **Parameters:**
 
@@ -75,20 +69,16 @@ Call attributeModifier.
 ## autoPlay
 
 ```TypeScript
-default autoPlay(value: boolean | undefined): this
+autoPlay(value: boolean | undefined): this
 ```
 
-Called when judging whether the video is played automatically.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default autoPlay(value: boolean | undefined): this--><!--Device-VideoAttribute-default autoPlay(value: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-autoPlay(value: boolean | undefined): this--><!--Device-VideoAttribute-autoPlay(value: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -105,20 +95,16 @@ Called when judging whether the video is played automatically.
 ## controls
 
 ```TypeScript
-default controls(value: boolean | undefined): this
+controls(value: boolean | undefined): this
 ```
 
-Called when judging whether the control bar is displayed.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default controls(value: boolean | undefined): this--><!--Device-VideoAttribute-default controls(value: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-controls(value: boolean | undefined): this--><!--Device-VideoAttribute-controls(value: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -135,20 +121,16 @@ Called when judging whether the control bar is displayed.
 ## enableAnalyzer
 
 ```TypeScript
-default enableAnalyzer(enable: boolean | undefined): this
+enableAnalyzer(enable: boolean | undefined): this
 ```
 
-Enable image analyzer.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default enableAnalyzer(enable: boolean | undefined): this--><!--Device-VideoAttribute-default enableAnalyzer(enable: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-enableAnalyzer(enable: boolean | undefined): this--><!--Device-VideoAttribute-enableAnalyzer(enable: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -165,20 +147,16 @@ Enable image analyzer.
 ## enableShortcutKey
 
 ```TypeScript
-default enableShortcutKey(enabled: boolean | undefined): this
+enableShortcutKey(enabled: boolean | undefined): this
 ```
 
-Indicates whether to response shortcut key. The default value is false.If the value is true, video will respond to the shortcut keys as follows:Space key: play/pause the video.Up/Down arrow key: turn up/down volume of the video.Right/Left arrow key: fast forward/backward the video.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default enableShortcutKey(enabled: boolean | undefined): this--><!--Device-VideoAttribute-default enableShortcutKey(enabled: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-enableShortcutKey(enabled: boolean | undefined): this--><!--Device-VideoAttribute-enableShortcutKey(enabled: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -195,20 +173,16 @@ Indicates whether to response shortcut key. The default value is false.If the va
 ## loop
 
 ```TypeScript
-default loop(value: boolean | undefined): this
+loop(value: boolean | undefined): this
 ```
 
-Called when judging whether the video is played circular.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default loop(value: boolean | undefined): this--><!--Device-VideoAttribute-default loop(value: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-loop(value: boolean | undefined): this--><!--Device-VideoAttribute-loop(value: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -225,20 +199,16 @@ Called when judging whether the video is played circular.
 ## muted
 
 ```TypeScript
-default muted(value: boolean | undefined): this
+muted(value: boolean | undefined): this
 ```
 
-Called when judging whether the video is muted.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default muted(value: boolean | undefined): this--><!--Device-VideoAttribute-default muted(value: boolean | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-muted(value: boolean | undefined): this--><!--Device-VideoAttribute-muted(value: boolean | undefined): this-End-->
 
 **Parameters:**
 
@@ -255,20 +225,16 @@ Called when judging whether the video is muted.
 ## objectFit
 
 ```TypeScript
-default objectFit(value: ImageFit | undefined): this
+objectFit(value: ImageFit | undefined): this
 ```
 
-Called when determining the zoom type of the video source.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default objectFit(value: ImageFit | undefined): this--><!--Device-VideoAttribute-default objectFit(value: ImageFit | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-objectFit(value: ImageFit | undefined): this--><!--Device-VideoAttribute-objectFit(value: ImageFit | undefined): this-End-->
 
 **Parameters:**
 
@@ -285,26 +251,22 @@ Called when determining the zoom type of the video source.
 ## onError
 
 ```TypeScript
-default onError(event: VoidCallback | ErrorCallback | undefined): this
+onError(event: VoidCallback | ErrorCallback | undefined): this
 ```
 
-Called when playback fails.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onError(event: VoidCallback | ErrorCallback | undefined): this--><!--Device-VideoAttribute-default onError(event: VoidCallback | ErrorCallback | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onError(event: VoidCallback | ErrorCallback | undefined): this--><!--Device-VideoAttribute-onError(event: VoidCallback | ErrorCallback | undefined): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) \| undefined | Yes |  |
+| event | [VoidCallback](arkts-arkui-voidcallback-t.md) \| [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -315,20 +277,16 @@ Called when playback fails.
 ## onFinish
 
 ```TypeScript
-default onFinish(event: VoidCallback | undefined): this
+onFinish(event: VoidCallback | undefined): this
 ```
 
-Called when the video playback ends.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onFinish(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-default onFinish(event: VoidCallback | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onFinish(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-onFinish(event: VoidCallback | undefined): this-End-->
 
 **Parameters:**
 
@@ -345,20 +303,16 @@ Called when the video playback ends.
 ## onFullscreenChange
 
 ```TypeScript
-default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
+onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this
 ```
 
-Called when the video enters and exits the full screen.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this--><!--Device-VideoAttribute-default onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this--><!--Device-VideoAttribute-onFullscreenChange(callback: Callback<FullscreenInfo> | undefined): this-End-->
 
 **Parameters:**
 
@@ -375,20 +329,16 @@ Called when the video enters and exits the full screen.
 ## onPause
 
 ```TypeScript
-default onPause(event: VoidCallback | undefined): this
+onPause(event: VoidCallback | undefined): this
 ```
 
-Called when the video is paused.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onPause(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-default onPause(event: VoidCallback | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onPause(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-onPause(event: VoidCallback | undefined): this-End-->
 
 **Parameters:**
 
@@ -405,20 +355,16 @@ Called when the video is paused.
 ## onPrepared
 
 ```TypeScript
-default onPrepared(callback: Callback<PreparedInfo> | undefined): this
+onPrepared(callback: Callback<PreparedInfo> | undefined): this
 ```
 
-Called when the video preparation is complete.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onPrepared(callback: Callback<PreparedInfo> | undefined): this--><!--Device-VideoAttribute-default onPrepared(callback: Callback<PreparedInfo> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onPrepared(callback: Callback<PreparedInfo> | undefined): this--><!--Device-VideoAttribute-onPrepared(callback: Callback<PreparedInfo> | undefined): this-End-->
 
 **Parameters:**
 
@@ -435,20 +381,16 @@ Called when the video preparation is complete.
 ## onSeeked
 
 ```TypeScript
-default onSeeked(callback: Callback<PlaybackInfo> | undefined): this
+onSeeked(callback: Callback<PlaybackInfo> | undefined): this
 ```
 
-Called when the playback time information is reported after the operation progress bar is completed.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onSeeked(callback: Callback<PlaybackInfo> | undefined): this--><!--Device-VideoAttribute-default onSeeked(callback: Callback<PlaybackInfo> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onSeeked(callback: Callback<PlaybackInfo> | undefined): this--><!--Device-VideoAttribute-onSeeked(callback: Callback<PlaybackInfo> | undefined): this-End-->
 
 **Parameters:**
 
@@ -465,20 +407,16 @@ Called when the playback time information is reported after the operation progre
 ## onSeeking
 
 ```TypeScript
-default onSeeking(callback: Callback<PlaybackInfo> | undefined): this
+onSeeking(callback: Callback<PlaybackInfo> | undefined): this
 ```
 
-Called when the time information is reported when the progress bar process is operated.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onSeeking(callback: Callback<PlaybackInfo> | undefined): this--><!--Device-VideoAttribute-default onSeeking(callback: Callback<PlaybackInfo> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onSeeking(callback: Callback<PlaybackInfo> | undefined): this--><!--Device-VideoAttribute-onSeeking(callback: Callback<PlaybackInfo> | undefined): this-End-->
 
 **Parameters:**
 
@@ -495,20 +433,16 @@ Called when the time information is reported when the progress bar process is op
 ## onStart
 
 ```TypeScript
-default onStart(event: VoidCallback | undefined): this
+onStart(event: VoidCallback | undefined): this
 ```
 
-Called when the video is played.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onStart(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-default onStart(event: VoidCallback | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onStart(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-onStart(event: VoidCallback | undefined): this-End-->
 
 **Parameters:**
 
@@ -525,20 +459,16 @@ Called when the video is played.
 ## onStop
 
 ```TypeScript
-default onStop(event: VoidCallback | undefined): this
+onStop(event: VoidCallback | undefined): this
 ```
 
-Called when the video is stopped.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onStop(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-default onStop(event: VoidCallback | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onStop(event: VoidCallback | undefined): this--><!--Device-VideoAttribute-onStop(event: VoidCallback | undefined): this-End-->
 
 **Parameters:**
 
@@ -555,20 +485,16 @@ Called when the video is stopped.
 ## onUpdate
 
 ```TypeScript
-default onUpdate(callback: Callback<PlaybackInfo> | undefined): this
+onUpdate(callback: Callback<PlaybackInfo> | undefined): this
 ```
 
-Called when the playback progress changes.
+**Since:** -1
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default onUpdate(callback: Callback<PlaybackInfo> | undefined): this--><!--Device-VideoAttribute-default onUpdate(callback: Callback<PlaybackInfo> | undefined): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-onUpdate(callback: Callback<PlaybackInfo> | undefined): this--><!--Device-VideoAttribute-onUpdate(callback: Callback<PlaybackInfo> | undefined): this-End-->
 
 **Parameters:**
 
@@ -585,30 +511,72 @@ Called when the playback progress changes.
 ## setVideoOptions
 
 ```TypeScript
-default setVideoOptions(value: VideoOptions): this
+setVideoOptions(value: VideoOptions): this
 ```
 
-Set Video options.
+**Since:** -1
 
-**Since:** 26.1.0
+**ArkTS mode:** ArkTS-Sta only, since version -1.
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+**Deprecated since:** -1
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-VideoAttribute-default setVideoOptions(value: VideoOptions): this--><!--Device-VideoAttribute-default setVideoOptions(value: VideoOptions): this-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-VideoAttribute-setVideoOptions(value: VideoOptions): this--><!--Device-VideoAttribute-setVideoOptions(value: VideoOptions): this-End-->
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [VideoOptions](arkts-arkui-video-videooptions-i.md) | Yes | Video constructor options |
+| value | [VideoOptions](arkts-arkui-video-videooptions-i.md) | Yes |  |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| this | Returns the instance of the VideoAttribute. |
+| this |  |
+
+## surfaceBackgroundColor
+
+```TypeScript
+surfaceBackgroundColor(color: ColorMetrics | undefined): this
+```
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Sta only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-VideoAttribute-surfaceBackgroundColor(color: ColorMetrics | undefined): this--><!--Device-VideoAttribute-surfaceBackgroundColor(color: ColorMetrics | undefined): this-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| color | [ColorMetrics](arkts-arkui-colormetrics-t.md) \| undefined | Yes |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| this |  |
+
+## default
+
+```TypeScript
+default
+```
+
+Call attributeModifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoAttribute-default--><!--Device-VideoAttribute-default-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

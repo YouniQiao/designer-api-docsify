@@ -2,7 +2,9 @@
 
 Describes device of cloud pair.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-interface TrustedPairedDevice--><!--Device-connection-interface TrustedPairedDevice-End-->
 
@@ -26,7 +28,9 @@ Indicates the bluetoothClass of the peripheral.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +50,9 @@ The local name of the device
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +72,9 @@ Indicates the deviceNameTime of the peripheral.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +94,9 @@ Indicates the device type of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +116,9 @@ Indicates the HiLink version of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +138,9 @@ Indicates the macAddress of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,7 +160,9 @@ Indicates the manufactory of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,7 +182,9 @@ Indicates the modelId of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,7 +204,9 @@ Indicates the pairState of the peripheral.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,7 +226,9 @@ Indicates the productId of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -226,7 +248,9 @@ Indicates the securityAdvInfo of the peripheral.
 
 **Type:** ArrayBuffer
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -246,7 +270,9 @@ Indicates the service id of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -266,7 +292,9 @@ Indicates the service type of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -286,7 +314,9 @@ Indicates the device identify.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -306,7 +336,9 @@ Indicates the token of the peripheral.
 
 **Type:** ArrayBuffer
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -326,7 +358,9 @@ Indicates the uuid of the peripheral.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

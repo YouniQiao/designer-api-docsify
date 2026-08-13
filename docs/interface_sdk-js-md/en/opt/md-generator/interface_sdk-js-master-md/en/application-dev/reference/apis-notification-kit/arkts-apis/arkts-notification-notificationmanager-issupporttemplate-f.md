@@ -12,10 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether a specified template is supported before using   
-[NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses an asynchronous callback to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void--><!--Device-notificationManager-function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -32,10 +33,10 @@ Checks whether a specified template is supported before using
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -60,10 +61,11 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-Checks whether a specified template is supported before using   
-[NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses a promise to return the result.
+Checks whether a specified template is supported before using [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md#NotificationTemplate) to publish a notification. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function isSupportTemplate(templateName: string): Promise<boolean>--><!--Device-notificationManager-function isSupportTemplate(templateName: string): Promise<boolean>-End-->
 
@@ -85,10 +87,10 @@ Checks whether a specified template is supported before using
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

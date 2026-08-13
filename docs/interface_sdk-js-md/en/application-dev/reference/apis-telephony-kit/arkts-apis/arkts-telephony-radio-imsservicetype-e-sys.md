@@ -2,9 +2,11 @@
 
 Indicates the type of IMS service.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum ImsServiceType--><!--Device-radio-export enum ImsServiceType-End-->
 
@@ -20,9 +22,11 @@ TYPE_VOICE = 0
 
 Indicates voice service.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsServiceType-TYPE_VOICE = 0--><!--Device-ImsServiceType-TYPE_VOICE = 0-End-->
 
@@ -38,9 +42,11 @@ TYPE_VIDEO = 1
 
 Indicates video service.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsServiceType-TYPE_VIDEO = 1--><!--Device-ImsServiceType-TYPE_VIDEO = 1-End-->
 
@@ -56,9 +62,11 @@ TYPE_UT = 2
 
 Indicates UT service.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsServiceType-TYPE_UT = 2--><!--Device-ImsServiceType-TYPE_UT = 2-End-->
 
@@ -74,9 +82,11 @@ TYPE_SMS = 3
 
 Indicates SMS service.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsServiceType-TYPE_SMS = 3--><!--Device-ImsServiceType-TYPE_SMS = 3-End-->
 

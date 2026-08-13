@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avMusicTemplate-interface DialogInfo--><!--Device-avMusicTemplate-interface DialogInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -19,6 +21,8 @@ buttons?: DialogButtonInfo[]
 **类型：** [DialogButtonInfo](arkts-avsession-avmusictemplate-dialogbuttoninfo-i.md)[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ description?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogInfo-description?: string--><!--Device-DialogInfo-description?: string-End-->
@@ -55,6 +61,8 @@ dialogId: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ dialogType: DialogType
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogInfo-dialogType: DialogType--><!--Device-DialogInfo-dialogType: DialogType-End-->
@@ -86,13 +96,13 @@ dialogType: DialogType
 qrCodes?: QrCodeInfo[]
 ```
 
-对话框二维码的数组。
-
-当设置了二维码信息时，此对话框将被识别为二维码对话框，并将优先显示二维码信息。最多可以设置两个。
+对话框二维码的数组。 当设置了二维码信息时，此对话框将被识别为二维码对话框，并将优先显示二维码信息。最多可以设置两个。
 
 **类型：** [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +122,8 @@ text?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogInfo-text?: string--><!--Device-DialogInfo-text?: string-End-->
@@ -129,6 +141,8 @@ title?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

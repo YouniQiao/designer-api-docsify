@@ -16,6 +16,8 @@ Compares buf1 to buf2
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1--><!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1-End-->
@@ -39,7 +41,7 @@ Compares buf1 to buf2
 
 | Error Code ID |
 | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
+| [10200068](../errorcode-utils.md#10200068-using-a-released-or-detached-arraybuffer) |
 
 ## Examples
 

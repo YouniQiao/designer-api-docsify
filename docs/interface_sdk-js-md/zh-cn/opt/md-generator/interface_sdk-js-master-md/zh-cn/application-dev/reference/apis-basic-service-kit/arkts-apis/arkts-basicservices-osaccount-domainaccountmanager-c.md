@@ -2,7 +2,9 @@
 
 域账号管理类。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
 
@@ -16,7 +18,9 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 修改指定域账号信息。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.MANAGE_DOMAIN_ACCOUNTS
 
@@ -41,12 +45,12 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) |
 
 ## 示例
 

@@ -14,7 +14,9 @@ function getCellularDataState(callback: AsyncCallback<DataConnectState>): void
 
 Obtain the connection state of the PS domain.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -32,7 +34,7 @@ Obtain the connection state of the PS domain.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -58,7 +60,9 @@ function getCellularDataState(): Promise<DataConnectState>
 
 Obtain the connection state of the PS domain.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
@@ -76,7 +80,7 @@ Obtain the connection state of the PS domain.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

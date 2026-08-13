@@ -2,7 +2,9 @@
 
 Enumerates the CMS message formats.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum CmsContentDataFormat--><!--Device-cert-enum CmsContentDataFormat-End-->
 
@@ -16,9 +18,11 @@ BINARY = 0
 
 Binary.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsContentDataFormat-BINARY = 0--><!--Device-CmsContentDataFormat-BINARY = 0-End-->
 
@@ -32,9 +36,11 @@ TEXT = 1
 
 Text.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsContentDataFormat-TEXT = 1--><!--Device-CmsContentDataFormat-TEXT = 1-End-->
 

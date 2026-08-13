@@ -6,6 +6,8 @@ Sets the status before and after execution of the animation in the current playb
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FillMode--><!--Device-unnamed-declare enum FillMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ If the animation is not executed, no style is applied to the target. After the a
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,6 +46,8 @@ The target component retains the state set by the last keyframe encountered duri
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -56,12 +62,13 @@ The target component retains the state set by the last keyframe encountered duri
 Backwards = 2
 ```
 
-The animation applies the values defined in the first relevant keyframe once it is applied to the target component,and retains the values during the period set by **delay**. The first relevant keyframe depends on the value of   
-**playMode**. If **playMode** is **Normal** or **Alternate**, the first relevant keyframe is in the **from** state.If **playMode** is **Reverse** or **AlternateReverse**, the first relevant keyframe is in the **to** state.
+The animation applies the values defined in the first relevant keyframe once it is applied to the target component, and retains the values during the period set by **delay**. The first relevant keyframe depends on the value of **playMode**. If **playMode** is **Normal** or **Alternate**, the first relevant keyframe is in the **from** state. If **playMode** is **Reverse** or **AlternateReverse**, the first relevant keyframe is in the **to** state.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,6 +89,8 @@ The animation follows the rules for both **Forwards** and **Backwards**, extendi
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

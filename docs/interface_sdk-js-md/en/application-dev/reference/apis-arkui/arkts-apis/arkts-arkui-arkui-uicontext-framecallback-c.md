@@ -1,12 +1,14 @@
 # FrameCallback
 
-Class FrameCallback
+Implements the API for setting the task that needs to be executed during the next frame rendering. > **NOTE：**> > - The following APIs must be used in conjunction with [postFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback) and > [postDelayedFrameCallback](arkts-arkui-arkui-uicontext-uicontext-c.md#postDelayedFrameCallback) from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext). > Extend this class and override either the [onFrame](#onFrame) or > [onIdle](#onIdle) method to implement specific service logic.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare abstract class FrameCallback--><!--Device-unnamed-export declare abstract class FrameCallback-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export abstract class FrameCallback--><!--Device-unnamed-export abstract class FrameCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,18 +21,22 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 ## onFrame
 
 ```TypeScript
-onFrame(frameTimeInNano: long): void
+onFrame(frameTimeInNano: number): void
 ```
 
-Call when a new display frame is being rendered.
+Called when the next frame is rendered.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FrameCallback-onFrame(frameTimeInNano: long): void--><!--Device-FrameCallback-onFrame(frameTimeInNano: long): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameCallback-onFrame(frameTimeInNano: number): void--><!--Device-FrameCallback-onFrame(frameTimeInNano: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,23 +44,27 @@ Call when a new display frame is being rendered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameTimeInNano | long | Yes | The frame time in nanoseconds. |
+| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.&lt;br&gt;Value range: [0, +∞) |
 
 ## onIdle
 
 ```TypeScript
-onIdle(timeLeftInNano: long): void
+onIdle(timeLeftInNano: number): void
 ```
 
-Called at the end of the next idle frame. If there is no next frame, will request one automatically.
+Called after the rendering of the subsequent frame has finished and there is more than 1 millisecond left before the next VSync signal. If the time left is not more than 1 millisecond, the execution of this API will be deferred to a later frame.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-FrameCallback-onIdle(timeLeftInNano: long): void--><!--Device-FrameCallback-onIdle(timeLeftInNano: long): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-FrameCallback-onIdle(timeLeftInNano: number): void--><!--Device-FrameCallback-onIdle(timeLeftInNano: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,5 +72,5 @@ Called at the end of the next idle frame. If there is no next frame, will reques
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeLeftInNano | long | Yes | The remaining time from the deadline for this frame. |
+| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.&lt;br&gt;Value range: [0, +∞) |
 

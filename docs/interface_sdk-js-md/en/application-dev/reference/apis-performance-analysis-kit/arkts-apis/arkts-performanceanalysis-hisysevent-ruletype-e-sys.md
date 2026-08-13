@@ -2,9 +2,11 @@
 
 Enumerates matching rule types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-enum RuleType--><!--Device-hiSysEvent-enum RuleType-End-->
 
@@ -20,9 +22,11 @@ WHOLE_WORD = 1
 
 Whole word matching.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RuleType-WHOLE_WORD = 1--><!--Device-RuleType-WHOLE_WORD = 1-End-->
 
@@ -38,9 +42,11 @@ PREFIX = 2
 
 Prefix matching.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RuleType-PREFIX = 2--><!--Device-RuleType-PREFIX = 2-End-->
 
@@ -56,9 +62,11 @@ REGULAR = 3
 
 Regular expression matching.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RuleType-REGULAR = 3--><!--Device-RuleType-REGULAR = 3-End-->
 

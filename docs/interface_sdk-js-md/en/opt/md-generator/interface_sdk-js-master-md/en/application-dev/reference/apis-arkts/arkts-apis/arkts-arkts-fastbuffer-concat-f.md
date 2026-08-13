@@ -16,6 +16,8 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer--><!--Device-fastbuffer-function concat(list: FastBuffer[] | Uint8Array[], totalLength?: number): FastBuffer-End-->
@@ -39,7 +41,7 @@ Returns a new `FastBuffer` which is the result of concatenating all the `FastBuf
 
 | Error Code ID |
 | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 

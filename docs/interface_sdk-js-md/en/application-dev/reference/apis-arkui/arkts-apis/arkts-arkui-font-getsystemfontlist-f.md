@@ -12,19 +12,7 @@ import { font } from '@kit.ArkUI';
 function getSystemFontList(): Array<string>
 ```
 
-Obtains this system font list.
-
-This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices.
-
-You are advised to use the  
-[getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType) API to obtain the latest system-supported font list data.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Font](@ohos.arkui.UIContext) object associated with
-> the current UI context.
+Obtains this system font list. This API only takes effect on PCs/2-in-1 devices and returns an empty array on other devices. You are advised to use the [getSystemFontFullNamesByType](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType) API to obtain the latest system-supported font list data. > **NOTE：**> > - Since API version 10, you can use the > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Font](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated with > the current UI context.
 
 **Since:** 10
 
@@ -32,7 +20,7 @@ You are advised to use the
 
 **Deprecated since:** 18
 
-**Substitutes:** [getSystemFontList](ohos.arkui.UIContext.Font#getSystemFontList)
+**Substitutes:** getSystemFontList
 
 **Model restriction:** This API can be used only in the stage model.
 

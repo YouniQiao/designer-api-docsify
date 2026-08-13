@@ -6,6 +6,8 @@ Displays the identification result of sensitive content.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-identifySensitiveContent-export interface MatchResult--><!--Device-identifySensitiveContent-export interface MatchResult-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -30,6 +32,8 @@ Matched sensitive content segment, that is, the text content matched by keyword 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-MatchResult-readonly matchContent: string--><!--Device-MatchResult-readonly matchContent: string-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -48,6 +52,8 @@ Total number of matched items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-MatchResult-readonly matchNumber: number--><!--Device-MatchResult-readonly matchNumber: number-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -58,13 +64,15 @@ Total number of matched items.
 readonly sensitiveLabel: string
 ```
 
-Label of an identification policy,which corresponds to sensitiveLabel in the input policy and is used to label the policy used to identify the matching result.
+Label of an identification policy, which corresponds to sensitiveLabel in the input policy and is used to label the policy used to identify the matching result.
 
 **Type:** string
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-MatchResult-readonly sensitiveLabel: string--><!--Device-MatchResult-readonly sensitiveLabel: string-End-->
 

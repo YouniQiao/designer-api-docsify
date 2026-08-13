@@ -1,16 +1,16 @@
 # UIGridEvent
 
-frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent-3)方法的返回值，可用于给Grid节点设置滚动事件。
+frameNode中[getEvent('Grid')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getEvent)方法的返 回值，可用于给Grid节点设置滚动事件。 UIGridEvent继承于UIScrollableCommonEvent。
 
-UIGridEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。
-
-**继承/实现关系：** UIGridEvent extends [UIScrollableCommonEvent](UIScrollableCommonEvent)
+**继承/实现关系：** UIGridEvent extends UIScrollableCommonEvent
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
-<!--Device-unnamed-declare interface UIGridEvent extends UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIGridEvent extends UIScrollableCommonEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface UIGridEvent--><!--Device-unnamed-declare interface UIGridEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,13 +20,13 @@ UIGridEvent继承于[UIScrollableCommonEvent](UIScrollableCommonEvent)。
 setOnDidScroll(callback: OnScrollCallback | undefined): void
 ```
 
-设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置[onDidScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#ondidscroll12)事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,13 +48,13 @@ setOnDidScroll(callback: OnScrollCallback | undefined): void
 setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 ```
 
-设置[onScrollIndex](GridAttribute#onScrollIndex)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置onScrollIndex事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,13 +76,13 @@ setOnScrollIndex(callback: OnGridScrollIndexCallback | undefined): void
 setOnWillScroll(callback: OnWillScrollCallback | undefined): void
 ```
 
-设置[onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12)事件的回调。
-
-方法入参为undefined时，会重置事件回调。
+设置[onWillScroll](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#onwillscroll12)事件的回调。 方法入参为undefined时，会重置事件回调。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

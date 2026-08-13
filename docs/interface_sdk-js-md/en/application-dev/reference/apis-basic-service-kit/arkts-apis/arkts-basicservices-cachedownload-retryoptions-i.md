@@ -4,7 +4,9 @@ Task retry configuration.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-interface RetryOptions--><!--Device-cacheDownload-interface RetryOptions-End-->
 
@@ -22,13 +24,15 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 maxRetryCount?: int
 ```
 
-Maximum number of retry attempts.The default value is 1.The minimum value is 0.The maximum value is 10.When set to 0, no retries will be performed.
+Maximum number of retry attempts. The default value is 1. The minimum value is 0. The maximum value is 10. When set to 0, no retries will be performed.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

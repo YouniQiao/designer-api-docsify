@@ -6,6 +6,8 @@ Defines the symbol span style result.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface RichEditorSymbolSpanStyleResult--><!--Device-unnamed-export declare interface RichEditorSymbolSpanStyleResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ The symbol span effect strategy.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The font color.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorSymbolSpanStyleResult-fontColor: Array<ResourceColor>--><!--Device-RichEditorSymbolSpanStyleResult-fontColor: Array<ResourceColor>-End-->
@@ -63,6 +69,8 @@ The font size.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ The font weight.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorSymbolSpanStyleResult-fontWeight: int | FontWeight | string--><!--Device-RichEditorSymbolSpanStyleResult-fontWeight: int | FontWeight | string-End-->
@@ -103,6 +113,8 @@ The symbol span rendering strategy.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

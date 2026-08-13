@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NavigationToolbarOptions--><!--Device-unnamed-declare interface NavigationToolbarOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ backgroundBlurStyle?: BlurStyle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -38,19 +42,15 @@ backgroundBlurStyle?: BlurStyle
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-工具栏背景模糊选项。
-
-**说明：**
-
-只在设置了backgroundBlurStyle时生效。
-
-不建议与backgroundEffect同时使用。
+工具栏背景模糊选项。 **说明：** 只在设置了backgroundBlurStyle时生效。 不建议与backgroundEffect同时使用。
 
 **类型：** BackgroundBlurStyleOptions
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +74,8 @@ backgroundColor?: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -88,17 +90,15 @@ backgroundColor?: ResourceColor
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-设置工具栏背景属性包括：模糊半径，亮度，饱和度，颜色等。
-
-**说明：**
-
-不建议与backgroundBlurStyleOptions同时使用。
+设置工具栏背景属性包括：模糊半径，亮度，饱和度，颜色等。 **说明：** 不建议与backgroundBlurStyleOptions同时使用。
 
 **类型：** BackgroundEffectOptions
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,9 +114,7 @@ backgroundEffect?: BackgroundEffectOptions
 barStyle?: BarStyle
 ```
 
-设置工具栏布局方式。
-
-默认值：BarStyle.STANDARD
+设置工具栏布局方式。 默认值：BarStyle.STANDARD
 
 **类型：** [BarStyle](arkts-arkui-barstyle-e.md)
 
@@ -125,6 +123,8 @@ barStyle?: BarStyle
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,11 +140,7 @@ barStyle?: BarStyle
 hideItemValue?: boolean
 ```
 
-设置是否隐藏工具栏的文本，默认显示文本。
-
-true：隐藏工具栏的文本；false：不隐藏工具栏的文本。
-
-默认值：false
+设置是否隐藏工具栏的文本，默认显示文本。 true：隐藏工具栏的文本；false：不隐藏工具栏的文本。 默认值：false
 
 **类型：** boolean
 
@@ -153,6 +149,8 @@ true：隐藏工具栏的文本；false：不隐藏工具栏的文本。
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -175,6 +173,8 @@ moreButtonOptions?: MoreButtonOptions
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

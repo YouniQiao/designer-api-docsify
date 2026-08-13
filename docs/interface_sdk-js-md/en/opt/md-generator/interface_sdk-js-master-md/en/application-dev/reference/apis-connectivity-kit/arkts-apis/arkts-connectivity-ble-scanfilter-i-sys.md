@@ -2,7 +2,9 @@
 
 Describes the criteria for filtering scanning results can be set.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface ScanFilter--><!--Device-ble-interface ScanFilter-End-->
 
@@ -20,11 +22,13 @@ import { ble } from '@kit.ConnectivityKit';
 irk?: Uint8Array
 ```
 
-Identity Resolving Key of BLE peripheral device.[irk](#irk) needs to be used with [address](arkts-connectivity-ble-scanfilter-i.md#address).
+Identity Resolving Key of BLE peripheral device. [irk](#irk) needs to be used with [address](arkts-connectivity-ble-scanfilter-i.md#address).
 
 **Type:** Uint8Array
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

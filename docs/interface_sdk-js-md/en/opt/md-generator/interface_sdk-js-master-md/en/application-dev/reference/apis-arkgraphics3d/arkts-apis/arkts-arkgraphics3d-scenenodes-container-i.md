@@ -2,9 +2,11 @@
 
 Defines a scene object container.
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface Container<T>--><!--Device-unnamed-export interface Container<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface Container--><!--Device-unnamed-export interface Container-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -16,7 +18,9 @@ append(item: T): void
 
 Append an item to the container.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Container-append(item: T): void--><!--Device-Container-append(item: T): void-End-->
 
@@ -36,7 +40,9 @@ clear(): void
 
 Clear all children.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Container-clear(): void--><!--Device-Container-clear(): void-End-->
 
@@ -50,7 +56,9 @@ count(): number
 
 Obtains the number of nodes in the container.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Container-count(): int--><!--Device-Container-count(): int-End-->
 
@@ -70,7 +78,9 @@ get(index: number): T | null
 
 Obtains a node of a given index. If no node is obtained, null is returned.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Container-get(index: int): T | null--><!--Device-Container-get(index: int): T | null-End-->
 
@@ -96,7 +106,9 @@ insertAfter(item: T, sibling: T | null): void
 
 Insert an item.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Container-insertAfter(item: T, sibling: T | null): void--><!--Device-Container-insertAfter(item: T, sibling: T | null): void-End-->
 
@@ -117,7 +129,9 @@ remove(item: T): void
 
 Remove an item from Container's children.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Container-remove(item: T): void--><!--Device-Container-remove(item: T): void-End-->
 

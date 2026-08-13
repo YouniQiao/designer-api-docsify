@@ -8,9 +8,11 @@ function getSensorListSync(): Array<Sensor>
 
 获取设备上的所有传感器信息，使用同步方式返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sensor-function getSensorListSync(): Array<Sensor>--><!--Device-sensor-function getSensorListSync(): Array<Sensor>-End-->
 
@@ -26,7 +28,7 @@ function getSensorListSync(): Array<Sensor>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 

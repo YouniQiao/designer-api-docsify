@@ -1,20 +1,10 @@
 # promptAction
 
-This module provides API for creating and displaying toasts, dialog boxes, and action menus.
-
-> **NOTE：**
-> 
-> - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). In
-> other words, the APIs of this module can be used only after a component instance is created; they cannot be called
-> in the lifecycle of the UIAbility.
-> 
-> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used
-> where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see
-> [UIContext](@ohos.arkui.UIContext). It is recommended that you use the dialog box APIs provided by
-> **UIContext**&lt;!--Del--&gt;, except for UI-less scenarios such as
-> [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)&lt;!--DelEnd--&gt;.
+This module provides API for creating and displaying toasts, dialog boxes, and action menus. > **NOTE：**> > - This module cannot be used in the file declaration of the [UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility). In > other words, the APIs of this module can be used only after a component instance is created; they cannot be called > in the lifecycle of the UIAbility. > > - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used > where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext). It is recommended that you use the dialog box APIs provided by > **UIContext**&lt;!--Del--&gt;, except for UI-less scenarios such as > [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)&lt;!--DelEnd--&gt;.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace promptAction--><!--Device-unnamed-declare namespace promptAction-End-->
 
@@ -32,15 +22,15 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [showToast](arkts-arkui-promptaction-showtoast-f.md#showtoast) |
-| [openToast](arkts-arkui-promptaction-opentoast-f.md#opentoast) |
-| [closeToast](arkts-arkui-promptaction-closetoast-f.md#closetoast) |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog) |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog-1) |
-| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md#opencustomdialog) |
-| [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md#closecustomdialog) |
-| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu) |
-| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu-1) |
+| [showToast](arkts-arkui-promptaction-showtoast-f.md#showToast) |
+| [openToast](arkts-arkui-promptaction-opentoast-f.md#openToast) |
+| [closeToast](arkts-arkui-promptaction-closetoast-f.md#closeToast) |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showDialog) |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showDialog) |
+| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md#openCustomDialog) |
+| [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md#closeCustomDialog) |
+| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showActionMenu) |
+| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showActionMenu) |
 
 ### Classes
 

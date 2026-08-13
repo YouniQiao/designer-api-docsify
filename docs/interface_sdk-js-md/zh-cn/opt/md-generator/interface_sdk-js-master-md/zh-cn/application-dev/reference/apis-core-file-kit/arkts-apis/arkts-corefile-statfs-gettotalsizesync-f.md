@@ -8,7 +8,9 @@ function getTotalSizeSync(path: string): number
 
 以同步方法获取指定文件系统总字节数。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getTotalSizeSync(path: string): long--><!--Device-statfs-function getTotalSizeSync(path: string): long-End-->
 

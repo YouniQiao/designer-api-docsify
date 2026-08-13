@@ -2,9 +2,11 @@
 
 Enum for power consumption scenario.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum PowerConsumptionScenario--><!--Device-geoLocationManager-export enum PowerConsumptionScenario-End-->
 
@@ -18,11 +20,13 @@ HIGH_POWER_CONSUMPTION = 0x601
 
 High power consumption mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PowerConsumptionScenario-HIGH_POWER_CONSUMPTION = 0x601--><!--Device-PowerConsumptionScenario-HIGH_POWER_CONSUMPTION = 0x601-End-->
 
@@ -36,11 +40,13 @@ LOW_POWER_CONSUMPTION = 0x602
 
 Low power consumption mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PowerConsumptionScenario-LOW_POWER_CONSUMPTION = 0x602--><!--Device-PowerConsumptionScenario-LOW_POWER_CONSUMPTION = 0x602-End-->
 
@@ -54,11 +60,13 @@ NO_POWER_CONSUMPTION = 0x603
 
 Power saving scenarios.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PowerConsumptionScenario-NO_POWER_CONSUMPTION = 0x603--><!--Device-PowerConsumptionScenario-NO_POWER_CONSUMPTION = 0x603-End-->
 

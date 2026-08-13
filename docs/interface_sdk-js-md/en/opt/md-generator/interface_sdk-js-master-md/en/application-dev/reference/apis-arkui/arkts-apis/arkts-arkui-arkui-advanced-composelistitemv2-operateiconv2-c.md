@@ -4,7 +4,7 @@ Declare type OperateIconV2
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class OperateIconV2--><!--Device-unnamed-export declare class OperateIconV2-End-->
 
@@ -16,24 +16,6 @@ Declare type OperateIconV2
 import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from '@kit.ArkUI';
 ```
 
-## action
-
-```TypeScript
-public action?: OnActionCallback
-```
-
-Callback function when operate the icon.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateIconV2-public action?: OnActionCallback--><!--Device-OperateIconV2-public action?: OnActionCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## constructor
 
 ```TypeScript
@@ -43,6 +25,8 @@ constructor(options?: OperateIconV2Options)
 The constructor of OperateIconV2.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +45,8 @@ The constructor of OperateIconV2.
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+  public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of the icon.
@@ -70,18 +55,21 @@ The accessibilityDescription of the icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIconV2-public accessibilityDescription?: ResourceStr--><!--Device-OperateIconV2-public accessibilityDescription?: ResourceStr-End-->
+<!--Device-OperateIconV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateIconV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel?: string
+@Trace
+  public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of the icon.
@@ -92,18 +80,21 @@ The accessibilityLevel of the icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIconV2-public accessibilityLevel?: string--><!--Device-OperateIconV2-public accessibilityLevel?: string-End-->
+<!--Device-OperateIconV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateIconV2-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-public accessibilityText?: ResourceStr
+@Trace
+  public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of the icon.
@@ -112,18 +103,44 @@ The accessibilityText of the icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIconV2-public accessibilityText?: ResourceStr--><!--Device-OperateIconV2-public accessibilityText?: ResourceStr-End-->
+<!--Device-OperateIconV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateIconV2-@Trace  public accessibilityText?: ResourceStr-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## action
+
+```TypeScript
+@Trace
+  public action?: OnActionCallback
+```
+
+Callback function when operate the icon.
+
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateIconV2-@Trace  public action?: OnActionCallback--><!--Device-OperateIconV2-@Trace  public action?: OnActionCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## symbolStyle
 
 ```TypeScript
-public symbolStyle?: SymbolGlyphModifier
+@Trace
+  public symbolStyle?: SymbolGlyphModifier
 ```
 
 The content of text or the address of symbol
@@ -132,18 +149,21 @@ The content of text or the address of symbol
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIconV2-public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateIconV2-public symbolStyle?: SymbolGlyphModifier-End-->
+<!--Device-OperateIconV2-@Trace  public symbolStyle?: SymbolGlyphModifier--><!--Device-OperateIconV2-@Trace  public symbolStyle?: SymbolGlyphModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## value
 
 ```TypeScript
-public value: ResourceStr
+@Trace
+  public value: ResourceStr
 ```
 
 The content of text or the address of icon.
@@ -152,10 +172,12 @@ The content of text or the address of icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateIconV2-public value: ResourceStr--><!--Device-OperateIconV2-public value: ResourceStr-End-->
+<!--Device-OperateIconV2-@Trace  public value: ResourceStr--><!--Device-OperateIconV2-@Trace  public value: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

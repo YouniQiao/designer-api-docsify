@@ -2,11 +2,13 @@
 
 Provides the web native messaging capability and is inherited from ExtensionAbility.
 
-**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends [ExtensionAbility](ExtensionAbility)
+**Inheritance/Implementation:** WebNativeMessagingExtensionAbility extends ExtensionAbility
 
 **Since:** 21
 
-<!--Device-unnamed-export default class WebNativeMessagingExtensionAbility extends ExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility extends ExtensionAbility-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export default class WebNativeMessagingExtensionAbility--><!--Device-unnamed-export default class WebNativeMessagingExtensionAbility-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -25,6 +27,8 @@ onConnectNative(info: ConnectionInfo): void
 Called when a web native message connection is established. In this callback, you can obtain the connection information for subsequent message communication processing.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,6 +67,8 @@ Called when the WebNativeMessagingExtensionAbility is destroyed. In this callbac
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void--><!--Device-WebNativeMessagingExtensionAbility-onDestroy(): void-End-->
@@ -91,6 +97,8 @@ onDisconnectNative(info: ConnectionInfo): void
 Called when a web native message connection is disconnected. In this callback, you can release resources related to the connection and complete necessary cleanup.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,6 +137,8 @@ Context of the current web native message ExtensionAbility.
 **Type:** [WebNativeMessagingExtensionContext](arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md)
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

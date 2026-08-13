@@ -10,6 +10,8 @@ declare function mkdtempSync(prefix: string): string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO

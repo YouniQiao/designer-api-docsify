@@ -2,53 +2,57 @@
 
 ```TypeScript
 export type Matrix4 = [
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number
 ]
 ```
 
-It's a 4x4 matrix, represent by double[].
+Sets a 4x4 matrix. The **Matrix4** type is used to set transformation information for components. The following is an example: ``` const transform: Matrix4 = [ 1, 0, 45, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1 ] ```.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export type Matrix4 = [  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double]--><!--Device-unnamed-export type Matrix4 = [  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double,  double]-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export type Matrix4 = [  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number]--><!--Device-unnamed-export type Matrix4 = [  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **Property type:** [
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double,
-  double
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number,
+  number
 ]
 

@@ -4,6 +4,8 @@ Describes the connection state parameters.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-remoteDevice-interface ConnectionStateParam--><!--Device-remoteDevice-interface ConnectionStateParam-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,11 +22,13 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 address: string
 ```
 
-Indicates the device address.The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
+Indicates the device address. The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF.
 
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Connection reason.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionStateParam-connectionReason: ConnectionReason--><!--Device-ConnectionStateParam-connectionReason: ConnectionReason-End-->
@@ -61,6 +67,8 @@ Indicates the previous connection state.
 **Type:** ConnectionState
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +88,8 @@ Indicates reason message. This field is intended for log information only and sh
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionStateParam-reasonMsg?: string--><!--Device-ConnectionStateParam-reasonMsg?: string-End-->
@@ -97,6 +107,8 @@ Indicates the current connection state.
 **Type:** ConnectionState
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

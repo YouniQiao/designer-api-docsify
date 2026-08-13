@@ -14,11 +14,13 @@ function getListenerCount(eventId: long | string): long
 
 Obtains the number of subscriptions to a specified event.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-emitter-function getListenerCount(eventId: long | string): long--><!--Device-emitter-function getListenerCount(eventId: long | string): long-End-->
 
@@ -28,13 +30,13 @@ Obtains the number of subscriptions to a specified event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventId | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：long \| string | Yes | Event ID. The value is a string, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
+| eventId | long \| string | Yes | Event ID. The value is a string, which cannot be empty or exceed 10,240 bytes. Excess content will be truncated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Number of subscriptions to a specified event. |
+| long | Number of subscriptions to a specified event. |
 
 ## Examples
 

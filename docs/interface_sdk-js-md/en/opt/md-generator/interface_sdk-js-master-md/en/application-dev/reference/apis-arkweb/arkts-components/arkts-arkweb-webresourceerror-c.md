@@ -4,6 +4,8 @@ Defines the Web resource error.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class WebResourceError--><!--Device-unnamed-declare class WebResourceError-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,6 +37,8 @@ getCustomErrorCode(): number
 Gets the custom error code of the Web resource.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceError-getCustomErrorCode(): number--><!--Device-WebResourceError-getCustomErrorCode(): number-End-->
 
@@ -53,6 +59,8 @@ getErrorCode(): number
 Gets the code of the Web resource error.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -75,6 +83,8 @@ getErrorInfo(): string
 Gets the info of the Web resource error.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

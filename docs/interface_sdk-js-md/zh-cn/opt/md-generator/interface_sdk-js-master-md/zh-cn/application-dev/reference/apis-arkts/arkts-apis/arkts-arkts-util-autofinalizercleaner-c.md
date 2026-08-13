@@ -4,7 +4,9 @@
 
 **起始版本：** 22
 
-<!--Device-util-class AutoFinalizerCleaner<T>--><!--Device-util-class AutoFinalizerCleaner<T>-End-->
+**废弃版本：** -1
+
+<!--Device-util-class AutoFinalizerCleaner--><!--Device-util-class AutoFinalizerCleaner-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -17,6 +19,8 @@ static register<T>(obj: AutoFinalizer<T>, heldValue: T): void
 注册释放由开发者管理的资源的对象。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

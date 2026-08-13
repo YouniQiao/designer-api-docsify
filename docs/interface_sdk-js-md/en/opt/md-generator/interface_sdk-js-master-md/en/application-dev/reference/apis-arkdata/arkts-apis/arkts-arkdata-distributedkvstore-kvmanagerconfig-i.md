@@ -2,7 +2,9 @@
 
 Provides the **KVManager** instance configuration, including the bundle name of the invoker and the application context.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-interface KVManagerConfig--><!--Device-distributedKVStore-interface KVManagerConfig-End-->
 
@@ -24,7 +26,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,20 +42,13 @@ Bundle name.
 context: BaseContext
 ```
 
-Application context.
-
-For details about the application context of the FA model, see  
-[Context](../apis-ability-kit/js-apis-inner-app-context.md).
-
-For details about the application context of the stage model, see  
-[Context](../apis-ability-kit/js-apis-inner-application-uiAbilityContext.md).
-
-Since API version 10, the parameter type of context is  
-[BaseContext](../apis-ability-kit/js-apis-inner-application-baseContext.md).
+Application context. For details about the application context of the FA model, see Context. For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext). Since API version 10, the parameter type of context is [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md#BaseContext).
 
 **Type:** [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

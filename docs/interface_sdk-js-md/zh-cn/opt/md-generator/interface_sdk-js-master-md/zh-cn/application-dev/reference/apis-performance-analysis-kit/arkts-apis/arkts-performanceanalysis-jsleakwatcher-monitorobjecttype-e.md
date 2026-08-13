@@ -2,7 +2,9 @@
 
 需要监控的组件对象类型枚举。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-jsLeakWatcher-export declare enum MonitorObjectType--><!--Device-jsLeakWatcher-export declare enum MonitorObjectType-End-->
 
@@ -16,7 +18,9 @@ ALL = -1
 
 监测所有组件类型。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-MonitorObjectType-ALL = -1--><!--Device-MonitorObjectType-ALL = -1-End-->
 
@@ -30,7 +34,9 @@ CUSTOM_COMPONENT = 1 << 0
 
 监测自定义组件类型。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-MonitorObjectType-CUSTOM_COMPONENT = 1 << 0--><!--Device-MonitorObjectType-CUSTOM_COMPONENT = 1 << 0-End-->
 
@@ -44,7 +50,9 @@ WINDOW = 1 << 1
 
 监测Window组件类型。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-MonitorObjectType-WINDOW = 1 << 1--><!--Device-MonitorObjectType-WINDOW = 1 << 1-End-->
 
@@ -58,7 +66,9 @@ NODE_CONTAINER = 1 << 2
 
 监测NodeContainer组件类型。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-MonitorObjectType-NODE_CONTAINER = 1 << 2--><!--Device-MonitorObjectType-NODE_CONTAINER = 1 << 2-End-->
 
@@ -72,7 +82,9 @@ X_COMPONENT = 1 << 3
 
 监测XComponent组件类型。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-MonitorObjectType-X_COMPONENT = 1 << 3--><!--Device-MonitorObjectType-X_COMPONENT = 1 << 3-End-->
 
@@ -86,7 +98,9 @@ ABILITY = 1 << 4
 
 监测Ability组件类型。
 
-**起始版本：** 24
+**起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-MonitorObjectType-ABILITY = 1 << 4--><!--Device-MonitorObjectType-ABILITY = 1 << 4-End-->
 

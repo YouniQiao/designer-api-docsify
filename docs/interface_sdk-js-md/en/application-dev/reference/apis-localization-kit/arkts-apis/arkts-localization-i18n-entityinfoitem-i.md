@@ -4,7 +4,9 @@ Defines a list of entities.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface EntityInfoItem--><!--Device-i18n-export interface EntityInfoItem-End-->
 
@@ -22,15 +24,17 @@ import { i18n } from '@kit.LocalizationKit';
 begin: int
 ```
 
-Start position of the entity in the input string.The value should be an integer.
+Start position of the entity in the input string.
 
 **Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-EntityInfoItem-begin: int--><!--Device-EntityInfoItem-begin: int-End-->
 
@@ -42,15 +46,17 @@ Start position of the entity in the input string.The value should be an integer.
 end: int
 ```
 
-End position of the entity the input string.The value should be an integer.
+End position of the entity the input string.
 
 **Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-EntityInfoItem-end: int--><!--Device-EntityInfoItem-end: int-End-->
 
@@ -62,15 +68,17 @@ End position of the entity the input string.The value should be an integer.
 type: string
 ```
 
-Entity type. The value can be "phone_number" or "date". "phone_number" indicates that the entity is a phone number, and "date" indicates that the entity is a date.
+Entity type. The value can be **phone_number** or **date**. **phone_number** indicates that the entity is a phone number, and **date** indicates that the entity is a date.
 
 **Type:** string
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-EntityInfoItem-type: string--><!--Device-EntityInfoItem-type: string-End-->
 

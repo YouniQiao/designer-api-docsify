@@ -1,14 +1,12 @@
 # Matrix2D
 
-用于画布绘制  
-[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、  
-[OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、  
-[CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和  
-[Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象，可以对矩阵进行缩放、旋转和平移等变换。
+用于画布绘制 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)、 [OffscreenCanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-offscreencanvasrenderingcontext2d.md)、 [CanvasPattern](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvaspattern.md)和 [Path2D](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-path2d.md)的矩阵对象， 可以对矩阵进行缩放、旋转和平移等变换。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class Matrix2D--><!--Device-unnamed-declare class Matrix2D-End-->
 
@@ -25,6 +23,8 @@ constructor()
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +47,8 @@ constructor(unit: LengthMetricsUnit)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +78,8 @@ identity(): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -101,6 +105,8 @@ invert(): Matrix2D
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -195,6 +201,8 @@ rotate(degree: number, rx?: number, ry?: number): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -231,6 +239,8 @@ scale(sx?: number, sy?: number): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -264,6 +274,8 @@ translate(tx?: number, ty?: number): Matrix2D
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -291,13 +303,15 @@ translate(tx?: number, ty?: number): Matrix2D
 rotateX?: number
 ```
 
-水平倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+水平倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -313,13 +327,15 @@ rotateX?: number
 rotateY?: number
 ```
 
-垂直倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+垂直倾斜系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -335,13 +351,15 @@ rotateY?: number
 scaleX?: number
 ```
 
-水平缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+水平缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -357,13 +375,15 @@ scaleX?: number
 scaleY?: number
 ```
 
-垂直缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
+垂直缩放系数，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -379,13 +399,15 @@ scaleY?: number
 translateX?: number
 ```
 
-水平平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
+水平平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -401,13 +423,15 @@ translateX?: number
 translateY?: number
 ```
 
-垂直平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理，NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
+垂直平移距离，取值范围无限制。&lt;br&gt;异常值undefined按无效值处理， NaN和Infinity会导致Matrix2D异常，设置后绘制内容不显示。&lt;br&gt;默认单位：vp
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

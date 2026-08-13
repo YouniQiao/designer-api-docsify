@@ -2,7 +2,9 @@
 
 Represents a set of optional parameters for remote authentication.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface RemoteAuthOptions--><!--Device-osAccount-interface RemoteAuthOptions-End-->
 
@@ -26,7 +28,9 @@ Network ID of the credential collector, which is left blank by default.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAuthOptions-collectorNetworkId?: string--><!--Device-RemoteAuthOptions-collectorNetworkId?: string-End-->
 
@@ -44,7 +48,9 @@ Token ID of the credential collector, which is **undefined** by default.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAuthOptions-collectorTokenId?: int--><!--Device-RemoteAuthOptions-collectorTokenId?: int-End-->
 
@@ -62,7 +68,9 @@ Network ID of the credential verifier, which is left blank by default.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RemoteAuthOptions-verifierNetworkId?: string--><!--Device-RemoteAuthOptions-verifierNetworkId?: string-End-->
 

@@ -4,7 +4,9 @@ Describes the rendering configuration.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RenderConfiguration--><!--Device-unnamed-export interface RenderConfiguration-End-->
 
@@ -16,7 +18,7 @@ Describes the rendering configuration.
 shadowResolution?: Vec2
 ```
 
-Global shadow map resolution, in pixels (px). The default value is undefined,indicating that the shadow map resolution is set to 1024 * 1024.The value must be greater than 0 for the parameter to take effect.If the input value is a floating-point number, it will be truncated to an integer;if the input value is less than or equal to 0, the input will be ignored, and the original configuration will be retained.
+Global shadow map resolution, in pixels (px). The default value is undefined, indicating that the shadow map resolution is set to 1024 * 1024. The value must be greater than 0 for the parameter to take effect. If the input value is a floating-point number, it will be truncated to an integer; if the input value is less than or equal to 0, the input will be ignored, and the original configuration will be retained.
 
 **Type:** [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)
 
@@ -24,7 +26,9 @@ Global shadow map resolution, in pixels (px). The default value is undefined,ind
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RenderConfiguration-shadowResolution?: Vec2--><!--Device-RenderConfiguration-shadowResolution?: Vec2-End-->
 
@@ -44,7 +48,9 @@ param config for soft shadow, control the algorithm type and its configuration
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

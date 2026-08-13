@@ -4,7 +4,9 @@ Describes [environment variable](../../../ui/arkts-env-system-property.md) data 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface UIEnvWindowAvoidAreaInfoVP--><!--Device-window-interface UIEnvWindowAvoidAreaInfoVP-End-->
 
@@ -28,7 +30,9 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-cutout: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-cutout: UIEnvAvoidAreaVP-End-->
 
@@ -46,7 +50,9 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-keyboard: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-keyboard: UIEnvAvoidAreaVP-End-->
 
@@ -58,13 +64,15 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 navigationIndicator: UIEnvAvoidAreaVP
 ```
 
-Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_NAVIGATION_INDICATOR**type, in vp.
+Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#AvoidAreaType) is **TYPE_NAVIGATION_INDICATOR** type, in vp.
 
 **Type:** [UIEnvAvoidAreaVP](arkts-arkui-window-uienvavoidareavp-i.md)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-navigationIndicator: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-navigationIndicator: UIEnvAvoidAreaVP-End-->
 
@@ -82,7 +90,9 @@ Avoidance area whose [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md#Avoid
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoVP-statusBar: UIEnvAvoidAreaVP--><!--Device-UIEnvWindowAvoidAreaInfoVP-statusBar: UIEnvAvoidAreaVP-End-->
 

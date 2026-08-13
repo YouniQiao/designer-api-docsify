@@ -2,9 +2,11 @@
 
 用于返回组件布局大小的宽和高。默认单位为vp，不同的接口使用Size类型时会再定义单位，以接口定义的单位为准。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface Size--><!--Device-unnamed-export interface Size-End-->
 
@@ -13,40 +15,48 @@
 ## height
 
 ```TypeScript
-height: double
+height: number
 ```
 
-组件大小的高度。单位：vp。取值范围：[0, +∞)。
+组件大小的高度。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Size-height: double--><!--Device-Size-height: double-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Size-height: number--><!--Device-Size-height: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## width
 
 ```TypeScript
-width: double
+width: number
 ```
 
-组件大小的宽度。单位：vp。取值范围：[0, +∞)。
+组件大小的宽度。 单位：vp 取值范围：[0, +∞) 负数按默认值处理。
 
-**类型：** double
+**类型：** number
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Size-width: double--><!--Device-Size-width: double-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-Size-width: number--><!--Device-Size-width: number-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

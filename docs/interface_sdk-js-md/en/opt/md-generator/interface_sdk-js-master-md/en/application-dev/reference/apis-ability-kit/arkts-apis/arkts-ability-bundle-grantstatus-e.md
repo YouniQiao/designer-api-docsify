@@ -1,12 +1,6 @@
 # GrantStatus
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md#PermissionGrantState)
-> instead.
-
-Enumerates the permission grant states.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. You are advised to use > [bundleManager.PermissionGrantState](arkts-ability-bundlemanager-permissiongrantstate-e.md#PermissionGrantState) > instead. Enumerates the permission grant states.
 
 **Since:** 7
 
@@ -30,7 +24,7 @@ Permission denied.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PERMISSION_DENIED](ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_DENIED)
+**Substitutes:** [PERMISSION_DENIED](arkts-ability-bundlemanager-permissiongrantstate-e.md#PERMISSION_DENIED)
 
 <!--Device-GrantStatus-PERMISSION_DENIED = -1--><!--Device-GrantStatus-PERMISSION_DENIED = -1-End-->
 
@@ -48,7 +42,7 @@ Permission granted.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PERMISSION_GRANTED](ohos.bundle.bundleManager/bundleManager.PermissionGrantState#PERMISSION_GRANTED)
+**Substitutes:** [PERMISSION_GRANTED](arkts-ability-bundlemanager-permissiongrantstate-e.md#PERMISSION_GRANTED)
 
 <!--Device-GrantStatus-PERMISSION_GRANTED = 0--><!--Device-GrantStatus-PERMISSION_GRANTED = 0-End-->
 

@@ -4,6 +4,8 @@ Implements the controller of the **ArcSwiper** component. You can bind this obje
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class ArcSwiperController--><!--Device-unnamed-export class ArcSwiperController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -24,6 +26,8 @@ A constructor used to create an **ArcSwiperController** instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSwiperController-constructor()--><!--Device-ArcSwiperController-constructor()-End-->
@@ -39,6 +43,8 @@ finishAnimation(handler?: FinishAnimationHandler)
 Stops an animation.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -58,10 +64,11 @@ Stops an animation.
 showNext()
 ```
 
-Turns to the next page. Page turning occurs with the animation, whose duration is specified by  
-[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration).
+Turns to the next page. Page turning occurs with the animation, whose duration is specified by duration.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -75,10 +82,11 @@ Turns to the next page. Page turning occurs with the animation, whose duration i
 showPrevious()
 ```
 
-Turns to the previous page. Page turning occurs with the animation, whose duration is specified by  
-[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration).
+Turns to the previous page. Page turning occurs with the animation, whose duration is specified by duration.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

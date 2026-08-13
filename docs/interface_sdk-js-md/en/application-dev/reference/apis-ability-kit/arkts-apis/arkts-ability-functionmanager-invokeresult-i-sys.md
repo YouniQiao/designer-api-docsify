@@ -6,6 +6,8 @@ Encapsulates the success or failure status of function invocation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-functionManager-interface InvokeResult--><!--Device-functionManager-interface InvokeResult-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -24,13 +26,15 @@ import { functionManager } from '@kit.AbilityKit';
 data?: any
 ```
 
-The returned data on success. The type can be any JSON value.Only present when [success](#success) is true.
+The returned data on success. The type can be any JSON value. Only present when [success](#success) is true.
 
 **Type:** any
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ The returned data on success. The type can be any JSON value.Only present when [
 errorCode?: number
 ```
 
-The error code on failure (numeric).Only present when [success](#success) is false.
+The error code on failure (numeric). Only present when [success](#success) is false.
 
 **Type:** number
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,13 +74,15 @@ The error code on failure (numeric).Only present when [success](#success) is fal
 errorMsg?: string
 ```
 
-The error description on failure.Only present when [success](#success) is false.
+The error description on failure. Only present when [success](#success) is false.
 
 **Type:** string
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +98,15 @@ The error description on failure.Only present when [success](#success) is false.
 success: boolean
 ```
 
-Indicates whether the invocation was successful (at business logic level).true: Invocation succeeded, [data](#data) contains the returned data.false: Invocation failed, [errorCode](#errorCode) and [errorMsg](#errorMsg) contain error information.
+Indicates whether the invocation was successful (at business logic level). true: Invocation succeeded, [data](#data) contains the returned data. false: Invocation failed, [errorCode](#errorCode) and [errorMsg](#errorMsg) contain error information.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

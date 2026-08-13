@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-companionDeviceAuth-interface ContinuousAuthParam--><!--Device-companionDeviceAuth-interface ContinuousAuthParam-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.CompanionDeviceAuth
@@ -21,6 +23,8 @@ templateId?: Uint8Array
 **类型：** Uint8Array
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

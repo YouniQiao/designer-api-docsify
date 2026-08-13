@@ -1,9 +1,10 @@
 # AVMimeTypes
 
-Enumerates the MIME type, which is set by using   
-[setMimeType](arkts-media-media-mediasource-i.md#setMimeType).
+Enumerates the MIME type, which is set by using [setMimeType](arkts-media-media-mediasource-i.md#setMimeType).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-enum AVMimeTypes--><!--Device-media-enum AVMimeTypes-End-->
 
@@ -17,9 +18,11 @@ APPLICATION_M3U8 = 'application/m3u8'
 
 Local M3U8 file.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVMimeTypes-APPLICATION_M3U8 = 'application/m3u8'--><!--Device-AVMimeTypes-APPLICATION_M3U8 = 'application/m3u8'-End-->
 

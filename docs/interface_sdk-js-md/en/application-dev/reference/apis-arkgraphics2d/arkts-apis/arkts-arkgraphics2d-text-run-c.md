@@ -1,13 +1,12 @@
 # Run
 
-Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)class.
+Represents a text typesetting unit, which is a continuous text segment with the same style attributes. Run is obtained through the [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) API of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class. Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class to create a **Run** object.
 
-Before calling any of the following APIs, you must use [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the  
-[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine) class to create a **Run** object.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-text-class Run--><!--Device-text-class Run-End-->
 
@@ -30,6 +29,8 @@ Obtains the glyph width array of each glyph within the specified range of the ru
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -68,7 +69,9 @@ Gets the glyph width array within the range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined-End-->
 
@@ -94,9 +97,11 @@ getFont(): drawing.Font
 
 Obtains the **Font** object of this run.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -118,21 +123,17 @@ let font = runs[0].getFont();
 
 ## getGlyphCount
 
-ArkTS-Dyn:
-```TypeScript
-getGlyphCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGlyphCount(): int
 ```
 
 Obtains the number of glyphs in this run.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -144,7 +145,7 @@ Obtains the number of glyphs in this run.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Number of glyphs. The value is an integer. |
+| int | Number of glyphs. The value is an integer. |
 
 ## Examples
 
@@ -154,21 +155,17 @@ let glyphs = runs[0].getGlyphCount();
 
 ## getGlyphs
 
-ArkTS-Dyn:
-```TypeScript
-getGlyphs(): Array<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGlyphs(): Array<int>
 ```
 
 Obtains the index of each glyph in this run.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -180,7 +177,7 @@ Obtains the index of each glyph in this run.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Array holding the index of each glyph in the run. |
+| Array&lt;int&gt; | Array holding the index of each glyph in the run. |
 
 ## Examples
 
@@ -199,6 +196,8 @@ Obtains the index of each glyph in the specified range of this run.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -256,7 +255,9 @@ Gets the range glyph identifier for each character.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Run-getGlyphs(range: Range): Array<int> | undefined--><!--Device-Run-getGlyphs(range: Range): Array<int> | undefined-End-->
 
@@ -280,21 +281,13 @@ Gets the range glyph identifier for each character.
 getImageBounds(): common2D.Rect
 ```
 
-Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line.
+Obtains the image boundaries of the typographic unit. Equivalent to visual boundaries, these boundaries are associated with the typographic font, font size, and characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), only "a b" is visible to users, and therefore the image boundaries do not include these spaces at the beginning and end of the line. > **NOTE：**> > The figure shows the image boundaries for the string " a b ". > >  > > The figure shows the image boundaries for the string "j" or "E". > > 
 
-> **NOTE：**
-> 
-> The figure shows the image boundaries for the string " a b ".
-> 
-> ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
-> 
-> The figure shows the image boundaries for the string "j" or "E".
-> 
-> ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -322,9 +315,11 @@ getOffsets(): Array<common2D.Point>
 
 Obtains the offset of each glyph in this run relative to its index.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -352,9 +347,11 @@ getPositions(): Array<common2D.Point>
 
 Obtains the position of each glyph relative to the respective line in this run.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -385,6 +382,8 @@ Obtains the position array of each glyph relative to the respective line within 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -442,7 +441,9 @@ Gets the range font position offset.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined-End-->
 
@@ -471,6 +472,8 @@ Obtains an array of character indices for glyphs within a specified range of thi
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -528,7 +531,9 @@ Gets the range of run glyph indices, the offset of the indices relative to the e
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined--><!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined-End-->
 
@@ -554,9 +559,11 @@ getStringRange(): Range
 
 Obtains the range of glyphs generated by this run.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -586,9 +593,11 @@ getTextDirection(): TextDirection
 
 Obtains the text direction of the run.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -618,7 +627,9 @@ Obtains the text style of this typesetting unit.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -640,22 +651,13 @@ Obtains the text style of this typesetting unit.
 getTypographicBounds(): TypographicBounds
 ```
 
-Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a" and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line.
+Obtains the typographic boundaries of the typographic unit. These boundaries are associated with the typographic font and font size, but not with the characters. For example, for the string " a b " (which has a space before "a " and a space after "b"), the typographic boundaries include the spaces at the beginning and end of the line. > **NOTE：**> > The figure shows the typesetting boundaries for the string " a b ". > >  > > The figure shows the typesetting boundaries for the string "j" or "E". > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-> **NOTE：**
-> 
-> The figure shows the typesetting boundaries for the string " a b ".
-> 
-> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
-> 
-> The figure shows the typesetting boundaries for the string "j" or "E".
-> 
-> !
-> [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -677,21 +679,17 @@ let typographicBounds = runs[0].getTypographicBounds();
 
 ## paint
 
-ArkTS-Dyn:
-```TypeScript
-paint(canvas: drawing.Canvas, x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
 Paints this run on the canvas with the coordinate point (x, y) as the upper left corner.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -704,8 +702,8 @@ Paints this run on the canvas with the coordinate point (x, y) as the upper left
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | Yes | Target canvas. |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| x | double | Yes | Horizontal coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
+| y | double | Yes | Vertical coordinate of the upper left corner, which is a floating-point value, in physical pixels (px). |
 
 ## Examples
 

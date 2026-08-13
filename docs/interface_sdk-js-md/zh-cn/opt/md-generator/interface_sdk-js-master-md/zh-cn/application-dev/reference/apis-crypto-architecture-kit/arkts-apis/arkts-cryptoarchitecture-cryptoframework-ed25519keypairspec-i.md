@@ -1,14 +1,14 @@
 # ED25519KeyPairSpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)的子类，用于指定Ed25519算法中公私钥包含的全量参数。
-
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec)方法创建密钥生成器。
+密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)的子类，用于指定Ed25519算法中公私钥包含的全量参数。 &lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) 方法创建密钥生成器。
 
 **继承/实现关系：** ED25519KeyPairSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-cryptoFramework-interface ED25519KeyPairSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface ED25519KeyPairSpec extends AsyKeySpec-End-->
+**废弃版本：** -1
+
+<!--Device-cryptoFramework-interface ED25519KeyPairSpec--><!--Device-cryptoFramework-interface ED25519KeyPairSpec-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -24,7 +24,9 @@ Ed25519算法中的公钥pk。
 
 **类型：** bigint
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,7 +46,9 @@ Ed25519算法中的私钥sk。
 
 **类型：** bigint
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

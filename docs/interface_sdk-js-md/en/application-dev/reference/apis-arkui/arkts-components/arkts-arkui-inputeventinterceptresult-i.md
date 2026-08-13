@@ -1,11 +1,12 @@
 # InputEventInterceptResult
 
-Input event interception result interface, used by the listener callback  
-[InputEventListener](arkts-arkui-inputeventlistener-t.md#InputEventListener) to return the interception decision.
+Input event interception result interface, used by the listener callback [InputEventListener](arkts-arkui-inputeventlistener-t.md#InputEventListener) to return the interception decision.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface InputEventInterceptResult--><!--Device-unnamed-declare interface InputEventInterceptResult-End-->
 
@@ -17,17 +18,15 @@ Input event interception result interface, used by the listener callback
 action: InputEventInterceptAction
 ```
 
-Input event interception action.
-
-**CONTINUE**: The event is allowed to continue being passed to the UI framework.
-
-**BLOCK**: The event is blocked from being passed to the UI framework.
+Input event interception action. **CONTINUE**: The event is allowed to continue being passed to the UI framework. **BLOCK**: The event is blocked from being passed to the UI framework.
 
 **Type:** InputEventInterceptAction
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

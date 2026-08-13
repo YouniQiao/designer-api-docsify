@@ -1,10 +1,12 @@
 # LaunchParam
 
-Describes the launch parameters, which mainly include the ability launch reasons and reasons for the last exit. The  parameter values are automatically passed in by the system when the ability is launched. You do not need to change  the values.
+Describes the launch parameters, which mainly include the ability launch reasons and reasons for the last exit. The parameter values are automatically passed in by the system when the ability is launched. You do not need to change the values.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export interface LaunchParam--><!--Device-AbilityConstant-export interface LaunchParam-End-->
 
@@ -26,13 +28,15 @@ Key runtime information for the last exit of the ability (including process ID, 
 
 **Type:** [LastExitDetailInfo](arkts-ability-abilityconstant-lastexitdetailinfo-i.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchParam-lastExitDetailInfo?: LastExitDetailInfo--><!--Device-LaunchParam-lastExitDetailInfo?: LastExitDetailInfo-End-->
 
@@ -48,13 +52,15 @@ Detailed message that describes the reason for the last exit of the ability.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchParam-lastExitMessage: string--><!--Device-LaunchParam-lastExitMessage: string-End-->
 
@@ -70,9 +76,11 @@ An enumerated value indicating the reason for the last exit of the ability.
 
 **Type:** [LastExitReason](arkts-ability-abilityconstant-lastexitreason-e.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -92,9 +100,11 @@ An enumerated value indicating the reason for ability launch (for example, recov
 
 **Type:** LaunchReason
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,13 +124,15 @@ Detailed message that describes the reason for the ability launch.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LaunchParam-launchReasonMessage?: string--><!--Device-LaunchParam-launchReasonMessage?: string-End-->
 
@@ -132,19 +144,15 @@ Detailed message that describes the reason for the ability launch.
 launchUTCTime?: long
 ```
 
-UTC timestamp when the UIAbility starts, in milliseconds.
+UTC timestamp when the UIAbility starts, in milliseconds. This API can be used in atomic services since API version 23. **Constraints**: This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
-This API can be used in atomic services since API version 23.
-
-**Constraints**:
-
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example,UIExtensionAbility), the obtained start time is the default value **0**.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -160,17 +168,15 @@ This feature takes effect only when the UIAbility is started. For other types of
 launchUptime?: long
 ```
 
-System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds.
+System uptime (the time elapsed since the system booted up) when the UIAbility starts, in milliseconds. **Constraints**: This feature takes effect only when the UIAbility is started. For other types of abilities (for example, UIExtensionAbility), the obtained start time is the default value **0**.
 
-**Constraints**:
-
-This feature takes effect only when the UIAbility is started. For other types of abilities (for example,UIExtensionAbility), the obtained start time is the default value **0**.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

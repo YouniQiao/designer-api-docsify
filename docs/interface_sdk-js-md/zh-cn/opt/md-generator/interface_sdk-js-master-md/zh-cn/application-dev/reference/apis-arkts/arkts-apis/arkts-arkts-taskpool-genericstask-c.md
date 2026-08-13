@@ -1,13 +1,14 @@
 # GenericsTask
 
-表示泛型任务。**GenericsTask**继承自  
-[Task](arkts-arkts-taskpool-execute-f.md#execute)。相比创建Task，创建GenericsTask可以在编译阶段校验并发函数的传参和返回值类型。其余行为与Task相同。
+表示泛型任务。**GenericsTask**继承自 [Task](arkts-arkts-taskpool-execute-f.md#execute)。 相比创建Task，创建GenericsTask可以在编译阶段校验并发函数的传参和返回值类型。其余行为与Task相同。
 
 **继承/实现关系：** GenericsTask extends [Task](arkts-arkts-taskpool-task-c.md#Task)
 
 **起始版本：** 13
 
-<!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task--><!--Device-taskpool-class GenericsTask<A extends Array<Object>, R> extends Task-End-->
+**废弃版本：** -1
+
+<!--Device-taskpool-class GenericsTask--><!--Device-taskpool-class GenericsTask-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -20,6 +21,8 @@ constructor(func: (...args: A) => R | Promise<R>, ...args: A)
 GenericsTask的构造函数，用于创建一个**GenericsTask**对象。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -38,7 +41,7 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**对象。
 
 | 错误码ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
 ## 示例
 
@@ -76,6 +79,8 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**实例，并可�
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 <!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)--><!--Device-GenericsTask-constructor(name: string, func: (...args: A) => R | Promise<R>, ...args: A)-End-->
@@ -94,7 +99,7 @@ GenericsTask的构造函数，用于创建一个**GenericsTask**实例，并可�
 
 | 错误码ID |
 | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) |
 
 ## 示例
 

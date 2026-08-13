@@ -2,11 +2,13 @@
 
 LightWeightSet stores a set of values, each of which must be unique.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class LightWeightSet<T>--><!--Device-unnamed-declare class LightWeightSet<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LightWeightSet--><!--Device-unnamed-declare class LightWeightSet-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +28,9 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,6 +56,8 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-[Symbol.iterator](): IterableIterator<T>--><!--Device-LightWeightSet-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -68,7 +74,7 @@ returns an ES6 iterator.Each item of the iterator is a Javascript Object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -114,9 +120,11 @@ add(obj: T): boolean
 
 Adds an element to this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -140,7 +148,7 @@ Adds an element to this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -158,9 +166,11 @@ addAll(set: LightWeightSet<T>): boolean
 
 Adds all elements in a LightWeightSet to this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -184,7 +194,7 @@ Adds all elements in a LightWeightSet to this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The addAll method cannot be bound. |
 
 ## Examples
 
@@ -207,9 +217,11 @@ clear(): void
 
 Clears this LightWeightSet and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -221,7 +233,7 @@ Clears this LightWeightSet and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -242,9 +254,11 @@ constructor()
 
 A constructor used to create a **LightWeightSet** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -256,7 +270,7 @@ A constructor used to create a **LightWeightSet** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightSet's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The LightWeightSet's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -272,9 +286,11 @@ entries(): IterableIterator<[T, T]>
 
 Returns an iterator that contains all the elements in this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -292,7 +308,7 @@ Returns an iterator that contains all the elements in this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
 
 ## Examples
 
@@ -325,11 +341,7 @@ for(let i = 0; i < 10; i++) {
 equal(obj: Object): boolean
 ```
 
-Checks whether the elements of this LightWeightSet are the same as those of **obj**.
-
-> **NOTE：**
-> 
-> This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
+Checks whether the elements of this LightWeightSet are the same as those of **obj**. > **NOTE：**> > This API is supported since API version 8 and deprecated since API version 12. There is no substitute API.
 
 **Since:** 8
 
@@ -357,7 +369,7 @@ Checks whether the elements of this LightWeightSet are the same as those of **ob
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
 
 ## Examples
 
@@ -382,6 +394,8 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void--><!--Device-LightWeightSet-forEach(callbackFn: (value?: T, key?: T, set?: LightWeightSet<T>) => void, thisArg?: Object): void-End-->
@@ -399,7 +413,7 @@ Uses a callback to traverse the elements in this LightWeightSet and obtain their
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -431,11 +445,13 @@ for(let i = 0; i < 10; i++) {
 forEach(callbackFn: LightWeightSetForEachCb<T>): void
 ```
 
-Executes the given callback function once for each real key in the map.It does not perform functions on deleted keys.
+Executes the given callback function once for each real key in the map. It does not perform functions on deleted keys.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -451,21 +467,17 @@ Executes the given callback function once for each real key in the map.It does n
 
 ## getIndexOf
 
-ArkTS-Dyn:
-```TypeScript
-getIndexOf(key: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndexOf(key: T): int
 ```
 
 Obtains the position index of the element with the specified key in this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -483,13 +495,13 @@ Obtains the position index of the element with the specified key in this LightWe
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Position index of the element. If the element does not exist, a negative value is returned. The negative value consists of a minus sign and the position where the element (if available) should be. The position starts from 1. |
+| int | Position index of the element. If the element does not exist, a negative value is returned. The negative value consists of a minus sign and the position where the element (if available) should be. The position starts from 1. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -513,6 +525,8 @@ Obtains the value of the element at the specified position in this LightWeightSe
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LightWeightSet-getValueAt(index: number): T--><!--Device-LightWeightSet-getValueAt(index: number): T-End-->
@@ -535,7 +549,7 @@ Obtains the value of the element at the specified position in this LightWeightSe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getValueAt method cannot be bound. |
 
 ## getValueAt
 
@@ -547,7 +561,9 @@ Obtains the object at the location identified by index in an LightWeightSet cont
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -575,9 +591,11 @@ has(key: T): boolean
 
 Checks whether this LightWeightSet has the specified key.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -601,7 +619,7 @@ Checks whether this LightWeightSet has the specified key.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -620,9 +638,11 @@ hasAll(set: LightWeightSet<T>): boolean
 
 Checks whether this LightWeightSet contains all elements of the specified LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -646,7 +666,7 @@ Checks whether this LightWeightSet contains all elements of the specified LightW
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The hasAll method cannot be bound. |
 
 ## Examples
 
@@ -662,21 +682,17 @@ console.info("result:", result);  // result: true
 
 ## increaseCapacityTo
 
-ArkTS-Dyn:
-```TypeScript
-increaseCapacityTo(minimumCapacity: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 increaseCapacityTo(minimumCapacity: int): void
 ```
 
 Increases the capacity of this LightWeightSet. If the passed-in capacity is greater than or equal to the number of elements in this LightWeightSet, the capacity is changed to the new capacity. If the passed-in capacity is less than the number of elements in this LightWeightSet, the capacity is not changed.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -688,14 +704,14 @@ Increases the capacity of this LightWeightSet. If the passed-in capacity is grea
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minimumCapacity | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Minimum number of elements to accommodate in this LightWeightSet. |
+| minimumCapacity | int | Yes | Minimum number of elements to accommodate in this LightWeightSet. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of minimumCapacity is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The increaseCapacityTo method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of minimumCapacity is out of range. |
 
 ## Examples
 
@@ -712,9 +728,11 @@ isEmpty(): boolean
 
 Checks whether this LightWeightSet is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -732,7 +750,7 @@ Checks whether this LightWeightSet is empty (contains no element).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -753,6 +771,8 @@ Removes an element of the specified key from this LightWeightSet.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -776,7 +796,7 @@ Removes an element of the specified key from this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -798,7 +818,9 @@ Deletes an object of a specified Object type from an LightWeightSet container
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -820,21 +842,17 @@ Deletes an object of a specified Object type from an LightWeightSet container
 
 ## removeAt
 
-ArkTS-Dyn:
-```TypeScript
-removeAt(index: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeAt(index: int): boolean
 ```
 
 Removes the element at the specified position from this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -846,7 +864,7 @@ Removes the element at the specified position from this LightWeightSet.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
+| index | int | Yes | Position index of the element. The value must be less than or equal to int32_max, that is, 2 147483647. |
 
 **Return value:**
 
@@ -858,7 +876,7 @@ Removes the element at the specified position from this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeAt method cannot be bound. |
 
 ## Examples
 
@@ -878,9 +896,11 @@ toArray(): Array<T>
 
 Obtains an array that contains all objects in this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -898,7 +918,7 @@ Obtains an array that contains all objects in this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toArray method cannot be bound. |
 
 ## Examples
 
@@ -917,9 +937,11 @@ toString(): String
 
 Obtains a string that contains all elements in this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -951,9 +973,11 @@ values(): IterableIterator<T>
 
 Returns an iterator that contains all the values in this LightWeightSet.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -971,7 +995,7 @@ Returns an iterator that contains all the values in this LightWeightSet.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
 
 ## Examples
 
@@ -999,7 +1023,9 @@ Number of elements in a LightWeightSet.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

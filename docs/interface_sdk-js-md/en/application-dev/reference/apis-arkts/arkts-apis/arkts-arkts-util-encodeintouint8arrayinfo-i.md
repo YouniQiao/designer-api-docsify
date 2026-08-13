@@ -1,10 +1,12 @@
 # EncodeIntoUint8ArrayInfo
 
-Return encoded text.
+Encrypted information, including the number of read characters and the number of written bytes.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-util-interface EncodeIntoUint8ArrayInfo--><!--Device-util-interface EncodeIntoUint8ArrayInfo-End-->
 
@@ -19,36 +21,44 @@ import { util } from '@kit.ArkTS';
 ## read
 
 ```TypeScript
-read: int
+read: number
 ```
 
-The read represents the number of characters that have been encoded.
+Number of characters that have been read.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-EncodeIntoUint8ArrayInfo-read: int--><!--Device-EncodeIntoUint8ArrayInfo-read: int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EncodeIntoUint8ArrayInfo-read: number--><!--Device-EncodeIntoUint8ArrayInfo-read: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
 ## written
 
 ```TypeScript
-written: int
+written: number
 ```
 
-The written represents the number of bytes occupied by the encoded characters.
+Number of bytes that have been written.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-EncodeIntoUint8ArrayInfo-written: int--><!--Device-EncodeIntoUint8ArrayInfo-written: int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-EncodeIntoUint8ArrayInfo-written: number--><!--Device-EncodeIntoUint8ArrayInfo-written: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

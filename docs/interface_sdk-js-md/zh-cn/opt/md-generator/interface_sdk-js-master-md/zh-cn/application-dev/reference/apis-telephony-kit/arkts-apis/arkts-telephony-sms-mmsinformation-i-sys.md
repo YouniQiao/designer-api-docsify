@@ -2,7 +2,9 @@
 
 彩信信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsInformation--><!--Device-sms-export interface MmsInformation-End-->
 
@@ -20,7 +22,9 @@ attachment?: Array<MmsAttachment>
 
 **类型：** Array&lt;[MmsAttachment](arkts-telephony-sms-mmsattachment-i-sys.md)&gt;
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsInformation-attachment?: Array<MmsAttachment>--><!--Device-MmsInformation-attachment?: Array<MmsAttachment>-End-->
 
@@ -38,7 +42,9 @@ messageType: MessageType
 
 **类型：** MessageType
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsInformation-messageType: MessageType--><!--Device-MmsInformation-messageType: MessageType-End-->
 
@@ -56,7 +62,9 @@ PDU头类型
 
 **类型：** [MmsSendReq](arkts-telephony-sms-mmssendreq-i-sys.md) \| [MmsSendConf](arkts-telephony-sms-mmssendconf-i-sys.md) \| [MmsNotificationInd](arkts-telephony-sms-mmsnotificationind-i-sys.md) \| [MmsRespInd](arkts-telephony-sms-mmsrespind-i-sys.md) \| [MmsRetrieveConf](arkts-telephony-sms-mmsretrieveconf-i-sys.md) \| [MmsAcknowledgeInd](arkts-telephony-sms-mmsacknowledgeind-i-sys.md) \| [MmsDeliveryInd](arkts-telephony-sms-mmsdeliveryind-i-sys.md) \| [MmsReadOrigInd](arkts-telephony-sms-mmsreadorigind-i-sys.md) \| [MmsReadRecInd](arkts-telephony-sms-mmsreadrecind-i-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsInformation-mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetrieveConf | MmsAcknowledgeInd | MmsDeliveryInd | MmsReadOrigInd | MmsReadRecInd--><!--Device-MmsInformation-mmsType: MmsSendReq | MmsSendConf | MmsNotificationInd | MmsRespInd | MmsRetrieveConf | MmsAcknowledgeInd | MmsDeliveryInd | MmsReadOrigInd | MmsReadRecInd-End-->
 

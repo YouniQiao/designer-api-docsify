@@ -2,7 +2,9 @@
 
 Enum for fusion fence scene.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export enum FusionFenceScene--><!--Device-geoLocationManager-export enum FusionFenceScene-End-->
 
@@ -18,7 +20,9 @@ AIRPORT = 1
 
 Indicates the airport scene.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ TRAIN_STATION = 2
 
 Indicates the train station scene.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +60,9 @@ SUBWAY = 3
 
 Indicates the subway scene.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +80,9 @@ SHOP = 4
 
 Indicates the shop scene.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

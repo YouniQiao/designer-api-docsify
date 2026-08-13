@@ -2,9 +2,11 @@
 
 Describes the immersive effect.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-interface ImmersiveEffect--><!--Device-inputMethodEngine-interface ImmersiveEffect-End-->
 
@@ -24,11 +26,13 @@ gradientHeight: int
 
 Gradient height, which cannot exceed 15% of the screen height.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveEffect-gradientHeight: int--><!--Device-ImmersiveEffect-gradientHeight: int-End-->
 
@@ -44,9 +48,11 @@ Gradient mode. If this attribute is not specified or is set to an invalid value,
 
 **Type:** [GradientMode](arkts-ime-inputmethodengine-gradientmode-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImmersiveEffect-gradientMode: GradientMode--><!--Device-ImmersiveEffect-gradientMode: GradientMode-End-->
 

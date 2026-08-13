@@ -62,7 +62,7 @@ setCookie()
 
 **废弃版本：** 9
 
-**替代接口：** [setCookie](ohos.web.webview.webview.WebCookieManager#setCookie)
+**替代接口：** setCookie
 
 <!--Device-WebCookie-setCookie()--><!--Device-WebCookie-setCookie()-End-->
 

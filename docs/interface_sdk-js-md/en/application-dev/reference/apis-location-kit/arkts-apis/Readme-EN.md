@@ -59,9 +59,19 @@
   - [isLocationPrivacyConfirmed(system api)](arkts-location-geolocationmanager-islocationprivacyconfirmed-f-sys.md)<!--DelEnd-->
   - [isPoiServiceSupported](arkts-location-geolocationmanager-ispoiservicesupported-f.md)
   - [isWlanBssidMatched](arkts-location-geolocationmanager-iswlanbssidmatched-f.md)
-  - [off](arkts-location-geolocationmanager-off-f.md)
+  - [off_bluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md)
+  - [off_cachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md)
+  - [off_countryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md)
+  - [off_gnssFenceStatusChange](arkts-location-geolocationmanager-offgnssfencestatuschange-f.md)
   <!--Del-->
-  - [off(system api)](arkts-location-geolocationmanager-off-f-sys.md)<!--DelEnd-->
+  - [off_locatingRequiredDataChange(system api)](arkts-location-geolocationmanager-offlocatingrequireddatachange-f-sys.md)<!--DelEnd-->
+  - [off_locationChange](arkts-location-geolocationmanager-offlocationchange-f.md)
+  - [off_locationEnabledChange](arkts-location-geolocationmanager-offlocationenabledchange-f.md)
+  - [off_locationError](arkts-location-geolocationmanager-offlocationerror-f.md)
+  <!--Del-->
+  - [off_locationIconStatusChange(system api)](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md)<!--DelEnd-->
+  - [off_nmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md)
+  - [off_satelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md)
   - [offBluetoothScanResultChange](arkts-location-geolocationmanager-offbluetoothscanresultchange-f.md)
   - [offCachedGnssLocationsChange](arkts-location-geolocationmanager-offcachedgnsslocationschange-f.md)
   - [offCountryCodeChange](arkts-location-geolocationmanager-offcountrycodechange-f.md)
@@ -75,9 +85,19 @@
   - [offLocationIconStatusChange(system api)](arkts-location-geolocationmanager-offlocationiconstatuschange-f-sys.md)<!--DelEnd-->
   - [offNmeaMessage](arkts-location-geolocationmanager-offnmeamessage-f.md)
   - [offSatelliteStatusChange](arkts-location-geolocationmanager-offsatellitestatuschange-f.md)
-  - [on](arkts-location-geolocationmanager-on-f.md)
+  - [on_bluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md)
+  - [on_cachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md)
+  - [on_countryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md)
+  - [on_gnssFenceStatusChange](arkts-location-geolocationmanager-ongnssfencestatuschange-f.md)
   <!--Del-->
-  - [on(system api)](arkts-location-geolocationmanager-on-f-sys.md)<!--DelEnd-->
+  - [on_locatingRequiredDataChange(system api)](arkts-location-geolocationmanager-onlocatingrequireddatachange-f-sys.md)<!--DelEnd-->
+  - [on_locationChange](arkts-location-geolocationmanager-onlocationchange-f.md)
+  - [on_locationEnabledChange](arkts-location-geolocationmanager-onlocationenabledchange-f.md)
+  - [on_locationError](arkts-location-geolocationmanager-onlocationerror-f.md)
+  <!--Del-->
+  - [on_locationIconStatusChange(system api)](arkts-location-geolocationmanager-onlocationiconstatuschange-f-sys.md)<!--DelEnd-->
+  - [on_nmeaMessage](arkts-location-geolocationmanager-onnmeamessage-f.md)
+  - [on_satelliteStatusChange](arkts-location-geolocationmanager-onsatellitestatuschange-f.md)
   - [onBluetoothScanResultChange](arkts-location-geolocationmanager-onbluetoothscanresultchange-f.md)
   - [onCachedGnssLocationsChange](arkts-location-geolocationmanager-oncachedgnsslocationschange-f.md)
   - [onCountryCodeChange](arkts-location-geolocationmanager-oncountrycodechange-f.md)
@@ -119,6 +139,8 @@
   <!--Del-->
   - [CellInfo(system api)](arkts-location-geolocationmanager-cellinfo-i-sys.md)<!--DelEnd-->
   - [ContinuousLocationRequest](arkts-location-geolocationmanager-continuouslocationrequest-i.md)
+  <!--Del-->
+  - [ContinuousLocationRequest(system api)](arkts-location-geolocationmanager-continuouslocationrequest-i-sys.md)<!--DelEnd-->
   - [CountryCode](arkts-location-geolocationmanager-countrycode-i.md)
   - [CurrentLocationRequest](arkts-location-geolocationmanager-currentlocationrequest-i.md)
   - [DistrictInfo](arkts-location-geolocationmanager-districtinfo-i.md)
@@ -142,6 +164,8 @@
   <!--Del-->
   - [LocatingRequiredDataConfig(system api)](arkts-location-geolocationmanager-locatingrequireddataconfig-i-sys.md)<!--DelEnd-->
   - [Location](arkts-location-geolocationmanager-location-i.md)
+  <!--Del-->
+  - [Location(system api)](arkts-location-geolocationmanager-location-i-sys.md)<!--DelEnd-->
   - [LocationCommand](arkts-location-geolocationmanager-locationcommand-i.md)
   <!--Del-->
   - [LocationMockConfig(system api)](arkts-location-geolocationmanager-locationmockconfig-i-sys.md)<!--DelEnd-->
@@ -200,8 +224,18 @@
   - [getLastLocation](arkts-location-geolocation-getlastlocation-f.md)
   - [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md)
   - [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md)
-  - [off](arkts-location-geolocation-off-f.md)
-  - [on](arkts-location-geolocation-on-f.md)
+  - [off_cachedGnssLocationsReporting](arkts-location-geolocation-offcachedgnsslocationsreporting-f.md)
+  - [off_fenceStatusChange](arkts-location-geolocation-offfencestatuschange-f.md)
+  - [off_gnssStatusChange](arkts-location-geolocation-offgnssstatuschange-f.md)
+  - [off_locationChange](arkts-location-geolocation-offlocationchange-f.md)
+  - [off_locationServiceState](arkts-location-geolocation-offlocationservicestate-f.md)
+  - [off_nmeaMessageChange](arkts-location-geolocation-offnmeamessagechange-f.md)
+  - [on_cachedGnssLocationsReporting](arkts-location-geolocation-oncachedgnsslocationsreporting-f.md)
+  - [on_fenceStatusChange](arkts-location-geolocation-onfencestatuschange-f.md)
+  - [on_gnssStatusChange](arkts-location-geolocation-ongnssstatuschange-f.md)
+  - [on_locationChange](arkts-location-geolocation-onlocationchange-f.md)
+  - [on_locationServiceState](arkts-location-geolocation-onlocationservicestate-f.md)
+  - [on_nmeaMessageChange](arkts-location-geolocation-onnmeamessagechange-f.md)
   - [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md)
   - [sendCommand](arkts-location-geolocation-sendcommand-f.md)
   - [CachedGnssLocationsRequest](arkts-location-geolocation-cachedgnsslocationsrequest-i.md)

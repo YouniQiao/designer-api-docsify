@@ -20,7 +20,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValue](ohos.settings#getValue)
+**Substitutes:** getValue
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -32,9 +32,9 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the [DataAbilityHelper](ohos.aafwk.ability.DataAbilityHelper) used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the DataAbilityHelper used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;object&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;object&gt; | Yes | The callback of getValue result. |
 
 ## Examples
 
@@ -67,7 +67,7 @@ Obtains the value of a specified character string in the database.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getValue](ohos.settings#getValue)
+**Substitutes:** getValue
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -79,7 +79,7 @@ Obtains the value of a specified character string in the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the [DataAbilityHelper](ohos.aafwk.ability.DataAbilityHelper) used to access the database. |
+| dataAbilityHelper | [DataAbilityHelper](../../apis-ability-kit/arkts-apis/arkts-ability-dataabilityhelper-dataabilityhelper-i.md) | Yes | Indicates the DataAbilityHelper used to access the database. |
 | name | string | Yes | Indicates the name of the character string. |
 
 **Return value:**
@@ -109,9 +109,11 @@ function getValue(context: Context, name: string, callback: AsyncCallback<string
 
 Get value from settingsdata
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,7 +127,7 @@ Get value from settingsdata
 | --- | --- | --- | --- |
 | context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context. Only UIAbilityContext and ExtensionContext are supported. |
 | name | string | Yes | Indicates the name of the character string. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | The callback of getValue result. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | The callback of getValue result. |
 
 ## Examples
 
@@ -153,9 +155,11 @@ function getValue(context: Context, name: string): Promise<string>
 
 Get value from settingsdata
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,12 +200,13 @@ settings.getValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS).then((valu
 function getValue(context: Context, name: string, domainName: string): Promise<string>
 ```
 
-Get value from settingsdata  
-[USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
+Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

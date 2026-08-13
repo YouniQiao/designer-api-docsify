@@ -2,7 +2,9 @@
 
 Enumerates the media file types.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum PhotoViewMIMETypes--><!--Device-photoAccessHelper-export enum PhotoViewMIMETypes-End-->
 
@@ -16,7 +18,9 @@ IMAGE_TYPE = 'image/*'
 
 Image.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ VIDEO_TYPE = 'video/*'
 
 Video.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,7 +54,9 @@ IMAGE_VIDEO_TYPE = '*/*'
 
 Image and video.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -64,9 +72,11 @@ MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
 
 Moving photo.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'--><!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'-End-->
 

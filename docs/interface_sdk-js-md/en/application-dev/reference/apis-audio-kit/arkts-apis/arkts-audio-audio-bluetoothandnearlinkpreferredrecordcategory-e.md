@@ -2,9 +2,11 @@
 
 Enumerates the preferred device categories available for recording with Bluetooth or NearLink.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum BluetoothAndNearlinkPreferredRecordCategory--><!--Device-audio-enum BluetoothAndNearlinkPreferredRecordCategory-End-->
 
@@ -18,9 +20,11 @@ PREFERRED_NONE = 0
 
 No specific device preference.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_NONE = 0--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_NONE = 0-End-->
 
@@ -34,9 +38,11 @@ PREFERRED_DEFAULT = 1
 
 Prefers using Bluetooth or NearLink devices for recording; whether to use low-latency or high-quality recording depends on the system.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_DEFAULT = 1--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_DEFAULT = 1-End-->
 
@@ -50,9 +56,11 @@ PREFERRED_LOW_LATENCY = 2
 
 Prefers using Bluetooth or NearLink devices in low-latency mode for recording.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_LOW_LATENCY = 2--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_LOW_LATENCY = 2-End-->
 
@@ -66,9 +74,11 @@ PREFERRED_HIGH_QUALITY = 3
 
 Prefers using Bluetooth or NearLink devices in high-quality mode for recording.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_HIGH_QUALITY = 3--><!--Device-BluetoothAndNearlinkPreferredRecordCategory-PREFERRED_HIGH_QUALITY = 3-End-->
 

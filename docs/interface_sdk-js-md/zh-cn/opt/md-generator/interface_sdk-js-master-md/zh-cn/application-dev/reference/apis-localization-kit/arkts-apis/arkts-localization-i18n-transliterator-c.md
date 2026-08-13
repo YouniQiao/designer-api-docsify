@@ -2,7 +2,9 @@
 
 提供文本音译相关的能力，包括音译支持范围获取和文本音译等。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class Transliterator--><!--Device-i18n-export class Transliterator-End-->
 
@@ -16,7 +18,9 @@ static getAvailableIDs(): string[]
 
 获取音译支持的转换ID列表。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -48,7 +52,9 @@ static getInstance(id: string): Transliterator
 
 创建指定转换ID的音译对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -84,7 +90,9 @@ transform(text: string): string
 
 将输入文本从源格式转换为目标格式。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

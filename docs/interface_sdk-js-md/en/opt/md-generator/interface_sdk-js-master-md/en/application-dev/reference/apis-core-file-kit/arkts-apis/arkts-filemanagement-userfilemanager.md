@@ -6,7 +6,7 @@ The **userFileManager** module provides user data management capabilities, inclu
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoAccessHelper)
+**Substitutes:** [photoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#@ohos.file.photoAccessHelper)
 
 <!--Device-unnamed-declare namespace userFileManager--><!--Device-unnamed-declare namespace userFileManager-End-->
 
@@ -27,7 +27,7 @@ import { userFileManager } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getuserfilemgr) |
+| [getUserFileMgr](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md#getUserFileMgr-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

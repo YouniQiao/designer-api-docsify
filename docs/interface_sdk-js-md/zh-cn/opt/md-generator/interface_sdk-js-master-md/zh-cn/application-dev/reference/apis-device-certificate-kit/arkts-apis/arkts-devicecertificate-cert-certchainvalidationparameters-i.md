@@ -2,7 +2,9 @@
 
 表示证书链校验的参数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-interface CertChainValidationParameters--><!--Device-cert-interface CertChainValidationParameters-End-->
 
@@ -14,14 +16,15 @@
 allowDownloadIntermediateCa?: boolean
 ```
 
-表示是否允许尝试从网络下载缺失的中间CA证书。 true表示允许；false表示不允许。默认值为false。&lt;br&gt;下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见  
-[声明权限](../../../security/AccessToken/declare-permissions.md)。
+表示是否允许尝试从网络下载缺失的中间CA证书。 true表示允许；false表示不允许。默认值为false。 &lt;br&gt;下载地址将从证书AIA扩展中获取，仅支持http，如需使用网络下载，需申请ohos.permission.INTERNET权限。配置方式请参见 [声明权限](../../../security/AccessToken/declare-permissions.md)。
 
 **类型：** boolean
 
 **默认值：** false
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -39,7 +42,9 @@ certCRLs?: Array<CertCRLCollection>
 
 **类型：** Array&lt;[CertCRLCollection](arkts-devicecertificate-cert-certcrlcollection-i.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -57,7 +62,9 @@ date?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -75,9 +82,11 @@ keyUsage?: Array<KeyUsageType>
 
 **类型：** Array&lt;[KeyUsageType](arkts-devicecertificate-cert-keyusagetype-e.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CertChainValidationParameters-keyUsage?: Array<KeyUsageType>--><!--Device-CertChainValidationParameters-keyUsage?: Array<KeyUsageType>-End-->
 
@@ -93,9 +102,11 @@ policy?: ValidationPolicyType
 
 **类型：** [ValidationPolicyType](arkts-devicecertificate-cert-validationpolicytype-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CertChainValidationParameters-policy?: ValidationPolicyType--><!--Device-CertChainValidationParameters-policy?: ValidationPolicyType-End-->
 
@@ -111,9 +122,11 @@ revocationCheckParam?: RevocationCheckParameter
 
 **类型：** [RevocationCheckParameter](arkts-devicecertificate-cert-revocationcheckparameter-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CertChainValidationParameters-revocationCheckParam?: RevocationCheckParameter--><!--Device-CertChainValidationParameters-revocationCheckParam?: RevocationCheckParameter-End-->
 
@@ -129,9 +142,11 @@ sslHostname?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CertChainValidationParameters-sslHostname?: string--><!--Device-CertChainValidationParameters-sslHostname?: string-End-->
 
@@ -147,7 +162,9 @@ trustAnchors: Array<X509TrustAnchor>
 
 **类型：** Array&lt;[X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -167,9 +184,11 @@ trustSystemCa?: boolean
 
 **默认值：** false
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CertChainValidationParameters-trustSystemCa?: boolean--><!--Device-CertChainValidationParameters-trustSystemCa?: boolean-End-->
 

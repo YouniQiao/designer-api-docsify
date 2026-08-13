@@ -2,9 +2,11 @@
 
 Describes detail of the cloud sync {@code Progress}.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface ProgressDetails--><!--Device-relationalStore-interface ProgressDetails-End-->
 
@@ -26,9 +28,11 @@ Describes the code of data sync progress.
 
 **Type:** [ProgressCode](arkts-arkdata-relationalstore-progresscode-e.md)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressDetails-code: ProgressCode--><!--Device-ProgressDetails-code: ProgressCode-End-->
 
@@ -40,15 +44,15 @@ Describes the code of data sync progress.
 details: Record<string, TableDetails>
 ```
 
-Statistics of each table.
-
-The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
+Statistics of each table. The key indicates the table name, and the value indicates the device-cloud sync statistics of the table.
 
 **Type:** Record&lt;string, [TableDetails](arkts-arkdata-relationalstore-tabledetails-i.md)&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressDetails-details: Record<string, TableDetails>--><!--Device-ProgressDetails-details: Record<string, TableDetails>-End-->
 
@@ -66,7 +70,9 @@ Indicates the code message.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,9 +90,11 @@ Describes the status of data sync progress.
 
 **Type:** Progress
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ProgressDetails-schedule: Progress--><!--Device-ProgressDetails-schedule: Progress-End-->
 

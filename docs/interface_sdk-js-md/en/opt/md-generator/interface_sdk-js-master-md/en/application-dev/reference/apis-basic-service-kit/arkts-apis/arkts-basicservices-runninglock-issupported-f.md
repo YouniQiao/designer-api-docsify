@@ -14,7 +14,9 @@ function isSupported(type: RunningLockType): boolean
 
 Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock-runninglock-c.md#RunningLock) is supported.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-runningLock-function isSupported(type: RunningLockType): boolean--><!--Device-runningLock-function isSupported(type: RunningLockType): boolean-End-->
 
@@ -36,7 +38,7 @@ Checks whether a specified type of [RunningLock](arkts-basicservices-runninglock
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

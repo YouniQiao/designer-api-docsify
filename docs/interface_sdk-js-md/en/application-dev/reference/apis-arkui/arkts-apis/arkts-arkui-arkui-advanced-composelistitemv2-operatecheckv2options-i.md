@@ -4,7 +4,9 @@ Declare interface OperateCheckV2Options
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface OperateCheckV2Options--><!--Device-unnamed-export interface OperateCheckV2Options-End-->
 
@@ -15,24 +17,6 @@ Declare interface OperateCheckV2Options
 ```TypeScript
 import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from '@kit.ArkUI';
 ```
-
-## onChange
-
-```TypeScript
-onChange?: OnChangeCallback
-```
-
-Callback function when operate the checkbox/switch/radio.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-OperateCheckV2Options-onChange?: OnChangeCallback--><!--Device-OperateCheckV2Options-onChange?: OnChangeCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityDescription
 
@@ -46,9 +30,13 @@ The accessibilityDescription of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateCheckV2Options-accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2Options-accessibilityDescription?: ResourceStr-End-->
 
@@ -68,9 +56,13 @@ The accessibilityLevel of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateCheckV2Options-accessibilityLevel?: string--><!--Device-OperateCheckV2Options-accessibilityLevel?: string-End-->
 
@@ -82,15 +74,19 @@ The accessibilityLevel of the checkbox/switch/radio.
 accessibilityText?: ResourceStr
 ```
 
-The accessibilityText of the checkbox/switch/radio.
+The accessibilityText of the checkbox/switch/radio
 
 **Type:** ResourceStr
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OperateCheckV2Options-accessibilityText?: ResourceStr--><!--Device-OperateCheckV2Options-accessibilityText?: ResourceStr-End-->
 
@@ -102,17 +98,45 @@ The accessibilityText of the checkbox/switch/radio.
 isCheck?: boolean
 ```
 
-Whether is checked on default.
+Whether is checked on default
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
 <!--Device-OperateCheckV2Options-isCheck?: boolean--><!--Device-OperateCheckV2Options-isCheck?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onChange
+
+```TypeScript
+onChange?: OnChangeCallback
+```
+
+Callback function when operate the checkbox/switch/radio
+
+**Type:** [OnChangeCallback](arkts-arkui-onchangecallback-t.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateCheckV2Options-onChange?: OnChangeCallback--><!--Device-OperateCheckV2Options-onChange?: OnChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,6 +4,8 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace sendableContextManager--><!--Device-unnamed-declare namespace sendableContextManager-End-->
@@ -16,12 +18,12 @@ sendableContextManager模块提供Context与[SendableContext](arkts-ability-send
 
 | 名称 |
 | --- |
-| [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md#convertfromcontext) |
-| [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md#converttoabilitystagecontext) |
-| [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md#converttoapplicationcontext) |
-| [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md#converttocontext) |
-| [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md#converttouiabilitycontext) |
-| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md#seteventhubmultithreadingenabled) |
+| [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md#convertFromContext) |
+| [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md#convertToAbilityStageContext) |
+| [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md#convertToApplicationContext) |
+| [convertToContext](arkts-ability-sendablecontextmanager-converttocontext-f.md#convertToContext) |
+| [convertToUIAbilityContext](arkts-ability-sendablecontextmanager-converttouiabilitycontext-f.md#convertToUIAbilityContext) |
+| [setEventHubMultithreadingEnabled](arkts-ability-sendablecontextmanager-seteventhubmultithreadingenabled-f.md#setEventHubMultithreadingEnabled) |
 
 ### 类型
 

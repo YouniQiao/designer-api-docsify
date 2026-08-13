@@ -2,7 +2,9 @@
 
 The module defines the bundle information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BundleInfo--><!--Device-unnamed-export interface BundleInfo-End-->
 
@@ -18,7 +20,9 @@ Index of an application clone. It takes effect only for application clones.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BundleInfo-readonly appIndex: int--><!--Device-BundleInfo-readonly appIndex: int-End-->
 
@@ -27,20 +31,18 @@ Index of an application clone. It takes effect only for application clones.
 ## appInfo
 
 ```TypeScript
-readonly appInfo: ApplicationInfo
+readonly appInfo: ApplicationInfo | null
 ```
 
-Application information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_APPLICATION** to the  
-**bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Obtains configuration information about an application
 
-**Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
+**Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md) \| null
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-BundleInfo-readonly appInfo: ApplicationInfo--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo-End-->
+<!--Device-BundleInfo-readonly appInfo: ApplicationInfo | null--><!--Device-BundleInfo-readonly appInfo: ApplicationInfo | null-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -55,6 +57,8 @@ Build version number of the application package, which identifies different buil
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,9 +78,11 @@ Timestamp for the initial installation of the application package. It measures t
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BundleInfo-readonly firstInstallTime?: long--><!--Device-BundleInfo-readonly firstInstallTime?: long-End-->
 
@@ -88,12 +94,13 @@ Timestamp for the initial installation of the application package. It measures t
 readonly hapModulesInfo: Array<HapModuleInfo>
 ```
 
-Module configuration information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE**to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Module configuration information. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,15 +114,13 @@ Module configuration information. The information can be obtained by passing in 
 readonly installTime: number
 ```
 
-Timestamp for the installation of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds.
-
-**NOTE：**
-
-If the current time is not obtained when the device is powered on for the first time from the factory, the Unix epoch (1970-01-01 08:00:00 UTC+8) is used as the start time of the current system. For example, if the time is not obtained after startup and the installation succeeds after a 32-second wait, the application package installation timestamp is 32000.
+Timestamp for the installation of the application package. It measures the milliseconds that have passed since the Unix epoch (January 1, 1970, 08:00:00 UTC+8), in milliseconds. **NOTE：**If the current time is not obtained when the device is powered on for the first time from the factory, the Unix epoch (1970-01-01 08:00:00 UTC+8) is used as the start time of the current system. For example, if the time is not obtained after startup and the installation succeeds after a 32-second wait, the application package installation timestamp is 32000.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -129,12 +134,13 @@ If the current time is not obtained when the device is powered on for the first 
 readonly minCompatibleVersionCode: number
 ```
 
-Minimum compatible version of the application package in the distributed scenario. It corresponds to the  
-**minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
+Minimum compatible version of the application package in the distributed scenario. It corresponds to the **minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -148,12 +154,13 @@ Minimum compatible version of the application package in the distributed scenari
 readonly name: string
 ```
 
-Name of the application package. It corresponds to the **bundleName** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Name of the application package. It corresponds to the **bundleName** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -167,13 +174,13 @@ Name of the application package. It corresponds to the **bundleName** field in t
 readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 ```
 
-Permission grant state. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION**to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is  
-**permissionGrantStates[2]**.
+Permission grant state. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
 
 **Type:** Array&lt;bundleManager.PermissionGrantState&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -187,14 +194,13 @@ Permission grant state. The information can be obtained by passing in **GET_BUND
 readonly reqPermissionDetails: Array<ReqPermissionDetail>
 ```
 
-Detailed information of the permissions to request from the system. The information can be obtained by passing in  
-**GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is  
-**permissionGrantStates[2]**.
+Detailed information of the permissions to request from the system. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf). The indices of the **reqPermissionDetails** array and the **permissionGrantStates** array are in one-to-one correspondence, meaning that the authorization status of **reqPermissionDetails[2]** is **permissionGrantStates[2]**.
 
 **Type:** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-i.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -208,14 +214,15 @@ Detailed information of the permissions to request from the system. The informat
 readonly routerMap: Array<RouterItem>
 ```
 
-Router table of the application. The table is obtained by deduplicating and combining the **routerMap** information under **hapModulesInfo** based on the **name** field in **RouterItem**. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Router table of the application. The table is obtained by deduplicating and combining the **routerMap** information under **hapModulesInfo** based on the **name** field in **RouterItem**. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
 
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BundleInfo-readonly routerMap: Array<RouterItem>--><!--Device-BundleInfo-readonly routerMap: Array<RouterItem>-End-->
 
@@ -224,20 +231,18 @@ Router table of the application. The table is obtained by deduplicating and comb
 ## signatureInfo
 
 ```TypeScript
-readonly signatureInfo: SignatureInfo
+readonly signatureInfo: SignatureInfo | null
 ```
 
-Signature information of the bundle. The information can be obtained by passing in  
-**GET_BUNDLE_INFO_WITH_SIGNATURE_INFO** to the **bundleFlags** parameter of  
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf).
+Indicates the SignatureInfo of the bundle
 
-**Type:** [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md)
+**Type:** [SignatureInfo](arkts-ability-bundleinfo-signatureinfo-i.md) \| null
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-BundleInfo-readonly signatureInfo: SignatureInfo--><!--Device-BundleInfo-readonly signatureInfo: SignatureInfo-End-->
+<!--Device-BundleInfo-readonly signatureInfo: SignatureInfo | null--><!--Device-BundleInfo-readonly signatureInfo: SignatureInfo | null-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -247,12 +252,13 @@ Signature information of the bundle. The information can be obtained by passing 
 readonly targetVersion: number
 ```
 
-Target version of the application. It corresponds to the **targetAPIVersion** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Target version of the application. It corresponds to the **targetAPIVersion** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -270,7 +276,9 @@ Timestamp for the last update of the application package. It measures the millis
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -284,12 +292,13 @@ Timestamp for the last update of the application package. It measures the millis
 readonly vendor: string
 ```
 
-Vendor of the application package. It corresponds to the **vendor** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Vendor of the application package. It corresponds to the **vendor** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -303,12 +312,13 @@ Vendor of the application package. It corresponds to the **vendor** field in the
 readonly versionCode: number
 ```
 
-Version code of the application package. It corresponds to the **versionCode** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Version code of the application package. It corresponds to the **versionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -322,12 +332,13 @@ Version code of the application package. It corresponds to the **versionCode** f
 readonly versionName: string
 ```
 
-Version description of the application package. It corresponds to the **versionName** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Version description of the application package. It corresponds to the **versionName** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

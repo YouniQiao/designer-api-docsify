@@ -6,6 +6,8 @@ List element
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ListElement--><!--Device-unnamed-export interface ListElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -16,11 +18,13 @@ List element
 rotation(obj?: FocusParamObj): void
 ```
 
-Requests or cancels the crown rotation focus for a component.If focus is set to true, the crown event focus is requested.If focus is set to false, the crown event focus is canceled.This attribute can be defaulted to true.
+Requests or cancels the crown rotation focus for a component. If focus is set to true, the crown event focus is requested. If focus is set to false, the crown event focus is canceled. This attribute can be defaulted to true.
 
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -45,6 +49,8 @@ Scrolls the list to the position of the item at the specified index.
 **Since:** 4
 
 **ArkTS mode:** ArkTS-Dyn only, since version 4.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

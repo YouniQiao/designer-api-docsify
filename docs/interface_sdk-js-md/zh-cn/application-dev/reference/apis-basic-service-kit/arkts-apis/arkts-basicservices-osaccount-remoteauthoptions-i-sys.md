@@ -2,9 +2,11 @@
 
 表示远程认证的可选参数集合。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface RemoteAuthOptions--><!--Device-osAccount-interface RemoteAuthOptions-End-->
 
@@ -22,9 +24,11 @@ collectorNetworkId?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteAuthOptions-collectorNetworkId?: string--><!--Device-RemoteAuthOptions-collectorNetworkId?: string-End-->
 
@@ -40,11 +44,13 @@ collectorTokenId?: int
 
 凭据收集者的令牌标识，默认为undefined。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteAuthOptions-collectorTokenId?: int--><!--Device-RemoteAuthOptions-collectorTokenId?: int-End-->
 
@@ -62,9 +68,11 @@ verifierNetworkId?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-RemoteAuthOptions-verifierNetworkId?: string--><!--Device-RemoteAuthOptions-verifierNetworkId?: string-End-->
 

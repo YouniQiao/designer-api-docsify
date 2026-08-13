@@ -2,7 +2,9 @@
 
 Enumerates the camera statuses.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum CameraStatus--><!--Device-camera-enum CameraStatus-End-->
 
@@ -16,7 +18,9 @@ CAMERA_STATUS_APPEAR = 0
 
 A camera appears.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -32,7 +36,9 @@ CAMERA_STATUS_DISAPPEAR = 1
 
 The camera disappears.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -48,7 +54,9 @@ CAMERA_STATUS_AVAILABLE = 2
 
 The camera is available.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -64,7 +72,9 @@ CAMERA_STATUS_UNAVAILABLE = 3
 
 The camera is unavailable.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

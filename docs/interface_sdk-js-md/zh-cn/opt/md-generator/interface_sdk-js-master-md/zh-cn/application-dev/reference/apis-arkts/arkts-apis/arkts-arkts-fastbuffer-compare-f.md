@@ -10,6 +10,8 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1--><!--Device-fastbuffer-function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): -1 | 0 | 1-End-->
@@ -33,7 +35,7 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 | 错误码ID |
 | --- |
-| [10200068](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
+| [10200068](../errorcode-utils.md#10200068-引用已释放或分离的arraybuffer) |
 
 ## 示例
 

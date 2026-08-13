@@ -2,9 +2,11 @@
 
 Describes group configuration options for download tasks.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface GroupConfig--><!--Device-agent-interface GroupConfig-End-->
 
@@ -22,18 +24,15 @@ import { request } from '@kit.BasicServicesKit';
 gauge?: boolean
 ```
 
-Whether to send progress notifications. This parameter applies only to background tasks.
-
-- **true**: The progress, success, and failure notifications are displayed.  
-- **false**: Only success and failure notifications are displayed.
-
-The default value is **false**.
+Whether to send progress notifications. This parameter applies only to background tasks. - **true**: The progress, success, and failure notifications are displayed. - **false**: Only success and failure notifications are displayed. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GroupConfig-gauge?: boolean--><!--Device-GroupConfig-gauge?: boolean-End-->
 
@@ -49,9 +48,11 @@ Custom settings for the notification bar. The default value is **{}**.
 
 **Type:** Notification
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GroupConfig-notification: Notification--><!--Device-GroupConfig-notification: Notification-End-->
 

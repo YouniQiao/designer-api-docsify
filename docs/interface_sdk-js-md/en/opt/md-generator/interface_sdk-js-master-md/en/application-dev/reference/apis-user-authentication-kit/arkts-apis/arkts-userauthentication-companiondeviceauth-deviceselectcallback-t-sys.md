@@ -4,9 +4,11 @@
 type DeviceSelectCallback = (selectPurpose: number) => DeviceSelectResult
 ```
 
-Defines the callback triggered for the companion device selection. When the system requires the user to select a companion device (for example, when adding a template or performing authentication), this callback is triggered.The application needs to return the information about the selected device.
+Defines the callback triggered for the companion device selection. When the system requires the user to select a companion device (for example, when adding a template or performing authentication), this callback is triggered. The application needs to return the information about the selected device.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

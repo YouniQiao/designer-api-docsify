@@ -12,9 +12,11 @@ import { connection } from '@kit.NetworkKit';
 function getPacUrl(): string
 ```
 
-Obtain the URL [pacUrl](pacUrl) of the current PAC script.
+Obtain the URL pacUrl of the current PAC script.
 
-**Since:** 15
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-function getPacUrl(): string--><!--Device-connection-function getPacUrl(): string-End-->
 
@@ -30,8 +32,8 @@ Obtain the URL [pacUrl](pacUrl) of the current PAC script.
 
 | Error Code ID |
 | --- |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 

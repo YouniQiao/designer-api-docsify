@@ -6,6 +6,8 @@ Defines the options of translate.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TranslateOptions--><!--Device-unnamed-declare interface TranslateOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the options of translate.
 x?: number | string
 ```
 
-Translation distance along the x-axis.For the number type, the unit is VP, and the value range is (-∞, +∞).For the string type, the value follows the format of length string type.
+Translation distance along the x-axis. For the number type, the unit is VP, and the value range is (-∞, +∞). For the string type, the value follows the format of length string type.
 
 **Type:** number \| string
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,13 +42,15 @@ Translation distance along the x-axis.For the number type, the unit is VP, and t
 y?: number | string
 ```
 
-Translation distance along the y-axis.For the number type, the unit is VP, and the value range is (-∞, +∞).For the string type, the value follows the format of length string type.
+Translation distance along the y-axis. For the number type, the unit is VP, and the value range is (-∞, +∞). For the string type, the value follows the format of length string type.
 
 **Type:** number \| string
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,6 +73,8 @@ Distance to translate along the z-axis. The value is a floating point number, th
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

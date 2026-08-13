@@ -4,6 +4,8 @@ Enumerates alignment modes.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ScrollAlign--><!--Device-unnamed-declare enum ScrollAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ START
 The start edge of the list item is flush with the start edge of the list.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ The list item is centered along the main axis of the list.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -54,6 +60,8 @@ The end edge of the list item is flush with the end edge of the list.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -71,6 +79,8 @@ AUTO
 The list item is automatically aligned.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

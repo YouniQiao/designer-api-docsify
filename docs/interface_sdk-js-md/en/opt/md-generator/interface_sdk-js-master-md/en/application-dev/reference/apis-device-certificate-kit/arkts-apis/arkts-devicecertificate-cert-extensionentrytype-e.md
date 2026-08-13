@@ -2,7 +2,9 @@
 
 Enumerates the entry types in certificate extensions that can be obtained.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-enum ExtensionEntryType--><!--Device-cert-enum ExtensionEntryType-End-->
 
@@ -16,7 +18,9 @@ EXTENSION_ENTRY_TYPE_ENTRY = 0
 
 Entire extension entry.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -32,7 +36,9 @@ EXTENSION_ENTRY_TYPE_ENTRY_CRITICAL = 1
 
 Critical attribute (**critical** flag) of the extension entry.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -48,7 +54,9 @@ EXTENSION_ENTRY_TYPE_ENTRY_VALUE = 2
 
 Value (extension-specific data) of the extension entry.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

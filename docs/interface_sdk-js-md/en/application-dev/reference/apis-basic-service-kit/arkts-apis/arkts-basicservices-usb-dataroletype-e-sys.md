@@ -8,7 +8,7 @@ Enumerates data role types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DataRoleType)
+**Substitutes:** [DataRoleType](arkts-basicservices-usbmanager-dataroletype-e-sys.md#DataRoleType-(System-API))
 
 <!--Device-usb-export enum DataRoleType--><!--Device-usb-export enum DataRoleType-End-->
 

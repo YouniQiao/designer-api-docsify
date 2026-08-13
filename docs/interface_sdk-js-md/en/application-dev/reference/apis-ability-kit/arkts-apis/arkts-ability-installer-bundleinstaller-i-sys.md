@@ -2,9 +2,11 @@
 
 Bundle installer interface, include install uninstall recover.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-installer-interface BundleInstaller--><!--Device-installer-interface BundleInstaller-End-->
 
@@ -26,9 +28,11 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 
 Adds extended resources based on the specified bundle name and HSP file path. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -55,11 +59,11 @@ Adds extended resources based on the specified bundle name and HSP file path. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700301-failed-to-add-extended-resources) | AddExtResource failed due to parse file failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700301](../errorcode-bundle.md#17700301-failed-to-add-extended-resources) | AddExtResource failed due to parse file failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -88,21 +92,17 @@ try {
 
 ## createAppClone
 
-ArkTS-Dyn:
-```TypeScript
-createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 createAppClone(bundleName: string, createAppCloneParam?: CreateAppCloneParam): Promise<int>
 ```
 
 Creates an application clone. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_CLONE_BUNDLE
 
@@ -117,25 +117,25 @@ Creates an application clone. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be created. |
-| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md#CreateAppCloneParam). |
+| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md#CreateAppCloneParam-(System-API)). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the index of the application clone. |
+| Promise&lt;int&gt; | Promise used to return the index of the application clone. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The appIndex is not in valid range or already exists. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_CLONE_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700069](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The appIndex is not in valid range or already exists. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_CLONE_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700069](../errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
 ## Examples
 
@@ -178,6 +178,8 @@ Destroys an application clone. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
 <!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>-End-->
@@ -204,12 +206,12 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
 ## Examples
 
@@ -250,6 +252,8 @@ Destroys an application clone. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
 <!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>--><!--Device-BundleInstaller-destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>-End-->
@@ -264,7 +268,7 @@ Destroys an application clone. This API uses a promise to return the result.
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
 | appIndex | number | Yes | Index of the clone to destroy. |
-| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md#DestroyAppCloneParam). |
+| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md#DestroyAppCloneParam-(System-API)). |
 
 **Return value:**
 
@@ -276,13 +280,13 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
 ## Examples
 
@@ -329,7 +333,9 @@ Destroy clone instance for an application.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UNINSTALL_CLONE_BUNDLE
 
@@ -357,12 +363,12 @@ Destroy clone instance for an application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
-| [17700061](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
+| [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_CLONE_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
 ## install
 
@@ -370,17 +376,13 @@ Destroy clone instance for an application.
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result.
+Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
 
-> **NOTE：**
-> 
-> To install applications of different distribution types, the appropriate permissions must be requested. For
-> details on distribution types, see the **appDistributionType** field in
-> [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -400,40 +402,40 @@ Installs an application. This API uses an asynchronous callback to return the re
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700044](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700042](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700036](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
-| [17700054](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
-| [17700052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
-| [17700050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700076](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
-| [17700077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700066](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
-| [17700031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
+| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 
 ## Examples
 
@@ -472,17 +474,13 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result.
+Installs an application. This API uses an asynchronous callback to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
 
-> **NOTE：**
-> 
-> To install applications of different distribution types, the appropriate permissions must be requested. For
-> details on distribution types, see the **appDistributionType** field in
-> [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -501,39 +499,39 @@ Installs an application. This API uses an asynchronous callback to return the re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700044](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700042](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700036](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
-| [17700054](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
-| [17700052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
-| [17700050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700076](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
-| [17700077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700066](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
-| [17700031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
+| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 
 ## Examples
 
@@ -567,17 +565,13 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result.
+Installs an application. This API uses a promise to return the result. > **NOTE：**> > To install applications of different distribution types, the appropriate permissions must be requested. For > details on distribution types, see the **appDistributionType** field in > [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
 
-> **NOTE：**
-> 
-> To install applications of different distribution types, the appropriate permissions must be requested. For
-> details on distribution types, see the **appDistributionType** field in
-> [ApplicationInfo](arkts-ability-applicationinfo-i.md#ApplicationInfo).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.INSTALL_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE or ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE or ohos.permission.INSTALL_INTERNALTESTING_BUNDLE or (ohos.permission.INSTALL_BUNDLE and ohos.permission.INSTALL_ALLOW_DOWNGRADE)
@@ -596,7 +590,7 @@ Installs an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam).<br>**Since:** 12 |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)).<br>**Since:** 12 |
 
 **Return value:**
 
@@ -608,34 +602,34 @@ Installs an application. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700044](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700042](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700043](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
-| [17700039](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700036](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
-| [17700054](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
-| [17700052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
-| [17700050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700076](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
-| [17700077](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700066](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
-| [17700031](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
-| [17700018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.INSTALL_ENTERPRISE_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_MDM_BUNDLE' or 'ohos.permission.INSTALL_ENTERPRISE_NORMAL_BUNDLE' or 'ohos.permission.INSTALL_INTERNALTESTING_BUNDLE' or ('ohos.permission.INSTALL_BUNDLE' and 'ohos.permission.INSTALL_ALLOW_DOWNGRADE'). |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700036](../errorcode-bundle.md#17700036-failure-in-installing-the-shared-library-because-of-no-allowappsharelibrary-privilege) | Failed to install the HSP because lacks appropriate permissions. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3000. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because the device has been controlled.<br>**Applicable version:** 12 and later |
+| [17700054](../errorcode-bundle.md#17700054-bundle-installation-failure-due-to-permission-verification-failure) | Failed to install the HAP because the HAP requests wrong permissions.<br>**Applicable version:** 11 and later |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the HAP because debug bundle cannot be installed under non -developer mode.<br>**Applicable version:** 11 and later |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device.<br>**Applicable version:** 10 and later |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed.<br>**Applicable version:** 10 and later |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
+| [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700066](../errorcode-bundle.md#17700066-failed-to-install-the-native-software-package) | Failed to install the HAP because installing the native package failed.<br>**Applicable version:** 12 and later |
+| [17700031](../errorcode-bundle.md#17700031-hap-installation-fails-due-to-overlay-feature-verification-failure) | Failed to install the HAP because the overlay check of the HAP is failed. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
 
 ## Examples
 
@@ -675,9 +669,11 @@ installPlugin(hostBundleName: string, pluginFilePaths: Array<string>, pluginPara
 
 Installs a plugin for an application. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_PLUGIN_BUNDLE
 
@@ -693,7 +689,7 @@ Installs a plugin for an application. This API uses a promise to return the resu
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be installed. |
 | pluginFilePaths | Array&lt;string&gt; | Yes | Paths where the plugin package files are stored. If multiple file paths or a directory is provided, ensure that these files are HSPs of the same plugin program and their signatures are consistent. |
-| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#PluginParam). |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for installing the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#PluginParam-(System-API)). |
 
 **Return value:**
 
@@ -705,24 +701,24 @@ Installs a plugin for an application. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the plugin because they have different configuration information. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the plugin because the HSP path is invalid or the HSP is too large. |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the plugin because the plugin fails to be parsed. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the plugin because the plugin signature fails to be verified. |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the plugin because a plugin with the same &lt;br&gt;bundle name but different signature information exists on the device. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_PLUGIN_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified hostBundleName cannot be found or the bundle is not installed by the specified user. |
-| [17700090](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700090-plugin-installation-failure-because-of-plugin-id-verification-failure) | Failed to install the plugin because the plugin id fails to be verified. |
-| [17700091](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700091-plugin-installation-failure-because-of-the-same-plugin-name-and-host-bundle-name) | Failed to install the plugin because the plugin name is same as host bundle name. |
-| [17700088](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700088-plugin-installation-failure-due-to-no-permission) | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT_PLUGIN. |
-| [17700089](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700089-plugin-installation-failure-because-of-plugin-id-parsing-failure) | Failed to install the plugin because the plugin id fails to be parsed. |
-| [17700087](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700087-unsupported-plugin-installation) | Failed to install the plugin because the current device does not support plugin. |
-| [17700052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the plugin because of insufficient system disk space. |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the plugin because they have different configuration information. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the plugin because the HSP path is invalid or the HSP is too large. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the plugin because the plugin fails to be parsed. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the plugin because the plugin signature fails to be verified. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the plugin because a plugin with the same &lt;br&gt;bundle name but different signature information exists on the device. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_PLUGIN_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified hostBundleName cannot be found or the bundle is not installed by the specified user. |
+| [17700090](../errorcode-bundle.md#17700090-plugin-installation-failure-because-of-plugin-id-verification-failure) | Failed to install the plugin because the plugin id fails to be verified. |
+| [17700091](../errorcode-bundle.md#17700091-plugin-installation-failure-because-of-the-same-plugin-name-and-host-bundle-name) | Failed to install the plugin because the plugin name is same as host bundle name. |
+| [17700088](../errorcode-bundle.md#17700088-plugin-installation-failure-due-to-no-permission) | Failed to install the plugin because the host application lacks ohos.permission.kernel.SUPPORT_PLUGIN. |
+| [17700089](../errorcode-bundle.md#17700089-plugin-installation-failure-because-of-plugin-id-parsing-failure) | Failed to install the plugin because the plugin id fails to be parsed. |
+| [17700087](../errorcode-bundle.md#17700087-unsupported-plugin-installation) | Failed to install the plugin because the current device does not support plugin. |
+| [17700052](../errorcode-bundle.md#17700052-installation-of-debugging-applications-allowed-only-in-developer-mode) | Failed to install the plugin because debug bundle cannot be installed under non-developer mode. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the plugin because of insufficient system disk space. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the plugin because the code signature verification is failed. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the plugin since the version of the plugin to install is too early. |
 
 ## Examples
 
@@ -755,27 +751,17 @@ try {
 
 ## installPreexistingApp
 
-ArkTS-Dyn:
-```TypeScript
-installPreexistingApp(bundleName: string, userId?: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 installPreexistingApp(bundleName: string, userId?: int): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result.
+Installs an application. This API uses a promise to return the result. > **NOTE：**> > This API does not support the installation of applications whose > [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md#ApplicationInfo) > is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
 
-> **NOTE：**
-> 
-> This API does not support the installation of applications whose
-> [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md#ApplicationInfo)
-> is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -790,7 +776,7 @@ Installs an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to install. |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The value must be greater than 0. The default value is the user ID of the caller. |
+| userId | int | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The value must be greater than 0. The default value is the user ID of the caller. |
 
 **Return value:**
 
@@ -802,13 +788,13 @@ Installs an application. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE'. |
-| [17700071](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700071-enterprise-applications-cannot-be-installed) | It is not allowed to install the enterprise bundle. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE'. |
+| [17700071](../errorcode-bundle.md#17700071-enterprise-applications-cannot-be-installed) | It is not allowed to install the enterprise bundle. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName cannot be found or the bundle is not installed by the specified user. |
 
 ## Examples
 
@@ -844,9 +830,11 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 
 Rolls back an application to the initial installation state. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
@@ -862,19 +850,19 @@ Rolls back an application to the initial installation state. This API uses an as
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -915,9 +903,11 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 
 Rolls back an application to the initial installation state. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
@@ -932,18 +922,18 @@ Rolls back an application to the initial installation state. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -979,9 +969,11 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 
 Rolls back an application to the initial installation state. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.RECOVER_BUNDLE
 
@@ -996,7 +988,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam). |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)). |
 
 **Return value:**
 
@@ -1008,13 +1000,13 @@ Rolls back an application to the initial installation state. This API uses a pro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700058](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited &lt;br&gt;from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_BUNDLE' or ' ohos.permission.RECOVER_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -1054,9 +1046,11 @@ removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 
 Removes extended resources based on the specified bundle name and module names. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1083,11 +1077,11 @@ Removes extended resources based on the specified bundle name and module names. 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700302-failed-to-delete-extended-resources) | RemoveExtResource failed due to module does not exist. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
+| [17700302](../errorcode-bundle.md#17700302-failed-to-delete-extended-resources) | RemoveExtResource failed due to module does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
 ## Examples
 
@@ -1122,9 +1116,11 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 
 Uninstalls an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1140,23 +1136,23 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700067](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -1197,9 +1193,11 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 
 Uninstalls an application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1214,21 +1212,21 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700067](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -1264,9 +1262,11 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 
 Uninstalls an application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1281,7 +1281,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam).<br>**Since:** 15 |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)).<br>**Since:** 15 |
 
 **Return value:**
 
@@ -1293,17 +1293,17 @@ Uninstalls an application. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700062](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
-| [17700040](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [17700020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700067](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall the HAP because uninstall is not allowed by the enterprise device management. |
+| [17700040](../errorcode-bundle.md#17700040-failure-in-uninstalling-an-interapplication-shared-library) | The specified bundle is a shared bundle and cannot be uninstalled. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -1343,9 +1343,11 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 
 Uninstalls a shared package. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1360,18 +1362,18 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | Parameters required for the uninstall. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700038](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700037](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
 
 ## Examples
 
@@ -1409,9 +1411,11 @@ uninstall(uninstallParam: UninstallParam): Promise<void>
 
 Uninstalls a shared package. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1437,12 +1441,12 @@ Uninstalls a shared package. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700038](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700020](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
-| [17700037](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700020](../errorcode-bundle.md#17700020-failure-to-uninstall-preinstalled-applications) | The specified bundle is a pre-installed bundle and cannot be uninstalled. |
+| [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
 
 ## Examples
 
@@ -1478,11 +1482,13 @@ try {
 uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 ```
 
-Uninstall new preinstalled applications.Only supports uninstalling pre installed applications added during device OTA upgrade. Asynchronous execution of application uninstallation tasks, the interface return value only indicates successful interface invocation and does not return uninstallation results.
+Uninstall new preinstalled applications. Only supports uninstalling pre installed applications added during device OTA upgrade. Asynchronous execution of application uninstallation tasks, the interface return value only indicates successful interface invocation and does not return uninstallation results.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UNINSTALL_BUNDLE
 
@@ -1510,8 +1516,8 @@ Uninstall new preinstalled applications.Only supports uninstalling pre installed
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
 ## uninstallPlugin
 
@@ -1521,9 +1527,11 @@ uninstallPlugin(hostBundleName: string, pluginBundleName: string, pluginParam?: 
 
 Uninstalls a plugin for an application. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.UNINSTALL_PLUGIN_BUNDLE
 
@@ -1539,7 +1547,7 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 | --- | --- | --- | --- |
 | hostBundleName | string | Yes | Bundle name of the application for which the plugin is to be uninstalled. |
 | pluginBundleName | string | Yes | Bundle name of the plugin. |
-| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#PluginParam). |
+| pluginParam | [PluginParam](arkts-ability-installer-pluginparam-i-sys.md) | No | Parameters required for uninstalling the plugin. For details about the default value, see [PluginParam](arkts-ability-installer-pluginparam-i-sys.md#PluginParam-(System-API)). |
 
 **Return value:**
 
@@ -1551,11 +1559,11 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700092](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_PLUGIN_BUNDLE'. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.UNINSTALL_PLUGIN_BUNDLE'. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -1594,9 +1602,11 @@ uninstallUpdates(bundleName: string, installParam?: InstallParam): Promise<void>
 
 Uninstalls and updates a preinstalled application and restores it to the initial installation status. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE or ohos.permission.UNINSTALL_BUNDLE
 
@@ -1611,7 +1621,7 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
+| installParam | InstallParam | No | Parameters required for the uninstall and update. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)). The **userId** parameter cannot be specified. Calling this API will uninstall and update the application for all users. |
 
 **Return value:**
 
@@ -1623,15 +1633,15 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700060](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
-| [17700045](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall because enterprise device management disallow uninstall. |
-| [17700057](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700057-specified-application-is-not-a-preset-application) | Failed to uninstall updates because the HAP is not pre-installed. |
-| [17700073](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700067](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
+| [17700045](../errorcode-bundle.md#17700045-application-uninstall-is-not-allowed-by-enterprise-device-management) | Failed to uninstall because enterprise device management disallow uninstall. |
+| [17700057](../errorcode-bundle.md#17700057-specified-application-is-not-a-preset-application) | Failed to uninstall updates because the HAP is not pre-installed. |
+| [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same &lt;br&gt;bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 
 ## Examples
 
@@ -1670,9 +1680,11 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 
 Updates the current bundle. This API can be called only by enterprise MDM applications on enterprise devices, and the HAPs in **hapFilePaths** must belong to the current application. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_SELF_BUNDLE
 
@@ -1688,33 +1700,33 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
 | installParam | InstallParam | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700044](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700042](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700043](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
-| [17700018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
-| [17700051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700049](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
+| [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
 ## Examples
 
@@ -1755,9 +1767,11 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 
 Updates the current bundle. This API can be called only by enterprise MDM applications on enterprise devices, and the HAPs in **hapFilePaths** must belong to the current application. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_SELF_BUNDLE
 
@@ -1772,32 +1786,32 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700044](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700042](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700043](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
-| [17700018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
-| [17700051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700049](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2 . Incorrect parameter types. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
+| [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
 ## Examples
 
@@ -1833,9 +1847,11 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 
 Updates the current bundle. This API can be called only by enterprise MDM applications on enterprise devices, and the HAPs in **hapFilePaths** must belong to the current application. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INSTALL_SELF_BUNDLE
 
@@ -1850,7 +1866,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam). |
+| installParam | InstallParam | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md#InstallParam-(System-API)). |
 
 **Return value:**
 
@@ -1862,27 +1878,27 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17700015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
-| [17700047](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
-| [17700012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
-| [17700044](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
-| [17700010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
-| [17700042](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
-| [17700011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
-| [17700043](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
-| [17700041](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
-| [17700039](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [17700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
-| [17700018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
-| [17700050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
-| [17700051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
-| [17700016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
-| [17700048](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
-| [17700017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
-| [17700049](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
+| [17700015](../errorcode-bundle.md#17700015-bundle-installation-failure-due-to-different-configuration-information-of-multiple-haps) | Failed to install the HAPs because they have different configuration information. |
+| [17700047](../errorcode-bundle.md#17700047-application-version-to-be-updated-is-not-later-than-the-current-version) | Failed to install the HAP because the VersionCode to be updated is not greater than the current VersionCode. |
+| [17700012](../errorcode-bundle.md#17700012-bundle-installation-failure-due-to-invalid-file-path-or-too-large-file) | Failed to install the HAP because the HAP path is invalid or the HAP is too large. |
+| [17700044](../errorcode-bundle.md#17700044-field-isolationmode-in-the-hap-conflicts-with-the-device-isolation-mode) | Failed to install the HAP because the isolationMode configured is not supported. |
+| [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
+| [17700042](../errorcode-bundle.md#17700042-incorrect-uri-in-the-data-proxy) | Failed to install the HAP because of incorrect URI in the data proxy. |
+| [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
+| [17700043](../errorcode-bundle.md#17700043-incorrect-permission-configuration-in-the-data-proxy) | Failed to install the HAP because of low APL in the non-system data proxy (required APL: system_basic or system_core). |
+| [17700041](../errorcode-bundle.md#17700041-application-installation-is-not-allowed-by-enterprise-device-management) | Failed to install because enterprise device management disallow install. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
+| [17700039](../errorcode-bundle.md#17700039-failure-in-installing-an-interapplication-shared-library) | Failed to install because disallow install a shared bundle by hapFilePaths. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| [17700018](../errorcode-bundle.md#17700018-bundle-installation-failure-because-the-dependent-module-does-not-exist) | Failed to install because the dependent module does not exist. |
+| [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
+| [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
+| [17700016](../errorcode-bundle.md#17700016-bundle-installation-failure-due-to-insufficient-system-disk-space) | Failed to install the HAP because of insufficient system disk space. |
+| [17700048](../errorcode-bundle.md#17700048-code-signature-verification-failure) | Failed to install the HAP because the code signature verification is failed. |
+| [17700017](../errorcode-bundle.md#17700017-bundle-installation-failure-because-the-version-to-install-is-too-earlier) | Failed to install the HAP since the version of the HAP to install is too early. |
+| [17700049](../errorcode-bundle.md#17700049-update-failure-because-of-incorrect-bundle-name) | Failed to install the HAP because the bundleName is different from the bundleName of the caller application. |
 
 ## Examples
 

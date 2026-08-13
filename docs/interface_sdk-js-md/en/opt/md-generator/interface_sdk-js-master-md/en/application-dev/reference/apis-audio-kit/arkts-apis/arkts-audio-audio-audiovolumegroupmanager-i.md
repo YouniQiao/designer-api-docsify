@@ -1,15 +1,10 @@
 # AudioVolumeGroupManager
 
-This interface implements volume management for an audio group.
+This interface implements volume management for an audio group. Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager) to obtain an AudioVolumeGroupManager instance. > **NOTE：**> > - The initial APIs of this interface are supported since API version 9.
 
-Before calling any API in AudioVolumeGroupManager, you must use  
-[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager)to obtain an AudioVolumeGroupManager instance.
+**Since:** 23
 
-> **NOTE：**
-> 
-> - The initial APIs of this interface are supported since API version 9.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
@@ -29,7 +24,9 @@ getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<numbe
 
 Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an input device. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForInputDevice(inputDevice: AudioDeviceDescriptor): Promise<double>-End-->
 
@@ -51,9 +48,9 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an i
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 ## getMaxAmplitudeForOutputDevice
 
@@ -63,7 +60,9 @@ getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<num
 
 Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an output device. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>--><!--Device-AudioVolumeGroupManager-getMaxAmplitudeForOutputDevice(outputDevice: AudioDeviceDescriptor): Promise<double>-End-->
 
@@ -85,9 +84,9 @@ Obtains the maximum amplitude (in the range [0, 1]) of the audio stream for an o
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 ## getMaxVolume
 
@@ -97,7 +96,7 @@ getMaxVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 Obtains the maximum volume level of a stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -122,7 +121,7 @@ getMaxVolume(volumeType: AudioVolumeType): Promise<number>
 
 Obtains the maximum volume level of a stream. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -152,7 +151,7 @@ getMaxVolumeSync(volumeType: AudioVolumeType): number
 
 Obtains the maximum volume level of a stream. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -178,8 +177,8 @@ Obtains the maximum volume level of a stream. This API returns the result synchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getMinVolume
 
@@ -189,7 +188,7 @@ getMinVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 Obtains the minimum volume level of a stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -214,7 +213,7 @@ getMinVolume(volumeType: AudioVolumeType): Promise<number>
 
 Obtains the minimum volume level of a stream. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -244,7 +243,7 @@ getMinVolumeSync(volumeType: AudioVolumeType): number
 
 Obtains the minimum volume level of a stream. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -270,8 +269,8 @@ Obtains the minimum volume level of a stream. This API returns the result synchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getRingerMode
 
@@ -281,7 +280,9 @@ getRingerMode(callback: AsyncCallback<AudioRingMode>): void
 
 Obtains the ringer mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-getRingerMode(callback: AsyncCallback<AudioRingMode>): void-End-->
 
@@ -301,7 +302,9 @@ getRingerMode(): Promise<AudioRingMode>
 
 Obtains the ringer mode. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>--><!--Device-AudioVolumeGroupManager-getRingerMode(): Promise<AudioRingMode>-End-->
 
@@ -321,7 +324,9 @@ getRingerModeSync(): AudioRingMode
 
 Obtains the ringer mode. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode--><!--Device-AudioVolumeGroupManager-getRingerModeSync(): AudioRingMode-End-->
 
@@ -341,7 +346,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 Obtains the volume gain. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -364,9 +369,9 @@ Obtains the volume gain. This API uses an asynchronous callback to return the re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 ## getSystemVolumeInDb
 
@@ -376,7 +381,7 @@ getSystemVolumeInDb(volumeType: AudioVolumeType, volumeLevel: number, device: De
 
 Obtains the volume gain. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -404,9 +409,9 @@ Obtains the volume gain. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-system-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [6800301](../errorcode-audio.md#6800301-system-error) |
 
 ## getSystemVolumeInDbSync
 
@@ -416,7 +421,7 @@ getSystemVolumeInDbSync(volumeType: AudioVolumeType, volumeLevel: number, device
 
 Obtains the volume gain. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -444,8 +449,8 @@ Obtains the volume gain. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## getVolume
 
@@ -455,7 +460,7 @@ getVolume(volumeType: AudioVolumeType, callback: AsyncCallback<number>): void
 
 Obtains the volume level of a stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -480,7 +485,7 @@ getVolume(volumeType: AudioVolumeType): Promise<number>
 
 Obtains the volume level of a stream. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -510,7 +515,7 @@ getVolumeSync(volumeType: AudioVolumeType): number
 
 Obtains the volume level of a stream. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -536,8 +541,8 @@ Obtains the volume level of a stream. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isMicrophoneMute
 
@@ -547,7 +552,9 @@ isMicrophoneMute(callback: AsyncCallback<boolean>): void
 
 Checks whether the microphone is muted. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(callback: AsyncCallback<boolean>): void-End-->
 
@@ -567,7 +574,9 @@ isMicrophoneMute(): Promise<boolean>
 
 Checks whether the microphone is muted. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>--><!--Device-AudioVolumeGroupManager-isMicrophoneMute(): Promise<boolean>-End-->
 
@@ -587,7 +596,9 @@ isMicrophoneMuteSync(): boolean
 
 Checks whether the microphone is muted. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean--><!--Device-AudioVolumeGroupManager-isMicrophoneMuteSync(): boolean-End-->
 
@@ -607,7 +618,7 @@ isMute(volumeType: AudioVolumeType, callback: AsyncCallback<boolean>): void
 
 Checks whether a stream is muted. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -632,7 +643,7 @@ isMute(volumeType: AudioVolumeType): Promise<boolean>
 
 Checks whether a stream is muted. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -662,7 +673,7 @@ isMuteSync(volumeType: AudioVolumeType): boolean
 
 Checks whether a stream is muted. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
 **Deprecated since:** 20
 
@@ -688,8 +699,8 @@ Checks whether a stream is muted. This API returns the result synchronously.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## isVolumeUnadjustable
 
@@ -699,7 +710,9 @@ isVolumeUnadjustable(): boolean
 
 Checks whether the fixed volume mode is enabled. When the fixed volume mode is enabled, the volume cannot be adjusted. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean--><!--Device-AudioVolumeGroupManager-isVolumeUnadjustable(): boolean-End-->
 
@@ -711,17 +724,19 @@ Checks whether the fixed volume mode is enabled. When the fixed volume mode is e
 | --- |
 | boolean |
 
-## off('ringerModeChange')
+## offMicStateChange
 
 ```TypeScript
-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
+offMicStateChange(callback?: Callback<MicStateChangeEvent>): void
 ```
 
-Unsubscribes from the ringer mode change event. This API uses an asynchronous callback to return the result.
+Unsubscribes to the microphone state change events.
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-offMicStateChange(callback?: Callback<MicStateChangeEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -729,16 +744,43 @@ Unsubscribes from the ringer mode change event. This API uses an asynchronous ca
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'ringerModeChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## offRingerModeChange
+
+```TypeScript
+offRingerModeChange(callback?: Callback<AudioRingMode>): void
+```
+
+Unsubscribes to the ringer mode state change events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-offRingerModeChange(callback?: Callback<AudioRingMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## off('micStateChange')
+## off_micStateChange
 
 ```TypeScript
 off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
@@ -747,6 +789,8 @@ off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void
 Unsubscribes from the microphone state change event. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-off(type: 'micStateChange', callback?: Callback<MicStateChangeEvent>): void-End-->
 
@@ -763,21 +807,22 @@ Unsubscribes from the microphone state change event. This API uses an asynchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('ringerModeChange')
+## off_ringerModeChange
 
 ```TypeScript
-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void
 ```
 
-Subscribes to the ringer mode change event, which is triggered when the  
-[AudioRingMode](arkts-audio-audio-audioringmode-e.md#AudioRingMode) changes. This API uses an asynchronous callback to return the result.
+Unsubscribes from the ringer mode change event. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 18
 
-<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-off(type: 'ringerModeChange', callback?: Callback<AudioRingMode>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
@@ -786,26 +831,81 @@ Subscribes to the ringer mode change event, which is triggered when the
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'ringerModeChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onMicStateChange
+
+```TypeScript
+onMicStateChange(callback: Callback<MicStateChangeEvent>): void
+```
+
+Listens for system microphone state change events. This method uses a callback to get microphone change events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-onMicStateChange(callback: Callback<MicStateChangeEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## onRingerModeChange
+
+```TypeScript
+onRingerModeChange(callback: Callback<AudioRingMode>): void
+```
+
+Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-onRingerModeChange(callback: Callback<AudioRingMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
-## on('micStateChange')
+## on_micStateChange
 
 ```TypeScript
 on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void
 ```
 
-Subscribes to the microphone state change event, which is triggered when the microphone state is changed. This API uses an asynchronous callback to return the result.
-
-Currently, when multiple AudioManager instances are used in a single process, only the subscription of the last instance takes effect, and the subscription of other instances is overwritten (even if the last instance does not initiate a subscription). Therefore, you are advised to use a single AudioManager instance.
+Subscribes to the microphone state change event, which is triggered when the microphone state is changed. This API uses an asynchronous callback to return the result. Currently, when multiple AudioManager instances are used in a single process, only the subscription of the last instance takes effect, and the subscription of other instances is overwritten (even if the last instance does not initiate a subscription). Therefore, you are advised to use a single AudioManager instance.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void--><!--Device-AudioVolumeGroupManager-on(type: 'micStateChange', callback: Callback<MicStateChangeEvent>): void-End-->
 
@@ -822,8 +922,38 @@ Currently, when multiple AudioManager instances are used in a single process, on
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+
+## on_ringerModeChange
+
+```TypeScript
+on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+```
+
+Subscribes to the ringer mode change event, which is triggered when the [AudioRingMode](arkts-audio-audio-audioringmode-e.md#AudioRingMode) changes. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioVolumeGroupManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Volume
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'ringerModeChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## setMicrophoneMute
 

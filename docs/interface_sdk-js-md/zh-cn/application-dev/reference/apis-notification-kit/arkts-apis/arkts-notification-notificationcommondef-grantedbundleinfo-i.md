@@ -2,9 +2,11 @@
 
 描述已授权的包信息。
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface GrantedBundleInfo--><!--Device-unnamed-export interface GrantedBundleInfo-End-->
 
@@ -16,13 +18,15 @@
 readonly appIndex: int
 ```
 
-应用的分身索引标识，仅在分身应用中生效。从[ApplicationInfo](@link ./bundleManager/ApplicationInfo::ApplicationInfo)中appIndex获取。
+应用的分身索引标识，仅在分身应用中生效。 从ApplicationInfo中appIndex获取。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GrantedBundleInfo-readonly appIndex: int--><!--Device-GrantedBundleInfo-readonly appIndex: int-End-->
 
@@ -34,13 +38,15 @@ readonly appIndex: int
 readonly appName?: string
 ```
 
-应用的名称。从[ApplicationInfo](@link ./bundleManager/ApplicationInfo::ApplicationInfo)中label获取。
+应用的名称。 从ApplicationInfo中label获取。
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GrantedBundleInfo-readonly appName?: string--><!--Device-GrantedBundleInfo-readonly appName?: string-End-->
 
@@ -56,9 +62,11 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GrantedBundleInfo-bundleName: string--><!--Device-GrantedBundleInfo-bundleName: string-End-->
 

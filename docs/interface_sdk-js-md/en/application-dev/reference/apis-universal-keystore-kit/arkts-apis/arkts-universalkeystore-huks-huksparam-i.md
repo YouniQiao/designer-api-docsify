@@ -6,6 +6,8 @@ Defines the **param** field in the **properties** array of **options** used in t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-huks-export interface HuksParam--><!--Device-huks-export interface HuksParam-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -30,6 +32,8 @@ Tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksParam-tag: HuksTag--><!--Device-HuksParam-tag: HuksTag-End-->
@@ -49,6 +53,8 @@ Value of the tag.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

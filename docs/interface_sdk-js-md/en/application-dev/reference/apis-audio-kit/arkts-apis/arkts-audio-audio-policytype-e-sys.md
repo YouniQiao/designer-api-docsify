@@ -2,9 +2,11 @@
 
 Enumerates type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum PolicyType--><!--Device-audio-enum PolicyType-End-->
 
@@ -20,9 +22,11 @@ EDM = 0
 
 EDM type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyType-EDM = 0--><!--Device-PolicyType-EDM = 0-End-->
 
@@ -38,9 +42,11 @@ PRIVACY = 1
 
 PRIVACY type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PolicyType-PRIVACY = 1--><!--Device-PolicyType-PRIVACY = 1-End-->
 

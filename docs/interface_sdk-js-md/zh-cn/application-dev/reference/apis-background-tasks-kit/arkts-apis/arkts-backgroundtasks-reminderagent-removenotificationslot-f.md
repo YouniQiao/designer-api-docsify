@@ -14,7 +14,7 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [removeNotificationSlot](reminderAgentManager.removeNotificationSlot)
+**替代接口：** removeNotificationSlot
 
 <!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -25,7 +25,7 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | slotType | notification.SlotType | 是 | 目标notification.slot的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步回调。 |
 
 ## 示例
 
@@ -54,7 +54,7 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeNotificationSlot](reminderAgentManager.removeNotificationSlot)
+**替代接口：** removeNotificationSlot
 
 <!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 

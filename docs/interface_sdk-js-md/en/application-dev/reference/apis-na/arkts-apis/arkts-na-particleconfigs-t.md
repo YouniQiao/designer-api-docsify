@@ -1,0 +1,25 @@
+# ParticleConfigs
+
+```TypeScript
+export type ParticleConfigs = PointParticleParameters | ImageParticleParameters
+```
+
+Defines the particle configs.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export type ParticleConfigs = PointParticleParameters | ImageParticleParameters--><!--Device-unnamed-export type ParticleConfigs = PointParticleParameters | ImageParticleParameters-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+| Type | Description |
+| --- | --- |
+| PointParticleParameters |  |
+| ImageParticleParameters |  |
+

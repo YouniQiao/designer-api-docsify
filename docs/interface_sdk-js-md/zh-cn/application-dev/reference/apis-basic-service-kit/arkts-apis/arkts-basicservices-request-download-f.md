@@ -14,7 +14,7 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 
 **废弃版本：** 9
 
-**替代接口：** [downloadFile](request.downloadFile(context:)
+**替代接口：** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -29,13 +29,13 @@ function download(config: DownloadConfig, callback: AsyncCallback<DownloadTask>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | 是 | 下载的配置信息。 |
-| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | 是 | 回调函数。当下载任务成功，err为undefined，data为获取到的DownloadTask对象；否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 
@@ -67,7 +67,7 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 **废弃版本：** 9
 
-**替代接口：** [downloadFile](request.downloadFile(context:)
+**替代接口：** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
 
 **需要权限：** ohos.permission.INTERNET
 
@@ -93,7 +93,7 @@ function download(config: DownloadConfig): Promise<DownloadTask>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | The permissions check fails. |
 
 ## 示例
 

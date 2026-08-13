@@ -19,6 +19,8 @@ Reads the text content of a file. This API returns the result synchronously.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: ReadTextOptions): string--><!--Device-unnamed-declare function readTextSync(  filePath: string,  options?: ReadTextOptions): string-End-->

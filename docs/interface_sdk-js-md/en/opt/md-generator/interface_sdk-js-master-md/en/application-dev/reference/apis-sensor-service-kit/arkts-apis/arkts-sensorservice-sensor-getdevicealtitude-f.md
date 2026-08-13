@@ -14,7 +14,9 @@ function getDeviceAltitude(seaPressure: number, currentPressure: number, callbac
 
 Obtains the altitude based on the atmospheric pressure. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double, callback: AsyncCallback<double>): void-End-->
 
@@ -32,8 +34,8 @@ Obtains the altitude based on the atmospheric pressure. This API uses an asynchr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 
@@ -67,7 +69,9 @@ function getDeviceAltitude(seaPressure: number, currentPressure: number): Promis
 
 Obtains the altitude based on the atmospheric pressure. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>--><!--Device-sensor-function getDeviceAltitude(seaPressure: double, currentPressure: double): Promise<double>-End-->
 
@@ -90,8 +94,8 @@ Obtains the altitude based on the atmospheric pressure. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14500101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) |
 
 ## Examples
 

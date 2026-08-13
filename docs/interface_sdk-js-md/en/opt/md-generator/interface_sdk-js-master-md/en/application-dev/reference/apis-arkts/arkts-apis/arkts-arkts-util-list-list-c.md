@@ -1,10 +1,12 @@
 # List
 
-List is implemented based on the singly linked list. Each node has a reference pointing to the next element.When querying an element, the system traverses the list from the beginning.
+List is implemented based on the singly linked list. Each node has a reference pointing to the next element. When querying an element, the system traverses the list from the beginning.
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-unnamed-declare class List<T>--><!--Device-unnamed-declare class List<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class List--><!--Device-unnamed-declare class List-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -13,6 +15,30 @@ List is implemented based on the singly linked list. Each node has a reference p
 ```TypeScript
 import { List } from '@kit.ArkTS';
 ```
+
+## $_iterator
+
+```TypeScript
+$_iterator(): IterableIterator<T>
+```
+
+returns an iterator. Each item of the iterator is a ArkTS Object
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-List-$_iterator(): IterableIterator<T>--><!--Device-List-$_iterator(): IterableIterator<T>-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 ## [Symbol.iterator]
 
@@ -24,6 +50,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-[Symbol.iterator](): IterableIterator<T>--><!--Device-List-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -34,13 +62,13 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;T&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -81,7 +109,9 @@ add(element: T): boolean
 
 Adds an element at the end of this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -105,7 +135,7 @@ Adds an element at the end of this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -133,7 +163,9 @@ clear(): void
 
 Clears this List and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -145,7 +177,7 @@ Clears this List and sets its length to **0**.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -168,7 +200,9 @@ constructor()
 
 A constructor used to create a **List** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -180,7 +214,7 @@ A constructor used to create a **List** instance.
 
 | Error Code ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) |
 
 ## Examples
 
@@ -196,7 +230,9 @@ convertToArray(): Array<T>
 
 Converts this List into an array and returns the array.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -214,7 +250,7 @@ Converts this List into an array and returns the array.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -238,6 +274,8 @@ Compares whether a specified object is equal to this List.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-equal(obj: Object): boolean--><!--Device-List-equal(obj: Object): boolean-End-->
@@ -260,7 +298,7 @@ Compares whether a specified object is equal to this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -277,6 +315,42 @@ let result = list.equal(obj);
 console.info("result:", result);  // result: true
 ```
 
+## equal
+
+```TypeScript
+equal(obj: RecordData): boolean
+```
+
+Compares the specified object with this list for equality.if the object are the same as this list return true, otherwise return false.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-List-equal(obj: RecordData): boolean--><!--Device-List-equal(obj: RecordData): boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| obj | [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md) | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| boolean |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+
 ## forEach
 
 ```TypeScript
@@ -286,6 +360,8 @@ forEach(callbackFn: (value: T, index?: number, List?: List<T>) => void, thisArg?
 Uses a callback to traverse each element in the **List** instance.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -304,7 +380,7 @@ Uses a callback to traverse each element in the **List** instance.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -323,6 +399,32 @@ list.forEach((value: number, index: number) => {
 // value:4 index:3
 ```
 
+## forEach
+
+```TypeScript
+forEach(callbackFn: ListForEachCb<T>): void
+```
+
+Replaces each element of this list with the result of applying the operator to that element.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-List-forEach(callbackFn: ListForEachCb<T>): void--><!--Device-List-forEach(callbackFn: ListForEachCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [ListForEachCb](arkts-arkts-listforeachcb-t.md)&lt;T&gt; | Yes |
+
 ## get
 
 ```TypeScript
@@ -331,7 +433,9 @@ get(index: number): T
 
 Obtains the element at the specified position in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -355,8 +459,8 @@ Obtains the element at the specified position in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -381,7 +485,9 @@ getFirst(): T
 
 Obtains the first element in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -399,8 +505,8 @@ Obtains the first element in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -422,7 +528,9 @@ getIndexOf(element: T): number
 
 Obtains the index of the first occurrence of the specified element in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -446,7 +554,7 @@ Obtains the index of the first occurrence of the specified element in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -471,7 +579,9 @@ getLast(): T
 
 Obtains the last element in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -489,8 +599,8 @@ Obtains the last element in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200010](../errorcode-utils.md#10200010-empty-container) |
 
 ## Examples
 
@@ -512,7 +622,9 @@ getLastIndexOf(element: T): number
 
 Obtains the index of the last occurrence of the specified element in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -536,7 +648,7 @@ Obtains the index of the last occurrence of the specified element in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -561,7 +673,9 @@ getSubList(fromIndex: number, toIndex: number): List<T>
 
 Obtains elements within a range in this List, including the element at the start position but not that at the end position, and returns these elements as a new **List** instance.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -586,8 +700,8 @@ Obtains elements within a range in this List, including the element at the start
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -609,7 +723,9 @@ has(element: T): boolean
 
 Checks whether this List has the specified element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -633,7 +749,7 @@ Checks whether this List has the specified element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -652,7 +768,9 @@ insert(element: T, index: number): void
 
 Inserts an element at the specified position in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -671,8 +789,8 @@ Inserts an element at the specified position in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -692,7 +810,9 @@ isEmpty(): boolean
 
 Checks whether this List is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -710,7 +830,7 @@ Checks whether this List is empty (contains no element).
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -732,7 +852,9 @@ remove(element: T): boolean
 
 Removes the first occurrence of the specified element from this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -756,7 +878,7 @@ Removes the first occurrence of the specified element from this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -780,6 +902,8 @@ Searches for an element based on its index and then removes it.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-removeByIndex(index: number): T--><!--Device-List-removeByIndex(index: number): T-End-->
@@ -802,8 +926,8 @@ Searches for an element based on its index and then removes it.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -818,6 +942,42 @@ let result = list.removeByIndex(2);
 console.info("result:", result);  // result: 5
 ```
 
+## removeByIndex
+
+```TypeScript
+removeByIndex(index: number): T | undefined
+```
+
+Find the corresponding element according to the index.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-List-removeByIndex(index: int): T | undefined--><!--Device-List-removeByIndex(index: int): T | undefined-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| index | number | Yes |
+
+**Return value:**
+
+| [Type](arkts-arkts-util-type-e.md) |
+| --- |
+| T |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
+
 ## replaceAllElements
 
 ```TypeScript
@@ -827,6 +987,8 @@ replaceAllElements(callbackFn: (value: T, index?: number, list?: List<T>) => T, 
 Replaces all elements in this List with new elements, and returns the new ones.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -845,7 +1007,7 @@ Replaces all elements in this List with new elements, and returns the new ones.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -866,6 +1028,32 @@ list.replaceAllElements((value: number) => {
 console.info("result:", list.get(2));  // result: 10
 ```
 
+## replaceAllElements
+
+```TypeScript
+replaceAllElements(callbackFn: ListReplaceCb<T>): void
+```
+
+Replaces each element of this list with the result of applying the operator to that element.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-List-replaceAllElements(callbackFn: ListReplaceCb<T>): void--><!--Device-List-replaceAllElements(callbackFn: ListReplaceCb<T>): void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callbackFn | [ListReplaceCb](arkts-arkts-listreplacecb-t.md)&lt;T&gt; | Yes |
+
 ## set
 
 ```TypeScript
@@ -874,7 +1062,9 @@ set(index: number, element: T): T
 
 Replaces an element at the specified position in this List with a given element.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -899,8 +1089,8 @@ Replaces an element at the specified position in this List with a given element.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
-| [10200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) |
 
 ## Examples
 
@@ -922,7 +1112,9 @@ sort(comparator: ListComparatorFn<T>): void
 
 Sorts elements in this List.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -940,7 +1132,7 @@ Sorts elements in this List.
 
 | Error Code ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) |
 
 ## Examples
 
@@ -968,6 +1160,8 @@ Number of elements in a List.
 **Type:** number
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

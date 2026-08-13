@@ -8,6 +8,8 @@ Called to return whether the recent image or video exists and the information ab
 
 **Since:** 13
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-unnamed-export type RecentPhotoCheckInfoCallback = (recentPhotoExists: boolean, info: RecentPhotoInfo) => void--><!--Device-unnamed-export type RecentPhotoCheckInfoCallback = (recentPhotoExists: boolean, info: RecentPhotoInfo) => void-End-->

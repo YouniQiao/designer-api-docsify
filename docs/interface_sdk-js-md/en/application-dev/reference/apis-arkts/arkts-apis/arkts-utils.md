@@ -1,4 +1,4 @@
-# @arkts.utils(Defines the utils for ArkTS)
+# @arkts.utils
 
 ## Modules to Import
 

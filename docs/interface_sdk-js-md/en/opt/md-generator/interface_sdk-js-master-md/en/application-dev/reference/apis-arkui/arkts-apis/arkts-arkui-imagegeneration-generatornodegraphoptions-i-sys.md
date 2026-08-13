@@ -4,6 +4,8 @@ Parameters used to open the NodeGraphComponent.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface GeneratorNodeGraphOptions--><!--Device-imageGeneration-interface GeneratorNodeGraphOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,6 +30,8 @@ Custom icons used on the AI generated image results page.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorNodeGraphOptions-customIcons?: Array<GeneratorResultPageIcon>--><!--Device-GeneratorNodeGraphOptions-customIcons?: Array<GeneratorResultPageIcon>-End-->
@@ -47,6 +51,8 @@ The following configuration parameters are used to customize the imported icon.
 **Type:** [CustomImportIcon](arkts-arkui-imagegeneration-customimporticon-i-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,6 +74,8 @@ Model used for AI generate image tasks.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorNodeGraphOptions-imageGenerationModel?: ImageGenerationModel--><!--Device-GeneratorNodeGraphOptions-imageGenerationModel?: ImageGenerationModel-End-->
@@ -88,6 +96,8 @@ Information for LiveView in AI image generation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-GeneratorNodeGraphOptions-liveViewInfo?: LiveViewInfo--><!--Device-GeneratorNodeGraphOptions-liveViewInfo?: LiveViewInfo-End-->
@@ -107,6 +117,8 @@ Text polishing model used in AI generate image tasks.
 **Type:** [TextGenerationModel](arkts-arkui-imagegeneration-textgenerationmodel-i-sys.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

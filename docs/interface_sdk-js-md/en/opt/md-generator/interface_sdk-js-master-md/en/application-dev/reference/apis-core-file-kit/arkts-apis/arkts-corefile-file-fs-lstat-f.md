@@ -16,6 +16,8 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function lstat(path: string): Promise<Stat>--><!--Device-unnamed-declare function lstat(path: string): Promise<Stat>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -57,6 +59,8 @@ declare function lstat(path: string, callback: AsyncCallback<Stat>): void
 Obtains information about a symbolic link that is used to refer to a file or directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void--><!--Device-unnamed-declare function lstat(path: string, callback: AsyncCallback<Stat>): void-End-->
 

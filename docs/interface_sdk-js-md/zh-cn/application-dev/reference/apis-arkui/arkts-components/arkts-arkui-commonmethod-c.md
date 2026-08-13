@@ -6,7 +6,9 @@ CommonMethod.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
-<!--Device-unnamed-declare class CommonMethod<T>--><!--Device-unnamed-declare class CommonMethod<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class CommonMethod--><!--Device-unnamed-declare class CommonMethod-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ accessibilityActionOptions(option: AccessibilityActionOptions | undefined): T
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,6 +60,8 @@ accessibilityChecked(isCheck: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -89,6 +95,8 @@ accessibilityCustomActions(actions: Array<AccessibilityCustomAction> | undefined
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -124,6 +132,8 @@ accessibilityDefaultFocus(focus: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -158,6 +168,8 @@ accessibilityDescription(value: string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -186,11 +198,13 @@ accessibilityDescription(value: string): T
 accessibilityDescription(description: Resource): T
 ```
 
-设置无障碍说明，支持通过Resource引用资源文件。该属性用于为用户进一步说明当前组件，开发人员可为组件设置相对较详细的解释文本，帮助用户理解将要执行的操作。&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Reference resource of the accessibility description. You can specify further explanation&lt;br&gt;of the current component, for example, possible operation consequences, especially those that&lt;br&gt;cannot be learned from component attributes and accessibility text. If a component contains&lt;br&gt;both text information and the accessibility description, the text is read first and then the&lt;br&gt;accessibility description, when the component is selected.&lt;/p&gt;
+设置无障碍说明，支持通过Resource引用资源文件。该属性用于为用户进一步说明当前组件，开发人员可为组件设置相对较详细的解释文本，帮助用户理解将要执行的操作。 &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Reference resource of the accessibility description. You can specify further explanation &lt;br&gt;of the current component, for example, possible operation consequences, especially those that &lt;br&gt;cannot be learned from component attributes and accessibility text. If a component contains &lt;br&gt;both text information and the accessibility description, the text is read first and then the &lt;br&gt;accessibility description, when the component is selected.&lt;/p&gt;
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -226,6 +240,8 @@ accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -254,13 +270,13 @@ accessibilityFocusDrawLevel(drawLevel: FocusDrawLevel): T
 accessibilityGroup(value: boolean): T
 ```
 
-Sets whether to enable accessibility grouping.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;Whether to enable accessibility grouping. When accessibility grouping is enabled,&lt;br&gt;the component and all its children are treated as a single selectable unit, and the accessibility&lt;br&gt;service will no longer focus on the individual child components.&lt;/p&gt;
+Sets whether to enable accessibility grouping. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;Whether to enable accessibility grouping. When accessibility grouping is enabled, &lt;br&gt;the component and all its children are treated as a single selectable unit, and the accessibility &lt;br&gt;service will no longer focus on the individual child components.&lt;/p&gt;
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -290,15 +306,13 @@ Sets whether to enable accessibility grouping.
 accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions): T
 ```
 
-Sets whether to enable accessibility grouping.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;If accessibility grouping is enabled and the component does not contain a universal text attribute&lt;br&gt;or an accessibility text attribute, the system will concatenate the universal text attributes of&lt;br&gt;its child components to form a merged text for the component. If a child component lacks a universal&lt;br&gt;text attribute, it will be ignored in the concatenation process.
-
-&lt;br&gt;When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility&lt;br&gt;text attributes of the child components to form the merged text. If a child component lacks an&lt;br&gt;accessibility text attribute, the system will continue to concatenate its universal text attribute.&lt;br&gt;If a child component lacks both, it will be ignored.&lt;/p&gt;
+Sets whether to enable accessibility grouping. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;If accessibility grouping is enabled and the component does not contain a universal text attribute &lt;br&gt;or an accessibility text attribute, the system will concatenate the universal text attributes of &lt;br&gt;its child components to form a merged text for the component. If a child component lacks a universal &lt;br&gt;text attribute, it will be ignored in the concatenation process. &lt;br&gt;When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility &lt;br&gt;text attributes of the child components to form the merged text. If a child component lacks an &lt;br&gt;accessibility text attribute, the system will continue to concatenate its universal text attribute. &lt;br&gt;If a child component lacks both, it will be ignored.&lt;/p&gt;
 
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -329,11 +343,13 @@ Sets whether to enable accessibility grouping.
 accessibilityLevel(value: string): T
 ```
 
-Sets the accessibility level.This property determines whether the component can be recognized by accessibility services.&lt;p&gt;Accessibility level, which is used to decide whether a component can be identified by the accessibility service.&lt;br&gt;The options are as follows:&lt;br&gt;"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI.&lt;br&gt;"yes": The component can be recognized by accessibility services.&lt;br&gt;"no": The component cannot be recognized by accessibility services.&lt;br&gt;"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services.&lt;strong&gt;NOTE&lt;/strong&gt;&lt;br&gt;When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors:&lt;br&gt;1. The accessibility service internally determines whether the component can be recognized.&lt;br&gt;2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will&lt;br&gt;not focus on its child components, making them unrecognizable.&lt;br&gt;3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be&lt;br&gt;recognized by accessibility services.&lt;/p&gt;
+Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. &lt;p&gt; Accessibility level, which is used to decide whether a component can be identified by the accessibility service. &lt;br&gt;The options are as follows: &lt;br&gt;"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. &lt;br&gt;"yes": The component can be recognized by accessibility services. &lt;br&gt;"no": The component cannot be recognized by accessibility services. &lt;br&gt;"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. &lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: &lt;br&gt;1. The accessibility service internally determines whether the component can be recognized. &lt;br&gt;2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will &lt;br&gt;not focus on its child components, making them unrecognizable. &lt;br&gt;3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be &lt;br&gt;recognized by accessibility services.&lt;/p&gt;
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -369,6 +385,8 @@ accessibilityNextFocusId(nextId: string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -397,11 +415,13 @@ accessibilityNextFocusId(nextId: string): T
 accessibilityNextFocusId(nextId: string, nextFocusParams : AccessibilityNextFocusParams | undefined): T
 ```
 
-指定屏幕朗读扫动走焦过程中组件的下一个焦点，并支持配置详细参数。&lt;br&gt;通过AccessibilityNextFocusParams参数，可以配置是否在无障碍下一个焦点处理过程中查找后代节点中的焦点。
+指定屏幕朗读扫动走焦过程中组件的下一个焦点，并支持配置详细参数。 &lt;br&gt;通过AccessibilityNextFocusParams参数，可以配置是否在无障碍下一个焦点处理过程中查找后代节点中的焦点。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -438,6 +458,8 @@ accessibilityRole(role: AccessibilityRoleType): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -471,6 +493,8 @@ accessibilityScrollTriggerable(isTriggerable: boolean): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -506,6 +530,8 @@ accessibilitySelected(isSelect: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
@@ -540,6 +566,8 @@ accessibilityStateDescription(description: string | Resource | undefined): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -568,11 +596,13 @@ accessibilityStateDescription(description: string | Resource | undefined): T
 accessibilityText(value: string): T
 ```
 
-Sets the accessibility text.When a component does not contain a text attribute, you can use this API to set an accessibility text attribute, so that accessibility services can announce the specified content for the component.
+Sets the accessibility text. When a component does not contain a text attribute, you can use this API to set an accessibility text attribute, so that accessibility services can announce the specified content for the component.
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -602,11 +632,13 @@ Sets the accessibility text.When a component does not contain a text attribute, 
 accessibilityText(text: Resource): T
 ```
 
-Sets the accessibility text.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;If a component has both text content and accessibility text, only the accessibility text is announced.&lt;br&gt;If a component is grouped for accessibility purposes but lacks both text content and accessibility&lt;br&gt;text, the screen reader will concatenate text from its child components (depth-first traversal).&lt;br&gt;To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup.&lt;/p&gt;
+Sets the accessibility text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. &lt;br&gt;If a component is grouped for accessibility purposes but lacks both text content and accessibility &lt;br&gt;text, the screen reader will concatenate text from its child components (depth-first traversal). &lt;br&gt;To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. &lt;/p&gt;
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -642,6 +674,8 @@ accessibilityTextHint(value: string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -675,6 +709,8 @@ accessibilityUseSamePage(pageMode: AccessibilitySamePageMode): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -710,6 +746,8 @@ accessibilityVirtualNode(builder: CustomBuilder): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -744,6 +782,8 @@ align(value: Alignment): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -756,7 +796,7 @@ align(value: Alignment): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Alignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式。&lt;br/&gt;只在[Stack](Stack), [FolderStack](FolderStack), [Shape](Shape), [Button](Button), [Marquee](Marquee), [StepperItem](StepperItem), [Text](Text), [TextArea](TextArea), [TextInput](TextInput), [RichEditor](RichEditor), [Hyperlink](Hyperlink), [SymbolGlyph](SymbolGlyph), [ListItem](ListItem), [GridItem](GridItem), [Scroll](Scroll), [FlowItem](FlowItem), [ImageAnimator](ImageAnimator), [LoadingProgress](LoadingProgress), [PatternLock](PatternLock), [Progress](Progress), [QRCode](QRCode), [TextClock](TextClock), [TextTimer](TextTimer), [MenuItem](StMenuItemack), [Toggle](Toggle), [Checkbox](Checkbox), and [NodeContainer](NodeContainer)中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic- components-text.md#textalign)。&lt;br/&gt;不支持textAlign属性的组件则无法设置水平方向的文字对齐。&lt;br/&gt;默认值：Alignment.Center&lt;br/&gt;**说明：** &lt;br/&gt;该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。&lt;br/&gt;在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对 齐方式。 |
+| value | Alignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式。&lt;br/&gt;只在Stack, FolderStack, Shape, Button, Marquee, [StepperItem](arkts-arkui-itemstate-e.md#StepperItem), Text, TextArea, TextInput, RichEditor, Hyperlink, SymbolGlyph, ListItem, GridItem, Scroll, FlowItem, ImageAnimator, LoadingProgress, PatternLock, Progress, QRCode, TextClock, TextTimer, MenuItem, Toggle, Checkbox, and NodeContainer中生效，其中和文本相关的组件Marquee、Text、TextArea、TextInput、RichEditor、Hyperlink的align结果参考[textAlign](ts-basic- components-text.md#textalign)。&lt;br/&gt;不支持textAlign属性的组件则无法设置水平方向的文字对齐。&lt;br/&gt;默认值：Alignment.Center&lt;br/&gt;**说明：** &lt;br/&gt;该属性在[Stack](ts-container-stack.md)组件上支持镜像能力，在其他组件上不支持镜像能力。&lt;br/&gt;在Stack中该属性与alignContent效果一致，只能设置子组件在当前组件内的对 齐方式。 |
 
 **返回值：**
 
@@ -776,6 +816,8 @@ align(alignment: Alignment | LocalizedAlignment): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -790,7 +832,7 @@ align(alignment: Alignment | LocalizedAlignment): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alignment | Alignment \| LocalizedAlignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式，增加支持镜像的能力。&lt;br/&gt;[LocalizedAlignment](LocalizedAlignment)只在[Shape](Shape), [Button](Button), [GridItem](GridItem), [FlowItem](FlowItem), [ImageAnimator](ImageAnimator), [LoadingProgress](LoadingProgress), [PatternLock](PatternLock), [Progress](Progress), [QRCode](QRCode), [TextClock](TextClock), [TextTimer](TextTimer), [StepperItem](StepperItem), [MenuItem](MenuItem), [Toggle](MenuItem), [Checkbox](Checkbox), and [ListItem](ListItem)中有效果。&lt;br/&gt;其中，除ListItem与Alignment的效果保持一致以外，其他组件镜像切换均生效；其他设置LocalizedAlignment无效果的组件按其默认效果显示。&lt;br/&gt;默认值：Al ignment.Center、LocalizedAlignment.CENTER&lt;br/&gt;设置异常值按默认值处理，效果为居中显示。&lt;br/&gt;**说明：** &lt;br/&gt;Alignment类型不支持镜像能力；LocalizedAlignment类型支持镜像能力，选择LocalizedAlignment中的枚举值，根据direction或系统语言方向的改变实现镜像切换。其中dire ction的优先级高于系统语言方向，当设置direction且不为auto时，LocalizedAlignment的镜像按照direction进行布局；当设置direction为auto或未设置时，LocalizedAli gnment的镜像按照系统语言方向进行布局。 |
+| alignment | Alignment \| LocalizedAlignment | 是 | 设置当前组件绘制区域内的子组件的对齐方式，增加支持镜像的能力。&lt;br/&gt;LocalizedAlignment只在Shape, Button, GridItem, FlowItem, ImageAnimator, LoadingProgress, PatternLock, Progress, QRCode, TextClock, TextTimer, [StepperItem](arkts-arkui-itemstate-e.md#StepperItem), MenuItem, Toggle, Checkbox, and ListItem中有效果。&lt;br/&gt;其中，除ListItem与Alignment的效果保持一致以外，其他组件镜像切换均生效；其他设置LocalizedAlignment无效果的组件按其默认效果显示。&lt;br/&gt;默认值：Al ignment.Center、LocalizedAlignment.CENTER&lt;br/&gt;设置异常值按默认值处理，效果为居中显示。&lt;br/&gt;**说明：** &lt;br/&gt;Alignment类型不支持镜像能力；LocalizedAlignment类型支持镜像能力，选择LocalizedAlignment中的枚举值，根据direction或系统语言方向的改变实现镜像切换。其中dire ction的优先级高于系统语言方向，当设置direction且不为auto时，LocalizedAlignment的镜像按照direction进行布局；当设置direction为auto或未设置时，LocalizedAli gnment的镜像按照系统语言方向进行布局。 |
 
 **返回值：**
 
@@ -804,11 +846,13 @@ align(alignment: Alignment | LocalizedAlignment): T
 alignRules(value: AlignRuleOption): T
 ```
 
-指定设置在相对布局组件中子组件的对齐规则，仅当父组件为[RelativeContainer](RelativeContainer)时生效，支持[attributeModifier](#attributeModifier)动态设置属性方法。
+指定设置在相对布局组件中子组件的对齐规则，仅当父组件为RelativeContainer时生效，支持[attributeModifier](#attributeModifier)动态设置属性方法。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -836,12 +880,13 @@ alignRules(value: AlignRuleOption): T
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-指定设置在相对布局组件中子组件的对齐规则，仅当父组件为[RelativeContainer](RelativeContainer)时生效。该方法水平方向上以start和end分别替代原方法的left和right，以便在RTL模式下能镜像显示，建议使用该方法指定设置在相对布局组件中子组件的对齐规则，支持  
-[attributeModifier](#attributeModifier)动态设置属性方法。
+指定设置在相对布局组件中子组件的对齐规则，仅当父组件为RelativeContainer时生效。该方法水平方向上以start和end分别替代原方法的left和right，以便在RTL模式下能镜像显示，建议使用该方法指定设置在相对布局组件中子组件的对齐规则，支持 [attributeModifier](#attributeModifier)动态设置属性方法。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -877,6 +922,8 @@ alignSelf(value: ItemAlign): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -889,7 +936,7 @@ alignSelf(value: ItemAlign): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ItemAlign | 是 | 子组件在父容器交叉轴的对齐格式，会覆盖([Flex](Flex), [Column](Column), [Row](Row), or [GridRow](GridRow))布局容器中的alignItems设置。&lt;br/&gt;[GridCol](GridCol)可以绑定alignSelf属性来改变它自身在交叉轴方向上的布局。&lt;br/&gt;默认值：ItemAlign.Auto |
+| value | ItemAlign | 是 | 子组件在父容器交叉轴的对齐格式，会覆盖(Flex, Column, Row, or GridRow)布局容器中的alignItems设置。&lt;br/&gt;GridCol可以绑定alignSelf属性来改变它自身在交叉轴方向上的布局。&lt;br/&gt;默认值：ItemAlign.Auto |
 
 **返回值：**
 
@@ -908,6 +955,8 @@ allowDrop(value: Array<UniformDataType> | null | Array<string>): T
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -935,11 +984,13 @@ allowDrop(value: Array<UniformDataType> | null | Array<string>): T
 allowForceDark(value: boolean): T
 ```
 
-Set whether the component enables the ability to invert colors.This interface needs to be set as the first attribute of the component.
+Set whether the component enables the ability to invert colors. This interface needs to be set as the first attribute of the component.
 
 **起始版本：** 21
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为21。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -967,19 +1018,13 @@ Set whether the component enables the ability to invert colors.This interface ne
 animation(value: AnimateParam): T
 ```
 
-设置组件的属性动画。
-
-> **说明：**
-> 
-> - 在单一页面上存在大量应用动效的组件时，可以使用[renderGroup](#renderGroup)方法来解决卡顿问题，从而提升动画性能。最佳实践请参考
-> [动画使用指导-使用renderGroup](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fair-use-animation#section1223162922415)。
-> 
-> 
-> - 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+设置组件的属性动画。 > **说明：** > > - 在单一页面上存在大量应用动效的组件时，可以使用[renderGroup](#renderGroup)方法来解决卡顿问题，从而提升动画性能。最佳实践请参考 > [动画使用指导-使用renderGroup](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fair-use-animation#section1223162922415)。 > > > - 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1005,16 +1050,13 @@ animation(value: AnimateParam): T
 aspectRatio(value: number): T
 ```
 
-指定当前组件的宽高比，aspectRatio=width/height。  
-- 仅设置width、aspectRatio时，height=width/aspectRatio。  
-- 仅设置height、aspectRatio时，width=height*aspectRatio。  
-- 同时设置width、height和aspectRatio时，height不生效，height=width/aspectRatio。
-
-设置aspectRatio属性后，组件宽高会受父组件内容区大小限制，[constraintSize](#constraintSize)的优先级高于aspectRatio。
+指定当前组件的宽高比，aspectRatio=width/height。 - 仅设置width、aspectRatio时，height=width/aspectRatio。 - 仅设置height、aspectRatio时，width=height*aspectRatio。 - 同时设置width、height和aspectRatio时，height不生效，height=width/aspectRatio。 设置aspectRatio属性后，组件宽高会受父组件内容区大小限制，[constraintSize](#constraintSize)的优先级高于aspectRatio。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1048,6 +1090,8 @@ Sets the attribute modifier.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1080,6 +1124,8 @@ backdropBlur(value: number, options?: BlurOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -1107,11 +1153,13 @@ backdropBlur(value: number, options?: BlurOptions): T
 backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur](#backdropBlur)相比，radius参数新增了对undefined类型的支持。
+为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur](#backdropBlur) 相比，radius参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1142,12 +1190,13 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与  
-[backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropBlur)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与 [backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropBlur)相比，新增 了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1179,13 +1228,13 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: Syste
 background(content: CustomBuilder | ResourceColor, options?: BackgroundOptions): T
 ```
 
-Add a background for the component.
-
-Anonymous Object Rectification.
+Add a background for the component. Anonymous Object Rectification.
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1220,6 +1269,8 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -1247,12 +1298,13 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与  
-[backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundBlurStyle)相比，style参数新增了对undefined类型的支持。
+为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与 [backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundBlurStyle) 相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1283,12 +1335,13 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与  
-[backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundBlurStyle)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与 [backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundBlurStyle) 相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1326,6 +1379,8 @@ backgroundBrightness(params: BackgroundBrightnessOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1352,12 +1407,13 @@ backgroundBrightness(params: BackgroundBrightnessOptions): T
 backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 ```
 
-设置组件背景提亮效果。与  
-[backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundBrightness)相比，options参数新增了对undefined类型的支持。
+设置组件背景提亮效果。与 [backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundBrightness)相 比，options参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1391,6 +1447,8 @@ Background color
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -1422,6 +1480,8 @@ Background color
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1457,6 +1517,8 @@ Background color
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -1491,6 +1553,8 @@ backgroundEffect(options: BackgroundEffectOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -1517,12 +1581,13 @@ backgroundEffect(options: BackgroundEffectOptions): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与  
-[backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundEffect)相比，options参数新增了对undefined类型的支持。
+设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与 [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundEffect)相比，options参数 新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1550,18 +1615,13 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与  
-[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundEffect)相比，新增了sysOptions参数，即支持系统自适应调节参数。
-
-> **说明：**
-> 
-> backgroundEffect接口为实时接口，每帧对模糊等效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考：
-> [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
+设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与 [backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundEffect)相 比，新增了sysOptions参数，即支持系统自适应调节参数。 > **说明：** > > backgroundEffect接口为实时接口，每帧对模糊等效果执行实时渲染，性能负载较大。当组件背景模糊效果无需变动时，推荐采用静态模糊接口 > [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)实现模糊效果。最佳实践请参考： > [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1590,15 +1650,13 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: System
 backgroundFilter(filter: Filter): T
 ```
 
-设置背景滤镜视觉效果。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置背景滤镜视觉效果。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1632,6 +1690,8 @@ Background image src: Image address url
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
@@ -1664,6 +1724,8 @@ Background image
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1700,6 +1762,8 @@ Background image position x:Horizontal coordinate;y:Vertical axis coordinate.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -1726,11 +1790,13 @@ Background image position x:Horizontal coordinate;y:Vertical axis coordinate.
 backgroundImageResizable(value: ResizableOptions): T
 ```
 
-Background image resizable.value:resizable options
+Background image resizable. value:resizable options
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1764,6 +1830,8 @@ Background image size
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -1790,15 +1858,13 @@ Background image size
 bindContentCover(isShow: boolean, builder: CustomBuilder, type?: ModalTransition): T
 ```
 
-给组件绑定全屏模态页面，点击后显示模态页面。模态页面内容自定义，显示方式可设置无动画过渡，上下切换过渡以及透明渐变过渡。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+给组件绑定全屏模态页面，点击后显示模态页面。模态页面内容自定义，显示方式可设置无动画过渡，上下切换过渡以及透明渐变过渡。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1834,6 +1900,8 @@ bindContentCover(isShow: boolean, builder: CustomBuilder, options?: ContentCover
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -1868,6 +1936,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions): T--><!--Device-CommonMethod-bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: ContextMenuOptions): T-End-->
@@ -1899,6 +1969,8 @@ ContextMenu control
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1934,6 +2006,8 @@ bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElem
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -1963,11 +2037,13 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
       options?: ContextMenuOptions): T
 ```
 
-将上下文菜单绑定到此组件，当用户长按或右键单击组件，支持自定义或固定样式的菜单项。
+将上下文菜单绑定到此组件，当用户长按或右键单击 组件，支持自定义或固定样式的菜单项。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2003,6 +2079,8 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
@@ -2031,11 +2109,13 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
     options?: ContextMenuOptions): T
 ```
 
-将上下文菜单绑定到此组件，当用户长按或右键单击组件，支持自定义或固定样式的菜单项。不支持使用鼠标设备长按。
+将上下文菜单绑定到此组件，当用户长按或右键单击 组件，支持自定义或固定样式的菜单项。不支持使用鼠标设备长按。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2070,6 +2150,8 @@ Menu control
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T--><!--Device-CommonMethod-bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T-End-->
@@ -2101,6 +2183,8 @@ Menu control
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2129,11 +2213,13 @@ Menu control
 bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 ```
 
-Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed.&lt;/p&gt;
+Popup control &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. &lt;/p&gt;
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2160,15 +2246,13 @@ Popup control&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The popup can 
 bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 ```
 
-给组件绑定半模态页面，点击后显示模态页面。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+给组件绑定半模态页面，点击后显示模态页面。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2204,6 +2288,8 @@ Tips control
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
@@ -2237,6 +2323,8 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2264,12 +2352,13 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 ```
 
-将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。与  
-[blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendMode)相比，mode参数新增了对undefined类型的支持。
+将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。与 [blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendMode)相比，mode参数新增了对 undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2304,6 +2393,8 @@ blur(value: number, options?: BlurOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -2331,11 +2422,13 @@ blur(value: number, options?: BlurOptions): T
 blur(blurRadius: Optional<number>, options?: BlurOptions): T
 ```
 
-为组件添加内容模糊效果。与[blur](#blur)相比，blurRadius参数新增了对undefined类型的支持。
+为组件添加内容模糊效果。与[blur](#blur)相比，blurRadius参数新增了对undefined类型的支 持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2364,11 +2457,13 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加内容模糊效果。与[blur&lt;sup&gt;18+&lt;/sup&gt;](#blur)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为组件添加内容模糊效果。与[blur&lt;sup&gt;18+&lt;/sup&gt;](#blur)相比，新 增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2398,15 +2493,13 @@ blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAda
 border(value: BorderOptions): T
 ```
 
-设置边框样式。
-
-> **说明：**
-> 
-> color、radius缺省时，为了保证[borderColor](#borderColor)、[borderRadius](CommonMethod#borderradius)生效，需要将[borderColor](CommonMethod#bordercolor)、[borderRadius](CommonMethod#borderradius)设置在[border](#border)后。
+设置边框样式。 > **说明：** > > color、radius缺省时，为了保证[borderColor](#borderColor)、borderRadius生效，需要将borderColor、borderRadius设置在[border](#border)后。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2440,6 +2533,8 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -2452,7 +2547,7 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors | 是 | Border color.&lt;br&gt;Default value: **Color.Black |
+| value | ResourceColor \| EdgeColors \| LocalizedEdgeColors | 是 | Border color.&lt;br&gt;Default value: **Color.Black |
 
 **返回值：**
 
@@ -2471,6 +2566,8 @@ Sets the border image of the component.
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2504,6 +2601,8 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -2530,13 +2629,13 @@ borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses): T
 borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses, type?: RenderStrategy): T
 ```
 
-设置边框的圆角半径和绘制圆角的模式。
-
-**注意**1. **RenderStrategy.FAST**：当前组件及其子组件将直接以圆角效果绘制到画布上。2. **RenderStrategy.OFFSCREEN**：当前组件及其子组件将首先渲染到一个离屏画布，然后进行圆角裁剪，最后绘制到主画布上。
+设置边框的圆角半径和绘制圆角的模式。 **注意** 1. **RenderStrategy.FAST**：当前组件及其子组件将直接以圆角效果绘制到画布上。 2. **RenderStrategy.OFFSCREEN**：当前组件及其子组件将首先渲染到一个离屏画布，然后进行圆角裁剪，最后绘制到主画布上。
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2573,6 +2672,8 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -2585,7 +2686,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | BorderStyle \| [EdgeStyles](../arkts-apis/arkts-arkui-units-edgestyles-i.md) | 是 | 设置元素的边框样式。&lt;br/&gt;默认值：BorderStyle.Solid - Border style.&lt;br&gt;Default value: **BorderStyle.Solid**.<br>**起始版本：** 9 |
+| value | BorderStyle \| EdgeStyles | 是 | 设置元素的边框样式。&lt;br/&gt;默认值：BorderStyle.Solid - Border style.&lt;br&gt;Default value: **BorderStyle.Solid**.<br>**起始版本：** 9 |
 
 **返回值：**
 
@@ -2605,6 +2706,8 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -2617,7 +2720,7 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length \| [EdgeWidths](../arkts-apis/arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths | 是 | Border width. This parameter cannot be set in percentage.<br>**起始版本：** 12 |
+| value | Length \| EdgeWidths \| LocalizedEdgeWidths | 是 | Border width. This parameter cannot be set in percentage.<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -2636,6 +2739,8 @@ brightness(value: number): T
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2663,11 +2768,13 @@ brightness(value: number): T
 brightness(brightness: Optional<number>): T
 ```
 
-为组件添加高光效果。不通过该接口设置时，默认无变化。与[brightness](#brightness)相比，brightness参数新增了对undefined类型的支持。
+为组件添加高光效果。不通过该接口设置时，默认无变化。与[brightness](#brightness)相比，brightness参数新增了对undefined类型 的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2701,6 +2808,8 @@ chainMode(direction: Axis, style: ChainStyle): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2728,15 +2837,13 @@ chainMode(direction: Axis, style: ChainStyle): T
 chainWeight(chainWeight: ChainWeightOptions): T
 ```
 
-对形成链的组件进行重新布局。仅当父组件为[RelativeContainer](RelativeContainer)时生效。
-
-> **说明：**
-> 
-> 从API version 23开始，支持 [attributeModifier](#attributeModifier)动态设置属性方法。
+对形成链的组件进行重新布局。仅当父组件为RelativeContainer时生效。 > **说明：** > > 从API version 23开始，支持 [attributeModifier](#attributeModifier)动态设置属性方法。
 
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2770,6 +2877,8 @@ clickEffect(value: ClickEffect | null): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -2801,6 +2910,8 @@ clickEffect(effect: Optional<ClickEffect | null>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2834,6 +2945,8 @@ clip(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -2862,12 +2975,13 @@ clip(value: boolean): T
 clip(clip: Optional<boolean>): T
 ```
 
-是否对子组件超出当前组件范围外的区域进行裁剪。不设置该接口时，默认不对子组件超出当前组件范围外的区域进行裁剪。与  
-[clip&lt;sup&gt;12+&lt;/sup&gt;](#clip)相比，新增了对undefined类型的支持。
+是否对子组件超出当前组件范围外的区域进行裁剪。不设置该接口时，默认不对子组件超出当前组件范围外的区域进行裁剪。与 [clip&lt;sup&gt;12+&lt;/sup&gt;](#clip)相比，新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2897,9 +3011,7 @@ clip(clip: Optional<boolean>): T
 clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute): T
 ```
 
-按指定的形状对当前组件进行裁剪。
-
-> **说明：**
+按指定的形状对当前组件进行裁剪。 > **说明：**
 
 **起始版本：** 7
 
@@ -2907,7 +3019,7 @@ clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectA
 
 **废弃版本：** 12
 
-**替代接口：** [clipShape](CommonMethod#clipShape(value:)
+**替代接口：** [clipShape](#clipShape)(value: CircleShape | EllipseShape | PathShape | RectShape)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -2935,19 +3047,13 @@ clip(value: boolean | CircleAttribute | EllipseAttribute | PathAttribute | RectA
 clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 ```
 
-按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。
-
-> **说明：**
-> 
-> 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
-> 
-> 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
-> 
-> 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。 > **说明：** > > 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。 > > 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。 > > 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -2977,20 +3083,13 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与  
-[clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipShape)相比，新增了对undefined类型的支持。
-
-> **说明：**
-> 
-> 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。
-> 
-> 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。
-> 
-> 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
+按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与 [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipShape)相 比，新增了对undefined类型的支持。 > **说明：** > > 不同的形状支持的属性范围不同，路径是一种形状，除此之外还有椭圆、矩形等形状。 > > 路径的形状不支持设置宽度和高度。具体形状支持的属性参考具体形状的文档。 > > 形状中的[fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill)属性对clipShape接口不生效。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3026,6 +3125,8 @@ colorBlend(value: Color | string | Resource): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -3052,11 +3153,13 @@ colorBlend(value: Color | string | Resource): T
 colorBlend(color: Optional<Color | string | Resource>): T
 ```
 
-为组件添加颜色叠加效果。与[colorBlend](#colorBlend)相比，color参数新增了对undefined类型的支持。
+为组件添加颜色叠加效果。与[colorBlend](#colorBlend)相比，color参数新增了对undefined类型 的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3084,15 +3187,13 @@ colorBlend(color: Optional<Color | string | Resource>): T
 compositingFilter(filter: Filter): T
 ```
 
-设置合成滤镜视觉效果。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置合成滤镜视觉效果。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3120,13 +3221,13 @@ compositingFilter(filter: Filter): T
 constraintSize(value: ConstraintSizeOptions): T
 ```
 
-设置约束尺寸，组件布局时进行尺寸范围限制。设置后组件的宽度和高度将被限制在指定的最小值和最大值范围内，constraintSize的优先级高于width和height属性。
-
-从API version 10开始，该接口支持calc计算特性。
+设置约束尺寸，组件布局时进行尺寸范围限制。设置后组件的宽度和高度将被限制在指定的最小值和最大值范围内，constraintSize的优先级高于width和height属性。 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3160,6 +3261,8 @@ contrast(value: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -3192,6 +3295,8 @@ contrast(contrast: Optional<number>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -3218,15 +3323,13 @@ contrast(contrast: Optional<number>): T
 customProperty(name: string, value: Optional<Object>): T
 ```
 
-设置组件的自定义属性。
-
-API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-create-custom-components.md)不支持设置自定义属性。
-
-从API版本26.0.0开始，自定义组件支持设置并读取自定义属性。
+设置组件的自定义属性。 API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-create-custom-components.md)不支持设置自定义属性。 从API版本26.0.0开始，自定义组件支持设置并读取自定义属性。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3255,15 +3358,13 @@ API版本26.0.0之前，[自定义组件](../../../ui/state-management/arkts-cre
 defaultFocus(value: boolean): T
 ```
 
-设置当前组件是否为当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)上的默认焦点。当未设置defaultFocus时，组件默认不为当前层级页面的默认焦点。
-
-> **说明：**
-> 
-> 可以设置默认焦点的页面指的是支持页面路由或是弹窗类的容器组件，例如Page、NaviDestination、NavBar、PopUp、Dialog等。
+设置当前组件是否为当前[层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)上的默认焦点。当未设置defaultFocus时，组件默认不为当前层级页面的默认焦点。 > **说明：** > > 可以设置默认焦点的页面指的是支持页面路由或是弹窗类的容器组件，例如Page、NaviDestination、NavBar、PopUp、Dialog等。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3294,6 +3395,8 @@ direction(value: Direction): T
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3327,6 +3430,8 @@ displayPriority(value: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -3339,7 +3444,7 @@ displayPriority(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置当前组件在布局容器中显示的优先级。&lt;br/&gt;默认值：1&lt;br/&gt;**说明：**&lt;br/&gt;仅在[Row](Row)/[Column](Column)/[Flex(单行)](Flex)容器组件中生效。&lt;br/&gt; 小数点后的数字不作优先级区分，即区间为[x, x + 1)内的数字视为相同优先级。例如：1.0与1.9为同一优先级。&lt;br/&gt;子组件的displayPriority均不大于1时，优先级没有区别。&lt;br/&gt;当子组件的displayPriority大于1时，displayPriority 数值越大，优先级越高。若父容器空间不足，隐藏低优先级子组件。若某一优先级的子组件被隐藏，则优先级更低的子组件也都被隐藏 &lt;br&gt;取值限定为整数。 |
+| value | number | 是 | 设置当前组件在布局容器中显示的优先级。&lt;br/&gt;默认值：1&lt;br/&gt;**说明：**&lt;br/&gt;仅在Row/Column/Flex(单行)容器组件中生效。&lt;br/&gt; 小数点后的数字不作优先级区分，即区间为[x, x + 1)内的数字视为相同优先级。例如：1.0与1.9为同一优先级。&lt;br/&gt;子组件的displayPriority均不大于1时，优先级没有区别。&lt;br/&gt;当子组件的displayPriority大于1时，displayPriority 数值越大，优先级越高。若父容器空间不足，隐藏低优先级子组件。若某一优先级的子组件被隐藏，则优先级更低的子组件也都被隐藏 &lt;br&gt;取值限定为整数。 |
 
 **返回值：**
 
@@ -3358,6 +3463,8 @@ doubleSided(value: Optional<boolean>): T
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3391,6 +3498,8 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -3403,7 +3512,7 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在 [onDragStart](#onDragStart)拖拽方式中有效。&lt;br/&gt;当组件支持拖拽并同时设置 [bindContextMenu](#bindContextMenu) 的预览图时，则长按浮起的预览图以 [bindContextMenu](#bindContextMenu) 设置的预览图为准。开发者在[onDragStart](#onDragStart)中返回的背板图优先级低于 [dragPreview](#dragPreview)设置的预览图，当设置了 [dragPreview](#dragPreview)预览图时，拖拽过程中的背板图使用 [dragPreview](#dragPreview)预览图。由于 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)需要离线渲染之后才能使用，因此存在一定的性能开销和时延， 推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md#DragItemInfo)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)方式。&lt;br/&gt; 当传入类 型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](Visibility)属性设置成None/Hidden，则对组件自身进行截图 作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。<br>**起始版本：** 12 |
+| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在 [onDragStart](#onDragStart)拖拽方式中有效。&lt;br/&gt;当组件支持拖拽并同时设置 [bindContextMenu](#bindContextMenu) 的预览图时，则长按浮起的预览图以 [bindContextMenu](#bindContextMenu) 设置的预览图为准。开发者在[onDragStart](#onDragStart)中返回的背板图优先级低于 [dragPreview](#dragPreview)设置的预览图，当设置了 [dragPreview](#dragPreview)预览图时，拖拽过程中的背板图使用 [dragPreview](#dragPreview)预览图。由于 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)需要离线渲染之后才能使用，因此存在一定的性能开销和时延， 推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md#DragItemInfo)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)方式。&lt;br/&gt; 当传入类 型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件Visibility属性设置成None/Hidden，则对组件自身进行截图 作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -3417,15 +3526,13 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConfiguration): T
 ```
 
-自定义组件拖拽过程中的预览图，仅用于设置浮起效果或者禁用浮起效果。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+自定义组件拖拽过程中的预览图，仅用于设置浮起效果或者禁用浮起效果。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3439,7 +3546,7 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConf
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在 [onDragStart](#onDragStart)拖拽方式中有效。&lt;br/&gt;当组件支持拖拽并同时设置 [bindContextMenu](#bindContextMenu) 的预览图时，则长按浮起的预览图以 [bindContextMenu](#bindContextMenu) 设置的预览图为准。开发者在[onDragStart](#onDragStart)中返回的背板图优先级低于 [dragPreview](#dragPreview)设置的预览图，当设置了 [dragPreview](#dragPreview)预览图时，拖拽过程中的背板图使用 [dragPreview](#dragPreview)预览图。由于 [CustomBuilder](arkts-arkui-custombuilder-t.md#CustomBuilder)需要离线渲染之后才能使用，因此存在一定的性能开销和时延， 推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md#DragItemInfo)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)方式。&lt;br/&gt; 当传入类 型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件[Visibility](Visibility)属性设置成None/Hidden，则对组件自身进行截图 作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。 |
+| preview | [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [DragItemInfo](arkts-arkui-dragiteminfo-i.md) \| string | 是 | 设置组件浮起和拖拽过程中的预览图，仅在 [onDragStart](#onDragStart)拖拽方式中有效。&lt;br/&gt;当组件支持拖拽并同时设置 [bindContextMenu](#bindContextMenu) 的预览图时，则长按浮起的预览图以 [bindContextMenu](#bindContextMenu) 设置的预览图为准。开发者在[onDragStart](#onDragStart)中返回的背板图优先级低于 [dragPreview](#dragPreview)设置的预览图，当设置了 [dragPreview](#dragPreview)预览图时，拖拽过程中的背板图使用 [dragPreview](#dragPreview)预览图。由于 [CustomBuilder](arkts-arkui-custombuilder-t.md#CustomBuilder)需要离线渲染之后才能使用，因此存在一定的性能开销和时延， 推荐优先使用 [DragItemInfo](arkts-arkui-dragiteminfo-i.md#DragItemInfo)中的[PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#PixelMap)方式。&lt;br/&gt; 当传入类 型为string的id时，则将id对应组件的截图作为预览图。如果id对应的组件无法查找到，或者id对应的组件Visibility属性设置成None/Hidden，则对组件自身进行截图 作为拖拽预览图。目前截图不含有亮度、阴影、模糊和旋转等视觉效果。 |
 | config | [PreviewConfiguration](arkts-arkui-previewconfiguration-i.md) | 否 | 对自定义拖拽过程中的预览图进行配置。&lt;br/&gt;只对 [dragPreview](#dragPreview)中的预览生效。 |
 
 **返回值：**
@@ -3454,15 +3561,13 @@ dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConf
 dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions): T
 ```
 
-设置拖拽过程中预览图处理模式，数量角标的显示以及预览图浮起的交互模式。不支持onItemDragStart拖拽方式。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置拖拽过程中预览图处理模式，数量角标的显示以及预览图浮起的交互模式。不支持onItemDragStart拖拽方式。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3497,6 +3602,8 @@ draggable(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -3528,6 +3635,8 @@ Sets the drawModifier of the current component.
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3561,6 +3670,8 @@ enableClickSoundEffect(enabled: boolean | undefined): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
@@ -3593,6 +3704,8 @@ enabled(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -3619,40 +3732,13 @@ enabled(value: boolean): T
 expandSafeArea(types?: Array<SafeAreaType>, edges?: Array<SafeAreaEdge>): T
 ```
 
-控制组件扩展其安全区域。
-
-> **说明：**
-> 
-> - 设置expandSafeArea属性进行组件绘制扩展时，建议组件尺寸不要设置固定宽高（百分比除外），当设置固定宽高（包括设置'auto'）时，扩展安全区域的方向只支持[SafeAreaEdge.TOP,
-SafeAreaEdge.START]，扩展后的组件尺寸保持不变。  
-> 
-> - 安全区域不会限制内部组件的布局和大小，不会裁剪内部组件。
-> 
-> - 当父容器为滚动容器时，组件设置expandSafeArea属性后，自身不会延伸，但仍可触发其子节点中设置了expandSafeArea的延伸范围更新。
-> 
-> - 设置expandSafeArea()时，不传参，走默认值处理；设置expandSafeArea([],[])时，相当于入参是空数组，此时expandSafeArea属性设置无效。
-> 
-> - 组件设置expandSafeArea生效的条件为：
-> 1.type为SafeAreaType.KEYBOARD时默认生效，表现为组件不避让键盘。&lt;br/&gt;
-> 2.设置其他type，组件的边界与安全区域重合时组件能够延伸到安全区域下。例如：设备顶部状态栏高度100，那么组件在屏幕中的绝对位置需要为0 &lt;= y <= 100。
-> 
-&gt;&lt;= 100。
-&gt; 
-> - 组件延伸到避让区时，在避让区的事件如点击事件等可能会被系统拦截，优先给状态栏等系统组件响应。
-> 
-> -
-滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性，否则expandSafeArea属性在滚动后可能会失效，写法参考[示例7](#示例7滚动类容器扩展安全区)。  
-> 
-> - expandSafeArea属性仅作用于当前组件，不会向父组件或子组件传递，因此使用过程中，所有相关组件均需配置。
-> 
-> -
-同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置exp andSafeArea属性将不生效，如弹窗和半模态组件。  
-> 
-> - 对于expandSafeArea属性无法生效的场景，若要将组件部署在避让区，需要手动调整组件的坐标。
+控制组件扩展其安全区域。 > **说明：** > > - 设置expandSafeArea属性进行组件绘制扩展时，建议组件尺寸不要设置固定宽高（百分比除外），当设置固定宽高（包括设置'auto'）时，扩展安全区域的方向只支持[SafeAreaEdge.TOP, SafeAreaEdge.START]，扩展后的组件尺寸保持不变。 > > - 安全区域不会限制内部组件的布局和大小，不会裁剪内部组件。 > > - 当父容器为滚动容器时，组件设置expandSafeArea属性后，自身不会延伸，但仍可触发其子节点中设置了expandSafeArea的延伸范围更新。 > > - 设置expandSafeArea()时，不传参，走默认值处理；设置expandSafeArea([],[])时，相当于入参是空数组，此时expandSafeArea属性设置无效。 > > - 组件设置expandSafeArea生效的条件为： > 1.type为SafeAreaType.KEYBOARD时默认生效，表现为组件不避让键盘。&lt;br/&gt; > 2.设置其他type，组件的边界与安全区域重合时组件能够延伸到安全区域下。例如：设备顶部状态栏高度100，那么组件在屏幕中的绝对位置需要为0 &lt;= y <= 100。 > &gt;&lt;= 100。 &gt; > - 组件延伸到避让区时，在避让区的事件如点击事件等可能会被系统拦截，优先给状态栏等系统组件响应。 > > - 滚动类容器内的组件不建议设置expandSafeArea属性，如果设置，需要按照组件嵌套关系，将当前节点到滚动类祖先容器间所有直接节点设置expandSafeArea属性，否则expandSafeArea属性在滚动后可能会失效，写 法参考[示例7](#示例7滚动类容器扩展安全区)。 > > - expandSafeArea属性仅作用于当前组件，不会向父组件或子组件传递，因此使用过程中，所有相关组件均需配置。 > > - 同时设置expandSafeArea和position属性时，position属性会优先生效，expandSafeArea属性会后生效。对于未设置position、offset等绘制属性的组件，如果其边界未与避让区重叠，设置exp andSafeArea属性将不生效，如弹窗和半模态组件。 > > - 对于expandSafeArea属性无法生效的场景，若要将组件部署在避让区，需要手动调整组件的坐标。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3687,6 +3773,8 @@ flexBasis(value: number | string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -3719,6 +3807,8 @@ flexGrow(value: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -3745,13 +3835,13 @@ flexGrow(value: number): T
 flexShrink(value: number): T
 ```
 
-设置父容器压缩尺寸分配给此属性所在组件的比例。当父容器为Column、Row时，需设置主轴方向的尺寸。
-
-使用[getInspectorByKey](ts-universal-attributes-component-id.md#getinspectorbykey9)获取flexShrink属性时，如果该节点未设置flexShrink属性，默认返回1。
+设置父容器压缩尺寸分配给此属性所在组件的比例。当父容器为Column、Row时，需设置主轴方向的尺寸。 使用[getInspectorByKey](ts-universal-attributes-component-id.md#getinspectorbykey9)获取flexShrink属性时，如果该节点未设置flexShrink 属性，默认返回1。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -3765,7 +3855,7 @@ flexShrink(value: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 设置父容器压缩尺寸分配给此属性所在组件的比例。 &lt;br&gt;取值限定为整数，父容器为 [Column](Column) 、[Row](Row)时， 取值范围[0,+∞). &lt;br/&gt; 父容器为[Flex](Flex)时，默认值：1 &lt;br/&gt;[constraintSize](#constraintSize)限制组件的尺寸范围. Column和Row即使设置了constraintSize，在未设置主轴尺寸width/height/size时仍遵守默认布局行为，在主轴上自适应子组件尺寸，此时flexShrink不生效.&lt;br/&gt;设置异常值时，该属性为 默认值。 |
+| value | number | 是 | 设置父容器压缩尺寸分配给此属性所在组件的比例。 &lt;br&gt;取值限定为整数，父容器为 Column 、Row时， 取值范围0,+∞). &lt;br/&gt; 父容器为[Flex时，默认值：1 &lt;br/&gt;[constraintSize](#constraintSize)限制组件的尺寸范围. Column和Row即使设置了constraintSize，在未设置主轴尺寸width/height/size时仍遵守默认布局行为，在主轴上自适应子组件尺寸，此时flexShrink不生效.&lt;br/&gt;设置异常值时，该属性为 默认值。 |
 
 **返回值：**
 
@@ -3784,6 +3874,8 @@ focusBox(style: FocusBoxStyle): T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3817,6 +3909,8 @@ focusOnTouch(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-focusOnTouch(value: boolean): T--><!--Device-CommonMethod-focusOnTouch(value: boolean): T-End-->
@@ -3846,6 +3940,8 @@ focusScopeId(id: string, isGroup?: boolean): T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3877,6 +3973,8 @@ focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3910,6 +4008,8 @@ focusScopePriority(scopeId: string, priority?: FocusPriority): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -3941,6 +4041,8 @@ focusable(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-focusable(value: boolean): T--><!--Device-CommonMethod-focusable(value: boolean): T-End-->
@@ -3951,7 +4053,7 @@ focusable(value: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。&lt;br/&gt;**说明：**&lt;br/&gt;存在默认交互逻辑的组件例如 [Button](arkts-arkui-mouseevent-i.md#button)、[TextInput](text_input)等，默认即为可获焦，[Text](text)、[Image](image)等组件则默认状态为不 可获焦。不可获焦状态下，无法触发[焦点事件](common)。 |
+| value | boolean | 是 | 设置当前组件是否可以获焦，true表示组件可以获焦，false表示组件不可获焦。&lt;br/&gt;**说明：**&lt;br/&gt;存在默认交互逻辑的组件例如 [Button](arkts-arkui-mouseevent-i.md#button)、TextInput等，默认即为可获焦，Text、Image等组件则默认状态为不 可获焦。不可获焦状态下，无法触发焦点事件。 |
 
 **返回值：**
 
@@ -3965,15 +4067,13 @@ focusable(value: boolean): T
 foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 ```
 
-为当前组件提供内容模糊能力。
-
-> **说明：**
-> 
-> 从API version 18开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+为当前组件提供内容模糊能力。 > **说明：** > > 从API version 18开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4002,12 +4102,13 @@ foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions): T
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions): T
 ```
 
-为当前组件提供内容模糊能力。与  
-[foregroundBlurStyle](#foregroundBlurStyle)相比，style参数新增了对undefined类型的支持。
+为当前组件提供内容模糊能力。与 [foregroundBlurStyle](#foregroundBlurStyle) 相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4034,18 +4135,13 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供内容模糊能力。与  
-[foregroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#foregroundBlurStyle)相比，新增了sysOptions参数，即支持系统自适应调节参数。
-
-> **说明：**
-> 
-> foregroundBlurStyle接口为实时模糊接口，每帧执行实时渲染，性能负载较大。当模糊内容与模糊半径均无需变动时，推荐采用静态模糊接口
-> [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)。最佳实践请参考：
-> [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
+为当前组件提供内容模糊能力。与 [foregroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#foregroundBlurStyle) 相比，新增了sysOptions参数，即支持系统自适应调节参数。 > **说明：** > > foregroundBlurStyle接口为实时模糊接口，每帧执行实时渲染，性能负载较大。当模糊内容与模糊半径均无需变动时，推荐采用静态模糊接口 > [blur](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit-filter-i.md#blur)。最佳实践请参考： > [图像模糊动效优化-使用场景](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-fuzzy-scene-performance-optimization#section4945532519)。
 
 **起始版本：** 19
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为19。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4079,6 +4175,8 @@ foregroundColor(value: ResourceColor | ColoringStrategy): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4091,7 +4189,7 @@ foregroundColor(value: ResourceColor | ColoringStrategy): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor \| ColoringStrategy | 是 | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持[属性动画](common)。 |
+| value | ResourceColor \| ColoringStrategy | 是 | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。 |
 
 **返回值：**
 
@@ -4105,12 +4203,13 @@ foregroundColor(value: ResourceColor | ColoringStrategy): T
 foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 ```
 
-设置组件的前景色。当组件未设置前景色，默认继承父组件。与  
-[foregroundColor](#foregroundColor)相比，color参数新增了对undefined类型的支持。
+设置组件的前景色。当组件未设置前景色，默认继承父组件。与 [foregroundColor](#foregroundColor)相比，color参数新增了对 undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4124,7 +4223,7 @@ foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| ColoringStrategy&gt; | 是 | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。&lt;br/&gt;当color的值为 undefined时，维持之前取值或组件默认取值，具体行为不同组件可能会有差异，建议开发者使用确定颜色或[ColoringStrategy](ColoringStrategy)。 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| ColoringStrategy&gt; | 是 | 设置组件的前景颜色或者根据智能取色策略设置前景颜色。不支持属性动画。&lt;br/&gt;当color的值为 undefined时，维持之前取值或组件默认取值，具体行为不同组件可能会有差异，建议开发者使用确定颜色或ColoringStrategy。 |
 
 **返回值：**
 
@@ -4143,6 +4242,8 @@ foregroundEffect(options: ForegroundEffectOptions): T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4170,15 +4271,13 @@ foregroundEffect(options: ForegroundEffectOptions): T
 foregroundFilter(filter: Filter): T
 ```
 
-设置前景滤镜（内容）视觉效果。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置前景滤镜（内容）视觉效果。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4206,15 +4305,13 @@ foregroundFilter(filter: Filter): T
 freeze(value: boolean): T
 ```
 
-设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4240,15 +4337,13 @@ freeze(value: boolean): T
 freeze(freeze: Optional<boolean>): T
 ```
 
-设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。与[freeze](#freeze)相比，freeze参数新增了对undefined类型的支持。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置当前控件和子控件是否整体离屏渲染绘制后重复绘制缓存，不再进行内部属性更新。与[freeze](#freeze)相比，freeze参数新增了对undefined 类型的支持。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4280,6 +4375,8 @@ geometryTransition(id: string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-geometryTransition(id: string): T--><!--Device-CommonMethod-geometryTransition(id: string): T-End-->
@@ -4310,6 +4407,8 @@ geometryTransition(id: string, options?: GeometryTransitionOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -4337,15 +4436,13 @@ geometryTransition(id: string, options?: GeometryTransitionOptions): T
 gesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-绑定手势。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+绑定手势。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4372,13 +4469,13 @@ gesture(gesture: GestureType, mask?: GestureMask): T
 gestureModifier(modifier: GestureModifier): T
 ```
 
-动态设置组件绑定的手势。
-
-说明：gestureModifier不支持自定义组件。该接口不支持在[attributeModifier](#attributeModifier)中调用。
+动态设置组件绑定的手势。 说明： gestureModifier不支持自定义组件。 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4412,6 +4509,8 @@ grayscale(value: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -4438,11 +4537,13 @@ grayscale(value: number): T
 grayscale(grayscale: Optional<number>): T
 ```
 
-为组件添加灰度效果。上层渲染灰度会覆盖下层子组件渲染。不通过该接口设置时，默认无变化。与[grayscale](#grayscale)相比，grayscale参数新增了对undefined类型的支持。
+为组件添加灰度效果。上层渲染灰度会覆盖下层子组件渲染。不通过该接口设置时，默认无变化。与[grayscale](#grayscale)相比，grayscale参数新 增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4470,7 +4571,7 @@ grayscale(grayscale: Optional<number>): T
 gridOffset(value: number): T
 ```
 
-The default offset column number indicates the number of offset columns of the current component in the start direction of the parent component when the useSizeType attribute does not set the offset of the corresponding dimension. That is,the current component is located in the nth column.
+The default offset column number indicates the number of offset columns of the current component in the start direction of the parent component when the useSizeType attribute does not set the offset of the corresponding dimension. That is, the current component is located in the nth column.
 
 **起始版本：** 11
 
@@ -4478,7 +4579,7 @@ The default offset column number indicates the number of offset columns of the c
 
 **废弃版本：** 14
 
-**替代接口：** [grid_col/GridColInterface](grid_col/GridColInterface)
+**替代接口：** grid_col/GridColInterface and grid_row/GridRowInterface
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4512,7 +4613,7 @@ Default number of occupied columns, indicating the number of occupied grid colum
 
 **废弃版本：** 14
 
-**替代接口：** [grid_col/GridColInterface](grid_col/GridColInterface)
+**替代接口：** grid_col/GridColInterface and grid_row/GridRowInterface
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4544,6 +4645,8 @@ groupDefaultFocus(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-groupDefaultFocus(value: boolean): T--><!--Device-CommonMethod-groupDefaultFocus(value: boolean): T-End-->
@@ -4568,13 +4671,13 @@ groupDefaultFocus(value: boolean): T
 height(value: Length): T
 ```
 
-设置组件自身的高度，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。
-
-从API version 10开始，该接口支持calc计算特性。
+设置组件自身的高度，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4602,13 +4705,13 @@ height(value: Length): T
 height(heightValue: Length | LayoutPolicy): T
 ```
 
-设置组件自身的高度或垂直方向布局策略，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。
-
-从API version 15开始，当参数为Length类型时，该接口支持calc计算特性。
+设置组件自身的高度或垂直方向布局策略，缺省时使用子组件自身内容需要的高度。若子组件的高大于父组件的高，则子组件会溢出显示在父组件外部。 从API version 15开始，当参数为Length类型时，该接口支持calc计算特性。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4644,6 +4747,8 @@ hitTestBehavior(value: HitTestMode): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
@@ -4676,6 +4781,8 @@ hoverEffect(value: HoverEffect): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-hoverEffect(value: HoverEffect): T--><!--Device-CommonMethod-hoverEffect(value: HoverEffect): T-End-->
@@ -4706,6 +4813,8 @@ hueRotate(value: number | string): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -4732,11 +4841,13 @@ hueRotate(value: number | string): T
 hueRotate(rotation: Optional<number | string>): T
 ```
 
-色相旋转效果。不通过该接口设置时，默认无变化。与[hueRotate](#hueRotate)相比，rotation参数新增了对undefined类型的支持。
+色相旋转效果。不通过该接口设置时，默认无变化。与[hueRotate](#hueRotate)相比，rotation参数新增了对undefined 类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4770,6 +4881,8 @@ Id. User can set an id to the component to identify it.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -4796,22 +4909,13 @@ Id. User can set an id to the component to identify it.
 ignoreLayoutSafeArea(types?: Array<LayoutSafeAreaType>, edges?: Array<LayoutSafeAreaEdge>): T
 ```
 
-扩展组件布局时的安全区。
-
-> **说明：**
-> 
-> 
-忽略布局安全区边缘的组件，如果其宽度或高度设置了 [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchParent)，其大小和位置都会改变，否则仅改变其位置。  
-> 
-> 依据safeAreaPadding累积功能，组件可扩展其安全区边缘到所有能感知的连续安全区域。
-> 
-> 滚动类组件的子元素忽略布局安全区边缘时在滚动方向不考虑滚动组件自身及其父组件的安全区域，包括：List、ArcListItem、Grid、WaterFlow、Swiper和Tabs。
-> 
-> 忽略布局安全区属性.ignoreLayoutSafeArea和忽略渲染安全区属性.expandSafeArea都设置时，.ignoreLayoutSafeArea先生效，.expandSafeArea在前者基础上再生效。
+扩展组件布局时的安全区。 > **说明：** > > 忽略布局安全区边缘的组件，如果其宽度或高度设置了 [LayoutPolicy.matchParent](arkts-arkui-layoutpolicy-c.md#matchParent)，其大小和位置都会改变，否则仅改变 其位置。 > > 依据safeAreaPadding累积功能，组件可扩展其安全区边缘到所有能感知的连续安全区域。 > > 滚动类组件的子元素忽略布局安全区边缘时在滚动方向不考虑滚动组件自身及其父组件的安全区域，包括：List、ArcListItem、Grid、WaterFlow、Swiper和Tabs。 > > 忽略布局安全区属性.ignoreLayoutSafeArea和忽略渲染安全区属性.expandSafeArea都设置时，.ignoreLayoutSafeArea先生效，.expandSafeArea在前者基础上再生效。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4846,6 +4950,8 @@ inspectorLabel(label: string | undefined): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -4877,6 +4983,8 @@ invert(value: number | InvertOptions): T
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -4910,6 +5018,8 @@ invert(options: Optional<number | InvertOptions>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -4941,6 +5051,8 @@ key(value: string): T
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -4974,6 +5086,8 @@ keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?:
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -4986,8 +5100,8 @@ keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?:
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| FunctionKey | 是 | 热键的单个字符（可以通过键盘输入的字符）或[FunctionKey](FunctionKey)。&lt;br /&gt;空字符串意为取消快捷键绑定。&lt;br/&gt; |
-| keys | Array&lt;ModifierKey&gt; | 是 | 热键组合。&lt;br /&gt;仅当value为[FunctionKey](FunctionKey)的情况下keys的值可以为空。&lt;br/&gt; |
+| value | string \| FunctionKey | 是 | 热键的单个字符（可以通过键盘输入的字符）或FunctionKey。&lt;br /&gt;空字符串意为取消快捷键绑定。&lt;br/&gt; |
+| keys | Array&lt;ModifierKey&gt; | 是 | 热键组合。&lt;br /&gt;仅当value为FunctionKey的情况下keys的值可以为空。&lt;br/&gt; |
 | action | () =&gt; void | 否 | 组合快捷键触发成功后的自定义事件回调。 |
 
 **返回值：**
@@ -5007,6 +5121,8 @@ layoutGravity(alignment: LocalizedAlignment): T
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5036,11 +5152,13 @@ layoutGravity(alignment: LocalizedAlignment): T
 layoutWeight(value: number | string): T
 ```
 
-设置组件的布局权重，使组件在父容器（[Row](./row)/[Column](./column)/[Flex](./flex)）的主轴方向按照权重分配尺寸。适用于父容器尺寸确定、需要多个子组件按比例分配剩余空间的场景。
+设置组件的布局权重，使组件在父容器（Row/Column/Flex）的主轴方向按照权重分配尺寸。适用于父容器尺寸确定、需要多个子组件 按比例分配剩余空间的场景。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5054,7 +5172,7 @@ layoutWeight(value: number | string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string | 是 | 父容器尺寸确定时，不设置layoutWeight属性或者layoutWeight属性生效值为0的子组件优先占位，这些子组件占位后在主轴留下的空间称为主轴剩余空 间。设置了layoutWeight属性且layoutWeight属性生效值大于0的子组件会从主轴剩余空间中按照各自所设置的权重占比分配尺寸，分配时会忽略子组件本身的width/height设置，但保留minWidth/ minHeight约束。 &lt;br&gt;默认值：0 &lt;br&gt;取值范围：[0, +∞) &lt;br&gt;超出范围时：传入小于0的值时，按0处理。 &lt;br&gt;**说明：** &lt;br&gt;仅在[Row](./row)/[Column](./column)/[Flex](./flex)布局中生效。 &lt;br&gt;可选值为大于等于0的数字，或者可以转换为数字的字符串（支持整数、小数格式）。 &lt;br&gt;如果容器中有子组件设置了layoutWeight属性，且设置的属性值大于0，则所有子组件不会再基于[flexShrink](#flexShrink)和 [flexGrow](#flexGrow)布局。 |
+| value | number \| string | 是 | 父容器尺寸确定时，不设置layoutWeight属性或者layoutWeight属性生效值为0的子组件优先占位，这些子组件占位后在主轴留下的空间称为主轴剩余空 间。设置了layoutWeight属性且layoutWeight属性生效值大于0的子组件会从主轴剩余空间中按照各自所设置的权重占比分配尺寸，分配时会忽略子组件本身的width/height设置，但保留minWidth/ minHeight约束。 &lt;br&gt;默认值：0 &lt;br&gt;取值范围：0, +∞) &lt;br&gt;超出范围时：传入小于0的值时，按0处理。 &lt;br&gt;**说明：** &lt;br&gt;仅在[Row/Column/Flex布局中生效。 &lt;br&gt;可选值为大于等于0的数字，或者可以转换为数字的字符串（支持整数、小数格式）。 &lt;br&gt;如果容器中有子组件设置了layoutWeight属性，且设置的属性值大于0，则所有子组件不会再基于[flexShrink](#flexShrink)和 [flexGrow](#flexGrow)布局。 |
 
 **返回值：**
 
@@ -5073,6 +5191,8 @@ lightUpEffect(value: number): T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5098,11 +5218,13 @@ lightUpEffect(value: number): T
 lightUpEffect(degree: Optional<number>): T
 ```
 
-设置组件图像亮起程度。与[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightUpEffect)相比，degree参数新增了对undefined类型的支持。
+设置组件图像亮起程度。与[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightUpEffect)相比，degree参数新增了对undefined类 型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5134,6 +5256,8 @@ linearGradient(value: LinearGradientOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
@@ -5158,11 +5282,13 @@ linearGradient(value: LinearGradientOptions): T
 linearGradient(options: Optional<LinearGradientOptions>): T
 ```
 
-线性渐变。与[linearGradient](#linearGradient)相比，options参数新增了对undefined类型的支持。
+线性渐变。与[linearGradient](#linearGradient)相比，options参数新增了对undefined类型的 支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5196,6 +5322,8 @@ linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -5221,12 +5349,13 @@ linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T
 ```
 
-为组件添加内容线性渐变模糊效果。与  
-[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#linearGradientBlur)相比，新增了对undefined类型的支持。
+为组件添加内容线性渐变模糊效果。与 [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#linearGradientBlur) 相比，新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5253,13 +5382,13 @@ linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradien
 margin(value: Margin | Length | LocalizedMargin): T
 ```
 
-设置组件的外边距属性。在计算位置时外边距视为组件大小的一部分，从而影响组件位置。
-
-从API version 10开始，该接口支持calc计算特性。
+设置组件的外边距属性。在计算位置时外边距视为组件大小的一部分，从而影响组件位置。 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5273,7 +5402,7 @@ margin(value: Margin | Length | LocalizedMargin): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Margin \| Length \| LocalizedMargin | 是 | 设置组件的外边距。 &lt;br&gt;参数为Length类型时，四个方向外边距同时生效。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;margin设置百分比时，上下左右外边距均以父容器的width作为基础值。在[Row](./row)、[Column](./column)、[Flex](./flex)交叉轴上布 局时，子组件在交叉轴方向占用的空间包含子组件本身尺寸和margin值。 &lt;br&gt;例如Column容器宽100，其中子组件宽50，margin left为10，right为20，子组件宽度与左右margin之和为50+10+20=80，小于容器宽度100，子组件在交叉轴方向居中对齐，此时水平方向 左侧和右侧各有(100-80)/2=10的空白区域。<br>**起始版本：** 12 |
+| value | Margin \| Length \| LocalizedMargin | 是 | 设置组件的外边距。 &lt;br&gt;参数为Length类型时，四个方向外边距同时生效。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;margin设置百分比时，上下左右外边距均以父容器的width作为基础值。在Row、Column、Flex交叉轴上布 局时，子组件在交叉轴方向占用的空间包含子组件本身尺寸和margin值。 &lt;br&gt;例如Column容器宽100，其中子组件宽50，margin left为10，right为20，子组件宽度与左右margin之和为50+10+20=80，小于容器宽度100，子组件在交叉轴方向居中对齐，此时水平方向 左侧和右侧各有(100-80)/2=10的空白区域。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -5293,6 +5422,8 @@ markAnchor(value: Position | LocalizedPosition): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -5305,7 +5436,7 @@ markAnchor(value: Position | LocalizedPosition): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| LocalizedPosition | 是 | Positioning anchor that offsets an element from the position specified by [position](position) or [offset](offset) **.position({x: value1, y: value2}).markAnchor({x: value3, y: value4})** has the same effect as **.position({x: value1 - value3, y: value2 - value4})**. The same applies to **offset**. &lt;br&gt;If **.markAnchor({x: value1, y: value2})** is set separately, the effect is the same as that of **.offset({x: -value1, y: -value2})**. &lt;br&gt;API version 9 and earlier: The default value is **{x: 0, y: 0}**. &lt;br&gt;API version 10: no default value. &lt;br&gt;This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| LocalizedPosition | 是 | Positioning anchor that offsets an element from the position specified by position or offset **.position({x: value1, y: value2}).markAnchor({x: value3, y: value4})** has the same effect as **.position({x: value1 - value3, y: value2 - value4})**. The same applies to **offset**. &lt;br&gt;If **.markAnchor({x: value1, y: value2})** is set separately, the effect is the same as that of **.offset({x: -value1, y: -value2})**. &lt;br&gt;API version 9 and earlier: The default value is **{x: 0, y: 0}**. &lt;br&gt;API version 10: no default value. &lt;br&gt;This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -5324,6 +5455,8 @@ mask(value: ProgressMask): T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5357,6 +5490,8 @@ mask(mask: Optional<ProgressMask>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -5383,9 +5518,7 @@ mask(mask: Optional<ProgressMask>): T
 mask(value: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute | ProgressMask): T
 ```
 
-为组件上添加指定形状的遮罩。
-
-> **说明：**
+为组件上添加指定形状的遮罩。 > **说明：**
 
 **起始版本：** 7
 
@@ -5393,7 +5526,7 @@ mask(value: CircleAttribute | EllipseAttribute | PathAttribute | RectAttribute |
 
 **废弃版本：** 12
 
-**替代接口：** [maskShape](CommonMethod#maskShape(value:)
+**替代接口：** [maskShape](#maskShape)(value: CircleShape | EllipseShape | PathShape | RectShape)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5427,6 +5560,8 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -5455,12 +5590,13 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-为组件上添加指定形状的遮罩。与  
-[maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskShape)相比，新增了对undefined类型的支持。
+为组件上添加指定形状的遮罩。与 [maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskShape)相 比，新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5490,15 +5626,13 @@ maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): 
 materialFilter(filter: Filter | undefined): T
 ```
 
-设置系统材质滤镜效果，系统材质滤镜的绘制早于[backgroundFilter](#backgroundFilter)绘制，即位于backgroundFilter的更底层。
-
-> **说明：**
-> 
-> 该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置系统材质滤镜效果，系统材质滤镜的绘制早于[backgroundFilter](#backgroundFilter)绘制，即位于backgroundFilter的更底层。 > **说明：** > > 该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5532,6 +5666,8 @@ monopolizeEvents(monopolize: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -5556,25 +5692,13 @@ monopolizeEvents(monopolize: boolean): T
 motionBlur(value: MotionBlurOptions):T
 ```
 
-在当前组件由缩放大小或位移变化引起的运动过程中，增加动态模糊效果。
-
-> **说明：**
-> 
-> - 不建议在组件内转场、共享元素转场、组件内隐式元素转场和粒子动画场景中使用该属性，否则会产生非预期效果。
-> 
-> - 该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。
-> 
-> - 该属性需要与动画的AnimateParam的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
-> 
-> - 在使用该属性过程中，不要在使用过程中频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。
-> 
-> - 运动模糊锚点坐标需要与动画缩放的锚点保持一致，否则会产生非预期效果。
-> 
-> - 模糊半径建议设置1以内，否则会产生非预期效果。
+在当前组件由缩放大小或位移变化引起的运动过程中，增加动态模糊效果。 > **说明：** > > - 不建议在组件内转场、共享元素转场、组件内隐式元素转场和粒子动画场景中使用该属性，否则会产生非预期效果。 > > - 该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。 > > - 该属性需要与动画的AnimateParam的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。 > > - 在使用该属性过程中，不要在使用过程中频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。 > > - 运动模糊锚点坐标需要与动画缩放的锚点保持一致，否则会产生非预期效果。 > > - 模糊半径建议设置1以内，否则会产生非预期效果。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5600,23 +5724,13 @@ motionBlur(value: MotionBlurOptions):T
 motionBlur(motionBlur: Optional<MotionBlurOptions>):T
 ```
 
-在当前组件由缩放大小或位移变化引起的运动过程中，增加动态模糊效果。与[motionBlur](#motionBlur)相比，motionBlur参数新增了对undefined类型的支持。
-
-1、不建议在组件内转场、共享元素转场、组件内隐式元素转场、粒子动画场景下使用该属性，否则会产生非预期效果。
-
-2、该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。
-
-3、该属性需要与动画的AnimateParam的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。
-
-4、在使用该属性过程中，不要在使用过程中频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。
-
-5、运动模糊锚点坐标需要与动画缩放的锚点保持一致，否则会产生非预期效果。
-
-6、模糊半径建议设置1以内，否则会产生非预期效果。
+在当前组件由缩放大小或位移变化引起的运动过程中，增加动态模糊效果。与[motionBlur](#motionBlur)相比， motionBlur参数新增了对undefined类型的支持。 1、不建议在组件内转场、共享元素转场、组件内隐式元素转场、粒子动画场景下使用该属性，否则会产生非预期效果。 2、该属性需要在开始状态将motionBlur的参数radius设置为0，否则冷启动时会有非预期效果。 3、该属性需要与动画的AnimateParam的onFinish参数配合使用，需要在运动模糊动画结束后将motionBlur的参数radius置为0，否则会产生非预期效果。 4、在使用该属性过程中，不要在使用过程中频繁更改同一个组件的模糊半径，否则会产生非预期效果。比如示例中的动画，频繁点击会出现模糊效果偶尔失效的情况。 5、运动模糊锚点坐标需要与动画缩放的锚点保持一致，否则会产生非预期效果。 6、模糊半径建议设置1以内，否则会产生非预期效果。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5648,6 +5762,8 @@ motionPath(value: MotionPathOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-motionPath(value: MotionPathOptions): T--><!--Device-CommonMethod-motionPath(value: MotionPathOptions): T-End-->
@@ -5677,6 +5793,8 @@ mouseResponseRegion(value: Array<Rectangle> | Rectangle): T
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5710,6 +5828,8 @@ nextFocus(nextStep: Optional<FocusMovement>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -5739,6 +5859,8 @@ Sets obscured
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5772,6 +5894,8 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -5784,7 +5908,7 @@ offset(value: Position | Edges | LocalizedEdges): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| LocalizedEdges | 是 | Offset of the component relative to its original layout position. The **offset** attribute does not affect the layout of the parent container. It adjusts the component position only during drawing. If of the [Position](Position) type, this parameter sets the offset relative to the upper left corner of the component. If of the [Edges](Edges) type, this parameter sets the offset relative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and **{right: -x, bottom: -y}**. The [LocalizedEdges](LocalizedEdges) type supports the mirror mode: **start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts. &lt;br&gt;API version 9 and earlier: The default value is **{x: 0, y: 0}**. &lt;br&gt;Default unit: vp &lt;br&gt;API version 10: no default value. &lt;br&gt;This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| Edges \| LocalizedEdges | 是 | Offset of the component relative to its original layout position. The **offset** attribute does not affect the layout of the parent container. It adjusts the component position only during drawing. If of the Position type, this parameter sets the offset relative to the upper left corner of the component. If of the Edges type, this parameter sets the offset relative to the four edges of the component. **{x: x, y: y}** has the same effect as **{left: x, top: y}** and **{right: -x, bottom: -y}**. The LocalizedEdges type supports the mirror mode: **start** is equivalent to **x** with left-to-right scripts and **-x** with right-to-left scripts. &lt;br&gt;API version 9 and earlier: The default value is **{x: 0, y: 0}**. &lt;br&gt;Default unit: vp &lt;br&gt;API version 10: no default value. &lt;br&gt;This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -5798,11 +5922,13 @@ offset(value: Position | Edges | LocalizedEdges): T
 onAccessibilityActionIntercept(callback: AccessibilityActionInterceptCallback): T
 ```
 
-注册可访问性操作拦截回调，当要执行可访问性操作时，将执行回调
+注册可访问性操作拦截回调， 当要执行可访问性操作时，将执行回调
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -5838,6 +5964,8 @@ Register accessibility focus callback,when the component is focused or out of fo
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -5872,6 +6000,8 @@ Trigger a accessibility hover event.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -5904,6 +6034,8 @@ prompt for current component and descendants unable to handle accessibility hove
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -5930,15 +6062,13 @@ prompt for current component and descendants unable to handle accessibility hove
 onAppear(event: () => void): T
 ```
 
-组件挂载后触发此回调。
-
-> **说明：**
-> 
-> 回调的调用时机有可能发生在组件布局渲染后。
+组件挂载后触发此回调。 > **说明：** > > 回调的调用时机有可能发生在组件布局渲染后。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -5966,21 +6096,13 @@ onAppear(event: () => void): T
 onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 ```
 
-组件区域变化时触发该回调。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。
-
-由绘制变化所导致的渲染属性变化不会响应回调，如[translate](#translate)、  
-[offset](#offset)、[markAnchor](#markAnchor)、  
-[scale](#scale)、[transform](#transform)。若组件自身位置由绘制变化决定也不会响应回调，如[bindSheet](#bindSheet)。
-
-> **说明：**
-> 
-> 当组件同时绑定onAreaChange事件和[position](#position)属性时，onAreaChange事件响应设置
-> [Position](Position)类型的position属性变化，不响应设置[Edges](Edges)和[LocalizedEdges](LocalizedEdges)
-> 类型的position属性变化。
+组件区域变化时触发该回调。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。 由绘制变化所导致的渲染属性变化不会响应回调，如[translate](#translate)、 [offset](#offset)、[markAnchor](#markAnchor)、 [scale](#scale)、[transform](#transform)。若组件 自身位置由绘制变化决定也不会响应回调，如[bindSheet](#bindSheet)。 > **说明：** > > 当组件同时绑定onAreaChange事件和[position](#position)属性时，onAreaChange事件响应设置 > Position类型的position属性变化，不响应设置Edges和LocalizedEdges > 类型的position属性变化。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6006,11 +6128,13 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-组件区域变化时触发该回调，可通过[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md#AreaChangeOptions)中的expectedUpdateInterval设置触发回调的间隔。仅会响应由布局变化所导致的组件大小、位置发生变化时的回调。
+组件区域变化时触发该回调，可通过[AreaChangeOptions](arkts-arkui-areachangeoptions-i.md#AreaChangeOptions)中的expectedUpdateInterval设置触发回调的间隔。仅会响应由布局变化所导致的组件大小、位置发 生变化时的回调。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6039,17 +6163,13 @@ onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 onAttach(callback: Callback<void>): T
 ```
 
-组件挂载到组件树时触发此回调。由于以下说明中的限制，建议使用[onAppear](#onAppear)替代此接口。
-
-> **说明：**
-> 
-> - 回调在组件布局渲染前调用。
-> 
-> - 不允许在回调中对组件树进行变更，例如启动动画或使用if-else变更组件树结构。
+组件挂载到组件树时触发此回调。由于以下说明中的限制，建议使用[onAppear](#onAppear)替代此接口。 > **说明：** > > - 回调在组件布局渲染前调用。 > > - 不允许在回调中对组件树进行变更，例如启动动画或使用if-else变更组件树结构。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6083,6 +6203,8 @@ onAxisEvent(event: Callback<AxisEvent>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -6115,6 +6237,8 @@ onBlur(event: () => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-onBlur(event: () => void): T--><!--Device-CommonMethod-onBlur(event: () => void): T-End-->
@@ -6139,17 +6263,13 @@ onBlur(event: () => void): T
 onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 ```
 
-当前组件通过设置回调，可自定义触摸测试并控制触摸测试中的子节点行为。
-
-> **说明：**
-> 
-> - 子节点信息数组中仅包含命名节点的信息，即开发者通过id属性设置了id的节点。
-> 
-> - 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+当前组件通过设置回调，可自定义触摸测试并控制触摸测试中的子节点行为。 > **说明：** > > - 子节点信息数组中仅包含命名节点的信息，即开发者通过id属性设置了id的节点。 > > - 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6177,21 +6297,13 @@ onChildTouchTest(event: (value: Array<TouchTestInfo>) => TouchResult): T
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-点击动作触发该回调。
-
-触发点击事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md#SourceType)值为KEY，JOYSTICK。
-
-> **说明：**
-> 
-> 从API version 9开始，使用卡片能力时存在以下限制：
-> 
-> 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。
-> 
-> 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
+点击动作触发该回调。 触发点击事件的设备类型为键盘或手柄时，事件的SourceTool值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md#SourceType)值为KEY，JOYSTICK。 > **说明：** > > 从API version 9开始，使用卡片能力时存在以下限制： > > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。 > > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6219,25 +6331,13 @@ onClick(event: (event: ClickEvent) => void): T
 onClick(event: Callback<ClickEvent>, distanceThreshold: number): T
 ```
 
-点击动作触发该回调。
-
-当触发点击事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-sourcetool-e.md#SourceTool)值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md#SourceType)值为KEY或JOYSTICK。
-
-新增distanceThreshold参数，设置点击手势移动阈值。手指移动超出阈值时，点击手势识别失败。
-
-对于无手指移动距离限制的点击场景，建议使用原有接口。若需限制点击时手指移动范围，建议使用该接口。
-
-> **说明：**
-> 
-> - 从API version 12开始，在使用卡片能力时，存在以下限制：
-> > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。
-> > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。
-> 
-> - 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+点击动作触发该回调。 当触发点击事件的设备类型为键盘或手柄时，事件的[SourceTool](arkts-arkui-sourcetool-e.md#SourceTool)值为Unknown，事件的[SourceType](arkts-arkui-sourcetype-e.md#SourceType)值为KEY或JOYSTICK。 新增distanceThreshold参数，设置点击手势移动阈值。手指移动超出阈值时，点击手势识别失败。 对于无手指移动距离限制的点击场景，建议使用原有接口。若需限制点击时手指移动范围，建议使用该接口。 > **说明：** > > - 从API version 12开始，在使用卡片能力时，存在以下限制： > > 1. 如果手指按下的持续时间超过800ms，不能触发点击事件。 > > 2. 如果手指按下后移动位移超过20px，不能触发点击事件。 > > - 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6274,6 +6374,8 @@ onDetach(callback: Callback<void>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -6300,15 +6402,13 @@ onDetach(callback: Callback<void>): T
 onDigitalCrown(handler: Optional<Callback<CrownEvent>>): T
 ```
 
-组件获焦以后旋转表冠时触发该回调。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+组件获焦以后旋转表冠时触发该回调。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6342,6 +6442,8 @@ onDisAppear(event: () => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -6374,6 +6476,8 @@ onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -6400,11 +6504,13 @@ onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-拖拽进入组件范围内时，触发回调，当监听了[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void))事件时，此事件才有效。
+拖拽进入组件范围内时，触发回调，当监听了onDrop事件 时，此事件才有效。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6430,11 +6536,13 @@ onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-拖拽离开组件范围内时，触发回调，当监听了[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void))事件时，此事件才有效。
+拖拽离开组件范围内时，触发回调，当监听了onDrop事件 时，此事件才有效。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6460,11 +6568,13 @@ onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-拖拽在组件范围内移动时，触发回调，当监听了[onDrop](CommonMethod#onDrop(event: (event: DragEvent, extraParams?: string) => void))事件时，此事件才有效。
+拖拽在组件范围内移动时，触发回调，当监听了onDrop事件 时，此事件才有效。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6490,13 +6600,13 @@ onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configuration?: DragSpringLoadingConfiguration): T
 ```
 
-绑定此事件的组件可作为具有悬停检测功能的拖拽响应目标。当拖拽对象悬停在目标上时，触发回调通知。此时只有一个目标可以成为响应方，并且子组件始终具有更高的响应优先级。
-
-关于悬停检测的触发机制及详细使用方法，请参考开发指南[支持悬停检测](../../../ui/arkts-common-events-drag-event.md#支持悬停检测)。
+绑定此事件的组件可作为具有悬停检测功能的拖拽响应目标。当拖拽对象悬停在目标上时，触发回调通知。此时只有一个目标可以成为响应方，并且子组件始终具有更高的响应优先级。 关于悬停检测的触发机制及详细使用方法，请参考开发指南[支持悬停检测](../../../ui/arkts-common-events-drag-event.md#支持悬停检测)。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6525,23 +6635,13 @@ onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configurati
 onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | DragItemInfo): T
 ```
 
-在手势拖拽场景中，在可拖拽的组件上长按时间超过500ms，然后手指移动距离大于10vp时触发此回调；在鼠标拖拽场景中，鼠标左键在可拖拽的组件上按下并移动超过1vp时，即可触发此回调。
-
-针对默认支持拖拽能力的组件，如果开发者设置了onDragStart，优先执行onDragStart，并根据执行情况决定是否使用系统默认的拖拽能力，具体规则为：
-
-- 如果开发者返回了自定义预览图，则不再使用系统默认的拖拽预览图；  
-- 如果开发者设置了拖拽数据，则不再使用系统默认填充的拖拽数据。
-
-文本类组件[Text](text)、[Search](search)、[TextInput](text_input)、[TextArea](text_area)、  
-[RichEditor](rich_editor)对选中的文本内容进行拖拽时，不支持自定义预览图。当onDragStart与菜单预览一起使用或使用了默认支持拖拽能力的组件时，预览及菜单项上的自定义内容不支持拖拽。
-
-> **说明：**
-> 
-> 从API version 13开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+在手势拖拽场景中，在可拖拽的组件上长按时间超过500ms，然后手指移动距离大于10vp时触发此回调；在鼠标拖拽场景中，鼠标左键在可拖拽的组件上按下并移动超过1vp时，即可触发此回调。 针对默认支持拖拽能力的组件，如果开发者设置了onDragStart，优先执行onDragStart，并根据执行情况决定是否使用系统默认的拖拽能力，具体规则为： - 如果开发者返回了自定义预览图，则不再使用系统默认的拖拽预览图； - 如果开发者设置了拖拽数据，则不再使用系统默认填充的拖拽数据。 文本类组件Text、Search、TextInput、TextArea、 RichEditor对选中的文本内容进行拖拽时，不支持自定义预览图。当onDragStart与菜单预览一起使用或使用了默认支持拖拽能力的组件时，预览及菜单项上的自定义内容不支持拖拽。 > **说明：** > > 从API version 13开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6567,11 +6667,13 @@ onDragStart(event: (event: DragEvent, extraParams?: string) => CustomBuilder | D
 onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-绑定此事件的组件可作为释放目标。当在本组件范围内停止拖放行为时，将触发回调。如果开发者未在onDrop中主动调用event.setResult()来设置拖拽接收的结果，对于系统支持的默认可拖入组件，处理结果将以系统实际处理的数据为准。对于其他组件，系统将默认视为数据接收成功。
+绑定此事件的组件可作为释放目标。当在本组件范围内停止拖放行为时，将触发回调。如果开发者未在onDrop中主动调用event.setResult()来设置拖拽接收的结果，对于系统支持的默认可拖入组件，处理结果将以系统实际处理的数据为 准。对于其他组件，系统将默认视为数据接收成功。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -6597,11 +6699,13 @@ onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 ```
 
-绑定此事件的组件可作为拖拽释放目标，当在本组件范围内停止拖拽行为时，触发回调。如果开发者没有在onDrop中主动调用event.[setResult](arkts-arkui-dragevent-i.md#setResult)()设置拖拽接收的结果，若拖拽组件为系统支持默认拖入的组件，以系统实际处理数据结果为准，其它组件则系统按照数据接收成功处理。
+绑定此事件的组件可作为拖拽释放目标，当在本组件范围内停止拖拽行为时，触发回调。如果开发者没有在onDrop中主动调用event.[setResult](arkts-arkui-dragevent-i.md#setResult)()设置拖拽接收的结果，若 拖拽组件为系统支持默认拖入的组件，以系统实际处理数据结果为准，其它组件则系统按照数据接收成功处理。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6636,6 +6740,8 @@ onFocus(event: () => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-onFocus(event: () => void): T--><!--Device-CommonMethod-onFocus(event: () => void): T-End-->
@@ -6665,6 +6771,8 @@ onFocusAxisEvent(event: Callback<FocusAxisEvent>): T
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6698,6 +6806,8 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -6724,15 +6834,13 @@ onGestureCollectIntercept(callback: GestureCollectInterceptCallback): T
 onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent) => GestureJudgeResult): T
 ```
 
-为组件绑定自定义手势判定回调。当手势即将成功时，触发用户定义的回调获取结果。
-
-> **说明：**
-> 
-> 在Text组件中使用该接口时，不支持对点击事件进行自定义手势判定。
+为组件绑定自定义手势判定回调。当手势即将成功时，触发用户定义的回调获取结果。 > **说明：** > > 在Text组件中使用该接口时，不支持对点击事件进行自定义手势判定。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6766,6 +6874,8 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -6792,16 +6902,13 @@ onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback): T
 onGestureRecognizerJudgeBegin(callback: GestureRecognizerJudgeBeginCallback, exposeInnerGesture: boolean): T
 ```
 
-给组件绑定自定义手势识别器判定回调。
-
-新增exposeInnerGesture参数作为是否将ArkUI系统组合组件的内置组件的手势暴露给开发者的标识。当该标识置为true时，将ArkUI系统组合组件的内置组件的手势暴露给开发者。
-
-对于不需要将ArkUI系统组合组件的内置组件的手势暴露给开发者的场景，建议采用原有  
-[onGestureRecognizerJudgeBegin](#onGestureRecognizerJudgeBegin)接口。若要求将ArkUI系统组合组件的内置组件的手势暴露给开发者，建议使用该接口并将exposeInnerGesture设置为true。
+给组件绑定自定义手势识别器判定回调。 新增exposeInnerGesture参数作为是否将ArkUI系统组合组件的内置组件的手势暴露给开发者的标识。当该标识置为true时，将ArkUI系统组合组件的内置组件的手势暴露给开发者。 对于不需要将ArkUI系统组合组件的内置组件的手势暴露给开发者的场景，建议采用原有 [onGestureRecognizerJudgeBegin](#onGestureRecognizerJudgeBegin) 接口。若要求将ArkUI系统组合组件的内置组件的手势暴露给开发者，建议使用该接口并将exposeInnerGesture设置为true。
 
 **起始版本：** 13
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为13。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6836,6 +6943,8 @@ onHover(event: (isHover: boolean, event: HoverEvent) => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-onHover(event: (isHover: boolean, event: HoverEvent) => void): T--><!--Device-CommonMethod-onHover(event: (isHover: boolean, event: HoverEvent) => void): T-End-->
@@ -6865,6 +6974,8 @@ onHoverMove(event: Callback<HoverEvent>): T
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6898,6 +7009,8 @@ onKeyEvent(event: (event: KeyEvent) => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-onKeyEvent(event: (event: KeyEvent) => void): T--><!--Device-CommonMethod-onKeyEvent(event: (event: KeyEvent) => void): T-End-->
@@ -6928,6 +7041,8 @@ onKeyEvent(event: Callback<KeyEvent, boolean>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -6954,13 +7069,13 @@ onKeyEvent(event: Callback<KeyEvent, boolean>): T
 onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 ```
 
-对应组件收到按键事件时，会触发该回调，该按键事件不会分发给其子组件。不支持构造KeyEvent进行分发，只支持分发已有的按键事件。
-
-该回调的返回值为`true`时，视作该按键事件已被消费，不会[冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)给父组件处理。
+对应组件收到按键事件时，会触发该回调，该按键事件不会分发给其子组件。不支持构造KeyEvent进行分发，只支持分发已有的按键事件。 该回调的返回值为`true`时，视作该按键事件已被消费，不会[冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)给父组件处理。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -6988,13 +7103,13 @@ onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 ```
 
-绑定该方法的组件获焦后，按键动作优先触发该回调。
-
-该回调的返回值为`true`时，视作该按键事件已被消费，后续的事件回调（`keyboardShortcut`、输入法事件、`onKeyEventDispatch`、`onKeyEvent`）会被拦截，不再触发。
+绑定该方法的组件获焦后，按键动作优先触发该回调。 该回调的返回值为`true`时，视作该按键事件已被消费，后续的事件回调（`keyboardShortcut`、输入法事件、`onKeyEventDispatch`、`onKeyEvent`）会被拦截，不再触发。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7028,6 +7143,8 @@ onMouse(event: (event: MouseEvent) => void): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-onMouse(event: (event: MouseEvent) => void): T--><!--Device-CommonMethod-onMouse(event: (event: MouseEvent) => void): T-End-->
@@ -7052,23 +7169,13 @@ onMouse(event: (event: MouseEvent) => void): T
 onNeedSoftkeyboard(onNeedSoftkeyboardCallback: OnNeedSoftkeyboardCallback | undefined): T
 ```
 
-设置组件判断是否需要键盘时触发的回调。主要用于键盘接续场景，当焦点从输入框切换到其他组件时，如果切换后的组件回调函数[OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md#OnNeedSoftkeyboardCallback)的返回值设置为`true`，则表示该组件需要键盘，此时键盘将不会收起，如果返回值设置为`false`，则表示该组件不需要键盘，此时键盘将收起。
-
-对于不能获焦的组件，本接口不生效。
-
-输入框组件使用该接口并将返回值设置为`false`时，点击输入框将不会拉起键盘。
-
-Web组件使用该方法时，如果返回值为`true`，Web组件会判断组件中是否有可编辑节点，如果有可编辑节点才会保留键盘，如果返回值为`false`，无论是否有可编辑节点，键盘都不会保留。
-
-XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。
-
-当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
-
-该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setCustomKeyboardContinueFeature)。
+设置组件判断是否需要键盘时触发的回调。主要用于键盘接续场景，当焦点从输入框切换到其他组件时，如果切换后的组件回调函数[OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md#OnNeedSoftkeyboardCallback)的返回值设置为`true`，则表示该组件需要键盘，此时键盘将不会收起，如果返回值设置为`false`，则表示该组件不需要键盘，此时键盘将收起。 对于不能获焦的组件，本接口不生效。 输入框组件使用该接口并将返回值设置为`false`时，点击输入框将不会拉起键盘。 Web组件使用该方法时，如果返回值为`true`，Web组件会判断组件中是否有可编辑节点，如果有可编辑节点才会保留键盘，如果返回值为`false`，无论是否有可编辑节点，键盘都不会保留。 XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。 当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。 该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setCustomKeyboardContinueFeature)。
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7082,7 +7189,7 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) \| undefined | 是 | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2)方法建立输入法通信，否则点击键盘会失去响应。 |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-onneedsoftkeyboardcallback-t.md) \| undefined | 是 | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法建立输入法通信，否则点击键盘会失去响应。 |
 
 **返回值：**
 
@@ -7096,15 +7203,13 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 onPreDrag(callback: Callback<PreDragStatus>): T
 ```
 
-绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDragStatus](arkts-arkui-predragstatus-e.md#PreDragStatus)。此接口不支持在鼠标拖拽中触发。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+绑定此事件的组件，当处于手势拖拽发起前的不同阶段时，触发回调。拖拽发起前的各阶段可参考[PreDragStatus](arkts-arkui-predragstatus-e.md#PreDragStatus)。此接口不支持在鼠标拖拽中触发。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7132,21 +7237,13 @@ onPreDrag(callback: Callback<PreDragStatus>): T
 onSizeChange(event: SizeChangeCallback): T
 ```
 
-组件区域变化时触发该回调。仅会响应由布局变化所导致的组件尺寸发生变化时的回调。
-
-> **说明：**
-> 
-> 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。
-> 
-> 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么
-> onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的
-> [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md#setTimeout)或
-> [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback)，将UI处理逻辑
-> 延后至异步执行。
+组件区域变化时触发该回调。仅会响应由布局变化所导致的组件尺寸发生变化时的回调。 > **说明：** > > 1. 该接口在布局发生变化时触发，由于计算精度的关系，其返回值可能与真实物理尺寸存在细微的差异。 > > 2. onSizeChange是布局过程中触发的同步回调，直接在其中更改状态变量存在被纳入动画闭包的风险。具体而言，动画会对比动画前的布局与动画闭包后的布局，若onSizeChange的回调在动画前的布局中同步触发，那么 > onSizeChange回调中所做的变更将与动画闭包中的变更一同纳入动画过程。为了避免此类问题，可在onSizeChange中使用延迟时间为0的 > [setTimeout](../arkts-apis/arkts-arkui-global-settimeout-f.md#setTimeout)或 > [postFrameCallback](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#postFrameCallback)，将UI处理逻辑 > 延后至异步执行。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7176,12 +7273,13 @@ onSizeChange(event: SizeChangeCallback): T
 onTouch(event: (event: TouchEvent) => void): T
 ```
 
-手指触摸动作触发该回调。触摸事件默认[冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)，会被多个组件消费，如果需阻止冒泡，可参考  
-[TouchEvent](arkts-arkui-touchevent-i.md#TouchEvent)的stopPropagation方法。鼠标左键按下时，对应的事件也会转换成触摸事件并触发该回调。
+手指触摸动作触发该回调。触摸事件默认[冒泡](../../../ui/arkts-interaction-basic-principles.md#事件冒泡)，会被多个组件消费，如果需阻止冒泡，可参考 [TouchEvent](arkts-arkui-touchevent-i.md#TouchEvent)的stopPropagation方法。鼠标左键按下时，对应的事件也会转换成触摸事件并触发该回调。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7212,6 +7310,8 @@ onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7245,6 +7345,8 @@ onTouchTestDone(callback: TouchTestDoneCallback): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -7271,15 +7373,13 @@ onTouchTestDone(callback: TouchTestDoneCallback): T
 onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleAreaChangeCallback | undefined): T
 ```
 
-设置onVisibleAreaApproximateChange事件的回调参数，限制它的执行间隔。
-
-> **说明：**
-> 
-> 从API version 23开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置onVisibleAreaApproximateChange事件的回调参数，限制它的执行间隔。 > **说明：** > > 从API version 23开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 17
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为17。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7308,27 +7408,13 @@ onVisibleAreaApproximateChange(options: VisibleAreaEventOptions, event: VisibleA
 onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 ```
 
-组件可见区域变化时触发该回调。开发指导及常见问题请参考[感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。
-
-> **说明：**
-> 
-> - 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
-> 
-> - 仅提供自身节点相对于所有祖先节点（直到window边界）的相对裁切面积与自身面积的比值及其变化趋势。
-> 
-> - 不支持兄弟组件对自身节点的遮挡计算，不支持所有祖先的兄弟节点对自身节点的遮挡计算，不支持窗口遮挡计算，不支持组件旋转计算，如[Stack](stack)、[Z序控制](#zIndex)、
-> [rotate](#rotate)等。
-> 
-> - 不支持非挂树节点的可见面积变化计算。例如，预加载的节点、通过[overlay](#overlay)能力挂载的自定义节点。
-> 
-> - 不支持[scale](#scale)属性，如果想要支持
-> [scale](#scale)，则需使用
-> [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onVisibleAreaChange)
-> ，将measureFromViewport设置为true。
+组件可见区域变化时触发该回调。开发指导及常见问题请参考[感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。 > **说明：** > > - 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。 > > - 仅提供自身节点相对于所有祖先节点（直到window边界）的相对裁切面积与自身面积的比值及其变化趋势。 > > - 不支持兄弟组件对自身节点的遮挡计算，不支持所有祖先的兄弟节点对自身节点的遮挡计算，不支持窗口遮挡计算，不支持组件旋转计算，如Stack、[Z序控制](#zIndex)、 > [rotate](#rotate)等。 > > - 不支持非挂树节点的可见面积变化计算。例如，预加载的节点、通过[overlay](#overlay)能力挂载的自定义节点。 > > - 不支持[scale](#scale)属性，如果想要支持 > [scale](#scale)，则需使用 > [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onVisibleAreaChange) > ，将measureFromViewport设置为true。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7355,12 +7441,13 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback, measureFromViewport: boolean): T
 ```
 
-组件可见区域变化时触发该回调。可以通过measureFromViewport设置可见区域计算模式。开发指导及常见问题请参考  
-[感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。
+组件可见区域变化时触发该回调。可以通过measureFromViewport设置可见区域计算模式。开发指导及常见问题请参考 [感知组件可见性](../../../ui/arkts-manage-components-visibility.md)指南。
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7396,6 +7483,8 @@ opacity(value: number | Resource): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -7427,6 +7516,8 @@ opacity(opacity: Optional<number | Resource>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7462,6 +7553,8 @@ outline(value: OutlineOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -7496,6 +7589,8 @@ outline(options: Optional<OutlineOptions>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -7528,6 +7623,8 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -7542,7 +7639,7 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors | 是 | 设置元素的外描边颜色。<br>**起始版本：** 12 |
+| value | ResourceColor \| EdgeColors \| LocalizedEdgeColors | 是 | 设置元素的外描边颜色。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -7556,12 +7653,13 @@ outlineColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>): T
 ```
 
-设置元素的外描边颜色。不设置该接口时，默认显示为黑色。与  
-[outlineColor](#outlineColor)相比，color参数新增了对undefined类型的支持。
+设置元素的外描边颜色。不设置该接口时，默认显示为黑色。与 [outlineColor](#outlineColor)相比，color参数新 增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7575,7 +7673,7 @@ outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| [EdgeColors](../arkts-apis/arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors&gt; | 是 | 设置元素的外描边颜色。&lt;br/&gt;当color的值为undefined时，恢 复为描边颜色为Color.Black的效果。 |
+| color | [Optional](arkts-arkui-optional-t.md)&lt;ResourceColor \| EdgeColors \| LocalizedEdgeColors&gt; | 是 | 设置元素的外描边颜色。&lt;br/&gt;当color的值为undefined时，恢 复为描边颜色为Color.Black的效果。 |
 
 **返回值：**
 
@@ -7595,6 +7693,8 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -7609,7 +7709,7 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Dimension \| [OutlineRadiuses](../arkts-apis/arkts-arkui-units-outlineradiuses-i.md) | 是 | 设置元素的外描边圆角半径，不支持百分比。&lt;br/&gt;最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。 |
+| value | Dimension \| OutlineRadiuses | 是 | 设置元素的外描边圆角半径，不支持百分比。&lt;br/&gt;最大生效值：组件width/2 + outlineWidth或组件height/2 + outlineWidth。 |
 
 **返回值：**
 
@@ -7623,11 +7723,13 @@ outlineRadius(value: Dimension | OutlineRadiuses): T
 outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 ```
 
-设置元素的外描边圆角半径。不设置该接口时，默认无变化。与[outlineRadius](#outlineRadius)相比，radius参数新增了对undefined类型的支持。
+设置元素的外描边圆角半径。不设置该接口时，默认无变化。与[outlineRadius](#outlineRadius)相 比，radius参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7641,7 +7743,7 @@ outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| [OutlineRadiuses](../arkts-apis/arkts-arkui-units-outlineradiuses-i.md)&gt; | 是 | 设置元素的外描边圆角半径，不支持百分比。&lt;br/&gt;最大生效值：组件width/2 + outlineWidth或组 件height/2 + outlineWidth。&lt;br/&gt;当radius的值为undefined时，恢复为外描边圆角半径为0的效果。 |
+| radius | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| OutlineRadiuses&gt; | 是 | 设置元素的外描边圆角半径，不支持百分比。&lt;br/&gt;最大生效值：组件width/2 + outlineWidth或组 件height/2 + outlineWidth。&lt;br/&gt;当radius的值为undefined时，恢复为外描边圆角半径为0的效果。 |
 
 **返回值：**
 
@@ -7661,6 +7763,8 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -7675,7 +7779,7 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [OutlineStyle](arkts-arkui-outlinestyle-e.md) \| [EdgeOutlineStyles](../arkts-apis/arkts-arkui-units-edgeoutlinestyles-i.md) | 是 | 设置元素的外描边样式。 |
+| value | [OutlineStyle](arkts-arkui-outlinestyle-e.md) \| EdgeOutlineStyles | 是 | 设置元素的外描边样式。 |
 
 **返回值：**
 
@@ -7689,12 +7793,13 @@ outlineStyle(value: OutlineStyle | EdgeOutlineStyles): T
 outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 ```
 
-设置元素的外描边样式。不设置该接口时，默认显示为一条实线。与  
-[outlineStyle](#outlineStyle)相比，style参数新增了对undefined类型的支持。
+设置元素的外描边样式。不设置该接口时，默认显示为一条实线。与 [outlineStyle](#outlineStyle)相比，style参数新增了对undefined类型的支 持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7708,7 +7813,7 @@ outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| [EdgeOutlineStyles](../arkts-apis/arkts-arkui-units-edgeoutlinestyles-i.md)&gt; | 是 | 设置元素的外描边样式。&lt;br/&gt;当style的值为undefined时，恢复为无外描边样式的效果。 |
+| style | [Optional](arkts-arkui-optional-t.md)&lt;[OutlineStyle](arkts-arkui-outlinestyle-e.md) \| EdgeOutlineStyles&gt; | 是 | 设置元素的外描边样式。&lt;br/&gt;当style的值为undefined时，恢复为无外描边样式的效果。 |
 
 **返回值：**
 
@@ -7728,6 +7833,8 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -7742,7 +7849,7 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md) | 是 | 设置元素的外描边宽度，不支持百分比。 |
+| value | Dimension \| EdgeOutlineWidths | 是 | 设置元素的外描边宽度，不支持百分比。 |
 
 **返回值：**
 
@@ -7756,11 +7863,13 @@ outlineWidth(value: Dimension | EdgeOutlineWidths): T
 outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 ```
 
-设置元素的外描边宽度。不设置该接口时，默认无变化。与[outlineWidth](#outlineWidth)相比，width参数新增了对undefined类型的支持。
+设置元素的外描边宽度。不设置该接口时，默认无变化。与[outlineWidth](#outlineWidth)相比， width参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7774,7 +7883,7 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| [EdgeOutlineWidths](../arkts-apis/arkts-arkui-units-edgeoutlinewidths-i.md)&gt; | 是 | 设置元素的外描边宽度，不支持百分比。&lt;br/&gt;当width的值为undefined时，恢复为无外描边宽度的效果。 |
+| width | [Optional](arkts-arkui-optional-t.md)&lt;Dimension \| EdgeOutlineWidths&gt; | 是 | 设置元素的外描边宽度，不支持百分比。&lt;br/&gt;当width的值为undefined时，恢复为无外描边宽度的效果。 |
 
 **返回值：**
 
@@ -7788,19 +7897,13 @@ outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptions): T
 ```
 
-在当前组件上，增加遮罩文本或者叠加自定义组件以及[ComponentContent](arkts-arkui-componentcontent-t.md#ComponentContent)作为该组件的浮层。浮层的定位同样基于当前组件进行计算。浮层不通过组件树进行渲染，部分接口（例如  
-[getRectangleById](api\@ohos.arkui.ComponentUtils#getRectangleById)）不支持获取浮层中的组件。
-
-> **说明：**
-> 
-> - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。
-> - 多次调用overlay接口时，如果同时传入string类型和
-> [CustomBuilder](arkts-arkui-custombuilder-t.md#CustomBuilder)类型，或者同时传入string类型和
-> [ComponentContent](arkts-arkui-componentcontent-t.md#ComponentContent)类型，浮层内容会叠加显示。
+在当前组件上，增加遮罩文本或者叠加自定义组件以及[ComponentContent](arkts-arkui-componentcontent-t.md#ComponentContent)作为该组件的浮层。浮层的定位同样基于当前组件进行计算。浮层不通过组件树进行渲染，部分接口（例如 getRectangleById）不支持获取浮层中 的组件。 > **说明：** > > - overlay会将浮层组件覆盖在所绑定的组件上方，阻塞用户对浮层下方组件的所有交互操作。 > - 多次调用overlay接口时，如果同时传入string类型和 > [CustomBuilder](arkts-arkui-custombuilder-t.md#CustomBuilder)类型，或者同时传入string类型和 > [ComponentContent](arkts-arkui-componentcontent-t.md#ComponentContent)类型，浮层内容会叠加显示。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7815,7 +7918,7 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string \| [CustomBuilder](arkts-arkui-custombuilder-t.md) \| [ComponentContent](arkts-arkui-componentcontent-t.md) | 是 | 遮罩文本内容或自定义组件构造函数。&lt;br/&gt;**说明：**&lt;br/&gt;自定义组件作为浮层时，不支持键盘走焦到自 定义组件中。通过CustomBuilder设置浮层时，浮层中的内容会在页面刷新时销毁并重新创建，存在一定的性能损耗，页面频繁刷新的场景推荐使用ComponentContent方式设置浮层。<br>**起始版本：** 12 |
-| options | [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 否 | 浮层的定位。&lt;br/&gt;**说明：**&lt;br/&gt;API version 12之前，options: &lt;br/&gt;{&lt;br/&gt;align?:  [Alignment](Alignment), &lt;br/&gt;offset?: {x?: number, y?: number}&lt;br/&gt;}<br>**起始版本：** 12 |
+| options | [OverlayOptions](arkts-arkui-overlayoptions-i.md) | 否 | 浮层的定位。&lt;br/&gt;**说明：**&lt;br/&gt;API version 12之前，options: &lt;br/&gt;{&lt;br/&gt;align?:  Alignment, &lt;br/&gt;offset?: {x?: number, y?: number}&lt;br/&gt;}<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -7829,13 +7932,13 @@ overlay(value: string | CustomBuilder | ComponentContent, options?: OverlayOptio
 padding(value: Padding | Length | LocalizedPadding): T
 ```
 
-设置组件的内边距属性。设置后会在组件内容和边框之间创建额外空间，影响组件内部内容的布局区域。
-
-从API version 10开始，该接口支持calc计算特性。
+设置组件的内边距属性。设置后会在组件内容和边框之间创建额外空间，影响组件内部内容的布局区域。 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7849,7 +7952,7 @@ padding(value: Padding | Length | LocalizedPadding): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| Length \| LocalizedPadding | 是 | 设置组件的内边距。 &lt;br&gt;参数为Length类型时，四个方向内边距同时生效。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;padding设置百分比时，上下左右内边距均以父容器的width作为基础值。<br>**起始版本：** 12 |
+| value | Padding \| Length \| LocalizedPadding | 是 | 设置组件的内边距。 &lt;br&gt;参数为Length类型时，四个方向内边距同时生效。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;padding设置百分比时，上下左右内边距均以父容器的width作为基础值。<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -7863,15 +7966,13 @@ padding(value: Padding | Length | LocalizedPadding): T
 parallelGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-绑定可与子组件手势同时触发的手势。手势事件为非冒泡事件。父组件设置parallelGesture时，父子组件相同的手势事件都可以触发，实现类似冒泡效果。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+绑定可与子组件手势同时触发的手势。手势事件为非冒泡事件。父组件设置parallelGesture时，父子组件相同的手势事件都可以触发，实现类似冒泡效果。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -7898,25 +7999,13 @@ parallelGesture(gesture: GestureType, mask?: GestureMask): T
 pixelRound(value: PixelRoundPolicy): T
 ```
 
-指定当前组件在指定方向上的像素取整对齐方式，某方向不设置时默认在该方向进行四舍五入取整。
-
-> **说明：**
-> 
-> - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。从API version
-12开始，本接口采用四舍五入的取整方式，并支持组件级关闭像素取整的能力。  
-> 
-> - 从API version
-12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。
-
-正常计算时，上下方向与组件高度相对应，左右方向（镜像的起始方向称为左）与宽度相对应。为方便描述将两组方向称为左上和右下。
-
-- 计算当前组件左上角坐标： 左上角相对父容器偏移量。  
-- 计算当前组件右下角坐标： 左上角相对于父容器偏移量 + 组件自身尺寸。  
-- 重新计算当前组件尺寸： 右下角坐标四舍五入取整 - 左上角坐标四舍五入取整。
+指定当前组件在指定方向上的像素取整对齐方式，某方向不设置时默认在该方向进行四舍五入取整。 > **说明：** > > - 在API version 11，本接口采用半像素对齐方式（即0\~0.25取0，0.25\~0.75取0.5，0.75\~1.0取1）。从API version 12开始，本接口采用四舍五入的取整方式，并支持组件级关闭像素取整的能力。 > > - 从API version 12开始，该接口支持在[attributeModifier](ts-universal-attributes-attribute-modifier.md#attributemodifier)中调用。 正常计算时，上下方向与组件高度相对应，左右方向（镜像的起始方向称为左）与宽度相对应。为方便描述将两组方向称为左上和右下。 - 计算当前组件左上角坐标： 左上角相对父容器偏移量。 - 计算当前组件右下角坐标： 左上角相对于父容器偏移量 + 组件自身尺寸。 - 重新计算当前组件尺寸： 右下角坐标四舍五入取整 - 左上角坐标四舍五入取整。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7952,6 +8041,8 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -7976,12 +8067,13 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 ```
 
-设置组件的图像边缘像素扩展距离。与  
-[pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelStretchEffect)相比，options参数新增了对undefined类型的支持。
+设置组件的图像边缘像素扩展距离。与 [pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelStretchEffect)相比， options参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8007,22 +8099,13 @@ pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 position(value: Position | Edges | LocalizedEdges): T
 ```
 
-绝对定位，确定子组件相对父组件内容区的位置，支持[attributeModifier](#attributeModifier)动态设置属性方法。
-
-> **说明：**
-> 
-> - position对位置的影响作用在组件的尺寸测量完成之后。
-> - 当父组件为[Row](Row)、[Column](Column)或[Flex](Flex)时，设置position的子组件不占位。在上述场景中，如果父组件包含的所有子组件均设置了position，此时父组件尺寸无法通过其他子组件确定，将基于尺寸(0, 0)进行布局测算。
-> -
-Position类型基于父组件内容区左上角确定位置；Edges类型基于父组件内容区四边确定位置，top/left/right/bottom分别为组件各边距离父组件内容区相应边的边距，通过边距来确定组件相对于父组件内容区的位置；Lo calizedEdges类型基于父组件内容区四边确定位置，支持镜像模式。  
-> - 本属性适用于置顶显示、悬浮按钮等组件在父组件中位置固定的场景。
-> - 本属性不支持在宽高为零的布局组件上设置。
-> - 当父组件为[RelativeContainer](RelativeContainer)，且子组件设置了alignRules属性时，子组件的position属性不生效。
-> - 若本属性所在组件的父组件未设置固定宽高，那么本组件会参考第一个设置固定宽高的祖先组件进行绝对定位。
+绝对定位，确定子组件相对父组件内容区的位置，支持[attributeModifier](#attributeModifier)动态设置属性方法。 > **说明：** > > - position对位置的影响作用在组件的尺寸测量完成之后。 > - 当父组件为Row、Column或Flex时，设置position的子组件不占位。在上述场景中，如果父组件包含的所有子组件均设置了position，此时父组件尺寸无法通过其他子组件确定，将基于尺寸(0, 0)进行布局测算。 > - Position类型基于父组件内容区左上角确定位置；Edges类型基于父组件内容区四边确定位置，top/left/right/bottom分别为组件各边距离父组件内容区相应边的边距，通过边距来确定组件相对于父组件内容区的位置；Lo calizedEdges类型基于父组件内容区四边确定位置，支持镜像模式。 > - 本属性适用于置顶显示、悬浮按钮等组件在父组件中位置固定的场景。 > - 本属性不支持在宽高为零的布局组件上设置。 > - 当父组件为RelativeContainer，且子组件设置了alignRules属性时，子组件的position属性不生效。 > - 若本属性所在组件的父组件未设置固定宽高，那么本组件会参考第一个设置固定宽高的祖先组件进行绝对定位。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8036,7 +8119,7 @@ Position类型基于父组件内容区左上角确定位置；Edges类型基于�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| LocalizedEdges | 是 | Absolute positioning that determines the child component's position relative to the parent's content area. The content area of the parent component is calculated by subtracting the [border](#border), [padding](padding), and [safeAreaPadding](#safeAreaPadding) values from the parent component's total size. This resulting content area defines the available layout space for child components. This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
+| value | Position \| Edges \| LocalizedEdges | 是 | Absolute positioning that determines the child component's position relative to the parent's content area. The content area of the parent component is calculated by subtracting the [border](#border), padding, and [safeAreaPadding](#safeAreaPadding) values from the parent component's total size. This resulting content area defines the available layout space for child components. This attribute does not take effect when it is set to an abnormal value.<br>**起始版本：** 12 |
 
 **返回值：**
 
@@ -8050,17 +8133,13 @@ Position类型基于父组件内容区左上角确定位置；Edges类型基于�
 priorityGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-绑定优先识别手势。
-
-1. 默认情况下，子组件优先识别通过gesture绑定的手势，当父组件配置priorityGesture时，父组件优先识别priorityGesture绑定的手势。2. 绑定长按手势时，设置触发长按的最短时间小的组件会优先响应，会忽略priorityGesture设置。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+绑定优先识别手势。 1. 默认情况下，子组件优先识别通过gesture绑定的手势，当父组件配置priorityGesture时，父组件优先识别priorityGesture绑定的手势。 2. 绑定长按手势时，设置触发长按的最短时间小的组件会优先响应，会忽略priorityGesture设置。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8087,13 +8166,13 @@ priorityGesture(gesture: GestureType, mask?: GestureMask): T
 radialGradient(value: RadialGradientOptions): T
 ```
 
-径向渐变。
-
-Anonymous Object Rectification.
+径向渐变。 Anonymous Object Rectification.
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -8119,11 +8198,13 @@ Anonymous Object Rectification.
 radialGradient(options: Optional<RadialGradientOptions>): T
 ```
 
-径向渐变。与[radialGradient](#radialGradient)相比，options参数新增了对undefined类型的支持。
+径向渐变。与[radialGradient](#radialGradient)相比，options参数新增了对undefined类型的 支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8157,6 +8238,8 @@ renderFit(fitMode: RenderFit): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -8185,12 +8268,13 @@ renderFit(fitMode: RenderFit): T
 renderFit(fitMode: Optional<RenderFit>): T
 ```
 
-设置宽高动画过程中的组件内容填充方式。不通过该接口设置，保持动画终态的内容大小，并且内容始终与组件保持左上角对齐。与  
-[renderFit](#renderFit)相比，fitMode参数新增了对undefined类型的支持。
+设置宽高动画过程中的组件内容填充方式。不通过该接口设置，保持动画终态的内容大小，并且内容始终与组件保持左上角对齐。与 [renderFit](#renderFit)相比，fitMode参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8220,13 +8304,13 @@ renderFit(fitMode: Optional<RenderFit>): T
 renderGroup(value: boolean): T
 ```
 
-设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件的不透明度不为1时，绘制效果可能有差异。
-
-不设置该属性时，默认不组成节点组。
+设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件 的不透明度不为1时，绘制效果可能有差异。 不设置该属性时，默认不组成节点组。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8256,15 +8340,13 @@ renderGroup(value: boolean): T
 renderGroup(isGroup: Optional<boolean>): T
 ```
 
-设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件的不透明度不为1时，绘制效果可能有差异。
-
-与[renderGroup&lt;sup&gt;10+&lt;/sup&gt;](#renderGroup)相比，isGroup参数新增了对undefined类型的支持。
-
-不设置该属性时，默认不组成节点组。
+设置是否组成节点组。节点组表示当前组件和子组件组成的子树先在离屏画布中渲染，再与父组件融合绘制。设置为节点组后，系统会缓存绘制结果，提升性能。但如果节点组内的组件频繁更新，缓存失效，可能导致性能下降。此外，设置为节点组后，当前组件 的不透明度不为1时，绘制效果可能有差异。 与[renderGroup&lt;sup&gt;10+&lt;/sup&gt;](#renderGroup)相比，isGroup参数新增了对undefined类型的支持。 不设置该属性时，默认不组成节点组。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8292,12 +8374,13 @@ renderGroup(isGroup: Optional<boolean>): T
 responseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](arkts-arkui-mouseevent-i.md#button)、[Button模式的Toggle](toggle)、[Select](select)、  
-[Chip](../arkts-apis/arkts-arkui-arkui-advanced-chip-chip-f.md#Chip)和[ChipGroup](../arkts-apis/arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md#ChipGroup)组件的触摸热区默认最小高度从28vp变更为32vp。该变更仅影响触摸命中范围，不影响组件实际显示高度。
+设置一个或多个触摸热区。从API版本26.0.0开始，未主动设置时[Button](arkts-arkui-mouseevent-i.md#button)、Button模式的Toggle、Select、 [Chip](../../apis-na/arkts-apis/arkts-na-arkui-advanced-chip-chip-f.md#Chip)和ChipGroup组件的触摸热区默认最小高度从28vp变更为32vp。 该变更仅影响触摸命中范围，不影响组件实际显示高度。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8325,12 +8408,13 @@ responseRegion(value: Array<Rectangle> | Rectangle): T
 responseRegionList(regions: Array<ResponseRegion>): T
 ```
 
-设置组件的触摸热区列表。调用该接口时，[responseRegion](#responseRegion)与  
-[mouseResponseRegion](#mouseResponseRegion)接口不再生效。
+设置组件的触摸热区列表。调用该接口时，[responseRegion](#responseRegion)与 [mouseResponseRegion](#mouseResponseRegion)接口不再生效。
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8364,6 +8448,8 @@ id for distribute identification.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-restoreId(value: number): T--><!--Device-CommonMethod-restoreId(value: number): T-End-->
@@ -8393,6 +8479,8 @@ Reuse id is used for identify the reuse type of each @ComponentV2 custom compone
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8426,6 +8514,8 @@ Reuse id is used for identify the reuse type for each custom node.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -8458,6 +8548,8 @@ rotate(value: RotateOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -8470,7 +8562,7 @@ rotate(value: RotateOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 是 | 可使组件在以组件左上角为坐标原点的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中进行旋转（坐标系如下图所示）。其中，( x, y, z）指定一个矢量，作为旋转轴。&lt;br/&gt;旋转轴和旋转中心点都基于坐标系设定，组件发生位移时，坐标系不会随之移动。&lt;br/&gt;默认值: 在x、y、z都不指定时，x、y、z的默认值分别为0、0、1。指定了x、y、z任 何一个值时，x、y、z中未指定的值默认为0。&lt;br/&gt;{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt; br/&gt;单位：vp&lt;br/&gt;![coordinates](../../../reference/apis-arkui/arkui-ts/figures/coordinates.png) |
+| value | [RotateOptions](arkts-arkui-rotateoptions-i.md) | 是 | 可使组件在以组件左上角为坐标原点的[组件坐标系](../../../ui/arkui-glossary.md#组件坐标系)中进行旋转（坐标系如下图所示）。其中，( x, y, z）指定一个矢量，作为旋转轴。&lt;br/&gt;旋转轴和旋转中心点都基于坐标系设定，组件发生位移时，坐标系不会随之移动。&lt;br/&gt;默认值: 在x、y、z都不指定时，x、y、z的默认值分别为0、0、1。指定了x、y、z任 何一个值时，x、y、z中未指定的值默认为0。&lt;br/&gt;{&lt;br/&gt;centerX: '50%',&lt;br/&gt;centerY: '50%',&lt;br/&gt;centerZ: 0,&lt;br/&gt;perspective: 0&lt;br/&gt;}&lt; br/&gt;单位：vp&lt;br/&gt; |
 
 **返回值：**
 
@@ -8489,6 +8581,8 @@ rotate(options: Optional<RotateOptions>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8518,11 +8612,13 @@ rotate(options: Optional<RotateOptions>): T
 rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 ```
 
-设置组件旋转效果。与[rotate](#rotate)相比，options参数新增了对RotateAngleOptions类型的支持。
+设置组件旋转效果。与[rotate](#rotate)相比，options参数新增了对RotateAngleOptions类型 的支持。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8552,15 +8648,13 @@ rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 ```
 
-设置安全区边距属性。允许容器向自身添加组件级安全区域，供子组件延伸，支持[attributeModifier](#attributeModifier)动态设置属性方法。与padding不同，safeAreaPadding用于设置组件级安全区域供子组件延伸使用，而padding用于设置组件内容区域的内边距，两者可同时设置、分别生效。
-
-> **说明：**
-> 
-> 从API version 18开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置安全区边距属性。允许容器向自身添加组件级安全区域，供子组件延伸，支持[attributeModifier](#attributeModifier)动态设置属性方法。与padding不同， safeAreaPadding用于设置组件级安全区域供子组件延伸使用，而padding用于设置组件内容区域的内边距，两者可同时设置、分别生效。 > **说明：** > > 从API version 18开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8576,7 +8670,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../arkts-apis/arkts-arkui-units-padding-i.md) \| LengthMetrics \| LocalizedPadding | 是 | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
+| paddingValue | Padding \| LengthMetrics \| LocalizedPadding | 是 | 设置组件的安全区边距，用于在组件内部创建组件级安全区域供子组件延伸使用。 &lt;br&gt;默认值：0 &lt;br&gt;单位：vp &lt;br&gt;paddingValue设置百分比时，上下左右内边距均以父容器的width作为基础值。 |
 
 **返回值：**
 
@@ -8595,6 +8689,8 @@ saturate(value: number): T
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8628,6 +8724,8 @@ saturate(saturate: Optional<number>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -8660,6 +8758,8 @@ scale(value: ScaleOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -8691,6 +8791,8 @@ scale(options: Optional<ScaleOptions>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8726,6 +8828,8 @@ sepia(value: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -8757,6 +8861,8 @@ sepia(sepia: Optional<number>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8790,6 +8896,8 @@ shadow(value: ShadowOptions | ShadowStyle): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本11开始，该接口支持在ArkTS卡片中使用。
@@ -8819,6 +8927,8 @@ shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8852,6 +8962,8 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-sharedTransition(id: string, options?: sharedTransitionOptions): T--><!--Device-CommonMethod-sharedTransition(id: string, options?: sharedTransitionOptions): T-End-->
@@ -8877,12 +8989,13 @@ sharedTransition(id: string, options?: sharedTransitionOptions): T
 shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWithCallback): T
 ```
 
-提供系统内置手势与响应链上其他组件的手势设置并行关系的回调事件。此接口对应的C API接口为  
-[setInnerGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto)。
+提供系统内置手势与响应链上其他组件的手势设置并行关系的回调事件。此接口对应的C API接口为 [setInnerGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto)。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8910,12 +9023,13 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback): T
 ```
 
-提供手势与响应链上其他组件的手势设置并行关系的回调事件。使用callback异步回调。此接口对应的C API接口为  
-[setGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-3.md#setgestureparallelto)。
+提供手势与响应链上其他组件的手势设置并行关系的回调事件。使用callback异步回调。此接口对应的C API接口为 [setGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-3.md#setgestureparallelto)。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -8943,13 +9057,13 @@ shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback): T
 size(value: SizeOptions): T
 ```
 
-设置组件自身的宽高尺寸。设置后会影响组件在父容器中的布局和显示大小。
-
-从API version 10开始，该接口支持calc计算特性。
+设置组件自身的宽高尺寸。设置后会影响组件在父容器中的布局和显示大小。 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -8983,6 +9097,8 @@ smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -9015,6 +9131,8 @@ sphericalEffect(value: number): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -9039,11 +9157,13 @@ sphericalEffect(value: number): T
 sphericalEffect(effect: Optional<number>): T
 ```
 
-设置组件的图像球面化程度。与[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericalEffect)相比，effect参数新增了对undefined类型的支持。
+设置组件的图像球面化程度。与[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericalEffect)相比，effect参数新增了对 undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9069,15 +9189,13 @@ sphericalEffect(effect: Optional<number>): T
 stateStyles(value: StateStyles): T
 ```
 
-设置组件不同状态下的样式。
-
-> **说明：**
-> 
-> 该接口不支持在[attributeModifier](#attributeModifier)中调用。
+设置组件不同状态下的样式。 > **说明：** > > 该接口不支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -9111,6 +9229,8 @@ sweepGradient(value: SweepGradientOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
@@ -9140,6 +9260,8 @@ sweepGradient(options: Optional<SweepGradientOptions>): T
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9173,6 +9295,8 @@ systemBarEffect(): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -9198,6 +9322,8 @@ Set system-styled materials for the component. The material effect behaves diffe
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9225,15 +9351,13 @@ Set system-styled materials for the component. The material effect behaves diffe
 tabIndex(index: number): T
 ```
 
-自定义组件tab键走焦能力。当组件未设置tabIndex时，默认按照预设的焦点移动规则进行焦点移动。
-
-> **说明：**
-> 
-> - tabIndex只能够自定义Tab键走焦，若想同时自定义方向键等走焦能力，建议使用[nextFocus](#nextFocus)。
+自定义组件tab键走焦能力。当组件未设置tabIndex时，默认按照预设的焦点移动规则进行焦点移动。 > **说明：** > > - tabIndex只能够自定义Tab键走焦，若想同时自定义方向键等走焦能力，建议使用[nextFocus](#nextFocus)。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -9245,7 +9369,7 @@ tabIndex(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置 tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。&lt;br /&gt;[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#uiExtension)组件未适配 tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#uiExtension)组件的 [层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。&lt;br /&gt;- tabIndex >= 0：表示元素是可聚焦的，并 且可以通过tab键走焦来访问到该元素。&lt;br /&gt;- tabIndex < 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。&lt;br/&gt; **说明：**&lt;br/&gt; tabIndex与focusScopeId不能混用。 |
+| index | number | 是 | 自定义组件tab键走焦能力。若有配置了tabIndex大于0的组件，则tab键走焦只会在tabIndex大于0的组件内按照tabIndex的值从小到大并循环依次走焦。若没有配置 tabIndex大于0的组件，则tabIndex等于0的组件按照组件预设的走焦规则走焦。&lt;br /&gt;[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#@ohos.arkui.uiExtension)组件未适配 tabIndex，在含有[UiExtension](../arkts-apis/arkts-arkui-uiextension.md#@ohos.arkui.uiExtension)组件的 [层级页面](../../../ui/arkts-common-events-focus-event.md#基础概念)使用tabIndex会导致走焦错乱。&lt;br /&gt;- tabIndex >= 0：表示元素是可聚焦的，并 且可以通过tab键走焦来访问到该元素。&lt;br /&gt;- tabIndex < 0（通常是tabIndex = -1）：表示元素是可聚焦的，但是不能通过tab键走焦来访问到该元素。&lt;br/&gt; **说明：**&lt;br/&gt; tabIndex与focusScopeId不能混用。 |
 
 **返回值：**
 
@@ -9264,6 +9388,8 @@ tabStop(isTabStop: boolean): T
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9295,6 +9421,8 @@ Config toolbar for current component.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CommonMethod-toolbar(value: CustomBuilder): T--><!--Device-CommonMethod-toolbar(value: CustomBuilder): T-End-->
@@ -9319,9 +9447,7 @@ Config toolbar for current component.
 touchable(value: boolean): T
 ```
 
-设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。
-
-> **说明：**
+设置当前组件是否可以响应点击事件、触摸事件等手指交互事件。 > **说明：**
 
 **起始版本：** 7
 
@@ -9359,6 +9485,8 @@ transform(value: object): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CommonMethod-transform(value: object): T--><!--Device-CommonMethod-transform(value: object): T-End-->
@@ -9383,12 +9511,13 @@ transform(value: object): T
 transform(transform: Optional<object>): T
 ```
 
-可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](#transform3D)接口。与  
-[transform](#transform)相比，transform&lt;sup&gt;18+&lt;/sup&gt;参数新增了对undefined类型的支持。
+可用于显示二维变换时的矩阵变换。包含三维变换时应使用[transform3D](#transform3D)接口。与 [transform](#transform)相比，transform&lt;sup&gt;18+&lt;/sup&gt;参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9422,6 +9551,8 @@ transform3D(transform: Optional<Matrix4Transit>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -9454,6 +9585,8 @@ transition(value: TransitionOptions | TransitionEffect): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -9480,15 +9613,13 @@ transition(value: TransitionOptions | TransitionEffect): T
 transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback>): T
 ```
 
-组件插入显示和删除隐藏的过渡效果。同[transition](#transition)相比，增加了转场动画结束的回调。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+组件插入显示和删除隐藏的过渡效果。同[transition](#transition)相比，增加了转场动 画结束的回调。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9525,6 +9656,8 @@ translate(value: TranslateOptions): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -9557,6 +9690,8 @@ translate(translate: Optional<TranslateOptions>): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
@@ -9585,11 +9720,13 @@ translate(translate: Optional<TranslateOptions>): T
 useEffect(useEffect: boolean, effectType: EffectType): T
 ```
 
-用于设置组件是否应用&lt;!--Del--&gt;父级[EffectComponent](effect_component)或&lt;!--DelEnd--&gt;窗口定义的效果模板。
+用于设置组件是否应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。
 
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9618,12 +9755,13 @@ useEffect(useEffect: boolean, effectType: EffectType): T
 useEffect(useEffect: Optional<boolean>, effectType?: EffectType): T
 ```
 
-用于设置组件是否应用&lt;!--Del--&gt;父级[EffectComponent](effect_component)或&lt;!--DelEnd--&gt;窗口定义的效果模板。与  
-[useEffect&lt;sup&gt;14+&lt;/sup&gt;](#useEffect)相比，useEffect参数新增了对undefined类型的支持。
+用于设置组件是否应用&lt;!--Del--&gt;父级EffectComponent或&lt;!--DelEnd--&gt;窗口定义的效果模板。与 [useEffect&lt;sup&gt;14+&lt;/sup&gt;](#useEffect)相比，useEffect参数新增 了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9658,6 +9796,8 @@ useEffect(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -9690,6 +9830,8 @@ useShadowBatching(value: boolean): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -9718,11 +9860,13 @@ useShadowBatching(value: boolean): T
 useShadowBatching(use: Optional<boolean>): T
 ```
 
-控件内部子节点的阴影进行同层绘制，同层元素阴影重叠。与[useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useShadowBatching)相比，use参数新增了对undefined类型的支持。
+控件内部子节点的阴影进行同层绘制，同层元素阴影重叠。与[useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useShadowBatching)相 比，use参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9763,7 +9907,7 @@ Sets the number of occupied columns and offset columns for a specific device wid
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-CommonMethod-useSizeType(value: {    xs?: number | { span: number; offset: number };    sm?: number | { span: number; offset: number };    md?: number | { span: number; offset: number };    lg?: number | { span: number; offset: number };  }): T--><!--Device-CommonMethod-useSizeType(value: {    xs?: number | { span: number; offset: number };    sm?: number | { span: number; offset: number };    md?: number | { span: number; offset: number };    lg?: number | { span: number; offset: number };  }): T-End-->
 
@@ -9793,6 +9937,8 @@ visibility(value: Visibility): T
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -9819,15 +9965,13 @@ visibility(value: Visibility): T
 visualEffect(effect: VisualEffect): T
 ```
 
-设置非滤镜视觉效果。
-
-> **说明：**
-> 
-> 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
+设置非滤镜视觉效果。 > **说明：** > > 从API version 20开始，该接口支持在[attributeModifier](#attributeModifier)中调用。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9855,13 +9999,13 @@ visualEffect(effect: VisualEffect): T
 width(value: Length): T
 ```
 
-设置组件自身的宽度，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。
-
-从API version 10开始，该接口支持calc计算特性。
+设置组件自身的宽度，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。 从API version 10开始，该接口支持calc计算特性。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -9889,13 +10033,13 @@ width(value: Length): T
 width(widthValue: Length | LayoutPolicy): T
 ```
 
-设置组件自身的宽度或水平方向布局策略，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。
-
-从API version 15开始，当参数为Length类型时，该接口支持calc计算特性。
+设置组件自身的宽度或水平方向布局策略，缺省时使用子组件自身内容需要的宽度。若子组件的宽大于父组件的宽，则子组件会溢出显示在父组件外部。 从API version 15开始，当参数为Length类型时，该接口支持calc计算特性。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -9930,6 +10074,8 @@ zIndex(value: number): T
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

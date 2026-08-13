@@ -2,7 +2,9 @@
 
 The enum of light type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum LightType--><!--Device-unnamed-export enum LightType-End-->
 
@@ -16,7 +18,9 @@ DIRECTIONAL = 1
 
 Directional light.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LightType-DIRECTIONAL = 1--><!--Device-LightType-DIRECTIONAL = 1-End-->
 
@@ -30,7 +34,9 @@ SPOT = 2
 
 Spot light.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LightType-SPOT = 2--><!--Device-LightType-SPOT = 2-End-->
 

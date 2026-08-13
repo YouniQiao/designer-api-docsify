@@ -10,6 +10,8 @@ function isSeniorModeEnabled(): Promise<boolean>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-accessibility-function isSeniorModeEnabled(): Promise<boolean>--><!--Device-accessibility-function isSeniorModeEnabled(): Promise<boolean>-End-->
@@ -26,7 +28,7 @@ function isSeniorModeEnabled(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
+| [9300000](../errorcode-accessibility.md#9300000-无障碍系统服务工作异常) |
 
 ## 示例
 

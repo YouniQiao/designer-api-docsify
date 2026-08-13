@@ -2,7 +2,7 @@
 
 Defines XComponent Node.
 
-**Inheritance/Implementation:** XComponentNode extends [FrameNode](FrameNode)
+**Inheritance/Implementation:** XComponentNode extends FrameNode
 
 **Since:** 11
 
@@ -10,9 +10,9 @@ Defines XComponent Node.
 
 **Deprecated since:** 12
 
-**Substitutes:** [XComponent](ohos.arkui.node/typeNode#XComponent)
+**Substitutes:** XComponent
 
-<!--Device-unnamed-export declare class XComponentNode extends FrameNode--><!--Device-unnamed-export declare class XComponentNode extends FrameNode-End-->
+<!--Device-unnamed-export declare class XComponentNode--><!--Device-unnamed-export declare class XComponentNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,7 +30,7 @@ Set the render type of the builderNode.
 
 **Deprecated since:** 12
 
-**Substitutes:** [appendChild](ohos.arkui.node/FrameNode#appendChild)
+**Substitutes:** appendChild
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +42,7 @@ Set the render type of the builderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md) | Yes | render type |
+| type | [NodeRenderType](../../apis-na/arkts-apis/arkts-na-buildernode-noderendertype-e.md) | Yes | render type |
 
 **Return value:**
 
@@ -65,7 +65,7 @@ constructor.
 
 **Deprecated since:** 12
 
-**Substitutes:** [createNode](ohos.arkui.node/typeNode#createNode)
+**Substitutes:** createNode
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ constructor.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UIContext used to create the FrameNode |
-| options | [RenderOptions](arkts-arkui-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
+| options | [RenderOptions](../../apis-na/arkts-apis/arkts-na-buildernode-renderoptions-i.md) | Yes | Render options of the Builder Node |
 | id | string | Yes | XComponent id defined by the application |
 | type | XComponentType | Yes | XComponent type |
 | libraryName | string | No | The name of the library to be loaded by XComponent |
@@ -97,7 +97,7 @@ Called when the XComponent surface has been created.
 
 **Deprecated since:** 12
 
-**Substitutes:** [onLoad](XComponent/XComponentAttribute#onLoad)
+**Substitutes:** onLoad
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -125,7 +125,7 @@ Called when the XComponent surface has been destroyed.
 
 **Deprecated since:** 12
 
-**Substitutes:** [onDestroy](XComponent/XComponentAttribute#onDestroy)
+**Substitutes:** onDestroy
 
 **Model restriction:** This API can be used only in the stage model.
 

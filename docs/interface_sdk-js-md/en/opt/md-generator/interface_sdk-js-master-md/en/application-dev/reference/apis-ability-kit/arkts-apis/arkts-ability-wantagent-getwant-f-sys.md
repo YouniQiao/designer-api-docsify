@@ -12,9 +12,11 @@ import { WantAgent } from '@kit.AbilityKit';
 function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 ```
 
-Obtains the Want in a WantAgent object.This API uses an asynchronous callback to return the result.
+Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void--><!--Device-wantAgent-function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void-End-->
 
@@ -33,10 +35,10 @@ Obtains the Want in a WantAgent object.This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-service-unresponsive) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) |
-| [16000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000015-service-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| [16000015](../errorcode-ability.md#16000015-service-timeout) |
 
 
 ## getWant
@@ -45,9 +47,11 @@ Obtains the Want in a WantAgent object.This API uses an asynchronous callback to
 function getWant(agent: WantAgent): Promise<Want>
 ```
 
-Obtains the Want in a WantAgent object.This API uses a promise to return the result.
+Obtains the Want in a WantAgent object. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>--><!--Device-wantAgent-function getWant(agent: WantAgent): Promise<Want>-End-->
 
@@ -71,7 +75,7 @@ Obtains the Want in a WantAgent object.This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000007-service-unresponsive) |
-| [16000151](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000151-invalid-wantagent-object) |
-| [16000015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000015-service-timeout) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000007](../errorcode-ability.md#16000007-service-unresponsive) |
+| [16000151](../errorcode-ability.md#16000151-invalid-wantagent-object) |
+| [16000015](../errorcode-ability.md#16000015-service-timeout) |

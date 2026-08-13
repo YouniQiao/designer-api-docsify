@@ -1,11 +1,10 @@
 # AudioManager
 
-This interface implements audio volume and device management.
+This interface implements audio volume and device management. Before calling any API in AudioManager, you must use [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) to obtain an AudioManager instance.
 
-Before calling any API in AudioManager, you must use  
-[getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getAudioManager) to obtain an AudioManager instance.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioManager--><!--Device-audio-interface AudioManager-End-->
 
@@ -25,7 +24,9 @@ disableSafeMediaVolume(): Promise<void>
 
 user disable the safe media volume state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -45,8 +46,8 @@ user disable the safe media volume state.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -68,7 +69,9 @@ getCollaborativeManager(): AudioCollaborativeManager
 
 Obtains a collaborative playback management instance.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager--><!--Device-AudioManager-getCollaborativeManager(): AudioCollaborativeManager-End-->
 
@@ -86,7 +89,7 @@ Obtains a collaborative playback management instance.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getEffectManager
 
@@ -94,9 +97,11 @@ Obtains a collaborative playback management instance.
 getEffectManager(): AudioEffectManager
 ```
 
-Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager) instance.
+Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#AudioEffectManager-(System-API)) instance.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getEffectManager(): AudioEffectManager--><!--Device-AudioManager-getEffectManager(): AudioEffectManager-End-->
 
@@ -114,7 +119,7 @@ Obtains an [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md#Au
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -132,7 +137,9 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 
 Obtains the values of a certain key. This method uses a promise to return the query result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>--><!--Device-AudioManager-getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<string, string>>-End-->
 
@@ -151,15 +158,15 @@ Obtains the values of a certain key. This method uses a promise to return the qu
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;&gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;&gt; |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -174,7 +181,42 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 });
 ```
 
-## on('volumeChange')
+## on_ringerModeChange
+
+```TypeScript
+on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
+```
+
+Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** ringerModeChange
+
+<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Communication
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'ringerModeChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes |
+
+## Examples
+
+```TypeScript
+audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
+  console.info(`Updated ringermode: ${ringerMode}`);
+});
+```
+
+## on_volumeChange
 
 ```TypeScript
 on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
@@ -186,7 +228,7 @@ Listens for system volume change events. This method uses a callback to get volu
 
 **Deprecated since:** 9
 
-**Substitutes:** [volumeChange](ohos.multimedia.audio.AudioVolumeManager#event:volumeChange)
+**Substitutes:** volumeChange
 
 <!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void--><!--Device-AudioManager-on(type: 'volumeChange', callback: Callback<VolumeEvent>): void-End-->
 
@@ -211,41 +253,6 @@ audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
 });
 ```
 
-## on('ringerModeChange')
-
-```TypeScript
-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
-```
-
-Listens for ringer mode change events. This method uses a callback to get ringer mode changes.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [ringerModeChange](ohos.multimedia.audio.AudioVolumeGroupManager#event:ringerModeChange)
-
-<!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void--><!--Device-AudioManager-on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Communication
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'ringerModeChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | Yes |
-
-## Examples
-
-```TypeScript
-audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
-  console.info(`Updated ringermode: ${ringerMode}`);
-});
-```
-
 ## setAudioScene
 
 ```TypeScript
@@ -254,7 +261,9 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void
 
 Sets the audio scene mode to change audio strategies. This method uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void--><!--Device-AudioManager-setAudioScene(scene: AudioScene, callback: AsyncCallback<void>): void-End-->
 
@@ -291,7 +300,9 @@ setAudioScene(scene: AudioScene): Promise<void>
 
 Sets the audio scene mode to change audio strategies. This method uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>--><!--Device-AudioManager-setAudioScene(scene: AudioScene): Promise<void>-End-->
 
@@ -331,7 +342,9 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 
 Sets extra audio parameters. This method uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MODIFY_AUDIO_SETTINGS
 
@@ -346,7 +359,7 @@ Sets extra audio parameters. This method uses a promise to return the result.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | mainKey | string | Yes |
-| kvpairs | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes |
+| kvpairs | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; | Yes |
 
 **Return value:**
 
@@ -358,10 +371,10 @@ Sets extra audio parameters. This method uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

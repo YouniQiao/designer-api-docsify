@@ -1,12 +1,10 @@
 # Screen (System API)
 
-Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.
+Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance. Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md#getAllScreens-(System-API)) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md#createVirtualScreen-(System-API)) to obtain a Screen instance.
 
-Before calling any API in Screen, you must use  
-[getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md#getAllScreens) or  
-[createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md#createVirtualScreen)to obtain a Screen instance.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-screen-interface Screen--><!--Device-screen-interface Screen-End-->
 
@@ -28,7 +26,9 @@ setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
 
 Sets the pixel density of the screen. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void--><!--Device-Screen-setDensityDpi(densityDpi: double, callback: AsyncCallback<void>): void-End-->
 
@@ -47,9 +47,9 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -101,7 +101,9 @@ setDensityDpi(densityDpi: number): Promise<void>
 
 Sets the pixel density of the screen. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>--><!--Device-Screen-setDensityDpi(densityDpi: double): Promise<void>-End-->
 
@@ -125,9 +127,9 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -174,11 +176,11 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 ```
 
-Sets the screen orientation. This API uses an asynchronous callback to return the result. The screen orientation changes only when the specified orientation complies with the  
-[application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the  
-**module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
+Sets the screen orientation. This API uses an asynchronous callback to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void--><!--Device-Screen-setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void-End-->
 
@@ -197,9 +199,9 @@ Sets the screen orientation. This API uses an asynchronous callback to return th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -248,11 +250,11 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 setOrientation(orientation: Orientation): Promise<void>
 ```
 
-Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the  
-[application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the  
-**module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
+Sets the screen orientation. This API uses a promise to return the result. The screen orientation changes only when the specified orientation complies with the [application rotation policy](../../../quick-start/module-configuration-file.md#abilities) (you can configure the application rotation policy by setting the **orientation** field in the **abilities** tag in the **module.json5** file). If the specified orientation does not comply with the application rotation policy, the screen orientation does not change and no exception is thrown.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation): Promise<void>-End-->
 
@@ -276,9 +278,9 @@ Sets the screen orientation. This API uses a promise to return the result. The s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -329,6 +331,8 @@ Set the orientation of the screen
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>--><!--Device-Screen-setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions): Promise<void>-End-->
@@ -354,9 +358,9 @@ Set the orientation of the screen
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -395,7 +399,9 @@ setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
 
 Sets the active mode of the screen. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void--><!--Device-Screen-setScreenActiveMode(modeIndex: long, callback: AsyncCallback<void>): void-End-->
 
@@ -414,9 +420,9 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -468,7 +474,9 @@ setScreenActiveMode(modeIndex: number): Promise<void>
 
 Sets the active mode of the screen. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>--><!--Device-Screen-setScreenActiveMode(modeIndex: long): Promise<void>-End-->
 
@@ -492,9 +500,9 @@ Sets the active mode of the screen. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -546,7 +554,9 @@ Index of the active screen mode. The current value and value range of this param
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly activeModeIndex: long--><!--Device-Screen-readonly activeModeIndex: long-End-->
 
@@ -566,6 +576,8 @@ Physical pixel density of the screen, that is, the number of pixels per inch.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Screen-readonly densityDpi?: double--><!--Device-Screen-readonly densityDpi?: double-End-->
@@ -584,7 +596,9 @@ Screen ID, which is an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly id: long--><!--Device-Screen-readonly id: long-End-->
 
@@ -604,6 +618,8 @@ The screen is in use
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Screen-readonly isInUse?: boolean--><!--Device-Screen-readonly isInUse?: boolean-End-->
@@ -622,7 +638,9 @@ Screen orientation.
 
 **Type:** Orientation
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly orientation: Orientation--><!--Device-Screen-readonly orientation: Orientation-End-->
 
@@ -640,7 +658,9 @@ ID of the group to which a screen belongs, where the ID is an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly parent: long--><!--Device-Screen-readonly parent: long-End-->
 
@@ -658,7 +678,9 @@ Screen port ID, which is an integer.
 
 **Type:** number
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly rsId: long--><!--Device-Screen-readonly rsId: long-End-->
 
@@ -678,6 +700,8 @@ Screen type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Screen-readonly screenType?: ScreenType--><!--Device-Screen-readonly screenType?: ScreenType-End-->
@@ -696,7 +720,9 @@ Serial number of the extended screen. By default, the value is an empty string.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly serialNumber?: string--><!--Device-Screen-readonly serialNumber?: string-End-->
 
@@ -714,7 +740,9 @@ Source mode of the screen
 
 **Type:** [ScreenSourceMode](arkts-arkui-screen-screensourcemode-e-sys.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly sourceMode: ScreenSourceMode--><!--Device-Screen-readonly sourceMode: ScreenSourceMode-End-->
 
@@ -732,7 +760,9 @@ Mode set supported by the screen.
 
 **Type:** Array&lt;[ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md)&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>--><!--Device-Screen-readonly supportedModeInfo: Array<ScreenModeInfo>-End-->
 

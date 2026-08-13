@@ -2,7 +2,9 @@
 
 Defines the time information for a calendar reminder.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface LocalDateTime--><!--Device-reminderAgentManager-interface LocalDateTime-End-->
 
@@ -24,7 +26,9 @@ Day. The value ranges from 1 to 31.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalDateTime-day: int--><!--Device-LocalDateTime-day: int-End-->
 
@@ -40,7 +44,9 @@ Hour. The value ranges from 0 to 23.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalDateTime-hour: int--><!--Device-LocalDateTime-hour: int-End-->
 
@@ -56,7 +62,9 @@ Minute. The value ranges from 0 to 59.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalDateTime-minute: int--><!--Device-LocalDateTime-minute: int-End-->
 
@@ -72,7 +80,9 @@ Month. The value ranges from 1 to 12.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalDateTime-month: int--><!--Device-LocalDateTime-month: int-End-->
 
@@ -88,7 +98,9 @@ Second. The value ranges from 0 to 59.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalDateTime-second?: int--><!--Device-LocalDateTime-second?: int-End-->
 
@@ -104,7 +116,9 @@ Year.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalDateTime-year: int--><!--Device-LocalDateTime-year: int-End-->
 

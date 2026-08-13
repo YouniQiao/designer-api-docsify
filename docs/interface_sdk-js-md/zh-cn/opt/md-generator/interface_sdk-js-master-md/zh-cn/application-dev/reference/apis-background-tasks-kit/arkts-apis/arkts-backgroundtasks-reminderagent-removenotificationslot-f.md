@@ -12,7 +12,7 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [removeNotificationSlot](reminderAgentManager.removeNotificationSlot)
+**替代接口：** removeNotificationSlot
 
 <!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -50,7 +50,7 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeNotificationSlot](reminderAgentManager.removeNotificationSlot)
+**替代接口：** removeNotificationSlot
 
 <!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgent-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 

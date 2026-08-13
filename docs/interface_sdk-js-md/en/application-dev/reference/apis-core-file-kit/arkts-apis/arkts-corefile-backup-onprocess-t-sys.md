@@ -4,11 +4,13 @@
 type OnProcess = (bundleName: string, process: string) => void
 ```
 
-function that returns backup datasize by bundleName.Callback called when the backup_sa service return result information.The first return string parameter indicates the result of the bundle.
+function that returns backup datasize by bundleName. Callback called when the backup_sa service return result information. The first return string parameter indicates the result of the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

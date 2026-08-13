@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [SubscribeType](ohos.data.distributedKVStore.SubscribeType)
+**替代接口：** SubscribeType
 
 <!--Device-distributedData-enum SubscribeType--><!--Device-distributedData-enum SubscribeType-End-->
 
@@ -24,7 +24,7 @@ SUBSCRIBE_TYPE_LOCAL = 0
 
 **废弃版本：** 9
 
-**替代接口：** [SUBSCRIBE_TYPE_LOCAL](ohos.data.distributedKVStore.SubscribeType#SUBSCRIBE_TYPE_LOCAL)
+**替代接口：** SUBSCRIBE_TYPE_LOCAL
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0-End-->
 
@@ -42,7 +42,7 @@ SUBSCRIBE_TYPE_REMOTE = 1
 
 **废弃版本：** 9
 
-**替代接口：** [SUBSCRIBE_TYPE_REMOTE](ohos.data.distributedKVStore.SubscribeType#SUBSCRIBE_TYPE_REMOTE)
+**替代接口：** SUBSCRIBE_TYPE_REMOTE
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1-End-->
 
@@ -60,7 +60,7 @@ SUBSCRIBE_TYPE_ALL = 2
 
 **废弃版本：** 9
 
-**替代接口：** [SUBSCRIBE_TYPE_ALL](ohos.data.distributedKVStore.SubscribeType#SUBSCRIBE_TYPE_ALL)
+**替代接口：** SUBSCRIBE_TYPE_ALL
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2--><!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2-End-->
 

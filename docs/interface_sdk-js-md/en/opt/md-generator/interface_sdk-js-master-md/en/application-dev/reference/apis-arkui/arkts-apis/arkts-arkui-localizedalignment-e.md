@@ -4,6 +4,8 @@ LocalizedAlignment enumeration description.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum LocalizedAlignment--><!--Device-unnamed-declare enum LocalizedAlignment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TOP_START = "top_start"
 Top Start.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ The top is centered horizontally.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -57,6 +63,8 @@ TOP_END = "top_end"
 Top tail end.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +86,8 @@ The starting end is centered longitudinally.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -97,6 +107,8 @@ CENTER = "center"
 Center horizontal and vertical.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,6 +130,8 @@ The tail end is centered longitudinally.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -137,6 +151,8 @@ BOTTOM_START = "bottom_start"
 Bottom starting end.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -158,6 +174,8 @@ The bottom is centered horizontally.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -177,6 +195,8 @@ BOTTOM_END = "bottom_end"
 Bottom end.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

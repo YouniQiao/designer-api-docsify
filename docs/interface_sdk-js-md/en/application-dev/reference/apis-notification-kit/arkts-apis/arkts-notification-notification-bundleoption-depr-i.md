@@ -8,7 +8,7 @@ Describes the **BundleOption** information, that is, the bundle information of a
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleOption](.ohos.notificationManager/notificationManager#BundleOption)
+**Substitutes:** BundleOption
 
 <!--Device-notification-export interface BundleOption--><!--Device-notification-export interface BundleOption-End-->
 
@@ -30,7 +30,7 @@ Bundle information of the application.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleOption](ohos.notificationManager/notificationManager#BundleOption)
+**Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#BundleOption)
 
 <!--Device-BundleOption-bundle: string--><!--Device-BundleOption-bundle: string-End-->
 
@@ -52,7 +52,7 @@ User ID. The default value is 0.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BundleOption](ohos.notificationManager/notificationManager#BundleOption)
+**Substitutes:** [BundleOption](arkts-notification-notificationmanager-bundleoption-t.md#BundleOption)
 
 <!--Device-BundleOption-uid?: number--><!--Device-BundleOption-uid?: number-End-->
 

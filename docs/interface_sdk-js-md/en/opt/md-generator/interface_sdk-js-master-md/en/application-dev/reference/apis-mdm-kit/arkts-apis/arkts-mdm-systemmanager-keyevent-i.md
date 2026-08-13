@@ -1,9 +1,10 @@
 # KeyEvent
 
-Enumerates key events. When the  
-[EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent)key event callback is triggered, the current key event information is transferred.
+Enumerates key events. When the [EnterpriseAdminExtensionAbility.onKeyEvent](arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md#onKeyEvent) key event callback is triggered, the current key event information is transferred.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-systemManager-interface KeyEvent--><!--Device-systemManager-interface KeyEvent-End-->
 
@@ -27,6 +28,8 @@ Time when the key action occurs. The value is a microsecond-level timestamp afte
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyEvent-actionTime: number--><!--Device-KeyEvent-actionTime: number-End-->
@@ -44,6 +47,8 @@ Key action.
 **Type:** [KeyAction](arkts-mdm-systemmanager-keyaction-e.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,6 +68,8 @@ Key code.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyEvent-keyCode: KeyCode--><!--Device-KeyEvent-keyCode: KeyCode-End-->
@@ -80,6 +87,8 @@ Information about other keys that are being pressed when the current key event o
 **Type:** Array&lt;[KeyItem](arkts-mdm-systemmanager-keyitem-i.md)&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

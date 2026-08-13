@@ -12,19 +12,17 @@ import { screenshot } from '@kit.ArkUI';
 function capture(options?: CaptureOption): Promise<image.PixelMap>
 ```
 
-Takes a screenshot of the entire screen. This API uses a promise to return the result.
+Takes a screenshot of the entire screen. This API uses a promise to return the result. This API allows you to take screenshots of different screens by setting various **displayId** values, but only full -screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md#pick) API allows you to take screenshots of a specified region.
 
-This API allows you to take screenshots of different screens by setting various **displayId** values, but only full  
--screen captures are supported. The [pick](arkts-arkui-screenshot-pick-f.md#pick) API allows you to take screenshots of a specified  
-region.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 22+: ohos.permission.CUSTOM_SCREEN_CAPTURE or ohos.permission.CUSTOM_SCREEN_RECORDING
 - API version 14 - 21: ohos.permission.CUSTOM_SCREEN_CAPTURE
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-screenshot-function capture(options?: CaptureOption): Promise<image.PixelMap>--><!--Device-screenshot-function capture(options?: CaptureOption): Promise<image.PixelMap>-End-->
 
@@ -46,10 +44,10 @@ region.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

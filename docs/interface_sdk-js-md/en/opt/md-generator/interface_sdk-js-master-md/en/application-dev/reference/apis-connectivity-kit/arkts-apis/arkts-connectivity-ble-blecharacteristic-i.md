@@ -2,7 +2,9 @@
 
 Describes the Gatt characteristic.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface BLECharacteristic--><!--Device-ble-interface BLECharacteristic-End-->
 
@@ -24,7 +26,9 @@ The UUID of a BLECharacteristic instance
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ The value of a BLECharacteristic instance
 
 **Type:** ArrayBuffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,11 +70,13 @@ The characteristic value handle of a BLECharacteristic instance
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BLECharacteristic-characteristicValueHandle?: int--><!--Device-BLECharacteristic-characteristicValueHandle?: int-End-->
 
@@ -84,7 +92,9 @@ The list of [BLEDescriptor](arkts-connectivity-ble-bledescriptor-i.md#BLEDescrip
 
 **Type:** Array&lt;BLEDescriptor&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,11 +114,13 @@ The permissions of a BLECharacteristic instance. The default value is Readable a
 
 **Type:** [GattPermissions](arkts-connectivity-ble-gattpermissions-i.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-BLECharacteristic-permissions?: GattPermissions--><!--Device-BLECharacteristic-permissions?: GattPermissions-End-->
 
@@ -124,7 +136,9 @@ The properties of a BLECharacteristic instance
 
 **Type:** [GattProperties](arkts-connectivity-ble-gattproperties-i.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,7 +158,9 @@ The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#GattServic
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

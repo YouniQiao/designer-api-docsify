@@ -6,6 +6,8 @@ Represents IP configuration information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-wifiManager-interface IpProfile--><!--Device-wifiManager-interface IpProfile-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -30,6 +32,8 @@ DNS server. The array can contain a maximum of two addresses: the primary DNS se
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IpProfile-dnsServers: number[]--><!--Device-IpProfile-dnsServers: number[]-End-->
@@ -50,6 +54,8 @@ Domain information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-IpProfile-domains: Array<string>--><!--Device-IpProfile-domains: Array<string>-End-->
@@ -62,13 +68,15 @@ Domain information.
 gateway: number
 ```
 
-Default gateway, represented in decimal format, usually the IP address of the router. The address ranges from 0.0.0.0 to 255.255.255.255.
+Default gateway, represented in decimal format, usually the IP address of the router. The address ranges from 0.0 .0.0 to 255.255.255.255.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,13 +90,15 @@ Default gateway, represented in decimal format, usually the IP address of the ro
 ipAddress: number
 ```
 
-IP address, represented in decimal format. For example, the standard dotted decimal notation **192.168.1.1**corresponds to the decimal value **3232235777**. The address ranges from 0.0.0.0 to 255.255.255.255.
+IP address, represented in decimal format. For example, the standard dotted decimal notation **192.168.1.1** corresponds to the decimal value **3232235777**. The address ranges from 0.0.0.0 to 255.255.255.255.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,6 +119,8 @@ Subnet mask. The address ranges from 0.0.0.0 to 255.255.255.255.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

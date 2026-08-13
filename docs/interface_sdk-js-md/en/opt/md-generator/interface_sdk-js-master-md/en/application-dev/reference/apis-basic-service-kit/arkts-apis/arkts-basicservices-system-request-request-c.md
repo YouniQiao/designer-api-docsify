@@ -28,7 +28,7 @@ Downloads a file. This API returns no value.
 
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](@ohos.request:request.downloadFile(context:)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
 
 <!--Device-Request-static download(options: DownloadRequestOptions): void--><!--Device-Request-static download(options: DownloadRequestOptions): void-End-->
 
@@ -52,7 +52,7 @@ Listens for download task status. This API returns no value.
 
 **Deprecated since:** 9
 
-**Substitutes:** [show](ohos.request.agent.Task.show(id:)
+**Substitutes:** show(id: string)
 
 <!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void--><!--Device-Request-static onDownloadComplete(options: OnDownloadCompleteOptions): void-End-->
 
@@ -76,7 +76,7 @@ Uploads a file. This API returns no value.
 
 **Deprecated since:** 9
 
-**Substitutes:** [uploadFile](@ohos.request:request.uploadFile(context:)
+**Substitutes:** [uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile)(context: BaseContext, config: UploadConfig)
 
 <!--Device-Request-static upload(options: UploadRequestOptions): void--><!--Device-Request-static upload(options: UploadRequestOptions): void-End-->
 

@@ -8,7 +8,7 @@ Defines the response of ShowDialog.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogSuccessResponse](ohos.promptAction/promptAction.ShowDialogSuccessResponse)
+**Substitutes:** [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#ShowDialogSuccessResponse)
 
 <!--Device-prompt-interface ShowDialogSuccessResponse--><!--Device-prompt-interface ShowDialogSuccessResponse-End-->
 
@@ -36,7 +36,7 @@ Defines the index of data.
 
 **Deprecated since:** 9
 
-**Substitutes:** [index](ohos.promptAction/promptAction.ShowDialogSuccessResponse#index)
+**Substitutes:** [index](arkts-arkui-promptaction-showdialogsuccessresponse-i.md#index)
 
 <!--Device-ShowDialogSuccessResponse-index: number--><!--Device-ShowDialogSuccessResponse-index: number-End-->
 

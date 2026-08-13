@@ -6,6 +6,8 @@ Defines a local address.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface LocalAddress--><!--Device-socket-export interface LocalAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -29,6 +31,8 @@ LocalAddress address.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-LocalAddress-address: string--><!--Device-LocalAddress-address: string-End-->
 

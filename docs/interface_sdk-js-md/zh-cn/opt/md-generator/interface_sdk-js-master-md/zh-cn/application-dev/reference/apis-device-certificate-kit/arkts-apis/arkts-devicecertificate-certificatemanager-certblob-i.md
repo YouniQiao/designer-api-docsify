@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-certificateManager-export interface CertBlob--><!--Device-certificateManager-export interface CertBlob-End-->
 
 **系统能力：** SystemCapability.Security.CertificateManager
@@ -20,6 +22,8 @@ certData: Uint8Array
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CertBlob-certData: Uint8Array--><!--Device-CertBlob-certData: Uint8Array-End-->
@@ -32,11 +36,13 @@ certData: Uint8Array
 certFormat? : CertFileFormat
 ```
 
-表示证书文件格式。默认值：PEM_DER。
+表示证书文件格式。 默认值：PEM_DER。
 
 **类型：** [CertFileFormat](arkts-devicecertificate-certificatemanager-certfileformat-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +56,13 @@ certFormat? : CertFileFormat
 certScope? : CertScope
 ```
 
-表示用户CA证书的存储位置。默认值：CURRENT_USER。
+表示用户CA证书的存储位置。 默认值：CURRENT_USER。
 
 **类型：** [CertScope](arkts-devicecertificate-certificatemanager-certscope-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

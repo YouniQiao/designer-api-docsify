@@ -1,10 +1,10 @@
 # @ohos.app.ability.continueManager
 
-continueManager提供了应用跨端迁移的管理能力，如获取应用跨端迁移过程中快速拉起目标应用的结果。
+continueManager提供了应用跨端迁移的管理能力，如获取应用跨端迁移过程中快速拉起目标应用的结果。 > 本模块接口仅可在Stage模型下使用。
 
-> 本模块接口仅可在Stage模型下使用。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -18,8 +18,10 @@ continueManager提供了应用跨端迁移的管理能力，如获取应用跨�
 
 | 名称 |
 | --- |
-| [off](arkts-ability-continuemanager-off-f.md#off) |
-| [on](arkts-ability-continuemanager-on-f.md#on) |
+| [offPrepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md#offPrepareContinue) |
+| [off_prepareContinue](arkts-ability-continuemanager-offpreparecontinue-f.md) |
+| [onPrepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md#onPrepareContinue) |
+| [on_prepareContinue](arkts-ability-continuemanager-onpreparecontinue-f.md) |
 
 ### 接口
 

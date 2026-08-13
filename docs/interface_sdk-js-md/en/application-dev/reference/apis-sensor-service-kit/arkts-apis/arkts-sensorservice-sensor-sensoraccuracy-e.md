@@ -2,9 +2,11 @@
 
 Enumerates the accuracy levels of sensor data.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-enum SensorAccuracy--><!--Device-sensor-enum SensorAccuracy-End-->
 
@@ -18,11 +20,13 @@ ACCURACY_UNRELIABLE = 0
 
 The sensor data is unreliable.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0--><!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0-End-->
 
@@ -36,11 +40,13 @@ ACCURACY_LOW = 1
 
 The sensor data is at a low accuracy level.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SensorAccuracy-ACCURACY_LOW = 1--><!--Device-SensorAccuracy-ACCURACY_LOW = 1-End-->
 
@@ -54,11 +60,13 @@ ACCURACY_MEDIUM = 2
 
 The sensor data is at a medium accuracy level.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2--><!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2-End-->
 
@@ -72,11 +80,13 @@ ACCURACY_HIGH = 3
 
 The sensor data is at a high accuracy level.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SensorAccuracy-ACCURACY_HIGH = 3--><!--Device-SensorAccuracy-ACCURACY_HIGH = 3-End-->
 

@@ -2,9 +2,11 @@
 
 Defines the personalized lock information.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface LockStatusResponse--><!--Device-sim-export interface LockStatusResponse-End-->
 
@@ -26,11 +28,13 @@ remain?: int
 
 Indicates the operations remaining.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LockStatusResponse-remain?: int--><!--Device-LockStatusResponse-remain?: int-End-->
 
@@ -46,11 +50,13 @@ result: int
 
 Indicates the current operation result.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LockStatusResponse-result: int--><!--Device-LockStatusResponse-result: int-End-->
 

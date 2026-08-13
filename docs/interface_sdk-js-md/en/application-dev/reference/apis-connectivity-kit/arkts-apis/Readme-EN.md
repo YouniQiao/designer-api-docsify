@@ -45,8 +45,8 @@
       - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
       - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
       - [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
-      - [off](arkts-connectivity-ble-off-f.md)
-      - [on](arkts-connectivity-ble-on-f.md)
+      - [off_BLEDeviceFind](arkts-connectivity-ble-offbledevicefind-f.md)
+      - [on_BLEDeviceFind](arkts-connectivity-ble-onbledevicefind-f.md)
       - [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
       - [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md)
     <!--Del-->
@@ -62,8 +62,16 @@
     - [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md)
     - [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md)
     - [getState](arkts-connectivity-bluetooth-getstate-f.md)
-    - [off](arkts-connectivity-bluetooth-off-f.md)
-    - [on](arkts-connectivity-bluetooth-on-f.md)
+    - [off_bluetoothDeviceFind](arkts-connectivity-bluetooth-offbluetoothdevicefind-f.md)
+    - [off_bondStateChange](arkts-connectivity-bluetooth-offbondstatechange-f.md)
+    - [off_pinRequired](arkts-connectivity-bluetooth-offpinrequired-f.md)
+    - [off_sppRead](arkts-connectivity-bluetooth-offsppread-f.md)
+    - [off_stateChange](arkts-connectivity-bluetooth-offstatechange-f.md)
+    - [on_bluetoothDeviceFind](arkts-connectivity-bluetooth-onbluetoothdevicefind-f.md)
+    - [on_bondStateChange](arkts-connectivity-bluetooth-onbondstatechange-f.md)
+    - [on_pinRequired](arkts-connectivity-bluetooth-onpinrequired-f.md)
+    - [on_sppRead](arkts-connectivity-bluetooth-onsppread-f.md)
+    - [on_stateChange](arkts-connectivity-bluetooth-onstatechange-f.md)
     - [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md)
     - [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md)
     - [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md)
@@ -147,9 +155,9 @@
   - [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md)
   <!--Del-->
   - [notifyDialogResult(system api)](arkts-connectivity-access-notifydialogresult-f-sys.md)<!--DelEnd-->
-  - [off](arkts-connectivity-access-off-f.md)
+  - [off_stateChange](arkts-connectivity-access-offstatechange-f.md)
   - [offStateChange](arkts-connectivity-access-offstatechange-f.md)
-  - [on](arkts-connectivity-access-on-f.md)
+  - [on_stateChange](arkts-connectivity-access-onstatechange-f.md)
   - [onStateChange](arkts-connectivity-access-onstatechange-f.md)
   <!--Del-->
   - [restrictBluetooth(system api)](arkts-connectivity-access-restrictbluetooth-f-sys.md)<!--DelEnd-->
@@ -188,10 +196,12 @@
   - [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md)
   - [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md)
   - [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
-  - [off](arkts-connectivity-ble-off-f.md)
+  - [off_advertisingStateChange](arkts-connectivity-ble-offadvertisingstatechange-f.md)
+  - [off_BLEDeviceFind](arkts-connectivity-ble-offbledevicefind-f.md)
   - [offAdvertisingStateChange](arkts-connectivity-ble-offadvertisingstatechange-f.md)
   - [offBLEDeviceFind](arkts-connectivity-ble-offbledevicefind-f.md)
-  - [on](arkts-connectivity-ble-on-f.md)
+  - [on_advertisingStateChange](arkts-connectivity-ble-onadvertisingstatechange-f.md)
+  - [on_BLEDeviceFind](arkts-connectivity-ble-onbledevicefind-f.md)
   - [onAdvertisingStateChange](arkts-connectivity-ble-onadvertisingstatechange-f.md)
   - [onBLEDeviceFind](arkts-connectivity-ble-onbledevicefind-f.md)
   - [startAdvertising](arkts-connectivity-ble-startadvertising-f.md)
@@ -263,10 +273,10 @@
   - [cancelPairedDevice(system api)](arkts-connectivity-connection-cancelpaireddevice-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [cancelPairingDevice(system api)](arkts-connectivity-connection-cancelpairingdevice-f-sys.md)<!--DelEnd-->
-  - [connectAllowedProfiles](arkts-connectivity-connection-connectallowedprofiles-f.md)
+  <!--Del-->
+  - [connectAllowedProfiles(system api)](arkts-connectivity-connection-connectallowedprofiles-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [controlDeviceAction(system api)](arkts-connectivity-connection-controldeviceaction-f-sys.md)<!--DelEnd-->
-  - [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f.md)
   <!--Del-->
   - [disconnectAllowedProfiles(system api)](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -289,10 +299,16 @@
   - [getRemoteDeviceType(system api)](arkts-connectivity-connection-getremotedevicetype-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getRemoteProductId(system api)](arkts-connectivity-connection-getremoteproductid-f-sys.md)<!--DelEnd-->
-  - [getRemoteProfileUuids](arkts-connectivity-connection-getremoteprofileuuids-f.md)
+  <!--Del-->
+  - [getRemoteProfileUuids(system api)](arkts-connectivity-connection-getremoteprofileuuids-f-sys.md)<!--DelEnd-->
   - [getVirtualAddressByHash](arkts-connectivity-connection-getvirtualaddressbyhash-f.md)
   - [isBluetoothDiscovering](arkts-connectivity-connection-isbluetoothdiscovering-f.md)
-  - [off](arkts-connectivity-connection-off-f.md)
+  - [off_batteryChange](arkts-connectivity-connection-offbatterychange-f.md)
+  - [off_bluetoothDeviceFind](arkts-connectivity-connection-offbluetoothdevicefind-f.md)
+  - [off_bondStateChange](arkts-connectivity-connection-offbondstatechange-f.md)
+  <!--Del-->
+  - [off_discoveryResult(system api)](arkts-connectivity-connection-offdiscoveryresult-f-sys.md)<!--DelEnd-->
+  - [off_pinRequired](arkts-connectivity-connection-offpinrequired-f.md)
   - [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md)
   - [offBatteryChange](arkts-connectivity-connection-offbatterychange-f.md)
   - [offBluetoothDeviceFind](arkts-connectivity-connection-offbluetoothdevicefind-f.md)
@@ -300,7 +316,12 @@
   - [offDiscoveryResult](arkts-connectivity-connection-offdiscoveryresult-f.md)
   - [offPinRequired](arkts-connectivity-connection-offpinrequired-f.md)
   - [offScanModeChange](arkts-connectivity-connection-offscanmodechange-f.md)
-  - [on](arkts-connectivity-connection-on-f.md)
+  - [on_batteryChange](arkts-connectivity-connection-onbatterychange-f.md)
+  - [on_bluetoothDeviceFind](arkts-connectivity-connection-onbluetoothdevicefind-f.md)
+  - [on_bondStateChange](arkts-connectivity-connection-onbondstatechange-f.md)
+  <!--Del-->
+  - [on_discoveryResult(system api)](arkts-connectivity-connection-ondiscoveryresult-f-sys.md)<!--DelEnd-->
+  - [on_pinRequired](arkts-connectivity-connection-onpinrequired-f.md)
   - [onAclStateChange](arkts-connectivity-connection-onaclstatechange-f.md)
   - [onBatteryChange](arkts-connectivity-connection-onbatterychange-f.md)
   - [onBluetoothDeviceFind](arkts-connectivity-connection-onbluetoothdevicefind-f.md)
@@ -336,7 +357,8 @@
   <!--Del-->
   - [ControlDeviceActionParams(system api)](arkts-connectivity-connection-controldeviceactionparams-i-sys.md)<!--DelEnd-->
   - [DeviceClass](arkts-connectivity-connection-deviceclass-i.md)
-  - [DiscoveryResult](arkts-connectivity-connection-discoveryresult-i.md)
+  <!--Del-->
+  - [DiscoveryResult(system api)](arkts-connectivity-connection-discoveryresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OobData(system api)](arkts-connectivity-connection-oobdata-i-sys.md)<!--DelEnd-->
   - [PinRequiredParam](arkts-connectivity-connection-pinrequiredparam-i.md)
@@ -351,7 +373,8 @@
   - [MajorMinorClass](arkts-connectivity-connection-majorminorclass-t.md)
   - [ProfileConnectionState](arkts-connectivity-connection-profileconnectionstate-t.md)
   - [ProfileId](arkts-connectivity-connection-profileid-t.md)
-  - [ProfileUuids](arkts-connectivity-connection-profileuuids-t.md)
+  <!--Del-->
+  - [ProfileUuids(system api)](arkts-connectivity-connection-profileuuids-t-sys.md)<!--DelEnd-->
   - [AclState](arkts-connectivity-connection-aclstate-e.md)
   - [BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)
   - [BondState](arkts-connectivity-connection-bondstate-e.md)
@@ -380,7 +403,8 @@
   - [MajorMinorClass](arkts-connectivity-constant-majorminorclass-e.md)
   - [ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)
   - [ProfileId](arkts-connectivity-constant-profileid-e.md)
-  - [ProfileUuids](arkts-connectivity-constant-profileuuids-e.md)
+  <!--Del-->
+  - [ProfileUuids(system api)](arkts-connectivity-constant-profileuuids-e-sys.md)<!--DelEnd-->
 - [@ohos.bluetooth.hfp](arkts-bluetooth-hfp.md)
   - [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md)
   - [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md)
@@ -451,9 +475,9 @@
   - [getMaxReceiveDataSize](arkts-connectivity-socket-getmaxreceivedatasize-f.md)
   - [getMaxTransmitDataSize](arkts-connectivity-socket-getmaxtransmitdatasize-f.md)
   - [isConnected](arkts-connectivity-socket-isconnected-f.md)
-  - [off](arkts-connectivity-socket-off-f.md)
+  - [off_sppRead](arkts-connectivity-socket-offsppread-f.md)
   - [offSppRead](arkts-connectivity-socket-offsppread-f.md)
-  - [on](arkts-connectivity-socket-on-f.md)
+  - [on_sppRead](arkts-connectivity-socket-onsppread-f.md)
   - [onSppRead](arkts-connectivity-socket-onsppread-f.md)
   - [sppAccept](arkts-connectivity-socket-sppaccept-f.md)
   - [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md)
@@ -480,8 +504,8 @@
       - [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md)
       - [createGattServer](arkts-connectivity-ble-creategattserver-f.md)
       - [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md)
-      - [off](arkts-connectivity-ble-off-f.md)
-      - [on](arkts-connectivity-ble-on-f.md)
+      - [off_BLEDeviceFind](arkts-connectivity-ble-offbledevicefind-f.md)
+      - [on_BLEDeviceFind](arkts-connectivity-ble-onbledevicefind-f.md)
       - [startBLEScan](arkts-connectivity-ble-startblescan-f.md)
       - [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md)
     <!--Del-->
@@ -497,8 +521,16 @@
     - [getRemoteDeviceClass](arkts-connectivity-bluetoothmanager-getremotedeviceclass-f.md)
     - [getRemoteDeviceName](arkts-connectivity-bluetoothmanager-getremotedevicename-f.md)
     - [getState](arkts-connectivity-bluetoothmanager-getstate-f.md)
-    - [off](arkts-connectivity-bluetoothmanager-off-f.md)
-    - [on](arkts-connectivity-bluetoothmanager-on-f.md)
+    - [off_bluetoothDeviceFind](arkts-connectivity-bluetoothmanager-offbluetoothdevicefind-f.md)
+    - [off_bondStateChange](arkts-connectivity-bluetoothmanager-offbondstatechange-f.md)
+    - [off_pinRequired](arkts-connectivity-bluetoothmanager-offpinrequired-f.md)
+    - [off_sppRead](arkts-connectivity-bluetoothmanager-offsppread-f.md)
+    - [off_stateChange](arkts-connectivity-bluetoothmanager-offstatechange-f.md)
+    - [on_bluetoothDeviceFind](arkts-connectivity-bluetoothmanager-onbluetoothdevicefind-f.md)
+    - [on_bondStateChange](arkts-connectivity-bluetoothmanager-onbondstatechange-f.md)
+    - [on_pinRequired](arkts-connectivity-bluetoothmanager-onpinrequired-f.md)
+    - [on_sppRead](arkts-connectivity-bluetoothmanager-onsppread-f.md)
+    - [on_stateChange](arkts-connectivity-bluetoothmanager-onstatechange-f.md)
     - [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md)
     - [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md)
     - [setDevicePairingConfirmation](arkts-connectivity-bluetoothmanager-setdevicepairingconfirmation-f.md)
@@ -558,8 +590,8 @@
 - [@ohos.connectedTag](arkts-connectedtag.md)
   - [init](arkts-connectivity-connectedtag-init-f.md)
   - [initialize](arkts-connectivity-connectedtag-initialize-f.md)
-  - [off](arkts-connectivity-connectedtag-off-f.md)
-  - [on](arkts-connectivity-connectedtag-on-f.md)
+  - [off_notify](arkts-connectivity-connectedtag-offnotify-f.md)
+  - [on_notify](arkts-connectivity-connectedtag-onnotify-f.md)
   - [read](arkts-connectivity-connectedtag-read-f.md)
   - [readNdefTag](arkts-connectivity-connectedtag-readndeftag-f.md)
   - [uninit](arkts-connectivity-connectedtag-uninit-f.md)
@@ -713,9 +745,9 @@
   - [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md)
   - [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md)
   - [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md)
-  - [off](arkts-connectivity-nfccontroller-off-f.md)
+  - [off_nfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md)
   - [offNfcStateChange](arkts-connectivity-nfccontroller-offnfcstatechange-f.md)
-  - [on](arkts-connectivity-nfccontroller-on-f.md)
+  - [on_nfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md)
   - [onNfcStateChange](arkts-connectivity-nfccontroller-onnfcstatechange-f.md)
   - [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md)
   - [NfcState](arkts-connectivity-nfccontroller-nfcstate-e.md)
@@ -746,10 +778,12 @@
     - [getNfcV](arkts-connectivity-tag-getnfcv-f.md)
     - [getNfcVTag](arkts-connectivity-tag-getnfcvtag-f.md)
     - [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md)
-    - [off](arkts-connectivity-tag-off-f.md)
+    - [off_readerMode](arkts-connectivity-tag-offreadermode-f.md)
+    - [off_readerModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md)
     - [offReaderMode](arkts-connectivity-tag-offreadermode-f.md)
     - [offReaderModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md)
-    - [on](arkts-connectivity-tag-on-f.md)
+    - [on_readerMode](arkts-connectivity-tag-onreadermode-f.md)
+    - [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md)
     - [onReaderMode](arkts-connectivity-tag-onreadermode-f.md)
     - [onReaderModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md)
     - [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md)
@@ -779,8 +813,8 @@
 - [@ohos.secureElement](arkts-secureelement.md)
   - [createService](arkts-connectivity-omapi-createservice-f.md)
   - [newSEService](arkts-connectivity-omapi-newseservice-f.md)
-  - [off](arkts-connectivity-omapi-off-f.md)
-  - [on](arkts-connectivity-omapi-on-f.md)
+  - [off_stateChanged](arkts-connectivity-omapi-offstatechanged-f.md)
+  - [on_stateChanged](arkts-connectivity-omapi-onstatechanged-f.md)
   - [Channel](arkts-connectivity-omapi-channel-i.md)
   - [Reader](arkts-connectivity-omapi-reader-i.md)
   - [SEService](arkts-connectivity-omapi-seservice-i.md)
@@ -834,12 +868,40 @@
   <!--Del-->
   - [isHotspotDualBandSupported(system api)](arkts-connectivity-wifi-ishotspotdualbandsupported-f-sys.md)<!--DelEnd-->
   - [isWifiActive](arkts-connectivity-wifi-iswifiactive-f.md)
-  - [off](arkts-connectivity-wifi-off-f.md)
   <!--Del-->
-  - [off(system api)](arkts-connectivity-wifi-off-f-sys.md)<!--DelEnd-->
-  - [on](arkts-connectivity-wifi-on-f.md)
+  - [off_hotspotStaJoin(system api)](arkts-connectivity-wifi-offhotspotstajoin-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(system api)](arkts-connectivity-wifi-on-f-sys.md)<!--DelEnd-->
+  - [off_hotspotStaLeave(system api)](arkts-connectivity-wifi-offhotspotstaleave-f-sys.md)<!--DelEnd-->
+  - [off_hotspotStateChange](arkts-connectivity-wifi-offhotspotstatechange-f.md)
+  - [off_p2pConnectionChange](arkts-connectivity-wifi-offp2pconnectionchange-f.md)
+  - [off_p2pDeviceChange](arkts-connectivity-wifi-offp2pdevicechange-f.md)
+  - [off_p2pDiscoveryChange](arkts-connectivity-wifi-offp2pdiscoverychange-f.md)
+  - [off_p2pPeerDeviceChange](arkts-connectivity-wifi-offp2ppeerdevicechange-f.md)
+  - [off_p2pPersistentGroupChange](arkts-connectivity-wifi-offp2ppersistentgroupchange-f.md)
+  - [off_p2pStateChange](arkts-connectivity-wifi-offp2pstatechange-f.md)
+  <!--Del-->
+  - [off_streamChange(system api)](arkts-connectivity-wifi-offstreamchange-f-sys.md)<!--DelEnd-->
+  - [off_wifiConnectionChange](arkts-connectivity-wifi-offwificonnectionchange-f.md)
+  - [off_wifiRssiChange](arkts-connectivity-wifi-offwifirssichange-f.md)
+  - [off_wifiScanStateChange](arkts-connectivity-wifi-offwifiscanstatechange-f.md)
+  - [off_wifiStateChange](arkts-connectivity-wifi-offwifistatechange-f.md)
+  <!--Del-->
+  - [on_hotspotStaJoin(system api)](arkts-connectivity-wifi-onhotspotstajoin-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_hotspotStaLeave(system api)](arkts-connectivity-wifi-onhotspotstaleave-f-sys.md)<!--DelEnd-->
+  - [on_hotspotStateChange](arkts-connectivity-wifi-onhotspotstatechange-f.md)
+  - [on_p2pConnectionChange](arkts-connectivity-wifi-onp2pconnectionchange-f.md)
+  - [on_p2pDeviceChange](arkts-connectivity-wifi-onp2pdevicechange-f.md)
+  - [on_p2pDiscoveryChange](arkts-connectivity-wifi-onp2pdiscoverychange-f.md)
+  - [on_p2pPeerDeviceChange](arkts-connectivity-wifi-onp2ppeerdevicechange-f.md)
+  - [on_p2pPersistentGroupChange](arkts-connectivity-wifi-onp2ppersistentgroupchange-f.md)
+  - [on_p2pStateChange](arkts-connectivity-wifi-onp2pstatechange-f.md)
+  <!--Del-->
+  - [on_streamChange(system api)](arkts-connectivity-wifi-onstreamchange-f-sys.md)<!--DelEnd-->
+  - [on_wifiConnectionChange](arkts-connectivity-wifi-onwificonnectionchange-f.md)
+  - [on_wifiRssiChange](arkts-connectivity-wifi-onwifirssichange-f.md)
+  - [on_wifiScanStateChange](arkts-connectivity-wifi-onwifiscanstatechange-f.md)
+  - [on_wifiStateChange](arkts-connectivity-wifi-onwifistatechange-f.md)
   - [p2pCancelConnect](arkts-connectivity-wifi-p2pcancelconnect-f.md)
   - [p2pConnect](arkts-connectivity-wifi-p2pconnect-f.md)
   <!--Del-->
@@ -972,9 +1034,25 @@
   - [isRandomMacDisabled(system api)](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md)<!--DelEnd-->
   - [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md)
   - [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md)
-  - [off](arkts-connectivity-wifimanager-off-f.md)
   <!--Del-->
-  - [off(system api)](arkts-connectivity-wifimanager-off-f-sys.md)<!--DelEnd-->
+  - [off_deviceConfigChange(system api)](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_hotspotStaJoin(system api)](arkts-connectivity-wifimanager-offhotspotstajoin-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_hotspotStaLeave(system api)](arkts-connectivity-wifimanager-offhotspotstaleave-f-sys.md)<!--DelEnd-->
+  - [off_hotspotStateChange](arkts-connectivity-wifimanager-offhotspotstatechange-f.md)
+  - [off_p2pConnectionChange](arkts-connectivity-wifimanager-offp2pconnectionchange-f.md)
+  - [off_p2pDeviceChange](arkts-connectivity-wifimanager-offp2pdevicechange-f.md)
+  - [off_p2pDiscoveryChange](arkts-connectivity-wifimanager-offp2pdiscoverychange-f.md)
+  - [off_p2pPeerDeviceChange](arkts-connectivity-wifimanager-offp2ppeerdevicechange-f.md)
+  - [off_p2pPersistentGroupChange](arkts-connectivity-wifimanager-offp2ppersistentgroupchange-f.md)
+  - [off_p2pStateChange](arkts-connectivity-wifimanager-offp2pstatechange-f.md)
+  <!--Del-->
+  - [off_streamChange(system api)](arkts-connectivity-wifimanager-offstreamchange-f-sys.md)<!--DelEnd-->
+  - [off_wifiConnectionChange](arkts-connectivity-wifimanager-offwificonnectionchange-f.md)
+  - [off_wifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md)
+  - [off_wifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md)
+  - [off_wifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md)
   <!--Del-->
   - [offDeviceConfigChange(system api)](arkts-connectivity-wifimanager-offdeviceconfigchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -994,9 +1072,25 @@
   - [offWifiRssiChange](arkts-connectivity-wifimanager-offwifirssichange-f.md)
   - [offWifiScanStateChange](arkts-connectivity-wifimanager-offwifiscanstatechange-f.md)
   - [offWifiStateChange](arkts-connectivity-wifimanager-offwifistatechange-f.md)
-  - [on](arkts-connectivity-wifimanager-on-f.md)
   <!--Del-->
-  - [on(system api)](arkts-connectivity-wifimanager-on-f-sys.md)<!--DelEnd-->
+  - [on_deviceConfigChange(system api)](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_hotspotStaJoin(system api)](arkts-connectivity-wifimanager-onhotspotstajoin-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_hotspotStaLeave(system api)](arkts-connectivity-wifimanager-onhotspotstaleave-f-sys.md)<!--DelEnd-->
+  - [on_hotspotStateChange](arkts-connectivity-wifimanager-onhotspotstatechange-f.md)
+  - [on_p2pConnectionChange](arkts-connectivity-wifimanager-onp2pconnectionchange-f.md)
+  - [on_p2pDeviceChange](arkts-connectivity-wifimanager-onp2pdevicechange-f.md)
+  - [on_p2pDiscoveryChange](arkts-connectivity-wifimanager-onp2pdiscoverychange-f.md)
+  - [on_p2pPeerDeviceChange](arkts-connectivity-wifimanager-onp2ppeerdevicechange-f.md)
+  - [on_p2pPersistentGroupChange](arkts-connectivity-wifimanager-onp2ppersistentgroupchange-f.md)
+  - [on_p2pStateChange](arkts-connectivity-wifimanager-onp2pstatechange-f.md)
+  <!--Del-->
+  - [on_streamChange(system api)](arkts-connectivity-wifimanager-onstreamchange-f-sys.md)<!--DelEnd-->
+  - [on_wifiConnectionChange](arkts-connectivity-wifimanager-onwificonnectionchange-f.md)
+  - [on_wifiRssiChange](arkts-connectivity-wifimanager-onwifirssichange-f.md)
+  - [on_wifiScanStateChange](arkts-connectivity-wifimanager-onwifiscanstatechange-f.md)
+  - [on_wifiStateChange](arkts-connectivity-wifimanager-onwifistatechange-f.md)
   <!--Del-->
   - [onDeviceConfigChange(system api)](arkts-connectivity-wifimanager-ondeviceconfigchange-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function getBadgeNumber(): Promise<number>
 ```
 
-获取当前应用角标数量。使用Promise异步回调。
+获取当前应用角标数量。使用Promise异步回调。 用于查询当前应用桌面图标上显示的角标数字。
 
-用于查询当前应用桌面图标上显示的角标数字。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
 <!--Device-notificationManager-function getBadgeNumber(): Promise<long>--><!--Device-notificationManager-function getBadgeNumber(): Promise<long>-End-->
 
@@ -24,7 +24,7 @@ function getBadgeNumber(): Promise<number>
 
 **参见：**
 
-[setBadgeNumber](notificationManager.setBadgeNumber(badgeNumber: int): Promise<void>) 设定角标个数。
+setBadgeNumber 设定角标个数。
 
 **返回值：**
 
@@ -36,9 +36,9 @@ function getBadgeNumber(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

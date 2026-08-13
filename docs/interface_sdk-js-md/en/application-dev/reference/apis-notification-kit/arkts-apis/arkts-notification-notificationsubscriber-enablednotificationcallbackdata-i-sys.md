@@ -2,9 +2,11 @@
 
 Returns the changes of the application enabling state.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface EnabledNotificationCallbackData--><!--Device-unnamed-export interface EnabledNotificationCallbackData-End-->
 
@@ -22,9 +24,11 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnabledNotificationCallbackData-readonly bundle: string--><!--Device-EnabledNotificationCallbackData-readonly bundle: string-End-->
 
@@ -38,15 +42,15 @@ Bundle name of the application.
 readonly enable: boolean
 ```
 
-Whether the application notification is enabled.  
-- **true**: enabled.  
-- **false**: disabled.
+Whether the application notification is enabled. - **true**: enabled. - **false**: disabled.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnabledNotificationCallbackData-readonly enable: boolean--><!--Device-EnabledNotificationCallbackData-readonly enable: boolean-End-->
 
@@ -62,11 +66,13 @@ readonly uid: int
 
 UID of the application.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EnabledNotificationCallbackData-readonly uid: int--><!--Device-EnabledNotificationCallbackData-readonly uid: int-End-->
 

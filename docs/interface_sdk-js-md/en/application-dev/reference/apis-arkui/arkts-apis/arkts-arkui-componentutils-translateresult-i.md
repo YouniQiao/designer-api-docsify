@@ -6,6 +6,8 @@ Translation Result
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-export interface TranslateResult--><!--Device-componentUtils-export interface TranslateResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Indicates the translation distance of the x-axis, in vp.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TranslateResult-x: double--><!--Device-TranslateResult-x: double-End-->
@@ -50,6 +54,8 @@ Indicates the translation distance of the y-axis, in vp.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TranslateResult-y: double--><!--Device-TranslateResult-y: double-End-->
@@ -69,6 +75,8 @@ Indicates the translation distance of the z-axis, in vp.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

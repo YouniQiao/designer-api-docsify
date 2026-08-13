@@ -8,7 +8,7 @@ Describes the scanned Wi-Fi information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [WifiScanInfo](ohos.wifiManager/wifiManager.WifiScanInfo)
+**Substitutes:** [WifiScanInfo](arkts-connectivity-wifimanager-wifiscaninfo-i.md#WifiScanInfo)
 
 <!--Device-wifi-interface WifiScanInfo--><!--Device-wifi-interface WifiScanInfo-End-->
 
@@ -36,7 +36,7 @@ Frequency band, 1: 2.4G, 2: 5G
 
 **Deprecated since:** 9
 
-**Substitutes:** [band](ohos.wifiManager/wifiManager.WifiScanInfo.band)
+**Substitutes:** [band](arkts-connectivity-wifimanager-wifiscaninfo-i.md#band)
 
 <!--Device-WifiScanInfo-band: number--><!--Device-WifiScanInfo-band: number-End-->
 
@@ -58,7 +58,7 @@ Wi-Fi bssid(MAC): the length is 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [bssid](ohos.wifiManager/wifiManager.WifiScanInfo.bssid)
+**Substitutes:** [bssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#bssid)
 
 <!--Device-WifiScanInfo-bssid: string--><!--Device-WifiScanInfo-bssid: string-End-->
 
@@ -80,7 +80,7 @@ Hotspot capability
 
 **Deprecated since:** 9
 
-**Substitutes:** [capabilities](ohos.wifiManager/wifiManager.WifiScanInfo.capabilities)
+**Substitutes:** [capabilities](arkts-connectivity-wifimanager-wifiscaninfo-i.md#capabilities)
 
 <!--Device-WifiScanInfo-capabilities: string--><!--Device-WifiScanInfo-capabilities: string-End-->
 
@@ -102,7 +102,7 @@ Channel width
 
 **Deprecated since:** 9
 
-**Substitutes:** [channelWidth](ohos.wifiManager/wifiManager.WifiScanInfo.channelWidth)
+**Substitutes:** [channelWidth](arkts-connectivity-wifimanager-wifiscaninfo-i.md#channelWidth)
 
 <!--Device-WifiScanInfo-channelWidth: number--><!--Device-WifiScanInfo-channelWidth: number-End-->
 
@@ -124,7 +124,7 @@ Frequency
 
 **Deprecated since:** 9
 
-**Substitutes:** [frequency](ohos.wifiManager/wifiManager.WifiScanInfo.frequency)
+**Substitutes:** [frequency](arkts-connectivity-wifimanager-wifiscaninfo-i.md#frequency)
 
 <!--Device-WifiScanInfo-frequency: number--><!--Device-WifiScanInfo-frequency: number-End-->
 
@@ -146,7 +146,7 @@ Received signal strength indicator (RSSI)
 
 **Deprecated since:** 9
 
-**Substitutes:** [rssi](ohos.wifiManager/wifiManager.WifiScanInfo.rssi)
+**Substitutes:** [rssi](arkts-connectivity-wifimanager-wifiscaninfo-i.md#rssi)
 
 <!--Device-WifiScanInfo-rssi: number--><!--Device-WifiScanInfo-rssi: number-End-->
 
@@ -168,7 +168,7 @@ Security type: reference definition of WifiSecurityType
 
 **Deprecated since:** 9
 
-**Substitutes:** [securityType](ohos.wifiManager/wifiManager.WifiScanInfo.securityType)
+**Substitutes:** [securityType](arkts-connectivity-wifimanager-wifiscaninfo-i.md#securityType)
 
 <!--Device-WifiScanInfo-securityType: WifiSecurityType--><!--Device-WifiScanInfo-securityType: WifiSecurityType-End-->
 
@@ -190,7 +190,7 @@ Wi-Fi SSID: the maximum length is 32
 
 **Deprecated since:** 9
 
-**Substitutes:** [ssid](ohos.wifiManager/wifiManager.WifiScanInfo.ssid)
+**Substitutes:** [ssid](arkts-connectivity-wifimanager-wifiscaninfo-i.md#ssid)
 
 <!--Device-WifiScanInfo-ssid: string--><!--Device-WifiScanInfo-ssid: string-End-->
 
@@ -212,7 +212,7 @@ Time stamp
 
 **Deprecated since:** 9
 
-**Substitutes:** [timestamp](ohos.wifiManager/wifiManager.WifiScanInfo.timestamp)
+**Substitutes:** [timestamp](arkts-connectivity-wifimanager-wifiscaninfo-i.md#timestamp)
 
 <!--Device-WifiScanInfo-timestamp: number--><!--Device-WifiScanInfo-timestamp: number-End-->
 

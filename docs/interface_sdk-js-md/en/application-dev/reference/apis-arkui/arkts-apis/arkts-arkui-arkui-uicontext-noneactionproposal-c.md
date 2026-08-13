@@ -1,14 +1,16 @@
 # NoneActionProposal
 
-Class NoneActionProposal.
+Smart gesture no-op action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type triggers no action.
 
 **Inheritance/Implementation:** NoneActionProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare class NoneActionProposal extends BaseGestureHandlingProposal--><!--Device-unnamed-export declare class NoneActionProposal extends BaseGestureHandlingProposal-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class NoneActionProposal--><!--Device-unnamed-export class NoneActionProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,13 +26,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 constructor()
 ```
 
-NoneActionProposal constructor.
+Constructor for the smart gesture no-op action handling.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-NoneActionProposal-constructor()--><!--Device-NoneActionProposal-constructor()-End-->
 

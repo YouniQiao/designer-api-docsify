@@ -6,15 +6,13 @@
 function resetUsbDevice(pipe: USBDevicePipe): boolean
 ```
 
-重置USB外设。
+重置USB外设。 > **说明：** > > 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确认相关业务已结束。
 
-> **说明：**
-> 
-> 本接口调用后会重置此前设置的配置和替换接口，请在调用之前确认相关业务已结束。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean--><!--Device-usbManager-function resetUsbDevice(pipe: USBDevicePipe): boolean-End-->
 
@@ -36,12 +34,12 @@ function resetUsbDevice(pipe: USBDevicePipe): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [14400010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
-| [14400008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) | No such device(it may have been disconnected) |
-| [14400013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400013-参数合法性检查失败) | The USBDevicePipe validity check failed. Possible causes:  &lt;br&gt;1.The input parameters fail the validation check.  &lt;br&gt;2.The call chain used to obtain the input parameters is not reasonable. |
-| [14400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes: 1. No accessory is plugged in. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) | No such device(it may have been disconnected) |
+| [14400013](../../apis-basic-services-kit/errorcode-usb.md#14400013-参数合法性检查失败) | The USBDevicePipe validity check failed. Possible causes:  &lt;br&gt;1.The input parameters fail the validation check.  &lt;br&gt;2.The call chain used to obtain the input parameters is not reasonable. |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) | Service exception. Possible causes: 1. No accessory is plugged in. |
 
 ## 示例
 

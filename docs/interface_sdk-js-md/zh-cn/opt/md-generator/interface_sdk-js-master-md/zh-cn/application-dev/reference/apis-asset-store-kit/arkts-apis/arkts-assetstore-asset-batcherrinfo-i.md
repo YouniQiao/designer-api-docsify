@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-asset-interface BatchErrInfo--><!--Device-asset-interface BatchErrInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -19,6 +21,8 @@ errCode: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-BatchErrInfo-errCode: number--><!--Device-BatchErrInfo-errCode: number-End-->
 
@@ -36,6 +40,8 @@ index: number
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-BatchErrInfo-index: number--><!--Device-BatchErrInfo-index: number-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -51,6 +57,8 @@ message: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-BatchErrInfo-message: string--><!--Device-BatchErrInfo-message: string-End-->
 

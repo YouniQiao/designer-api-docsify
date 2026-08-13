@@ -2,7 +2,9 @@
 
 Defines the device profile information.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceProfileInfo--><!--Device-distributedDeviceManager-interface DeviceProfileInfo-End-->
 
@@ -26,7 +28,9 @@ Bluetooth BLE MAC address.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-bleMac: string--><!--Device-DeviceProfileInfo-bleMac: string-End-->
 
@@ -44,7 +48,9 @@ Bluetooth BR MAC address.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-brMac: string--><!--Device-DeviceProfileInfo-brMac: string-End-->
 
@@ -62,7 +68,9 @@ Device ID.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-deviceId: string--><!--Device-DeviceProfileInfo-deviceId: string-End-->
 
@@ -80,7 +88,9 @@ Device name.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-deviceName: string--><!--Device-DeviceProfileInfo-deviceName: string-End-->
 
@@ -98,7 +108,9 @@ Device SN.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-deviceSn: string--><!--Device-DeviceProfileInfo-deviceSn: string-End-->
 
@@ -116,7 +128,9 @@ Device type.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-deviceType: string--><!--Device-DeviceProfileInfo-deviceType: string-End-->
 
@@ -134,7 +148,9 @@ Firmware version.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-firmwareVersion: string--><!--Device-DeviceProfileInfo-firmwareVersion: string-End-->
 
@@ -152,7 +168,9 @@ Hardware version.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-hardwareVersion: string--><!--Device-DeviceProfileInfo-hardwareVersion: string-End-->
 
@@ -170,7 +188,9 @@ Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-internalModel?: string--><!--Device-DeviceProfileInfo-internalModel?: string-End-->
 
@@ -184,14 +204,13 @@ Internal product model. This parameter is left unspecified by default.
 isLocalDevice: boolean
 ```
 
-Whether the device is a local device.
-
-- **false**: non-local device.  
-- **true**: local device.
+Whether the device is a local device. - **false**: non-local device. - **true**: local device.
 
 **Type:** boolean
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-isLocalDevice: boolean--><!--Device-DeviceProfileInfo-isLocalDevice: boolean-End-->
 
@@ -209,7 +228,9 @@ MAC address.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-mac: string--><!--Device-DeviceProfileInfo-mac: string-End-->
 
@@ -227,7 +248,9 @@ Manufacturer.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-manufacturer: string--><!--Device-DeviceProfileInfo-manufacturer: string-End-->
 
@@ -245,7 +268,9 @@ Device model.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-model: string--><!--Device-DeviceProfileInfo-model: string-End-->
 
@@ -263,7 +288,9 @@ Modification time.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-modifyTime: string--><!--Device-DeviceProfileInfo-modifyTime: string-End-->
 
@@ -281,7 +308,9 @@ Product ID.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-productId: string--><!--Device-DeviceProfileInfo-productId: string-End-->
 
@@ -299,7 +328,9 @@ Product name. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-productName?: string--><!--Device-DeviceProfileInfo-productName?: string-End-->
 
@@ -317,7 +348,9 @@ Protocol type.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-protocolType: int--><!--Device-DeviceProfileInfo-protocolType: int-End-->
 
@@ -335,7 +368,9 @@ Registration time.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-registerTime: string--><!--Device-DeviceProfileInfo-registerTime: string-End-->
 
@@ -353,7 +388,9 @@ SDK version.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-sdkVersion: string--><!--Device-DeviceProfileInfo-sdkVersion: string-End-->
 
@@ -371,7 +408,9 @@ Service list. This parameter is left unspecified by default.
 
 **Type:** Array&lt;[ServiceProfileInfo](arkts-distributedservice-distributeddevicemanager-serviceprofileinfo-i-sys.md)&gt;
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-services?: Array<ServiceProfileInfo>--><!--Device-DeviceProfileInfo-services?: Array<ServiceProfileInfo>-End-->
 
@@ -389,7 +428,9 @@ Device type.
 
 **Type:** number
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-setupType: int--><!--Device-DeviceProfileInfo-setupType: int-End-->
 
@@ -407,7 +448,9 @@ Share time.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-shareTime: string--><!--Device-DeviceProfileInfo-shareTime: string-End-->
 
@@ -425,7 +468,9 @@ Starflash MAC address.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-sleMac: string--><!--Device-DeviceProfileInfo-sleMac: string-End-->
 
@@ -443,7 +488,9 @@ Software version.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-softwareVersion: string--><!--Device-DeviceProfileInfo-softwareVersion: string-End-->
 
@@ -461,7 +508,9 @@ Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-subProductId?: string--><!--Device-DeviceProfileInfo-subProductId?: string-End-->
 
@@ -479,7 +528,9 @@ Registered device ID.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-wiseDeviceId: string--><!--Device-DeviceProfileInfo-wiseDeviceId: string-End-->
 
@@ -497,7 +548,9 @@ Registered user ID.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceProfileInfo-wiseUserId: string--><!--Device-DeviceProfileInfo-wiseUserId: string-End-->
 

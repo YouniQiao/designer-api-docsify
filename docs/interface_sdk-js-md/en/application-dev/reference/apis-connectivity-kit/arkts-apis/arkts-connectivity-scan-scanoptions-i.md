@@ -4,7 +4,9 @@ Describes the parameters for scan.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-scan-interface ScanOptions--><!--Device-scan-interface ScanOptions-End-->
 
@@ -22,13 +24,15 @@ import { scan } from '@kit.ConnectivityKit';
 duration?: int
 ```
 
-Indicates the scan duration.If the "duration" is not set, the scanning is performed all the time.Unit: Seconds, The value must be an integer within [10,60].
+Indicates the scan duration. If the "duration" is not set, the scanning is performed all the time. Unit: Seconds, The value must be an integer within [10,60].
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ Indicates the scan duration.If the "duration" is not set, the scanning is perfor
 scanMode?: ScanMode
 ```
 
-Indicates the scan mode.If the "scanMode" is not set, the default value is "SCAN_MODE_LOW_POWER".Default value: SCAN_MODE_LOW_POWER.
+Indicates the scan mode. If the "scanMode" is not set, the default value is "SCAN_MODE_LOW_POWER". Default value: SCAN_MODE_LOW_POWER.
 
 **Type:** ScanMode
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 Enumerates the audio loopback modes.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioLoopbackMode--><!--Device-audio-enum AudioLoopbackMode-End-->
 
@@ -18,9 +20,11 @@ HARDWARE = 0
 
 Hardware loopback.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioLoopbackMode-HARDWARE = 0--><!--Device-AudioLoopbackMode-HARDWARE = 0-End-->
 

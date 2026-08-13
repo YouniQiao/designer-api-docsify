@@ -1,3 +1,3 @@
-# @ohos.arkui.advanced.SegmentButtonV2(api/@ohos.arkui.advanced.SegmentedButton.d.ts)
+# @ohos.arkui.advanced.SegmentButtonV2
 
 ## 汇总

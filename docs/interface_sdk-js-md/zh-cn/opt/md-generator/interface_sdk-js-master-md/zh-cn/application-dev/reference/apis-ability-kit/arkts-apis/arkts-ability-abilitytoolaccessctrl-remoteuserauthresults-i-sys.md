@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults--><!--Device-abilityToolAccessCtrl-interface RemoteUserAuthResults-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ permissionQuery: PermissionQuery
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery--><!--Device-RemoteUserAuthResults-permissionQuery: PermissionQuery-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -39,6 +43,8 @@ results: RemoteUserAuthItem[]
 **类型：** [RemoteUserAuthItem](arkts-ability-abilitytoolaccessctrl-remoteuserauthitem-i-sys.md)[]
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]--><!--Device-RemoteUserAuthResults-results: RemoteUserAuthItem[]-End-->
 

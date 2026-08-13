@@ -14,7 +14,9 @@ function getMaxTransmitDataSize(clientSocket: number): number
 
 Obtain the maximum data size that can be transmitted through this socket channel.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function getMaxTransmitDataSize(clientSocket: int): int--><!--Device-socket-function getMaxTransmitDataSize(clientSocket: int): int-End-->
 

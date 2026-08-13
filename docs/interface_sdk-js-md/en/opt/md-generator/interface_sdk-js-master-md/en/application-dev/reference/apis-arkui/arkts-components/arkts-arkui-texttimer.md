@@ -2,9 +2,7 @@
 
 The **TextTimer** component displays timing information and is controlled in text format.
 
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## TextTimer
 
@@ -15,6 +13,8 @@ TextTimer(options?: TextTimerOptions)
 Create TextTimer component.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,5 +32,5 @@ Create TextTimer component.
 
 ## Summary
 
-- [TextTimerConfiguration](arkts-arkui-texttimer-texttimerconfiguration-i.md)
-- [TextTimerOptions](arkts-arkui-texttimer-texttimeroptions-i.md)
+- [TextTimerConfiguration](arkts-arkui-texttimerconfiguration-i.md)
+- [TextTimerOptions](arkts-arkui-texttimeroptions-i.md)

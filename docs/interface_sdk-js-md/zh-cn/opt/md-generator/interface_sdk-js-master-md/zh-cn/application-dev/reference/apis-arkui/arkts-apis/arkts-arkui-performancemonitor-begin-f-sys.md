@@ -10,6 +10,8 @@ function begin(scene: string, startInputType: ActionType, note?: string): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-performanceMonitor-function begin(scene: string, startInputType: ActionType, note?: string): void--><!--Device-performanceMonitor-function begin(scene: string, startInputType: ActionType, note?: string): void-End-->
@@ -23,7 +25,7 @@ function begin(scene: string, startInputType: ActionType, note?: string): void
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | scene | string | 是 |
-| startInputType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
+| startInputType | [ActionType](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-actiontype-t.md) | 是 |
 | [note](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-contact-c.md) | string | 否 |
 
 ## 示例

@@ -2,7 +2,9 @@
 
 Provides APIs for X.500 distinguished name operations.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface X500DistinguishedName--><!--Device-cert-interface X500DistinguishedName-End-->
 
@@ -22,9 +24,11 @@ getEncoded(): EncodingBlob
 
 Obtains the DER-encoded data of the X.500 Distinguished Name.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X500DistinguishedName-getEncoded(): EncodingBlob--><!--Device-X500DistinguishedName-getEncoded(): EncodingBlob-End-->
 
@@ -40,9 +44,9 @@ Obtains the DER-encoded data of the X.500 Distinguished Name.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getName
 
@@ -52,9 +56,11 @@ getName(): string
 
 Obtains the DN in the form of a string.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X500DistinguishedName-getName(): string--><!--Device-X500DistinguishedName-getName(): string-End-->
 
@@ -70,9 +76,9 @@ Obtains the DN in the form of a string.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getName
 
@@ -82,9 +88,11 @@ getName(encodingType: EncodingType): string
 
 Obtains RDN strings based on the specified encoding format.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X500DistinguishedName-getName(encodingType: EncodingType): string--><!--Device-X500DistinguishedName-getName(encodingType: EncodingType): string-End-->
 
@@ -106,10 +114,10 @@ Obtains RDN strings based on the specified encoding format.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getName
 
@@ -119,9 +127,11 @@ getName(type: string): Array<string>
 
 Obtains relative distinguished name (RDN) strings of the specified type.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-X500DistinguishedName-getName(type: string): Array<string>--><!--Device-X500DistinguishedName-getName(type: string): Array<string>-End-->
 
@@ -143,10 +153,10 @@ Obtains relative distinguished name (RDN) strings of the specified type.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |
 
 ## getName
 
@@ -157,6 +167,8 @@ getName(type: string, encodingType: EncodingType): Array<string>
 Obtains an array of RDN strings based on the specified type and encoding format.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,7 +195,7 @@ Obtains an array of RDN strings based on the specified type and encoding format.
 
 | Error Code ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-runtime-error) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-parameter-check-failure) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-memory-error) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-crypto-operation-error) |
+| [19020002](../errorcode-cert.md#19020002-runtime-error) |
+| [19020003](../errorcode-cert.md#19020003-parameter-check-failure) |
+| [19020001](../errorcode-cert.md#19020001-memory-error) |
+| [19030001](../errorcode-cert.md#19030001-crypto-operation-error) |

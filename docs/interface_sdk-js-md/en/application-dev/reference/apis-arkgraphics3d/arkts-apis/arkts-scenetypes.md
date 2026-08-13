@@ -1,5 +1,19 @@
 # SceneTypes(Defines 3D basic types)
 
+/*
+ Copyright (c) 2024-2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
+
 ## Summary
 
 ### Classes
@@ -8,7 +22,7 @@
 | --- | --- |
 | [CubeGeometry](arkts-arkgraphics3d-scenetypes-cubegeometry-c.md) | Define a rectangular cuboid. |
 | [CustomGeometry](arkts-arkgraphics3d-scenetypes-customgeometry-c.md) | An array of vertices and their data defining a custom geometric shape. |
-| [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition).  > **NOTE：** >  > You must ensure that all three parameters are set correctly. > Invalid values may prevent cylinder creation or cause undefined behavior. |
+| [CylinderGeometry](arkts-arkgraphics3d-scenetypes-cylindergeometry-c.md) | A cylinder geometry type that inherits from [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md#GeometryDefinition). > **NOTE：**> > You must ensure that all three parameters are set correctly. > Invalid values may prevent cylinder creation or cause undefined behavior. |
 | [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md) | Define a geometric shape for mesh creation. |
 | [PlaneGeometry](arkts-arkgraphics3d-scenetypes-planegeometry-c.md) | Define a plane. |
 | [SphereGeometry](arkts-arkgraphics3d-scenetypes-spheregeometry-c.md) | Define a sphere. |
@@ -20,11 +34,11 @@
 | [Aabb](arkts-arkgraphics3d-scenetypes-aabb-i.md) | Axis aligned boundary box used to determine whether two objects in space are overlapping. |
 | [Color](arkts-arkgraphics3d-scenetypes-color-i.md) | Color in RGBA format. It consists of four components: red, green, blue, and alpha. |
 | [Mat4x4](arkts-arkgraphics3d-scenetypes-mat4x4-i.md) | A camera matrix, which is a mathematical tool for transforming 3D world coordinates into 2D image coordinates. |
-| [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md) | A mathematical notation for representing spatial rotations of elements in 3D space.Compared with Euler angles, a quaternion has advantages in numerical stability and avoiding the gimbal lock problem. |
+| [Quaternion](arkts-arkgraphics3d-scenetypes-quaternion-i.md) | A mathematical notation for representing spatial rotations of elements in 3D space. Compared with Euler angles, a quaternion has advantages in numerical stability and avoiding the gimbal lock problem. |
 | [Rect](arkts-arkgraphics3d-scenetypes-rect-i.md) | Rectangle in a plane. |
-| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | A two-dimensional vector used to represent a point or a direction in 2D space.It consists of two components: x and y. |
-| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) | A three-dimensional vector used to represent a point, a direction, or a vector transformation in 3D space.It consists of three components: x, y, and z. |
-| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) | A four-dimensional vector used to represent a point, a direction, or a vector transformation in 4D space.It consists of four components: x, y, z, and w. The fourth component (w) enhances normalization and convenience for various calculations and transformations. |
+| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) | A two-dimensional vector used to represent a point or a direction in 2D space. It consists of two components: x and y. |
+| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) | A three-dimensional vector used to represent a point, a direction, or a vector transformation in 3D space. It consists of three components: x, y, and z. |
+| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) | A four-dimensional vector used to represent a point, a direction, or a vector transformation in 4D space. It consists of four components: x, y, z, and w. The fourth component (w) enhances normalization and convenience for various calculations and transformations. |
 
 ### Enums
 

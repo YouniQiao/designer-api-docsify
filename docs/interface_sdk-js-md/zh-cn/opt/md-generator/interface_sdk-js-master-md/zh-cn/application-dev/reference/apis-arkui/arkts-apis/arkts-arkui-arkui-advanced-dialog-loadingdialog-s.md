@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare struct LoadingDialog--><!--Device-unnamed-export declare struct LoadingDialog-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 Controller: CustomDialogController
 ```
 
-加载弹出框控制器，用于控制弹出框的显示和隐藏。
-
-**说明：** 未使用@Require装饰，构造时不强制校验参数。
+加载弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ Controller: CustomDialogController
 content?: ResourceStr
 ```
 
-加载弹出框内容。
-
-默认不设置或设置为undefined，加载弹出框内容不显示。
+加载弹出框内容。 默认不设置或设置为undefined，加载弹出框内容不显示。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,6 +66,8 @@ theme?: Theme | CustomTheme
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -78,13 +82,13 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

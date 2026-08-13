@@ -4,6 +4,8 @@ Defines the counter options.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class CounterV2Options--><!--Device-unnamed-declare class CounterV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Set the counter attribute of the INLINE_DATE counter component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,6 +49,8 @@ Indicates the attribute of the current counter direction.
 **Type:** Direction
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Set the counter attribute of the INLINE counter component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -86,6 +94,8 @@ Set the counter attribute of the LIST or COMPACT counter component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -105,6 +115,8 @@ Set the type of the counter component.
 **Type:** [CounterV2Type](arkts-arkui-arkui-advanced-counterv2-counterv2type-e.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

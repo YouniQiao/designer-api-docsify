@@ -2,9 +2,11 @@
 
 Parameters for obtaining detailed information on specified network traffic usage.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetworkInfo--><!--Device-statistics-export interface NetworkInfo-End-->
 
@@ -24,11 +26,13 @@ endTime: int
 
 End time for querying traffic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInfo-endTime: int--><!--Device-NetworkInfo-endTime: int-End-->
 
@@ -42,11 +46,13 @@ simId?: int
 
 SIM card id for querying traffic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInfo-simId?: int--><!--Device-NetworkInfo-simId?: int-End-->
 
@@ -60,11 +66,13 @@ startTime: int
 
 Start time for querying traffic.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInfo-startTime: int--><!--Device-NetworkInfo-startTime: int-End-->
 
@@ -80,9 +88,11 @@ Network type for querying traffic.
 
 **Type:** NetBearType
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInfo-type: NetBearType--><!--Device-NetworkInfo-type: NetBearType-End-->
 

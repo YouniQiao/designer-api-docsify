@@ -2,9 +2,11 @@
 
 Obtains CDMA cell information.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface CdmaCellInformation--><!--Device-radio-export interface CdmaCellInformation-End-->
 
@@ -26,11 +28,13 @@ baseId: int
 
 Indicates the base station Id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-baseId: int--><!--Device-CdmaCellInformation-baseId: int-End-->
 
@@ -46,11 +50,13 @@ latitude: int
 
 Indicates the latitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-latitude: int--><!--Device-CdmaCellInformation-latitude: int-End-->
 
@@ -66,11 +72,13 @@ longitude: int
 
 Indicates the longitude.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-longitude: int--><!--Device-CdmaCellInformation-longitude: int-End-->
 
@@ -86,11 +94,13 @@ nid: int
 
 Indicates the network identification code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-nid: int--><!--Device-CdmaCellInformation-nid: int-End-->
 
@@ -106,11 +116,13 @@ sid: int
 
 Indicates the system identification code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CdmaCellInformation-sid: int--><!--Device-CdmaCellInformation-sid: int-End-->
 

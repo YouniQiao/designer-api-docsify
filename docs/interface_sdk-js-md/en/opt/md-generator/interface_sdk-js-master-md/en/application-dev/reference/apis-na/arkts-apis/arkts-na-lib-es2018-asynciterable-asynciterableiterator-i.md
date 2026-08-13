@@ -1,0 +1,27 @@
+# AsyncIterableIterator
+
+**Inheritance/Implementation:** AsyncIterableIterator extends AsyncIterator<T>
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface AsyncIterableIterator--><!--Device-unnamed-interface AsyncIterableIterator-End-->
+
+## [Symbol.asyncIterator]
+
+```TypeScript
+[Symbol.asyncIterator](): AsyncIterableIterator<T>
+```
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-AsyncIterableIterator-[Symbol.asyncIterator](): AsyncIterableIterator<T>--><!--Device-AsyncIterableIterator-[Symbol.asyncIterator](): AsyncIterableIterator<T>-End-->
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [AsyncIterableIterator](arkts-na-lib-es2018-asynciterable-asynciterableiterator-i.md)&lt;T&gt; |

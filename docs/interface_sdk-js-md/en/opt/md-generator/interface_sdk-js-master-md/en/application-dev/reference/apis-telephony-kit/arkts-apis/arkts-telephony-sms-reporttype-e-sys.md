@@ -2,7 +2,9 @@
 
 Enumerates report types.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export enum ReportType--><!--Device-sms-export enum ReportType-End-->
 
@@ -18,7 +20,9 @@ MMS_YES = 128
 
 YES
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReportType-MMS_YES = 128--><!--Device-ReportType-MMS_YES = 128-End-->
 
@@ -34,7 +38,9 @@ MMS_NO = 129
 
 NO
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ReportType-MMS_NO = 129--><!--Device-ReportType-MMS_NO = 129-End-->
 

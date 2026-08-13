@@ -2,11 +2,13 @@
 
 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-commonconfiguration-i.md#CommonConfiguration)。
 
-**继承/实现关系：** ToggleConfiguration extends [CommonConfiguration<ToggleConfiguration>](CommonConfiguration<ToggleConfiguration>)
+**继承/实现关系：** ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare interface ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>--><!--Device-unnamed-declare interface ToggleConfiguration extends CommonConfiguration<ToggleConfiguration>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface ToggleConfiguration--><!--Device-unnamed-declare interface ToggleConfiguration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,13 @@
 enabled: boolean
 ```
 
-是否可以切换状态。
-
-true：可以切换状态；false：不可以切换状态。
-
-默认值：true
+是否可以切换状态。 true：可以切换状态；false：不可以切换状态。 默认值：true
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,15 +40,13 @@ true：可以切换状态；false：不可以切换状态。
 isOn: boolean
 ```
 
-开关是否打开。
-
-true：开关打开；false：开关关闭。
-
-默认值：false
+开关是否打开。 true：开关打开；false：开关关闭。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,6 +67,8 @@ triggerChange: Callback<boolean>
 **类型：** Callback&lt;boolean&gt;
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

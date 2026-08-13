@@ -6,11 +6,13 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface WatchEventListener--><!--Device-unnamed-export interface WatchEventListener-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (event: WatchEvent): void
@@ -21,6 +23,8 @@ Specifies the callback function to be invoked.
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 <!--Device-WatchEventListener-(event: WatchEvent): void--><!--Device-WatchEventListener-(event: WatchEvent): void-End-->
 

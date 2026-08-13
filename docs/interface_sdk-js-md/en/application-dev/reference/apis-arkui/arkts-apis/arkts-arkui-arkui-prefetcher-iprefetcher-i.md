@@ -1,12 +1,14 @@
 # IPrefetcher
 
-Implement this interface to provide prefetcher logic.
+Provides the prefetching capability. It works with **LazyForEach** to prefetch data items when users swipe through container components such as **List** and **Grid**, improving user browsing experience.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface IPrefetcher<T>--><!--Device-unnamed-export interface IPrefetcher<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface IPrefetcher--><!--Device-unnamed-export interface IPrefetcher-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,18 +21,22 @@ import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI
 ## setDataSource
 
 ```TypeScript
-setDataSource(dataSource: IDataSourcePrefetching<T>): void
+setDataSource(dataSource: IDataSourcePrefetching): void
 ```
 
-Sets the data source to bind to this prefetcher.
+Sets the prefetching-capable data source to bind to the **Prefetcher**.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching<T>): void--><!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching<T>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void--><!--Device-IPrefetcher-setDataSource(dataSource: IDataSourcePrefetching): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,23 +44,27 @@ Sets the data source to bind to this prefetcher.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataSource | [IDataSourcePrefetching](arkts-arkui-arkui-prefetcher-idatasourceprefetching-i.md)&lt;T&gt; | Yes | Data source that supports prefetching. |
+| dataSource | [IDataSourcePrefetching](../../apis-na/arkts-apis/arkts-na-arkui-prefetcher-idatasourceprefetching-i.md) | Yes | Prefetching-capable data source. |
 
 ## visibleAreaChanged
 
 ```TypeScript
-visibleAreaChanged(minVisible: int, maxVisible: int): void
+visibleAreaChanged(minVisible: number, maxVisible: number): void
 ```
 
-Call this method when the visible area boundaries were changed.
+Called when the boundary of the visible area changes. It notifies **Prefetcher** of the current visible area range so that **Prefetcher** can determine whether to prefetch or cancel the prefetching of data items. Before calling this API, you need to set a data source using **setDataSource**. This API works with the **List**, **Grid**, **WaterFlow**, and **Swiper** components.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-IPrefetcher-visibleAreaChanged(minVisible: int, maxVisible: int): void--><!--Device-IPrefetcher-visibleAreaChanged(minVisible: int, maxVisible: int): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-IPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void--><!--Device-IPrefetcher-visibleAreaChanged(minVisible: number, maxVisible: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,6 +72,6 @@ Call this method when the visible area boundaries were changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minVisible | int | Yes | Index of the first visible data item. |
-| maxVisible | int | Yes | Index of the last visible data item. |
+| minVisible | number | Yes | Index of the first data item in the current visible area. |
+| maxVisible | number | Yes | Index of the last data item in the current visible area. |
 

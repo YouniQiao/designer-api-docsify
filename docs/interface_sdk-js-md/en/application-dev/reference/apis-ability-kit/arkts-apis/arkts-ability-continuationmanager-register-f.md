@@ -20,7 +20,7 @@ Registers the continuation management service and obtains a token. This API does
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +32,7 @@ Registers the continuation management service and obtains a token. This API does
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 
@@ -57,7 +57,7 @@ continuationManager.register((err, data) => {
 function register(options: ContinuationExtraParams, callback: AsyncCallback<number>): void
 ```
 
-Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return  the result.
+Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result.
 
 **Since:** 8
 
@@ -65,7 +65,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +78,7 @@ Registers the continuation management service and obtains a token. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ContinuationExtraParams | Yes | Extra parameters used to filter the list of available devices. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the token generated after the continuation management service is connected. |
 
 ## Examples
 
@@ -115,7 +115,7 @@ Registers the continuation management service and obtains a token. This API uses
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.on(type:)
+**Substitutes:** [on](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#on_deviceStateChange)(type: 'deviceStateChange', callback: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 

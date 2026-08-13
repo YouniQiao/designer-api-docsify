@@ -1,15 +1,10 @@
 # Int8Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](./arkts/@arkts.collections:collections)实现。
-
-> **说明：**
-> 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> **装饰器类型**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
 <!--Device-collections-class Int8Array--><!--Device-collections-class Int8Array-End-->
 
@@ -21,9 +16,11 @@
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个数字对象。说明：本接口不支持在.ets文件中使用。
+返回一个迭代器，迭代器的每一项都是一个数字对象。 说明： 本接口不支持在.ets文件中使用。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -41,7 +38,7 @@
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
 
 ## at
 
@@ -52,6 +49,8 @@ at(index: number): number | undefined
 返回指定下标的元素，如果不存在，则返回undefined。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -75,8 +74,8 @@ at(index: number): number | undefined
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## constructor
 
@@ -88,6 +87,8 @@ constructor()
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-constructor()--><!--Device-Int8Array-constructor()-End-->
@@ -98,7 +99,7 @@ constructor()
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -109,6 +110,8 @@ constructor(length: number)
 构造函数，用于创建一个指定长度的ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -126,7 +129,7 @@ constructor(length: number)
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -137,6 +140,8 @@ constructor(elements: Iterable<number>)
 构造函数，以Iterable创建一个ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -154,7 +159,7 @@ constructor(elements: Iterable<number>)
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -165,6 +170,8 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 构造函数，以ArrayLike或ArkTS ArrayBuffer创建一个ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -182,7 +189,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## constructor
 
@@ -193,6 +200,8 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 构造函数，以ArkTS ArrayBuffer创建一个ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -205,14 +214,14 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | [buffer](#buffer) | ArrayBuffer | 是 |
-| [byteOffset](#byteoffset) | number | 否 |
+| [byteOffset](#byteOffset) | number | 否 |
 | [length](#length) | number | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) |
 
 ## copyWithin
 
@@ -223,6 +232,8 @@ copyWithin(target: number, start: number, end?: number): Int8Array
 从ArkTS Int8Array指定范围内的元素依次拷贝到目标位置。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -248,8 +259,8 @@ copyWithin(target: number, start: number, end?: number): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## entries
 
@@ -260,6 +271,8 @@ entries(): IterableIterator<[number, number]>
 返回一个新的迭代器对象，该对象包含ArkTS Int8Array中每个元素的键值对。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -277,8 +290,8 @@ entries(): IterableIterator<[number, number]>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## every
 
@@ -289,6 +302,8 @@ every(predicate: TypedArrayPredicateFn<number, Int8Array>): boolean
 测试ArkTS Int8Array中的所有元素是否满足指定条件。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -312,8 +327,8 @@ every(predicate: TypedArrayPredicateFn<number, Int8Array>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## fill
 
@@ -324,6 +339,8 @@ fill(value: number, start?: number, end?: number): Int8Array
 使用特定值填充ArkTS Int8Array指定范围的全部元素。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -349,8 +366,8 @@ fill(value: number, start?: number, end?: number): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## filter
 
@@ -361,6 +378,8 @@ filter(predicate: TypedArrayPredicateFn<number, Int8Array>): Int8Array
 返回一个新ArkTS Int8Array，其包含满足指定条件的所有元素。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -384,8 +403,8 @@ filter(predicate: TypedArrayPredicateFn<number, Int8Array>): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## find
 
@@ -396,6 +415,8 @@ find(predicate: TypedArrayPredicateFn<number, Int8Array>): number | undefined
 返回ArkTS Int8Array中第一个满足指定条件的元素的值，如果所有元素都不满足，则返回undefined。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -419,8 +440,8 @@ find(predicate: TypedArrayPredicateFn<number, Int8Array>): number | undefined
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## findIndex
 
@@ -431,6 +452,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Int8Array>): number
 返回ArkTS Int8Array中第一个满足指定条件的元素索引，如果所有元素都不满足，则返回-1。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -454,8 +477,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Int8Array>): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## forEach
 
@@ -466,6 +489,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Int8Array>): void
 对ArkTS Int8Array中的每个元素执行提供的回调函数。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -483,8 +508,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Int8Array>): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## from
 
@@ -495,6 +520,8 @@ static from(arrayLike: ArrayLike<number>): Int8Array
 从一个ArrayLike中创建一个ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -523,6 +550,8 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 从一个ArrayLike中创建一个ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -553,6 +582,8 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Int8Array--><!--Device-Int8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Int8Array-End-->
@@ -582,6 +613,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Int8Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
@@ -605,8 +638,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## indexOf
 
@@ -617,6 +650,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 返回在ArkTS Int8Array中给定元素的第一个索引，如果不存在，则返回-1。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -641,8 +676,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## join
 
@@ -653,6 +688,8 @@ join(separator?: string): string
 将ArkTS Int8Array的所有元素拼接成一个字符串，元素之间使用指定的分隔符分隔。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -676,8 +713,8 @@ join(separator?: string): string
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## keys
 
@@ -688,6 +725,8 @@ keys(): IterableIterator<number>
 返回一个新的迭代器对象，该对象包含ArkTS Int8Array中每个元素的键（索引）。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -705,8 +744,8 @@ keys(): IterableIterator<number>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## lastIndexOf
 
@@ -717,6 +756,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 返回ArkTS Int8Array实例中最后一次出现searchElement的索引，如果不存在，则返回-1。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -741,8 +782,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## map
 
@@ -753,6 +794,8 @@ map(callbackFn: TypedArrayMapCallback<number, Int8Array>): Int8Array
 对ArkTS Int8Array中的每个元素应用指定的回调函数，并使用结果创建一个新的ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -776,8 +819,8 @@ map(callbackFn: TypedArrayMapCallback<number, Int8Array>): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## of
 
@@ -788,6 +831,8 @@ static of(...items: number[]): Int8Array
 通过可变数量的参数创建一个新的ArkTS Int8Array对象。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -817,6 +862,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): number--><!--Device-Int8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): number-End-->
@@ -839,8 +886,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): number
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduce
 
@@ -851,6 +898,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>, initialV
 对ArkTS Int8Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -875,8 +924,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>, initialV
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduce
 
@@ -887,6 +936,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int8Array>, initialVal
 对ArkTS Int8Array中的每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -911,8 +962,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Int8Array>, initialVal
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduceRight
 
@@ -923,6 +974,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int8Arra
 反向遍历ArkTS Int8Array，对每个元素执行归约函数，接收初始值作为归约函数首次调用的参数，并返回最终的归约结果。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -947,8 +1000,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int8Arra
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reduceRight
 
@@ -959,6 +1012,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): nu
 反向遍历ArkTS Int8Array，对每个元素执行归约函数，并返回最终的归约结果。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -982,8 +1037,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Int8Array>): nu
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## reverse
 
@@ -994,6 +1049,8 @@ reverse(): Int8Array
 反转ArkTS Int8Array中元素的顺序。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1011,8 +1068,8 @@ reverse(): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## set
 
@@ -1023,6 +1080,8 @@ set(array: ArrayLike<number>, offset?: number): void
 将传入的ArrayLike元素依次写入到指定的起始位置。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1041,8 +1100,8 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## slice
 
@@ -1053,6 +1112,8 @@ slice(start?: number, end?: number): Int8Array
 返回一个新的ArkTS Int8Array对象，其包含原ArkTS Int8Array指定范围的内容。与subarray不同，slice返回的对象不会影响原数组。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1077,8 +1138,8 @@ slice(start?: number, end?: number): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## some
 
@@ -1089,6 +1150,8 @@ some(predicate: TypedArrayPredicateFn<number, Int8Array>): boolean
 测试ArkTS Int8Array中是否存在元素满足指定条件。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1112,8 +1175,8 @@ some(predicate: TypedArrayPredicateFn<number, Int8Array>): boolean
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## sort
 
@@ -1124,6 +1187,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Int8Array
 对ArkTS Int8Array进行原地排序，并返回排序后的ArkTS Int8Array对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1147,8 +1212,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## subarray
 
@@ -1159,6 +1224,8 @@ subarray(begin?: number, end?: number): Int8Array
 从指定的位置截取数组，返回一个基于相同ArkTS ArrayBuffer的新ArkTS Int8Array对象。由于返回的对象与原始对象共享同一个ArrayBuffer，修改其中一个会影响另一个。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1183,8 +1250,8 @@ subarray(begin?: number, end?: number): Int8Array
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## toLocaleString
 
@@ -1195,6 +1262,8 @@ toLocaleString(): string
 根据当前应用的系统地区获取符合当前文化习惯的数字表示形式，让每个元素调用自己的toLocaleString方法把数字转换为字符串，然后使用逗号将每个元素的结果字符串按照顺序拼接成字符串。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1212,8 +1281,8 @@ toLocaleString(): string
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## toString
 
@@ -1224,6 +1293,8 @@ toString(): string
 将ArkTS Int8Array转换为字符串。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1241,8 +1312,8 @@ toString(): string
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## values
 
@@ -1253,6 +1324,8 @@ values(): IterableIterator<number>
 返回一个新的迭代器对象，该对象包含ArkTS Int8Array中每个元素的值。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1270,8 +1343,8 @@ values(): IterableIterator<number>
 
 | 错误码ID |
 | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
-| [10200201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) |
 
 ## BYTES_PER_ELEMENT
 
@@ -1285,27 +1358,11 @@ ArkTS Int8Array中每个元素所占的字节数。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Int8Array-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## [index: number]
-
-```TypeScript
-[index: number]: number
-```
-
-返回ArkTS Int8Array指定索引位置的元素。
-
-**类型：** number
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Int8Array-[index: number]: number--><!--Device-Int8Array-[index: number]: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1320,6 +1377,8 @@ ArkTS Int8Array底层使用的buffer。
 **类型：** ArrayBuffer
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1339,6 +1398,8 @@ ArkTS Int8Array所占的字节数。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-readonly byteLength: number--><!--Device-Int8Array-readonly byteLength: number-End-->
@@ -1357,6 +1418,8 @@ ArkTS Int8Array距离其ArrayBuffer起始位置的字节偏移。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Int8Array-readonly byteOffset: number--><!--Device-Int8Array-readonly byteOffset: number-End-->
@@ -1374,6 +1437,8 @@ ArkTS Int8Array元素个数。
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

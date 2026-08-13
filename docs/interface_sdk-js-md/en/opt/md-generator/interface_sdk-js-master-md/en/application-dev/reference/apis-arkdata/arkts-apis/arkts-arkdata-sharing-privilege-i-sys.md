@@ -2,7 +2,9 @@
 
 Defines the privilege (permissions) on the shared data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sharing-interface Privilege--><!--Device-sharing-interface Privilege-End-->
 
@@ -26,7 +28,9 @@ Whether the participant can create data to share. The value true means the parti
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Privilege-creatable?: boolean--><!--Device-Privilege-creatable?: boolean-End-->
 
@@ -44,7 +48,9 @@ Whether the participant can delete the shared data. The value true means the par
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Privilege-deletable?: boolean--><!--Device-Privilege-deletable?: boolean-End-->
 
@@ -58,11 +64,13 @@ Whether the participant can delete the shared data. The value true means the par
 readable?: boolean
 ```
 
-Whether the participant can read the shared data. The value true means the participant can read the data;the value false means the opposite. The default value is false.
+Whether the participant can read the shared data. The value true means the participant can read the data; the value false means the opposite. The default value is false.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Privilege-readable?: boolean--><!--Device-Privilege-readable?: boolean-End-->
 
@@ -80,7 +88,9 @@ Whether the participant can share the data to others. The value true means the p
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Privilege-shareable?: boolean--><!--Device-Privilege-shareable?: boolean-End-->
 
@@ -98,7 +108,9 @@ Whether the participant can modify the shared data. The value true means the par
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Privilege-writable?: boolean--><!--Device-Privilege-writable?: boolean-End-->
 

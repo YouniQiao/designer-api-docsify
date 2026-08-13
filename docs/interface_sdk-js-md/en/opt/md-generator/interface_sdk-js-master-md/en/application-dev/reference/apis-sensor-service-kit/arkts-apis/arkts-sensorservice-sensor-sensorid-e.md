@@ -2,7 +2,9 @@
 
 Enumerates the sensor types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-enum SensorId--><!--Device-sensor-enum SensorId-End-->
 
@@ -14,11 +16,11 @@ Enumerates the sensor types.
 ACCELEROMETER = 1
 ```
 
-Acceleration sensor.
+Acceleration sensor. This API can be used in atomic services since API version 11.
 
-This API can be used in atomic services since API version 11.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,11 +34,11 @@ This API can be used in atomic services since API version 11.
 GYROSCOPE = 2
 ```
 
-Gyroscope sensor.
+Gyroscope sensor. This API can be used in atomic services since API version 11.
 
-This API can be used in atomic services since API version 11.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -52,7 +54,9 @@ AMBIENT_LIGHT = 5
 
 Ambient light sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-AMBIENT_LIGHT = 5--><!--Device-SensorId-AMBIENT_LIGHT = 5-End-->
 
@@ -66,7 +70,9 @@ MAGNETIC_FIELD = 6
 
 Magnetic field sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-MAGNETIC_FIELD = 6--><!--Device-SensorId-MAGNETIC_FIELD = 6-End-->
 
@@ -80,7 +86,9 @@ BAROMETER = 8
 
 Barometer sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-BAROMETER = 8--><!--Device-SensorId-BAROMETER = 8-End-->
 
@@ -94,7 +102,9 @@ HALL = 10
 
 Hall effect sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-HALL = 10--><!--Device-SensorId-HALL = 10-End-->
 
@@ -108,7 +118,9 @@ PROXIMITY = 12
 
 Proximity sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-PROXIMITY = 12--><!--Device-SensorId-PROXIMITY = 12-End-->
 
@@ -122,7 +134,9 @@ HUMIDITY = 13
 
 Humidity sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-HUMIDITY = 13--><!--Device-SensorId-HUMIDITY = 13-End-->
 
@@ -134,11 +148,11 @@ Humidity sensor.
 ORIENTATION = 256
 ```
 
-Orientation sensor.
+Orientation sensor. This API can be used in atomic services since API version 11.
 
-This API can be used in atomic services since API version 11.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -154,7 +168,9 @@ GRAVITY = 257
 
 Gravity sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-GRAVITY = 257--><!--Device-SensorId-GRAVITY = 257-End-->
 
@@ -168,7 +184,9 @@ LINEAR_ACCELEROMETER = 258
 
 Linear acceleration sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-LINEAR_ACCELEROMETER = 258--><!--Device-SensorId-LINEAR_ACCELEROMETER = 258-End-->
 
@@ -182,7 +200,9 @@ ROTATION_VECTOR = 259
 
 Rotation vector sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-ROTATION_VECTOR = 259--><!--Device-SensorId-ROTATION_VECTOR = 259-End-->
 
@@ -196,7 +216,9 @@ AMBIENT_TEMPERATURE = 260
 
 Ambient temperature sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-AMBIENT_TEMPERATURE = 260--><!--Device-SensorId-AMBIENT_TEMPERATURE = 260-End-->
 
@@ -210,7 +232,9 @@ MAGNETIC_FIELD_UNCALIBRATED = 261
 
 Uncalibrated magnetic field sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
@@ -224,7 +248,9 @@ GYROSCOPE_UNCALIBRATED = 263
 
 Uncalibrated gyroscope sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263-End-->
 
@@ -238,7 +264,9 @@ SIGNIFICANT_MOTION = 264
 
 Significant motion sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-SIGNIFICANT_MOTION = 264--><!--Device-SensorId-SIGNIFICANT_MOTION = 264-End-->
 
@@ -252,7 +280,9 @@ PEDOMETER_DETECTION = 265
 
 Pedometer detection sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-PEDOMETER_DETECTION = 265--><!--Device-SensorId-PEDOMETER_DETECTION = 265-End-->
 
@@ -266,7 +296,9 @@ PEDOMETER = 266
 
 Pedometer sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-PEDOMETER = 266--><!--Device-SensorId-PEDOMETER = 266-End-->
 
@@ -280,7 +312,9 @@ HEART_RATE = 278
 
 Heart rate sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-HEART_RATE = 278--><!--Device-SensorId-HEART_RATE = 278-End-->
 
@@ -294,7 +328,9 @@ WEAR_DETECTION = 280
 
 Wear detection sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-WEAR_DETECTION = 280--><!--Device-SensorId-WEAR_DETECTION = 280-End-->
 
@@ -308,7 +344,9 @@ ACCELEROMETER_UNCALIBRATED = 281
 
 Uncalibrated acceleration sensor.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281-End-->
 
@@ -320,11 +358,11 @@ Uncalibrated acceleration sensor.
 FUSION_PRESSURE = 283
 ```
 
-Fused pressure sensor.
+Fused pressure sensor. This sensor is available only on smart watches.
 
-This sensor is available only on smart watches.
+**Since:** 23
 
-**Since:** 22
+**Deprecated since:** -1
 
 <!--Device-SensorId-FUSION_PRESSURE = 283--><!--Device-SensorId-FUSION_PRESSURE = 283-End-->
 

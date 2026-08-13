@@ -9,6 +9,8 @@ Describes the traversal function of the ArkTS typed array.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-collections-type TypedArrayForEachCallback<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => void--><!--Device-collections-type TypedArrayForEachCallback<ElementType, ArrayType> =    (value: ElementType, index: number, array: ArrayType) => void-End-->

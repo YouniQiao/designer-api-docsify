@@ -2,7 +2,9 @@
 
 定义打印页面尺寸的接口。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-interface PrintPageSize--><!--Device-print-interface PrintPageSize-End-->
 
@@ -18,7 +20,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageSize-height: int--><!--Device-PrintPageSize-height: int-End-->
 
@@ -34,7 +38,9 @@ id: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageSize-id: string--><!--Device-PrintPageSize-id: string-End-->
 
@@ -50,7 +56,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageSize-name: string--><!--Device-PrintPageSize-name: string-End-->
 
@@ -66,7 +74,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintPageSize-width: int--><!--Device-PrintPageSize-width: int-End-->
 

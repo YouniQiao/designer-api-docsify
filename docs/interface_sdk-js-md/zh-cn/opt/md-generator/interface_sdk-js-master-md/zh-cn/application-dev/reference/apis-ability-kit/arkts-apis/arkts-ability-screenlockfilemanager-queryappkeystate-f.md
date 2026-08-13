@@ -8,7 +8,9 @@ function queryAppKeyState(): KeyStatus
 
 以同步方法查询调用方应用锁屏下敏感数据密钥的状态。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus--><!--Device-screenLockFileManager-function queryAppKeyState(): KeyStatus-End-->
 
@@ -24,8 +26,8 @@ function queryAppKeyState(): KeyStatus
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [29300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-screenLockFileManager.md#29300002-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [29300002](../errorcode-screenLockFileManager.md#29300002-系统服务工作异常) |
 
 ## 示例
 

@@ -1,0 +1,42 @@
+# ISubscribedWatches
+
+Define ISubscribedWatches interface.
+
+**Inheritance/Implementation:** ISubscribedWatches extends [IWatchSubscriberRegister](arkts-na-decorator-iwatchsubscriberregister-i.md#IWatchSubscriberRegister)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface ISubscribedWatches--><!--Device-unnamed-export declare interface ISubscribedWatches-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## executeOnSubscribingWatches
+
+```TypeScript
+executeOnSubscribingWatches(propertyName: string): void
+```
+
+Execute the watch function callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ISubscribedWatches-executeOnSubscribingWatches(propertyName: string): void--><!--Device-ISubscribedWatches-executeOnSubscribingWatches(propertyName: string): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| propertyName | string | Yes | property name |
+

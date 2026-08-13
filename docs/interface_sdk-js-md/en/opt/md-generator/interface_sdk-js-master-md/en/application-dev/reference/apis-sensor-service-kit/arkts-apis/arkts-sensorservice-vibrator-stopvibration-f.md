@@ -14,7 +14,9 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 Stops vibration in the specified mode. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -38,8 +40,8 @@ Stops vibration in the specified mode. This API uses a promise to return the res
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -128,7 +130,9 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 
 Stops vibration in the specified mode. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -147,8 +151,8 @@ Stops vibration in the specified mode. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -245,7 +249,9 @@ function stopVibration(callback: AsyncCallback<void>): void
 
 Stops vibration in all modes. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -265,7 +271,7 @@ Stops vibration in all modes. This API uses an asynchronous callback to return t
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -298,7 +304,9 @@ function stopVibration(): Promise<void>
 
 Stops vibration in all modes. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -318,7 +326,7 @@ Stops vibration in all modes. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -349,7 +357,9 @@ function stopVibration(param?: VibratorInfoParam): Promise<void>
 
 Stops vibration based on the specified vibrator parameters. If no parameters are passed, this API stops all vibrators of the local device by default. This API uses a promise to return the result.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -373,8 +383,8 @@ Stops vibration based on the specified vibrator parameters. If no parameters are
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [14600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
 ## Examples
 

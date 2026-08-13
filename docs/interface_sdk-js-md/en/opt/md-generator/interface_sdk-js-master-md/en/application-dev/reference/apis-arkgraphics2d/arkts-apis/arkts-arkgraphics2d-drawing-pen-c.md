@@ -1,15 +1,10 @@
 # Pen
 
-Defines a pen, which is used to describe the style and color to outline a shape.
+Defines a pen, which is used to describe the style and color to outline a shape. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-drawing-class Pen--><!--Device-drawing-class Pen-End-->
 
@@ -29,7 +24,9 @@ constructor()
 
 A constructor used to create a **Pen** object.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-constructor()--><!--Device-Pen-constructor()-End-->
 
@@ -43,7 +40,9 @@ constructor(pen: Pen)
 
 Copies a **Pen** object to create a new one.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-constructor(pen: Pen)--><!--Device-Pen-constructor(pen: Pen)-End-->
 
@@ -59,7 +58,7 @@ Copies a **Pen** object to create a new one.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getAlpha
 
@@ -69,7 +68,9 @@ getAlpha(): number
 
 Obtains the alpha value of this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getAlpha(): int--><!--Device-Pen-getAlpha(): int-End-->
 
@@ -89,7 +90,9 @@ getCapStyle(): CapStyle
 
 Obtains the cap style of this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getCapStyle(): CapStyle--><!--Device-Pen-getCapStyle(): CapStyle-End-->
 
@@ -111,7 +114,31 @@ Obtains the color of this pen.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Pen-getColor(): common2D.Color--><!--Device-Pen-getColor(): common2D.Color-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Color |
+
+## getColor
+
+```TypeScript
+getColor(): common2D.Color | undefined
+```
+
+Obtains the color of this pen.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Pen-getColor(): common2D.Color | undefined--><!--Device-Pen-getColor(): common2D.Color | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -131,7 +158,31 @@ Obtains the pen color. The difference between this method and [getColor](#getCol
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-Pen-getColor4f(): common2D.Color4f--><!--Device-Pen-getColor4f(): common2D.Color4f-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| common2D.Color4f |
+
+## getColor4f
+
+```TypeScript
+getColor4f(): common2D.Color4f | undefined
+```
+
+Obtains the color of a pen. The color is used by the pen to outline a shape.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-Pen-getColor4f(): common2D.Color4f | undefined--><!--Device-Pen-getColor4f(): common2D.Color4f | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -151,7 +202,31 @@ Obtains the color filter of this pen.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Pen-getColorFilter(): ColorFilter--><!--Device-Pen-getColorFilter(): ColorFilter-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ColorFilter](../../apis-arkui/arkts-apis/arkts-arkui-colorfilter-c.md) |
+
+## getColorFilter
+
+```TypeScript
+getColorFilter(): ColorFilter | undefined
+```
+
+Obtains the color filter of this pen.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-Pen-getColorFilter(): ColorFilter | undefined--><!--Device-Pen-getColorFilter(): ColorFilter | undefined-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -169,7 +244,9 @@ getFillPath(src: Path, dst: Path): boolean
 
 Obtains the source path outline drawn using this pen and represents it using a destination path.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getFillPath(src: Path, dst: Path): boolean--><!--Device-Pen-getFillPath(src: Path, dst: Path): boolean-End-->
 
@@ -192,7 +269,7 @@ Obtains the source path outline drawn using this pen and represents it using a d
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## getHexColor
 
@@ -202,7 +279,9 @@ getHexColor(): number
 
 Obtains the color of this pen.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getHexColor(): int--><!--Device-Pen-getHexColor(): int-End-->
 
@@ -222,7 +301,9 @@ getJoinStyle(): JoinStyle
 
 Obtains the join style of this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getJoinStyle(): JoinStyle--><!--Device-Pen-getJoinStyle(): JoinStyle-End-->
 
@@ -242,7 +323,9 @@ getMiterLimit(): number
 
 Obtains the maximum ratio allowed between the sharp corner length of a polyline and its line width.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getMiterLimit(): double--><!--Device-Pen-getMiterLimit(): double-End-->
 
@@ -262,7 +345,9 @@ getWidth(): number
 
 Obtains the stroke width of this pen. The width describes the thickness of the outline of a shape.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-getWidth(): double--><!--Device-Pen-getWidth(): double-End-->
 
@@ -282,7 +367,9 @@ isAntiAlias(): boolean
 
 Checks whether anti-aliasing is enabled for this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-isAntiAlias(): boolean--><!--Device-Pen-isAntiAlias(): boolean-End-->
 
@@ -302,7 +389,9 @@ reset(): void
 
 Resets this pen to the initial state.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-reset(): void--><!--Device-Pen-reset(): void-End-->
 
@@ -316,7 +405,9 @@ setAlpha(alpha: number): void
 
 Sets an alpha value for this pen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setAlpha(alpha: int): void--><!--Device-Pen-setAlpha(alpha: int): void-End-->
 
@@ -332,7 +423,7 @@ Sets an alpha value for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setAntiAlias
 
@@ -342,7 +433,9 @@ setAntiAlias(aa: boolean): void
 
 Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content smoother. If this API is not called, anti-aliasing is disabled by default.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setAntiAlias(aa: boolean): void--><!--Device-Pen-setAntiAlias(aa: boolean): void-End-->
 
@@ -358,7 +451,7 @@ Enables anti-aliasing for this pen. Anti-aliasing makes the edges of the content
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setBlendMode
 
@@ -368,7 +461,9 @@ setBlendMode(mode: BlendMode): void
 
 Sets a blend mode for this pen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setBlendMode(mode: BlendMode): void--><!--Device-Pen-setBlendMode(mode: BlendMode): void-End-->
 
@@ -378,13 +473,13 @@ Sets a blend mode for this pen.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| mode | [BlendMode](../../apis-arkui/arkts-apis/arkts-arkui-common-blendmode-e.md) | Yes |
+| mode | [BlendMode](../../apis-na/arkts-apis/arkts-na-common-blendmode-e.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setCapStyle
 
@@ -394,7 +489,9 @@ setCapStyle(style: CapStyle): void
 
 Sets the cap style for this pen. If this API is not called, the default cap style is **FLAT_CAP**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setCapStyle(style: CapStyle): void--><!--Device-Pen-setCapStyle(style: CapStyle): void-End-->
 
@@ -410,7 +507,7 @@ Sets the cap style for this pen. If this API is not called, the default cap styl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor
 
@@ -420,7 +517,9 @@ setColor(color: common2D.Color): void
 
 Sets a color for this pen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor(color: common2D.Color): void--><!--Device-Pen-setColor(color: common2D.Color): void-End-->
 
@@ -436,7 +535,7 @@ Sets a color for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor
 
@@ -444,10 +543,11 @@ Sets a color for this pen.
 setColor(alpha: number, red: number, green: number, blue: number): void
 ```
 
-Sets a color for this pen. This API provides better performance than  
-[setColor](#setColor) and is recommended.
+Sets a color for this pen. This API provides better performance than [setColor](#setColor) and is recommended.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void--><!--Device-Pen-setColor(alpha: int, red: int, green: int, blue: int): void-End-->
 
@@ -466,7 +566,7 @@ Sets a color for this pen. This API provides better performance than
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setColor
 
@@ -476,7 +576,9 @@ setColor(color: number): void
 
 Sets a color for this pen.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor(color: int): void--><!--Device-Pen-setColor(color: int): void-End-->
 
@@ -494,10 +596,11 @@ Sets a color for this pen.
 setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void
 ```
 
-Sets the color and standard color gamut for this pen. The difference between this method and  
-[setColor](#setColor) is that the color gamut can be set separately.
+Sets the color and standard color gamut for this pen. The difference between this method and [setColor](#setColor) is that the color gamut can be set separately.
 
-**Since:** 20
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void--><!--Device-Pen-setColor4f(color4f: common2D.Color4f, colorSpace: colorSpaceManager.ColorSpaceManager | null): void-End-->
 
@@ -518,7 +621,9 @@ setColorFilter(filter: ColorFilter | null): void
 
 Sets a color filter for this pen.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setColorFilter(filter: ColorFilter | null): void--><!--Device-Pen-setColorFilter(filter: ColorFilter | null): void-End-->
 
@@ -534,7 +639,7 @@ Sets a color filter for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setDither
 
@@ -544,7 +649,9 @@ setDither(dither: boolean): void
 
 Enables dithering for this pen. Dithering make the drawn color more realistic.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setDither(dither: boolean): void--><!--Device-Pen-setDither(dither: boolean): void-End-->
 
@@ -560,7 +667,7 @@ Enables dithering for this pen. Dithering make the drawn color more realistic.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setImageFilter
 
@@ -570,7 +677,9 @@ setImageFilter(filter: ImageFilter | null): void
 
 Sets an image filter for this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setImageFilter(filter: ImageFilter | null): void--><!--Device-Pen-setImageFilter(filter: ImageFilter | null): void-End-->
 
@@ -586,7 +695,7 @@ Sets an image filter for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setJoinStyle
 
@@ -596,7 +705,9 @@ setJoinStyle(style: JoinStyle): void
 
 Sets the join style for this pen. If this API is not called, the default join style is **MITER_JOIN**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setJoinStyle(style: JoinStyle): void--><!--Device-Pen-setJoinStyle(style: JoinStyle): void-End-->
 
@@ -612,7 +723,7 @@ Sets the join style for this pen. If this API is not called, the default join st
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setMaskFilter
 
@@ -622,7 +733,9 @@ setMaskFilter(filter: MaskFilter | null): void
 
 Adds a mask filter for this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void--><!--Device-Pen-setMaskFilter(filter: MaskFilter | null): void-End-->
 
@@ -638,7 +751,7 @@ Adds a mask filter for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setMiterLimit
 
@@ -646,9 +759,11 @@ Adds a mask filter for this pen.
 setMiterLimit(miter: number): void
 ```
 
-Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#JoinStyle) is set to **MITER_JOIN**and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
+Sets the maximum ratio allowed between the sharp corner length of a polyline and its line width. When drawing a polyline with the pen, if [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md#JoinStyle) is set to **MITER_JOIN** and this maximum ratio is exceeded, the corner will be displayed as beveled instead of mitered.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setMiterLimit(miter: double): void--><!--Device-Pen-setMiterLimit(miter: double): void-End-->
 
@@ -664,7 +779,7 @@ Sets the maximum ratio allowed between the sharp corner length of a polyline and
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setPathEffect
 
@@ -674,7 +789,9 @@ setPathEffect(effect: PathEffect | null): void
 
 Sets the path effect for this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setPathEffect(effect: PathEffect | null): void--><!--Device-Pen-setPathEffect(effect: PathEffect | null): void-End-->
 
@@ -690,7 +807,7 @@ Sets the path effect for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setShaderEffect
 
@@ -700,7 +817,9 @@ setShaderEffect(shaderEffect: ShaderEffect | null): void
 
 Sets the shader effect for this pen.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void--><!--Device-Pen-setShaderEffect(shaderEffect: ShaderEffect | null): void-End-->
 
@@ -716,7 +835,7 @@ Sets the shader effect for this pen.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setShadowLayer
 
@@ -726,7 +845,9 @@ setShadowLayer(shadowLayer: ShadowLayer | null): void
 
 Sets a shadow layer for this pen. The shadow layer effect takes effect only when text is drawn.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void--><!--Device-Pen-setShadowLayer(shadowLayer: ShadowLayer | null): void-End-->
 
@@ -742,7 +863,7 @@ Sets a shadow layer for this pen. The shadow layer effect takes effect only when
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## setStrokeWidth
 
@@ -752,7 +873,9 @@ setStrokeWidth(width: number): void
 
 Sets the stroke width for this pen. The value **0** is treated as an unusually thin width. During drawing, the width of 0 is always drawn as 1 pixel wide, regardless of any scaling applied to the canvas. Negative values are also regarded as the value **0** during the drawing process.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Pen-setStrokeWidth(width: double): void--><!--Device-Pen-setStrokeWidth(width: double): void-End-->
 
@@ -768,4 +891,4 @@ Sets the stroke width for this pen. The value **0** is treated as an unusually t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

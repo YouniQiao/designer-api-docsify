@@ -2,7 +2,9 @@
 
 A color class used to store the color picking result. It is suitable for scenarios such as obtaining the main color, the color with the largest proportion, and the color with the highest saturation from an image in conjunction with ColorPicker, helping developers conveniently obtain and pass image color picking results.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-effectKit-interface Color--><!--Device-effectKit-interface Color-End-->
 
@@ -24,7 +26,9 @@ Alpha component value. Value range: [0x0, 0xFF].
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,7 +48,9 @@ Blue component value. Value range: [0x0, 0xFF].
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -64,7 +70,9 @@ Green component value. Value range: [0x0, 0xFF].
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -84,7 +92,9 @@ Red component value. Value range: [0x0, 0xFF].
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

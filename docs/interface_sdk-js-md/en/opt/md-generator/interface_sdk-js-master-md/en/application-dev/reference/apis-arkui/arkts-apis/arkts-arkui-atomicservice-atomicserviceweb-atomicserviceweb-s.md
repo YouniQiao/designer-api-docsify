@@ -1,14 +1,10 @@
 # AtomicServiceWeb
 
-**AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities.
-
-> **NOTE：**
-> 
-> - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
+**AtomicServiceWeb** is an advanced web component offering customization to meet specific demands. It shields irrelevant APIs from the native **Web** component and extends functionality through JavaScript capabilities. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AtomicServiceWeb--><!--Device-unnamed-export declare struct AtomicServiceWeb-End-->
 
@@ -20,26 +16,11 @@
 import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from '@kit.ArkUI';
 ```
 
-## onLoadIntercept
-
-```TypeScript
-onLoadIntercept?: OnLoadInterceptCallback
-```
-
-Triggered when the resources loading is intercepted.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback--><!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## controller
 
 ```TypeScript
-controller: AtomicServiceWebController
+@ObjectLink
+  controller: AtomicServiceWebController
 ```
 
 Sets the controller of the AtomicServiceWeb.
@@ -48,18 +29,19 @@ Sets the controller of the AtomicServiceWeb.
 
 **Since:** 12
 
-**Decorator:** @ObjectLink
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AtomicServiceWeb-controller: AtomicServiceWebController--><!--Device-AtomicServiceWeb-controller: AtomicServiceWebController-End-->
+<!--Device-AtomicServiceWeb-@ObjectLink  controller: AtomicServiceWebController--><!--Device-AtomicServiceWeb-@ObjectLink  controller: AtomicServiceWebController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## darkMode
 
 ```TypeScript
-darkMode?: WebDarkMode
+@Prop
+  darkMode?: WebDarkMode
 ```
 
 Sets the dark mode of Web.
@@ -68,18 +50,19 @@ Sets the dark mode of Web.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AtomicServiceWeb-darkMode?: WebDarkMode--><!--Device-AtomicServiceWeb-darkMode?: WebDarkMode-End-->
+<!--Device-AtomicServiceWeb-@Prop  darkMode?: WebDarkMode--><!--Device-AtomicServiceWeb-@Prop  darkMode?: WebDarkMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## forceDarkAccess
 
 ```TypeScript
-forceDarkAccess?: boolean
+@Prop
+  forceDarkAccess?: boolean
 ```
 
 Sets whether to enable forced dark algorithm when the web is in dark mode.
@@ -88,18 +71,19 @@ Sets whether to enable forced dark algorithm when the web is in dark mode.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AtomicServiceWeb-forceDarkAccess?: boolean--><!--Device-AtomicServiceWeb-forceDarkAccess?: boolean-End-->
+<!--Device-AtomicServiceWeb-@Prop  forceDarkAccess?: boolean--><!--Device-AtomicServiceWeb-@Prop  forceDarkAccess?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## mixedMode
 
 ```TypeScript
-mixedMode?: MixedMode
+@Prop
+  mixedMode?: MixedMode
 ```
 
 Sets how to load HTTP and HTTPS content.
@@ -108,11 +92,11 @@ Sets how to load HTTP and HTTPS content.
 
 **Since:** 12
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AtomicServiceWeb-mixedMode?: MixedMode--><!--Device-AtomicServiceWeb-mixedMode?: MixedMode-End-->
+<!--Device-AtomicServiceWeb-@Prop  mixedMode?: MixedMode--><!--Device-AtomicServiceWeb-@Prop  mixedMode?: MixedMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -128,6 +112,8 @@ The navPathStack to control page route in Navigation and NavDestination.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWeb-navPathStack?: NavPathStack--><!--Device-AtomicServiceWeb-navPathStack?: NavPathStack-End-->
@@ -137,7 +123,8 @@ The navPathStack to control page route in Navigation and NavDestination.
 ## nestedScroll
 
 ```TypeScript
-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
+@Prop
+  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt
 ```
 
 Sets the nested scroll options.
@@ -146,11 +133,11 @@ Sets the nested scroll options.
 
 **Since:** 15
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
-<!--Device-AtomicServiceWeb-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt--><!--Device-AtomicServiceWeb-nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt-End-->
+<!--Device-AtomicServiceWeb-@Prop  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt--><!--Device-AtomicServiceWeb-@Prop  nestedScroll?: NestedScrollOptions | NestedScrollOptionsExt-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -160,11 +147,13 @@ Sets the nested scroll options.
 onControllerAttached?: Callback<void>
 ```
 
-Triggered when The controller is bound to the web component, this controller must be a WebviewController.This callback can not use the interface about manipulating web pages.
+Triggered when The controller is bound to the web component, this controller must be a WebviewController. This callback can not use the interface about manipulating web pages.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -184,6 +173,8 @@ Triggered when the web page receives a web resource loading error.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWeb-onErrorReceive?: Callback<OnErrorReceiveEvent>--><!--Device-AtomicServiceWeb-onErrorReceive?: Callback<OnErrorReceiveEvent>-End-->
@@ -202,9 +193,31 @@ Triggered when the web page receives a web resource loading HTTP error.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWeb-onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>--><!--Device-AtomicServiceWeb-onHttpErrorReceive?: Callback<OnHttpErrorReceiveEvent>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onLoadIntercept
+
+```TypeScript
+onLoadIntercept?: OnLoadInterceptCallback
+```
+
+Triggered when the resources loading is intercepted.
+
+**Type:** [OnLoadInterceptCallback](arkts-arkui-onloadinterceptcallback-t.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback--><!--Device-AtomicServiceWeb-onLoadIntercept?: OnLoadInterceptCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -219,6 +232,8 @@ The callback method to invoke after page is back or destroyed if postMessage() i
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnMessageEvent](arkts-arkui-atomicservice-atomicserviceweb-onmessageevent-i.md)&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -238,6 +253,8 @@ Triggered at the begin of web page loading.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWeb-onPageBegin?: Callback<OnPageBeginEvent>--><!--Device-AtomicServiceWeb-onPageBegin?: Callback<OnPageBeginEvent>-End-->
@@ -255,6 +272,8 @@ Triggered at the end of web page loading.
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[OnPageEndEvent](arkts-arkui-atomicservice-atomicserviceweb-onpageendevent-i.md)&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -274,6 +293,8 @@ Triggered when the page loading progress changes.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceWeb-onProgressChange?: Callback<OnProgressChangeEvent>--><!--Device-AtomicServiceWeb-onProgressChange?: Callback<OnProgressChangeEvent>-End-->
@@ -291,6 +312,8 @@ The address of the web page to be displayed.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

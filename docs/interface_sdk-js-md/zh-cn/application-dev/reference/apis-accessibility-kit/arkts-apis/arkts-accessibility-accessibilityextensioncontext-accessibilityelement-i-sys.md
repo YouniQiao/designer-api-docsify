@@ -1,11 +1,12 @@
 # AccessibilityElement
 
-无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
+无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用 [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement) 或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
@@ -19,9 +20,11 @@ enableScreenCurtain(isEnable: boolean): void
 
 提供开启/关闭幕帘屏的能力。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-enableScreenCurtain(isEnable: boolean): void--><!--Device-AccessibilityElement-enableScreenCurtain(isEnable: boolean): void-End-->
 
@@ -39,9 +42,9 @@ enableScreenCurtain(isEnable: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300003](../errorcode-accessibility.md#9300003-不具备执行该操作的无障碍权限) | No accessibility permission to perform the operation. |
 
 ## 示例
 
@@ -96,9 +99,11 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 根据action指定的操作类型和parameters传入的参数，执行特定操作。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -125,9 +130,9 @@ executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -197,6 +202,8 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-AccessibilityElement-findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -220,7 +227,7 @@ findElement(type: 'textType', condition: string): Promise<Array<AccessibilityEle
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -251,6 +258,8 @@ findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-AccessibilityElement-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -274,7 +283,7 @@ findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -301,9 +310,11 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 根据内容查找元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -329,9 +340,9 @@ findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
 ## 示例
 
@@ -372,7 +383,9 @@ Find elements that match the condition.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-findElementByElementId(condition: long): Promise<AccessibilityElement>--><!--Device-AccessibilityElement-findElementByElementId(condition: long): Promise<AccessibilityElement>-End-->
 
@@ -396,7 +409,7 @@ Find elements that match the condition.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -422,9 +435,11 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 根据焦点方向查找元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -450,9 +465,9 @@ findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityEle
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
 ## 示例
 
@@ -488,21 +503,17 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 
 ## findElementById
 
-ArkTS-Dyn:
-```TypeScript
-findElementById(condition: number): Promise<AccessibilityElement>
-```
-
-ArkTS-Sta:
 ```TypeScript
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
 根据元素 ID 查找元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -516,7 +527,7 @@ findElementById(condition: long): Promise<AccessibilityElement>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 元素 ID。 |
+| condition | long | 是 | 元素 ID。 |
 
 **返回值：**
 
@@ -528,9 +539,9 @@ findElementById(condition: long): Promise<AccessibilityElement>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
 ## 示例
 
@@ -574,7 +585,9 @@ Find elements that match the condition.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-findElementByTextType(condition: string): Promise<Array<AccessibilityElement>>--><!--Device-AccessibilityElement-findElementByTextType(condition: string): Promise<Array<AccessibilityElement>>-End-->
 
@@ -598,7 +611,7 @@ Find elements that match the condition.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -624,9 +637,11 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 根据提示文本查找元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -652,9 +667,9 @@ findElementsByAccessibilityHintText(condition: string): Promise<Array<Accessibil
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [9300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [9300006](../errorcode-accessibility.md#9300006-目标应用和无障碍服务建立连接失败) | The target application failed to connect to accessibility service. |
 
 ## 示例
 
@@ -700,7 +715,9 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -727,8 +744,8 @@ findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<Foc
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -756,9 +773,11 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 获取元素的子元素列表。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -778,8 +797,8 @@ getChildren(): Promise<Array<AccessibilityElement>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -802,21 +821,17 @@ axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) 
 
 ## getCursorPosition
 
-ArkTS-Dyn:
-```TypeScript
-getCursorPosition(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCursorPosition(callback: AsyncCallback<int>): void
 ```
 
 获取文本组件中光标位置，使用callback异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-getCursorPosition(callback: AsyncCallback<int>): void--><!--Device-AccessibilityElement-getCursorPosition(callback: AsyncCallback<int>): void-End-->
 
@@ -828,7 +843,7 @@ getCursorPosition(callback: AsyncCallback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | 回调函数，表示文本组件中光标位置。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | 回调函数，表示文本组件中光标位置。 |
 
 ## 示例
 
@@ -864,21 +879,17 @@ rootElement.getCursorPosition((err: BusinessError | null, data: int | undefined)
 
 ## getCursorPosition
 
-ArkTS-Dyn:
-```TypeScript
-getCursorPosition(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCursorPosition(): Promise<int>
 ```
 
 获取文本组件中光标位置，使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-getCursorPosition(): Promise<int>--><!--Device-AccessibilityElement-getCursorPosition(): Promise<int>-End-->
 
@@ -890,7 +901,7 @@ getCursorPosition(): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回当前光标所处位置。 |
+| Promise&lt;int&gt; | Promise对象，返回当前光标所处位置。 |
 
 ## 示例
 
@@ -928,9 +939,11 @@ getParent(): Promise<AccessibilityElement>
 
 获取无障碍节点元素的父元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -950,8 +963,8 @@ getParent(): Promise<AccessibilityElement>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -980,9 +993,11 @@ getRoot(): Promise<AccessibilityElement>
 
 获取活动窗口中的根元素。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESSIBILITY_EXTENSION_ABILITY
 
@@ -1002,8 +1017,8 @@ getRoot(): Promise<AccessibilityElement>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed.The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
 ## 示例
 
@@ -1029,15 +1044,15 @@ for (let window of windows) {
 accessibilityFocused?: boolean
 ```
 
-表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。
-
-默认值：false。
+表示元素是否因无障碍目的获得焦点。true表示已获得焦点，false表示未获得焦点。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityFocused?: boolean--><!--Device-AccessibilityElement-accessibilityFocused?: boolean-End-->
 
@@ -1051,15 +1066,15 @@ accessibilityFocused?: boolean
 accessibilityGroup?: boolean
 ```
 
-元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。
-
-默认值：false。
+元素是否为无障碍组。true表示元素是无障碍组，false表示元素不是无障碍组。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityGroup?: boolean--><!--Device-AccessibilityElement-accessibilityGroup?: boolean-End-->
 
@@ -1073,21 +1088,15 @@ accessibilityGroup?: boolean
 accessibilityLevel?: string
 ```
 
-组件的无障碍级别。
-
-'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。
-
-'yes'：当前组件可被辅助功能识别。
-
-'no'：当前组件不可被辅助功能识别。
-
-'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。
+组件的无障碍级别。 'auto'：当前组件由无障碍分组服务和ArkUI进行综合判断组件是否可被辅助功能识别。 'yes'：当前组件可被辅助功能识别。 'no'：当前组件不可被辅助功能识别。 'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityLevel?: string--><!--Device-AccessibilityElement-accessibilityLevel?: string-End-->
 
@@ -1101,15 +1110,15 @@ accessibilityLevel?: string
 accessibilityNextFocusId?: long
 ```
 
-下一个要获得焦点的组件的ID。
+下一个要获得焦点的组件的ID。 默认值：-1。
 
-默认值：-1。
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityNextFocusId?: long--><!--Device-AccessibilityElement-accessibilityNextFocusId?: long-End-->
 
@@ -1123,15 +1132,15 @@ accessibilityNextFocusId?: long
 accessibilityPreviousFocusId?: long
 ```
 
-上一个要获得焦点的组件的ID。
+上一个要获得焦点的组件的ID。 默认值：-1。
 
-默认值：-1。
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityPreviousFocusId?: long--><!--Device-AccessibilityElement-accessibilityPreviousFocusId?: long-End-->
 
@@ -1145,17 +1154,15 @@ accessibilityPreviousFocusId?: long
 accessibilityScrollable?: boolean
 ```
 
-元素是否因无障碍目的而可滚动。此属性优先级高于scrollable。
-
-true表示元素可滚动，false表示元素不可滚动。
-
-默认值：true。
+元素是否因无障碍目的而可滚动。此属性优先级高于scrollable。 true表示元素可滚动，false表示元素不可滚动。 默认值：true。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityScrollable?: boolean--><!--Device-AccessibilityElement-accessibilityScrollable?: boolean-End-->
 
@@ -1175,7 +1182,9 @@ accessibilityStateDescription?: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1195,9 +1204,11 @@ accessibilityText?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityText?: string--><!--Device-AccessibilityElement-accessibilityText?: string-End-->
 
@@ -1215,9 +1226,11 @@ accessibilityVisible?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-accessibilityVisible?: boolean--><!--Device-AccessibilityElement-accessibilityVisible?: boolean-End-->
 
@@ -1233,11 +1246,13 @@ belongTreeId?: int
 
 表示元素所属的组件树ID。默认值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1257,9 +1272,11 @@ bundleName?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-bundleName?: string--><!--Device-AccessibilityElement-bundleName?: string-End-->
 
@@ -1273,15 +1290,15 @@ bundleName?: string
 checkable?: boolean
 ```
 
-元素是否可勾选。true表示可勾选，false表示不可勾选。
-
-默认值：false。
+元素是否可勾选。true表示可勾选，false表示不可勾选。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-checkable?: boolean--><!--Device-AccessibilityElement-checkable?: boolean-End-->
 
@@ -1295,15 +1312,15 @@ checkable?: boolean
 checked?: boolean
 ```
 
-元素是否已勾选。true表示已勾选，false表示未勾选。
-
-默认值：false。
+元素是否已勾选。true表示已勾选，false表示未勾选。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-checked?: boolean--><!--Device-AccessibilityElement-checked?: boolean-End-->
 
@@ -1319,11 +1336,13 @@ childrenIds?: Array<long>
 
 组件的子元素ID列表。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**类型：** Array&lt;long&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-childrenIds?: Array<long>--><!--Device-AccessibilityElement-childrenIds?: Array<long>-End-->
 
@@ -1339,11 +1358,13 @@ childrenTreeId?: int
 
 表示元素的子组件树ID。默认值为-1。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1359,15 +1380,15 @@ childrenTreeId?: int
 clickable?: boolean
 ```
 
-元素是否可点击。true表示可点击，false表示不可点击。
-
-默认值：false。
+元素是否可点击。true表示可点击，false表示不可点击。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-clickable?: boolean--><!--Device-AccessibilityElement-clickable?: boolean-End-->
 
@@ -1385,9 +1406,11 @@ clip?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-clip?: boolean--><!--Device-AccessibilityElement-clip?: boolean-End-->
 
@@ -1401,15 +1424,15 @@ clip?: boolean
 componentId?: long
 ```
 
-元素所属组件的ID。
+元素所属组件的ID。 默认值：-1。
 
-默认值：-1。
+**类型：** long
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-componentId?: long--><!--Device-AccessibilityElement-componentId?: long-End-->
 
@@ -1427,9 +1450,11 @@ componentType?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-componentType?: string--><!--Device-AccessibilityElement-componentType?: string-End-->
 
@@ -1447,9 +1472,11 @@ contents?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-contents?: Array<string>--><!--Device-AccessibilityElement-contents?: Array<string>-End-->
 
@@ -1463,15 +1490,15 @@ contents?: Array<string>
 currentIndex?: int
 ```
 
-当前项的索引。
+当前项的索引。 默认值：0。
 
-默认值：0。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-currentIndex?: int--><!--Device-AccessibilityElement-currentIndex?: int-End-->
 
@@ -1489,9 +1516,11 @@ currentItem?: AccessibilityGrid
 
 **类型：** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-currentItem?: AccessibilityGrid--><!--Device-AccessibilityElement-currentItem?: AccessibilityGrid-End-->
 
@@ -1511,7 +1540,9 @@ Indicates the custom actions supported by the component.
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1531,9 +1562,11 @@ customComponentType?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-customComponentType?: string--><!--Device-AccessibilityElement-customComponentType?: string-End-->
 
@@ -1551,9 +1584,11 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-description?: string--><!--Device-AccessibilityElement-description?: string-End-->
 
@@ -1567,15 +1602,15 @@ description?: string
 editable?: boolean
 ```
 
-元素是否可编辑。true表示可编辑，false表示不可编辑。
-
-默认值：false。
+元素是否可编辑。true表示可编辑，false表示不可编辑。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-editable?: boolean--><!--Device-AccessibilityElement-editable?: boolean-End-->
 
@@ -1589,15 +1624,15 @@ editable?: boolean
 endIndex?: int
 ```
 
-屏幕上显示的最后一个列表项的索引。
+屏幕上显示的最后一个列表项的索引。 默认值：0。
 
-默认值：0。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-endIndex?: int--><!--Device-AccessibilityElement-endIndex?: int-End-->
 
@@ -1615,9 +1650,11 @@ error?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-error?: string--><!--Device-AccessibilityElement-error?: string-End-->
 
@@ -1635,9 +1672,11 @@ extraInfo?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-extraInfo?: string--><!--Device-AccessibilityElement-extraInfo?: string-End-->
 
@@ -1651,15 +1690,15 @@ extraInfo?: string
 focusable?: boolean
 ```
 
-元素是否可获得焦点。true表示可获得焦点，false表示不可获得焦点。
-
-默认值：false。
+元素是否可获得焦点。true表示可获得焦点，false表示不可获得焦点。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-focusable?: boolean--><!--Device-AccessibilityElement-focusable?: boolean-End-->
 
@@ -1677,9 +1716,11 @@ hintText?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-hintText?: string--><!--Device-AccessibilityElement-hintText?: string-End-->
 
@@ -1697,9 +1738,11 @@ hotArea?: Rect
 
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-hotArea?: Rect--><!--Device-AccessibilityElement-hotArea?: Rect-End-->
 
@@ -1713,15 +1756,15 @@ hotArea?: Rect
 inputType?: int
 ```
 
-输入文本的类型。
+输入文本的类型。 默认值：0。
 
-默认值：0。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-inputType?: int--><!--Device-AccessibilityElement-inputType?: int-End-->
 
@@ -1739,9 +1782,11 @@ inspectorKey?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-inspectorKey?: string--><!--Device-AccessibilityElement-inspectorKey?: string-End-->
 
@@ -1755,15 +1800,15 @@ inspectorKey?: string
 isActive?: boolean
 ```
 
-元素是否处于活动状态。true表示活动状态，false表示非活动状态。
-
-默认值：true。
+元素是否处于活动状态。true表示活动状态，false表示非活动状态。 默认值：true。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-isActive?: boolean--><!--Device-AccessibilityElement-isActive?: boolean-End-->
 
@@ -1777,15 +1822,15 @@ isActive?: boolean
 isEnable?: boolean
 ```
 
-元素是否启用。true表示启用，false表示未启用。
-
-默认值：false。
+元素是否启用。true表示启用，false表示未启用。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-isEnable?: boolean--><!--Device-AccessibilityElement-isEnable?: boolean-End-->
 
@@ -1805,7 +1850,9 @@ isEssential?: boolean
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1821,15 +1868,15 @@ isEssential?: boolean
 isFocused?: boolean
 ```
 
-表示元素是否已获得焦点。true表示已获得焦点，false表示未获得焦点。
-
-默认值：false。
+表示元素是否已获得焦点。true表示已获得焦点，false表示未获得焦点。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-isFocused?: boolean--><!--Device-AccessibilityElement-isFocused?: boolean-End-->
 
@@ -1843,15 +1890,15 @@ isFocused?: boolean
 isHint?: boolean
 ```
 
-元素是否为提示信息。true表示元素是提示信息，false表示非提示信息。
-
-默认值：false。
+元素是否为提示信息。true表示元素是提示信息，false表示非提示信息。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-isHint?: boolean--><!--Device-AccessibilityElement-isHint?: boolean-End-->
 
@@ -1865,15 +1912,15 @@ isHint?: boolean
 isPassword?: boolean
 ```
 
-元素是否为密码。true表示元素是密码，false表示不是密码。
-
-默认值：false。
+元素是否为密码。true表示元素是密码，false表示不是密码。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-isPassword?: boolean--><!--Device-AccessibilityElement-isPassword?: boolean-End-->
 
@@ -1887,15 +1934,15 @@ isPassword?: boolean
 isVisible?: boolean
 ```
 
-元素是否可见。true表示元素可见，false表示元素不可见。
-
-默认值：false。
+元素是否可见。true表示元素可见，false表示元素不可见。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-isVisible?: boolean--><!--Device-AccessibilityElement-isVisible?: boolean-End-->
 
@@ -1909,15 +1956,15 @@ isVisible?: boolean
 itemCount?: int
 ```
 
-项目总数。
+项目总数。 默认值：0。
 
-默认值：0。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-itemCount?: int--><!--Device-AccessibilityElement-itemCount?: int-End-->
 
@@ -1935,9 +1982,11 @@ lastContent?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-lastContent?: string--><!--Device-AccessibilityElement-lastContent?: string-End-->
 
@@ -1953,11 +2002,13 @@ layer?: int
 
 元素的显示层级。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-layer?: int--><!--Device-AccessibilityElement-layer?: int-End-->
 
@@ -1971,15 +2022,15 @@ layer?: int
 longClickable?: boolean
 ```
 
-元素是否可长按。true表示可长按，false表示不可长按。
-
-默认值：false。
+元素是否可长按。true表示可长按，false表示不可长按。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-longClickable?: boolean--><!--Device-AccessibilityElement-longClickable?: boolean-End-->
 
@@ -1995,11 +2046,13 @@ mainWindowId?: int
 
 组件的主窗口ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-mainWindowId?: int--><!--Device-AccessibilityElement-mainWindowId?: int-End-->
 
@@ -2015,11 +2068,13 @@ navDestinationId?: long
 
 组件的导航目标ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-navDestinationId?: long--><!--Device-AccessibilityElement-navDestinationId?: long-End-->
 
@@ -2033,15 +2088,15 @@ navDestinationId?: long
 offset?: double
 ```
 
-内容区域相对于可滚动组件（如List和Grid）顶部坐标的像素偏移量，单位为像素（px）。
+内容区域相对于可滚动组件（如List和Grid）顶部坐标的像素偏移量，单位为像素（px）。 默认值：0。
 
-默认值：0。
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-offset?: double--><!--Device-AccessibilityElement-offset?: double-End-->
 
@@ -2055,15 +2110,15 @@ offset?: double
 pageId?: int
 ```
 
-页面ID。
+页面ID。 默认值：-1。
 
-默认值：-1。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-pageId?: int--><!--Device-AccessibilityElement-pageId?: int-End-->
 
@@ -2079,11 +2134,13 @@ parentId?: long
 
 组件的父元素ID。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-parentId?: long--><!--Device-AccessibilityElement-parentId?: long-End-->
 
@@ -2097,15 +2154,15 @@ parentId?: long
 pluralLineSupported?: boolean
 ```
 
-表示元素是否支持多行文本。true表示支持，false表示不支持。
-
-默认值：false。
+表示元素是否支持多行文本。true表示支持，false表示不支持。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-pluralLineSupported?: boolean--><!--Device-AccessibilityElement-pluralLineSupported?: boolean-End-->
 
@@ -2123,9 +2180,11 @@ rect?: Rect
 
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-rect?: Rect--><!--Device-AccessibilityElement-rect?: Rect-End-->
 
@@ -2143,9 +2202,11 @@ resourceName?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-resourceName?: string--><!--Device-AccessibilityElement-resourceName?: string-End-->
 
@@ -2163,9 +2224,11 @@ screenRect?: Rect
 
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-screenRect?: Rect--><!--Device-AccessibilityElement-screenRect?: Rect-End-->
 
@@ -2179,15 +2242,15 @@ screenRect?: Rect
 scrollable?: boolean
 ```
 
-元素是否可滚动。true表示元素可滚动，false表示不可滚动。
-
-默认值：false。
+元素是否可滚动。true表示元素可滚动，false表示不可滚动。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-scrollable?: boolean--><!--Device-AccessibilityElement-scrollable?: boolean-End-->
 
@@ -2201,15 +2264,15 @@ scrollable?: boolean
 selected?: boolean
 ```
 
-元素是否已选中。true表示已选中，false表示未选中。
-
-默认值：false。
+元素是否已选中。true表示已选中，false表示未选中。 默认值：false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-selected?: boolean--><!--Device-AccessibilityElement-selected?: boolean-End-->
 
@@ -2227,9 +2290,11 @@ spans?: AccessibilitySpan[]
 
 **类型：** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-spans?: AccessibilitySpan[]--><!--Device-AccessibilityElement-spans?: AccessibilitySpan[]-End-->
 
@@ -2243,15 +2308,15 @@ spans?: AccessibilitySpan[]
 startIndex?: int
 ```
 
-屏幕上第一个列表项的索引。
+屏幕上第一个列表项的索引。 默认值：0。
 
-默认值：0。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-startIndex?: int--><!--Device-AccessibilityElement-startIndex?: int-End-->
 
@@ -2269,9 +2334,11 @@ supportedActionNames?: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-supportedActionNames?: Array<string>--><!--Device-AccessibilityElement-supportedActionNames?: Array<string>-End-->
 
@@ -2289,9 +2356,11 @@ text?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-text?: string--><!--Device-AccessibilityElement-text?: string-End-->
 
@@ -2307,11 +2376,13 @@ textLengthLimit?: int
 
 元素的最大文本长度。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-textLengthLimit?: int--><!--Device-AccessibilityElement-textLengthLimit?: int-End-->
 
@@ -2325,15 +2396,15 @@ textLengthLimit?: int
 textMoveUnit?: accessibility.TextMoveUnit
 ```
 
-文本朗读时的移动单位。
-
-默认值：0。
+文本朗读时的移动单位。 默认值：0。
 
 **类型：** accessibility.TextMoveUnit
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-textMoveUnit?: accessibility.TextMoveUnit--><!--Device-AccessibilityElement-textMoveUnit?: accessibility.TextMoveUnit-End-->
 
@@ -2351,9 +2422,11 @@ textType?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-textType?: string--><!--Device-AccessibilityElement-textType?: string-End-->
 
@@ -2371,9 +2444,11 @@ triggerAction?: AccessibilityAction
 
 **类型：** [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-triggerAction?: AccessibilityAction--><!--Device-AccessibilityElement-triggerAction?: AccessibilityAction-End-->
 
@@ -2391,9 +2466,11 @@ type?: WindowType
 
 **类型：** [WindowType](arkts-accessibility-windowtype-t.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-type?: WindowType--><!--Device-AccessibilityElement-type?: WindowType-End-->
 
@@ -2407,15 +2484,15 @@ type?: WindowType
 valueMax?: double
 ```
 
-最大值。
+最大值。 默认值：0。
 
-默认值：0。
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-valueMax?: double--><!--Device-AccessibilityElement-valueMax?: double-End-->
 
@@ -2429,15 +2506,15 @@ valueMax?: double
 valueMin?: double
 ```
 
-最小值。
+最小值。 默认值：0。
 
-默认值：0。
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-valueMin?: double--><!--Device-AccessibilityElement-valueMin?: double-End-->
 
@@ -2451,15 +2528,15 @@ valueMin?: double
 valueNow?: double
 ```
 
-当前值。
+当前值。 默认值：0。
 
-默认值：0。
+**类型：** double
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-valueNow?: double--><!--Device-AccessibilityElement-valueNow?: double-End-->
 
@@ -2473,15 +2550,15 @@ valueNow?: double
 windowId?: int
 ```
 
-窗口ID。
+窗口ID。 默认值：-1。
 
-默认值：-1。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-AccessibilityElement-windowId?: int--><!--Device-AccessibilityElement-windowId?: int-End-->
 

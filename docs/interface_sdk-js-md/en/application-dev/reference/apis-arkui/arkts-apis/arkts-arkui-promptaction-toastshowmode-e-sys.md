@@ -1,10 +1,12 @@
 # ToastShowMode
 
-Enum for the toast showMode.
+Enumerates display modes for toasts. By default, the toast is displayed within the application and supports display in subwindows.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-promptAction-export enum ToastShowMode--><!--Device-promptAction-export enum ToastShowMode-End-->
 
@@ -18,9 +20,11 @@ SYSTEM_TOP_MOST = 2
 
 Toast shows in SYSTEM_TOAST window.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

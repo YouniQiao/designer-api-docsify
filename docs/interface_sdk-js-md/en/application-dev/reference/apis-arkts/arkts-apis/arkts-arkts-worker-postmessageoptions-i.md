@@ -1,10 +1,12 @@
 # PostMessageOptions
 
-Defines the object for which the ownership is to be transferred during data transfer. The object must be an ArrayBuffer instance.After the ownership is transferred, the object becomes unavailable in the sender and can be used only in the receiver.
+Defines the object for which the ownership is to be transferred during data transfer. The object must be an ArrayBuffer instance. After the ownership is transferred, the object becomes unavailable in the sender and can be used only in the receiver.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PostMessageOptions--><!--Device-unnamed-export interface PostMessageOptions-End-->
 
@@ -29,6 +31,8 @@ ArrayBuffer array used to transfer the ownership. The array cannot be null.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

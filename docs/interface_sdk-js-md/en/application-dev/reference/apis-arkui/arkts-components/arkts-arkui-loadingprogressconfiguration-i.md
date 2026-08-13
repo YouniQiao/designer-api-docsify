@@ -1,15 +1,16 @@
 # LoadingProgressConfiguration
 
-You need a custom class to implement the **ContentModifier** API. Inherits from  
-[CommonConfiguration](CommonConfiguration).
+You need a custom class to implement the **ContentModifier** API. Inherits from CommonConfiguration.
 
-**Inheritance/Implementation:** LoadingProgressConfiguration extends [CommonConfiguration<LoadingProgressConfiguration>](CommonConfiguration<LoadingProgressConfiguration>)
+**Inheritance/Implementation:** LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>--><!--Device-unnamed-declare interface LoadingProgressConfiguration extends CommonConfiguration<LoadingProgressConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface LoadingProgressConfiguration--><!--Device-unnamed-declare interface LoadingProgressConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,15 +20,15 @@ You need a custom class to implement the **ContentModifier** API. Inherits from
 enableLoading: boolean
 ```
 
-Whether to show the loading animation.
-
-Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation.
+Whether to show the loading animation. Default value: **true**. **true**: Show the loading animation. **false**: Do not show the loading animation.
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

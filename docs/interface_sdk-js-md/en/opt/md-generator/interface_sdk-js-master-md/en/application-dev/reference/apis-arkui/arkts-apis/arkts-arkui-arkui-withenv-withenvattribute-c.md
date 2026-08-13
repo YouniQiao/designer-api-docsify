@@ -4,6 +4,8 @@ Define the WithEnv attribute functions.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class WithEnvAttribute--><!--Device-unnamed-export declare class WithEnvAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ customEnv<T>(key: CustomEnvKey<T>,  value: T): WithEnvAttribute
 Defining Custom Environment Variables
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +58,8 @@ env<T>(key: WritableSystemEnvKey<T>, value: T): WithEnvAttribute
 Defining System Environment Variables
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

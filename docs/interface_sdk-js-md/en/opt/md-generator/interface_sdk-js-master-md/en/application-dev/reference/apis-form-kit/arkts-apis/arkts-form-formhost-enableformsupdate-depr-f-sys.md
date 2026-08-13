@@ -12,7 +12,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableFormsUpdate)
+**Substitutes:** [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableFormsUpdate-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,7 +42,7 @@ Instructs the widget framework to make a widget updatable. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableFormsUpdate)
+**Substitutes:** [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableFormsUpdate-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

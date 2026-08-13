@@ -26,7 +26,7 @@ day: number
 
 **废弃版本：** 9
 
-**替代接口：** [day](reminderAgentManager.LocalDateTime.day)
+**替代接口：** day
 
 <!--Device-LocalDateTime-day: number--><!--Device-LocalDateTime-day: number-End-->
 
@@ -46,7 +46,7 @@ hour: number
 
 **废弃版本：** 9
 
-**替代接口：** [hour](reminderAgentManager.LocalDateTime.hour)
+**替代接口：** hour
 
 <!--Device-LocalDateTime-hour: number--><!--Device-LocalDateTime-hour: number-End-->
 
@@ -66,7 +66,7 @@ minute: number
 
 **废弃版本：** 9
 
-**替代接口：** [minute](reminderAgentManager.LocalDateTime.minute)
+**替代接口：** minute
 
 <!--Device-LocalDateTime-minute: number--><!--Device-LocalDateTime-minute: number-End-->
 
@@ -86,7 +86,7 @@ month: number
 
 **废弃版本：** 9
 
-**替代接口：** [month](reminderAgentManager.LocalDateTime.month)
+**替代接口：** month
 
 <!--Device-LocalDateTime-month: number--><!--Device-LocalDateTime-month: number-End-->
 
@@ -106,7 +106,7 @@ second?: number
 
 **废弃版本：** 9
 
-**替代接口：** [second](reminderAgentManager.LocalDateTime.second)
+**替代接口：** second
 
 <!--Device-LocalDateTime-second?: number--><!--Device-LocalDateTime-second?: number-End-->
 
@@ -126,7 +126,7 @@ year: number
 
 **废弃版本：** 9
 
-**替代接口：** [year](reminderAgentManager.LocalDateTime.year)
+**替代接口：** year
 
 <!--Device-LocalDateTime-year: number--><!--Device-LocalDateTime-year: number-End-->
 

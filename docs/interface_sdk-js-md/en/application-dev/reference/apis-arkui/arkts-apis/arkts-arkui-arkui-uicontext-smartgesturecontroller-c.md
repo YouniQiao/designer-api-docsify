@@ -1,12 +1,14 @@
 # SmartGestureController
 
-Class SmartGestureController.
+Provides the capability to enable smart gestures, monitor them, control the selection state, and dynamically determine smart gesture behavior. > **NOTE：**> > The following APIs must be called using a **SmartGestureController** instance obtained via > [getSmartGestureController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getSmartGestureController) in **UIContext**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export declare class SmartGestureController--><!--Device-unnamed-export declare class SmartGestureController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class SmartGestureController--><!--Device-unnamed-export class SmartGestureController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 clearMonitors(): void
 ```
 
-Clear the callback functions to monitor gesture events.
+Clears all monitoring callbacks registered for the current **UIContext**.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SmartGestureController-clearMonitors(): void--><!--Device-SmartGestureController-clearMonitors(): void-End-->
 
@@ -40,13 +46,17 @@ Clear the callback functions to monitor gesture events.
 clearSelected(): void
 ```
 
-Clear the current smart gesture selection.
+Clears the currently selected node of smart gestures.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SmartGestureController-clearSelected(): void--><!--Device-SmartGestureController-clearSelected(): void-End-->
 
@@ -58,13 +68,17 @@ Clear the current smart gesture selection.
 enableSmartTapAndSlideGestures(enabled: boolean): void
 ```
 
-Enable or disable smart tap and slide gestures for watch. This switch controls the new implementation of tap and slide gestures. When enabled, the new smart gesture handling pipeline is used. When disabled, the legacy implementation is used for compatibility.
+Sets whether to enable the tap and slide operations of smart gestures. > **NOTE：**> > - This API affects only the tap and slide smart gestures, not the wrist-turn gesture. > > - When disabled, the smartGestureShortcut > attribute on the component side is retained, but the tap and slide smart gestures will not be responded to.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SmartGestureController-enableSmartTapAndSlideGestures(enabled: boolean): void--><!--Device-SmartGestureController-enableSmartTapAndSlideGestures(enabled: boolean): void-End-->
 
@@ -74,7 +88,7 @@ Enable or disable smart tap and slide gestures for watch. This switch controls t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable smart tap and slide gesture handling. |
+| enabled | boolean | Yes | Whether to enable the tap and slide smart gesture handling. The value **true** means to enable it, and **false** means to disable it. |
 
 ## registerMonitor
 
@@ -82,13 +96,17 @@ Enable or disable smart tap and slide gestures for watch. This switch controls t
 registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-Register a callback function to monitor gesture events. This method enables the application to receive the processing intention of the current gesture and carry out customized intervention before the system processes the gesture event.
+Registers a smart gesture monitoring callback. Before the system processes the current smart gesture, the application can receive the default action handling of the current gesture and apply custom intervention. The callback is used for asynchronous callbacks. > **NOTE：**> > - This API enables the application to receive the system's handling intent for the current smart gesture event > before it is processed by the system and apply custom intervention. > > - Users can customize the behavior of the current smart gesture through this callback. > > - Multiple monitoring callbacks can be registered. They are triggered in the reverse order of registration (the > last registered one is executed first). When a monitoring callback consumes the smart gesture event, that is, > when the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution).isConsumed is **true**, > subsequent monitoring callbacks will not be executed. > > - If the same callback is registered repeatedly, only the first registration takes effect; duplicate > registrations are ignored. > > - The return value of the callback must be a valid [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution) > instance; otherwise, the modification will not take effect.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SmartGestureController-registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void--><!--Device-SmartGestureController-registerMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void-End-->
 
@@ -98,7 +116,7 @@ Register a callback function to monitor gesture events. This method enables the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](arkts-arkui-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Callback function invoked when a gesture is recognized. |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Smart gesture monitoring callback. The callback parameter is the default action handling provided by the system, and the return value is used to declare whether to consume the current smart gesture and whether to replace the default action handling. |
 
 ## requestSelected
 
@@ -106,13 +124,17 @@ Register a callback function to monitor gesture events. This method enables the 
 requestSelected(id: string): void
 ```
 
-Request smart gesture selection of a frame node by its identifier.
+Requests to set the specified component as the current smart gesture selected node. After successful selection, a selection prompt box is displayed. The style of the selection box varies by device. > **NOTE：**> > - The request takes effect only when all the following conditions are met: the target component can respond to > smart gestures, the component is visible on the screen, and the component has an > onClick event bound or a > TapGesture gesture bound. > > - Whether a component can respond to smart gestures is determined by **enabled** in > smartGestureShortcut.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SmartGestureController-requestSelected(id: string): void--><!--Device-SmartGestureController-requestSelected(id: string): void-End-->
 
@@ -122,7 +144,7 @@ Request smart gesture selection of a frame node by its identifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | The identifier of the frame node to select. |
+| id | string | Yes | Component id. |
 
 ## unregisterMonitor
 
@@ -130,13 +152,17 @@ Request smart gesture selection of a frame node by its identifier.
 unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void
 ```
 
-Unregister a callback function to monitor gesture events.
+Unregisters a smart gesture monitoring callback.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SmartGestureController-unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void--><!--Device-SmartGestureController-unregisterMonitor(monitorCallback: Callback<BaseGestureHandlingProposal, GestureHandlingResolution>): void-End-->
 
@@ -146,5 +172,5 @@ Unregister a callback function to monitor gesture events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitorCallback | [Callback](arkts-arkui-callback-t.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | Callback function invoked when a gesture is recognized. |
+| monitorCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md), [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md)&gt; | Yes | The smart gesture monitoring callback to unregister. |
 

@@ -2,7 +2,9 @@
 
 优化空间状态，为枚举类型。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-enum OptimizeState--><!--Device-cloudSync-enum OptimizeState-End-->
 
@@ -18,7 +20,9 @@ RUNNING = 0
 
 正在优化空间。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OptimizeState-RUNNING = 0--><!--Device-OptimizeState-RUNNING = 0-End-->
 
@@ -34,7 +38,9 @@ COMPLETED = 1
 
 优化空间成功结束。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OptimizeState-COMPLETED = 1--><!--Device-OptimizeState-COMPLETED = 1-End-->
 
@@ -50,7 +56,9 @@ FAILED = 2
 
 优化空间失败。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OptimizeState-FAILED = 2--><!--Device-OptimizeState-FAILED = 2-End-->
 
@@ -66,7 +74,9 @@ STOPPED = 3
 
 优化空间停止。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-OptimizeState-STOPPED = 3--><!--Device-OptimizeState-STOPPED = 3-End-->
 

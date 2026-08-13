@@ -2,7 +2,9 @@
 
 rtt通话错误报告
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export interface RttErrorInfo--><!--Device-call-export interface RttErrorInfo-End-->
 
@@ -20,7 +22,9 @@ rtt通话id
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-callId: int--><!--Device-RttErrorInfo-callId: int-End-->
 
@@ -38,7 +42,9 @@ rtt失败原因值
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-causeCode: int--><!--Device-RttErrorInfo-causeCode: int-End-->
 
@@ -56,7 +62,9 @@ rtt操作类型
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-operationType: int--><!--Device-RttErrorInfo-operationType: int-End-->
 
@@ -74,7 +82,9 @@ rtt失败原因
 
 **类型：** string
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RttErrorInfo-reasonText: string--><!--Device-RttErrorInfo-reasonText: string-End-->
 

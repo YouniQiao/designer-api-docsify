@@ -1,14 +1,12 @@
 # AtomicFile
 
-AtomicFile是一个用于对文件进行原子读写操作的类。
-
-在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。
-
-使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。
+AtomicFile是一个用于对文件进行原子读写操作的类。 在写操作时，通过写入临时文件，并在写入成功后将其重命名到原始文件位置来确保写入文件的完整性；而在写入失败时删除临时文件，不修改原始文件内容。 使用者可以自行调用finishWrite或failWrite来完成文件内容的写入或回滚。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class AtomicFile--><!--Device-unnamed-export class AtomicFile-End-->
 
@@ -26,6 +24,8 @@ constructor(path: string)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 <!--Device-AtomicFile-constructor(path: string)--><!--Device-AtomicFile-constructor(path: string)-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -40,7 +40,7 @@ constructor(path: string)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 
 ## delete
 
@@ -53,6 +53,8 @@ delete(): void
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-AtomicFile-delete(): void--><!--Device-AtomicFile-delete(): void-End-->
 
@@ -135,6 +137,8 @@ failWrite(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 <!--Device-AtomicFile-failWrite(): void--><!--Device-AtomicFile-failWrite(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -198,6 +202,8 @@ finishWrite(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 <!--Device-AtomicFile-finishWrite(): void--><!--Device-AtomicFile-finishWrite(): void-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -253,13 +259,13 @@ try {
 getBaseFile(): File
 ```
 
-通过AtomicFile对象获取文件对象。
-
-文件描述符fd需要由用户调用close方法关闭。
+通过AtomicFile对象获取文件对象。 文件描述符fd需要由用户调用close方法关闭。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-AtomicFile-getBaseFile(): File--><!--Device-AtomicFile-getBaseFile(): File-End-->
 
@@ -334,6 +340,8 @@ openRead(): ReadStream
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-AtomicFile-openRead(): ReadStream--><!--Device-AtomicFile-openRead(): ReadStream-End-->
 
@@ -427,6 +435,8 @@ readFully(): ArrayBuffer
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 <!--Device-AtomicFile-readFully(): ArrayBuffer--><!--Device-AtomicFile-readFully(): ArrayBuffer-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -503,15 +513,13 @@ try {
 startWrite(): WriteStream
 ```
 
-对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。
-
-当文件不存在时新建文件。
-
-在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
+对文件开始新的写入操作。将返回一个WriteStream，用于在其中写入新的文件数据。 当文件不存在时新建文件。 在写入文件完成后，写入成功需要调用finishWrite()，写入失败需要调用failWrite()。
 
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-AtomicFile-startWrite(): WriteStream--><!--Device-AtomicFile-startWrite(): WriteStream-End-->
 

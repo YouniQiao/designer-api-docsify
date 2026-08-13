@@ -1,8 +1,12 @@
 # NamedRouterOptions
 
-**Since:** 23
+Describes the named route options.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-router-interface NamedRouterOptions--><!--Device-router-interface NamedRouterOptions-End-->
 
@@ -20,15 +24,19 @@ import { router } from '@kit.ArkUI';
 name: string
 ```
 
-Name of the destination named route.
+Name of the target named route.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NamedRouterOptions-name: string--><!--Device-NamedRouterOptions-name: string-End-->
 
@@ -40,15 +48,19 @@ Name of the destination named route.
 params?: Object
 ```
 
-Data that needs to be passed to the destination page during navigation.
+Data that needs to be passed to the target page during redirection. The target page can use **router.getParams()** to obtain the passed parameters, for example, **this.keyValue** (**keyValue** is the value of a key in **params**). In the web-like paradigm, these parameters can be directly used on the target page. If the field specified by **key** already exists on the target page, the passed value of the key will be displayed. **NOTE：**The **params** parameter cannot pass objects returned by methods and system APIs, for example, **PixelMap** objects defined and returned by media APIs. To pass such objects, extract from them the basic type attributes to be passed, and then construct objects of the object type.
 
 **Type:** Object
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NamedRouterOptions-params?: Object--><!--Device-NamedRouterOptions-params?: Object-End-->
 
@@ -60,13 +72,15 @@ Data that needs to be passed to the destination page during navigation.
 recoverable?: boolean
 ```
 
-Set router page stack can be recovered after application is destroyed. When router page stack is recovered,top page will be recovered, other page recovered when it backs. the default value is 'true'.
+Whether the corresponding page is recoverable. Default value: **true**. **true**: The corresponding page is recoverable. **false**: The corresponding page is not recoverable. **NOTE：**If an application is switched to the background and is later closed by the system due to resource constraints or other reasons, a page marked as recoverable can be restored by the system when the application is brought back to the foreground. For more details, see [UIAbility Backup and Restore](../../../application-models/ability-recover-guideline.md).
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 14
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-NamedRouterOptions-recoverable?: boolean--><!--Device-NamedRouterOptions-recoverable?: boolean-End-->
 

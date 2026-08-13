@@ -2,7 +2,9 @@
 
 Describes audio renderer filter.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRendererFilter--><!--Device-audio-interface AudioRendererFilter-End-->
 
@@ -26,7 +28,9 @@ AudioRenderer id.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererFilter-rendererId?: int--><!--Device-AudioRendererFilter-rendererId?: int-End-->
 
@@ -44,7 +48,9 @@ Renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererFilter-rendererInfo?: AudioRendererInfo--><!--Device-AudioRendererFilter-rendererInfo?: AudioRendererInfo-End-->
 
@@ -62,7 +68,9 @@ Application uid.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererFilter-uid?: int--><!--Device-AudioRendererFilter-uid?: int-End-->
 

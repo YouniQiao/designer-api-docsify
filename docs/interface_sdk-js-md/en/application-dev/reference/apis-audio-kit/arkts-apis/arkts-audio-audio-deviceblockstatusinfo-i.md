@@ -2,9 +2,11 @@
 
 Describes the audio device blocked status and device information.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface DeviceBlockStatusInfo--><!--Device-audio-interface DeviceBlockStatusInfo-End-->
 
@@ -26,9 +28,11 @@ Blocked status of the audio device.
 
 **Type:** [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md)
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus--><!--Device-DeviceBlockStatusInfo-blockStatus: DeviceBlockStatus-End-->
 
@@ -44,9 +48,11 @@ Device information.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors--><!--Device-DeviceBlockStatusInfo-devices: AudioDeviceDescriptors-End-->
 

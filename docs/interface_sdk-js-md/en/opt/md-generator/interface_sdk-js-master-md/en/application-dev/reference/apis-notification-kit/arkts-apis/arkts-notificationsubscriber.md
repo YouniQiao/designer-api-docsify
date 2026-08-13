@@ -1,8 +1,4 @@
-# notificationSubscriber(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)
-
-The **NotificationSubscriber** module serves as the input parameter of subscribeNotification and provides
- callbacks for receiving or removing notifications.
-
+# notificationSubscriber
 
 ## Summary
 
@@ -29,6 +25,7 @@ The **NotificationSubscriber** module serves as the input parameter of subscribe
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [BadgeEnabledChangedCallback](arkts-notification-badgeenabledchangedcallback-t-sys.md) |
 | [EnabledSilentReminderChangedCallback](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md) |
 | [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md) |
 | [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md) |

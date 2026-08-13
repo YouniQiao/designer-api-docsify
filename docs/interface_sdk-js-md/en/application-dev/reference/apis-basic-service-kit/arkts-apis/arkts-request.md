@@ -1,8 +1,6 @@
-# @ohos.request(Upload and Download)
+# @ohos.request
 
-The **request** module provides applications with basic upload, download, and background transmission agent capabilities.
-
-- Currently, the **request** module cannot be called in extensions.
+The **request** module provides applications with basic upload, download, and background transmission agent capabilities. - Currently, the **request** module cannot be called in extensions.
 
 ## Modules to Import
 
@@ -16,5 +14,5 @@ import { request } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [request](arkts-basicservices-request-n.md) | The **request** module provides applications with basic upload, download, and background transmission agent capabilities.  - Currently, the **request** module cannot be called in extensions. |
+| [request](arkts-basicservices-request-n.md) | The **request** module provides applications with basic upload, download, and background transmission agent capabilities. - Currently, the **request** module cannot be called in extensions. |
 

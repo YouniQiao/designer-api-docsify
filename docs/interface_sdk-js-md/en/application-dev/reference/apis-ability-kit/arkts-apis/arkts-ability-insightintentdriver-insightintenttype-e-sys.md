@@ -1,12 +1,12 @@
 # InsightIntentType (System API)
 
-Enumerates the intent types defined by the intent decorator. You can obtain the intent type from  
-[LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md#LinkIntentInfo) returned by calling APIs such as  
-[getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getAllInsightIntentInfo).
+Enumerates the intent types defined by the intent decorator. You can obtain the intent type from [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md#LinkIntentInfo-(System-API)) returned by calling APIs such as [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getAllInsightIntentInfo-(System-API)).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-enum InsightIntentType--><!--Device-insightIntentDriver-enum InsightIntentType-End-->
 
@@ -20,12 +20,13 @@ Enumerates the intent types defined by the intent decorator. You can obtain the 
 LINK = '@InsightIntentLink'
 ```
 
-A decorator of the  
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) type.
+A decorator of the @InsightIntentLink type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,12 +42,13 @@ A decorator of the
 PAGE = '@InsightIntentPage'
 ```
 
-A decorator of the  
-[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) type.
+A decorator of the @InsightIntentPage type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,12 +64,13 @@ A decorator of the
 ENTRY = '@InsightIntentEntry'
 ```
 
-A decorator of the  
-[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry) type.
+A decorator of the @InsightIntentEntry type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,12 +86,13 @@ A decorator of the
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-A decorator of the  
-[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) type.
+A decorator of the @InsightIntentFunctionMethod type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,12 +108,13 @@ A decorator of the
 FORM = '@InsightIntentForm'
 ```
 
-A decorator of the  
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) type.
+A decorator of the @InsightIntentForm type.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

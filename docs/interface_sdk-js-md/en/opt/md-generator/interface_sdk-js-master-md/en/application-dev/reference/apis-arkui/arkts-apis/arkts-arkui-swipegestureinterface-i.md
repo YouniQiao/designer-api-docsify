@@ -2,15 +2,17 @@
 
 **SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default.
 
-**Inheritance/Implementation:** SwipeGestureInterface extends [GestureInterface<SwipeGestureInterface>](GestureInterface<SwipeGestureInterface>)
+**Inheritance/Implementation:** SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 
 **Since:** 8
 
-<!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>--><!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface SwipeGestureInterface--><!--Device-unnamed-interface SwipeGestureInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
@@ -19,6 +21,8 @@
 Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-gestureinterface-i.md#GestureInterface).
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -38,15 +42,17 @@ Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&
 | --- |
 | [SwipeGestureInterface](arkts-arkui-swipegestureinterface-i.md) |
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (options?: SwipeGestureHandlerOptions): SwipeGestureInterface
 ```
 
-Sets the parameters for the swipe gesture. Compared with [SwipeGesture](SwipeGestureInterface(value?: { fingers?: number; direction?: SwipeDirection; speed?: number))}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
+Sets the parameters for the swipe gesture. Compared with SwipeGesture)}, this API adds the **isFingerCountLimited** parameter to **options**, which determines whether to enforce the exact number of fingers touching the screen.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -77,6 +83,8 @@ onAction(event: (event: GestureEvent) => void): SwipeGestureInterface
 Triggered when the swipe gesture is recognized.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,9 +6,11 @@ type Image = string
 
 The type of the image can be its URI.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligence-type Image = string--><!--Device-intelligence-type Image = string-End-->
 

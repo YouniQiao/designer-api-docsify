@@ -6,10 +6,7 @@
 function controlTransfer(pipe: USBDevicePipe, controlparam: USBControlParams, timeout?: number): Promise<number>
 ```
 
-控制传输。
-
-需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices)获取设备列表；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight)获取设备请求权限；调用  
-[usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice)接口得到devicepipe作为参数。
+控制传输。 需要调用[usb.getDevices](arkts-basicservices-usb-getdevices-f.md#getDevices)获取设备列表；调用[usb.requestRight](arkts-basicservices-usb-requestright-f.md#requestRight)获取设备请求权限；调用 [usb.connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectDevice)接口得到devicepipe作为参数。
 
 **起始版本：** 8
 

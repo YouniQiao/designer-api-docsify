@@ -14,7 +14,9 @@ function create(colorSpaceName: ColorSpace): ColorSpaceManager
 
 Creates a standard color space object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager--><!--Device-colorSpaceManager-function create(colorSpaceName: ColorSpace): ColorSpaceManager-End-->
 
@@ -36,8 +38,8 @@ Creates a standard color space object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 
@@ -59,7 +61,9 @@ function create(primaries: ColorSpacePrimaries, gamma: number): ColorSpaceManage
 
 Creates a custom color space object.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager--><!--Device-colorSpaceManager-function create(primaries: ColorSpacePrimaries, gamma: double): ColorSpaceManager-End-->
 
@@ -82,8 +86,8 @@ Creates a custom color space object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [18600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) |
 
 ## Examples
 

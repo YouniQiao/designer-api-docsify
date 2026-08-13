@@ -8,6 +8,8 @@ Indicates the type of the result of batch operation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-photoAccessHelper-type ResultListener = (result: ResultInfo) => void--><!--Device-photoAccessHelper-type ResultListener = (result: ResultInfo) => void-End-->

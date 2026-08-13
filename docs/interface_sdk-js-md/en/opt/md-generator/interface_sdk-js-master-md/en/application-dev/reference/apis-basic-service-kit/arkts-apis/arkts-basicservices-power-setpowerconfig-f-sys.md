@@ -16,6 +16,8 @@ Update the power configuration value for a given scene name.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.POWER_CONFIG
 
 **Model restriction:** This API can be used only in the stage model.
@@ -37,11 +39,11 @@ Update the power configuration value for a given scene name.
 
 | Error Code ID |
 | --- |
-| [4900601](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900601-failure-to-write-the-power-supply-configuration-node) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [4900400](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) |
-| [4900101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
+| [4900601](../../apis-basic-services-kit/errorcode-power.md#4900601-failure-to-write-the-power-supply-configuration-node) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [4900400](../../apis-basic-services-kit/errorcode-power.md#4900400-incorrect-input-parameter) |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-service-connection-failure) |
 
 ## Examples
 

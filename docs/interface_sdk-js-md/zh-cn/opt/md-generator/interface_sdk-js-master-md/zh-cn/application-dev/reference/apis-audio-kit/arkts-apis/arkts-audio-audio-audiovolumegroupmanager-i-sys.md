@@ -1,15 +1,10 @@
 # AudioVolumeGroupManager
 
-管理音频组音量。
+管理音频组音量。 在使用AudioVolumeGroupManager的接口之前，需先通过 [getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager) 获取AudioVolumeGroupManager实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-在使用AudioVolumeGroupManager的接口之前，需先通过  
-[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getVolumeGroupManager)获取AudioVolumeGroupManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioVolumeGroupManager--><!--Device-audio-interface AudioVolumeGroupManager-End-->
 
@@ -21,7 +16,9 @@
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -43,10 +40,10 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -68,7 +65,9 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustType): Promise<void>
 ```
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -95,10 +94,10 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -118,7 +117,9 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>): void
 ```
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -139,10 +140,10 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -165,7 +166,9 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
 adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 ```
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -191,10 +194,10 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [6800301](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800301-系统处理异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [6800301](../errorcode-audio.md#6800301-系统处理异常) |
 
 ## 示例
 
@@ -216,7 +219,9 @@ getActiveVolumeTypeSync(uid: number): AudioVolumeType
 
 Obtains the active volume type in the calling moment. This method returns in sync mode.
 
-**起始版本：** 13
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType--><!--Device-AudioVolumeGroupManager-getActiveVolumeTypeSync(uid: int): AudioVolumeType-End-->
 
@@ -240,9 +245,9 @@ Obtains the active volume type in the calling moment. This method returns in syn
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -258,7 +263,9 @@ let value = audioVolumeGroupManager.getActiveVolumeTypeSync(uid);
 isPersistentMicMute(): boolean
 ```
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
 
@@ -278,8 +285,8 @@ isPersistentMicMute(): boolean
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -293,7 +300,9 @@ let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
 mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void
 ```
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -331,7 +340,9 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 ```
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -370,7 +381,9 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
 setMicMute(mute: boolean): Promise<void>
 ```
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_AUDIO_CONFIG
 
@@ -396,10 +409,10 @@ setMicMute(mute: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -415,7 +428,9 @@ audioVolumeGroupManager.setMicMute(true).then(() => {
 setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 ```
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MICROPHONE_CONTROL
 
@@ -442,10 +457,10 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -461,7 +476,9 @@ audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).the
 setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 ```
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -498,7 +515,9 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 setRingerMode(mode: AudioRingMode): Promise<void>
 ```
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -538,7 +557,9 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 
 Sets the volume for a stream. This method uses an asynchronous callback to return the result.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -578,7 +599,9 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 
 Sets the volume for a stream. This method uses a promise to return the result.
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -617,7 +640,9 @@ setVolumeWithFlag(volumeType: AudioVolumeType, volume: number, flags: number): P
 
 Sets the volume for a stream. This method uses a promise to return the result.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -645,8 +670,8 @@ Sets the volume for a stream. This method uses a promise to return the result.
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

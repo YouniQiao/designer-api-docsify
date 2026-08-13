@@ -2,7 +2,9 @@
 
 Class of fence extension ability.
 
-**Since:** 14
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export default class FenceExtensionAbility--><!--Device-unnamed-export default class FenceExtensionAbility-End-->
 
@@ -22,7 +24,9 @@ onDestroy(): void
 
 Called back before a fence extension is destroyed.
 
-**Since:** 14
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,7 +55,9 @@ onFenceStatusChange(transition: geoLocationManager.GeofenceTransition, additions
 
 Called back when geofence status is change.
 
-**Since:** 14
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +70,7 @@ Called back when geofence status is change.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | transition | geoLocationManager.GeofenceTransition | Yes |
-| additions | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt; | Yes |
+| additions | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt; | Yes |
 
 ## Examples
 
@@ -123,7 +129,9 @@ Indicates the fence extension context.
 
 **Type:** [FenceExtensionContext](arkts-location-app-ability-fenceextensioncontext-fenceextensioncontext-c-sys.md)
 
-**Since:** 14
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

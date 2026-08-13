@@ -4,6 +4,8 @@
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class CanvasGradient--><!--Device-unnamed-declare class CanvasGradient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ addColorStop(offset: number, color: string): void
 Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,24 +76,11 @@ struct AddColorStop {
 addColorStop(offset: number, color: string | ColorMetrics): void
 ```
 
-Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the  
-[ColorMetrics](ColorMetrics)type, which can achieve richer color reproduction on devices that support high color gamut.
-
-> **NOTE：**
-> 
-> Only the
-> [fillStyle](CanvasRenderingContext2D#fillStyle)
-> and
-> [strokeStyle](arkts-arkui-canvasrenderer-c.md#strokeStyle)
-> attributes of the
-> [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D)
-> object support the **CanvasGradient** object with the P3 wide color gamut. In addition,
-> the color gamut mode of the window where the **Canvas** component is located must be set
-> to wide color gamut mode **WIDE_GAMUT** via the
-> [setWindowColorSpace](../arkts-apis/arkts-arkui-window-window-i.md#setWindowColorSpace)
-> method.
+Adds a color stop for the **CanvasGradient** object based on the specified offset and gradient color. Colors in RGB or ARGB format can be set. You can set P3 color gamut values by passing in the ColorMetrics type, which can achieve richer color reproduction on devices that support high color gamut. > **NOTE：**> > Only the > fillStyle > and > [strokeStyle](arkts-arkui-canvasrenderer-c.md#strokeStyle) > attributes of the > [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D) > object support the **CanvasGradient** object with the P3 wide color gamut. In addition, > the color gamut mode of the window where the **Canvas** component is located must be set > to wide color gamut mode **WIDE_GAMUT** via the > [setWindowColorSpace](../arkts-apis/arkts-arkui-window-window-i.md#setWindowColorSpace) > method.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,17 +97,17 @@ Adds a color stop for the **CanvasGradient** object based on the specified offse
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | offset | number | Yes |
-| color | string \| [ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | Yes |
+| color | string \| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [103701](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) |
+| [103701](../errorcode-canvas.md#103701-parameter-error) |
 
 ## Examples
 
-This example demonstrates how to set the gradient stop value of a specified color gamut using addColorStop, including the offset and color. For details about how to set the color gamut mode of the window to wide color gamut, see [setWindowColorSpace](../arkts-apis-window-Window.md#setwindowcolorspace9).
+This example demonstrates how to set the gradient stop value of a specified color gamut using addColorStop, including the offset and color. For details about how to set the color gamut mode of the window to wide color gamut, see [setWindowColorSpace](../arkts-apis-window-Window.md#setWindowColorSpace).
 
 ```TypeScript
 // xxx.ets
@@ -170,7 +161,7 @@ struct AddColorStop {
 }
 ```
 
-Since API version 26.0.0, the [addColorStop](#addcolorstop20) API additionally supports HDR brightening through the [ColorMetrics](../js-apis-arkui-graphics.md#colormetrics12) type input parameter.
+Since API version 26.0.0, the [addColorStop](#addColorStop) API additionally supports HDR brightening through the ColorMetrics type input parameter.
 
 ```TypeScript
 // xxx.ets

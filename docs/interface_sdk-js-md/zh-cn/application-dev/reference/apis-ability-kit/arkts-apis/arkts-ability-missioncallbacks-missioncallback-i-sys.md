@@ -2,9 +2,11 @@
 
 任务回调已注册
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->
 
@@ -20,9 +22,13 @@ notifyMissionsChanged: NotifyMissionsChangedCallback
 
 任务变更时由系统调用。
 
-**起始版本：** 9
+**类型：** [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md)
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -42,9 +48,13 @@ notifyNetDisconnect: NotifyNetDisconnectCallback
 
 Called by system when network disconnect.
 
-**起始版本：** 9
+**类型：** [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md)
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -64,9 +74,13 @@ notifySnapshot: NotifySnapshotCallback
 
 快照发生更改时，系统会调用此函数。
 
-**起始版本：** 9
+**类型：** [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md)
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

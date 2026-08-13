@@ -4,6 +4,8 @@ Defines the triggered callback to decision whether resend form data or not.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnDataResubmittedEvent--><!--Device-unnamed-declare interface OnDataResubmittedEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Form data resubmission handle.
 **类型：** [DataResubmissionHandler](arkts-arkweb-dataresubmissionhandler-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -2,11 +2,11 @@
 
 ## 汇总
 
-### 接口
+### 类
 
 | 名称 | 说明 |
 | --- | --- |
-| [ApplicationStateObserver](arkts-ability-applicationstateobserver-i.md) | 应用状态监听器，可以作为入参传入  [on('applicationState')](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))方法，监听应用的生命周期变化。 |
+| [ApplicationStateObserver](arkts-ability-applicationstateobserver-c.md) | 应用状态监听器，可以作为入参传入 [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) 方法，监听应用的生命周期变化。 |
 
 ### 类型
 

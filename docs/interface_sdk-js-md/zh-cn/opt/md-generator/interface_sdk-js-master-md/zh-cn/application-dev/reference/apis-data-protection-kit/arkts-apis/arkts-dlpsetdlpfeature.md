@@ -1,18 +1,22 @@
 # @ohos.dlpSetDlpFeature(设置数据防泄漏入口)
 
-本模块提供数据防泄漏（Data Loss Prevention，简称为DLP）特性开关的控制能力，包括开启和关闭DLP特性开关、返回特性开关设置结果等，帮助企业满足数据安全合规要求，实现机密文件的访问控制和加密保护。
+/*
+ Copyright (c) 2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**使用场景**：
-
-- 需要满足数据安全合规要求的场景。  
-- 对机密文件进行访问控制和加密保护。
-
-> **说明：**
-> 
-> - 本模块首批接口从API version 26.0.0开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> - 本模块接口为系统接口。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -29,7 +33,7 @@
 
 | 名称 |
 | --- |
-| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setdlpfeature) |
+| [setDlpFeature](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md#setDlpFeature（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

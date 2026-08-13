@@ -1,4 +1,4 @@
-# @ohos.userIAM.userAuthIcon(Embedded User Authentication Icons)
+# @ohos.userIAM.userAuthIcon
 
 ## Modules to Import
 

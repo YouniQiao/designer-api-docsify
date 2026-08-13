@@ -1,10 +1,12 @@
 # ControllerAttachState
 
-Enum type supplied to [getAttachState](arkts-arkweb-webview-webviewcontroller-c.md#getAttachState) for indicating the attach state of controller.
+表示controller的绑定状态枚举
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum ControllerAttachState--><!--Device-webview-enum ControllerAttachState-End-->
 
@@ -16,11 +18,13 @@ Enum type supplied to [getAttachState](arkts-arkweb-webview-webviewcontroller-c.
 UNATTACHED = 0
 ```
 
-Indicates webviewController is not attached a web component.
+表示controller当前并未绑定一个web组件
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-ControllerAttachState-UNATTACHED = 0--><!--Device-ControllerAttachState-UNATTACHED = 0-End-->
 
@@ -34,9 +38,11 @@ ATTACHED = 1
 
 Indicates webviewController is attached a web component.
 
-**起始版本：** 23
+**起始版本：** 20
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-ControllerAttachState-ATTACHED = 1--><!--Device-ControllerAttachState-ATTACHED = 1-End-->
 

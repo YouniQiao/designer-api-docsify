@@ -10,6 +10,8 @@ Get network route information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-vpn-export type RouteInfo = connection.RouteInfo--><!--Device-vpn-export type RouteInfo = connection.RouteInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core

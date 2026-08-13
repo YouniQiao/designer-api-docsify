@@ -2,9 +2,11 @@
 
 记录最后一次增量备份时间，用于描述备份增量的时间点。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-backup-interface IncrementalBackupTime--><!--Device-backup-interface IncrementalBackupTime-End-->
 
@@ -22,9 +24,11 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-IncrementalBackupTime-bundleName: string--><!--Device-IncrementalBackupTime-bundleName: string-End-->
 
@@ -40,11 +44,13 @@ lastIncrementalTime: long
 
 最后一次增量备份时间。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-IncrementalBackupTime-lastIncrementalTime: long--><!--Device-IncrementalBackupTime-lastIncrementalTime: long-End-->
 

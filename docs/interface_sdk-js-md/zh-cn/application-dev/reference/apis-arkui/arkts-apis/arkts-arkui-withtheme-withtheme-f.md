@@ -3,6 +3,7 @@
 ## WithTheme
 
 ```TypeScript
+@ComponentBuilder
 export declare function WithTheme(
     options: WithThemeOptions | undefined, 
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ export declare function WithTheme(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-export declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function WithTheme(    options: WithThemeOptions | undefined,     content_?: CustomBuilder,): WithThemeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +29,7 @@ export declare function WithTheme(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [WithThemeOptions](arkts-arkui-withtheme-withthemeoptions-i.md) \| undefined | 是 | 设置作用域内组件配色。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 支持单个子组件。 |
+| content_ | CustomBuilder | 否 | 支持单个子组件。 |
 
 **返回值：**
 
@@ -38,6 +41,7 @@ export declare function WithTheme(
 ## WithTheme
 
 ```TypeScript
+@Builder
 export declare function WithTheme(
     style_: CustomBuilderT<WithThemeAttribute>,
     content_?: CustomBuilder,
@@ -50,11 +54,11 @@ export declare function WithTheme(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-export declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute--><!--Device-unnamed-@Builderexport declare function WithTheme(    style_: CustomBuilderT<WithThemeAttribute>,    content_?: CustomBuilder,): WithThemeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,8 +66,8 @@ export declare function WithTheme(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md)&gt; | 是 | WithTheme属性实例 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器 |
+| style_ | CustomBuilderT&lt;[WithThemeAttribute](arkts-arkui-withtheme-withthemeattribute-i.md)&gt; | 是 | WithTheme属性实例 |
+| content_ | CustomBuilder | 否 | 容器 |
 
 **返回值：**
 

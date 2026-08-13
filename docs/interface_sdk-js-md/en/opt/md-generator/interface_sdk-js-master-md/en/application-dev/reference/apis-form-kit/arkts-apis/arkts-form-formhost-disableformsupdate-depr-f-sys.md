@@ -12,7 +12,7 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableFormsUpdate)
+**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableFormsUpdate-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,7 +42,7 @@ Instructs the widget framework to make a widget not updatable. After this API is
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableFormsUpdate)
+**Substitutes:** [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableFormsUpdate-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

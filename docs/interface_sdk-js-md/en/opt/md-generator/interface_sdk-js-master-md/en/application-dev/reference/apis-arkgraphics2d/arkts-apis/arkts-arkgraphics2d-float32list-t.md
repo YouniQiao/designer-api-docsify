@@ -8,6 +8,8 @@ WebGL 1.0
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-unnamed-type Float32List = Float32Array | GLfloat[]--><!--Device-unnamed-type Float32List = Float32Array | GLfloat[]-End-->

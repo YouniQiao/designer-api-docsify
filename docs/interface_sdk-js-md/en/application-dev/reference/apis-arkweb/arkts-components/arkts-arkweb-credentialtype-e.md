@@ -6,6 +6,8 @@ Enum type supplied to [CredentialType](#CredentialType) when ClientAuthenticatio
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum CredentialType--><!--Device-unnamed-declare enum CredentialType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ User credential.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialType-CREDENTIAL_USER = 2--><!--Device-CredentialType-CREDENTIAL_USER = 2-End-->
 
@@ -38,6 +42,8 @@ Application-specific credential.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-CredentialType-CREDENTIAL_APP = 3--><!--Device-CredentialType-CREDENTIAL_APP = 3-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -53,6 +59,8 @@ Hardware security key credential.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialType-CREDENTIAL_UKEY = 4--><!--Device-CredentialType-CREDENTIAL_UKEY = 4-End-->
 

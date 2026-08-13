@@ -2,9 +2,11 @@
 
 Defines an HTTP request method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-http-export enum RequestMethod--><!--Device-http-export enum RequestMethod-End-->
 
@@ -18,11 +20,13 @@ OPTIONS = "OPTIONS"
 
 OPTIONS method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
 
@@ -36,11 +40,13 @@ GET = "GET"
 
 GET method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-GET = "GET"--><!--Device-RequestMethod-GET = "GET"-End-->
 
@@ -54,11 +60,13 @@ HEAD = "HEAD"
 
 HEAD method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-HEAD = "HEAD"--><!--Device-RequestMethod-HEAD = "HEAD"-End-->
 
@@ -72,11 +80,13 @@ POST = "POST"
 
 POST method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-POST = "POST"--><!--Device-RequestMethod-POST = "POST"-End-->
 
@@ -90,11 +100,13 @@ PUT = "PUT"
 
 PUT method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-PUT = "PUT"--><!--Device-RequestMethod-PUT = "PUT"-End-->
 
@@ -108,11 +120,13 @@ DELETE = "DELETE"
 
 DELETE method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
 
@@ -126,11 +140,13 @@ TRACE = "TRACE"
 
 TRACE method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-TRACE = "TRACE"--><!--Device-RequestMethod-TRACE = "TRACE"-End-->
 
@@ -144,11 +160,13 @@ CONNECT = "CONNECT"
 
 CONNECT method.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
 
@@ -164,7 +182,9 @@ PATCH method
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

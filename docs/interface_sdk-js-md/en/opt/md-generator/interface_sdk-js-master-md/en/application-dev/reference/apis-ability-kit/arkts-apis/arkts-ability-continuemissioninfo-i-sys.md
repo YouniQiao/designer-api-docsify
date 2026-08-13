@@ -1,9 +1,10 @@
 # ContinueMissionInfo (System API)
 
-The module defines the parameters required for initiating mission continuation with the bundle name specified. For details about mission continuation, see  
-[continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission)
+The module defines the parameters required for initiating mission continuation with the bundle name specified. For details about mission continuation, see [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission-(System-API))
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContinueMissionInfo--><!--Device-unnamed-export interface ContinueMissionInfo-End-->
 
@@ -21,7 +22,9 @@ Bundle name of the target application to which the mission belongs.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +44,9 @@ Continuation type of the application to which the mission belongs.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +66,9 @@ ID of the target device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,7 +88,9 @@ Bundle name of the source application to which the mission belongs. The value is
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,7 +110,9 @@ ID of the source device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -119,9 +130,11 @@ wantParam: Record<string, Object>
 
 Extended parameters.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

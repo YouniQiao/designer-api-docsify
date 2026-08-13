@@ -14,7 +14,9 @@ function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void
 
 Subscribe the attachment failure event.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void--><!--Device-inputMethod-function onAttachmentDidFail(callback: Callback<AttachFailureReason>): void-End-->
 

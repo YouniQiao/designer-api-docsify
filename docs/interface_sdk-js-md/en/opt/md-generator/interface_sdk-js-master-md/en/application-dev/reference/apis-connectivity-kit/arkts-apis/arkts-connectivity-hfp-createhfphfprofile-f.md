@@ -16,6 +16,8 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-hfp-function createHfpHfProfile(): HandsFreeHfProfile--><!--Device-hfp-function createHfpHfProfile(): HandsFreeHfProfile-End-->
@@ -32,4 +34,4 @@ create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile).
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |

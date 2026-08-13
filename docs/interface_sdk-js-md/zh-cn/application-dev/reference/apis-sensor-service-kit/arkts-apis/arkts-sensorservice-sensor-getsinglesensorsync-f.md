@@ -8,9 +8,11 @@ function getSingleSensorSync(type: SensorId): Sensor
 
 获取指定类型的传感器信息，使用同步方式返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor--><!--Device-sensor-function getSingleSensorSync(type: SensorId): Sensor-End-->
 
@@ -32,9 +34,9 @@ function getSingleSensorSync(type: SensorId): Sensor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
-| [14500102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-sensor-service-kit/errorcode-sensor.md#14500102-设备不支持该传感器) | The sensor is not supported by the device. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500102](../errorcode-sensor.md#14500102-设备不支持该传感器) | The sensor is not supported by the device. |
 
 ## 示例
 

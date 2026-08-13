@@ -4,6 +4,8 @@ Sets the voice button options.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface VoiceButtonOptions--><!--Device-unnamed-interface VoiceButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,13 @@ Sets the voice button options.
 enabled?: boolean
 ```
 
-Whether to enable or disable the voice button for the input box.
-
-**true**: The voice button is enabled. **false**: The voice button is disabled.
-
-Default value: **false**
+Whether to enable or disable the voice button for the input box. **true**: The voice button is enabled. **false**: The voice button is disabled. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

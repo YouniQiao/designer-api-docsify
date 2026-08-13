@@ -8,6 +8,8 @@ Provides methods for controlling the 3d scene
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-declare type Scene = import('../api/@ohos.graphics.scene').Scene--><!--Device-unnamed-declare type Scene = import('../api/@ohos.graphics.scene').Scene-End-->

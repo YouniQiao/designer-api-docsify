@@ -2,9 +2,11 @@
 
 定义ArcButton可设置的弧形按钮的类型。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum ArcButtonPosition--><!--Device-unnamed-export declare enum ArcButtonPosition-End-->
 
@@ -18,9 +20,13 @@ TOP_EDGE = 0
 
 上弧形按钮，位于圆形屏幕上方。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcButtonPosition-TOP_EDGE = 0--><!--Device-ArcButtonPosition-TOP_EDGE = 0-End-->
 
@@ -34,9 +40,13 @@ BOTTOM_EDGE = 1
 
 底部弧形按钮，位于圆形屏幕底部。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ArcButtonPosition-BOTTOM_EDGE = 1--><!--Device-ArcButtonPosition-BOTTOM_EDGE = 1-End-->
 

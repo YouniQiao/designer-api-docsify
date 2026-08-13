@@ -2,7 +2,9 @@
 
 Session controller,used to control media playback and get media information
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AVSessionController--><!--Device-avSession-interface AVSessionController-End-->
 
@@ -22,7 +24,9 @@ destroy(callback: AsyncCallback<void>): void
 
 Destroy the server controller
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-destroy(callback: AsyncCallback<void>): void--><!--Device-AVSessionController-destroy(callback: AsyncCallback<void>): void-End-->
 
@@ -38,8 +42,8 @@ Destroy the server controller
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## destroy
 
@@ -49,7 +53,9 @@ destroy(): Promise<void>
 
 Destroy the server controller
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -67,8 +73,8 @@ Destroy the server controller
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVCallState
 
@@ -78,7 +84,9 @@ getAVCallState(callback: AsyncCallback<AVCallState>): void
 
 Get the call status of the current session
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getAVCallState(callback: AsyncCallback<AVCallState>): void--><!--Device-AVSessionController-getAVCallState(callback: AsyncCallback<AVCallState>): void-End-->
 
@@ -94,9 +102,9 @@ Get the call status of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVCallState
 
@@ -106,7 +114,9 @@ getAVCallState(): Promise<AVCallState>
 
 Get the call status of the current session
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getAVCallState(): Promise<AVCallState>--><!--Device-AVSessionController-getAVCallState(): Promise<AVCallState>-End-->
 
@@ -122,9 +132,9 @@ Get the call status of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVMetadata
 
@@ -134,7 +144,9 @@ getAVMetadata(callback: AsyncCallback<AVMetadata>): void
 
 Get the metadata of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getAVMetadata(callback: AsyncCallback<AVMetadata>): void--><!--Device-AVSessionController-getAVMetadata(callback: AsyncCallback<AVMetadata>): void-End-->
 
@@ -150,9 +162,9 @@ Get the metadata of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVMetadata
 
@@ -162,7 +174,9 @@ getAVMetadata(): Promise<AVMetadata>
 
 Get the metadata of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -180,9 +194,9 @@ Get the metadata of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVMetadataSync
 
@@ -192,7 +206,9 @@ getAVMetadataSync(): AVMetadata
 
 Get the metadata of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -210,9 +226,9 @@ Get the metadata of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVPlaybackState
 
@@ -222,7 +238,9 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 Get the playback status of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVSessionController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
@@ -238,9 +256,9 @@ Get the playback status of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVPlaybackState
 
@@ -250,7 +268,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 Get the playback status of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -268,9 +288,9 @@ Get the playback status of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVPlaybackStateSync
 
@@ -280,7 +300,9 @@ getAVPlaybackStateSync(): AVPlaybackState
 
 Get the playback status of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -298,9 +320,9 @@ Get the playback status of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVQueueItems
 
@@ -310,7 +332,9 @@ getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void
 
 Get the playlist of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-getAVQueueItems(callback: AsyncCallback<Array<AVQueueItem>>): void-End-->
 
@@ -326,9 +350,9 @@ Get the playlist of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVQueueItems
 
@@ -338,7 +362,9 @@ getAVQueueItems(): Promise<Array<AVQueueItem>>
 
 Get the playlist of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -356,9 +382,9 @@ Get the playlist of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVQueueItemsSync
 
@@ -368,7 +394,9 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 
 Get the playlist of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -386,9 +414,9 @@ Get the playlist of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVQueueTitle
 
@@ -398,7 +426,9 @@ getAVQueueTitle(callback: AsyncCallback<string>): void
 
 Get the name of the playlist of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getAVQueueTitle(callback: AsyncCallback<string>): void--><!--Device-AVSessionController-getAVQueueTitle(callback: AsyncCallback<string>): void-End-->
 
@@ -414,9 +444,9 @@ Get the name of the playlist of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVQueueTitle
 
@@ -426,7 +456,9 @@ getAVQueueTitle(): Promise<string>
 
 Get the name of the playlist of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -444,9 +476,9 @@ Get the name of the playlist of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getAVQueueTitleSync
 
@@ -456,7 +488,9 @@ getAVQueueTitleSync(): string
 
 Get the name of the playlist of the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -474,9 +508,9 @@ Get the name of the playlist of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getCallMetadata
 
@@ -486,7 +520,9 @@ getCallMetadata(callback: AsyncCallback<CallMetadata>): void
 
 Get the call metadata of the current session
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getCallMetadata(callback: AsyncCallback<CallMetadata>): void--><!--Device-AVSessionController-getCallMetadata(callback: AsyncCallback<CallMetadata>): void-End-->
 
@@ -502,9 +538,9 @@ Get the call metadata of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getCallMetadata
 
@@ -514,7 +550,9 @@ getCallMetadata(): Promise<CallMetadata>
 
 Get the call metadata of the current session
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getCallMetadata(): Promise<CallMetadata>--><!--Device-AVSessionController-getCallMetadata(): Promise<CallMetadata>-End-->
 
@@ -530,9 +568,9 @@ Get the call metadata of the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getDesktopLyricState
 
@@ -543,6 +581,8 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 Get desktop lyric state such as lock state for this session.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -560,11 +600,11 @@ Get desktop lyric state such as lock state for this session.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## getExtras
 
@@ -575,6 +615,8 @@ getExtras(callback: AsyncCallback<{[key: string]: Object}>): void
 Get custom media packets provided by the corresponding session
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getExtras(callback: AsyncCallback<{[key: string]: Object}>): void--><!--Device-AVSessionController-getExtras(callback: AsyncCallback<{[key: string]: Object}>): void-End-->
 
@@ -590,12 +632,44 @@ Get custom media packets provided by the corresponding session
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+
+## getExtras
+
+```TypeScript
+getExtras(callback: AsyncCallback<Record<string, Object>>): void
+```
+
+Get custom media packets provided by the corresponding session
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-getExtras(callback: AsyncCallback<Record<string, Object>>): void--><!--Device-AVSessionController-getExtras(callback: AsyncCallback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
 ## getExtras
 
@@ -606,6 +680,8 @@ getExtras(): Promise<{[key: string]: Object}>
 Get custom media packets provided by the corresponding session
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -623,12 +699,46 @@ Get custom media packets provided by the corresponding session
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+
+## getExtras
+
+```TypeScript
+getExtras(): Promise<Record<string, Object>>
+```
+
+Get custom media packets provided by the corresponding session
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSessionController-getExtras(): Promise<Record<string, Object>>--><!--Device-AVSessionController-getExtras(): Promise<Record<string, Object>>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
 ## getExtrasWithEvent
 
@@ -638,7 +748,9 @@ getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>
 
 Get extra information for remote device, such as volume level, connected devices.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>--><!--Device-AVSessionController-getExtrasWithEvent(extraEvent: string): Promise<ExtraInfo>-End-->
 
@@ -660,10 +772,10 @@ Get extra information for remote device, such as volume level, connected devices
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
 
 ## getLaunchAbility
 
@@ -671,9 +783,11 @@ Get extra information for remote device, such as volume level, connected devices
 getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 ```
 
-Get the [WantAgent](WantAgent) of this session that can launch the session ability
+Get the WantAgent of this session that can launch the session ability
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getLaunchAbility(callback: AsyncCallback<WantAgent>): void--><!--Device-AVSessionController-getLaunchAbility(callback: AsyncCallback<WantAgent>): void-End-->
 
@@ -689,9 +803,9 @@ Get the [WantAgent](WantAgent) of this session that can launch the session abili
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getLaunchAbility
 
@@ -699,9 +813,11 @@ Get the [WantAgent](WantAgent) of this session that can launch the session abili
 getLaunchAbility(): Promise<WantAgent>
 ```
 
-Get the [WantAgent](WantAgent) of this session that can launch the session ability
+Get the WantAgent of this session that can launch the session ability
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -719,9 +835,9 @@ Get the [WantAgent](WantAgent) of this session that can launch the session abili
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getMediaCenterControlType
 
@@ -732,6 +848,8 @@ getMediaCenterControlType(): Promise<Array<AVMediaCenterControlType>>
 Get media control type that the can be displayed on the media center.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -749,8 +867,8 @@ Get media control type that the can be displayed on the media center.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getOutputDevice
 
@@ -760,7 +878,9 @@ getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void
 
 Get output device information
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void--><!--Device-AVSessionController-getOutputDevice(callback: AsyncCallback<OutputDeviceInfo>): void-End-->
 
@@ -787,7 +907,9 @@ getOutputDevice(): Promise<OutputDeviceInfo>
 
 Get output device information
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -816,7 +938,9 @@ getOutputDeviceSync(): OutputDeviceInfo
 
 Get output device information
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -834,8 +958,8 @@ Get output device information
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getRealPlaybackPositionSync
 
@@ -845,7 +969,9 @@ getRealPlaybackPositionSync(): number
 
 Get the adjusted playback position. The time automatically calculated by the system taking into account factors such as playback status, playback speed, and application update time.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -863,8 +989,8 @@ Get the adjusted playback position. The time automatically calculated by the sys
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getSupportedLoopModes
 
@@ -875,6 +1001,8 @@ getSupportedLoopModes(): Promise<Array<LoopMode>>
 Get supported loop modes supplied by application.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -894,8 +1022,8 @@ Get supported loop modes supplied by application.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getSupportedPlaySpeeds
 
@@ -906,6 +1034,8 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 Get supported speeds supplied by application.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -925,8 +1055,8 @@ Get supported speeds supplied by application.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getValidCommands
 
@@ -936,7 +1066,9 @@ getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void
 
 Get commands supported by the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-getValidCommands(callback: AsyncCallback<Array<AVControlCommandType>>): void-End-->
 
@@ -952,9 +1084,9 @@ Get commands supported by the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getValidCommands
 
@@ -964,7 +1096,9 @@ getValidCommands(): Promise<Array<AVControlCommandType>>
 
 Get commands supported by the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -982,9 +1116,9 @@ Get commands supported by the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## getValidCommandsSync
 
@@ -994,7 +1128,9 @@ getValidCommandsSync(): Array<AVControlCommandType>
 
 Get commands supported by the current session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1012,9 +1148,9 @@ Get commands supported by the current session
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## isActive
 
@@ -1024,7 +1160,9 @@ isActive(callback: AsyncCallback<boolean>): void
 
 Check if the current session is active
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-isActive(callback: AsyncCallback<boolean>): void--><!--Device-AVSessionController-isActive(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1040,9 +1178,9 @@ Check if the current session is active
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## isActive
 
@@ -1052,7 +1190,9 @@ isActive(): Promise<boolean>
 
 Check if the current session is active
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1070,9 +1210,9 @@ Check if the current session is active
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## isActiveSync
 
@@ -1082,7 +1222,9 @@ isActiveSync(): boolean
 
 Check if the current session is active
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1100,9 +1242,9 @@ Check if the current session is active
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## isDesktopLyricEnabled
 
@@ -1113,6 +1255,8 @@ isDesktopLyricEnabled(): Promise<boolean>
 Query desktop lyric enabled state for this session.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1130,10 +1274,10 @@ Query desktop lyric enabled state for this session.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## isDesktopLyricVisible
 
@@ -1144,6 +1288,8 @@ isDesktopLyricVisible(): Promise<boolean>
 Query desktop lyric visible state for this session.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1161,25 +1307,25 @@ Query desktop lyric visible state for this session.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
-## off('metadataChange')
+## offActiveStateChange
 
 ```TypeScript
-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
+offActiveStateChange(callback?: Callback<boolean>): void
 ```
 
-Unregister metadata changed callback
+Unregister the active state of this session changed callback
 
-**Since:** 10
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)--><!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)-End-->
+<!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void--><!--Device-AVSessionController-offActiveStateChange(callback?: Callback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1187,61 +1333,28 @@ Unregister metadata changed callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'metadataChange' | Yes |
-| callback | (data: AVMetadata) = & gt; void | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## off('playbackStateChange')
-
-```TypeScript
-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
-```
-
-Unregister playback state changed callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playbackStateChange' | Yes |
-| callback | (state: AVPlaybackState) = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('callMetadataChange')
+## offCallMetadataChange
 
 ```TypeScript
-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
+offCallMetadataChange(callback?: Callback<CallMetadata>): void
 ```
 
 Unregister call metadata changed callback
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void-End-->
+<!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-offCallMetadataChange(callback?: Callback<CallMetadata>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1249,30 +1362,28 @@ Unregister call metadata changed callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'callMetadataChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## off('callStateChange')
+## offCallStateChange
 
 ```TypeScript
-off(type: 'callStateChange', callback?: Callback<AVCallState>): void
+offCallStateChange(callback?: Callback<AVCallState>): void
 ```
 
 Unregister playback state changed callback
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
 
-<!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void-End-->
+<!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-offCallStateChange(callback?: Callback<AVCallState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1280,278 +1391,28 @@ Unregister playback state changed callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'callStateChange' | Yes |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## off('sessionDestroy')
-
-```TypeScript
-off(type: 'sessionDestroy', callback?: () => void)
-```
-
-Unregister current session destroyed callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)--><!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionDestroy' | Yes |
-| callback | () = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('activeStateChange')
+## offCustomDataChange
 
 ```TypeScript
-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
-```
-
-Unregister the active state of this session changed callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)--><!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'activeStateChange' | Yes |
-| callback | (isActive: boolean) = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('validCommandChange')
-
-```TypeScript
-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
-```
-
-Unregister the valid commands of the session changed callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'validCommandChange' | Yes |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('outputDeviceChange')
-
-```TypeScript
-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
-```
-
-Unregister session output device change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'outputDeviceChange' | Yes |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('sessionEvent')
-
-```TypeScript
-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
-```
-
-Unregister session event callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionEvent' | Yes |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('queueItemsChange')
-
-```TypeScript
-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
-```
-
-Unregister session playlist change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueItemsChange' | Yes |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('queueTitleChange')
-
-```TypeScript
-off(type: 'queueTitleChange', callback?: (title: string) => void): void
-```
-
-Unregister the name of session playlist change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void--><!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueTitleChange' | Yes |
-| callback | (title: string) = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('extrasChange')
-
-```TypeScript
-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
-```
-
-Unregister the custom media packets change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'extrasChange' | Yes |
-| callback | (extras: {[key: string]: Object}) = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## off('customDataChange')
-
-```TypeScript
-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
 ```
 
 Unregister listener for custom data.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
 
-<!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -1559,15 +1420,14 @@ Unregister listener for custom data.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## offDesktopLyricEnabled
 
@@ -1578,6 +1438,8 @@ offDesktopLyricEnabled(callback?: Callback<boolean>): void
 Unregister desktop lyric enable state change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1595,8 +1457,8 @@ Unregister desktop lyric enable state change callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## offDesktopLyricStateChanged
 
@@ -1607,6 +1469,8 @@ offDesktopLyricStateChanged(callback?: Callback<DesktopLyricState>): void
 Unregister desktop lyric state changed callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1624,8 +1488,8 @@ Unregister desktop lyric state changed callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## offDesktopLyricVisibilityChanged
 
@@ -1636,6 +1500,8 @@ offDesktopLyricVisibilityChanged(callback?: Callback<boolean>): void
 Unregister desktop lyric visible state change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1653,8 +1519,37 @@ Unregister desktop lyric visible state change callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offExtrasChange
+
+```TypeScript
+offExtrasChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister the custom media packets change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-offExtrasChange(callback?: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## offMediaCenterControlTypeChanged
 
@@ -1665,6 +1560,8 @@ offMediaCenterControlTypeChanged(callback?: Callback<Array<AVMediaCenterControlT
 Unregister media center control type changed callback.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1682,8 +1579,213 @@ Unregister media center control type changed callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offMetadataChange
+
+```TypeScript
+offMetadataChange(callback?: Callback<AVMetadata>): void
+```
+
+Unregister metadata changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void--><!--Device-AVSessionController-offMetadataChange(callback?: Callback<AVMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offOutputDeviceChange
+
+```TypeScript
+offOutputDeviceChange(callback?: ConnectionEvent): void
+```
+
+Unregister session output device change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void--><!--Device-AVSessionController-offOutputDeviceChange(callback?: ConnectionEvent): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offPlaybackStateChange
+
+```TypeScript
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
+```
+
+Unregister playback state changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offQueueItemsChange
+
+```TypeScript
+offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void
+```
+
+Unregister session playlist change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-offQueueItemsChange(callback?: Callback<Array<AVQueueItem>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offQueueTitleChange
+
+```TypeScript
+offQueueTitleChange(callback?: Callback<string>): void
+```
+
+Unregister the name of session playlist change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void--><!--Device-AVSessionController-offQueueTitleChange(callback?: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offSessionDestroy
+
+```TypeScript
+offSessionDestroy(callback?: NoParamCallback): void
+```
+
+Unregister current session destroyed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void--><!--Device-AVSessionController-offSessionDestroy(callback?: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## offSessionEvent
+
+```TypeScript
+offSessionEvent(callback?: EventProcess): void
+```
+
+Unregister session event callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void--><!--Device-AVSessionController-offSessionEvent(callback?: EventProcess): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## offSupportedLoopModesChange
 
@@ -1694,6 +1796,8 @@ offSupportedLoopModesChange(callback?: Callback<Array<LoopMode>>): void
 Unregister listener for supported loop modes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1713,8 +1817,8 @@ Unregister listener for supported loop modes.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## offSupportedPlaySpeedsChange
 
@@ -1725,6 +1829,8 @@ offSupportedPlaySpeedsChange(callback?: Callback<Array<number>>): void
 Unregister listener for supported play speeds.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1744,181 +1850,53 @@ Unregister listener for supported play speeds.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## on('metadataChange')
+## offValidCommandChange
 
 ```TypeScript
-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
+offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void
 ```
 
-Register metadata changed callback
+Unregister the valid commands of the session changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-offValidCommandChange(callback?: Callback<Array<AVControlCommandType>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_activeStateChange
+
+```TypeScript
+off(type: 'activeStateChange', callback?: (isActive: boolean) => void)
+```
+
+Unregister the active state of this session changed callback
 
 **Since:** 10
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)--><!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'metadataChange' | Yes |
-| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | Yes |
-| callback | (data: AVMetadata) = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('playbackStateChange')
-
-```TypeScript
-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
-```
-
-Register playback state changed callback
-
-**Since:** 10
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'playbackStateChange' | Yes |
-| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes |
-| callback | (state: AVPlaybackState) = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('callMetadataChange')
-
-```TypeScript
-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
-```
-
-Register call metadata changed callback
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callMetadataChange' | Yes |
-| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('callStateChange')
-
-```TypeScript
-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
-```
-
-Register call state changed callback
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void--><!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'callStateChange' | Yes |
-| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('sessionDestroy')
-
-```TypeScript
-on(type: 'sessionDestroy', callback: () => void)
-```
-
-Register current session destroyed callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)--><!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionDestroy' | Yes |
-| callback | () = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('activeStateChange')
-
-```TypeScript
-on(type: 'activeStateChange', callback: (isActive: boolean) => void)
-```
-
-Register the active state of this session changed callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)--><!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)-End-->
+<!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)--><!--Device-AVSessionController-off(type: 'activeStateChange', callback?: (isActive: boolean) => void)-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1927,29 +1905,31 @@ Register the active state of this session changed callback
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'activeStateChange' | Yes |
-| callback | (isActive: boolean) = & gt; void | Yes |
+| callback | (isActive: boolean) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## on('validCommandChange')
+## off_callMetadataChange
 
 ```TypeScript
-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
+off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void
 ```
 
-Register the valid commands of the session changed callback
+Unregister call metadata changed callback
 
-**Since:** 10
+**Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)-End-->
+<!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void--><!--Device-AVSessionController-off(type: 'callMetadataChange', callback?: Callback<CallMetadata>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1957,30 +1937,32 @@ Register the valid commands of the session changed callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'validCommandChange' | Yes |
-| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | Yes |
+| type | 'callMetadataChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## on('outputDeviceChange')
+## off_callStateChange
 
 ```TypeScript
-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+off(type: 'callStateChange', callback?: Callback<AVCallState>): void
 ```
 
-Register session output device change callback
+Unregister playback state changed callback
 
-**Since:** 10
+**Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+<!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void--><!--Device-AVSessionController-off(type: 'callStateChange', callback?: Callback<AVCallState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -1988,154 +1970,32 @@ Register session output device change callback
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'outputDeviceChange' | Yes |
-| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes |
+| type | 'callStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
-## on('sessionEvent')
-
-```TypeScript
-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
-```
-
-Register session event callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'sessionEvent' | Yes |
-| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('queueItemsChange')
+## off_customDataChange
 
 ```TypeScript
-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
+off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 ```
 
-Register session playlist change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueItemsChange' | Yes |
-| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('queueTitleChange')
-
-```TypeScript
-on(type: 'queueTitleChange', callback: (title: string) => void): void
-```
-
-Register the name of session playlist change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void--><!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'queueTitleChange' | Yes |
-| callback | (title: string) = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('extrasChange')
-
-```TypeScript
-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
-```
-
-Register the custom media packets change callback
-
-**Since:** 10
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'extrasChange' | Yes |
-| callback | (extras: {[key: string]: Object}) = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-
-## on('customDataChange')
-
-```TypeScript
-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
-```
-
-Register listener for custom data.
+Unregister listener for custom data.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+<!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -2144,14 +2004,487 @@ Register listener for custom data.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'customDataChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_extrasChange
+
+```TypeScript
+off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void
+```
+
+Unregister the custom media packets change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'extrasChange', callback?: (extras: {[key: string]: Object}) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'extrasChange' | Yes |
+| callback | (extras: {[key: string]: Object}) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_metadataChange
+
+```TypeScript
+off(type: 'metadataChange', callback?: (data: AVMetadata) => void)
+```
+
+Unregister metadata changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)--><!--Device-AVSessionController-off(type: 'metadataChange', callback?: (data: AVMetadata) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'metadataChange' | Yes |
+| callback | (data: AVMetadata) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_outputDeviceChange
+
+```TypeScript
+off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+```
+
+Unregister session output device change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-off(type: 'outputDeviceChange', callback?: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'outputDeviceChange' | Yes |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_playbackStateChange
+
+```TypeScript
+off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)
+```
+
+Unregister playback state changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playbackStateChange' | Yes |
+| callback | (state: AVPlaybackState) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_queueItemsChange
+
+```TypeScript
+off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void
+```
+
+Unregister session playlist change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-off(type: 'queueItemsChange', callback?: (items: Array<AVQueueItem>) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'queueItemsChange' | Yes |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_queueTitleChange
+
+```TypeScript
+off(type: 'queueTitleChange', callback?: (title: string) => void): void
+```
+
+Unregister the name of session playlist change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void--><!--Device-AVSessionController-off(type: 'queueTitleChange', callback?: (title: string) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'queueTitleChange' | Yes |
+| callback | (title: string) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_sessionDestroy
+
+```TypeScript
+off(type: 'sessionDestroy', callback?: () => void)
+```
+
+Unregister current session destroyed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)--><!--Device-AVSessionController-off(type: 'sessionDestroy', callback?: () => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'sessionDestroy' | Yes |
+| callback | () = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_sessionEvent
+
+```TypeScript
+off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void
+```
+
+Unregister session event callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-off(type: 'sessionEvent', callback?: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'sessionEvent' | Yes |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## off_validCommandChange
+
+```TypeScript
+off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)
+```
+
+Unregister the valid commands of the session changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-off(type: 'validCommandChange', callback?: (commands: Array<AVControlCommandType>) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'validCommandChange' | Yes |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onActiveStateChange
+
+```TypeScript
+onActiveStateChange(callback: Callback<boolean>): void
+```
+
+Register the active state of this session changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void--><!--Device-AVSessionController-onActiveStateChange(callback: Callback<boolean>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onCallMetadataChange
+
+```TypeScript
+onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChange(filter: Array<string>, callback: Callback<CallMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onCallMetadataChangeAll
+
+```TypeScript
+onCallMetadataChangeAll(callback: Callback<CallMetadata>): void
+```
+
+Registers a callback for all call metadata changes
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-onCallMetadataChangeAll(callback: Callback<CallMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onCallStateChange
+
+```TypeScript
+onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChange(filter: Array<string>, callback: Callback<AVCallState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onCallStateChangeAll
+
+```TypeScript
+onCallStateChangeAll(callback: Callback<AVCallState>): void
+```
+
+Register a callback for all call attribute changes
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void--><!--Device-AVSessionController-onCallStateChangeAll(callback: Callback<AVCallState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## onDesktopLyricEnabled
 
@@ -2162,6 +2495,8 @@ onDesktopLyricEnabled(callback: Callback<boolean>): void
 Register desktop lyric enable state change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2179,8 +2514,8 @@ Register desktop lyric enable state change callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## onDesktopLyricStateChanged
 
@@ -2191,6 +2526,8 @@ onDesktopLyricStateChanged(callback: Callback<DesktopLyricState>): void
 Register desktop lyric state changed callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2208,8 +2545,8 @@ Register desktop lyric state changed callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## onDesktopLyricVisibilityChanged
 
@@ -2220,6 +2557,8 @@ onDesktopLyricVisibilityChanged(callback: Callback<boolean>): void
 Register desktop lyric visible state change callback.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2237,8 +2576,37 @@ Register desktop lyric visible state change callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onExtrasChange
+
+```TypeScript
+onExtrasChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register the custom media packets change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-onExtrasChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## onMediaCenterControlTypeChanged
 
@@ -2249,6 +2617,8 @@ onMediaCenterControlTypeChanged(callback: Callback<Array<AVMediaCenterControlTyp
 Register media center control type changed callback.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2266,8 +2636,271 @@ Register media center control type changed callback.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onMetadataChange
+
+```TypeScript
+onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void
+```
+
+Register metadata changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChange(filter: Array<string>, callback: Callback<AVMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onMetadataChangeAll
+
+```TypeScript
+onMetadataChangeAll(callback: Callback<AVMetadata>): void
+```
+
+Registers a callback to be invoked whenever any metadata changes
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void--><!--Device-AVSessionController-onMetadataChangeAll(callback: Callback<AVMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;AVMetadata&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onOutputDeviceChange
+
+```TypeScript
+onOutputDeviceChange(callback: ConnectionEvent): void
+```
+
+Register session output device change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void--><!--Device-AVSessionController-onOutputDeviceChange(callback: ConnectionEvent): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ConnectionEvent](arkts-avsession-avsession-connectionevent-t.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Registers a callback to be invoked whenever the playback state changes
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVSessionController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onQueueItemsChange
+
+```TypeScript
+onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void
+```
+
+Register session playlist change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void--><!--Device-AVSessionController-onQueueItemsChange(callback: Callback<Array<AVQueueItem>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onQueueTitleChange
+
+```TypeScript
+onQueueTitleChange(callback: Callback<string>): void
+```
+
+Register the name of session playlist change callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void--><!--Device-AVSessionController-onQueueTitleChange(callback: Callback<string>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onSessionDestroy
+
+```TypeScript
+onSessionDestroy(callback: NoParamCallback): void
+```
+
+Register current session destroyed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void--><!--Device-AVSessionController-onSessionDestroy(callback: NoParamCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onSessionEvent
+
+```TypeScript
+onSessionEvent(callback: EventProcess): void
+```
+
+Register session event callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void--><!--Device-AVSessionController-onSessionEvent(callback: EventProcess): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [EventProcess](arkts-avsession-avsession-eventprocess-t.md) | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## onSupportedLoopModesChange
 
@@ -2278,6 +2911,8 @@ onSupportedLoopModesChange(callback: Callback<Array<LoopMode>>): void
 Register listener for supported loop modes.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2297,8 +2932,8 @@ Register listener for supported loop modes.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## onSupportedPlaySpeedsChange
 
@@ -2309,6 +2944,8 @@ onSupportedPlaySpeedsChange(callback: Callback<Array<number>>): void
 Register listener for supported play speeds.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2328,8 +2965,469 @@ Register listener for supported play speeds.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void
+```
+
+Register the valid commands of the session changed callback
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void--><!--Device-AVSessionController-onValidCommandChange(callback: Callback<Array<AVControlCommandType>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_activeStateChange
+
+```TypeScript
+on(type: 'activeStateChange', callback: (isActive: boolean) => void)
+```
+
+Register the active state of this session changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)--><!--Device-AVSessionController-on(type: 'activeStateChange', callback: (isActive: boolean) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'activeStateChange' | Yes |
+| callback | (isActive: boolean) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_callMetadataChange
+
+```TypeScript
+on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void
+```
+
+Register call metadata changed callback
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void--><!--Device-AVSessionController-on(type: 'callMetadataChange', filter: Array<keyof CallMetadata> | 'all', callback: Callback<CallMetadata>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'callMetadataChange' | Yes |
+| filter | Array & lt;keyof CallMetadata & gt; \ | 'all' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CallMetadata](arkts-avsession-avsession-callmetadata-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_callStateChange
+
+```TypeScript
+on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void
+```
+
+Register call state changed callback
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void--><!--Device-AVSessionController-on(type: 'callStateChange', filter: Array<keyof AVCallState> | 'all', callback: Callback<AVCallState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'callStateChange' | Yes |
+| filter | Array & lt;keyof AVCallState & gt; \ | 'all' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCallState](arkts-avsession-avsession-avcallstate-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_customDataChange
+
+```TypeScript
+on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data.
+
+**Since:** 20
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVSessionController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'customDataChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_extrasChange
+
+```TypeScript
+on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void
+```
+
+Register the custom media packets change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'extrasChange', callback: (extras: {[key: string]: Object}) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'extrasChange' | Yes |
+| callback | (extras: {[key: string]: Object}) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_metadataChange
+
+```TypeScript
+on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)
+```
+
+Register metadata changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)--><!--Device-AVSessionController-on(type: 'metadataChange', filter: Array<keyof AVMetadata> | 'all', callback: (data: AVMetadata) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'metadataChange' | Yes |
+| filter | Array & lt;keyof AVMetadata & gt; \ | 'all' | Yes |
+| callback | (data: AVMetadata) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_outputDeviceChange
+
+```TypeScript
+on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
+```
+
+Register session output device change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void--><!--Device-AVSessionController-on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'outputDeviceChange' | Yes |
+| callback | (state: ConnectionState, device: OutputDeviceInfo) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_playbackStateChange
+
+```TypeScript
+on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)
+```
+
+Register playback state changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)--><!--Device-AVSessionController-on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'playbackStateChange' | Yes |
+| filter | Array & lt;keyof AVPlaybackState & gt; \ | 'all' | Yes |
+| callback | (state: AVPlaybackState) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_queueItemsChange
+
+```TypeScript
+on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void
+```
+
+Register session playlist change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void--><!--Device-AVSessionController-on(type: 'queueItemsChange', callback: (items: Array<AVQueueItem>) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'queueItemsChange' | Yes |
+| callback | (items: Array&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt;) =&gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_queueTitleChange
+
+```TypeScript
+on(type: 'queueTitleChange', callback: (title: string) => void): void
+```
+
+Register the name of session playlist change callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void--><!--Device-AVSessionController-on(type: 'queueTitleChange', callback: (title: string) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'queueTitleChange' | Yes |
+| callback | (title: string) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_sessionDestroy
+
+```TypeScript
+on(type: 'sessionDestroy', callback: () => void)
+```
+
+Register current session destroyed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)--><!--Device-AVSessionController-on(type: 'sessionDestroy', callback: () => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'sessionDestroy' | Yes |
+| callback | () = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_sessionEvent
+
+```TypeScript
+on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void
+```
+
+Register session event callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void--><!--Device-AVSessionController-on(type: 'sessionEvent', callback: (sessionEvent: string, args: {[key: string]: Object}) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'sessionEvent' | Yes |
+| callback | (sessionEvent: string, args: {[key: string]: Object}) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+
+## on_validCommandChange
+
+```TypeScript
+on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)
+```
+
+Register the valid commands of the session changed callback
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)--><!--Device-AVSessionController-on(type: 'validCommandChange', callback: (commands: Array<AVControlCommandType>) => void)-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'validCommandChange' | Yes |
+| callback | (commands: Array&lt;[AVControlCommandType](arkts-avsession-avsession-avcontrolcommandtype-t.md)&gt;) =&gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## sendAVKeyEvent
 
@@ -2339,7 +3437,9 @@ sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void
 
 Send media key event to this session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): void-End-->
 
@@ -2357,7 +3457,7 @@ Send media key event to this session
 | Error Code ID |
 | --- |
 | 600105 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 600106 |
 | 600101 |
 | 600103 |
@@ -2371,7 +3471,9 @@ sendAVKeyEvent(event: KeyEvent): Promise<void>
 
 Send media key event to this session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2396,7 +3498,7 @@ Send media key event to this session
 | Error Code ID |
 | --- |
 | 600105 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 600106 |
 | 600101 |
 | 600103 |
@@ -2411,6 +3513,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}, callback: Asyn
 Send common commands to this session
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendCommonCommand(command: string, args: {[key: string]: Object}, callback: AsyncCallback<void>): void-End-->
 
@@ -2428,13 +3532,50 @@ Send common commands to this session
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+
+## sendCommonCommand
+
+```TypeScript
+sendCommonCommand(command: string, args: Record<string, Object>, callback: AsyncCallback<void>): void
+```
+
+Send common commands to this session
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>, callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| command | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
 ## sendCommonCommand
 
@@ -2445,6 +3586,8 @@ sendCommonCommand(command: string, args: {[key: string]: Object}): Promise<void>
 Send common commands to this session
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2469,13 +3612,55 @@ Send common commands to this session
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
+
+## sendCommonCommand
+
+```TypeScript
+sendCommonCommand(command: string, args: Record<string, Object>): Promise<void>
+```
+
+Send common commands to this session
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>): Promise<void>--><!--Device-AVSessionController-sendCommonCommand(command: string, args: Record<string, Object>): Promise<void>-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| command | string | Yes |
+| [args](../../apis-arkdata/arkts-apis/arkts-arkdata-relationalstore-sqlinfo-i.md) | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
 ## sendControlCommand
 
@@ -2485,7 +3670,9 @@ sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): vo
 
 Send control commands to this session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-sendControlCommand(command: AVControlCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -2502,13 +3689,13 @@ Send control commands to this session
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
 ## sendControlCommand
 
@@ -2518,7 +3705,9 @@ sendControlCommand(command: AVControlCommand): Promise<void>
 
 Send control commands to this session
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2542,13 +3731,13 @@ Send control commands to this session
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-invalid-session-command) |
-| [6600106](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600106-session-not-activated) |
-| [6600107](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600107-too-many-commands-or-events) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600105](../errorcode-avsession.md#6600105-invalid-session-command) |
+| [6600106](../errorcode-avsession.md#6600106-session-not-activated) |
+| [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) |
 
 ## sendCustomData
 
@@ -2558,9 +3747,11 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 Send custom data to this avsession.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVSessionController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVSessionController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
@@ -2570,7 +3761,7 @@ Send custom data to this avsession.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| data | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| data | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 
 **Return value:**
 
@@ -2582,9 +3773,9 @@ Send custom data to this avsession.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## setDesktopLyricState
 
@@ -2595,6 +3786,8 @@ setDesktopLyricState(state: DesktopLyricState): Promise<void>
 Set desktop lyric state such as lock state for this session.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2618,11 +3811,11 @@ Set desktop lyric state such as lock state for this session.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## setDesktopLyricVisible
 
@@ -2633,6 +3826,8 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 Set desktop lyric visible state for this session.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2656,11 +3851,11 @@ Set desktop lyric visible state for this session.
 
 | Error Code ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
-| [6600110](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
-| [6600111](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [6600110](../errorcode-avsession.md#6600110-desktop-lyrics-not-enabled-for-the-application) |
+| [6600111](../errorcode-avsession.md#6600111-desktop-lyrics-not-supported-for-the-current-device) |
 
 ## skipToQueueItem
 
@@ -2670,7 +3865,9 @@ skipToQueueItem(itemId: number, callback: AsyncCallback<void>): void
 
 Set the item in the playlist to be played
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVSessionController-skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void--><!--Device-AVSessionController-skipToQueueItem(itemId: int, callback: AsyncCallback<void>): void-End-->
 
@@ -2687,10 +3884,10 @@ Set the item in the playlist to be played
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## skipToQueueItem
 
@@ -2700,7 +3897,9 @@ skipToQueueItem(itemId: number): Promise<void>
 
 Set the item in the playlist to be played
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -2724,10 +3923,10 @@ Set the item in the playlist to be played
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
-| [6600102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600102-session-does-not-exist) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-session-controller-does-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) |
+| [6600103](../errorcode-avsession.md#6600103-session-controller-does-not-exist) |
 
 ## sessionId
 
@@ -2739,7 +3938,9 @@ Unique session Id
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

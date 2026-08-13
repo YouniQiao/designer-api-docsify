@@ -4,6 +4,8 @@
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-mediaquery-interface MediaQueryResult--><!--Device-mediaquery-interface MediaQueryResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ readonly matches: boolean
 **类型：** boolean
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -39,6 +43,8 @@ readonly media: string
 **类型：** string
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

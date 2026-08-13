@@ -2,7 +2,9 @@
 
 Describes the aperture information.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface ApertureInfo--><!--Device-camera-interface ApertureInfo-End-->
 
@@ -20,7 +22,9 @@ Aperture.
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApertureInfo-readonly aperture?: double--><!--Device-ApertureInfo-readonly aperture?: double-End-->
 

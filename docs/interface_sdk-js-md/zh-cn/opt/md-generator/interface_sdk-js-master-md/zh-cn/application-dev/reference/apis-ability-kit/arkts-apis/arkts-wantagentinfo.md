@@ -1,8 +1,5 @@
 # wantAgentInfo
 
-定义触发WantAgent所需要的信息。
-
-
 ## 汇总
 
 ### 接口

@@ -2,7 +2,9 @@
 
 Enumerates the uri operate mode types.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-fileShare-export enum OperationMode--><!--Device-fileShare-export enum OperationMode-End-->
 
@@ -16,7 +18,9 @@ READ_MODE = 0b1
 
 Indicates read permissions.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationMode-READ_MODE = 0b1--><!--Device-OperationMode-READ_MODE = 0b1-End-->
 
@@ -30,7 +34,9 @@ WRITE_MODE = 0b10
 
 Indicates write permissions.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationMode-WRITE_MODE = 0b10--><!--Device-OperationMode-WRITE_MODE = 0b10-End-->
 
@@ -44,7 +50,9 @@ CREATE_MODE = 0b100
 
 Indicates creating permissions.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationMode-CREATE_MODE = 0b100--><!--Device-OperationMode-CREATE_MODE = 0b100-End-->
 
@@ -58,7 +66,9 @@ DELETE_MODE = 0b1000
 
 Indicates deleting permissions.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationMode-DELETE_MODE = 0b1000--><!--Device-OperationMode-DELETE_MODE = 0b1000-End-->
 
@@ -72,7 +82,9 @@ RENAME_MODE = 0b10000
 
 Indicates renaming permissions.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperationMode-RENAME_MODE = 0b10000--><!--Device-OperationMode-RENAME_MODE = 0b10000-End-->
 

@@ -4,11 +4,11 @@
 type VibrateEffect = VibrateTime | VibratePreset | VibrateFromFile | VibrateFromPattern
 ```
 
-马达振动效果，支持以下四种：在调用  
-[vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)或  
-[vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startVibration-1)接口时，此参数的四种类型表示以四种不同的形式触发振动。
+马达振动效果，支持以下四种：在调用 [vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) 或 [vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startVibration) 接口时，此参数的四种类型表示以四种不同的形式触发振动。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

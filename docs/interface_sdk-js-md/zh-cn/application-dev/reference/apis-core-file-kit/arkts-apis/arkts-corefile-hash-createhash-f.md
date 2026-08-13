@@ -8,9 +8,11 @@ function createHash(algorithm: string): HashStream
 
 创建并返回 HashStream 对象，该对象可用于使用给定的 algorithm 生成哈希摘要。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
@@ -33,7 +35,7 @@ function createHash(algorithm: string): HashStream
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900042 | Unknown error |
 
 ## 示例

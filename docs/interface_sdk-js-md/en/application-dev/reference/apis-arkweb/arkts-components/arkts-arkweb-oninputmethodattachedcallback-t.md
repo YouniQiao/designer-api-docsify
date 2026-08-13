@@ -10,6 +10,8 @@ The callback will be triggered when inputmethod is attached.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-type OnInputmethodAttachedCallback = () => void--><!--Device-unnamed-type OnInputmethodAttachedCallback = () => void-End-->

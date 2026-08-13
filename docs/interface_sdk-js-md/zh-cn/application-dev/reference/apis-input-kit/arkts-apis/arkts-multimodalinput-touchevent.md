@@ -1,8 +1,4 @@
-# @ohos.multimodalInput.touchEvent(Touch Event)
-
-The **touchEvent** module provides touch events reported by a device. It is inherited from
- [InputEvent](arkts-input-multimodalinput-inputevent-inputevent-i.md#InputEvent).
-
+# @ohos.multimodalInput.touchEvent
 
 ## 汇总
 
@@ -35,6 +31,6 @@ The **touchEvent** module provides touch events reported by a device. It is inhe
 
 | 名称 | 说明 |
 | --- | --- |
-| [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md) | 修正坐标的模式。  **系统API**: 此接口为系统接口。 |
+| [FixedMode](arkts-input-multimodalinput-touchevent-fixedmode-e-sys.md) | 修正坐标的模式。 **系统API**: 此接口为系统接口。 |
 <!--DelEnd-->
 

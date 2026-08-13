@@ -2,9 +2,11 @@
 
 Defines the interface descriptor of a USB device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-deviceManager-interface USBInterfaceDesc--><!--Device-deviceManager-interface USBInterfaceDesc-End-->
 
@@ -26,11 +28,13 @@ bClass: int
 
 Interface class.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bClass: int--><!--Device-USBInterfaceDesc-bClass: int-End-->
 
@@ -46,11 +50,13 @@ bInterfaceNumber: int
 
 Interface ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bInterfaceNumber: int--><!--Device-USBInterfaceDesc-bInterfaceNumber: int-End-->
 
@@ -66,11 +72,13 @@ bProtocol: int
 
 Interface protocol.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bProtocol: int--><!--Device-USBInterfaceDesc-bProtocol: int-End-->
 
@@ -86,11 +94,13 @@ bSubClass: int
 
 Interface subclass.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterfaceDesc-bSubClass: int--><!--Device-USBInterfaceDesc-bSubClass: int-End-->
 

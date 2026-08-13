@@ -2,7 +2,9 @@
 
 Defines a struct for the details about the device-cloud sync process.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface ChangeInfo--><!--Device-relationalStore-interface ChangeInfo-End-->
 
@@ -24,7 +26,9 @@ Location where data is deleted. If the primary key of the table is of the string
 
 **Type:** Array&lt;string&gt; \| Array&lt;number&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeInfo-deleted: Array<string> | Array<long>--><!--Device-ChangeInfo-deleted: Array<string> | Array<long>-End-->
 
@@ -40,7 +44,9 @@ Location where data is inserted. If the primary key of the table is of the strin
 
 **Type:** Array&lt;string&gt; \| Array&lt;number&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeInfo-inserted: Array<string> | Array<long>--><!--Device-ChangeInfo-inserted: Array<string> | Array<long>-End-->
 
@@ -56,7 +62,9 @@ Name of the table with data changes.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeInfo-table: string--><!--Device-ChangeInfo-table: string-End-->
 
@@ -72,7 +80,9 @@ Type of the data changed, which can be data or asset.
 
 **Type:** ChangeType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeInfo-type: ChangeType--><!--Device-ChangeInfo-type: ChangeType-End-->
 
@@ -88,7 +98,9 @@ Location where data is updated. If the primary key of the table is of the string
 
 **Type:** Array&lt;string&gt; \| Array&lt;number&gt;
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeInfo-updated: Array<string> | Array<long>--><!--Device-ChangeInfo-updated: Array<string> | Array<long>-End-->
 

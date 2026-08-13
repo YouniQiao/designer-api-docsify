@@ -2,7 +2,9 @@
 
 Enumerates file aggregation types.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-picker-export enum MergeTypeMode--><!--Device-picker-export enum MergeTypeMode-End-->
 
@@ -16,9 +18,11 @@ DEFAULT = 0
 
 默认模式，表示该参数不生效。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MergeTypeMode-DEFAULT = 0--><!--Device-MergeTypeMode-DEFAULT = 0-End-->
 
@@ -32,9 +36,11 @@ AUDIO = 1
 
 音频文件模式。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MergeTypeMode-AUDIO = 1--><!--Device-MergeTypeMode-AUDIO = 1-End-->
 
@@ -48,9 +54,11 @@ VIDEO = 2
 
 视频文件模式。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MergeTypeMode-VIDEO = 2--><!--Device-MergeTypeMode-VIDEO = 2-End-->
 
@@ -64,9 +72,11 @@ DOCUMENT = 3
 
 文档文件模式。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MergeTypeMode-DOCUMENT = 3--><!--Device-MergeTypeMode-DOCUMENT = 3-End-->
 
@@ -80,9 +90,11 @@ PICTURE = 4
 
 图片文件模式。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MergeTypeMode-PICTURE = 4--><!--Device-MergeTypeMode-PICTURE = 4-End-->
 

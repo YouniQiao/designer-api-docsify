@@ -6,6 +6,8 @@ Provides the widget information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FormInfo--><!--Device-unnamed-declare interface FormInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ Ability name of the widget.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-ability: string--><!--Device-FormInfo-ability: string-End-->
 
@@ -46,6 +50,8 @@ Bundle name of the widget.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-FormInfo-bundle: string--><!--Device-FormInfo-bundle: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -58,15 +64,15 @@ Bundle name of the widget.
 dimension?: FormDimension
 ```
 
-Dimensions of the widget. The 2 x 2, 4 x 4, 4 x 2, and more options are available.
-
-Default value: **Dimension_2_2**
+Dimensions of the widget. The 2 x 2, 4 x 4, 4 x 2, and more options are available. Default value: **Dimension_2_2**
 
 **Type:** [FormDimension](arkts-arkui-formdimension-e-sys.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-dimension?: FormDimension--><!--Device-FormInfo-dimension?: FormDimension-End-->
 
@@ -80,15 +86,15 @@ Default value: **Dimension_2_2**
 exemptAppLock?: boolean
 ```
 
-Whether the widget is exempt from app lock. **true**: The widget is exempt from app lock management. No app lock overlay is displayed when an app lock is applied to the host application. **false**: The widget is managed by app lock. The app lock overlay is displayed when an app lock is applied to the host application.
-
-Default value: **false**.
+Whether the widget is exempt from app lock. **true**: The widget is exempt from app lock management. No app lock overlay is displayed when an app lock is applied to the host application. **false**: The widget is managed by app lock. The app lock overlay is displayed when an app lock is applied to the host application. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-exemptAppLock?: boolean--><!--Device-FormInfo-exemptAppLock?: boolean-End-->
 
@@ -102,19 +108,15 @@ Default value: **false**.
 id: number | string
 ```
 
-Widget ID. Set this parameter to **0** for a new widget.
-
-**NOTE：**
-
-Different widget hosts cannot use the same ID.
-
-If a widget host uses the same ID for two widgets, the one added later is displayed.
+Widget ID. Set this parameter to **0** for a new widget. **NOTE：**Different widget hosts cannot use the same ID. If a widget host uses the same ID for two widgets, the one added later is displayed.
 
 **Type:** number \| string
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-id: number | string--><!--Device-FormInfo-id: number | string-End-->
 
@@ -136,6 +138,8 @@ Module name of the widget.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-FormInfo-module: string--><!--Device-FormInfo-module: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -156,6 +160,8 @@ Widget name.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-FormInfo-name: string--><!--Device-FormInfo-name: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -168,22 +174,15 @@ Widget name.
 renderingMode?: FormRenderingMode
 ```
 
-Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows:
-
-- **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that   
-the widget is displayed in the effect as you set it.  
-- **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In   
-this mode you need to set the widget style based on the best practices.
-
-**NOTE：**
-
-If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
+Widget rendering mode. Default value: **FULL_COLOR**. The options are as follows: - **FULL_COLOR**: full color mode, where the widget framework does not change the widget effect, which means that the widget is displayed in the effect as you set it. - **SINGLE_COLOR**: single color mode, where the widget framework sets the widget background to transparent. In this mode you need to set the widget style based on the best practices. **NOTE：**If the system does not support unified rendering, the widget framework does not set the widget background to transparent in single color mode.
 
 **Type:** [FormRenderingMode](arkts-arkui-formrenderingmode-e-sys.md)
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-renderingMode?: FormRenderingMode--><!--Device-FormInfo-renderingMode?: FormRenderingMode-End-->
 
@@ -205,6 +204,8 @@ The shape of the form.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-FormInfo-shape?: FormShape--><!--Device-FormInfo-shape?: FormShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -217,15 +218,15 @@ The shape of the form.
 temporary?: boolean
 ```
 
-Whether the widget is a temporary widget. **true**: The widget is a temporary widget. **false**: The widget is not a temporary widget.
-
-Default value: **false**.
+Whether the widget is a temporary widget. **true**: The widget is a temporary widget. **false**: The widget is not a temporary widget. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-temporary?: boolean--><!--Device-FormInfo-temporary?: boolean-End-->
 
@@ -246,6 +247,8 @@ The want of the form.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-want?: import('../api/@ohos.app.ability.Want').default--><!--Device-FormInfo-want?: import('../api/@ohos.app.ability.Want').default-End-->
 

@@ -1,9 +1,10 @@
 # FilterProcessStateType (System API)
 
-Enumerates the types of process states to filter. It can be used with  
-[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#AppStateFilter) to filter the process state types you want to listen for.
+Enumerates the types of process states to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#AppStateFilter-(System-API)) to filter the process state types you want to listen for.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export enum FilterProcessStateType--><!--Device-appManager-export enum FilterProcessStateType-End-->
 
@@ -17,10 +18,11 @@ Enumerates the types of process states to filter. It can be used with
 CREATE = 1 << 0
 ```
 
-The process has just been created. It corresponds to the state whose value is **0** in  
-[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
+The process has just been created. It corresponds to the state whose value is **0** in [ProcessData](arkts-ability-processdata-c.md#ProcessData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterProcessStateType-CREATE = 1 << 0--><!--Device-FilterProcessStateType-CREATE = 1 << 0-End-->
 
@@ -34,10 +36,11 @@ The process has just been created. It corresponds to the state whose value is **
 FOREGROUND = 1 << 1
 ```
 
-The process is running in the foreground. It corresponds to the state whose value is **2** in  
-[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
+The process is running in the foreground. It corresponds to the state whose value is **2** in [ProcessData](arkts-ability-processdata-c.md#ProcessData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterProcessStateType-FOREGROUND = 1 << 1--><!--Device-FilterProcessStateType-FOREGROUND = 1 << 1-End-->
 
@@ -51,10 +54,11 @@ The process is running in the foreground. It corresponds to the state whose valu
 BACKGROUND = 1 << 2
 ```
 
-The process is running in the background. It corresponds to the state whose value is **4** in  
-[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
+The process is running in the background. It corresponds to the state whose value is **4** in [ProcessData](arkts-ability-processdata-c.md#ProcessData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterProcessStateType-BACKGROUND = 1 << 2--><!--Device-FilterProcessStateType-BACKGROUND = 1 << 2-End-->
 
@@ -68,10 +72,11 @@ The process is running in the background. It corresponds to the state whose valu
 DESTROY = 1 << 3
 ```
 
-The process has terminated. It corresponds to the state whose value is **5** in  
-[ProcessData](../../../reference/apis-ability-kit/js-apis-inner-application-processData.md#properties).
+The process has terminated. It corresponds to the state whose value is **5** in [ProcessData](arkts-ability-processdata-c.md#ProcessData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterProcessStateType-DESTROY = 1 << 3--><!--Device-FilterProcessStateType-DESTROY = 1 << 3-End-->
 

@@ -14,7 +14,9 @@ function getDnsUnicode(host: string, flag?: ConversionProcess): string
 
 Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by the ToUnicode operation of RFC 3490.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string--><!--Device-connection-function getDnsUnicode(host: string, flag?: ConversionProcess): string-End-->
 
@@ -37,9 +39,9 @@ Convert a string from ASCII Compatible Encoding (ACE) to Unicode, as defined by 
 
 | Error Code ID |
 | --- |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 

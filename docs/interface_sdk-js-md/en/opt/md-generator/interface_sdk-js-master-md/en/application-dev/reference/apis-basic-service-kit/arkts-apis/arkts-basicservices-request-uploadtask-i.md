@@ -1,9 +1,10 @@
 # UploadTask
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile-1) or from a callback through   
-[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile).
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadFile) .
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-interface UploadTask--><!--Device-request-interface UploadTask-End-->
 
@@ -21,14 +22,11 @@ import { request } from '@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the upload task. This API uses an asynchronous callback to return the result.
+Deletes the upload task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -46,7 +44,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -66,14 +64,11 @@ uploadTask.delete((err: BusinessError, result: boolean) => {
 delete(): Promise<boolean>
 ```
 
-Deletes the upload task. This API uses a promise to return the result.
+Deletes the upload task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -91,7 +86,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -103,17 +98,19 @@ uploadTask.delete().then((result: boolean) => {
 });
 ```
 
-## off('progress')
+## offComplete
 
 ```TypeScript
-off(type: 'progress', callback?: (uploadedSize: number, totalSize: number) => void): void
+offComplete(callback?: Callback<Array<TaskState>>): void
 ```
 
-Unsubscribes from upload progress events.
+Called when the current upload session complete.
 
-**Since:** 6
+**Since:** 23
 
-<!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offComplete(callback?: Callback<Array<TaskState>>): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -121,33 +118,217 @@ Unsubscribes from upload progress events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'progress' | Yes |
-| callback | (uploadedSize: number, totalSize: number) = & gt; void | No |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No |
+
+## offFail
+
+```TypeScript
+offFail(callback?: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session fail.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-offFail(callback?: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No |
+
+## offHeaderReceive
+
+```TypeScript
+offHeaderReceive(callback?: UploadHeaderReceiveCallback): void
+```
+
+Called when the header of the current upload session has been received.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-offHeaderReceive(callback?: UploadHeaderReceiveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | No |
+
+## offProgress
+
+```TypeScript
+offProgress(callback?: UploadProgressCallback): void
+```
+
+Called when the current upload session is in process.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void--><!--Device-UploadTask-offProgress(callback?: UploadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | No |
+
+## off_complete
+
+```TypeScript
+off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
+```
+
+Unsubscribes from upload completion or failure events.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'fail' | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
 ```TypeScript
-let upProgressCallback1 = (uploadedSize: number, totalSize: number) => {
-  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
 };
-let upProgressCallback2 = (uploadedSize: number, totalSize: number) => {
-  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
 };
-uploadTask.on('progress', upProgressCallback1);
-uploadTask.on('progress', upProgressCallback2);
-// Unsubscribe from upProgressCallback1.
-uploadTask.off('progress', upProgressCallback1);
-// Unsubscribe from all callbacks of upload progress events.
-uploadTask.off('progress');
+uploadTask.on('complete', upCompleteCallback1);
+uploadTask.on('complete', upCompleteCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('complete', upCompleteCallback1);
+// Unsubscribe from all callbacks of the upload completion events.
+uploadTask.off('complete');
+
+let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('fail', upFailCallback1);
+uploadTask.on('fail', upFailCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('fail', upFailCallback1);
+// Unsubscribe from all callbacks of the upload failure events.
+uploadTask.off('fail');
 ```
 
-## off('headerReceive')
+## off_fail
+
+```TypeScript
+off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
+```
+
+Unsubscribes from upload completion or failure events.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'fail' | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete complete notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('complete', upCompleteCallback1);
+uploadTask.on('complete', upCompleteCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('complete', upCompleteCallback1);
+// Unsubscribe from all callbacks of the upload completion events.
+uploadTask.off('complete');
+
+let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
+  console.info('Upload delete fail notification.');
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info('taskState:' + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('fail', upFailCallback1);
+uploadTask.on('fail', upFailCallback2);
+// Unsubscribe from headerCallback1.
+uploadTask.off('fail', upFailCallback1);
+// Unsubscribe from all callbacks of the upload failure events.
+uploadTask.off('fail');
+```
+
+## off_headerReceive
 
 ```TypeScript
 off(type: 'headerReceive', callback?: (header: object) => void): void
@@ -156,6 +337,8 @@ off(type: 'headerReceive', callback?: (header: object) => void): void
 Unsubscribes from HTTP response events for the upload task.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void--><!--Device-UploadTask-off(type: 'headerReceive', callback?: (header: object) => void): void-End-->
 
@@ -172,7 +355,7 @@ Unsubscribes from HTTP response events for the upload task.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -191,160 +374,19 @@ uploadTask.off('headerReceive', headerCallback1);
 uploadTask.off('headerReceive');
 ```
 
-## off('complete' | 'fail')
+## off_progress
 
 ```TypeScript
-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
+off(type: 'progress', callback?: (uploadedSize: number, totalSize: number) => void): void
 ```
 
-Unsubscribes from upload completion or failure events.
-
-**Since:** 9
-
-<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('complete', upCompleteCallback1);
-uploadTask.on('complete', upCompleteCallback2);
-// Unsubscribe from headerCallback1.
-uploadTask.off('complete', upCompleteCallback1);
-// Unsubscribe from all callbacks of the upload completion events.
-uploadTask.off('complete');
-
-let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('fail', upFailCallback1);
-uploadTask.on('fail', upFailCallback2);
-// Unsubscribe from headerCallback1.
-uploadTask.off('fail', upFailCallback1);
-// Unsubscribe from all callbacks of the upload failure events.
-uploadTask.off('fail');
-```
-
-## off('complete' | 'fail')
-
-```TypeScript
-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void
-```
-
-Unsubscribes from upload completion or failure events.
-
-**Since:** 9
-
-<!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void--><!--Device-UploadTask-off(type: 'complete' | 'fail', callback?: Callback<Array<TaskState>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-let upCompleteCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upCompleteCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete complete notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('complete', upCompleteCallback1);
-uploadTask.on('complete', upCompleteCallback2);
-// Unsubscribe from headerCallback1.
-uploadTask.off('complete', upCompleteCallback1);
-// Unsubscribe from all callbacks of the upload completion events.
-uploadTask.off('complete');
-
-let upFailCallback1 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-let upFailCallback2 = (taskStates: Array<request.TaskState>) => {
-  console.info('Upload delete fail notification.');
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info('taskState:' + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('fail', upFailCallback1);
-uploadTask.on('fail', upFailCallback2);
-// Unsubscribe from headerCallback1.
-uploadTask.off('fail', upFailCallback1);
-// Unsubscribe from all callbacks of the upload failure events.
-uploadTask.off('fail');
-```
-
-## on('progress')
-
-```TypeScript
-on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void): void
-```
-
-Subscribes to upload progress events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> To maintain a balance between power consumption and performance, this API cannot be called when the application
-> is running in the background.
+Unsubscribes from upload progress events.
 
 **Since:** 6
 
-<!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-off(type: 'progress', callback?: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -353,24 +395,214 @@ Subscribes to upload progress events. This API uses an asynchronous callback to 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'progress' | Yes |
-| callback | (uploadedSize: number, totalSize: number) = & gt; void | Yes |
+| callback | (uploadedSize: number, totalSize: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
 ```TypeScript
-let upProgressCallback = (uploadedSize: number, totalSize: number) => {
-  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
+let upProgressCallback1 = (uploadedSize: number, totalSize: number) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
 };
-uploadTask.on('progress', upProgressCallback);
+let upProgressCallback2 = (uploadedSize: number, totalSize: number) => {
+  console.info('Upload delete progress notification.' + 'totalSize:' + totalSize + 'uploadedSize:' + uploadedSize);
+};
+uploadTask.on('progress', upProgressCallback1);
+uploadTask.on('progress', upProgressCallback2);
+// Unsubscribe from upProgressCallback1.
+uploadTask.off('progress', upProgressCallback1);
+// Unsubscribe from all callbacks of upload progress events.
+uploadTask.off('progress');
 ```
 
-## on('headerReceive')
+## onComplete
+
+```TypeScript
+onComplete(callback: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session complete.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onComplete(callback: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes |
+
+## onFail
+
+```TypeScript
+onFail(callback: Callback<Array<TaskState>>): void
+```
+
+Called when the current upload session fail.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-onFail(callback: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes |
+
+## onHeaderReceive
+
+```TypeScript
+onHeaderReceive(callback: UploadHeaderReceiveCallback): void
+```
+
+Called when the header of the current upload session has been received.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void--><!--Device-UploadTask-onHeaderReceive(callback: UploadHeaderReceiveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | Yes |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: UploadProgressCallback): void
+```
+
+Called when the current upload session is in process.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void--><!--Device-UploadTask-onProgress(callback: UploadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | Yes |
+
+## on_complete
+
+```TypeScript
+on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
+```
+
+Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'fail' | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('complete', upCompleteCallback);
+
+let upFailCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('fail', upFailCallback);
+```
+
+## on_fail
+
+```TypeScript
+on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
+```
+
+Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
+
+**Since:** 9
+
+**Deprecated since:** -1
+
+<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Upload
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'fail' | Yes |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('complete', upCompleteCallback);
+
+let upFailCallback = (taskStates: Array<request.TaskState>) => {
+  for (let i = 0; i < taskStates.length; i++) {
+    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
+  }
+};
+uploadTask.on('fail', upFailCallback);
+```
+
+## on_headerReceive
 
 ```TypeScript
 on(type: 'headerReceive', callback: (header: object) => void): void
@@ -379,6 +611,8 @@ on(type: 'headerReceive', callback: (header: object) => void): void
 Subscribes to HTTP response events for the upload task.This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void--><!--Device-UploadTask-on(type: 'headerReceive', callback: (header: object) => void): void-End-->
 
@@ -395,7 +629,7 @@ Subscribes to HTTP response events for the upload task.This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -406,17 +640,19 @@ let headerCallback = (headers: object) => {
 uploadTask.on('headerReceive', headerCallback);
 ```
 
-## on('complete' | 'fail')
+## on_progress
 
 ```TypeScript
-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
+on(type: 'progress', callback: (uploadedSize: number, totalSize: number) => void): void
 ```
 
-Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
+Subscribes to upload progress events. This API uses an asynchronous callback to return the result. > **NOTE：**> > To maintain a balance between power consumption and performance, this API cannot be called when the application > is running in the background.
 
-**Since:** 9
+**Since:** 6
 
-<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void--><!--Device-UploadTask-on(type: 'progress', callback: (uploadedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Upload
 
@@ -424,76 +660,22 @@ Subscribes to upload completion or failure events. This API uses an asynchronous
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes |
+| type | 'progress' | Yes |
+| callback | (uploadedSize: number, totalSize: number) = & gt; void | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
 ```TypeScript
-let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
-  }
+let upProgressCallback = (uploadedSize: number, totalSize: number) => {
+  console.info("upload totalSize:" + totalSize + "  uploadedSize:" + uploadedSize);
 };
-uploadTask.on('complete', upCompleteCallback);
-
-let upFailCallback = (taskStates: Array<request.TaskState>) => {
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('fail', upFailCallback);
-```
-
-## on('complete' | 'fail')
-
-```TypeScript
-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void
-```
-
-Subscribes to upload completion or failure events. This API uses an asynchronous callback to return the result.
-
-**Since:** 9
-
-<!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void--><!--Device-UploadTask-on(type: 'complete' | 'fail', callback: Callback<Array<TaskState>>): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Upload
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'fail' | Yes |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Array&lt;[TaskState](arkts-basicservices-request-taskstate-i.md)&gt;&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-let upCompleteCallback = (taskStates: Array<request.TaskState>) => {
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnComplete taskState:" + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('complete', upCompleteCallback);
-
-let upFailCallback = (taskStates: Array<request.TaskState>) => {
-  for (let i = 0; i < taskStates.length; i++) {
-    console.info("upOnFail taskState:" + JSON.stringify(taskStates[i]));
-  }
-};
-uploadTask.on('fail', upFailCallback);
+uploadTask.on('progress', upProgressCallback);
 ```
 
 ## remove
@@ -508,7 +690,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](request.UploadTask.delete(callback:)
+**Substitutes:** [delete](#delete)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -526,7 +708,7 @@ Deletes the upload task. This API uses an asynchronous callback to return the re
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -572,7 +754,7 @@ Deletes the upload task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

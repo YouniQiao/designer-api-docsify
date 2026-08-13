@@ -4,6 +4,8 @@ Page flip mode of Swiper and Tabs on mouse wheel event.
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum PageFlipMode--><!--Device-unnamed-declare enum PageFlipMode-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ CONTINUOUS = 0
 Turn pages continuously according to the number of mouse wheel events.
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,8 @@ SINGLE = 1
 The page-turning animation remains unresponsive to other mouse wheel events until it completes.
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

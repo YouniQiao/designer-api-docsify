@@ -2,9 +2,11 @@
 
 Represents the result returned.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export interface CMResult--><!--Device-certificateManager-export interface CMResult-End-->
 
@@ -26,9 +28,11 @@ List of authorized applications.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-appUidList?: Array<string>--><!--Device-CMResult-appUidList?: Array<string>-End-->
 
@@ -44,9 +48,11 @@ Detailed certificate information.
 
 **Type:** [CertInfo](arkts-devicecertificate-certificatemanager-certinfo-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-certInfo?: CertInfo--><!--Device-CMResult-certInfo?: CertInfo-End-->
 
@@ -62,9 +68,11 @@ Brief certificate information.
 
 **Type:** Array&lt;[CertAbstract](arkts-devicecertificate-certificatemanager-certabstract-i.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-certList?: Array<CertAbstract>--><!--Device-CMResult-certList?: Array<CertAbstract>-End-->
 
@@ -80,9 +88,11 @@ Detailed credential information.
 
 **Type:** Credential
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-credential?: Credential--><!--Device-CMResult-credential?: Credential-End-->
 
@@ -98,9 +108,11 @@ Represents detailed information about a credential.
 
 **Type:** Array&lt;Credential&gt;
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-credentialDetailList?: Array<Credential>--><!--Device-CMResult-credentialDetailList?: Array<Credential>-End-->
 
@@ -116,9 +128,11 @@ Brief credential information.
 
 **Type:** Array&lt;[CredentialAbstract](arkts-devicecertificate-certificatemanager-credentialabstract-i.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-credentialList?: Array<CredentialAbstract>--><!--Device-CMResult-credentialList?: Array<CredentialAbstract>-End-->
 
@@ -134,9 +148,11 @@ Signature generated.
 
 **Type:** Uint8Array
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-outData?: Uint8Array--><!--Device-CMResult-outData?: Uint8Array-End-->
 
@@ -152,9 +168,11 @@ Unique identifier of a certificate or credential. The value contains up to 256 b
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CMResult-uri?: string--><!--Device-CMResult-uri?: string-End-->
 
@@ -166,14 +184,15 @@ Unique identifier of a certificate or credential. The value contains up to 256 b
 uriList?: Array<string>
 ```
 
-Certificate URI list.  
-**Since**: 26.0.0
+Certificate URI list. **Since**: 26.0.0
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

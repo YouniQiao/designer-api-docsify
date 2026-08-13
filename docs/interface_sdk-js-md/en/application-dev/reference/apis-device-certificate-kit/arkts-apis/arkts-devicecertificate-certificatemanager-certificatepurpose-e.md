@@ -2,9 +2,11 @@
 
 Enumerates the usage of a credential.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-certificateManager-export enum CertificatePurpose--><!--Device-certificateManager-export enum CertificatePurpose-End-->
 
@@ -18,9 +20,11 @@ PURPOSE_DEFAULT = 0
 
 Default usage, which is used for credential signing.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertificatePurpose-PURPOSE_DEFAULT = 0--><!--Device-CertificatePurpose-PURPOSE_DEFAULT = 0-End-->
 
@@ -34,9 +38,11 @@ PURPOSE_ALL = 1
 
 Query of all credentials.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertificatePurpose-PURPOSE_ALL = 1--><!--Device-CertificatePurpose-PURPOSE_ALL = 1-End-->
 
@@ -50,9 +56,11 @@ PURPOSE_SIGN = 2
 
 Credential signing.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertificatePurpose-PURPOSE_SIGN = 2--><!--Device-CertificatePurpose-PURPOSE_SIGN = 2-End-->
 
@@ -66,9 +74,11 @@ PURPOSE_ENCRYPT = 3
 
 Credential encryption.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CertificatePurpose-PURPOSE_ENCRYPT = 3--><!--Device-CertificatePurpose-PURPOSE_ENCRYPT = 3-End-->
 

@@ -16,7 +16,9 @@ Open the input method detail page.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +38,7 @@ Open the input method detail page.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
+| [16900010](../../apis-basic-services-kit/errorcode-settings.md#16900010-parameter-check-failed) | Parameter error. |
 
 ## Examples
 

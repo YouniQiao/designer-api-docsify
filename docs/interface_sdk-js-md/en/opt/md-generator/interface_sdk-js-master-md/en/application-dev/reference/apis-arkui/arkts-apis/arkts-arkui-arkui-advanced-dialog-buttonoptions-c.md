@@ -4,6 +4,8 @@ Declare ButtonOptions
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ButtonOptions--><!--Device-unnamed-export declare class ButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,7 +24,11 @@ action?: () => void
 
 Sets the Button Callback.
 
+**Type:** () =&gt; void
+
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +49,8 @@ Sets the background color of a button.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Describes the Button style.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -88,6 +98,8 @@ Set the default focus of a button.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -107,6 +119,8 @@ Sets the Button Text Color.
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +144,8 @@ Describes the Button role.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -152,6 +168,8 @@ Set the alignment mode for the button label.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -171,6 +189,8 @@ Sets the Display Content of a Button.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

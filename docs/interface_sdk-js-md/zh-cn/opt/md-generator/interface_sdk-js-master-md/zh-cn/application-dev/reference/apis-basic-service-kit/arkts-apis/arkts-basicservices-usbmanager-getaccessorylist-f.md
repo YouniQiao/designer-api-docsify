@@ -8,7 +8,9 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 获取当前已接入主机的USB配件列表。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>--><!--Device-usbManager-function getAccessoryList(): Array<Readonly<USBAccessory>>-End-->
 
@@ -24,8 +26,8 @@ function getAccessoryList(): Array<Readonly<USBAccessory>>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [14400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [14400004](../../apis-basic-services-kit/errorcode-usb.md#14400004-服务异常) |
 
 ## 示例
 

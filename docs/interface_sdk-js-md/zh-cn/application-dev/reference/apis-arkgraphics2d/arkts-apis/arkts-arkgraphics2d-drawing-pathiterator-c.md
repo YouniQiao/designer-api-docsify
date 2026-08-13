@@ -1,18 +1,12 @@
 # PathIterator
 
-表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。
+表示路径操作迭代器，可通过遍历迭代器逐段读取路径的操作指令。 迭代器按顺序遍历路径中的操作指令，便于实现对路径的细粒度分析与自定义处理。 > **说明：** > > - 本Class首批接口从API version 18开始支持。 > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 18开始支持。
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-drawing-class PathIterator--><!--Device-drawing-class PathIterator-End-->
 
@@ -26,9 +20,11 @@ constructor(path: Path)
 
 构造迭代器并绑定路径。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PathIterator-constructor(path: Path)--><!--Device-PathIterator-constructor(path: Path)-End-->
 
@@ -48,9 +44,11 @@ hasNext(): boolean
 
 判断迭代器中是否还有下一个操作。通常与next()或peek()方法配合使用实现路径遍历。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PathIterator-hasNext(): boolean--><!--Device-PathIterator-hasNext(): boolean-End-->
 
@@ -68,11 +66,13 @@ hasNext(): boolean
 next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 ```
 
-返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](#peek)。通常与[hasNext](#hasNext)方法配合使用实现路径遍历。
+返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。 若仅需预览下一个操作而不改变迭代器状态，请使用[peek](#peek)。 通常与[hasNext](#hasNext)方法配合使用实现路径遍历。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb--><!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb-End-->
 
@@ -95,7 +95,7 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## next
 
@@ -103,11 +103,13 @@ next(points: Array<common2D.Point>, offset?: number): PathIteratorVerb
 next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 ```
 
-返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。若仅需预览下一个操作而不改变迭代器状态，请使用[peek](#peek)。通常与[hasNext](#hasNext)方法配合使用实现路径遍历。
+返回当前路径的下一个操作，并将迭代器推进至该操作，同时将路径坐标点数据按操作类型写入传入的points数组。 若仅需预览下一个操作而不改变迭代器状态，请使用[peek](#peek)。 通常与[hasNext](#hasNext)方法配合使用实现路径遍历。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined--><!--Device-PathIterator-next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined-End-->
 
@@ -130,7 +132,7 @@ next(points: Array<common2D.Point>, offset?: int): PathIteratorVerb | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## peek
 
@@ -143,6 +145,8 @@ peek(): PathIteratorVerb
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 <!--Device-PathIterator-peek(): PathIteratorVerb--><!--Device-PathIterator-peek(): PathIteratorVerb-End-->
 
@@ -164,7 +168,9 @@ peek(): PathIteratorVerb | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-PathIterator-peek(): PathIteratorVerb | undefined--><!--Device-PathIterator-peek(): PathIteratorVerb | undefined-End-->
 

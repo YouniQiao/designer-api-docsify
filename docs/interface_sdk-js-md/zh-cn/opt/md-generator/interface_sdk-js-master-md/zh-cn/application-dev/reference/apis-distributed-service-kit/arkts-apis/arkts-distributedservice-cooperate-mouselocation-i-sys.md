@@ -2,7 +2,9 @@
 
 键鼠穿越的位置。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cooperate-interface MouseLocation--><!--Device-cooperate-interface MouseLocation-End-->
 
@@ -20,7 +22,9 @@ displayHeight: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MouseLocation-displayHeight: int--><!--Device-MouseLocation-displayHeight: int-End-->
 
@@ -38,7 +42,9 @@ displayWidth: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MouseLocation-displayWidth: int--><!--Device-MouseLocation-displayWidth: int-End-->
 
@@ -56,7 +62,9 @@ displayX: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MouseLocation-displayX: int--><!--Device-MouseLocation-displayX: int-End-->
 
@@ -74,7 +82,9 @@ displayY: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MouseLocation-displayY: int--><!--Device-MouseLocation-displayY: int-End-->
 

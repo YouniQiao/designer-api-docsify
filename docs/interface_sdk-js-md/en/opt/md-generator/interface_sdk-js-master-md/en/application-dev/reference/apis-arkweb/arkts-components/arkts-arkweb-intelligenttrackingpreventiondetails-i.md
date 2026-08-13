@@ -4,6 +4,8 @@ Defines the Intelligent Tracking Prevention details.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails--><!--Device-unnamed-declare interface IntelligentTrackingPreventionDetails-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ The host of website url.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -37,6 +41,8 @@ The host of tracker url.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

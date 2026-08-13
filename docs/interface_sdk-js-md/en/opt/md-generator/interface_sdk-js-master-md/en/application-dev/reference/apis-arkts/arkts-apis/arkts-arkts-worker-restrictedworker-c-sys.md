@@ -6,7 +6,9 @@ The RestrictedWorker class contains all Worker functions.
 
 **Since:** 11
 
-<!--Device-worker-class RestrictedWorker extends ThreadWorker--><!--Device-worker-class RestrictedWorker extends ThreadWorker-End-->
+**Deprecated since:** -1
+
+<!--Device-worker-class RestrictedWorker--><!--Device-worker-class RestrictedWorker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -28,6 +30,8 @@ Creates a worker instance
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-RestrictedWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -45,5 +49,5 @@ Creates a worker instance
 
 | Error Code ID |
 | --- |
-| [10200003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
-| [10200007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200007-abnormal-worker-file-path) |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) |
+| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) |

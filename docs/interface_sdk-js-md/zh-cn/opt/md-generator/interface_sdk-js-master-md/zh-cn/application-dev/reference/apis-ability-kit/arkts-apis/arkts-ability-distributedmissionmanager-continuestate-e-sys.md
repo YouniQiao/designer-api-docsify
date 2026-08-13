@@ -2,7 +2,9 @@
 
 当前任务流转状态的枚举。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedMissionManager-enum ContinueState--><!--Device-distributedMissionManager-enum ContinueState-End-->
 
@@ -18,7 +20,9 @@ ACTIVE = 0
 
 表示当前任务流转处于激活状态。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,9 @@ INACTIVE = 1
 
 表示当前任务流转处于未激活状态。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

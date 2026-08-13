@@ -4,6 +4,8 @@ Enumerates the states of a refresh operation.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum RefreshStatus--><!--Device-unnamed-declare enum RefreshStatus-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ The component is not pulled down. This is the default value.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RefreshStatus-Inactive--><!--Device-RefreshStatus-Inactive-End-->
@@ -30,11 +34,11 @@ The component is not pulled down. This is the default value.
 Drag
 ```
 
-The component is being pulled down, but the pull-down distance is shorter than the refresh threshold.
-
-If you release the component, it enters the **Inactive** state. If you continue to pull down the component and the pull-down distance exceeds the refresh threshold, the component enters the **OverDrag** state.
+The component is being pulled down, but the pull-down distance is shorter than the refresh threshold. If you release the component, it enters the **Inactive** state. If you continue to pull down the component and the pull-down distance exceeds the refresh threshold, the component enters the **OverDrag** state.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -48,11 +52,11 @@ If you release the component, it enters the **Inactive** state. If you continue 
 OverDrag
 ```
 
-The component is being pulled down, and the pull-down distance exceeds the refresh threshold.
-
-If you release the component, the component enters the **Refresh** state. If you swipe upward and the pull-down distance is less than the refresh threshold, the component enters the **Drag** state.
+The component is being pulled down, and the pull-down distance exceeds the refresh threshold. If you release the component, the component enters the **Refresh** state. If you swipe upward and the pull-down distance is less than the refresh threshold, the component enters the **Drag** state.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +74,8 @@ The pull-down ends, and the component rebounds to the minimum length required to
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RefreshStatus-Refresh--><!--Device-RefreshStatus-Refresh-End-->
@@ -85,6 +91,8 @@ Done
 The refresh is complete, and the component returns to the initial state (at the top).
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

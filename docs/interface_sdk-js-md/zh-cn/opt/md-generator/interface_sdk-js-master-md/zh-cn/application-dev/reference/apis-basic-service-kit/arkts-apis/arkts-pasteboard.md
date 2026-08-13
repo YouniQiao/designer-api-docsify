@@ -1,9 +1,10 @@
 # @ohos.pasteboard
 
-剪贴板
+本模块提供管理系统剪贴板的能力，支持系统复制、粘贴功能。系统剪贴板支持对文本、HTML、URI、Want、PixelMap等内容的操作。
 
+**起始版本：** 23
 
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace pasteboard--><!--Device-unnamed-declare namespace pasteboard-End-->
 
@@ -15,18 +16,18 @@
 
 | 名称 |
 | --- |
-| [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata) |
-| [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata-1) |
-| [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md#createhtmldata) |
-| [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md#createhtmltextrecord) |
-| [createPlainTextData](arkts-basicservices-pasteboard-createplaintextdata-f.md#createplaintextdata) |
-| [createPlainTextRecord](arkts-basicservices-pasteboard-createplaintextrecord-f.md#createplaintextrecord) |
-| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord) |
-| [createUriData](arkts-basicservices-pasteboard-createuridata-f.md#createuridata) |
-| [createUriRecord](arkts-basicservices-pasteboard-createurirecord-f.md#createurirecord) |
-| [createWantData](arkts-basicservices-pasteboard-createwantdata-f.md#createwantdata) |
-| [createWantRecord](arkts-basicservices-pasteboard-createwantrecord-f.md#createwantrecord) |
-| [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard) |
+| [createData](arkts-basicservices-pasteboard-createdata-f.md#createData) |
+| [createData](arkts-basicservices-pasteboard-createdata-f.md#createData) |
+| [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md#createHtmlData) |
+| [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md#createHtmlTextRecord) |
+| [createPlainTextData](arkts-basicservices-pasteboard-createplaintextdata-f.md#createPlainTextData) |
+| [createPlainTextRecord](arkts-basicservices-pasteboard-createplaintextrecord-f.md#createPlainTextRecord) |
+| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord) |
+| [createUriData](arkts-basicservices-pasteboard-createuridata-f.md#createUriData) |
+| [createUriRecord](arkts-basicservices-pasteboard-createurirecord-f.md#createUriRecord) |
+| [createWantData](arkts-basicservices-pasteboard-createwantdata-f.md#createWantData) |
+| [createWantRecord](arkts-basicservices-pasteboard-createwantrecord-f.md#createWantRecord) |
+| [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getSystemPasteboard) |
 
 ### 类
 
@@ -44,6 +45,14 @@
 | [PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md) |
 | [ProgressInfo](arkts-basicservices-pasteboard-progressinfo-i.md) |
 | [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i.md) |
+
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 |
+| --- |
+| [SystemPasteboard](arkts-basicservices-pasteboard-systempasteboard-i-sys.md) |
+<!--DelEnd-->
 
 ### 枚举
 
@@ -66,9 +75,9 @@
 
 | 名称 |
 | --- |
-| [MAX_RECORD_NUM](arkts-basicservices-pasteboard-con.md#max_record_num) |
-| [MIMETYPE_PIXELMAP](arkts-basicservices-pasteboard-con.md#mimetype_pixelmap) |
-| [MIMETYPE_TEXT_HTML](arkts-basicservices-pasteboard-con.md#mimetype_text_html) |
-| [MIMETYPE_TEXT_PLAIN](arkts-basicservices-pasteboard-con.md#mimetype_text_plain) |
-| [MIMETYPE_TEXT_URI](arkts-basicservices-pasteboard-con.md#mimetype_text_uri) |
-| [MIMETYPE_TEXT_WANT](arkts-basicservices-pasteboard-con.md#mimetype_text_want) |
+| [MAX_RECORD_NUM](arkts-basicservices-pasteboard-con.md#MAX_RECORD_NUM) |
+| [MIMETYPE_PIXELMAP](arkts-basicservices-pasteboard-con.md#MIMETYPE_PIXELMAP) |
+| [MIMETYPE_TEXT_HTML](arkts-basicservices-pasteboard-con.md#MIMETYPE_TEXT_HTML) |
+| [MIMETYPE_TEXT_PLAIN](arkts-basicservices-pasteboard-con.md#MIMETYPE_TEXT_PLAIN) |
+| [MIMETYPE_TEXT_URI](arkts-basicservices-pasteboard-con.md#MIMETYPE_TEXT_URI) |
+| [MIMETYPE_TEXT_WANT](arkts-basicservices-pasteboard-con.md#MIMETYPE_TEXT_WANT) |

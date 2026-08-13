@@ -1,8 +1,10 @@
 # UsedScene
 
-Describes the use scenario and timing of the permission,helping developers request and use permissions properly.
+Describes the use scenario and timing of the permission, helping developers request and use permissions properly.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface UsedScene--><!--Device-unnamed-export interface UsedScene-End-->
 
@@ -18,7 +20,9 @@ Abilities that use the permission.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,7 +40,9 @@ Time when the permission is used. The value can be **inuse** or **always**.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,7 +6,9 @@ export type NotificationFlagStatus = _NotificationFlagStatus
 
 描述通知标志状态。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus--><!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus-End-->
 

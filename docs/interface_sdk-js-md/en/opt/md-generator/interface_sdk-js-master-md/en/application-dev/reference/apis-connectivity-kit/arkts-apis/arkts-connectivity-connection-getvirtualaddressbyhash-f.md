@@ -14,7 +14,9 @@ function getVirtualAddressByHash(algorithmType: HashAlgorithmType, hashValue: st
 
 Obtain the virtual address of the corresponding device based on the hash value of the real address.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -41,10 +43,10 @@ Obtain the virtual address of the corresponding device based on the hash value o
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2900015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2900015-parameter-format-inconsistent-with-specifications) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [2900016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2900016-device-not-paired) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2900015](../errorcode-bluetoothManager.md#2900015-parameter-format-inconsistent-with-specifications) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2900016](../errorcode-bluetoothManager.md#2900016-device-not-paired) |
 | 2900003 |
 | 2900099 |
 

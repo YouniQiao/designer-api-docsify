@@ -1,15 +1,10 @@
 # FocusQuery
 
-FocusQuery provides APIs to check whether a focus mode is supported.
+FocusQuery provides APIs to check whether a focus mode is supported. > **NOTE：**> > - This interface was first introduced in API version 12. In this version, a compatibility change was made that > preserved the initial version information of inner elements. As a result, you might see outer element's @since > version number being higher than that of the inner elements. However, this discrepancy does not affect the > functionality of the interface.
 
-> **NOTE：**
-> 
-> - This interface was first introduced in API version 12. In this version, a compatibility change was made that
-> preserved the initial version information of inner elements. As a result, you might see outer element's @since
-> version number being higher than that of the inner elements. However, this discrepancy does not affect the
-> functionality of the interface.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-camera-interface FocusQuery--><!--Device-camera-interface FocusQuery-End-->
 
@@ -29,7 +24,9 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 Checks whether a focus mode is supported.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -53,7 +50,7 @@ Checks whether a focus mode is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |
 
 ## isLockFocusTrackingSupported
 
@@ -64,6 +61,8 @@ isLockFocusTrackingSupported(): boolean
 Checks whether lock focus tracking is supported.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -83,4 +82,4 @@ Checks whether lock focus tracking is supported.
 
 | Error Code ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) |

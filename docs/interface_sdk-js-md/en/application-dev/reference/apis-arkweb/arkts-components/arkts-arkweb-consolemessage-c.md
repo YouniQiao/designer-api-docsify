@@ -1,10 +1,12 @@
 # ConsoleMessage
 
-Encompassed message information as parameters to [onConsole](onConsole) method.
+Encompassed message information as parameters to onConsole method.
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ConsoleMessage--><!--Device-unnamed-declare class ConsoleMessage-End-->
 
@@ -24,7 +26,7 @@ Constructor.
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.web.ConsoleMessage#constructor)
+**Substitutes:** constructor
 
 <!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)--><!--Device-ConsoleMessage-constructor(message: string, sourceId: string, lineNumber: number, messageLevel: MessageLevel)-End-->
 
@@ -51,6 +53,8 @@ Constructor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConsoleMessage-constructor()--><!--Device-ConsoleMessage-constructor()-End-->
@@ -68,6 +72,8 @@ Gets the line number of a console message.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,6 +99,8 @@ Gets the message of a console message.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConsoleMessage-getMessage(): string--><!--Device-ConsoleMessage-getMessage(): string-End-->
@@ -116,6 +124,8 @@ Gets the message level of a console message.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -141,6 +151,8 @@ Gets the source of a console message.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-ConsoleMessage-getSource(): ConsoleMessageSource--><!--Device-ConsoleMessage-getSource(): ConsoleMessageSource-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -162,6 +174,8 @@ Gets the Web source file's path and name of a console message.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

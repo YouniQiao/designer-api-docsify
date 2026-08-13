@@ -12,11 +12,13 @@ import { storageStatistics } from '@kit.CoreFileKit';
 function listUserdataDirInfo(): Promise<Array<UserdataDirInfo>>
 ```
 
-Queries the space usage of the **\/data** directory on the user device.This API uses a promise to return the result.
+Queries the space usage of the **\/data** directory on the user device. This API uses a promise to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.STORAGE_MANAGER
 
@@ -39,8 +41,8 @@ Queries the space usage of the **\/data** directory on the user device.This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | 13600015 | Failed to traverse the query data partition directory. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
 
 ## Examples

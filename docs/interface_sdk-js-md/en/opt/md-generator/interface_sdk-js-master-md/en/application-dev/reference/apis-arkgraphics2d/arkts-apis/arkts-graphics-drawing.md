@@ -1,15 +1,10 @@
 # @ohos.graphics.drawing
 
-During application development, you often need to draw different elements. Typically, you can use ArkUI components to draw the desired elements or effects. However, sometimes these components cannot meet the needs for custom graphics or effects. In such cases, you can turn to the Drawing module for flexible custom drawing. This module provides basic drawing capabilities, such as drawing rectangles, circles, points, straight lines, custom paths, and fonts.
+During application development, you often need to draw different elements. Typically, you can use ArkUI components to draw the desired elements or effects. However, sometimes these components cannot meet the needs for custom graphics or effects. In such cases, you can turn to the Drawing module for flexible custom drawing. This module provides basic drawing capabilities, such as drawing rectangles, circles, points, straight lines, custom paths, and fonts. > **NOTE：**> > - This module uses the physical pixel unit, px. > > - The module operates under a single-threaded model. The caller needs to manage thread safety and context state > transitions.
 
-> **NOTE：**
-> 
-> - This module uses the physical pixel unit, px.
-> 
-> - The module operates under a single-threaded model. The caller needs to manage thread safety and context state
-> transitions.
+**Since:** 23
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace drawing--><!--Device-unnamed-declare namespace drawing-End-->
 
@@ -64,7 +59,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) |
-| [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Enumerates the blur types of a mask filter.  \| Name \| Value\| Description \| Diagram \|  \| ------ \| - \| ------------------ \| -------- \|  \| NORMAL \| 0 \| Both the outer edges and the inner solid parts are blurred.\|![image_BlueType_Normal.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Normal.png)\|  \| SOLID \| 1 \| The inner solid part remains unchanged, while only the outer edges are blurred.\|![image_BlueType_Solid.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Solid.png)\|  \| OUTER \| 2 \| Only the outer edges are blurred, with the inner solid part being fully transparent.\|![image_BlueType_Outer.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Outer.png)\|  \| INNER \| 3 \| Only the inner solid part is blurred, while the outer edges remain sharp.\|![image_BlueType_Inner.png](../../../reference/apis-arkgraphics2d/figures/zh-ch_image_BlueType_Inner.png)\|
+| [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | Enumerates the blur types of a mask filter. \| Name \| Value\| Description \| Diagram \| \| ------ \| - \| ------------------ \| -------- \| \| NORMAL \| 0 \| Both the outer edges and the inner solid parts are blurred.\| \| \| SOLID \| 1 \| The inner solid part remains unchanged, while only the outer edges are blurred.\| \| \| OUTER \| 2 \| Only the outer edges are blurred, with the inner solid part being fully transparent.\| \| \| INNER \| 3 \| Only the inner solid part is blurred, while the outer edges remain sharp.\| \|
 | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) |
 | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) |
 | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) |
@@ -73,7 +68,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) |
 | [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) |
 | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) |
-| [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Enumerates the drawing styles for path effects.  \| Name \| Value\| Description \|  \| ------ \| - \| ------------------ \|  \| TRANSLATE \| 0 \| Translates only, not rotating with the path.\|  \| ROTATE \| 1 \| Rotates with the path.\|  \| MORPH \| 2 \| Rotates with the path and stretches or compresses at turns to enhance smoothness.\|
+| [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | Enumerates the drawing styles for path effects. \| Name \| Value\| Description \| \| ------ \| - \| ------------------ \| \| TRANSLATE \| 0 \| Translates only, not rotating with the path.\| \| ROTATE \| 1 \| Rotates with the path.\| \| MORPH \| 2 \| Rotates with the path and stretches or compresses at turns to enhance smoothness.\|
 | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) |
 | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) |
 | [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) |

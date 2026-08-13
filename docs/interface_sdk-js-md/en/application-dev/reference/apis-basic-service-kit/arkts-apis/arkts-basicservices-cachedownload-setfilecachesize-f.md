@@ -12,16 +12,13 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function setFileCacheSize(bytes: long): void
 ```
 
-Sets the upper limit of the file cache size for the **cacheDownload** component.
+Sets the upper limit of the file cache size for the **cacheDownload** component. - When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data in the file. - If **bytes** is set to **0**, all cached files will be deleted. - This API returns the result synchronously, without blocking the calling thread.
 
-- When this API is used to adjust the cache size, the LRU mode is used by default to clear redundant cached data   
-in the file.  
-- If **bytes** is set to **0**, all cached files will be deleted.  
-- This API returns the result synchronously, without blocking the calling thread.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-function setFileCacheSize(bytes: long): void--><!--Device-cacheDownload-function setFileCacheSize(bytes: long): void-End-->
 
@@ -31,13 +28,13 @@ in the file.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bytes | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Upper limit of the cache, in bytes. The default value is **104857600** (100 MB), and the maximum value is **4294967296** (4 GB). |
+| bytes | long | Yes | Upper limit of the cache, in bytes. The default value is **104857600** (100 MB), and the maximum value is **4294967296** (4 GB). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

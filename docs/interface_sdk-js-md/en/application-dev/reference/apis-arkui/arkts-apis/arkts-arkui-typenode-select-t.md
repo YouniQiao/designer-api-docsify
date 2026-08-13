@@ -1,20 +1,24 @@
 # Select
 
 ```TypeScript
-type Select = SelectFrameNode
+type Select = TypedFrameNode<SelectInterface, SelectAttribute>
 ```
 
-Define the FrameNode type for Select.
+Represents a FrameNode of the **Select** type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type Select = SelectFrameNode--><!--Device-typeNode-type Select = SelectFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type Select = TypedFrameNode<SelectInterface, SelectAttribute>--><!--Device-typeNode-type Select = TypedFrameNode<SelectInterface, SelectAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** SelectFrameNode
+**Property type:** TypedFrameNode<SelectInterface, SelectAttribute>
 

@@ -1,10 +1,10 @@
 # TypeCode
 
-Since API version 12,   
- [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer) and  
- [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer) are added to pass ArrayBuffer  data. The specific TypedArray type is determined by the **TypeCode** defined as follows:
+Since API version 12, [writeArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#writeArrayBuffer) and [readArrayBuffer](arkts-ipc-rpc-messagesequence-c.md#readArrayBuffer) are added to pass ArrayBuffer data. The specific TypedArray type is determined by the **TypeCode** defined as follows:
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-rpc-enum TypeCode--><!--Device-rpc-enum TypeCode-End-->
 
@@ -18,7 +18,9 @@ INT8_ARRAY = 0
 
 The TypedArray type is **INT8_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-INT8_ARRAY = 0--><!--Device-TypeCode-INT8_ARRAY = 0-End-->
 
@@ -32,7 +34,9 @@ UINT8_ARRAY = 1
 
 The TypedArray type is **UINT8_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-UINT8_ARRAY = 1--><!--Device-TypeCode-UINT8_ARRAY = 1-End-->
 
@@ -46,7 +50,9 @@ INT16_ARRAY = 2
 
 The TypedArray type is **INT16_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-INT16_ARRAY = 2--><!--Device-TypeCode-INT16_ARRAY = 2-End-->
 
@@ -60,7 +66,9 @@ UINT16_ARRAY = 3
 
 The TypedArray type is **UINT16_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-UINT16_ARRAY = 3--><!--Device-TypeCode-UINT16_ARRAY = 3-End-->
 
@@ -74,7 +82,9 @@ INT32_ARRAY = 4
 
 The TypedArray type is **INT32_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-INT32_ARRAY = 4--><!--Device-TypeCode-INT32_ARRAY = 4-End-->
 
@@ -88,7 +98,9 @@ UINT32_ARRAY = 5
 
 The TypedArray type is **UINT32_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-UINT32_ARRAY = 5--><!--Device-TypeCode-UINT32_ARRAY = 5-End-->
 
@@ -102,7 +114,9 @@ FLOAT32_ARRAY = 6
 
 The TypedArray type is **FLOAT32_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-FLOAT32_ARRAY = 6--><!--Device-TypeCode-FLOAT32_ARRAY = 6-End-->
 
@@ -116,7 +130,9 @@ FLOAT64_ARRAY = 7
 
 The TypedArray type is **FLOAT64_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-FLOAT64_ARRAY = 7--><!--Device-TypeCode-FLOAT64_ARRAY = 7-End-->
 
@@ -130,7 +146,9 @@ BIGINT64_ARRAY = 8
 
 The TypedArray type is **BIGINT64_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-BIGINT64_ARRAY = 8--><!--Device-TypeCode-BIGINT64_ARRAY = 8-End-->
 
@@ -144,7 +162,9 @@ BIGUINT64_ARRAY = 9
 
 The TypedArray type is **BIGUINT64_ARRAY**.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TypeCode-BIGUINT64_ARRAY = 9--><!--Device-TypeCode-BIGUINT64_ARRAY = 9-End-->
 

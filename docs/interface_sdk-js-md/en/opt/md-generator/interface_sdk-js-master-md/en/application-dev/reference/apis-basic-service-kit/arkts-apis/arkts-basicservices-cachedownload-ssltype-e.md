@@ -2,7 +2,9 @@
 
 Enumerates secure communication protocols.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-enum SslType--><!--Device-cacheDownload-enum SslType-End-->
 
@@ -16,7 +18,9 @@ TLS = 'TLS'
 
 TLS.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SslType-TLS = 'TLS'--><!--Device-SslType-TLS = 'TLS'-End-->
 
@@ -30,7 +34,9 @@ TLCP = 'TLCP'
 
 TLCP.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SslType-TLCP = 'TLCP'--><!--Device-SslType-TLCP = 'TLCP'-End-->
 

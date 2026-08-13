@@ -11,9 +11,11 @@ function setPermissionManagedState(
   ): void
 ```
 
-设置指定应用的[user_grant权限](permissions:Permissions)的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。
+设置指定应用的user_grant权限的管理策略。适用于企业应用批量部署场景，如静默授权减少权限弹窗干扰、统一企业应用权限管理策略，提升员工使用体验和管理效率。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_USER_GRANT_PERMISSION
 
@@ -36,11 +38,11 @@ function setPermissionManagedState(
 
 | 错误码ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [9200010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [9200010](../errorcode-enterpriseDeviceManager.md#9200010-策略冲突) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

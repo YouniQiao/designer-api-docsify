@@ -1,23 +1,12 @@
 # OffscreenCanvas
 
-OffscreenCanvas组件用于绘制自定义图形。
-
-使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或  
-[CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md)对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务，从而避免影响应用程序主线程性能。
-
-> **说明：**
-> 
-> OffscreenCanvas无法在ServiceExtensionAbility中使用，ServiceExtensionAbility中建议使用
-> [Drawing模块](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md)
-> 进行离屏绘制。
-
-## 子组件
-
-不支持。
+OffscreenCanvas组件用于绘制自定义图形。 使用[Canvas](../../../reference/apis-arkui/arkui-ts/ts-components-canvas-canvas.md)组件或 [CanvasRenderingContext2D](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md) 对象时，渲染、动画和用户交互通常发生在应用程序的主线程上，与画布动画和渲染相关的计算可能会影响 应用程序性能。OffscreenCanvas提供了一个可以在屏幕外渲染的画布，这样可以在单独的线程中运行一些任务， 从而避免影响应用程序主线程性能。 > **说明：** > > OffscreenCanvas无法在ServiceExtensionAbility中使用，ServiceExtensionAbility中建议使用 > [Drawing模块](../../../reference/apis-arkgraphics2d/arkts-apis-graphics-drawing.md) > 进行离屏绘制。 ## 子组件 不支持。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class OffscreenCanvas--><!--Device-unnamed-declare class OffscreenCanvas-End-->
 
@@ -34,6 +23,8 @@ constructor(width: number, height: number)
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -61,6 +52,8 @@ constructor(width: number, height: number, unit: LengthMetricsUnit)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,6 +85,8 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -105,7 +100,7 @@ getContext(contextType: "2d", options?: RenderingContextSettings): OffscreenCanv
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | contextType | "2d" | 是 | OffscreenCanvas组件绘图上下文的类型，当前仅支持"2d"类型。 &lt;br&gt;"2d"：创建一个表示二维渲染上下文的OffscreenCanvasRenderingContext2D对象。 &lt;br&gt;异常值undefined和null按无效值处理，当前接口返回undefined。 |
-| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见[RenderingContextSettings](#renderingcontextsettings)。 &lt;br&gt;异常值undefined和null按RenderingContextSettings的默认值处理。 &lt;br&gt;默认值：null。 |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数， 见RenderingContextSettings。 &lt;br&gt;异常值undefined和null按RenderingContextSettings的默认值处理。 &lt;br&gt;默认值：null。 |
 
 **返回值：**
 
@@ -124,6 +119,8 @@ transferToImageBitmap(): ImageBitmap
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -145,13 +142,15 @@ transferToImageBitmap(): ImageBitmap
 height: number
 ```
 
-OffscreenCanvas组件的高度。&lt;br&gt;默认单位为vp。
+OffscreenCanvas组件的高度。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -167,13 +166,15 @@ OffscreenCanvas组件的高度。&lt;br&gt;默认单位为vp。
 width: number
 ```
 
-OffscreenCanvas组件的宽度。&lt;br&gt;默认单位为vp。
+OffscreenCanvas组件的宽度。 &lt;br&gt;默认单位为vp。
 
 **类型：** number
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

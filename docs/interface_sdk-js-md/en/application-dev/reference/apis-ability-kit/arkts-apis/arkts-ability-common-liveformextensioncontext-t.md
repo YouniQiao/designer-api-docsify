@@ -1,22 +1,22 @@
 # LiveFormExtensionContext
 
 ```TypeScript
-export type LiveFormExtensionContext = _LiveFormExtensionContext.default
+export type LiveFormExtensionContext = _LiveFormExtensionContext
 ```
 
 The context of live form extension. It allows access to liveFormExtension-specific resources.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 22.
-
-<!--Device-common-export type LiveFormExtensionContext = _LiveFormExtensionContext.default--><!--Device-common-export type LiveFormExtensionContext = _LiveFormExtensionContext.default-End-->
+<!--Device-common-export type LiveFormExtensionContext = _LiveFormExtensionContext--><!--Device-common-export type LiveFormExtensionContext = _LiveFormExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.Form
 
-**Property type:** _LiveFormExtensionContext.default
+**Property type:** _LiveFormExtensionContext
 

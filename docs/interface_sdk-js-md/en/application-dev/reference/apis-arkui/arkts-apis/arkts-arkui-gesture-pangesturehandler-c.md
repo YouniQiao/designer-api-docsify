@@ -8,7 +8,9 @@ Defines the PanGesture handler.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class PanGestureHandler extends GestureHandler--><!--Device-unnamed-export declare class PanGestureHandler extends GestureHandler-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PanGestureHandler--><!--Device-unnamed-export declare class PanGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor parameters.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ The Pan gesture is successfully recognized and a callback is triggered when the 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +84,8 @@ The Pan gesture is successfully recognized. When the finger is lifted, the callb
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureHandler-onActionEnd(event: Callback<GestureEvent>): this--><!--Device-PanGestureHandler-onActionEnd(event: Callback<GestureEvent>): this-End-->
@@ -108,6 +116,8 @@ Pan gesture recognition success callback.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureHandler-onActionStart(event: Callback<GestureEvent>): this--><!--Device-PanGestureHandler-onActionStart(event: Callback<GestureEvent>): this-End-->
@@ -137,6 +147,8 @@ Callback when the Pan gesture is moving.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

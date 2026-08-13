@@ -1,16 +1,16 @@
 # TextTimerConfiguration
 
-Defines the **TextTimer** configuration used by the **ContentModifier** API.
+Defines the **TextTimer** configuration used by the **ContentModifier** API. You need a custom class to implement the **ContentModifier** API.
 
-You need a custom class to implement the **ContentModifier** API.
-
-**Inheritance/Implementation:** TextTimerConfiguration extends [CommonConfiguration<TextTimerConfiguration>](CommonConfiguration<TextTimerConfiguration>)
+**Inheritance/Implementation:** TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>--><!--Device-unnamed-declare interface TextTimerConfiguration extends CommonConfiguration<TextTimerConfiguration>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface TextTimerConfiguration--><!--Device-unnamed-declare interface TextTimerConfiguration-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +20,7 @@ You need a custom class to implement the **ContentModifier** API.
 count: number
 ```
 
-Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 86400000 ms (24 hours). If the value is between 0 and 86,400,000, it is used as the initial countdown time. Otherwise,the default value is used as the initial countdown time.
-
-Default value: **60000**
+Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 864000 00 ms (24 hours). If the value is between 0 and 86,400,000, it is used as the initial countdown time. Otherwise, the default value is used as the initial countdown time. Default value: **60000**
 
 **Type:** number
 
@@ -31,6 +29,8 @@ Default value: **60000**
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,6 +54,8 @@ Elapsed time of the timer, in the minimum unit of the format.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -68,11 +70,7 @@ Elapsed time of the timer, in the minimum unit of the format.
 isCountDown: boolean
 ```
 
-Whether the timer is a countdown.
-
-**true**: The timer counts down, e.g., from 30s to 0s. **false**: The timer counts up, e.g., from 0s to 30s.
-
-Default value: **false**
+Whether the timer is a countdown. **true**: The timer counts down, e.g., from 30s to 0s. **false**: The timer counts up, e.g., from 0s to 30s. Default value: **false**
 
 **Type:** boolean
 
@@ -81,6 +79,8 @@ Default value: **false**
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,13 +96,7 @@ Default value: **false**
 startTime?: number
 ```
 
-The start time of the timer.It is effective when isCountDown is false.
-
-Default value: **0**
-
-Unit: ms.
-
-When the value is negative, the timer starts with a negative value and continues with a positive value after 0.
+The start time of the timer.It is effective when isCountDown is false. Default value: **0** Unit: ms. When the value is negative, the timer starts with a negative value and continues with a positive value after 0.
 
 **Type:** number
 
@@ -111,6 +105,8 @@ When the value is negative, the timer starts with a negative value and continues
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,17 +122,15 @@ When the value is negative, the timer starts with a negative value and continues
 started: boolean
 ```
 
-Whether the timer has already started.
-
-**true**: The timer has started. **false**: The timer has not started.
-
-Default value: **false**
+Whether the timer has already started. **true**: The timer has started. **false**: The timer has not started. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

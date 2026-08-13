@@ -1,10 +1,12 @@
 # SecurityLevel
 
-Defines the security level for the page.
+当前网页的安全级别。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 <!--Device-webview-enum SecurityLevel--><!--Device-webview-enum SecurityLevel-End-->
 
@@ -16,11 +18,15 @@ Defines the security level for the page.
 NONE = 0
 ```
 
-Unable to determine whether it is safe or not, the non-http/https protocol used.
+页面既不绝对安全，也不是不安全，即是中立。例如，部分scheme非http/https的URL。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecurityLevel-NONE = 0--><!--Device-SecurityLevel-NONE = 0-End-->
 
@@ -32,11 +38,15 @@ Unable to determine whether it is safe or not, the non-http/https protocol used.
 SECURE = 1
 ```
 
-Indicates the HTTPS protocol used by the page and the authentication is successful.
+页面安全，页面使用的是HTTPS协议，且使用了信任的证书。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecurityLevel-SECURE = 1--><!--Device-SecurityLevel-SECURE = 1-End-->
 
@@ -48,11 +58,15 @@ Indicates the HTTPS protocol used by the page and the authentication is successf
 WARNING = 2
 ```
 
-The page is insecure. For example, the HTTP protocol is used or the HTTPS protocol is used but use an legacy TLS version.
+页面不安全。例如，使用HTTP协议或使用HTTPS协议但使用旧版TLS版本。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecurityLevel-WARNING = 2--><!--Device-SecurityLevel-WARNING = 2-End-->
 
@@ -64,11 +78,15 @@ The page is insecure. For example, the HTTP protocol is used or the HTTPS protoc
 DANGEROUS = 3
 ```
 
-Attempted HTTPS and failed, the authentication is failed.
+尝试进行HTTPS连接但失败，认证未通过。
 
-**起始版本：** 23
+**起始版本：** 11
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SecurityLevel-DANGEROUS = 3--><!--Device-SecurityLevel-DANGEROUS = 3-End-->
 

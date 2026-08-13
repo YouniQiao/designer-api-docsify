@@ -4,6 +4,8 @@ Configures icon, text, and interaction information of a menu item.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface MenuElement--><!--Device-unnamed-declare interface MenuElement-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ action: () => void
 
 Action triggered when a menu item is clicked.
 
+**Type:** () =&gt; void
+
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -30,17 +36,15 @@ Action triggered when a menu item is clicked.
 enabled?: boolean
 ```
 
-Whether to enable interactions with the menu item.
-
-**true**: yes; **false**: no
-
-Default value: **true**.
+Whether to enable interactions with the menu item. **true**: yes; **false**: no Default value: **true**.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +66,8 @@ Menu item icon.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -82,6 +88,8 @@ Icon of a menu item. You can configure the menu item icon using **Modifier**. If
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -101,6 +109,8 @@ Menu item text.
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -18,6 +18,8 @@ Creates a temporary directory. This API returns the result synchronously.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function mkdtempSync(prefix: string): string--><!--Device-unnamed-declare function mkdtempSync(prefix: string): string-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO

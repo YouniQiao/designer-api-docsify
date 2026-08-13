@@ -12,7 +12,7 @@ Requests a continuous task from the system. This API uses an asynchronous callba
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
+**Substitutes:** [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning)(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
@@ -118,7 +118,7 @@ Requests a continuous task from the system. This API uses a promise to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBackgroundRunning](@ohos.resourceschedule.backgroundTaskManager:backgroundTaskManager.startBackgroundRunning(context:)
+**Substitutes:** [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startBackgroundRunning)(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent)
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 

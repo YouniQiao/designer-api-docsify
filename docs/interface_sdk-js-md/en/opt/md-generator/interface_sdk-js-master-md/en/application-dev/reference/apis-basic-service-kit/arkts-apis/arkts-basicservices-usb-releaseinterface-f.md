@@ -12,10 +12,7 @@ import { usb } from '@kit.BasicServicesKit';
 function releaseInterface(pipe: USBDevicePipe, iface: USBInterface): number
 ```
 
-Releases a USB interface.
-
-Before you do this, ensure that you have claimed the interface by calling  
-[usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface).
+Releases a USB interface. Before you do this, ensure that you have claimed the interface by calling [usb.claimInterface](arkts-basicservices-usb-claiminterface-f.md#claimInterface).
 
 **Since:** 8
 

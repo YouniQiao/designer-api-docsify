@@ -2,7 +2,9 @@
 
 Defines the connection of the TLSSocket client and server.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-export interface TLSSocketConnection--><!--Device-socket-export interface TLSSocketConnection-End-->
 
@@ -22,7 +24,9 @@ close(callback: AsyncCallback<void>): void
 
 Closes a TLSSocket client connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-close(callback: AsyncCallback<void>): void--><!--Device-TLSSocketConnection-close(callback: AsyncCallback<void>): void-End-->
 
@@ -38,11 +42,11 @@ Closes a TLSSocket client connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2303506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -95,7 +99,9 @@ close(): Promise<void>
 
 Closes a TLSSocket client connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-close(): Promise<void>--><!--Device-TLSSocketConnection-close(): Promise<void>-End-->
 
@@ -111,10 +117,10 @@ Closes a TLSSocket client connection.
 
 | Error Code ID |
 | --- |
-| [2303506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -162,9 +168,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getCipherSuite(callback: AsyncCallback<Array<string>>): void
 ```
 
-Returns a list containing the negotiated cipher suite information.For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Returns a list containing the negotiated cipher suite information. For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getCipherSuite(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocketConnection-getCipherSuite(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -180,11 +188,11 @@ Returns a list containing the negotiated cipher suite information.For example:{"
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) |
-| [2303502](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303502-tls-read-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -234,9 +242,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getCipherSuite(): Promise<Array<string>>
 ```
 
-Returns a list containing the negotiated cipher suite information.For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
+Returns a list containing the negotiated cipher suite information. For example:{"TLS_RSA_WITH_AES_128_CBC_SHA256", "TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256"}
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getCipherSuite(): Promise<Array<string>>--><!--Device-TLSSocketConnection-getCipherSuite(): Promise<Array<string>>-End-->
 
@@ -252,10 +262,10 @@ Returns a list containing the negotiated cipher suite information.For example:{"
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) |
-| [2303502](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303502-tls-read-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) |
+| [2303502](../errorcode-net-socket.md#2303502-tls-read-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -305,7 +315,9 @@ getLocalAddress(): Promise<NetAddress>
 
 Obtains the local address of a TLSSocketServer connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getLocalAddress(): Promise<NetAddress>--><!--Device-TLSSocketConnection-getLocalAddress(): Promise<NetAddress>-End-->
 
@@ -321,9 +333,9 @@ Obtains the local address of a TLSSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2301009](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2301009-bad-file-descriptor) |
-| [2303188](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2301009](../errorcode-net-socket.md#2301009-bad-file-descriptor) |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
 
 ## Examples
 
@@ -374,7 +386,9 @@ getRemoteAddress(callback: AsyncCallback<NetAddress>): void
 
 Obtains the peer address of a TLSSocketServer connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void--><!--Device-TLSSocketConnection-getRemoteAddress(callback: AsyncCallback<NetAddress>): void-End-->
 
@@ -390,9 +404,9 @@ Obtains the peer address of a TLSSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303188](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
 
 ## Examples
 
@@ -444,7 +458,9 @@ getRemoteAddress(): Promise<NetAddress>
 
 Obtains the peer address of a TLSSocketServer connection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getRemoteAddress(): Promise<NetAddress>--><!--Device-TLSSocketConnection-getRemoteAddress(): Promise<NetAddress>-End-->
 
@@ -460,8 +476,8 @@ Obtains the peer address of a TLSSocketServer connection.
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303188](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303188](../errorcode-net-socket.md#2303188-socket-operations-on-nonsockets) |
 
 ## Examples
 
@@ -509,9 +525,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 ```
 
-&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate,an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt;It only contains the peer's certificate.
+&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate, an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt; It only contains the peer's certificate.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void--><!--Device-TLSSocketConnection-getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void-End-->
 
@@ -527,9 +545,9 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## getRemoteCertificate
 
@@ -537,9 +555,11 @@ getRemoteCertificate(callback: AsyncCallback<X509CertRawData>): void
 getRemoteCertificate(): Promise<X509CertRawData>
 ```
 
-&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate,an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt;It only contains the peer's certificate.
+&lt;p&gt;Returns an object representing the peer certificate. If the peer does not provide a certificate, an empty object will be returned. If the socket is destroyed, null is returned.&lt;/p&gt; It only contains the peer's certificate.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getRemoteCertificate(): Promise<X509CertRawData>--><!--Device-TLSSocketConnection-getRemoteCertificate(): Promise<X509CertRawData>-End-->
 
@@ -555,8 +575,8 @@ getRemoteCertificate(): Promise<X509CertRawData>
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## getSignatureAlgorithms
 
@@ -564,9 +584,11 @@ getRemoteCertificate(): Promise<X509CertRawData>
 getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 ```
 
-&lt;p&gt;The list of signature algorithms shared between the server and the client,in descending order of priority.&lt;/p&gt;
+&lt;p&gt;The list of signature algorithms shared between the server and the client, in descending order of priority.&lt;/p&gt;
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void--><!--Device-TLSSocketConnection-getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -582,9 +604,9 @@ getSignatureAlgorithms(callback: AsyncCallback<Array<string>>): void
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -634,9 +656,11 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 getSignatureAlgorithms(): Promise<Array<string>>
 ```
 
-&lt;p&gt;The list of signature algorithms shared between the server and the client,in descending order of priority.&lt;/p&gt;
+&lt;p&gt;The list of signature algorithms shared between the server and the client, in descending order of priority.&lt;/p&gt;
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-getSignatureAlgorithms(): Promise<Array<string>>--><!--Device-TLSSocketConnection-getSignatureAlgorithms(): Promise<Array<string>>-End-->
 
@@ -652,8 +676,8 @@ getSignatureAlgorithms(): Promise<Array<string>>
 
 | Error Code ID |
 | --- |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -703,7 +727,9 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the TLSSocketConnection.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -721,7 +747,7 @@ Obtains the file descriptor of the TLSSocketConnection.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -763,7 +789,151 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 });
 ```
 
-## off('message')
+## off_close
+
+```TypeScript
+off(type: 'close', callback?: Callback<void>): void
+```
+
+Cancels listening for close events of the TLSSocketConnection.
+
+**Since:** 24
+
+**Deprecated since:** -1
+
+<!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'close' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+
+let callback = () => {
+  console.info("on close success");
+}
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.on('close', callback);
+  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+  client.off('close', callback);
+  client.off('close');
+});
+```
+
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Cancels listening for error events of the TLSSocketConnection.
+
+**Since:** 10
+
+**Deprecated since:** -1
+
+<!--Device-TLSSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'error' | Yes |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { socket } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
+let netAddress: socket.NetAddress = {
+  address: '192.168.xx.xxx',
+  port: 8080
+}
+let tlsSecureOptions: socket.TLSSecureOptions = {
+  key: "xxxx",
+  cert: ["xxxx"],
+  ca: ["xxxx"],
+  password: "xxxx",
+  protocols: socket.Protocol.TLSv12,
+  useRemoteCipherPrefer: true,
+  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
+  cipherSuite: "AES256-SHA256"
+}
+let tlsConnectOptions: socket.TLSConnectOptions = {
+  address: netAddress,
+  secureOptions: tlsSecureOptions,
+  ALPNProtocols: ["spdy/1", "http/1.1"]
+}
+tlsServer.listen(tlsConnectOptions).then(() => {
+  console.info("listen callback success");
+}).catch((err: BusinessError) => {
+  console.error("failed" + err);
+});
+
+let callback = (err: BusinessError) => {
+  console.error("on error, err:" + JSON.stringify(err));
+}
+tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
+  client.on('error', callback);
+  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
+  client.off('error', callback);
+  client.off('error');
+});
+```
+
+## off_message
 
 ```TypeScript
 off(type: 'message', callback?: Callback<SocketMessageInfo>): void
@@ -772,6 +942,8 @@ off(type: 'message', callback?: Callback<SocketMessageInfo>): void
 Cancels listening for message receiving events of the TLSSocketConnection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void--><!--Device-TLSSocketConnection-off(type: 'message', callback?: Callback<SocketMessageInfo>): void-End-->
 
@@ -788,7 +960,7 @@ Cancels listening for message receiving events of the TLSSocketConnection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -841,17 +1013,19 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## off('close')
+## on_close
 
 ```TypeScript
-off(type: 'close', callback?: Callback<void>): void
+on(type: 'close', callback: Callback<void>): void
 ```
 
-Cancels listening for close events of the TLSSocketConnection.
+Listens for close events of the TLSSocketConnection.
 
 **Since:** 24
 
-<!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void--><!--Device-TLSSocketConnection-off(type: 'close', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -860,13 +1034,13 @@ Cancels listening for close events of the TLSSocketConnection.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'close' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -899,29 +1073,26 @@ tlsServer.listen(tlsConnectOptions).then(() => {
 }).catch((err: BusinessError) => {
   console.error("failed" + err);
 });
-
-let callback = () => {
-  console.info("on close success");
-}
 tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
-  client.on('close', callback);
-  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-  client.off('close', callback);
-  client.off('close');
+  client.on('close', () => {
+    console.info("on close success")
+  });
 });
 ```
 
-## off('error')
+## on_error
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
+on(type: 'error', callback: ErrorCallback): void
 ```
 
-Cancels listening for error events of the TLSSocketConnection.
+Listens for error events of the TLSSocketConnection.
 
 **Since:** 10
 
-<!--Device-TLSSocketConnection-off(type: 'error', callback?: ErrorCallback): void--><!--Device-TLSSocketConnection-off(type: 'error', callback?: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+<!--Device-TLSSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -930,13 +1101,13 @@ Cancels listening for error events of the TLSSocketConnection.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -970,18 +1141,14 @@ tlsServer.listen(tlsConnectOptions).then(() => {
   console.error("failed" + err);
 });
 
-let callback = (err: BusinessError) => {
-  console.error("on error, err:" + JSON.stringify(err));
-}
 tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
-  client.on('error', callback);
-  // You can pass the callback of the on function if you want to cancel listening for a certain type of events. If you do not pass the callback, you will cancel listening for all events.
-  client.off('error', callback);
-  client.off('error');
+  client.on('error', (err: BusinessError) => {
+    console.error("on error, err:" + JSON.stringify(err))
+  });
 });
 ```
 
-## on('message')
+## on_message
 
 ```TypeScript
 on(type: 'message', callback: Callback<SocketMessageInfo>): void
@@ -990,6 +1157,8 @@ on(type: 'message', callback: Callback<SocketMessageInfo>): void
 Listens for message receiving events of the TLSSocketConnection.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void--><!--Device-TLSSocketConnection-on(type: 'message', callback: Callback<SocketMessageInfo>): void-End-->
 
@@ -1006,7 +1175,7 @@ Listens for message receiving events of the TLSSocketConnection.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1055,137 +1224,6 @@ tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
 });
 ```
 
-## on('close')
-
-```TypeScript
-on(type: 'close', callback: Callback<void>): void
-```
-
-Listens for close events of the TLSSocketConnection.
-
-**Since:** 24
-
-<!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void--><!--Device-TLSSocketConnection-on(type: 'close', callback: Callback<void>): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'close' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tlsSecureOptions: socket.TLSSecureOptions = {
-  key: "xxxx",
-  cert: ["xxxx"],
-  ca: ["xxxx"],
-  password: "xxxx",
-  protocols: socket.Protocol.TLSv12,
-  useRemoteCipherPrefer: true,
-  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
-  cipherSuite: "AES256-SHA256"
-}
-let tlsConnectOptions: socket.TLSConnectOptions = {
-  address: netAddress,
-  secureOptions: tlsSecureOptions,
-  ALPNProtocols: ["spdy/1", "http/1.1"]
-}
-tlsServer.listen(tlsConnectOptions).then(() => {
-  console.info("listen callback success");
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
-  client.on('close', () => {
-    console.info("on close success")
-  });
-});
-```
-
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-Listens for error events of the TLSSocketConnection.
-
-**Since:** 10
-
-<!--Device-TLSSocketConnection-on(type: 'error', callback: ErrorCallback): void--><!--Device-TLSSocketConnection-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'error' | Yes |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { socket } from '@kit.NetworkKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let tlsServer: socket.TLSSocketServer = socket.constructTLSSocketServerInstance();
-let netAddress: socket.NetAddress = {
-  address: '192.168.xx.xxx',
-  port: 8080
-}
-let tlsSecureOptions: socket.TLSSecureOptions = {
-  key: "xxxx",
-  cert: ["xxxx"],
-  ca: ["xxxx"],
-  password: "xxxx",
-  protocols: socket.Protocol.TLSv12,
-  useRemoteCipherPrefer: true,
-  signatureAlgorithms: "rsa_pss_rsae_sha256:ECDSA+SHA256",
-  cipherSuite: "AES256-SHA256"
-}
-let tlsConnectOptions: socket.TLSConnectOptions = {
-  address: netAddress,
-  secureOptions: tlsSecureOptions,
-  ALPNProtocols: ["spdy/1", "http/1.1"]
-}
-tlsServer.listen(tlsConnectOptions).then(() => {
-  console.info("listen callback success");
-}).catch((err: BusinessError) => {
-  console.error("failed" + err);
-});
-
-tlsServer.on('connect', (client: socket.TLSSocketConnection) => {
-  client.on('error', (err: BusinessError) => {
-    console.error("on error, err:" + JSON.stringify(err))
-  });
-});
-```
-
 ## send
 
 ```TypeScript
@@ -1194,7 +1232,9 @@ send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void
 
 Sends data over a TLSSocketServer connection to client.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void--><!--Device-TLSSocketConnection-send(data: string | ArrayBuffer, callback: AsyncCallback<void>): void-End-->
 
@@ -1211,12 +1251,12 @@ Sends data over a TLSSocketServer connection to client.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2303506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) |
-| [2303503](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303503-tls-write-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -1269,7 +1309,9 @@ send(data: string | ArrayBuffer): Promise<void>
 
 Sends data over a TLSSocketServer connection to client.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-send(data: string | ArrayBuffer): Promise<void>--><!--Device-TLSSocketConnection-send(data: string | ArrayBuffer): Promise<void>-End-->
 
@@ -1291,12 +1333,12 @@ Sends data over a TLSSocketServer connection to client.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2303506](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
-| [2300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2300002-system-internal-error) |
-| [2303505](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303505-tls-system-call-error) |
-| [2303503](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303503-tls-write-error) |
-| [2303501](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-socket.md#2303501-null-ssl) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2303506](../errorcode-net-socket.md#2303506-failed-to-close-tls-connections) |
+| [2300002](../errorcode-net-socket.md#2300002-system-internal-error) |
+| [2303505](../errorcode-net-socket.md#2303505-tls-system-call-error) |
+| [2303503](../errorcode-net-socket.md#2303503-tls-write-error) |
+| [2303501](../errorcode-net-socket.md#2303501-null-ssl) |
 
 ## Examples
 
@@ -1349,7 +1391,9 @@ The id of a client connects to the TLSSocketServer.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-TLSSocketConnection-clientId: int--><!--Device-TLSSocketConnection-clientId: int-End-->
 

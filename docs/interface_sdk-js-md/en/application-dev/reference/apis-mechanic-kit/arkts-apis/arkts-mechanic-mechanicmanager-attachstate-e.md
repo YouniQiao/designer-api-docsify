@@ -2,9 +2,11 @@
 
 Device attach states.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export enum AttachState--><!--Device-mechanicManager-export enum AttachState-End-->
 
@@ -18,9 +20,11 @@ ATTACHED = 0
 
 Device attached.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AttachState-ATTACHED = 0--><!--Device-AttachState-ATTACHED = 0-End-->
 
@@ -34,9 +38,11 @@ DETACHED = 1
 
 Device detached.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AttachState-DETACHED = 1--><!--Device-AttachState-DETACHED = 1-End-->
 

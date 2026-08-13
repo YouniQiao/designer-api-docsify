@@ -2,7 +2,9 @@
 
 应用包信息
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface BundlePackInfo--><!--Device-unnamed-export interface BundlePackInfo-End-->
 
@@ -20,7 +22,9 @@ pack.info的包信息。
 
 **类型：** Array&lt;[PackageConfig](arkts-ability-bundlepackinfo-packageconfig-i-sys.md)&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundlePackInfo-readonly packages: Array<PackageConfig>--><!--Device-BundlePackInfo-readonly packages: Array<PackageConfig>-End-->
 
@@ -38,7 +42,9 @@ pack.info中的包摘要信息。
 
 **类型：** [PackageSummary](arkts-ability-bundlepackinfo-packagesummary-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BundlePackInfo-readonly summary: PackageSummary--><!--Device-BundlePackInfo-readonly summary: PackageSummary-End-->
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 <!--Device-backgroundLoader-export interface TaskStopInfo--><!--Device-backgroundLoader-export interface TaskStopInfo-End-->
 
@@ -22,7 +24,9 @@ abilityName: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +46,9 @@ stopCode: StopCode
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,7 +68,9 @@ stopMessage: string
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,13 +84,15 @@ stopMessage: string
 taskId: int
 ```
 
-任务id。取值范围为全体整数。
+任务id。 取值范围为全体整数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 26.1.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.1.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

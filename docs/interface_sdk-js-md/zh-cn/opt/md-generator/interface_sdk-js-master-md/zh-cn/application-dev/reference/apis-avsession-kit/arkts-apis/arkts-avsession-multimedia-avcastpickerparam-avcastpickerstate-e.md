@@ -2,7 +2,9 @@
 
 投播组件设备列表状态参数选项。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum AVCastPickerState--><!--Device-unnamed-export declare enum AVCastPickerState-End-->
 
@@ -14,7 +16,9 @@
 STATE_APPEARING = 0
 ```
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -28,7 +32,9 @@ STATE_APPEARING = 0
 STATE_DISAPPEARING = 1
 ```
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

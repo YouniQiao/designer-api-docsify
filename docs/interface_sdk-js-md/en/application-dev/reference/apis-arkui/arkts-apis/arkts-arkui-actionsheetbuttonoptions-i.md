@@ -1,16 +1,12 @@
 # ActionSheetButtonOptions
 
-Provides button style configuration for the dialog box.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Provides button style configuration for the dialog box. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface ActionSheetButtonOptions--><!--Device-unnamed-interface ActionSheetButtonOptions-End-->
 
@@ -24,9 +20,13 @@ action: VoidCallback
 
 Callback invoked when the button is selected.
 
+**Type:** VoidCallback
+
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,10 +40,7 @@ Callback invoked when the button is selected.
 defaultFocus?: boolean
 ```
 
-Whether the button is the default focus. The value **true** means that the button is the default focus, and   
-**false** means the opposite.
-
-Default value: **false**
+Whether the button is the default focus. The value **true** means that the button is the default focus, and **false** means the opposite. Default value: **false**
 
 **Type:** boolean
 
@@ -52,6 +49,8 @@ Default value: **false**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,10 +66,7 @@ Default value: **false**
 enabled?: boolean
 ```
 
-Whether to respond when the button is clicked. The value **true** means to respond when the button is clicked, and   
-**false** means the opposite.
-
-Default value: **true**
+Whether to respond when the button is clicked. The value **true** means to respond when the button is clicked, and **false** means the opposite. Default value: **true**
 
 **Type:** boolean
 
@@ -79,6 +75,8 @@ Default value: **true**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,9 +92,7 @@ Default value: **true**
 style?: DialogButtonStyle
 ```
 
-Button style.
-
-Default value: **DialogButtonStyle.DEFAULT**
+Button style. Default value: **DialogButtonStyle.DEFAULT**
 
 **Type:** DialogButtonStyle
 
@@ -105,6 +101,8 @@ Default value: **DialogButtonStyle.DEFAULT**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,15 +118,15 @@ Default value: **DialogButtonStyle.DEFAULT**
 value: string | Resource
 ```
 
-Button text.
-
-If the text is too long to display, it is truncated with an ellipsis (...).
+Button text. If the text is too long to display, it is truncated with an ellipsis (...).
 
 **Type:** string \| Resource
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

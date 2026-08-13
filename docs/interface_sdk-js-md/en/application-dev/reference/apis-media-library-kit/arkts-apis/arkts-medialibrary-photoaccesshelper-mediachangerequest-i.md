@@ -1,15 +1,12 @@
 # MediaChangeRequest
 
-Media change request, which is the parent class of the asset change request and album change request.
+Media change request, which is the parent class of the asset change request and album change request. > **NOTE：**> > The media change request takes effect only after > [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applyChanges) is called.
 
-> **NOTE：**
-> 
-> The media change request takes effect only after
-> [applyChanges](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#applyChanges) is called.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface MediaChangeRequest--><!--Device-photoAccessHelper-interface MediaChangeRequest-End-->
 
@@ -33,7 +30,9 @@ A readonly member for type checking.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

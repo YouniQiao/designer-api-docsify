@@ -6,11 +6,11 @@
 function stopUsingPermission(tokenID: number, permissionName: Permissions): Promise<void>
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
-
-该接口需与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission)配套使用。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。 适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 该接口需与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission（系统接口）)配套使用。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -37,14 +37,14 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions): Prom
 
 | 错误码ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -68,11 +68,11 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 function stopUsingPermission(tokenID: number, permissionName: Permissions, callback: AsyncCallback<void>): void
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用callback异步回调。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。 适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用callback异步回调。 该接口需与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission（系统接口）)配套使用。
 
-该接口需与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission)配套使用。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -94,14 +94,14 @@ function stopUsingPermission(tokenID: number, permissionName: Permissions, callb
 
 | 错误码ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -132,11 +132,11 @@ function stopUsingPermission(
   ): Promise<void>
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
-
-pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission)传入的pid相同。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。 适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission（系统接口）)传入的pid相同。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -167,13 +167,13 @@ pid需要与[startUsingPermission](arkts-ability-privacymanager-startusingpermis
 
 | 错误码ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 
@@ -218,12 +218,11 @@ function stopUsingPermission(
   ): Promise<void>
 ```
 
-系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。
+系统应用调用此接口，标记不再使用指定权限。调用成功后，隐私服务将此状态变化通知所有该权限使用状态变更事件的订阅者。适用于应用完成敏感操作后或退出前台时，通知系统权限使用结束。使用Promise异步回调。 pid需要与 [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission（系统接口）) 传入的pid相同。
 
-pid需要与  
-[startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-1)传入的pid相同。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -251,14 +250,14 @@ pid需要与
 
 | 错误码ID |
 | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-内存申请失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
-| [12100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-接口未配套使用) |
-| [12100007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-系统服务工作异常) |
+| [12100008](../errorcode-access-token.md#12100008-内存申请失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
+| [12100004](../errorcode-access-token.md#12100004-接口未配套使用) |
+| [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) |
 
 ## 示例
 

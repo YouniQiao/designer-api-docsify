@@ -8,7 +8,9 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 创建DataProxyHandle实例。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -26,7 +28,7 @@ function createDataProxyHandle(): Promise<DataProxyHandle>
 
 | 错误码ID |
 | --- |
-| [15700000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-datashare.md#15700000-内部错误) |
+| [15700000](../errorcode-datashare.md#15700000-内部错误) |
 
 ## 示例
 

@@ -1,11 +1,12 @@
 # StatusMonitor (System API)
 
-Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling  
-[getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor).
+Status monitor object. It is used to listen for or obtain information such as the template status, continuous authentication status, and available device status. This object can be obtained by calling [getStatusMonitor](arkts-userauthentication-companiondeviceauth-getstatusmonitor-f-sys.md#getStatusMonitor-(System-API)).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-interface StatusMonitor--><!--Device-companionDeviceAuth-interface StatusMonitor-End-->
 
@@ -29,7 +30,9 @@ Obtains the status of the companion device template. This API is used to query t
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -51,7 +54,7 @@ Obtains the status of the companion device template. This API is used to query t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -79,7 +82,9 @@ Unsubscribes from the events for status changes of companion devices that can be
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -101,7 +106,7 @@ Unsubscribes from the events for status changes of companion devices that can be
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -128,11 +133,13 @@ try {
 offContinuousAuthChange(callback?: ContinuousAuthStatusCallback): void
 ```
 
-Unsubscribes from the continuous authentication status change event of the companion device. After the unsubscription, the application will no longer receive notifications of continuous authentication status changes.This API uses an asynchronous callback to return the result.
+Unsubscribes from the continuous authentication status change event of the companion device. After the unsubscription, the application will no longer receive notifications of continuous authentication status changes. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -154,7 +161,7 @@ Unsubscribes from the continuous authentication status change event of the compa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -193,7 +200,9 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -215,7 +224,7 @@ Unsubscribes from template status change events. This API uses an asynchronous c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -246,7 +255,9 @@ Subscribes to the events for status changes of companion devices that can be add
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -268,7 +279,7 @@ Subscribes to the events for status changes of companion devices that can be add
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 
@@ -298,7 +309,9 @@ Subscribes to the events for continuous authentication status of companion devic
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -321,8 +334,8 @@ Subscribes to the events for continuous authentication status of companion devic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
-| [32600002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600002](../errorcode-useriam.md#32600002-template-not-found) | The template is not found. |
 
 ## Examples
 
@@ -360,7 +373,9 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_IDM
 
@@ -382,7 +397,7 @@ Subscribes to template status change events. This API uses an asynchronous callb
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
+| [32600001](../errorcode-useriam.md#32600001-system-service-not-working-properly) | The system service is not working properly. Please try again later. |
 
 ## Examples
 

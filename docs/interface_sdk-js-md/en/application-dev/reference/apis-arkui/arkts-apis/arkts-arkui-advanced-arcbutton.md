@@ -1,4 +1,4 @@
-# @ohos.arkui.advanced.ArcButton(Defines the arc button component)
+# @ohos.arkui.advanced.ArcButton
 
 ## Modules to Import
 
@@ -12,26 +12,26 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 
 | Name | Description |
 | --- | --- |
-| [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md) | The class for ArcButtonOptions. |
-| [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) | The class used for configuring ArcButton to support progress bar display. |
+| [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md) | Defines the default or custom style parameters for the **ArcButton** component. |
+| [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md) | Defines the progress indicator configuration options of the **ArcButton** component. |
 
 ### Structs
 
 | Name | Description |
 | --- | --- |
-| [ArcButton](arkts-arkui-arkui-advanced-arcbutton-arcbutton-s.md) | Declare Component ArcButton |
+| [ArcButton](arkts-arkui-arkui-advanced-arcbutton-arcbutton-s.md) | The **ArcButton** component offers various button styles, such as emphasized, normal, and warning. It is recommended for devices with circular screens. > **NOTE：**> - This component can be used on phones, PCs, 2-in-1 devices, tablets, TVs, and wearables. In API version 22 and > earlier versions, a compilation warning will be reported when this component is used on phones, PCs, 2-in-1 > devices, tablets, and TVs, but the component can still run properly. |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [CommonArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Defines the arc button options. |
+| [CommonArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-commonarcbuttonoptions-i.md) | Defines the default or custom style parameters for the **ArcButton** component. |
 
 ### Enums
 
 | Name | Description |
 | --- | --- |
-| [ArcButtonPosition](arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md) | Describes the Position of arc button. |
-| [ArcButtonStatus](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md) | Defines an arc button status. |
-| [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) | Provides an arc button style. |
+| [ArcButtonPosition](arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md) | Enumerates the types of arc buttons that can be set for **ArcButton**. |
+| [ArcButtonStatus](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md) | Enumerates the states that can be set for **ArcButton**. |
+| [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md) | Enumerates the style modes that can be set for **ArcButton**. |
 

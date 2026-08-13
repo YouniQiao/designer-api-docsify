@@ -6,7 +6,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** [PhotoSelectResult](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult)
+**替代接口：** PhotoSelectResult
 
 <!--Device-picker-class PhotoSelectResult--><!--Device-picker-class PhotoSelectResult-End-->
 
@@ -26,7 +26,7 @@ isOriginalPhoto: boolean
 
 **废弃版本：** 18
 
-**替代接口：** [isOriginalPhoto](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#isOriginalPhoto)
+**替代接口：** isOriginalPhoto
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,8 +40,7 @@ isOriginalPhoto: boolean
 photoUris: Array<string>
 ```
 
-返回图库选择后的媒体文件的URI数组。此URI数组只能通过临时授权的方式调用接口  
-[photoAccessHelper.getAssets](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoAccessHelper.getAssets(options: FetchOptions, callback: AsyncCallback&lt;FetchResult<PhotoAsset>&gt;&lt;PhotoAsset&gt;>))去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
+返回图库选择后的媒体文件的URI数组。此URI数组只能通过临时授权的方式调用接口 photoAccessHelper.getAssets 去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **类型：** Array&lt;string&gt;
 
@@ -49,7 +48,7 @@ photoUris: Array<string>
 
 **废弃版本：** 18
 
-**替代接口：** [photoUris](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSelectResult#photoUris)
+**替代接口：** photoUris
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

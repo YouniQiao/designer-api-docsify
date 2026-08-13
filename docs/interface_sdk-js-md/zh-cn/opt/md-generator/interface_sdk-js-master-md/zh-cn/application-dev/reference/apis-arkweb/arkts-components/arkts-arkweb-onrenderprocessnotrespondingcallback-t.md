@@ -8,6 +8,8 @@ The callback of render process not responding.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void--><!--Device-unnamed-type OnRenderProcessNotRespondingCallback = (data : RenderProcessNotRespondingData) => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

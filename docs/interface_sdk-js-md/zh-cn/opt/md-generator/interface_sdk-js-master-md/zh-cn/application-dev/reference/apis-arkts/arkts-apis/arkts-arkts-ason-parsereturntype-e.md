@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-ASON-const enum ParseReturnType--><!--Device-ASON-const enum ParseReturnType-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ OBJECT = 0
 返回 SendableObject 对象。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ MAP = 1
 返回 SendableMap 对象。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 

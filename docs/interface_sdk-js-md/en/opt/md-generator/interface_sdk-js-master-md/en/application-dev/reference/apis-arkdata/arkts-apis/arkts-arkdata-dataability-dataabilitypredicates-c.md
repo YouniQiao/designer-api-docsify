@@ -4,6 +4,8 @@ Provides APIs for creating diverse query conditions.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-dataAbility-class DataAbilityPredicates--><!--Device-dataAbility-class DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -23,6 +25,8 @@ and(): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to add the AND condition.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-and(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-and(): DataAbilityPredicates-End-->
 
@@ -52,6 +56,8 @@ Creates a **DataAbilityPredicates** object to add a left parenthesis. This API i
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginWrap(): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -79,11 +85,11 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 beginsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value.
-
-This API is similar to the percent sign (%) in SQL statements.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that begin with the given value. This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-beginsWith(field: string, value: string): DataAbilityPredicates-End-->
 
@@ -117,6 +123,8 @@ between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are within the given range.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-between(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
 
@@ -152,6 +160,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-contains(field: string, value: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -185,6 +195,8 @@ Creates a **DataAbilityPredicates** object to filter out duplicate records.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-distinct(): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -210,6 +222,8 @@ endWrap(): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to add a right parenthesis. This API is similar to ")" in an SQL statement and must be used with **beginWrap**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endWrap(): DataAbilityPredicates-End-->
 
@@ -238,11 +252,11 @@ dataAbilityPredicates.equalTo("NAME", "lisi")
 endsWith(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value.
-
-This API is similar to the percent sign (%) in SQL statements.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that end with the given value. This API is similar to the percent sign (%) in SQL statements.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-endsWith(field: string, value: string): DataAbilityPredicates-End-->
 
@@ -273,11 +287,11 @@ dataAbilityPredicates.endsWith("NAME", "se")
 equalTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value.
-
-This API is similar to the SQL equal to (=) operator.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are equal to the given value. This API is similar to the SQL equal to (=) operator.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-equalTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
@@ -311,6 +325,8 @@ glob(field: string, value: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that match the given string. Different from **like**, the input parameters of this API are case-sensitive.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-glob(field: string, value: string): DataAbilityPredicates-End-->
 
@@ -351,6 +367,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThan(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -383,6 +401,8 @@ greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are greater than or equal to the given value.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-greaterThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
@@ -417,6 +437,8 @@ Creates a **DataAbilityPredicates** object to group the query results based on t
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-groupBy(fields: Array<string>): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -448,6 +470,8 @@ in(field: string, value: Array<ValueType>): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are in the given range.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-in(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
 
@@ -481,6 +505,8 @@ indexedBy(field: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to specify the index column. Before calling this API, you need to create an index column.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-indexedBy(field: string): DataAbilityPredicates-End-->
 
@@ -549,10 +575,11 @@ export default class EntryAbility extends UIAbility {
 isNotNull(field: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not  
-**null**.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not **null**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNotNull(field: string): DataAbilityPredicates-End-->
 
@@ -586,6 +613,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-isNull(field: string): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -617,6 +646,8 @@ lessThan(field: string, value: ValueType): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to search for the records in the specified column that are less than the given value.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThan(field: string, value: ValueType): DataAbilityPredicates-End-->
 
@@ -651,6 +682,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-lessThanOrEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -680,11 +713,11 @@ dataAbilityPredicates.lessThanOrEqualTo("AGE", 20)
 like(field: string, value: string): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value.
-
-This API is similar to the SQL **like** statement.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are similar to the given value. This API is similar to the SQL **like** statement.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-like(field: string, value: string): DataAbilityPredicates-End-->
 
@@ -719,6 +752,8 @@ Creates a **DataAbilityPredicates** object to limit the number of records.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-limitAs(value: number): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -751,6 +786,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notBetween(field: string, low: ValueType, high: ValueType): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -781,11 +818,11 @@ dataAbilityPredicates.notBetween("AGE", 10, 50)
 notEqualTo(field: string, value: ValueType): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value.
-
-This API is similar to the SQL not equal (!=) operator.
+Creates a **DataAbilityPredicates** object to search for the records in the specified column that are not equal to the given value. This API is similar to the SQL not equal (!=) operator.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notEqualTo(field: string, value: ValueType): DataAbilityPredicates-End-->
 
@@ -820,6 +857,8 @@ Creates a **DataAbilityPredicates** object to search for the records in the spec
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates--><!--Device-DataAbilityPredicates-notIn(field: string, value: Array<ValueType>): DataAbilityPredicates-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Core
@@ -849,9 +888,11 @@ dataAbilityPredicates.notIn("NAME", ["Lisa", "Rose"])
 offsetAs(rowOffset: number): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset,pass in **-1** in **limitAs**.
+Creates a **DataAbilityPredicates** object to set the start position of the query result. This API must be used together with **limitAs**. Otherwise, no result will be returned. To query all rows after the specified offset, pass in **-1** in **limitAs**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates--><!--Device-DataAbilityPredicates-offsetAs(rowOffset: number): DataAbilityPredicates-End-->
 
@@ -882,11 +923,11 @@ dataAbilityPredicates.equalTo("NAME", "Rose").offsetAs(3).limitAs(3)
 or(): DataAbilityPredicates
 ```
 
-Creates a **DataAbilityPredicates** object to add the OR condition.
-
-This API is similar to the SQL **or** operator.
+Creates a **DataAbilityPredicates** object to add the OR condition. This API is similar to the SQL **or** operator.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-or(): DataAbilityPredicates--><!--Device-DataAbilityPredicates-or(): DataAbilityPredicates-End-->
 
@@ -915,6 +956,8 @@ orderByAsc(field: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to sort the records in the specified column in ascending order. When there are multiple **orderByAsc**s, the first **orderByAsc** used has the highest priority.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByAsc(field: string): DataAbilityPredicates-End-->
 
@@ -948,6 +991,8 @@ orderByDesc(field: string): DataAbilityPredicates
 Creates a **DataAbilityPredicates** object to sort the records in the specified column in descending order. When there are multiple **orderByDesc**s, the first **orderByDesc** used has the highest priority.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates--><!--Device-DataAbilityPredicates-orderByDesc(field: string): DataAbilityPredicates-End-->
 

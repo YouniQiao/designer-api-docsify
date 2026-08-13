@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-util-class Aspect--><!--Device-util-class Aspect-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,6 +23,8 @@ static addAfter(targetClass: Object, methodName: string, isStatic: boolean, afte
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -104,6 +108,8 @@ static addBefore(targetClass: Object, methodName: string, isStatic: boolean, bef
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -196,6 +202,8 @@ static replace(targetClass: Object, methodName: string, isStatic: boolean, inste
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

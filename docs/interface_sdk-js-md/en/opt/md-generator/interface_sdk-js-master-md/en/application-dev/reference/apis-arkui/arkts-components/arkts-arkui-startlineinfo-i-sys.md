@@ -4,6 +4,8 @@ Define start line info used in GridLayoutOptions.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface StartLineInfo--><!--Device-unnamed-declare interface StartLineInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Define the start index of the row where the target index or offset is located.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Define the start row of the item with startIndex.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StartLineInfo-startLine: int--><!--Device-StartLineInfo-startLine: int-End-->
@@ -56,11 +62,13 @@ Define the start row of the item with startIndex.
 startOffset: number
 ```
 
-Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**.&lt;br&gt;Unit: vp
+Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**. &lt;br&gt;Unit: vp
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,11 +84,13 @@ Offset between the top of the **GridItem** corresponding to **startIndex** and t
 totalOffset: number
 ```
 
-Total scrolling offset,that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.&lt;br&gt;Unit: vp
+Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.&lt;br&gt;Unit: vp
 
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Provides methods related to advertising. Nearby devices can scan and discover th
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace advertising--><!--Device-unnamed-declare namespace advertising-End-->
@@ -22,10 +24,10 @@ import { advertising } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md#offadvertisingstatechange) |
-| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md#onadvertisingstatechange) |
-| [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md#startadvertising) |
-| [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md#stopadvertising) |
+| [offAdvertisingStateChange](arkts-connectivity-advertising-offadvertisingstatechange-f.md#offAdvertisingStateChange) |
+| [onAdvertisingStateChange](arkts-connectivity-advertising-onadvertisingstatechange-f.md#onAdvertisingStateChange) |
+| [startAdvertising](arkts-connectivity-advertising-startadvertising-f.md#startAdvertising) |
+| [stopAdvertising](arkts-connectivity-advertising-stopadvertising-f.md#stopAdvertising) |
 
 ### Interfaces
 

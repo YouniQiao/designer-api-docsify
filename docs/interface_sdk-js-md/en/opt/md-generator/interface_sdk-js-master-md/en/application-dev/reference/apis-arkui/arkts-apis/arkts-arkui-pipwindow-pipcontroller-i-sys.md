@@ -1,11 +1,10 @@
 # PiPController
 
-Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks.
+Implements a PiP controller that starts, stops, or updates a PiP window and registers callbacks. Before calling any of the following APIs, you must use [PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
 
-Before calling any of the following APIs, you must use  
-[PiPWindow.create()](arkts-arkui-pipwindow-create-f.md#create) to create a PiPController instance.
+**Since:** 26.0.0
 
-**Since:** 11
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-interface PiPController--><!--Device-PiPWindow-interface PiPController-End-->
 
@@ -25,7 +24,9 @@ isPiPSupported(): boolean
 
 Returns a Boolean value that indicates whether picture-in-picture is supported
 
-**Since:** 18
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PiPController-isPiPSupported(): boolean--><!--Device-PiPController-isPiPSupported(): boolean-End-->
 
@@ -43,5 +44,5 @@ Returns a Boolean value that indicates whether picture-in-picture is supported
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [1300014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-window.md#1300014-pip-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) |

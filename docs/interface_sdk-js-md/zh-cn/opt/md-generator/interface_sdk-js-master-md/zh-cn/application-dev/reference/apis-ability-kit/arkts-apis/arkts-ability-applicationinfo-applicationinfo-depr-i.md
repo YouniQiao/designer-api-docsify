@@ -1,11 +1,6 @@
 # ApplicationInfo
 
-应用程序信息，未做特殊说明的属性，均通过  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo-2)获取。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-ApplicationInfo](#ApplicationInfo)替代。
+应用程序信息，未做特殊说明的属性，均通过 [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) 获取。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-ApplicationInfo](#ApplicationInfo)替代。
 
 **起始版本：** 7
 
@@ -33,7 +28,7 @@ readonly accessTokenId: number
 
 **废弃版本：** 9
 
-**替代接口：** [accessTokenId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#accessTokenId)
+**替代接口：** accessTokenId
 
 <!--Device-ApplicationInfo-readonly accessTokenId: number--><!--Device-ApplicationInfo-readonly accessTokenId: number-End-->
 
@@ -45,7 +40,7 @@ readonly accessTokenId: number
 readonly codePath: string
 ```
 
-应用程序的安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)访问资源。
+应用程序的安装目录。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager)访问资源。
 
 **类型：** string
 
@@ -55,7 +50,7 @@ readonly codePath: string
 
 **废弃版本：** 9
 
-**替代接口：** [codePath](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#codePath)
+**替代接口：** codePath
 
 <!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
 
@@ -77,7 +72,7 @@ readonly description: string
 
 **废弃版本：** 9
 
-**替代接口：** [description](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#description)
+**替代接口：** description
 
 <!--Device-ApplicationInfo-readonly description: string--><!--Device-ApplicationInfo-readonly description: string-End-->
 
@@ -99,7 +94,7 @@ readonly descriptionId: number
 
 **废弃版本：** 9
 
-**替代接口：** [descriptionId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#descriptionId)
+**替代接口：** descriptionId
 
 <!--Device-ApplicationInfo-readonly descriptionId: number--><!--Device-ApplicationInfo-readonly descriptionId: number-End-->
 
@@ -121,7 +116,7 @@ readonly enabled: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [enabled](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#enabled)
+**替代接口：** enabled
 
 <!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
 
@@ -153,7 +148,7 @@ readonly entityType: string
 readonly entryDir: string
 ```
 
-应用程序的文件保存路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)访问资源。
+应用程序的文件保存路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager)访问资源。
 
 **类型：** string
 
@@ -183,7 +178,7 @@ readonly icon: string
 
 **废弃版本：** 9
 
-**替代接口：** [icon](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#icon)
+**替代接口：** icon
 
 <!--Device-ApplicationInfo-readonly icon: string--><!--Device-ApplicationInfo-readonly icon: string-End-->
 
@@ -205,7 +200,7 @@ readonly iconId: string
 
 **废弃版本：** 9
 
-**替代接口：** [iconId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#iconId)
+**替代接口：** iconId
 
 <!--Device-ApplicationInfo-readonly iconId: string--><!--Device-ApplicationInfo-readonly iconId: string-End-->
 
@@ -227,7 +222,7 @@ readonly label: string
 
 **废弃版本：** 9
 
-**替代接口：** [label](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#label)
+**替代接口：** label
 
 <!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
 
@@ -249,7 +244,7 @@ readonly labelId: string
 
 **废弃版本：** 9
 
-**替代接口：** [labelId](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#labelId)
+**替代接口：** labelId
 
 <!--Device-ApplicationInfo-readonly labelId: string--><!--Device-ApplicationInfo-readonly labelId: string-End-->
 
@@ -261,10 +256,7 @@ readonly labelId: string
 readonly metaData: Map<string, Array<CustomizeData>>
 ```
 
-应用程序的自定义元信息。
-
-通过调用  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo-2)接口时，传入GET_APPLICATION_INFO_WITH_METADATA获取。
+应用程序的自定义元信息。 通过调用 [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) 接口时，传入GET_APPLICATION_INFO_WITH_METADATA获取。
 
 **类型：** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;&gt;
 
@@ -274,7 +266,7 @@ readonly metaData: Map<string, Array<CustomizeData>>
 
 **废弃版本：** 9
 
-**替代接口：** [metadataArray](arkts-ability-applicationinfo-i.md#metadataArray)
+**替代接口：** metadataArray
 
 <!--Device-ApplicationInfo-readonly metaData: Map<string, Array<CustomizeData>>--><!--Device-ApplicationInfo-readonly metaData: Map<string, Array<CustomizeData>>-End-->
 
@@ -296,7 +288,7 @@ readonly moduleInfos: Array<ModuleInfo>
 
 **废弃版本：** 9
 
-**替代接口：** [hapModulesInfo](arkts-ability-bundleinfo-i.md#hapModulesInfo)
+**替代接口：** hapModulesInfo
 
 <!--Device-ApplicationInfo-readonly moduleInfos: Array<ModuleInfo>--><!--Device-ApplicationInfo-readonly moduleInfos: Array<ModuleInfo>-End-->
 
@@ -308,7 +300,7 @@ readonly moduleInfos: Array<ModuleInfo>
 readonly moduleSourceDirs: Array<string>
 ```
 
-应用程序的资源存放的相对路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#resourceManager)访问资源。
+应用程序的资源存放的相对路径。不能拼接路径访问资源文件，请使用[资源管理接口](../../apis-localization-kit/arkts-apis/arkts-resourcemanager.md#@ohos.resourceManager)访问资源。
 
 **类型：** Array&lt;string&gt;
 
@@ -338,7 +330,7 @@ readonly name: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#name)
+**替代接口：** name
 
 <!--Device-ApplicationInfo-readonly name: string--><!--Device-ApplicationInfo-readonly name: string-End-->
 
@@ -350,10 +342,7 @@ readonly name: string
 readonly permissions: Array<string>
 ```
 
-访问应用程序所需的权限。
-
-通过调用  
-[bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo-2)接口时，传入GET_APPLICATION_INFO_WITH_PERMISSION获取。
+访问应用程序所需的权限。 通过调用 [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getApplicationInfo) 接口时，传入GET_APPLICATION_INFO_WITH_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -363,7 +352,7 @@ readonly permissions: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [permissions](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#permissions)
+**替代接口：** permissions
 
 <!--Device-ApplicationInfo-readonly permissions: Array<string>--><!--Device-ApplicationInfo-readonly permissions: Array<string>-End-->
 
@@ -385,7 +374,7 @@ readonly process: string
 
 **废弃版本：** 9
 
-**替代接口：** [process](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#process)
+**替代接口：** process
 
 <!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
 
@@ -407,7 +396,7 @@ readonly removable: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [removable](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#removable)
+**替代接口：** removable
 
 <!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
 
@@ -449,7 +438,7 @@ readonly systemApp: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [systemApp](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#systemApp)
+**替代接口：** systemApp
 
 <!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
 
@@ -471,7 +460,7 @@ readonly uid: number
 
 **废弃版本：** 9
 
-**替代接口：** [uid](ohos.bundle.bundleManager/bundleManager.ApplicationInfo#uid)
+**替代接口：** uid
 
 <!--Device-ApplicationInfo-readonly uid: number--><!--Device-ApplicationInfo-readonly uid: number-End-->
 

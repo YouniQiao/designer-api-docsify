@@ -12,14 +12,13 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: number): void
 ```
 
-Stops an asynchronous trace with the trace output level specified.
+Stops an asynchronous trace with the trace output level specified. The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of [startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace).
 
-The **level**, **name**, and **taskId** used in **finishAsyncTrace()** must be the same as those of  
-[startAsyncTrace()](arkts-performanceanalysis-hitracemeter-startasynctrace-f.md#startAsyncTrace).
+**Since:** 23
 
-**Since:** 19
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void--><!--Device-hiTraceMeter-function finishAsyncTrace(level: HiTraceOutputLevel, name: string, taskId: int): void-End-->
 

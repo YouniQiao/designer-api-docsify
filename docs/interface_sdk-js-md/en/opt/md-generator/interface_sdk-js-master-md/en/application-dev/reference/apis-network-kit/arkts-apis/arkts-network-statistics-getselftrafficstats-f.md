@@ -12,9 +12,11 @@ import { statistics } from '@kit.NetworkKit';
 function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>
 ```
 
-Get the traffic usage details of the specified network of the calling application  in the specified time period and the specified networktype.
+Get the traffic usage details of the specified network of the calling application in the specified time period and the specified networktype.
 
-**Since:** 22
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>--><!--Device-statistics-function getSelfTrafficStats(networkInfo: NetworkInfo): Promise<NetStatsInfo>-End-->
 
@@ -36,11 +38,11 @@ Get the traffic usage details of the specified network of the calling applicatio
 
 | Error Code ID |
 | --- |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [2103017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
-| [2103019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-statistics.md#2103019-invalid-timestamp) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) |
+| [2103019](../errorcode-net-statistics.md#2103019-invalid-timestamp) |
 
 ## Examples
 

@@ -30,7 +30,7 @@ abilityName: string
 
 **废弃版本：** 9
 
-**替代接口：** [abilityName](reminderAgentManager.WantAgent.abilityName)
+**替代接口：** abilityName
 
 <!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
 
@@ -52,7 +52,7 @@ pkgName: string
 
 **废弃版本：** 9
 
-**替代接口：** [pkgName](reminderAgentManager.WantAgent.pkgName)
+**替代接口：** pkgName
 
 <!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
 

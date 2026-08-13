@@ -2,9 +2,11 @@
 
 描述通知渠道，不同通知渠道对应的通知提醒方式不同。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface NotificationSlot--><!--Device-unnamed-export interface NotificationSlot-End-->
 
@@ -16,16 +18,15 @@
 badgeFlag?: boolean
 ```
 
-是否显示角标。默认值为true。
-
-- true：显示角标。  
-- false：不显示角标。
+是否显示角标。默认值为true。 - true：显示角标。 - false：不显示角标。
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-badgeFlag?: boolean--><!--Device-NotificationSlot-badgeFlag?: boolean-End-->
 
@@ -37,16 +38,15 @@ badgeFlag?: boolean
 bypassDnd?: boolean
 ```
 
-是否在系统中绕过免打扰模式。默认值为false。
-
-- true：绕过免打扰模式，免打扰模式下仍会提醒。  
-- false：不绕过免打扰模式，免打扰模式下不提醒。
+是否在系统中绕过免打扰模式。默认值为false。 - true：绕过免打扰模式，免打扰模式下仍会提醒。 - false：不绕过免打扰模式，免打扰模式下不提醒。
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-bypassDnd?: boolean--><!--Device-NotificationSlot-bypassDnd?: boolean-End-->
 
@@ -62,9 +62,11 @@ desc?: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-desc?: string--><!--Device-NotificationSlot-desc?: string-End-->
 
@@ -76,16 +78,15 @@ desc?: string
 readonly enabled?: boolean
 ```
 
-是否允许发布此通知渠道类型的通知。
-
-- true：允许发布通知。  
-- false：禁止发布通知。
+是否允许发布此通知渠道类型的通知。 - true：允许发布通知。 - false：禁止发布通知。
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-readonly enabled?: boolean--><!--Device-NotificationSlot-readonly enabled?: boolean-End-->
 
@@ -121,11 +122,13 @@ lightColor?: int
 
 通知灯颜色。预留能力，暂不支持。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-lightColor?: int--><!--Device-NotificationSlot-lightColor?: int-End-->
 
@@ -137,16 +140,15 @@ lightColor?: int
 lightEnabled?: boolean
 ```
 
-是否闪灯。默认值为false。
-
-- true：闪灯。  
-- false：不闪灯。
+是否闪灯。默认值为false。 - true：闪灯。 - false：不闪灯。
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-lightEnabled?: boolean--><!--Device-NotificationSlot-lightEnabled?: boolean-End-->
 
@@ -160,11 +162,13 @@ lockscreenVisibility?: int
 
 在锁定屏幕上显示通知的模式。预留能力，暂不支持。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-lockscreenVisibility?: int--><!--Device-NotificationSlot-lockscreenVisibility?: int-End-->
 
@@ -180,9 +184,11 @@ notificationLevel?: notificationManager.SlotLevel
 
 **类型：** notificationManager.SlotLevel
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel--><!--Device-NotificationSlot-notificationLevel?: notificationManager.SlotLevel-End-->
 
@@ -198,9 +204,11 @@ notificationType?: notificationManager.SlotType
 
 **类型：** notificationManager.SlotType
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-notificationType?: notificationManager.SlotType--><!--Device-NotificationSlot-notificationType?: notificationManager.SlotType-End-->
 
@@ -216,9 +224,11 @@ sound?: string
 
 **类型：** string
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-sound?: string--><!--Device-NotificationSlot-sound?: string-End-->
 
@@ -252,16 +262,15 @@ type?: notification.SlotType
 vibrationEnabled?: boolean
 ```
 
-是否可振动。默认值为false。
-
-- true：可振动。  
-- false：不可振动。
+是否可振动。默认值为false。 - true：可振动。 - false：不可振动。
 
 **类型：** boolean
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-vibrationEnabled?: boolean--><!--Device-NotificationSlot-vibrationEnabled?: boolean-End-->
 
@@ -275,11 +284,13 @@ vibrationValues?: Array<long>
 
 通知振动样式。预留能力，暂不支持。
 
-**类型：** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;long&gt;
+**类型：** Array&lt;long&gt;
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-NotificationSlot-vibrationValues?: Array<long>--><!--Device-NotificationSlot-vibrationValues?: Array<long>-End-->
 

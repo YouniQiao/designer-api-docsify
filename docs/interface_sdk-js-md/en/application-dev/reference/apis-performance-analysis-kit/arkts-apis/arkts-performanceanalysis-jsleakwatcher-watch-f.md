@@ -14,9 +14,11 @@ function watch(obj: object, msg: string): void
 
 Registers the object to be checked.
 
-**Since:** 12
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 <!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void--><!--Device-jsLeakWatcher-function watch(obj: object, msg: string): void-End-->
 

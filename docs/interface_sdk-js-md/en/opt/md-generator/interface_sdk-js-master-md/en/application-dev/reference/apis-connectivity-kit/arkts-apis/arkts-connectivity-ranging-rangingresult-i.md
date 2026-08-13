@@ -4,6 +4,8 @@ Describes the contents of the ranging results.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-ranging-interface RangingResult--><!--Device-ranging-interface RangingResult-End-->
 
 **System capability:** SystemCapability.Communication.FusionConnectivity.Core
@@ -26,6 +28,8 @@ Azimuth angle output from ranging.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingResult-angle: RangingMeasurement--><!--Device-RangingResult-angle: RangingMeasurement-End-->
@@ -43,6 +47,8 @@ Address of the ranging device.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ The distance measured by the ranging output.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RangingResult-distance: RangingMeasurement--><!--Device-RangingResult-distance: RangingMeasurement-End-->
@@ -79,6 +87,8 @@ Received signal strength.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

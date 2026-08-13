@@ -8,7 +8,9 @@ function getVss(): bigint
 
 获取应用进程占用的虚拟内存大小。接口实现方式：读取/proc/{pid}/statm节点中的size值（内存页数），vss = size * 页大小（4KB/页）。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-function getVss(): bigint--><!--Device-hidebug-function getVss(): bigint-End-->
 

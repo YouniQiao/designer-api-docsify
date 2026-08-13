@@ -2,7 +2,9 @@
 
 需要查询的文件或目录的信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-fileShare-export interface PathPolicyInfo--><!--Device-fileShare-export interface PathPolicyInfo-End-->
 
@@ -18,7 +20,9 @@ operationMode: OperationMode
 
 **类型：** [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PathPolicyInfo-operationMode: OperationMode--><!--Device-PathPolicyInfo-operationMode: OperationMode-End-->
 
@@ -34,7 +38,9 @@ path: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PathPolicyInfo-path: string--><!--Device-PathPolicyInfo-path: string-End-->
 

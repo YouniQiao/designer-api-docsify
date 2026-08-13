@@ -12,14 +12,13 @@ import { cacheDownload } from '@kit.BasicServicesKit';
 function cancel(url: string): void
 ```
 
-Cancels an ongoing download task based on the URL. The saved memory cache and file cache are not affected.
+Cancels an ongoing download task based on the URL. The saved memory cache and file cache are not affected. - If there is no download task with the specified URL, this API does not take effect. - When this API is used for synchronous execution, the calling thread is not blocked.
 
-- If there is no download task with the specified URL, this API does not take effect.  
-- When this API is used for synchronous execution, the calling thread is not blocked.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cacheDownload-function cancel(url: string): void--><!--Device-cacheDownload-function cancel(url: string): void-End-->
 
@@ -35,7 +34,7 @@ Cancels an ongoing download task based on the URL. The saved memory cache and fi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
 
 ## Examples
 

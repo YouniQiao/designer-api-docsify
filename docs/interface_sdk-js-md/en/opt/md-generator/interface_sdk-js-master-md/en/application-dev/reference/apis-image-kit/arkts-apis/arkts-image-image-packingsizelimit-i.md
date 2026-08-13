@@ -4,6 +4,8 @@ Packing image size limit.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-interface PackingSizeLimit--><!--Device-image-interface PackingSizeLimit-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.ImagePacker
@@ -26,6 +28,8 @@ Specify the scaling algorithm during zooming.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PackingSizeLimit-level: AntiAliasingLevel--><!--Device-PackingSizeLimit-level: AntiAliasingLevel-End-->
@@ -43,6 +47,8 @@ Maximum packing size
 **Type:** Size
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

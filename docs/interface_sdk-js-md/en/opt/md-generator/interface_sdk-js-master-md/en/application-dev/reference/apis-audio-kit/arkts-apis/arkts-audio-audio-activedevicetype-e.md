@@ -24,7 +24,7 @@ Speaker.
 
 **Deprecated since:** 9
 
-**Substitutes:** [SPEAKER](ohos.multimedia.audio.CommunicationDeviceType.SPEAKER)
+**Substitutes:** SPEAKER
 
 <!--Device-ActiveDeviceType-SPEAKER = 2--><!--Device-ActiveDeviceType-SPEAKER = 2-End-->
 
@@ -42,7 +42,7 @@ Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLUETOOTH_SCO](ohos.multimedia.audio.DeviceType#BLUETOOTH_SCO)
+**Substitutes:** BLUETOOTH_SCO
 
 <!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7--><!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7-End-->
 

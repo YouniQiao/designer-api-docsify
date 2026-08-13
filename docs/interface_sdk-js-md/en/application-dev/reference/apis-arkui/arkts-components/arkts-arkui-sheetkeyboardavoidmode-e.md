@@ -6,6 +6,8 @@ Define the mode of sheet how to avoid keyboard.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum SheetKeyboardAvoidMode--><!--Device-unnamed-declare enum SheetKeyboardAvoidMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,6 +24,8 @@ Sheet will not aovid keyboard.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -36,11 +40,13 @@ Sheet will not aovid keyboard.
 TRANSLATE_AND_RESIZE = 1
 ```
 
-Firstly sheet will avoid keyboard by changing its height.And then sheet will avoid by resizing after reaching its maximum height.
+Firstly sheet will avoid keyboard by changing its height. And then sheet will avoid by resizing after reaching its maximum height.
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Sheet will only avoid keyboard by resizing the content.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -76,11 +84,13 @@ Sheet will only avoid keyboard by resizing the content.
 TRANSLATE_AND_SCROLL = 3
 ```
 
-Firstly sheet will avoid keyboard by changing its height.And then sheet will avoid keyboard by scrolling after reaching its maximum height.
+Firstly sheet will avoid keyboard by changing its height. And then sheet will avoid keyboard by scrolling after reaching its maximum height.
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,6 +111,8 @@ Popup sheet will avoid keyboard by default.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

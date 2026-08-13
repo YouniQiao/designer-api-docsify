@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-spatialAwareness-export enum DistanceRank--><!--Device-spatialAwareness-export enum DistanceRank-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
@@ -19,6 +21,8 @@ RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 表示超短距。单位:cm，范围:[0:5]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ RANK_SHORT_RANGE = 'rankShort'
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'--><!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'-End-->
@@ -56,6 +62,8 @@ RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DistanceRank-RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'--><!--Device-DistanceRank-RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'-End-->
@@ -73,6 +81,8 @@ RANK_MEDIUM_RANGE = 'rankMedium'
 表示中距。单位:cm，范围:(500:1000]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

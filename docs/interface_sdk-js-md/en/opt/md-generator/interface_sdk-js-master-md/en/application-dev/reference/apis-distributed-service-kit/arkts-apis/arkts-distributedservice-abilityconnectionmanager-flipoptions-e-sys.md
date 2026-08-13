@@ -2,7 +2,9 @@
 
 Flip option.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityConnectionManager-export enum FlipOptions--><!--Device-abilityConnectionManager-export enum FlipOptions-End-->
 
@@ -18,7 +20,9 @@ HORIZONTAL = 0
 
 Horizontal Flip
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +40,9 @@ VERTICAL = 1
 
 Vertical Flip
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

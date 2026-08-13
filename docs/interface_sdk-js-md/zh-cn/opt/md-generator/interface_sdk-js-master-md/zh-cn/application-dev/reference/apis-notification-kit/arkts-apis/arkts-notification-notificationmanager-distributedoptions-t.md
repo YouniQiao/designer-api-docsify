@@ -6,7 +6,9 @@ export type DistributedOptions = _DistributedOptions
 
 分布式选项。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type DistributedOptions = _DistributedOptions--><!--Device-notificationManager-export type DistributedOptions = _DistributedOptions-End-->
 

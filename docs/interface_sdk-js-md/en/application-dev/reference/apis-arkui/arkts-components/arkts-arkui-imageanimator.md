@@ -1,13 +1,8 @@
 # ImageAnimator
 
-The **ImageAnimator** component enables images to be played a frame-by-frame basis. The list of images to be played
-as well as the duration of each image can be configured.
+The **ImageAnimator** component enables images to be played a frame-by-frame basis. The list of images to be played as well as the duration of each image can be configured. > **NOTE**
 
-> **NOTE**
-
-## Child Components
-
-Not supported
+## Child Components Not supported
 
 ## ImageAnimator
 
@@ -21,6 +16,8 @@ ImageAnimator is returned.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 10.
@@ -31,4 +28,4 @@ ImageAnimator is returned.
 
 ## Summary
 
-- [ImageFrameInfo](arkts-arkui-imageanimator-imageframeinfo-i.md)
+- [ImageFrameInfo](arkts-arkui-imageframeinfo-i.md)

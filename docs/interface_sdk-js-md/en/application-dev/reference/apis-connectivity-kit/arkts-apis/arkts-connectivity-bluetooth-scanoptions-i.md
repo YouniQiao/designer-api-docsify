@@ -8,7 +8,7 @@ Describes the parameters for scan.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScanOptions](ohos.bluetoothManager/bluetoothManager.ScanOptions)
+**Substitutes:** [ScanOptions](arkts-connectivity-bluetoothmanager-scanoptions-i.md#ScanOptions)
 
 <!--Device-bluetooth-interface ScanOptions--><!--Device-bluetooth-interface ScanOptions-End-->
 
@@ -36,7 +36,7 @@ Bluetooth LE scan mode
 
 **Deprecated since:** 9
 
-**Substitutes:** [dutyMode](ohos.bluetoothManager/bluetoothManager.ScanOptions.dutyMode)
+**Substitutes:** [dutyMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#dutyMode)
 
 <!--Device-ScanOptions-dutyMode?: ScanDuty--><!--Device-ScanOptions-dutyMode?: ScanDuty-End-->
 
@@ -58,7 +58,7 @@ Time of delay for reporting the scan result
 
 **Deprecated since:** 9
 
-**Substitutes:** [interval](ohos.bluetoothManager/bluetoothManager.ScanOptions.interval)
+**Substitutes:** [interval](arkts-connectivity-bluetoothmanager-scanoptions-i.md#interval)
 
 <!--Device-ScanOptions-interval?: number--><!--Device-ScanOptions-interval?: number-End-->
 
@@ -80,7 +80,7 @@ Match mode for Bluetooth LE scan filters hardware match
 
 **Deprecated since:** 9
 
-**Substitutes:** [matchMode](ohos.bluetoothManager/bluetoothManager.ScanOptions.matchMode)
+**Substitutes:** [matchMode](arkts-connectivity-bluetoothmanager-scanoptions-i.md#matchMode)
 
 <!--Device-ScanOptions-matchMode?: MatchMode--><!--Device-ScanOptions-matchMode?: MatchMode-End-->
 

@@ -2,7 +2,9 @@
 
 待机资源请求体。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->
 
@@ -16,11 +18,13 @@
 duration: number
 ```
 
-豁免时长。单位：s
+豁免时长。 单位：s
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResourceRequest-duration: int--><!--Device-ResourceRequest-duration: int-End-->
 
@@ -38,7 +42,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResourceRequest-name: string--><!--Device-ResourceRequest-name: string-End-->
 
@@ -56,7 +62,9 @@ reason: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResourceRequest-reason: string--><!--Device-ResourceRequest-reason: string-End-->
 
@@ -70,11 +78,13 @@ reason: string
 resourceTypes: number
 ```
 
-资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType)。
+资源类型，类型具体说明请参考[ResourceType](arkts-backgroundtasks-devicestandby-resourcetype-e-sys.md#ResourceType（系统接口）)。
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResourceRequest-resourceTypes: int--><!--Device-ResourceRequest-resourceTypes: int-End-->
 
@@ -92,7 +102,9 @@ uid: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ResourceRequest-uid: int--><!--Device-ResourceRequest-uid: int-End-->
 

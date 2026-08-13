@@ -18,7 +18,7 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [addNotificationSlot](reminderAgentManager.addNotificationSlot)
+**Substitutes:** addNotificationSlot
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void-End-->
 
@@ -60,7 +60,7 @@ Adds a notification slot. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [addNotificationSlot](reminderAgentManager.addNotificationSlot)
+**Substitutes:** addNotificationSlot
 
 <!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>--><!--Device-reminderAgent-function addNotificationSlot(slot: NotificationSlot): Promise<void>-End-->
 

@@ -4,6 +4,8 @@ Enumerates USB descriptors.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-usbManager-enum Descriptor--><!--Device-usbManager-enum Descriptor-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ INTERFACE = 0
 Interface descriptor.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ DEVICE = 1
 Device descriptor.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

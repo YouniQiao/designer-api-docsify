@@ -6,11 +6,13 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 <!--Device-dragController-interface DragAction--><!--Device-dragController-interface DragAction-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## off('statusChange')
+## off_statusChange
 
 ```TypeScript
 off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
@@ -21,6 +23,8 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -35,9 +39,9 @@ off(type: 'statusChange', callback?: Callback<DragAndDropInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | for status changing |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 | with drag event and status information |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 否 | with drag event and status information |
 
-## on('statusChange')
+## on_statusChange
 
 ```TypeScript
 on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
@@ -48,6 +52,8 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,7 +68,7 @@ on(type: 'statusChange', callback: Callback<DragAndDropInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'statusChange' | 是 | for status changing |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 | with drag event and status information |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[DragAndDropInfo](arkts-arkui-dragcontroller-draganddropinfo-i.md)&gt; | 是 | with drag event and status information |
 
 ## startDrag
 
@@ -75,6 +81,8 @@ startDrag(): Promise<void>
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -94,5 +102,5 @@ startDrag(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
 

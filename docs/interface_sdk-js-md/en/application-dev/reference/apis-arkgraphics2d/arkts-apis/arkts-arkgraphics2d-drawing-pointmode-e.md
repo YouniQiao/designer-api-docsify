@@ -2,9 +2,11 @@
 
 Enumerates the modes for drawing multiple points in an array.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum PointMode--><!--Device-drawing-enum PointMode-End-->
 
@@ -18,9 +20,11 @@ POINTS = 0
 
 Draws each point separately.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PointMode-POINTS = 0--><!--Device-PointMode-POINTS = 0-End-->
 
@@ -34,9 +38,11 @@ LINES = 1
 
 Draws every two points as a line segment.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PointMode-LINES = 1--><!--Device-PointMode-LINES = 1-End-->
 
@@ -50,9 +56,11 @@ POLYGON = 2
 
 Draws an array of points as an open polygon.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PointMode-POLYGON = 2--><!--Device-PointMode-POLYGON = 2-End-->
 

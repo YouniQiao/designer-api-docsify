@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface RandomAccessFileOptions--><!--Device-unnamed-export interface RandomAccessFileOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -20,6 +22,8 @@ end?: number
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-RandomAccessFileOptions-end?: number--><!--Device-RandomAccessFileOptions-end?: number-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -35,6 +39,8 @@ start?: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-RandomAccessFileOptions-start?: number--><!--Device-RandomAccessFileOptions-start?: number-End-->
 

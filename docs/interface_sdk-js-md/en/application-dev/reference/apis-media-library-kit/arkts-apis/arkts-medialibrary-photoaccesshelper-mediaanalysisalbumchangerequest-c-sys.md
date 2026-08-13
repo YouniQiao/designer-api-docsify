@@ -4,11 +4,13 @@ Provides APIs for managing the analysis album change request.
 
 **Inheritance/Implementation:** MediaAnalysisAlbumChangeRequest extends [MediaAlbumChangeRequest](arkts-medialibrary-photoaccesshelper-mediaalbumchangerequest-c.md#MediaAlbumChangeRequest)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest extends MediaAlbumChangeRequest-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest--><!--Device-photoAccessHelper-class MediaAnalysisAlbumChangeRequest-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -28,9 +30,11 @@ constructor(album: Album)
 
 Constructor.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)--><!--Device-MediaAnalysisAlbumChangeRequest-constructor(album: Album)-End-->
 
@@ -48,8 +52,8 @@ Constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -90,7 +94,9 @@ Creates a MediaAnalysisAlbumChangeRequest instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,9 +124,9 @@ Creates a MediaAnalysisAlbumChangeRequest instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
 
 ## createAnalysisAlbumRequest
 
@@ -132,19 +138,13 @@ static createAnalysisAlbumRequest(
     ): MediaAnalysisAlbumChangeRequest
 ```
 
-Creates a change request for the **Analysis** album.
-
-> **NOTE：**
-> 
-> The album name must meet the following requirements:
-> 
-> - The album name string length ranges from 1 to 255.
-> 
-> - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
+Creates a change request for the **Analysis** album. > **NOTE：**> > The album name must meet the following requirements: > > - The album name string length ranges from 1 to 255. > > - The album name cannot contain any of the following characters:.. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,9 +172,9 @@ Creates a change request for the **Analysis** album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
 
 ## Examples
 
@@ -204,7 +204,9 @@ Sets the default cover image for the smart album.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,9 +226,9 @@ Sets the default cover image for the smart album.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
 
 ## Examples
 
@@ -278,21 +280,17 @@ async function example(context: Context) {
 
 ## setOrderPosition
 
-ArkTS-Dyn:
-```TypeScript
-setOrderPosition(assets: Array<PhotoAsset>, position: Array<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOrderPosition(assets: Array<PhotoAsset>, position: Array<int>): void
 ```
 
 Sets the sequence of assets in the **Analysis** album.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -307,15 +305,15 @@ Sets the sequence of assets in the **Analysis** album.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | assets | Array&lt;PhotoAsset&gt; | Yes | Assets in the album for which the sequence needs to be set. |
-| position | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Sequence of assets in the album. |
+| position | Array&lt;int&gt; | Yes | Sequence of assets in the album. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 | 14000011 | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
 
 ## Examples
@@ -368,39 +366,13 @@ async function example(context: Context) {
 setRelationship(relationship: string): Promise<void>
 ```
 
-Sets the relationships of a person in the portrait album.
+Sets the relationships of a person in the portrait album. The supported relationship names include: | Unique ID | Description | | ---------- | ------- | | me | Me| | son | Son| | daughter | Daughter| | wife | Wife| | husband | Husband| | father | Father| | mother | Mother| | colleague | Colleague| | friend | Friend| | classmate | Classmate| | best_friend_female | Best female friend| | boyfriend | Boyfriend| | girlfriend | Girlfriend| | family | Family| | maternal_grandfather | Maternal grandfather| | maternal_grandmother | Maternal grandmother| | paternal_grandfather | Paternal grandfather| | paternal_grandmother | Paternal grandmother| | older_brother | Older brother| | older_sister | Older sister| | younger_brother | Younger brother| | younger_sister | Younger sister| | relative | Relative| | other | Other|
 
-The supported relationship names include:  
-| Unique ID | Description |  
-| ---------- | ------- |  
-| me | Me|  
-| son | Son|  
-| daughter | Daughter|  
-| wife | Wife|  
-| husband | Husband|  
-| father | Father|  
-| mother | Mother|  
-| colleague | Colleague|  
-| friend | Friend|  
-| classmate | Classmate|  
-| best_friend_female | Best female friend|  
-| boyfriend | Boyfriend|  
-| girlfriend | Girlfriend|  
-| family | Family|  
-| maternal_grandfather | Maternal grandfather|  
-| maternal_grandmother | Maternal grandmother|  
-| paternal_grandfather | Paternal grandfather|  
-| paternal_grandmother | Paternal grandmother|  
-| older_brother | Older brother|  
-| older_sister | Older sister|  
-| younger_brother | Younger brother|  
-| younger_sister | Younger sister|  
-| relative | Relative|  
-| other | Other|
+**Since:** 26.0.0
 
-**Since:** 21
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
@@ -426,10 +398,10 @@ The supported relationship names include:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. &lt;br&gt;Possible causes: &lt;br&gt;1. The input parameter is not within the valid range. |
 
 ## Examples
 

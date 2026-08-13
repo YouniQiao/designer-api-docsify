@@ -4,6 +4,8 @@ Defines font weight configurations. When the configuration object (including an 
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FontWeightConfigs--><!--Device-unnamed-declare interface FontWeightConfigs-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,13 @@ Defines font weight configurations. When the configuration object (including an 
 enableDeviceFontWeightCategory?: boolean
 ```
 
-Whether to automatically synchronize the font weight with the device's font weight setting.
-
-Default value: **true**
-
-**true**: The font weight is automatically synchronized when the device's font weight setting changes.
-
-**false**: The font weight is not automatically synchronized when the device's font weight setting changes.
+Whether to automatically synchronize the font weight with the device's font weight setting. Default value: **true** **true**: The font weight is automatically synchronized when the device's font weight setting changes. **false**: The font weight is not automatically synchronized when the device's font weight setting changes.
 
 **Type:** boolean
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,19 +38,13 @@ Default value: **true**
 enableVariableFontWeight?: boolean
 ```
 
-Whether to enable variable font weight adjustment. When **weight** is set to a non-multiple of 100 within  
-[100, 900], **enableVariableFontWeight** is used to set whether the **weight** value takes effect.
-
-Default value: **false**
-
-**true**: Enable variable font weight adjustment. If the value of **weight** is any integer within [100, 900],the value is used. Otherwise, the default value **400** is used.
-
-**false**: Disable variable font weight adjustment. If the value of **weight** is a multiple of 100 within  
-[100, 900], the value is used. If **weight** is a non-multiple of 100, the default value **400** is used.
+Whether to enable variable font weight adjustment. When **weight** is set to a non-multiple of 100 within [100, 900], **enableVariableFontWeight** is used to set whether the **weight** value takes effect. Default value: **false** **true**: Enable variable font weight adjustment. If the value of **weight** is any integer within [100, 900], the value is used. Otherwise, the default value **400** is used. **false**: Disable variable font weight adjustment. If the value of **weight** is a multiple of 100 within [100, 900], the value is used. If **weight** is a non-multiple of 100, the default value **400** is used.
 
 **Type:** boolean
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

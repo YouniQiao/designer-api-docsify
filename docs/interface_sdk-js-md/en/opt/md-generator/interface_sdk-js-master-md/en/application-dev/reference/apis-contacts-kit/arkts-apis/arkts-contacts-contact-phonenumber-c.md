@@ -4,6 +4,8 @@ Defines a contact's phone number.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-contact-class PhoneNumber--><!--Device-contact-class PhoneNumber-End-->
 
 **System capability:** SystemCapability.Applications.ContactsData
@@ -26,6 +28,8 @@ Custom phone type, the default value is **0**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly CUSTOM_LABEL: 0--><!--Device-PhoneNumber-static readonly CUSTOM_LABEL: 0-End-->
@@ -43,6 +47,8 @@ Invalid phone type, the default value is **-1**.
 **Type:** -1
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ Assistant phone, the default value is **19**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_ASSISTANT: 19--><!--Device-PhoneNumber-static readonly NUM_ASSISTANT: 19-End-->
@@ -79,6 +87,8 @@ Callback phone, the default value is **8**.
 **Type:** 8
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +108,8 @@ Car phone, the default value is **9**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_CAR: 9--><!--Device-PhoneNumber-static readonly NUM_CAR: 9-End-->
@@ -115,6 +127,8 @@ Company phone, the default value is **10**.
 **Type:** 10
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -134,6 +148,8 @@ Family fax, the default value is **5**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_FAX_HOME: 5--><!--Device-PhoneNumber-static readonly NUM_FAX_HOME: 5-End-->
@@ -151,6 +167,8 @@ Work fax, the default value is **4**.
 **Type:** 4
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -170,6 +188,8 @@ Home phone, the default value is **1**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_HOME: 1--><!--Device-PhoneNumber-static readonly NUM_HOME: 1-End-->
@@ -187,6 +207,8 @@ Integrated Services Digital Network (ISDN) phone, the default value is **11**.
 **Type:** 11
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -206,6 +228,8 @@ Main phone, the default value is **12**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_MAIN: 12--><!--Device-PhoneNumber-static readonly NUM_MAIN: 12-End-->
@@ -223,6 +247,8 @@ MMS phone, the default value is **20**.
 **Type:** 20
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -242,6 +268,8 @@ Mobile phone, the default value is **2**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_MOBILE: 2--><!--Device-PhoneNumber-static readonly NUM_MOBILE: 2-End-->
@@ -259,6 +287,8 @@ Other phone type, the default value is **7**.
 **Type:** 7
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -278,6 +308,8 @@ Other fax phone, the default value is **13**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_OTHER_FAX: 13--><!--Device-PhoneNumber-static readonly NUM_OTHER_FAX: 13-End-->
@@ -295,6 +327,8 @@ Pager, the default value is **6**.
 **Type:** 6
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -314,6 +348,8 @@ Wireless phone, the default value is **14**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_RADIO: 14--><!--Device-PhoneNumber-static readonly NUM_RADIO: 14-End-->
@@ -331,6 +367,8 @@ Telex phone, the default value is **15**.
 **Type:** 15
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -350,6 +388,8 @@ Teletypewriter (TTY) or Test Driven Development (TDD) phone, the default value i
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_TTY_TDD: 16--><!--Device-PhoneNumber-static readonly NUM_TTY_TDD: 16-End-->
@@ -367,6 +407,8 @@ Work phone, the default value is **3**.
 **Type:** 3
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -386,6 +428,8 @@ Work mobile phone, the default value is **17**.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-static readonly NUM_WORK_MOBILE: 17--><!--Device-PhoneNumber-static readonly NUM_WORK_MOBILE: 17-End-->
@@ -403,6 +447,8 @@ Work pager, the default value is **18**.
 **Type:** 18
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -422,6 +468,8 @@ Phone number type.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-labelId?: number--><!--Device-PhoneNumber-labelId?: number-End-->
@@ -440,6 +488,8 @@ Name of the phone number type.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhoneNumber-labelName?: string--><!--Device-PhoneNumber-labelName?: string-End-->
@@ -457,6 +507,8 @@ Phone number.
 **Type:** string
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

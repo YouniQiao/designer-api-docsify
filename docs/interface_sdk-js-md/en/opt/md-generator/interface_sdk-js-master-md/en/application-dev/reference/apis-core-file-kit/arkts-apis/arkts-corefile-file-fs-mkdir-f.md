@@ -16,6 +16,8 @@ Creates a directory. This API uses a promise to return the result.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function mkdir(path: string): Promise<void>--><!--Device-unnamed-declare function mkdir(path: string): Promise<void>-End-->
@@ -64,6 +66,8 @@ declare function mkdir(path: string, recursion: boolean): Promise<void>
 Creates a directory. This API uses a promise to return the result. The value **true** means to create a directory recursively.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -115,6 +119,8 @@ Creates a directory. This API uses an asynchronous callback to return the result
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function mkdir(path: string, callback: AsyncCallback<void>): void-End-->
@@ -158,6 +164,8 @@ declare function mkdir(path: string, recursion: boolean, callback: AsyncCallback
 Creates a directory. This API uses an asynchronous callback to return the result. The value **true** means to create a directory recursively.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

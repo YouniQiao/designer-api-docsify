@@ -1,9 +1,10 @@
 # ApplicationStateObserver
 
-应用状态监听器，可以作为入参传入  
-[on('applicationState')](./../@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver))方法，监听应用的生命周期变化。
+应用状态监听器，可以作为入参传入 [on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) 方法，监听应用的生命周期变化。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export default class ApplicationStateObserver--><!--Device-unnamed-export default class ApplicationStateObserver-End-->
 
@@ -18,6 +19,8 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 Ability状态发生变化时执行的回调函数。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-ApplicationStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void--><!--Device-ApplicationStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void-End-->
 
@@ -39,6 +42,8 @@ onAppStarted(appStateData: AppStateData): void
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-ApplicationStateObserver-onAppStarted(appStateData: AppStateData): void--><!--Device-ApplicationStateObserver-onAppStarted(appStateData: AppStateData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -58,6 +63,8 @@ onAppStopped(appStateData: AppStateData): void
 应用最后一个进程销毁时执行的回调函数。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-ApplicationStateObserver-onAppStopped(appStateData: AppStateData): void--><!--Device-ApplicationStateObserver-onAppStopped(appStateData: AppStateData): void-End-->
 
@@ -79,6 +86,8 @@ onForegroundApplicationChanged(appStateData: AppStateData): void
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-ApplicationStateObserver-onForegroundApplicationChanged(appStateData: AppStateData): void--><!--Device-ApplicationStateObserver-onForegroundApplicationChanged(appStateData: AppStateData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -98,6 +107,8 @@ onProcessCreated(processData: ProcessData): void
 进程创建时执行的回调函数。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-ApplicationStateObserver-onProcessCreated(processData: ProcessData): void--><!--Device-ApplicationStateObserver-onProcessCreated(processData: ProcessData): void-End-->
 
@@ -119,6 +130,8 @@ onProcessDied(processData: ProcessData): void
 
 **起始版本：** 14
 
+**废弃版本：** -1
+
 <!--Device-ApplicationStateObserver-onProcessDied(processData: ProcessData): void--><!--Device-ApplicationStateObserver-onProcessDied(processData: ProcessData): void-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -138,6 +151,8 @@ onProcessStateChanged(processData: ProcessData): void
 进程状态更新时执行的回调函数。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 <!--Device-ApplicationStateObserver-onProcessStateChanged(processData: ProcessData): void--><!--Device-ApplicationStateObserver-onProcessStateChanged(processData: ProcessData): void-End-->
 

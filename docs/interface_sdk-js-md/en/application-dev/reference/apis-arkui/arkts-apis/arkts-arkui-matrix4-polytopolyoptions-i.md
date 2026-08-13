@@ -1,10 +1,12 @@
 # PolyToPolyOptions
 
-Set poly to poly point options.
+Describes the configuration options for polygon-to-polygon transformation mapping.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-matrix4-export interface PolyToPolyOptions--><!--Device-matrix4-export interface PolyToPolyOptions-End-->
 
@@ -19,64 +21,76 @@ import { matrix4 } from '@kit.ArkUI';
 ## dst
 
 ```TypeScript
-dst: Array<Point>
+dst:Array<Point>
 ```
 
-Array of point coordinates for the target polygon.
+Coordinates of the destination point.
 
 **Type:** Array&lt;Point&gt;
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PolyToPolyOptions-dst: Array<Point>--><!--Device-PolyToPolyOptions-dst: Array<Point>-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-dst:Array<Point>--><!--Device-PolyToPolyOptions-dst:Array<Point>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## dstIndex
 
 ```TypeScript
-dstIndex?: int
+dstIndex?: number
 ```
 
-Start index of the target polygon, which defaults to 0.
+Start index of the destination point coordinates. Default value: **src.length/2**. Value range: [0, +∞).
 
-**Type:** int
+**Type:** number
 
 **Default:** src.Length/2
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PolyToPolyOptions-dstIndex?: int--><!--Device-PolyToPolyOptions-dstIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-dstIndex?: number--><!--Device-PolyToPolyOptions-dstIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## pointCount
 
 ```TypeScript
-pointCount?: int
+pointCount?:number
 ```
 
-The number of points to be used.If it is 0, it returns the identity matrix.If it is 1, it returns a translation matrix that changed before two points.If it is 2-4, it returns a transformation matrix.
+Number of used points. **0**: returns an identity matrix. **1**: returns a translation matrix. 2-4: returns a transformation matrix. Default value: **0**. Value range: [0, +∞).
 
-**Type:** int
+**Type:** number
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PolyToPolyOptions-pointCount?: int--><!--Device-PolyToPolyOptions-pointCount?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-pointCount?:number--><!--Device-PolyToPolyOptions-pointCount?:number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,15 +100,19 @@ The number of points to be used.If it is 0, it returns the identity matrix.If it
 src: Array<Point>
 ```
 
-Array of point coordinates for the source polygon.
+Coordinates of the source point.
 
 **Type:** Array&lt;Point&gt;
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PolyToPolyOptions-src: Array<Point>--><!--Device-PolyToPolyOptions-src: Array<Point>-End-->
 
@@ -103,22 +121,26 @@ Array of point coordinates for the source polygon.
 ## srcIndex
 
 ```TypeScript
-srcIndex?: int
+srcIndex?: number
 ```
 
-Start point index of the source polygon, which defaults to 0.
+Start index of the source point coordinates. Default value: **0**. Value range: [0, +∞).
 
-**Type:** int
+**Type:** number
 
 **Default:** 0
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PolyToPolyOptions-srcIndex?: int--><!--Device-PolyToPolyOptions-srcIndex?: int-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PolyToPolyOptions-srcIndex?: number--><!--Device-PolyToPolyOptions-srcIndex?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

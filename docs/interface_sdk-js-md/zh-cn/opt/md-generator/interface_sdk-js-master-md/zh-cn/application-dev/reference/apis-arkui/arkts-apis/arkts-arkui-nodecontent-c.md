@@ -1,16 +1,14 @@
 # NodeContent
 
-NodeContent是ArkUI提供的[ContentSlot](../@internal/component/ets/content_slot)的管理器，用于管理挂载到ContentSlot上的FrameNode节点内容，支持动态添加、删除FrameNode节点。适用于需要通过ContentSlot动态管理FrameNode节点内容的场景，例如根据用户交互动态新增或移除文本、图片等自定义FrameNode节点。
+NodeContent是ArkUI提供的ContentSlot的管理器，用于管理挂载到ContentSlot上的FrameNode节点内 容，支持动态添加、删除FrameNode节点。适用于需要通过ContentSlot动态管理FrameNode节点内容的场景，例如根据用户交互动态新增或移除文本、图片等自定义FrameNode节点。 > **说明：** > > - NodeContent对象不支持使用JSON序列化。
 
-> **说明：**
-> 
-> - NodeContent对象不支持使用JSON序列化。
-
-**继承/实现关系：** NodeContent extends [Content](Content)
+**继承/实现关系：** NodeContent extends Content
 
 **起始版本：** 12
 
-<!--Device-unnamed-export class NodeContent extends Content--><!--Device-unnamed-export class NodeContent extends Content-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export class NodeContent--><!--Device-unnamed-export class NodeContent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,9 +18,11 @@ NodeContent是ArkUI提供的[ContentSlot](../@internal/component/ets/content_slo
 addFrameNode(node: FrameNode): void
 ```
 
-将FrameNode添加到NodeContent中，添加后FrameNode将通过关联的ContentSlot渲染显示。适用于需要动态管理ContentSlot中显示内容节点的场景，例如根据用户交互动态新增文本、图片等自定义FrameNode节点。
+将FrameNode添加到NodeContent中，添加后FrameNode将通过关联的ContentSlot渲染显示。适用于需要动态管理ContentSlot中显示内容节点的场景，例如根据用户交互动态新增文本、图片等自定义 FrameNode节点。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,7 +42,7 @@ addFrameNode(node: FrameNode): void
 
 | 错误码ID |
 | --- |
-| [100025](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-node.md#100025-传入参数不符合要求) |
+| [100025](../errorcode-node.md#100025-传入参数不符合要求) |
 
 ## constructor
 
@@ -53,6 +53,8 @@ constructor()
 节点内容的实体封装。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -95,6 +97,8 @@ removeFrameNode(node: FrameNode): void
 将FrameNode从NodeContent中删除，删除后FrameNode将不再通过ContentSlot显示。适用于需要动态移除已添加内容节点的场景，例如用户交互后移除指定的文本、图片等自定义FrameNode节点。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

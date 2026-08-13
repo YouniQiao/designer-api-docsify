@@ -1,22 +1,16 @@
 # AlphabetIndexer properties/events
 
-When the [width](CommonMethod#width(value: Length)) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+When the width attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items. The default value of the padding attribute is 4 vp. The maxFontScale and minFontScale attributes are both set to a constant value of 1, which means that they do not change with the system font size. In addition to the universal attributes, the following attributes are supported. In addition to the universal events, the following events are supported.
 
-The default value of the [padding](CommonMethod#padding) attribute is 4 vp.
-
-The [maxFontScale](TextAttribute#maxFontScale) and [minFontScale](TextAttribute#minFontScale) attributes are both set to a constant value of 1, which means that they do not change with the system font size.
-
-In addition to the [universal attributes](common), the following attributes are supported.
-
-In addition to the [universal events](common), the following events are supported.
-
-**Inheritance/Implementation:** AlphabetIndexerAttribute extends [CommonMethod<AlphabetIndexerAttribute>](CommonMethod<AlphabetIndexerAttribute>)
+**Inheritance/Implementation:** AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>--><!--Device-unnamed-declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class AlphabetIndexerAttribute--><!--Device-unnamed-declare class AlphabetIndexerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,6 +26,8 @@ Sets the alignment style of the indexer pop-up window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-alignStyle(value: IndexerAlign, offset?: Length): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-alignStyle(value: IndexerAlign, offset?: Length): AlphabetIndexerAttribute-End-->
@@ -43,7 +39,7 @@ Sets the alignment style of the indexer pop-up window.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.&lt;br&gt;Default value: **IndexerAlign.END |
-| offset | Length | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](AlphabetIndexerAttribute#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
+| offset | Length | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
 
@@ -51,19 +47,13 @@ Sets the alignment style of the indexer pop-up window.
 autoCollapse(value: boolean)
 ```
 
-Sets whether to enable the adaptive collapse behavior for the indexer.
-
-When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
-
-When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height.
-
-> **NOTE：**
-
-> This API can be called within [attributeModifier](CommonMethod#attributeModifier) since API version 12.
+Sets whether to enable the adaptive collapse behavior for the indexer. When the first index item is **"#"**: Remaining items ≤ 9: Full display mode; 9 &lt; Remaining items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; remaining items &gt; 13: Adapts between short and long collapse modes based on the indexer height. When the first index item is not **"#"**: All items ≤ 9: Full display mode; 9 &lt; All items ≤ 13: Adapts between full display and short collapse modes based on the indexer height; all items &gt; 13: Adapts between short and long collapse modes based on the indexer height. > **NOTE：**> This API can be called within attributeModifier since API version 12.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,6 +81,8 @@ Sets the text color for unselected items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-color(value: ResourceColor): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-color(value: ResourceColor): AlphabetIndexerAttribute-End-->
@@ -114,6 +106,8 @@ Sets whether to enable haptic feedback.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -141,6 +135,8 @@ Sets the text style for unselected items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-font(value: Font): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-font(value: Font): AlphabetIndexerAttribute-End-->
@@ -164,6 +160,8 @@ Sets the radius of the index background border corners in the alphabetic index b
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,6 +189,8 @@ Sets the size of the index item area.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-itemSize(value: string | number): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-itemSize(value: string | number): AlphabetIndexerAttribute-End-->
@@ -201,7 +201,7 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.&lt;br&gt;The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right [padding](CommonMethod#padding), and the maximum height of an index item is (component height minus the top and bottom [padding](CommonMethod#padding))/number of index items. If the input value is less than or equal to 0, the default value is used.&lt;br&gt;Default value: **16.0**&lt;br&gt;Unit: vp |
+| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.&lt;br&gt;The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right padding, and the maximum height of an index item is (component height minus the top and bottom padding)/number of index items. If the input value is less than or equal to 0, the default value is used.&lt;br&gt;Default value: **16.0**&lt;br&gt;Unit: vp |
 
 ## onPopupSelect
 
@@ -214,6 +214,8 @@ Triggered when a secondary index item in the pop-up window is selected. The call
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -239,6 +241,8 @@ Triggered for a secondary index item content event in the pop-up window. The cal
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onRequestPopupData(callback: OnAlphabetIndexerRequestPopupDataCallback): AlphabetIndexerAttribute-End-->
@@ -263,6 +267,8 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-onSelect(callback: OnAlphabetIndexerSelectCallback): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onSelect(callback: OnAlphabetIndexerSelectCallback): AlphabetIndexerAttribute-End-->
@@ -281,9 +287,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 onSelected(callback: (index: number) => void)
 ```
 
-Triggered when an index item is selected, with the callback parameter being the index of the currently selected item.
-
-> **NOTE：**
+Triggered when an index item is selected, with the callback parameter being the index of the currently selected item. > **NOTE：**
 
 **Since:** 7
 
@@ -291,7 +295,7 @@ Triggered when an index item is selected, with the callback parameter being the 
 
 **Deprecated since:** 8
 
-**Substitutes:** [onSelect](onSelect)
+**Substitutes:** [onSelect](#onSelect)
 
 <!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-onSelected(callback: (index: number) => void): AlphabetIndexerAttribute-End-->
 
@@ -309,21 +313,13 @@ Triggered when an index item is selected, with the callback parameter being the 
 popupBackground(value: ResourceColor)
 ```
 
-Sets the background color for the pop-up window.
-
-If this API is not called or the **value** parameter is set to **undefined**:
-
-In API version 11 and earlier versions, the default background color of the pop-up is **0xFFFFFFFF**, which is white.
-
-In API versions 12 to 24, the default background color is **#66808080**, which is translucent gray.
-
-Since API version 26.0.0, if neither **popupBackground** nor  
-[popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle) is called or the **value**parameter is set to **undefined**, the **THIN** style of  
-**[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)** is displayed by default on devices with high- and mid-level computing power, and the white background is displayed by default on devices with low-level computing power. If **popupBackgroundBlurStyle** is called and the **value** parameter is set to a valid value, the background color of the pop-up is **#66808080** by default, which is translucent gray.
+Sets the background color for the pop-up window. If this API is not called or the **value** parameter is set to **undefined**: In API version 11 and earlier versions, the default background color of the pop-up is **0xFFFFFFFF**, which is white. In API versions 12 to 24, the default background color is **#66808080**, which is translucent gray. Since API version 26.0.0, if neither **popupBackground** nor [popupBackgroundBlurStyle](#popupBackgroundBlurStyle) is called or the **value** parameter is set to **undefined**, the **THIN** style of **[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle)** is displayed by default on devices with high- and mid-level computing power, and the white background is displayed by default on devices with low-level computing power. If **popupBackgroundBlurStyle** is called and the **value** parameter is set to a valid value, the background color of the pop-up is **#66808080** by default, which is translucent gray.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -335,7 +331,7 @@ Since API version 26.0.0, if neither **popupBackground** nor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the pop-up window.&lt;br&gt;The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](AlphabetIndexerAttribute#popupBackgroundBlurStyle) to **NONE**.&lt;br&gt; |
+| value | ResourceColor | Yes | Background color of the pop-up window.&lt;br&gt;The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](#popupBackgroundBlurStyle) to **NONE**.&lt;br&gt; |
 
 ## popupBackgroundBlurStyle
 
@@ -343,12 +339,13 @@ Since API version 26.0.0, if neither **popupBackground** nor
 popupBackgroundBlurStyle(value: BlurStyle)
 ```
 
-Sets the background blur style of the pop-up window. In versions earlier than API version 26.0.0, if this API is not called, the **COMPONENT_REGULAR** value in **BlurStyle** is used by default. Since API version 26.0.0, if neither [popupBackground](AlphabetIndexerAttribute#popupBackground) nor **popupBackgroundBlurStyle** is called or the value is **undefined**, the **THIN** style of  
-[ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle) is used by default on devices with high- and mid-level computing power, and the white background is used by default on devices with low-level computing power.
+Sets the background blur style of the pop-up window. In versions earlier than API version 26.0.0, if this API is not called, the **COMPONENT_REGULAR** value in **BlurStyle** is used by default. Since API version 26.0.0, if neither [popupBackground](#popupBackground) nor **popupBackgroundBlurStyle** is called or the value is **undefined**, the **THIN** style of [ImmersiveStyle](../../../reference/apis-arkui/arkts-apis-uimaterial.md#immersivestyle) is used by default on devices with high- and mid-level computing power, and the white background is used by default on devices with low- level computing power.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -362,7 +359,7 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BlurStyle | Yes | Background blur style of the pop-up window.&lt;br&gt;The background blur effect can affect [popupBackground](AlphabetIndexerAttribute#popupBackground). You can disable the effect by setting it to **NONE**. |
+| value | BlurStyle | Yes | Background blur style of the pop-up window.&lt;br&gt;The background blur effect can affect [popupBackground](#popupBackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -375,6 +372,8 @@ Sets the text color for the primary index item in the pop-up window.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -400,6 +399,8 @@ Sets the text style for the primary index item in the pop-up window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-popupFont(value: Font): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-popupFont(value: Font): AlphabetIndexerAttribute-End-->
@@ -423,6 +424,8 @@ Sets the background color for the secondary index item in the pop-up window.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -450,6 +453,8 @@ Sets the radius of the index border corners in the pop-up window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -475,6 +480,8 @@ Sets the text style for the secondary index item in the pop-up window.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -502,6 +509,8 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-popupPosition(value: Position): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-popupPosition(value: Position): AlphabetIndexerAttribute-End-->
@@ -525,6 +534,8 @@ Sets the text color for the selected secondary index item in the pop-up window.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -552,6 +563,8 @@ Sets the background color for the primary index item in the pop-up window.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -578,6 +591,8 @@ Sets the text color for the unselected secondary index items in the pop-up windo
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -598,14 +613,13 @@ Sets the text color for the unselected secondary index items in the pop-up windo
 selected(index: number)
 ```
 
-Sets the index of the selected item.
-
-Since API version 10, this parameter supports two-way binding through  
-[\$\$](../../../ui/state-management/arkts-two-way-sync.md).
+Sets the index of the selected item. Since API version 10, this parameter supports two-way binding through [\$\$](../../../ui/state-management/arkts-two-way-sync.md).
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -631,6 +645,8 @@ Sets the background color of the selected item.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-selectedBackgroundColor(value: ResourceColor): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-selectedBackgroundColor(value: ResourceColor): AlphabetIndexerAttribute-End-->
@@ -654,6 +670,8 @@ Sets the text color for the selected item.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -679,6 +697,8 @@ Sets the text style for the selected item.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AlphabetIndexerAttribute-selectedFont(value: Font): AlphabetIndexerAttribute--><!--Device-AlphabetIndexerAttribute-selectedFont(value: Font): AlphabetIndexerAttribute-End-->
@@ -702,6 +722,8 @@ Sets whether to display the pop-up window.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

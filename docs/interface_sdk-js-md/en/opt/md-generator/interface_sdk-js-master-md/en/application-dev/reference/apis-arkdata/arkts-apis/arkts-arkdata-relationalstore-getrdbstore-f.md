@@ -12,22 +12,11 @@ import { relationalStore } from '@kit.ArkData';
 function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<RdbStore>): void
 ```
 
-Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses an asynchronous callback to return the result.
+Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses an asynchronous callback to return the result. If no database file exists in the corresponding sandbox directory, a database file is created. For details, see [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig). If a database file exists in the corresponding directory, the existing database file is opened. When creating a database, you should consider whether to configure the [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) parameter. Once the database is created, you are not allowed to change this parameter. | Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result| | ------- | -------------------------------- | ---- | | Non-encryption| Encryption | The RDB store is opened in encrypted mode. | | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. | Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
-If no database file exists in the corresponding sandbox directory, a database file is created. For details, see   
-[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig). If a database file exists in the corresponding directory, the existing database file is opened.
+**Since:** 23
 
-When creating a database, you should consider whether to configure the   
-[encrypt](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) parameter. Once the database is created, you are not allowed to change this parameter.
-
-| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | [Result](arkts-arkdata-relationalstore-result-i.md) |
-| ------- | -------------------------------- | ---- |
-| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |
-| Encryption| Non-encryption |
-
-Currently, **getRdbStore()** does not support multi-thread concurrent operations.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<RdbStore>): void--><!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig, callback: AsyncCallback<RdbStore>): void-End-->
 
@@ -45,21 +34,21 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 | Error Code ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-stage-model-required) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
-| [14800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800017-key-configuration-changed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800020-key-damaged-or-lost) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
+| [14800017](../errorcode-data-rdb.md#14800017-key-configuration-changed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## Examples
 
@@ -124,22 +113,11 @@ class EntryAbility extends UIAbility {
 function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>
 ```
 
-Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses a promise to return the result.
+Obtains an RdbStore instance. You can set the **config** parameter as required and use **RdbStore** APIs to perform data operations. This API uses a promise to return the result. If no database file exists in the corresponding sandbox directory, a database file is created. For details, see [StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig). If a database file exists in the corresponding directory, the existing database file is opened. When creating a database, you should consider whether to configure the [encrypt](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) parameter. Once the database is created, you are not allowed to change this parameter. | Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | Result| | ------- | -------------------------------- | ---- | | Non-encryption| Encryption | The RDB store is opened in encrypted mode. | | Encryption| Non-encryption | The RDB store is opened in non-encrypted mode. | Currently, **getRdbStore()** does not support multi-thread concurrent operations.
 
-If no database file exists in the corresponding sandbox directory, a database file is created. For details, see   
-[StoreConfig](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig). If a database file exists in the corresponding directory, the existing database file is opened.
+**Since:** 23
 
-When creating a database, you should consider whether to configure the   
-[encrypt](arkts-arkdata-relationalstore-storeconfig-i.md#StoreConfig) parameter. Once the database is created, you are not allowed to change this parameter.
-
-| Encryption Type When the RDB Store Is Opened | Encryption Type When the RDB Store Is Created | [Result](arkts-arkdata-relationalstore-result-i.md) |
-| ------- | -------------------------------- | ---- |
-| Non-encryption| Encryption | The RDB store is opened in encrypted mode. |
-| Encryption| Non-encryption |
-
-Currently, **getRdbStore()** does not support multi-thread concurrent operations.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>--><!--Device-relationalStore-function getRdbStore(context: Context, config: StoreConfig): Promise<RdbStore>-End-->
 
@@ -162,21 +140,21 @@ Currently, **getRdbStore()** does not support multi-thread concurrent operations
 
 | Error Code ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-internal-error) |
-| [14801001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801001-stage-model-required) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800010-invalid-database-path) |
-| [14801002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
-| [14800017](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800017-key-configuration-changed) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800020-key-damaged-or-lost) |
-| [14800023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800023-sqlite-access-denied) |
-| [14800022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
-| [14800027](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
-| [14800029](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800000](../errorcode-data-rdb.md#14800000-internal-error) |
+| [14801001](../errorcode-data-rdb.md#14801001-stage-model-required) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800010](../errorcode-data-rdb.md#14800010-invalid-database-path) |
+| [14801002](../errorcode-data-rdb.md#14801002-invalid-datagroupid-in-storeconfig) |
+| [14800017](../errorcode-data-rdb.md#14800017-key-configuration-changed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800020](../errorcode-data-rdb.md#14800020-key-damaged-or-lost) |
+| [14800023](../errorcode-data-rdb.md#14800023-sqlite-access-denied) |
+| [14800022](../errorcode-data-rdb.md#14800022-sqlite-asynchronous-callback-request-aborted) |
+| [14800027](../errorcode-data-rdb.md#14800027-sqlite-attempt-to-write-a-readonly-database) |
+| [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## Examples
 

@@ -1,8 +1,10 @@
-# @ohos.multimodalAwareness.motion(动作感知能力)
+# @ohos.multimodalAwareness.motion
 
 **motion**模块提供用户动作感知能力，包括用户手势和动作。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace motion--><!--Device-unnamed-declare namespace motion-End-->
 
@@ -14,26 +16,30 @@
 
 | 名称 |
 | --- |
-| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md#getrecentoperatinghandstatus) |
-| [off](arkts-multimodalawareness-motion-off-f.md#off) |
-| [off](arkts-multimodalawareness-motion-off-f.md#off-1) |
-| [on](arkts-multimodalawareness-motion-on-f.md#on) |
-| [on](arkts-multimodalawareness-motion-on-f.md#on-1) |
+| [getRecentOperatingHandStatus](arkts-multimodalawareness-motion-getrecentoperatinghandstatus-f.md#getRecentOperatingHandStatus) |
+| [offHoldingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md#offHoldingHandChanged) |
+| [offOperatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md#offOperatingHandChanged) |
+| [off_holdingHandChanged](arkts-multimodalawareness-motion-offholdinghandchanged-f.md) |
+| [off_operatingHandChanged](arkts-multimodalawareness-motion-offoperatinghandchanged-f.md) |
+| [onHoldingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md#onHoldingHandChanged) |
+| [onOperatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md#onOperatingHandChanged) |
+| [on_holdingHandChanged](arkts-multimodalawareness-motion-onholdinghandchanged-f.md) |
+| [on_operatingHandChanged](arkts-multimodalawareness-motion-onoperatinghandchanged-f.md) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md#offhoverhandchange) |
-| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md#offpickupchange) |
-| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md#offrotatechange) |
-| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md#offsmartrotatechange) |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange) |
-| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onhoverhandchange-1) |
-| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md#onpickupchange) |
-| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md#onrotatechange) |
-| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md#onsmartrotatechange) |
+| [offHoverHandChange](arkts-multimodalawareness-motion-offhoverhandchange-f-sys.md#offHoverHandChange（系统接口）) |
+| [offPickupChange](arkts-multimodalawareness-motion-offpickupchange-f-sys.md#offPickupChange（系统接口）) |
+| [offRotateChange](arkts-multimodalawareness-motion-offrotatechange-f-sys.md#offRotateChange（系统接口）) |
+| [offSmartRotateChange](arkts-multimodalawareness-motion-offsmartrotatechange-f-sys.md#offSmartRotateChange（系统接口）) |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onHoverHandChange（系统接口）) |
+| [onHoverHandChange](arkts-multimodalawareness-motion-onhoverhandchange-f-sys.md#onHoverHandChange（系统接口）) |
+| [onPickupChange](arkts-multimodalawareness-motion-onpickupchange-f-sys.md#onPickupChange（系统接口）) |
+| [onRotateChange](arkts-multimodalawareness-motion-onrotatechange-f-sys.md#onRotateChange（系统接口）) |
+| [onSmartRotateChange](arkts-multimodalawareness-motion-onsmartrotatechange-f-sys.md#onSmartRotateChange（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

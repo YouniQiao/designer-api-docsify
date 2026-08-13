@@ -6,6 +6,8 @@ Defines the option of ShowActionMenu.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ShowActionMenuOptions--><!--Device-unnamed-export interface ShowActionMenuOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,6 +18,28 @@ Defines the option of ShowActionMenu.
 import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
 ```
 
+## buttons
+
+```TypeScript
+buttons: [Button, Button?, Button?, Button?, Button?, Button?]
+```
+
+Array of buttons in the dialog box. The array structure is {text:'button', color: '#666666'}. One to six buttons are supported.
+
+**Type:** [Button, Button?, Button?, Button?, Button?, Button?]
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## complete
 
 ```TypeScript
@@ -24,9 +48,13 @@ complete?: () => void
 
 Called when the dialog box is closed.
 
+**Type:** () =&gt; void
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,21 +70,19 @@ fail?: (errMsg: string) => void
 
 Called when the operation is cancelled.
 
+**Type:** (errMsg: string) =&gt; void
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void--><!--Device-ShowActionMenuOptions-fail?: (errMsg: string) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| errMsg | string | Yes |  |
 
 ## success
 
@@ -66,40 +92,17 @@ success?: (tapIndex: number, errMsg: string) => void
 
 Called when the dialog box is displayed.
 
+**Type:** (tapIndex: number, errMsg: string) =&gt; void
+
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void--><!--Device-ShowActionMenuOptions-success?: (tapIndex: number, errMsg: string) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| tapIndex | number | Yes |  |
-| errMsg | string | Yes |  |
-
-## buttons
-
-```TypeScript
-buttons: [Button, Button?, Button?, Button?, Button?, Button?]
-```
-
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to six buttons are supported.
-
-**Type:** [Button, Button?, Button?, Button?, Button?, Button?]
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]--><!--Device-ShowActionMenuOptions-buttons: [Button, Button?, Button?, Button?, Button?, Button?]-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -116,6 +119,8 @@ Title of the text to display.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,16 +1,12 @@
 # PolygonOptions
 
-Describes the options of the polygon.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's @since version number is higher than inner elements'. This does not affect interface usability.
+Describes the options of the polygon. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer > element's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface PolygonOptions--><!--Device-unnamed-declare interface PolygonOptions-End-->
 
@@ -22,14 +18,15 @@ Describes the options of the polygon.
 height?: Length
 ```
 
-Height.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and  
-**Infinity** values are invalid and treated as the default value. Default value: **0**.
+Height. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,13 +42,15 @@ Height.Unit: vp, The value must be greater than or equal to 0, The **undefined**
 width?: Length
 ```
 
-Width.Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity**values are invalid and treated as the default value. Default value: **0**.
+Width. Unit: vp, The value must be greater than or equal to 0, The **undefined**, **null**, **NaN**, and **Infinity** values are invalid and treated as the default value. Default value: **0**.
 
 **Type:** Length
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

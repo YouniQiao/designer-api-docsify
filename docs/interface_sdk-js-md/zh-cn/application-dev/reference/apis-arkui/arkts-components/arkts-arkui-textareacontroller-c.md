@@ -1,26 +1,18 @@
 # TextAreaController
 
-TextArea组件的控制器继承自[TextContentControllerBase](TextContentControllerBase)，涉及的接口有  
-[getTextContentRect](TextContentControllerBase#getTextContentRect)、  
-[getTextContentLineCount](TextContentControllerBase#getTextContentLineCount)、  
-[getCaretOffset](TextContentControllerBase#getCaretOffset)、[addText](TextContentControllerBase#addText)、  
-[deleteText](TextContentControllerBase#deleteText)、[getSelection](TextContentControllerBase#getSelection)、[clearPreviewText](TextContentControllerBase#clearPreviewText)、  
-[setStyledPlaceholder](TextContentControllerBase#setStyledPlaceholder)、  
-[deleteBackward](TextContentControllerBase#deleteBackward)、  
-[scrollToVisible](TextContentControllerBase#scrollToVisible)&lt;!--Del--&gt;以及系统接口  
-[getText](TextContentControllerBase#getText)&lt;!--DelEnd--&gt;。
+TextArea组件的控制器继承自TextContentControllerBase，涉及的接口有 getTextContentRect、 getTextContentLineCount、 getCaretOffset、addText、 deleteText、getSelection 、clearPreviewText、 setStyledPlaceholder、 deleteBackward、 scrollToVisible&lt;!--Del--&gt;以及系统接口 getText&lt;!--DelEnd--&gt;。
 
-## 导入对象
+## 导入对象 ```ts controller: TextAreaController = new TextAreaController(); ```
 
-```ts controller: TextAreaController = new TextAreaController();```
-
-**继承/实现关系：** TextAreaController extends [TextContentControllerBase](TextContentControllerBase)
+**继承/实现关系：** TextAreaController extends TextContentControllerBase
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
-<!--Device-unnamed-declare class TextAreaController extends TextContentControllerBase--><!--Device-unnamed-declare class TextAreaController extends TextContentControllerBase-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class TextAreaController--><!--Device-unnamed-declare class TextAreaController-End-->
 
 **系统能力：** 
 - API版本10+：SystemCapability.ArkUI.ArkUI.Full
@@ -36,6 +28,8 @@ caretPosition(value: number): void
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -61,6 +55,8 @@ TextAreaController的构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TextAreaController-constructor()--><!--Device-TextAreaController-constructor()-End-->
@@ -78,6 +74,8 @@ setTextSelection(selectionStart: number, selectionEnd: number, options?: Selecti
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -106,6 +104,8 @@ stopEditing(): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

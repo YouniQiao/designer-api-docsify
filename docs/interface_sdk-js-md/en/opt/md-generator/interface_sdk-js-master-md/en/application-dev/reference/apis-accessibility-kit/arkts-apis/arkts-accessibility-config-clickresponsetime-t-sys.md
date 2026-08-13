@@ -6,7 +6,9 @@ type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 
 Defines the length of time for a click.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'--><!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'-End-->
 

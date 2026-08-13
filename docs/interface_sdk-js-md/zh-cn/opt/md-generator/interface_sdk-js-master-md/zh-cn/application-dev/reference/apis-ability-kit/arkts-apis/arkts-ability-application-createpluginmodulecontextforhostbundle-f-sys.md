@@ -9,7 +9,9 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 根据入参Context、插件包名和插件模块名和应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -26,7 +28,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i-sys.md) | string | 是 |
 | pluginModuleName | string | 是 |
 | hostBundleName | string | 是 |
 
@@ -40,8 +42,8 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

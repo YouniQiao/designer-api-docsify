@@ -2,11 +2,13 @@
 
 Represents the data sharing result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-cloudExtension-export interface Result<T>--><!--Device-cloudExtension-export interface Result<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-cloudExtension-export interface Result--><!--Device-cloudExtension-export interface Result-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -26,11 +28,13 @@ code: int
 
 Error code.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Result-code: int--><!--Device-Result-code: int-End-->
 
@@ -48,9 +52,11 @@ Detailed description of the error code. The default value is undefined.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Result-description?: string--><!--Device-Result-description?: string-End-->
 
@@ -68,9 +74,11 @@ Value returned. The specific type is specified by the T parameter. The default v
 
 **Type:** T
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Result-value?: T--><!--Device-Result-value?: T-End-->
 

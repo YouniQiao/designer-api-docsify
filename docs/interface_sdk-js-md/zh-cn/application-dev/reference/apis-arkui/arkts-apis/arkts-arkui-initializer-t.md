@@ -1,28 +1,22 @@
 # Initializer
 
 ```TypeScript
-export type Initializer<T> = (...params: FixedArray<RecordData>) => T
+declare type Initializer<T> = () => T
 ```
 
-可以将属性更新到本地的修饰器。
+组件属性的初始化函数类型，用于创建并返回组件的属性实例。
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export type Initializer<T> = (...params: FixedArray<RecordData>) => T--><!--Device-unnamed-export type Initializer<T> = (...params: FixedArray<RecordData>) => T-End-->
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
-**参数：**
+<!--Device-unnamed-declare type Initializer<T> = () => T--><!--Device-unnamed-declare type Initializer<T> = () => T-End-->
 
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| params | FixedArray&lt;[RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt; | 是 |  |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| T | 返回当前组件。 |
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

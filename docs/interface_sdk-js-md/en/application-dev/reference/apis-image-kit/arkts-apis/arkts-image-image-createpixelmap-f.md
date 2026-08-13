@@ -12,13 +12,13 @@ import { image } from '@kit.ImageKit';
 function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback<PixelMap>): void
 ```
 
-Create pixelmap by data buffer.
+Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback<PixelMap>): void--><!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions, callback: AsyncCallback<PixelMap>): void-End-->
 
@@ -30,7 +30,7 @@ Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](ar
 | --- | --- | --- | --- |
 | colors | ArrayBuffer | Yes | The image color buffer. |
 | options | [InitializationOptions](arkts-image-image-initializationoptions-i.md) | Yes | Initialization options for pixelmap. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PixelMap&gt; | Yes | Callback used to return the PixelMap object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PixelMap&gt; | Yes | Callback used to return the PixelMap object. |
 
 ## Examples
 
@@ -58,13 +58,13 @@ async function CreatePixelMap() {
 function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise<PixelMap>
 ```
 
-Create pixelmap by data buffer.
+Create pixelmap by data buffer. Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
 
-Starting from API 26.0.0, it is recommended to use [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createPixelMapFromPixels) instead for better exception handling capabilities.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise<PixelMap>--><!--Device-image-function createPixelMap(colors: ArrayBuffer, options: InitializationOptions): Promise<PixelMap>-End-->
 

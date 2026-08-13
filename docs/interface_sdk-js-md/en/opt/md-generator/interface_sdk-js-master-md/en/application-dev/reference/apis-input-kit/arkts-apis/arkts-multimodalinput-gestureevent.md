@@ -1,7 +1,4 @@
-# @ohos.multimodalInput.gestureEvent(Gesture Event)
-
-The **gestureEvent** module provides APIs for gesture events reported by devices.
-
+# @ohos.multimodalInput.gestureEvent
 
 ## Modules to Import
 

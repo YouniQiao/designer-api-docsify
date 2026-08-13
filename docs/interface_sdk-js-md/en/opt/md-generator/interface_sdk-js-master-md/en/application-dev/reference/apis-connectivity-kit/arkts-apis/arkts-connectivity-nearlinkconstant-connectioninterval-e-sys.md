@@ -4,6 +4,8 @@ The enum of connection interval values.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-nearlinkConstant-export enum ConnectionInterval--><!--Device-nearlinkConstant-export enum ConnectionInterval-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -19,6 +21,8 @@ HIGH_SPEED_INTERVAL_4_5 = 0
 Connection interval 4.5ms.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Connection interval 4.875ms.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionInterval-HIGH_SPEED_INTERVAL_4_875 = 1--><!--Device-ConnectionInterval-HIGH_SPEED_INTERVAL_4_875 = 1-End-->
@@ -55,6 +61,8 @@ MID_SPEED_INTERVAL_11_25 = 2
 Connection interval 11.25ms.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Connection interval 15ms.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3-End-->
@@ -91,6 +101,8 @@ MID_SPEED_INTERVAL_50 = 4
 Connection interval 50ms.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +122,8 @@ Connection interval 100ms.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_100 = 5--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_100 = 5-End-->
@@ -127,6 +141,8 @@ LOW_SPEED_INTERVAL_150 = 6
 Connection interval 150ms.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +162,8 @@ Connection interval 200ms.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_200 = 7--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_200 = 7-End-->
@@ -164,6 +182,8 @@ Connection interval 300ms.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_300 = 8--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_300 = 8-End-->
@@ -181,6 +201,8 @@ LOW_SPEED_INTERVAL_500 = 9
 Connection interval 500ms.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

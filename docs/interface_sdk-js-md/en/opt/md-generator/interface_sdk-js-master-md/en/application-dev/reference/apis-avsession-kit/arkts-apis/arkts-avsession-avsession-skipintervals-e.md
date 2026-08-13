@@ -2,7 +2,9 @@
 
 Supported skip intervals definition
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum SkipIntervals--><!--Device-avSession-enum SkipIntervals-End-->
 
@@ -16,7 +18,9 @@ SECONDS_10 = 10
 
 10 seconds
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SkipIntervals-SECONDS_10 = 10--><!--Device-SkipIntervals-SECONDS_10 = 10-End-->
 
@@ -30,7 +34,9 @@ SECONDS_15 = 15
 
 15 seconds
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SkipIntervals-SECONDS_15 = 15--><!--Device-SkipIntervals-SECONDS_15 = 15-End-->
 
@@ -44,7 +50,9 @@ SECONDS_30 = 30
 
 30 seconds
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SkipIntervals-SECONDS_30 = 30--><!--Device-SkipIntervals-SECONDS_30 = 30-End-->
 

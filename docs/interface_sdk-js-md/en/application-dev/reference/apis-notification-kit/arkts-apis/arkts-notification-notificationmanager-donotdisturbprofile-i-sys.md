@@ -2,9 +2,11 @@
 
 Do Not Disturb profile.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface DoNotDisturbProfile--><!--Device-notificationManager-export interface DoNotDisturbProfile-End-->
 
@@ -26,11 +28,13 @@ id: long
 
 ID of the Do Not Disturb profile.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DoNotDisturbProfile-id: long--><!--Device-DoNotDisturbProfile-id: long-End-->
 
@@ -48,9 +52,11 @@ Name of the Do Not Disturb profile.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DoNotDisturbProfile-name: string--><!--Device-DoNotDisturbProfile-name: string-End-->
 
@@ -68,9 +74,11 @@ Trustlist in Do Not Disturb profile.
 
 **Type:** Array&lt;BundleOption&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DoNotDisturbProfile-trustlist?: Array<BundleOption>--><!--Device-DoNotDisturbProfile-trustlist?: Array<BundleOption>-End-->
 

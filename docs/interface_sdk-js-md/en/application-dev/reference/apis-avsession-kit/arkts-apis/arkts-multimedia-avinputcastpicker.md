@@ -12,5 +12,11 @@ import { AVInputCastPicker } from '@kit.AVSessionKit';
 
 | Name | Description |
 | --- | --- |
-| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) | A picker view to show availale input device list. |
+| [AVInputCastPicker](arkts-avsession-multimedia-avinputcastpicker-avinputcastpicker-s.md) | Picker used to show available input devices. |
+
+### Types
+
+| Name | Description |
+| --- | --- |
+| [OnPickerStateCallback](arkts-avsession-onpickerstatecallback-t.md) | Callback for picker state |
 

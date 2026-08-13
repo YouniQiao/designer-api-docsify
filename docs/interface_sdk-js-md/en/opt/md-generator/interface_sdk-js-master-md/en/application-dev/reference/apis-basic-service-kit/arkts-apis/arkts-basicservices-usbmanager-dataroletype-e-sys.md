@@ -2,7 +2,9 @@
 
 Enumerates data role types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum DataRoleType--><!--Device-usbManager-export enum DataRoleType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 No function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataRoleType-NONE = 0--><!--Device-DataRoleType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ HOST = 1
 
 Host mode
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataRoleType-HOST = 1--><!--Device-DataRoleType-HOST = 1-End-->
 
@@ -50,7 +56,9 @@ DEVICE = 2
 
 Device mode
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DataRoleType-DEVICE = 2--><!--Device-DataRoleType-DEVICE = 2-End-->
 

@@ -18,7 +18,7 @@ Obtains the current system date. This API uses an asynchronous callback to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate)
+**Substitutes:** [setDate](arkts-basicservices-systemdatetime-setdate-f-sys.md#setDate-(System-API))
 
 <!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void--><!--Device-systemTime-function getDate(callback: AsyncCallback<Date>): void-End-->
 

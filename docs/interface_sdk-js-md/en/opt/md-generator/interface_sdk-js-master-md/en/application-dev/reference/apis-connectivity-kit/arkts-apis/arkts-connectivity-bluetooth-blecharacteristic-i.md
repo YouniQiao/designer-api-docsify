@@ -6,7 +6,7 @@ Describes the Gatt characteristic.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLECharacteristic](ohos.bluetoothManager/bluetoothManager.BLECharacteristic)
+**Substitutes:** [BLECharacteristic](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#BLECharacteristic)
 
 <!--Device-bluetooth-interface BLECharacteristic--><!--Device-bluetooth-interface BLECharacteristic-End-->
 
@@ -32,7 +32,7 @@ The UUID of a BLECharacteristic instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicUuid](ohos.bluetoothManager/bluetoothManager.BLECharacteristic.characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#characteristicUuid)
 
 <!--Device-BLECharacteristic-characteristicUuid: string--><!--Device-BLECharacteristic-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The value of a BLECharacteristic instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicValue](ohos.bluetoothManager/bluetoothManager.BLECharacteristic.characteristicValue)
+**Substitutes:** [characteristicValue](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#characteristicValue)
 
 <!--Device-BLECharacteristic-characteristicValue: ArrayBuffer--><!--Device-BLECharacteristic-characteristicValue: ArrayBuffer-End-->
 
@@ -72,7 +72,7 @@ The list of [BLEDescriptor](arkts-connectivity-bluetooth-bledescriptor-i.md#BLED
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptors](ohos.bluetoothManager/bluetoothManager.BLECharacteristic.descriptors)
+**Substitutes:** [descriptors](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#descriptors)
 
 <!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>--><!--Device-BLECharacteristic-descriptors: Array<BLEDescriptor>-End-->
 
@@ -92,7 +92,7 @@ The UUID of the [GattService](arkts-connectivity-bluetooth-gattservice-i.md#Gatt
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.BLECharacteristic.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-blecharacteristic-i.md#serviceUuid)
 
 <!--Device-BLECharacteristic-serviceUuid: string--><!--Device-BLECharacteristic-serviceUuid: string-End-->
 

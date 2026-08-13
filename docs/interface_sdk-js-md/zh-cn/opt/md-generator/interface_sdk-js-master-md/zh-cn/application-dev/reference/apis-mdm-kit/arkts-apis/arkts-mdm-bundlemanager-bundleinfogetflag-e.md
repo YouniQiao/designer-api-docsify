@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-bundleManager-export enum BundleInfoGetFlag--><!--Device-bundleManager-export enum BundleInfoGetFlag-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ DEFAULT = 0
 用于获取默认包信息，不包含applicationInfo、signatureInfo的信息。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ WITH_APPLICATION_INFO = 1 << 0
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BundleInfoGetFlag-WITH_APPLICATION_INFO = 1 << 0--><!--Device-BundleInfoGetFlag-WITH_APPLICATION_INFO = 1 << 0-End-->
@@ -50,6 +56,8 @@ WITH_SIGNATURE_INFO = 1 << 1
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-BundleInfoGetFlag-WITH_SIGNATURE_INFO = 1 << 1--><!--Device-BundleInfoGetFlag-WITH_SIGNATURE_INFO = 1 << 1-End-->
@@ -65,6 +73,8 @@ WITH_APPLICATION_ICON_INFO = 1 << 2
 用于获取默认包信息和applicationInfo的iconData信息。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

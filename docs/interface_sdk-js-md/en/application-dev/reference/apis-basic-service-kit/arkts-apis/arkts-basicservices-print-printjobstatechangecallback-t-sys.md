@@ -4,11 +4,13 @@
 type PrintJobStateChangeCallback = (state: PrintJobState, job: PrintJob) => void
 ```
 
-Defines the callback type used in registering to listen for PrintJobState.The value of state indicates the state of print job.The value of job indicates the latest print job info.
+Defines the callback type used in registering to listen for PrintJobState. The value of state indicates the state of print job. The value of job indicates the latest print job info.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-type PrintJobStateChangeCallback = (state: PrintJobState, job: PrintJob) => void--><!--Device-print-type PrintJobStateChangeCallback = (state: PrintJobState, job: PrintJob) => void-End-->
 

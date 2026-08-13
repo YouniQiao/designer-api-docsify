@@ -10,6 +10,8 @@ Defines GestureGroup Component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const GestureGroup: GestureGroupInterface--><!--Device-unnamed-declare const GestureGroup: GestureGroupInterface-End-->
@@ -25,6 +27,8 @@ declare const LongPressGesture: LongPressGestureInterface
 Defines LongPressGesture Component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,6 +46,8 @@ Defines PanGesture Component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const PanGesture: PanGestureInterface--><!--Device-unnamed-declare const PanGesture: PanGestureInterface-End-->
@@ -57,6 +63,8 @@ declare const PinchGesture: PinchGestureInterface
 Defines PinchGesture Component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -74,6 +82,8 @@ Defines RotationGesture Component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const RotationGesture: RotationGestureInterface--><!--Device-unnamed-declare const RotationGesture: RotationGestureInterface-End-->
@@ -90,6 +100,8 @@ Defines SwipeGesture Component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-unnamed-declare const SwipeGesture: SwipeGestureInterface--><!--Device-unnamed-declare const SwipeGesture: SwipeGestureInterface-End-->
@@ -105,6 +117,8 @@ declare const TapGesture: TapGestureInterface
 Defines TapGesture Component.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

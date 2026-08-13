@@ -18,7 +18,7 @@ Restarts the system.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot)
+**Substitutes:** [reboot](arkts-basicservices-power-reboot-f-sys.md#reboot-(System-API))
 
 **Required permissions:** ohos.permission.REBOOT
 

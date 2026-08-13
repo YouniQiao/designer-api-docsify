@@ -1,9 +1,10 @@
 # KeyboardController
 
-下列API均需使用  
-[on('inputStart')](inputMethodEngine.InputMethodAbility.on(type: 'inputStart', callback: (kbController: KeyboardController, inputClient: InputClient) => void))获取到KeyboardController实例后，通过实例调用。
+下列API均需使用 on('inputStart') 获取到KeyboardController实例后，通过实例调用。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface KeyboardController--><!--Device-inputMethodEngine-interface KeyboardController-End-->
 
@@ -17,7 +18,9 @@ exitCurrentInputType(callback: AsyncCallback<void>): void
 
 退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardController-exitCurrentInputType(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-exitCurrentInputType(callback: AsyncCallback<void>): void-End-->
 
@@ -33,8 +36,8 @@ exitCurrentInputType(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -58,7 +61,9 @@ exitCurrentInputType(): Promise<void>
 
 退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardController-exitCurrentInputType(): Promise<void>--><!--Device-KeyboardController-exitCurrentInputType(): Promise<void>-End-->
 
@@ -74,8 +79,8 @@ exitCurrentInputType(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [12800010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800010](../errorcode-inputmethod-framework.md#12800010-不是系统配置的默认输入法) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 
@@ -97,7 +102,9 @@ hide(callback: AsyncCallback<void>): void
 
 隐藏输入法。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardController-hide(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hide(callback: AsyncCallback<void>): void-End-->
 
@@ -113,7 +120,7 @@ hide(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## 示例
 
@@ -137,7 +144,9 @@ hide(): Promise<void>
 
 隐藏输入法。使用promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-KeyboardController-hide(): Promise<void>--><!--Device-KeyboardController-hide(): Promise<void>-End-->
 
@@ -153,7 +162,7 @@ hide(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [12800003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) |
 
 ## 示例
 
@@ -179,7 +188,7 @@ hideKeyboard(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [hide](inputMethodEngine.KeyboardController.hide(callback:)
+**替代接口：** [hide](#hide)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void-End-->
 

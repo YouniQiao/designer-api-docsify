@@ -2,7 +2,9 @@
 
 长时任务类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-export enum BackgroundMode--><!--Device-backgroundTaskManager-export enum BackgroundMode-End-->
 
@@ -14,11 +16,11 @@
 WIFI_INTERACTION = 7
 ```
 
-WLAN相关。
+WLAN相关。 **系统API**: 此接口为系统接口。
 
-**系统API**: 此接口为系统接口。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-BackgroundMode-WIFI_INTERACTION = 7--><!--Device-BackgroundMode-WIFI_INTERACTION = 7-End-->
 

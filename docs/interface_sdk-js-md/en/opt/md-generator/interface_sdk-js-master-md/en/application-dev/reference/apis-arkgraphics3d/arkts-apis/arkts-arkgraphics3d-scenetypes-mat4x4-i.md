@@ -4,6 +4,8 @@ A camera matrix, which is a mathematical tool for transforming 3D world coordina
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface Mat4x4--><!--Device-unnamed-export interface Mat4x4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -19,6 +21,8 @@ The fourth column of the matrix, represented as a four-dimensional vector.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mat4x4-w: Vec4--><!--Device-Mat4x4-w: Vec4-End-->
 
@@ -36,6 +40,8 @@ The first column of the matrix, represented as a four-dimensional vector.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-Mat4x4-x: Vec4--><!--Device-Mat4x4-x: Vec4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -52,6 +58,8 @@ The second column of the matrix, represented as a four-dimensional vector.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-Mat4x4-y: Vec4--><!--Device-Mat4x4-y: Vec4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -67,6 +75,8 @@ The third column of the matrix, represented as a four-dimensional vector.
 **Type:** [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Mat4x4-z: Vec4--><!--Device-Mat4x4-z: Vec4-End-->
 

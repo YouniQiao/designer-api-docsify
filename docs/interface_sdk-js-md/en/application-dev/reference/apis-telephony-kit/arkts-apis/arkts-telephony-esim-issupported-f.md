@@ -14,9 +14,11 @@ function isSupported(slotId: int): boolean
 
 Whether embedded subscriptions are currently supported.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-function isSupported(slotId: int): boolean--><!--Device-eSIM-function isSupported(slotId: int): boolean-End-->
 
@@ -26,7 +28,7 @@ Whether embedded subscriptions are currently supported.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index number. |
+| slotId | int | Yes | Indicates the card slot index number. |
 
 **Return value:**
 
@@ -38,9 +40,9 @@ Whether embedded subscriptions are currently supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [3120002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
-| [3120001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [3120002](../errorcode-telephony.md#3120002-system-internal-error) | System internal error. |
+| [3120001](../errorcode-telephony.md#3120001-service-connection-error) | Service connection failed. |
 
 ## Examples
 

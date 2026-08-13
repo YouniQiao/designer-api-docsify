@@ -1,18 +1,12 @@
 # MediaSourceInfo
 
-表示媒体源的信息。
+表示媒体源的信息。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
-> **说明：**
-> 
-> - 本模块同时支持ArkTS-Dyn、ArkTS-Sta。
-> 
-> - 本Class首批接口从API version 12开始支持。
-> 
-> - 示例效果请以真机运行为准。
+**起始版本：** 12
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
 <!--Device-webview-class MediaSourceInfo--><!--Device-webview-class MediaSourceInfo-End-->
 
@@ -28,9 +22,13 @@ format: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceInfo-format: string--><!--Device-MediaSourceInfo-format: string-End-->
 
@@ -46,9 +44,13 @@ source: string
 
 **类型：** string
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaSourceInfo-source: string--><!--Device-MediaSourceInfo-source: string-End-->
 
@@ -64,9 +66,11 @@ type: SourceType
 
 **类型：** SourceType
 
-**起始版本：** 23
+**起始版本：** 12
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 <!--Device-MediaSourceInfo-type: SourceType--><!--Device-MediaSourceInfo-type: SourceType-End-->
 

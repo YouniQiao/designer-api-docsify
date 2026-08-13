@@ -1,12 +1,14 @@
 # List
 
-List is implemented based on the singly linked list. Each node has a reference pointing to the next element.When querying an element, the system traverses the list from the beginning.
+List is implemented based on the singly linked list. Each node has a reference pointing to the next element. When querying an element, the system traverses the list from the beginning.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-declare class List<T>--><!--Device-unnamed-declare class List<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class List--><!--Device-unnamed-declare class List-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -26,7 +28,9 @@ returns an iterator. Each item of the iterator is a ArkTS Object
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -52,6 +56,8 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-[Symbol.iterator](): IterableIterator<T>--><!--Device-List-[Symbol.iterator](): IterableIterator<T>-End-->
@@ -68,7 +74,7 @@ returns an iterator.Each item of the iterator is a Javascript Object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## Examples
 
@@ -109,9 +115,11 @@ add(element: T): boolean
 
 Adds an element at the end of this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -135,7 +143,7 @@ Adds an element at the end of this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The add method cannot be bound. |
 
 ## Examples
 
@@ -163,9 +171,11 @@ clear(): void
 
 Clears this List and sets its length to **0**.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -177,7 +187,7 @@ Clears this List and sets its length to **0**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The clear method cannot be bound. |
 
 ## Examples
 
@@ -200,9 +210,11 @@ constructor()
 
 A constructor used to create a **List** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -214,7 +226,7 @@ A constructor used to create a **List** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The List's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The List's constructor cannot be directly invoked. |
 
 ## Examples
 
@@ -230,9 +242,11 @@ convertToArray(): Array<T>
 
 Converts this List into an array and returns the array.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -250,7 +264,7 @@ Converts this List into an array and returns the array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The convertToArray method cannot be bound. |
 
 ## Examples
 
@@ -276,6 +290,8 @@ Compares whether a specified object is equal to this List.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-equal(obj: Object): boolean--><!--Device-List-equal(obj: Object): boolean-End-->
@@ -298,7 +314,7 @@ Compares whether a specified object is equal to this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
 
 ## Examples
 
@@ -325,7 +341,9 @@ Compares the specified object with this list for equality.if the object are the 
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -349,7 +367,7 @@ Compares the specified object with this list for equality.if the object are the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The equal method cannot be bound. |
 
 ## forEach
 
@@ -362,6 +380,8 @@ Uses a callback to traverse each element in the **List** instance.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -380,7 +400,7 @@ Uses a callback to traverse each element in the **List** instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
 
 ## Examples
 
@@ -409,7 +429,9 @@ Replaces each element of this list with the result of applying the operator to t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -427,21 +449,17 @@ Replaces each element of this list with the result of applying the operator to t
 
 ## get
 
-ArkTS-Dyn:
-```TypeScript
-get(index: number): T
-```
-
-ArkTS-Sta:
 ```TypeScript
 get(index: int): T
 ```
 
 Obtains the element at the specified position in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -453,7 +471,7 @@ Obtains the element at the specified position in this List.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Return value:**
 
@@ -465,8 +483,8 @@ Obtains the element at the specified position in this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The get method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -491,9 +509,11 @@ getFirst(): T
 
 Obtains the first element in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -511,8 +531,8 @@ Obtains the first element in this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getFirst method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -528,21 +548,17 @@ console.info("result:", result);  // result: 2
 
 ## getIndexOf
 
-ArkTS-Dyn:
-```TypeScript
-getIndexOf(element: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getIndexOf(element: T): int
 ```
 
 Obtains the index of the first occurrence of the specified element in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -560,13 +576,13 @@ Obtains the index of the first occurrence of the specified element in this List.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
+| int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -591,9 +607,11 @@ getLast(): T
 
 Obtains the last element in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -611,8 +629,8 @@ Obtains the last element in this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
-| [10200010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLast method cannot be bound. |
+| [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty.<br>**Applicable version:** 23 and later  **ArkTS mode:** This error code applies only to ArkTS-Sta. |
 
 ## Examples
 
@@ -628,21 +646,17 @@ console.info("result:", result);  // result: 4
 
 ## getLastIndexOf
 
-ArkTS-Dyn:
-```TypeScript
-getLastIndexOf(element: T): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLastIndexOf(element: T): int
 ```
 
 Obtains the index of the last occurrence of the specified element in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -660,13 +674,13 @@ Obtains the index of the last occurrence of the specified element in this List.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Index of the element. If no match is found, **-1** is returned. |
+| int | Index of the element. If no match is found, **-1** is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getLastIndexOf method cannot be bound. |
 
 ## Examples
 
@@ -685,21 +699,17 @@ console.info("result:", result); // result: 5
 
 ## getSubList
 
-ArkTS-Dyn:
-```TypeScript
-getSubList(fromIndex: number, toIndex: number): List<T>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSubList(fromIndex: int, toIndex: int): List<T>
 ```
 
 Obtains elements within a range in this List, including the element at the start position but not that at the end position, and returns these elements as a new **List** instance.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -711,8 +721,8 @@ Obtains elements within a range in this List, including the element at the start
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the start position. |
-| toIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the end position. |
+| fromIndex | int | Yes | Index of the start position. |
+| toIndex | int | Yes | Index of the end position. |
 
 **Return value:**
 
@@ -724,8 +734,8 @@ Obtains elements within a range in this List, including the element at the start
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getSubList method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The getSubList method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of fromIndex or toIndex is out of range. |
 
 ## Examples
 
@@ -747,9 +757,11 @@ has(element: T): boolean
 
 Checks whether this List has the specified element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -773,7 +785,7 @@ Checks whether this List has the specified element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The has method cannot be bound. |
 
 ## Examples
 
@@ -786,21 +798,17 @@ console.info("result:", result);  // result: true
 
 ## insert
 
-ArkTS-Dyn:
-```TypeScript
-insert(element: T, index: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 insert(element: T, index: int): void
 ```
 
 Inserts an element at the specified position in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -813,14 +821,14 @@ Inserts an element at the specified position in this List.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | element | T | Yes | Target element. |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Index of the position where the element is to be inserted. The value must be less than or equal to int32_max, that is, 2147483647. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The insert method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -840,9 +848,11 @@ isEmpty(): boolean
 
 Checks whether this List is empty (contains no element).
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -860,7 +870,7 @@ Checks whether this List is empty (contains no element).
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The isEmpty method cannot be bound. |
 
 ## Examples
 
@@ -882,9 +892,11 @@ remove(element: T): boolean
 
 Removes the first occurrence of the specified element from this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -908,7 +920,7 @@ Removes the first occurrence of the specified element from this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The remove method cannot be bound. |
 
 ## Examples
 
@@ -934,6 +946,8 @@ Searches for an element based on its index and then removes it.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-List-removeByIndex(index: number): T--><!--Device-List-removeByIndex(index: number): T-End-->
@@ -956,8 +970,8 @@ Searches for an element based on its index and then removes it.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The removeByIndex method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -982,7 +996,9 @@ Find the corresponding element according to the index.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -1006,7 +1022,7 @@ Find the corresponding element according to the index.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && <= \\${length - 1}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && <= \\${length - 1}. Received value is: \\${index} |
 
 ## replaceAllElements
 
@@ -1019,6 +1035,8 @@ Replaces all elements in this List with new elements, and returns the new ones.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1037,7 +1055,7 @@ Replaces all elements in this List with new elements, and returns the new ones.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The replaceAllElements method cannot be bound. |
 
 ## Examples
 
@@ -1068,7 +1086,9 @@ Replaces each element of this list with the result of applying the operator to t
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1086,21 +1106,17 @@ Replaces each element of this list with the result of applying the operator to t
 
 ## set
 
-ArkTS-Dyn:
-```TypeScript
-set(index: number, element: T): T
-```
-
-ArkTS-Sta:
 ```TypeScript
 set(index: int, element: T): T
 ```
 
 Replaces an element at the specified position in this List with a given element.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1112,7 +1128,7 @@ Replaces an element at the specified position in this List with a given element.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
+| index | int | Yes | Position index of the target element. The value must be less than or equal to int32_max, that is, 2147483647. |
 | element | T | Yes | Element to be used for replacement. |
 
 **Return value:**
@@ -1125,8 +1141,8 @@ Replaces an element at the specified position in this List with a given element.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of index is out of range. |
 
 ## Examples
 
@@ -1148,9 +1164,11 @@ sort(comparator: ListComparatorFn<T>): void
 
 Sorts elements in this List.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1168,7 +1186,7 @@ Sorts elements in this List.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
 
 ## Examples
 
@@ -1185,26 +1203,6 @@ list.sort((a: number, b: number) => b - a);  // The elements are sorted in desce
 console.info("result:", list.convertToArray());  // result: 4,3,2,1
 ```
 
-## [index: int]
-
-```TypeScript
-[index: int]: T
-```
-
-Returns the item at that index.
-
-**Type:** T
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 23.
-
-<!--Device-List-[index: int]: T--><!--Device-List-[index: int]: T-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## length
 
 ```TypeScript
@@ -1217,7 +1215,9 @@ Number of elements in a List.
 
 **Since:** 8
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

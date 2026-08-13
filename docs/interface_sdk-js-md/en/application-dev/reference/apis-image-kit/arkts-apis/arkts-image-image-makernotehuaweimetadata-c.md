@@ -1,16 +1,16 @@
 # MakerNoteHuaweiMetadata
 
-MakerNoteHuaweiMetadata implements Metadata
-
-Photo metadata from Huawei cameras.
+MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras.
 
 **Inheritance/Implementation:** MakerNoteHuaweiMetadata implements [Metadata](arkts-image-image-metadata-i.md#Metadata)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-image-class MakerNoteHuaweiMetadata implements Metadata--><!--Device-image-class MakerNoteHuaweiMetadata implements Metadata-End-->
+**Deprecated since:** -1
+
+<!--Device-image-class MakerNoteHuaweiMetadata--><!--Device-image-class MakerNoteHuaweiMetadata-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -30,7 +30,9 @@ Clones [MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata) metadata. This API re
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +56,9 @@ Returns an empty [MakerNoteHuaweiMetadata](#MakerNoteHuaweiMetadata) instance.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +82,9 @@ Obtains all properties and their values from the image metadata. This API return
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +108,9 @@ Obtains the metadata in binary format. This API uses a promise to return the res
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,7 +134,9 @@ Obtains the property values from image metadata. This API returns the result asy
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,7 +160,7 @@ Obtains the property values from image metadata. This API returns the result asy
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## setBlob
 
@@ -162,7 +172,9 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -186,7 +198,7 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) | Invalid parameter. Possible causes: The blob is empty or has a length of 0. |
 
 ## setProperties
 
@@ -194,13 +206,13 @@ Replaces the current metadata with binary data. This API uses a promise to retur
 setProperties(records: Record<string, string | null>): Promise<void>
 ```
 
-Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise.
-
-For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
+Sets the values of specified properties in image metadata in batches. This API returns the result asynchronously through a promise. For details about the properties, see [PropertyKey](arkts-image-image-propertykey-e.md#PropertyKey).
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -224,7 +236,7 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
+| [7600202](../errorcode-image.md#7600202-unsupported-metadata-readwrite-operation) | Unsupported metadata. Possible causes: unsupported metadata type. |
 
 ## burstNumber
 
@@ -232,13 +244,15 @@ For details about the properties, see [PropertyKey](arkts-image-image-propertyke
 burstNumber?: int
 ```
 
-Number of burst shots.The value range is all integers.
+Number of burst shots. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,13 +266,15 @@ Number of burst shots.The value range is all integers.
 captureMode?: int
 ```
 
-Capture mode.The value range is all integers.
+Capture mode. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,7 +294,9 @@ Cloud enhancement label.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -294,11 +312,13 @@ faceConfidences?: int[]
 
 Confidences of a specified number of faces.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,13 +332,15 @@ Confidences of a specified number of faces.
 faceCount?: int
 ```
 
-Number of faces.The value range is all integers.
+Number of faces. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -334,11 +356,13 @@ faceSmileScores?: int[]
 
 Smile scores of a specified number of faces.
 
-**Type:** ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[]
+**Type:** int[]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -358,7 +382,9 @@ Lens focus control policy, which determines how the camera adjusts the focal len
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -378,7 +404,9 @@ Whether the image has been cloud-enhanced. **true** indicates yes; **false** ind
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -398,7 +426,9 @@ Whether to use the front camera. **true** indicates yes; **false** indicates no.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -412,13 +442,15 @@ Whether to use the front camera. **true** indicates yes; **false** indicates no.
 isWindSnapshot?: boolean
 ```
 
-Whether the wind snapshot mode is used. **true** indicates yes; **false** indicates no.This mode is a specialized photography mode designed for capturing fast-moving subjects or scenes prone to blurring, such as in windy conditions or when photographing moving objects.
+Whether the wind snapshot mode is used. **true** indicates yes; **false** indicates no. This mode is a specialized photography mode designed for capturing fast-moving subjects or scenes prone to blurring, such as in windy conditions or when photographing moving objects.
 
 **Type:** boolean
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -438,7 +470,9 @@ Whether XMAGE is supported. **true** indicates yes; **false** indicates no.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -452,13 +486,15 @@ Whether XMAGE is supported. **true** indicates yes; **false** indicates no.
 physicalAperture?: int
 ```
 
-Physical aperture, in fNumber.The value range is all integers.
+Physical aperture, in fNumber. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -472,13 +508,15 @@ Physical aperture, in fNumber.The value range is all integers.
 pitchAngle?: int
 ```
 
-Pitch angle.The value range is all integers.
+Pitch angle. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -492,13 +530,15 @@ Pitch angle.The value range is all integers.
 rollAngle?: int
 ```
 
-Horizontal pan angle.The value range is all integers.
+Horizontal pan angle. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -512,13 +552,15 @@ Horizontal pan angle.The value range is all integers.
 sceneBeachConfidence?: int
 ```
 
-Capture scene: beach confidence.The value range is all integers.
+Capture scene: beach confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -532,13 +574,15 @@ Capture scene: beach confidence.The value range is all integers.
 sceneBlueSkyConfidence?: int
 ```
 
-Capture scene: blue sky confidence.The value range is all integers.
+Capture scene: blue sky confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -552,13 +596,15 @@ Capture scene: blue sky confidence.The value range is all integers.
 sceneFlowersConfidence?: int
 ```
 
-Capture scene: flower confidence.The value range is all integers.
+Capture scene: flower confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,13 +618,15 @@ Capture scene: flower confidence.The value range is all integers.
 sceneFoodConfidence?: int
 ```
 
-Capture scene: food confidence.The value range is all integers.
+Capture scene: food confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -592,13 +640,15 @@ Capture scene: food confidence.The value range is all integers.
 sceneGreenPlantConfidence?: int
 ```
 
-Capture scene: green plant confidence.The value range is all integers.
+Capture scene: green plant confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -612,13 +662,15 @@ Capture scene: green plant confidence.The value range is all integers.
 sceneNightConfidence?: int
 ```
 
-Capture scene: night scene confidence.The value range is all integers.
+Capture scene: night scene confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,13 +684,15 @@ Capture scene: night scene confidence.The value range is all integers.
 sceneSnowConfidence?: int
 ```
 
-Capture scene: snow confidence.The value range is all integers.
+Capture scene: snow confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -652,13 +706,15 @@ Capture scene: snow confidence.The value range is all integers.
 sceneStageConfidence?: int
 ```
 
-Capture scene: stage performance confidence.The value range is all integers.
+Capture scene: stage performance confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -672,13 +728,15 @@ Capture scene: stage performance confidence.The value range is all integers.
 sceneSunsetConfidence?: int
 ```
 
-Capture scene: sunset confidence.The value range is all integers.
+Capture scene: sunset confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -692,13 +750,15 @@ Capture scene: sunset confidence.The value range is all integers.
 sceneTextConfidence?: int
 ```
 
-Capture scene: text confidence.The value range is all integers.
+Capture scene: text confidence. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -712,13 +772,15 @@ Capture scene: text confidence.The value range is all integers.
 sceneVersion?: int
 ```
 
-Version number of the scene recognition algorithm.The value range is all integers.
+Version number of the scene recognition algorithm. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -732,13 +794,15 @@ Version number of the scene recognition algorithm.The value range is all integer
 xmageBottom?: int
 ```
 
-Vertical coordinate of the bottom boundary of the effective content area (excluding the watermark coverage area)on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
+Vertical coordinate of the bottom boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -758,7 +822,9 @@ XMAGE color mode.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -772,13 +838,15 @@ XMAGE color mode.
 xmageLeft?: int
 ```
 
-Horizontal coordinate of the left boundary of the effective content area (excluding the watermark coverage area)on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
+Horizontal coordinate of the left boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -792,13 +860,15 @@ Horizontal coordinate of the left boundary of the effective content area (exclud
 xmageRight?: int
 ```
 
-Horizontal coordinate of the right boundary of the effective content area (excluding the watermark coverage area)on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
+Horizontal coordinate of the right boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -812,13 +882,15 @@ Horizontal coordinate of the right boundary of the effective content area (exclu
 xmageTop?: int
 ```
 
-Vertical coordinate of the top boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px.The value range is all integers.
+Vertical coordinate of the top boundary of the effective content area (excluding the watermark coverage area) on the original image, relative to the top-left origin of the image. The unit is px. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -832,13 +904,15 @@ Vertical coordinate of the top boundary of the effective content area (excluding
 xmageWatermarkMode?: int
 ```
 
-XMAGE watermark mode. For details, see [Constants](@ohos.multimedia.image:image.Constants).The value range is all integers.
+XMAGE watermark mode. For details, see Constants. The value range is all integers.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

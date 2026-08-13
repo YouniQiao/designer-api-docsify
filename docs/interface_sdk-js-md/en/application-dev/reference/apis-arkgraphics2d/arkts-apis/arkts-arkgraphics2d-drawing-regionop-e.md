@@ -1,15 +1,12 @@
 # RegionOp
 
-Enumerates the operations for combining two regions.
+Enumerates the operations for combining two regions. > **NOTE：**> > The schematic diagram shows the result obtained by combining a red region with a blue region at different > operation mode. The green region is the region obtained.
 
-> **NOTE：**
-> 
-> The schematic diagram shows the result obtained by combining a red region with a blue region at different
-> operation mode. The green region is the region obtained.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-drawing-enum RegionOp--><!--Device-drawing-enum RegionOp-End-->
 
@@ -23,9 +20,11 @@ DIFFERENCE = 0
 
 Difference operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RegionOp-DIFFERENCE = 0--><!--Device-RegionOp-DIFFERENCE = 0-End-->
 
@@ -39,9 +38,11 @@ INTERSECT = 1
 
 Intersect operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RegionOp-INTERSECT = 1--><!--Device-RegionOp-INTERSECT = 1-End-->
 
@@ -55,9 +56,11 @@ UNION = 2
 
 Union operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RegionOp-UNION = 2--><!--Device-RegionOp-UNION = 2-End-->
 
@@ -71,9 +74,11 @@ XOR = 3
 
 XOR operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RegionOp-XOR = 3--><!--Device-RegionOp-XOR = 3-End-->
 
@@ -87,9 +92,11 @@ REVERSE_DIFFERENCE = 4
 
 Reverse difference operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RegionOp-REVERSE_DIFFERENCE = 4--><!--Device-RegionOp-REVERSE_DIFFERENCE = 4-End-->
 
@@ -103,9 +110,11 @@ REPLACE = 5
 
 Replace operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RegionOp-REPLACE = 5--><!--Device-RegionOp-REPLACE = 5-End-->
 

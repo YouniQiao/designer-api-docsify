@@ -4,6 +4,8 @@ Describes the scope of restoring factory settings.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-update-export enum FactoryResetScope--><!--Device-update-export enum FactoryResetScope-End-->
 
 **System capability:** SystemCapability.Update.UpdateService
@@ -19,6 +21,8 @@ DATA = 1
 User data.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ DATA_AND_OS = 2
 User data and operating system.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

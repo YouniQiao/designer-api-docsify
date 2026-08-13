@@ -3,64 +3,72 @@
 ## RULE_CAUTION_PRINT_LOG
 
 ```TypeScript
-const RULE_CAUTION_PRINT_LOG = 9223372036854775808n
+const RULE_CAUTION_PRINT_LOG: bigint
 ```
 
 Alarm rule, which is programmed to print a log when an alarm is generated.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-hichecker-const RULE_CAUTION_PRINT_LOG = 9223372036854775808n--><!--Device-hichecker-const RULE_CAUTION_PRINT_LOG = 9223372036854775808n-End-->
+**Deprecated since:** -1
+
+<!--Device-hichecker-const RULE_CAUTION_PRINT_LOG: bigint--><!--Device-hichecker-const RULE_CAUTION_PRINT_LOG: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## RULE_CAUTION_TRIGGER_CRASH
 
 ```TypeScript
-const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n
+const RULE_CAUTION_TRIGGER_CRASH: bigint
 ```
 
 Alarm rule, which is programmed to force the application to exit when an alarm is generated.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-hichecker-const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n--><!--Device-hichecker-const RULE_CAUTION_TRIGGER_CRASH = 4611686018427387904n-End-->
+**Deprecated since:** -1
+
+<!--Device-hichecker-const RULE_CAUTION_TRIGGER_CRASH: bigint--><!--Device-hichecker-const RULE_CAUTION_TRIGGER_CRASH: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## RULE_CHECK_ABILITY_CONNECTION_LEAK
 
 ```TypeScript
-const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n
+const RULE_CHECK_ABILITY_CONNECTION_LEAK: bigint
 ```
 
 Caution rule, which is programmed to detect whether ability leakage has occurred.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-hichecker-const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n--><!--Device-hichecker-const RULE_CHECK_ABILITY_CONNECTION_LEAK = 8589934592n-End-->
+**Deprecated since:** -1
+
+<!--Device-hichecker-const RULE_CHECK_ABILITY_CONNECTION_LEAK: bigint--><!--Device-hichecker-const RULE_CHECK_ABILITY_CONNECTION_LEAK: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
 ## RULE_CHECK_ARKUI_PERFORMANCE
 
 ```TypeScript
-const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n
+const RULE_CHECK_ARKUI_PERFORMANCE: bigint
 ```
 
 Caution rule, which is programmed to detect the ArkUI performance.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-hichecker-const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n--><!--Device-hichecker-const RULE_CHECK_ARKUI_PERFORMANCE = 17179869184n-End-->
+**Deprecated since:** -1
+
+<!--Device-hichecker-const RULE_CHECK_ARKUI_PERFORMANCE: bigint--><!--Device-hichecker-const RULE_CHECK_ARKUI_PERFORMANCE: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 
@@ -74,7 +82,9 @@ The thread rule check network usage.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-hichecker-const RULE_THREAD_CHECK_NETWORK_USAGE = 2n--><!--Device-hichecker-const RULE_THREAD_CHECK_NETWORK_USAGE = 2n-End-->
 
@@ -83,16 +93,18 @@ The thread rule check network usage.
 ## RULE_THREAD_CHECK_SLOW_PROCESS
 
 ```TypeScript
-const RULE_THREAD_CHECK_SLOW_PROCESS = 1n
+const RULE_THREAD_CHECK_SLOW_PROCESS: bigint
 ```
 
 Caution rule, which is programmed to detect whether any time-consuming function is invoked.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-hichecker-const RULE_THREAD_CHECK_SLOW_PROCESS = 1n--><!--Device-hichecker-const RULE_THREAD_CHECK_SLOW_PROCESS = 1n-End-->
+**Deprecated since:** -1
+
+<!--Device-hichecker-const RULE_THREAD_CHECK_SLOW_PROCESS: bigint--><!--Device-hichecker-const RULE_THREAD_CHECK_SLOW_PROCESS: bigint-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiChecker
 

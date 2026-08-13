@@ -8,9 +8,11 @@ function removeProcessor(id: number): void
 
 移除上报事件的数据处理者。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiAppEvent-function removeProcessor(id: long): void--><!--Device-hiAppEvent-function removeProcessor(id: long): void-End-->
 
@@ -26,7 +28,7 @@ function removeProcessor(id: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

@@ -6,6 +6,8 @@ Describes the text shadow style.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TextShadowStyle--><!--Device-unnamed-declare class TextShadowStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@ Describes the text shadow style.
 constructor(value: ShadowOptions | Array<ShadowOptions>)
 ```
 
-A constructor used to create a text shadow style.
-
-The **ShadowOptions** object does not support the **fill** field.
+A constructor used to create a text shadow style. The **ShadowOptions** object does not support the **fill** field.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +53,8 @@ Text shadow of the styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

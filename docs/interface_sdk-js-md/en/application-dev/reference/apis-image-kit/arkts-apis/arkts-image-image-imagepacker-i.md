@@ -1,18 +1,12 @@
 # ImagePacker
 
-The **ImagePacker** class provides APIs to compress and encode images.
+The **ImagePacker** class provides APIs to compress and encode images. Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed. Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
-Before calling any API in ImagePacker, you must use   
-[image.createImagePacker](arkts-image-image-createimagepacker-f.md#createImagePacker) to create an ImagePacker instance.During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
+**Since:** 23
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call   
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-interface ImagePacker--><!--Device-image-interface ImagePacker-End-->
 
@@ -34,7 +28,9 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,17 +55,11 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
-| [7800202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packBinaryImageToTiffFile
 
-ArkTS-Dyn:
-```TypeScript
-packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: number, options?: PackingOptionsForTiff): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: PackingOptionsForTiff): Promise<void>
 ```
@@ -78,7 +68,9 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,7 +83,7 @@ Compresses or packs an image into a file and uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | Yes | image buffer info. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of a file descriptor &lt;br&gt;The value must be a positive integer. |
+| fd | int | Yes | ID of a file descriptor &lt;br&gt;The value must be a positive integer. |
 | options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | No | Options for tiff image packing. |
 
 **Return value:**
@@ -104,8 +96,8 @@ Compresses or packs an image into a file and uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
-| [7800202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [7800202](../errorcode-image.md#7800202-invalid-imagepacker-parameter) | Invalid parameter. Possible causes: 1. Invalid FD; 2. Compression algorithm mismatch. |
 
 ## packToData
 
@@ -115,11 +107,13 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -142,15 +136,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the parameter is invalid. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToData
 
@@ -158,19 +152,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
+Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE：**> > If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is > released in advance. You need to check the code and ensure that the PixelMap object is released after this API > is called.
 
-> **NOTE：**
-> 
-> If error code 401 is returned, the parameters are abnormal. The possible cause is that the PixelMap object is
-> released in advance. You need to check the code and ensure that the PixelMap object is released after this API
-> is called.
+**Since:** 23
 
-**Since:** 13
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -193,15 +183,15 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the parameter is invalid. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the parameter is invalid. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToDataFromPixelmapSequence
 
@@ -211,9 +201,11 @@ packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: Packi
 
 Encodes multiple PixelMap objects into GIF data. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToDataFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, options: PackingOptionsForSequence): Promise<ArrayBuffer>-End-->
 
@@ -236,26 +228,22 @@ Encodes multiple PixelMap objects into GIF data. This API uses a promise to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
 
 ## packToFile
 
-ArkTS-Dyn:
-```TypeScript
-packToFile(source: ImageSource, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
 Encodes the image source into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
@@ -266,41 +254,37 @@ Encodes the image source into a file based on the specified encoding parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | ImageSource | Yes | Image source to encode. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
-ArkTS-Dyn:
-```TypeScript
-packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>
 ```
 
 Encodes the image source into a file based on the specified encoding parameters. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: ImageSource, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -311,7 +295,7 @@ Encodes the image source into a file based on the specified encoding parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | ImageSource | Yes | Image source to encode. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -324,39 +308,29 @@ Encodes the image source into a file based on the specified encoding parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
-ArkTS-Dyn:
-```TypeScript
-packToFile(source: PixelMap, fd: number, options: PackingOption, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses an asynchronous callback to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
 
-> **NOTE：**
-> 
-> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
-> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
-> this API is called.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption, callback: AsyncCallback<void>): void-End-->
 
@@ -367,47 +341,37 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | PixelMap | Yes | PixelMap to encode. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
-ArkTS-Dyn:
-```TypeScript
-packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>
 ```
 
-Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result.
+Encodes the PixelMap into a file based on the specified encoding parameters. This API uses a promise to return the result. > **NOTE：**> > If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap > object is released in advance. You need to check the code and ensure that the PixelMap object is released after > this API is called.
 
-> **NOTE：**
-> 
-> If error code 62980115 is returned, the parameters are abnormal. The possible cause is that the PixelMap
-> object is released in advance. You need to check the code and ensure that the PixelMap object is released after
-> this API is called.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(source: PixelMap, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -418,7 +382,7 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | source | PixelMap | Yes | PixelMap to encode. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -431,33 +395,29 @@ Encodes the PixelMap into a file based on the specified encoding parameters. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980113](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
-| [62980096](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
-| [62980115](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
-| [62980101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
-| [62980119](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
-| [62980120](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
-| [62980106](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
-| [62980172](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
-| [62980252](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
+| [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid input parameter. |
+| [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
+| [62980119](../errorcode-image.md#62980119-image-encoding-failure) | Failed to encode the image. |
+| [62980120](../errorcode-image.md#62980120-failure-in-adding-pixel-mappings) | Add pixelmap out of range. |
+| [62980106](../errorcode-image.md#62980106-too-large-image-data) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
+| [62980172](../errorcode-image.md#62980172-failed-to-encode-icc) | Failed to encode icc. |
+| [62980252](../errorcode-image.md#62980252-failed-to-create-a-surface) | Failed to create surface. |
 
 ## packToFile
 
-ArkTS-Dyn:
-```TypeScript
-packToFile(picture: Picture, fd: number, options: PackingOption): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>
 ```
 
 Encodes the Picture into a file based on the specified encoding parameters. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>--><!--Device-ImagePacker-packToFile(picture: Picture, fd: int, options: PackingOption): Promise<void>-End-->
 
@@ -468,7 +428,7 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | picture | [Picture](arkts-image-image-picture-i.md) | Yes | Picture to encode. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| fd | int | Yes | File descriptor. |
 | options | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
 
 **Return value:**
@@ -481,26 +441,22 @@ Encodes the Picture into a file based on the specified encoding parameters. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 
 ## packToFileFromPixelmapSequence
 
-ArkTS-Dyn:
-```TypeScript
-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: number, options: PackingOptionsForSequence): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>
 ```
 
 Encodes multiple PixelMaps into a GIF file. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>--><!--Device-ImagePacker-packToFileFromPixelmapSequence(pixelmapSequence: Array<PixelMap>, fd: int, options: PackingOptionsForSequence): Promise<void>-End-->
 
@@ -511,7 +467,7 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pixelmapSequence | Array&lt;PixelMap&gt; | Yes | PixelMaps to encode. |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor. |
+| fd | int | Yes | File descriptor. |
 | options | [PackingOptionsForSequence](arkts-image-image-packingoptionsforsequence-i.md) | Yes | Options for encoding animated images. |
 
 **Return value:**
@@ -524,8 +480,8 @@ Encodes multiple PixelMaps into a GIF file. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
-| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types;3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Failed to encode image. |
 
 ## packing
 
@@ -555,7 +511,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | source | ImageSource | Yes | Image source to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
 ## packing
 
@@ -598,13 +554,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBuffer>): void
 ```
 
-Compresses or re-encodes an image. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
-> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
-> released after this API is called.
+Compresses or re-encodes an image. This API uses an asynchronous callback to return the result. > **NOTE：**> > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
 
 **Since:** 8
 
@@ -626,7 +576,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 | --- | --- | --- | --- |
 | source | PixelMap | Yes | PixelMap to compress or re-encode. |
 | option | [PackingOption](arkts-image-image-packingoption-i.md) | Yes | Encoding parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ArrayBuffer&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the compressed or encoded image data; otherwise, **err** is an error object. |
 
 ## packing
 
@@ -634,13 +584,7 @@ Compresses or re-encodes an image. This API uses an asynchronous callback to ret
 packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 ```
 
-Compresses or re-encodes an image. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the
-> PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is
-> released after this API is called.
+Compresses or re-encodes an image. This API uses a promise to return the result. > **NOTE：**> > If the message "PixelMap mismatch" is returned, the parameters are abnormal. The possible cause is that the > PixelMap object is released in advance. You need to check the code and ensure that the PixelMap object is > released after this API is called.
 
 **Since:** 8
 
@@ -677,9 +621,11 @@ packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>
 
 Compresses or re-encodes an image. This API uses a promise to return the result.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packing(picture: Picture, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -702,8 +648,8 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [7800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7800301-encoding-failure) | Encode failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [7800301](../errorcode-image.md#7800301-encoding-failure) | Encode failed. |
 
 ## release
 
@@ -711,15 +657,13 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this ImagePacker instance. This API uses an asynchronous callback to return the result.
+Releases this ImagePacker instance. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-release(callback: AsyncCallback<void>): void--><!--Device-ImagePacker-release(callback: AsyncCallback<void>): void-End-->
 
@@ -729,7 +673,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## release
 
@@ -737,15 +681,13 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this ImagePacker instance. This API uses a promise to return the result.
+Releases this ImagePacker instance. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call this API to free the memory promptly.
+**Since:** 23
 
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-release(): Promise<void>--><!--Device-ImagePacker-release(): Promise<void>-End-->
 
@@ -767,9 +709,11 @@ Supported formats for image encoding, including jpeg, webp, png, heic&lt;sup&gt;
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImagePacker-readonly supportedFormats: Array<string>--><!--Device-ImagePacker-readonly supportedFormats: Array<string>-End-->
 

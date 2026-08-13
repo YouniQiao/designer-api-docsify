@@ -12,7 +12,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string, callback: 
 
 **废弃版本：** 9
 
-**替代接口：** [removeGroupByBundle](ohos.notificationManager/notificationManager#removeGroupByBundle)
+**替代接口：** [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md#removeGroupByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ function removeGroupByBundle(bundle: BundleOption, groupName: string): Promise<v
 
 **废弃版本：** 9
 
-**替代接口：** [removeGroupByBundle](ohos.notificationManager/notificationManager#removeGroupByBundle)
+**替代接口：** [removeGroupByBundle](arkts-notification-notificationmanager-removegroupbybundle-f-sys.md#removeGroupByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

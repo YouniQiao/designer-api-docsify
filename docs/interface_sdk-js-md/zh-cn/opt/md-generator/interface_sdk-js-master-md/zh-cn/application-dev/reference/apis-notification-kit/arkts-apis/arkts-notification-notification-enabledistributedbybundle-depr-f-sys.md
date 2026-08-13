@@ -12,7 +12,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean, callba
 
 **废弃版本：** 9
 
-**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle)
+**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -43,7 +43,7 @@ function enableDistributedByBundle(bundle: BundleOption, enable: boolean): Promi
 
 **废弃版本：** 9
 
-**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle)
+**替代接口：** [setDistributedEnableByBundle](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md#setDistributedEnableByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

@@ -6,11 +6,11 @@
 function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 ```
 
-查询DLP沙箱聚合策略。使用Promise异步回调。
-
-应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
+查询DLP沙箱聚合策略。使用Promise异步回调。 应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -30,10 +30,10 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 
 | 错误码ID |
 | --- |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -54,11 +54,11 @@ dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.Gathe
 function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): void
 ```
 
-查询DLP沙箱聚合策略。使用callback异步回调。
-
-应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
+查询DLP沙箱聚合策略。使用callback异步回调。 应用需要获取当前系统的DLP沙箱聚合策略配置时使用此接口。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_DLP_FILE
 
@@ -78,11 +78,11 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 免打扰设置的时间类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export enum DoNotDisturbType--><!--Device-notificationManager-export enum DoNotDisturbType-End-->
 
@@ -18,7 +20,9 @@ TYPE_NONE = 0
 
 非通知勿扰类型。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbType-TYPE_NONE = 0--><!--Device-DoNotDisturbType-TYPE_NONE = 0-End-->
 
@@ -34,7 +38,9 @@ TYPE_ONCE = 1
 
 以设置时间段(只看小时和分钟)一次执行勿扰。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbType-TYPE_ONCE = 1--><!--Device-DoNotDisturbType-TYPE_ONCE = 1-End-->
 
@@ -50,7 +56,9 @@ TYPE_DAILY = 2
 
 以设置时间段(只看小时和分钟)每天执行勿扰。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbType-TYPE_DAILY = 2--><!--Device-DoNotDisturbType-TYPE_DAILY = 2-End-->
 
@@ -66,7 +74,9 @@ TYPE_CLEARLY = 3
 
 以设置时间段(明确月日时)执行勿扰。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbType-TYPE_CLEARLY = 3--><!--Device-DoNotDisturbType-TYPE_CLEARLY = 3-End-->
 

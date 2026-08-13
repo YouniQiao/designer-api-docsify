@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avSession-interface DesktopLyricState--><!--Device-avSession-interface DesktopLyricState-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
@@ -19,6 +21,8 @@ isLocked: boolean
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

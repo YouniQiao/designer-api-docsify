@@ -6,7 +6,9 @@ export type LiveViewTypes = _LiveViewTypes
 
 Enumerates live view types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type LiveViewTypes = _LiveViewTypes--><!--Device-notificationManager-export type LiveViewTypes = _LiveViewTypes-End-->
 

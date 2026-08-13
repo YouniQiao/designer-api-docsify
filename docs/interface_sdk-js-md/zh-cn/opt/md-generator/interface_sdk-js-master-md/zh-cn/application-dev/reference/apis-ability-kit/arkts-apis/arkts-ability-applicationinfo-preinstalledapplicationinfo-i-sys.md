@@ -2,7 +2,9 @@
 
 预装应用的信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface PreinstalledApplicationInfo--><!--Device-unnamed-export interface PreinstalledApplicationInfo-End-->
 
@@ -20,7 +22,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly bundleName: string--><!--Device-PreinstalledApplicationInfo-readonly bundleName: string-End-->
 
@@ -34,13 +38,13 @@ readonly bundleName: string
 readonly descriptionId?: number
 ```
 
-应用描述Id。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+应用描述Id。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,7 +64,9 @@ readonly iconId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly iconId: long--><!--Device-PreinstalledApplicationInfo-readonly iconId: long-End-->
 
@@ -78,7 +84,9 @@ readonly labelId: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly labelId: long--><!--Device-PreinstalledApplicationInfo-readonly labelId: long-End-->
 
@@ -96,7 +104,9 @@ readonly moduleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PreinstalledApplicationInfo-readonly moduleName: string--><!--Device-PreinstalledApplicationInfo-readonly moduleName: string-End-->
 

@@ -6,6 +6,8 @@ Execution frequency information.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-workScheduler-export interface FrequencyInfo--><!--Device-workScheduler-export interface FrequencyInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -24,13 +26,15 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 interval: number
 ```
 
-Set app exec interval, in milliseconds.Unit:ms.
+Set app exec interval, in milliseconds. Unit:ms.
 
 **Type:** number
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,13 +50,15 @@ Set app exec interval, in milliseconds.Unit:ms.
 uid: number
 ```
 
-App uid.The value should be an integer.
+App uid. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,13 +74,15 @@ App uid.The value should be an integer.
 workId: number
 ```
 
-ID of the deferred task.The value should be an integer.
+ID of the deferred task. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

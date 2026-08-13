@@ -1,21 +1,14 @@
 # CcmParamsSpec
 
-Encapsulates the parameters for encryption or decryption using the CCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec) and used as a parameter in  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3) for symmetric encryption or decryption.
-
-&lt;br&gt;Applies to the CCM mode.
-
-> **NOTE：**
-> 
-> Before passing a value to
-> [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3), specify
-> **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec).
+Encapsulates the parameters for encryption or decryption using the CCM AEAD mode, which requires an IV, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption. &lt;br&gt;Applies to the CCM mode. > **NOTE：**> > Before passing a value to > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec).
 
 **Inheritance/Implementation:** CcmParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-cryptoFramework-interface CcmParamsSpec extends ParamsSpec--><!--Device-cryptoFramework-interface CcmParamsSpec extends ParamsSpec-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface CcmParamsSpec--><!--Device-cryptoFramework-interface CcmParamsSpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
@@ -37,7 +30,9 @@ AAD for encryption and decryption. The AAD value contains 1 to 2,048 bytes.
 
 **Type:** DataBlob
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -53,19 +48,13 @@ AAD for encryption and decryption. The AAD value contains 1 to 2,048 bytes.
 authTag: DataBlob
 ```
 
-Authentication tag, which is of 12 bytes.
-
-&lt;br&gt;When CCM mode is used for encryption, you need to extract the last 12 bytes from the  
-[DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md#DataBlob) returned by  
-[doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) or  
-[doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinalSync) and use them as **authTag** in  
-**CcmParamsSpec** for  
-[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init-3) or  
-[initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initSync) during decryption.
+Authentication tag, which is of 12 bytes. &lt;br&gt;When CCM mode is used for encryption, you need to extract the last 12 bytes from the [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md#DataBlob) returned by [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) or [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinalSync) and use them as **authTag** in **CcmParamsSpec** for [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initSync) during decryption.
 
 **Type:** DataBlob
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -81,11 +70,13 @@ Authentication tag, which is of 12 bytes.
 iv: DataBlob
 ```
 
-IV for encryption and decryption. Only 7 bytes are supported. If the length of the input **iv** parameter exceeds7 bytes, the excess part will be truncated.
+IV for encryption and decryption. Only 7 bytes are supported. If the length of the input **iv** parameter exceeds 7 bytes, the excess part will be truncated.
 
 **Type:** DataBlob
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

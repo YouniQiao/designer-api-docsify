@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-unnamed-declare namespace componentUtils--><!--Device-unnamed-declare namespace componentUtils-End-->
@@ -16,14 +18,14 @@
 
 | 名称 |
 | --- |
-| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid) |
+| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getRectangleById) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getitemsinshapepath) |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getItemsInShapePath（系统接口）) |
 <!--DelEnd-->
 
 ### 接口

@@ -1,8 +1,6 @@
 # RichEditorUpdateImageSpanStyleOptions
 
-图片的样式选项。
-
-继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)。
+图片的样式选项。 继承自[RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)。
 
 **继承/实现关系：** RichEditorUpdateImageSpanStyleOptions extends [RichEditorSpanStyleOptions](arkts-arkui-richeditor-richeditorspanstyleoptions-i.md#RichEditorSpanStyleOptions)
 
@@ -10,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateImageSpanStyleOptions extends RichEditorSpanStyleOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare interface RichEditorUpdateImageSpanStyleOptions--><!--Device-unnamed-export declare interface RichEditorUpdateImageSpanStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ imageStyle: RichEditorImageSpanStyle
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

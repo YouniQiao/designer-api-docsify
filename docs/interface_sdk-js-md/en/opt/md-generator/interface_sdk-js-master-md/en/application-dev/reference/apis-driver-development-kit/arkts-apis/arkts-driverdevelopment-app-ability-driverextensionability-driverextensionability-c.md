@@ -2,7 +2,9 @@
 
 The **DriverExtensionAbility** module provides the ExtensionAbility related to drivers. It provides lifecycle callbacks to be invoked when a driver is created, destroyed, connected, or disconnected.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class DriverExtensionAbility--><!--Device-unnamed-declare class DriverExtensionAbility-End-->
 
@@ -20,10 +22,11 @@ import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
 onConnect(want: Want): rpc.RemoteObject | Promise<rpc.RemoteObject>
 ```
 
-Called following **onCreate()** when a DriverExtensionAbility is started by calling **connectAbility()**. A  
-**RemoteObject** object is returned for communication between the server and client.
+Called following **onCreate()** when a DriverExtensionAbility is started by calling **connectAbility()**. A **RemoteObject** object is returned for communication between the server and client.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,7 +70,7 @@ class DriverExt extends DriverExtensionAbility {
 }
 ```
 
-If the returned [RemoteObject](../apis-ipc-kit/js-apis-rpc.md#remoteobject) object depends on an asynchronous API, you can use the asynchronous lifecycle.
+If the returned [RemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-remoteobject-c.md#RemoteObject) object depends on an asynchronous API, you can use the asynchronous lifecycle.
 
 ```TypeScript
 import { DriverExtensionAbility } from '@kit.DriverDevelopmentKit';
@@ -105,6 +108,8 @@ onDisconnect(want: Want): void | Promise<void>
 Called when a client is disconnected from this DriverExtensionAbility.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -145,6 +150,36 @@ class DriverExt extends DriverExtensionAbility {
 }
 ```
 
+## onDisconnect
+
+```TypeScript
+onDisconnect(want: Want): undefined | Promise<void>
+```
+
+Called back when all abilities connected to a driver extension are disconnected.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DriverExtensionAbility-onDisconnect(want: Want): undefined | Promise<void>--><!--Device-DriverExtensionAbility-onDisconnect(want: Want): undefined | Promise<void>-End-->
+
+**System capability:** SystemCapability.Driver.ExternalDevice
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| undefined |
+
 ## onDump
 
 ```TypeScript
@@ -153,7 +188,9 @@ onDump(params: Array<string>): Array<string>
 
 Dumps client information. It is recommended that developers don't DUMP sensitive information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,7 +229,9 @@ onInit(want: Want): void
 
 Called when a DriverExtensionAbility is created to initialize the service logic.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -227,7 +266,9 @@ onRelease(): void
 
 Called when this DriverExtensionAbility is destroyed to clear resources.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -255,7 +296,9 @@ Context of the **DriverExtension**. This context is inherited from **ExtensionCo
 
 **Type:** [DriverExtensionContext](arkts-driverdevelopment-driverextensioncontext-t.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

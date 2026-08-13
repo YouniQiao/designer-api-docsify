@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-onScreen-export interface OnscreenAwarenessInfo--><!--Device-onScreen-export interface OnscreenAwarenessInfo-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -21,6 +23,8 @@ appIndex?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ appName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-appName?: string--><!--Device-OnscreenAwarenessInfo-appName?: string-End-->
@@ -62,6 +68,8 @@ bundleName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-bundleName?: string--><!--Device-OnscreenAwarenessInfo-bundleName?: string-End-->
@@ -76,11 +84,13 @@ bundleName?: string
 collectStrategy?: number
 ```
 
-页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md#CollectStrategy) 的按位或运算组合。
+页面采集策略，是 [CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md#CollectStrategy（系统接口）) 的按位或运算组合。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,6 +112,8 @@ displayId?: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-displayId?: long--><!--Device-OnscreenAwarenessInfo-displayId?: long-End-->
@@ -121,6 +133,8 @@ entityInfo?: EntityInfo[]
 **类型：** EntityInfo[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -142,6 +156,8 @@ items?: AwarenessItem[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]--><!--Device-OnscreenAwarenessInfo-items?: AwarenessItem[]-End-->
@@ -161,6 +177,8 @@ languageInfo?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -182,6 +200,8 @@ miniProgramId?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-miniProgramId?: string--><!--Device-OnscreenAwarenessInfo-miniProgramId?: string-End-->
@@ -201,6 +221,8 @@ miniProgramName?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -222,6 +244,8 @@ pageId?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-pageId?: string--><!--Device-OnscreenAwarenessInfo-pageId?: string-End-->
@@ -241,6 +265,8 @@ pageTags?: string[]
 **类型：** string[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -262,6 +288,8 @@ resultCode: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-resultCode: int--><!--Device-OnscreenAwarenessInfo-resultCode: int-End-->
@@ -281,6 +309,8 @@ sampleId?: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -302,6 +332,8 @@ timestamp: number
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-timestamp: long--><!--Device-OnscreenAwarenessInfo-timestamp: long-End-->
@@ -322,6 +354,8 @@ uid?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OnscreenAwarenessInfo-uid?: string--><!--Device-OnscreenAwarenessInfo-uid?: string-End-->
@@ -341,6 +375,8 @@ windowId?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

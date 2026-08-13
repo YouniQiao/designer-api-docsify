@@ -1,10 +1,4 @@
-# AccessibilityExtensionContext(Provides accessibility extension context)
-
-The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for
- **AccessibilityExtensionAbility**.
- You can use the APIs of this module to configure the concerned information, obtain root information, and inject
- gestures.
-
+# AccessibilityExtensionContext
 
 ## Summary
 
@@ -20,14 +14,14 @@ The **AccessibilityExtensionContext** module, inherited from **ExtensionContext*
 | Name | Description |
 | --- | --- |
 | [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The accessibility extension context. Used to configure, query information, and inject gestures. |
-| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Sets the parameter for a specific operation when the accessibility node element executes this operation. For details,see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction) (executable actions for accessibility node elements). |
+| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Sets the parameter for a specific operation when the accessibility node element executes this operation. For details, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (executable actions for accessibility node elements). |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call  [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement-1)or  [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement-1)to obtain an **AccessibilityElement** instance. |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance. |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) | Provides attribute names and value types of a node element. |
 | [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | Defines a rectangle. |
 
@@ -36,9 +30,9 @@ The **AccessibilityExtensionContext** module, inherited from **ExtensionContext*
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call  [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement-1)or  [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement-1)to obtain an **AccessibilityElement** instance. |
-| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Defines accessibility grid information. For details, see the currentItem attribute in  [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
-| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in  [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance. |
+| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Defines accessibility grid information. For details, see the currentItem attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
+| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
 | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Defines the **AccessibilityVirtualNode**. |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | Provides attribute names and value types of a node element. |
 | [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | Queries the return value type of the target accessibility nodes. |

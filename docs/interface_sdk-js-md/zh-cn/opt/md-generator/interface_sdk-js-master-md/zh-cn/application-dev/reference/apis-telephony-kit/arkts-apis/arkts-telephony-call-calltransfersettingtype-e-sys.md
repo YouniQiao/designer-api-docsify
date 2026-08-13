@@ -2,7 +2,9 @@
 
 设置呼叫转移类型。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-export enum CallTransferSettingType--><!--Device-call-export enum CallTransferSettingType-End-->
 
@@ -18,7 +20,9 @@ CALL_TRANSFER_DISABLE = 0
 
 禁用呼叫转移。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0--><!--Device-CallTransferSettingType-CALL_TRANSFER_DISABLE = 0-End-->
 
@@ -34,7 +38,9 @@ CALL_TRANSFER_ENABLE = 1
 
 启用呼叫转移。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1--><!--Device-CallTransferSettingType-CALL_TRANSFER_ENABLE = 1-End-->
 
@@ -50,7 +56,9 @@ CALL_TRANSFER_REGISTRATION = 3
 
 登记呼叫转移。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3--><!--Device-CallTransferSettingType-CALL_TRANSFER_REGISTRATION = 3-End-->
 
@@ -66,7 +74,9 @@ CALL_TRANSFER_ERASURE = 4
 
 消除呼叫转移。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4--><!--Device-CallTransferSettingType-CALL_TRANSFER_ERASURE = 4-End-->
 

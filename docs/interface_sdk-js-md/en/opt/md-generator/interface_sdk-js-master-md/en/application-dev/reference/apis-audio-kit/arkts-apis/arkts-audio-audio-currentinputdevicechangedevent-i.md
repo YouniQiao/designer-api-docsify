@@ -2,7 +2,9 @@
 
 Describes the event indicating that the input device changes.
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface CurrentInputDeviceChangedEvent--><!--Device-audio-interface CurrentInputDeviceChangedEvent-End-->
 
@@ -24,7 +26,9 @@ Audio input device change reason.
 
 **Type:** [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-CurrentInputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason--><!--Device-CurrentInputDeviceChangedEvent-changeReason: AudioStreamDeviceChangeReason-End-->
 
@@ -40,7 +44,9 @@ Audio input device descriptors after change.
 
 **Type:** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**Since:** 21
+**Since:** 24
+
+**Deprecated since:** -1
 
 <!--Device-CurrentInputDeviceChangedEvent-devices: AudioDeviceDescriptors--><!--Device-CurrentInputDeviceChangedEvent-devices: AudioDeviceDescriptors-End-->
 

@@ -4,6 +4,8 @@ Declare ToolBarV2Modifier used in ToolBar
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ToolBarV2Modifier--><!--Device-unnamed-export declare class ToolBarV2Modifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Sets the backgroundColor of the toolBarV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -36,7 +40,7 @@ Sets the backgroundColor of the toolBarV2.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [backgroundColor](#backgroundcolor) | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes |
+| [backgroundColor](#backgroundColor) | [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -54,6 +58,8 @@ Sets the height of the toolBarV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -66,7 +72,7 @@ Sets the height of the toolBarV2.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [height](#height) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes |
+| [height](#height) | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -84,6 +90,8 @@ Sets the left and right padding of the toolbarV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -96,7 +104,7 @@ Sets the left and right padding of the toolbarV2.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [padding](#padding) | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes |
+| [padding](#padding) | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Yes |
 
 **Return value:**
 
@@ -114,6 +122,8 @@ Sets whether or not to display the press status effect.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -126,7 +136,7 @@ Sets whether or not to display the press status effect.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [stateEffect](#stateeffect) | boolean | Yes |
+| [stateEffect](#stateEffect) | boolean | Yes |
 
 **Return value:**
 

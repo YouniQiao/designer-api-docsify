@@ -2,11 +2,13 @@
 
 点击手势处理器对象类型。
 
-**继承/实现关系：** TapGestureHandler extends [GestureHandler<TapGestureHandler>](GestureHandler<TapGestureHandler>)
+**继承/实现关系：** TapGestureHandler extends GestureHandler<TapGestureHandler>
 
 **起始版本：** 12
 
-<!--Device-unnamed-declare class TapGestureHandler extends GestureHandler<TapGestureHandler>--><!--Device-unnamed-declare class TapGestureHandler extends GestureHandler<TapGestureHandler>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class TapGestureHandler--><!--Device-unnamed-declare class TapGestureHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: TapGestureHandlerOptions)
 点击手势处理器的构造函数。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -43,6 +47,8 @@ onAction(event: Callback<GestureEvent>): TapGestureHandler
 设置点击手势处理器识别成功回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

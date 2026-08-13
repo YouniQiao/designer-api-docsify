@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-avMusicTemplate-interface QrCodeInfo--><!--Device-avMusicTemplate-interface QrCodeInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -19,6 +21,8 @@ codeData?: image.PixelMap
 **类型：** image.PixelMap
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ content: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-QrCodeInfo-content: string--><!--Device-QrCodeInfo-content: string-End-->
@@ -55,6 +61,8 @@ detailName: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ icon?: image.PixelMap
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-QrCodeInfo-icon?: image.PixelMap--><!--Device-QrCodeInfo-icon?: image.PixelMap-End-->
@@ -86,13 +96,13 @@ icon?: image.PixelMap
 id: string
 ```
 
-用于唯一标识用户登录的二维码会话。
-
-当二维码过期时，MediaUI将使用此ID从媒体应用查询并更新新的二维码。
+用于唯一标识用户登录的二维码会话。 当二维码过期时，MediaUI将使用此ID从媒体应用查询并更新新的二维码。
 
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +122,8 @@ price: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-QrCodeInfo-price: string--><!--Device-QrCodeInfo-price: string-End-->
@@ -129,6 +141,8 @@ tips: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,6 +162,8 @@ titleName: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-QrCodeInfo-titleName: string--><!--Device-QrCodeInfo-titleName: string-End-->
@@ -160,13 +176,13 @@ titleName: string
 validPeriod: number
 ```
 
-二维码有效期（单位：秒）。
-
-当二维码到期时，二维码ID将用于再次查询并获得新的二维码。
+二维码有效期（单位：秒）。 当二维码到期时，二维码ID将用于再次查询并获得新的二维码。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

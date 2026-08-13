@@ -1,16 +1,10 @@
 # AVCastPickerHelper
 
-投播半模态对象，可拉起半模态窗口，选择投播设备。在使用前，需要创建AVCastPickerHelper实例。
+投播半模态对象，可拉起半模态窗口，选择投播设备。在使用前，需要创建AVCastPickerHelper实例。 > **说明：** > > - 本Class首批接口从API version 14开始支持。 > > - AVCastPickerHelper样式显示为半模态，实际会绑定 > [全模态页面（bindContentCover）](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindContentCover) > 。
 
-> **说明：**
-> 
-> - 本Class首批接口从API version 14开始支持。
-> 
-> - AVCastPickerHelper样式显示为半模态，实际会绑定
-> [全模态页面（bindContentCover）](../../apis-arkui/arkts-components/arkts-arkui-commonmethod-c.md#bindContentCover)
-> 。
+**起始版本：** 23
 
-**起始版本：** 14
+**废弃版本：** -1
 
 <!--Device-avSession-class AVCastPickerHelper--><!--Device-avSession-class AVCastPickerHelper-End-->
 
@@ -24,9 +18,11 @@ constructor(context: Context)
 
 创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext)。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerHelper-constructor(context: Context)--><!--Device-AVCastPickerHelper-constructor(context: Context)-End-->
 
@@ -42,10 +38,38 @@ constructor(context: Context)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('pickerStateChange')
+## offPickerStateChange
+
+```TypeScript
+offPickerStateChange(callback?: Callback<AVCastPickerState>) : void
+```
+
+Unregister picker state change callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastPickerHelper-offPickerStateChange(callback?: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-offPickerStateChange(callback?: Callback<AVCastPickerState>) : void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_pickerStateChange
 
 ```TypeScript
 off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
@@ -54,6 +78,8 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 取消半模态窗口变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -72,20 +98,48 @@ off(type: 'pickerStateChange', callback?: Callback<AVCastPickerState>) : void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## on('pickerStateChange')
+## onPickerStateChange
+
+```TypeScript
+onPickerStateChange(callback: Callback<AVCastPickerState>) : void
+```
+
+Register picker state change callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastPickerHelper-onPickerStateChange(callback: Callback<AVCastPickerState>) : void--><!--Device-AVCastPickerHelper-onPickerStateChange(callback: Callback<AVCastPickerState>) : void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVCastPickerState](arkts-avsession-multimedia-avcastpickerparam-avcastpickerstate-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_pickerStateChange
 
 ```TypeScript
 on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 ```
 
-设置半模态窗口变化的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置半模态窗口变化的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 14
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -104,8 +158,8 @@ on(type: 'pickerStateChange', callback: Callback<AVCastPickerState>) : void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## resetCommunicationDevice
 
@@ -115,9 +169,11 @@ resetCommunicationDevice(): Promise<void>
 
 将应用通话设备恢复至默认设备。例如，在语音通话场景下，手机设备的通话装置将恢复为听筒。使用Promise异步回调。
 
-**起始版本：** 21
+**起始版本：** 24
 
-**原子化服务API：** 从API版本21开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>--><!--Device-AVCastPickerHelper-resetCommunicationDevice(): Promise<void>-End-->
 
@@ -137,9 +193,11 @@ select(options?: AVCastPickerOptions): Promise<void>
 
 通过选择模式拉起AVCastPicker界面，用户可以选择投播设备。接口采用Promise异步返回形式，传入可选参数AVCastPickerOptions对象，无返回结果。
 
-**起始版本：** 14
+**起始版本：** 23
 
-**原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerHelper-select(options?: AVCastPickerOptions): Promise<void>--><!--Device-AVCastPickerHelper-select(options?: AVCastPickerOptions): Promise<void>-End-->
 
@@ -161,4 +219,4 @@ select(options?: AVCastPickerOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

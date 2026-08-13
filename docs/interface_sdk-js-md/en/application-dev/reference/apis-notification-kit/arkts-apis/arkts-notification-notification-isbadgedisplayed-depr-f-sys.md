@@ -6,7 +6,7 @@
 function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether the notification badge is enabled for a specified application.This API uses an asynchronous callback to return the result.
+Checks whether the notification badge is enabled for a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Checks whether the notification badge is enabled for a specified application.Thi
 
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -29,7 +29,7 @@ Checks whether the notification badge is enabled for a specified application.Thi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
 
 ## isBadgeDisplayed
@@ -38,7 +38,7 @@ Checks whether the notification badge is enabled for a specified application.Thi
 function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 ```
 
-Checks whether the notification badge is enabled for a specified application.This API uses a promise to return the result.
+Checks whether the notification badge is enabled for a specified application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -46,7 +46,7 @@ Checks whether the notification badge is enabled for a specified application.Thi
 
 **Deprecated since:** 9
 
-**Substitutes:** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
+**Substitutes:** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

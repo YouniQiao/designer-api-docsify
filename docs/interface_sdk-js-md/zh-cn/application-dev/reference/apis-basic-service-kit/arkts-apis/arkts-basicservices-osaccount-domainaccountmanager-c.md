@@ -2,9 +2,11 @@
 
 域账号管理类。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
 
@@ -18,9 +20,11 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 修改指定域账号信息。使用Promise异步回调。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.MANAGE_DOMAIN_ACCOUNTS
 
@@ -45,12 +49,12 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The old account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | The new account info is invalid. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | The new account already exists. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) | The old account not found. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) | The new account info is invalid. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-账号已存在) | The new account already exists. |
 
 ## 示例
 

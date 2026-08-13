@@ -4,6 +4,8 @@ Describes the information of an Metrics Event.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-media-interface AVMetricsEvent--><!--Device-media-interface AVMetricsEvent-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -22,9 +24,11 @@ details: Record<string, Object>
 
 The detailed information of the event.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ Type of the metrics event.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMetricsEvent-event: AVMetricsEventType--><!--Device-AVMetricsEvent-event: AVMetricsEventType-End-->
@@ -62,6 +68,8 @@ The playback progress position when the event occurs, in ms.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-AVMetricsEvent-playbackPosition: int--><!--Device-AVMetricsEvent-playbackPosition: int-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
@@ -77,6 +85,8 @@ Absolute timestamp when the event occurred, in ms.
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVMetricsEvent-timeStamp: long--><!--Device-AVMetricsEvent-timeStamp: long-End-->
 

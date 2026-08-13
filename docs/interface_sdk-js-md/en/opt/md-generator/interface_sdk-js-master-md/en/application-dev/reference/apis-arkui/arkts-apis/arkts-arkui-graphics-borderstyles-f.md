@@ -10,6 +10,8 @@ Generates a border style object with the specified border style color for all bo
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.

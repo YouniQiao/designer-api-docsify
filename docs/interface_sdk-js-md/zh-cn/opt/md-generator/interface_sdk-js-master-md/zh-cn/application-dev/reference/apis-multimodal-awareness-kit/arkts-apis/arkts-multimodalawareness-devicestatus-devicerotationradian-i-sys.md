@@ -2,7 +2,9 @@
 
 设备旋转弧度接口。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-deviceStatus-export interface DeviceRotationRadian--><!--Device-deviceStatus-export interface DeviceRotationRadian-End-->
 
@@ -20,7 +22,9 @@ x: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceRotationRadian-x: double--><!--Device-DeviceRotationRadian-x: double-End-->
 
@@ -38,7 +42,9 @@ y: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceRotationRadian-y: double--><!--Device-DeviceRotationRadian-y: double-End-->
 
@@ -56,7 +62,9 @@ z: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceRotationRadian-z: double--><!--Device-DeviceRotationRadian-z: double-End-->
 

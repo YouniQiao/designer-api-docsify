@@ -2,7 +2,9 @@
 
 本模块提供数据共享和扩展功能。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class DataShareExtensionAbility--><!--Device-unnamed-declare class DataShareExtensionAbility-End-->
 
@@ -19,6 +21,8 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 在数据库批量插入时服务端回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,6 +75,8 @@ batchUpdate?(
 在数据库批量更新时服务端回调此接口，该方法可以选择性重写。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -131,6 +137,8 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void--><!--Device-DataShareExtensionAbility-delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallback<number>): void-End-->
@@ -179,6 +187,8 @@ denormalizeUri?(uri: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -224,6 +234,8 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 在数据库插入时回调此接口，该方法可以选择性重写。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -275,6 +287,8 @@ normalizeUri?(uri: string, callback: AsyncCallback<string>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -320,6 +334,8 @@ onCreate?(want: Want, callback: AsyncCallback<void>): void
 DataShare客户端连接DataShareExtensionAbility服务端时，服务端回调此接口，执行初始化业务逻辑操作。该方法可以选择性重写。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -383,6 +399,8 @@ query?(
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void--><!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void-End-->
@@ -440,6 +458,8 @@ update?(
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void--><!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void-End-->
@@ -479,6 +499,50 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 };
 ```
 
+## batchInsert
+
+```TypeScript
+batchInsert?: BatchInsertFn
+```
+
+插入多个数据到数据库中。该方法可被datashare数据提供方重写
+
+**类型：** [BatchInsertFn](arkts-arkdata-batchinsertfn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-batchInsert?: BatchInsertFn--><!--Device-DataShareExtensionAbility-batchInsert?: BatchInsertFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## batchUpdate
+
+```TypeScript
+batchUpdate?: BatchUpdateFn
+```
+
+更新数据库中多个数据。该方法可被datashare数据提供方重写。
+
+**类型：** [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-batchUpdate?: BatchUpdateFn--><!--Device-DataShareExtensionAbility-batchUpdate?: BatchUpdateFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
 ## context
 
 ```TypeScript
@@ -489,11 +553,167 @@ context: ExtensionContext
 
 **类型：** [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DataShareExtensionAbility-context: ExtensionContext--><!--Device-DataShareExtensionAbility-context: ExtensionContext-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## delete
+
+```TypeScript
+delete?: DeleteFn
+```
+
+删除数据库中一个或多个数据，该方法可被datashare数据提供方重写
+
+**类型：** [DeleteFn](arkts-arkdata-deletefn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-delete?: DeleteFn--><!--Device-DataShareExtensionAbility-delete?: DeleteFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## denormalizeUri
+
+```TypeScript
+denormalizeUri?: DenormalizeUriFn
+```
+
+将通过 normalizeUri(uri) 生成的给定标准化uri转换为非标准化uri。此方法的默认实现返回传递给它的原始 uri。
+
+**类型：** [DenormalizeUriFn](arkts-arkdata-denormalizeurifn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-denormalizeUri?: DenormalizeUriFn--><!--Device-DataShareExtensionAbility-denormalizeUri?: DenormalizeUriFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## insert
+
+```TypeScript
+insert?: InsertFn
+```
+
+插入数据到数据库中，该方法可被datashare数据提供方重写
+
+**类型：** [InsertFn](arkts-arkdata-insertfn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-insert?: InsertFn--><!--Device-DataShareExtensionAbility-insert?: InsertFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## normalizeUri
+
+```TypeScript
+normalizeUri?: NormalizeUriFn
+```
+
+将给定的引用数据共享的 URI 转换为标准 URI。标准 URI 可以在设备之间使用，可以持久化、备份和恢复。即使上下文发生变化，它也可以引用数据共享中的同一项。
+
+**类型：** [NormalizeUriFn](arkts-arkdata-normalizeurifn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-normalizeUri?: NormalizeUriFn--><!--Device-DataShareExtensionAbility-normalizeUri?: NormalizeUriFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## onCreate
+
+```TypeScript
+onCreate?: OnCreateFn
+```
+
+当datashare extension ability启动初始化时会被调用
+
+**类型：** [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-onCreate?: OnCreateFn--><!--Device-DataShareExtensionAbility-onCreate?: OnCreateFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## query
+
+```TypeScript
+query?: QueryFn
+```
+
+查询数据库中一个或多个数据记录。该方法可被datashare数据提供方重写。只支持RDB和分布式KVDB的结果集。当前版本不支持自定义结果集。
+
+**类型：** [QueryFn](arkts-arkdata-queryfn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-query?: QueryFn--><!--Device-DataShareExtensionAbility-query?: QueryFn-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**系统接口：** 此接口为系统接口。
+
+## update
+
+```TypeScript
+update?: UpdateFn
+```
+
+更新数据库中一个或多个数据，该方法可被datashare数据提供方重写
+
+**类型：** [UpdateFn](arkts-arkdata-updatefn-t-sys.md)
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DataShareExtensionAbility-update?: UpdateFn--><!--Device-DataShareExtensionAbility-update?: UpdateFn-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Provider
 

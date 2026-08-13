@@ -12,8 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getCurrentFunctions(): FunctionType
 ```
 
-Obtains the numeric mask combination for the USB function list in Device mode. When the developer mode is disabled,  
- **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
+Obtains the numeric mask combination for the USB function list in Device mode. When the developer mode is disabled, **undefined** may be returned if no device is connected. Check whether the return value of the API is empty.
 
 **Since:** 9
 
@@ -21,7 +20,7 @@ Obtains the numeric mask combination for the USB function list in Device mode. W
 
 **Deprecated since:** 12
 
-**Substitutes:** [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getDeviceFunctions)()
+**Substitutes:** [getDeviceFunctions](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md#getDeviceFunctions-(System-API))()
 
 <!--Device-usbManager-function getCurrentFunctions(): FunctionType--><!--Device-usbManager-function getCurrentFunctions(): FunctionType-End-->
 

@@ -4,6 +4,8 @@ Enumerates the permission decision statuses.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityAccessCtrl-export enum PermissionDecisionStatus--><!--Device-abilityAccessCtrl-export enum PermissionDecisionStatus-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -19,6 +21,8 @@ NEED_PERMISSION_DIALOG = 0
 Indicates that a permission dialog needs to pop up.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates that no dialog is needed and the permission has been denied by the use
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDecisionStatus-NO_DIALOG_DENIED = 1--><!--Device-PermissionDecisionStatus-NO_DIALOG_DENIED = 1-End-->
@@ -55,6 +61,8 @@ NO_DIALOG_RESTRICTED = 2
 Indicates that no dialog is needed and the permission is restricted by the system or policy.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Indicates that no dialog is needed and the permission has been granted.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDecisionStatus-NO_DIALOG_GRANTED = 3--><!--Device-PermissionDecisionStatus-NO_DIALOG_GRANTED = 3-End-->
@@ -92,6 +102,8 @@ Indicates that no dialog is needed, but the permission is not declared.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionDecisionStatus-NO_DIALOG_NOT_DECLARED = 4--><!--Device-PermissionDecisionStatus-NO_DIALOG_NOT_DECLARED = 4-End-->
@@ -109,6 +121,8 @@ NO_DIALOG_CLI_PERMISSION_RESOLVED = 5
 Indicates that no dialog is needed and the CLI permission has been resolved to runtime permissions.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

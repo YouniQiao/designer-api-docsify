@@ -1,13 +1,12 @@
 # KVStore
 
-KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过  
-[getKVStore](distributedData.KVManager.getKVStore&lt;T extends KVStore&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个KVStore实例。
+KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。 在调用KVStore的方法前，需要先通过 getKVStore 构建一个KVStore实例。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [SingleKVStore](ohos.data.distributedKVStore.SingleKVStore)
+**替代接口：** SingleKVStore
 
 <!--Device-distributedData-interface KVStore--><!--Device-distributedData-interface KVStore-End-->
 
@@ -25,7 +24,7 @@ commit(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [commit](ohos.data.distributedKVStore.SingleKVStore#commit)
+**替代接口：** commit
 
 <!--Device-KVStore-commit(callback: AsyncCallback<void>): void--><!--Device-KVStore-commit(callback: AsyncCallback<void>): void-End-->
 
@@ -66,7 +65,7 @@ commit(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [commit](ohos.data.distributedKVStore.SingleKVStore#commit)
+**替代接口：** commit
 
 <!--Device-KVStore-commit(): Promise<void>--><!--Device-KVStore-commit(): Promise<void>-End-->
 
@@ -105,7 +104,7 @@ delete(key: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [delete](ohos.data.distributedKVStore.SingleKVStore#delete)
+**替代接口：** delete
 
 <!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void--><!--Device-KVStore-delete(key: string, callback: AsyncCallback<void>): void-End-->
 
@@ -156,7 +155,7 @@ delete(key: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [delete](ohos.data.distributedKVStore.SingleKVStore#delete)
+**替代接口：** delete
 
 <!--Device-KVStore-delete(key: string): Promise<void>--><!--Device-KVStore-delete(key: string): Promise<void>-End-->
 
@@ -208,7 +207,7 @@ deleteBatch(keys: string[], callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [deleteBatch](ohos.data.distributedKVStore.SingleKVStore#deleteBatch)
+**替代接口：** deleteBatch
 
 <!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-deleteBatch(keys: string[], callback: AsyncCallback<void>): void-End-->
 
@@ -264,7 +263,7 @@ deleteBatch(keys: string[]): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [deleteBatch](ohos.data.distributedKVStore.SingleKVStore#deleteBatch)
+**替代接口：** deleteBatch
 
 <!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>--><!--Device-KVStore-deleteBatch(keys: string[]): Promise<void>-End-->
 
@@ -329,7 +328,7 @@ enableSync(enabled: boolean, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [enableSync](ohos.data.distributedKVStore.SingleKVStore#enableSync)
+**替代接口：** enableSync
 
 <!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-enableSync(enabled: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -371,7 +370,7 @@ enableSync(enabled: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [enableSync](ohos.data.distributedKVStore.SingleKVStore#enableSync)
+**替代接口：** enableSync
 
 <!--Device-KVStore-enableSync(enabled: boolean): Promise<void>--><!--Device-KVStore-enableSync(enabled: boolean): Promise<void>-End-->
 
@@ -404,7 +403,7 @@ try {
 }
 ```
 
-## off
+## off_dataChange
 
 ```TypeScript
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
@@ -416,7 +415,7 @@ off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 
 **废弃版本：** 9
 
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**替代接口：** off
 
 <!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void--><!--Device-KVStore-off(event: 'dataChange', listener?: Callback<ChangeNotification>): void-End-->
 
@@ -450,7 +449,7 @@ class KvstoreModel {
 }
 ```
 
-## off
+## off_syncComplete
 
 ```TypeScript
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
@@ -462,7 +461,7 @@ off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): vo
 
 **废弃版本：** 9
 
-**替代接口：** [off](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)
+**替代接口：** off
 
 <!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void--><!--Device-KVStore-off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void-End-->
 
@@ -496,7 +495,7 @@ class KvstoreModel {
 }
 ```
 
-## on
+## on_dataChange
 
 ```TypeScript
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
@@ -508,7 +507,7 @@ on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotificati
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.data.distributedKVStore.SingleKVStore#on)
+**替代接口：** on
 
 <!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void--><!--Device-KVStore-on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void-End-->
 
@@ -531,7 +530,7 @@ kvStore.on('dataChange', distributedData.SubscribeType.SUBSCRIBE_TYPE_LOCAL, fun
 });
 ```
 
-## on
+## on_syncComplete
 
 ```TypeScript
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
@@ -543,7 +542,7 @@ on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 
 **废弃版本：** 9
 
-**替代接口：** [on](ohos.data.distributedKVStore.SingleKVStore#on)
+**替代接口：** on
 
 <!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void--><!--Device-KVStore-on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void-End-->
 
@@ -577,7 +576,7 @@ put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncC
 
 **废弃版本：** 9
 
-**替代接口：** [put](ohos.data.distributedKVStore.SingleKVStore#put)
+**替代接口：** put
 
 <!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -622,7 +621,7 @@ put(key: string, value: Uint8Array | string | number | boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [put](ohos.data.distributedKVStore.SingleKVStore#put)
+**替代接口：** put
 
 <!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>--><!--Device-KVStore-put(key: string, value: Uint8Array | string | number | boolean): Promise<void>-End-->
 
@@ -670,7 +669,7 @@ putBatch(entries: Entry[], callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [putBatch](ohos.data.distributedKVStore.SingleKVStore#putBatch)
+**替代接口：** putBatch
 
 <!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void--><!--Device-KVStore-putBatch(entries: Entry[], callback: AsyncCallback<void>): void-End-->
 
@@ -726,7 +725,7 @@ putBatch(entries: Entry[]): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [putBatch](ohos.data.distributedKVStore.SingleKVStore#putBatch)
+**替代接口：** putBatch
 
 <!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>--><!--Device-KVStore-putBatch(entries: Entry[]): Promise<void>-End-->
 
@@ -790,7 +789,7 @@ rollback(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [rollback](ohos.data.distributedKVStore.SingleKVStore#rollback)
+**替代接口：** rollback
 
 <!--Device-KVStore-rollback(callback: AsyncCallback<void>): void--><!--Device-KVStore-rollback(callback: AsyncCallback<void>): void-End-->
 
@@ -831,7 +830,7 @@ rollback(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [rollback](ohos.data.distributedKVStore.SingleKVStore#rollback)
+**替代接口：** rollback
 
 <!--Device-KVStore-rollback(): Promise<void>--><!--Device-KVStore-rollback(): Promise<void>-End-->
 
@@ -870,7 +869,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: Asy
 
 **废弃版本：** 9
 
-**替代接口：** [setSyncRange](ohos.data.distributedKVStore.SingleKVStore#setSyncRange)
+**替代接口：** setSyncRange
 
 <!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[], callback: AsyncCallback<void>): void-End-->
 
@@ -911,7 +910,7 @@ setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void
 
 **废弃版本：** 9
 
-**替代接口：** [setSyncRange](ohos.data.distributedKVStore.SingleKVStore#setSyncRange)
+**替代接口：** setSyncRange
 
 <!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>--><!--Device-KVStore-setSyncRange(localLabels: string[], remoteSupportLabels: string[]): Promise<void>-End-->
 
@@ -959,7 +958,7 @@ startTransaction(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [startTransaction](ohos.data.distributedKVStore.SingleKVStore#startTransaction)
+**替代接口：** startTransaction
 
 <!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void--><!--Device-KVStore-startTransaction(callback: AsyncCallback<void>): void-End-->
 
@@ -1020,7 +1019,7 @@ startTransaction(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [startTransaction](ohos.data.distributedKVStore.SingleKVStore#startTransaction)
+**替代接口：** startTransaction
 
 <!--Device-KVStore-startTransaction(): Promise<void>--><!--Device-KVStore-startTransaction(): Promise<void>-End-->
 

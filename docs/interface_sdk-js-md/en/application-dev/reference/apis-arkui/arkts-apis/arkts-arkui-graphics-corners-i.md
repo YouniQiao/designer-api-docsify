@@ -1,12 +1,14 @@
 # Corners
 
-Defines the Corner property.
+Describes the four corners.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export interface Corners<T>--><!--Device-unnamed-export interface Corners<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface Corners--><!--Device-unnamed-interface Corners-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,19 @@ Defines the Corner property.
 bottomLeft: T
 ```
 
-BottomLeft property.
+Radius of the lower left corner.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Corners-bottomLeft: T--><!--Device-Corners-bottomLeft: T-End-->
 
@@ -36,15 +42,19 @@ BottomLeft property.
 bottomRight: T
 ```
 
-BottomRight property.
+Radius of the lower right corner.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Corners-bottomRight: T--><!--Device-Corners-bottomRight: T-End-->
 
@@ -56,15 +66,19 @@ BottomRight property.
 topLeft: T
 ```
 
-TopLeft property.
+Radius of the upper left corner.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Corners-topLeft: T--><!--Device-Corners-topLeft: T-End-->
 
@@ -76,15 +90,19 @@ TopLeft property.
 topRight: T
 ```
 
-TopRight property.
+Radius of the upper right corner.
 
 **Type:** T
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Corners-topRight: T--><!--Device-Corners-topRight: T-End-->
 

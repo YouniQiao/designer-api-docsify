@@ -14,7 +14,9 @@ function getOpKeySync(slotId: number): string
 
 Obtains the operator key of the SIM card in a specified slot.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getOpKeySync(slotId: int): string--><!--Device-sim-function getOpKeySync(slotId: int): string-End-->
 

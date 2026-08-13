@@ -1,8 +1,10 @@
 # @ohos.rpc
 
-The **RPC** module implements communication between processes, including inter-process communication (IPC) on a  single device and remote procedure call (RPC) between processes on difference devices. IPC is implemented based  on the Binder driver, and RPC is based on the DSoftBus driver.
+The **RPC** module implements communication between processes, including inter-process communication (IPC) on a single device and remote procedure call (RPC) between processes on difference devices. IPC is implemented based on the Binder driver, and RPC is based on the DSoftBus driver.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace rpc--><!--Device-unnamed-declare namespace rpc-End-->
 
@@ -47,3 +49,9 @@ import { rpc } from '@kit.IPCKit';
 | --- |
 | [ErrorCode](arkts-ipc-rpc-errorcode-e.md) |
 | [TypeCode](arkts-ipc-rpc-typecode-e.md) |
+
+### Types
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [OnRemoteDiedFunc](arkts-ipc-rpc-onremotediedfunc-t.md) |

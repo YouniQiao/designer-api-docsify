@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface AuthStatusInfo--><!--Device-abilityToolAccessCtrl-interface AuthStatusInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ authStatus?: AuthStatus
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-AuthStatusInfo-authStatus?: AuthStatus--><!--Device-AuthStatusInfo-authStatus?: AuthStatus-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -34,11 +38,13 @@ authStatus?: AuthStatus
 flag?: number
 ```
 
-授权标志。取值范围：(-∞,+∞)。
+授权标志。 取值范围：(-∞,+∞)。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-AuthStatusInfo-flag?: long--><!--Device-AuthStatusInfo-flag?: long-End-->
 

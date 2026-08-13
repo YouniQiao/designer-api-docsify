@@ -2,7 +2,9 @@
 
 麦克风状态变化时，应用接收到的事件。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface MicStateChangeEvent--><!--Device-audio-interface MicStateChangeEvent-End-->
 
@@ -18,7 +20,9 @@ mute: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MicStateChangeEvent-mute: boolean--><!--Device-MicStateChangeEvent-mute: boolean-End-->
 

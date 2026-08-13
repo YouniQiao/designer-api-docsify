@@ -18,7 +18,7 @@ Waits for a remote device to connect.
 
 **Deprecated since:** 9
 
-**Substitutes:** [sppAccept](ohos.bluetoothManager/bluetoothManager.sppAccept)
+**Substitutes:** [sppAccept](arkts-connectivity-bluetoothmanager-sppaccept-f.md#sppAccept)
 
 <!--Device-bluetooth-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void--><!--Device-bluetooth-function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void-End-->
 

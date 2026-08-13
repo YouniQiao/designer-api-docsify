@@ -10,6 +10,8 @@ function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomi
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-userStatus-function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]--><!--Device-userStatus-function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomicCap[]-End-->
@@ -34,5 +36,5 @@ function queryCapabilities(capabilities: UserStatusAtomicCap[]): UserStatusAtomi
 
 | 错误码ID |
 | --- |
-| [33900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [33900001](../../apis-multimodalawareness-kit/errorcode-userStatus.md#33900001-服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

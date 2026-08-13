@@ -10,6 +10,8 @@ function quit(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-hiRetrieval-function quit(): void--><!--Device-hiRetrieval-function quit(): void-End-->

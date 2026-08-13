@@ -2,7 +2,9 @@
 
 系统窗口的创建参数。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-interface SystemWindowOptions--><!--Device-window-interface SystemWindowOptions-End-->
 
@@ -20,7 +22,9 @@ windowType: WindowType
 
 **类型：** WindowType
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

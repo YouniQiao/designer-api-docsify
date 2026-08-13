@@ -6,15 +6,13 @@
 function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 ```
 
-创建音视频录制实例。使用callback异步回调。
-
-> **说明：**
-> 
-> 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
+创建音视频录制实例。使用callback异步回调。 > **说明：** > > 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder>): void-End-->
 
@@ -24,13 +22,13 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md)&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 ## 示例
 
@@ -59,7 +57,9 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void--><!--Device-media-function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void-End-->
 
@@ -69,13 +69,13 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AVRecorder](arkts-media-multimedia-media-avrecorder-i.md) \| undefined&gt; | 是 | 回调函数，返回AVRecorder实例，可用于录制音视频媒体。失败时返回null。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 
 
 ## createAVRecorder
@@ -84,15 +84,13 @@ function createAVRecorder(callback: AsyncCallback<AVRecorder | undefined>): void
 function createAVRecorder(): Promise<AVRecorder>
 ```
 
-创建音视频录制实例。使用Promise异步回调。
-
-> **说明：**
-> 
-> 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
+创建音视频录制实例。使用Promise异步回调。 > **说明：** > > 应用可创建多个音视频录制实例，但由于设备共用音频通路，一个设备仅能有一个实例进行音频录制。创建第二个实例录制音频时，将会因为音频通路冲突导致创建失败。
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -110,7 +108,7 @@ function createAVRecorder(): Promise<AVRecorder>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 
 ## 示例
 
@@ -140,7 +138,9 @@ function createAVRecorder(): Promise<AVRecorder | undefined>
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-media-function createAVRecorder(): Promise<AVRecorder | undefined>--><!--Device-media-function createAVRecorder(): Promise<AVRecorder | undefined>-End-->
 
@@ -156,5 +156,5 @@ function createAVRecorder(): Promise<AVRecorder | undefined>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 

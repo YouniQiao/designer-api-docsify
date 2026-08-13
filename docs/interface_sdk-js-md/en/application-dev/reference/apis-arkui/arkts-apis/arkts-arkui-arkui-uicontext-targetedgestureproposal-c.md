@@ -1,14 +1,16 @@
 # TargetedGestureProposal
 
-Class TargetedGestureProposal.
+Base class for smart gesture handling with a target node.
 
 **Inheritance/Implementation:** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-unnamed-export abstract class TargetedGestureProposal extends BaseGestureHandlingProposal--><!--Device-unnamed-export abstract class TargetedGestureProposal extends BaseGestureHandlingProposal-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export abstract class TargetedGestureProposal--><!--Device-unnamed-export abstract class TargetedGestureProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,15 +26,19 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 node: FrameNode
 ```
 
-The target frame node for gesture handling. This node will receive and process the gesture events.
+Target node that handles the current smart gesture.
 
 **Type:** FrameNode
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TargetedGestureProposal-node: FrameNode--><!--Device-TargetedGestureProposal-node: FrameNode-End-->
 

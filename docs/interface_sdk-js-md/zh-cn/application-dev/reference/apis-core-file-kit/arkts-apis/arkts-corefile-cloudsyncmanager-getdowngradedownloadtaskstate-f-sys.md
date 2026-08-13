@@ -6,13 +6,13 @@
 function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Array<DownloadProgress>>
 ```
 
-查询接入云盘的应用的全量下载任务状态。使用Promise异步回调。
-
-由于返回的DownloadProgress对象中不包含包名信息，因此在批量查询多个应用时，调用方需自行记录应用包名。
+查询接入云盘的应用的全量下载任务状态。使用Promise异步回调。 由于返回的DownloadProgress对象中不包含包名信息，因此在批量查询多个应用时，调用方需自行记录应用包名。
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC_MANAGER
 
@@ -41,8 +41,8 @@ function getDowngradeDownloadTaskState(bundleNames: Array<string>): Promise<Arra
 | 错误码ID | 错误信息 |
 | --- | --- |
 | 13900020 | Invalid argument. Possible causes: &lt;br&gt;1.Mandatory parameter are left unspecified. 2.The length of the input parameter exceeds the upper limit. &lt;br&gt;3.The input parameter contains an invalid bundleName. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13900010 | Try again. |
 
 ## 示例

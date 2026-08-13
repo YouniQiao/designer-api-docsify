@@ -1,10 +1,6 @@
 # CaptureSession
 
-拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相机功能(录像，拍照)。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)，并向相机设备申请完成相 机功能(录像，拍照)。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -56,7 +52,7 @@ Obtains the level of the beauty type in use.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 
@@ -83,13 +79,7 @@ function getBeauty(captureSession: camera.CaptureSession): number {
 getSupportedBeautyRange(type: BeautyType): Array<number>
 ```
 
-Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example.  
-| Input Parameter | Example Return Value | Return Value Description |  
-| ----------------| ---- | ---------|  
-| AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. |  
-| SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. |  
-| FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. |  
-| SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,&lt;br&gt; for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
+Obtains the levels that can be set a beauty type. The beauty levels vary according to the device type. The following table is only an example. | Input Parameter | Example Return Value | Return Value Description | | ----------------| ---- | ---------| | AUTO | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] |Beauty levels supported when **type** is set to **AUTO**. The value **0** means that beauty mode is disabled, and other positive values mean the corresponding automatic beauty levels. | | SKIN_SMOOTH | [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] | Beauty levels supported when **type** is set to **SKIN_SMOOTH**. The value **0** means that the skin smoothing feature is disabled, and other positive values mean the corresponding skin smoothing levels. | | FACE_SLENDER | [0, 1, 2, 3, 4, 5] | Beauty levels supported when **type** is set to **FACE_SLENDER**. The value **0** means that the face slimming feature is disabled, and other positive values mean the corresponding face slimming levels. | | SKIN_TONE | [-1, 16242611] | Beauty levels supported when **type** is set to **SKIN_TONE**. The value **-1** means that the skin tone perfection feature is disabled. Other non-negative values mean the skin tone perfection levels represented by RGB,&lt;br&gt; for example, 16242611, which is 0xF7D7B3 in hexadecimal format, where F7, D7, and B3 represent the values of the R channel, G channel, and B channel, respectively. |
 
 **起始版本：** 10
 
@@ -121,7 +111,7 @@ Obtains the levels that can be set a beauty type. The beauty levels vary accordi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 
@@ -168,7 +158,7 @@ Obtains the supported beauty types.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 
@@ -185,9 +175,7 @@ function getSupportedBeautyTypes(captureSession: camera.CaptureSession): Array<c
 setBeauty(type: BeautyType, value: number): void
 ```
 
-Sets a beauty type and its level. Beauty mode is turned off only when all the  
-[beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType) obtained through  
-[getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
+Sets a beauty type and its level. Beauty mode is turned off only when all the [beauty types](arkts-camera-camera-beautytype-e-sys.md#BeautyType（系统接口）) obtained through [getSupportedBeautyTypes](#getSupportedBeautyTypes) are disabled.
 
 **起始版本：** 10
 
@@ -214,7 +202,7 @@ Sets a beauty type and its level. Beauty mode is turned off only when all the
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## 示例
 

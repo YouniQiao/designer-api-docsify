@@ -2,9 +2,11 @@
 
 Defines the error code for download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebDownloadErrorCode--><!--Device-webview-enum WebDownloadErrorCode-End-->
 
@@ -18,9 +20,13 @@ ERROR_UNKNOWN = 0
 
 Unknown error.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-ERROR_UNKNOWN = 0--><!--Device-WebDownloadErrorCode-ERROR_UNKNOWN = 0-End-->
 
@@ -34,9 +40,13 @@ FILE_FAILED = 1
 
 Generic file operation failure.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_FAILED = 1--><!--Device-WebDownloadErrorCode-FILE_FAILED = 1-End-->
 
@@ -50,9 +60,13 @@ FILE_ACCESS_DENIED = 2
 
 The file cannot be accessed due to certain restrictions.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_ACCESS_DENIED = 2--><!--Device-WebDownloadErrorCode-FILE_ACCESS_DENIED = 2-End-->
 
@@ -66,9 +80,13 @@ FILE_NO_SPACE = 3
 
 There is not enough disk space.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_NO_SPACE = 3--><!--Device-WebDownloadErrorCode-FILE_NO_SPACE = 3-End-->
 
@@ -82,9 +100,13 @@ FILE_NAME_TOO_LONG = 5
 
 The file name is too long.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_NAME_TOO_LONG = 5--><!--Device-WebDownloadErrorCode-FILE_NAME_TOO_LONG = 5-End-->
 
@@ -98,9 +120,13 @@ FILE_TOO_LARGE = 6
 
 The file is too large.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6--><!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6-End-->
 
@@ -114,9 +140,13 @@ FILE_TRANSIENT_ERROR = 10
 
 Some temporary problems occurred, such as not enough memory, files in use, and too many files open at the same time.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_TRANSIENT_ERROR = 10--><!--Device-WebDownloadErrorCode-FILE_TRANSIENT_ERROR = 10-End-->
 
@@ -130,9 +160,13 @@ FILE_BLOCKED = 11
 
 The file is blocked from accessing because of some local policy.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_BLOCKED = 11--><!--Device-WebDownloadErrorCode-FILE_BLOCKED = 11-End-->
 
@@ -146,9 +180,13 @@ FILE_TOO_SHORT = 13
 
 When trying to resume the download, Found that the file is not long enough, maybe the file no longer exists.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_TOO_SHORT = 13--><!--Device-WebDownloadErrorCode-FILE_TOO_SHORT = 13-End-->
 
@@ -162,9 +200,13 @@ FILE_HASH_MISMATCH = 14
 
 Hash mismatch.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14--><!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14-End-->
 
@@ -178,9 +220,13 @@ FILE_SAME_AS_SOURCE = 15
 
 The file already exists.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_SAME_AS_SOURCE = 15--><!--Device-WebDownloadErrorCode-FILE_SAME_AS_SOURCE = 15-End-->
 
@@ -194,9 +240,13 @@ NETWORK_FAILED = 20
 
 Generic network error.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_FAILED = 20--><!--Device-WebDownloadErrorCode-NETWORK_FAILED = 20-End-->
 
@@ -210,9 +260,13 @@ NETWORK_TIMEOUT = 21
 
 The network operation timed out.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_TIMEOUT = 21--><!--Device-WebDownloadErrorCode-NETWORK_TIMEOUT = 21-End-->
 
@@ -226,9 +280,13 @@ NETWORK_DISCONNECTED = 22
 
 The network was disconnected.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_DISCONNECTED = 22--><!--Device-WebDownloadErrorCode-NETWORK_DISCONNECTED = 22-End-->
 
@@ -242,9 +300,13 @@ NETWORK_SERVER_DOWN = 23
 
 Server down.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_SERVER_DOWN = 23--><!--Device-WebDownloadErrorCode-NETWORK_SERVER_DOWN = 23-End-->
 
@@ -258,9 +320,13 @@ NETWORK_INVALID_REQUEST = 24
 
 Invalid network requests，may redirect to unsupported scheme or an invalid URL.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_INVALID_REQUEST = 24--><!--Device-WebDownloadErrorCode-NETWORK_INVALID_REQUEST = 24-End-->
 
@@ -274,9 +340,13 @@ SERVER_FAILED = 30
 
 The server returned a generic error.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_FAILED = 30--><!--Device-WebDownloadErrorCode-SERVER_FAILED = 30-End-->
 
@@ -290,9 +360,13 @@ SERVER_NO_RANGE = 31
 
 The server does not support range requests.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_NO_RANGE = 31--><!--Device-WebDownloadErrorCode-SERVER_NO_RANGE = 31-End-->
 
@@ -306,9 +380,13 @@ SERVER_BAD_CONTENT = 33
 
 The server does not have the requested data.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_BAD_CONTENT = 33--><!--Device-WebDownloadErrorCode-SERVER_BAD_CONTENT = 33-End-->
 
@@ -322,9 +400,13 @@ SERVER_UNAUTHORIZED = 34
 
 The server does not allow the file to be downloaded.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_UNAUTHORIZED = 34--><!--Device-WebDownloadErrorCode-SERVER_UNAUTHORIZED = 34-End-->
 
@@ -338,9 +420,13 @@ SERVER_CERT_PROBLEM = 35
 
 Server certificate error.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_CERT_PROBLEM = 35--><!--Device-WebDownloadErrorCode-SERVER_CERT_PROBLEM = 35-End-->
 
@@ -354,9 +440,13 @@ SERVER_FORBIDDEN = 36
 
 Server access forbidden.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_FORBIDDEN = 36--><!--Device-WebDownloadErrorCode-SERVER_FORBIDDEN = 36-End-->
 
@@ -370,9 +460,13 @@ SERVER_UNREACHABLE = 37
 
 Server unreachable.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_UNREACHABLE = 37--><!--Device-WebDownloadErrorCode-SERVER_UNREACHABLE = 37-End-->
 
@@ -386,9 +480,13 @@ SERVER_CONTENT_LENGTH_MISMATCH = 38
 
 The received data does not match content-length.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_CONTENT_LENGTH_MISMATCH = 38--><!--Device-WebDownloadErrorCode-SERVER_CONTENT_LENGTH_MISMATCH = 38-End-->
 
@@ -402,9 +500,13 @@ SERVER_CROSS_ORIGIN_REDIRECT = 39
 
 An unexpected cross-origin redirect happened.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_CROSS_ORIGIN_REDIRECT = 39--><!--Device-WebDownloadErrorCode-SERVER_CROSS_ORIGIN_REDIRECT = 39-End-->
 
@@ -418,9 +520,13 @@ USER_CANCELED = 40
 
 User cancel.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-USER_CANCELED = 40--><!--Device-WebDownloadErrorCode-USER_CANCELED = 40-End-->
 
@@ -434,9 +540,13 @@ USER_SHUTDOWN = 41
 
 User shut down the application.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-USER_SHUTDOWN = 41--><!--Device-WebDownloadErrorCode-USER_SHUTDOWN = 41-End-->
 
@@ -450,9 +560,13 @@ CRASH = 50
 
 Application crash.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-CRASH = 50--><!--Device-WebDownloadErrorCode-CRASH = 50-End-->
 

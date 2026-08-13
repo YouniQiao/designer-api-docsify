@@ -4,7 +4,9 @@ Represents the language or country/region suggestion type.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export enum SuggestionType--><!--Device-i18n-export enum SuggestionType-End-->
 
@@ -22,7 +24,9 @@ Not a recommended language or country/region.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuggestionType-SUGGESTION_TYPE_NONE = 0--><!--Device-SuggestionType-SUGGESTION_TYPE_NONE = 0-End-->
 
@@ -40,7 +44,9 @@ Country/region recommended by the system language or language recommended by the
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuggestionType-SUGGESTION_TYPE_RELATED = 1--><!--Device-SuggestionType-SUGGESTION_TYPE_RELATED = 1-End-->
 
@@ -58,7 +64,9 @@ Language recommended by the country/region of the SIM card.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SuggestionType-SUGGESTION_TYPE_SIM = 2--><!--Device-SuggestionType-SUGGESTION_TYPE_SIM = 2-End-->
 

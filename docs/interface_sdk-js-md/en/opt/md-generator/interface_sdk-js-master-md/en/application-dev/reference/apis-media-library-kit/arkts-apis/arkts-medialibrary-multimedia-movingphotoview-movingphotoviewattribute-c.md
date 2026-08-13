@@ -2,11 +2,13 @@
 
 Defines the moving photo view attribute functions.
 
-**Inheritance/Implementation:** MovingPhotoViewAttribute extends [CommonMethod<MovingPhotoViewAttribute>](CommonMethod<MovingPhotoViewAttribute>)
+**Inheritance/Implementation:** MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>--><!--Device-unnamed-declare class MovingPhotoViewAttribute extends CommonMethod<MovingPhotoViewAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class MovingPhotoViewAttribute--><!--Device-unnamed-declare class MovingPhotoViewAttribute-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -25,6 +27,8 @@ autoPlay(isAutoPlay: boolean): MovingPhotoViewAttribute
 Sets whether to allow automatic play. If the value is true, the moving photo starts automatic after the resource is loaded.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -50,9 +54,11 @@ Sets whether to allow automatic play. If the value is true, the moving photo sta
 autoPlayPeriod(startTime: number, endTime: number): MovingPhotoViewAttribute
 ```
 
-Sets automatic play period, If not set, the moving photo plays in the full video duration.If set, the moving photo plays in the automatic play period.
+Sets automatic play period, If not set, the moving photo plays in the full video duration. If set, the moving photo plays in the automatic play period.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -83,6 +89,8 @@ Sets whether to enable moving photo analyzer. If the value is true, the moving p
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-MovingPhotoViewAttribute-enableAnalyzer(enabled: boolean): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-enableAnalyzer(enabled: boolean): MovingPhotoViewAttribute-End-->
@@ -110,6 +118,8 @@ muted(isMuted: boolean): MovingPhotoViewAttribute
 Called when judging whether the video is muted.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -139,6 +149,8 @@ Called when determining the zoom type of the view.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewAttribute-objectFit(value: ImageFit): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-objectFit(value: ImageFit): MovingPhotoViewAttribute-End-->
@@ -166,6 +178,8 @@ onComplete(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute
 Called when the image load completed.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -195,6 +209,8 @@ Called when playback fails.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewAttribute-onError(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onError(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
@@ -222,6 +238,8 @@ onFinish(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute
 Called when the video playback ends.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -251,6 +269,8 @@ Called when the video playback paused.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewAttribute-onPause(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onPause(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
@@ -278,6 +298,8 @@ onPrepared(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute
 Called when playback prepared.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -307,6 +329,8 @@ Called when the video is played.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewAttribute-onStart(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onStart(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
@@ -335,6 +359,8 @@ Called when the video playback stopped.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MovingPhotoViewAttribute-onStop(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute--><!--Device-MovingPhotoViewAttribute-onStop(callback: MovingPhotoViewEventCallback): MovingPhotoViewAttribute-End-->
@@ -362,6 +388,8 @@ repeatPlay(isRepeatPlay: boolean): MovingPhotoViewAttribute
 Sets whether to allow repeat play. If the value is true, the moving photo plays repeat after the resource is loaded.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 

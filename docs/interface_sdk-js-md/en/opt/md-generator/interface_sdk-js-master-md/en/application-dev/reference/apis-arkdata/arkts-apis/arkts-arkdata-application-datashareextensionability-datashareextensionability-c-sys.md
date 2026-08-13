@@ -2,7 +2,9 @@
 
 This module provides data sharing and expansion capabilities.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class DataShareExtensionAbility--><!--Device-unnamed-declare class DataShareExtensionAbility-End-->
 
@@ -25,6 +27,8 @@ batchInsert?(uri: string, valueBuckets: Array<ValuesBucket>, callback: AsyncCall
 Batch inserts data into the database. This API is called by the server and can be overridden as required.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,6 +82,8 @@ Batch updates data into the database. This API is called by the server and can b
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-batchUpdate?(    operations: Record<string, Array<UpdateOperation>>,    callback: AsyncCallback<Record<string, Array<number>>>  ): void--><!--Device-DataShareExtensionAbility-batchUpdate?(    operations: Record<string, Array<UpdateOperation>>,    callback: AsyncCallback<Record<string, Array<number>>>  ): void-End-->
@@ -90,8 +96,8 @@ Batch updates data into the database. This API is called by the server and can b
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| operations | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;number&gt;&gt;&gt; | Yes |
+| operations | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Array&lt;[UpdateOperation](arkts-arkdata-updateoperation-t-sys.md)&gt;&gt; | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Array&lt;number&gt;&gt;&gt; | Yes |
 
 ## Examples
 
@@ -136,6 +142,8 @@ delete?(uri: string, predicates: dataSharePredicates.DataSharePredicates, callba
 Deletes data from the database. This API can be overridden as required.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,6 +193,8 @@ Denormalizes a URI. This API can be overridden as required.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-denormalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -230,6 +240,8 @@ insert?(uri: string, valueBucket: ValuesBucket, callback: AsyncCallback<number>)
 Inserts data into the database. This API can be overridden as required.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -281,6 +293,8 @@ Normalizes a URI. This API can be overridden as required.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void--><!--Device-DataShareExtensionAbility-normalizeUri?(uri: string, callback: AsyncCallback<string>): void-End-->
@@ -326,6 +340,8 @@ onCreate?(want: Want, callback: AsyncCallback<void>): void
 Called by the server to initialize service logic when the DataShare client connects to the DataShareExtensionAbility server. This API can be overridden as required.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -389,6 +405,8 @@ Queries data from the database. This API can be overridden as required.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void--><!--Device-DataShareExtensionAbility-query?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    columns: Array<string>,    callback: AsyncCallback<Object>  ): void-End-->
@@ -446,6 +464,8 @@ Updates data in the database. This API can be overridden as required.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void--><!--Device-DataShareExtensionAbility-update?(    uri: string,    predicates: dataSharePredicates.DataSharePredicates,    valueBucket: ValuesBucket,    callback: AsyncCallback<number>  ): void-End-->
@@ -485,6 +505,50 @@ export default class DataShareExtAbility extends DataShareExtensionAbility {
 };
 ```
 
+## batchInsert
+
+```TypeScript
+batchInsert?: BatchInsertFn
+```
+
+Inserts multiple data records into the database. This method should be implemented by a data share.
+
+**Type:** [BatchInsertFn](arkts-arkdata-batchinsertfn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-batchInsert?: BatchInsertFn--><!--Device-DataShareExtensionAbility-batchInsert?: BatchInsertFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## batchUpdate
+
+```TypeScript
+batchUpdate?: BatchUpdateFn
+```
+
+Updates multiple data records in the database. This method should be implemented by a data share.
+
+**Type:** [BatchUpdateFn](arkts-arkdata-batchupdatefn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-batchUpdate?: BatchUpdateFn--><!--Device-DataShareExtensionAbility-batchUpdate?: BatchUpdateFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
 ## context
 
 ```TypeScript
@@ -495,11 +559,167 @@ Context of the DataShare ExtensionAbility.
 
 **Type:** [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataShareExtensionAbility-context: ExtensionContext--><!--Device-DataShareExtensionAbility-context: ExtensionContext-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## delete
+
+```TypeScript
+delete?: DeleteFn
+```
+
+Deletes one or more data records. This method should be implemented by a data share.
+
+**Type:** [DeleteFn](arkts-arkdata-deletefn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-delete?: DeleteFn--><!--Device-DataShareExtensionAbility-delete?: DeleteFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## denormalizeUri
+
+```TypeScript
+denormalizeUri?: DenormalizeUriFn
+```
+
+Converts the given normalized {@code uri} generated by normalizeUri into a denormalized one. The default implementation of this method returns the original uri passed to it.
+
+**Type:** [DenormalizeUriFn](arkts-arkdata-denormalizeurifn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-denormalizeUri?: DenormalizeUriFn--><!--Device-DataShareExtensionAbility-denormalizeUri?: DenormalizeUriFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## insert
+
+```TypeScript
+insert?: InsertFn
+```
+
+Inserts a data record into the database. This method should be implemented by a data share.
+
+**Type:** [InsertFn](arkts-arkdata-insertfn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-insert?: InsertFn--><!--Device-DataShareExtensionAbility-insert?: InsertFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## normalizeUri
+
+```TypeScript
+normalizeUri?: NormalizeUriFn
+```
+
+Converts the given {@code uri} that refer to the data share into a normalized URI. A normalized URI can be used across devices, persisted, backed up, and restored. It can refer to the same item in the data share even if the context has changed.
+
+**Type:** [NormalizeUriFn](arkts-arkdata-normalizeurifn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-normalizeUri?: NormalizeUriFn--><!--Device-DataShareExtensionAbility-normalizeUri?: NormalizeUriFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## onCreate
+
+```TypeScript
+onCreate?: OnCreateFn
+```
+
+Called back when a datashare extension ability is started for initialization.
+
+**Type:** [OnCreateFn](arkts-arkdata-oncreatefn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-onCreate?: OnCreateFn--><!--Device-DataShareExtensionAbility-onCreate?: OnCreateFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## query
+
+```TypeScript
+query?: QueryFn
+```
+
+Queries one or more data records in the database. This method should be implemented by a data share. Only RDB and distributed KVDB resultsets are supported. The current version does not support custom resultsets.
+
+**Type:** [QueryFn](arkts-arkdata-queryfn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-query?: QueryFn--><!--Device-DataShareExtensionAbility-query?: QueryFn-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
+
+**System API:** This is a system API.
+
+## update
+
+```TypeScript
+update?: UpdateFn
+```
+
+Updates one or more data records in the database. This method should be implemented by a data share.
+
+**Type:** [UpdateFn](arkts-arkdata-updatefn-t-sys.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataShareExtensionAbility-update?: UpdateFn--><!--Device-DataShareExtensionAbility-update?: UpdateFn-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Provider
 

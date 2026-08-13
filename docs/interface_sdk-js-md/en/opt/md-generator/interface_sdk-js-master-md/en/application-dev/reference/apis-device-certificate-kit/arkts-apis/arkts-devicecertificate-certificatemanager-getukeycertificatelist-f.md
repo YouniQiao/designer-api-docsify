@@ -16,6 +16,8 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -41,11 +43,11 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [17500011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [17500010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500010-failed-to-access-the-usb-credential) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-internal-error) |
+| [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [17500010](../errorcode-certManager.md#17500010-failed-to-access-the-usb-credential) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) |
 
 ## Examples
 

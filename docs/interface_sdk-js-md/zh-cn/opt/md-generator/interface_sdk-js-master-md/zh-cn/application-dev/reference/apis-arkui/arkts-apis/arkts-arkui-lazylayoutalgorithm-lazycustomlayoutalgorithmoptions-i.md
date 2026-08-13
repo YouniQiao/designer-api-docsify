@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-interface LazyCustomLayoutAlgorithmOptions--><!--Device-unnamed-interface LazyCustomLayoutAlgorithmOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ axis?: Axis
 **默认值：** Axis.Vertical
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

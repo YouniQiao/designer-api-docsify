@@ -2,7 +2,9 @@
 
 定义可弹出菜单的组件的位置。
 
-**起始版本：** 22
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface MenuPosition--><!--Device-avSession-interface MenuPosition-End-->
 
@@ -18,9 +20,11 @@ height: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 24
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MenuPosition-height: int--><!--Device-MenuPosition-height: int-End-->
 
@@ -36,9 +40,11 @@ width: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 24
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MenuPosition-width: int--><!--Device-MenuPosition-width: int-End-->
 
@@ -54,9 +60,11 @@ x: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 24
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MenuPosition-x: int--><!--Device-MenuPosition-x: int-End-->
 
@@ -72,9 +80,11 @@ y: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 24
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MenuPosition-y: int--><!--Device-MenuPosition-y: int-End-->
 

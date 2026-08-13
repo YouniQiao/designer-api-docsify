@@ -4,6 +4,8 @@ Define the divider configuration options.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface DividerOptions--><!--Device-unnamed-declare interface DividerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,15 @@ Define the divider configuration options.
 color?: ResourceColor
 ```
 
-Color of the divider.
-
-Default value: **'#33000000'**
+Color of the divider. Default value: **'#33000000'**
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** '#33000000'
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,19 +40,15 @@ Default value: **'#33000000'**
 endMargin?: Dimension
 ```
 
-Distance between the divider and the end edge of the text picker.
-
-Default value: **0**
-
-Unit: vp (default) or px.
-
-Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
+Distance between the divider and the end edge of the text picker. Default value: **0** Unit: vp (default) or px. Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 0
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,19 +64,15 @@ Values less than 0 are invalid. The maximum value allowed is the width of the co
 startMargin?: Dimension
 ```
 
-Distance between the divider and the start edge of the text picker.
-
-Default value: **0**
-
-Unit: vp (default) or px.
-
-Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
+Distance between the divider and the start edge of the text picker. Default value: **0** Unit: vp (default) or px. Values less than 0 are invalid. The maximum value allowed is the width of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 0
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,19 +88,15 @@ Values less than 0 are invalid. The maximum value allowed is the width of the co
 strokeWidth?: Dimension
 ```
 
-Stroke width of the divider.
-
-Default value: **2.0px**
-
-Unit: vp (default) or px.
-
-If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column.Percentages are not supported.
+Stroke width of the divider. Default value: **2.0px** Unit: vp (default) or px. If the value is less than 0, the default value is used. The maximum value allowed is half the height of the column. Percentages are not supported.
 
 **Type:** [Dimension](../arkts-apis/arkts-arkui-dimension-t.md)
 
 **Default:** 2.0px
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

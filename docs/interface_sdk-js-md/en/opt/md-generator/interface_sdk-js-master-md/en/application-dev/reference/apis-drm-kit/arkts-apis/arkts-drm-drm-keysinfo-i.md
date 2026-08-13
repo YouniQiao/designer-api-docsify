@@ -2,7 +2,9 @@
 
 Defines the status information of a media key.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drm-interface KeysInfo--><!--Device-drm-interface KeysInfo-End-->
 
@@ -24,7 +26,9 @@ Media key ID.
 
 **Type:** Uint8Array
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Media key status.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

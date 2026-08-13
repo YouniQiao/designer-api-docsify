@@ -12,12 +12,11 @@ import { image } from '@kit.ImageKit';
 function createImageSource(uri: string): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given URI. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -51,15 +50,43 @@ async function CreateImageSource(context : Context) {
 ## createImageSource
 
 ```TypeScript
+function createImageSource(uri: string): ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the URI.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(uri: string): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string): ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+
+
+## createImageSource
+
+```TypeScript
 function createImageSource(uri: string, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on a given URI.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given URI. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -97,15 +124,44 @@ async function CreateImageSource(context : Context) {
 ## createImageSource
 
 ```TypeScript
+function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the URI.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(uri: string, options: SourceOptions): ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+
+
+## createImageSource
+
+```TypeScript
 function createImageSource(fd: number): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given file descriptor. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -142,15 +198,43 @@ async function CreateImageSource(context : Context) {
 ## createImageSource
 
 ```TypeScript
+function createImageSource(fd: number): ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the file descriptor.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(fd: int): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int): ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+
+
+## createImageSource
+
+```TypeScript
 function createImageSource(fd: number, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on a given file descriptor.
-
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on a given file descriptor. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -191,14 +275,44 @@ async function CreateImageSource(context : Context) {
 ## createImageSource
 
 ```TypeScript
+function createImageSource(fd: number, options: SourceOptions): ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the file descriptor.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(fd: int, options: SourceOptions): ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| fd | number | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+
+
+## createImageSource
+
+```TypeScript
 function createImageSource(buf: ArrayBuffer): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -233,14 +347,43 @@ async function CreateImageSource() {
 ## createImageSource
 
 ```TypeScript
+function createImageSource(buf: ArrayBuffer): ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the buffer.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer): ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+
+
+## createImageSource
+
+```TypeScript
 function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call   
-[image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync).Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [image.createPixelMapSync](arkts-image-image-imagesource-i.md#createPixelMapSync) . Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -277,13 +420,44 @@ async function CreateImageSource() {
 ## createImageSource
 
 ```TypeScript
+function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the buffer.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined--><!--Device-image-function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| buf | ArrayBuffer | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |
+
+
+## createImageSource
+
+```TypeScript
 function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions): ImageSource
 ```
 
-Creates an ImageSource instance based on the raw file descriptor of an image resource file.Images occupy a large amount of memory. When you finish using an ImageSource instance, call   
-[release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageSource instance based on the raw file descriptor of an image resource file. Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](arkts-image-image-imagesource-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -321,3 +495,34 @@ async function CreateImageSource(context : Context) {
   })
 }
 ```
+
+
+## createImageSource
+
+```TypeScript
+function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)
+      : ImageSource | undefined
+```
+
+Creates an ImageSource instance based on the raw file descriptor.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined--><!--Device-image-function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?: SourceOptions)      : ImageSource | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.ImageSource
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| rawfile | resourceManager.RawFileDescriptor | Yes |
+| options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [ImageSource](arkts-image-sendableimage-imagesource-i.md) |

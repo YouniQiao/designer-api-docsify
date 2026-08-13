@@ -4,6 +4,8 @@ Enumerates the card styles of the **ListItemGroup** component.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ListItemGroupStyle--><!--Device-unnamed-declare enum ListItemGroupStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ NONE = 0
 No style.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ CARD = 1
 Default card style.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

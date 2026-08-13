@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result.
+Cancels notifications under a notification group of this application. This API uses an asynchronous callback to return the result. The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
 
-The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -33,10 +33,10 @@ The notification group **groupName** is the group identifier specified through t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 
@@ -61,11 +61,11 @@ notificationManager.cancelGroup(groupName, cancelGroupCallback);
 function cancelGroup(groupName: string): Promise<void>
 ```
 
-Cancels notifications under a notification group of this application. This API uses a promise to return the result.
+Cancels notifications under a notification group of this application. This API uses a promise to return the result. The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
 
-The notification group **groupName** is the group identifier specified through the **groupName** field of NotificationRequest when a notification is published. After cancellation, all notifications under this group will be removed from the notification center. This is suitable for scenarios where notifications need to be canceled in batches by service group.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
@@ -87,10 +87,10 @@ The notification group **groupName** is the group identifier specified through t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-internal-error) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [1600001](../errorcode-notification.md#1600001-internal-error) |
+| [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) |
+| [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) |
 
 ## Examples
 

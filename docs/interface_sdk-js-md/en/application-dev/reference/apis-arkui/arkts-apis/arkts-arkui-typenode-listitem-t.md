@@ -1,20 +1,24 @@
 # ListItem
 
 ```TypeScript
-type ListItem = ListItemFrameNode
+type ListItem = TypedFrameNode<ListItemInterface, ListItemAttribute>
 ```
 
-Define the FrameNode type for ListItem.
+Represents a FrameNode of the **ListItem** type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type ListItem = ListItemFrameNode--><!--Device-typeNode-type ListItem = ListItemFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-typeNode-type ListItem = TypedFrameNode<ListItemInterface, ListItemAttribute>--><!--Device-typeNode-type ListItem = TypedFrameNode<ListItemInterface, ListItemAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** ListItemFrameNode
+**Property type:** TypedFrameNode<ListItemInterface, ListItemAttribute>
 

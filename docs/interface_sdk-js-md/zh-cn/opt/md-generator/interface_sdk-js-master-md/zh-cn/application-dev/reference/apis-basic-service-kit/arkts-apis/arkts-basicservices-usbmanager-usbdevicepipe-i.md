@@ -2,7 +2,9 @@
 
 USB设备消息传输通道，用于确定设备。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-interface USBDevicePipe--><!--Device-usbManager-interface USBDevicePipe-End-->
 
@@ -18,7 +20,9 @@ busNum: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevicePipe-busNum: int--><!--Device-USBDevicePipe-busNum: int-End-->
 
@@ -34,7 +38,9 @@ devAddress: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBDevicePipe-devAddress: int--><!--Device-USBDevicePipe-devAddress: int-End-->
 

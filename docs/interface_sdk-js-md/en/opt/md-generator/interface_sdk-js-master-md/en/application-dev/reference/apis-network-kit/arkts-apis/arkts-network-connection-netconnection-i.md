@@ -2,7 +2,9 @@
 
 Represents the network connection handle.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface NetConnection--><!--Device-connection-export interface NetConnection-End-->
 
@@ -14,7 +16,77 @@ Represents the network connection handle.
 import { connection } from '@kit.NetworkKit';
 ```
 
-## on('netAvailable')
+## onNetBlockStatusChange
+
+```TypeScript
+onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void
+```
+
+Registers a listener for netBlockStatusChange events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-NetConnection-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void--><!--Device-NetConnection-onNetBlockStatusChange(callback: Callback<NetBlockStatusInfo>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[NetBlockStatusInfo](arkts-network-connection-netblockstatusinfo-i.md)&gt; | Yes |
+
+## onNetLost
+
+```TypeScript
+onNetLost(callback: Callback<NetHandle>): void
+```
+
+Registers a listener for **netLost** events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-NetConnection-onNetLost(callback: Callback<NetHandle>): void--><!--Device-NetConnection-onNetLost(callback: Callback<NetHandle>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;NetHandle&gt; | Yes |
+
+## onNetUnavailable
+
+```TypeScript
+onNetUnavailable(callback: Callback<void>): void
+```
+
+Registers a listener for netUnavailable events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-NetConnection-onNetUnavailable(callback: Callback<void>): void--><!--Device-NetConnection-onNetUnavailable(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## on_netAvailable
 
 ```TypeScript
 on(type: 'netAvailable', callback: Callback<NetHandle>): void
@@ -23,6 +95,8 @@ on(type: 'netAvailable', callback: Callback<NetHandle>): void
 Registers a listener for netAvailable events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,7 +136,7 @@ netCon.unregister((error: BusinessError) => {
 });
 ```
 
-## on('netBlockStatusChange')
+## on_netBlockStatusChange
 
 ```TypeScript
 on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void
@@ -71,6 +145,8 @@ on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void
 Registers a listener for netBlockStatusChange events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-NetConnection-on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void--><!--Device-NetConnection-on(type: 'netBlockStatusChange', callback: Callback<NetBlockStatusInfo>): void-End-->
 
@@ -108,7 +184,7 @@ netCon.unregister((error: BusinessError) => {
 });
 ```
 
-## on('netCapabilitiesChange')
+## on_netCapabilitiesChange
 
 ```TypeScript
 on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
@@ -117,6 +193,8 @@ on(type: 'netCapabilitiesChange', callback: Callback<NetCapabilityInfo>): void
 Registers a listener for **netCapabilitiesChange** events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -156,7 +234,7 @@ netCon.unregister((error: BusinessError) => {
 });
 ```
 
-## on('netConnectionPropertiesChange')
+## on_netConnectionPropertiesChange
 
 ```TypeScript
 on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void
@@ -165,6 +243,8 @@ on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionProper
 Registers a listener for netConnectionPropertiesChange events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-NetConnection-on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void--><!--Device-NetConnection-on(type: 'netConnectionPropertiesChange', callback: Callback<NetConnectionPropertyInfo>): void-End-->
 
@@ -202,7 +282,7 @@ netCon.unregister((error: BusinessError) => {
 });
 ```
 
-## on('netLost')
+## on_netLost
 
 ```TypeScript
 on(type: 'netLost', callback: Callback<NetHandle>): void
@@ -211,6 +291,8 @@ on(type: 'netLost', callback: Callback<NetHandle>): void
 Registers a listener for **netLost** events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -250,7 +332,7 @@ netCon.unregister((error: BusinessError) => {
 });
 ```
 
-## on('netUnavailable')
+## on_netUnavailable
 
 ```TypeScript
 on(type: 'netUnavailable', callback: Callback<void>): void
@@ -259,6 +341,8 @@ on(type: 'netUnavailable', callback: Callback<void>): void
 Registers a listener for netUnavailable events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -306,11 +390,13 @@ register(callback: AsyncCallback<void>): void
 
 Receives status change notifications of a specified network.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetConnection-register(callback: AsyncCallback<void>): void--><!--Device-NetConnection-register(callback: AsyncCallback<void>): void-End-->
 
@@ -326,12 +412,12 @@ Receives status change notifications of a specified network.
 
 | Error Code ID |
 | --- |
-| [2101008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2101008-callback-already-exists) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [2101022](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) |
+| [2101008](../errorcode-net-connection.md#2101008-callback-already-exists) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2101022](../errorcode-net-connection.md#2101022-number-of-requests-exceeding-the-maximum) |
 
 ## Examples
 
@@ -353,9 +439,11 @@ unregister(callback: AsyncCallback<void>): void
 
 Cancels listening for network status changes.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetConnection-unregister(callback: AsyncCallback<void>): void--><!--Device-NetConnection-unregister(callback: AsyncCallback<void>): void-End-->
 
@@ -371,10 +459,10 @@ Cancels listening for network status changes.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [2101007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2101007-callback-not-exist) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [2101007](../errorcode-net-connection.md#2101007-callback-not-exist) |
 
 ## Examples
 

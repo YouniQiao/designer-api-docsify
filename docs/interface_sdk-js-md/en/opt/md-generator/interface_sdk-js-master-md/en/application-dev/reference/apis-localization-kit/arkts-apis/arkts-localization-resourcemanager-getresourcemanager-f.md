@@ -16,6 +16,8 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void--><!--Device-resourceManager-export function getResourceManager(callback: AsyncCallback<ResourceManager>): void-End-->
@@ -65,6 +67,8 @@ export function getResourceManager(bundleName: string, callback: AsyncCallback<R
 Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -119,6 +123,8 @@ Obtains the **ResourceManager** object of the current application. This API uses
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>--><!--Device-resourceManager-export function getResourceManager(): Promise<ResourceManager>-End-->
@@ -164,6 +170,8 @@ export function getResourceManager(bundleName: string): Promise<ResourceManager>
 Obtains the **ResourceManager** object of the specified application. This API uses a promise to return the result.
 
 **Since:** 6
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

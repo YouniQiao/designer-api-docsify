@@ -2,7 +2,9 @@
 
 Represents the cloud data.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface CloudData--><!--Device-cloudExtension-export interface CloudData-End-->
 
@@ -22,11 +24,13 @@ import { cloudExtension } from '@kit.ArkData';
 hasMore: boolean
 ```
 
-Whether there is data to be queried on the server.The value true means there is data to be queried on the server; the value false means the opposite.
+Whether there is data to be queried on the server. The value true means there is data to be queried on the server; the value false means the opposite.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudData-hasMore: boolean--><!--Device-CloudData-hasMore: boolean-End-->
 
@@ -44,7 +48,9 @@ Cursor for data query.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudData-nextCursor: string--><!--Device-CloudData-nextCursor: string-End-->
 
@@ -60,9 +66,11 @@ values: Array<Record<string, CloudType>>
 
 Array of data to be queried, which consists of the data value and ExtensionValue.
 
-**Type:** Array&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
+**Type:** Array&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [CloudType](arkts-arkdata-cloudextension-cloudtype-t-sys.md)&gt;&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudData-values: Array<Record<string, CloudType>>--><!--Device-CloudData-values: Array<Record<string, CloudType>>-End-->
 

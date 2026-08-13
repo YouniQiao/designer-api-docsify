@@ -1,15 +1,14 @@
 # PubKey
 
-公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#Key)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。
-
-&lt;br&gt;公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#AsyKeyGenerator)、  
-[AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#AsyKeyGeneratorBySpec)来生成。
+公钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#Key)的子类，在非对称加密、签名验证、密钥协商时需要将其对象作为输入使用。 &lt;br&gt;公钥可以通过非对称密钥生成器[AsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-asykeygenerator-i.md#AsyKeyGenerator)、 [AsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#AsyKeyGeneratorBySpec)来生成。
 
 **继承/实现关系：** PubKey extends [Key](arkts-cryptoarchitecture-cryptoframework-key-i.md#Key)
 
-**起始版本：** 9
+**起始版本：** 23
 
-<!--Device-cryptoFramework-interface PubKey extends Key--><!--Device-cryptoFramework-interface PubKey extends Key-End-->
+**废弃版本：** -1
+
+<!--Device-cryptoFramework-interface PubKey--><!--Device-cryptoFramework-interface PubKey-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -23,7 +22,9 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 获取密钥参数。此API以同步方式返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -49,11 +50,11 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -99,17 +100,13 @@ async function testgetAsyKeySpec() {
 getEncodedDer(format: string): DataBlob
 ```
 
-支持根据指定的密钥格式（如规范、压缩状态等），获取符合ASN.1语法和DER编码的公钥数据。
+支持根据指定的密钥格式（如规范、压缩状态等），获取符合ASN.1语法和DER编码的公钥数据。 > **说明：** > > 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getEncoded)的区别是： > 1. 本接口可以指定获取密钥数据的格式。 > 2. [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getEncoded)不支持指定获取密钥数据的格式。
 
-> **说明：**
-> 
-> 本接口和[Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getEncoded)的区别是：
-> 1. 本接口可以指定获取密钥数据的格式。
-> 2. [Key.getEncoded()](arkts-cryptoarchitecture-cryptoframework-key-i.md#getEncoded)不支持指定获取密钥数据的格式。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PubKey-getEncodedDer(format: string): DataBlob--><!--Device-PubKey-getEncodedDer(format: string): DataBlob-End-->
 
@@ -131,10 +128,10 @@ getEncodedDer(format: string): DataBlob
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -160,9 +157,11 @@ getEncodedPem(format: string): string
 
 获取PEM编码的密钥数据。此API以同步方式返回结果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PubKey-getEncodedPem(format: string): string--><!--Device-PubKey-getEncodedPem(format: string): string-End-->
 
@@ -184,10 +183,10 @@ getEncodedPem(format: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -220,6 +219,8 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -244,10 +245,10 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 
 | 错误码ID |
 | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -268,11 +269,11 @@ async function eccGetKeyDataTest() {
 getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 ```
 
-获取指定的密钥数据类型对应的公钥数据。此API以同步方式返回结果。
-
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[getKeyData](getKeyData)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+获取指定的密钥数据类型对应的公钥数据。此API以同步方式返回结果。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，getKeyData。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -298,10 +299,10 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 | 错误码ID |
 | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 

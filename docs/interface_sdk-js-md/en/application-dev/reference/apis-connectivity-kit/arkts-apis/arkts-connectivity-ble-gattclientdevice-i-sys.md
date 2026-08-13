@@ -2,9 +2,11 @@
 
 Manages GATT client. Before calling an Gatt client method, you must use [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) to create an GattClientDevice instance.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface GattClientDevice--><!--Device-ble-interface GattClientDevice-End-->
 
@@ -25,9 +27,11 @@ writeCharacteristicValueWithContext(
 
 Writes the characteristic of a BLE peripheral device with context.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -57,15 +61,15 @@ Writes the characteristic of a BLE peripheral device with context.
 | Error Code ID | Error Message |
 | --- | --- |
 | 2901004 | The connection is congested. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2901005 | The connection is not encrypted. |
 | 2901006 | The connection is not authenticated. |
 | 2901007 | The connection is not authorized. |
 | 2901001 | Write forbidden. |
 | 2900011 | The operation is busy. The last operation is not complete. |
 | 2901003 | The connection is not established. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | 2900099 | Operation failed. |
 
 ## Examples

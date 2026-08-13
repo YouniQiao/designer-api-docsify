@@ -2,9 +2,11 @@
 
 ASR whisper detection mode.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AsrWhisperDetectionMode--><!--Device-audio-enum AsrWhisperDetectionMode-End-->
 
@@ -20,9 +22,11 @@ BYPASS = 0
 
 No operation.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrWhisperDetectionMode-BYPASS = 0--><!--Device-AsrWhisperDetectionMode-BYPASS = 0-End-->
 
@@ -38,9 +42,11 @@ STANDARD = 1
 
 Use standard whisper detection model.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AsrWhisperDetectionMode-STANDARD = 1--><!--Device-AsrWhisperDetectionMode-STANDARD = 1-End-->
 

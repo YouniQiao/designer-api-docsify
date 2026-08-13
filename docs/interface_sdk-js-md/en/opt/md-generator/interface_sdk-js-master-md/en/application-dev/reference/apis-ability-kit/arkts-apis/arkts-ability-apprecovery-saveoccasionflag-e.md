@@ -1,9 +1,10 @@
 # SaveOccasionFlag
 
-Enumerates the scenarios for saving the application state. This enum is used as an input parameter of   
-[enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery).
+Enumerates the scenarios for saving the application state. This enum is used as an input parameter of [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appRecovery-enum SaveOccasionFlag--><!--Device-appRecovery-enum SaveOccasionFlag-End-->
 
@@ -17,7 +18,9 @@ SAVE_WHEN_ERROR = 0x0001
 
 Saving the application state when an application fault occurs.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,7 +36,9 @@ SAVE_WHEN_BACKGROUND = 0x0002
 
 Saving the application state when the application is switched to the background.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

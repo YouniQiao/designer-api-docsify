@@ -2,7 +2,9 @@
 
 日志文件对象接口。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-logLibrary-interface LogEntry--><!--Device-logLibrary-interface LogEntry-End-->
 
@@ -20,7 +22,9 @@ mtime: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LogEntry-mtime: long--><!--Device-LogEntry-mtime: long-End-->
 
@@ -38,7 +42,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LogEntry-name: string--><!--Device-LogEntry-name: string-End-->
 
@@ -56,7 +62,9 @@ size: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LogEntry-size: long--><!--Device-LogEntry-size: long-End-->
 

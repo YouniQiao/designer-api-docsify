@@ -4,9 +4,11 @@ Describes the linear acceleration sensor data. It extends from [Response](arkts-
 
 **Inheritance/Implementation:** LinearAccelerometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**Since:** 8
+**Since:** 23
 
-<!--Device-sensor-interface LinearAccelerometerResponse extends Response--><!--Device-sensor-interface LinearAccelerometerResponse extends Response-End-->
+**Deprecated since:** -1
+
+<!--Device-sensor-interface LinearAccelerometerResponse--><!--Device-sensor-interface LinearAccelerometerResponse-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -26,7 +28,9 @@ Linear acceleration along the x-axis of the device, in m/s?.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LinearAccelerometerResponse-x: double--><!--Device-LinearAccelerometerResponse-x: double-End-->
 
@@ -42,7 +46,9 @@ Linear acceleration along the y-axis of the device, in m/s?.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LinearAccelerometerResponse-y: double--><!--Device-LinearAccelerometerResponse-y: double-End-->
 
@@ -58,7 +64,9 @@ Linear acceleration along the z-axis of the device, in m/s?.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LinearAccelerometerResponse-z: double--><!--Device-LinearAccelerometerResponse-z: double-End-->
 

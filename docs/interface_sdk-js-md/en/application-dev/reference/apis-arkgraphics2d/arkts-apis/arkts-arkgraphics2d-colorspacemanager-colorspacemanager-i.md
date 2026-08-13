@@ -1,12 +1,12 @@
 # ColorSpaceManager
 
-Implements management of color space objects.
+Implements management of color space objects. Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager.
 
-Before calling any of the following APIs, you must use [create()](arkts-arkgraphics2d-colorspacemanager-create-f.md#create) to create a color space manager.
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-colorSpaceManager-interface ColorSpaceManager--><!--Device-colorSpaceManager-interface ColorSpaceManager-End-->
 
@@ -26,9 +26,11 @@ getColorSpaceName(): ColorSpace
 
 Obtains the color space type.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace--><!--Device-ColorSpaceManager-getColorSpaceName(): ColorSpace-End-->
 
@@ -44,7 +46,7 @@ Obtains the color space type.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
 
 ## Examples
 
@@ -58,21 +60,17 @@ try {
 
 ## getGamma
 
-ArkTS-Dyn:
-```TypeScript
-getGamma(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGamma(): double
 ```
 
 Obtains the gamma of the color space.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getGamma(): double--><!--Device-ColorSpaceManager-getGamma(): double-End-->
 
@@ -82,13 +80,13 @@ Obtains the gamma of the color space.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Gamma of the color space. |
+| double | Gamma of the color space. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
 
 ## Examples
 
@@ -102,21 +100,17 @@ try {
 
 ## getWhitePoint
 
-ArkTS-Dyn:
-```TypeScript
-getWhitePoint(): Array<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWhitePoint(): Array<double>
 ```
 
 Obtains the coordinates of the white point in the color space.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ColorSpaceManager-getWhitePoint(): Array<double>--><!--Device-ColorSpaceManager-getWhitePoint(): Array<double>-End-->
 
@@ -126,13 +120,13 @@ Obtains the coordinates of the white point in the color space.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt; | Coordinates [x, y] of the white point. |
+| Array&lt;double&gt; | Coordinates [x, y] of the white point. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [18600001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkgraphics2d/errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
+| [18600001](../errorcode-colorspace-manager.md#18600001-abnormal-parameter-value) | The parameter value is abnormal.<br>**Applicable version:** 9 - 22 |
 
 ## Examples
 

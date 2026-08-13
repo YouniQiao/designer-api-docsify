@@ -2,7 +2,9 @@
 
 Enumerate the album subtypes.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum AlbumSubtype--><!--Device-photoAccessHelper-enum AlbumSubtype-End-->
 
@@ -16,7 +18,9 @@ HIDDEN
 
 Hidden album.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-HIDDEN--><!--Device-AlbumSubtype-HIDDEN-End-->
 
@@ -32,7 +36,9 @@ TRASH
 
 Trash.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-TRASH--><!--Device-AlbumSubtype-TRASH-End-->
 
@@ -48,7 +54,9 @@ SCREENSHOT
 
 Album for screenshots and screen recording files.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-SCREENSHOT--><!--Device-AlbumSubtype-SCREENSHOT-End-->
 
@@ -64,9 +72,29 @@ CAMERA
 
 Album for images and videos taken by the camera.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-CAMERA--><!--Device-AlbumSubtype-CAMERA-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## IMAGE
+
+```TypeScript
+IMAGE = 1031
+```
+
+Photo album.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AlbumSubtype-IMAGE = 1031--><!--Device-AlbumSubtype-IMAGE = 1031-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -80,7 +108,9 @@ CLOUD_ENHANCEMENT = 1032
 
 AI-powered cloud enhanced album.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032--><!--Device-AlbumSubtype-CLOUD_ENHANCEMENT = 1032-End-->
 
@@ -98,7 +128,27 @@ LIVEPHOTO_4D = 1033
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033--><!--Device-AlbumSubtype-LIVEPHOTO_4D = 1033-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+## SOURCE_GENERIC
+
+```TypeScript
+SOURCE_GENERIC = 2049
+```
+
+Source album.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AlbumSubtype-SOURCE_GENERIC = 2049--><!--Device-AlbumSubtype-SOURCE_GENERIC = 2049-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -112,7 +162,9 @@ CLASSIFY = 4097
 
 Classified album.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-CLASSIFY = 4097--><!--Device-AlbumSubtype-CLASSIFY = 4097-End-->
 
@@ -128,7 +180,9 @@ GEOGRAPHY_LOCATION = 4099
 
 Geographic location album.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099--><!--Device-AlbumSubtype-GEOGRAPHY_LOCATION = 4099-End-->
 
@@ -144,7 +198,9 @@ GEOGRAPHY_CITY
 
 City album.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-GEOGRAPHY_CITY--><!--Device-AlbumSubtype-GEOGRAPHY_CITY-End-->
 
@@ -160,7 +216,9 @@ SHOOTING_MODE
 
 Shooting mode album.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-SHOOTING_MODE--><!--Device-AlbumSubtype-SHOOTING_MODE-End-->
 
@@ -176,7 +234,9 @@ PORTRAIT
 
 Portrait album.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-PORTRAIT--><!--Device-AlbumSubtype-PORTRAIT-End-->
 
@@ -192,7 +252,9 @@ GROUP_PHOTO
 
 Group photo album.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-GROUP_PHOTO--><!--Device-AlbumSubtype-GROUP_PHOTO-End-->
 
@@ -208,7 +270,9 @@ HIGHLIGHT = 4104
 
 Highlights album.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-HIGHLIGHT = 4104--><!--Device-AlbumSubtype-HIGHLIGHT = 4104-End-->
 
@@ -224,7 +288,9 @@ HIGHLIGHT_SUGGESTIONS
 
 Highlights suggestion album.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS--><!--Device-AlbumSubtype-HIGHLIGHT_SUGGESTIONS-End-->
 

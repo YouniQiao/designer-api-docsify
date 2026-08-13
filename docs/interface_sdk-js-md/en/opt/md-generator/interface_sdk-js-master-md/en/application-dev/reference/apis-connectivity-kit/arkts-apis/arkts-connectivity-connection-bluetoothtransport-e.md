@@ -2,7 +2,9 @@
 
 Enum for the transport of a remote device
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-enum BluetoothTransport--><!--Device-connection-enum BluetoothTransport-End-->
 
@@ -16,7 +18,9 @@ TRANSPORT_BR_EDR = 0
 
 The value of bluetooth transport BR/EDR.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ TRANSPORT_LE = 1
 
 The value of bluetooth transport LE.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ TRANSPORT_DUAL = 2
 
 The value of bluetooth transport DUAL.
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ TRANSPORT_UNKNOWN = 3
 
 The unknown bluetooth transport.
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

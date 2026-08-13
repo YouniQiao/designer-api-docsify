@@ -1,4 +1,4 @@
-# onTabContentUpdate
+# on_tabContentUpdate
 
 ## Modules to Import
 
@@ -6,21 +6,25 @@
 import { uiObserver } from '@kit.ArkUI';
 ```
 
-## onTabContentUpdate
+## on_tabContentUpdate
 
 ```TypeScript
-export function onTabContentUpdate(options: ObserverOptions, callback: Callback<TabContentInfo>): void
+export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
+Subscribes to **TabContent** page switching events for the specified **Tabs** component identified by its ID. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navDestinationUpdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function onTabContentUpdate(options: ObserverOptions, callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function onTabContentUpdate(options: ObserverOptions, callback: Callback<TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function on(type: 'tabContentUpdate', options: ObserverOptions, callback: Callback<TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,25 +32,81 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | ObserverOptions | Yes | The options object. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | The callback function to be called when when the tabContent is showed or hidden. |
+| type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
+| options | ObserverOptions | Yes | ID of the target **Tabs** component. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
 
-
-## onTabContentUpdate
+## Examples
 
 ```TypeScript
-export function onTabContentUpdate(callback: Callback<TabContentInfo>): void
+import { uiObserver } from '@kit.ArkUI';
+
+function callbackFunc(info: uiObserver.TabContentInfo) {
+  console.info(`tabContentUpdate ${JSON.stringify(info)}`);
+}
+
+@Entry
+@Component
+struct TabsExample {
+
+  aboutToAppear(): void {
+    // Register a listener with the specified tab ID.
+    uiObserver.on('tabContentUpdate', { id: 'tabsId' }, callbackFunc);
+  }
+
+  aboutToDisappear(): void {
+    // Unregister the listeners.
+    uiObserver.off('tabContentUpdate', { id: 'tabsId' }, callbackFunc);
+  }
+
+  build() {
+    Column() {
+      Tabs() {
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#00CB87')
+        }.tabBar('green').id('tabContentId0')
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#007DFF')
+        }.tabBar('blue').id('tabContentId1')
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#FFBF00')
+        }.tabBar('yellow').id('tabContentId2')
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#E67C92')
+        }.tabBar('pink').id('tabContentId3')
+      }
+      .width(360)
+      .height(296)
+      .backgroundColor('#F1F3F5')
+      .id('tabsId')
+    }.width('100%')
+  }
+}
 ```
 
-Registers a callback function to be called when the tabContent is showed or hidden.
 
-**Since:** 23
+## on_tabContentUpdate
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+```TypeScript
+export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void
+```
+
+Subscribes to **TabContent** switch events. Unlike [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navDestinationUpdate), this API does not support listening for the initial tab display event when the **Tabs** component is initialized.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-uiObserver-export function onTabContentUpdate(callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function onTabContentUpdate(callback: Callback<TabContentInfo>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-uiObserver-export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void--><!--Device-uiObserver-export function on(type: 'tabContentUpdate', callback: Callback<TabContentInfo>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -54,5 +114,57 @@ Registers a callback function to be called when the tabContent is showed or hidd
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | The callback function to be called when the tabContent is showed or hidden. |
+| type | 'tabContentUpdate' | Yes | Event type. Set to **'tabContentUpdate'** for **TabContent** page switching events. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[TabContentInfo](arkts-arkui-uiobserver-tabcontentinfo-i.md)&gt; | Yes | Callback used to return the result. It provides information about **TabContent** switch events through **TabContentInfo**. |
+
+## Examples
+
+```TypeScript
+import { uiObserver } from '@kit.ArkUI';
+
+function callbackFunc(info: uiObserver.TabContentInfo) {
+  console.info(`tabContentUpdate ${JSON.stringify(info)}`);
+}
+
+@Entry
+@Component
+struct TabsExample {
+
+  aboutToAppear(): void {
+    // Register a listener.
+    uiObserver.on('tabContentUpdate', callbackFunc);
+  }
+
+  aboutToDisappear(): void {
+    // Unregister the listeners.
+    uiObserver.off('tabContentUpdate', callbackFunc);
+  }
+
+  build() {
+    Column() {
+      Tabs() {
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#00CB87')
+        }.tabBar('green').id('tabContentId0')
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#007DFF')
+        }.tabBar('blue').id('tabContentId1')
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#FFBF00')
+        }.tabBar('yellow').id('tabContentId2')
+
+        TabContent() {
+          Column().width('100%').height('100%').backgroundColor('#E67C92')
+        }.tabBar('pink').id('tabContentId3')
+      }
+      .width(360)
+      .height(296)
+      .backgroundColor('#F1F3F5')
+      .id('tabsId')
+    }.width('100%')
+  }
+}
+```
 

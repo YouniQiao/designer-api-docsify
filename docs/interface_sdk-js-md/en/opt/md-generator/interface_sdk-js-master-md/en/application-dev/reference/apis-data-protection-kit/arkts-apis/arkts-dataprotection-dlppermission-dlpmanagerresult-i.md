@@ -4,6 +4,8 @@ Represents information about the trigger of the DLP manager application.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-dlpPermission-export interface DLPManagerResult--><!--Device-dlpPermission-export interface DLPManagerResult-End-->
 
 **System capability:** SystemCapability.Security.DataLossPrevention
@@ -26,6 +28,8 @@ Result code returned after the DLP manager application is started and exits. The
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DLPManagerResult-resultCode: number--><!--Device-DLPManagerResult-resultCode: number-End-->
@@ -43,6 +47,8 @@ Data returned after the DLP manager application is started and exits.
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -8,6 +8,8 @@ Indicates the event type of bundle change
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-bundleMonitor-type BundleChangedEvent = 'add' | 'update' | 'remove'--><!--Device-bundleMonitor-type BundleChangedEvent = 'add' | 'update' | 'remove'-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

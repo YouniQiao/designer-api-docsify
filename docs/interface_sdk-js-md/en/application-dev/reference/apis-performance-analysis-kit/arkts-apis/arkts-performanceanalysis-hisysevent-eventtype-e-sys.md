@@ -2,9 +2,11 @@
 
 Enumerate system event types.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-enum EventType--><!--Device-hiSysEvent-enum EventType-End-->
 
@@ -20,9 +22,11 @@ FAULT = 1
 
 Error event.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -38,9 +42,11 @@ STATISTIC = 2
 
 Statistic event.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
@@ -56,9 +62,11 @@ SECURITY = 3
 
 Security event.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
@@ -74,9 +82,11 @@ BEHAVIOR = 4
 
 User behavior event.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 

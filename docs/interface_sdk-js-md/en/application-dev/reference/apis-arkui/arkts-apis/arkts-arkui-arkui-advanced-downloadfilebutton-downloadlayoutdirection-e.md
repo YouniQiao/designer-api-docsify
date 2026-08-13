@@ -1,10 +1,12 @@
 # DownloadLayoutDirection
 
-Enum for DownloadLayoutDirection
+Enum for DownloadDescription
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum DownloadLayoutDirection--><!--Device-unnamed-export declare enum DownloadLayoutDirection-End-->
 
@@ -18,11 +20,13 @@ HORIZONTAL = 0
 
 Layout direction is HORIZONTAL.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadLayoutDirection-HORIZONTAL = 0--><!--Device-DownloadLayoutDirection-HORIZONTAL = 0-End-->
 
@@ -36,11 +40,13 @@ VERTICAL = 1
 
 Layout direction is VERTICAL.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DownloadLayoutDirection-VERTICAL = 1--><!--Device-DownloadLayoutDirection-VERTICAL = 1-End-->
 

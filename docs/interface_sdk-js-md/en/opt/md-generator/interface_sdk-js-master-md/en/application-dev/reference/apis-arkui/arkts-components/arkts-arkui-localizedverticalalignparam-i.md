@@ -4,6 +4,8 @@ Defines the localized vertical align param of relative container.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LocalizedVerticalAlignParam--><!--Device-unnamed-declare interface LocalizedVerticalAlignParam-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Vertical alignment mode relative to the anchor component.
 **Type:** [VerticalAlign](../arkts-apis/arkts-arkui-verticalalign-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ ID of the component that serves as the anchor.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Enumerates the types of components displayed on the PiP controller.
 
-**Since:** 12
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum PiPControlType--><!--Device-PiPWindow-enum PiPControlType-End-->
 
@@ -16,9 +18,11 @@ VIDEO_PLAY_PAUSE = 0
 
 Play/Pause component group for live video.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0--><!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0-End-->
 
@@ -32,9 +36,11 @@ VIDEO_PREVIOUS = 1
 
 Previous component in video scenarios.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
 
@@ -48,9 +54,11 @@ VIDEO_NEXT = 2
 
 Next component in video scenarios.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-VIDEO_NEXT = 2--><!--Device-PiPControlType-VIDEO_NEXT = 2-End-->
 
@@ -64,9 +72,11 @@ FAST_FORWARD = 3
 
 Fast-forward component in video scenarios.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
 
@@ -80,9 +90,11 @@ FAST_BACKWARD = 4
 
 Rewind component in video scenarios.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-FAST_BACKWARD = 4--><!--Device-PiPControlType-FAST_BACKWARD = 4-End-->
 
@@ -96,9 +108,11 @@ HANG_UP_BUTTON = 5
 
 Hang-up component.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-HANG_UP_BUTTON = 5--><!--Device-PiPControlType-HANG_UP_BUTTON = 5-End-->
 
@@ -112,9 +126,11 @@ MICROPHONE_SWITCH = 6
 
 Microphone on/off component.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-MICROPHONE_SWITCH = 6--><!--Device-PiPControlType-MICROPHONE_SWITCH = 6-End-->
 
@@ -128,9 +144,11 @@ CAMERA_SWITCH = 7
 
 Camera on/off component.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
 
@@ -144,9 +162,11 @@ MUTE_SWITCH = 8
 
 Mute/Unmute component.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PiPControlType-MUTE_SWITCH = 8--><!--Device-PiPControlType-MUTE_SWITCH = 8-End-->
 

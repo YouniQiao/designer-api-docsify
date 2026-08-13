@@ -6,11 +6,11 @@
 function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Promise<AuthToken>
 ```
 
-验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。
+验证认证令牌。该接口用于校验AuthToken的有效性，包括完整性校验和时效性校验，校验通过后返回解析后的AuthToken详细信息。使用Promise异步回调。 完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。
 
-完整性校验通过验证AuthToken的数字签名确保令牌未被篡改；时效性校验通过比对AuthToken的签发时间与当前时间，并结合allowableDuration参数判断令牌是否在有效期内。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.USE_USER_ACCESS_MANAGER
 
@@ -37,12 +37,12 @@ function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Prom
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12500015](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500015-authtoken完整性校验失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
-| [12500016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500016-authtoken过期) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500015](../errorcode-useriam.md#12500015-authtoken完整性校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [12500016](../errorcode-useriam.md#12500016-authtoken过期) |
 
 ## 示例
 

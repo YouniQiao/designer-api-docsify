@@ -10,6 +10,8 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CRYPTO_EXTENSION_REGISTER
 
 <!--Device-huksExternalCrypto-function unregisterProvider(providerName: string, params?: Array<HuksExternalCryptoParam>): Promise<void>--><!--Device-huksExternalCrypto-function unregisterProvider(providerName: string, params?: Array<HuksExternalCryptoParam>): Promise<void>-End-->
@@ -33,13 +35,13 @@ function unregisterProvider(providerName: string, params?: Array<HuksExternalCry
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-进程通信错误) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-输入参数非法) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-内存不足) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-外部错误) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-目标对象不存在) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [12000005](../errorcode-huks.md#12000005-进程通信错误) |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12000014](../errorcode-huks.md#12000014-内存不足) |
+| [12000012](../errorcode-huks.md#12000012-外部错误) |
+| [12000011](../errorcode-huks.md#12000011-目标对象不存在) |
 
 ## 示例
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-webview-enum WebHitTestType--><!--Device-webview-enum WebHitTestType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ EditText = 0
 可编辑的区域。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ Email = 1
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHitTestType-Email = 1--><!--Device-WebHitTestType-Email = 1-End-->
@@ -49,6 +55,8 @@ HttpAnchor = 2
 超链接，其中src为http。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ HttpAnchorImg = 3
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHitTestType-HttpAnchorImg = 3--><!--Device-WebHitTestType-HttpAnchorImg = 3-End-->
@@ -81,6 +91,8 @@ Img = 4
 HTML::img标签。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -98,6 +110,8 @@ Map = 5
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHitTestType-Map = 5--><!--Device-WebHitTestType-Map = 5-End-->
@@ -114,6 +128,8 @@ Phone = 6
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebHitTestType-Phone = 6--><!--Device-WebHitTestType-Phone = 6-End-->
@@ -129,6 +145,8 @@ Unknown = 7
 未知内容。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

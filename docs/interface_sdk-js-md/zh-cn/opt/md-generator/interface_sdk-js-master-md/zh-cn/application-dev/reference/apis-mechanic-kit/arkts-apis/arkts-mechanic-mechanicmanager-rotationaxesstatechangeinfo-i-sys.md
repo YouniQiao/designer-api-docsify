@@ -2,7 +2,9 @@
 
 旋转轴状态变更信息
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface RotationAxesStateChangeInfo--><!--Device-mechanicManager-export interface RotationAxesStateChangeInfo-End-->
 
@@ -20,7 +22,9 @@ mechId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAxesStateChangeInfo-mechId: int--><!--Device-RotationAxesStateChangeInfo-mechId: int-End-->
 
@@ -38,7 +42,9 @@ Rotate axis status.
 
 **类型：** [RotationAxesStatus](arkts-mechanic-mechanicmanager-rotationaxesstatus-i-sys.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus--><!--Device-RotationAxesStateChangeInfo-status: RotationAxesStatus-End-->
 

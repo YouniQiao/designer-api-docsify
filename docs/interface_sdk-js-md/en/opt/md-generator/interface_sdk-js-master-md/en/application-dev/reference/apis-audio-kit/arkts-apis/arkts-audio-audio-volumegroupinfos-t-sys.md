@@ -6,7 +6,9 @@ type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>
 
 Array of VolumeGroupInfos, which is read-only.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>--><!--Device-audio-type VolumeGroupInfos = Array<Readonly<VolumeGroupInfo>>-End-->
 

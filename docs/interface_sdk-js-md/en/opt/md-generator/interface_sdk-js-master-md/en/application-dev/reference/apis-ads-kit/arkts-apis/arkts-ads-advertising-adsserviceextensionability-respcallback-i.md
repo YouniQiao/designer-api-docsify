@@ -4,6 +4,8 @@ Ad request callback.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface RespCallback--><!--Device-unnamed-export interface RespCallback-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -14,7 +16,7 @@ Ad request callback.
 import { RespCallback } from '@kit.AdsKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (respData: Map<string, Array<advertising.Advertisement>>): void
@@ -23,6 +25,8 @@ import { RespCallback } from '@kit.AdsKit';
 Data in the ad request callback.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void--><!--Device-RespCallback-(respData: Map<string, Array<advertising.Advertisement>>): void-End-->
 

@@ -6,6 +6,8 @@ Represents the callback invoked when the web page is overscrolled.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnOverScrollEvent--><!--Device-unnamed-declare interface OnOverScrollEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,15 +18,15 @@ Represents the callback invoked when the web page is overscrolled.
 xOffset: number
 ```
 
-Horizontal overscroll offset based on the leftmost edge of the web page.
-
-Unit: vp.
+Horizontal overscroll offset based on the leftmost edge of the web page. Unit: vp.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,15 +40,15 @@ Unit: vp.
 yOffset: number
 ```
 
-Vertical overscroll offset based on the top edge of the web page.
-
-Unit: vp.
+Vertical overscroll offset based on the top edge of the web page. Unit: vp.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

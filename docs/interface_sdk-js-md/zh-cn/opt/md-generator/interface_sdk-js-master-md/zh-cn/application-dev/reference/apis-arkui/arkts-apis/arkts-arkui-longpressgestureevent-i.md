@@ -1,12 +1,14 @@
 # LongPressGestureEvent
 
-继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)。可将该对象作为[onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#onGestureJudgeBegin)的event参数来传递。
+继承自[BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)。可将该对象作为[onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#onGestureJudgeBegin)的 event参数来传递。
 
 **继承/实现关系：** LongPressGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
 
 **起始版本：** 11
 
-<!--Device-unnamed-interface LongPressGestureEvent extends BaseGestureEvent--><!--Device-unnamed-interface LongPressGestureEvent extends BaseGestureEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-interface LongPressGestureEvent--><!--Device-unnamed-interface LongPressGestureEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ repeat: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

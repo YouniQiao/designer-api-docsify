@@ -2,7 +2,9 @@
 
 Parameters for obtaining detailed information on network interface traffic usage.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface IfaceInfo--><!--Device-statistics-export interface IfaceInfo-End-->
 
@@ -26,7 +28,9 @@ End time for querying traffic.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IfaceInfo-endTime: int--><!--Device-IfaceInfo-endTime: int-End-->
 
@@ -44,7 +48,9 @@ Network interface for querying traffic.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IfaceInfo-iface: string--><!--Device-IfaceInfo-iface: string-End-->
 
@@ -62,7 +68,9 @@ Start time for querying traffic.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-IfaceInfo-startTime: int--><!--Device-IfaceInfo-startTime: int-End-->
 

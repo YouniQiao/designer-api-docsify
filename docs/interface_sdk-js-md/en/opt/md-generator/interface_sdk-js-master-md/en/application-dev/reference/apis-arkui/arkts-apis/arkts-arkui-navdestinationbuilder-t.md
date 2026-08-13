@@ -8,6 +8,8 @@ Defines the content of the **NavDestination** component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-unnamed-export type NavDestinationBuilder = (name: string, param?: Object) => void--><!--Device-unnamed-export type NavDestinationBuilder = (name: string, param?: Object) => void-End-->

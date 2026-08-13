@@ -1,8 +1,10 @@
 # @ohos.distributedMissionManager
 
-The distributedMissionManager module implements mission management across devices. You can use the APIs provided by this module to register or unregister a mission status listener, start or stop synchronizing a remote mission list,and continue a mission on a remote device by mission ID or bundle name.
+The distributedMissionManager module implements mission management across devices. You can use the APIs provided by this module to register or unregister a mission status listener, start or stop synchronizing a remote mission list, and continue a mission on a remote device by mission ID or bundle name.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -25,20 +27,22 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission) |
-| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission-1) |
-| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission-2) |
-| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission-3) |
-| [off](arkts-ability-distributedmissionmanager-off-f-sys.md#off) |
-| [on](arkts-ability-distributedmissionmanager-on-f-sys.md#on) |
-| [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener) |
-| [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener-1) |
-| [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions) |
-| [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions-1) |
-| [stopSyncRemoteMissions](arkts-ability-distributedmissionmanager-stopsyncremotemissions-f-sys.md#stopsyncremotemissions) |
-| [stopSyncRemoteMissions](arkts-ability-distributedmissionmanager-stopsyncremotemissions-f-sys.md#stopsyncremotemissions-1) |
-| [unRegisterMissionListener](arkts-ability-distributedmissionmanager-unregistermissionlistener-f-sys.md#unregistermissionlistener) |
-| [unRegisterMissionListener](arkts-ability-distributedmissionmanager-unregistermissionlistener-f-sys.md#unregistermissionlistener-1) |
+| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission-(System-API)) |
+| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission-(System-API)) |
+| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission-(System-API)) |
+| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission-(System-API)) |
+| [offContinueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md#offContinueStateChange-(System-API)) |
+| [off_continueStateChange](arkts-ability-distributedmissionmanager-offcontinuestatechange-f-sys.md) |
+| [onContinueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md#onContinueStateChange-(System-API)) |
+| [on_continueStateChange](arkts-ability-distributedmissionmanager-oncontinuestatechange-f-sys.md) |
+| [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener-(System-API)) |
+| [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registerMissionListener-(System-API)) |
+| [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startSyncRemoteMissions-(System-API)) |
+| [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startSyncRemoteMissions-(System-API)) |
+| [stopSyncRemoteMissions](arkts-ability-distributedmissionmanager-stopsyncremotemissions-f-sys.md#stopSyncRemoteMissions-(System-API)) |
+| [stopSyncRemoteMissions](arkts-ability-distributedmissionmanager-stopsyncremotemissions-f-sys.md#stopSyncRemoteMissions-(System-API)) |
+| [unRegisterMissionListener](arkts-ability-distributedmissionmanager-unregistermissionlistener-f-sys.md#unRegisterMissionListener-(System-API)) |
+| [unRegisterMissionListener](arkts-ability-distributedmissionmanager-unregistermissionlistener-f-sys.md#unRegisterMissionListener-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

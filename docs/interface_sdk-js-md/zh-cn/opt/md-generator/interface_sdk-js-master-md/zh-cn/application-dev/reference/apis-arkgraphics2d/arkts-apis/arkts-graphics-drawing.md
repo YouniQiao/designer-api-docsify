@@ -1,14 +1,10 @@
 # @ohos.graphics.drawing
 
-开发者在绘制界面元素时，若ArkUI组件无法满足自定义图形需求，可使用Drawing模块实现灵活的自定义绘制效果。Drawing模块提供基础的图形绘制能力，包括绘制矩形、圆形、点、直线、自定义Path和字体等。
+开发者在绘制界面元素时，若ArkUI组件无法满足自定义图形需求，可使用Drawing模块实现灵活的自定义绘制效果。 Drawing模块提供基础的图形绘制能力，包括绘制矩形、圆形、点、直线、自定义Path和字体等。 > **说明：** > > - 本模块使用屏幕物理像素单位px。 > > - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
 
-> **说明：**
-> 
-> - 本模块使用屏幕物理像素单位px。
-> 
-> - 本模块为单线程模型策略，需要调用方自行管理线程安全和上下文状态的切换。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace drawing--><!--Device-unnamed-declare namespace drawing-End-->
 
@@ -57,7 +53,7 @@
 | 名称 |
 | --- |
 | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) |
-| [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 定义蒙版滤镜模糊中操作类型的枚举。蒙版用于定义图像的可绘制区域，滤镜用于应用模糊等视觉效果。该枚举控制模糊效果如何应用到蒙版定义的区域内。  \| 名称 \| 值 \| 说明 \| 示意图 \|  \| ------ \| - \| ------------------ \| -------- \|  \| NORMAL \| 0 \| 全面模糊，外圈和内部实体一起模糊。 \| ![NORMAL](../../../reference/apis-arkgraphics2d/figures/BlurType-Normal.png) \|  \| SOLID \| 1 \| 内部实体不变，只模糊外圈边缘部分。 \| ![SOLID](../../../reference/apis-arkgraphics2d/figures/BlurType-Solid.png) \|  \| OUTER \| 2 \| 只有外圈边缘模糊，内部实体完全透明。 \| ![OUTER](../../../reference/apis-arkgraphics2d/figures/BlurType-Outer.png) \|  \| INNER \| 3 \| 只有内部实体模糊，外圈边缘清晰。 \| ![INNER](../../../reference/apis-arkgraphics2d/figures/BlurType-Inner.png) \|
+| [BlurType](arkts-arkgraphics2d-drawing-blurtype-e.md) | 定义蒙版滤镜模糊中操作类型的枚举。蒙版用于定义图像的可绘制区域，滤镜用于应用模糊等视觉效果。该枚举控制模糊效果如何应用到蒙版定义的区域内。 \| 名称 \| 值 \| 说明 \| 示意图 \| \| ------ \| - \| ------------------ \| -------- \| \| NORMAL \| 0 \| 全面模糊，外圈和内部实体一起模糊。 \|  \| \| SOLID \| 1 \| 内部实体不变，只模糊外圈边缘部分。 \|  \| \| OUTER \| 2 \| 只有外圈边缘模糊，内部实体完全透明。 \|  \| \| INNER \| 3 \| 只有内部实体模糊，外圈边缘清晰。 \|  \|
 | [CapStyle](arkts-arkgraphics2d-drawing-capstyle-e.md) |
 | [ClipOp](arkts-arkgraphics2d-drawing-clipop-e.md) |
 | [CornerPos](arkts-arkgraphics2d-drawing-cornerpos-e.md) |
@@ -66,7 +62,7 @@
 | [FontHinting](arkts-arkgraphics2d-drawing-fonthinting-e.md) |
 | [FontMetricsFlags](arkts-arkgraphics2d-drawing-fontmetricsflags-e.md) |
 | [JoinStyle](arkts-arkgraphics2d-drawing-joinstyle-e.md) |
-| [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 路径效果的绘制样式枚举。  \| 名称 \| 值 \| 说明 \|  \| ------ \| - \| ------------------ \|  \| TRANSLATE \| 0 \| 不会随着路径旋转，只会平移。 \|  \| ROTATE \| 1 \| 随着路径的旋转而旋转。 \|  \| MORPH \| 2 \| 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 \|
+| [PathDashStyle](arkts-arkgraphics2d-drawing-pathdashstyle-e.md) | 路径效果的绘制样式枚举。 \| 名称 \| 值 \| 说明 \| \| ------ \| - \| ------------------ \| \| TRANSLATE \| 0 \| 不会随着路径旋转，只会平移。 \| \| ROTATE \| 1 \| 随着路径的旋转而旋转。 \| \| MORPH \| 2 \| 随着路径的旋转而旋转，并在转折处进行拉伸或压缩等操作以增加平滑度。 \|
 | [PathDirection](arkts-arkgraphics2d-drawing-pathdirection-e.md) |
 | [PathFillType](arkts-arkgraphics2d-drawing-pathfilltype-e.md) |
 | [PathIteratorVerb](arkts-arkgraphics2d-drawing-pathiteratorverb-e.md) |

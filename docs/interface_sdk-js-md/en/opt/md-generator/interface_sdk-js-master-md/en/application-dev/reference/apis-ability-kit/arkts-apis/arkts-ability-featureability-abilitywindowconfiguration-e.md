@@ -1,9 +1,10 @@
 # AbilityWindowConfiguration
 
-Defines the window configuration corresponding to this ability. The configuration is obtained through  
-**featureAbility.AbilityWindowConfiguration**.
+Defines the window configuration corresponding to this ability. The configuration is obtained through **featureAbility.AbilityWindowConfiguration**.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-featureAbility-export enum AbilityWindowConfiguration--><!--Device-featureAbility-export enum AbilityWindowConfiguration-End-->
 
@@ -18,6 +19,8 @@ WINDOW_MODE_UNDEFINED = 0
 The PageAbility is in an undefined window display mode.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -35,6 +38,8 @@ The PageAbility is in full screen mode.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_FULLSCREEN = 1-End-->
@@ -50,6 +55,8 @@ WINDOW_MODE_SPLIT_PRIMARY = 100
 The left screen in horizontal direction or the upper screen in vertical direction is the primary window.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -67,6 +74,8 @@ The right screen in horizontal direction or the lower screen in vertical directi
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101--><!--Device-AbilityWindowConfiguration-WINDOW_MODE_SPLIT_SECONDARY = 101-End-->
@@ -82,6 +91,8 @@ WINDOW_MODE_FLOATING = 102
 The PageAbility is displayed in floating window mode.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

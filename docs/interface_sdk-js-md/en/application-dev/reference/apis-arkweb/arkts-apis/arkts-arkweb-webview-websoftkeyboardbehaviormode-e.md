@@ -1,10 +1,12 @@
 # WebSoftKeyboardBehaviorMode
 
-Indicates the keyboard behavior mode of the web component, default value is DEFAULT.
+Enumerates the behavior modes of the web soft keyboard.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebSoftKeyboardBehaviorMode--><!--Device-webview-enum WebSoftKeyboardBehaviorMode-End-->
 
@@ -16,11 +18,13 @@ Indicates the keyboard behavior mode of the web component, default value is DEFA
 DEFAULT = 0
 ```
 
-Soft keyboard will not be hidden or shown automatically when web comes into pause/continue or blur/focus state.
+When the **Web** component is focused or unfocused, or its status changes to inactive or active, the system attempts to hide or display the soft keyboard. This value is used by default.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-WebSoftKeyboardBehaviorMode-DEFAULT = 0--><!--Device-WebSoftKeyboardBehaviorMode-DEFAULT = 0-End-->
 
@@ -32,11 +36,13 @@ Soft keyboard will not be hidden or shown automatically when web comes into paus
 DISABLE_AUTO_KEYBOARD_ON_ACTIVE = 1
 ```
 
-Soft keyboard will not be hidden or shown automatically when web comes into pause/continue state
+When the **Web** component's status changes between inactive and active, the system does not hide or start the soft keyboard.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 <!--Device-WebSoftKeyboardBehaviorMode-DISABLE_AUTO_KEYBOARD_ON_ACTIVE = 1--><!--Device-WebSoftKeyboardBehaviorMode-DISABLE_AUTO_KEYBOARD_ON_ACTIVE = 1-End-->
 

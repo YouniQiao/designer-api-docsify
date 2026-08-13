@@ -6,7 +6,7 @@ Enumerates the KV store types.
 
 **Deprecated since:** 9
 
-**Substitutes:** [KVStoreType](ohos.data.distributedKVStore.KVStoreType)
+**Substitutes:** KVStoreType
 
 <!--Device-distributedData-enum KVStoreType--><!--Device-distributedData-enum KVStoreType-End-->
 
@@ -18,15 +18,13 @@ Enumerates the KV store types.
 DEVICE_COLLABORATION = 0
 ```
 
-Device KV store.
-
-The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.
+Device KV store. The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [DEVICE_COLLABORATION](ohos.data.distributedKVStore.KVStoreType#DEVICE_COLLABORATION)
+**Substitutes:** DEVICE_COLLABORATION
 
 <!--Device-KVStoreType-DEVICE_COLLABORATION = 0--><!--Device-KVStoreType-DEVICE_COLLABORATION = 0-End-->
 
@@ -38,15 +36,13 @@ The device KV store manages data by device, which eliminates conflicts. Data can
 SINGLE_VERSION = 1
 ```
 
-Single KV store.
-
-The single KV store does not differentiate data by device. If the same key is modified by different devices, the data will be overwritten.
+Single KV store. The single KV store does not differentiate data by device. If the same key is modified by different devices, the data will be overwritten.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [SINGLE_VERSION](ohos.data.distributedKVStore.KVStoreType#SINGLE_VERSION)
+**Substitutes:** SINGLE_VERSION
 
 <!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
 

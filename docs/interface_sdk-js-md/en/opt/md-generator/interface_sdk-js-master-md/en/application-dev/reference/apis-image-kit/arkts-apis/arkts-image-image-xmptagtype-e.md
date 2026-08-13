@@ -4,6 +4,8 @@ Enumerates XMP tag type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-image-enum XMPTagType--><!--Device-image-enum XMPTagType-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
@@ -17,6 +19,8 @@ UNKNOWN = 0
 Unknown XMP tag type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ String XMP tag type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPTagType-STRING = 1--><!--Device-XMPTagType-STRING = 1-End-->
@@ -49,6 +55,8 @@ UNORDERED_ARRAY = 2
 Unordered array XMP tag type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Ordered array XMP tag type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPTagType-ORDERED_ARRAY = 3--><!--Device-XMPTagType-ORDERED_ARRAY = 3-End-->
@@ -81,6 +91,8 @@ ALTERNATE_ARRAY = 4
 Alternate array XMP tag type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ Alternate text XMP tag type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-XMPTagType-ALTERNATE_TEXT = 5--><!--Device-XMPTagType-ALTERNATE_TEXT = 5-End-->
@@ -113,6 +127,8 @@ STRUCTURE = 6
 Structure XMP tag type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

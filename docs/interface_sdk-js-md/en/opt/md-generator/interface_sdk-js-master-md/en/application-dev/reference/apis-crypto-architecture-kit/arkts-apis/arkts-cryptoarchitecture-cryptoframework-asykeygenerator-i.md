@@ -1,9 +1,10 @@
 # AsyKeyGenerator
 
-Asymmetric key generator interface, defining methods for generating asymmetric keys. Before use, you must create an  
-**AsyKeyGenerator** instance by using [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createAsyKeyGenerator).
+Asymmetric key generator interface, defining methods for generating asymmetric keys. Before use, you must create an **AsyKeyGenerator** instance by using [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createAsyKeyGenerator).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface AsyKeyGenerator--><!--Device-cryptoFramework-interface AsyKeyGenerator-End-->
 
@@ -27,6 +28,8 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob, callback: AsyncCallback<KeyPair>): void-End-->
@@ -47,10 +50,10 @@ Converts asymmetric key data to a key pair object. This API uses an asynchronous
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## convertKey
 
@@ -60,7 +63,9 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCall
 
 Converts data into an asymmetric key pair. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -82,10 +87,10 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -122,6 +127,8 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob, priKey: DataBlob): Promise<KeyPair>-End-->
@@ -147,10 +154,10 @@ Converts asymmetric key data to a key pair object. This API uses a promise to re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## convertKey
 
@@ -160,7 +167,9 @@ convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>
 
 Converts data into an asymmetric key pair. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -187,10 +196,10 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -223,13 +232,13 @@ keyGenPromise.then(keyPair => {
 convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair
 ```
 
-Converts data into an asymmetric key pair. This API returns the result synchronously.
+Converts data into an asymmetric key pair. This API returns the result synchronously. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [convertKey](convertKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair--><!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair-End-->
 
@@ -252,10 +261,10 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -291,23 +300,13 @@ try {
 convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. This API uses a promise to return the result.
+Converts data into an asymmetric key pair. This API uses a promise to return the result. > **NOTE：**> > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM > encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM > encoding format. > 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is > passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. > 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the > Crypto framework, the system does not verify whether the specifications of the generated key object are the > same as the key specifications specified for the asymmetric key generator.
 
-> **NOTE：**
-> 
-> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
-> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
-> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
-> encoding format.
-> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
-> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
-> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
-> Crypto framework, the system does not verify whether the specifications of the generated key object are the
-> same as the key specifications specified for the asymmetric key generator.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>-End-->
 
@@ -330,10 +329,10 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -381,24 +380,13 @@ async function TestConvertPemKeyByPromise() {
 convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. This API uses a promise to return the result. > **NOTE：**> > 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by > the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM > encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM > encoding format. > 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is > passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in. > 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the > Crypto framework, the system does not verify whether the specifications of the generated key object are the > same as the key specifications specified for the asymmetric key generator. > 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
 
-> **NOTE：**
-> 
-> 1. When **convertPemKey()** is used to convert an external string into an asymmetric key object defined by
-> the Crypto framework, the public key must comply with the ASN.1 syntax, X.509 specifications, and PEM
-> encoding format, and the private key must comply with the ASN.1 syntax, PKCS #8 specifications, and PEM
-> encoding format.
-> 2. In **convertPemKey()**, you can pass in either **pubKey** or **priKey**, or both of them. If one of them is
-> passed in, the returned **KeyPair** instance contains only the key converted from the data you passed in.
-> 3. When **convertPemKey** is used to convert an external string into an asymmetric key object defined by the
-> Crypto framework, the system does not verify whether the specifications of the generated key object are the
-> same as the key specifications specified for the asymmetric key generator.
-> 4. If **password** is passed in, it can be used to decrypt the encrypted private key.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
 
@@ -422,9 +410,9 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -468,19 +456,13 @@ async function TestConvertPemKeyByPromise() {
 convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair
 ```
 
-Converts data into an asymmetric key pair. This API returns the result synchronously.
+Converts data into an asymmetric key pair. This API returns the result synchronously. > **NOTE：**> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see > the description of > [convertPemKey](#convertPemKey) > . &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertPemKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-> **NOTE：**
-> The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see
-> the description of
-> [convertPemKey](#convertPemKey)
-> .
+**Since:** 23
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertPemKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Deprecated since:** -1
 
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair-End-->
 
@@ -503,10 +485,10 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -557,18 +539,13 @@ function TestConvertPemKeyBySync() {
 convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair
 ```
 
-Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key.
+Converts data into an asymmetric key pair. Encrypted private keys are supported. The private key password is synchronously passed to decrypt the private key. > **NOTE：**> The precautions for using **convertPemKeySync** are the same as those for > [convertPemKey](#convertPemKey) > . &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertPemKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-> **NOTE：**
-> The precautions for using **convertPemKeySync** are the same as those for
-> [convertPemKey](#convertPemKey-1)
-> .
+**Since:** 23
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertPemKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Deprecated since:** -1
 
-**Since:** 18
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair-End-->
 
@@ -592,9 +569,9 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -643,7 +620,9 @@ generateKeyPair(callback: AsyncCallback<KeyPair>): void
 
 Generates a random key pair using this asymmetric key generator. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -663,9 +642,9 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -690,7 +669,9 @@ generateKeyPair(): Promise<KeyPair>
 
 Generates a random key pair using this asymmetric key generator. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -710,9 +691,9 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -735,13 +716,13 @@ keyGenPromise.then(keyPair => {
 generateKeyPairSync(): KeyPair
 ```
 
-Generates a random key pair using this asymmetric key generator. This API returns the result synchronously.
+Generates a random key pair using this asymmetric key generator. This API returns the result synchronously. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, generateKeyPair. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [generateKeyPair](generateKeyPair). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair-End-->
 
@@ -757,9 +738,9 @@ Generates a random key pair using this asymmetric key generator. This API return
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17630001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -789,7 +770,9 @@ The algName of the AsyKeyGenerator.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

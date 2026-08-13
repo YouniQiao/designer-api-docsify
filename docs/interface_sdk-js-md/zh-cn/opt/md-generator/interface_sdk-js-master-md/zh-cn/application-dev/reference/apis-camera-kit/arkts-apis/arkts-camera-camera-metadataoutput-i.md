@@ -4,42 +4,13 @@ metadata流。继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraO
 
 **继承/实现关系：** MetadataOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**起始版本：** 10
-
-<!--Device-camera-interface MetadataOutput extends CameraOutput--><!--Device-camera-interface MetadataOutput extends CameraOutput-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## addMetadataObjectTypes
-
-```TypeScript
-addMetadataObjectTypes(types: Array<MetadataObjectType>): void
-```
-
-新增需要上报的检测对象类型。
-
 **起始版本：** 23
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MetadataOutput-addMetadataObjectTypes(types: Array<MetadataObjectType>): void--><!--Device-MetadataOutput-addMetadataObjectTypes(types: Array<MetadataObjectType>): void-End-->
+<!--Device-camera-interface MetadataOutput--><!--Device-camera-interface MetadataOutput-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isLockMetadataObjectTrackingSupported
 
@@ -50,6 +21,8 @@ isLockMetadataObjectTrackingSupported(): boolean
 检查设备是否支持锁定元数据对象（如猫脸、狗脸）追踪功能。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -71,15 +44,11 @@ isLockMetadataObjectTrackingSupported(): boolean
 lockMetadataObjectTracking(point: Point): void
 ```
 
-锁定对特定元数据对象（如猫脸、狗脸）的追踪。
-
-> **说明：**
-> 
-> - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。
-> 
-> - 被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。
+锁定对特定元数据对象（如猫脸、狗脸）的追踪。 > **说明：** > > - 该功能以point所指向的点所在的对象为追踪对象，如果该点不存在追踪对象，则功能不生效。 > > - 被锁定追踪的对象离开取景范围超过三秒或调用解锁追踪后，锁定追踪自动取消。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -99,22 +68,22 @@ lockMetadataObjectTracking(point: Point): void
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
-## off('metadataObjectsAvailable')
+## offError
 
 ```TypeScript
-off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObject>>): void
+offError(callback?: ErrorCallback): void
 ```
 
-注销监听检测到的metadata对象。
+Unsubscribes from error events.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MetadataOutput-off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObject>>): void-End-->
+<!--Device-MetadataOutput-offError(callback?: ErrorCallback): void--><!--Device-MetadataOutput-offError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -122,10 +91,31 @@ off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObj
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'metadataObjectsAvailable' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offMetadataObjectsAvailable
+
+```TypeScript
+offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void
+```
+
+Unsubscribes from metadata objects available event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MetadataOutput-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-offMetadataObjectsAvailable(callback?: AsyncCallback<Array<MetadataObject>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 |
 
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -134,6 +124,8 @@ off(type: 'error', callback?: ErrorCallback): void
 注销监听metadata流的错误。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -148,23 +140,21 @@ off(type: 'error', callback?: ErrorCallback): void
 | type | 'error' | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
-## on('metadataObjectsAvailable')
+## off_metadataObjectsAvailable
 
 ```TypeScript
-on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void
+off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObject>>): void
 ```
 
-监听检测到的metadata对象，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+注销监听检测到的metadata对象。
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
-<!--Device-MetadataOutput-on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void-End-->
+<!--Device-MetadataOutput-off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-off(type: 'metadataObjectsAvailable', callback?: AsyncCallback<Array<MetadataObject>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -173,21 +163,63 @@ on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObjec
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | type | 'metadataObjectsAvailable' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 否 |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MetadataOutput-onError(callback: ErrorCallback): void--><!--Device-MetadataOutput-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+## onMetadataObjectsAvailable
+
+```TypeScript
+onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void
+```
+
+Subscribes to metadata objects available event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MetadataOutput-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-onMetadataObjectsAvailable(callback: AsyncCallback<Array<MetadataObject>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 |
 
-## on('error')
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-监听metadata流的错误，通过注册回调函数获取结果。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+监听metadata流的错误，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -202,19 +234,21 @@ on(type: 'error', callback: ErrorCallback): void
 | type | 'error' | 是 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
-## removeMetadataObjectTypes
+## on_metadataObjectsAvailable
 
 ```TypeScript
-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void
+on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void
 ```
 
-删除需要上报的检测对象类型。
+监听检测到的metadata对象，通过注册回调函数获取结果。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-MetadataOutput-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void--><!--Device-MetadataOutput-removeMetadataObjectTypes(types: Array<MetadataObjectType>): void-End-->
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+
+<!--Device-MetadataOutput-on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void--><!--Device-MetadataOutput-on(type: 'metadataObjectsAvailable', callback: AsyncCallback<Array<MetadataObject>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -222,16 +256,8 @@ removeMetadataObjectTypes(types: Array<MetadataObjectType>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [types](../../apis-arkts/arkts-apis/arkts-arkts-util-types-c.md) | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| type | 'metadataObjectsAvailable' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MetadataObject](arkts-camera-camera-metadataobject-i.md)&gt;&gt; | 是 |
 
 ## start
 
@@ -241,7 +267,9 @@ start(callback: AsyncCallback<void>): void
 
 开始输出metadata，通过注册回调函数获取结果。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -259,8 +287,8 @@ start(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## start
 
@@ -270,7 +298,9 @@ start(): Promise<void>
 
 开始输出metadata。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -288,8 +318,8 @@ start(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
 
 ## stop
 
@@ -299,7 +329,9 @@ stop(callback: AsyncCallback<void>): void
 
 停止输出metadata，通过注册回调函数获取结果。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -321,7 +353,9 @@ stop(): Promise<void>
 
 停止输出metadata。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -345,6 +379,8 @@ unlockMetadataObjectTracking(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -357,5 +393,5 @@ unlockMetadataObjectTracking(): void
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |

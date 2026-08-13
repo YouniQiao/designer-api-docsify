@@ -4,7 +4,7 @@
 
 **起始版本：** 18
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class SubHeaderV2Title--><!--Device-unnamed-export declare class SubHeaderV2Title-End-->
 
@@ -19,6 +19,8 @@ constructor(options: SubHeaderV2TitleOptions)
 标题内容信息SubHeaderV2Title构造函数。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,29 +39,31 @@ constructor(options: SubHeaderV2TitleOptions)
 ## id
 
 ```TypeScript
-id?: string
+@Trace
+  id?: string
 ```
 
-标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。
-
-默认值：undefined，表示不设置标题id。
+标题id。需要为标题设置id的时候设置此参数，缺省时不设置此参数。 默认值：undefined，表示不设置标题id。
 
 **类型：** string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Title-id?: string--><!--Device-SubHeaderV2Title-id?: string-End-->
+<!--Device-SubHeaderV2Title-@Trace  id?: string--><!--Device-SubHeaderV2Title-@Trace  id?: string-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
 
 ```TypeScript
-primaryTitle?: ResourceStr
+@Trace
+  primaryTitle?: ResourceStr
 ```
 
 The first line text of content area.
@@ -68,18 +72,21 @@ The first line text of content area.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Title-primaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-primaryTitle?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-@Trace  primaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace  primaryTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitleModifier
 
 ```TypeScript
-primaryTitleModifier?: TextModifier
+@Trace
+  primaryTitleModifier?: TextModifier
 ```
 
 Text modifier for primary title.
@@ -88,18 +95,21 @@ Text modifier for primary title.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Title-primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-primaryTitleModifier?: TextModifier-End-->
+<!--Device-SubHeaderV2Title-@Trace  primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-@Trace  primaryTitleModifier?: TextModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
 
 ```TypeScript
-secondaryTitle?: ResourceStr
+@Trace
+  secondaryTitle?: ResourceStr
 ```
 
 The secondary line text of content area.
@@ -108,18 +118,21 @@ The secondary line text of content area.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Title-secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-secondaryTitle?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-@Trace  secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace  secondaryTitle?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitleModifier
 
 ```TypeScript
-secondaryTitleModifier?: TextModifier
+@Trace
+  secondaryTitleModifier?: TextModifier
 ```
 
 Text modifier for secondary title.
@@ -128,34 +141,35 @@ Text modifier for secondary title.
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Title-secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-secondaryTitleModifier?: TextModifier-End-->
+<!--Device-SubHeaderV2Title-@Trace  secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-@Trace  secondaryTitleModifier?: TextModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleAccessibilityText
 
 ```TypeScript
-titleAccessibilityText?: ResourceStr
+@Trace
+  titleAccessibilityText?: ResourceStr
 ```
 
-设置标题自定义朗读内容。
-
-默认值：undefined
-
-值为undefined时，默认朗读组件显示的标题内容。
+设置标题自定义朗读内容。 默认值：undefined 值为undefined时，默认朗读组件显示的标题内容。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
-<!--Device-SubHeaderV2Title-titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2Title-titleAccessibilityText?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-@Trace  titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace  titleAccessibilityText?: ResourceStr-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

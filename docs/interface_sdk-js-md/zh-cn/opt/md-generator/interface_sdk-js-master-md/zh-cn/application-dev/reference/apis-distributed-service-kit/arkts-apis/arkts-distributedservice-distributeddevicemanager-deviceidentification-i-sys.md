@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-distributedDeviceManager-interface DeviceIdentification--><!--Device-distributedDeviceManager-interface DeviceIdentification-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
@@ -21,6 +23,8 @@ deviceId: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,6 +45,8 @@ udid: string
 **类型：** string
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC and ohos.permission.ACCESS_SERVICE_DM and ohos.permission.sec.ACCESS_UDID
 

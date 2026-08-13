@@ -6,25 +6,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface RichEditorImageSpanOptions--><!--Device-unnamed-export declare interface RichEditorImageSpanOptions-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## onHover
-
-```TypeScript
-onHover?: OnHoverCallback
-```
-
-鼠标悬停触发回调。省略时，不执行相关行为。
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback--><!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -41,6 +25,8 @@ gesture?: RichEditorGesture
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,6 +48,8 @@ imageStyle?: RichEditorImageSpanStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorImageSpanOptions-imageStyle?: RichEditorImageSpanStyle--><!--Device-RichEditorImageSpanOptions-imageStyle?: RichEditorImageSpanStyle-End-->
@@ -74,9 +62,7 @@ imageStyle?: RichEditorImageSpanStyle
 offset?: int
 ```
 
-添加图片的位置。省略时，添加到所有内容的末尾。
-
-当值小于0时，设置在所有内容最前面；当值大于所有内容长度时，设置在所有内容最后面。
+添加图片的位置。省略时，添加到所有内容的末尾。 当值小于0时，设置在所有内容最前面；当值大于所有内容长度时，设置在所有内容最后面。
 
 **类型：** int
 
@@ -84,9 +70,33 @@ offset?: int
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-RichEditorImageSpanOptions-offset?: int--><!--Device-RichEditorImageSpanOptions-offset?: int-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## onHover
+
+```TypeScript
+onHover?: OnHoverCallback
+```
+
+鼠标悬停触发回调。省略时，不执行相关行为。
+
+**类型：** [OnHoverCallback](arkts-arkui-onhovercallback-t.md)
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback--><!--Device-RichEditorImageSpanOptions-onHover?: OnHoverCallback-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

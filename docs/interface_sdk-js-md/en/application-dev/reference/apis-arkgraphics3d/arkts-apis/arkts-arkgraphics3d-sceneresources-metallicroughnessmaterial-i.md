@@ -1,14 +1,16 @@
 # MetallicRoughnessMaterial
 
-Material resource for creating realistic appearances, using the Metallic-Roughness model based on PBR.It simulates the surface lighting and reflection effects of different materials like metal and plastic by adjusting metallicity and roughness parameters. It inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material).
+Material resource for creating realistic appearances, using the Metallic-Roughness model based on PBR. It simulates the surface lighting and reflection effects of different materials like metal and plastic by adjusting metallicity and roughness parameters. It inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material).
 
 **Inheritance/Implementation:** MetallicRoughnessMaterial extends [Material](arkts-arkgraphics3d-sceneresources-material-i.md#Material)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-unnamed-export interface MetallicRoughnessMaterial extends Material--><!--Device-unnamed-export interface MetallicRoughnessMaterial extends Material-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface MetallicRoughnessMaterial--><!--Device-unnamed-export interface MetallicRoughnessMaterial-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -22,9 +24,11 @@ Ambient occlusion map, which is used to simulate the occlusion of ambient light 
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-ambientOcclusion: MaterialProperty--><!--Device-MetallicRoughnessMaterial-ambientOcclusion: MaterialProperty-End-->
 
@@ -40,9 +44,11 @@ Base color map, which is used to represent the material's color in the absence o
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-baseColor: MaterialProperty--><!--Device-MetallicRoughnessMaterial-baseColor: MaterialProperty-End-->
 
@@ -54,13 +60,15 @@ Base color map, which is used to represent the material's color in the absence o
 clearCoat: MaterialProperty
 ```
 
-Clear coat, similar to car paint, carbon fiber, or a wet surface,which requires an additional transparent layer with reflective properties.
+Clear coat, similar to car paint, carbon fiber, or a wet surface, which requires an additional transparent layer with reflective properties.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-clearCoat: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoat: MaterialProperty-End-->
 
@@ -76,9 +84,11 @@ Normal map of the clear coat.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-clearCoatNormal: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoatNormal: MaterialProperty-End-->
 
@@ -94,9 +104,11 @@ Roughness of the clear coat.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-clearCoatRoughness: MaterialProperty--><!--Device-MetallicRoughnessMaterial-clearCoatRoughness: MaterialProperty-End-->
 
@@ -112,9 +124,11 @@ Emissive color, which is the color of the material as a light source.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-emissive: MaterialProperty--><!--Device-MetallicRoughnessMaterial-emissive: MaterialProperty-End-->
 
@@ -126,13 +140,15 @@ Emissive color, which is the color of the material as a light source.
 material: MaterialProperty
 ```
 
-Metal material parameters.Roughness: strength of reflection caused by the fine surface structure details of the material.Metallic: metallic properties of the material.Reflectance: reflectivity of the material.
+Metal material parameters. Roughness: strength of reflection caused by the fine surface structure details of the material. Metallic: metallic properties of the material. Reflectance: reflectivity of the material.
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-material: MaterialProperty--><!--Device-MetallicRoughnessMaterial-material: MaterialProperty-End-->
 
@@ -148,9 +164,11 @@ Normal map, which is used to represent the surface structure details of an objec
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-normal: MaterialProperty--><!--Device-MetallicRoughnessMaterial-normal: MaterialProperty-End-->
 
@@ -166,9 +184,11 @@ Gentle, widespread shine of microfiber materials, ideal for representing fabrics
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-sheen: MaterialProperty--><!--Device-MetallicRoughnessMaterial-sheen: MaterialProperty-End-->
 
@@ -184,9 +204,11 @@ Specular reflection of non-metallic materials, showing the intensity of traditio
 
 **Type:** [MaterialProperty](arkts-arkgraphics3d-sceneresources-materialproperty-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MetallicRoughnessMaterial-specular: MaterialProperty--><!--Device-MetallicRoughnessMaterial-specular: MaterialProperty-End-->
 

@@ -6,6 +6,8 @@ Provides detailed information about the first meaningful paint.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FirstMeaningfulPaint--><!--Device-unnamed-declare interface FirstMeaningfulPaint-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,13 +18,15 @@ Provides detailed information about the first meaningful paint.
 firstMeaningfulPaintTime?: number
 ```
 
-Paint time of first meaningful content.&lt;br&gt;Unit:milliseconds.
+Paint time of first meaningful content. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,13 +40,15 @@ Paint time of first meaningful content.&lt;br&gt;Unit:milliseconds.
 navigationStartTime?: number
 ```
 
-Start time of navigation.&lt;br&gt;Unit:microseconds.
+Start time of navigation. &lt;br&gt;Unit:microseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

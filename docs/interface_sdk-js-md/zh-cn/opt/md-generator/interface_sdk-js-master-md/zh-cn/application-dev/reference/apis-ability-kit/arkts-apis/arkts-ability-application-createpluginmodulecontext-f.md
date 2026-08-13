@@ -8,7 +8,9 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 
 根据入参Context、指定的插件包名和插件模块名，创建本应用下插件的Context，用于获取插件的基本信息。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -21,7 +23,7 @@ export function createPluginModuleContext(context: Context, pluginBundleName: st
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 |
-| [pluginBundleName](arkts-ability-pluginbundleinfo-i.md) | string | 是 |
+| [pluginBundleName](arkts-ability-pluginbundleinfo-i-sys.md) | string | 是 |
 | pluginModuleName | string | 是 |
 
 **返回值：**

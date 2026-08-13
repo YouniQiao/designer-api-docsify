@@ -19,7 +19,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Deprecated since:** 9
 
-**Substitutes:** [transformRotationMatrix](sensor.transformRotationMatrix(inRotationVector:)
+**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformRotationMatrix)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions,    callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -65,7 +65,7 @@ Rotates a rotation vector so that it can represent the coordinate system in diff
 
 **Deprecated since:** 9
 
-**Substitutes:** [transformRotationMatrix](sensor.transformRotationMatrix(inRotationVector:)
+**Substitutes:** [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md#transformRotationMatrix)(inRotationVector: Array&lt;double&gt;, coordinates: CoordinatesOptions)
 
 <!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions): Promise<Array<number>>--><!--Device-sensor-function transformCoordinateSystem(inRotationVector: Array<number>, coordinates: CoordinatesOptions): Promise<Array<number>>-End-->
 

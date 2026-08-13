@@ -32,7 +32,7 @@ Rotation angle around the Z axis when the X/Y axis of the device coincides with 
 
 **Deprecated since:** 8
 
-**Substitutes:** [alpha](ohos.sensor/sensor#OrientationResponse.alpha)
+**Substitutes:** [alpha](arkts-sensorservice-sensor-orientationresponse-i.md#alpha)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -54,7 +54,7 @@ Rotation angle around the X axis when the Y/Z axis of the device coincides with 
 
 **Deprecated since:** 8
 
-**Substitutes:** [beta](ohos.sensor/sensor#OrientationResponse.beta)
+**Substitutes:** [beta](arkts-sensorservice-sensor-orientationresponse-i.md#beta)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -76,7 +76,7 @@ Rotation angle around the Y axis when the X/Z axis of the device coincides with 
 
 **Deprecated since:** 8
 
-**Substitutes:** [gamma](ohos.sensor/sensor#OrientationResponse.gamma)
+**Substitutes:** [gamma](arkts-sensorservice-sensor-orientationresponse-i.md#gamma)
 
 **Model restriction:** This API can be used only in the FA model.
 

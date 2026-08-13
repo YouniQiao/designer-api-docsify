@@ -1,12 +1,10 @@
 # WaterFlowSections
 
-瀑布流分组信息。
-
-> **说明：**
-> 
-> 使用splice、push、update修改分组信息后需要保证所有分组子组件总数与瀑布流实际子组件总数一致，否则会出现瀑布流因为不能正常布局而无法滑动的问题。
+瀑布流分组信息。 > **说明：** > > 使用splice、push、update修改分组信息后需要保证所有分组子组件总数与瀑布流实际子组件总数一致，否则会出现瀑布流因为不能正常布局而无法滑动的问题。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class WaterFlowSections--><!--Device-unnamed-declare class WaterFlowSections-End-->
 
@@ -21,6 +19,8 @@ constructor()
 创建一个瀑布流分组。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -39,6 +39,8 @@ length(): number
 获取瀑布流中分组数量。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,6 +65,8 @@ push(section: SectionOptions): boolean
 将指定分组添加到瀑布流末尾。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,6 +97,8 @@ splice(start: number, deleteCount?: number, sections?: Array<SectionOptions>): b
 移除或者替换已存在的分组和/或添加新分组。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,6 +132,8 @@ update(sectionIndex:number, section: SectionOptions): boolean
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -156,6 +164,8 @@ values(): Array<SectionOptions>
 获取瀑布流中所有分组配置信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

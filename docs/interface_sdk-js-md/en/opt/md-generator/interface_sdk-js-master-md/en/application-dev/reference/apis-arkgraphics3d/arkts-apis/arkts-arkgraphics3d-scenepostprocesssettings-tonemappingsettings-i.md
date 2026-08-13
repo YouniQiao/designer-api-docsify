@@ -2,7 +2,9 @@
 
 Describes the tone mapping settings.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ToneMappingSettings--><!--Device-unnamed-export interface ToneMappingSettings-End-->
 
@@ -18,7 +20,9 @@ Exposure. The value must be greater than 0. The default value is undefined.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToneMappingSettings-exposure?: double--><!--Device-ToneMappingSettings-exposure?: double-End-->
 
@@ -34,7 +38,9 @@ Tone mapping type. The default value is undefined.
 
 **Type:** [ToneMappingType](arkts-arkgraphics3d-scenepostprocesssettings-tonemappingtype-e.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ToneMappingSettings-type?: ToneMappingType--><!--Device-ToneMappingSettings-type?: ToneMappingType-End-->
 

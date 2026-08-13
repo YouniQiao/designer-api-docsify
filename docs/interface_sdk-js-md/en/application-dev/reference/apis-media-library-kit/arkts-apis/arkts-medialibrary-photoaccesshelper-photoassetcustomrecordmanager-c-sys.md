@@ -2,9 +2,11 @@
 
 Provides APIs for custom user behavior recording for Gallery.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager--><!--Device-photoAccessHelper-class PhotoAssetCustomRecordManager-End-->
 
@@ -20,22 +22,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 ## addLcdJumpCount
 
-ArkTS-Dyn:
-```TypeScript
-addLcdJumpCount(ids: Array<number>): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 addLcdJumpCount(ids: Array<int>): Promise<Array<int>>
 ```
 
-Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in   
-[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord). This API uses a promise to return the result.
+Increases the value of **LcdJumpCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord-(System-API)). This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addLcdJumpCount(ids: Array<int>): Promise<Array<int>>-End-->
 
@@ -47,40 +44,35 @@ Increases the value of **LcdJumpCount** by 1 for the data in the database based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord). |
+| ids | Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord-(System-API)). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The ids list is empty. &lt;br&gt;2. The number of ids lists exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The ids list is empty. &lt;br&gt;2. The number of ids lists exceeds 500. |
 
 ## addShareCount
 
-ArkTS-Dyn:
-```TypeScript
-addShareCount(ids: Array<number>): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 addShareCount(ids: Array<int>): Promise<Array<int>>
 ```
 
-Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in   
-[PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord). This API uses a promise to return the result.
+Increases the value of **shareCount** by 1 for the data in the database based on **fileId** in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord-(System-API)). This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-addShareCount(ids: Array<int>): Promise<Array<int>>-End-->
 
@@ -92,21 +84,21 @@ Increases the value of **shareCount** by 1 for the data in the database based on
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| ids | ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord). |
+| ids | Array&lt;int&gt; | Yes | Array of file IDs in [PhotoAssetCustomRecord](arkts-medialibrary-photoaccesshelper-photoassetcustomrecord-i-sys.md#PhotoAssetCustomRecord-(System-API)). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The ids list is empty. 2. The number of ids lists exceeds 500. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The ids list is empty. 2. The number of ids lists exceeds 500. |
 
 ## createCustomRecords
 
@@ -116,9 +108,11 @@ createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>
 
 Adds custom user behavior recordings. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-createCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<void>-End-->
 
@@ -142,9 +136,9 @@ Adds custom user behavior recordings. This API uses a promise to return the resu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements. &lt;br&gt;2. The transferred record already exists. 3. The number of transferred records exceeds 200. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements. &lt;br&gt;2. The transferred record already exists. 3. The number of transferred records exceeds 200. |
 
 ## Examples
 
@@ -177,6 +171,8 @@ Obtains an instance of custom user behavior recording for Gallery.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager--><!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -199,8 +195,8 @@ Obtains an instance of custom user behavior recording for Gallery.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800107-context-is-empty-or-invalid) | Context is invalid |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800107](../errorcode-medialibrary.md#23800107-context-is-empty-or-invalid) | Context is invalid |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## Examples
 
@@ -228,7 +224,9 @@ Get media asset custom record manager instance.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager | null--><!--Device-PhotoAssetCustomRecordManager-static getCustomRecordManagerInstance(context: Context): PhotoAssetCustomRecordManager | null-End-->
 
@@ -252,8 +250,8 @@ Get media asset custom record manager instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800107](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800107-context-is-empty-or-invalid) | Context is invalid @static |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800107](../errorcode-medialibrary.md#23800107-context-is-empty-or-invalid) | Context is invalid @static |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
 
 ## getCustomRecords
 
@@ -263,9 +261,11 @@ getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCusto
 
 Obtains custom user behavior recordings based on retrieval options. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>--><!--Device-PhotoAssetCustomRecordManager-getCustomRecords(optionCheck: FetchOptions): Promise<FetchResult<PhotoAssetCustomRecord>>-End-->
 
@@ -289,9 +289,9 @@ Obtains custom user behavior recordings based on retrieval options. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: 1. The filter criteria or fetchColumns that are not supported by options are transferred. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: 1. The filter criteria or fetchColumns that are not supported by options are transferred. |
 
 ## Examples
 
@@ -325,9 +325,11 @@ removeCustomRecords(optionCheck: FetchOptions): Promise<void>
 
 Removes custom user behavior recordings based on retrieval options. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>--><!--Device-PhotoAssetCustomRecordManager-removeCustomRecords(optionCheck: FetchOptions): Promise<void>-End-->
 
@@ -351,9 +353,9 @@ Removes custom user behavior recordings based on retrieval options. This API use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The filter criteria or fetchColumns that are not supported by options are transferred. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The filter criteria or fetchColumns that are not supported by options are transferred. |
 
 ## Examples
 
@@ -380,21 +382,17 @@ async function example(context: Context) {
 
 ## setCustomRecords
 
-ArkTS-Dyn:
-```TypeScript
-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<number>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>
 ```
 
 Updates the existing database fields based on custom user behavior recordings. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>--><!--Device-PhotoAssetCustomRecordManager-setCustomRecords(customRecords: Array<PhotoAssetCustomRecord>): Promise<Array<int>>-End-->
 
@@ -412,15 +410,15 @@ Updates the existing database fields based on custom user behavior recordings. T
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;Array&lt;number&gt;&gt;  <br>ArkTS-Sta：Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
+| Promise&lt;Array&lt;int&gt;&gt; | Promise used to return the file ID in the custom user behavior recordings that fail to be updated. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements. &lt;br&gt;2. The number of transferred records exceeds 200. |
+| [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. &lt;br&gt;Possible causes: &lt;br&gt;1. Database corrupted; &lt;br&gt;2. The file system is abnormal; &lt;br&gt;3. The IPC request timed out. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scenario parameters fail to pass the verification.Possible causes: &lt;br&gt;1. The value range of mandatory parameters in photoAssetCustomRecord does not meet the requirements. &lt;br&gt;2. The number of transferred records exceeds 200. |
 
 ## Examples
 

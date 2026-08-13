@@ -1,16 +1,10 @@
 # ImageCreator
 
-ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。
+ImageCreator类，作为图片的生产者，用于将图片写入到Surface中。 在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator)创建ImageCreator实例，ImageCreator不支持多线程。 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法 及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。 > **说明：** > > - 本Interface首批接口从API version 9开始支持。
 
-在调用以下方法前需要先通过[image.createImageCreator](arkts-image-image-createimagecreator-f.md#createImageCreator)创建ImageCreator实例，ImageCreator不支持多线程。
+**起始版本：** 23
 
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-> **说明：**
-> 
-> - 本Interface首批接口从API version 9开始支持。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-image-interface ImageCreator--><!--Device-image-interface ImageCreator-End-->
 
@@ -24,7 +18,9 @@ dequeueImage(callback: AsyncCallback<Image>): void
 
 从空闲队列中获取buffer图片，用于绘制UI内容。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-dequeueImage(callback: AsyncCallback<Image>): void--><!--Device-ImageCreator-dequeueImage(callback: AsyncCallback<Image>): void-End-->
 
@@ -44,7 +40,9 @@ dequeueImage(): Promise<Image>
 
 从空闲队列中获取buffer图片，用于绘制UI内容。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-dequeueImage(): Promise<Image>--><!--Device-ImageCreator-dequeueImage(): Promise<Image>-End-->
 
@@ -56,7 +54,29 @@ dequeueImage(): Promise<Image>
 | --- |
 | Promise & lt;Image & gt; |
 
-## off('imageRelease')
+## offImageRelease
+
+```TypeScript
+offImageRelease(callback?: AsyncCallback<void>): void
+```
+
+Remove callback subscriptions when releasing buffer
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-ImageCreator-offImageRelease(callback?: AsyncCallback<void>): void--><!--Device-ImageCreator-offImageRelease(callback?: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageCreator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
+
+## off_imageRelease
 
 ```TypeScript
 off(type: 'imageRelease', callback?: AsyncCallback<void>): void
@@ -65,6 +85,8 @@ off(type: 'imageRelease', callback?: AsyncCallback<void>): void
 释放buffer时，移除注册的回调函数。使用callback异步回调。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-off(type: 'imageRelease', callback?: AsyncCallback<void>): void--><!--Device-ImageCreator-off(type: 'imageRelease', callback?: AsyncCallback<void>): void-End-->
 
@@ -77,7 +99,29 @@ off(type: 'imageRelease', callback?: AsyncCallback<void>): void
 | type | 'imageRelease' | 是 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 |
 
-## on('imageRelease')
+## onImageRelease
+
+```TypeScript
+onImageRelease(callback: AsyncCallback<void>): void
+```
+
+Subscribe callback when releasing buffer
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-ImageCreator-onImageRelease(callback: AsyncCallback<void>): void--><!--Device-ImageCreator-onImageRelease(callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.ImageCreator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 |
+
+## on_imageRelease
 
 ```TypeScript
 on(type: 'imageRelease', callback: AsyncCallback<void>): void
@@ -86,6 +130,8 @@ on(type: 'imageRelease', callback: AsyncCallback<void>): void
 监听imageRelease事件。使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void--><!--Device-ImageCreator-on(type: 'imageRelease', callback: AsyncCallback<void>): void-End-->
 
@@ -106,7 +152,9 @@ queueImage(image: Image, callback: AsyncCallback<void>): void
 
 将绘制好的图片放入队列。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-queueImage(image: Image, callback: AsyncCallback<void>): void--><!--Device-ImageCreator-queueImage(image: Image, callback: AsyncCallback<void>): void-End-->
 
@@ -127,7 +175,9 @@ queueImage(image: Image): Promise<void>
 
 将绘制好的图片放入队列。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-queueImage(image: Image): Promise<void>--><!--Device-ImageCreator-queueImage(image: Image): Promise<void>-End-->
 
@@ -151,13 +201,11 @@ queueImage(image: Image): Promise<void>
 release(callback: AsyncCallback<void>): void
 ```
 
-释放当前图像。使用callback异步回调。
+释放当前图像。使用callback异步回调。 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。
+**起始版本：** 23
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-ImageCreator-release(callback: AsyncCallback<void>): void--><!--Device-ImageCreator-release(callback: AsyncCallback<void>): void-End-->
 
@@ -175,13 +223,11 @@ release(callback: AsyncCallback<void>): void
 release(): Promise<void>
 ```
 
-释放当前图像。使用Promise异步回调。
+释放当前图像。使用Promise异步回调。 由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。 释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-由于图片占用内存较大，所以当ImageCreator实例使用完成后，应主动调用该方法，及时释放内存。
+**起始版本：** 23
 
-释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-ImageCreator-release(): Promise<void>--><!--Device-ImageCreator-release(): Promise<void>-End-->
 
@@ -203,7 +249,9 @@ readonly capacity: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-readonly capacity: int--><!--Device-ImageCreator-readonly capacity: int-End-->
 
@@ -219,7 +267,9 @@ readonly format: ImageFormat
 
 **类型：** [ImageFormat](arkts-image-image-imageformat-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ImageCreator-readonly format: ImageFormat--><!--Device-ImageCreator-readonly format: ImageFormat-End-->
 

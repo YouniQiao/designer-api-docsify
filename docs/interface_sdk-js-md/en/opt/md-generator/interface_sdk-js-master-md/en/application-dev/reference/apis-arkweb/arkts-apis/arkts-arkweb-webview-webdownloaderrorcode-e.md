@@ -4,6 +4,8 @@ Defines the error code for download.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum WebDownloadErrorCode--><!--Device-webview-enum WebDownloadErrorCode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ ERROR_UNKNOWN = 0
 Unknown error.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Generic file operation failure.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_FAILED = 1--><!--Device-WebDownloadErrorCode-FILE_FAILED = 1-End-->
@@ -49,6 +55,8 @@ FILE_ACCESS_DENIED = 2
 The file cannot be accessed due to certain restrictions.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ There is not enough disk space.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_NO_SPACE = 3--><!--Device-WebDownloadErrorCode-FILE_NO_SPACE = 3-End-->
@@ -81,6 +91,8 @@ FILE_NAME_TOO_LONG = 5
 The file name is too long.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ The file is too large.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6--><!--Device-WebDownloadErrorCode-FILE_TOO_LARGE = 6-End-->
@@ -113,6 +127,8 @@ FILE_TRANSIENT_ERROR = 10
 Some temporary problems occurred, such as not enough memory, files in use, and too many files open at the same time.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -130,6 +146,8 @@ The file is blocked from accessing because of some local policy.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_BLOCKED = 11--><!--Device-WebDownloadErrorCode-FILE_BLOCKED = 11-End-->
@@ -145,6 +163,8 @@ FILE_TOO_SHORT = 13
 When trying to resume the download, Found that the file is not long enough, maybe the file no longer exists.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,6 +182,8 @@ Hash mismatch.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14--><!--Device-WebDownloadErrorCode-FILE_HASH_MISMATCH = 14-End-->
@@ -177,6 +199,8 @@ FILE_SAME_AS_SOURCE = 15
 The file already exists.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -194,6 +218,8 @@ Generic network error.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_FAILED = 20--><!--Device-WebDownloadErrorCode-NETWORK_FAILED = 20-End-->
@@ -209,6 +235,8 @@ NETWORK_TIMEOUT = 21
 The network operation timed out.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -226,6 +254,8 @@ The network was disconnected.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_DISCONNECTED = 22--><!--Device-WebDownloadErrorCode-NETWORK_DISCONNECTED = 22-End-->
@@ -241,6 +271,8 @@ NETWORK_SERVER_DOWN = 23
 Server down.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -258,6 +290,8 @@ Invalid network requests，may redirect to unsupported scheme or an invalid URL.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-NETWORK_INVALID_REQUEST = 24--><!--Device-WebDownloadErrorCode-NETWORK_INVALID_REQUEST = 24-End-->
@@ -273,6 +307,8 @@ SERVER_FAILED = 30
 The server returned a generic error.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -290,6 +326,8 @@ The server does not support range requests.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_NO_RANGE = 31--><!--Device-WebDownloadErrorCode-SERVER_NO_RANGE = 31-End-->
@@ -305,6 +343,8 @@ SERVER_BAD_CONTENT = 33
 The server does not have the requested data.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -322,6 +362,8 @@ The server does not allow the file to be downloaded.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_UNAUTHORIZED = 34--><!--Device-WebDownloadErrorCode-SERVER_UNAUTHORIZED = 34-End-->
@@ -337,6 +379,8 @@ SERVER_CERT_PROBLEM = 35
 Server certificate error.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -354,6 +398,8 @@ Server access forbidden.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_FORBIDDEN = 36--><!--Device-WebDownloadErrorCode-SERVER_FORBIDDEN = 36-End-->
@@ -369,6 +415,8 @@ SERVER_UNREACHABLE = 37
 Server unreachable.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -386,6 +434,8 @@ The received data does not match content-length.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-SERVER_CONTENT_LENGTH_MISMATCH = 38--><!--Device-WebDownloadErrorCode-SERVER_CONTENT_LENGTH_MISMATCH = 38-End-->
@@ -401,6 +451,8 @@ SERVER_CROSS_ORIGIN_REDIRECT = 39
 An unexpected cross-origin redirect happened.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -418,6 +470,8 @@ User cancel.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-USER_CANCELED = 40--><!--Device-WebDownloadErrorCode-USER_CANCELED = 40-End-->
@@ -434,6 +488,8 @@ User shut down the application.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadErrorCode-USER_SHUTDOWN = 41--><!--Device-WebDownloadErrorCode-USER_SHUTDOWN = 41-End-->
@@ -449,6 +505,8 @@ CRASH = 50
 Application crash.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,6 +6,8 @@ Enumerates pixel map formats.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum PixelMapFormat--><!--Device-unnamed-export declare enum PixelMapFormat-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -24,6 +26,8 @@ Indicates that the storage order is to store Y first and then V U alternately ea
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-PixelMapFormat-NV21 = 2--><!--Device-PixelMapFormat-NV21 = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -36,11 +40,13 @@ Indicates that the storage order is to store Y first and then V U alternately ea
 RGBA_8888 = 1
 ```
 
-Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components：B(8bits), G(8bits), R(8bits), A(8bits)and are stored from the higher-order to the lower-order bits.
+Indicates that each pixel is stored on 32 bits. Each pixel contains 4 components：B(8bits), G(8bits), R(8bits), A(8bits) and are stored from the higher-order to the lower-order bits.
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMapFormat-RGBA_8888 = 1--><!--Device-PixelMapFormat-RGBA_8888 = 1-End-->
 
@@ -59,6 +65,8 @@ Indicates an unknown format.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 <!--Device-PixelMapFormat-UNKNOWN = 0--><!--Device-PixelMapFormat-UNKNOWN = 0-End-->
 

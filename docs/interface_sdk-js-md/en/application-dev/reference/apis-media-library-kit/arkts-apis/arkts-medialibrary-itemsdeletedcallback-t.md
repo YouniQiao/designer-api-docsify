@@ -1,18 +1,20 @@
 # ItemsDeletedCallback
 
 ```TypeScript
-export type ItemsDeletedCallback = (baseItemInfos: BaseItemInfo[]) => void
+export type ItemsDeletedCallback = (baseItemInfos: Array<BaseItemInfo>) => void
 ```
 
-The callback of onSelectedItemsDeleted event
+Called when the selected items are deleted.
 
-**Since:** 26.0.0
+**Since:** 13
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 13.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export type ItemsDeletedCallback = (baseItemInfos: BaseItemInfo[]) => void--><!--Device-unnamed-export type ItemsDeletedCallback = (baseItemInfos: BaseItemInfo[]) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 13.
+
+<!--Device-unnamed-export type ItemsDeletedCallback = (baseItemInfos: Array<BaseItemInfo>) => void--><!--Device-unnamed-export type ItemsDeletedCallback = (baseItemInfos: Array<BaseItemInfo>) => void-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -20,5 +22,5 @@ The callback of onSelectedItemsDeleted event
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| baseItemInfos | [BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)[] | Yes |  |
+| baseItemInfos | Array&lt;[BaseItemInfo](arkts-medialibrary-file-photopickercomponent-baseiteminfo-c.md)&gt; | Yes | Basic information about the selected items. |
 

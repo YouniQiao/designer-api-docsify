@@ -8,9 +8,11 @@ function getLocalCapabilities(): Promise<FileData>
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -55,7 +57,7 @@ async function getLocalCapabilities() {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](js-apis-file-fs.md)提供的[fileIo.stat](js-apis-file-fs.md#fileiostat)等相关接口获取，能力文件内容示例：
+能力文件可以通过@ohos.file.fs提供的fileIo.stat等相关接口获取，能力文件内容示例：
 
 ```TypeScript
 {
@@ -83,9 +85,11 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -99,7 +103,7 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | 是 | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FileData](arkts-corefile-backup-filedata-i-sys.md)&gt; | 是 | 回调函数，返回包含本地能力文件描述符的FileData。 返回的文件为临时文件，关闭后将自动删除。 |
 
 **错误码：**
 
@@ -133,7 +137,7 @@ try {
 }
 ```
 
-能力文件可以通过[@ohos.file.fs](js-apis-file-fs.md)提供的[fileIo.stat](js-apis-file-fs.md#fileiostat)等相关接口获取，能力文件内容示例：
+能力文件可以通过@ohos.file.fs提供的fileIo.stat等相关接口获取，能力文件内容示例：
 
 ```TypeScript
 {
@@ -161,9 +165,11 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 获取描述本地能力的JSON文件。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKUP
 
@@ -189,10 +195,10 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 | 13900005 | I/O error |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
 | 13900025 | No space left on device |
 | 13600001 | IPC error |
 | 13900042 | Unknown error |

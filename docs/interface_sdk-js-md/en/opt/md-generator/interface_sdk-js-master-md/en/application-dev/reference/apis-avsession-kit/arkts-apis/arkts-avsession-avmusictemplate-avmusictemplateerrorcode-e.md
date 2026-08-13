@@ -4,6 +4,8 @@ Enumeration ErrorCode types, returns in BusinessError.code.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode--><!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -17,6 +19,8 @@ ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_FAILED = 35000001
 Failed to create the AVMusicTemplate.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Failed to create the AVMusicTemplate controller.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateErrorCode-ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_CONTROLLER_FAILED = 35000002--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CREATE_AV_MUSIC_TEMPLATE_CONTROLLER_FAILED = 35000002-End-->
@@ -49,6 +55,8 @@ ERR_CODE_TEMPLATE_LISTENER_NO_EXIT = 35000003
 Template listener not registered.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Controller callback not registered.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_CALLBACK_NO_EXIT = 35000004--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_CALLBACK_NO_EXIT = 35000004-End-->
@@ -81,6 +91,8 @@ ERR_CODE_AV_MUSIC_TEMPLATE_NOT_EXIST = 35000005
 AVMusicTemplate does not exist.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ AVMusicTemplateController does not exist.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 35000006--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 35000006-End-->
@@ -113,6 +127,8 @@ ERR_CODE_CONTROLLER_IS_EXIST = 35000007
 AVMusicTemplateController already exists.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +146,8 @@ AVMusicTemplate Manager services do not exist.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateErrorCode-ERR_CODE_SERVICE_NOT_EXIST = 35000008--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_SERVICE_NOT_EXIST = 35000008-End-->
@@ -145,6 +163,8 @@ ERR_CODE_SERVICE_EXCEPTION = 35000009
 AVMusicTemplate Manager services exception.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,6 +182,8 @@ The data exceeds the maximum allowable transmission capacity.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateErrorCode-ERR_CODE_EXCEED_MAX_DATA_SIZE = 35000010--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_EXCEED_MAX_DATA_SIZE = 35000010-End-->
@@ -178,6 +200,8 @@ The data write error, data is invalid.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AVMusicTemplateErrorCode-ERR_CODE_WRITE_RESULT_EXCEPTION = 35000011--><!--Device-AVMusicTemplateErrorCode-ERR_CODE_WRITE_RESULT_EXCEPTION = 35000011-End-->
@@ -193,6 +217,8 @@ ERR_CODE_AV_MUSIC_TEMPLATE_ERROR = 35000012
 AVMusicTemplate error.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

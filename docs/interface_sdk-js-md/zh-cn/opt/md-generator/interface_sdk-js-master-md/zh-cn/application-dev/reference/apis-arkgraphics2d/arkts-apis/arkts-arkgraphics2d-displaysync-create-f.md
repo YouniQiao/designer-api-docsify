@@ -8,7 +8,9 @@ function create(): DisplaySync
 
 创建DisplaySync对象，通过此对象设置UI自绘制内容帧率。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-displaySync-function create(): DisplaySync--><!--Device-displaySync-function create(): DisplaySync-End-->
 

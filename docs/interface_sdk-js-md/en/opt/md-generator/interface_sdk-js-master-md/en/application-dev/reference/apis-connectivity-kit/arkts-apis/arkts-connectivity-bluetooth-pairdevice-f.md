@@ -18,7 +18,7 @@ Starts pairing with a remote Bluetooth device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pairDevice](ohos.bluetoothManager/bluetoothManager.pairDevice)
+**Substitutes:** [pairDevice](arkts-connectivity-bluetoothmanager-pairdevice-f.md#pairDevice)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

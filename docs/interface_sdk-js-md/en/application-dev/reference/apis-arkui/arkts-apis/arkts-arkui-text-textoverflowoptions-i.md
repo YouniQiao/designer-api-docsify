@@ -1,12 +1,12 @@
 # TextOverflowOptions
 
-Text overflow options.
-
-Anonymous Object Rectification.
+Text overflow options. Anonymous Object Rectification.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface TextOverflowOptions--><!--Device-unnamed-export declare interface TextOverflowOptions-End-->
 
@@ -18,9 +18,7 @@ Anonymous Object Rectification.
 overflow: TextOverflow | undefined
 ```
 
-Text overflow option. Use TextOverflow::NONE when the value is undefined.
-
-Anonymous Object Rectification.
+Text overflow option. Use TextOverflow::NONE when the value is undefined. Anonymous Object Rectification.
 
 **Type:** [TextOverflow](arkts-arkui-textoverflow-e.md) \| undefined
 
@@ -29,6 +27,8 @@ Anonymous Object Rectification.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@ Provides information about **Swiper** child components.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SwiperItemInfo--><!--Device-unnamed-export interface SwiperItemInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Index of the child component in the **Swiper** container.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -45,6 +49,8 @@ Unique ID of the **Swiper** child component.
 **Type:** number
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

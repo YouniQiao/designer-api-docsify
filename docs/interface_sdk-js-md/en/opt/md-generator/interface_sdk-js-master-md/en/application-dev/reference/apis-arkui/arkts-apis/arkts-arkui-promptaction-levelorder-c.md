@@ -4,6 +4,8 @@ Defines the display order of a dialog box.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class LevelOrder--><!--Device-unnamed-export class LevelOrder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ static clamp(order: number): LevelOrder
 Creates a dialog box level with the specified order.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,6 +57,8 @@ getOrder(): number
 Obtains the display order of this dialog box.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Enumerates the window types.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-enum WindowType--><!--Device-window-enum WindowType-End-->
 
@@ -14,10 +16,7 @@ Enumerates the window types.
 TYPE_INPUT_METHOD = 2
 ```
 
-Input method window.
-
-Note: This API is supported since API version 9 and deprecated since API version 13. There is no alternative window type. To control the input method, call  
-[Input method framework APIs](../../../inputmethod/inputmethod-application-guide.md).
+Input method window. Note: This API is supported since API version 9 and deprecated since API version 13. There is no alternative window type. To control the input method, call [Input method framework APIs](../../../inputmethod/inputmethod-application-guide.md).
 
 **Since:** 9
 
@@ -39,7 +38,9 @@ TYPE_STATUS_BAR = 3
 
 Status bar window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -57,7 +58,9 @@ TYPE_PANEL = 4
 
 Notification panel.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +78,9 @@ TYPE_KEYGUARD = 5
 
 Keyguard.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,7 +98,9 @@ TYPE_VOLUME_OVERLAY = 6
 
 Volume bar.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,7 +118,9 @@ TYPE_NAVIGATION_BAR = 7
 
 Navigation bar.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,7 +138,9 @@ TYPE_WALLPAPER = 9
 
 Wallpaper.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,7 +158,9 @@ TYPE_DESKTOP = 10
 
 Home screen.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -165,7 +178,9 @@ TYPE_LAUNCHER_RECENT = 11
 
 Recent tasks screen.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -183,7 +198,9 @@ TYPE_LAUNCHER_DOCK = 12
 
 Dock bar on the home screen.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -201,7 +218,9 @@ TYPE_VOICE_INTERACTION = 13
 
 Voice assistant.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,7 +238,9 @@ TYPE_POINTER = 14
 
 Mouse.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -237,7 +258,9 @@ TYPE_FLOAT_CAMERA = 15
 
 Floating camera window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -255,7 +278,9 @@ TYPE_SCREENSHOT = 17
 
 Screenshot window.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -273,7 +298,9 @@ TYPE_SYSTEM_TOAST = 18
 
 Toast displayed at the top.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,7 +318,9 @@ TYPE_DIVIDER = 19
 
 Divider.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -309,7 +338,9 @@ TYPE_GLOBAL_SEARCH = 20
 
 Window used for global search.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -327,7 +358,9 @@ TYPE_HANDWRITE = 21
 
 Stylus window.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -345,7 +378,9 @@ TYPE_WALLET_SWIPE_CARD = 22
 
 Wallet swipe card window.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -363,7 +398,9 @@ TYPE_SCREEN_CONTROL = 23
 
 Top-level window used for locking touch input, which intercepts screen touch and click events.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -381,7 +418,9 @@ TYPE_FLOAT_NAVIGATION = 24
 
 Floating window with a three-button navigation bar.
 
-**Since:** 17
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -399,7 +438,9 @@ TYPE_DYNAMIC = 25
 
 System window that allows for adjustable z-levels.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -417,7 +458,9 @@ TYPE_MUTISCREEN_COLLABORATION = 26
 
 Window for multi-screen collaboration.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

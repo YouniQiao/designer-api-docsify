@@ -1,20 +1,24 @@
 # CheckboxGroup
 
 ```TypeScript
-type CheckboxGroup = CheckboxGroupFrameNode
+type CheckboxGroup = TypedFrameNode<CheckboxGroupInterface, CheckboxGroupAttribute>
 ```
 
-Define the FrameNode type for CheckboxGroup.
+Represents a FrameNode of the **CheckboxGroup** type.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-typeNode-type CheckboxGroup = CheckboxGroupFrameNode--><!--Device-typeNode-type CheckboxGroup = CheckboxGroupFrameNode-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-typeNode-type CheckboxGroup = TypedFrameNode<CheckboxGroupInterface, CheckboxGroupAttribute>--><!--Device-typeNode-type CheckboxGroup = TypedFrameNode<CheckboxGroupInterface, CheckboxGroupAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Property type:** CheckboxGroupFrameNode
+**Property type:** TypedFrameNode<CheckboxGroupInterface, CheckboxGroupAttribute>
 

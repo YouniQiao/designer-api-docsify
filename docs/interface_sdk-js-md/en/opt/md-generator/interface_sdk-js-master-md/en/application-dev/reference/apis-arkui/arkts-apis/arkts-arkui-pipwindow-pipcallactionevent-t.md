@@ -6,7 +6,9 @@ type PiPCallActionEvent = 'hangUp' | 'micStateChanged' | 'videoStateChanged' | '
 
 Defines the PiP action event in a video call.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

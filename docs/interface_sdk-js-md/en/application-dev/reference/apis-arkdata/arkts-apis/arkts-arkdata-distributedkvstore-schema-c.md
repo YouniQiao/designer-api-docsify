@@ -1,11 +1,12 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and pass it in  
-[Options](arkts-arkdata-distributedkvstore-options-i.md#Options) when creating or opening a KV store.
+Defines the schema of a KV store. You can create a **Schema** object and pass it in [Options](arkts-arkdata-distributedkvstore-options-i.md#Options) when creating or opening a KV store.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-class Schema--><!--Device-distributedKVStore-class Schema-End-->
 
@@ -25,9 +26,11 @@ constructor()
 
 Defines a constructor used to create a **Schema** instance.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,84 +57,4 @@ schema.indexes = ['$.id', '$.name'];
 schema.mode = 1;
 schema.skip = 0;
 ```
-
-## indexes
-
-```TypeScript
-set indexes(indexes: Array<string>)
-```
-
-Set the string array of json.
-
-**Type:** Array&lt;string&gt;
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Schema-set indexes(indexes: Array<string>)--><!--Device-Schema-set indexes(indexes: Array<string>)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## mode
-
-```TypeScript
-set mode(mode: int)
-```
-
-Set the mode of schema.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Schema-set mode(mode: int)--><!--Device-Schema-set mode(mode: int)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## root
-
-```TypeScript
-set root(root: FieldNode)
-```
-
-Set the root json object.
-
-**Type:** FieldNode
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Schema-set root(root: FieldNode)--><!--Device-Schema-set root(root: FieldNode)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
-
-## skip
-
-```TypeScript
-set skip(skip: int)
-```
-
-Set the skip size of schema.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Schema-set skip(skip: int)--><!--Device-Schema-set skip(skip: int)-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 

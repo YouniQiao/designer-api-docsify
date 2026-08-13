@@ -14,7 +14,9 @@ function isStartupTaskInitialized(startupTask: string): boolean
 
 Checks whether a startup task or .so file preloading task is initialized.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +40,7 @@ Checks whether a startup task or .so file preloading task is initialized.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

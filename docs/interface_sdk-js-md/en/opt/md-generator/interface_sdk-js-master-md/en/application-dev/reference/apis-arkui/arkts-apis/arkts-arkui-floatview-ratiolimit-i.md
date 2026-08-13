@@ -4,6 +4,8 @@ Provides the aspect ratio range of the float view. The aspect ratio is obtained 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-floatView-interface RatioLimit--><!--Device-floatView-interface RatioLimit-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
@@ -26,6 +28,8 @@ Maximum aspect ratio of the float view.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RatioLimit-maxRatio: double--><!--Device-RatioLimit-maxRatio: double-End-->
@@ -43,6 +47,8 @@ Minimum aspect ratio of the float view.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-wifiManager-enum WifiSecurityType--><!--Device-wifiManager-enum WifiSecurityType-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ WIFI_SEC_TYPE_INVALID = 0
 无效加密类型。例如机场公共Wi-Fi。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,6 +38,8 @@ WIFI_SEC_TYPE_OPEN = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1-End-->
@@ -49,6 +55,8 @@ WIFI_SEC_TYPE_WEP = 2
 Wired Equivalent Privacy (WEP)加密类型。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,6 +74,8 @@ Pre-shared key (PSK)加密类型。 例如家庭、小型办公室Wi-Fi。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3-End-->
@@ -81,6 +91,8 @@ WIFI_SEC_TYPE_SAE = 4
 Simultaneous Authentication of Equals (SAE)加密类型。例如智能家居、中小型企业网络。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,6 +110,8 @@ EAP加密类型。例如大型企业认证、大学校园网络等。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5-End-->
@@ -113,6 +127,8 @@ WIFI_SEC_TYPE_EAP_SUITE_B = 6
 Suite-B 192位加密类型。设置后Wi-Fi将使用Suite-B 192位高强度加密，提供高级别的安全认证，适用于政府和高安全机构。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,6 +146,8 @@ WIFI_SEC_TYPE_OWE = 7
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7-End-->
@@ -146,6 +164,8 @@ WAPI-Cert加密类型。中国自主的无线安全标准。
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_WAPI_CERT = 8--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WAPI_CERT = 8-End-->
@@ -161,6 +181,8 @@ WIFI_SEC_TYPE_WAPI_PSK = 9
 WAPI-PSK加密类型。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

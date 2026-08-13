@@ -4,9 +4,11 @@
 export type ValuesBucket = Record<string, ValueType | Uint8Array | null>
 ```
 
-Defines the types of the key and value in a KV pair. This type is not multi-thread safe. If a **ValuesBucket**instance is operated by multiple threads at the same time in an application, use a lock for it.
+Defines the types of the key and value in a KV pair. This type is not multi-thread safe. If a **ValuesBucket** instance is operated by multiple threads at the same time in an application, use a lock for it.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

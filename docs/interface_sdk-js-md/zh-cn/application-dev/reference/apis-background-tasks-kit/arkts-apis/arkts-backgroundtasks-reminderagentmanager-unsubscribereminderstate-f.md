@@ -10,7 +10,9 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -22,7 +24,7 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Array&lt;[ReminderState](arkts-backgroundtasks-reminderagentmanager-reminderstate-i.md)&gt;&gt; | 否 | 回调函数。如果不传参数callback，则取消所有订阅。 |
 
 **返回值：**
 
@@ -34,7 +36,7 @@ function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Pr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1700007](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-参数错误) | If the input parameter is not valid parameter. |
 
 ## 示例
 

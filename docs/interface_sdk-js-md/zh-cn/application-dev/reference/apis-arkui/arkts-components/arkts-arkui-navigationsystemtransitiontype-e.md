@@ -1,24 +1,12 @@
 # NavigationSystemTransitionType
 
-系统转场动画类型。
-
-> **说明：**
-
-> 设置系统转场动画，支持分别设置系统标题栏动画和内容动画。
-
-> 系统默认转场动画中只有STANDARD页面的push和pop动画有单独的标题栏动画，存在如下限制：
-> 
-> - 设置NavigationSystemTransitionType为TITLE时，系统转场只有标题栏动画。
-> 
-> - 设置NavigationSystemTransitionType为CONTENT时，系统转场只有内容区动画。
-> 
-> - 设置NavigationSystemTransitionType为NONE时，没有系统转场动画。
-> 
-> - 设置NavigationSystemTransitionType为DEFAULT时，使用默认系统转场动画。
+系统转场动画类型。 > **说明：** > 设置系统转场动画，支持分别设置系统标题栏动画和内容动画。 > 系统默认转场动画中只有STANDARD页面的push和pop动画有单独的标题栏动画，存在如下限制： > > - 设置NavigationSystemTransitionType为TITLE时，系统转场只有标题栏动画。 > > - 设置NavigationSystemTransitionType为CONTENT时，系统转场只有内容区动画。 > > - 设置NavigationSystemTransitionType为NONE时，没有系统转场动画。 > > - 设置NavigationSystemTransitionType为DEFAULT时，使用默认系统转场动画。
 
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum NavigationSystemTransitionType--><!--Device-unnamed-declare enum NavigationSystemTransitionType-End-->
 
@@ -35,6 +23,8 @@ DEFAULT = 0
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,6 +46,8 @@ NONE = 1
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -75,6 +67,8 @@ TITLE = 2
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,6 +90,8 @@ CONTENT = 3
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -115,6 +111,8 @@ FADE = 4
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,6 +134,8 @@ EXPLODE = 5
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -156,6 +156,8 @@ SLIDE_RIGHT = 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
@@ -175,6 +177,8 @@ SLIDE_BOTTOM = 7
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

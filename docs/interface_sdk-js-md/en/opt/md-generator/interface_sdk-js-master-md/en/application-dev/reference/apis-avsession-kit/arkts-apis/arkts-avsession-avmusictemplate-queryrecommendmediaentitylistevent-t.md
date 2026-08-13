@@ -8,6 +8,8 @@ The query recommend media entity list event.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-avMusicTemplate-type QueryRecommendMediaEntityListEvent = () => Promise<MediaEntity[]>--><!--Device-avMusicTemplate-type QueryRecommendMediaEntityListEvent = () => Promise<MediaEntity[]>-End-->

@@ -2,7 +2,9 @@
 
 Represents the connection state information of the proxy channel.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-proxyChannelManager-interface ChannelStateInfo--><!--Device-proxyChannelManager-interface ChannelStateInfo-End-->
 
@@ -24,7 +26,9 @@ Proxy channel ID.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Connection state of the proxy channel.
 
 **Type:** [ChannelState](arkts-distributedservice-proxychannelmanager-channelstate-e.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

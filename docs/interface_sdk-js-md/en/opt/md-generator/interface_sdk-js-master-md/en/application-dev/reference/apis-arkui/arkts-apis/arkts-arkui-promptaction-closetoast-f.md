@@ -12,16 +12,11 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 function closeToast(toastId: number): void
 ```
 
-Closes the specified toast.
-
-> **NOTE：**
-> 
-> Directly using **closeToast** can lead to the issue of
-> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
-> **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the
-> [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closeToast) API through this object.
+Closes the specified toast. > **NOTE：**> > Directly using **closeToast** can lead to the issue of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the > **PromptAction** object using the **getPromptAction** API in **UIContext** and then call the > [closeToast](arkts-arkui-arkui-uicontext-promptaction-c.md#closeToast) API through this object.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,6 +36,6 @@ Closes the specified toast.
 
 | Error Code ID |
 | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [103401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-promptAction.md#103401-toast-not-found) |
+| [100001](../errorcode-internal.md#100001-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [103401](../errorcode-promptAction.md#103401-toast-not-found) |

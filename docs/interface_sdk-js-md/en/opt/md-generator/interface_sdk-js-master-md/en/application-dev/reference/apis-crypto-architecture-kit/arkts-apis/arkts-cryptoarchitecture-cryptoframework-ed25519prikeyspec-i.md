@@ -1,15 +1,14 @@
 # ED25519PriKeySpec
 
-Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec) used to specify the parameters of the private key in the Ed25519 algorithm.
-
-&lt;br&gt;To generate a key based on key parameters, pass it to  
-[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) to create a key generator.
+Defines a child class of [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec) used to specify the parameters of the private key in the Ed25519 algorithm. &lt;br&gt;To generate a key based on key parameters, pass it to [createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) to create a key generator.
 
 **Inheritance/Implementation:** ED25519PriKeySpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-cryptoFramework-interface ED25519PriKeySpec extends AsyKeySpec--><!--Device-cryptoFramework-interface ED25519PriKeySpec extends AsyKeySpec-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface ED25519PriKeySpec--><!--Device-cryptoFramework-interface ED25519PriKeySpec-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -31,7 +30,9 @@ Private key **sk** in the Ed25519 algorithm.
 
 **Type:** bigint
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

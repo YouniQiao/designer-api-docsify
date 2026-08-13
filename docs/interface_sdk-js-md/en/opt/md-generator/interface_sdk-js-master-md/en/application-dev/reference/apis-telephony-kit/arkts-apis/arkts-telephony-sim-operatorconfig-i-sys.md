@@ -2,7 +2,9 @@
 
 Defines the carrier configuration.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export interface OperatorConfig--><!--Device-sim-export interface OperatorConfig-End-->
 
@@ -26,7 +28,9 @@ Indicates the field.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperatorConfig-field: string--><!--Device-OperatorConfig-field: string-End-->
 
@@ -44,7 +48,9 @@ Indicates the value.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-OperatorConfig-value: string--><!--Device-OperatorConfig-value: string-End-->
 

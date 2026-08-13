@@ -1,22 +1,24 @@
 # FillResponse (System API)
 
 ```TypeScript
-export type FillResponse = _AutoFillRequest.FillResponse
+export type FillResponse = _FillResponse
 ```
 
 Defines the information about the response to an auto-fill request.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-autoFillManager-export type FillResponse = _AutoFillRequest.FillResponse--><!--Device-autoFillManager-export type FillResponse = _AutoFillRequest.FillResponse-End-->
+<!--Device-autoFillManager-export type FillResponse = _FillResponse--><!--Device-autoFillManager-export type FillResponse = _FillResponse-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillRequest.FillResponse
+**Property type:** _FillResponse
 

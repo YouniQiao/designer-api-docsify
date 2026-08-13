@@ -2,9 +2,11 @@
 
 Describes the coordinate options.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface CoordinatesOptions--><!--Device-sensor-interface CoordinatesOptions-End-->
 
@@ -24,11 +26,13 @@ x: int
 
 X coordinate direction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CoordinatesOptions-x: int--><!--Device-CoordinatesOptions-x: int-End-->
 
@@ -42,11 +46,13 @@ y: int
 
 Y coordinate direction.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CoordinatesOptions-y: int--><!--Device-CoordinatesOptions-y: int-End-->
 

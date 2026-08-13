@@ -12,11 +12,11 @@ import { sim } from '@kit.TelephonyKit';
 function getSimOperatorNumeric(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the home PLMN number of the SIM card in a specified slot.
+Obtains the home PLMN number of the SIM card in a specified slot. &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
-&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+**Since:** 23
 
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimOperatorNumeric(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimOperatorNumeric(slotId: int, callback: AsyncCallback<string>): void-End-->
 
@@ -33,12 +33,12 @@ Obtains the home PLMN number of the SIM card in a specified slot.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-sim-card-not-detected) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -58,11 +58,11 @@ sim.getSimOperatorNumeric(0, (err: BusinessError, data: string) => {
 function getSimOperatorNumeric(slotId: number): Promise<string>
 ```
 
-Obtains the home PLMN number of the SIM card in a specified slot.
+Obtains the home PLMN number of the SIM card in a specified slot. &lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
-&lt;p&gt;The value is recorded in the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+**Since:** 23
 
-**Since:** 6
+**Deprecated since:** -1
 
 <!--Device-sim-function getSimOperatorNumeric(slotId: int): Promise<string>--><!--Device-sim-function getSimOperatorNumeric(slotId: int): Promise<string>-End-->
 
@@ -84,12 +84,12 @@ Obtains the home PLMN number of the SIM card in a specified slot.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-internal-error) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-sim-card-not-detected) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-service-connection-error) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-system-internal-error) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [8300999](../errorcode-telephony.md#8300999-internal-error) |
+| [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) |
+| [8300002](../errorcode-telephony.md#8300002-service-connection-error) |
+| [8300003](../errorcode-telephony.md#8300003-system-internal-error) |
+| [8300001](../errorcode-telephony.md#8300001-input-parameter-value-out-of-range) |
 
 ## Examples
 

@@ -4,6 +4,8 @@ Indicates the options of the editable title bar.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface EditableTitleBarOptions--><!--Device-unnamed-export declare interface EditableTitleBarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the title bar.
-
-Default value: **BlurStyle.NONE**
+Background blur style of the title bar. Default value: **BlurStyle.NONE**
 
 **Type:** BlurStyle
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Default value: **BlurStyle.NONE**
 backgroundColor?: ResourceColor
 ```
 
-Background color of the title bar.
-
-Default value: **'#00000000'**
+Background color of the title bar. Default value: **'#00000000'**
 
 **Type:** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,13 +66,13 @@ Default value: **'#00000000'**
 safeAreaEdges?: Array<SafeAreaEdge>
 ```
 
-Edges for expanding the safe area.
-
-Default value: **[SafeAreaEdge.TOP]**
+Edges for expanding the safe area. Default value: **[SafeAreaEdge.TOP]**
 
 **Type:** Array&lt;[SafeAreaEdge](../arkts-components/arkts-arkui-safeareaedge-e.md)&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,13 +88,13 @@ Default value: **[SafeAreaEdge.TOP]**
 safeAreaTypes?: Array<SafeAreaType>
 ```
 
-Types of the expanded safe areas.
-
-Default value: **[SafeAreaType.SYSTEM]**
+Types of the expanded safe areas. Default value: **[SafeAreaType.SYSTEM]**
 
 **Type:** Array&lt;[SafeAreaType](../arkts-components/arkts-arkui-safeareatype-e.md)&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -20,7 +20,7 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone)
+**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone-(System-API))
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -32,8 +32,8 @@ Sets the system time zone. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones) . |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones . |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Sets the system time zone. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone)
+**Substitutes:** [setTimezone](arkts-basicservices-systemdatetime-settimezone-f-sys.md#setTimezone-(System-API))
 
 **Required permissions:** ohos.permission.SET_TIME_ZONE
 
@@ -87,7 +87,7 @@ Sets the system time zone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timezone | string | Yes | System time zone to set. For details, see [Supported System Time Zones](../../../reference/apis-basic-services-kit/js-apis-system-time.md#supported-system-time-zones) . |
+| timezone | string | Yes | System time zone to set. For details, see Supported System Time Zones . |
 
 **Return value:**
 

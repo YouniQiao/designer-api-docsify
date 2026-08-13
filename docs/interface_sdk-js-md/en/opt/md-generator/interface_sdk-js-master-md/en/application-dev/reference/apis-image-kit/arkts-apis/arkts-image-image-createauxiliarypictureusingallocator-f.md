@@ -13,9 +13,11 @@ function createAuxiliaryPictureUsingAllocator(auxiliaryPictureInfo: AuxiliaryPic
     allocatorType?: AllocatorType, pixels?: ArrayBuffer): AuxiliaryPicture
 ```
 
-Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType [IMAGE_ALLOCATOR_TYPE](IMAGE_ALLOCATOR_TYPE). By default, the system selects the memory type based on the image type,image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
+Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by the AuxiliaryPicture can be specified by allocatorType IMAGE_ALLOCATOR_TYPE. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the AuxiliaryPicture returned by this interface, please always consider the impact of stride. The created auxiliary picture is initialized with the input pixels.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,9 +43,9 @@ Create an &lt;b&gt;AuxiliaryPicture&lt;/b&gt; object, the memory type used by th
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
-| [7600205](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600205-unsupported-format) |
-| [7600301](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600205](../errorcode-image.md#7600205-unsupported-format) |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) |
 
 ## Examples
 

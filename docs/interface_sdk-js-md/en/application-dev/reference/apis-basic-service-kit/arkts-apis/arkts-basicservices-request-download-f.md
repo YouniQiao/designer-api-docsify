@@ -20,7 +20,7 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](request.downloadFile(context:)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig, callback: AsyncCallback&lt;DownloadTask&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -35,13 +35,13 @@ Downloads a file. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | config | [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md) | Yes | Download configuration. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[DownloadTask](arkts-basicservices-request-downloadtask-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the **DownloadTask** object obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 
@@ -73,7 +73,7 @@ Downloads a file. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [downloadFile](request.downloadFile(context:)
+**Substitutes:** [downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile)(context: BaseContext, config: DownloadConfig)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -99,7 +99,7 @@ Downloads a file. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permissions check fails. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 
 ## Examples
 

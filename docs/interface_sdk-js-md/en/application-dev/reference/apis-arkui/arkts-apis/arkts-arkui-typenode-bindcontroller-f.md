@@ -6,11 +6,13 @@
 export function bindController(node: FrameNode, controller: TextController, nodeType: 'Text'): void
 ```
 
-Binds a [TextController](TextController) instance to a [Text](arkts-arkui-typenode-text-t.md#Text) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a TextController instance to a [Text](arkts-arkui-typenode-text-t.md#Text) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,8 +34,8 @@ Binds a [TextController](TextController) instance to a [Text](arkts-arkui-typeno
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 
@@ -89,11 +91,13 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: SwiperController, nodeType: 'Swiper'): void
 ```
 
-Binds a [SwiperController](SwiperController) instance to the [Swiper](arkts-arkui-typenode-swiper-t.md#Swiper) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
+Binds a SwiperController instance to the [Swiper](arkts-arkui-typenode-swiper-t.md#Swiper) node. Cross- language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API does not support declaratively created nodes.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,12 +119,12 @@ Binds a [SwiperController](SwiperController) instance to the [Swiper](arkts-arku
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 
-See the example for [createNode('Swiper')12+](#createnodeswiper12).
+See the example for createNode('Swiper')12+.
 
 
 ## bindController
@@ -129,11 +133,13 @@ See the example for [createNode('Swiper')12+](#createnodeswiper12).
 function bindController(node: FrameNode, controller: Scroller, nodeType: 'Scroll'): void
 ```
 
-Binds the [Scroller](Scroller) to the [Scroll](arkts-arkui-typenode-scroll-t.md#Scroll) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds the Scroller to the [Scroll](arkts-arkui-typenode-scroll-t.md#Scroll) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,8 +161,8 @@ Binds the [Scroller](Scroller) to the [Scroll](arkts-arkui-typenode-scroll-t.md#
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**Applicable version:** 15 - 24 |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be threw above API version 24.<br>**Applicable version:** 15 - 24 |
 
 ## Examples
 
@@ -171,11 +177,13 @@ typeNode.bindController(node, scroller, 'Scroll');
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'List'): void
 ```
 
-Binds a [Scroller](Scroller) instance to the [List](arkts-arkui-typenode-list-t.md#List) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [List](arkts-arkui-typenode-list-t.md#List) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -197,8 +205,8 @@ Binds a [Scroller](Scroller) instance to the [List](arkts-arkui-typenode-list-t.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 
@@ -213,13 +221,13 @@ typeNode.bindController(node, scroller, 'List');
 export function bindController(node: FrameNode, controller: TextInputController, nodeType: 'TextInput'): void
 ```
 
-Binds the [TextInputController](TextInputController) to the [TextInput](arkts-arkui-typenode-textinput-t.md#TextInput) node. Cross  
--language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API  
-supports declaratively created nodes since API version 26.0.0.
+Binds the TextInputController to the [TextInput](arkts-arkui-typenode-textinput-t.md#TextInput) node. Cross -language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -241,8 +249,8 @@ supports declaratively created nodes since API version 26.0.0.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 
@@ -291,11 +299,13 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'WaterFlow'): void
 ```
 
-Binds a [Scroller](Scroller) instance to the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [WaterFlow](arkts-arkui-typenode-waterflow-t.md#WaterFlow) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -317,8 +327,8 @@ Binds a [Scroller](Scroller) instance to the [WaterFlow](arkts-arkui-typenode-wa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 
@@ -333,11 +343,13 @@ typeNode.bindController(node, scroller, 'WaterFlow');
 export function bindController(node: FrameNode, controller: TextAreaController, nodeType: 'TextArea'): void
 ```
 
-Binds a [TextAreaController](TextAreaController) instance to the [TextArea](arkts-arkui-typenode-textarea-t.md#TextArea) node.Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a TextAreaController instance to the [TextArea](arkts-arkui-typenode-textarea-t.md#TextArea) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -359,8 +371,8 @@ Binds a [TextAreaController](TextAreaController) instance to the [TextArea](arkt
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 
@@ -409,11 +421,13 @@ struct FrameNodeTypeTest {
 export function bindController(node: FrameNode, controller: Scroller, nodeType: 'Grid'): void
 ```
 
-Binds a [Scroller](Scroller) instance to the [Grid](arkts-arkui-typenode-grid-t.md#Grid) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
+Binds a Scroller instance to the [Grid](arkts-arkui-typenode-grid-t.md#Grid) node. Cross-language access must be enabled for nodes not created via ArkTS; otherwise, an exception will be thrown. This API supports declaratively created nodes since API version 26.0.0.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -435,8 +449,8 @@ Binds a [Scroller](Scroller) instance to the [Grid](arkts-arkui-typenode-grid-t.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
-| [100023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
+| [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 20 and will not be threw above API version 24.<br>**Applicable version:** 20 - 24 |
+| [100023](../errorcode-node.md#100023-parameter-error) | Parameter error. Possible causes: 1. The component type of the node is incorrect. 2. The node is null or undefined. 3. The controller is null or undefined. |
 
 ## Examples
 

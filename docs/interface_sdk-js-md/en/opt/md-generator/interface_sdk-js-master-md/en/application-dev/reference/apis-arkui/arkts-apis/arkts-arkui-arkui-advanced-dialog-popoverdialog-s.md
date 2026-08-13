@@ -4,7 +4,7 @@ Declare struct PopoverDialog
 
 **Since:** 14
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct PopoverDialog--><!--Device-unnamed-export declare struct PopoverDialog-End-->
 
@@ -19,7 +19,8 @@ import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, P
 ## popover
 
 ```TypeScript
-popover: PopoverOptions
+@Require @Prop
+  popover: PopoverOptions
 ```
 
 Sets the PopoverDialog options.
@@ -28,20 +29,21 @@ Sets the PopoverDialog options.
 
 **Since:** 14
 
-**Decorator:** @Require, @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-PopoverDialog-popover: PopoverOptions--><!--Device-PopoverDialog-popover: PopoverOptions-End-->
+<!--Device-PopoverDialog-@Require @Prop  popover: PopoverOptions--><!--Device-PopoverDialog-@Require @Prop  popover: PopoverOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## targetBuilder
 
 ```TypeScript
-targetBuilder: Callback<void>
+@Require @BuilderParam 
+  targetBuilder: Callback<void>
 ```
 
 Sets the targetBuilder content.
@@ -50,20 +52,21 @@ Sets the targetBuilder content.
 
 **Since:** 14
 
-**Decorator:** @Require, @BuilderParam
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-PopoverDialog-targetBuilder: Callback<void>--><!--Device-PopoverDialog-targetBuilder: Callback<void>-End-->
+<!--Device-PopoverDialog-@Require @BuilderParam   targetBuilder: Callback<void>--><!--Device-PopoverDialog-@Require @BuilderParam   targetBuilder: Callback<void>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## visible
 
 ```TypeScript
-visible: boolean
+@Link
+  visible: boolean
 ```
 
 Sets the PopoverDialog Visible Status.
@@ -72,12 +75,12 @@ Sets the PopoverDialog Visible Status.
 
 **Since:** 14
 
-**Decorator:** @Link
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
-<!--Device-PopoverDialog-visible: boolean--><!--Device-PopoverDialog-visible: boolean-End-->
+<!--Device-PopoverDialog-@Link  visible: boolean--><!--Device-PopoverDialog-@Link  visible: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -2,7 +2,9 @@
 
 Describes the configuration of the main window screenshot.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface WindowSnapshotConfiguration--><!--Device-window-interface WindowSnapshotConfiguration-End-->
 
@@ -24,7 +26,9 @@ Whether the existing screenshot of the main window should be used. The default v
 
 **Type:** boolean
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WindowSnapshotConfiguration-useCache?: boolean--><!--Device-WindowSnapshotConfiguration-useCache?: boolean-End-->
 

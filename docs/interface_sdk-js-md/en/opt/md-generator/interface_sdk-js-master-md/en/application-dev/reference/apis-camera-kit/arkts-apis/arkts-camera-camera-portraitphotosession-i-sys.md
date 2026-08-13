@@ -1,13 +1,14 @@
 # PortraitPhotoSession (System API)
 
-PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement,Portrait, Aperture Implements a portrait photo session, which sets the parameters of the portrait photo mode and saves all  
-[CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
+PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture Implements a portrait photo session, which sets the parameters of the portrait photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md#Session).
 
-**Inheritance/Implementation:** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [Portrait](arkts-camera-camera-portrait-i-sys.md#Portrait), [Aperture](arkts-camera-camera-aperture-i.md#Aperture)
+**Inheritance/Implementation:** PortraitPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [Flash](arkts-camera-camera-flash-i.md#Flash), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty-(System-API)), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect-(System-API)), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [Portrait](arkts-camera-camera-portrait-i-sys.md#Portrait-(System-API)), [Aperture](arkts-camera-camera-aperture-i-sys.md#Aperture-(System-API))
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-camera-interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture--><!--Device-camera-interface PortraitPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, Beauty, ColorEffect, ColorManagement, Portrait, Aperture-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface PortraitPhotoSession--><!--Device-camera-interface PortraitPhotoSession-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -27,7 +28,9 @@ getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>
 
 Gets session conflict functions.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>--><!--Device-PortraitPhotoSession-getSessionConflictFunctions(): Array<PortraitPhotoConflictFunctions>-End-->
 
@@ -45,7 +48,7 @@ Gets session conflict functions.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## getSessionFunctions
 
@@ -55,7 +58,9 @@ getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPho
 
 Gets session functions.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPhotoFunctions>--><!--Device-PortraitPhotoSession-getSessionFunctions(outputCapability: CameraOutputCapability): Array<PortraitPhotoFunctions>-End-->
 
@@ -79,10 +84,112 @@ Gets session functions.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## off('error')
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-offError(callback?: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No |
+
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No |
+
+## offLcdFlashStatus
+
+```TypeScript
+offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void
+```
+
+Unsubscribes from lcd flash status.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-offLcdFlashStatus(callback?: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## offSmoothZoomInfoAvailable
+
+```TypeScript
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Unsubscribes from zoom info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | No |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -91,6 +198,8 @@ off(type: 'error', callback?: ErrorCallback): void
 Unsubscribes from PortraitSession error events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-PortraitPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -113,7 +222,7 @@ function unregisterSessionError(portraitPhotoSession: camera.PortraitPhotoSessio
 }
 ```
 
-## off('focusStateChange')
+## off_focusStateChange
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -122,6 +231,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -144,7 +255,46 @@ function unregisterFocusStateChange(portraitPhotoSession: camera.PortraitPhotoSe
 }
 ```
 
-## off('smoothZoomInfoAvailable')
+## off_lcdFlashStatus
+
+```TypeScript
+off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
+```
+
+Unsubscribes from LCD flash status change events.
+
+**Since:** 13
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'lcdFlashStatus' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+function unregisterLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
+  portraitPhotoSession.off('lcdFlashStatus');
+}
+```
+
+## off_smoothZoomInfoAvailable
 
 ```TypeScript
 off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
@@ -153,6 +303,8 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 Unsubscribes from smooth zoom state change events.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -175,17 +327,19 @@ function unregisterSmoothZoomInfo(portraitPhotoSession: camera.PortraitPhotoSess
 }
 ```
 
-## off('lcdFlashStatus')
+## onError
 
 ```TypeScript
-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
+onError(callback: ErrorCallback): void
 ```
 
-Unsubscribes from LCD flash status change events.
+Subscribes to error events.
 
-**Since:** 13
+**Since:** 23
 
-<!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-onError(callback: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -195,24 +349,87 @@ Unsubscribes from LCD flash status change events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'lcdFlashStatus' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | No |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes |
+
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes |
+
+## onLcdFlashStatus
+
+```TypeScript
+onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to lcd flash status.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-onLcdFlashStatus(callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
-## Examples
+## onSmoothZoomInfoAvailable
 
 ```TypeScript
-function unregisterLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
-  portraitPhotoSession.off('lcdFlashStatus');
-}
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
 ```
 
-## on('error')
+Subscribes zoom info event callback.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | Yes |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
@@ -221,6 +438,8 @@ on(type: 'error', callback: ErrorCallback): void
 Subscribes to PortraitSession error events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-PortraitPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -249,7 +468,7 @@ function registerSessionError(portraitPhotoSession: camera.PortraitPhotoSession)
 }
 ```
 
-## on('focusStateChange')
+## on_focusStateChange
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -258,6 +477,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-PortraitPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -290,7 +511,57 @@ function registerFocusStateChange(portraitPhotoSession: camera.PortraitPhotoSess
 }
 ```
 
-## on('smoothZoomInfoAvailable')
+## on_lcdFlashStatus
+
+```TypeScript
+on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
+```
+
+Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
+
+**Since:** 13
+
+**Deprecated since:** -1
+
+<!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'lcdFlashStatus' | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
+  if (err !== undefined && err.code !== 0) {
+    console.error(`Callback Error, errorCode: ${err.code}`);
+    return;
+  }
+  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
+  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
+}
+
+function registerLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
+  portraitPhotoSession.on('lcdFlashStatus', callback);
+}
+```
+
+## on_smoothZoomInfoAvailable
 
 ```TypeScript
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
@@ -299,6 +570,8 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-PortraitPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-PortraitPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -328,53 +601,5 @@ function callback(err: BusinessError, smoothZoomInfo: camera.SmoothZoomInfo): vo
 
 function registerSmoothZoomInfo(portraitPhotoSession: camera.PortraitPhotoSession): void {
   portraitPhotoSession.on('smoothZoomInfoAvailable', callback);
-}
-```
-
-## on('lcdFlashStatus')
-
-```TypeScript
-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
-```
-
-Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
-
-**Since:** 13
-
-<!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void--><!--Device-PortraitPhotoSession-on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'lcdFlashStatus' | Yes |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-function callback(err: BusinessError, lcdFlashStatus: camera.LcdFlashStatus): void {
-  if (err !== undefined && err.code !== 0) {
-    console.error(`Callback Error, errorCode: ${err.code}`);
-    return;
-  }
-  console.info(`isLcdFlashNeeded: ${lcdFlashStatus.isLcdFlashNeeded}`);
-  console.info(`lcdCompensation: ${lcdFlashStatus.lcdCompensation}`);
-}
-
-function registerLcdFlashStatus(portraitPhotoSession: camera.PortraitPhotoSession): void {
-  portraitPhotoSession.on('lcdFlashStatus', callback);
 }
 ```

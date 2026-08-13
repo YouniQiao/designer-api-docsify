@@ -1,6 +1,8 @@
 # @ohos.ai.mindSporeLite
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -20,19 +22,19 @@ import { mindSporeLite } from '@kit.MindSporeLiteKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAllNNRTDeviceDescriptions](arkts-mindsporelite-mindsporelite-getallnnrtdevicedescriptions-f.md#getallnnrtdevicedescriptions) |
-| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadmodelfrombuffer) |
-| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadmodelfrombuffer-1) |
-| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadmodelfrombuffer-2) |
-| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadmodelfromfd) |
-| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadmodelfromfd-1) |
-| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadmodelfromfd-2) |
-| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadmodelfromfile) |
-| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadmodelfromfile-1) |
-| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadmodelfromfile-2) |
-| [loadTrainModelFromBuffer](arkts-mindsporelite-mindsporelite-loadtrainmodelfrombuffer-f.md#loadtrainmodelfrombuffer) |
-| [loadTrainModelFromFd](arkts-mindsporelite-mindsporelite-loadtrainmodelfromfd-f.md#loadtrainmodelfromfd) |
-| [loadTrainModelFromFile](arkts-mindsporelite-mindsporelite-loadtrainmodelfromfile-f.md#loadtrainmodelfromfile) |
+| [getAllNNRTDeviceDescriptions](arkts-mindsporelite-mindsporelite-getallnnrtdevicedescriptions-f.md#getAllNNRTDeviceDescriptions) |
+| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadModelFromBuffer) |
+| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadModelFromBuffer) |
+| [loadModelFromBuffer](arkts-mindsporelite-mindsporelite-loadmodelfrombuffer-f.md#loadModelFromBuffer) |
+| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadModelFromFd) |
+| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadModelFromFd) |
+| [loadModelFromFd](arkts-mindsporelite-mindsporelite-loadmodelfromfd-f.md#loadModelFromFd) |
+| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadModelFromFile) |
+| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadModelFromFile) |
+| [loadModelFromFile](arkts-mindsporelite-mindsporelite-loadmodelfromfile-f.md#loadModelFromFile) |
+| [loadTrainModelFromBuffer](arkts-mindsporelite-mindsporelite-loadtrainmodelfrombuffer-f.md#loadTrainModelFromBuffer) |
+| [loadTrainModelFromFd](arkts-mindsporelite-mindsporelite-loadtrainmodelfromfd-f.md#loadTrainModelFromFd) |
+| [loadTrainModelFromFile](arkts-mindsporelite-mindsporelite-loadtrainmodelfromfile-f.md#loadTrainModelFromFile) |
 
 ### Interfaces
 

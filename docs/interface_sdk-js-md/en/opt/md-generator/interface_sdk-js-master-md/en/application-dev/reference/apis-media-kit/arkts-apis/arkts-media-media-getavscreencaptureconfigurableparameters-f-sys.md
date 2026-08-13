@@ -14,7 +14,9 @@ function getAVScreenCaptureConfigurableParameters(sessionId: number): Promise<st
 
 get Configurations which user can changes from AVScreenCapture server
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>--><!--Device-media-function getAVScreenCaptureConfigurableParameters(sessionId: int): Promise<string>-End-->
 
@@ -38,8 +40,8 @@ get Configurations which user can changes from AVScreenCapture server
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [5400109](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400109-session-id-does-not-exist) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) |
 
 ## Examples
 

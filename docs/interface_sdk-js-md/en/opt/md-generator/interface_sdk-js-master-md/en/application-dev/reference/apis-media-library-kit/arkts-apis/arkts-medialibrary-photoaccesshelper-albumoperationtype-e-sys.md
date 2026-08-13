@@ -4,6 +4,8 @@ Album operation type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-enum AlbumOperationType--><!--Device-photoAccessHelper-enum AlbumOperationType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -19,6 +21,8 @@ ADD = 'add'
 The album add operation type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ The album remove operation type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AlbumOperationType-REMOVE = 'remove'--><!--Device-AlbumOperationType-REMOVE = 'remove'-End-->
@@ -55,6 +61,8 @@ UPDATE = 'update'
 The album update operation type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

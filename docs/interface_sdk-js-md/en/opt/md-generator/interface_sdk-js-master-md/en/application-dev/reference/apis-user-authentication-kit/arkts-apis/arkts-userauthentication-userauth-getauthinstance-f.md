@@ -12,12 +12,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getAuthInstance(challenge: Uint8Array, authType: UserAuthType, authTrustLevel: AuthTrustLevel): AuthInstance
 ```
 
-Obtains an **AuthInstance** instance for user authentication.
-
-> **NOTE：**
-> 
-> Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new
-> **AuthInstance**.
+Obtains an **AuthInstance** instance for user authentication. > **NOTE：**> > Each **AuthInstance** can perform authentication only once. To perform authentication again, obtain a new > **AuthInstance**.
 
 **Since:** 9
 
@@ -47,10 +42,10 @@ Obtains an **AuthInstance** instance for user authentication.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
-| [12500005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
 
 ## Examples
 

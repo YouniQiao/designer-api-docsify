@@ -2,7 +2,9 @@
 
 Defines the notification key value.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export interface NotificationKey--><!--Device-notificationSubscribe-export interface NotificationKey-End-->
 
@@ -26,7 +28,9 @@ Notification ID.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationKey-id: int--><!--Device-NotificationKey-id: int-End-->
 
@@ -44,7 +48,9 @@ Notification label. This parameter is left empty by default.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationKey-label?: string--><!--Device-NotificationKey-label?: string-End-->
 

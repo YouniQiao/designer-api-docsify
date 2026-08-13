@@ -6,7 +6,9 @@ type Image = string
 
 表示图片的URI地址，为string类型。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-intelligence-type Image = string--><!--Device-intelligence-type Image = string-End-->
 

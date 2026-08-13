@@ -2,9 +2,11 @@
 
 Describes the settings for BLE advertising.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface AdvertiseSetting--><!--Device-ble-interface AdvertiseSetting-End-->
 
@@ -26,9 +28,11 @@ Indicates whether the BLE is connectable, default is {@code true}
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +48,15 @@ Indicates whether the BLE is connectable, default is {@code true}
 interval?: int
 ```
 
-Minimum slot value for the advertising interval, which is {@code 32} (20 ms)Maximum slot value for the advertising interval, which is {@code 16777215} (10485.759375s)Default slot value for the advertising interval, which is {@code 1600} (1s)
+Minimum slot value for the advertising interval, which is {@code 32} (20 ms) Maximum slot value for the advertising interval, which is {@code 16777215} (10485.759375s) Default slot value for the advertising interval, which is {@code 1600} (1s)
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,7 +78,9 @@ Indicates whether the advertisement is extended, default is {@code false}
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -88,13 +96,15 @@ Indicates whether the advertisement is extended, default is {@code false}
 txPower?: int
 ```
 
-Minimum transmission power level for advertising, which is {@code -127}Maximum transmission power level for advertising, which is {@code 1}Default transmission power level for advertising, which is {@code -7}
+Minimum transmission power level for advertising, which is {@code -127} Maximum transmission power level for advertising, which is {@code 1} Default transmission power level for advertising, which is {@code -7}
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

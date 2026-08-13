@@ -2,7 +2,9 @@
 
 **MediaAssetProgressHandler** is used to obtain the media asset processing progress from **onProgress()**.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface MediaAssetProgressHandler--><!--Device-photoAccessHelper-interface MediaAssetProgressHandler-End-->
 
@@ -22,7 +24,9 @@ onProgress(progress: number): void
 
 Called when the progress of the requested video is returned.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MediaAssetProgressHandler-onProgress(progress: int): void--><!--Device-MediaAssetProgressHandler-onProgress(progress: int): void-End-->
 

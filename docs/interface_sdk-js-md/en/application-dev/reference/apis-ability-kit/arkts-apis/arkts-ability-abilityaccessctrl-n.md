@@ -1,8 +1,10 @@
 # abilityAccessCtrl
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace abilityAccessCtrl--><!--Device-unnamed-declare namespace abilityAccessCtrl-End-->
 
@@ -20,7 +22,7 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager) | Creates a program access control management instance for scenarios such as permission verification, runtime permission request, settings page authorization guidance, and permission status change monitoring. After the call is successful, an AtManager instance is returned, which can be used for subsequent permission management operations. |
+| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager) | Creates a program access control management instance for scenarios such as permission verification, runtime permission request, settings page authorization guidance, and permission status change monitoring. After the call is successful, an AtManager instance is returned, which can be used for subsequent permission management operations. |
 
 ### Interfaces
 

@@ -4,6 +4,8 @@ Provides a SelectionContainer component interface.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface SelectionContainerInterface--><!--Device-unnamed-export interface SelectionContainerInterface-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,7 +16,7 @@ Provides a SelectionContainer component interface.
 import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (value?: SelectionContainerOptions): SelectionContainerAttribute
@@ -23,6 +25,8 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 Defines the constructor of SelectionContainer.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

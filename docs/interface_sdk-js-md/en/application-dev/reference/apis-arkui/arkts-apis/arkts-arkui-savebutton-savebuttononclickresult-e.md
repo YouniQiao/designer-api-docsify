@@ -6,6 +6,8 @@ Enumerates the click event results of the save button.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum SaveButtonOnClickResult--><!--Device-unnamed-export declare enum SaveButtonOnClickResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Success.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Failure because the application is not temporarily authorized for saving files.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SaveButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1--><!--Device-SaveButtonOnClickResult-TEMPORARY_AUTHORIZATION_FAILED = 1-End-->
@@ -57,6 +63,8 @@ Canceled by user.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

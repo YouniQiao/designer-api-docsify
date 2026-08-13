@@ -2,7 +2,9 @@
 
 描述采集trace线程的类型，包括主线程和所有线程。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-hidebug-enum TraceFlag--><!--Device-hidebug-enum TraceFlag-End-->
 
@@ -16,7 +18,9 @@ MAIN_THREAD = 1
 
 只采集当前应用主线程。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TraceFlag-MAIN_THREAD = 1--><!--Device-TraceFlag-MAIN_THREAD = 1-End-->
 
@@ -30,7 +34,9 @@ ALL_THREADS = 2
 
 采集当前应用下所有线程。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TraceFlag-ALL_THREADS = 2--><!--Device-TraceFlag-ALL_THREADS = 2-End-->
 

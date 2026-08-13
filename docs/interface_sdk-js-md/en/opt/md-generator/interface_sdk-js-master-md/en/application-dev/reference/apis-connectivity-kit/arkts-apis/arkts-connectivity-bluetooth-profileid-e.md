@@ -6,7 +6,7 @@ The enum of profile id.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ProfileId](ohos.bluetoothManager/bluetoothManager.ProfileId)
+**Substitutes:** [ProfileId](arkts-connectivity-bluetoothmanager-profileid-e.md#ProfileId)
 
 <!--Device-bluetooth-enum ProfileId--><!--Device-bluetooth-enum ProfileId-End-->
 
@@ -24,7 +24,7 @@ A2DP profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PROFILE_A2DP_SOURCE](ohos.bluetoothManager/bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE)
+**Substitutes:** [PROFILE_A2DP_SOURCE](arkts-connectivity-bluetoothmanager-profileid-e.md#PROFILE_A2DP_SOURCE)
 
 <!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1--><!--Device-ProfileId-PROFILE_A2DP_SOURCE = 1-End-->
 
@@ -42,7 +42,7 @@ HFP profile.
 
 **Deprecated since:** 9
 
-**Substitutes:** [PROFILE_HANDS_FREE_AUDIO_GATEWAY](ohos.bluetoothManager/bluetoothManager.ProfileId.PROFILE_HANDS_FREE_AUDIO_GATEWAY)
+**Substitutes:** [PROFILE_HANDS_FREE_AUDIO_GATEWAY](arkts-connectivity-bluetoothmanager-profileid-e.md#PROFILE_HANDS_FREE_AUDIO_GATEWAY)
 
 <!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4--><!--Device-ProfileId-PROFILE_HANDS_FREE_AUDIO_GATEWAY = 4-End-->
 

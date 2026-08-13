@@ -10,6 +10,8 @@ function allocUninitializedFromPool(size: number): FastBuffer
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-fastbuffer-function allocUninitializedFromPool(size: number): FastBuffer--><!--Device-fastbuffer-function allocUninitializedFromPool(size: number): FastBuffer-End-->

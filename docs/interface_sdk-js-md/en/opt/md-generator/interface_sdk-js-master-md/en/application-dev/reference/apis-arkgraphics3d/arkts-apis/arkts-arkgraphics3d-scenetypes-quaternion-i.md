@@ -1,8 +1,10 @@
 # Quaternion
 
-A mathematical notation for representing spatial rotations of elements in 3D space.Compared with Euler angles, a quaternion has advantages in numerical stability and avoiding the gimbal lock problem.
+A mathematical notation for representing spatial rotations of elements in 3D space. Compared with Euler angles, a quaternion has advantages in numerical stability and avoiding the gimbal lock problem.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Quaternion--><!--Device-unnamed-export interface Quaternion-End-->
 
@@ -18,7 +20,9 @@ Component on the W axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Quaternion-w: double--><!--Device-Quaternion-w: double-End-->
 
@@ -34,7 +38,9 @@ Component on the X axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Quaternion-x: double--><!--Device-Quaternion-x: double-End-->
 
@@ -50,7 +56,9 @@ Component on the Y axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Quaternion-y: double--><!--Device-Quaternion-y: double-End-->
 
@@ -66,7 +74,9 @@ Component on the Z axis. The value is a real number.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Quaternion-z: double--><!--Device-Quaternion-z: double-End-->
 

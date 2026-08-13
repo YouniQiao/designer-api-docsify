@@ -16,6 +16,8 @@ Copies the source directory to the destination path. This API uses a promise to 
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function copyDir(src: string, dest: string, mode?: number): Promise<void>--><!--Device-unnamed-declare function copyDir(src: string, dest: string, mode?: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -64,9 +66,11 @@ Copies the source directory to the destination path. This API uses a promise to 
 declare function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void
 ```
 
-Copies the source directory to the destination directory.This API uses an asynchronous callback to return the result.
+Copies the source directory to the destination directory. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyDir(src: string, dest: string, callback: AsyncCallback<void>): void-End-->
 
@@ -109,11 +113,11 @@ Copies the source directory to the destination directory.This API uses an asynch
 declare function copyDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void
 ```
 
-Copies the source directory to the destination path. This API uses an asynchronous callback to return the result.
-
-An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format.
+Copies the source directory to the destination path. This API uses an asynchronous callback to return the result. An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copyDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-unnamed-declare function copyDir(src: string, dest: string, callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
 
@@ -140,9 +144,11 @@ An exception will be thrown if the destination directory contains a directory wi
 declare function copyDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void
 ```
 
-Copies the source directory to the destination directory. You can set the copy mode.This API uses an asynchronous callback to return the result.
+Copies the source directory to the destination directory. You can set the copy mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copyDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void--><!--Device-unnamed-declare function copyDir(src: string, dest: string, mode: number, callback: AsyncCallback<void>): void-End-->
 
@@ -189,6 +195,8 @@ declare function copyDir(src: string, dest: string, mode: number, callback: Asyn
 Copies the source directory to the destination path. You can set the copy mode. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function copyDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void--><!--Device-unnamed-declare function copyDir(src: string, dest: string, mode: number, callback: AsyncCallback<void, Array<ConflictFiles>>): void-End-->
 

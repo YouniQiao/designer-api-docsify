@@ -6,7 +6,9 @@ The definition of compilation.
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface Compilation extends OperResult--><!--Device-avMusicTemplate-interface Compilation extends OperResult-End-->
+**Deprecated since:** -1
+
+<!--Device-avMusicTemplate-interface Compilation--><!--Device-avMusicTemplate-interface Compilation-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,6 +30,8 @@ Having more compilation data
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Compilation-hasMoreData: boolean--><!--Device-Compilation-hasMoreData: boolean-End-->
@@ -45,6 +49,8 @@ Unique ID of the compilation
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,6 +70,8 @@ Media type of the compilation
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Compilation-memberMediaType: EntityType--><!--Device-Compilation-memberMediaType: EntityType-End-->
@@ -81,6 +89,8 @@ Title of the compilation
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +110,8 @@ Content of the compilation
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Compilation-topElements: MediaEntity[]--><!--Device-Compilation-topElements: MediaEntity[]-End-->
@@ -117,6 +129,8 @@ Total size of the compilation
 **Type:** number
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

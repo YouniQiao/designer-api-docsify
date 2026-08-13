@@ -1,9 +1,10 @@
 # ParagraphStyle
 
-段落样式，用于控制段落的整体布局行为，包括对齐方式、断行策略和最大行数等属性。ParagraphStyle作为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)构造函数的必要参数，与  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)（控制文本级别样式）分工协作，共同决定段落的最终排版效果。
+段落样式，用于控制段落的整体布局行为，包括对齐方式、断行策略和最大行数等属性。ParagraphStyle作为[ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)构造函数的必要参数，与 [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)（控制文本级别样式）分工协作，共同决定段落的最终排版效果。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-text-interface ParagraphStyle--><!--Device-text-interface ParagraphStyle-End-->
 
@@ -19,7 +20,9 @@ align?: TextAlign
 
 **类型：** TextAlign
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -33,11 +36,13 @@ align?: TextAlign
 autoSpace?: boolean
 ```
 
-设置文本排版时是否使能自动间距。true表示使能自动间距，则会在文本排版时自动调整CJK（中文字符、日文字符、韩文字符）与西文（拉丁字母、西里尔字母、希腊字母）、CJK与数字、CJK与版权符号、版权符号与数字、版权符号与西文之间的间距。false表示不使能自动间距，默认值为false。
+设置文本排版时是否使能自动间距。true表示使能自动间距，则会在文本排版时自动调整CJK（中文字符、日文字符、韩文字符）与西文（拉丁字母、西里尔字母、希腊字母）、CJK与数字、CJK与版权符号、版权符号与数字、版权符号与西文之 间的间距。false表示不使能自动间距，默认值为false。
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -55,7 +60,9 @@ breakStrategy?: BreakStrategy
 
 **类型：** [BreakStrategy](arkts-arkgraphics2d-text-breakstrategy-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -69,29 +76,13 @@ breakStrategy?: BreakStrategy
 compressHeadPunctuation?: boolean
 ```
 
-设置文本排版时是否使能行首标点压缩。true表示使能行首标点压缩，false表示不使能行首标点压缩，默认值为false。
-
-**说明：**
-
-1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#FontFeature)中的"ss08"特性，否则无法压缩。2. 在行首标点压缩范围内的标点才在本特性作用范围内。行首压缩的标点范围:  
-| 标点 | Unicode码位 | Unicode名称 |
-|---------|---------|-------------|
-| 「 | U+300C | LEFT CORNER BRACKET |
-| 『 | U+300E | LEFT WHITE CORNER BRACKET |
-| " | U+201C | LEFT DOUBLE QUOTATION MARK |
-| ' | U+2018 | LEFT SINGLE QUOTATION MARK |
-| （ | U+FF08 | FULLWIDTH LEFT PARENTHESIS |
-| 《 | U+300A | LEFT DOUBLE ANGLE BRACKET |
-| 〈 | U+3008 | LEFT ANGLE BRACKET |
-| 【 | U+3010 | LEFT BLACK LENTICULAR BRACKET |
-| 〖 | U+3016 | LEFT WHITE LENTICULAR BRACKET |
-| 〔 | U+3014 | LEFT TORTOISE SHELL BRACKET |
-| ［ | U+FF3B | FULLWIDTH LEFT SQUARE BRACKET |
-| ｛ | U+FF5B |
+设置文本排版时是否使能行首标点压缩。true表示使能行首标点压缩，false表示不使能行首标点压缩，默认值为false。 **说明：** 1. 需要字体文件支持[FontFeature](arkts-arkgraphics2d-text-fontfeature-i.md#FontFeature)中的"ss08"特性，否则无法压缩。 2. 在行首标点压缩范围内的标点才在本特性作用范围内。 行首压缩的标点范围: | 标点 | Unicode码位 | Unicode名称 | |---------|---------|-------------| | 「 | U+300C | LEFT CORNER BRACKET | | 『 | U+300E | LEFT WHITE CORNER BRACKET | | " | U+201C | LEFT DOUBLE QUOTATION MARK | | ' | U+2018 | LEFT SINGLE QUOTATION MARK | | （ | U+FF08 | FULLWIDTH LEFT PARENTHESIS | | 《 | U+300A | LEFT DOUBLE ANGLE BRACKET | | 〈 | U+3008 | LEFT ANGLE BRACKET | | 【 | U+3010 | LEFT BLACK LENTICULAR BRACKET | | 〖 | U+3016 | LEFT WHITE LENTICULAR BRACKET | | 〔 | U+3014 | LEFT TORTOISE SHELL BRACKET | | ［ | U+FF3B | FULLWIDTH LEFT SQUARE BRACKET | | ｛ | U+FF5B | FULLWIDTH LEFT CURLY BRACKET |
 
 **类型：** boolean
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -111,6 +102,8 @@ fallbackLineSpacing?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParagraphStyle-fallbackLineSpacing?: boolean--><!--Device-ParagraphStyle-fallbackLineSpacing?: boolean-End-->
@@ -128,6 +121,8 @@ firstLineHeadIndent?: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -149,6 +144,8 @@ headIndents?: Array<number>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -169,6 +166,8 @@ includeFontPadding?: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ParagraphStyle-includeFontPadding?: boolean--><!--Device-ParagraphStyle-includeFontPadding?: boolean-End-->
@@ -181,11 +180,13 @@ includeFontPadding?: boolean
 lineSpacing?: number
 ```
 
-行间距，单位为物理像素px，默认值为0。lineSpacing不受[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中lineHeightMaximum和lineHeightMinimum限制。尾行默认保留行间距，可通过设置[ParagraphStyle](#ParagraphStyle)的textHeightBehavior为DISABLE_ALL或DISABLE_LAST_ASCENT禁用尾行行间距。
+行间距，单位为物理像素px，默认值为0。lineSpacing不受[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中lineHeightMaximum和lineHeightMinimum限制。尾行默认保留行间 距，可通过设置[ParagraphStyle](#ParagraphStyle)的textHeightBehavior为DISABLE_ALL或DISABLE_LAST_ASCENT禁用尾行行间距。
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -203,7 +204,9 @@ maxLines?: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -217,11 +220,13 @@ maxLines?: number
 orphanCharOptimization?: boolean
 ```
 
-设置文本排版时是否使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#WordBreak)为非BREAK_ALL并且待排版文本首个[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的locale为“zh-Hans”或“zh-Hant”时生效。true表示使能孤字优化，false表示不使能孤字优化，默认值为false。
+设置文本排版时是否使能孤字优化。孤字优化通过更高效地处理孤立字符（段落尾行首字符）来改善文本布局。使能后，它会调整换行点以尽可能避免孤立字符。孤字优化特性需在[wordBreak](arkts-arkgraphics2d-text-wordbreak-e.md#WordBreak)为 非BREAK_ALL并且待排版文本首个[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的locale为“zh-Hans”或“zh-Hant”时生效。true表示使能孤字优化，false表示不使能孤字优化，默认 值为false。
 
 **类型：** boolean
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,6 +248,8 @@ punctuationOverflow?: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -261,7 +268,9 @@ strutStyle?: StrutStyle
 
 **类型：** [StrutStyle](arkts-arkgraphics2d-text-strutstyle-i.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -275,11 +284,13 @@ strutStyle?: StrutStyle
 tab?: TextTab
 ```
 
-表示段落中文本制表符后的文本对齐方式及位置，默认将制表符替换为一个空格。此参数与文本对齐方式（align属性）或省略号样式（[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的ellipsis属性）共同配置时无效。
+表示段落中文本制表符后的文本对齐方式及位置，默认将制表符替换为一个空格。此参数与文本对齐方式（align属性）或省略号样式（[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)中的ellipsis属性）共同配置时 无效。
 
 **类型：** [TextTab](arkts-arkgraphics2d-text-texttab-i.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -299,6 +310,8 @@ tailIndents?: Array<number>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -317,7 +330,9 @@ textDirection?: TextDirection
 
 **类型：** TextDirection
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -335,7 +350,9 @@ textHeightBehavior?: TextHeightBehavior
 
 **类型：** [TextHeightBehavior](arkts-arkgraphics2d-text-textheightbehavior-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -353,7 +370,9 @@ textStyle?: TextStyle
 
 **类型：** TextStyle
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -371,7 +390,9 @@ trailingSpaceOptimized?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -385,12 +406,13 @@ trailingSpaceOptimized?: boolean
 verticalAlign?: TextVerticalAlign
 ```
 
-文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的heightScale）或行内不同字号（即设置  
-[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的badgeType属性文本），上下标文本将与普通文本一样参与垂直对齐。
+文本垂直对齐方式，默认为BASELINE，即文本基线对齐。开启行高缩放（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的heightScale）或行内不同字号（即设置 [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的fontSize）文本混排时生效。若行内有上下标文本（即设置[TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)的badgeType属性文本）， 上下标文本将与普通文本一样参与垂直对齐。
 
 **类型：** TextVerticalAlign
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -408,7 +430,9 @@ wordBreak?: WordBreak
 
 **类型：** WordBreak
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

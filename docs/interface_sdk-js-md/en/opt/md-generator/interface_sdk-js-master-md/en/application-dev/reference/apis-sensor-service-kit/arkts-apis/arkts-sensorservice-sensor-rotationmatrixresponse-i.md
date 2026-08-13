@@ -2,7 +2,9 @@
 
 Describes the response for setting the rotation matrix.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface RotationMatrixResponse--><!--Device-sensor-interface RotationMatrixResponse-End-->
 
@@ -24,7 +26,9 @@ Inclination matrix.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationMatrixResponse-inclination: Array<double>--><!--Device-RotationMatrixResponse-inclination: Array<double>-End-->
 
@@ -40,7 +44,9 @@ Rotation matrix.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RotationMatrixResponse-rotation: Array<double>--><!--Device-RotationMatrixResponse-rotation: Array<double>-End-->
 

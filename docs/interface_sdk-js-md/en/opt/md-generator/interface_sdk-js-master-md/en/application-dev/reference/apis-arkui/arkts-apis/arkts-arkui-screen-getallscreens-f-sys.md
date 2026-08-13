@@ -14,7 +14,9 @@ function getAllScreens(callback: AsyncCallback<Array<Screen>>): void
 
 Obtains all screens. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void--><!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>): void-End-->
 
@@ -32,8 +34,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -66,6 +68,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>, isNeedUnused?: boolean): void--><!--Device-screen-function getAllScreens(callback: AsyncCallback<Array<Screen>>, isNeedUnused?: boolean): void-End-->
@@ -85,8 +89,8 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -117,7 +121,9 @@ function getAllScreens(): Promise<Array<Screen>>
 
 Obtains all screens. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-function getAllScreens(): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(): Promise<Array<Screen>>-End-->
 
@@ -135,8 +141,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -167,6 +173,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-screen-function getAllScreens(isNeedUnused?: boolean): Promise<Array<Screen>>--><!--Device-screen-function getAllScreens(isNeedUnused?: boolean): Promise<Array<Screen>>-End-->
@@ -191,8 +199,8 @@ Obtains all screens. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400001-invalid-display-or-screen) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

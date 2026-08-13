@@ -9,7 +9,9 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -23,7 +25,7 @@ type QueryMediaEntityByKeywordEvent = (keyword: string, searchType: EntityType,
 | --- | --- | --- | --- |
 | keyword | string | 是 |  |
 | searchType | [EntityType](arkts-avsession-avmusictemplate-entitytype-e.md) | 是 | 搜索内容的类型 |
-| pageIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 页面索引 |
+| pageIndex | int | 是 | 页面索引 |
 
 **返回值：**
 

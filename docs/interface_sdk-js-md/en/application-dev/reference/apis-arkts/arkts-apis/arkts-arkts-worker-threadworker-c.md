@@ -8,7 +8,9 @@ Before using the following APIs, you must create a ThreadWorker instance. The Th
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-worker-class ThreadWorker implements WorkerEventTarget--><!--Device-worker-class ThreadWorker implements WorkerEventTarget-End-->
+**Deprecated since:** -1
+
+<!--Device-worker-class ThreadWorker--><!--Device-worker-class ThreadWorker-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -30,6 +32,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void--><!--Device-ThreadWorker-addEventListener(type: string, listener: WorkerEventListener): void-End-->
@@ -47,8 +51,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -78,6 +82,8 @@ A constructor used to create a ThreadWorker instance.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)--><!--Device-ThreadWorker-constructor(scriptURL: string, options?: WorkerOptions)-End-->
@@ -95,12 +101,12 @@ A constructor used to create a ThreadWorker instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed. |
-| [10200007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file path is invalid. |
+| [10200003](../errorcode-utils.md#10200003-failed-to-initialize-the-worker-instance) | Worker initialization failed. |
+| [10200007](../errorcode-utils.md#10200007-abnormal-worker-file-path) | The worker file path is invalid. |
 
 ## Examples
 
-The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
+The following uses the Index.ets file in the entry module of the stage model as an example to describe how to load the worker file. For details about how to use the library to load the Worker thread file, see [Precautions for File URLs](../../../arkts-utils/worker-introduction.md#precautions-for-file-urls).
 
 ```TypeScript
 // Index.ets
@@ -121,6 +127,8 @@ Dispatches the event defined for the Worker thread.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,7 +152,7 @@ Dispatches the event defined for the Worker thread.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -163,17 +171,19 @@ let result: Boolean = workerInstance.dispatchEvent({type: "alert", timeStamp: 0}
 console.info("dispatchEvent result is: ", result);
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(type: string, listener?: WorkerEventListener): void
 ```
 
-Removes an event listener for the Worker thread. This API provides the same functionality as removeEventListener9+.
+Removes an event listener for the Worker thread. This API provides the same functionality as removeEventListener9 +.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -192,8 +202,8 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -223,7 +233,7 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 workerInstance.off("alert");
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(type: string, listener: WorkerEventListener): void
@@ -234,6 +244,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -252,8 +264,8 @@ Adds an event listener for the Worker thread. This API provides the same functio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -272,36 +284,7 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
 ```
 
-## onAllErrors
-
-```TypeScript
-onAllErrors?: ErrorCallback
-```
-
-Called when an exception occurs within the lifecycle of the Worker thread.The event handler is executed in the host thread.
-
-onerror can capture only exceptions generated by synchronous methods within the onmessage callback.It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions.Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used.
-
-onAllErrors can capture global exceptions generated during the onmessage callback, timer callback,and file execution of the Worker thread. After an exception is captured by onAllErrors,the Worker thread remains alive and can continue to be used.You are advised to use onAllErrors instead of onerror.
-
-**Since:** 18
-
-**ArkTS mode:** ArkTS-Dyn only, since version 18.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ThreadWorker-onAllErrors?: ErrorCallback--><!--Device-ThreadWorker-onAllErrors?: ErrorCallback-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
-## once
+## once_string
 
 ```TypeScript
 once(type: string, listener: WorkerEventListener): void
@@ -312,6 +295,8 @@ Adds an event listener for the Worker thread and removes the event listener afte
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -330,8 +315,8 @@ Adds an event listener for the Worker thread and removes the event listener afte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200005](../errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -351,130 +336,6 @@ workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not
 // workerInstance.dispatchEvent({type: "alert", timeStamp: 0}); // timeStamp is not supported yet.
 ```
 
-## onerror
-
-```TypeScript
-onerror?: (err: ErrorEvent) => void
-```
-
-Called when an exception occurs during worker execution. The event handler is executed in the host thread.In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void--><!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| err | [ErrorEvent](arkts-arkts-worker-errorevent-i.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
-## onexit
-
-```TypeScript
-onexit?: (code: number) => void
-```
-
-Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function,the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onexit?: (code: number) => void--><!--Device-ThreadWorker-onexit?: (code: number) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| code | number | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
-## onmessage
-
-```TypeScript
-onmessage?: (event: MessageEvents) => void
-```
-
-Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage.The event handler is executed in the host thread. In the callback function, the event type is MessageEvents,indicating the received message data.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
-## onmessageerror
-
-```TypeScript
-onmessageerror?: (event: MessageEvents) => void
-```
-
-Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the host thread.In the callback function, the event type is MessageEvents, indicating the received message data.
-
-**Since:** 9
-
-**ArkTS mode:** ArkTS-Dyn only, since version 9.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| event | [MessageEvents](arkts-arkts-worker-messageevents-i.md) | Yes |  |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [10200005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200005-api-not-supported-in-the-worker-thread) | The called API is not supported in the worker thread. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
-
 ## postMessage
 
 ```TypeScript
@@ -486,6 +347,8 @@ Sends a message from the host thread to the Worker thread by transferring object
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -504,8 +367,8 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -594,6 +457,8 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void--><!--Device-ThreadWorker-postMessage(message: Object, options?: PostMessageOptions): void-End-->
@@ -611,8 +476,8 @@ Sends a message from the host thread to the Worker thread by transferring object
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -638,11 +503,13 @@ workerInstance.postMessage(buffer);
 postMessageWithSharedSendable(message: Object, transfer?: ArrayBuffer[]): void
 ```
 
-Sends a message from the host thread to the Worker thread. In the message, a sendable object is passed by reference,and a non-sendable object is passed by serialization.
+Sends a message from the host thread to the Worker thread. In the message, a sendable object is passed by reference, and a non-sendable object is passed by serialization.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -661,8 +528,8 @@ Sends a message from the host thread to the Worker thread. In the message, a sen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) | An exception occurred during serialization. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -713,11 +580,13 @@ workerPort.onmessage = (e: MessageEvents) => {
 registerGlobalCallObject(instanceName: string, globalCallObject: Object): void
 ```
 
-Registers an object with the ThreadWorker instance of the host thread.In this way, the methods of the object can be called in the Worker thread through callGlobalCallObjectMethod.
+Registers an object with the ThreadWorker instance of the host thread. In this way, the methods of the object can be called in the Worker thread through callGlobalCallObjectMethod.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -736,7 +605,7 @@ Registers an object with the ThreadWorker instance of the host thread.In this wa
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -797,6 +666,8 @@ Removes all event listeners for the Worker thread.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-removeAllListener(): void--><!--Device-ThreadWorker-removeAllListener(): void-End-->
@@ -807,7 +678,7 @@ Removes all event listeners for the Worker thread.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -834,6 +705,8 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void--><!--Device-ThreadWorker-removeEventListener(type: string, callback?: WorkerEventListener): void-End-->
@@ -851,7 +724,7 @@ Removes an event listener for the Worker thread. This API provides the same func
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -882,6 +755,8 @@ Terminates the Worker thread to stop it from receiving messages.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ThreadWorker-terminate(): void--><!--Device-ThreadWorker-terminate(): void-End-->
@@ -892,7 +767,7 @@ Terminates the Worker thread to stop it from receiving messages.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -916,6 +791,8 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void--><!--Device-ThreadWorker-unregisterGlobalCallObject(instanceName?: string): void-End-->
@@ -932,7 +809,7 @@ Unregisters an object with the ThreadWorker instance of the host thread. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
+| [10200004](../errorcode-utils.md#10200004-worker-instance-is-not-running) | The Worker instance is not running. |
 
 ## Examples
 
@@ -958,4 +835,114 @@ workerInstance.unregisterGlobalCallObject("myObj");
 //workerInstance.unregisterGlobalCallObject();
 workerInstance.postMessage("start worker");
 ```
+
+## onAllErrors
+
+```TypeScript
+onAllErrors?: ErrorCallback
+```
+
+Called when an exception occurs within the lifecycle of the Worker thread. The event handler is executed in the host thread. onerror can capture only exceptions generated by synchronous methods within the onmessage callback. It cannot capture exceptions from multithreaded callbacks or modularization-related exceptions. Once an exception is captured, the Worker thread will proceed to the destruction process and cannot be used. onAllErrors can capture global exceptions generated during the onmessage callback, timer callback, and file execution of the Worker thread. After an exception is captured by onAllErrors, the Worker thread remains alive and can continue to be used. You are advised to use onAllErrors instead of onerror.
+
+**Type:** [ErrorCallback](arkts-arkts-errorcallback-t.md)
+
+**Since:** 18
+
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ThreadWorker-onAllErrors?: ErrorCallback--><!--Device-ThreadWorker-onAllErrors?: ErrorCallback-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onerror
+
+```TypeScript
+onerror?: (err: ErrorEvent) => void
+```
+
+Called when an exception occurs during worker execution. The event handler is executed in the host thread. In the callback function, the err type is ErrorEvent, indicating the received abnormal data.
+
+**Type:** (err: ErrorEvent) =&gt; void
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void--><!--Device-ThreadWorker-onerror?: (err: ErrorEvent) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onexit
+
+```TypeScript
+onexit?: (code: number) => void
+```
+
+Called when the Worker thread exits. The event handler is executed in the host thread. In the callback function, the code value is of the number type, where the value 1 indicates abnormal exit and 0 indicates normal exit.The default value is undefined.
+
+**Type:** (code: number) =&gt; void
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onexit?: (code: number) => void--><!--Device-ThreadWorker-onexit?: (code: number) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onmessage
+
+```TypeScript
+onmessage?: (event: MessageEvents) => void
+```
+
+Called when the host thread receives a message sent by the Worker thread through workerPort.postMessage. The event handler is executed in the host thread. In the callback function, the event type is MessageEvents, indicating the received message data.
+
+**Type:** (event: MessageEvents) =&gt; void
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessage?: (event: MessageEvents) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## onmessageerror
+
+```TypeScript
+onmessageerror?: (event: MessageEvents) => void
+```
+
+Called when the Worker thread receives a message that cannot be serialized. The event handler is executed in the host thread. In the callback function, the event type is MessageEvents, indicating the received message data.
+
+**Type:** (event: MessageEvents) =&gt; void
+
+**Since:** 9
+
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void--><!--Device-ThreadWorker-onmessageerror?: (event: MessageEvents) => void-End-->
+
+**System capability:** SystemCapability.Utils.Lang
 

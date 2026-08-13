@@ -6,25 +6,9 @@ Provides **ActionSheet** configuration options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ActionSheetOptions--><!--Device-unnamed-interface ActionSheetOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## cancel
-
-```TypeScript
-cancel?: VoidCallback
-```
-
-Callback invoked when the dialog box is closed after the overlay is clicked.
-
-**Since:** 8
-
-**ArkTS mode:** ArkTS-Dyn only, since version 8.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ActionSheetOptions-cancel?: VoidCallback--><!--Device-ActionSheetOptions-cancel?: VoidCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,19 +18,15 @@ Callback invoked when the dialog box is closed after the overlay is clicked.
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.
-
-Default value: **DialogAlignment.Bottom**
-
-**NOTE：**
-
-If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
+Alignment mode of the dialog box in the vertical direction. Default value: **DialogAlignment.Bottom** **NOTE：**If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
 **Type:** DialogAlignment
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -60,17 +40,15 @@ If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is 
 autoCancel?: boolean
 ```
 
-Whether to close the dialog box when the overlay is clicked.
-
-Default value: **true**
-
-The value **true** means to close the dialog box when the overlay is clicked, and **false** means the opposite.
+Whether to close the dialog box when the overlay is clicked. Default value: **true** The value **true** means to close the dialog box when the overlay is clicked, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -84,13 +62,7 @@ The value **true** means to close the dialog box when the overlay is clicked, an
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
-
-Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
-
-**NOTE：**
-
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_ULTRA_THICK** **NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
@@ -99,6 +71,8 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,14 +88,15 @@ Setting this parameter to **BlurStyle.NONE** disables the background blur. When 
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for customizing the background blur style. For details about the default value, see   
-**BackgroundBlurStyleOptions**.
+Options for customizing the background blur style. For details about the default value, see **BackgroundBlurStyleOptions**.
 
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -137,14 +112,7 @@ Options for customizing the background blur style. For details about the default
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box.
-
-Default value: **Color.Transparent**
-
-**NOTE：**
-
-The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the   
-**backgroundBlurStyle** property to **BlurStyle.NONE**.
+Background color of the dialog box. Default value: **Color.Transparent** **NOTE：**The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
 
 **Type:** ResourceColor
 
@@ -153,6 +121,8 @@ The background color will be visually combined with the blur effect when both pr
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -168,14 +138,15 @@ The background color will be visually combined with the blur effect when both pr
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Options for customizing the background effect. For details about the default value, see   
-**BackgroundEffectOptions**.
+Options for customizing the background effect. For details about the default value, see **BackgroundEffectOptions**.
 
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -191,23 +162,17 @@ Options for customizing the background effect. For details about the default val
 borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 ```
 
-Border color of the dialog box.
+Border color of the dialog box. Default value: **Color.Black** **borderColor** must be used with **borderWidth** in pairs. **NOTE：**When **borderColor** is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user 's language settings.
 
-Default value: **Color.Black**
-
-**borderColor** must be used with **borderWidth** in pairs.
-
-**NOTE：**
-
-When **borderColor** is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings.
-
-**Type:** ResourceColor \| [EdgeColors](arkts-arkui-units-edgecolors-i.md) \| LocalizedEdgeColors
+**Type:** ResourceColor \| EdgeColors \| LocalizedEdgeColors
 
 **Default:** Color.Black - borderColor must be used with borderWidth in pairs.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -223,19 +188,17 @@ When **borderColor** is of type LocalizedEdgeColors, the layout order can be dyn
 borderStyle?: BorderStyle | EdgeStyles
 ```
 
-Border style of the dialog box.
+Border style of the dialog box. Default value: **BorderStyle.Solid** **borderStyle** must be used with **borderWidth** in pairs.
 
-Default value: **BorderStyle.Solid**
-
-**borderStyle** must be used with **borderWidth** in pairs.
-
-**Type:** BorderStyle \| [EdgeStyles](arkts-arkui-units-edgestyles-i.md)
+**Type:** BorderStyle \| EdgeStyles
 
 **Default:** BorderStyle.Solid - borderStyle must be used with borderWidth in pairs.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -251,27 +214,17 @@ Default value: **BorderStyle.Solid**
 borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 ```
 
-Border width of the dialog box.
+Border width of the dialog box. You can set the width for all four sides or set separate widths for individual sides. Default value: **0** When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected. **NOTE：**When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dynamically adjusted based on the user 's language settings.
 
-You can set the width for all four sides or set separate widths for individual sides.
-
-Default value: **0**
-
-When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width.
-
-If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
-
-**NOTE：**
-
-When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dynamically adjusted based on the user's language settings.
-
-**Type:** Dimension \| [EdgeWidths](arkts-arkui-units-edgewidths-i.md) \| LocalizedEdgeWidths
+**Type:** Dimension \| EdgeWidths \| LocalizedEdgeWidths
 
 **Default:** 0 - When set to a percentage, the value defines the border width as a percentage of the parent dialog box's width. If the left and right borders are greater than its width, or the top and bottom borders are greater than its height, the dialog box may not display as expected.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -281,20 +234,43 @@ When **borderWidth** is of type LocalizedEdgeWidths, the layout order can be dyn
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## cancel
+
+```TypeScript
+cancel?: VoidCallback
+```
+
+Callback invoked when the dialog box is closed after the overlay is clicked.
+
+**Type:** VoidCallback
+
+**Since:** 8
+
+**ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ActionSheetOptions-cancel?: VoidCallback--><!--Device-ActionSheetOptions-cancel?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## confirm
 
 ```TypeScript
 confirm?: ActionSheetButtonOptions
 ```
 
-Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the   
-**Enter** key does not work when **defaultFocus** is set to **true**.
+Information about the confirm button. When the dialog box has focus and the **Tab** key is not pressed for sequential focus navigation, the button responds to the **Enter** key by default. Multiple dialog boxes can automatically gain focus and respond to user interactions in a sequential manner. The default response to the **Enter** key does not work when **defaultFocus** is set to **true**.
 
 **Type:** [ActionSheetButtonOptions](arkts-arkui-actionsheetbuttonoptions-i.md)
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -308,19 +284,7 @@ Information about the confirm button. When the dialog box has focus and the **Ta
 cornerRadius?: Dimension | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Corner radius of the background.
-
-You can set the radius for each of the four corners individually.
-
-Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }**
-
-The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used.
-
-When set to a percentage, the value defines the radius as a percentage of the parent dialog box's width or height.
-
-**NOTE：**
-
-When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can be dynamically adjusted based on the user's language settings.
+Corner radius of the background. You can set the radius for each of the four corners individually. Default value: **{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' }** The corner radius is subject to the component size, with the maximum value being half of the component width or height. If the value is negative, the default value is used. When set to a percentage, the value defines the radius as a percentage of the parent dialog box's width or height. **NOTE：**When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can be dynamically adjusted based on the user's language settings.
 
 **Type:** Dimension \| BorderRadiuses \| LocalizedBorderRadiuses
 
@@ -329,6 +293,8 @@ When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can b
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,15 +310,7 @@ When **cornerRadius** is of type LocalizedBorderRadiuses, the layout order can b
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode.
-
-Default value: **false**, meaning not to enable the hover mode.
-
-**NOTE：**
-
-For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the screen by default when   
-**enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the lower half of the screen. For other devices, the dialog box is displayed on the lower half of the screen by default when   
-**enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the upper half of the screen.
+Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. Default value: **false**, meaning not to enable the hover mode. **NOTE：**For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the lower half of the screen. For other devices, the dialog box is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the dialog box on the upper half of the screen.
 
 **Type:** boolean
 
@@ -361,6 +319,8 @@ For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,13 +336,7 @@ For a PC or 2-in-1 device, the dialog box is displayed on the upper half of the 
 height?: Dimension
 ```
 
-Height of the dialog box.
-
-**NOTE：**
-
-- Default maximum height of the dialog box: 0.9 x (Window height – Safe area)  
-- When this parameter is set to a percentage, the reference height of the dialog box is the height of the window   
-where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
+Height of the dialog box. **NOTE：**- Default maximum height of the dialog box: 0.9 x (Window height – Safe area) - When this parameter is set to a percentage, the reference height of the dialog box is the height of the window where the dialog box is located minus the safe area. You can decrease or increase the height as needed.
 
 **Type:** Dimension
 
@@ -391,6 +345,8 @@ where the dialog box is located minus the safe area. You can decrease or increas
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -406,9 +362,7 @@ where the dialog box is located minus the safe area. You can decrease or increas
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box in hover mode.
-
-Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Display area of the dialog box in hover mode. Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** HoverModeAreaType
 
@@ -417,6 +371,8 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,12 +388,7 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box.
-
-**NOTE：**
-
-- Default value: **ImmersiveMode.DEFAULT**  
-- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Overlay effect for the page-level dialog box. **NOTE：**- Default value: **ImmersiveMode.DEFAULT** - This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-immersivemode-t.md)
 
@@ -446,6 +397,8 @@ Overlay effect for the page-level dialog box.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -461,10 +414,7 @@ Overlay effect for the page-level dialog box.
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal. A modal dialog box has a mask applied, while a non-modal dialog box does not.   
-**false**: The dialog box is not a modal.
-
-Default value: **true**
+Whether the dialog box is a modal. A modal dialog box has a mask applied, while a non-modal dialog box does not. **false**: The dialog box is not a modal. Default value: **true**
 
 **Type:** boolean
 
@@ -473,6 +423,8 @@ Default value: **true**
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -488,12 +440,7 @@ Default value: **true**
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box.
-
-**NOTE：**
-
-- Default value: **LevelMode.OVERLAY**  
-- This parameter takes effect only when **showInSubWindow** is set to **false**.
+Display level of the dialog box. **NOTE：**- Default value: **LevelMode.OVERLAY** - This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-levelmode-t.md)
 
@@ -502,6 +449,8 @@ Display level of the dialog box.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -517,12 +466,7 @@ Display level of the dialog box.
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog box.
-
-**NOTE：**
-
-- Default value: **LevelOrder.clamp(0)**  
-- Dynamic updating is not supported.
+Display order of the dialog box. **NOTE：**- Default value: **LevelOrder.clamp(0)** - Dynamic updating is not supported.
 
 **Type:** LevelOrder
 
@@ -531,6 +475,8 @@ Display order of the dialog box.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -546,19 +492,15 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getUniqueId) of the node under the display level for the page-level dialog box.
-
-Value range: a number no less than 0
-
-**NOTE：**
-
-- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+[Unique ID](arkts-arkui-framenode-c.md#getUniqueId) of the node under the display level for the page-level dialog box. Value range: a number no less than 0 **NOTE：**- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -574,13 +516,7 @@ Value range: a number no less than 0
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
-
-Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
-
-**NOTE：**
-
-**maskRect** does not take effect when **showInSubWindow** is set to **true**.
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not. Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }** **NOTE：****maskRect** does not take effect when **showInSubWindow** is set to **true**.
 
 **Type:** Rectangle
 
@@ -589,6 +525,8 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -604,15 +542,15 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 message: string | Resource
 ```
 
-Content of the dialog box.
-
-If the text is too long to display, a scrollbar is displayed.
+Content of the dialog box. If the text is too long to display, a scrollbar is displayed.
 
 **Type:** string \| Resource
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -626,17 +564,15 @@ If the text is too long to display, a scrollbar is displayed.
 offset?: ActionSheetOffset
 ```
 
-Offset of the dialog box relative to the alignment position.
-
-Default value:
-
-1. If **alignment** is set to **Top**, **TopStart**, or **TopEnd**, the default offset value is **{dx: 0,dy: "40vp"}**.2. If **alignment** is set to other values, the default offset value is **{dx: 0,dy: "-40vp"}**.
+Offset of the dialog box relative to the alignment position. Default value: 1. If **alignment** is set to **Top**, **TopStart**, or **TopEnd**, the default offset value is **{dx: 0,dy: "40vp"}**. 2. If **alignment** is set to other values, the default offset value is **{dx: 0,dy: "-40vp"}**.
 
 **Type:** [ActionSheetOffset](arkts-arkui-actionsheetoffset-i.md)
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -650,17 +586,15 @@ Default value:
 onDidAppear?: Callback<void>
 ```
 
-Event callback after the dialog box appears.
-
-**NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
+Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. 4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
 
 **Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -676,17 +610,15 @@ Event callback after the dialog box appears.
 onDidDisappear?: Callback<void>
 ```
 
-Event callback after the dialog box disappears.
-
-**NOTE：**
-
-The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Event callback after the dialog box disappears. **NOTE：**The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
 **Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -702,17 +634,15 @@ The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDis
 onWillAppear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to appear.
-
-**NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -728,17 +658,15 @@ Event callback when the dialog box is about to appear.
 onWillDisappear?: Callback<void>
 ```
 
-Event callback when the dialog box is about to disappear.
-
-**NOTE：**
-
-The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Event callback when the dialog box is about to disappear. **NOTE：**The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
 **Type:** Callback&lt;void&gt;
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -754,17 +682,15 @@ The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDis
 onWillDismiss?: Callback<DismissDialogAction>
 ```
 
-Callback for interactive closure of the dialog box.
-
-**NOTE：**
-
-1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
+Callback for interactive closure of the dialog box. **NOTE：**1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**. 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
 **Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -780,10 +706,7 @@ Callback for interactive closure of the dialog box.
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
-
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and   
-**ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
+Shadow of the dialog box. Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
 **Type:** ShadowOptions \| ShadowStyle
 
@@ -792,6 +715,8 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dial
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -815,6 +740,8 @@ Options in the dialog box. Each option supports the image, text, and callback.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ActionSheetOptions-sheets: Array<SheetInfo>--><!--Device-ActionSheetOptions-sheets: Array<SheetInfo>-End-->
@@ -827,15 +754,7 @@ Options in the dialog box. Each option supports the image, text, and callback.
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window.   
-**true**: The dialog box is shown in a subwindow.
-
-Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow.
-
-**NOTE：**
-
-A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose  
-**showInSubWindow** attribute is also **true**.
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. **true**: The dialog box is shown in a subwindow. Default value: **false**, meaning the dialog box is displayed within the application, not in a separate subwindow. **NOTE：**A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose **showInSubWindow** attribute is also **true**.
 
 **Type:** boolean
 
@@ -844,6 +763,8 @@ A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -859,15 +780,15 @@ A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the 
 subtitle?: ResourceStr
 ```
 
-Subtitle of the dialog box.
-
-If the text is too long to display, it is truncated with an ellipsis (...).
+Subtitle of the dialog box. If the text is too long to display, it is truncated with an ellipsis (...).
 
 **Type:** ResourceStr
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -883,15 +804,15 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
-
-Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog. Device Behavior Differences:The effect of same material may vary across different devices depending on their computing power.
 
 **Type:** SystemUiMaterial
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -907,15 +828,15 @@ Device Behavior Differences:The effect of same material may vary across differen
 title: string | Resource
 ```
 
-Title of the dialog box.
-
-If the text is too long to display, it is truncated with an ellipsis (...).
+Title of the dialog box. If the text is too long to display, it is truncated with an ellipsis (...).
 
 **Type:** string \| Resource
 
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -929,17 +850,15 @@ If the text is too long to display, it is truncated with an ellipsis (...).
 transition?: TransitionEffect
 ```
 
-Transition effect for the entrance and exit of the dialog box.
-
-**NOTE：**
-
-1. If this parameter is not set, the default effect is used.2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined.3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
+Transition effect for the entrance and exit of the dialog box. **NOTE：**1. If this parameter is not set, the default effect is used. 2. Touching the Back button during the entrance animation pauses the entrance animation and starts the exit animation. The final effect is one obtained after the curves of the entrance and exit animations are combined. 3. Touching the Back button during the exit animation does not affect the animation playback. Touching the Back button again closes the application.
 
 **Type:** TransitionEffect
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -955,13 +874,7 @@ Transition effect for the entrance and exit of the dialog box.
 width?: Dimension
 ```
 
-Width of the dialog box.
-
-**NOTE：**
-
-- Default maximum width of the dialog box: 400 vp  
-- When this parameter is set to a percentage, the reference width of the dialog box is the width of the window   
-where the dialog box is located. You can decrease or increase the width as needed.
+Width of the dialog box. **NOTE：**- Default maximum width of the dialog box: 400 vp - When this parameter is set to a percentage, the reference width of the dialog box is the width of the window where the dialog box is located. You can decrease or increase the width as needed.
 
 **Type:** Dimension
 
@@ -970,6 +883,8 @@ where the dialog box is located. You can decrease or increase the width as neede
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

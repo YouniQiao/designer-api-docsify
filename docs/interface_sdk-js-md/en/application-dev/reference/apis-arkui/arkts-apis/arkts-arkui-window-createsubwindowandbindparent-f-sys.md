@@ -13,11 +13,13 @@ function createSubWindowAndBindParent(name: string, parentId: int, ctx: BaseCont
     parentWindowEventListener: WindowEventListener): Promise<Window>
 ```
 
-Create a subwindow with a specific name and bind parent.The parent window only supports main window.The subwindow follows the parent window to show/hide, but does not follow the parent window to destroy.The subwindow listens to the parent window lifecycle changes through the callback function.
+Create a subwindow with a specific name and bind parent. The parent window only supports main window. The subwindow follows the parent window to show/hide, but does not follow the parent window to destroy. The subwindow listens to the parent window lifecycle changes through the callback function.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +34,7 @@ Create a subwindow with a specific name and bind parent.The parent window only s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates window name. |
-| parentId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates parent window id. The window id is a non-negative number and exists. |
+| parentId | int | Yes | Indicates parent window id. The window id is a non-negative number and exists. |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | Yes | Indicates the context on which the window depends. |
 | parentWindowEventListener | [WindowEventListener](arkts-arkui-windoweventlistener-t.md) | Yes | Indicates the event listener of parent window. |
 
@@ -46,12 +48,12 @@ Create a subwindow with a specific name and bind parent.The parent window only s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. This cannot work correctly due to limited device capabilities. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Internal task error. 2. The number of windows has reached the limit. |
-| [1300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300001-repeated-operation) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [1300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
+| [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. This cannot work correctly due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Internal task error. 2. The number of windows has reached the limit. |
+| [1300001](../errorcode-window.md#1300001-repeated-operation) | Repeated operation. Possible cause: The window has been created and cannot be created again. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [1300009](../errorcode-window.md#1300009-invalid-parent-window) | The parent window is invalid. Possible cause: 1. The parent window does not exist or has been destroyed. 2. Invalid window type. Only main windows are supported. |
 
 ## Examples
 

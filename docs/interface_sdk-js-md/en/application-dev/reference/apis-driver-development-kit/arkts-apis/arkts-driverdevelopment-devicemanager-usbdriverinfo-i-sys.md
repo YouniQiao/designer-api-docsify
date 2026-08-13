@@ -1,15 +1,16 @@
 # USBDriverInfo (System API)
 
-Defines detailed information about the USB device driver. It is inherited from  
-[DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#DriverInfo).
+Defines detailed information about the USB device driver. It is inherited from [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#DriverInfo-(System-API)).
 
-**Inheritance/Implementation:** USBDriverInfo extends [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#DriverInfo)
+**Inheritance/Implementation:** USBDriverInfo extends [DriverInfo](arkts-driverdevelopment-devicemanager-driverinfo-i-sys.md#DriverInfo-(System-API))
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-deviceManager-interface USBDriverInfo extends DriverInfo--><!--Device-deviceManager-interface USBDriverInfo extends DriverInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-deviceManager-interface USBDriverInfo--><!--Device-deviceManager-interface USBDriverInfo-End-->
 
 **System capability:** SystemCapability.Driver.ExternalDevice
 
@@ -29,11 +30,13 @@ productIdList: Array<int>
 
 Product ID list of the USB devices supported by the driver.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBDriverInfo-productIdList: Array<int>--><!--Device-USBDriverInfo-productIdList: Array<int>-End-->
 
@@ -49,11 +52,13 @@ vendorIdList: Array<int>
 
 Vendor ID list of the USB devices supported by the driver.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBDriverInfo-vendorIdList: Array<int>--><!--Device-USBDriverInfo-vendorIdList: Array<int>-End-->
 

@@ -2,7 +2,9 @@
 
 Defines the paragraph information.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export interface Paragraph--><!--Device-onScreen-export interface Paragraph-End-->
 
@@ -26,7 +28,9 @@ Chapter ID of the paragraph, which is the identifier of each subchapter.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Paragraph-chapterId?: int--><!--Device-Paragraph-chapterId?: int-End-->
 
@@ -44,7 +48,9 @@ Hook ID of the paragraph, which is the identifier of each main paragraph.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Paragraph-hookId?: long--><!--Device-Paragraph-hookId?: long-End-->
 
@@ -62,7 +68,9 @@ Content of the paragraph.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Paragraph-text?: string--><!--Device-Paragraph-text?: string-End-->
 
@@ -80,7 +88,9 @@ Title of the paragraph.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Paragraph-title?: string--><!--Device-Paragraph-title?: string-End-->
 

@@ -4,6 +4,8 @@ Defines the TransferProgress data structure.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cloudSyncManager-interface TransferProgress--><!--Device-cloudSyncManager-interface TransferProgress-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -22,11 +24,13 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 failedCount: number
 ```
 
-failed count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
+failed count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Describes the state type of transfer task.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferProgress-state: TransferState--><!--Device-TransferProgress-state: TransferState-End-->
@@ -68,6 +74,8 @@ Describes the state type of transfer stop reason.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TransferProgress-stopReason: TransferStopReason--><!--Device-TransferProgress-stopReason: TransferStopReason-End-->
@@ -82,11 +90,13 @@ Describes the state type of transfer stop reason.
 successfulCount: number
 ```
 
-successful count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
+successful count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,11 +112,13 @@ successful count in TransferProgress.The value should be an integer.&lt;br&gt;Un
 totalCount: number
 ```
 
-total count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pcs.
+total count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,11 +134,13 @@ total count in TransferProgress.The value should be an integer.&lt;br&gt;Unit:Pc
 totalSize: number
 ```
 
-Total size in TransferProgress.&lt;br&gt;Unit:Byte.
+Total size in TransferProgress. &lt;br&gt;Unit:Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,11 +156,13 @@ Total size in TransferProgress.&lt;br&gt;Unit:Byte.
 transferredSize: number
 ```
 
-transferred size in TransferProgress.&lt;br&gt;Unit:Byte.
+transferred size in TransferProgress. &lt;br&gt;Unit:Byte.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

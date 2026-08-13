@@ -4,6 +4,8 @@ This module provides the capability to media enhancement
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace avMusicTemplate--><!--Device-unnamed-declare namespace avMusicTemplate-End-->
@@ -22,19 +24,19 @@ import { avMusicTemplate } from '@kit.AVSessionKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate) |
+| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAVMusicTemplateController](arkts-avsession-avmusictemplate-createavmusictemplatecontroller-f-sys.md#createavmusictemplatecontroller) |
-| [getAllAVMusicTemplateDescriptors](arkts-avsession-avmusictemplate-getallavmusictemplatedescriptors-f-sys.md#getallavmusictemplatedescriptors) |
-| [offAVMusicTemplateCreate](arkts-avsession-avmusictemplate-offavmusictemplatecreate-f-sys.md#offavmusictemplatecreate) |
-| [offAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-offavmusictemplatedestroy-f-sys.md#offavmusictemplatedestroy) |
-| [onAVMusicTemplateCreate](arkts-avsession-avmusictemplate-onavmusictemplatecreate-f-sys.md#onavmusictemplatecreate) |
-| [onAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-onavmusictemplatedestroy-f-sys.md#onavmusictemplatedestroy) |
+| [createAVMusicTemplateController](arkts-avsession-avmusictemplate-createavmusictemplatecontroller-f-sys.md#createAVMusicTemplateController-(System-API)) |
+| [getAllAVMusicTemplateDescriptors](arkts-avsession-avmusictemplate-getallavmusictemplatedescriptors-f-sys.md#getAllAVMusicTemplateDescriptors-(System-API)) |
+| [offAVMusicTemplateCreate](arkts-avsession-avmusictemplate-offavmusictemplatecreate-f-sys.md#offAVMusicTemplateCreate-(System-API)) |
+| [offAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-offavmusictemplatedestroy-f-sys.md#offAVMusicTemplateDestroy-(System-API)) |
+| [onAVMusicTemplateCreate](arkts-avsession-avmusictemplate-onavmusictemplatecreate-f-sys.md#onAVMusicTemplateCreate-(System-API)) |
+| [onAVMusicTemplateDestroy](arkts-avsession-avmusictemplate-onavmusictemplatedestroy-f-sys.md#onAVMusicTemplateDestroy-(System-API)) |
 <!--DelEnd-->
 
 ### Classes

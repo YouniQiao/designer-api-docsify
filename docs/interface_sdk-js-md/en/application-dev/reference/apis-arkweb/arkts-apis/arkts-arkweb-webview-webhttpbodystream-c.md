@@ -2,9 +2,11 @@
 
 The http body stream of the request.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebHttpBodyStream--><!--Device-webview-class WebHttpBodyStream-End-->
 
@@ -19,16 +21,20 @@ import { webview } from '@kit.ArkWeb';
 ## getPosition
 
 ```TypeScript
-getPosition(): long
+getPosition(): number
 ```
 
 Get the current position of the data stream. Unit: bytes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-WebHttpBodyStream-getPosition(): long--><!--Device-WebHttpBodyStream-getPosition(): long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebHttpBodyStream-getPosition(): number--><!--Device-WebHttpBodyStream-getPosition(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -36,21 +42,25 @@ Get the current position of the data stream. Unit: bytes.
 
 | Type | Description |
 | --- | --- |
-| long | Return position in post data stream. |
+| number | Return position in post data stream. |
 
 ## getSize
 
 ```TypeScript
-getSize(): long
+getSize(): number
 ```
 
 Get the total size of the data stream. When data is chunked, always return zero. Unit: bytes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-WebHttpBodyStream-getSize(): long--><!--Device-WebHttpBodyStream-getSize(): long-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebHttpBodyStream-getSize(): number--><!--Device-WebHttpBodyStream-getSize(): number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -58,7 +68,7 @@ Get the total size of the data stream. When data is chunked, always return zero.
 
 | Type | Description |
 | --- | --- |
-| long | Return size of data stream size. |
+| number | Return size of data stream size. |
 
 ## initialize
 
@@ -68,9 +78,13 @@ initialize(): Promise<void>
 
 Initialize data stream.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-initialize(): Promise<void>--><!--Device-WebHttpBodyStream-initialize(): Promise<void>-End-->
 
@@ -86,7 +100,7 @@ Initialize data stream.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) | Failed to initialize the HTTP body stream. |
+| [17100022](../errorcode-webview.md#17100022-failed-to-initialize-webhttpbodystream) | Failed to initialize the HTTP body stream. |
 
 ## isChunked
 
@@ -96,9 +110,13 @@ isChunked(): boolean
 
 Whether data stream is chunked.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-isChunked(): boolean--><!--Device-WebHttpBodyStream-isChunked(): boolean-End-->
 
@@ -116,11 +134,15 @@ Whether data stream is chunked.
 isEof(): boolean
 ```
 
-Whether all data stream has been consumed. For chunked uploads,returns false until the first read attempt.
+Whether all data stream has been consumed. For chunked uploads, returns false until the first read attempt.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-isEof(): boolean--><!--Device-WebHttpBodyStream-isEof(): boolean-End-->
 
@@ -140,9 +162,13 @@ isInMemory(): boolean
 
 Returns true if the upload data in the stream is entirely in memory, and all read requests will succeed synchronously. Expected to return false for chunked requests.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHttpBodyStream-isInMemory(): boolean--><!--Device-WebHttpBodyStream-isInMemory(): boolean-End-->
 
@@ -157,16 +183,20 @@ Returns true if the upload data in the stream is entirely in memory, and all rea
 ## read
 
 ```TypeScript
-read(size: int): Promise<ArrayBuffer>
+read(size: number): Promise<ArrayBuffer>
 ```
 
 Read the data stream to the buffer. Unit: bytes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-WebHttpBodyStream-read(size: int): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: int): Promise<ArrayBuffer>-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>--><!--Device-WebHttpBodyStream-read(size: number): Promise<ArrayBuffer>-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -174,7 +204,7 @@ Read the data stream to the buffer. Unit: bytes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | int | Yes | Read size. The value should be an integer. |
+| size | number | Yes | Read size. |
 
 **Return value:**
 
@@ -186,5 +216,5 @@ Read the data stream to the buffer. Unit: bytes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

@@ -2,7 +2,9 @@
 
 Represents data of the pixel map type defined by the system.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-uniformDataStruct-interface PixelMap--><!--Device-uniformDataStruct-interface PixelMap-End-->
 
@@ -22,9 +24,11 @@ details?: Record<string, number | number | number | string | Uint8Array>
 
 Object of the dictionary type used to describe the icon. The key is of the string type, and the value can be a number, a string, or a Uint8Array. By default, it is an empty dictionary object.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, number \| number \| number \| string \| Uint8Array&gt;
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Binary data of the pixel map.
 
 **Type:** image.PixelMap
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,12 +62,13 @@ Binary data of the pixel map.
 readonly uniformDataType: 'openharmony.pixel-map'
 ```
 
-Uniform data type, which has a fixed value of **openharmony.pixel-map**. For details, see   
-[UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
+Uniform data type, which has a fixed value of **openharmony.pixel-map**. For details, see [UniformDataType](arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md#UniformDataType).
 
 **Type:** 'openharmony.pixel-map'
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

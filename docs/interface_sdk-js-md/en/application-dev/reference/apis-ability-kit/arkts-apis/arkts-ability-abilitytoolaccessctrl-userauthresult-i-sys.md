@@ -6,6 +6,8 @@ User authorization result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-abilityToolAccessCtrl-interface UserAuthResult--><!--Device-abilityToolAccessCtrl-interface UserAuthResult-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -26,6 +28,8 @@ Permission information list.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-UserAuthResult-permissionInfo: PermissionInfo[]--><!--Device-UserAuthResult-permissionInfo: PermissionInfo[]-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -45,6 +49,8 @@ Permission query information.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-UserAuthResult-permissionQuery: PermissionQuery--><!--Device-UserAuthResult-permissionQuery: PermissionQuery-End-->
 

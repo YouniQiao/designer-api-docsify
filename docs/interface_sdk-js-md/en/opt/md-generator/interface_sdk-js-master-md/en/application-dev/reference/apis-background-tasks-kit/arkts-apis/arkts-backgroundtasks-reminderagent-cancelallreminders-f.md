@@ -18,7 +18,7 @@ Cancels all reminders set by the current application. This API uses an asynchron
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelAllReminders](reminderAgentManager.cancelAllReminders)
+**Substitutes:** cancelAllReminders
 
 <!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
 
@@ -54,7 +54,7 @@ Cancels all reminders set by the current application. This API uses a promise to
 
 **Deprecated since:** 9
 
-**Substitutes:** [cancelAllReminders](reminderAgentManager.cancelAllReminders)
+**Substitutes:** cancelAllReminders
 
 <!--Device-reminderAgent-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgent-function cancelAllReminders(): Promise<void>-End-->
 

@@ -1,15 +1,6 @@
 # Polyline
 
-The **Polyline** component is used to draw a polyline.
-> **NOTE**
->
-> This component supports dynamic constructor parameter updates using the
-> [updateConstructorParams](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#properties) API of the
-> [AttributeUpdater](docroot://reference/apis-arkui/js-apis-arkui-AttributeUpdater.md) class since API version 20.
->
-> **Child Components**
->
-> None
+The **Polyline** component is used to draw a polyline. > **NOTE** > > This component supports dynamic constructor parameter updates using the > updateConstructorParams API of the > AttributeUpdater class since API version 20. > > **Child Components** > > None
 
 ## Polyline
 
@@ -17,9 +8,11 @@ The **Polyline** component is used to draw a polyline.
 Polyline(options?: PolylineOptions)
 ```
 
-Uses new to create Polyline.Anonymous Object Rectification.
+Uses new to create Polyline. Anonymous Object Rectification.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -45,6 +38,8 @@ Defines the constructor of Polyline component.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -61,4 +56,4 @@ Defines the constructor of Polyline component.
 
 ## Summary
 
-- [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md)
+- [PolylineOptions](arkts-arkui-polylineoptions-i.md)

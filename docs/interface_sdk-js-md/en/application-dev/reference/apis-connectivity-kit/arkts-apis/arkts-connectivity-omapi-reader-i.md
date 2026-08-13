@@ -6,6 +6,8 @@ Reader represents the SE readers supported by this device.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface Reader--><!--Device-omapi-export interface Reader-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -28,6 +30,8 @@ Close all the sessions opened on this reader. All the channels opened by all the
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Reader-closeSessions(): void--><!--Device-Reader-closeSessions(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -36,8 +40,8 @@ Close all the sessions opened on this reader. All the channels opened by all the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
 ## Examples
 
@@ -77,11 +81,13 @@ function secureElementDemo() {
 getName(): string
 ```
 
-Returns the name of this reader.If this reader is a SIM reader, then its name must be "SIM[slot]".If the reader is an embedded SE reader, then its name must be "eSE[slot]".
+Returns the name of this reader. If this reader is a SIM reader, then its name must be "SIM[slot]". If the reader is an embedded SE reader, then its name must be "eSE[slot]".
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Reader-getName(): string--><!--Device-Reader-getName(): string-End-->
 
@@ -97,7 +103,7 @@ Returns the name of this reader.If this reader is a SIM reader, then its name mu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -130,6 +136,8 @@ Checks if a SE is present in this reader.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Reader-isSecureElementPresent(): boolean--><!--Device-Reader-isSecureElementPresent(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -144,8 +152,8 @@ Checks if a SE is present in this reader.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
 ## Examples
 
@@ -172,11 +180,13 @@ try {
 openSession(): Session
 ```
 
-Connects to a SE in this reader.This method prepares (initializes) the SE for communication before the session object is returned.There might be multiple sessions opened at the same time on the same reader.
+Connects to a SE in this reader. This method prepares (initializes) the SE for communication before the session object is returned. There might be multiple sessions opened at the same time on the same reader.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Reader-openSession(): Session--><!--Device-Reader-openSession(): Session-End-->
 
@@ -192,9 +202,9 @@ Connects to a SE in this reader.This method prepares (initializes) the SE for co
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 

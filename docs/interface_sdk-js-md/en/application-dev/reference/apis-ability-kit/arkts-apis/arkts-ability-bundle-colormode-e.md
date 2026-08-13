@@ -1,10 +1,6 @@
 # ColorMode
 
-> **NOTE：**
-> 
-> This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided.
-
-Enumerates the color modes of applications and widgets.
+> **NOTE：**> > This API has been supported since API version 7 and deprecated since API version 9. No substitute is provided. Enumerates the color modes of applications and widgets.
 
 **Since:** 7
 
@@ -12,7 +8,7 @@ Enumerates the color modes of applications and widgets.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 <!--Device-bundle-export enum ColorMode--><!--Device-bundle-export enum ColorMode-End-->
 
@@ -32,7 +28,7 @@ Auto mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_NOT_SET](ohos.app.ability.ConfigurationConstant/ConfigurationConstant.ColorMode#COLOR_MODE_NOT_SET)
+**Substitutes:** [COLOR_MODE_NOT_SET](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_NOT_SET)
 
 <!--Device-ColorMode-AUTO_MODE = -1--><!--Device-ColorMode-AUTO_MODE = -1-End-->
 
@@ -52,7 +48,7 @@ Dark mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_DARK](ohos.app.ability.ConfigurationConstant/ConfigurationConstant.ColorMode#COLOR_MODE_DARK)
+**Substitutes:** [COLOR_MODE_DARK](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_DARK)
 
 <!--Device-ColorMode-DARK_MODE = 0--><!--Device-ColorMode-DARK_MODE = 0-End-->
 
@@ -72,7 +68,7 @@ Light mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [COLOR_MODE_LIGHT](ohos.app.ability.ConfigurationConstant/ConfigurationConstant.ColorMode#COLOR_MODE_LIGHT)
+**Substitutes:** [COLOR_MODE_LIGHT](arkts-ability-configurationconstant-colormode-e.md#COLOR_MODE_LIGHT)
 
 <!--Device-ColorMode-LIGHT_MODE = 1--><!--Device-ColorMode-LIGHT_MODE = 1-End-->
 

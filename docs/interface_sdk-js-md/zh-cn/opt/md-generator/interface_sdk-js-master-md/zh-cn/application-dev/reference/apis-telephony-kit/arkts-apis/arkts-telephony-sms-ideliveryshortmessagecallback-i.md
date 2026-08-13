@@ -2,7 +2,9 @@
 
 回调实例，返回短信送达报告。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface IDeliveryShortMessageCallback--><!--Device-sms-export interface IDeliveryShortMessageCallback-End-->
 
@@ -18,7 +20,9 @@ pdu: Array<number>
 
 **类型：** Array&lt;number&gt;
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IDeliveryShortMessageCallback-pdu: Array<int>--><!--Device-IDeliveryShortMessageCallback-pdu: Array<int>-End-->
 

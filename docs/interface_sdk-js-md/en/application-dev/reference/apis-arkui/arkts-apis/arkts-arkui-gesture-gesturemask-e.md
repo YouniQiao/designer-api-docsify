@@ -6,6 +6,8 @@ Creating an Object
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum GestureMask--><!--Device-unnamed-export declare enum GestureMask-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@ Creating an Object
 Normal
 ```
 
-High-priority response to the current gesture.When the current gesture fails to be recognized,other gesture responses are triggered.For gestures with the same priority,responses are performed based on the recognition sequence.
+High-priority response to the current gesture.When the current gesture fails to be recognized, other gesture responses are triggered.For gestures with the same priority, responses are performed based on the recognition sequence.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,6 +43,8 @@ Ignore internal gestures and recognize the current gesture first.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

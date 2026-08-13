@@ -2,9 +2,11 @@
 
 Enumerates the asset statuses.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-commonType-enum AssetStatus--><!--Device-commonType-enum AssetStatus-End-->
 
@@ -18,9 +20,11 @@ ASSET_NORMAL
 
 The asset is in normal status.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AssetStatus-ASSET_NORMAL--><!--Device-AssetStatus-ASSET_NORMAL-End-->
 
@@ -34,9 +38,11 @@ ASSET_INSERT
 
 The asset is to be inserted to the cloud.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AssetStatus-ASSET_INSERT--><!--Device-AssetStatus-ASSET_INSERT-End-->
 
@@ -50,9 +56,11 @@ ASSET_UPDATE
 
 The asset is to be updated to the cloud.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AssetStatus-ASSET_UPDATE--><!--Device-AssetStatus-ASSET_UPDATE-End-->
 
@@ -66,9 +74,11 @@ ASSET_DELETE
 
 The asset is to be deleted from the cloud.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AssetStatus-ASSET_DELETE--><!--Device-AssetStatus-ASSET_DELETE-End-->
 
@@ -82,9 +92,11 @@ ASSET_ABNORMAL
 
 The asset is in abnormal status.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AssetStatus-ASSET_ABNORMAL--><!--Device-AssetStatus-ASSET_ABNORMAL-End-->
 
@@ -98,9 +110,11 @@ ASSET_DOWNLOADING
 
 The asset is being downloaded to a local device.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AssetStatus-ASSET_DOWNLOADING--><!--Device-AssetStatus-ASSET_DOWNLOADING-End-->
 

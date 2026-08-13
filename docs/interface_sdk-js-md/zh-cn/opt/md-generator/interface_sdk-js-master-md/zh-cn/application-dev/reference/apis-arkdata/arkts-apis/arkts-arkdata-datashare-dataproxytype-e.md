@@ -2,7 +2,9 @@
 
 数据代理类型的枚举。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dataShare-enum DataProxyType--><!--Device-dataShare-enum DataProxyType-End-->
 
@@ -16,7 +18,9 @@ SHARED_CONFIG = 0
 
 表示应用之间的共享配置。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

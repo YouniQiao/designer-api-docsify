@@ -1,9 +1,10 @@
 # ConnectOptions
 
-**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of  
-[connectServiceExtensionAbility](./application/UIAbilityContext:UIAbilityContext.connectServiceExtensionAbility)to connect to a ServiceExtensionAbility.
+**ConnectOptions** can be used as an input parameter to receive status changes during the connection to a background service. For example, it is used as an input parameter of [connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectServiceExtensionAbility) to connect to a ServiceExtensionAbility.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ConnectOptions--><!--Device-unnamed-export interface ConnectOptions-End-->
 
@@ -18,6 +19,8 @@ onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void
 Called when a connection is set up.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-ConnectOptions-onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void--><!--Device-ConnectOptions-onConnect(elementName: ElementName, remote: rpc.IRemoteObject): void-End-->
 
@@ -71,6 +74,8 @@ Called when a connection is interrupted.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-ConnectOptions-onDisconnect(elementName: ElementName): void--><!--Device-ConnectOptions-onDisconnect(elementName: ElementName): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -122,6 +127,8 @@ Called when a connection fails.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-ConnectOptions-onFailed(code: number): void--><!--Device-ConnectOptions-onFailed(code: number): void-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -162,3 +169,57 @@ class EntryAbility extends UIAbility {
   }
 }
 ```
+
+## onConnect
+
+```TypeScript
+onConnect: OnConnectFn
+```
+
+Callback invoked when a connection is set up.
+
+**Type:** [OnConnectFn](arkts-ability-onconnectfn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-ConnectOptions-onConnect: OnConnectFn--><!--Device-ConnectOptions-onConnect: OnConnectFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## onDisconnect
+
+```TypeScript
+onDisconnect: OnDisconnectFn
+```
+
+Callback invoked when a connection is interrupted.
+
+**Type:** [OnDisconnectFn](arkts-ability-ondisconnectfn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-ConnectOptions-onDisconnect: OnDisconnectFn--><!--Device-ConnectOptions-onDisconnect: OnDisconnectFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## onFailed
+
+```TypeScript
+onFailed: OnFailedFn
+```
+
+Callback invoked when a connection fails.
+
+**Type:** [OnFailedFn](arkts-ability-onfailedfn-t.md)
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-ConnectOptions-onFailed: OnFailedFn--><!--Device-ConnectOptions-onFailed: OnFailedFn-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core

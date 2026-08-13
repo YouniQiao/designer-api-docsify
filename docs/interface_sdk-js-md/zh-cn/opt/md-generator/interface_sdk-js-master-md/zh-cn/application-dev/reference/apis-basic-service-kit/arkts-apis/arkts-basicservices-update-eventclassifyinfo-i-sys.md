@@ -2,7 +2,9 @@
 
 事件信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-update-export interface EventClassifyInfo--><!--Device-update-export interface EventClassifyInfo-End-->
 
@@ -20,7 +22,9 @@ eventClassify: EventClassify
 
 **类型：** [EventClassify](arkts-basicservices-update-eventclassify-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventClassifyInfo-eventClassify: EventClassify--><!--Device-EventClassifyInfo-eventClassify: EventClassify-End-->
 
@@ -38,7 +42,9 @@ extraInfo: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-EventClassifyInfo-extraInfo: string--><!--Device-EventClassifyInfo-extraInfo: string-End-->
 

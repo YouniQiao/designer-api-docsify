@@ -1,12 +1,14 @@
 # SaveButton属性/事件
 
-不支持通用属性，除了继承[安全控件通用属性](./security_component)，还支持以下属性。不支持通用事件，仅支持以下事件。
+不支持通用属性，除了继承安全控件通用属性，还支持以下属性。 不支持通用事件，仅支持以下事件。
 
-**继承/实现关系：** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
+**继承/实现关系：** SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 
 **起始版本：** 10
 
-<!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>--><!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class SaveButtonAttribute--><!--Device-unnamed-declare class SaveButtonAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 设置保存控件图标的边框圆角半径。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -46,6 +50,8 @@ iconSize(size: Dimension | SizeOptions)
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -66,9 +72,11 @@ iconSize(size: Dimension | SizeOptions)
 onClick(event: SaveButtonCallback)
 ```
 
-点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
+点击保存控件触发该回调。用户首次点击保存控件时会展示授权弹窗，点击允许后授权成功，应用会获取访问媒体库接口的临时授权（授权持续时间见[SaveButton](../../../reference/apis-arkui/arkui -ts/ts-security-components-savebutton.md#savebutton-1)构造函数说明）；点击拒绝或关闭弹窗则授权失败。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,6 +101,8 @@ setIcon(icon: Resource)
 设置保存控件的图标。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -120,6 +130,8 @@ setText(text: string | Resource)
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -146,6 +158,8 @@ stateEffect(enabled: boolean)
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -168,12 +182,11 @@ stateEffect(enabled: boolean)
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-设置保存控件Symbol图标粗细。
-
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的粗细不会生效。
+设置保存控件Symbol图标粗细。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的粗细不会生效。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -197,13 +210,11 @@ symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-设置保存控件Symbol图标颜色。
-
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的颜色不会生效。  
-- 建议与[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
+设置保存控件Symbol图标颜色。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的颜色不会生效。 - 建议与[symbolRenderingStrategy](#symbolRenderingStrategy)配合使用，以实现不同的渲染效果。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -227,13 +238,11 @@ symbolIconColor(color: Array<ResourceColor>)
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-设置保存控件Symbol图标渲染策略。
-
-- 调用本方法前，需先调用[setIcon](SaveButtonAttribute#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。  
-- 若未设置Symbol图标，该方法设置的渲染策略不会生效。  
-- 与[symbolIconColor](SaveButtonAttribute#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
+设置保存控件Symbol图标渲染策略。 - 调用本方法前，需先调用[setIcon](#setIcon)设置Symbol格式的图标资源（如\$r('sys.symbol.xxx')），本方法才会生效。 - 若未设置Symbol图标，该方法设置的渲染策略不会生效。 - 与[symbolIconColor](#symbolIconColor)配合使用时，渲染策略会影响颜色数组的作用方式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -260,6 +269,8 @@ userCancelEvent(enabled: boolean)
 设置接收保存控件的用户取消授权事件。适用于需要区分用户主动取消授权和授权失败的场景，以便进行不同的业务处理，例如记录用户行为、提供重试提示等。
 
 **起始版本：** 21
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

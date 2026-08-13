@@ -14,6 +14,8 @@ declare function read(
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<number>--><!--Device-unnamed-declare function read(  fd: number,  buffer: ArrayBuffer,  options?: ReadOptions): Promise<number>-End-->
@@ -60,6 +62,8 @@ declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<n
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<number>): void--><!--Device-unnamed-declare function read(fd: number, buffer: ArrayBuffer, callback: AsyncCallback<number>): void-End-->
@@ -103,6 +107,8 @@ declare function read(
 从文件读取数据，使用callback异步回调。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

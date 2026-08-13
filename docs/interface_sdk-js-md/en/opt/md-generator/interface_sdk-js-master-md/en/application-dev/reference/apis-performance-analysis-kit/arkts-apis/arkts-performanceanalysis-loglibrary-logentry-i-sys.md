@@ -2,7 +2,9 @@
 
 Defines a **LogEntry** object.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-logLibrary-interface LogEntry--><!--Device-logLibrary-interface LogEntry-End-->
 
@@ -26,7 +28,9 @@ Time of the last modification to the file. The value is the number of seconds el
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LogEntry-mtime: long--><!--Device-LogEntry-mtime: long-End-->
 
@@ -44,7 +48,9 @@ Log file name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LogEntry-name: string--><!--Device-LogEntry-name: string-End-->
 
@@ -62,7 +68,9 @@ File size, in bytes.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LogEntry-size: long--><!--Device-LogEntry-size: long-End-->
 

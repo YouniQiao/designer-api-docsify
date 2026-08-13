@@ -2,9 +2,11 @@
 
 Type of the primary mouse button.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pointer-enum PrimaryButton--><!--Device-pointer-enum PrimaryButton-End-->
 
@@ -18,9 +20,11 @@ LEFT = 0
 
 Left button.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrimaryButton-LEFT = 0--><!--Device-PrimaryButton-LEFT = 0-End-->
 
@@ -34,9 +38,11 @@ RIGHT = 1
 
 Right button.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrimaryButton-RIGHT = 1--><!--Device-PrimaryButton-RIGHT = 1-End-->
 

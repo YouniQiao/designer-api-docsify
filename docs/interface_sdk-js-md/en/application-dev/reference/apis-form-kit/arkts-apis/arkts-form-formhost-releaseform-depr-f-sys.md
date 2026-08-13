@@ -14,7 +14,7 @@ Releases a widget. After this API is called, the application can no longer use t
 
 **Deprecated since:** 9
 
-**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm)
+**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -29,7 +29,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## releaseForm
@@ -46,7 +46,7 @@ Releases a widget. After this API is called, the application can no longer use t
 
 **Deprecated since:** 9
 
-**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm)
+**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -62,7 +62,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
 | isReleaseCache | boolean | Yes | Whether to release the cache. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
 
 ## releaseForm
@@ -79,7 +79,7 @@ Releases a widget. After this API is called, the application can no longer use t
 
 **Deprecated since:** 9
 
-**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm)
+**Substitutes:** [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseForm-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

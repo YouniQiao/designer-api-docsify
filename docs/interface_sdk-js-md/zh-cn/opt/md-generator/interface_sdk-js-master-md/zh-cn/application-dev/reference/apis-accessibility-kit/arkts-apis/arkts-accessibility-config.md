@@ -2,7 +2,9 @@
 
 本模块提供系统辅助功能的配置，包括辅助扩展的启用与关闭、高对比度文字显示、鼠标键、无障碍字幕配置等。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace config--><!--Device-unnamed-declare namespace config-End-->
 
@@ -17,20 +19,24 @@
 
 | 名称 |
 | --- |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability) |
-| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableability-1) |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability) |
-| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableability-1) |
-| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableabilitywithcallback) |
-| [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md#getseniormodestateforapp) |
-| [off](arkts-accessibility-config-off-f-sys.md#off) |
-| [off](arkts-accessibility-config-off-f-sys.md#off-1) |
-| [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offseniormodestatechangeforapp) |
-| [on](arkts-accessibility-config-on-f-sys.md#on) |
-| [on](arkts-accessibility-config-on-f-sys.md#on-1) |
-| [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onseniormodestatechangeforapp) |
-| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setmagnificationstate) |
-| [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md#setseniormodestateforapp) |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableAbility（系统接口）) |
+| [disableAbility](arkts-accessibility-config-disableability-f-sys.md#disableAbility（系统接口）) |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableAbility（系统接口）) |
+| [enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableAbility（系统接口）) |
+| [enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableAbilityWithCallback（系统接口）) |
+| [getSeniorModeStateForApp](arkts-accessibility-config-getseniormodestateforapp-f-sys.md#getSeniorModeStateForApp（系统接口）) |
+| [offEnabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md#offEnabledAccessibilityExtensionListChange（系统接口）) |
+| [offInstalledAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md#offInstalledAccessibilityListChange（系统接口）) |
+| [offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offSeniorModeStateChangeForApp（系统接口）) |
+| [off_enabledAccessibilityExtensionListChange](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md) |
+| [off_installedAccessibilityListChange](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md) |
+| [onEnabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md#onEnabledAccessibilityExtensionListChange（系统接口）) |
+| [onInstalledAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md#onInstalledAccessibilityListChange（系统接口）) |
+| [onSeniorModeStateChangeForApp](arkts-accessibility-config-onseniormodestatechangeforapp-f-sys.md#onSeniorModeStateChangeForApp（系统接口）) |
+| [on_enabledAccessibilityExtensionListChange](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md) |
+| [on_installedAccessibilityListChange](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md) |
+| [setMagnificationState](arkts-accessibility-config-setmagnificationstate-f-sys.md#setMagnificationState（系统接口）) |
+| [setSeniorModeStateForApp](arkts-accessibility-config-setseniormodestateforapp-f-sys.md#setSeniorModeStateForApp（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -59,12 +65,12 @@
 
 | 名称 |
 | --- |
-| [audioBalance](arkts-accessibility-config-con-sys.md#audiobalance) |
-| [audioMono](arkts-accessibility-config-con-sys.md#audiomono) |
-| [clickResponseTime](arkts-accessibility-config-con-sys.md#clickresponsetime) |
-| [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationstate) |
-| [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignorerepeatclick) |
-| [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatclickinterval) |
-| [screenMagnification](arkts-accessibility-config-con-sys.md#screenmagnification) |
-| [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeymultitargets) |
+| [audioBalance](arkts-accessibility-config-con-sys.md#audioBalance) |
+| [audioMono](arkts-accessibility-config-con-sys.md#audioMono) |
+| [clickResponseTime](arkts-accessibility-config-con-sys.md#clickResponseTime) |
+| [daltonizationState](arkts-accessibility-config-con-sys.md#daltonizationState) |
+| [ignoreRepeatClick](arkts-accessibility-config-con-sys.md#ignoreRepeatClick) |
+| [repeatClickInterval](arkts-accessibility-config-con-sys.md#repeatClickInterval) |
+| [screenMagnification](arkts-accessibility-config-con-sys.md#screenMagnification) |
+| [shortkeyMultiTargets](arkts-accessibility-config-con-sys.md#shortkeyMultiTargets) |
 <!--DelEnd-->

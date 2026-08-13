@@ -16,7 +16,9 @@ Create an ad playback controller associated with the player instance.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,5 +42,5 @@ Create an ad playback controller associated with the player instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | The player object corresponding to player does not exist or is invalid. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The player object corresponding to player does not exist or is invalid. |
 

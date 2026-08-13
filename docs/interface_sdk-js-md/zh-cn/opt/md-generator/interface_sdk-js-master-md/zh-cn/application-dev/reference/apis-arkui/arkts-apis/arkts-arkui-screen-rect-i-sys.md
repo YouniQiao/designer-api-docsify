@@ -2,7 +2,9 @@
 
 矩形信息。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screen-interface Rect--><!--Device-screen-interface Rect-End-->
 
@@ -20,7 +22,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
 
@@ -38,7 +42,9 @@ left: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
 
@@ -56,7 +62,9 @@ top: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
 
@@ -74,7 +82,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
 

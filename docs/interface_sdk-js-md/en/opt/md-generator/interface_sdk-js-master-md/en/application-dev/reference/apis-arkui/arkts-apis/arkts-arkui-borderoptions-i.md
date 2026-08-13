@@ -4,6 +4,8 @@ Defines the options of border.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface BorderOptions--><!--Device-unnamed-declare interface BorderOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,11 @@ color?: EdgeColors | ResourceColor | LocalizedEdgeColors
 
 Defines the border color.
 
-**Type:** EdgeColors \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
+**Type:** [EdgeColors](arkts-arkui-edgecolors-t.md) \| [ResourceColor](arkts-arkui-resourcecolor-t.md) \| [LocalizedEdgeColors](arkts-arkui-localizededgecolors-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -36,9 +40,11 @@ dashGap?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the gap of dash when BorderStyle is dashed.
 
-**Type:** EdgeWidths \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md) \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,9 +62,11 @@ dashWidth?: EdgeWidths | LengthMetrics | LocalizedEdgeWidths
 
 Defines the length of dash when BorderStyle is dashed.
 
-**Type:** EdgeWidths \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md) \| [LengthMetrics](arkts-arkui-lengthmetrics-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +88,8 @@ Defines the border radius.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 12.
@@ -96,9 +106,11 @@ style?: EdgeStyles | BorderStyle
 
 Defines the border style.
 
-**Type:** EdgeStyles \| [BorderStyle](arkts-arkui-borderstyle-e.md)
+**Type:** [EdgeStyles](arkts-arkui-edgestyles-t.md) \| [BorderStyle](arkts-arkui-borderstyle-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -116,9 +128,11 @@ width?: EdgeWidths | Length | LocalizedEdgeWidths
 
 Defines the border width.
 
-**Type:** EdgeWidths \| [Length](arkts-arkui-length-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
+**Type:** [EdgeWidths](arkts-arkui-edgewidths-t.md) \| [Length](arkts-arkui-length-t.md) \| [LocalizedEdgeWidths](arkts-arkui-localizededgewidths-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

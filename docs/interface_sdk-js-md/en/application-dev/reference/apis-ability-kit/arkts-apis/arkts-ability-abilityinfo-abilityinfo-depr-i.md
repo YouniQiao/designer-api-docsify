@@ -1,12 +1,6 @@
 # AbilityInfo
 
-The module provides information about an ability. Unless otherwise specified, the information is obtained through  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1).
-
-> **NOTE：**
-> 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-AbilityInfo](#AbilityInfo) instead.
+The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo). > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-AbilityInfo](#AbilityInfo) instead.
 
 **Since:** 7
 
@@ -26,10 +20,7 @@ The module provides information about an ability. Unless otherwise specified, th
 readonly applicationInfo: ApplicationInfo
 ```
 
-Application configuration information.
-
-The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1).
+Application configuration information. The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo).
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -41,7 +32,7 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to
 
 **Deprecated since:** 9
 
-**Substitutes:** [applicationInfo](ohos.bundle.bundleManager/bundleManager.AbilityInfo#applicationInfo)
+**Substitutes:** applicationInfo
 
 <!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
@@ -53,9 +44,7 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to
 readonly backgroundModes: number
 ```
 
-Background service mode of the ability.
-
-**Model restriction**: This API can be used only in the FA model.
+Background service mode of the ability. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** number
 
@@ -91,7 +80,7 @@ Bundle name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [bundleName](ohos.bundle.bundleManager/bundleManager.AbilityInfo#bundleName)
+**Substitutes:** bundleName
 
 <!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
@@ -115,7 +104,7 @@ Ability description.
 
 **Deprecated since:** 9
 
-**Substitutes:** [description](ohos.bundle.bundleManager/bundleManager.AbilityInfo#description)
+**Substitutes:** description
 
 <!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
 
@@ -139,7 +128,7 @@ ID of the ability description.
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptionId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#descriptionId)
+**Substitutes:** descriptionId
 
 <!--Device-AbilityInfo-readonly descriptionId: number--><!--Device-AbilityInfo-readonly descriptionId: number-End-->
 
@@ -185,7 +174,7 @@ Device types supported by the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceTypes](ohos.bundle.bundleManager/bundleManager.AbilityInfo#deviceTypes)
+**Substitutes:** deviceTypes
 
 <!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -209,7 +198,7 @@ Whether the ability is enabled. **true** if enabled, **false** otherwise.
 
 **Deprecated since:** 9
 
-**Substitutes:** [enabled](ohos.bundle.bundleManager/bundleManager.AbilityInfo#enabled)
+**Substitutes:** enabled
 
 <!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
 
@@ -221,9 +210,7 @@ Whether the ability is enabled. **true** if enabled, **false** otherwise.
 readonly formEnabled: boolean
 ```
 
-Whether the ability provides the service widget capability. **true** if the ability provides the service widget capability, **false** otherwise.
-
-**Model restriction**: This API can be used only in the FA model.
+Whether the ability provides the service widget capability. **true** if the ability provides the service widget capability, **false** otherwise. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** boolean
 
@@ -259,7 +246,7 @@ Index of the ability icon resource file.
 
 **Deprecated since:** 9
 
-**Substitutes:** [icon](ohos.bundle.bundleManager/bundleManager.AbilityInfo#icon)
+**Substitutes:** icon
 
 <!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
 
@@ -283,7 +270,7 @@ ID of the ability icon.
 
 **Deprecated since:** 9
 
-**Substitutes:** [iconId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#iconId)
+**Substitutes:** iconId
 
 <!--Device-AbilityInfo-readonly iconId: number--><!--Device-AbilityInfo-readonly iconId: number-End-->
 
@@ -307,7 +294,7 @@ Whether the ability can be called by other applications. **true** if the ability
 
 **Deprecated since:** 9
 
-**Substitutes:** [exported](ohos.bundle.bundleManager/bundleManager.AbilityInfo#exported)
+**Substitutes:** exported
 
 <!--Device-AbilityInfo-readonly isVisible: boolean--><!--Device-AbilityInfo-readonly isVisible: boolean-End-->
 
@@ -331,7 +318,7 @@ Ability name visible to users.
 
 **Deprecated since:** 9
 
-**Substitutes:** [label](ohos.bundle.bundleManager/bundleManager.AbilityInfo#label)
+**Substitutes:** label
 
 <!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
 
@@ -355,7 +342,7 @@ ID of the ability label.
 
 **Deprecated since:** 9
 
-**Substitutes:** [labelId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#labelId)
+**Substitutes:** labelId
 
 <!--Device-AbilityInfo-readonly labelId: number--><!--Device-AbilityInfo-readonly labelId: number-End-->
 
@@ -379,7 +366,7 @@ Ability launch mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [launchType](arkts-ability-abilityinfo-i.md#launchType)
+**Substitutes:** launchType
 
 <!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode--><!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode-End-->
 
@@ -391,10 +378,7 @@ Ability launch mode.
 readonly metaData: Array<CustomizeData>
 ```
 
-Metadata of the ability.
-
-The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1).
+Metadata of the ability. The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo).
 
 **Type:** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
@@ -406,7 +390,7 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to
 
 **Deprecated since:** 9
 
-**Substitutes:** [metadata](ohos.bundle.bundleManager/bundleManager.AbilityInfo#metadata)
+**Substitutes:** metadata
 
 <!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>--><!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>-End-->
 
@@ -430,7 +414,7 @@ Name of the HAP file to which the ability belongs.
 
 **Deprecated since:** 9
 
-**Substitutes:** [moduleName](ohos.bundle.bundleManager/bundleManager.AbilityInfo#moduleName)
+**Substitutes:** moduleName
 
 <!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
 
@@ -454,7 +438,7 @@ Ability name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [name](ohos.bundle.bundleManager/bundleManager.AbilityInfo#name)
+**Substitutes:** name
 
 <!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
 
@@ -478,7 +462,7 @@ Ability display orientation.
 
 **Deprecated since:** 9
 
-**Substitutes:** [orientation](ohos.bundle.bundleManager/bundleManager.AbilityInfo#orientation)
+**Substitutes:** orientation
 
 <!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation-End-->
 
@@ -490,10 +474,7 @@ Ability display orientation.
 readonly permissions: Array<string>
 ```
 
-Permissions required for other applications to call the ability.
-
-The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1).
+Permissions required for other applications to call the ability. The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo).
 
 **Type:** Array&lt;string&gt;
 
@@ -505,7 +486,7 @@ The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to
 
 **Deprecated since:** 9
 
-**Substitutes:** [permissions](ohos.bundle.bundleManager/bundleManager.AbilityInfo#permissions)
+**Substitutes:** permissions
 
 <!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
 
@@ -529,7 +510,7 @@ Process name of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [process](ohos.bundle.bundleManager/bundleManager.AbilityInfo#process)
+**Substitutes:** process
 
 <!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 
@@ -541,9 +522,7 @@ Process name of the ability.
 readonly readPermission: string
 ```
 
-Permission required for reading the ability data.
-
-**Model restriction**: This API can be used only in the FA model.
+Permission required for reading the ability data. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -567,9 +546,7 @@ Permission required for reading the ability data.
 readonly subType: bundle.AbilitySubType
 ```
 
-Subtype of the template that can be used by the ability.
-
-**Model restriction**: This API can be used only in the FA model.
+Subtype of the template that can be used by the ability. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundle.AbilitySubType
 
@@ -593,9 +570,7 @@ Subtype of the template that can be used by the ability.
 readonly targetAbility: string
 ```
 
-Target ability that the ability alias points to.
-
-**Model restriction**: This API can be used only in the FA model.
+Target ability that the ability alias points to. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -619,9 +594,7 @@ Target ability that the ability alias points to.
 readonly type: bundle.AbilityType
 ```
 
-Ability type.
-
-**Model restriction**: This API can be used only in the FA model.
+Ability type. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** bundle.AbilityType
 
@@ -645,9 +618,7 @@ Ability type.
 readonly uri: string
 ```
 
-URI of the ability.
-
-**Model restriction**: This API can be used only in the FA model.
+URI of the ability. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 
@@ -671,9 +642,7 @@ URI of the ability.
 readonly writePermission: string
 ```
 
-Permission required for writing data to the ability.
-
-**Model restriction**: This API can be used only in the FA model.
+Permission required for writing data to the ability. **Model restriction**: This API can be used only in the FA model.
 
 **Type:** string
 

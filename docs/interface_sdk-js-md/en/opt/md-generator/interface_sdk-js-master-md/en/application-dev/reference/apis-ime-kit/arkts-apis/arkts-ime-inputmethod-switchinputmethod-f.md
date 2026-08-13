@@ -14,7 +14,9 @@ function switchInputMethod(target: InputMethodProperty, callback: AsyncCallback<
 
 Switch input method. The caller must be the current inputmethod.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
@@ -34,10 +36,10 @@ Switch input method. The caller must be the current inputmethod.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 
@@ -67,7 +69,9 @@ function switchInputMethod(target: InputMethodProperty): Promise<boolean>
 
 Switch input method. The caller must be the current inputmethod.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 9 - 10: ohos.permission.CONNECT_IME_ABILITY
@@ -92,10 +96,10 @@ Switch input method. The caller must be the current inputmethod.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-configuration-persistence-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 

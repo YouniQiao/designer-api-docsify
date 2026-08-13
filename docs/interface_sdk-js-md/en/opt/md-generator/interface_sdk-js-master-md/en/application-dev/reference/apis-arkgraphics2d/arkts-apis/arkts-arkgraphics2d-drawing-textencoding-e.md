@@ -2,7 +2,9 @@
 
 Enumerates the text encoding types.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drawing-enum TextEncoding--><!--Device-drawing-enum TextEncoding-End-->
 
@@ -16,7 +18,9 @@ TEXT_ENCODING_UTF8 = 0
 
 One byte is used to indicate UTF-8 or ASCII characters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -32,7 +36,9 @@ TEXT_ENCODING_UTF16 = 1
 
 Two bytes are used to indicate most Unicode characters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -48,7 +54,9 @@ TEXT_ENCODING_UTF32 = 2
 
 Four bytes are used to indicate all Unicode characters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -64,7 +72,9 @@ TEXT_ENCODING_GLYPH_ID = 3
 
 Two bytes are used to indicate the glyph index.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

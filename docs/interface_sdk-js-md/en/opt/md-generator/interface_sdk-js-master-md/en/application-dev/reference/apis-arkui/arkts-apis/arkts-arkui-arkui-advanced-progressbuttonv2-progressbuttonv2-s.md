@@ -4,7 +4,7 @@ Declare Component ProgressButtonV2
 
 **Since:** 18
 
-**Decorator:** @ComponentV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ProgressButtonV2--><!--Device-unnamed-export declare struct ProgressButtonV2-End-->
 
@@ -16,30 +16,10 @@ Declare Component ProgressButtonV2
 import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@kit.ArkUI';
 ```
 
-## onClicked
-
-```TypeScript
-readonly onClicked: ClickCallback
-```
-
-Sets the ProgressButtonV2 onClicked.
-
-**Since:** 18
-
-**Decorator:** @Param
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ProgressButtonV2-readonly onClicked: ClickCallback--><!--Device-ProgressButtonV2-readonly onClicked: ClickCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## colorOptions
 
 ```TypeScript
-colorOptions?: ProgressButtonV2Color
+@Param colorOptions?: ProgressButtonV2Color
 ```
 
 Set Color options of the ProgressButtonV2.
@@ -48,20 +28,21 @@ Set Color options of the ProgressButtonV2.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2-colorOptions?: ProgressButtonV2Color--><!--Device-ProgressButtonV2-colorOptions?: ProgressButtonV2Color-End-->
+<!--Device-ProgressButtonV2-@Param colorOptions?: ProgressButtonV2Color--><!--Device-ProgressButtonV2-@Param colorOptions?: ProgressButtonV2Color-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-readonly content: ResourceStr
+@Require
+  @Param readonly content: ResourceStr
 ```
 
 Sets the ProgressButtonV2 content.
@@ -70,20 +51,20 @@ Sets the ProgressButtonV2 content.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2-readonly content: ResourceStr--><!--Device-ProgressButtonV2-readonly content: ResourceStr-End-->
+<!--Device-ProgressButtonV2-@Require  @Param readonly content: ResourceStr--><!--Device-ProgressButtonV2-@Require  @Param readonly content: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isEnabled
 
 ```TypeScript
-readonly isEnabled: boolean
+@Param readonly isEnabled: boolean
 ```
 
 Sets the ProgressButtonV2 isEnabled state.
@@ -92,20 +73,43 @@ Sets the ProgressButtonV2 isEnabled state.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2-readonly isEnabled: boolean--><!--Device-ProgressButtonV2-readonly isEnabled: boolean-End-->
+<!--Device-ProgressButtonV2-@Param readonly isEnabled: boolean--><!--Device-ProgressButtonV2-@Param readonly isEnabled: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onClicked
+
+```TypeScript
+@Param readonly onClicked: ClickCallback
+```
+
+Sets the ProgressButtonV2 onClicked.
+
+**Type:** [ClickCallback](arkts-arkui-clickcallback-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ProgressButtonV2-@Param readonly onClicked: ClickCallback--><!--Device-ProgressButtonV2-@Param readonly onClicked: ClickCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progress
 
 ```TypeScript
-readonly progress: number
+@Require
+  @Param readonly progress: number
 ```
 
 Sets the ProgressButtonV2 progress.
@@ -114,20 +118,20 @@ Sets the ProgressButtonV2 progress.
 
 **Since:** 18
 
-**Decorator:** @Require, @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2-readonly progress: number--><!--Device-ProgressButtonV2-readonly progress: number-End-->
+<!--Device-ProgressButtonV2-@Require  @Param readonly progress: number--><!--Device-ProgressButtonV2-@Require  @Param readonly progress: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressButtonRadius
 
 ```TypeScript
-progressButtonRadius?: LengthMetrics
+@Param progressButtonRadius?: LengthMetrics
 ```
 
 Set border rounded corner radius of progress.
@@ -136,20 +140,20 @@ Set border rounded corner radius of progress.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2-progressButtonRadius?: LengthMetrics--><!--Device-ProgressButtonV2-progressButtonRadius?: LengthMetrics-End-->
+<!--Device-ProgressButtonV2-@Param progressButtonRadius?: LengthMetrics--><!--Device-ProgressButtonV2-@Param progressButtonRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressButtonWidth
 
 ```TypeScript
-progressButtonWidth?: LengthMetrics
+@Param @Once progressButtonWidth?: LengthMetrics
 ```
 
 Sets the ProgressButtonV2 progressButtonWidth.
@@ -158,12 +162,12 @@ Sets the ProgressButtonV2 progressButtonWidth.
 
 **Since:** 18
 
-**Decorator:** @Param
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButtonV2-progressButtonWidth?: LengthMetrics--><!--Device-ProgressButtonV2-progressButtonWidth?: LengthMetrics-End-->
+<!--Device-ProgressButtonV2-@Param @Once progressButtonWidth?: LengthMetrics--><!--Device-ProgressButtonV2-@Param @Once progressButtonWidth?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

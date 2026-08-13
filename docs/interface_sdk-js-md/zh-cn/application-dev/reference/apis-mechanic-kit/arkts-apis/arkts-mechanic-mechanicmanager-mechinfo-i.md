@@ -2,9 +2,11 @@
 
 机械设备信息
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface MechInfo--><!--Device-mechanicManager-export interface MechInfo-End-->
 
@@ -20,9 +22,11 @@ mechDeviceType: MechDeviceType
 
 **类型：** [MechDeviceType](arkts-mechanic-mechanicmanager-mechdevicetype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MechInfo-mechDeviceType: MechDeviceType--><!--Device-MechInfo-mechDeviceType: MechDeviceType-End-->
 
@@ -36,11 +40,13 @@ mechId: int
 
 机械设备ID
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MechInfo-mechId: int--><!--Device-MechInfo-mechId: int-End-->
 
@@ -56,9 +62,11 @@ mechName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MechInfo-mechName: string--><!--Device-MechInfo-mechName: string-End-->
 

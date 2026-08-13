@@ -2,9 +2,11 @@
 
 Defines the parameters for continuous vibration.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface ContinuousParam--><!--Device-vibrator-interface ContinuousParam-End-->
 
@@ -24,11 +26,13 @@ frequency?: int
 
 Vibration frequency. This parameter is optional. The value range is [0,100]. If this parameter is left empty, the default value is **50**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ContinuousParam-frequency?: int--><!--Device-ContinuousParam-frequency?: int-End-->
 
@@ -42,11 +46,13 @@ index?: int
 
 Channel number. This parameter is optional. The value range is [0,2]. If this parameter is left empty, the default value is **0**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ContinuousParam-index?: int--><!--Device-ContinuousParam-index?: int-End-->
 
@@ -60,11 +66,13 @@ intensity?: int
 
 Vibration intensity. This parameter is optional. The value range is [0,100]. If this parameter is left empty, the default value is **100**.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ContinuousParam-intensity?: int--><!--Device-ContinuousParam-intensity?: int-End-->
 
@@ -80,9 +88,11 @@ Adjustment points of the vibration curve.
 
 **Type:** [VibratorCurvePoint](arkts-sensorservice-vibrator-vibratorcurvepoint-i.md)[]
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ContinuousParam-points?: VibratorCurvePoint[]--><!--Device-ContinuousParam-points?: VibratorCurvePoint[]-End-->
 

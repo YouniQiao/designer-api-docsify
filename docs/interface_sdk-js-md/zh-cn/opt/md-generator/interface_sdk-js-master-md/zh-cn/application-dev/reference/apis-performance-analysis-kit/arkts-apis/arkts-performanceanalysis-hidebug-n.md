@@ -2,7 +2,9 @@
 
 为应用提供多种调试、调优的方法，帮助开发者定位性能瓶颈、优化应用性能。主要功能包括：内存数据分析、CPU使用率监控、trace采集、profiler采集、VM堆快照转储。由于该模块的接口大多比较耗费性能，接口调用较为耗时，且基于HiDebug模块定义，该模块内的接口仅建议在应用调试、调优阶段使用。若需要在其他场景使用时，请认真评估所需调用的接口对应用性能的影响。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace hidebug--><!--Device-unnamed-declare namespace hidebug-End-->
 
@@ -20,52 +22,52 @@
 
 | 名称 |
 | --- |
-| [getNativeHeapSize](arkts-performanceanalysis-hidebug-getnativeheapsize-f.md#getnativeheapsize) |
-| [getNativeHeapAllocatedSize](arkts-performanceanalysis-hidebug-getnativeheapallocatedsize-f.md#getnativeheapallocatedsize) |
-| [getNativeHeapFreeSize](arkts-performanceanalysis-hidebug-getnativeheapfreesize-f.md#getnativeheapfreesize) |
-| [getVss](arkts-performanceanalysis-hidebug-getvss-f.md#getvss) |
-| [getPss](arkts-performanceanalysis-hidebug-getpss-f.md#getpss) |
-| [getSharedDirty](arkts-performanceanalysis-hidebug-getshareddirty-f.md#getshareddirty) |
-| [getPrivateDirty](arkts-performanceanalysis-hidebug-getprivatedirty-f.md#getprivatedirty) |
-| [getCpuUsage](arkts-performanceanalysis-hidebug-getcpuusage-f.md#getcpuusage) |
-| [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md#startprofiling) |
-| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md#stopprofiling) |
-| [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md#dumpheapdata) |
-| [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startjscpuprofiling) |
-| [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md#stopjscpuprofiling) |
-| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata) |
-| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpjsheapdata-1) |
-| [getServiceDump](arkts-performanceanalysis-hidebug-getservicedump-f.md#getservicedump) |
-| [getSystemCpuUsage](arkts-performanceanalysis-hidebug-getsystemcpuusage-f.md#getsystemcpuusage) |
-| [getAppThreadCpuUsage](arkts-performanceanalysis-hidebug-getappthreadcpuusage-f.md#getappthreadcpuusage) |
-| [getSystemMemInfo](arkts-performanceanalysis-hidebug-getsystemmeminfo-f.md#getsystemmeminfo) |
-| [getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md#getappnativememinfo) |
-| [getAppMemoryLimit](arkts-performanceanalysis-hidebug-getappmemorylimit-f.md#getappmemorylimit) |
-| [getAppVMMemoryInfo](arkts-performanceanalysis-hidebug-getappvmmemoryinfo-f.md#getappvmmemoryinfo) |
-| [getAppVMObjectUsedSize](arkts-performanceanalysis-hidebug-getappvmobjectusedsize-f.md#getappvmobjectusedsize) |
-| [getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md#getappnativememinfoasync) |
-| [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md#getappnativememinfowithcache) |
-| [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md#startapptracecapture) |
-| [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopapptracecapture) |
-| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md#getgwpasangrayscalestate) |
-| [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md#requesttrace) |
-| [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md#getvmruntimestats) |
-| [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md#getvmruntimestat) |
-| [setAppResourceLimit](arkts-performanceanalysis-hidebug-setappresourcelimit-f.md#setappresourcelimit) |
-| [isDebugState](arkts-performanceanalysis-hidebug-isdebugstate-f.md#isdebugstate) |
-| [getGraphicsMemory](arkts-performanceanalysis-hidebug-getgraphicsmemory-f.md#getgraphicsmemory) |
-| [getGraphicsMemorySync](arkts-performanceanalysis-hidebug-getgraphicsmemorysync-f.md#getgraphicsmemorysync) |
-| [getGraphicsMemorySummary](arkts-performanceanalysis-hidebug-getgraphicsmemorysummary-f.md#getgraphicsmemorysummary) |
-| [setJsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-setjsrawheaptrimlevel-f.md#setjsrawheaptrimlevel) |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata) |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-1) |
-| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpjsrawheapdata-2) |
-| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md#enablegwpasangrayscale) |
-| [disableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-disablegwpasangrayscale-f.md#disablegwpasangrayscale) |
-| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md#getgwpasangrayscalestate-1) |
-| [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md#setprocdumpinsharedoom) |
-| [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md#getrssinfo) |
-| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md#enablegwpasangrayscale-1) |
+| [getNativeHeapSize](arkts-performanceanalysis-hidebug-getnativeheapsize-f.md#getNativeHeapSize) |
+| [getNativeHeapAllocatedSize](arkts-performanceanalysis-hidebug-getnativeheapallocatedsize-f.md#getNativeHeapAllocatedSize) |
+| [getNativeHeapFreeSize](arkts-performanceanalysis-hidebug-getnativeheapfreesize-f.md#getNativeHeapFreeSize) |
+| [getVss](arkts-performanceanalysis-hidebug-getvss-f.md#getVss) |
+| [getPss](arkts-performanceanalysis-hidebug-getpss-f.md#getPss) |
+| [getSharedDirty](arkts-performanceanalysis-hidebug-getshareddirty-f.md#getSharedDirty) |
+| [getPrivateDirty](arkts-performanceanalysis-hidebug-getprivatedirty-f.md#getPrivateDirty) |
+| [getCpuUsage](arkts-performanceanalysis-hidebug-getcpuusage-f.md#getCpuUsage) |
+| [startProfiling](arkts-performanceanalysis-hidebug-startprofiling-f.md#startProfiling) |
+| [stopProfiling](arkts-performanceanalysis-hidebug-stopprofiling-f.md#stopProfiling) |
+| [dumpHeapData](arkts-performanceanalysis-hidebug-dumpheapdata-f.md#dumpHeapData) |
+| [startJsCpuProfiling](arkts-performanceanalysis-hidebug-startjscpuprofiling-f.md#startJsCpuProfiling) |
+| [stopJsCpuProfiling](arkts-performanceanalysis-hidebug-stopjscpuprofiling-f.md#stopJsCpuProfiling) |
+| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpJsHeapData) |
+| [dumpJsHeapData](arkts-performanceanalysis-hidebug-dumpjsheapdata-f.md#dumpJsHeapData) |
+| [getServiceDump](arkts-performanceanalysis-hidebug-getservicedump-f.md#getServiceDump) |
+| [getSystemCpuUsage](arkts-performanceanalysis-hidebug-getsystemcpuusage-f.md#getSystemCpuUsage) |
+| [getAppThreadCpuUsage](arkts-performanceanalysis-hidebug-getappthreadcpuusage-f.md#getAppThreadCpuUsage) |
+| [getSystemMemInfo](arkts-performanceanalysis-hidebug-getsystemmeminfo-f.md#getSystemMemInfo) |
+| [getAppNativeMemInfo](arkts-performanceanalysis-hidebug-getappnativememinfo-f.md#getAppNativeMemInfo) |
+| [getAppMemoryLimit](arkts-performanceanalysis-hidebug-getappmemorylimit-f.md#getAppMemoryLimit) |
+| [getAppVMMemoryInfo](arkts-performanceanalysis-hidebug-getappvmmemoryinfo-f.md#getAppVMMemoryInfo) |
+| [getAppVMObjectUsedSize](arkts-performanceanalysis-hidebug-getappvmobjectusedsize-f.md#getAppVMObjectUsedSize) |
+| [getAppNativeMemInfoAsync](arkts-performanceanalysis-hidebug-getappnativememinfoasync-f.md#getAppNativeMemInfoAsync) |
+| [getAppNativeMemInfoWithCache](arkts-performanceanalysis-hidebug-getappnativememinfowithcache-f.md#getAppNativeMemInfoWithCache) |
+| [startAppTraceCapture](arkts-performanceanalysis-hidebug-startapptracecapture-f.md#startAppTraceCapture) |
+| [stopAppTraceCapture](arkts-performanceanalysis-hidebug-stopapptracecapture-f.md#stopAppTraceCapture) |
+| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md#getGwpAsanGrayscaleState) |
+| [requestTrace](arkts-performanceanalysis-hidebug-requesttrace-f.md#requestTrace) |
+| [getVMRuntimeStats](arkts-performanceanalysis-hidebug-getvmruntimestats-f.md#getVMRuntimeStats) |
+| [getVMRuntimeStat](arkts-performanceanalysis-hidebug-getvmruntimestat-f.md#getVMRuntimeStat) |
+| [setAppResourceLimit](arkts-performanceanalysis-hidebug-setappresourcelimit-f.md#setAppResourceLimit) |
+| [isDebugState](arkts-performanceanalysis-hidebug-isdebugstate-f.md#isDebugState) |
+| [getGraphicsMemory](arkts-performanceanalysis-hidebug-getgraphicsmemory-f.md#getGraphicsMemory) |
+| [getGraphicsMemorySync](arkts-performanceanalysis-hidebug-getgraphicsmemorysync-f.md#getGraphicsMemorySync) |
+| [getGraphicsMemorySummary](arkts-performanceanalysis-hidebug-getgraphicsmemorysummary-f.md#getGraphicsMemorySummary) |
+| [setJsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-setjsrawheaptrimlevel-f.md#setJsRawHeapTrimLevel) |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpJsRawHeapData) |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpJsRawHeapData) |
+| [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md#dumpJsRawHeapData) |
+| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md#enableGwpAsanGrayscale) |
+| [disableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-disablegwpasangrayscale-f.md#disableGwpAsanGrayscale) |
+| [getGwpAsanGrayscaleState](arkts-performanceanalysis-hidebug-getgwpasangrayscalestate-f.md#getGwpAsanGrayscaleState) |
+| [setProcDumpInSharedOOM](arkts-performanceanalysis-hidebug-setprocdumpinsharedoom-f.md#setProcDumpInSharedOOM) |
+| [getRssInfo](arkts-performanceanalysis-hidebug-getrssinfo-f.md#getRssInfo) |
+| [enableGwpAsanGrayscale](arkts-performanceanalysis-hidebug-enablegwpasangrayscale-f.md#enableGwpAsanGrayscale) |
 
 ### 接口
 

@@ -10,9 +10,11 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
 
 启动键鼠穿越，使用选项开始屏幕跳转。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -27,8 +29,8 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetNetworkId | string | 是 | 键鼠穿越目标设备描述符。 |
-| inputDeviceId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 发起穿越操作的输入设备ID。 |
-| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | 否 | 穿越可选控制参数，用于控制穿出点具体位置等。不设置此参数时，本接口能力 与[cooperate.activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-1) 相同。 |
+| inputDeviceId | int | 是 | 发起穿越操作的输入设备ID。 |
+| cooperateOptions | [CooperateOptions](arkts-distributedservice-cooperate-cooperateoptions-i-sys.md) | 否 | 穿越可选控制参数，用于控制穿出点具体位置等。不设置此参数时，本接口能力 与[cooperate.activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate（系统接口）) 相同。 |
 
 **返回值：**
 
@@ -40,9 +42,9 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: in
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [20900001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes: &lt;br&gt;1. A system error, such as null pointer, container-related exception, or IPC exception. &lt;br&gt;2. N-API invocation exception or invalid N-API status. |
 
 ## 示例
 

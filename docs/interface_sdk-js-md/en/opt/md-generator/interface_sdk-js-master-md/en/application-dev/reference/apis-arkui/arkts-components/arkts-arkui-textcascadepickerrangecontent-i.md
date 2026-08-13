@@ -4,6 +4,8 @@ Defines the content for multi-column picker options.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextCascadePickerRangeContent--><!--Device-unnamed-declare interface TextCascadePickerRangeContent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ Linkage data.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -34,13 +38,13 @@ Linkage data.
 text: string | Resource
 ```
 
-Text information.
-
-Note: Text truncation occurs when content exceeds column width.
+Text information. Note: Text truncation occurs when content exceeds column width.
 
 **Type:** string \| Resource
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

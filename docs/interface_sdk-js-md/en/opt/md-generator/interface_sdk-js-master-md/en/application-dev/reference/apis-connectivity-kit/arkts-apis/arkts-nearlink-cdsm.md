@@ -4,6 +4,8 @@ Provides methods related to nearlink CDSM(Coordinated Devices Set Management).
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace cdsm--><!--Device-unnamed-declare namespace cdsm-End-->
@@ -22,7 +24,7 @@ import { cdsm } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) |
+| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createCdsmClient) |
 
 ### Interfaces
 

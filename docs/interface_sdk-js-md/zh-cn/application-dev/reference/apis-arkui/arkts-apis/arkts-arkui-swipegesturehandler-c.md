@@ -2,13 +2,15 @@
 
 快滑手势处理器对象类型。
 
-**继承/实现关系：** SwipeGestureHandler extends [GestureHandler<SwipeGestureHandler>](GestureHandler<SwipeGestureHandler>)
+**继承/实现关系：** SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare class SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>--><!--Device-unnamed-declare class SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class SwipeGestureHandler--><!--Device-unnamed-declare class SwipeGestureHandler-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ constructor(options?: SwipeGestureHandlerOptions)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -49,6 +53,8 @@ onAction(event: Callback<GestureEvent>): SwipeGestureHandler
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

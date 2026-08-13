@@ -2,7 +2,9 @@
 
 Report mode used during scan.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-enum ScanReportMode--><!--Device-ble-enum ScanReportMode-End-->
 
@@ -16,11 +18,13 @@ NORMAL = 1
 
 In normal mode, the advertisement packet is reported immediately after being scanned.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanReportMode-NORMAL = 1--><!--Device-ScanReportMode-NORMAL = 1-End-->
 
@@ -32,13 +36,15 @@ In normal mode, the advertisement packet is reported immediately after being sca
 BATCH = 2
 ```
 
-Enables delayed sending of advertising packets in batch mode by the interval specified by[interval](arkts-connectivity-ble-scanoptions-i.md#interval).
+Enables delayed sending of advertising packets in batch mode by the interval specified by [interval](arkts-connectivity-ble-scanoptions-i.md#interval).
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanReportMode-BATCH = 2--><!--Device-ScanReportMode-BATCH = 2-End-->
 
@@ -52,11 +58,13 @@ FENCE_SENSITIVITY_LOW = 10
 
 In low sensitivity fence mode, the advertisement packets are reported only when they are received for the first time and lost for the last time. The reception sensitivity is low.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanReportMode-FENCE_SENSITIVITY_LOW = 10--><!--Device-ScanReportMode-FENCE_SENSITIVITY_LOW = 10-End-->
 
@@ -70,11 +78,13 @@ FENCE_SENSITIVITY_HIGH = 11
 
 In high sensitivity fence mode, the advertisement packets are reported only when they are received for the first time and lost for the last time. The reception sensitivity is high.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ScanReportMode-FENCE_SENSITIVITY_HIGH = 11--><!--Device-ScanReportMode-FENCE_SENSITIVITY_HIGH = 11-End-->
 

@@ -6,6 +6,8 @@ Defines LineHeightStyle.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class LineHeightStyle--><!--Device-unnamed-export declare class LineHeightStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,6 +50,8 @@ constructor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LineHeightStyle-constructor(lineHeight: LengthMetrics, lineHeightMultiple: double)--><!--Device-LineHeightStyle-constructor(lineHeight: LengthMetrics, lineHeightMultiple: double)-End-->
@@ -65,13 +71,15 @@ constructor.
 readonly lineHeight: double
 ```
 
-Get the lineHeight value of the StyledString.The unit is vp.
+Get the lineHeight value of the StyledString. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -85,13 +93,15 @@ Get the lineHeight value of the StyledString.The unit is vp.
 readonly lineHeightMultiple?: double
 ```
 
-Get the lineHeightMultiple value of the StyledString.The unit is vp.
+Get the lineHeightMultiple value of the StyledString. The unit is vp.
 
 **Type:** double
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

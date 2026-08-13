@@ -4,6 +4,8 @@ Declaration of the tab item.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class TabTitleBarTabItem--><!--Device-unnamed-export declare class TabTitleBarTabItem-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Icon of the tab.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -46,6 +50,8 @@ Symbol icon of the tab, which has higher priority than **icon**.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -65,6 +71,8 @@ Text of the tab.
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

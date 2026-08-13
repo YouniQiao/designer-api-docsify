@@ -2,7 +2,9 @@
 
 Enumeration of PhotoSource type
 
-**Since:** 20
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum PhotoSource--><!--Device-photoAccessHelper-export enum PhotoSource-End-->
 
@@ -16,9 +18,11 @@ ALL = 0
 
 Images and videos from all sources.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSource-ALL = 0--><!--Device-PhotoSource-ALL = 0-End-->
 
@@ -32,9 +36,11 @@ CAMERA = 1
 
 Image or video taken by the camera.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSource-CAMERA = 1--><!--Device-PhotoSource-CAMERA = 1-End-->
 
@@ -48,9 +54,11 @@ SCREENSHOT = 2
 
 Screenshot or screen capture video.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSource-SCREENSHOT = 2--><!--Device-PhotoSource-SCREENSHOT = 2-End-->
 

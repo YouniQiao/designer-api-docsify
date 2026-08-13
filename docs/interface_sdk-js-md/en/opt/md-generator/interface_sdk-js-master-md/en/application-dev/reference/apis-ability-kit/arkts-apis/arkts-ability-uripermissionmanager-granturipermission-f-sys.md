@@ -17,20 +17,11 @@ function grantUriPermission(
   ): void
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
-[Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
-> of another application. If the application does not have this permission, it can grant only its own URI
-> permissions.
-> 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the
-> system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -53,14 +44,14 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
 
 ## Examples
 
@@ -92,23 +83,63 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 ## grantUriPermission
 
 ```TypeScript
+function grantUriPermission(
+    uri: string,
+    flag: wantConstant.Flags,
+    targetBundleName: string,
+    callback: AsyncCallback<void>
+  ): void
+```
+
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses an asynchronous callback to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-uriPermissionManager-function grantUriPermission(    uri: string,    flag: wantConstant.Flags,    targetBundleName: string,    callback: AsyncCallback<void>  ): void--><!--Device-uriPermissionManager-function grantUriPermission(    uri: string,    flag: wantConstant.Flags,    targetBundleName: string,    callback: AsyncCallback<void>  ): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| flag | wantConstant.Flags | Yes |
+| targetBundleName | string | Yes |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+
+
+## grantUriPermission
+
+```TypeScript
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<number>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
-[Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
-> of another application. If the application does not have this permission, it can grant only its own URI
-> permissions.
-> 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the
-> system cannot guarantee their functions.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -136,14 +167,14 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
 
 ## Examples
 
@@ -175,26 +206,61 @@ uriPermissionManager.grantUriPermission(uri, wantConstant.Flags.FLAG_AUTH_READ_U
 ## grantUriPermission
 
 ```TypeScript
+function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>
+```
+
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
+
+<!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>--><!--Device-uriPermissionManager-function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| uri | string | Yes |
+| flag | wantConstant.Flags | Yes |
+| targetBundleName | string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+
+
+## grantUriPermission
+
+```TypeScript
 function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleName: string, appCloneIndex: number): Promise<void>
 ```
 
-Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For  details about how to access the file based on the URI, see  
-[Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result.
+Grants the URI permission to an application. If the call is successful, the application obtains the permission to access the file specified by the URI. Once the application exits, the permission will be automatically revoked. For details about how to access the file based on the URI, see [Sharing an Application File](../../../file-management/share-app-file.md). This API uses a promise to return the result. > **NOTE：**> > - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs > of another application. If the application does not have this permission, it can grant only its own URI > permissions. > > - This API can be used to grant URI access permission to a cloned application. You need to specify the > application bundle name and index of the cloned application. > > - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the > [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the > system cannot guarantee their functions.
 
-> **NOTE：**
-> 
-> - If an application has the ohos.permission.PROXY_AUTHORIZATION_URI permission, it can grant the accessible URIs
-> of another application. If the application does not have this permission, it can grant only its own URI
-> permissions.
-> 
-> - This API can be used to grant URI access permission to a cloned application. You need to specify the
-> application bundle name and index of the cloned application.
-> 
-> - URI processing involves encoding and decoding. Therefore, the input URI must be obtained through the
-> [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath) API. For URIs combined by the application, the
-> system cannot guarantee their functions.
+**Since:** 23
 
-**Since:** 14
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PROXY_AUTHORIZATION_URI
 
@@ -223,15 +289,15 @@ Grants the URI permission to an application. If the call is successful, the appl
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000081](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [16000060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [16000058](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
-| [16000059](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000081](../errorcode-ability.md#16000081-failed-to-obtain-the-target-application-information) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [16000060](../errorcode-ability.md#16000060-sandbox-applications-cannot-grant-uri-permission) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000058](../errorcode-ability.md#16000058-specified-uri-flag-is-invalid) |
+| [16000059](../errorcode-ability.md#16000059-specified-uri-type-is-invalid) |
 
 ## Examples
 

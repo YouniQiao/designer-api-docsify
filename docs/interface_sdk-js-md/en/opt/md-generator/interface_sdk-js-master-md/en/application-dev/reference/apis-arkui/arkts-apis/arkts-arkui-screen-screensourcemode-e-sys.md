@@ -2,7 +2,9 @@
 
 Enumerates the sources of the content displayed on the screen.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-screen-enum ScreenSourceMode--><!--Device-screen-enum ScreenSourceMode-End-->
 
@@ -18,7 +20,9 @@ SCREEN_MAIN = 0
 
 Content from the primary screen (default).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenSourceMode-SCREEN_MAIN = 0--><!--Device-ScreenSourceMode-SCREEN_MAIN = 0-End-->
 
@@ -34,7 +38,9 @@ SCREEN_MIRROR = 1
 
 Content from a mirror screen.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenSourceMode-SCREEN_MIRROR = 1--><!--Device-ScreenSourceMode-SCREEN_MIRROR = 1-End-->
 
@@ -50,7 +56,9 @@ SCREEN_EXTEND = 2
 
 Content from an extended screen.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenSourceMode-SCREEN_EXTEND = 2--><!--Device-ScreenSourceMode-SCREEN_EXTEND = 2-End-->
 
@@ -66,7 +74,9 @@ SCREEN_ALONE = 3
 
 The source is unspecified.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ScreenSourceMode-SCREEN_ALONE = 3--><!--Device-ScreenSourceMode-SCREEN_ALONE = 3-End-->
 

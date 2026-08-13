@@ -18,7 +18,7 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 **Deprecated since:** 12
 
-**Substitutes:** [getPortSupportModes](usbManager.getPortSupportModes(portId:)
+**Substitutes:** [getPortSupportModes](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md#getPortSupportModes-(System-API))(portId: int)
 
 <!--Device-usbManager-function getSupportedModes(portId: number): PortModeType--><!--Device-usbManager-function getSupportedModes(portId: number): PortModeType-End-->
 
@@ -42,4 +42,4 @@ Obtains the mask combination for the supported mode list of a given USB port.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

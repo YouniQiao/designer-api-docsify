@@ -14,7 +14,9 @@ function isGeocoderAvailable(): boolean
 
 Obtain geocoding service status.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-function isGeocoderAvailable(): boolean--><!--Device-geoLocationManager-function isGeocoderAvailable(): boolean-End-->
 
@@ -30,8 +32,8 @@ Obtain geocoding service status.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3301000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3301000](../errorcode-geoLocationManager.md#3301000-location-service-unavailable) |
 
 ## Examples
 

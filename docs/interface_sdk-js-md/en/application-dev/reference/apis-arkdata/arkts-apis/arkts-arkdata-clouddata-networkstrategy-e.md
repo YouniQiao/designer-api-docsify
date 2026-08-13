@@ -2,9 +2,11 @@
 
 Enumerates the network sync options.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-enum NetWorkStrategy--><!--Device-cloudData-enum NetWorkStrategy-End-->
 
@@ -18,9 +20,11 @@ WIFI = 1
 
 Sync over Wi-Fi.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetWorkStrategy-WIFI = 1--><!--Device-NetWorkStrategy-WIFI = 1-End-->
 
@@ -34,9 +38,11 @@ CELLULAR = 2
 
 Sync over the cellular network.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetWorkStrategy-CELLULAR = 2--><!--Device-NetWorkStrategy-CELLULAR = 2-End-->
 

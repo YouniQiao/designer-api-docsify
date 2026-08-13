@@ -4,6 +4,8 @@ Enumerates the text that can be displayed on the paste button.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum PasteDescription--><!--Device-unnamed-declare enum PasteDescription-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ PASTE = 0
 Paste
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

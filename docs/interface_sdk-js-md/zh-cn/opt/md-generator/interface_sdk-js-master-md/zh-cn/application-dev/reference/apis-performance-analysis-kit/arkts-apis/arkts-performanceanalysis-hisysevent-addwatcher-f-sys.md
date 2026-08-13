@@ -6,9 +6,11 @@
 function addWatcher(watcher: Watcher): void
 ```
 
-订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md#Watcher)类型的对象作为事件参数。
+订阅系统事件，接收[Watcher](arkts-performanceanalysis-hisysevent-watcher-i-sys.md#Watcher（系统接口）)类型的对象作为事件参数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.READ_DFX_SYSEVENT
 
@@ -28,11 +30,11 @@ function addWatcher(watcher: Watcher): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [11200102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200102-系统事件监听者包含的监听规则数量超过限制) |
-| [11200101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-performance-analysis-kit/errorcode-hisysevent-sys.md#11200101-系统事件监听者的数量超过限制) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [11200102](../errorcode-hisysevent-sys.md#11200102-系统事件监听者包含的监听规则数量超过限制) |
+| [11200101](../errorcode-hisysevent-sys.md#11200101-系统事件监听者的数量超过限制) |
 
 ## 示例
 

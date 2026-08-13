@@ -6,11 +6,11 @@
 function closePipe(pipe: USBDevicePipe): number
 ```
 
-关闭设备消息控制通道。
+关闭设备消息控制通道。 1. 需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)获取设备列表； 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)获取设备请求权限； 3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)得到devicepipe作为参数。
 
-1. 需要调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md#getDevices)获取设备列表；2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md#requestRight)获取设备请求权限；3. 调用[usbManager.connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md#connectDevice)得到devicepipe作为参数。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-usbManager-function closePipe(pipe: USBDevicePipe): int--><!--Device-usbManager-function closePipe(pipe: USBDevicePipe): int-End-->
 
@@ -32,8 +32,8 @@ function closePipe(pipe: USBDevicePipe): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

@@ -1,6 +1,6 @@
 # UiDriver
 
-The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot.All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**.
+The **UiDriver** class is the main entry to the UiTest framework. It provides APIs for features such as component matching/search, key injection, coordinate clicking/sliding, and screenshot. All APIs provided by this class, except **UiDriver.create()**, use a promise to return the result and must be invoked using **await**.
 
 **Since:** 8
 
@@ -56,9 +56,9 @@ Asserts that a component that matches the given attributes exists on the current
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | if the input parameters are invalid. |
-| [17000002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
+| [17000003](../errorcode-uitest.md#17000003-assertion-failure) | if the assertion failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | if the input parameters are invalid. |
+| [17000002](../errorcode-uitest.md#17000002-api-does-not-support-concurrent-calls) | The API does not support concurrent calls. |
 
 ## Examples
 
@@ -123,12 +123,7 @@ async function demo() {
 static create(): UiDriver
 ```
 
-Creates a **UiDriver** object and returns the object created. This API is a static API.
-
-> **NOTE：**
-> 
-> This method is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
+Creates a **UiDriver** object and returns the object created. This API is a static API. > **NOTE：**> > This method is supported since API version 8 and deprecated since API version 9. You are advised to use > [create&lt;sup&gt;9+&lt;/sup&gt;](arkts-test-uitest-driver-c.md#create) instead.
 
 **Since:** 8
 
@@ -262,7 +257,7 @@ Searches this **UiDriver** object for the target component that matches the give
 
 **Deprecated since:** 9
 
-**Substitutes:** [findComponent](Driver#findComponent(on:)
+**Substitutes:** [findComponent](arkts-test-uitest-driver-c.md#findComponent)(on: On)
 
 <!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>--><!--Device-UiDriver-findComponent(by: By): Promise<UiComponent>-End-->
 
@@ -306,7 +301,7 @@ Searches this **UiDriver** object for all components that match the given attrib
 
 **Deprecated since:** 9
 
-**Substitutes:** [findComponents](Driver#findComponents(on:)
+**Substitutes:** [findComponents](arkts-test-uitest-driver-c.md#findComponents)(on: On)
 
 <!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>--><!--Device-UiDriver-findComponents(by: By): Promise<Array<UiComponent>>-End-->
 
@@ -433,7 +428,7 @@ Captures the current screen of this **UiDriver** object and saves it as a PNG im
 
 **Deprecated since:** 9
 
-**Substitutes:** [screenCap](Driver#screenCap(savePath:)
+**Substitutes:** [screenCap](arkts-test-uitest-driver-c.md#screenCap)(savePath: string)
 
 <!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>--><!--Device-UiDriver-screenCap(savePath: string): Promise<boolean>-End-->
 
@@ -469,7 +464,7 @@ async function demo() {
 swipe(startx: number, starty: number, endx: number, endy: number): Promise<void>
 ```
 
-Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API  uses a promise to return the result.
+Swipes on this **UiDriver** object from the start point to the end point based on the given coordinates. This API uses a promise to return the result.
 
 **Since:** 8
 
@@ -524,7 +519,7 @@ Triggers a key event by passing the key code value. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [triggerKey](Driver#triggerKey(keyCode:)
+**Substitutes:** [triggerKey](arkts-test-uitest-driver-c.md#triggerKey)(keyCode: int)
 
 <!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>--><!--Device-UiDriver-triggerKey(keyCode: number): Promise<void>-End-->
 

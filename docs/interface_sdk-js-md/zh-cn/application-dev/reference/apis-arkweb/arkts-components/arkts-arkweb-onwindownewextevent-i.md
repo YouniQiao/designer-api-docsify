@@ -6,6 +6,8 @@ Defines the triggered callback when web page requires the user to create a windo
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnWindowNewExtEvent--><!--Device-unnamed-declare interface OnWindowNewExtEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Lets you set the WebviewController instance for creating a new window.
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +48,8 @@ true indicates the request to create a dialog and false indicates a new tab.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnWindowNewExtEvent-isAlert: boolean--><!--Device-OnWindowNewExtEvent-isAlert: boolean-End-->
@@ -63,6 +69,8 @@ true indicates that it is triggered by the user, and false indicates that it is 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -84,6 +92,8 @@ The navigation policy causing the new web view to be created.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy--><!--Device-OnWindowNewExtEvent-navigationPolicy: NavigationPolicy-End-->
@@ -104,6 +114,8 @@ Destination URL.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-OnWindowNewExtEvent-targetUrl: string--><!--Device-OnWindowNewExtEvent-targetUrl: string-End-->
@@ -123,6 +135,8 @@ Contains the attributes that a webpage requests from its containing web view, th
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

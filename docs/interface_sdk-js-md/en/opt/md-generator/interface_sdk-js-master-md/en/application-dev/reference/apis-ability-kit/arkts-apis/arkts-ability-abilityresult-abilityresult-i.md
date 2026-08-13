@@ -2,7 +2,9 @@
 
 The module defines the result code and data returned to the caller when a started UIAbility is terminated.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AbilityResult--><!--Device-unnamed-export interface AbilityResult-End-->
 
@@ -18,7 +20,9 @@ Indicates the result code returned after the ability is destroyed. You can defin
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,11 +36,13 @@ Indicates the result code returned after the ability is destroyed. You can defin
 want?: Want
 ```
 
-Indicates the data returned after the ability is destroyed. You can define the data returned.This parameter can be null.
+Indicates the data returned after the ability is destroyed. You can define the data returned. This parameter can be null.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

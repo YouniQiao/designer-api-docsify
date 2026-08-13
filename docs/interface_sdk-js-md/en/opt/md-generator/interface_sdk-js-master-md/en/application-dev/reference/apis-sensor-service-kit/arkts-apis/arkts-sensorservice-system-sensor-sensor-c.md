@@ -4,7 +4,7 @@
 
 **Deprecated since:** 8
 
-**Substitutes:** [sensor/sensor](ohos.sensor/sensor)
+**Substitutes:** [sensor/sensor](arkts-sensor.md#@ohos.sensor)
 
 <!--Device-unnamed-export default class Sensor--><!--Device-unnamed-export default class Sensor-End-->
 
@@ -48,19 +48,13 @@ Obtains the wearing state of a wearable device.
 static subscribeAccelerometer(options: subscribeAccelerometerOptions): void
 ```
 
-Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [ACCELEROMETER](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the acceleration sensor. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [ACCELEROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -82,19 +76,13 @@ Subscribes to data changes of the acceleration sensor. If this API is called mul
 static subscribeBarometer(options: SubscribeBarometerOptions): void
 ```
 
-Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application,the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [BAROMETER](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the barometer sensor. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [BAROMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -114,19 +102,13 @@ Subscribes to data changes of the barometer sensor. If this API is called multip
 static subscribeCompass(options: SubscribeCompassOptions): void
 ```
 
-Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application,the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [ORIENTATION](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options))
-> since API Version 8.
+Subscribes to data changes of the compass sensor. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [ORIENTATION](ohos.sensor/sensor.SensorId#ORIENTATION)
+**Substitutes:** [ORIENTATION](arkts-sensorservice-sensor-sensorid-e.md#ORIENTATION)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -146,21 +128,13 @@ Subscribes to data changes of the compass sensor. If this API is called multiple
 static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void
 ```
 
-Subscribes to data changes of the device orientation sensor.
-
-If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [ORIENTATION](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the device orientation sensor. If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event. > **NOTE：**> > Except for lite wearables, You are advised to use > [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -180,21 +154,13 @@ If this API is called multiple times for the same application, the last call tak
 static subscribeGyroscope(options: SubscribeGyroscopeOptions): void
 ```
 
-Subscribes to data changes of the gyroscope sensor.
-
-If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [GYROSCOPE](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the gyroscope sensor. If this API is called multiple times for the same application, the last call takes effect. However, this API cannot be called multiple times in one click event. > **NOTE：**> > Except for lite wearables, You are advised to use > [GYROSCOPE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -216,19 +182,13 @@ If this API is called multiple times for the same application, the last call tak
 static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 ```
 
-Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application,the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [HEART_RATE](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the heart rate sensor. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [HEART_RATE](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -250,13 +210,7 @@ Subscribes to data changes of the heart rate sensor. If this API is called multi
 static subscribeLight(options: SubscribeLightOptions): void
 ```
 
-Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [AMBIENT_LIGHT](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options))
-> since API Version 8.
+Subscribes to data changes of the ambient light sensor. If this API is called multiple times, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > since API Version 8.
 
 **Since:** 3
 
@@ -282,19 +236,13 @@ Subscribes to data changes of the ambient light sensor. If this API is called mu
 static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 ```
 
-Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [WEAR_DETECTION](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to wearing status changes of a wearable device. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [WEAR_DETECTION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -314,13 +262,7 @@ Subscribes to wearing status changes of a wearable device. If this API is called
 static subscribeProximity(options: SubscribeProximityOptions): void
 ```
 
-Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application,the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [PROXIMITY](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the proximity sensor. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [PROXIMITY](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
@@ -346,19 +288,13 @@ Subscribes to data changes of the proximity sensor. If this API is called multip
 static subscribeStepCounter(options: SubscribeStepCounterOptions): void
 ```
 
-Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [PEDOMETER](@ohos.sensor:sensor.on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options))
-> instead. since API Version 8.
+Subscribes to data changes of the step counter sensor. If this API is called multiple times for the same application, the last call takes effect. > **NOTE：**> > Except for lite wearables, You are advised to use > [PEDOMETER](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [on](@ohos.sensor:sensor.on(type:)
+**Substitutes:** [on](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -380,19 +316,13 @@ Subscribes to data changes of the step counter sensor. If this API is called mul
 static unsubscribeAccelerometer(): void
 ```
 
-Unsubscribes from data changes of the acceleration sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [ACCELEROMETER](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the acceleration sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [ACCELEROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -408,19 +338,13 @@ Unsubscribes from data changes of the acceleration sensor.
 static unsubscribeBarometer(): void
 ```
 
-Unsubscribes from data changes of the barometer sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [BAROMETER](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the barometer sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [BAROMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -434,19 +358,13 @@ Unsubscribes from data changes of the barometer sensor.
 static unsubscribeCompass(): void
 ```
 
-Unsubscribes from data changes of the compass sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [ORIENTATION](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;))
-> instead.
+Unsubscribes from data changes of the compass sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -460,19 +378,13 @@ Unsubscribes from data changes of the compass sensor.
 static unsubscribeDeviceOrientation(): void
 ```
 
-Unsubscribes from data changes of the device orientation sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [ORIENTATION](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the device orientation sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -486,19 +398,13 @@ Unsubscribes from data changes of the device orientation sensor.
 static unsubscribeGyroscope(): void
 ```
 
-Unsubscribes from data changes of the gyroscope sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [GYROSCOPE](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the gyroscope sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [GYROSCOPE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -514,19 +420,13 @@ Unsubscribes from data changes of the gyroscope sensor.
 static unsubscribeHeartRate(): void
 ```
 
-Unsubscribes from data changes of the heart rate sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [HEART_RATE](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the heart rate sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [HEART_RATE](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **Required permissions:** ohos.permission.READ_HEALTH_DATA
 
@@ -542,19 +442,13 @@ Unsubscribes from data changes of the heart rate sensor.
 static unsubscribeLight(): void
 ```
 
-Unsubscribes from data changes of the ambient light sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [AMBIENT_LIGHT](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the ambient light sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -568,19 +462,13 @@ Unsubscribes from data changes of the ambient light sensor.
 static unsubscribeOnBodyState(): void
 ```
 
-Unsubscribes from wearing status changes of a wearable device.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [WEAR_DETECTION](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from wearing status changes of a wearable device. > **NOTE：**> > Except for lite wearables, You are advised to use > [WEAR_DETECTION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -594,13 +482,7 @@ Unsubscribes from wearing status changes of a wearable device.
 static unsubscribeProximity(): void
 ```
 
-Unsubscribes from data changes of the proximity sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [PROXIMITY](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the proximity sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [PROXIMITY](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
@@ -620,19 +502,13 @@ Unsubscribes from data changes of the proximity sensor.
 static unsubscribeStepCounter(): void
 ```
 
-Unsubscribes from data changes of the step counter sensor.
-
-> **NOTE：**
-> 
-> Except for lite wearables, You are advised to use
-> [PEDOMETER](@ohos.sensor:sensor.off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;))
-> instead. since API Version 8.
+Unsubscribes from data changes of the step counter sensor. > **NOTE：**> > Except for lite wearables, You are advised to use > [PEDOMETER](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > instead. since API Version 8.
 
 **Since:** 3
 
 **Deprecated since:** 8
 
-**Substitutes:** [off](@ohos.sensor:sensor.off(type:)
+**Substitutes:** [off](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR)(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 

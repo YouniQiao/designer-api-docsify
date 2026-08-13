@@ -2,7 +2,9 @@
 
 Represents a USB device pipe, which is used to determine a USB device.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBDevicePipe--><!--Device-usbManager-interface USBDevicePipe-End-->
 
@@ -24,7 +26,9 @@ Bus address.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDevicePipe-busNum: int--><!--Device-USBDevicePipe-busNum: int-End-->
 
@@ -40,7 +44,9 @@ Device address.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBDevicePipe-devAddress: int--><!--Device-USBDevicePipe-devAddress: int-End-->
 

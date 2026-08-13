@@ -1,6 +1,6 @@
 # GeometryInfo
 
-Provides layout geometry information of the parent component (a custom component).Inherits from [SizeResult](arkts-arkui-sizeresult-i.md#SizeResult).
+Provides layout geometry information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-sizeresult-i.md#SizeResult).
 
 **Inheritance/Implementation:** GeometryInfo extends [SizeResult](arkts-arkui-sizeresult-i.md#SizeResult)
 
@@ -8,7 +8,9 @@ Provides layout geometry information of the parent component (a custom component
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-unnamed-declare interface GeometryInfo extends SizeResult--><!--Device-unnamed-declare interface GeometryInfo extends SizeResult-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface GeometryInfo--><!--Device-unnamed-declare interface GeometryInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Provides layout geometry information of the parent component (a custom component
 borderWidth: EdgeWidth
 ```
 
-Width of the parent component's border.Unit: vp.
+Width of the parent component's border. Unit: vp.
 
 **Type:** EdgeWidth
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,13 +44,15 @@ Width of the parent component's border.Unit: vp.
 margin: Margin
 ```
 
-Margin values of the parent component.Unit: vp.
+Margin values of the parent component. Unit: vp.
 
 **Type:** Margin
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,13 +68,15 @@ Margin values of the parent component.Unit: vp.
 padding: Padding
 ```
 
-Padding values of the parent component.Unit: vp.
+Padding values of the parent component. Unit: vp.
 
-**Type:** [Padding](../arkts-apis/arkts-arkui-units-padding-i.md)
+**Type:** Padding
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

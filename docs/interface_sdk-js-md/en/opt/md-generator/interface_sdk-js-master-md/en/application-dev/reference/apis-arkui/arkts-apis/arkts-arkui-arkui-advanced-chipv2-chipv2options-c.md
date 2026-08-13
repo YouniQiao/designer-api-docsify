@@ -4,7 +4,7 @@ Defines chip options class.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export class ChipV2Options--><!--Device-unnamed-export class ChipV2Options-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipV2Options
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -40,28 +42,11 @@ The constructor of ChipV2Options
 | --- | --- | --- |
 | config | [IChipV2OptionsConfig](arkts-arkui-arkui-advanced-chipv2-ichipv2optionsconfig-i.md) | Yes |
 
-## onClose
-
-```TypeScript
-public onClose?: VoidCallback
-```
-
-On close action.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2Options-public onClose?: VoidCallback--><!--Device-ChipV2Options-public onClose?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+  public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description for Chip.
@@ -70,18 +55,21 @@ Set accessibility description for Chip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Options-public accessibilityDescription?: ResourceStr-End-->
+<!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Options-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel?: string
+@Trace
+  public accessibilityLevel?: string
 ```
 
 Set accessibility level for Chip.
@@ -90,18 +78,21 @@ Set accessibility level for Chip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public accessibilityLevel?: string--><!--Device-ChipV2Options-public accessibilityLevel?: string-End-->
+<!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2Options-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilitySelectedType
 
 ```TypeScript
-public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
+@Trace
+  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType
 ```
 
 Sets the accessibility selection type for the chip.
@@ -110,18 +101,21 @@ Sets the accessibility selection type for the chip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-ChipV2Options-public accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
+<!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType--><!--Device-ChipV2Options-@Trace  public accessibilitySelectedType?: ChipV2AccessibilitySelectedType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activated
 
 ```TypeScript
-public activated?: boolean
+@Trace
+  public activated?: boolean
 ```
 
 Set whether chip is active or not.
@@ -130,18 +124,21 @@ Set whether chip is active or not.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public activated?: boolean--><!--Device-ChipV2Options-public activated?: boolean-End-->
+<!--Device-ChipV2Options-@Trace  public activated?: boolean--><!--Device-ChipV2Options-@Trace  public activated?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedBackgroundColor
 
 ```TypeScript
-public activatedBackgroundColor?: ColorMetrics
+@Trace
+  public activatedBackgroundColor?: ColorMetrics
 ```
 
 Chip background color when chip is activated.
@@ -150,38 +147,44 @@ Chip background color when chip is activated.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public activatedBackgroundColor?: ColorMetrics--><!--Device-ChipV2Options-public activatedBackgroundColor?: ColorMetrics-End-->
+<!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public activatedBackgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## activatedBackgroundSystemMaterial
 
 ```TypeScript
-public activatedBackgroundSystemMaterial?: uiMaterial.Material
+@Trace
+  public activatedBackgroundSystemMaterial?: uiMaterial.Material
 ```
 
-Set system-styled materials for the component which is activated. Different materials have different effects,which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
+Set system-styled materials for the component which is activated. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
 
 **Type:** uiMaterial.Material
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-public activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
+<!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public activatedBackgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## allowClose
 
 ```TypeScript
-public allowClose?: boolean
+@Trace
+  public allowClose?: boolean
 ```
 
 Show close icon.
@@ -190,18 +193,21 @@ Show close icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public allowClose?: boolean--><!--Device-ChipV2Options-public allowClose?: boolean-End-->
+<!--Device-ChipV2Options-@Trace  public allowClose?: boolean--><!--Device-ChipV2Options-@Trace  public allowClose?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundColor
 
 ```TypeScript
-public backgroundColor?: ColorMetrics
+@Trace
+  public backgroundColor?: ColorMetrics
 ```
 
 Chip background color.
@@ -210,18 +216,21 @@ Chip background color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public backgroundColor?: ColorMetrics--><!--Device-ChipV2Options-public backgroundColor?: ColorMetrics-End-->
+<!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics--><!--Device-ChipV2Options-@Trace  public backgroundColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## backgroundSystemMaterial
 
 ```TypeScript
-public backgroundSystemMaterial?: uiMaterial.Material
+@Trace
+  public backgroundSystemMaterial?: uiMaterial.Material
 ```
 
 Set system-styled materials for the component. Different materials have different effects, which can influence the backgroundColor, border, shadow, and other visual attributes of the component.
@@ -230,18 +239,21 @@ Set system-styled materials for the component. Different materials have differen
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-public backgroundSystemMaterial?: uiMaterial.Material-End-->
+<!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material--><!--Device-ChipV2Options-@Trace  public backgroundSystemMaterial?: uiMaterial.Material-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## borderRadius
 
 ```TypeScript
-public borderRadius?: LengthMetrics
+@Trace
+  public borderRadius?: LengthMetrics
 ```
 
 Chip radius.
@@ -250,18 +262,21 @@ Chip radius.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public borderRadius?: LengthMetrics--><!--Device-ChipV2Options-public borderRadius?: LengthMetrics-End-->
+<!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public borderRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeIcon
 
 ```TypeScript
-public closeIcon?: ChipV2CloseIcon
+@Trace
+  public closeIcon?: ChipV2CloseIcon
 ```
 
 Set config for default close icon when 'allowClose' is true.
@@ -270,18 +285,21 @@ Set config for default close icon when 'allowClose' is true.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public closeIcon?: ChipV2CloseIcon--><!--Device-ChipV2Options-public closeIcon?: ChipV2CloseIcon-End-->
+<!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon--><!--Device-ChipV2Options-@Trace  public closeIcon?: ChipV2CloseIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## direction
 
 ```TypeScript
-public direction?: Direction
+@Trace
+  public direction?: Direction
 ```
 
 Indicates the attribute of the current chip direction.
@@ -290,18 +308,21 @@ Indicates the attribute of the current chip direction.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public direction?: Direction--><!--Device-ChipV2Options-public direction?: Direction-End-->
+<!--Device-ChipV2Options-@Trace  public direction?: Direction--><!--Device-ChipV2Options-@Trace  public direction?: Direction-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enabled
 
 ```TypeScript
-public enabled?: boolean
+@Trace
+  public enabled?: boolean
 ```
 
 Enable chip.
@@ -310,18 +331,21 @@ Enable chip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public enabled?: boolean--><!--Device-ChipV2Options-public enabled?: boolean-End-->
+<!--Device-ChipV2Options-@Trace  public enabled?: boolean--><!--Device-ChipV2Options-@Trace  public enabled?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
 
 ```TypeScript
-public fontSize?: LengthMetrics
+@Trace
+  public fontSize?: LengthMetrics
 ```
 
 Set font size for the label text and the close icon.
@@ -330,18 +354,21 @@ Set font size for the label text and the close icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public fontSize?: LengthMetrics--><!--Device-ChipV2Options-public fontSize?: LengthMetrics-End-->
+<!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Options-@Trace  public fontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
 
 ```TypeScript
-public label: ChipV2Label
+@Trace
+  public label: ChipV2Label
 ```
 
 Chip prefix icon.
@@ -350,18 +377,21 @@ Chip prefix icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public label: ChipV2Label--><!--Device-ChipV2Options-public label: ChipV2Label-End-->
+<!--Device-ChipV2Options-@Trace  public label: ChipV2Label--><!--Device-ChipV2Options-@Trace  public label: ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## maxFontScale
 
 ```TypeScript
-public maxFontScale?: number | Resource
+@Trace
+  public maxFontScale?: number | Resource
 ```
 
 Maximum font scale for Chip.
@@ -370,18 +400,21 @@ Maximum font scale for Chip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public maxFontScale?: number | Resource--><!--Device-ChipV2Options-public maxFontScale?: number | Resource-End-->
+<!--Device-ChipV2Options-@Trace  public maxFontScale?: number | Resource--><!--Device-ChipV2Options-@Trace  public maxFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## minFontScale
 
 ```TypeScript
-public minFontScale?: number | Resource
+@Trace
+  public minFontScale?: number | Resource
 ```
 
 Minimum font scale for Chip.
@@ -390,11 +423,13 @@ Minimum font scale for Chip.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public minFontScale?: number | Resource--><!--Device-ChipV2Options-public minFontScale?: number | Resource-End-->
+<!--Device-ChipV2Options-@Trace  public minFontScale?: number | Resource--><!--Device-ChipV2Options-@Trace  public minFontScale?: number | Resource-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -410,6 +445,8 @@ On clicked action.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -418,10 +455,33 @@ On clicked action.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## onClose
+
+```TypeScript
+public onClose?: VoidCallback
+```
+
+On close action.
+
+**Type:** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2Options-public onClose?: VoidCallback--><!--Device-ChipV2Options-public onClose?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## padding
 
 ```TypeScript
-public padding?: LocalizedPadding
+@Trace
+  public padding?: LocalizedPadding
 ```
 
 Chip padding.
@@ -430,18 +490,21 @@ Chip padding.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public padding?: LocalizedPadding--><!--Device-ChipV2Options-public padding?: LocalizedPadding-End-->
+<!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding--><!--Device-ChipV2Options-@Trace  public padding?: LocalizedPadding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## prefixIcon
 
 ```TypeScript
-public prefixIcon?: ChipV2Icon
+@Trace
+  public prefixIcon?: ChipV2Icon
 ```
 
 Chip prefix icon.
@@ -450,18 +513,21 @@ Chip prefix icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public prefixIcon?: ChipV2Icon--><!--Device-ChipV2Options-public prefixIcon?: ChipV2Icon-End-->
+<!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon--><!--Device-ChipV2Options-@Trace  public prefixIcon?: ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
 
 ```TypeScript
-public size?: ChipV2Size | SizeT<LengthMetrics>
+@Trace
+  public size?: ChipV2Size | SizeT<LengthMetrics>
 ```
 
 Chip size.
@@ -470,18 +536,21 @@ Chip size.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipV2Options-public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
+<!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>--><!--Device-ChipV2Options-@Trace  public size?: ChipV2Size | SizeT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffixIcon
 
 ```TypeScript
-public suffixIcon?: ChipV2Icon
+@Trace
+  public suffixIcon?: ChipV2Icon
 ```
 
 Chip suffix icon.
@@ -490,10 +559,12 @@ Chip suffix icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Options-public suffixIcon?: ChipV2Icon--><!--Device-ChipV2Options-public suffixIcon?: ChipV2Icon-End-->
+<!--Device-ChipV2Options-@Trace  public suffixIcon?: ChipV2Icon--><!--Device-ChipV2Options-@Trace  public suffixIcon?: ChipV2Icon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

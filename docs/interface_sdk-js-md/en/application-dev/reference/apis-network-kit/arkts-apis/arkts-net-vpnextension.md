@@ -6,6 +6,8 @@ Provides VPN related interfaces.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace vpnExtension--><!--Device-unnamed-declare namespace vpnExtension-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -22,19 +24,19 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection) | Create a VPN connection using the VpnExtensionContext. |
-| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver) | Create a VPN observer. |
-| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability) | Starts a new vpn extension ability. |
-| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability) | Stops a service within the same application. |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createVpnConnection) | Create a VPN connection using the VpnExtensionContext. |
+| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createVpnObserver) | Create a VPN observer. |
+| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startVpnExtensionAbility) | Starts a new vpn extension ability. |
+| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopVpnExtensionAbility) | Stops a service within the same application. |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md#isalwaysonvpnenabled) | Get the Always on VPN mode status for a device. |
-| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md#setalwaysonvpnenabled) | Set the Enable/Disable Always on VPN mode for a device. |
-| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md#updatevpnauthorizedstate) | Update a VPN dialog authorize information |
+| [isAlwaysOnVpnEnabled](arkts-network-vpnextension-isalwaysonvpnenabled-f-sys.md#isAlwaysOnVpnEnabled) | Get the Always on VPN mode status for a device. |
+| [setAlwaysOnVpnEnabled](arkts-network-vpnextension-setalwaysonvpnenabled-f-sys.md#setAlwaysOnVpnEnabled) | Set the Enable/Disable Always on VPN mode for a device. |
+| [updateVpnAuthorizedState](arkts-network-vpnextension-updatevpnauthorizedstate-f-sys.md#updateVpnAuthorizedState) | Update a VPN dialog authorize information |
 <!--DelEnd-->
 
 ### Interfaces

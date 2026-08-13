@@ -12,11 +12,11 @@ import { notificationManager } from '@kit.NotificationKit';
 function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 ```
 
-取消当前应用指定组下的通知。使用callback异步回调。
+取消当前应用指定组下的通知。使用callback异步回调。 通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。 取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
-通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void--><!--Device-notificationManager-function cancelGroup(groupName: string, callback: AsyncCallback<void>): void-End-->
 
@@ -33,10 +33,10 @@ function cancelGroup(groupName: string, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 
@@ -61,11 +61,11 @@ notificationManager.cancelGroup(groupName, cancelGroupCallback);
 function cancelGroup(groupName: string): Promise<void>
 ```
 
-取消当前应用指定组下的通知。使用Promise异步回调。
+取消当前应用指定组下的通知。使用Promise异步回调。 通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。 取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
 
-通知组groupName是在发布通知时通过NotificationRequest的groupName字段指定的分组标识。取消后，该组下所有通知将从通知中心移除。适用于需要按业务分组批量取消通知的场景。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>--><!--Device-notificationManager-function cancelGroup(groupName: string): Promise<void>-End-->
 
@@ -87,10 +87,10 @@ function cancelGroup(groupName: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [1600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600001-内部错误) |
-| [1600002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600002-序列化或反序列化错误) |
-| [1600003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-notification-kit/errorcode-notification.md#1600003-连接通知服务失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [1600001](../errorcode-notification.md#1600001-内部错误) |
+| [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) |
+| [1600003](../errorcode-notification.md#1600003-连接通知服务失败) |
 
 ## 示例
 

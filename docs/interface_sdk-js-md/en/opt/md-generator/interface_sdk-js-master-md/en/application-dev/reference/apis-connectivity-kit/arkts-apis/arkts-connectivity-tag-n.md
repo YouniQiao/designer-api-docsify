@@ -2,7 +2,9 @@
 
 Provides methods to operate or manage NFC tag.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace tag--><!--Device-unnamed-declare namespace tag-End-->
 
@@ -26,27 +28,31 @@ import { tag } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getNfcATag](arkts-connectivity-tag-getnfcatag-f.md#getnfcatag) |
-| [getNfcA](arkts-connectivity-tag-getnfca-f.md#getnfca) |
-| [getNfcBTag](arkts-connectivity-tag-getnfcbtag-f.md#getnfcbtag) |
-| [getNfcB](arkts-connectivity-tag-getnfcb-f.md#getnfcb) |
-| [getNfcFTag](arkts-connectivity-tag-getnfcftag-f.md#getnfcftag) |
-| [getNfcF](arkts-connectivity-tag-getnfcf-f.md#getnfcf) |
-| [getNfcVTag](arkts-connectivity-tag-getnfcvtag-f.md#getnfcvtag) |
-| [getNfcV](arkts-connectivity-tag-getnfcv-f.md#getnfcv) |
-| [getIsoDep](arkts-connectivity-tag-getisodep-f.md#getisodep) |
-| [getNdef](arkts-connectivity-tag-getndef-f.md#getndef) |
-| [getMifareClassic](arkts-connectivity-tag-getmifareclassic-f.md#getmifareclassic) |
-| [getMifareUltralight](arkts-connectivity-tag-getmifareultralight-f.md#getmifareultralight) |
-| [getNdefFormatable](arkts-connectivity-tag-getndefformatable-f.md#getndefformatable) |
-| [getBarcodeTag](arkts-connectivity-tag-getbarcodetag-f.md#getbarcodetag) |
-| [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md#gettaginfo) |
-| [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md#registerforegrounddispatch) |
-| [unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md#unregisterforegrounddispatch) |
-| [on](arkts-connectivity-tag-on-f.md#on) |
-| [off](arkts-connectivity-tag-off-f.md#off) |
-| [on](arkts-connectivity-tag-on-f.md#on-1) |
-| [off](arkts-connectivity-tag-off-f.md#off-1) |
+| [getNfcATag](arkts-connectivity-tag-getnfcatag-f.md#getNfcATag) |
+| [getNfcA](arkts-connectivity-tag-getnfca-f.md#getNfcA) |
+| [getNfcBTag](arkts-connectivity-tag-getnfcbtag-f.md#getNfcBTag) |
+| [getNfcB](arkts-connectivity-tag-getnfcb-f.md#getNfcB) |
+| [getNfcFTag](arkts-connectivity-tag-getnfcftag-f.md#getNfcFTag) |
+| [getNfcF](arkts-connectivity-tag-getnfcf-f.md#getNfcF) |
+| [getNfcVTag](arkts-connectivity-tag-getnfcvtag-f.md#getNfcVTag) |
+| [getNfcV](arkts-connectivity-tag-getnfcv-f.md#getNfcV) |
+| [getIsoDep](arkts-connectivity-tag-getisodep-f.md#getIsoDep) |
+| [getNdef](arkts-connectivity-tag-getndef-f.md#getNdef) |
+| [getMifareClassic](arkts-connectivity-tag-getmifareclassic-f.md#getMifareClassic) |
+| [getMifareUltralight](arkts-connectivity-tag-getmifareultralight-f.md#getMifareUltralight) |
+| [getNdefFormatable](arkts-connectivity-tag-getndefformatable-f.md#getNdefFormatable) |
+| [getBarcodeTag](arkts-connectivity-tag-getbarcodetag-f.md#getBarcodeTag) |
+| [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md#getTagInfo) |
+| [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md#registerForegroundDispatch) |
+| [unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md#unregisterForegroundDispatch) |
+| [on_readerMode](arkts-connectivity-tag-onreadermode-f.md) |
+| [onReaderMode](arkts-connectivity-tag-onreadermode-f.md#onReaderMode) |
+| [off_readerMode](arkts-connectivity-tag-offreadermode-f.md) |
+| [offReaderMode](arkts-connectivity-tag-offreadermode-f.md#offReaderMode) |
+| [on_readerModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md) |
+| [onReaderModeWithInterval](arkts-connectivity-tag-onreadermodewithinterval-f.md#onReaderModeWithInterval) |
+| [off_readerModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md) |
+| [offReaderModeWithInterval](arkts-connectivity-tag-offreadermodewithinterval-f.md#offReaderModeWithInterval) |
 
 ### Interfaces
 
@@ -94,16 +100,16 @@ import { tag } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [NFC_A](arkts-connectivity-tag-con.md#nfc_a) |
-| [NFC_B](arkts-connectivity-tag-con.md#nfc_b) |
-| [ISO_DEP](arkts-connectivity-tag-con.md#iso_dep) |
-| [NFC_F](arkts-connectivity-tag-con.md#nfc_f) |
-| [NFC_V](arkts-connectivity-tag-con.md#nfc_v) |
-| [NDEF](arkts-connectivity-tag-con.md#ndef) |
-| [NDEF_FORMATABLE](arkts-connectivity-tag-con.md#ndef_formatable) |
-| [MIFARE_CLASSIC](arkts-connectivity-tag-con.md#mifare_classic) |
-| [MIFARE_ULTRALIGHT](arkts-connectivity-tag-con.md#mifare_ultralight) |
-| [NFC_BARCODE](arkts-connectivity-tag-con.md#nfc_barcode) |
-| [RTD_TEXT](arkts-connectivity-tag-con.md#rtd_text) |
-| [RTD_URI](arkts-connectivity-tag-con.md#rtd_uri) |
-| [SKIP_NDEF](arkts-connectivity-tag-con.md#skip_ndef) |
+| [NFC_A](arkts-connectivity-tag-con.md#NFC_A) |
+| [NFC_B](arkts-connectivity-tag-con.md#NFC_B) |
+| [ISO_DEP](arkts-connectivity-tag-con.md#ISO_DEP) |
+| [NFC_F](arkts-connectivity-tag-con.md#NFC_F) |
+| [NFC_V](arkts-connectivity-tag-con.md#NFC_V) |
+| [NDEF](arkts-connectivity-tag-con.md#NDEF) |
+| [NDEF_FORMATABLE](arkts-connectivity-tag-con.md#NDEF_FORMATABLE) |
+| [MIFARE_CLASSIC](arkts-connectivity-tag-con.md#MIFARE_CLASSIC) |
+| [MIFARE_ULTRALIGHT](arkts-connectivity-tag-con.md#MIFARE_ULTRALIGHT) |
+| [NFC_BARCODE](arkts-connectivity-tag-con.md#NFC_BARCODE) |
+| [RTD_TEXT](arkts-connectivity-tag-con.md#RTD_TEXT) |
+| [RTD_URI](arkts-connectivity-tag-con.md#RTD_URI) |
+| [SKIP_NDEF](arkts-connectivity-tag-con.md#SKIP_NDEF) |

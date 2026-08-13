@@ -2,7 +2,9 @@
 
 Describes upload file information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface UploadFile--><!--Device-intelligentVoice-interface UploadFile-End-->
 
@@ -26,7 +28,9 @@ Files content.
 
 **Type:** Array&lt;ArrayBuffer&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadFile-filesContent: Array<ArrayBuffer>--><!--Device-UploadFile-filesContent: Array<ArrayBuffer>-End-->
 
@@ -44,7 +48,9 @@ Files description.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadFile-filesDescription: string--><!--Device-UploadFile-filesDescription: string-End-->
 
@@ -62,7 +68,9 @@ Report file type.
 
 **Type:** [UploadFileType](arkts-basicservices-intelligentvoice-uploadfiletype-e-sys.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UploadFile-type: UploadFileType--><!--Device-UploadFile-type: UploadFileType-End-->
 

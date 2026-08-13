@@ -12,9 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo>>
 ```
 
-Obtains the [provision](bundleManager/AppProvisionInfo) configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
+Obtains the provision configuration file information of all applications based on the given user ID. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or (ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS)
 
@@ -40,9 +42,9 @@ Obtains the [provision](bundleManager/AppProvisionInfo) configuration file infor
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-user-id-does-not-exist) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) |
 
 ## Examples
 

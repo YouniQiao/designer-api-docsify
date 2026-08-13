@@ -1,9 +1,10 @@
 # ContinueDeviceInfo (System API)
 
-The module defines the parameters required for initiating mission continuation. For details about mission continuation, see  
-[continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission)
+The module defines the parameters required for initiating mission continuation. For details about mission continuation, see [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission-(System-API))
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContinueDeviceInfo--><!--Device-unnamed-export interface ContinueDeviceInfo-End-->
 
@@ -21,7 +22,9 @@ Indicates the target deviceId to continue mission.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +44,9 @@ Indicates the mission to continue.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +66,9 @@ Indicates the original deviceId to continue mission.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,9 +86,11 @@ wantParam: Record<string, Object>
 
 Indicates the extended param.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

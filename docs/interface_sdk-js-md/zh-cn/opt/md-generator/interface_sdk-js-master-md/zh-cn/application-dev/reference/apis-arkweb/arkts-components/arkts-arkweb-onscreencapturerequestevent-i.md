@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnScreenCaptureRequestEvent--><!--Device-unnamed-declare interface OnScreenCaptureRequestEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ handler: ScreenCaptureHandler
 **类型：** [ScreenCaptureHandler](arkts-arkweb-screencapturehandler-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

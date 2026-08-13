@@ -6,6 +6,8 @@ Describes the attendees in a meeting.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export interface Attendee--><!--Device-calendarManager-export interface Attendee-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -30,6 +32,8 @@ Email address of the attendee, with a maximum of 5,000 characters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Attendee-email: string--><!--Device-Attendee-email: string-End-->
@@ -49,6 +53,8 @@ Name of the attendee, with a maximum of 5,000 characters.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +76,8 @@ Role of the Attendee.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Attendee-role?: AttendeeRole--><!--Device-Attendee-role?: AttendeeRole-End-->
@@ -90,6 +98,8 @@ Status of the attendee. If this parameter is not set, the default value is empty
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Attendee-status?: AttendeeStatus--><!--Device-Attendee-status?: AttendeeStatus-End-->
@@ -109,6 +119,8 @@ Type of the attendee. If this parameter is not set, the default value is empty.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

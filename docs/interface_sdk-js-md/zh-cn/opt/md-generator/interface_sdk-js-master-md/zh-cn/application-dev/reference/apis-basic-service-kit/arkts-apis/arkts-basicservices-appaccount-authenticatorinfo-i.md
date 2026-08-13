@@ -2,7 +2,9 @@
 
 表示OAuth认证器信息。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-appAccount-interface AuthenticatorInfo--><!--Device-appAccount-interface AuthenticatorInfo-End-->
 
@@ -18,7 +20,9 @@ iconId: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-iconId: long--><!--Device-AuthenticatorInfo-iconId: long-End-->
 
@@ -34,7 +38,9 @@ labelId: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-labelId: long--><!--Device-AuthenticatorInfo-labelId: long-End-->
 
@@ -50,7 +56,9 @@ owner: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthenticatorInfo-owner: string--><!--Device-AuthenticatorInfo-owner: string-End-->
 

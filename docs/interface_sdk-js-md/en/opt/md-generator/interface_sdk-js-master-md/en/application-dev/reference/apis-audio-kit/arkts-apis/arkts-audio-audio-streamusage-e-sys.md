@@ -2,7 +2,9 @@
 
 Enumerates the types of audio streams played.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum StreamUsage--><!--Device-audio-enum StreamUsage-End-->
 
@@ -16,7 +18,9 @@ STREAM_USAGE_SYSTEM = 9
 
 System usage, such as screen lock or key click.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StreamUsage-STREAM_USAGE_SYSTEM = 9--><!--Device-StreamUsage-STREAM_USAGE_SYSTEM = 9-End-->
 
@@ -32,7 +36,9 @@ STREAM_USAGE_DTMF = 14
 
 DTMF dial tone usage.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StreamUsage-STREAM_USAGE_DTMF = 14--><!--Device-StreamUsage-STREAM_USAGE_DTMF = 14-End-->
 
@@ -48,7 +54,9 @@ STREAM_USAGE_ENFORCED_TONE = 15
 
 Enforced tone usage, such as camera shutter.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StreamUsage-STREAM_USAGE_ENFORCED_TONE = 15--><!--Device-StreamUsage-STREAM_USAGE_ENFORCED_TONE = 15-End-->
 
@@ -64,7 +72,9 @@ STREAM_USAGE_ULTRASONIC = 16
 
 Ultrasonic playing usage. This type is only used for msdp condition.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StreamUsage-STREAM_USAGE_ULTRASONIC = 16--><!--Device-StreamUsage-STREAM_USAGE_ULTRASONIC = 16-End-->
 
@@ -80,7 +90,9 @@ STREAM_USAGE_VOICE_CALL_ASSISTANT = 21
 
 Voice call assistant type. This type is only used for call assistant functionalities.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-StreamUsage-STREAM_USAGE_VOICE_CALL_ASSISTANT = 21--><!--Device-StreamUsage-STREAM_USAGE_VOICE_CALL_ASSISTANT = 21-End-->
 
@@ -97,6 +109,8 @@ STREAM_USAGE_ANNOUNCEMENT = 22
 Announcement usage.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +130,8 @@ Emergency usage.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23--><!--Device-StreamUsage-STREAM_USAGE_EMERGENCY = 23-End-->
@@ -133,6 +149,8 @@ STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27
 Voice assistant broadcast usage for system app.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

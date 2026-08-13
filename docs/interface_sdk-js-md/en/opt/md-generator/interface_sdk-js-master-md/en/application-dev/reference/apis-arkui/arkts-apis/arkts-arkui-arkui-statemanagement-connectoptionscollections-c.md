@@ -1,16 +1,14 @@
 # ConnectOptionsCollections
 
-Defines the parameter type for the  
-[globalConnect](PersistenceV2.globalConnect&lt;T extends CollectionType<S>, S extends object&gt;&lt;S&gt;, S extends object>( type: ConnectOptionsCollections&lt;T, S&gt; | ConnectOptions&lt;T&gt; ))API. **ConnectOptionsCollections** is inherited from [ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md#ConnectOptions). You can use the  
-**ConnectOptionsCollections** input parameter to persist container data (such as **Array\&lt;S&gt;**).
+Defines the parameter type for the globalConnect API. **ConnectOptionsCollections** is inherited from [ConnectOptions\&lt;T\&gt;](arkts-arkui-arkui-statemanagement-connectoptions-c.md#ConnectOptions). You can use the **ConnectOptionsCollections** input parameter to persist container data (such as **Array\&lt;S&gt;**). The following shows the examples of **StorageDefaultCreator\&lt;T&gt;** and **StorageDefaultCreator\&lt;S&gt;**:
 
-The following shows the examples of **StorageDefaultCreator\&lt;T&gt;** and **StorageDefaultCreator\&lt;S&gt;**:
-
-**Inheritance/Implementation:** ConnectOptionsCollections extends [ConnectOptions<T>](ConnectOptions<T>)
+**Inheritance/Implementation:** ConnectOptionsCollections extends ConnectOptions<T>
 
 **Since:** 23
 
-<!--Device-unnamed-export class ConnectOptionsCollections<T extends CollectionType<S>, S extends object> extends ConnectOptions<T>--><!--Device-unnamed-export class ConnectOptionsCollections<T extends CollectionType<S>, S extends object> extends ConnectOptions<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ConnectOptionsCollections--><!--Device-unnamed-export class ConnectOptionsCollections-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,10 +24,13 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 defaultCreator?: StorageDefaultCreator<T>
 ```
 
-Persists container data. **defaultSubCreator** should be provided together with **defaultCreator**; otherwise, the container data cannot be persisted. The collection item type **S** must be the same as the return type of  
-**defaultSubCreator**. If **defaultSubCreator** is provided but **defaultCreator** is not, the persistence fails.
+Persists container data. **defaultSubCreator** should be provided together with **defaultCreator**; otherwise, the container data cannot be persisted. The collection item type **S** must be the same as the return type of **defaultSubCreator**. If **defaultSubCreator** is provided but **defaultCreator** is not, the persistence fails.
+
+**Type:** [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;T&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,10 +46,13 @@ Persists container data. **defaultSubCreator** should be provided together with 
 defaultSubCreator?: StorageDefaultCreator<S>
 ```
 
-Persists container data. If the return value of **defaultSubCreator** is **undefined** or **null**, the persistence fails. When a user-defined class collection (such as **Array&lt;ClassA&gt;**) is persisted, the generic type **T** in  
-**defaultCreator** is **Array&lt;ClassA&gt;**, and **S** in **defaultSubCreator** is **ClassA**.
+Persists container data. If the return value of **defaultSubCreator** is **undefined** or **null**, the persistence fails. When a user-defined class collection (such as **Array&lt;ClassA&gt;**) is persisted, the generic type **T** in **defaultCreator** is **Array&lt;ClassA&gt;**, and **S** in **defaultSubCreator** is **ClassA**.
+
+**Type:** [StorageDefaultCreator](arkts-arkui-storagedefaultcreator-t.md)&lt;S&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityAccessCtrl-interface PermissionDialogDetail--><!--Device-abilityAccessCtrl-interface PermissionDialogDetail-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
@@ -21,6 +23,8 @@ authResult: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ needPermissionDialog: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PermissionDialogDetail-needPermissionDialog: boolean--><!--Device-PermissionDialogDetail-needPermissionDialog: boolean-End-->
@@ -62,6 +68,8 @@ permissionNameList: Array<Permissions>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PermissionDialogDetail-permissionNameList: Array<Permissions>--><!--Device-PermissionDialogDetail-permissionNameList: Array<Permissions>-End-->
@@ -81,6 +89,8 @@ statusList: Array<PermissionDecisionStatus>
 **类型：** Array&lt;[PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md)&gt;
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

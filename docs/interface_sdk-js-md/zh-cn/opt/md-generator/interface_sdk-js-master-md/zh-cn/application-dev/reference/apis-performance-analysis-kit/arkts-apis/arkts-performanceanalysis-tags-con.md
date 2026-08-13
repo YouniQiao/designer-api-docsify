@@ -8,7 +8,9 @@ const ABILITY_MANAGER: number
 
 能力管理标签，hitrace命令行工具对应tagName:ability。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const ABILITY_MANAGER: long--><!--Device-tags-const ABILITY_MANAGER: long-End-->
 
@@ -22,7 +24,9 @@ const ARK: number
 
 JSVM虚拟机标签，hitrace命令行工具对应tagName:ark。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const ARK: long--><!--Device-tags-const ARK: long-End-->
 
@@ -36,7 +40,9 @@ const ARKUI: number
 
 ArkUI开发框架标签，hitrace命令行工具对应tagName:ace。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const ARKUI: long--><!--Device-tags-const ARKUI: long-End-->
 
@@ -50,7 +56,9 @@ const AUDIO: number
 
 音频模块标签，hitrace命令行工具对应tagName:zaudio。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const AUDIO: long--><!--Device-tags-const AUDIO: long-End-->
 
@@ -64,7 +72,9 @@ const BLUETOOTH: number
 
 蓝牙标签，hitrace命令行工具对应tagName:bluetooth。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const BLUETOOTH: long--><!--Device-tags-const BLUETOOTH: long-End-->
 
@@ -78,7 +88,9 @@ const CAMERA: number
 
 相机模块标签，hitrace命令行工具对应tagName:zcamera。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const CAMERA: long--><!--Device-tags-const CAMERA: long-End-->
 
@@ -92,7 +104,9 @@ const COMMON_LIBRARY: number
 
 公共库子系统标签，hitrace命令行工具对应tagName:commonlibrary。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const COMMON_LIBRARY: long--><!--Device-tags-const COMMON_LIBRARY: long-End-->
 
@@ -106,7 +120,9 @@ const DISTRIBUTED_AUDIO: number
 
 分布式音频标签，hitrace命令行工具对应tagName:daudio。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_AUDIO: long--><!--Device-tags-const DISTRIBUTED_AUDIO: long-End-->
 
@@ -120,7 +136,9 @@ const DISTRIBUTED_CAMERA: number
 
 分布式相机标签，hitrace命令行工具对应tagName:dcamera。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_CAMERA: long--><!--Device-tags-const DISTRIBUTED_CAMERA: long-End-->
 
@@ -134,7 +152,9 @@ const DISTRIBUTED_DATA: number
 
 分布式数据管理模块标签，hitrace命令行工具对应tagName:distributeddatamgr。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_DATA: long--><!--Device-tags-const DISTRIBUTED_DATA: long-End-->
 
@@ -148,7 +168,9 @@ const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: number
 
 分布式硬件设备管理标签，hitrace命令行工具对应tagName:devicemanager。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long--><!--Device-tags-const DISTRIBUTED_HARDWARE_DEVICE_MANAGER: long-End-->
 
@@ -162,7 +184,9 @@ const DISTRIBUTED_HARDWARE_FRAMEWORK: number
 
 分布式硬件框架标签，hitrace命令行工具对应tagName:dhfwk。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_HARDWARE_FRAMEWORK: long--><!--Device-tags-const DISTRIBUTED_HARDWARE_FRAMEWORK: long-End-->
 
@@ -176,7 +200,9 @@ const DISTRIBUTED_INPUT: number
 
 分布式输入标签，hitrace命令行工具对应tagName:dinput。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_INPUT: long--><!--Device-tags-const DISTRIBUTED_INPUT: long-End-->
 
@@ -190,7 +216,9 @@ const DISTRIBUTED_SCHEDULER: number
 
 分布式调度器标签，hitrace命令行工具对应tagName:dsched。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_SCHEDULER: long--><!--Device-tags-const DISTRIBUTED_SCHEDULER: long-End-->
 
@@ -204,7 +232,9 @@ const DISTRIBUTED_SCREEN: number
 
 分布式屏幕标签，hitrace命令行工具对应tagName:dscreen。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const DISTRIBUTED_SCREEN: long--><!--Device-tags-const DISTRIBUTED_SCREEN: long-End-->
 
@@ -218,7 +248,9 @@ const FFRT: number
 
 FFRT任务标签，hitrace命令行工具对应tagName:ffrt。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const FFRT: long--><!--Device-tags-const FFRT: long-End-->
 
@@ -232,7 +264,9 @@ const FILE_MANAGEMENT: number
 
 文件管理系统标签，hitrace命令行工具对应tagName:filemanagement。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const FILE_MANAGEMENT: long--><!--Device-tags-const FILE_MANAGEMENT: long-End-->
 
@@ -246,7 +280,9 @@ const GLOBAL_RESOURCE_MANAGER: number
 
 全局资源管理标签，hitrace命令行工具对应tagName:gresource。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const GLOBAL_RESOURCE_MANAGER: long--><!--Device-tags-const GLOBAL_RESOURCE_MANAGER: long-End-->
 
@@ -260,7 +296,9 @@ const GRAPHICS: number
 
 图形模块标签，hitrace命令行工具对应tagName:graphic。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const GRAPHICS: long--><!--Device-tags-const GRAPHICS: long-End-->
 
@@ -274,7 +312,9 @@ const HDF: number
 
 HDF子系统标签，hitrace命令行工具对应tagName:hdf。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const HDF: long--><!--Device-tags-const HDF: long-End-->
 
@@ -288,7 +328,9 @@ const IMAGE: number
 
 图片模块标签，hitrace命令行工具对应tagName:zimage。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const IMAGE: long--><!--Device-tags-const IMAGE: long-End-->
 
@@ -302,7 +344,9 @@ const MEDIA: number
 
 媒体模块标签，hitrace命令行工具对应tagName:zmedia。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const MEDIA: long--><!--Device-tags-const MEDIA: long-End-->
 
@@ -316,7 +360,9 @@ const MISC: number
 
 MISC模块标签，hitrace命令行工具对应tagName:misc。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const MISC: long--><!--Device-tags-const MISC: long-End-->
 
@@ -330,7 +376,9 @@ const MULTIMODAL_INPUT: number
 
 多模态输入模块标签，hitrace命令行工具对应tagName:multimodalinput。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const MULTIMODAL_INPUT: long--><!--Device-tags-const MULTIMODAL_INPUT: long-End-->
 
@@ -344,7 +392,9 @@ const NET: number
 
 网络标签，hitrace命令行工具对应tagName:net。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const NET: long--><!--Device-tags-const NET: long-End-->
 
@@ -358,7 +408,9 @@ const NOTIFICATION: number
 
 通知模块标签，hitrace命令行工具对应tagName:notification。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const NOTIFICATION: long--><!--Device-tags-const NOTIFICATION: long-End-->
 
@@ -372,7 +424,9 @@ const NWEB: number
 
 Nweb标签，hitrace命令行工具对应tagName:nweb。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const NWEB: long--><!--Device-tags-const NWEB: long-End-->
 
@@ -386,7 +440,9 @@ const OHOS: number
 
 OHOS通用标签，hitrace命令行工具对应tagName:ohos。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const OHOS: long--><!--Device-tags-const OHOS: long-End-->
 
@@ -400,7 +456,9 @@ const POWER_MANAGER: number
 
 电源管理标签，hitrace命令行工具对应tagName:power。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const POWER_MANAGER: long--><!--Device-tags-const POWER_MANAGER: long-End-->
 
@@ -414,7 +472,9 @@ const RPC: number
 
 RPC标签，hitrace命令行工具对应tagName:rpc。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const RPC: long--><!--Device-tags-const RPC: long-End-->
 
@@ -428,7 +488,9 @@ const SAMGR: number
 
 系统能力管理标签，hitrace命令行工具对应tagName:samgr。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const SAMGR: long--><!--Device-tags-const SAMGR: long-End-->
 
@@ -442,7 +504,9 @@ const WINDOW_MANAGER: number
 
 窗口管理标签，hitrace命令行工具对应tagName:window。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-tags-const WINDOW_MANAGER: long--><!--Device-tags-const WINDOW_MANAGER: long-End-->
 

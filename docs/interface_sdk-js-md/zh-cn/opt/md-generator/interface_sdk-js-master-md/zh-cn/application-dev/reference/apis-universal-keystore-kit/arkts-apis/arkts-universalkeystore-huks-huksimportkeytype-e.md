@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-huks-export enum HuksImportKeyType--><!--Device-huks-export enum HuksImportKeyType-End-->
 
 **系统能力：** 
@@ -19,6 +21,8 @@ HUKS_KEY_TYPE_PUBLIC_KEY = 0
 表示导入的密钥类型为公钥。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ HUKS_KEY_TYPE_PRIVATE_KEY = 1
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PRIVATE_KEY = 1--><!--Device-HuksImportKeyType-HUKS_KEY_TYPE_PRIVATE_KEY = 1-End-->
@@ -55,6 +61,8 @@ HUKS_KEY_TYPE_KEY_PAIR = 2
 表示导入的密钥类型为公私钥对。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

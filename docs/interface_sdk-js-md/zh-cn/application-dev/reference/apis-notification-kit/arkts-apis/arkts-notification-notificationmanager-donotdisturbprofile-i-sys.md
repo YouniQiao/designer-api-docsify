@@ -2,9 +2,11 @@
 
 勿扰模式的配置信息。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export interface DoNotDisturbProfile--><!--Device-notificationManager-export interface DoNotDisturbProfile-End-->
 
@@ -26,11 +28,13 @@ id: long
 
 勿扰模式编号。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbProfile-id: long--><!--Device-DoNotDisturbProfile-id: long-End-->
 
@@ -48,9 +52,11 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbProfile-name: string--><!--Device-DoNotDisturbProfile-name: string-End-->
 
@@ -68,9 +74,11 @@ trustlist?: Array<BundleOption>
 
 **类型：** Array&lt;BundleOption&gt;
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DoNotDisturbProfile-trustlist?: Array<BundleOption>--><!--Device-DoNotDisturbProfile-trustlist?: Array<BundleOption>-End-->
 

@@ -23,7 +23,7 @@ function getNameForUid(uid: number, callback: AsyncCallback<string>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uid | number | 是 | @param { AsyncCallback&lt;string&gt; } callback |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 |  |
 
 ## 示例
 
@@ -56,7 +56,7 @@ function getNameForUid(uid: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [null](null)
+**替代接口：** null
 
 <!--Device-bundle-function getNameForUid(uid: number): Promise<string>--><!--Device-bundle-function getNameForUid(uid: number): Promise<string>-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the supported image formats.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum SupportedImageFormat--><!--Device-photoAccessHelper-enum SupportedImageFormat-End-->
 
@@ -20,9 +22,11 @@ AVFILE_FORMAT_JPG = 'jpg'
 
 jpg format
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SupportedImageFormat-AVFILE_FORMAT_JPG = 'jpg'--><!--Device-SupportedImageFormat-AVFILE_FORMAT_JPG = 'jpg'-End-->
 

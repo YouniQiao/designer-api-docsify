@@ -2,7 +2,9 @@
 
 Enumerates the types of the memory used for image decoding.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-enum AllocatorType--><!--Device-image-enum AllocatorType-End-->
 
@@ -16,7 +18,9 @@ AUTO = 0
 
 The system determines whether DMA memory or shared memory is used.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AllocatorType-AUTO = 0--><!--Device-AllocatorType-AUTO = 0-End-->
 
@@ -30,7 +34,9 @@ DMA = 1
 
 DMA memory is used.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AllocatorType-DMA = 1--><!--Device-AllocatorType-DMA = 1-End-->
 
@@ -44,7 +50,9 @@ SHARE_MEMORY = 2
 
 Shared memory is used.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AllocatorType-SHARE_MEMORY = 2--><!--Device-AllocatorType-SHARE_MEMORY = 2-End-->
 

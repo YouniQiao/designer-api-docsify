@@ -10,6 +10,8 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>--><!--Device-sendableRelationalStore-function toSendableValues(values: NonSendableValues): collections.Array<ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -30,7 +32,7 @@ function toSendableValues(values: NonSendableValues): collections.Array<ValueTyp
 
 | 错误码ID |
 | --- |
-| [14800000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800000-内部错误) |
+| [14800000](../errorcode-data-rdb.md#14800000-内部错误) |
 
 ## 示例
 

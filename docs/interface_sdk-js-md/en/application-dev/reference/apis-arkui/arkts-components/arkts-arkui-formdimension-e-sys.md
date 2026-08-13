@@ -6,6 +6,8 @@ Enumerates widget sizes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum FormDimension--><!--Device-unnamed-declare enum FormDimension-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Dimension_1_2 = 0
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-FormDimension-Dimension_1_2 = 0--><!--Device-FormDimension-Dimension_1_2 = 0-End-->
 
@@ -42,6 +46,8 @@ Dimension_2_2 = 1
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-FormDimension-Dimension_2_2 = 1--><!--Device-FormDimension-Dimension_2_2 = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -60,6 +66,8 @@ Dimension_2_4 = 2
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-FormDimension-Dimension_2_4 = 2--><!--Device-FormDimension-Dimension_2_4 = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -77,6 +85,8 @@ Dimension_4_4 = 3
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 <!--Device-FormDimension-Dimension_4_4 = 3--><!--Device-FormDimension-Dimension_4_4 = 3-End-->
 
@@ -116,6 +126,8 @@ DIMENSION_1_1 = 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-FormDimension-DIMENSION_1_1 = 6--><!--Device-FormDimension-DIMENSION_1_1 = 6-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -133,6 +145,8 @@ DIMENSION_6_4 = 7
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-FormDimension-DIMENSION_6_4 = 7--><!--Device-FormDimension-DIMENSION_6_4 = 7-End-->
 
@@ -152,6 +166,8 @@ DIMENSION_2_3 = 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-FormDimension-DIMENSION_2_3 = 8--><!--Device-FormDimension-DIMENSION_2_3 = 8-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -169,6 +185,8 @@ DIMENSION_3_3 = 9
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
 

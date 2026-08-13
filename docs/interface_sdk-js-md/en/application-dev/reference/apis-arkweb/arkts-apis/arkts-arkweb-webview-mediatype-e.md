@@ -2,9 +2,11 @@
 
 Enumerates the media types.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum MediaType--><!--Device-webview-enum MediaType-End-->
 
@@ -18,9 +20,13 @@ VIDEO = 0
 
 Video.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaType-VIDEO = 0--><!--Device-MediaType-VIDEO = 0-End-->
 
@@ -34,9 +40,13 @@ AUDIO = 1
 
 Audio.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaType-AUDIO = 1--><!--Device-MediaType-AUDIO = 1-End-->
 

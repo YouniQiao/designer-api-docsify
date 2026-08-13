@@ -1,9 +1,10 @@
 # ContinuableInfo (System API)
 
-The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see  
-[on('continueStateChange')](@ohos.distributedMissionManager:distributedMissionManager.on(type: 'continueStateChange', callback: Callback&lt;ContinueCallbackInfo&gt;)).
+The module provides the mission continuation information to be returned when the listener for listening for the mission continuation state is registered. For details about the registration, see on('continueStateChange').
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ContinuableInfo--><!--Device-unnamed-export interface ContinuableInfo-End-->
 
@@ -21,7 +22,9 @@ Bundle name of the target application to which the mission belongs.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +44,9 @@ Continuation type of the application to which the mission belongs.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +66,9 @@ Bundle name of the source application to which the mission belongs. The value is
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,7 +88,9 @@ ID of the source device.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,6 +111,8 @@ Target AppId list of the application to which the mission belongs.
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -15,7 +15,9 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 
 Minimize the window target with animation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,    callback: AsyncCallback<WindowAnimationFinishedCallback>): void--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,    callback: AsyncCallback<WindowAnimationFinishedCallback>): void-End-->
 
@@ -27,7 +29,7 @@ Minimize the window target with animation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes |
+| windowTarget | [WindowAnimationTarget](../../apis-na/arkts-apis/arkts-na-remotewindow-windowanimationtarget-i-sys.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Yes |
 
 ## Examples
@@ -103,7 +105,9 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 
 Minimize the window target with animation.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
 
@@ -115,7 +119,7 @@ Minimize the window target with animation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| windowTarget | [WindowAnimationTarget](arkts-arkui-remotewindow-windowanimationtarget-i-sys.md) | Yes |
+| windowTarget | [WindowAnimationTarget](../../apis-na/arkts-apis/arkts-na-remotewindow-windowanimationtarget-i-sys.md) | Yes |
 
 **Return value:**
 

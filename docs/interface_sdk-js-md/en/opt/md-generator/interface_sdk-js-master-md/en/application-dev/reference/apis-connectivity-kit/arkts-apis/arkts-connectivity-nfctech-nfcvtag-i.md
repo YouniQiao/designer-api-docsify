@@ -1,12 +1,14 @@
 # NfcVTag
 
-Provides methods for creating an NFC-V tag, obtaining tag information, and controlling tag read and write.&lt;p&gt;This class inherits from the [TagSession](TagSession) abstract class and provides interfaces to create an{@code NfcVTag} and obtain the tag information.
+Provides methods for creating an NFC-V tag, obtaining tag information, and controlling tag read and write. &lt;p&gt;This class inherits from the TagSession abstract class and provides interfaces to create an {@code NfcVTag} and obtain the tag information.
 
-**Inheritance/Implementation:** NfcVTag extends [TagSession](TagSession)
+**Inheritance/Implementation:** NfcVTag extends TagSession
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface NfcVTag extends TagSession--><!--Device-unnamed-export interface NfcVTag extends TagSession-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface NfcVTag--><!--Device-unnamed-export interface NfcVTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -18,9 +20,11 @@ getDsfId(): number
 
 Obtains the response flags from this {@code NfcVTag} instance.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcVTag-getDsfId(): int--><!--Device-NfcVTag-getDsfId(): int-End-->
 
@@ -50,9 +54,11 @@ getResponseFlags(): number
 
 Obtains the response flags from this {@code NfcVTag} instance.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NfcVTag-getResponseFlags(): int--><!--Device-NfcVTag-getResponseFlags(): int-End-->
 

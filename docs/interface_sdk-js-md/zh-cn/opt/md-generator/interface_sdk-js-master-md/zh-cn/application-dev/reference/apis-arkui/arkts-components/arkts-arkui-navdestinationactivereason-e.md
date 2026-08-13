@@ -4,6 +4,8 @@ NavDestination激活态或者非激活态变化的原因。
 
 **起始版本：** 17
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum NavDestinationActiveReason--><!--Device-unnamed-declare enum NavDestinationActiveReason-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ TRANSITION = 0
 通过页面跳转的方式使NavDestination激活态发生变化。
 
 **起始版本：** 17
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ CONTENT_COVER = 1
 
 **起始版本：** 17
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -53,6 +59,8 @@ SHEET = 2
 通过半模态的开启或关闭使NavDestination激活态发生变化。
 
 **起始版本：** 17
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +80,8 @@ DIALOG = 3
 
 **起始版本：** 17
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -90,6 +100,8 @@ OVERLAY = 4
 
 **起始版本：** 17
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本17开始，该接口支持在原子化服务API中使用。
@@ -107,6 +119,8 @@ APP_STATE = 5
 通过前后台切换使NavDestination激活态发生变化。
 
 **起始版本：** 17
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

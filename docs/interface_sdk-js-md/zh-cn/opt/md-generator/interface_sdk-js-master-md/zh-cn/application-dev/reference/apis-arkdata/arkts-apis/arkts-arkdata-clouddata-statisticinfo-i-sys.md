@@ -2,7 +2,9 @@
 
 端云同步的统计信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudData-interface StatisticInfo--><!--Device-cloudData-interface StatisticInfo-End-->
 
@@ -20,7 +22,9 @@ inserted: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StatisticInfo-inserted: int--><!--Device-StatisticInfo-inserted: int-End-->
 
@@ -38,7 +42,9 @@ normal: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StatisticInfo-normal: int--><!--Device-StatisticInfo-normal: int-End-->
 
@@ -56,7 +62,9 @@ table: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StatisticInfo-table: string--><!--Device-StatisticInfo-table: string-End-->
 
@@ -74,7 +82,9 @@ updated: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-StatisticInfo-updated: int--><!--Device-StatisticInfo-updated: int-End-->
 

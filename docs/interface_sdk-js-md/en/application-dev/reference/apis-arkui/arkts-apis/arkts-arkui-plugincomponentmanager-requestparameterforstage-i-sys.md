@@ -2,11 +2,13 @@
 
 Plugin component request parameters which is used in request function.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-pluginComponentManager-export interface RequestParameterForStage--><!--Device-pluginComponentManager-export interface RequestParameterForStage-End-->
+**Deprecated since:** -1
+
+<!--Device-pluginComponentManager-interface RequestParameterForStage--><!--Device-pluginComponentManager-interface RequestParameterForStage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,13 +28,13 @@ data: KVObject
 
 Defines data.
 
-**Type:** [KVObject](arkts-arkui-plugincomponentmanager-kvobject-t.md)
+**Type:** [KVObject](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-kvobject-t.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-RequestParameterForStage-data: KVObject--><!--Device-RequestParameterForStage-data: KVObject-End-->
 
@@ -50,11 +52,11 @@ Defines jsonPath.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-RequestParameterForStage-jsonPath?: string--><!--Device-RequestParameterForStage-jsonPath?: string-End-->
 
@@ -72,11 +74,11 @@ Defines name.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-RequestParameterForStage-name: string--><!--Device-RequestParameterForStage-name: string-End-->
 
@@ -94,11 +96,11 @@ Defines owner.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-RequestParameterForStage-owner: Want--><!--Device-RequestParameterForStage-owner: Want-End-->
 
@@ -116,11 +118,11 @@ Defines target.
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
 <!--Device-RequestParameterForStage-target: Want--><!--Device-RequestParameterForStage-target: Want-End-->
 

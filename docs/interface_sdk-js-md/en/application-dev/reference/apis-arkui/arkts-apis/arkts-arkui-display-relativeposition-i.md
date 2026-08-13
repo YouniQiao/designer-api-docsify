@@ -2,9 +2,11 @@
 
 Describes a coordinate position in the relative coordinate system, with the origin in the top-left corner of the screen specified by **displayId**.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-display-interface RelativePosition--><!--Device-display-interface RelativePosition-End-->
 
@@ -24,11 +26,13 @@ displayId: long
 
 Display ID for the relative coordinates. Only integers are supported, and the value must be greater than or equal to 0.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RelativePosition-displayId: long--><!--Device-RelativePosition-displayId: long-End-->
 
@@ -44,9 +48,11 @@ Coordinates with the top-left corner of the screen specified by **displayId** as
 
 **Type:** Position
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RelativePosition-position: Position--><!--Device-RelativePosition-position: Position-End-->
 

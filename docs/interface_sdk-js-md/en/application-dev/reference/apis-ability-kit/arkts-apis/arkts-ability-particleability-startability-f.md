@@ -12,16 +12,13 @@ import { particleAbility } from '@kit.AbilityKit';
 function startAbility(parameter: StartAbilityParameter, callback: AsyncCallback<void>): void
 ```
 
-Starts a ParticleAbility. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the FA model, see
-> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+Starts a ParticleAbility. This API uses an asynchronous callback to return the result. > **NOTE：**> > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -34,7 +31,7 @@ Starts a ParticleAbility. This API uses an asynchronous callback to return the r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | parameter | [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md) | Yes | Ability to start. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the ParticleAbility is started, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -72,16 +69,13 @@ particleAbility.startAbility(
 function startAbility(parameter: StartAbilityParameter): Promise<void>
 ```
 
-Starts a ParticleAbility. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> For details about the startup rules for the components in the FA model, see
-> [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
+Starts a ParticleAbility. This API uses a promise to return the result. > **NOTE：**> > For details about the startup rules for the components in the FA model, see > [Component Startup Rules (FA Model)](../../../application-models/component-startup-rules-fa.md).
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

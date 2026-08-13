@@ -4,7 +4,9 @@
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -18,8 +20,8 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [createClient](arkts-connectivity-ssap-createclient-f.md#createclient) | 创建SSAP客户端实例。 |
-| [createServer](arkts-connectivity-ssap-createserver-f.md#createserver) | 创建SSAP服务端实例。 |
+| [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) | 创建SSAP客户端实例。 |
+| [createServer](arkts-connectivity-ssap-createserver-f.md#createServer) | 创建SSAP服务端实例。 |
 
 ### 接口
 

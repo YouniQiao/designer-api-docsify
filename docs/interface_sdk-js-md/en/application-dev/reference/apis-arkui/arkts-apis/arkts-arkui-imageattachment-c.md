@@ -6,6 +6,8 @@ Describes the image attachment.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ImageAttachment--><!--Device-unnamed-declare class ImageAttachment-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ A constructor used to create an image object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,12 +46,13 @@ A constructor used to create an image object.
 constructor(attachment: Optional<AttachmentType>)
 ```
 
-A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and  
-[ResourceStr](ResourceStr) types.
+A constructor used to create an image object. Compared to the constructor with a **value** type parameter, this constructor with an **attachment** type parameter supports images of **undefined** and ResourceStr types.
 
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +66,7 @@ A constructor used to create an image object. Compared to the constructor with a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| attachment | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes | Image attachment, which can be of type PixelMap or [ResourceStr](ResourceStr). |
+| attachment | Optional&lt;[AttachmentType](arkts-arkui-attachmenttype-t.md)&gt; | Yes | Image attachment, which can be of type PixelMap or ResourceStr. |
 
 ## colorFilter
 
@@ -76,6 +81,8 @@ Image color filter of the styled string.
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,6 +106,8 @@ Image layout of the styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -121,6 +130,8 @@ Image scale type of the styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -135,15 +146,15 @@ Image scale type of the styled string.
 readonly size?: SizeOptions
 ```
 
-Image size of the styled string.
-
-Number-type values use px as the unit.
+Image size of the styled string. Number-type values use px as the unit.
 
 **Type:** SizeOptions
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,17 +170,15 @@ Number-type values use px as the unit.
 readonly sizeInVp?: SizeOptions
 ```
 
-Image size of the styled string.
-
-Number-type values use vp as the unit.
-
-If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
+Image size of the styled string. Number-type values use vp as the unit. If **ImageAttachment** is set to a negative value or **undefined**, **undefined** is returned.
 
 **Type:** SizeOptions
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -185,18 +194,15 @@ If **ImageAttachment** is set to a negative value or **undefined**, **undefined*
 readonly supportSvg2?: boolean
 ```
 
-Whether to enable  
-[enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md).
-
-**true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing.
-
-Default value: **false**
+Whether to enable [enhanced SVG tag parsing capabilities](../../../reference/apis-arkui/arkui-ts/ts-image-svg2-capabilities.md). **true**: Enable enhanced SVG tag parsing. **false**: Use original SVG tag parsing. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +226,8 @@ Image data source of the styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -241,6 +249,8 @@ Image alignment mode of the styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

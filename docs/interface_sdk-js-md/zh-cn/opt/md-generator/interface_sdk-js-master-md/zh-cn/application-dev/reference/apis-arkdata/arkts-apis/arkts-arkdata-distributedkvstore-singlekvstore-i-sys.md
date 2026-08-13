@@ -1,11 +1,10 @@
 # SingleKVStore
 
-SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。
+SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。 在调用SingleKVStore的方法前，需要先通过 getKVStore 构建一个SingleKVStore实例。
 
-在调用SingleKVStore的方法前，需要先通过  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个SingleKVStore实例。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface SingleKVStore--><!--Device-distributedKVStore-interface SingleKVStore-End-->
 
@@ -18,6 +17,10 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 ```
 
 从数据库中删除符合predicates条件的键值对，使用callback异步回调。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,9 +41,9 @@ delete(predicates: dataSharePredicates.DataSharePredicates, callback: AsyncCallb
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
 
 ## delete
 
@@ -49,6 +52,10 @@ delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 ```
 
 从数据库中删除符合predicates条件的键值对，使用Promise异步回调。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,9 +81,9 @@ delete(predicates: dataSharePredicates.DataSharePredicates): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
 
 ## getResultSet
 
@@ -85,6 +92,10 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 ```
 
 获取与指定Predicates对象匹配的KVStoreResultSet对象，使用callback异步回调。获取结果集后，需要及时调用closeResultSet方法关闭结果集以释放资源。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -105,9 +116,9 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates, callback: Asyn
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## getResultSet
 
@@ -116,6 +127,10 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 ```
 
 获取与指定Predicates对象匹配的KVStoreResultSet对象，使用Promise异步回调。获取结果集后，需要及时调用closeResultSet方法关闭结果集以释放资源。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -141,9 +156,9 @@ getResultSet(predicates: dataSharePredicates.DataSharePredicates): Promise<KVSto
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [15100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [15100001](../errorcode-distributedKVStore.md#15100001-超过最大订阅数量或结果集数量) |
 
 ## putBatch
 
@@ -152,6 +167,10 @@ putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 ```
 
 批量写入键值对数据，每个ValuesBucket对象包含key和value字段，使用callback异步回调。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -172,9 +191,9 @@ putBatch(value: Array<ValuesBucket>, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
 
 ## putBatch
 
@@ -183,6 +202,10 @@ putBatch(value: Array<ValuesBucket>): Promise<void>
 ```
 
 批量写入键值对数据，每个ValuesBucket对象包含key和value字段，使用Promise异步回调。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -208,9 +231,9 @@ putBatch(value: Array<ValuesBucket>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
-| [14800047](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [14800047](../errorcode-data-rdb.md#14800047-wal文件大小超过默认上限) |
 
 ## putValuesBuckets
 
@@ -219,6 +242,10 @@ putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): voi
 ```
 
 将值写入SingleKVStore数据库，使用callback异步回调。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -239,8 +266,8 @@ putValuesBuckets(value: Array<ValuesBucket>, callback: AsyncCallback<void>): voi
 
 | 错误码ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## putValuesBuckets
 
@@ -249,6 +276,10 @@ putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 ```
 
 将valuesbucket类型的值写入SingleKVStore数据库，使用Promise异步回调。
+
+**起始版本：** -1
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -274,5 +305,5 @@ putValuesBuckets(value: Array<ValuesBucket>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [15100005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [15100005](../errorcode-distributedKVStore.md#15100005-数据库或查询结果集已关闭) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

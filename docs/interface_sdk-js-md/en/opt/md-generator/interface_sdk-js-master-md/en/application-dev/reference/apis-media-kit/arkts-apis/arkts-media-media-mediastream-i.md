@@ -2,7 +2,9 @@
 
 Media Stream. AVPlayer use this for mediaData access, current version only support live stream.
 
-**Since:** 19
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface MediaStream--><!--Device-media-interface MediaStream-End-->
 
@@ -24,9 +26,11 @@ biterate of this mediaStream.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaStream-bitrate: int--><!--Device-MediaStream-bitrate: int-End-->
 
@@ -42,9 +46,11 @@ video height.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaStream-height: int--><!--Device-MediaStream-height: int-End-->
 
@@ -60,9 +66,11 @@ url for this mediaStream
 
 **Type:** string
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaStream-url: string--><!--Device-MediaStream-url: string-End-->
 
@@ -78,9 +86,11 @@ video width.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-MediaStream-width: int--><!--Device-MediaStream-width: int-End-->
 

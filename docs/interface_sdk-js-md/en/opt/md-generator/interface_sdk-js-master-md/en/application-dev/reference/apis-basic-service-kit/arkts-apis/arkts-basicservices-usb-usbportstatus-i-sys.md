@@ -6,7 +6,7 @@ Enumerates USB port roles.
 
 **Deprecated since:** 9
 
-**Substitutes:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#USBPortStatus)
+**Substitutes:** [USBPortStatus](arkts-basicservices-usbmanager-usbportstatus-i-sys.md#USBPortStatus-(System-API))
 
 <!--Device-usb-interface USBPortStatus--><!--Device-usb-interface USBPortStatus-End-->
 

@@ -2,7 +2,9 @@
 
 通话会话元数据相关属性。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface CallMetadata--><!--Device-avSession-interface CallMetadata-End-->
 
@@ -18,7 +20,9 @@ avatar?: image.PixelMap
 
 **类型：** image.PixelMap
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -36,7 +40,9 @@ name?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +60,9 @@ phoneNumber?: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

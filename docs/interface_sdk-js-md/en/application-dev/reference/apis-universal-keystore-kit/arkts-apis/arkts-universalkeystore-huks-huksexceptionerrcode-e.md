@@ -1,13 +1,12 @@
 # HuksExceptionErrCode
 
-Enumerates error codes and error details.
-
-For details about the error codes, see [Universal Error Codes](../../../reference/errorcode-universal.md) and  
-[HUKS Error Codes](../../../reference/apis-universal-keystore-kit/errorcode-huks.md).
+Enumerates error codes and error details. For details about the error codes, see [Universal Error Codes](../../errorcode-universal.md) and [HUKS Error Codes](../errorcode-huks.md).
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-huks-export enum HuksExceptionErrCode--><!--Device-huks-export enum HuksExceptionErrCode-End-->
 
@@ -24,6 +23,8 @@ Permission verification failed.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,6 +44,8 @@ The caller is not a system application and cannot call the system API.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_NOT_SYSTEM_APP = 202--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_NOT_SYSTEM_APP = 202-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -58,6 +61,8 @@ Invalid parameters are detected. Possible causes: 1. Mandatory parameters are le
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -77,6 +82,8 @@ The API is not supported.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_NOT_SUPPORTED_API = 801--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_NOT_SUPPORTED_API = 801-End-->
@@ -94,6 +101,8 @@ The feature is not supported.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -113,6 +122,8 @@ Key algorithm parameters are missing.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT = 12000002--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_MISSING_CRYPTO_ALG_ARGUMENT = 12000002-End-->
@@ -130,6 +141,8 @@ Invalid key algorithm parameters are detected.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -149,6 +162,8 @@ The file operation failed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_FILE_OPERATION_FAIL = 12000004--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_FILE_OPERATION_FAIL = 12000004-End-->
@@ -166,6 +181,8 @@ The communication failed.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -185,6 +202,8 @@ Failed to operate the algorithm library.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_CRYPTO_FAIL = 12000006--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_CRYPTO_FAIL = 12000006-End-->
@@ -202,6 +221,8 @@ Failed to access the key because the key has expired.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -221,6 +242,8 @@ Failed to access the key because the authentication has failed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_KEY_AUTH_VERIFY_FAILED = 12000008--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_KEY_AUTH_VERIFY_FAILED = 12000008-End-->
@@ -238,6 +261,8 @@ Key access timed out.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -257,6 +282,8 @@ The number of key operation sessions has reached the limit.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_SESSION_LIMIT = 12000010--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_SESSION_LIMIT = 12000010-End-->
@@ -274,6 +301,8 @@ The target object does not exist.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -293,6 +322,8 @@ An external error occurs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_EXTERNAL_ERROR = 12000012--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_EXTERNAL_ERROR = 12000012-End-->
@@ -310,6 +341,8 @@ The credential does not exist.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -329,6 +362,8 @@ The memory is insufficient.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014-End-->
@@ -346,6 +381,8 @@ Failed to call other system services.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -365,6 +402,8 @@ The required lock screen password is not set.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_DEVICE_PASSWORD_UNSET = 12000016--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_DEVICE_PASSWORD_UNSET = 12000016-End-->
@@ -382,6 +421,8 @@ A key with the same name already exists.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
@@ -401,6 +442,8 @@ The argument is invalid.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_INVALID_ARGUMENT = 12000018--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_INVALID_ARGUMENT = 12000018-End-->
@@ -418,6 +461,8 @@ A provider with the same name has been registered.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -437,6 +482,8 @@ The external module on which this API depends returns an error.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_EXTERNAL_MODULE = 12000020--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_EXTERNAL_MODULE = 12000020-End-->
@@ -454,6 +501,8 @@ The UKey PIN is locked.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -473,6 +522,8 @@ The UKey PIN is incorrect.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_PIN_INCORRECT = 12000022--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_PIN_INCORRECT = 12000022-End-->
@@ -490,6 +541,8 @@ The UKey PIN is not authenticated.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -509,6 +562,8 @@ The device or resource is busy.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_BUSY = 12000024--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_BUSY = 12000024-End-->
@@ -526,6 +581,8 @@ The resource limit is exceeded.
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -545,6 +602,8 @@ The secure element is faulty.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_SE_FAULT = 12000026--><!--Device-HuksExceptionErrCode-HUKS_ERR_CODE_SE_FAULT = 12000026-End-->
@@ -562,6 +621,8 @@ The network is unavailable.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

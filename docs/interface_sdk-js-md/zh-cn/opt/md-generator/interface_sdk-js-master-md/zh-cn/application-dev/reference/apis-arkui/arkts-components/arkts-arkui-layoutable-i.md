@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface Layoutable--><!--Device-unnamed-declare interface Layoutable-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getBorderWidth() : DirectionalEdgesT<number>
 调用此方法获取子组件的borderWidth信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ getMargin() : DirectionalEdgesT<number>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -65,6 +71,8 @@ getPadding() : DirectionalEdgesT<number>
 调用此方法获取子组件的padding信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +98,8 @@ layout(position: Position): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -110,11 +120,13 @@ layout(position: Position): void
 measureResult: MeasureResult
 ```
 
-子组件测量后的尺寸信息。单位为： vp。
+子组件测量后的尺寸信息。 单位为： vp。
 
 **类型：** [MeasureResult](arkts-arkui-measureresult-i.md)
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -130,11 +142,13 @@ measureResult: MeasureResult
 uniqueId?: number
 ```
 
-系统为子组件分配的唯一标识UniqueID。取值应为≥0的整数。
+系统为子组件分配的唯一标识UniqueID。 取值应为≥0的整数。
 
 **类型：** number
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

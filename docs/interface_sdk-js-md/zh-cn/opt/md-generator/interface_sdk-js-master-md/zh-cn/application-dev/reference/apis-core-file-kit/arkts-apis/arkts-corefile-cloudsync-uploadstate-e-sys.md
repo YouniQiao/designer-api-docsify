@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-cloudSync-enum UploadState--><!--Device-cloudSync-enum UploadState-End-->
 
 **系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
@@ -19,6 +21,8 @@ WAITING = 0
 等待上传。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ RUNNING = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UploadState-RUNNING = 1--><!--Device-UploadState-RUNNING = 1-End-->
@@ -55,6 +61,8 @@ COMPLETED = 2
 上传完成。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ FAILED = 3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UploadState-FAILED = 3--><!--Device-UploadState-FAILED = 3-End-->
@@ -92,6 +102,8 @@ STOPPED = 4
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UploadState-STOPPED = 4--><!--Device-UploadState-STOPPED = 4-End-->
@@ -109,6 +121,8 @@ PAUSED = 5
 上传已暂停。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

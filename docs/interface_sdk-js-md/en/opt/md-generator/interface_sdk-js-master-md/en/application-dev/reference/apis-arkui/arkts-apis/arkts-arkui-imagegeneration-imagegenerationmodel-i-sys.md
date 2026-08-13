@@ -4,6 +4,8 @@ AI Image Model Abstract Interface.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface ImageGenerationModel--><!--Device-imageGeneration-interface ImageGenerationModel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ cancelImageGeneration(sessionId: number): void
 Cancel AI image generation task.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Get the types of image styles supported by the AI model.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ImageGenerationModel-getModelSupportStyles(): Array<ImageStyle>--><!--Device-ImageGenerationModel-getModelSupportStyles(): Array<ImageStyle>-End-->
@@ -73,6 +79,8 @@ onComplain(sessionId: number, request: GenerateImageTaskParams, result: Generate
 User use complaint menu to complain the result of an AI-generated image task.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +108,8 @@ requestImageGeneration(sessionId: number, params: GenerateImageTaskParams,
 Request AI image generation task to get the generated image.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

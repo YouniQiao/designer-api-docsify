@@ -1,0 +1,40 @@
+# ContentModifier
+
+Defines the content modifier.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface ContentModifier--><!--Device-unnamed-export declare interface ContentModifier-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## applyContent
+
+```TypeScript
+applyContent(): WrappedBuilder<CustomBuilderT<T>>
+```
+
+Defining applyContent function.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ContentModifier-applyContent(): WrappedBuilder<CustomBuilderT<T>>--><!--Device-ContentModifier-applyContent(): WrappedBuilder<CustomBuilderT<T>>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| WrappedBuilder&lt;CustomBuilderT&lt;T&gt;&gt; |  |
+

@@ -8,7 +8,9 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 订阅公共事件。使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -27,10 +29,10 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1500007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
-| [1500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500010-订阅者数量超限) |
-| [1500008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1500007](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500007-ipc请求发送失败) |
+| [1500010](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500010-订阅者数量超限) |
+| [1500008](../../apis-basic-services-kit/errorcode-CommonEventService.md#1500008-公共事件服务端初始化失败) |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 Returns notification information carrying system property values.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SubscribeCallbackData--><!--Device-unnamed-export interface SubscribeCallbackData-End-->
 
@@ -22,6 +24,8 @@ Notification classification information. It exists only when **enableClassificat
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SubscribeCallbackData-readonly notificationClassification?: NotificationClassification--><!--Device-SubscribeCallbackData-readonly notificationClassification?: NotificationClassification-End-->
@@ -36,14 +40,13 @@ Notification classification information. It exists only when **enableClassificat
 readonly reason?: number
 ```
 
-Reason for deletion. The options are as follows:
-
-- **1**: The notification is deleted after being tapped.  
-- **2**: The notification is deleted by the user.
+Reason for deletion. The options are as follows: - **1**: The notification is deleted after being tapped. - **2**: The notification is deleted by the user.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly reason?: int--><!--Device-SubscribeCallbackData-readonly reason?: int-End-->
 
@@ -61,7 +64,9 @@ Notification content.
 
 **Type:** [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly request: NotificationRequest--><!--Device-SubscribeCallbackData-readonly request: NotificationRequest-End-->
 
@@ -79,7 +84,9 @@ Notification sorting information.
 
 **Type:** [NotificationSortingMap](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap--><!--Device-SubscribeCallbackData-readonly sortingMap?: NotificationSortingMap-End-->
 
@@ -97,7 +104,9 @@ Notification sound.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly sound?: string--><!--Device-SubscribeCallbackData-readonly sound?: string-End-->
 
@@ -115,7 +124,9 @@ Notification vibration.
 
 **Type:** Array&lt;number&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>--><!--Device-SubscribeCallbackData-readonly vibrationValues?: Array<long>-End-->
 
@@ -134,6 +145,8 @@ Voice broadcast content of the notification.
 **Type:** [VoiceContent](arkts-notification-notificationsubscriber-voicecontent-i-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

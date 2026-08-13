@@ -4,9 +4,11 @@ Describes the normal live notification content. This API inherits from Notificat
 
 **Inheritance/Implementation:** NotificationLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationLiveViewContent extends NotificationBasicContent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface NotificationLiveViewContent--><!--Device-unnamed-export interface NotificationLiveViewContent-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -22,7 +24,9 @@ Redirection by tapping in the auxiliary area. This parameter is left empty by de
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent--><!--Device-NotificationLiveViewContent-extensionWantAgent?: WantAgent-End-->
 
@@ -33,16 +37,18 @@ Redirection by tapping in the auxiliary area. This parameter is left empty by de
 ## extraInfo
 
 ```TypeScript
-extraInfo?: Record<string, Object>
+extraInfo?: Record<string, RecordData>
 ```
 
 Extra information of the live view. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>--><!--Device-NotificationLiveViewContent-extraInfo?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-NotificationLiveViewContent-extraInfo?: Record<string, RecordData>--><!--Device-NotificationLiveViewContent-extraInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -54,14 +60,13 @@ Extra information of the live view. This parameter is left empty by default.
 isLocalUpdateOnly?: boolean
 ```
 
-Whether the live view is updated only locally. The default value is **false**.
-
-- **true**: Yes.  
-- **false**: No.
+Whether the live view is updated only locally. The default value is **false**. - **true**: Yes. - **false**: No.
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean--><!--Device-NotificationLiveViewContent-isLocalUpdateOnly?: boolean-End-->
 
@@ -77,9 +82,11 @@ pictureInfo?: Record<string, Array<image.PixelMap>>
 
 Extra image information of the live view. This parameter is left empty by default.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;image.PixelMap&gt;&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Array&lt;image.PixelMap&gt;&gt;
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>--><!--Device-NotificationLiveViewContent-pictureInfo?: Record<string, Array<image.PixelMap>>-End-->
 
@@ -97,7 +104,9 @@ Notification status.
 
 **Type:** [LiveViewStatus](arkts-notification-notificationcontent-liveviewstatus-e-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationLiveViewContent-status: LiveViewStatus--><!--Device-NotificationLiveViewContent-status: LiveViewStatus-End-->
 
@@ -115,7 +124,9 @@ If the version number stored in the database is not **0xffffffff**, the version 
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationLiveViewContent-version?: int--><!--Device-NotificationLiveViewContent-version?: int-End-->
 

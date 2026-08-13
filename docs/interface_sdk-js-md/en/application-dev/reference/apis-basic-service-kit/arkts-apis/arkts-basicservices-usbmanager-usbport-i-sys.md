@@ -2,9 +2,11 @@
 
 Represents a USB port.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBPort--><!--Device-usbManager-interface USBPort-End-->
 
@@ -26,11 +28,13 @@ id: int
 
 Unique identifier of a USB port.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBPort-id: int--><!--Device-USBPort-id: int-End-->
 
@@ -48,9 +52,11 @@ USB port role.
 
 **Type:** USBPortStatus
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBPort-status: USBPortStatus--><!--Device-USBPort-status: USBPortStatus-End-->
 
@@ -68,9 +74,11 @@ Numeric mask combination for the supported mode list.
 
 **Type:** PortModeType
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBPort-supportedModes: PortModeType--><!--Device-USBPort-supportedModes: PortModeType-End-->
 

@@ -12,25 +12,15 @@ import { hiTraceMeter } from '@kit.PerformanceAnalysisKit';
 function registerTraceListener(callback: TraceEventListener): int
 ```
 
-Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result.
+Registers a callback to notify whether the application trace capture is enabled. This API uses a synchronous callback to return the result. After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes. Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process. > **NOTE：**> > If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting > for the callback execution to complete) when the callback is executed. > > Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the > main thread of the application to avoid application freeze.
 
-After the registration is successful, the callback is executed immediately. Subsequent callbacks are executed when the application trace capture status changes.
+**Since:** 23
 
-Callbacks are stored in the application process. A maximum of 10 callbacks can be registered in a process.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-> **NOTE：**
-> 
-> If the callback contains time-consuming operations, the registration or deregistration will be blocked (waiting
-> for the callback execution to complete) when the callback is executed.
-> 
-> Therefore, you are advised not to register or deregister callbacks containing time-consuming operations in the
-> main thread of the application to avoid application freeze.
+**Deprecated since:** -1
 
-**Since:** 22
-
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 22.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int--><!--Device-hiTraceMeter-function registerTraceListener(callback: TraceEventListener): int-End-->
 
@@ -46,7 +36,7 @@ Callbacks are stored in the application process. A maximum of 10 callbacks can b
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Callback registration status. >= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9. **-1**: The maximum number of callbacks has been reached. **-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
+| int | Callback registration status. >= 0: The registration is successful. The callback index for deregistration is returned. The index ranges from 0 to 9. **-1**: The maximum number of callbacks has been reached. **-2**: Invalid parameter. The parameter is not of the **TraceEventListener** type. |
 
 ## Examples
 

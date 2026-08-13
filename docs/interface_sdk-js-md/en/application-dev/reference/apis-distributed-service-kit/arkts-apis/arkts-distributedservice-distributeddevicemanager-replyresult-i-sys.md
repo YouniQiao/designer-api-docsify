@@ -4,7 +4,9 @@ Reply result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface ReplyResult--><!--Device-distributedDeviceManager-interface ReplyResult-End-->
 
@@ -30,7 +32,9 @@ Param of ui state changes.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ReplyResult-param: string--><!--Device-ReplyResult-param: string-End-->
 

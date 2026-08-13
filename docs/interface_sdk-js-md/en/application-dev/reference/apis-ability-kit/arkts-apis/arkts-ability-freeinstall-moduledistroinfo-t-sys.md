@@ -1,20 +1,22 @@
 # ModuleDistroInfo (System API)
 
 ```TypeScript
-export type ModuleDistroInfo = _PackInfo.ModuleDistroInfo
+export type ModuleDistroInfo = _ModuleDistroInfo
 ```
 
 Defines the distribution information of the module.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-freeInstall-export type ModuleDistroInfo = _PackInfo.ModuleDistroInfo--><!--Device-freeInstall-export type ModuleDistroInfo = _PackInfo.ModuleDistroInfo-End-->
+**Deprecated since:** -1
+
+<!--Device-freeInstall-export type ModuleDistroInfo = _ModuleDistroInfo--><!--Device-freeInstall-export type ModuleDistroInfo = _ModuleDistroInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ModuleDistroInfo
+**Property type:** _ModuleDistroInfo
 

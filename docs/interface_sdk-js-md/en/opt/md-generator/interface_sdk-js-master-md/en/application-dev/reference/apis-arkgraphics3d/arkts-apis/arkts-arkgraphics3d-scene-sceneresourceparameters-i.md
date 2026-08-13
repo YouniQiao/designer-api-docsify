@@ -2,7 +2,9 @@
 
 The scene resource parameters type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneResourceParameters--><!--Device-unnamed-export interface SceneResourceParameters-End-->
 
@@ -18,7 +20,9 @@ The name of the scene resource parameters.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceParameters-name: string--><!--Device-SceneResourceParameters-name: string-End-->
 
@@ -34,7 +38,9 @@ The resource uri of the scene resource parameters.
 
 **Type:** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SceneResourceParameters-uri?: ResourceStr--><!--Device-SceneResourceParameters-uri?: ResourceStr-End-->
 

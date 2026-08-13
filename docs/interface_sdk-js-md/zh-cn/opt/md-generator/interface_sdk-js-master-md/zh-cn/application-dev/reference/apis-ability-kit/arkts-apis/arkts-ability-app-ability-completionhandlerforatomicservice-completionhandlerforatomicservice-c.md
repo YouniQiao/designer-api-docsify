@@ -1,10 +1,10 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService提供了  
-[onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess)和  
-[onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure)两个回调函数，分别在打开原子化服务成功和失败时回调。
+CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess) 和 [onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class CompletionHandlerForAtomicService--><!--Device-unnamed-declare class CompletionHandlerForAtomicService-End-->
 
@@ -19,6 +19,8 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 打开原子化服务失败时的回调函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +40,7 @@ onAtomicServiceRequestFailure(appId: string, failureCode: FailureCode, failureMe
 
 ## 示例
 
-参见[CompletionHandlerForAtomicService示例](#completionhandlerforatomicservice示例)。
+参见[CompletionHandlerForAtomicService示例](#示例)。
 
 ## onAtomicServiceRequestSuccess
 
@@ -49,6 +51,8 @@ onAtomicServiceRequestSuccess(appId: string): void
 打开原子化服务成功时的回调函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,4 +70,4 @@ onAtomicServiceRequestSuccess(appId: string): void
 
 ## 示例
 
-参见[CompletionHandlerForAtomicService示例](#completionhandlerforatomicservice示例)。
+参见[CompletionHandlerForAtomicService示例](#示例)。

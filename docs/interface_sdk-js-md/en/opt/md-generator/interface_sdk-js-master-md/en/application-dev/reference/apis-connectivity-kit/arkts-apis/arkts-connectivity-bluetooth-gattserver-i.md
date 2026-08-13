@@ -6,7 +6,7 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 
 **Deprecated since:** 9
 
-**Substitutes:** [GattServer](ohos.bluetoothManager/bluetoothManager.GattServer)
+**Substitutes:** [GattServer](arkts-connectivity-bluetoothmanager-gattserver-i.md#GattServer)
 
 <!--Device-bluetooth-interface GattServer--><!--Device-bluetooth-interface GattServer-End-->
 
@@ -24,13 +24,13 @@ import { bluetooth } from '@kit.ConnectivityKit';
 addService(service: GattService): boolean
 ```
 
-Adds a specified service to be hosted.The added service and its characteristics are provided by the local device.
+Adds a specified service to be hosted. The added service and its characteristics are provided by the local device.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [addService](ohos.bluetoothManager/bluetoothManager.GattServer#addService)
+**Substitutes:** [addService](arkts-connectivity-bluetoothmanager-gattserver-i.md#addService)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -98,7 +98,7 @@ Closes this {@code GattServer} object and unregisters its callbacks.
 
 **Deprecated since:** 9
 
-**Substitutes:** [close](ohos.bluetoothManager/bluetoothManager.GattServer#close)
+**Substitutes:** [close](arkts-connectivity-bluetoothmanager-gattserver-i.md#close)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -119,15 +119,13 @@ server.close();
 notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): boolean
 ```
 
-Sends a notification of a change in a specified local characteristic.
-
-This method should be called for every BLE peripheral device that has requested notifications.
+Sends a notification of a change in a specified local characteristic. This method should be called for every BLE peripheral device that has requested notifications.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyCharacteristicChanged](ohos.bluetoothManager/bluetoothManager.GattServer#notifyCharacteristicChanged)
+**Substitutes:** [notifyCharacteristicChanged](arkts-connectivity-bluetoothmanager-gattserver-i.md#notifyCharacteristicChanged)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -169,7 +167,7 @@ let server : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 server.notifyCharacteristicChanged('XX:XX:XX:XX:XX:XX', notifyCharacteristic);
 ```
 
-## off('characteristicRead')
+## off_characteristicRead
 
 ```TypeScript
 off(type: 'characteristicRead', callback?: Callback<CharacteristicReadReq>): void
@@ -181,7 +179,7 @@ Unsubscribe characteristic read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicRead](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:characteristicRead)
+**Substitutes:** characteristicRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -203,7 +201,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("characteristicRead");
 ```
 
-## off('characteristicWrite')
+## off_characteristicWrite
 
 ```TypeScript
 off(type: 'characteristicWrite', callback?: Callback<CharacteristicWriteReq>): void
@@ -215,7 +213,7 @@ Unsubscribe characteristic write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicWrite](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:characteristicWrite)
+**Substitutes:** characteristicWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -237,75 +235,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("characteristicWrite");
 ```
 
-## off('descriptorRead')
-
-```TypeScript
-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void
-```
-
-Unsubscribe descriptor read event.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [descriptorRead](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:descriptorRead)
-
-**Required permissions:** ohos.permission.USE_BLUETOOTH
-
-<!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void--><!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'descriptorRead' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No |
-
-## Examples
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("descriptorRead");
-```
-
-## off('descriptorWrite')
-
-```TypeScript
-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void
-```
-
-Unsubscribe descriptor write event.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [descriptorWrite](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:descriptorWrite)
-
-**Required permissions:** ohos.permission.USE_BLUETOOTH
-
-<!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void--><!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'descriptorWrite' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No |
-
-## Examples
-
-```TypeScript
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.off("descriptorWrite");
-```
-
-## off('connectStateChange')
+## off_connectStateChange
 
 ```TypeScript
 off(type: 'connectStateChange', callback?: Callback<BLEConnectChangedState>): void
@@ -317,7 +247,7 @@ Unsubscribe server connection state changed event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [connectStateChange](ohos.bluetoothManager/bluetoothManager.GattServer.off#event:connectStateChange)
+**Substitutes:** connectStateChange
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -339,7 +269,75 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.off("connectStateChange");
 ```
 
-## on('characteristicRead')
+## off_descriptorRead
+
+```TypeScript
+off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void
+```
+
+Unsubscribe descriptor read event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** descriptorRead
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void--><!--Device-GattServer-off(type: 'descriptorRead', callback?: Callback<DescriptorReadReq>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'descriptorRead' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorReadReq](arkts-connectivity-bluetooth-descriptorreadreq-i.md)&gt; | No |
+
+## Examples
+
+```TypeScript
+let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
+gattServer.off("descriptorRead");
+```
+
+## off_descriptorWrite
+
+```TypeScript
+off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void
+```
+
+Unsubscribe descriptor write event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** descriptorWrite
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void--><!--Device-GattServer-off(type: 'descriptorWrite', callback?: Callback<DescriptorWriteReq>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'descriptorWrite' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DescriptorWriteReq](arkts-connectivity-bluetooth-descriptorwritereq-i.md)&gt; | No |
+
+## Examples
+
+```TypeScript
+let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
+gattServer.off("descriptorWrite");
+```
+
+## on_characteristicRead
 
 ```TypeScript
 on(type: 'characteristicRead', callback: Callback<CharacteristicReadReq>): void
@@ -351,7 +349,7 @@ Subscribe characteristic read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicRead](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:characteristicRead)
+**Substitutes:** characteristicRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -393,7 +391,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("characteristicRead", ReadCharacteristicReq);
 ```
 
-## on('characteristicWrite')
+## on_characteristicWrite
 
 ```TypeScript
 on(type: 'characteristicWrite', callback: Callback<CharacteristicWriteReq>): void
@@ -405,7 +403,7 @@ Subscribe characteristic write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicWrite](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:characteristicWrite)
+**Substitutes:** characteristicWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -450,7 +448,46 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("characteristicWrite", WriteCharacteristicReq);
 ```
 
-## on('descriptorRead')
+## on_connectStateChange
+
+```TypeScript
+on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
+```
+
+Subscribe server connection state changed event.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** connectStateChange
+
+**Required permissions:** ohos.permission.USE_BLUETOOTH
+
+<!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'connectStateChange' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes |
+
+## Examples
+
+```TypeScript
+function Connected(BLEConnectChangedState : bluetooth.BLEConnectChangedState) {
+  let deviceId : string = BLEConnectChangedState.deviceId;
+  let status : bluetooth.ProfileConnectionState = BLEConnectChangedState.state;
+}
+
+let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
+gattServer.on("connectStateChange", Connected);
+```
+
+## on_descriptorRead
 
 ```TypeScript
 on(type: 'descriptorRead', callback: Callback<DescriptorReadReq>): void
@@ -462,7 +499,7 @@ Subscribe descriptor read event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptorRead](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:descriptorRead)
+**Substitutes:** descriptorRead
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -504,7 +541,7 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("descriptorRead", ReadDescriptorReq);
 ```
 
-## on('descriptorWrite')
+## on_descriptorWrite
 
 ```TypeScript
 on(type: 'descriptorWrite', callback: Callback<DescriptorWriteReq>): void
@@ -516,7 +553,7 @@ Subscribe descriptor write event.
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptorWrite](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:descriptorWrite)
+**Substitutes:** descriptorWrite
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -560,45 +597,6 @@ let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
 gattServer.on("descriptorWrite", WriteDescriptorReq);
 ```
 
-## on('connectStateChange')
-
-```TypeScript
-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void
-```
-
-Subscribe server connection state changed event.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [connectStateChange](ohos.bluetoothManager/bluetoothManager.GattServer.on#event:connectStateChange)
-
-**Required permissions:** ohos.permission.USE_BLUETOOTH
-
-<!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void--><!--Device-GattServer-on(type: 'connectStateChange', callback: Callback<BLEConnectChangedState>): void-End-->
-
-**System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'connectStateChange' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;BLEConnectChangedState&gt; | Yes |
-
-## Examples
-
-```TypeScript
-function Connected(BLEConnectChangedState : bluetooth.BLEConnectChangedState) {
-  let deviceId : string = BLEConnectChangedState.deviceId;
-  let status : bluetooth.ProfileConnectionState = BLEConnectChangedState.state;
-}
-
-let gattServer : bluetooth.GattServer = bluetooth.BLE.createGattServer();
-gattServer.on("connectStateChange", Connected);
-```
-
 ## removeService
 
 ```TypeScript
@@ -611,7 +609,7 @@ Removes a specified service from the list of GATT services provided by this devi
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeService](ohos.bluetoothManager/bluetoothManager.GattServer#removeService)
+**Substitutes:** [removeService](arkts-connectivity-bluetoothmanager-gattserver-i.md#removeService)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -650,7 +648,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 **Deprecated since:** 9
 
-**Substitutes:** [sendResponse](ohos.bluetoothManager/bluetoothManager.GattServer#sendResponse)
+**Substitutes:** [sendResponse](arkts-connectivity-bluetoothmanager-gattserver-i.md#sendResponse)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 
@@ -706,7 +704,7 @@ Starts BLE advertising.
 
 **Deprecated since:** 9
 
-**Substitutes:** [startAdvertising](ohos.bluetoothManager/bluetoothManager.GattServer#startAdvertising)
+**Substitutes:** [startAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#startAdvertising)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 
@@ -781,7 +779,7 @@ Stops BLE advertising.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopAdvertising](ohos.bluetoothManager/bluetoothManager.GattServer#stopAdvertising)
+**Substitutes:** [stopAdvertising](arkts-connectivity-bluetoothmanager-gattserver-i.md#stopAdvertising)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

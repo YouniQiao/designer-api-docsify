@@ -1,12 +1,12 @@
 # UserDataSpan
 
-Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation.
-
-The extended user data does not affect the display effect.
+Implements a **UserDataSpan** object for storing and obtaining user data. Only the base class is provided. You need to define the specific implementation. The extended user data does not affect the display effect.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

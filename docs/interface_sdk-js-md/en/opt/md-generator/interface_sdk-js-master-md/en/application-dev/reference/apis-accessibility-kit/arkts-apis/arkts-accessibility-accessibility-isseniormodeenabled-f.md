@@ -16,6 +16,8 @@ Checks whether the senior mode is enabled. This API uses a promise to return the
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-accessibility-function isSeniorModeEnabled(): Promise<boolean>--><!--Device-accessibility-function isSeniorModeEnabled(): Promise<boolean>-End-->
@@ -32,7 +34,7 @@ Checks whether the senior mode is enabled. This API uses a promise to return the
 
 | Error Code ID |
 | --- |
-| [9300000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) |
 
 ## Examples
 

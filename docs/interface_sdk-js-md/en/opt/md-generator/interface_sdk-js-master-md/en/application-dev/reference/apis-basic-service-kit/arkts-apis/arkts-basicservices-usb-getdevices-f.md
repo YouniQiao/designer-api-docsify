@@ -28,7 +28,7 @@ Obtains the USB device list.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Array&lt;[Readonly](../../apis-default/arkts-apis/arkts-readonly-t.md)&lt;USBDevice&gt;&gt; |
+| Array&lt;[Readonly](../../apis-na/arkts-apis/arkts-na-readonly-t.md)&lt;USBDevice&gt;&gt; |
 
 ## Examples
 

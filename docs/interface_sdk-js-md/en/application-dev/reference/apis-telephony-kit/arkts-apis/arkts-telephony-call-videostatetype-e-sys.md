@@ -2,9 +2,11 @@
 
 Video state type.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum VideoStateType--><!--Device-call-export enum VideoStateType-End-->
 
@@ -20,9 +22,11 @@ TYPE_VOICE = 0
 
 Voice state.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoStateType-TYPE_VOICE = 0--><!--Device-VideoStateType-TYPE_VOICE = 0-End-->
 
@@ -60,9 +64,11 @@ TYPE_VIDEO_SEND_ONLY = 1
 
 Data sending only during a video call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_SEND_ONLY = 1--><!--Device-VideoStateType-TYPE_VIDEO_SEND_ONLY = 1-End-->
 
@@ -78,9 +84,11 @@ TYPE_VIDEO_RECEIVE_ONLY = 2
 
 Data receiving only during a video call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_RECEIVE_ONLY = 2--><!--Device-VideoStateType-TYPE_VIDEO_RECEIVE_ONLY = 2-End-->
 
@@ -96,9 +104,11 @@ TYPE_VIDEO_BIDIRECTIONAL = 3
 
 Data receiving/sending status during a video call.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoStateType-TYPE_VIDEO_BIDIRECTIONAL = 3--><!--Device-VideoStateType-TYPE_VIDEO_BIDIRECTIONAL = 3-End-->
 

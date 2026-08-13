@@ -14,7 +14,9 @@ function create(context: Context, source: object): DataObject
 
 Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDataObject-function create(context: Context, source: object): DataObject--><!--Device-distributedDataObject-function create(context: Context, source: object): DataObject-End-->
 
@@ -37,7 +39,7 @@ Creates a distributed data object. The object properties support basic types (nu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

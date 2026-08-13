@@ -6,7 +6,7 @@ Describes the parameters of the Gatt client's descriptor read request.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DescriptorReadRequest](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest)
+**Substitutes:** [DescriptorReadRequest](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#DescriptorReadRequest)
 
 <!--Device-bluetooth-interface DescriptorReadReq--><!--Device-bluetooth-interface DescriptorReadReq-End-->
 
@@ -32,7 +32,7 @@ The UUID of the characteristic to which the descriptor belongs
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicUuid](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest.characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#characteristicUuid)
 
 <!--Device-DescriptorReadReq-characteristicUuid: string--><!--Device-DescriptorReadReq-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ The UUID of a DescriptorReadReq instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [descriptorUuid](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest.descriptorUuid)
+**Substitutes:** [descriptorUuid](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#descriptorUuid)
 
 <!--Device-DescriptorReadReq-descriptorUuid: string--><!--Device-DescriptorReadReq-descriptorUuid: string-End-->
 
@@ -72,7 +72,7 @@ Indicates the address of the client that initiates the read request
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest.deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#deviceId)
 
 <!--Device-DescriptorReadReq-deviceId: string--><!--Device-DescriptorReadReq-deviceId: string-End-->
 
@@ -92,7 +92,7 @@ Indicates the byte offset of the start position for reading characteristic value
 
 **Deprecated since:** 9
 
-**Substitutes:** [offset](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest.offset)
+**Substitutes:** [offset](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#offset)
 
 <!--Device-DescriptorReadReq-offset: number--><!--Device-DescriptorReadReq-offset: number-End-->
 
@@ -112,7 +112,7 @@ The UUID of the service to which the descriptor belongs
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#serviceUuid)
 
 <!--Device-DescriptorReadReq-serviceUuid: string--><!--Device-DescriptorReadReq-serviceUuid: string-End-->
 
@@ -132,7 +132,7 @@ The Id of the read request
 
 **Deprecated since:** 9
 
-**Substitutes:** [transId](ohos.bluetoothManager/bluetoothManager.DescriptorReadRequest.transId)
+**Substitutes:** [transId](arkts-connectivity-bluetoothmanager-descriptorreadrequest-i.md#transId)
 
 <!--Device-DescriptorReadReq-transId: number--><!--Device-DescriptorReadReq-transId: number-End-->
 

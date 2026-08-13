@@ -8,7 +8,7 @@ Provides APIs for managing a distributed data object. Before using any API of th
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 <!--Device-distributedDataObject-interface DistributedObject--><!--Device-distributedDataObject-interface DistributedObject-End-->
 
@@ -20,7 +20,7 @@ Provides APIs for managing a distributed data object. Before using any API of th
 import { distributedDataObject } from '@kit.ArkData';
 ```
 
-## off('change')
+## off_change
 
 ```TypeScript
 off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void
@@ -34,7 +34,7 @@ Unsubscribes from data changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](distributedDataObject.DataObject.off(type:)
+**Substitutes:** off(type: 'change', callback?: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
 
 <!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-off(type: 'change', callback?: (sessionId: string, fields: Array<string>) => void): void-End-->
 
@@ -77,7 +77,7 @@ g_object.off("change", (sessionId: string, fields: Array<string>) => {
 g_object.off("change");
 ```
 
-## off('status')
+## off_status
 
 ```TypeScript
 off(
@@ -94,7 +94,7 @@ Unsubscribes from the status change of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](distributedDataObject.DataObject.off()
+**Substitutes:** off( type: 'status', callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
 
 <!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-off(      type: 'status',      callback?: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
@@ -132,7 +132,7 @@ g_object.off("status", (sessionId: string, networkId: string, status: 'online' |
 g_object.off("status");
 ```
 
-## on('change')
+## on_change
 
 ```TypeScript
 on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void
@@ -146,7 +146,7 @@ Subscribes to data changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](distributedDataObject.DataObject.on(type:)
+**Substitutes:** on(type: 'change', callback: (sessionId: string, fields: Array&lt;string&gt;) =&gt; void )
 
 <!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void--><!--Device-DistributedObject-on(type: 'change', callback: (sessionId: string, fields: Array<string>) => void): void-End-->
 
@@ -186,7 +186,7 @@ g_object.on("change", (sessionId: string, fields: Array<string>) => {
 });
 ```
 
-## on('status')
+## on_status
 
 ```TypeScript
 on(
@@ -203,7 +203,7 @@ Subscribes to status changes of this distributed data object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [on](distributedDataObject.DataObject.on()
+**Substitutes:** on( type: 'status', callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) =&gt; void )
 
 <!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void--><!--Device-DistributedObject-on(      type: 'status',      callback: (sessionId: string, networkId: string, status: 'online' | 'offline' ) => void    ): void-End-->
 
@@ -253,7 +253,7 @@ Sets a session ID. For the devices in the collaboration state in a trusted netwo
 
 **Deprecated since:** 9
 
-**Substitutes:** [setSessionId](distributedDataObject.DataObject.setSessionId(sessionId:)
+**Substitutes:** [setSessionId](arkts-arkdata-distributeddataobject-dataobject-i.md#setSessionId)(sessionId: string, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 

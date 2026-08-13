@@ -12,11 +12,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPPermissionInfo(): Promise<DLPPermissionInfo>
 ```
 
-Queries the permission information of the current DLP sandbox, including permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API can be called only in DLP sandbox applications. This API uses a promise to return the result.
-
-When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
+Queries the permission information of the current DLP sandbox, including permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API can be called only in DLP sandbox applications. This API uses a promise to return the result. When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>--><!--Device-dlpPermission-function getDLPPermissionInfo(): Promise<DLPPermissionInfo>-End-->
 
@@ -32,10 +32,10 @@ When processing files in the DLP sandbox, the system determines the operations t
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100006](../errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 
@@ -60,11 +60,11 @@ dlpPermission.isInSandbox().then(async (inSandbox) => { // Check whether the app
 function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void
 ```
 
-Obtains the permission information of this DLP file. The returned permission information includes permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API uses an asynchronous callback to return the result.
-
-When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
+Obtains the permission information of this DLP file. The returned permission information includes permissions on the file and operations that can be performed (such as viewing, editing, and copying). This API uses an asynchronous callback to return the result. When processing files in the DLP sandbox, the system determines the operations that can be performed for the current user to prevent calling unauthorized capabilities.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void--><!--Device-dlpPermission-function getDLPPermissionInfo(callback: AsyncCallback<DLPPermissionInfo>): void-End-->
 
@@ -80,11 +80,11 @@ When processing files in the DLP sandbox, the system determines the operations t
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100006](../errorcode-dlp.md#19100006-access-denied-for-a-nondlp-sandbox-application) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

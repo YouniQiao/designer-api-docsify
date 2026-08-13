@@ -2,7 +2,9 @@
 
 像素填充模式枚举。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-enum TileMode--><!--Device-uiEffect-enum TileMode-End-->
 
@@ -18,7 +20,9 @@ CLAMP = 0
 
 截断。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TileMode-CLAMP = 0--><!--Device-TileMode-CLAMP = 0-End-->
 
@@ -34,7 +38,9 @@ REPEAT = 1
 
 重复。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TileMode-REPEAT = 1--><!--Device-TileMode-REPEAT = 1-End-->
 
@@ -50,7 +56,9 @@ MIRROR = 2
 
 镜像。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TileMode-MIRROR = 2--><!--Device-TileMode-MIRROR = 2-End-->
 
@@ -66,7 +74,9 @@ DECAL = 3
 
 透明。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TileMode-DECAL = 3--><!--Device-TileMode-DECAL = 3-End-->
 

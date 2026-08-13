@@ -8,7 +8,7 @@ Defines the option of show dialog.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ShowDialogOptions](ohos.promptAction/promptAction.ShowDialogOptions)
+**Substitutes:** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md#ShowDialogOptions)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -26,7 +26,7 @@ import { prompt } from '@kit.ArkUI';
 buttons?: [Button, Button?, Button?]
 ```
 
-Array of buttons in the dialog box.The array structure is {text:'button', color: '#666666'}.One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
+Array of buttons in the dialog box. The array structure is {text:'button', color: '#666666'}. One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
 
 **Type:** [Button, Button?, Button?]
 
@@ -36,7 +36,7 @@ Array of buttons in the dialog box.The array structure is {text:'button', color:
 
 **Deprecated since:** 9
 
-**Substitutes:** [buttons](ohos.promptAction/promptAction.ShowDialogOptions#buttons)
+**Substitutes:** [buttons](arkts-arkui-promptaction-showdialogoptions-i.md#buttons)
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -58,7 +58,7 @@ Text body.
 
 **Deprecated since:** 9
 
-**Substitutes:** [message](ohos.promptAction/promptAction.ShowDialogOptions#message)
+**Substitutes:** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -80,7 +80,7 @@ Title of the text to display.
 
 **Deprecated since:** 9
 
-**Substitutes:** [title](ohos.promptAction/promptAction.ShowDialogOptions#title)
+**Substitutes:** [title](arkts-arkui-promptaction-showdialogoptions-i.md#title)
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

@@ -2,9 +2,11 @@
 
 Defines the MMI code result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export enum MmiCodeResult--><!--Device-call-export enum MmiCodeResult-End-->
 
@@ -20,9 +22,11 @@ MMI_CODE_SUCCESS = 0
 
 Success.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmiCodeResult-MMI_CODE_SUCCESS = 0--><!--Device-MmiCodeResult-MMI_CODE_SUCCESS = 0-End-->
 
@@ -38,9 +42,11 @@ MMI_CODE_FAILED = 1
 
 Failure.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmiCodeResult-MMI_CODE_FAILED = 1--><!--Device-MmiCodeResult-MMI_CODE_FAILED = 1-End-->
 

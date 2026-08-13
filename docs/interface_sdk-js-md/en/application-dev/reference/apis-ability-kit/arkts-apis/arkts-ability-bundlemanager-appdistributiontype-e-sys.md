@@ -2,9 +2,11 @@
 
 Enumerates the application [distribution types](../../../security/app-provision-structure.md).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export enum AppDistributionType--><!--Device-bundleManager-export enum AppDistributionType-End-->
 
@@ -20,9 +22,11 @@ APP_GALLERY = 1
 
 Application installed from AppGallery.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-APP_GALLERY = 1--><!--Device-AppDistributionType-APP_GALLERY = 1-End-->
 
@@ -38,9 +42,11 @@ ENTERPRISE = 2
 
 Enterprise application that can be installed on personal devices.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
 
@@ -56,9 +62,11 @@ ENTERPRISE_NORMAL = 3
 
 Common enterprise application that can be installed on enterprise devices only through an enterprise mobile device management (MDM) application.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
 
@@ -72,12 +80,13 @@ Common enterprise application that can be installed on enterprise devices only t
 ENTERPRISE_MDM = 4
 ```
 
-Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have  
-[administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f.md#enableAdmin).
+Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableAdmin-(System-API)) .
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-ENTERPRISE_MDM = 4--><!--Device-AppDistributionType-ENTERPRISE_MDM = 4-End-->
 
@@ -93,9 +102,11 @@ OS_INTEGRATION = 5
 
 Preinstalled system application.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-OS_INTEGRATION = 5--><!--Device-AppDistributionType-OS_INTEGRATION = 5-End-->
 
@@ -111,9 +122,11 @@ CROWDTESTING = 6
 
 Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
 
@@ -129,9 +142,11 @@ NONE = 7
 
 Other.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AppDistributionType-NONE = 7--><!--Device-AppDistributionType-NONE = 7-End-->
 

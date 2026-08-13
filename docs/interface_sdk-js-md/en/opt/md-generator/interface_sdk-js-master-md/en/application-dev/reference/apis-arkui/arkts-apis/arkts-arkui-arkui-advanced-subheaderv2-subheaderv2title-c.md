@@ -4,7 +4,7 @@ Defines the title settings for the subheader.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class SubHeaderV2Title--><!--Device-unnamed-export declare class SubHeaderV2Title-End-->
 
@@ -26,6 +26,8 @@ A constructor used to create a **SubHeaderV2Title** object.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -43,7 +45,8 @@ A constructor used to create a **SubHeaderV2Title** object.
 ## id
 
 ```TypeScript
-id?: string
+@Trace
+  id?: string
 ```
 
 Set the id of the title.
@@ -52,18 +55,21 @@ Set the id of the title.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
-<!--Device-SubHeaderV2Title-id?: string--><!--Device-SubHeaderV2Title-id?: string-End-->
+<!--Device-SubHeaderV2Title-@Trace  id?: string--><!--Device-SubHeaderV2Title-@Trace  id?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitle
 
 ```TypeScript
-primaryTitle?: ResourceStr
+@Trace
+  primaryTitle?: ResourceStr
 ```
 
 The first line text of content area.
@@ -72,18 +78,21 @@ The first line text of content area.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-primaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-primaryTitle?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-@Trace  primaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace  primaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## primaryTitleModifier
 
 ```TypeScript
-primaryTitleModifier?: TextModifier
+@Trace
+  primaryTitleModifier?: TextModifier
 ```
 
 Text modifier for primary title.
@@ -92,18 +101,21 @@ Text modifier for primary title.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-primaryTitleModifier?: TextModifier-End-->
+<!--Device-SubHeaderV2Title-@Trace  primaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-@Trace  primaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitle
 
 ```TypeScript
-secondaryTitle?: ResourceStr
+@Trace
+  secondaryTitle?: ResourceStr
 ```
 
 The secondary line text of content area.
@@ -112,18 +124,21 @@ The secondary line text of content area.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-secondaryTitle?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-@Trace  secondaryTitle?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace  secondaryTitle?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## secondaryTitleModifier
 
 ```TypeScript
-secondaryTitleModifier?: TextModifier
+@Trace
+  secondaryTitleModifier?: TextModifier
 ```
 
 Text modifier for secondary title.
@@ -132,36 +147,35 @@ Text modifier for secondary title.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-SubHeaderV2Title-secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-secondaryTitleModifier?: TextModifier-End-->
+<!--Device-SubHeaderV2Title-@Trace  secondaryTitleModifier?: TextModifier--><!--Device-SubHeaderV2Title-@Trace  secondaryTitleModifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## titleAccessibilityText
 
 ```TypeScript
-titleAccessibilityText?: ResourceStr
+@Trace
+  titleAccessibilityText?: ResourceStr
 ```
 
-Customized content to be read in the title.
-
-Default value: **undefined**
-
-If the value is **undefined**, the title content displayed by the component is read by default.
-
-Decorator: @Trace
+Customized content to be read in the title. Default value: **undefined** If the value is **undefined**, the title content displayed by the component is read by default. Decorator: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
-<!--Device-SubHeaderV2Title-titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2Title-titleAccessibilityText?: ResourceStr-End-->
+<!--Device-SubHeaderV2Title-@Trace  titleAccessibilityText?: ResourceStr--><!--Device-SubHeaderV2Title-@Trace  titleAccessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

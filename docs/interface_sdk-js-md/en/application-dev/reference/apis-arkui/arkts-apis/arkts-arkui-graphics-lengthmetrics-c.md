@@ -1,30 +1,36 @@
 # LengthMetrics
 
-Defines the Length Metrics.
+Defines the length attribute. When the length unit is PERCENT, the value **1** indicates 100%.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-unnamed-export declare class LengthMetrics--><!--Device-unnamed-export declare class LengthMetrics-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class LengthMetrics--><!--Device-unnamed-declare class LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## autoRefresh
 
 ```TypeScript
-autoRefresh(value: boolean): LengthMetrics
+autoRefresh?(value: boolean): LengthMetrics
 ```
 
-Sets automatic refresh for the LengthMetrics object.When enabled, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes.
+Sets whether the **LengthMetrics** object automatically updates with system configuration changes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-autoRefresh(value: boolean): LengthMetrics--><!--Device-LengthMetrics-autoRefresh(value: boolean): LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-LengthMetrics-autoRefresh?(value: boolean): LengthMetrics--><!--Device-LengthMetrics-autoRefresh?(value: boolean): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -32,29 +38,33 @@ Sets automatic refresh for the LengthMetrics object.When enabled, the length val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | whether to automatically update the length value when the system configuration changes. &lt;br&gt;If set to true, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. If set to false, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. The default value is false. |
+| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#resource) automatically refreshes the value when the system configuration changes. &lt;br&gt;**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. &lt;br&gt;**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the LengthMetrics object for chaining. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | LengthMetrics** object. |
 
 ## constructor
 
 ```TypeScript
-constructor(value: double, unit?:LengthUnit)
+constructor(value: number, unit?:LengthUnit)
 ```
 
-Constructor.
+A constructor used to create a **LengthMetrics** instance. If the **unit** parameter is omitted or explicitly set to **undefined**, the default unit VP is used. If it is set to a value that is not of the LengthUnit type, the default value 0 VP is used.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-constructor(value: double, unit?:LengthUnit)--><!--Device-LengthMetrics-constructor(value: double, unit?:LengthUnit)-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-constructor(value: number, unit?:LengthUnit)--><!--Device-LengthMetrics-constructor(value: number, unit?:LengthUnit)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,24 +72,28 @@ Constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The value of length. |
-| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | No | The length unit. |
+| value | number | Yes | Value of the length property. &lt;br&gt;Value range: [0, +∞). |
+| unit | [LengthUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md) | No | Unit of the length property. |
 
 ## fp
 
 ```TypeScript
-static fp(value: double): LengthMetrics
+static fp(value: number): LengthMetrics
 ```
 
-Init a lengthMetrics with fp unit.
+Creates a length property in fp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-static fp(value: double): LengthMetrics--><!--Device-LengthMetrics-static fp(value: double): LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static fp(value: number): LengthMetrics--><!--Device-LengthMetrics-static fp(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -87,29 +101,33 @@ Init a lengthMetrics with fp unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The value of the length metrics. |
+| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit fp. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## lpx
 
 ```TypeScript
-static lpx(value: double): LengthMetrics
+static lpx(value: number): LengthMetrics
 ```
 
-Init a lengthMetrics with lpx unit.
+Creates a length property in lpx.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-static lpx(value: double): LengthMetrics--><!--Device-LengthMetrics-static lpx(value: double): LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static lpx(value: number): LengthMetrics--><!--Device-LengthMetrics-static lpx(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -117,29 +135,33 @@ Init a lengthMetrics with lpx unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The value of the length metrics. |
+| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit lpx. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## percent
 
 ```TypeScript
-static percent(value: double): LengthMetrics
+static percent(value: number): LengthMetrics
 ```
 
-Init a lengthMetrics with percent unit.
+Creates a length property in percent. The value **1** indicates 100%.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-static percent(value: double): LengthMetrics--><!--Device-LengthMetrics-static percent(value: double): LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static percent(value: number): LengthMetrics--><!--Device-LengthMetrics-static percent(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -147,29 +169,33 @@ Init a lengthMetrics with percent unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The value of the length metrics. |
+| value | number | Yes | Value of the length property. &lt;br&gt;Value range: [0, 1]. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit percent. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## px
 
 ```TypeScript
-static px(value: double): LengthMetrics
+static px(value: number): LengthMetrics
 ```
 
-Init a lengthMetrics with px unit.
+Creates a length property in px.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-static px(value: double): LengthMetrics--><!--Device-LengthMetrics-static px(value: double): LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static px(value: number): LengthMetrics--><!--Device-LengthMetrics-static px(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -177,13 +203,13 @@ Init a lengthMetrics with px unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The value of the length metrics. |
+| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit px. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## resource
 
@@ -191,13 +217,17 @@ Init a lengthMetrics with px unit.
 static resource(value: Resource): LengthMetrics
 ```
 
-Init a lengthMetrics with Resource unit.
+Represents the length of a resource of the Resource type.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthMetrics-static resource(value: Resource): LengthMetrics--><!--Device-LengthMetrics-static resource(value: Resource): LengthMetrics-End-->
 
@@ -207,29 +237,79 @@ Init a lengthMetrics with Resource unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | The value of the length metrics. |
+| value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Value of the length property. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit Resource. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
+
+## Examples
+
+Use LengthMetrics to set the padding and margin attributes of Row.
+
+```TypeScript
+import { LengthMetrics, LengthUnit } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SizeExample {
+  build() {
+    Column({ space: 10 }) {
+      Text('margin and padding:')
+        .fontSize(12)
+        .fontColor(0xCCCCCC)
+        .width('90%')
+      Row() {
+        Row() {
+          Row()
+            .size({ width: '100%', height: '100%' })
+            .backgroundColor('#ffd5d5d5')
+        }
+        .width(80)
+        .height(80)
+        .padding({
+          top: new LengthMetrics(20, LengthUnit.VP),
+          bottom: LengthMetrics.px(15),
+          start: LengthMetrics.vp(10),
+          end: LengthMetrics.fp(20)
+        })
+        .margin({
+          top: LengthMetrics.percent(0.1),
+          bottom: LengthMetrics.lpx(20),
+          start: LengthMetrics.resource($r('app.float.row_margin_start')),
+          end: LengthMetrics.vp(10)
+        })
+        .backgroundColor(Color.White)
+      }
+      .backgroundColor("#ff2787d9")
+    }
+    .width('100%')
+    .margin({ top: 5 })
+  }
+}
+```
 
 ## vp
 
 ```TypeScript
-static vp(value: double): LengthMetrics
+static vp(value: number): LengthMetrics
 ```
 
-Init a lengthMetrics with vp unit.
+Creates a length property in vp.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-static vp(value: double): LengthMetrics--><!--Device-LengthMetrics-static vp(value: double): LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-static vp(value: number): LengthMetrics--><!--Device-LengthMetrics-static vp(value: number): LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -237,13 +317,13 @@ Init a lengthMetrics with vp unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The value of the length metrics. |
+| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Returns the lengthMetrics object with unit vp. |
+| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Instance of the **LengthMetrics** class. |
 
 ## unit
 
@@ -251,17 +331,21 @@ Init a lengthMetrics with vp unit.
 public unit: LengthUnit
 ```
 
-The unit of the LengthMetrics. The default value is VP.
+Unit of the length property. The default value is VP.
 
-**Type:** [LengthUnit](arkts-arkui-graphics-lengthunit-e.md)
+**Type:** [LengthUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md)
 
 **Default:** VP
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LengthMetrics-public unit: LengthUnit--><!--Device-LengthMetrics-public unit: LengthUnit-End-->
 
@@ -270,20 +354,24 @@ The unit of the LengthMetrics. The default value is VP.
 ## value
 
 ```TypeScript
-public value: double
+public value: number
 ```
 
-The value of the LengthMetrics.
+Value of the length property.
 
-**Type:** double
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LengthMetrics-public value: double--><!--Device-LengthMetrics-public value: double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-LengthMetrics-public value: number--><!--Device-LengthMetrics-public value: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

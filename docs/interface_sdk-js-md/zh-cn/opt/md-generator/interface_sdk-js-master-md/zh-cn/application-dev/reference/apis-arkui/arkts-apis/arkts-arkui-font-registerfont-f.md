@@ -6,26 +6,13 @@
 function registerFont(options: FontOptions): void
 ```
 
-在字体管理中注册自定义字体。
-
-该接口为异步接口，不支持并发调用。
-
-> **说明：**
-> 
-> -registerFont需要先通过[UIContext](@ohos.arkui.UIContext)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取
-> [Font](@ohos.arkui.UIContext)对象，然后通过该对象进行调用。且直接使用registerFont可能导致
-> [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。
-> 
-> - 从API version 10开始，可以通过使用[UIContext](@ohos.arkui.UIContext)中的
-> [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的
-> [Font](@ohos.arkui.UIContext)对象。
+在字体管理中注册自定义字体。 该接口为异步接口，不支持并发调用。 > **说明：** > > -registerFont需要先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取 > [Font](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象，然后通过该对象进行调用。且直接使用registerFont可能导致 > [UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的问题。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getFont](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getfont)方法获取当前UI上下文关联的 > [Font](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象。
 
 **起始版本：** 9
 
 **废弃版本：** 18
 
-**替代接口：** [registerFont](ohos.arkui.UIContext.Font#registerFont)
+**替代接口：** registerFont
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,9 +2,11 @@
 
 Enumerates the device-cloud file sync states.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum FileState--><!--Device-cloudSync-enum FileState-End-->
 
@@ -18,9 +20,11 @@ INITIAL_AFTER_DOWNLOAD = 0
 
 Initial state after the first download.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileState-INITIAL_AFTER_DOWNLOAD = 0--><!--Device-FileState-INITIAL_AFTER_DOWNLOAD = 0-End-->
 
@@ -34,9 +38,11 @@ UPLOADING = 1
 
 The file is being uploaded.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileState-UPLOADING = 1--><!--Device-FileState-UPLOADING = 1-End-->
 
@@ -50,9 +56,11 @@ STOPPED = 2
 
 The upload has been stopped.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileState-STOPPED = 2--><!--Device-FileState-STOPPED = 2-End-->
 
@@ -66,9 +74,11 @@ TO_BE_UPLOADED = 3
 
 The file is going to be uploaded.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileState-TO_BE_UPLOADED = 3--><!--Device-FileState-TO_BE_UPLOADED = 3-End-->
 
@@ -82,9 +92,11 @@ UPLOAD_SUCCESS = 4
 
 The file has been successfully uploaded.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileState-UPLOAD_SUCCESS = 4--><!--Device-FileState-UPLOAD_SUCCESS = 4-End-->
 
@@ -98,9 +110,11 @@ UPLOAD_FAILURE = 5
 
 The file fails to be uploaded.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileState-UPLOAD_FAILURE = 5--><!--Device-FileState-UPLOAD_FAILURE = 5-End-->
 

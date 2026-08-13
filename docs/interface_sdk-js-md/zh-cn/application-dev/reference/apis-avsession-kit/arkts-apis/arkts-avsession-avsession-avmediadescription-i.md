@@ -2,9 +2,11 @@
 
 播放列表媒体元数据的相关属性。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVMediaDescription--><!--Device-avSession-interface AVMediaDescription-End-->
 
@@ -20,9 +22,11 @@ albumCoverUri?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,9 +44,11 @@ albumTitle?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -60,9 +66,11 @@ appName?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,9 +88,11 @@ artist?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -96,17 +106,15 @@ artist?: string
 assetId: string
 ```
 
-媒体ID。媒体信息的唯一标识，由应用自定义。
-
-- 该属性发生变化则其他元数据属性都将被刷新。  
-- 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。  
-- 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setAVMetadata-1)方法将失败，返回错误码6600101。
+媒体ID。媒体信息的唯一标识，由应用自定义。 - 该属性发生变化则其他元数据属性都将被刷新。 - 若该属性维持不变，且不设置相应的媒体元数据信息，那么将不会更新对应的媒体元数据信息。 - 当该属性设为空值时，调用[setAVMetadata](arkts-avsession-avsession-avsession-i.md#setAVMetadata)方法将失败，返回错误码6600101。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -122,11 +130,13 @@ creditsPosition?: int
 
 播放列表媒体的片尾播放位置。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -144,9 +154,11 @@ dataSrc?: media.AVDataSrcDescriptor
 
 **类型：** media.AVDataSrcDescriptor
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVMediaDescription-dataSrc?: media.AVDataSrcDescriptor--><!--Device-AVMediaDescription-dataSrc?: media.AVDataSrcDescriptor-End-->
 
@@ -162,9 +174,11 @@ description?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -178,15 +192,15 @@ description?: string
 displayTags?: int
 ```
 
-媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md#DisplayTag)。
+媒体资源的金标类型，取值参考[DisplayTag](arkts-avsession-avsession-displaytag-e.md#DisplayTag)。 在使用了cast+协议的音频投播场景下，不支持使用该属性。
 
-在使用了cast+协议的音频投播场景下，不支持使用该属性。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 11
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -204,9 +218,11 @@ drmScheme?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AVMediaDescription-drmScheme?: string--><!--Device-AVMediaDescription-drmScheme?: string-End-->
 
@@ -220,11 +236,13 @@ duration?: int
 
 播放列表媒体播放时长。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -235,27 +253,20 @@ duration?: int
 ## extras
 
 ```TypeScript
-extras?: {[key: string]: Object}
+extras?: Record<string, Object>
 ```
 
-播放列表媒体额外字段。
+Any additional attributes that can be represented as key-value pairs
 
-从API版本26.0.0开始，DLNA投播场景下支持将[ExtraKey](arkts-avsession-avsession-extrakey-e.md#ExtraKey)中DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE两个键的值传递给对端设备，键值对的值需传入符合XML格式的字符串。如传入入参`{[avSession.ExtraKey.DLNA_CURRENT_URI_METADATA]: '&lt;xxtv&gt;...&lt;/xxtv&gt;'}`。
+**类型：** Record&lt;string, Object&gt;
 
-- 非DLNA投播场景不生效。  
-- 非字符串类型不生效。  
-- 非XML格式会触发  
-[on('castControlIoError')](avSession.AVCastController.on(type: 'castControlIoError', callback: ErrorCallback))回调并返回错误码6612000。错误码的详细介绍请参见[媒体会话管理错误码](../../../reference/apis-avsession-kit/errorcode-avsession.md)。  
-- 通过extras字段，在[ExtraKey](arkts-avsession-avsession-extrakey-e.md#ExtraKey)中通过DLNA_CURRENT_URI_METADATA和DLNA_DIDL_LITE键传入的字符串总长度需小于40960字  
-节。
+**起始版本：** 23
 
-**类型：** {[key: string]: Object}
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 10
+**废弃版本：** -1
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
-<!--Device-AVMediaDescription-extras?: {[key: string]: Object}--><!--Device-AVMediaDescription-extras?: {[key: string]: Object}-End-->
+<!--Device-AVMediaDescription-extras?: Record<string, Object>--><!--Device-AVMediaDescription-extras?: Record<string, Object>-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.Core
 
@@ -269,9 +280,11 @@ fdSrc?: media.AVFileDescriptor
 
 **类型：** media.AVFileDescriptor
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -289,11 +302,13 @@ launchClientData?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVMediaDescription-launchClientData?: string--><!--Device-AVMediaDescription-launchClientData?: string-End-->
 
@@ -305,15 +320,15 @@ launchClientData?: string
 lyricContent?: string
 ```
 
-播放列表媒体歌词内容。
-
-字符串长度需小于40960字节。
+播放列表媒体歌词内容。 字符串长度需小于40960字节。
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -331,9 +346,11 @@ lyricUri?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -347,22 +364,15 @@ lyricUri?: string
 mediaImage?: image.PixelMap | string
 ```
 
-设置播放列表媒体图片像素数据。
-
-在使用了cast+协议的音视频投播场景下，该字段用于给对端设备设置媒体专辑封面。
-
-当入参为string类型时：
-
-- 只支持使用网络URI设置封面，不支持本地URI。  
-- 其作用与albumCoverUri属性功能相同，且优先级高于albumCoverUri。
-
-从API version 23开始，支持入参为image.PixelMap类型给对端设备设置媒体信息。
+设置播放列表媒体图片像素数据。 在使用了cast+协议的音视频投播场景下，该字段用于给对端设备设置媒体专辑封面。 当入参为string类型时： - 只支持使用网络URI设置封面，不支持本地URI。 - 其作用与albumCoverUri属性功能相同，且优先级高于albumCoverUri。 从API version 23开始，支持入参为image.PixelMap类型给对端设备设置媒体信息。
 
 **类型：** image.PixelMap \| string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -378,11 +388,13 @@ mediaSize?: int
 
 播放列表媒体的大小。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -400,9 +412,11 @@ mediaType?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -420,9 +434,11 @@ mediaUri?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -440,11 +456,13 @@ pcmSrc?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVMediaDescription-pcmSrc?: boolean--><!--Device-AVMediaDescription-pcmSrc?: boolean-End-->
 
@@ -458,11 +476,13 @@ startPosition?: int
 
 播放列表媒体起始播放位置。音视频投播场景中，在投播直播资源时，此字段应置空或赋值为0。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -480,9 +500,11 @@ subtitle?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -500,9 +522,11 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

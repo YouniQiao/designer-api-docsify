@@ -6,6 +6,8 @@
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class Matrix2D--><!--Device-unnamed-declare class Matrix2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,11 +18,13 @@
 constructor()
 ```
 
-Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0.
+Constructs a two-dimensional transformation matrix object. The default value is a matrix whose attributes are all 0.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ Constructs a two-dimensional transformation matrix object.The default value is a
 constructor(unit: LengthMetricsUnit)
 ```
 
-Constructs a two-dimensional transformation matrix object.The default value is a matrix whose attributes are all 0. The unit mode of the Matrix2D object can be configured.
+Constructs a two-dimensional transformation matrix object. The default value is a matrix whose attributes are all 0. The unit mode of the Matrix2D object can be configured.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +78,8 @@ Transforms the current 2D matrix back to the identity matrix (i.e., without any 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -98,6 +106,8 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -118,7 +128,7 @@ Transform the current 2D matrix into an inverse matrix (that is, the transformat
 multiply(other?: Matrix2D): Matrix2D
 ```
 
-The matrix is superimposed in right multiplication mode. When the input parameter is empty,the matrix is superimposed.
+The matrix is superimposed in right multiplication mode. When the input parameter is empty, the matrix is superimposed.
 
 **Since:** 8
 
@@ -191,6 +201,8 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -227,6 +239,8 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -259,6 +273,8 @@ Performs a left multiplication translation operation on this matrix.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -295,6 +311,8 @@ Horizontal skew coefficient. The value range is not limited.&lt;br&gt;If the val
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -316,6 +334,8 @@ Vertical skew coefficient. The value range is not limited.&lt;br&gt;If the value
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -339,6 +359,8 @@ Horizontal scaling coefficient. The value range is not limited.&lt;br&gt;If the 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -360,6 +382,8 @@ Vertical scaling coefficient. The value range is not limited.&lt;br&gt;If the va
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -383,6 +407,8 @@ Horizontal translation distance. The value range is unlimited. &lt;br&gt;The abn
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -404,6 +430,8 @@ Vertical translation distance. The value range is unlimited. &lt;br&gt;The abnor
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

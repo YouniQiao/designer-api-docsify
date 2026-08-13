@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-screen-interface OrientationOptions--><!--Device-screen-interface OrientationOptions-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -23,6 +25,8 @@ ignoreRotationLock?: boolean
 **默认值：** false
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +49,8 @@ needAnimation?: boolean
 **默认值：** true
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface AreaChangeOptions--><!--Device-unnamed-declare interface AreaChangeOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,9 +18,7 @@
 expectedUpdateInterval?: int
 ```
 
-区域变化的计算时间间隔，单位为ms。当该字段大于2^31-1时，默认取值为2^31-1。
-
-默认值：1000
+区域变化的计算时间间隔，单位为ms。当该字段大于2^31-1时，默认取值为2^31-1。 默认值：1000
 
 **类型：** int
 
@@ -27,6 +27,8 @@ expectedUpdateInterval?: int
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

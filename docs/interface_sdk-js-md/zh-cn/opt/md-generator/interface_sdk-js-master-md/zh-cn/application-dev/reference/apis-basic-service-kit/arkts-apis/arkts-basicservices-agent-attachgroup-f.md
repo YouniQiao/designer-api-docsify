@@ -6,11 +6,11 @@
 function attachGroup(gid: string, tids: string[]): Promise<void>
 ```
 
-向指定分组id中绑定多个下载任务id。使用Promise异步回调。
+向指定分组id中绑定多个下载任务id。使用Promise异步回调。 如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。
 
-如果任意一个任务id不满足添加条件，则所有列表中的任务都不会添加到分组中。
+**起始版本：** 23
 
-**起始版本：** 15
+**废弃版本：** -1
 
 <!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>--><!--Device-agent-function attachGroup(gid: string, tids: string[]): Promise<void>-End-->
 
@@ -33,9 +33,9 @@ function attachGroup(gid: string, tids: string[]): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [21900008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900008-任务分组不存在或已移除) |
-| [21900006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900006-操作不存在的任务错误) |
-| [21900007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
-| [21900005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
-| [13400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [21900008](../../apis-basic-services-kit/errorcode-request.md#21900008-任务分组不存在或已移除) |
+| [21900006](../../apis-basic-services-kit/errorcode-request.md#21900006-操作不存在的任务错误) |
+| [21900007](../../apis-basic-services-kit/errorcode-request.md#21900007-在不支持的状态上的操作) |
+| [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-任务模式错误) |
+| [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-服务异常) |

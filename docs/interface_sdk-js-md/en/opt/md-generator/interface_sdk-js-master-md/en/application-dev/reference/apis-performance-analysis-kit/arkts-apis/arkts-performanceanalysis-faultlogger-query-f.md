@@ -18,7 +18,7 @@ Obtains the fault information about the current application. This API uses an as
 
 **Deprecated since:** 18
 
-**Substitutes:** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
+**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void--><!--Device-FaultLogger-function query(faultType: FaultType, callback: AsyncCallback<Array<FaultLogInfo>>): void-End-->
 
@@ -35,9 +35,9 @@ Obtains the fault information about the current application. This API uses an as
 
 | Error Code ID |
 | --- |
-| [10600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 
@@ -84,7 +84,7 @@ Obtains the fault information about the current application. This API uses a pro
 
 **Deprecated since:** 18
 
-**Substitutes:** [addWatcher](ohos.hiviewdfx.hiAppEvent/hiAppEvent#addWatcher)
+**Substitutes:** [addWatcher](arkts-performanceanalysis-hiappevent-addwatcher-f.md#addWatcher)
 
 <!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>--><!--Device-FaultLogger-function query(faultType: FaultType): Promise<Array<FaultLogInfo>>-End-->
 
@@ -106,9 +106,9 @@ Obtains the fault information about the current application. This API uses a pro
 
 | Error Code ID |
 | --- |
-| [10600001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [10600001](../errorcode-faultlogger.md#10600001-service-faulty-or-not-started) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

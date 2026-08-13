@@ -10,7 +10,9 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.BACKGROUND_MANAGER_POWER_SAVE_MODE
 
@@ -22,7 +24,7 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 进程号。&lt;br&gt;取值范围：大于0的整数。 |
+| pid | int | 是 | 进程号。&lt;br&gt;取值范围：大于0的整数。 |
 
 **返回值：**
 
@@ -34,9 +36,9 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [31800002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-参数错误) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

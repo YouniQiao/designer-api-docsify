@@ -10,6 +10,8 @@ Triggered when an atomic service is launched.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare type LaunchAtomicServiceCallback = (appId: string, options?: AtomicServiceOptions) => void--><!--Device-unnamed-export declare type LaunchAtomicServiceCallback = (appId: string, options?: AtomicServiceOptions) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -2,7 +2,9 @@
 
 拖拽对象的数据摘要。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-dragInteraction-interface Summary--><!--Device-dragInteraction-interface Summary-End-->
 
@@ -20,7 +22,9 @@ dataSize: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Summary-dataSize: int--><!--Device-Summary-dataSize: int-End-->
 
@@ -38,7 +42,9 @@ dataType: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Summary-dataType: string--><!--Device-Summary-dataType: string-End-->
 

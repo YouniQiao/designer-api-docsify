@@ -4,6 +4,8 @@ Provides the gutter options for the grid layout to define the spacing between ch
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GutterOption--><!--Device-unnamed-declare interface GutterOption-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ Horizontal spacing between grid child components. Unit: vp.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -34,11 +38,13 @@ Horizontal spacing between grid child components. Unit: vp.
 y?: Length | GridRowSizeOption
 ```
 
-Vertical spacing between grid child components.Unit: vp.
+Vertical spacing between grid child components. Unit: vp.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md) \| [GridRowSizeOption](arkts-arkui-gridrowsizeoption-i.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -6,6 +6,8 @@ The type of XComponent
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum XComponentType--><!--Device-unnamed-declare enum XComponentType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Surface type. The default type is used.
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,11 +64,13 @@ Component type.
 TEXTURE
 ```
 
-Texture type.Supports EGL/OpenGLES and media data rendering.Custom drawing content is composited with XComponent’s native content before display.Key features:1. Maintains frame synchronization between GPU textures and ArkUI drawing commands.2. Supports unified animation with built-in components.3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type  using the display subsystem (DSS).
+Texture type. Supports EGL/OpenGLES and media data rendering. Custom drawing content is composited with XComponent’s native content before display. Key features: 1. Maintains frame synchronization between GPU textures and ArkUI drawing commands. 2. Supports unified animation with built-in components. 3. Utilizes GPU composition, which may have higher power consumption than the SURFACE type using the display subsystem (DSS).
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,7 +94,7 @@ Node type.
 
 **废弃版本：** 20
 
-**替代接口：** [ContentSlot](ContentSlot)
+**替代接口：** ContentSlot
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

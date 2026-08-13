@@ -2,7 +2,9 @@
 
 旋转手势事件。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface Rotate--><!--Device-unnamed-export declare interface Rotate-End-->
 
@@ -18,7 +20,9 @@ angle: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rotate-angle: double--><!--Device-Rotate-angle: double-End-->
 
@@ -34,7 +38,9 @@ type: ActionType
 
 **类型：** [ActionType](arkts-input-multimodalinput-gestureevent-actiontype-e.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Rotate-type: ActionType--><!--Device-Rotate-type: ActionType-End-->
 

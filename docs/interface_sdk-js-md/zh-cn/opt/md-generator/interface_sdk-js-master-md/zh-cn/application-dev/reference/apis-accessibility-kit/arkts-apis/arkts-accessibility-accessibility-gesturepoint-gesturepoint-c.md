@@ -1,10 +1,10 @@
 # GesturePoint
 
-GesturePoint表示手势触摸点。
-
-本模块用于创建辅助功能注入手势所需的手势路径的触摸点信息。
+GesturePoint表示手势触摸点。 本模块用于创建辅助功能注入手势所需的手势路径的触摸点信息。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare class GesturePoint--><!--Device-unnamed-export declare class GesturePoint-End-->
 
@@ -30,8 +30,8 @@ constructor(positionX: number, positionY: number)
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [positionX](#positionx) | number | 是 |
-| [positionY](#positiony) | number | 是 |
+| [positionX](#positionX) | number | 是 |
+| [positionY](#positionY) | number | 是 |
 
 ## 示例
 
@@ -53,6 +53,8 @@ positionX: number
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-GesturePoint-positionX: double--><!--Device-GesturePoint-positionX: double-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
@@ -68,6 +70,8 @@ positionY: number
 **类型：** number
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-GesturePoint-positionY: double--><!--Device-GesturePoint-positionY: double-End-->
 

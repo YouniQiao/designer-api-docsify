@@ -4,6 +4,8 @@
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PopupMaskType--><!--Device-unnamed-declare interface PopupMaskType-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ color: ResourceColor
 **类型：** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

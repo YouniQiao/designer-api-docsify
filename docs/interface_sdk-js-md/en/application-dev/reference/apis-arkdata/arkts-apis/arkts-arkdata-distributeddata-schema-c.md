@@ -1,7 +1,6 @@
 # Schema
 
-Defines the schema of a KV store. You can create a **Schema** object and place it in  
-[Options](arkts-arkdata-distributeddata-options-i.md#Options) when creating or opening a KV store.
+Defines the schema of a KV store. You can create a **Schema** object and place it in [Options](arkts-arkdata-distributeddata-options-i.md#Options) when creating or opening a KV store.
 
 **Since:** 8
 
@@ -9,7 +8,7 @@ Defines the schema of a KV store. You can create a **Schema** object and place i
 
 **Deprecated since:** 9
 
-**Substitutes:** [Schema](ohos.data.distributedKVStore.Schema)
+**Substitutes:** Schema
 
 <!--Device-distributedData-class Schema--><!--Device-distributedData-class Schema-End-->
 
@@ -29,7 +28,7 @@ A constructor used to create a **Schema** instance.
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](ohos.data.distributedKVStore.Schema#constructor)
+**Substitutes:** constructor
 
 <!--Device-Schema-constructor()--><!--Device-Schema-constructor()-End-->
 
@@ -51,7 +50,7 @@ String array in JSON format.
 
 **Deprecated since:** 9
 
-**Substitutes:** [indexes](ohos.data.distributedKVStore.Schema#indexes)
+**Substitutes:** [indexes](#indexes)
 
 <!--Device-Schema-indexes: Array<string>--><!--Device-Schema-indexes: Array<string>-End-->
 
@@ -73,7 +72,7 @@ Schema mode.
 
 **Deprecated since:** 9
 
-**Substitutes:** [mode](ohos.data.distributedKVStore.Schema#mode)
+**Substitutes:** mode
 
 <!--Device-Schema-mode: number--><!--Device-Schema-mode: number-End-->
 
@@ -95,7 +94,7 @@ JSON root object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [root](ohos.data.distributedKVStore.Schema#root)
+**Substitutes:** [root](#root)
 
 <!--Device-Schema-root: FieldNode--><!--Device-Schema-root: FieldNode-End-->
 
@@ -117,7 +116,7 @@ Size of a skip of the schema.
 
 **Deprecated since:** 9
 
-**Substitutes:** [skip](ohos.data.distributedKVStore.Schema#skip)
+**Substitutes:** [skip](#skip)
 
 <!--Device-Schema-skip: number--><!--Device-Schema-skip: number-End-->
 

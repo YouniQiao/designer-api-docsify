@@ -2,7 +2,9 @@
 
 投播组件显示模式参数选项。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum AVCastPickerColorMode--><!--Device-unnamed-export declare enum AVCastPickerColorMode-End-->
 
@@ -16,9 +18,11 @@ AUTO = 0
 
 Auto mode which follows the definition of system.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerColorMode-AUTO = 0--><!--Device-AVCastPickerColorMode-AUTO = 0-End-->
 
@@ -32,9 +36,11 @@ DARK = 1
 
 Dark mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerColorMode-DARK = 1--><!--Device-AVCastPickerColorMode-DARK = 1-End-->
 
@@ -48,9 +54,11 @@ LIGHT = 2
 
 Light mode.
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastPickerColorMode-LIGHT = 2--><!--Device-AVCastPickerColorMode-LIGHT = 2-End-->
 

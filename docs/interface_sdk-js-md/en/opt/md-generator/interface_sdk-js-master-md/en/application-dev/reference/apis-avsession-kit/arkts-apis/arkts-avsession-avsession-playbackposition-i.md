@@ -2,7 +2,9 @@
 
 Playback position definition
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface PlaybackPosition--><!--Device-avSession-interface PlaybackPosition-End-->
 
@@ -24,7 +26,9 @@ Elapsed time(position) of this media set by the app, described by milliseconds.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,7 +46,9 @@ Record the system time when elapsedTime is set, described by milliseconds.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -29,7 +29,7 @@ import { fileExtensionInfo } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#supports_read) | The device supports read. |
-| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#supports_write) | The device supports write. |
+| [SUPPORTS_READ](arkts-corefile-deviceflag-con-sys.md#SUPPORTS_READ) | The device supports read. |
+| [SUPPORTS_WRITE](arkts-corefile-deviceflag-con-sys.md#SUPPORTS_WRITE) | The device supports write. |
 <!--DelEnd-->
 

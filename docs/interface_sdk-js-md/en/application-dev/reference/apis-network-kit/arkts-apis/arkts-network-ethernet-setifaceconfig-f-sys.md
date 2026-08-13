@@ -18,6 +18,8 @@ Set the specified network interface parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration, callback: AsyncCallback<void>): void-End-->
@@ -31,23 +33,23 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#InterfaceConfiguration). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | the callback of setIfaceConfig. |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#InterfaceConfiguration-(System-API)). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | the callback of setIfaceConfig. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2201005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 | 2201004 | Invalid Ethernet profile. |
-| [2201007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
-| [2201006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
+| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
+| [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
 
 ## Examples
 
@@ -86,6 +88,8 @@ Set the specified network interface parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CONNECTIVITY_INTERNAL
 
 <!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>--><!--Device-ethernet-function setIfaceConfig(iface: string, ic: InterfaceConfiguration): Promise<void>-End-->
@@ -99,7 +103,7 @@ Set the specified network interface parameters.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | iface | string | Yes | Indicates the network interface name of the network parameter. |
-| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#InterfaceConfiguration). |
+| ic | [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md) | Yes | Indicates the ic. See [InterfaceConfiguration](arkts-network-ethernet-interfaceconfiguration-i-sys.md#InterfaceConfiguration-(System-API)). |
 
 **Return value:**
 
@@ -111,16 +115,16 @@ Set the specified network interface parameters.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. |
-| [2100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
-| [2200003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
-| [2200002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [2201005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) | Invalid parameter value. |
+| [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
+| [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 | 2201004 | Invalid Ethernet profile. |
-| [2201007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
-| [2201006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-network-kit/errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
+| [2201007](../errorcode-net-ethernet.md#2201007-failed-to-write-the-user-configuration) | Ethernet failed to write user configuration information. |
+| [2201006](../errorcode-net-ethernet.md#2201006-device-not-connected) | Ethernet device not connected. |
 
 ## Examples
 

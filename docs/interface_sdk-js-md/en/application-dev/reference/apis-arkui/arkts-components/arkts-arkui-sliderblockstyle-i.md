@@ -6,6 +6,8 @@ Describes the style of the slider in the block direction.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SliderBlockStyle--><!--Device-unnamed-declare interface SliderBlockStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Describes the style of the slider in the block direction.
 image?: ResourceStr
 ```
 
-Image resource of the slider.
-
-The area size for displaying the image is subject to the **blockSize** attribute. Be mindful of the image size when selecting an image.
+Image resource of the slider. The area size for displaying the image is subject to the **blockSize** attribute. Be mindful of the image size when selecting an image.
 
 **Type:** ResourceStr
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +50,8 @@ Custom shape of the slider.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -62,9 +66,7 @@ Custom shape of the slider.
 type: SliderBlockType
 ```
 
-Type of the slider in the block direction.
-
-Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
+Type of the slider in the block direction. Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
 
 **Type:** [SliderBlockType](arkts-arkui-sliderblocktype-e.md)
 
@@ -73,6 +75,8 @@ Default value: **SliderBlockType.DEFAULT**, indicating the round slider.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,10 +1,12 @@
 # @ohos.data.distributedDataObject
 
-The distributedDataObject module provides basic data object management, including creating, querying, deleting,modifying, and subscribing to data objects, and distributed data object collaboration for the same application among multiple devices. Although this module does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
+The distributedDataObject module provides basic data object management, including creating, querying, deleting, modifying, and subscribing to data objects, and distributed data object collaboration for the same application among multiple devices. Although this module does not parse user data, you are advised not to transfer sensitive personal data or privacy data due to low-level security of storage path.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace distributedDataObject--><!--Device-unnamed-declare namespace distributedDataObject-End-->
 
@@ -23,8 +25,8 @@ import { distributedDataObject } from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | [create](arkts-arkdata-distributeddataobject-create-f.md#create) | Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types). |
-| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject) | Creates a distributed data object. |
-| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#gensessionid) | Creates a random session ID. |
+| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createDistributedObject) | Creates a distributed data object. |
+| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#genSessionId) | Creates a random session ID. |
 
 ### Interfaces
 
@@ -34,7 +36,7 @@ import { distributedDataObject } from '@kit.ArkData';
 | [DataObject](arkts-arkdata-distributeddataobject-dataobject-i.md) | Provides APIs for managing a distributed data object. Before using any API of this class, use create() to create a DataObject object. |
 | [DistributedObject](arkts-arkdata-distributeddataobject-distributedobject-i.md) | Provides APIs for managing a distributed data object. Before using any API of this class, use createDistributedObject() to create a DistributedObject object. |
 | [RevokeSaveSuccessResponse](arkts-arkdata-distributeddataobject-revokesavesuccessresponse-i.md) | Represents the information returned by the callback of revokeSave. |
-| [SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md) | Represents the information returned by the callback of save.. |
+| [SaveSuccessResponse](arkts-arkdata-distributeddataobject-savesuccessresponse-i.md) | Represents the information returned by the callback of save. . |
 
 ### Types
 

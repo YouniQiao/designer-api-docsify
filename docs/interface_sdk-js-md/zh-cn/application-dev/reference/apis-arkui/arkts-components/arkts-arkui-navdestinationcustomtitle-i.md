@@ -6,6 +6,8 @@ NavDestination自定义标题。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NavDestinationCustomTitle--><!--Device-unnamed-declare interface NavDestinationCustomTitle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ builder: CustomBuilder
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-NavDestinationCustomTitle-builder: CustomBuilder--><!--Device-NavDestinationCustomTitle-builder: CustomBuilder-End-->
@@ -36,15 +40,15 @@ builder: CustomBuilder
 height: TitleHeight | Length
 ```
 
-设置标题栏高度。
-
-取值范围：[0, +∞)。
+设置标题栏高度。 取值范围：[0, +∞)。
 
 **类型：** TitleHeight \| Length
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

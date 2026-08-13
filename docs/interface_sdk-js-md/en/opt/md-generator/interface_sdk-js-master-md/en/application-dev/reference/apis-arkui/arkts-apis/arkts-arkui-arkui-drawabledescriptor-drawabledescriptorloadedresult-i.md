@@ -4,6 +4,8 @@ Represents the result of loading an image resource or URI.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface DrawableDescriptorLoadedResult--><!--Device-unnamed-export interface DrawableDescriptorLoadedResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,13 +22,13 @@ import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, Anim
 imageHeight: number
 ```
 
-Image height.
-
-Unit: px.
+Image height. Unit: px.
 
 **Type:** number
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +44,13 @@ Unit: px.
 imageWidth: number
 ```
 
-Image width.
-
-Unit: px.
+Image width. Unit: px.
 
 **Type:** number
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

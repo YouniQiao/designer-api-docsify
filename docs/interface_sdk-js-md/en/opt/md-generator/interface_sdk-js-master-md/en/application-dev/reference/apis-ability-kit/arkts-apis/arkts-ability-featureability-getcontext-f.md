@@ -16,6 +16,8 @@ Obtains the application context.
 
 **Since:** 6
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function getContext(): Context--><!--Device-featureAbility-function getContext(): Context-End-->

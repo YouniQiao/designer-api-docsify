@@ -1,18 +1,20 @@
 # ArcSliderEnlargeHandler
 
 ```TypeScript
-export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
+declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
 ```
 
-弧形Slider放大或缩小时，告知应用。
+弧形Slider放大或缩小时触发回调。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**废弃版本：** -1
 
-<!--Device-unnamed-export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void--><!--Device-unnamed-export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-unnamed-declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void--><!--Device-unnamed-declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Circle
 

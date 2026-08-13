@@ -14,9 +14,11 @@ function getFreeSize(path: string): Promise<long>
 
 Obtains the free size of the specified file system, in bytes. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getFreeSize(path: string): Promise<long>--><!--Device-statfs-function getFreeSize(path: string): Promise<long>-End-->
 
@@ -32,7 +34,7 @@ Obtains the free size of the specified file system, in bytes. This API uses a pr
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the free size obtained, in bytes. |
+| Promise&lt;long&gt; | Promise used to return the free size obtained, in bytes. |
 
 **Error codes:**
 
@@ -77,9 +79,11 @@ function getFreeSize(path: string, callback: AsyncCallback<long>): void
 
 Obtains the free size of the specified file system, in bytes. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void--><!--Device-statfs-function getFreeSize(path: string, callback: AsyncCallback<long>): void-End-->
 
@@ -90,7 +94,7 @@ Obtains the free size of the specified file system, in bytes. This API uses an a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | File path of the file system. |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the free size obtained, in bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the free size obtained, in bytes. |
 
 **Error codes:**
 

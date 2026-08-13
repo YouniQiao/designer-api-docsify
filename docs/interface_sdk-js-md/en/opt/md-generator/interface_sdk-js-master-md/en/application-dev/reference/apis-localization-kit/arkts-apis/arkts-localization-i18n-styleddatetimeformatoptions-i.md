@@ -4,6 +4,8 @@ Optional configuration items for creating the time and date formatting object fo
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-i18n-export interface StyledDateTimeFormatOptions--><!--Device-i18n-export interface StyledDateTimeFormatOptions-End-->
 
 **System capability:** SystemCapability.Global.I18n
@@ -26,6 +28,8 @@ Specifies the text style of the day. The default value is the default text style
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormatOptions-day?: TextStyle--><!--Device-StyledDateTimeFormatOptions-day?: TextStyle-End-->
@@ -43,6 +47,8 @@ Specifies the text style of the period. The default value is the default text st
 **Type:** TextStyle
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -62,6 +68,8 @@ Specifies the text style of the era. The default value is the default text style
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormatOptions-era?: TextStyle--><!--Device-StyledDateTimeFormatOptions-era?: TextStyle-End-->
@@ -79,6 +87,8 @@ Specifies the text style of the hour. The default value is the default text styl
 **Type:** TextStyle
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -98,6 +108,8 @@ Specifies the text style of the minute. The default value is the default text st
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormatOptions-minute?: TextStyle--><!--Device-StyledDateTimeFormatOptions-minute?: TextStyle-End-->
@@ -115,6 +127,8 @@ Specifies the text style of the month. The default value is the default text sty
 **Type:** TextStyle
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -134,6 +148,8 @@ Specifies the text style of the second. The default value is the default text st
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormatOptions-second?: TextStyle--><!--Device-StyledDateTimeFormatOptions-second?: TextStyle-End-->
@@ -151,6 +167,8 @@ Specifies the text style of the time zone name. The default value is the default
 **Type:** TextStyle
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -170,6 +188,8 @@ Specifies the text style of the week. The default value is the default text styl
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-StyledDateTimeFormatOptions-weekday?: TextStyle--><!--Device-StyledDateTimeFormatOptions-weekday?: TextStyle-End-->
@@ -187,6 +207,8 @@ Specifies the text style of the year. The default value is the default text styl
 **Type:** TextStyle
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 

@@ -2,9 +2,11 @@
 
 公共消息选项，使用指定的标志类型，构造指定的MessageOption对象。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-rpc-class MessageOption--><!--Device-rpc-class MessageOption-End-->
 
@@ -21,6 +23,8 @@ MessageOption构造函数。
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -59,6 +63,8 @@ MessageOption构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MessageOption-constructor(async?: boolean)--><!--Device-MessageOption-constructor(async?: boolean)-End-->
@@ -93,7 +99,9 @@ MessageOption构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MessageOption-constructor(isAsync: boolean)--><!--Device-MessageOption-constructor(isAsync: boolean)-End-->
 
@@ -130,7 +138,9 @@ MessageOption构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MessageOption-constructor()--><!--Device-MessageOption-constructor()-End-->
 
@@ -159,7 +169,9 @@ MessageOption构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MessageOption-constructor(syncFlags: int)--><!--Device-MessageOption-constructor(syncFlags: int)-End-->
 
@@ -194,7 +206,9 @@ MessageOption构造函数。
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)--><!--Device-MessageOption-constructor(syncFlags: int, waitTime: int)-End-->
 
@@ -224,21 +238,17 @@ class TestRemoteObject extends rpc.MessageOption {
 
 ## getFlags
 
-ArkTS-Dyn:
-```TypeScript
-getFlags(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getFlags(): int
 ```
 
 获取同步调用或异步调用标志。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -250,7 +260,7 @@ getFlags(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 调用成功返回同步调用或异步调用标志。同步调用标志：0，异步调用标志：1。 |
+| int | 调用成功返回同步调用或异步调用标志。同步调用标志：0，异步调用标志：1。 |
 
 ## 示例
 
@@ -274,21 +284,17 @@ try {
 
 ## getWaitTime
 
-ArkTS-Dyn:
-```TypeScript
-getWaitTime(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWaitTime(): int
 ```
 
 获取rpc调用的最长等待时间。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -300,7 +306,7 @@ getWaitTime(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | rpc最长等待时间（单位：秒）。 |
+| int | rpc最长等待时间（单位：秒）。 |
 
 ## 示例
 
@@ -326,12 +332,13 @@ try {
 isAsync(): boolean
 ```
 
-获取  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
+获取 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -365,12 +372,13 @@ try {
 setAsync(isAsync: boolean): void
 ```
 
-设置  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
+设置 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)调用中确定同步或是异步的标志。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -400,21 +408,17 @@ try {
 
 ## setFlags
 
-ArkTS-Dyn:
-```TypeScript
-setFlags(flags: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setFlags(flags: int): void
 ```
 
 设置同步调用或异步调用标志。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -426,7 +430,7 @@ setFlags(flags: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| flags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0；异步调用标志：1。 |
+| flags | int | 是 | 同步调用或异步调用标志。取值范围：{0, 1}。同步调用标志：0；异步调用标志：1。 |
 
 ## 示例
 
@@ -447,21 +451,17 @@ try {
 
 ## setWaitTime
 
-ArkTS-Dyn:
-```TypeScript
-setWaitTime(waitTime: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setWaitTime(waitTime: int): void
 ```
 
 设置rpc调用最长等待时间。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -473,7 +473,7 @@ setWaitTime(waitTime: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| waitTime | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | rpc调用最长等待时间（单位：秒），取值范围：(0，3000] |
+| waitTime | int | 是 | rpc调用最长等待时间（单位：秒），取值范围：(0，3000] |
 
 ## 示例
 
@@ -497,8 +497,7 @@ try {
 static readonly TF_ACCEPT_FDS: number
 ```
 
-指示  
-[sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)接口可以传递文件描述符。
+指示 [sendMessageRequest](arkts-ipc-rpc-iremoteobject-c.md#sendMessageRequest)接口可以传递文件描述符。
 
 **类型：** number
 
@@ -506,7 +505,9 @@ static readonly TF_ACCEPT_FDS: number
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -528,7 +529,9 @@ static readonly TF_ASYNC: number
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -550,7 +553,9 @@ static readonly TF_SYNC: number
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -572,7 +577,9 @@ RPC等待时间（单位：秒），IPC场景下无效。默认等待为8秒（�
 
 **起始版本：** 7
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 

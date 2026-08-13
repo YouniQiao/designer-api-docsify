@@ -2,9 +2,11 @@
 
 Enumerates live view types.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum LiveViewTypes--><!--Device-unnamed-export enum LiveViewTypes-End-->
 
@@ -20,9 +22,11 @@ LIVE_VIEW_ACTIVITY = 0
 
 Real-time activity (progress).
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewTypes-LIVE_VIEW_ACTIVITY = 0--><!--Device-LiveViewTypes-LIVE_VIEW_ACTIVITY = 0-End-->
 
@@ -38,9 +42,11 @@ LIVE_VIEW_INSTANT = 1
 
 Instant task.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewTypes-LIVE_VIEW_INSTANT = 1--><!--Device-LiveViewTypes-LIVE_VIEW_INSTANT = 1-End-->
 
@@ -56,9 +62,11 @@ LIVE_VIEW_LONG_TERM = 2
 
 Long-term task.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LiveViewTypes-LIVE_VIEW_LONG_TERM = 2--><!--Device-LiveViewTypes-LIVE_VIEW_LONG_TERM = 2-End-->
 

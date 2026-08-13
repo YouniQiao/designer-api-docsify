@@ -18,6 +18,8 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void--><!--Device-featureAbility-function hasWindowFocus(callback: AsyncCallback<boolean>): void-End-->
@@ -28,7 +30,7 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result.&lt;br&gt;If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.&lt;br&gt;If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 ## Examples
 
@@ -56,6 +58,8 @@ Checks whether the main window of this ability has the focus. This API uses a pr
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

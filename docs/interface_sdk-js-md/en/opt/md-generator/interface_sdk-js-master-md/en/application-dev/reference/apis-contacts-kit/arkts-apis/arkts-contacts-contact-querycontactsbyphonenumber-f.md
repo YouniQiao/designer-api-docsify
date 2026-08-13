@@ -12,14 +12,13 @@ import { contact } from '@kit.ContactsKit';
 function queryContactsByPhoneNumber(phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number. This API uses an asynchronous callback to return the result.The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
+**Substitutes:** [queryContactsByPhoneNumber](#queryContactsByPhoneNumber)(context: Context, phoneNumber: string, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -57,10 +56,11 @@ contact.queryContactsByPhoneNumber('138xxxxxxxx', (err: BusinessError, data) => 
 function queryContactsByPhoneNumber(context: Context, phoneNumber: string, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number. This API uses an asynchronous callback to return the result.The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -80,12 +80,12 @@ Queries a contact based on the specified phone number. This API uses an asynchro
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -110,14 +110,13 @@ contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', (err: BusinessError, 
 function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
+**Substitutes:** [queryContactsByPhoneNumber](#queryContactsByPhoneNumber)(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -160,10 +159,11 @@ contact.queryContactsByPhoneNumber('138xxxxxxxx', {
 function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder: Holder, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number and holder. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -184,12 +184,12 @@ Queries a contact based on the specified phone number and holder. This API uses 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance that inherits from UIAbility. If you need to use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -218,14 +218,13 @@ contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
 function queryContactsByPhoneNumber(phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers**attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
+**Substitutes:** [queryContactsByPhoneNumber](#queryContactsByPhoneNumber)(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -265,10 +264,11 @@ contact.queryContactsByPhoneNumber('138xxxxxxxx', {
 function queryContactsByPhoneNumber(context: Context, phoneNumber: string, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers**attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -289,12 +289,12 @@ Queries a contact based on the specified phone number and attributes. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -321,15 +321,13 @@ contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
 function queryContactsByPhoneNumber(phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and  
-**phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
+**Substitutes:** [queryContactsByPhoneNumber](#queryContactsByPhoneNumber)(context: Context, phoneNumber: string, holder: Holder, attrs: ContactAttributes, callback: AsyncCallback&lt;Array&lt;Contact&gt;&gt;)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -375,11 +373,11 @@ function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holde
     callback: AsyncCallback<Array<Contact>>): void
 ```
 
-Queries a contact based on the specified phone number, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and  
-**phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number, holder, and attributes. This API uses an asynchronous callback to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -401,12 +399,12 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -437,14 +435,13 @@ contact.queryContactsByPhoneNumber(context, '138xxxxxxxx', {
 function queryContactsByPhoneNumber(phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 7
 
 **Deprecated since:** 10
 
-**Substitutes:** [queryContactsByPhoneNumber](contact.queryContactsByPhoneNumber(context:)
+**Substitutes:** [queryContactsByPhoneNumber](#queryContactsByPhoneNumber)(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes)
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -490,10 +487,11 @@ promise.then((data) => {
 function queryContactsByPhoneNumber(context: Context, phoneNumber: string, holder?: Holder, attrs?: ContactAttributes): Promise<Array<Contact>>
 ```
 
-Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call  
-[queryContact](arkts-contacts-contact-querycontact-f.md#queryContact)to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
+Queries a contact based on the specified phone number, holder, and attributes. This API uses a promise to return the result. The return result of this API includes only the **id**, **key**, and **phoneNumbers** attributes. If you want to query all information about a contact, you are advised to call [queryContact](arkts-contacts-contact-querycontact-f.md#queryContact) to query the contact based on the specified key. If an application calls this API in the background to obtain contact information, the application must request the corresponding continuous task.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.READ_CONTACTS
 
@@ -520,12 +518,12 @@ Queries a contact based on the specified phone number, holder, and attributes. T
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../errorcode-contacts.md#401-failed-to-open-the-contact-portrait-file) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
-In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the examples in this document, this.context is used to obtain the UIAbilityContext, where this represents the UIAbility instance inherited from UIAbility. If you need to use the capabilities provided by UIAbilityContext in the UI, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { contact } from '@kit.ContactsKit';

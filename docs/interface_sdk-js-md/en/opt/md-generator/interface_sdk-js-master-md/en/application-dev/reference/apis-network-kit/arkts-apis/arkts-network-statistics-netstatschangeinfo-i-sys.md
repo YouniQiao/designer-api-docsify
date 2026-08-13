@@ -2,7 +2,9 @@
 
 Used to monitor and manage the status and usage of network interfaces.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetStatsChangeInfo--><!--Device-statistics-export interface NetStatsChangeInfo-End-->
 
@@ -26,7 +28,9 @@ Network interface for querying traffic.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsChangeInfo-iface: string--><!--Device-NetStatsChangeInfo-iface: string-End-->
 
@@ -44,7 +48,9 @@ Network interface for querying traffic.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsChangeInfo-uid?: int--><!--Device-NetStatsChangeInfo-uid?: int-End-->
 

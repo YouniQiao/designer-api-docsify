@@ -4,6 +4,8 @@ UI font configuration of the system.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-font-interface UIFontGenericInfo--><!--Device-font-interface UIFontGenericInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Weight of the font when displayed, which corresponds to the original weight.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,6 +50,8 @@ Font alias configuration information.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -65,6 +71,8 @@ Font family name, which is the value of **family** specified in the font file.
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

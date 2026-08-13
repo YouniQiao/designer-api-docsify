@@ -14,9 +14,11 @@ function isWifiActive(): boolean
 
 Query the Wi-Fi status
 
-**Since:** 13
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 13.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-wifiManager-function isWifiActive(): boolean--><!--Device-wifiManager-function isWifiActive(): boolean-End-->
 
@@ -32,8 +34,8 @@ Query the Wi-Fi status
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501000-sta-internal-error) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
 
 ## Examples
 

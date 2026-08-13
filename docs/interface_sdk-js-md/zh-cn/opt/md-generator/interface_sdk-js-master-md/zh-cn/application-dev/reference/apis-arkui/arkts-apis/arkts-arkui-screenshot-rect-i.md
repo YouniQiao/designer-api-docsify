@@ -2,7 +2,9 @@
 
 表示截取图像的区域。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-screenshot-interface Rect--><!--Device-screenshot-interface Rect-End-->
 
@@ -18,9 +20,11 @@ height: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Rect-height: long--><!--Device-Rect-height: long-End-->
 
@@ -36,9 +40,11 @@ left: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Rect-left: long--><!--Device-Rect-left: long-End-->
 
@@ -54,9 +60,11 @@ top: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Rect-top: long--><!--Device-Rect-top: long-End-->
 
@@ -72,9 +80,11 @@ width: number
 
 **类型：** number
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Rect-width: long--><!--Device-Rect-width: long-End-->
 

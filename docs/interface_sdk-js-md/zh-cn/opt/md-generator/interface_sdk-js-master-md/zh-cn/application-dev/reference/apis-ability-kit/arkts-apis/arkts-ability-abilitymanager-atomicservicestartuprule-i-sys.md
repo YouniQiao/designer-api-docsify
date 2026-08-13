@@ -2,7 +2,9 @@
 
 嵌入式拉起原子化服务的规则。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-abilityManager-export interface AtomicServiceStartupRule--><!--Device-abilityManager-export interface AtomicServiceStartupRule-End-->
 
@@ -20,7 +22,9 @@ isEmbeddedAllowed: boolean
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AtomicServiceStartupRule-isEmbeddedAllowed: boolean--><!--Device-AtomicServiceStartupRule-isEmbeddedAllowed: boolean-End-->
 
@@ -38,7 +42,9 @@ isOpenAllowed: boolean
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AtomicServiceStartupRule-isOpenAllowed: boolean--><!--Device-AtomicServiceStartupRule-isOpenAllowed: boolean-End-->
 

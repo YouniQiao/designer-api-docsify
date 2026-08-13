@@ -1,0 +1,44 @@
+# on_cooperate (System API)
+
+## Modules to Import
+
+```TypeScript
+import { cooperate } from '@kit.DistributedServiceKit';
+```
+
+## on_cooperate
+
+```TypeScript
+function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void
+```
+
+Enables listening for screen hopping status change events.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](#on_cooperate)(type: 'cooperateMessage', callback: Callback&lt;CooperateMessage&gt;)
+
+<!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void--><!--Device-cooperate-function on(type: 'cooperate', callback: Callback<{ networkId: string, msg: CooperateMsg }>): void-End-->
+
+**System capability:** SystemCapability.Msdp.DeviceStatus.Cooperate
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'cooperate' | Yes | Event type. The value is **cooperate**. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;{ networkId: string, msg: CooperateMsg }&gt; | Yes |  |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+

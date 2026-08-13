@@ -1,11 +1,5 @@
 # HapModuleInfo
 
-The module defines the HAP module information. An application can obtain its own HAP module information through
- [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getBundleInfoForSelf),
- with **GET_BUNDLE_INFO_WITH_HAP_MODULE** passed in for
- [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag).
-
-
 ## Summary
 
 ### Interfaces

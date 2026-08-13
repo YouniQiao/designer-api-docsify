@@ -4,6 +4,8 @@ The actual offset by which the scrollable scrolls.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class ScrollResult--><!--Device-unnamed-declare class ScrollResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Actual offset by which the scrollable scrolls in vp.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

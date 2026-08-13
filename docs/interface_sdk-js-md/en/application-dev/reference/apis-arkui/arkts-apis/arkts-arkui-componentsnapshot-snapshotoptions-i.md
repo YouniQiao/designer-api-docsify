@@ -6,6 +6,8 @@ Defines the extra options for snapshot taking.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentSnapshot-export interface SnapshotOptions--><!--Device-componentSnapshot-export interface SnapshotOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Set the color space options for current snapshot taking.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SnapshotOptions-colorMode?: ColorModeOptions--><!--Device-SnapshotOptions-colorMode?: ColorModeOptions-End-->
@@ -49,6 +53,8 @@ Set the dynamic range mode options for current snapshot taking.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Defines the rect region type of the snapshot.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SnapshotOptions-region?: SnapshotRegionType--><!--Device-SnapshotOptions-region?: SnapshotRegionType-End-->
@@ -90,6 +98,8 @@ Defines the scale property to render the snapshot.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SnapshotOptions-scale?: double--><!--Device-SnapshotOptions-scale?: double-End-->
@@ -109,6 +119,8 @@ Whether to wait the rendering is finished.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

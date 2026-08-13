@@ -6,7 +6,9 @@ The definition of the tab page content.
 
 **Since:** 23
 
-<!--Device-avMusicTemplate-interface MediaTabContent extends OperResult--><!--Device-avMusicTemplate-interface MediaTabContent extends OperResult-End-->
+**Deprecated since:** -1
+
+<!--Device-avMusicTemplate-interface MediaTabContent--><!--Device-avMusicTemplate-interface MediaTabContent-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -28,6 +30,8 @@ Compilations content of the tab page.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MediaTabContent-compilations: Compilation[]--><!--Device-MediaTabContent-compilations: Compilation[]-End-->
@@ -45,6 +49,8 @@ Tab id corresponding to the content.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

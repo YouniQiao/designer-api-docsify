@@ -2,7 +2,9 @@
 
 Enumerates CallerType including caller source type.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-enum CallerType--><!--Device-avSession-enum CallerType-End-->
 
@@ -16,7 +18,9 @@ TYPE_CAST = 'cast'
 
 The control command comes from cast service.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallerType-TYPE_CAST = 'cast'--><!--Device-CallerType-TYPE_CAST = 'cast'-End-->
 
@@ -30,7 +34,9 @@ TYPE_BLUETOOTH = 'bluetooth'
 
 The control command comes from bluetooth.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallerType-TYPE_BLUETOOTH = 'bluetooth'--><!--Device-CallerType-TYPE_BLUETOOTH = 'bluetooth'-End-->
 
@@ -44,7 +50,9 @@ TYPE_NEARLINK = 'nearlink'
 
 The control command comes from nearlink device.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +68,9 @@ TYPE_APP = 'app'
 
 The control command comes from an application.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CallerType-TYPE_APP = 'app'--><!--Device-CallerType-TYPE_APP = 'app'-End-->
 

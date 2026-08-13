@@ -10,6 +10,8 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>--><!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
@@ -24,7 +26,7 @@ function createAVImageGenerator(): Promise<AVImageGenerator>
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 
@@ -48,12 +50,43 @@ media.createAVImageGenerator().then((generator: media.AVImageGenerator) => {
 ## createAVImageGenerator
 
 ```TypeScript
+function createAVImageGenerator(): Promise<AVImageGenerator | undefined>
+```
+
+Creates an **AVImageGenerator** instance. This API uses a promise to return the result.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator | undefined>--><!--Device-media-function createAVImageGenerator(): Promise<AVImageGenerator | undefined>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**返回值：**
+
+| 类型 |
+| --- |
+| Promise&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined & gt; |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
+
+
+## createAVImageGenerator
+
+```TypeScript
 function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 ```
 
 创建AVImageGenerator实例。使用callback异步回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void--><!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void-End-->
 
@@ -69,7 +102,7 @@ function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator>): void
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 
@@ -86,3 +119,32 @@ media.createAVImageGenerator((error: BusinessError, generator: media.AVImageGene
   }
 });
 ```
+
+
+## createAVImageGenerator
+
+```TypeScript
+function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undefined>): void
+```
+
+Creates an **AVImageGenerator** instance. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undefined>): void--><!--Device-media-function createAVImageGenerator(callback: AsyncCallback<AVImageGenerator | undefined>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AVImageGenerator](arkts-media-media-avimagegenerator-i.md) \| undefined & gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) |

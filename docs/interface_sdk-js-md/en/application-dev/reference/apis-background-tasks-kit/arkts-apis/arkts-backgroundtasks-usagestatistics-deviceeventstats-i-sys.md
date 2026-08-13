@@ -1,8 +1,10 @@
 # DeviceEventStats (System API)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface DeviceEventStats--><!--Device-usageStatistics-interface DeviceEventStats-End-->
 
@@ -24,11 +26,13 @@ count: int
 
 The the event occurrence number.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceEventStats-count: int--><!--Device-DeviceEventStats-count: int-End-->
 
@@ -44,11 +48,13 @@ eventId: int
 
 The event id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceEventStats-eventId: int--><!--Device-DeviceEventStats-eventId: int-End-->
 
@@ -66,9 +72,11 @@ The bundle name or system event name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceEventStats-name: string--><!--Device-DeviceEventStats-name: string-End-->
 

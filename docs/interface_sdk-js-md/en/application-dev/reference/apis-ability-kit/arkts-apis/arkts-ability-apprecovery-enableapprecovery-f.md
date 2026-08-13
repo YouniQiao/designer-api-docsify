@@ -14,9 +14,11 @@ function enableAppRecovery(restart?: RestartFlag, saveOccasion?: SaveOccasionFla
 
 Enables application recovery. After this API is called, the first ability that is displayed when the application is started from the initiator can be restored.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

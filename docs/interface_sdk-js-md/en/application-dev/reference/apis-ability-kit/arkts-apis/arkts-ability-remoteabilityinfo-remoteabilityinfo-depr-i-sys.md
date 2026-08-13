@@ -1,13 +1,6 @@
 # RemoteAbilityInfo (System API)
 
-The module provides information about a remote ability.
-
-> **NOTE：**
-> 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-RemoteAbilityInfo](#RemoteAbilityInfo) instead.
-> 
-> The APIs provided by this module are system APIs.
+The module provides information about a remote ability. > **NOTE：**> > The APIs of this module have been deprecated since API version 9. You are advised to use > [bundleManager-RemoteAbilityInfo](#RemoteAbilityInfo-(System-API)) instead. > > The APIs provided by this module are system APIs.
 
 **Since:** 8
 
@@ -15,7 +8,7 @@ The module provides information about a remote ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [RemoteAbilityInfo](#RemoteAbilityInfo)
+**Substitutes:** [RemoteAbilityInfo](#RemoteAbilityInfo-(System-API))
 
 <!--Device-unnamed-export interface RemoteAbilityInfo--><!--Device-unnamed-export interface RemoteAbilityInfo-End-->
 
@@ -41,7 +34,7 @@ Element name information of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [elementName](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#elementName)
+**Substitutes:** elementName
 
 <!--Device-RemoteAbilityInfo-readonly elementName: ElementName--><!--Device-RemoteAbilityInfo-readonly elementName: ElementName-End-->
 
@@ -67,7 +60,7 @@ Icon of the ability.
 
 **Deprecated since:** 9
 
-**Substitutes:** [icon](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#icon)
+**Substitutes:** icon
 
 <!--Device-RemoteAbilityInfo-readonly icon: string--><!--Device-RemoteAbilityInfo-readonly icon: string-End-->
 
@@ -93,7 +86,7 @@ Ability name.
 
 **Deprecated since:** 9
 
-**Substitutes:** [label](ohos.bundle.distributedBundleManager/distributedBundleManager.RemoteAbilityInfo#label)
+**Substitutes:** label
 
 <!--Device-RemoteAbilityInfo-readonly label: string--><!--Device-RemoteAbilityInfo-readonly label: string-End-->
 

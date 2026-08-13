@@ -1,11 +1,12 @@
 # IntentEntityDecoratorInfo
 
-用于描述  
-[@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity)装饰器支持的参数。
+用于描述 @InsightIntentEntity 装饰器支持的参数。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface IntentEntityDecoratorInfo--><!--Device-unnamed-declare interface IntentEntityDecoratorInfo-End-->
 
@@ -24,6 +25,8 @@ entityCategory: string
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +50,8 @@ parameters?: Record<string, Object>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
@@ -68,6 +73,8 @@ supportedQueryProperties?: string[]
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

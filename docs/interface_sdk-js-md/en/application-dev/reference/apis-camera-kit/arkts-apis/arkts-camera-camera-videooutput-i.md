@@ -1,15 +1,16 @@
 # VideoOutput
 
-VideoOutput implements output information used in a video session. It inherits from   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
+VideoOutput implements output information used in a video session. It inherits from [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput).
 
 **Inheritance/Implementation:** VideoOutput extends [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface VideoOutput extends CameraOutput--><!--Device-camera-interface VideoOutput extends CameraOutput-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface VideoOutput--><!--Device-camera-interface VideoOutput-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -19,57 +20,19 @@ VideoOutput implements output information used in a video session. It inherits f
 import { camera } from '@kit.CameraKit';
 ```
 
-## enableMirror
-
-```TypeScript
-enableMirror(enabled: boolean): void
-```
-
-Enables or disables mirror recording.
-
-- Before calling this API, check whether mirror recording is supported by using   
-[isMirrorSupported](#isMirrorSupported).  
-- After enabling or disabling mirror recording, call   
-[getVideoRotation](#getVideoRotation) to obtain the rotation angle and   
-[updateRotation](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#updateRotation) to update the rotation angle.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-enableMirror(enabled: boolean): void--><!--Device-VideoOutput-enableMirror(enabled: boolean): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable mirror recording. **true** to enable, **false** otherwise. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
-
 ## getActiveFrameRate
 
 ```TypeScript
 getActiveFrameRate(): FrameRateRange
 ```
 
-Obtains the configured frame rate range.
+Obtains the configured frame rate range. This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for video streams.
 
-This API is valid only after [setFrameRate](#setFrameRate) is called to set a frame rate range for video streams.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -91,9 +54,11 @@ getActiveProfile(): VideoProfile
 
 Obtains the profile that takes effect currently.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -111,7 +76,7 @@ Obtains the profile that takes effect currently.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getSupportedFrameRates
 
@@ -121,9 +86,11 @@ getSupportedFrameRates(): Array<FrameRateRange>
 
 Obtains the supported frame rates.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -139,26 +106,17 @@ Obtains the supported frame rates.
 
 ## getVideoRotation
 
-ArkTS-Dyn:
-```TypeScript
-getVideoRotation(deviceDegree?: number): ImageRotation
-```
-
-ArkTS-Sta:
 ```TypeScript
 getVideoRotation(deviceDegree?: int): ImageRotation
 ```
 
-Obtains the video rotation angle.
+Obtains the video rotation angle. - Device' natural orientation: the default orientation for using a device. For example, the default orientation of the bar-type phone is in portrait mode, with the charging port facing downward. - Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
 
-- Device' natural orientation: the default orientation for using a device. For example, the default orientation   
-of the bar-type phone is in portrait mode, with the charging port facing downward.  
-- Camera lens angle: equivalent to the angle at which the camera is rotated clockwise to match the device's   
-natural orientation. For example, the rear camera sensor of a bar-type phone is installed in landscape mode. Therefore, it needs to be rotated by 90 degrees clockwise to match the device's natural orientation.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -172,7 +130,7 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. &lt;br&gt; Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
+| deviceDegree | int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. &lt;br&gt; Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -184,58 +142,24 @@ natural orientation. For example, the rear camera sensor of a bar-type phone is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 12 - 22 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
-## isMirrorSupported
-
-```TypeScript
-isMirrorSupported(): boolean
-```
-
-Checks whether mirror recording is supported.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-isMirrorSupported(): boolean--><!--Device-VideoOutput-isMirrorSupported(): boolean-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Check result for the support of mirror recording. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 14 |
-
-## off('frameStart')
+## offError
 
 ```TypeScript
-off(type: 'frameStart', callback?: AsyncCallback<void>): void
+offError(callback?: ErrorCallback): void
 ```
 
-Unsubscribes from video recording start events.
+Unsubscribes from error events.
 
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**Deprecated since:** -1
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
-
-<!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-offError(callback?: ErrorCallback): void--><!--Device-VideoOutput-offError(callback?: ErrorCallback): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -243,24 +167,23 @@ Unsubscribes from video recording start events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to get the video output errors. |
 
-## off('frameEnd')
+## offFrameEnd
 
 ```TypeScript
-off(type: 'frameEnd', callback?: AsyncCallback<void>): void
+offFrameEnd(callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from video recording stop events.
+Unsubscribes from frame end event callback.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
 
-<!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -268,10 +191,33 @@ Unsubscribes from video recording stop events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. |
 
-## off('error')
+## offFrameStart
+
+```TypeScript
+offFrameStart(callback?: AsyncCallback<void>): void
+```
+
+Unsubscribes from frame start event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. |
+
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -282,6 +228,8 @@ Unsubscribes from VideoOutput error events.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -294,93 +242,25 @@ Unsubscribes from VideoOutput error events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a photoOutput instance is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## offError
-
-```TypeScript
-offError(callback?: ErrorCallback): void
-```
-
-Unsubscribes from error events.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-VideoOutput-offError(callback?: ErrorCallback): void--><!--Device-VideoOutput-offError(callback?: ErrorCallback): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to get the video output errors. |
-
-## offFrameEnd
+## off_frameEnd
 
 ```TypeScript
-offFrameEnd(callback?: AsyncCallback<void>): void
+off(type: 'frameEnd', callback?: AsyncCallback<void>): void
 ```
 
-Unsubscribes from frame end event callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-VideoOutput-offFrameEnd(callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-offFrameEnd(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. |
-
-## offFrameStart
-
-```TypeScript
-offFrameStart(callback?: AsyncCallback<void>): void
-```
-
-Unsubscribes from frame start event callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-VideoOutput-offFrameStart(callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-offFrameStart(callback?: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | No | Callback used to return the result. |
-
-## on('frameStart')
-
-```TypeScript
-on(type: 'frameStart', callback: AsyncCallback<void>): void
-```
-
-Subscribes to video recording start events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Unsubscribes from video recording stop events.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameEnd', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -388,24 +268,26 @@ Subscribes to video recording start events. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. The event is triggered and the corresponding information is returned when the bottom layer starts exposure for the first time. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. The recording starts as long as this event is returned. |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## on('frameEnd')
+## off_frameStart
 
 ```TypeScript
-on(type: 'frameEnd', callback: AsyncCallback<void>): void
+off(type: 'frameStart', callback?: AsyncCallback<void>): void
 ```
 
-Subscribes to video recording stop events. This API uses an asynchronous callback to return the result.
+Unsubscribes from video recording start events. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
-<!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
+<!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void--><!--Device-VideoOutput-off(type: 'frameStart', callback?: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -413,24 +295,94 @@ Subscribes to video recording stop events. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. This event is triggered and returned when the last frame of recording is complete. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. The recording ends as long as this event is returned. |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## on('error')
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-onError(callback: ErrorCallback): void--><!--Device-VideoOutput-onError(callback: ErrorCallback): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to get the video output errors. |
+
+## onFrameEnd
+
+```TypeScript
+onFrameEnd(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame end event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## onFrameStart
+
+```TypeScript
+onFrameStart(callback: AsyncCallback<void>): void
+```
+
+Subscribes frame start event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-VideoOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to VideoOutput error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -443,21 +395,25 @@ Subscribes to VideoOutput error events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a videoOutput instance is created. This event is triggered and the corresponding error message is returned when an error occurs during the use of a recording-related API such as [start](#start) or [CameraOutput.release](arkts-camera-camera-cameraoutput-i.md#release). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
 
-## onError
+## on_frameEnd
 
 ```TypeScript
-onError(callback: ErrorCallback): void
+on(type: 'frameEnd', callback: AsyncCallback<void>): void
 ```
 
-Subscribes to error events.
+Subscribes to video recording stop events. This API uses an asynchronous callback to return the result.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-VideoOutput-onError(callback: ErrorCallback): void--><!--Device-VideoOutput-onError(callback: ErrorCallback): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameEnd', callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -465,21 +421,26 @@ Subscribes to error events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to get the video output errors. |
+| type | 'frameEnd' | Yes | Event type. The value is fixed at **'frameEnd'**. The event can be listened for when a videoOutput instance is created. This event is triggered and returned when the last frame of recording is complete. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The recording ends as long as this event is returned. |
 
-## onFrameEnd
+## on_frameStart
 
 ```TypeScript
-onFrameEnd(callback: AsyncCallback<void>): void
+on(type: 'frameStart', callback: AsyncCallback<void>): void
 ```
 
-Subscribes frame end event callback.
+Subscribes to video recording start events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
-**Since:** 23
+**Since:** 10
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-VideoOutput-onFrameEnd(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-onFrameEnd(callback: AsyncCallback<void>): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void--><!--Device-VideoOutput-on(type: 'frameStart', callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -487,58 +448,22 @@ Subscribes frame end event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
-
-## onFrameStart
-
-```TypeScript
-onFrameStart(callback: AsyncCallback<void>): void
-```
-
-Subscribes frame start event callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-VideoOutput-onFrameStart(callback: AsyncCallback<void>): void--><!--Device-VideoOutput-onFrameStart(callback: AsyncCallback<void>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| type | 'frameStart' | Yes | Event type. The value is fixed at **'frameStart'**. The event can be listened for when a videoOutput instance is created. The event is triggered and the corresponding information is returned when the bottom layer starts exposure for the first time. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. The recording starts as long as this event is returned. |
 
 ## setFrameRate
 
-ArkTS-Dyn:
-```TypeScript
-setFrameRate(minFps: number, maxFps: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setFrameRate(minFps: int, maxFps: int): void
 ```
 
-Sets a frame rate range for video streams. The range must be within the supported frame rate range,
+Sets a frame rate range for video streams. The range must be within the supported frame rate range, which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates). > **NOTE：**> > This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or > [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode. > > Before calling this API, call [getActiveFrameRate](#getActiveFrameRate) to obtain the > current frame rate of the video session. If the delivered frame rate matches the current frame rate, the > delivered frame rate is not applied.
 
-which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRates).
+**Since:** 23
 
-> **NOTE：**
-> 
-> This API is valid only in [PhotoSession](arkts-camera-camera-photosession-i.md#PhotoSession) or
-> [VideoSession](arkts-camera-camera-videosession-i.md#VideoSession) mode.
-> 
-> Before calling this API, call [getActiveFrameRate](#getActiveFrameRate) to obtain the
-> current frame rate of the video session. If the delivered frame rate matches the current frame rate, the
-> delivered frame rate is not applied.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -550,15 +475,15 @@ which can be obtained by calling [getSupportedFrameRates](#getSupportedFrameRate
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Minimum frame rate, in fps. When the maximum value is less than the minimum value, the API does not take effect. |
-| maxFps | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum frame rate, in fps. When the minimum value is greater than the maximum value, the API does not take effect. |
+| minFps | int | Yes | Minimum frame rate, in fps. When the maximum value is less than the minimum value, the API does not take effect. |
+| maxFps | int | Yes | Maximum frame rate, in fps. When the minimum value is greater than the maximum value, the API does not take effect. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400110](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400110-configuration-conflicts) | Unresolved conflicts with current configurations. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400110](../errorcode-camera.md#7400110-configuration-conflicts) | Unresolved conflicts with current configurations. |
 
 ## start
 
@@ -568,9 +493,11 @@ start(callback: AsyncCallback<void>): void
 
 Starts video recording. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -582,14 +509,14 @@ Starts video recording. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If video recording starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If video recording starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## start
 
@@ -599,9 +526,11 @@ start(): Promise<void>
 
 Starts video recording. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -619,8 +548,8 @@ Starts video recording. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## stop
 
@@ -630,9 +559,11 @@ stop(callback: AsyncCallback<void>): void
 
 Stops video recording. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -644,7 +575,7 @@ Stops video recording. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If video recording stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If video recording stops successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 ## stop
 
@@ -654,9 +585,11 @@ stop(): Promise<void>
 
 Stops video recording. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

@@ -12,10 +12,11 @@ import { accessibility } from '@kit.AccessibilityKit';
 function isOpenAccessibilitySync(): boolean
 ```
 
-Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, use   
-[accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
+Checks whether any accessibility application has been enabled in the system. To obtain information about accessibility applications in the system, use [accessibility.getAccessibilityExtensionListSync](arkts-accessibility-accessibility-getaccessibilityextensionlistsync-f.md#getAccessibilityExtensionListSync).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

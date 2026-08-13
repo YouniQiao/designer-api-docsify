@@ -16,7 +16,9 @@ Unsubscribes from the state changes in mono audio mode. This API uses an asynchr
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -28,7 +30,7 @@ Unsubscribes from the state changes in mono audio mode. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | No | Callback function. Cancels the event response of a specified callback object. The value must be the same as the value of callback in [accessibility.onAudioMonoStateChange](accessibility.onAudioMonoStateChange(callback: Callback&lt;boolean&gt;)) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback function. Cancels the event response of a specified callback object. The value must be the same as the value of callback in [accessibility.onAudioMonoStateChange](arkts-accessibility-accessibility-onaudiomonostatechange-f.md#onAudioMonoStateChange) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 ## Examples
 

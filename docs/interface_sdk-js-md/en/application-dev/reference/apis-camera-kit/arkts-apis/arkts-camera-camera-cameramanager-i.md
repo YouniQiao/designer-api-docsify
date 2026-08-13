@@ -1,11 +1,12 @@
 # CameraManager
 
-**CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use   
-[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager) to obtain a **CameraManager** instance.
+**CameraManager** implements camera management. Before calling any API in **CameraManager**, you must use [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager) to obtain a **CameraManager** instance.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
@@ -23,13 +24,13 @@ import { camera } from '@kit.CameraKit';
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously.
+Creates a **CameraInput** instance with the specified **CameraDevice** instance. This API returns the result synchronously. Before calling this API, call [getSupportedCameras](#getSupportedCameras) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
 
-Before calling this API, call [getSupportedCameras](#getSupportedCameras) to obtain the list of supported camera devices, select the camera device that meets the requirements based on the actual usage scenario, and then create the **CameraInput** instance.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CAMERA
 
@@ -55,9 +56,9 @@ Before calling this API, call [getSupportedCameras](#getSupportedCameras) to obt
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createCameraInput
 
@@ -65,13 +66,13 @@ Before calling this API, call [getSupportedCameras](#getSupportedCameras) to obt
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-Creates a **CameraInput** instance with the specified camera position and type. This API returns the result synchronously.
+Creates a **CameraInput** instance with the specified camera position and type. This API returns the result synchronously. Before calling this API, specify the camera position and type based on the usage scenario. For example, open the front camera for the selfie feature
 
-Before calling this API, specify the camera position and type based on the usage scenario. For example, open the front camera for the selfie feature
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CAMERA
 
@@ -98,9 +99,9 @@ Before calling this API, specify the camera position and type based on the usage
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createCaptureSession
 
@@ -132,45 +133,7 @@ Creates a **CaptureSession** instance. This API returns the result synchronously
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-
-## createDeferredPreviewOutput
-
-```TypeScript
-createDeferredPreviewOutput(profile: Profile): PreviewOutput
-```
-
-Creates a deferred **PreviewOutput** instance and adds it, instead of a common **PreviewOutput** instance, to the data stream during stream configuration.
-
-**Since:** 24
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 24.
-
-<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability-1). |
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput** instance created. If the operation fails, an error code defined in [CameraErrorCode]{ |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 24 and later |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 12 - 23 |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## createMetadataOutput
 
@@ -180,9 +143,11 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 Creates a **MetadataOutput** instance. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -194,7 +159,7 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | Yes | Metadata object types, which are obtained through [getSupportedOutputCapability](#getSupportedOutputCapability-1). |
+| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | Yes | Metadata object types, which are obtained through [getSupportedOutputCapability](#getSupportedOutputCapability). |
 
 **Return value:**
 
@@ -206,8 +171,8 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPhotoOutput
 
@@ -215,11 +180,7 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 ```
 
-Creates a **PhotoOutput** instance. This API returns the result synchronously.
-
-> **NOTE：**
-> 
-> - This API can only be used to create a **PhotoOutput** object in JPEG format.
+Creates a **PhotoOutput** instance. This API returns the result synchronously. > **NOTE：**> > - This API can only be used to create a **PhotoOutput** object in JPEG format.
 
 **Since:** 10
 
@@ -227,7 +188,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 **Deprecated since:** 11
 
-**Substitutes:** [createPhotoOutput](camera.CameraManager.createPhotoOutput(profile?:)
+**Substitutes:** [createPhotoOutput](#createPhotoOutput)(profile?: Profile)
 
 <!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
 
@@ -237,7 +198,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability-1). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability). |
 | surfaceId | string | Yes | Surface ID, which is obtained from [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver). |
 
 **Return value:**
@@ -250,7 +211,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
 
 ## createPhotoOutput
 
@@ -260,9 +221,11 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -274,7 +237,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability-1). &lt;br&gt;In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability). &lt;br&gt;In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
 
 **Return value:**
 
@@ -286,8 +249,8 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPreviewOutput
 
@@ -297,9 +260,11 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -311,8 +276,8 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability-1). |
-| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability). |
+| surfaceId | string | Yes | Surface ID, which is obtained from XComponent or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver). |
 
 **Return value:**
 
@@ -324,8 +289,8 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createPreviewOutput
 
@@ -335,9 +300,11 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 
 Creates a **PreviewOutput** instance without configuration. This API returns the result synchronously. It must be used with [preconfig](arkts-camera-camera-photosession-i.md#preconfig).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -349,7 +316,7 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | Surface ID, which is obtained from [XComponent](XComponent) or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver). |
+| surfaceId | string | Yes | Surface ID, which is obtained from XComponent or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver). |
 
 **Return value:**
 
@@ -361,8 +328,8 @@ Creates a **PreviewOutput** instance without configuration. This API returns the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## createSession
 
@@ -372,9 +339,11 @@ createSession<T extends Session>(mode: SceneMode): T
 
 Creates a **Session** instance with a given scene mode. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -398,8 +367,8 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**Applicable version:** 19 and later |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**Applicable version:** 19 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## createVideoOutput
 
@@ -407,18 +376,13 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-Creates a **VideoOutput** instance. This API returns the result synchronously.
+Creates a **VideoOutput** instance. This API returns the result synchronously. In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions. | SDR/HDR Photo Capture | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT&lt;br&gt;BT2020_HLG_FULL |
 
-In video recording mode, if SDR or HDR VIVID is enabled, the camera format and color space must be configured according to the relationships specified in the table below. Configurations that do not match the table will cause issues such as preview exceptions.
+**Since:** 23
 
-| SDR/HDR Photo Capture | CameraFormat | ColorSpace |  
-|--------------------|--------------------------|------------------|  
-| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |  
-| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT&lt;br&gt;BT2020_HLG_FULL |
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -430,7 +394,7 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability-1). |
+| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability](#getSupportedOutputCapability). |
 | surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md#AVRecorder). |
 
 **Return value:**
@@ -443,8 +407,8 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 
 ## createVideoOutput
 
@@ -454,9 +418,11 @@ createVideoOutput(surfaceId: string): VideoOutput
 
 Creates a **VideoOutput** instance without configuration. This API returns the result synchronously. It must be used with [preconfig](arkts-camera-camera-videosession-i.md#preconfig).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -480,8 +446,8 @@ Creates a **VideoOutput** instance without configuration. This API returns the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getCameraConcurrentInfos
 
@@ -491,9 +457,11 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 
 Obtains the concurrency information of the specified cameras. If the return value is an empty array, concurrency is not supported.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -517,7 +485,7 @@ Obtains the concurrency information of the specified cameras. If the return valu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getCameraDevice
 
@@ -525,14 +493,13 @@ Obtains the concurrency information of the specified cameras. If the return valu
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-Obtains the specified camera based on the camera position and type.
+Obtains the specified camera based on the camera position and type. Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-cameraposition-e.md#CameraPosition) and [CameraType](arkts-camera-camera-cameratype-e.md#CameraType). If the returned result is undefined, the camera lens is not found on the current device.
 
-Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-cameraposition-e.md#CameraPosition) and   
-[CameraType](arkts-camera-camera-cameratype-e.md#CameraType). If the returned result is undefined, the camera lens is not found on the current device.
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -557,7 +524,7 @@ Obtains the camera lens of the specified [CameraPosition](arkts-camera-camera-ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getCameraDevices
 
@@ -569,7 +536,9 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -595,7 +564,7 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getSupportedCameras
 
@@ -603,13 +572,13 @@ Obtains the list of cameras that meet the search criteria based on the camera po
 getSupportedCameras(): Array<CameraDevice>
 ```
 
-Obtains the supported cameras (such as the default camera whose **CameraType** is **CAMERA_TYPE_DEFAULT**). This API returns the result synchronously.
+Obtains the supported cameras (such as the default camera whose **CameraType** is **CAMERA_TYPE_DEFAULT**). This API returns the result synchronously. Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYPE_TELEPHOTO**) can be obtained using [getCameraDevices](#getCameraDevices) API.
 
-Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYPE_TELEPHOTO**) can be obtained using [getCameraDevices](#getCameraDevices) API.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -629,16 +598,13 @@ Other cameras (such as the telephoto camera whose **CameraType** is **CAMERA_TYP
 getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR.
-
-> **NOTE：**
-> 
-> Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output
-> capabilities are obtained.
+Obtains the complete output capabilities supported by a specified camera in a specified mode, including YUV, HEIF, and HDR. > **NOTE：**> > Before using YUV, HEIF, or HDR, you need to explicitly call this method to ensure that the complete output > capabilities are obtained.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -675,7 +641,7 @@ Obtains the output capability supported by a camera device. This API returns the
 
 **Deprecated since:** 11
 
-**Substitutes:** [getSupportedOutputCapability](camera.CameraManager.getSupportedOutputCapability(camera:)
+**Substitutes:** [getSupportedOutputCapability](#getSupportedOutputCapability)(camera: CameraDevice, mode: SceneMode)
 
 <!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
 
@@ -701,9 +667,11 @@ getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutpu
 
 Obtains the output capability supported by a camera device in a given scene mode. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -732,9 +700,11 @@ getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
 
 Obtains the scene modes supported by a camera device. This API returns the result synchronously.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -762,9 +732,11 @@ getTorchMode(): TorchMode
 
 Obtains the flashlight mode of this camera device.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -786,9 +758,11 @@ isCameraMuted(): boolean
 
 Checks whether this camera is muted.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -802,38 +776,6 @@ Checks whether this camera is muted.
 | --- | --- |
 | boolean | Check result for whether the camera is muted. **true** if muted, **false** otherwise. |
 
-## isTorchLevelControlSupported
-
-```TypeScript
-isTorchLevelControlSupported(): boolean
-```
-
-Checks whether the device supports flashlight brightness control.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Return value:**
-
-| Type | Description |
-| --- | --- |
-| boolean | Whether the device supports flashlight brightness control. Returns **true** if supported, **false** if not. If the API call fails, undefined is returned. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 23 - 24 |
-
 ## isTorchModeSupported
 
 ```TypeScript
@@ -842,9 +784,11 @@ isTorchModeSupported(mode: TorchMode): boolean
 
 Checks whether a flashlight mode is supported.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -872,9 +816,11 @@ isTorchSupported(): boolean
 
 Checks whether the camera device supports the flashlight.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -888,7 +834,79 @@ Checks whether the camera device supports the flashlight.
 | --- | --- |
 | boolean | Whether the device supports the flashlight. **true** if supported, **false** otherwise. &lt;br&gt;If **false** is returned, [isTorchModeSupported]{ |
 
-## off('cameraStatus')
+## offCameraStatus
+
+```TypeScript
+offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void
+```
+
+Unsubscribes from camera status change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | No | Callback used to get the camera status change. |
+
+## offFoldStatusChange
+
+```TypeScript
+offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void
+```
+
+Unsubscribes from fold status change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | No | Callback used to get the fold status change. |
+
+## offTorchStatusChange
+
+```TypeScript
+offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void
+```
+
+Unsubscribes torch status change event callback.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | No | Callback used to return the torch status change |
+
+## off_cameraStatus
 
 ```TypeScript
 off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
@@ -899,6 +917,8 @@ Unsubscribes from camera status events. This API uses an asynchronous callback t
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -911,9 +931,9 @@ Unsubscribes from camera status events. This API uses an asynchronous callback t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listened for when a **CameraManager** instance is obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## off('foldStatusChange')
+## off_foldStatusChange
 
 ```TypeScript
 off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
@@ -924,6 +944,8 @@ Unsubscribes from fold state change events of the foldable device.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -936,9 +958,9 @@ Unsubscribes from fold state change events of the foldable device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event is triggered when the fold state of the foldable device changes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | No | Callback used to return the fold state information about the foldable device. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | No | Callback used to return the fold state information about the foldable device. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## off('torchStatusChange')
+## off_torchStatusChange
 
 ```TypeScript
 off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
@@ -949,6 +971,8 @@ Unsubscribes from flashlight status change events. This API uses an asynchronous
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -961,21 +985,23 @@ Unsubscribes from flashlight status change events. This API uses an asynchronous
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can be listened for when a **CameraManager** instance is obtained. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## offCameraStatus
+## onCameraStatus
 
 ```TypeScript
-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void
+onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void
 ```
 
-Unsubscribes from camera status change event callback.
+Subscribes camera status change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -983,21 +1009,23 @@ Unsubscribes from camera status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | No | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | Yes | Callback used to get the camera status change. |
 
-## offFoldStatusChange
+## onFoldStatusChange
 
 ```TypeScript
-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void
+onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-Unsubscribes from fold status change event callback.
+Subscribes fold status change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1005,21 +1033,23 @@ Unsubscribes from fold status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | No | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | Yes | Callback used to get the fold status change. |
 
-## offTorchStatusChange
+## onTorchStatusChange
 
 ```TypeScript
-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void
+onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void
 ```
 
-Unsubscribes torch status change event callback.
+Subscribes torch status change event callback.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -1027,23 +1057,21 @@ Unsubscribes torch status change event callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | No | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | Yes | Callback used to return the torch status change |
 
-## on('cameraStatus')
+## on_cameraStatus
 
 ```TypeScript
 on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 ```
 
-Subscribes to camera status events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to camera status events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1056,23 +1084,21 @@ Subscribes to camera status events. This API uses an asynchronous callback to re
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'cameraStatus' | Yes | Event type. The value is fixed at **'cameraStatus'**. The event can be listened for when a **CameraManager** instance is obtained. This event is triggered and the corresponding information is returned only when the camera device is enabled or disabled. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | Yes | Callback used to return the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | Yes | Callback used to return the camera status change. |
 
-## on('foldStatusChange')
+## on_foldStatusChange
 
 ```TypeScript
 on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to fold status change events of the foldable device. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1085,23 +1111,21 @@ Subscribes to fold status change events of the foldable device. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | Yes | Event type. The value is fixed at **'foldStatusChange'**. The event is triggered when the fold state of the foldable device changes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | Yes | Callback used to return the fold state information about the foldable device. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | Yes | Callback used to return the fold state information about the foldable device. |
 
-## on('torchStatusChange')
+## on_torchStatusChange
 
 ```TypeScript
 on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 ```
 
-Subscribes to flashlight status change events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to flashlight status change events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1114,73 +1138,7 @@ Subscribes to flashlight status change events. This API uses an asynchronous cal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'torchStatusChange' | Yes | Event type. The value is fixed at **'torchStatusChange'**. The event can be listened for when a **CameraManager** instance is obtained. Currently, this event is triggered only in the following scenarios: The flashlight is turned on or turned off, or becomes unavailable or available. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | Yes | Callback used to return the flashlight status. |
-
-## onCameraStatus
-
-```TypeScript
-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void
-```
-
-Subscribes camera status change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | Yes | Callback used to get the camera status change. |
-
-## onFoldStatusChange
-
-```TypeScript
-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void
-```
-
-Subscribes fold status change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | Yes | Callback used to get the fold status change. |
-
-## onTorchStatusChange
-
-```TypeScript
-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void
-```
-
-Subscribes torch status change event callback.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-<!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | Yes | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | Yes | Callback used to return the flashlight status. |
 
 ## setTorchMode
 
@@ -1190,9 +1148,11 @@ setTorchMode(mode: TorchMode): void
 
 Sets the flashlight mode.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 
@@ -1210,47 +1170,7 @@ Sets the flashlight mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 11 - 17 |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
-
-## setTorchModeOnWithLevel
-
-ArkTS-Dyn:
-```TypeScript
-setTorchModeOnWithLevel(torchLevel: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setTorchModeOnWithLevel(torchLevel: double): void
-```
-
-Sets the torch mode to [ON](arkts-camera-camera-torchmode-e.md#ON) with the specified torch level.
-
-**Since:** 26.0.0
-
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| torchLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | the specified torch level, the value range is [0.0, 1.0] |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 23 - 24 |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect.<br>**Applicable version:** 11 - 17 |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error.<br>**Applicable version:** 12 and later |
 

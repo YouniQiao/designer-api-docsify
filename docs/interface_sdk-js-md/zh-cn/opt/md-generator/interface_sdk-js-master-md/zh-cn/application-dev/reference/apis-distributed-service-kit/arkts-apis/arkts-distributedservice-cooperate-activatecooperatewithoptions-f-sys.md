@@ -10,7 +10,9 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: nu
 
 启动键鼠穿越，使用选项开始屏幕跳转。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.COOPERATE_MANAGER
 
@@ -38,9 +40,9 @@ function activateCooperateWithOptions(targetNetworkId: string, inputDeviceId: nu
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [20900001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [20900001](../../apis-distributedservice-kit/errorcode-devicestatus.md#20900001-操作输入设备失败) |
 
 ## 示例
 

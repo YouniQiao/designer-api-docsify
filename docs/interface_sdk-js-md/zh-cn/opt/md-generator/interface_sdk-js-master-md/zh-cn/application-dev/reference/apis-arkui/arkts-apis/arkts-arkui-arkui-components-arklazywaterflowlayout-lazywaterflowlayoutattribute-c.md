@@ -2,11 +2,13 @@
 
 定义懒加载瀑布流布局属性。
 
-**继承/实现关系：** LazyWaterFlowLayoutAttribute extends [CommonMethod<T>](CommonMethod<T>)
+**继承/实现关系：** LazyWaterFlowLayoutAttribute extends CommonMethod<T>
 
 **起始版本：** 26.0.0
 
-<!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>--><!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute--><!--Device-unnamed-export declare class LazyWaterFlowLayoutAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ columnsGap(value: LengthMetrics | undefined): T
 列之间的间距。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,6 +54,8 @@ footer(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -80,6 +86,8 @@ header(builder: CustomBuilder | undefined): T
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -106,9 +114,11 @@ header(builder: CustomBuilder | undefined): T
 onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): T
 ```
 
-当组件中显示的第一个或最后一个项目更改时调用。它在组件初始化时会触发一次。
+当组件中显示的第一个或最后一个项目更改时调用。 它在组件初始化时会触发一次。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -140,6 +150,8 @@ rowsGap(value: LengthMetrics | undefined): T
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -169,6 +181,8 @@ sticky(sticky: StickyStyle | undefined): T
 设置header和footer的吸顶吸底样式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,7 +6,9 @@ export type NotificationTime = _NotificationTime
 
 Describes the notification timing information.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationTime = _NotificationTime--><!--Device-notificationManager-export type NotificationTime = _NotificationTime-End-->
 

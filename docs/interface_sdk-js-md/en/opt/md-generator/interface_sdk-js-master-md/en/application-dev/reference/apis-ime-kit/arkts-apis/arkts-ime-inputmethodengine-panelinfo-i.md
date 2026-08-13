@@ -2,7 +2,9 @@
 
 Describes the attributes of the input method panel.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface PanelInfo--><!--Device-inputMethodEngine-export interface PanelInfo-End-->
 
@@ -26,7 +28,9 @@ State type of the panel.
 
 **Default:** FLG_FIXED
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PanelInfo-flag?: PanelFlag--><!--Device-PanelInfo-flag?: PanelFlag-End-->
 
@@ -42,7 +46,9 @@ Type of the panel.
 
 **Type:** PanelType
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PanelInfo-type: PanelType--><!--Device-PanelInfo-type: PanelType-End-->
 

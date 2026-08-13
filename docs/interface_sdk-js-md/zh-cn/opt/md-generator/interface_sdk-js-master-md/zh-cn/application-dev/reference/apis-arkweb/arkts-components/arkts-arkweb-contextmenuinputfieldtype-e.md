@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ContextMenuInputFieldType--><!--Device-unnamed-declare enum ContextMenuInputFieldType-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ None = 0
 非输入框。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ PlainText = 1
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContextMenuInputFieldType-PlainText = 1--><!--Device-ContextMenuInputFieldType-PlainText = 1-End-->
@@ -49,6 +55,8 @@ Password = 2
 密码类型。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -66,6 +74,8 @@ Number = 3
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContextMenuInputFieldType-Number = 3--><!--Device-ContextMenuInputFieldType-Number = 3-End-->
@@ -82,6 +92,8 @@ Telephone = 4
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ContextMenuInputFieldType-Telephone = 4--><!--Device-ContextMenuInputFieldType-Telephone = 4-End-->
@@ -97,6 +109,8 @@ Other = 5
 其他类型。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

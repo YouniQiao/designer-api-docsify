@@ -6,6 +6,8 @@ PasswordIcon object.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface PasswordIcon--><!--Device-unnamed-export interface PasswordIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ PasswordIcon object.
 offIconSrc?: string | Resource
 ```
 
-Define the off icon source of PasswordIcon.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Icon that can be used to show the password in password input mode.&lt;br&gt;The string type can be used to load network images and local images.&lt;/p&gt;
+Define the off icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Icon that can be used to show the password in password input mode. &lt;br&gt;The string type can be used to load network images and local images. &lt;/p&gt;
 
 **Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ Define the off icon source of PasswordIcon.&lt;p&gt;&lt;strong&gt;NOTE&lt;/stron
 onIconSrc?: string | Resource
 ```
 
-Define the on icon source of PasswordIcon.&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;Icon that can be used to hide the password in password input mode.&lt;br&gt;The string type can be used to load network images and local images.&lt;/p&gt;
+Define the on icon source of PasswordIcon. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Icon that can be used to hide the password in password input mode. &lt;br&gt;The string type can be used to load network images and local images. &lt;/p&gt;
 
 **Type:** string \| [Resource](arkts-arkui-resource-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

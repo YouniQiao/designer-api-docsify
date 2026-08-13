@@ -15,9 +15,11 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,
 
 Minimize the window target with animation.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,    callback: AsyncCallback<WindowAnimationFinishedCallback>): void--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget,    callback: AsyncCallback<WindowAnimationFinishedCallback>): void-End-->
 
@@ -30,7 +32,7 @@ Minimize the window target with animation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowTarget | WindowAnimationTarget | Yes | The window target to be minimized. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Yes | Returns the animation finished callback. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WindowAnimationFinishedCallback](arkts-arkui-windowanimationmanager-windowanimationfinishedcallback-i-sys.md)&gt; | Yes | Returns the animation finished callback. |
 
 ## Examples
 
@@ -105,9 +107,11 @@ function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promi
 
 Minimize the window target with animation.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>--><!--Device-windowAnimationManager-function minimizeWindowWithAnimation(windowTarget: WindowAnimationTarget): Promise<WindowAnimationFinishedCallback>-End-->
 

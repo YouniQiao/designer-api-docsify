@@ -15,13 +15,13 @@ declare function listFileSync(
 ): string[]
 ```
 
-Lists the names of all files and directories in the current directory. This API returns the result synchronously.Filtering is supported.
-
-You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
+Lists the names of all files and directories in the current directory. This API returns the result synchronously. Filtering is supported. You can configure the **recursion** parameter in **options** to recursively list the relative paths of all files. The relative path starts with a slash (/).
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +34,7 @@ You can configure the **recursion** parameter in **options** to recursively list
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileOptions](arkts-corefile-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
+| options | [ListFileOptions](../../apis-na/arkts-apis/arkts-na-file-fs-listfileoptions-i.md) | No | Options for filtering files. The files are not filtered by default.<br>**Since:** 11 |
 
 **Return value:**
 

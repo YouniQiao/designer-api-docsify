@@ -4,6 +4,8 @@ Describes the supplementary information captured in **BusinessError** in the cat
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-taskpool-interface TaskResult--><!--Device-taskpool-interface TaskResult-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -26,6 +28,8 @@ Error message. By default, the value is the same as the **message** field of **B
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-TaskResult-error?: Error | Object--><!--Device-TaskResult-error?: Error | Object-End-->
@@ -43,6 +47,8 @@ Task execution result. The default value is **undefined**. You are advised not t
 **Type:** Object
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

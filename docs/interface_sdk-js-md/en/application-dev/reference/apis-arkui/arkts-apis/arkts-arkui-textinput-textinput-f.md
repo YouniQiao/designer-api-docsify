@@ -3,6 +3,7 @@
 ## TextInput
 
 ```TypeScript
+@ComponentBuilder
 export declare function TextInput(
     value?: TextInputOptions
 ): TextInputAttribute
@@ -14,9 +15,11 @@ Defines TextInput Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function TextInput(    value?: TextInputOptions): TextInputAttribute--><!--Device-unnamed-export declare function TextInput(    value?: TextInputOptions): TextInputAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function TextInput(    value?: TextInputOptions): TextInputAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function TextInput(    value?: TextInputOptions): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines TextInput Component.
 
 | Type | Description |
 | --- | --- |
-| [TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md) |  |
+| TextInputAttribute |  |
 
 
 ## TextInput
 
 ```TypeScript
+@Builder
 export declare function TextInput(
     style: CustomBuilderT<TextInputAttribute>,
 ): TextInputAttribute
@@ -47,11 +51,11 @@ Defines TextInput Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute--><!--Device-unnamed-export declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute--><!--Device-unnamed-@Builderexport declare function TextInput(    style: CustomBuilderT<TextInputAttribute>,): TextInputAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines TextInput Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md)&gt; | Yes | TextInput attribute instance |
+| style | CustomBuilderT&lt;TextInputAttribute&gt; | Yes | TextInput attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [TextInputAttribute](arkts-arkui-textinput-textinputattribute-i.md) |  |
+| TextInputAttribute |  |
 

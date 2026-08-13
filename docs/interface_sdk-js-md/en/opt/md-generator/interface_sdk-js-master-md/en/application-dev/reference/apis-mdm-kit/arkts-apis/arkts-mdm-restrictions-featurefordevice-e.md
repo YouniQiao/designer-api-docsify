@@ -4,6 +4,8 @@ Enumerates device features.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-restrictions-enum FeatureForDevice--><!--Device-restrictions-enum FeatureForDevice-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ WIFI_P2P = 0
 Wi-Fi P2P (peer-to-peer connection), which allows devices to directly connect to each other without an access point. Once this feature is disallowed, devices cannot be connected through Wi-Fi P2P, affecting application functions that require direct Wi-Fi connections, such as file transfer, online gaming, and screen sharing.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ X key.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-X_KEY = 1--><!--Device-FeatureForDevice-X_KEY = 1-End-->
@@ -49,6 +55,8 @@ LOCAL_INPUT = 2
 After local input (including the keyboard, mouse, touchpad, and touchscreen) is disabled, operations cannot be performed through local input. You can restart the device to cancel the disabling. If local input is disabled when the screen is off, the screen cannot be woken up. If the screen automatically turns off after this feature is disabled, the screen also cannot be woken up.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +74,8 @@ Network packet filtering.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-PACKET_FILTERING = 3--><!--Device-FeatureForDevice-PACKET_FILTERING = 3-End-->
@@ -81,6 +91,8 @@ SUDO = 4
 Super user do.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +110,8 @@ Policy for controlling network traffic redirection. After this capability is dis
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-TRAFFIC_REDIRECTION = 5--><!--Device-FeatureForDevice-TRAFFIC_REDIRECTION = 5-End-->
@@ -110,9 +124,11 @@ Policy for controlling network traffic redirection. After this capability is dis
 CORE_DUMP = 6
 ```
 
-Create a file dump. After this capability is disabled, file dumps cannot be created through the task manager.Currently, this capability is supported only on PCs/2-in-1 devices.
+Create a file dump. After this capability is disabled, file dumps cannot be created through the task manager. Currently, this capability is supported only on PCs/2-in-1 devices.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,9 +142,11 @@ Create a file dump. After this capability is disabled, file dumps cannot be crea
 RS232 = 7
 ```
 
-RS-232 serial port control policy. If this capability is disabled, data cannot be transmitted via the RS-232serial port. Currently, this capability is supported only on PCs/2-in-1 devices. (some devices do not support the RS-232 serial port).
+RS-232 serial port control policy. If this capability is disabled, data cannot be transmitted via the RS-232 serial port. Currently, this capability is supported only on PCs/2-in-1 devices. (some devices do not support the RS-232 serial port).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +164,8 @@ Disk erasure capability. Once disabled, the "Disk Erasure" entry will be grayed 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-DISK_ERASURE = 8--><!--Device-FeatureForDevice-DISK_ERASURE = 8-End-->
@@ -158,11 +178,11 @@ Disk erasure capability. Once disabled, the "Disk Erasure" entry will be grayed 
 BLUETOOTH = 9
 ```
 
-Device Bluetooth capability. If a Bluetooth device blocklist or trustlist is configured via  
-[addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#addDisallowedBluetoothDevices)or  
-[addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addAllowedBluetoothDevices),disabling Bluetooth via this API takes priority. The blocklist or trustlist will only take effect after Bluetooth is re-enabled.
+Device Bluetooth capability. If a Bluetooth device blocklist or trustlist is configured via [addDisallowedBluetoothDevices](arkts-mdm-bluetoothmanager-adddisallowedbluetoothdevices-f.md#addDisallowedBluetoothDevices) or [addAllowedBluetoothDevices](arkts-mdm-bluetoothmanager-addallowedbluetoothdevices-f.md#addAllowedBluetoothDevices), disabling Bluetooth via this API takes priority. The blocklist or trustlist will only take effect after Bluetooth is re-enabled.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,6 +200,8 @@ Device capability to modify system time.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-MODIFY_DATE_TIME = 10--><!--Device-FeatureForDevice-MODIFY_DATE_TIME = 10-End-->
@@ -195,6 +217,8 @@ PRINTER = 11
 Device printing capability. When the device printing capability has been disabled, enabling printing for a specific user via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API will not take effect. The printing capability remains disabled for that user.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,6 +236,8 @@ Capability for other devices to connect to and debug this device via HDC. Disabl
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-HDC = 12--><!--Device-FeatureForDevice-HDC = 12-End-->
@@ -228,6 +254,8 @@ Device microphone capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-MICROPHONE = 13--><!--Device-FeatureForDevice-MICROPHONE = 13-End-->
@@ -240,10 +268,11 @@ Device microphone capability.
 FINGERPRINT = 14
 ```
 
-Device fingerprint authentication capability. Enable device fingerprint authentication will trigger a policy conflict if fingerprint authentication has already been disabled for a user via  
-[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount).
+Device fingerprint authentication capability. Enable device fingerprint authentication will trigger a policy conflict if fingerprint authentication has already been disabled for a user via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -257,16 +286,11 @@ Device fingerprint authentication capability. Enable device fingerprint authenti
 USB = 15
 ```
 
-Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices).
-
-If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported:
-
-1. A list of allowed USB devices has been configured via the  
-[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addAllowedUsbDevices) API.2. USB storage device access policy has been set to read-only or disabled via the  
-[setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setUsbStorageDeviceAccessPolicy) API.3. Specific USB device types have been blocked via the  
-[addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#addDisallowedUsbDevices) API.4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API.5. USB-to-serial conversion ([USB_SERIAL](#FeatureForDevice)) is disabled.
+Device USB capability. Disabling this capability prohibits the use of external USB devices (the device cannot act as a USB host to connect external devices). If the device USB capability is disabled in any of the following scenarios, a policy conflict will be reported: 1. A list of allowed USB devices has been configured via the [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addAllowedUsbDevices) API. 2. USB storage device access policy has been set to read-only or disabled via the [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md#setUsbStorageDeviceAccessPolicy) API. 3. Specific USB device types have been blocked via the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md#addDisallowedUsbDevices) API. 4. USB storage write has been disabled for specific users via the [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount) API. 5. USB-to-serial conversion ([USB_SERIAL](#FeatureForDevice)) is disabled.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -284,6 +308,8 @@ Device Wi-Fi capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-WIFI = 16--><!--Device-FeatureForDevice-WIFI = 16-End-->
@@ -296,9 +322,11 @@ Device Wi-Fi capability.
 TETHERING = 17
 ```
 
-Network tethering capability (the ability to share the device's internet connection with other devices, that is,hotspot sharing).
+Network tethering capability (the ability to share the device's internet connection with other devices, that is, hotspot sharing).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -316,6 +344,8 @@ Capability of freezing inactive users. When this capability is disabled, non-**U
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-INACTIVE_USER_FREEZE = 18--><!--Device-FeatureForDevice-INACTIVE_USER_FREEZE = 18-End-->
@@ -332,6 +362,8 @@ Device camera capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-CAMERA = 19--><!--Device-FeatureForDevice-CAMERA = 19-End-->
@@ -344,10 +376,11 @@ Device camera capability.
 MTP_CLIENT = 20
 ```
 
-Media Transfer Protocol (MTP) client capability (including read and write capabilities), currently supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. A policy conflict occurs when you disable the MTP client capability after MTP client write has been disabled for specific users via  
-[setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount).
+Media Transfer Protocol (MTP) client capability (including read and write capabilities), currently supported only on PC/2-in-1 devices. MTP allows users to linearly access media files on mobile devices. A policy conflict occurs when you disable the MTP client capability after MTP client write has been disabled for specific users via [setDisallowedPolicyForAccount](arkts-mdm-restrictions-setdisallowedpolicyforaccount-f.md#setDisallowedPolicyForAccount).
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -365,6 +398,8 @@ MTP server capability, currently supported only on phone and tablets.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-MTP_SERVER = 21--><!--Device-FeatureForDevice-MTP_SERVER = 21-End-->
@@ -377,11 +412,11 @@ MTP server capability, currently supported only on phone and tablets.
 SAMBA_CLIENT = 22
 ```
 
-Samba client capability, currently supported only on PC/2-in-1 devices.
-
-Samba is a free software that implements the SMB protocol on Linux and UNIX systems, consisting of both server and client programs. Server Message Block (SMB) is a communication protocol for sharing files and printers over the local area network (LAN). It provides resource-sharing services, such as files and printers, among different computers within the LAN. As a client/server protocol, SMB allows clients to access shared resources hosted on servers.
+Samba client capability, currently supported only on PC/2-in-1 devices. Samba is a free software that implements the SMB protocol on Linux and UNIX systems, consisting of both server and client programs. Server Message Block (SMB) is a communication protocol for sharing files and printers over the local area network (LAN). It provides resource-sharing services, such as files and printers, among different computers within the LAN. As a client/server protocol, SMB allows clients to access shared resources hosted on servers.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -399,6 +434,8 @@ Samba server capability, currently supported only on PC/2-in-1 devices.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-SAMBA_SERVER = 23--><!--Device-FeatureForDevice-SAMBA_SERVER = 23-End-->
@@ -411,10 +448,11 @@ Samba server capability, currently supported only on PC/2-in-1 devices.
 BACKUP_AND_RESTORE = 24
 ```
 
-Backup and restore capability. If this feature is disabled, the **Settings** > **System** > **Backup & Restore**and **Settings** > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call  
-[applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#addDisallowedRunningBundlesSync)to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
+Backup and restore capability. If this feature is disabled, the **Settings** > **System** > **Backup & Restore** and **Settings** > **Cloud** options will be dimmed. Currently, this feature is supported only on phones and tablets. To completely disable the backup and restore capability, you are advised to call [applicationManager.addDisallowedRunningBundlesSync](arkts-mdm-applicationmanager-adddisallowedrunningbundlessync-f.md#addDisallowedRunningBundlesSync) to disable applications with this feature, such as Backup & Restore, HiSuite, and Cloud.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,6 +470,8 @@ Device maintenance mode capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-MAINTENANCE_MODE = 25--><!--Device-FeatureForDevice-MAINTENANCE_MODE = 25-End-->
@@ -447,6 +487,8 @@ MMS = 26
 Multimedia Messaging Service (MMS) capability to receive and send multimedia messages. Currently, this feature is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -464,6 +506,8 @@ Short Messaging Service (SMS) capability to receive and send SMS messages. Curre
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-SMS = 27--><!--Device-FeatureForDevice-SMS = 27-End-->
@@ -479,6 +523,8 @@ MOBILE_DATA = 28
 Cellular data capability, which is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -496,6 +542,8 @@ Airplane mode capability, which is supported only on smartphones and tablets.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-AIRPLANE_MODE = 29--><!--Device-FeatureForDevice-AIRPLANE_MODE = 29-End-->
@@ -512,6 +560,8 @@ Virtual Private Network (VPN) capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-VPN = 30--><!--Device-FeatureForDevice-VPN = 30-End-->
@@ -524,10 +574,11 @@ Virtual Private Network (VPN) capability.
 NOTIFICATION = 31
 ```
 
-Device notification capability. After this capability is disabled, notifications sent by system applications and third-party applications will not be displayed. However, notification capabilities for system services are not affected. If you disable the device-level notification capability after an allowed notification bundle has already been set via  
-[addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addAllowedNotificationBundles),error code 9200010 will be reported.
+Device notification capability. After this capability is disabled, notifications sent by system applications and third-party applications will not be displayed. However, notification capabilities for system services are not affected. If you disable the device-level notification capability after an allowed notification bundle has already been set via [addAllowedNotificationBundles](arkts-mdm-applicationmanager-addallowednotificationbundles-f.md#addAllowedNotificationBundles), error code 9200010 will be reported.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -545,6 +596,8 @@ Near Field Communication (NFC) capability, which is supported only on phones and
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-NFC = 32--><!--Device-FeatureForDevice-NFC = 32-End-->
@@ -560,6 +613,8 @@ PRIVATE_SPACE = 33
 Privacy space creation capability, which is supported only on smartphones and tablets. This setting does not affect existing private spaces.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -577,6 +632,8 @@ Call capability. Disabling this feature blocks incoming or outgoing calls. Curre
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-TELEPHONE_CALL = 34--><!--Device-FeatureForDevice-TELEPHONE_CALL = 34-End-->
@@ -593,6 +650,8 @@ APP_CLONE = 35
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-APP_CLONE = 35--><!--Device-FeatureForDevice-APP_CLONE = 35-End-->
@@ -605,11 +664,11 @@ APP_CLONE = 35
 EXTERNAL_STORAGE_CARD = 36
 ```
 
-External storage capability. Disabling this feature prohibits the use of external storage and unmounts currently connected external storage. If files are in use during unmounting, unmounting may fail with error code 9200013.
-
-After external storage is disabled and then enabled again, you need to manually reconnect the external storage.
+External storage capability. Disabling this feature prohibits the use of external storage and unmounts currently connected external storage. If files are in use during unmounting, unmounting may fail with error code 9200013. After external storage is disabled and then enabled again, you need to manually reconnect the external storage.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -627,6 +686,8 @@ Random MAC address capability for Wi-Fi connections. When this feature is disabl
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-RANDOM_MAC = 37--><!--Device-FeatureForDevice-RANDOM_MAC = 37-End-->
@@ -639,10 +700,11 @@ Random MAC address capability for Wi-Fi connections. When this feature is disabl
 UNMUTE_DEVICE = 38
 ```
 
-Device audio playback capability. When this feature is disabled, media playback will be muted, while  
-[cellular calls](../../../media/audio/audio-call-overview.md) remain unaffected.
+Device audio playback capability. When this feature is disabled, media playback will be muted, while [cellular calls](../../../media/audio/audio-call-overview.md) remain unaffected.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -656,11 +718,11 @@ Device audio playback capability. When this feature is disabled, media playback 
 HDC_REMOTE = 39
 ```
 
-Capability of the device to debug other devices through HDC. Currently, this feature can be set only for PCs/2-in  
--1 devices. Disabling this capability prevents debugging smartphones, tablets, PCs, smart watches, and other  
-devices via HDC.
+Capability of the device to debug other devices through HDC. Currently, this feature can be set only for PCs/2-in -1 devices. Disabling this capability prevents debugging smartphones, tablets, PCs, smart watches, and other devices via HDC.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -678,6 +740,8 @@ Device virtualization service capability, which refers to the system capability 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-VIRTUAL_SERVICE = 40--><!--Device-FeatureForDevice-VIRTUAL_SERVICE = 40-End-->
@@ -690,12 +754,11 @@ Device virtualization service capability, which refers to the system capability 
 USB_SERIAL = 41
 ```
 
-Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict:
-
-1. A list of allowed USB devices has been configured via the  
-[addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addAllowedUsbDevices) API.2. The device ([USB](#FeatureForDevice)) capability has been disabled.
+Device USB-to-serial port capability. After the capability is disabled, external USB-to-serial port devices will be unavailable. Disabling the USB-to-Serial capability in any of the following scenario will trigger a policy conflict: 1. A list of allowed USB devices has been configured via the [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md#addAllowedUsbDevices) API. 2. The device ([USB](#FeatureForDevice)) capability has been disabled.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -713,6 +776,8 @@ Screenshot capability. After this capability is disabled, screenshots cannot be 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-SCREEN_SHOT = 42--><!--Device-FeatureForDevice-SCREEN_SHOT = 42-End-->
@@ -728,6 +793,8 @@ SCREEN_RECORD = 43
 Screen recording capability. After this capability is disabled, screen recording cannot be performed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -745,6 +812,8 @@ DISK_RECOVERY_KEY = 44
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-DISK_RECOVERY_KEY = 44--><!--Device-FeatureForDevice-DISK_RECOVERY_KEY = 44-End-->
@@ -760,6 +829,8 @@ NEAR_LINK = 45
 NearLink capability.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -777,6 +848,8 @@ Developer mode. Disabling this feature takes effect after the device is restarte
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-DEVELOPER_MODE = 46--><!--Device-FeatureForDevice-DEVELOPER_MODE = 46-End-->
@@ -792,6 +865,8 @@ RESET_FACTORY = 47
 Factory reset capability.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -809,6 +884,8 @@ Remote desktop capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-REMOTE_DESK = 48--><!--Device-FeatureForDevice-REMOTE_DESK = 48-End-->
@@ -825,6 +902,8 @@ Remote diagnosis capability.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FeatureForDevice-REMOTE_DIAGNOSIS = 49--><!--Device-FeatureForDevice-REMOTE_DIAGNOSIS = 49-End-->
@@ -840,6 +919,8 @@ OTA_UPDATE = 50
 Public network system upgrade capability.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

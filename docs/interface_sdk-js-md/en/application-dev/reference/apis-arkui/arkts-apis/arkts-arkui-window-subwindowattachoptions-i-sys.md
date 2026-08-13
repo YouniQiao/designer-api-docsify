@@ -4,7 +4,9 @@ Describes the parameters used to maintain the relative position between the chil
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-window-interface SubWindowAttachOptions--><!--Device-window-interface SubWindowAttachOptions-End-->
 
@@ -30,7 +32,9 @@ Current layout mode of the child window, which is used to control the UI effect 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,7 +58,9 @@ Whether to use the intersection of the height limits of both windows in the atta
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +84,9 @@ Whether to use the intersection of the width limits of both windows in the attac
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,13 +102,15 @@ Whether to use the intersection of the width limits of both windows in the attac
 parentWindowSizeChangeCallback?: Callback<Size>
 ```
 
-Callback triggered when the parent window size changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window size changes. By default, this parameter is not passed, and notifications about the parent window size changes cannot be received.
+Callback triggered when the parent window size changes. The callback is triggered immediately after the binding, and notifications are sent when the parent window size changes. By default, this parameter is not passed, and notifications about the parent window size changes cannot be received.
 
 **Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;Size&gt;
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,13 +126,15 @@ Callback triggered when the parent window size changes. The callback is triggere
 parentWindowStatusChangeCallback?: Callback<WindowStatusType>
 ```
 
-Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding,and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and notifications about the parent window mode changes cannot be received.
+Callback triggered when the parent window mode changes. The callback is triggered immediately after the binding, and notifications are sent when the parent window mode changes. By default, this parameter is not passed, and notifications about the parent window mode changes cannot be received.
 
 **Type:** [Callback](arkts-arkui-window-callback-i.md)&lt;WindowStatusType&gt;
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

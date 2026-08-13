@@ -2,7 +2,9 @@
 
 Enumerates the smooth zoom modes.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum SmoothZoomMode--><!--Device-camera-enum SmoothZoomMode-End-->
 
@@ -16,7 +18,9 @@ NORMAL = 0
 
 Bessel curve mode.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
 

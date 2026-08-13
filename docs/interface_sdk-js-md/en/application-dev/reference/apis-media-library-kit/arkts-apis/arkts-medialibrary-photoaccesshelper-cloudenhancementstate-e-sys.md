@@ -2,9 +2,11 @@
 
 Enumerates the cloud enhancement states.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-enum CloudEnhancementState--><!--Device-photoAccessHelper-enum CloudEnhancementState-End-->
 
@@ -20,9 +22,11 @@ UNAVAILABLE = 0
 
 Cloud enhancement is unavailable.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudEnhancementState-UNAVAILABLE = 0--><!--Device-CloudEnhancementState-UNAVAILABLE = 0-End-->
 
@@ -38,9 +42,11 @@ AVAILABLE
 
 Cloud enhancement is available.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudEnhancementState-AVAILABLE--><!--Device-CloudEnhancementState-AVAILABLE-End-->
 
@@ -56,9 +62,11 @@ EXECUTING
 
 Cloud enhancement is being executed.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudEnhancementState-EXECUTING--><!--Device-CloudEnhancementState-EXECUTING-End-->
 
@@ -74,9 +82,11 @@ COMPLETED
 
 Cloud enhancement has been completed.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CloudEnhancementState-COMPLETED--><!--Device-CloudEnhancementState-COMPLETED-End-->
 

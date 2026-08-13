@@ -12,6 +12,8 @@ function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPre
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates--><!--Device-dataAbility-function createRdbPredicates(name: string, dataAbilityPredicates: DataAbilityPredicates): rdb.RdbPredicates-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Core

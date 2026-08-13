@@ -6,6 +6,8 @@ Provides APIs for interrupting a copy task.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class TaskSignal--><!--Device-unnamed-export class TaskSignal-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -27,6 +29,8 @@ Cancels a copy task.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-TaskSignal-cancel(): void--><!--Device-TaskSignal-cancel(): void-End-->
 
@@ -88,11 +92,7 @@ try {
 onCancel(): Promise<string>
 ```
 
-> **NOTE：**
-> 
-> This API is supported since API version 12 and deprecated since API version 24.
-
-Subscribes to the event reported when a copy task is canceled.
+> **NOTE：**> > This API is supported since API version 12 and deprecated since API version 24. Subscribes to the event reported when a copy task is canceled.
 
 **Since:** 12
 

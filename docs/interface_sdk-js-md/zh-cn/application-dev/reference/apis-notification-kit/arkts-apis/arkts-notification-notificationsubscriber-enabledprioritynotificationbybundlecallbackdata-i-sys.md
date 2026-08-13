@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface EnabledPriorityNotificationByBundleCallbackData--><!--Device-unnamed-export interface EnabledPriorityNotificationByBundleCallbackData-End-->
 
@@ -24,7 +26,9 @@ readonly bundle: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly bundle: string--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly bundle: string-End-->
 
@@ -44,7 +48,9 @@ readonly enableStatus: notificationManager.PriorityEnableStatus
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly enableStatus: notificationManager.PriorityEnableStatus--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly enableStatus: notificationManager.PriorityEnableStatus-End-->
 
@@ -60,11 +66,13 @@ readonly uid: int
 
 应用的uid。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly uid: int--><!--Device-EnabledPriorityNotificationByBundleCallbackData-readonly uid: int-End-->
 

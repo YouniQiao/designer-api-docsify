@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-huks-export enum HuksKeyGenerateType--><!--Device-huks-export enum HuksKeyGenerateType-End-->
 
 **系统能力：** 
@@ -19,6 +21,8 @@ HUKS_KEY_GENERATE_TYPE_DEFAULT = 0
 默认生成的密钥。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ HUKS_KEY_GENERATE_TYPE_DERIVE = 1
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksKeyGenerateType-HUKS_KEY_GENERATE_TYPE_DERIVE = 1--><!--Device-HuksKeyGenerateType-HUKS_KEY_GENERATE_TYPE_DERIVE = 1-End-->
@@ -55,6 +61,8 @@ HUKS_KEY_GENERATE_TYPE_AGREE = 2
 协商生成的密钥。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

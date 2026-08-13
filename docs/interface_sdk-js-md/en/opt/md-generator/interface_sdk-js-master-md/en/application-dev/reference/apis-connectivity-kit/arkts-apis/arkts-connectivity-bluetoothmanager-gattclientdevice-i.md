@@ -6,7 +6,7 @@ Manages GATT client. Before calling an Gatt client method, you must use [createG
 
 **Deprecated since:** 10
 
-**Substitutes:** [GattClientDevice](ohos.bluetooth.ble/ble.GattClientDevice)
+**Substitutes:** [GattClientDevice](arkts-connectivity-ble-gattclientdevice-i.md#GattClientDevice)
 
 <!--Device-bluetoothManager-interface GattClientDevice--><!--Device-bluetoothManager-interface GattClientDevice-End-->
 
@@ -24,15 +24,13 @@ import { bluetoothManager } from '@kit.ConnectivityKit';
 close(): void
 ```
 
-Disables a BLE peripheral device.
-
-This method unregisters the device and clears the registered callbacks and handles.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Disables a BLE peripheral device. This method unregisters the device and clears the registered callbacks and handles. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [close](ohos.bluetooth.ble/ble.GattClientDevice#close)
+**Substitutes:** [close](arkts-connectivity-ble-gattclientdevice-i.md#close)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -46,8 +44,8 @@ This method unregisters the device and clears the registered callbacks and handl
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -70,15 +68,13 @@ try {
 connect(): void
 ```
 
-Connects to a BLE peripheral device.
-
-The 'BLEConnectionStateChange' event is subscribed to return the connection state.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Connects to a BLE peripheral device. The 'BLEConnectionStateChange' event is subscribed to return the connection state. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [connect](ohos.bluetooth.ble/ble.GattClientDevice#connect)
+**Substitutes:** [connect](arkts-connectivity-ble-gattclientdevice-i.md#connect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -92,8 +88,8 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -116,13 +112,13 @@ try {
 disconnect(): void
 ```
 
-Disconnects from or stops an ongoing connection to a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Disconnects from or stops an ongoing connection to a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [disconnect](ohos.bluetooth.ble/ble.GattClientDevice#disconnect)
+**Substitutes:** [disconnect](arkts-connectivity-ble-gattclientdevice-i.md#disconnect)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -136,8 +132,8 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.On AP
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900003 |
 | 2900099 |
@@ -160,13 +156,13 @@ try {
 getDeviceName(callback: AsyncCallback<string>): void
 ```
 
-Obtains the name of BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the name of BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getDeviceName](ohos.bluetooth.ble/ble.GattClientDevice#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getDeviceName)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -186,9 +182,9 @@ Obtains the name of BLE peripheral device.On API 10 and above, the permission re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -215,13 +211,13 @@ try {
 getDeviceName(): Promise<string>
 ```
 
-Obtains the name of BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Obtains the name of BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getDeviceName](ohos.bluetooth.ble/ble.GattClientDevice#getDeviceName)
+**Substitutes:** [getDeviceName](arkts-connectivity-ble-gattclientdevice-i.md#getDeviceName)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -241,9 +237,9 @@ Obtains the name of BLE peripheral device.On API 10 and above, the permission re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -269,13 +265,13 @@ try {
 getRssiValue(callback: AsyncCallback<number>): void
 ```
 
-Get the RSSI value of this BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Get the RSSI value of this BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRssiValue](ohos.bluetooth.ble/ble.GattClientDevice#getRssiValue)
+**Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getRssiValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -295,9 +291,9 @@ Get the RSSI value of this BLE peripheral device.On API 10 and above, the permis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -323,13 +319,13 @@ try {
 getRssiValue(): Promise<number>
 ```
 
-Get the RSSI value of this BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Get the RSSI value of this BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getRssiValue](ohos.bluetooth.ble/ble.GattClientDevice#getRssiValue)
+**Substitutes:** [getRssiValue](arkts-connectivity-ble-gattclientdevice-i.md#getRssiValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -349,9 +345,9 @@ Get the RSSI value of this BLE peripheral device.On API 10 and above, the permis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900099 |
 
 ## Examples
@@ -375,13 +371,13 @@ try {
 getServices(callback: AsyncCallback<Array<GattService>>): void
 ```
 
-Starts discovering services.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Starts discovering services. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getServices](ohos.bluetooth.ble/ble.GattClientDevice#getServices)
+**Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getServices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -401,9 +397,9 @@ Starts discovering services.On API 10 and above, the permission required by this
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -439,13 +435,13 @@ try {
 getServices(): Promise<Array<GattService>>
 ```
 
-Starts discovering services.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Starts discovering services. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [getServices](ohos.bluetooth.ble/ble.GattClientDevice#getServices)
+**Substitutes:** [getServices](arkts-connectivity-ble-gattclientdevice-i.md#getServices)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -465,9 +461,9 @@ Starts discovering services.On API 10 and above, the permission required by this
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -487,19 +483,19 @@ try {
 }
 ```
 
-## off('BLECharacteristicChange')
+## off_BLECharacteristicChange
 
 ```TypeScript
 off(type: 'BLECharacteristicChange', callback?: Callback<BLECharacteristic>): void
 ```
 
-Unsubscribe characteristic value changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe characteristic value changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [BLECharacteristicChange](ohos.bluetooth.ble/ble.GattClientDevice.off#event:BLECharacteristicChange)
+**Substitutes:** BLECharacteristicChange
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -520,8 +516,8 @@ Unsubscribe characteristic value changed event.On API 10 and above, the permissi
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -535,19 +531,19 @@ try {
 }
 ```
 
-## off('BLEConnectionStateChange')
+## off_BLEConnectionStateChange
 
 ```TypeScript
 off(type: 'BLEConnectionStateChange', callback?: Callback<BLEConnectChangedState>): void
 ```
 
-Unsubscribe client connection state changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Unsubscribe client connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [BLEConnectionStateChange](ohos.bluetooth.ble/ble.GattClientDevice.off#event:BLEConnectionStateChange)
+**Substitutes:** BLEConnectionStateChange
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -568,8 +564,8 @@ Unsubscribe client connection state changed event.On API 10 and above, the permi
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -583,19 +579,19 @@ try {
 }
 ```
 
-## on('BLECharacteristicChange')
+## on_BLECharacteristicChange
 
 ```TypeScript
 on(type: 'BLECharacteristicChange', callback: Callback<BLECharacteristic>): void
 ```
 
-Subscribe characteristic value changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe characteristic value changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [BLECharacteristicChange](ohos.bluetooth.ble/ble.GattClientDevice.on#event:BLECharacteristicChange)
+**Substitutes:** BLECharacteristicChange
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -616,8 +612,8 @@ Subscribe characteristic value changed event.On API 10 and above, the permission
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -636,19 +632,19 @@ try {
 }
 ```
 
-## on('BLEConnectionStateChange')
+## on_BLEConnectionStateChange
 
 ```TypeScript
 on(type: 'BLEConnectionStateChange', callback: Callback<BLEConnectChangedState>): void
 ```
 
-Subscribe client connection state changed event.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Subscribe client connection state changed event. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [BLEConnectionStateChange](ohos.bluetooth.ble/ble.GattClientDevice.on#event:BLEConnectionStateChange)
+**Substitutes:** BLEConnectionStateChange
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -669,8 +665,8 @@ Subscribe client connection state changed event.On API 10 and above, the permiss
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -694,13 +690,13 @@ try {
 readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void
 ```
 
-Reads the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Reads the characteristic of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [readCharacteristicValue](ohos.bluetooth.ble/ble.GattClientDevice#readCharacteristicValue)
+**Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readCharacteristicValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -721,10 +717,10 @@ Reads the characteristic of a BLE peripheral device.On API 10 and above, the per
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901000 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -771,13 +767,13 @@ try {
 readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>
 ```
 
-Reads the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Reads the characteristic of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [readCharacteristicValue](ohos.bluetooth.ble/ble.GattClientDevice#readCharacteristicValue)
+**Substitutes:** [readCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#readCharacteristicValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -803,10 +799,10 @@ Reads the characteristic of a BLE peripheral device.On API 10 and above, the per
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901000 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -844,13 +840,13 @@ try {
 readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void
 ```
 
-Reads the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Reads the descriptor of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [readDescriptorValue](ohos.bluetooth.ble/ble.GattClientDevice#readDescriptorValue)
+**Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readDescriptorValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -871,10 +867,10 @@ Reads the descriptor of a BLE peripheral device.On API 10 and above, the permiss
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901000 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -913,13 +909,13 @@ try {
 readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>
 ```
 
-Reads the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Reads the descriptor of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [readDescriptorValue](ohos.bluetooth.ble/ble.GattClientDevice#readDescriptorValue)
+**Substitutes:** [readDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#readDescriptorValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -945,10 +941,10 @@ Reads the descriptor of a BLE peripheral device.On API 10 and above, the permiss
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901000 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -979,13 +975,13 @@ try {
 setBLEMtuSize(mtu: number): void
 ```
 
-Set the mtu size of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Set the mtu size of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [setBLEMtuSize](ohos.bluetooth.ble/ble.GattClientDevice#setBLEMtuSize)
+**Substitutes:** [setBLEMtuSize](arkts-connectivity-ble-gattclientdevice-i.md#setBLEMtuSize)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1005,9 +1001,9 @@ Set the mtu size of a BLE peripheral device.On API 10 and above, the permission 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1029,7 +1025,7 @@ try {
 setNotifyCharacteristicChanged(characteristic: BLECharacteristic, enable: boolean): void
 ```
 
-Enables or disables notification of a characteristic when value changed.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Enables or disables notification of a characteristic when value changed. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
@@ -1056,9 +1052,9 @@ Enables or disables notification of a characteristic when value changed.On API 1
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1096,13 +1092,13 @@ try {
 writeCharacteristicValue(characteristic: BLECharacteristic): void
 ```
 
-Writes the characteristic of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Writes the characteristic of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [writeCharacteristicValue](ohos.bluetooth.ble/ble.GattClientDevice#writeCharacteristicValue)
+**Substitutes:** [writeCharacteristicValue](arkts-connectivity-ble-gattclientdevice-i.md#writeCharacteristicValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1122,10 +1118,10 @@ Writes the characteristic of a BLE peripheral device.On API 10 and above, the pe
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 
@@ -1162,13 +1158,13 @@ try {
 writeDescriptorValue(descriptor: BLEDescriptor): void
 ```
 
-Writes the descriptor of a BLE peripheral device.On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
+Writes the descriptor of a BLE peripheral device. On API 10 and above, the permission required by this interface is changed from USE_BLUETOOTH to ACCESS_BLUETOOTH.
 
 **Since:** 9
 
 **Deprecated since:** 10
 
-**Substitutes:** [writeDescriptorValue](ohos.bluetooth.ble/ble.GattClientDevice#writeDescriptorValue)
+**Substitutes:** [writeDescriptorValue](arkts-connectivity-ble-gattclientdevice-i.md#writeDescriptorValue)
 
 **Required permissions:** 
 - API version 10+: ohos.permission.ACCESS_BLUETOOTH
@@ -1188,10 +1184,10 @@ Writes the descriptor of a BLE peripheral device.On API 10 and above, the permis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901001 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900001 |
 | 2900099 |
 

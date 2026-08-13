@@ -2,9 +2,11 @@
 
 Describes the geographical location.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sensor-interface LocationOptions--><!--Device-sensor-interface LocationOptions-End-->
 
@@ -24,11 +26,13 @@ altitude: double
 
 Altitude, in m.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationOptions-altitude: double--><!--Device-LocationOptions-altitude: double-End-->
 
@@ -42,11 +46,13 @@ latitude: double
 
 Latitude, in degrees.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationOptions-latitude: double--><!--Device-LocationOptions-latitude: double-End-->
 
@@ -60,11 +66,13 @@ longitude: double
 
 Longitude, in degrees.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LocationOptions-longitude: double--><!--Device-LocationOptions-longitude: double-End-->
 

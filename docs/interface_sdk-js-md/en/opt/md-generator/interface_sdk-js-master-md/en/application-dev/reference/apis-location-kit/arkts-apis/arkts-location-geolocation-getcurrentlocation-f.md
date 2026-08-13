@@ -18,7 +18,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -63,7 +63,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 
@@ -106,7 +106,7 @@ Obtain current location
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCurrentLocation](ohos.geoLocationManager/geoLocationManager.getCurrentLocation)
+**Substitutes:** [getCurrentLocation](arkts-location-geolocationmanager-getcurrentlocation-f.md#getCurrentLocation)
 
 **Required permissions:** ohos.permission.LOCATION
 

@@ -4,6 +4,8 @@ Provides basic parameters for creating an **ArcList** component.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ArkListOptions--><!--Device-unnamed-declare interface ArkListOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -26,6 +28,8 @@ Header component.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArkListOptions-header?: ComponentContent--><!--Device-ArkListOptions-header?: ComponentContent-End-->
@@ -38,12 +42,13 @@ Header component.
 initialIndex?: number
 ```
 
-Item displayed at the beginning of the viewport when the **ArcList** component is loaded for the first time, that is, the first item to be displayed.&lt;br/&gt;Default value: **0**&lt;br/&gt;  
-**NOTE：**&lt;br/&gt;If the set value is a negative number or is greater than the index of the last item, the value is invalid. In this case, the default value will be used.
+Item displayed at the beginning of the viewport when the **ArcList** component is loaded for the first time, that is, the first item to be displayed.&lt;br/&gt;Default value: **0**&lt;br/&gt; **NOTE：**&lt;br/&gt;If the set value is a negative number or is greater than the index of the last item, the value is invalid. In this case, the default value will be used.
 
 **Type:** number
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -62,6 +67,8 @@ Controller of the scrollable component. After being bound to **ArcList**, the co
 **Type:** [Scroller](../arkts-components/arkts-arkui-scroller-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

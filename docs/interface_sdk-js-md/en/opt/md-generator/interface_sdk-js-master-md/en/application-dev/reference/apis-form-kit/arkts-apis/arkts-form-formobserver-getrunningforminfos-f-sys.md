@@ -14,7 +14,9 @@ function getRunningFormInfos(callback: AsyncCallback<Array<formInfo.RunningFormI
 
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -29,17 +31,17 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes |
-| [hostBundleName](arkts-form-forminfo-runningforminfo-i.md) | string | No |
+| [hostBundleName](arkts-form-forminfo-runningforminfo-i-sys.md) | string | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 
 ## getRunningFormInfos
@@ -54,7 +56,9 @@ function getRunningFormInfos(
 
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -70,17 +74,17 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;formInfo.RunningFormInfo&gt;&gt; | Yes |
 | [isUnusedIncluded](arkts-form-forminfo-formproviderfilter-i-sys.md) | boolean | Yes |
-| [hostBundleName](arkts-form-forminfo-runningforminfo-i.md) | string | No |
+| [hostBundleName](arkts-form-forminfo-runningforminfo-i-sys.md) | string | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 
 ## getRunningFormInfos
@@ -91,7 +95,9 @@ function getRunningFormInfos(hostBundleName?: string): Promise<Array<formInfo.Ru
 
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -105,7 +111,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [hostBundleName](arkts-form-forminfo-runningforminfo-i.md) | string | No |
+| [hostBundleName](arkts-form-forminfo-runningforminfo-i-sys.md) | string | No |
 
 **Return value:**
 
@@ -117,11 +123,11 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 
 ## getRunningFormInfos
@@ -135,7 +141,9 @@ function getRunningFormInfos(
 
 Obtains the RunningFormInfo objects provided by a specific card host application on the device.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.OBSERVE_FORM_RUNNING
 
@@ -150,7 +158,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [isUnusedIncluded](arkts-form-forminfo-formproviderfilter-i-sys.md) | boolean | Yes |
-| [hostBundleName](arkts-form-forminfo-runningforminfo-i.md) | string | No |
+| [hostBundleName](arkts-form-forminfo-runningforminfo-i-sys.md) | string | No |
 
 **Return value:**
 
@@ -162,8 +170,8 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16500060](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500060-service-connection-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [16500050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-form-kit/errorcode-form.md#16500050-ipc-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16500060](../errorcode-form.md#16500060-service-connection-failure) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [16500050](../errorcode-form.md#16500050-ipc-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

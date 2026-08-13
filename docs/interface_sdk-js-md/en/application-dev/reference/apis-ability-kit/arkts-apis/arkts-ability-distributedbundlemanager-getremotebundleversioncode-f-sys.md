@@ -12,11 +12,13 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promise<long>
 ```
 
-Obtains the version information of an app with a specified bundle name on a specified remote device.This API uses a promise to return the result.
+Obtains the version information of an app with a specified bundle name on a specified remote device. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -39,16 +41,16 @@ Obtains the version information of an app with a specified bundle name on a spec
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise object. If the call succeeds, the version information is returned; if the call fails, an error object is returned. |
+| Promise&lt;long&gt; | Promise object. If the call succeeds, the version information is returned; if the call fails, an error object is returned. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [17700027](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
+| [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 

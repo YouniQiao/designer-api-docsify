@@ -2,9 +2,11 @@
 
 Represents information about the last device-cloud sync.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudData-interface SyncInfo--><!--Device-cloudData-interface SyncInfo-End-->
 
@@ -28,9 +30,11 @@ Result of the last device-cloud sync.
 
 **Type:** relationalStore.ProgressCode
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncInfo-code: relationalStore.ProgressCode--><!--Device-SyncInfo-code: relationalStore.ProgressCode-End-->
 
@@ -48,9 +52,11 @@ End time of the last device-cloud sync.
 
 **Type:** Date
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncInfo-finishTime: Date--><!--Device-SyncInfo-finishTime: Date-End-->
 
@@ -68,9 +74,11 @@ Start time of the last device-cloud sync.
 
 **Type:** Date
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncInfo-startTime: Date--><!--Device-SyncInfo-startTime: Date-End-->
 
@@ -88,9 +96,11 @@ Status of the last device-cloud sync. The default value is **cloudData.SyncStatu
 
 **Type:** [SyncStatus](arkts-arkdata-clouddata-syncstatus-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SyncInfo-syncStatus?: SyncStatus--><!--Device-SyncInfo-syncStatus?: SyncStatus-End-->
 

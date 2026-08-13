@@ -14,7 +14,7 @@ function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number
 
 **废弃版本：** 9
 
-**替代接口：** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
+**替代接口：** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getSlotNumByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -29,7 +29,7 @@ function getSlotNumByBundle(bundle: BundleOption, callback: AsyncCallback<number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取通知通道数量回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | 是 | 获取通知通道数量回调函数。 |
 
 
 ## getSlotNumByBundle
@@ -46,7 +46,7 @@ function getSlotNumByBundle(bundle: BundleOption): Promise<number>
 
 **废弃版本：** 9
 
-**替代接口：** [getSlotNumByBundle](ohos.notificationManager/notificationManager#getSlotNumByBundle)
+**替代接口：** [getSlotNumByBundle](arkts-notification-notificationmanager-getslotnumbybundle-f-sys.md#getSlotNumByBundle（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

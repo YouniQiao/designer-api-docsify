@@ -14,9 +14,11 @@ function configure(config: ConfigOption): void
 
 Configures the application event logging function, such as setting the logging switch and directory storage quota.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,8 +36,8 @@ Configures the application event logging function, such as setting the logging s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11103001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11103001](../errorcode-hiappevent.md#11103001-invalid-maximum-storage-quota) | Invalid max storage quota value. Possibly caused by incorrectly formatted. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
 
 ## Examples
 

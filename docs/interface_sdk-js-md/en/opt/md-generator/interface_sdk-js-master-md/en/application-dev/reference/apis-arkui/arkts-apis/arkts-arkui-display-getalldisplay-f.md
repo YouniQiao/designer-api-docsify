@@ -18,7 +18,7 @@ Obtains all Display objects. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllDisplays](display.getAllDisplays(callback:)
+**Substitutes:** [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getAllDisplays)(callback: AsyncCallback&lt;Array&lt;Display&gt;&gt;)
 
 <!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplay(callback: AsyncCallback<Array<Display>>): void-End-->
 

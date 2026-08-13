@@ -1,8 +1,10 @@
 # BreakpointOptions
 
-Defines the breakpoint configuration options for container dimension analysis.Specifies threshold values that trigger different layout behaviors based on container size.
+Defines the breakpoint configuration options for container dimension analysis. Specifies threshold values that trigger different layout behaviors based on container size.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BreakpointOptions--><!--Device-unnamed-export interface BreakpointOptions-End-->
 
@@ -20,11 +22,13 @@ import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@k
 height?: Array<number>
 ```
 
-Optional array of height breakpoint values in vp units.Defines the height thresholds for container height analysis.
+Optional array of height breakpoint values in vp units. Defines the height thresholds for container height analysis.
 
 **Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ Optional array of height breakpoint values in vp units.Defines the height thresh
 width?: Array<number>
 ```
 
-Optional array of width breakpoint values in vp units.Defines the width thresholds for container width analysis.
+Optional array of width breakpoint values in vp units. Defines the width thresholds for container width analysis.
 
 **Type:** Array&lt;number&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

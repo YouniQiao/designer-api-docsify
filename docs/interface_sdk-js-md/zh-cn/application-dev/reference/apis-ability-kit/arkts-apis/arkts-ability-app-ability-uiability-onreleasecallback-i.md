@@ -6,11 +6,13 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface OnReleaseCallback--><!--Device-unnamed-export interface OnReleaseCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (msg: string): void
@@ -21,6 +23,8 @@
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

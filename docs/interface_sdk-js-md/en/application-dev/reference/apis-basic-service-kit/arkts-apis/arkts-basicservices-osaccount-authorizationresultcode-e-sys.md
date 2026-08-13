@@ -4,7 +4,9 @@ Enumerates authorization result codes.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum AuthorizationResultCode--><!--Device-osAccount-enum AuthorizationResultCode-End-->
 
@@ -22,7 +24,9 @@ The authorization is successful.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ The authorization is canceled.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,15 +64,13 @@ The authorization is canceled.
 AUTHORIZATION_INTERACTION_NOT_ALLOWED = 12300302
 ```
 
-The authorization is rejected because user interaction is not allowed.
-
-Possible causes:
-
-1. The caller is in the background.2. The value of **isInteractionAllowed** is **false**.3. The specified interaction context is invalid.
+The authorization is rejected because user interaction is not allowed. Possible causes: 1. The caller is in the background. 2. The value of **isInteractionAllowed** is **false**. 3. The specified interaction context is invalid.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,7 +90,9 @@ The authorization is rejected because the authorization rules are not met, for e
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,13 +108,13 @@ The authorization is rejected because the authorization rules are not met, for e
 AUTHORIZATION_SERVICE_BUSY = 12300304
 ```
 
-Authorization service is busy.
-
-Possible cause: Another authorization is being processed.
+Authorization service is busy. Possible cause: Another authorization is being processed.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

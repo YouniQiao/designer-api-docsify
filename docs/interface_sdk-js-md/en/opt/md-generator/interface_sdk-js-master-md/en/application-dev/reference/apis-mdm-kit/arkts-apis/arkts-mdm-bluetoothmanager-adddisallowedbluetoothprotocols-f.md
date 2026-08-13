@@ -16,6 +16,8 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
 **Model restriction:** This API can be used only in the stage model.
@@ -36,9 +38,9 @@ Adds disallowed Bluetooth protocols. Specified users cannot use the disallowed B
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 
@@ -72,24 +74,11 @@ try {
 function addDisallowedBluetoothProtocols(admin: Want, accountId: number, protocols: Array<Protocol>, policy: TransferPolicy): void
 ```
 
-Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy.
-
-> **NOTE：**
-> 
-> 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and
-> system applications.
-> 
-> 2. When the SPP protocol is passed, the value of the **policy** parameter can only be
-> **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned.
-> 
-> 3. This API and
-> [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#addDisallowedBluetoothProtocols) are
-> overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine-
-> grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving,
-> or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be
-> combined and take effect.
+Adds disallowed Bluetooth protocols. After the setting, specified users cannot use the disallowed Bluetooth protocols based on the specified transfer policy. > **NOTE：**> > 1. This API is used to disable the GATT or SPP protocol, which does not take effect for system services and > system applications. > > 2. When the SPP protocol is passed, the value of the **policy** parameter can only be > **TransferPolicy.RECEIVE_SEND**. Otherwise, error code 9200012 will be returned. > > 3. This API and > [addDisallowedBluetoothProtocols&lt;sup&gt;20+&lt;/sup&gt;](#addDisallowedBluetoothProtocols) are > overloaded APIs. This API adds the **policy** parameter to specify the transfer policy, enabling more fine- > grained control over Bluetooth protocol disabling behavior (for example, blocking only sending, only receiving, > or both sending and receiving). If both APIs are used to configure disabling policies, the policies will be > combined and take effect.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_BLUETOOTH
 
@@ -112,10 +101,10 @@ Adds disallowed Bluetooth protocols. After the setting, specified users cannot u
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

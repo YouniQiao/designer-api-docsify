@@ -6,7 +6,9 @@ export type NotificationTemplate = _NotificationTemplate
 
 Describes the notification template.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationTemplate = _NotificationTemplate--><!--Device-notificationManager-export type NotificationTemplate = _NotificationTemplate-End-->
 

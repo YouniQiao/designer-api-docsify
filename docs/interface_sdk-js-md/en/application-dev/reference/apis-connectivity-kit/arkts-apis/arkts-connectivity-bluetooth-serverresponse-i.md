@@ -8,7 +8,7 @@ Describes the parameters of a response send by the server to a specified read or
 
 **Deprecated since:** 9
 
-**Substitutes:** [ServerResponse](ohos.bluetoothManager/bluetoothManager.ServerResponse)
+**Substitutes:** [ServerResponse](arkts-connectivity-bluetoothmanager-serverresponse-i.md#ServerResponse)
 
 <!--Device-bluetooth-interface ServerResponse--><!--Device-bluetooth-interface ServerResponse-End-->
 
@@ -36,7 +36,7 @@ Indicates the address of the client to which to send the response
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.ServerResponse.deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#deviceId)
 
 <!--Device-ServerResponse-deviceId: string--><!--Device-ServerResponse-deviceId: string-End-->
 
@@ -58,7 +58,7 @@ Indicates the byte offset of the start position for reading or writing operation
 
 **Deprecated since:** 9
 
-**Substitutes:** [offset](ohos.bluetoothManager/bluetoothManager.ServerResponse.offset)
+**Substitutes:** [offset](arkts-connectivity-bluetoothmanager-serverresponse-i.md#offset)
 
 <!--Device-ServerResponse-offset: number--><!--Device-ServerResponse-offset: number-End-->
 
@@ -80,7 +80,7 @@ Indicates the status of the read or write request, set this parameter to '0' in 
 
 **Deprecated since:** 9
 
-**Substitutes:** [status](ohos.bluetoothManager/bluetoothManager.ServerResponse.status)
+**Substitutes:** [status](arkts-connectivity-bluetoothmanager-serverresponse-i.md#status)
 
 <!--Device-ServerResponse-status: number--><!--Device-ServerResponse-status: number-End-->
 
@@ -102,7 +102,7 @@ The Id of the write request
 
 **Deprecated since:** 9
 
-**Substitutes:** [transId](ohos.bluetoothManager/bluetoothManager.ServerResponse.transId)
+**Substitutes:** [transId](arkts-connectivity-bluetoothmanager-serverresponse-i.md#transId)
 
 <!--Device-ServerResponse-transId: number--><!--Device-ServerResponse-transId: number-End-->
 
@@ -124,7 +124,7 @@ Indicates the value to be sent
 
 **Deprecated since:** 9
 
-**Substitutes:** [value](ohos.bluetoothManager/bluetoothManager.ServerResponse.value)
+**Substitutes:** [value](arkts-connectivity-bluetoothmanager-serverresponse-i.md#value)
 
 <!--Device-ServerResponse-value: ArrayBuffer--><!--Device-ServerResponse-value: ArrayBuffer-End-->
 

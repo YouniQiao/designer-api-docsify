@@ -1,14 +1,10 @@
 # WebDataBase
 
-Implements a **WebDataBase** object.
-
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
-> 
-> - You must load the **Web** component before calling the APIs in **WebDataBase**.
+Implements a **WebDataBase** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **WebDataBase**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
@@ -30,6 +26,8 @@ Deletes all HTTP authentication credentials saved in the cache. This API returns
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
@@ -45,6 +43,8 @@ static existHttpAuthCredentials(): boolean
 Checks whether any saved HTTP authentication credentials exist. This API returns the result synchronously.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -67,6 +67,8 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 Retrieves HTTP authentication credentials for a given host and realm. This API returns the result synchronously.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -91,7 +93,7 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## saveHttpAuthCredentials
 
@@ -102,6 +104,8 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 Saves HTTP authentication credentials for a given host and realm. This API returns the result synchronously.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -122,4 +126,4 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

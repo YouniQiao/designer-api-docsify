@@ -2,9 +2,11 @@
 
 GATT connection parameters.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-ble-enum ConnectionParam--><!--Device-ble-enum ConnectionParam-End-->
 
@@ -18,9 +20,11 @@ LOW_POWER = 1
 
 low power mode.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +40,11 @@ BALANCED = 2
 
 balanced power mode.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,9 +60,11 @@ HIGH = 3
 
 Use the highest connection parameters.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

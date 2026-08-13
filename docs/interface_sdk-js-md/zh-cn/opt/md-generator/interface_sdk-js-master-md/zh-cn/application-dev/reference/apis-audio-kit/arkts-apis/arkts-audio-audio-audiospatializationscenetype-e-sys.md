@@ -2,7 +2,9 @@
 
 Describes a spatialization scene type group.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-enum AudioSpatializationSceneType--><!--Device-audio-enum AudioSpatializationSceneType-End-->
 
@@ -18,7 +20,9 @@ DEFAULT = 0
 
 Audio Spatialization Scene Type Default.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationSceneType-DEFAULT = 0--><!--Device-AudioSpatializationSceneType-DEFAULT = 0-End-->
 
@@ -34,7 +38,9 @@ MUSIC = 1
 
 Audio Spatialization Scene Type Music.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationSceneType-MUSIC = 1--><!--Device-AudioSpatializationSceneType-MUSIC = 1-End-->
 
@@ -50,7 +56,9 @@ MOVIE = 2
 
 Audio Spatialization Scene Type Movie.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationSceneType-MOVIE = 2--><!--Device-AudioSpatializationSceneType-MOVIE = 2-End-->
 
@@ -66,7 +74,9 @@ AUDIOBOOK = 3
 
 Audio Spatialization Scene Type Audio Book.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3--><!--Device-AudioSpatializationSceneType-AUDIOBOOK = 3-End-->
 

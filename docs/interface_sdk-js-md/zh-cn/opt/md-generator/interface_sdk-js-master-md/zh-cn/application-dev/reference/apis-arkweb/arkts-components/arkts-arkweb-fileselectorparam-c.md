@@ -1,8 +1,10 @@
 # FileSelectorParam
 
-封装消息信息，作为 [onFileSelectorShow](onFileSelectorShow) 方法的入参。
+封装消息信息，作为 onFileSelectorShow 方法的入参。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class FileSelectorParam--><!--Device-unnamed-declare class FileSelectorParam-End-->
 
@@ -17,6 +19,8 @@ constructor()
 FileSelectorParam的构造函数。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ getAcceptType(): Array<string>
 获取可接受的MIME类型数组。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +62,8 @@ getAcceptableFileTypes(): Array<Array<AcceptableFileType>>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>--><!--Device-FileSelectorParam-getAcceptableFileTypes(): Array<Array<AcceptableFileType>>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -75,6 +83,8 @@ getDefaultPath(): string
 获取拉起选择器时默认打开的路径。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-FileSelectorParam-getDefaultPath(): string--><!--Device-FileSelectorParam-getDefaultPath(): string-End-->
 
@@ -96,6 +106,8 @@ getDescriptions(): Array<string>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-FileSelectorParam-getDescriptions(): Array<string>--><!--Device-FileSelectorParam-getDescriptions(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -116,6 +128,8 @@ getMimeTypes(): Array<string>
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 <!--Device-FileSelectorParam-getMimeTypes(): Array<string>--><!--Device-FileSelectorParam-getMimeTypes(): Array<string>-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -135,6 +149,8 @@ getMode(): FileSelectorMode
 获取当前文件选择器的选择模式。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -158,6 +174,8 @@ getSuggestedName(): string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-FileSelectorParam-getSuggestedName(): string--><!--Device-FileSelectorParam-getSuggestedName(): string-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -177,6 +195,8 @@ getTitle(): string
 获取此文件选择器的标题。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -200,6 +220,8 @@ isAcceptAllOptionExcluded(): boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean--><!--Device-FileSelectorParam-isAcceptAllOptionExcluded(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -219,6 +241,8 @@ isCapture(): boolean
 获取此文件选择器是否使用实时媒体拍摄所得内容。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

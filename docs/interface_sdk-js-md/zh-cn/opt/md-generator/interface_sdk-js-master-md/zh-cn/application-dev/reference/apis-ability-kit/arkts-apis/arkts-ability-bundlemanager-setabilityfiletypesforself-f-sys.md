@@ -8,7 +8,9 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 设置当前应用支持打开的文件类型。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_SELF_SKILLS
 
@@ -30,11 +32,11 @@ function setAbilityFileTypesForSelf(moduleName: string, abilityName: string, fil
 
 | 错误码ID |
 | --- |
-| [17700351](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700351-无效的文件类型) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700002-指定的modulename不存在) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [17700351](../errorcode-bundle.md#17700351-无效的文件类型) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
 
 ## 示例
 

@@ -4,11 +4,13 @@ Defines the prime field of the elliptic curve. It is a child class of [ECField](
 
 **Inheritance/Implementation:** ECFieldFp extends [ECField](arkts-cryptoarchitecture-cryptoframework-ecfield-i.md#ECField)
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-cryptoFramework-interface ECFieldFp extends ECField--><!--Device-cryptoFramework-interface ECFieldFp extends ECField-End-->
+**Deprecated since:** -1
+
+<!--Device-cryptoFramework-interface ECFieldFp--><!--Device-cryptoFramework-interface ECFieldFp-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -30,9 +32,11 @@ Value of the prime number **p**.
 
 **Type:** bigint
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

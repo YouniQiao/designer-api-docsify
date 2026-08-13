@@ -8,9 +8,11 @@ function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void
 
 设置键盘按键的重复速率，使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void--><!--Device-inputDevice-function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void-End-->
 
@@ -22,15 +24,15 @@ function setKeyboardRepeatRate(rate: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置键盘按键重复速率成功，err为undefined，否则为错误对象。 |
+| rate | int | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置键盘按键重复速率成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
 
@@ -106,9 +108,11 @@ function setKeyboardRepeatRate(rate: int): Promise<void>
 
 设置键盘按键的重复速率，使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>--><!--Device-inputDevice-function setKeyboardRepeatRate(rate: int): Promise<void>-End-->
 
@@ -120,7 +124,7 @@ function setKeyboardRepeatRate(rate: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
+| rate | int | 是 | 键盘按键重复速率，默认值50ms/次，调节范围[36ms/次，100ms/次]。 |
 
 **返回值：**
 
@@ -132,8 +136,8 @@ function setKeyboardRepeatRate(rate: int): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | SystemAPI permission error. |
 
 ## 示例
 

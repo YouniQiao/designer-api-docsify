@@ -6,6 +6,8 @@ A **VideoController** object can control one or more **Video** components.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class VideoController--><!--Device-unnamed-declare class VideoController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ A constructor used to create a **VideoController** object.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -40,6 +44,8 @@ Exits full-screen mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoController-exitFullscreen()--><!--Device-VideoController-exitFullscreen()-End-->
@@ -58,6 +64,8 @@ Pauses playback. The current frame is then displayed, and playback will be resum
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoController-pause()--><!--Device-VideoController-pause()-End-->
@@ -75,6 +83,8 @@ Requests full-screen playback.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -100,6 +110,8 @@ Resets the **AVPlayer** instance of this component, which displays the current f
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -114,16 +126,13 @@ Resets the **AVPlayer** instance of this component, which displays the current f
 setCurrentTime(value: number)
 ```
 
-Sets the video playback position.
-
-> **NOTE：**
-> 
-> To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then
-> seek to the target position.
+Sets the video playback position. > **NOTE：**> > To start playback from a specific position, disable autoplay, wait for video preparation to complete, and then > seek to the target position.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -135,7 +144,7 @@ Sets the video playback position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second&lt;br&gt;Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setCurrentTime-1). |
+| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second&lt;br&gt;Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setCurrentTime). |
 
 ## setCurrentTime
 
@@ -148,6 +157,8 @@ Sets the video playback position with the specified seek mode.
 **Since:** 8
 
 **ArkTS mode:** ArkTS-Dyn only, since version 8.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -174,6 +185,8 @@ Starts playback.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VideoController-start()--><!--Device-VideoController-start()-End-->
@@ -191,6 +204,8 @@ Stops playback. The current frame is then displayed, and playback will restart f
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,6 +4,8 @@ Represents the management status of application permissions.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-securityManager-export enum PermissionManagedState--><!--Device-securityManager-export enum PermissionManagedState-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ DENIED = -1
 This permission is denied silently.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ This permission is granted silently.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PermissionManagedState-GRANTED = 0--><!--Device-PermissionManagedState-GRANTED = 0-End-->
@@ -49,6 +55,8 @@ DEFAULT = 1
 The permission is granted by the user by default.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

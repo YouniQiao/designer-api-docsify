@@ -1,10 +1,10 @@
 # ContactSyncProgress
 
-Information about the contact synchronization progress.
-
-Contains the sync ID, current batch, and total batch.
+Information about the contact synchronization progress. Contains the sync ID, current batch, and total batch.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-contact-interface ContactSyncProgress--><!--Device-contact-interface ContactSyncProgress-End-->
 
@@ -22,13 +22,13 @@ import { contact } from '@kit.ContactsKit';
 currentBatch: number
 ```
 
-Indicates the identifier of the current batch of contacts to be synchronized.
-
-The range of values is from 1 to totalBatches.
+Indicates the identifier of the current batch of contacts to be synchronized. The range of values is from 1 to totalBatches.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,13 +44,13 @@ The range of values is from 1 to totalBatches.
 syncId: number
 ```
 
-Indicates the sync identifier used for synchronizing all contacts.
-
-The value should start from 0.
+Indicates the sync identifier used for synchronizing all contacts. The value should start from 0.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,6 +71,8 @@ Indicates the total number of batches of contacts to be synchronized.
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

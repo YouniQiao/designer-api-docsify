@@ -6,9 +6,11 @@ export type NotificationCheckRequest = _NotificationCheckRequest
 
 Describes the notification authentication information.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest--><!--Device-notificationManager-export type NotificationCheckRequest = _NotificationCheckRequest-End-->
 

@@ -1,12 +1,14 @@
 # AbortSignal
 
-Object used to abort an async operation.An instance of this class must be accessed in the same thread where the instance is created.Access to fields of this class from another thread is undefined behaviour.
+Object used to abort an async operation. An instance of this class must be accessed in the same thread where the instance is created. Access to fields of this class from another thread is undefined behaviour.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-locks-class AbortSignal<T>--><!--Device-locks-class AbortSignal<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-locks-class AbortSignal--><!--Device-locks-class AbortSignal-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -30,6 +32,8 @@ Set to true to abort an operation.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AbortSignal-aborted: boolean--><!--Device-AbortSignal-aborted: boolean-End-->
@@ -49,6 +53,8 @@ Reason for the abort. This value will be used to reject the promise returned fro
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

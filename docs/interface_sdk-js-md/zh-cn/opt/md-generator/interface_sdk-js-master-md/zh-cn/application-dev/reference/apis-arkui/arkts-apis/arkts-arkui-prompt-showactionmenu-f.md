@@ -12,7 +12,7 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 **废弃版本：** 9
 
-**替代接口：** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**替代接口：** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void-End-->
 
@@ -63,7 +63,7 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 **废弃版本：** 9
 
-**替代接口：** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**替代接口：** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>-End-->
 

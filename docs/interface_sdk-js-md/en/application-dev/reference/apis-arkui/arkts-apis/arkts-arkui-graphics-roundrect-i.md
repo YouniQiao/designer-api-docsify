@@ -1,10 +1,12 @@
 # RoundRect
 
-Defines the RoundRect.
+Describes a rectangle with rounded corners.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RoundRect--><!--Device-unnamed-export interface RoundRect-End-->
 
@@ -16,15 +18,19 @@ Defines the RoundRect.
 corners: CornerRadius
 ```
 
-Corners property.
+Attributes of rounded corners.
 
-**Type:** [CornerRadius](arkts-arkui-cornerradius-t.md)
+**Type:** [CornerRadius](../../apis-na/arkts-apis/arkts-na-cornerradius-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RoundRect-corners: CornerRadius--><!--Device-RoundRect-corners: CornerRadius-End-->
 
@@ -36,15 +42,19 @@ Corners property.
 rect: Rect
 ```
 
-Rect property.
+Attributes of the rectangle.
 
-**Type:** [Rect](arkts-arkui-rect-t.md)
+**Type:** [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-RoundRect-rect: Rect--><!--Device-RoundRect-rect: Rect-End-->
 

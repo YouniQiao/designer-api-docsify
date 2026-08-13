@@ -2,7 +2,9 @@
 
 Represents the authorization request information of the credentials.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManagerDialog-export interface AuthorizeRequest--><!--Device-certificateManagerDialog-export interface AuthorizeRequest-End-->
 
@@ -20,11 +22,13 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 certPurpose?: certificateManager.CertificatePurpose
 ```
 
-Certificate usage.If the **certTypes** parameter contains the **CertificateType.CREDENTIAL_UKEY** type, the **certPurpose**parameter takes effect , indicating that the certificate credentials of the USB key are filtered based on the specified certificate usage.
+Certificate usage. If the **certTypes** parameter contains the **CertificateType.CREDENTIAL_UKEY** type, the **certPurpose** parameter takes effect , indicating that the certificate credentials of the USB key are filtered based on the specified certificate usage.
 
 **Type:** certificateManager.CertificatePurpose
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ List of certificate types.
 
 **Type:** Array&lt;[CertificateType](arkts-devicecertificate-certificatemanagerdialog-certificatetype-e.md)&gt;
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Indicates the certificate issuer, which is encoded in DER format. This parameter
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>--><!--Device-AuthorizeRequest-issuers?: Array<Uint8Array>-End-->
@@ -74,11 +82,13 @@ Indicates the certificate issuer, which is encoded in DER format. This parameter
 keyAlgIDs?: Array<string>
 ```
 
-Indicates the algorithm type of the public key of the certificate. It is used to filter the list of certificates that can be selected in the authorization dialog box. Only the certificates that match the public key algorithm are displayed.The value can only be RSA, EC, or ECDSA (case sensitive). If this parameter is not specified, certificates are not filtered by algorithm type.If the keyAlgIDs array contains an unsupported algorithm type,the keyAlgIDs filter does not take effect.The maximum length is 20.
+Indicates the algorithm type of the public key of the certificate. It is used to filter the list of certificates that can be selected in the authorization dialog box. Only the certificates that match the public key algorithm are displayed. The value can only be RSA, EC, or ECDSA (case sensitive). If this parameter is not specified, certificates are not filtered by algorithm type. If the keyAlgIDs array contains an unsupported algorithm type, the keyAlgIDs filter does not take effect. The maximum length is 20.
 
 **Type:** Array&lt;string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -97,6 +107,8 @@ This URI is displayed in the authorization dialog box and is used to provide the
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

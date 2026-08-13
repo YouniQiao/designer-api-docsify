@@ -12,7 +12,7 @@ Checks whether two WantAgent objects are equal.
 
 **Deprecated since:** 9
 
-**Substitutes:** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
+**Substitutes:** [equal](arkts-ability-wantagent-equal-f.md#equal)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -97,7 +97,7 @@ Checks whether two WantAgent objects are equal.
 
 **Deprecated since:** 9
 
-**Substitutes:** [equal](ohos.app.ability.wantAgent/wantAgent#equal)
+**Substitutes:** [equal](arkts-ability-wantagent-equal-f.md#equal)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

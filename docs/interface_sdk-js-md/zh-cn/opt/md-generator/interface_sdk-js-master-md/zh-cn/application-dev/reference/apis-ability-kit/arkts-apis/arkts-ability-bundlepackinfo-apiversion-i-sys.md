@@ -2,7 +2,9 @@
 
 module的api版本。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ApiVersion--><!--Device-unnamed-export interface ApiVersion-End-->
 
@@ -20,7 +22,9 @@ readonly compatible: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApiVersion-readonly compatible: int--><!--Device-ApiVersion-readonly compatible: int-End-->
 
@@ -38,7 +42,9 @@ readonly releaseType: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApiVersion-readonly releaseType: string--><!--Device-ApiVersion-readonly releaseType: string-End-->
 
@@ -56,7 +62,9 @@ readonly target: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ApiVersion-readonly target: int--><!--Device-ApiVersion-readonly target: int-End-->
 

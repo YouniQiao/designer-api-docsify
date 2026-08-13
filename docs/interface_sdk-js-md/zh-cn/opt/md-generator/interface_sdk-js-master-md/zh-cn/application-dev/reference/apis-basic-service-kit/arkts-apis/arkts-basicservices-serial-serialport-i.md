@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-serial-interface SerialPort--><!--Device-serial-interface SerialPort-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
@@ -17,6 +19,8 @@ close(): Promise<void>
 关闭串口。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,8 +38,8 @@ close(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## drain
 
@@ -46,6 +50,8 @@ drain(): Promise<void>
 等待所有写入请求完成。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,9 +69,9 @@ drain(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## flush
 
@@ -76,6 +82,8 @@ flush(): Promise<void>
 flush串口缓冲区。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -93,9 +101,9 @@ flush串口缓冲区。使用Promise异步回调。
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## getCts
 
@@ -106,6 +114,8 @@ getCts(): Promise<boolean>
 获取cts信号状态。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -123,9 +133,9 @@ getCts(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## getDsr
 
@@ -136,6 +146,8 @@ getDsr(): Promise<boolean>
 获取DSR信号状态，使用Promise异步返回
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,9 +165,9 @@ getDsr(): Promise<boolean>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## offDataRead
 
@@ -166,6 +178,8 @@ offDataRead(callback?: Callback<Uint8Array>): void
 取消监听串口端口接收数据事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -183,8 +197,8 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## offDisconnect
 
@@ -195,6 +209,8 @@ offDisconnect(callback?: Callback<void>): void
 取消监听USB虚拟串口断开事件。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -212,8 +228,8 @@ offDisconnect(callback?: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## onDataRead
 
@@ -221,9 +237,11 @@ offDisconnect(callback?: Callback<void>): void
 onDataRead(callback: Callback<Uint8Array>): void
 ```
 
-监听串口端口接收到的数据。使用Callback异步回调。调用[close](#close)接口时，会清理全部回调
+监听串口端口接收到的数据。使用Callback异步回调。 调用[close](#close)接口时，会清理全部回调
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -241,9 +259,9 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## onDisconnect
 
@@ -251,9 +269,11 @@ onDataRead(callback: Callback<Uint8Array>): void
 onDisconnect(callback: Callback<void>): void
 ```
 
-监听USB虚拟串口断开事件。使用Callback异步回调。调用[close](#close)接口时，会清理全部回调
+监听USB虚拟串口断开事件。使用Callback异步回调。 调用[close](#close)接口时，会清理全部回调
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -271,8 +291,8 @@ onDisconnect(callback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## open
 
@@ -283,6 +303,8 @@ open(config?: SerialConfigs): Promise<void>
 打开端口。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -306,11 +328,11 @@ open(config?: SerialConfigs): Promise<void>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-端口已被占用) |
-| [35700007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-需要用户授权) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-端口已被占用) |
+| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-需要用户授权) |
 
 ## sendBrk
 
@@ -321,6 +343,8 @@ sendBrk(): Promise<void>
 发送brk信号。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -338,9 +362,9 @@ sendBrk(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## setDtr
 
@@ -351,6 +375,8 @@ setDtr(enable: boolean): Promise<void>
 设置DTR信号状态，使用Promise异步返回
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -374,9 +400,9 @@ setDtr(enable: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## setRts
 
@@ -387,6 +413,8 @@ setRts(enable: boolean): Promise<void>
 设置rts信号。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -410,9 +438,9 @@ setRts(enable: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
 
 ## write
 
@@ -423,6 +451,8 @@ write(data: Uint8Array, timeout?: number): Promise<number>
 发送数据。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -447,11 +477,11 @@ write(data: Uint8Array, timeout?: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
-| [35700002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
-| [35700006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-传输超时) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-服务异常) |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-参数错误) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-虚拟串口断开) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-端口未打开) |
+| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-传输超时) |
 
 ## portInfo
 
@@ -464,6 +494,8 @@ readonly portInfo: SerialPortInfo
 **类型：** [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,8 +1,22 @@
 # @ohos.security.asset
 
-This module provides the capabilities for life cycle management of sensitive user data (Asset) such as passwords and tokens, including adding, removing, updating, and querying.
+/*
+ Copyright (c) 2024 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace asset--><!--Device-unnamed-declare namespace asset-End-->
 
@@ -21,33 +35,33 @@ import { asset } from '@kit.AssetStoreKit';
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
 | [add](arkts-assetstore-asset-add-f.md#add) |
-| [addSync](arkts-assetstore-asset-addsync-f.md#addsync) |
-| [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchadd) |
-| [batchRemove](arkts-assetstore-asset-batchremove-f.md#batchremove) |
-| [batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchupdate) |
-| [postQuery](arkts-assetstore-asset-postquery-f.md#postquery) |
-| [postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postquerysync) |
-| [preQuery](arkts-assetstore-asset-prequery-f.md#prequery) |
-| [preQuerySync](arkts-assetstore-asset-prequerysync-f.md#prequerysync) |
+| [addSync](arkts-assetstore-asset-addsync-f.md#addSync) |
+| [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd) |
+| [batchRemove](arkts-assetstore-asset-batchremove-f.md#batchRemove) |
+| [batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate) |
+| [postQuery](arkts-assetstore-asset-postquery-f.md#postQuery) |
+| [postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync) |
+| [preQuery](arkts-assetstore-asset-prequery-f.md#preQuery) |
+| [preQuerySync](arkts-assetstore-asset-prequerysync-f.md#preQuerySync) |
 | [query](arkts-assetstore-asset-query-f.md#query) |
-| [querySync](arkts-assetstore-asset-querysync-f.md#querysync) |
-| [querySyncResult](arkts-assetstore-asset-querysyncresult-f.md#querysyncresult) |
+| [querySync](arkts-assetstore-asset-querysync-f.md#querySync) |
+| [querySyncResult](arkts-assetstore-asset-querysyncresult-f.md#querySyncResult) |
 | [remove](arkts-assetstore-asset-remove-f.md#remove) |
-| [removeSync](arkts-assetstore-asset-removesync-f.md#removesync) |
+| [removeSync](arkts-assetstore-asset-removesync-f.md#removeSync) |
 | [update](arkts-assetstore-asset-update-f.md#update) |
-| [updateSync](arkts-assetstore-asset-updatesync-f.md#updatesync) |
+| [updateSync](arkts-assetstore-asset-updatesync-f.md#updateSync) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addAsUser](arkts-assetstore-asset-addasuser-f-sys.md#addasuser) |
-| [postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postqueryasuser) |
-| [preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#prequeryasuser) |
-| [queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md#queryasuser) |
-| [removeAsUser](arkts-assetstore-asset-removeasuser-f-sys.md#removeasuser) |
-| [updateAsUser](arkts-assetstore-asset-updateasuser-f-sys.md#updateasuser) |
+| [addAsUser](arkts-assetstore-asset-addasuser-f-sys.md#addAsUser-(System-API)) |
+| [postQueryAsUser](arkts-assetstore-asset-postqueryasuser-f-sys.md#postQueryAsUser-(System-API)) |
+| [preQueryAsUser](arkts-assetstore-asset-prequeryasuser-f-sys.md#preQueryAsUser-(System-API)) |
+| [queryAsUser](arkts-assetstore-asset-queryasuser-f-sys.md#queryAsUser-(System-API)) |
+| [removeAsUser](arkts-assetstore-asset-removeasuser-f-sys.md#removeAsUser-(System-API)) |
+| [updateAsUser](arkts-assetstore-asset-updateasuser-f-sys.md#updateAsUser-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces

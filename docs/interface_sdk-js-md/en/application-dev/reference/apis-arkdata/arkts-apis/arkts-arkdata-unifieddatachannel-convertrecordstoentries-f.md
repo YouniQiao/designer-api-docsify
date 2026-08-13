@@ -12,19 +12,17 @@ import { unifiedDataChannel } from '@kit.ArkData';
 function convertRecordsToEntries(data: UnifiedData): void
 ```
 
-Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data.
+Converts the provided data into a multi-style data structure, which is useful when the original data uses multiple records to represent different styles of the same data. This API is used only when the following rules are met: 1. The number of records in data is greater than 1. 2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
 
-This API is used only when the following rules are met:
+**Since:** 23
 
-1. The number of records in data is greater than 1.2. The value of **unifiedData.properties.tag** is **records_to_entries_data_format**.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 17
-
-**ArkTS mode:** ArkTS-Dyn since version 17; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 17.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void--><!--Device-unifiedDataChannel-function convertRecordsToEntries(data: UnifiedData): void-End-->
 
@@ -40,7 +38,7 @@ This API is used only when the following rules are met:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2.Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
 
 ## Examples
 

@@ -12,17 +12,13 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function setEnterprisePolicy(policy: EnterprisePolicy): void
 ```
 
-Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection for enterprise applications is implemented based on the configured policy.
-
-This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules.
-
-> **NOTE：**
-> 
-> This API can be called only by enterprise accounts.
+Sets the protection policy for enterprise applications. After the API is successfully called, the DLP protection for enterprise applications is implemented based on the configured policy. This API is used by the enterprise administrator to configure DLP security policies for unified management of data security protection rules. > **NOTE：**> > This API can be called only by enterprise accounts.
 
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_ACCESS_DLP_FILE
 
@@ -40,11 +36,11 @@ This API is used by the enterprise administrator to configure DLP security polic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
-| [19100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
-| [19100021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100021-failed-to-set-enterprise-application-policy) | Failed to set the enterprise policy. |
-| [19100011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.1.0 and later |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
+| [19100021](../errorcode-dlp.md#19100021-failed-to-set-enterprise-application-policy) | Failed to set the enterprise policy. |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

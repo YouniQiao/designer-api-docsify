@@ -1,12 +1,14 @@
 # ArcSwiperController
 
-Provide methods for controlling ArcSwiper component.
+Implements the controller of the **ArcSwiper** component. You can bind this object to the **ArcSwiper** component and use it to control page switching.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare class ArcSwiperController--><!--Device-unnamed-export declare class ArcSwiperController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ArcSwiperController--><!--Device-unnamed-export class ArcSwiperController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,13 +24,15 @@ import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDo
 constructor()
 ```
 
-A constructor used to create a ArcSwiperController object.
+A constructor used to create an **ArcSwiperController** instance.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSwiperController-constructor()--><!--Device-ArcSwiperController-constructor()-End-->
 
@@ -37,18 +41,20 @@ A constructor used to create a ArcSwiperController object.
 ## finishAnimation
 
 ```TypeScript
-finishAnimation(handler?: FinishAnimationHandler): void
+finishAnimation(handler?: FinishAnimationHandler)
 ```
 
-Finish the swiper animation.
+Stops an animation.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler): void--><!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler)--><!--Device-ArcSwiperController-finishAnimation(handler?: FinishAnimationHandler)-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -56,41 +62,45 @@ Finish the swiper animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | The handler is used to listen for the end of the animation. |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.&lt;br&gt;If no value is provided, no callback is performed. |
 
 ## showNext
 
 ```TypeScript
-showNext(): void
+showNext()
 ```
 
-Show next subcomponent.
+Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-na/arkts-apis/arkts-na-arkui-arcswiper-arcswiperattribute-i.md#duration).
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ArcSwiperController-showNext(): void--><!--Device-ArcSwiperController-showNext(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSwiperController-showNext()--><!--Device-ArcSwiperController-showNext()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## showPrevious
 
 ```TypeScript
-showPrevious(): void
+showPrevious()
 ```
 
-Show previous subcomponent.
+Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](../../apis-na/arkts-apis/arkts-na-arkui-arcswiper-arcswiperattribute-i.md#duration).
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-ArcSwiperController-showPrevious(): void--><!--Device-ArcSwiperController-showPrevious(): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSwiperController-showPrevious()--><!--Device-ArcSwiperController-showPrevious()-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

@@ -2,9 +2,11 @@
 
 Defines the FormDimension enum.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum FormDimension--><!--Device-formInfo-enum FormDimension-End-->
 
@@ -18,9 +20,11 @@ Dimension_1_2 = 1
 
 1 x 2 form
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -36,9 +40,11 @@ Dimension_2_2 = 2
 
 2 x 2 form
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,9 +60,11 @@ Dimension_2_4 = 3
 
 2 x 4 form
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -72,9 +80,11 @@ Dimension_4_4 = 4
 
 4 x 4 form
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -110,11 +120,13 @@ DIMENSION_1_1 = 6
 
 1 x 1 form
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormDimension-DIMENSION_1_1 = 6--><!--Device-FormDimension-DIMENSION_1_1 = 6-End-->
 
@@ -128,11 +140,13 @@ DIMENSION_6_4 = 7
 
 6 x 4 form
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormDimension-DIMENSION_6_4 = 7--><!--Device-FormDimension-DIMENSION_6_4 = 7-End-->
 
@@ -146,11 +160,13 @@ DIMENSION_2_3 = 8
 
 2 x 3 form used for wearable devices
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormDimension-DIMENSION_2_3 = 8--><!--Device-FormDimension-DIMENSION_2_3 = 8-End-->
 
@@ -164,11 +180,13 @@ DIMENSION_3_3 = 9
 
 3 x 3 form used for wearable devices
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormDimension-DIMENSION_3_3 = 9--><!--Device-FormDimension-DIMENSION_3_3 = 9-End-->
 

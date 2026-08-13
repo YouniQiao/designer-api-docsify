@@ -2,7 +2,9 @@
 
 发送彩信的参数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsParams--><!--Device-sms-export interface MmsParams-End-->
 
@@ -20,7 +22,9 @@ data: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsParams-data: string--><!--Device-MmsParams-data: string-End-->
 
@@ -34,11 +38,13 @@ data: string
 mmsConfig?: MmsConfig
 ```
 
-彩信配置文件，参考[MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md#MmsConfig)。
+彩信配置文件，参考[MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md#MmsConfig（系统接口）)。
 
 **类型：** [MmsConfig](arkts-telephony-sms-mmsconfig-i-sys.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsParams-mmsConfig?: MmsConfig--><!--Device-MmsParams-mmsConfig?: MmsConfig-End-->
 
@@ -56,7 +62,9 @@ mmsc: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsParams-mmsc: string--><!--Device-MmsParams-mmsc: string-End-->
 
@@ -70,14 +78,13 @@ mmsc: string
 slotId: number
 ```
 
-用于发送短信的SIM卡槽ID：
-
-- 0：卡槽1  
-- 1：卡槽2
+用于发送短信的SIM卡槽ID： - 0：卡槽1 - 1：卡槽2
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MmsParams-slotId: int--><!--Device-MmsParams-slotId: int-End-->
 

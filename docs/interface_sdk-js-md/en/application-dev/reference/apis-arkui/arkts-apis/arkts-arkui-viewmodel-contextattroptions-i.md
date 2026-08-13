@@ -6,6 +6,8 @@ ContextAttrOptions
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ContextAttrOptions--><!--Device-unnamed-export interface ContextAttrOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ antialias: boolean
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

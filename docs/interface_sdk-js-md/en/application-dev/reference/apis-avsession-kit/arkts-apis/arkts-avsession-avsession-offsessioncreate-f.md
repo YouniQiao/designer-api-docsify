@@ -16,7 +16,9 @@ Unregister session create callback
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_MEDIA_RESOURCES_FOR_PUBLIC
 
@@ -28,12 +30,12 @@ Unregister session create callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)&gt; | No | Used to unregister listener for ('sessionCreate') command |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt; | No | Used to unregister listener for ('sessionCreate') command |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | permission denied. |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 

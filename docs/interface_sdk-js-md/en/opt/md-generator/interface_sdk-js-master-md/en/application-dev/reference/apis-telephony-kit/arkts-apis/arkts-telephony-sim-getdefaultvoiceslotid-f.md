@@ -14,7 +14,9 @@ function getDefaultVoiceSlotId(callback: AsyncCallback<number>): void
 
 Obtains the default card slot for the voice service.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void--><!--Device-sim-function getDefaultVoiceSlotId(callback: AsyncCallback<int>): void-End-->
 
@@ -46,7 +48,9 @@ function getDefaultVoiceSlotId(): Promise<number>
 
 Obtains the default card slot for the voice service.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>--><!--Device-sim-function getDefaultVoiceSlotId(): Promise<int>-End-->
 

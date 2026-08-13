@@ -2,7 +2,9 @@
 
 The enum of node type.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->
 
@@ -16,7 +18,9 @@ NODE = 1
 
 The node is an empty node.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
 
@@ -30,7 +34,9 @@ GEOMETRY = 2
 
 The node is a geometry node.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NodeType-GEOMETRY = 2--><!--Device-NodeType-GEOMETRY = 2-End-->
 
@@ -44,7 +50,9 @@ CAMERA = 3
 
 The node is a camera node.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
 
@@ -58,7 +66,9 @@ LIGHT = 4
 
 The node is a light node.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NodeType-LIGHT = 4--><!--Device-NodeType-LIGHT = 4-End-->
 
@@ -70,9 +80,11 @@ The node is a light node.
 CUSTOM = 255
 ```
 
-The node is of custom type.Usually this means that the node is of a type defined in an extension plugin.
+The node is of custom type. Usually this means that the node is of a type defined in an extension plugin.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
 

@@ -1,11 +1,6 @@
 # ElementName
 
-ElementName信息，通过接口  
-[Context.getElementName](../../../reference/apis-ability-kit/js-apis-inner-app-context.md#contextgetelementname7)获取。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](#ElementName)替代。
+ElementName信息，通过接口 Context.getElementName获取。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-ElementName](#ElementName)替代。
 
 **起始版本：** 7
 
@@ -33,7 +28,7 @@ Ability的名称。
 
 **废弃版本：** 9
 
-**替代接口：** [abilityName](ohos.bundle.bundleManager/bundleManager.ElementName#abilityName)
+**替代接口：** abilityName
 
 <!--Device-ElementName-abilityName: string--><!--Device-ElementName-abilityName: string-End-->
 
@@ -55,7 +50,7 @@ bundleName: string
 
 **废弃版本：** 9
 
-**替代接口：** [bundleName](ohos.bundle.bundleManager/bundleManager.ElementName#bundleName)
+**替代接口：** bundleName
 
 <!--Device-ElementName-bundleName: string--><!--Device-ElementName-bundleName: string-End-->
 
@@ -77,7 +72,7 @@ deviceId?: string
 
 **废弃版本：** 9
 
-**替代接口：** [deviceId](ohos.bundle.bundleManager/bundleManager.ElementName#deviceId)
+**替代接口：** deviceId
 
 <!--Device-ElementName-deviceId?: string--><!--Device-ElementName-deviceId?: string-End-->
 
@@ -99,7 +94,7 @@ Ability的短名称。
 
 **废弃版本：** 9
 
-**替代接口：** [shortName](ohos.bundle.bundleManager/bundleManager.ElementName#shortName)
+**替代接口：** shortName
 
 <!--Device-ElementName-shortName?: string--><!--Device-ElementName-shortName?: string-End-->
 
@@ -121,7 +116,7 @@ uri?: string
 
 **废弃版本：** 9
 
-**替代接口：** [uri](ohos.bundle.bundleManager/bundleManager.ElementName#uri)
+**替代接口：** uri
 
 <!--Device-ElementName-uri?: string--><!--Device-ElementName-uri?: string-End-->
 

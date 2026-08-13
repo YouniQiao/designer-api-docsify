@@ -12,18 +12,15 @@ import { errorManager } from '@kit.AbilityKit';
 function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 ```
 
-Returns the previously registered handler when a JavaScript crash exception occurs. It can only be used in the main thread.
+Returns the previously registered handler when a JavaScript crash exception occurs. It can only be used in the main thread. If an invalid parameter is passed or the API is called from a child thread, an error code is thrown and **undefined** is returned. You are advised to handle it with try-catch logic. If the API parameter is empty, subsequently registered handlers are not able to establish a connection with previously registered handlers, thereby breaking the chain call mechanism.
 
-If an invalid parameter is passed or the API is called from a child thread, an error code is thrown and   
-**undefined** is returned. You are advised to handle it with try-catch logic.
+**Since:** 24
 
-If the API parameter is empty, subsequently registered handlers are not able to establish a connection with previously registered handlers, thereby breaking the chain call mechanism.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Since:** 21
+**Deprecated since:** -1
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
-
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler--><!--Device-errorManager-function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler-End-->
 
@@ -45,7 +42,7 @@ If the API parameter is empty, subsequently registered handlers are not able to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [16000205](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
+| [16000205](../errorcode-ability.md#16000205-api-not-called-in-main-thread) | The API is not called on the main thread. |
 
 ## Examples
 

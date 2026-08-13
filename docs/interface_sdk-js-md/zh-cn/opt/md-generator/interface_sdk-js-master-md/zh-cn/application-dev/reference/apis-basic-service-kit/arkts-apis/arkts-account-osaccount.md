@@ -2,7 +2,9 @@
 
 本模块提供管理系统账号的基础能力，包括系统账号的添加、删除、查询、设置、订阅、启动等功能。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace osAccount--><!--Device-unnamed-declare namespace osAccount-End-->
 
@@ -14,16 +16,16 @@
 
 | 名称 |
 | --- |
-| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getaccountmanager) |
-| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isdomainaccountsupported) |
+| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getAccountManager) |
+| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isDomainAccountSupported) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getauthorizationmanager) |
-| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getosaccountsubprofilemanager) |
+| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getAuthorizationManager（系统接口）) |
+| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getOsAccountSubProfileManager（系统接口）) |
 <!--DelEnd-->
 
 ### 类
@@ -125,4 +127,20 @@
 | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) |
 | [ResultCode](arkts-basicservices-osaccount-resultcode-e-sys.md) |
 | [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md) |
+<!--DelEnd-->
+
+<!--Del-->
+### 类型（系统接口）
+
+| 名称 |
+| --- |
+| [DomainPluginAuthFunc](arkts-basicservices-osaccount-domainpluginauthfunc-t-sys.md) |
+| [DomainPluginAuthWithPopupFunc](arkts-basicservices-osaccount-domainpluginauthwithpopupfunc-t-sys.md) |
+| [DomainPluginAuthWithTokenFunc](arkts-basicservices-osaccount-domainpluginauthwithtokenfunc-t-sys.md) |
+| [DomainPluginBindAccountFunc](arkts-basicservices-osaccount-domainpluginbindaccountfunc-t-sys.md) |
+| [DomainPluginGetAccessTokenFunc](arkts-basicservices-osaccount-domainplugingetaccesstokenfunc-t-sys.md) |
+| [DomainPluginGetAccountInfoFunc](arkts-basicservices-osaccount-domainplugingetaccountinfofunc-t-sys.md) |
+| [DomainPluginGetAuthStatusInfoFunc](arkts-basicservices-osaccount-domainplugingetauthstatusinfofunc-t-sys.md) |
+| [DomainPluginIsAccountTokenValidFunc](arkts-basicservices-osaccount-domainpluginisaccounttokenvalidfunc-t-sys.md) |
+| [DomainPluginUnbindAccountFunc](arkts-basicservices-osaccount-domainpluginunbindaccountfunc-t-sys.md) |
 <!--DelEnd-->

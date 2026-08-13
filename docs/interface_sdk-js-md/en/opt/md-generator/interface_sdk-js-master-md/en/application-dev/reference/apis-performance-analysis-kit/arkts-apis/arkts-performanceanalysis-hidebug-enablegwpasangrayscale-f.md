@@ -14,7 +14,9 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: number): vo
 
 Enable the GWP-ASAN grayscale of your application.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
 
@@ -31,7 +33,7 @@ Enable the GWP-ASAN grayscale of your application.
 
 | Error Code ID |
 | --- |
-| [11400114](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) |
+| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) |
 
 ## Examples
 

@@ -6,7 +6,9 @@ export type ContinuableInfo = _ContinuableInfo
 
 应用任务对应的可迁移信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

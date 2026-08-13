@@ -14,12 +14,14 @@ function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>
 
 Remove a beacon fence.
 
-**Since:** 20
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 20 - 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>--><!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>-End-->
 
@@ -41,9 +43,9 @@ Remove a beacon fence.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3501602](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3501602](../errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

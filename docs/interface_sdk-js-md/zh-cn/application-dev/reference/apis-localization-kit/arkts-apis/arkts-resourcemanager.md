@@ -1,28 +1,10 @@
 # @ohos.resourceManager
 
-本模块提供应用资源和系统资源的访问能力，允许应用根据当前的[Configuration](arkts-localization-resourcemanager-configuration-c.md#Configuration)配置，获取最匹配的应用资源或系统资源，支持国际化资源匹配和多设备适配。具体匹配规则参考[资源匹配](../../../quick-start/resource-categories-and-access.md#资源匹配)。
+**起始版本：** -1
 
-Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式、Mcc（移动国家码）和Mnc（移动网络码）、设备类型、屏幕密度。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
 
-**使用场景**：
-
-- 应用国际化：根据用户语言和地区自动获取匹配的字符串资源。  
-- 多设备适配：根据设备类型、屏幕密度获取合适的媒体资源。  
-- 动态资源配置：根据设备状态（横竖屏、颜色模式等）获取对应配置的资源。
-
-**使用说明**：
-
-- FA模型需要先导入模块，再调用[getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager)接口获取资源管理对象。  
-- 从API version 9开始，Stage模型无需导入模块，支持通过Context获取资源管理resourceManager对象。Context的更多介绍请参考  
-[应用上下文Context](../../../application-models/application-context-stage.md)。
-
- ```ts  import { UIAbility } from '@kit.AbilityKit'; import { window } from '@kit.ArkUI';
-
- export default class EntryAbility extends UIAbility { onWindowStageCreate(windowStage: window.WindowStage) { let context = this.context; let resourceManager = context.resourceManager; } } ```
-
-**起始版本：** 6
-
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace resourceManager--><!--Device-unnamed-declare namespace resourceManager-End-->
 
@@ -34,12 +16,12 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 
 | 名称 | 说明 |
 | --- | --- |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager) | 获取当前应用的资源管理对象。使用callback异步回调。 |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-1) | 获取指定应用的资源管理对象。使用callback异步回调。 |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-2) | 获取当前应用的资源管理对象。使用Promise异步回调。 |
-| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager-3) | 获取指定应用的资源管理对象。使用Promise异步回调。 |
-| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
-| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取当前应用的资源管理对象。使用callback异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取指定应用的资源管理对象。使用callback异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取当前应用的资源管理对象。使用Promise异步回调。 |
+| [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getResourceManager) | 获取指定应用的资源管理对象。使用Promise异步回调。 |
+| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getSysResourceManager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
+| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getSystemResourceManager) | 获取系统资源管理对象，用于访问系统预置的资源。 |
 
 ### 类
 
@@ -60,7 +42,7 @@ Configuration配置包括语言-文字-国家地区、横竖屏、颜色模式�
 | 名称 | 说明 |
 | --- | --- |
 | [ColorMode](arkts-localization-resourcemanager-colormode-e.md) | 用于表示当前设备颜色模式。 |
-| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。  &lt;!--RP1--&gt;  &lt;!--RP1End--&gt; |
+| [DeviceType](arkts-localization-resourcemanager-devicetype-e.md) | 用于表示当前设备类型。 &lt;!--RP1--&gt; &lt;!--RP1End--&gt; |
 | [Direction](arkts-localization-resourcemanager-direction-e.md) | 用于表示设备屏幕方向。 |
 | [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md) | 用于表示当前设备屏幕密度。 |
 

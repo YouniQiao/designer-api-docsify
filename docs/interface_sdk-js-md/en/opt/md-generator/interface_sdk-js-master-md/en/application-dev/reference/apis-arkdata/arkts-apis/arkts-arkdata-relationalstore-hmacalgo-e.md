@@ -2,7 +2,9 @@
 
 Enumerates the HMAC algorithms for the database. Use the enum name rather than the enum value.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-enum HmacAlgo--><!--Device-relationalStore-enum HmacAlgo-End-->
 
@@ -16,7 +18,9 @@ SHA1 = 0
 
 SHA1: HMAC_SHA1 algorithm.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HmacAlgo-SHA1 = 0--><!--Device-HmacAlgo-SHA1 = 0-End-->
 
@@ -30,7 +34,9 @@ SHA256 = 1
 
 SHA256: HMAC_SHA256 algorithm.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HmacAlgo-SHA256 = 1--><!--Device-HmacAlgo-SHA256 = 1-End-->
 
@@ -44,7 +50,9 @@ SHA512 = 2
 
 SHA512: HMAC_SHA512 algorithm.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-HmacAlgo-SHA512 = 2--><!--Device-HmacAlgo-SHA512 = 2-End-->
 

@@ -12,6 +12,8 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
 <!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource--><!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource-End-->
@@ -35,8 +37,8 @@ function createMediaSourceWithUrl(url: string, headers?: Record<string, string>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
 
 
 ## createMediaSourceWithUrl
@@ -49,7 +51,9 @@ Creates a media source for streaming media to be pre-downloaded.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource | undefined--><!--Device-media-function createMediaSourceWithUrl(url: string, headers?: Record<string, string>): MediaSource | undefined-End-->
 
@@ -72,6 +76,6 @@ Creates a media source for streaming media to be pre-downloaded.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [5400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) | No memory. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. |
 

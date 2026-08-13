@@ -1,10 +1,10 @@
 # ProcessData
 
-The module defines process data. If a lifecycle change listener is registered by calling  
-[appManager.on('applicationState')](@ohos.app.ability.appManager:appManager.on(type: 'applicationState', observer: ApplicationStateObserver)), the  
-[onProcessCreated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationStateObserver.md#applicationstateobserveronprocesscreated) callback in [ApplicationStateObserver](./application/ApplicationStateObserver) is invoked when the lifecycle of an application or ability changes.
+The module defines process data. If a lifecycle change listener is registered by calling [appManager.on('applicationState')](arkts-ability-appmanager-onapplicationstate-f.md#on_applicationState) , the [onProcessCreated](arkts-ability-applicationstateobserver-c.md#onProcessCreated) callback in ApplicationStateObserver is invoked when the lifecycle of an application or ability changes.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ProcessData--><!--Device-unnamed-declare class ProcessData-End-->
 
@@ -20,7 +20,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessData-bundleName: string--><!--Device-ProcessData-bundleName: string-End-->
 
@@ -36,7 +38,9 @@ Whether the task is a continuous task. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessData-isContinuousTask: boolean--><!--Device-ProcessData-isContinuousTask: boolean-End-->
 
@@ -52,7 +56,9 @@ Whether the process is a resident task. **true** if yes, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessData-isKeepAlive: boolean--><!--Device-ProcessData-isKeepAlive: boolean-End-->
 
@@ -68,7 +74,9 @@ Process ID.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessData-pid: int--><!--Device-ProcessData-pid: int-End-->
 
@@ -80,21 +88,13 @@ Process ID.
 state: number
 ```
 
-Application state. The options are as follows:
-
-**0**: The application process is being initialized.
-
-**1**: The application process has been initialized and is ready.
-
-**2**: The application is running in the foreground.
-
-**4**: The application is running in the background.
-
-**5**: The application process is terminated.
+Application state. The options are as follows: **0**: The application process is being initialized. **1**: The application process has been initialized and is ready. **2**: The application is running in the foreground. **4**: The application is running in the background. **5**: The application process is terminated.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessData-state: int--><!--Device-ProcessData-state: int-End-->
 
@@ -110,7 +110,9 @@ UID of the application.
 
 **Type:** number
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ProcessData-uid: int--><!--Device-ProcessData-uid: int-End-->
 

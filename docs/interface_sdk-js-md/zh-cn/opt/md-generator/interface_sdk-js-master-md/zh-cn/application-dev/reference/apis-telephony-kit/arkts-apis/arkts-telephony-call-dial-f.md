@@ -6,17 +6,13 @@
 function dial(phoneNumber: string, options: DialOptions, callback: AsyncCallback<boolean>): void
 ```
 
-拨打电话，可设置通话参数。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
+拨打电话，可设置通话参数。使用callback异步回调。 > **说明：** > > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall（系统接口）)
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -52,17 +48,13 @@ call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
 function dial(phoneNumber: string, options?: DialOptions): Promise<boolean>
 ```
 
-拨打电话，可设置通话参数。使用Promise异步回调。
-
-> **说明：**
-> 
-> 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
+拨打电话，可设置通话参数。使用Promise异步回调。 > **说明：** > > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall（系统接口）)
 
 **需要权限：** ohos.permission.PLACE_CALL
 
@@ -105,17 +97,13 @@ call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
 function dial(phoneNumber: string, callback: AsyncCallback<boolean>): void
 ```
 
-拨打电话。使用callback异步回调。
-
-> **说明：**
-> 
-> 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
+拨打电话。使用callback异步回调。 > **说明：** > > 从API version 6 开始支持，从API version 9 开始废弃。替代接口能力仅对系统应用开放。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall)
+**替代接口：** [dialCall](arkts-telephony-call-dialcall-f-sys.md#dialCall（系统接口）)
 
 **需要权限：** ohos.permission.PLACE_CALL
 

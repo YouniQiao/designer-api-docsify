@@ -2,7 +2,9 @@
 
 Type of form.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-enum FormType--><!--Device-formInfo-enum FormType-End-->
 
@@ -16,7 +18,9 @@ JS = 1
 
 JS form.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -32,7 +36,9 @@ eTS = 2
 
 eTS form.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

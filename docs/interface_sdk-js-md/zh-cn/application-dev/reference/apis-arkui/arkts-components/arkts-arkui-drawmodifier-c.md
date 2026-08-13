@@ -6,6 +6,8 @@ Defined the draw modifier of node. Provides draw callbacks for the associated No
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class DrawModifier--><!--Device-unnamed-declare class DrawModifier-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ drawBehind Method. Executed before drawing associated Node.
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -52,6 +56,8 @@ drawContent Method. Executed when associated Node is drawing, the default drawCo
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -81,6 +87,8 @@ drawForeground(drawContext: DrawContext): void
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +120,8 @@ drawFront Method. Executed after drawing associated Node.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -136,15 +146,13 @@ drawFront Method. Executed after drawing associated Node.
 drawOverlay(drawContext: DrawContext): void
 ```
 
-在关联的Node及其所有子节点绘制完成后，在悬浮层中绘制内容。
-
-自定义绘制包含五个层级：内容背景层、内容层、内容前景层、前景层和悬浮层。  
- - 前景层和悬浮层在子节点之后绘制。  
- - 悬浮层与前景层的区别在于：悬浮层可以在组件的边界范围外进行绘制。
+在关联的Node及其所有子节点绘制完成后，在悬浮层中绘制内容。 自定义绘制包含五个层级：内容背景层、内容层、内容前景层、前景层和悬浮层。 - 前景层和悬浮层在子节点之后绘制。 - 悬浮层与前景层的区别在于：悬浮层可以在组件的边界范围外进行绘制。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,6 +240,8 @@ Invalidate the component, which will cause a re-render of the component.
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

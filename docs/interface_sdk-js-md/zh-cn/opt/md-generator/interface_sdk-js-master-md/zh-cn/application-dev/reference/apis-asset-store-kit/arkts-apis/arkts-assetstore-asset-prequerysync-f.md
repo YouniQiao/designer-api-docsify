@@ -6,10 +6,11 @@
 function preQuerySync(query: AssetMap): Uint8Array
 ```
 
-查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.querySync](arkts-assetstore-asset-querysync-f.md#querySync)、  
-[asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync)。使用同步方式返回结果。
+查询的预处理，用于需要用户认证的关键资产。在用户认证成功后，应当随后调用[asset.querySync](arkts-assetstore-asset-querysync-f.md#querySync)、 [asset.postQuerySync](arkts-assetstore-asset-postquerysync-f.md#postQuerySync)。使用同步方式返回结果。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -33,20 +34,20 @@ function preQuerySync(query: AssetMap): Uint8Array
 
 | 错误码ID |
 | --- |
-| [24000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000012-账号系统服务异常) |
-| [24000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000013-访问控制服务异常) |
-| [24000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000010-进程通信错误) |
-| [24000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000011-包管理服务异常) |
-| [24000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000008-数据库操作失败) |
-| [24000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000009-算法库操作失败) |
-| [24000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000006-系统内存不足) |
-| [24000007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000007-关键资产损坏) |
-| [24000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000005-锁屏状态不匹配) |
-| [24000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000002-未找到关键资产) |
-| [24000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000001-关键资产服务不可用) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24000016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000016-缓存数量超限) |
-| [24000017](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-asset-store-kit/errorcode-asset.md#24000017-该子功能不支持) |
+| [24000012](../errorcode-asset.md#24000012-账号系统服务异常) |
+| [24000013](../errorcode-asset.md#24000013-访问控制服务异常) |
+| [24000010](../errorcode-asset.md#24000010-进程通信错误) |
+| [24000011](../errorcode-asset.md#24000011-包管理服务异常) |
+| [24000008](../errorcode-asset.md#24000008-数据库操作失败) |
+| [24000009](../errorcode-asset.md#24000009-算法库操作失败) |
+| [24000006](../errorcode-asset.md#24000006-系统内存不足) |
+| [24000007](../errorcode-asset.md#24000007-关键资产损坏) |
+| [24000005](../errorcode-asset.md#24000005-锁屏状态不匹配) |
+| [24000002](../errorcode-asset.md#24000002-未找到关键资产) |
+| [24000001](../errorcode-asset.md#24000001-关键资产服务不可用) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24000016](../errorcode-asset.md#24000016-缓存数量超限) |
+| [24000017](../errorcode-asset.md#24000017-该子功能不支持) |
 
 ## 示例
 

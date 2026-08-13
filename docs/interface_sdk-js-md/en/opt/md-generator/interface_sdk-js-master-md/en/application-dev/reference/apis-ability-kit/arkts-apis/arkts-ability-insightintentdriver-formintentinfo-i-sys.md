@@ -1,10 +1,10 @@
 # FormIntentInfo (System API)
 
-Describes the parameters supported by the  
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) decorator, such as the widget name. It also describes the widget information bound to the  
-[intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
+Describes the parameters supported by the @InsightIntentForm decorator, such as the widget name. It also describes the widget information bound to the [intent developed using a configuration file](../../../application-models/insight-intent-config-development.md).
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-insightIntentDriver-interface FormIntentInfo--><!--Device-insightIntentDriver-interface FormIntentInfo-End-->
 
@@ -28,7 +28,9 @@ Ability name.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +50,9 @@ Name of the widget bound to the [FormExtensionAbility](../../apis-form-kit/arkts
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

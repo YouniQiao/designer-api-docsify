@@ -20,5 +20,5 @@
 
 | 名称 |
 | --- |
-| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#containerreader) |
-| [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#containerreaderinstance) |
+| [ContainerReader](arkts-arkui-arkui-components-containerreader-con.md#ContainerReader) |
+| [ContainerReaderInstance](arkts-arkui-arkui-components-containerreader-con.md#ContainerReaderInstance) |

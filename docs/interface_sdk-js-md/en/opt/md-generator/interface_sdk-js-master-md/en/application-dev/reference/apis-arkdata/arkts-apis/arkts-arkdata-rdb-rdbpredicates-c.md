@@ -595,14 +595,7 @@ predicates.inAllDevices()
 inDevices(devices: Array<string>): RdbPredicates
 ```
 
-Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync.
-
-> **NOTE：**
-
-> The value of **devices** can be obtained by using &lt;!--RP2--&gt;
-> [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync)
-> . &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system
-> applications.
+Creates an **RdbPredicates** object to specify the remote devices to connect on the network during distributed database sync. > **NOTE：**> The value of **devices** can be obtained by using &lt;!--RP2--&gt; > [deviceManager.getTrustedDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-devicemanager-devicemanager-i-sys.md#getTrustedDeviceListSync) > . &lt;!--RP2End--&gt;The APIs of the **deviceManager** module are system interfaces and available only to system > applications.
 
 **Since:** 8
 
@@ -725,7 +718,7 @@ Creates an **RdbPredicates** object to search for the records in the specified c
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

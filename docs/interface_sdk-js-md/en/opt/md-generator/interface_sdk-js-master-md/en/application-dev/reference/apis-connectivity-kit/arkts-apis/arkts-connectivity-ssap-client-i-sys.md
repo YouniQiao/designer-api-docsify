@@ -1,8 +1,10 @@
 # Client
 
-Manages SSAP client. Before calling a SSAP client method,you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
+Manages SSAP client. Before calling a SSAP client method, you must use [createClient](arkts-connectivity-ssap-createclient-f.md#createClient) to create a ssap client instance.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-ssap-interface Client--><!--Device-ssap-interface Client-End-->
 
@@ -23,6 +25,8 @@ callMethod(method: Method): Promise<Method>
 Calls the method of a server.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -52,8 +56,8 @@ Calls the method of a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |
 
@@ -66,6 +70,8 @@ offEventNotify(callback?: Callback<Event>): void
 Unsubscribes from event notifications.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -87,11 +93,11 @@ Unsubscribes from event notifications.
 onEventNotify(callback: Callback<Event>): void
 ```
 
-Subscribes to event notifications.
-
-This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.
+Subscribes to event notifications. This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +122,8 @@ readDescriptor(descriptor: PropertyDescriptor): Promise<PropertyDescriptor>
 Reads the descriptor of a server.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -145,8 +153,8 @@ Reads the descriptor of a server.
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |
 
@@ -159,6 +167,8 @@ setPropertyIndication(property: Property, enable: boolean): Promise<void>
 Enables or disables indication of a property when value changed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK and ohos.permission.MANAGE_NEARLINK
 
@@ -190,8 +200,8 @@ Enables or disables indication of a property when value changed.
 | 36100003 |
 | 36100099 |
 | 36100030 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |
 
@@ -201,12 +211,11 @@ Enables or disables indication of a property when value changed.
 writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 ```
 
-Writes the descriptor of a server.
-
-This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setPropertyNotification) or  
-[setPropertyIndication](#setPropertyIndication) instead.
+Writes the descriptor of a server. This method does not support writing client property configuration descriptors. To write client property configuration descriptors, call [setPropertyNotification](arkts-connectivity-ssap-client-i.md#setPropertyNotification) or [setPropertyIndication](#setPropertyIndication) instead.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_NEARLINK
 
@@ -236,7 +245,7 @@ This method does not support writing client property configuration descriptors. 
 | --- |
 | 36100003 |
 | 36100099 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 36100044 |
 | 36100043 |

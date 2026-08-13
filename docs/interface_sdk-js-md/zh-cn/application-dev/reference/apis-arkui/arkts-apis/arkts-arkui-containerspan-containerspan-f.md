@@ -3,6 +3,7 @@
 ## ContainerSpan
 
 ```TypeScript
+@ComponentBuilder
 export declare function ContainerSpan(
     content_?: CustomBuilder,
 ): ContainerSpanAttribute
@@ -14,9 +15,11 @@ export declare function ContainerSpan(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-export declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function ContainerSpan(    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,18 +27,19 @@ export declare function ContainerSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 |  |
+| content_ | CustomBuilder | 否 |  |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md) |  |
+| ContainerSpanAttribute |  |
 
 
 ## ContainerSpan
 
 ```TypeScript
+@Builder
 export declare function ContainerSpan(
     style: CustomBuilderT<ContainerSpanAttribute>,
     content_?: CustomBuilder,
@@ -48,11 +52,11 @@ export declare function ContainerSpan(
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.1.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-export declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute--><!--Device-unnamed-@Builderexport declare function ContainerSpan(    style: CustomBuilderT<ContainerSpanAttribute>,    content_?: CustomBuilder,): ContainerSpanAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -60,12 +64,12 @@ export declare function ContainerSpan(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md)&gt; | 是 | containerspan属性实例。 |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | 容器。 |
+| style | CustomBuilderT&lt;ContainerSpanAttribute&gt; | 是 | containerspan属性实例。 |
+| content_ | CustomBuilder | 否 | 容器。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ContainerSpanAttribute](arkts-arkui-containerspan-containerspanattribute-i.md) |  |
+| ContainerSpanAttribute |  |
 

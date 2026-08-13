@@ -6,13 +6,13 @@
 function createMac(algName: string): Mac
 ```
 
-创建消息认证码实例。
+创建消息认证码实例。 &lt;br&gt;支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
-&lt;br&gt;支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,8 +38,8 @@ function createMac(algName: string): Mac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -63,15 +63,15 @@ try {
 function createMac(macSpec: MacSpec): Mac
 ```
 
-创建消息认证码实例。
+创建消息认证码实例。 &lt;br&gt;支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
-&lt;br&gt;支持的规格详见[MAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac--><!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac-End-->
 
@@ -93,10 +93,10 @@ function createMac(macSpec: MacSpec): Mac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
 
 ## 示例
 

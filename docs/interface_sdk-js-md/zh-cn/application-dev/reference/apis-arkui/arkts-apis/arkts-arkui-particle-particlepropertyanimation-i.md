@@ -6,7 +6,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export interface ParticlePropertyAnimation<T>--><!--Device-unnamed-export interface ParticlePropertyAnimation<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface ParticlePropertyAnimation--><!--Device-unnamed-export interface ParticlePropertyAnimation-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,9 +18,7 @@
 curve?: Curve | ICurve
 ```
 
-设置动画曲线。
-
-默认值：Curve.Linear
+设置动画曲线。 默认值：Curve.Linear
 
 **类型：** [Curve](arkts-arkui-curve-e.md) \| [ICurve](../arkts-components/arkts-arkui-icurve-i.md)
 
@@ -27,6 +27,8 @@ curve?: Curve | ICurve
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,17 +42,15 @@ curve?: Curve | ICurve
 endMillis: int
 ```
 
-动画结束时间。
-
-单位：毫秒。
-
-取值范围：[0, +∞)。
+动画结束时间。 单位：毫秒。 取值范围：[0, +∞)。
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +72,8 @@ from: T
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ParticlePropertyAnimation-from: T--><!--Device-ParticlePropertyAnimation-from: T-End-->
@@ -84,17 +86,15 @@ from: T
 startMillis: int
 ```
 
-动画开始时间。
-
-单位：毫秒。
-
-取值范围：[0, +∞)。
+动画开始时间。 单位：毫秒。 取值范围：[0, +∞)。
 
 **类型：** int
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -115,6 +115,8 @@ to: T
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

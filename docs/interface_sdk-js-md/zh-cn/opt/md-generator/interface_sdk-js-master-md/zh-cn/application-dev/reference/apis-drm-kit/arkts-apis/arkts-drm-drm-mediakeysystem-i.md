@@ -1,9 +1,10 @@
 # MediaKeySystem
 
-支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用  
-[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem)创建一个MediaKeySystem实例。
+支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用 [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem)创建一个MediaKeySystem实例。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
@@ -17,7 +18,9 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 删除指定媒体密钥标识的离线媒体密钥。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -35,9 +38,9 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## createMediaKeySession
 
@@ -48,6 +51,8 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 创建指定内容保护级别的MediaKeySession实例。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -71,10 +76,47 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 
 | 错误码ID |
 | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-mediakeysession数量达到极限) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## createMediaKeySession
+
+```TypeScript
+createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined
+```
+
+Create a MediaKeySession instance with level.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## createMediaKeySession
 
@@ -85,6 +127,8 @@ createMediaKeySession(): MediaKeySession
 创建DRM解决方案默认内容保护级别的MediaKeySession实例。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -102,9 +146,39 @@ createMediaKeySession(): MediaKeySession
 
 | 错误码ID |
 | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-mediakeysession数量达到极限) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## createMediaKeySession
+
+```TypeScript
+createMediaKeySession(): MediaKeySession | undefined
+```
+
+Create a MediaKeySession instance.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [24700104](../errorcode-drm.md#24700104-mediakeysession数量达到极限) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## destroy
 
@@ -114,7 +188,9 @@ destroy(): void
 
 销毁MediaKeySystem实例。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -126,8 +202,8 @@ destroy(): void
 
 | 错误码ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## generateKeySystemRequest
 
@@ -135,11 +211,11 @@ destroy(): void
 generateKeySystemRequest(): Promise<ProvisionRequest>
 ```
 
-生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。
+生成获取mediaKeySystem设备证书的请求。使用Promise异步回调。 如果设备上已存在设备证书，调用此接口会返回失败。
 
-如果设备上已存在设备证书，调用此接口会返回失败。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -157,8 +233,8 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 
 | 错误码ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getCertificateStatus
 
@@ -168,7 +244,9 @@ getCertificateStatus(): CertificateStatus
 
 获取设备证书状态值。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -186,8 +264,8 @@ getCertificateStatus(): CertificateStatus
 
 | 错误码ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getConfigurationByteArray
 
@@ -197,7 +275,9 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 获取数组类型的配置信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -221,9 +301,9 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getConfigurationString
 
@@ -233,7 +313,9 @@ getConfigurationString(configName: string): string
 
 获取字符串类型的配置属性值。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -257,9 +339,9 @@ getConfigurationString(configName: string): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getMaxContentProtectionLevel
 
@@ -269,7 +351,9 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 获取当前DRM解决方案支持的最大内容保护级别。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -287,8 +371,8 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 | 错误码ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getOfflineMediaKeyIds
 
@@ -298,7 +382,9 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 获取离线媒体密钥标识列表。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -316,8 +402,8 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 | 错误码ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getOfflineMediaKeyStatus
 
@@ -327,7 +413,9 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 获取指定离线媒体密钥标识的媒体密钥的状态值。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -351,9 +439,9 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## getStatistics
 
@@ -363,7 +451,9 @@ getStatistics(): StatisticKeyValue[]
 
 获取性能度量记录。其中包括当前会话数、插件版本信息、每个会话最大三次解密耗时、解密次数和解密失败次数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -381,10 +471,38 @@ getStatistics(): StatisticKeyValue[]
 
 | 错误码ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
-## off('keySystemRequired')
+## offKeySystemRequired
+
+```TypeScript
+offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void
+```
+
+Unregister keySystemRequired events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## off_keySystemRequired
 
 ```TypeScript
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -393,6 +511,8 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 注销设备证书请求事件的监听。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -411,10 +531,38 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
-## on('keySystemRequired')
+## onKeySystemRequired
+
+```TypeScript
+onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keySystemRequired events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
+
+## on_keySystemRequired
 
 ```TypeScript
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
@@ -423,6 +571,8 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 监听设备证书请求事件，获取事件信息。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -441,8 +591,8 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## processKeySystemResponse
 
@@ -450,11 +600,11 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 processKeySystemResponse(response: Uint8Array): Promise<void>
 ```
 
-处理获得的设备证书请求的响应。使用Promise异步回调。
+处理获得的设备证书请求的响应。使用Promise异步回调。 如果设备上已存在设备证书，调用此接口会返回失败。
 
-如果设备上已存在设备证书，调用此接口会返回失败。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -478,9 +628,9 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## setConfigurationByteArray
 
@@ -490,7 +640,9 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 设置数组类型的配置信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -509,9 +661,9 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |
 
 ## setConfigurationString
 
@@ -521,7 +673,9 @@ setConfigurationString(configName: string, value: string): void
 
 设置字符串类型的配置信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
 
@@ -540,6 +694,6 @@ setConfigurationString(configName: string, value: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-服务异常) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-未知错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [24700201](../errorcode-drm.md#24700201-服务异常) |
+| [24700101](../errorcode-drm.md#24700101-未知错误) |

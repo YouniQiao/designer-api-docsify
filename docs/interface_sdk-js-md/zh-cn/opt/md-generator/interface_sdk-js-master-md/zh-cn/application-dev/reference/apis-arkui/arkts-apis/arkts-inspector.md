@@ -15,7 +15,7 @@ inspector的性能分析（Profiler）工具。
 
 | 名称 |
 | --- |
-| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md#getinspectornodebyid) |
-| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md#getinspectornodes) |
-| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md#setappbgcolor) |
+| [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md#getInspectorNodeById（系统接口）) |
+| [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md#getInspectorNodes（系统接口）) |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md#setAppBgColor（系统接口）) |
 <!--DelEnd-->

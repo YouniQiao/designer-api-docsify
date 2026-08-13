@@ -2,9 +2,11 @@
 
 Provides information about a form.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface FormInfo--><!--Device-formInfo-interface FormInfo-End-->
 
@@ -26,9 +28,11 @@ Indicates whether the form uses a blur background provided by the form host.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly enableBlurBackground?: boolean--><!--Device-FormInfo-readonly enableBlurBackground?: boolean-End-->
 
@@ -46,9 +50,11 @@ Indicates the fun interaction form params
 
 **Type:** [FunInteractionParams](arkts-form-forminfo-funinteractionparams-i-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly funInteractionParams?: FunInteractionParams--><!--Device-FormInfo-readonly funInteractionParams?: FunInteractionParams-End-->
 
@@ -66,9 +72,11 @@ Obtains the group id of the form.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly groupId?: string--><!--Device-FormInfo-readonly groupId?: string-End-->
 
@@ -82,13 +90,15 @@ Obtains the group id of the form.
 isFontScaleFollowSystem?: boolean
 ```
 
-Obtains whether the font scaling factor follows system settings.&lt;br&gt;Default value:The default value is true.
+Obtains whether the font scaling factor follows system settings. &lt;br&gt;Default value:The default value is true.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,7 +120,9 @@ Obtains whether the form is privacy sensitive.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,7 +144,9 @@ Obtains whether the form is adapted for standby.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -154,7 +168,9 @@ Obtains whether the form supports standby.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,7 +192,9 @@ Obtains whether the form is template form.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly isTemplateForm?: boolean--><!--Device-FormInfo-readonly isTemplateForm?: boolean-End-->
 
@@ -192,13 +210,15 @@ readonly previewImages?: Array<int>
 
 Indicates the form previewImage IDs map corresponds to the \"supportDimensions\". The maximum length is +∞, positive integer.
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt;
+**Type:** Array&lt;int&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-FormInfo-readonly previewImages?: Array<int>--><!--Device-FormInfo-readonly previewImages?: Array<int>-End-->
 
@@ -216,9 +236,11 @@ Obtains the rendering mode of the form.
 
 **Type:** [RenderingMode](arkts-form-forminfo-renderingmode-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly renderingMode?: RenderingMode--><!--Device-FormInfo-readonly renderingMode?: RenderingMode-End-->
 
@@ -236,9 +258,11 @@ Obtains the resizable of the form.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly resizable?: boolean--><!--Device-FormInfo-readonly resizable?: boolean-End-->
 
@@ -256,9 +280,11 @@ Indicates the scene animation form params
 
 **Type:** [SceneAnimationParams](arkts-form-forminfo-sceneanimationparams-i-sys.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FormInfo-readonly sceneAnimationParams?: SceneAnimationParams--><!--Device-FormInfo-readonly sceneAnimationParams?: SceneAnimationParams-End-->
 

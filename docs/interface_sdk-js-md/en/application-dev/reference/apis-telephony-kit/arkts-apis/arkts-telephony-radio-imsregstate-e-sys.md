@@ -2,9 +2,11 @@
 
 Obtains IMS registration status.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum ImsRegState--><!--Device-radio-export enum ImsRegState-End-->
 
@@ -20,9 +22,11 @@ IMS_UNREGISTERED = 0
 
 Indicates that the ims service is not registered.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsRegState-IMS_UNREGISTERED = 0--><!--Device-ImsRegState-IMS_UNREGISTERED = 0-End-->
 
@@ -38,9 +42,11 @@ IMS_REGISTERED = 1
 
 Indicates that the ims service has been registered.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ImsRegState-IMS_REGISTERED = 1--><!--Device-ImsRegState-IMS_REGISTERED = 1-End-->
 

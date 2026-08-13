@@ -14,7 +14,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Deprecated since:** 9
 
-**Substitutes:** [deletePreferences](ohos.preferences.preferences.deletePreferences)
+**Substitutes:** deletePreferences
 
 <!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void--><!--Device-storage-function deleteStorage(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -23,7 +23,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the target file. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 
 ## deleteStorage
@@ -40,7 +40,7 @@ Deletes the singleton **Storage** instance of a file from the memory, and delete
 
 **Deprecated since:** 9
 
-**Substitutes:** [deletePreferences](ohos.preferences.preferences.deletePreferences)
+**Substitutes:** deletePreferences
 
 <!--Device-storage-function deleteStorage(path: string): Promise<void>--><!--Device-storage-function deleteStorage(path: string): Promise<void>-End-->
 

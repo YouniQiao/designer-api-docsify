@@ -14,7 +14,9 @@ function enableFlag(id: HiTraceId, flag: HiTraceFlag): void
 
 Enables the trace flag specified in HiTraceId. This API returns the result synchronously.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void--><!--Device-hiTraceChain-function enableFlag(id: HiTraceId, flag: HiTraceFlag): void-End-->
 

@@ -4,13 +4,13 @@
 type MediaDescription = Record<string, Object>
 ```
 
-Provides the container definition for media description key-value pairs.
-
-The media description consists of key-value pairs where keys reference @MediaDescriptionKey.
+Provides the container definition for media description key-value pairs. The media description consists of key-value pairs where keys reference @MediaDescriptionKey.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-type MediaDescription = Record<string, Object>--><!--Device-unnamed-type MediaDescription = Record<string, Object>-End-->
 

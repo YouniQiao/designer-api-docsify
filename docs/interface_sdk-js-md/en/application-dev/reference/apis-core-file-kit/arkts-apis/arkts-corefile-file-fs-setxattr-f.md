@@ -18,6 +18,8 @@ Sets an extended attribute of a file or directory. This API uses a promise to re
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>--><!--Device-unnamed-declare function setxattr(path: string, key: string, value: string): Promise<void>-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -41,7 +43,7 @@ Sets an extended attribute of a file or directory. This API uses a promise to re
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900002 | No such file or directory |
 | 13900012 | Permission denied |

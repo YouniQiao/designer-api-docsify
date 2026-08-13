@@ -6,6 +6,8 @@ Declare the type of input box
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum InputType--><!--Device-unnamed-export declare enum InputType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Basic input mode.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Pure digital input mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputType-NUMBER = 2--><!--Device-InputType-NUMBER = 2-End-->
@@ -58,6 +64,8 @@ Phone number entry mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputType-PhoneNumber = 3--><!--Device-InputType-PhoneNumber = 3-End-->
@@ -70,13 +78,13 @@ Phone number entry mode.
 Email = 5
 ```
 
-E-mail address input mode.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;This mode accepts only digits, letters, underscores (_), dots (.),and the following special characters: ! # \$ % & ' " * + - / = ? ^ ` { | } ~ @ (which can only appear once)&lt;/p&gt;
+E-mail address input mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' " * + - / = ? ^ ` { | } ~ @ (which can only appear once) &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,13 +98,13 @@ E-mail address input mode.
 Password = 7
 ```
 
-Password entry mode.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;An eye icon is used to show or hide the password.&lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots;they are directly obscured by dots since API version 12 on certain devices.&lt;br&gt;The password input mode does not support underlines.&lt;br&gt;If Password Vault is enabled, autofill is available for the username and password.&lt;/p&gt;
+Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An eye icon is used to show or hide the password. &lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. &lt;br&gt;The password input mode does not support underlines. &lt;br&gt;If Password Vault is enabled, autofill is available for the username and password. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,13 +118,13 @@ Password entry mode.
 NUMBER_PASSWORD = 8
 ```
 
-Number Password entry mode.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;An eye icon is used to show or hide the password.&lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots;they are directly obscured by dots since API version 12 on certain devices.&lt;br&gt;The password input mode does not support underlines.&lt;/p&gt;
+Number Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An eye icon is used to show or hide the password. &lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. &lt;br&gt;The password input mode does not support underlines. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,13 +138,13 @@ Number Password entry mode.
 USER_NAME = 10
 ```
 
-UserName entry mode.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If Password Vault is enabled, autofill is available for the username and password.&lt;/p&gt;
+UserName entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If Password Vault is enabled, autofill is available for the username and password. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,13 +158,13 @@ UserName entry mode.
 NEW_PASSWORD = 11
 ```
 
-NewPassword entry mode.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;An eye icon is used to show or hide the password.&lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots;they are directly obscured by dots since API version 12 on certain devices.&lt;br&gt;If Password Vault is enabled, a new password can be automatically generated.&lt;/p&gt;
+NewPassword entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An eye icon is used to show or hide the password. &lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. &lt;br&gt;If Password Vault is enabled, a new password can be automatically generated. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,13 +178,13 @@ NewPassword entry mode.
 NUMBER_DECIMAL = 12
 ```
 
-Number decimal entry mode.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The value can contain digits and one decimal point.&lt;/p&gt;
+Number decimal entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The value can contain digits and one decimal point. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,6 +204,8 @@ URL entry mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InputType-URL = 13--><!--Device-InputType-URL = 13-End-->
@@ -213,6 +223,8 @@ One time code mode.
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

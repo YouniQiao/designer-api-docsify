@@ -4,6 +4,8 @@ Defines a custom title for the **NavDestination** component.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavDestinationCustomTitle--><!--Device-unnamed-declare interface NavDestinationCustomTitle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ Content of the title bar.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NavDestinationCustomTitle-builder: CustomBuilder--><!--Device-NavDestinationCustomTitle-builder: CustomBuilder-End-->
@@ -32,13 +36,13 @@ Content of the title bar.
 height: TitleHeight | Length
 ```
 
-Height of the title bar.
-
-Value range: [0, +��)
+Height of the title bar. Value range: [0, +��)
 
 **Type:** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

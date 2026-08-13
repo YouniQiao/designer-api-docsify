@@ -6,6 +6,8 @@ Provides an interface for deleting value from text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface DeleteValue--><!--Device-unnamed-export declare interface DeleteValue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Provides an interface for deleting value from text.
 deleteOffset: int
 ```
 
-The location info where the value will be deleted.The value should be an integer.
+The location info where the value will be deleted. The value should be an integer.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The deleted value.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeleteValue-deleteValue: string--><!--Device-DeleteValue-deleteValue: string-End-->
@@ -63,6 +69,8 @@ The deleted direction.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

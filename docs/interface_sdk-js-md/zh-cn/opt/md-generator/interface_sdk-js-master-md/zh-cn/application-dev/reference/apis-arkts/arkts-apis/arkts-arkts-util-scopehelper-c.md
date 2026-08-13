@@ -4,6 +4,8 @@
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-util-class ScopeHelper--><!--Device-util-class ScopeHelper-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ clamp(value: ScopeType): ScopeType
 将一个值限制在此 **Scope** 范围内。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -78,6 +82,8 @@ constructor(lowerObj: ScopeType, upperObj: ScopeType)
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)--><!--Device-ScopeHelper-constructor(lowerObj: ScopeType, upperObj: ScopeType)-End-->
@@ -129,6 +135,8 @@ contains(value: ScopeType): boolean
 判断一个范围是否在此 **Scope** 范围内。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -189,6 +197,8 @@ contains(range: ScopeHelper): boolean
 判断一个范围是否在此 **Scope** 范围内。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -252,6 +262,8 @@ expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
@@ -313,6 +325,8 @@ expand(range: ScopeHelper): ScopeHelper
 获取此 **Scope** 与给定 **Scope** 的并集。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -376,6 +390,8 @@ expand(value: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper--><!--Device-ScopeHelper-expand(value: ScopeType): ScopeHelper-End-->
@@ -436,6 +452,8 @@ getLower(): ScopeType
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-getLower(): ScopeType--><!--Device-ScopeHelper-getLower(): ScopeType-End-->
@@ -489,6 +507,8 @@ getUpper(): ScopeType
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-getUpper(): ScopeType--><!--Device-ScopeHelper-getUpper(): ScopeType-End-->
@@ -541,6 +561,8 @@ intersect(range: ScopeHelper): ScopeHelper
 获取此 **Scope** 与给定 **Scope** 的交集。如果交集为空，则抛出异常。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -604,6 +626,8 @@ intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper--><!--Device-ScopeHelper-intersect(lowerObj: ScopeType, upperObj: ScopeType): ScopeHelper-End-->
@@ -665,6 +689,8 @@ toString(): string
 获取包含此 **Scope** 的字符串表示形式。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-interface DeviceStateChangeResult--><!--Device-distributedDeviceManager-interface DeviceStateChangeResult-End-->
 
@@ -22,7 +24,9 @@ action: DeviceStateChange
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceStateChangeResult-action: DeviceStateChange--><!--Device-DeviceStateChangeResult-action: DeviceStateChange-End-->
 
@@ -40,7 +44,9 @@ device: DeviceBasicInfo
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DeviceStateChangeResult-device: DeviceBasicInfo--><!--Device-DeviceStateChangeResult-device: DeviceBasicInfo-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the network statuses of the player.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum NetworkState--><!--Device-webview-enum NetworkState-End-->
 
@@ -18,9 +20,13 @@ EMPTY = 0
 
 The player has not started downloading data.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetworkState-EMPTY = 0--><!--Device-NetworkState-EMPTY = 0-End-->
 
@@ -34,9 +40,13 @@ IDLE = 1
 
 The player's network activity is idle. This could mean that the download of a media segment is complete, and the player is waiting to start downloading the next segment.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetworkState-IDLE = 1--><!--Device-NetworkState-IDLE = 1-End-->
 
@@ -50,9 +60,13 @@ LOADING = 2
 
 The player is downloading media data.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetworkState-LOADING = 2--><!--Device-NetworkState-LOADING = 2-End-->
 
@@ -66,9 +80,13 @@ NETWORK_ERROR = 3
 
 A network error occurs.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetworkState-NETWORK_ERROR = 3--><!--Device-NetworkState-NETWORK_ERROR = 3-End-->
 

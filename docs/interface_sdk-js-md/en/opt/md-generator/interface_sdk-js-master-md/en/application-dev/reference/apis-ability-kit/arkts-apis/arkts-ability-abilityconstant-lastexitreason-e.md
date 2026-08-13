@@ -1,9 +1,10 @@
 # LastExitReason
 
-Enumerates the reasons for the last exit of the ability. You can use it together with the value of  
-**launchParam.lastExitReason** in [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
+Enumerates the reasons for the last exit of the ability. You can use it together with the value of **launchParam.lastExitReason** in [onCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onCreate) of the UIAbility to complete different operations.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AbilityConstant-export enum LastExitReason--><!--Device-AbilityConstant-export enum LastExitReason-End-->
 
@@ -17,7 +18,9 @@ UNKNOWN = 0
 
 Unknown reason.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,11 +56,11 @@ The ability does not respond.
 NORMAL = 2
 ```
 
-The ability exits normally because the user closes the application.
+The ability exits normally because the user closes the application. Note: If the application process is forcibly terminated using methods not provided by Ability Kit, such as calling process.exit() or using the kernel **kill** command, the reason for the last exit is also reported as **NORMAL**.
 
-Note: If the application process is forcibly terminated using methods not provided by Ability Kit, such as calling [process.exit()](../apis-arkts/js-apis-process.md#processexitdeprecated) or using the kernel **kill**command, the reason for the last exit is also reported as **NORMAL**.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +78,9 @@ CPP_CRASH = 3
 
 The ability exits due to [process crash](../../../dfx/cppcrash-guidelines.md).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -93,7 +98,9 @@ JS_ERROR = 4
 
 The ability exits due to a JS_ERROR fault triggered when an application has a JS syntax error that is not captured by developers.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,7 +118,9 @@ APP_FREEZE = 5
 
 The ability exits due to [application freeze](../../../dfx/appfreeze-guidelines.md).
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,11 +136,11 @@ The ability exits due to [application freeze](../../../dfx/appfreeze-guidelines.
 PERFORMANCE_CONTROL = 6
 ```
 
-The ability exits due to system performance problems, for example, insufficient device memory.
+The ability exits due to system performance problems, for example, insufficient device memory. Note: This API will be deprecated. You are advised to use **RESOURCE_CONTROL** instead.
 
-Note: This API will be deprecated. You are advised to use **RESOURCE_CONTROL** instead.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -147,18 +156,11 @@ Note: This API will be deprecated. You are advised to use **RESOURCE_CONTROL** i
 RESOURCE_CONTROL = 7
 ```
 
-The ability exits due to improper use of system resources. The specific error cause can be obtained through  
-[LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam). The possible causes are as follows:
+The ability exits due to improper use of system resources. The specific error cause can be obtained through [LaunchParam.lastExitMessage](arkts-ability-abilityconstant-launchparam-i.md#LaunchParam). The possible causes are as follows: - **CPU Highload**: The CPU load is high. - **CPU_EXT Highload**: A fast CPU load detection is carried out. - **IO Manage Control**: An I/O management and control operation is carried out. - **App Memory Deterioration**: The application memory usage exceeds the threshold. - **Temperature Control**: The temperature is too high or too low. - **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of priority.
 
-- **CPU Highload**: The CPU load is high.  
-- **CPU_EXT Highload**: A fast CPU load detection is carried out.  
-- **IO Manage Control**: An I/O management and control operation is carried out.  
-- **App Memory Deterioration**: The application memory usage exceeds the threshold.  
-- **Temperature Control**: The temperature is too high or too low.  
-- **Memory Pressure**: The system is low on memory, triggering process termination in ascending order of  
-priority.
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -176,7 +178,9 @@ UPGRADE = 8
 
 The application exits due to an upgrade.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,11 +198,13 @@ USER_REQUEST = 9
 
 The ability exits because it receives a request from the multitasking center.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LastExitReason-USER_REQUEST = 9--><!--Device-LastExitReason-USER_REQUEST = 9-End-->
 
@@ -212,11 +218,13 @@ SIGNAL = 10
 
 The ability exits because it receives a kill signal from the system.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 

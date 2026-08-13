@@ -6,11 +6,11 @@
 function getSimSpn(slotId: number, callback: AsyncCallback<string>): void
 ```
 
-Obtains the service provider name (SPN) of the SIM card in a specified slot.
+Obtains the service provider name (SPN) of the SIM card in a specified slot. &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
-&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+**起始版本：** 23
 
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-sim-function getSimSpn(slotId: int, callback: AsyncCallback<string>): void--><!--Device-sim-function getSimSpn(slotId: int, callback: AsyncCallback<string>): void-End-->
 
@@ -27,12 +27,12 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-未识别sim卡) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
+| [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 
@@ -52,11 +52,11 @@ sim.getSimSpn(0, (err: BusinessError, data: string) => {
 function getSimSpn(slotId: number): Promise<string>
 ```
 
-Obtains the service provider name (SPN) of the SIM card in a specified slot.
+Obtains the service provider name (SPN) of the SIM card in a specified slot. &lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
 
-&lt;p&gt;The value is recorded in the EFSPN file of the SIM card and is irrelevant to the network with which the SIM card is currently registered.
+**起始版本：** 23
 
-**起始版本：** 6
+**废弃版本：** -1
 
 <!--Device-sim-function getSimSpn(slotId: int): Promise<string>--><!--Device-sim-function getSimSpn(slotId: int): Promise<string>-End-->
 
@@ -78,12 +78,12 @@ Obtains the service provider name (SPN) of the SIM card in a specified slot.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-未识别sim卡) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
+| [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

@@ -4,6 +4,8 @@ Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoas
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-enum PhotoSubtype--><!--Device-sendablePhotoAccessHelper-enum PhotoSubtype-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -17,6 +19,8 @@ DEFAULT = 0
 Photo, which is the default type.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -34,6 +38,8 @@ Moving photo.
 
 **Since:** 14
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-PhotoSubtype-MOVING_PHOTO = 3--><!--Device-PhotoSubtype-MOVING_PHOTO = 3-End-->
@@ -49,6 +55,8 @@ BURST = 4
 Burst photo.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

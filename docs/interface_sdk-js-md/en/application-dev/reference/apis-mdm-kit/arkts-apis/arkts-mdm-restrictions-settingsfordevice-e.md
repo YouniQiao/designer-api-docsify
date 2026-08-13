@@ -6,6 +6,8 @@ Enumerates device setting items.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-restrictions-enum SettingsForDevice--><!--Device-restrictions-enum SettingsForDevice-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ APN configuration, currently supported only on phones and tablets.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Opens the power menu by long-pressing the power button. Currently, this item is 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsForDevice-POWER_LONG_PRESS = 1--><!--Device-SettingsForDevice-POWER_LONG_PRESS = 1-End-->
@@ -58,6 +64,8 @@ Changes the Ethernet IP address. Currently, this item is supported only on PCs/2
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SettingsForDevice-SET_ETHERNET_IP = 2--><!--Device-SettingsForDevice-SET_ETHERNET_IP = 2-End-->
@@ -70,13 +78,13 @@ Changes the Ethernet IP address. Currently, this item is supported only on PCs/2
 SET_DEVICE_NAME = 3
 ```
 
-Changes the device name configuration. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**,  
-**Bluetooth**, and **More connectivity options** > **NearLink** on PCs/2-in-1 devices, and **About**,  
-**Bluetooth**, and **Personal hotspot** on smartphones and tablets.
+Changes the device name configuration. Currently, this item is supported only on PCs/2-in-1 devices, phones, and tablets. When it is disabled, the device name cannot be modified in the following settings: **About**, **Bluetooth**, and **More connectivity options** > **NearLink** on PCs/2-in-1 devices, and **About**, **Bluetooth**, and **Personal hotspot** on smartphones and tablets.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,6 +103,8 @@ Changes the screen lock password. Currently, this item is supported only on PCs/
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

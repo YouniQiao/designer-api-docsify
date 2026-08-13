@@ -13,11 +13,13 @@ function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: Initializa
     allocatorType?: AllocatorType): PixelMap
 ```
 
-Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
+Create pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(colors: ArrayBuffer, param: InitializationOptions,    allocatorType?: AllocatorType): PixelMap-End-->
 
@@ -41,9 +43,9 @@ Create pixelmap by data buffer based on opts, the memory type used by the PixelM
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
-| [7600302](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) | Memory copy failed. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
 ## Examples
 
@@ -63,11 +65,13 @@ function CreatePixelMapSync() {
 function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap
 ```
 
-Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size,platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
+Create an empty pixelmap by data buffer based on opts, the memory type used by the PixelMap can be specified by allocatorType. By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the PixelMap returned by this interface, please always consider the impact of stride.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap--><!--Device-image-function createPixelMapUsingAllocatorSync(param: InitializationOptions, allocatorType?: AllocatorType): PixelMap-End-->
 
@@ -90,8 +94,8 @@ Create an empty pixelmap by data buffer based on opts, the memory type used by t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7600201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
-| [7600301](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
+| [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. |
+| [7600301](../errorcode-image.md#7600301-memory-allocation-failure) | Memory alloc failed. |
 
 ## Examples
 

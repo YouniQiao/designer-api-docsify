@@ -18,7 +18,7 @@ Connects to Wi-Fi network.
 
 **Deprecated since:** 9
 
-**Substitutes:** [connectToDevice](ohos.wifiManager/wifiManager.connectToDevice)
+**Substitutes:** [connectToDevice](arkts-connectivity-wifimanager-connecttodevice-f-sys.md#connectToDevice-(System-API))
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.SET_WIFI_CONFIG and ohos.permission.MANAGE_WIFI_CONNECTION
 

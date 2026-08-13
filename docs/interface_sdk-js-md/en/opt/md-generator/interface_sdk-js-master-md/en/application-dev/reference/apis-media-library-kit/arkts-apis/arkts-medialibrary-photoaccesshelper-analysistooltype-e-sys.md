@@ -4,6 +4,8 @@ Enumerates the smart analysis tool types.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-export enum AnalysisToolType--><!--Device-photoAccessHelper-export enum AnalysisToolType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -19,6 +21,8 @@ ANALYSIS_BASE_TOOL_TYPE = 0
 Base analysis tool type for triggering all analysis algorithms.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Image retrieval tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-IMAGE_RETRIEVAL_TOOL_TYPE = 1--><!--Device-AnalysisToolType-IMAGE_RETRIEVAL_TOOL_TYPE = 1-End-->
@@ -55,6 +61,8 @@ NEGATIVE_FILTER_TOOL_TYPE = 2
 Negative filter tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Face recognition tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-FACE_RECOGNITION_TOOL_TYPE = 3--><!--Device-AnalysisToolType-FACE_RECOGNITION_TOOL_TYPE = 3-End-->
@@ -91,6 +101,8 @@ BATCH_SIMILARITY_SELECTION_TOOL_TYPE = 4
 Batch similarity selection tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +122,8 @@ Balanced selection tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-BALANCED_SELECTION_TOOL_TYPE = 5--><!--Device-AnalysisToolType-BALANCED_SELECTION_TOOL_TYPE = 5-End-->
@@ -127,6 +141,8 @@ COVER_GRID_SELECTION_TOOL_TYPE = 6
 Cover grid selection tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -146,6 +162,8 @@ Highlight tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-HIGHLIGHT_TOOL_TYPE = 7--><!--Device-AnalysisToolType-HIGHLIGHT_TOOL_TYPE = 7-End-->
@@ -163,6 +181,8 @@ SEARCH_TOOL_TYPE = 8
 Search tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,6 +202,8 @@ Selection tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-SELECTION_TOOL_TYPE = 9--><!--Device-AnalysisToolType-SELECTION_TOOL_TYPE = 9-End-->
@@ -199,6 +221,8 @@ PORTRAIT_ALBUM_TOOL_TYPE = 10
 Portrait album tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,6 +242,8 @@ Classify album tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-CLASSIFY_ALBUM_TOOL_TYPE = 11--><!--Device-AnalysisToolType-CLASSIFY_ALBUM_TOOL_TYPE = 11-End-->
@@ -235,6 +261,8 @@ SIMILARITY_CLEANING_TOOL_TYPE = 12
 Similarity cleaning tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -254,6 +282,8 @@ Edit recommendation tool type.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AnalysisToolType-EDIT_RECOMMENDATION_TOOL_TYPE = 13--><!--Device-AnalysisToolType-EDIT_RECOMMENDATION_TOOL_TYPE = 13-End-->
@@ -271,6 +301,8 @@ AI_SEARCH_TOOL_TYPE = 14
 AI search tool type.
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

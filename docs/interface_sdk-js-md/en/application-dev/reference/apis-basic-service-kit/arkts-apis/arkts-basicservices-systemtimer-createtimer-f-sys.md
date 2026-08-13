@@ -12,17 +12,13 @@ import { systemTimer } from '@kit.BasicServicesKit';
 function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void
 ```
 
-Creates a timer. This API uses an asynchronous callback to return the result.
+Creates a timer. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs.
 
-> **NOTE：**
-> 
-> This API must be used together with
-> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer). Otherwise
-> , memory leakage occurs.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void--><!--Device-systemTimer-function createTimer(options: TimerOptions, callback: AsyncCallback<long>): void-End-->
 
@@ -35,14 +31,14 @@ Creates a timer. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [TimerOptions](arkts-basicservices-systemtimer-timeroptions-i-sys.md) | Yes | Timer initialization options, including the timer type, whether the timer is a repeating timer, interval, and **WantAgent** options. |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;long&gt; | Yes | Callback used to return the timer ID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the timer ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 
@@ -74,17 +70,13 @@ try {
 function createTimer(options: TimerOptions): Promise<long>
 ```
 
-Creates a timer. This API uses a promise to return the timer ID.
+Creates a timer. This API uses a promise to return the timer ID. > **NOTE：**> > This API must be used together with > [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer-(System-API)). Otherwise > , memory leakage occurs.
 
-> **NOTE：**
-> 
-> This API must be used together with
-> [systemTimer.destroyTimer](arkts-basicservices-systemtimer-destroytimer-f-sys.md#destroyTimer). Otherwise
-> , memory leakage occurs.
+**Since:** 23
 
-**Since:** 7
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>--><!--Device-systemTimer-function createTimer(options: TimerOptions): Promise<long>-End-->
 
@@ -102,14 +94,14 @@ Creates a timer. This API uses a promise to return the timer ID.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the timer ID. |
+| Promise&lt;long&gt; | Promise used to return the timer ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
 

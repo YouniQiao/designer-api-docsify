@@ -12,14 +12,14 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 
 | Name | Description |
 | --- | --- |
-| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#popup) | Build function of popup. This component is implemented based on state management V1. |
+| [Popup](arkts-arkui-arkui-advanced-popup-popup-f.md#Popup) |  |
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [PopupButtonOptions](arkts-arkui-arkui-advanced-popup-popupbuttonoptions-i.md) | Defines the popup button options |
-| [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md) | Defines the popup icon options |
-| [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Defines the popup options. |
-| [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md) | Defines the popup text options |
+| [PopupButtonOptions](arkts-arkui-arkui-advanced-popup-popupbuttonoptions-i.md) | Defines the button attributes and events. |
+| [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md) | Defines the icon options. |
+| [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Defines the style parameters of the popup. |
+| [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md) | Provides text style settings. |
 

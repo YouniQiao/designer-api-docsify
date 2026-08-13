@@ -2,9 +2,11 @@
 
 MMS configuration file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsConfig--><!--Device-sms-export interface MmsConfig-End-->
 
@@ -28,9 +30,11 @@ User agent.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsConfig-userAgent: string--><!--Device-MmsConfig-userAgent: string-End-->
 
@@ -48,9 +52,11 @@ User agent profile.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MmsConfig-userAgentProfile: string--><!--Device-MmsConfig-userAgentProfile: string-End-->
 

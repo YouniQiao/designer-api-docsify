@@ -1,9 +1,10 @@
 # @ohos.graphics.text
 
-文本模块
+本模块提供一系列用于文本布局和字体管理的编程接口。文本布局相关的接口旨在提供高质量的排版，包括字符到字形的转换、字距调整、换行、对齐、文本测量等。字体管理接口提供字体注册、字体描述符、字体集管理等功能。 该模块提供以下创建复杂样式的文本段落的常用类： - [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle)：文本样式，控制文本的字体类型、大小、间距等属性。 - [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection)：字体集，控制各种不同的字体。 - [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md#FontDescriptor)：字体描述符信息。 - [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)：段落样式，控制整个段落的断行策略、断词策略等属性。 - [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder)：段落生成器，控制生成不同的段落对象。 - [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)：段落，由ParagraphBuilder类调用[build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build)接口构建而成。 - [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset)：行排版器，由ParagraphBuilder类调用 [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset)接口构建而成。 - [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)：以行为单位的段落文本的载体，由Paragraph类调用[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines)接口获取。 - [Run](arkts-arkgraphics2d-text-run-c.md#Run)：文本排版单元，由TextLine类调用[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接口获取。
 
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace text--><!--Device-unnamed-declare namespace text-End-->
 
@@ -15,16 +16,16 @@
 
 | 名称 |
 | --- |
-| [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md#getfontcount) |
-| [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md#getfontdescriptorbyfullname) |
-| [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md#getfontdescriptorsfrompath) |
-| [getFontPathsByType](arkts-arkgraphics2d-text-getfontpathsbytype-f.md#getfontpathsbytype) |
-| [getFontUnicodeSet](arkts-arkgraphics2d-text-getfontunicodeset-f.md#getfontunicodeset) |
-| [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) |
-| [isFontSupported](arkts-arkgraphics2d-text-isfontsupported-f.md#isfontsupported) |
-| [matchFontDescriptors](arkts-arkgraphics2d-text-matchfontdescriptors-f.md#matchfontdescriptors) |
-| [setTextHighContrast](arkts-arkgraphics2d-text-settexthighcontrast-f.md#settexthighcontrast) |
-| [setTextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-settextundefinedglyphdisplay-f.md#settextundefinedglyphdisplay) |
+| [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md#getFontCount) |
+| [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md#getFontDescriptorByFullName) |
+| [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md#getFontDescriptorsFromPath) |
+| [getFontPathsByType](arkts-arkgraphics2d-text-getfontpathsbytype-f.md#getFontPathsByType) |
+| [getFontUnicodeSet](arkts-arkgraphics2d-text-getfontunicodeset-f.md#getFontUnicodeSet) |
+| [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType) |
+| [isFontSupported](arkts-arkgraphics2d-text-isfontsupported-f.md#isFontSupported) |
+| [matchFontDescriptors](arkts-arkgraphics2d-text-matchfontdescriptors-f.md#matchFontDescriptors) |
+| [setTextHighContrast](arkts-arkgraphics2d-text-settexthighcontrast-f.md#setTextHighContrast) |
+| [setTextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-settextundefinedglyphdisplay-f.md#setTextUndefinedGlyphDisplay) |
 
 ### 类
 

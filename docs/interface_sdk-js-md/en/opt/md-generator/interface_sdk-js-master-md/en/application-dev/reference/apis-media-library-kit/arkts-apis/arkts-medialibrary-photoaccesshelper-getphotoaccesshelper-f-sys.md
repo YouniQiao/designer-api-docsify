@@ -16,6 +16,8 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -44,8 +46,8 @@ Obtains a PhotoAccessHelper instance for the specified user, letting you access 
 | Error Code ID |
 | --- |
 | 13900020 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -69,3 +71,47 @@ struct Index {
   }
 }
 ```
+
+
+## getPhotoAccessHelper
+
+```TypeScript
+function getPhotoAccessHelper(context: Context, userId: number): PhotoAccessHelper | null
+```
+
+Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-photoAccessHelper-function getPhotoAccessHelper(context: Context, userId: int): PhotoAccessHelper | null--><!--Device-photoAccessHelper-function getPhotoAccessHelper(context: Context, userId: int): PhotoAccessHelper | null-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes |
+| userId | number | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [PhotoAccessHelper](arkts-medialibrary-sendablephotoaccesshelper-photoaccesshelper-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) |

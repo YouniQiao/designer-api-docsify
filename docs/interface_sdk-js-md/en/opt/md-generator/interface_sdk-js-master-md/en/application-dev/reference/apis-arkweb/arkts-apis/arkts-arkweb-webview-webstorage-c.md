@@ -1,18 +1,10 @@
 # WebStorage
 
-Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web**components in an application share a **WebStorage** object.
-
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
-> 
-> - You must load the **Web** component before calling the APIs in **WebStorage**.
-> 
-> - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel
-> discards Web SQL. For details about the ArkWeb kernel version, see
-> [Constraints](../../../web/web-component-overview.md#constraints).
+Implements a **WebStorage** object to manage the Web SQL database and HTML5 Web Storage APIs. All **Web** components in an application share a **WebStorage** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **WebStorage**. > > - After the ArkWeb kernel is upgraded to M132, the Web SQL database management becomes invalid because the kernel > discards Web SQL. For details about the ArkWeb kernel version, see > [Constraints](../../../web/web-component-overview.md#constraints).
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebStorage--><!--Device-webview-class WebStorage-End-->
 
@@ -33,6 +25,8 @@ static deleteAllData(incognito?: boolean): void
 Deletes all storage data used by JavaScript storage APIs, including the Web SQL Database and HTML5-supported Web storage APIs.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -56,6 +50,8 @@ Deletes all data in the specified origin.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebStorage-static deleteOrigin(origin: string): void--><!--Device-WebStorage-static deleteOrigin(origin: string): void-End-->
@@ -72,8 +68,8 @@ Deletes all data in the specified origin.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getOriginQuota
 
@@ -81,9 +77,11 @@ Deletes all data in the specified origin.
 static getOriginQuota(origin: string): Promise<number>
 ```
 
-Obtains the storage quota of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes.This API uses a promise to return the result.
+Obtains the storage quota of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -107,8 +105,8 @@ Obtains the storage quota of an origin in the Web SQL Database and HTML5-support
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getOriginQuota
 
@@ -119,6 +117,8 @@ static getOriginQuota(origin: string, callback: AsyncCallback<number>): void
 Obtains the storage quota of an origin in Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -137,8 +137,8 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getOriginUsage
 
@@ -146,9 +146,11 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 static getOriginUsage(origin: string): Promise<number>
 ```
 
-Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes.This API uses a promise to return the result.
+Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -172,8 +174,8 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getOriginUsage
 
@@ -181,9 +183,11 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 static getOriginUsage(origin: string, callback: AsyncCallback<number>): void
 ```
 
-Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes.This API uses an asynchronous callback to return the result.
+Obtains the storage usage of an origin in the Web SQL Database and HTML5-supported Web Storage APIs, in bytes. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -202,8 +206,8 @@ Obtains the storage usage of an origin in the Web SQL Database and HTML5-support
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100011-invalid-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100011](../errorcode-webview.md#17100011-invalid-origin) |
 
 ## getOrigins
 
@@ -214,6 +218,8 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses a promise to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -231,8 +237,8 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100012-no-web-storage-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) |
 
 ## getOrigins
 
@@ -243,6 +249,8 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 Obtains information about origins that are currently using the Web SQL Database and HTML5-supported Web Storage APIs. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -260,5 +268,5 @@ Obtains information about origins that are currently using the Web SQL Database 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17100012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100012-no-web-storage-origin) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17100012](../errorcode-webview.md#17100012-no-web-storage-origin) |

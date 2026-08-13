@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface FocusBoxStyle--><!--Device-unnamed-declare interface FocusBoxStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 margin?: LengthMetrics
 ```
 
-焦点框相对组件边缘的距离。
-
-正数代表外侧，负数代表内侧。不支持百分比。
+焦点框相对组件边缘的距离。 正数代表外侧，负数代表内侧。不支持百分比。
 
 **类型：** LengthMetrics
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +44,8 @@ strokeColor?: ColorMetrics
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -56,13 +60,13 @@ strokeColor?: ColorMetrics
 strokeWidth?: LengthMetrics
 ```
 
-焦点框宽度。
-
-不支持负数与百分比。
+焦点框宽度。 不支持负数与百分比。
 
 **类型：** LengthMetrics
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

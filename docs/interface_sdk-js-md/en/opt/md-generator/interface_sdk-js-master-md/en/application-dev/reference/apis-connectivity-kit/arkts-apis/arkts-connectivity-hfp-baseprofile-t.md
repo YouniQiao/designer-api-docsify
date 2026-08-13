@@ -6,7 +6,9 @@ type BaseProfile = baseProfile.BaseProfile
 
 Base interface of profile.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hfp-type BaseProfile = baseProfile.BaseProfile--><!--Device-hfp-type BaseProfile = baseProfile.BaseProfile-End-->
 

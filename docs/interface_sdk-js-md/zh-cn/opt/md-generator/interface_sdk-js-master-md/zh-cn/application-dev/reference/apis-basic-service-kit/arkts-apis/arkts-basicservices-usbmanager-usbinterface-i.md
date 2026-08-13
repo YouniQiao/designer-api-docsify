@@ -2,7 +2,9 @@
 
 一个[USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration)中可以含有多个USBInterface，每个USBInterface提供一个功能。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
 
@@ -18,7 +20,9 @@ alternateSetting: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
 
@@ -34,7 +38,9 @@ clazz: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
 
@@ -50,7 +56,9 @@ endpoints: Array<USBEndpoint>
 
 **类型：** Array&lt;USBEndpoint&gt;
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
@@ -66,7 +74,9 @@ id: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
 
@@ -82,7 +92,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
@@ -98,7 +110,9 @@ protocol: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
 
@@ -114,7 +128,9 @@ subClass: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 

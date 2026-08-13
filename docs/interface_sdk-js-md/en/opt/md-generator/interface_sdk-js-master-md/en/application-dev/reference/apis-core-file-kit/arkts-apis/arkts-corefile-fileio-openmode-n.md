@@ -4,6 +4,8 @@ Mode Indicates the open flags.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-fileIo-namespace OpenMode--><!--Device-fileIo-namespace OpenMode-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -20,14 +22,14 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [READ_ONLY](arkts-corefile-openmode-con.md#read_only) |
-| [WRITE_ONLY](arkts-corefile-openmode-con.md#write_only) |
-| [READ_WRITE](arkts-corefile-openmode-con.md#read_write) |
-| [CREATE](arkts-corefile-openmode-con.md#create) |
-| [TRUNC](arkts-corefile-openmode-con.md#trunc) |
-| [APPEND](arkts-corefile-openmode-con.md#append) |
-| [NONBLOCK](arkts-corefile-openmode-con.md#nonblock) |
-| [DIR](arkts-corefile-openmode-con.md#dir) |
-| [NOFOLLOW](arkts-corefile-openmode-con.md#nofollow) |
-| [SYNC](arkts-corefile-openmode-con.md#sync) |
-| [UNCACHE](arkts-corefile-openmode-con.md#uncache) |
+| [READ_ONLY](arkts-corefile-openmode-con.md#READ_ONLY) |
+| [WRITE_ONLY](arkts-corefile-openmode-con.md#WRITE_ONLY) |
+| [READ_WRITE](arkts-corefile-openmode-con.md#READ_WRITE) |
+| [CREATE](arkts-corefile-openmode-con.md#CREATE) |
+| [TRUNC](arkts-corefile-openmode-con.md#TRUNC) |
+| [APPEND](arkts-corefile-openmode-con.md#APPEND) |
+| [NONBLOCK](arkts-corefile-openmode-con.md#NONBLOCK) |
+| [DIR](arkts-corefile-openmode-con.md#DIR) |
+| [NOFOLLOW](arkts-corefile-openmode-con.md#NOFOLLOW) |
+| [SYNC](arkts-corefile-openmode-con.md#SYNC) |
+| [UNCACHE](arkts-corefile-openmode-con.md#UNCACHE) |

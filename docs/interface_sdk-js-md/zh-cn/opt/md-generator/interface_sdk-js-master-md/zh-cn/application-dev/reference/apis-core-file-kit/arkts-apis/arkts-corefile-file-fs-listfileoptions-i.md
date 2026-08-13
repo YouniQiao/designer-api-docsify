@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface ListFileOptions--><!--Device-unnamed-export interface ListFileOptions-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -19,6 +21,8 @@ filter?: Filter
 **类型：** [Filter](arkts-corefile-file-fs-filter-i.md)
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ listNum?: number
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ListFileOptions-listNum?: number--><!--Device-ListFileOptions-listNum?: number-End-->
@@ -55,6 +61,8 @@ recursion?: boolean
 **类型：** boolean
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -6,6 +6,8 @@ Defines the triggered function at the end of web page loading.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnLoadFinishedEvent--><!--Device-unnamed-declare interface OnLoadFinishedEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ The url to be loaded.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-OnLoadFinishedEvent-url: string--><!--Device-OnLoadFinishedEvent-url: string-End-->
 

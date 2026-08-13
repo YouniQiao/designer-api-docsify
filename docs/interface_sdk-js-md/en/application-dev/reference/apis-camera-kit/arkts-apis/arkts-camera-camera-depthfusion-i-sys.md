@@ -1,14 +1,16 @@
 # DepthFusion (System API)
 
-Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#DepthFusionQuery).
+Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#DepthFusionQuery-(System-API)).
 
-**Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#DepthFusionQuery)
+**Inheritance/Implementation:** DepthFusion extends [DepthFusionQuery](arkts-camera-camera-depthfusionquery-i-sys.md#DepthFusionQuery-(System-API))
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface DepthFusion extends DepthFusionQuery--><!--Device-camera-interface DepthFusion extends DepthFusionQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface DepthFusion--><!--Device-camera-interface DepthFusion-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,9 +30,11 @@ enableDepthFusion(enabled: boolean): void
 
 Enables depth fusion.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthFusion-enableDepthFusion(enabled: boolean): void--><!--Device-DepthFusion-enableDepthFusion(enabled: boolean): void-End-->
 
@@ -48,10 +52,10 @@ Enables depth fusion.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -78,9 +82,11 @@ isDepthFusionEnabled(): boolean
 
 Checks whether depth fusion is enabled.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DepthFusion-isDepthFusionEnabled(): boolean--><!--Device-DepthFusion-isDepthFusionEnabled(): boolean-End-->
 
@@ -98,8 +104,8 @@ Checks whether depth fusion is enabled.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

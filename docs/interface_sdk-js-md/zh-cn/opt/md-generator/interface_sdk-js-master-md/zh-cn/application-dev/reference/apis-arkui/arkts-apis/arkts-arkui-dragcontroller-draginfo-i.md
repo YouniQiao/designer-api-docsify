@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-dragController-interface DragInfo--><!--Device-dragController-interface DragInfo-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,19 +16,13 @@
 autoHideComponentUniqueIds?: number | number[]
 ```
 
-设置在主动拖拽过程中由系统自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。
-
-主动拖拽成功发起后，系统会在显示拖拽预览窗口前自动隐藏目标组件。
-
-若主动拖拽源本身也需要被隐藏，需要同时传入其uniqueId。
-
-组件的uniqueId可通过[UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById)配合[FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getUniqueId)获取。
-
-开发者需要在拖拽结束回调中按需恢复组件显示状态。
+设置在主动拖拽过程中由系统自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 主动拖拽成功发起后，系统会在显示拖拽预览窗口前自动隐藏目标组件。 若主动拖拽源本身也需要被隐藏，需要同时传入其uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById) 配合[FrameNode.getUniqueId()](arkts-arkui-framenode-c.md#getUniqueId)获取。 开发者需要在拖拽结束回调中按需恢复组件显示状态。
 
 **类型：** number \| number[]
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,13 +38,13 @@ autoHideComponentUniqueIds?: number | number[]
 data?: unifiedDataChannel.UnifiedData
 ```
 
-设置拖拽过程中携带的数据。 
-
-默认值：空
+设置拖拽过程中携带的数据。 默认值：空
 
 **类型：** unifiedDataChannel.UnifiedData
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -64,13 +60,13 @@ data?: unifiedDataChannel.UnifiedData
 dataLoadParams?: unifiedDataChannel.DataLoadParams
 ```
 
-设置拖起方延迟提供数据。调用此方法向系统提供数据加载参数，而非直接传入完整的数据对象。当用户将数据拖拽至目标应用程序并释放时，系统将使用此参数从起拖方请求实际数据。与data同时设置时，dataLoadParams生效。
-
-默认值：空
+设置拖起方延迟提供数据。调用此方法向系统提供数据加载参数，而非直接传入完整的数据对象。当用户将数据拖拽至目标应用程序并释放时，系统将使用此参数从起拖方请求实际数据。与data同时设置时，dataLoadParams生效。 默认值：空
 
 **类型：** unifiedDataChannel.DataLoadParams
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,13 +82,13 @@ dataLoadParams?: unifiedDataChannel.DataLoadParams
 extraParams?: string
 ```
 
-设置拖拽事件额外信息，具体功能暂未实现。
-
-默认值：空
+设置拖拽事件额外信息，具体功能暂未实现。 默认值：空
 
 **类型：** string
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,6 +110,8 @@ pointerId: number
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -134,6 +132,8 @@ previewOptions?: DragPreviewOptions
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -153,6 +153,8 @@ touchPoint?: TouchPoint
 **类型：** TouchPoint
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

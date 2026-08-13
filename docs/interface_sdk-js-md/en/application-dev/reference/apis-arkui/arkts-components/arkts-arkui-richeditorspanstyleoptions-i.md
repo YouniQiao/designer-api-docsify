@@ -1,8 +1,6 @@
 # RichEditorSpanStyleOptions
 
-Defines the text span style options.
-
-Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange).
+Defines the text span style options. Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange).
 
 **Inheritance/Implementation:** RichEditorSpanStyleOptions extends [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange)
 
@@ -10,11 +8,13 @@ Inherits [RichEditorRange](arkts-arkui-richeditorrange-i.md#RichEditorRange).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-unnamed-declare interface RichEditorSpanStyleOptions extends RichEditorRange--><!--Device-unnamed-declare interface RichEditorSpanStyleOptions extends RichEditorRange-End-->
+<!--Device-unnamed-declare interface RichEditorSpanStyleOptions--><!--Device-unnamed-declare interface RichEditorSpanStyleOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

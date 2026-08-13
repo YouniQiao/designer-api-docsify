@@ -13,7 +13,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>,
     callback: AsyncCallback<{deviceId: number; remote: rpc.IRemoteObject;}>): void
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**.You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device.
+Binds a peripheral device based on the device information returned by **queryDevices()**. You need to use [deviceManager.queryDevices()](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device.
 
 **Since:** 10
 
@@ -21,7 +21,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 **Deprecated since:** 19
 
-**Substitutes:** [bindDriverWithDeviceId](deviceManager.bindDriverWithDeviceId(deviceId:)
+**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -34,16 +34,16 @@ Binds a peripheral device based on the device information returned by **queryDev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Yes |  |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: number; remote: rpc.IRemoteObject;}&gt; | Yes |  |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. 3.Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [22900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2 .Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
 
 ## Examples
 
@@ -81,7 +81,7 @@ function bindDevice(deviceId: number, onDisconnect: AsyncCallback<number>): Prom
     remote: rpc.IRemoteObject;}>
 ```
 
-Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result.You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device.
+Binds a peripheral device based on the device information returned by **queryDevices()**. This API uses a promise to return the result. You need to use [deviceManager.queryDevices](arkts-driverdevelopment-devicemanager-querydevices-f.md#queryDevices) to obtain the peripheral device information and device.
 
 **Since:** 10
 
@@ -89,7 +89,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 **Deprecated since:** 19
 
-**Substitutes:** [bindDriverWithDeviceId](deviceManager.bindDriverWithDeviceId(deviceId:)
+**Substitutes:** [bindDriverWithDeviceId](arkts-driverdevelopment-devicemanager-binddriverwithdeviceid-f.md#bindDriverWithDeviceId)(deviceId: long, onDisconnect: AsyncCallback&lt;long&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_EXTENSIONAL_DEVICE_DRIVER
 
@@ -102,7 +102,7 @@ Binds a peripheral device based on the device information returned by **queryDev
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | number | Yes | Device ID, which can be obtained via **queryDevices()**. |
-| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
+| onDisconnect | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. When the bound device is disconnected, the value of **err** is **undefined** and the value of **data** is the ID of the unbound device. Otherwise, **err** is an error object. |
 
 **Return value:**
 
@@ -114,9 +114,9 @@ Binds a peripheral device based on the device information returned by **queryDev
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | The permission check failed. |
-| [22900001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | The permission check failed. |
+| [22900001](../../apis-driverdevelopment-kit/errorcode-deviceManager.md#22900001-externaldevicemanager-service-exception-or-bustype-parameter-error) | ExternalDeviceManager service exception. |
 
 ## Examples
 

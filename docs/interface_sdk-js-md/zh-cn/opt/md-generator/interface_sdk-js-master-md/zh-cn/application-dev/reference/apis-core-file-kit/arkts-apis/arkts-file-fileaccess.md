@@ -1,10 +1,6 @@
 # @ohos.file.fileAccess
 
-fileAccess模块是基于[extension](../../../application-models/extensionability-overview.md)机制实现的一个对公共文件访问和操作的框架。该模块一方面对接各类文件管理服务，如存储管理服务等；另一方面为系统应用提供一套统一的文件访问管理接口。存储管理服务可以管理内置存储部分目录，以及共享盘、U盘、SD卡等设备上的资源。
-
-> **说明：**
-> 
-> - 当前只支持FilePicker、文件管理器调用。
+fileAccess模块是基于[extension](../../../application-models/extensionability-overview.md)机制实现的一个对公共文件访问和操作的框架。该模块一方面对接各类文 件管理服务，如存储管理服务等；另一方面为系统应用提供一套统一的文件访问管理接口。存储管理服务可以管理内置存储部分目录，以及共享盘、U盘、SD卡等设备上的资源。 > **说明：** > > - 当前只支持FilePicker、文件管理器调用。
 
 **起始版本：** 9
 
@@ -23,10 +19,10 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 | 名称 |
 | --- |
-| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper) |
-| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createfileaccesshelper-1) |
-| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo) |
-| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getfileaccessabilityinfo-1) |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createFileAccessHelper（系统接口）) |
+| [createFileAccessHelper](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md#createFileAccessHelper（系统接口）) |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getFileAccessAbilityInfo（系统接口）) |
+| [getFileAccessAbilityInfo](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md#getFileAccessAbilityInfo（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -59,5 +55,5 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 | 名称 |
 | --- |
-| [DEVICES_URI](arkts-corefile-fileaccess-con-sys.md#devices_uri) |
+| [DEVICES_URI](arkts-corefile-fileaccess-con-sys.md#DEVICES_URI) |
 <!--DelEnd-->

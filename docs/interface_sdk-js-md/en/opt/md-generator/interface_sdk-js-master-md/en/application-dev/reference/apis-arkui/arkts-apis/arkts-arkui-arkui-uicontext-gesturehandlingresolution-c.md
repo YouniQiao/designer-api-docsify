@@ -4,6 +4,8 @@ Class for declaring the result of smart gesture handling.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export class GestureHandlingResolution--><!--Device-unnamed-export class GestureHandlingResolution-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ constructor(isConsumed: boolean)
 Constructor for the smart gesture handling result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,15 +48,13 @@ Constructor for the smart gesture handling result.
 isConsumed: boolean
 ```
 
-Whether to consume the current smart gesture.
-
-**true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used.
-
-**false**: The smart gesture is not consumed, and the system treats it as unhandled.
+Whether to consume the current smart gesture. **true**: The smart gesture is consumed. If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used. **false**: The smart gesture is not consumed, and the system treats it as unhandled.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,16 +70,13 @@ Whether to consume the current smart gesture.
 selectedProposal?: BaseGestureHandlingProposal
 ```
 
-The smart gesture handling behavior specified by the user.
-
-When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If  
-**selectedProposal** is set, the custom action handling is used.
-
-When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
+The smart gesture handling behavior specified by the user. When **isConsumed** is **true**: If **selectedProposal** is not set, the system default action handling is used. If **selectedProposal** is set, the custom action handling is used. When **isConsumed** is **false**, the **selectedProposal** setting does not take effect.
 
 **Type:** [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

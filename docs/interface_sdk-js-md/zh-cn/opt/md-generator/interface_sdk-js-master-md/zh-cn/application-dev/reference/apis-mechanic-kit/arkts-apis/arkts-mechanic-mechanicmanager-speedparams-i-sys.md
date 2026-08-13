@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-mechanicManager-export interface SpeedParams--><!--Device-mechanicManager-export interface SpeedParams-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -21,6 +23,8 @@ angle: number
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-SpeedParams-angle: double--><!--Device-SpeedParams-angle: double-End-->
 
@@ -40,6 +44,8 @@ mode?: MarchingMode
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-SpeedParams-mode?: MarchingMode--><!--Device-SpeedParams-mode?: MarchingMode-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -52,11 +58,13 @@ mode?: MarchingMode
 speed: number
 ```
 
-转动或移动速度。取值限定为整数。
+转动或移动速度。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-SpeedParams-speed: int--><!--Device-SpeedParams-speed: int-End-->
 

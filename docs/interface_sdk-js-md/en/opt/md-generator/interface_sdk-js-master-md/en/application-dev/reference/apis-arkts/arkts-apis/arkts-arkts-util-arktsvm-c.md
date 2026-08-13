@@ -4,6 +4,8 @@ A class that provides VM maintenance and test capabilities for developers.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-util-class ArkTSVM--><!--Device-util-class ArkTSVM-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -24,6 +26,8 @@ Enable the local handle detection to avoid memory leakage in the event looper of
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ArkTSVM-static enableLocalHandleDetection(): void--><!--Device-ArkTSVM-static enableLocalHandleDetection(): void-End-->
@@ -39,6 +43,8 @@ static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 Get all heap memory information from ArkTS-VMs and the shared heap.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void--><!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void-End-->
@@ -74,11 +82,11 @@ Unregister the callback that is triggered when the heap memory exceeds the criti
 static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean
 ```
 
-Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC.It must be called on the main thread and only one callback can be registered.
-
-NOTE:There is no guarantee that the callback will be triggered before OOM.
+Register a callback that is triggered if the heap memory exceeds the critical warning threshold after a GC. It must be called on the main thread and only one callback can be registered. NOTE: There is no guarantee that the callback will be triggered before OOM.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,9 +113,11 @@ NOTE:There is no guarantee that the callback will be triggered before OOM.
 static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void
 ```
 
-Sets whether to enable multithreading detection. When **enabled** is set to **true**, the detection is turned on,and multithreading-related details will be included in the cppcrash files generated for multithreading issues.When **enabled** is set to **false**, the detection is turned off, and no such details will be present in the corresponding cppcrash files.
+Sets whether to enable multithreading detection. When **enabled** is set to **true**, the detection is turned on, and multithreading-related details will be included in the cppcrash files generated for multithreading issues. When **enabled** is set to **false**, the detection is turned off, and no such details will be present in the corresponding cppcrash files.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -131,6 +141,8 @@ static setTrackGlobalRef(enable: boolean): void
 Enable or disable tracking of the relationship between napi_ref and global handle. When enabled, heap snapshot will include native reference address information. When disabled (enable is false), the tracking will be stopped and heap snapshot will not display the relationship between native reference and global handle.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,12 +1,10 @@
 # CmsRecipientInfo
 
-CMS封装数据的接收者信息。
+CMS封装数据的接收者信息。 > **说明：** > > 至少需要设置一个接收者。
 
-> **说明：**
-> 
-> 至少需要设置一个接收者。
+**起始版本：** 23
 
-**起始版本：** 22
+**废弃版本：** -1
 
 <!--Device-cert-interface CmsRecipientInfo--><!--Device-cert-interface CmsRecipientInfo-End-->
 
@@ -22,9 +20,11 @@ keyAgree接收者信息。
 
 **类型：** [CmsKeyAgreeRecipientInfo](arkts-devicecertificate-cert-cmskeyagreerecipientinfo-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientInfo-keyAgreeInfo?: CmsKeyAgreeRecipientInfo--><!--Device-CmsRecipientInfo-keyAgreeInfo?: CmsKeyAgreeRecipientInfo-End-->
 
@@ -40,9 +40,11 @@ keyTrans接收者信息。
 
 **类型：** [CmsKeyTransRecipientInfo](arkts-devicecertificate-cert-cmskeytransrecipientinfo-i.md)
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CmsRecipientInfo-keyTransInfo?: CmsKeyTransRecipientInfo--><!--Device-CmsRecipientInfo-keyTransInfo?: CmsKeyTransRecipientInfo-End-->
 

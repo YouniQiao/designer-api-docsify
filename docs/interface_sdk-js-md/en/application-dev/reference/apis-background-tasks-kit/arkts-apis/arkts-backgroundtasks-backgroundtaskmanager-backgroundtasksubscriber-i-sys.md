@@ -6,6 +6,8 @@ Represents a listener object used to listen for background task state changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber--><!--Device-backgroundTaskManager-export interface BackgroundTaskSubscriber-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -29,6 +31,8 @@ Called when a continuous task starts.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +78,8 @@ Called when a continuous task stops.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void--><!--Device-BackgroundTaskSubscriber-onContinuousTaskStop(info: ContinuousTaskInfo): void-End-->
@@ -117,6 +123,8 @@ Called when a continuous task is updated.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

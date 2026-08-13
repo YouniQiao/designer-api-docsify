@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [DeviceRemindType](ohos.notificationManager/notificationManager#DeviceRemindType)
+**替代接口：** [DeviceRemindType](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#DeviceRemindType（系统接口）)
 
 <!--Device-notification-export enum DeviceRemindType--><!--Device-notification-export enum DeviceRemindType-End-->
 
@@ -30,7 +30,7 @@ IDLE_DONOT_REMIND = 0
 
 **废弃版本：** 9
 
-**替代接口：** [IDLE_DONOT_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#IDLE_DONOT_REMIND)
+**替代接口：** [IDLE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#IDLE_DONOT_REMIND)
 
 <!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0--><!--Device-DeviceRemindType-IDLE_DONOT_REMIND = 0-End-->
 
@@ -52,7 +52,7 @@ IDLE_REMIND = 1
 
 **废弃版本：** 9
 
-**替代接口：** [IDLE_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#IDLE_REMIND)
+**替代接口：** [IDLE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#IDLE_REMIND)
 
 <!--Device-DeviceRemindType-IDLE_REMIND = 1--><!--Device-DeviceRemindType-IDLE_REMIND = 1-End-->
 
@@ -74,7 +74,7 @@ ACTIVE_DONOT_REMIND = 2
 
 **废弃版本：** 9
 
-**替代接口：** [ACTIVE_DONOT_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#ACTIVE_DONOT_REMIND)
+**替代接口：** [ACTIVE_DONOT_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#ACTIVE_DONOT_REMIND)
 
 <!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2--><!--Device-DeviceRemindType-ACTIVE_DONOT_REMIND = 2-End-->
 
@@ -96,7 +96,7 @@ ACTIVE_REMIND = 3
 
 **废弃版本：** 9
 
-**替代接口：** [ACTIVE_REMIND](ohos.notificationManager/notificationManager.DeviceRemindType#ACTIVE_REMIND)
+**替代接口：** [ACTIVE_REMIND](arkts-notification-notificationmanager-deviceremindtype-e-sys.md#ACTIVE_REMIND)
 
 <!--Device-DeviceRemindType-ACTIVE_REMIND = 3--><!--Device-DeviceRemindType-ACTIVE_REMIND = 3-End-->
 

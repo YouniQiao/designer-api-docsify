@@ -6,7 +6,7 @@ Defines the callback invoked when the acceleration sensor data changes.
 
 **Deprecated since:** 8
 
-**Substitutes:** [AccelerometerResponse](ohos.sensor/sensor#AccelerometerResponse)
+**Substitutes:** [AccelerometerResponse](arkts-sensorservice-sensor-accelerometerresponse-i.md#AccelerometerResponse)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -34,7 +34,7 @@ Acceleration on the x-axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** [x](ohos.sensor/sensor#AccelerometerResponse.x)
+**Substitutes:** [x](arkts-sensorservice-sensor-accelerometerresponse-i.md#x)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -58,7 +58,7 @@ Acceleration on the y-axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** [y](ohos.sensor/sensor#AccelerometerResponse.y)
+**Substitutes:** [y](arkts-sensorservice-sensor-accelerometerresponse-i.md#y)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -82,7 +82,7 @@ Acceleration on the z-axis.
 
 **Deprecated since:** 8
 
-**Substitutes:** [z](ohos.sensor/sensor#AccelerometerResponse.z)
+**Substitutes:** [z](arkts-sensorservice-sensor-accelerometerresponse-i.md#z)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 

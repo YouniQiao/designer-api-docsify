@@ -1,11 +1,12 @@
 # AccessibilityElement
 
-无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用   
-[AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement)或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
+无障碍节点元素。在调用 **AccessibilityElement** 的 API 之前，应该调用 [AccessibilityExtensionContext.getAccessibilityFocusedElement()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getAccessibilityFocusedElement) 或 [AccessibilityExtensionContext.getRootInActiveWindow()](arkts-accessibility-accessibilityextensioncontext-c-sys.md#getRootInActiveWindow) 来获取一个 **AccessibilityElement** 实例。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface AccessibilityElement--><!--Device-unnamed-export declare interface AccessibilityElement-End-->
 
@@ -33,7 +34,7 @@ actionNames(callback: AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回节点元素支持的所有操作名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回节点元素支持的所有操作名称。 |
 
 ## 示例
 
@@ -109,7 +110,7 @@ attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<A
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | 是 | 回调函数，返回节点元素的所有属性名称。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;T&gt;&gt; | 是 | 回调函数，返回节点元素的所有属性名称。 |
 
 ## 示例
 
@@ -191,14 +192,14 @@ attributeValue<T extends keyof ElementAttributeValues>(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | attributeName | T | 是 | 表示属性的名称。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | 是 | 回调函数，返回根据节点属性名称获取的属性值。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ElementAttributeValues[T]&gt; | 是 | 回调函数，返回根据节点属性名称获取的属性值。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-属性不存在) | This property does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300004](../errorcode-accessibility.md#9300004-属性不存在) | This property does not exist. |
 
 ## 示例
 
@@ -252,8 +253,8 @@ attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300004-属性不存在) | This property does not exist. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300004](../errorcode-accessibility.md#9300004-属性不存在) | This property does not exist. |
 
 ## 示例
 
@@ -295,13 +296,13 @@ findElement(type: 'content', condition: string, callback: AsyncCallback<Array<Ac
 | --- | --- | --- | --- |
 | type | 'content' | 是 | 固定为'content',表示查找的类型为节点元素内容。 |
 | condition | string | 是 | 表示查找的条件。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数，返回满足指定查询关键字的所有节点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数，返回满足指定查询关键字的所有节点元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -356,7 +357,7 @@ findElement(type: 'content', condition: string): Promise<Array<AccessibilityElem
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -398,13 +399,13 @@ findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<Acc
 | --- | --- | --- | --- |
 | type | 'focusType' | 是 | 固定为'focusType'，表示查询的类型为节点的焦点元素类型。 |
 | condition | [FocusType](arkts-accessibility-focustype-t.md) | 是 | 表示查询焦点元素的类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回满足指定查询焦点元素类型的节点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回满足指定查询焦点元素类型的节点元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -459,7 +460,7 @@ findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityEleme
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -501,13 +502,13 @@ findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCa
 | --- | --- | --- | --- |
 | type | 'focusDirection' | 是 | 固定为'focusDirection', 表示查询的类型为节点的下一焦点元素方向。 |
 | condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | 是 | 表示下一查询焦点元素的方向。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回满足指定查询下一焦点元素方向的节点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回满足指定查询下一焦点元素方向的节点元素。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -562,7 +563,7 @@ findElement(type: 'focusDirection', condition: FocusDirection): Promise<Accessib
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## 示例
 
@@ -604,14 +605,14 @@ performAction(actionName: string, parameters: object, callback: AsyncCallback<vo
 | --- | --- | --- | --- |
 | actionName | string | 是 | 表示属性的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md#Action)。 |
 | parameters | object | 是 | 表示执行操作时所需要的参数；默认为空。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，表示执行指定操作的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，表示执行指定操作的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
 
 ## 示例
 
@@ -666,8 +667,8 @@ performAction(actionName: string, parameters?: object): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
 
 ## 示例
 
@@ -742,14 +743,14 @@ performAction(actionName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | actionName | string | 是 | 表示属性的名称，取值参考[Action](arkts-accessibility-accessibility-action-t.md#Action)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，表示执行指定操作的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，表示执行指定操作的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [9300005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-accessibility-kit/errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [9300005](../errorcode-accessibility.md#9300005-不支持该操作) | This action is not supported. |
 
 ## 示例
 

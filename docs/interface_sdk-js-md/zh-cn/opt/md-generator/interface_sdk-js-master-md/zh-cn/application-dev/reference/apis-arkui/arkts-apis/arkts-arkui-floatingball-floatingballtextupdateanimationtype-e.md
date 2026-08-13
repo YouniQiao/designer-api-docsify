@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-floatingBall-enum FloatingBallTextUpdateAnimationType--><!--Device-floatingBall-enum FloatingBallTextUpdateAnimationType-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -17,6 +19,8 @@ ANIMATION_NONE = 0
 无动画。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ ANIMATION_OPACITY = 1
 淡入淡出动画。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

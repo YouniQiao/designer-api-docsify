@@ -2,11 +2,13 @@
 
 Defines a type of gesture handler object for tap gestures.
 
-**Inheritance/Implementation:** TapGestureHandler extends [GestureHandler<TapGestureHandler>](GestureHandler<TapGestureHandler>)
+**Inheritance/Implementation:** TapGestureHandler extends GestureHandler<TapGestureHandler>
 
 **Since:** 12
 
-<!--Device-unnamed-declare class TapGestureHandler extends GestureHandler<TapGestureHandler>--><!--Device-unnamed-declare class TapGestureHandler extends GestureHandler<TapGestureHandler>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class TapGestureHandler--><!--Device-unnamed-declare class TapGestureHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,6 +21,8 @@ constructor(options?: TapGestureHandlerOptions)
 Constructor used to create a tap gesture handler instance.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ onAction(event: Callback<GestureEvent>): TapGestureHandler
 Sets the callback for successful tap gesture recognition.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

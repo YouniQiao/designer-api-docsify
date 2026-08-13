@@ -8,7 +8,9 @@ const DEFAULT_INTERRUPT_GROUP_ID: number
 
 Define default interrupt group id for audio
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int--><!--Device-audio-const DEFAULT_INTERRUPT_GROUP_ID: int-End-->
 
@@ -22,7 +24,9 @@ const DEFAULT_VOLUME_GROUP_ID: number
 
 Define default volume group id for audio
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int--><!--Device-audio-const DEFAULT_VOLUME_GROUP_ID: int-End-->
 

@@ -16,6 +16,8 @@ Obtains information about all local plugins installed on the current application
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.kernel.SUPPORT_LOCAL_PLUGIN
 
 **Model restriction:** This API can be used only in the stage model.
@@ -34,4 +36,4 @@ Obtains information about all local plugins installed on the current application
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |

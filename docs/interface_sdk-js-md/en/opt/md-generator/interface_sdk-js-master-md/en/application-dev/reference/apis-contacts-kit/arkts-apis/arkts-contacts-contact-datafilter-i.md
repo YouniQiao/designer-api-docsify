@@ -4,6 +4,8 @@ Defines the contact data filter item.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-contact-interface DataFilter--><!--Device-contact-interface DataFilter-End-->
 
 **System capability:** SystemCapability.Applications.Contacts
@@ -26,6 +28,8 @@ Contact data field.
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-DataFilter-field: DataField--><!--Device-DataFilter-field: DataField-End-->
@@ -43,6 +47,8 @@ Contact filtering parameter. Multiple filter options in the array are ORed. The 
 **Type:** Array&lt;[FilterOptions](arkts-contacts-contact-filteroptions-i.md)&gt;
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
 

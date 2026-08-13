@@ -14,9 +14,11 @@ function isNRSupported(): boolean
 
 Checks whether the device supports 5G New Radio (NR).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-function isNRSupported(): boolean--><!--Device-radio-function isNRSupported(): boolean-End-->
 
@@ -44,9 +46,11 @@ function isNRSupported(slotId: int): boolean
 
 Checks whether the device supports 5G New Radio (NR) by according card slot.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-function isNRSupported(slotId: int): boolean--><!--Device-radio-function isNRSupported(slotId: int): boolean-End-->
 
@@ -56,7 +60,7 @@ Checks whether the device supports 5G New Radio (NR) by according card slot.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slot index number supported by the device. |
+| slotId | int | Yes | Indicates the card slot index int, ranging from 0 to the maximum card slot index number supported by the device. |
 
 **Return value:**
 

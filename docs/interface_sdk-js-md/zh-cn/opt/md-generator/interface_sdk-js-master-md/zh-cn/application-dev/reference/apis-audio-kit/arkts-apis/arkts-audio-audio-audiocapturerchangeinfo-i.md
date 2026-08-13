@@ -2,7 +2,9 @@
 
 描述音频采集器更改信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioCapturerChangeInfo--><!--Device-audio-interface AudioCapturerChangeInfo-End-->
 
@@ -18,7 +20,9 @@ readonly capturerInfo: AudioCapturerInfo
 
 **类型：** [AudioCapturerInfo](arkts-audio-audio-audiocapturerinfo-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerChangeInfo-readonly capturerInfo: AudioCapturerInfo-End-->
 
@@ -34,7 +38,9 @@ readonly deviceDescriptors: AudioDeviceDescriptors
 
 **类型：** [AudioDeviceDescriptors](arkts-audio-audio-audiodevicedescriptors-t.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors--><!--Device-AudioCapturerChangeInfo-readonly deviceDescriptors: AudioDeviceDescriptors-End-->
 
@@ -50,7 +56,9 @@ readonly muted?: boolean
 
 **类型：** boolean
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly muted?: boolean--><!--Device-AudioCapturerChangeInfo-readonly muted?: boolean-End-->
 
@@ -66,7 +74,9 @@ readonly streamId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioCapturerChangeInfo-readonly streamId: int--><!--Device-AudioCapturerChangeInfo-readonly streamId: int-End-->
 

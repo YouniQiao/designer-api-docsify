@@ -6,9 +6,9 @@ ChipV2 icon common option
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export abstract class ChipV2ImageIcon extends ChipV2Icon--><!--Device-unnamed-export abstract class ChipV2ImageIcon extends ChipV2Icon-End-->
+<!--Device-unnamed-export abstract class ChipV2ImageIcon--><!--Device-unnamed-export abstract class ChipV2ImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +28,8 @@ The constructor of ChipV2ImageIcon
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,7 +47,8 @@ The constructor of ChipV2ImageIcon
 ## activatedFillColor
 
 ```TypeScript
-public activatedFillColor?: ColorMetrics
+@Trace
+  public activatedFillColor?: ColorMetrics
 ```
 
 Image filled color when chip is activated.
@@ -54,18 +57,21 @@ Image filled color when chip is activated.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2ImageIcon-public activatedFillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-public activatedFillColor?: ColorMetrics-End-->
+<!--Device-ChipV2ImageIcon-@Trace  public activatedFillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-@Trace  public activatedFillColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fillColor
 
 ```TypeScript
-public fillColor?: ColorMetrics
+@Trace
+  public fillColor?: ColorMetrics
 ```
 
 Image filled color.
@@ -74,18 +80,21 @@ Image filled color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2ImageIcon-public fillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-public fillColor?: ColorMetrics-End-->
+<!--Device-ChipV2ImageIcon-@Trace  public fillColor?: ColorMetrics--><!--Device-ChipV2ImageIcon-@Trace  public fillColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## modifier
 
 ```TypeScript
-public modifier?: ImageModifier
+@Trace
+  public modifier?: ImageModifier
 ```
 
 Modifier for icon.
@@ -94,18 +103,21 @@ Modifier for icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2ImageIcon-public modifier?: ImageModifier--><!--Device-ChipV2ImageIcon-public modifier?: ImageModifier-End-->
+<!--Device-ChipV2ImageIcon-@Trace  public modifier?: ImageModifier--><!--Device-ChipV2ImageIcon-@Trace  public modifier?: ImageModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## size
 
 ```TypeScript
-public size?: SizeT<LengthMetrics>
+@Trace
+  public size?: SizeT<LengthMetrics>
 ```
 
 Image size option.
@@ -114,18 +126,21 @@ Image size option.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2ImageIcon-public size?: SizeT<LengthMetrics>--><!--Device-ChipV2ImageIcon-public size?: SizeT<LengthMetrics>-End-->
+<!--Device-ChipV2ImageIcon-@Trace  public size?: SizeT<LengthMetrics>--><!--Device-ChipV2ImageIcon-@Trace  public size?: SizeT<LengthMetrics>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## src
 
 ```TypeScript
-public src: ResourceStr
+@Trace
+  public src: ResourceStr
 ```
 
 Image resource.
@@ -134,10 +149,12 @@ Image resource.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2ImageIcon-public src: ResourceStr--><!--Device-ChipV2ImageIcon-public src: ResourceStr-End-->
+<!--Device-ChipV2ImageIcon-@Trace  public src: ResourceStr--><!--Device-ChipV2ImageIcon-@Trace  public src: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

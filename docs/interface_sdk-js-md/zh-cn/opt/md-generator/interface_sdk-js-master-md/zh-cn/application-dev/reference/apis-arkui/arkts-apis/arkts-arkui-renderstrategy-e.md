@@ -1,8 +1,10 @@
 # RenderStrategy
 
-RenderStrategy 的枚举。定义图形渲染策略。
+RenderStrategy 的枚举。 定义图形渲染策略。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum RenderStrategy--><!--Device-unnamed-declare enum RenderStrategy-End-->
 
@@ -17,6 +19,8 @@ FAST = 0
 当前组件及其子组件将直接绘制到画布上，并应用圆角效果。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,9 +38,11 @@ FAST = 0
 OFFSCREEN = 1
 ```
 
-当前组件及其子组件会先被画到一个离屏画布上，然后进行一些图形渲染操作，最后绘制到主画布上。
+当前组件及其子组件会先被画到一个离屏画布上， 然后进行一些图形渲染操作，最后绘制到主画布上。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,0 +1,36 @@
+# get
+
+## get
+
+```TypeScript
+function get<T extends object, P extends PropertyKey>(
+        target: T,
+        propertyKey: P,
+        receiver?: unknown,
+    ): P extends keyof T ? T[P] : any
+```
+
+Gets the property of target, equivalent to `target[propertyKey]` when `receiver === target`.
+
+**Since:** -1
+
+**ArkTS mode:** ArkTS-Dyn only, since version -1.
+
+**Deprecated since:** -1
+
+<!--Device-Reflect-function get<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,        receiver?: unknown,    ): P extends keyof T ? T[P] : any--><!--Device-Reflect-function get<T extends object, P extends PropertyKey>(        target: T,        propertyKey: P,        receiver?: unknown,    ): P extends keyof T ? T[P] : any-End-->
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| target | T | Yes |  |
+| propertyKey | P | Yes |  |
+| receiver | unknown | No |  |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| P extends keyof T ? T[P] : any |  |
+

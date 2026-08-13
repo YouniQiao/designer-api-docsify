@@ -6,6 +6,8 @@ Describes whether the surface held by the **XComponent** is treated as opaque du
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SurfaceConfig--><!--Device-unnamed-declare interface SurfaceConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,8 +18,7 @@ Describes whether the surface held by the **XComponent** is treated as opaque du
 isOpaque?: boolean
 ```
 
-Whether the surface held by the **XComponent** is treated as opaque during rendering. If this attribute is not set,the default value **false** is used, indicating that the transparency of the pixels in the content drawn on the surface will be applied during rendering.  
-**true**: yes; **false**: no.Default value: **false**.
+Whether the surface held by the **XComponent** is treated as opaque during rendering. If this attribute is not set, the default value **false** is used, indicating that the transparency of the pixels in the content drawn on the surface will be applied during rendering. **true**: yes; **false**: no. Default value: **false**.
 
 **Type:** boolean
 
@@ -26,6 +27,8 @@ Whether the surface held by the **XComponent** is treated as opaque during rende
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

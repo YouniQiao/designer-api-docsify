@@ -12,9 +12,11 @@ import { media } from '@kit.MediaKit';
 function reportAVScreenCaptureUserChoice(sessionId: number, choice: string): Promise<void>
 ```
 
-Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation.This API is called by the system application that creates the dialog box.
+Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>--><!--Device-media-function reportAVScreenCaptureUserChoice(sessionId: int, choice: string): Promise<void>-End-->
 
@@ -39,8 +41,8 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-memory-allocation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [5400101](../errorcode-media.md#5400101-memory-allocation-failed) |
 
 ## Examples
 

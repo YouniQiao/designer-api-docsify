@@ -14,11 +14,13 @@ function addBeaconFence(fenceRequest: BeaconFenceRequest): Promise<number>
 
 Add a beacon fence.
 
-**Since:** 20
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-geoLocationManager-function addBeaconFence(fenceRequest: BeaconFenceRequest): Promise<int>--><!--Device-geoLocationManager-function addBeaconFence(fenceRequest: BeaconFenceRequest): Promise<int>-End-->
 
@@ -40,12 +42,12 @@ Add a beacon fence.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [3501601](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3501601-failed-to-add-a-beacon-fence-because-the-maximum-number-is-exceeded) |
-| [3501603](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3501603-failed-to-add-a-beacon-fence-because-of-duplication) |
-| [3501101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3501101-failed-to-add-a-beacon-fence-because-bluetooth-is-disabled) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [3501100](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3501100-failed-to-add-a-beacon-fence-because-the-location-switch-is-turned-off) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [3501601](../errorcode-geoLocationManager.md#3501601-failed-to-add-a-beacon-fence-because-the-maximum-number-is-exceeded) |
+| [3501603](../errorcode-geoLocationManager.md#3501603-failed-to-add-a-beacon-fence-because-of-duplication) |
+| [3501101](../errorcode-geoLocationManager.md#3501101-failed-to-add-a-beacon-fence-because-bluetooth-is-disabled) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [3501100](../errorcode-geoLocationManager.md#3501100-failed-to-add-a-beacon-fence-because-the-location-switch-is-turned-off) |
 
 ## Examples
 

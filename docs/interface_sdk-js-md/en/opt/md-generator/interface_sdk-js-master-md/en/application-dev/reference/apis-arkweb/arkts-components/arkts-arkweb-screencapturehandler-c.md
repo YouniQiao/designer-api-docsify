@@ -1,17 +1,10 @@
 # ScreenCaptureHandler
 
-Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request.For details about the sample code,see [onScreenCaptureRequest](./arkts-basic-components-web-events.md#onscreencapturerequest10).
-
-> **NOTE：**
-> 
-> - The initial APIs of this component are supported since API version 8.
-> Updates will be marked with a superscript to indicate their earliest API version.
-> 
-> - The initial APIs of this class are supported since API version 10.
-> 
-> - The sample effect is subject to the actual device.
+Implements the **ScreenCaptureHandler** object for accepting or rejecting a screen capture request. For details about the sample code, see [onScreenCaptureRequest](./arkts-basic-components-web-events.md#onScreenCaptureRequest). > **NOTE：**> > - The initial APIs of this component are supported since API version 8. > Updates will be marked with a superscript to indicate their earliest API version. > > - The initial APIs of this class are supported since API version 10. > > - The sample effect is subject to the actual device.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ScreenCaptureHandler--><!--Device-unnamed-declare class ScreenCaptureHandler-End-->
 
@@ -26,6 +19,8 @@ constructor()
 Constructs a **ScreenCaptureHandler** object.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,6 +38,8 @@ Rejects this screen capture request.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenCaptureHandler-deny(): void--><!--Device-ScreenCaptureHandler-deny(): void-End-->
@@ -58,6 +55,8 @@ getOrigin(): string
 Obtains the origin of this web page.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -80,6 +79,8 @@ grant(config: ScreenCaptureConfig): void
 Grants the screen capture permission.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

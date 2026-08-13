@@ -2,9 +2,11 @@
 
 Enumerates the media source types.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum SourceType--><!--Device-webview-enum SourceType-End-->
 
@@ -18,9 +20,13 @@ URL = 0
 
 URL.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SourceType-URL = 0--><!--Device-SourceType-URL = 0-End-->
 
@@ -34,9 +40,13 @@ MSE = 1
 
 Blob.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SourceType-MSE = 1--><!--Device-SourceType-MSE = 1-End-->
 

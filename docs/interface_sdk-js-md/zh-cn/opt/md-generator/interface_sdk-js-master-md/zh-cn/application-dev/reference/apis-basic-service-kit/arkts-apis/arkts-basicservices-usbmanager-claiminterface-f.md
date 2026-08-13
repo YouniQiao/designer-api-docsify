@@ -6,14 +6,11 @@
 function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): number
 ```
 
-声明对USB设备某个接口的控制权。
+声明对USB设备某个接口的控制权。 > **说明：** > > 在USB编程中，claim interface是一个常见操作，指的是应用程序请求操作系统将某个USB接口从内核驱动中释放并交由用户空间程序控制。&lt;br&gt; > > 下面用到的claim通信接口都表示claim interface操作。
 
-> **说明：**
-> 
-> 在USB编程中，claim interface是一个常见操作，指的是应用程序请求操作系统将某个USB接口从内核驱动中释放并交由用户空间程序控制。&lt;br&gt;
-> > 下面用到的claim通信接口都表示claim interface操作。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int--><!--Device-usbManager-function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolean): int-End-->
 
@@ -37,8 +34,8 @@ function claimInterface(pipe: USBDevicePipe, iface: USBInterface, force?: boolea
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 定义扫描仪选项值的接口。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-scan-interface ScannerOptionValue--><!--Device-scan-interface ScannerOptionValue-End-->
 
@@ -18,7 +20,9 @@ boolValue?: boolean
 
 **类型：** boolean
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerOptionValue-boolValue?: boolean--><!--Device-ScannerOptionValue-boolValue?: boolean-End-->
 
@@ -34,7 +38,9 @@ numValue?: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerOptionValue-numValue?: int--><!--Device-ScannerOptionValue-numValue?: int-End-->
 
@@ -50,7 +56,9 @@ strValue?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerOptionValue-strValue?: string--><!--Device-ScannerOptionValue-strValue?: string-End-->
 
@@ -66,7 +74,9 @@ valueType: OptionValueType
 
 **类型：** [OptionValueType](arkts-basicservices-scan-optionvaluetype-e.md)
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScannerOptionValue-valueType: OptionValueType--><!--Device-ScannerOptionValue-valueType: OptionValueType-End-->
 

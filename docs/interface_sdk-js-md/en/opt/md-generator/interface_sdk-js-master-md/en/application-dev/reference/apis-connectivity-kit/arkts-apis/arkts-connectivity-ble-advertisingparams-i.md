@@ -2,7 +2,9 @@
 
 Describes the advertising parameters.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface AdvertisingParams--><!--Device-ble-interface AdvertisingParams-End-->
 
@@ -24,7 +26,9 @@ Indicates the advertising data.
 
 **Type:** AdvertiseData
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Indicates the advertising response.
 
 **Type:** AdvertiseData
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Indicates the advertising settings.
 
 **Type:** AdvertiseSetting
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,11 +82,13 @@ Indicates the advertising settings.
 duration?: number
 ```
 
-Indicates the duration for advertising continuously.The duration, in 10ms unit. Valid range is from 1 (10ms) to 65535 (655,350 ms).If this parameter is not specified or is set to 0, advertisement is continuously sent.
+Indicates the duration for advertising continuously. The duration, in 10ms unit. Valid range is from 1 (10ms) to 65535 (655,350 ms). If this parameter is not specified or is set to 0, advertisement is continuously sent.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

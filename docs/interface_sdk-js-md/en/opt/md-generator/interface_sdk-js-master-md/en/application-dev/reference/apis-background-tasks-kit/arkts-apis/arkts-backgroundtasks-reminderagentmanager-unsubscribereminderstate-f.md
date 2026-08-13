@@ -16,6 +16,8 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-reminderAgentManager-function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>--><!--Device-reminderAgentManager-function unsubscribeReminderState(callback?: Callback<Array<ReminderState>>): Promise<void>-End-->
@@ -38,7 +40,7 @@ Unsubscribes from agent-powered reminder state changes. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [1700007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
+| [1700007](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700007-invalid-parameter) |
 
 ## Examples
 

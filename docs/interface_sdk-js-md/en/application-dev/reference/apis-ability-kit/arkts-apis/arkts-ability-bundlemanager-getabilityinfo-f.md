@@ -14,13 +14,15 @@ function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityIn
 
 Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_ABILITY_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>--><!--Device-bundleManager-function getAbilityInfo(uri: string, abilityFlags: int): Promise<Array<AbilityInfo>>-End-->
 
@@ -31,7 +33,7 @@ Obtains the ability information based on the given resource identifier and abili
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the resource. The value is the same as that of the [uris field under skills in the module.json5 file](../../../quick-start/module-configuration-file.md#skills). |
-| abilityFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e.md#AbilityFlag), indicating the ability information to be obtained. |
+| abilityFlags | int | Yes | [Ability flag](arkts-ability-bundlemanager-abilityflag-e-sys.md#AbilityFlag-(System-API)), indicating the ability information to be obtained. |
 
 **Return value:**
 
@@ -43,8 +45,8 @@ Obtains the ability information based on the given resource identifier and abili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-ability-name-does-not-exist) | The ability is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The ability is not found. |
 
 ## Examples
 

@@ -16,6 +16,8 @@ Checks whether this domain account is supported. This API uses a promise to retu
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>--><!--Device-osAccount-function isDomainAccountSupported(): Promise<boolean>-End-->
@@ -32,7 +34,7 @@ Checks whether this domain account is supported. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 

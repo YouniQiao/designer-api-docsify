@@ -4,6 +4,8 @@ Defines the event for PIN verification.
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface VerifyPinEvent--><!--Device-unnamed-declare interface VerifyPinEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -20,6 +22,8 @@ Handle the result of PIN verification.
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-VerifyPinEvent-handler: VerifyPinHandler--><!--Device-VerifyPinEvent-handler: VerifyPinHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -35,6 +39,8 @@ The identity of the Credential.
 **类型：** string
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 <!--Device-VerifyPinEvent-identity: string--><!--Device-VerifyPinEvent-identity: string-End-->
 

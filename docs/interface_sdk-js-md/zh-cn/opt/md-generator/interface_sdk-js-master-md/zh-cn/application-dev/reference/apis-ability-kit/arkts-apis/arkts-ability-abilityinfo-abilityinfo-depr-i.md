@@ -1,11 +1,6 @@
 # AbilityInfo
 
-Ability信息，未做特殊说明的属性，均通过  
-[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)获取。
-
-> **说明：**
-> 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#AbilityInfo)替代。
+Ability信息，未做特殊说明的属性，均通过 [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo)获取。 > **说明：** > > 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](#AbilityInfo)替代。
 
 **起始版本：** 7
 
@@ -23,9 +18,7 @@ Ability信息，未做特殊说明的属性，均通过
 readonly applicationInfo: ApplicationInfo
 ```
 
-应用程序的配置信息。
-
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
+应用程序的配置信息。 通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo) 接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
 
@@ -35,7 +28,7 @@ readonly applicationInfo: ApplicationInfo
 
 **废弃版本：** 9
 
-**替代接口：** [applicationInfo](ohos.bundle.bundleManager/bundleManager.AbilityInfo#applicationInfo)
+**替代接口：** applicationInfo
 
 <!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo--><!--Device-AbilityInfo-readonly applicationInfo: ApplicationInfo-End-->
 
@@ -47,9 +40,7 @@ readonly applicationInfo: ApplicationInfo
 readonly backgroundModes: number
 ```
 
-表示后台服务的类型。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+表示后台服务的类型。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** number
 
@@ -81,7 +72,7 @@ readonly bundleName: string
 
 **废弃版本：** 9
 
-**替代接口：** [bundleName](ohos.bundle.bundleManager/bundleManager.AbilityInfo#bundleName)
+**替代接口：** bundleName
 
 <!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
@@ -103,7 +94,7 @@ Ability的描述。
 
 **废弃版本：** 9
 
-**替代接口：** [description](ohos.bundle.bundleManager/bundleManager.AbilityInfo#description)
+**替代接口：** description
 
 <!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
 
@@ -125,7 +116,7 @@ Ability的描述的资源id值。
 
 **废弃版本：** 9
 
-**替代接口：** [descriptionId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#descriptionId)
+**替代接口：** descriptionId
 
 <!--Device-AbilityInfo-readonly descriptionId: number--><!--Device-AbilityInfo-readonly descriptionId: number-End-->
 
@@ -167,7 +158,7 @@ Ability支持的设备类型。
 
 **废弃版本：** 9
 
-**替代接口：** [deviceTypes](ohos.bundle.bundleManager/bundleManager.AbilityInfo#deviceTypes)
+**替代接口：** deviceTypes
 
 <!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -189,7 +180,7 @@ Ability是否可用，取值为true表示Ability可用，取值为false表示Abi
 
 **废弃版本：** 9
 
-**替代接口：** [enabled](ohos.bundle.bundleManager/bundleManager.AbilityInfo#enabled)
+**替代接口：** enabled
 
 <!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
 
@@ -201,9 +192,7 @@ Ability是否可用，取值为true表示Ability可用，取值为false表示Abi
 readonly formEnabled: boolean
 ```
 
-判断Ability是否提供卡片能力，取值为true表示Ability提供卡片能力，取值为false表示Ability不提供卡片能力。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+判断Ability是否提供卡片能力，取值为true表示Ability提供卡片能力，取值为false表示Ability不提供卡片能力。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** boolean
 
@@ -235,7 +224,7 @@ Ability的图标资源文件索引。
 
 **废弃版本：** 9
 
-**替代接口：** [icon](ohos.bundle.bundleManager/bundleManager.AbilityInfo#icon)
+**替代接口：** icon
 
 <!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
 
@@ -257,7 +246,7 @@ Ability的图标的资源id值。
 
 **废弃版本：** 9
 
-**替代接口：** [iconId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#iconId)
+**替代接口：** iconId
 
 <!--Device-AbilityInfo-readonly iconId: number--><!--Device-AbilityInfo-readonly iconId: number-End-->
 
@@ -279,7 +268,7 @@ readonly isVisible: boolean
 
 **废弃版本：** 9
 
-**替代接口：** [exported](ohos.bundle.bundleManager/bundleManager.AbilityInfo#exported)
+**替代接口：** exported
 
 <!--Device-AbilityInfo-readonly isVisible: boolean--><!--Device-AbilityInfo-readonly isVisible: boolean-End-->
 
@@ -301,7 +290,7 @@ Ability对用户显示的名称。
 
 **废弃版本：** 9
 
-**替代接口：** [label](ohos.bundle.bundleManager/bundleManager.AbilityInfo#label)
+**替代接口：** label
 
 <!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
 
@@ -323,7 +312,7 @@ Ability的标签的资源id值。
 
 **废弃版本：** 9
 
-**替代接口：** [labelId](ohos.bundle.bundleManager/bundleManager.AbilityInfo#labelId)
+**替代接口：** labelId
 
 <!--Device-AbilityInfo-readonly labelId: number--><!--Device-AbilityInfo-readonly labelId: number-End-->
 
@@ -345,7 +334,7 @@ Ability的启动模式。
 
 **废弃版本：** 9
 
-**替代接口：** [launchType](arkts-ability-abilityinfo-i.md#launchType)
+**替代接口：** launchType
 
 <!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode--><!--Device-AbilityInfo-readonly launchMode: bundle.LaunchMode-End-->
 
@@ -357,9 +346,7 @@ Ability的启动模式。
 readonly metaData: Array<CustomizeData>
 ```
 
-Ability的元信息。
-
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
+Ability的元信息。 通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo) 接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
 
 **类型：** Array&lt;[CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)&gt;
 
@@ -369,7 +356,7 @@ Ability的元信息。
 
 **废弃版本：** 9
 
-**替代接口：** [metadata](ohos.bundle.bundleManager/bundleManager.AbilityInfo#metadata)
+**替代接口：** metadata
 
 <!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>--><!--Device-AbilityInfo-readonly metaData: Array<CustomizeData>-End-->
 
@@ -391,7 +378,7 @@ Ability所属的HAP的名称。
 
 **废弃版本：** 9
 
-**替代接口：** [moduleName](ohos.bundle.bundleManager/bundleManager.AbilityInfo#moduleName)
+**替代接口：** moduleName
 
 <!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
 
@@ -413,7 +400,7 @@ Ability名称。
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.bundle.bundleManager/bundleManager.AbilityInfo#name)
+**替代接口：** name
 
 <!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
 
@@ -435,7 +422,7 @@ Ability的显示模式。
 
 **废弃版本：** 9
 
-**替代接口：** [orientation](ohos.bundle.bundleManager/bundleManager.AbilityInfo#orientation)
+**替代接口：** orientation
 
 <!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundle.DisplayOrientation-End-->
 
@@ -447,9 +434,7 @@ Ability的显示模式。
 readonly permissions: Array<string>
 ```
 
-被其他应用Ability调用时需要申请的权限集合。
-
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo-1)接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
+被其他应用Ability调用时需要申请的权限集合。 通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getAbilityInfo) 接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 
@@ -459,7 +444,7 @@ readonly permissions: Array<string>
 
 **废弃版本：** 9
 
-**替代接口：** [permissions](ohos.bundle.bundleManager/bundleManager.AbilityInfo#permissions)
+**替代接口：** permissions
 
 <!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
 
@@ -481,7 +466,7 @@ Ability的进程名称。
 
 **废弃版本：** 9
 
-**替代接口：** [process](ohos.bundle.bundleManager/bundleManager.AbilityInfo#process)
+**替代接口：** process
 
 <!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 
@@ -493,9 +478,7 @@ Ability的进程名称。
 readonly readPermission: string
 ```
 
-读取Ability数据所需的权限。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+读取Ability数据所需的权限。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -517,9 +500,7 @@ readonly readPermission: string
 readonly subType: bundle.AbilitySubType
 ```
 
-Ability中枚举使用的模板的子类型。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+Ability中枚举使用的模板的子类型。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** bundle.AbilitySubType
 
@@ -541,9 +522,7 @@ Ability中枚举使用的模板的子类型。
 readonly targetAbility: string
 ```
 
-当前Ability重用的目标Ability。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+当前Ability重用的目标Ability。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -565,9 +544,7 @@ readonly targetAbility: string
 readonly type: bundle.AbilityType
 ```
 
-Ability类型。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+Ability类型。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** bundle.AbilityType
 
@@ -589,9 +566,7 @@ Ability类型。
 readonly uri: string
 ```
 
-获取Ability的统一资源标识符（URI）。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+获取Ability的统一资源标识符（URI）。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 
@@ -613,9 +588,7 @@ readonly uri: string
 readonly writePermission: string
 ```
 
-向Ability写数据所需的权限。
-
-**模型约束：** 此接口仅可在FA模型下使用。
+向Ability写数据所需的权限。 **模型约束：** 此接口仅可在FA模型下使用。
 
 **类型：** string
 

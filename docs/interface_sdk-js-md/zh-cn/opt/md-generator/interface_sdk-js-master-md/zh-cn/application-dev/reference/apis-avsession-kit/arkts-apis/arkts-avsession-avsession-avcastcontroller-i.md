@@ -1,12 +1,10 @@
 # AVCastController
 
-在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getAVCastController)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件，获取会话元数据，播放状态信息等操作。
+在投播建立后，调用[avSession.getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getAVCastController（系统接口）)后，返回会话控制器实例。控制器可查看会话ID，并可完成对会话发送命令及事件， 获取会话元数据，播放状态信息等操作。 > **说明：** > > - 本Interface首批接口从API version 10开始支持。
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 10开始支持。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-avSession-interface AVCastController--><!--Device-avSession-interface AVCastController-End-->
 
@@ -20,7 +18,9 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 获取当前的远端播放状态。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void--><!--Device-AVCastController-getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void-End-->
 
@@ -36,7 +36,7 @@ getAVPlaybackState(callback: AsyncCallback<AVPlaybackState>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getAVPlaybackState
 
@@ -46,7 +46,9 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 获取当前的远端播放状态。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,7 +66,7 @@ getAVPlaybackState(): Promise<AVPlaybackState>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getCurrentItem
 
@@ -74,7 +76,9 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 获取当前投播的资源信息。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void--><!--Device-AVCastController-getCurrentItem(callback: AsyncCallback<AVQueueItem>): void-End-->
 
@@ -90,7 +94,7 @@ getCurrentItem(callback: AsyncCallback<AVQueueItem>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getCurrentItem
 
@@ -100,7 +104,9 @@ getCurrentItem(): Promise<AVQueueItem>
 
 获取当前投播的资源信息。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -118,7 +124,7 @@ getCurrentItem(): Promise<AVQueueItem>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getRecommendedResolutionLevel
 
@@ -128,9 +134,11 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 通过传递解码方式，获取推荐的分辨率。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>--><!--Device-AVCastController-getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel>-End-->
 
@@ -152,7 +160,7 @@ getRecommendedResolutionLevel(decoderType: DecoderType): Promise<ResolutionLevel
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getSupportedDecoders
 
@@ -162,9 +170,11 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 获取当前远端设备的解码方式。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>--><!--Device-AVCastController-getSupportedDecoders(): Promise<Array<DecoderType>>-End-->
 
@@ -180,7 +190,7 @@ getSupportedDecoders(): Promise<Array<DecoderType>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getSupportedHdrCapabilities
 
@@ -190,9 +200,11 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 获取当前的远端设备所支持的HDR能力。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>--><!--Device-AVCastController-getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>-End-->
 
@@ -208,7 +220,7 @@ getSupportedHdrCapabilities(): Promise<Array<hdrCapability.HDRFormat>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getSupportedPlaySpeeds
 
@@ -218,9 +230,11 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 获取当前的远端设备所支持倍速播放列表，仅支持使用cast+协议连接的设备。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>--><!--Device-AVCastController-getSupportedPlaySpeeds(): Promise<Array<double>>-End-->
 
@@ -236,7 +250,7 @@ getSupportedPlaySpeeds(): Promise<Array<number>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getValidCommands
 
@@ -246,7 +260,9 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 获取当前支持的命令。结果通过callback异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void-End-->
 
@@ -262,7 +278,7 @@ getValidCommands(callback: AsyncCallback<Array<AVCastControlCommandType>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## getValidCommands
 
@@ -272,7 +288,9 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 获取当前支持的命令。结果通过Promise异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>--><!--Device-AVCastController-getValidCommands(): Promise<Array<AVCastControlCommandType>>-End-->
 
@@ -288,21 +306,21 @@ getValidCommands(): Promise<Array<AVCastControlCommandType>>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('playbackStateChange')
+## offCastControlAudioRendererError
 
 ```TypeScript
-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void
+offCastControlAudioRendererError(callback?: ErrorCallback): void
 ```
 
-取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listeners for cast control audio renderer error events.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
+<!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlAudioRendererError(callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -310,29 +328,159 @@ off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): v
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'playbackStateChange' | 是 |
-| callback | (state: AVPlaybackState) = & gt; void | 否 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offCastControlDecodingError
+
+```TypeScript
+offCastControlDecodingError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control decoding error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDecodingError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offCastControlDrmError
+
+```TypeScript
+offCastControlDrmError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control drm error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlDrmError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offCastControlGenericError
+
+```TypeScript
+offCastControlGenericError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control generic error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlGenericError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offCastControlIoError
+
+```TypeScript
+offCastControlIoError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control input/output error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlIoError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offCastControlParsingError
+
+```TypeScript
+offCastControlParsingError(callback?: ErrorCallback): void
+```
+
+Unregister listeners for cast control parsing error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void--><!--Device-AVCastController-offCastControlParsingError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+## offCustomDataChange
+
+```TypeScript
+offCustomDataChange(callback?: Callback<Record<string, Object>>): void
+```
+
+Unregister listener for custom data sent from remote device.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void--><!--Device-AVCastController-offCustomDataChange(callback?: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('mediaItemChange')
+## offEndOfStream
 
 ```TypeScript
-off(type: 'mediaItemChange'): void
+offEndOfStream(callback?: NoParamCallback): void
 ```
 
-取消设置投播当前播放媒体内容事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister endOfStream state callback.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
+<!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void--><!--Device-AVCastController-offEndOfStream(callback?: NoParamCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -340,57 +488,55 @@ off(type: 'mediaItemChange'): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'mediaItemChange' | 是 |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('playNext')
+## offError
 
 ```TypeScript
-off(type: 'playNext'): void
+offError(): void
 ```
 
-取消设置播放下一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listens for playback error events.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVCastController-off(type: 'playNext'): void--><!--Device-AVCastController-off(type: 'playNext'): void-End-->
+<!--Device-AVCastController-offError(): void--><!--Device-AVCastController-offError(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playNext' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
 
-## off('playPrevious')
+## offKeyRequest
 
 ```TypeScript
-off(type: 'playPrevious'): void
+offKeyRequest(callback?: KeyRequestCallback): void
 ```
 
-取消设置播放上一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for drm key request.
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
+<!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void--><!--Device-AVCastController-offKeyRequest(callback?: KeyRequestCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -398,26 +544,93 @@ off(type: 'playPrevious'): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'playPrevious' | 是 |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('requestPlay')
+## offMediaItemChange
 
 ```TypeScript
-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
+offMediaItemChange(): void
 ```
 
-取消设置请求播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for current media item playback events.
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AVCastController-offMediaItemChange(): void--><!--Device-AVCastController-offMediaItemChange(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## offPlayNext
+
+```TypeScript
+offPlayNext(): void
+```
+
+Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offPlayNext(): void--><!--Device-AVCastController-offPlayNext(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## offPlayPrevious
+
+```TypeScript
+offPlayPrevious(): void
+```
+
+Unregister playback command callback sent by remote side or media center. When canceling the callback, need to update the supported commands list.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offPlayPrevious(): void--><!--Device-AVCastController-offPlayPrevious(): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## offPlaybackStateChange
+
+```TypeScript
+offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void
+```
+
+Unregister playback state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void--><!--Device-AVCastController-offPlaybackStateChange(callback?: Callback<AVPlaybackState>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -425,57 +638,77 @@ off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'requestPlay' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## offRequestPlay
+
+```TypeScript
+offRequestPlay(callback?: Callback<AVQueueItem>): void
+```
+
+Unregister requested playback command callback sent by remote side or media center.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-offRequestPlay(callback?: Callback<AVQueueItem>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('endOfStream')
+## offSeekDone
 
 ```TypeScript
-off(type: 'endOfStream', callback?: Callback<void>): void
+offSeekDone(): void
 ```
 
-取消设置播放结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listens for playback events.
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+**废弃版本：** -1
+
+<!--Device-AVCastController-offSeekDone(): void--><!--Device-AVCastController-offSeekDone(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'endOfStream' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## off('seekDone')
+## offValidCommandChange
 
 ```TypeScript
-off(type: 'seekDone'): void
+offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void
 ```
 
-取消设置seek结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister the valid commands of the casted session changed callback
 
-**起始版本：** 10
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVCastController-off(type: 'seekDone'): void--><!--Device-AVCastController-off(type: 'seekDone'): void-End-->
+<!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-offValidCommandChange(callback?: Callback<Array<AVCastControlCommandType>>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -483,229 +716,38 @@ off(type: 'seekDone'): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'seekDone' | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
-## off('validCommandChange')
-
-```TypeScript
-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)
-```
-
-取消会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 11
-
-<!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'validCommandChange' | 是 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## off('videoSizeChange')
+## offVideoSizeChange
 
 ```TypeScript
-off(type: 'videoSizeChange'): void
+offVideoSizeChange(): void
 ```
 
-取消视频尺寸事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+Unregister listener for video size change event, used at remote side.
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
+**废弃版本：** -1
+
+<!--Device-AVCastController-offVideoSizeChange(): void--><!--Device-AVCastController-offVideoSizeChange(): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'videoSizeChange' | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## 示例
-
-```TypeScript
-avCastController.off('videoSizeChange');
-```
-
-## off('error')
-
-```TypeScript
-off(type: 'error'): void
-```
-
-取消播放的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-off(type: 'error'): void--><!--Device-AVCastController-off(type: 'error'): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'error' | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-
-## off('castControlGenericError')
-
-```TypeScript
-off(type: 'castControlGenericError', callback?: ErrorCallback): void
-```
-
-取消投播通用的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlGenericError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## off('castControlIoError')
-
-```TypeScript
-off(type: 'castControlIoError', callback?: ErrorCallback): void
-```
-
-取消投播输入/输出的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlIoError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## off('castControlParsingError')
-
-```TypeScript
-off(type: 'castControlParsingError', callback?: ErrorCallback): void
-```
-
-取消投播解析的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlParsingError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## off('castControlDecodingError')
-
-```TypeScript
-off(type: 'castControlDecodingError', callback?: ErrorCallback): void
-```
-
-取消投播解码的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlDecodingError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## off('castControlAudioRendererError')
+## off_castControlAudioRendererError
 
 ```TypeScript
 off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
@@ -714,6 +756,8 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 取消投播音频渲染器的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -732,9 +776,40 @@ off(type: 'castControlAudioRendererError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
-## off('castControlDrmError')
+## off_castControlDecodingError
+
+```TypeScript
+off(type: 'castControlDecodingError', callback?: ErrorCallback): void
+```
+
+取消投播解码的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlDecodingError', callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlDecodingError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## off_castControlDrmError
 
 ```TypeScript
 off(type: 'castControlDrmError', callback?: ErrorCallback): void
@@ -743,6 +818,8 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 取消投播drm的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
 **起始版本：** 13
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
 
@@ -761,21 +838,23 @@ off(type: 'castControlDrmError', callback?: ErrorCallback): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
-## off('keyRequest')
+## off_castControlGenericError
 
 ```TypeScript
-off(type: 'keyRequest', callback?: KeyRequestCallback): void
+off(type: 'castControlGenericError', callback?: ErrorCallback): void
 ```
 
-取消许可证请求事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+取消投播通用的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
 
-**起始版本：** 12
+**起始版本：** 13
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
 
-<!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void--><!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void-End-->
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlGenericError', callback?: ErrorCallback): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
@@ -783,17 +862,78 @@ off(type: 'keyRequest', callback?: KeyRequestCallback): void
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'keyRequest' | 是 |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 否 |
+| type | 'castControlGenericError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
-## off('customDataChange')
+## off_castControlIoError
+
+```TypeScript
+off(type: 'castControlIoError', callback?: ErrorCallback): void
+```
+
+取消投播输入/输出的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlIoError', callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlIoError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## off_castControlParsingError
+
+```TypeScript
+off(type: 'castControlParsingError', callback?: ErrorCallback): void
+```
+
+取消投播解析的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void--><!--Device-AVCastController-off(type: 'castControlParsingError', callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlParsingError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## off_customDataChange
 
 ```TypeScript
 off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
@@ -802,6 +942,8 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 取消对自定义数据的监听。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
@@ -820,19 +962,1427 @@ off(type: 'customDataChange', callback?: Callback<Record<string, Object>>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## on('playbackStateChange')
+## off_endOfStream
+
+```TypeScript
+off(type: 'endOfStream', callback?: Callback<void>): void
+```
+
+取消设置播放结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AVCastController-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'endOfStream' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_error
+
+```TypeScript
+off(type: 'error'): void
+```
+
+取消播放的错误事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'error'): void--><!--Device-AVCastController-off(type: 'error'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+
+## off_keyRequest
+
+```TypeScript
+off(type: 'keyRequest', callback?: KeyRequestCallback): void
+```
+
+取消许可证请求事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void--><!--Device-AVCastController-off(type: 'keyRequest', callback?: KeyRequestCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keyRequest' | 是 |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_mediaItemChange
+
+```TypeScript
+off(type: 'mediaItemChange'): void
+```
+
+取消设置投播当前播放媒体内容事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'mediaItemChange'): void--><!--Device-AVCastController-off(type: 'mediaItemChange'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'mediaItemChange' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_playNext
+
+```TypeScript
+off(type: 'playNext'): void
+```
+
+取消设置播放下一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'playNext'): void--><!--Device-AVCastController-off(type: 'playNext'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playNext' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_playPrevious
+
+```TypeScript
+off(type: 'playPrevious'): void
+```
+
+取消设置播放上一首资源事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'playPrevious'): void--><!--Device-AVCastController-off(type: 'playPrevious'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playPrevious' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_playbackStateChange
+
+```TypeScript
+off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void
+```
+
+取消播放状态变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void--><!--Device-AVCastController-off(type: 'playbackStateChange', callback?: (state: AVPlaybackState) => void): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playbackStateChange' | 是 |
+| callback | (state: AVPlaybackState) = & gt; void | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_requestPlay
+
+```TypeScript
+off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void
+```
+
+取消设置请求播放事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void--><!--Device-AVCastController-off(type: 'requestPlay', callback?: Callback<AVQueueItem>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'requestPlay' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_seekDone
+
+```TypeScript
+off(type: 'seekDone'): void
+```
+
+取消设置seek结束事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-off(type: 'seekDone'): void--><!--Device-AVCastController-off(type: 'seekDone'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'seekDone' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## off_validCommandChange
+
+```TypeScript
+off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)
+```
+
+取消会话有效命令变化事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-off(type: 'validCommandChange', callback?: Callback<Array<AVCastControlCommandType>>)-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'validCommandChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## off_videoSizeChange
+
+```TypeScript
+off(type: 'videoSizeChange'): void
+```
+
+取消视频尺寸事件监听。指定callback，可取消对应监听；未指定callback，取消所有事件监听。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-off(type: 'videoSizeChange'): void--><!--Device-AVCastController-off(type: 'videoSizeChange'): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'videoSizeChange' | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## 示例
+
+```TypeScript
+avCastController.off('videoSizeChange');
+```
+
+## onCastControlAudioRendererError
+
+```TypeScript
+onCastControlAudioRendererError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control audio renderer error error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlAudioRendererError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) |
+| [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) |
+| [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) |
+
+## onCastControlDecodingError
+
+```TypeScript
+onCastControlDecodingError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control decoding error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDecodingError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) |
+| [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) |
+| [6614000](../errorcode-avsession.md#6614000-未知的解码错误) |
+| [6614001](../errorcode-avsession.md#6614001-解码器初始化失败) |
+| [6614002](../errorcode-avsession.md#6614002-解码器查询失败) |
+| [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) |
+
+## onCastControlDrmError
+
+```TypeScript
+onCastControlDrmError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control drm error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlDrmError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6616004](../errorcode-avsession.md#6616004-许可证获取失败) |
+| [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) |
+| [6616005](../errorcode-avsession.md#6616005-许可证策略不允许的操作) |
+| [6616006](../errorcode-avsession.md#6616006-drm系统错误) |
+| [6616007](../errorcode-avsession.md#6616007-设备已吊销drm权限) |
+| [6616000](../errorcode-avsession.md#6616000-drm相关的未知错误) |
+| [6616001](../errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) |
+| [6616002](../errorcode-avsession.md#6616002-调配设备时出现故障) |
+| [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) |
+| [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) |
+
+## onCastControlGenericError
+
+```TypeScript
+onCastControlGenericError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control generic error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlGenericError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) |
+| [6611104](../errorcode-avsession.md#6611104-不支持当前播放速度) |
+| [6611105](../errorcode-avsession.md#6611105-设备吊销) |
+| [6611106](../errorcode-avsession.md#6611106-传入非法参数) |
+| [6611107](../errorcode-avsession.md#6611107-内存分配失败) |
+| [6611004](../errorcode-avsession.md#6611004-运行时检查失败) |
+| [6611100](../errorcode-avsession.md#6611100-跨设备数据传输被锁定) |
+| [6611101](../errorcode-avsession.md#6611101-不支持当前进度条模式) |
+| [6611102](../errorcode-avsession.md#6611102-非法seek目标) |
+| [6611103](../errorcode-avsession.md#6611103-不支持当前播放模式) |
+| [6611000](../errorcode-avsession.md#6611000-投播控制器出现未知错误) |
+| [6611001](../errorcode-avsession.md#6611001-远端设备出现未知错误) |
+| [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) |
+| [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) |
+
+## onCastControlIoError
+
+```TypeScript
+onCastControlIoError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control input/output error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlIoError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6612004](../errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) |
+| [6612100](../errorcode-avsession.md#6612100-缺少可播放的媒体资源) |
+| [6612005](../errorcode-avsession.md#6612005-文件不存在) |
+| [6612101](../errorcode-avsession.md#6612101-媒体资源无法被读取) |
+| [6612006](../errorcode-avsession.md#6612006-缺少执行io操作的权限) |
+| [6612102](../errorcode-avsession.md#6612102-资源正在使用) |
+| [6612007](../errorcode-avsession.md#6612007-网络安全配置不允许此操作) |
+| [6612103](../errorcode-avsession.md#6612103-内容使用有效期已过) |
+| [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) |
+| [6612001](../errorcode-avsession.md#6612001-网络连接失败) |
+| [6612002](../errorcode-avsession.md#6612002-网络超时) |
+| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) |
+| [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) |
+| [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) |
+| [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) |
+| [6612106](../errorcode-avsession.md#6612106-资源使用频繁) |
+| [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) |
+
+## onCastControlParsingError
+
+```TypeScript
+onCastControlParsingError(callback: ErrorCallback): void
+```
+
+Register listeners for cast control parsing error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void--><!--Device-AVCastController-onCastControlParsingError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) |
+| [6613000](../errorcode-avsession.md#6613000-未知解析错误) |
+| [6613001](../errorcode-avsession.md#6613001-非法类型) |
+| [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) |
+| [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) |
+
+## onCustomDataChange
+
+```TypeScript
+onCustomDataChange(callback: Callback<Record<string, Object>>): void
+```
+
+Register listener for custom data sent from remote device.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-onCustomDataChange(callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onEndOfStream
+
+```TypeScript
+onEndOfStream(callback: NoParamCallback): void
+```
+
+Register endOfStream state callback. Application needs update the new media resource when receive these commands by using playItem.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void--><!--Device-AVCastController-onEndOfStream(callback: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Register listeners for playback error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onError(callback: ErrorCallback): void--><!--Device-AVCastController-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+
+## onKeyRequest
+
+```TypeScript
+onKeyRequest(callback: KeyRequestCallback): void
+```
+
+Register listener for drm key request.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void--><!--Device-AVCastController-onKeyRequest(callback: KeyRequestCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onMediaItemChange
+
+```TypeScript
+onMediaItemChange(callback: Callback<AVQueueItem>): void
+```
+
+Register listener for current media item playback events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onMediaItemChange(callback: Callback<AVQueueItem>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onPlayNext
+
+```TypeScript
+onPlayNext(callback: NoParamCallback): void
+```
+
+Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayNext(callback: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onPlayPrevious
+
+```TypeScript
+onPlayPrevious(callback: NoParamCallback): void
+```
+
+Register playback command callback sent by remote side or media center. Application needs update the new media resource when receive these commands by using playItem.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void--><!--Device-AVCastController-onPlayPrevious(callback: NoParamCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [NoParamCallback](arkts-avsession-avsession-noparamcallback-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onPlaybackStateChange
+
+```TypeScript
+onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChange(filter: Array<string>, callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| filter | Array & lt;string & gt; | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onPlaybackStateChangeAll
+
+```TypeScript
+onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void
+```
+
+Register playback state changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void--><!--Device-AVCastController-onPlaybackStateChangeAll(callback: Callback<AVPlaybackState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVPlaybackState](arkts-avsession-avsession-avplaybackstate-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onRequestPlay
+
+```TypeScript
+onRequestPlay(callback: Callback<AVQueueItem>): void
+```
+
+Register requested playback command callback sent by remote side or media center. The AVQueueItem may include the requested assetId, starting position and other configurations.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-onRequestPlay(callback: Callback<AVQueueItem>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onSeekDone
+
+```TypeScript
+onSeekDone(callback: Callback<number>): void
+```
+
+Register listens for playback events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onSeekDone(callback: Callback<int>): void--><!--Device-AVCastController-onSeekDone(callback: Callback<int>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## onValidCommandChange
+
+```TypeScript
+onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void
+```
+
+Register the valid commands of the casted session changed callback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void--><!--Device-AVCastController-onValidCommandChange(callback: Callback<Array<AVCastControlCommandType>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[AVCastControlCommandType](arkts-avsession-avsession-avcastcontrolcommandtype-t.md)&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
+
+## onVideoSizeChange
+
+```TypeScript
+onVideoSizeChange(callback: VideoSizeEvent): void
+```
+
+Register listener for video size change event, used at remote side.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void--><!--Device-AVCastController-onVideoSizeChange(callback: VideoSizeEvent): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [VideoSizeEvent](arkts-avsession-avsession-videosizeevent-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_castControlAudioRendererError
+
+```TypeScript
+on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
+```
+
+监听投播音频渲染器的错误事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlAudioRendererError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6615000](../errorcode-avsession.md#6615000-音频渲染器相关的未知错误) |
+| [6615001](../errorcode-avsession.md#6615001-音频渲染器初始化异常) |
+| [6615002](../errorcode-avsession.md#6615002-音频渲染器写数据异常) |
+
+## on_castControlDecodingError
+
+```TypeScript
+on(type: 'castControlDecodingError', callback: ErrorCallback): void
+```
+
+监听投播解码的错误事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlDecodingError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6614004](../errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6614005](../errorcode-avsession.md#6614005-解码不支持的内容格式) |
+| [6614000](../errorcode-avsession.md#6614000-未知的解码错误) |
+| [6614001](../errorcode-avsession.md#6614001-解码器初始化失败) |
+| [6614002](../errorcode-avsession.md#6614002-解码器查询失败) |
+| [6614003](../errorcode-avsession.md#6614003-解码媒体样本时失败) |
+
+## on_castControlDrmError
+
+```TypeScript
+on(type: 'castControlDrmError', callback: ErrorCallback): void
+```
+
+监听投播drm的错误事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlDrmError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6616004](../errorcode-avsession.md#6616004-许可证获取失败) |
+| [6616100](../errorcode-avsession.md#6616100-drm进程密钥响应错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6616005](../errorcode-avsession.md#6616005-许可证策略不允许的操作) |
+| [6616006](../errorcode-avsession.md#6616006-drm系统错误) |
+| [6616007](../errorcode-avsession.md#6616007-设备已吊销drm权限) |
+| [6616000](../errorcode-avsession.md#6616000-drm相关的未知错误) |
+| [6616001](../errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) |
+| [6616002](../errorcode-avsession.md#6616002-调配设备时出现故障) |
+| [6616003](../errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) |
+| [6616008](../errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) |
+
+## on_castControlGenericError
+
+```TypeScript
+on(type: 'castControlGenericError', callback: ErrorCallback): void
+```
+
+监听投播通用错误事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlGenericError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6611108](../errorcode-avsession.md#6611108-不允许进行当前操作) |
+| [6611104](../errorcode-avsession.md#6611104-不支持当前播放速度) |
+| [6611105](../errorcode-avsession.md#6611105-设备吊销) |
+| [6611106](../errorcode-avsession.md#6611106-传入非法参数) |
+| [6611107](../errorcode-avsession.md#6611107-内存分配失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6611004](../errorcode-avsession.md#6611004-运行时检查失败) |
+| [6611100](../errorcode-avsession.md#6611100-跨设备数据传输被锁定) |
+| [6611101](../errorcode-avsession.md#6611101-不支持当前进度条模式) |
+| [6611102](../errorcode-avsession.md#6611102-非法seek目标) |
+| [6611103](../errorcode-avsession.md#6611103-不支持当前播放模式) |
+| [6611000](../errorcode-avsession.md#6611000-投播控制器出现未知错误) |
+| [6611001](../errorcode-avsession.md#6611001-远端设备出现未知错误) |
+| [6611002](../errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) |
+| [6611003](../errorcode-avsession.md#6611003-投播控制器加载超时) |
+
+## on_castControlIoError
+
+```TypeScript
+on(type: 'castControlIoError', callback: ErrorCallback): void
+```
+
+监听投播输入/输出的错误事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlIoError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6612004](../errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) |
+| [6612100](../errorcode-avsession.md#6612100-缺少可播放的媒体资源) |
+| [6612005](../errorcode-avsession.md#6612005-文件不存在) |
+| [6612101](../errorcode-avsession.md#6612101-媒体资源无法被读取) |
+| [6612006](../errorcode-avsession.md#6612006-缺少执行io操作的权限) |
+| [6612102](../errorcode-avsession.md#6612102-资源正在使用) |
+| [6612007](../errorcode-avsession.md#6612007-网络安全配置不允许此操作) |
+| [6612103](../errorcode-avsession.md#6612103-内容使用有效期已过) |
+| [6612000](../errorcode-avsession.md#6612000-未知的输入输出错误) |
+| [6612001](../errorcode-avsession.md#6612001-网络连接失败) |
+| [6612002](../errorcode-avsession.md#6612002-网络超时) |
+| [6612003](../errorcode-avsession.md#6612003-无效contenttypehttp头) |
+| [6612008](../errorcode-avsession.md#6612008-读取数据超出数据范围) |
+| [6612104](../errorcode-avsession.md#6612104-不允许使用请求的内容) |
+| [6612105](../errorcode-avsession.md#6612105-无法验证允许使用的内容) |
+| [6612106](../errorcode-avsession.md#6612106-资源使用频繁) |
+| [6612107](../errorcode-avsession.md#6612107-本端向远端发送资源包失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+
+## on_castControlParsingError
+
+```TypeScript
+on(type: 'castControlParsingError', callback: ErrorCallback): void
+```
+
+监听投播解析的错误事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 13
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'castControlParsingError' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6613004](../errorcode-avsession.md#6613004-媒体清单中不支持此功能) |
+| [6613000](../errorcode-avsession.md#6613000-未知解析错误) |
+| [6613001](../errorcode-avsession.md#6613001-非法类型) |
+| [6613002](../errorcode-avsession.md#6613002-相关媒体清单的解析错误) |
+| [6613003](../errorcode-avsession.md#6613003-不支持该媒体格式) |
+
+## on_customDataChange
+
+```TypeScript
+on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
+```
+
+注册从远端设备发送的自定义数据的监听器。
+
+**起始版本：** 20
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'customDataChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_endOfStream
+
+```TypeScript
+on(type: 'endOfStream', callback: Callback<void>): void
+```
+
+设置播放结束的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 11
+
+**废弃版本：** -1
+
+<!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'endOfStream' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_error
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400104](../../apis-media-kit/errorcode-media.md#5400104-操作超时) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
+
+## on_keyRequest
+
+```TypeScript
+on(type: 'keyRequest', callback: KeyRequestCallback): void
+```
+
+在线DRM资源投播时，设置许可证请求的事件监听。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'keyRequest' | 是 |
+| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_mediaItemChange
+
+```TypeScript
+on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
+```
+
+设置投播当前播放媒体内容的监听事件。使用callback异步回调。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'mediaItemChange' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_playNext
+
+```TypeScript
+on(type: 'playNext', callback: Callback<void>): void
+```
+
+设置播放下一首资源的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playNext' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_playPrevious
+
+```TypeScript
+on(type: 'playPrevious', callback: Callback<void>): void
+```
+
+设置播放上一首资源的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+
+**起始版本：** 10
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'playPrevious' | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+
+## on_playbackStateChange
 
 ```TypeScript
 on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', callback: (state: AVPlaybackState) => void): void
 ```
 
-设置播放状态变化的监听事件。使用callback异步回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放状态变化的监听事件。使用callback异步回调。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -852,116 +2402,20 @@ on(type: 'playbackStateChange', filter: Array<keyof AVPlaybackState> | 'all', ca
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## on('mediaItemChange')
-
-```TypeScript
-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void
-```
-
-设置投播当前播放媒体内容的监听事件。使用callback异步回调。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'mediaItemChange', callback: Callback<AVQueueItem>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'mediaItemChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVQueueItem](arkts-avsession-avsession-avqueueitem-i.md)&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
-## on('playNext')
-
-```TypeScript
-on(type: 'playNext', callback: Callback<void>): void
-```
-
-设置播放下一首资源的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playNext', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playNext' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
-## on('playPrevious')
-
-```TypeScript
-on(type: 'playPrevious', callback: Callback<void>): void
-```
-
-设置播放上一首资源的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'playPrevious', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'playPrevious' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
-## on('requestPlay')
+## on_requestPlay
 
 ```TypeScript
 on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 ```
 
-设置请求播放的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置请求播放的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void--><!--Device-AVCastController-on(type: 'requestPlay', callback: Callback<AVQueueItem>): void-End-->
 
@@ -978,50 +2432,20 @@ on(type: 'requestPlay', callback: Callback<AVQueueItem>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## on('endOfStream')
-
-```TypeScript
-on(type: 'endOfStream', callback: Callback<void>): void
-```
-
-设置播放结束的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 11
-
-<!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AVCastController-on(type: 'endOfStream', callback: Callback<void>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'endOfStream' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
-## on('seekDone')
+## on_seekDone
 
 ```TypeScript
 on(type: 'seekDone', callback: Callback<number>): void
 ```
 
-设置seek结束的监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置seek结束的监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1040,20 +2464,20 @@ on(type: 'seekDone', callback: Callback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
-## on('validCommandChange')
+## on_validCommandChange
 
 ```TypeScript
 on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)
 ```
 
-会话支持的有效命令变化监听事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+会话支持的有效命令变化监听事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)--><!--Device-AVCastController-on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType>>)-End-->
 
@@ -1070,21 +2494,21 @@ on(type: 'validCommandChange', callback: Callback<Array<AVCastControlCommandType
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600103-会话控制器不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600103](../errorcode-avsession.md#6600103-会话控制器不存在) |
 
-## on('videoSizeChange')
+## on_videoSizeChange
 
 ```TypeScript
 on(type: 'videoSizeChange', callback: (width: number, height: number) => void): void
 ```
 
-媒体控制器监听视频尺寸变化变化的事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+媒体控制器监听视频尺寸变化变化的事件。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void--><!--Device-AVCastController-on(type: 'videoSizeChange', callback: (width: int, height: int) => void): void-End-->
 
@@ -1101,8 +2525,8 @@ on(type: 'videoSizeChange', callback: (width: number, height: number) => void): 
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## 示例
 
@@ -1113,346 +2537,6 @@ avCastController.on('videoSizeChange', (width: number, height: number) => {
 });
 ```
 
-## on('error')
-
-```TypeScript
-on(type: 'error', callback: ErrorCallback): void
-```
-
-监听远端播放器的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 10
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'error', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'error' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-出现io错误) |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
-| [5400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400104-操作超时) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-播放服务死亡) |
-
-## on('castControlGenericError')
-
-```TypeScript
-on(type: 'castControlGenericError', callback: ErrorCallback): void
-```
-
-监听投播通用错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlGenericError', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlGenericError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6611108](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611108-不允许进行当前操作) |
-| [6611104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611104-不支持当前播放速度) |
-| [6611105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611105-设备吊销) |
-| [6611106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611106-传入非法参数) |
-| [6611107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611107-内存分配失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6611004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611004-运行时检查失败) |
-| [6611100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611100-跨设备数据传输被锁定) |
-| [6611101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611101-不支持当前进度条模式) |
-| [6611102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611102-非法seek目标) |
-| [6611103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611103-不支持当前播放模式) |
-| [6611000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611000-投播控制器出现未知错误) |
-| [6611001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611001-远端设备出现未知错误) |
-| [6611002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611002-加载位置超过投播视频的总进度) |
-| [6611003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6611003-投播控制器加载超时) |
-
-## on('castControlIoError')
-
-```TypeScript
-on(type: 'castControlIoError', callback: ErrorCallback): void
-```
-
-监听投播输入/输出的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlIoError', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlIoError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6612004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612004-http服务器返回异常的http响应状态码) |
-| [6612100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612100-缺少可播放的媒体资源) |
-| [6612005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612005-文件不存在) |
-| [6612101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612101-媒体资源无法被读取) |
-| [6612006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612006-缺少执行io操作的权限) |
-| [6612102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612102-资源正在使用) |
-| [6612007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612007-网络安全配置不允许此操作) |
-| [6612103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612103-内容使用有效期已过) |
-| [6612000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612000-未知的输入输出错误) |
-| [6612001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612001-网络连接失败) |
-| [6612002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612002-网络超时) |
-| [6612003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612003-无效contenttypehttp头) |
-| [6612008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612008-读取数据超出数据范围) |
-| [6612104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612104-不允许使用请求的内容) |
-| [6612105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612105-无法验证允许使用的内容) |
-| [6612106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612106-资源使用频繁) |
-| [6612107](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6612107-本端向远端发送资源包失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-
-## on('castControlParsingError')
-
-```TypeScript
-on(type: 'castControlParsingError', callback: ErrorCallback): void
-```
-
-监听投播解析的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlParsingError', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlParsingError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6613004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613004-媒体清单中不支持此功能) |
-| [6613000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613000-未知解析错误) |
-| [6613001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613001-非法类型) |
-| [6613002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613002-相关媒体清单的解析错误) |
-| [6613003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6613003-不支持该媒体格式) |
-
-## on('castControlDecodingError')
-
-```TypeScript
-on(type: 'castControlDecodingError', callback: ErrorCallback): void
-```
-
-监听投播解码的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDecodingError', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlDecodingError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6614004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614004-所需解码的内容格式超出设备能力) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6614005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614005-解码不支持的内容格式) |
-| [6614000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614000-未知的解码错误) |
-| [6614001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614001-解码器初始化失败) |
-| [6614002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614002-解码器查询失败) |
-| [6614003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6614003-解码媒体样本时失败) |
-
-## on('castControlAudioRendererError')
-
-```TypeScript
-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void
-```
-
-监听投播音频渲染器的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlAudioRendererError', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlAudioRendererError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6615000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615000-音频渲染器相关的未知错误) |
-| [6615001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615001-音频渲染器初始化异常) |
-| [6615002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6615002-音频渲染器写数据异常) |
-
-## on('castControlDrmError')
-
-```TypeScript
-on(type: 'castControlDrmError', callback: ErrorCallback): void
-```
-
-监听投播drm的错误事件。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 13
-
-**原子化服务API：** 从API版本13开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void--><!--Device-AVCastController-on(type: 'castControlDrmError', callback: ErrorCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'castControlDrmError' | 是 |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6616004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616004-许可证获取失败) |
-| [6616100](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616100-drm进程密钥响应错误) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6616005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616005-许可证策略不允许的操作) |
-| [6616006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616006-drm系统错误) |
-| [6616007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616007-设备已吊销drm权限) |
-| [6616000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616000-drm相关的未知错误) |
-| [6616001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616001-设备不支持所选的drm保护方案) |
-| [6616002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616002-调配设备时出现故障) |
-| [6616003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616003-尝试播放不兼容的drm保护内容) |
-| [6616008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6616008-已过期的drm许可证被加载到打开的drm会话中) |
-
-## on('keyRequest')
-
-```TypeScript
-on(type: 'keyRequest', callback: KeyRequestCallback): void
-```
-
-在线DRM资源投播时，设置许可证请求的事件监听。
-
-每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void--><!--Device-AVCastController-on(type: 'keyRequest', callback: KeyRequestCallback): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'keyRequest' | 是 |
-| callback | [KeyRequestCallback](arkts-avsession-avsession-keyrequestcallback-t.md) | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
-## on('customDataChange')
-
-```TypeScript
-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void
-```
-
-注册从远端设备发送的自定义数据的监听器。
-
-**起始版本：** 20
-
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
-
-<!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void--><!--Device-AVCastController-on(type: 'customDataChange', callback: Callback<Record<string, Object>>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-**参数：**
-
-| 参数名 | 类型 | 必填 |
-| --- | --- | --- |
-| type | 'customDataChange' | 是 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-
 ## prepare
 
 ```TypeScript
@@ -1461,7 +2545,9 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-prepare(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
@@ -1478,9 +2564,9 @@ prepare(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## prepare
 
@@ -1490,7 +2576,9 @@ prepare(item: AVQueueItem): Promise<void>
 
 准备播放媒体资源，即进行播放资源的加载和缓冲。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1514,9 +2602,9 @@ prepare(item: AVQueueItem): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## processMediaKeyResponse
 
@@ -1526,9 +2614,11 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 在线DRM资源投播时，处理许可证响应。结果通过Promise异步回调方式返回。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>--><!--Device-AVCastController-processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>-End-->
 
@@ -1551,8 +2641,8 @@ processMediaKeyResponse(assetId: string, response: Uint8Array): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## release
 
@@ -1562,7 +2652,9 @@ release(callback: AsyncCallback<void>): void
 
 销毁当前controller，结果通过callback异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-release(callback: AsyncCallback<void>): void--><!--Device-AVCastController-release(callback: AsyncCallback<void>): void-End-->
 
@@ -1578,7 +2670,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## release
 
@@ -1588,7 +2680,9 @@ release(): Promise<void>
 
 销毁当前controller。结果通过Promise异步回调方式返回。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1606,7 +2700,7 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## sendControlCommand
 
@@ -1616,7 +2710,9 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 
 通过会话控制器发送命令到其对应的会话。结果通过callback异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void--><!--Device-AVCastController-sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>): void-End-->
 
@@ -1633,10 +2729,10 @@ sendControlCommand(command: AVCastControlCommand, callback: AsyncCallback<void>)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 
 ## sendControlCommand
 
@@ -1646,7 +2742,9 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 通过控制器发送命令到其对应的会话。结果通过Promise异步回调方式返回。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1670,10 +2768,10 @@ sendControlCommand(command: AVCastControlCommand): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
-| [6600105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600105-无效会话命令) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
+| [6600105](../errorcode-avsession.md#6600105-无效会话命令) |
 
 ## sendCustomData
 
@@ -1683,9 +2781,11 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 发送私有数据到远端设备。使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>--><!--Device-AVCastController-sendCustomData(data: Record<string, Object>): Promise<void>-End-->
 
@@ -1707,7 +2807,7 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
 
 ## start
 
@@ -1715,15 +2815,11 @@ sendCustomData(data: Record<string, Object>): Promise<void>
 start(item: AVQueueItem, callback: AsyncCallback<void>): void
 ```
 
-启动播放某个媒体资源。结果通过callback异步回调方式返回。
+启动播放某个媒体资源。结果通过callback异步回调方式返回。 > **说明：** > > 在音视频投播场景下，当应用程序顺序调用 > [prepare](#prepare)和start接口，且 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
-> **说明：**
-> 
-> 在音视频投播场景下，当应用程序顺序调用
-> [prepare](#prepare)和start接口，且
-> assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 <!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void--><!--Device-AVCastController-start(item: AVQueueItem, callback: AsyncCallback<void>): void-End-->
 
@@ -1740,9 +2836,9 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## start
 
@@ -1750,15 +2846,11 @@ start(item: AVQueueItem, callback: AsyncCallback<void>): void
 start(item: AVQueueItem): Promise<void>
 ```
 
-启动播放某个媒体资源。结果通过Promise异步回调方式返回。
+启动播放某个媒体资源。结果通过Promise异步回调方式返回。 > **说明：** > > 在音视频投播场景下，当应用程序顺序调用 > [prepare](#prepare)和start接口，且 > assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
 
-> **说明：**
-> 
-> 在音视频投播场景下，当应用程序顺序调用
-> [prepare](#prepare)和start接口，且
-> assetId不变时，如果prepare已经传入有效的mediaUri或fdSrc，则start接口将复用prepare阶段的完整的AVMediaDescription对象信息。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1782,9 +2874,9 @@ start(item: AVQueueItem): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |
 
 ## update
 
@@ -1795,6 +2887,8 @@ update(item: AVQueueItem): Promise<void>
 更新投播媒体信息
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1818,5 +2912,5 @@ update(item: AVQueueItem): Promise<void>
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [6600109](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600109-远端会话不存在) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [6600109](../errorcode-avsession.md#6600109-远端会话不存在) |

@@ -4,6 +4,8 @@ Defines the style of a grid item.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GridItemOptions--><!--Device-unnamed-declare interface GridItemOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,17 +16,13 @@ Defines the style of a grid item.
 style?: GridItemStyle
 ```
 
-Style of the grid item.
-
-Default value: **GridItemStyle.NONE**.
-
-If this parameter is set to **GridItemStyle.NONE**, no style is applied.
-
-If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
+Style of the grid item. Default value: **GridItemStyle.NONE**. If this parameter is set to **GridItemStyle.NONE**, no style is applied. If this parameter is set to **GridItemStyle.PLAIN**, the grid item is in hover or press style depending on the state.
 
 **Type:** [GridItemStyle](arkts-arkui-griditemstyle-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

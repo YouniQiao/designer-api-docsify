@@ -1,12 +1,12 @@
 # DataShareResultSet（系统接口）
 
-提供通过查询数据库生成的结果集的相关访问方法。
+提供通过查询数据库生成的结果集的相关访问方法。 列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。
 
-列或键名称作为字符串数组返回，其中字符串的顺序与结果集中的列或键的顺序相同。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-unnamed-export default interface DataShareResultSet--><!--Device-unnamed-export default interface DataShareResultSet-End-->
 
@@ -20,13 +20,13 @@
 close(): void
 ```
 
-关闭结果集。
+关闭结果集。 对结果集调用此方法将释放其所有资源并使其无效。
 
-对结果集调用此方法将释放其所有资源并使其无效。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,23 +46,17 @@ if (resultSet != undefined) {
 
 ## getBlob
 
-ArkTS-Dyn:
-```TypeScript
-getBlob(columnIndex: number): Uint8Array
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBlob(columnIndex: int): Uint8Array
 ```
 
-以字节数组的形式获取当前行中指定列的值。
+以字节数组的形式获取当前行中指定列的值。 如果当前行中指定的列或键的值为空，或者指定的列或键不是Blob类型，则使用方需要确定是否抛出此异常。
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是Blob类型，则使用方需要确定是否抛出此异常。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,7 +70,7 @@ getBlob(columnIndex: int): Uint8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -101,23 +95,17 @@ if (resultSet != undefined) {
 
 ## getColumnIndex
 
-ArkTS-Dyn:
-```TypeScript
-getColumnIndex(columnName: string): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColumnIndex(columnName: string): int
 ```
 
-根据指定的列名获取列索引。
+根据指定的列名获取列索引。 列名作为输入参数传递。
 
-列名作为输入参数传递。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -137,7 +125,7 @@ getColumnIndex(columnName: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 返回指定列的索引。 |
+| int | 返回指定列的索引。 |
 
 ## 示例
 
@@ -151,23 +139,17 @@ if (resultSet != undefined) {
 
 ## getColumnName
 
-ArkTS-Dyn:
-```TypeScript
-getColumnName(columnIndex: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getColumnName(columnIndex: int): string
 ```
 
-根据指定的列索引获取列名。
+根据指定的列索引获取列名。 列索引作为输入参数传递。
 
-列索引作为输入参数传递。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -181,7 +163,7 @@ getColumnName(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示结果集中指定列的索引。 |
+| columnIndex | int | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
@@ -201,23 +183,17 @@ if (resultSet != undefined) {
 
 ## getDataType
 
-ArkTS-Dyn:
-```TypeScript
-getDataType(columnIndex: number): DataType
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDataType(columnIndex: int): DataType
 ```
 
-指定列索引获取该列的数据类型。
+指定列索引获取该列的数据类型。 如果当前行中指定的列或键的值为空，或者指定的列或键不是DataType类型，则使用方需要确定是否抛出此异常。
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是DataType类型，则使用方需要确定是否抛出此异常。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -231,7 +207,7 @@ getDataType(columnIndex: int): DataType
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示结果集中指定列的索引。 |
+| columnIndex | int | 是 | 表示结果集中指定列的索引。 |
 
 **返回值：**
 
@@ -251,23 +227,17 @@ if (resultSet != undefined) {
 
 ## getDouble
 
-ArkTS-Dyn:
-```TypeScript
-getDouble(columnIndex: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getDouble(columnIndex: int): double
 ```
 
-以值类型为双浮点数形式获取当前行中指定列的值。
+以值类型为双浮点数形式获取当前行中指定列的值。 如果当前行中指定的列或键的值为空，或者指定的列或键不是double类型，则使用方需要确定是否抛出此异常。
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是double类型，则使用方需要确定是否抛出此异常。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -281,13 +251,13 @@ getDouble(columnIndex: int): double
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Value obtained. |
+| double | Value obtained. |
 
 ## 示例
 
@@ -302,23 +272,17 @@ if (resultSet != undefined) {
 
 ## getLong
 
-ArkTS-Dyn:
-```TypeScript
-getLong(columnIndex: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getLong(columnIndex: int): long
 ```
 
-以长整数值形式获取当前行中指定列的值。
+以长整数值形式获取当前行中指定列的值。 如果当前行中指定的列或键的值为空，或者指定的列或键不是long类型，则使用方需要确定是否抛出此异常。
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是long类型，则使用方需要确定是否抛出此异常。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -332,13 +296,13 @@ getLong(columnIndex: int): long
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | 以长整数值形式返回指定列的值。 |
+| long | 以长整数值形式返回指定列的值。 |
 
 ## 示例
 
@@ -353,23 +317,17 @@ if (resultSet != undefined) {
 
 ## getString
 
-ArkTS-Dyn:
-```TypeScript
-getString(columnIndex: number): string
-```
-
-ArkTS-Sta:
 ```TypeScript
 getString(columnIndex: int): string
 ```
 
-以字符串形式获取当前行中指定列的值。
+以字符串形式获取当前行中指定列的值。 如果当前行中指定的列或键的值为空，或者指定的列或键不是string类型，则使用方需要确定是否抛出此异常。
 
-如果当前行中指定的列或键的值为空，或者指定的列或键不是string类型，则使用方需要确定是否抛出此异常。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -383,7 +341,7 @@ getString(columnIndex: int): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| columnIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 指定的列索引，从0开始。 |
+| columnIndex | int | 是 | 指定的列索引，从0开始。 |
 
 **返回值：**
 
@@ -404,21 +362,17 @@ if (resultSet != undefined) {
 
 ## goTo
 
-ArkTS-Dyn:
-```TypeScript
-goTo(offset: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 goTo(offset: int): boolean
 ```
 
 相对于当前位置向前或向后移动指定行数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -432,7 +386,7 @@ goTo(offset: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
+| offset | int | 是 | 表示相对于当前位置的偏移量。offset为负值表示向前偏移，正值则表示向后偏移。 |
 
 **返回值：**
 
@@ -458,9 +412,11 @@ goToFirstRow(): boolean
 
 转到结果集的第一行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -494,9 +450,11 @@ goToLastRow(): boolean
 
 转到结果集的最后一行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -529,9 +487,11 @@ goToNextRow(): boolean
 
 转到结果集的下一行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -564,9 +524,11 @@ goToPreviousRow(): boolean
 
 转到结果集的上一行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -593,21 +555,17 @@ if (resultSet != undefined) {
 
 ## goToRow
 
-ArkTS-Dyn:
-```TypeScript
-goToRow(position: number): boolean
-```
-
-ArkTS-Sta:
 ```TypeScript
 goToRow(position: int): boolean
 ```
 
 转到结果集的指定行。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -621,7 +579,7 @@ goToRow(position: int): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 表示要移动到的指定位置，从 0 开始。 |
+| position | int | 是 | 表示要移动到的指定位置，从 0 开始。 |
 
 **返回值：**
 
@@ -647,11 +605,13 @@ columnCount: int
 
 结果集中的列数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -671,9 +631,11 @@ columnNames: Array<string>
 
 **类型：** Array&lt;string&gt;
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -693,9 +655,11 @@ isClosed: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -713,11 +677,13 @@ rowCount: int
 
 结果集中的行数。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

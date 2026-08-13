@@ -2,9 +2,11 @@
 
 Corresponding to a file's data. Filedata is useful when doing IPC with the backup service.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-backup-interface FileData--><!--Device-backup-interface FileData-End-->
 
@@ -26,11 +28,13 @@ fd: int
 
 Indicates a native file descriptor typically retrieved from the backup service to hold the file's content.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileData-fd: int--><!--Device-FileData-fd: int-End-->
 

@@ -14,7 +14,9 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute, call
 
 Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -29,17 +31,17 @@ Starts vibration based on a specified effect and attribute. This API uses an asy
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | effect | [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Yes |
-| attribute | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md) | Yes |
+| [attribute](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md) | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md) | Yes |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [14600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
 ## Examples
 
@@ -173,7 +175,9 @@ function startVibration(effect: VibrateEffect, attribute: VibrateAttribute): Pro
 
 Starts vibration based on a specified effect and attribute. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -188,7 +192,7 @@ Starts vibration based on a specified effect and attribute. This API uses a prom
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | effect | [VibrateEffect](arkts-sensorservice-vibrator-vibrateeffect-t.md) | Yes |
-| attribute | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md) | Yes |
+| [attribute](../../apis-arkui/arkts-apis/arkts-arkui-framenode-typedframenode-i.md) | [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md) | Yes |
 
 **Return value:**
 
@@ -200,10 +204,10 @@ Starts vibration based on a specified effect and attribute. This API uses a prom
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [14600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) |
 
 ## Examples
 

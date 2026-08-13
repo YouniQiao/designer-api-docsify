@@ -2,7 +2,9 @@
 
 Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Deflate, or Gzip format.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface Zip--><!--Device-zlib-interface Zip-End-->
 
@@ -22,9 +24,11 @@ compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<Zi
 
 Compresses the source buffer into the destination buffer. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-compress(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
 
@@ -48,8 +52,8 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
 
 ## Examples
 
@@ -80,9 +84,11 @@ compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLe
 
 Compresses the source buffer into the destination buffer. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>--><!--Device-Zip-compress2(dest: ArrayBuffer, source: ArrayBuffer, level: CompressLevel, sourceLen?: long,): Promise<ZipOutputInfo>-End-->
 
@@ -107,9 +113,9 @@ Compresses the source buffer into the destination buffer. This API uses a promis
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## compressBound
 
@@ -119,9 +125,11 @@ compressBound(sourceLen: number): Promise<number>
 
 Calculates the maximum size of the compressed data to be returned. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-compressBound(sourceLen: int): Promise<int>--><!--Device-Zip-compressBound(sourceLen: int): Promise<int>-End-->
 
@@ -143,7 +151,7 @@ Calculates the maximum size of the compressed data to be returned. This API uses
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -175,9 +183,11 @@ deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 Deflates data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-deflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
@@ -200,9 +210,9 @@ Deflates data. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -245,9 +255,11 @@ deflateBound(strm: ZStream, sourceLength: number): Promise<number>
 
 Calculates the maximum size of the compressed data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>--><!--Device-Zip-deflateBound(strm: ZStream, sourceLength: long): Promise<int>-End-->
 
@@ -270,7 +282,7 @@ Calculates the maximum size of the compressed data. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -313,9 +325,11 @@ deflateCopy(source: Zip): Promise<ReturnStatus>
 
 Copies a compression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-deflateCopy(source: Zip): Promise<ReturnStatus>-End-->
 
@@ -337,8 +351,8 @@ Copies a compression stream. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -381,9 +395,11 @@ deflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 Releases all dynamically allocated data structs of a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -405,8 +421,8 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -454,9 +470,11 @@ deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 Obtains the content and length of the decompression dictionary used in a compression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-deflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
 
@@ -479,8 +497,8 @@ Obtains the content and length of the decompression dictionary used in a compres
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -528,9 +546,11 @@ deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>
 
 Initializes a compression stream with a specified compression level. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>--><!--Device-Zip-deflateInit(strm: ZStream, level: CompressLevel): Promise<ReturnStatus>-End-->
 
@@ -553,8 +573,8 @@ Initializes a compression stream with a specified compression level. This API us
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -593,9 +613,11 @@ deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, window
 
 Initializes a compression stream with the specified compression level, compression method, window size, memory level, and compression strategy. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateInit2(strm: ZStream, level: CompressLevel, method: CompressMethod, windowBits: int,        memLevel: MemLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
@@ -622,8 +644,8 @@ Initializes a compression stream with the specified compression level, compressi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -662,9 +684,11 @@ deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): 
 
 Dynamically updates the compression level and compression strategy. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>--><!--Device-Zip-deflateParams(strm: ZStream, level: CompressLevel, strategy: CompressStrategy): Promise<ReturnStatus>-End-->
 
@@ -688,8 +712,8 @@ Dynamically updates the compression level and compression strategy. This API use
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -732,9 +756,11 @@ deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>
 
 Returns the number of bytes and bits of output that has been generated but not yet provided in the available output. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>--><!--Device-Zip-deflatePending(strm: ZStream): Promise<DeflatePendingOutputInfo>-End-->
 
@@ -756,8 +782,8 @@ Returns the number of bytes and bits of output that has been generated but not y
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -800,9 +826,11 @@ deflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
 
 Inserts bits and values into the compression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-deflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
 
@@ -826,8 +854,8 @@ Inserts bits and values into the compression stream. This API uses a promise to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -870,9 +898,11 @@ deflateReset(strm: ZStream): Promise<ReturnStatus>
 
 Equivalent to call the **deflateEnd** API and then the **deflateInit** API. However, this API does not release or reallocate the internal decompression state. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -894,8 +924,8 @@ Equivalent to call the **deflateEnd** API and then the **deflateInit** API. Howe
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -936,11 +966,13 @@ async function demo() {
 deflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 ```
 
-Resets the initialized compression stream, but retains the compression parameters and dictionaries set by it.This API uses a promise to return the result.
+Resets the initialized compression stream, but retains the compression parameters and dictionaries set by it. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-deflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -962,8 +994,8 @@ Resets the initialized compression stream, but retains the compression parameter
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1006,9 +1038,11 @@ deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 Initializes the compression dictionary from a given sequence of bytes. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-deflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
 
@@ -1031,8 +1065,8 @@ Initializes the compression dictionary from a given sequence of bytes. This API 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1075,9 +1109,11 @@ deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>
 
 Provides the header information of a gzip file when **deflateInit2()** requests a gzip stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-deflateSetHeader(strm: ZStream, head: GzHeader): Promise<ReturnStatus>-End-->
 
@@ -1100,8 +1136,8 @@ Provides the header information of a gzip file when **deflateInit2()** requests 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1145,9 +1181,11 @@ deflateTune(strm: ZStream, goodLength: number, maxLazy: number, niceLength: numb
 
 Fine-tunes the internal compression parameters of **deflate**. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>--><!--Device-Zip-deflateTune(strm: ZStream, goodLength: int, maxLazy: int, niceLength: int, maxChain: int): Promise<ReturnStatus>-End-->
 
@@ -1173,8 +1211,8 @@ Fine-tunes the internal compression parameters of **deflate**. This API uses a p
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1219,6 +1257,8 @@ Obtains this stream. This API uses a promise to return the result.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Zip-getZStream(): Promise<ZStream>--><!--Device-Zip-getZStream(): Promise<ZStream>-End-->
@@ -1243,6 +1283,30 @@ zip.getZStream().then(data => {
 })
 ```
 
+## getZStream
+
+```TypeScript
+getZStream(): Promise<ZStream | undefined>
+```
+
+Get ZStream.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Zip-getZStream(): Promise<ZStream | undefined>--><!--Device-Zip-getZStream(): Promise<ZStream | undefined>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ZStream](arkts-basicservices-zlib-zstream-i.md) \| undefined & gt; |
+
 ## inflate
 
 ```TypeScript
@@ -1251,9 +1315,11 @@ inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>
 
 Inflates data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>--><!--Device-Zip-inflate(strm: ZStream, flush: CompressFlushMode): Promise<ReturnStatus>-End-->
 
@@ -1276,9 +1342,9 @@ Inflates data. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1344,6 +1410,8 @@ Implements decompression and uses callbacks to process input and output data. Th
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: object, backOut: InflateBackOutputCallback, outDesc: object): Promise<ReturnStatus>-End-->
@@ -1370,8 +1438,8 @@ Implements decompression and uses callbacks to process input and output data. Th
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1510,6 +1578,46 @@ async function demo() {
 }
 ```
 
+## inflateBack
+
+```TypeScript
+inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>
+```
+
+Does a raw inflate with a single call using a call-back interface for input and output.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>--><!--Device-Zip-inflateBack(strm: ZStream, backIn: InflateBackInputCallback, inDesc: RecordData, backOut: InflateBackOutputCallback, outDesc: RecordData): Promise<ReturnStatus>-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes |
+| backIn | [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md) | Yes |
+| inDesc | [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md) | Yes |
+| backOut | [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md) | Yes |
+| outDesc | [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+
 ## inflateBackEnd
 
 ```TypeScript
@@ -1518,9 +1626,11 @@ inflateBackEnd(strm: ZStream): Promise<ReturnStatus>
 
 Releases all memory allocated by the **inflateBackInit()** function. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateBackEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -1542,12 +1652,12 @@ Releases all memory allocated by the **inflateBackInit()** function. This API us
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
-For details about the sample code, see [inflateBack](#inflateback12).
+For details about the sample code, see [inflateBack](#inflateBack).
 
 ## inflateBackInit
 
@@ -1557,9 +1667,11 @@ inflateBackInit(strm: ZStream, windowBits: number, window: ArrayBuffer): Promise
 
 Initializes the internal stream state for decompression before using the **inflateBack()** function. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateBackInit(strm: ZStream, windowBits: long, window: ArrayBuffer): Promise<ReturnStatus>-End-->
 
@@ -1583,12 +1695,12 @@ Initializes the internal stream state for decompression before using the **infla
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
-For details about the sample code, see [inflateBack](#inflateback12).
+For details about the sample code, see [inflateBack](#inflateBack).
 
 ## inflateCodesUsed
 
@@ -1598,9 +1710,11 @@ inflateCodesUsed(strm: ZStream): Promise<number>
 
 Describes the number of Huffman trees used in a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>--><!--Device-Zip-inflateCodesUsed(strm: ZStream): Promise<long>-End-->
 
@@ -1622,7 +1736,7 @@ Describes the number of Huffman trees used in a decompression stream. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1660,9 +1774,11 @@ inflateCopy(source: Zip): Promise<ReturnStatus>
 
 Copies a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>--><!--Device-Zip-inflateCopy(source: Zip): Promise<ReturnStatus>-End-->
 
@@ -1684,8 +1800,8 @@ Copies a decompression stream. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1724,9 +1840,11 @@ inflateEnd(strm: ZStream): Promise<ReturnStatus>
 
 Releases all dynamically allocated data structs of a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateEnd(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -1748,8 +1866,8 @@ Releases all dynamically allocated data structs of a decompression stream. This 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1792,9 +1910,11 @@ inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<Dictionary
 
 Obtains the content and length of the decompression dictionary used in a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>--><!--Device-Zip-inflateGetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<DictionaryOutputInfo>-End-->
 
@@ -1817,8 +1937,8 @@ Obtains the content and length of the decompression dictionary used in a decompr
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1856,9 +1976,11 @@ inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>
 
 Obtains the header information of a gzip file before decompressing data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>--><!--Device-Zip-inflateGetHeader(strm: ZStream, header: GzHeader): Promise<ReturnStatus>-End-->
 
@@ -1881,8 +2003,8 @@ Obtains the header information of a gzip file before decompressing data. This AP
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -1920,9 +2042,11 @@ inflateInit(strm: ZStream): Promise<ReturnStatus>
 
 Initializes a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateInit(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -1944,7 +2068,7 @@ Initializes a decompression stream. This API uses a promise to return the result
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1978,9 +2102,11 @@ inflateInit2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 
 Initializes a decompression stream with the specified **windowBits**. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateInit2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
 
@@ -2003,8 +2129,8 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2038,9 +2164,11 @@ inflateMark(strm: ZStream): Promise<number>
 
 Marks the location of the input data for random access. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateMark(strm: ZStream): Promise<int>--><!--Device-Zip-inflateMark(strm: ZStream): Promise<int>-End-->
 
@@ -2062,7 +2190,7 @@ Marks the location of the input data for random access. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -2100,9 +2228,11 @@ inflatePrime(strm: ZStream, bits: number, value: number): Promise<ReturnStatus>
 
 Sets the initial number of bits and bit value in the specified decompression stream to pre-fill the bit buffer at the beginning of the decompression stream to correctly process the data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>--><!--Device-Zip-inflatePrime(strm: ZStream, bits: int, value: int): Promise<ReturnStatus>-End-->
 
@@ -2126,8 +2256,8 @@ Sets the initial number of bits and bit value in the specified decompression str
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2165,9 +2295,11 @@ inflateReset(strm: ZStream): Promise<ReturnStatus>
 
 Resets the status of the specified decompression stream to the initial state to start a new decompression operation. The internal buffer is not released or reallocated. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateReset(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2189,8 +2321,8 @@ Resets the status of the specified decompression stream to the initial state to 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2228,9 +2360,11 @@ inflateReset2(strm: ZStream, windowBits: number): Promise<ReturnStatus>
 
 Resets the status of the specified decompression stream and updates the window size to start a new decompression operation. The internal buffer is not released or reallocated. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>--><!--Device-Zip-inflateReset2(strm: ZStream, windowBits: int): Promise<ReturnStatus>-End-->
 
@@ -2253,8 +2387,8 @@ Resets the status of the specified decompression stream and updates the window s
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2292,9 +2426,11 @@ inflateResetKeep(strm: ZStream): Promise<ReturnStatus>
 
 Resets the state of the decompression stream to retain the allocated Huffman tree and preset dictionary. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateResetKeep(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2316,8 +2452,8 @@ Resets the state of the decompression stream to retain the allocated Huffman tre
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2355,9 +2491,11 @@ inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStat
 
 Initializes the dictionary content of a decompression stream based on the given dictionary data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>--><!--Device-Zip-inflateSetDictionary(strm: ZStream, dictionary: ArrayBuffer): Promise<ReturnStatus>-End-->
 
@@ -2380,9 +2518,9 @@ Initializes the dictionary content of a decompression stream based on the given 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2457,9 +2595,11 @@ inflateSync(strm: ZStream): Promise<ReturnStatus>
 
 Skips invalid compressed data until a possible complete refresh point is found. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSync(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2481,10 +2621,10 @@ Skips invalid compressed data until a possible complete refresh point is found. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
-| [17800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2553,9 +2693,11 @@ inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>
 
 Finds the synchronization point of a decompression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>--><!--Device-Zip-inflateSyncPoint(strm: ZStream): Promise<ReturnStatus>-End-->
 
@@ -2577,8 +2719,8 @@ Finds the synchronization point of a decompression stream. This API uses a promi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2616,9 +2758,11 @@ inflateValidate(strm: ZStream, check: number): Promise<ReturnStatus>
 
 Validates the checksum inside the compression stream. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>--><!--Device-Zip-inflateValidate(strm: ZStream, check: int): Promise<ReturnStatus>-End-->
 
@@ -2641,8 +2785,8 @@ Validates the checksum inside the compression stream. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800004](../../apis-basic-services-kit/errorcode-zlib.md#17800004-compressed-or-decompressed-flow-error) |
 
 ## Examples
 
@@ -2680,9 +2824,11 @@ uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise<Z
 
 Decompresses the compressed data into the raw data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>--><!--Device-Zip-uncompress(dest:ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<ZipOutputInfo>-End-->
 
@@ -2706,9 +2852,9 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
-| [17800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
 
 ## Examples
 
@@ -2745,9 +2891,11 @@ uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: number): Promise
 
 Decompresses the compressed data into the raw data. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>--><!--Device-Zip-uncompress2(dest: ArrayBuffer, source: ArrayBuffer, sourceLen?: long): Promise<DecompressionOutputInfo>-End-->
 
@@ -2771,9 +2919,9 @@ Decompresses the compressed data into the raw data. This API uses a promise to r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17800007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
-| [17800005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17800007](../../apis-basic-services-kit/errorcode-zlib.md#17800007-incorrect-input-buffer) |
+| [17800005](../../apis-basic-services-kit/errorcode-zlib.md#17800005-incorrect-input-data) |
 
 ## Examples
 
@@ -2810,9 +2958,11 @@ zlibCompileFlags(): Promise<number>
 
 Returns the flags indicating compile-time options. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-zlibCompileFlags(): Promise<int>--><!--Device-Zip-zlibCompileFlags(): Promise<int>-End-->
 
@@ -2844,9 +2994,11 @@ zlibVersion(): Promise<string>
 
 Obtains the version information of this zlib library connected. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Zip-zlibVersion(): Promise<string>--><!--Device-Zip-zlibVersion(): Promise<string>-End-->
 

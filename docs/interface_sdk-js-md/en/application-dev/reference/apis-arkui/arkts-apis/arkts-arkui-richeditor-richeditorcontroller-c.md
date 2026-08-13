@@ -8,7 +8,9 @@ Provides Controller for RichEditor.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class RichEditorController extends RichEditorBaseController--><!--Device-unnamed-export declare class RichEditorController extends RichEditorBaseController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class RichEditorController--><!--Device-unnamed-export declare class RichEditorController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -24,6 +26,8 @@ Add a builder span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorController-addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): int | undefined--><!--Device-RichEditorController-addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): int | undefined-End-->
@@ -34,7 +38,7 @@ Add a builder span.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-custombuilder-t.md) | Yes | Indicates the custom builder node |
+| value | CustomBuilder | Yes | Indicates the custom builder node |
 | options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | No | span option. |
 
 **Return value:**
@@ -54,6 +58,8 @@ Add a image span.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +92,8 @@ Add a symbol span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorController-addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions): int | undefined--><!--Device-RichEditorController-addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions): int | undefined-End-->
@@ -116,6 +124,8 @@ Add a text span.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +158,8 @@ Delete span.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorController-deleteSpans(value?: RichEditorRange): void--><!--Device-RichEditorController-deleteSpans(value?: RichEditorRange): void-End-->
@@ -166,11 +178,13 @@ Delete span.
 fromStyledString(value: StyledString): Array<RichEditorSpan> | undefined
 ```
 
-Convert StyledString to spans in rich editor.return a empty Array&lt;RichEditorSpan&gt; if convert failed
+Convert StyledString to spans in rich editor. return a empty Array&lt;RichEditorSpan&gt; if convert failed
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -194,7 +208,7 @@ Convert StyledString to spans in rich editor.return a empty Array&lt;RichEditorS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 
 ## getParagraphs
 
@@ -207,6 +221,8 @@ Get span content.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -238,6 +254,8 @@ Called when the content is selected.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorController-getSelection(): RichEditorSelection | undefined--><!--Device-RichEditorController-getSelection(): RichEditorSelection | undefined-End-->
@@ -261,6 +279,8 @@ Get span content.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -286,11 +306,13 @@ Get span content.
 toStyledString(value: RichEditorRange): StyledString | undefined
 ```
 
-Convert spans to StyledString in rich editor.return a empty StyledString if convert failed
+Convert spans to StyledString in rich editor. return a empty StyledString if convert failed
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,7 +336,7 @@ Convert spans to StyledString in rich editor.return a empty StyledString if conv
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -327,6 +349,8 @@ Modify span style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -352,6 +376,8 @@ Modify span style.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

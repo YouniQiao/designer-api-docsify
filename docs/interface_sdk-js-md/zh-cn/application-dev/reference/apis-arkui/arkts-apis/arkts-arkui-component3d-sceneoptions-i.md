@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface SceneOptions--><!--Device-unnamed-export declare interface SceneOptions-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -26,6 +28,8 @@ modelType?: ModelType
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-SceneOptions-modelType?: ModelType--><!--Device-SceneOptions-modelType?: ModelType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -43,6 +47,8 @@ scene?: ResourceStr | Scene
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SceneOptions-scene?: ResourceStr | Scene--><!--Device-SceneOptions-scene?: ResourceStr | Scene-End-->
 

@@ -12,7 +12,7 @@ Obtains the DND time. This API uses an asynchronous callback to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ Obtains the DND time. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -70,7 +70,7 @@ Obtains the DND time of a specified user. This API uses an asynchronous callback
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -100,7 +100,7 @@ Obtains the DND time of a specified user. This API uses a promise to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**Substitutes:** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

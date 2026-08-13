@@ -2,9 +2,11 @@
 
 云图同步对象，用来支撑图库应用媒体资源端云同步流程。在使用前，需要先创建GallerySync实例。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-class GallerySync--><!--Device-cloudSync-class GallerySync-End-->
 
@@ -20,9 +22,11 @@ constructor()
 
 端云同步流程的构造函数，用于获取GallerySync类的实例。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-GallerySync-constructor()--><!--Device-GallerySync-constructor()-End-->
 
@@ -36,103 +40,6 @@ constructor()
 let gallerySync = new cloudSync.GallerySync()
 ```
 
-## off
-
-```TypeScript
-off(evt: 'progress', callback: (pg: SyncProgress) => void): void
-```
-
-云图同步对象移除'progress'类型中指定的callback回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**需要权限：** ohos.permission.CLOUDFILE_SYNC
-
-<!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| evt | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#SyncProgress)，返 回值为void。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 13600001 | IPC error |
-
-## 示例
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-let callback = (pg: cloudSync.SyncProgress) => {
-  console.info("gallery sync state: " + pg.state + "error type: " + pg.error);
-}
-
-gallerySync.on('progress', callback);
-
-gallerySync.off('progress', callback);
-```
-
-## off
-
-```TypeScript
-off(evt: 'progress'): void
-```
-
-云图同步对象移除'progress'类型的所有回调。
-
-**起始版本：** 10
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
-
-**需要权限：** ohos.permission.CLOUDFILE_SYNC
-
-<!--Device-GallerySync-off(evt: 'progress'): void--><!--Device-GallerySync-off(evt: 'progress'): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| evt | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 13600001 | IPC error |
-
-## 示例
-
-```TypeScript
-let gallerySync = new cloudSync.GallerySync();
-
-gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
-    console.info("syncState: " + pg.state);
-});
-
-gallerySync.off('progress');
-```
-
 ## offProgress
 
 ```TypeScript
@@ -143,7 +50,9 @@ Unsubscribes from sync progress event.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -157,15 +66,15 @@ Unsubscribes from sync progress event.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -189,7 +98,9 @@ Unsubscribes all callbacks objects from sync progress event.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -203,8 +114,8 @@ Unsubscribes all callbacks objects from sync progress event.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -218,7 +129,161 @@ gallerySync.onProgress(callback);
 gallerySync.offProgress();
 ```
 
-## on
+## off_progress
+
+```TypeScript
+off(evt: 'progress', callback: (pg: SyncProgress) => void): void
+```
+
+云图同步对象移除'progress'类型中指定的callback回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void--><!--Device-GallerySync-off(evt: 'progress', callback: (pg: SyncProgress) => void): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| evt | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
+| callback | (pg: SyncProgress) =&gt; void | 是 | 回调函数。同步过程事件，入参为[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md#SyncProgress)，返 回值为void。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync();
+
+let callback = (pg: cloudSync.SyncProgress) => {
+  console.info("gallery sync state: " + pg.state + "error type: " + pg.error);
+}
+
+gallerySync.on('progress', callback);
+
+gallerySync.off('progress', callback);
+```
+
+## off_progress
+
+```TypeScript
+off(evt: 'progress'): void
+```
+
+云图同步对象移除'progress'类型的所有回调。
+
+**起始版本：** 10
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-off(evt: 'progress'): void--><!--Device-GallerySync-off(evt: 'progress'): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| evt | 'progress' | 是 | 取消订阅的事件类型，取值为'progress'（同步过程事件）。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+let gallerySync = new cloudSync.GallerySync();
+
+gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
+    console.info("syncState: " + pg.state);
+});
+
+gallerySync.off('progress');
+```
+
+## onProgress
+
+```TypeScript
+onProgress(callback: Callback<SyncProgress>): void
+```
+
+Subscribes to sync progress change event. This method uses a callback to get sync progress changes.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-onProgress(callback: Callback<SyncProgress>): void--><!--Device-GallerySync-onProgress(callback: Callback<SyncProgress>): void-End-->
+
+**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| 13600001 | IPC error |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let gallerySync = new cloudSync.GallerySync();
+let callback = (pg: cloudSync.SyncProgress): void => {
+  console.info("syncState: " + pg.state);
+};
+try {
+  gallerySync.onProgress(callback);
+} catch (error) {
+  console.error(`Error code: ${error.code}, message: ${error.message}`);
+}
+```
+
+## on_progress
 
 ```TypeScript
 on(evt: 'progress', callback: (pg: SyncProgress) => void): void
@@ -229,6 +294,8 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -249,9 +316,9 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error |
 
 ## 示例
@@ -264,57 +331,6 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
 });
 ```
 
-## onProgress
-
-```TypeScript
-onProgress(callback: Callback<SyncProgress>): void
-```
-
-Subscribes to sync progress change event. This method uses a callback to get sync progress changes.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-**需要权限：** ohos.permission.CLOUDFILE_SYNC
-
-<!--Device-GallerySync-onProgress(callback: Callback<SyncProgress>): void--><!--Device-GallerySync-onProgress(callback: Callback<SyncProgress>): void-End-->
-
-**系统能力：** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
-
-**系统接口：** 此接口为系统接口。
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | 是 | callback function with a `SyncProgress` argument. |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes: &lt;br&gt;1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 13600001 | IPC error |
-
-## 示例
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let gallerySync = new cloudSync.GallerySync();
-let callback = (pg: cloudSync.SyncProgress): void => {
-  console.info("syncState: " + pg.state);
-};
-try {
-  gallerySync.onProgress(callback);
-} catch (error) {
-  console.error(`Error code: ${error.code}, message: ${error.message}`);
-}
-```
-
 ## start
 
 ```TypeScript
@@ -323,9 +339,11 @@ start(): Promise<void>
 
 启动端云同步。使用Promise异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -345,12 +363,12 @@ start(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 | 22400001 | Cloud status not ready. |
 | 22400003 | Low battery level. |
 | 22400002 | Network unavailable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
 
@@ -397,9 +415,11 @@ start(callback: AsyncCallback<void>): void
 
 异步方法启动端云同步。使用callback异步回调。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -413,18 +433,18 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步启动端云同步。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步启动端云同步。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 22400001 | Cloud status not ready. |
 | 22400003 | Low battery level. |
 | 22400002 | Network unavailable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
 
@@ -465,15 +485,13 @@ gallerySync.start((err: BusinessError<void> | null): void => {
 stop(): Promise<void>
 ```
 
-异步方法停止端云同步。使用Promise异步回调。
+异步方法停止端云同步。使用Promise异步回调。 > **说明：** > > 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
-> **说明：**
-> 
-> 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -493,9 +511,9 @@ stop(): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
 
@@ -532,15 +550,13 @@ gallerySync.stop().then<void>((): void => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-异步方法停止端云同步。使用callback异步回调。
+异步方法停止端云同步。使用callback异步回调。 > **说明：** > > 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
 
-> **说明：**
-> 
-> 调用stop接口，同步流程会停止。再次调用[start](#start)接口会继续同步。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -554,15 +570,15 @@ stop(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步停止端云同步。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步停止端云同步。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 
 ## 示例
 

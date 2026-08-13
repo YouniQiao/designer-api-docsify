@@ -14,9 +14,11 @@ function createHash(algorithm: string): HashStream
 
 Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
@@ -39,7 +41,7 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error |
 | 13900042 | Unknown error |
 
 ## Examples

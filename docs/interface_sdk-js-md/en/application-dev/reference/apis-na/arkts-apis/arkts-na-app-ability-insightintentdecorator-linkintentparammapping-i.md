@@ -1,0 +1,80 @@
+# LinkIntentParamMapping
+
+Declare interface of LinkIntentParamMapping.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare interface LinkIntentParamMapping--><!--Device-unnamed-export declare interface LinkIntentParamMapping-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## paramCategory
+
+```TypeScript
+paramCategory?: LinkParamCategory
+```
+
+The parameter category.
+
+**Type:** [LinkParamCategory](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md)
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory--><!--Device-LinkIntentParamMapping-paramCategory?: LinkParamCategory-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## paramMappingName
+
+```TypeScript
+paramMappingName?: string
+```
+
+The parameter mapping name.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LinkIntentParamMapping-paramMappingName?: string--><!--Device-LinkIntentParamMapping-paramMappingName?: string-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## paramName
+
+```TypeScript
+paramName: string
+```
+
+The parameter name.
+
+**Type:** string
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-LinkIntentParamMapping-paramName: string--><!--Device-LinkIntentParamMapping-paramName: string-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+

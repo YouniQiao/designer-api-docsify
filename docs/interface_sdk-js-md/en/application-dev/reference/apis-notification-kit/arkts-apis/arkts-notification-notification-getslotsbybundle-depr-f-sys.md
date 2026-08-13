@@ -6,7 +6,7 @@
 function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-Obtains the notification slots of a specified application.This API uses an asynchronous callback to return the result.
+Obtains the notification slots of a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -14,7 +14,7 @@ Obtains the notification slots of a specified application.This API uses an async
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
+**Substitutes:** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md#getSlotsByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -29,7 +29,7 @@ Obtains the notification slots of a specified application.This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundle | BundleOption | Yes | Bundle information of the application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 
 ## getSlotsByBundle
@@ -46,7 +46,7 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
+**Substitutes:** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md#getSlotsByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

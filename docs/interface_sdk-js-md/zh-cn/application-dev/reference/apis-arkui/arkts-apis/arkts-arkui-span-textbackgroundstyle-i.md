@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface TextBackgroundStyle--><!--Device-unnamed-export declare interface TextBackgroundStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ color?: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextBackgroundStyle-color?: ResourceColor--><!--Device-TextBackgroundStyle-color?: ResourceColor-End-->
@@ -38,11 +42,13 @@ radius?: Dimension | BorderRadiuses
 
 文本背景圆角。
 
-**类型：** [Dimension](arkts-arkui-dimension-t.md) \| BorderRadiuses
+**类型：** [Dimension](arkts-arkui-dimension-t.md) \| [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

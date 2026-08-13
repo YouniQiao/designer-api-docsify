@@ -6,6 +6,8 @@ Enumerates the album types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-sendablePhotoAccessHelper-const enum AlbumType--><!--Device-sendablePhotoAccessHelper-const enum AlbumType-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -22,6 +24,8 @@ User album.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-AlbumType-USER = 0--><!--Device-AlbumType-USER = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -37,6 +41,8 @@ System album.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumType-SYSTEM = 1024--><!--Device-AlbumType-SYSTEM = 1024-End-->
 

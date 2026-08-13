@@ -4,7 +4,13 @@ Represents a generic class for mutable data binding, which allows the read and w
 
 **Since:** 20
 
-<!--Device-unnamed-export declare class MutableBinding<T>--><!--Device-unnamed-export declare class MutableBinding<T>-End-->
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-unnamed-export declare class MutableBinding--><!--Device-unnamed-export declare class MutableBinding-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -13,24 +19,3 @@ Represents a generic class for mutable data binding, which allows the read and w
 ```TypeScript
 import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
 ```
-
-## value
-
-```TypeScript
-set value(newValue: T)
-```
-
-Provides the **set** accessor to set a new value for the current bound value. The **set** accessor must be provided when the **MutableBinding** class instance is constructed. Otherwise, a runtime error will be thrown when the  
-**set** accessor is triggered.
-
-**Type:** T
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-MutableBinding-set value(newValue: T)--><!--Device-MutableBinding-set value(newValue: T)-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -1,10 +1,12 @@
 # PopupButtonOptions
 
-Defines the popup button options
+Defines the button attributes and events.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PopupButtonOptions--><!--Device-unnamed-export interface PopupButtonOptions-End-->
 
@@ -19,20 +21,24 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 ## action
 
 ```TypeScript
-action?: VoidCallback
+action?: () => void
 ```
 
-Set the button callback.
+Click callback of the button. By default, no operation is performed.
 
-**Type:** VoidCallback
+**Type:** () =&gt; void
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PopupButtonOptions-action?: VoidCallback--><!--Device-PopupButtonOptions-action?: VoidCallback-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupButtonOptions-action?: () => void--><!--Device-PopupButtonOptions-action?: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -42,17 +48,19 @@ Set the button callback.
 fontColor?: ResourceColor
 ```
 
-Set the button font color.
+Font color of the button text. Default value: **\$r('sys.color.ohos_id_color_text_primary_activated')**
 
 **Type:** ResourceColor
 
-**Default:** $r('sys.color.ohos_id_color_text_primary_activated')
+**Since:** 11
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupButtonOptions-fontColor?: ResourceColor--><!--Device-PopupButtonOptions-fontColor?: ResourceColor-End-->
 
@@ -64,17 +72,19 @@ Set the button font color.
 fontSize?: number | string | Resource
 ```
 
-Set the button font size.
+Font size of the button text. Default value: **\$r('sys.float.ohos_id_text_size_button2')** The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example, **'10px'**); percentage-based strings are not supported. Invalid values are handled as default values.
 
 **Type:** number \| string \| Resource
 
-**Default:** $r('sys.float.ohos_id_text_size_button2')
+**Since:** 11
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupButtonOptions-fontSize?: number | string | Resource--><!--Device-PopupButtonOptions-fontSize?: number | string | Resource-End-->
 
@@ -83,20 +93,24 @@ Set the button font size.
 ## text
 
 ```TypeScript
-text?: ResourceStr
+text: ResourceStr
 ```
 
-Set the button display content.
+Text of the button.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PopupButtonOptions-text?: ResourceStr--><!--Device-PopupButtonOptions-text?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupButtonOptions-text: ResourceStr--><!--Device-PopupButtonOptions-text: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

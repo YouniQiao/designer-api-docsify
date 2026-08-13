@@ -6,6 +6,8 @@ Defines span type.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum RichEditorSpanType--><!--Device-unnamed-export declare enum RichEditorSpanType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Text,corresponding textSpan type.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Image,corresponding imageSpan type.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorSpanType-IMAGE = 1--><!--Device-RichEditorSpanType-IMAGE = 1-End-->
@@ -57,6 +63,8 @@ Mixed,corresponding mixed span type.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Builder,corresponding builderSpan type.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RichEditorSpanType-BUILDER = 3--><!--Device-RichEditorSpanType-BUILDER = 3-End-->
@@ -93,6 +103,8 @@ When no other types are explicitly specified, this type will be matched.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

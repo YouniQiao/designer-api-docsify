@@ -4,7 +4,7 @@ Declare Component ProgressButton
 
 **Since:** 22
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct ProgressButton--><!--Device-unnamed-export declare struct ProgressButton-End-->
 
@@ -24,7 +24,11 @@ clickCallback: () => void
 
 Sets the ProgressButton clickCallback.
 
+**Type:** () =&gt; void
+
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,7 +41,7 @@ Sets the ProgressButton clickCallback.
 ## colorOptions
 
 ```TypeScript
-colorOptions?: ProgressButtonColorOptions
+@Prop colorOptions?: ProgressButtonColorOptions
 ```
 
 Set Color options of the ProgressButton.
@@ -46,20 +50,20 @@ Set Color options of the ProgressButton.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-colorOptions?: ProgressButtonColorOptions--><!--Device-ProgressButton-colorOptions?: ProgressButtonColorOptions-End-->
+<!--Device-ProgressButton-@Prop colorOptions?: ProgressButtonColorOptions--><!--Device-ProgressButton-@Prop colorOptions?: ProgressButtonColorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## content
 
 ```TypeScript
-content: ResourceStr
+@Prop content: ResourceStr
 ```
 
 Sets the ProgressButton content.
@@ -68,20 +72,20 @@ Sets the ProgressButton content.
 
 **Since:** 20
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-ProgressButton-content: ResourceStr--><!--Device-ProgressButton-content: ResourceStr-End-->
+<!--Device-ProgressButton-@Prop content: ResourceStr--><!--Device-ProgressButton-@Prop content: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## enable
 
 ```TypeScript
-enable: boolean
+@Prop enable: boolean
 ```
 
 Sets the ProgressButton enable state.
@@ -90,20 +94,20 @@ Sets the ProgressButton enable state.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-enable: boolean--><!--Device-ProgressButton-enable: boolean-End-->
+<!--Device-ProgressButton-@Prop enable: boolean--><!--Device-ProgressButton-@Prop enable: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progress
 
 ```TypeScript
-progress: number
+@Prop progress: number
 ```
 
 Sets the ProgressButton progress.
@@ -112,20 +116,20 @@ Sets the ProgressButton progress.
 
 **Since:** 22
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
-<!--Device-ProgressButton-progress: number--><!--Device-ProgressButton-progress: number-End-->
+<!--Device-ProgressButton-@Prop progress: number--><!--Device-ProgressButton-@Prop progress: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## progressButtonRadius
 
 ```TypeScript
-progressButtonRadius?: LengthMetrics
+@Prop progressButtonRadius?: LengthMetrics
 ```
 
 Set border rounded corner radius of progress.
@@ -134,13 +138,13 @@ Set border rounded corner radius of progress.
 
 **Since:** 18
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ProgressButton-progressButtonRadius?: LengthMetrics--><!--Device-ProgressButton-progressButtonRadius?: LengthMetrics-End-->
+<!--Device-ProgressButton-@Prop progressButtonRadius?: LengthMetrics--><!--Device-ProgressButton-@Prop progressButtonRadius?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -155,6 +159,8 @@ Sets the ProgressButton progressButtonWidth.
 **Type:** [Length](arkts-arkui-length-t.md)
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

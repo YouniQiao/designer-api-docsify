@@ -1,10 +1,10 @@
 # UIInspector
 
-class UIInspector
-
-提供注册组件布局和组件绘制送显完成回调通知的能力。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作，适用于需要精确感知组件布局和绘制时机的场景。
+class UIInspector 提供注册组件布局和组件绘制送显完成回调通知的能力。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作，适用于需要精确感知组件布局和绘制时机的场景。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export class UIInspector--><!--Device-unnamed-export class UIInspector-End-->
 
@@ -19,6 +19,8 @@ createComponentObserver(id: string): inspector.ComponentObserver
 注册组件布局和组件绘制送显完成回调通知。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -46,9 +48,11 @@ createComponentObserver(id: string): inspector.ComponentObserver
 createComponentObserver(id: string | number): inspector.ComponentObserver
 ```
 
-注册组件布局和组件绘制送显完成回调通知。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。相比createComponentObserver，新增支持传入UniqueID（系统为节点分配的唯一标识）。
+注册组件布局和组件绘制送显完成回调通知。送显指节点的绘制命令发送到图形服务并完成显示。例如，开发者可在组件布局完成后获取组件精确尺寸，或在送显完成后执行截图、动画同步等操作。 相比createComponentObserver，新增支持传入UniqueID（系统为节点分配的唯一标识）。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

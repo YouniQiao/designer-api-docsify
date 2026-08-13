@@ -8,7 +8,9 @@ Defines a UIScrollableCommonEvent which is used to set event to target component
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
-<!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent extends UICommonEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface UIScrollableCommonEvent--><!--Device-unnamed-declare interface UIScrollableCommonEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -75,6 +81,8 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,6 +110,8 @@ Set or reset the callback which is triggered when the scrolling started.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -127,6 +137,8 @@ Set or reset the callback which is triggered when the scrolling stoped.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

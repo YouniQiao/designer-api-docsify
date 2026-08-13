@@ -10,6 +10,8 @@ Callback function when the selection menu appears.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-export type MenuOnAppearCallback = (start: int, end: int) => void--><!--Device-unnamed-export type MenuOnAppearCallback = (start: int, end: int) => void-End-->

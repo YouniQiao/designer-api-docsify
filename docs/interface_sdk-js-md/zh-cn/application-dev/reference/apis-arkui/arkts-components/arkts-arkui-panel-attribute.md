@@ -2,13 +2,15 @@
 
 窗格属性。
 
-**继承/实现关系：** PanelAttribute extends [CommonMethod<PanelAttribute>](CommonMethod<PanelAttribute>)
+**继承/实现关系：** PanelAttribute extends CommonMethod<PanelAttribute>
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
-<!--Device-unnamed-declare class PanelAttribute extends CommonMethod<PanelAttribute>--><!--Device-unnamed-declare class PanelAttribute extends CommonMethod<PanelAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class PanelAttribute--><!--Device-unnamed-declare class PanelAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

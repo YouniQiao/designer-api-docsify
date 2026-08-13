@@ -2,9 +2,11 @@
 
 Result the metadata for a downloadableProfile.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface GetDownloadableProfileMetadataResult--><!--Device-eSIM-export interface GetDownloadableProfileMetadataResult-End-->
 
@@ -28,9 +30,11 @@ Information about a profile which is downloadable to an eUICC using.
 
 **Type:** [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-downloadableProfile: DownloadableProfile--><!--Device-GetDownloadableProfileMetadataResult-downloadableProfile: DownloadableProfile-End-->
 
@@ -48,9 +52,11 @@ The iccid of the profile.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-iccid: string--><!--Device-GetDownloadableProfileMetadataResult-iccid: string-End-->
 
@@ -68,9 +74,11 @@ The flag of profile policy rule.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-pprFlag: boolean--><!--Device-GetDownloadableProfileMetadataResult-pprFlag: boolean-End-->
 
@@ -86,11 +94,13 @@ pprType: int
 
 The type of profile policy rule.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-pprType: int--><!--Device-GetDownloadableProfileMetadataResult-pprType: int-End-->
 
@@ -108,9 +118,11 @@ Profile class for the profile.
 
 **Type:** [ProfileClass](arkts-telephony-esim-profileclass-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-profileClass: ProfileClass--><!--Device-GetDownloadableProfileMetadataResult-profileClass: ProfileClass-End-->
 
@@ -128,9 +140,11 @@ The profile name.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-profileName: string--><!--Device-GetDownloadableProfileMetadataResult-profileName: string-End-->
 
@@ -148,9 +162,11 @@ Gets the result of the operation.
 
 **Type:** ResultCode
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-responseResult: ResultCode--><!--Device-GetDownloadableProfileMetadataResult-responseResult: ResultCode-End-->
 
@@ -168,9 +184,11 @@ The service provider name for the profile.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-serviceProviderName: string--><!--Device-GetDownloadableProfileMetadataResult-serviceProviderName: string-End-->
 
@@ -188,9 +206,11 @@ Gets the solvable errors.
 
 **Type:** [SolvableErrors](arkts-telephony-esim-solvableerrors-e-sys.md)
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfileMetadataResult-solvableErrors: SolvableErrors--><!--Device-GetDownloadableProfileMetadataResult-solvableErrors: SolvableErrors-End-->
 

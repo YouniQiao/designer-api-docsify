@@ -6,7 +6,9 @@ export type NotificationFlagStatus = _NotificationFlagStatus
 
 Enumerates the notification flag states.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus--><!--Device-notificationManager-export type NotificationFlagStatus = _NotificationFlagStatus-End-->
 

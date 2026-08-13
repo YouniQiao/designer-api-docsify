@@ -2,7 +2,9 @@
 
 Color in RGBA format. It consists of four components: red, green, blue, and alpha.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface Color--><!--Device-unnamed-export interface Color-End-->
 
@@ -18,7 +20,9 @@ Alpha component. The value range is [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-a: double--><!--Device-Color-a: double-End-->
 
@@ -34,7 +38,9 @@ Blue component. The value range is [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-b: double--><!--Device-Color-b: double-End-->
 
@@ -50,7 +56,9 @@ Green component. The value range is [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-g: double--><!--Device-Color-g: double-End-->
 
@@ -66,7 +74,9 @@ Red component. The value range is [0, 1].
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Color-r: double--><!--Device-Color-r: double-End-->
 

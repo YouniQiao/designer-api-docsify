@@ -8,7 +8,9 @@ function getCertificateStorePath(property: CertStoreProperty): string
 
 表示获取证书的存储路径。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string--><!--Device-certificateManager-function getCertificateStorePath(property: CertStoreProperty): string-End-->
 
@@ -30,9 +32,9 @@ function getCertificateStorePath(property: CertStoreProperty): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17500009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500009-不支持指定的证书存储路径) |
-| [17500001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-certManager.md#17500001-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17500009](../errorcode-certManager.md#17500009-不支持指定的证书存储路径) |
+| [17500001](../errorcode-certManager.md#17500001-内部错误) |
 
 ## 示例
 

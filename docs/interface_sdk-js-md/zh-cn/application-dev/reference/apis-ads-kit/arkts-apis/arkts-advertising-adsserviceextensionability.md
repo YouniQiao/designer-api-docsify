@@ -1,7 +1,4 @@
-# @ohos.advertising.AdsServiceExtensionAbility(广告扩展服务)
-
-本模块为设备厂商提供广告扩展能力，设备厂商可自主实现请求广告的回调。
-
+# @ohos.advertising.AdsServiceExtensionAbility
 
 ## 汇总
 

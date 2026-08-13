@@ -4,6 +4,8 @@ View model
 
 **Since:** 4
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ViewModel--><!--Device-unnamed-export interface ViewModel-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
@@ -17,6 +19,8 @@ $t(path: string, param?: object | Array<any>): string
 Displays content based on the current system language and a path of the language resource key specified through \$t.
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -48,6 +52,8 @@ An object that holds all DOM elements and component instances that have been reg
 **Type:** [ElementReferences](arkts-arkui-viewmodel-elementreferences-i.md)
 
 **Since:** 4
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

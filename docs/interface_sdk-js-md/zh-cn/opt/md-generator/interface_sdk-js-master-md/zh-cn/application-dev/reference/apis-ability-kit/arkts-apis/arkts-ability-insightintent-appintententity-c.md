@@ -6,7 +6,9 @@
 
 **起始版本：** 26.0.0
 
-<!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity<T> implements IntentEntity-End-->
+**废弃版本：** -1
+
+<!--Device-insightIntent-abstract class AppIntentEntity--><!--Device-insightIntent-abstract class AppIntentEntity-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -19,6 +21,8 @@ abstract onQueryEntity(params: QueryEntityParam): Promise<Array<T>>
 在查询实体执行时调用。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -154,6 +158,8 @@ displayName: string
 **类型：** string
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

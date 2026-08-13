@@ -4,9 +4,11 @@ Immersive material parameters.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-uiMaterial-export interface ImmersiveOptions--><!--Device-uiMaterial-export interface ImmersiveOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-uiMaterial-interface ImmersiveOptions--><!--Device-uiMaterial-interface ImmersiveOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,7 @@ import { uiMaterial } from '@kit.ArkUI';
 applyShadow?: boolean
 ```
 
-Whether to add a shadow effect for a material.
-
-If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle)) attribute. If this parameter is set to **false**, only the general shadow attribute takes effect.
-
-Note: This parameter takes effect only for the display effect of devices with all levels of computing power.
-
-Default value: **true**
+Whether to add a shadow effect for a material. If this parameter is set to **true**, the added shadow effect in the material always takes effect, which takes precedence over the general shadow attribute. If this parameter is set to **false**, only the general shadow attribute takes effect. Note: This parameter takes effect only for the display effect of devices with all levels of computing power. Default value: **true**
 
 **Type:** boolean
 
@@ -36,9 +32,13 @@ Default value: **true**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveOptions-applyShadow?: boolean--><!--Device-ImmersiveOptions-applyShadow?: boolean-End-->
 
@@ -50,27 +50,7 @@ Default value: **true**
 colorInvert?: boolean
 ```
 
-Whether the subtree of the node of the material object automatically adapts the material to the complementary color of the background color.
-
-**false** indicates the material is not automatically adapted to the complementary color of the background color.
-
-**true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color.
-
-The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include   
-[fontColor](TextAttribute#fontColor) of the **Text** component,   
-[fontColor](ButtonAttribute#fontColor) of the **Button** component,   
-[fontColor](SymbolGlyphAttribute#fontColor(value: Array&lt;ResourceColor&gt;)) of the **SymbolGlyph** component,   
-[fillColor](ImageAttribute#fillColor(value: ResourceColor)) of the **Image** component, icon colors in   
-[placeholderColor](SearchAttribute#placeholderColor), [fontColor](SearchAttribute#fontColor), and   
-[searchIcon](SearchAttribute#searchIcon) of the **Search** component, icon colors in   
-[cancelButton](SearchAttribute#cancelButton), caret colors in   
-[caretStyle](SearchAttribute#caretStyle), and text and icon colors in   
-[tabBar](TabContentAttribute#tabBar(options: string | Resource | CustomBuilder | TabBarOptions)) of the   
-**TabContent** component when the [BottomTabBarStyle](BottomTabBarStyle) style is used.
-
-Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
-
-Default value: **false**
+Whether the subtree of the node of the material object automatically adapts the material to the complementary color of the background color. **false** indicates the material is not automatically adapted to the complementary color of the background color. **true** indicates that the material is automatically adapted to the complementary color of the background color only when the material layer is thin enough. The materials that can be adapted to the complementary color are defined by the system. Such materials must have at least the **THIN** or **ULTRA_THIN** style, and are related to the strength configuration of the immersive light effect of the application. The thinner the material and the stronger the immersive light effect, the more likely the material meets the requirements for adapting to the complementary color. The capability of automatically adapting the material to the complementary color takes effect only when special resource values are set for some attribute APIs. The attribute APIs include fontColor of the **Text** component, fontColor of the **Button** component, fontColor of the **SymbolGlyph** component, fillColor of the **Image** component, icon colors in placeholderColor, fontColor, and searchIcon of the **Search** component, icon colors in cancelButton, caret colors in caretStyle, and text and icon colors in tabBar of the **TabContent** component when the BottomTabBarStyle style is used. Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power. Default value: **false**
 
 **Type:** boolean
 
@@ -78,9 +58,13 @@ Default value: **false**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveOptions-colorInvert?: boolean--><!--Device-ImmersiveOptions-colorInvert?: boolean-End-->
 
@@ -92,21 +76,19 @@ Default value: **false**
 interactive?: boolean
 ```
 
-Whether to set an interactive deformation effect for the component with a material set.
-
-Note: This parameter takes effect for the display effect of devices with all levels of computing power.
-
-Default value: **false**
+Whether to set an interactive deformation effect for the component with a material set. Note: This parameter takes effect for the display effect of devices with all levels of computing power. Default value: **false**
 
 **Type:** boolean
 
-**Default:** false
-
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveOptions-interactive?: boolean--><!--Device-ImmersiveOptions-interactive?: boolean-End-->
 
@@ -118,19 +100,19 @@ Default value: **false**
 lightEffect?: LightEffectOptions | null
 ```
 
-Whether to set a light sensing interaction feedback effect for the component with a material set. If this parameter is set to null, the light sensing interaction feedback effect is disabled.
-
-Note: This parameter takes effect for the display effect of devices with all levels of computing power.
-
-Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
+Whether to set a light sensing interaction feedback effect for the component with a material set. If this parameter is set to null, the light sensing interaction feedback effect is disabled. Note: This parameter takes effect for the display effect of devices with all levels of computing power. Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
 
 **Type:** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveOptions-lightEffect?: LightEffectOptions | null--><!--Device-ImmersiveOptions-lightEffect?: LightEffectOptions | null-End-->
 
@@ -142,11 +124,7 @@ Default value: **undefined**, indicating that the light sensing interaction feed
 materialColor?: ResourceColor
 ```
 
-Coloring of the material layer. This parameter is used to add a pure color effect for the material filter. The pure color must have a certain transparency value and cannot be completely opaque. Otherwise, the material filter effect will be completely blocked.
-
-Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
-
-Default value: **Color.Transparent**
+Coloring of the material layer. This parameter is used to add a pure color effect for the material filter. The pure color must have a certain transparency value and cannot be completely opaque. Otherwise, the material filter effect will be completely blocked. Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power. Default value: **Color.Transparent**
 
 **Type:** ResourceColor
 
@@ -154,9 +132,13 @@ Default value: **Color.Transparent**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveOptions-materialColor?: ResourceColor--><!--Device-ImmersiveOptions-materialColor?: ResourceColor-End-->
 
@@ -168,11 +150,7 @@ Default value: **Color.Transparent**
 style?: ImmersiveStyle
 ```
 
-Material style. Different styles correspond to different material parameters, which affect the material thickness.
-
-Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power.
-
-Default value: **ImmersiveStyle.REGULAR**
+Material style. Different styles correspond to different material parameters, which affect the material thickness. Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power. Default value: **ImmersiveStyle.REGULAR**
 
 **Type:** [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
 
@@ -180,9 +158,13 @@ Default value: **ImmersiveStyle.REGULAR**
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ImmersiveOptions-style?: ImmersiveStyle--><!--Device-ImmersiveOptions-style?: ImmersiveStyle-End-->
 

@@ -2,9 +2,11 @@
 
 Defines **PathSeparatorStrategy**, a property of [Options](arkts-basicservices-zlib-options-i.md#Options), used to specify the separator strategy for the file path in the compressed package specified for decompression.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-zlib-export enum PathSeparatorStrategy--><!--Device-zlib-export enum PathSeparatorStrategy-End-->
 
@@ -18,11 +20,13 @@ PATH_SEPARATOR_STRATEGY_DEFAULT = 0
 
 Default value, indicating that separators in the file path of the compressed package are not processed.
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PathSeparatorStrategy-PATH_SEPARATOR_STRATEGY_DEFAULT = 0--><!--Device-PathSeparatorStrategy-PATH_SEPARATOR_STRATEGY_DEFAULT = 0-End-->
 
@@ -36,11 +40,13 @@ PATH_SEPARATOR_STRATEGY_REPLACE_BACKSLASH = 1
 
 Backslashes () in the file path of the package are replaced with slashes (/).
 
-**Since:** 21
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PathSeparatorStrategy-PATH_SEPARATOR_STRATEGY_REPLACE_BACKSLASH = 1--><!--Device-PathSeparatorStrategy-PATH_SEPARATOR_STRATEGY_REPLACE_BACKSLASH = 1-End-->
 

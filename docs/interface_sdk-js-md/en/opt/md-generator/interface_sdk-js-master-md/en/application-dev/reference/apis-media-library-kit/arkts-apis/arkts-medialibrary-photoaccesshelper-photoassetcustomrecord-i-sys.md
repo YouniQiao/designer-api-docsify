@@ -2,7 +2,9 @@
 
 Provides APIs for custom user behavior recording for Gallery.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface PhotoAssetCustomRecord--><!--Device-photoAccessHelper-interface PhotoAssetCustomRecord-End-->
 
@@ -26,7 +28,9 @@ File ID, which must be an integer greater than 0.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecord-readonly fileId: int--><!--Device-PhotoAssetCustomRecord-readonly fileId: int-End-->
 
@@ -44,7 +48,9 @@ Number of times the image or video was jumped to in large view. The value must b
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecord-readonly lcdJumpCount: int--><!--Device-PhotoAssetCustomRecord-readonly lcdJumpCount: int-End-->
 
@@ -62,7 +68,9 @@ Number of times that image or video was shared. The value must be an integer gre
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PhotoAssetCustomRecord-readonly shareCount: int--><!--Device-PhotoAssetCustomRecord-readonly shareCount: int-End-->
 

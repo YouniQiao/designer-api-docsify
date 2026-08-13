@@ -2,7 +2,9 @@
 
 Enumerates the authentication intents.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum AuthIntent--><!--Device-osAccount-enum AuthIntent-End-->
 
@@ -18,7 +20,9 @@ UNLOCK = 1
 
 Unlock.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthIntent-UNLOCK = 1--><!--Device-AuthIntent-UNLOCK = 1-End-->
 
@@ -34,7 +38,9 @@ SILENT_AUTH = 2
 
 Silent authentication.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthIntent-SILENT_AUTH = 2--><!--Device-AuthIntent-SILENT_AUTH = 2-End-->
 
@@ -50,7 +56,9 @@ QUESTION_AUTH = 3
 
 Security question authentication.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthIntent-QUESTION_AUTH = 3--><!--Device-AuthIntent-QUESTION_AUTH = 3-End-->
 
@@ -66,7 +74,9 @@ ABANDONED_PIN_AUTH = 4
 
 Abandoned PIN authentication. After a user changes the lock screen password, the old PIN is abandoned. If a user forgets the current password, the user can reset the lock screen password after passing the authentication with the abandoned PIN.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthIntent-ABANDONED_PIN_AUTH = 4--><!--Device-AuthIntent-ABANDONED_PIN_AUTH = 4-End-->
 

@@ -6,7 +6,7 @@ Wi-Fi IP information.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IpInfo](ohos.wifiManager/wifiManager.IpInfo)
+**Substitutes:** [IpInfo](arkts-connectivity-wifimanager-ipinfo-i.md#IpInfo)
 
 <!--Device-wifi-interface IpInfo--><!--Device-wifi-interface IpInfo-End-->
 
@@ -32,7 +32,7 @@ The gateway of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [gateway](ohos.wifiManager/wifiManager.IpInfo.gateway)
+**Substitutes:** [gateway](arkts-connectivity-wifimanager-ipinfo-i.md#gateway)
 
 <!--Device-IpInfo-gateway: number--><!--Device-IpInfo-gateway: number-End-->
 
@@ -52,7 +52,7 @@ The IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [ipAddress](ohos.wifiManager/wifiManager.IpInfo.ipAddress)
+**Substitutes:** [ipAddress](arkts-connectivity-wifimanager-ipinfo-i.md#ipAddress)
 
 <!--Device-IpInfo-ipAddress: number--><!--Device-IpInfo-ipAddress: number-End-->
 
@@ -72,7 +72,7 @@ The IP address lease duration of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [leaseDuration](ohos.wifiManager/wifiManager.IpInfo.leaseDuration)
+**Substitutes:** [leaseDuration](arkts-connectivity-wifimanager-ipinfo-i.md#leaseDuration)
 
 <!--Device-IpInfo-leaseDuration: number--><!--Device-IpInfo-leaseDuration: number-End-->
 
@@ -92,7 +92,7 @@ The network mask of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [netmask](ohos.wifiManager/wifiManager.IpInfo.netmask)
+**Substitutes:** [netmask](arkts-connectivity-wifimanager-ipinfo-i.md#netmask)
 
 <!--Device-IpInfo-netmask: number--><!--Device-IpInfo-netmask: number-End-->
 
@@ -112,7 +112,7 @@ The primary DNS server IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [primaryDns](ohos.wifiManager/wifiManager.IpInfo.primaryDns)
+**Substitutes:** [primaryDns](arkts-connectivity-wifimanager-ipinfo-i.md#primaryDns)
 
 <!--Device-IpInfo-primaryDns: number--><!--Device-IpInfo-primaryDns: number-End-->
 
@@ -132,7 +132,7 @@ T he secondary DNS server IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [secondDns](ohos.wifiManager/wifiManager.IpInfo.secondDns)
+**Substitutes:** [secondDns](arkts-connectivity-wifimanager-ipinfo-i.md#secondDns)
 
 <!--Device-IpInfo-secondDns: number--><!--Device-IpInfo-secondDns: number-End-->
 
@@ -152,7 +152,7 @@ The DHCP server IP address of the Wi-Fi connection
 
 **Deprecated since:** 9
 
-**Substitutes:** [serverIp](ohos.wifiManager/wifiManager.IpInfo.serverIp)
+**Substitutes:** [serverIp](arkts-connectivity-wifimanager-ipinfo-i.md#serverIp)
 
 <!--Device-IpInfo-serverIp: number--><!--Device-IpInfo-serverIp: number-End-->
 

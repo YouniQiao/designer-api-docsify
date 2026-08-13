@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
-<!--Device-unnamed-declare interface FocusAxisEvent extends BaseEvent--><!--Device-unnamed-declare interface FocusAxisEvent extends BaseEvent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface FocusAxisEvent--><!--Device-unnamed-declare interface FocusAxisEvent-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ axisMap: Map<AxisModel, number>
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -47,6 +51,8 @@ stopPropagation: Callback<void>
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

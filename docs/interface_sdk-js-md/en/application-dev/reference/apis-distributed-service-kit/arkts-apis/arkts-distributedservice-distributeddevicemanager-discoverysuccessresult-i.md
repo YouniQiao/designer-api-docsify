@@ -4,7 +4,9 @@ Discovery successful result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DiscoverySuccessResult--><!--Device-distributedDeviceManager-interface DiscoverySuccessResult-End-->
 
@@ -28,7 +30,9 @@ Basic description information of a distributed device.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DiscoverySuccessResult-device: DeviceBasicInfo--><!--Device-DiscoverySuccessResult-device: DeviceBasicInfo-End-->
 

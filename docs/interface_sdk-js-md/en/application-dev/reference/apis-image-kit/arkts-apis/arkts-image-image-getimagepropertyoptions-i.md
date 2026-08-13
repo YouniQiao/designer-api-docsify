@@ -56,7 +56,7 @@ Index of the image. The default value is **0**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-**Deprecated since:** 11  
+**Deprecated since:** 11
 
 **Substitutes:** [index](arkts-image-image-imagepropertyoptions-i.md#index)
 

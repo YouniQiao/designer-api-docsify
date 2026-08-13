@@ -2,9 +2,11 @@
 
 提供ECC密钥参数生成和基于指定椭圆曲线的点转换工具。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-class ECCKeyUtil--><!--Device-cryptoFramework-class ECCKeyUtil-End-->
 
@@ -18,19 +20,15 @@
 static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 ```
 
-根据椭圆曲线的曲线名，即相应的NID（Name Identifier），将指定的点数据转换为Point对象。当前支持压缩/非压缩格式的点数据。
+根据椭圆曲线的曲线名，即相应的NID（Name Identifier），将指定的点数据转换为Point对象。当前支持压缩/非压缩格式的点数据。 > **说明：** > > 根据RFC5480规范中第2.2节的描述： > 1. 非压缩格式的点数据表示为 **0x04**|x坐标|y坐标。 > 2. **Fp**域（当前不支持**F2m**域）中的压缩点数据表示如下：**0x03**|x坐标（当y坐标为奇数时）；**0x02**|x坐标（当y坐标为偶数时）。
 
-> **说明：**
-> 
-> 根据RFC5480规范中第2.2节的描述：
-> 1. 非压缩格式的点数据表示为 **0x04**|x坐标|y坐标。
-> 2. **Fp**域（当前不支持**F2m**域）中的压缩点数据表示如下：**0x03**|x坐标（当y坐标为奇数时）；**0x02**|x坐标（当y坐标为偶数时）。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point--><!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point-End-->
 
@@ -53,9 +51,9 @@ static convertPoint(curveName: string, encodedPoint: Uint8Array): Point
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -77,13 +75,13 @@ console.info('returnPoint: ' + returnPoint.x.toString(16));
 static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 ```
 
-根据椭圆曲线相应的NID（Name Identifier）字符串名称生成相应的非对称公共密钥参数。详见  
-[ECC密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#ecc)和  
-[SM2密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#sm2)。
+根据椭圆曲线相应的NID（Name Identifier）字符串名称生成相应的非对称公共密钥参数。详见 [ECC密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#ecc)和 [SM2密钥生成规格](../../../security/CryptoArchitectureKit/crypto-key-generation-conversion.md#sm2)。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -109,9 +107,9 @@ static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | 该操作不支持。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 
@@ -133,13 +131,15 @@ try {
 static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array
 ```
 
-根据椭圆曲线的曲线名，即相应的NID（Name Identifier），按照指定的点数据格式，将Point对象转换为点数据。当前支持压缩/非压缩格式的点数据。
+根据椭圆曲线的曲线名，即相应的NID（Name Identifier），按照指定的点数据格式，将Point对象转换为点数据。当前支持压缩/非压缩格式的点 数据。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array--><!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array-End-->
 
@@ -163,9 +163,9 @@ static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Ar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
 ## 示例
 

@@ -4,6 +4,8 @@ Defines a custom title for the **Navigation** component.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationCustomTitle--><!--Device-unnamed-declare interface NavigationCustomTitle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Content of the title bar.
 **Type:** [CustomBuilder](arkts-arkui-custombuilder-t.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -37,6 +41,8 @@ Height of the title bar.
 **Type:** [TitleHeight](../arkts-apis/arkts-arkui-titleheight-e.md) \| [Length](../arkts-apis/arkts-arkui-length-t.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

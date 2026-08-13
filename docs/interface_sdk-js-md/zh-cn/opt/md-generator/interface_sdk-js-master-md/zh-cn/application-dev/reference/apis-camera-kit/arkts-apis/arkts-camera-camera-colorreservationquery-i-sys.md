@@ -2,7 +2,9 @@
 
 Provides APIs for querying the color retention type supported by the device.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface ColorReservationQuery--><!--Device-camera-interface ColorReservationQuery-End-->
 
@@ -18,7 +20,9 @@ getSupportedColorReservationTypes(): Array<ColorReservationType>
 
 Obtains the supported color reservation types.
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>--><!--Device-ColorReservationQuery-getSupportedColorReservationTypes(): Array<ColorReservationType>-End-->
 
@@ -36,8 +40,8 @@ Obtains the supported color reservation types.
 
 | 错误码ID |
 | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

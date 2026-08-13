@@ -6,7 +6,9 @@ Implements a **PixelMapDrawableDescriptor** object, which can be created by pass
 
 **Since:** 12
 
-<!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class PixelMapDrawableDescriptor extends DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class PixelMapDrawableDescriptor--><!--Device-unnamed-export class PixelMapDrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -25,6 +27,8 @@ constructor(src?: image.PixelMap)
 A constructor used to create a **PixelMapDrawableDescriptor** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ constructor(src?: image.PixelMap | ResourceStr)
 A constructor used to create a **PixelMapDrawableDescriptor** object through the PixelMap type or **ResourceStr**.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

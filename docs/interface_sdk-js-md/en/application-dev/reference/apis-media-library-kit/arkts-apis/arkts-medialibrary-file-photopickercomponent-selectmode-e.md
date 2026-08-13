@@ -1,10 +1,12 @@
 # SelectMode
 
-SelectMode. include SINGLE_SELECT and MULTI_SELECT
+Enumerates the selection modes.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum SelectMode--><!--Device-unnamed-export declare enum SelectMode-End-->
 
@@ -16,13 +18,15 @@ SelectMode. include SINGLE_SELECT and MULTI_SELECT
 SINGLE_SELECT = 0
 ```
 
-SINGLE_SELECT. single select
+Select a single option.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SelectMode-SINGLE_SELECT = 0--><!--Device-SelectMode-SINGLE_SELECT = 0-End-->
 
@@ -34,13 +38,15 @@ SINGLE_SELECT. single select
 MULTI_SELECT = 1
 ```
 
-MULTI_SELECT. multi select
+Select multiple options.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SelectMode-MULTI_SELECT = 1--><!--Device-SelectMode-MULTI_SELECT = 1-End-->
 

@@ -1,19 +1,12 @@
 # ErrorType
 
-Enumerates the device-cloud sync errors.
+Enumerates the device-cloud sync errors. - In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are unavailable. If the mobile data network is available, the synchronization can be performed normally. - During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW** will be return when the current upload is complete. - When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not allowed. - If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in the cloud.
 
-- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
-unavailable. If the mobile data network is available, the synchronization can be performed normally.  
-- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**  
-will be return when the current upload is complete.  
-- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not  
-allowed.  
-- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in  
-the cloud.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
 
@@ -27,9 +20,11 @@ NO_ERROR = 0
 
 No error.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-NO_ERROR = 0--><!--Device-ErrorType-NO_ERROR = 0-End-->
 
@@ -43,9 +38,11 @@ NETWORK_UNAVAILABLE = 1
 
 No network is available.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-NETWORK_UNAVAILABLE = 1--><!--Device-ErrorType-NETWORK_UNAVAILABLE = 1-End-->
 
@@ -59,9 +56,11 @@ WIFI_UNAVAILABLE = 2
 
 Wi-Fi is unavailable.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-WIFI_UNAVAILABLE = 2--><!--Device-ErrorType-WIFI_UNAVAILABLE = 2-End-->
 
@@ -75,9 +74,11 @@ BATTERY_LEVEL_LOW = 3
 
 The battery level is lower than 10%.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-BATTERY_LEVEL_LOW = 3--><!--Device-ErrorType-BATTERY_LEVEL_LOW = 3-End-->
 
@@ -91,9 +92,11 @@ BATTERY_LEVEL_WARNING = 4
 
 The battery level is lower than 15%.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4--><!--Device-ErrorType-BATTERY_LEVEL_WARNING = 4-End-->
 
@@ -107,9 +110,11 @@ CLOUD_STORAGE_FULL = 5
 
 The cloud space is insufficient.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-CLOUD_STORAGE_FULL = 5--><!--Device-ErrorType-CLOUD_STORAGE_FULL = 5-End-->
 
@@ -123,9 +128,11 @@ LOCAL_STORAGE_FULL = 6
 
 The local space is insufficient.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-LOCAL_STORAGE_FULL = 6--><!--Device-ErrorType-LOCAL_STORAGE_FULL = 6-End-->
 
@@ -139,9 +146,11 @@ DEVICE_TEMPERATURE_TOO_HIGH = 7
 
 The device temperature is too high.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7--><!--Device-ErrorType-DEVICE_TEMPERATURE_TOO_HIGH = 7-End-->
 
@@ -155,9 +164,11 @@ REMOTE_SERVER_ABNORMAL = 8
 
 The remote service is unavailable.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8--><!--Device-ErrorType-REMOTE_SERVER_ABNORMAL = 8-End-->
 

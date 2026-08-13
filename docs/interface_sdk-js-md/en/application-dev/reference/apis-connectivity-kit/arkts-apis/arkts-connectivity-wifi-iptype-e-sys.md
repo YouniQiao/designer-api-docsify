@@ -8,7 +8,7 @@ Wi-Fi IP type enumeration.
 
 **Deprecated since:** 9
 
-**Substitutes:** [IpType](ohos.wifiManager/wifiManager.IpType)
+**Substitutes:** [IpType](arkts-connectivity-wifimanager-iptype-e-sys.md#IpType-(System-API))
 
 <!--Device-wifi-enum IpType--><!--Device-wifi-enum IpType-End-->
 
@@ -30,7 +30,7 @@ Use statically configured IP settings
 
 **Deprecated since:** 9
 
-**Substitutes:** [STATIC](ohos.wifiManager/wifiManager.IpType.STATIC)
+**Substitutes:** [STATIC](arkts-connectivity-wifimanager-iptype-e-sys.md#STATIC)
 
 <!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
 
@@ -52,7 +52,7 @@ Use dynamically configured IP settings
 
 **Deprecated since:** 9
 
-**Substitutes:** [DHCP](ohos.wifiManager/wifiManager.IpType.DHCP)
+**Substitutes:** [DHCP](arkts-connectivity-wifimanager-iptype-e-sys.md#DHCP)
 
 <!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
 
@@ -74,7 +74,7 @@ No IP details are assigned
 
 **Deprecated since:** 9
 
-**Substitutes:** [UNKNOWN](ohos.wifiManager/wifiManager.IpType.UNKNOWN)
+**Substitutes:** [UNKNOWN](arkts-connectivity-wifimanager-iptype-e-sys.md#UNKNOWN)
 
 <!--Device-IpType-UNKNOWN--><!--Device-IpType-UNKNOWN-End-->
 

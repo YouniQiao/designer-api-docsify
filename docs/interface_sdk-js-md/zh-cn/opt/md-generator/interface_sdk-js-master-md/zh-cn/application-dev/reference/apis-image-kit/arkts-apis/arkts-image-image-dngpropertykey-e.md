@@ -1,14 +1,10 @@
 # DngPropertyKey
 
-表示DNG图片信息的枚举。
-
-> **说明：**
-> 
-> - 关于字段的更详细描述请参考DNG协议文档DNG Specification 1.4.0.0。
-> 
-> - 返回字段类型具体参考[DngMetadata](arkts-image-image-dngmetadata-c.md#DngMetadata)。
+表示DNG图片信息的枚举。 > **说明：** > > - 关于字段的更详细描述请参考DNG协议文档DNG Specification 1.4.0.0。 > > - 返回字段类型具体参考[DngMetadata](arkts-image-image-dngmetadata-c.md#DngMetadata)。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-image-enum DngPropertyKey--><!--Device-image-enum DngPropertyKey-End-->
 
@@ -23,6 +19,8 @@ DNG_VERSION = 'DNGVersion'
 DNG图片的版本号。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +38,8 @@ DNG文件向后兼容的最低版本号。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-DNG_BACKWARD_VERSION = 'DNGBackwardVersion'--><!--Device-DngPropertyKey-DNG_BACKWARD_VERSION = 'DNGBackwardVersion'-End-->
@@ -55,6 +55,8 @@ UNIQUE_CAMERA_MODEL = 'UniqueCameraModel'
 相机的唯一型号标识，用于区分不同设备。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,6 +74,8 @@ LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'--><!--Device-DngPropertyKey-LOCALIZED_CAMERA_MODEL = 'LocalizedCameraModel'-End-->
@@ -87,6 +91,8 @@ CFA_PLANE_COLOR = 'CFAPlaneColor'
 CFA各平面的颜色通道定义。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,6 +110,8 @@ CFA布局类型，如RGGB、BGGR等。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CFA_LAYOUT = 'CFALayout'--><!--Device-DngPropertyKey-CFA_LAYOUT = 'CFALayout'-End-->
@@ -119,6 +127,8 @@ LINEARIZATION_TABLE = 'LinearizationTable'
 线性化查找表，用于将原始传感器值映射为线性光强度。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -136,6 +146,8 @@ BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'--><!--Device-DngPropertyKey-BLACK_LEVEL_REPEAT_DIM = 'BlackLevelRepeatDim'-End-->
@@ -151,6 +163,8 @@ BLACK_LEVEL = 'BlackLevel'
 零光照下的编码电平，按CFA平面顺序排列。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -168,6 +182,8 @@ BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'--><!--Device-DngPropertyKey-BLACK_LEVEL_DELTA_H = 'BlackLevelDeltaH'-End-->
@@ -183,6 +199,8 @@ BLACK_LEVEL_DELTA_V = 'BlackLevelDeltaV'
 垂直方向黑电平校正增量。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,6 +218,8 @@ WHITE_LEVEL = 'WhiteLevel'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-WHITE_LEVEL = 'WhiteLevel'--><!--Device-DngPropertyKey-WHITE_LEVEL = 'WhiteLevel'-End-->
@@ -215,6 +235,8 @@ DEFAULT_SCALE = 'DefaultScale'
 默认缩放比例。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,6 +254,8 @@ DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'--><!--Device-DngPropertyKey-DEFAULT_CROP_ORIGIN = 'DefaultCropOrigin'-End-->
@@ -247,6 +271,8 @@ DEFAULT_CROP_SIZE = 'DefaultCropSize'
 默认裁剪区域的宽度和高度。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -264,6 +290,8 @@ COLOR_MATRIX1 = 'ColorMatrix1'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-COLOR_MATRIX1 = 'ColorMatrix1'--><!--Device-DngPropertyKey-COLOR_MATRIX1 = 'ColorMatrix1'-End-->
@@ -279,6 +307,8 @@ COLOR_MATRIX2 = 'ColorMatrix2'
 第二校准光源下的色彩变换矩阵。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -296,6 +326,8 @@ CAMERA_CALIBRATION1 = 'CameraCalibration1'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CAMERA_CALIBRATION1 = 'CameraCalibration1'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION1 = 'CameraCalibration1'-End-->
@@ -311,6 +343,8 @@ CAMERA_CALIBRATION2 = 'CameraCalibration2'
 第二校准光源下的相机校准矩阵。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -328,6 +362,8 @@ REDUCTION_MATRIX1 = 'ReductionMatrix1'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-REDUCTION_MATRIX1 = 'ReductionMatrix1'--><!--Device-DngPropertyKey-REDUCTION_MATRIX1 = 'ReductionMatrix1'-End-->
@@ -343,6 +379,8 @@ REDUCTION_MATRIX2 = 'ReductionMatrix2'
 第二校准光源下的降维矩阵。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -360,6 +398,8 @@ ANALOG_BALANCE = 'AnalogBalance'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-ANALOG_BALANCE = 'AnalogBalance'--><!--Device-DngPropertyKey-ANALOG_BALANCE = 'AnalogBalance'-End-->
@@ -375,6 +415,8 @@ AS_SHOT_NEUTRAL = 'AsShotNeutral'
 拍摄时的中性白点。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -392,6 +434,8 @@ AS_SHOT_WHITEXY = 'AsShotWhiteXY'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-AS_SHOT_WHITEXY = 'AsShotWhiteXY'--><!--Device-DngPropertyKey-AS_SHOT_WHITEXY = 'AsShotWhiteXY'-End-->
@@ -407,6 +451,8 @@ BASELINE_EXPOSURE = 'BaselineExposure'
 基准曝光补偿值，单位：EV。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -424,6 +470,8 @@ BASELINE_NOISE = 'BaselineNoise'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-BASELINE_NOISE = 'BaselineNoise'--><!--Device-DngPropertyKey-BASELINE_NOISE = 'BaselineNoise'-End-->
@@ -439,6 +487,8 @@ BASELINE_SHARPNESS = 'BaselineSharpness'
 基准锐度增益。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -456,6 +506,8 @@ Bayer图像中两个绿色通道的分离程度。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-BAYER_GREEN_SPLIT = 'BayerGreenSplit'--><!--Device-DngPropertyKey-BAYER_GREEN_SPLIT = 'BayerGreenSplit'-End-->
@@ -471,6 +523,8 @@ LINEAR_RESPONSE_LIMIT = 'LinearResponseLimit'
 线性响应上限，有效值范围为[0.0, 1.0]。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -488,6 +542,8 @@ CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'--><!--Device-DngPropertyKey-CAMERA_SERIAL_NUMBER = 'CameraSerialNumber'-End-->
@@ -503,6 +559,8 @@ LENS_INFO = 'LensInfo'
 镜头信息。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -520,6 +578,8 @@ CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'--><!--Device-DngPropertyKey-CHROMA_BLUR_RADIUS = 'ChromaBlurRadius'-End-->
@@ -535,6 +595,8 @@ ANTI_ALIAS_STRENGTH = 'AntiAliasStrength'
 抗锯齿滤波器强度。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -552,6 +614,8 @@ SHADOW_SCALE = 'ShadowScale'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-SHADOW_SCALE = 'ShadowScale'--><!--Device-DngPropertyKey-SHADOW_SCALE = 'ShadowScale'-End-->
@@ -567,6 +631,8 @@ DNG_PRIVATE_DATA = 'DNGPrivateData'
 厂商私有数据块。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -584,6 +650,8 @@ EXIF MakerNote 是否安全可保留。0：不安全，1：安全
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-MAKER_NOTE_SAFETY = 'MakerNoteSafety'--><!--Device-DngPropertyKey-MAKER_NOTE_SAFETY = 'MakerNoteSafety'-End-->
@@ -599,6 +667,8 @@ CALIBRATION_ILLUMINANT1 = 'CalibrationIlluminant1'
 第一校准光源类型。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -616,6 +686,8 @@ CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'--><!--Device-DngPropertyKey-CALIBRATION_ILLUMINANT2 = 'CalibrationIlluminant2'-End-->
@@ -631,6 +703,8 @@ BEST_QUALITY_SCALE = 'BestQualityScale'
 最佳画质缩放比例。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -648,6 +722,8 @@ RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'--><!--Device-DngPropertyKey-RAW_DATA_UNIQUE_ID = 'RawDataUniqueID'-End-->
@@ -663,6 +739,8 @@ ORIGINAL_RAW_FILE_NAME = 'OriginalRawFileName'
 原始RAW文件名。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -680,6 +758,8 @@ ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'--><!--Device-DngPropertyKey-ORIGINAL_RAW_FILE_DATA = 'OriginalRawFileData'-End-->
@@ -695,6 +775,8 @@ ACTIVE_AREA = 'ActiveArea'
 有效图像区域。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -712,6 +794,8 @@ MASKED_AREAS = 'MaskedAreas'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-MASKED_AREAS = 'MaskedAreas'--><!--Device-DngPropertyKey-MASKED_AREAS = 'MaskedAreas'-End-->
@@ -727,6 +811,8 @@ AS_SHOT_ICC_PROFILE = 'AsShotICCProfile'
 拍摄时使用的ICC色彩配置文件。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -744,6 +830,8 @@ AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'--><!--Device-DngPropertyKey-AS_SHOT_PRE_PROFILE_MATRIX = 'AsShotPreProfileMatrix'-End-->
@@ -759,6 +847,8 @@ CURRENT_ICC_PROFILE = 'CurrentICCProfile'
 当前使用的ICC色彩配置文件。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -776,6 +866,8 @@ CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'--><!--Device-DngPropertyKey-CURRENT_PRE_PROFILE_MATRIX = 'CurrentPreProfileMatrix'-End-->
@@ -791,6 +883,8 @@ COLORIMETRIC_REFERENCE = 'ColorimetricReference'
 色度参考标准。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -808,6 +902,8 @@ CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'--><!--Device-DngPropertyKey-CAMERA_CALIBRATION_SIGNATURE = 'CameraCalibrationSignature'-End-->
@@ -823,6 +919,8 @@ PROFILE_CALIBRATION_SIGNATURE = 'ProfileCalibrationSignature'
 配置文件校准签名。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -840,6 +938,8 @@ EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'--><!--Device-DngPropertyKey-EXTRA_CAMERA_PROFILES = 'ExtraCameraProfiles'-End-->
@@ -855,6 +955,8 @@ AS_SHOT_PROFILE_NAME = 'AsShotProfileName'
 拍摄时使用的配置文件名称。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -872,6 +974,8 @@ NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'--><!--Device-DngPropertyKey-NOISE_REDUCTION_APPLIED = 'NoiseReductionApplied'-End-->
@@ -887,6 +991,8 @@ PROFILE_NAME = 'ProfileName'
 色彩配置文件名称。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -904,6 +1010,8 @@ PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DIMS = 'ProfileHueSatMapDims'-End-->
@@ -919,6 +1027,8 @@ PROFILE_HUE_SAT_MAP_DATA1 = 'ProfileHueSatMapData1'
 第一组色调/饱和度映射表数据。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -936,6 +1046,8 @@ PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'--><!--Device-DngPropertyKey-PROFILE_HUE_SAT_MAP_DATA2 = 'ProfileHueSatMapData2'-End-->
@@ -951,6 +1063,8 @@ PROFILE_TONE_CURVE = 'ProfileToneCurve'
 配置文件色调曲线。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -968,6 +1082,8 @@ PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'--><!--Device-DngPropertyKey-PROFILE_EMBED_POLICY = 'ProfileEmbedPolicy'-End-->
@@ -983,6 +1099,8 @@ PROFILE_COPYRIGHT = 'ProfileCopyright'
 配置文件版权信息。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1000,6 +1118,8 @@ FORWARD_MATRIX1 = 'ForwardMatrix1'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-FORWARD_MATRIX1 = 'ForwardMatrix1'--><!--Device-DngPropertyKey-FORWARD_MATRIX1 = 'ForwardMatrix1'-End-->
@@ -1015,6 +1135,8 @@ FORWARD_MATRIX2 = 'ForwardMatrix2'
 第二前向变换矩阵。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1032,6 +1154,8 @@ PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'--><!--Device-DngPropertyKey-PREVIEW_APPLICATION_NAME = 'PreviewApplicationName'-End-->
@@ -1047,6 +1171,8 @@ PREVIEW_APPLICATION_VERSION = 'PreviewApplicationVersion'
 预览图生成应用程序版本。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1064,6 +1190,8 @@ PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'--><!--Device-DngPropertyKey-PREVIEW_SETTINGS_NAME = 'PreviewSettingsName'-End-->
@@ -1079,6 +1207,8 @@ PREVIEW_SETTINGS_DIGEST = 'PreviewSettingsDigest'
 预览图设置的MD5摘要。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1096,6 +1226,8 @@ PREVIEW_COLOR_SPACE = 'PreviewColorSpace'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PREVIEW_COLOR_SPACE = 'PreviewColorSpace'--><!--Device-DngPropertyKey-PREVIEW_COLOR_SPACE = 'PreviewColorSpace'-End-->
@@ -1111,6 +1243,8 @@ PREVIEW_DATE_TIME = 'PreviewDateTime'
 预览图生成时间。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1128,6 +1262,8 @@ RAW_IMAGE_DIGEST = 'RawImageDigest'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-RAW_IMAGE_DIGEST = 'RawImageDigest'--><!--Device-DngPropertyKey-RAW_IMAGE_DIGEST = 'RawImageDigest'-End-->
@@ -1143,6 +1279,8 @@ ORIGINAL_RAW_FILE_DIGEST = 'OriginalRawFileDigest'
 原始RAW文件数据的MD5摘要。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1160,6 +1298,8 @@ SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'--><!--Device-DngPropertyKey-SUB_TILE_BLOCK_SIZE = 'SubTileBlockSize'-End-->
@@ -1175,6 +1315,8 @@ ROW_INTERLEAVE_FACTOR = 'RowInterleaveFactor'
 行交织因子。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1192,6 +1334,8 @@ ProfileLookTableData的维度。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_DIMS = 'ProfileLookTableDims'-End-->
@@ -1207,6 +1351,8 @@ PROFILE_LOOK_TABLE_DATA = 'ProfileLookTableData'
 色彩表数据。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1224,6 +1370,8 @@ OPCODE_LIST1 = 'OpcodeList1'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-OPCODE_LIST1 = 'OpcodeList1'--><!--Device-DngPropertyKey-OPCODE_LIST1 = 'OpcodeList1'-End-->
@@ -1239,6 +1387,8 @@ OPCODE_LIST2 = 'OpcodeList2'
 第二操作码列表。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1256,6 +1406,8 @@ OPCODE_LIST3 = 'OpcodeList3'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-OPCODE_LIST3 = 'OpcodeList3'--><!--Device-DngPropertyKey-OPCODE_LIST3 = 'OpcodeList3'-End-->
@@ -1271,6 +1423,8 @@ NOISE_PROFILE = 'NoiseProfile'
 噪声剖面参数。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1288,6 +1442,8 @@ ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'--><!--Device-DngPropertyKey-ORIGINAL_DEFAULT_FINAL_SIZE = 'OriginalDefaultFinalSize'-End-->
@@ -1303,6 +1459,8 @@ ORIGINAL_BEST_QUALITY_FINAL_SIZE = 'OriginalBestQualityFinalSize'
 原始最佳画质输出尺寸（宽, 高）。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1320,6 +1478,8 @@ ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'--><!--Device-DngPropertyKey-ORIGINAL_DEFAULT_CROP_SIZE = 'OriginalDefaultCropSize'-End-->
@@ -1335,6 +1495,8 @@ PROFILE_HUE_SAT_MAP_ENCODING = 'ProfileHueSatMapEncoding'
 色调/饱和度映射表编码方式。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1352,6 +1514,8 @@ PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'--><!--Device-DngPropertyKey-PROFILE_LOOK_TABLE_ENCODING = 'ProfileLookTableEncoding'-End-->
@@ -1367,6 +1531,8 @@ BASELINE_EXPOSURE_OFFSET = 'BaselineExposureOffset'
 基准曝光偏移量，单位：EV。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1384,6 +1550,8 @@ DEFAULT_BLACK_RENDER = 'DefaultBlackRender'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-DEFAULT_BLACK_RENDER = 'DefaultBlackRender'--><!--Device-DngPropertyKey-DEFAULT_BLACK_RENDER = 'DefaultBlackRender'-End-->
@@ -1399,6 +1567,8 @@ NEW_RAW_IMAGE_DIGEST = 'NewRawImageDigest'
 修改后原始图像数据的新MD5摘要。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1416,6 +1586,8 @@ RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DngPropertyKey-RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'--><!--Device-DngPropertyKey-RAW_TO_PREVIEW_GAIN = 'RawToPreviewGain'-End-->
@@ -1431,6 +1603,8 @@ DEFAULT_USER_CROP = 'DefaultUserCrop'
 默认用户裁剪区域。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

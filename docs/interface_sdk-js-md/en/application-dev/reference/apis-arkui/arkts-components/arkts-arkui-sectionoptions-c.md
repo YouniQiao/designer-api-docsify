@@ -6,31 +6,9 @@ Describes the configuration of the water flow item section.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class SectionOptions--><!--Device-unnamed-declare class SectionOptions-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onGetItemMainSizeByIndex
-
-```TypeScript
-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
-```
-
-Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width.
-
-**NOTE：**
-
-1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used,the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**,which will override the main-axis length of **FlowItem**.2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections that do not have it set, as this can cause layout exceptions.3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex--><!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -40,13 +18,15 @@ Callback used to obtain the main axis size, in vp, of the water flow item at a s
 columnsGap?: Dimension
 ```
 
-Column gap of the section. If this parameter is not set, the [columnsGap](WaterFlowAttribute#columnsGap) of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Column gap of the section. If this parameter is not set, the columnsGap of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** Dimension
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,11 +42,7 @@ Column gap of the section. If this parameter is not set, the [columnsGap](WaterF
 crossCount?: number
 ```
 
-Number of columns (in vertical layout) or rows (in horizontal layout).
-
-Default value: **1**
-
-If the value is less than 1, the default value is used.
+Number of columns (in vertical layout) or rows (in horizontal layout). Default value: **1** If the value is less than 1, the default value is used.
 
 **Type:** number
 
@@ -75,6 +51,8 @@ If the value is less than 1, the default value is used.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,14 +68,15 @@ If the value is less than 1, the default value is used.
 itemsCount: number
 ```
 
-Number of **FlowItem** components in a section. The value must be a non-negative number. If the **splice**,  
-**push**, or **update** APIs receive a section whose **itemsCount** is set to a negative number, these APIs will not be executed. Do not use a section whose **itemsCount** is **0**. Otherwise, the layout calculation may be abnormal.
+Number of **FlowItem** components in a section. The value must be a non-negative number. If the **splice**, **push**, or **update** APIs receive a section whose **itemsCount** is set to a negative number, these APIs will not be executed. Do not use a section whose **itemsCount** is **0**. Otherwise, the layout calculation may be abnormal.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -113,13 +92,7 @@ Number of **FlowItem** components in a section. The value must be a non-negative
 margin?: Margin | Dimension
 ```
 
-Margins of the section. A value of the **Length** type specifies the margins on all the four sides.
-
-Default value: **0**
-
-Unit: vp
-
-When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
+Margins of the section. A value of the **Length** type specifies the margins on all the four sides. Default value: **0** Unit: vp When **margin** is set to a percentage, the width of the **WaterFlow** component is used as the base value for the top, bottom, left, and right margins.
 
 **Type:** Margin \| Dimension
 
@@ -129,11 +102,37 @@ When **margin** is set to a percentage, the width of the **WaterFlow** component
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SectionOptions-margin?: Margin | Dimension--><!--Device-SectionOptions-margin?: Margin | Dimension-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onGetItemMainSizeByIndex
+
+```TypeScript
+onGetItemMainSizeByIndex?: GetItemMainSizeByIndex
+```
+
+Callback used to obtain the main axis size, in vp, of the water flow item at a specified index during the layout process of the **WaterFlow** component. For a vertical **WaterFlow** component, this size refers to the height, and for a horizontal **WaterFlow** component, it refers to the width. **NOTE：**1. When both **onGetItemMainSizeByIndex** and the width or height attribute of **FlowItem** are used, the main-axis size is determined by the return value of **onGetItemMainSizeByIndex**, which will override the main-axis length of **FlowItem**. 2. Using **onGetItemMainSizeByIndex** can improve the efficiency of jumping to a specific position or index in the **WaterFlow** component. Avoid mixing the use of **onGetItemMainSizeByIndex** with sections that do not have it set, as this can cause layout exceptions. 3. If **onGetItemMainSizeByIndex** returns a negative number, the height of the water flow item is 0.
+
+**Type:** [GetItemMainSizeByIndex](arkts-arkui-getitemmainsizebyindex-t.md)
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex--><!--Device-SectionOptions-onGetItemMainSizeByIndex?: GetItemMainSizeByIndex-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -143,14 +142,15 @@ When **margin** is set to a percentage, the width of the **WaterFlow** component
 rowsGap?: Dimension
 ```
 
-Row gap of the section. If this parameter is not set, the [rowsGap](WaterFlowAttribute#rowsGap) of the  
-**WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
+Row gap of the section. If this parameter is not set, the rowsGap of the **WaterFlow** component is used by default. If an invalid value is set, 0 vp is used.
 
 **Type:** Dimension
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

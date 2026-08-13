@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-interface LongPressGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-interface LongPressGestureHandlerOptions extends BaseHandlerOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-interface LongPressGestureHandlerOptions--><!--Device-unnamed-interface LongPressGestureHandlerOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,17 +20,15 @@
 allowableMovement?: number
 ```
 
-长按手势识别器识别的手势的最大移动距离，单位为px。
-
-默认值：15 
-
-取值范围：(0, +∞)，设置小于等于0时，按照默认值15处理。
+长按手势识别器识别的手势的最大移动距离，单位为px。 默认值：15 取值范围：(0, +∞)，设置小于等于0时，按照默认值15处理。
 
 **类型：** number
 
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,19 +44,15 @@ allowableMovement?: number
 duration?: number
 ```
 
-触发长按的最短时间，单位为毫秒（ms）。
-
-默认值：500 
-
-**说明：**
-
-取值范围：[0, +∞)，设置小于等于0时，按照默认值500处理。
+触发长按的最短时间，单位为毫秒（ms）。 默认值：500 **说明：** 取值范围：[0, +∞)，设置小于等于0时，按照默认值500处理。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -72,21 +68,15 @@ duration?: number
 fingers?: number
 ```
 
-触发长按的最少手指数，最小为1指， 最大取值为10指。
-
-默认值：1 
-
-取值范围：[1, 10]
-
-**说明：**
-
-手指按下后若发生超过15px的移动，则判定当前长按手势识别失败。
+触发长按的最少手指数，最小为1指， 最大取值为10指。 默认值：1 取值范围：[1, 10] **说明：** 手指按下后若发生超过15px的移动，则判定当前长按手势识别失败。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -102,15 +92,15 @@ fingers?: number
 repeat?: boolean
 ```
 
-是否连续触发事件回调。true表示为连续触发事件回调，false表示不连续触发事件回调。
-
-默认值：false
+是否连续触发事件回调。true表示为连续触发事件回调，false表示不连续触发事件回调。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [CompleteData](ohos.app.ability.wantAgent/wantAgent#CompleteData)
+**替代接口：** [CompleteData](arkts-ability-wantagent-completedata-i.md#CompleteData)
 
 <!--Device-wantAgent-export interface CompleteData--><!--Device-wantAgent-export interface CompleteData-End-->
 
@@ -30,7 +30,7 @@ extraInfo?: { [key: string]: any }
 
 **废弃版本：** 9
 
-**替代接口：** [extraInfo](ohos.app.ability.wantAgent/wantAgent.CompleteData#extraInfo)
+**替代接口：** [extraInfo](arkts-ability-wantagent-completedata-i.md#extraInfo)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -54,7 +54,7 @@ finalCode: number
 
 **废弃版本：** 9
 
-**替代接口：** [finalCode](ohos.app.ability.wantAgent/wantAgent.CompleteData#finalCode)
+**替代接口：** [finalCode](arkts-ability-wantagent-completedata-i.md#finalCode)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -78,7 +78,7 @@ finalData: string
 
 **废弃版本：** 9
 
-**替代接口：** [finalData](ohos.app.ability.wantAgent/wantAgent.CompleteData#finalData)
+**替代接口：** [finalData](arkts-ability-wantagent-completedata-i.md#finalData)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -102,7 +102,7 @@ info: WantAgent
 
 **废弃版本：** 9
 
-**替代接口：** [info](ohos.app.ability.wantAgent/wantAgent.CompleteData#info)
+**替代接口：** [info](arkts-ability-wantagent-completedata-i.md#info)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -126,7 +126,7 @@ want: Want
 
 **废弃版本：** 9
 
-**替代接口：** [want](ohos.app.ability.wantAgent/wantAgent.CompleteData#want)
+**替代接口：** [want](arkts-ability-wantagent-completedata-i.md#want)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

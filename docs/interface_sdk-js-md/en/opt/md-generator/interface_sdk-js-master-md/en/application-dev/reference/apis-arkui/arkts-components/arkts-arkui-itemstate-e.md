@@ -6,7 +6,7 @@ Display status of **nextLabel** in the stepper.
 
 **Deprecated since:** 22
 
-**Substitutes:** [Swiper](Swiper)
+**Substitutes:** Swiper
 
 <!--Device-unnamed-declare enum ItemState--><!--Device-unnamed-declare enum ItemState-End-->
 
@@ -18,18 +18,13 @@ Display status of **nextLabel** in the stepper.
 Normal
 ```
 
-The button on the right is clickable and can navigate users to the next **StepperItem** when it is clicked.
-
-**NOTE：**
-
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[index](SwiperAttribute#index) instead.
+The button on the right is clickable and can navigate users to the next **StepperItem** when it is clicked. **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 
 **Since:** 8
 
 **Deprecated since:** 22
 
-**Substitutes:** [index](Swiper.SwiperAttribute#index)
+**Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -43,18 +38,13 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 Disabled
 ```
 
-The button on the right is disabled.
-
-**NOTE：**
-
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[indicatorInteractive](SwiperAttribute#indicatorInteractive) instead.
+The button on the right is disabled. **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use indicatorInteractive instead.
 
 **Since:** 8
 
 **Deprecated since:** 22
 
-**Substitutes:** [indicatorInteractive](Swiper.SwiperAttribute#indicatorInteractive)
+**Substitutes:** indicatorInteractive
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -68,18 +58,13 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 Waiting
 ```
 
-The button on the right is not displayed, and a progress bar is displayed instead.
-
-**NOTE：**
-
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[Swiper](swiper) instead.
+The button on the right is not displayed, and a progress bar is displayed instead. **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use Swiper instead.
 
 **Since:** 8
 
 **Deprecated since:** 22
 
-**Substitutes:** [Swiper](Swiper)
+**Substitutes:** Swiper
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -93,19 +78,13 @@ This API is supported since API version 8 and deprecated since API version 22. Y
 Skip
 ```
 
-The button on the right reads "Skip" by default. You can define the processing logic for this state in the  
-**onSkip** callback of the stepper.
-
-**NOTE：**
-
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use  
-[index](SwiperAttribute#index) instead.
+The button on the right reads "Skip" by default. You can define the processing logic for this state in the **onSkip** callback of the stepper. **NOTE：**This API is supported since API version 8 and deprecated since API version 22. You are advised to use index instead.
 
 **Since:** 8
 
 **Deprecated since:** 22
 
-**Substitutes:** [index](Swiper.SwiperAttribute#index)
+**Substitutes:** index
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

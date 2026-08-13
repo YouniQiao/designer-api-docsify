@@ -8,7 +8,9 @@ Defines event info for pan gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface PanGestureEvent extends BaseGestureEvent--><!--Device-unnamed-export interface PanGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface PanGestureEvent--><!--Device-unnamed-export interface PanGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Defines event info for pan gesture.
 offsetX: double
 ```
 
-Gesture event offset X.The unit is vp.
+Gesture event offset X. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,13 +42,15 @@ Gesture event offset X.The unit is vp.
 offsetY: double
 ```
 
-Gesture event offset Y.The unit is vp.
+Gesture event offset Y. The unit is vp.
 
 **Type:** double
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ velocity of the gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureEvent-velocity: double--><!--Device-PanGestureEvent-velocity: double-End-->
@@ -86,6 +94,8 @@ X-axis velocity of the gesture.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PanGestureEvent-velocityX: double--><!--Device-PanGestureEvent-velocityX: double-End-->
@@ -105,6 +115,8 @@ Y-axis velocity of the gesture.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

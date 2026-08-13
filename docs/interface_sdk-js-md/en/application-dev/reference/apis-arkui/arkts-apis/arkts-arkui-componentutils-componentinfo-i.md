@@ -6,6 +6,8 @@ Component information.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-componentUtils-export interface ComponentInfo--><!--Device-componentUtils-export interface ComponentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Obtain attribute information relative to the local coordinates.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComponentInfo-localOffset: Offset--><!--Device-ComponentInfo-localOffset: Offset-End-->
@@ -49,6 +53,8 @@ Obtain attribute information for rotate.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,6 +76,8 @@ Obtain attribute information for scale.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComponentInfo-scale: ScaleResult--><!--Device-ComponentInfo-scale: ScaleResult-End-->
@@ -89,6 +97,8 @@ Obtain attribute information relative to the screen.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +120,8 @@ component size.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComponentInfo-size: Size--><!--Device-ComponentInfo-size: Size-End-->
@@ -129,6 +141,8 @@ Obtain attribute information of the transformation matrix.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -150,6 +164,8 @@ Obtain attribute information for translation.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ComponentInfo-translate: TranslateResult--><!--Device-ComponentInfo-translate: TranslateResult-End-->
@@ -169,6 +185,8 @@ Obtain attribute information relative to the window.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

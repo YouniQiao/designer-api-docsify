@@ -18,6 +18,8 @@ Total battery capacity of the device, in unit of mAh. This is a system API.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-batteryInfo-function totalEnergy(): int--><!--Device-batteryInfo-function totalEnergy(): int-End-->
 
 **System capability:** SystemCapability.PowerManager.BatteryManager.Core

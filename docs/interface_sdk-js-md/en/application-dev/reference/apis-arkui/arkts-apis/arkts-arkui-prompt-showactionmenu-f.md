@@ -20,7 +20,7 @@ Displays the menu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**Substitutes:** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<ActionMenuSuccessResponse>): void-End-->
 
@@ -31,7 +31,7 @@ Displays the menu.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | ActionMenuOptions | Yes | Options. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ActionMenuSuccessResponse&gt; | Yes |  |
 
 ## Examples
 
@@ -73,7 +73,7 @@ Displays the menu.
 
 **Deprecated since:** 9
 
-**Substitutes:** [showActionMenu](ohos.arkui.UIContext.PromptAction#showActionMenu)
+**Substitutes:** showActionMenu
 
 <!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>--><!--Device-prompt-function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessResponse>-End-->
 

@@ -8,7 +8,9 @@ function getMainCallId(callId: number, callback: AsyncCallback<number>): void
 
 获取主呼叫Id。使用callback异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void--><!--Device-call-function getMainCallId(callId: int, callback: AsyncCallback<int>): void-End-->
 
@@ -27,12 +29,12 @@ function getMainCallId(callId: number, callback: AsyncCallback<number>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 
@@ -57,7 +59,9 @@ function getMainCallId(callId: number): Promise<number>
 
 获取主呼叫Id。使用Promise异步回调。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-call-function getMainCallId(callId: int): Promise<int>--><!--Device-call-function getMainCallId(callId: int): Promise<int>-End-->
 
@@ -81,12 +85,12 @@ function getMainCallId(callId: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |
 
 ## 示例
 

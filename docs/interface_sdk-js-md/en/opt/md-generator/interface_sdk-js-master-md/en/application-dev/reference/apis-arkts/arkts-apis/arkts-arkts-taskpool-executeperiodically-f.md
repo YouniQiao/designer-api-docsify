@@ -16,6 +16,8 @@ Executes a task periodically. In this execution mode, you can set the task prior
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void--><!--Device-taskpool-function executePeriodically(period: number, task: Task, priority?: Priority): void-End-->
@@ -34,11 +36,11 @@ Executes a task periodically. In this execution mode, you can set the task prior
 
 | Error Code ID |
 | --- |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-delay-less-than-zero) |
-| [10200050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 
@@ -88,9 +90,11 @@ taskpoolTest();
 function executePeriodically<A extends Array<Object>, R>(period: number, task: GenericsTask<A, R>, priority?: Priority): void
 ```
 
-Executes a generic task periodically, without verifying the parameter type and return value type of the task.The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
+Executes a generic task periodically, without verifying the parameter type and return value type of the task. The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**.
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -110,11 +114,11 @@ Executes a generic task periodically, without verifying the parameter type and r
 
 | Error Code ID |
 | --- |
-| [10200057](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
-| [10200014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-nonconcurrent-function-error) |
-| [10200028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200028-delay-less-than-zero) |
-| [10200050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
-| [10200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker-data-serialization-exception) |
+| [10200057](../errorcode-utils.md#10200057-task-cannot-be-executed-by-two-apis) |
+| [10200014](../errorcode-utils.md#10200014-nonconcurrent-function-error) |
+| [10200028](../errorcode-utils.md#10200028-delay-less-than-zero) |
+| [10200050](../errorcode-utils.md#10200050-concurrent-task-that-has-been-executed-cannot-be-executed-periodically) |
+| [10200006](../errorcode-utils.md#10200006-worker-data-serialization-exception) |
 
 ## Examples
 

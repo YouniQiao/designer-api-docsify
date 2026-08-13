@@ -6,7 +6,9 @@ export type LiveViewStatus = _LiveViewStatus
 
 Enumerates the statuses of the common live view.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus--><!--Device-notificationManager-export type LiveViewStatus = _LiveViewStatus-End-->
 

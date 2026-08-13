@@ -5,9 +5,11 @@ type CreateNativeMediaPlayerCallback =
       (handler: NativeMediaPlayerHandler, mediaInfo: MediaInfo) => NativeMediaPlayerBridge
 ```
 
-[onCreateNativeMediaPlayer](@ohos.web.webview:webview.WebviewController#onCreateNativeMediaPlayer(callback: CreateNativeMediaPlayerCallback))方法的参数。一个回调函数，创建一个播放器，用于接管网页中的媒体播放。
+[onCreateNativeMediaPlayer](arkts-arkweb-webview-webviewcontroller-c.md#onCreateNativeMediaPlayer) 方法的参数。一个回调函数，创建一个播放器，用于接管网页中的媒体播放。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

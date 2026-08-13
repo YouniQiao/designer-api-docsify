@@ -9,18 +9,20 @@ import { PluginComponentTemplate } from '@kit.ArkUI';
 ## request
 
 ```TypeScript
-export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void
+function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void
 ```
 
 Plugin component request method used to send a request for the information of the template it wants.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-pluginComponentManager-export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void--><!--Device-pluginComponentManager-export function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void-End-->
+<!--Device-pluginComponentManager-function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void--><!--Device-pluginComponentManager-function request(param: RequestParameterForStage, callback: AsyncCallback<RequestCallbackParameters>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,6 +32,6 @@ Plugin component request method used to send a request for the information of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Plugin component request event callback. |
+| param | [RequestParameterForStage](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Plugin component request parameters for stage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Plugin component request event callback. |
 

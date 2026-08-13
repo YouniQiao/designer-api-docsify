@@ -18,7 +18,7 @@ create a JavaScript Gatt client device instance.
 
 **Deprecated since:** 10
 
-**Substitutes:** [createGattClientDevice](ohos.bluetooth.ble/ble#createGattClientDevice)
+**Substitutes:** [createGattClientDevice](#createGattClientDevice)
 
 <!--Device-BLE-function createGattClientDevice(deviceId: string): GattClientDevice--><!--Device-BLE-function createGattClientDevice(deviceId: string): GattClientDevice-End-->
 
@@ -40,8 +40,8 @@ create a JavaScript Gatt client device instance.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

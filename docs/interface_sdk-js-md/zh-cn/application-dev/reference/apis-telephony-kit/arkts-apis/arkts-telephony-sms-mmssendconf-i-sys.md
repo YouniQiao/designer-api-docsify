@@ -2,9 +2,11 @@
 
 彩信发送配置。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-sms-export interface MmsSendConf--><!--Device-sms-export interface MmsSendConf-End-->
 
@@ -22,9 +24,11 @@ messageId?: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-messageId?: string--><!--Device-MmsSendConf-messageId?: string-End-->
 
@@ -40,11 +44,13 @@ responseState: int
 
 响应状态
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-responseState: int--><!--Device-MmsSendConf-responseState: int-End-->
 
@@ -62,9 +68,11 @@ transactionId: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-transactionId: string--><!--Device-MmsSendConf-transactionId: string-End-->
 
@@ -82,9 +90,11 @@ version: MmsVersionType
 
 **类型：** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MmsSendConf-version: MmsVersionType--><!--Device-MmsSendConf-version: MmsVersionType-End-->
 

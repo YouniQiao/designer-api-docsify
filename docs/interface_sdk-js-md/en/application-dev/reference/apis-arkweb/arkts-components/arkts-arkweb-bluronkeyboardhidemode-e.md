@@ -6,6 +6,8 @@ Enumerates whether the **Web** component loses focus when the soft keyboard is h
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum BlurOnKeyboardHideMode--><!--Device-unnamed-declare enum BlurOnKeyboardHideMode-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ The **Web** component does not lose focus when the soft keyboard is hidden.
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -39,6 +43,8 @@ The **Web** component loses focus when the soft keyboard is hidden, and the focu
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

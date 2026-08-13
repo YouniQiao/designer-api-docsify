@@ -4,6 +4,8 @@ The values of the **ScopeComparable** type are used to implement the **compareTo
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-util-interface ScopeComparable--><!--Device-util-interface ScopeComparable-End-->
 
 **System capability:** SystemCapability.Utils.Lang
@@ -23,6 +25,8 @@ compareTo(other: ScopeComparable): boolean
 Compares two values and returns a Boolean value.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

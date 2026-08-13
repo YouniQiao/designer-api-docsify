@@ -8,7 +8,7 @@ Describes the class of a bluetooth device.
 
 **Deprecated since:** 10
 
-**Substitutes:** [BondStateParam](ohos.bluetooth.connection/connection.BondStateParam)
+**Substitutes:** [BondStateParam](arkts-connectivity-connection-bondstateparam-i.md#BondStateParam)
 
 <!--Device-bluetoothManager-interface BondStateParam--><!--Device-bluetoothManager-interface BondStateParam-End-->
 
@@ -36,7 +36,7 @@ Address of a Bluetooth device.
 
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](ohos.bluetooth.connection/connection.BondStateParam#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-connection-bondstateparam-i.md#deviceId)
 
 <!--Device-BondStateParam-deviceId: string--><!--Device-BondStateParam-deviceId: string-End-->
 
@@ -58,7 +58,7 @@ Profile connection state of the device.
 
 **Deprecated since:** 10
 
-**Substitutes:** [state](ohos.bluetooth.connection/connection.BondStateParam#state)
+**Substitutes:** [state](arkts-connectivity-connection-bondstateparam-i.md#state)
 
 <!--Device-BondStateParam-state: BondState--><!--Device-BondStateParam-state: BondState-End-->
 

@@ -2,7 +2,9 @@
 
 立即优化空间状态和当前进度。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-interface OptimizeSpaceProgress--><!--Device-cloudSync-interface OptimizeSpaceProgress-End-->
 
@@ -20,7 +22,9 @@ progress: number
 
 **类型：** number
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -40,7 +44,9 @@ state: OptimizeState
 
 **类型：** [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md)
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 

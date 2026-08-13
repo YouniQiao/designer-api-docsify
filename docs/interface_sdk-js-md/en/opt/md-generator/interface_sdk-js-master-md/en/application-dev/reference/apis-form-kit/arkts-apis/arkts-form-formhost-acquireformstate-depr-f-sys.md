@@ -12,7 +12,7 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireFormState)
+**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireFormState-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -42,7 +42,7 @@ Obtains the widget state. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireFormState)
+**Substitutes:** [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireFormState-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM and ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

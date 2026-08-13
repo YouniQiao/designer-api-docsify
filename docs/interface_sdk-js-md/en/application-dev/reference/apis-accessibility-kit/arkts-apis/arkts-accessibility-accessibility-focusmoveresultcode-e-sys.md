@@ -4,7 +4,9 @@ Enumerates the result codes returned by the focusable node query.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum FocusMoveResultCode--><!--Device-unnamed-export enum FocusMoveResultCode-End-->
 
@@ -22,7 +24,9 @@ Query is not supported.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-NOT_SUPPORTED = -1--><!--Device-FocusMoveResultCode-NOT_SUPPORTED = -1-End-->
 
@@ -40,7 +44,9 @@ The node is queried successfully.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_SUCCESS = 0--><!--Device-FocusMoveResultCode-SEARCH_SUCCESS = 0-End-->
 
@@ -58,7 +64,9 @@ The node is queried successfully. Use the **bypassSelfDescendants** parameter to
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1--><!--Device-FocusMoveResultCode-SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1-End-->
 
@@ -76,7 +84,9 @@ Failed to query the node. The current page has no focusable node.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE = 2--><!--Device-FocusMoveResultCode-SEARCH_FAILURE = 2-End-->
 
@@ -94,7 +104,9 @@ Failed to query the node. The current container has no focusable node.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_CHILD_TREE = 3--><!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_CHILD_TREE = 3-End-->
 
@@ -112,7 +124,9 @@ Failed to query the node. The start node is not found.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE_LOST_NODE = 4--><!--Device-FocusMoveResultCode-SEARCH_FAILURE_LOST_NODE = 4-End-->
 
@@ -130,7 +144,9 @@ The returned node is not focusable. Continue to query from the returned node.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_NEXT = 5--><!--Device-FocusMoveResultCode-SEARCH_NEXT = 5-End-->
 
@@ -148,7 +164,9 @@ The returned node is not focusable. Continue to query from all descendants of th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY = 6--><!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY = 6-End-->
 
@@ -166,7 +184,9 @@ The returned node is not focusable. Continue to query from the last child node o
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY_AND_GET_LAST = 7--><!--Device-FocusMoveResultCode-DOUBLE_CHECK_CHILD_PROPERTY_AND_GET_LAST = 7-End-->
 
@@ -184,7 +204,9 @@ Failed to query the node in the scrollable component.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_SCROLL = 8--><!--Device-FocusMoveResultCode-SEARCH_FAILURE_IN_SCROLL = 8-End-->
 

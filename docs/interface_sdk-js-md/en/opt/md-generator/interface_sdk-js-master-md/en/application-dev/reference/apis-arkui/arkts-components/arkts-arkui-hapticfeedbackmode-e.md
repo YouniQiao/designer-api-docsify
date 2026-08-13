@@ -4,6 +4,8 @@ Enumerates the haptic feedback modes used when the menu is displayed.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum HapticFeedbackMode--><!--Device-unnamed-declare enum HapticFeedbackMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DISABLED = 0
 The menu is displayed without haptic feedback.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ The menu is displayed with haptic feedback.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -53,6 +59,8 @@ AUTO = 2
 Whether to enable haptic feedback is subject to system settings. It is enabled when the menu has a mask.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

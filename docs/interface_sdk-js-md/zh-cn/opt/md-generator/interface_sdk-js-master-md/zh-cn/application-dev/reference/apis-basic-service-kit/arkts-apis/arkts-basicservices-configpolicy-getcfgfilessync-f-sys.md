@@ -8,7 +8,9 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 
 根据提供的跟随模式获取指定文件名所有的文件列表，按优先级从低到高。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>--><!--Device-configPolicy-function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: string): Array<string>-End-->
 
@@ -34,4 +36,4 @@ function getCfgFilesSync(relPath: string, followMode?: FollowXMode, extra?: stri
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

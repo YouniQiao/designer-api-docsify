@@ -6,6 +6,8 @@ Enumerates the callbacks used for the request for loading multiple ads.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export interface MultiSlotsAdLoadListener--><!--Device-advertising-export interface MultiSlotsAdLoadListener-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -27,6 +29,8 @@ Called when an ad request fails.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -68,6 +72,8 @@ Called when a request for loading multiple ads is successful.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

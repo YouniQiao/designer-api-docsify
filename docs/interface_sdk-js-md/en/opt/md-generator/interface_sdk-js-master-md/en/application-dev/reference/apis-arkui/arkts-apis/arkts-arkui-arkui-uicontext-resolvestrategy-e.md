@@ -4,6 +4,8 @@ Enumerates resolution strategies for **UIContext** objects.
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export const enum ResolveStrategy--><!--Device-unnamed-export const enum ResolveStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ CALLING_SCOPE = 0
 Obtain the UIContext of the current calling scope.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Obtain the UIContext of the instance that most recently switched to the focused 
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -53,6 +59,8 @@ MAX_INSTANCE_ID = 2
 Obtain the UIContext of the instance with the largest instance ID.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ Obtain the UIContext of the unique UI instance (when only one UI instance exists
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -90,6 +100,8 @@ Obtain the UIContext of the instance that most recently switched to the foregrou
 
 **Since:** 22
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
@@ -107,6 +119,8 @@ UNDEFINED = 5
 Obtain a UIContext with an ambiguous calling scope.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

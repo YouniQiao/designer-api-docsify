@@ -4,6 +4,8 @@ Provides entity information perceived, including content, links, images, and oth
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-onScreen-export interface EntityInfo--><!--Device-onScreen-export interface EntityInfo-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.OnScreenAwareness
@@ -24,9 +26,11 @@ entityInfo: Record<string, Object>
 
 Entity information of the awareness result, including the content, links, images, and other entity information.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ Name of the perceived entity, which is fixed.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

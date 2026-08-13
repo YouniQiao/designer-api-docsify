@@ -14,7 +14,9 @@ function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: Asy
 
 Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha format.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void--><!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap, callback: AsyncCallback<void>): void-End-->
 
@@ -32,10 +34,10 @@ Transforms pixelmap from unpremultiplied alpha format to premultiplied alpha for
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
-| [62980246](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
-| [62980248](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-no-modification-to-the-pixelmap) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
+| [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) |
 
 ## Examples
 
@@ -74,7 +76,9 @@ function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void
 
 Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>--><!--Device-image-function createPremultipliedPixelMap(src: PixelMap, dst: PixelMap): Promise<void>-End-->
 
@@ -97,10 +101,10 @@ Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha for
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [62980103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980103-unsupported-image-type) |
-| [62980246](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
-| [62980248](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#62980248-no-modification-to-the-pixelmap) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [62980103](../errorcode-image.md#62980103-unsupported-image-type) |
+| [62980246](../errorcode-image.md#62980246-failure-in-reading-the-pixelmap) |
+| [62980248](../errorcode-image.md#62980248-no-modification-to-the-pixelmap) |
 
 ## Examples
 

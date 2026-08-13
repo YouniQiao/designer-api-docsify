@@ -4,6 +4,8 @@ Enum type for navigationPolicy in OnWindowNewExtEvent.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum NavigationPolicy--><!--Device-unnamed-declare enum NavigationPolicy-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NEW_POPUP = 0
 NEW POPUP window.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NavigationPolicy-NEW_POPUP = 0--><!--Device-NavigationPolicy-NEW_POPUP = 0-End-->
 
@@ -32,6 +36,8 @@ Shift key when clicking.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-NavigationPolicy-NEW_WINDOW = 1--><!--Device-NavigationPolicy-NEW_WINDOW = 1-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -46,6 +52,8 @@ Middle mouse button or meta/ctrl key when clicking.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-NavigationPolicy-NEW_BACKGROUND_TAB = 2--><!--Device-NavigationPolicy-NEW_BACKGROUND_TAB = 2-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -59,6 +67,8 @@ NEW_FOREGROUND_TAB = 3
 Shift key + Middle mouse button or meta/ctrl key when clicking.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NavigationPolicy-NEW_FOREGROUND_TAB = 3--><!--Device-NavigationPolicy-NEW_FOREGROUND_TAB = 3-End-->
 

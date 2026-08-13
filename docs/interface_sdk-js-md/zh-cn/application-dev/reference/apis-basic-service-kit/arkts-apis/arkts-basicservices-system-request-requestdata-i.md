@@ -28,7 +28,7 @@ name: string
 
 **废弃版本：** 9
 
-**替代接口：** [name](ohos.request.agent.FormItem.name)
+**替代接口：** name
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
@@ -50,7 +50,7 @@ value: string
 
 **废弃版本：** 9
 
-**替代接口：** [value](ohos.request.agent.FormItem.value)
+**替代接口：** value
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 

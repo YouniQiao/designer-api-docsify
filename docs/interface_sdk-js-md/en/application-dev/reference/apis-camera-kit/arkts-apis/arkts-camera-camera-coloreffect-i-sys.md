@@ -1,14 +1,16 @@
 # ColorEffect (System API)
 
-ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery)Provides the APIs to obtain and set the lens color effect.
+ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery-(System-API)) Provides the APIs to obtain and set the lens color effect.
 
-**Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery)
+**Inheritance/Implementation:** ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md#ColorEffectQuery-(System-API))
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-camera-interface ColorEffect extends ColorEffectQuery--><!--Device-camera-interface ColorEffect extends ColorEffectQuery-End-->
+**Deprecated since:** -1
+
+<!--Device-camera-interface ColorEffect--><!--Device-camera-interface ColorEffect-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -28,9 +30,11 @@ getColorEffect(): ColorEffectType
 
 Obtains the color effect in use.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ColorEffect-getColorEffect(): ColorEffectType--><!--Device-ColorEffect-getColorEffect(): ColorEffectType-End-->
 
@@ -48,8 +52,8 @@ Obtains the color effect in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 
@@ -66,12 +70,13 @@ function getColorEffect(session: camera.PhotoSessionForSys): camera.ColorEffectT
 setColorEffect(type: ColorEffectType): void
 ```
 
-Sets a color effect. Before the setting, call  
-[getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getSupportedColorEffects) to obtain the supported color effects.
+Sets a color effect. Before the setting, call [getSupportedColorEffects](arkts-camera-camera-coloreffectquery-i-sys.md#getSupportedColorEffects) to obtain the supported color effects.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void--><!--Device-ColorEffect-setColorEffect(type: ColorEffectType): void-End-->
 
@@ -89,8 +94,8 @@ Sets a color effect. Before the setting, call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application. |
 
 ## Examples
 

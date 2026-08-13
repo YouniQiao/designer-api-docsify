@@ -8,7 +8,7 @@
 
 **废弃版本：** 22
 
-**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#distributedDeviceManager)
+**替代接口：** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributeddevicemanager.md#@ohos.distributedDeviceManager)
 
 <!--Device-unnamed-export interface ContinuationResult--><!--Device-unnamed-export interface ContinuationResult-End-->
 

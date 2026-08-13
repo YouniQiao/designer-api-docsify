@@ -1,18 +1,12 @@
 # FullScreenLaunchComponent
 
-**FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner,the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner.
-
-> **NOTE：**
-> 
-> To implement an embeddable atomic service within this component, it must inherit from
-> [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system
-> cannot guarantee that the atomic service will function properly.
+**FullScreenLaunchComponent** is a component designed for launching atomic services in full screen. If the invoked app (the one being launched) grants the invoker the authorization to run the atomic service in an embedded manner, the invoker can operate the atomic service in full-screen embedded mode. If authorization is not provided, the invoker will launch the atomic service in a pop-up manner. > **NOTE：**> > To implement an embeddable atomic service within this component, it must inherit from > [EmbeddableUIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md#EmbeddableUIAbility). Otherwise, the system > cannot guarantee that the atomic service will function properly.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct FullScreenLaunchComponent--><!--Device-unnamed-export declare struct FullScreenLaunchComponent-End-->
 
@@ -27,7 +21,8 @@ import { FullScreenLaunchComponent } from '@kit.ArkUI';
 ## build
 
 ```TypeScript
-build(): void
+@Builder
+  build(): void
 ```
 
 The method to build component.
@@ -36,27 +31,9 @@ The method to build component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
-<!--Device-FullScreenLaunchComponent-build(): void--><!--Device-FullScreenLaunchComponent-build(): void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## content
-
-```TypeScript
-content: ContentBuilder
-```
-
-Sets the component content.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Decorator:** @BuilderParam
-
-<!--Device-FullScreenLaunchComponent-content: ContentBuilder--><!--Device-FullScreenLaunchComponent-content: ContentBuilder-End-->
+<!--Device-FullScreenLaunchComponent-@Builder  build(): void--><!--Device-FullScreenLaunchComponent-@Builder  build(): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,7 +51,30 @@ Indicates atomic service appId.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-FullScreenLaunchComponent-appId: string--><!--Device-FullScreenLaunchComponent-appId: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## content
+
+```TypeScript
+@BuilderParam
+  content: ContentBuilder
+```
+
+Sets the component content.
+
+**Type:** [ContentBuilder](arkts-arkui-contentbuilder-t.md)
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-FullScreenLaunchComponent-@BuilderParam  content: ContentBuilder--><!--Device-FullScreenLaunchComponent-@BuilderParam  content: ContentBuilder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -84,13 +84,15 @@ Indicates atomic service appId.
 onError?: ErrorCallback
 ```
 
-Callback triggered when an error occurs during running of the started ExtensionAbility.It is supported only when the atomic service runs in embedded mode,with the parameter being of type BusinessError.
+Callback triggered when an error occurs during running of the started ExtensionAbility. It is supported only when the atomic service runs in embedded mode, with the parameter being of type BusinessError.
 
-**Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md)
+**Type:** [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FullScreenLaunchComponent-onError?: ErrorCallback--><!--Device-FullScreenLaunchComponent-onError?: ErrorCallback-End-->
 
@@ -104,11 +106,13 @@ onReceive?: Callback<Record<string, RecordData>>
 
 Indicates the callback of onReceive.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Record&lt;string, [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)&gt;&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FullScreenLaunchComponent-onReceive?: Callback<Record<string, RecordData>>--><!--Device-FullScreenLaunchComponent-onReceive?: Callback<Record<string, RecordData>>-End-->
 
@@ -120,13 +124,15 @@ Indicates the callback of onReceive.
 onTerminated?: Callback<TerminationInfo>
 ```
 
-Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode,with the parameter being of type TerminationInfo.
+Callback triggered when the EmbeddableUIAbility is terminated to receive the information about the termination. It is supported only when the atomic service runs in embedded mode, with the parameter being of type TerminationInfo.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TerminationInfo&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TerminationInfo&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FullScreenLaunchComponent-onTerminated?: Callback<TerminationInfo>--><!--Device-FullScreenLaunchComponent-onTerminated?: Callback<TerminationInfo>-End-->
 
@@ -145,6 +151,8 @@ Indicates the atomic service start options.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FullScreenLaunchComponent-options?: AtomicServiceOptions--><!--Device-FullScreenLaunchComponent-options?: AtomicServiceOptions-End-->
 

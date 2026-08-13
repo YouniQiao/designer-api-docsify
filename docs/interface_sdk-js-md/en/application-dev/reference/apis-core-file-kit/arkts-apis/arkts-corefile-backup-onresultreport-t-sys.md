@@ -4,11 +4,13 @@
 type OnResultReport = (bundleName: string, result: string) => void
 ```
 
-Callback called when the backup service return result information.The first return string parameter indicates the bundleName that triggers the callback.The second return string parameter indicates the result of the bundle.
+Callback called when the backup service return result information. The first return string parameter indicates the bundleName that triggers the callback. The second return string parameter indicates the result of the bundle.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Provide methods for adding long or short vibration events and generate VibratorPattern objects.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-class VibratorPatternBuilder--><!--Device-vibrator-class VibratorPatternBuilder-End-->
 
@@ -22,7 +24,9 @@ addContinuousEvent(time: number, duration: number, options?: ContinuousParam): V
 
 Adds a long vibration event as a **VibratorPattern** object.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addContinuousEvent(time: int, duration: int, options?: ContinuousParam): VibratorPatternBuilder-End-->
 
@@ -46,7 +50,7 @@ Adds a long vibration event as a **VibratorPattern** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -92,7 +96,9 @@ addTransientEvent(time: number, options?: TransientParam): VibratorPatternBuilde
 
 Adds a short vibration event as a **VibratorPattern** object.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder--><!--Device-VibratorPatternBuilder-addTransientEvent(time: int, options?: TransientParam): VibratorPatternBuilder-End-->
 
@@ -115,7 +121,7 @@ Adds a short vibration event as a **VibratorPattern** object.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -147,7 +153,9 @@ build(): VibratorPattern
 
 Constructor used to create a **VibratorPattern** object, which determines the vibration sequence of short or long events.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VibratorPatternBuilder-build(): VibratorPattern--><!--Device-VibratorPatternBuilder-build(): VibratorPattern-End-->
 

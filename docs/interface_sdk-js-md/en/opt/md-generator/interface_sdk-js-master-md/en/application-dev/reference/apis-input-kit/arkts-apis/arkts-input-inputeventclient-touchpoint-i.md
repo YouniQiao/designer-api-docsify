@@ -4,6 +4,8 @@ Represents information about a single touch point on the display.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-inputEventClient-interface TouchPoint--><!--Device-inputEventClient-interface TouchPoint-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputSimulator
@@ -26,6 +28,8 @@ Unique ID of the display where the touch point is located. The value must be an 
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TouchPoint-displayId: int--><!--Device-TouchPoint-displayId: int-End-->
@@ -43,6 +47,8 @@ X coordinate of the touch point relative to the left edge of the display, in pix
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Y coordinate of the touch point relative to the top edge of the display, in pixe
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TouchPoint-displayY: int--><!--Device-TouchPoint-displayY: int-End-->
@@ -79,6 +87,8 @@ Unique ID of a touch point. The value must be an integer in the range of [0, 9].
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

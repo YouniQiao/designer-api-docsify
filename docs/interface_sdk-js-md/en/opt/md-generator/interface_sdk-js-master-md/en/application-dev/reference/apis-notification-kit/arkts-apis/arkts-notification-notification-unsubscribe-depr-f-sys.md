@@ -12,7 +12,7 @@ Unsubscribes from a notification. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [unsubscribe](ohos.notificationSubscribe/notificationSubscribe#unsubscribe)
+**Substitutes:** [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Unsubscribes from a notification. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unsubscribe](ohos.notificationSubscribe/notificationSubscribe#unsubscribe)
+**Substitutes:** [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

@@ -2,9 +2,11 @@
 
 Defines the resource type of request.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebResourceType--><!--Device-webview-enum WebResourceType-End-->
 
@@ -18,9 +20,11 @@ MAIN_FRAME = 0
 
 Top level page.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-MAIN_FRAME = 0--><!--Device-WebResourceType-MAIN_FRAME = 0-End-->
 
@@ -34,9 +38,11 @@ SUB_FRAME = 1
 
 Frame or Iframe.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-SUB_FRAME = 1--><!--Device-WebResourceType-SUB_FRAME = 1-End-->
 
@@ -50,9 +56,11 @@ STYLE_SHEET = 2
 
 CSS stylesheet.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-STYLE_SHEET = 2--><!--Device-WebResourceType-STYLE_SHEET = 2-End-->
 
@@ -66,9 +74,11 @@ SCRIPT = 3
 
 External script.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-SCRIPT = 3--><!--Device-WebResourceType-SCRIPT = 3-End-->
 
@@ -82,9 +92,11 @@ IMAGE = 4
 
 Image (jpg/gif/png/etc).
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-IMAGE = 4--><!--Device-WebResourceType-IMAGE = 4-End-->
 
@@ -98,9 +110,11 @@ FONT_RESOURCE = 5
 
 Font.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-FONT_RESOURCE = 5--><!--Device-WebResourceType-FONT_RESOURCE = 5-End-->
 
@@ -114,9 +128,11 @@ SUB_RESOURCE = 6
 
 Some other subresource. This is the default type if the actual type is unknown.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-SUB_RESOURCE = 6--><!--Device-WebResourceType-SUB_RESOURCE = 6-End-->
 
@@ -130,9 +146,11 @@ OBJECT = 7
 
 Object (or embed) tag for a plugin, or a resource that a plugin requested.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-OBJECT = 7--><!--Device-WebResourceType-OBJECT = 7-End-->
 
@@ -146,9 +164,11 @@ MEDIA = 8
 
 Media resource.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-MEDIA = 8--><!--Device-WebResourceType-MEDIA = 8-End-->
 
@@ -162,9 +182,11 @@ WORKER = 9
 
 Main resource of a dedicated worker.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-WORKER = 9--><!--Device-WebResourceType-WORKER = 9-End-->
 
@@ -178,9 +200,11 @@ SHARED_WORKER = 10
 
 Main resource of a shared worker.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-SHARED_WORKER = 10--><!--Device-WebResourceType-SHARED_WORKER = 10-End-->
 
@@ -194,9 +218,11 @@ PREFETCH = 11
 
 Explicitly requested prefetch.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-PREFETCH = 11--><!--Device-WebResourceType-PREFETCH = 11-End-->
 
@@ -210,9 +236,11 @@ FAVICON = 12
 
 Favicon.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-FAVICON = 12--><!--Device-WebResourceType-FAVICON = 12-End-->
 
@@ -226,9 +254,11 @@ XHR = 13
 
 XMLHttpRequest.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-XHR = 13--><!--Device-WebResourceType-XHR = 13-End-->
 
@@ -242,9 +272,11 @@ PING = 14
 
 Ping request for &lt;a ping&gt;/sendBeacon.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-PING = 14--><!--Device-WebResourceType-PING = 14-End-->
 
@@ -258,9 +290,11 @@ SERVICE_WORKER = 15
 
 The main resource of a service worker.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-SERVICE_WORKER = 15--><!--Device-WebResourceType-SERVICE_WORKER = 15-End-->
 
@@ -274,9 +308,11 @@ CSP_REPORT = 16
 
 Report of Content Security Policy violations.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-CSP_REPORT = 16--><!--Device-WebResourceType-CSP_REPORT = 16-End-->
 
@@ -290,9 +326,11 @@ PLUGIN_RESOURCE = 17
 
 Resource that a plugin requested.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-PLUGIN_RESOURCE = 17--><!--Device-WebResourceType-PLUGIN_RESOURCE = 17-End-->
 
@@ -306,9 +344,11 @@ NAVIGATION_PRELOAD_MAIN_FRAME = 19
 
 A main-frame service worker navigation preload request.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-NAVIGATION_PRELOAD_MAIN_FRAME = 19--><!--Device-WebResourceType-NAVIGATION_PRELOAD_MAIN_FRAME = 19-End-->
 
@@ -322,9 +362,11 @@ NAVIGATION_PRELOAD_SUB_FRAME = 20
 
 A sub-frame service worker navigation preload request.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebResourceType-NAVIGATION_PRELOAD_SUB_FRAME = 20--><!--Device-WebResourceType-NAVIGATION_PRELOAD_SUB_FRAME = 20-End-->
 

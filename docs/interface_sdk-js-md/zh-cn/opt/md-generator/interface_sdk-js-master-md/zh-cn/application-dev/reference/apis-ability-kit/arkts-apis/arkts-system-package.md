@@ -1,11 +1,5 @@
 # @system.package
 
-> **NOTE**
- >
- > - The APIs of this module have been deprecated since API version 9. You are advised to use
- > [@ohos.bundle.bundleManager](arkts-bundle-bundlemanager.md#bundleManager) instead.
-
-
 ## 汇总
 
 ### 类

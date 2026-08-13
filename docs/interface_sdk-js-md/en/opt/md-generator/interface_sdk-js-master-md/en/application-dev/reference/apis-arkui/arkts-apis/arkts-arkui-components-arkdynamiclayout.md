@@ -24,5 +24,5 @@ import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayout) |
-| [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#dynamiclayoutinstance) |
+| [DynamicLayout](arkts-arkui-arkui-components-arkdynamiclayout-con.md#DynamicLayout) |
+| [DynamicLayoutInstance](arkts-arkui-arkui-components-arkdynamiclayout-con.md#DynamicLayoutInstance) |

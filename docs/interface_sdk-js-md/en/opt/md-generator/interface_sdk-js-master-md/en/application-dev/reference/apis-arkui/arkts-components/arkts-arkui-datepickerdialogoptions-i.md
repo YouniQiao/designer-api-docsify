@@ -1,176 +1,14 @@
 # DatePickerDialogOptions
 
-Defines the configuration options of the date picker dialog box.
-
-Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions).
+Defines the configuration options of the date picker dialog box. Inherited from [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions).
 
 **Inheritance/Implementation:** DatePickerDialogOptions extends [DatePickerOptions](arkts-arkui-datepickeroptions-i.md#DatePickerOptions)
 
 **Since:** 8
 
-<!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions extends DatePickerOptions-End-->
+**Deprecated since:** -1
 
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onAccept
-
-```TypeScript
-onAccept?: (value: DatePickerResult) => void
-```
-
-Callback invoked when the OK button in the dialog box is clicked.
-
-**NOTE：**
-
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**onDateAccept** instead.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [onDateAccept](#onDateAccept)
-
-<!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |
-
-## onCancel
-
-```TypeScript
-onCancel?: VoidCallback
-```
-
-Callback invoked when the Cancel button in the dialog box is clicked.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-DatePickerDialogOptions-onCancel?: VoidCallback--><!--Device-DatePickerDialogOptions-onCancel?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onChange
-
-```TypeScript
-onChange?: (value: DatePickerResult) => void
-```
-
-Callback invoked when the selected item in the picker changes.
-
-**NOTE：**
-
-This API is supported since API version 8 and deprecated since API version 10. You are advised to use  
-**onDateChange** instead.
-
-**Since:** 8
-
-**Deprecated since:** 10
-
-**Substitutes:** [onDateChange](datePicker/DatePickerDialogOptions#onDateChange)
-
-<!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| value | [DatePickerResult](arkts-arkui-datepickerresult-i.md) | Yes |
-
-## onDidAppear
-
-```TypeScript
-onDidAppear?: VoidCallback
-```
-
-Event callback after the dialog box appears.
-
-**NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is  invoked before **onDidAppear**.4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onDidDisappear
-
-```TypeScript
-onDidDisappear?: VoidCallback
-```
-
-Event callback after the dialog box disappears.
-
-**NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillAppear
-
-```TypeScript
-onWillAppear?: VoidCallback
-```
-
-Event callback when the dialog box is about to appear.
-
-**NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear.2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## onWillDisappear
-
-```TypeScript
-onWillDisappear?: VoidCallback
-```
-
-Event callback when the dialog box is about to disappear.
-
-**NOTE：**
-
-1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear.2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback-End-->
+<!--Device-unnamed-declare interface DatePickerDialogOptions--><!--Device-unnamed-declare interface DatePickerDialogOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -180,15 +18,13 @@ Event callback when the dialog box is about to disappear.
 acceptButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the accept button.
-
-**NOTE：**
-
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
+Style of the accept button. **NOTE：**1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**。 If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,15 +40,15 @@ Style of the accept button.
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.
-
-Default value: **DialogAlignment.Default**
+Alignment mode of the dialog box in the vertical direction. Default value: **DialogAlignment.Default**
 
 **Type:** [DialogAlignment](../arkts-apis/arkts-arkui-dialogalignment-e.md)
 
 **Default:** DialogAlignment.Default [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -228,19 +64,15 @@ Default value: **DialogAlignment.Default**
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box.
-
-Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
-
-**NOTE：**
-
-Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box. Default value: **BlurStyle.COMPONENT_ULTRA_THICK** **NOTE：**Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
 **Default:** BlurStyle.COMPONENT_ULTRA_THICK
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,6 +94,8 @@ Options for customizing the background blur style.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -276,20 +110,15 @@ Options for customizing the background blur style.
 backgroundColor?: ResourceColor
 ```
 
-Backplane color of the dialog box.
-
-Default value: **Color.Transparent**
-
-**NOTE：**
-
-When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to  
-**BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
+Backplane color of the dialog box. Default value: **Color.Transparent** **NOTE：**When **backgroundColor** is set to a non-transparent color, **backgroundBlurStyle** must be set to **BlurStyle.NONE**; otherwise, the color display may not meet the expected effect.
 
 **Type:** [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)
 
 **Default:** Color.Transparent
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -311,6 +140,8 @@ Options for customizing the background effect.
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -325,21 +156,15 @@ Options for customizing the background effect.
 canLoop?: boolean
 ```
 
-Whether to enable cyclic scrolling.
-
-Default value: **true**
-
-**NOTE：**
-
-**true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling.
-
-**false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and cross-column value synchronization.
+Whether to enable cyclic scrolling. Default value: **true** **NOTE：****true**: Cyclic scrolling is enabled, where the year values increment or decrement with month cycling, and month values increment or decrement with day cycling. **false**: Cyclic scrolling is disabled, preventing out-of-bounds scrolling in year, month, and day columns and cross-column value synchronization.
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -355,15 +180,13 @@ Default value: **true**
 cancelButtonStyle?: PickerDialogButtonStyle
 ```
 
-Style of the cancel button.
-
-**NOTE：**
-
-1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**.2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to [ROUNDED_RECTANGLE](ButtonType), the displayed effect is still a capsule button ([Capsule](ButtonType)).
+Style of the cancel button. **NOTE：**1. In **acceptButtonStyle** and **cancelButtonStyle**, at most one **primary** field can be set to **true**. If both are set to **true**, the **primary** field will remain at the default value of **false**. 2. The default button height is 40 vp and remains fixed even in accessibility and large-font modes. In addition, even if the button style is set to ROUNDED_RECTANGLE, the displayed effect is still a capsule button (Capsule).
 
 **Type:** [PickerDialogButtonStyle](arkts-arkui-pickerdialogbuttonstyle-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -379,20 +202,15 @@ Style of the cancel button.
 dateTimeOptions?: DateTimeOptions
 ```
 
-Whether to display a leading zero for the hours and minutes. Currently only the configuration of the **hour** and  
-**minute** parameters is supported.
-
-Default value:
-
-**hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format,the default value is **"numeric"**, meaning no leading zero.
-
-**minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
+Whether to display a leading zero for the hours and minutes. Currently only the configuration of the **hour** and **minute** parameters is supported. Default value: **hour**: For the 24-hour format, the default value is **"2-digit"**, meaning the hour is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X". For the 12-hour format, the default value is **"numeric"**, meaning no leading zero. **minute**: The default value is **"2-digit"**, meaning the minute is displayed as a two-digit number. If the actual value is less than 10, a leading zero is added, displayed as "0X".
 
 **Type:** DateTimeOptions
 
 **Default:** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -408,15 +226,15 @@ Default value:
 disappearTextStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of edge items (the second item above or below the selected item).
-
-Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
+Text color, font size, and font weight of edge items (the second item above or below the selected item). Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } }
 
 **Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Default:** { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Regular } } [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -432,24 +250,15 @@ Default value: { color: '#ff182431', font: { size: '14fp', weight: FontWeight.Re
 enableHapticFeedback?: boolean
 ```
 
-Whether to enable haptic feedback.
-
-- **true**: Enable haptic feedback.  
-- **false**: Disable haptic feedback.
-
-Default value: **true**
-
-**NOTE：**
-
-1. Whether this parameter takes effect after being set to **true** depends on hardware support.2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project:
-
-"requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
+Whether to enable haptic feedback. - **true**: Enable haptic feedback. - **false**: Disable haptic feedback. Default value: **true** **NOTE：**1. Whether this parameter takes effect after being set to **true** depends on hardware support. 2. To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project: "requestPermissions": [{"name": "ohos.permission.VIBRATE"}]
 
 **Type:** boolean
 
 **Default:** true
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -465,18 +274,15 @@ Default value: **true**
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode.
-
-- **true**: Respond when the device is in semi-folded mode.  
-- **false**: Do not respond when the device is in semi-folded mode.
-
-Default value: **false**
+Whether to respond when the device is in semi-folded mode. - **true**: Respond when the device is in semi-folded mode. - **false**: Do not respond when the device is in semi-folded mode. Default value: **false**
 
 **Type:** boolean
 
 **Default:** false - meaning not to enable the hover mode.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -492,15 +298,15 @@ Default value: **false**
 hoverModeArea?: HoverModeAreaType
 ```
 
-Display area of the dialog box when the device is in semi-folded mode.
-
-Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Display area of the dialog box when the device is in semi-folded mode. Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** [HoverModeAreaType](arkts-arkui-hovermodeareatype-e.md)
 
 **Default:** HoverModeAreaType.BOTTOM_SCREEN
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -516,22 +322,15 @@ Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 lunar?: boolean
 ```
 
-Whether to display dates in lunar calendar format.
-
-- **true**: Display dates in lunar calendar format.  
-- **false**: Do not display dates in lunar calendar format.
-
-Default value: **false**
-
-**NOTE：**
-
-This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other locales.
+Whether to display dates in lunar calendar format. - **true**: Display dates in lunar calendar format. - **false**: Do not display dates in lunar calendar format. Default value: **false** **NOTE：**This attribute takes effect only in Simplified Chinese and Traditional Chinese locales; it has no effect in other locales.
 
 **Type:** boolean
 
 **Default:** false [since 11]
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -545,22 +344,15 @@ This attribute takes effect only in Simplified Chinese and Traditional Chinese l
 lunarSwitch?: boolean
 ```
 
-Whether to display the lunar calendar switch.
-
-- **true**: Display the lunar calendar switch.  
-- **false**: Do not display the lunar calendar switch.
-
-Default value: **false**
-
-**NOTE：**
-
-After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
+Whether to display the lunar calendar switch. - **true**: Display the lunar calendar switch. - **false**: Do not display the lunar calendar switch. Default value: **false** **NOTE：**After being enabled, this attribute takes effect only in Simplified Chinese and Traditional Chinese; it has no effect in other locales. Therefore, you are advised to set this attribute to **false** in other locales.
 
 **Type:** boolean
 
 **Default:** false [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -576,23 +368,15 @@ After being enabled, this attribute takes effect only in Simplified Chinese and 
 lunarSwitchStyle?: LunarSwitchStyle
 ```
 
-Style of the lunar calendar switch.
-
-Default value: {
-
-selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`,
-
-unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`,
-
-strokeColor: Color.White
-
-}
+Style of the lunar calendar switch. Default value: { selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`, unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`, strokeColor: Color.White }
 
 **Type:** [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
 
 **Default:** { selectedColor: $r('sys.color.ohos_id_color_text_primary_actived'), unselectedColor: $r('sys.color.ohos_id_color_switch_outline_off'), strokeColor: Color.White }.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -608,15 +392,15 @@ strokeColor: Color.White
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not.
-
-Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not. Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 
 **Type:** [Rectangle](arkts-arkui-rectangle-i.md)
 
 **Default:** { x: 0, y: 0, width: '100%', height: '100%' } [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -632,15 +416,15 @@ Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**
 offset?: Offset
 ```
 
-Offset of the dialog box based on the **alignment** settings.
-
-Default value: **{ dx: 0 , dy: 0 }**
+Offset of the dialog box based on the **alignment** settings. Default value: **{ dx: 0 , dy: 0 }**
 
 **Type:** Offset
 
 **Default:** { dx: 0 , dy: 0 } [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -650,21 +434,79 @@ Default value: **{ dx: 0 , dy: 0 }**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## onAccept
+
+```TypeScript
+onAccept?: (value: DatePickerResult) => void
+```
+
+Callback invoked when the OK button in the dialog box is clicked. **NOTE：**This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateAccept** instead.
+
+**Type:** (value: DatePickerResult) =&gt; void
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** onDateAccept
+
+<!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onAccept?: (value: DatePickerResult) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onCancel
+
+```TypeScript
+onCancel?: VoidCallback
+```
+
+Callback invoked when the Cancel button in the dialog box is clicked.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 8
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-DatePickerDialogOptions-onCancel?: VoidCallback--><!--Device-DatePickerDialogOptions-onCancel?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onChange
+
+```TypeScript
+onChange?: (value: DatePickerResult) => void
+```
+
+Callback invoked when the selected item in the picker changes. **NOTE：**This API is supported since API version 8 and deprecated since API version 10. You are advised to use **onDateChange** instead.
+
+**Type:** (value: DatePickerResult) =&gt; void
+
+**Since:** 8
+
+**Deprecated since:** 10
+
+**Substitutes:** onDateChange
+
+<!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void--><!--Device-DatePickerDialogOptions-onChange?: (value: DatePickerResult) => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## onDateAccept
 
 ```TypeScript
 onDateAccept?: Callback<Date>
 ```
 
-Callback invoked when the OK button in the dialog box is clicked.
-
-**NOTE：**
-
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
+Callback invoked when the OK button in the dialog box is clicked. **NOTE：**When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
 **Type:** Callback&lt;Date&gt;
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -680,15 +522,13 @@ When **showTime** is set to **true**, the hour and minute in the value returned 
 onDateChange?: Callback<Date>
 ```
 
-Callback triggered when date selection changes through scrolling in the dialog box.
-
-**NOTE：**
-
-When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
+Callback triggered when date selection changes through scrolling in the dialog box. **NOTE：**When **showTime** is set to **true**, the hour and minute in the value returned by the callback are the hour and minute selected in the picker. Otherwise, the hour and minute are the hour and minute of the system time.
 
 **Type:** Callback&lt;Date&gt;
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -698,21 +538,109 @@ When **showTime** is set to **true**, the hour and minute in the value returned 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## onDidAppear
+
+```TypeScript
+onDidAppear?: VoidCallback
+```
+
+Event callback after the dialog box appears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. 3. If the user closes the dialog box immediately after it appears, **onWillDisappear** is invoked before **onDidAppear**. 4. If the dialog box is closed before its entrance animation is finished, this callback is not invoked.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidAppear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onDidDisappear
+
+```TypeScript
+onDidDisappear?: VoidCallback
+```
+
+Event callback after the dialog box disappears. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onDidDisappear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillAppear
+
+```TypeScript
+onWillAppear?: VoidCallback
+```
+
+Event callback when the dialog box is about to appear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. 2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillAppear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onWillDisappear
+
+```TypeScript
+onWillDisappear?: VoidCallback
+```
+
+Event callback when the dialog box is about to disappear. **NOTE：**1. The normal timing sequence is as follows: onWillAppear > onDidAppear > (onDateAccept/onCancel/onDateChange) > onWillDisappear > onDidDisappear. 2. If the user closes the dialog box immediately after it appears, onWillDisappear is invoked before onDidAppear.
+
+**Type:** [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md)
+
+**Since:** 12
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback--><!--Device-DatePickerDialogOptions-onWillDisappear?: VoidCallback-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## selectedTextStyle
 
 ```TypeScript
 selectedTextStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of the selected item.
-
-Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
+Text color, font size, and font weight of the selected item. Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium }
 
 **Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Default:** { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Medium } [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -728,14 +656,13 @@ Default value: { color: '#ff007dff', font: { size: '20vp', weight: FontWeight.Me
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box.
-
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and  
-**ShadowStyle.OUTER_FLOATING_SM** otherwise
+Shadow of the dialog box. Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise
 
 **Type:** [ShadowOptions](arkts-arkui-shadowoptions-i.md) \| [ShadowStyle](arkts-arkui-shadowstyle-e.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -751,22 +678,15 @@ Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dial
 showTime?: boolean
 ```
 
-Whether to display the time picker in the dialog box.
-
-- **true**: Display the time picker.  
-- **false**: Do not display the time picker.
-
-Default value: **false**
-
-**NOTE：**
-
-1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views.2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month, and day columns.
+Whether to display the time picker in the dialog box. - **true**: Display the time picker. - **false**: Do not display the time picker. Default value: **false** **NOTE：**1. When showTime is true, clicking the date in the dialog box header toggles between date-only and date+time views. 2. When showTime is true, the mode parameter is ignored, meaning the date picker always shows year, month, and day columns.
 
 **Type:** boolean
 
 **Default:** false [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -782,11 +702,13 @@ Default value: **false**
 systemMaterial?: SystemUiMaterial
 ```
 
-Set system-styled materials for dialog. Different materials have different effects,which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
+Set system-styled materials for dialog. Different materials have different effects, which can influence backgroundColor, border, shadow, and other visual attributes of dialog.
 
-**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t.md)
+**Type:** [SystemUiMaterial](arkts-arkui-systemuimaterial-t-sys.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -802,15 +724,15 @@ Set system-styled materials for dialog. Different materials have different effec
 textStyle?: PickerTextStyle
 ```
 
-Text color, font size, and font weight of candidate items (the first item immediately above or below the selected item).
-
-Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
+Text color, font size, and font weight of candidate items (the first item immediately above or below the selected item). Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } }
 
 **Type:** [PickerTextStyle](arkts-arkui-pickertextstyle-i.md)
 
 **Default:** { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Regular } } [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -826,23 +748,15 @@ Default value: { color: '#ff182431', font: { size: '16fp', weight: FontWeight.Re
 useMilitaryTime?: boolean
 ```
 
-Whether the time picker in the dialog box is in 24-hour format. This parameter has effect only when **showTime** is  
-**true**.
-
-- **true**: 24-hour format.  
-- **false**: 12-hour format.
-
-Default value: **false**
-
-**NOTE：**
-
-When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour value changes.
+Whether the time picker in the dialog box is in 24-hour format. This parameter has effect only when **showTime** is **true**. - **true**: 24-hour format. - **false**: 12-hour format. Default value: **false** **NOTE：**When 12-hour format is used in the time picker, the AM/PM indicator does not automatically update when the hour value changes.
 
 **Type:** boolean
 
 **Default:** false [since 11]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

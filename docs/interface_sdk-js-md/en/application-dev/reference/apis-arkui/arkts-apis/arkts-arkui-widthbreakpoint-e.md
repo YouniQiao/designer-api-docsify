@@ -1,12 +1,12 @@
 # WidthBreakpoint
 
-Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getWindowWidthBreakpoint).
-
-The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed.
+Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getWindowWidthBreakpoint). The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed.
 
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum WidthBreakpoint--><!--Device-unnamed-declare enum WidthBreakpoint-End-->
 
@@ -23,6 +23,8 @@ The window width is less than 320 vp.
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +46,8 @@ The window width is greater than or equal to 320 vp and less than 600 vp.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -63,6 +67,8 @@ The window width is greater than or equal to 600 vp and less than 840 vp.
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +90,8 @@ The window width is greater than or equal to 840 vp and less than 1440 vp.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
@@ -103,6 +111,8 @@ The window width is greater than or equal to 1440 vp.
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

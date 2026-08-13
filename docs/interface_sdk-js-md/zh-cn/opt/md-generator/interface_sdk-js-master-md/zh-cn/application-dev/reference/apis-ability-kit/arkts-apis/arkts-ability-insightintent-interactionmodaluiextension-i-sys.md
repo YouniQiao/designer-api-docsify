@@ -2,11 +2,13 @@
 
 定义当意图执行完成时模态UIExtension要显示为交互界面的信息，不支持分布式。
 
-**继承/实现关系：** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md#InteractionUI)
+**继承/实现关系：** InteractionModalUIExtension extends [InteractionUI](arkts-ability-insightintent-interactionui-i-sys.md#InteractionUI（系统接口）)
 
 **起始版本：** 26.1.0
 
-<!--Device-insightIntent-interface InteractionModalUIExtension extends InteractionUI--><!--Device-insightIntent-interface InteractionModalUIExtension extends InteractionUI-End-->
+**废弃版本：** -1
+
+<!--Device-insightIntent-interface InteractionModalUIExtension--><!--Device-insightIntent-interface InteractionModalUIExtension-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -23,6 +25,8 @@ abilityName: string
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ bundleName: string
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InteractionModalUIExtension-bundleName: string--><!--Device-InteractionModalUIExtension-bundleName: string-End-->
@@ -63,6 +69,8 @@ interactionUIType: 'MODAL_UIEXTENSION'
 **类型：** 'MODAL_UIEXTENSION'
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,6 +92,8 @@ moduleName: string
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InteractionModalUIExtension-moduleName: string--><!--Device-InteractionModalUIExtension-moduleName: string-End-->
@@ -95,18 +105,20 @@ moduleName: string
 ## parameters
 
 ```TypeScript
-parameters: Record<string, Object>
+parameters: Record<string, RecordData>
 ```
 
 传递给目标UIExtension的参数。
 
-**类型：** Record&lt;string, Object&gt;
+**类型：** Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-InteractionModalUIExtension-parameters: Record<string, Object>--><!--Device-InteractionModalUIExtension-parameters: Record<string, Object>-End-->
+<!--Device-InteractionModalUIExtension-parameters: Record<string, RecordData>--><!--Device-InteractionModalUIExtension-parameters: Record<string, RecordData>-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -123,6 +135,8 @@ UIExtension的类型。
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -143,6 +157,8 @@ uri: string
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

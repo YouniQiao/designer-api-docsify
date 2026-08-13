@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-window-interface UIEnvWindowAvoidAreaInfoPX--><!--Device-window-interface UIEnvWindowAvoidAreaInfoPX-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -19,6 +21,8 @@ cutout: AvoidArea
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-cutout: AvoidArea-End-->
 
@@ -36,6 +40,8 @@ keyboard: AvoidArea
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-keyboard: AvoidArea-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -52,6 +58,8 @@ navigationIndicator: AvoidArea
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-navigationIndicator: AvoidArea-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
@@ -67,6 +75,8 @@ statusBar: AvoidArea
 **类型：** [AvoidArea](arkts-arkui-window-avoidarea-i.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea--><!--Device-UIEnvWindowAvoidAreaInfoPX-statusBar: AvoidArea-End-->
 

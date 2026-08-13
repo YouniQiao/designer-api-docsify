@@ -12,7 +12,7 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 
 **废弃版本：** 9
 
-**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
+**替代接口：** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -64,7 +64,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 
 **废弃版本：** 9
 
-**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
+**替代接口：** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -117,7 +117,7 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 
 **废弃版本：** 9
 
-**替代接口：** [moveMissionToFront](ohos.app.ability.missionManager/missionManager#moveMissionToFront)
+**替代接口：** [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#moveMissionToFront（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

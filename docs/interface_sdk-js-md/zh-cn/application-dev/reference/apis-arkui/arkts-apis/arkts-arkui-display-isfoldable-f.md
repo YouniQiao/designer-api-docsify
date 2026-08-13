@@ -8,9 +8,11 @@ function isFoldable(): boolean
 
 判断设备是否可折叠。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -28,7 +30,7 @@ function isFoldable(): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
 ## 示例
 

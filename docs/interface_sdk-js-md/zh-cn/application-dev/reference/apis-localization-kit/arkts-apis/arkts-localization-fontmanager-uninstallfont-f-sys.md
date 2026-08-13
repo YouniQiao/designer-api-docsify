@@ -8,9 +8,11 @@ function uninstallFont(fullName: string): Promise<int>
 
 根据字体名称从系统字体库中卸载已安装的字体文件。使用Promise异步回调。
 
-**起始版本：** 19
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为19；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_FONT
 
@@ -30,15 +32,15 @@ function uninstallFont(fullName: string): Promise<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回卸载结果。 &lt;br&gt;- 返回0：卸载成功，字体已从系统字体库中移除。 &lt;br&gt;- 返回其他值：卸载失败，请根据错误码排查原因。 |
+| Promise&lt;int&gt; | Promise对象，返回卸载结果。 &lt;br&gt;- 返回0：卸载成功，字体已从系统字体库中移除。 &lt;br&gt;- 返回其他值：卸载失败，请根据错误码排查原因。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [31100107](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100107-卸载的字体文件不存在) | The font file does not exist. |
-| [31100108](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100108-无法删除字体) | Failed to delete the font file. |
-| [31100109](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100109-其他错误导致卸载失败) | The system ability works abnormally. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [31100107](../errorcode-font-manager.md#31100107-卸载的字体文件不存在) | The font file does not exist. |
+| [31100108](../errorcode-font-manager.md#31100108-无法删除字体) | Failed to delete the font file. |
+| [31100109](../errorcode-font-manager.md#31100109-其他错误导致卸载失败) | The system ability works abnormally. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

@@ -4,6 +4,8 @@ Context type
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-contextConstant-export enum ContextType--><!--Device-contextConstant-export enum ContextType-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -17,6 +19,8 @@ APPLICATION_CONTEXT = 0
 Application context type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,6 +40,8 @@ Ability stage context type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -53,6 +59,8 @@ UIABILITY_CONTEXT = 2
 UI ability context type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -72,6 +80,8 @@ Form extension context type.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -89,6 +99,8 @@ APP_SERVICE_EXTENSION_CONTEXT = 4
 App service extension context type.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

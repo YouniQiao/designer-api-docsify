@@ -14,9 +14,11 @@ function getSignatureInfo(uid: int): SignatureInfo
 
 Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#SignatureInfo) of an application based on the given UID.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.GET_SIGNATURE_INFO
 
@@ -28,7 +30,7 @@ Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | UID of the application. |
+| uid | int | Yes | UID of the application. |
 
 **Return value:**
 
@@ -40,8 +42,8 @@ Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md#
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [17700021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [17700021](../errorcode-bundle.md#17700021-invalid-uid) | The uid is not found. |
 
 ## Examples
 

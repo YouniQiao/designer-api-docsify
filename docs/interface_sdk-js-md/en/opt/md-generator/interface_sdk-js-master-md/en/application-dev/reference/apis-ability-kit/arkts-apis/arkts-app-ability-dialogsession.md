@@ -2,7 +2,9 @@
 
 The dialogSession module provides APIs related to the dialog box.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -25,9 +27,10 @@ import { dialogSession } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getdialogsessioninfo) |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult) |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult-1) |
+| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getDialogSessionInfo-(System-API)) |
+| [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md#getDialogSessionInfo-(System-API)) |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#sendDialogResult-(System-API)) |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#sendDialogResult-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->

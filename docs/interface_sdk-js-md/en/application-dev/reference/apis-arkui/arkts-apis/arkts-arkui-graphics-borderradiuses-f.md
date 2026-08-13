@@ -3,18 +3,22 @@
 ## borderRadiuses
 
 ```TypeScript
-export declare function borderRadiuses(all: double): NodeBorderRadiuses
+export function borderRadiuses(all: number): BorderRadiuses
 ```
 
-Obtain a BorderRadiuses object with all edges are set to the same radius.
+Generates a **borderRadiuses** object with the specified radius for all border corners.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function borderRadiuses(all: double): NodeBorderRadiuses--><!--Device-unnamed-export declare function borderRadiuses(all: double): NodeBorderRadiuses-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export function borderRadiuses(all: number): BorderRadiuses--><!--Device-unnamed-export function borderRadiuses(all: number): BorderRadiuses-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,11 +26,55 @@ Obtain a BorderRadiuses object with all edges are set to the same radius.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | double | Yes | The edge radius will be set. |
+| all | number | Yes | Radius of border corners. &lt;br&gt;Unit: vp. &lt;br&gt;Value range: [0, +∞). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [NodeBorderRadiuses](arkts-arkui-nodeborderradiuses-t.md) | The BorderRadiuses object. |
+| [BorderRadiuses](arkts-arkui-borderradiuses-t.md) | borderRadiuses** object whose border corners all have the specified radius. |
+
+## Examples
+
+```TypeScript
+import { RenderNode, FrameNode, NodeController, borderRadiuses } from '@kit.ArkUI';
+
+const renderNode = new RenderNode();
+renderNode.frame = {
+  x: 0,
+  y: 0,
+  width: 150,
+  height: 150
+};
+renderNode.backgroundColor = 0xff519db4;
+renderNode.borderRadius = borderRadiuses(32);
+
+
+class MyNodeController extends NodeController {
+  private rootNode: FrameNode | null = null;
+
+  makeNode(uiContext: UIContext): FrameNode | null {
+    this.rootNode = new FrameNode(uiContext);
+
+    const rootRenderNode = this.rootNode.getRenderNode();
+    if (rootRenderNode !== null) {
+      rootRenderNode.appendChild(renderNode);
+    }
+
+    return this.rootNode;
+  }
+}
+
+@Entry
+@Component
+struct Index {
+  private myNodeController: MyNodeController = new MyNodeController();
+
+  build() {
+    Row() {
+      NodeContainer(this.myNodeController)
+    }.margin(20)
+  }
+}
+```
 

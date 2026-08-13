@@ -4,7 +4,9 @@ Enumerates the credential change types.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-enum CredentialChangeType--><!--Device-osAccount-enum CredentialChangeType-End-->
 
@@ -22,7 +24,9 @@ A credential is added.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialChangeType-ADD_CREDENTIAL = 1--><!--Device-CredentialChangeType-ADD_CREDENTIAL = 1-End-->
 
@@ -40,7 +44,9 @@ A credential is updated.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialChangeType-UPDATE_CREDENTIAL = 2--><!--Device-CredentialChangeType-UPDATE_CREDENTIAL = 2-End-->
 
@@ -58,7 +64,9 @@ A credential is deleted.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CredentialChangeType-DELETE_CREDENTIAL = 3--><!--Device-CredentialChangeType-DELETE_CREDENTIAL = 3-End-->
 

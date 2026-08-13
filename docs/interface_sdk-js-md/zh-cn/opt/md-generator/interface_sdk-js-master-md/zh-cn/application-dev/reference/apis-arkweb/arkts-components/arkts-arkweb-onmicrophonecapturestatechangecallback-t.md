@@ -8,6 +8,8 @@ type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChan
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChangeInfo) => void--><!--Device-unnamed-type OnMicrophoneCaptureStateChangeCallback = (event: MicrophoneCaptureStateChangeInfo) => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

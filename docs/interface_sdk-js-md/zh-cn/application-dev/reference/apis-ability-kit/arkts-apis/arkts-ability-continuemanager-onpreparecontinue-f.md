@@ -10,7 +10,9 @@ prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart�
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -23,13 +25,13 @@ prepareContinue 事件，当在 continueType 中配置了“ContinueQuickStart�
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 | the ability context. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 是 | Used to handle ('prepareContinue') command. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ContinueResultInfo](arkts-ability-continuemanager-continueresultinfo-i.md)&gt; | 是 | Used to handle ('prepareContinue') command. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16300501](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
+| [16300501](../errorcode-DistributedSchedule.md#16300501-系统服务工作异常) | the system ability work abnormally. |
 
 ## 示例
 

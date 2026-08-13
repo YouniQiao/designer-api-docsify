@@ -2,7 +2,9 @@
 
 Defines authorization token information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface AuthTokenInfo--><!--Device-appAccount-interface AuthTokenInfo-End-->
 
@@ -24,7 +26,9 @@ Information about the account to which the token belongs. By default, no value i
 
 **Type:** [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTokenInfo-account?: AppAccountInfo--><!--Device-AuthTokenInfo-account?: AppAccountInfo-End-->
 
@@ -40,7 +44,9 @@ Authentication type.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTokenInfo-authType: string--><!--Device-AuthTokenInfo-authType: string-End-->
 
@@ -56,7 +62,9 @@ Value of the authorization token.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthTokenInfo-token: string--><!--Device-AuthTokenInfo-token: string-End-->
 

@@ -4,6 +4,8 @@ Declare class TreeListenerV2
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class TreeListenerV2--><!--Device-unnamed-export declare class TreeListenerV2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ offNodeAdd(callback?: OnChangedCallback): void
 Destroy node add callback event.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Destroy node click callback event.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -71,6 +77,8 @@ offNodeDelete(callback?: OnChangedCallback): void
 Destroy node delete callback event.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,6 +104,8 @@ Destroy node modify callback event.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -120,6 +130,8 @@ Destroy node move callback event.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -140,9 +152,11 @@ Destroy node move callback event.
 onNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.The event will not be destroyed after being processed.
+Node add event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,9 +178,11 @@ Node add event registration and processing.The event will not be destroyed after
 onNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.The event will not be destroyed after being processed.
+Node click event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,9 +204,11 @@ Node click event registration and processing.The event will not be destroyed aft
 onNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.The event will not be destroyed after being processed.
+Node delete event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -212,9 +230,11 @@ Node delete event registration and processing.The event will not be destroyed af
 onNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.The event will not be destroyed after being processed.
+Node modify event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -236,9 +256,11 @@ Node modify event registration and processing.The event will not be destroyed af
 onNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.The event will not be destroyed after being processed.
+Node move event registration and processing. The event will not be destroyed after being processed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,9 +282,11 @@ Node move event registration and processing.The event will not be destroyed afte
 onceNodeAdd(callback: OnChangedCallback): void
 ```
 
-Node add event registration and processing.After the event is processed once, it will be destroyed.
+Node add event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -284,9 +308,11 @@ Node add event registration and processing.After the event is processed once, it
 onceNodeClick(callback: OnChangedCallback): void
 ```
 
-Node click event registration and processing.After the event is processed once, it will be destroyed.
+Node click event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -308,9 +334,11 @@ Node click event registration and processing.After the event is processed once, 
 onceNodeDelete(callback: OnChangedCallback): void
 ```
 
-Node delete event registration and processing.After the event is processed once, it will be destroyed.
+Node delete event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,9 +360,11 @@ Node delete event registration and processing.After the event is processed once,
 onceNodeModify(callback: OnChangedCallback): void
 ```
 
-Node modify event registration and processing.After the event is processed once, it will be destroyed.
+Node modify event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,9 +386,11 @@ Node modify event registration and processing.After the event is processed once,
 onceNodeMove(callback: OnChangedCallback): void
 ```
 
-Node move event registration and processing.After the event is processed once, it will be destroyed.
+Node move event registration and processing. After the event is processed once, it will be destroyed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

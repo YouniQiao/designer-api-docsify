@@ -8,7 +8,9 @@ function getLevel(): ThermalLevel
 
 获取当前热档位信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-thermal-function getLevel(): ThermalLevel--><!--Device-thermal-function getLevel(): ThermalLevel-End-->
 

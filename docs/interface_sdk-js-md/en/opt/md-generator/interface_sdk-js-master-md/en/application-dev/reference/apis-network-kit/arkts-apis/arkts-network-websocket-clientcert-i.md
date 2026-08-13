@@ -1,8 +1,10 @@
 # ClientCert
 
-The clientCert field of the client certificate, which includes three attributes:client certificate (certPath) and only support PEM format, certificate private key (keyPath), and passphrase (keyPassword).
+The clientCert field of the client certificate, which includes three attributes: client certificate (certPath) and only support PEM format, certificate private key (keyPath), and passphrase (keyPassword).
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-webSocket-export interface ClientCert--><!--Device-webSocket-export interface ClientCert-End-->
 
@@ -24,7 +26,9 @@ The path to the client certificate file.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ClientCert-certPath: string--><!--Device-ClientCert-certPath: string-End-->
 
@@ -40,7 +44,9 @@ Client certificate password.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ClientCert-keyPassword?: string--><!--Device-ClientCert-keyPassword?: string-End-->
 
@@ -56,7 +62,9 @@ The path of the client certificate private key file.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ClientCert-keyPath: string--><!--Device-ClientCert-keyPath: string-End-->
 

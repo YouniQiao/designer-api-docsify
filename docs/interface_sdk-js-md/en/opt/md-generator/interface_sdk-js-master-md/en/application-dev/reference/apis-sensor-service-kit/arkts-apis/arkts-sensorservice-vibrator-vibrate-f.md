@@ -18,7 +18,7 @@ Triggers vibration based on a specified duration. This API uses an asynchronous 
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration](vibrator.startVibration(effect:)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -61,7 +61,7 @@ Triggers vibration based on a specified duration. This API uses a promise to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration](vibrator.startVibration(effect:)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -107,7 +107,7 @@ Triggers vibration based on a specified effect. This API uses a promise to retur
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration](vibrator.startVibration(effect:)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute)
 
 **Required permissions:** ohos.permission.VIBRATE
 
@@ -153,7 +153,7 @@ Triggers vibration based on a specified effect. This API uses an asynchronous ca
 
 **Deprecated since:** 9
 
-**Substitutes:** [startVibration](vibrator.startVibration(effect:)
+**Substitutes:** [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startVibration)(effect: VibrateEffect, attribute: VibrateAttribute, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.VIBRATE
 

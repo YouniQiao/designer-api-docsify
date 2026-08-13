@@ -6,6 +6,8 @@ Defines the toolbar options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NavigationToolbarOptions--><!--Device-unnamed-declare interface NavigationToolbarOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -38,19 +42,15 @@ Background blur style of the title bar. If this parameter is not set, the backgr
 backgroundBlurStyleOptions?: BackgroundBlurStyleOptions
 ```
 
-Options for the title bar background blur style.
-
-**NOTE：**
-
-This parameter is only effective when **backgroundBlurStyle** is set.
-
-Avoid using this API in conjunction with **backgroundEffect**.
+Options for the title bar background blur style. **NOTE：**This parameter is only effective when **backgroundBlurStyle** is set. Avoid using this API in conjunction with **backgroundEffect**.
 
 **Type:** BackgroundBlurStyleOptions
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +74,8 @@ Background color of the title bar. If this parameter is not set, the default col
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -88,17 +90,15 @@ Background color of the title bar. If this parameter is not set, the default col
 backgroundEffect?: BackgroundEffectOptions
 ```
 
-Title bar background properties, including blur radius, brightness, saturation, and color.
-
-**NOTE：**
-
-Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
+Title bar background properties, including blur radius, brightness, saturation, and color. **NOTE：**Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 
 **Type:** BackgroundEffectOptions
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -114,9 +114,7 @@ Avoid using this API in conjunction with **backgroundBlurStyleOptions**.
 barStyle?: BarStyle
 ```
 
-Layout style of the toolbar.
-
-Default value: **BarStyle.STANDARD**
+Layout style of the toolbar. Default value: **BarStyle.STANDARD**
 
 **Type:** [BarStyle](arkts-arkui-barstyle-e.md)
 
@@ -125,6 +123,8 @@ Default value: **BarStyle.STANDARD**
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,13 +140,7 @@ Default value: **BarStyle.STANDARD**
 hideItemValue?: boolean
 ```
 
-Whether to hide the toolbar text.
-
-Default value: **false**
-
-**true**: yes; **false**: no
-
-Default value: **false**
+Whether to hide the toolbar text. Default value: **false** **true**: yes; **false**: no Default value: **false**
 
 **Type:** boolean
 
@@ -155,6 +149,8 @@ Default value: **false**
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -177,6 +173,8 @@ Options for the toolbar's more button menu.
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

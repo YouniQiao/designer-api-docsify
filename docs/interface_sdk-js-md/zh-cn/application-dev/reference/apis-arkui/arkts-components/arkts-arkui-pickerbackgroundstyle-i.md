@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface PickerBackgroundStyle--><!--Device-unnamed-declare interface PickerBackgroundStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,18 +18,7 @@
 borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-选中项的边框圆角半径。
-
-> 默认值：{ value:24, unit:LengthUnit.VP }，即四个圆角半径均为24vp。
-
-> 单位：默认为vp，可通过LengthMetrics或LocalizedBorderRadiuses类型指定单位。
-
-> **说明：**
-> 
-> 1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics)类型的value参数同时作用于四个圆角半径大小，
-> unit参数用于设置单位。
-> 2. [BorderRadiuses](BorderRadiuses)类型可以设置四个不同值的圆角半径，所有单位固定为vp。
-> 3. [LocalizedBorderRadiuses](LocalizedBorderRadiuses)类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
+选中项的边框圆角半径。 > 默认值：{ value:24, unit:LengthUnit.VP }，即四个圆角半径均为24vp。 > 单位：默认为vp，可通过LengthMetrics或LocalizedBorderRadiuses类型指定单位。 > **说明：** > > 1. [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#LengthMetrics)类型的value参数同时作用于四个圆角半径大小， > unit参数用于设置单位。 > 2. BorderRadiuses类型可以设置四个不同值的圆角半径，所有单位固定为vp。 > 3. LocalizedBorderRadiuses类型可以设置四个不同值的圆角半径，并且可以单独设置每个圆角的单位。
 
 **类型：** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
 
@@ -36,6 +27,8 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -51,13 +44,7 @@ borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 color?: ResourceColor
 ```
 
-选中项的背景颜色。
-
-> 默认值：
-> 
-> 'sys.color.comp_background_tertiary'
-
-> **说明：**未设置该属性时，使用默认值。
+选中项的背景颜色。 > 默认值： > > 'sys.color.comp_background_tertiary' > **说明：**未设置该属性时，使用默认值。
 
 **类型：** ResourceColor
 
@@ -66,6 +53,8 @@ color?: ResourceColor
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

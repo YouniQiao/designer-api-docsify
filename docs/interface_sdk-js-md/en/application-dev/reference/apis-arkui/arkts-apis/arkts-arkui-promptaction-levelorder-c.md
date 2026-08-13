@@ -1,12 +1,14 @@
 # LevelOrder
 
-Defines level order.
+Defines the display order of a dialog box.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare class LevelOrder--><!--Device-unnamed-export declare class LevelOrder-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class LevelOrder--><!--Device-unnamed-export class LevelOrder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -19,18 +21,22 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ## clamp
 
 ```TypeScript
-static clamp(order: double): LevelOrder
+static clamp(order: number): LevelOrder
 ```
 
-Generate valid level order.
+Creates a dialog box level with the specified order.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LevelOrder-static clamp(order: double): LevelOrder--><!--Device-LevelOrder-static clamp(order: double): LevelOrder-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LevelOrder-static clamp(order: number): LevelOrder--><!--Device-LevelOrder-static clamp(order: number): LevelOrder-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -38,29 +44,33 @@ Generate valid level order.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| order | double | Yes | Clamp order with minimum number -100000 and maximum number 100000. |
+| order | number | Yes | Display order of the dialog box. The value range is [-100000.0, +100000.0]. Values outside this range are clamped to the nearest limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | the order object. |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | Current instance. |
 
 ## getOrder
 
 ```TypeScript
-getOrder(): double
+getOrder(): number
 ```
 
-Get the order from LevelOrder object.
+Obtains the display order of this dialog box.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-LevelOrder-getOrder(): double--><!--Device-LevelOrder-getOrder(): double-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-LevelOrder-getOrder(): number--><!--Device-LevelOrder-getOrder(): number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -68,5 +78,5 @@ Get the order from LevelOrder object.
 
 | Type | Description |
 | --- | --- |
-| double | the order number. |
+| number | Display order of the dialog box. |
 

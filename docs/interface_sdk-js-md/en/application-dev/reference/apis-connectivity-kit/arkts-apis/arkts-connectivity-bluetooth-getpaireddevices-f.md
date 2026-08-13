@@ -20,7 +20,7 @@ Obtains the list of Bluetooth devices that have been paired with the current dev
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPairedDevices](ohos.bluetoothManager/bluetoothManager.getPairedDevices)
+**Substitutes:** [getPairedDevices](arkts-connectivity-bluetoothmanager-getpaireddevices-f.md#getPairedDevices)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

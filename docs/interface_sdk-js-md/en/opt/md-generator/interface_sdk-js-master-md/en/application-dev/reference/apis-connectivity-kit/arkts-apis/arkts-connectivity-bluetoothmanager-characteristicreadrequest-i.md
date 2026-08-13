@@ -6,7 +6,7 @@ Describes the parameters of the Gatt client's characteristic read request.
 
 **Deprecated since:** 10
 
-**Substitutes:** [CharacteristicReadRequest](ohos.bluetooth.ble/ble.CharacteristicReadRequest)
+**Substitutes:** [CharacteristicReadRequest](arkts-connectivity-ble-characteristicreadrequest-i.md#CharacteristicReadRequest)
 
 <!--Device-bluetoothManager-interface CharacteristicReadRequest--><!--Device-bluetoothManager-interface CharacteristicReadRequest-End-->
 
@@ -32,7 +32,7 @@ The UUID of a CharacteristicReadRequest instance
 
 **Deprecated since:** 10
 
-**Substitutes:** [characteristicUuid](ohos.bluetooth.ble/ble.CharacteristicReadRequest#characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-ble-characteristicreadrequest-i.md#characteristicUuid)
 
 <!--Device-CharacteristicReadRequest-characteristicUuid: string--><!--Device-CharacteristicReadRequest-characteristicUuid: string-End-->
 
@@ -52,7 +52,7 @@ Indicates the address of the client that initiates the read request
 
 **Deprecated since:** 10
 
-**Substitutes:** [deviceId](ohos.bluetooth.ble/ble.CharacteristicReadRequest#deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-ble-characteristicreadrequest-i.md#deviceId)
 
 <!--Device-CharacteristicReadRequest-deviceId: string--><!--Device-CharacteristicReadRequest-deviceId: string-End-->
 
@@ -72,7 +72,7 @@ Indicates the byte offset of the start position for reading characteristic value
 
 **Deprecated since:** 10
 
-**Substitutes:** [offset](ohos.bluetooth.ble/ble.CharacteristicReadRequest#offset)
+**Substitutes:** [offset](arkts-connectivity-ble-characteristicreadrequest-i.md#offset)
 
 <!--Device-CharacteristicReadRequest-offset: number--><!--Device-CharacteristicReadRequest-offset: number-End-->
 
@@ -92,7 +92,7 @@ The UUID of the service to which the characteristic belongs
 
 **Deprecated since:** 10
 
-**Substitutes:** [serviceUuid](ohos.bluetooth.ble/ble.CharacteristicReadRequest#serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-ble-characteristicreadrequest-i.md#serviceUuid)
 
 <!--Device-CharacteristicReadRequest-serviceUuid: string--><!--Device-CharacteristicReadRequest-serviceUuid: string-End-->
 
@@ -112,7 +112,7 @@ The Id of the read request
 
 **Deprecated since:** 10
 
-**Substitutes:** [transId](ohos.bluetooth.ble/ble.CharacteristicReadRequest#transId)
+**Substitutes:** [transId](arkts-connectivity-ble-characteristicreadrequest-i.md#transId)
 
 <!--Device-CharacteristicReadRequest-transId: number--><!--Device-CharacteristicReadRequest-transId: number-End-->
 

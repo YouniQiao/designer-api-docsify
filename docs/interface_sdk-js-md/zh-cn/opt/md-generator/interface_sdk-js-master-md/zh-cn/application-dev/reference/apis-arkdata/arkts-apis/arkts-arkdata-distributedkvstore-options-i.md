@@ -2,7 +2,9 @@
 
 用于提供创建数据库的配置信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface Options--><!--Device-distributedKVStore-interface Options-End-->
 
@@ -18,7 +20,9 @@ autoSync?: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -38,7 +42,9 @@ backup?: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,7 +62,9 @@ createIfMissing?: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,7 +82,9 @@ encrypt?: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -92,7 +102,9 @@ kvStoreType?: KVStoreType
 
 **类型：** KVStoreType
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +124,8 @@ rootDir?: string
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Options-rootDir?: string--><!--Device-Options-rootDir?: string-End-->
@@ -128,7 +142,9 @@ schema?: Schema
 
 **类型：** Schema
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -146,7 +162,9 @@ securityLevel: SecurityLevel
 
 **类型：** SecurityLevel
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

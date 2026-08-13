@@ -4,6 +4,8 @@ Web组件资源响应对象。
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class WebResourceResponse--><!--Device-unnamed-declare class WebResourceResponse-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ getReasonMessage(): string
 获取资源响应的状态码描述。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,6 +62,8 @@ getResponseCode(): number
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceResponse-getResponseCode(): number--><!--Device-WebResourceResponse-getResponseCode(): number-End-->
@@ -77,6 +85,8 @@ getResponseData(): string
 获取资源响应数据。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -100,6 +110,8 @@ getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 <!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined--><!--Device-WebResourceResponse-getResponseDataEx(): string | number | ArrayBuffer | Resource | undefined-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -119,6 +131,8 @@ getResponseEncoding(): string
 获取资源响应的编码。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -142,6 +156,8 @@ getResponseHeader(): Array<Header>
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceResponse-getResponseHeader(): Array<Header>--><!--Device-WebResourceResponse-getResponseHeader(): Array<Header>-End-->
@@ -164,6 +180,8 @@ getResponseIsReady(): boolean
 
 **起始版本：** 13
 
+**废弃版本：** -1
+
 <!--Device-WebResourceResponse-getResponseIsReady(): boolean--><!--Device-WebResourceResponse-getResponseIsReady(): boolean-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -183,6 +201,8 @@ getResponseMimeType(): string
 获取资源响应的媒体（MIME）类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -206,6 +226,8 @@ setReasonMessage(reason: string): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceResponse-setReasonMessage(reason: string): void--><!--Device-WebResourceResponse-setReasonMessage(reason: string): void-End-->
@@ -227,6 +249,8 @@ setResponseCode(code: number): void
 设置资源响应的状态码。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -250,6 +274,8 @@ setResponseData(data: string | number | Resource | ArrayBuffer): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void--><!--Device-WebResourceResponse-setResponseData(data: string | number | Resource | ArrayBuffer): void-End-->
@@ -271,6 +297,8 @@ setResponseEncoding(encoding: string): void
 设置资源响应的编码。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -294,6 +322,8 @@ setResponseHeader(header: Array<Header>): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void--><!--Device-WebResourceResponse-setResponseHeader(header: Array<Header>): void-End-->
@@ -316,6 +346,8 @@ setResponseIsReady(IsReady: boolean): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void--><!--Device-WebResourceResponse-setResponseIsReady(IsReady: boolean): void-End-->
@@ -337,6 +369,8 @@ setResponseMimeType(mimeType: string): void
 设置资源响应的媒体（MIME）类型。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

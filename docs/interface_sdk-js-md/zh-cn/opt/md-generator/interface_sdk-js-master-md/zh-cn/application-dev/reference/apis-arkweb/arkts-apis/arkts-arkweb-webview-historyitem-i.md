@@ -4,6 +4,8 @@ Provides information for history item in BackForwardList.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ historyRawUrl: string
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +42,8 @@ historyUrl: string
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HistoryItem-historyUrl: string--><!--Device-HistoryItem-historyUrl: string-End-->
@@ -56,6 +62,8 @@ icon: image.PixelMap
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HistoryItem-icon: image.PixelMap--><!--Device-HistoryItem-icon: image.PixelMap-End-->
@@ -73,6 +81,8 @@ title: string
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

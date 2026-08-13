@@ -4,11 +4,13 @@ Manager HID device profile.
 
 **Inheritance/Implementation:** HidDeviceProfile extends [BaseProfile](arkts-connectivity-hid-baseprofile-t.md#BaseProfile)
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-hid-interface HidDeviceProfile extends BaseProfile--><!--Device-hid-interface HidDeviceProfile extends BaseProfile-End-->
+**Deprecated since:** -1
+
+<!--Device-hid-interface HidDeviceProfile--><!--Device-hid-interface HidDeviceProfile-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -26,9 +28,11 @@ connect(deviceId: BluetoothAddress): void
 
 Initiate an HID connection to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -48,10 +52,10 @@ Initiate an HID connection to a remote HID host device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | 2900004 | Remote Device profile not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
@@ -80,9 +84,11 @@ disconnect(): void
 
 Disconnect the HID connection with the remote device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -96,9 +102,9 @@ Disconnect the HID connection with the remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
@@ -121,9 +127,11 @@ offGetReport(callback?: Callback<GetReportData>): void
 
 Unsubscribe from the event that a GET_REPORT message is received from the peer device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -137,14 +145,14 @@ Unsubscribe from the event that a GET_REPORT message is received from the peer d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -169,9 +177,11 @@ offInterruptDataReceived(callback?: Callback<InterruptData>): void
 
 Unsubscribe from the event reported when InterruptData is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -185,14 +195,14 @@ Unsubscribe from the event reported when InterruptData is received from the remo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -217,9 +227,11 @@ offSetProtocol(callback?: Callback<ProtocolData>): void
 
 Unsubscribe from the event that a SET_PROTOCOL message is received from the peer device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -233,14 +245,14 @@ Unsubscribe from the event that a SET_PROTOCOL message is received from the peer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -265,9 +277,11 @@ offSetReport(callback?: Callback<SetReportData>): void
 
 Unsubscribe from the event that a SET_REPORT message is received from the peer device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -281,14 +295,14 @@ Unsubscribe from the event that a SET_REPORT message is received from the peer d
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -313,9 +327,11 @@ offVirtualCableUnplug(callback?: Callback<void>): void
 
 Unsubscribe from the event reported when virtual Cable is removed.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -329,14 +345,14 @@ Unsubscribe from the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | No | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -361,9 +377,11 @@ onGetReport(callback: Callback<GetReportData>): void
 
 Subscribe to the event reported when GET_REPORT message is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -377,14 +395,14 @@ Subscribe to the event reported when GET_REPORT message is received from the rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GetReportData](arkts-connectivity-hid-getreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -408,9 +426,11 @@ onInterruptDataReceived(callback: Callback<InterruptData>): void
 
 Subscribe to the event reported when InterruptData is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -424,14 +444,14 @@ Subscribe to the event reported when InterruptData is received from the remote.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptData](arkts-connectivity-hid-interruptdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -455,9 +475,11 @@ onSetProtocol(callback: Callback<ProtocolData>): void
 
 Subscribe to the event reported when SET_PROTOCOL message is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -471,14 +493,14 @@ Subscribe to the event reported when SET_PROTOCOL message is received from the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ProtocolData](arkts-connectivity-hid-protocoldata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -502,9 +524,11 @@ onSetReport(callback: Callback<SetReportData>): void
 
 Subscribe to the event reported when SET_REPORT message is received from the remote.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -518,14 +542,14 @@ Subscribe to the event reported when SET_REPORT message is received from the rem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SetReportData](arkts-connectivity-hid-setreportdata-i.md)&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -549,9 +573,11 @@ onVirtualCableUnplug(callback: Callback<void>): void
 
 Subscribe to the event reported when virtual Cable is removed.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -565,14 +591,14 @@ Subscribe to the event reported when virtual Cable is removed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | Yes | Callback used to listen for event. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback used to listen for event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -594,11 +620,13 @@ try {
 registerHidDevice(sdp: HidDeviceSdp, inQos: HidDeviceQos, outQos: HidDeviceQos, callback: Callback<boolean>): void
 ```
 
-Application registers the HID Device capability.The application will only successfully call this API when it's in the foreground.If the application that has registered the HID Device capability is switched to the background, the system automatically cancels the HID Device capability registration. The application can listen to the appStatusChange callback to detect the status change.
+Application registers the HID Device capability. The application will only successfully call this API when it's in the foreground. If the application that has registered the HID Device capability is switched to the background, the system automatically cancels the HID Device capability registration. The application can listen to the appStatusChange callback to detect the status change.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -615,16 +643,16 @@ Application registers the HID Device capability.The application will only succes
 | sdp | [HidDeviceSdp](arkts-connectivity-hid-hiddevicesdp-i.md) | Yes | Describe the hid device capability fields of this endpoint being queried. |
 | inQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the In Quality of Service (QoS) settings for the Bluetooth HID device application. |
 | outQos | [HidDeviceQos](arkts-connectivity-hid-hiddeviceqos-i.md) | Yes | Describe the Out Quality of Service (QoS) settings for the Bluetooth HID device application. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback for HID device registration status changes, {@code true} indicates register success or {@code false} otherwise. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2903050](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903050-hid-is-not-in-the-foreground) | Application is not in the foreground. |
-| [2903051](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903051-hid-has-been-registered) | Any app has been registered. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2903050](../errorcode-bluetoothManager.md#2903050-hid-is-not-in-the-foreground) | Application is not in the foreground. |
+| [2903051](../errorcode-bluetoothManager.md#2903051-hid-has-been-registered) | Any app has been registered. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
@@ -681,21 +709,17 @@ try {
 
 ## replyReport
 
-ArkTS-Dyn:
-```TypeScript
-replyReport(type: ReportType, id: number, reportData: Uint8Array): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 replyReport(type: ReportType, id: int, reportData: Uint8Array): void
 ```
 
 Reply report to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -710,17 +734,17 @@ Reply report to a remote HID host device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | ReportType | Yes | Report type for reply |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Report Id, as defined in descriptor. It can be 0 in case Report Id are not defined in descriptor. |
+| id | int | Yes | Report Id, as defined in descriptor. It can be 0 in case Report Id are not defined in descriptor. |
 | reportData | Uint8Array | Yes | Report Data send to host. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2903053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
@@ -746,9 +770,11 @@ reportError(error: ErrorReason): void
 
 Report error to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -768,10 +794,10 @@ Report error to a remote HID host device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2903053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
@@ -789,21 +815,17 @@ try {
 
 ## sendReport
 
-ArkTS-Dyn:
-```TypeScript
-sendReport(id: number, reportData: Uint8Array): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 sendReport(id: int, reportData: Uint8Array): void
 ```
 
 Send report to a remote HID host device.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -817,17 +839,17 @@ Send report to a remote HID host device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Report ID defined in the descriptor. |
+| id | int | Yes | Report ID defined in the descriptor. |
 | reportData | Uint8Array | Yes | Report data sent to the host device. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [2903052](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2903053](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [2903052](../errorcode-bluetoothManager.md#2903052-hid-not-registered) | App not register. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2903053](../errorcode-bluetoothManager.md#2903053-hid-not-connected) | Device not connected. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
@@ -852,9 +874,11 @@ unregisterHidDevice(): void
 
 Application unregisters the HID Device capability.
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -868,8 +892,8 @@ Application unregisters the HID Device capability.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 

@@ -2,7 +2,9 @@
 
 Defines the options for obtaining domain account information.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoOptions-End-->
 
@@ -26,7 +28,9 @@ Domain account name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccountInfoOptions-accountName: string--><!--Device-GetDomainAccountInfoOptions-accountName: string-End-->
 
@@ -44,7 +48,9 @@ Domain name, which is **undefined** by default.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccountInfoOptions-domain?: string--><!--Device-GetDomainAccountInfoOptions-domain?: string-End-->
 
@@ -62,7 +68,9 @@ ID of the server to which the domain account belongs, which is **undefined** by 
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccountInfoOptions-serverConfigId?: string--><!--Device-GetDomainAccountInfoOptions-serverConfigId?: string-End-->
 

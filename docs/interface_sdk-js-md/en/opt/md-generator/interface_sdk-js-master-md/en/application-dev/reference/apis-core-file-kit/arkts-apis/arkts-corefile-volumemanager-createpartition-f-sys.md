@@ -16,6 +16,8 @@ Creates a partition on a disk. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MOUNT_FORMAT_MANAGER
 
 **Model restriction:** This API can be used only in the stage model.
@@ -45,9 +47,9 @@ Creates a partition on a disk. This API uses a promise to return the result.
 | --- |
 | 13600010 |
 | 13600008 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 13600022 |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600005 |
 | 13600002 |
 | 13600001 |

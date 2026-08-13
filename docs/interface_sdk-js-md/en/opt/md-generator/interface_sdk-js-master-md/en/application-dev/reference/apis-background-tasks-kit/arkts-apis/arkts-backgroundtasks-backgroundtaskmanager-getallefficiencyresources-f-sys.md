@@ -14,7 +14,9 @@ function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>
 
 Obtains all information about the requested efficiency resources, including the resource type. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>--><!--Device-backgroundTaskManager-function getAllEfficiencyResources(): Promise<EfficiencyResourcesInfo[]>-End-->
 
@@ -32,10 +34,10 @@ Obtains all information about the requested efficiency resources, including the 
 
 | Error Code ID |
 | --- |
-| [18700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700004-system-service-failure) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [18700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
-| [18700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) |
+| [18700004](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700004-system-service-failure) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [18700001](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) |
+| [18700002](../../apis-backgroundtasks-kit/errorcode-backgroundTaskMgr.md#18700002-parcel-operation-failure) |
 
 ## Examples
 

@@ -4,6 +4,8 @@ The **sendableRelationalStore** module provides APIs for obtaining **ValuesBucke
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace sendableRelationalStore--><!--Device-unnamed-declare namespace sendableRelationalStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.RelationalStore.Core
@@ -20,12 +22,12 @@ import { sendableRelationalStore } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md#fromsendableasset) |
-| [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md#fromsendablevalues) |
-| [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md#fromsendablevaluesbucket) |
-| [toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#tosendableasset) |
-| [toSendableValues](arkts-arkdata-sendablerelationalstore-tosendablevalues-f.md#tosendablevalues) |
-| [toSendableValuesBucket](arkts-arkdata-sendablerelationalstore-tosendablevaluesbucket-f.md#tosendablevaluesbucket) |
+| [fromSendableAsset](arkts-arkdata-sendablerelationalstore-fromsendableasset-f.md#fromSendableAsset) |
+| [fromSendableValues](arkts-arkdata-sendablerelationalstore-fromsendablevalues-f.md#fromSendableValues) |
+| [fromSendableValuesBucket](arkts-arkdata-sendablerelationalstore-fromsendablevaluesbucket-f.md#fromSendableValuesBucket) |
+| [toSendableAsset](arkts-arkdata-sendablerelationalstore-tosendableasset-f.md#toSendableAsset) |
+| [toSendableValues](arkts-arkdata-sendablerelationalstore-tosendablevalues-f.md#toSendableValues) |
+| [toSendableValuesBucket](arkts-arkdata-sendablerelationalstore-tosendablevaluesbucket-f.md#toSendableValuesBucket) |
 
 ### Interfaces
 

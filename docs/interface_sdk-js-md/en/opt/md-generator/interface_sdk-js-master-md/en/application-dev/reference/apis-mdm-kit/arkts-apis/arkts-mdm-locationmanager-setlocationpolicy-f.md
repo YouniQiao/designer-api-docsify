@@ -12,17 +12,11 @@ import { locationManager } from '@kit.MDMKit';
 function setLocationPolicy(admin: Want, policy: LocationPolicy): void
 ```
 
-Sets a location service policy. This API can be used in enterprise management and control scenarios. For example,you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations.
-
-> **NOTE：**
-> 
-> - Disabled: Set this option when privacy protection or power saving is required.
-> 
-> - Forced on: Set this option in scenarios such as device security tracking and asset management.
-> 
-> - Default: This option removes policy restrictions and allows the user to control the setting independently.
+Sets a location service policy. This API can be used in enterprise management and control scenarios. For example, you can disable the location service in confidential areas to protect information security, or forcibly enable the location service in logistics and distribution applications to track device locations. > **NOTE：**> > - Disabled: Set this option when privacy protection or power saving is required. > > - Forced on: Set this option in scenarios such as device security tracking and asset management. > > - Default: This option removes policy restrictions and allows the user to control the setting independently.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_LOCATION
 
@@ -43,10 +37,10 @@ Sets a location service policy. This API can be used in enterprise management an
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

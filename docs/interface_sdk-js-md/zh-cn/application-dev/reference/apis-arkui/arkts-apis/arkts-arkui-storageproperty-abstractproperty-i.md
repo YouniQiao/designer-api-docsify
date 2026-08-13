@@ -1,14 +1,14 @@
 # AbstractProperty
 
-Define AbstractProperty&lt;T&gt; interface.
-
- AbstractProperty can be understood as a handler or an alias  to a property inside LocalStorage / AppStorage singleton  allows to read the value with @see get and to change the  value with @see set.
+Define AbstractProperty&lt;T&gt; interface. AbstractProperty can be understood as a handler or an alias to a property inside LocalStorage / AppStorage singleton allows to read the value with @see get and to change the value with @see set.
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
-<!--Device-unnamed-export declare interface AbstractProperty<T>--><!--Device-unnamed-export declare interface AbstractProperty<T>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export declare interface AbstractProperty--><!--Device-unnamed-export declare interface AbstractProperty-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,12 +18,13 @@ Define AbstractProperty&lt;T&gt; interface.
 get(): T
 ```
 
-读取[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性的数据。
+读取AppStorage/ LocalStorage中所引用属性的数据。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,75 +41,80 @@ get(): T
 ## info
 
 ```TypeScript
-default info(): string
+info(): string
 ```
 
-读取[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性的属性名。
+**起始版本：** -1
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AbstractProperty-default info(): string--><!--Device-AbstractProperty-default info(): string-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-AbstractProperty-info(): string--><!--Device-AbstractProperty-info(): string-End-->
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| string | AppStorage/LocalStorage中所引用属性的属性名。 |
+| string |  |
 
 ## onChange
 
 ```TypeScript
-default onChange(onChangeFunc: OnChangeType<T> | undefined): void
+onChange(onChangeFunc: OnChangeType<T> | undefined): void
 ```
 
-注册[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性变化的事件。
+**起始版本：** -1
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AbstractProperty-default onChange(onChangeFunc: OnChangeType<T> | undefined): void--><!--Device-AbstractProperty-default onChange(onChangeFunc: OnChangeType<T> | undefined): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void--><!--Device-AbstractProperty-onChange(onChangeFunc: OnChangeType<T> | undefined): void-End-->
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | 是 | 属性变化回调函数。&lt;/br&gt;如果传入有效值，则添加到监听属性变化的函数列表中。&lt;/br&gt;如果传入undefined，则清除所有 监听回调。 |
+| onChangeFunc | [OnChangeType](arkts-arkui-onchangetype-t.md)&lt;T&gt; \| undefined | 是 |  |
 
 ## set
 
 ```TypeScript
-default set(newValue: T): void
+set(newValue: T): void
 ```
 
-更新[AppStorage](../../../ui/state-management-static/arkts-static-appstorage.md)/  
-[LocalStorage](../../../ui/state-management-static/arkts-static-localstorage.md)中所引用属性的数据，newValue必须是T类型，可以为null或undefined。
+**起始版本：** -1
 
-**起始版本：** 23
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为-1。
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**废弃版本：** -1
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AbstractProperty-default set(newValue: T): void--><!--Device-AbstractProperty-default set(newValue: T): void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+<!--Device-AbstractProperty-set(newValue: T): void--><!--Device-AbstractProperty-set(newValue: T): void-End-->
 
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| newValue | T | 是 | 要更新的数据，可以为null或undefined。 |
+| newValue | T | 是 |  |
+
+## default
+
+```TypeScript
+default
+```
+
+注册AppStorage/ LocalStorage中所引用属性变化的事件。
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AbstractProperty-default--><!--Device-AbstractProperty-default-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

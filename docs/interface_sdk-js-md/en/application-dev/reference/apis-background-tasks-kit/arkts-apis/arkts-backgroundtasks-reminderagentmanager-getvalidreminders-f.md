@@ -14,9 +14,11 @@ function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): voi
 
 Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void--><!--Device-reminderAgentManager-function getValidReminders(callback: AsyncCallback<Array<ReminderRequest>>): void-End-->
 
@@ -26,14 +28,14 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return the result. If the agent-powered reminder is queried, **err** is **undefined**, and **data** contains all valid (not yet expired) reminders set by the current application. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;ReminderRequest&gt;&gt; | Yes | Callback used to return the result. If the agent-powered reminder is queried, **err** is **undefined**, and **data** contains all valid (not yet expired) reminders set by the current application. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
 
 ## Examples
 
@@ -79,9 +81,11 @@ function getValidReminders(): Promise<Array<ReminderRequest>>
 
 Obtains all [valid (not yet expired) reminders](../../../task-management/agent-powered-reminder.md#constraints) set by the current application. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>--><!--Device-reminderAgentManager-function getValidReminders(): Promise<Array<ReminderRequest>>-End-->
 
@@ -97,8 +101,8 @@ Obtains all [valid (not yet expired) reminders](../../../task-management/agent-p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
-| [1700004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
+| [1700004](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700004-nonexistent-bundle-name) | The bundle name does not exist. |
 
 ## Examples
 

@@ -1,9 +1,10 @@
 # IntentEntityDecoratorInfo
 
-Describes the parameters supported by the  
-[@InsightIntentEntity](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententity) decorator.
+Describes the parameters supported by the @InsightIntentEntity decorator.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface IntentEntityDecoratorInfo--><!--Device-unnamed-declare interface IntentEntityDecoratorInfo-End-->
 
@@ -27,6 +28,8 @@ Category of the intent entity. Intents can be classified based on intent entity 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -43,9 +46,11 @@ parameters?: Record<string, Object>
 
 Data format of the intent entity.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt;
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +71,8 @@ Supported query properties.
 **Type:** string[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

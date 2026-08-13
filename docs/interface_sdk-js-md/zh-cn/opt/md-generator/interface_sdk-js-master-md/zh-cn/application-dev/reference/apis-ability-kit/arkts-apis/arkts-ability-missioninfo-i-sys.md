@@ -1,9 +1,10 @@
 # MissionInfo（系统接口）
 
-表示任务的详细信息，可以通过  
-[getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo)获取。
+表示任务的详细信息，可以通过 [getMissionInfo](arkts-ability-missionmanager-getmissioninfo-f-sys.md#getMissionInfo（系统接口）) 获取。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface MissionInfo--><!--Device-unnamed-export interface MissionInfo-End-->
 
@@ -21,7 +22,9 @@ abilityState: number
 
 **类型：** number
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-abilityState: int--><!--Device-MissionInfo-abilityState: int-End-->
 
@@ -39,7 +42,9 @@ continuable: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-continuable: boolean--><!--Device-MissionInfo-continuable: boolean-End-->
 
@@ -57,7 +62,9 @@ iconPath: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-iconPath: string--><!--Device-MissionInfo-iconPath: string-End-->
 
@@ -75,7 +82,9 @@ label: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-label: string--><!--Device-MissionInfo-label: string-End-->
 
@@ -93,7 +102,9 @@ lockedState: boolean
 
 **类型：** boolean
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-lockedState: boolean--><!--Device-MissionInfo-lockedState: boolean-End-->
 
@@ -111,7 +122,9 @@ missionId: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-missionId: int--><!--Device-MissionInfo-missionId: int-End-->
 
@@ -129,7 +142,9 @@ runningState: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-runningState: int--><!--Device-MissionInfo-runningState: int-End-->
 
@@ -147,7 +162,9 @@ timestamp: string
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-timestamp: string--><!--Device-MissionInfo-timestamp: string-End-->
 
@@ -165,7 +182,9 @@ unclearable: boolean
 
 **类型：** boolean
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-unclearable: boolean--><!--Device-MissionInfo-unclearable: boolean-End-->
 
@@ -183,7 +202,9 @@ want: Want
 
 **类型：** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-MissionInfo-want: Want--><!--Device-MissionInfo-want: Want-End-->
 

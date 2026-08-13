@@ -6,13 +6,13 @@
 function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 ```
 
-获取当前应用内层级最高的子窗口，使用callback异步回调。
+获取当前应用内层级最高的子窗口，使用callback异步回调。 若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showWindow)进行显示，则返回应用主 窗口。
 
-若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showWindow)进行显示，则返回应用主窗口。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -25,15 +25,15 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | Current application context. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | Callback used to return the top window obtained. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | Callback used to return the top window obtained. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
-| [1300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
 
 ## 示例
 
@@ -131,13 +131,13 @@ export default class EntryAbility extends UIAbility {
 function getLastWindow(ctx: BaseContext): Promise<Window>
 ```
 
-获取当前应用内层级最高的子窗口，使用Promise异步回调。
+获取当前应用内层级最高的子窗口，使用Promise异步回调。 若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showWindow)进行显示，则返回应用主 窗口。
 
-若无应用子窗口或子窗口未调用[showWindow()](arkts-arkui-window-window-i.md#showWindow)进行显示，则返回应用主窗口。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -161,9 +161,9 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
-| [1300006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Top window or main window is null or destroyed; 2. This window context is abnormal. |
+| [1300006](../errorcode-window.md#1300006-窗口上下文异常) | This window context is abnormal. |
 
 ## 示例
 

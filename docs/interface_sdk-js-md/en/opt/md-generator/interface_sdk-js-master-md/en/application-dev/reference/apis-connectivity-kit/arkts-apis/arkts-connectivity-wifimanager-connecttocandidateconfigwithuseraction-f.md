@@ -12,13 +12,15 @@ import { wifiManager } from '@kit.ConnectivityKit';
 function connectToCandidateConfigWithUserAction(networkId: number): Promise<void>
 ```
 
-Connect to a specified candidate hotspot by networkId, and wait for user respond result.Only the configuration which is added by ourself is allowed to be connected.This method connect to a configuration at a time.The app must be in the foreground.
+Connect to a specified candidate hotspot by networkId, and wait for user respond result. Only the configuration which is added by ourself is allowed to be connected. This method connect to a configuration at a time. The app must be in the foreground.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-wifiManager-function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>--><!--Device-wifiManager-function connectToCandidateConfigWithUserAction(networkId: int): Promise<void>-End-->
 
@@ -40,13 +42,13 @@ Connect to a specified candidate hotspot by networkId, and wait for user respond
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [2501006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501006-connection-request-rejected) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [2501007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501007-parameter-verification-failed) |
-| [2501005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501005-no-user-response-to-the-connection-request) |
-| [2501000](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501000-sta-internal-error) |
-| [2501001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2501001-sta-disabled) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [2501006](../errorcode-wifi.md#2501006-connection-request-rejected) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [2501007](../errorcode-wifi.md#2501007-parameter-verification-failed) |
+| [2501005](../errorcode-wifi.md#2501005-no-user-response-to-the-connection-request) |
+| [2501000](../errorcode-wifi.md#2501000-sta-internal-error) |
+| [2501001](../errorcode-wifi.md#2501001-sta-disabled) |
 
 ## Examples
 

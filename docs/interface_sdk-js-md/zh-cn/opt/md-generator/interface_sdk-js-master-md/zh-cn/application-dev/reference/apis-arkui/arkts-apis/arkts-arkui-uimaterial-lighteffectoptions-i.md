@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-uiMaterial-interface LightEffectOptions--><!--Device-uiMaterial-interface LightEffectOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,15 @@
 color?: ResourceColor
 ```
 
-自定义交互反馈光感的颜色。
-
-默认值：Color.White
+自定义交互反馈光感的颜色。 默认值：Color.White
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **默认值：** Color.White
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

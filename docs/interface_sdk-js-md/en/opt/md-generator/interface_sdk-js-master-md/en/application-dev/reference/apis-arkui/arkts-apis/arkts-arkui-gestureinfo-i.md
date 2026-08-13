@@ -4,6 +4,8 @@ Defines the gesture information type.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface GestureInfo--><!--Device-unnamed-declare interface GestureInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Defines the gesture information type.
 isSystemGesture: boolean
 ```
 
-Whether the gesture is a system/component gesture. **true** if the gesture is a system/component gesture, **false**otherwise.
-
-Default value: **false**
+Whether the gesture is a system/component gesture. **true** if the gesture is a system/component gesture, **false** otherwise. Default value: **false**
 
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,15 +38,13 @@ Default value: **false**
 tag?: string
 ```
 
-Gesture tag.
-
-**NOTE：**
-
-Returns **undefined** if the gesture's **tag** attribute was not set.
+Gesture tag. **NOTE：**Returns **undefined** if the gesture's **tag** attribute was not set.
 
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,15 +60,13 @@ Returns **undefined** if the gesture's **tag** attribute was not set.
 type: GestureControl.GestureType
 ```
 
-Gesture type.
-
-**NOTE：**
-
-Returns **-1** for built-in gestures of unexposed types.
+Gesture type. **NOTE：**Returns **-1** for built-in gestures of unexposed types.
 
 **Type:** [GestureControl.GestureType](arkts-arkui-gesturecontrol-gesturetype-e.md)
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

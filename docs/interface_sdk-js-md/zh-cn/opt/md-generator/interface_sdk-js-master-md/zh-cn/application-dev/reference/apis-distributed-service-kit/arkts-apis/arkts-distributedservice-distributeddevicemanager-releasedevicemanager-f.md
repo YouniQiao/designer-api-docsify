@@ -8,7 +8,9 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 设备管理实例不再使用后，通过该方法释放DeviceManager实例。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void--><!--Device-distributedDeviceManager-function releaseDeviceManager(deviceManager: DeviceManager): void-End-->
 
@@ -24,8 +26,8 @@ function releaseDeviceManager(deviceManager: DeviceManager): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [11600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [11600101](../../apis-distributedservice-kit/errorcode-device-manager.md#11600101-服务调用异常) |
 
 ## 示例
 

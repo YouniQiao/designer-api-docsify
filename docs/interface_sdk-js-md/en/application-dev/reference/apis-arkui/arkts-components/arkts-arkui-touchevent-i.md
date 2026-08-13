@@ -8,7 +8,9 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent). In non-event in
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-declare interface TouchEvent extends BaseEvent--><!--Device-unnamed-declare interface TouchEvent extends BaseEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface TouchEvent--><!--Device-unnamed-declare interface TouchEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,13 @@ Inherits from [BaseEvent](arkts-arkui-baseevent-i.md#BaseEvent). In non-event in
 getHistoricalPoints(): Array<HistoricalPoint>
 ```
 
-Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device.This API can be called only in [TouchEvent](#TouchEvent). This API is only available within  
-[TouchEvent](#TouchEvent) during [onTouch](arkts-arkui-commonmethod-c.md#onTouch) invocations. Typically,  
-[onTouch](arkts-arkui-commonmethod-c.md#onTouch) is invoked once per frame. If multiple [TouchEvent](#TouchEvent)instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
+Obtains all historical touch points for the current frame. The touch event frequency per frame varies by device. This API can be called only in [TouchEvent](#TouchEvent). This API is only available within [TouchEvent](#TouchEvent) during [onTouch](arkts-arkui-commonmethod-c.md#onTouch) invocations. Typically, [onTouch](arkts-arkui-commonmethod-c.md#onTouch) is invoked once per frame. If multiple [TouchEvent](#TouchEvent) instances are received in a single frame, the last point is returned through **onTouch**, and the remaining points are stored as historical points. For multi-touch events within the same frame, multiple** onTouch** calls may occur.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,54 +42,6 @@ Obtains all historical touch points for the current frame. The touch event frequ
 | --- | --- |
 | Array&lt;[HistoricalPoint](arkts-arkui-historicalpoint-i.md)&gt; | Array of historical points. |
 
-## preventDefault
-
-```TypeScript
-preventDefault: () => void
-```
-
-Blocks the default event.
-
-**NOTE：**
-
-This API is only supported by the [Hyperlink](hyperlink) component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-TouchEvent-preventDefault: () => void--><!--Device-TouchEvent-preventDefault: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [100017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-event.md#100017-component-does-not-support-default-event-prevention) | Component does not support prevent function. |
-
-## stopPropagation
-
-```TypeScript
-stopPropagation: () => void
-```
-
-Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TouchEvent-stopPropagation: () => void--><!--Device-TouchEvent-stopPropagation: () => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## changedTouches
 
 ```TypeScript
@@ -102,6 +56,8 @@ Information about touch points that changed and triggered the event. When using 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TouchEvent-changedTouches: TouchObject[]--><!--Device-TouchEvent-changedTouches: TouchObject[]-End-->
@@ -114,16 +70,7 @@ Information about touch points that changed and triggered the event. When using 
 eventHandleId?: number
 ```
 
-Unique identifier for event processing.
-
-Value range: [0, +∞)
-
-**NOTE：**
-
-This field is used when dispatching events using the  
-[postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000.
-
-Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 
@@ -131,11 +78,59 @@ Using the same **eventHandleId** for multiple event dispatches will cause abnorm
 
 **ArkTS mode:** ArkTS-Dyn only, since version 24.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-TouchEvent-eventHandleId?: number--><!--Device-TouchEvent-eventHandleId?: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## preventDefault
+
+```TypeScript
+preventDefault: () => void
+```
+
+Blocks the default event. **NOTE：**This API is only supported by the Hyperlink component. Using it with unsupported components throws an exception. Asynchronous calls and **Modifier** API integration are not yet supported.
+
+**Type:** () =&gt; void
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-TouchEvent-preventDefault: () => void--><!--Device-TouchEvent-preventDefault: () => void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## stopPropagation
+
+```TypeScript
+stopPropagation: () => void
+```
+
+Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) propagation.
+
+**Type:** () =&gt; void
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TouchEvent-stopPropagation: () => void--><!--Device-TouchEvent-stopPropagation: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -152,6 +147,8 @@ Information about all touch points (for multi-touch). Each element represents on
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -172,6 +169,8 @@ Type of the touch event.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

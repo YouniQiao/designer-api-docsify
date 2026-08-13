@@ -1,8 +1,10 @@
 # ScreenCaptureMonitor（系统接口）
 
-A class that provides APIs to query and monitor the system screen recorder status. Before calling any API,you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
+A class that provides APIs to query and monitor the system screen recorder status. Before calling any API, you must use getScreenCaptureMonitor() to obtain a ScreenCaptureMonitor instance.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface ScreenCaptureMonitor--><!--Device-unnamed-interface ScreenCaptureMonitor-End-->
 
@@ -10,7 +12,37 @@ A class that provides APIs to query and monitor the system screen recorder statu
 
 **系统接口：** 此接口为系统接口。
 
-## off('systemScreenRecorder')
+## offSystemScreenRecorder
+
+```TypeScript
+offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void
+```
+
+Unsubscribes from state change events of the system screen recorder. This event is triggered when the state of the system screen recorder changes.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-offSystemScreenRecorder(callback?: Callback<ScreenCaptureEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_systemScreenRecorder
 
 ```TypeScript
 off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
@@ -19,6 +51,8 @@ off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void
 Unsubscribes from state change events of the system screen recorder.
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-off(type: 'systemScreenRecorder', callback?: Callback<ScreenCaptureEvent>): void-End-->
 
@@ -37,7 +71,7 @@ Unsubscribes from state change events of the system screen recorder.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -45,13 +79,47 @@ Unsubscribes from state change events of the system screen recorder.
 screenCaptureMonitor.off('systemScreenRecorder');
 ```
 
-## on('systemScreenRecorder')
+## onSystemScreenRecorder
+
+```TypeScript
+onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void
+```
+
+Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working. This event is triggered when the state of the system screen recorder changes.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-onSystemScreenRecorder(callback: Callback<ScreenCaptureEvent>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ScreenCaptureEvent](arkts-media-multimedia-media-screencaptureevent-e-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_systemScreenRecorder
 
 ```TypeScript
 on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void
 ```
 
-Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported,you can determine whether the system screen recorder is working.
+Subscribes to state change events of the system screen recorder. From the ScreenCaptureEvent event reported, you can determine whether the system screen recorder is working.
+
+**起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void--><!--Device-ScreenCaptureMonitor-on(type: 'systemScreenRecorder', callback: Callback<ScreenCaptureEvent>): void-End-->
 
@@ -70,7 +138,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -92,7 +160,9 @@ Whether the system screen recorder is working.
 
 **类型：** boolean
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean--><!--Device-ScreenCaptureMonitor-readonly isSystemScreenRecorderWorking: boolean-End-->
 

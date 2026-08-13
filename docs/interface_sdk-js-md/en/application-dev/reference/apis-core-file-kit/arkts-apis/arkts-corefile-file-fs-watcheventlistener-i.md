@@ -1,12 +1,12 @@
 # WatchEventListener
 
-(event: WatchEvent): void
-
-Provides APIs for observing events.
+(event: WatchEvent): void Provides APIs for observing events.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface WatchEventListener--><!--Device-unnamed-export interface WatchEventListener-End-->
 
@@ -18,7 +18,7 @@ Provides APIs for observing events.
 import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (event: WatchEvent): void
@@ -30,6 +30,8 @@ Specifies the callback function to be invoked.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-WatchEventListener-(event: WatchEvent): void--><!--Device-WatchEventListener-(event: WatchEvent): void-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -38,5 +40,5 @@ Specifies the callback function to be invoked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
+| event | [WatchEvent](../../apis-na/arkts-apis/arkts-na-file-fs-watchevent-i.md) | Yes | Event for the callback to invoke. |
 

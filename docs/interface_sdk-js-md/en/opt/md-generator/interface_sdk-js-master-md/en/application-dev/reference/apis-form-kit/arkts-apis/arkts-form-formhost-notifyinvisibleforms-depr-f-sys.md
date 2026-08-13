@@ -12,7 +12,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyInvisibleForms)
+**Substitutes:** [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyInvisibleForms-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 
@@ -42,7 +42,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 
 **Deprecated since:** 9
 
-**Substitutes:** [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyInvisibleForms)
+**Substitutes:** [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyInvisibleForms-(System-API))
 
 **Required permissions:** ohos.permission.REQUIRE_FORM
 

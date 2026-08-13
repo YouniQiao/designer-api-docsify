@@ -10,6 +10,8 @@ function move(mechId: number, params: MoveParams): Promise<Result>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-mechanicManager-function move(mechId: int, params: MoveParams): Promise<Result>--><!--Device-mechanicManager-function move(mechId: int, params: MoveParams): Promise<Result>-End-->
 
 **系统能力：** SystemCapability.Mechanic.Core
@@ -33,7 +35,7 @@ function move(mechId: number, params: MoveParams): Promise<Result>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [33300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) |
-| [33300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300002-设备未连接) |
-| [33300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300003-功能不支持) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) |
+| [33300002](../errorcode-mechanic.md#33300002-设备未连接) |
+| [33300003](../errorcode-mechanic.md#33300003-功能不支持) |

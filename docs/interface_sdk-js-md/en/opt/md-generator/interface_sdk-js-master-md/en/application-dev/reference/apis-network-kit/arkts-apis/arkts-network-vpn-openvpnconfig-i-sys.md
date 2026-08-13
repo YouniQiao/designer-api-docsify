@@ -2,11 +2,13 @@
 
 Define configuration of the open VPN network.
 
-**Inheritance/Implementation:** OpenVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig)
+**Inheritance/Implementation:** OpenVpnConfig extends [SysVpnConfig](arkts-network-vpn-sysvpnconfig-i-sys.md#SysVpnConfig-(System-API))
 
 **Since:** 12
 
-<!--Device-vpn-export interface OpenVpnConfig extends SysVpnConfig--><!--Device-vpn-export interface OpenVpnConfig extends SysVpnConfig-End-->
+**Deprecated since:** -1
+
+<!--Device-vpn-export interface OpenVpnConfig--><!--Device-vpn-export interface OpenVpnConfig-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
 
@@ -30,6 +32,8 @@ The ask pass for the openvpn VPN network.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-OpenVpnConfig-askpass?: string--><!--Device-OpenVpnConfig-askpass?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -47,6 +51,8 @@ The auth type for the openvpn VPN network.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-OpenVpnConfig-ovpnAuthType?: number--><!--Device-OpenVpnConfig-ovpnAuthType?: number-End-->
 
@@ -66,6 +72,8 @@ The ca cert file path for the openvpn VPN network.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnCaCertFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -83,6 +91,8 @@ The config for the openvpn VPN network.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-OpenVpnConfig-ovpnConfig?: string--><!--Device-OpenVpnConfig-ovpnConfig?: string-End-->
 
@@ -102,6 +112,8 @@ The config file path for the openvpn VPN network.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-OpenVpnConfig-ovpnConfigFilePath?: string--><!--Device-OpenVpnConfig-ovpnConfigFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -119,6 +131,8 @@ The port for the openvpn VPN network.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-OpenVpnConfig-ovpnPort?: string--><!--Device-OpenVpnConfig-ovpnPort?: string-End-->
 
@@ -138,6 +152,8 @@ The private key file path for the openvpn VPN network.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string--><!--Device-OpenVpnConfig-ovpnPrivateKeyFilePath?: string-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -156,6 +172,8 @@ The protocol for the openvpn VPN network.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-OpenVpnConfig-ovpnProtocol?: number--><!--Device-OpenVpnConfig-ovpnProtocol?: number-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Vpn
@@ -173,6 +191,8 @@ The user cert file path for the openvpn VPN network.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string--><!--Device-OpenVpnConfig-ovpnUserCertFilePath?: string-End-->
 

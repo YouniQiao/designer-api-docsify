@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export interface SortOptions--><!--Device-i18n-export interface SortOptions-End-->
 
@@ -18,13 +20,15 @@
 isSuggestedFirst?: boolean
 ```
 
-true表示将推荐语言或国家地区在排序结果中置顶，false表示不将推荐语言或国家地区在排序结果中置顶。默认值：true。
+true表示将推荐语言或国家地区在排序结果中置顶，false表示不将推荐语言或国家地区在排序结果中置顶。 默认值：true。
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SortOptions-isSuggestedFirst?: boolean--><!--Device-SortOptions-isSuggestedFirst?: boolean-End-->
 
@@ -38,13 +42,15 @@ true表示将推荐语言或国家地区在排序结果中置顶，false表示�
 isUseLocalName?: boolean
 ```
 
-true表示使用本地名称进行排序，false表示不使用本地名称进行排序。若调用方法为getLanguageInfoArray，isUseLocalName属性默认值为true。若调用方法为getRegionInfoArray，isUseLocalName属性默认值为false。
+true表示使用本地名称进行排序，false表示不使用本地名称进行排序。 若调用方法为getLanguageInfoArray，isUseLocalName属性默认值为true。 若调用方法为getRegionInfoArray，isUseLocalName属性默认值为false。
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SortOptions-isUseLocalName?: boolean--><!--Device-SortOptions-isUseLocalName?: boolean-End-->
 
@@ -58,13 +64,15 @@ true表示使用本地名称进行排序，false表示不使用本地名称进�
 locale?: string
 ```
 
-表示区域ID的字符串，由语言、脚本、国家或地区组成，如"zh-Hans-CN"。默认值：系统当前区域ID。
+表示区域ID的字符串，由语言、脚本、国家或地区组成，如"zh-Hans-CN"。 默认值：系统当前区域ID。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-SortOptions-locale?: string--><!--Device-SortOptions-locale?: string-End-->
 

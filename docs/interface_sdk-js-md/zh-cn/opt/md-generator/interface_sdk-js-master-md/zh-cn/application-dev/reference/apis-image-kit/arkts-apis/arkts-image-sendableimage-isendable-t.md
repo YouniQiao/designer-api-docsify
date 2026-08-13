@@ -8,6 +8,8 @@ ISendable是所有Sendable类型（除null和undefined）的父类型。自身�
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-sendableImage-type ISendable = lang.ISendable--><!--Device-sendableImage-type ISendable = lang.ISendable-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

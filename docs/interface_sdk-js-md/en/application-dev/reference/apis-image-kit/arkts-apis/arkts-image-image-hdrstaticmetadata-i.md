@@ -1,11 +1,12 @@
 # HdrStaticMetadata
 
-Describes the static metadata keys, that is, the values available for **HDR_STATIC_METADATA** in   
-[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey).
+Describes the static metadata keys, that is, the values available for **HDR_STATIC_METADATA** in [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md#HdrMetadataKey).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-interface HdrStaticMetadata--><!--Device-image-interface HdrStaticMetadata-End-->
 
@@ -23,13 +24,15 @@ import { image } from '@kit.ImageKit';
 displayPrimariesX: Array<double>
 ```
 
-The X-coordinate of the primary colors. Specifies the normalized X-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b).Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The X-coordinate of the primary colors. Specifies the normalized X-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b). Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;double&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-displayPrimariesX: Array<double>--><!--Device-HdrStaticMetadata-displayPrimariesX: Array<double>-End-->
 
@@ -41,13 +44,15 @@ The X-coordinate of the primary colors. Specifies the normalized X-coordinates o
 displayPrimariesY: Array<double>
 ```
 
-The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b).Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates of the display device's three primary colors. The values are stored in an array of length 3, in the order of red, green, and blue (r, g, b). Each value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-**Type:** ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;double&gt;
+**Type:** Array&lt;double&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-displayPrimariesY: Array<double>--><!--Device-HdrStaticMetadata-displayPrimariesY: Array<double>-End-->
 
@@ -59,15 +64,15 @@ The Y-coordinate of the primary colors. Specifies the normalized Y-coordinates o
 maxContentLightLevel: double
 ```
 
-Maximum brightness of displayed content.
+Maximum brightness of displayed content. The value is measured in units of 1, with a maximum allowed value of 65,535.
 
-The value is measured in units of 1, with a maximum allowed value of 65,535.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-maxContentLightLevel: double--><!--Device-HdrStaticMetadata-maxContentLightLevel: double-End-->
 
@@ -79,15 +84,15 @@ The value is measured in units of 1, with a maximum allowed value of 65,535.
 maxFrameAverageLightLevel: double
 ```
 
-Maximum average brightness of displayed content.
+Maximum average brightness of displayed content. The value is measured in units of 1, with a maximum allowed value of 65,535.
 
-The value is measured in units of 1, with a maximum allowed value of 65,535.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-maxFrameAverageLightLevel: double--><!--Device-HdrStaticMetadata-maxFrameAverageLightLevel: double-End-->
 
@@ -99,15 +104,15 @@ The value is measured in units of 1, with a maximum allowed value of 65,535.
 maxLuminance: double
 ```
 
-Maximum luminance of the image's primary display.The value is measured in units of 1, with a maximum allowed value of 65,535.
+Maximum luminance of the image's primary display. The value is measured in units of 1, with a maximum allowed value of 65,535. Unit:nit.
 
-Unit:nit.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-maxLuminance: double--><!--Device-HdrStaticMetadata-maxLuminance: double-End-->
 
@@ -119,15 +124,15 @@ Unit:nit.
 minLuminance: double
 ```
 
-Minimum luminance of the image's primary display.
+Minimum luminance of the image's primary display. The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
 
-The value is measured in units of 0.0001, with a maximum allowed value of 6.55535.
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-minLuminance: double--><!--Device-HdrStaticMetadata-minLuminance: double-End-->
 
@@ -139,15 +144,15 @@ The value is measured in units of 0.0001, with a maximum allowed value of 6.5553
 whitePointX: double
 ```
 
-The X-coordinate of the white point value. Specifies the normalized X-coordinate of the white point.
+The X-coordinate of the white point value. Specifies the normalized X-coordinate of the white point. The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-whitePointX: double--><!--Device-HdrStaticMetadata-whitePointX: double-End-->
 
@@ -159,15 +164,15 @@ The value is represented in units of 0.00002 and must fall within the range [0.0
 whitePointY: double
 ```
 
-The Y-coordinate of the white point value. Specifies the normalized Y-coordinate of the white point.
+The Y-coordinate of the white point value. Specifies the normalized Y-coordinate of the white point. The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
 
-The value is represented in units of 0.00002 and must fall within the range [0.0, 1.0].
+**Type:** double
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-HdrStaticMetadata-whitePointY: double--><!--Device-HdrStaticMetadata-whitePointY: double-End-->
 

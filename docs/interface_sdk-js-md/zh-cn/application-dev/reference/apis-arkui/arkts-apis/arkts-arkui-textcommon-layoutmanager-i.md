@@ -1,14 +1,12 @@
 # LayoutManager
 
-布局管理器对象。
-
-> **说明：**
-> 
-> 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
+布局管理器对象。 > **说明：** > > 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare interface LayoutManager--><!--Device-unnamed-export declare interface LayoutManager-End-->
 
@@ -25,6 +23,8 @@ getCharacterPositionAtCoordinate(x: double, y: double): PositionWithAffinity | u
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -57,6 +57,8 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding):
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined--><!--Device-LayoutManager-getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding): PositionWithAffinity | undefined-End-->
@@ -83,11 +85,13 @@ getCharacterPositionAtCoordinate(x: double, y: double, encoding?: TextEncoding):
 getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefined
 ```
 
-根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。例如文本为"世界Hello"，其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 11]。如果指定的索引范围是[0, 11]，但字形一共只有7个，所以实际的字形索引范围是[0, 7]。
+根据给定的文本字形范围来获取范围内的字符范围，以及实际的字形范围。例如文本为"世界Hello"，其字形索引范围为[0, 7]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 11]。如果指定的索引范围是[0, 11]，但 字形一共只有7个，所以实际的字形索引范围是[0, 7]。
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,6 +122,8 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -150,6 +156,8 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undef
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-LayoutManager-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undefined--><!--Device-LayoutManager-getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undefined-End-->
@@ -175,12 +183,13 @@ getGlyphPositionAtCoordinate(x: double, y: double): PositionWithAffinity | undef
 getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefined
 ```
 
-根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。例如文本为"世界Hello"，其中文本"世"的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是  
-[0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。
+根据给定的文本字符范围来获取范围内的字形范围，以及实际的字符范围。例如文本为"世界Hello"，其中文本"世"的字形索引范围为[0, 1]，一个汉字占三个字符，所以其对应的字符索引范围为[0, 3]。如果指定的字符索引范围是 [0, 1]，但无法解析出三分之一个汉字，所以实际的字符索引范围是[0, 3]。
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -211,6 +220,8 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,6 +254,8 @@ getLineCount(): int | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-LayoutManager-getLineCount(): int | undefined--><!--Device-LayoutManager-getLineCount(): int | undefined-End-->
@@ -261,13 +274,13 @@ getLineCount(): int | undefined
 getLineMetrics(lineNumber: int): LineMetrics | undefined
 ```
 
-ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined
-
-获取指定行的行信息、文本样式信息、以及字体属性信息。
+ArkTS-Sta: getLineMetrics(lineNumber: int): LineMetrics | undefined 获取指定行的行信息、文本样式信息、以及字体属性信息。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -298,6 +311,8 @@ getRectsForRange(range: TextRange, widthStyle: RectWidthStyle, heightStyle: Rect
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 屏幕亮度信息。此类型中的信息均来自底层屏幕信息数据。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-display-interface BrightnessInfo--><!--Device-display-interface BrightnessInfo-End-->
 
@@ -18,9 +20,11 @@ readonly currentHeadroom: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BrightnessInfo-readonly currentHeadroom: double--><!--Device-BrightnessInfo-readonly currentHeadroom: double-End-->
 
@@ -36,9 +40,11 @@ readonly maxHeadroom: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BrightnessInfo-readonly maxHeadroom: double--><!--Device-BrightnessInfo-readonly maxHeadroom: double-End-->
 
@@ -54,9 +60,11 @@ readonly sdrNits: number
 
 **类型：** number
 
-**起始版本：** 22
+**起始版本：** 23
 
-**原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-BrightnessInfo-readonly sdrNits: double--><!--Device-BrightnessInfo-readonly sdrNits: double-End-->
 

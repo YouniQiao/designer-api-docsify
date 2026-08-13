@@ -1,9 +1,10 @@
 # SymKeyGenerator
 
-对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过  
-[createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator)方法创建一个SymKeyGenerator实例。
+对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过 [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator)方法创建一个SymKeyGenerator实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface SymKeyGenerator--><!--Device-cryptoFramework-interface SymKeyGenerator-End-->
 
@@ -17,16 +18,11 @@
 convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 ```
 
-将指定数据转换为对称密钥。使用callback异步回调。
+将指定数据转换为对称密钥。使用callback异步回调。 > **说明：** > > 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制 > 密钥数据（如传入SHA256对应256位的密钥数据）。 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在[1,4096]范围内（单位为bytes）的任意二进制密钥数据。
 
-> **说明：**
-> 
-> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则需要传入与哈希长度一致的二进制
-> 密钥数据（如传入SHA256对应256位的密钥数据）。
+**起始版本：** 23
 
-如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在[1,4096]范围内（单位为bytes）的任意二进制密钥数据。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -47,9 +43,9 @@ convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -82,7 +78,9 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 将指定数据转换为对称密钥。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -108,9 +106,9 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -145,19 +143,13 @@ function testConvertKey() {
 convertKeySync(key: DataBlob): SymKey
 ```
 
-将指定数据转换为对称密钥。
+将指定数据转换为对称密钥。 > **说明：** > > 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据 >（如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围 > 内的任意二进制密钥数据。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，convertKey。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-> **说明：**
-> 
-> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则需要传入与哈希长度一致的二进制密钥数据
-> （如传入SHA256对应的256位密钥数据）。如果在创建对称密钥生成器时未指定具体哈希算法，如仅指定"HMAC"，则支持传入长度在1到4096字节范围
-> 内的任意二进制密钥数据。
+**起始版本：** 23
 
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[convertKey](convertKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
+**废弃版本：** -1
 
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey--><!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey-End-->
 
@@ -179,9 +171,9 @@ convertKeySync(key: DataBlob): SymKey
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) |
 
 ## 示例
 
@@ -208,18 +200,11 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-获取对称密钥生成器随机生成的密钥。使用callback异步回调。
+获取对称密钥生成器随机生成的密钥。使用callback异步回调。 &lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。 > **说明：** > > 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥 > 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过 > [convertKey](#convertKey) > 方式生成对称密钥数据。
 
-&lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 对于HMAC算法的对称密钥，如果在创建对称密钥生成器时指定了具体哈希算法（如"HMAC|SHA256"），则会随机生成与哈希长度一致的二进制密钥
-> 数据（如256位的密钥数据）。如果未指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过
-> [convertKey](#convertKey)
-> 方式生成对称密钥数据。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -239,8 +224,8 @@ generateSymKey(callback: AsyncCallback<SymKey>): void
 
 | 错误码ID |
 | --- |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-无效的函数调用) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -259,11 +244,11 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
 generateSymKey(): Promise<SymKey>
 ```
 
-获取该对称密钥生成器随机生成的密钥。使用Promise异步回调。
+获取该对称密钥生成器随机生成的密钥。使用Promise异步回调。 &lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
 
-&lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -283,8 +268,8 @@ generateSymKey(): Promise<SymKey>
 
 | 错误码ID |
 | --- |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-无效的函数调用) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -307,23 +292,13 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
 generateSymKeySync(): SymKey
 ```
 
-同步获取对称密钥生成器随机生成的密钥。
+同步获取对称密钥生成器随机生成的密钥。 &lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。 > **说明：** > > 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的 > 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。 如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过 [convertKeySync](#convertKeySync)方式生成对称密钥数据。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，[generateSymKey](#generateSymKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
-&lt;br&gt;目前使用OpenSSL的RAND_priv_bytes()作为底层能力生成随机密钥。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 对于HMAC算法的对称密钥，如果已经在创建对称密钥生成器时指定了具体哈希算法（如指定"HMAC|SHA256"），则会随机生成与哈希长度一致的
-> 二进制密钥数据（如指定"HMAC|SHA256"会随机生成256位的密钥数据）。
+**废弃版本：** -1
 
-如果在创建对称密钥生成器时没有指定具体哈希算法，如仅指定"HMAC"，则不支持随机生成对称密钥数据，可通过  
-[convertKeySync](#convertKeySync)方式生成对称密钥数据。
-
-&lt;br&gt;&lt;br&gt;**说明：**&lt;br&gt;建议优先使用异步API，[generateSymKey](#generateSymKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
-
-**起始版本：** 12
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SymKeyGenerator-generateSymKeySync(): SymKey--><!--Device-SymKeyGenerator-generateSymKeySync(): SymKey-End-->
 
@@ -339,8 +314,8 @@ generateSymKeySync(): SymKey
 
 | 错误码ID |
 | --- |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-无效的函数调用) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) |
+| [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) |
 
 ## 示例
 
@@ -367,7 +342,9 @@ readonly algName: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

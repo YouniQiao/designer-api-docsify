@@ -6,18 +6,13 @@
 function usbCancelTransfer(transfer: UsbDataTransferParams): void
 ```
 
-取消异步传输请求。
+取消异步传输请求。 > **说明：** > > 该接口的主要作用是主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。&lt;br&gt; > > 在调用该接口前需要通过 > [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface) > claim通信接口。
 
-> **说明：**
-> 
-> 该接口的主要作用是主动取消尚未完成的USB数据传输请求（如usbSubmitTransfer提交的传输）。&lt;br&gt;
-> > 在调用该接口前需要通过
-> [usbManager.claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md#claimInterface)
-> claim通信接口。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void--><!--Device-usbManager-function usbCancelTransfer(transfer: UsbDataTransferParams): void-End-->
 
@@ -33,11 +28,11 @@ function usbCancelTransfer(transfer: UsbDataTransferParams): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14400011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400011-未找到正在进行的传输) | The transfer is not in progress, or is already complete or cancelled. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [14400010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
-| [14400008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
-| [14400001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
+| [14400011](../../apis-basic-services-kit/errorcode-usb.md#14400011-未找到正在进行的传输) | The transfer is not in progress, or is already complete or cancelled. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-无法识别的错误) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
+| [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-没有设备连接已断开) | No such device (it may have been disconnected). |
+| [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb设备访问权限被拒绝) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 
 ## 示例
 

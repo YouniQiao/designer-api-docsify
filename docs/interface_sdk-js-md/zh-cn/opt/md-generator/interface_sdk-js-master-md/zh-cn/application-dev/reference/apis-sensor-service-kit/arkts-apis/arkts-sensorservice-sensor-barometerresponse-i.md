@@ -4,9 +4,11 @@
 
 **继承/实现关系：** BarometerResponse extends [Response](arkts-sensorservice-sensor-response-i.md#Response)
 
-**起始版本：** 8
+**起始版本：** 23
 
-<!--Device-sensor-interface BarometerResponse extends Response--><!--Device-sensor-interface BarometerResponse extends Response-End-->
+**废弃版本：** -1
+
+<!--Device-sensor-interface BarometerResponse--><!--Device-sensor-interface BarometerResponse-End-->
 
 **系统能力：** SystemCapability.Sensors.Sensor
 
@@ -20,7 +22,9 @@ pressure: number
 
 **类型：** number
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-BarometerResponse-pressure: double--><!--Device-BarometerResponse-pressure: double-End-->
 

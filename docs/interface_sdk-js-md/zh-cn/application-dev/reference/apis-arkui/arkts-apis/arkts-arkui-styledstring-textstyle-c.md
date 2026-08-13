@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare class TextStyle--><!--Device-unnamed-export declare class TextStyle-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ constructor(value?: TextStyleInterface)
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,6 +52,8 @@ readonly fontColor?: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextStyle-readonly fontColor?: ResourceColor--><!--Device-TextStyle-readonly fontColor?: ResourceColor-End-->
@@ -60,15 +66,15 @@ readonly fontColor?: ResourceColor
 readonly fontConfigs?: FontConfigs
 ```
 
-获取属性字符串的字体配置。
-
-默认返回undefined，表示未设置fontConfigs。
+获取属性字符串的字体配置。 默认返回undefined，表示未设置fontConfigs。
 
 **类型：** [FontConfigs](arkts-arkui-textcommon-fontconfigs-i.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,15 +88,15 @@ readonly fontConfigs?: FontConfigs
 readonly fontFamily?: string
 ```
 
-获取属性字符串的文本字体。
-
-默认返回undefined。
+获取属性字符串的文本字体。 默认返回undefined。
 
 **类型：** string
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -104,15 +110,15 @@ readonly fontFamily?: string
 readonly fontSize?: double
 ```
 
-获取属性字符串的文本字体大小。
-
-单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
+获取属性字符串的文本字体大小。 单位：[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)
 
 **类型：** double
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -134,6 +140,8 @@ readonly fontStyle?: FontStyle
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextStyle-readonly fontStyle?: FontStyle--><!--Device-TextStyle-readonly fontStyle?: FontStyle-End-->
@@ -146,15 +154,15 @@ readonly fontStyle?: FontStyle
 readonly fontVariations?: Array<FontVariation>
 ```
 
-获取可变字体的属性数组。
-
-默认值：undefined，表示未设置可变字体的属性。
+获取可变字体的属性数组。 默认值：undefined，表示未设置可变字体的属性。
 
 **类型：** Array&lt;[FontVariation](arkts-arkui-fontvariation-t.md)&gt;
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -176,6 +184,8 @@ readonly fontWeight?: int
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TextStyle-readonly fontWeight?: int--><!--Device-TextStyle-readonly fontWeight?: int-End-->
@@ -188,15 +198,15 @@ readonly fontWeight?: int
 readonly strokeColor?: ResourceColor
 ```
 
-获取属性字符串的文本描边颜色。
-
-默认返回字体颜色。
+获取属性字符串的文本描边颜色。 默认返回字体颜色。
 
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -210,15 +220,15 @@ readonly strokeColor?: ResourceColor
 readonly strokeJoinStyle?: StrokeJoinStyle
 ```
 
-获取属性字符串的文本描边拐角样式。
-
-默认值：StrokeJoinStyle.MITER_JOIN。
+获取属性字符串的文本描边拐角样式。 默认值：StrokeJoinStyle.MITER_JOIN。
 
 **类型：** [StrokeJoinStyle](arkts-arkui-textcommon-strokejoinstyle-e.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -232,15 +242,15 @@ readonly strokeJoinStyle?: StrokeJoinStyle
 readonly strokeWidth?: double
 ```
 
-获取属性字符串的文本描边宽度。
-
-默认返回0，单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
+获取属性字符串的文本描边宽度。 默认返回0，单位为[vp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位)。
 
 **类型：** double
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -254,15 +264,15 @@ readonly strokeWidth?: double
 readonly superscript?: SuperscriptStyle
 ```
 
-获取属性字符串的文本上下角标。
-
-默认值：SuperscriptStyle.NORMAL。
+获取属性字符串的文本上下角标。 默认值：SuperscriptStyle.NORMAL。
 
 **类型：** [SuperscriptStyle](arkts-arkui-textcommon-superscriptstyle-e.md)
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

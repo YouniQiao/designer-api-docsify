@@ -2,9 +2,11 @@
 
 Provides the file information of a table item.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-agent-interface FileSpec--><!--Device-agent-interface FileSpec-End-->
 
@@ -22,14 +24,15 @@ import { request } from '@kit.BasicServicesKit';
 contentType?: string
 ```
 
-Content type of the file. The default value is the file name extension. This option is filled in the   
-**Content-Type** field specified in the HTTP form.
+Content type of the file. The default value is the file name extension. This option is filled in the **Content-Type** field specified in the HTTP form.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FileSpec-contentType?: string--><!--Device-FileSpec-contentType?: string-End-->
 
@@ -38,20 +41,20 @@ Content type of the file. The default value is the file name extension. This opt
 ## extras
 
 ```TypeScript
-extras?: object
+extras?: Record<string, string>
 ```
 
-Additional information. This parameter is not included in HTTP requests. The default value is empty.
+The extras for the file information.
 
-**Type:** object
+**Type:** Record&lt;string, string&gt;
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
 
-<!--Device-FileSpec-extras?: object--><!--Device-FileSpec-extras?: object-End-->
+<!--Device-FileSpec-extras?: Record<string, string>--><!--Device-FileSpec-extras?: Record<string, string>-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
@@ -65,9 +68,11 @@ File name. The default value is obtained from the file path.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -81,9 +86,7 @@ File name. The default value is obtained from the file path.
 mimeType?: string
 ```
 
-MIME type of the file, which is obtained from the file name. The default value is the file name extension.
-
-This API is deprecated since API version 18. You are advised to use **contentType** instead.
+MIME type of the file, which is obtained from the file name. The default value is the file name extension. This API is deprecated since API version 18. You are advised to use **contentType** instead.
 
 **Type:** string
 
@@ -107,36 +110,15 @@ This API is deprecated since API version 18. You are advised to use **contentTyp
 path: string
 ```
 
-File path.
-
-- Relative path, which is in the cache directory of the caller.
-
-Example: **./xxx/yyy/zzz.html** or **xxx/yyy/zzz.html**
-
-- Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache   
-directory of the caller (that is, the input **context**), and **internal://cache** corresponds to   
-**context.cacheDir**.
-
-Example: **internal://cache/path/to/file.txt**
-
-- Application sandbox directory. Only the **base** directory and its subdirectories are supported.
-
-Example: **./data/storage/el1/base/path/to/file.txt**
-
-- File protocol path, which must match the application bundle name. Only the **base** directory and its   
-subdirectories are supported.
-
-Example: **file://com.example.test/data/storage/el2/base/file.txt**
-
-- Public files of users. Only upload tasks are supported.
-
-Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supported.
+File path. - Relative path, which is in the cache directory of the caller. Example: **./xxx/yyy/zzz.html** or **xxx/yyy/zzz.html** - Internal protocol path, which can be **internal://** or its subdirectory. **internal** indicates the cache directory of the caller (that is, the input **context**), and **internal://cache** corresponds to **context.cacheDir**. Example: **internal://cache/path/to/file.txt** - Application sandbox directory. Only the **base** directory and its subdirectories are supported. Example: **./data/storage/el1/base/path/to/file.txt** - File protocol path, which must match the application bundle name. Only the **base** directory and its subdirectories are supported. Example: **file://com.example.test/data/storage/el2/base/file.txt** - Public files of users. Only upload tasks are supported. Example: **file://media/Photo/path/to/file.img**. Only foreground tasks are supported.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

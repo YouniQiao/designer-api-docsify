@@ -12,13 +12,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 declare function accessSync(path: string, mode?: AccessModeType): boolean
 ```
 
-Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory exists or has the operation permission. This API returns the result synchronously. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -63,13 +63,13 @@ If the read, write, or read and write permission verification fails, the error c
 declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean
 ```
 
-Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously.
-
-If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
+Checks whether a file or directory is stored locally or has the operation permission. This API returns the result synchronously. If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean--><!--Device-unnamed-declare function accessSync(path: string, mode: AccessModeType, flag: AccessFlagType): boolean-End-->
 
@@ -94,7 +94,7 @@ If the read, write, or read and write permission verification fails, the error c
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid argument |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13900005 | I/O error |
 | 13900023 | Text file busy |
 | 13900033 | Too many symbolic links encountered |

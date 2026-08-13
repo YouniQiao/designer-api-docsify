@@ -1,10 +1,12 @@
 # ArcButtonPosition
 
-Describes the Position of arc button.
+Enumerates the types of arc buttons that can be set for **ArcButton**.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ArcButtonPosition--><!--Device-unnamed-export declare enum ArcButtonPosition-End-->
 
@@ -16,11 +18,15 @@ Describes the Position of arc button.
 TOP_EDGE = 0
 ```
 
-The top edge button is located above the circular screen.
+Upper arc button located at the top of the circular screen.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonPosition-TOP_EDGE = 0--><!--Device-ArcButtonPosition-TOP_EDGE = 0-End-->
 
@@ -32,11 +38,15 @@ The top edge button is located above the circular screen.
 BOTTOM_EDGE = 1
 ```
 
-The bottom edge button is located below the circular screen.
+Lower arc button located at the bottom of the circular screen.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonPosition-BOTTOM_EDGE = 1--><!--Device-ArcButtonPosition-BOTTOM_EDGE = 1-End-->
 

@@ -6,16 +6,11 @@
 export function createBundleContext(context: Context, bundleName: string): Promise<Context>
 ```
 
-根据入参Context创建相应应用的Context。使用Promise异步回调。
+根据入参Context创建相应应用的Context。使用Promise异步回调。 > **说明：** > > 从API version 18开始，Context支持获取当前应用的进程名 > [processName](arkts-ability-context-c.md#Context)。 > createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context、bundleName和moduleName获得相应 > 的属性值。
 
-> **说明：**
-> 
-> 从API version 18开始，Context支持获取当前应用的进程名
-> [processName](../../../reference/apis-ability-kit/js-apis-inner-application-context.md#context)。
-> createBundleContext创建的Context中的processName属性与入参Context中的processName属性一致，其他属性根据入参Context、bundleName和moduleName获得相应
-> 的属性值。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -44,9 +39,9 @@ export function createBundleContext(context: Context, bundleName: string): Promi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

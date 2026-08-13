@@ -2,7 +2,9 @@
 
 Describes enroll engine config.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface EnrollEngineConfig--><!--Device-intelligentVoice-interface EnrollEngineConfig-End-->
 
@@ -26,7 +28,9 @@ Language that enroll engine supports.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnrollEngineConfig-language: string--><!--Device-EnrollEngineConfig-language: string-End-->
 
@@ -44,7 +48,9 @@ Region that enroll engine supports.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnrollEngineConfig-region: string--><!--Device-EnrollEngineConfig-region: string-End-->
 

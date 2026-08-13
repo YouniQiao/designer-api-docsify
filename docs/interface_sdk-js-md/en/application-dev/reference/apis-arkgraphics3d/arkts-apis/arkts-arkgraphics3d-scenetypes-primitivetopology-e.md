@@ -2,9 +2,11 @@
 
 How vertices in a sequence form triangles.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum PrimitiveTopology--><!--Device-unnamed-export enum PrimitiveTopology-End-->
 
@@ -18,9 +20,11 @@ TRIANGLE_LIST = 0
 
 The vertices form a set of independent triangle. Vertices (0, 1, 2), (3, 4, 5), ... define separate triangles.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrimitiveTopology-TRIANGLE_LIST = 0--><!--Device-PrimitiveTopology-TRIANGLE_LIST = 0-End-->
 
@@ -34,9 +38,11 @@ TRIANGLE_STRIP = 1
 
 The vertices form a triangle strip. Starting from the 3rd, each vertex defines a triangle with the previous two.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrimitiveTopology-TRIANGLE_STRIP = 1--><!--Device-PrimitiveTopology-TRIANGLE_STRIP = 1-End-->
 

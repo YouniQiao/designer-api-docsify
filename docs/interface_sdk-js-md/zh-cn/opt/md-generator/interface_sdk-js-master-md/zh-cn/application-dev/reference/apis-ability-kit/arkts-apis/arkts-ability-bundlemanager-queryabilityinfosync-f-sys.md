@@ -6,11 +6,11 @@
 function queryAbilityInfoSync(want: Want, abilityFlags: number, userId?: number): Array<AbilityInfo>
 ```
 
-以同步方法根据给定的want、abilityFlags和userId获取一个或多个AbilityInfo。
+以同步方法根据给定的want、abilityFlags和userId获取一个或多个AbilityInfo。 获取调用方自身的信息时不需要权限。
 
-获取调用方自身的信息时不需要权限。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED or ohos.permission.GET_BUNDLE_INFO
 
@@ -38,14 +38,14 @@ function queryAbilityInfoSync(want: Want, abilityFlags: number, userId?: number)
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17700029](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700029-指定的ability被禁用) |
-| [17700026](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700026-指定应用被禁用) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [17700004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700004-指定的用户不存在) |
-| [17700003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700003-指定的abilityname不存在) |
-| [17700001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-bundle.md#17700001-指定的bundlename不存在) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) |
+| [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) |
+| [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) |
 
 ## 示例
 

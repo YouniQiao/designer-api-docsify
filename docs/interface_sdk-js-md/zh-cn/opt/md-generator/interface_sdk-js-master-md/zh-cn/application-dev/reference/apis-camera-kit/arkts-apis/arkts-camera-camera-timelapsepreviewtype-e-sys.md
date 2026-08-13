@@ -2,7 +2,9 @@
 
 Enumerates the time-lapse preview types, which affect the shooting algorithm.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum TimeLapsePreviewType--><!--Device-camera-enum TimeLapsePreviewType-End-->
 
@@ -18,7 +20,9 @@ DARK = 1
 
 Dark environment, a scenario with poor illumination, for example, at night or in a dark area.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TimeLapsePreviewType-DARK = 1--><!--Device-TimeLapsePreviewType-DARK = 1-End-->
 
@@ -34,7 +38,9 @@ LIGHT = 2
 
 Bright environment, a scenario with good illumination, for example, in the daytime or under light.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TimeLapsePreviewType-LIGHT = 2--><!--Device-TimeLapsePreviewType-LIGHT = 2-End-->
 

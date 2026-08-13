@@ -1,0 +1,385 @@
+# RegExpConstructor
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface RegExpConstructor--><!--Device-unnamed-interface RegExpConstructor-End-->
+
+## constructor
+
+```TypeScript
+new(pattern: RegExp | string): RegExp
+```
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-RegExpConstructor-new(pattern: RegExp | string): RegExp--><!--Device-RegExpConstructor-new(pattern: RegExp | string): RegExp-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
+
+## constructor
+
+```TypeScript
+new(pattern: string, flags?: string): RegExp
+```
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-RegExpConstructor-new(pattern: string, flags?: string): RegExp--><!--Device-RegExpConstructor-new(pattern: string, flags?: string): RegExp-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| flags | string | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
+
+## constructor
+
+```TypeScript
+(pattern: RegExp | string): RegExp
+```
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-RegExpConstructor-(pattern: RegExp | string): RegExp--><!--Device-RegExpConstructor-(pattern: RegExp | string): RegExp-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | RegExp \| string | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
+
+## constructor
+
+```TypeScript
+(pattern: string, flags?: string): RegExp
+```
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-RegExpConstructor-(pattern: string, flags?: string): RegExp--><!--Device-RegExpConstructor-(pattern: string, flags?: string): RegExp-End-->
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [pattern](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-vibratefrompattern-i.md) | string | Yes |
+| flags | string | No |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| RegExp |
+
+## "$&"
+
+```TypeScript
+"$&": string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-"$&": string--><!--Device-RegExpConstructor-"$&": string-End-->
+
+## "$'"
+
+```TypeScript
+"$'": string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-"$'": string--><!--Device-RegExpConstructor-"$'": string-End-->
+
+## "$+"
+
+```TypeScript
+"$+": string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-"$+": string--><!--Device-RegExpConstructor-"$+": string-End-->
+
+## "$`"
+
+```TypeScript
+"$`": string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-"$`": string--><!--Device-RegExpConstructor-"$`": string-End-->
+
+## $1
+
+```TypeScript
+$1: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$1: string--><!--Device-RegExpConstructor-$1: string-End-->
+
+## $2
+
+```TypeScript
+$2: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$2: string--><!--Device-RegExpConstructor-$2: string-End-->
+
+## $3
+
+```TypeScript
+$3: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$3: string--><!--Device-RegExpConstructor-$3: string-End-->
+
+## $4
+
+```TypeScript
+$4: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$4: string--><!--Device-RegExpConstructor-$4: string-End-->
+
+## $5
+
+```TypeScript
+$5: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$5: string--><!--Device-RegExpConstructor-$5: string-End-->
+
+## $6
+
+```TypeScript
+$6: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$6: string--><!--Device-RegExpConstructor-$6: string-End-->
+
+## $7
+
+```TypeScript
+$7: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$7: string--><!--Device-RegExpConstructor-$7: string-End-->
+
+## $8
+
+```TypeScript
+$8: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$8: string--><!--Device-RegExpConstructor-$8: string-End-->
+
+## $9
+
+```TypeScript
+$9: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$9: string--><!--Device-RegExpConstructor-$9: string-End-->
+
+## $_
+
+```TypeScript
+$_: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-$_: string--><!--Device-RegExpConstructor-$_: string-End-->
+
+## input
+
+```TypeScript
+input: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-input: string--><!--Device-RegExpConstructor-input: string-End-->
+
+## lastMatch
+
+```TypeScript
+lastMatch: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-lastMatch: string--><!--Device-RegExpConstructor-lastMatch: string-End-->
+
+## lastParen
+
+```TypeScript
+lastParen: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-lastParen: string--><!--Device-RegExpConstructor-lastParen: string-End-->
+
+## leftContext
+
+```TypeScript
+leftContext: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-leftContext: string--><!--Device-RegExpConstructor-leftContext: string-End-->
+
+## prototype
+
+```TypeScript
+readonly prototype: RegExp
+```
+
+**Type:** RegExp
+
+**Since:** -1
+
+**Deprecated since:** -1
+
+<!--Device-RegExpConstructor-readonly prototype: RegExp--><!--Device-RegExpConstructor-readonly prototype: RegExp-End-->
+
+## rightContext
+
+```TypeScript
+rightContext: string
+```
+
+**Type:** string
+
+**Since:** -1
+
+**Deprecated since:** legacy feature for browser compatibility
+
+<!--Device-RegExpConstructor-rightContext: string--><!--Device-RegExpConstructor-rightContext: string-End-->

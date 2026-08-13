@@ -1,37 +1,12 @@
 # CustomContentDialog
 
-自定义内容区弹出框，同时支持定义操作区按钮样式。
-
-> **说明：**
-> 
-> 当弹框高度不足时，触发全局滚动的规格为contentBuilder被压缩，压缩至小于100vp时启动全局滚动。
-> 
-> CustomContentDialog内容区的滚动需由开发者自定义，内容区自定义滚动必须配合属性nestedScroll，nestedScroll({ scrollForward:
-> NestedScrollMode.PARALLEL, scrollBackward: NestedScrollMode.PARALLEL })
+自定义内容区弹出框，同时支持定义操作区按钮样式。 > **说明：** > > 当弹框高度不足时，触发全局滚动的规格为contentBuilder被压缩，压缩至小于100vp时启动全局滚动。 > > CustomContentDialog内容区的滚动需由开发者自定义，内容区自定义滚动必须配合属性nestedScroll，nestedScroll({ scrollForward: > NestedScrollMode.PARALLEL, scrollBackward: NestedScrollMode.PARALLEL })
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare struct CustomContentDialog--><!--Device-unnamed-export declare struct CustomContentDialog-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## contentBuilder
-
-```TypeScript
-contentBuilder: () => void
-```
-
-用于构建弹出框内容区域的组件构建函数。
-
-**起始版本：** 12
-
-**装饰器类型：** @BuilderParam
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CustomContentDialog-contentBuilder: () => void--><!--Device-CustomContentDialog-contentBuilder: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,6 +21,8 @@ buttons?: ButtonOptions[]
 **类型：** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)[]
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,9 +40,11 @@ contentAreaPadding?: Padding
 
 弹出框内容区内边距。设置了localizedContentAreaPadding属性时该属性不生效。
 
-**类型：** Padding
+**类型：** [Padding](arkts-arkui-padding-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,19 +54,41 @@ contentAreaPadding?: Padding
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## contentBuilder
+
+```TypeScript
+@BuilderParam contentBuilder: () => void
+```
+
+用于构建弹出框内容区域的组件构建函数。
+
+**类型：** () =&gt; void
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+
+<!--Device-CustomContentDialog-@BuilderParam contentBuilder: () => void--><!--Device-CustomContentDialog-@BuilderParam contentBuilder: () => void-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## controller
 
 ```TypeScript
 controller: CustomDialogController
 ```
 
-弹出框控制器，用于控制弹出框的显示和隐藏。
-
-**说明：** 未使用@Require装饰，构造时不强制校验参数。
+弹出框控制器，用于控制弹出框的显示和隐藏。 **说明：** 未使用@Require装饰，构造时不强制校验参数。
 
 **类型：** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,6 +110,8 @@ localizedContentAreaPadding?: LocalizedPadding
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -123,15 +126,13 @@ localizedContentAreaPadding?: LocalizedPadding
 primaryTitle?: ResourceStr
 ```
 
-弹出框标题。
-
-默认不设置或设置为undefined，弹出框标题不显示。
-
-**说明：** 标题超过两行会显示“...”。
+弹出框标题。 默认不设置或设置为undefined，弹出框标题不显示。 **说明：** 标题超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,15 +148,13 @@ primaryTitle?: ResourceStr
 secondaryTitle?: ResourceStr
 ```
 
-弹出框辅助文本。
-
-默认不设置或设置为undefined，弹出框辅助文本不显示。
-
-**说明：** 辅助文本超过两行会显示“...”。
+弹出框辅助文本。 默认不设置或设置为undefined，弹出框辅助文本不显示。 **说明：** 辅助文本超过两行会显示“...”。
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -177,6 +176,8 @@ theme?: Theme | CustomTheme
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -191,13 +192,13 @@ theme?: Theme | CustomTheme
 themeColorMode?: ThemeColorMode
 ```
 
-自定义弹出框深浅色模式。
-
-默认值：ThemeColorMode.SYSTEM
+自定义弹出框深浅色模式。 默认值：ThemeColorMode.SYSTEM
 
 **类型：** [ThemeColorMode](../arkts-components/arkts-arkui-themecolormode-e.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

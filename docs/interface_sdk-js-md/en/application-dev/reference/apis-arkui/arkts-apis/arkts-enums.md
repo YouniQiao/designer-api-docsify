@@ -27,7 +27,7 @@
 | [CopyOptions](arkts-arkui-copyoptions-e.md) | Copy options. |
 | [CrownAction](arkts-arkui-crownaction-e.md) | Enumerates the crown actions. |
 | [CrownSensitivity](arkts-arkui-crownsensitivity-e.md) | Enumerates the sensitivity levels for crown rotation. |
-| [Curve](arkts-arkui-curve-e.md) | Enumerates the interpolation curves. For details about the animation, see &lt;!--RP1--&gt;  [Bezier Curve](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;. |
+| [Curve](arkts-arkui-curve-e.md) | Enumerates the interpolation curves. For details about the animation, see &lt;!--RP1--&gt; [Bezier Curve](../../../../design/ux-design/animation-attributes.md)&lt;!--RP1End--&gt;. |
 | [DialogButtonStyle](arkts-arkui-dialogbuttonstyle-e.md) | The Button Style of dialog, |
 | [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md) | Dialog display mode. |
 | [Direction](arkts-arkui-direction-e.md) | Sets the horizontal layout of elements. |
@@ -50,8 +50,8 @@
 | [GestureCollectIntervention](arkts-arkui-gesturecollectintervention-e.md) | Define the gesture and events collection intervention operations. |
 | [GestureShortcut](arkts-arkui-gestureshortcut-e.md) | Define the smart gesture shortcut priority enumeration. |
 | [GradientDirection](arkts-arkui-gradientdirection-e.md) | GradientDirection enumeration description |
-| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getWindowHeightBreakpoint).  The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
-| [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test.  > **NOTE：** >  > When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child > component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch > testing for lower-layer nodes can only be triggered by setting the > [hitTestBehavior](CommonMethod#hitTestBehavior) of the topmost node to **HitTestMode.Transparent**. |
+| [HeightBreakpoint](arkts-arkui-heightbreakpoint-e.md) | Enumerates the height breakpoint values corresponding to different window aspect ratio thresholds. The values are returned through [getWindowHeightBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getWindowHeightBreakpoint). The following table lists default aspect ratio breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window aspect ratios. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
+| [HitTestMode](arkts-arkui-hittestmode-e.md) | Sets the response logic and node blocking rules for the hit test. > **NOTE：**> > When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child > component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch > testing for lower-layer nodes can only be triggered by setting the > hitTestBehavior of the topmost node to **HitTestMode.Transparent**. |
 | [HorizontalAlign](arkts-arkui-horizontalalign-e.md) | HorizontalAlign enumeration description. |
 | [HoverEffect](arkts-arkui-hovereffect-e.md) | Sets the hover effect of the component. |
 | [ImageFit](arkts-arkui-imagefit-e.md) | Image display mode. |
@@ -107,7 +107,7 @@
 | [VerticalAlign](arkts-arkui-verticalalign-e.md) | VerticalAlign enumeration description |
 | [Visibility](arkts-arkui-visibility-e.md) | Defines the visibility and layout placeholder status of the component. |
 | [Week](arkts-arkui-week-e.md) | Week Enum value |
-| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getWindowWidthBreakpoint).  The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
+| [WidthBreakpoint](arkts-arkui-widthbreakpoint-e.md) | Enumerates the width breakpoint values corresponding to different window width thresholds. The values are returned through [getWindowWidthBreakpoint](arkts-arkui-arkui-uicontext-uicontext-c.md#getWindowWidthBreakpoint). The following table lists default width breakpoint thresholds for typical devices, serving as a reference for responsive layout design based on window width breakpoints. Device manufacturers may customize these thresholds through product-specific configurations when needed. |
 | [WordBreak](arkts-arkui-wordbreak-e.md) | The word break rule. |
 | [XComponentType](arkts-arkui-xcomponenttype-e.md) | The type of XComponent |
 

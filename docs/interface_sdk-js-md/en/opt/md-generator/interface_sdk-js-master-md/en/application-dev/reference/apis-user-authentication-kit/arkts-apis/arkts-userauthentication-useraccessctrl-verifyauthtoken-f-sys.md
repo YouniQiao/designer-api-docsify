@@ -12,12 +12,11 @@ import { userAccessCtrl } from '@kit.UserAuthenticationKit';
 function verifyAuthToken(authToken: Uint8Array, allowableDuration: number): Promise<AuthToken>
 ```
 
-Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed  
-**AuthToken** is returned. This API uses a promise to return the result.
+Verifies an authentication token. This API is used to verify the validity of an **AuthToken**, including the integrity and validity check. After the verification is successful, the detailed information about the parsed **AuthToken** is returned. This API uses a promise to return the result. The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter.
 
-The integrity check verifies the digital signature of the **AuthToken** to ensure that the token has not been tampered with. The validity check compares the issuance time of the **AuthToken** with the current time and determines whether the token is within the validity period based on the **allowableDuration** parameter.
+**Since:** 23
 
-**Since:** 18
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.USE_USER_ACCESS_MANAGER
 
@@ -44,12 +43,12 @@ The integrity check verifies the digital signature of the **AuthToken** to ensur
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [12500015](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500015-authtoken-integrity-check-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
-| [12500016](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500016-authtoken-has-expired) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [12500015](../errorcode-useriam.md#12500015-authtoken-integrity-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) |
+| [12500016](../errorcode-useriam.md#12500016-authtoken-has-expired) |
 
 ## Examples
 

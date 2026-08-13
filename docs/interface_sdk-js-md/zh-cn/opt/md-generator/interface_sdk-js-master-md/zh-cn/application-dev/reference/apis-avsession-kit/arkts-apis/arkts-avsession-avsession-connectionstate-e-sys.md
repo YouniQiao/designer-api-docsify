@@ -2,7 +2,9 @@
 
 连接状态枚举。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-enum ConnectionState--><!--Device-avSession-enum ConnectionState-End-->
 
@@ -17,6 +19,8 @@ STATE_AUTHENTICATING = 10
 与远端设备连接认证中。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,6 +42,8 @@ STATE_MIRROR_TO_STREAM = 11
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -57,6 +63,8 @@ STATE_STREAM_TO_MIRROR = 12
 从音视频投播切换到镜像模式。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

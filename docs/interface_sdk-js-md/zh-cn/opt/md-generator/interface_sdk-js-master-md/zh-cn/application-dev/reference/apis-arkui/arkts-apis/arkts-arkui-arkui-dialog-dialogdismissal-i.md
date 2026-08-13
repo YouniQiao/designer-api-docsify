@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface DialogDismissal--><!--Device-unnamed-export interface DialogDismissal-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,7 +18,11 @@ dismiss: VoidCallback
 
 关闭对话框的回调。只有当需要退出对话框时，才会调用此接口。
 
+**类型：** [VoidCallback](arkts-arkui-voidcallback-t.md)
+
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +43,8 @@ reason: DismissReason
 **类型：** [DismissReason](../arkts-components/arkts-arkui-dismissreason-e.md)
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

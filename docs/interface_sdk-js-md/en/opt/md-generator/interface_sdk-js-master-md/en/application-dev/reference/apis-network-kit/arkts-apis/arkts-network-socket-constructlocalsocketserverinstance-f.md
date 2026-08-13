@@ -16,6 +16,8 @@ Creates a LocalSocketServer object.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer--><!--Device-socket-function constructLocalSocketServerInstance(): LocalSocketServer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

@@ -1,12 +1,12 @@
 # PhotoSubType (System API)
 
-Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#FileAsset) types.
+Enumerates the [FileAsset](arkts-corefile-userfilemanager-fileasset-i-sys.md#FileAsset-(System-API)) types.
 
 **Since:** 10
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [PhotoSubType](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType)
+**Substitutes:** PhotoSubType
 
 <!--Device-userFileManager-enum PhotoSubType--><!--Device-userFileManager-enum PhotoSubType-End-->
 
@@ -26,7 +26,7 @@ Default (photo) type.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [DEFAULT](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.DEFAULT)
+**Substitutes:** DEFAULT
 
 <!--Device-PhotoSubType-DEFAULT--><!--Device-PhotoSubType-DEFAULT-End-->
 
@@ -46,7 +46,7 @@ Screenshots and screen recording files.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [SCREENSHOT](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoSubType.SCREENSHOT)
+**Substitutes:** SCREENSHOT
 
 <!--Device-PhotoSubType-SCREENSHOT--><!--Device-PhotoSubType-SCREENSHOT-End-->
 
@@ -66,7 +66,7 @@ Photos and videos taken by a camera.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [SOURCE_GENERIC](@ohos.file.photoAccessHelper:photoAccessHelper.AlbumSubType.SOURCE_GENERIC)
+**Substitutes:** SOURCE_GENERIC
 
 <!--Device-PhotoSubType-CAMERA--><!--Device-PhotoSubType-CAMERA-End-->
 

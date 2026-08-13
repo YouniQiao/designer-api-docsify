@@ -2,7 +2,9 @@
 
 描述数据库表执行端云同步任务上传和下载的统计信息。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface TableDetails--><!--Device-relationalStore-interface TableDetails-End-->
 
@@ -18,7 +20,9 @@ download: Statistic
 
 **类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TableDetails-download: Statistic--><!--Device-TableDetails-download: Statistic-End-->
 
@@ -34,7 +38,9 @@ upload: Statistic
 
 **类型：** [Statistic](arkts-arkdata-relationalstore-statistic-i.md)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-TableDetails-upload: Statistic--><!--Device-TableDetails-upload: Statistic-End-->
 

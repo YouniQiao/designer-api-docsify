@@ -2,9 +2,11 @@
 
 Defines event query rules.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hiSysEvent-interface QueryRule--><!--Device-hiSysEvent-interface QueryRule-End-->
 
@@ -21,25 +23,20 @@ import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ## condition
 
 ```TypeScript
-condition?: string
+condition?: string | null | undefined
 ```
 
-Additional event conditions. The value of this parameter is in the format of  
-**{"version":"V1","condition":{"and":[{"param":"*Parameter*","op":"*Operator*","value":"*Comparison value*"}]}}**.
+Additional event conditions. The value of this parameter is in the format of **{"version":"V1","condition":{"and":[{"param":"*Parameter*","op":"*Operator*","value":"*Comparison value*"}]}}**. Parameter: key value of the specified event parameter. Supported operators: **=**, **!=**, **&lt;**, **<=**, **>** and **&gt;&lt;=**, **&gt;** and **>=**. Multiple conditions can be configured in the **"and"** array, and the intersection of the query results is used.
 
-Parameter: key value of the specified event parameter.
+**Type:** string \| null \| undefined
 
-Supported operators: **=**, **!=**, **&lt;**, **<=**, **>** and **&gt;&lt;=**, **&gt;** and **>=**.
+**Since:** 23
 
-Multiple conditions can be configured in the **"and"** array, and the intersection of the query results is used.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Type:** string
+**Deprecated since:** -1
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
-
-<!--Device-QueryRule-condition?: string--><!--Device-QueryRule-condition?: string-End-->
+<!--Device-QueryRule-condition?: string | null | undefined--><!--Device-QueryRule-condition?: string | null | undefined-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiSysEvent
 
@@ -55,9 +52,11 @@ Event domain.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-QueryRule-domain: string--><!--Device-QueryRule-domain: string-End-->
 
@@ -75,9 +74,11 @@ Array of event names. A **QueryRule** object contains multiple system event name
 
 **Type:** string[]
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-QueryRule-names: string[]--><!--Device-QueryRule-names: string[]-End-->
 

@@ -12,9 +12,11 @@ import { huksExternalCrypto } from '@kit.UniversalKeystoreKit';
 function setProperty(resourceId: string, propertyId: string, params?: HuksExternalCryptoParam[]): Promise<void>
 ```
 
-The set-type operations of the external crypto extension support calling custom interfaces.However, the custom interface must be registered with the provider.
+The set-type operations of the external crypto extension support calling custom interfaces. However, the custom interface must be registered with the provider.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,17 +42,17 @@ The set-type operations of the external crypto extension support calling custom 
 
 | Error Code ID |
 | --- |
-| [12000023](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000023-unauthenticated-ukey-pin) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000006-algorithm-library-operation-failed) |
-| [12000005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) |
-| [12000021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000021-ukey-pin-locked) |
-| [12000020](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000020-dependent-module-error) |
-| [12000018](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) |
-| [12000014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) |
-| [12000012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) |
-| [12000011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000011-the-entity-does-not-exist) |
-| [12000024](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000024-device-or-resource-busy) |
+| [12000023](../errorcode-huks.md#12000023-unauthenticated-ukey-pin) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12000006](../errorcode-huks.md#12000006-algorithm-library-operation-failed) |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) |
+| [12000021](../errorcode-huks.md#12000021-ukey-pin-locked) |
+| [12000020](../errorcode-huks.md#12000020-dependent-module-error) |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) |
+| [12000012](../errorcode-huks.md#12000012-external-error) |
+| [12000011](../errorcode-huks.md#12000011-the-entity-does-not-exist) |
+| [12000024](../errorcode-huks.md#12000024-device-or-resource-busy) |
 
 ## Examples
 

@@ -4,6 +4,8 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class SimpleAnimatorOptions--><!--Device-unnamed-export declare class SimpleAnimatorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -24,6 +26,8 @@ A constructor used to create a **SimpleAnimatorOptions** instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -41,7 +45,7 @@ A constructor used to create a **SimpleAnimatorOptions** instance.
 
 ## Examples
 
-See [ArkTS-based Declarative Development Paradigm](#arkts-based-declarative-development-paradigm).
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -72,6 +76,8 @@ Sets the playback delay for this animation.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -94,7 +100,7 @@ Sets the playback delay for this animation.
 
 ## Examples
 
-See [ArkTS-based Declarative Development Paradigm](#arkts-based-declarative-development-paradigm).
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -125,6 +131,8 @@ Sets the playback direction for this animator animation.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -137,7 +145,7 @@ Sets the playback direction for this animator animation.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [direction](#direction) | [PlayMode](arkts-arkui-enums-playmode-e.md) | Yes |
+| [direction](#direction) | [PlayMode](../../apis-na/arkts-apis/arkts-na-enums-playmode-e.md) | Yes |
 
 **Return value:**
 
@@ -154,6 +162,8 @@ duration(duration: number): SimpleAnimatorOptions
 Sets the animation duration.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -177,7 +187,7 @@ Sets the animation duration.
 
 ## Examples
 
-See [ArkTS-based Declarative Development Paradigm](#arkts-based-declarative-development-paradigm).
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -208,6 +218,8 @@ Sets the interpolation curve for this animation.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -230,7 +242,7 @@ Sets the interpolation curve for this animation.
 
 ## Examples
 
-See [ArkTS-based Declarative Development Paradigm](#arkts-based-declarative-development-paradigm).
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
@@ -260,6 +272,8 @@ fill(fillMode: FillMode): SimpleAnimatorOptions
 Sets the fill mode for this animation.
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -291,6 +305,8 @@ Sets the number of times that this animation is played.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -313,7 +329,7 @@ Sets the number of times that this animation is played.
 
 ## Examples
 
-See [ArkTS-based Declarative Development Paradigm](#arkts-based-declarative-development-paradigm).
+See ArkTS-based Declarative Development Paradigm.
 
 ```TypeScript
 import { AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';

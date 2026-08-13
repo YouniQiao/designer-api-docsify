@@ -1,8 +1,10 @@
 # WebOptions
 
-Defines web options through the [APIs](web).
+Defines web options through the APIs.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface WebOptions--><!--Device-unnamed-declare interface WebOptions-End-->
 
@@ -14,12 +16,13 @@ Defines web options through the [APIs](web).
 controller: WebController | WebviewController
 ```
 
-Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use  
-[WebviewController](arkts-arkweb-webviewcontroller-t.md#WebviewController) instead.
+Controller that controls various behaviors of **Web** components, including page navigation, declaration period status, and JavaScript interaction. **WebController** is deprecated since API version 9. You are advised to use [WebviewController](arkts-arkweb-webviewcontroller-t.md#WebviewController) instead.
 
 **Type:** [WebController](arkts-arkweb-webcontroller-c.md) \| [WebviewController](arkts-arkweb-webviewcontroller-t.md)
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -33,13 +36,13 @@ Controller that controls various behaviors of **Web** components, including page
 emulateTouchFromMouseEvent? : boolean
 ```
 
-Whether to convert mouse events into touch events.
-
-Default value: **false**.
+Whether to convert mouse events into touch events. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 <!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean--><!--Device-WebOptions-emulateTouchFromMouseEvent? : boolean-End-->
 
@@ -51,11 +54,13 @@ Default value: **false**.
 incognitoMode? : boolean
 ```
 
-Whether to enable incognito mode. The value **true** means to enable incognito mode, and **false** means the opposite.Default value: **false**.If **undefined** or **null** is passed, the value is **false**.
+Whether to enable incognito mode. The value **true** means to enable incognito mode, and **false** means the opposite. Default value: **false**. If **undefined** or **null** is passed, the value is **false**.
 
 **Type:** boolean
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -75,6 +80,8 @@ Rendering mode.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebOptions-renderMode? : RenderMode--><!--Device-WebOptions-renderMode? : RenderMode-End-->
@@ -87,12 +94,13 @@ Rendering mode.
 sharedRenderProcessToken? : string
 ```
 
-Token of the shared rendering process specified by the **Web** component. In multi-rendering process mode, the  
-**Web** component with the same token preferentially attempts to reuse the rendering process bound to the token.The token is bound to the rendering process when the rendering process is initialized. When the rendering process is not associated with a **Web** component, its binding to the token is removed.Default value: **""**.
+Token of the shared rendering process specified by the **Web** component. In multi-rendering process mode, the **Web** component with the same token preferentially attempts to reuse the rendering process bound to the token. The token is bound to the rendering process when the rendering process is initialized. When the rendering process is not associated with a **Web** component, its binding to the token is removed. Default value: **""**.
 
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-WebOptions-sharedRenderProcessToken? : string--><!--Device-WebOptions-sharedRenderProcessToken? : string-End-->
 
@@ -109,6 +117,8 @@ Address of a web page resource. To access local resource files, use the \$rawfil
 **Type:** string \| Resource
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

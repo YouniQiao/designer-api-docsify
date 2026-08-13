@@ -2,7 +2,9 @@
 
 Provides WebSocket APIs.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace webSocket--><!--Device-unnamed-declare namespace webSocket-End-->
 
@@ -20,8 +22,8 @@ import { webSocket } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createwebsocket) |
-| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createwebsocketserver) |
+| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createWebSocket) |
+| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createWebSocketServer) |
 
 ### Interfaces
 
@@ -29,6 +31,7 @@ import { webSocket } from '@kit.NetworkKit';
 | --- |
 | [ClientCert](arkts-network-websocket-clientcert-i.md) |
 | [CloseResult](arkts-network-websocket-closeresult-i.md) |
+| [OpenResult](arkts-network-websocket-openresult-i.md) |
 | [ServerCert](arkts-network-websocket-servercert-i.md) |
 | [WebSocket](arkts-network-websocket-websocket-i.md) |
 | [WebSocketCloseOptions](arkts-network-websocket-websocketcloseoptions-i.md) |

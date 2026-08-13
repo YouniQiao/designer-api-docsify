@@ -1,14 +1,14 @@
 # RectShape
 
-Represents a rectangle shape used in the **clipShape** and **maskShape** APIs.
+Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape).
 
-This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape).
-
-**Inheritance/Implementation:** RectShape extends [BaseShape<RectShape>](BaseShape<RectShape>)
+**Inheritance/Implementation:** RectShape extends BaseShape<RectShape>
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>--><!--Device-unnamed-export declare class RectShape extends BaseShape<RectShape>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class RectShape--><!--Device-unnamed-export declare class RectShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ constructor(options?: RectShapeOptions | RoundRectShapeOptions)
 A constructor used to create a **RectShape** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,6 +55,8 @@ radius(radius: number | string | Array<number | string>): RectShape
 Sets the radius of the rectangle border corners.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +90,8 @@ Sets the radius height of the rectangle border corners.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -117,6 +123,8 @@ radiusWidth(rWidth: number | string): RectShape
 Sets the radius width of the rectangle border corners.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

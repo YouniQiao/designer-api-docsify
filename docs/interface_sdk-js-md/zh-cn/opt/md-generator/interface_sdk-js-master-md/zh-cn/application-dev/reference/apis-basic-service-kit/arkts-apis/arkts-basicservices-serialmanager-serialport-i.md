@@ -2,7 +2,9 @@
 
 串口参数。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-interface SerialPort--><!--Device-serialManager-interface SerialPort-End-->
 
@@ -18,7 +20,9 @@ deviceName: string
 
 **类型：** string
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SerialPort-deviceName: string--><!--Device-SerialPort-deviceName: string-End-->
 
@@ -34,7 +38,9 @@ portId: number
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SerialPort-portId: int--><!--Device-SerialPort-portId: int-End-->
 

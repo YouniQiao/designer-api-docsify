@@ -1,13 +1,14 @@
 # RotationGestureEvent
 
-Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of   
-[onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#onGestureJudgeBegin).
+Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent). This object can be passed as the **event** parameter of [onGestureJudgeBegin](../arkts-components/arkts-arkui-commonmethod-c.md#onGestureJudgeBegin).
 
 **Inheritance/Implementation:** RotationGestureEvent extends [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEvent)
 
 **Since:** 11
 
-<!--Device-unnamed-interface RotationGestureEvent extends BaseGestureEvent--><!--Device-unnamed-interface RotationGestureEvent extends BaseGestureEvent-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface RotationGestureEvent--><!--Device-unnamed-interface RotationGestureEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -17,19 +18,13 @@ Inherits from [BaseGestureEvent](arkts-arkui-basegestureevent-i.md#BaseGestureEv
 angle: number
 ```
 
-Rotation angle, in deg.
-
-**NOTE：**
-
-Angle calculation: When a rotation gesture is detected, the line connecting the two fingers is identified as the starting line. As the fingers slide, the line between them rotates. Based on the coordinates of the end points of the starting line and the current line, the arctangent function is used to calculate the included angles relative to the horizontal direction.
-
-The final rotation angle is: arctan2(cy2 - cy1, cx2 - cx1) - arctan2(y2 - y1, x2 - x1)
-
-With the starting line as the reference axis, clockwise rotation ranges from 0 to 180 degrees, and counterclockwise rotation ranges from 0 to –180 degrees.
+Rotation angle, in deg. **NOTE：**Angle calculation: When a rotation gesture is detected, the line connecting the two fingers is identified as the starting line. As the fingers slide, the line between them rotates. Based on the coordinates of the end points of the starting line and the current line, the arctangent function is used to calculate the included angles relative to the horizontal direction. The final rotation angle is: arctan2(cy2 - cy1, cx2 - cx1) - arctan2(y2 - y1, x2 - x1) With the starting line as the reference axis, clockwise rotation ranges from 0 to 180 degrees, and counterclockwise rotation ranges from 0 to –180 degrees.
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

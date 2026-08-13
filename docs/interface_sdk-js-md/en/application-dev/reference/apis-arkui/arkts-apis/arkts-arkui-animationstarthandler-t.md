@@ -1,18 +1,20 @@
 # AnimationStartHandler
 
 ```TypeScript
-export type AnimationStartHandler = (index: int, targetIndex: int, event: SwiperAnimationEvent) => void
+declare type AnimationStartHandler = (index: number, targetIndex: number, event: SwiperAnimationEvent) => void
 ```
 
-Handler of swiper, used in OnAnimationStart.
+Defines the callback triggered when the page transition animation starts.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export type AnimationStartHandler = (index: int, targetIndex: int, event: SwiperAnimationEvent) => void--><!--Device-unnamed-export type AnimationStartHandler = (index: int, targetIndex: int, event: SwiperAnimationEvent) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type AnimationStartHandler = (index: number, targetIndex: number, event: SwiperAnimationEvent) => void--><!--Device-unnamed-declare type AnimationStartHandler = (index: number, targetIndex: number, event: SwiperAnimationEvent) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -20,7 +22,7 @@ Handler of swiper, used in OnAnimationStart.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index of the current swiper. |
-| targetIndex | int | Yes | The index of the target swiper. |
-| event | SwiperAnimationEvent | Yes | The extra information of the animation. |
+| index | number | Yes | Index of the currently displayed element before the animation starts (not the final index after the animation ends). |
+| targetIndex | number | Yes | Index of the target element to switch to. |
+| event | SwiperAnimationEvent | Yes | Extra information of the animation, including the offset of the currently displayed element and target element relative to the start position of the **ArcSwiper** along the main axis, and the hands-off velocity. |
 

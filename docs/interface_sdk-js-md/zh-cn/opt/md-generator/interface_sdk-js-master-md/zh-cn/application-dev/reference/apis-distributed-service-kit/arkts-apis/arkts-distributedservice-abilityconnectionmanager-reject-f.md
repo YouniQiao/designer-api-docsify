@@ -8,7 +8,9 @@ function reject(token: string, reason: string): void
 
 在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -27,7 +29,7 @@ function reject(token: string, reason: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

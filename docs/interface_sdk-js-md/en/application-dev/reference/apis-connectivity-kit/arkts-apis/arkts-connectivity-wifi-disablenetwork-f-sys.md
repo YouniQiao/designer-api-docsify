@@ -12,9 +12,7 @@ import { wifi } from '@kit.ConnectivityKit';
 function disableNetwork(netId: number): boolean
 ```
 
-Disables a specified network.
-
-&lt;p&gt;The disabled network will not be associated with again.
+Disables a specified network. &lt;p&gt;The disabled network will not be associated with again.
 
 **Since:** 7
 
@@ -22,7 +20,7 @@ Disables a specified network.
 
 **Deprecated since:** 9
 
-**Substitutes:** [disableDeviceConfig](ohos.wifiManager/wifiManager.disableDeviceConfig)
+**Substitutes:** disableDeviceConfig
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

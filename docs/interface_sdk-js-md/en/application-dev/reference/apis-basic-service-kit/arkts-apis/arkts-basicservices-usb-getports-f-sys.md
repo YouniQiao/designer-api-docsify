@@ -20,7 +20,7 @@ Obtains the list of all physical USB ports.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getPorts)
+**Substitutes:** [getPorts](arkts-basicservices-usbmanager-getports-f-sys.md#getPorts-(System-API))
 
 <!--Device-usb-function getPorts(): Array<USBPort>--><!--Device-usb-function getPorts(): Array<USBPort>-End-->
 

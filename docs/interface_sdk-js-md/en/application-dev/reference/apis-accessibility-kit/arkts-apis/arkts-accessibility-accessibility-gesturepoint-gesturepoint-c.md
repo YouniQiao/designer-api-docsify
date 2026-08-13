@@ -6,6 +6,8 @@ The **GesturePoint** module provides APIs for creating gesture touch point infor
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class GesturePoint--><!--Device-unnamed-export declare class GesturePoint-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -63,6 +65,8 @@ X coordinate of the touch point, in pixels (px).
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-GesturePoint-positionX: double--><!--Device-GesturePoint-positionX: double-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -80,6 +84,8 @@ Y coordinate of the touch point, in pixels (px).
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-GesturePoint-positionY: double--><!--Device-GesturePoint-positionY: double-End-->
 

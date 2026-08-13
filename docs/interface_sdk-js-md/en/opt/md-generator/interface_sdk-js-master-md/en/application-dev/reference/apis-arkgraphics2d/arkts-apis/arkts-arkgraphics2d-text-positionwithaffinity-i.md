@@ -2,7 +2,9 @@
 
 Describes the position and affinity of a glyph.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface PositionWithAffinity--><!--Device-text-interface PositionWithAffinity-End-->
 
@@ -24,7 +26,9 @@ Affinity of the position.
 
 **Type:** Affinity
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Index of the glyph relative to the paragraph. The value is an integer.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

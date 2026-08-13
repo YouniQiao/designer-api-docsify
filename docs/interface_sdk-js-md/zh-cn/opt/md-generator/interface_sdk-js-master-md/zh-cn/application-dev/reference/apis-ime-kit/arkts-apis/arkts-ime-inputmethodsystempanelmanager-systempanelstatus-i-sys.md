@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus--><!--Device-inputMethodSystemPanelManager-interface SystemPanelStatus-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -21,6 +23,8 @@ inputType: InputMethodInputType
 **类型：** [InputMethodInputType](arkts-ime-inputmethodsystempanelmanager-inputmethodinputtype-e-sys.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ isPanelRaised: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SystemPanelStatus-isPanelRaised: boolean--><!--Device-SystemPanelStatus-isPanelRaised: boolean-End-->
@@ -62,6 +68,8 @@ needFuncButton: boolean
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SystemPanelStatus-needFuncButton: boolean--><!--Device-SystemPanelStatus-needFuncButton: boolean-End-->
@@ -81,6 +89,8 @@ panelFlag: PanelFlag
 **类型：** [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

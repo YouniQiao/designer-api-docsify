@@ -16,7 +16,9 @@ Subscribes to the carrier call state changes and obtains the call number. This m
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_CALL_FOR_DEVICES
 
@@ -28,18 +30,18 @@ Subscribes to the carrier call state changes and obtains the call number. This m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. &lt;br&gt;The application can obtain CCallState. &lt;br&gt; |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | Yes | Callback function used to return the call status information object. &lt;br&gt;The application can obtain CCallState. &lt;br&gt; |
 | options | ObserverOptions | No | Event subscription parameters. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [8800999](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800999-internal-error) | Unknown error. |
-| [8800002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
-| [8800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
-| [8800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [8800999](../errorcode-telephony.md#8800999-internal-error) | Unknown error. |
+| [8800002](../errorcode-telephony.md#8800002-service-connection-error) | Service connection failed. |
+| [8800003](../errorcode-telephony.md#8800003-system-internal-error) | System internal error. |
+| [8800001](../errorcode-telephony.md#8800001-input-parameter-value-out-of-range) | Invalid parameter value. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

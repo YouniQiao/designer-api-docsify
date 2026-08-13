@@ -18,7 +18,7 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 23
 
-**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)
+**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-(System-API))
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback: AsyncCallback<void>): void-End-->
 
@@ -38,10 +38,10 @@ Starts screen hopping. This API uses an asynchronous callback to return the resu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [4400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400002-input-device-operation-failed) |
-| [4400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [4400002](../errorcode-cooperator.md#4400002-input-device-operation-failed) |
+| [4400001](../errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -88,7 +88,7 @@ Starts screen hopping. This API uses a promise to return the result.
 
 **Deprecated since:** 23
 
-**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate)
+**Substitutes:** [activateCooperate](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activateCooperate-(System-API))
 
 <!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>--><!--Device-inputDeviceCooperate-function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<void>-End-->
 
@@ -113,10 +113,10 @@ Starts screen hopping. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [4400002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400002-input-device-operation-failed) |
-| [4400001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [4400002](../errorcode-cooperator.md#4400002-input-device-operation-failed) |
+| [4400001](../errorcode-cooperator.md#4400001-incorrect-target-device-descriptor) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

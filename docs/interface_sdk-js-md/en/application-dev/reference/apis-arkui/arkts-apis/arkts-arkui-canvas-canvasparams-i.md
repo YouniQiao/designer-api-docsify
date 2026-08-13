@@ -6,6 +6,8 @@ Defines the parameters for creating Canvas.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface CanvasParams--><!--Device-unnamed-export declare interface CanvasParams-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the parameters for creating Canvas.
 imageAIOptions?: ImageAIOptions
 ```
 
-AI image analysis options.You can configure the analysis type or bind an analyzer controller through this parameter.
+AI image analysis options. You can configure the analysis type or bind an analyzer controller through this parameter.
 
-**Type:** [ImageAIOptions](arkts-arkui-imagecommon-imageaioptions-i.md)
+**Type:** [ImageAIOptions](../../apis-na/arkts-apis/arkts-na-imagecommon-imageaioptions-i.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +40,15 @@ AI image analysis options.You can configure the analysis type or bind an analyze
 unit?: LengthMetricsUnit
 ```
 
-Indicates the unit mode employed by Canvas during drawing.Default value is LengthMetricsUnit.DEFAULT, undefined means setting to default value.
+Indicates the unit mode employed by Canvas during drawing. Default value is LengthMetricsUnit.DEFAULT, undefined means setting to default value.
 
 **Type:** [LengthMetricsUnit](arkts-arkui-lengthmetricsunit-t.md)
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

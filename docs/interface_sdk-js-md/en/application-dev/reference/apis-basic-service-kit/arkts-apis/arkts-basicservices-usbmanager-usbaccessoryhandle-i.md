@@ -2,9 +2,11 @@
 
 Describes the USB accessory handle.
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBAccessoryHandle--><!--Device-usbManager-interface USBAccessoryHandle-End-->
 
@@ -24,11 +26,13 @@ accessoryFd: int
 
 Accessory file descriptor. A valid **accessoryFd** is a positive integer.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBAccessoryHandle-accessoryFd: int--><!--Device-USBAccessoryHandle-accessoryFd: int-End-->
 

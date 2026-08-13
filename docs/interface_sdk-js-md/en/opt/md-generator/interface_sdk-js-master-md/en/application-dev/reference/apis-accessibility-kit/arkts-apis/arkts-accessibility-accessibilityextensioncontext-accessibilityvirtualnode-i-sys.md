@@ -4,6 +4,8 @@ Defines the **AccessibilityVirtualNode**.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface AccessibilityVirtualNode--><!--Device-unnamed-export declare interface AccessibilityVirtualNode-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -16,11 +18,13 @@ Defines the **AccessibilityVirtualNode**.
 accessibilityFocused?: boolean
 ```
 
-Whether the accessibility virtual node is focused for accessibility purposes.The value **true** indicates that the element is focused, and **false** indicates the opposite.
+Whether the accessibility virtual node is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,11 +40,13 @@ Whether the accessibility virtual node is focused for accessibility purposes.The
 accessibilityGroup?: boolean
 ```
 
-Whether the accessibility virtual node is an accessibility group.The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
+Whether the accessibility virtual node is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ This property determines whether the component can be recognized by accessibilit
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-accessibilityLevel?: string--><!--Device-AccessibilityVirtualNode-accessibilityLevel?: string-End-->
@@ -82,6 +90,8 @@ Accessibility text information of an accessibility virtual node.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-accessibilityText?: string--><!--Device-AccessibilityVirtualNode-accessibilityText?: string-End-->
@@ -96,11 +106,13 @@ Accessibility text information of an accessibility virtual node.
 checkable?: boolean
 ```
 
-Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable,and **false** indicates the opposite.
+Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,11 +128,13 @@ Whether the accessibility virtual node is checkable. The value **true** indicate
 checked?: boolean
 ```
 
-Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked,and **false** indicates the opposite.
+Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -142,6 +156,8 @@ List of child accessibility virtual node ids of a component.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-childNodeIds?: Array<long>--><!--Device-AccessibilityVirtualNode-childNodeIds?: Array<long>-End-->
@@ -156,11 +172,13 @@ List of child accessibility virtual node ids of a component.
 clickable?: boolean
 ```
 
-Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable,and **false** indicates the opposite.
+Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -182,6 +200,8 @@ Component type of the accessibility virtual node.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-customComponentType?: string--><!--Device-AccessibilityVirtualNode-customComponentType?: string-End-->
@@ -202,6 +222,8 @@ The id of accessibility element.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-elementId?: long--><!--Device-AccessibilityVirtualNode-elementId?: long-End-->
@@ -216,11 +238,13 @@ The id of accessibility element.
 enabled?: boolean
 ```
 
-Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled,and **false** indicates the opposite.
+Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,6 +266,8 @@ Parent element id of the accessibility element.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-parentId?: long--><!--Device-AccessibilityVirtualNode-parentId?: long-End-->
@@ -262,6 +288,8 @@ Area of the accessibility virtual node.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-rect?: Rect--><!--Device-AccessibilityVirtualNode-rect?: Rect-End-->
@@ -276,11 +304,13 @@ Area of the accessibility virtual node.
 selected?: boolean
 ```
 
-Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected,and **false** indicates the opposite.
+Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected, and **false** indicates the opposite.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -302,6 +332,8 @@ Supported action names.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-supportedActionNames?: Array<string>--><!--Device-AccessibilityVirtualNode-supportedActionNames?: Array<string>-End-->
@@ -321,6 +353,8 @@ Text of the accessibility virtual node.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -342,6 +376,8 @@ Click position of the accessibility virtual node.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition--><!--Device-AccessibilityVirtualNode-touchPosition?: TouchPosition-End-->
@@ -356,11 +392,13 @@ Click position of the accessibility virtual node.
 virtualNodeId: number
 ```
 
-ID of the accessibility virtual node.Default value: **-1**.
+ID of the accessibility virtual node. Default value: **-1**.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

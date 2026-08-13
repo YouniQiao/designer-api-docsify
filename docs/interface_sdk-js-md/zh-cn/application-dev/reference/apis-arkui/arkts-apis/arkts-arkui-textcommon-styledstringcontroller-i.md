@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface StyledStringController--><!--Device-unnamed-export declare interface StyledStringController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,13 @@
 getStyledString(): MutableStyledString | undefined
 ```
 
-ArkTS-Sta: getStyledString(): MutableStyledString | undefined
-
-获取富文本组件显示的属性字符串。
+ArkTS-Sta: getStyledString(): MutableStyledString | undefined 获取富文本组件显示的属性字符串。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +47,8 @@ setStyledString(styledString: StyledString): void
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -2,7 +2,9 @@
 
 Receive information about changes in network capabilities.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface NetCapabilityInfo--><!--Device-connection-export interface NetCapabilityInfo-End-->
 
@@ -24,9 +26,11 @@ Defines the network capability set.
 
 **Type:** [NetCapabilities](arkts-network-connection-netcapabilities-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCapabilityInfo-netCap: NetCapabilities--><!--Device-NetCapabilityInfo-netCap: NetCapabilities-End-->
 
@@ -42,9 +46,11 @@ Defines the handle of the data network.
 
 **Type:** NetHandle
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetCapabilityInfo-netHandle: NetHandle--><!--Device-NetCapabilityInfo-netHandle: NetHandle-End-->
 

@@ -2,7 +2,9 @@
 
 立即优化空间设置参数，设置优化总空间和老化天数。
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudSync-interface OptimizeSpaceParam--><!--Device-cloudSync-interface OptimizeSpaceParam-End-->
 
@@ -20,7 +22,9 @@ agingDays: number
 
 **类型：** number
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 
@@ -40,7 +44,9 @@ totalSize:number
 
 **类型：** number
 
-**起始版本：** 17
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CLOUDFILE_SYNC
 

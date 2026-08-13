@@ -2,7 +2,9 @@
 
 Defines a vertical domain panel manager.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -25,7 +27,8 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startverticalpanel) |
+| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startVerticalPanel-(System-API)) |
+| [startVerticalPanel](arkts-ability-verticalpanelmanager-startverticalpanel-f-sys.md#startVerticalPanel-(System-API)) |
 <!--DelEnd-->
 
 <!--Del-->
@@ -50,9 +53,9 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [SOURCE_APP_BUNDLE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_bundle_name) |
-| [SOURCE_APP_MODULE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_module_name) |
-| [SOURCE_APP_ABILITY_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_ability_name) |
-| [SOURCE_APP_WINDOW_ID](arkts-ability-verticalpanelmanager-con-sys.md#source_app_window_id) |
-| [SOURCE_APP_SCREEN_MODE](arkts-ability-verticalpanelmanager-con-sys.md#source_app_screen_mode) |
+| [SOURCE_APP_BUNDLE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#SOURCE_APP_BUNDLE_NAME) |
+| [SOURCE_APP_MODULE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#SOURCE_APP_MODULE_NAME) |
+| [SOURCE_APP_ABILITY_NAME](arkts-ability-verticalpanelmanager-con-sys.md#SOURCE_APP_ABILITY_NAME) |
+| [SOURCE_APP_WINDOW_ID](arkts-ability-verticalpanelmanager-con-sys.md#SOURCE_APP_WINDOW_ID) |
+| [SOURCE_APP_SCREEN_MODE](arkts-ability-verticalpanelmanager-con-sys.md#SOURCE_APP_SCREEN_MODE) |
 <!--DelEnd-->

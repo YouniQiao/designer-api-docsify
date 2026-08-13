@@ -2,9 +2,11 @@
 
 Obtains the network information.
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface NetworkInformation--><!--Device-radio-export interface NetworkInformation-End-->
 
@@ -28,9 +30,11 @@ Indicates the name of the operator.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformation-operatorName: string--><!--Device-NetworkInformation-operatorName: string-End-->
 
@@ -48,9 +52,11 @@ Indicates the number of the operator.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformation-operatorNumeric: string--><!--Device-NetworkInformation-operatorNumeric: string-End-->
 
@@ -68,9 +74,11 @@ Indicates the radio Technology.
 
 **Type:** string
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformation-radioTech: string--><!--Device-NetworkInformation-radioTech: string-End-->
 
@@ -88,9 +96,11 @@ Indicates the status of network information.
 
 **Type:** [NetworkInformationState](arkts-telephony-radio-networkinformationstate-e-sys.md)
 
-**Since:** 6
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 6; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NetworkInformation-state: NetworkInformationState--><!--Device-NetworkInformation-state: NetworkInformationState-End-->
 

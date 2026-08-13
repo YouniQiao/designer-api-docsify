@@ -1,7 +1,6 @@
 # CaptureSession
 
-**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and   
-[CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
+**CaptureSession** implements a capture session, which saves all [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instances required to run the camera and requests the camera to complete shooting or video recording.
 
 **Since:** 10
 
@@ -51,8 +50,8 @@ Adds a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instance 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## addOutput
 
@@ -84,8 +83,8 @@ Adds a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) instan
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## beginConfig
 
@@ -111,7 +110,7 @@ Starts configuration for the session.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
+| [7400105](../errorcode-camera.md#7400105-session-configuration-locked) | Session config locked. |
 
 ## commitConfig
 
@@ -127,7 +126,7 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [commitConfig](camera.Session.commitConfig(callback:)
+**Substitutes:** [commitConfig](arkts-camera-camera-session-i.md#commitConfig)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-commitConfig(callback: AsyncCallback<void>): void-End-->
 
@@ -137,14 +136,14 @@ Commits the configuration for this session. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the configuration is successfully committed, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## commitConfig
 
@@ -176,8 +175,8 @@ Commits the configuration for this session. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## getActiveVideoStabilizationMode
 
@@ -209,7 +208,7 @@ Obtains the video stabilization mode in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureBiasRange
 
@@ -241,7 +240,7 @@ Obtains the exposure compensation values of the camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureMode
 
@@ -273,7 +272,7 @@ Obtains the exposure mode in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getExposureValue
 
@@ -305,7 +304,7 @@ Obtains the exposure value in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFlashMode
 
@@ -337,7 +336,7 @@ Obtains the flash mode in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocalLength
 
@@ -369,7 +368,7 @@ Obtains the focal length of the camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusMode
 
@@ -401,7 +400,7 @@ Obtains the focus mode in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getFocusPoint
 
@@ -433,7 +432,7 @@ Obtains the focal point of the camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getMeteringPoint
 
@@ -465,7 +464,7 @@ Obtains the metering point of the camera device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getZoomRatio
 
@@ -497,7 +496,7 @@ Obtains the zoom ratio in use.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## getZoomRatioRange
 
@@ -529,7 +528,7 @@ Obtains the supported zoom ratio range.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## hasFlash
 
@@ -561,7 +560,7 @@ Checks whether the camera device has flash.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isExposureModeSupported
 
@@ -599,7 +598,7 @@ Checks whether an exposure mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isFlashModeSupported
 
@@ -637,7 +636,7 @@ Checks whether the flash mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isFocusModeSupported
 
@@ -675,7 +674,7 @@ Checks whether a focus mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## isVideoStabilizationModeSupported
 
@@ -713,36 +712,9 @@ Checks whether a video stabilization mode is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
-## off('focusStateChange')
-
-```TypeScript
-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
-```
-
-Unsubscribes from focus state change events.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn only, since version 10.
-
-**Deprecated since:** 11
-
-**Substitutes:** [off](camera.VideoSession.off(type:)
-
-<!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
-
-## off('error')
+## off_error
 
 ```TypeScript
 off(type: 'error', callback?: ErrorCallback): void
@@ -756,7 +728,7 @@ Unsubscribes from CaptureSession error events. This API uses a callback to retur
 
 **Deprecated since:** 11
 
-**Substitutes:** [off](camera.VideoSession.off(type:)
+**Substitutes:** [off](arkts-camera-camera-videosession-i.md#off_error)(type: 'error', callback?: ErrorCallback)
 
 <!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-CaptureSession-off(type: 'error', callback?: ErrorCallback): void-End-->
 
@@ -767,19 +739,15 @@ Unsubscribes from CaptureSession error events. This API uses a callback to retur
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## on('focusStateChange')
+## off_focusStateChange
 
 ```TypeScript
-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
+off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 ```
 
-Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Unsubscribes from focus state change events.
 
 **Since:** 10
 
@@ -787,9 +755,9 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](camera.VideoSession.on(type:)
+**Substitutes:** [off](arkts-camera-camera-videosession-i.md#off_error)(type: 'focusStateChange', callback?: AsyncCallback&lt;FocusState&gt;)
 
-<!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+<!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -797,20 +765,16 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | No | Callback used to return the result. If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
-## on('error')
+## on_error
 
 ```TypeScript
 on(type: 'error', callback: ErrorCallback): void
 ```
 
-Subscribes to CaptureSession error events. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+Subscribes to CaptureSession error events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
 
 **Since:** 10
 
@@ -818,7 +782,7 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 
 **Deprecated since:** 11
 
-**Substitutes:** [on](camera.VideoSession.on(type:)
+**Substitutes:** [on](arkts-camera-camera-videosession-i.md#on_error)(type: 'error', callback: ErrorCallback)
 
 <!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-CaptureSession-on(type: 'error', callback: ErrorCallback): void-End-->
 
@@ -829,7 +793,34 @@ Subscribes to CaptureSession error events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'error' | Yes | Event type. The value is fixed at **'error'**. The event can be listened for when a session is created. This event is triggered and the error message is returned when an error occurs during the calling of a session-related API such as [beginConfig](#beginConfig), [commitConfig](#commitConfig), and [addInput](#addInput). |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback used to return an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+
+## on_focusStateChange
+
+```TypeScript
+on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes to focus state change events. This API uses an asynchronous callback to return the result. > **NOTE：**> > Currently, you cannot use **off()** to unregister the callback in the callback method of **on()**.
+
+**Since:** 10
+
+**ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** 11
+
+**Substitutes:** [on](arkts-camera-camera-videosession-i.md#on_error)(type: 'focusStateChange', callback: AsyncCallback&lt;FocusState&gt;)
+
+<!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-CaptureSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'focusStateChange' | Yes | Event type. The value is fixed at **'focusStateChange'**. The event can be listened for when a session is created. This event is triggered only when the camera focus state changes in auto focus mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | Yes | Callback used to return the focus state change. |
 
 ## release
 
@@ -845,7 +836,7 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 **Deprecated since:** 11
 
-**Substitutes:** [release](camera.Session.release(callback:)
+**Substitutes:** [release](arkts-camera-camera-session-i.md#release)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-CaptureSession-release(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-release(callback: AsyncCallback<void>): void-End-->
 
@@ -855,13 +846,13 @@ Releases this session. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session is released successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## release
 
@@ -893,7 +884,7 @@ Releases this session. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## removeInput
 
@@ -925,8 +916,8 @@ Removes a [CameraInput](arkts-camera-camera-camerainput-i.md#CameraInput) instan
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## removeOutput
 
@@ -958,8 +949,8 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) ins
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed. |
 
 ## setExposureBias
 
@@ -967,10 +958,7 @@ Removes a [CameraOutput](arkts-camera-camera-cameraoutput-i.md#CameraOutput) ins
 setExposureBias(exposureBias: number): void
 ```
 
-Sets an exposure compensation value (EV).
-
-Before the setting, you are advised to use   
-[getExposureBiasRange](#getExposureBiasRange) to obtain the supported values.
+Sets an exposure compensation value (EV). Before the setting, you are advised to use [getExposureBiasRange](#getExposureBiasRange) to obtain the supported values.
 
 **Since:** 10
 
@@ -994,7 +982,7 @@ Before the setting, you are advised to use
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setExposureMode
 
@@ -1002,8 +990,7 @@ Before the setting, you are advised to use
 setExposureMode(aeMode: ExposureMode): void
 ```
 
-Sets an exposure mode. Before the setting, call   
-[isExposureModeSupported](#isExposureModeSupported) to check whether the target exposure mode is supported.
+Sets an exposure mode. Before the setting, call [isExposureModeSupported](#isExposureModeSupported) to check whether the target exposure mode is supported.
 
 **Since:** 10
 
@@ -1027,7 +1014,7 @@ Sets an exposure mode. Before the setting, call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFlashMode
 
@@ -1035,11 +1022,7 @@ Sets an exposure mode. Before the setting, call
 setFlashMode(flashMode: FlashMode): void
 ```
 
-Sets a flash mode.
-
-Before the setting, do the following checks:
-
-1. Use [hasFlash](#hasFlash) to check whether the camera device has flash.2. Use [isFlashModeSupported](#isFlashModeSupported) to check whether the camera device supports the flash mode.
+Sets a flash mode. Before the setting, do the following checks: 1. Use [hasFlash](#hasFlash) to check whether the camera device has flash. 2. Use [isFlashModeSupported](#isFlashModeSupported) to check whether the camera device supports the flash mode.
 
 **Since:** 10
 
@@ -1063,7 +1046,7 @@ Before the setting, do the following checks:
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFocusMode
 
@@ -1071,9 +1054,7 @@ Before the setting, do the following checks:
 setFocusMode(afMode: FocusMode): void
 ```
 
-Sets a focus mode.
-
-Before the setting, call [isFocusModeSupported](#isFocusModeSupported) to check whether the focus mode is supported.
+Sets a focus mode. Before the setting, call [isFocusModeSupported](#isFocusModeSupported) to check whether the focus mode is supported.
 
 **Since:** 10
 
@@ -1097,7 +1078,7 @@ Before the setting, call [isFocusModeSupported](#isFocusModeSupported) to check 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setFocusPoint
 
@@ -1105,9 +1086,7 @@ Before the setting, call [isFocusModeSupported](#isFocusModeSupported) to check 
 setFocusPoint(point: Point): void
 ```
 
-Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0}and the bottom-right corner is {1, 1}.
-
-The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the focal point. The focal point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -1131,7 +1110,7 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setMeteringPoint
 
@@ -1139,9 +1118,7 @@ The coordinate system is based on the horizontal device direction with the devic
 setMeteringPoint(point: Point): void
 ```
 
-Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}.
-
-The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
+Sets the metering point, which is the center point of the metering rectangle. The metering point must be in the coordinate system (0-1), where the top-left corner is {0, 0} and the bottom-right corner is {1, 1}. The coordinate system is based on the horizontal device direction with the device's charging port on the right. If the layout of the preview screen of an application is based on the vertical direction with the charging port on the lower side, the layout width and height are {w, h}, and the touch point is {x, y}, then the coordinate point after conversion is {y/h, 1-x/w}.
 
 **Since:** 10
 
@@ -1165,7 +1142,7 @@ The coordinate system is based on the horizontal device direction with the devic
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setVideoStabilizationMode
 
@@ -1173,8 +1150,7 @@ The coordinate system is based on the horizontal device direction with the devic
 setVideoStabilizationMode(mode: VideoStabilizationMode): void
 ```
 
-Sets a video stabilization mode. Before the setting, call   
-[isVideoStabilizationModeSupported](#isVideoStabilizationModeSupported) to check whether the target video stabilization mode is supported.
+Sets a video stabilization mode. Before the setting, call [isVideoStabilizationModeSupported](#isVideoStabilizationModeSupported) to check whether the target video stabilization mode is supported.
 
 **Since:** 10
 
@@ -1198,7 +1174,7 @@ Sets a video stabilization mode. Before the setting, call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## setZoomRatio
 
@@ -1230,7 +1206,7 @@ Sets a zoom ratio, with a maximum precision of two decimal places.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
 
 ## start
 
@@ -1246,7 +1222,7 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 **Deprecated since:** 11
 
-**Substitutes:** [start](camera.Session.start(callback:)
+**Substitutes:** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-CaptureSession-start(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-start(callback: AsyncCallback<void>): void-End-->
 
@@ -1256,14 +1232,14 @@ Starts this session. This API uses an asynchronous callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session starts successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## start
 
@@ -1295,8 +1271,8 @@ Starts this session. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-session-not-configured) | Session not config. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## stop
 
@@ -1312,7 +1288,7 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 11
 
-**Substitutes:** [stop](camera.Session.stop(callback:)
+**Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void--><!--Device-CaptureSession-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -1322,13 +1298,13 @@ Stops this session. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the session stops successfully, **err** is **undefined**; otherwise, **err** is an error object with an error code defined in [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 
 ## stop
 
@@ -1360,5 +1336,5 @@ Stops this session. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
 

@@ -1,12 +1,12 @@
 # ProcessManager
 
-Provides APIs for throwing exceptions during the addition of a process.
-
-Construct a **ProcessManager** object.
+Provides APIs for throwing exceptions during the addition of a process. Construct a **ProcessManager** object.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-process-export class ProcessManager--><!--Device-process-export class ProcessManager-End-->
 
@@ -24,13 +24,13 @@ import { process } from '@kit.ArkTS';
 exit(code: number): void
 ```
 
-Terminates this process.
-
-Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
+Terminates this process. Exercise caution when using this API. After this API is called, the application exits. If the input parameter is not 0, data loss or exceptions may occur.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -57,16 +57,13 @@ pro.exit(0);
 getEnvironmentVar(name: string): string
 ```
 
-Obtains the value of an environment variable.
-
-> **NOTE：**
-> 
-> Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is
-> returned.
+Obtains the value of an environment variable. > **NOTE：**> > Obtains the value of an environment variable. If the environment variable does not exist, **undefined** is > returned.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,6 +101,8 @@ Obtains the system configuration.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -143,6 +142,8 @@ Obtains the thread priority based on the specified TID.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ProcessManager-getThreadPriority(v: number): number--><!--Device-ProcessManager-getThreadPriority(v: number): number-End-->
@@ -181,6 +182,8 @@ Obtains the UID of a user from the user database of the system based on the spec
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ProcessManager-getUidForName(v: string): number--><!--Device-ProcessManager-getUidForName(v: string): number-End-->
@@ -217,6 +220,8 @@ Checks whether a UID belongs to this application.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -257,6 +262,8 @@ Sends a signal to the specified process to terminate it. Only the current proces
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

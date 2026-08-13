@@ -10,6 +10,8 @@ type NonSendableValues = Array<relationalStore.ValueType>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-sendableRelationalStore-type NonSendableValues = Array<relationalStore.ValueType>--><!--Device-sendableRelationalStore-type NonSendableValues = Array<relationalStore.ValueType>-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core

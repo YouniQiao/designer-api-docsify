@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface UserAuthResult--><!--Device-abilityToolAccessCtrl-interface UserAuthResult-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -22,6 +24,8 @@ permissionInfo: PermissionInfo[]
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-UserAuthResult-permissionInfo: PermissionInfo[]--><!--Device-UserAuthResult-permissionInfo: PermissionInfo[]-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -39,6 +43,8 @@ permissionQuery: PermissionQuery
 **类型：** [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-UserAuthResult-permissionQuery: PermissionQuery--><!--Device-UserAuthResult-permissionQuery: PermissionQuery-End-->
 

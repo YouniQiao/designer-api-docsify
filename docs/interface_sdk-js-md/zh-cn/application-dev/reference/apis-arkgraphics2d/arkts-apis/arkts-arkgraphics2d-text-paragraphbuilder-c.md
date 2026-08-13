@@ -1,13 +1,12 @@
 # ParagraphBuilder
 
-段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)和  
-[FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection)初始化ParagraphBuilder，然后通过  
-[pushStyle](#pushStyle)设置文本样式、[addText](#addText)添加文本内容，最终调用  
-[build()](#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)对象进行排版和绘制。
+段落生成器，采用建造者模式构建段落对象。开发者通过构造函数传入[ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)和 [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection)初始化ParagraphBuilder，然后通过 [pushStyle](#pushStyle)设置文本样式、[addText](#addText)添加文本内容，最终调用 [build()](#build)接口生成[Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph)对象进行排版和绘制。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-text-class ParagraphBuilder--><!--Device-text-class ParagraphBuilder-End-->
 
@@ -21,9 +20,11 @@ addPlaceholder(placeholderSpan: PlaceholderSpan): void
 
 用于构建文本段落时插入占位符。插入后，占位符将在段落排版中按照指定的宽度、高度和对齐方式占据相应空间，并影响文本的换行和布局。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -112,21 +113,17 @@ struct Index {
 
 ## addSymbol
 
-ArkTS-Dyn:
-```TypeScript
-addSymbol(symbolId: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 addSymbol(symbolId: int): void
 ```
 
 向正在构建的文本段落中插入具体符号。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -138,7 +135,7 @@ addSymbol(symbolId: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| symbolId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 要设置的symbol码位，十六进制，当前支持的取值范围为：0xF0000-0xF0C97。可设置的symbol码位（即列表视图下的unicode值）请见 [主题图标库](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol/)。 |
+| symbolId | int | 是 | 要设置的symbol码位，十六进制，当前支持的取值范围为：0xF0000-0xF0C97。可设置的symbol码位（即列表视图下的unicode值）请见 [主题图标库](https://developer.huawei.com/consumer/cn/design/harmonyos-symbol/)。 |
 
 ## 示例
 
@@ -219,9 +216,11 @@ addText(text: string): void
 
 向正在构建的文本段落中插入具体的文本字符串。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -312,9 +311,11 @@ build(): Paragraph
 
 用于构建段落，生成可用于后续排版渲染的段落对象。调用build()后，如需再次构建文本，必须创建新的ParagraphBuilder实例。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -407,9 +408,11 @@ buildLineTypeset(): LineTypeset
 
 构建行排版器，生成可用于逐行排版计算的LineTypeset对象。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -492,9 +495,11 @@ constructor(paragraphStyle: ParagraphStyle, fontCollection: FontCollection)
 
 ParagraphBuilder对象的构造函数。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -582,16 +587,13 @@ struct Index {
 popStyle(): void
 ```
 
-弹出当前文本样式。
+弹出当前文本样式。 > **说明：** > > 必须在调用[pushStyle()](#pushStyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用 > [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中的textStyle作为默认样式。
 
-> **说明：**
-> 
-> 必须在调用[pushStyle()](#pushStyle)之后才能调用此方法。调用后，后续添加的文本将使用弹出前的文本样式。如果样式栈为空，将使用
-> [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle)中的textStyle作为默认样式。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -676,15 +678,13 @@ struct Index {
 pushStyle(textStyle: TextStyle): void
 ```
 
-更新当前文本块的样式。
+更新当前文本块的样式。 > **说明：** > > 更新当前文本块的样式，之后添加文字均采用该样式。
 
-> **说明：**
-> 
-> 更新当前文本块的样式，之后添加文字均采用该样式。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 

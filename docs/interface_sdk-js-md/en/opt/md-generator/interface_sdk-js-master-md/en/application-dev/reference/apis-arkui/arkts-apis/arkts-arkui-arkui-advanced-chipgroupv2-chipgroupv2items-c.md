@@ -2,13 +2,13 @@
 
 Defines items of chip group.
 
-**Inheritance/Implementation:** ChipGroupV2Items extends [Array<ChipGroupV2Item>](Array<ChipGroupV2Item>)
+**Inheritance/Implementation:** ChipGroupV2Items extends Array<ChipGroupV2Item>
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>--><!--Device-unnamed-export declare class ChipGroupV2Items extends Array<ChipGroupV2Item>-End-->
+<!--Device-unnamed-export declare class ChipGroupV2Items--><!--Device-unnamed-export declare class ChipGroupV2Items-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ constructor(items: ChipGroupV2ItemConfig[])
 The constructor of ChipGroupV2Items
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

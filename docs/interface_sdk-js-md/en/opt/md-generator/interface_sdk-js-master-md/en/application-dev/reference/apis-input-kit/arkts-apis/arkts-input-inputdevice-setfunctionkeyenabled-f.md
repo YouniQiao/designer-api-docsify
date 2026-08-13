@@ -14,7 +14,9 @@ function setFunctionKeyEnabled(functionKey: FunctionKey, enabled: boolean): Prom
 
 Specifies whether to enable a function key (for example, **CapsLock**). This API uses a promise to return the result.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INPUT_KEYBOARD_CONTROLLER
 
@@ -39,10 +41,10 @@ Specifies whether to enable a function key (for example, **CapsLock**). This API
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [3900003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900003-api-call-failed-for-a-noninput-application) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [3900002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-input-kit/errorcode-inputdevice.md#3900002-keyboard-not-connected) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3900003](../errorcode-inputdevice.md#3900003-api-call-failed-for-a-noninput-application) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [3900002](../errorcode-inputdevice.md#3900002-keyboard-not-connected) |
 
 ## Examples
 

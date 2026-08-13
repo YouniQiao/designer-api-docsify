@@ -4,6 +4,8 @@ Defines the input method client type bound to an input component.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface IMEClient--><!--Device-unnamed-declare interface IMEClient-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ setExtraConfig(config: InputMethodExtraConfig): void
 Sets the extension configuration of an input method.
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,6 +47,8 @@ Unique ID of the current input component. The value must be greater than or equa
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 hap级别的快速修复信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-quickFixManager-export interface HapModuleQuickFixInfo--><!--Device-quickFixManager-export interface HapModuleQuickFixInfo-End-->
 
@@ -20,7 +22,9 @@ HAP的名称。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapModuleQuickFixInfo-readonly moduleName: string--><!--Device-HapModuleQuickFixInfo-readonly moduleName: string-End-->
 
@@ -38,7 +42,9 @@ readonly originHapHash: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapModuleQuickFixInfo-readonly originHapHash: string--><!--Device-HapModuleQuickFixInfo-readonly originHapHash: string-End-->
 
@@ -56,7 +62,9 @@ readonly quickFixFilePath: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-HapModuleQuickFixInfo-readonly quickFixFilePath: string--><!--Device-HapModuleQuickFixInfo-readonly quickFixFilePath: string-End-->
 

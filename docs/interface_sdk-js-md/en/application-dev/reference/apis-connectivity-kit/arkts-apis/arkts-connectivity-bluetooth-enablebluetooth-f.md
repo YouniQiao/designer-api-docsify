@@ -20,7 +20,7 @@ Enables Bluetooth on a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [enableBluetooth](ohos.bluetoothManager/bluetoothManager.enableBluetooth)
+**Substitutes:** [enableBluetooth](arkts-connectivity-bluetoothmanager-enablebluetooth-f.md#enableBluetooth)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH
 

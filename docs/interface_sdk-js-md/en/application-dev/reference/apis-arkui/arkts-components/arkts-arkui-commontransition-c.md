@@ -6,7 +6,9 @@ Defines a common transition animation for page transitions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
-<!--Device-unnamed-declare class CommonTransition<T>--><!--Device-unnamed-declare class CommonTransition<T>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class CommonTransition--><!--Device-unnamed-declare class CommonTransition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +23,8 @@ A constructor used to create a common transition animation.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -39,6 +43,8 @@ Sets the starting opacity value for entrance or the ending opacity value for exi
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -70,6 +76,8 @@ Sets the scaling effect for page transitions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonTransition-scale(value: ScaleOptions): T--><!--Device-CommonTransition-scale(value: ScaleOptions): T-End-->
@@ -100,6 +108,8 @@ Sets the slide-in and slide-out effects for page transitions.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonTransition-slide(value: SlideEffect): T--><!--Device-CommonTransition-slide(value: SlideEffect): T-End-->
@@ -129,6 +139,8 @@ Sets the translation effect for page transitions.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -20,7 +20,10 @@
     - [isOpenTouchGuideSync](arkts-accessibility-accessibility-isopentouchguidesync-f.md)
     - [isScreenReaderOpenSync](arkts-accessibility-accessibility-isscreenreaderopensync-f.md)
     - [isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md)
-    - [off](arkts-accessibility-accessibility-off-f.md)
+    - [off_accessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md)
+    - [off_screenReaderStateChange](arkts-accessibility-accessibility-offscreenreaderstatechange-f.md)
+    - [off_touchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md)
+    - [off_touchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md)
     - [offAccessibilityStateChange](arkts-accessibility-accessibility-offaccessibilitystatechange-f.md)
     - [offAnimationReduceStateChange](arkts-accessibility-accessibility-offanimationreducestatechange-f.md)
     - [offAudioMonoStateChange](arkts-accessibility-accessibility-offaudiomonostatechange-f.md)
@@ -30,7 +33,10 @@
     - [offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md)
     - [offTouchGuideStateChange](arkts-accessibility-accessibility-offtouchguidestatechange-f.md)
     - [offTouchModeChange](arkts-accessibility-accessibility-offtouchmodechange-f.md)
-    - [on](arkts-accessibility-accessibility-on-f.md)
+    - [on_accessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md)
+    - [on_screenReaderStateChange](arkts-accessibility-accessibility-onscreenreaderstatechange-f.md)
+    - [on_touchGuideStateChange](arkts-accessibility-accessibility-ontouchguidestatechange-f.md)
+    - [on_touchModeChange](arkts-accessibility-accessibility-ontouchmodechange-f.md)
     - [onAccessibilityStateChange](arkts-accessibility-accessibility-onaccessibilitystatechange-f.md)
     - [onAnimationReduceStateChange](arkts-accessibility-accessibility-onanimationreducestatechange-f.md)
     - [onAudioMonoStateChange](arkts-accessibility-accessibility-onaudiomonostatechange-f.md)
@@ -80,7 +86,9 @@
   <!--Del-->
   - [getSeniorModeStateForApp(系统接口)](arkts-accessibility-config-getseniormodestateforapp-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [off(系统接口)](arkts-accessibility-config-off-f-sys.md)<!--DelEnd-->
+  - [off_enabledAccessibilityExtensionListChange(系统接口)](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [off_installedAccessibilityListChange(系统接口)](arkts-accessibility-config-offinstalledaccessibilitylistchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offEnabledAccessibilityExtensionListChange(系统接口)](arkts-accessibility-config-offenabledaccessibilityextensionlistchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -88,7 +96,9 @@
   <!--Del-->
   - [offSeniorModeStateChangeForApp(系统接口)](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [on(系统接口)](arkts-accessibility-config-on-f-sys.md)<!--DelEnd-->
+  - [on_enabledAccessibilityExtensionListChange(系统接口)](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [on_installedAccessibilityListChange(系统接口)](arkts-accessibility-config-oninstalledaccessibilitylistchange-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [onEnabledAccessibilityExtensionListChange(系统接口)](arkts-accessibility-config-onenabledaccessibilityextensionlistchange-f-sys.md)<!--DelEnd-->
   <!--Del-->

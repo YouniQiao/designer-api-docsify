@@ -12,7 +12,7 @@ function isBadgeDisplayed(bundle: BundleOption, callback: AsyncCallback<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
+**替代接口：** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function isBadgeDisplayed(bundle: BundleOption): Promise<boolean>
 
 **废弃版本：** 9
 
-**替代接口：** [isBadgeDisplayed](ohos.notificationManager/notificationManager#isBadgeDisplayed)
+**替代接口：** [isBadgeDisplayed](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md#isBadgeDisplayed（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

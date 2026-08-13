@@ -8,7 +8,9 @@ function getStorageDataDir(): Promise<string>
 
 异步方法获取内存存储根目录，使用promise异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Environment-function getStorageDataDir(): Promise<string>--><!--Device-Environment-function getStorageDataDir(): Promise<string>-End-->
 
@@ -27,7 +29,7 @@ function getStorageDataDir(): Promise<string>
 | 错误码ID |
 | --- |
 | 13900020 |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900042 |
 
 
@@ -39,7 +41,9 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 
 异步方法获取内存存储根目录，使用callback异步回调。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void--><!--Device-Environment-function getStorageDataDir(callback: AsyncCallback<string>): void-End-->
 
@@ -58,5 +62,5 @@ function getStorageDataDir(callback: AsyncCallback<string>): void
 | 错误码ID |
 | --- |
 | 13900020 |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 | 13900042 |

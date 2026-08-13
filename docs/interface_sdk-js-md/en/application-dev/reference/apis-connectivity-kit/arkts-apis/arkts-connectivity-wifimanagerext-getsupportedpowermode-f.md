@@ -18,6 +18,8 @@ Obtains the supported power Mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManagerExt-function getSupportedPowerMode(): Promise<Array<PowerMode>>--><!--Device-wifiManagerExt-function getSupportedPowerMode(): Promise<Array<PowerMode>>-End-->
@@ -34,9 +36,9 @@ Obtains the supported power Mode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2701000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 
 ## getSupportedPowerMode
@@ -51,6 +53,8 @@ Obtains the supported power Mode.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 
 <!--Device-wifiManagerExt-function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void--><!--Device-wifiManagerExt-function getSupportedPowerMode(callback: AsyncCallback<Array<PowerMode>>): void-End-->
@@ -61,15 +65,15 @@ Obtains the supported power Mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt;&gt; | Yes | the callback of model. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)&gt;&gt; | Yes | the callback of model. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [2701000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [2701000](../errorcode-wifi.md#2701000-ap-extension-module-error) | Operation failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

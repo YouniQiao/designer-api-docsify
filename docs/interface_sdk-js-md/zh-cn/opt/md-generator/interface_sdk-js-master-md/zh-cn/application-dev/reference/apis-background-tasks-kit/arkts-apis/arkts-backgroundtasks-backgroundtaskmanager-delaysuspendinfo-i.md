@@ -2,7 +2,9 @@
 
 短时任务信息。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-backgroundTaskManager-interface DelaySuspendInfo--><!--Device-backgroundTaskManager-interface DelaySuspendInfo-End-->
 
@@ -14,13 +16,13 @@
 actualDelayTime: number
 ```
 
-Actual duration of the transient task requested by the application, in milliseconds.&lt;br&gt;Unit:ms
-
-**说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md#BatteryCapacityLevel)为LEVEL_LOW）时最长为1分钟。
+Actual duration of the transient task requested by the application, in milliseconds. &lt;br&gt;Unit:ms **说明：** 申请时间最长为3分钟，低电量（[BatteryCapacityLevel](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-batteryinfo-batterycapacitylevel-e.md#BatteryCapacityLevel)为LEVEL_LOW） 时最长为1分钟。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DelaySuspendInfo-actualDelayTime: int--><!--Device-DelaySuspendInfo-actualDelayTime: int-End-->
 
@@ -36,7 +38,9 @@ requestId: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DelaySuspendInfo-requestId: int--><!--Device-DelaySuspendInfo-requestId: int-End-->
 

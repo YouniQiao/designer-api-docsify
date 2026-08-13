@@ -2,7 +2,9 @@
 
 开发者可以从回调函数中获取帧绘制的时间戳信息，包含当前帧到达的时间timestamp和下一帧预期到达的时间targetTimestamp。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-displaySync-interface IntervalInfo--><!--Device-displaySync-interface IntervalInfo-End-->
 
@@ -18,7 +20,9 @@ targetTimestamp: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IntervalInfo-targetTimestamp: long--><!--Device-IntervalInfo-targetTimestamp: long-End-->
 
@@ -34,7 +38,9 @@ timestamp: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-IntervalInfo-timestamp: long--><!--Device-IntervalInfo-timestamp: long-End-->
 

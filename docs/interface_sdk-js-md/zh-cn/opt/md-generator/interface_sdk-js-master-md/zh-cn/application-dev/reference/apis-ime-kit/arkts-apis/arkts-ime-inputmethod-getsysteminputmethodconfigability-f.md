@@ -8,7 +8,9 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 获取系统输入法设置界面Ability信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName--><!--Device-inputMethod-function getSystemInputMethodConfigAbility(): ElementName-End-->
 
@@ -24,7 +26,7 @@ function getSystemInputMethodConfigAbility(): ElementName
 
 | 错误码ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) |
 
 ## 示例
 

@@ -4,7 +4,9 @@ Returns the result of companion device selection. It is used to return the devic
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-companionDeviceAuth-interface DeviceSelectResult--><!--Device-companionDeviceAuth-interface DeviceSelectResult-End-->
 
@@ -24,14 +26,15 @@ import { companionDeviceAuth } from '@kit.UserAuthenticationKit';
 deviceKeys: DeviceKey[]
 ```
 
-Device information list. It contains the device service identifier information selected by the user. Each  
-**DeviceKey** contains the device ID type, device ID, and device user ID. The system will perform subsequent operations such as adding a template or performing authentication based on this information.
+Device information list. It contains the device service identifier information selected by the user. Each **DeviceKey** contains the device ID type, device ID, and device user ID. The system will perform subsequent operations such as adding a template or performing authentication based on this information.
 
 **Type:** [DeviceKey](arkts-userauthentication-companiondeviceauth-devicekey-i-sys.md)[]
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -53,7 +56,9 @@ Device selection context. It carries extension information in JSON format and ca
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

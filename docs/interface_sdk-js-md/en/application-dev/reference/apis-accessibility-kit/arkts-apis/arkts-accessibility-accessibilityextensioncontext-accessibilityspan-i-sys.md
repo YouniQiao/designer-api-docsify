@@ -1,11 +1,12 @@
 # AccessibilitySpan (System API)
 
-Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in   
-[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
+Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface AccessibilitySpan--><!--Device-unnamed-interface AccessibilitySpan-End-->
 
@@ -23,9 +24,11 @@ Accessibility description of the hyperlink.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-accessibilityDescription: string--><!--Device-AccessibilitySpan-accessibilityDescription: string-End-->
 
@@ -43,9 +46,11 @@ Accessibility level of the hyperlink.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-accessibilityLevel: string--><!--Device-AccessibilitySpan-accessibilityLevel: string-End-->
 
@@ -63,9 +68,11 @@ Accessibility text of the hyperlink.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-accessibilityText: string--><!--Device-AccessibilitySpan-accessibilityText: string-End-->
 
@@ -81,11 +88,13 @@ spanId: int
 
 Hyperlink ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-spanId: int--><!--Device-AccessibilitySpan-spanId: int-End-->
 
@@ -103,9 +112,11 @@ Text content of the hyperlink.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilitySpan-spanText: string--><!--Device-AccessibilitySpan-spanText: string-End-->
 

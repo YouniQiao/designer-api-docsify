@@ -8,7 +8,9 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 创建HdrBrightnessBlender实例用于给组件添加支持HDR的提亮效果。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender--><!--Device-uiEffect-function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnessBlender-End-->
 
@@ -32,7 +34,7 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

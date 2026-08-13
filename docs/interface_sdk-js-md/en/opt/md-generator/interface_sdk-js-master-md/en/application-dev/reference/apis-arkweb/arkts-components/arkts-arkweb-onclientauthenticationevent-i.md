@@ -4,6 +4,8 @@ Defines the triggered callback when needs ssl client certificate from the user.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnClientAuthenticationEvent--><!--Device-unnamed-declare interface OnClientAuthenticationEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ Notifies the user of the operation behavior of the web component.
 **Type:** [ClientAuthenticationHandler](arkts-arkweb-clientauthenticationhandler-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -38,6 +42,8 @@ The hostname of the requesting certificate server.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnClientAuthenticationEvent-host : string--><!--Device-OnClientAuthenticationEvent-host : string-End-->
@@ -55,6 +61,8 @@ Certificates that match the private key are acceptable to the issuer.
 **Type:** Array&lt;string&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -74,6 +82,8 @@ Acceptable asymmetric key types.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnClientAuthenticationEvent-keyTypes : Array<string>--><!--Device-OnClientAuthenticationEvent-keyTypes : Array<string>-End-->
@@ -91,6 +101,8 @@ The port number of the request certificate server.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

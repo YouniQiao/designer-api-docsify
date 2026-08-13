@@ -8,7 +8,7 @@ Describes the parameters of the of the Gatt client's characteristic write reques
 
 **Deprecated since:** 9
 
-**Substitutes:** [CharacteristicWriteRequest](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest)
+**Substitutes:** [CharacteristicWriteRequest](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#CharacteristicWriteRequest)
 
 <!--Device-bluetooth-interface CharacteristicWriteReq--><!--Device-bluetooth-interface CharacteristicWriteReq-End-->
 
@@ -36,7 +36,7 @@ The UUID of a CharacteristicWriteReq instance
 
 **Deprecated since:** 9
 
-**Substitutes:** [characteristicUuid](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.characteristicUuid)
+**Substitutes:** [characteristicUuid](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#characteristicUuid)
 
 <!--Device-CharacteristicWriteReq-characteristicUuid: string--><!--Device-CharacteristicWriteReq-characteristicUuid: string-End-->
 
@@ -58,7 +58,7 @@ Indicates the address of the client that initiates the write request
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#deviceId)
 
 <!--Device-CharacteristicWriteReq-deviceId: string--><!--Device-CharacteristicWriteReq-deviceId: string-End-->
 
@@ -80,7 +80,7 @@ Whether this request should be pending for later operation
 
 **Deprecated since:** 9
 
-**Substitutes:** [isPrep](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.isPrep)
+**Substitutes:** [isPrep](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#isPrep)
 
 <!--Device-CharacteristicWriteReq-isPrep: boolean--><!--Device-CharacteristicWriteReq-isPrep: boolean-End-->
 
@@ -102,7 +102,7 @@ Whether the remote client need a response
 
 **Deprecated since:** 9
 
-**Substitutes:** [needRsp](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.needRsp)
+**Substitutes:** [needRsp](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#needRsp)
 
 <!--Device-CharacteristicWriteReq-needRsp: boolean--><!--Device-CharacteristicWriteReq-needRsp: boolean-End-->
 
@@ -124,7 +124,7 @@ Indicates the byte offset of the start position for writing characteristic value
 
 **Deprecated since:** 9
 
-**Substitutes:** [offset](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.offset)
+**Substitutes:** [offset](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#offset)
 
 <!--Device-CharacteristicWriteReq-offset: number--><!--Device-CharacteristicWriteReq-offset: number-End-->
 
@@ -146,7 +146,7 @@ The UUID of the service to which the characteristic belongs
 
 **Deprecated since:** 9
 
-**Substitutes:** [serviceUuid](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.serviceUuid)
+**Substitutes:** [serviceUuid](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#serviceUuid)
 
 <!--Device-CharacteristicWriteReq-serviceUuid: string--><!--Device-CharacteristicWriteReq-serviceUuid: string-End-->
 
@@ -168,7 +168,7 @@ The Id of the write request
 
 **Deprecated since:** 9
 
-**Substitutes:** [transId](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.transId)
+**Substitutes:** [transId](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#transId)
 
 <!--Device-CharacteristicWriteReq-transId: number--><!--Device-CharacteristicWriteReq-transId: number-End-->
 
@@ -190,7 +190,7 @@ Indicates the value to be written
 
 **Deprecated since:** 9
 
-**Substitutes:** [value](ohos.bluetoothManager/bluetoothManager.CharacteristicWriteRequest.value)
+**Substitutes:** [value](arkts-connectivity-bluetoothmanager-characteristicwriterequest-i.md#value)
 
 <!--Device-CharacteristicWriteReq-value: ArrayBuffer--><!--Device-CharacteristicWriteReq-value: ArrayBuffer-End-->
 

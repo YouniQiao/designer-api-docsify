@@ -2,9 +2,11 @@
 
 Describes an uninstallation disposed rule.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appControl-export interface UninstallDisposedRule--><!--Device-appControl-export interface UninstallDisposedRule-End-->
 
@@ -24,13 +26,15 @@ import { appControl } from '@kit.AbilityKit';
 priority: int
 ```
 
-Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer.A smaller value indicates a higher priority.
+Priority of the disposed rule, which is used to sort the query results of the rule list. The value is an integer. A smaller value indicates a higher priority.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UninstallDisposedRule-priority: int--><!--Device-UninstallDisposedRule-priority: int-End-->
 
@@ -48,9 +52,11 @@ Type of the ability to start during interception.
 
 **Type:** [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UninstallDisposedRule-uninstallComponentType: UninstallComponentType--><!--Device-UninstallDisposedRule-uninstallComponentType: UninstallComponentType-End-->
 
@@ -68,9 +74,11 @@ Component displayed when the application is disposed of.
 
 **Type:** [Want](arkts-ability-app-ability-want-want-c.md)
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-UninstallDisposedRule-want: Want--><!--Device-UninstallDisposedRule-want: Want-End-->
 

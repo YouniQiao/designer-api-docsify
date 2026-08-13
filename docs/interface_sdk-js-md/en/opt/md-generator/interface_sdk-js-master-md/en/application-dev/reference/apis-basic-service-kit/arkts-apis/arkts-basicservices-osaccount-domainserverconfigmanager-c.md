@@ -2,7 +2,9 @@
 
 Provides APIs for domain server configuration and management.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-class DomainServerConfigManager--><!--Device-osAccount-class DomainServerConfigManager-End-->
 
@@ -24,6 +26,8 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
@@ -34,7 +38,7 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 
 **Return value:**
 
@@ -46,11 +50,11 @@ Adds domain server configuration. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300215 |
 | 12300213 |
 
@@ -71,6 +75,48 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
 });
 ```
 
+## addServerConfig
+
+```TypeScript
+static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>
+```
+
+Adds domain server configuration. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static addServerConfig(parameters: Record<string, RecordData>): Promise<DomainServerConfig>-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 12300211 |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| 12300215 |
+| 12300213 |
+
 ## getAccountServerConfig
 
 ```TypeScript
@@ -79,7 +125,9 @@ static getAccountServerConfig(domainAccountInfo: DomainAccountInfo): Promise<Dom
 
 Obtains the server configuration of a domain account. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -103,10 +151,10 @@ Obtains the server configuration of a domain account. This API uses a promise to
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -133,7 +181,9 @@ static getAllServerConfigs(): Promise<Array<DomainServerConfig>>
 
 Obtains the configurations of all domain servers. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -151,9 +201,9 @@ Obtains the configurations of all domain servers. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -185,7 +235,9 @@ static getServerConfig(configId: string): Promise<DomainServerConfig>
 
 Obtains the domain server configuration. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -209,9 +261,9 @@ Obtains the domain server configuration. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300212 |
 
 ## Examples
@@ -244,7 +296,9 @@ static removeServerConfig(configId: string): Promise<void>
 
 Removes domain server configuration. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
@@ -268,9 +322,9 @@ Removes domain server configuration. This API uses a promise to return the resul
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300214 |
 | 12300212 |
 
@@ -303,6 +357,8 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
 
 <!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, Object>): Promise<DomainServerConfig>-End-->
@@ -314,7 +370,7 @@ Updates the domain server configuration. This API uses a promise to return the r
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | [configId](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
-| parameters | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 
 **Return value:**
 
@@ -326,11 +382,11 @@ Updates the domain server configuration. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 12300211 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 | 12300214 |
 | 12300213 |
 | 12300212 |
@@ -356,3 +412,47 @@ osAccount.DomainServerConfigManager.addServerConfig(configParams).then((
   console.error(`add server configuration failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+## updateServerConfig
+
+```TypeScript
+static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>
+```
+
+Updates the domain server configuration. This API uses a promise to return the result.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.MANAGE_DOMAIN_ACCOUNT_SERVER_CONFIGS
+
+<!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>--><!--Device-DomainServerConfigManager-static updateServerConfig(configId: string, parameters: Record<string, RecordData>): Promise<DomainServerConfig>-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| [configId](../../apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-hiappevent-processor-i.md) | string | Yes |
+| parameters | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise&lt;[DomainServerConfig](arkts-basicservices-osaccount-domainserverconfig-i.md)&gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| 12300211 |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| 12300214 |
+| 12300213 |
+| 12300212 |

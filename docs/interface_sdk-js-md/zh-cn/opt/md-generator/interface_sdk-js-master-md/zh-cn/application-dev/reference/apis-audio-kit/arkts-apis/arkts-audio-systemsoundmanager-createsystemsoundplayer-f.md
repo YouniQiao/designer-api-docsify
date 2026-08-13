@@ -10,6 +10,8 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>--><!--Device-systemSoundManager-function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>-End-->
 
 **系统能力：** SystemCapability.Multimedia.SystemSound.Core
@@ -24,7 +26,7 @@ function createSystemSoundPlayer(): Promise<SystemSoundPlayer | null>
 
 | 错误码ID |
 | --- |
-| [5400101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
+| [5400101](../../apis-media-kit/errorcode-media.md#5400101-内存分配失败) |
 
 ## 示例
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export interface TimeZoneCityItem--><!--Device-i18n-export interface TimeZoneCityItem-End-->
 
@@ -24,7 +26,9 @@ cityDisplayName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TimeZoneCityItem-cityDisplayName: string--><!--Device-TimeZoneCityItem-cityDisplayName: string-End-->
 
@@ -44,7 +48,9 @@ cityId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TimeZoneCityItem-cityId: string--><!--Device-TimeZoneCityItem-cityId: string-End-->
 
@@ -64,7 +70,9 @@ offset: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TimeZoneCityItem-offset: int--><!--Device-TimeZoneCityItem-offset: int-End-->
 
@@ -84,7 +92,9 @@ rawOffset?: int
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TimeZoneCityItem-rawOffset?: int--><!--Device-TimeZoneCityItem-rawOffset?: int-End-->
 
@@ -104,7 +114,9 @@ zoneDisplayName: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TimeZoneCityItem-zoneDisplayName: string--><!--Device-TimeZoneCityItem-zoneDisplayName: string-End-->
 
@@ -124,7 +136,9 @@ zoneId: string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-TimeZoneCityItem-zoneId: string--><!--Device-TimeZoneCityItem-zoneId: string-End-->
 

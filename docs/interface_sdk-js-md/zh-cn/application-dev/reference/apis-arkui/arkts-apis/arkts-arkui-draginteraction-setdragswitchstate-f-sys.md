@@ -8,9 +8,11 @@ function setDragSwitchState(enabled: boolean): void
 
 控制统一拖拽功能总开关。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-dragInteraction-function setDragSwitchState(enabled: boolean): void--><!--Device-dragInteraction-function setDragSwitchState(enabled: boolean): void-End-->
 
@@ -28,5 +30,5 @@ function setDragSwitchState(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 

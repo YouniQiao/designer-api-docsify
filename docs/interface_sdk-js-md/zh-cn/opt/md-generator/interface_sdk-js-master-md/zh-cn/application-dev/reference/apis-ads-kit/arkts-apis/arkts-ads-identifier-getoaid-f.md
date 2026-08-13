@@ -6,13 +6,11 @@
 function getOAID(callback: AsyncCallback<string>): void
 ```
 
-获取开放匿名设备标识符（OAID）。使用callback异步回调。
-
-> **说明：**
-> 
-> 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
+获取开放匿名设备标识符（OAID）。使用callback异步回调。 > **说明：** > > 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.APP_TRACKING_CONSENT
 
@@ -30,7 +28,7 @@ function getOAID(callback: AsyncCallback<string>): void
 
 | 错误码ID |
 | --- |
-| [17300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-系统内部错误) |
+| [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
 
 ## 示例
 
@@ -54,13 +52,11 @@ identifier.getOAID((err: BusinessError, data: string) => {
 function getOAID(): Promise<string>
 ```
 
-获取开放匿名设备标识符（OAID）。使用Promise异步回调。
-
-> **说明：**
-> 
-> 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
+获取开放匿名设备标识符（OAID）。使用Promise异步回调。 > **说明：** > > 设置项“跨应用关联访问权限”在HarmonyOS NEXT Developer Beta5及更早版本名称为“应用跟踪访问权限”。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.APP_TRACKING_CONSENT
 
@@ -78,7 +74,7 @@ function getOAID(): Promise<string>
 
 | 错误码ID |
 | --- |
-| [17300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-oaid.md#17300001-系统内部错误) |
+| [17300001](../errorcode-oaid.md#17300001-系统内部错误) |
 
 ## 示例
 

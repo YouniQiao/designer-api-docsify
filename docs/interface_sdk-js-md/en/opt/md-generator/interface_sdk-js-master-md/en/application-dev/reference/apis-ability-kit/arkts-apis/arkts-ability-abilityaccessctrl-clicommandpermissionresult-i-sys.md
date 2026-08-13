@@ -4,6 +4,8 @@ Represents the permission information of a single CLI command.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-abilityAccessCtrl-interface CliCommandPermissionResult--><!--Device-abilityAccessCtrl-interface CliCommandPermissionResult-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
@@ -27,6 +29,8 @@ List of CLI permission information that the current CLI command depends on.
 **Type:** Array&lt;[CliPermissionDetail](arkts-ability-abilityaccessctrl-clipermissiondetail-i-sys.md)&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

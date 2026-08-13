@@ -34,7 +34,7 @@ Marshals the sequenceable object into a **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [marshalling](rpc.Parcelable#marshalling(dataOut:)
+**Substitutes:** [marshalling](arkts-ipc-rpc-parcelable-i.md#marshalling)(dataOut: MessageSequence)
 
 <!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean--><!--Device-Sequenceable-marshalling(dataOut: MessageParcel): boolean-End-->
 
@@ -104,7 +104,7 @@ Unmarshals this sequenceable object from a **MessageParcel** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [unmarshalling](rpc.Parcelable#unmarshalling(dataIn:)
+**Substitutes:** [unmarshalling](arkts-ipc-rpc-parcelable-i.md#unmarshalling)(dataIn: MessageSequence)
 
 <!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean--><!--Device-Sequenceable-unmarshalling(dataIn: MessageParcel): boolean-End-->
 

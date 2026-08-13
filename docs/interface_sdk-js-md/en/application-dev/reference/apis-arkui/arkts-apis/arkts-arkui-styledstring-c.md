@@ -6,6 +6,8 @@ StyledString
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class StyledString--><!--Device-unnamed-declare class StyledString-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ A constructor used to create a styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Checks whether this styled string the same as another styled string.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -75,33 +81,13 @@ Checks whether this styled string the same as another styled string.
 static fromHtml(html: string): Promise<StyledString>
 ```
 
-Converts an HTML string into a styled string. Currently, the following HTML tags are supported for conversion: \&lt;p&gt;, \&lt;span&gt;, \&lt;img&gt;, \
-
-, \&lt;strong&gt;, \&lt;b&gt;, \&lt;a&gt;, \&lt;i&gt;, \&lt;em&gt;, \&lt;s&gt;, \&lt;u&gt;, \&lt;del&gt;, \&lt;sup&gt;, \&lt;sub&gt;. The **style** attribute within tags can be converted to the corresponding style in the styled string.
-
-For details about how to use this API, see  
-[Example 12: Implementing Conversion Using fromHtml and toHtml](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
-
-| Tag Name| Description |  
-| ------------- | ---------------------------- |  
-| \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. |  
-| \&lt;span\&gt; | Inline text supporting style configuration. |  
-| \&lt;img\&gt; | Image tag, used to insert an image. |  
-| \&lt;strong\&gt; | Bold text tag. |  
-| &lt;br&gt;&lt;sup&gt;20+&lt;/sup&gt; | Line break tag. |  
-| \&lt;b\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Bold text tag. |  
-| \&lt;a\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Hyperlink tag. |  
-| \&lt;i\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. |  
-| \&lt;em\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. |  
-| \&lt;s\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. |  
-| \&lt;u\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Underline tag, which adds a decorative underline to the text. |  
-| \&lt;del\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. |  
-| \&lt;sup\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Superscript tag. |  
-| \&lt;sub\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Subscript tag. |
+Converts an HTML string into a styled string. Currently, the following HTML tags are supported for conversion: \&lt;p&gt; , \&lt;span&gt;, \&lt;img&gt;, \ , \&lt;strong&gt;, \&lt;b&gt;, \&lt;a&gt;, \&lt;i&gt;, \&lt;em&gt;, \&lt;s&gt;, \&lt;u&gt;, \&lt;del&gt;, \&lt;sup&gt;, \&lt;sub&gt;. The **style** attribute within tags can be converted to the corresponding style in the styled string. For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml] (../../../reference/apis-arkui/arkui-ts/ ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml). | Tag Name| Description | | ------------- | ---------------------------- | | \&lt;p\&gt; | Paragraph tag, which separates text into paragraphs. | | \&lt;span\&gt; | Inline text supporting style configuration. | | \&lt;img\&gt; | Image tag, used to insert an image. | | \&lt;strong\&gt; | Bold text tag. | | &lt;br&gt;&lt;sup&gt;20+&lt;/sup&gt; | Line break tag. | | \&lt;b\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Bold text tag. | | \&lt;a\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Hyperlink tag. | | \&lt;i\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. | | \&lt;em\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Italic text tag. | | \&lt;s\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. | | \&lt;u\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Underline tag, which adds a decorative underline to the text. | | \&lt;del\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Strikethrough tag, which adds a line through the text. | | \&lt;sup\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Superscript tag. | | \&lt;sub\&gt;&lt;sup&gt;20+&lt;/sup&gt; | Subscript tag. |
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -127,8 +113,8 @@ For details about how to use this API, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [170001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [170001](../errorcode-styled-string.md#170001-conversion-error) | Convert Error. |
 
 ## getString
 
@@ -141,6 +127,8 @@ Obtains the text of this styled string.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,13 +150,13 @@ Obtains the text of this styled string.
 getStyles(start: number, length: number, styledKey?: StyledStringKey): Array<SpanStyle>
 ```
 
-Obtains the styles in the specified range of a styled string. The specified range must not exceed the string's length.
-
-This API returns only styles explicitly set by the developer.
+Obtains the styles in the specified range of a styled string. The specified range must not exceed the string's length. This API returns only styles explicitly set by the developer.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -196,7 +184,7 @@ This API returns only styles explicitly set by the developer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## subStyledString
 
@@ -209,6 +197,8 @@ Obtains a substring of this styled string. The specified range must not exceed t
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -235,7 +225,7 @@ Obtains a substring of this styled string. The specified range must not exceed t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## toHtml
 
@@ -243,16 +233,13 @@ Obtains a substring of this styled string. The specified range must not exceed t
 static toHtml(styledString: StyledString): string
 ```
 
-Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey), include: **StyledStringKey.FONT**,  
-**StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**,  
-**StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**.
-
-For details about how to use this API, see  
-[Example 12: Implementing Conversion Using fromHtml and toHtml](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
+Converts a styled string into an HTML-formatted string. The supported styled string keys for conversion, as detailed in [StyledStringKey](arkts-arkui-styledstringkey-e.md#StyledStringKey), include: **StyledStringKey.FONT**, **StyledStringKey.DECORATION**, **StyledStringKey.LETTER_SPACING**, **StyledStringKey.TEXT_SHADOW**, **StyledStringKey.LINE_HEIGHT**, and **StyledStringKey.IMAGE**. For details about how to use this API, see [Example 12: Implementing Conversion Using fromHtml and toHtml](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#example-12-implementing-conversion-using-fromhtml-and-tohtml).
 
 **Since:** 14
 
 **ArkTS mode:** ArkTS-Dyn only, since version 14.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -278,7 +265,7 @@ For details about how to use this API, see
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
 
 ## length
 
@@ -286,17 +273,15 @@ For details about how to use this API, see
 readonly length: number
 ```
 
-Length of the styled string.
-
-**NOTE：**
-
-Both **ImageAttachment** and **CustomSpan** in the styled string are counted as length 1.
+Length of the styled string. **NOTE：**Both **ImageAttachment** and **CustomSpan** in the styled string are counted as length 1.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

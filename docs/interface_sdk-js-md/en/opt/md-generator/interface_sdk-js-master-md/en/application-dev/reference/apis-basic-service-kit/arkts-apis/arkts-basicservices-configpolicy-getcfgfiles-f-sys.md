@@ -12,11 +12,11 @@ import { configPolicy } from '@kit.BasicServicesKit';
 function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of all files with the specified names, in ascending order of priority. This API uses an asynchronous callback to return the result.For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml** and   
-**\/sys_pod/etc/config.xml** in ascending order of priority,   
-**\/system/etc/config.xml, /sys_pod/etc/config.xml** is returned.
+Obtains a list of all files with the specified names, in ascending order of priority. This API uses an asynchronous callback to return the result. For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml** and **\/sys_pod/etc/config.xml** in ascending order of priority, **\/system/etc/config.xml, /sys_pod/etc/config.xml** is returned.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -35,7 +35,7 @@ Obtains a list of all files with the specified names, in ascending order of prio
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## getCfgFiles
@@ -44,12 +44,11 @@ Obtains a list of all files with the specified names, in ascending order of prio
 function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses an asynchronous callback to return the result.For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**,   
-**\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in ascending order of priority, the default opkey of the device is **46060**, and **followMode** is set to   
-**configPolicy.FollowXMode.SIM_DEFAULT**, the return value is   
-**\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
+Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses an asynchronous callback to return the result. For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**, **\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in ascending order of priority, the default opkey of the device is **46060**, and **followMode** is set to **configPolicy.FollowXMode.SIM_DEFAULT**, the return value is **\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -69,7 +68,7 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## getCfgFiles
@@ -78,13 +77,11 @@ Obtains a list of all files of a specified file name based on the provided follo
 function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses an asynchronous callback to return the result.For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**,   
-**\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in ascending order of priority, the opkey of the device card 1 is **46060**, **followMode** is set to   
-**configPolicy.FollowXMode.USER_DEFINED**, and the custom follow rule is   
-**"etc/carrier/\${telephony.sim.opkey0}"**, the return value is   
-**\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
+Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses an asynchronous callback to return the result. For example, if the paths of **config.xml** on the device are **\/system/etc/config.xml**, **\/sys_pod/etc/config.xml**, and **\/sys_pod/etc/carrier/46060/etc/config.xml** in ascending order of priority, the opkey of the device card 1 is **46060**, **followMode** is set to **configPolicy.FollowXMode.USER_DEFINED**, and the custom follow rule is **"etc/carrier/\${telephony.sim.opkey0}"**, the return value is **\/system/etc/config.xml, /sys_pod/etc/config.xml, /sys_pod/etc/carrier/46060/etc/config.xml**.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra: string, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -105,7 +102,7 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## getCfgFiles
@@ -116,7 +113,9 @@ function getCfgFiles(relPath: string): Promise<Array<string>>
 
 Obtains a list of all files with the specified names, in ascending order of priority. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgFiles(relPath: string): Promise<Array<string>>--><!--Device-configPolicy-function getCfgFiles(relPath: string): Promise<Array<string>>-End-->
 
@@ -140,7 +139,7 @@ Obtains a list of all files with the specified names, in ascending order of prio
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 
 ## getCfgFiles
@@ -151,7 +150,9 @@ function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): 
 
 Obtains a list of all files of a specified file name based on the provided follow mode, in ascending order of priority. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>--><!--Device-configPolicy-function getCfgFiles(relPath: string, followMode: FollowXMode, extra?: string): Promise<Array<string>>-End-->
 
@@ -177,4 +178,4 @@ Obtains a list of all files of a specified file name based on the provided follo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |

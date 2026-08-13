@@ -2,27 +2,31 @@
 
 Quick shot photo session object.
 
-**继承/实现关系：** QuickShotPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md#EffectSuggestion), [Flash](arkts-camera-camera-flash-i.md#Flash), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty)
+**继承/实现关系：** QuickShotPhotoSession extends [Session](arkts-camera-camera-session-i.md#Session), [AutoExposure](arkts-camera-camera-autoexposure-i.md#AutoExposure), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect（系统接口）), [ColorManagement](arkts-camera-camera-colormanagement-i.md#ColorManagement), [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md#EffectSuggestion（系统接口）), [Flash](arkts-camera-camera-flash-i.md#Flash), [Focus](arkts-camera-camera-focus-i.md#Focus), [Zoom](arkts-camera-camera-zoom-i.md#Zoom), [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty（系统接口）)
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-camera-interface QuickShotPhotoSession extends Session, AutoExposure, ColorEffect, ColorManagement, EffectSuggestion,    Flash, Focus, Zoom, Beauty--><!--Device-camera-interface QuickShotPhotoSession extends Session, AutoExposure, ColorEffect, ColorManagement, EffectSuggestion,    Flash, Focus, Zoom, Beauty-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface QuickShotPhotoSession--><!--Device-camera-interface QuickShotPhotoSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
 
-## off('error')
+## offEffectSuggestionChange
 
 ```TypeScript
-off(type: 'error', callback?: ErrorCallback): void
+offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void
 ```
 
-Unsubscribes from HighResolutionPhotoSession error events.
+Unsubscribes from effect suggestion change events.
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-QuickShotPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-QuickShotPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-QuickShotPhotoSession-offEffectSuggestionChange(callback?: AsyncCallback<EffectSuggestionType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -32,16 +36,105 @@ Unsubscribes from HighResolutionPhotoSession error events.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'error' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offError
+
+```TypeScript
+offError(callback?: ErrorCallback): void
+```
+
+Unsubscribes from error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-offError(callback?: ErrorCallback): void--><!--Device-QuickShotPhotoSession-offError(callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## off('effectSuggestionChange')
+## offFocusStateChange
+
+```TypeScript
+offFocusStateChange(callback?: AsyncCallback<FocusState>): void
+```
+
+Unsubscribes from focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void--><!--Device-QuickShotPhotoSession-offFocusStateChange(callback?: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## offSmoothZoomInfoAvailable
+
+```TypeScript
+offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Unsubscribes from zoom info event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-QuickShotPhotoSession-offSmoothZoomInfoAvailable(callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_effectSuggestionChange
 
 ```TypeScript
 off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void
@@ -50,6 +143,8 @@ off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionTyp
 Unsubscribes from effect suggestion event callback.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-QuickShotPhotoSession-off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void--><!--Device-QuickShotPhotoSession-off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void-End-->
 
@@ -68,9 +163,40 @@ Unsubscribes from effect suggestion event callback.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## off('focusStateChange')
+## off_error
+
+```TypeScript
+off(type: 'error', callback?: ErrorCallback): void
+```
+
+Unsubscribes from HighResolutionPhotoSession error events.
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-off(type: 'error', callback?: ErrorCallback): void--><!--Device-QuickShotPhotoSession-off(type: 'error', callback?: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## off_focusStateChange
 
 ```TypeScript
 off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
@@ -79,6 +205,8 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 Unsubscribes from focus state change events.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-QuickShotPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void--><!--Device-QuickShotPhotoSession-off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void-End-->
 
@@ -97,9 +225,9 @@ Unsubscribes from focus state change events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## off('smoothZoomInfoAvailable')
+## off_smoothZoomInfoAvailable
 
 ```TypeScript
 off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void
@@ -108,6 +236,8 @@ off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): 
 Unsubscribes from smooth zoom state change events.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-QuickShotPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void--><!--Device-QuickShotPhotoSession-off(type: 'smoothZoomInfoAvailable', callback?: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -126,19 +256,21 @@ Unsubscribes from smooth zoom state change events.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## on('error')
+## onEffectSuggestionChange
 
 ```TypeScript
-on(type: 'error', callback: ErrorCallback): void
+onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void
 ```
 
-Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
+Subscribes to effect suggestion change events.
 
-**起始版本：** 12
+**起始版本：** 23
 
-<!--Device-QuickShotPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-QuickShotPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-QuickShotPhotoSession-onEffectSuggestionChange(callback: AsyncCallback<EffectSuggestionType>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -148,16 +280,105 @@ Subscribes to HighResolutionPhotoSession error events. This API uses an asynchro
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| type | 'error' | 是 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onError
+
+```TypeScript
+onError(callback: ErrorCallback): void
+```
+
+Subscribes to error events.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-onError(callback: ErrorCallback): void--><!--Device-QuickShotPhotoSession-onError(callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## on('effectSuggestionChange')
+## onFocusStateChange
+
+```TypeScript
+onFocusStateChange(callback: AsyncCallback<FocusState>): void
+```
+
+Subscribes focus state change event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void--><!--Device-QuickShotPhotoSession-onFocusStateChange(callback: AsyncCallback<FocusState>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FocusState](arkts-camera-camera-focusstate-e.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## onSmoothZoomInfoAvailable
+
+```TypeScript
+onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void
+```
+
+Subscribes zoom info event callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-QuickShotPhotoSession-onSmoothZoomInfoAvailable(callback: AsyncCallback<SmoothZoomInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmoothZoomInfo](arkts-camera-camera-smoothzoominfo-i.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_effectSuggestionChange
 
 ```TypeScript
 on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void
@@ -166,6 +387,8 @@ on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>
 Subscribes to effect suggestion event callback.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-QuickShotPhotoSession-on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void--><!--Device-QuickShotPhotoSession-on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void-End-->
 
@@ -184,9 +407,40 @@ Subscribes to effect suggestion event callback.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## on('focusStateChange')
+## on_error
+
+```TypeScript
+on(type: 'error', callback: ErrorCallback): void
+```
+
+Subscribes to HighResolutionPhotoSession error events. This API uses an asynchronous callback to return the result.
+
+**起始版本：** 12
+
+**废弃版本：** -1
+
+<!--Device-QuickShotPhotoSession-on(type: 'error', callback: ErrorCallback): void--><!--Device-QuickShotPhotoSession-on(type: 'error', callback: ErrorCallback): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| type | 'error' | 是 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+## on_focusStateChange
 
 ```TypeScript
 on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
@@ -195,6 +449,8 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 Subscribes to focus state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-QuickShotPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void--><!--Device-QuickShotPhotoSession-on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void-End-->
 
@@ -213,9 +469,9 @@ Subscribes to focus state change events. This API uses an asynchronous callback 
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
-## on('smoothZoomInfoAvailable')
+## on_smoothZoomInfoAvailable
 
 ```TypeScript
 on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void
@@ -224,6 +480,8 @@ on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): vo
 Subscribes to smooth zoom state change events. This API uses an asynchronous callback to return the result.
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 <!--Device-QuickShotPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void--><!--Device-QuickShotPhotoSession-on(type: 'smoothZoomInfoAvailable', callback: AsyncCallback<SmoothZoomInfo>): void-End-->
 
@@ -242,4 +500,4 @@ Subscribes to smooth zoom state change events. This API uses an asynchronous cal
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

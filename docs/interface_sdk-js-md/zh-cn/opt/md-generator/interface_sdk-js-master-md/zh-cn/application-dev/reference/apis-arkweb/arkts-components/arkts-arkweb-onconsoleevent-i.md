@@ -4,6 +4,8 @@ Defines the triggered function when the web page receives a JavaScript console m
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OnConsoleEvent--><!--Device-unnamed-declare interface OnConsoleEvent-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ message: ConsoleMessage
 **类型：** [ConsoleMessage](arkts-arkweb-consolemessage-c.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

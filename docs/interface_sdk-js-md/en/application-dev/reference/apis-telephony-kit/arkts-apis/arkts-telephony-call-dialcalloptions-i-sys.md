@@ -2,9 +2,11 @@
 
 Provides an option for determining whether a call is a video call.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-call-export interface DialCallOptions--><!--Device-call-export interface DialCallOptions-End-->
 
@@ -24,16 +26,15 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-Account ID.
+Account ID. - **0**: card slot 1. - **1**: card slot 2.
 
-- **0**: card slot 1.  
-- **1**: card slot 2.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-accountId?: int--><!--Device-DialCallOptions-accountId?: int-End-->
 
@@ -51,9 +52,11 @@ Dialup scenario.
 
 **Type:** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-dialScene?: DialScene--><!--Device-DialCallOptions-dialScene?: DialScene-End-->
 
@@ -71,9 +74,11 @@ Dialup type.
 
 **Type:** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-dialType?: DialType--><!--Device-DialCallOptions-dialType?: DialType-End-->
 
@@ -91,9 +96,11 @@ Indicates the extra call parameters.
 
 **Type:** Record&lt;string, Object&gt;
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-extraParams?: Record<string, Object>--><!--Device-DialCallOptions-extraParams?: Record<string, Object>-End-->
 
@@ -111,9 +118,11 @@ Video state type.
 
 **Type:** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-videoState?: VideoStateType--><!--Device-DialCallOptions-videoState?: VideoStateType-End-->
 
@@ -133,7 +142,9 @@ XCALL type.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-DialCallOptions-xCallType?: XCallType--><!--Device-DialCallOptions-xCallType?: XCallType-End-->
 

@@ -6,6 +6,8 @@ Defines the underline color width property.
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare interface UnderlineColor--><!--Device-unnamed-export declare interface UnderlineColor-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ disable?: ResourceColor | undefined
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -44,6 +48,8 @@ error?: ResourceColor | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UnderlineColor-error?: ResourceColor | undefined--><!--Device-UnderlineColor-error?: ResourceColor | undefined-End-->
@@ -64,6 +70,8 @@ normal?: ResourceColor | undefined
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UnderlineColor-normal?: ResourceColor | undefined--><!--Device-UnderlineColor-normal?: ResourceColor | undefined-End-->
@@ -83,6 +91,8 @@ typing?: ResourceColor | undefined
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,10 +1,12 @@
 # ArcButtonStatus
 
-Defines an arc button status.
+Enumerates the states that can be set for **ArcButton**.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ArcButtonStatus--><!--Device-unnamed-export declare enum ArcButtonStatus-End-->
 
@@ -18,9 +20,13 @@ NORMAL = 0
 
 Normal state.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStatus-NORMAL = 0--><!--Device-ArcButtonStatus-NORMAL = 0-End-->
 
@@ -34,9 +40,13 @@ PRESSED = 1
 
 Pressed state.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStatus-PRESSED = 1--><!--Device-ArcButtonStatus-PRESSED = 1-End-->
 
@@ -50,9 +60,13 @@ DISABLED = 2
 
 Disabled state.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStatus-DISABLED = 2--><!--Device-ArcButtonStatus-DISABLED = 2-End-->
 

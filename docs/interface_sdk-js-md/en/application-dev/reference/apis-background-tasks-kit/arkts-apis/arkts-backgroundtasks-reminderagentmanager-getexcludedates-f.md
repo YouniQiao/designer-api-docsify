@@ -14,9 +14,11 @@ function getExcludeDates(reminderId: int): Promise<Array<Date>>
 
 Obtains all non-reminder dates for a recurring calendar reminder with a specific ID. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function getExcludeDates(reminderId: int): Promise<Array<Date>>--><!--Device-reminderAgentManager-function getExcludeDates(reminderId: int): Promise<Array<Date>>-End-->
 
@@ -26,7 +28,7 @@ Obtains all non-reminder dates for a recurring calendar reminder with a specific
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reminderId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the agent-powered reminder to be queried. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called. |
+| reminderId | int | Yes | ID of the agent-powered reminder to be queried. The reminder ID is returned when the [publishReminder](arkts-backgroundtasks-reminderagentmanager-publishreminder-f.md#publishReminder) API is called. |
 
 **Return value:**
 
@@ -38,8 +40,8 @@ Obtains all non-reminder dates for a recurring calendar reminder with a specific
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied |
-| [1700003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
+| [1700003](../../apis-backgroundtasks-kit/errorcode-reminderAgentManager.md#1700003-nonexistent-reminder) | The reminder does not exist. |
 
 ## Examples
 

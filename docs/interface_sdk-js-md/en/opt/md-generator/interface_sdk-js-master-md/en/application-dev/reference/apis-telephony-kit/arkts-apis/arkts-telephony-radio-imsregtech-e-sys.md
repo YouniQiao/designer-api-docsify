@@ -2,7 +2,9 @@
 
 Indicates IMS registration technology.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export enum ImsRegTech--><!--Device-radio-export enum ImsRegTech-End-->
 
@@ -18,7 +20,9 @@ REGISTRATION_TECH_NONE = 0
 
 Indicates that ims has no registered technology.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImsRegTech-REGISTRATION_TECH_NONE = 0--><!--Device-ImsRegTech-REGISTRATION_TECH_NONE = 0-End-->
 
@@ -34,7 +38,9 @@ REGISTRATION_TECH_LTE = 1
 
 Indicates that ims registers LTE technology.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImsRegTech-REGISTRATION_TECH_LTE = 1--><!--Device-ImsRegTech-REGISTRATION_TECH_LTE = 1-End-->
 
@@ -50,7 +56,9 @@ REGISTRATION_TECH_IWLAN = 2
 
 Indicates that ims registers IWLAN technology.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImsRegTech-REGISTRATION_TECH_IWLAN = 2--><!--Device-ImsRegTech-REGISTRATION_TECH_IWLAN = 2-End-->
 
@@ -66,7 +74,9 @@ REGISTRATION_TECH_NR = 3
 
 Indicates that ims registers NR technology.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ImsRegTech-REGISTRATION_TECH_NR = 3--><!--Device-ImsRegTech-REGISTRATION_TECH_NR = 3-End-->
 

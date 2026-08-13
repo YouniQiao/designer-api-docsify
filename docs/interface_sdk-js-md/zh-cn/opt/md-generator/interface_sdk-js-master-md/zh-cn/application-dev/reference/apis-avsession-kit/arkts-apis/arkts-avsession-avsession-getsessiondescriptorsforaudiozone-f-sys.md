@@ -10,6 +10,8 @@ function getSessionDescriptorsForAudioZone(userId: number): Promise<Array<Readon
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,12 +32,12 @@ function getSessionDescriptorsForAudioZone(userId: number): Promise<Array<Readon
 
 | 类型 |
 | --- |
-| Promise&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i.md)&gt;&gt;&gt; |
+| Promise&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; |
 
 **错误码：**
 
 | 错误码ID |
 | --- |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-会话服务端异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [6600101](../errorcode-avsession.md#6600101-会话服务端异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

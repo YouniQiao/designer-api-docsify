@@ -18,6 +18,8 @@ Creates a UDPSocket object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-function constructUDPSocketInstance(): UDPSocket--><!--Device-socket-function constructUDPSocketInstance(): UDPSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

@@ -8,6 +8,8 @@ The percentage length union type is not supported.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -18,8 +20,8 @@ The percentage length union type is not supported.
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| [PX](arkts-arkui-px-t.md) |
-| [VP](arkts-arkui-vp-t.md) |
-| [FP](arkts-arkui-fp-t.md) |
+| [PX](../../apis-na/arkts-apis/arkts-na-px-t.md) |
+| [VP](../../apis-na/arkts-apis/arkts-na-vp-t.md) |
+| [FP](../../apis-na/arkts-apis/arkts-na-fp-t.md) |
 | [LPX](arkts-arkui-lpx-t.md) |
 | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) |

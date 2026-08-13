@@ -4,7 +4,9 @@ Describes the video Dimensions.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface VideoSize--><!--Device-media-interface VideoSize-End-->
 
@@ -22,13 +24,15 @@ import { media } from '@kit.MediaKit';
 height?: int
 ```
 
-height of the video resolution.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Pixel.
+height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,13 +46,15 @@ height of the video resolution.The value should be an integer.Value constraint:T
 width?: int
 ```
 
-width of the video resolution.The value should be an integer.Value constraint:The value must be a positive integer.&lt;br&gt;Unit:Pixel.
+width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

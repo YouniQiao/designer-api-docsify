@@ -2,9 +2,11 @@
 
 标识卸载时功能组件类型。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-appControl-export enum UninstallComponentType--><!--Device-appControl-export enum UninstallComponentType-End-->
 
@@ -18,13 +20,13 @@
 EXTENSION = 1
 ```
 
-服务扩展能力类型。仅支持service类型的[ExtensionAbility](../../../quick-start/module-configuration-file.md#extensionabilities标签)。
+服务扩展能力类型。仅支持service类型的[ExtensionAbility](../../../quick-start/module-configuration-file.md#extensionabilities标签) 。 被拉起的ExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定。
 
-被拉起的ExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定。
+**起始版本：** 23
 
-**起始版本：** 15
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-UninstallComponentType-EXTENSION = 1--><!--Device-UninstallComponentType-EXTENSION = 1-End-->
 
@@ -38,14 +40,13 @@ EXTENSION = 1
 UI_EXTENSION = 2
 ```
 
-UI扩展能力类型。
+UI扩展能力类型。 被拉起的UIExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定，同时want.parameters中的 ability.want.params.uiExtensionType字段需要配置为 [UIExtensionAbility](../../../application-models/uiextensionability-sys.md)的类型。
 
-被拉起的UIExtensionAbility通过want中bundleName、moduleName、abilityName字段共同确定，同时want.parameters中的ability.want.params.uiExtensionType字段需要配置为  
-[UIExtensionAbility](../../../application-models/uiextensionability-sys.md)的类型。
+**起始版本：** 23
 
-**起始版本：** 22
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为22；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-UninstallComponentType-UI_EXTENSION = 2--><!--Device-UninstallComponentType-UI_EXTENSION = 2-End-->
 

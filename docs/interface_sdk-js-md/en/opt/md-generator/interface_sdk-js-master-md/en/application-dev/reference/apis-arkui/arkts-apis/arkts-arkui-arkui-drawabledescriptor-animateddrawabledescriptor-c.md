@@ -1,13 +1,14 @@
 # AnimatedDrawableDescriptor
 
-Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the [Image](./@internal/component/ets/image) component. It inherits from   
-[DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
+Defines a descriptor object used to play animated content (for example, **PixelMap** arrays or animated image resources) using the Image component. It inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult).
 
 **Inheritance/Implementation:** AnimatedDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 12
 
-<!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor--><!--Device-unnamed-export class AnimatedDrawableDescriptor extends DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class AnimatedDrawableDescriptor--><!--Device-unnamed-export class AnimatedDrawableDescriptor-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +27,8 @@ constructor(pixelMaps: Array<image.PixelMap>, options?: AnimationOptions)
 A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -51,6 +54,8 @@ constructor(src: ResourceStr | Array<image.PixelMap>, options?: AnimationOptions
 A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -109,6 +114,8 @@ Obtains the animation controller for playback control.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -131,7 +138,7 @@ Obtains the animation controller for playback control.
 
 ## Examples
 
-Scenario 1: 1:1 relationship between the [Image](./arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
+Scenario 1: 1:1 relationship between the [Image](../arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';
@@ -165,7 +172,7 @@ struct Example {
 }
 ```
 
-Scenario 2: 1:N relationship between the [Image](./arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
+Scenario 2: 1:N relationship between the [Image](../arkui-ts/ts-basic-components-image.md) component and AnimatedDrawableDescriptor object
 
 ```TypeScript
 import { AnimationOptions, AnimatedDrawableDescriptor, AnimationController } from '@kit.ArkUI';

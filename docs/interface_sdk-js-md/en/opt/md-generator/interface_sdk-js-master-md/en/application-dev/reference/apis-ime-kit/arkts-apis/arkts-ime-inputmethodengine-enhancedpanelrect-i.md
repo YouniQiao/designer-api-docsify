@@ -2,7 +2,9 @@
 
 Indicates the size of the enhanced input method panel, including the custom avoid area and touch area.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethodEngine-export interface EnhancedPanelRect--><!--Device-inputMethodEngine-export interface EnhancedPanelRect-End-->
 
@@ -20,16 +22,15 @@ import { inputMethodEngine } from '@kit.IMEKit';
 fullScreenMode?: boolean
 ```
 
-Indicates whether to enable the full-screen mode. The default value is **false**.
-
-- If the value is **true**, **landscapeRect** and **portraitRect** are optional.  
-- If the value is **false**, **landscapeRect** and **portraitRect** are mandatory.
+Indicates whether to enable the full-screen mode. The default value is **false**. - If the value is **true**, **landscapeRect** and **portraitRect** are optional. - If the value is **false**, **landscapeRect** and **portraitRect** are mandatory.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-fullScreenMode?: boolean--><!--Device-EnhancedPanelRect-fullScreenMode?: boolean-End-->
 
@@ -41,17 +42,15 @@ Indicates whether to enable the full-screen mode. The default value is **false**
 landscapeAvoidY?: number
 ```
 
-Distance between the avoid line and the top of the panel in landscape mode, in px. The default value is **0**.
-
-- Other system components in the application avoid the input method panel area below the avoid line.  
-- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of   
-the screen height.
+Distance between the avoid line and the top of the panel in landscape mode, in px. The default value is **0**. - Other system components in the application avoid the input method panel area below the avoid line. - When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of the screen height.
 
 **Type:** number
 
 **Default:** 0
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-landscapeAvoidY?: int--><!--Device-EnhancedPanelRect-landscapeAvoidY?: int-End-->
 
@@ -63,14 +62,13 @@ the screen height.
 landscapeInputRegion?: Array<window.Rect>
 ```
 
-Region where the panel receives input events in landscape mode.
-
-- The array size is limited to [1, 4]. The default value is the panel size in landscape mode.  
-- The input hot zone is relative to the left vertex of the input method panel window.
+Region where the panel receives input events in landscape mode. - The array size is limited to [1, 4]. The default value is the panel size in landscape mode. - The input hot zone is relative to the left vertex of the input method panel window.
 
 **Type:** Array&lt;window.Rect&gt;
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-landscapeInputRegion?: Array<window.Rect>-End-->
 
@@ -82,13 +80,13 @@ Region where the panel receives input events in landscape mode.
 landscapeRect?: window.Rect
 ```
 
-Size of the input method panel window in landscape mode.
-
-- This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
+Size of the input method panel window in landscape mode. - This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
 
 **Type:** window.Rect
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-landscapeRect?: window.Rect--><!--Device-EnhancedPanelRect-landscapeRect?: window.Rect-End-->
 
@@ -100,17 +98,15 @@ Size of the input method panel window in landscape mode.
 portraitAvoidY?: number
 ```
 
-Distance between the avoid line and the top of the panel in portrait mode, in px. The default value is **0**.
-
-- Other system components in the application avoid the input method panel area below the avoid line.  
-- When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of   
-the screen height.
+Distance between the avoid line and the top of the panel in portrait mode, in px. The default value is **0**. - Other system components in the application avoid the input method panel area below the avoid line. - When the panel is fixed, the distance between the avoid line and the bottom of the screen cannot exceed 70% of the screen height.
 
 **Type:** number
 
 **Default:** 0
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-portraitAvoidY?: int--><!--Device-EnhancedPanelRect-portraitAvoidY?: int-End-->
 
@@ -122,14 +118,13 @@ the screen height.
 portraitInputRegion?: Array<window.Rect>
 ```
 
-Region where the panel receives input events in portrait mode.
-
-- The array size is limited to [1, 4]. The default value is the panel size in portrait mode.  
-- The input hot zone is relative to the left vertex of the input method panel window.
+Region where the panel receives input events in portrait mode. - The array size is limited to [1, 4]. The default value is the panel size in portrait mode. - The input hot zone is relative to the left vertex of the input method panel window.
 
 **Type:** Array&lt;window.Rect&gt;
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>--><!--Device-EnhancedPanelRect-portraitInputRegion?: Array<window.Rect>-End-->
 
@@ -141,13 +136,13 @@ Region where the panel receives input events in portrait mode.
 portraitRect?: window.Rect
 ```
 
-Size of the input method panel window in portrait mode.
-
-- This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
+Size of the input method panel window in portrait mode. - This attribute is mandatory when **fullScreenMode** is not set or is set to **false**.
 
 **Type:** window.Rect
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-EnhancedPanelRect-portraitRect?: window.Rect--><!--Device-EnhancedPanelRect-portraitRect?: window.Rect-End-->
 

@@ -17,9 +17,11 @@ function startVerticalPanel(
   ): Promise<void>
 ```
 
-Starts the vertical domain picker with panel config.If the target ability is visible, you can start the target ability; If the target ability is invisible,you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability.If the caller application is in the background, it is not allowed to call this interface.
+Starts the vertical domain picker with panel config. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the caller application is in the background, it is not allowed to call this interface.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,7 +36,7 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | common.UIAbilityContext | Yes |
-| wantParam | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt; | Yes |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Object&gt; | Yes |
 | panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes |
 | panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes |
 
@@ -48,9 +50,9 @@ Starts the vertical domain picker with panel config.If the target ability is vis
 
 | Error Code ID |
 | --- |
-| [16000135](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000135-uiability-main-window-does-not-exist) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -130,3 +132,52 @@ struct Index {
   }
 }
 ```
+
+
+## startVerticalPanel
+
+```TypeScript
+function startVerticalPanel(
+      context: common.UIAbilityContext,
+      wantParam: Record<string, RecordData>,
+      panelConfig: PanelConfig,
+      panelStartCallback: PanelStartCallback
+  ): Promise<void>
+```
+
+Starts the vertical domain picker with panel config. If the target ability is visible, you can start the target ability; If the target ability is invisible, you need to apply for permission:ohos.permission.START_INVISIBLE_ABILITY to start target invisible ability. If the caller application is in the background, it is not allowed to call this interface.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-verticalPanelManager-function startVerticalPanel(      context: common.UIAbilityContext,      wantParam: Record<string, RecordData>,      panelConfig: PanelConfig,      panelStartCallback: PanelStartCallback  ): Promise<void>--><!--Device-verticalPanelManager-function startVerticalPanel(      context: common.UIAbilityContext,      wantParam: Record<string, RecordData>,      panelConfig: PanelConfig,      panelStartCallback: PanelStartCallback  ): Promise<void>-End-->
+
+**System capability:** SystemCapability.Ability.AppExtension.VerticalPanel
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| context | common.UIAbilityContext | Yes |
+| wantParam | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | Yes |
+| panelConfig | [PanelConfig](arkts-ability-verticalpanelmanager-panelconfig-i-sys.md) | Yes |
+| panelStartCallback | [PanelStartCallback](arkts-ability-verticalpanelmanager-panelstartcallback-i-sys.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| Promise & lt;void & gt; |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [16000135](../errorcode-ability.md#16000135-uiability-main-window-does-not-exist) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |

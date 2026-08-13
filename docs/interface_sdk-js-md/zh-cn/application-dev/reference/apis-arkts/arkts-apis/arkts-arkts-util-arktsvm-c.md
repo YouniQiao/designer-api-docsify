@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-util-class ArkTSVM--><!--Device-util-class ArkTSVM-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -21,6 +23,8 @@ static enableLocalHandleDetection(): void
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -109,15 +113,13 @@ napi_value dangerous_function(napi_env env, napi_callback_info info) {
 static getAllVMHeapMemoryInfo(): Promise<HeapMemoryInfo[]>
 ```
 
-从 ArkTS-VM 和共享堆中获取所有堆内存信息。
-
-> **说明：**
-> 
-> 此接口在执行时会暂停所有VM线程运行以获取内存信息。由于需要等待所有VM线程暂停，高负载场景下调用此接口的耗时可能较高。
+从 ArkTS-VM 和共享堆中获取所有堆内存信息。 > **说明：** > > 此接口在执行时会暂停所有VM线程运行以获取内存信息。由于需要等待所有VM线程暂停，高负载场景下调用此接口的耗时可能较高。
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -160,6 +162,8 @@ static offVMHeapMemoryPressure(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void--><!--Device-ArkTSVM-static offVMHeapMemoryPressure(): void-End-->
@@ -180,13 +184,13 @@ util.ArkTSVM.offVMHeapMemoryPressure();
 static onVMHeapMemoryPressure(callback: Callback<string>, heapMemoryThreshold: HeapMemoryThreshold): boolean
 ```
 
-注册一个回调函数，在 GC（垃圾回收）后堆内存超过临界预警阈值时触发。必须在主线程上调用，且仅能注册一个回调。
-
-NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
+注册一个回调函数，在 GC（垃圾回收）后堆内存超过临界预警阈值时触发。 必须在主线程上调用，且仅能注册一个回调。 NOTE: 无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 **起始版本：** 24
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -198,7 +202,7 @@ NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | 是 | 在 GC 后内存达到阈值时触发的回调。字符串参数表示内存压力事件的类型： "LocalHeapMemPressure"、"SharedHeapMemPressure" 或 "ProcessHeapMemPressure"。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;string&gt; | 是 | 在 GC 后内存达到阈值时触发的回调。字符串参数表示内存压力事件的类型： "LocalHeapMemPressure"、"SharedHeapMemPressure" 或 "ProcessHeapMemPressure"。 |
 | heapMemoryThreshold | [HeapMemoryThreshold](arkts-arkts-util-heapmemorythreshold-i.md) | 是 | 表示 GC 后触发回调的堆内存百分比阈值。取值范围为 [70, 95]。 |
 
 **返回值：**
@@ -232,11 +236,13 @@ console.info('Registration result: ' + result);
 static setMultithreadingDetectionEnabled(enabled: boolean, options?: MultithreadingDetectionOptions):void
 ```
 
-设置是否开启多线程安全检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
+设置是否开启多线程安全检测。当 **enabled** 设置为 **true** 时开启检测，多线程问题的 cppcrash 文件中将包含多线程相关的 详细信息。当 **enabled** 设置为 **false** 时关闭检测，相应的 cppcrash 文件中将不包含此类详细信息。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -280,11 +286,13 @@ util.ArkTSVM.setMultithreadingDetectionEnabled(true, {
 static setTrackGlobalRef(enable: boolean): void
 ```
 
-开启或关闭 napi_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
+开启或关闭 napi_ref 与全局 handle 之间关联关系的追踪。开启后，堆快照将包含 native 引用地址信息。关闭后（enable 为 false），将停止追踪，堆快照中不再显示 native 引用与全局 handle 之间的关联关系。
 
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

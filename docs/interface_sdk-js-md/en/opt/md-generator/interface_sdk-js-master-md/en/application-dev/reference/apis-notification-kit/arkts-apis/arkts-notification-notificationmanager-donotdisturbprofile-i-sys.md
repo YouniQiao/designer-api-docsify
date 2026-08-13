@@ -2,7 +2,9 @@
 
 Do Not Disturb profile.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface DoNotDisturbProfile--><!--Device-notificationManager-export interface DoNotDisturbProfile-End-->
 
@@ -26,7 +28,9 @@ ID of the Do Not Disturb profile.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DoNotDisturbProfile-id: long--><!--Device-DoNotDisturbProfile-id: long-End-->
 
@@ -44,7 +48,9 @@ Name of the Do Not Disturb profile.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DoNotDisturbProfile-name: string--><!--Device-DoNotDisturbProfile-name: string-End-->
 
@@ -62,7 +68,9 @@ Trustlist in Do Not Disturb profile.
 
 **Type:** Array&lt;BundleOption&gt;
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DoNotDisturbProfile-trustlist?: Array<BundleOption>--><!--Device-DoNotDisturbProfile-trustlist?: Array<BundleOption>-End-->
 

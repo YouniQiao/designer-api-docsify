@@ -16,6 +16,8 @@ complete?: () => void
 
 Called when the execution is completed.
 
+**Type:** () =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 6
@@ -34,6 +36,8 @@ fail?: (data: string, code: number) => void
 
 Called when the stored content fails to be modified.
 
+**Type:** (data: string, code: number) =&gt; void
+
 **Since:** 3
 
 **Deprecated since:** 6
@@ -44,38 +48,13 @@ Called when the stored content fails to be modified.
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| data | string | Yes |
-| code | number | Yes |
-
-## success
-
-```TypeScript
-success?: () => void
-```
-
-Called when the stored content is modified successfully.
-
-**Since:** 3
-
-**Deprecated since:** 6
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-SetStorageOptions-success?: () => void--><!--Device-SetStorageOptions-success?: () => void-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
-
 ## key
 
 ```TypeScript
 key: string
 ```
 
-Index of the stored content to be modified.the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;&lt;=&gt;?[]|\x7F.
+Index of the stored content to be modified. the value contains a maximum of 32 characters and cannot contain special characters such as \/"*+,:;&lt;=&gt;?[]|\x7F.
 
 **Type:** string
 
@@ -86,6 +65,26 @@ Index of the stored content to be modified.the value contains a maximum of 32 ch
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-SetStorageOptions-key: string--><!--Device-SetStorageOptions-key: string-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
+
+## success
+
+```TypeScript
+success?: () => void
+```
+
+Called when the stored content is modified successfully.
+
+**Type:** () =&gt; void
+
+**Since:** 3
+
+**Deprecated since:** 6
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-SetStorageOptions-success?: () => void--><!--Device-SetStorageOptions-success?: () => void-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.Preferences.Core.Lite
 

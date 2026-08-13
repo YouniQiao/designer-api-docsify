@@ -2,9 +2,11 @@
 
 Represents the information obtained by the **ReaderIterator** object.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface ReaderIteratorResult--><!--Device-unnamed-export interface ReaderIteratorResult-End-->
 
@@ -26,9 +28,11 @@ Whether the iteration is complete. The value **true** means the iteration is com
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-ReaderIteratorResult-done: boolean--><!--Device-ReaderIteratorResult-done: boolean-End-->
 
@@ -44,9 +48,11 @@ File text content read line by line.
 
 **Type:** string
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-ReaderIteratorResult-value: string--><!--Device-ReaderIteratorResult-value: string-End-->
 

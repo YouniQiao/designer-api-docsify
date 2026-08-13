@@ -1,0 +1,38 @@
+# PowerScene (System API)
+
+Defines the scenario to which the power policy applies.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+<!--Device-deviceSettings-enum PowerScene--><!--Device-deviceSettings-enum PowerScene-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**System API:** This is a system API.
+
+## TIME_OUT
+
+```TypeScript
+TIME_OUT = 0
+```
+
+Timeout scenario.
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PowerScene-TIME_OUT = 0--><!--Device-PowerScene-TIME_OUT = 0-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**System API:** This is a system API.
+

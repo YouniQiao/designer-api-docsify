@@ -2,7 +2,9 @@
 
 Defines the location attributes of a modal dialog box.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-dialogRequest-export interface WindowRect--><!--Device-dialogRequest-export interface WindowRect-End-->
 
@@ -24,7 +26,9 @@ Height of the dialog box, in px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ X-coordinate of the upper left corner of the dialog box.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ Y-coordinate of the upper left corner of the dialog box.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ Width of the dialog box, in px.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -4,7 +4,9 @@ Describes the settings for Wi-Fi connection.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface ConnectSettings--><!--Device-wifiManager-interface ConnectSettings-End-->
 
@@ -22,13 +24,15 @@ import { wifiManager } from '@kit.ConnectivityKit';
 addNetworkToSystem?: boolean
 ```
 
-Whether to add the network to the system for connection.Default is false, if set to true, the network will be added to the system before connection and cannot be retrieved again.
+Whether to add the network to the system for connection. Default is false, if set to true, the network will be added to the system before connection and cannot be retrieved again.
 
 **Type:** boolean
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,11 +50,13 @@ networkId: int
 
 The ID (uniquely identifies) of a Wi-Fi connection.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,13 +72,15 @@ The ID (uniquely identifies) of a Wi-Fi connection.
 userActionTimeout?: int
 ```
 
-User action timeout threshold(unit is seconds).The maximum value cannot exceed 30, and default is 10.
+User action timeout threshold(unit is seconds). The maximum value cannot exceed 30, and default is 10.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -94,7 +102,9 @@ Returned with user action, default value is false.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

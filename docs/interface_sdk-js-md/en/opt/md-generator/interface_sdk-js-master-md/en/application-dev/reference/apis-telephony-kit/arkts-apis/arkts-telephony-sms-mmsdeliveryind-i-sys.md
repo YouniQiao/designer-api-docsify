@@ -2,7 +2,9 @@
 
 Defines an MMS message delivery index.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface MmsDeliveryInd--><!--Device-sms-export interface MmsDeliveryInd-End-->
 
@@ -26,7 +28,9 @@ Date.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsDeliveryInd-date: long--><!--Device-MmsDeliveryInd-date: long-End-->
 
@@ -44,7 +48,9 @@ Message ID.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsDeliveryInd-messageId: string--><!--Device-MmsDeliveryInd-messageId: string-End-->
 
@@ -62,7 +68,9 @@ Status.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsDeliveryInd-status: int--><!--Device-MmsDeliveryInd-status: int-End-->
 
@@ -80,7 +88,9 @@ Destination address.
 
 **Type:** Array&lt;[MmsAddress](arkts-telephony-sms-mmsaddress-i-sys.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsDeliveryInd-to: Array<MmsAddress>--><!--Device-MmsDeliveryInd-to: Array<MmsAddress>-End-->
 
@@ -98,7 +108,9 @@ Version.
 
 **Type:** [MmsVersionType](arkts-telephony-sms-mmsversiontype-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-MmsDeliveryInd-version: MmsVersionType--><!--Device-MmsDeliveryInd-version: MmsVersionType-End-->
 

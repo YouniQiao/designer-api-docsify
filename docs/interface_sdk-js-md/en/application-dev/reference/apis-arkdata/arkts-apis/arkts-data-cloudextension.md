@@ -1,10 +1,12 @@
 # @ohos.data.cloudExtension
 
-The cloudExtension module provides APIs for third-party vendors to implement the device-cloud sharing service.You can use these APIs to share the device data to the server and implement device-cloud data sharing,including sharing and unsharing data, exiting a share,changing the privilege (operation permissions)on the shared data, querying participants by data identifier or invitation code, and confirming or changing a sharing invitation.
+The cloudExtension module provides APIs for third-party vendors to implement the device-cloud sharing service. You can use these APIs to share the device data to the server and implement device-cloud data sharing, including sharing and unsharing data, exiting a share,changing the privilege (operation permissions) on the shared data, querying participants by data identifier or invitation code, and confirming or changing a sharing invitation.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace cloudExtension--><!--Device-unnamed-declare namespace cloudExtension-End-->
 
@@ -23,10 +25,10 @@ import { cloudExtension } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createassetloaderstub) | Creates a RemoteObject instance based on an AssetLoader instance.The system uses this object to call the APIs of the AssetLoader instance.This API uses a promise to return the result. |
-| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createclouddbstub) | Creates a RemoteObject instance based on a CloudDB instance.The system uses this object to call the APIs of the CloudDB instance.This API uses a promise to return the result. |
-| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createcloudservicestub) | Creates a RemoteObject instance based on a CloudService instance.The system uses this object to call the APIs of the CloudService instance.This API uses a promise to return the result. |
-| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createshareservicestub) | Creates a RemoteObject instance based on a ShareCenter instance.The system uses this object to call the APIs of the ShareCenter instance.This API uses a promise to return the result. |
+| [createAssetLoaderStub](arkts-arkdata-cloudextension-createassetloaderstub-f-sys.md#createAssetLoaderStub) | Creates a RemoteObject instance based on an AssetLoader instance. The system uses this object to call the APIs of the AssetLoader instance. This API uses a promise to return the result. |
+| [createCloudDBStub](arkts-arkdata-cloudextension-createclouddbstub-f-sys.md#createCloudDBStub) | Creates a RemoteObject instance based on a CloudDB instance. The system uses this object to call the APIs of the CloudDB instance. This API uses a promise to return the result. |
+| [createCloudServiceStub](arkts-arkdata-cloudextension-createcloudservicestub-f-sys.md#createCloudServiceStub) | Creates a RemoteObject instance based on a CloudService instance. The system uses this object to call the APIs of the CloudService instance. This API uses a promise to return the result. |
+| [createShareServiceStub](arkts-arkdata-cloudextension-createshareservicestub-f-sys.md#createShareServiceStub) | Creates a RemoteObject instance based on a ShareCenter instance. The system uses this object to call the APIs of the ShareCenter instance. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->
@@ -41,14 +43,14 @@ import { cloudExtension } from '@kit.ArkData';
 | [CloudDB](arkts-arkdata-cloudextension-clouddb-i-sys.md) | Provides APIs for performing cloud database operations. |
 | [CloudData](arkts-arkdata-cloudextension-clouddata-i-sys.md) | Represents the cloud data. |
 | [CloudInfo](arkts-arkdata-cloudextension-cloudinfo-i-sys.md) | Represents the cloud information. |
-| [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Provides APIs for interacting with the cloud sync service.You need to inherit this class and implement APIs of this class.The system calls these APIs to connect to the cloud and use the cloud sync service. |
+| [CloudService](arkts-arkdata-cloudextension-cloudservice-i-sys.md) | Provides APIs for interacting with the cloud sync service. You need to inherit this class and implement APIs of this class. The system calls these APIs to connect to the cloud and use the cloud sync service. |
 | [Database](arkts-arkdata-cloudextension-database-i-sys.md) | Represents the database information. |
 | [ExtensionValue](arkts-arkdata-cloudextension-extensionvalue-i-sys.md) | Represents additional information about a data record. |
 | [Field](arkts-arkdata-cloudextension-field-i-sys.md) | Represents a field in the database. |
 | [LockInfo](arkts-arkdata-cloudextension-lockinfo-i-sys.md) | Represents the cloud database lock information. |
 | [Result](arkts-arkdata-cloudextension-result-i-sys.md) | Represents the data sharing result. |
 | [ServiceInfo](arkts-arkdata-cloudextension-serviceinfo-i-sys.md) | Represents the cloud service information. |
-| [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | Provides APIs for interacting with the sharedCenter service.You need to inherit this class and implement APIs of this class.The system calls these APIs to initiate, cancel, or exit a device-cloud share. |
+| [ShareCenter](arkts-arkdata-cloudextension-sharecenter-i-sys.md) | Provides APIs for interacting with the sharedCenter service. You need to inherit this class and implement APIs of this class. The system calls these APIs to initiate, cancel, or exit a device-cloud share. |
 | [SubscribeId](arkts-arkdata-cloudextension-subscribeid-i-sys.md) | Represents the subscription ID information. |
 | [SubscribeInfo](arkts-arkdata-cloudextension-subscribeinfo-i-sys.md) | Represents the subscription information. |
 | [Table](arkts-arkdata-cloudextension-table-i-sys.md) | Represents the table information. |

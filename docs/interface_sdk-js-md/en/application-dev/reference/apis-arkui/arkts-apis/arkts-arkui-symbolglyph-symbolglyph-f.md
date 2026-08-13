@@ -3,6 +3,7 @@
 ## SymbolGlyph
 
 ```TypeScript
+@ComponentBuilder
 export declare function SymbolGlyph(
     value?: Resource
 ): SymbolGlyphAttribute
@@ -14,9 +15,11 @@ Defines SymbolGlyph Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function SymbolGlyph(    value?: Resource): SymbolGlyphAttribute--><!--Device-unnamed-export declare function SymbolGlyph(    value?: Resource): SymbolGlyphAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function SymbolGlyph(    value?: Resource): SymbolGlyphAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function SymbolGlyph(    value?: Resource): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -30,12 +33,13 @@ Defines SymbolGlyph Component.
 
 | Type | Description |
 | --- | --- |
-| [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) |  |
+| SymbolGlyphAttribute |  |
 
 
 ## SymbolGlyph
 
 ```TypeScript
+@Builder
 export declare function SymbolGlyph(
     style: CustomBuilderT<SymbolGlyphAttribute>,
 ): SymbolGlyphAttribute
@@ -47,11 +51,11 @@ Defines SymbolGlyph Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function SymbolGlyph(    style: CustomBuilderT<SymbolGlyphAttribute>,): SymbolGlyphAttribute--><!--Device-unnamed-export declare function SymbolGlyph(    style: CustomBuilderT<SymbolGlyphAttribute>,): SymbolGlyphAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function SymbolGlyph(    style: CustomBuilderT<SymbolGlyphAttribute>,): SymbolGlyphAttribute--><!--Device-unnamed-@Builderexport declare function SymbolGlyph(    style: CustomBuilderT<SymbolGlyphAttribute>,): SymbolGlyphAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,11 +63,11 @@ Defines SymbolGlyph Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md)&gt; | Yes | SymbolGlyph attribute instance |
+| style | CustomBuilderT&lt;SymbolGlyphAttribute&gt; | Yes | SymbolGlyph attribute instance |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SymbolGlyphAttribute](arkts-arkui-symbolglyph-symbolglyphattribute-i.md) |  |
+| SymbolGlyphAttribute |  |
 

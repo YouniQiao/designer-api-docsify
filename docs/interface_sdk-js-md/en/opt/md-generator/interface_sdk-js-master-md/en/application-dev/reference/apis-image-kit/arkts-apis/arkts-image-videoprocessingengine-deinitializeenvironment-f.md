@@ -14,9 +14,11 @@ function deinitializeEnvironment(): Promise<void>
 
 Deinitialize global environment for image processing.
 
-**Since:** 18
+**Since:** 23
 
-**Widget capability:** This API can be used in ArkTS widgets since API version 18.
+**Deprecated since:** -1
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-videoProcessingEngine-function deinitializeEnvironment(): Promise<void>--><!--Device-videoProcessingEngine-function deinitializeEnvironment(): Promise<void>-End-->
 
@@ -32,7 +34,7 @@ Deinitialize global environment for image processing.
 
 | Error Code ID |
 | --- |
-| [29200006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
+| [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) |
 
 ## Examples
 

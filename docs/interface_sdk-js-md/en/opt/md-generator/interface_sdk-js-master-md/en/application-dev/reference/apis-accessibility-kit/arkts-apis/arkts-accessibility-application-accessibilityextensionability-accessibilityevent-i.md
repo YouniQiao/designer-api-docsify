@@ -4,6 +4,8 @@ Defines an accessibility event.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface AccessibilityEvent--><!--Device-unnamed-export declare interface AccessibilityEvent-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -26,6 +28,8 @@ Component ID for auto-focusing. The default value is **0**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AccessibilityEvent-elementId?: long--><!--Device-AccessibilityEvent-elementId?: long-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -37,21 +41,13 @@ eventType: accessibility.EventType | accessibility.WindowUpdateType |
         TouchGuideType | GestureType | PageUpdateType
 ```
 
-Event type.
-
-**EventType**: accessibility event type.
-
-**WindowUpdateType**: window update type.
-
-**TouchGuideType**: touch guide type.
-
-**GestureType**: gesture type.
-
-**PageUpdateType**: page update type.
+Event type. **EventType**: accessibility event type. **WindowUpdateType**: window update type. **TouchGuideType**: touch guide type. **GestureType**: gesture type. **PageUpdateType**: page update type.
 
 **Type:** accessibility.EventType \| accessibility.WindowUpdateType \| [TouchGuideType](arkts-accessibility-touchguidetype-t.md) \| [GestureType](arkts-accessibility-gesturetype-t.md) \| [PageUpdateType](arkts-accessibility-pageupdatetype-t.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType--><!--Device-AccessibilityEvent-eventType: accessibility.EventType | accessibility.WindowUpdateType |        TouchGuideType | GestureType | PageUpdateType-End-->
 
@@ -69,6 +65,8 @@ Added or deleted text content carried by the **TextArea**, **TextInput**, **Sear
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-AccessibilityEvent-extraInfo?: string--><!--Device-AccessibilityEvent-extraInfo?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -84,6 +82,8 @@ Target component where the event occurs.
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md)
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityEvent-target?: AccessibilityElement--><!--Device-AccessibilityEvent-target?: AccessibilityElement-End-->
 
@@ -101,6 +101,8 @@ Content for auto-broadcasting. Set the broadcast content based on the actual sce
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string--><!--Device-AccessibilityEvent-textAnnouncedForAccessibility?: string-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -116,6 +118,8 @@ Timestamp of the event, in milliseconds. The default value is **0**.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-AccessibilityEvent-timeStamp?: long--><!--Device-AccessibilityEvent-timeStamp?: long-End-->
 

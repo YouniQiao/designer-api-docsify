@@ -6,6 +6,8 @@ Provides TCP and UDP Socket APIs.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare namespace socket--><!--Device-unnamed-declare namespace socket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -22,15 +24,15 @@ import { socket } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md#constructlocalsocketinstance) | Creates a LocalSocket object. |
-| [constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md#constructlocalsocketserverinstance) | Creates a LocalSocketServer object. |
-| [constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md#constructmulticastsocketinstance) | Creates a MulticastSocket object. |
-| [constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md#constructtcpsocketinstance) | Creates a TCPSocket object. |
-| [constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md#constructtcpsocketserverinstance) | Creates a TCPSocketServer object. |
-| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructtlssocketinstance) | Creates a TLSSocket object. |
-| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructtlssocketinstance-1) | Creates a TLSSocket object with a TCPSocket object. |
-| [constructTLSSocketServerInstance](arkts-network-socket-constructtlssocketserverinstance-f.md#constructtlssocketserverinstance) | Creates a TLSSocketServer object. |
-| [constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md#constructudpsocketinstance) | Creates a UDPSocket object. |
+| [constructLocalSocketInstance](arkts-network-socket-constructlocalsocketinstance-f.md#constructLocalSocketInstance) | Creates a LocalSocket object. |
+| [constructLocalSocketServerInstance](arkts-network-socket-constructlocalsocketserverinstance-f.md#constructLocalSocketServerInstance) | Creates a LocalSocketServer object. |
+| [constructMulticastSocketInstance](arkts-network-socket-constructmulticastsocketinstance-f.md#constructMulticastSocketInstance) | Creates a MulticastSocket object. |
+| [constructTCPSocketInstance](arkts-network-socket-constructtcpsocketinstance-f.md#constructTCPSocketInstance) | Creates a TCPSocket object. |
+| [constructTCPSocketServerInstance](arkts-network-socket-constructtcpsocketserverinstance-f.md#constructTCPSocketServerInstance) | Creates a TCPSocketServer object. |
+| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructTLSSocketInstance) | Creates a TLSSocket object. |
+| [constructTLSSocketInstance](arkts-network-socket-constructtlssocketinstance-f.md#constructTLSSocketInstance) | Creates a TLSSocket object with a TCPSocket object. |
+| [constructTLSSocketServerInstance](arkts-network-socket-constructtlssocketserverinstance-f.md#constructTLSSocketServerInstance) | Creates a TLSSocketServer object. |
+| [constructUDPSocketInstance](arkts-network-socket-constructudpsocketinstance-f.md#constructUDPSocketInstance) | Creates a UDPSocket object. |
 
 ### Interfaces
 

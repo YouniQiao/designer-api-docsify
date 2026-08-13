@@ -1,8 +1,10 @@
 # LayoutStyle
 
-[Scrollable](TabsAttribute#barMode(value: BarMode, options?: ScrollableBarModeOptions))模式下不滚动时的页签排布方式枚举。
+Scrollable模式下不滚动时的页签排布方式枚举。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare enum LayoutStyle--><!--Device-unnamed-declare enum LayoutStyle-End-->
 
@@ -14,11 +16,11 @@
 ALWAYS_CENTER = 0
 ```
 
-当页签内容超过TabBar宽度时，TabBar可滚动。
-
-当页签内容不超过TabBar宽度时，TabBar不可滚动，页签紧凑居中。
+当页签内容超过TabBar宽度时，TabBar可滚动。 当页签内容不超过TabBar宽度时，TabBar不可滚动，页签紧凑居中。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,11 +36,11 @@ ALWAYS_CENTER = 0
 ALWAYS_AVERAGE_SPLIT = 1
 ```
 
-当页签内容超过TabBar宽度时，TabBar可滚动。
-
-当页签内容不超过TabBar宽度时，TabBar不可滚动，且所有页签平均分配TabBar宽度。
+当页签内容超过TabBar宽度时，TabBar可滚动。 当页签内容不超过TabBar宽度时，TabBar不可滚动，且所有页签平均分配TabBar宽度。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -54,13 +56,11 @@ ALWAYS_AVERAGE_SPLIT = 1
 SPACE_BETWEEN_OR_CENTER = 2
 ```
 
-当页签内容超过TabBar宽度时，TabBar可滚动。
-
-当页签内容不超过TabBar宽度但超过TabBar宽度一半时，TabBar不可滚动，页签紧凑居中。
-
-当页签内容不超过TabBar宽度一半时，TabBar不可滚动，页签居中排列，页签之间的间距相等，所有页签的总宽度占用TabBar宽度的一半。
+当页签内容超过TabBar宽度时，TabBar可滚动。 当页签内容不超过TabBar宽度但超过TabBar宽度一半时，TabBar不可滚动，页签紧凑居中。 当页签内容不超过TabBar宽度一半时，TabBar不可滚动，页签居中排列，页签之间的间距相等，所有页签的总宽度占用TabBar宽度的一半。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

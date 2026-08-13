@@ -14,9 +14,11 @@ function isHdHapticSupported(): boolean
 
 Checks whether HD vibration is supported.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-function isHdHapticSupported(): boolean--><!--Device-vibrator-function isHdHapticSupported(): boolean-End-->
 
@@ -32,7 +34,7 @@ Checks whether HD vibration is supported.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14600101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-sensor-service-kit/errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
+| [14600101](../errorcode-vibrator.md#14600101-device-operation-failed) | Device operation failed. |
 
 ## Examples
 

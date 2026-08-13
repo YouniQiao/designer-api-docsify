@@ -12,13 +12,13 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function getId(): HiTraceId
 ```
 
-Obtains the trace ID. This API returns the result synchronously.
+Obtains the trace ID. This API returns the result synchronously. Obtains the HiTrace ID in the TLS of the current thread.
 
-Obtains the HiTrace ID in the TLS of the current thread.
+**Since:** 23
 
-**Since:** 8
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function getId(): HiTraceId--><!--Device-hiTraceChain-function getId(): HiTraceId-End-->
 

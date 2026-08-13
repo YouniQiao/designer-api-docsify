@@ -1,9 +1,10 @@
 # HitTestValue
 
-提供点击区域的元素信息。示例代码参考  
-[getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest).
+提供点击区域的元素信息。示例代码参考 [getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest).
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-webview-interface HitTestValue--><!--Device-webview-interface HitTestValue-End-->
 
@@ -20,6 +21,8 @@ extra: string
 **类型：** string
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,6 +41,8 @@ type: WebHitTestType
 **类型：** [WebHitTestType](arkts-arkweb-webview-webhittesttype-e.md)
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

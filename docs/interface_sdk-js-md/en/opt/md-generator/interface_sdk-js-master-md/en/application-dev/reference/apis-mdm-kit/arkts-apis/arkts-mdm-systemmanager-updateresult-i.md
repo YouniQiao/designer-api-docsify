@@ -4,6 +4,8 @@ Represents the update result information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-interface UpdateResult--><!--Device-systemManager-interface UpdateResult-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ Error information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateResult-errorInfo: ErrorInfo--><!--Device-UpdateResult-errorInfo: ErrorInfo-End-->
@@ -44,6 +48,8 @@ System update status.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateResult-status: UpdateStatus--><!--Device-UpdateResult-status: UpdateStatus-End-->
@@ -61,6 +67,8 @@ Current version of the system.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

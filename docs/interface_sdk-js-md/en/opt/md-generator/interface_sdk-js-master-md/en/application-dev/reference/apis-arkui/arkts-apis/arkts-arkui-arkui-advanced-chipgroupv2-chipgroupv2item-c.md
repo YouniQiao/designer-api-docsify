@@ -4,7 +4,7 @@ Defines chip group item.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipGroupV2Item--><!--Device-unnamed-export declare class ChipGroupV2Item-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipGroupV2Item
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of ChipGroupV2Item
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+    public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description for ChipGroupV2 item.
@@ -52,18 +55,21 @@ Set accessibility description for ChipGroupV2 item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2Item-public accessibilityDescription?: ResourceStr-End-->
+<!--Device-ChipGroupV2Item-@Trace    public accessibilityDescription?: ResourceStr--><!--Device-ChipGroupV2Item-@Trace    public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel?: string
+@Trace
+    public accessibilityLevel?: string
 ```
 
 Set accessibility level for ChipGroupV2 item.
@@ -74,18 +80,21 @@ Set accessibility level for ChipGroupV2 item.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public accessibilityLevel?: string--><!--Device-ChipGroupV2Item-public accessibilityLevel?: string-End-->
+<!--Device-ChipGroupV2Item-@Trace    public accessibilityLevel?: string--><!--Device-ChipGroupV2Item-@Trace    public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## allowClose
 
 ```TypeScript
-public allowClose?: boolean
+@Trace
+    public allowClose?: boolean
 ```
 
 Allow close.
@@ -94,18 +103,21 @@ Allow close.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public allowClose?: boolean--><!--Device-ChipGroupV2Item-public allowClose?: boolean-End-->
+<!--Device-ChipGroupV2Item-@Trace    public allowClose?: boolean--><!--Device-ChipGroupV2Item-@Trace    public allowClose?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## closeIcon
 
 ```TypeScript
-public closeIcon?: ChipV2CloseConfig
+@Trace
+    public closeIcon?: ChipV2CloseConfig
 ```
 
 Set config for default close icon when 'allowClose' is true.
@@ -114,18 +126,21 @@ Set config for default close icon when 'allowClose' is true.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public closeIcon?: ChipV2CloseConfig--><!--Device-ChipGroupV2Item-public closeIcon?: ChipV2CloseConfig-End-->
+<!--Device-ChipGroupV2Item-@Trace    public closeIcon?: ChipV2CloseConfig--><!--Device-ChipGroupV2Item-@Trace    public closeIcon?: ChipV2CloseConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## label
 
 ```TypeScript
-public label: ChipV2Label
+@Trace
+    public label: ChipV2Label
 ```
 
 Chip label.
@@ -134,18 +149,21 @@ Chip label.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public label: ChipV2Label--><!--Device-ChipGroupV2Item-public label: ChipV2Label-End-->
+<!--Device-ChipGroupV2Item-@Trace    public label: ChipV2Label--><!--Device-ChipGroupV2Item-@Trace    public label: ChipV2Label-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## prefixIcon
 
 ```TypeScript
-public prefixIcon?: ChipV2PrefixImageIcon
+@Trace
+    public prefixIcon?: ChipV2PrefixImageIcon
 ```
 
 Prefix icon.
@@ -154,18 +172,21 @@ Prefix icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public prefixIcon?: ChipV2PrefixImageIcon--><!--Device-ChipGroupV2Item-public prefixIcon?: ChipV2PrefixImageIcon-End-->
+<!--Device-ChipGroupV2Item-@Trace    public prefixIcon?: ChipV2PrefixImageIcon--><!--Device-ChipGroupV2Item-@Trace    public prefixIcon?: ChipV2PrefixImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## prefixSymbolIcon
 
 ```TypeScript
-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
+@Trace
+    public prefixSymbolIcon?: ChipV2PrefixSymbolIcon
 ```
 
 Prefix symbol icon.
@@ -174,18 +195,21 @@ Prefix symbol icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon--><!--Device-ChipGroupV2Item-public prefixSymbolIcon?: ChipV2PrefixSymbolIcon-End-->
+<!--Device-ChipGroupV2Item-@Trace    public prefixSymbolIcon?: ChipV2PrefixSymbolIcon--><!--Device-ChipGroupV2Item-@Trace    public prefixSymbolIcon?: ChipV2PrefixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffixIcon
 
 ```TypeScript
-public suffixIcon?: ChipV2SuffixImageIcon
+@Trace
+    public suffixIcon?: ChipV2SuffixImageIcon
 ```
 
 Suffix icon.
@@ -194,18 +218,21 @@ Suffix icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public suffixIcon?: ChipV2SuffixImageIcon--><!--Device-ChipGroupV2Item-public suffixIcon?: ChipV2SuffixImageIcon-End-->
+<!--Device-ChipGroupV2Item-@Trace    public suffixIcon?: ChipV2SuffixImageIcon--><!--Device-ChipGroupV2Item-@Trace    public suffixIcon?: ChipV2SuffixImageIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## suffixSymbolIcon
 
 ```TypeScript
-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
+@Trace
+    public suffixSymbolIcon?: ChipV2SuffixSymbolIcon
 ```
 
 Suffix symbol icon.
@@ -214,10 +241,12 @@ Suffix symbol icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipGroupV2Item-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon--><!--Device-ChipGroupV2Item-public suffixSymbolIcon?: ChipV2SuffixSymbolIcon-End-->
+<!--Device-ChipGroupV2Item-@Trace    public suffixSymbolIcon?: ChipV2SuffixSymbolIcon--><!--Device-ChipGroupV2Item-@Trace    public suffixSymbolIcon?: ChipV2SuffixSymbolIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

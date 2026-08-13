@@ -3,6 +3,7 @@
 ## PasteButton
 
 ```TypeScript
+@ComponentBuilder
 export declare function PasteButton(
     options?: PasteButtonOptions
 ): PasteButtonAttribute
@@ -14,9 +15,11 @@ Set a paste button.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function PasteButton(    options?: PasteButtonOptions): PasteButtonAttribute--><!--Device-unnamed-export declare function PasteButton(    options?: PasteButtonOptions): PasteButtonAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function PasteButton(    options?: PasteButtonOptions): PasteButtonAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function PasteButton(    options?: PasteButtonOptions): PasteButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -2,9 +2,11 @@
 
 Defines the information about the redirected-to ability.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-interface WantAgent--><!--Device-reminderAgentManager-interface WantAgent-End-->
 
@@ -26,9 +28,11 @@ Name of the target ability.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WantAgent-abilityName: string--><!--Device-WantAgent-abilityName: string-End-->
 
@@ -37,18 +41,20 @@ Name of the target ability.
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: RecordData
 ```
 
-Parameters to be transferred to the target.
+The description of the WantParams object in an Want
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** [RecordData](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-recorddata-t.md)
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-WantAgent-parameters?: Record<string, Object>--><!--Device-WantAgent-parameters?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-WantAgent-parameters?: RecordData--><!--Device-WantAgent-parameters?: RecordData-End-->
 
 **System capability:** SystemCapability.Notification.ReminderAgent
 
@@ -62,9 +68,11 @@ Name of the target package.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WantAgent-pkgName: string--><!--Device-WantAgent-pkgName: string-End-->
 
@@ -80,9 +88,11 @@ URI of the target ability.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-WantAgent-uri?: string--><!--Device-WantAgent-uri?: string-End-->
 

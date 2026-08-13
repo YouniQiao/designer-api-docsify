@@ -6,7 +6,9 @@ type ChangedType = 'add' | 'remove'
 
 Enumerates hot swap events.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-type ChangedType = 'add' | 'remove'--><!--Device-inputDevice-type ChangedType = 'add' | 'remove'-End-->
 

@@ -2,27 +2,13 @@
 
 自定义通信对象。
 
-**起始版本：** 15
-
-**ArkTS模式：** ArkTS-Dyn起始版本为15；ArkTS-Sta起始版本为23。
-
-<!--Device-inputMethod-interface MessageHandler--><!--Device-inputMethod-interface MessageHandler-End-->
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
-## onMessage
-
-```TypeScript
-onMessage: OnMessageCallback
-```
-
-onMessage(msgId: string, msgParam?: ArrayBuffer): void
-
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
+**废弃版本：** -1
+
+<!--Device-inputMethod-interface MessageHandler--><!--Device-inputMethod-interface MessageHandler-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
@@ -37,6 +23,8 @@ onMessage(msgId: string, msgParam?: ArrayBuffer): void
 **起始版本：** 15
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
+
+**废弃版本：** -1
 
 <!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
 
@@ -77,6 +65,8 @@ onTerminated(): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为15。
 
+**废弃版本：** -1
+
 <!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
 
 **系统能力：** SystemCapability.MiscServices.InputMethodFramework
@@ -97,21 +87,41 @@ let messageHandler: inputMethod.MessageHandler = {
 inputMethodController.recvMessage(messageHandler);
 ```
 
+## onMessage
+
+```TypeScript
+onMessage: OnMessageCallback
+```
+
+onMessage(msgId: string, msgParam?: ArrayBuffer): void
+
+**类型：** OnMessageCallback
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
 ## onTerminated
 
 ```TypeScript
 onTerminated: Callback<void>
 ```
 
-onTerminated(): void
+onTerminated(): void 监听对象终止回调函数。
 
-监听对象终止回调函数。
-
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt;
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
 

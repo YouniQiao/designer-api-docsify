@@ -12,6 +12,8 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 19.
@@ -35,7 +37,7 @@ Obtains the **UIScrollEvent** object associated with the **Scroll** node for con
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 
 
 ## getEvent
@@ -49,6 +51,8 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +77,7 @@ Obtains the **UIListEvent** object associated with the **List** node for configu
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 
 
 ## getEvent
@@ -87,6 +91,8 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,7 +117,7 @@ Obtains the **UIWaterFlowEvent** object associated with the [WaterFlow](arkts-ar
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 
 
 ## getEvent
@@ -125,6 +131,8 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,5 +157,5 @@ Obtains the **UIGridEvent** object associated with the **Grid** node for configu
 
 ## Examples
 
-See [Scroll Event Example](#scroll-event-example).
+See Scroll Event Example.
 

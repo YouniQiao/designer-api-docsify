@@ -2,7 +2,9 @@
 
 [UploadConfig](arkts-basicservices-request-uploadconfig-i.md#UploadConfig)中的表单数据。
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-request-interface RequestData--><!--Device-request-interface RequestData-End-->
 
@@ -18,7 +20,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestData-name: string--><!--Device-RequestData-name: string-End-->
 
@@ -34,7 +38,9 @@ value: string
 
 **类型：** string
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RequestData-value: string--><!--Device-RequestData-value: string-End-->
 

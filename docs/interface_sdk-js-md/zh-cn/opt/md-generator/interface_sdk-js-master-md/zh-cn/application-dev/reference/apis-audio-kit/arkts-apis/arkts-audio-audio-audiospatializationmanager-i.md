@@ -1,15 +1,10 @@
 # AudioSpatializationManager
 
-空间音频管理。
+空间音频管理。 在使用AudioSpatializationManager的接口之前，需先通过 [getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getSpatializationManager)获取AudioSpatializationManager实例。 > **说明：** > > - 本Interface首批接口从API version 18开始支持。
 
-在使用AudioSpatializationManager的接口之前，需先通过  
-[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getSpatializationManager)获取AudioSpatializationManager实例。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本Interface首批接口从API version 18开始支持。
-
-**起始版本：** 18
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioSpatializationManager--><!--Device-audio-interface AudioSpatializationManager-End-->
 
@@ -23,7 +18,9 @@ isSpatializationEnabledForCurrentDevice(): boolean
 
 获取当前设备空间音频渲染是否开启。同步返回结果。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean--><!--Device-AudioSpatializationManager-isSpatializationEnabledForCurrentDevice(): boolean-End-->
 
@@ -35,7 +32,35 @@ isSpatializationEnabledForCurrentDevice(): boolean
 | --- |
 | boolean |
 
-## off('spatializationEnabledChangeForCurrentDevice')
+## offSpatializationEnabledChangeForCurrentDevice
+
+```TypeScript
+offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void
+```
+
+Unsubscribes to the spatialization enable state change events by the current device.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-offSpatializationEnabledChangeForCurrentDevice(callback?: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 否 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## off_spatializationEnabledChangeForCurrentDevice
 
 ```TypeScript
 off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void
@@ -44,6 +69,8 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 取消监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boolean>): void-End-->
 
@@ -60,9 +87,37 @@ off(type: 'spatializationEnabledChangeForCurrentDevice', callback?: Callback<boo
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
 
-## on('spatializationEnabledChangeForCurrentDevice')
+## onSpatializationEnabledChangeForCurrentDevice
+
+```TypeScript
+onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void
+```
+
+Subscribes to the spatialization enable state change events by the current device. When the spatialization enable state changes, registered clients will receive the callback.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-onSpatializationEnabledChangeForCurrentDevice(callback: Callback<boolean>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Spatialization
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+
+## on_spatializationEnabledChangeForCurrentDevice
 
 ```TypeScript
 on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void
@@ -71,6 +126,8 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 监听当前设备空间音频渲染开关状态变化事件。使用callback异步回调。
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boolean>): void-End-->
 
@@ -87,4 +144,4 @@ on(type: 'spatializationEnabledChangeForCurrentDevice', callback: Callback<boole
 
 | 错误码ID |
 | --- |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |

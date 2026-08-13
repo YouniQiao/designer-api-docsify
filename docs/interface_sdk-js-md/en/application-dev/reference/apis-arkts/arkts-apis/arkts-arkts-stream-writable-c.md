@@ -1,10 +1,12 @@
 # Writable
 
-Stream to which data can be written. A writable stream allows data to be written to a target, which can be a file,an HTTP response, a standard output, another stream, or the like.
+Stream to which data can be written. A writable stream allows data to be written to a target, which can be a file, an HTTP response, a standard output, another stream, or the like.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-stream-export class Writable--><!--Device-stream-export class Writable-End-->
 
@@ -24,11 +26,13 @@ constructor()
 
 A constructor used to create a **Writable** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-constructor()--><!--Device-Writable-constructor()-End-->
 
@@ -48,11 +52,13 @@ cork(): boolean
 
 Forces subsequent writes to be buffered. This API is called to optimize the performance of continuous write operations. After this API is called, the value of **writableCorked** is incremented by one. It is recommended that this API be used in pair with [uncork()](#uncork).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-cork(): boolean--><!--Device-Writable-cork(): boolean-End-->
 
@@ -90,11 +96,13 @@ doInitialize(callback: Function): void
 
 You need to implement this API but do not call it directly. It is automatically called during the initialization of the writable stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-doInitialize(callback: Function): void--><!--Device-Writable-doInitialize(callback: Function): void-End-->
 
@@ -131,11 +139,13 @@ doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void
 
 A data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void--><!--Device-Writable-doWrite(chunk: string | Uint8Array, encoding: string, callback: Function): void-End-->
 
@@ -175,11 +185,13 @@ doWritev(chunks: string[] | Uint8Array[], callback: Function): void
 
 A batch data write API. You need to implement this API but do not call it directly. This API is automatically called when data is written. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void--><!--Device-Writable-doWritev(chunks: string[] | Uint8Array[], callback: Function): void-End-->
 
@@ -221,14 +233,15 @@ writableStream.end();
 end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable
 ```
 
-Ends the writing process in a writable stream. If the value of **writableCorked** is greater than 0, the value is set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on  
-**doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is written through **doWrite**. This API uses an asynchronous callback to return the result.
+Ends the writing process in a writable stream. If the value of **writableCorked** is greater than 0, the value is set to **0** and the remaining data in the buffer is output. If the **chunk** parameter is passed, it is treated as the final data chunk and written using either the **write** or **doWrite** API, based on the current execution context. If **doWrite** is used for writing, the validity check of the **encoding** parameter depends on **doWrite**. If **end** is used alone (without **write**) and the **chunk** parameter is passed, the data is written through **doWrite**. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable--><!--Device-Writable-end(chunk?: string | Uint8Array, encoding?: string, callback?: Function): Writable-End-->
 
@@ -252,7 +265,7 @@ Ends the writing process in a writable stream. If the value of **writableCorked*
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200035](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
+| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
 
 ## Examples
 
@@ -277,7 +290,7 @@ writableStream.end('finish', 'utf8', () => {
 });
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(event: string, callback?: Callback<emitter.EventData>): void
@@ -288,6 +301,8 @@ Unregisters an event processing callback used to listen for different events on 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -300,7 +315,7 @@ Unregisters an event processing callback used to listen for different events on 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | No | Callback function. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | No | Callback function. |
 
 ## Examples
 
@@ -329,7 +344,7 @@ setTimeout(() => {
 }, 0);
 ```
 
-## off
+## off_string
 
 ```TypeScript
 off(event: string, callback?: Function): void
@@ -339,7 +354,9 @@ Cancel event message.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -354,7 +371,7 @@ Cancel event message.
 | event | string | Yes | Register Event. |
 | callback | Function | No | event callbacks. |
 
-## on
+## on_string
 
 ```TypeScript
 on(event: string, callback: Callback<emitter.EventData>): void
@@ -365,6 +382,8 @@ Registers an event processing callback to listen for different events on the wri
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -377,7 +396,7 @@ Registers an event processing callback to listen for different events on the wri
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | string | Yes | Type of the event. The following events are supported: |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;emitter.EventData&gt; | Yes | Callback function used to return the event data. |
 
 ## Examples
 
@@ -401,7 +420,7 @@ writable.write('hello', 'utf8', () => {
 });
 ```
 
-## on
+## on_string
 
 ```TypeScript
 on(event: string, callback: Function): void
@@ -411,7 +430,9 @@ Registering Event Messages.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
 
@@ -434,11 +455,13 @@ setDefaultEncoding(encoding?: string): boolean
 
 Sets the default encoding format for the writable stream.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-setDefaultEncoding(encoding?: string): boolean--><!--Device-Writable-setDefaultEncoding(encoding?: string): boolean-End-->
 
@@ -482,11 +505,13 @@ uncork(): boolean
 
 Releases the cork state, flushing the buffered data and writing it to the target location. After this API is called, the value of **writableCorked** is decremented by one. If the value reaches **0**, the stream is no longer in the cork state. Otherwise, the stream is still in the cork state. It is recommended that this API be used in pair with [cork()](#cork).
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-uncork(): boolean--><!--Device-Writable-uncork(): boolean-End-->
 
@@ -530,11 +555,13 @@ write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): bool
 
 Writes data to the buffer of the stream. This API uses an asynchronous callback to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean--><!--Device-Writable-write(chunk?: string | Uint8Array, encoding?: string, callback?: Function): boolean-End-->
 
@@ -558,9 +585,9 @@ Writes data to the buffer of the stream. This API uses an asynchronous callback 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200035](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
-| [10200037](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
-| [10200036](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
+| [10200035](../errorcode-utils.md#10200035-dowrite-is-not-implemented) | The doWrite method has not been implemented. |
+| [10200037](../errorcode-utils.md#10200037-callback-is-invoked-multiple-times) | The callback is invoked multiple times consecutively. |
+| [10200036](../errorcode-utils.md#10200036-write-operation-is-still-performed-after-the-stream-ends) | The stream has been ended. |
 
 ## Examples
 
@@ -579,144 +606,4 @@ class TestWritable extends stream.Writable {
 let writableStream = new TestWritable();
 writableStream.write('test', 'utf8');
 ```
-
-## writable
-
-```TypeScript
-get writable(): boolean
-```
-
-Is true if it is safe to call writable.write(), which means the stream has not been destroyed, error or end.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writable(): boolean--><!--Device-Writable-get writable(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## writableCorked
-
-```TypeScript
-get writableCorked(): int
-```
-
-Number of times writable.uncork() needs to be called in order to fully uncork the stream.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writableCorked(): int--><!--Device-Writable-get writableCorked(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## writableEnded
-
-```TypeScript
-get writableEnded(): boolean
-```
-
-Whether Writable.end has been called.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writableEnded(): boolean--><!--Device-Writable-get writableEnded(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## writableFinished
-
-```TypeScript
-get writableFinished(): boolean
-```
-
-Whether Writable.end has been called and all buffers have been flushed.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writableFinished(): boolean--><!--Device-Writable-get writableFinished(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## writableHighWatermark
-
-```TypeScript
-get writableHighWatermark(): int
-```
-
-Value of highWatermark.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writableHighWatermark(): int--><!--Device-Writable-get writableHighWatermark(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## writableLength
-
-```TypeScript
-get writableLength(): int
-```
-
-Size of data that can be flushed, in bytes or objects.
-
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writableLength(): int--><!--Device-Writable-get writableLength(): int-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## writableObjectMode
-
-```TypeScript
-get writableObjectMode(): boolean
-```
-
-Returns boolean indicating whether it is in ObjectMode.
-
-**Type:** boolean
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Writable-get writableObjectMode(): boolean--><!--Device-Writable-get writableObjectMode(): boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
 

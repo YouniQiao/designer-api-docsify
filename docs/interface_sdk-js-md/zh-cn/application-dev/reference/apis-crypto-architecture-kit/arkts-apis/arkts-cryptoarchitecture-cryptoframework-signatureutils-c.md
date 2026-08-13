@@ -2,9 +2,11 @@
 
 用于ECC/SM2签名数据转换的工具类。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-class SignatureUtils--><!--Device-cryptoFramework-class SignatureUtils-End-->
 
@@ -18,11 +20,13 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 将（r、s）的ECC/SM2签名数据转换为ASN.1 DER编码。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array--><!--Device-SignatureUtils-static genEccSignature(spec: EccSignatureSpec): Uint8Array-End-->
 
@@ -44,10 +48,10 @@ static genEccSignature(spec: EccSignatureSpec): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. spec参数的r或s值为0或过大。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. spec参数的r或s值为0或过大。 |
 
 ## 示例
 
@@ -80,11 +84,13 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 从ASN.1 DER编码的ECC/SM2签名数据获取r和s。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec--><!--Device-SignatureUtils-static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec-End-->
 
@@ -106,10 +112,10 @@ static genEccSignatureSpec(data: Uint8Array): EccSignatureSpec
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [17630001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
-| [17620001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
-| [17620002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
-| [17620003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. data参数长度为0或过大。 |
+| [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
+| [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
+| [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | 获取Native对象失败或参数转换失败。 |
+| [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. data参数长度为0或过大。 |
 
 ## 示例
 

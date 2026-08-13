@@ -2,7 +2,9 @@
 
 Enumerates the scale modes of images.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-image-enum ScaleMode--><!--Device-image-enum ScaleMode-End-->
 
@@ -16,7 +18,9 @@ FIT_TARGET_SIZE = 0
 
 Reduces the image size to the dimensions of the target.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,7 +38,9 @@ CENTER_CROP = 1
 
 Scales the image so that it fills the requested bounds of the target and crops the extra.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -4,6 +4,8 @@ Boids simulation plugin, providing static methods for obtaining the boids simula
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class BoidsSimPlugin--><!--Device-unnamed-export declare class BoidsSimPlugin-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
@@ -19,6 +21,8 @@ static getDefaultBoidsSimWorld(scene: Scene): BoidsSimWorld | null
 Gets the Boids simulation world instance associated with the specified scene.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

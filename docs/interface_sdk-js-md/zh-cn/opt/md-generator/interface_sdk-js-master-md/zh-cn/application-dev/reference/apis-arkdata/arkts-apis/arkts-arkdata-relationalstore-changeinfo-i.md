@@ -2,7 +2,9 @@
 
 记录端云同步过程详情。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-relationalStore-interface ChangeInfo--><!--Device-relationalStore-interface ChangeInfo-End-->
 
@@ -18,7 +20,9 @@ deleted: Array<string> | Array<number>
 
 **类型：** Array&lt;string&gt; \| Array&lt;number&gt;
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ChangeInfo-deleted: Array<string> | Array<long>--><!--Device-ChangeInfo-deleted: Array<string> | Array<long>-End-->
 
@@ -34,7 +38,9 @@ inserted: Array<string> | Array<number>
 
 **类型：** Array&lt;string&gt; \| Array&lt;number&gt;
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ChangeInfo-inserted: Array<string> | Array<long>--><!--Device-ChangeInfo-inserted: Array<string> | Array<long>-End-->
 
@@ -50,7 +56,9 @@ table: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ChangeInfo-table: string--><!--Device-ChangeInfo-table: string-End-->
 
@@ -66,7 +74,9 @@ type: ChangeType
 
 **类型：** ChangeType
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ChangeInfo-type: ChangeType--><!--Device-ChangeInfo-type: ChangeType-End-->
 
@@ -82,7 +92,9 @@ updated: Array<string> | Array<number>
 
 **类型：** Array&lt;string&gt; \| Array&lt;number&gt;
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ChangeInfo-updated: Array<string> | Array<long>--><!--Device-ChangeInfo-updated: Array<string> | Array<long>-End-->
 

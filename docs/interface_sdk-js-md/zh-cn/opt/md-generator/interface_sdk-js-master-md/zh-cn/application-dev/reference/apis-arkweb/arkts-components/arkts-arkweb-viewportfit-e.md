@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ViewportFit--><!--Device-unnamed-declare enum ViewportFit-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ AUTO = 0
 默认值，整个网页可见。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ CONTAINS = 1
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ViewportFit-CONTAINS = 1--><!--Device-ViewportFit-CONTAINS = 1-End-->
@@ -49,6 +55,8 @@ COVER = 2
 初始布局视口和视觉视口为适应设备显示屏的最大矩形内。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

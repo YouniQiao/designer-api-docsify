@@ -1,12 +1,12 @@
 # AbilityStageMonitor
 
-The module provides the capability to listen for a specified  
-[AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) object. You can use AbilityStageMonitor as an input parameter of  
-[abilityDelegator.waitAbilityStageMonitor](arkts-ability-abilitydelegator-i.md#waitAbilityStageMonitor)to register a listener.
+The module provides the capability to listen for a specified [AbilityStage](arkts-ability-app-ability-abilitystage-abilitystage-c.md#AbilityStage) object. You can use AbilityStageMonitor as an input parameter of [abilityDelegator.waitAbilityStageMonitor](arkts-ability-abilitydelegator-i.md#waitAbilityStageMonitor) to register a listener.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AbilityStageMonitor--><!--Device-unnamed-export interface AbilityStageMonitor-End-->
 
@@ -22,9 +22,11 @@ Module name of the AbilityStage object.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,9 +44,11 @@ Source path of the AbilityStage object.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

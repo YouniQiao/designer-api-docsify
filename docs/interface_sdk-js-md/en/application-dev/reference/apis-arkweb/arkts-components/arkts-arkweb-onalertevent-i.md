@@ -6,6 +6,8 @@ Defines the callback used when a web page triggers **alert()**.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface OnAlertEvent--><!--Device-unnamed-declare interface OnAlertEvent-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -23,6 +25,8 @@ Information displayed in the dialog box.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -44,6 +48,8 @@ User operation result that is notified to the **Web** component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OnAlertEvent-result: JsResult--><!--Device-OnAlertEvent-result: JsResult-End-->
@@ -63,6 +69,8 @@ URL of the web page where the dialog box is displayed.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

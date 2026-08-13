@@ -4,6 +4,8 @@ interface AtomicServiceBar
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface AtomicServiceBar--><!--Device-unnamed-export interface AtomicServiceBar-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getBarRect(): Frame
 Get size and position of the bar.
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ onBarRectChange(callback: Callback<Frame>): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -65,6 +71,8 @@ setBackgroundColor(color: Nullable< Color | number | string>): void
 Set the background color of the bar.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,6 +98,8 @@ Set the color of the icon on the bar.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -113,6 +123,8 @@ setTitleContent(content: string): void
 Set the title of the bar.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -138,6 +150,8 @@ Set the font style of the bar's title.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -150,7 +164,7 @@ Set the font style of the bar's title.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [font](arkts-font.md) | [FontStyle](arkts-arkui-enums-fontstyle-e.md) | 是 |
+| [font](arkts-font.md) | [FontStyle](../../apis-na/arkts-apis/arkts-na-enums-fontstyle-e.md) | 是 |
 
 ## setVisible
 
@@ -161,6 +175,8 @@ setVisible(visible: boolean): void
 Set the visibility of the bar, except the icon.
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

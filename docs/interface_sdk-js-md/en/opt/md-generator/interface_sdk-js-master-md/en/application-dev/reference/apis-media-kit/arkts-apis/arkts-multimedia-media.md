@@ -2,7 +2,9 @@
 
 The multimedia subsystem provides a set of simple and easy-to-use APIs for you to access the system and use media resources.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace media--><!--Device-unnamed-declare namespace media-End-->
 
@@ -21,41 +23,58 @@ import { media } from '@kit.MediaKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createAVAdsController](arkts-media-media-createavadscontroller-f.md#createavadscontroller) |
-| [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md#createavdownloadermanager) |
-| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator) |
-| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator-1) |
-| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor) |
-| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor-1) |
-| [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer) |
-| [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer-1) |
-| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder) |
-| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder-1) |
-| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder) |
-| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createavtranscoder) |
-| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md#createaudioplayer) |
-| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) |
-| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md#createmediasourcewithdatasource) |
-| [createMediaSourceWithDirectory](arkts-media-media-createmediasourcewithdirectory-f.md#createmediasourcewithdirectory) |
-| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md#createmediasourcewithfd) |
-| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createmediasourcewithstreamdata) |
-| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl) |
-| [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool) |
-| [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool-1) |
-| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer) |
-| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer-1) |
+| [createAVAdsController](arkts-media-media-createavadscontroller-f.md#createAVAdsController) |
+| [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md#createAVDownloaderManager) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createAVImageGenerator) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createAVMetadataExtractor) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) |
+| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) |
+| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createAVScreenCaptureRecorder) |
+| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createAVTranscoder) |
+| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createAVTranscoder) |
+| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md#createAudioPlayer) |
+| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md#createAudioRecorder) |
+| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md#createMediaSourceWithDataSource) |
+| [createMediaSourceWithDirectory](arkts-media-media-createmediasourcewithdirectory-f.md#createMediaSourceWithDirectory) |
+| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md#createMediaSourceWithFd) |
+| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createMediaSourceWithStreamData) |
+| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createMediaSourceWithStreamData) |
+| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl) |
+| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createMediaSourceWithUrl) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createSoundPool](arkts-media-media-createsoundpool-f.md#createSoundPool) |
+| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createVideoPlayer) |
+| [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createVideoPlayer) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md#createparallelsoundpool) |
-| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder) |
-| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder-1) |
-| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md#getavscreencaptureconfigurableparameters) |
-| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getscreencapturemonitor) |
-| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md#reportavscreencaptureuserchoice) |
+| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md#createParallelSoundPool-(System-API)) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder-(System-API)) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder-(System-API)) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder-(System-API)) |
+| [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createVideoRecorder-(System-API)) |
+| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md#getAVScreenCaptureConfigurableParameters-(System-API)) |
+| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getScreenCaptureMonitor-(System-API)) |
+| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getScreenCaptureMonitor-(System-API)) |
+| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md#reportAVScreenCaptureUserChoice-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -180,6 +199,7 @@ import { media } from '@kit.MediaKit';
 | [AVPlayerState](arkts-media-media-avplayerstate-t.md) |
 | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) |
 | [AudioState](arkts-media-media-audiostate-t.md) |
+| [MediaDescription](arkts-media-media-mediadescription-t.md) |
 | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) |
 | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) |
 | [OnAVPlayerStateChangeHandle](arkts-media-media-onavplayerstatechangehandle-t.md) |
@@ -194,6 +214,7 @@ import { media } from '@kit.MediaKit';
 | [OnTrackChangeHandler](arkts-media-media-ontrackchangehandler-t.md) |
 | [OnVideoSizeChangeHandler](arkts-media-media-onvideosizechangehandler-t.md) |
 | [PlayParameters](arkts-media-media-playparameters-t.md) |
+| [PlaybackInfo](arkts-media-media-playbackinfo-t.md) |
 | [PlaybackMetrics](arkts-media-media-playbackmetrics-t.md) |
 | [SoundPool](arkts-media-media-soundpool-t.md) |
 | [SourceCloseCallback](arkts-media-media-sourceclosecallback-t.md) |

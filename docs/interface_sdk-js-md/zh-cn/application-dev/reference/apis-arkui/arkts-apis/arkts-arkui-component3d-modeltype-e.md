@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum ModelType--><!--Device-unnamed-export declare enum ModelType-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -22,6 +24,8 @@ TEXTURE = 0
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-ModelType-TEXTURE = 0--><!--Device-ModelType-TEXTURE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
@@ -37,6 +41,8 @@ SURFACE = 1
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ModelType-SURFACE = 1--><!--Device-ModelType-SURFACE = 1-End-->
 

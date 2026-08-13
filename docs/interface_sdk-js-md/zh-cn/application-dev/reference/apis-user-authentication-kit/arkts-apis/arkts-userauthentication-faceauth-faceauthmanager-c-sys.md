@@ -2,9 +2,11 @@
 
 人脸认证管理器对象。用于提供人脸录入过程中的管理功能，目前支持设置人脸预览界面的Surface ID。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-faceAuth-class FaceAuthManager--><!--Device-faceAuth-class FaceAuthManager-End-->
 
@@ -20,9 +22,11 @@ constructor()
 
 用于创建人脸认证管理器对象。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-FaceAuthManager-constructor()--><!--Device-FaceAuthManager-constructor()-End-->
 
@@ -44,13 +48,13 @@ let faceAuthManager = new faceAuth.FaceAuthManager();
 setSurfaceId(surfaceId: string): void
 ```
 
-用于在录入人脸时设置人脸预览界面的Surface ID。该接口需要配合  
-[addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addCredential)使用，通过  
-[getXComponentSurfaceId](XComponentController#getXComponentSurfaceId)组件的Surface来显示人脸预览画面。
+用于在录入人脸时设置人脸预览界面的Surface ID。该接口需要配合 [addCredential](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-useridentitymanager-c-sys.md#addCredential)使用，通过 getXComponentSurfaceId组件的Surface来显示人脸预览画面。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_USER_IDM
 
@@ -64,15 +68,15 @@ setSurfaceId(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | [XComponent](./@internal/component/ets/xcomponent)持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 &lt;br&gt;**说明：**需在XComponent完成初始化后，通过[getXComponentSurfaceId](XComponentController#getXComponentSurfaceId)方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
+| surfaceId | string | 是 | XComponent持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 &lt;br&gt;**说明：**需在XComponent完成初始化后，通过getXComponentSurfaceId方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12700001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
+| [12700001](../errorcode-useriam.md#12700001-人脸服务不可用) | The service is unavailable. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied. Called by non-system application. |
 
 ## 示例
 

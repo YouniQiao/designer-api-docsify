@@ -2,9 +2,11 @@
 
 定义应用是否支持多开模式。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum MultiAppMode--><!--Device-unnamed-export enum MultiAppMode-End-->
 
@@ -20,9 +22,11 @@ NOT_SUPPORTED = 0
 
 应用不支持多开模式。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,13 +42,13 @@ NOT_SUPPORTED = 0
 MULTI_INSTANCE = 1
 ```
 
-应用支持多实例模式。
+应用支持多实例模式。 **说明：** 只支持2in1设备。
 
-**说明：** 只支持2in1设备。
+**起始版本：** 23
 
-**起始版本：** 14
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,9 +66,11 @@ APP_CLONE = 2
 
 应用支持分身模式。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

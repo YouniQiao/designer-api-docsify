@@ -14,6 +14,8 @@ Called when the RootScene is used.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-RootSceneInterface-(session: RootSceneSession): RootSceneAttribute--><!--Device-RootSceneInterface-(session: RootSceneSession): RootSceneAttribute-End-->
@@ -30,4 +32,4 @@ Called when the RootScene is used.
 
 ## Summary
 
-- [RootSceneSession](arkts-arkui-rootscene-rootscenesession-i-sys.md)
+- [RootSceneSession](arkts-arkui-rootscenesession-i.md)

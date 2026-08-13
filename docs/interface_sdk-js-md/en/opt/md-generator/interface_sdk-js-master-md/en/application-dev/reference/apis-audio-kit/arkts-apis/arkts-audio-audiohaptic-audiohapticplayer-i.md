@@ -1,9 +1,10 @@
 # AudioHapticPlayer
 
-Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use   
-[createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
+Implements audio-haptic playback. Before calling any API in AudioHapticPlayer, you must use [createPlayer](arkts-audio-audiohaptic-audiohapticmanager-i.md#createPlayer) to create an AudioHapticPlayer instance.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audioHaptic-interface AudioHapticPlayer--><!--Device-audioHaptic-interface AudioHapticPlayer-End-->
 
@@ -23,7 +24,9 @@ isMuted(type: AudioHapticType): boolean
 
 Checks whether an audio-haptic type is muted.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean--><!--Device-AudioHapticPlayer-isMuted(type: AudioHapticType): boolean-End-->
 
@@ -45,7 +48,7 @@ Checks whether an audio-haptic type is muted.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -55,17 +58,19 @@ let audioHapticType: audioHaptic.AudioHapticType = audioHaptic.AudioHapticType.A
 let result: boolean = audioHapticPlayerInstance.isMuted(audioHapticType);
 ```
 
-## off('endOfStream')
+## offAudioInterrupt
 
 ```TypeScript
-off(type: 'endOfStream', callback?: Callback<void>): void
+offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void
 ```
 
-Unsubscribes from the EOS event. This API uses an asynchronous callback to return the result.
+Unsubscribes audio interrupt event.
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioHapticPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-offAudioInterrupt(callback?: Callback<audio.InterruptEvent>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -73,26 +78,31 @@ Unsubscribes from the EOS event. This API uses an asynchronous callback to retur
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'endOfStream' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | No |
 
-## Examples
+## offEndOfStream
 
 ```TypeScript
-// Cancel all subscriptions to the event.
-audioHapticPlayerInstance.off('endOfStream');
-
-// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
-let endOfStreamCallback = () => {
-  console.info(`Receive the callback of endOfStream.`);
-};
-
-audioHapticPlayerInstance.on('endOfStream', endOfStreamCallback);
-
-audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
+offEndOfStream(callback?: Callback<void>): void
 ```
 
-## off('audioInterrupt')
+Unsubscribes end of stream event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioHapticPlayer-offEndOfStream(callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-offEndOfStream(callback?: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
+
+## off_audioInterrupt
 
 ```TypeScript
 off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
@@ -101,6 +111,8 @@ off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void
 Unsubscribes from the audio interruption event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-off(type: 'audioInterrupt', callback?: Callback<audio.InterruptEvent>): void-End-->
 
@@ -175,17 +187,19 @@ audioHapticPlayerInstance.on('audioInterrupt', audioInterruptCallback);
 audioHapticPlayerInstance.off('audioInterrupt', audioInterruptCallback);
 ```
 
-## on('endOfStream')
+## off_endOfStream
 
 ```TypeScript
-on(type: 'endOfStream', callback: Callback<void>): void
+off(type: 'endOfStream', callback?: Callback<void>): void
 ```
 
-Subscribes to end of stream (EOS) event, which is triggered when the audio stream playback ends. This API uses an asynchronous callback to return the result.
+Unsubscribes from the EOS event. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
-<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+**Deprecated since:** -1
+
+<!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void--><!--Device-AudioHapticPlayer-off(type: 'endOfStream', callback?: Callback<void>): void-End-->
 
 **System capability:** SystemCapability.Multimedia.AudioHaptic.Core
 
@@ -194,17 +208,69 @@ Subscribes to end of stream (EOS) event, which is triggered when the audio strea
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'endOfStream' | Yes |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No |
 
 ## Examples
 
 ```TypeScript
-audioHapticPlayerInstance.on('endOfStream', () => {
+// Cancel all subscriptions to the event.
+audioHapticPlayerInstance.off('endOfStream');
+
+// For the same event, if the callback parameter passed to the off API is the same as that passed to the on API, the off API cancels the subscription registered with the specified callback parameter.
+let endOfStreamCallback = () => {
   console.info(`Receive the callback of endOfStream.`);
-});
+};
+
+audioHapticPlayerInstance.on('endOfStream', endOfStreamCallback);
+
+audioHapticPlayerInstance.off('endOfStream', endOfStreamCallback);
 ```
 
-## on('audioInterrupt')
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+Subscribes audio interrupt event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioHapticPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes |
+
+## onEndOfStream
+
+```TypeScript
+onEndOfStream(callback: Callback<void>): void
+```
+
+Subscribes end of stream event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-AudioHapticPlayer-onEndOfStream(callback: Callback<void>): void--><!--Device-AudioHapticPlayer-onEndOfStream(callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## on_audioInterrupt
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
@@ -213,6 +279,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-AudioHapticPlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
@@ -280,6 +348,37 @@ audioHapticPlayerInstance.on('audioInterrupt', (interruptEvent: audio.InterruptE
 });
 ```
 
+## on_endOfStream
+
+```TypeScript
+on(type: 'endOfStream', callback: Callback<void>): void
+```
+
+Subscribes to end of stream (EOS) event, which is triggered when the audio stream playback ends. This API uses an asynchronous callback to return the result.
+
+**Since:** 11
+
+**Deprecated since:** -1
+
+<!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void--><!--Device-AudioHapticPlayer-on(type: 'endOfStream', callback: Callback<void>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.AudioHaptic.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'endOfStream' | Yes |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes |
+
+## Examples
+
+```TypeScript
+audioHapticPlayerInstance.on('endOfStream', () => {
+  console.info(`Receive the callback of endOfStream.`);
+});
+```
+
 ## release
 
 ```TypeScript
@@ -288,7 +387,9 @@ release(): Promise<void>
 
 Releases this audio-haptic player. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-release(): Promise<void>--><!--Device-AudioHapticPlayer-release(): Promise<void>-End-->
 
@@ -304,7 +405,7 @@ Releases this audio-haptic player. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -324,13 +425,11 @@ audioHapticPlayerInstance.release().then(() => {
 setLoop(loop: boolean): Promise<void>
 ```
 
-Sets this audio-haptic player to play in a loop. This API uses a promise to return the result.
+Sets this audio-haptic player to play in a loop. This API uses a promise to return the result. > **NOTE：**> > This API must be called before the audio-haptic player is released.
 
-> **NOTE：**
-> 
-> This API must be called before the audio-haptic player is released.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>--><!--Device-AudioHapticPlayer-setLoop(loop: boolean): Promise<void>-End-->
 
@@ -352,7 +451,7 @@ Sets this audio-haptic player to play in a loop. This API uses a promise to retu
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
 
 ## Examples
 
@@ -372,13 +471,11 @@ audioHapticPlayerInstance.setLoop(true).then(() => {
 setVolume(volume: number): Promise<void>
 ```
 
-Sets the volume for this audio-haptic player. This API uses a promise to return the result.
+Sets the volume for this audio-haptic player. This API uses a promise to return the result. > **NOTE：**> > This API must be called before the audio-haptic player is released.
 
-> **NOTE：**
-> 
-> This API must be called before the audio-haptic player is released.
+**Since:** 23
 
-**Since:** 20
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>--><!--Device-AudioHapticPlayer-setVolume(volume: double): Promise<void>-End-->
 
@@ -400,9 +497,9 @@ Sets the volume for this audio-haptic player. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -424,7 +521,9 @@ start(): Promise<void>
 
 Starts playback. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-start(): Promise<void>--><!--Device-AudioHapticPlayer-start(): Promise<void>-End-->
 
@@ -440,9 +539,9 @@ Starts playback. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -464,7 +563,9 @@ stop(): Promise<void>
 
 Stops playback. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioHapticPlayer-stop(): Promise<void>--><!--Device-AudioHapticPlayer-stop(): Promise<void>-End-->
 
@@ -480,8 +581,8 @@ Stops playback. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 

@@ -1,8 +1,10 @@
 # KVManager
 
-分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager)构建一个KVManager实例。
+分布式键值数据库管理实例，用于获取分布式键值数据库的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager)构建一 个KVManager实例。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface KVManager--><!--Device-distributedKVStore-interface KVManager-End-->
 
@@ -16,7 +18,9 @@ closeKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): voi
 
 通过storeId的值关闭指定的分布式键值数据库，使用callback异步回调。此方法与getKVStore()方法配对使用，使用完毕的数据库应通过此方法关闭。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +40,7 @@ closeKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): voi
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -88,7 +92,9 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 通过storeId的值关闭指定的分布式键值数据库，如果使用kvConfig参数，关闭的是指定路径下的分布式键值数据库，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -114,7 +120,7 @@ closeKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -165,7 +171,9 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 
 通过storeId的值删除指定的分布式键值数据库，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -185,8 +193,8 @@ deleteKVStore(appId: string, storeId: string, callback: AsyncCallback<void>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
 
 ## 示例
 
@@ -239,7 +247,9 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 通过storeId的值删除指定的分布式键值数据库，如果使用kvConfig参数，删除的是指定路径下的分布式键值数据库，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,8 +275,8 @@ deleteKVStore(appId: string, storeId: string, kvConfig?: Options): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100004-未找到相关数据) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100004](../errorcode-distributedKVStore.md#15100004-未找到相关数据) |
 
 ## 示例
 
@@ -315,11 +325,11 @@ try {
 getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 ```
 
-获取所有通过  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))方法创建的且没有调用  
-[deleteKVStore](#deleteKVStore)方法删除的分布式键值数据库的storeId，使用callback异步回调。
+获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deleteKVStore) 方法删除的分布式键值数据库的storeId，使用callback异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -338,7 +348,7 @@ getAllKVStoreId(appId: string, callback: AsyncCallback<string[]>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -367,11 +377,11 @@ try {
 getAllKVStoreId(appId: string): Promise<string[]>
 ```
 
-获取所有通过  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))方法创建的且没有调用  
-[deleteKVStore](#deleteKVStore)方法删除的分布式键值数据库的storeId，使用Promise异步回调。
+获取所有通过 getKVStore 方法创建的且没有调用 [deleteKVStore](#deleteKVStore) 方法删除的分布式键值数据库的storeId，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -395,7 +405,7 @@ getAllKVStoreId(appId: string): Promise<string[]>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -423,15 +433,11 @@ try {
 getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): void
 ```
 
-通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用  
-[closeKVStore](#closeKVStore)关闭数据库释放资源。
+通过指定options和storeId，创建并获取分布式键值数据库，使用callback异步回调。获取数据库后，在使用完毕时需调用 [closeKVStore](#closeKVStore) 关闭数据库释放资源。 > **注意：** > > 在获取已有的分布式键值数据库时，如果数据库文件无法打开（例如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，以防止数据丢失。有关备份恢复的使用方法，请参 > 阅[数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 
-> **注意：**
-> 
-> 在获取已有的分布式键值数据库时，如果数据库文件无法打开（例如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，以防止数据丢失。有关备份恢复的使用方法，请参
-> 阅[数据库备份与恢复](../../../database/data-backup-and-restore.md)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -451,9 +457,9 @@ getKVStore<T>(storeId: string, options: Options, callback: AsyncCallback<T>): vo
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -494,15 +500,11 @@ try {
 getKVStore<T>(storeId: string, options: Options): Promise<T>
 ```
 
-指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用  
-[closeKVStore](#closeKVStore)关闭数据库释放资源。
+指定options和storeId，创建并获取分布式键值数据库，使用Promise回调。获取数据库后，在使用完毕时需调用 [closeKVStore](#closeKVStore) 关闭数据库释放资源。 > **注意：** > > 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见 > [数据库备份与恢复](../../../database/data-backup-and-restore.md)。
 
-> **注意：**
-> 
-> 获取已有的分布式键值数据库时，如果数据库文件无法打开（如文件头损坏），将触发自动重建逻辑，并返回新创建的分布式键值数据库实例。建议对重要且无法重新生成的数据使用备份恢复功能，防止数据丢失。备份恢复的使用方法详见
-> [数据库备份与恢复](../../../database/data-backup-and-restore.md)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -527,9 +529,9 @@ getKVStore<T>(storeId: string, options: Options): Promise<T>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
-| [15100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-distributedKVStore.md#15100003-数据库损坏) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15100002](../errorcode-distributedKVStore.md#15100002-打开已有数据库时参数配置发生变化) |
+| [15100003](../errorcode-distributedKVStore.md#15100003-数据库损坏) |
 
 ## 示例
 
@@ -560,16 +562,41 @@ try {
 }
 ```
 
-## off
+## offDistributedDataServiceDie
+
+```TypeScript
+offDistributedDataServiceDie(deathCallback?: Callback<void>): void
+```
+
+取消订阅服务状态变更通知。必须先调用onDistributedDataServiceDie订阅后，才能调用offDistributedDataServiceDie取消订阅。 参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void--><!--Device-KVManager-offDistributedDataServiceDie(deathCallback?: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 |
+
+## off_distributedDataServiceDie
 
 ```TypeScript
 off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 ```
 
-取消订阅服务状态变更通知。必须先调用  
-[on('distributedDataServiceDie')](distributedKVStore.KVManager.on(event: 'distributedDataServiceDie', deathCallback: Callback&lt;void&gt;))订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
+取消订阅服务状态变更通知。必须先调用 [on('distributedDataServiceDie')](#on_distributedDataServiceDie) 订阅后，才能调用off取消订阅。参数中的deathCallback必须是已经订阅过的deathCallback，否则会取消订阅失败。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void--><!--Device-KVManager-off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void-End-->
 
@@ -586,7 +613,7 @@ off(event: 'distributedDataServiceDie', deathCallback?: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -605,18 +632,41 @@ try {
 }
 ```
 
-## on
+## onDistributedDataServiceDie
+
+```TypeScript
+onDistributedDataServiceDie(deathCallback: Callback<void>): void
+```
+
+订阅服务终止事件。如果服务终止，需要重新调用onDataChange和onSyncComplete注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。 调用onDistributedDataServiceDie订阅后，在不需要监听时必须调用offDistributedDataServiceDie取消订阅
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void--><!--Device-KVManager-onDistributedDataServiceDie(deathCallback: Callback<void>): void-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| deathCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 |
+
+## on_distributedDataServiceDie
 
 ```TypeScript
 on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 ```
 
-订阅服务终止事件。如果服务终止，需要重新调用  
-[on('dataChange')](distributedKVStore.SingleKVStore.on(event: 'dataChange', type: SubscribeType, listener: Callback&lt;ChangeNotification&gt;))和  
-[on('syncComplete')](distributedKVStore.SingleKVStore.on(event: 'syncComplete', syncCallback: Callback&lt;Array<[string, number]>&gt;&lt;[string, number]&gt;>))注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用  
-[off('distributedDataServiceDie')](../../apis-user-authentication-kit/arkts-apis/arkts-userauthentication-userauth-authinstance-i.md#off)取消订阅。
+订阅服务终止事件。如果服务终止，需要重新调用 [on('dataChange')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on_dataChange) 和 [on('syncComplete')](arkts-arkdata-distributedkvstore-singlekvstore-i.md#on_dataChange) 注册数据变更通知和端端同步完成事件回调通知，并且端端同步操作会返回失败。调用on订阅后，在不需要监听时必须调用 [off('distributedDataServiceDie')](#off_distributedDataServiceDie) 取消订阅。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void--><!--Device-KVManager-on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void-End-->
 
@@ -633,7 +683,7 @@ on(event: 'distributedDataServiceDie', deathCallback: Callback<void>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

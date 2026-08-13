@@ -1,9 +1,10 @@
 # LocalWantAgentInfo (System API)
 
-Defines the information required for triggering a local WantAgent object. The information can be used as an input parameter in  
-[createLocalWantAgent](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent-sys.md#wantagentcreatelocalwantagent20)to obtain a local WantAgent object.
+Defines the information required for triggering a local WantAgent object. The information can be used as an input parameter in createLocalWantAgent to obtain a local WantAgent object.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LocalWantAgentInfo--><!--Device-unnamed-export interface LocalWantAgentInfo-End-->
 
@@ -21,7 +22,9 @@ Type of the operation to execute.
 
 **Type:** abilityWantAgent.OperationType
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,7 +44,9 @@ Custom request code, which is used to identify the operation to execute.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +66,9 @@ Array of all Want objects. Currently, only one Want object is supported. If mult
 
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

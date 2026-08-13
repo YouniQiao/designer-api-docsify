@@ -2,7 +2,9 @@
 
 应用数据库模式。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface AppSchema--><!--Device-cloudExtension-export interface AppSchema-End-->
 
@@ -20,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppSchema-bundleName: string--><!--Device-AppSchema-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ databases: Array<Database>
 
 **类型：** Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppSchema-databases: Array<Database>--><!--Device-AppSchema-databases: Array<Database>-End-->
 
@@ -56,7 +62,9 @@ version: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AppSchema-version: int--><!--Device-AppSchema-version: int-End-->
 

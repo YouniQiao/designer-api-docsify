@@ -1,14 +1,8 @@
 # Ellipse
 
-椭圆绘制组件。该组件通过设置宽度和高度属性绘制椭圆形状，在给定的矩形区域内渲染椭圆轮廓和填充区域。
+椭圆绘制组件。该组件通过设置宽度和高度属性绘制椭圆形状，在给定的矩形区域内渲染椭圆轮廓和填充区域。 > **说明：** > > 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
 
-> **说明：**
->
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-
-## 子组件
-
-无
+## 子组件 无
 
 ## Ellipse
 
@@ -16,9 +10,11 @@
 Ellipse(options?: EllipseOptions)
 ```
 
-use new function to set the value.Anonymous Object Rectification.
+use new function to set the value. Anonymous Object Rectification.
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -44,6 +40,8 @@ Ellipse(options?: EllipseOptions)
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -60,4 +58,4 @@ Ellipse(options?: EllipseOptions)
 
 ## 汇总
 
-- [EllipseOptions](arkts-arkui-ellipse-ellipseoptions-i.md)
+- [EllipseOptions](arkts-arkui-ellipseoptions-i.md)

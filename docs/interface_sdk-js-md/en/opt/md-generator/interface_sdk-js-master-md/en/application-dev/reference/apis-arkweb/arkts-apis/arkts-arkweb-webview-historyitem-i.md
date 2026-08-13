@@ -4,6 +4,8 @@ Provides information for history item in BackForwardList.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 <!--Device-webview-interface HistoryItem--><!--Device-webview-interface HistoryItem-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -26,6 +28,8 @@ Original request url of this history item.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HistoryItem-historyRawUrl: string--><!--Device-HistoryItem-historyRawUrl: string-End-->
@@ -43,6 +47,8 @@ Url of this history item.
 **Type:** string
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -62,6 +68,8 @@ Pixelmap of icon.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HistoryItem-icon: image.PixelMap--><!--Device-HistoryItem-icon: image.PixelMap-End-->
@@ -79,6 +87,8 @@ Title of this history item.
 **Type:** string
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

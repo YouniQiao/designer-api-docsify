@@ -1,18 +1,15 @@
 # Graphics
 
-The **Graphics** module provides APIs for defining attributes of a custom node.
-
-
 ## Summary
 
 ### Functions
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderradiuses) |
-| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderstyles) |
-| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgecolors) |
-| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgewidths) |
+| [borderRadiuses](arkts-arkui-graphics-borderradiuses-f.md#borderRadiuses) |
+| [borderStyles](arkts-arkui-graphics-borderstyles-f.md#borderStyles) |
+| [edgeColors](arkts-arkui-graphics-edgecolors-f.md#edgeColors) |
+| [edgeWidths](arkts-arkui-graphics-edgewidths-f.md#edgeWidths) |
 
 ### Classes
 

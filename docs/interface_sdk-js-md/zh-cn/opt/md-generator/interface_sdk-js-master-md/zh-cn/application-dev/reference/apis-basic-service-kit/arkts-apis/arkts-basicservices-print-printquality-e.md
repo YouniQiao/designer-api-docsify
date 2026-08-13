@@ -2,7 +2,9 @@
 
 打印质量的枚举。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-print-enum PrintQuality--><!--Device-print-enum PrintQuality-End-->
 
@@ -16,7 +18,9 @@ QUALITY_DRAFT = 3
 
 表示经济的打印质量。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintQuality-QUALITY_DRAFT = 3--><!--Device-PrintQuality-QUALITY_DRAFT = 3-End-->
 
@@ -30,7 +34,9 @@ QUALITY_NORMAL = 4
 
 表示标准的打印质量。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintQuality-QUALITY_NORMAL = 4--><!--Device-PrintQuality-QUALITY_NORMAL = 4-End-->
 
@@ -44,7 +50,9 @@ QUALITY_HIGH = 5
 
 表示最佳的打印质量。
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-PrintQuality-QUALITY_HIGH = 5--><!--Device-PrintQuality-QUALITY_HIGH = 5-End-->
 

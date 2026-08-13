@@ -6,7 +6,9 @@ export type AbilityResult = _AbilityResult
 
 定义Ability被拉起并退出后返回的结果码和数据。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

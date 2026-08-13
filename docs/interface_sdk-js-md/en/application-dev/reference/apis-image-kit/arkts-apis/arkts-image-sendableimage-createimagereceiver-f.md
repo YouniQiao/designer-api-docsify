@@ -12,14 +12,13 @@ import { sendableImage } from '@kit.ImageKit';
 function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver
 ```
 
-Creates an ImageReceiver instance based on the specified image size, format, and capacity.
-
-Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call   
-[release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Creates an ImageReceiver instance based on the specified image size, format, and capacity. Images occupy a large amount of memory. When you finish using an ImageReceiver instance, call [release](arkts-image-sendableimage-pixelmap-i.md#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver--><!--Device-sendableImage-function createImageReceiver(size: image.Size, format: image.ImageFormat, capacity: number): ImageReceiver-End-->
 
@@ -43,7 +42,7 @@ Images occupy a large amount of memory. When you finish using an ImageReceiver i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 
 ## Examples
 

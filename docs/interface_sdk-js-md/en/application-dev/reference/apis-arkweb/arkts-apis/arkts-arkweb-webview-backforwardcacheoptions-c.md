@@ -2,9 +2,11 @@
 
 This class is used to set back forward cache options.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class BackForwardCacheOptions--><!--Device-webview-class BackForwardCacheOptions-End-->
 
@@ -22,9 +24,11 @@ import { webview } from '@kit.ArkWeb';
 constructor()
 ```
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-BackForwardCacheOptions-constructor()--><!--Device-BackForwardCacheOptions-constructor()-End-->
 
@@ -33,36 +37,40 @@ constructor()
 ## size
 
 ```TypeScript
-size: int
+size: number
 ```
 
-Set the maximum size of pages that can cache.Default is 1, max is 50.
+Set the maximum size of pages that can cache. Default is 1, max is 50.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-BackForwardCacheOptions-size: int--><!--Device-BackForwardCacheOptions-size: int-End-->
+**Deprecated since:** -1
+
+<!--Device-BackForwardCacheOptions-size: number--><!--Device-BackForwardCacheOptions-size: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
 ## timeToLive
 
 ```TypeScript
-timeToLive: int
+timeToLive: number
 ```
 
-Set the lifetime in seconds in the BackForwardCache.The value should be an integer.Unit: seconds. Default is 600.
+Set the lifetime in seconds in the BackForwardCache. Unit: seconds. Default is 600.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-BackForwardCacheOptions-timeToLive: int--><!--Device-BackForwardCacheOptions-timeToLive: int-End-->
+**Deprecated since:** -1
+
+<!--Device-BackForwardCacheOptions-timeToLive: number--><!--Device-BackForwardCacheOptions-timeToLive: number-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 

@@ -8,7 +8,9 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 
 发送来自身份认证组件的通知。在使用统一身份认证控件进行用户身份认证时，该接口用于接收来自统一身份认证组件的通知，并将通知发送给用户认证框架。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
 
@@ -29,10 +31,10 @@ function sendNotice(noticeType: NoticeType, eventData: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 

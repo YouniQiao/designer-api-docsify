@@ -7,6 +7,6 @@
 
 | Name | Description |
 | --- | --- |
-| [ExtensionRunningInfo](arkts-ability-extensionrunninginfo-i-sys.md) | The ExtensionRunningInfo module encapsulates ExtensionAbility running information, which can be obtained through  [getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md#getExtensionRunningInfos). |
+| [ExtensionRunningInfo](arkts-ability-extensionrunninginfo-i-sys.md) | The ExtensionRunningInfo module encapsulates ExtensionAbility running information, which can be obtained through [getExtensionRunningInfos](arkts-ability-abilitymanager-getextensionrunninginfos-f-sys.md#getExtensionRunningInfos-(System-API)) . |
 <!--DelEnd-->
 

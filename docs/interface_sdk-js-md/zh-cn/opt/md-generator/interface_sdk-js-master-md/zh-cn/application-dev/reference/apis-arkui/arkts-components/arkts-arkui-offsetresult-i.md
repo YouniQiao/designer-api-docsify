@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface OffsetResult--><!--Device-unnamed-declare interface OffsetResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@
 xOffset: number
 ```
 
-水平滑动偏移。
-
-单位：vp。
+水平滑动偏移。 单位：vp。
 
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,13 +38,13 @@ xOffset: number
 yOffset: number
 ```
 
-竖直滑动偏移。
-
-单位：vp。
+竖直滑动偏移。 单位：vp。
 
 **类型：** number
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

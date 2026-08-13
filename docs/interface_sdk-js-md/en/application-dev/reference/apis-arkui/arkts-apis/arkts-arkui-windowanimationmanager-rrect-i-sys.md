@@ -2,9 +2,11 @@
 
 Round rect.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-windowAnimationManager-export interface RRect--><!--Device-windowAnimationManager-export interface RRect-End-->
 
@@ -26,11 +28,13 @@ height: double
 
 Height of the round rect, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-height: double--><!--Device-RRect-height: double-End-->
 
@@ -46,11 +50,13 @@ left: double
 
 The X-axis coordinate of the upper left vertex of the round rect, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-left: double--><!--Device-RRect-left: double-End-->
 
@@ -66,11 +72,13 @@ radius: double
 
 Radius of the round corner of the round rect, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-radius: double--><!--Device-RRect-radius: double-End-->
 
@@ -86,11 +94,13 @@ top: double
 
 The Y-axis coordinate of the upper left vertex of the round rect, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-top: double--><!--Device-RRect-top: double-End-->
 
@@ -106,11 +116,13 @@ width: double
 
 Width of the round rect, in pixels.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-RRect-width: double--><!--Device-RRect-width: double-End-->
 

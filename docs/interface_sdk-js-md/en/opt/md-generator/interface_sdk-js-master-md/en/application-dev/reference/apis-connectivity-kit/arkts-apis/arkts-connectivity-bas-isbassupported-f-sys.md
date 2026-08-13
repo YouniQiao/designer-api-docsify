@@ -16,6 +16,8 @@ Determine whether the local device can obtain the battery level of the remote de
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-bas-function isBasSupported(): boolean--><!--Device-bas-function isBasSupported(): boolean-End-->
@@ -34,5 +36,5 @@ Determine whether the local device can obtain the battery level of the remote de
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 2900099 |

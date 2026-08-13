@@ -1,14 +1,14 @@
 # Text
 
-文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如  
-[PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md#PlainText)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md#Hyperlink)、  
-[HTML](arkts-arkdata-unifieddatachannel-html-c.md#HTML)等具体子类。
+文本类型数据，是[UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)的子类，也是文本类型数据的基类，用于描述文本类数据，推荐开发者优先使用Text的子类描述数据，如 [PlainText](arkts-arkdata-unifieddatachannel-plaintext-c.md#PlainText)、[Hyperlink](arkts-arkdata-unifieddatachannel-hyperlink-c.md#Hyperlink)、 [HTML](arkts-arkdata-unifieddatachannel-html-c.md#HTML)等具体子类。
 
 **继承/实现关系：** Text extends [UnifiedRecord](arkts-arkdata-unifieddatachannel-unifiedrecord-c.md#UnifiedRecord)
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-unifiedDataChannel-class Text extends UnifiedRecord--><!--Device-unifiedDataChannel-class Text extends UnifiedRecord-End-->
+**废弃版本：** -1
+
+<!--Device-unifiedDataChannel-class Text--><!--Device-unifiedDataChannel-class Text-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -18,21 +18,13 @@
 details?: Record<string, string>
 ```
 
-是一个字典类型对象，key和value都是string类型，用于描述文本内容。例如，可生成一个details内容为
-
-{
-
-"title":"标题",
-
-"content":"内容"
-
-}
-
-的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
+是一个字典类型对象，key和value都是string类型，用于描述文本内容。例如，可生成一个details内容为 { "title":"标题", "content":"内容" } 的数据对象，用于描述一篇文章。非必填字段，默认值为空字典对象。
 
 **类型：** Record&lt;string, string&gt;
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -10,6 +10,8 @@ function getPasswordPolicy(admin: Want): PasswordPolicy
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -34,10 +36,10 @@ function getPasswordPolicy(admin: Want): PasswordPolicy
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 
@@ -70,6 +72,8 @@ function getPasswordPolicy(admin: Want | null): PasswordPolicy
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SECURITY
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -94,10 +98,10 @@ function getPasswordPolicy(admin: Want | null): PasswordPolicy
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 
@@ -107,48 +111,6 @@ import { securityManager } from '@kit.MDMKit';
 try {
   // 参数需根据实际情况进行替换
   let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy(null);
-  console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
-} catch(err) {
-  console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-
-## getPasswordPolicy
-
-```TypeScript
-function getPasswordPolicy(): PasswordPolicy
-```
-
-获取设备锁屏口令策略。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy--><!--Device-securityManager-function getPasswordPolicy(): PasswordPolicy-End-->
-
-**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
-
-**返回值：**
-
-| 类型 |
-| --- |
-| [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md) |
-
-**错误码：**
-
-| 错误码ID |
-| --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-
-## 示例
-
-```TypeScript
-import { securityManager } from '@kit.MDMKit';
-
-try {
-  let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy();
   console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
 } catch(err) {
   console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);

@@ -2,9 +2,11 @@
 
 Enumerates the fragment map information.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-image-enum FragmentMapPropertyKey--><!--Device-image-enum FragmentMapPropertyKey-End-->
 
@@ -18,9 +20,11 @@ X_IN_ORIGINAL = 'XInOriginal'
 
 X coordinate of the top-left corner of the fragment map in the original image.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FragmentMapPropertyKey-X_IN_ORIGINAL = 'XInOriginal'--><!--Device-FragmentMapPropertyKey-X_IN_ORIGINAL = 'XInOriginal'-End-->
 
@@ -34,9 +38,11 @@ Y_IN_ORIGINAL = 'YInOriginal'
 
 Y coordinate of the top-left corner of the fragment map in the original image.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FragmentMapPropertyKey-Y_IN_ORIGINAL = 'YInOriginal'--><!--Device-FragmentMapPropertyKey-Y_IN_ORIGINAL = 'YInOriginal'-End-->
 
@@ -50,9 +56,11 @@ WIDTH = 'FragmentImageWidth'
 
 Width of the fragment map.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FragmentMapPropertyKey-WIDTH = 'FragmentImageWidth'--><!--Device-FragmentMapPropertyKey-WIDTH = 'FragmentImageWidth'-End-->
 
@@ -66,9 +74,11 @@ HEIGHT = 'FragmentImageHeight'
 
 Height of the fragment map.
 
-**Since:** 13
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FragmentMapPropertyKey-HEIGHT = 'FragmentImageHeight'--><!--Device-FragmentMapPropertyKey-HEIGHT = 'FragmentImageHeight'-End-->
 

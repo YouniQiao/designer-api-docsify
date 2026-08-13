@@ -4,6 +4,8 @@ Defines the constructor information for **ArcSliderOptions**.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface ArcSliderOptionsConstructorOptions--><!--Device-unnamed-interface ArcSliderOptionsConstructorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
@@ -14,73 +16,19 @@ Defines the constructor information for **ArcSliderOptions**.
 import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from '@kit.ArkUI';
 ```
 
-## onChange
-
-```TypeScript
-onChange?: ArcSliderChangeHandler
-```
-
-Callback invoked to notify the application when the progress value of the arc slider changes.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-**Since:** 18
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderOptionsConstructorOptions-onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptionsConstructorOptions-onChange?: ArcSliderChangeHandler-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-## onEnlarge
-
-```TypeScript
-onEnlarge?: ArcSliderEnlargeHandler
-```
-
-Callback invoked to notify the application when the arc slider is enlarged or reduced.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-**Since:** 18
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderOptionsConstructorOptions-onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptionsConstructorOptions-onEnlarge?: ArcSliderEnlargeHandler-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
-## onTouch
-
-```TypeScript
-onTouch?: ArcSliderTouchHandler
-```
-
-Callback invoked to notify the application when the arc slider is touched.
-
-Default value: If this parameter is not provided, no callback will be invoked.
-
-**Since:** 18
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ArcSliderOptionsConstructorOptions-onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptionsConstructorOptions-onTouch?: ArcSliderTouchHandler-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Circle
-
 ## digitalCrownSensitivity
 
 ```TypeScript
 digitalCrownSensitivity?: CrownSensitivity
 ```
 
-Sensitivity to the digital crown rotation.
-
-Default value: **CrownSensitivity.MEDIUM**
+Sensitivity to the digital crown rotation. Default value: **CrownSensitivity.MEDIUM**
 
 **Type:** [CrownSensitivity](arkts-arkui-crownsensitivity-e.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -94,17 +42,77 @@ Default value: **CrownSensitivity.MEDIUM**
 layoutOptions?: ArcSliderLayoutOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
+Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
 
 **Type:** [ArcSliderLayoutOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptions-c.md)
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderOptionsConstructorOptions-layoutOptions?: ArcSliderLayoutOptions--><!--Device-ArcSliderOptionsConstructorOptions-layoutOptions?: ArcSliderLayoutOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## onChange
+
+```TypeScript
+onChange?: ArcSliderChangeHandler
+```
+
+Callback invoked to notify the application when the progress value of the arc slider changes. Default value: If this parameter is not provided, no callback will be invoked.
+
+**Type:** [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptionsConstructorOptions-onChange?: ArcSliderChangeHandler--><!--Device-ArcSliderOptionsConstructorOptions-onChange?: ArcSliderChangeHandler-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## onEnlarge
+
+```TypeScript
+onEnlarge?: ArcSliderEnlargeHandler
+```
+
+Callback invoked to notify the application when the arc slider is enlarged or reduced. Default value: If this parameter is not provided, no callback will be invoked.
+
+**Type:** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptionsConstructorOptions-onEnlarge?: ArcSliderEnlargeHandler--><!--Device-ArcSliderOptionsConstructorOptions-onEnlarge?: ArcSliderEnlargeHandler-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Circle
+
+## onTouch
+
+```TypeScript
+onTouch?: ArcSliderTouchHandler
+```
+
+Callback invoked to notify the application when the arc slider is touched. Default value: If this parameter is not provided, no callback will be invoked.
+
+**Type:** [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md)
+
+**Since:** 18
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-ArcSliderOptionsConstructorOptions-onTouch?: ArcSliderTouchHandler--><!--Device-ArcSliderOptionsConstructorOptions-onTouch?: ArcSliderTouchHandler-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -114,13 +122,13 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 styleOptions?: ArcSliderStyleOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
+Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
 
 **Type:** [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -134,13 +142,13 @@ Default value: default values of all properties of [ArcSliderStyleOptions](arkts
 valueOptions?: ArcSliderValueOptions
 ```
 
-Style of the arc slider.
-
-Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
+Style of the arc slider. Default value: default values of all properties of [ArcSliderStyleOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptions-c.md#ArcSliderStyleOptions)
 
 **Type:** [ArcSliderValueOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptions-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

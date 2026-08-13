@@ -1,16 +1,16 @@
 # ArcAlphabetIndexerAttribute
 
-In addition to the [universal attributes](common), the following attributes are supported.
+In addition to the universal attributes, the following attributes are supported. In addition to the universal events, the following events are supported.
 
-In addition to the [universal events](common), the following events are supported.
-
-**Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends [CommonMethod<ArcAlphabetIndexerAttribute>](CommonMethod<ArcAlphabetIndexerAttribute>)
+**Inheritance/Implementation:** ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>--><!--Device-unnamed-declare class ArcAlphabetIndexerAttribute extends CommonMethod<ArcAlphabetIndexerAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class ArcAlphabetIndexerAttribute--><!--Device-unnamed-declare class ArcAlphabetIndexerAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -32,6 +32,8 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcAlphabetIndexerAttribute-autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-autoCollapse(enable: Optional<boolean>): ArcAlphabetIndexerAttribute-End-->
@@ -48,7 +50,7 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## color
 
@@ -61,6 +63,8 @@ Sets the text color of the index items in the normal state.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -78,7 +82,7 @@ Sets the text color of the index items in the normal state.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## font
 
@@ -91,6 +95,8 @@ Sets the default font style of the index items.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -108,7 +114,7 @@ Sets the default font style of the index items.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## itemSize
 
@@ -121,6 +127,8 @@ Sets the size of the index item area.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -138,7 +146,7 @@ Sets the size of the index item area.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## onSelect
 
@@ -152,6 +160,8 @@ Triggered when an index item is selected. The return value is the index of the s
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcAlphabetIndexerAttribute-onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute--><!--Device-ArcAlphabetIndexerAttribute-onSelect(handler: Optional<OnSelectCallback>): ArcAlphabetIndexerAttribute-End-->
@@ -162,13 +172,13 @@ Triggered when an index item is selected. The return value is the index of the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | Optional&lt;[OnSelectCallback](arkts-arkui-onselectcallback-t.md)&gt; | Yes | Callback used to return the result. |
+| handler | Optional&lt;[OnSelectCallback](../../apis-na/arkts-apis/arkts-na-onselectcallback-t.md)&gt; | Yes | Callback used to return the result. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupBackground
 
@@ -181,6 +191,8 @@ Sets the background color of the pop-up window.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -198,7 +210,7 @@ Sets the background color of the pop-up window.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupBackgroundBlurStyle
 
@@ -206,16 +218,13 @@ Sets the background color of the pop-up window.
 popupBackgroundBlurStyle(style: Optional<BlurStyle>): ArcAlphabetIndexerAttribute
 ```
 
-Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**.
-
-> **NOTE：**
-
-> After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying
-> background colors via [popupBackground](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md#popupBackground).
+Sets the background blur style of the pop-up window. If this API is not used, the blur is disabled by default. The corresponding value is **NONE** in **BlurStyle**. > **NOTE：**> After configuring the pop-up window background blur style with **popupBackgroundBlurStyle**, avoid applying > background colors via [popupBackground](#popupBackground).
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -233,7 +242,7 @@ Sets the background blur style of the pop-up window. If this API is not used, th
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupColor
 
@@ -246,6 +255,8 @@ Sets the text color for the pop-up window.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -263,7 +274,7 @@ Sets the text color for the pop-up window.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## popupFont
 
@@ -276,6 +287,8 @@ Sets the font style of the pop-up window.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -293,7 +306,7 @@ Sets the font style of the pop-up window.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selected
 
@@ -306,6 +319,8 @@ Sets the index of the selected item.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -323,7 +338,7 @@ Sets the index of the selected item.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selectedBackgroundColor
 
@@ -336,6 +351,8 @@ Sets the background color of the selected item.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -353,7 +370,7 @@ Sets the background color of the selected item.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selectedColor
 
@@ -366,6 +383,8 @@ Sets the text color of the selected item.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -383,7 +402,7 @@ Sets the text color of the selected item.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## selectedFont
 
@@ -396,6 +415,8 @@ Sets the font style of the selected item, including size, weight, style, and fon
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -413,7 +434,7 @@ Sets the font style of the selected item, including size, weight, style, and fon
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 
 ## usePopup
 
@@ -426,6 +447,8 @@ Sets whether to display the pop-up window.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -443,5 +466,5 @@ Sets whether to display the pop-up window.
 
 | Type | Description |
 | --- | --- |
-| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-i.md) |  |
+| [ArcAlphabetIndexerAttribute](arkts-arkui-arkui-arcalphabetindexer-arcalphabetindexerattribute-c.md) |  |
 

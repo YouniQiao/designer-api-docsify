@@ -2,9 +2,11 @@
 
 连接对象，提供连接、断连、获取对端设备ID、发送数据、注册/取消注册回调等方法。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-linkEnhance-interface Connection--><!--Device-linkEnhance-interface Connection-End-->
 
@@ -18,9 +20,11 @@ close(): void
 
 业务执行完毕后，任意设备可调用该接口销毁connection对象，释放资源。若需再次与对端设备交互，必须重新创建connection对象并调用`connect()`发起连接。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -34,7 +38,7 @@ close(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -70,9 +74,11 @@ connect(): void
 
 在客户端执行，向服务端设备发起连接，最大连接个数限制为10。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -86,9 +92,9 @@ connect(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390204](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390204-连接个数超出限制) | The number of connection exceeds the limit. |
-| [32390300](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390204](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390204-连接个数超出限制) | The number of connection exceeds the limit. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -125,9 +131,11 @@ disconnect(): void
 
 业务执行完毕后，双端任意设备可调用该接口断开连接。创建的connection对象仍有效，需要时可调用connect()重新连接。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -141,7 +149,7 @@ disconnect(): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -177,9 +185,11 @@ getPeerDeviceId(): string
 
 获取对端设备的deviceId，作为对端设备的标识符，连接成功后或者被连接成功后调用。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -199,7 +209,7 @@ getPeerDeviceId(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -221,189 +231,6 @@ try {
 }
 ```
 
-## off('connectResult')
-
-```TypeScript
-off(type: 'connectResult', callback?: Callback<ConnectResult>): void
-```
-
-取消connect事件的回调监听，使用callback异步回调。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void--><!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 否 | 注册的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-## 示例
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-  // 取消订阅连接结果
-  connection.off('connectResult', (result: linkEnhance.ConnectResult): void => {
-    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## off('disconnected')
-
-```TypeScript
-off(type: 'disconnected', callback?: Callback<number>): void
-```
-
-取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'disconnected' | 是 | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-## 示例
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.on('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-  // 取消订阅断连通知
-  connection.off('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
-  });
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## off('dataReceived')
-
-```TypeScript
-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
-```
-
-取消dataReceived事件的回调监听，使用callback异步回调。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'dataReceived' | 是 | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | 注册的回调函数。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-## 示例
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  connection.connect();
-  // 订阅数据接收通知
-  connection.on('dataReceived', (data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-  // 取消数据接收通知
-  connection.off('dataReceived', (data: ArrayBuffer) => {
-    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
-  });
-  connection.disconnect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
 ## offConnectResult
 
 ```TypeScript
@@ -414,7 +241,9 @@ offConnectResult(callback?: Callback<ConnectResult>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -428,14 +257,14 @@ offConnectResult(callback?: Callback<ConnectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 否 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | 否 | 注册的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -473,7 +302,9 @@ offDataReceived(callback?: Callback<ArrayBuffer>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -487,14 +318,14 @@ offDataReceived(callback?: Callback<ArrayBuffer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 否 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | 否 | 注册的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -531,7 +362,9 @@ offDisconnected(callback?: Callback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -545,14 +378,14 @@ offDisconnected(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -580,23 +413,25 @@ try {
 }
 ```
 
-## on('connectResult')
+## off_connectResult
 
 ```TypeScript
-on(type: 'connectResult', callback: Callback<ConnectResult>): void
+off(type: 'connectResult', callback?: Callback<ConnectResult>): void
 ```
 
-注册connect事件的回调监听，通过回调函数获取连接结果。使用callback进行异步回调。
+取消connect事件的回调监听，使用callback异步回调。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void--><!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void-End-->
+<!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void--><!--Device-Connection-off(type: 'connectResult', callback?: Callback<ConnectResult>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -605,14 +440,14 @@ on(type: 'connectResult', callback: Callback<ConnectResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | 否 | 注册的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -627,69 +462,12 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // 订阅连接结果
   connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
     hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
   });
-
-  // 发起连接
-  connection.connect();
-} catch (err) {
-  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
-  (err as BusinessError).message);
-}
-```
-
-## on('disconnected')
-
-```TypeScript
-on(type: 'disconnected', callback: Callback<number>): void
-```
-
-注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
-
-**起始版本：** 20
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
-
-**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
-
-**系统能力：** SystemCapability.DistributedSched.AppCollaboration
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| type | 'disconnected' | 是 | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-
-## 示例
-
-```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { hilog } from '@kit.PerformanceAnalysisKit';
-
-const TAG = "testDemo";
-
-try {
-  let peerDeviceId: string = "00:11:22:33:44:55";
-  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
-  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // 订阅断连通知
-  connection.on('disconnected', (number: number) => {
-    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  // 取消订阅连接结果
+  connection.off('connectResult', (result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
   });
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
@@ -697,23 +475,25 @@ try {
 }
 ```
 
-## on('dataReceived')
+## off_dataReceived
 
 ```TypeScript
-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
+off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void
 ```
 
-注册dataReceived事件的回调监听。使用callback异步回调。
+取消dataReceived事件的回调监听，使用callback异步回调。
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void--><!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void-End-->
+<!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void--><!--Device-Connection-off(type: 'dataReceived', callback?: Callback<ArrayBuffer>): void-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
 
@@ -722,14 +502,14 @@ on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'dataReceived' | 是 | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | 否 | 注册的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -744,11 +524,77 @@ try {
   let peerDeviceId: string = "00:11:22:33:44:55";
   hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
   let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
-  // 发起连接
   connection.connect();
   // 订阅数据接收通知
   connection.on('dataReceived', (data: ArrayBuffer) => {
     hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+  // 取消数据接收通知
+  connection.off('dataReceived', (data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+  connection.disconnect();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## off_disconnected
+
+```TypeScript
+off(type: 'disconnected', callback?: Callback<number>): void
+```
+
+取消注册disconnected事件的回调监听。连接被动断开或底层异常断开时触发该事件，使用callback异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void--><!--Device-Connection-off(type: 'disconnected', callback?: Callback<number>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'disconnected' | 是 | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  connection.on('disconnected', (number: number) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+  // 取消订阅断连通知
+  connection.off('disconnected', (number: number) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
   });
 } catch (err) {
   hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
@@ -766,7 +612,9 @@ onConnectResult(callback: Callback<ConnectResult>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -780,14 +628,14 @@ onConnectResult(callback: Callback<ConnectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ConnectResult&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | 是 | 注册的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -825,7 +673,9 @@ onDataReceived(callback: Callback<ArrayBuffer>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -839,14 +689,14 @@ onDataReceived(callback: Callback<ArrayBuffer>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ArrayBuffer&gt; | 是 | 注册的回调函数。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | 是 | 注册的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -881,7 +731,9 @@ onDisconnected(callback: Callback<int>): void
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -895,14 +747,14 @@ onDisconnected(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 
@@ -927,6 +779,188 @@ try {
 }
 ```
 
+## on_connectResult
+
+```TypeScript
+on(type: 'connectResult', callback: Callback<ConnectResult>): void
+```
+
+注册connect事件的回调监听，通过回调函数获取连接结果。使用callback进行异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void--><!--Device-Connection-on(type: 'connectResult', callback: Callback<ConnectResult>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'connectResult' | 是 | 事件回调类型，支持的事件为'connectResult'，完成`connect()`调用，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ConnectResult&gt; | 是 | 注册的回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅连接结果
+  connection.on('connectResult', (result: linkEnhance.ConnectResult): void => {
+    hilog.info(0x0000, TAG, 'clientConnectResultCallback result = ' + result.success);
+  });
+
+  // 发起连接
+  connection.connect();
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## on_dataReceived
+
+```TypeScript
+on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void
+```
+
+注册dataReceived事件的回调监听。使用callback异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void--><!--Device-Connection-on(type: 'dataReceived', callback: Callback<ArrayBuffer>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'dataReceived' | 是 | 事件回调类型，支持的事件为'dataReceived'，收到数据时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ArrayBuffer&gt; | 是 | 注册的回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 发起连接
+  connection.connect();
+  // 订阅数据接收通知
+  connection.on('dataReceived', (data: ArrayBuffer) => {
+    hilog.info(0x0000, TAG, 'recv dataLen = ' + data.byteLength);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
+## on_disconnected
+
+```TypeScript
+on(type: 'disconnected', callback: Callback<number>): void
+```
+
+注册disconnected事件的回调监听，连接被动断开或者底层异常断开时触发该事件。使用callback异步回调。
+
+**起始版本：** 20
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
+
+**需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void--><!--Device-Connection-on(type: 'disconnected', callback: Callback<number>): void-End-->
+
+**系统能力：** SystemCapability.DistributedSched.AppCollaboration
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| type | 'disconnected' | 是 | 事件回调类型，支持的事件为'disconnected'，连接被动断开或底层异常断开时，触发该事件。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+
+## 示例
+
+```TypeScript
+import { linkEnhance } from '@kit.DistributedServiceKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+const TAG = "testDemo";
+
+try {
+  let peerDeviceId: string = "00:11:22:33:44:55";
+  hilog.info(0x0000, TAG, 'connection server deviceId = ' + peerDeviceId);
+  let connection: linkEnhance.Connection = linkEnhance.createConnection(peerDeviceId, "demo");
+  // 订阅断连通知
+  connection.on('disconnected', (number: number) => {
+    hilog.info(0x0000, TAG, 'connection disconnected reason = ' + number);
+  });
+} catch (err) {
+  hilog.error(0x0000, TAG, 'errCode: ' + (err as BusinessError).code + ', errMessage: ' +
+  (err as BusinessError).message);
+}
+```
+
 ## sendData
 
 ```TypeScript
@@ -935,9 +969,11 @@ sendData(data: ArrayBuffer): void
 
 客户端连接成功后，可以向服务端发送数据。服务端接收到连接回调时，也可以向客户端发送数据。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -957,10 +993,10 @@ sendData(data: ArrayBuffer): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
-| [32390300](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
-| [32390205](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390205-连接状态不可用) | Connection is not ready. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-参数非法) | Invalid parameter. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-内部错误) | Internal error. |
+| [32390205](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390205-连接状态不可用) | Connection is not ready. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
 

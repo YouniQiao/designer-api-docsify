@@ -1,17 +1,19 @@
 # Version (System API)
 
 ```TypeScript
-export type Version = _PackInfo.Version
+export type Version = _Version
 ```
 
 Defines the version in the **pack.info** file.
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-freeInstall-export type Version = _PackInfo.Version--><!--Device-freeInstall-export type Version = _PackInfo.Version-End-->
+**Deprecated since:** -1
+
+<!--Device-freeInstall-export type Version = _Version--><!--Device-freeInstall-export type Version = _Version-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.Version
+**Property type:** _Version

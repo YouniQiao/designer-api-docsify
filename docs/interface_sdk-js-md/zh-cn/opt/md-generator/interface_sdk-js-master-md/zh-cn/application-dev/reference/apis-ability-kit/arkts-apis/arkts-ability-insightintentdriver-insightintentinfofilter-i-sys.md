@@ -4,6 +4,8 @@
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-insightIntentDriver-interface InsightIntentInfoFilter--><!--Device-insightIntentDriver-interface InsightIntentInfoFilter-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -22,6 +24,8 @@ bundleName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InsightIntentInfoFilter-bundleName?: string--><!--Device-InsightIntentInfoFilter-bundleName?: string-End-->
@@ -36,12 +40,13 @@ bundleName?: string
 intentFlags: number
 ```
 
-意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考  
-[GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag)。
+意图信息（[InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo（系统接口）)）的标识，用于表示查询全量意图信息或者简要意图信息，取值可参考 [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag（系统接口）)。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -63,6 +68,8 @@ intentName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InsightIntentInfoFilter-intentName?: string--><!--Device-InsightIntentInfoFilter-intentName?: string-End-->
@@ -83,6 +90,8 @@ moduleName?: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-InsightIntentInfoFilter-moduleName?: string--><!--Device-InsightIntentInfoFilter-moduleName?: string-End-->
@@ -97,15 +106,13 @@ moduleName?: string
 userId?: number
 ```
 
-目标意图所属的用户ID。
-
-**说明：**
-
-如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
+目标意图所属的用户ID。 **说明：** 如果调用方应用的用户ID与目标意图所属的用户ID不同，则需要申请权限`ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`。
 
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -8,9 +8,11 @@ function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>):
 
 异步获取外置存储设备中指定卷设备的可用空间大小（单位为Byte），以callback方式返回。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -25,16 +27,16 @@ function getFreeSizeOfVolume(volumeUuid: string, callback: AsyncCallback<long>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | volumeUuid | string | 是 | 卷设备uuid。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 获取指定卷可用空间之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 获取指定卷可用空间之后的回调。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
@@ -91,9 +93,11 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<long>
 
 异步获取外置存储设备中指定卷设备的可用空间大小（单位为Byte），以Promise方式返回。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.STORAGE_MANAGER
 
@@ -113,16 +117,16 @@ function getFreeSizeOfVolume(volumeUuid: string): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回指定卷的可用空间大小（单位为Byte）。 |
+| Promise&lt;long&gt; | Promise对象，返回指定卷的可用空间大小（单位为Byte）。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
 | 13600008 | No such object. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 

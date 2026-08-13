@@ -12,9 +12,11 @@ import { autoFillManager } from '@kit.AbilityKit';
 export function requestAutoSave(context: UIContext, callback?: AutoSaveCallback): void
 ```
 
-Requests to automatically save the widget data. This API uses an asynchronous callback to return the result.If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
+Requests to automatically save the widget data. This API uses an asynchronous callback to return the result. If the current widget does not support widget switching, you can call this API to save historical widget input data. The callback is triggered when the auto-save request is complete.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,8 +37,8 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
 
 ## Examples
 
@@ -132,6 +134,8 @@ Trigger an auto save request.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -145,11 +149,11 @@ Trigger an auto save request.
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | context | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes |
-| request | [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md) | Yes |
+| request | [SaveRequest](arkts-ability-autofillmanager-saverequest-t-sys.md) | Yes |
 | callback | [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md) | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |

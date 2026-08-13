@@ -12,13 +12,15 @@ import { access } from '@kit.ConnectivityKit';
 function addPersistentDeviceId(deviceId: string): Promise<void>
 ```
 
-Add a persistent random device address. Once the randomized address is successfully added,the application can save it for an extended period of time.
+Add a persistent random device address. Once the randomized address is successfully added, the application can save it for an extended period of time.
 
-**Since:** 16
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH and ohos.permission.PERSISTENT_BLUETOOTH_PEERS_MAC
 
-**Atomic service API:** This API can be used in atomic services since API version 16.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-access-function addPersistentDeviceId(deviceId: string): Promise<void>--><!--Device-access-function addPersistentDeviceId(deviceId: string): Promise<void>-End-->
 
@@ -40,10 +42,10 @@ Add a persistent random device address. Once the randomized address is successfu
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900010 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2900003 |
 | 2900099 |
 

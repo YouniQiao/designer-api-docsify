@@ -1,12 +1,22 @@
 # @ohos.file.keyManager
 
-This module provides common features related to user key management, including user key uninstallation.
+/*
+ Copyright (c) 2024-2026 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-> **NOTE：**
-> 
-> - This topic describes only the system APIs provided by the module.
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace keyManager--><!--Device-unnamed-declare namespace keyManager-End-->
 
@@ -25,5 +35,5 @@ import { keyManager } from '@kit.CoreFileKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md#deactivateuserkey) |
+| [deactivateUserKey](arkts-corefile-keymanager-deactivateuserkey-f-sys.md#deactivateUserKey-(System-API)) |
 <!--DelEnd-->

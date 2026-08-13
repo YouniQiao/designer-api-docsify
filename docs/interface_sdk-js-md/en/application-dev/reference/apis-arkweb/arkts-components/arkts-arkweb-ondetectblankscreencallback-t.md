@@ -10,6 +10,8 @@ Defines a callback triggered when a blank screen is detected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void--><!--Device-unnamed-type OnDetectBlankScreenCallback = (event: BlankScreenDetectionEventInfo) => void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core

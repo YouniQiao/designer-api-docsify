@@ -1,14 +1,12 @@
 # NativeMediaPlayerSurfaceInfo
 
-Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page](../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12).
+Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page] (../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). > **NOTE：**> > - The sample effect is subject to the actual device.
 
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 <!--Device-webview-class NativeMediaPlayerSurfaceInfo--><!--Device-webview-class NativeMediaPlayerSurfaceInfo-End-->
 
@@ -26,14 +24,17 @@ import { webview } from '@kit.ArkWeb';
 id: string
 ```
 
-Surface ID, which is the **psurfaceid** of the native image used for rendering at the same layer.&lt;br&gt;For details, see  
-[NativeEmbedDataInfo](../arkts-components/arkts-arkweb-nativeembeddatainfo-i.md#NativeEmbedDataInfo).
+Surface ID, which is the **psurfaceid** of the native image used for rendering at the same layer. For details, see [NativeEmbedDataInfo](./arkts-basic-components-web-i.md#nativeembeddatainfo11).
 
 **Type:** string
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerSurfaceInfo-id: string--><!--Device-NativeMediaPlayerSurfaceInfo-id: string-End-->
 
@@ -49,9 +50,11 @@ Position of the surface.
 
 **Type:** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-NativeMediaPlayerSurfaceInfo-rect: RectEvent--><!--Device-NativeMediaPlayerSurfaceInfo-rect: RectEvent-End-->
 

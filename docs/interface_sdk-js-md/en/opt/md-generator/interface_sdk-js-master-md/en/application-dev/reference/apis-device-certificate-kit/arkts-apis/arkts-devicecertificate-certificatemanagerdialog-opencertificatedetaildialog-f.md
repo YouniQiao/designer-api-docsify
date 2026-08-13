@@ -12,9 +12,11 @@ import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 function openCertificateDetailDialog(context: common.Context,cert: Uint8Array, property: CertificateDialogProperty): Promise<void>
 ```
 
-Opens the Certificate Management dialog box to display the certificate details. After the interface is invoked successfully, detailed information about the certificate, such as the basic information, validity period, issuer,and user, is displayed. Use Promise asynchronous callback.
+Opens the Certificate Management dialog box to display the certificate details. After the interface is invoked successfully, detailed information about the certificate, such as the basic information, validity period, issuer, and user, is displayed. Use Promise asynchronous callback.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_CERT_MANAGER
 
@@ -42,11 +44,11 @@ Opens the Certificate Management dialog box to display the certificate details. 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [29700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
-| [29700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700001-internal-error) |
-| [29700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-device-certificate-kit/errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [29700004](../errorcode-certManagerDialog.md#29700004-operation-not-supported-by-the-device) |
+| [29700001](../errorcode-certManagerDialog.md#29700001-internal-error) |
+| [29700003](../errorcode-certManagerDialog.md#29700003-failed-to-install-the-certificate) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

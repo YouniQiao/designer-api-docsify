@@ -6,6 +6,8 @@ playback speed.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare enum PlaybackSpeed--><!--Device-unnamed-export declare enum PlaybackSpeed-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Speed_Forward_0_75_X = '0.75'
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Speed_Forward_1_00_X = '1.00'
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackSpeed-Speed_Forward_1_00_X = '1.00'--><!--Device-PlaybackSpeed-Speed_Forward_1_00_X = '1.00'-End-->
@@ -57,6 +63,8 @@ Speed_Forward_1_25_X = '1.25'
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Speed_Forward_1_75_X = '1.75'
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackSpeed-Speed_Forward_1_75_X = '1.75'--><!--Device-PlaybackSpeed-Speed_Forward_1_75_X = '1.75'-End-->
@@ -93,6 +103,8 @@ Speed_Forward_2_00_X = '2.00'
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ SPEED_FORWARD_0_50_X = '0.50'
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = '0.50'--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = '0.50'-End-->
@@ -129,6 +143,8 @@ SPEED_FORWARD_1_50_X = '1.50'
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +164,8 @@ SPEED_FORWARD_3_00_X = '3.00'
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = '3.00'--><!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = '3.00'-End-->
@@ -166,6 +184,8 @@ SPEED_FORWARD_0_25_X = '0.25'
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = '0.25'--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = '0.25'-End-->
@@ -183,6 +203,8 @@ SPEED_FORWARD_0_125_X = '0.125'
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Provides calendar management capabilities, such as calendar name retrieval and date calculation.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export class Calendar--><!--Device-i18n-export class Calendar-End-->
 
@@ -22,7 +24,9 @@ add(field: string, amount: number): void
 
 Performs addition or subtraction on the calendar attributes of this **Calendar** object.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -41,8 +45,8 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |
 
 ## Examples
 
@@ -69,7 +73,9 @@ compareDays(date: Date): number
 
 Compares the current date of this **Calendar** object with the specified date for the difference in the number of days.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -93,7 +99,7 @@ Compares the current date of this **Calendar** object with the specified date fo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -120,7 +126,9 @@ get(field: string): number
 
 Obtains the values of the calendar attributes in this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -158,7 +166,9 @@ getDisplayName(locale: string): string
 
 Obtains calendar display name in the specified language.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -195,7 +205,9 @@ getFirstDayOfWeek(): number
 
 Obtains the first day of a week for this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -226,7 +238,9 @@ getMinimalDaysInFirstWeek(): number
 
 Obtains the minimum number of days in the first week for this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -257,7 +271,9 @@ getTimeInMillis(): number
 
 Obtains the timestamp of this **Calendar** object.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -289,7 +305,9 @@ getTimeZone(): string
 
 Obtains the time zone ID of this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -321,7 +339,9 @@ isWeekend(date?: Date): boolean
 
 Checks whether a given date is a weekend in this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -361,7 +381,9 @@ set(year: number, month: number, date:number, hour?: number, minute?: number, se
 
 Sets the year, month, day, hour, minute, and second for this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -397,7 +419,9 @@ setFirstDayOfWeek(value: number): void
 
 Sets the first day of a week for this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -429,7 +453,9 @@ setMinimalDaysInFirstWeek(value: number): void
 
 Sets the minimum number of days in the first week for this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -461,7 +487,9 @@ setTime(date: Date): void
 
 Sets the date and time for a **Calendar** object based on the input **Date** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -493,7 +521,9 @@ setTime(time: number): void
 
 Sets the date and time for a **Calendar** object based on the input timestamp.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -524,7 +554,9 @@ setTimeZone(timezone: string): void
 
 Sets the time zone of this **Calendar** object.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

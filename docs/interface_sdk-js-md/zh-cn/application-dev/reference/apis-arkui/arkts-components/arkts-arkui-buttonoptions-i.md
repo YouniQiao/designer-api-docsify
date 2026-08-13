@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface ButtonOptions--><!--Device-unnamed-declare interface ButtonOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,7 @@
 buttonStyle?: ButtonStyleMode
 ```
 
-按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
-[fontColor](ButtonAttribute#fontColor)和[role](ButtonAttribute#role)接口设置，实际显示效果以最后一次设置为准。
-
-默认值：ButtonStyleMode.EMPHASIZED 
-
-**说明：**
-
-按钮重要程度：强调按钮>普通按钮>文字按钮。
+按钮的样式和重要程度。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、 [fontColor](arkts-arkui-button-attribute.md#fontColor)和[role](arkts-arkui-button-attribute.md#role)接口设置，实际显示效果以最后一次设置为准。 默认值：ButtonStyleMode.EMPHASIZED **说明：** 按钮重要程度：强调按钮>普通按钮>文字按钮。
 
 **类型：** [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md)
 
@@ -33,6 +27,8 @@ buttonStyle?: ButtonStyleMode
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,9 +46,7 @@ buttonStyle?: ButtonStyleMode
 controlSize?: ControlSize
 ```
 
-按钮的尺寸。
-
-默认值：ControlSize.NORMAL
+按钮的尺寸。 默认值：ControlSize.NORMAL
 
 **类型：** [ControlSize](arkts-arkui-controlsize-e.md)
 
@@ -61,6 +55,8 @@ controlSize?: ControlSize
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,11 +74,7 @@ controlSize?: ControlSize
 role?: ButtonRole
 ```
 
-按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过  
-[backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、  
-[fontColor](ButtonAttribute#fontColor)和[buttonStyle](ButtonAttribute#buttonStyle)接口设置，实际显示效果以最后一次设置为准。
-
-默认值：ButtonRole.NORMAL
+按钮的角色。根据设置枚举值的不同，系统自动调整按钮的背景色和文字颜色。背景色和文字颜色也支持开发者通过 backgroundColor、 [fontColor](arkts-arkui-button-attribute.md#fontColor)和[buttonStyle](arkts-arkui-button-attribute.md#buttonStyle)接口设置，实际显示效果以最后一次设置为 准。 默认值：ButtonRole.NORMAL
 
 **类型：** [ButtonRole](arkts-arkui-buttonrole-e.md)
 
@@ -91,6 +83,8 @@ role?: ButtonRole
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -108,21 +102,15 @@ role?: ButtonRole
 stateEffect?: boolean
 ```
 
-按钮按下时是否开启按压态显示效果。
-
-true：开启按压效果；false：关闭按压效果。
-
-默认值：true
-
-**说明：**
-
-当开启按压态显示效果，且开发者设置状态样式时，会基于状态样式设置完成后的背景色再进行颜色叠加。
+按钮按下时是否开启按压态显示效果。 true：开启按压效果；false：关闭按压效果。 默认值：true **说明：** 当开启按压态显示效果，且开发者设置状态样式时，会基于状态样式设置完成后的背景色再进行颜色叠加。
 
 **类型：** boolean
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -138,17 +126,15 @@ true：开启按压效果；false：关闭按压效果。
 type?: ButtonType
 ```
 
-按钮显示样式。
-
-默认值：ButtonType.ROUNDED_RECTANGLE
-
-API version 18及之后，ButtonType的默认值修改为ButtonType.ROUNDED_RECTANGLE。API version 18之前的版本，ButtonType的默认值为ButtonType.Capsule。
+按钮显示样式。 默认值：ButtonType.ROUNDED_RECTANGLE API version 18及之后，ButtonType的默认值修改为ButtonType.ROUNDED_RECTANGLE。API version 18之前的版本，ButtonType的默认值为 ButtonType.Capsule。
 
 **类型：** [ButtonType](arkts-arkui-buttontype-e.md)
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

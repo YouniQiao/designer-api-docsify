@@ -1,6 +1,18 @@
 # @ohos.application.ConfigurationConstant
 
-The ConfigurationConstant module provides the enumerated values of the environment configuration information.
+/*
+ Copyright (c) 2022-2023 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License"),
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
+
 
 **Since:** 8
 
@@ -8,7 +20,7 @@ The ConfigurationConstant module provides the enumerated values of the environme
 
 **Deprecated since:** 9
 
-**Substitutes:** [ConfigurationConstant/ConfigurationConstant](ohos.app.ability.ConfigurationConstant/ConfigurationConstant)
+**Substitutes:** [ConfigurationConstant/ConfigurationConstant](arkts-app-ability-configurationconstant.md#@ohos.app.ability.ConfigurationConstant)
 
 <!--Device-unnamed-declare namespace ConfigurationConstant--><!--Device-unnamed-declare namespace ConfigurationConstant-End-->
 

@@ -18,6 +18,8 @@ Allocates a new FastBuffer for a fixed size bytes. If fill is undefined, the Fas
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-fastbuffer-function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer--><!--Device-fastbuffer-function alloc(size: number, fill?: string | FastBuffer | number, encoding?: BufferEncoding): FastBuffer-End-->

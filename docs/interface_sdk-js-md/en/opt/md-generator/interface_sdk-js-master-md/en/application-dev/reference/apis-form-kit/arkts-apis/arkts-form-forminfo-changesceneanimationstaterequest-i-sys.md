@@ -2,7 +2,9 @@
 
 ChangeSceneAnimationStateRequest
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-formInfo-interface ChangeSceneAnimationStateRequest--><!--Device-formInfo-interface ChangeSceneAnimationStateRequest-End-->
 
@@ -26,7 +28,9 @@ The form id about request change scene animation state
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeSceneAnimationStateRequest-formId: string--><!--Device-ChangeSceneAnimationStateRequest-formId: string-End-->
 
@@ -44,7 +48,9 @@ The state of scene animation. 0 means deactivate, 1 means activate The value mus
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ChangeSceneAnimationStateRequest-state: int--><!--Device-ChangeSceneAnimationStateRequest-state: int-End-->
 

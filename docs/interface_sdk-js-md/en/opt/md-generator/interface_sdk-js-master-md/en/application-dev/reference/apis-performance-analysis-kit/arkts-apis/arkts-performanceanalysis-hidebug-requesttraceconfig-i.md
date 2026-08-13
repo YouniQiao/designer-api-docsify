@@ -4,6 +4,8 @@ Describes the trace request configuration.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-hidebug-interface RequestTraceConfig--><!--Device-hidebug-interface RequestTraceConfig-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -26,6 +28,8 @@ Buffer size of the trace file, in KB.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -45,6 +49,8 @@ Duration of the trace, in ms.
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Identifier used as the prefix of the output trace file name.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 24.
@@ -85,6 +93,8 @@ Reserved field for future use. Set to 0.
 **Type:** number
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

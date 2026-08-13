@@ -6,6 +6,8 @@ Defines the BaseHandlerOptions options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface BaseHandlerOptions--><!--Device-unnamed-export interface BaseHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -16,13 +18,15 @@ Defines the BaseHandlerOptions options.
 isFingerCountLimited?: boolean
 ```
 
-The flag to strict verification fingers, if touch finger size is over or less than fingers, gesture can not be accepted.The default value is false.
+The flag to strict verification fingers, if touch finger size is over or less than fingers, gesture can not be accepted. The default value is false.
 
 **Type:** boolean
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

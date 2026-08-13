@@ -14,7 +14,9 @@ function createHash(algorithm: string): HashStream
 
 Creates a **HashStream** instance, which can be used to generate a message digest (a hash value) using the given algorithm.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-hash-function createHash(algorithm: string): HashStream--><!--Device-hash-function createHash(algorithm: string): HashStream-End-->
 
@@ -37,7 +39,7 @@ Creates a **HashStream** instance, which can be used to generate a message diges
 | Error Code ID |
 | --- |
 | 13900020 |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 13900042 |
 
 ## Examples

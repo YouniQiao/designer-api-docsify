@@ -2,7 +2,9 @@
 
 Provides information about an input device.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputDevice-interface InputDeviceData--><!--Device-inputDevice-interface InputDeviceData-End-->
 
@@ -24,7 +26,9 @@ Axis information of the input device.
 
 **Type:** Array&lt;[AxisRange](arkts-input-inputdevice-axisrange-i.md)&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-axisRanges: Array<AxisRange>--><!--Device-InputDeviceData-axisRanges: Array<AxisRange>-End-->
 
@@ -40,7 +44,9 @@ Bus type of the input device. By default, the bus type reported by the input dev
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-bus: int--><!--Device-InputDeviceData-bus: int-End-->
 
@@ -56,7 +62,9 @@ Unique ID of the input device. If a physical device is repeatedly plugged and un
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-id: int--><!--Device-InputDeviceData-id: int-End-->
 
@@ -68,13 +76,13 @@ Unique ID of the input device. If a physical device is repeatedly plugged and un
 isLocal?: boolean
 ```
 
-Whether the input device is a local device.
-
-The value **true** indicates that the device is a local device, and the value **false** indicates that the device is a non-local device.
+Whether the input device is a local device. The value **true** indicates that the device is a local device, and the value **false** indicates that the device is a non-local device.
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-isLocal?: boolean--><!--Device-InputDeviceData-isLocal?: boolean-End-->
 
@@ -86,13 +94,13 @@ The value **true** indicates that the device is a local device, and the value **
 isVirtual?: boolean
 ```
 
-Whether the input device is a virtual device.
-
-The value **true** indicates that the device is a virtual device, and the value **false** indicates that the device is a non-virtual device.
+Whether the input device is a virtual device. The value **true** indicates that the device is a virtual device, and the value **false** indicates that the device is a non-virtual device.
 
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-isVirtual?: boolean--><!--Device-InputDeviceData-isVirtual?: boolean-End-->
 
@@ -108,7 +116,9 @@ Name of the input device.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-name: string--><!--Device-InputDeviceData-name: string-End-->
 
@@ -124,7 +134,9 @@ Physical address of the input device.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-phys: string--><!--Device-InputDeviceData-phys: string-End-->
 
@@ -140,7 +152,9 @@ Product information of the input device.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-product: int--><!--Device-InputDeviceData-product: int-End-->
 
@@ -156,7 +170,9 @@ Input sources supported by the input device, including the keyboard, mouse, touc
 
 **Type:** Array&lt;SourceType&gt;
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-sources: Array<SourceType>--><!--Device-InputDeviceData-sources: Array<SourceType>-End-->
 
@@ -172,7 +188,9 @@ Unique ID of the input device.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-uniq: string--><!--Device-InputDeviceData-uniq: string-End-->
 
@@ -188,7 +206,9 @@ Vendor information of the input device.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-vendor: int--><!--Device-InputDeviceData-vendor: int-End-->
 
@@ -204,7 +224,9 @@ Version information of the input device.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-InputDeviceData-version: int--><!--Device-InputDeviceData-version: int-End-->
 

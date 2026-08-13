@@ -4,6 +4,8 @@ Enumerates the media source types.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum SourceType--><!--Device-webview-enum SourceType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ URL = 0
 URL.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -33,6 +37,8 @@ MSE = 1
 Blob.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

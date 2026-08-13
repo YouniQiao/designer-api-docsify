@@ -6,7 +6,9 @@
 
 **起始版本：** 9
 
-<!--Device-unnamed-export interface MessageEvents extends Event--><!--Device-unnamed-export interface MessageEvents extends Event-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface MessageEvents--><!--Device-unnamed-export interface MessageEvents-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -21,6 +23,8 @@ readonly data: any
 **类型：** any
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

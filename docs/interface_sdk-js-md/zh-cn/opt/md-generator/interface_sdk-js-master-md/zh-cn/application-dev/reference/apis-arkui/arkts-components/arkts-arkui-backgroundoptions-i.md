@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface BackgroundOptions--><!--Device-unnamed-declare interface BackgroundOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,15 @@
 align?: Alignment
 ```
 
-Set the alignment of the custom background and component.
-
-Anonymous Object Rectification.
+Set the alignment of the custom background and component. Anonymous Object Rectification.
 
 **类型：** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **默认值：** Alignment.Center
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -45,6 +47,8 @@ The set of edges for which to ignore layout safe area. To respect safe area inse
 **默认值：** The default value is LayoutSafeAreaEdge.ALL when background is ResourceColor, otherwise it is an empty array [].
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

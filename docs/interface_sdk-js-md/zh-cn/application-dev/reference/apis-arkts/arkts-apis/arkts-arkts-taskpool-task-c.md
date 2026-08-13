@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 <!--Device-taskpool-class Task--><!--Device-taskpool-class Task-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -16,11 +18,13 @@
 addDependency(...tasks: Task[]): void
 ```
 
-为当前任务添加对其他任务的依赖。使用该方法前需先构造**Task**实例。该任务和被依赖的任务不能是任务组任务、串行队列任务、异步队列任务、已执行任务或周期任务。存在依赖关系的任务（依赖其他任务的任务或被依赖的任务）执行后不可再次执行。
+为当前任务添加对其他任务的依赖。使用该方法前需先构造**Task**实例。该任务和被依赖的任务不能是任务组任务、串行队列任务、 异步队列任务、已执行任务或周期任务。存在依赖关系的任务（依赖其他任务的任务或被依赖的任务）执行后不可再次执行。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -38,9 +42,9 @@ addDependency(...tasks: Task[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200026](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200026-当前任务存在循环依赖) | There is a circular dependency. |
-| [10200056](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
-| [10200052](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200026](../errorcode-utils.md#10200026-当前任务存在循环依赖) | There is a circular dependency. |
+| [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
+| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -87,6 +91,8 @@ Task的构造函数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-constructor(func: Function, ...args: Object[])--><!--Device-Task-constructor(func: Function, ...args: Object[])-End-->
@@ -97,14 +103,14 @@ Task的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
-| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
+| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 序列化支持类型。 |
+| args | Object[] | 是 | 任务执行函数的入参，支持的参数类型请参考 序列化支持类型。默认值为**undefined**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -130,6 +136,8 @@ Task的构造函数用于创建任务，并可指定任务名称。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-constructor(name: string, func: Function, ...args: Object[])--><!--Device-Task-constructor(name: string, func: Function, ...args: Object[])-End-->
@@ -141,14 +149,14 @@ Task的构造函数用于创建任务，并可指定任务名称。
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | name | string | 是 | 任务名称。 |
-| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。 |
-| args | Object[] | 是 | 任务执行函数的入参。支持的类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
+| func | Function | 是 | 待执行的函数，必须使用 [@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰。支持的函数返回值类型请参考 序列化支持类型。 |
+| args | Object[] | 是 | 任务执行函数的入参。支持的类型请参考 序列化支持类型。默认值为**undefined**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200014](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
+| [10200014](../errorcode-utils.md#10200014-非concurrent函数错误) | The function is not marked as concurrent. |
 
 ## 示例
 
@@ -170,15 +178,13 @@ let name: string = task.name;
 static isCanceled(): boolean
 ```
 
-检查当前正在运行的任务是否已取消。使用此方法前，需要先创建一个**Task**对象。
-
-> **说明：**
-> 
-> isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
+检查当前正在运行的任务是否已取消。使用此方法前，需要先创建一个**Task**对象。 > **说明：** > > isCanceled方法需要和taskpool.cancel方法搭配使用，如果不调用cancel方法，isCanceled方法默认返回false。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -252,6 +258,8 @@ isDone(): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-isDone(): boolean--><!--Device-Task-isDone(): boolean-End-->
@@ -309,6 +317,8 @@ onEnqueued(callback: CallbackFunction): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-onEnqueued(callback: CallbackFunction): void--><!--Device-Task-onEnqueued(callback: CallbackFunction): void-End-->
@@ -325,7 +335,7 @@ onEnqueued(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -362,6 +372,8 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-onExecutionFailed(callback: CallbackFunctionWithError): void--><!--Device-Task-onExecutionFailed(callback: CallbackFunctionWithError): void-End-->
@@ -378,7 +390,7 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -419,6 +431,8 @@ onExecutionSucceeded(callback: CallbackFunction): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-onExecutionSucceeded(callback: CallbackFunction): void--><!--Device-Task-onExecutionSucceeded(callback: CallbackFunction): void-End-->
@@ -435,7 +449,7 @@ onExecutionSucceeded(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -466,17 +480,13 @@ taskpool.execute(task).then(() => {
 onReceiveData(callback?: Function): void
 ```
 
-为任务注册回调函数，接收并处理任务池工作线程的数据。使用此方法前，需构造Task。
-
-> **说明：**
-> 
-> 该方法与[sendData](#sendData)配对使用。
-> 
-> 不支持为同一任务定义多种回调函数。如果多次赋值，只有最后一次赋值的回调函数会生效。
+为任务注册回调函数，接收并处理任务池工作线程的数据。使用此方法前，需构造Task。 > **说明：** > > 该方法与[sendData](#sendData)配对使用。 > > 不支持为同一任务定义多种回调函数。如果多次赋值，只有最后一次赋值的回调函数会生效。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -529,6 +539,8 @@ onStartExecution(callback: CallbackFunction): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-onStartExecution(callback: CallbackFunction): void--><!--Device-Task-onStartExecution(callback: CallbackFunction): void-End-->
@@ -545,7 +557,7 @@ onStartExecution(callback: CallbackFunction): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200034](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
+| [10200034](../errorcode-utils.md#10200034-已执行的任务不支持注册监听器) | The executed task does not support the registration of listeners. |
 
 ## 示例
 
@@ -582,6 +594,8 @@ removeDependency(...tasks: Task[]): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Task-removeDependency(...tasks: Task[]): void--><!--Device-Task-removeDependency(...tasks: Task[]): void-End-->
@@ -598,9 +612,9 @@ removeDependency(...tasks: Task[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200027](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200027-依赖关系不存在) | The dependency does not exist. |
-| [10200056](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
-| [10200052](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
+| [10200027](../errorcode-utils.md#10200027-依赖关系不存在) | The dependency does not exist. |
+| [10200056](../errorcode-utils.md#10200056-任务已被asyncrunner执行) | The task has been executed by the AsyncRunner.<br>**适用版本：** 18+ |
+| [10200052](../errorcode-utils.md#10200052-周期性任务不能具有依赖项) | The periodic task cannot have a dependency.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -645,22 +659,13 @@ taskpool.execute(task3).then(() => {
 static sendData(...args: Object[]): void
 ```
 
-任务执行过程中向宿主线程发送消息并触发已注册的回调函数。使用此方法前需构造**Task**对象。
-
-> **说明：**
-> 
-> - 该接口应在taskpool的线程中调用。
-> 
-> - 避免在回调函数中调用该方法，否则可能导致消息无法传递到宿主线程。
-> 
-> - 避免在异步函数中调用该方法，否则可能导致消息无法传递到宿主线程。如果在异步函数中使用，
-> 则需要使用**await**来确保该异步函数在任务中同步执行完成。
-> 
-> - 调用该接口时，请确保处理数据的回调函数已在宿主线程注册。
+任务执行过程中向宿主线程发送消息并触发已注册的回调函数。使用此方法前需构造**Task**对象。 > **说明：** > > - 该接口应在taskpool的线程中调用。 > > - 避免在回调函数中调用该方法，否则可能导致消息无法传递到宿主线程。 > > - 避免在异步函数中调用该方法，否则可能导致消息无法传递到宿主线程。如果在异步函数中使用， > 则需要使用**await**来确保该异步函数在任务中同步执行完成。 > > - 调用该接口时，请确保处理数据的回调函数已在宿主线程注册。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -672,16 +677,16 @@ static sendData(...args: Object[]): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| args | Object[] | 是 | 作为已注册回调函数入参的数据，支持的参数类型请参考 [序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为**undefined**。 |
+| args | Object[] | 是 | 作为已注册回调函数入参的数据，支持的参数类型请参考 序列化支持类型。默认值为**undefined**。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200024-未在宿主线程中注册的函数) | The callback is not registered on the host side. |
-| [10200023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200023-未在并发函数中调用的函数) | The function is not called in the concurrent function. |
-| [10200006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
-| [10200022](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200022-未在任务池中调用的函数) | The function is not called in the TaskPool thread. |
+| [10200024](../errorcode-utils.md#10200024-未在宿主线程中注册的函数) | The callback is not registered on the host side. |
+| [10200023](../errorcode-utils.md#10200023-未在并发函数中调用的函数) | The function is not called in the concurrent function. |
+| [10200006](../errorcode-utils.md#10200006-worker传输信息序列化异常) | An exception occurred during serialization. |
+| [10200022](../errorcode-utils.md#10200022-未在任务池中调用的函数) | The function is not called in the TaskPool thread. |
 
 ## 示例
 
@@ -746,18 +751,13 @@ taskpoolTest();
 setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 ```
 
-设置任务的拷贝列表。在使用该方法前，需先构造**Task**对象。
-
-> **说明：**
-> 
-> - 此接口与[setTransferList](#setTransferList)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
-> 
-> 该接口需搭配
-> [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
+设置任务的拷贝列表。在使用该方法前，需先构造**Task**对象。 > **说明：** > > - 此接口与[setTransferList](#setTransferList)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。 > > 该接口需搭配 > [@Sendable装饰器](../../../arkts-utils/arkts-sendable.md#sendable装饰器)使用，否则会抛异常。建议开发者使用该装饰器以避免异常。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -775,7 +775,7 @@ setCloneList(cloneList: Object[] | ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200029](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
+| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list. |
 
 ## 示例
 
@@ -912,18 +912,13 @@ struct Index {
 setTransferList(transfer?: ArrayBuffer[]): void
 ```
 
-设置任务的传输列表。使用该方法前需要先构造**Task**。不调用该接口，则传给任务的数据中的ArrayBuffer默认transfer转移。
-
-> **说明：**
-> 
-> - 此接口与[setCloneList](#setCloneList)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。
-> 
-> 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程，
-> 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
+设置任务的传输列表。使用该方法前需要先构造**Task**。不调用该接口，则传给任务的数据中的ArrayBuffer默认transfer转移。 > **说明：** > > - 此接口与[setCloneList](#setCloneList)互斥：同一个ArrayBuffer不能同时设置在transfer列表和clone列表中。 > > 此接口可以设置任务池中ArrayBuffer的transfer列表，transfer列表中的ArrayBuffer对象在传输时不会复制buffer内容到工作线程， > 而是转移buffer控制权至工作线程，传输后当前的ArrayBuffer失效。若ArrayBuffer为空，则不会transfer转移。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -941,7 +936,7 @@ setTransferList(transfer?: ArrayBuffer[]): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200029](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
+| [10200029](../errorcode-utils.md#10200029-无法将arraybuffer同时设置为transferlist和clonelist) | An ArrayBuffer cannot be set as both a transfer list and a clone list.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -984,13 +979,15 @@ console.info("testTransfer view3 byteLength: " + view1.byteLength);
 arguments?: Object[]
 ```
 
-创建任务传入函数所需的参数，支持的参数类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。默认值为undefined。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+创建任务传入函数所需的参数，支持的参数类型请参考序列化支持类型。默认值为undefined。&lt;br&gt; 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Object[]
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1004,7 +1001,7 @@ arguments?: Object[]
 cpuDuration: number
 ```
 
-执行任务CPU耗时。单位：ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+执行任务CPU耗时。单位：ms。不建议修改此值。&lt;br&gt; 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1013,6 +1010,8 @@ cpuDuration: number
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1026,13 +1025,15 @@ cpuDuration: number
 function: Function
 ```
 
-待执行的函数，必须使用[@Concurrent装饰器](../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰，支持的函数返回值类型请参考[序列化支持类型](../../../reference/apis-arkts/js-apis-taskpool.md#序列化支持类型)。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+待执行的函数，必须使用[@Concurrent装饰器](../../../arkts-utils/taskpool-introduction.md#concurrent装饰器)装饰， 支持的函数返回值类型请参考序列化支持类型。&lt;br&gt; 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** Function
 
 **起始版本：** 9
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1046,7 +1047,7 @@ function: Function
 ioDuration: number
 ```
 
-执行任务异步IO耗时。单位：ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+执行任务异步IO耗时。单位：ms。不建议修改此值。&lt;br&gt; 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1055,6 +1056,8 @@ ioDuration: number
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1068,13 +1071,15 @@ ioDuration: number
 name: string
 ```
 
-创建任务时指定的任务名称。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+创建任务时指定的任务名称。不建议修改此值。&lt;br&gt; 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** string
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -1088,7 +1093,7 @@ name: string
 taskId: number
 ```
 
-任务的ID。系统默认提供全局唯一值，不建议修改此值。&lt;br&gt;从API version 18开始，该接口支持在原子化服务中使用。
+任务的ID。系统默认提供全局唯一值，不建议修改此值。&lt;br&gt; 从API version 18开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1097,6 +1102,8 @@ taskId: number
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1110,7 +1117,7 @@ taskId: number
 totalDuration: number
 ```
 
-执行任务总耗时。单位：ms。不建议修改此值。&lt;br&gt;从API version 11开始，该接口支持在原子化服务中使用。
+执行任务总耗时。单位：ms。不建议修改此值。&lt;br&gt; 从API version 11开始，该接口支持在原子化服务中使用。
 
 **类型：** number
 
@@ -1119,6 +1126,8 @@ totalDuration: number
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

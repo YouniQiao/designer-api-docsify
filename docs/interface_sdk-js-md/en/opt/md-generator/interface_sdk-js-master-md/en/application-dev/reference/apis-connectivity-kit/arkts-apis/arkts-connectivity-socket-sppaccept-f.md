@@ -14,7 +14,9 @@ function sppAccept(serverSocket: number, callback: AsyncCallback<number>): void
 
 Waits for a remote device to connect.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void--><!--Device-socket-function sppAccept(serverSocket: int, callback: AsyncCallback<int>): void-End-->
 
@@ -31,8 +33,8 @@ Waits for a remote device to connect.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2900004 |
 | 2900001 |
 | 2900003 |

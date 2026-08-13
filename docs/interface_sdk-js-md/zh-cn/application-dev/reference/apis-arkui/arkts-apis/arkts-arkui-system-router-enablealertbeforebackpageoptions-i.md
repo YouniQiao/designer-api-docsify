@@ -22,6 +22,8 @@ cancel?: (errMsg: string) => void
 
 用户选择对话框取消按钮时触发，errMsg表示返回信息。
 
+**类型：** (errMsg: string) =&gt; void
+
 **起始版本：** 6
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
@@ -34,12 +36,6 @@ cancel?: (errMsg: string) => void
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errMsg | string | 是 |  |
-
 ## complete
 
 ```TypeScript
@@ -47,6 +43,8 @@ complete?: () => void
 ```
 
 当对话框关闭时触发该回调。
+
+**类型：** () =&gt; void
 
 **起始版本：** 6
 
@@ -59,32 +57,6 @@ complete?: () => void
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## success
-
-```TypeScript
-success?: (errMsg: string) => void
-```
-
-用户选择对话框确认按钮时触发，errMsg表示返回信息。
-
-**起始版本：** 6
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
-
-**废弃版本：** 8
-
-**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
-
-<!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| errMsg | string | 是 |  |
 
 ## message
 
@@ -102,9 +74,31 @@ message: string
 
 **废弃版本：** 8
 
-**替代接口：** [message](ohos.router.EnableAlertOptions#message)
+**替代接口：** message
 
 <!--Device-EnableAlertBeforeBackPageOptions-message: string--><!--Device-EnableAlertBeforeBackPageOptions-message: string-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## success
+
+```TypeScript
+success?: (errMsg: string) => void
+```
+
+用户选择对话框确认按钮时触发，errMsg表示返回信息。
+
+**类型：** (errMsg: string) =&gt; void
+
+**起始版本：** 6
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为6。
+
+**废弃版本：** 8
+
+**替代接口：** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
+
+<!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,13 +6,11 @@
 function deletePreferences(context: Context, name: string, callback: AsyncCallback<void>): void
 ```
 
-从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过name进行参数设置，使用callback异步回调。
+从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过name进行参数设置，使用callback异步回调。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 不支持该接口与其他preference接口并发调用。
 
-调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
+**起始版本：** 23
 
-不支持该接口与其他preference接口并发调用。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -32,9 +30,9 @@ function deletePreferences(context: Context, name: string, callback: AsyncCallba
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -83,13 +81,11 @@ class EntryAbility extends UIAbility {
 function deletePreferences(context: Context, options: Options, callback: AsyncCallback<void>): void
 ```
 
-从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过Options进行参数设置，使用callback异步回调。
+从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过Options进行参数设置，使用callback异步回调。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 不支持该接口与其他preference接口并发调用。
 
-调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
+**起始版本：** 23
 
-不支持该接口与其他preference接口并发调用。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -109,12 +105,12 @@ function deletePreferences(context: Context, options: Options, callback: AsyncCa
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [15501001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-上下文环境非stage模型) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
-| [15501002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -165,13 +161,11 @@ class EntryAbility extends UIAbility {
 function deletePreferences(context: Context, name: string): Promise<void>
 ```
 
-从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过name进行参数设置，使用Promise异步回调。
+从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过name进行参数设置，使用Promise异步回调。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 不支持该接口与其他preference接口并发调用。
 
-调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
+**起始版本：** 23
 
-不支持该接口与其他preference接口并发调用。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -196,9 +190,9 @@ function deletePreferences(context: Context, name: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 
@@ -245,13 +239,11 @@ class EntryAbility extends UIAbility {
 function deletePreferences(context: Context, options: Options): Promise<void>
 ```
 
-从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过Options进行参数设置，使用Promise异步回调。
+从缓存中删除指定的Preferences实例，若Preferences实例有对应的持久化文件，则同时删除其持久化文件。通过Options进行参数设置，使用Promise异步回调。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 不支持该接口与其他preference接口并发调用。
 
-调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
+**起始版本：** 23
 
-不支持该接口与其他preference接口并发调用。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -276,12 +268,12 @@ function deletePreferences(context: Context, options: Options): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [15501001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-上下文环境非stage模型) |
-| [15500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
-| [15501002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
-| [15500000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) |
+| [15500010](../errorcode-preferences.md#15500010-删除用户首选项持久化文件失败) |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) |
 
 ## 示例
 

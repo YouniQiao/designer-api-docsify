@@ -2,7 +2,9 @@
 
 Enumerates USB device function types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-export enum FunctionType--><!--Device-usbManager-export enum FunctionType-End-->
 
@@ -18,7 +20,9 @@ NONE = 0
 
 No function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-NONE = 0--><!--Device-FunctionType-NONE = 0-End-->
 
@@ -34,7 +38,9 @@ ACM = 1
 
 ACM function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-ACM = 1--><!--Device-FunctionType-ACM = 1-End-->
 
@@ -50,7 +56,9 @@ ECM = 2
 
 ECM function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-ECM = 2--><!--Device-FunctionType-ECM = 2-End-->
 
@@ -66,7 +74,9 @@ HDC = 4
 
 HDC function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-HDC = 4--><!--Device-FunctionType-HDC = 4-End-->
 
@@ -82,7 +92,9 @@ MTP = 8
 
 Media transmission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-MTP = 8--><!--Device-FunctionType-MTP = 8-End-->
 
@@ -98,7 +110,9 @@ PTP = 16
 
 Image transmission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-PTP = 16--><!--Device-FunctionType-PTP = 16-End-->
 
@@ -114,7 +128,9 @@ RNDIS = 32
 
 Network sharing.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-RNDIS = 32--><!--Device-FunctionType-RNDIS = 32-End-->
 
@@ -130,7 +146,9 @@ MIDI = 64
 
 MIDI function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-MIDI = 64--><!--Device-FunctionType-MIDI = 64-End-->
 
@@ -146,7 +164,9 @@ AUDIO_SOURCE = 128
 
 Audio function.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-AUDIO_SOURCE = 128--><!--Device-FunctionType-AUDIO_SOURCE = 128-End-->
 
@@ -162,7 +182,9 @@ NCM = 256
 
 NCM transmission.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FunctionType-NCM = 256--><!--Device-FunctionType-NCM = 256-End-->
 

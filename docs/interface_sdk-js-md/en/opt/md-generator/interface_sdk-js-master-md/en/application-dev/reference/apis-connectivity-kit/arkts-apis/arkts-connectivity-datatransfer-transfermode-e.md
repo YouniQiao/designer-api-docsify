@@ -4,6 +4,8 @@ Indicates the data transfer mode.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-dataTransfer-enum TransferMode--><!--Device-dataTransfer-enum TransferMode-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -17,6 +19,8 @@ BASIC = 0
 Basic data transfer mode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ RELIABLE = 1
 Reliable data transfer mode.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

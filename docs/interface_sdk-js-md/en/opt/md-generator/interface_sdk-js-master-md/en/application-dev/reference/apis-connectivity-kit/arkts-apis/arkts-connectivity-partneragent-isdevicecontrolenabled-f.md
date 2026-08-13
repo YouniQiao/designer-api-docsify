@@ -14,7 +14,9 @@ function isDeviceControlEnabled(deviceAddress: PartnerDeviceAddress): boolean
 
 Checks whether device control is enabled.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
@@ -40,6 +42,6 @@ Checks whether device control is enabled.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [34900099](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-fusionConnectivity.md#34900099-operation-failed) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [34900099](../errorcode-fusionConnectivity.md#34900099-operation-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |

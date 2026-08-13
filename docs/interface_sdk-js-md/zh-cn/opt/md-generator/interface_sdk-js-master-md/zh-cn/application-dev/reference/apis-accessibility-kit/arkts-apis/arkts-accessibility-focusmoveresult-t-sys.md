@@ -8,6 +8,8 @@ Indicates focus move result.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export type FocusMoveResult = _FocusMoveResult--><!--Device-unnamed-export type FocusMoveResult = _FocusMoveResult-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

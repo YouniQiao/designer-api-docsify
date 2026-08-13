@@ -1,9 +1,10 @@
 # RingtonePlayer (System API)
 
-Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use   
-[getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i.md#getRingtonePlayer)to obtain a RingtonePlayer instance.
+Provides APIs for setting and obtaining ringtone parameters as well as playing and stopping ringtones. Before calling any API in RingtonePlayer, you must use [getRingtonePlayer](arkts-audio-systemsoundmanager-systemsoundmanager-i-sys.md#getRingtonePlayer) to obtain a RingtonePlayer instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface RingtonePlayer--><!--Device-unnamed-export interface RingtonePlayer-End-->
 
@@ -19,7 +20,9 @@ configure(options: RingtoneOptions, callback: AsyncCallback<void>): void
 
 Sets ringtone parameters. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-configure(options: RingtoneOptions, callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-configure(options: RingtoneOptions, callback: AsyncCallback<void>): void-End-->
 
@@ -62,7 +65,9 @@ configure(options: RingtoneOptions): Promise<void>
 
 Sets ringtone parameters. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>--><!--Device-RingtonePlayer-configure(options: RingtoneOptions): Promise<void>-End-->
 
@@ -108,7 +113,9 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 
 Obtains the information about the audio renderer used by the ringtone. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void--><!--Device-RingtonePlayer-getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void-End-->
 
@@ -148,7 +155,9 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 
 Obtains the information about the audio renderer used by the ringtone. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-getAudioRendererInfo(): Promise<audio.AudioRendererInfo>--><!--Device-RingtonePlayer-getAudioRendererInfo(): Promise<audio.AudioRendererInfo>-End-->
 
@@ -186,7 +195,9 @@ getTitle(callback: AsyncCallback<string>): void
 
 Obtains the title of the ringtone. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-getTitle(callback: AsyncCallback<string>): void--><!--Device-RingtonePlayer-getTitle(callback: AsyncCallback<string>): void-End-->
 
@@ -222,7 +233,9 @@ getTitle(): Promise<string>
 
 Obtains the title of the ringtone. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-getTitle(): Promise<string>--><!--Device-RingtonePlayer-getTitle(): Promise<string>-End-->
 
@@ -248,7 +261,31 @@ systemRingtonePlayer.getTitle().then((value: string) => {
 });
 ```
 
-## off('audioInterrupt')
+## offAudioInterrupt
+
+```TypeScript
+offAudioInterrupt(): void
+```
+
+Unsubscribes to audio interrupt events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RingtonePlayer-offAudioInterrupt(): void--><!--Device-RingtonePlayer-offAudioInterrupt(): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## off_audioInterrupt
 
 ```TypeScript
 off(type: 'audioInterrupt'): void
@@ -257,6 +294,8 @@ off(type: 'audioInterrupt'): void
 Unsubscribes from the audio interruption event.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-off(type: 'audioInterrupt'): void--><!--Device-RingtonePlayer-off(type: 'audioInterrupt'): void-End-->
 
@@ -274,8 +313,8 @@ Unsubscribes from the audio interruption event.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## Examples
 
@@ -283,7 +322,38 @@ Unsubscribes from the audio interruption event.
 systemRingtonePlayer.off('audioInterrupt');
 ```
 
-## on('audioInterrupt')
+## onAudioInterrupt
+
+```TypeScript
+onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void
+```
+
+Listens for audio interrupt events. This method uses a callback to get interrupt events. The interrupt event is triggered when audio playback is interrupted.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-onAudioInterrupt(callback: Callback<audio.InterruptEvent>): void-End-->
+
+**System capability:** SystemCapability.Multimedia.SystemSound.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;audio.InterruptEvent&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+
+## on_audioInterrupt
 
 ```TypeScript
 on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
@@ -292,6 +362,8 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 Subscribes to the audio interruption event, which is triggered when the audio focus is changed. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void--><!--Device-RingtonePlayer-on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void-End-->
 
@@ -310,8 +382,8 @@ Subscribes to the audio interruption event, which is triggered when the audio fo
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-invalid-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6800101](../errorcode-audio.md#6800101-invalid-parameter) |
 
 ## Examples
 
@@ -371,7 +443,9 @@ release(callback: AsyncCallback<void>): void
 
 Releases the ringtone player. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-release(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -407,7 +481,9 @@ release(): Promise<void>
 
 Releases the ringtone player. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-release(): Promise<void>--><!--Device-RingtonePlayer-release(): Promise<void>-End-->
 
@@ -441,7 +517,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts playing the ringtone. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-start(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-start(callback: AsyncCallback<void>): void-End-->
 
@@ -477,7 +555,9 @@ start(): Promise<void>
 
 Starts playing the ringtone. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-start(): Promise<void>--><!--Device-RingtonePlayer-start(): Promise<void>-End-->
 
@@ -511,7 +591,9 @@ stop(callback: AsyncCallback<void>): void
 
 Stops playing the ringtone. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-stop(callback: AsyncCallback<void>): void--><!--Device-RingtonePlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -547,7 +629,9 @@ stop(): Promise<void>
 
 Stops playing the ringtone. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-stop(): Promise<void>--><!--Device-RingtonePlayer-stop(): Promise<void>-End-->
 
@@ -583,7 +667,9 @@ Gets player state.
 
 **Type:** media.AVPlayerState
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-RingtonePlayer-readonly state: media.AVPlayerState--><!--Device-RingtonePlayer-readonly state: media.AVPlayerState-End-->
 

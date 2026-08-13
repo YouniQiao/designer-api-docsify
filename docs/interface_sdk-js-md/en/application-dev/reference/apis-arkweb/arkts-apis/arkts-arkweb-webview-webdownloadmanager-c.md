@@ -2,9 +2,11 @@
 
 You can trigger download manually through this interface, or resume failed or canceled downloads.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class WebDownloadManager--><!--Device-webview-class WebDownloadManager-End-->
 
@@ -24,9 +26,13 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 
 Resume the canceled or failed download.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void--><!--Device-WebDownloadManager-static resumeDownload(webDownloadItem: WebDownloadItem): void-End-->
 
@@ -42,7 +48,7 @@ Resume the canceled or failed download.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17100018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkweb/errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
+| [17100018](../errorcode-webview.md#17100018-no-webdownloaddelegate-available) | No WebDownloadDelegate has been set yet. |
 
 ## setDownloadDelegate
 
@@ -52,9 +58,13 @@ static setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 Set a delegate used to receive the progress of the download triggered from WebDownloadManager.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void--><!--Device-WebDownloadManager-static setDownloadDelegate(delegate: WebDownloadDelegate): void-End-->
 

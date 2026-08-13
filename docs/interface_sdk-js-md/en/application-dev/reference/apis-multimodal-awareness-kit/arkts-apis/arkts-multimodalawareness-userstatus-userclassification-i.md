@@ -2,9 +2,9 @@
 
 Defines the user age group detection result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 
@@ -28,9 +28,9 @@ User age group, for example, child or adult.
 
 **Type:** [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 
@@ -48,9 +48,9 @@ Confidence of the detection result. The value is a floating point number ranging
 
 **Type:** float
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 24
 

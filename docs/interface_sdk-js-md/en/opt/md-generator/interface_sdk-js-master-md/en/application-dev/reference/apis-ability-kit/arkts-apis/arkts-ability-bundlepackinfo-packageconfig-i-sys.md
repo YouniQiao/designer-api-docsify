@@ -2,7 +2,9 @@
 
 PackageConfig: the package info class.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PackageConfig--><!--Device-unnamed-export interface PackageConfig-End-->
 
@@ -20,7 +22,9 @@ Whether it should be installed together with the application. **true** if it sho
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PackageConfig-readonly deliveryWithInstall: boolean--><!--Device-PackageConfig-readonly deliveryWithInstall: boolean-End-->
 
@@ -38,7 +42,9 @@ Device types supported by the bundle.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PackageConfig-readonly deviceTypes: Array<string>--><!--Device-PackageConfig-readonly deviceTypes: Array<string>-End-->
 
@@ -56,7 +62,9 @@ Module type of the bundle.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PackageConfig-readonly moduleType: string--><!--Device-PackageConfig-readonly moduleType: string-End-->
 
@@ -74,7 +82,9 @@ Bundle name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PackageConfig-readonly name: string--><!--Device-PackageConfig-readonly name: string-End-->
 

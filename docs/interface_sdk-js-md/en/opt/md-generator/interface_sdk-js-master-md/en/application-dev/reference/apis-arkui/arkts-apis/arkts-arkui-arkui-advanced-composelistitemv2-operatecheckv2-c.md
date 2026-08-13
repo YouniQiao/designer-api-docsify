@@ -4,7 +4,7 @@ Declare type OperateCheckV2
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class OperateCheckV2--><!--Device-unnamed-export declare class OperateCheckV2-End-->
 
@@ -26,6 +26,8 @@ The constructor of OperateCheckV2.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -40,28 +42,11 @@ The constructor of OperateCheckV2.
 | --- | --- | --- |
 | options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | No |
 
-## onChange
-
-```TypeScript
-public onChange?: OnChangeCallback
-```
-
-Callback function when operate the checkbox/switch/radio.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-OperateCheckV2-public onChange?: OnChangeCallback--><!--Device-OperateCheckV2-public onChange?: OnChangeCallback-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+  public accessibilityDescription?: ResourceStr
 ```
 
 The accessibilityDescription of the checkbox/switch/radio.
@@ -70,18 +55,21 @@ The accessibilityDescription of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateCheckV2-public accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2-public accessibilityDescription?: ResourceStr-End-->
+<!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel?: string
+@Trace
+  public accessibilityLevel?: string
 ```
 
 The accessibilityLevel of the checkbox/switch/radio.
@@ -92,18 +80,21 @@ The accessibilityLevel of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateCheckV2-public accessibilityLevel?: string--><!--Device-OperateCheckV2-public accessibilityLevel?: string-End-->
+<!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string--><!--Device-OperateCheckV2-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-public accessibilityText?: ResourceStr
+@Trace
+  public accessibilityText?: ResourceStr
 ```
 
 The accessibilityText of the checkbox/switch/radio.
@@ -112,18 +103,21 @@ The accessibilityText of the checkbox/switch/radio.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateCheckV2-public accessibilityText?: ResourceStr--><!--Device-OperateCheckV2-public accessibilityText?: ResourceStr-End-->
+<!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr--><!--Device-OperateCheckV2-@Trace  public accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isCheck
 
 ```TypeScript
-public isCheck?: boolean
+@Trace
+  public isCheck?: boolean
 ```
 
 Whether is checked on default.
@@ -132,10 +126,35 @@ Whether is checked on default.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-OperateCheckV2-public isCheck?: boolean--><!--Device-OperateCheckV2-public isCheck?: boolean-End-->
+<!--Device-OperateCheckV2-@Trace  public isCheck?: boolean--><!--Device-OperateCheckV2-@Trace  public isCheck?: boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## onChange
+
+```TypeScript
+@Trace
+  public onChange?: OnChangeCallback
+```
+
+Callback function when operate the checkbox/switch/radio.
+
+**Type:** [OnChangeCallback](arkts-arkui-onchangecallback-t.md)
+
+**Since:** 26.0.0
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-OperateCheckV2-@Trace  public onChange?: OnChangeCallback--><!--Device-OperateCheckV2-@Trace  public onChange?: OnChangeCallback-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -2,7 +2,9 @@
 
 认证令牌数据。表示校验通过后返回解析后的AuthToken数据，包含认证的详细信息，如挑战值、认证信任等级、认证类型、用户ID等。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-userAccessCtrl-interface AuthToken--><!--Device-userAccessCtrl-interface AuthToken-End-->
 
@@ -20,7 +22,9 @@ authTrustLevel: userAuth.AuthTrustLevel
 
 **类型：** userAuth.AuthTrustLevel
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel--><!--Device-AuthToken-authTrustLevel: userAuth.AuthTrustLevel-End-->
 
@@ -38,7 +42,9 @@ authType: userAuth.UserAuthType
 
 **类型：** userAuth.UserAuthType
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-authType: userAuth.UserAuthType--><!--Device-AuthToken-authType: userAuth.UserAuthType-End-->
 
@@ -56,7 +62,9 @@ challenge: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-challenge: Uint8Array--><!--Device-AuthToken-challenge: Uint8Array-End-->
 
@@ -74,7 +82,9 @@ credentialId?: bigint
 
 **类型：** bigint
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-credentialId?: bigint--><!--Device-AuthToken-credentialId?: bigint-End-->
 
@@ -92,7 +102,9 @@ enrolledId?: bigint
 
 **类型：** bigint
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-enrolledId?: bigint--><!--Device-AuthToken-enrolledId?: bigint-End-->
 
@@ -110,7 +122,9 @@ secureUid?: bigint
 
 **类型：** bigint
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-secureUid?: bigint--><!--Device-AuthToken-secureUid?: bigint-End-->
 
@@ -128,7 +142,9 @@ AuthToken签发后经过的时间。自AuthToken签发至当前的时间间隔�
 
 **类型：** bigint
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-timeInterval: bigint--><!--Device-AuthToken-timeInterval: bigint-End-->
 
@@ -146,7 +162,9 @@ tokenType: AuthTokenType
 
 **类型：** [AuthTokenType](arkts-userauthentication-useraccessctrl-authtokentype-e-sys.md)
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-tokenType: AuthTokenType--><!--Device-AuthToken-tokenType: AuthTokenType-End-->
 
@@ -164,7 +182,9 @@ userId: number
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AuthToken-userId: int--><!--Device-AuthToken-userId: int-End-->
 

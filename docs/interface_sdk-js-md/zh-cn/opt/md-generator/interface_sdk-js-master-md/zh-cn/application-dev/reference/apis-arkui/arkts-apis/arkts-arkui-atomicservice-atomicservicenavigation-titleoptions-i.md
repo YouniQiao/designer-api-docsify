@@ -4,6 +4,8 @@
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface TitleOptions--><!--Device-unnamed-export interface TitleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ backgroundColor?: ResourceColor
 **类型：** [ResourceColor](arkts-arkui-resourcecolor-t.md)
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -40,6 +44,8 @@ barStyle?: BarStyle
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TitleOptions-barStyle?: BarStyle--><!--Device-TitleOptions-barStyle?: BarStyle-End-->
@@ -59,6 +65,8 @@ isBlurEnabled?: boolean
 **默认值：** true
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -80,6 +88,8 @@ titleBarType?: TitleBarType
 
 **起始版本：** 18
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
 <!--Device-TitleOptions-titleBarType?: TitleBarType--><!--Device-TitleOptions-titleBarType?: TitleBarType-End-->
@@ -99,6 +109,8 @@ titleIcon?: Resource | SymbolGlyphModifier
 **默认值：** atomicservice icon
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 

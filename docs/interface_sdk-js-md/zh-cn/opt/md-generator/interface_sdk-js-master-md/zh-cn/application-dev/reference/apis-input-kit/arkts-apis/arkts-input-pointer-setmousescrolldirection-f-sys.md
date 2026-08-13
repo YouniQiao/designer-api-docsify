@@ -10,6 +10,8 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.INPUT_DEVICE_CONTROLLER
 
 <!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>--><!--Device-pointer-function setMouseScrollDirection(inverted: boolean): Promise<void>-End-->
@@ -34,9 +36,9 @@ function setMouseScrollDirection(inverted: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [3800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-input-kit/errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [3800001](../errorcode-infraredemitter.md#3800001-多模输入服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

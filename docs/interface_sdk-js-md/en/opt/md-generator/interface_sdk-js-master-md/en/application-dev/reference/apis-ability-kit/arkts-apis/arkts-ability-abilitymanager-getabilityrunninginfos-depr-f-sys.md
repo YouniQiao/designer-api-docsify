@@ -12,7 +12,7 @@ Obtains the ability running information. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAbilityRunningInfos](ohos.app.ability.abilityManager/abilityManager#getAbilityRunningInfos)
+**Substitutes:** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 
@@ -41,7 +41,7 @@ Obtains the ability running information. This API uses an asynchronous callback 
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAbilityRunningInfos](ohos.app.ability.abilityManager/abilityManager#getAbilityRunningInfos)
+**Substitutes:** [getAbilityRunningInfos](arkts-ability-abilitymanager-getabilityrunninginfos-f.md#getAbilityRunningInfos)
 
 **Required permissions:** ohos.permission.GET_RUNNING_INFO
 

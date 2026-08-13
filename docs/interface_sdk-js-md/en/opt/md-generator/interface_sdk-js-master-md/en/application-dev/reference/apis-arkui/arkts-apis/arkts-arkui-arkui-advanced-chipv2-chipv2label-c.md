@@ -4,7 +4,7 @@ Defines chip label class.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipV2Label--><!--Device-unnamed-export declare class ChipV2Label-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipLabel
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of ChipLabel
 ## activatedFontColor
 
 ```TypeScript
-public activatedFontColor?: ColorMetrics
+@Trace
+  public activatedFontColor?: ColorMetrics
 ```
 
 Text font color when chip is activated.
@@ -52,18 +55,21 @@ Text font color when chip is activated.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public activatedFontColor?: ColorMetrics--><!--Device-ChipV2Label-public activatedFontColor?: ColorMetrics-End-->
+<!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public activatedFontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontColor
 
 ```TypeScript
-public fontColor?: ColorMetrics
+@Trace
+  public fontColor?: ColorMetrics
 ```
 
 Text font color.
@@ -72,18 +78,21 @@ Text font color.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public fontColor?: ColorMetrics--><!--Device-ChipV2Label-public fontColor?: ColorMetrics-End-->
+<!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics--><!--Device-ChipV2Label-@Trace  public fontColor?: ColorMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontFamily
 
 ```TypeScript
-public fontFamily?: string
+@Trace
+  public fontFamily?: string
 ```
 
 Text font family.
@@ -92,18 +101,21 @@ Text font family.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public fontFamily?: string--><!--Device-ChipV2Label-public fontFamily?: string-End-->
+<!--Device-ChipV2Label-@Trace  public fontFamily?: string--><!--Device-ChipV2Label-@Trace  public fontFamily?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## fontSize
 
 ```TypeScript
-public fontSize?: LengthMetrics
+@Trace
+  public fontSize?: LengthMetrics
 ```
 
 Text font size.
@@ -112,18 +124,21 @@ Text font size.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public fontSize?: LengthMetrics--><!--Device-ChipV2Label-public fontSize?: LengthMetrics-End-->
+<!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2Label-@Trace  public fontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## labelMargin
 
 ```TypeScript
-public labelMargin?: ChipV2LabelMarginConfig
+@Trace
+  public labelMargin?: ChipV2LabelMarginConfig
 ```
 
 Label margin.
@@ -132,18 +147,21 @@ Label margin.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public labelMargin?: ChipV2LabelMarginConfig--><!--Device-ChipV2Label-public labelMargin?: ChipV2LabelMarginConfig-End-->
+<!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig--><!--Device-ChipV2Label-@Trace  public labelMargin?: ChipV2LabelMarginConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## localizedLabelMargin
 
 ```TypeScript
-public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
+@Trace
+  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig
 ```
 
 Localized label margin.
@@ -152,18 +170,21 @@ Localized label margin.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig--><!--Device-ChipV2Label-public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig-End-->
+<!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig--><!--Device-ChipV2Label-@Trace  public localizedLabelMargin?: ChipV2LocalizedLabelMarginConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## modifier
 
 ```TypeScript
-public modifier?: TextModifier
+@Trace
+  public modifier?: TextModifier
 ```
 
 Modifier for the label text.
@@ -172,18 +193,21 @@ Modifier for the label text.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public modifier?: TextModifier--><!--Device-ChipV2Label-public modifier?: TextModifier-End-->
+<!--Device-ChipV2Label-@Trace  public modifier?: TextModifier--><!--Device-ChipV2Label-@Trace  public modifier?: TextModifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## text
 
 ```TypeScript
-public text: string
+@Trace
+  public text: string
 ```
 
 Text content.
@@ -192,10 +216,12 @@ Text content.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Label-public text: string--><!--Device-ChipV2Label-public text: string-End-->
+<!--Device-ChipV2Label-@Trace  public text: string--><!--Device-ChipV2Label-@Trace  public text: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -1,12 +1,12 @@
 # Run
 
-文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接口获取。
+文本排版单元，表示一段具有相同样式属性的连续文本片段。Run由[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接 口获取。 下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接口获取Run对象实例，再通过此实例调 用对应方法。
 
-下列API示例中都需先使用[TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine)类的[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns)接口获取Run对象实例，再通过此实例调用对应方法。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-text-class Run--><!--Device-text-class Run-End-->
 
@@ -23,6 +23,8 @@ getAdvances(range: Range): Array<common2D.Point>
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -71,7 +73,9 @@ getAdvances(range: Range): Array<common2D.Point> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getAdvances(range: Range): Array<common2D.Point> | undefined-End-->
 
@@ -97,9 +101,11 @@ getFont(): drawing.Font
 
 获取排版单元的字体属性对象。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -121,21 +127,17 @@ let font = runs[0].getFont();
 
 ## getGlyphCount
 
-ArkTS-Dyn:
-```TypeScript
-getGlyphCount(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGlyphCount(): int
 ```
 
 获取该排版单元中字形的数量。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -147,7 +149,7 @@ getGlyphCount(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | 该排版单元中字形数量，整数。 |
+| int | 该排版单元中字形数量，整数。 |
 
 ## 示例
 
@@ -157,21 +159,17 @@ let glyphs = runs[0].getGlyphCount();
 
 ## getGlyphs
 
-ArkTS-Dyn:
-```TypeScript
-getGlyphs(): Array<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getGlyphs(): Array<int>
 ```
 
 获取该排版单元中每个字符的字形序号。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -183,7 +181,7 @@ getGlyphs(): Array<int>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Array&lt;number&gt;  <br>ArkTS-Sta：Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
+| Array&lt;int&gt; | 该排版单元中每个字符对应的字形序号。 |
 
 ## 示例
 
@@ -202,6 +200,8 @@ getGlyphs(range: Range): Array<int>
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -303,7 +303,9 @@ getGlyphs(range: Range): Array<int> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Run-getGlyphs(range: Range): Array<int> | undefined--><!--Device-Run-getGlyphs(range: Range): Array<int> | undefined-End-->
 
@@ -327,21 +329,13 @@ getGlyphs(range: Range): Array<int> | undefined
 getImageBounds(): common2D.Rect
 ```
 
-获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和末尾空格的边界。
+获取该排版单元的图像边界，图像边界与排版字体、排版字号、字符本身都有关，相当于视觉边界，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，用户在界面上只能看到"a b"，图像边界即为不包括带行首和 末尾空格的边界。 > **说明：** > > 示意图展示了字符串为" a b "的图像边界。 > >  > > 示意图展示了字符串为"j"或"E"的图像边界。 > > 
 
-> **说明：**
-> 
-> 示意图展示了字符串为" a b "的图像边界。
-> 
-> ![ImageBounds.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds.png)
-> 
-> 示意图展示了字符串为"j"或"E"的图像边界。
-> 
-> ![ImageBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/ImageBounds-Character.png)
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -369,9 +363,11 @@ getOffsets(): Array<common2D.Point>
 
 获取该排版单元中每个字形的索引偏移量。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -399,9 +395,11 @@ getPositions(): Array<common2D.Point>
 
 获取该排版单元中每个字形相对于每行的字形位置。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -432,6 +430,8 @@ getPositions(range: Range): Array<common2D.Point>
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -534,7 +534,9 @@ getPositions(range: Range): Array<common2D.Point> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined--><!--Device-Run-getPositions(range: Range): Array<common2D.Point> | undefined-End-->
 
@@ -563,6 +565,8 @@ getStringIndices(range?: Range): Array<int>
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -665,7 +669,9 @@ getStringIndices(range?: Range): Array<int> | undefined
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined--><!--Device-Run-getStringIndices(range?: Range): Array<int> | undefined-End-->
 
@@ -691,9 +697,11 @@ getStringRange(): Range
 
 获取排版单元生成字形的字符范围。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -723,9 +731,11 @@ getTextDirection(): TextDirection
 
 获取该排版单元的文本方向。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -755,7 +765,9 @@ getTextStyle(): TextStyle
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -889,22 +901,13 @@ struct Index {
 getTypographicBounds(): TypographicBounds
 ```
 
-获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。
+获取该排版单元的排版边界，排版边界与排版字体、排版字号有关，与字符本身无关，例如字符串为" a b "，'a'字符前面有1个空格，'b'字符后面有1个空格，排版边界就包括行首和末尾空格的边界。 > **说明：** > > 示意图展示了字符串为" a b "的排版边界。 > >  > > 示意图展示了字符串为"j"或"E"的排版边界。 > > ! > [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
 
-> **说明：**
-> 
-> 示意图展示了字符串为" a b "的排版边界。
-> 
-> ![TypographicBounds.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds.png)
-> 
-> 示意图展示了字符串为"j"或"E"的排版边界。
-> 
-> !
-> [TypographicBounds-Character.png](../../../reference/apis-arkgraphics2d/figures/TypographicBounds-Character.png)
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -926,21 +929,17 @@ let typographicBounds = runs[0].getTypographicBounds();
 
 ## paint
 
-ArkTS-Dyn:
-```TypeScript
-paint(canvas: drawing.Canvas, x: number, y: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 paint(canvas: drawing.Canvas, x: double, y: double): void
 ```
 
 在画布上以(x, y)为左上角位置绘制排版单元。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -953,8 +952,8 @@ paint(canvas: drawing.Canvas, x: double, y: double): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | canvas | drawing.Canvas | 是 | 绘制的目标 canvas。 |
-| x | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
-| y | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
+| x | double | 是 | 绘制的左上角位置的横坐标，浮点数，单位为物理像素px。 |
+| y | double | 是 | 绘制的左上角位置的纵坐标，浮点数，单位为物理像素px。 |
 
 ## 示例
 

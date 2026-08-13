@@ -1,10 +1,12 @@
 # TextDecoderOptions
 
-Defines the TextDecoder related options parameters.
+Describes decoding-related options, which include **fatal** and **ignoreBOM**.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-util-interface TextDecoderOptions--><!--Device-util-interface TextDecoderOptions-End-->
 
@@ -22,13 +24,17 @@ import { util } from '@kit.ArkTS';
 fatal?: boolean
 ```
 
-Is a fatal error displayed? The default value is false.
+Whether to display fatal errors. The value **true** means to display fatal errors, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextDecoderOptions-fatal?: boolean--><!--Device-TextDecoderOptions-fatal?: boolean-End-->
 
@@ -40,13 +46,17 @@ Is a fatal error displayed? The default value is false.
 ignoreBOM?: boolean
 ```
 
-Do you want to ignore BOM tags? The default value is false.
+Whether to ignore the BOM. The value **true** means to ignore the BOM, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TextDecoderOptions-ignoreBOM?: boolean--><!--Device-TextDecoderOptions-ignoreBOM?: boolean-End-->
 

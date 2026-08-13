@@ -1,4 +1,4 @@
-# Scene(Defines 3D scene related interfaces)
+# Scene
 
 ## Summary
 

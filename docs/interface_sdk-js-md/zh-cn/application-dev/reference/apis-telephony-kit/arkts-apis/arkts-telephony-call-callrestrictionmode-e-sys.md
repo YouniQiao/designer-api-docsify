@@ -2,9 +2,11 @@
 
 呼叫限制模式。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum CallRestrictionMode--><!--Device-call-export enum CallRestrictionMode-End-->
 
@@ -20,9 +22,11 @@ RESTRICTION_MODE_DEACTIVATION = 0
 
 限制模式停用。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0--><!--Device-CallRestrictionMode-RESTRICTION_MODE_DEACTIVATION = 0-End-->
 
@@ -38,9 +42,11 @@ RESTRICTION_MODE_ACTIVATION = 1
 
 限制模式激活。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1--><!--Device-CallRestrictionMode-RESTRICTION_MODE_ACTIVATION = 1-End-->
 

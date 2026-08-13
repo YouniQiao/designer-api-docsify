@@ -2,7 +2,9 @@
 
 提供历法相关的能力，包括历法名称获取和日期计算等。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class Calendar--><!--Device-i18n-export class Calendar-End-->
 
@@ -16,7 +18,9 @@ add(field: string, amount: number): void
 
 对日历对象中的表示时间日期的日历属性值进行加减操作。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -35,8 +39,8 @@ add(field: string, amount: number): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [890001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-参数校验错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [890001](../errorcode-i18n.md#890001-参数校验错误) |
 
 ## 示例
 
@@ -63,7 +67,9 @@ compareDays(date: Date): number
 
 比较日历对象当前日期和指定日期相差的天数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -87,7 +93,7 @@ compareDays(date: Date): number
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -114,7 +120,9 @@ get(field: string): number
 
 获取日历对象中日历属性的值。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -152,7 +160,9 @@ getDisplayName(locale: string): string
 
 获取日历对象名称在指定语言下的翻译。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -189,7 +199,9 @@ getFirstDayOfWeek(): number
 
 获取日历对象的周起始日。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -220,7 +232,9 @@ getMinimalDaysInFirstWeek(): number
 
 获取日历对象一年中第一周的最小天数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -251,7 +265,9 @@ getTimeInMillis(): number
 
 获取当前日历对象的时间戳。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -283,7 +299,9 @@ getTimeZone(): string
 
 获取日历对象的时区ID。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -315,7 +333,9 @@ isWeekend(date?: Date): boolean
 
 判断指定的日期在日历对象中是否为周末。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -355,7 +375,9 @@ set(year: number, month: number, date:number, hour?: number, minute?: number, se
 
 设置日历对象的年、月、日、时、分、秒。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -391,7 +413,9 @@ setFirstDayOfWeek(value: number): void
 
 设置日历对象的周起始日。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -423,7 +447,9 @@ setMinimalDaysInFirstWeek(value: number): void
 
 设置日历对象一年中第一周的最小天数。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -455,7 +481,9 @@ setTime(date: Date): void
 
 基于传入的Date对象，设置日历对象内部的时间日期。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -487,7 +515,9 @@ setTime(time: number): void
 
 基于传入的时间戳，设置日历对象内部的时间日期。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -518,7 +548,9 @@ setTimeZone(timezone: string): void
 
 设置日历对象的时区。
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

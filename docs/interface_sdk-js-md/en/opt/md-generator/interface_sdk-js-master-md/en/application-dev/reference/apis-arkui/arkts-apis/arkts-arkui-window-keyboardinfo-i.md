@@ -2,7 +2,9 @@
 
 Describes the information about the soft keyboard window.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-window-interface KeyboardInfo--><!--Device-window-interface KeyboardInfo-End-->
 
@@ -24,9 +26,11 @@ Whether there is a show/hide animation. **true** if there is a show/hide animati
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-KeyboardInfo-animated?: boolean--><!--Device-KeyboardInfo-animated?: boolean-End-->
 
@@ -42,9 +46,11 @@ Position and size of the soft keyboard before the animation starts.
 
 **Type:** Rect
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-KeyboardInfo-beginRect: Rect--><!--Device-KeyboardInfo-beginRect: Rect-End-->
 
@@ -60,9 +66,11 @@ Animation configuration.
 
 **Type:** [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md)
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-KeyboardInfo-config?: WindowAnimationConfig--><!--Device-KeyboardInfo-config?: WindowAnimationConfig-End-->
 
@@ -78,9 +86,11 @@ Position and size of the soft keyboard after the animation ends.
 
 **Type:** Rect
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-KeyboardInfo-endRect: Rect--><!--Device-KeyboardInfo-endRect: Rect-End-->
 

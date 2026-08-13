@@ -2,7 +2,9 @@
 
 定义应用多开在运行态的结构信息。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface RunningMultiAppInfo--><!--Device-unnamed-export interface RunningMultiAppInfo-End-->
 
@@ -20,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningMultiAppInfo-bundleName: string--><!--Device-RunningMultiAppInfo-bundleName: string-End-->
 
@@ -38,7 +42,9 @@ mode: MultiAppMode
 
 **类型：** [MultiAppMode](arkts-ability-multiappmode-e-sys.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningMultiAppInfo-mode: MultiAppMode--><!--Device-RunningMultiAppInfo-mode: MultiAppMode-End-->
 
@@ -56,7 +62,9 @@ runningAppClones?: Array<RunningAppClone>
 
 **类型：** Array&lt;[RunningAppClone](arkts-ability-runningappclone-i-sys.md)&gt;
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>--><!--Device-RunningMultiAppInfo-runningAppClones?: Array<RunningAppClone>-End-->
 
@@ -74,7 +82,9 @@ runningMultiInstances?: Array<RunningMultiInstanceInfo>
 
 **类型：** Array&lt;[RunningMultiInstanceInfo](arkts-ability-runningmultiinstanceinfo-i-sys.md)&gt;
 
-**起始版本：** 14
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>--><!--Device-RunningMultiAppInfo-runningMultiInstances?: Array<RunningMultiInstanceInfo>-End-->
 

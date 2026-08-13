@@ -6,9 +6,11 @@ type NetworkState = radio.NetworkState
 
 网络注册状态。
 
-**起始版本：** 6
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为6；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-observer-type NetworkState = radio.NetworkState--><!--Device-observer-type NetworkState = radio.NetworkState-End-->
 

@@ -6,7 +6,9 @@ type CloudAssets = Array<CloudAsset>
 
 表示CloudAsset类型的数组。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>--><!--Device-cloudExtension-type CloudAssets = Array<CloudAsset>-End-->
 

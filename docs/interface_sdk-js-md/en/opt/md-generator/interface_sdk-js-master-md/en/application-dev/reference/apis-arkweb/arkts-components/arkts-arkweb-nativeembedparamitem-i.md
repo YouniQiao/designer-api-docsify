@@ -4,6 +4,8 @@ Provides details about the **param** element embedded in the same-layer renderin
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NativeEmbedParamItem--><!--Device-unnamed-declare interface NativeEmbedParamItem-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -19,6 +21,8 @@ ID of the **param** element.
 **Type:** string
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedParamItem-id: string--><!--Device-NativeEmbedParamItem-id: string-End-->
 
@@ -36,6 +40,8 @@ Name of the **param** element.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-NativeEmbedParamItem-name?: string--><!--Device-NativeEmbedParamItem-name?: string-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -52,6 +58,8 @@ Status change type of the **param** element.
 
 **Since:** 21
 
+**Deprecated since:** -1
+
 <!--Device-NativeEmbedParamItem-status: NativeEmbedParamStatus--><!--Device-NativeEmbedParamItem-status: NativeEmbedParamStatus-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -67,6 +75,8 @@ Value of the **param** element.
 **Type:** string
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 <!--Device-NativeEmbedParamItem-value?: string--><!--Device-NativeEmbedParamItem-value?: string-End-->
 

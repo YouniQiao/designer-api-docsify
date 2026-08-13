@@ -8,7 +8,7 @@ Asynchronous callback interface.
 
 **Substitutes:** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md#AsyncCallback)
 
-<!--Device-resourceManager-export interface AsyncCallback<T>--><!--Device-resourceManager-export interface AsyncCallback<T>-End-->
+<!--Device-resourceManager-export interface AsyncCallback--><!--Device-resourceManager-export interface AsyncCallback-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager
 
@@ -18,7 +18,7 @@ Asynchronous callback interface.
 import { resourceManager } from '@kit.LocalizationKit';
 ```
 
-## [[Call]]
+## constructor
 
 ```TypeScript
 (err: Error, data: T): void

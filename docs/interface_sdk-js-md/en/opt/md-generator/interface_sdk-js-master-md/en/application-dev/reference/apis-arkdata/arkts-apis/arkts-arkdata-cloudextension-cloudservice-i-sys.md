@@ -1,8 +1,10 @@
 # CloudService (System API)
 
-Provides APIs for interacting with the cloud sync service.You need to inherit this class and implement APIs of this class.The system calls these APIs to connect to the cloud and use the cloud sync service.
+Provides APIs for interacting with the cloud sync service. You need to inherit this class and implement APIs of this class. The system calls these APIs to connect to the cloud and use the cloud sync service.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudExtension-export interface CloudService--><!--Device-cloudExtension-export interface CloudService-End-->
 
@@ -22,9 +24,11 @@ import { cloudExtension } from '@kit.ArkData';
 connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader,which is created by using createAssetLoaderStub. This API uses a promise to return the result.You can use this API to connect to the asset loader.
+Connects to an asset loader by obtaining a RemoteObject instance of AssetLoader, which is created by using createAssetLoaderStub. This API uses a promise to return the result. You can use this API to connect to the asset loader.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectAssetLoader(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
@@ -70,9 +74,11 @@ class MyCloudService implements cloudExtension.CloudService {
 connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>
 ```
 
-Connects to a cloud database by obtaining a RemoteObject instance of CloudDB,which is created by using createCloudDBStub. This API uses a promise to return the result.
+Connects to a cloud database by obtaining a RemoteObject instance of CloudDB, which is created by using createCloudDBStub. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectDB(bundleName: string, database: Database): Promise<rpc.RemoteObject>-End-->
 
@@ -118,9 +124,11 @@ class MyCloudService implements cloudExtension.CloudService {
 connectShareCenter(userId: number, bundleName: string): Promise<rpc.RemoteObject>
 ```
 
-Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter,which is created by using createShareServiceStub. This API uses a promise to return the result.
+Connects to ShareCenter by obtaining a RemoteObject instance of ShareCenter, which is created by using createShareServiceStub. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>--><!--Device-CloudService-connectShareCenter(userId: int, bundleName: string): Promise<rpc.RemoteObject>-End-->
 
@@ -168,7 +176,9 @@ getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>
 
 Obtains brief application information. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>--><!--Device-CloudService-getAppBriefInfo(): Promise<Record<string, AppBriefInfo>>-End-->
 
@@ -180,7 +190,7 @@ Obtains brief application information. This API uses a promise to return the res
 
 | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
 | --- |
-| Promise&lt;[Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
+| Promise&lt;[Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [AppBriefInfo](arkts-arkdata-cloudextension-appbriefinfo-i-sys.md)&gt;&gt; |
 
 ## Examples
 
@@ -212,7 +222,9 @@ getAppSchema(bundleName: string): Promise<Result<AppSchema>>
 
 Obtains the application database schema information. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>--><!--Device-CloudService-getAppSchema(bundleName: string): Promise<Result<AppSchema>>-End-->
 
@@ -263,7 +275,9 @@ getServiceInfo(): Promise<ServiceInfo>
 
 Obtains the server information. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>--><!--Device-CloudService-getServiceInfo(): Promise<ServiceInfo>-End-->
 
@@ -313,7 +327,9 @@ subscribe(
 
 Subscribes to data. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>--><!--Device-CloudService-subscribe(      subInfo: Record<string, Array<Database>>,      expirationTime: long    ): Promise<Result<SubscribeInfo>>-End-->
 
@@ -325,7 +341,7 @@ Subscribes to data. This API uses a promise to return the result.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| subInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes |
+| subInfo | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Array&lt;[Database](arkts-arkdata-cloudextension-database-i-sys.md)&gt;&gt; | Yes |
 | expirationTime | number | Yes |
 
 **Return value:**
@@ -365,7 +381,9 @@ unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<number>
 
 Unsubscribes from data changes in the cloud. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>--><!--Device-CloudService-unsubscribe(unsubscribeInfo: Record<string, Array<string>>): Promise<int>-End-->
 
@@ -377,7 +395,7 @@ Unsubscribes from data changes in the cloud. This API uses a promise to return t
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| unsubscribeInfo | [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Array&lt;string&gt;&gt; | Yes |
+| unsubscribeInfo | [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, Array&lt;string&gt;&gt; | Yes |
 
 **Return value:**
 

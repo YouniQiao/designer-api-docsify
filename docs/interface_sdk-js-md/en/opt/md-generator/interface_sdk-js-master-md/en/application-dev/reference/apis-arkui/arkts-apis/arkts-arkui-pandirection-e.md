@@ -4,6 +4,8 @@ Enumerates the pan directions. Unlike **SwipeDirection**, **PanDirection** has n
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum PanDirection--><!--Device-unnamed-declare enum PanDirection-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ None
 Panning disabled.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Horizontal direction.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanDirection-Horizontal--><!--Device-PanDirection-Horizontal-End-->
@@ -49,6 +55,8 @@ Left
 Leftward.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -66,6 +74,8 @@ Rightward.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanDirection-Right--><!--Device-PanDirection-Right-End-->
@@ -81,6 +91,8 @@ Vertical
 Vertical direction.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -98,6 +110,8 @@ Upward.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanDirection-Up--><!--Device-PanDirection-Up-End-->
@@ -114,6 +128,8 @@ Downward.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PanDirection-Down--><!--Device-PanDirection-Down-End-->
@@ -129,6 +145,8 @@ All
 All directions.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

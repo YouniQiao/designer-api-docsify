@@ -8,9 +8,11 @@ function getTotalSize(path: string): Promise<long>
 
 异步方法获取指定文件系统总字节数，以Promise形式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getTotalSize(path: string): Promise<long>--><!--Device-statfs-function getTotalSize(path: string): Promise<long>-End-->
 
@@ -26,7 +28,7 @@ function getTotalSize(path: string): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise对象，返回总字节数。 |
+| Promise&lt;long&gt; | Promise对象，返回总字节数。 |
 
 **错误码：**
 
@@ -71,9 +73,11 @@ function getTotalSize(path: string, callback: AsyncCallback<long>): void
 
 异步方法获取指定文件系统总字节数，使用callback形式返回结果。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-statfs-function getTotalSize(path: string, callback: AsyncCallback<long>): void--><!--Device-statfs-function getTotalSize(path: string, callback: AsyncCallback<long>): void-End-->
 
@@ -84,7 +88,7 @@ function getTotalSize(path: string, callback: AsyncCallback<long>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 需要查询的文件系统的文件路径。 |
-| callback | ArkTS-Dyn: [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 异步获取总字节数之后的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 异步获取总字节数之后的回调。 |
 
 **错误码：**
 

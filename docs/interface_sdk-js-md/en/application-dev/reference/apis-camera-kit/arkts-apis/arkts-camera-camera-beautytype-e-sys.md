@@ -2,9 +2,11 @@
 
 Enumerates the beauty types.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum BeautyType--><!--Device-camera-enum BeautyType-End-->
 
@@ -20,9 +22,11 @@ AUTO = 0
 
 Automatic.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-AUTO = 0--><!--Device-BeautyType-AUTO = 0-End-->
 
@@ -38,9 +42,11 @@ SKIN_SMOOTH = 1
 
 Skin smoothing.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-SKIN_SMOOTH = 1--><!--Device-BeautyType-SKIN_SMOOTH = 1-End-->
 
@@ -56,9 +62,11 @@ FACE_SLENDER = 2
 
 Face slimming.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-FACE_SLENDER = 2--><!--Device-BeautyType-FACE_SLENDER = 2-End-->
 
@@ -74,9 +82,11 @@ SKIN_TONE = 3
 
 Skin tone perfection.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-SKIN_TONE = 3--><!--Device-BeautyType-SKIN_TONE = 3-End-->
 
@@ -92,9 +102,11 @@ SKIN_TONE_BRIGHT = 4
 
 Skin tone bright beauty type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-SKIN_TONE_BRIGHT = 4--><!--Device-BeautyType-SKIN_TONE_BRIGHT = 4-End-->
 
@@ -110,9 +122,11 @@ EYE_BIG_EYES = 5
 
 Eye big eyes beauty type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-EYE_BIG_EYES = 5--><!--Device-BeautyType-EYE_BIG_EYES = 5-End-->
 
@@ -128,9 +142,11 @@ HAIR_HAIRLINE = 6
 
 Hair hairline beauty type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-HAIR_HAIRLINE = 6--><!--Device-BeautyType-HAIR_HAIRLINE = 6-End-->
 
@@ -146,9 +162,11 @@ FACE_MAKEUP = 7
 
 Face makeup beauty type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-FACE_MAKEUP = 7--><!--Device-BeautyType-FACE_MAKEUP = 7-End-->
 
@@ -164,9 +182,11 @@ HEAD_SHRINK = 8
 
 Head shrink beauty type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-HEAD_SHRINK = 8--><!--Device-BeautyType-HEAD_SHRINK = 8-End-->
 
@@ -182,9 +202,11 @@ NOSE_SLENDER = 9
 
 Nose slender beauty type.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-BeautyType-NOSE_SLENDER = 9--><!--Device-BeautyType-NOSE_SLENDER = 9-End-->
 

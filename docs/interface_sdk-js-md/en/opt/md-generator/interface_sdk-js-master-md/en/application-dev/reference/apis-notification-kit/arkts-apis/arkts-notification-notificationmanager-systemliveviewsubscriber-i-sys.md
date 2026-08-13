@@ -2,7 +2,9 @@
 
 Subscriber of the system live view notification.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-notificationManager-export interface SystemLiveViewSubscriber--><!--Device-notificationManager-export interface SystemLiveViewSubscriber-End-->
 
@@ -24,17 +26,14 @@ onResponse?: (notificationId: number, buttonOptions: ButtonOptions) => void
 
 Callback when the button is touched.
 
-**Since:** 11
+**Type:** (notificationId: number, buttonOptions: ButtonOptions) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void--><!--Device-SystemLiveViewSubscriber-onResponse?: (notificationId: int, buttonOptions: ButtonOptions) => void-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
 **System API:** This is a system API.
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| notificationId | number | Yes |
-| buttonOptions | [ButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-button-buttonoptions-i.md) | Yes |

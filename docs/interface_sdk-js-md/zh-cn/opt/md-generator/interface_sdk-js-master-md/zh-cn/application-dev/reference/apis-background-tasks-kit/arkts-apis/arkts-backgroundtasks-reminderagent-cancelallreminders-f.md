@@ -12,7 +12,7 @@ function cancelAllReminders(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [cancelAllReminders](reminderAgentManager.cancelAllReminders)
+**替代接口：** cancelAllReminders
 
 <!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void--><!--Device-reminderAgent-function cancelAllReminders(callback: AsyncCallback<void>): void-End-->
 
@@ -48,7 +48,7 @@ function cancelAllReminders(): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [cancelAllReminders](reminderAgentManager.cancelAllReminders)
+**替代接口：** cancelAllReminders
 
 <!--Device-reminderAgent-function cancelAllReminders(): Promise<void>--><!--Device-reminderAgent-function cancelAllReminders(): Promise<void>-End-->
 

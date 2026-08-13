@@ -4,6 +4,8 @@ Define html web message port.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ close(): void
 不需要发送消息时关闭该消息端口。在使用close前，请先使用createWebMessagePorts创建消息端口。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -34,6 +38,8 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void--><!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void-End-->
@@ -50,8 +56,8 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) |
 
 ## onMessageEventExt
 
@@ -62,6 +68,8 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#WebMessageType)类型消息。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -79,8 +87,8 @@ onMessageEventExt(callback: (result: WebMessageExt) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) |
 
 ## postMessageEvent
 
@@ -91,6 +99,8 @@ postMessageEvent(message: WebMessage): void
 发送WebMessage类型消息给HTML5侧，必须先调用onMessageEvent，否则会发送失败。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -108,8 +118,8 @@ postMessageEvent(message: WebMessage): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) |
 
 ## postMessageEventExt
 
@@ -120,6 +130,8 @@ postMessageEventExt(message: WebMessageExt): void
 发送WebMessageType类型消息给HTML5侧，必须先调用onMessageEventExt，否则会发送失败。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -137,8 +149,8 @@ postMessageEventExt(message: WebMessageExt): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [17100010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) |
 
 ## isExtentionType
 
@@ -151,6 +163,8 @@ isExtentionType?: boolean
 **类型：** boolean
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

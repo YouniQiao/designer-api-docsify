@@ -6,7 +6,9 @@ export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo
 
 Defines the preinstalled application information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-bundleManager-export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo--><!--Device-bundleManager-export type PreinstalledApplicationInfo = _PreinstalledApplicationInfo-End-->
 

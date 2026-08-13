@@ -4,6 +4,8 @@ Defines the options used in listFileExt().
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface ListFileExtOptions--><!--Device-unnamed-export interface ListFileExtOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -20,11 +22,13 @@ import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventList
 fileFilter?: FileFilter
 ```
 
-File name filtering interface. This parameter is optional.Filtering rules can be defined based on file names.
+File name filtering interface. This parameter is optional. Filtering rules can be defined based on file names.
 
 **Type:** [FileFilter](arkts-corefile-file-fs-filefilter-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,11 +42,13 @@ File name filtering interface. This parameter is optional.Filtering rules can be
 listNum?: number
 ```
 
-Number of file names to list. This parameter is optional. The default value is 0, which means to list all files.The value should be an integer.
+Number of file names to list. This parameter is optional. The default value is 0, which means to list all files. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,11 +62,13 @@ Number of file names to list. This parameter is optional. The default value is 0
 recursion?: boolean
 ```
 
-Whether to list all files in the subdirectories recursively. This parameter is optional.The default value is false. If recursion is false, the names of files and directories that meet the filtering requirements in the current directory are returned. If recursion is true, relative paths (starting with"/")of all files that meet the specified conditions in the current directory are returned.
+Whether to list all files in the subdirectories recursively. This parameter is optional. The default value is false. If recursion is false, the names of files and directories that meet the filtering requirements in the current directory are returned. If recursion is true, relative paths (starting with"/") of all files that meet the specified conditions in the current directory are returned.
 
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

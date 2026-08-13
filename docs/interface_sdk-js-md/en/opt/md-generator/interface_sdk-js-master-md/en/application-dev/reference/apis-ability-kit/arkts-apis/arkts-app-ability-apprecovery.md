@@ -2,7 +2,9 @@
 
 The appRecovery module provides APIs for recovering faulty applications.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace appRecovery--><!--Device-unnamed-declare namespace appRecovery-End-->
 
@@ -20,11 +22,11 @@ import { appRecovery } from '@kit.AbilityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableapprecovery) |
-| [restartApp](arkts-ability-apprecovery-restartapp-f.md#restartapp) |
-| [saveAppState](arkts-ability-apprecovery-saveappstate-f.md#saveappstate) |
-| [saveAppState](arkts-ability-apprecovery-saveappstate-f.md#saveappstate-1) |
-| [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setrestartwant) |
+| [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md#enableAppRecovery) |
+| [restartApp](arkts-ability-apprecovery-restartapp-f.md#restartApp) |
+| [saveAppState](arkts-ability-apprecovery-saveappstate-f.md#saveAppState) |
+| [saveAppState](arkts-ability-apprecovery-saveappstate-f.md#saveAppState) |
+| [setRestartWant](arkts-ability-apprecovery-setrestartwant-f.md#setRestartWant) |
 
 ### Enums
 

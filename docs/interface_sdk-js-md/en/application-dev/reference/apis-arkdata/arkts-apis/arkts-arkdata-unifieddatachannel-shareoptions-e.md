@@ -2,9 +2,11 @@
 
 Enumerates the options for using **UnifiedData** in a device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unifiedDataChannel-enum ShareOptions--><!--Device-unifiedDataChannel-enum ShareOptions-End-->
 
@@ -18,13 +20,15 @@ IN_APP = 0
 
 **UnifiedData** can be used only in the same application of a device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ShareOptions-IN_APP = 0--><!--Device-ShareOptions-IN_APP = 0-End-->
 
@@ -38,13 +42,15 @@ CROSS_APP = 1
 
 **UnifiedData** can be used across applications of a device.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ShareOptions-CROSS_APP = 1--><!--Device-ShareOptions-CROSS_APP = 1-End-->
 

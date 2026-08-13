@@ -4,6 +4,8 @@ Data bits in serial port communication.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-serial-enum DataBits--><!--Device-serial-enum DataBits-End-->
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -17,6 +19,8 @@ FIVE = 5
 Five data bits.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Six data bits.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataBits-SIX = 6--><!--Device-DataBits-SIX = 6-End-->
@@ -50,6 +56,8 @@ SEVEN = 7
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataBits-SEVEN = 7--><!--Device-DataBits-SEVEN = 7-End-->
@@ -65,6 +73,8 @@ EIGHT = 8
 Eight data bits.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

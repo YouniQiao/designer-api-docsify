@@ -8,7 +8,9 @@ Defines the TapGestureHandler options.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export interface TapGestureHandlerOptions extends BaseHandlerOptions--><!--Device-unnamed-export interface TapGestureHandlerOptions extends BaseHandlerOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface TapGestureHandlerOptions--><!--Device-unnamed-export interface TapGestureHandlerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,13 +20,15 @@ Defines the TapGestureHandler options.
 count?: int
 ```
 
-Indicates the number of consecutive clicks recognized. If the value is less than 1, the default value is used.The default value is 1.
+Indicates the number of consecutive clicks recognized. If the value is less than 1, the default value is used. The default value is 1.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ The limited move distance of click. If the value is less than 0, the default val
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TapGestureHandlerOptions-distanceThreshold?: double--><!--Device-TapGestureHandlerOptions-distanceThreshold?: double-End-->
@@ -60,13 +66,15 @@ The limited move distance of click. If the value is less than 0, the default val
 fingers?: int
 ```
 
-Indicates the hand index that triggers the click. If the value is less than 1, the default value is used.The default value is 1.
+Indicates the hand index that triggers the click. If the value is less than 1, the default value is used. The default value is 1.
 
 **Type:** int
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

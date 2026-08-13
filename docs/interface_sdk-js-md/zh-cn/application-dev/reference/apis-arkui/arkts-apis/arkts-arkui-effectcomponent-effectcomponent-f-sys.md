@@ -3,6 +3,7 @@
 ## EffectComponent
 
 ```TypeScript
+@ComponentBuilder
 export declare function EffectComponent(
     options?: EffectComponentOptions,
     content_?: CustomBuilder,
@@ -15,9 +16,11 @@ Defines EffectComponent Component
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-export declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function EffectComponent(    options?: EffectComponentOptions,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,18 +31,19 @@ Defines EffectComponent Component
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [EffectComponentOptions](arkts-arkui-effectcomponent-effectcomponentoptions-i-sys.md) | 否 | The options to create an EffectComponent. |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | Subcomponents of EffectComponent |
+| content_ | CustomBuilder | 否 | Subcomponents of EffectComponent |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
+| EffectComponentAttribute |  |
 
 
 ## EffectComponent
 
 ```TypeScript
+@Builder
 export declare function EffectComponent(
     style_: CustomBuilderT<EffectComponentAttribute>,
     content_?: CustomBuilder,
@@ -52,11 +56,11 @@ Defines EffectComponent
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为26.0.0。
 
-**装饰器类型：** @Builder
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-unnamed-export declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-export declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute--><!--Device-unnamed-@Builderexport declare function EffectComponent(    style_: CustomBuilderT<EffectComponentAttribute>,    content_?: CustomBuilder,): EffectComponentAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,12 +70,12 @@ Defines EffectComponent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| style_ | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md)&gt; | 是 | EffectComponent attribute instance |
-| content_ | [CustomBuilder](arkts-arkui-custombuilder-t.md) | 否 | container |
+| style_ | CustomBuilderT&lt;EffectComponentAttribute&gt; | 是 | EffectComponent attribute instance |
+| content_ | CustomBuilder | 否 | container |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [EffectComponentAttribute](arkts-arkui-effectcomponent-effectcomponentattribute-i-sys.md) |  |
+| EffectComponentAttribute |  |
 

@@ -2,9 +2,11 @@
 
 Define html web message port.
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface WebMessagePort--><!--Device-webview-interface WebMessagePort-End-->
 
@@ -16,11 +18,15 @@ Define html web message port.
 close(): void
 ```
 
-Close port.
+不需要发送消息时关闭该消息端口。在使用close前，请先使用createWebMessagePorts创建消息端口。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-close(): void--><!--Device-WebMessagePort-close(): void-End-->
 
@@ -32,11 +38,15 @@ Close port.
 onMessageEvent(callback: (result: WebMessage) => void): void
 ```
 
-Receive message from other port.
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的WebMessage类型消息。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void--><!--Device-WebMessagePort-onMessageEvent(callback: (result: WebMessage) => void): void-End-->
 
@@ -46,14 +56,14 @@ Receive message from other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (result: WebMessage) =&gt; void | 是 | Callback function for receiving messages. |
+| callback | (result: WebMessage) =&gt; void | 是 | 用于接收消息的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
 
 ## onMessageEventExt
 
@@ -61,11 +71,15 @@ Receive message from other port.
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-Receive message from other port.
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md#WebMessageType)类型消息。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void--><!--Device-WebMessagePort-onMessageEventExt(callback: (result: WebMessageExt) => void): void-End-->
 
@@ -75,14 +89,14 @@ Receive message from other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (result: WebMessageExt) =&gt; void | 是 | Callback function for receiving messages. |
+| callback | (result: WebMessageExt) =&gt; void | 是 | 接收到的消息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100006](../errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
 
 ## postMessageEvent
 
@@ -90,11 +104,15 @@ Receive message from other port.
 postMessageEvent(message: WebMessage): void
 ```
 
-Post a message to other port.
+发送WebMessage类型消息给HTML5侧，必须先调用onMessageEvent，否则会发送失败。
 
-**起始版本：** 23
+**起始版本：** 9
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void--><!--Device-WebMessagePort-postMessageEvent(message: WebMessage): void-End-->
 
@@ -104,14 +122,14 @@ Post a message to other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | 是 | Message to send. |
+| message | [WebMessage](../../apis-na/arkts-apis/arkts-na-webview-webmessage-t.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
 
 ## postMessageEventExt
 
@@ -119,11 +137,15 @@ Post a message to other port.
 postMessageEventExt(message: WebMessageExt): void
 ```
 
-Post a message to other port.
+发送WebMessageType类型消息给HTML5侧，必须先调用onMessageEventExt，否则会发送失败。
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void--><!--Device-WebMessagePort-postMessageEventExt(message: WebMessageExt): void-End-->
 
@@ -133,14 +155,14 @@ Post a message to other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | 是 | Message to send. |
+| message | [WebMessageExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageext-c.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
-| [17100010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [17100010](../errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
 
 ## isExtentionType
 
@@ -148,13 +170,17 @@ Post a message to other port.
 isExtentionType?: boolean
 ```
 
-The flag indicates whether more formats are supported than string and array buffers.
+创建WebMessagePort时是否指定使用扩展增强接口（如 postMessageEventExt 和 onMessageEventExt）。
 
 **类型：** boolean
 
-**起始版本：** 23
+**起始版本：** 10
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-WebMessagePort-isExtentionType?: boolean--><!--Device-WebMessagePort-isExtentionType?: boolean-End-->
 

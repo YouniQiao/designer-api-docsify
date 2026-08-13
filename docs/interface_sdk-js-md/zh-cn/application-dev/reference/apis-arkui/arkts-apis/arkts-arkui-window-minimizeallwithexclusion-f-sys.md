@@ -10,7 +10,9 @@ function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promis
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -24,8 +26,8 @@ function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | 是 | 屏幕ID，该参数仅支持整数输入，输入浮点数会向下取整。 |
-| excludeWindowId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 窗口ID。可通过 [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接口获取到相关窗口属性，其中属性id即对应为窗口ID。窗口ID小于等于0 ，或窗口ID为null或者undefined时，会抛出[401错误码](../../../reference/errorcode-universal.md#401-参数检查失败)；窗口ID大于0但是不存在会抛出13000 02错误码；窗口ID大于0且窗口存在但是不在该屏幕，最小化指定屏幕上的所有主窗口。该参数仅支持整数输入，输入浮点数会向下取整。 |
+| displayId | long | 是 | 屏幕ID，该参数仅支持整数输入，输入浮点数会向下取整。 |
+| excludeWindowId | int | 是 | 窗口ID。可通过 [getWindowProperties](arkts-arkui-window-window-i.md#getWindowProperties)接口获取到相关窗口属性，其中属性id即对应为窗口ID。窗口ID小于等于0 ，或窗口ID为null或者undefined时，会抛出[401错误码](../../errorcode-universal.md#401-参数检查失败)；窗口ID大于0但是不存在会抛出13000 02错误码；窗口ID大于0且窗口存在但是不在该屏幕，最小化指定屏幕上的所有主窗口。该参数仅支持整数输入，输入浮点数会向下取整。 |
 
 **返回值：**
 
@@ -37,9 +39,9 @@ function minimizeAllWithExclusion(displayId: long, excludeWindowId: int): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [1300002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Window is nullptr; 2. Failed to find specified window by id. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: 1. Window is nullptr; 2. Failed to find specified window by id. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A nonsystem application calls a system API. |
 
 ## 示例
 

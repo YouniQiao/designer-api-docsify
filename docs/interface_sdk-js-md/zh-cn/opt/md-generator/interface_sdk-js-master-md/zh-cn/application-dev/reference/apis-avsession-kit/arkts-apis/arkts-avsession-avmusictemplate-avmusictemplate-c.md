@@ -1,12 +1,10 @@
 # AVMusicTemplate
 
-调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取方法。随后，同步数据给模板控制方，以完成后续操作。
-
-> **说明：**
-> 
-> - 本模块仅适用于API version 23及以上版本的Car设备。
+调用[avMusicTemplate.createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createAVMusicTemplate)获取实例后，可获取其ID，启动音频模板界面，并配置数据获取 方法。随后，同步数据给模板控制方，以完成后续操作。 > **说明：** > > - 本模块仅适用于API version 23及以上版本的Car设备。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avMusicTemplate-class AVMusicTemplate--><!--Device-avMusicTemplate-class AVMusicTemplate-End-->
 
@@ -21,6 +19,8 @@ destroy(): Promise<void>
 销毁音频模板实例。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +38,7 @@ destroy(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## offClearSearchHistory
 
@@ -49,6 +49,8 @@ offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 注销清除搜索历史的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -66,9 +68,9 @@ offClearSearchHistory(callback?: ClearSearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offDownloadMediaEntity
 
@@ -79,6 +81,8 @@ offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 注销下载媒体实体事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -96,9 +100,9 @@ offDownloadMediaEntity(callback?: DownloadMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offExecuteAction
 
@@ -109,6 +113,8 @@ offExecuteAction(callback?: ExecuteActionEvent): void
 注销执行操作事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -126,9 +132,9 @@ offExecuteAction(callback?: ExecuteActionEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offFavoriteMediaEntity
 
@@ -139,6 +145,8 @@ offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 注销收藏媒体实体事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -156,9 +164,9 @@ offFavoriteMediaEntity(callback?: FavoriteMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offHandleMemberPurchase
 
@@ -169,6 +177,8 @@ offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 注销处理购买会员事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -186,9 +196,9 @@ offHandleMemberPurchase(callback?: HandleMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offLogin
 
@@ -199,6 +209,8 @@ offLogin(callback?: LoginEvent): void
 注销登录事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -216,9 +228,9 @@ offLogin(callback?: LoginEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offPlayForSearch
 
@@ -229,6 +241,8 @@ offPlayForSearch(callback?: PlayForSearchEvent): void
 注销搜播事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -246,9 +260,9 @@ offPlayForSearch(callback?: PlayForSearchEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offPlayMediaEntity
 
@@ -259,6 +273,8 @@ offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 注销播放媒体实体事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -276,9 +292,9 @@ offPlayMediaEntity(callback?: PlayMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offProblemAndAdvice
 
@@ -289,6 +305,8 @@ offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 注销问题与建议事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -306,9 +324,9 @@ offProblemAndAdvice(callback?: ProblemAndAdviceEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCompilation
 
@@ -319,6 +337,8 @@ offQueryCompilation(callback?: QueryCompilationEvent): void
 注销查询合集的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -336,9 +356,9 @@ offQueryCompilation(callback?: QueryCompilationEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCompilationByKeyword
 
@@ -349,6 +369,8 @@ offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 注销按关键字查询合集的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -366,9 +388,9 @@ offQueryCompilationByKeyword(callback?: QueryCompilationByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCurrentSingle
 
@@ -379,6 +401,8 @@ offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 注销查询当前单曲的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -396,9 +420,9 @@ offQueryCurrentSingle(callback?: QueryCurrentSingleEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryCustomContent
 
@@ -409,6 +433,8 @@ offQueryCustomContent(callback?: QueryCustomContentEvent): void
 注销查询自定义内容事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -426,9 +452,9 @@ offQueryCustomContent(callback?: QueryCustomContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryHotWords
 
@@ -439,6 +465,8 @@ offQueryHotWords(callback?: QueryHotWordsEvent): void
 注销查询热词的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -456,9 +484,9 @@ offQueryHotWords(callback?: QueryHotWordsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMainTabs
 
@@ -469,6 +497,8 @@ offQueryMainTabs(callback?: QueryMainTabsEvent): void
 注销查询主标签事件监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -486,9 +516,9 @@ offQueryMainTabs(callback?: QueryMainTabsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMediaEntity
 
@@ -499,6 +529,8 @@ offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 注销查询媒体实体监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -516,9 +548,9 @@ offQueryMediaEntity(callback?: QueryMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMediaEntityByKeyword
 
@@ -529,6 +561,8 @@ offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 注销按关键字查询媒体实体的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -546,9 +580,9 @@ offQueryMediaEntityByKeyword(callback?: QueryMediaEntityByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMediaTabContent
 
@@ -559,6 +593,8 @@ offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 取消查询媒体标签内容监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -576,9 +612,9 @@ offQueryMediaTabContent(callback?: QueryMediaTabContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryMemberPurchase
 
@@ -589,6 +625,8 @@ offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 注销查询购买会员事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -606,9 +644,9 @@ offQueryMemberPurchase(callback?: QueryMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryPlaylist
 
@@ -619,6 +657,8 @@ offQueryPlaylist(callback?: QueryPlaylistEvent): void
 注销查询播放列表的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -636,9 +676,9 @@ offQueryPlaylist(callback?: QueryPlaylistEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQueryRecommendMediaEntityList
 
@@ -649,6 +689,8 @@ offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent):
 注销查询推荐媒体列表的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -666,9 +708,9 @@ offQueryRecommendMediaEntityList(callback?: QueryRecommendMediaEntityListEvent):
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offQuerySearchHistory
 
@@ -679,6 +721,8 @@ offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 注销查询搜索历史的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -696,9 +740,9 @@ offQuerySearchHistory(callback?: QuerySearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offRequestDialogInfo
 
@@ -709,6 +753,8 @@ offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 注销请求对话框信息的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -726,9 +772,9 @@ offRequestDialogInfo(callback?: RequestDialogInfoEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## offSettingsChange
 
@@ -739,6 +785,8 @@ offSettingsChange(callback?: SettingsChangeEvent): void
 注销设置改变事件的监听。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -756,9 +804,9 @@ offSettingsChange(callback?: SettingsChangeEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onClearSearchHistory
 
@@ -769,6 +817,8 @@ onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 注册清除搜索历史的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -786,9 +836,9 @@ onClearSearchHistory(callback: ClearSearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onDownloadMediaEntity
 
@@ -799,6 +849,8 @@ onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 注册下载媒体实体事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -816,9 +868,9 @@ onDownloadMediaEntity(callback: DownloadMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onExecuteAction
 
@@ -829,6 +881,8 @@ onExecuteAction(callback: ExecuteActionEvent): void
 注册执行操作事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -846,9 +900,9 @@ onExecuteAction(callback: ExecuteActionEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onFavoriteMediaEntity
 
@@ -859,6 +913,8 @@ onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 注册收藏媒体实体事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -876,9 +932,9 @@ onFavoriteMediaEntity(callback: FavoriteMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onHandleMemberPurchase
 
@@ -889,6 +945,8 @@ onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 注册处理购买会员事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -906,9 +964,9 @@ onHandleMemberPurchase(callback: HandleMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onLogin
 
@@ -919,6 +977,8 @@ onLogin(callback: LoginEvent): void
 注册登录事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -936,9 +996,9 @@ onLogin(callback: LoginEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onPlayForSearch
 
@@ -949,6 +1009,8 @@ onPlayForSearch(callback: PlayForSearchEvent): void
 注册搜播事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -966,9 +1028,9 @@ onPlayForSearch(callback: PlayForSearchEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onPlayMediaEntity
 
@@ -979,6 +1041,8 @@ onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 注册播放媒体实体事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -996,9 +1060,9 @@ onPlayMediaEntity(callback: PlayMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onProblemAndAdvice
 
@@ -1009,6 +1073,8 @@ onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 注册问题与建议事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1026,9 +1092,9 @@ onProblemAndAdvice(callback: ProblemAndAdviceEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCompilation
 
@@ -1039,6 +1105,8 @@ onQueryCompilation(callback: QueryCompilationEvent): void
 注册查询合集的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1056,9 +1124,9 @@ onQueryCompilation(callback: QueryCompilationEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCompilationByKeyword
 
@@ -1069,6 +1137,8 @@ onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 注册按关键字查询合集的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1086,9 +1156,9 @@ onQueryCompilationByKeyword(callback: QueryCompilationByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCurrentSingle
 
@@ -1099,6 +1169,8 @@ onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 注册查询当前单曲的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1116,9 +1188,9 @@ onQueryCurrentSingle(callback: QueryCurrentSingleEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryCustomContent
 
@@ -1129,6 +1201,8 @@ onQueryCustomContent(callback: QueryCustomContentEvent): void
 注册查询自定义内容事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1146,9 +1220,9 @@ onQueryCustomContent(callback: QueryCustomContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryHotWords
 
@@ -1159,6 +1233,8 @@ onQueryHotWords(callback: QueryHotWordsEvent): void
 注册查询热词的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1176,9 +1252,9 @@ onQueryHotWords(callback: QueryHotWordsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMainTabs
 
@@ -1189,6 +1265,8 @@ onQueryMainTabs(callback: QueryMainTabsEvent): void
 注册查询主标签的事件监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1206,9 +1284,9 @@ onQueryMainTabs(callback: QueryMainTabsEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMediaEntity
 
@@ -1219,6 +1297,8 @@ onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 注册查询媒体实体监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1236,9 +1316,9 @@ onQueryMediaEntity(callback: QueryMediaEntityEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMediaEntityByKeyword
 
@@ -1249,6 +1329,8 @@ onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 注册按关键字查询媒体实体的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1266,9 +1348,9 @@ onQueryMediaEntityByKeyword(callback: QueryMediaEntityByKeywordEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMediaTabContent
 
@@ -1279,6 +1361,8 @@ onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 注册查询媒体标签内容事件监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1296,9 +1380,9 @@ onQueryMediaTabContent(callback: QueryMediaTabContentEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryMemberPurchase
 
@@ -1309,6 +1393,8 @@ onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 注册查询购买会员事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1326,9 +1412,9 @@ onQueryMemberPurchase(callback: QueryMemberPurchaseEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryPlaylist
 
@@ -1339,6 +1425,8 @@ onQueryPlaylist(callback: QueryPlaylistEvent): void
 注册查询播放列表的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1356,9 +1444,9 @@ onQueryPlaylist(callback: QueryPlaylistEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQueryRecommendMediaEntityList
 
@@ -1369,6 +1457,8 @@ onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): v
 注册查询推荐媒体列表的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1386,9 +1476,9 @@ onQueryRecommendMediaEntityList(callback: QueryRecommendMediaEntityListEvent): v
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onQuerySearchHistory
 
@@ -1399,6 +1489,8 @@ onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 注册查询搜索历史的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1416,9 +1508,9 @@ onQuerySearchHistory(callback: QuerySearchHistoryEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onRequestDialogInfo
 
@@ -1429,6 +1521,8 @@ onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 注册请求对话框信息的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1446,9 +1540,9 @@ onRequestDialogInfo(callback: RequestDialogInfoEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## onSettingsChange
 
@@ -1459,6 +1553,8 @@ onSettingsChange(callback: SettingsChangeEvent): void
 注册设置改变事件的监听。使用callback异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1476,9 +1572,9 @@ onSettingsChange(callback: SettingsChangeEvent): void
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000012-音频模板错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000012](../errorcode-avmusictemplate.md#35000012-音频模板错误) |
 
 ## reportExecuteAction
 
@@ -1489,6 +1585,8 @@ reportExecuteAction(actionType: string, params: string): Promise<void>
 向音频模板控制方同步执行操作信息。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1513,9 +1611,9 @@ reportExecuteAction(actionType: string, params: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setCurrentSingle
 
@@ -1526,6 +1624,8 @@ setCurrentSingle(single: Single): Promise<void>
 向音频模板控制方同步当前单曲。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1549,9 +1649,9 @@ setCurrentSingle(single: Single): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setCustomElements
 
@@ -1564,6 +1664,8 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AVMusicTemplate-setCustomElements(actionType: ActionType, customType: CustomType,      customElement: CustomElement): Promise<void>--><!--Device-AVMusicTemplate-setCustomElements(actionType: ActionType, customType: CustomType,      customElement: CustomElement): Promise<void>-End-->
@@ -1574,7 +1676,7 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| actionType | [ActionType](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission-actiontype-e.md) | 是 |
+| actionType | [ActionType](arkts-avsession-avmusictemplate-actiontype-t.md) | 是 |
 | customType | [CustomType](arkts-avsession-avmusictemplate-customtype-t.md) | 是 |
 | customElement | [CustomElement](arkts-avsession-avmusictemplate-customelement-i.md) | 是 |
 
@@ -1588,9 +1690,9 @@ setCustomElements(actionType: ActionType, customType: CustomType,
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setDialogCommand
 
@@ -1601,6 +1703,8 @@ setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 向音频模板控制方同步对话框命令。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1625,9 +1729,9 @@ setDialogCommand(type: DialogControlType, dialogInfo: DialogInfo): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setDownloadMediaEntityStatus
 
@@ -1638,6 +1742,8 @@ setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 向音频模板控制方同步单曲下载状态信息。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1661,9 +1767,9 @@ setDownloadMediaEntityStatus(single: MediaEntity): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setExtensionAbility
 
@@ -1674,6 +1780,8 @@ setExtensionAbility(want: WantAgent): Promise<void>
 向音频模板控制方同步用于被拉起的Ability。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1697,9 +1805,9 @@ setExtensionAbility(want: WantAgent): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setMediaEntities
 
@@ -1710,6 +1818,8 @@ setMediaEntities(entities: MediaEntity[]): Promise<void>
 向音频模板控制方同步媒体资源变更信息。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1733,9 +1843,9 @@ setMediaEntities(entities: MediaEntity[]): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setPlaylist
 
@@ -1746,6 +1856,8 @@ setPlaylist(playlist: PageMediaEntity): Promise<void>
 向音频模板控制方同步播放列表。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1769,9 +1881,9 @@ setPlaylist(playlist: PageMediaEntity): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setSettings
 
@@ -1782,6 +1894,8 @@ setSettings(settingItems: SettingItem[]): Promise<void>
 向音频模板控制方同步设置信息。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1805,9 +1919,9 @@ setSettings(settingItems: SettingItem[]): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setTabContent
 
@@ -1818,6 +1932,8 @@ setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 向音频模板控制方同步标签页内容信息。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1842,9 +1958,9 @@ setTabContent(tabId: string, tabContent: MediaTabContent): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## setUserInfo
 
@@ -1855,6 +1971,8 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 向音频模板控制方同步用户信息。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1878,9 +1996,9 @@ setUserInfo(userInfo: UserInfo): Promise<void>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000011](../errorcode-avmusictemplate.md#35000011-数据写入错误数据无效) |
 
 ## startTemplate
 
@@ -1891,6 +2009,8 @@ startTemplate(): Promise<OperResult>
 启动音频模板界面。使用Promise异步回调。
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1908,7 +2028,7 @@ startTemplate(): Promise<OperResult>
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
 
 ## sessionId
 
@@ -1921,6 +2041,8 @@ sessionId: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1939,6 +2061,8 @@ sessionTag: string
 **类型：** string
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

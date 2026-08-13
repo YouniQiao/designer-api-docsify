@@ -12,7 +12,7 @@ function removeAll(bundle: BundleOption, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ function removeAll(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -71,7 +71,7 @@ function removeAll(userId: number, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -101,7 +101,7 @@ function removeAll(userId: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -136,7 +136,7 @@ function removeAll(bundle?: BundleOption): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [removeAll](ohos.notificationSubscribe/notificationSubscribe#removeAll)
+**替代接口：** [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeAll（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

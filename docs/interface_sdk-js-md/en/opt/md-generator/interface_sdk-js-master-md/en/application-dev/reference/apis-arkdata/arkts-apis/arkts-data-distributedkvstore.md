@@ -1,18 +1,10 @@
 # @ohos.data.distributedKVStore
 
-The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices.The **distributedKVStore** module provides the following functionalities:
+The **distributedKVStore** module implements collaboration between databases for different devices that form a Super Device. You can use the APIs provided by this module to save application data to a distributed key-value (KV) store and perform operations, such as adding, deleting, modifying, and querying data, and synchronizing data across devices. The **distributedKVStore** module provides the following functionalities: - [KVManager](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md#KVManagerConfig): provides a **KVManager** instance to obtain KV store information. - [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#KVStoreResultSet): provides APIs for accessing the results obtained from a KV store. - [Query](arkts-arkdata-distributedkvstore-query-c.md#Query): provides APIs for setting predicates for data query. - [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore): provides APIs for querying data in single KV stores and synchronizing data across devices. The single KV stores manage data without distinguishing devices. - [DeviceKVStore](arkts-arkdata-distributedkvstore-devicekvstore-i.md#DeviceKVStore): provides APIs for querying data in device KV stores and synchronizing data across devices. This class inherits from [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore). The device KV stores manage data by device.
 
-- [KVManager](arkts-arkdata-distributedkvstore-kvmanagerconfig-i.md#KVManagerConfig): provides a **KVManager** instance to obtain KV store  
-information.  
-- [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md#KVStoreResultSet): provides APIs for accessing the results obtained  
-from a KV store.  
-- [Query](arkts-arkdata-distributedkvstore-query-c.md#Query): provides APIs for setting predicates for data query.  
-- [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore): provides APIs for querying data in single KV stores and  
-synchronizing data across devices. The single KV stores manage data without distinguishing devices.  
-- [DeviceKVStore](arkts-arkdata-distributedkvstore-devicekvstore-i.md#DeviceKVStore): provides APIs for querying data in device KV stores and  
-synchronizing data across devices. This class inherits from [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md#SingleKVStore).The device KV stores manage data by device.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +24,7 @@ import { distributedKVStore } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager) |
+| [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createKVManager) |
 
 ### Classes
 
@@ -71,7 +63,8 @@ import { distributedKVStore } from '@kit.ArkData';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md) | Enumerates the distributed KV store types.  \| Name \| Value\| Description \|  \| -------------------- \| - \| ------------------------------------------------------------ \|  \| DEVICE_COLLABORATION \| 0 \| Device KV store. & lt;br & gt;The device KV store manages data by device, which eliminates conflicts. Data can be queried by device. & lt;br & gt;**System capability**:SystemCapability.DistributedDataManager.KVStore.DistributedKVStore\ |  \| SINGLE_VERSION \| 1 \| Single KV store. & lt;br & gt;The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten. & lt;br & gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.Core\ |
+| [Constants](arkts-arkdata-distributedkvstore-constants-e.md) |
+| [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md) | Enumerates the distributed KV store types. \| Name \| Value\| Description \| \| -------------------- \| - \| ------------------------------------------------------------ \| \| DEVICE_COLLABORATION \| 0 \| Device KV store. & lt;br & gt;The device KV store manages data by device, which eliminates conflicts. Data can be queried by device. & lt;br & gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.DistributedKVStore\ | \| SINGLE_VERSION \| 1 \| Single KV store. & lt;br & gt;The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten. & lt;br & gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.Core\ |
 | [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md) |
 | [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md) |
 | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) |

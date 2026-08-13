@@ -16,6 +16,8 @@ Obtains the intent information on the current device based on the given intent f
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
@@ -42,10 +44,10 @@ Obtains the intent information on the current device based on the given intent f
 
 | Error Code ID |
 | --- |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [16000006](../errorcode-ability.md#16000006-crossuser-operation-is-not-allowed) |
+| [16000050](../errorcode-ability.md#16000050-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

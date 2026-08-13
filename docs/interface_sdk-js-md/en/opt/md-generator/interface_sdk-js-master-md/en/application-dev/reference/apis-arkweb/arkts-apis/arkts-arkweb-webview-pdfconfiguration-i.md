@@ -1,12 +1,10 @@
 # PdfConfiguration
 
-Specifies the input parameters of **createPdf()**.
-
-> **NOTE：**
-> 
-> The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
+Specifies the input parameters of **createPdf()**. > **NOTE：**> > The number of pixels is calculated as follows: Number of pixels = 96 x Number of inches.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-webview-interface PdfConfiguration--><!--Device-webview-interface PdfConfiguration-End-->
 
@@ -24,15 +22,13 @@ import { webview } from '@kit.ArkWeb';
 height: number
 ```
 
-Page height,
-
-in inches.
-
-Recommended value: 11.69 inches of A4 paper height.
+Page height, in inches. Recommended value: 11.69 inches of A4 paper height.
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -46,15 +42,13 @@ Recommended value: 11.69 inches of A4 paper height.
 marginBottom: number
 ```
 
-Bottom margin.
-
-The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**.
-
-Unit: inch.
+Bottom margin. The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -68,15 +62,13 @@ Unit: inch.
 marginLeft: number
 ```
 
-Left margin.
-
-The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**.
-
-Unit: inch.
+Left margin. The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -90,15 +82,13 @@ Unit: inch.
 marginRight: number
 ```
 
-Right margin.
-
-The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**.
-
-Unit: inch.
+Right margin. The value range is [0.0, half of the page width). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -112,15 +102,13 @@ Unit: inch.
 marginTop: number
 ```
 
-Top margin.
-
-The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**.
-
-Unit: inch.
+Top margin. The value range is [0.0, half of the page height). If the value is not within the value range, set it to **0.0**. Unit: inch.
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -134,15 +122,13 @@ Unit: inch.
 scale?: number
 ```
 
-Scale multiple.
-
-The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2.0, set it to **2.0**.
-
-Default value: **1.0**
+Scale multiple. The value range is [0.0, 2.0]. If the value is less than 0.0, set it to **0.0**. If the value is greater than 2.0, set it to **2.0**. Default value: **1.0**
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -156,13 +142,13 @@ Default value: **1.0**
 shouldPrintBackground?: boolean
 ```
 
-Whether to print the background color. The value **true** means to print the background color, and **false** means the opposite.
-
-Default value: **false**.
+Whether to print the background color. The value **true** means to print the background color, and **false** means the opposite. Default value: **false**.
 
 **Type:** boolean
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -176,15 +162,13 @@ Default value: **false**.
 width: number
 ```
 
-Page width,
-
-in inches.
-
-Recommended value: 8.27 inches of A4 paper width.
+Page width, in inches. Recommended value: 8.27 inches of A4 paper width.
 
 **Type:** number
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class AdvancedMeasureFormat--><!--Device-i18n-export class AdvancedMeasureFormat-End-->
 
@@ -20,7 +22,9 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,6 +41,17 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 | numberFormat | Intl.NumberFormat | 是 | 用于格式化数字的对象。 |
 | options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | 否 |  |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh-Hans-CN', { style: 'unit', unit: 'fahrenheit' });
+let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasureFormat(numFmt, {
+  unitUsage: i18n.UnitUsage.TEMPERATURE_PERSON
+});
+```
+
 ## format
 
 ```TypeScript
@@ -47,7 +62,9 @@ format(num: double): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,4 +85,16 @@ format(num: double): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 格式化后的文本。 |
+
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let numFmt: Intl.NumberFormat = new Intl.NumberFormat('zh-Hans-CN', { style: 'unit', unit: 'fahrenheit' });
+let advancedMeasureFormat: i18n.AdvancedMeasureFormat = new i18n.AdvancedMeasureFormat(numFmt, {
+  unitUsage: i18n.UnitUsage.TEMPERATURE_PERSON
+});
+let result = advancedMeasureFormat.format(100); // result = '37.778°C'
+```
 

@@ -4,6 +4,8 @@ Sets the spacing between child components along the main axis or cross axis of t
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FlexSpaceOptions--><!--Device-unnamed-declare interface FlexSpaceOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Sets the spacing between child components along the main axis or cross axis of t
 cross?: LengthMetrics
 ```
 
-Space on the cross axis of the **Flex** component.
-
-Default value: **LengthMetrics.px(0)**.
+Space on the cross axis of the **Flex** component. Default value: **LengthMetrics.px(0)**.
 
 **Type:** LengthMetrics
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Default value: **LengthMetrics.px(0)**.
 main?: LengthMetrics
 ```
 
-Space on the main axis of the **Flex** component.
-
-Default value: **LengthMetrics.px(0)**.
+Space on the main axis of the **Flex** component. Default value: **LengthMetrics.px(0)**.
 
 **Type:** LengthMetrics
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

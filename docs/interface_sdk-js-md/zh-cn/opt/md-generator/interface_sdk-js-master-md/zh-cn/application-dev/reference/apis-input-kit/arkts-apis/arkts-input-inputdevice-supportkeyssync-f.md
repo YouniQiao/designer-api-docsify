@@ -8,7 +8,9 @@ function supportKeysSync(deviceId: number, keys: Array<KeyCode>): Array<boolean>
 
 查询指定id的输入设备对指定键值的支持情况。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputDevice-function supportKeysSync(deviceId: int, keys: Array<KeyCode>): Array<boolean>--><!--Device-inputDevice-function supportKeysSync(deviceId: int, keys: Array<KeyCode>): Array<boolean>-End-->
 
@@ -31,7 +33,7 @@ function supportKeysSync(deviceId: number, keys: Array<KeyCode>): Array<boolean>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

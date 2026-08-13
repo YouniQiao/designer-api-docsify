@@ -4,7 +4,9 @@ Provides APIs to discard the least recently used data to make rooms for new elem
 
 **Since:** 9
 
-<!--Device-util-class LRUCache<K, V>--><!--Device-util-class LRUCache<K, V>-End-->
+**Deprecated since:** -1
+
+<!--Device-util-class LRUCache--><!--Device-util-class LRUCache-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -24,6 +26,8 @@ Specifies the default iterator for an object.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-[Symbol.iterator](): IterableIterator<[K, V]>--><!--Device-LRUCache-[Symbol.iterator](): IterableIterator<[K, V]>-End-->
@@ -34,7 +38,7 @@ Specifies the default iterator for an object.
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## Examples
 
@@ -57,18 +61,11 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get),  
-[put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove),  
-[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and  
-[updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity).
-
-> **NOTE：**
-> 
-> If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and
-> [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) are called and the input **key** and
-> **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
+Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get), [put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity). > **NOTE：**> > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) are called and the input **key** and > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -94,6 +91,8 @@ clear(): void
 Clears key-value pairs from this cache.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -125,6 +124,8 @@ A constructor used to create a **LRUCache** instance. The default capacity of th
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-constructor(capacity?: number)--><!--Device-LRUCache-constructor(capacity?: number)-End-->
@@ -152,6 +153,8 @@ contains(key: K): boolean
 Checks whether this cache contains the specified key.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -187,9 +190,11 @@ console.info('result = ' + result);
 createDefault(key: K): V
 ```
 
-Performs subsequent operations if no key is matched in the cache and returns the value (**undefined** by default)associated with the key.
+Performs subsequent operations if no key is matched in the cache and returns the value (**undefined** by default) associated with the key.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -228,6 +233,8 @@ Returns an iterator object that traverses all key-value pairs ([key, value]) in 
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-entries(): IterableIterator<[K, V]>--><!--Device-LRUCache-entries(): IterableIterator<[K, V]>-End-->
@@ -238,7 +245,7 @@ Returns an iterator object that traverses all key-value pairs ([key, value]) in 
 
 | [Type](arkts-arkts-util-type-e.md) |
 | --- |
-| [IterableIterator](../../apis-default/arkts-apis/arkts-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
+| [IterableIterator](../../apis-na/arkts-apis/arkts-na-lib-es2015-iterable-iterableiterator-i.md)&lt;[K, V]&gt; |
 
 ## Examples
 
@@ -261,12 +268,11 @@ for (let value of pair) {
 get(key: K): V | undefined
 ```
 
-Obtains the value of a key. If the key is not in the cache,  
-[createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) is called to create the key. If the value specified in **createDefault** is not **undefined**,  
-[afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) is called to return the value specified in  
-**createDefault**.
+Obtains the value of a key. If the key is not in the cache, [createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) is called to create the key. If the value specified in **createDefault** is not **undefined**, [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) is called to return the value specified in **createDefault**.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -306,6 +312,8 @@ Obtains the capacity of this cache.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getCapacity(): number--><!--Device-LRUCache-getCapacity(): number-End-->
@@ -336,6 +344,8 @@ getCreateCount(): number
 Obtains the number of times that an object is created.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -381,6 +391,8 @@ Obtains the number of times that the queried values are matched.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getMatchCount(): number--><!--Device-LRUCache-getMatchCount(): number-End-->
@@ -413,6 +425,8 @@ getMissCount(): number
 Obtains the number of times that the queried values are mismatched.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -447,6 +461,8 @@ Obtains the number of additions to this cache.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-getPutCount(): number--><!--Device-LRUCache-getPutCount(): number-End-->
@@ -478,6 +494,8 @@ getRemovalCount(): number
 Obtains the number of times that key-value pairs in the cache are recycled.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -513,6 +531,8 @@ Checks whether this cache is empty.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-isEmpty(): boolean--><!--Device-LRUCache-isEmpty(): boolean-End-->
@@ -544,6 +564,8 @@ keys(): K[]
 Obtains all keys in this cache, listed from the least to the most recently accessed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -587,6 +609,8 @@ Adds a key-value pair to this cache and returns the value associated with the ke
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-put(key: K, value: V): V--><!--Device-LRUCache-put(key: K, value: V): V-End-->
@@ -624,6 +648,8 @@ remove(key: K): V | undefined
 Removes a key and its associated value from this cache and returns the value associated with the key. If the key does not exist, **undefined** is returned.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -663,6 +689,8 @@ Obtains the string representation of this cache.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-toString(): string--><!--Device-LRUCache-toString(): string-End-->
@@ -697,6 +725,8 @@ Changes the cache capacity. If the new capacity is less than or equal to **0**, 
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LRUCache-updateCapacity(newCapacity: number): void--><!--Device-LRUCache-updateCapacity(newCapacity: number): void-End-->
@@ -725,6 +755,8 @@ values(): V[]
 Obtains all values in this cache, listed from the least to the most recently accessed.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -769,6 +801,8 @@ Total number of values in this cache.
 **Type:** number
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

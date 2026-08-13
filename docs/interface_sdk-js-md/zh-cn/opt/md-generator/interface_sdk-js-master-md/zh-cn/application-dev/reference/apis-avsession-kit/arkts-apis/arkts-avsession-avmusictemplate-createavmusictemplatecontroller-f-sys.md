@@ -10,6 +10,8 @@ function createAVMusicTemplateController(sessionId: string): AVMusicTemplateCont
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_MEDIA_RESOURCES
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -36,8 +38,8 @@ function createAVMusicTemplateController(sessionId: string): AVMusicTemplateCont
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000005-音频模板不存在) |
-| [35000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-avsession-kit/errorcode-avmusictemplate.md#35000002-音频模板控制器创建失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35000005](../errorcode-avmusictemplate.md#35000005-音频模板不存在) |
+| [35000002](../errorcode-avmusictemplate.md#35000002-音频模板控制器创建失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

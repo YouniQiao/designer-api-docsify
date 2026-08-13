@@ -2,7 +2,9 @@
 
 Configuring parameters in continuous location requests.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface ContinuousLocationRequest--><!--Device-geoLocationManager-export interface ContinuousLocationRequest-End-->
 
@@ -24,9 +26,11 @@ Location report interval, in seconds.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ContinuousLocationRequest-interval: int--><!--Device-ContinuousLocationRequest-interval: int-End-->
 
@@ -42,9 +46,11 @@ Location scenario. You can select a user activity scenario or power consumption 
 
 **Type:** [UserActivityScenario](arkts-location-geolocationmanager-useractivityscenario-e.md) \| [PowerConsumptionScenario](arkts-location-geolocationmanager-powerconsumptionscenario-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ContinuousLocationRequest-locationScenario: UserActivityScenario | PowerConsumptionScenario--><!--Device-ContinuousLocationRequest-locationScenario: UserActivityScenario | PowerConsumptionScenario-End-->
 
@@ -60,28 +66,12 @@ Indicates whether to obtain POI information near the current location.
 
 **Type:** boolean
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ContinuousLocationRequest-needPoi?: boolean--><!--Device-ContinuousLocationRequest-needPoi?: boolean-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## sportsType
-
-```TypeScript
-sportsType?: SportsType
-```
-
-Indicates the type of sports.This parameter is valid only when locationScenario is set to UserActivityScenario.SPORT.
-
-**Type:** [SportsType](arkts-location-geolocationmanager-sportstype-e.md)
-
-**Since:** 26.0.0
-
-**Atomic service API:** This API can be used in atomic services since API version 18.
-
-<!--Device-ContinuousLocationRequest-sportsType?: SportsType--><!--Device-ContinuousLocationRequest-sportsType?: SportsType-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

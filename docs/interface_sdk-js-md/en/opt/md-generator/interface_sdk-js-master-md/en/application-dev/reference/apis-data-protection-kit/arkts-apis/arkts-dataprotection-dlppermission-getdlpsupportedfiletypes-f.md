@@ -12,11 +12,11 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 function getDLPSupportedFileTypes(): Promise<Array<string>>
 ```
 
-Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses a promise to return the result.
-
-This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
+Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses a promise to return the result. This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>--><!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>-End-->
 
@@ -32,9 +32,9 @@ This API is used to obtain the types of files that can be used to generate DLP f
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 
@@ -55,11 +55,11 @@ dlpPermission.getDLPSupportedFileTypes().then((fileTypes) => { // Obtain the fil
 function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses an asynchronous callback to return the result.
-
-This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
+Obtains the file name extension types that support DLP. After the API is successfully called, the list of supported file types is returned, indicating the types of files that can be used to generate DLP files. This API uses an asynchronous callback to return the result. This API is used to obtain the types of files that can be used to generate DLP files. If the current file type is in the list, it can be encrypted.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 <!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void--><!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -75,10 +75,10 @@ This API is used to obtain the types of files that can be used to generate DLP f
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-invalid-parameter) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-system-service-abnormal) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [19100001](../errorcode-dlp.md#19100001-invalid-parameter) |
+| [19100011](../errorcode-dlp.md#19100011-system-service-abnormal) |
 
 ## Examples
 

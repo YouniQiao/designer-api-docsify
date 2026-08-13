@@ -4,6 +4,8 @@ Sets the type of page transition.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum RouteType--><!--Device-unnamed-declare enum RouteType-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,6 +20,8 @@ The page is not redirected. The animation specified by **PageTransitionEnter** t
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RouteType-None = 0--><!--Device-RouteType-None = 0-End-->
@@ -30,9 +34,11 @@ The page is not redirected. The animation specified by **PageTransitionEnter** t
 Push = 1
 ```
 
-Redirects to the next page. To redirect the user from page A to page B, set **RouteType** of **PageTransitionExit**to **None** or **Push** for page A and set **RouteType** of **PageTransitionEnter** to **None** or **Push** for page B.
+Redirects to the next page. To redirect the user from page A to page B, set **RouteType** of **PageTransitionExit** to **None** or **Push** for page A and set **RouteType** of **PageTransitionEnter** to **None** or **Push** for page B.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -46,11 +52,11 @@ Redirects to the next page. To redirect the user from page A to page B, set **Ro
 Pop = 2
 ```
 
-Redirects to a specified page. To redirect the user from page B back to page A, set **RouteType** of   
-**PageTransitionExit** to **None** or **Pop** for page B and set **RouteType** of **PageTransitionEnter** to   
-**None** or **Pop** for page A.
+Redirects to a specified page. To redirect the user from page B back to page A, set **RouteType** of **PageTransitionExit** to **None** or **Pop** for page B and set **RouteType** of **PageTransitionEnter** to **None** or **Pop** for page A.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -1,12 +1,14 @@
 # DragController
 
-class DragController
+Provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. > **NOTE：**> > In the following API examples, you must first use [getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController) in > **UIContext** to obtain a **DragController** instance, and then call the APIs using the obtained instance.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-<!--Device-unnamed-export declare class DragController--><!--Device-unnamed-export declare class DragController-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class DragController--><!--Device-unnamed-export class DragController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,7 +28,9 @@ Interrupt the pending follow-hand morph drop animation and trigger the finish se
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,5 +44,5 @@ Interrupt the pending follow-hand morph drop animation and trigger the finish se
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns true if interrupted successfully; false if there is no pending follow-hand morph drop animation to interrupt. |
+| boolean | Interruption result.&lt;br&gt;Returns **true** if the interruption is successful, and **false** if there is no pending follow-hand morph drop animation to interrupt. |
 

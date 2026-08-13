@@ -12,14 +12,7 @@ import { router } from '@kit.ArkUI';
 function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -27,7 +20,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
+**Substitutes:** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,17 +34,17 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## Examples
 
@@ -93,14 +86,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -108,7 +94,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
+**Substitutes:** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,7 +108,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
 
 **Return value:**
 
@@ -134,10 +120,10 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## Examples
 
@@ -181,14 +167,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -196,7 +175,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
+**Substitutes:** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -210,18 +189,18 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## Examples
 
@@ -263,14 +242,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> - Since API version 10, you can use the
-> [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in
-> [UIContext](@ohos.arkui.UIContext) to obtain the [Router](@ohos.arkui.UIContext) object associated
-> with the current UI context.
+Navigates to a page using the named route. This API uses a promise to return the result. > **NOTE：**> > - Since API version 10, you can use the > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter) API in > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to obtain the [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) object associated > with the current UI context.
 
 **Since:** 10
 
@@ -278,7 +250,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushNamedRoute](@ohos.arkui.UIContext:Router#pushNamedRoute(options:)
+**Substitutes:** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, mode: router.RouterMode)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -292,8 +264,8 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
+| options | [NamedRouterOptions](../../apis-na/arkts-apis/arkts-na-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 
@@ -305,10 +277,10 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
-| [100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
+| [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [100003](../errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## Examples
 

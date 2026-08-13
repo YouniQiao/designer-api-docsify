@@ -1,19 +1,12 @@
 # ErrorType
 
-Enumerates the device-cloud sync errors.
+Enumerates the device-cloud sync errors. - In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are unavailable. If the mobile data network is available, the synchronization can be performed normally. - During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW** will be return when the current upload is complete. - When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not allowed. - If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in the cloud.
 
-- In the current phase, **NETWORK_UNAVAILABLE** is returned only when the mobile data network and Wi-Fi are  
-unavailable. If the mobile data network is available, the synchronization can be performed normally.  
-- During the sync process, if the battery level is lower than 10% in non-charging scenarios, **BATTERY_LEVEL_LOW**  
-will be return when the current upload is complete.  
-- When sync is being triggered, if the battery level is lower than 10% in non-charging scenarios, sync is not  
-allowed.  
-- If the cloud space is insufficient when a file is uploaded, the upload will fail and there is no such a file in  
-the cloud.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum ErrorType--><!--Device-cloudSync-enum ErrorType-End-->
 
@@ -29,7 +22,9 @@ Upload aborted due to cloud response time out.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,7 +44,9 @@ Upload aborted due to unknown error.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

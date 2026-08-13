@@ -2,9 +2,11 @@
 
 Represents the parameters for checking the certificate revocation status for a certificate chain.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface RevocationCheckParameter--><!--Device-cert-interface RevocationCheckParameter-End-->
 
@@ -22,19 +24,17 @@ import { cert } from '@kit.DeviceCertificateKit';
 crlDownloadURI?: string
 ```
 
-Address used to download the CRLs.
-
-> **NOTE：**
-> 
-> The URI takes effect only for the leaf certificate.
+Address used to download the CRLs. > **NOTE：**> > The URI takes effect only for the leaf certificate.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-crlDownloadURI?: string--><!--Device-RevocationCheckParameter-crlDownloadURI?: string-End-->
 
@@ -46,18 +46,19 @@ Address used to download the CRLs.
 ocspDigest?: string
 ```
 
-Hash algorithm used to create a certificate ID during OCSP communication. The options **MD5**, **SHA1**,  
-**SHA224**, **SHA256**, **SHA384**, and **SHA512** are supported. The default value is **SHA256**.
+Hash algorithm used to create a certificate ID during OCSP communication. The options **MD5**, **SHA1**, **SHA224**, **SHA256**, **SHA384**, and **SHA512** are supported. The default value is **SHA256**.
 
 **Type:** string
 
 **Default:** SHA256
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-ocspDigest?: string--><!--Device-RevocationCheckParameter-ocspDigest?: string-End-->
 
@@ -73,11 +74,13 @@ OCSP request extensions.
 
 **Type:** Array&lt;Uint8Array&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-ocspRequestExtension?: Array<Uint8Array>--><!--Device-RevocationCheckParameter-ocspRequestExtension?: Array<Uint8Array>-End-->
 
@@ -93,11 +96,13 @@ Signing certificate used for verifying the signature of the OCSP response.
 
 **Type:** X509Cert
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-ocspResponderCert?: X509Cert--><!--Device-RevocationCheckParameter-ocspResponderCert?: X509Cert-End-->
 
@@ -109,19 +114,17 @@ Signing certificate used for verifying the signature of the OCSP response.
 ocspResponderURI?: string
 ```
 
-URI of the alternative server used to send OCSP requests. HTTP and HTTPS are supported. The specific configuration is determined via the negotiation with the server.
-
-> **NOTE：**
-> 
-> The URI takes effect only for the leaf certificate.
+URI of the alternative server used to send OCSP requests. HTTP and HTTPS are supported. The specific configuration is determined via the negotiation with the server. > **NOTE：**> > The URI takes effect only for the leaf certificate.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-ocspResponderURI?: string--><!--Device-RevocationCheckParameter-ocspResponderURI?: string-End-->
 
@@ -137,11 +140,13 @@ Alternative OCSP responses.
 
 **Type:** Uint8Array
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-ocspResponses?: Uint8Array--><!--Device-RevocationCheckParameter-ocspResponses?: Uint8Array-End-->
 
@@ -157,11 +162,13 @@ A set of rules for obtaining the certificate revocation status.
 
 **Type:** Array&lt;[RevocationCheckOptions](arkts-devicecertificate-cert-revocationcheckoptions-e.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-RevocationCheckParameter-options?: Array<RevocationCheckOptions>--><!--Device-RevocationCheckParameter-options?: Array<RevocationCheckOptions>-End-->
 

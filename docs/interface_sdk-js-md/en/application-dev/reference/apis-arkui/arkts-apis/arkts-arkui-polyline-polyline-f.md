@@ -3,6 +3,7 @@
 ## Polyline
 
 ```TypeScript
+@ComponentBuilder
 export declare function Polyline(
     options?: PolylineOptions
 ): PolylineAttribute
@@ -14,9 +15,11 @@ Polyline is returned when the parameter is transferred.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Polyline(    options?: PolylineOptions): PolylineAttribute--><!--Device-unnamed-export declare function Polyline(    options?: PolylineOptions): PolylineAttribute-End-->
+<!--Device-unnamed-@ComponentBuilderexport declare function Polyline(    options?: PolylineOptions): PolylineAttribute--><!--Device-unnamed-@ComponentBuilderexport declare function Polyline(    options?: PolylineOptions): PolylineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,6 +39,7 @@ Polyline is returned when the parameter is transferred.
 ## Polyline
 
 ```TypeScript
+@Builder
 export declare function Polyline(
     style: CustomBuilderT<PolylineAttribute>,
 ): PolylineAttribute
@@ -47,11 +51,11 @@ Defines Polyline Component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
-**Decorator:** @Builder
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare function Polyline(    style: CustomBuilderT<PolylineAttribute>,): PolylineAttribute--><!--Device-unnamed-export declare function Polyline(    style: CustomBuilderT<PolylineAttribute>,): PolylineAttribute-End-->
+<!--Device-unnamed-@Builderexport declare function Polyline(    style: CustomBuilderT<PolylineAttribute>,): PolylineAttribute--><!--Device-unnamed-@Builderexport declare function Polyline(    style: CustomBuilderT<PolylineAttribute>,): PolylineAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -59,7 +63,7 @@ Defines Polyline Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [CustomBuilderT](arkts-arkui-custombuildert-t.md)&lt;[PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
+| style | CustomBuilderT&lt;[PolylineAttribute](arkts-arkui-polyline-polylineattribute-i.md)&gt; | Yes | the callback to set up component's attributes. |
 
 **Return value:**
 

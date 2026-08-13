@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export enum Priority--><!--Device-unnamed-export enum Priority-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ IMMEDIATE = 1
 立即执行优先级，对应EventHandler IMMEDIATE优先级。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,6 +40,8 @@ HIGH = 2
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -54,6 +60,8 @@ LOW = 3
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
@@ -71,6 +79,8 @@ IDLE = 4
 后台优先级，对应EventHandler IDLE优先级。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

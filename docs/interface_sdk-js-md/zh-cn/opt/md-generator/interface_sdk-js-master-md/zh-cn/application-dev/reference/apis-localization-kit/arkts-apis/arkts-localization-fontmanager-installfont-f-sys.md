@@ -6,9 +6,11 @@
 function installFont(path: string): Promise<number>
 ```
 
-将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。安装成功后，应用可以通过字体名称使用该字体。
+将指定路径下的字体文件安装到系统字体库中。使用Promise异步回调。 安装成功后，应用可以通过字体名称使用该字体。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.UPDATE_FONT
 
@@ -34,11 +36,11 @@ function installFont(path: string): Promise<number>
 
 | 错误码ID |
 | --- |
-| [31100106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100106-其他错误导致安装失败) |
-| [31100104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100104-字体文件已安装) |
-| [31100105](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100105-已安装字体文件超过最大数量) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [31100102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100102-字体文件不支持安装) |
-| [31100103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100103-字体文件拷贝失败) |
-| [31100101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-localization-kit/errorcode-font-manager.md#31100101-字体文件不存在) |
+| [31100106](../errorcode-font-manager.md#31100106-其他错误导致安装失败) |
+| [31100104](../errorcode-font-manager.md#31100104-字体文件已安装) |
+| [31100105](../errorcode-font-manager.md#31100105-已安装字体文件超过最大数量) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [31100102](../errorcode-font-manager.md#31100102-字体文件不支持安装) |
+| [31100103](../errorcode-font-manager.md#31100103-字体文件拷贝失败) |
+| [31100101](../errorcode-font-manager.md#31100101-字体文件不存在) |

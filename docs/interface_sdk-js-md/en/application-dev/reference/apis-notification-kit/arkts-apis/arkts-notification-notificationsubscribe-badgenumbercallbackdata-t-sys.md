@@ -6,9 +6,11 @@ export type BadgeNumberCallbackData = _BadgeNumberCallbackData
 
 Describes the badge number of the application has changed.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData--><!--Device-notificationSubscribe-export type BadgeNumberCallbackData = _BadgeNumberCallbackData-End-->
 

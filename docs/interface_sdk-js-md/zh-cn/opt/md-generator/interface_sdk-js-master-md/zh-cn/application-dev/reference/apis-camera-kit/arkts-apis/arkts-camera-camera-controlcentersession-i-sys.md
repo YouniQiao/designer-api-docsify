@@ -2,11 +2,13 @@
 
 Control center session object.
 
-**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty), [Aperture](arkts-camera-camera-aperture-i.md#Aperture), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect)
+**继承/实现关系：** ControlCenterSession extends [Beauty](arkts-camera-camera-beauty-i-sys.md#Beauty（系统接口）), [Aperture](arkts-camera-camera-aperture-i-sys.md#Aperture（系统接口）), [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md#ColorEffect（系统接口）)
 
-**起始版本：** 20
+**起始版本：** 23
 
-<!--Device-camera-interface ControlCenterSession extends Beauty, Aperture, ColorEffect--><!--Device-camera-interface ControlCenterSession extends Beauty, Aperture, ColorEffect-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface ControlCenterSession--><!--Device-camera-interface ControlCenterSession-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -21,6 +23,8 @@ enableAutoFraming(enabled: boolean): void
 Enable auto-framing effect.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void--><!--Device-ControlCenterSession-enableAutoFraming(enabled: boolean): void-End-->
 
@@ -38,9 +42,9 @@ Enable auto-framing effect.
 
 | 错误码ID |
 | --- |
-| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getAutoFramingStatus
 
@@ -51,6 +55,8 @@ getAutoFramingStatus(): boolean
 Gets the status of auto-framing effect.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-ControlCenterSession-getAutoFramingStatus(): boolean--><!--Device-ControlCenterSession-getAutoFramingStatus(): boolean-End-->
 
@@ -68,7 +74,7 @@ Gets the status of auto-framing effect.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getControlCenterHeight
 
@@ -79,6 +85,8 @@ getControlCenterHeight(): number
 Gets the control center height.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,7 +106,7 @@ Gets the control center height.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## getCurrentDevice
 
@@ -109,6 +117,8 @@ getCurrentDevice(): CameraDevice
 Gets the current camera device.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,8 +138,8 @@ Gets the current camera device.
 
 | 错误码ID |
 | --- |
-| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## isAutoFramingSupported
 
@@ -140,6 +150,8 @@ isAutoFramingSupported(): boolean
 Checks whether auto-framing is supported.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-ControlCenterSession-isAutoFramingSupported(): boolean--><!--Device-ControlCenterSession-isAutoFramingSupported(): boolean-End-->
 
@@ -157,7 +169,7 @@ Checks whether auto-framing is supported.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## release
 
@@ -167,7 +179,9 @@ release(): Promise<void>
 
 Release control center session object.
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ControlCenterSession-release(): Promise<void>--><!--Device-ControlCenterSession-release(): Promise<void>-End-->
 
@@ -185,7 +199,7 @@ Release control center session object.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## usedAsPosition
 
@@ -196,6 +210,8 @@ usedAsPosition(position: CameraPosition): void
 Sets the camera to be used as a camera at the specified position.
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -215,6 +231,6 @@ Sets the camera to be used as a camera at the specified position.
 
 | 错误码ID |
 | --- |
-| [7400104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400104-会话未运行) |
-| [7400201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [7400104](../errorcode-camera.md#7400104-会话未运行) |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |

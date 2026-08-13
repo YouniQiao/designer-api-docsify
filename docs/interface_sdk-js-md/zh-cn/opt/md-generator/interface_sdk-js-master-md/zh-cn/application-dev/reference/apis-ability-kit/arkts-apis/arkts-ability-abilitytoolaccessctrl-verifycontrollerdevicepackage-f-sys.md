@@ -7,9 +7,11 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
     Promise<boolean[]>
 ```
 
-验证来自控制器设备的授权包。验证控制器设备发送的远程授权包。它验证票证和远程设备信息，以确保授权是合法的。
+验证来自控制器设备的授权包。 验证控制器设备发送的远程授权包。 它验证票证和远程设备信息，以确保授权是合法的。
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 
@@ -36,9 +38,9 @@ export function verifyControllerDevicePackage(ticketInfo: RemoteAuthPackage[], r
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [24010002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
-| [24010003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
-| [24010000](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) |
-| [24010001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) |
+| [24010003](../errorcode-abilityToolAccessCtrl-sys.md#24010003-环境错误) |
+| [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) |
+| [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) |

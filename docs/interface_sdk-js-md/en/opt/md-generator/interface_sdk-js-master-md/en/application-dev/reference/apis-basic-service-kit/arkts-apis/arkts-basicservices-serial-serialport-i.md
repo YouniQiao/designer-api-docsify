@@ -4,6 +4,8 @@ Serial port object, which provides information and communication capabilities of
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-serial-interface SerialPort--><!--Device-serial-interface SerialPort-End-->
 
 **System capability:** SystemCapability.BusManager.Serial
@@ -24,6 +26,8 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SerialPort-close(): Promise<void>--><!--Device-SerialPort-close(): Promise<void>-End-->
@@ -40,8 +44,8 @@ Closes the serial port device. This API returns the result asynchronously throug
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## drain
 
@@ -52,6 +56,8 @@ drain(): Promise<void>
 Waits until all write requests are complete. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -69,9 +75,9 @@ Waits until all write requests are complete. This API returns the result asynchr
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## flush
 
@@ -82,6 +88,8 @@ flush(): Promise<void>
 Flushes the serial port buffer. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -99,9 +107,9 @@ Flushes the serial port buffer. This API returns the result asynchronously throu
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## getCts
 
@@ -112,6 +120,8 @@ getCts(): Promise<boolean>
 Obtains the CTS signal status. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,9 +139,9 @@ Obtains the CTS signal status. This API returns the result asynchronously throug
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## getDsr
 
@@ -142,6 +152,8 @@ getDsr(): Promise<boolean>
 Obtains the DSR signal status. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -159,9 +171,9 @@ Obtains the DSR signal status. This API returns the result asynchronously throug
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## offDataRead
 
@@ -172,6 +184,8 @@ offDataRead(callback?: Callback<Uint8Array>): void
 Cancels listening for data receiving events on the serial port.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -189,8 +203,8 @@ Cancels listening for data receiving events on the serial port.
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## offDisconnect
 
@@ -201,6 +215,8 @@ offDisconnect(callback?: Callback<void>): void
 This command is used to cancel the monitoring of the USB virtual serial port disconnection event.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -218,8 +234,8 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## onDataRead
 
@@ -227,9 +243,11 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 onDataRead(callback: Callback<Uint8Array>): void
 ```
 
-Listens for data received by the serial port. This API uses an asynchronous callback to return the result.When [close](#close) is called, all callbacks are cleared.
+Listens for data received by the serial port. This API uses an asynchronous callback to return the result. When [close](#close) is called, all callbacks are cleared.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -247,9 +265,9 @@ Listens for data received by the serial port. This API uses an asynchronous call
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## onDisconnect
 
@@ -257,9 +275,11 @@ Listens for data received by the serial port. This API uses an asynchronous call
 onDisconnect(callback: Callback<void>): void
 ```
 
-This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback.When the [close](#close) interface is invoked, all callbacks are cleared.
+This interface is used to listen to the disconnection event of the USB virtual serial port. Use Callback asynchronous callback. When the [close](#close) interface is invoked, all callbacks are cleared.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,8 +297,8 @@ This interface is used to listen to the disconnection event of the USB virtual s
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## open
 
@@ -289,6 +309,8 @@ open(config?: SerialConfigs): Promise<void>
 Enables the port. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -312,11 +334,11 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) |
-| [35700007](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700004](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700004-port-in-use) |
+| [35700007](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700007-user-authorization-rejected) |
 
 ## sendBrk
 
@@ -327,6 +349,8 @@ sendBrk(): Promise<void>
 Sends a BRK signal. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -344,9 +368,9 @@ Sends a BRK signal. This API returns the result asynchronously through a promise
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## setDtr
 
@@ -357,6 +381,8 @@ setDtr(enable: boolean): Promise<void>
 Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -380,9 +406,9 @@ Sets the DTR signal status. Use Promise asynchronous callbacks.
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## setRts
 
@@ -393,6 +419,8 @@ setRts(enable: boolean): Promise<void>
 Sets the RTS signal. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -416,9 +444,9 @@ Sets the RTS signal. This API returns the result asynchronously through a promis
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
 
 ## write
 
@@ -429,6 +457,8 @@ write(data: Uint8Array, timeout?: number): Promise<number>
 Sends data. This API returns the result asynchronously through a promise.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -453,11 +483,11 @@ Sends data. This API returns the result asynchronously through a promise.
 
 | Error Code ID |
 | --- |
-| [35700001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
-| [35700002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) |
-| [35700003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
-| [35700005](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
-| [35700006](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) |
+| [35700001](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700001-abnormal-service) |
+| [35700002](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700002-parameter-error) |
+| [35700003](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700003-virtual-serial-port-disconnected) |
+| [35700005](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700005-port-not-opened) |
+| [35700006](../../apis-basic-services-kit/errorcode-busmanager-serial.md#35700006-transmission-timeout) |
 
 ## portInfo
 
@@ -470,6 +500,8 @@ Serial port information.
 **Type:** [SerialPortInfo](arkts-basicservices-serial-serialportinfo-i.md)
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

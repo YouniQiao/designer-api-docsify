@@ -18,7 +18,7 @@ Starts scanning Bluetooth devices.
 
 **Deprecated since:** 9
 
-**Substitutes:** [startBluetoothDiscovery](ohos.bluetoothManager/bluetoothManager.startBluetoothDiscovery)
+**Substitutes:** [startBluetoothDiscovery](arkts-connectivity-bluetoothmanager-startbluetoothdiscovery-f.md#startBluetoothDiscovery)
 
 **Required permissions:** ohos.permission.DISCOVER_BLUETOOTH and ohos.permission.LOCATION
 

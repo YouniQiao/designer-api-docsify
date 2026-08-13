@@ -14,7 +14,9 @@ function createStream(sessionId: number, param: StreamParam): Promise<number>
 
 Creating a Stream.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,11 +43,11 @@ Creating a Stream.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [32300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300004-color-space-not-supported) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) |
-| [32300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-distributedservice-kit/errorcode-device-manager.md#32300003-bit-rate-not-supported) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [32300004](../../apis-distributedservice-kit/errorcode-device-manager.md#32300004-color-space-not-supported) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32300001](../../apis-distributedservice-kit/errorcode-device-manager.md#32300001-transport-stream-repeatedly-created) |
+| [32300003](../../apis-distributedservice-kit/errorcode-device-manager.md#32300003-bit-rate-not-supported) |
 
 ## Examples
 

@@ -4,6 +4,8 @@ Defines the user submission event.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface SubmitEvent--><!--Device-unnamed-declare interface SubmitEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ keepEditableState(): void
 Maintains the editable state of the text box when called.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -37,6 +41,8 @@ Text in the text box.
 **Type:** string
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

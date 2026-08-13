@@ -2,11 +2,13 @@
 
 Defines the LazyDynamicLayout attribute functions.
 
-**Inheritance/Implementation:** LazyDynamicLayoutAttribute extends [CommonMethod<LazyDynamicLayoutAttribute>](CommonMethod<LazyDynamicLayoutAttribute>)
+**Inheritance/Implementation:** LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export declare class LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>--><!--Device-unnamed-export declare class LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class LazyDynamicLayoutAttribute--><!--Device-unnamed-export declare class LazyDynamicLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +28,8 @@ Called when visible indexes change.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -38,7 +42,7 @@ Called when visible indexes change.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| callback | [Callback](arkts-arkui-callback-t.md) & lt;number[] & gt; \ | undefined | Yes |
+| callback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md) & lt;number[] & gt; \ | undefined | Yes |
 
 **Return value:**
 

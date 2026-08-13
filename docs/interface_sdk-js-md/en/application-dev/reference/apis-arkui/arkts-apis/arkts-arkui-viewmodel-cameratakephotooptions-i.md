@@ -6,6 +6,8 @@ CameraTakePhotoOptions
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface CameraTakePhotoOptions--><!--Device-unnamed-export interface CameraTakePhotoOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -18,21 +20,19 @@ complete?: (result: Object) => void
 
 Callback function at the end of the interface invoking (executed both successfully and unsuccessfully).
 
+**Type:** (result: Object) =&gt; void
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CameraTakePhotoOptions-complete?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-complete?: (result: Object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | Object | Yes |  |
 
 ## fail
 
@@ -42,45 +42,19 @@ fail?: (result: Object) => void
 
 Callback function for interface invocation failure.
 
+**Type:** (result: Object) =&gt; void
+
 **Since:** 6
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CameraTakePhotoOptions-fail?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-fail?: (result: Object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | Object | Yes |  |
-
-## success
-
-```TypeScript
-success?: (result: Object) => void
-```
-
-Callback function for successful interface invocation.
-
-**Since:** 6
-
-**ArkTS mode:** ArkTS-Dyn only, since version 6.
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-CameraTakePhotoOptions-success?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-success?: (result: Object) => void-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| result | Object | Yes |  |
 
 ## quality
 
@@ -96,9 +70,33 @@ Picture quality.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 6.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-CameraTakePhotoOptions-quality: "high" | "normal" | "low"--><!--Device-CameraTakePhotoOptions-quality: "high" | "normal" | "low"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## success
+
+```TypeScript
+success?: (result: Object) => void
+```
+
+Callback function for successful interface invocation.
+
+**Type:** (result: Object) =&gt; void
+
+**Since:** 6
+
+**ArkTS mode:** ArkTS-Dyn only, since version 6.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-CameraTakePhotoOptions-success?: (result: Object) => void--><!--Device-CameraTakePhotoOptions-success?: (result: Object) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,12 +1,14 @@
 # CommonArcButtonOptions
 
-Defines the arc button options.
+Defines the default or custom style parameters for the **ArcButton** component.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-<!--Device-unnamed-export declare interface CommonArcButtonOptions--><!--Device-unnamed-export declare interface CommonArcButtonOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-interface CommonArcButtonOptions--><!--Device-unnamed-interface CommonArcButtonOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -22,15 +24,17 @@ import { ArcButtonPosition, ArcButton, ArcButtonStatus, ArcButtonStyleMode, ArcB
 backgroundBlurStyle?: BlurStyle
 ```
 
-Describe the blurred background style of the arc-shaped button.
+Background blur style of the arc button. Default value: **BlurStyle.NONE**
 
 **Type:** BlurStyle
 
-**Default:** BlurStyle.NONE
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-backgroundBlurStyle?: BlurStyle--><!--Device-CommonArcButtonOptions-backgroundBlurStyle?: BlurStyle-End-->
 
@@ -42,15 +46,17 @@ Describe the blurred background style of the arc-shaped button.
 backgroundColor?: ColorMetrics
 ```
 
-Describes the arc button background color.
+Background color of the arc button. This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**. Default value: **Color.Black**
 
 **Type:** ColorMetrics
 
-**Default:** Color.Black
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-backgroundColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-backgroundColor?: ColorMetrics-End-->
 
@@ -62,15 +68,17 @@ Describes the arc button background color.
 fontColor?: ColorMetrics
 ```
 
-Describes the arc button text color.
+Font color of the arc button. This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**. Default value: **Color.White**
 
 **Type:** ColorMetrics
 
-**Default:** Color.White
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-fontColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-fontColor?: ColorMetrics-End-->
 
@@ -82,13 +90,17 @@ Describes the arc button text color.
 fontFamily?: string | Resource
 ```
 
-Describes the arc button text family.
+Font family of the arc button.
 
 **Type:** string \| Resource
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-fontFamily?: string | Resource--><!--Device-CommonArcButtonOptions-fontFamily?: string | Resource-End-->
 
@@ -100,15 +112,17 @@ Describes the arc button text family.
 fontMargin?: LocalizedMargin
 ```
 
-Describes the arc button text margin.
+Margin of the arc button text. Default value: **{start:24vp, top: 10vp,end: 24vp, bottom:16vp }**
 
 **Type:** LocalizedMargin
 
-**Default:** { start: 24.0_vp, top: 10.0_vp, end: 24.0_vp, bottom: 16.0_vp }
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-fontMargin?: LocalizedMargin--><!--Device-CommonArcButtonOptions-fontMargin?: LocalizedMargin-End-->
 
@@ -120,15 +134,17 @@ Describes the arc button text margin.
 fontSize?: LengthMetrics
 ```
 
-Describes the arc button text size.
+Font size of the arc button. Default value: **19fp**
 
 **Type:** LengthMetrics
 
-**Default:** 19.0_fp
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-fontSize?: LengthMetrics--><!--Device-CommonArcButtonOptions-fontSize?: LengthMetrics-End-->
 
@@ -140,15 +156,17 @@ Describes the arc button text size.
 fontStyle?: FontStyle
 ```
 
-Describes the arc button text style.
+Font style of the arc button. Default value: **FontStyle.Normal**
 
 **Type:** FontStyle
 
-**Default:** FontStyle.Normal
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-fontStyle?: FontStyle--><!--Device-CommonArcButtonOptions-fontStyle?: FontStyle-End-->
 
@@ -160,13 +178,17 @@ Describes the arc button text style.
 label?: ResourceStr
 ```
 
-Describes the arc button displays text.
+Text displayed on the arc button.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-label?: ResourceStr--><!--Device-CommonArcButtonOptions-label?: ResourceStr-End-->
 
@@ -178,13 +200,17 @@ Describes the arc button displays text.
 onClick?: Callback<ClickEvent>
 ```
 
-Describes the arc button click event.
+Callback triggered by click actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;ClickEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;ClickEvent&gt;
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-onClick?: Callback<ClickEvent>--><!--Device-CommonArcButtonOptions-onClick?: Callback<ClickEvent>-End-->
 
@@ -196,13 +222,17 @@ Describes the arc button click event.
 onTouch?: Callback<TouchEvent>
 ```
 
-Describes the arc button touch event.
+Callback triggered by touch actions on the arc button.
 
-**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;TouchEvent&gt;
+**Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;TouchEvent&gt;
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-onTouch?: Callback<TouchEvent>--><!--Device-CommonArcButtonOptions-onTouch?: Callback<TouchEvent>-End-->
 
@@ -214,15 +244,17 @@ Describes the arc button touch event.
 position?: ArcButtonPosition
 ```
 
-Describes the arc button position.
+Type of the arc button. Default value: **ArcButtonPosition.BOTTOM_EDGE**
 
-**Type:** [ArcButtonPosition](arkts-arkui-arkui-advanced-arcbutton-arcbuttonposition-e.md)
+**Type:** [ArcButtonPosition](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonposition-e.md)
 
-**Default:** ArcButtonPosition.BOTTOM_EDGE
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-position?: ArcButtonPosition--><!--Device-CommonArcButtonOptions-position?: ArcButtonPosition-End-->
 
@@ -234,15 +266,17 @@ Describes the arc button position.
 pressedFontColor?: ColorMetrics
 ```
 
-Describes the arc button pressed text color.
+Font color of the arc button when pressed. This property takes effect only when **ArcButtonStyleMode** is set to **CUSTOM**. Default value: **Color.White**
 
 **Type:** ColorMetrics
 
-**Default:** Color.White
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-pressedFontColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-pressedFontColor?: ColorMetrics-End-->
 
@@ -254,15 +288,19 @@ Describes the arc button pressed text color.
 progressConfig?: ArcButtonProgressConfig
 ```
 
-Sets the ArcButton progress bar parameters.When not set, the button style is used.When set, the progress style is used.
+Parameters for the progress indicator of the **ArcButton** component. If this property is not set, the **ArcButton** component is displayed as a button (see [Example 1](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-1-setting-an-arc-button) ). If this property is set, the component is displayed as a progress indicator (see [Example 2](../../../reference/apis-arkui/arkui-ts/ohos-arkui-advanced-ArcButton.md#example-2-setting-a-device-progress-indicator-button) ). The progress indicator style is not affected by the settings of the [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md#ArcButtonStyleMode) attribute. Default value: default values of all properties of [ArcButtonProgressConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig)
 
-**Type:** [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
+**Type:** [ArcButtonProgressConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CommonArcButtonOptions-progressConfig?: ArcButtonProgressConfig--><!--Device-CommonArcButtonOptions-progressConfig?: ArcButtonProgressConfig-End-->
 
@@ -274,15 +312,17 @@ Sets the ArcButton progress bar parameters.When not set, the button style is use
 shadowColor?: ColorMetrics
 ```
 
-Describes the arc button shadow color.
+Shadow color of the arc button. Default value: **Color.Black**
 
 **Type:** ColorMetrics
 
-**Default:** Color.Black
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-shadowColor?: ColorMetrics--><!--Device-CommonArcButtonOptions-shadowColor?: ColorMetrics-End-->
 
@@ -294,15 +334,17 @@ Describes the arc button shadow color.
 shadowEnabled?: boolean
 ```
 
-Describes the arc button shadow switch.
+Whether to enable the shadow for the arc button. Default value: **false** The value **true** means to enable the shadow, and **false** means the opposite.
 
 **Type:** boolean
 
-**Default:** false
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-shadowEnabled?: boolean--><!--Device-CommonArcButtonOptions-shadowEnabled?: boolean-End-->
 
@@ -314,15 +356,17 @@ Describes the arc button shadow switch.
 status?: ArcButtonStatus
 ```
 
-Describes the arc button status.
+Status of the arc button. Default value: **ArcButtonStatus.NORMAL**
 
-**Type:** [ArcButtonStatus](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
+**Type:** [ArcButtonStatus](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstatus-e.md)
 
-**Default:** ArcButtonStatus.NORMAL
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-status?: ArcButtonStatus--><!--Device-CommonArcButtonOptions-status?: ArcButtonStatus-End-->
 
@@ -334,15 +378,17 @@ Describes the arc button status.
 styleMode?: ArcButtonStyleMode
 ```
 
-Describes the arc button style mode.
+Style mode for the arc button. This style cannot be used together with the [ArcButtonProgressConfig](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md#ArcButtonProgressConfig) style. Default value: **ArcButtonStyleMode.EMPHASIZED_LIGHT**
 
-**Type:** [ArcButtonStyleMode](arkts-arkui-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
+**Type:** [ArcButtonStyleMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-arcbutton-arcbuttonstylemode-e.md)
 
-**Default:** ArcButtonStyleMode.EMPHASIZED_LIGHT
+**Since:** 18
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CommonArcButtonOptions-styleMode?: ArcButtonStyleMode--><!--Device-CommonArcButtonOptions-styleMode?: ArcButtonStyleMode-End-->
 

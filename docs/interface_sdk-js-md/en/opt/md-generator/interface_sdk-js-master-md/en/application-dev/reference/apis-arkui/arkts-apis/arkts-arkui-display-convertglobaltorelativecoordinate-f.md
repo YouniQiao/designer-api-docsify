@@ -14,9 +14,11 @@ function convertGlobalToRelativeCoordinate(position: Position, displayId?: numbe
 
 Converts global coordinates (based on the top-left corner of the primary screen) into relative coordinates (based on the top-left corner of the screen specified by **displayId**). This API supports only coordinate conversion between the primary screen and extended screen. If **displayId** is not passed, the coordinates are converted relative to the screen where the global coordinates are located. If the global coordinates are not on any screen, the coordinates are converted relative to the primary screen by default.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition--><!--Device-display-function convertGlobalToRelativeCoordinate(position: Position, displayId?: long): RelativePosition-End-->
 
@@ -39,8 +41,8 @@ Converts global coordinates (based on the top-left corner of the primary screen)
 
 | Error Code ID |
 | --- |
-| [1400004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400004-parameter-error) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-display.md#1400003-abnormal-display-manager-service) |
+| [1400004](../errorcode-display.md#1400004-parameter-error) |
+| [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) |
 
 ## Examples
 

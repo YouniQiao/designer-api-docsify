@@ -6,7 +6,9 @@ type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 
 用于不同时间长短的点击重复时间。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'--><!--Device-config-type ClickResponseTime = 'Short' | 'Medium' | 'Long'-End-->
 

@@ -6,7 +6,9 @@ export type DriverExtensionContext = _DriverExtensionContext
 
 DriverExtensionAbility的上下文环境。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export type DriverExtensionContext = _DriverExtensionContext--><!--Device-unnamed-export type DriverExtensionContext = _DriverExtensionContext-End-->
 

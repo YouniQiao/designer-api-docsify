@@ -6,11 +6,11 @@
 function getOriginalFileName(fileName: string): string
 ```
 
-获取指定DLP文件名的原始文件名。该接口为同步接口。
-
-根据原始文件名后缀判断文件类型，选择对应的应用打开。
+获取指定DLP文件名的原始文件名。该接口为同步接口。 根据原始文件名后缀判断文件类型，选择对应的应用打开。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getOriginalFileName(fileName: string): string--><!--Device-dlpPermission-function getOriginalFileName(fileName: string): string-End-->
 
@@ -32,8 +32,8 @@ function getOriginalFileName(fileName: string): string
 
 | 错误码ID |
 | --- |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

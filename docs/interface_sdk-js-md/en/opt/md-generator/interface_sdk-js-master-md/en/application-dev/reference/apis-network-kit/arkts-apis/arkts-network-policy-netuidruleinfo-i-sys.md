@@ -4,6 +4,8 @@ The interface is used to generate network unique identifiers.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-policy-export interface NetUidRuleInfo--><!--Device-policy-export interface NetUidRuleInfo-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -28,6 +30,8 @@ Rules whether an uid can access to a metered or non-metered network.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-NetUidRuleInfo-rule: NetUidRule--><!--Device-NetUidRuleInfo-rule: NetUidRule-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
@@ -45,6 +49,8 @@ The warning threshold of traffic, default: DATA_USAGE_UNKNOWN.
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-NetUidRuleInfo-uid: number--><!--Device-NetUidRuleInfo-uid: number-End-->
 

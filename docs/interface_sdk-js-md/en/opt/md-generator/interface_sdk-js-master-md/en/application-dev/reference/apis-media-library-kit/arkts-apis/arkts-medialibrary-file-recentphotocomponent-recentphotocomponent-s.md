@@ -1,12 +1,10 @@
 # RecentPhotoComponent
 
-RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?:RecentPhotoCheckResultCallback, onRecentPhotoClick: RecentPhotoClickCallback, onRecentPhotoCheckInfo?:RecentPhotoCheckInfoCallback, })
-
-Allows an application to access the latest image or video file in the public directory to access the recent image or video in the user directory without the media access permission.
+RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback, onRecentPhotoClick: RecentPhotoClickCallback, onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback, }) Allows an application to access the latest image or video file in the public directory to access the recent image or video in the user directory without the media access permission.
 
 **Since:** 12
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct RecentPhotoComponent--><!--Device-unnamed-export declare struct RecentPhotoComponent-End-->
 
@@ -26,7 +24,11 @@ onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback
 
 Callback when check whether photos or videos exists and return the recent photo info
 
+**Type:** [RecentPhotoCheckInfoCallback](arkts-medialibrary-recentphotocheckinfocallback-t.md)
+
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 13.
 
@@ -42,7 +44,11 @@ onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback
 
 Callback when check whether photos or videos exists
 
+**Type:** [RecentPhotoCheckResultCallback](arkts-medialibrary-recentphotocheckresultcallback-t.md)
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -58,7 +64,11 @@ onRecentPhotoClick: RecentPhotoClickCallback
 
 Callback when select photos or videos
 
+**Type:** [RecentPhotoClickCallback](arkts-medialibrary-recentphotoclickcallback-t.md)
+
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -77,6 +87,8 @@ recentPhotoOptions
 **Type:** [RecentPhotoOptions](arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

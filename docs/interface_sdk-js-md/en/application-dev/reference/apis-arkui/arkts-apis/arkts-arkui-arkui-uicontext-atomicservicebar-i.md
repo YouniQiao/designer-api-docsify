@@ -2,9 +2,11 @@
 
 interface AtomicServiceBar
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface AtomicServiceBar--><!--Device-unnamed-export interface AtomicServiceBar-End-->
 
@@ -24,11 +26,15 @@ getBarRect(): Frame
 
 Get size and position of the bar.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-AtomicServiceBar-getBarRect(): Frame--><!--Device-AtomicServiceBar-getBarRect(): Frame-End-->
 
@@ -38,23 +44,55 @@ Get size and position of the bar.
 
 | Type | Description |
 | --- | --- |
-| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](../../apis-na/arkts-apis/arkts-na-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+
+## onBarRectChange
+
+```TypeScript
+onBarRectChange(callback: Callback<Frame>): void
+```
+
+When size and position of the bar changed, callback will be called.
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-AtomicServiceBar-onBarRectChange(callback: Callback<Frame>): void--><!--Device-AtomicServiceBar-onBarRectChange(callback: Callback<Frame>): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Frame](../../apis-na/arkts-apis/arkts-na-graphics-frame-i.md)&gt; | Yes | Callback that param contains the Frame. The parameters of the callback function cannot be undefined or null. |
 
 ## setBackgroundColor
 
 ```TypeScript
-setBackgroundColor(color: Nullable< Color | int | string>): void
+setBackgroundColor(color: Nullable< Color | number | string>): void
 ```
 
 Set the background color of the bar.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AtomicServiceBar-setBackgroundColor(color: Nullable< Color | int | string>): void--><!--Device-AtomicServiceBar-setBackgroundColor(color: Nullable< Color | int | string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceBar-setBackgroundColor(color: Nullable< Color | number | string>): void--><!--Device-AtomicServiceBar-setBackgroundColor(color: Nullable< Color | number | string>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,23 +100,27 @@ Set the background color of the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Nullable&lt;Color \| int \| string&gt; | Yes | the color to set, undefined indicates using default. |
+| color | Nullable&lt;Color \| number \| string&gt; | Yes | the color to set, undefined indicates using default. |
 
 ## setIconColor
 
 ```TypeScript
-setIconColor(color: Nullable< Color | int | string>): void
+setIconColor(color: Nullable< Color | number | string>): void
 ```
 
 Set the color of the icon on the bar.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AtomicServiceBar-setIconColor(color: Nullable< Color | int | string>): void--><!--Device-AtomicServiceBar-setIconColor(color: Nullable< Color | int | string>): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AtomicServiceBar-setIconColor(color: Nullable< Color | number | string>): void--><!--Device-AtomicServiceBar-setIconColor(color: Nullable< Color | number | string>): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -86,7 +128,7 @@ Set the color of the icon on the bar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Nullable&lt;Color \| int \| string&gt; | Yes | the color to set to icon, undefined indicates using default. |
+| color | Nullable&lt;Color \| number \| string&gt; | Yes | the color to set to icon, undefined indicates using default. |
 
 ## setTitleContent
 
@@ -96,11 +138,15 @@ setTitleContent(content: string): void
 
 Set the title of the bar.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceBar-setTitleContent(content: string): void--><!--Device-AtomicServiceBar-setTitleContent(content: string): void-End-->
 
@@ -120,11 +166,15 @@ setTitleFontStyle(font: FontStyle): void
 
 Set the font style of the bar's title.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtomicServiceBar-setTitleFontStyle(font: FontStyle): void--><!--Device-AtomicServiceBar-setTitleFontStyle(font: FontStyle): void-End-->
 
@@ -144,11 +194,15 @@ setVisible(visible: boolean): void
 
 Set the visibility of the bar, except the icon.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AtomicServiceBar-setVisible(visible: boolean): void--><!--Device-AtomicServiceBar-setVisible(visible: boolean): void-End-->
 

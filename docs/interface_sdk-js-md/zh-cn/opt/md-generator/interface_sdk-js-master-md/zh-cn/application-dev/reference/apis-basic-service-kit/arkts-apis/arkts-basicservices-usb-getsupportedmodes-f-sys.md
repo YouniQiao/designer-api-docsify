@@ -12,7 +12,7 @@ function getSupportedModes(portId: number): PortModeType
 
 **废弃版本：** 9
 
-**替代接口：** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes)
+**替代接口：** [getSupportedModes](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md#getSupportedModes（系统接口）)
 
 <!--Device-usb-function getSupportedModes(portId: number): PortModeType--><!--Device-usb-function getSupportedModes(portId: number): PortModeType-End-->
 

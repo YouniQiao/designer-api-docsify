@@ -6,13 +6,11 @@
 function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 ```
 
-获取UIAbility运行时的相关信息。使用Promise异步回调。
+获取UIAbility运行时的相关信息。使用Promise异步回调。 > **说明：** > > 如果应用申请了ohos.permission.GET_RUNNING_INFO权限，可以获取所有应用UIAbility的运行信息，否则只能获取当前应用UIAbility的运行信息。
 
-> **说明：**
-> 
-> 如果应用申请了ohos.permission.GET_RUNNING_INFO权限，可以获取所有应用UIAbility的运行信息，否则只能获取当前应用UIAbility的运行信息。
+**起始版本：** 23
 
-**起始版本：** 14
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.GET_RUNNING_INFO
 
@@ -30,7 +28,7 @@ function getAbilityRunningInfos(): Promise<Array<AbilityRunningInfo>>
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
 
 ## 示例
 

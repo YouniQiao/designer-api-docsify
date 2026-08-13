@@ -2,9 +2,11 @@
 
 Describes the album sorting order.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AlbumOrder--><!--Device-photoAccessHelper-interface AlbumOrder-End-->
 
@@ -26,11 +28,13 @@ albumId: int
 
 Album ID.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-albumId: int--><!--Device-AlbumOrder-albumId: int-End-->
 
@@ -46,11 +50,13 @@ albumOrder: int
 
 Sorting value of the album.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-albumOrder: int--><!--Device-AlbumOrder-albumOrder: int-End-->
 
@@ -66,11 +72,13 @@ orderSection: int
 
 Sorting section of the album.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderSection: int--><!--Device-AlbumOrder-orderSection: int-End-->
 
@@ -86,11 +94,13 @@ orderStatus: int
 
 Sorting status of the album.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderStatus: int--><!--Device-AlbumOrder-orderStatus: int-End-->
 
@@ -106,11 +116,13 @@ orderType: int
 
 Sorting type of the album.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AlbumOrder-orderType: int--><!--Device-AlbumOrder-orderType: int-End-->
 

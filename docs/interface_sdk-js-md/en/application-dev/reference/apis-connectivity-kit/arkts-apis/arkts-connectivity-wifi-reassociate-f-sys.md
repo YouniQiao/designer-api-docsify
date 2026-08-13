@@ -20,7 +20,7 @@ Re-associate to current network.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reassociate](ohos.wifiManager/wifiManager.reassociate)
+**Substitutes:** [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md#reassociate-(System-API))
 
 **Required permissions:** ohos.permission.SET_WIFI_INFO and ohos.permission.MANAGE_WIFI_CONNECTION
 

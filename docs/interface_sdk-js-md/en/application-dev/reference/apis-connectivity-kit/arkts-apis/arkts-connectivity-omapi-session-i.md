@@ -6,6 +6,8 @@ Session represent a connection session to one of the SEs available on the device
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-omapi-export interface Session--><!--Device-omapi-export interface Session-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -28,6 +30,8 @@ Close the connection with the SE. This will close any channels opened by this ap
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-close(): void--><!--Device-Session-close(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -36,8 +40,8 @@ Close the connection with the SE. This will close any channels opened by this ap
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
 ## Examples
 
@@ -68,6 +72,8 @@ Close any channels opened on this session.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-closeChannels(): void--><!--Device-Session-closeChannels(): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -76,8 +82,8 @@ Close any channels opened on this session.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
 ## Examples
 
@@ -102,11 +108,13 @@ try {
 getATR(): number[]
 ```
 
-Get the ATR of this SE.A empty array SHALL be returned if the ATR for this SE is not available.
+Get the ATR of this SE. A empty array SHALL be returned if the ATR for this SE is not available.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Session-getATR(): number[]--><!--Device-Session-getATR(): number[]-End-->
 
@@ -122,8 +130,8 @@ Get the ATR of this SE.A empty array SHALL be returned if the ATR for this SE is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, service state exception. |
 
 ## Examples
 
@@ -155,6 +163,8 @@ Get the reader that provides this session.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-getReader(): Reader--><!--Device-Session-getReader(): Reader-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -169,7 +179,7 @@ Get the reader that provides this session.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -213,6 +223,8 @@ Check if this session is closed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-isClosed(): boolean--><!--Device-Session-isClosed(): boolean-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -227,7 +239,7 @@ Check if this session is closed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
 ## Examples
 
@@ -259,6 +271,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[]): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -279,12 +293,12 @@ This method is provided to ease the development of mobile applications and for b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -327,6 +341,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -336,18 +352,18 @@ This method is provided to ease the development of mobile applications and for b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -386,11 +402,13 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], p2: number): Promise<Channel>
 ```
 
-Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class.Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed.Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases,a Null value SHALL be returned.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class. Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed. Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases, a Null value SHALL be returned. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openBasicChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
@@ -413,12 +431,12 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -456,11 +474,13 @@ function secureElementDemo() {
 openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void
 ```
 
-Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class.Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed.Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases,a Null value SHALL be returned.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Get access to the basic channel, as defined in [ISO 7816-4] (the one that has number 0). The obtained object is an instance of the channel class. Once this channel has been opened by a device application, it is considered as ‘locked’ by this device application, and other calls to this method SHALL return Null, until the channel is closed. Some SE plug-ins, such as those handling UICC, may prevent the use of the Basic Channel. In these cases, a Null value SHALL be returned. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openBasicChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
@@ -472,18 +492,18 @@ Get access to the basic channel, as defined in [ISO 7816-4] (the one that has nu
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array, or Null if no applet is to be selected. |
 | p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -529,6 +549,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[]): Promise<Channel>-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -549,12 +571,12 @@ This method is provided to ease the development of mobile applications and for b
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -597,6 +619,8 @@ This method is provided to ease the development of mobile applications and for b
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], callback: AsyncCallback<Channel>): void-End-->
 
 **System capability:** SystemCapability.Communication.SecureElement
@@ -606,18 +630,18 @@ This method is provided to ease the development of mobile applications and for b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the Channel object. Null if the SE is unable to provide. A new logical channel or is unable to retrieve Access Control rules due to the lack of an available logical channel. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -656,11 +680,13 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], p2: number): Promise<Channel>
 ```
 
-Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0).If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS].If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0). If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS]. If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>--><!--Device-Session-openLogicalChannel(aid: number[], p2: number): Promise<Channel>-End-->
 
@@ -683,12 +709,12 @@ Open a logical channel with the SE, selecting the applet represented by the give
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 
@@ -726,11 +752,13 @@ function secureElementDemo() {
 openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void
 ```
 
-Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0).If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS].If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default.P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values:0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
+Open a logical channel with the SE, selecting the applet represented by the given AID (when the AID is not Null and the length of the AID is not 0). If the length of the AID is 0, the method will select the Issuer Security Domain of the SE by sending a SELECT command with 0 length AID as defined in [GPCS]. If the AID is Null, the method SHALL only send a MANAGE CHANNEL Open and SHALL NOT send a SELECT command. In this case, the default applet associated to the logical channel will be selected by default. P2 is normally 0x00. The device SHOULD allow any value for P2 and SHALL allow the following values: 0x00, 0x04, 0x08, 0x0C (as defined in [ISO 7816-4]).
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void--><!--Device-Session-openLogicalChannel(aid: number[], p2: number, callback: AsyncCallback<Channel>): void-End-->
 
@@ -742,18 +770,18 @@ Open a logical channel with the SE, selecting the applet represented by the give
 | --- | --- | --- | --- |
 | aid | number[] | Yes | The AID of the applet to be selected on this channel, as a byte array. |
 | p2 | number | Yes | The P2 parameter of the SELECT APDU executed on this channel. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the instance of channel. Null if the SE is unable to provide. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Channel](arkts-connectivity-omapi-channel-i.md)&gt; | Yes | The callback to return the instance of channel. Null if the SE is unable to provide. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [3300102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
-| [3300103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
-| [3300101](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
-| [3300104](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-connectivity-kit/errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [3300102](../errorcode-se.md#3300102-failed-to-find-the-desired-se) | NoSuchElementError, the AID on the SE is not available or cannot be selected or a logical channel is already open to a non-multi-selectable applet. |
+| [3300103](../errorcode-se.md#3300103-failed-to-obtain-the-access-rule) | SecurityError, the calling application cannot be granted access to this AID or the default applet on this session. |
+| [3300101](../errorcode-se.md#3300101-abnormal-se-service-status) | IllegalStateError, an attempt is made to use an SE session that has been closed. |
+| [3300104](../errorcode-se.md#3300104-se-chip-io-exception) | IOError, there is a communication problem to the reader or the SE. |
 
 ## Examples
 

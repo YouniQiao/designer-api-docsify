@@ -6,7 +6,7 @@ The AutoAdComponent module provides the capability of displaying carousel ads.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare struct AutoAdComponent--><!--Device-unnamed-declare struct AutoAdComponent-End-->
 
@@ -30,6 +30,8 @@ A constructor used to create an **AutoAdComponent** object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoAdComponent-build(): void--><!--Device-AutoAdComponent-build(): void-End-->
@@ -49,6 +51,8 @@ Ad configuration options.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -70,6 +74,8 @@ Ad request parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoAdComponent-adParam: advertising.AdRequestParams--><!--Device-AutoAdComponent-adParam: advertising.AdRequestParams-End-->
@@ -90,6 +96,8 @@ Ad display parameters.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions--><!--Device-AutoAdComponent-displayOptions: advertising.AdDisplayOptions-End-->
@@ -109,6 +117,8 @@ Ad status change callback.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

@@ -1,10 +1,12 @@
 # PopupIconOptions
 
-Defines the popup icon options
+Defines the icon options.
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PopupIconOptions--><!--Device-unnamed-export interface PopupIconOptions-End-->
 
@@ -22,17 +24,19 @@ import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOpt
 borderRadius?: Length | BorderRadiuses
 ```
 
-Set the icon border radius.
+Rounded corner of the icon. Default value: **\$r('sys.float.ohos_id_corner_radius_default_s')**
 
 **Type:** Length \| BorderRadiuses
 
-**Default:** $r('sys.float.ohos_id_corner_radius_default_s')
+**Since:** 11
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupIconOptions-borderRadius?: Length | BorderRadiuses--><!--Device-PopupIconOptions-borderRadius?: Length | BorderRadiuses-End-->
 
@@ -44,15 +48,19 @@ Set the icon border radius.
 fillColor?: ResourceColor
 ```
 
-Set the icon fill color.
+Icon fill color. This property applies only to an SVG image. By default, the icon color is not changed.
 
 **Type:** ResourceColor
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupIconOptions-fillColor?: ResourceColor--><!--Device-PopupIconOptions-fillColor?: ResourceColor-End-->
 
@@ -64,17 +72,19 @@ Set the icon fill color.
 height?: Dimension
 ```
 
-Set the icon height.
+Icon height. Default value: **32VP**
 
 **Type:** Dimension
 
-**Default:** 32.0_vp
+**Since:** 11
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupIconOptions-height?: Dimension--><!--Device-PopupIconOptions-height?: Dimension-End-->
 
@@ -83,20 +93,24 @@ Set the icon height.
 ## image
 
 ```TypeScript
-image?: ResourceStr
+image: ResourceStr
 ```
 
-Set the icon image.
+Icon content.
 
 **Type:** ResourceStr
 
-**Since:** 23
+**Since:** 11
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PopupIconOptions-image?: ResourceStr--><!--Device-PopupIconOptions-image?: ResourceStr-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-PopupIconOptions-image: ResourceStr--><!--Device-PopupIconOptions-image: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -106,17 +120,19 @@ Set the icon image.
 width?: Dimension
 ```
 
-Set the icon width.
+Icon width. Default value: **32VP**
 
 **Type:** Dimension
 
-**Default:** 32.0_vp
+**Since:** 11
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PopupIconOptions-width?: Dimension--><!--Device-PopupIconOptions-width?: Dimension-End-->
 

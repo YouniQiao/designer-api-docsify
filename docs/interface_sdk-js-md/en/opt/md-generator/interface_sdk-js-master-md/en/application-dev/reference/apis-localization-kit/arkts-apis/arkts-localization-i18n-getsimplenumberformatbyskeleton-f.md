@@ -14,9 +14,11 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat--><!--Device-i18n-export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.Locale): SimpleNumberFormat-End-->
 
@@ -39,7 +41,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Error Code ID |
 | --- |
-| [8900001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#8900001-parameter-verification-error) |
+| [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) |
 
 
 ## getSimpleNumberFormatBySkeleton
@@ -54,7 +56,7 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSimpleNumberFormatBySkeleton](i18n.getSimpleNumberFormatBySkeleton(skeleton:)
+**Substitutes:** [getSimpleNumberFormatBySkeleton](#getSimpleNumberFormatBySkeleton)(skeleton: string, locale?: Intl.Locale)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -79,4 +81,4 @@ Obtains a **SimpleNumberFormat** object based on the specified skeleton.
 
 | Error Code ID |
 | --- |
-| [890001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-localization-kit/errorcode-i18n.md#890001-parameter-error) |
+| [890001](../errorcode-i18n.md#890001-parameter-error) |

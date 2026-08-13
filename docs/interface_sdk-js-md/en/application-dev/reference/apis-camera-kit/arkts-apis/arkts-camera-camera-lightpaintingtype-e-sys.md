@@ -2,9 +2,11 @@
 
 Enumerates the types of light painting shutter modes.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum LightPaintingType--><!--Device-camera-enum LightPaintingType-End-->
 
@@ -20,9 +22,11 @@ TRAFFIC_TRAILS = 0
 
 Traffic trails.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LightPaintingType-TRAFFIC_TRAILS = 0--><!--Device-LightPaintingType-TRAFFIC_TRAILS = 0-End-->
 
@@ -38,9 +42,11 @@ STAR_TRAILS = 1
 
 Star trails.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LightPaintingType-STAR_TRAILS = 1--><!--Device-LightPaintingType-STAR_TRAILS = 1-End-->
 
@@ -56,9 +62,11 @@ SILKY_WATER = 2
 
 Silky water.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LightPaintingType-SILKY_WATER = 2--><!--Device-LightPaintingType-SILKY_WATER = 2-End-->
 
@@ -74,9 +82,11 @@ LIGHT_GRAFFITI = 3
 
 Light graffiti.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LightPaintingType-LIGHT_GRAFFITI = 3--><!--Device-LightPaintingType-LIGHT_GRAFFITI = 3-End-->
 

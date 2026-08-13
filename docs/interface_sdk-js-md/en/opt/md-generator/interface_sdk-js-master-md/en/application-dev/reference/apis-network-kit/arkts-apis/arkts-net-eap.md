@@ -2,7 +2,9 @@
 
 Provides interfaces to manage ethernet.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace eap--><!--Device-unnamed-declare namespace eap-End-->
 
@@ -20,11 +22,11 @@ import { eap } from '@kit.NetworkKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [logOffEthEap](arkts-network-eap-logoffetheap-f.md#logoffetheap) |
-| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md#regcustomeaphandler) |
-| [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md#replycustomeapdata) |
-| [startEthEap](arkts-network-eap-startetheap-f.md#startetheap) |
-| [unregCustomEapHandler](arkts-network-eap-unregcustomeaphandler-f.md#unregcustomeaphandler) |
+| [logOffEthEap](arkts-network-eap-logoffetheap-f.md#logOffEthEap) |
+| [regCustomEapHandler](arkts-network-eap-regcustomeaphandler-f.md#regCustomEapHandler) |
+| [replyCustomEapData](arkts-network-eap-replycustomeapdata-f.md#replyCustomEapData) |
+| [startEthEap](arkts-network-eap-startetheap-f.md#startEthEap) |
+| [unregCustomEapHandler](arkts-network-eap-unregcustomeaphandler-f.md#unregCustomEapHandler) |
 
 ### Interfaces
 

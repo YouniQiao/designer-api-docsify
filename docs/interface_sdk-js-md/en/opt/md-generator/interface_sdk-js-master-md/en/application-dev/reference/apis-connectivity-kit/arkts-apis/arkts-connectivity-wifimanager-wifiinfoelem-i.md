@@ -2,7 +2,9 @@
 
 Wi-Fi information elements.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-wifiManager-interface WifiInfoElem--><!--Device-wifiManager-interface WifiInfoElem-End-->
 
@@ -24,7 +26,9 @@ Element content
 
 **Type:** Uint8Array
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiInfoElem-content: Uint8Array--><!--Device-WifiInfoElem-content: Uint8Array-End-->
 
@@ -40,7 +44,9 @@ Element id
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WifiInfoElem-eid: int--><!--Device-WifiInfoElem-eid: int-End-->
 

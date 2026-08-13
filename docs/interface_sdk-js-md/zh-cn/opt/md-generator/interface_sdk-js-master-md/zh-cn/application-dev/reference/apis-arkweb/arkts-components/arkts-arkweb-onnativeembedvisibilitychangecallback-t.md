@@ -8,6 +8,8 @@ type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeE
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void--><!--Device-unnamed-type OnNativeEmbedVisibilityChangeCallback = (nativeEmbedVisibilityInfo: NativeEmbedVisibilityInfo) => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

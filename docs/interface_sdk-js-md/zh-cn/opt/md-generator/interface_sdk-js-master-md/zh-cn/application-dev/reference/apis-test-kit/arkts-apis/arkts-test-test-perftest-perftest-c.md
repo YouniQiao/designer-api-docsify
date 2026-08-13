@@ -2,7 +2,9 @@
 
 PerfTest类为白盒性能测试框架的总入口，提供测试任务创建、测试代码段执行和数据采集、测量结果获取等能力。通过[create](#create)创建实例。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class PerfTest--><!--Device-unnamed-declare class PerfTest-End-->
 
@@ -16,9 +18,11 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 静态方法，构造一个PerfTest对象，并返回该对象。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest--><!--Device-PerfTest-static create(strategy: PerfTestStrategy): PerfTest-End-->
 
@@ -40,10 +44,10 @@ static create(strategy: PerfTestStrategy): PerfTest
 
 | 错误码ID |
 | --- |
-| [32400007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-接口不支持并行调用) |
-| [32400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-内部错误) |
-| [32400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400003-参数校验失败) |
-| [32400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400001-初始化失败) |
+| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) |
+| [32400002](../errorcode-perftest.md#32400002-内部错误) |
+| [32400003](../errorcode-perftest.md#32400003-参数校验失败) |
+| [32400001](../errorcode-perftest.md#32400001-初始化失败) |
 
 ## 示例
 
@@ -82,9 +86,11 @@ destroy(): void
 
 销毁PerfTest对象。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-destroy(): void--><!--Device-PerfTest-destroy(): void-End-->
 
@@ -94,8 +100,8 @@ destroy(): void
 
 | 错误码ID |
 | --- |
-| [32400007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-接口不支持并行调用) |
-| [32400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-内部错误) |
+| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) |
+| [32400002](../errorcode-perftest.md#32400002-内部错误) |
 
 ## 示例
 
@@ -129,9 +135,11 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 获取指定性能指标的测量数据。需要在run()执行完成后调用，否则无法获取到有效的测量数据。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult--><!--Device-PerfTest-getMeasureResult(metric: PerfMetric): PerfMeasureResult-End-->
 
@@ -153,10 +161,10 @@ getMeasureResult(metric: PerfMetric): PerfMeasureResult
 
 | 错误码ID |
 | --- |
-| [32400006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400006-无法获取性能数据) |
-| [32400007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-接口不支持并行调用) |
-| [32400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-内部错误) |
-| [32400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400003-参数校验失败) |
+| [32400006](../errorcode-perftest.md#32400006-无法获取性能数据) |
+| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) |
+| [32400002](../errorcode-perftest.md#32400002-内部错误) |
+| [32400003](../errorcode-perftest.md#32400003-参数校验失败) |
 
 ## 示例
 
@@ -190,9 +198,11 @@ run(): Promise<void>
 
 运行性能测试，迭代执行测试代码段并采集性能数据，使用Promise回调。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-PerfTest-run(): Promise<void>--><!--Device-PerfTest-run(): Promise<void>-End-->
 
@@ -208,10 +218,10 @@ run(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [32400007](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400007-接口不支持并行调用) |
-| [32400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400004-执行回调函数失败) |
-| [32400005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400005-采集性能数据失败) |
-| [32400002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-test-kit/errorcode-perftest.md#32400002-内部错误) |
+| [32400007](../errorcode-perftest.md#32400007-接口不支持并行调用) |
+| [32400004](../errorcode-perftest.md#32400004-执行回调函数失败) |
+| [32400005](../errorcode-perftest.md#32400005-采集性能数据失败) |
+| [32400002](../errorcode-perftest.md#32400002-内部错误) |
 
 ## 示例
 

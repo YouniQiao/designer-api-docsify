@@ -12,9 +12,11 @@ import { bundleManager } from '@kit.AbilityKit';
 function getInstalledBundleList(bundleFlags: number): Promise<Array<BundleInfo>>
 ```
 
-Obtains all the bundle information in the system based on the given bundle flags.This API uses a promise to return the result.
+Obtains all the bundle information in the system based on the given bundle flags. This API uses a promise to return the result.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
@@ -40,7 +42,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

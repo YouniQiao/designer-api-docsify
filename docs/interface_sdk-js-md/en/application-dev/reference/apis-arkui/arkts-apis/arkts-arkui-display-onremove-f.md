@@ -16,7 +16,9 @@ Register the callback for display remove events.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-display-function onRemove(callback: Callback<long>): void--><!--Device-display-function onRemove(callback: Callback<long>): void-End-->
 
@@ -26,5 +28,5 @@ Register the callback for display remove events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;long&gt; | Yes | the display id of changed |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;long&gt; | Yes | the display id of changed |
 

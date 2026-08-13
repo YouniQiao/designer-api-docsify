@@ -6,6 +6,8 @@ An ImageData object is a common object that stores the actual pixel data of a Ca
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class ImageData--><!--Device-unnamed-export declare class ImageData-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ A one-dimensional array of color values. The color values are sorted in the RGBA
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 
@@ -46,6 +50,8 @@ Actual height of the ImageData object, in pixels.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the FA model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -67,6 +73,8 @@ Actual width of the ImageData object, in pixels.
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the FA model.
 

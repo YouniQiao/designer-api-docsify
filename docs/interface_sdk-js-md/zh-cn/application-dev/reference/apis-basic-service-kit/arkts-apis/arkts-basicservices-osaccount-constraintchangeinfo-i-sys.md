@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface ConstraintChangeInfo--><!--Device-osAccount-interface ConstraintChangeInfo-End-->
 
@@ -18,13 +20,15 @@
 constraint: string
 ```
 
-发生变更的[约束](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#系统账号约束列表)。
+发生变更的约束。
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConstraintChangeInfo-constraint: string--><!--Device-ConstraintChangeInfo-constraint: string-End-->
 
@@ -38,15 +42,15 @@ constraint: string
 isEnabled: boolean
 ```
 
-发生变更的约束的使能状态。默认：false。
-
-true表示目标约束已使能；false表示目标约束未使能。
+发生变更的约束的使能状态。默认：false。 true表示目标约束已使能；false表示目标约束未使能。
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConstraintChangeInfo-isEnabled: boolean--><!--Device-ConstraintChangeInfo-isEnabled: boolean-End-->
 

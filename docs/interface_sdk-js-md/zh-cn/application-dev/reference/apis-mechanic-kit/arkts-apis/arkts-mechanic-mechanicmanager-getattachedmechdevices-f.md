@@ -8,9 +8,11 @@ function getAttachedMechDevices(): MechInfo[]
 
 获取已连接的机械设备列表
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]--><!--Device-mechanicManager-function getAttachedMechDevices(): MechInfo[]-End-->
 
@@ -26,7 +28,7 @@ function getAttachedMechDevices(): MechInfo[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [33300001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-mechanic-kit/errorcode-mechanic.md#33300001-系统错误) | Service exception. |
+| [33300001](../errorcode-mechanic.md#33300001-系统错误) | Service exception. |
 
 ## 示例
 

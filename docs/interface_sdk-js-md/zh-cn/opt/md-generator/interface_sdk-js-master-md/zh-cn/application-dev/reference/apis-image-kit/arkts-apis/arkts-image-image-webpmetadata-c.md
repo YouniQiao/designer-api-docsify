@@ -4,6 +4,8 @@ WebP metadata.
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-image-class WebPMetadata--><!--Device-image-class WebPMetadata-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
@@ -14,11 +16,13 @@ WebP metadata.
 readonly canvasHeight?: number
 ```
 
-Canvas Height.Unit: px, The value should be an integer.
+Canvas Height. Unit: px, The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,11 +36,13 @@ Canvas Height.Unit: px, The value should be an integer.
 readonly canvasWidth?: number
 ```
 
-Canvas Width.Unit: px, The value should be an integer.
+Canvas Width. Unit: px, The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,11 +56,13 @@ Canvas Width.Unit: px, The value should be an integer.
 readonly delayTime?: number
 ```
 
-Delay of each frame.Unit: ms, The value should be an integer.
+Delay of each frame. Unit: ms, The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,6 +82,8 @@ WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-WebPMetadata-readonly loopCount?: int--><!--Device-WebPMetadata-readonly loopCount?: int-End-->
@@ -86,11 +96,13 @@ WebP图片动画循环的次数。如果取值为0，则表示不限次数。
 readonly unclampedDelayTime?: number
 ```
 
-Unclamped delay of each frame.Unit: ms, The value should be an integer.
+Unclamped delay of each frame. Unit: ms, The value should be an integer.
 
 **类型：** number
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

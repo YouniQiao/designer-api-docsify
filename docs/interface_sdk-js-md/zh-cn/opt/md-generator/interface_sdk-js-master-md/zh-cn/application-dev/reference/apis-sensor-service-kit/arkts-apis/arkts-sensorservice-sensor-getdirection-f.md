@@ -6,19 +6,13 @@
 function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-根据旋转矩阵计算设备的方向，使用Callback异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)
-> 替代。
+根据旋转矩阵计算设备的方向，使用Callback异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation) > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOrientation](sensor.getOrientation(rotationMatrix:)
+**替代接口：** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)(rotationMatrix: Array&lt;double&gt;, callback: AsyncCallback&lt;Array&lt;double&gt;&gt;)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>, callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -56,18 +50,13 @@ sensor.getDirection([1, 0, 0, 0, 1, 0, 0, 0, 1], (err: BusinessError, data: Arra
 function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>
 ```
 
-根据旋转矩阵计算设备的方向，使用Promise异步方式返回结果。
-
-> **说明：**
-> 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)替代。
+根据旋转矩阵计算设备的方向，使用Promise异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getOrientation](sensor.getOrientation(rotationMatrix:)
+**替代接口：** [getOrientation](arkts-sensorservice-sensor-getorientation-f.md#getOrientation)(rotationMatrix: Array&lt;double&gt;)
 
 <!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>--><!--Device-sensor-function getDirection(rotationMatrix: Array<number>): Promise<Array<number>>-End-->
 

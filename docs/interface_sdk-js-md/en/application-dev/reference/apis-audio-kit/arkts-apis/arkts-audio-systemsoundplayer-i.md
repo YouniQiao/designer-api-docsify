@@ -1,11 +1,12 @@
 # SystemSoundPlayer
 
-Implements a system sound player that provides functions for loading, unloading, playing system sounds.Before using these functions, application must call  
-[createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createSystemSoundPlayer) to create a SystemSoundPlayer instance first.
+Implements a system sound player that provides functions for loading, unloading, playing system sounds. Before using these functions, application must call [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createSystemSoundPlayer) to create a SystemSoundPlayer instance first.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SystemSoundPlayer--><!--Device-unnamed-export interface SystemSoundPlayer-End-->
 
@@ -21,7 +22,9 @@ Loads a system sound.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -45,9 +48,9 @@ Loads a system sound.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## Examples
 
@@ -71,7 +74,9 @@ Plays a system sound.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,9 +100,9 @@ Plays a system sound.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## Examples
 
@@ -121,7 +126,9 @@ Releases this system sound player instance.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -139,7 +146,7 @@ Releases this system sound player instance.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
 
 ## Examples
 
@@ -163,7 +170,9 @@ Unloads a system sound that has been loaded before.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -187,8 +196,8 @@ Unloads a system sound that has been loaded before.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) | Crash or blocking occurs in system process. |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | Parameter check failed. Returned by promise. |
 
 ## Examples
 

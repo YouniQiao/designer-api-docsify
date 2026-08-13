@@ -14,7 +14,9 @@ export function getTimeZone(zoneID?: string): TimeZone
 
 Obtains the **TimeZone** object corresponding to the specified time zone ID.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

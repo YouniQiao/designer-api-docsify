@@ -2,9 +2,11 @@
 
 Enumerates the playback states on the current web page.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum MediaPlaybackState--><!--Device-webview-enum MediaPlaybackState-End-->
 
@@ -18,9 +20,13 @@ NONE = 0
 
 No audio or video playback is started on the page.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaPlaybackState-NONE = 0--><!--Device-MediaPlaybackState-NONE = 0-End-->
 
@@ -34,9 +40,13 @@ PLAYING = 1
 
 The audio and video on the page are being played.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaPlaybackState-PLAYING = 1--><!--Device-MediaPlaybackState-PLAYING = 1-End-->
 
@@ -50,9 +60,13 @@ PAUSED = 2
 
 The audio and video on the page are paused.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaPlaybackState-PAUSED = 2--><!--Device-MediaPlaybackState-PAUSED = 2-End-->
 
@@ -66,9 +80,13 @@ STOPPED = 3
 
 The audio and video on the page are stopped.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaPlaybackState-STOPPED = 3--><!--Device-MediaPlaybackState-STOPPED = 3-End-->
 

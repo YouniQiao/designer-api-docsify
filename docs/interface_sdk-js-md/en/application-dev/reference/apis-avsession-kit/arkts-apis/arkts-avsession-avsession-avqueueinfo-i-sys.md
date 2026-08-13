@@ -2,9 +2,11 @@
 
 The play list information definition.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface AVQueueInfo--><!--Device-avSession-interface AVQueueInfo-End-->
 
@@ -28,9 +30,11 @@ The id of play list
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-avQueueId: string--><!--Device-AVQueueInfo-avQueueId: string-End-->
 
@@ -44,13 +48,15 @@ The id of play list
 avQueueImage: image.PixelMap | string
 ```
 
-The artwork of play list, can be a [PixelMap](PixelMap) or a URI formatted string,
+The artwork of play list, can be a PixelMap or a URI formatted string,
 
 **Type:** image.PixelMap \| string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string--><!--Device-AVQueueInfo-avQueueImage: image.PixelMap | string-End-->
 
@@ -68,9 +74,11 @@ The name of play list
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-avQueueName: string--><!--Device-AVQueueInfo-avQueueName: string-End-->
 
@@ -88,9 +96,11 @@ The bundle name of application which current play list belongs to.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-bundleName: string--><!--Device-AVQueueInfo-bundleName: string-End-->
 
@@ -104,13 +114,15 @@ The bundle name of application which current play list belongs to.
 lastPlayedTime?: long
 ```
 
-The time when the user last played the playlist.The time format can be system, such as 1611081385000, it means 2021-01-20 02:36:25.
+The time when the user last played the playlist. The time format can be system, such as 1611081385000, it means 2021-01-20 02:36:25.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AVQueueInfo-lastPlayedTime?: long--><!--Device-AVQueueInfo-lastPlayedTime?: long-End-->
 

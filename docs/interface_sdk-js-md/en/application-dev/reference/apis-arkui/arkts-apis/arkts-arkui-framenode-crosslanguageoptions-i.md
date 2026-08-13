@@ -1,12 +1,14 @@
 # CrossLanguageOptions
 
-Defines the cross-language options.
+Provides options for configuring or querying the cross-language access permissions for a FrameNode. For example, for nodes created using ArkTS, this API can control whether non-ArkTS languages are allowed to access or modify the attributes of these nodes.
 
-**Since:** 23
+**Since:** 15
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
 
-<!--Device-unnamed-export declare interface CrossLanguageOptions--><!--Device-unnamed-export declare interface CrossLanguageOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare interface CrossLanguageOptions--><!--Device-unnamed-declare interface CrossLanguageOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,15 +18,21 @@ Defines the cross-language options.
 attributeSetting?: boolean
 ```
 
-Defines if it enables setting attributes cross-language. Default value is false.
+Whether the FrameNode supports cross-language settings. The value **true** means the FrameNode supports cross-language settings, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Default:** false
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Since:** 15
+
+**ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-CrossLanguageOptions-attributeSetting?: boolean--><!--Device-CrossLanguageOptions-attributeSetting?: boolean-End-->
 
@@ -36,15 +44,21 @@ Defines if it enables setting attributes cross-language. Default value is false.
 treeOperating?: boolean
 ```
 
-Defines if it enables tree operations cross-language. Default value is false.Tree operations include appendChild, removeChild, insertChildAfter, etc.
+Whether the FrameNode supports cross-language operations on the component tree. The value **true** means the FrameNode supports cross-language operations on the component tree, and **false** means the opposite. The default value is **false**. Note: When **treeOperating** is set to **true** for a FrameNode, the FrameNode can call [addChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#addchild), [insertChildAfter](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildafter), [insertChildAt](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildat), [insertChildBefore](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#insertchildbefore), and [removeChild](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#removechild) across languages.
 
 **Type:** boolean
 
+**Default:** false
+
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CrossLanguageOptions-treeOperating?: boolean--><!--Device-CrossLanguageOptions-treeOperating?: boolean-End-->
 

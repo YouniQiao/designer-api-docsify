@@ -3,19 +3,47 @@
 ## onKey
 
 ```TypeScript
+function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void
+```
+
+订阅系统快捷键，当满足条件的组合按键输入事件发生时，使用Callback异步方式上报组合按键数据。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-inputConsumer-function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void--><!--Device-inputConsumer-function onKey(keyOptions: KeyOptions, callback: Callback<KeyOptions>): void-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.InputConsumer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| keyOptions | [KeyOptions](../../apis-test-kit/arkts-apis/arkts-test-uitest-keyoptions-i.md) | 是 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;KeyOptions&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
+
+## onKey
+
+```TypeScript
 function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void
 ```
 
-订阅组合按键（按键命令模式），支持通过triggerType指定不同的触发模式。当满足条件的组合按键输入事件发生时，使用callback异步回调。
-
-与   
-[inputConsumer.on('key')](inputConsumer.on(type: 'key', keyOptions: KeyOptions, callback: Callback&lt;KeyOptions&gt;))现有接口的区别：
-
-- 本接口的keyOptions支持triggerType参数，可选择按键按下触发、重复按下触发、重复按下或抬起均会触发等模式。  
-- 本接口回调参数为KeyCommandCallback类型，同时接收KeyOptions和KeyEvent对象。  
-- 本接口采用事件消费机制，可通过事件消费阻止按键事件向后传递。
+订阅组合按键（按键命令模式），支持通过triggerType指定不同的触发模式。当满足条件的组合按键输入事件发生时，使用callback异步回调。 与 [inputConsumer.on('key')](arkts-input-inputconsumer-onkey-f-sys.md#on_key) 现有接口的区别： - 本接口的keyOptions支持triggerType参数，可选择按键按下触发、重复按下触发、重复按下或抬起均会触发等模式。 - 本接口回调参数为KeyCommandCallback类型，同时接收KeyOptions和KeyEvent对象。 - 本接口采用事件消费机制，可通过事件消费阻止按键事件向后传递。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +64,7 @@ function onKey(keyOptions: KeyOptions, callback:KeyCommandCallback): void
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

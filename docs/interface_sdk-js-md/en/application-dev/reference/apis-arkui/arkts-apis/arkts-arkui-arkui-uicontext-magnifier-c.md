@@ -1,12 +1,14 @@
 # Magnifier
 
-Provides the method for magnifier capabilities.
+Provides the capability of displaying and hiding of the magnifier. The magnifier enlarges the component content for you to view the component details. > **NOTE：**> > - In the following API examples, you must first use [getMagnifier()](arkts-arkui-arkui-uicontext-uicontext-c.md#getMagnifier) in **UIContext** > to obtain a **Magnifier** instance, and then call the APIs using the obtained instance. > > - The magnifier capability of this class does not affect that of text components. For text components, you are > advised to use the built-in magnifier capability.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
-<!--Device-unnamed-export declare class Magnifier--><!--Device-unnamed-export declare class Magnifier-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class Magnifier--><!--Device-unnamed-export class Magnifier-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -22,13 +24,17 @@ import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChange
 bind(id: string): void
 ```
 
-Bind magnifier to a component.
+Binds the magnifier to the component with the specified ID. > **NOTE：**> > Obtain the Magnifier instance by using the getMagnifier() method in UIContext.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Magnifier-bind(id: string): void--><!--Device-Magnifier-bind(id: string): void-End-->
 
@@ -38,23 +44,27 @@ Bind magnifier to a component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | component id. |
+| id | string | Yes | Component ID, which can be set through the universal attribute id or key. If the component ID is an empty string or no component is found based on the specified ID, the magnifier is not displayed. |
 
 ## show
 
 ```TypeScript
-show(x: double, y: double): void
+show(x: number, y: number): void
 ```
 
-Set the position of the magnified content.
+Sets the position of the component content displayed by the magnifier relative to the upper left corner of the component. After the setting is successful, the magnifier displays the content centered at the coordinate point. > **NOTE：**> > When the content of the component bound to the magnifier changes, the magnifier does not automatically update the > displayed content. You need to call the **show** API to update the displayed content of the magnifier.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Magnifier-show(x: double, y: double): void--><!--Device-Magnifier-show(x: double, y: double): void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 22.
+
+<!--Device-Magnifier-show(x: number, y: number): void--><!--Device-Magnifier-show(x: number, y: number): void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -62,8 +72,8 @@ Set the position of the magnified content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | double | Yes | the x position of the magnified content relative to the component. The unit of x is vp. |
-| y | double | Yes | the y position of the magnified content relative to the component. The unit of y is vp. |
+| x | number | Yes | Horizontal coordinate of the component content displayed by the magnifier, relative to the component itself, in vp. If the coordinate value is greater than the component width or less than 0, the magnifier is not displayed. If the value is **undefined**, the current display status of the magnifier is retained. |
+| y | number | Yes | Vertical coordinate of the component content displayed by the magnifier, relative to the component itself, in vp. If the coordinate value is greater than the component height or less than 0, the magnifier is not displayed. If the value is **undefined**, the current display status of the magnifier is retained. |
 
 ## unbind
 
@@ -71,13 +81,17 @@ Set the position of the magnified content.
 unbind(): void
 ```
 
-Unbind the magnifier from its associated component.
+Unbinds the magnifier from the current component.
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Magnifier-unbind(): void--><!--Device-Magnifier-unbind(): void-End-->
 

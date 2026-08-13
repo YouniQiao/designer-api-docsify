@@ -12,13 +12,13 @@ import { privacyManager } from '@kit.AbilityKit';
 function stopUsingPermission(tokenID: int, permissionName: Permissions): Promise<void>
 ```
 
-A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result.
-
-This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission).
+A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result. This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)).
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -45,14 +45,14 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
-| [12100007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 ## Examples
 
@@ -75,13 +75,13 @@ privacyManager.stopUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then((
 function stopUsingPermission(tokenID: int, permissionName: Permissions, callback: AsyncCallback<void>): void
 ```
 
-A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses an asynchronous callback to return the result.
+A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses an asynchronous callback to return the result. This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)).
 
-This API must be used in conjunction with [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -95,22 +95,22 @@ This API must be used in conjunction with [startUsingPermission](arkts-ability-p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001. &lt;br&gt;Value constraint: The permission name length cannot exceed 256 characters. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
-| [12100007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 ## Examples
 
@@ -140,13 +140,13 @@ function stopUsingPermission(
   ): Promise<void>
 ```
 
-A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result.
-
-The PID must be the same as the PID passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission).
+A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result. The PID must be the same as the PID passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)).
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -162,10 +162,10 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001. |
-| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Process ID of the caller, which must be the same as the pid passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission). Failure to meet the matching relationship may cause the API call to fail (error code 12100004). &lt;br&gt;The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
-| options | [PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md) | No | Optional parameter for permission usage, used to specify the extension identity. This parameter is passed in when the caller's extension identity information needs to be identified. &lt;br&gt;Default value: Please refer to [PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md#PermissionUsingOptions) for the default values of each property in the structure. |
+| pid | int | No | Process ID of the caller, which must be the same as the pid passed in [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)). Failure to meet the matching relationship may cause the API call to fail (error code 12100004). &lt;br&gt;The value should be an integer. Default value: -1, indicating no response based on the process lifecycle. |
+| options | [PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md) | No | Optional parameter for permission usage, used to specify the extension identity. This parameter is passed in when the caller's extension identity information needs to be identified. &lt;br&gt;Default value: Please refer to [PermissionUsingOptions](arkts-ability-privacymanager-permissionusingoptions-i-sys.md#PermissionUsingOptions-(System-API)) for the default values of each property in the structure. |
 
 **Return value:**
 
@@ -177,13 +177,13 @@ The PID must be the same as the PID passed in [startUsingPermission](arkts-abili
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
-| [12100007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the type of the specified tokenID is not of the application type, or the enhancedIdentity in PermissionUsingOptions exceeds 48 characters. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 
 ## stopUsingPermission
@@ -196,13 +196,13 @@ function stopUsingPermission(
   ): Promise<void>
 ```
 
-A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result.
+A system application calls this API to mark that the specified permission is no longer in use. After a successful call, the privacy service notifies all subscribers of this permission usage status change event of this status change. It is suitable for notifying the system that permission usage has ended when an application completes a sensitive operation or exits the foreground. This API uses a promise to return the result. The pid must be the same as the pid passed into [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)).
 
-The pid must be the same as the pid passed into [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission).
+**Since:** 23
 
-**Since:** 18
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.PERMISSION_USED_STATS
 
@@ -216,9 +216,9 @@ The pid must be the same as the pid passed into [startUsingPermission](arkts-abi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
 | permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to stop using. Passing an invalid value returns error code 12100001. &lt;br&gt;Value constraint: The permission name length cannot exceed 256 characters. |
-| pid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | Process PID of the caller. Must be the same as the pid passed to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission). A mismatch may cause the API call to fail (error code 12100004). &lt;br&gt;The value should be an integer. Default value: -1, indicating no response based on process lifecycle. |
+| pid | int | No | Process PID of the caller. Must be the same as the pid passed to [startUsingPermission](arkts-ability-privacymanager-startusingpermission-f-sys.md#startUsingPermission-(System-API)). A mismatch may cause the API call to fail (error code 12100004). &lt;br&gt;The value should be an integer. Default value: -1, indicating no response based on process lifecycle. |
 
 **Return value:**
 
@@ -230,14 +230,14 @@ The pid must be the same as the pid passed into [startUsingPermission](arkts-abi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12100008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
-| [12100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
-| [12100003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
-| [12100004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
-| [12100007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+| [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission "ohos.permission.PERMISSION_USED_STATS". |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the type of the specified tokenID is not of the application type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
+| [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist or is not a user_grant permission. |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | The API is not used in pair with 'startUsingPermission'. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 ## Examples
 

@@ -2,7 +2,9 @@
 
 Detailed information of statistics.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-statistics-export interface NetStatsInfo--><!--Device-statistics-export interface NetStatsInfo-End-->
 
@@ -24,7 +26,9 @@ Bytes of received.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-rxBytes: long--><!--Device-NetStatsInfo-rxBytes: long-End-->
 
@@ -40,7 +44,9 @@ Packets of received.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-rxPackets: long--><!--Device-NetStatsInfo-rxPackets: long-End-->
 
@@ -56,7 +62,9 @@ Bytes of send.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-txBytes: long--><!--Device-NetStatsInfo-txBytes: long-End-->
 
@@ -72,7 +80,9 @@ Packets of send.
 
 **Type:** number
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NetStatsInfo-txPackets: long--><!--Device-NetStatsInfo-txPackets: long-End-->
 

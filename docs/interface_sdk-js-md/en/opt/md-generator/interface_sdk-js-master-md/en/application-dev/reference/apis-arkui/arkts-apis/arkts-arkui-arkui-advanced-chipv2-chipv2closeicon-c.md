@@ -6,9 +6,9 @@ Defines default close icon.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class ChipV2CloseIcon extends ChipV2Accessibility--><!--Device-unnamed-export declare class ChipV2CloseIcon extends ChipV2Accessibility-End-->
+<!--Device-unnamed-export declare class ChipV2CloseIcon--><!--Device-unnamed-export declare class ChipV2CloseIcon-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +28,8 @@ The constructor of ChipV2CloseIcon
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -45,7 +47,8 @@ The constructor of ChipV2CloseIcon
 ## fontSize
 
 ```TypeScript
-public fontSize?: LengthMetrics
+@Trace
+  public fontSize?: LengthMetrics
 ```
 
 Set font size for the close icon.
@@ -54,10 +57,12 @@ Set font size for the close icon.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2CloseIcon-public fontSize?: LengthMetrics--><!--Device-ChipV2CloseIcon-public fontSize?: LengthMetrics-End-->
+<!--Device-ChipV2CloseIcon-@Trace  public fontSize?: LengthMetrics--><!--Device-ChipV2CloseIcon-@Trace  public fontSize?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

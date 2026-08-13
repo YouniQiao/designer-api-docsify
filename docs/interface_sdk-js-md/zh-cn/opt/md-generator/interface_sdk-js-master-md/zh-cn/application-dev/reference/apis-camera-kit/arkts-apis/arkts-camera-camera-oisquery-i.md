@@ -4,6 +4,8 @@ OIS (Optical Image Stabilization) query interface.
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-camera-interface OISQuery--><!--Device-camera-interface OISQuery-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
@@ -17,6 +19,8 @@ getCurrentCustomOISBias(oisAxis: OISAxes): number
 Gets the current custom bias value for the specified OIS axis.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,8 +46,8 @@ Gets the current custom bias value for the specified OIS axis.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## getCurrentOISMode
 
@@ -54,6 +58,8 @@ getCurrentOISMode(): OISMode
 Gets the current OIS mode.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -73,8 +79,8 @@ Gets the current OIS mode.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## getSupportedOISBiasRange
 
@@ -85,6 +91,8 @@ getSupportedOISBiasRange(oisAxis: OISAxes): Array<number>
 Gets the supported bias range for the specified OIS axis.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,8 +118,8 @@ Gets the supported bias range for the specified OIS axis.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## getSupportedOISBiasStep
 
@@ -122,6 +130,8 @@ getSupportedOISBiasStep(oisAxis: OISAxes): number
 Gets the bias step for the specified OIS axis.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -147,8 +157,8 @@ Gets the bias step for the specified OIS axis.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |
 
 ## isOISModeSupported
 
@@ -159,6 +169,8 @@ isOISModeSupported(mode: OISMode): boolean
 Checks if the specified OIS mode is supported.
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -184,5 +196,5 @@ Checks if the specified OIS mode is supported.
 
 | 错误码ID |
 | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) |
-| [7400103](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) |
+| [7400102](../errorcode-camera.md#7400102-非法操作) |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) |

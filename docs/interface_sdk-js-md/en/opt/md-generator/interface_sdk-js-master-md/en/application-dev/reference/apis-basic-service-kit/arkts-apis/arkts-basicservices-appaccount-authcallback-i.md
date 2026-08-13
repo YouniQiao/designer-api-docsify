@@ -2,7 +2,9 @@
 
 Implements authenticator callbacks.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface AuthCallback--><!--Device-appAccount-interface AuthCallback-End-->
 
@@ -22,27 +24,15 @@ onRequestContinued?: () => void
 
 Called to continue to process the request.
 
-**Since:** 9
+**Type:** () =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthCallback-onRequestContinued?: () => void--><!--Device-AuthCallback-onRequestContinued?: () => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-  if (callback.onRequestContinued != undefined) {
-    callback.onRequestContinued();
-  }
-}).catch((err: BusinessError) => {
-  console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```
 
 ## onRequestRedirected
 
@@ -52,49 +42,15 @@ onRequestRedirected: (request: Want) => void
 
 Called to redirect a request.
 
-**Since:** 9
+**Type:** (request: Want) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthCallback-onRequestRedirected: (request: Want) => void--><!--Device-AuthCallback-onRequestRedirected: (request: Want) => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| request | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes |
-
-## Examples
-
-```TypeScript
-import { Want } from '@kit.AbilityKit';
-
-class MyAuthenticator extends appAccount.Authenticator {
-  createAccountImplicitly(
-    options: appAccount.CreateAccountImplicitlyOptions, callback: appAccount.AuthCallback) {
-    let want: Want = {
-      bundleName: 'com.example.accountjsdemo',
-      abilityName: 'com.example.accountjsdemo.LoginAbility',
-    };
-    callback.onRequestRedirected(want);
-  }
-
-  auth(name: string, authType: string,
-    options: Record<string, Object>, callback: appAccount.AuthCallback) {
-    let result: appAccount.AuthResult = {
-      account: {
-        name: 'Lisi',
-        owner: 'com.example.accountjsdemo',
-      },
-      tokenInfo: {
-        token: 'xxxxxx',
-        authType: 'getSocialData'
-      }
-    };
-    callback.onResult(0, result);
-  }
-}
-```
 
 ## onResult
 
@@ -104,39 +60,12 @@ onResult: (code: number, result?: AuthResult) => void
 
 Called to return the result of an authentication request.
 
-**Since:** 9
+**Type:** (code: number, result?: AuthResult) =&gt; void
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AuthCallback-onResult: (code: int, result?: AuthResult) => void--><!--Device-AuthCallback-onResult: (code: int, result?: AuthResult) => void-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| code | number | Yes |
-| result | [AuthResult](arkts-basicservices-appaccount-authresult-i.md) | No |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let appAccountManager: appAccount.AppAccountManager = appAccount.createAppAccountManager();
-let sessionId = '1234';
-appAccountManager.getAuthCallback(sessionId).then((callback: appAccount.AuthCallback) => {
-  let result: appAccount.AuthResult = {
-    account: {
-      name: 'Lisi',
-      owner: 'com.example.accountjsdemo',
-    },
-    tokenInfo: {
-      token: 'xxxxxx',
-      authType: 'getSocialData'
-    }
-  };
-  callback.onResult(0, result);
-}).catch((err: BusinessError) => {
-  console.error(`getAuthCallback err: code is ${err.code}, message is ${err.message}`);
-});
-```

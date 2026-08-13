@@ -1,8 +1,10 @@
 # SslErrorHandler
 
-Defines the ssl error request result, related to [onSslErrorEventReceive](onSslErrorEventReceive) method.
+Defines the ssl error request result, related to onSslErrorEventReceive method.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class SslErrorHandler--><!--Device-unnamed-declare class SslErrorHandler-End-->
 
@@ -17,6 +19,8 @@ constructor()
 Constructor.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -34,6 +38,8 @@ Cancel this request.
 
 **Since:** 9
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SslErrorHandler-handleCancel(): void--><!--Device-SslErrorHandler-handleCancel(): void-End-->
@@ -49,6 +55,8 @@ handleCancel(abortLoading: boolean): void
 ArkWeb has encountered an SSL certificate error, and this interface indicates whether to terminate or continue displaying the error to users.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 <!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void--><!--Device-SslErrorHandler-handleCancel(abortLoading: boolean): void-End-->
 
@@ -69,6 +77,8 @@ handleConfirm(): void
 Confirm to use the SSL certificate.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

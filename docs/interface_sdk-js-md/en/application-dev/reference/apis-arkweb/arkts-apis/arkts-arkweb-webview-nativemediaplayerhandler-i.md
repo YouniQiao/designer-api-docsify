@@ -1,15 +1,12 @@
 # NativeMediaPlayerHandler
 
-Implements a **NativeMediaPlayerHandler** object used as a parameter of the  
-[CreateNativeMediaPlayerCallback](../../../reference/apis-arkweb/arkts-apis-webview-t.md#createnativemediaplayercallback12)callback. The application uses this object to report the player status to the ArkWeb engine.
+Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The application uses this object to report the player status to the ArkWeb engine. > **NOTE：**> > - The sample effect is subject to the actual device.
 
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
+**Since:** 12
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 <!--Device-webview-interface NativeMediaPlayerHandler--><!--Device-webview-interface NativeMediaPlayerHandler-End-->
 
@@ -24,16 +21,20 @@ import { webview } from '@kit.ArkWeb';
 ## handleBufferedEndTimeChanged
 
 ```TypeScript
-handleBufferedEndTimeChanged(bufferedEndTime: double): void
+handleBufferedEndTimeChanged(bufferedEndTime: number): void
 ```
 
 Called to notify the ArkWeb engine of the buffer time when the buffer time changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: double): void--><!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: number): void--><!--Device-NativeMediaPlayerHandler-handleBufferedEndTimeChanged(bufferedEndTime: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -41,21 +42,25 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bufferedEndTime | double | Yes | Duration of media data in the buffer.&lt;br&gt;Unit: second. Value range: [0, duration] |
+| bufferedEndTime | number | Yes | Duration of media data in the buffer.&lt;br&gt;Unit: second. Value range: [0, duration] |
 
 ## handleDurationChanged
 
 ```TypeScript
-handleDurationChanged(duration: double): void
+handleDurationChanged(duration: number): void
 ```
 
 Called to notify the ArkWeb engine of the total duration of the media.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: double): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void--><!--Device-NativeMediaPlayerHandler-handleDurationChanged(duration: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -63,7 +68,7 @@ Called to notify the ArkWeb engine of the total duration of the media.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | double | Yes | Total duration of the media.&lt;br&gt;Unit: second. Value range: [0,+��) |
+| duration | number | Yes | Total duration of the media.&lt;br&gt;Unit: second. Value range: [0,+��) |
 
 ## handleEnded
 
@@ -73,9 +78,13 @@ handleEnded(): void
 
 Called to notify the ArkWeb engine that the media playback ends.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleEnded(): void--><!--Device-NativeMediaPlayerHandler-handleEnded(): void-End-->
 
@@ -89,9 +98,13 @@ handleError(error: MediaError, errorMessage: string): void
 
 Called to notify the ArkWeb engine that an error occurs with the player.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleError(error: MediaError, errorMessage: string): void--><!--Device-NativeMediaPlayerHandler-handleError(error: MediaError, errorMessage: string): void-End-->
 
@@ -112,9 +125,13 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 Called to notify the ArkWeb engine of the full screen status of the player when the full screen status changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void--><!--Device-NativeMediaPlayerHandler-handleFullscreenChanged(fullscreen: boolean): void-End-->
 
@@ -134,9 +151,13 @@ handleMutedChanged(muted: boolean): void
 
 Called to notify the ArkWeb engine of the muted status of the player when the muted status changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void--><!--Device-NativeMediaPlayerHandler-handleMutedChanged(muted: boolean): void-End-->
 
@@ -156,9 +177,13 @@ handleNetworkStateChanged(state: NetworkState): void
 
 Called to notify the ArkWeb engine of the network status of the player when the network status changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void--><!--Device-NativeMediaPlayerHandler-handleNetworkStateChanged(state: NetworkState): void-End-->
 
@@ -173,16 +198,20 @@ Called to notify the ArkWeb engine of the network status of the player when the 
 ## handlePlaybackRateChanged
 
 ```TypeScript
-handlePlaybackRateChanged(playbackRate: double): void
+handlePlaybackRateChanged(playbackRate: number): void
 ```
 
 Called to notify the ArkWeb engine of the playback rate of the player when the playback rate changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: double): void--><!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: number): void--><!--Device-NativeMediaPlayerHandler-handlePlaybackRateChanged(playbackRate: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -190,7 +219,7 @@ Called to notify the ArkWeb engine of the playback rate of the player when the p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| playbackRate | double | Yes | Playback rate. The value range is [0, +��). |
+| playbackRate | number | Yes | Playback rate. The value range is [0, +��). |
 
 ## handleReadyStateChanged
 
@@ -200,9 +229,13 @@ handleReadyStateChanged(state: ReadyState): void
 
 Called to notify the ArkWeb engine of the cache status of the player when the cache status changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void--><!--Device-NativeMediaPlayerHandler-handleReadyStateChanged(state: ReadyState): void-End-->
 
@@ -222,9 +255,13 @@ handleSeekFinished(): void
 
 Called to notify the ArkWeb engine that the seek operation is complete.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void--><!--Device-NativeMediaPlayerHandler-handleSeekFinished(): void-End-->
 
@@ -238,9 +275,13 @@ handleSeeking(): void
 
 Called to notify the ArkWeb engine that the player enters the seek state.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleSeeking(): void--><!--Device-NativeMediaPlayerHandler-handleSeeking(): void-End-->
 
@@ -254,9 +295,13 @@ handleStatusChanged(status: PlaybackStatus): void
 
 Called to notify the ArkWeb engine of the playback status of the player when the playback status changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void--><!--Device-NativeMediaPlayerHandler-handleStatusChanged(status: PlaybackStatus): void-End-->
 
@@ -271,16 +316,20 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 ## handleTimeUpdate
 
 ```TypeScript
-handleTimeUpdate(currentPlayTime: double): void
+handleTimeUpdate(currentPlayTime: number): void
 ```
 
 Called to notify the ArkWeb engine of the playback progress when the playback progress changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: double): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void--><!--Device-NativeMediaPlayerHandler-handleTimeUpdate(currentPlayTime: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -288,21 +337,25 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentPlayTime | double | Yes | Current progress.&lt;br&gt;Unit: second. Value range: [0, duration] |
+| currentPlayTime | number | Yes | Current progress.&lt;br&gt;Unit: second. Value range: [0, duration] |
 
 ## handleVideoSizeChanged
 
 ```TypeScript
-handleVideoSizeChanged(width: double, height: double): void
+handleVideoSizeChanged(width: number, height: number): void
 ```
 
 Called to notify the ArkWeb engine of the video size of the player.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: double, height: double): void--><!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: double, height: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: number, height: number): void--><!--Device-NativeMediaPlayerHandler-handleVideoSizeChanged(width: number, height: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -310,22 +363,26 @@ Called to notify the ArkWeb engine of the video size of the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | double | Yes | Video width, in pixels. Value range: [0,+��) |
-| height | double | Yes | Video height, in pixels. Value range: [0,+��) |
+| width | number | Yes | Video width, in pixels. Value range: [0,+��) |
+| height | number | Yes | Video height, in pixels. Value range: [0,+��) |
 
 ## handleVolumeChanged
 
 ```TypeScript
-handleVolumeChanged(volume: double): void
+handleVolumeChanged(volume: number): void
 ```
 
 Called to notify the ArkWeb engine of the volume of the player when the volume changes.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: double): void--><!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: double): void-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: number): void--><!--Device-NativeMediaPlayerHandler-handleVolumeChanged(volume: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
 
@@ -333,5 +390,5 @@ Called to notify the ArkWeb engine of the volume of the player when the volume c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| volume | double | Yes | Volume of the player. The value range is [0, 1.0]. |
+| volume | number | Yes | Volume of the player. The value range is [0, 1.0]. |
 

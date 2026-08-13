@@ -6,18 +6,13 @@
 function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?: ChildProcessOptions): Promise<int>
 ```
 
-启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回801错误码。
+启动[ArkTS子进程](../../../application-models/ability-terminology.md#arkts子进程)。使用Promise异步回调。 该接口在Tablet、PC/2in1中可正常调用，在其他设备类型中返回801错误码。 > **说明：** > > 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后执行子进程的 > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数。 > [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数执行完后子进程不会自动销毁，需要子进程调用 > [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md#abort)销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
 
-> **说明：**
-> 
-> 调用该接口创建的子进程不会继承父进程资源，子进程创建成功会返回子进程pid，然后执行子进程的
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数。
-> [ChildProcess.onStart](arkts-ability-app-ability-childprocess-childprocess-c.md#onStart)函数执行完后子进程不会自动销毁，需要子进程调用
-> [process.abort](../../apis-arkts/arkts-apis/arkts-arkts-process-abort-f.md#abort)销毁。调用该接口的进程销毁后，所创建的子进程也会一并销毁。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -37,17 +32,17 @@ function startArkChildProcess(srcEntry: string, args: ChildProcessArgs, options?
 
 | 类型 | 说明 |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise对象，返回子进程pid。 |
+| Promise&lt;int&gt; | Promise对象，返回子进程pid。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [16000050](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
-| [16000061](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
-| [16000062](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit.<br>**适用版本：** 13+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000061](../errorcode-ability.md#16000061-不支持的操作) | Operation not supported. |
+| [16000062](../errorcode-ability.md#16000062-子进程数量超出上限) | The number of child processes exceeds the upper limit.<br>**适用版本：** 13+ |
 
 ## 示例
 

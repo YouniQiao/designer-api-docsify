@@ -1,8 +1,10 @@
 # @ohos.account.osAccount
 
-The **osAccount** module provides basic capabilities for managing system (OS) accounts, including adding, deleting,querying, setting, subscribing to, and enabling an OS account.
+The **osAccount** module provides basic capabilities for managing system (OS) accounts, including adding, deleting, querying, setting, subscribing to, and enabling an OS account.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace osAccount--><!--Device-unnamed-declare namespace osAccount-End-->
 
@@ -20,16 +22,16 @@ import { osAccount } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getaccountmanager) |
-| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isdomainaccountsupported) |
+| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getAccountManager) |
+| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isDomainAccountSupported) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getauthorizationmanager) |
-| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getosaccountsubprofilemanager) |
+| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getAuthorizationManager-(System-API)) |
+| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getOsAccountSubProfileManager-(System-API)) |
 <!--DelEnd-->
 
 ### Classes
@@ -131,4 +133,20 @@ import { osAccount } from '@kit.BasicServicesKit';
 | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e-sys.md) |
 | [ResultCode](arkts-basicservices-osaccount-resultcode-e-sys.md) |
 | [SetPropertyType](arkts-basicservices-osaccount-setpropertytype-e-sys.md) |
+<!--DelEnd-->
+
+<!--Del-->
+### Types（系统接口）
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
+| --- |
+| [DomainPluginAuthFunc](arkts-basicservices-osaccount-domainpluginauthfunc-t-sys.md) |
+| [DomainPluginAuthWithPopupFunc](arkts-basicservices-osaccount-domainpluginauthwithpopupfunc-t-sys.md) |
+| [DomainPluginAuthWithTokenFunc](arkts-basicservices-osaccount-domainpluginauthwithtokenfunc-t-sys.md) |
+| [DomainPluginBindAccountFunc](arkts-basicservices-osaccount-domainpluginbindaccountfunc-t-sys.md) |
+| [DomainPluginGetAccessTokenFunc](arkts-basicservices-osaccount-domainplugingetaccesstokenfunc-t-sys.md) |
+| [DomainPluginGetAccountInfoFunc](arkts-basicservices-osaccount-domainplugingetaccountinfofunc-t-sys.md) |
+| [DomainPluginGetAuthStatusInfoFunc](arkts-basicservices-osaccount-domainplugingetauthstatusinfofunc-t-sys.md) |
+| [DomainPluginIsAccountTokenValidFunc](arkts-basicservices-osaccount-domainpluginisaccounttokenvalidfunc-t-sys.md) |
+| [DomainPluginUnbindAccountFunc](arkts-basicservices-osaccount-domainpluginunbindaccountfunc-t-sys.md) |
 <!--DelEnd-->

@@ -4,6 +4,8 @@ Describes the application bundle information.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 <!--Device-bundleManager-interface BundleInfo--><!--Device-bundleManager-interface BundleInfo-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ Index of an application clone. It takes effect only for application clones.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfo-readonly appIndex: number--><!--Device-BundleInfo-readonly appIndex: number-End-->
@@ -43,6 +47,8 @@ Application information.
 **Type:** ApplicationInfo
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Timestamp for the initial installation of the application bundle. It measures th
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfo-readonly firstInstallTime?: number--><!--Device-BundleInfo-readonly firstInstallTime?: number-End-->
@@ -80,6 +88,8 @@ Timestamp for the installation of the application bundle. It measures the millis
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfo-readonly installTime: number--><!--Device-BundleInfo-readonly installTime: number-End-->
@@ -92,12 +102,13 @@ Timestamp for the installation of the application bundle. It measures the millis
 readonly minCompatibleVersionCode: number
 ```
 
-Minimum compatible version of the application bundle in the distributed scenario. It corresponds to the  
-**minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
+Minimum compatible version of the application bundle in the distributed scenario. It corresponds to the **minCompatibleVersionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -111,12 +122,13 @@ Minimum compatible version of the application bundle in the distributed scenario
 readonly name: string
 ```
 
-Name of the application bundle. It corresponds to the **bundleName** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Name of the application bundle. It corresponds to the **bundleName** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,6 +148,8 @@ Signature information of the bundle.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfo-readonly signatureInfo: SignatureInfo--><!--Device-BundleInfo-readonly signatureInfo: SignatureInfo-End-->
@@ -148,12 +162,13 @@ Signature information of the bundle.
 readonly targetVersion: number
 ```
 
-Target version of the application. It corresponds to the **targetAPIVersion** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Target version of the application. It corresponds to the **targetAPIVersion** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -173,6 +188,8 @@ Timestamp for the last update of the application bundle. It measures the millise
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleInfo-readonly updateTime: number--><!--Device-BundleInfo-readonly updateTime: number-End-->
@@ -185,12 +202,13 @@ Timestamp for the last update of the application bundle. It measures the millise
 readonly vendor: string
 ```
 
-Vendor of the application bundle. It corresponds to the **vendor** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Vendor of the application bundle. It corresponds to the **vendor** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -204,12 +222,13 @@ Vendor of the application bundle. It corresponds to the **vendor** field in the
 readonly versionCode: number
 ```
 
-Version code of the application bundle. It corresponds to the **versionCode** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Version code of the application bundle. It corresponds to the **versionCode** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** number
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -223,12 +242,13 @@ Version code of the application bundle. It corresponds to the **versionCode** fi
 readonly versionName: string
 ```
 
-Version description of the application bundle. It corresponds to the **versionName** field in the  
-[app.json5](../../../quick-start/app-configuration-file.md) file.
+Version description of the application bundle. It corresponds to the **versionName** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

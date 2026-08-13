@@ -2,9 +2,11 @@
 
 Describes the parameters for requesting efficiency resources.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export interface EfficiencyResourcesRequest--><!--Device-backgroundTaskManager-export interface EfficiencyResourcesRequest-End-->
 
@@ -30,7 +32,9 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,16 +50,15 @@ CPU level. If **resourceTypes** is set to **CPU**, this parameter specifies the 
 isApply: boolean
 ```
 
-Whether the request is used to apply for resources.
-
-- **true**: The request is used to apply for resources.  
-- **false**: The request is used to release resources.
+Whether the request is used to apply for resources. - **true**: The request is used to apply for resources. - **false**: The request is used to release resources.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-isApply: boolean--><!--Device-EfficiencyResourcesRequest-isApply: boolean-End-->
 
@@ -69,16 +72,15 @@ Whether the request is used to apply for resources.
 isPersist?: boolean
 ```
 
-Whether the resource is permanently held. The default value is **false**.
-
-- **true**: The resource is permanently held.  
-- **false**: The resource is held for a limited period of time.
+Whether the resource is permanently held. The default value is **false**. - **true**: The resource is permanently held. - **false**: The resource is held for a limited period of time.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-isPersist?: boolean--><!--Device-EfficiencyResourcesRequest-isPersist?: boolean-End-->
 
@@ -92,16 +94,15 @@ Whether the resource is permanently held. The default value is **false**.
 isProcess?: boolean
 ```
 
-Whether the request is initiated by a process. The default value is **false**.
-
-- **true**: The request is initiated by a process.  
-- **false**: The request is initiated by an application.
+Whether the request is initiated by a process. The default value is **false**. - **true**: The request is initiated by a process. - **false**: The request is initiated by an application.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-isProcess?: boolean--><!--Device-EfficiencyResourcesRequest-isProcess?: boolean-End-->
 
@@ -119,9 +120,11 @@ Reason for requesting the resource.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-reason: string--><!--Device-EfficiencyResourcesRequest-reason: string-End-->
 
@@ -137,11 +140,13 @@ resourceTypes: int
 
 Type of the resource to request.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-resourceTypes: int--><!--Device-EfficiencyResourcesRequest-resourceTypes: int-End-->
 
@@ -157,11 +162,13 @@ timeOut: int
 
 Duration for which the resource will be used, in milliseconds.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EfficiencyResourcesRequest-timeOut: int--><!--Device-EfficiencyResourcesRequest-timeOut: int-End-->
 

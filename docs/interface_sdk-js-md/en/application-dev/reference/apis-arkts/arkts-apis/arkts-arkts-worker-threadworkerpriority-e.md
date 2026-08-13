@@ -1,10 +1,12 @@
 # ThreadWorkerPriority
 
-Enumerates the priorities available for Worker threads.For details about the mappings between priorities and QoS levels, see QoS Level.
+Enumerates the priorities available for Worker threads. For details about the mappings between priorities and QoS levels, see QoS Level.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum ThreadWorkerPriority--><!--Device-unnamed-export enum ThreadWorkerPriority-End-->
 
@@ -21,6 +23,8 @@ High priority, corresponding to QOS_USER_INITIATED.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -40,6 +44,8 @@ Medium priority, corresponding to QOS_DEFAULT.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ThreadWorkerPriority-MEDIUM = 1--><!--Device-ThreadWorkerPriority-MEDIUM = 1-End-->
@@ -57,6 +63,8 @@ Low priority, corresponding to QOS_UTILITY.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -76,6 +84,8 @@ Background priority, corresponding to QOS_BACKGROUND.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ThreadWorkerPriority-IDLE = 3--><!--Device-ThreadWorkerPriority-IDLE = 3-End-->
@@ -94,6 +104,8 @@ Deadline priority, corresponding to QOS_DEADLINE_REQUEST.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ThreadWorkerPriority-DEADLINE = 4--><!--Device-ThreadWorkerPriority-DEADLINE = 4-End-->
@@ -111,6 +123,8 @@ Vip priority, corresponding to QOS_USER_INTERACTIVE.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 

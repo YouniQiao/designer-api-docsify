@@ -6,6 +6,8 @@ Enumerates the update policy types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-enum PolicyType--><!--Device-systemManager-enum PolicyType-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Default update policy, which periodically notifies the user of the update and st
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Prohibit updates.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PolicyType-PROHIBIT = 1--><!--Device-PolicyType-PROHIBIT = 1-End-->
@@ -57,6 +63,8 @@ Enforce updates. In this case, **latestUpdateTime** must be specified.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ Update at the specified time window. In this case, **installStartTime** and **in
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PolicyType-WINDOWS = 3--><!--Device-PolicyType-WINDOWS = 3-End-->
@@ -93,6 +103,8 @@ Postpone updates. After the time specified by **delayUpdateTime** is over, the d
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

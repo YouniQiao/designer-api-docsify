@@ -1,14 +1,16 @@
 # RatingConfiguration
 
-开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](CommonConfiguration)。
+开发者需要自定义class实现ContentModifier接口。继承自CommonConfiguration。
 
-**继承/实现关系：** RatingConfiguration extends [CommonConfiguration<RatingConfiguration>](CommonConfiguration<RatingConfiguration>)
+**继承/实现关系：** RatingConfiguration extends CommonConfiguration<RatingConfiguration>
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>--><!--Device-unnamed-declare interface RatingConfiguration extends CommonConfiguration<RatingConfiguration>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface RatingConfiguration--><!--Device-unnamed-declare interface RatingConfiguration-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -18,15 +20,15 @@
 indicator: boolean
 ```
 
-评分条是否作为指示器使用。当值为true时，表示作为指示器；当值为false时，表示不作为指示器。
-
-默认值：false
+评分条是否作为指示器使用。当值为true时，表示作为指示器；当值为false时，表示不作为指示器。 默认值：false
 
 **类型：** boolean
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,23 +44,15 @@ indicator: boolean
 rating: number
 ```
 
-设置并接收评分值。
-
-默认值：0
-
-取值范围： [0, stars]
-
-小于0取0，大于[stars](RatingAttribute#stars(value: number))取最大值stars。
-
-该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。
-
-该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
+设置并接收评分值。 默认值：0 取值范围： [0, stars] 小于0取0，大于stars取最大值stars。 该参数支持[\$\$](../../../ui/state-management/arkts-two-way-sync.md)双向绑定变量。 该参数支持[!!](../../../ui/state-management/arkts-new-binding.md#系统组件参数双向绑定)双向绑定变量。
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -74,15 +68,15 @@ rating: number
 stars: number
 ```
 
-评分条的星级总数。
-
-默认值：5
+评分条的星级总数。 默认值：5
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,15 +92,15 @@ stars: number
 stepSize: number
 ```
 
-评分条的评分步长。
-
-默认值：0.5
+评分条的评分步长。 默认值：0.5
 
 **类型：** number
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -129,6 +123,8 @@ triggerChange: Callback<number>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

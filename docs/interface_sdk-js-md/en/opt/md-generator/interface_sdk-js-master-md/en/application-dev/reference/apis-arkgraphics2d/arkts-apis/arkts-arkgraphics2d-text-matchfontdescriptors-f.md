@@ -14,7 +14,9 @@ function matchFontDescriptors(desc: FontDescriptor): Promise<Array<FontDescripto
 
 Obtains all system font descriptors that match the provided font descriptor. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -38,7 +40,7 @@ Obtains all system font descriptors that match the provided font descriptor. Thi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

@@ -1,17 +1,19 @@
 # ApiVersion (System API)
 
 ```TypeScript
-export type ApiVersion = _PackInfo.ApiVersion
+export type ApiVersion = _ApiVersion
 ```
 
 Defines the API version of the module.
 
-**Since:** 9
+**Since:** 23
 
-<!--Device-freeInstall-export type ApiVersion = _PackInfo.ApiVersion--><!--Device-freeInstall-export type ApiVersion = _PackInfo.ApiVersion-End-->
+**Deprecated since:** -1
+
+<!--Device-freeInstall-export type ApiVersion = _ApiVersion--><!--Device-freeInstall-export type ApiVersion = _ApiVersion-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.FreeInstall
 
 **System API:** This is a system API.
 
-**Property type:** _PackInfo.ApiVersion
+**Property type:** _ApiVersion

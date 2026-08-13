@@ -6,9 +6,11 @@ OIS (Optical Image Stabilization) interface.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
 
-<!--Device-camera-interface OIS extends OISQuery--><!--Device-camera-interface OIS extends OISQuery-End-->
+**废弃版本：** -1
+
+<!--Device-camera-interface OIS--><!--Device-camera-interface OIS-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -22,7 +24,9 @@ Sets the OIS mode.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +46,11 @@ Sets the OIS mode.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
 ## setOISModeCustom
 
-ArkTS-Dyn:
-```TypeScript
-setOISModeCustom(pitch: number, yaw: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOISModeCustom(pitch: double, yaw: double): void
 ```
@@ -61,7 +59,9 @@ Sets custom OIS bias values for each axis.
 
 **起始版本：** 24
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为24。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为24。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -75,13 +75,13 @@ Sets custom OIS bias values for each axis.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pitch | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Bias value for pitch axis. |
-| yaw | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | Bias value for yaw axis. |
+| pitch | double | 是 | Bias value for pitch axis. |
+| yaw | double | 是 | Bias value for yaw axis. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
-| [7400103](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400103-会话未配置) | Session not config. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed, the inputDevice or the session is abnormal. |
+| [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 

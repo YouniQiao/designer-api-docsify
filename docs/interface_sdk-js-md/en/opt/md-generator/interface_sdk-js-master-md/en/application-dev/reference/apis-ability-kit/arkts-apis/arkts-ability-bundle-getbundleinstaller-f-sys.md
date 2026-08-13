@@ -18,7 +18,7 @@ Obtains the installation package. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 
@@ -47,7 +47,7 @@ Obtains the installation package. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 **Required permissions:** ohos.permission.INSTALL_BUNDLE
 

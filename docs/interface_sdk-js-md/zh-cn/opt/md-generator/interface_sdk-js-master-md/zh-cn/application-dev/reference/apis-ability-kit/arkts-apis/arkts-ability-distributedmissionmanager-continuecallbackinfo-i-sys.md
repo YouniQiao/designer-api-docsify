@@ -2,7 +2,9 @@
 
 当前任务流转状态监听的回调信息，包含流转状态和流转信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-distributedMissionManager-interface ContinueCallbackInfo--><!--Device-distributedMissionManager-interface ContinueCallbackInfo-End-->
 
@@ -20,7 +22,9 @@ info: ContinuableInfo
 
 **类型：** ContinuableInfo
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +44,9 @@ state: ContinueState
 
 **类型：** ContinueState
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

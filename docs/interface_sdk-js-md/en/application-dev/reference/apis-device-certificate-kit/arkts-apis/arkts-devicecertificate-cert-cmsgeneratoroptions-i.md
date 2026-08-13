@@ -2,9 +2,11 @@
 
 Represents the configuration for generating a CMS message.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface CmsGeneratorOptions--><!--Device-cert-interface CmsGeneratorOptions-End-->
 
@@ -28,11 +30,13 @@ Format of the content. The default value is **CmsContentDataFormat.BINARY**.
 
 **Default:** CmsContentDataFormat.BINARY
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsGeneratorOptions-contentDataFormat?: CmsContentDataFormat--><!--Device-CmsGeneratorOptions-contentDataFormat?: CmsContentDataFormat-End-->
 
@@ -50,11 +54,13 @@ Whether the final CMS message does not contain the raw data. The default value i
 
 **Default:** false
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsGeneratorOptions-isDetached?: boolean--><!--Device-CmsGeneratorOptions-isDetached?: boolean-End-->
 
@@ -72,11 +78,13 @@ Format of the CMS message generated. The default value is **DER**.
 
 **Default:** CmsFormat.DER
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-CmsGeneratorOptions-outFormat?: CmsFormat--><!--Device-CmsGeneratorOptions-outFormat?: CmsFormat-End-->
 

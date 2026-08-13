@@ -1,16 +1,12 @@
 # PluginErrorData (System API)
 
-Data provided when the error occurs.
-
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
+Data provided when the error occurs. > **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 18. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface PluginErrorData--><!--Device-unnamed-declare interface PluginErrorData-End-->
 
@@ -32,6 +28,8 @@ Error code.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 <!--Device-PluginErrorData-errcode: number--><!--Device-PluginErrorData-errcode: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -51,6 +49,8 @@ Error message.
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-PluginErrorData-msg: string--><!--Device-PluginErrorData-msg: string-End-->
 

@@ -2,7 +2,9 @@
 
 Represents the domain account information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface DomainAccountInfo--><!--Device-osAccount-interface DomainAccountInfo-End-->
 
@@ -24,7 +26,9 @@ Domain account name.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DomainAccountInfo-accountName: string--><!--Device-DomainAccountInfo-accountName: string-End-->
 
@@ -33,18 +37,20 @@ Domain account name.
 ## additionalInfo
 
 ```TypeScript
-additionalInfo?: Record<string, Object>
+additionalInfo?: Record<string, RecordData>
 ```
 
 Additional information about the domain account.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, Object&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DomainAccountInfo-additionalInfo?: Record<string, Object>--><!--Device-DomainAccountInfo-additionalInfo?: Record<string, Object>-End-->
+<!--Device-DomainAccountInfo-additionalInfo?: Record<string, RecordData>--><!--Device-DomainAccountInfo-additionalInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -58,7 +64,9 @@ Domain name.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DomainAccountInfo-domain: string--><!--Device-DomainAccountInfo-domain: string-End-->
 
@@ -74,7 +82,9 @@ Domain account configuration ID, which is an empty string by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DomainAccountInfo-serverConfigId?: string--><!--Device-DomainAccountInfo-serverConfigId?: string-End-->
 

@@ -2,9 +2,11 @@
 
 媒体类型枚举。
 
-**起始版本：** 8
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-enum MediaType--><!--Device-unnamed-enum MediaType-End-->
 
@@ -16,15 +18,15 @@
 MEDIA_TYPE_UNSUPPORTED = -1
 ```
 
-表示未支持的类型。 
+表示未支持的类型。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1--><!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1-End-->
 
@@ -36,13 +38,13 @@ MEDIA_TYPE_UNSUPPORTED = -1
 MEDIA_TYPE_AUD = 0
 ```
 
-表示音频。 
+表示音频。 **原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -56,13 +58,13 @@ MEDIA_TYPE_AUD = 0
 MEDIA_TYPE_VID = 1
 ```
 
-表示视频。 
+表示视频。 **原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 11 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 8
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为8；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -76,15 +78,15 @@ MEDIA_TYPE_VID = 1
 MEDIA_TYPE_SUBTITLE = 2
 ```
 
-表示字幕。 
+表示字幕。 **原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 12 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 12
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2--><!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2-End-->
 
@@ -96,15 +98,15 @@ MEDIA_TYPE_SUBTITLE = 2
 MEDIA_TYPE_ATTACHMENT = 3
 ```
 
-表示附件信息（如嵌入的外部文件）。 
+表示附件信息（如嵌入的外部文件）。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3--><!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3-End-->
 
@@ -116,15 +118,15 @@ MEDIA_TYPE_ATTACHMENT = 3
 MEDIA_TYPE_DATA = 4
 ```
 
-表示数据。 
+表示数据。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-MEDIA_TYPE_DATA = 4--><!--Device-MediaType-MEDIA_TYPE_DATA = 4-End-->
 
@@ -136,15 +138,15 @@ MEDIA_TYPE_DATA = 4
 MEDIA_TYPE_TIMED_METADATA = 5
 ```
 
-表示带时间戳的元数据。 
+表示带时间戳的元数据。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5--><!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5-End-->
 
@@ -156,15 +158,15 @@ MEDIA_TYPE_TIMED_METADATA = 5
 MEDIA_TYPE_AUXILIARY = 6
 ```
 
-表示辅助（轨道）信息。 
+表示辅助（轨道）信息。 **原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
 
-**原子化服务API：** 从API version 20 开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6--><!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6-End-->
 

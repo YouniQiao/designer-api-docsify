@@ -1,22 +1,24 @@
 # FillRequestCallback (System API)
 
 ```TypeScript
-export type FillRequestCallback = _AutoFillRequest.FillRequestCallback
+export type FillRequestCallback = _FillRequestCallback
 ```
 
 Defines the callback for an auto-fill request, which is used to automatically fill in or generate a password. The callback can be used to notify the client of the success or failure of the request.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-autoFillManager-export type FillRequestCallback = _AutoFillRequest.FillRequestCallback--><!--Device-autoFillManager-export type FillRequestCallback = _AutoFillRequest.FillRequestCallback-End-->
+<!--Device-autoFillManager-export type FillRequestCallback = _FillRequestCallback--><!--Device-autoFillManager-export type FillRequestCallback = _FillRequestCallback-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
 **System API:** This is a system API.
 
-**Property type:** _AutoFillRequest.FillRequestCallback
+**Property type:** _FillRequestCallback
 

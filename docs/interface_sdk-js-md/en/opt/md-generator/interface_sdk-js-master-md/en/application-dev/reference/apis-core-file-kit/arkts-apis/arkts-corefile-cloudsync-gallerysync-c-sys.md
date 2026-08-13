@@ -1,9 +1,10 @@
 # GallerySync (System API)
 
-Provides APIs to implement device-cloud sync of media assets in **Gallery**. Before using the APIs of  
-**GallerySync**, you need to create a **GallerySync** instance.
+Provides APIs to implement device-cloud sync of media assets in **Gallery**. Before using the APIs of **GallerySync**, you need to create a **GallerySync** instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-class GallerySync--><!--Device-cloudSync-class GallerySync-End-->
 
@@ -25,7 +26,9 @@ constructor()
 
 A constructor used to create a **GallerySync** instance.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GallerySync-constructor()--><!--Device-GallerySync-constructor()-End-->
 
@@ -39,7 +42,70 @@ A constructor used to create a **GallerySync** instance.
 let gallerySync = new cloudSync.GallerySync()
 ```
 
-## off
+## offProgress
+
+```TypeScript
+offProgress(callback: Callback<SyncProgress>): void
+```
+
+Unsubscribes from sync progress event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-offProgress(callback: Callback<SyncProgress>): void--><!--Device-GallerySync-offProgress(callback: Callback<SyncProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+
+## offProgress
+
+```TypeScript
+offProgress(): void
+```
+
+Unsubscribes all callbacks objects from sync progress event.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-offProgress(): void--><!--Device-GallerySync-offProgress(): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**System API:** This is a system API.
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+
+## off_progress
 
 ```TypeScript
 off(evt: 'progress', callback: (pg: SyncProgress) => void): void
@@ -48,6 +114,8 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 Removes the specified callback from the device-cloud sync progress.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -68,9 +136,9 @@ Removes the specified callback from the device-cloud sync progress.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## Examples
@@ -87,7 +155,7 @@ gallerySync.on('progress', callback);
 gallerySync.off('progress', callback);
 ```
 
-## off
+## off_progress
 
 ```TypeScript
 off(evt: 'progress'): void
@@ -96,6 +164,8 @@ off(evt: 'progress'): void
 Removes all callbacks from the device-cloud sync progress.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -115,9 +185,9 @@ Removes all callbacks from the device-cloud sync progress.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## Examples
@@ -132,7 +202,42 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
 gallerySync.off('progress');
 ```
 
-## on
+## onProgress
+
+```TypeScript
+onProgress(callback: Callback<SyncProgress>): void
+```
+
+Subscribes to sync progress change event. This method uses a callback to get sync progress changes.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.CLOUDFILE_SYNC
+
+<!--Device-GallerySync-onProgress(callback: Callback<SyncProgress>): void--><!--Device-GallerySync-onProgress(callback: Callback<SyncProgress>): void-End-->
+
+**System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSync.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[SyncProgress](arkts-corefile-cloudsync-syncprogress-i.md)&gt; | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| 13600001 |
+
+## on_progress
 
 ```TypeScript
 on(evt: 'progress', callback: (pg: SyncProgress) => void): void
@@ -141,6 +246,8 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 Registers a listener for the device-cloud sync progress.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -161,9 +268,9 @@ Registers a listener for the device-cloud sync progress.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 | 13600001 |
 
 ## Examples
@@ -184,7 +291,9 @@ start(): Promise<void>
 
 Starts device-cloud sync. This API uses a promise to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -204,12 +313,12 @@ Starts device-cloud sync. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 22400001 |
 | 22400003 |
 | 22400002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -237,7 +346,9 @@ start(callback: AsyncCallback<void>): void
 
 Starts device-cloud sync. This API uses an asynchronous callback to return the result.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -257,12 +368,12 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 22400001 |
 | 22400003 |
 | 22400002 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -286,14 +397,11 @@ gallerySync.start((err: BusinessError) => {
 stop(): Promise<void>
 ```
 
-Stops device-cloud sync. This API uses a promise to return the result.
+Stops device-cloud sync. This API uses a promise to return the result. > **NOTE：**> > Calling **stop** will stop the sync process. To resume the sync, call > [start](#start).
 
-> **NOTE：**
-> 
-> Calling **stop** will stop the sync process. To resume the sync, call
-> [start](#start).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -313,9 +421,9 @@ Stops device-cloud sync. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 
@@ -337,14 +445,11 @@ gallerySync.stop().then(() => {
 stop(callback: AsyncCallback<void>): void
 ```
 
-Stops device-cloud sync. This API uses an asynchronous callback to return the result.
+Stops device-cloud sync. This API uses an asynchronous callback to return the result. > **NOTE：**> > Calling **stop** will stop the sync process. To resume the sync, call > [start](#start).
 
-> **NOTE：**
-> 
-> Calling **stop** will stop the sync process. To resume the sync, call
-> [start](#start).
+**Since:** 23
 
-**Since:** 10
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CLOUDFILE_SYNC
 
@@ -364,9 +469,9 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
 
 ## Examples
 

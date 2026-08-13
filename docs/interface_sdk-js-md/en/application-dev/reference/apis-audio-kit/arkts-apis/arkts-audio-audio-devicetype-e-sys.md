@@ -2,9 +2,11 @@
 
 Enumerates the device types.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum DeviceType--><!--Device-audio-enum DeviceType-End-->
 
@@ -18,9 +20,11 @@ ACCESSORY = 26
 
 Accessory devices, such as the mic on remote control.
 
-**Since:** 19
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-ACCESSORY = 26--><!--Device-DeviceType-ACCESSORY = 26-End-->
 
@@ -36,9 +40,11 @@ BLUETOOTH_SPP = 33
 
 Bluetooth device using the spp profile.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-BLUETOOTH_SPP = 33--><!--Device-DeviceType-BLUETOOTH_SPP = 33-End-->
 
@@ -54,9 +60,11 @@ NEARLINK_PORT = 34
 
 Nearlink port.
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DeviceType-NEARLINK_PORT = 34--><!--Device-DeviceType-NEARLINK_PORT = 34-End-->
 

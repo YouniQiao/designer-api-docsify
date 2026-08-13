@@ -2,13 +2,15 @@
 
 Inheritance CommonMethod Set Styles
 
-**Inheritance/Implementation:** RemoteWindowAttribute extends [CommonMethod<RemoteWindowAttribute>](CommonMethod<RemoteWindowAttribute>)
+**Inheritance/Implementation:** RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-<!--Device-unnamed-declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>--><!--Device-unnamed-declare class RemoteWindowAttribute extends CommonMethod<RemoteWindowAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class RemoteWindowAttribute--><!--Device-unnamed-declare class RemoteWindowAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -1,23 +1,27 @@
 # DialogOptionsCornerRadius
 
 ```TypeScript
-export type DialogOptionsCornerRadius = Dimension | BorderRadiuses
+declare type DialogOptionsCornerRadius = Dimension | BorderRadiuses
 ```
 
 表示弹窗背板的圆角半径允许的数据字段类型。
 
-**起始版本：** 23
+**起始版本：** 18
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-promptAction-export type DialogOptionsCornerRadius = Dimension | BorderRadiuses--><!--Device-promptAction-export type DialogOptionsCornerRadius = Dimension | BorderRadiuses-End-->
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+
+<!--Device-promptAction-declare type DialogOptionsCornerRadius = Dimension | BorderRadiuses--><!--Device-promptAction-declare type DialogOptionsCornerRadius = Dimension | BorderRadiuses-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 | 类型 | 说明 |
 | --- | --- |
-| Dimension | 表示值类型为长度类型，用于描述尺寸单位。 |
-| BorderRadiuses | 表示值类型为圆角类型，用于描述组件边框圆角半径。 |
+| Dimension |  |
+| BorderRadiuses |  |
 

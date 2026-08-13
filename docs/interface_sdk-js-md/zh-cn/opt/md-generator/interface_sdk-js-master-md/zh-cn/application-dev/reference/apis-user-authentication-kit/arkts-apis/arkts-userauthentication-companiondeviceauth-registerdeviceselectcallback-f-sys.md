@@ -10,6 +10,8 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.USE_USER_IDM
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -30,9 +32,9 @@ function registerDeviceSelectCallback(callback: DeviceSelectCallback): void
 
 | 错误码ID |
 | --- |
-| [32600001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#32600001-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [32600001](../errorcode-useriam.md#32600001-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -10,6 +10,8 @@ The callback of verify pin.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void--><!--Device-unnamed-type OnVerifyPinCallback = (verifyPinEvent: VerifyPinEvent) => void-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core

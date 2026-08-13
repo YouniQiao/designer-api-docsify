@@ -1,11 +1,12 @@
 # USBInterface
 
-Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration) object can contain multiple *  
-*USBInterface** instances, each providing a specific function.
+Represents a USB interface. One [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md#USBConfiguration) object can contain multiple * *USBInterface** instances, each providing a specific function.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBInterface--><!--Device-usbManager-interface USBInterface-End-->
 
@@ -25,11 +26,13 @@ alternateSetting: int
 
 Settings for alternating between descriptors of the same USB interface. The value size indicates the number of optional modes. The value 0 indicates that no optional mode is supported.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-alternateSetting: int--><!--Device-USBInterface-alternateSetting: int-End-->
 
@@ -43,11 +46,13 @@ clazz: int
 
 Device type.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-clazz: int--><!--Device-USBInterface-clazz: int-End-->
 
@@ -63,9 +68,11 @@ Endpoints that belong to the USB interface.
 
 **Type:** Array&lt;USBEndpoint&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-endpoints: Array<USBEndpoint>--><!--Device-USBInterface-endpoints: Array<USBEndpoint>-End-->
 
@@ -79,11 +86,13 @@ id: int
 
 Unique ID of the USB interface.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-id: int--><!--Device-USBInterface-id: int-End-->
 
@@ -99,9 +108,11 @@ Interface name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-name: string--><!--Device-USBInterface-name: string-End-->
 
@@ -115,11 +126,13 @@ protocol: int
 
 Interface protocol.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-protocol: int--><!--Device-USBInterface-protocol: int-End-->
 
@@ -133,11 +146,13 @@ subClass: int
 
 Device subclass.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-USBInterface-subClass: int--><!--Device-USBInterface-subClass: int-End-->
 

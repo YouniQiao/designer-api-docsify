@@ -1,12 +1,14 @@
 # Component3D属性/事件
 
-**继承/实现关系：** Component3DAttribute extends [CommonMethod<Component3DAttribute>](CommonMethod<Component3DAttribute>)
+**继承/实现关系：** Component3DAttribute extends CommonMethod<Component3DAttribute>
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-<!--Device-unnamed-declare class Component3DAttribute extends CommonMethod<Component3DAttribute>--><!--Device-unnamed-declare class Component3DAttribute extends CommonMethod<Component3DAttribute>-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class Component3DAttribute--><!--Device-unnamed-declare class Component3DAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -21,6 +23,8 @@ customRender(uri: ResourceStr, selfRenderUpdate: boolean)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -47,6 +51,8 @@ environment(uri: ResourceStr)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Component3DAttribute-environment(uri: ResourceStr): Component3DAttribute--><!--Device-Component3DAttribute-environment(uri: ResourceStr): Component3DAttribute-End-->
@@ -70,6 +76,8 @@ renderHeight(value: Dimension)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -95,6 +103,8 @@ renderWidth(value: Dimension)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Component3DAttribute-renderWidth(value: Dimension): Component3DAttribute--><!--Device-Component3DAttribute-renderWidth(value: Dimension): Component3DAttribute-End-->
@@ -118,6 +128,8 @@ shader(uri: ResourceStr)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -143,6 +155,8 @@ shaderImageTexture(uri: ResourceStr)
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Component3DAttribute-shaderImageTexture(uri: ResourceStr): Component3DAttribute--><!--Device-Component3DAttribute-shaderImageTexture(uri: ResourceStr): Component3DAttribute-End-->
@@ -166,6 +180,8 @@ shaderInputBuffer(buffer: Array<number>)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -6,6 +6,8 @@ Define the editableText Component changed value.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface EditableTextChangeValue--><!--Device-unnamed-export interface EditableTextChangeValue-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ Value of body text, without previewText value.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The TextChangeOptions.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EditableTextChangeValue-options?: TextChangeOptions--><!--Device-EditableTextChangeValue-options?: TextChangeOptions-End-->
@@ -63,6 +69,8 @@ Info of previewText, contains previewText value and start index.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

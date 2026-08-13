@@ -1,17 +1,12 @@
 # Uint8Array
 
-一种线性数据结构，底层基于[ArkTS ArrayBuffer](./arkts/@arkts.collections:collections)实现。
-
-> **说明：**
-> 
-> - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。
-> **装饰器类型：** \@Sendable
+一种线性数据结构，底层基于ArkTS ArrayBuffer实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型：** \@Sendable
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
-**装饰器类型：** @Sendable
+**废弃版本：** -1
 
 <!--Device-collections-class Uint8Array--><!--Device-collections-class Uint8Array-End-->
 
@@ -23,15 +18,13 @@
 [Symbol.iterator](): IterableIterator<number>
 ```
 
-返回一个迭代器，迭代器的每一项都是一个数字。
-
-> **说明：**
-> 
-> 本接口不支持在.ets文件中使用（和本文中其他迭代器方法不同，其他迭代器方法没有此限制）。
+返回一个迭代器，迭代器的每一项都是一个数字。 > **说明：** > > 本接口不支持在.ets文件中使用（和本文中其他迭代器方法不同，其他迭代器方法没有此限制）。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -49,7 +42,7 @@
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -62,6 +55,8 @@ at(index: number): number | undefined
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -85,8 +80,8 @@ at(index: number): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## constructor
 
@@ -100,6 +95,8 @@ constructor()
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-constructor()--><!--Device-Uint8Array-constructor()-End-->
@@ -110,7 +107,7 @@ constructor()
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -123,6 +120,8 @@ constructor(length: number)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -140,7 +139,7 @@ constructor(length: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -153,6 +152,8 @@ constructor(elements: Iterable<number>)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -170,7 +171,7 @@ constructor(elements: Iterable<number>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -183,6 +184,8 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -200,7 +203,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -213,6 +216,8 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -232,7 +237,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-构造函数调用异常) | The Uint8Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -245,6 +250,8 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -270,8 +277,8 @@ copyWithin(target: number, start: number, end?: number): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## entries
 
@@ -284,6 +291,8 @@ entries(): IterableIterator<[number, number]>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -301,8 +310,8 @@ entries(): IterableIterator<[number, number]>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## every
 
@@ -315,6 +324,8 @@ every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -338,8 +349,8 @@ every(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## fill
 
@@ -352,6 +363,8 @@ fill(value: number, start?: number, end?: number): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -377,8 +390,8 @@ fill(value: number, start?: number, end?: number): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## filter
 
@@ -391,6 +404,8 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -414,8 +429,8 @@ filter(predicate: TypedArrayPredicateFn<number, Uint8Array>): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## find
 
@@ -428,6 +443,8 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -451,8 +468,8 @@ find(predicate: TypedArrayPredicateFn<number, Uint8Array>): number | undefined
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## findIndex
 
@@ -465,6 +482,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -488,8 +507,8 @@ findIndex(predicate: TypedArrayPredicateFn<number, Uint8Array>): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## forEach
 
@@ -502,6 +521,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -519,8 +540,8 @@ forEach(callbackFn: TypedArrayForEachCallback<number, Uint8Array>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## from
 
@@ -533,6 +554,8 @@ static from(arrayLike: ArrayLike<number>): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -563,6 +586,8 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -595,6 +620,8 @@ static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, num
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint8Array--><!--Device-Uint8Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Uint8Array-End-->
@@ -626,6 +653,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Uint8Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
@@ -649,8 +678,8 @@ includes(searchElement: number, fromIndex?: number): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## indexOf
 
@@ -663,6 +692,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -687,8 +718,8 @@ indexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## join
 
@@ -701,6 +732,8 @@ join(separator?: string): string
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -724,8 +757,8 @@ join(separator?: string): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## keys
 
@@ -738,6 +771,8 @@ keys(): IterableIterator<number>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -755,8 +790,8 @@ keys(): IterableIterator<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -769,6 +804,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -793,8 +830,8 @@ lastIndexOf(searchElement: number, fromIndex?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## map
 
@@ -807,6 +844,8 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -830,8 +869,8 @@ map(callbackFn: TypedArrayMapCallback<number, Uint8Array>): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## of
 
@@ -844,6 +883,8 @@ static of(...items: number[]): Uint8Array
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -875,6 +916,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number--><!--Device-Uint8Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number-End-->
@@ -897,8 +940,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -911,6 +954,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -935,8 +980,8 @@ reduce(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>, initial
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduce
 
@@ -949,6 +994,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -973,8 +1020,8 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -982,11 +1029,13 @@ reduce<U>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialVa
 reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Array>, initialValue: U): U
 ```
 
-反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回最终的归约结果。
+反向遍历ArkTS Uint8Array，对每个元素执行归约函数，且接收一个初始值作为归约函数首次调用的参数，并返回 最终的归约结果。
 
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1011,8 +1060,8 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint8Arr
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -1025,6 +1074,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): n
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1048,8 +1099,8 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint8Array>): n
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## reverse
 
@@ -1062,6 +1113,8 @@ reverse(): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1079,8 +1132,8 @@ reverse(): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## set
 
@@ -1093,6 +1146,8 @@ set(array: ArrayLike<number>, offset?: number): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1111,8 +1166,8 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The set method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## slice
 
@@ -1125,6 +1180,8 @@ slice(start?: number, end?: number): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1149,8 +1206,8 @@ slice(start?: number, end?: number): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## some
 
@@ -1163,6 +1220,8 @@ some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1186,8 +1245,8 @@ some(predicate: TypedArrayPredicateFn<number, Uint8Array>): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## sort
 
@@ -1200,6 +1259,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1223,8 +1284,8 @@ sort(compareFn?: TypedArrayCompareFn<number>): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## subarray
 
@@ -1237,6 +1298,8 @@ subarray(begin?: number, end?: number): Uint8Array
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1261,8 +1324,8 @@ subarray(begin?: number, end?: number): Uint8Array
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subarray method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The subarray method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1275,6 +1338,8 @@ toLocaleString(): string
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1292,8 +1357,8 @@ toLocaleString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## toString
 
@@ -1306,6 +1371,8 @@ toString(): string
 **起始版本：** 18
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为18。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -1323,8 +1390,8 @@ toString(): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## values
 
@@ -1337,6 +1404,8 @@ values(): IterableIterator<number>
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1354,8 +1423,8 @@ values(): IterableIterator<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-传入的thisobject不是容器类的实例) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent修改错误) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1371,29 +1440,11 @@ ArkTS Uint8Array中每个元素所占的字节数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Uint8Array-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**系统能力：** SystemCapability.Utils.Lang
-
-## [index: number]
-
-```TypeScript
-[index: number]: number
-```
-
-返回指定索引位置的元素。
-
-**类型：** number
-
-**起始版本：** 12
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
-
-<!--Device-Uint8Array-[index: number]: number--><!--Device-Uint8Array-[index: number]: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -1410,6 +1461,8 @@ ArkTS Uint8Array底层使用的buffer。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1431,6 +1484,8 @@ ArkTS Uint8Array所占的字节数。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-readonly byteLength: number--><!--Device-Uint8Array-readonly byteLength: number-End-->
@@ -1451,6 +1506,8 @@ ArkTS Uint8Array距离其ArrayBuffer起始位置的字节偏移。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Uint8Array-readonly byteOffset: number--><!--Device-Uint8Array-readonly byteOffset: number-End-->
@@ -1470,6 +1527,8 @@ ArkTS Uint8Array元素个数。
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

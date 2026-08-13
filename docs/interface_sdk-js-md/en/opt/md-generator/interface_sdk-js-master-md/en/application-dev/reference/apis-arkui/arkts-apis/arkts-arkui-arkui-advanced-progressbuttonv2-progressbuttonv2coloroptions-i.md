@@ -4,6 +4,8 @@ Declare Color options interface of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface ProgressButtonV2ColorOptions--><!--Device-unnamed-export declare interface ProgressButtonV2ColorOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Set background color of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -45,6 +49,8 @@ Set border color of the ProgressButtonV2.
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,6 +72,8 @@ Set progress color of the ProgressButtonV2.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -85,6 +93,8 @@ Set text color of the ProgressButtonV2.
 **Type:** ColorMetrics
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

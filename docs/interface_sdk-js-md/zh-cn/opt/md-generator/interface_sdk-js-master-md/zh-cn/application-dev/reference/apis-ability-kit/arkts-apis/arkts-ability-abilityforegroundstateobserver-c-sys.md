@@ -4,6 +4,8 @@
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export default class AbilityForegroundStateObserver--><!--Device-unnamed-export default class AbilityForegroundStateObserver-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
@@ -19,6 +21,8 @@ onAbilityStateChanged(abilityStateData: AbilityStateData): void
 当Ability前后台状态发生变化时，系统会触发该回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 <!--Device-AbilityForegroundStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void--><!--Device-AbilityForegroundStateObserver-onAbilityStateChanged(abilityStateData: AbilityStateData): void-End-->
 

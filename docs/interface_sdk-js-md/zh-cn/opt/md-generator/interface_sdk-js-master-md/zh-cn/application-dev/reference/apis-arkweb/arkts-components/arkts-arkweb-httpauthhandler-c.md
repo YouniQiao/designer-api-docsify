@@ -1,8 +1,10 @@
 # HttpAuthHandler
 
-Defines the http auth request result, related to [onHttpAuthRequest](onHttpAuthRequest) method.
+Defines the http auth request result, related to onHttpAuthRequest method.
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class HttpAuthHandler--><!--Device-unnamed-declare class HttpAuthHandler-End-->
 
@@ -17,6 +19,8 @@ cancel(): void
 通知Web组件用户取消HTTP认证操作。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -33,6 +37,8 @@ confirm(userName: string, password: string): boolean
 使用用户名和密码进行HTTP认证操作。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -63,6 +69,8 @@ Constructor.
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HttpAuthHandler-constructor()--><!--Device-HttpAuthHandler-constructor()-End-->
@@ -78,6 +86,8 @@ isHttpAuthInfoSaved(): boolean
 通知Web组件用户使用服务器缓存的账号密码认证。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

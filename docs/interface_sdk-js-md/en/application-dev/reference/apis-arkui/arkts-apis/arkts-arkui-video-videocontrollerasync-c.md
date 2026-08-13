@@ -1,10 +1,12 @@
 # VideoControllerAsync
 
-Video playback controller class for asynchronous operations.Provides methods to control video playback, timing, and display mode.
+Video playback controller class for asynchronous operations. Provides methods to control video playback, timing, and display mode.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class VideoControllerAsync--><!--Device-unnamed-export declare class VideoControllerAsync-End-->
 
@@ -21,6 +23,8 @@ Creates a VideoControllerAsync instance.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Exits fullscreen display mode.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoControllerAsync-exitFullscreen(): void--><!--Device-VideoControllerAsync-exitFullscreen(): void-End-->
@@ -57,6 +63,8 @@ Pauses video playback asynchronously.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +90,8 @@ Requests fullscreen display for the video.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoControllerAsync-requestFullscreen(value: boolean): void--><!--Device-VideoControllerAsync-requestFullscreen(value: boolean): void-End-->
@@ -100,11 +110,13 @@ Requests fullscreen display for the video.
 reset(): Promise<void>
 ```
 
-Resets the video controller asynchronously.Restores the controller to its initial state.
+Resets the video controller asynchronously. Restores the controller to its initial state.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -129,6 +141,8 @@ Sets the current playback time with specified seek mode.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -155,6 +169,8 @@ Starts video playback asynchronously.
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-VideoControllerAsync-start(): Promise<void>--><!--Device-VideoControllerAsync-start(): Promise<void>-End-->
@@ -178,6 +194,8 @@ Stops video playback asynchronously.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

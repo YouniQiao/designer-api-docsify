@@ -2,9 +2,11 @@
 
 音频设备类型。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum AudioDeviceType--><!--Device-call-export enum AudioDeviceType-End-->
 
@@ -20,9 +22,11 @@ DEVICE_EARPIECE = 0
 
 耳机设备。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceType-DEVICE_EARPIECE = 0--><!--Device-AudioDeviceType-DEVICE_EARPIECE = 0-End-->
 
@@ -38,9 +42,11 @@ DEVICE_SPEAKER = 1
 
 扬声器设备。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceType-DEVICE_SPEAKER = 1--><!--Device-AudioDeviceType-DEVICE_SPEAKER = 1-End-->
 
@@ -56,9 +62,11 @@ DEVICE_WIRED_HEADSET = 2
 
 有线耳机设备。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2--><!--Device-AudioDeviceType-DEVICE_WIRED_HEADSET = 2-End-->
 
@@ -74,9 +82,11 @@ DEVICE_BLUETOOTH_SCO = 3
 
 蓝牙SCO设备。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3--><!--Device-AudioDeviceType-DEVICE_BLUETOOTH_SCO = 3-End-->
 
@@ -92,9 +102,11 @@ DEVICE_DISTRIBUTED_AUTOMOTIVE = 4
 
 分布式车机设备。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4--><!--Device-AudioDeviceType-DEVICE_DISTRIBUTED_AUTOMOTIVE = 4-End-->
 

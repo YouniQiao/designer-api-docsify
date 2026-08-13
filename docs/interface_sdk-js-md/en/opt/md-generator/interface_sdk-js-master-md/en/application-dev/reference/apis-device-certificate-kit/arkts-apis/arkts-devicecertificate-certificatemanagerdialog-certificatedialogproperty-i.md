@@ -2,7 +2,9 @@
 
 Defines the property of the certificate management dialog box.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-certificateManagerDialog-export interface CertificateDialogProperty--><!--Device-certificateManagerDialog-export interface CertificateDialogProperty-End-->
 
@@ -24,7 +26,9 @@ Whether to display the button for installing the certificate. The value **true**
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

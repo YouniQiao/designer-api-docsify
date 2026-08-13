@@ -6,6 +6,8 @@ Enumerates the web element types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum WebElementType--><!--Device-unnamed-declare enum WebElementType-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Image.
 **Since:** 13
 
 **ArkTS mode:** ArkTS-Dyn only, since version 13.
+
+**Deprecated since:** -1
 
 <!--Device-WebElementType-IMAGE = 1--><!--Device-WebElementType-IMAGE = 1-End-->
 
@@ -38,6 +42,8 @@ Hyperlink.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
+**Deprecated since:** -1
+
 <!--Device-WebElementType-LINK = 2--><!--Device-WebElementType-LINK = 2-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -53,6 +59,8 @@ Text or editable area.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 <!--Device-WebElementType-TEXT = 3--><!--Device-WebElementType-TEXT = 3-End-->
 

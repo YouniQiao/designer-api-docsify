@@ -2,7 +2,9 @@
 
 Enumerates the audio sample formats.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioSampleFormat--><!--Device-audio-enum AudioSampleFormat-End-->
 
@@ -16,7 +18,9 @@ SAMPLE_FORMAT_INVALID = -1
 
 Invalid format.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_INVALID = -1-End-->
 
@@ -30,7 +34,9 @@ SAMPLE_FORMAT_U8 = 0
 
 Unsigned 8-bit integer.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_U8 = 0-End-->
 
@@ -44,7 +50,9 @@ SAMPLE_FORMAT_S16LE = 1
 
 Signed 16-bit integer, little endian.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S16LE = 1-End-->
 
@@ -56,11 +64,11 @@ Signed 16-bit integer, little endian.
 SAMPLE_FORMAT_S24LE = 2
 ```
 
-Signed 24-bit integer, little endian.
+Signed 24-bit integer, little endian. Due to system restrictions, only some devices support this sampling format.
 
-Due to system restrictions, only some devices support this sampling format.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S24LE = 2-End-->
 
@@ -72,11 +80,11 @@ Due to system restrictions, only some devices support this sampling format.
 SAMPLE_FORMAT_S32LE = 3
 ```
 
-Signed 32-bit integer, little endian.
+Signed 32-bit integer, little endian. Due to system restrictions, only some devices support this sampling format.
 
-Due to system restrictions, only some devices support this sampling format.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_S32LE = 3-End-->
 
@@ -88,11 +96,11 @@ Due to system restrictions, only some devices support this sampling format.
 SAMPLE_FORMAT_F32LE = 4
 ```
 
-Signed 32-bit floating-point number, little endian.
+Signed 32-bit floating-point number, little endian. Due to system restrictions, only some devices support this sampling format.
 
-Due to system restrictions, only some devices support this sampling format.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4--><!--Device-AudioSampleFormat-SAMPLE_FORMAT_F32LE = 4-End-->
 

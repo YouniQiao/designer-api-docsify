@@ -1,8 +1,6 @@
 # ContentSlot
 
-用于渲染Native侧使用C-API创建的组件，并通过Content管理器管理这些组件。
-
-支持混合模式开发，当容器是ArkTS组件，子组件在Native侧创建时，推荐使用ContentSlot占位组件。
+用于渲染Native侧使用C-API创建的组件，并通过Content管理器管理这些组件。 支持混合模式开发，当容器是ArkTS组件，子组件在Native侧创建时，推荐使用ContentSlot占位组件。
 
 ## ContentSlot
 
@@ -15,6 +13,8 @@ ContentSlot(content: Content)
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -32,4 +32,4 @@ ContentSlot(content: Content)
 
 ## 汇总
 
-- [Content](arkts-arkui-contentslot-content-t.md)
+- [Content](arkts-arkui-content-t.md)

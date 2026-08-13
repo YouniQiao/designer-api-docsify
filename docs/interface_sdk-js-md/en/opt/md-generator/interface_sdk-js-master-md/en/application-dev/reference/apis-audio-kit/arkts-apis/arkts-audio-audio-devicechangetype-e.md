@@ -2,7 +2,9 @@
 
 Enumerates the device connection statuses.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum DeviceChangeType--><!--Device-audio-enum DeviceChangeType-End-->
 
@@ -16,7 +18,9 @@ CONNECT = 0
 
 Connected.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceChangeType-CONNECT = 0--><!--Device-DeviceChangeType-CONNECT = 0-End-->
 
@@ -30,7 +34,9 @@ DISCONNECT = 1
 
 Disconnected.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceChangeType-DISCONNECT = 1--><!--Device-DeviceChangeType-DISCONNECT = 1-End-->
 

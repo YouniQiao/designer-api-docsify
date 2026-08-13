@@ -2,9 +2,11 @@
 
 相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md#getCameraManager)接口获取相机管理实例。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-camera-interface CameraManager--><!--Device-camera-interface CameraManager-End-->
 
@@ -16,13 +18,13 @@
 createCameraInput(camera: CameraDevice): CameraInput
 ```
 
-使用CameraDevice对象创建CameraInput实例，同步返回结果。
+使用CameraDevice对象创建CameraInput实例，同步返回结果。 该接口使用前首先通过[getSupportedCameras](#getSupportedCameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选 择符合需求的相机设备，然后使用该接口创建CameraInput实例。
 
-该接口使用前首先通过[getSupportedCameras](#getSupportedCameras)接口查询当前设备支持的相机设备信息列表，开发者需要根据具体使用场景选择符合需求的相机设备，然后使用该接口创建CameraInput实例。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CAMERA
 
@@ -48,9 +50,9 @@ createCameraInput(camera: CameraDevice): CameraInput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## createCameraInput
 
@@ -58,13 +60,13 @@ createCameraInput(camera: CameraDevice): CameraInput
 createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 ```
 
-根据相机位置和类型创建CameraInput实例，同步返回结果。
+根据相机位置和类型创建CameraInput实例，同步返回结果。 该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
 
-该接口使用前需要开发者根据应用具体使用场景自行指定相机位置和类型，例如打开前置相机进入自拍功能。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CAMERA
 
@@ -91,9 +93,9 @@ createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## createCaptureSession
 
@@ -101,11 +103,7 @@ createCameraInput(position: CameraPosition, type: CameraType): CameraInput
 createCaptureSession(): CaptureSession
 ```
 
-创建CaptureSession实例，同步返回结果。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+创建CaptureSession实例，同步返回结果。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -129,45 +127,7 @@ createCaptureSession(): CaptureSession
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-
-## createDeferredPreviewOutput
-
-```TypeScript
-createDeferredPreviewOutput(profile: Profile): PreviewOutput
-```
-
-创建延迟预览输出对象，在配流时替代普通的预览输出对象加入数据流。
-
-**起始版本：** 24
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
-
-**原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput--><!--Device-CameraManager-createDeferredPreviewOutput(profile: Profile): PreviewOutput-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability-1) 接口获取。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| [PreviewOutput](arkts-camera-camera-previewoutput-i.md) | PreviewOutput实例。接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 24+ |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 12 - 23 |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## createMetadataOutput
 
@@ -177,9 +137,11 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 创建metadata流输出对象，同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -191,7 +153,7 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 | metadata流类型信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability-1) 接口获取。 |
+| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 | metadata流类型信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability) 接口获取。 |
 
 **返回值：**
 
@@ -203,8 +165,8 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## createPhotoOutput
 
@@ -212,13 +174,7 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 ```
 
-创建拍照输出对象，同步返回结果。
-
-> **说明：**
-> 
-> - 从API version 10开始支持，从API version 11开始废弃。
-> 
-> - 该接口只支持创建JPEG格式的拍照输出对象。
+创建拍照输出对象，同步返回结果。 > **说明：** > > - 从API version 10开始支持，从API version 11开始废弃。 > > - 该接口只支持创建JPEG格式的拍照输出对象。
 
 **起始版本：** 10
 
@@ -226,7 +182,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 **废弃版本：** 11
 
-**替代接口：** [createPhotoOutput](camera.CameraManager.createPhotoOutput(profile?:)
+**替代接口：** [createPhotoOutput](#createPhotoOutput)(profile?: Profile)
 
 <!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
 
@@ -236,7 +192,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的拍照配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability-1) 接口获取。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的拍照配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability) 接口获取。 |
 | surfaceId | string | 是 | 从[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver)获取的surfaceId。 |
 
 **返回值：**
@@ -249,7 +205,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 
 ## createPhotoOutput
 
@@ -259,9 +215,11 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 创建拍照输出对象，同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -273,7 +231,7 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability-1) 接口获取。 &lt;br&gt;API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入 profile参数会覆盖preconfig的预配置参数。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability) 接口获取。 &lt;br&gt;API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入 profile参数会覆盖preconfig的预配置参数。 |
 
 **返回值：**
 
@@ -285,8 +243,8 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## createPreviewOutput
 
@@ -296,9 +254,11 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 创建预览输出对象，同步返回结果。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -310,8 +270,8 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability-1) 接口获取。 |
-| surfaceId | string | 是 | 从[XComponent](XComponent)或者 [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver)组件获取的surfaceId。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability) 接口获取。 |
+| surfaceId | string | 是 | 从XComponent或者 [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver)组件获取的surfaceId。 |
 
 **返回值：**
 
@@ -323,8 +283,8 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## createPreviewOutput
 
@@ -334,9 +294,11 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 
 创建无配置信息的预览输出对象，同步返回结果。该接口需配合[preconfig](arkts-camera-camera-photosession-i.md#preconfig)一起使用。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -348,7 +310,7 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 从[XComponent](XComponent)或者 [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver)组件获取的surfaceId。 |
+| surfaceId | string | 是 | 从XComponent或者 [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md#ImageReceiver)组件获取的surfaceId。 |
 
 **返回值：**
 
@@ -360,8 +322,8 @@ createPreviewOutput(surfaceId: string): PreviewOutput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## createSession
 
@@ -371,9 +333,11 @@ createSession<T extends Session>(mode: SceneMode): T
 
 创建指定SceneMode的Session实例，同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -397,8 +361,8 @@ createSession<T extends Session>(mode: SceneMode): T
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**适用版本：** 19+ |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**适用版本：** 19+ |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## createVideoOutput
 
@@ -406,18 +370,13 @@ createSession<T extends Session>(mode: SceneMode): T
 createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 ```
 
-创建录像输出对象，同步返回结果。
+创建录像输出对象，同步返回结果。 在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。 | SDR/HDR拍摄 | CameraFormat | ColorSpace | |--------------------|--------------------------|------------------| | SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT | | HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT&lt;br&gt;BT2020_HLG_FULL |
 
-在录像模式下，使能SDR或HDR_VIVID拍摄效果时，CameraFormat与ColorSpace必须按照下列表格中的对应关系配置，若不满足表格中CameraFormat与ColorSpace配置，会导致预览异常等问题。
+**起始版本：** 23
 
-| SDR/HDR拍摄 | CameraFormat | ColorSpace |  
-|--------------------|--------------------------|------------------|  
-| SDR | CAMERA_FORMAT_YUV_420_SP | BT709_LIMIT |  
-| HDR_VIVID | CAMERA_FORMAT_YCRCB_P010&lt;br&gt;CAMERA_FORMAT_YCBCR_P010 | BT2020_HLG_LIMIT&lt;br&gt;BT2020_HLG_FULL |
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -429,8 +388,8 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | 是 | 支持的录像配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability-1) 接口获取。 |
-| surfaceId | string | 是 | 从[AVRecorder](@ohos.multimedia.media:media.AVRecorder)获取的surfaceId。 |
+| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | 是 | 支持的录像配置信息，通过 [getSupportedOutputCapability](#getSupportedOutputCapability) 接口获取。 |
+| surfaceId | string | 是 | 从AVRecorder获取的surfaceId。 |
 
 **返回值：**
 
@@ -442,8 +401,8 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 
 ## createVideoOutput
 
@@ -453,9 +412,11 @@ createVideoOutput(surfaceId: string): VideoOutput
 
 创建无配置信息的录像输出对象，同步返回结果。该接口需配合[preconfig](arkts-camera-camera-videosession-i.md#preconfig)功能一起使用。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -467,7 +428,7 @@ createVideoOutput(surfaceId: string): VideoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | 从[AVRecorder](@ohos.multimedia.media:media.AVRecorder)获取的surfaceId。 |
+| surfaceId | string | 是 | 从AVRecorder获取的surfaceId。 |
 
 **返回值：**
 
@@ -479,8 +440,8 @@ createVideoOutput(surfaceId: string): VideoOutput
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getCameraConcurrentInfos
 
@@ -490,9 +451,11 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 
 获取指定相机设备的并发信息。返回空数组表示不支持并发。
 
-**起始版本：** 18
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -516,7 +479,7 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getCameraDevice
 
@@ -524,13 +487,13 @@ getCameraConcurrentInfos(cameras: Array<CameraDevice>): Array<CameraConcurrentIn
 getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 ```
 
-根据相机位置和相机类型查询对应相机。
+根据相机位置和相机类型查询对应相机。 获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md#CameraPosition)和[CameraType](arkts-camera-camera-cameratype-e.md#CameraType)的相机镜头，如果该接口返回结果为undefined， 表示当前设备未查询到该镜头。
 
-获取指定[CameraPosition](arkts-camera-camera-cameraposition-e.md#CameraPosition)和[CameraType](arkts-camera-camera-cameratype-e.md#CameraType)的相机镜头，如果该接口返回结果为undefined，表示当前设备未查询到该镜头。
+**起始版本：** 23
 
-**起始版本：** 18
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为18；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -555,7 +518,7 @@ getCameraDevice(position: CameraPosition, type: CameraType): CameraDevice
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getCameraDevices
 
@@ -567,7 +530,9 @@ getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -593,7 +558,7 @@ getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## getSupportedCameras
 
@@ -601,14 +566,13 @@ getCameraDevices(position: CameraPosition, types: Array<CameraType>, connectType
 getSupportedCameras(): Array<CameraDevice>
 ```
 
-获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。
+获取支持的基础相机设备对象（如获取CameraType为CAMERA_TYPE_DEFAULT的默认相机），同步返回结果。 如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过 [getCameraDevices](#getCameraDevices)接口获取。
 
-如果需要获取额外的相机设备对象（如获取CameraType为CAMERA_TYPE_TELEPHOTO的长焦相机），可通过  
-[getCameraDevices](#getCameraDevices)接口获取。
+**起始版本：** 23
 
-**起始版本：** 10
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -628,15 +592,13 @@ getSupportedCameras(): Array<CameraDevice>
 getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutputCapability
 ```
 
-查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。
-
-> **说明：**
-> 
-> 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
+查询指定相机在指定模式下支持的完整输出能力，包括未压缩图（YUV）、HEIF和HDR等能力。 > **说明：** > > 使用YUV，HEIF或HDR等能力前，需要先显式调用此方法确保获取完整输出能力。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -665,11 +627,7 @@ getSupportedFullOutputCapability(camera: CameraDevice, mode: SceneMode): CameraO
 getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 ```
 
-查询相机设备支持的输出能力，同步返回结果。
-
-> **说明：**
-> 
-> 从 API version 10开始支持，从API version 11开始废弃。
+查询相机设备支持的输出能力，同步返回结果。 > **说明：** > > 从 API version 10开始支持，从API version 11开始废弃。
 
 **起始版本：** 10
 
@@ -677,7 +635,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 **废弃版本：** 11
 
-**替代接口：** [getSupportedOutputCapability](camera.CameraManager.getSupportedOutputCapability(camera:)
+**替代接口：** [getSupportedOutputCapability](#getSupportedOutputCapability)(camera: CameraDevice, mode: SceneMode)
 
 <!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
 
@@ -703,9 +661,11 @@ getSupportedOutputCapability(camera: CameraDevice, mode: SceneMode): CameraOutpu
 
 查询相机设备在指定模式下支持的输出能力，同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -734,9 +694,11 @@ getSupportedSceneModes(camera: CameraDevice): Array<SceneMode>
 
 获取指定的相机设备对象支持的模式，同步返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -764,9 +726,11 @@ getTorchMode(): TorchMode
 
 获取当前设备手电筒模式。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -788,9 +752,11 @@ isCameraMuted(): boolean
 
 查询当前相机是否禁用。
 
-**起始版本：** 10
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -804,38 +770,6 @@ isCameraMuted(): boolean
 | --- | --- |
 | boolean | 返回true表示相机被禁用，返回false表示相机未被禁用。 |
 
-## isTorchLevelControlSupported
-
-```TypeScript
-isTorchLevelControlSupported(): boolean
-```
-
-检测设备是否支持手电筒亮度调节功能。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CameraManager-isTorchLevelControlSupported(): boolean--><!--Device-CameraManager-isTorchLevelControlSupported(): boolean-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**返回值：**
-
-| 类型 | 说明 |
-| --- | --- |
-| boolean | 表示设备是否支持手电筒亮度调节功能。返回true表示支持，返回false表示不支持。若接口调用失败，返回undefined。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 23 - 24 |
-
 ## isTorchModeSupported
 
 ```TypeScript
@@ -844,9 +778,11 @@ isTorchModeSupported(mode: TorchMode): boolean
 
 检测是否支持设置的手电筒模式。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -874,9 +810,11 @@ isTorchSupported(): boolean
 
 检测设备是否支持手电筒。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -890,7 +828,79 @@ isTorchSupported(): boolean
 | --- | --- |
 | boolean | 表示设备是否支持手电筒，true表示设备支持手电筒，false表示设备不支持手电。 &lt;br&gt;如果返回false，则[isTorchModeSupported]{ |
 
-## off('cameraStatus')
+## offCameraStatus
+
+```TypeScript
+offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void
+```
+
+Unsubscribes from camera status change event callback.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | Callback used to get the camera status change. |
+
+## offFoldStatusChange
+
+```TypeScript
+offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void
+```
+
+Unsubscribes from fold status change event callback.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | Callback used to get the fold status change. |
+
+## offTorchStatusChange
+
+```TypeScript
+offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void
+```
+
+Unsubscribes torch status change event callback.
+
+**起始版本：** 23
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
+
+<!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | Callback used to return the torch status change |
+
+## off_cameraStatus
 
 ```TypeScript
 off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
@@ -901,6 +911,8 @@ off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -913,9 +925,9 @@ off(type: 'cameraStatus', callback?: AsyncCallback<CameraStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraStatus' | 是 | 监听事件，固定为'cameraStatus'。cameraManager对象获取成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## off('foldStatusChange')
+## off_foldStatusChange
 
 ```TypeScript
 off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
@@ -926,6 +938,8 @@ off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -938,9 +952,9 @@ off(type: 'foldStatusChange', callback?: AsyncCallback<FoldStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | 是 | 监听事件，固定为'foldStatusChange'。表示折叠设备折叠状态发生变化。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | 回调函数，返回折叠设备折叠信息。如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | 回调函数，返回折叠设备折叠信息。如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有 callback。 |
 
-## off('torchStatusChange')
+## off_torchStatusChange
 
 ```TypeScript
 off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
@@ -951,6 +965,8 @@ off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -963,21 +979,23 @@ off(type: 'torchStatusChange', callback?: AsyncCallback<TorchStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'torchStatusChange' | 是 | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-## offCameraStatus
+## onCameraStatus
 
 ```TypeScript
-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void
+onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void
 ```
 
-Unsubscribes from camera status change event callback.
+Subscribes camera status change event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-offCameraStatus(callback?: AsyncCallback<CameraStatusInfo>): void-End-->
+**废弃版本：** -1
+
+<!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -985,21 +1003,23 @@ Unsubscribes from camera status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 否 | Callback used to get the camera status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | Callback used to get the camera status change. |
 
-## offFoldStatusChange
+## onFoldStatusChange
 
 ```TypeScript
-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void
+onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-Unsubscribes from fold status change event callback.
+Subscribes fold status change event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-offFoldStatusChange(callback?: AsyncCallback<FoldStatusInfo>): void-End-->
+**废弃版本：** -1
+
+<!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1007,21 +1027,23 @@ Unsubscribes from fold status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 否 | Callback used to get the fold status change. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | Callback used to get the fold status change. |
 
-## offTorchStatusChange
+## onTorchStatusChange
 
 ```TypeScript
-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void
+onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void
 ```
 
-Unsubscribes torch status change event callback.
+Subscribes torch status change event callback.
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-<!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-offTorchStatusChange(callback?: AsyncCallback<TorchStatusInfo>): void-End-->
+**废弃版本：** -1
+
+<!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -1029,23 +1051,21 @@ Unsubscribes torch status change event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 否 | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | Callback used to return the torch status change |
 
-## on('cameraStatus')
+## on_cameraStatus
 
 ```TypeScript
 on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 ```
 
-相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+相机设备状态回调，通过注册回调函数获取相机的状态变化。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -1058,23 +1078,21 @@ on(type: 'cameraStatus', callback: AsyncCallback<CameraStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cameraStatus' | 是 | 监听事件，固定为'cameraStatus'。cameraManager对象获取成功后可监听。目前只支持对设备打开或者关闭会触发该事件并返回对应信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | 回调函数，用于获取镜头状态变化信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | 回调函数，用于获取镜头状态变化信息。 |
 
-## on('foldStatusChange')
+## on_foldStatusChange
 
 ```TypeScript
 on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 ```
 
-注册折叠设备折叠状态变化的监听。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+注册折叠设备折叠状态变化的监听。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 12
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -1087,23 +1105,21 @@ on(type: 'foldStatusChange', callback: AsyncCallback<FoldStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'foldStatusChange' | 是 | 监听事件，固定为'foldStatusChange'。表示折叠设备折叠状态发生变化。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | 回调函数。返回折叠设备折叠信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | 回调函数。返回折叠设备折叠信息。 |
 
-## on('torchStatusChange')
+## on_torchStatusChange
 
 ```TypeScript
 on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 ```
 
-手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。
-
-> **说明：**
-> 
-> 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
+手电筒状态变化回调，通过注册回调函数获取手电筒状态变化。使用callback异步回调。 > **说明：** > > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -1116,73 +1132,7 @@ on(type: 'torchStatusChange', callback: AsyncCallback<TorchStatusInfo>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'torchStatusChange' | 是 | 监听事件，固定为'torchStatusChange'。cameraManager对象获取成功后可监听。目前只支持手电筒打开，手电筒关闭，手电筒不可 用，手电筒恢复可用会触发该事件并返回对应信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取手电筒状态变化信息。 |
-
-## onCameraStatus
-
-```TypeScript
-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void
-```
-
-Subscribes camera status change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void--><!--Device-CameraManager-onCameraStatus(callback: AsyncCallback<CameraStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)&gt; | 是 | Callback used to get the camera status change. |
-
-## onFoldStatusChange
-
-```TypeScript
-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void
-```
-
-Subscribes fold status change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void--><!--Device-CameraManager-onFoldStatusChange(callback: AsyncCallback<FoldStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FoldStatusInfo](arkts-camera-camera-foldstatusinfo-i.md)&gt; | 是 | Callback used to get the fold status change. |
-
-## onTorchStatusChange
-
-```TypeScript
-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void
-```
-
-Subscribes torch status change event callback.
-
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
-
-<!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void--><!--Device-CameraManager-onTorchStatusChange(callback: AsyncCallback<TorchStatusInfo>): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | Callback used to return the torch status change |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[TorchStatusInfo](arkts-camera-camera-torchstatusinfo-i.md)&gt; | 是 | 回调函数，用于获取手电筒状态变化信息。 |
 
 ## setTorchMode
 
@@ -1192,9 +1142,11 @@ setTorchMode(mode: TorchMode): void
 
 设置设备手电筒模式。
 
-**起始版本：** 11
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为11；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 
@@ -1212,47 +1164,7 @@ setTorchMode(mode: TorchMode): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7400101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 11 - 17 |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
-
-## setTorchModeOnWithLevel
-
-ArkTS-Dyn:
-```TypeScript
-setTorchModeOnWithLevel(torchLevel: number): void
-```
-
-ArkTS-Sta:
-```TypeScript
-setTorchModeOnWithLevel(torchLevel: double): void
-```
-
-手电筒设置指定亮度级别。
-
-**起始版本：** 26.0.0
-
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void--><!--Device-CameraManager-setTorchModeOnWithLevel(torchLevel: double): void-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**参数：**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| torchLevel | ArkTS-Dyn: number  <br>ArkTS-Sta：double | 是 | 手电筒亮度级别。通常范围是[0.0, 1.0]（0.0为最暗，1.0为最亮）。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [7400102](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400102-非法操作) | Operation not allowed. |
-| [7400201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-camera-kit/errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Not System Application.<br>**适用版本：** 23 - 24 |
+| [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect.<br>**适用版本：** 11 - 17 |
+| [7400102](../errorcode-camera.md#7400102-非法操作) | Operation not allowed.<br>**适用版本：** 12+ |
+| [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error.<br>**适用版本：** 12+ |
 

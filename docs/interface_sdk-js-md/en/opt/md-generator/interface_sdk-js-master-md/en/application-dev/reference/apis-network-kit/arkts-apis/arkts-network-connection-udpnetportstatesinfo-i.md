@@ -2,7 +2,9 @@
 
 Defines UDP port states of system network.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface UdpNetPortStatesInfo--><!--Device-connection-export interface UdpNetPortStatesInfo-End-->
 
@@ -24,7 +26,9 @@ Local IP of the UDP network.
 
 **Type:** string
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,7 +46,9 @@ Local port of the UDP network.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -60,7 +66,9 @@ PID of the UDP network.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,7 +86,9 @@ UID of the UDP network.
 
 **Type:** number
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

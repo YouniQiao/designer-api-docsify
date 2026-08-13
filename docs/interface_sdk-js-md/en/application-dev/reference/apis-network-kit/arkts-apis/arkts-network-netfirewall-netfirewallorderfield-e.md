@@ -6,6 +6,8 @@ Pagination query sorting field.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-netFirewall-enum NetFirewallOrderField--><!--Device-netFirewall-enum NetFirewallOrderField-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -22,6 +24,8 @@ Sort rule names, it can be referenced only by the getNetFirewallRules interface.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
 
+**Deprecated since:** -1
+
 <!--Device-NetFirewallOrderField-ORDER_BY_RULE_NAME = 1--><!--Device-NetFirewallOrderField-ORDER_BY_RULE_NAME = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.NetFirewall
@@ -37,6 +41,8 @@ Sort the recorded time, it can be referenced only by the getNetFirewallRules int
 **Since:** 15
 
 **ArkTS mode:** ArkTS-Dyn only, since version 15.
+
+**Deprecated since:** -1
 
 <!--Device-NetFirewallOrderField-ORDER_BY_RECORD_TIME = 100--><!--Device-NetFirewallOrderField-ORDER_BY_RECORD_TIME = 100-End-->
 

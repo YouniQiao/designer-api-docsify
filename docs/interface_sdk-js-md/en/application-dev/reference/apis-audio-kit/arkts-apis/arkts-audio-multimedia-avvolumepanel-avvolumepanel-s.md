@@ -2,11 +2,11 @@
 
 A panel to set the system audio output volume.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct AVVolumePanel--><!--Device-unnamed-export declare struct AVVolumePanel-End-->
 
@@ -18,57 +18,49 @@ A panel to set the system audio output volume.
 import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
 ```
 
-## build
-
-```TypeScript
-build(): void
-```
-
-The method to build component.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Decorator:** @Builder
-
-<!--Device-AVVolumePanel-build(): void--><!--Device-AVVolumePanel-build(): void-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Volume
-
 ## volumeLevel
 
 ```TypeScript
-volumeLevel?: int
+@Prop
+  volumeLevel?: number
 ```
 
-Sets the device volume through the volume panel.The value should be between mininum and maxinum current device volume, otherwise it will be discarded.
+Sets the device volume through the volume panel. The value should be between mininum and maxinum current device volume, otherwise it will be discarded.
 
-**Type:** int
+**Type:** number
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-AVVolumePanel-volumeLevel?: int--><!--Device-AVVolumePanel-volumeLevel?: int-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVVolumePanel-@Prop  volumeLevel?: number--><!--Device-AVVolumePanel-@Prop  volumeLevel?: number-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 
 ## volumeParameter
 
 ```TypeScript
-volumeParameter?: AVVolumePanelParameter
+@Prop
+  volumeParameter?: AVVolumePanelParameter
 ```
 
 Sets the custom parameters of volume panel.
 
 **Type:** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-<!--Device-AVVolumePanel-volumeParameter?: AVVolumePanelParameter--><!--Device-AVVolumePanel-volumeParameter?: AVVolumePanelParameter-End-->
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AVVolumePanel-@Prop  volumeParameter?: AVVolumePanelParameter--><!--Device-AVVolumePanel-@Prop  volumeParameter?: AVVolumePanelParameter-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Volume
 

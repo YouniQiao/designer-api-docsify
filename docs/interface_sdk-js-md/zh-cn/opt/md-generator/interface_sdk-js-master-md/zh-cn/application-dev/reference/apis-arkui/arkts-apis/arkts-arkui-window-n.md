@@ -1,6 +1,8 @@
 # window
 
-**起始版本：** 6
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace window--><!--Device-unnamed-declare namespace window-End-->
 
@@ -12,65 +14,71 @@
 
 | 名称 |
 | --- |
-| [createWindow](arkts-arkui-window-createwindow-f.md#createwindow) |
-| [createWindow](arkts-arkui-window-createwindow-f.md#createwindow-1) |
+| [createWindow](arkts-arkui-window-createwindow-f.md#createWindow) |
+| [createWindow](arkts-arkui-window-createwindow-f.md#createWindow) |
 | [create](arkts-arkui-window-create-f.md#create) |
-| [create](arkts-arkui-window-create-f.md#create-1) |
-| [create](arkts-arkui-window-create-f.md#create-2) |
-| [create](arkts-arkui-window-create-f.md#create-3) |
+| [create](arkts-arkui-window-create-f.md#create) |
+| [create](arkts-arkui-window-create-f.md#create) |
+| [create](arkts-arkui-window-create-f.md#create) |
 | [find](arkts-arkui-window-find-f.md#find) |
-| [find](arkts-arkui-window-find-f.md#find-1) |
-| [findWindow](arkts-arkui-window-findwindow-f.md#findwindow) |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow) |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow-1) |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow-2) |
-| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#gettopwindow-3) |
-| [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow) |
-| [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1) |
-| [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md#shiftappwindowfocus) |
-| [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md#shiftappwindowpointerevent) |
-| [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md#shiftappwindowtouchevent) |
-| [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f.md#getvisiblewindowinfo) |
-| [getWindowsByCoordinate](arkts-arkui-window-getwindowsbycoordinate-f.md#getwindowsbycoordinate) |
-| [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo) |
-| [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getallwindowlayoutinfo-1) |
-| [getGlobalWindowMode](arkts-arkui-window-getglobalwindowmode-f.md#getglobalwindowmode) |
-| [onApplicationFocusStateChange](arkts-arkui-window-onapplicationfocusstatechange-f.md#onapplicationfocusstatechange) |
-| [offApplicationFocusStateChange](arkts-arkui-window-offapplicationfocusstatechange-f.md#offapplicationfocusstatechange) |
-| [setStartWindowBackgroundColor](arkts-arkui-window-setstartwindowbackgroundcolor-f.md#setstartwindowbackgroundcolor) |
-| [setWatermarkImageForAppWindows](arkts-arkui-window-setwatermarkimageforappwindows-f.md#setwatermarkimageforappwindows) |
-| [getAllMainWindowInfo](arkts-arkui-window-getallmainwindowinfo-f.md#getallmainwindowinfo) |
-| [getMainWindowSnapshot](arkts-arkui-window-getmainwindowsnapshot-f.md#getmainwindowsnapshot) |
+| [find](arkts-arkui-window-find-f.md#find) |
+| [findWindow](arkts-arkui-window-findwindow-f.md#findWindow) |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#getTopWindow) |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#getTopWindow) |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#getTopWindow) |
+| [getTopWindow](arkts-arkui-window-gettopwindow-f.md#getTopWindow) |
+| [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getLastWindow) |
+| [getLastWindow](arkts-arkui-window-getlastwindow-f.md#getLastWindow) |
+| [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md#shiftAppWindowFocus) |
+| [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md#shiftAppWindowPointerEvent) |
+| [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md#shiftAppWindowTouchEvent) |
+| [getWindowsByCoordinate](arkts-arkui-window-getwindowsbycoordinate-f.md#getWindowsByCoordinate) |
+| [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getAllWindowLayoutInfo) |
+| [getAllWindowLayoutInfo](arkts-arkui-window-getallwindowlayoutinfo-f.md#getAllWindowLayoutInfo) |
+| [getGlobalWindowMode](arkts-arkui-window-getglobalwindowmode-f.md#getGlobalWindowMode) |
+| [onApplicationFocusStateChange](arkts-arkui-window-onapplicationfocusstatechange-f.md#onApplicationFocusStateChange) |
+| [offApplicationFocusStateChange](arkts-arkui-window-offapplicationfocusstatechange-f.md#offApplicationFocusStateChange) |
+| [setStartWindowBackgroundColor](arkts-arkui-window-setstartwindowbackgroundcolor-f.md#setStartWindowBackgroundColor) |
+| [setWatermarkImageForAppWindows](arkts-arkui-window-setwatermarkimageforappwindows-f.md#setWatermarkImageForAppWindows) |
+| [getAllMainWindowInfo](arkts-arkui-window-getallmainwindowinfo-f.md#getAllMainWindowInfo) |
+| [getMainWindowSnapshot](arkts-arkui-window-getmainwindowsnapshot-f.md#getMainWindowSnapshot) |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 |
 | --- |
-| [createSubWindowAndBindParent](arkts-arkui-window-createsubwindowandbindparent-f-sys.md#createsubwindowandbindparent) |
-| [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md#minimizeall) |
-| [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md#minimizeall-1) |
-| [minimizeAllWithExclusion](arkts-arkui-window-minimizeallwithexclusion-f-sys.md#minimizeallwithexclusion) |
-| [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md#toggleshownstateforallappwindows) |
-| [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md#toggleshownstateforallappwindows-1) |
-| [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md#setwindowlayoutmode) |
-| [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md#setwindowlayoutmode-1) |
-| [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setgesturenavigationenabled) |
-| [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setgesturenavigationenabled-1) |
-| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage) |
-| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-1) |
-| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setwatermarkimage-2) |
-| [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md#setspecificsystemwindowzindex) |
-| [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md#gettopnavdestinationname) |
-| [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md#getsnapshot) |
-| [on](arkts-arkui-window-on-f-sys.md#on) |
-| [off](arkts-arkui-window-off-f-sys.md#off) |
-| [on](arkts-arkui-window-on-f-sys.md#on-1) |
-| [off](arkts-arkui-window-off-f-sys.md#off-1) |
-| [on](arkts-arkui-window-on-f-sys.md#on-2) |
-| [off](arkts-arkui-window-off-f-sys.md#off-2) |
-| [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md#notifyscreenshotevent) |
-| [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md#movemainwindowtotargetdisplay) |
+| [createSubWindowAndBindParent](arkts-arkui-window-createsubwindowandbindparent-f-sys.md#createSubWindowAndBindParent（系统接口）) |
+| [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md#minimizeAll（系统接口）) |
+| [minimizeAll](arkts-arkui-window-minimizeall-f-sys.md#minimizeAll（系统接口）) |
+| [minimizeAllWithExclusion](arkts-arkui-window-minimizeallwithexclusion-f-sys.md#minimizeAllWithExclusion（系统接口）) |
+| [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md#toggleShownStateForAllAppWindows（系统接口）) |
+| [toggleShownStateForAllAppWindows](arkts-arkui-window-toggleshownstateforallappwindows-f-sys.md#toggleShownStateForAllAppWindows（系统接口）) |
+| [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md#setWindowLayoutMode（系统接口）) |
+| [setWindowLayoutMode](arkts-arkui-window-setwindowlayoutmode-f-sys.md#setWindowLayoutMode（系统接口）) |
+| [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setGestureNavigationEnabled（系统接口）) |
+| [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setGestureNavigationEnabled（系统接口）) |
+| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setWaterMarkImage（系统接口）) |
+| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setWaterMarkImage（系统接口）) |
+| [setWaterMarkImage](arkts-arkui-window-setwatermarkimage-f-sys.md#setWaterMarkImage（系统接口）) |
+| [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md#setSpecificSystemWindowZIndex（系统接口）) |
+| [getVisibleWindowInfo](arkts-arkui-window-getvisiblewindowinfo-f-sys.md#getVisibleWindowInfo（系统接口）) |
+| [getTopNavDestinationName](arkts-arkui-window-gettopnavdestinationname-f-sys.md#getTopNavDestinationName（系统接口）) |
+| [getSnapshot](arkts-arkui-window-getsnapshot-f-sys.md#getSnapshot（系统接口）) |
+| [on_systemBarTintChange](arkts-arkui-window-onsystembartintchange-f-sys.md) |
+| [onSystemBarTintChange](arkts-arkui-window-onsystembartintchange-f-sys.md#onSystemBarTintChange（系统接口）) |
+| [off_systemBarTintChange](arkts-arkui-window-offsystembartintchange-f-sys.md) |
+| [offSystemBarTintChange](arkts-arkui-window-offsystembartintchange-f-sys.md#offSystemBarTintChange（系统接口）) |
+| [on_gestureNavigationEnabledChange](arkts-arkui-window-ongesturenavigationenabledchange-f-sys.md) |
+| [onGestureNavigationEnabledChange](arkts-arkui-window-ongesturenavigationenabledchange-f-sys.md#onGestureNavigationEnabledChange（系统接口）) |
+| [off_gestureNavigationEnabledChange](arkts-arkui-window-offgesturenavigationenabledchange-f-sys.md) |
+| [offGestureNavigationEnabledChange](arkts-arkui-window-offgesturenavigationenabledchange-f-sys.md#offGestureNavigationEnabledChange（系统接口）) |
+| [on_waterMarkFlagChange](arkts-arkui-window-onwatermarkflagchange-f-sys.md) |
+| [onWaterMarkFlagChange](arkts-arkui-window-onwatermarkflagchange-f-sys.md#onWaterMarkFlagChange（系统接口）) |
+| [off_waterMarkFlagChange](arkts-arkui-window-offwatermarkflagchange-f-sys.md) |
+| [offWaterMarkFlagChange](arkts-arkui-window-offwatermarkflagchange-f-sys.md#offWaterMarkFlagChange（系统接口）) |
+| [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md#notifyScreenshotEvent（系统接口）) |
+| [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md#moveMainWindowToTargetDisplay（系统接口）) |
 <!--DelEnd-->
 
 ### 接口
@@ -129,6 +137,7 @@
 | [SystemBarTintState](arkts-arkui-window-systembartintstate-i-sys.md) |
 | [WindowAnchorInfo](arkts-arkui-window-windowanchorinfo-i-sys.md) |
 | [SubWindowAttachOptions](arkts-arkui-window-subwindowattachoptions-i-sys.md) |
+| [WindowInfo](arkts-arkui-window-windowinfo-i-sys.md) |
 | [ScaleOptions](arkts-arkui-window-scaleoptions-i-sys.md) |
 | [RotateOptions](arkts-arkui-window-rotateoptions-i-sys.md) |
 | [TranslateOptions](arkts-arkui-window-translateoptions-i-sys.md) |
@@ -191,5 +200,5 @@
 
 | 名称 |
 | --- |
-| [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md) | 旋转事件通知通用回调函数。  开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo)，返回值类型为  [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) \\|
+| [RotationChangeCallback](arkts-arkui-window-rotationchangecallback-t.md) | 旋转事件通知通用回调函数。 开发者在使用时，回调函数参数类型为[RotationChangeInfo](arkts-arkui-window-rotationchangeinfo-i.md#RotationChangeInfo)，返回值类型为 [RotationChangeResult](arkts-arkui-window-rotationchangeresult-i.md#RotationChangeResult) \\|
 | [SpecificSystemBar](arkts-arkui-window-specificsystembar-t.md) |

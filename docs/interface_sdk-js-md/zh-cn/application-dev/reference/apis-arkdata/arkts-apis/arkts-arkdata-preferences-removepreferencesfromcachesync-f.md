@@ -6,18 +6,13 @@
 function removePreferencesFromCacheSync(context: Context, name: string): void
 ```
 
-从缓存中移除指定的Preferences实例，通过name进行参数设置，此为同步接口。
+从缓存中移除指定的Preferences实例，通过name进行参数设置，此为同步接口。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
 
-应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+**起始版本：** 23
 
-调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
-
-**起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -29,15 +24,15 @@ function removePreferencesFromCacheSync(context: Context, name: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 &lt;br&gt;FA模型的应用Context定义见[Context](./app/context)。 &lt;br&gt;Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 |
+| context | Context | 是 | 应用上下文。 &lt;br&gt;FA模型的应用Context定义见Context。 &lt;br&gt;Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 |
 | name | string | 是 | Preferences实例的名称。名称长度需大于零且小于等于255字节，名称中不能包含'/'且不能以'/'结尾。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 
@@ -71,18 +66,13 @@ class EntryAbility extends UIAbility {
 function removePreferencesFromCacheSync(context: Context, options: Options): void
 ```
 
-从缓存中移除指定的Preferences实例，通过Options进行参数设置，此为同步接口。
+从缓存中移除指定的Preferences实例，通过Options进行参数设置，此为同步接口。 应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用 [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次 getPreferences将会重新读取持久化文件，生成新的Preferences实例。 调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。 若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上 减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
 
-应用首次调用[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)接口获取某个Preferences实例后，该实例会被缓存起来，后续调用  
-[getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getPreferences)时不会再次从持久化文件中读取，直接从缓存中获取Preferences实例。调用此接口移除缓存中的实例之后，再次getPreferences将会重新读取持久化文件，生成新的Preferences实例。
+**起始版本：** 23
 
-调用该接口后，不建议再使用旧的Preferences实例进行数据操作，否则会导致数据一致性问题，应将Preferences实例置为null，系统会统一回收。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-若使用[GSKV存储模式](../../../database/data-persistence-by-preferences.md#gskv存储)，推荐在进程退出时手动调用一次该接口。此操作会将数据缓存页写入磁盘，可一定程度上减少下一次调用getPreferences接口时的耗时。否则，下一次调用getPreferences接口时底层需要进行数据恢复，数据恢复的耗时取决于未写入磁盘的数据缓存页数量。
-
-**起始版本：** 10
-
-**ArkTS模式：** ArkTS-Dyn起始版本为10；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -94,18 +84,18 @@ function removePreferencesFromCacheSync(context: Context, options: Options): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用上下文。 &lt;br&gt;FA模型的应用Context定义见[Context](./app/context)。 &lt;br&gt;Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 |
+| context | Context | 是 | 应用上下文。 &lt;br&gt;FA模型的应用Context定义见Context。 &lt;br&gt;Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 |
 | options | Options | 是 | 与Preferences实例相关的配置选项。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [15501001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
-| [15501002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
-| [15500000](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkdata/errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
+| [15501001](../errorcode-preferences.md#15501001-上下文环境非stage模型) | The operations is supported in stage mode only. |
+| [15501002](../errorcode-preferences.md#15501002-options中传入的datagroupid参数非法) | Invalid dataGroupId. |
+| [15500000](../errorcode-preferences.md#15500000-内部错误) | Inner error.<br>**适用版本：** 11+ |
 
 ## 示例
 

@@ -1,15 +1,12 @@
 # AuxiliaryPictureType
 
-Enumerates the auxiliary pictures types.
+Enumerates the auxiliary pictures types. Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures. Before obtaining and using a specific auxiliary picture, call [getAuxiliaryPicture](arkts-image-image-picture-i.md#getAuxiliaryPicture) in Picture to obtain the auxiliary picture.
 
-Auxiliary pictures do not directly participate in image display, and not all images contain auxiliary pictures.
+**Since:** 23
 
-Before obtaining and using a specific auxiliary picture, call   
-[getAuxiliaryPicture](arkts-image-image-picture-i.md#getAuxiliaryPicture) in Picture to obtain the auxiliary picture.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-image-enum AuxiliaryPictureType--><!--Device-image-enum AuxiliaryPictureType-End-->
 
@@ -21,16 +18,13 @@ Before obtaining and using a specific auxiliary picture, call
 GAINMAP = 1
 ```
 
-Gain map.
+Gain map. It is used to generate HDR images more accurately. HDR synthesis usually involves using the SDR main image, gain map, and [HDR metadata](arkts-image-image-pixelmap-i.md#getMetadata) to calculate the luminance mapping.
 
-It is used to generate HDR images more accurately.
+**Since:** 23
 
-HDR synthesis usually involves using the SDR main image, gain map, and   
-[HDR metadata](arkts-image-image-pixelmap-i.md#getMetadata) to calculate the luminance mapping.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-GAINMAP = 1--><!--Device-AuxiliaryPictureType-GAINMAP = 1-End-->
 
@@ -42,15 +36,13 @@ HDR synthesis usually involves using the SDR main image, gain map, and
 DEPTH_MAP = 2
 ```
 
-Depth map.
+Depth map. It is used to store the distance between each pixel and the camera, and provides the 3D structure of the scene. It is useful for tasks like 3D reconstruction, background separation, and scene understanding.
 
-It is used to store the distance between each pixel and the camera, and provides the 3D structure of the scene.
+**Since:** 23
 
-It is useful for tasks like 3D reconstruction, background separation, and scene understanding.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-DEPTH_MAP = 2--><!--Device-AuxiliaryPictureType-DEPTH_MAP = 2-End-->
 
@@ -62,15 +54,13 @@ It is useful for tasks like 3D reconstruction, background separation, and scene 
 UNREFOCUS_MAP = 3
 ```
 
-Unrefocus map.
+Unrefocus map. It is used to store the pixel content that is not refocused during capture. It is useful for post-processing effects such as portrait blurring, allowing users to select focus areas freely.
 
-It is used to store the pixel content that is not refocused during capture.
+**Since:** 23
 
-It is useful for post-processing effects such as portrait blurring, allowing users to select focus areas freely.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-UNREFOCUS_MAP = 3--><!--Device-AuxiliaryPictureType-UNREFOCUS_MAP = 3-End-->
 
@@ -82,15 +72,13 @@ It is useful for post-processing effects such as portrait blurring, allowing use
 LINEAR_MAP = 4
 ```
 
-Linear map.
+Linear map. It records lighting, color, or other visual elements linearly, providing additional data for image processing. It is useful for visual effect enhancement and color post-processing.
 
-It records lighting, color, or other visual elements linearly, providing additional data for image processing.
+**Since:** 23
 
-It is useful for visual effect enhancement and color post-processing.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-LINEAR_MAP = 4--><!--Device-AuxiliaryPictureType-LINEAR_MAP = 4-End-->
 
@@ -102,15 +90,13 @@ It is useful for visual effect enhancement and color post-processing.
 FRAGMENT_MAP = 5
 ```
 
-Fragment map.
+Fragment map. It records areas of the original image obscured by watermarks. These areas might be cropped from the original image or filled with placeholder pixel data. It is useful for watermark removal and original image restoration.
 
-It records areas of the original image obscured by watermarks. These areas might be cropped from the original image or filled with placeholder pixel data.
+**Since:** 23
 
-It is useful for watermark removal and original image restoration.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-AuxiliaryPictureType-FRAGMENT_MAP = 5--><!--Device-AuxiliaryPictureType-FRAGMENT_MAP = 5-End-->
 
@@ -126,7 +112,9 @@ LHDR gain map.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

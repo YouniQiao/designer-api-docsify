@@ -1,14 +1,10 @@
 # PermissionUsedType (System API)
 
-Enumerates the means for using a sensitive permission.
+Enumerates the means for using a sensitive permission. | Name | Value| Description | | ----------------------- | -- | ---------------- | | NORMAL_TYPE | 0 | The sensitive permission is used after authorization through a dialog box or a system settings page. | | PICKER_TYPE | 1 | Indicates that a sensitive permission is used through a PICKER service, but this method does not grant the permission. | | SECURITY_COMPONENT_TYPE | 2 | Indicates that a sensitive permission is used through security component authorization. A security component is a system-provided authorization component; after the user taps it, the application can temporarily obtain the corresponding permission. |
 
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description |
-| ----------------------- | -- | ---------------- |
-| [NORMAL_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 0 | The sensitive permission is used after authorization through a dialog box or a system settings page. |
-| [PICKER_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 1 | Indicates that a sensitive permission is used through a PICKER service, but this method does not grant the permission. |
-| [SECURITY_COMPONENT_TYPE](arkts-ability-privacymanager-permissionusedtype-e-sys.md) | 2 |
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-privacyManager-enum PermissionUsedType--><!--Device-privacyManager-enum PermissionUsedType-End-->
 
@@ -24,7 +20,9 @@ NORMAL_TYPE = 0
 
 Sensitive resources are accessed with the declared permission or permission granted by the user.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedType-NORMAL_TYPE = 0--><!--Device-PermissionUsedType-NORMAL_TYPE = 0-End-->
 
@@ -40,7 +38,9 @@ PICKER_TYPE = 1
 
 Sensitive resources are accessed through a picker.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedType-PICKER_TYPE = 1--><!--Device-PermissionUsedType-PICKER_TYPE = 1-End-->
 
@@ -56,7 +56,9 @@ SECURITY_COMPONENT_TYPE = 2
 
 Sensitive resources are accessed through a security component.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PermissionUsedType-SECURITY_COMPONENT_TYPE = 2--><!--Device-PermissionUsedType-SECURITY_COMPONENT_TYPE = 2-End-->
 

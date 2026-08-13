@@ -4,6 +4,8 @@ NavDestination自定义动画接口。
 
 **起始版本：** 15
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface NavDestinationTransition--><!--Device-unnamed-declare interface NavDestinationTransition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,13 @@ NavDestination自定义动画接口。
 curve?: Curve
 ```
 
-动画的曲线类型，默认值为[Curve.EaseInOut](Curve)。
+动画的曲线类型，默认值为Curve.EaseInOut。
 
 **类型：** Curve
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -34,17 +38,13 @@ curve?: Curve
 delay?: number
 ```
 
-转场动画的延迟。
-
-取值范围：[0, +∞)
-
-默认值：0（毫秒）
-
-单位：ms
+转场动画的延迟。 取值范围：[0, +∞) 默认值：0（毫秒） 单位：ms
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -60,17 +60,13 @@ delay?: number
 duration?: number
 ```
 
-转场动画的持续时间。
-
-取值范围：[0, +∞)
-
-默认值：1000（毫秒）
-
-单位：ms
+转场动画的持续时间。 取值范围：[0, +∞) 默认值：1000（毫秒） 单位：ms
 
 **类型：** number
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -86,11 +82,13 @@ duration?: number
 event: Callback<void>
 ```
 
-指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animateToImmediately)中的event。
+指定转场动效的闭包函数，系统会根据闭包中对组件UI状态的修改，生成对应的过渡动画。参见[animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c-sys.md#animateToImmediately)中 的event。
 
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -111,6 +109,8 @@ onTransitionEnd?: Callback<void>
 **类型：** Callback&lt;void&gt;
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

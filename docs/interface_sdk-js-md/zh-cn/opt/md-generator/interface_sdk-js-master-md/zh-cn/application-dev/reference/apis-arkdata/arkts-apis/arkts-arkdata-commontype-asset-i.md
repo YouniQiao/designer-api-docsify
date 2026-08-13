@@ -2,7 +2,9 @@
 
 记录资产附件（文件、图片、视频等类型文件）的相关信息。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-commonType-interface Asset--><!--Device-commonType-interface Asset-End-->
 
@@ -18,7 +20,9 @@ createTime: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-createTime: string--><!--Device-Asset-createTime: string-End-->
 
@@ -34,7 +38,9 @@ modifyTime: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-modifyTime: string--><!--Device-Asset-modifyTime: string-End-->
 
@@ -50,7 +56,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-name: string--><!--Device-Asset-name: string-End-->
 
@@ -66,7 +74,9 @@ path: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-path: string--><!--Device-Asset-path: string-End-->
 
@@ -82,7 +92,9 @@ size: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-size: string--><!--Device-Asset-size: string-End-->
 
@@ -98,7 +110,9 @@ status?: AssetStatus
 
 **类型：** AssetStatus
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-status?: AssetStatus--><!--Device-Asset-status?: AssetStatus-End-->
 
@@ -114,7 +128,9 @@ uri: string
 
 **类型：** string
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Asset-uri: string--><!--Device-Asset-uri: string-End-->
 

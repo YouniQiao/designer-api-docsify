@@ -1,10 +1,12 @@
 # RowLayoutAlgorithmOptions
 
-RowLayoutAlgorithm constructor options.
+Sets the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the horizontal linear layout algorithm.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-interface RowLayoutAlgorithmOptions--><!--Device-unnamed-interface RowLayoutAlgorithmOptions-End-->
 
@@ -16,17 +18,23 @@ RowLayoutAlgorithm constructor options.
 alignItems?: VerticalAlign
 ```
 
-Sets the alignment format of the subassembly in the vertical direction.
+Vertical alignment mode of all child components. Default value: **VerticalAlign.Center** Invalid values are treated as the default value.
 
-**Type:** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
+**Type:** [VerticalAlign](../../apis-na/arkts-apis/arkts-na-enums-verticalalign-e.md)
 
 **Default:** VerticalAlign.Center
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithmOptions-alignItems?: VerticalAlign-End-->
 
@@ -38,7 +46,7 @@ Sets the alignment format of the subassembly in the vertical direction.
 isReverse?: boolean
 ```
 
-Whether the main axis is reversed.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order. Default value: **false** Invalid values are treated as the default value.
 
 **Type:** boolean
 
@@ -46,9 +54,15 @@ Whether the main axis is reversed.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean--><!--Device-RowLayoutAlgorithmOptions-isReverse?: boolean-End-->
 
@@ -60,17 +74,23 @@ Whether the main axis is reversed.
 justifyContent?: FlexAlign
 ```
 
-Alignment mode of the child components along the horizontal axis.
+Horizontal alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
 
-**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
 
 **Default:** FlexAlign.Start
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithmOptions-justifyContent?: FlexAlign-End-->
 
@@ -82,17 +102,23 @@ Alignment mode of the child components along the horizontal axis.
 space?: LengthMetrics
 ```
 
-Horizontal layout element spacing.
+Horizontal spacing between elements in a horizontal layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics--><!--Device-RowLayoutAlgorithmOptions-space?: LengthMetrics-End-->
 

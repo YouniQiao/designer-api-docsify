@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface CheckboxGroupResult--><!--Device-unnamed-declare interface CheckboxGroupResult-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ name: Array<string>
 **类型：** Array&lt;string&gt;
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -39,6 +43,8 @@ status: SelectStatus
 **类型：** [SelectStatus](arkts-arkui-selectstatus-e.md)
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

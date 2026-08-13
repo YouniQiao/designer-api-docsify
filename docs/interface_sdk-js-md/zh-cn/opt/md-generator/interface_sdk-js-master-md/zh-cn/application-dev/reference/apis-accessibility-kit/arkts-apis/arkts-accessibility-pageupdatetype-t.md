@@ -8,6 +8,8 @@ type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 <!--Device-unnamed-type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'--><!--Device-unnamed-type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core

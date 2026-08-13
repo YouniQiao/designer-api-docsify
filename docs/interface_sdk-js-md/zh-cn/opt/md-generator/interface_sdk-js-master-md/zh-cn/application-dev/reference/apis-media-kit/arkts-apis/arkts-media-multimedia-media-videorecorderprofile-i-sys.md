@@ -2,7 +2,9 @@
 
 视频录制配置参数定义。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface VideoRecorderProfile--><!--Device-unnamed-interface VideoRecorderProfile-End-->
 
@@ -20,7 +22,9 @@ readonly audioBitrate: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly audioBitrate: int--><!--Device-VideoRecorderProfile-readonly audioBitrate: int-End-->
 
@@ -38,7 +42,9 @@ readonly audioChannels: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly audioChannels: int--><!--Device-VideoRecorderProfile-readonly audioChannels: int-End-->
 
@@ -56,7 +62,9 @@ readonly audioCodec: CodecMimeType
 
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType-End-->
 
@@ -74,7 +82,9 @@ readonly audioSampleRate: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly audioSampleRate: int--><!--Device-VideoRecorderProfile-readonly audioSampleRate: int-End-->
 
@@ -92,7 +102,9 @@ readonly fileFormat: ContainerFormatType
 
 **类型：** [ContainerFormatType](arkts-media-multimedia-media-containerformattype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType--><!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType-End-->
 
@@ -110,7 +122,9 @@ readonly videoBitrate: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoBitrate: int--><!--Device-VideoRecorderProfile-readonly videoBitrate: int-End-->
 
@@ -128,7 +142,9 @@ readonly videoCodec: CodecMimeType
 
 **类型：** [CodecMimeType](arkts-media-multimedia-media-codecmimetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType-End-->
 
@@ -146,7 +162,9 @@ readonly videoFrameHeight: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameHeight: int--><!--Device-VideoRecorderProfile-readonly videoFrameHeight: int-End-->
 
@@ -164,7 +182,9 @@ readonly videoFrameRate: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameRate: int--><!--Device-VideoRecorderProfile-readonly videoFrameRate: int-End-->
 
@@ -182,7 +202,9 @@ readonly videoFrameWidth: number
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameWidth: int--><!--Device-VideoRecorderProfile-readonly videoFrameWidth: int-End-->
 

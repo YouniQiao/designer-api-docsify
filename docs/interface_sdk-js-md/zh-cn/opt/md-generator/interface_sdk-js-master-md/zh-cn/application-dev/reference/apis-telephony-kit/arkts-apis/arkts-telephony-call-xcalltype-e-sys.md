@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-call-export enum XCallType--><!--Device-call-export enum XCallType-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -19,6 +21,8 @@ XCALL_ECALL_TYPE = 0
 表示XCall是ECall。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-XCallType-XCALL_ECALL_TYPE = 0--><!--Device-XCallType-XCALL_ECALL_TYPE = 0-End-->
 
@@ -36,6 +40,8 @@ XCALL_BCALL_TYPE = 1
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-XCallType-XCALL_BCALL_TYPE = 1--><!--Device-XCallType-XCALL_BCALL_TYPE = 1-End-->
 
 **系统能力：** SystemCapability.Telephony.CallManager
@@ -51,6 +57,8 @@ XCALL_ICALL_TYPE = 2
 表示XCall是ICall。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 <!--Device-XCallType-XCALL_ICALL_TYPE = 2--><!--Device-XCallType-XCALL_ICALL_TYPE = 2-End-->
 

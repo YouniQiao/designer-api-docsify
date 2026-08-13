@@ -6,13 +6,11 @@
 function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 ```
 
-获取身份认证组件管理器对象。用于获取UserAuthWidgetMgr实例，通过该实例可将自定义身份认证控件注册到系统进行统一管理。
+获取身份认证组件管理器对象。用于获取UserAuthWidgetMgr实例，通过该实例可将自定义身份认证控件注册到系统进行统一管理。 > **说明：** > > 每个UserAuthWidgetMgr实例可管理一个身份认证控件，若需要管理多个控件则需获取多个实例。
 
-> **说明：**
-> 
-> 每个UserAuthWidgetMgr实例可管理一个身份认证控件，若需要管理多个控件则需获取多个实例。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.SUPPORT_USER_AUTH
 
@@ -38,10 +36,10 @@ function getUserAuthWidgetMgr(version: number): UserAuthWidgetMgr
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 

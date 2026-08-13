@@ -2,9 +2,11 @@
 
 System common events are events published by system services or system apps. Subscribing to these common events requires specific permissions and event values.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-commonEventManager-export enum Support--><!--Device-commonEventManager-export enum Support-End-->
 
@@ -16,13 +18,13 @@ System common events are events published by system services or system apps. Sub
 COMMON_EVENT_USER_LOCKING = 'usual.event.USER_LOCKING'
 ```
 
-Indicates that a user is about to be locked.
+Indicates that a user is about to be locked. Before a user is locked, the common event service is triggered to publish this event carrying the system account ID.
 
-Before a user is locked, the common event service is triggered to publish this event carrying the system account ID.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_LOCKING = 'usual.event.USER_LOCKING'--><!--Device-Support-COMMON_EVENT_USER_LOCKING = 'usual.event.USER_LOCKING'-End-->
 
@@ -36,13 +38,13 @@ Before a user is locked, the common event service is triggered to publish this e
 COMMON_EVENT_USER_LOCKED = 'usual.event.USER_LOCKED'
 ```
 
-Indicates that a user is locked.
+Indicates that a user is locked. After a user is locked, the common event service is triggered to publish this event carrying the system account ID.
 
-After a user is locked, the common event service is triggered to publish this event carrying the system account ID.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_USER_LOCKED = 'usual.event.USER_LOCKED'--><!--Device-Support-COMMON_EVENT_USER_LOCKED = 'usual.event.USER_LOCKED'-End-->
 
@@ -56,13 +58,13 @@ After a user is locked, the common event service is triggered to publish this ev
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_CREATED = 'usual.event.OS_ACCOUNT_SUB_PROFILE_CREATED'
 ```
 
-Indicates an OS account sub-profile is created.
-
-After an OS account sub-profile is created, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+Indicates an OS account sub-profile is created. After an OS account sub-profile is created, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,13 +80,13 @@ After an OS account sub-profile is created, the common event service is triggere
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_DELETED = 'usual.event.OS_ACCOUNT_SUB_PROFILE_DELETED'
 ```
 
-Indicates an OS account sub-profile is deleted.
-
-After an OS account sub-profile is deleted, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+Indicates an OS account sub-profile is deleted. After an OS account sub-profile is deleted, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,13 +102,13 @@ After an OS account sub-profile is deleted, the common event service is triggere
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHING = 'usual.event.OS_ACCOUNT_SUB_PROFILE_SWITCHING'
 ```
 
-Indicates an OS account sub-profile is switching.
-
-After an OS account sub-profile is switching, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switching to and the previous sub-profile ID switching from.
+Indicates an OS account sub-profile is switching. After an OS account sub-profile is switching, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switching to and the previous sub-profile ID switching from.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -122,13 +124,13 @@ After an OS account sub-profile is switching, the common event service is trigge
 COMMON_EVENT_OS_ACCOUNT_SUB_PROFILE_SWITCHED = 'usual.event.OS_ACCOUNT_SUB_PROFILE_SWITCHED'
 ```
 
-Indicates an OS account sub-profile is switched.
-
-After an OS account sub-profile is switched, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switched to and the previous sub-profile ID switched from.
+Indicates an OS account sub-profile is switched. After an OS account sub-profile is switched, the common event service is triggered to publish this event carrying the OS account local ID, the sub-profile ID switched to and the previous sub-profile ID switched from.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -144,13 +146,13 @@ After an OS account sub-profile is switched, the common event service is trigger
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_BOUND = 'usual.event.DISTRIBUTED_ACCOUNT_BOUND'
 ```
 
-Indicates a distributed account is bound.
-
-After a distributed account is bound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+Indicates a distributed account is bound. After a distributed account is bound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -166,13 +168,13 @@ After a distributed account is bound, the common event service is triggered to p
 COMMON_EVENT_DISTRIBUTED_ACCOUNT_UNBOUND = 'usual.event.DISTRIBUTED_ACCOUNT_UNBOUND'
 ```
 
-Indicates a distributed account is unbound.
-
-After a distributed account is unbound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
+Indicates a distributed account is unbound. After a distributed account is unbound, the common event service is triggered to publish this event carrying the OS account local ID and the sub-profile ID.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -188,13 +190,13 @@ After a distributed account is unbound, the common event service is triggered to
 COMMON_EVENT_CHARGE_TYPE_CHANGED = 'usual.event.CHARGE_TYPE_CHANGED'
 ```
 
-Indicates that the system charging type has changed.
+Indicates that the system charging type has changed. When the system charging type changes, the common event service is triggered to publish this event.
 
-When the system charging type changes, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_CHARGE_TYPE_CHANGED = 'usual.event.CHARGE_TYPE_CHANGED'--><!--Device-Support-COMMON_EVENT_CHARGE_TYPE_CHANGED = 'usual.event.CHARGE_TYPE_CHANGED'-End-->
 
@@ -208,17 +210,13 @@ When the system charging type changes, the common event service is triggered to 
 COMMON_EVENT_DEVICE_IDLE_EXEMPTION_LIST_UPDATED = 'usual.event.DEVICE_IDLE_EXEMPTION_LIST_UPDATED'
 ```
 
-Indicates that the exemption list for resource usage restrictions has been updated in idle mode.
+Indicates that the exemption list for resource usage restrictions has been updated in idle mode. When the exemption list for resource usage restrictions is updated, the common event service is triggered to publish this event. Resources include application network access, Timer usage, and WorkScheduler task usage. System applications can call JavaScript APIs to apply for removing resource usage restrictions.
 
-When the exemption list for resource usage restrictions is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-Resources include application network access, Timer usage, and WorkScheduler task usage.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-System applications can call JavaScript APIs to apply for removing resource usage restrictions.
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DEVICE_IDLE_EXEMPTION_LIST_UPDATED = 'usual.event.DEVICE_IDLE_EXEMPTION_LIST_UPDATED'--><!--Device-Support-COMMON_EVENT_DEVICE_IDLE_EXEMPTION_LIST_UPDATED = 'usual.event.DEVICE_IDLE_EXEMPTION_LIST_UPDATED'-End-->
 
@@ -232,11 +230,13 @@ System applications can call JavaScript APIs to apply for removing resource usag
 COMMON_EVENT_USB_CONTROL_DATA = 'usual.event.hardware.usb.action.USB_CONTROL_DATA'
 ```
 
-Indicates that the local host receives a user-defined control transmission request from the USB host.This is a protected common event that can only be sent by system.
+Indicates that the local host receives a user-defined control transmission request from the USB host. This is a protected common event that can only be sent by system.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -252,15 +252,13 @@ Indicates that the local host receives a user-defined control transmission reque
 COMMON_EVENT_DISK_VOLUME_STATE_CHANGE = 'usual.event.data.DISK_VOLUME_STATE_CHANGE'
 ```
 
-Indicates that the state of a system data disk volume has changed.
-
-This common event is triggered when the state of a system data disk volume changes,such as during format or repair operations (started, succeeded, or failed).
-
-To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission.(This permission is available only for system applications.)
+Indicates that the state of a system data disk volume has changed. This common event is triggered when the state of a system data disk volume changes, such as during format or repair operations (started, succeeded, or failed). To subscribe to this common event, your application must have the **ohos.permission.STORAGE_MANAGER** permission. (This permission is available only for system applications.)
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -276,15 +274,13 @@ To subscribe to this common event, your application must have the **ohos.permiss
 COMMON_EVENT_APP_FIRST_LAUNCH = 'usual.event.APP_FIRST_LAUNCH'
 ```
 
-Indicates that when the application is launched for the first time after installation, the common event service is triggered to publish this system common event.
-
-Model constraint: This API can be used only in the stage model.
-
-To subscribe to this common event, your application must have the ohos.permission.INSTALL_BUNDLE permission.(This permission is available only for system applications.)
+Indicates that when the application is launched for the first time after installation, the common event service is triggered to publish this system common event. Model constraint: This API can be used only in the stage model. To subscribe to this common event, your application must have the ohos.permission.INSTALL_BUNDLE permission.(This permission is available only for system applications.)
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -300,15 +296,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SMS_RECEIVE_COMPLETED = 'usual.event.SMS_RECEIVE_COMPLETED'
 ```
 
-Indicates that an SMS message is received.
+Indicates that an SMS message is received. When the device receives an SMS message, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
-When the device receives an SMS message, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SMS_RECEIVE_COMPLETED = 'usual.event.SMS_RECEIVE_COMPLETED'--><!--Device-Support-COMMON_EVENT_SMS_RECEIVE_COMPLETED = 'usual.event.SMS_RECEIVE_COMPLETED'-End-->
 
@@ -322,15 +316,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_RECEIVE_COMPLETED'
 ```
 
-Indicates that an emergency cell broadcast message is received.
+Indicates that an emergency cell broadcast message is received. When the device receives an emergency cell broadcast message, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
-When the device receives an emergency cell broadcast message, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_RECEIVE_COMPLETED'--><!--Device-Support-COMMON_EVENT_SMS_EMERGENCY_CB_RECEIVE_COMPLETED = 'usual.event.SMS_EMERGENCY_CB_RECEIVE_COMPLETED'-End-->
 
@@ -344,15 +336,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SMS_CB_RECEIVE_COMPLETED = 'usual.event.SMS_CB_RECEIVE_COMPLETED'
 ```
 
-Indicates that a cell broadcast message is received.
+Indicates that a cell broadcast message is received. When the device receives a cell broadcast message, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
-When the device receives a cell broadcast message, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SMS_CB_RECEIVE_COMPLETED = 'usual.event.SMS_CB_RECEIVE_COMPLETED'--><!--Device-Support-COMMON_EVENT_SMS_CB_RECEIVE_COMPLETED = 'usual.event.SMS_CB_RECEIVE_COMPLETED'-End-->
 
@@ -366,13 +356,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_STK_COMMAND = 'usual.event.STK_COMMAND'
 ```
 
-(Reserved, not supported yet) Indicates that an STK command is sent.
+(Reserved, not supported yet) Indicates that an STK command is sent. When an STK command is sent, the common event service is triggered to publish this event.
 
-When an STK command is sent, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_STK_COMMAND = 'usual.event.STK_COMMAND'--><!--Device-Support-COMMON_EVENT_STK_COMMAND = 'usual.event.STK_COMMAND'-End-->
 
@@ -386,13 +376,13 @@ When an STK command is sent, the common event service is triggered to publish th
 COMMON_EVENT_STK_SESSION_END = 'usual.event.STK_SESSION_END'
 ```
 
-(Reserved, not supported yet) Indicates that an STK session has ended.
+(Reserved, not supported yet) Indicates that an STK session has ended. When an STK session ends, the common event service is triggered to publish this event.
 
-When an STK session ends, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_STK_SESSION_END = 'usual.event.STK_SESSION_END'--><!--Device-Support-COMMON_EVENT_STK_SESSION_END = 'usual.event.STK_SESSION_END'-End-->
 
@@ -406,13 +396,13 @@ When an STK session ends, the common event service is triggered to publish this 
 COMMON_EVENT_STK_CARD_STATE_CHANGED = 'usual.event.STK_CARD_STATE_CHANGED'
 ```
 
-(Reserved, not supported yet) Indicates that the STK card state has been updated.
+(Reserved, not supported yet) Indicates that the STK card state has been updated. When the STK card state is updated, the common event service is triggered to publish this event.
 
-When the STK card state is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_STK_CARD_STATE_CHANGED = 'usual.event.STK_CARD_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_STK_CARD_STATE_CHANGED = 'usual.event.STK_CARD_STATE_CHANGED'-End-->
 
@@ -426,13 +416,13 @@ When the STK card state is updated, the common event service is triggered to pub
 COMMON_EVENT_STK_ALPHA_IDENTIFIER = 'usual.event.STK_ALPHA_IDENTIFIER'
 ```
 
-(Reserved, not supported yet) Indicates that an STK Alpha identifier is sent.
+(Reserved, not supported yet) Indicates that an STK Alpha identifier is sent. When an STK Alpha identifier is sent, the common event service is triggered to publish this event.
 
-When an STK Alpha identifier is sent, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_STK_ALPHA_IDENTIFIER = 'usual.event.STK_ALPHA_IDENTIFIER'--><!--Device-Support-COMMON_EVENT_STK_ALPHA_IDENTIFIER = 'usual.event.STK_ALPHA_IDENTIFIER'-End-->
 
@@ -446,15 +436,13 @@ When an STK Alpha identifier is sent, the common event service is triggered to p
 COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_COMPLETED'
 ```
 
-(Reserved, not supported yet) Indicates that a WAP push message is received.
+(Reserved, not supported yet) Indicates that a WAP push message is received. When the device receives a WAP push message, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
-When the device receives a WAP push message, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_COMPLETED'--><!--Device-Support-COMMON_EVENT_SMS_WAPPUSH_RECEIVE_COMPLETED = 'usual.event.SMS_WAPPUSH_RECEIVE_COMPLETED'-End-->
 
@@ -468,13 +456,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_OPERATOR_CONFIG_CHANGED = 'usual.event.OPERATOR_CONFIG_CHANGED'
 ```
 
-Indicates that the carrier configuration has been updated.
+Indicates that the carrier configuration has been updated. When the carrier configuration of the device is updated, the common event service is triggered to publish this event.
 
-When the carrier configuration of the device is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_OPERATOR_CONFIG_CHANGED = 'usual.event.OPERATOR_CONFIG_CHANGED'--><!--Device-Support-COMMON_EVENT_OPERATOR_CONFIG_CHANGED = 'usual.event.OPERATOR_CONFIG_CHANGED'-End-->
 
@@ -488,13 +476,13 @@ When the carrier configuration of the device is updated, the common event servic
 COMMON_EVENT_SIM_CARD_DEFAULT_SMS_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_SMS_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card for the SMS service has been updated.
+Indicates that the default primary SIM card for the SMS service has been updated. When the default primary SIM card for the SMS service is updated, the common event service is triggered to publish this event.
 
-When the default primary SIM card for the SMS service is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_SMS_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_SMS_SUBSCRIPTION_CHANGED'--><!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_SMS_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_SMS_SUBSCRIPTION_CHANGED'-End-->
 
@@ -508,13 +496,13 @@ When the default primary SIM card for the SMS service is updated, the common eve
 COMMON_EVENT_SIM_CARD_DEFAULT_DATA_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_DATA_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card for the data service has been updated.
+Indicates that the default primary SIM card for the data service has been updated. When the default primary SIM card for the data service is updated, the common event service is triggered to publish this event.
 
-When the default primary SIM card for the data service is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_DATA_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_DATA_SUBSCRIPTION_CHANGED'--><!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_DATA_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_DATA_SUBSCRIPTION_CHANGED'-End-->
 
@@ -528,13 +516,13 @@ When the default primary SIM card for the data service is updated, the common ev
 COMMON_EVENT_SIM_CARD_DEFAULT_MAIN_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_MAIN_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card of the device has been updated.
+Indicates that the default primary SIM card of the device has been updated. When the default primary SIM card of the device is updated, the common event service is triggered to publish this event.
 
-When the default primary SIM card of the device is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_MAIN_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_MAIN_SUBSCRIPTION_CHANGED'--><!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_MAIN_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_MAIN_SUBSCRIPTION_CHANGED'-End-->
 
@@ -548,13 +536,13 @@ When the default primary SIM card of the device is updated, the common event ser
 COMMON_EVENT_SET_PRIMARY_SLOT_STATUS = 'usual.event.SET_PRIMARY_SLOT_STATUS'
 ```
 
-Indicates that the status of the action for setting the primary SIM card changes.
+Indicates that the status of the action for setting the primary SIM card changes. When the status of the action for setting the primary SIM card changes (for example, when the status is updated to executing or completed), the common event service is triggered to publish this event.
 
-When the status of the action for setting the primary SIM card changes (for example, when the status is updated to executing or completed), the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SET_PRIMARY_SLOT_STATUS = 'usual.event.SET_PRIMARY_SLOT_STATUS'--><!--Device-Support-COMMON_EVENT_SET_PRIMARY_SLOT_STATUS = 'usual.event.SET_PRIMARY_SLOT_STATUS'-End-->
 
@@ -568,13 +556,13 @@ When the status of the action for setting the primary SIM card changes (for exam
 COMMON_EVENT_PRIMARY_SLOT_ROAMING = 'usual.event.PRIMARY_SLOT_ROAMING'
 ```
 
-Indicates that the roaming status of the default primary SIM card is updated.
+Indicates that the roaming status of the default primary SIM card is updated. When the roaming status of the default primary SIM card changes, the common event service is triggered to publish this event.
 
-When the roaming status of the default primary SIM card changes, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PRIMARY_SLOT_ROAMING = 'usual.event.PRIMARY_SLOT_ROAMING'--><!--Device-Support-COMMON_EVENT_PRIMARY_SLOT_ROAMING = 'usual.event.PRIMARY_SLOT_ROAMING'-End-->
 
@@ -588,13 +576,13 @@ When the roaming status of the default primary SIM card changes, the common even
 COMMON_EVENT_SIM_CARD_DEFAULT_VOICE_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_VOICE_SUBSCRIPTION_CHANGED'
 ```
 
-Indicates that the default primary SIM card for the voice service has been updated.
+Indicates that the default primary SIM card for the voice service has been updated. When the default primary SIM card for the voice service is updated, the common event service is triggered to publish this event.
 
-When the default primary SIM card for the voice service is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_VOICE_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_VOICE_SUBSCRIPTION_CHANGED'--><!--Device-Support-COMMON_EVENT_SIM_CARD_DEFAULT_VOICE_SUBSCRIPTION_CHANGED = 'usual.event.SIM.DEFAULT_VOICE_SUBSCRIPTION_CHANGED'-End-->
 
@@ -608,13 +596,13 @@ When the default primary SIM card for the voice service is updated, the common e
 COMMON_EVENT_CELLULAR_DATA_STATE_CHANGED = 'usual.event.CELLULAR_DATA_STATE_CHANGED'
 ```
 
-Indicates that the cellular data state has been updated.
+Indicates that the cellular data state has been updated. When the cellular data state of the device is updated, the common event service is triggered to publish this event.
 
-When the cellular data state of the device is updated, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_CELLULAR_DATA_STATE_CHANGED = 'usual.event.CELLULAR_DATA_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_CELLULAR_DATA_STATE_CHANGED = 'usual.event.CELLULAR_DATA_STATE_CHANGED'-End-->
 
@@ -628,15 +616,13 @@ When the cellular data state of the device is updated, the common event service 
 COMMON_EVENT_INCOMING_CALL_MISSED = 'usual.event.INCOMING_CALL_MISSED'
 ```
 
-Indicates that an incoming call is missed.
+Indicates that an incoming call is missed. When an incoming call is missed on the device, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.GET_TELEPHONY_STATE permission. (This permission is available only for system applications.)
 
-When an incoming call is missed on the device, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.GET_TELEPHONY_STATE permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_INCOMING_CALL_MISSED = 'usual.event.INCOMING_CALL_MISSED'--><!--Device-Support-COMMON_EVENT_INCOMING_CALL_MISSED = 'usual.event.INCOMING_CALL_MISSED'-End-->
 
@@ -650,13 +636,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_RADIO_STATE_CHANGE = 'usual.event.RADIO_STATE_CHANGE'
 ```
 
-Indicates that the radio state of the device modem has changed.
+Indicates that the radio state of the device modem has changed. When there is a change in the radio state of the device modem, the common event service is triggered to publish this event.
 
-When there is a change in the radio state of the device modem, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_RADIO_STATE_CHANGE = 'usual.event.RADIO_STATE_CHANGE'--><!--Device-Support-COMMON_EVENT_RADIO_STATE_CHANGE = 'usual.event.RADIO_STATE_CHANGE'-End-->
 
@@ -670,19 +656,13 @@ When there is a change in the radio state of the device modem, the common event 
 COMMON_EVENT_DOMAIN_ACCOUNT_STATUS_CHANGED = 'usual.event.DOMAIN_ACCOUNT_STATUS_CHANGED'
 ```
 
-Indicates that domain account status changes.
+Indicates that domain account status changes. When a domain user account is authenticated, deleted, or has the token updated, the common event service is triggered to publish this event carrying the system account ID, domain name, and account status. The system APIs related to this common event are **removeOsAccount**, **DomainAccountManager.auth**, and **updateAccountToken**. For details, see [@ohos.account.osAccount (System Account Management)](arkts-account-osaccount.md#@ohos.account.osAccount). To subscribe to this common event, your application must have the ohos.permission.GET_LOCAL_ACCOUNTS permission.( This permission is available only for system applications.)
 
-When a domain user account is authenticated, deleted, or has the token updated, the common event service is triggered to publish this event carrying the system account ID, domain name, and account status.
+**Since:** 23
 
-The system APIs related to this common event are **removeOsAccount**, **DomainAccountManager.auth**, and   
-**updateAccountToken**. For details, see   
-[@ohos.account.osAccount (System Account Management)](../../../reference/js-apis-osAccount.md).
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-To subscribe to this common event, your application must have the ohos.permission.GET_LOCAL_ACCOUNTS permission.(This permission is available only for system applications.)
-
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DOMAIN_ACCOUNT_STATUS_CHANGED = 'usual.event.DOMAIN_ACCOUNT_STATUS_CHANGED'--><!--Device-Support-COMMON_EVENT_DOMAIN_ACCOUNT_STATUS_CHANGED = 'usual.event.DOMAIN_ACCOUNT_STATUS_CHANGED'-End-->
 
@@ -700,7 +680,9 @@ This commonEvent means when the screen lock is exiting.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -716,13 +698,13 @@ This commonEvent means when the screen lock is exiting.
 COMMON_EVENT_SPECIAL_CODE = 'common.event.SPECIAL_CODE'
 ```
 
-Indicates that a secret code is sent successfully.
+Indicates that a secret code is sent successfully. When a secret code is successfully sent on the device, the common event service is triggered to publish this event.
 
-When a secret code is successfully sent on the device, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SPECIAL_CODE = 'common.event.SPECIAL_CODE'--><!--Device-Support-COMMON_EVENT_SPECIAL_CODE = 'common.event.SPECIAL_CODE'-End-->
 
@@ -736,13 +718,13 @@ When a secret code is successfully sent on the device, the common event service 
 COMMON_EVENT_AUDIO_QUALITY_CHANGE = 'usual.event.AUDIO_QUALITY_CHANGE'
 ```
 
-Indicates that the audio quality has changed.
+Indicates that the audio quality has changed. When there is a change in the audio quality of the device, the common event service is triggered to publish this event.
 
-When there is a change in the audio quality of the device, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 10
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_AUDIO_QUALITY_CHANGE = 'usual.event.AUDIO_QUALITY_CHANGE'--><!--Device-Support-COMMON_EVENT_AUDIO_QUALITY_CHANGE = 'usual.event.AUDIO_QUALITY_CHANGE'-End-->
 
@@ -756,13 +738,13 @@ When there is a change in the audio quality of the device, the common event serv
 COMMON_EVENT_PRIVACY_STATE_CHANGED = 'usual.event.PRIVACY_STATE_CHANGED'
 ```
 
-Indicates the privacy state has been changed.
+Indicates the privacy state has been changed. When a user taps the agree button in the privacy statement dialog box, the event notification service is triggered to publish this event.
 
-When a user taps the agree button in the privacy statement dialog box, the event notification service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PRIVACY_STATE_CHANGED = 'usual.event.PRIVACY_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_PRIVACY_STATE_CHANGED = 'usual.event.PRIVACY_STATE_CHANGED'-End-->
 
@@ -776,13 +758,13 @@ When a user taps the agree button in the privacy statement dialog box, the event
 COMMON_EVENT_PACKAGE_INSTALLATION_STARTED = 'usual.event.PACKAGE_INSTALLATION_STARTED'
 ```
 
-Indicates that a package is sent by the system verifier when the package is verified.
+Indicates that a package is sent by the system verifier when the package is verified. When a new application starts to be installed by a specified user on the device, the common event service is triggered to publish this event.
 
-When a new application starts to be installed by a specified user on the device, the common event service is triggered to publish this event.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_PACKAGE_INSTALLATION_STARTED = 'usual.event.PACKAGE_INSTALLATION_STARTED'--><!--Device-Support-COMMON_EVENT_PACKAGE_INSTALLATION_STARTED = 'usual.event.PACKAGE_INSTALLATION_STARTED'-End-->
 
@@ -796,11 +778,13 @@ When a new application starts to be installed by a specified user on the device,
 COMMON_EVENT_DYNAMIC_ICON_CHANGED = 'usual.event.DYNAMIC_ICON_CHANGED'
 ```
 
-This common event means an application package enables or disables a dynamic icon.This is a protected common event that can only be sent by system.
+This common event means an application package enables or disables a dynamic icon. This is a protected common event that can only be sent by system.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DYNAMIC_ICON_CHANGED = 'usual.event.DYNAMIC_ICON_CHANGED'--><!--Device-Support-COMMON_EVENT_DYNAMIC_ICON_CHANGED = 'usual.event.DYNAMIC_ICON_CHANGED'-End-->
 
@@ -814,15 +798,13 @@ This common event means an application package enables or disables a dynamic ico
 COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'
 ```
 
-Indicates that the bundle management resource data has updated.
+Indicates that the bundle management resource data has updated. This common event is sent when the bundle management resource data is updated in scenarios such as language or theme switching. To subscribe to this common event, your application must have the ohos.permission.GET_BUNDLE_RESOURCES permission.
 
-This common event is sent when the bundle management resource data is updated in scenarios such as language or theme switching.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.GET_BUNDLE_RESOURCES permission.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'--><!--Device-Support-COMMON_EVENT_BUNDLE_RESOURCES_CHANGED = 'usual.event.BUNDLE_RESOURCES_CHANGED'-End-->
 
@@ -836,13 +818,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_VPN_CONNECTION_STATUS_CHANGED = 'usual.event.VPN_CONNECTION_STATUS_CHANGED'
 ```
 
-Indicates the common event that the VPN connection status has changed.
+Indicates the common event that the VPN connection status has changed. This common event is sent when a VPN connection is established or disconnected.
 
-This common event is sent when a VPN connection is established or disconnected.
+**Since:** 23
 
-**Since:** 12
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_VPN_CONNECTION_STATUS_CHANGED = 'usual.event.VPN_CONNECTION_STATUS_CHANGED'--><!--Device-Support-COMMON_EVENT_VPN_CONNECTION_STATUS_CHANGED = 'usual.event.VPN_CONNECTION_STATUS_CHANGED'-End-->
 
@@ -856,15 +838,13 @@ This common event is sent when a VPN connection is established or disconnected.
 COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'
 ```
 
-Indicates that an application starts to be restored.
+Indicates that an application starts to be restored. When a data migration application starts the backup and restore framework to perform a restoration task, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.START_RESTORE_NOTIFICATION permission.
 
-When a data migration application starts the backup and restore framework to perform a restoration task, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.START_RESTORE_NOTIFICATION permission.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 13
-
-**ArkTS mode:** ArkTS-Dyn since version 13; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'--><!--Device-Support-COMMON_EVENT_RESTORE_START = 'usual.event.RESTORE_START'-End-->
 
@@ -878,15 +858,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_DEFAULT_APPLICATION_CHANGED = 'usual.event.DEFAULT_APPLICATION_CHANGED'
 ```
 
-Indicates that the default application for opening a file has changed.
+Indicates that the default application for opening a file has changed. This common event is sent when the default application for opening a file changes. To subscribe to this common event, your application must have the ohos.permission.CHANGE_DEFAULT_APPLICATION permission.
 
-This common event is sent when the default application for opening a file changes.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.CHANGE_DEFAULT_APPLICATION permission.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 19
-
-**ArkTS mode:** ArkTS-Dyn since version 19; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_DEFAULT_APPLICATION_CHANGED = 'usual.event.DEFAULT_APPLICATION_CHANGED'--><!--Device-Support-COMMON_EVENT_DEFAULT_APPLICATION_CHANGED = 'usual.event.DEFAULT_APPLICATION_CHANGED'-End-->
 
@@ -900,16 +878,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'
 ```
 
-Indicates that the application shortcut has changed.
+Indicates that the application shortcut has changed. This common event is sent when the shortcut is changed (for example, when [shortcutManager.setShortcutVisibleForSelf](../../apis-ability-kit/arkts-apis/arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md#setShortcutVisibleForSelf) of the shortcutManager module is successfully called). To subscribe to this common event, your application must have the ohos.permission.MANAGE_SHORTCUTS permission.
 
-This common event is sent when the shortcut is changed (for example, when   
-[shortcutManager.setShortcutVisibleForSelf](../../../apis-ability-kit/js-apis-shortcutManager.md#shortcutmanagersetshortcutvisibleforself)of the shortcutManager module is successfully called).
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.MANAGE_SHORTCUTS permission.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'--><!--Device-Support-COMMON_EVENT_SHORTCUT_CHANGED = 'usual.event.SHORTCUT_CHANGED'-End-->
 
@@ -923,13 +898,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_CUSTOM_CONFIG_POLICY_UPDATED = 'usual.event.CUSTOM_CONFIG_POLICY_UPDATED'
 ```
 
-Indicates that the configuration directory level and system parameters of a device are updated.
+Indicates that the configuration directory level and system parameters of a device are updated. This common event is sent when the system updates the device configuration directory level and system parameters after identifying the home area and roaming area of the device.
 
-This common event is sent when the system updates the device configuration directory level and system parameters after identifying the home area and roaming area of the device.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_CUSTOM_CONFIG_POLICY_UPDATED = 'usual.event.CUSTOM_CONFIG_POLICY_UPDATED'--><!--Device-Support-COMMON_EVENT_CUSTOM_CONFIG_POLICY_UPDATED = 'usual.event.CUSTOM_CONFIG_POLICY_UPDATED'-End-->
 
@@ -943,13 +918,13 @@ This common event is sent when the system updates the device configuration direc
 COMMON_EVENT_CUSTOM_ROAMING_REGION_UPDATED = 'usual.event.CUSTOM_ROAMING_REGION_UPDATED'
 ```
 
-Indicates that the roaming area of a device is updated.
+Indicates that the roaming area of a device is updated. When the attributes such as network injection, persistent connection, and GPS location of a device change, the system identifies the roaming area and updates the parameters if the roaming area changes. After the update is complete, this common event is sent.
 
-When the attributes such as network injection, persistent connection, and GPS location of a device change, the system identifies the roaming area and updates the parameters if the roaming area changes. After the update is complete, this common event is sent.
+**Since:** 23
 
-**Since:** 20
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_CUSTOM_ROAMING_REGION_UPDATED = 'usual.event.CUSTOM_ROAMING_REGION_UPDATED'--><!--Device-Support-COMMON_EVENT_CUSTOM_ROAMING_REGION_UPDATED = 'usual.event.CUSTOM_ROAMING_REGION_UPDATED'-End-->
 
@@ -963,15 +938,13 @@ When the attributes such as network injection, persistent connection, and GPS lo
 COMMON_EVENT_SCREEN_SHARE = 'usual.event.SCREEN_SHARE'
 ```
 
-Indicates that a screen sharing event has occurred in the system.
+Indicates that a screen sharing event has occurred in the system. This is a protected common event and can be sent only by the system. To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
 
-This is a protected common event and can be sent only by the system.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.RECEIVE_SMS permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 20
-
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_SCREEN_SHARE = 'usual.event.SCREEN_SHARE'--><!--Device-Support-COMMON_EVENT_SCREEN_SHARE = 'usual.event.SCREEN_SHARE'-End-->
 
@@ -985,13 +958,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'
 ```
 
-Represents the common event indicating the restore is complete for an application.When a data migration application starts the backup and restore framework to perform a restoration task, this common event is sent when the restore is complete.
-
-To subscribe to this common event, your application must have the ohos.permission.RESTORE_END_NOTIFICATION permission.(This permission is available only for system applications.)
+Represents the common event indicating the restore is complete for an application. When a data migration application starts the backup and restore framework to perform a restoration task, this common event is sent when the restore is complete. To subscribe to this common event, your application must have the ohos.permission.RESTORE_END_NOTIFICATION permission.(This permission is available only for system applications.)
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'--><!--Device-Support-COMMON_EVENT_RESTORE_END = 'usual.event.RESTORE_END'-End-->
 
@@ -1005,15 +978,13 @@ To subscribe to this common event, your application must have the ohos.permissio
 COMMON_EVENT_CLOUD_DISK_STATE_CHANGED = 'usual.event.CLOUD_DISK_STATE_CHANGED'
 ```
 
-Indicates that the sync root of the cloud disk has been updated.
+Indicates that the sync root of the cloud disk has been updated. When the sync root update is complete, the common event service is triggered to publish this event. To subscribe to this common event, your application must have the ohos.permission.ACCESS_CLOUD_DISK_INFO permission.(This permission is available only for system applications.)
 
-When the sync root update is complete, the common event service is triggered to publish this event.
+**Since:** 23
 
-To subscribe to this common event, your application must have the ohos.permission.ACCESS_CLOUD_DISK_INFO permission.(This permission is available only for system applications.)
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 21
-
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-Support-COMMON_EVENT_CLOUD_DISK_STATE_CHANGED = 'usual.event.CLOUD_DISK_STATE_CHANGED'--><!--Device-Support-COMMON_EVENT_CLOUD_DISK_STATE_CHANGED = 'usual.event.CLOUD_DISK_STATE_CHANGED'-End-->
 
@@ -1031,7 +1002,9 @@ Indicates that the sandbox application has been installed on the device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1051,7 +1024,9 @@ Indicates that the sandbox application has been uninstalled on the device.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

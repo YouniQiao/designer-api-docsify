@@ -8,7 +8,9 @@ function minimizeAll(id: number, callback: AsyncCallback<void>): void
 
 最小化指定ID的屏幕中的所有主窗口。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function minimizeAll(id: long, callback: AsyncCallback<void>): void--><!--Device-window-function minimizeAll(id: long, callback: AsyncCallback<void>): void-End-->
 
@@ -27,9 +29,9 @@ function minimizeAll(id: number, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -67,7 +69,9 @@ function minimizeAll(id: number): Promise<void>
 
 最小化指定ID的屏幕中的所有主窗口，使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function minimizeAll(id: long): Promise<void>--><!--Device-window-function minimizeAll(id: long): Promise<void>-End-->
 
@@ -91,9 +95,9 @@ function minimizeAll(id: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

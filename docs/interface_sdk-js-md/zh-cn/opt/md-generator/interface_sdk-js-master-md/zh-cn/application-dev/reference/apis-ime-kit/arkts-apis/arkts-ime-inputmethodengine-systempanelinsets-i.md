@@ -2,7 +2,9 @@
 
 输入法软键盘相对系统面板的偏移区域。
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface SystemPanelInsets--><!--Device-inputMethodEngine-interface SystemPanelInsets-End-->
 
@@ -18,7 +20,9 @@ readonly bottom: number
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemPanelInsets-readonly bottom: int--><!--Device-SystemPanelInsets-readonly bottom: int-End-->
 
@@ -34,7 +38,9 @@ readonly left: number
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemPanelInsets-readonly left: int--><!--Device-SystemPanelInsets-readonly left: int-End-->
 
@@ -50,7 +56,9 @@ readonly right: number
 
 **类型：** number
 
-**起始版本：** 21
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SystemPanelInsets-readonly right: int--><!--Device-SystemPanelInsets-readonly right: int-End-->
 

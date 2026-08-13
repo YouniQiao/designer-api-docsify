@@ -4,6 +4,8 @@ Describes audio capturer configuration options that can capture microphone input
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-audio-interface AudioCapturerMicInConfig--><!--Device-audio-interface AudioCapturerMicInConfig-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
@@ -22,6 +24,8 @@ Capturer attribute information.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioCapturerMicInConfig-capturerInfo: AudioCapturerInfo--><!--Device-AudioCapturerMicInConfig-capturerInfo: AudioCapturerInfo-End-->
@@ -36,11 +40,13 @@ Capturer attribute information.
 ecStreamInfo?: AudioStreamInfo
 ```
 
-Stream information that describe echo reference signal.If not set this attribute, the capturer will only record Mic-In audio stream.
+Stream information that describe echo reference signal. If not set this attribute, the capturer will only record Mic-In audio stream.
 
 **类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -62,6 +68,8 @@ Stream information that describe Mic-In audio stream.
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioCapturerMicInConfig-micInStreamInfo: AudioStreamInfo--><!--Device-AudioCapturerMicInConfig-micInStreamInfo: AudioStreamInfo-End-->
@@ -81,6 +89,8 @@ processedStreamInfo?: AudioStreamInfo
 **类型：** [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

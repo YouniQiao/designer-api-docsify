@@ -2,7 +2,9 @@
 
 Request read permission result
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export class RequestReadPermissionResult--><!--Device-photoAccessHelper-export class RequestReadPermissionResult-End-->
 
@@ -24,11 +26,13 @@ URIs that have been created and granted the save permission.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RequestReadPermissionResult-authorizedUris?: Array<string>--><!--Device-RequestReadPermissionResult-authorizedUris?: Array<string>-End-->
 
@@ -44,11 +48,13 @@ URIs that may be deleted, hidden, or renamed.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-RequestReadPermissionResult-invalidUris?: Array<string>--><!--Device-RequestReadPermissionResult-invalidUris?: Array<string>-End-->
 

@@ -1,4 +1,4 @@
-# notificationSubscriber(Provides methods that will be called back when the subscriber receives a new notification or a notification is canceled)
+# notificationSubscriber
 
 ## 汇总
 
@@ -25,9 +25,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [BadgeEnabledChangedCallback](arkts-notification-badgeenabledchangedcallback-t-sys.md) | type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void注册应用角标使能状态变化的回调函数类型。 |
-| [EnabledSilentReminderChangedCallback](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md) | 注册应用通知静默提醒使能状态变化的回调函数类型。type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void |
-| [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md) | 注册由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setNotificationSwitch)接口设置的通知开关状态变化的回调函数类型。 |
-| [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md) | type SystemUpdateCallback = (data: SubscribeCallbackData) => void返回携带系统属性值通知信息的回调函数类型。 |
+| [BadgeEnabledChangedCallback](arkts-notification-badgeenabledchangedcallback-t-sys.md) | type BadgeEnabledChangedCallback = (data: EnabledNotificationCallbackData) => void 注册应用角标使能状态变化的回调函数类型。 |
+| [EnabledSilentReminderChangedCallback](arkts-notification-enabledsilentreminderchangedcallback-t-sys.md) | 注册应用通知静默提醒使能状态变化的回调函数类型。 type EnabledSilentReminderChangedCallback = (callbackData: EnabledSilentReminderCallbackData) => void |
+| [NotificationSwitchChangedCallback](arkts-notification-notificationswitchchangedcallback-t-sys.md) | 注册由[notificationManager.setNotificationSwitch](arkts-notification-notificationmanager-setnotificationswitch-f-sys.md#setNotificationSwitch（系统接口）)接口设置的通知开关状态变化的回调函数类型。 |
+| [SystemUpdateCallback](arkts-notification-systemupdatecallback-t-sys.md) | type SystemUpdateCallback = (data: SubscribeCallbackData) => void 返回携带系统属性值通知信息的回调函数类型。 |
 <!--DelEnd-->
 

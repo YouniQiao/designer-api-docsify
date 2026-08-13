@@ -2,9 +2,11 @@
 
 Video meta type.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-camera-enum VideoMetaType--><!--Device-camera-enum VideoMetaType-End-->
 
@@ -20,9 +22,11 @@ VIDEO_META_MAKER_INFO = 0
 
 Video meta type for storing maker info.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-VideoMetaType-VIDEO_META_MAKER_INFO = 0--><!--Device-VideoMetaType-VIDEO_META_MAKER_INFO = 0-End-->
 

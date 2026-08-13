@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-huks-export enum HuksTag--><!--Device-huks-export enum HuksTag-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Core
@@ -14,9 +16,7 @@
 HUKS_TAG_INVALID = HuksTagType.HUKS_TAG_TYPE_INVALID | 0
 ```
 
-表示非法的Tag。
-
-**说明：** 从API version 8开始使用，从API version 9开始废弃。
+表示非法的Tag。 **说明：** 从API version 8开始使用，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -36,6 +36,8 @@ HUKS_TAG_ALGORITHM = HuksTagType.HUKS_TAG_TYPE_UINT | 1
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_ALGORITHM = HuksTagType.HUKS_TAG_TYPE_UINT | 1--><!--Device-HuksTag-HUKS_TAG_ALGORITHM = HuksTagType.HUKS_TAG_TYPE_UINT | 1-End-->
@@ -51,6 +53,8 @@ HUKS_TAG_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 2
 表示密钥用途的Tag。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -68,6 +72,8 @@ HUKS_TAG_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 3
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 3--><!--Device-HuksTag-HUKS_TAG_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 3-End-->
@@ -83,6 +89,8 @@ HUKS_TAG_DIGEST = HuksTagType.HUKS_TAG_TYPE_UINT | 4
 表示摘要算法的Tag。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -102,6 +110,8 @@ HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5--><!--Device-HuksTag-HUKS_TAG_PADDING = HuksTagType.HUKS_TAG_TYPE_UINT | 5-End-->
@@ -117,6 +127,8 @@ HUKS_TAG_BLOCK_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 6
 表示加密模式的Tag。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -134,6 +146,8 @@ HUKS_TAG_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 7
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 7--><!--Device-HuksTag-HUKS_TAG_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 7-End-->
@@ -149,6 +163,8 @@ HUKS_TAG_ASSOCIATED_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 8
 表示附加身份验证数据的Tag。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -166,6 +182,8 @@ HUKS_TAG_NONCE = HuksTagType.HUKS_TAG_TYPE_BYTES | 9
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_NONCE = HuksTagType.HUKS_TAG_TYPE_BYTES | 9--><!--Device-HuksTag-HUKS_TAG_NONCE = HuksTagType.HUKS_TAG_TYPE_BYTES | 9-End-->
@@ -181,6 +199,8 @@ HUKS_TAG_IV = HuksTagType.HUKS_TAG_TYPE_BYTES | 10
 表示密钥初始化的向量。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -198,6 +218,8 @@ HUKS_TAG_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 11
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 11--><!--Device-HuksTag-HUKS_TAG_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 11-End-->
@@ -214,6 +236,8 @@ HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12--><!--Device-HuksTag-HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12-End-->
@@ -228,9 +252,7 @@ HUKS_TAG_SALT = HuksTagType.HUKS_TAG_TYPE_BYTES | 12
 HUKS_TAG_PWD = HuksTagType.HUKS_TAG_TYPE_BYTES | 13
 ```
 
-表示操作系统补丁级别的Tag。
-
-**说明：** 从API version 8开始支持，从API version 9开始废弃。
+表示操作系统补丁级别的Tag。 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -250,6 +272,8 @@ HUKS_TAG_ITERATION = HuksTagType.HUKS_TAG_TYPE_UINT | 14
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_ITERATION = HuksTagType.HUKS_TAG_TYPE_UINT | 14--><!--Device-HuksTag-HUKS_TAG_ITERATION = HuksTagType.HUKS_TAG_TYPE_UINT | 14-End-->
@@ -268,6 +292,8 @@ HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15--><!--Device-HuksTag-HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15-End-->
@@ -280,9 +306,7 @@ HUKS_TAG_KEY_GENERATE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 15
 HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -298,9 +322,7 @@ HUKS_TAG_DERIVE_MAIN_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 16
 HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -316,9 +338,7 @@ HUKS_TAG_DERIVE_FACTOR = HuksTagType.HUKS_TAG_TYPE_BYTES | 17
 HUKS_TAG_DERIVE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 18
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -338,6 +358,8 @@ HUKS_TAG_AGREE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 19
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_AGREE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 19--><!--Device-HuksTag-HUKS_TAG_AGREE_ALG = HuksTagType.HUKS_TAG_TYPE_UINT | 19-End-->
@@ -355,6 +377,8 @@ HUKS_TAG_AGREE_PUBLIC_KEY_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 20
 表示密钥协商时的公钥别名。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -374,6 +398,8 @@ HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 21
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 21--><!--Device-HuksTag-HUKS_TAG_AGREE_PRIVATE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 21-End-->
@@ -391,6 +417,8 @@ HUKS_TAG_AGREE_PUBLIC_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 22
 表示密钥协商时的公钥。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -410,6 +438,8 @@ HUKS_TAG_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 23
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 23--><!--Device-HuksTag-HUKS_TAG_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 23-End-->
@@ -425,6 +455,8 @@ HUKS_TAG_DERIVE_KEY_SIZE = HuksTagType.HUKS_TAG_TYPE_UINT | 24
 表示派生密钥的大小，单位：byte。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -444,6 +476,8 @@ HUKS_TAG_IMPORT_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 25
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_IMPORT_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 25--><!--Device-HuksTag-HUKS_TAG_IMPORT_KEY_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 25-End-->
@@ -461,6 +495,8 @@ HUKS_TAG_UNWRAP_ALGORITHM_SUITE = HuksTagType.HUKS_TAG_TYPE_UINT | 26
 表示安全导入密钥的套件。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -480,6 +516,8 @@ HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 29
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 29--><!--Device-HuksTag-HUKS_TAG_DERIVED_AGREED_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 29-End-->
@@ -498,6 +536,8 @@ HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30--><!--Device-HuksTag-HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30-End-->
@@ -512,9 +552,7 @@ HUKS_TAG_RSA_PSS_SALT_LEN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 30
 HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -530,9 +568,7 @@ HUKS_TAG_ACTIVE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 201
 HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -548,9 +584,7 @@ HUKS_TAG_ORIGINATION_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 202
 HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -566,9 +600,7 @@ HUKS_TAG_USAGE_EXPIRE_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 203
 HUKS_TAG_CREATION_DATETIME = HuksTagType.HUKS_TAG_TYPE_ULONG | 204
 ```
 
-原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为证书业务预留字段，当前证书管理已独立，此字段废弃，不再预留。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -588,6 +620,8 @@ HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301--><!--Device-HuksTag-HUKS_TAG_ALL_USERS = HuksTagType.HUKS_TAG_TYPE_BOOL | 301-End-->
@@ -605,6 +639,8 @@ HUKS_TAG_USER_ID = HuksTagType.HUKS_TAG_TYPE_UINT | 302
 表示当前密钥属于哪个userID。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -624,6 +660,8 @@ HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303--><!--Device-HuksTag-HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303-End-->
@@ -638,9 +676,11 @@ HUKS_TAG_NO_AUTH_REQUIRED = HuksTagType.HUKS_TAG_TYPE_BOOL | 303
 HUKS_TAG_USER_AUTH_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 304
 ```
 
-表示用户认证类型。从[HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md#HuksUserAuthType)中选择，需要与安全访问控制类型同时设置。支持同时指定两种用户认证类型，如：安全访问控制类型指定为HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL时，密钥访问认证类型可以指定以下三种： HUKS_USER_AUTH_TYPE_FACE 、HUKS_USER_AUTH_TYPE_FINGERPRINT、HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT
+表示用户认证类型。从[HuksUserAuthType](arkts-universalkeystore-huks-huksuserauthtype-e.md#HuksUserAuthType)中选择，需要与安全访问控制类型同时设置。支持同时指定两种用户认证类型，如：安全访问控制类型指定为 HUKS_AUTH_ACCESS_INVALID_NEW_BIO_ENROLL时，密钥访问认证类型可以指定以下三种： HUKS_USER_AUTH_TYPE_FACE 、 HUKS_USER_AUTH_TYPE_FINGERPRINT、HUKS_USER_AUTH_TYPE_FACE | HUKS_USER_AUTH_TYPE_FINGERPRINT
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -658,6 +698,8 @@ HUKS_TAG_AUTH_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 305
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_AUTH_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 305--><!--Device-HuksTag-HUKS_TAG_AUTH_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 305-End-->
@@ -673,6 +715,8 @@ HUKS_TAG_AUTH_TOKEN = HuksTagType.HUKS_TAG_TYPE_BYTES | 306
 用于传入authToken的字段。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -690,6 +734,8 @@ HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307--><!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ACCESS_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 307-End-->
@@ -705,6 +751,8 @@ HUKS_TAG_KEY_SECURE_SIGN_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 308
 表示生成或导入密钥时，指定该密钥的签名类型。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -722,6 +770,8 @@ HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309
 
 **起始版本：** 9
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309--><!--Device-HuksTag-HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309-End-->
@@ -734,9 +784,11 @@ HUKS_TAG_CHALLENGE_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 309
 HUKS_TAG_CHALLENGE_POS = HuksTagType.HUKS_TAG_TYPE_UINT | 310
 ```
 
-表示challenge类型为用户自定义类型时，huks产生的challenge有效长度仅为8字节连续的数据。从[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md#HuksChallengePosition)中选择。
+表示challenge类型为用户自定义类型时，huks产生的challenge有效长度仅为8字节连续的数据。从[HuksChallengePosition](arkts-universalkeystore-huks-hukschallengeposition-e.md#HuksChallengePosition)中 选择。
 
 **起始版本：** 9
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -754,6 +806,8 @@ HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311--><!--Device-HuksTag-HUKS_TAG_KEY_AUTH_PURPOSE = HuksTagType.HUKS_TAG_TYPE_UINT | 311-End-->
@@ -769,6 +823,8 @@ HUKS_TAG_AUTH_STORAGE_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 316
 表示密钥存储安全等级的tag。从[HuksAuthStorageLevel](arkts-universalkeystore-huks-huksauthstoragelevel-e.md#HuksAuthStorageLevel)中选择。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -786,6 +842,8 @@ HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319--><!--Device-HuksTag-HUKS_TAG_USER_AUTH_MODE = HuksTagType.HUKS_TAG_TYPE_UINT | 319-End-->
@@ -801,6 +859,8 @@ HUKS_TAG_ATTESTATION_CHALLENGE = HuksTagType.HUKS_TAG_TYPE_BYTES | 501
 表示attestation时的挑战值。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -818,6 +878,8 @@ HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502-End-->
@@ -830,9 +892,7 @@ HUKS_TAG_ATTESTATION_APPLICATION_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 502
 HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -848,9 +908,7 @@ HUKS_TAG_ATTESTATION_ID_BRAND = HuksTagType.HUKS_TAG_TYPE_BYTES | 503
 HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -866,9 +924,7 @@ HUKS_TAG_ATTESTATION_ID_DEVICE = HuksTagType.HUKS_TAG_TYPE_BYTES | 504
 HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -884,9 +940,7 @@ HUKS_TAG_ATTESTATION_ID_PRODUCT = HuksTagType.HUKS_TAG_TYPE_BYTES | 505
 HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -902,9 +956,7 @@ HUKS_TAG_ATTESTATION_ID_SERIAL = HuksTagType.HUKS_TAG_TYPE_BYTES | 506
 HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -920,9 +972,7 @@ HUKS_TAG_ATTESTATION_ID_IMEI = HuksTagType.HUKS_TAG_TYPE_BYTES | 507
 HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -938,9 +988,7 @@ HUKS_TAG_ATTESTATION_ID_MEID = HuksTagType.HUKS_TAG_TYPE_BYTES | 508
 HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -956,9 +1004,7 @@ HUKS_TAG_ATTESTATION_ID_MANUFACTURER = HuksTagType.HUKS_TAG_TYPE_BYTES | 509
 HUKS_TAG_ATTESTATION_ID_MODEL = HuksTagType.HUKS_TAG_TYPE_BYTES | 510
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -978,6 +1024,8 @@ HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511-End-->
@@ -990,9 +1038,7 @@ HUKS_TAG_ATTESTATION_ID_ALIAS = HuksTagType.HUKS_TAG_TYPE_BYTES | 511
 HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1008,9 +1054,7 @@ HUKS_TAG_ATTESTATION_ID_SOCID = HuksTagType.HUKS_TAG_TYPE_BYTES | 512
 HUKS_TAG_ATTESTATION_ID_UDID = HuksTagType.HUKS_TAG_TYPE_BYTES | 513
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1030,6 +1074,8 @@ HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514--><!--Device-HuksTag-HUKS_TAG_ATTESTATION_ID_SEC_LEVEL_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 514-End-->
@@ -1045,6 +1091,8 @@ HUKS_TAG_ATTESTATION_ID_VERSION_INFO = HuksTagType.HUKS_TAG_TYPE_BYTES | 515
 表示attestation时的版本号。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1062,6 +1110,8 @@ HUKS_TAG_KEY_OVERRIDE = HuksTagType.HUKS_TAG_TYPE_BOOL | 520
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_OVERRIDE = HuksTagType.HUKS_TAG_TYPE_BOOL | 520--><!--Device-HuksTag-HUKS_TAG_KEY_OVERRIDE = HuksTagType.HUKS_TAG_TYPE_BOOL | 520-End-->
@@ -1077,6 +1127,8 @@ HUKS_TAG_AE_TAG_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 521
 表示指定的AEAD标签长度，单位：byte。
 
 **起始版本：** 22
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本22开始，该接口支持在原子化服务API中使用。
 
@@ -1094,6 +1146,8 @@ HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522
 
 **起始版本：** 22
 
+**废弃版本：** -1
+
 <!--Device-HuksTag-HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522--><!--Device-HuksTag-HUKS_TAG_KEY_CLASS = HuksTagType.HUKS_TAG_TYPE_UINT | 522-End-->
 
 **系统能力：** SystemCapability.Security.Huks.Extension
@@ -1108,6 +1162,8 @@ HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523--><!--Device-HuksTag-HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523-End-->
@@ -1120,15 +1176,11 @@ HUKS_TAG_KEY_ACCESS_GROUP = HuksTagType.HUKS_TAG_TYPE_BYTES | 523
 HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526
 ```
 
-表示密钥安全级别。
-
-26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+表示密钥安全级别。 26.0.0 **模型约束：** 此接口仅可在Stage模型下使用。 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
@@ -1142,11 +1194,11 @@ HUKS_TAG_KEY_SECURITY_LEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 526
 HUKS_TAG_AAD = HuksTagType.HUKS_TAG_TYPE_BYTES | 527
 ```
 
-标记指示GCM或CCM模式的附加验证数据。
-
-**模型约束：** 此接口仅可在Stage模型下使用。
+标记指示GCM或CCM模式的附加验证数据。 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本24开始，该接口支持在原子化服务API中使用。
 
@@ -1164,6 +1216,8 @@ HUKS_TAG_CONTEXT = HuksTagType.HUKS_TAG_TYPE_BYTES | 528
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_CONTEXT = HuksTagType.HUKS_TAG_TYPE_BYTES | 528--><!--Device-HuksTag-HUKS_TAG_CONTEXT = HuksTagType.HUKS_TAG_TYPE_BYTES | 528-End-->
@@ -1179,6 +1233,8 @@ HUKS_TAG_IS_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1001
 表示是否使用生成key时传入的别名的Tag。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1196,6 +1252,8 @@ HUKS_TAG_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1002
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1002--><!--Device-HuksTag-HUKS_TAG_KEY_STORAGE_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1002-End-->
@@ -1211,6 +1269,8 @@ HUKS_TAG_IS_ALLOWED_WRAP = HuksTagType.HUKS_TAG_TYPE_BOOL | 1003
 预留。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1230,6 +1290,8 @@ HUKS_TAG_KEY_WRAP_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 1004
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_WRAP_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 1004--><!--Device-HuksTag-HUKS_TAG_KEY_WRAP_TYPE = HuksTagType.HUKS_TAG_TYPE_UINT | 1004-End-->
@@ -1248,6 +1310,8 @@ HUKS_TAG_KEY_AUTH_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005--><!--Device-HuksTag-HUKS_TAG_KEY_AUTH_ID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1005-End-->
@@ -1263,6 +1327,8 @@ HUKS_TAG_KEY_ROLE = HuksTagType.HUKS_TAG_TYPE_UINT | 1006
 预留。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1282,6 +1348,8 @@ HUKS_TAG_KEY_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1007
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1007--><!--Device-HuksTag-HUKS_TAG_KEY_FLAG = HuksTagType.HUKS_TAG_TYPE_UINT | 1007-End-->
@@ -1298,6 +1366,8 @@ HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008--><!--Device-HuksTag-HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008-End-->
@@ -1312,9 +1382,7 @@ HUKS_TAG_IS_ASYNCHRONIZED = HuksTagType.HUKS_TAG_TYPE_UINT | 1008
 HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009
 ```
 
-表示操作系统补丁级别的Tag。
-
-**说明：** 从API version 8开始支持，从API version 9开始废弃。
+表示操作系统补丁级别的Tag。 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -1330,9 +1398,7 @@ HUKS_TAG_SECURE_KEY_ALIAS = HuksTagType.HUKS_TAG_TYPE_BOOL | 1009
 HUKS_TAG_SECURE_KEY_UUID = HuksTagType.HUKS_TAG_TYPE_BYTES | 1010
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1352,6 +1418,8 @@ HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011--><!--Device-HuksTag-HUKS_TAG_KEY_DOMAIN = HuksTagType.HUKS_TAG_TYPE_UINT | 1011-End-->
@@ -1368,6 +1436,8 @@ HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012--><!--Device-HuksTag-HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012-End-->
@@ -1380,9 +1450,7 @@ HUKS_TAG_IS_DEVICE_PASSWORD_SET = HuksTagType.HUKS_TAG_TYPE_BOOL | 1012
 HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001
 ```
 
-表示操作系统补丁级别的Tag。
-
-**说明：** 从API version 8开始支持，从API version 9开始废弃。
+表示操作系统补丁级别的Tag。 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -1398,9 +1466,7 @@ HUKS_TAG_PROCESS_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10001
 HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1416,9 +1482,7 @@ HUKS_TAG_PACKAGE_NAME = HuksTagType.HUKS_TAG_TYPE_BYTES | 10002
 HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1434,9 +1498,7 @@ HUKS_TAG_ACCESS_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10003
 HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1452,9 +1514,7 @@ HUKS_TAG_USES_TIME = HuksTagType.HUKS_TAG_TYPE_UINT | 10004
 HUKS_TAG_CRYPTO_CTX = HuksTagType.HUKS_TAG_TYPE_ULONG | 10005
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1474,6 +1534,8 @@ HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006--><!--Device-HuksTag-HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006-End-->
@@ -1486,9 +1548,7 @@ HUKS_TAG_KEY = HuksTagType.HUKS_TAG_TYPE_BYTES | 10006
 HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1504,9 +1564,7 @@ HUKS_TAG_KEY_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10007
 HUKS_TAG_PAYLOAD_LEN = HuksTagType.HUKS_TAG_TYPE_UINT | 10008
 ```
 
-原为预留字段。
-
-**说明：** 从API version 9开始废弃，无替代接口。
+原为预留字段。 **说明：** 从API version 9开始废弃，无替代接口。
 
 **起始版本：** 8
 
@@ -1526,6 +1584,8 @@ HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009--><!--Device-HuksTag-HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009-End-->
@@ -1538,9 +1598,7 @@ HUKS_TAG_AE_TAG = HuksTagType.HUKS_TAG_TYPE_BYTES | 10009
 HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010
 ```
 
-表示操作系统补丁级别的Tag。
-
-**说明：** 从API version 8开始支持，从API version 9开始废弃。
+表示操作系统补丁级别的Tag。 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -1556,9 +1614,7 @@ HUKS_TAG_IS_KEY_HANDLE = HuksTagType.HUKS_TAG_TYPE_ULONG | 10010
 HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101
 ```
 
-表示操作系统版本的Tag。
-
-**说明：** 从API version 8开始支持，从API version 9开始废弃。
+表示操作系统版本的Tag。 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -1574,9 +1630,7 @@ HUKS_TAG_OS_VERSION = HuksTagType.HUKS_TAG_TYPE_UINT | 10101
 HUKS_TAG_OS_PATCHLEVEL = HuksTagType.HUKS_TAG_TYPE_UINT | 10102
 ```
 
-表示操作系统补丁级别的Tag。
-
-**说明：** 从API version 8开始支持，从API version 9开始废弃。
+表示操作系统补丁级别的Tag。 **说明：** 从API version 8开始支持，从API version 9开始废弃。
 
 **起始版本：** 8
 
@@ -1596,6 +1650,8 @@ HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-HuksTag-HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001--><!--Device-HuksTag-HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001-End-->
@@ -1611,6 +1667,8 @@ HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20002
 预留。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1629,6 +1687,8 @@ HUKS_TAG_ASYMMETRIC_PRIVATE_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20003
 预留。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

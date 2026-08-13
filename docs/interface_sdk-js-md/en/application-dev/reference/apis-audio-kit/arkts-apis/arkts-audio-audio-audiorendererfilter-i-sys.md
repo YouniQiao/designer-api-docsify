@@ -2,9 +2,11 @@
 
 Describes audio renderer filter.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioRendererFilter--><!--Device-audio-interface AudioRendererFilter-End-->
 
@@ -26,11 +28,13 @@ rendererId?: int
 
 AudioRenderer id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererFilter-rendererId?: int--><!--Device-AudioRendererFilter-rendererId?: int-End-->
 
@@ -48,9 +52,11 @@ Renderer information.
 
 **Type:** [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererFilter-rendererInfo?: AudioRendererInfo--><!--Device-AudioRendererFilter-rendererInfo?: AudioRendererInfo-End-->
 
@@ -66,11 +72,13 @@ uid?: int
 
 Application uid.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AudioRendererFilter-uid?: int--><!--Device-AudioRendererFilter-uid?: int-End-->
 

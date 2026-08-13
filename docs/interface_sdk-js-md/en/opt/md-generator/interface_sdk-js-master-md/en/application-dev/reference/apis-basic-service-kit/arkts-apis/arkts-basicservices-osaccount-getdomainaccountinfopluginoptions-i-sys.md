@@ -1,14 +1,14 @@
 # GetDomainAccountInfoPluginOptions (System API)
 
-Defines the options for the domain plug-in to obtain the domain account information. The  
-**GetDomainAccountInfoPluginOptions** class inherits from  
-[**GetDomainAccountInfoOptions**](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions).
+Defines the options for the domain plug-in to obtain the domain account information. The **GetDomainAccountInfoPluginOptions** class inherits from [**GetDomainAccountInfoOptions**](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions-(System-API)).
 
-**Inheritance/Implementation:** GetDomainAccountInfoPluginOptions extends [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions)
+**Inheritance/Implementation:** GetDomainAccountInfoPluginOptions extends [GetDomainAccountInfoOptions](arkts-basicservices-osaccount-getdomainaccountinfooptions-i-sys.md#GetDomainAccountInfoOptions-(System-API))
 
-**Since:** 10
+**Since:** 23
 
-<!--Device-osAccount-interface GetDomainAccountInfoPluginOptions extends GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoPluginOptions extends GetDomainAccountInfoOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-osAccount-interface GetDomainAccountInfoPluginOptions--><!--Device-osAccount-interface GetDomainAccountInfoPluginOptions-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -30,7 +30,9 @@ Unique identifier of the caller.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetDomainAccountInfoPluginOptions-callerUid: int--><!--Device-GetDomainAccountInfoPluginOptions-callerUid: int-End-->
 

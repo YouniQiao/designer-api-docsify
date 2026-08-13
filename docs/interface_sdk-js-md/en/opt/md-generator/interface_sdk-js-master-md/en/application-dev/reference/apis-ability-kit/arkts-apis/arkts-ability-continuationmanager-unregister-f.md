@@ -18,7 +18,7 @@ Unregisters the continuation management service. This API uses an asynchronous c
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -61,7 +61,7 @@ Unregisters the continuation management service. This API uses a promise to retu
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](@ohos.distributedDeviceManager:distributedDeviceManager.DeviceManager.off(type:)
+**Substitutes:** [off](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#off_deviceStateChange)(type: 'deviceStateChange', callback?: Callback&lt;{ action: DeviceStateChange; device: DeviceBasicInfo; }&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 

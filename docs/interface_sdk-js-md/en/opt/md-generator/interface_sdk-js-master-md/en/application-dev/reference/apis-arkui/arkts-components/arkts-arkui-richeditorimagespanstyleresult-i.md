@@ -4,6 +4,8 @@ Provides the image span style information returned by the backend.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface RichEditorImageSpanStyleResult--><!--Device-unnamed-declare interface RichEditorImageSpanStyleResult-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Image layout style.
 **Type:** [RichEditorLayoutStyle](arkts-arkui-richeditorlayoutstyle-i.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Scale mode of the image.
 
 **Since:** 10
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -54,12 +60,13 @@ Scale mode of the image.
 size: [number, number]
 ```
 
-Width and height of the image, in px. Default value: varies by the value of **objectFit**. If the value of   
-**objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
+Width and height of the image, in px. Default value: varies by the value of **objectFit**. If the value of **objectFit** is **Cover**, the image height is the component height minus the top and bottom paddings, and the image width is the component width minus the left and right paddings.
 
 **Type:** [number, number]
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,6 +87,8 @@ Vertical alignment mode of the image.
 **Type:** [ImageSpanAlignment](../arkts-apis/arkts-arkui-imagespanalignment-e.md)
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

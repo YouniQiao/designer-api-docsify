@@ -2,9 +2,11 @@
 
 Implements intelligent voice management.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-intelligentVoice-interface IntelligentVoiceManager--><!--Device-intelligentVoice-interface IntelligentVoiceManager-End-->
 
@@ -26,9 +28,11 @@ getCapabilityInfo(): Array<IntelligentVoiceEngineType>
 
 Obtains capability information.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -48,8 +52,8 @@ Obtains capability information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -59,7 +63,42 @@ if (intelligentVoiceManager != null) {
 }
 ```
 
-## off('serviceChange')
+## offServiceChange
+
+```TypeScript
+offServiceChange(callback?: Callback<ServiceChangeType>): void
+```
+
+Unsubscribes service change events.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
+
+<!--Device-IntelligentVoiceManager-offServiceChange(callback?: Callback<ServiceChangeType>): void--><!--Device-IntelligentVoiceManager-offServiceChange(callback?: Callback<ServiceChangeType>): void-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+
+## off_serviceChange
 
 ```TypeScript
 off(type: 'serviceChange', callback?: Callback<ServiceChangeType>): void
@@ -70,6 +109,8 @@ Unsubscribes service change events.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -84,14 +125,14 @@ Unsubscribes service change events.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the event to listen for. Only the serviceChange event is supported. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -101,21 +142,23 @@ if (intelligentVoiceManager != null) {
 }
 ```
 
-## offServiceChange
+## onServiceChange
 
 ```TypeScript
-offServiceChange(callback?: Callback<ServiceChangeType>): void
+onServiceChange(callback: Callback<ServiceChangeType>): void
 ```
 
-Unsubscribes service change events.
+Subscribes service change events. When the state of intelligent voice service changes, the callback is invoked.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
-<!--Device-IntelligentVoiceManager-offServiceChange(callback?: Callback<ServiceChangeType>): void--><!--Device-IntelligentVoiceManager-offServiceChange(callback?: Callback<ServiceChangeType>): void-End-->
+<!--Device-IntelligentVoiceManager-onServiceChange(callback: Callback<ServiceChangeType>): void--><!--Device-IntelligentVoiceManager-onServiceChange(callback: Callback<ServiceChangeType>): void-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 
@@ -125,26 +168,28 @@ Unsubscribes service change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | No | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
-## on('serviceChange')
+## on_serviceChange
 
 ```TypeScript
 on(type: 'serviceChange', callback: Callback<ServiceChangeType>): void
 ```
 
-Subscribes service change events. When the state of intelligent voice service changes,the callback is invoked.
+Subscribes service change events. When the state of intelligent voice service changes, the callback is invoked.
 
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
 
@@ -159,14 +204,14 @@ Subscribes service change events. When the state of intelligent voice service ch
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serviceChange' | Yes | Type of the event to listen for. Only the serviceChange event is supported. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -175,37 +220,4 @@ if (intelligentVoiceManager != null) {
   intelligentVoiceManager.on('serviceChange', (serviceChangeType: intelligentVoice.ServiceChangeType) => {});
 }
 ```
-
-## onServiceChange
-
-```TypeScript
-onServiceChange(callback: Callback<ServiceChangeType>): void
-```
-
-Subscribes service change events. When the state of intelligent voice service changes,the callback is invoked.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Required permissions:** ohos.permission.MANAGE_INTELLIGENT_VOICE
-
-<!--Device-IntelligentVoiceManager-onServiceChange(callback: Callback<ServiceChangeType>): void--><!--Device-IntelligentVoiceManager-onServiceChange(callback: Callback<ServiceChangeType>): void-End-->
-
-**System capability:** SystemCapability.AI.IntelligentVoice.Core
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ServiceChangeType](arkts-basicservices-intelligentvoice-servicechangetype-e-sys.md)&gt; | Yes | Callback is invoked when the event is triggered. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 

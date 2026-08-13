@@ -13,19 +13,13 @@ function getLauncherAbilityInfos(bundleName: string,
     userId: number, callback: AsyncCallback<Array<LauncherAbilityInfo>>): void
 ```
 
-Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result.
-
-> **NOTE：**
-> 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo)
-> instead.
+Obtains an array of the launcher ability information based on a given bundle name. This API uses an asynchronous callback to return the result. > **NOTE：**> > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo-(System-API)) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo(bundleName:)
+**Substitutes:** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo-(System-API))(bundleName: string, userId: int, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -50,19 +44,13 @@ Obtains an array of the launcher ability information based on a given bundle nam
 function getLauncherAbilityInfos(bundleName: string, userId: number): Promise<Array<LauncherAbilityInfo>>
 ```
 
-Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result.
-
-> **NOTE：**
-> 
-> This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo)
-> instead.
+Obtains an array of the launcher ability information based on a given bundle name. This API uses a promise to return the result. > **NOTE：**> > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use > [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo-(System-API)) > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getLauncherAbilityInfo](@ohos.bundle.launcherBundleManager:launcherBundleManager.getLauncherAbilityInfo(bundleName:)
+**Substitutes:** [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getLauncherAbilityInfo-(System-API))(bundleName: string, userId: int, callback: AsyncCallback&lt;Array&lt;LauncherAbilityInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

@@ -4,7 +4,9 @@ Definition of the Offline Download Management Interface
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVDownloaderManager--><!--Device-media-interface AVDownloaderManager-End-->
 
@@ -26,7 +28,9 @@ Create a download task based on the media description.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +60,9 @@ Set the network environment for the download. By default, the download is perfor
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +86,9 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -104,7 +112,9 @@ Obtains the offline download cache directory of a specified task.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -128,16 +138,10 @@ Obtains the offline download cache directory of a specified task.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
 ## getTaskProgress
 
-ArkTS-Dyn:
-```TypeScript
-getTaskProgress(taskId: string): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getTaskProgress(taskId: string): double
 ```
@@ -146,7 +150,9 @@ Obtains the progress of a specified offline download task.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -164,13 +170,13 @@ Obtains the progress of a specified offline download task.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Returns the approximate ratio of the download progress of a specified task. Value range: [0.0-1.0] If the returned value range is -1, the resource size is unknown. |
+| double | Returns the approximate ratio of the download progress of a specified task. Value range: [0.0-1.0] If the returned value range is -1, the resource size is unknown. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
 ## getTaskStatus
 
@@ -182,7 +188,9 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -206,7 +214,7 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
 ## offProgressChange
 
@@ -218,7 +226,9 @@ Deregisters a specified function's listening on task progress change events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -242,7 +252,9 @@ Deregisters a specified function's listening on task status change events.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,11 +274,13 @@ Deregisters a specified function's listening on task status change events.
 onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 ```
 
-Registers a function to listen to the progress change value of an offline download task.The progress change of the offline download task exceeds 1% compared with that of the last time.The event is triggered after the interval exceeds 500 ms.
+Registers a function to listen to the progress change value of an offline download task. The progress change of the offline download task exceeds 1% compared with that of the last time. The event is triggered after the interval exceeds 500 ms.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -290,7 +304,9 @@ Registering a Function for Listening on Status Changes of Offline Download Tasks
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,7 +330,9 @@ Suspending the download of a specified task
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -332,8 +350,8 @@ Suspending the download of a specified task
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 
 ## release
 
@@ -345,7 +363,9 @@ Release resources used for AVDownloaderManager.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -363,7 +383,9 @@ Remove a download task from the offline download manager
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -381,7 +403,7 @@ Remove a download task from the offline download manager
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 
 ## resumeDownloadTask
 
@@ -393,7 +415,9 @@ Resuming Offline download of a Specified Task
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -411,17 +435,11 @@ Resuming Offline download of a Specified Task
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
-| [5400108](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+| [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
+| [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 
 ## setRequestTimeout
 
-ArkTS-Dyn:
-```TypeScript
-setRequestTimeout(timeout: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setRequestTimeout(timeout: int): void
 ```
@@ -430,7 +448,9 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -442,5 +462,5 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer. &lt;br&gt;**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;If the value is less than 0, there is no timeout duration.&lt;/li&gt;&lt;/ul&gt;. |
+| timeout | int | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer. &lt;br&gt;**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;If the value is less than 0, there is no timeout duration.&lt;/li&gt;&lt;/ul&gt;. |
 

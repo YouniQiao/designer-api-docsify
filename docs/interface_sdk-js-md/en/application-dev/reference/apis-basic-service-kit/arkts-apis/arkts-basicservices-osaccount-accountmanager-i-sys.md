@@ -2,9 +2,11 @@
 
 Provides APIs for managing OS accounts.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface AccountManager--><!--Device-osAccount-interface AccountManager-End-->
 
@@ -18,21 +20,17 @@ import { osAccount } from '@kit.BasicServicesKit';
 
 ## activateOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-activateOsAccount(localId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 activateOsAccount(localId: int, callback: AsyncCallback<void>): void
 ```
 
 Activates an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -46,40 +44,36 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| localId | int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
-| [12300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
+| [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 ## activateOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-activateOsAccount(localId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 activateOsAccount(localId: int): Promise<void>
 ```
 
 Activates an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -93,7 +87,7 @@ Activates an OS account. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -105,33 +99,29 @@ Activates an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
-| [12300009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
+| [12300009](../../apis-basic-services-kit/errorcode-account.md#12300009-account-already-activated) | Account has been activated.<br>**Applicable version:** 7 - 11 |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
 ## activateOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-activateOsAccount(localId: number, displayId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 activateOsAccount(localId: int, displayId: long): Promise<void>
 ```
 
-Activates (Starts on the foreground or switches to) the target OS account on the specified logical display.This API uses a promise to return the result.Currently, cross-logical-display activation is not supported. That is, you cannot activate an OS account that is already running on the foreground of another logical display on the specified logical display.
+Activates (Starts on the foreground or switches to) the target OS account on the specified logical display. This API uses a promise to return the result. Currently, cross-logical-display activation is not supported. That is, you cannot activate an OS account that is already running on the foreground of another logical display on the specified logical display.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -145,8 +135,8 @@ Activates (Starts on the foreground or switches to) the target OS account on the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Logical display ID. |
+| localId | int | Yes | ID of the target OS account. |
+| displayId | long | Yes | Logical display ID. |
 
 **Return value:**
 
@@ -158,34 +148,30 @@ Activates (Starts on the foreground or switches to) the target OS account on the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [12300019](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300019-crossdisplay-activation-not-supported) | Cross-display activation not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300018-logical-display-not-found) | Display not found. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300016](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [12300019](../../apis-basic-services-kit/errorcode-account.md#12300019-crossdisplay-activation-not-supported) | Cross-display activation not supported. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300018](../../apis-basic-services-kit/errorcode-account.md#12300018-logical-display-not-found) | Display not found. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300016](../../apis-basic-services-kit/errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit. |
 
 ## bindDomainAccount
 
-ArkTS-Dyn:
-```TypeScript
-bindDomainAccount(localId: number, domainAccountInfo: DomainAccountInfo): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 bindDomainAccount(localId: int, domainAccountInfo: DomainAccountInfo): Promise<void>
 ```
 
 Binds a domain account to an OS account. This API uses a promise to return the result.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -199,7 +185,7 @@ Binds a domain account to an OS account. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 | domainAccountInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
 
 **Return value:**
@@ -212,16 +198,16 @@ Binds a domain account to an OS account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account or domain account is being operated. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. Possible causes: The OS account cannot be bound. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The OS account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domain account information. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300022](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300022-domain-account-already-bound) | The domain account is already bound. |
-| [12300021](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300021-os-account-already-bound) | The OS account is already bound. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account or domain account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. Possible causes: The OS account cannot be bound. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | The OS account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid domain account information. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300022](../../apis-basic-services-kit/errorcode-account.md#12300022-domain-account-already-bound) | The domain account is already bound. |
+| [12300021](../../apis-basic-services-kit/errorcode-account.md#12300021-os-account-already-bound) | The OS account is already bound. |
 
 ## Examples
 
@@ -252,9 +238,11 @@ createOsAccount(localName: string, type: OsAccountType, callback: AsyncCallback<
 
 Creates an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -270,22 +258,22 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- | --- | --- |
 | localName | string | Yes | Name of the OS account to create. |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -316,9 +304,11 @@ createOsAccount(localName: string, type: OsAccountType, options?: CreateOsAccoun
 
 Creates an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -346,17 +336,17 @@ Creates an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -394,9 +384,11 @@ createOsAccountForDomain(
 
 Creates an OS account and associates it with the specified domain account. This API uses an asynchronous callback to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -412,23 +404,23 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- | --- | --- |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account to create. |
 | domainInfo | [DomainAccountInfo](arkts-basicservices-osaccount-domainaccountinfo-i.md) | Yes | Domain account information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the created OS account. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -461,9 +453,11 @@ createOsAccountForDomain(type: OsAccountType, domainInfo: DomainAccountInfo, opt
 
 Creates an OS account and associates it with the specified domain account. This API uses a promise to return the result.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -491,18 +485,18 @@ Creates an OS account and associates it with the specified domain account. This 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported.<br>**Applicable version:** 12 and later |
-| [12300015](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
-| [12300007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
-| [12300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
-| [12300006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
-| [12300005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
-| [12300004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
+| [12300015](../../apis-basic-services-kit/errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300007](../../apis-basic-services-kit/errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
+| [12300006](../../apis-basic-services-kit/errorcode-account.md#12300006-unsupported-account-type) | Unsupported account type. |
+| [12300005](../../apis-basic-services-kit/errorcode-account.md#12300005-multiple-users-not-supported) | Multi-user not supported. |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) | Account already exists. |
 
 ## Examples
 
@@ -530,21 +524,17 @@ try {
 
 ## deactivateOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-deactivateOsAccount(localId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 deactivateOsAccount(localId: int): Promise<void>
 ```
 
 Deactivates (logs out of) an OS account. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -558,7 +548,7 @@ Deactivates (logs out of) an OS account. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -570,31 +560,27 @@ Deactivates (logs out of) an OS account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getBundleIdForUid
 
-ArkTS-Dyn:
-```TypeScript
-getBundleIdForUid(uid: number, callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void
 ```
 
 Obtains the bundle ID based on the specified UID. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void--><!--Device-AccountManager-getBundleIdForUid(uid: int, callback: AsyncCallback<int>): void-End-->
 
@@ -606,17 +592,17 @@ Obtains the bundle ID based on the specified UID. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
+| uid | int | Yes | Process UID. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the bundle ID obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -641,21 +627,17 @@ try {
 
 ## getBundleIdForUid
 
-ArkTS-Dyn:
-```TypeScript
-getBundleIdForUid(uid: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBundleIdForUid(uid: int): Promise<int>
 ```
 
 Obtains the bundle ID based on the specified UID. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>--><!--Device-AccountManager-getBundleIdForUid(uid: int): Promise<int>-End-->
 
@@ -667,22 +649,22 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
+| uid | int | Yes | Process UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the bundle ID obtained. |
+| Promise&lt;int&gt; | Promise used to return the bundle ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -705,21 +687,17 @@ try {
 
 ## getBundleIdForUidSync
 
-ArkTS-Dyn:
-```TypeScript
-getBundleIdForUidSync(uid: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getBundleIdForUidSync(uid: int): int
 ```
 
 Obtains the bundle ID based on the specified UID. The API returns the result synchronously.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-getBundleIdForUidSync(uid: int): int--><!--Device-AccountManager-getBundleIdForUidSync(uid: int): int-End-->
 
@@ -731,21 +709,21 @@ Obtains the bundle ID based on the specified UID. The API returns the result syn
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Process UID. |
+| uid | int | Yes | Process UID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Bundle ID obtained. |
+| int | Bundle ID obtained. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
 ## Examples
 
@@ -765,21 +743,17 @@ try {
 
 ## getEnabledOsAccountConstraints
 
-ArkTS-Dyn:
-```TypeScript
-getEnabledOsAccountConstraints(localId: number): Promise<Array<string>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getEnabledOsAccountConstraints(localId: int): Promise<Array<string>>
 ```
 
 Obtains all the enabled constraints of an OS account. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -793,32 +767,26 @@ Obtains all the enabled constraints of an OS account. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the enabled [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) of the OS account. |
+| Promise&lt;Array&lt;string&gt;&gt; | Promise used to return all the enabled [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) of the OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getForegroundOsAccountDisplayId
 
-ArkTS-Dyn:
-```TypeScript
-getForegroundOsAccountDisplayId(localId: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForegroundOsAccountDisplayId(localId: int): Promise<long>
 ```
@@ -827,7 +795,9 @@ Obtains the logical display ID of the specified foreground OS account. This API 
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -841,22 +811,22 @@ Obtains the logical display ID of the specified foreground OS account. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;long&gt; | Promise used to return the logical display ID. |
+| Promise&lt;long&gt; | Promise used to return the logical display ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300017](../../apis-basic-services-kit/errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
 
 ## Examples
 
@@ -879,12 +849,6 @@ try {
 
 ## getForegroundOsAccountLocalId
 
-ArkTS-Dyn:
-```TypeScript
-getForegroundOsAccountLocalId(displayId: number): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getForegroundOsAccountLocalId(displayId: long): Promise<int>
 ```
@@ -893,7 +857,9 @@ Obtains the ID of the foreground OS account running on a specified logical displ
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -907,22 +873,22 @@ Obtains the ID of the foreground OS account running on a specified logical displ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Logical display ID. |
+| displayId | long | Yes | Logical display ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the OS account ID. |
+| Promise&lt;int&gt; | Promise used to return the OS account ID. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [12300017](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300017](../../apis-basic-services-kit/errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
 
 ## Examples
 
@@ -945,21 +911,17 @@ try {
 
 ## getOsAccountConstraintSourceTypes
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountConstraintSourceTypes(localId: number, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountConstraintSourceTypes(localId: int, constraint: string, callback: AsyncCallback<Array<ConstraintSourceTypeInfo>>): void
 ```
 
 Obtains the constraint source information of an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -973,20 +935,20 @@ Obtains the constraint source information of an OS account. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) whose source information is to be obtained. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) source information obtained. Otherwise, **err** is an error object. |
+| localId | int | Yes | ID of the target OS account. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) whose source information is to be obtained. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the [constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) source information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1011,21 +973,17 @@ try {
 
 ## getOsAccountConstraintSourceTypes
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountConstraintSourceTypes(localId: number, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountConstraintSourceTypes(localId: int, constraint: string): Promise<Array<ConstraintSourceTypeInfo>>
 ```
 
 Obtains the constraint source information of an OS account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1039,25 +997,25 @@ Obtains the constraint source information of an OS account. This API uses a prom
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) whose source information is to be obtained. |
+| localId | int | Yes | ID of the target OS account. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) whose source information is to be obtained. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Promise used to return the source information of the specified [constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints). |
+| Promise&lt;Array&lt;[ConstraintSourceTypeInfo](arkts-basicservices-osaccount-constraintsourcetypeinfo-i-sys.md)&gt;&gt; | Promise used to return the source information of the specified [constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints). |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1080,21 +1038,17 @@ try {
 
 ## getOsAccountProfilePhoto
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountProfilePhoto(localId: number, callback: AsyncCallback<string>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountProfilePhoto(localId: int, callback: AsyncCallback<string>): void
 ```
 
 Obtains the profile photo of an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1108,37 +1062,33 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
+| localId | int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the profile photo information obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountProfilePhoto
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountProfilePhoto(localId: number): Promise<string>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountProfilePhoto(localId: int): Promise<string>
 ```
 
 Obtains the profile photo of an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1152,7 +1102,7 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -1164,30 +1114,26 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## getOsAccountType
 
-ArkTS-Dyn:
-```TypeScript
-getOsAccountType(localId: number): Promise<OsAccountType>
-```
-
-ArkTS-Sta:
 ```TypeScript
 getOsAccountType(localId: int): Promise<OsAccountType>
 ```
 
 Obtains the type of a specified OS account. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1201,7 +1147,7 @@ Obtains the type of a specified OS account. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -1213,11 +1159,11 @@ Obtains the type of a specified OS account. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1246,9 +1192,11 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 
 Checks whether the current process belongs to the main OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1262,16 +1210,16 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If **true** is returned, the current process belongs to the main OS account. If **false** is returned, the current process does not belong to the main OS account. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1301,9 +1249,11 @@ isMainOsAccount(): Promise<boolean>
 
 Checks whether the current process belongs to the main OS account. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -1323,9 +1273,9 @@ Checks whether the current process belongs to the main OS account. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1347,21 +1297,17 @@ try {
 
 ## isOsAccountActivated
 
-ArkTS-Dyn:
-```TypeScript
-isOsAccountActivated(localId: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 isOsAccountActivated(localId: int): Promise<boolean>
 ```
 
 Checks whether an OS account is activated. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1375,7 +1321,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -1387,29 +1333,25 @@ Checks whether an OS account is activated. This API uses a promise to return the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## isOsAccountConstraintEnabled
 
-ArkTS-Dyn:
-```TypeScript
-isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 isOsAccountConstraintEnabled(localId: int, constraint: string): Promise<boolean>
 ```
 
 Checks whether a constraint is enabled for an OS account. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1423,8 +1365,8 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| constraint | string | Yes | [Constraint](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to check. |
+| localId | int | Yes | ID of the target OS account. |
+| constraint | string | Yes | [Constraint](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to check. |
 
 **Return value:**
 
@@ -1436,29 +1378,25 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## isOsAccountUnlocked
 
-ArkTS-Dyn:
-```TypeScript
-isOsAccountUnlocked(localId: number): Promise<boolean>
-```
-
-ArkTS-Sta:
 ```TypeScript
 isOsAccountUnlocked(localId: int): Promise<boolean>
 ```
 
 Checks whether an OS account has been verified. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1472,7 +1410,7 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. If this parameter is not specified, this API checks whether the current OS account has been verified. |
+| localId | int | Yes | ID of the target OS account. If this parameter is not specified, this API checks whether the current OS account has been verified. |
 
 **Return value:**
 
@@ -1484,11 +1422,11 @@ Checks whether an OS account has been verified. This API uses a promise to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1509,224 +1447,6 @@ try {
 }
 ```
 
-## off('activate' | 'activating')
-
-```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
-```
-
-Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function offCallback(){
-  console.info('off enter')
-}
-
-try {
-  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('activate' | 'activating')
-
-```TypeScript
-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
-```
-
-Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-**ArkTS mode:** ArkTS-Dyn only, since version 7.
-
-**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
-
-<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function offCallback(){
-  console.info('off enter')
-}
-
-try {
-  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('switching')
-
-```TypeScript
-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
-```
-
-Unsubscribes from the switchover between a foreground OS account and a background OS account in progress. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switching');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## off('switched')
-
-```TypeScript
-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
-```
-
-Unsubscribes from the end of a switchover between a foreground OS account and a background OS account.This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-try {
-  accountManager.off('switched');
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
 ## offActivate
 
 ```TypeScript
@@ -1737,7 +1457,9 @@ Unsubscribes from the event indicating the completion of an OS account activatio
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -1752,16 +1474,16 @@ Unsubscribes from the event indicating the completion of an OS account activatio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## offActivating
 
@@ -1773,7 +1495,9 @@ Unsubscribes from the event indicating that an OS account is being activated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -1788,16 +1512,16 @@ Unsubscribes from the event indicating that an OS account is being activated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | No | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## offConstraintChanged
 
@@ -1805,11 +1529,13 @@ Unsubscribes from the event indicating that an OS account is being activated.
 offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void
 ```
 
-Unsubscribes from constraint change events associated with the specified callback. If no callback is specified,this API unsubscribes from all subscription records.
+Unsubscribes from constraint change events associated with the specified callback. If no callback is specified, this API unsubscribes from all subscription records.
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void--><!--Device-AccountManager-offConstraintChanged(callback?: Callback<ConstraintChangeInfo>): void-End-->
 
@@ -1821,14 +1547,14 @@ Unsubscribes from constraint change events associated with the specified callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.&lt;br&gt;The default value is **undefined**, indicating that all subscription records are unsubscribed.&lt;br&gt;If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | No | Callback for receiving constraint change information. - Callback used to listen for the constraint change events.&lt;br&gt;The default value is **undefined**, indicating that all subscription records are unsubscribed.&lt;br&gt;If this parameter is not **undefined**, the subscription records associated with the callback are unsubscribed. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1866,7 +1592,9 @@ Unsubscribes from the OS account switched event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1880,15 +1608,15 @@ Unsubscribes from the OS account switched event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## offSwitching
 
@@ -1900,7 +1628,9 @@ Unsubscribes from the OS account switching event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -1914,31 +1644,33 @@ Unsubscribes from the OS account switching event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
-## on('activate' | 'activating')
+## off_activate
 
 ```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
 ```
 
-Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
+Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
-<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
+<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -1948,19 +1680,19 @@ Subscribes to the OS account activation states, including the states of the acco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -1969,33 +1701,35 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 
-function onCallback(receiveLocalId: number){
-  console.info('receive localId:' + receiveLocalId);
+function offCallback(){
+  console.info('off enter')
 }
 
 try {
-  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
+  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
-## on('activate' | 'activating')
+## off_activating
 
 ```TypeScript
-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
+off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void
 ```
 
-Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
+Unsubscribes from the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
-<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
+<!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void--><!--Device-AccountManager-off(type: 'activate' | 'activating', name: string, callback?: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2005,19 +1739,19 @@ Subscribes to the OS account activation states, including the states of the acco
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
-| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+| type | 'activate' \| 'activating' | Yes | Type of the event to unsubscribe from. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes, and must be the same as the value passed by **on()**. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the OS account activation states. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2026,92 +1760,37 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
 
-function onCallback(receiveLocalId: number){
-  console.info('receive localId:' + receiveLocalId);
+function offCallback(){
+  console.info('off enter')
 }
 
 try {
-  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
+  accountManager.off('activating', 'osAccountOnOffNameA', offCallback);
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
-## on('switching')
+## off_switched
 
 ```TypeScript
-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
+off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void
 ```
 
-Subscribes to the switchover between a foreground OS account and a background OS account in progress.This API uses an asynchronous callback to return the result.
+Unsubscribes from the end of a switchover between a foreground OS account and a background OS account. This API uses an asynchronous callback to return the result.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Required permissions:** 
-- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
-- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
-
-<!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void-End-->
-
-**System capability:** SystemCapability.Account.OsAccount
-
-**System API:** This is a system API.
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.&lt;br&gt;Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
-let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
-try {
-  accountManager.on('switching', onSwitchingCallback);
-} catch (e) {
-  const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
-}
-```
-
-## on('switched')
-
-```TypeScript
-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
-```
-
-Subscribes to the end of a switchover between a foreground OS account and a background OS account. This API uses an asynchronous callback to return the result.
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 - API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
-<!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void-End-->
+<!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switched', callback?: Callback<OsAccountSwitchEventData>): void-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 
@@ -2122,16 +1801,16 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. &lt;br&gt;Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switched** event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2139,16 +1818,65 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
-
-function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
-  console.info('receive eventData:' + JSON.stringify(eventData));
-}
-
 try {
-  accountManager.on('switched', onSwitchedCallback);
+  accountManager.off('switched');
 } catch (e) {
   const err = e as BusinessError;
-  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## off_switching
+
+```TypeScript
+off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void
+```
+
+Unsubscribes from the switchover between a foreground OS account and a background OS account in progress. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-off(type: 'switching', callback?: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | No | Callback to unregister. By default, this parameter is left empty, which unregisters all callbacks for the **switching** event. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+try {
+  accountManager.off('switching');
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
 
@@ -2162,7 +1890,9 @@ Subscribes to the event indicating the completion of an OS account activation.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -2177,16 +1907,16 @@ Subscribes to the event indicating the completion of an OS account activation.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## onActivating
 
@@ -2198,7 +1928,9 @@ Subscribes to the event indicating that an OS account is being activated.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -2213,16 +1945,16 @@ Subscribes to the event indicating that an OS account is being activated.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Indicates the name of subscriber. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Asynchronous callback interface. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## onConstraintChanged
 
@@ -2234,7 +1966,9 @@ Subscribes to one or more constraint change events of the OS account to which th
 
 **Since:** 23
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void--><!--Device-AccountManager-onConstraintChanged(constraints: string[], callback: Callback<ConstraintChangeInfo>): void-End-->
 
@@ -2246,16 +1980,16 @@ Subscribes to one or more constraint change events of the OS account to which th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| constraints | string[] | Yes | List of [constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to be subscribed to. |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the constraint change events. |
+| constraints | string[] | Yes | List of [constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to be subscribed to. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[ConstraintChangeInfo](arkts-basicservices-osaccount-constraintchangeinfo-i-sys.md)&gt; | Yes | Callback used to listen for the constraint change events. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2286,7 +2020,9 @@ Subscribes to the OS account switched event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2300,15 +2036,15 @@ Subscribes to the OS account switched event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## onSwitching
 
@@ -2320,7 +2056,9 @@ Subscribes to the OS account switching event.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
@@ -2334,15 +2072,251 @@ Subscribes to the OS account switching event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Indicates the callback for getting the event data. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## on_activate
+
+```TypeScript
+on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
+```
+
+Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onCallback(receiveLocalId: number){
+  console.info('receive localId:' + receiveLocalId);
+}
+
+try {
+  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## on_activating
+
+```TypeScript
+on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void
+```
+
+Subscribes to the OS account activation states, including the states of the account being activated and the account with activation completed. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
+
+<!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void--><!--Device-AccountManager-on(type: 'activate' | 'activating', name: string, callback: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'activate' \| 'activating' | Yes | Type of the event to subscribe to. The value **activate** indicates that an OS account is activated, and **activating** indicates that an OS account is being activated. |
+| name | string | Yes | Subscription name, which can be customized. The value cannot be empty or exceed 1024 bytes. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback used to return the ID of the OS account being activated or activated. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onCallback(receiveLocalId: number){
+  console.info('receive localId:' + receiveLocalId);
+}
+
+try {
+  accountManager.on('activating', 'osAccountOnOffNameA', onCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## on_switched
+
+```TypeScript
+on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void
+```
+
+Subscribes to the end of a switchover between a foreground OS account and a background OS account. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switched', callback: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'switched' | Yes | Event type. The value **switched** indicates that the switchover between a foreground OS account and a background OS account is complete. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switched between the foreground and background. The source and target OS account IDs are subscribed to. &lt;br&gt;Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchedCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switched', onSwitchedCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
+
+## on_switching
+
+```TypeScript
+on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void
+```
+
+Subscribes to the switchover between a foreground OS account and a background OS account in progress. This API uses an asynchronous callback to return the result.
+
+**Since:** 12
+
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Required permissions:** 
+- API version 23+: ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+- API version 12 - 22: ohos.permission.MANAGE_LOCAL_ACCOUNTS
+
+<!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void--><!--Device-AccountManager-on(type: 'switching', callback: Callback<OsAccountSwitchEventData>): void-End-->
+
+**System capability:** SystemCapability.Account.OsAccount
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| type | 'switching' | Yes | Event type. The value **switching** indicates that the switchover between a foreground OS account and a background account is being performed. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[OsAccountSwitchEventData](arkts-basicservices-osaccount-osaccountswitcheventdata-i-sys.md)&gt; | Yes | Callback to be invoked when an OS account is switching between the foreground and background. The source and target OS account IDs are subscribed to.&lt;br&gt;Note: Since API version 23, the optional field **displayId** is available, indicating the ID of the logical display where the switch event occurs. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let accountManager: osAccount.AccountManager = osAccount.getAccountManager();
+
+function onSwitchingCallback(eventData: osAccount.OsAccountSwitchEventData){
+  console.info('receive eventData:' + JSON.stringify(eventData));
+}
+
+try {
+  accountManager.on('switching', onSwitchingCallback);
+} catch (e) {
+  const err = e as BusinessError;
+  console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
+}
+```
 
 ## queryAllCreatedOsAccounts
 
@@ -2352,9 +2326,11 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 
 Queries information about all the OS accounts created. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2368,16 +2344,16 @@ Queries information about all the OS accounts created. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is a list of all created OS accounts. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2407,9 +2383,11 @@ queryAllCreatedOsAccounts(): Promise<Array<OsAccountInfo>>
 
 Queries information about all the OS accounts created. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2429,9 +2407,9 @@ Queries information about all the OS accounts created. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2453,21 +2431,17 @@ try {
 
 ## queryMaxLoggedInOsAccountNumber
 
-ArkTS-Dyn:
-```TypeScript
-queryMaxLoggedInOsAccountNumber(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryMaxLoggedInOsAccountNumber(): Promise<int>
 ```
 
 Queries the maximum number of OS accounts allowed to log in to the system. This API uses a promise to return the result.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-queryMaxLoggedInOsAccountNumber(): Promise<int>--><!--Device-AccountManager-queryMaxLoggedInOsAccountNumber(): Promise<int>-End-->
 
@@ -2479,14 +2453,14 @@ Queries the maximum number of OS accounts allowed to log in to the system. This 
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2508,21 +2482,17 @@ try {
 
 ## queryMaxOsAccountNumber
 
-ArkTS-Dyn:
-```TypeScript
-queryMaxOsAccountNumber(callback: AsyncCallback<number>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryMaxOsAccountNumber(callback: AsyncCallback<int>): void
 ```
 
 Queries the maximum number of OS accounts that can be created. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-queryMaxOsAccountNumber(callback: AsyncCallback<int>): void--><!--Device-AccountManager-queryMaxOsAccountNumber(callback: AsyncCallback<int>): void-End-->
 
@@ -2534,15 +2504,15 @@ Queries the maximum number of OS accounts that can be created. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | ArkTS-Dyn: [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;number&gt;  <br>ArkTS-Sta：[AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the maximum number of OS accounts that can be created. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2566,21 +2536,17 @@ try {
 
 ## queryMaxOsAccountNumber
 
-ArkTS-Dyn:
-```TypeScript
-queryMaxOsAccountNumber(): Promise<number>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryMaxOsAccountNumber(): Promise<int>
 ```
 
 Queries the maximum number of OS accounts that can be created. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>--><!--Device-AccountManager-queryMaxOsAccountNumber(): Promise<int>-End-->
 
@@ -2592,14 +2558,14 @@ Queries the maximum number of OS accounts that can be created. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: Promise&lt;number&gt;  <br>ArkTS-Sta：Promise&lt;int&gt; | Promise used to return the result. |
+| Promise&lt;int&gt; | Promise used to return the result. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2627,9 +2593,11 @@ queryOsAccount(): Promise<OsAccountInfo>
 
 Obtains information about the OS account to which the current process belongs. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.GET_LOCAL_ACCOUNTS
 
@@ -2649,9 +2617,9 @@ Obtains information about the OS account to which the current process belongs. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## Examples
 
@@ -2673,21 +2641,17 @@ try {
 
 ## queryOsAccountById
 
-ArkTS-Dyn:
-```TypeScript
-queryOsAccountById(localId: number, callback: AsyncCallback<OsAccountInfo>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryOsAccountById(localId: int, callback: AsyncCallback<OsAccountInfo>): void
 ```
 
 Queries information about the OS account of the given ID. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -2701,37 +2665,33 @@ Queries information about the OS account of the given ID. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
+| localId | int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[OsAccountInfo](arkts-basicservices-osaccount-osaccountinfo-i.md)&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null** and **data** is the OS account information obtained. Otherwise, **data** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## queryOsAccountById
 
-ArkTS-Dyn:
-```TypeScript
-queryOsAccountById(localId: number): Promise<OsAccountInfo>
-```
-
-ArkTS-Sta:
 ```TypeScript
 queryOsAccountById(localId: int): Promise<OsAccountInfo>
 ```
 
 Queries information about the OS account of the given ID. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS_EXTENSION
 
@@ -2745,7 +2705,7 @@ Queries information about the OS account of the given ID. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -2757,30 +2717,26 @@ Queries information about the OS account of the given ID. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## removeOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-removeOsAccount(localId: number, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeOsAccount(localId: int, callback: AsyncCallback<void>): void
 ```
 
 Removes an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2794,21 +2750,21 @@ Removes an OS account. This API uses an asynchronous callback to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| localId | int | Yes | ID of the target OS account. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 
 ## Examples
 
@@ -2836,21 +2792,17 @@ try {
 
 ## removeOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-removeOsAccount(localId: number): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeOsAccount(localId: int): Promise<void>
 ```
 
 Removes an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2864,7 +2816,7 @@ Removes an OS account. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 
 **Return value:**
 
@@ -2876,14 +2828,14 @@ Removes an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 
 ## Examples
 
@@ -2909,12 +2861,6 @@ try {
 
 ## removeOsAccount
 
-ArkTS-Dyn:
-```TypeScript
-removeOsAccount(localId: number, options: RemoveOsAccountOptions): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 removeOsAccount(localId: int, options: RemoveOsAccountOptions): Promise<void>
 ```
@@ -2923,7 +2869,9 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -2937,7 +2885,7 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. &lt;br&gt;The value should be an integer. |
+| localId | int | Yes | ID of the target OS account. &lt;br&gt;The value should be an integer. |
 | options | [RemoveOsAccountOptions](arkts-basicservices-osaccount-removeosaccountoptions-i-sys.md) | Yes | Options for removing an OS account. |
 
 **Return value:**
@@ -2950,14 +2898,14 @@ Removes a specified OS account based on the options. This API uses a promise to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or options. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
 
 ## Examples
 
@@ -2987,21 +2935,17 @@ try {
 
 ## setOsAccountConstraints
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean, callback: AsyncCallback<void>): void
 ```
 
 Sets or removes constraints for an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3015,40 +2959,36 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| constraints | Array&lt;string&gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to set or remove. |
+| localId | int | Yes | ID of the target OS account. |
+| constraints | Array&lt;string&gt; | Yes | [Constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to set or remove. |
 | enable | boolean | Yes | Whether to set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountConstraints
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boolean): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountConstraints(localId: int, constraints: Array<string>, enable: boolean): Promise<void>
 ```
 
 Sets or removes constraints for an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3062,8 +3002,8 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
-| constraints | Array&lt;string&gt; | Yes | [Constraints](../../../reference/apis-basic-services-kit/js-apis-osAccount.md#constraints) to set or remove. |
+| localId | int | Yes | ID of the target OS account. |
+| constraints | Array&lt;string&gt; | Yes | [Constraints](arkts-basicservices-osaccount-osaccountinfo-i.md#constraints) to set or remove. |
 | enable | boolean | Yes | Set or remove constraints. The value **true** means to set constraints, and **false** means to remove constraints. |
 
 **Return value:**
@@ -3076,31 +3016,27 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or constraints. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountName
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountName(localId: number, localName: string, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountName(localId: int, localName: string, callback: AsyncCallback<void>): void
 ```
 
 Sets the name of an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3114,39 +3050,35 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 | localName | string | Yes | Account name to set. The value cannot exceed 1024 characters. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountName
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountName(localId: number, localName: string): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountName(localId: int, localName: string): Promise<void>
 ```
 
 Sets the name of an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3160,7 +3092,7 @@ Sets the name of an OS account. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 | localName | string | Yes | Account name to set. The value cannot exceed 1024 characters. |
 
 **Return value:**
@@ -3173,31 +3105,27 @@ Sets the name of an OS account. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or localName. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountProfilePhoto
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountProfilePhoto(localId: number, photo: string, callback: AsyncCallback<void>): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountProfilePhoto(localId: int, photo: string, callback: AsyncCallback<void>): void
 ```
 
 Sets a profile photo for an OS account. This API uses an asynchronous callback to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3211,39 +3139,35 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 | photo | string | Yes | Profile photo information. |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountProfilePhoto
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountProfilePhoto(localId: number, photo: string): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountProfilePhoto(localId: int, photo: string): Promise<void>
 ```
 
 Sets a profile photo for an OS account. This API uses a promise to return the result.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3257,7 +3181,7 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. |
+| localId | int | Yes | ID of the target OS account. |
 | photo | string | Yes | Profile photo information. |
 
 **Return value:**
@@ -3270,22 +3194,16 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted Account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid localId or photo. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
 ## setOsAccountType
 
-ArkTS-Dyn:
-```TypeScript
-setOsAccountType(localId: number, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>
-```
-
-ArkTS-Sta:
 ```TypeScript
 setOsAccountType(localId: int, type: OsAccountType, options?: SetOsAccountTypeOptions): Promise<void>
 ```
@@ -3294,7 +3212,9 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -3308,7 +3228,7 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| localId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the target OS account. &lt;br&gt;The value should be an integer. |
+| localId | int | Yes | ID of the target OS account. &lt;br&gt;The value should be an integer. |
 | type | [OsAccountType](arkts-basicservices-osaccount-osaccounttype-e.md) | Yes | Type of the OS account. |
 | options | [SetOsAccountTypeOptions](arkts-basicservices-osaccount-setosaccounttypeoptions-i-sys.md) | No | Options for setting the OS account type. This parameter is left empty by default. |
 
@@ -3322,15 +3242,15 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
-| [12300008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
-| [12300003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [12300002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or options. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [12300001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
-| [204](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
-| [12300023](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit. |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid type or options. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [12300023](../../apis-basic-services-kit/errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit. |
 
 ## Examples
 

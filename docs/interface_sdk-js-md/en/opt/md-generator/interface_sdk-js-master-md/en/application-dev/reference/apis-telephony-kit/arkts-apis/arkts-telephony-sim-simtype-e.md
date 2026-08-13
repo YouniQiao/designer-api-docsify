@@ -2,7 +2,9 @@
 
 Indicates the SIM card type.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sim-export enum SimType--><!--Device-sim-export enum SimType-End-->
 
@@ -16,7 +18,9 @@ PSIM = 0
 
 Indicates psim type.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimType-PSIM = 0--><!--Device-SimType-PSIM = 0-End-->
 
@@ -30,7 +34,9 @@ ESIM = 1
 
 Indicates esim type.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SimType-ESIM = 1--><!--Device-SimType-ESIM = 1-End-->
 

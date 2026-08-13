@@ -2,7 +2,9 @@
 
 表示系统账号类型的枚举。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-enum OsAccountType--><!--Device-osAccount-enum OsAccountType-End-->
 
@@ -14,11 +16,11 @@
 PRIVATE = 1024
 ```
 
-隐私账号。隐私账号只能有一个。
+隐私账号。隐私账号只能有一个。 此接口为系统接口。
 
-此接口为系统接口。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
 <!--Device-OsAccountType-PRIVATE = 1024--><!--Device-OsAccountType-PRIVATE = 1024-End-->
 

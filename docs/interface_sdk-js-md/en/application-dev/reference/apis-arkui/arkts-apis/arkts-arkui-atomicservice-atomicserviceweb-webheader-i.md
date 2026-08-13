@@ -6,6 +6,8 @@ Describes the request/response header returned by the **AtomicServiceWeb** compo
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface WebHeader--><!--Device-unnamed-export declare interface WebHeader-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -30,6 +32,8 @@ Key of the request/response header.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WebHeader-headerKey: string--><!--Device-WebHeader-headerKey: string-End-->
@@ -49,6 +53,8 @@ Value of the request/response header.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

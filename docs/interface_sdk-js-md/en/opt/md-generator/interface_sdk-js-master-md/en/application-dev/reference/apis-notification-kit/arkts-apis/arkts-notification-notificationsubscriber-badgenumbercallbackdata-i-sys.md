@@ -2,7 +2,9 @@
 
 Returns the changes of the application badge number.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BadgeNumberCallbackData--><!--Device-unnamed-export interface BadgeNumberCallbackData-End-->
 
@@ -20,7 +22,9 @@ Key value of an application instance.
 
 **Type:** string
 
-**Since:** 15
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BadgeNumberCallbackData-readonly appInstanceKey?: string--><!--Device-BadgeNumberCallbackData-readonly appInstanceKey?: string-End-->
 
@@ -38,7 +42,9 @@ Number of notifications displayed on the application icon.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BadgeNumberCallbackData-readonly badgeNumber: int--><!--Device-BadgeNumberCallbackData-readonly badgeNumber: int-End-->
 
@@ -56,7 +62,9 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BadgeNumberCallbackData-readonly bundle: string--><!--Device-BadgeNumberCallbackData-readonly bundle: string-End-->
 
@@ -96,7 +104,9 @@ UID of the application.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-BadgeNumberCallbackData-readonly uid: int--><!--Device-BadgeNumberCallbackData-readonly uid: int-End-->
 

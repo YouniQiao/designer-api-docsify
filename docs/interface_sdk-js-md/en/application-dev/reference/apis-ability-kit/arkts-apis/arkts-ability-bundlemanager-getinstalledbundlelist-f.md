@@ -12,11 +12,13 @@ import { bundleManager } from '@kit.AbilityKit';
 function getInstalledBundleList(bundleFlags: int): Promise<Array<BundleInfo>>
 ```
 
-Obtains all the bundle information in the system based on the given bundle flags.This API uses a promise to return the result.
+Obtains all the bundle information in the system based on the given bundle flags. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_GET_INSTALLED_BUNDLE_LIST
 
@@ -30,7 +32,7 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleFlags | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag). |
+| bundleFlags | int | Yes | Information contained in the returned BundleInfo. For details, see [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md#BundleFlag). |
 
 **Return value:**
 
@@ -42,5 +44,5 @@ Obtains all the bundle information in the system based on the given bundle flags
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 

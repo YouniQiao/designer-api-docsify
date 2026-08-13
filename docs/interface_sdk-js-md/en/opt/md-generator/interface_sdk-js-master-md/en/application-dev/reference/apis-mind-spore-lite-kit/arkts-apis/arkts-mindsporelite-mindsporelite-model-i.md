@@ -2,7 +2,9 @@
 
 Provides manages model function. Including get inputs, predict ,resize.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-mindSporeLite-interface Model--><!--Device-mindSporeLite-interface Model-End-->
 
@@ -26,7 +28,9 @@ exportModel(
 
 Export train model to file
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,7 +86,9 @@ exportWeightsCollaborateWithMicro(
 
 Export model's weights, which can be used in micro only. Only valid for Lite Train
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,7 +136,9 @@ getInputs(): MSTensor[]
 
 Get model input tensors.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -170,7 +178,9 @@ getWeights(): MSTensor[]
 
 Obtain all weights of the model
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -229,7 +239,9 @@ predict(inputs: MSTensor[], callback: Callback<MSTensor[]>): void
 
 Infer model
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -299,7 +311,9 @@ predict(inputs: MSTensor[]): Promise<MSTensor[]>
 
 Infer model
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -376,7 +390,9 @@ resize(inputs: MSTensor[], dims: Array<Array<number>>): boolean
 
 resize model input
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -427,7 +443,9 @@ runStep(inputs: MSTensor[]): boolean
 
 Train model by step
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -480,7 +498,9 @@ setupVirtualBatch(virtualBatchMultiplier: number, lr: number, momentum: number):
 
 Setup training with virtual batches
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -548,7 +568,9 @@ updateWeights(weights: MSTensor[]): boolean
 
 Update weights of the model
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -618,7 +640,9 @@ The learning rate of the training model
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -636,7 +660,9 @@ The running mode of the model
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

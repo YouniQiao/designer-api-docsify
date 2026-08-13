@@ -12,11 +12,11 @@ import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
 function clearId(): void
 ```
 
-Clears the trace ID. This API returns the result synchronously.
+Clears the trace ID. This API returns the result synchronously. Clears the HiTrace ID in the current thread's TLS.
 
-Clears the HiTrace ID in the current thread's TLS.
+**Since:** 23
 
-**Since:** 8
+**Deprecated since:** -1
 
 <!--Device-hiTraceChain-function clearId(): void--><!--Device-hiTraceChain-function clearId(): void-End-->
 

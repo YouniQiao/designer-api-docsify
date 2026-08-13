@@ -1,0 +1,114 @@
+# VideoPlayerState
+
+VideoPlayerState. include PLAYING, PAUSED, STOPPED, SEEK_START and SEEK_FINISH
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare enum VideoPlayerState--><!--Device-unnamed-export declare enum VideoPlayerState-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## PLAYING
+
+```TypeScript
+PLAYING = 0
+```
+
+PLAYING. video is playing
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoPlayerState-PLAYING = 0--><!--Device-VideoPlayerState-PLAYING = 0-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## PAUSED
+
+```TypeScript
+PAUSED = 1
+```
+
+PAUSED. video is paused
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoPlayerState-PAUSED = 1--><!--Device-VideoPlayerState-PAUSED = 1-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## STOPPED
+
+```TypeScript
+STOPPED = 2
+```
+
+STOPPED. video is stopped
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoPlayerState-STOPPED = 2--><!--Device-VideoPlayerState-STOPPED = 2-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SEEK_START
+
+```TypeScript
+SEEK_START = 3
+```
+
+SEEK_START. seek drag is start
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoPlayerState-SEEK_START = 3--><!--Device-VideoPlayerState-SEEK_START = 3-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SEEK_FINISH
+
+```TypeScript
+SEEK_FINISH = 4
+```
+
+SEEK_FINISH. seek drag is finish
+
+**Since:** 26.0.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-VideoPlayerState-SEEK_FINISH = 4--><!--Device-VideoPlayerState-SEEK_FINISH = 4-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+

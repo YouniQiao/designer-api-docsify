@@ -8,6 +8,8 @@ template form detail info callback.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-formInfo-type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => void--><!--Device-formInfo-type TemplateFormDetailInfoCallback = (info: Array<TemplateFormDetailInfo>) => void-End-->

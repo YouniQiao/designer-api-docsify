@@ -2,9 +2,11 @@
 
 Enumerates application collaboration key values.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-abilityConnectionManager-export enum CollaborationKeys--><!--Device-abilityConnectionManager-export enum CollaborationKeys-End-->
 
@@ -18,9 +20,11 @@ PEER_INFO = 'ohos.collaboration.key.peerInfo'
 
 Key value of the peer device information.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,9 +40,11 @@ CONNECT_OPTIONS = 'ohos.collaboration.key.connectOptions'
 
 Key value of the connection option.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -54,9 +60,11 @@ COLLABORATE_TYPE = 'ohos.collaboration.key.abilityCollaborateType'
 
 Key value of the collaboration type.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

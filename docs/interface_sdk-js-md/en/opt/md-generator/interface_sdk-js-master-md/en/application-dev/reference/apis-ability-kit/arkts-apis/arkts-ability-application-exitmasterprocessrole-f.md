@@ -12,9 +12,11 @@ import { application } from '@kit.AbilityKit';
 export function exitMasterProcessRole(): Promise<void>
 ```
 
-Relinquishes the [master-process](../../../application-models/ability-terminology.md#master-process) role from the  current process. This API uses a promise to return the result.This API can be properly called only on 2-in-1 devices and tablets. If it is called on other device types, error code 801 is returned.
+Relinquishes the [master-process](../../../application-models/ability-terminology.md#master-process) role from the current process. This API uses a promise to return the result. This API can be properly called only on 2-in-1 devices and tablets. If it is called on other device types, error code 801 is returned.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,9 +34,9 @@ Relinquishes the [master-process](../../../application-models/ability-terminolog
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [16000118](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000118-process-is-not-the-master-process) |
-| [16000119](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000119-pending-request-exists) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [16000118](../errorcode-ability.md#16000118-process-is-not-the-master-process) |
+| [16000119](../errorcode-ability.md#16000119-pending-request-exists) |
 
 ## Examples
 

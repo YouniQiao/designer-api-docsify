@@ -2,7 +2,9 @@
 
 Enumeration type of filter operator.
 
-**Since:** 19
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-export enum FilterOperator--><!--Device-photoAccessHelper-export enum FilterOperator-End-->
 
@@ -16,9 +18,11 @@ EQUAL_TO = 0
 
 Equal to.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-EQUAL_TO = 0--><!--Device-FilterOperator-EQUAL_TO = 0-End-->
 
@@ -32,9 +36,11 @@ NOT_EQUAL_TO = 1
 
 Not equal to.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-NOT_EQUAL_TO = 1--><!--Device-FilterOperator-NOT_EQUAL_TO = 1-End-->
 
@@ -48,9 +54,11 @@ MORE_THAN = 2
 
 Greater than.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-MORE_THAN = 2--><!--Device-FilterOperator-MORE_THAN = 2-End-->
 
@@ -64,9 +72,11 @@ LESS_THAN = 3
 
 Less than.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-LESS_THAN = 3--><!--Device-FilterOperator-LESS_THAN = 3-End-->
 
@@ -80,9 +90,11 @@ MORE_THAN_OR_EQUAL_TO = 4
 
 Greater than or equal to.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4--><!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4-End-->
 
@@ -96,9 +108,11 @@ LESS_THAN_OR_EQUAL_TO = 5
 
 Less than or equal to.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5--><!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5-End-->
 
@@ -112,9 +126,11 @@ BETWEEN = 6
 
 Within the specified range.
 
-**Since:** 19
+**Since:** 26.0.0
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-FilterOperator-BETWEEN = 6--><!--Device-FilterOperator-BETWEEN = 6-End-->
 

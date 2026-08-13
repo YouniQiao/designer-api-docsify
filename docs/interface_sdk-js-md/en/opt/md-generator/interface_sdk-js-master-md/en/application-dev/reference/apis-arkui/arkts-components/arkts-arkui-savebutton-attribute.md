@@ -1,13 +1,14 @@
 # SaveButton properties/events
 
-Universal attributes are not supported. This component supports the attributes listed below, as well as  
-[universal attributes of security components](./security_component). Only the following events are supported.
+Universal attributes are not supported. This component supports the attributes listed below, as well as universal attributes of security components. Only the following events are supported.
 
-**Inheritance/Implementation:** SaveButtonAttribute extends [SecurityComponentMethod<SaveButtonAttribute>](SecurityComponentMethod<SaveButtonAttribute>)
+**Inheritance/Implementation:** SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>
 
 **Since:** 10
 
-<!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>--><!--Device-unnamed-declare class SaveButtonAttribute extends SecurityComponentMethod<SaveButtonAttribute>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class SaveButtonAttribute--><!--Device-unnamed-declare class SaveButtonAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,6 +21,8 @@ iconBorderRadius(radius: Dimension | BorderRadiuses)
 Sets the corner radius of the **SaveButton** component.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -35,7 +38,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../arkts-apis/arkts-arkui-borderradiuses-t.md) | Yes |
+| radius | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) \| [BorderRadiuses](../../apis-na/arkts-apis/arkts-na-units-borderradiuses-i.md) | Yes |
 
 ## iconSize
 
@@ -46,6 +49,8 @@ iconSize(size: Dimension | SizeOptions)
 Sets the icon size of the **SaveButton** component.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,10 +72,11 @@ Sets the icon size of the **SaveButton** component.
 onClick(event: SaveButtonCallback)
 ```
 
-Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the  
-[SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1)constructor. Authorization fails if the user declines authorization or closes the dialog box.
+Triggered when the **SaveButton** component is clicked. When a user clicks the save button for the first time, an authorization dialog box is displayed. If the user allows authorization, the app obtains temporary access to media library APIs. For details about the authorization duration, see the description of the [SaveButton](../../../reference/apis-arkui/arkui-ts/ts-security-components-savebutton.md#savebutton-1) constructor. Authorization fails if the user declines authorization or closes the dialog box.
 
 **Since:** 10
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -95,6 +101,8 @@ setIcon(icon: Resource)
 Sets the icon of the **SaveButton** component.
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -122,6 +130,8 @@ Sets the text of the **SaveButton** component.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -148,6 +158,8 @@ Sets the press effect of the **SaveButton** component.
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
 **Model restriction:** This API can be used only in the stage model.
@@ -170,13 +182,11 @@ Sets the press effect of the **SaveButton** component.
 symbolFontWeight(fontWeight: number | FontWeight | string | Resource)
 ```
 
-Sets the font weight of the symbol icon for the save button.
-
-- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
-- If no symbol icon is configured, the font weight setting will not apply.
+Sets the font weight of the symbol icon for the save button. - Before calling this method, you need to call [setIcon](#setIcon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - If no symbol icon is configured, the font weight setting will not apply.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -200,15 +210,11 @@ style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).
 symbolIconColor(color: Array<ResourceColor>)
 ```
 
-Sets the color of the symbol icon for the save button.
-
-- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.xxx')**).  
-- If no symbol icon is set, the color set via this method does not take effect.  
-- It is recommended that you use this API together with  
-[symbolRenderingStrategy](SaveButtonAttribute#symbolRenderingStrategy) to achieve different rendering effects.
+Sets the color of the symbol icon for the save button. - Before calling this method, you need to call [setIcon](#setIcon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.xxx')**). - If no symbol icon is set, the color set via this method does not take effect. - It is recommended that you use this API together with [symbolRenderingStrategy](#symbolRenderingStrategy) to achieve different rendering effects.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -232,15 +238,11 @@ style icon resource (i.e., **\$r('sys.symbol.xxx')**).
 symbolRenderingStrategy(strategy: SymbolRenderingStrategy)
 ```
 
-Sets the rendering strategy for the symbol icon of the save button.
-
-- Before calling this method, you need to call [setIcon](SaveButtonAttribute#setIcon) to configure a symbol-  
-style icon resource (i.e., **\$r('sys.symbol.*xxx*')**).  
-- The configured rendering strategy will not apply if no symbol icon is set.  
-- When this parameter is used together with [symbolIconColor](SaveButtonAttribute#symbolIconColor), the  
-rendering strategy determines how the color array is applied.
+Sets the rendering strategy for the symbol icon of the save button. - Before calling this method, you need to call [setIcon](#setIcon) to configure a symbol- style icon resource (i.e., **\$r('sys.symbol.*xxx*')**). - The configured rendering strategy will not apply if no symbol icon is set. - When this parameter is used together with [symbolIconColor](#symbolIconColor), the rendering strategy determines how the color array is applied.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.CUSTOMIZE_SAVE_BUTTON
 
@@ -267,6 +269,8 @@ userCancelEvent(enabled: boolean)
 Sets the user authorization cancellation event for the **SaveButton** component. This API can be used to distinguish between user cancellation and authorization failures for differentiated service logic, such as logging user behaviors or prompting users to retry.
 
 **Since:** 21
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

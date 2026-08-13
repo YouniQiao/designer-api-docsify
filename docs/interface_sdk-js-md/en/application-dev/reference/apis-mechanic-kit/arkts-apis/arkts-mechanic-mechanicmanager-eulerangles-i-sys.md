@@ -2,9 +2,11 @@
 
 Absolute euler angles relative to the home position.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-mechanicManager-export interface EulerAngles--><!--Device-mechanicManager-export interface EulerAngles-End-->
 
@@ -26,11 +28,13 @@ pitch?: double
 
 Pitch angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EulerAngles-pitch?: double--><!--Device-EulerAngles-pitch?: double-End-->
 
@@ -46,11 +50,13 @@ roll?: double
 
 Roll angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EulerAngles-roll?: double--><!--Device-EulerAngles-roll?: double-End-->
 
@@ -66,11 +72,13 @@ yaw?: double
 
 Yaw angle, ranging from -Math.PI to Math.PI, measured in radians.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-EulerAngles-yaw?: double--><!--Device-EulerAngles-yaw?: double-End-->
 

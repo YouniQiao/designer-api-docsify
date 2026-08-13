@@ -1,24 +1,28 @@
 # InputEventType
 
 ```TypeScript
-export declare type InputEventType = TouchEvent | MouseEvent | AxisEvent
+declare type InputEventType = TouchEvent | MouseEvent | AxisEvent
 ```
 
-Defines the event type used for posting.
+Defines the type of input event to be dispatched. For details, see [postInputEvent](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postInputEvent).
 
-**Since:** 24
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-unnamed-export declare type InputEventType = TouchEvent | MouseEvent | AxisEvent--><!--Device-unnamed-export declare type InputEventType = TouchEvent | MouseEvent | AxisEvent-End-->
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-unnamed-declare type InputEventType = TouchEvent | MouseEvent | AxisEvent--><!--Device-unnamed-declare type InputEventType = TouchEvent | MouseEvent | AxisEvent-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 | Type | Description |
 | --- | --- |
-| TouchEvent |  |
-| MouseEvent |  |
-| AxisEvent |  |
+| TouchEvent | Touch event. |
+| MouseEvent | Mouse event. |
+| AxisEvent | Axis event. |
 

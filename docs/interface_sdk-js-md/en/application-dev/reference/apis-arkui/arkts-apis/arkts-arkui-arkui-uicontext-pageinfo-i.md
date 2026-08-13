@@ -1,10 +1,12 @@
 # PageInfo
 
-Defines the PageInfo type.The value of routerPageInfo indicates the information of the router page, or undefined if the frameNode does not have router page information. And the value of navDestinationInfo indicates the information of the navDestination, or undefined if the frameNode does not have navDestination information.
+Represents the page information of the router or navigation destination. If there is no related page information, **undefined** is returned.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PageInfo--><!--Device-unnamed-export interface PageInfo-End-->
 
@@ -26,11 +28,15 @@ the property of navDestination information.
 
 **Type:** observer.NavDestinationInfo
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PageInfo-navDestinationInfo?: observer.NavDestinationInfo--><!--Device-PageInfo-navDestinationInfo?: observer.NavDestinationInfo-End-->
 
@@ -42,15 +48,19 @@ the property of navDestination information.
 routerPageInfo?: observer.RouterPageInfo
 ```
 
-the property of router page information.
+Router information.
 
 **Type:** observer.RouterPageInfo
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PageInfo-routerPageInfo?: observer.RouterPageInfo--><!--Device-PageInfo-routerPageInfo?: observer.RouterPageInfo-End-->
 

@@ -2,7 +2,9 @@
 
 Defines the data structure of a notification request, which is used to describe all information about a notification, including the notification content, identifier, display style, and interaction behavior.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationRequest--><!--Device-unnamed-export interface NotificationRequest-End-->
 
@@ -18,7 +20,9 @@ Notification button. This parameter is left empty by default. A notification can
 
 **Type:** Array&lt;[NotificationActionButton](arkts-notification-notificationactionbutton-notificationactionbutton-i.md)&gt;
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>--><!--Device-NotificationRequest-actionButtons?: Array<NotificationActionButton>-End-->
 
@@ -30,11 +34,13 @@ Notification button. This parameter is left empty by default. A notification can
 appMessageId?: string
 ```
 
-Unique identifier field carried when an application sends a notification, used for notification deduplication.If the same application publishes notifications carrying the same **appMessageId** through different channels such as local and cloud, the device displays only one message, and subsequent duplicate notifications received will be silently deduplicated without being displayed or alerted. The deduplication identifier is valid only within 24hours after the notification is published, and becomes invalid after 24 hours or after the device restarts. The size does not exceed 202 bytes, and the excess part will be truncated. The value is empty by default.
+Unique identifier field carried when an application sends a notification, used for notification deduplication. If the same application publishes notifications carrying the same **appMessageId** through different channels such as local and cloud, the device displays only one message, and subsequent duplicate notifications received will be silently deduplicated without being displayed or alerted. The deduplication identifier is valid only within 24 hours after the notification is published, and becomes invalid after 24 hours or after the device restarts. The size does not exceed 202 bytes, and the excess part will be truncated. The value is empty by default.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-appMessageId?: string--><!--Device-NotificationRequest-appMessageId?: string-End-->
 
@@ -46,11 +52,13 @@ Unique identifier field carried when an application sends a notification, used f
 autoDeletedTime?: number
 ```
 
-Scheduled auto-delete time for the notification. You can set this parameter to automatically delete the notification after the specified time. Default value: **0**. This parameter does not take effect if a value less than 0 or a past time is passed in.Data format: timestamp. Unit: millisecond. For example, to delete a notification after it has been retained for3 seconds (3000 ms), the corresponding deletion time is: **new Date().getTime()** + 3000.
+Scheduled auto-delete time for the notification. You can set this parameter to automatically delete the notification after the specified time. Default value: **0**. This parameter does not take effect if a value less than 0 or a past time is passed in. Data format: timestamp. Unit: millisecond. For example, to delete a notification after it has been retained for 3 seconds (3000 ms), the corresponding deletion time is: **new Date().getTime()** + 3000.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-autoDeletedTime?: long--><!--Device-NotificationRequest-autoDeletedTime?: long-End-->
 
@@ -66,7 +74,9 @@ Notification badge type. Not supported currently.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-badgeIconStyle?: int--><!--Device-NotificationRequest-badgeIconStyle?: int-End-->
 
@@ -78,17 +88,13 @@ Notification badge type. Not supported currently.
 badgeNumber?: number
 ```
 
-Number of notifications displayed on the application icon. The value is accumulated. The default value is **0**.
-
-If the value of **badgeNumber** is less than or equal to 0, the badge number is not displayed;
-
-if the value is greater than 99, **99+** is displayed on the badge.
-
-For example, if an application publishes three notifications, and `badgeNumber` is set to **2**, **0**, and **3** in sequence, the application displays **2**, **2**, and **5** accordingly.
+Number of notifications displayed on the application icon. The value is accumulated. The default value is **0**. If the value of **badgeNumber** is less than or equal to 0, the badge number is not displayed; if the value is greater than 99, **99+** is displayed on the badge. For example, if an application publishes three notifications, and `badgeNumber` is set to **2**, **0**, and **3** in sequence, the application displays **2**, **2**, and **5** accordingly.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-badgeNumber?: long--><!--Device-NotificationRequest-badgeNumber?: long-End-->
 
@@ -104,7 +110,9 @@ Background color of the notification. Not supported currently.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-color?: long--><!--Device-NotificationRequest-color?: long-End-->
 
@@ -120,7 +128,9 @@ Whether the notification background color can be enabled. Not supported currentl
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-colorEnabled?: boolean--><!--Device-NotificationRequest-colorEnabled?: boolean-End-->
 
@@ -136,7 +146,9 @@ Notification display content, including the notification title and body.
 
 **Type:** [NotificationContent](arkts-notification-notificationcontent-notificationcontent-i.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-content: NotificationContent--><!--Device-NotificationRequest-content: NotificationContent-End-->
 
@@ -152,7 +164,9 @@ Name of the application that creates the notification.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly creatorBundleName?: string--><!--Device-NotificationRequest-readonly creatorBundleName?: string-End-->
 
@@ -168,7 +182,9 @@ PID used for creating the notification.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly creatorPid?: int--><!--Device-NotificationRequest-readonly creatorPid?: int-End-->
 
@@ -184,7 +200,9 @@ UID of the application that creates the notification.
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly creatorUid?: int--><!--Device-NotificationRequest-readonly creatorUid?: int-End-->
 
@@ -200,7 +218,9 @@ ID of the user who creates the notification.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly creatorUserId?: int--><!--Device-NotificationRequest-readonly creatorUserId?: int-End-->
 
@@ -216,7 +236,9 @@ Notification delivery time. This parameter is automatically generated by the sys
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-deliveryTime?: long--><!--Device-NotificationRequest-deliveryTime?: long-End-->
 
@@ -232,7 +254,9 @@ Distributed notification options. Not supported currently.
 
 **Type:** [DistributedOptions](arkts-notification-notificationrequest-distributedoptions-i.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-distributedOption?: DistributedOptions--><!--Device-NotificationRequest-distributedOption?: DistributedOptions-End-->
 
@@ -241,22 +265,18 @@ Distributed notification options. Not supported currently.
 ## extraInfo
 
 ```TypeScript
-extraInfo?: { [key: string]: any }
+extraInfo?: Record<string, RecordData>
 ```
 
-Extended parameters, used to provide custom services for applications. This parameter is left blank by default.
+Extended parameters, used to provide custom services for applications. This parameter is left blank by default. The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission. - **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want) object, which is passed to the application when the user taps a notification. This field can be obtained via the [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getActiveNotifications) API call.
 
-The key value is assigned by the system. Manual modification does not take effect. The system automatically changes the value to the actual value during data transmission.
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-- **ohos.notificationManager.wantUri**: **uri** field in the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want) object,   
-which is passed to the application when the user taps a notification. This field can be obtained via the   
-[getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md#getActiveNotifications)API call.
+**Since:** 23
 
-**Type:** { [key: string]: any }
+**Deprecated since:** -1
 
-**Since:** 7
-
-<!--Device-NotificationRequest-extraInfo?: { [key: string]: any }--><!--Device-NotificationRequest-extraInfo?: { [key: string]: any }-End-->
+<!--Device-NotificationRequest-extraInfo?: Record<string, RecordData>--><!--Device-NotificationRequest-extraInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -270,7 +290,9 @@ Group to which the notification belongs. When different notifications have the s
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-groupName?: string--><!--Device-NotificationRequest-groupName?: string-End-->
 
@@ -286,7 +308,9 @@ Unique ID of the notification.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-readonly hashCode?: string--><!--Device-NotificationRequest-readonly hashCode?: string-End-->
 
@@ -302,7 +326,9 @@ Notification ID. The default value is **0**. If a notification with the same ID 
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-id?: int--><!--Device-NotificationRequest-id?: int-End-->
 
@@ -314,17 +340,13 @@ Notification ID. The default value is **0**. If a notification with the same ID 
 isAlertOnce?: boolean
 ```
 
-Whether to send a notification only once when the notification is published or updated. The default value is   
-**false**.
-
-- **true**: A notification is sent only when the notification is published for the first time. For subsequent   
-update, the notification mode is changed to   
-[LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel).  
-- **false**: A notification is sent based on the configured notification mode.
+Whether to send a notification only once when the notification is published or updated. The default value is **false**. - **true**: A notification is sent only when the notification is published for the first time. For subsequent update, the notification mode is changed to [LEVEL_LOW](arkts-notification-notificationmanager-slotlevel-e.md#SlotLevel). - **false**: A notification is sent based on the configured notification mode.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-isAlertOnce?: boolean--><!--Device-NotificationRequest-isAlertOnce?: boolean-End-->
 
@@ -340,7 +362,9 @@ Whether to display the countdown time. Not supported currently.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-isCountDown?: boolean--><!--Device-NotificationRequest-isCountDown?: boolean-End-->
 
@@ -356,7 +380,9 @@ Whether the notification is displayed as a floating icon in the status bar. Not 
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-isFloatingIcon?: boolean--><!--Device-NotificationRequest-isFloatingIcon?: boolean-End-->
 
@@ -372,7 +398,9 @@ Not supported currently.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-isOngoing?: boolean--><!--Device-NotificationRequest-isOngoing?: boolean-End-->
 
@@ -388,7 +416,9 @@ Whether to display the stopwatch. Not supported currently.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-isStopwatch?: boolean--><!--Device-NotificationRequest-isStopwatch?: boolean-End-->
 
@@ -404,7 +434,9 @@ Not supported currently.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-isUnremovable?: boolean--><!--Device-NotificationRequest-isUnremovable?: boolean-End-->
 
@@ -420,7 +452,9 @@ Notification label. The **label** field functions similarly to an ID and can be 
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-label?: string--><!--Device-NotificationRequest-label?: string-End-->
 
@@ -432,12 +466,13 @@ Notification label. The **label** field functions similarly to an ID and can be 
 largeIcon?: image.PixelMap
 ```
 
-Large notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)). The setting does not take effect if the limit is exceeded. When **largeIcon** is not set, the notification does not display a large icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
+Large notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)). The setting does not take effect if the limit is exceeded. When **largeIcon** is not set, the notification does not display a large icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
 
 **Type:** image.PixelMap
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-largeIcon?: image.PixelMap--><!--Device-NotificationRequest-largeIcon?: image.PixelMap-End-->
 
@@ -453,7 +488,9 @@ Notification flags. The default value is empty. This parameter is writable since
 
 **Type:** [NotificationFlags](arkts-notification-notificationflags-notificationflags-i.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** 
 - API version 23 and later: This API can be used in both the stage model and FA model.
@@ -472,25 +509,11 @@ Notification slot type. The default value is **OTHER_TYPES**. The notification r
 
 **Type:** notificationManager.SlotType
 
-**Since:** 11
-
-<!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType--><!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType-End-->
-
-**System capability:** SystemCapability.Notification.Notification
-
-## overlayIcon
-
-```TypeScript
-overlayIcon?: image.PixelMap
-```
-
-Notification overlay icon. This parameter is left empty by default. The total bytes of the icon pixels cannot exceed 192 KB.
-
-**Type:** image.PixelMap
-
 **Since:** 23
 
-<!--Device-NotificationRequest-overlayIcon?: image.PixelMap--><!--Device-NotificationRequest-overlayIcon?: image.PixelMap-End-->
+**Deprecated since:** -1
+
+<!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType--><!--Device-NotificationRequest-notificationSlotType?: notificationManager.SlotType-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -505,6 +528,8 @@ Notification priority type. The default value is **OTHER**. If this parameter is
 **Type:** notificationManager.PriorityNotificationType
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -522,7 +547,9 @@ Behavior intent of an application, which is triggered when a notification is rem
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-removalWantAgent?: WantAgent--><!--Device-NotificationRequest-removalWantAgent?: WantAgent-End-->
 
@@ -538,7 +565,9 @@ Whether to display the time when the notification is delivered. Not supported cu
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-showDeliveryTime?: boolean--><!--Device-NotificationRequest-showDeliveryTime?: boolean-End-->
 
@@ -570,12 +599,13 @@ Notification slot type. The default value is **OTHER_TYPES**.
 smallIcon?: image.PixelMap
 ```
 
-Small notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through  
-[getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)). The setting does not take effect if the limit is exceeded. When **smallIcon** is not set, the notification displays the default application icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
+Small notification icon. This parameter is left empty by default. The total number of the icon pixel bytes cannot exceed 192 KB (which is obtained through [getPixelBytesNumber](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md#getPixelBytesNumber)). The setting does not take effect if the limit is exceeded. When **smallIcon** is not set, the notification displays the default application icon. The recommended icon size is 128 × 128 pixels. The display effect depends on the device capability and notification center UI style.
 
 **Type:** image.PixelMap
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-smallIcon?: image.PixelMap--><!--Device-NotificationRequest-smallIcon?: image.PixelMap-End-->
 
@@ -587,20 +617,13 @@ Small notification icon. This parameter is left empty by default. The total numb
 sound?: string
 ```
 
-Path of the custom application notification ringtone resource. By default, this parameter is left empty. The following two types of audio resources are supported:
-
-- Resource file: Audio file preconfigured in the application. It must be stored in the **resources/rawfile**   
-directory. To use the resource file, directly pass the file name.  
-- Sandbox file: Audio file downloaded from the network or generated by the user. It must be stored in the **files**  
-directory or its subdirectory in the EL1 area of the   
-[sandbox file directory](../../../file-management/app-sandbox-directory.md#application-sandbox-directory-and-application-sandbox-path). The input format is **uri::{fileUri}**, where **fileUri** is the path obtained through   
-[getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath). For example, if an application transfers the downloaded audio resource demo.mp3 to the sandbox file directory /data/storage/el1/base/files/, the path obtained through **getUriFromPath** is **file://{bundleName}/data/storage/el1/base/files/demo.mp3**. You can use this path to release a notification to play the audio resource downloaded by the application.
-
-Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
+Path of the custom application notification ringtone resource. By default, this parameter is left empty. The following two types of audio resources are supported: - Resource file: Audio file preconfigured in the application. It must be stored in the **resources/rawfile** directory. To use the resource file, directly pass the file name. - Sandbox file: Audio file downloaded from the network or generated by the user. It must be stored in the **files** directory or its subdirectory in the EL1 area of the [sandbox file directory](../../../file-management/app-sandbox-directory.md#application-sandbox-directory-and-application-sandbox-path) . The input format is **uri::{fileUri}**, where **fileUri** is the path obtained through [getUriFromPath](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md#getUriFromPath). For example, if an application transfers the downloaded audio resource demo.mp3 to the sandbox file directory /data/storage/el1/base/files/, the path obtained through **getUriFromPath** is **file://{bundleName}/data/storage/el1/base/files/demo.mp3**. You can use this path to release a notification to play the audio resource downloaded by the application. Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-sound?: string--><!--Device-NotificationRequest-sound?: string-End-->
 
@@ -612,15 +635,13 @@ Supported formats: M4A, AAC, MP3, OGG, WAV, FLAC, and AMR.
 tapDismissed?: boolean
 ```
 
-Whether the notification is automatically cleared when the notification carries **wantAgent** or **actionButtons**.This parameter is valid only when the notification carries **wantAgent** or **actionButtons**. The default value is  
-**true**.
-
-- **true**: The current notification is automatically cleared after the notification or button is tapped.  
-- **false**: The current notification is retained after the notification or button is tapped.
+Whether the notification is automatically cleared when the notification carries **wantAgent** or **actionButtons**. This parameter is valid only when the notification carries **wantAgent** or **actionButtons**. The default value is **true**. - **true**: The current notification is automatically cleared after the notification or button is tapped. - **false**: The current notification is retained after the notification or button is tapped.
 
 **Type:** boolean
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-tapDismissed?: boolean--><!--Device-NotificationRequest-tapDismissed?: boolean-End-->
 
@@ -636,7 +657,9 @@ Notification template. This parameter is left empty by default.
 
 **Type:** [NotificationTemplate](arkts-notification-notificationtemplate-notificationtemplate-i.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-template?: NotificationTemplate--><!--Device-NotificationRequest-template?: NotificationTemplate-End-->
 
@@ -648,16 +671,13 @@ Notification template. This parameter is left empty by default.
 updateOnly?: boolean
 ```
 
-Whether to update notifications only. The default value is **false**.
-
-- **true**: If a notification with the same ID exists, the notification is updated. If no notification with the   
-same ID exists, the update fails and no new notification is created.  
-- **false**: If a notification with the same ID exists, the notification is updated. If no notification with the   
-same ID exists, a new notification is created.
+Whether to update notifications only. The default value is **false**. - **true**: If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, the update fails and no new notification is created. - **false**: If a notification with the same ID exists, the notification is updated. If no notification with the same ID exists, a new notification is created.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-updateOnly?: boolean--><!--Device-NotificationRequest-updateOnly?: boolean-End-->
 
@@ -673,7 +693,9 @@ Behavior intent of an application, which is triggered when a notification is cli
 
 **Type:** [WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-depr-t.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationRequest-wantAgent?: WantAgent--><!--Device-NotificationRequest-wantAgent?: WantAgent-End-->
 

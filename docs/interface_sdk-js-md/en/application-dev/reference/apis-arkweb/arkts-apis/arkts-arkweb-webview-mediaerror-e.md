@@ -2,9 +2,11 @@
 
 Enumerates the error types of the player.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum MediaError--><!--Device-webview-enum MediaError-End-->
 
@@ -18,9 +20,13 @@ NETWORK_ERROR = 1
 
 Network error.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaError-NETWORK_ERROR = 1--><!--Device-MediaError-NETWORK_ERROR = 1-End-->
 
@@ -34,9 +40,13 @@ FORMAT_ERROR = 2
 
 Media format error.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaError-FORMAT_ERROR = 2--><!--Device-MediaError-FORMAT_ERROR = 2-End-->
 
@@ -50,9 +60,13 @@ DECODE_ERROR = 3
 
 Decoding error.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaError-DECODE_ERROR = 3--><!--Device-MediaError-DECODE_ERROR = 3-End-->
 

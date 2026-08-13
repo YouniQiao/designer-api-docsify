@@ -2,7 +2,9 @@
 
 Defines the SMS message segment information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sms-export interface SmsSegmentsInfo--><!--Device-sms-export interface SmsSegmentsInfo-End-->
 
@@ -26,7 +28,9 @@ Encoding count.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsSegmentsInfo-encodeCount: int--><!--Device-SmsSegmentsInfo-encodeCount: int-End-->
 
@@ -44,7 +48,9 @@ Remaining encoding count.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsSegmentsInfo-encodeCountRemaining: int--><!--Device-SmsSegmentsInfo-encodeCountRemaining: int-End-->
 
@@ -62,7 +68,9 @@ Encoding scheme.
 
 **Type:** [SmsEncodingScheme](arkts-telephony-sms-smsencodingscheme-e-sys.md)
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsSegmentsInfo-scheme: SmsEncodingScheme--><!--Device-SmsSegmentsInfo-scheme: SmsEncodingScheme-End-->
 
@@ -80,7 +88,9 @@ Split count.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SmsSegmentsInfo-splitCount: int--><!--Device-SmsSegmentsInfo-splitCount: int-End-->
 

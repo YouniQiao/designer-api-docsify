@@ -12,7 +12,7 @@ function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getBundleName](ohos.app.ability.wantAgent/wantAgent#getBundleName)
+**替代接口：** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -94,7 +94,7 @@ function getBundleName(agent: WantAgent): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getBundleName](ohos.app.ability.wantAgent/wantAgent#getBundleName)
+**替代接口：** [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getBundleName)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

@@ -8,7 +8,9 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare interface BackgroundBlurStyleOptions extends BlurStyleOptions--><!--Device-unnamed-declare interface BackgroundBlurStyleOptions extends BlurStyleOptions-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare interface BackgroundBlurStyleOptions--><!--Device-unnamed-declare interface BackgroundBlurStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,6 +30,8 @@ inactiveColor?: ResourceColor
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本14开始，该接口支持在原子化服务API中使用。
@@ -42,9 +46,7 @@ inactiveColor?: ResourceColor
 policy?: BlurStyleActivePolicy
 ```
 
-模糊激活策略。
-
-默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
+模糊激活策略。 默认值：BlurStyleActivePolicy.ALWAYS_ACTIVE
 
 **类型：** [BlurStyleActivePolicy](arkts-arkui-blurstyleactivepolicy-e.md)
 
@@ -53,6 +55,8 @@ policy?: BlurStyleActivePolicy
 **起始版本：** 14
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为14。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

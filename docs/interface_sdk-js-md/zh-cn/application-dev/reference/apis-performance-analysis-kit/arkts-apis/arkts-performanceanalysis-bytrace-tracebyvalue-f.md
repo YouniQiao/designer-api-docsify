@@ -14,7 +14,7 @@ function traceByValue(name: string, count: number): void
 
 **废弃版本：** 8
 
-**替代接口：** [traceByValue](ohos.hiTraceMeter.traceByValue)
+**替代接口：** traceByValue
 
 <!--Device-bytrace-function traceByValue(name: string, count: number): void--><!--Device-bytrace-function traceByValue(name: string, count: number): void-End-->
 

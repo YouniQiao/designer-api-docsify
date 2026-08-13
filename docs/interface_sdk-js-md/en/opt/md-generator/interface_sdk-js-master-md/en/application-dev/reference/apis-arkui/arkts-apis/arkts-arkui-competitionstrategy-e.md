@@ -4,6 +4,8 @@ Defines whether the dispatched event is a competitive gesture. In the competitiv
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum CompetitionStrategy--><!--Device-unnamed-declare enum CompetitionStrategy-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ DEFAULT = 0
 Indicates that the dispatched event is a non‑competitive gesture.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -35,6 +39,8 @@ COMPETITION = 1
 Indicates that the dispatched event is a competitive gesture.
 
 **Since:** 24
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

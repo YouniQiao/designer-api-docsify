@@ -2,9 +2,11 @@
 
 Defines the size of the printed page.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrintPageSize--><!--Device-print-interface PrintPageSize-End-->
 
@@ -24,11 +26,13 @@ height: int
 
 Page height, in millimeters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-height: int--><!--Device-PrintPageSize-height: int-End-->
 
@@ -44,9 +48,11 @@ Paper size ID.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-id: string--><!--Device-PrintPageSize-id: string-End-->
 
@@ -62,9 +68,11 @@ Paper size name.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-name: string--><!--Device-PrintPageSize-name: string-End-->
 
@@ -78,11 +86,13 @@ width: int
 
 Page width, in millimeters.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintPageSize-width: int--><!--Device-PrintPageSize-width: int-End-->
 

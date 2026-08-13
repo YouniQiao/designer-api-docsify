@@ -1,14 +1,14 @@
 # NumericTextTransition
 
-数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，[copyOption](TextAttribute#copyOption)属性无效。当文本存在子组件时或通过属性字符串设置时，数字翻牌失效。
-
-NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)。
+数字翻牌动效。仅限正整数，不支持小数和负数。不支持渐变色和Text跑马灯模式。不支持选中，copyOption属性无效。当文本存在子组件时或通过属性字符串设置时，数字 翻牌失效。 NumericTextTransition继承自[ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)。
 
 **继承/实现关系：** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)
 
 **起始版本：** 20
 
-<!--Device-unnamed-declare class NumericTextTransition extends ContentTransition--><!--Device-unnamed-declare class NumericTextTransition extends ContentTransition-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class NumericTextTransition--><!--Device-unnamed-declare class NumericTextTransition-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -21,6 +21,8 @@ constructor(options?: NumericTextTransitionOptions)
 用于创建NumericTextTransition对象的构造函数。
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,17 +44,13 @@ constructor(options?: NumericTextTransitionOptions)
 enableBlur?: boolean
 ```
 
-是否开启翻牌模糊效果。
-
-默认值：false
-
-true：开启翻牌模糊效果。
-
-false：不开启翻牌模糊效果。
+是否开启翻牌模糊效果。 默认值：false true：开启翻牌模糊效果。 false：不开启翻牌模糊效果。
 
 **类型：** boolean
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,13 +66,13 @@ false：不开启翻牌模糊效果。
 flipDirection?: FlipDirection
 ```
 
-翻牌方向。
-
-默认值：FlipDirection.DOWN
+翻牌方向。 默认值：FlipDirection.DOWN
 
 **类型：** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **起始版本：** 20
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

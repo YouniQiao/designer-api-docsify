@@ -9,18 +9,20 @@ import { curves } from '@kit.ArkUI';
 ## stepsCurve
 
 ```TypeScript
-export function stepsCurve(count: int, end: boolean): ICurve
+function stepsCurve(count: number, end: boolean): ICurve
 ```
 
 Creates a step curve.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-curves-export function stepsCurve(count: int, end: boolean): ICurve--><!--Device-curves-export function stepsCurve(count: int, end: boolean): ICurve-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-curves-function stepsCurve(count: number, end: boolean): ICurve--><!--Device-curves-function stepsCurve(count: number, end: boolean): ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,12 +30,19 @@ Creates a step curve.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | Number of steps. The value must be a positive integer.&lt;br&gt;Value range: [1, INT_MAX]. &lt;p&gt;**NOTE：**: &lt;br&gt;A value less than 1 evaluates to the value **1**. &lt;/p&gt; |
-| end | boolean | Yes | Whether jumping occurs when the interpolation ends. **true**: Jumping occurs when the interpolation ends. **false**: Jumping occurs when the interpolation starts. |
+| count | number | Yes | Number of steps. The value must be a positive integer.&lt;br&gt;Value range: [1, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 1 evaluates to the value **1**. |
+| end | boolean | Yes | Whether the step change occurs at the start or end of each interval.&lt;br&gt;- **true**: The step change occurs at the end of each interval.&lt;br&gt;- **false**: The step change occurs at the start of each interval. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | ICurve | Interpolation curve. |
+
+## Examples
+
+```TypeScript
+import { curves } from '@kit.ArkUI';
+curves.stepsCurve(9, true)  // Create a step curve.
+```
 

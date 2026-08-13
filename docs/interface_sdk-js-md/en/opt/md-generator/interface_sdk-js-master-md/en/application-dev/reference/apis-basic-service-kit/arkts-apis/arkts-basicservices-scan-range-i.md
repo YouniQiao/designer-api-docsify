@@ -2,7 +2,9 @@
 
 Defines the range.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-scan-interface Range--><!--Device-scan-interface Range-End-->
 
@@ -24,7 +26,9 @@ Maximum value.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-maxValue: int--><!--Device-Range-maxValue: int-End-->
 
@@ -40,7 +44,9 @@ Minimum value.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-minValue: int--><!--Device-Range-minValue: int-End-->
 
@@ -56,7 +62,9 @@ Quantized value.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Range-quantValue: int--><!--Device-Range-quantValue: int-End-->
 

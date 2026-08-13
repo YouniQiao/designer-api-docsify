@@ -1,13 +1,10 @@
 # @ohos.distributedsched.proxyChannelManager
 
-软总线具备常驻运行能力，可为跨设备通信提供稳定可靠的底层通道。本模块基于软总线进程开发，支持手机与穿戴设备间高效的数据互通，可为用户提供无缝的设备互联体验。使用场景：手机侧APP与手表侧APP协同时，当手机APP不在前台被使用，手机应用的下行消息经由通知服务器，通过代理模块发送给手表侧。模块核心功能包括：代理通道管理、数据路由管理、 应用状态感知和唤醒、链路状态监听。
+软总线具备常驻运行能力，可为跨设备通信提供稳定可靠的底层通道。本模块基于软总线进程开发，支持手机与穿戴设备间高效的数据互通， 可为用户提供无缝的设备互联体验。使用场景：手机侧APP与手表侧APP协同时，当手机APP不在前台被使用，手机应 用的下行消息经由通知服务器，通过代理模块发送给手表侧。模块核心功能包括：代理通道管理、数据路由管理、 应用状态感知和唤醒、 链路状态监听。 - 代理通道管理：通过蓝牙 BR 协议建立手机与穿戴设备的双向数据通道，支持的数据通道 ID 范围是[1,2147483647] 。 - 数据路由管理：基于 UUID 服务识别机制，精准转发穿戴设备数据。 - 应用状态感知和唤醒：代理通道使能后，收到穿戴设备发送的数据后，动态分析和唤醒手机端对应应用进程。 - 全链路状态监控：通过回调实时感知通道连接状态。
 
-- 代理通道管理：通过蓝牙 BR 协议建立手机与穿戴设备的双向数据通道，支持的数据通道 ID 范围是[1,2147483647] 。  
-- 数据路由管理：基于 UUID 服务识别机制，精准转发穿戴设备数据。  
-- 应用状态感知和唤醒：代理通道使能后，收到穿戴设备发送的数据后，动态分析和唤醒手机端对应应用进程。  
-- 全链路状态监控：通过回调实时感知通道连接状态。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -21,13 +18,17 @@
 
 | 名称 |
 | --- |
-| [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeproxychannel) |
-| [off](arkts-distributedservice-proxychannelmanager-off-f.md#off) |
-| [off](arkts-distributedservice-proxychannelmanager-off-f.md#off-1) |
-| [on](arkts-distributedservice-proxychannelmanager-on-f.md#on) |
-| [on](arkts-distributedservice-proxychannelmanager-on-f.md#on-1) |
-| [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openproxychannel) |
-| [sendData](arkts-distributedservice-proxychannelmanager-senddata-f.md#senddata) |
+| [closeProxyChannel](arkts-distributedservice-proxychannelmanager-closeproxychannel-f.md#closeProxyChannel) |
+| [offChannelStateChange](arkts-distributedservice-proxychannelmanager-offchannelstatechange-f.md#offChannelStateChange) |
+| [offReceiveData](arkts-distributedservice-proxychannelmanager-offreceivedata-f.md#offReceiveData) |
+| [off_channelStateChange](arkts-distributedservice-proxychannelmanager-offchannelstatechange-f.md) |
+| off_receiveData |
+| [onChannelStateChange](arkts-distributedservice-proxychannelmanager-onchannelstatechange-f.md#onChannelStateChange) |
+| [onReceiveData](arkts-distributedservice-proxychannelmanager-onreceivedata-f.md#onReceiveData) |
+| [on_channelStateChange](arkts-distributedservice-proxychannelmanager-onchannelstatechange-f.md) |
+| on_receiveData |
+| [openProxyChannel](arkts-distributedservice-proxychannelmanager-openproxychannel-f.md#openProxyChannel) |
+| [sendData](arkts-distributedservice-proxychannelmanager-senddata-f.md#sendData) |
 
 ### 接口
 

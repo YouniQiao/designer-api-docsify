@@ -1,13 +1,10 @@
 # ClipOp
 
-Enumerates the canvas clipping modes.
+Enumerates the canvas clipping modes. > **NOTE：**> > The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is > cropped in INTERSECT mode. The green area is the final area obtained.
 
-> **NOTE：**
-> 
-> The diagrams show the result of cropping a circle based on different enumerated values after a rectangle is
-> cropped in INTERSECT mode. The green area is the final area obtained.
+**Since:** 23
 
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-drawing-enum ClipOp--><!--Device-drawing-enum ClipOp-End-->
 
@@ -21,7 +18,9 @@ DIFFERENCE = 0
 
 Clips a specified area. That is, the difference set is obtained.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ClipOp-DIFFERENCE = 0--><!--Device-ClipOp-DIFFERENCE = 0-End-->
 
@@ -35,7 +34,9 @@ INTERSECT = 1
 
 Retains a specified area. That is, the intersection is obtained.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ClipOp-INTERSECT = 1--><!--Device-ClipOp-INTERSECT = 1-End-->
 

@@ -6,7 +6,9 @@ Provides APIs to manage albums.
 
 **Since:** 12
 
-<!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum--><!--Device-sendablePhotoAccessHelper-interface Album extends AbsAlbum-End-->
+**Deprecated since:** -1
+
+<!--Device-sendablePhotoAccessHelper-interface Album--><!--Device-sendablePhotoAccessHelper-interface Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -26,6 +28,8 @@ Commits the modification on the album attributes to the database. This API uses 
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_IMAGEVIDEO
 
 <!--Device-Album-commitModify(): Promise<void>--><!--Device-Album-commitModify(): Promise<void>-End-->
@@ -42,12 +46,12 @@ Commits the modification on the album attributes to the database. This API uses 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -82,6 +86,8 @@ Converts this Sendable album to a non-Sendable album.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album--><!--Device-Album-convertToPhotoAlbum(): photoAccessHelper.Album-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -96,12 +102,12 @@ Converts this Sendable album to a non-Sendable album.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 14000011 |
 
 ## Examples
 
-For details about how to create a phAccessHelper instance, see the example provided in [sendablePhotoAccessHelper.getPhotoAccessHelper](#sendablephotoaccesshelpergetphotoaccesshelper).
+For details about how to create a phAccessHelper instance, see the example provided in sendablePhotoAccessHelper.getPhotoAccessHelper.
 
 ```TypeScript
 import { dataSharePredicates } from '@kit.ArkData';
@@ -142,6 +148,8 @@ Number of image assets in the album
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-Album-readonly imageCount?: number--><!--Device-Album-readonly imageCount?: number-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -157,6 +165,8 @@ Number of video assets in the album
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-Album-readonly videoCount?: number--><!--Device-Album-readonly videoCount?: number-End-->
 

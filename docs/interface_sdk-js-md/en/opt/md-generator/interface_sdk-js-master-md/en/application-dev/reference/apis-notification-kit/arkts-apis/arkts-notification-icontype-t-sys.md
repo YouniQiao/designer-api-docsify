@@ -6,7 +6,9 @@ type IconType = Resource | image.PixelMap
 
 Describes the icon types.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-type IconType = Resource | image.PixelMap--><!--Device-unnamed-type IconType = Resource | image.PixelMap-End-->
 

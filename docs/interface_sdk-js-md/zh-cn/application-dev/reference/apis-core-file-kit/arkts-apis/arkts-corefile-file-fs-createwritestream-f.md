@@ -12,6 +12,8 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream--><!--Device-unnamed-declare function createWriteStream(path: string, options?: WriteStreamOptions): WriteStream-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -21,7 +23,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 文件路径。 |
-| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- start，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- mode， number 类型，创建文件可写流的[选项](../../../reference/apis-core-file-kit/js-apis-file-fs.md#openmode)，可选，默认以只写方式创建。 |
+| options | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | 否 | 支持如下选项：&lt;br/&gt;- start，number类型，表示期望写入文件的位置，单位为Byte。可选，默认从当前位置开始写。&lt;br/&gt;- mode， number 类型，创建文件可写流的选项，可选，默认以只写方式创建。 |
 
 **返回值：**
 
@@ -42,7 +44,7 @@ declare function createWriteStream(path: string, options?: WriteStreamOptions): 
 | 13900025 | No space left on device |
 | 13900027 | Read-only file system |
 | 13900004 | Interrupted system call |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error |
 | 13900038 | Value too large for defined data type |
 | 13900001 | Operation not permitted |
 | 13900002 | No such file or directory |

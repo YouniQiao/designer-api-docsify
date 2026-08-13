@@ -1,16 +1,12 @@
 # WebDataBase
 
-Implements a **WebDataBase** object.
+Implements a **WebDataBase** object. > **NOTE：**> > - The sample effect is subject to the actual device. > > - You must load the **Web** component before calling the APIs in **WebDataBase**.
 
-> **NOTE：**
-> 
-> - The sample effect is subject to the actual device.
-> 
-> - You must load the **Web** component before calling the APIs in **WebDataBase**.
+**Since:** 9
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**Deprecated since:** -1
 
 <!--Device-webview-class WebDataBase--><!--Device-webview-class WebDataBase-End-->
 
@@ -30,9 +26,13 @@ static deleteHttpAuthCredentials(): void
 
 Deletes all HTTP authentication credentials saved in the cache. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static deleteHttpAuthCredentials(): void--><!--Device-WebDataBase-static deleteHttpAuthCredentials(): void-End-->
 
@@ -46,9 +46,13 @@ static existHttpAuthCredentials(): boolean
 
 Checks whether any saved HTTP authentication credentials exist. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static existHttpAuthCredentials(): boolean--><!--Device-WebDataBase-static existHttpAuthCredentials(): boolean-End-->
 
@@ -68,9 +72,13 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 
 Retrieves HTTP authentication credentials for a given host and realm. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>--><!--Device-WebDataBase-static getHttpAuthCredentials(host: string, realm: string): Array<string>-End-->
 
@@ -93,7 +101,7 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveHttpAuthCredentials
 
@@ -103,9 +111,13 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 
 Saves HTTP authentication credentials for a given host and realm. This API returns the result synchronously.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void--><!--Device-WebDataBase-static saveHttpAuthCredentials(host: string, realm: string, username: string, password: string): void-End-->
 
@@ -124,5 +136,5 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
 

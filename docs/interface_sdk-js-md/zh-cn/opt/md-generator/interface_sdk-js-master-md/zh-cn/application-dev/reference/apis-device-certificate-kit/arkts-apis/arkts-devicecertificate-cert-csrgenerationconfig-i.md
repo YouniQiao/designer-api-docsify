@@ -1,18 +1,10 @@
 # CsrGenerationConfig
 
-用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。
+用于生成CSR的配置参数，包含主体名称、扩展、摘要算法、输出格式等。 > **说明：** > > - subject是X500DistinguishedName对象。 > > - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。 > > - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。 > > - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
 
-> **说明：**
-> 
-> - subject是X500DistinguishedName对象。
-> 
-> - mdName是摘要算法名，当前支持SHA1、SHA256、SHA384、SHA512。
-> 
-> - attributes是可选参数，指定**PKCS #9**中规定的扩展类型跟扩展值生成CSR。例如challengePassword。
-> 
-> - outFormat指定输出CSR的格式，若不指定默认为PEM格式。
+**起始版本：** 23
 
-**起始版本：** 18
+**废弃版本：** -1
 
 <!--Device-cert-interface CsrGenerationConfig--><!--Device-cert-interface CsrGenerationConfig-End-->
 
@@ -28,9 +20,11 @@ attributes?: Array<CsrAttribute>
 
 **类型：** Array&lt;[CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md)&gt;
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CsrGenerationConfig-attributes?: Array<CsrAttribute>--><!--Device-CsrGenerationConfig-attributes?: Array<CsrAttribute>-End-->
 
@@ -46,9 +40,11 @@ mdName: string
 
 **类型：** string
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CsrGenerationConfig-mdName: string--><!--Device-CsrGenerationConfig-mdName: string-End-->
 
@@ -66,9 +62,11 @@ outFormat?: EncodingBaseFormat
 
 **默认值：** EncodingBaseFormat.PEM
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CsrGenerationConfig-outFormat?: EncodingBaseFormat--><!--Device-CsrGenerationConfig-outFormat?: EncodingBaseFormat-End-->
 
@@ -84,9 +82,11 @@ subject: X500DistinguishedName
 
 **类型：** [X500DistinguishedName](arkts-devicecertificate-cert-x500distinguishedname-i.md)
 
-**起始版本：** 18
+**起始版本：** 23
 
-**原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-CsrGenerationConfig-subject: X500DistinguishedName--><!--Device-CsrGenerationConfig-subject: X500DistinguishedName-End-->
 

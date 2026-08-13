@@ -2,9 +2,11 @@
 
 The definition of command information to be sent to the session
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-avSession-interface CommandInfo--><!--Device-avSession-interface CommandInfo-End-->
 
@@ -26,9 +28,11 @@ Caller bundle name.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CommandInfo-callerBundleName?: string--><!--Device-CommandInfo-callerBundleName?: string-End-->
 
@@ -44,9 +48,11 @@ Caller device id.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CommandInfo-callerDeviceId?: string--><!--Device-CommandInfo-callerDeviceId?: string-End-->
 
@@ -62,9 +68,11 @@ Caller module name.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CommandInfo-callerModuleName?: string--><!--Device-CommandInfo-callerModuleName?: string-End-->
 
@@ -80,9 +88,11 @@ Caller type.
 
 **Type:** [CallerType](arkts-avsession-avsession-callertype-e.md)
 
-**Since:** 22
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CommandInfo-callerType?: CallerType--><!--Device-CommandInfo-callerType?: CallerType-End-->
 

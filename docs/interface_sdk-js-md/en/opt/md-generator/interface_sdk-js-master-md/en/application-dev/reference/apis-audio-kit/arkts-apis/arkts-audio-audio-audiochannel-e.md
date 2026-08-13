@@ -2,7 +2,9 @@
 
 Enumerates the audio channels.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioChannel--><!--Device-audio-enum AudioChannel-End-->
 
@@ -16,7 +18,9 @@ CHANNEL_1 = 1
 
 One audio channel (mono).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_1 = 1--><!--Device-AudioChannel-CHANNEL_1 = 1-End-->
 
@@ -30,7 +34,9 @@ CHANNEL_2 = 2
 
 Two audio channels (stereo).
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_2 = 2--><!--Device-AudioChannel-CHANNEL_2 = 2-End-->
 
@@ -44,7 +50,9 @@ CHANNEL_3 = 3
 
 Three audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_3 = 3--><!--Device-AudioChannel-CHANNEL_3 = 3-End-->
 
@@ -58,7 +66,9 @@ CHANNEL_4 = 4
 
 Four audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_4 = 4--><!--Device-AudioChannel-CHANNEL_4 = 4-End-->
 
@@ -72,7 +82,9 @@ CHANNEL_5 = 5
 
 Five audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_5 = 5--><!--Device-AudioChannel-CHANNEL_5 = 5-End-->
 
@@ -86,7 +98,9 @@ CHANNEL_6 = 6
 
 Six audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_6 = 6--><!--Device-AudioChannel-CHANNEL_6 = 6-End-->
 
@@ -100,7 +114,9 @@ CHANNEL_7 = 7
 
 Seven audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_7 = 7--><!--Device-AudioChannel-CHANNEL_7 = 7-End-->
 
@@ -114,7 +130,9 @@ CHANNEL_8 = 8
 
 Eight audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_8 = 8--><!--Device-AudioChannel-CHANNEL_8 = 8-End-->
 
@@ -128,7 +146,9 @@ CHANNEL_9 = 9
 
 Nine audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_9 = 9--><!--Device-AudioChannel-CHANNEL_9 = 9-End-->
 
@@ -142,7 +162,9 @@ CHANNEL_10 = 10
 
 Ten audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_10 = 10--><!--Device-AudioChannel-CHANNEL_10 = 10-End-->
 
@@ -156,7 +178,9 @@ CHANNEL_12 = 12
 
 Twelve audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_12 = 12--><!--Device-AudioChannel-CHANNEL_12 = 12-End-->
 
@@ -170,7 +194,9 @@ CHANNEL_14 = 14
 
 Fourteen audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_14 = 14--><!--Device-AudioChannel-CHANNEL_14 = 14-End-->
 
@@ -184,7 +210,9 @@ CHANNEL_16 = 16
 
 Sixteen audio channels.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioChannel-CHANNEL_16 = 16--><!--Device-AudioChannel-CHANNEL_16 = 16-End-->
 

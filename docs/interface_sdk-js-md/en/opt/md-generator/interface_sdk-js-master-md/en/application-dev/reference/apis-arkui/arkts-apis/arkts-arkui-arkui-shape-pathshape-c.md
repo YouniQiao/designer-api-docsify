@@ -1,14 +1,14 @@
 # PathShape
 
-Represents a path used in the **clipShape** and **maskShape** APIs.
+Represents a path used in the **clipShape** and **maskShape** APIs. This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
 
-This API inherits from [CommonShapeMethod](arkts-arkui-arkui-shape-commonshapemethod-c.md#CommonShapeMethod).
-
-**Inheritance/Implementation:** PathShape extends [CommonShapeMethod<PathShape>](CommonShapeMethod<PathShape>)
+**Inheritance/Implementation:** PathShape extends CommonShapeMethod<PathShape>
 
 **Since:** 12
 
-<!--Device-unnamed-export declare class PathShape extends CommonShapeMethod<PathShape>--><!--Device-unnamed-export declare class PathShape extends CommonShapeMethod<PathShape>-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class PathShape--><!--Device-unnamed-export declare class PathShape-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -27,6 +27,8 @@ commands(commands: string): PathShape
 Sets the path drawing commands.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,6 +61,8 @@ constructor(options?: PathShapeOptions)
 A constructor used to create a **PathShape** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

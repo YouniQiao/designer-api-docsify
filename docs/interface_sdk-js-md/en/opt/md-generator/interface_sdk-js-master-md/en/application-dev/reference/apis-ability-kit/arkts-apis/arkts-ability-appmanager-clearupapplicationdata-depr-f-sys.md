@@ -12,7 +12,7 @@ Clear up application data by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
+**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData-(System-API))
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 
@@ -63,7 +63,7 @@ Clear up application data by bundle name
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearUpApplicationData](ohos.app.ability.appManager/appManager#clearUpApplicationData)
+**Substitutes:** [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearUpApplicationData-(System-API))
 
 **Required permissions:** ohos.permission.CLEAN_APPLICATION_DATA
 

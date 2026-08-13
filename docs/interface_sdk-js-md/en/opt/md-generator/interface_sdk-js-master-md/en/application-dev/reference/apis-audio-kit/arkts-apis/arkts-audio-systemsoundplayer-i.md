@@ -1,9 +1,10 @@
 # SystemSoundPlayer
 
-Implements a system sound player that provides functions for loading, unloading, playing system sounds.Before using these functions, application must call  
-[createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createSystemSoundPlayer) to create a SystemSoundPlayer instance first.
+Implements a system sound player that provides functions for loading, unloading, playing system sounds. Before using these functions, application must call [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createSystemSoundPlayer) to create a SystemSoundPlayer instance first.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SystemSoundPlayer--><!--Device-unnamed-export interface SystemSoundPlayer-End-->
 
@@ -18,6 +19,8 @@ load(soundType: systemSoundManager.SystemSoundType): Promise<void>
 Loads a system sound.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -41,9 +44,9 @@ Loads a system sound.
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -67,6 +70,8 @@ Plays a system sound.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemSoundPlayer-play(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-play(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
@@ -89,9 +94,9 @@ Plays a system sound.
 
 | Error Code ID |
 | --- |
-| [5400103](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400103-io-error) |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## Examples
 
@@ -115,6 +120,8 @@ Releases this system sound player instance.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemSoundPlayer-release(): Promise<void>--><!--Device-SystemSoundPlayer-release(): Promise<void>-End-->
@@ -131,7 +138,7 @@ Releases this system sound player instance.
 
 | Error Code ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
 
 ## Examples
 
@@ -155,6 +162,8 @@ Unloads a system sound that has been loaded before.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SystemSoundPlayer-unload(soundType: systemSoundManager.SystemSoundType): Promise<void>--><!--Device-SystemSoundPlayer-unload(soundType: systemSoundManager.SystemSoundType): Promise<void>-End-->
@@ -177,8 +186,8 @@ Unloads a system sound that has been loaded before.
 
 | Error Code ID |
 | --- |
-| [5400105](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
-| [5400108](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
+| [5400105](../../apis-media-kit/errorcode-media.md#5400105-play-service-dead) |
+| [5400108](../../apis-media-kit/errorcode-media.md#5400108-parameter-value-out-of-range) |
 
 ## Examples
 

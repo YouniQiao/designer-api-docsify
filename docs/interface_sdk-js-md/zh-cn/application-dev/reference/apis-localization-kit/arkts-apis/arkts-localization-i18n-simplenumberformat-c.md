@@ -4,7 +4,9 @@
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-i18n-export class SimpleNumberFormat--><!--Device-i18n-export class SimpleNumberFormat-End-->
 
@@ -20,7 +22,9 @@ format(value: double): string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -39,4 +43,20 @@ format(value: double): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 格式化后的数字字符串。 |
+
+## 示例
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleNumberFormat = i18n.getSimpleNumberFormatBySkeleton('%', locale);
+  let formattedNumber: string = formatter.format(10); // formattedNumber = '10%'
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call SimpleNumberFormat.format failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

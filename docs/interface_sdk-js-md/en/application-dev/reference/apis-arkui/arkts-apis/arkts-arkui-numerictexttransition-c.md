@@ -1,9 +1,6 @@
 # NumericTextTransition
 
-Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the  
-[copyOption](TextAttribute#copyOption) property is ineffective. The flip animation fails if the text contains child components or is set via a styled string.
-
-**NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition).
+Implements a flip animation for numeric text. It applies only to positive integers (decimals and negative numbers are not supported). Gradient colors and text marquee mode are not supported. Text selection is not supported, and the copyOption property is ineffective. The flip animation fails if the text contains child components or is set via a styled string. **NumericTextTransition** inherits from [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition).
 
 **Inheritance/Implementation:** NumericTextTransition extends [ContentTransition](arkts-arkui-contenttransition-c.md#ContentTransition)
 
@@ -11,7 +8,9 @@ Implements a flip animation for numeric text. It applies only to positive intege
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
 
-<!--Device-unnamed-declare class NumericTextTransition extends ContentTransition--><!--Device-unnamed-declare class NumericTextTransition extends ContentTransition-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-declare class NumericTextTransition--><!--Device-unnamed-declare class NumericTextTransition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -26,6 +25,8 @@ A constructor used to create a **NumericTextTransition** object.
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,19 +48,15 @@ A constructor used to create a **NumericTextTransition** object.
 enableBlur?: boolean
 ```
 
-Whether to enable the blur effect for the flip animation.
-
-Default value: **false**
-
-**true**: Enable the blur effect.
-
-**false**: Disable the blur effect.
+Whether to enable the blur effect for the flip animation. Default value: **false** **true**: Enable the blur effect. **false**: Disable the blur effect.
 
 **Type:** boolean
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,15 +72,15 @@ Default value: **false**
 flipDirection?: FlipDirection
 ```
 
-Direction of the flip animation.
-
-Default value: **FlipDirection.DOWN**
+Direction of the flip animation. Default value: **FlipDirection.DOWN**
 
 **Type:** [FlipDirection](arkts-arkui-flipdirection-e.md)
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

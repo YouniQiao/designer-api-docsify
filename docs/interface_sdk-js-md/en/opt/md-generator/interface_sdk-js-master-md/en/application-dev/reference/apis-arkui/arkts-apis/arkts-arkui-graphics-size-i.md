@@ -4,6 +4,8 @@ Returns the width and height of the component. The default unit is vp, but APIs 
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export interface Size--><!--Device-unnamed-export interface Size-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,15 +16,13 @@ Returns the width and height of the component. The default unit is vp, but APIs 
 height: number
 ```
 
-Height of the component.
-
-Unit: vp.
-
-Value range: [0, +∞).
+Height of the component. Unit: vp. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,15 +38,13 @@ Value range: [0, +∞).
 width: number
 ```
 
-Width of the component.
-
-Unit: vp.
-
-Value range: [0, +∞).
+Width of the component. Unit: vp. Value range: [0, +∞).
 
 **Type:** number
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

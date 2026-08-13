@@ -6,13 +6,13 @@
 function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 ```
 
-设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。
+设置电源键过滤策略，在电源服务订阅电源键事件后，用于配置电源键事件的处理方式。 电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md#PowerKeyFilteringStrategy)接口。
 
-电源键过滤策略见[power.PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md#PowerKeyFilteringStrategy)接口。
+**起始版本：** 23
 
-**起始版本：** 21
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为21；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.POWER_MANAGER
 
@@ -32,9 +32,9 @@ function setPowerKeyFilteringStrategy(strategy: PowerKeyFilteringStrategy): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
-| [4900101](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
+| [4900101](../../apis-basic-services-kit/errorcode-power.md#4900101-连接服务失败) | Failed to connect to the service. |
 
 ## 示例
 

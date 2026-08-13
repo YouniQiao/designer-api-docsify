@@ -14,7 +14,9 @@ function dump(filePath: string): Array<string>
 
 Dumps the list of leaked objects and VM memory snapshot.
 
-**Since:** 12
+**Since:** 26.1.0
+
+**Deprecated since:** -1
 
 <!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>--><!--Device-jsLeakWatcher-function dump(filePath: string): Array<string>-End-->
 

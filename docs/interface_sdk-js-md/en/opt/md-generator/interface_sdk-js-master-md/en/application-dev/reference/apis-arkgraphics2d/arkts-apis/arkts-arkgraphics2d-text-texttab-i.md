@@ -2,7 +2,9 @@
 
 Implements a paragraph-style text tab, which stores the alignment mode and position.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-text-interface TextTab--><!--Device-text-interface TextTab-End-->
 
@@ -24,7 +26,9 @@ Text alignment method after the tab character in a paragraph. It supports the LE
 
 **Type:** TextAlign
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 
@@ -42,7 +46,9 @@ Alignment position of the text following the tab character. The value is a float
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 22.
 

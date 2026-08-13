@@ -6,6 +6,8 @@ Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**,
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface ReaderIterator--><!--Device-unnamed-declare interface ReaderIterator-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -28,6 +30,8 @@ Obtains the **ReaderIterator** result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-ReaderIterator-next(): ReaderIteratorResult--><!--Device-ReaderIterator-next(): ReaderIteratorResult-End-->
 
 **System capability:** SystemCapability.FileManagement.File.FileIO
@@ -36,7 +40,7 @@ Obtains the **ReaderIterator** result.
 
 | Type | Description |
 | --- | --- |
-| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
+| [ReaderIteratorResult](../../apis-na/arkts-apis/arkts-na-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 

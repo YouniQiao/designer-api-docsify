@@ -2,9 +2,11 @@
 
 Defines the shared album asset
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface SharedAlbumAsset--><!--Device-photoAccessHelper-interface SharedAlbumAsset-End-->
 
@@ -26,11 +28,13 @@ albumId: int
 
 album id of album asset
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumId: int--><!--Device-SharedAlbumAsset-albumId: int-End-->
 
@@ -48,9 +52,11 @@ album name
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumName: string--><!--Device-SharedAlbumAsset-albumName: string-End-->
 
@@ -68,9 +74,11 @@ subtype of album asset
 
 **Type:** AlbumSubtype
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype--><!--Device-SharedAlbumAsset-albumSubType: AlbumSubtype-End-->
 
@@ -88,9 +96,11 @@ type of album asset
 
 **Type:** AlbumType
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-albumType: AlbumType--><!--Device-SharedAlbumAsset-albumType: AlbumType-End-->
 
@@ -106,11 +116,13 @@ count: int
 
 number of assets in this album
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-count: int--><!--Device-SharedAlbumAsset-count: int-End-->
 
@@ -128,9 +140,11 @@ uri of album cover
 
 **Type:** string
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-coverUri: string--><!--Device-SharedAlbumAsset-coverUri: string-End-->
 
@@ -146,11 +160,13 @@ imageCount: int
 
 number of photo assets in this album
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-imageCount: int--><!--Device-SharedAlbumAsset-imageCount: int-End-->
 
@@ -166,11 +182,13 @@ videoCount: int
 
 number of video assets in this album
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 14
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SharedAlbumAsset-videoCount: int--><!--Device-SharedAlbumAsset-videoCount: int-End-->
 

@@ -1,12 +1,38 @@
 # BuildOptions
 
-BuildOptions info.
+Defines the optional build options.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface BuildOptions--><!--Device-unnamed-export interface BuildOptions-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## enableProvideConsumeCrossing
+
+```TypeScript
+enableProvideConsumeCrossing?: boolean
+```
+
+Defines whether two-way synchronization is supported between the [@Consume](../../../ui/state-management/arkts-provide-and-consume.md) decorated variable of the custom component of [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1) inside the **BuilderNode** and the [@Provide](../../../ui/state-management/arkts-provide-and-consume.md) decorated variable outside the **BuilderNode**, and whether two-way synchronization is supported between the [@Consumer](../../../ui/state-management/arkts-new-provider-and-consumer.md) decorated variable of the custom component of [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2) inside the **BuilderNode** and the [@Provider](../../../ui/state-management/arkts-new-provider-and-consumer.md) decorated variable outside the **BuilderNode**. API version 20 and later versions support two-way synchronization for the custom component of state management V1. API version 23 and later versions support two-way synchronization for the custom component of state management V2. The value **true** means that this feature is supported, and **false** means the opposite. Default value: **false**.
+
+**Type:** boolean
+
+**Since:** 20
+
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-BuildOptions-enableProvideConsumeCrossing?: boolean--><!--Device-BuildOptions-enableProvideConsumeCrossing?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -16,39 +42,47 @@ BuildOptions info.
 localStorage?: LocalStorage
 ```
 
-The LocalStorage of the Builder.
+LocalStorage for the current BuilderNode. Custom components mounted under this BuilderNode will share the specified LocalStorage. **NOTE：**If LocalStorage is also passed through a custom component's constructor, the constructor parameter takes precedence. Default value: **null**.
 
 **Type:** LocalStorage
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-BuildOptions-localStorage?: LocalStorage--><!--Device-BuildOptions-localStorage?: LocalStorage-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## useParallel
+## nestingBuilderSupported
 
 ```TypeScript
-useParallel?: boolean
+nestingBuilderSupported?: boolean
 ```
 
-Whether support the BuilderNode parallel creation.
+Whether to support nested **@Builder** within **@Builder**. **true** if supported, **false** otherwise. Default value: **false**.
 
 **Type:** boolean
 
 **Default:** false
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-BuildOptions-useParallel?: boolean--><!--Device-BuildOptions-useParallel?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-BuildOptions-nestingBuilderSupported?: boolean--><!--Device-BuildOptions-nestingBuilderSupported?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

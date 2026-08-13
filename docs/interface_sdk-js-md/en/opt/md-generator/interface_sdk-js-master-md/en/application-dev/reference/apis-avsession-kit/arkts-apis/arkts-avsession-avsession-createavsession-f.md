@@ -14,7 +14,9 @@ function createAVSession(context: Context, tag: string, type: AVSessionType, cal
 
 Create an AVSession instance. An ability can only create one AVSession
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void--><!--Device-avSession-function createAVSession(context: Context, tag: string, type: AVSessionType, callback: AsyncCallback<AVSession>): void-End-->
 
@@ -33,8 +35,8 @@ Create an AVSession instance. An ability can only create one AVSession
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
 ## Examples
 
@@ -78,7 +80,9 @@ function createAVSession(context: Context, tag: string, type: AVSessionType): Pr
 
 Create an AVSession instance. An ability can only create one AVSession
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,8 +108,8 @@ Create an AVSession instance. An ability can only create one AVSession
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [6600101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-avsession-kit/errorcode-avsession.md#6600101-session-service-exception) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) |
 
 ## Examples
 

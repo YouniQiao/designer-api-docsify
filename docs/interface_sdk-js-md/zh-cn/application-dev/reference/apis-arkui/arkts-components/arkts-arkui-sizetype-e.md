@@ -1,10 +1,6 @@
 # SizeType
 
-设备宽度类型枚举，用于在栅格布局中区分不同宽度的设备类型，实现响应式布局。
-
-> **说明：**
-> 
-> 从API version 7开始支持，从API version 9开始废弃。
+设备宽度类型枚举，用于在栅格布局中区分不同宽度的设备类型，实现响应式布局。 > **说明：** > > 从API version 7开始支持，从API version 9开始废弃。
 
 **起始版本：** 7
 
@@ -12,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-unnamed-declare enum SizeType--><!--Device-unnamed-declare enum SizeType-End-->
 
@@ -32,7 +28,7 @@ Auto = 0
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-Auto = 0--><!--Device-SizeType-Auto = 0-End-->
 
@@ -52,7 +48,7 @@ XS
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-XS--><!--Device-SizeType-XS-End-->
 
@@ -72,7 +68,7 @@ SM
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-SM--><!--Device-SizeType-SM-End-->
 
@@ -92,7 +88,7 @@ MD
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-MD--><!--Device-SizeType-MD-End-->
 
@@ -112,7 +108,7 @@ LG
 
 **废弃版本：** 9
 
-**替代接口：** [grid_col/GridColColumnOption](grid_col/GridColColumnOption)
+**替代接口：** grid_col/GridColColumnOption and grid_row/GridRowColumnOption
 
 <!--Device-SizeType-LG--><!--Device-SizeType-LG-End-->
 

@@ -1,12 +1,10 @@
 # @ohos.brightness
 
-The **brightness** module provides an API for setting the screen brightness.
+The **brightness** module provides an API for setting the screen brightness. > **NOTE：**> > - The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> - The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 7
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace brightness--><!--Device-unnamed-declare namespace brightness-End-->
 
@@ -27,6 +25,6 @@ import { brightness } from '@kit.BasicServicesKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue) |
-| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setvalue-1) |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setValue-(System-API)) |
+| [setValue](arkts-basicservices-brightness-setvalue-f-sys.md#setValue-(System-API)) |
 <!--DelEnd-->

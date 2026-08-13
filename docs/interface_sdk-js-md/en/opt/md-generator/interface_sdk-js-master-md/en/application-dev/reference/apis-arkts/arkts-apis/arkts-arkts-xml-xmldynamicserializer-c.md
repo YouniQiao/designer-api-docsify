@@ -2,7 +2,9 @@
 
 The XmlDynamicSerializer interface is used to dynamically generate an xml file.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-xml-class XmlDynamicSerializer--><!--Device-xml-class XmlDynamicSerializer-End-->
 
@@ -22,9 +24,11 @@ addEmptyElement(name: string): void
 
 Add an empty element.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void--><!--Device-XmlDynamicSerializer-addEmptyElement(name: string): void-End-->
 
@@ -40,8 +44,8 @@ Add an empty element.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -62,11 +66,13 @@ console.info(result); // <d/>
 constructor(encoding?: string)
 ```
 
-A parameterized constructor used to create a new XmlDynamicSerializer instance.The input parameter is an encoding format of string type.
+A parameterized constructor used to create a new XmlDynamicSerializer instance. The input parameter is an encoding format of string type.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-constructor(encoding?: string)--><!--Device-XmlDynamicSerializer-constructor(encoding?: string)-End-->
 
@@ -82,7 +88,7 @@ A parameterized constructor used to create a new XmlDynamicSerializer instance.T
 
 | Error Code ID |
 | --- |
-| [10200066](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200066-incorrect-encoding-format) |
+| [10200066](../errorcode-utils.md#10200066-incorrect-encoding-format) |
 
 ## Examples
 
@@ -98,9 +104,11 @@ endElement(): void
 
 Writes end tag of the element.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-endElement(): void--><!--Device-XmlDynamicSerializer-endElement(): void-End-->
 
@@ -110,8 +118,8 @@ Writes end tag of the element.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200065](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200065](../errorcode-utils.md#10200065-mismatched-element-start-and-end-tags) |
 
 ## Examples
 
@@ -136,9 +144,11 @@ getOutput(): ArrayBuffer
 
 Get an ArrayBuffer from a XmlDynamicSerializer instance.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer--><!--Device-XmlDynamicSerializer-getOutput(): ArrayBuffer-End-->
 
@@ -173,9 +183,11 @@ setAttributes(name: string, value: string): void
 
 Write an attribute to xml element.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void--><!--Device-XmlDynamicSerializer-setAttributes(name: string, value: string): void-End-->
 
@@ -192,9 +204,9 @@ Write an attribute to xml element.
 
 | Error Code ID |
 | --- |
-| [10200063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -219,9 +231,11 @@ setCdata(text: string): void
 
 Writes the CDATA.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setCdata(text: string): void--><!--Device-XmlDynamicSerializer-setCdata(text: string): void-End-->
 
@@ -237,8 +251,8 @@ Writes the CDATA.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -261,9 +275,11 @@ setComment(text: string): void
 
 Writes the comment to xml.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setComment(text: string): void--><!--Device-XmlDynamicSerializer-setComment(text: string): void-End-->
 
@@ -279,8 +295,8 @@ Writes the comment to xml.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -303,9 +319,11 @@ setDeclaration(): void
 
 Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encoding="utf-8"?&gt;.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setDeclaration(): void--><!--Device-XmlDynamicSerializer-setDeclaration(): void-End-->
 
@@ -315,8 +333,8 @@ Writes xml declaration with encoding. For example: &lt;?xml version="1.0" encodi
 
 | Error Code ID |
 | --- |
-| [10200063](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200063](../errorcode-utils.md#10200063-xml-declaration-or-attribute-position-error) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
 
 ## Examples
 
@@ -339,9 +357,11 @@ setDocType(text: string): void
 
 Writes the DOCTYPE.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setDocType(text: string): void--><!--Device-XmlDynamicSerializer-setDocType(text: string): void-End-->
 
@@ -357,8 +377,8 @@ Writes the DOCTYPE.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -381,9 +401,11 @@ setNamespace(prefix: string, namespace: string): void
 
 Writes the namespace of the current element tag.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void--><!--Device-XmlDynamicSerializer-setNamespace(prefix: string, namespace: string): void-End-->
 
@@ -400,8 +422,8 @@ Writes the namespace of the current element tag.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -426,9 +448,11 @@ setText(text: string): void
 
 Writes the text to xml element.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-setText(text: string): void--><!--Device-XmlDynamicSerializer-setText(text: string): void-End-->
 
@@ -444,8 +468,8 @@ Writes the text to xml element.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 
@@ -471,9 +495,11 @@ startElement(name: string): void
 
 Writes a element start tag with the given name.
 
-**Since:** 20
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-XmlDynamicSerializer-startElement(name: string): void--><!--Device-XmlDynamicSerializer-startElement(name: string): void-End-->
 
@@ -489,8 +515,8 @@ Writes a element start tag with the given name.
 
 | Error Code ID |
 | --- |
-| [10200062](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
-| [10200064](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200064-input-string-cannot-be-empty) |
+| [10200062](../errorcode-utils.md#10200062-xml-cumulative-length-exceeded) |
+| [10200064](../errorcode-utils.md#10200064-input-string-cannot-be-empty) |
 
 ## Examples
 

@@ -10,6 +10,8 @@ Create ASR processing controller on one audio capturer.
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Capturer
@@ -32,10 +34,10 @@ Create ASR processing controller on one audio capturer.
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [6800101](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800101-无效入参) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [6800104](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-audio-kit/errorcode-audio.md#6800104-参数选项不支持) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |
 
 ## 示例
 
@@ -70,3 +72,42 @@ audio.createAudioCapturer(audioCapturerOptions, (err, data) => {
   }
 });
 ```
+
+
+## createAsrProcessingController
+
+```TypeScript
+function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null
+```
+
+Create ASR processing controller on one audio capturer.
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null--><!--Device-audio-function createAsrProcessingController(audioCapturer: AudioCapturer): AsrProcessingController | null-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Capturer
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| audioCapturer | [AudioCapturer](arkts-audio-audio-audiocapturer-i.md) | 是 |
+
+**返回值：**
+
+| 类型 |
+| --- |
+| [AsrProcessingController](arkts-audio-audio-asrprocessingcontroller-i-sys.md) |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [6800101](../errorcode-audio.md#6800101-无效入参) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [6800104](../errorcode-audio.md#6800104-参数选项不支持) |

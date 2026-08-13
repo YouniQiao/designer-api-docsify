@@ -1,18 +1,20 @@
 # FinishAnimationHandler
 
 ```TypeScript
-export type FinishAnimationHandler = () => void
+declare type FinishAnimationHandler = () => void
 ```
 
-Handler of swiper controller, used in finishAnimation.
+Defines the callback to notify the application when the animation stops playing.
 
-**Since:** 26.0.0
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export type FinishAnimationHandler = () => void--><!--Device-unnamed-export type FinishAnimationHandler = () => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type FinishAnimationHandler = () => void--><!--Device-unnamed-declare type FinishAnimationHandler = () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 

@@ -2,7 +2,9 @@
 
 Represents the configuration of a transaction object.
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-interface TransactionOptions--><!--Device-relationalStore-interface TransactionOptions-End-->
 
@@ -20,13 +22,13 @@ import { relationalStore } from '@kit.ArkData';
 transactionType?: TransactionType
 ```
 
-Transaction object type. 
-
-Default value: **DEFERRED**.
+Transaction object type. Default value: **DEFERRED**.
 
 **Type:** [TransactionType](arkts-arkdata-relationalstore-transactiontype-e.md)
 
-**Since:** 14
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-TransactionOptions-transactionType?: TransactionType--><!--Device-TransactionOptions-transactionType?: TransactionType-End-->
 

@@ -2,7 +2,9 @@
 
 Configuring parameters in geocode requests.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-geoLocationManager-export interface GeoCodeRequest--><!--Device-geoLocationManager-export interface GeoCodeRequest-End-->
 
@@ -24,7 +26,9 @@ Indicates the country information.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-country?: string--><!--Device-GeoCodeRequest-country?: string-End-->
 
@@ -40,7 +44,9 @@ Address information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-description: string--><!--Device-GeoCodeRequest-description: string-End-->
 
@@ -56,7 +62,9 @@ Indicates the language area information.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-locale?: string--><!--Device-GeoCodeRequest-locale?: string-End-->
 
@@ -72,7 +80,9 @@ Indicates the maximum number of geocode query results.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-maxItems?: int--><!--Device-GeoCodeRequest-maxItems?: int-End-->
 
@@ -88,7 +98,9 @@ Indicates the maximum latitude for geocoding query results.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-maxLatitude?: double--><!--Device-GeoCodeRequest-maxLatitude?: double-End-->
 
@@ -104,7 +116,9 @@ Indicates the maximum longitude for geocoding query results.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-maxLongitude?: double--><!--Device-GeoCodeRequest-maxLongitude?: double-End-->
 
@@ -120,7 +134,9 @@ Indicates the minimum latitude for geocoding query results.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-minLatitude?: double--><!--Device-GeoCodeRequest-minLatitude?: double-End-->
 
@@ -136,7 +152,9 @@ Indicates the minimum longitude for geocoding query results.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GeoCodeRequest-minLongitude?: double--><!--Device-GeoCodeRequest-minLongitude?: double-End-->
 

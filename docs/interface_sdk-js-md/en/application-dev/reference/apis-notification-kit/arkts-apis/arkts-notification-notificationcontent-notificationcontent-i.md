@@ -2,9 +2,11 @@
 
 Describes the notification contents.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationContent--><!--Device-unnamed-export interface NotificationContent-End-->
 
@@ -38,14 +40,15 @@ Notification content type.
 longText?: NotificationLongTextContent
 ```
 
-Long text notification content. This parameter is used when **notificationContentType** is  
-**NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
+Long text notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_LONG_TEXT**. The complete long text content can be displayed after the notification is expanded.
 
 **Type:** [NotificationLongTextContent](arkts-notification-notificationcontent-notificationlongtextcontent-i.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationContent-longText?: NotificationLongTextContent--><!--Device-NotificationContent-longText?: NotificationLongTextContent-End-->
 
@@ -57,14 +60,15 @@ Long text notification content. This parameter is used when **notificationConten
 multiLine?: NotificationMultiLineContent
 ```
 
-Multi-line notification content. This parameter is used when **notificationContentType** is  
-**NOTIFICATION_CONTENT_MULTILINE**. The notification is displayed in a multi-line list style after expansion.
+Multi-line notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_MULTILINE**. The notification is displayed in a multi-line list style after expansion.
 
 **Type:** [NotificationMultiLineContent](arkts-notification-notificationcontent-notificationmultilinecontent-i.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationContent-multiLine?: NotificationMultiLineContent--><!--Device-NotificationContent-multiLine?: NotificationMultiLineContent-End-->
 
@@ -76,14 +80,15 @@ Multi-line notification content. This parameter is used when **notificationConte
 normal?: NotificationBasicContent
 ```
 
-Basic notification content. This parameter is used when **notificationContentType** is  
-**NOTIFICATION_CONTENT_BASIC_TEXT**. The notification displays the title and body in a plain text style.
+Basic notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_BASIC_TEXT**. The notification displays the title and body in a plain text style.
 
 **Type:** [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationContent-normal?: NotificationBasicContent--><!--Device-NotificationContent-normal?: NotificationBasicContent-End-->
 
@@ -95,14 +100,15 @@ Basic notification content. This parameter is used when **notificationContentTyp
 notificationContentType?: notificationManager.ContentType
 ```
 
-Notification content type, used to specify the content layout type of the notification, which determines the display style of the notification in the notification center. It must be used together with the corresponding notification content object. For example, when this parameter is set to **NOTIFICATION_CONTENT_BASIC_TEXT**, the  
-**normal** field must be specified at the same time.
+Notification content type, used to specify the content layout type of the notification, which determines the display style of the notification in the notification center. It must be used together with the corresponding notification content object. For example, when this parameter is set to **NOTIFICATION_CONTENT_BASIC_TEXT**, the **normal** field must be specified at the same time.
 
 **Type:** notificationManager.ContentType
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType--><!--Device-NotificationContent-notificationContentType?: notificationManager.ContentType-End-->
 
@@ -114,14 +120,15 @@ Notification content type, used to specify the content layout type of the notifi
 picture?: NotificationPictureContent
 ```
 
-Picture notification content. This parameter is used when **notificationContentType** is  
-**NOTIFICATION_CONTENT_PICTURE**. The picture can be displayed after the notification is expanded.
+Picture notification content. This parameter is used when **notificationContentType** is **NOTIFICATION_CONTENT_PICTURE**. The picture can be displayed after the notification is expanded.
 
 **Type:** [NotificationPictureContent](arkts-notification-notificationcontent-notificationpicturecontent-i.md)
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationContent-picture?: NotificationPictureContent--><!--Device-NotificationContent-picture?: NotificationPictureContent-End-->
 
@@ -137,9 +144,11 @@ System live view notification content. Third-party applications are not supporte
 
 **Type:** [NotificationSystemLiveViewContent](arkts-notification-notificationcontent-notificationsystemliveviewcontent-i.md)
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent--><!--Device-NotificationContent-systemLiveView?: NotificationSystemLiveViewContent-End-->
 

@@ -8,6 +8,8 @@ type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: Use
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-companionDeviceAuth-type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: UserAuth.AuthTrustLevel) => void--><!--Device-companionDeviceAuth-type ContinuousAuthStatusCallback = (isAuthPassed: boolean, authTrustLevel?: UserAuth.AuthTrustLevel) => void-End-->

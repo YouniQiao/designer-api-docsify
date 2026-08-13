@@ -10,6 +10,8 @@ function createRemoteDevice(address: string): RemoteDevice
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-remoteDevice-function createRemoteDevice(address: string): RemoteDevice--><!--Device-remoteDevice-function createRemoteDevice(address: string): RemoteDevice-End-->
@@ -32,5 +34,5 @@ function createRemoteDevice(address: string): RemoteDevice
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [36100041](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-connectivity-kit/errorcode-nearlink-service.md#36100041-无效地址) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [36100041](../errorcode-nearlink-service.md#36100041-无效地址) |

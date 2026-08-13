@@ -2,7 +2,9 @@
 
 Defines the handle of the data network.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-connection-export interface NetHandle--><!--Device-connection-export interface NetHandle-End-->
 
@@ -20,9 +22,11 @@ import { connection } from '@kit.NetworkKit';
 bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void
 ```
 
-&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).&lt;/p&gt;Before using this method, ensure that the socket is disconnected.
+&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): void-End-->
 
@@ -39,10 +43,10 @@ bindSocket(socketParam: TCPSocket | UDPSocket, callback: AsyncCallback<void>): v
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 
@@ -112,9 +116,11 @@ interface Data {
 bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 ```
 
-&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).&lt;/p&gt;Before using this method, ensure that the socket is disconnected.
+&lt;p&gt;Binds a TCPSocket or UDPSocket to the current network. All data flows from the socket will use this network, without being subject to [setAppNet](arkts-network-connection-setappnet-f.md#setAppNet).&lt;/p&gt; Before using this method, ensure that the socket is disconnected.
 
 **Since:** 9
+
+**Deprecated since:** -1
 
 <!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>--><!--Device-NetHandle-bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>-End-->
 
@@ -136,10 +142,10 @@ bindSocket(socketParam: TCPSocket | UDPSocket): Promise<void>
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
 
 ## Examples
 
@@ -208,6 +214,8 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void--><!--Device-NetHandle-getAddressByName(host: string, callback: AsyncCallback<NetAddress>): void-End-->
@@ -225,11 +233,11 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -263,6 +271,8 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>--><!--Device-NetHandle-getAddressByName(host: string): Promise<NetAddress>-End-->
@@ -285,11 +295,11 @@ Resolves a host name to obtain the first IP address based on the specified NetHa
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -318,6 +328,8 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -337,11 +349,11 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -375,6 +387,8 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -399,11 +413,11 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -430,7 +444,9 @@ getAddressesByNameWithOptions(host: string, option?: QueryOptions): Promise<Arra
 
 Resolves a host name to obtain all IP addresses based on the specified NetHandle with specified query option.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -457,10 +473,10 @@ Resolves a host name to obtain all IP addresses based on the specified NetHandle
 
 | Error Code ID |
 | --- |
-| [2100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100001-invalid-parameter-value) |
-| [2100002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100002-service-connection-failure) |
-| [2100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-network-kit/errorcode-net-connection.md#2100003-system-internal-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [2100001](../errorcode-net-connection.md#2100001-invalid-parameter-value) |
+| [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) |
+| [2100003](../errorcode-net-connection.md#2100003-system-internal-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -495,9 +511,11 @@ Network ID, a value of 0 means that there is no default network, and the other v
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-NetHandle-netId: int--><!--Device-NetHandle-netId: int-End-->
 

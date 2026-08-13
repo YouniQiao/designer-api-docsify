@@ -8,6 +8,8 @@ Callback to be invoked when a grid view switches to the photo browser page or th
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 23.

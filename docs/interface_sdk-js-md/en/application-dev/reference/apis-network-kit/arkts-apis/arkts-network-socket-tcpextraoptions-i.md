@@ -8,7 +8,9 @@ Defines other properties of the TCPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-socket-export interface TCPExtraOptions extends ExtraOptionsBase--><!--Device-socket-export interface TCPExtraOptions extends ExtraOptionsBase-End-->
+**Deprecated since:** -1
+
+<!--Device-socket-export interface TCPExtraOptions--><!--Device-socket-export interface TCPExtraOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -32,6 +34,8 @@ Whether to enable OOBInline. The default value is false.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TCPExtraOptions-OOBInline?: boolean--><!--Device-TCPExtraOptions-OOBInline?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -49,6 +53,8 @@ Whether to enable no-delay on the TCPSocket connection. The default value is fal
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TCPExtraOptions-TCPNoDelay?: boolean--><!--Device-TCPExtraOptions-TCPNoDelay?: boolean-End-->
 
@@ -68,6 +74,8 @@ Whether to keep the connection alive. The default value is false.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TCPExtraOptions-keepAlive?: boolean--><!--Device-TCPExtraOptions-keepAlive?: boolean-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -86,6 +94,8 @@ Socket linger.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TCPExtraOptions-socketLinger?: { on: boolean, linger: number }--><!--Device-TCPExtraOptions-socketLinger?: { on: boolean, linger: number }-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -100,9 +110,11 @@ Whether to enable TCP Fast Open (TFO) on the TCPSocket connection. The default v
 
 **Type:** boolean
 
-**Since:** 24
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 24; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

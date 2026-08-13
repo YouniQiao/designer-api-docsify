@@ -6,6 +6,8 @@ Text data detector config.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare interface TextDataDetectorConfig--><!--Device-unnamed-export declare interface TextDataDetectorConfig-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ The color of AI entity.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,6 +48,8 @@ The decoration of AI entity.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextDataDetectorConfig-decoration?: DecorationStyleInterface--><!--Device-TextDataDetectorConfig-decoration?: DecorationStyleInterface-End-->
@@ -63,6 +69,8 @@ Used to set whether the preview window will be displayed when long-presses and s
 **Since:** 24
 
 **ArkTS mode:** ArkTS-Sta only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,6 +92,8 @@ Text data detect result callback.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextDataDetectorConfig-onDetectResultUpdate?: Callback<string>--><!--Device-TextDataDetectorConfig-onDetectResultUpdate?: Callback<string>-End-->
@@ -96,13 +106,15 @@ Text data detect result callback.
 types: TextDataDetectorType[] | undefined | null
 ```
 
-Text data detector types. The default value is an empty array.Set to `undefined` or `null` will restore it to the default value.
+Text data detector types. The default value is an empty array. Set to `undefined` or `null` will restore it to the default value.
 
 **Type:** [TextDataDetectorType](arkts-arkui-textcommon-textdatadetectortype-e.md)[] \| undefined \| null
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

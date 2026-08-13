@@ -1,9 +1,5 @@
 # @ohos.application.AccessibilityExtensionAbility
 
-The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the
- ExtensionAbility framework.
-
-
 ## Modules to Import
 
 ```TypeScript

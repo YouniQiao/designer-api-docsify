@@ -6,6 +6,8 @@ Enumerates the Wi-Fi security types.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-wifiManager-enum WifiSecurityType--><!--Device-wifiManager-enum WifiSecurityType-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ Invalid security type. For example, airport public Wi-Fi.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Open security type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1-End-->
@@ -57,6 +63,8 @@ Wired Equivalent Privacy (WEP).
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ PSK. For example, home and small office Wi-Fi.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_PSK = 3-End-->
@@ -93,6 +103,8 @@ Simultaneous Authentication of Equals (SAE). For example, smart home and small- 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +124,8 @@ EAP. For example, large enterprise authentication and university campus networks
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5-End-->
@@ -129,6 +143,8 @@ Suite B 192-bit encryption. After the setting, Wi-Fi will use Suite-B 192-bit hi
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -148,6 +164,8 @@ Opportunistic Wireless Encryption (OWE). For example, public Wi-Fi in a coffee s
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7-End-->
@@ -166,6 +184,8 @@ WLAN Authentication and Privacy Infrastructure (WAPI) in certificate-based mode 
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_WAPI_CERT = 8--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WAPI_CERT = 8-End-->
@@ -183,6 +203,8 @@ WAPI-PSK.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

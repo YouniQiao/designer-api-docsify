@@ -2,9 +2,11 @@
 
 Enumerates the download states of a cloud file.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cloudSync-enum State--><!--Device-cloudSync-enum State-End-->
 
@@ -18,9 +20,11 @@ RUNNING = 0
 
 The cloud file is being downloaded.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-State-RUNNING = 0--><!--Device-State-RUNNING = 0-End-->
 
@@ -34,9 +38,11 @@ COMPLETED = 1
 
 The cloud file download is complete.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-State-COMPLETED = 1--><!--Device-State-COMPLETED = 1-End-->
 
@@ -50,9 +56,11 @@ FAILED = 2
 
 The cloud file download failed.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-State-FAILED = 2--><!--Device-State-FAILED = 2-End-->
 
@@ -66,9 +74,11 @@ STOPPED = 3
 
 The cloud file download is stopped.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-State-STOPPED = 3--><!--Device-State-STOPPED = 3-End-->
 

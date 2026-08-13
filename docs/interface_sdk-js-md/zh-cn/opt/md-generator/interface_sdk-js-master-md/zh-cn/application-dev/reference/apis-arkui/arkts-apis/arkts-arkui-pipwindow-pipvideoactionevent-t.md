@@ -6,7 +6,9 @@ type PiPVideoActionEvent = 'playbackStateChanged' | 'nextVideo' | 'previousVideo
 
 视频播放控制事件类型。
 
-**起始版本：** 11
+**起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

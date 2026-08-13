@@ -6,11 +6,13 @@ type SensorFrequency = 'game' | 'ui' | 'normal'
 
 Defines the reporting frequency mode of the sensor.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-sensor-type SensorFrequency = 'game' | 'ui' | 'normal'--><!--Device-sensor-type SensorFrequency = 'game' | 'ui' | 'normal'-End-->
 

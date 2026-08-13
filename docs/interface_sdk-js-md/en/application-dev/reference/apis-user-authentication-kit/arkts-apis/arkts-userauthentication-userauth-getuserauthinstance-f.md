@@ -12,17 +12,13 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getUserAuthInstance(authParam: AuthParam, widgetParam: WidgetParam): UserAuthInstance
 ```
 
-Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#UserAuthInstance) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result.
+Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md#UserAuthInstance) instance for user authentication. The user authentication widget is also supported. This API is used to create a user authentication instance. After authentication parameters and UI parameters are configured, you can use the returned instance object to start authentication and subscribe to the authentication result. > **NOTE：**> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must > obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful > or fails), the instance cannot be used again.
 
-> **NOTE：**
+**Since:** 23
 
-> Each **UserAuthInstance** can be used for authentication only once. To perform authentication again, you must
-> obtain a new **UserAuthInstance**. After the authentication is complete (regardless of whether it is successful
-> or fails), the instance cannot be used again.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Since:** 10
-
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -47,10 +43,10 @@ Obtains a [UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
-| [12500006](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
-| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [12500006](../errorcode-useriam.md#12500006-unsupported-authentication-trust-level) | The authentication trust level is not supported. |
+| [12500005](../errorcode-useriam.md#12500005-unsupported-authentication-type) | The authentication type is not supported. |
+| [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
 

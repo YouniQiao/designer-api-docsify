@@ -2,7 +2,9 @@
 
 Information about an exempted application.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceStandby-export interface ExemptedAppInfo--><!--Device-deviceStandby-export interface ExemptedAppInfo-End-->
 
@@ -22,11 +24,13 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 duration: number
 ```
 
-The exemption duration.&lt;br&gt;Unit:s
+The exemption duration. &lt;br&gt;Unit:s
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExemptedAppInfo-duration: int--><!--Device-ExemptedAppInfo-duration: int-End-->
 
@@ -44,7 +48,9 @@ The application name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExemptedAppInfo-name: string--><!--Device-ExemptedAppInfo-name: string-End-->
 
@@ -62,7 +68,9 @@ The set of resource types that an application requests.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ExemptedAppInfo-resourceTypes: int--><!--Device-ExemptedAppInfo-resourceTypes: int-End-->
 

@@ -2,7 +2,9 @@
 
 管理嵌入模型的配置信息。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-intelligence-interface ModelConfig--><!--Device-intelligence-interface ModelConfig-End-->
 
@@ -18,7 +20,9 @@ cachePath?: string
 
 **类型：** string
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModelConfig-cachePath?: string--><!--Device-ModelConfig-cachePath?: string-End-->
 
@@ -34,7 +38,9 @@ isNpuAvailable: boolean
 
 **类型：** boolean
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModelConfig-isNpuAvailable: boolean--><!--Device-ModelConfig-isNpuAvailable: boolean-End-->
 
@@ -51,6 +57,8 @@ modelInfo?: CloudModelInfo
 **类型：** [CloudModelInfo](arkts-arkdata-intelligence-cloudmodelinfo-i.md)
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,6 +78,8 @@ networkPolicy?: NetworkPolicy
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ModelConfig-networkPolicy?: NetworkPolicy--><!--Device-ModelConfig-networkPolicy?: NetworkPolicy-End-->
@@ -86,7 +96,9 @@ version: ModelVersion
 
 **类型：** [ModelVersion](arkts-arkdata-intelligence-modelversion-e.md)
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-ModelConfig-version: ModelVersion--><!--Device-ModelConfig-version: ModelVersion-End-->
 

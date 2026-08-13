@@ -2,11 +2,13 @@
 
 Provides methods for accessing IsoDep tag.
 
-**Inheritance/Implementation:** IsoDepTag extends [TagSession](TagSession)
+**Inheritance/Implementation:** IsoDepTag extends TagSession
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-unnamed-export interface IsoDepTag extends TagSession--><!--Device-unnamed-export interface IsoDepTag extends TagSession-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface IsoDepTag--><!--Device-unnamed-export interface IsoDepTag-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
@@ -16,11 +18,13 @@ Provides methods for accessing IsoDep tag.
 getHiLayerResponse(): number[]
 ```
 
-Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology.It could be null if not based on NfcB.
+Gets IsoDep HiLayer Response bytes of the tag, which is based on NfcB RF technology. It could be null if not based on NfcB.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-getHiLayerResponse(): int[]--><!--Device-IsoDepTag-getHiLayerResponse(): int[]-End-->
 
@@ -48,11 +52,13 @@ console.info("isoDep hiLayerResponse: " + hiLayerResponse);
 getHistoricalBytes(): number[]
 ```
 
-Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology.It could be null if not based on NfcA.
+Gets IsoDep Historical bytes of the tag, which is based on NfcA RF technology. It could be null if not based on NfcA.
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-getHistoricalBytes(): int[]--><!--Device-IsoDepTag-getHistoricalBytes(): int[]-End-->
 
@@ -82,11 +88,13 @@ isExtendedApduSupported(): Promise<boolean>
 
 Checks if extended apdu length supported or not.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>--><!--Device-IsoDepTag-isExtendedApduSupported(): Promise<boolean>-End-->
 
@@ -102,10 +110,10 @@ Checks if extended apdu length supported or not.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [3100204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) |
-| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -143,11 +151,13 @@ isExtendedApduSupported(callback: AsyncCallback<boolean>): void
 
 Checks if extended apdu length supported or not.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void--><!--Device-IsoDepTag-isExtendedApduSupported(callback: AsyncCallback<boolean>): void-End-->
 
@@ -163,10 +173,10 @@ Checks if extended apdu length supported or not.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [3100204](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100204-nfc-chip-io-exception) |
-| [3100201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-connectivity-kit/errorcode-nfc.md#3100201-tag-readwrite-error) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [3100204](../errorcode-nfc.md#3100204-nfc-chip-io-exception) |
+| [3100201](../errorcode-nfc.md#3100201-tag-readwrite-error) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

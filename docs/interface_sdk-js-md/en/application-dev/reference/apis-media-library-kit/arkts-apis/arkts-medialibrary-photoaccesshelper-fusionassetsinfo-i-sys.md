@@ -2,9 +2,11 @@
 
 Fusion assets information.
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface FusionAssetsInfo--><!--Device-photoAccessHelper-interface FusionAssetsInfo-End-->
 
@@ -26,11 +28,13 @@ assetsCount: int
 
 Assets count.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetsInfo-assetsCount: int--><!--Device-FusionAssetsInfo-assetsCount: int-End-->
 
@@ -48,9 +52,11 @@ Assets path.
 
 **Type:** string
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetsInfo-assetsPath: string--><!--Device-FusionAssetsInfo-assetsPath: string-End-->
 
@@ -68,9 +74,11 @@ Assets type.
 
 **Type:** [FusionAssetType](arkts-medialibrary-photoaccesshelper-fusionassettype-e-sys.md)
 
-**Since:** 22
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 22; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-FusionAssetsInfo-assetsType: FusionAssetType--><!--Device-FusionAssetsInfo-assetsType: FusionAssetType-End-->
 

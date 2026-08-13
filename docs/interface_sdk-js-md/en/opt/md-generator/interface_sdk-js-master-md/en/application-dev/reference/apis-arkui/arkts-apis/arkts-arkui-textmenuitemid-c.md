@@ -4,6 +4,8 @@ Defines the unique identifier for a custom menu item. It is used to identify men
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare class TextMenuItemId--><!--Device-unnamed-declare class TextMenuItemId-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ equals(id: TextMenuItemId): boolean
 Checks whether this **TextMenuItemId** object is the same as another **TextMenuItemId** object.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ Creates a **TextMenuItemId** object based on **id**.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -74,11 +80,13 @@ Creates a **TextMenuItemId** object based on **id**.
 static readonly AI_WRITER: TextMenuItemId
 ```
 
-&lt;!--RP1--&gt;&lt;!--RP1End--&gt;ID for the menu item involving text enhancement features,such as polishing, summary extraction, and formatting, for selected text.It is a level-1 menu item. This menu item requires the large language model. If no large language model is available,this menu item does not take effect.
+&lt;!--RP1--&gt;&lt;!--RP1End--&gt;ID for the menu item involving text enhancement features, such as polishing, summary extraction, and formatting, for selected text. It is a level-1 menu item. This menu item requires the large language model. If no large language model is available, this menu item does not take effect.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 13
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,6 +108,8 @@ ID for the camera input menu item. It is a level-1 menu item.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -119,6 +129,8 @@ ID for the collaboration service menu item. It is a level-1 menu item.
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,6 +152,8 @@ ID for the default copy menu item. It is a level-1 menu item.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -159,6 +173,8 @@ ID for the default cut menu item. It is a level-1 menu item.
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -180,6 +196,8 @@ ID for the default paste menu item. It is a level-1 menu item.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -199,6 +217,8 @@ ID for the search menu item. It is a level-1 menu item. This menu item launches 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -220,6 +240,8 @@ ID for the default select-all menu item. It is a level-1 menu item.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -239,6 +261,8 @@ ID for the share menu item. It is a level-1 menu item. This menu item launches a
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 18
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,6 +284,8 @@ ID for the translate menu item. It is a level-1 menu item. The translation servi
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 15.
@@ -280,6 +306,8 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -294,11 +322,13 @@ ID for the navigation menu item. It is a level-1 menu item. This menu item provi
 static readonly askAI: TextMenuItemId
 ```
 
-&lt;!--RP2--&gt;&lt;!--RP2End--&gt;ID for the AI assistant menu item,which provides AI query capabilities for the selected text. It is a level-1 menu item.
+&lt;!--RP2--&gt;&lt;!--RP2End--&gt;ID for the AI assistant menu item, which provides AI query capabilities for the selected text. It is a level-1 menu item.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -314,13 +344,13 @@ static readonly askAI: TextMenuItemId
 static readonly autoFill: TextMenuItemId
 ```
 
-ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item  
-**Password Vault** is displayed. This menu item is supported exclusively for the [Search](search),  
-[TextInput](text_input), [TextArea](text_area), and [RichEditor](rich_editor) components.
+ID for the autofill menu item. It is a level-1 menu item. When a menu item is tapped, the secondary menu item **Password Vault** is displayed. This menu item is supported exclusively for the Search, TextInput, TextArea, and RichEditor components.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -342,6 +372,8 @@ ID for the event creation menu item. It is a level-1 menu item. This menu item p
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -362,6 +394,8 @@ ID for the email menu item. It is a level-1 menu item. This menu item provides t
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -376,13 +410,13 @@ ID for the email menu item. It is a level-1 menu item. This menu item provides t
 static readonly passwordVault: TextMenuItemId
 ```
 
-ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for  
-[Search](./search), [TextInput](./text_input), [TextArea](./text_area), and  
-[RichEditor](./rich_editor).
+ID for the password vault menu item. It is a level-2 menu item. Tapping this menu item launches the password vault app, which supports automatic username and password filling. The menu item is supported only for Search, TextInput, TextArea, and RichEditor.
 
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -404,6 +438,8 @@ ID for the phone call menu item. It is a level-1 menu item. This menu item provi
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -423,6 +459,8 @@ ID for the URL menu item. It is a level-1 menu item. This menu item provides the
 **Type:** [TextMenuItemId](arkts-arkui-textmenuitemid-c.md)
 
 **Since:** 20
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

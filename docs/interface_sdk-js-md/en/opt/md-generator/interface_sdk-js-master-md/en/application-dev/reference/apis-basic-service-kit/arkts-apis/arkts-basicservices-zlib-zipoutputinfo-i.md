@@ -2,7 +2,9 @@
 
 Compression and decompression return value information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-zlib-interface ZipOutputInfo--><!--Device-zlib-interface ZipOutputInfo-End-->
 
@@ -24,9 +26,11 @@ Total length of the destination buffer.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZipOutputInfo-destLen: long--><!--Device-ZipOutputInfo-destLen: long-End-->
 
@@ -42,9 +46,11 @@ For details, see [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md#Retur
 
 **Type:** [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 
-**Since:** 12
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ZipOutputInfo-status: ReturnStatus--><!--Device-ZipOutputInfo-status: ReturnStatus-End-->
 

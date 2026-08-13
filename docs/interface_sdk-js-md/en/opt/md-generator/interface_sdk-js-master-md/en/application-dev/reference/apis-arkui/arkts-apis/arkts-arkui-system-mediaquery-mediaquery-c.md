@@ -4,6 +4,8 @@ Defines the mediaquery interface.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export default class MediaQuery--><!--Device-unnamed-export default class MediaQuery-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -23,6 +25,8 @@ static matchMedia(condition: string): MediaQueryList
 Queries a media item and returns a MediaQueryList object.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

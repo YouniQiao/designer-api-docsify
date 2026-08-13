@@ -6,7 +6,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowDialogOptions](ohos.promptAction/promptAction.ShowDialogOptions)
+**替代接口：** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md#ShowDialogOptions)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -18,7 +18,7 @@
 buttons?: [Button, Button?, Button?]
 ```
 
-对话框中按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-3个按钮。其中第一个为positiveButton，第二个为negativeButton，第三个为neutralButton。
+对话框中按钮的数组，结构为：{text:'button', color: '#666666'}，支持1-3个按钮。其中第一个为positiveButton，第二个为negativeButton，第三个为 neutralButton。
 
 **类型：** [Button, Button?, Button?]
 
@@ -26,7 +26,7 @@ buttons?: [Button, Button?, Button?]
 
 **废弃版本：** 9
 
-**替代接口：** [buttons](ohos.promptAction/promptAction.ShowDialogOptions#buttons)
+**替代接口：** [buttons](arkts-arkui-promptaction-showdialogoptions-i.md#buttons)
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -46,7 +46,7 @@ message?: string
 
 **废弃版本：** 9
 
-**替代接口：** [message](ohos.promptAction/promptAction.ShowDialogOptions#message)
+**替代接口：** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -66,7 +66,7 @@ title?: string
 
 **废弃版本：** 9
 
-**替代接口：** [title](ohos.promptAction/promptAction.ShowDialogOptions#title)
+**替代接口：** [title](arkts-arkui-promptaction-showdialogoptions-i.md#title)
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

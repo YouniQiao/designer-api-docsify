@@ -1,10 +1,12 @@
 # WebKeyboardController
 
-Define the controller to interact with a custom keyboard, related to the [onInterceptKeyboardAttach](onInterceptKeyboardAttach) event.
+Define the controller to interact with a custom keyboard, related to the onInterceptKeyboardAttach event.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WebKeyboardController--><!--Device-unnamed-declare class WebKeyboardController-End-->
 
@@ -22,6 +24,8 @@ Closes this custom keyboard.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-WebKeyboardController-close(): void--><!--Device-WebKeyboardController-close(): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -37,6 +41,8 @@ Constructs a **WebKeyboardController** API.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -55,6 +61,8 @@ Deletes a specified number of characters backward in a **Web** component text bo
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebKeyboardController-deleteBackward(length: number): void--><!--Device-WebKeyboardController-deleteBackward(length: number): void-End-->
 
@@ -78,6 +86,8 @@ Deletes a specified number of characters forward in a **Web** component text box
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-WebKeyboardController-deleteForward(length: number): void--><!--Device-WebKeyboardController-deleteForward(length: number): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -100,6 +110,8 @@ Inserts characters into the **Web** component text box.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-WebKeyboardController-insertText(text: string): void--><!--Device-WebKeyboardController-insertText(text: string): void-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -116,12 +128,13 @@ Inserts characters into the **Web** component text box.
 sendFunctionKey(key: number): void
 ```
 
-Inserts a function key. Currently, only the Enter key type is supported.For details about the value, see  
-[EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType).
+Inserts a function key. Currently, only the Enter key type is supported. For details about the value, see [EnterKeyType](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-enterkeytype-e.md#EnterKeyType).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-WebKeyboardController-sendFunctionKey(key: number): void--><!--Device-WebKeyboardController-sendFunctionKey(key: number): void-End-->
 

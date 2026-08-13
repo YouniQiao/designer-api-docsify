@@ -1,8 +1,10 @@
 # Color4f
 
-ARGB格式的颜色描述。
+ARGB格式的颜色描述，颜色分量值为0.0~1.0的浮点数。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-common2D-interface Color4f--><!--Device-common2D-interface Color4f-End-->
 
@@ -18,7 +20,9 @@ alpha: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color4f-alpha: double--><!--Device-Color4f-alpha: double-End-->
 
@@ -34,7 +38,9 @@ blue: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color4f-blue: double--><!--Device-Color4f-blue: double-End-->
 
@@ -50,7 +56,9 @@ green: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color4f-green: double--><!--Device-Color4f-green: double-End-->
 
@@ -66,7 +74,9 @@ red: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Color4f-red: double--><!--Device-Color4f-red: double-End-->
 

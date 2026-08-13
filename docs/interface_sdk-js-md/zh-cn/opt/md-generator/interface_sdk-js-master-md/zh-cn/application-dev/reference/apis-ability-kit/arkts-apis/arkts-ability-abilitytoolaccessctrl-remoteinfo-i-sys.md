@@ -4,6 +4,8 @@
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-abilityToolAccessCtrl-interface RemoteInfo--><!--Device-abilityToolAccessCtrl-interface RemoteInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -21,6 +23,8 @@ domainId: string
 **类型：** string
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-RemoteInfo-domainId: string--><!--Device-RemoteInfo-domainId: string-End-->
 
@@ -40,6 +44,8 @@ remoteControlParams?: RemoteControlParams
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-RemoteInfo-remoteControlParams?: RemoteControlParams--><!--Device-RemoteInfo-remoteControlParams?: RemoteControlParams-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -58,6 +64,8 @@ remoteId: string
 
 **起始版本：** 26.1.0
 
+**废弃版本：** -1
+
 <!--Device-RemoteInfo-remoteId: string--><!--Device-RemoteInfo-remoteId: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -75,6 +83,8 @@ role: Role
 **类型：** Role
 
 **起始版本：** 26.1.0
+
+**废弃版本：** -1
 
 <!--Device-RemoteInfo-role: Role--><!--Device-RemoteInfo-role: Role-End-->
 

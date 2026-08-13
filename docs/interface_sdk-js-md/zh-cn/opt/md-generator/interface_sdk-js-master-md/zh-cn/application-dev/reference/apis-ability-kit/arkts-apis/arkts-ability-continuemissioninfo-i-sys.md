@@ -1,9 +1,10 @@
 # ContinueMissionInfo（系统接口）
 
-表示发起按照包名迁移时所需参数的枚举，迁移Mission详见：  
-[continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission)
+表示发起按照包名迁移时所需参数的枚举，迁移Mission详见： [continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continueMission（系统接口）)
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface ContinueMissionInfo--><!--Device-unnamed-export interface ContinueMissionInfo-End-->
 
@@ -21,7 +22,9 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -41,7 +44,9 @@ continueType?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -61,7 +66,9 @@ dstDeviceId: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -81,7 +88,9 @@ srcBundleName?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -101,7 +110,9 @@ srcDeviceId: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -121,7 +132,9 @@ wantParam: Record<string, Object>
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

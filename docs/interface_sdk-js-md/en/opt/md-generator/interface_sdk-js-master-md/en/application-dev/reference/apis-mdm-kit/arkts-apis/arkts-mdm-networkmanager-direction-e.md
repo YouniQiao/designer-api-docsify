@@ -4,6 +4,8 @@ Enumerates the direction chains to which the rule applies.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-networkManager-enum Direction--><!--Device-networkManager-enum Direction-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -17,6 +19,8 @@ INPUT = 0
 Input chain.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -34,6 +38,8 @@ Output chain.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Direction-OUTPUT = 1--><!--Device-Direction-OUTPUT = 1-End-->
@@ -49,6 +55,8 @@ FORWARD = 2
 Forward chain.
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

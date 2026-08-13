@@ -8,9 +8,11 @@ function createBrightnessBlender(param: BrightnessBlenderParam): BrightnessBlend
 
 创建BrightnessBlender实例用于给组件添加提亮效果。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 

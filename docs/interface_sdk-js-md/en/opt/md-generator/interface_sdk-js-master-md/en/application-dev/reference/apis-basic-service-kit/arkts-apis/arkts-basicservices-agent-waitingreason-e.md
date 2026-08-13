@@ -2,7 +2,9 @@
 
 Enumerates the reasons why a task is waiting.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-agent-enum WaitingReason--><!--Device-agent-enum WaitingReason-End-->
 
@@ -16,7 +18,9 @@ TASK_QUEUE_FULL = 0x00
 
 The task queue is full.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00--><!--Device-WaitingReason-TASK_QUEUE_FULL = 0x00-End-->
 
@@ -30,7 +34,9 @@ NETWORK_NOT_MATCH = 0x01
 
 The required network conditions are not met.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01--><!--Device-WaitingReason-NETWORK_NOT_MATCH = 0x01-End-->
 
@@ -44,7 +50,9 @@ APP_BACKGROUND = 0x02
 
 The application has been running in the background for a long time.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaitingReason-APP_BACKGROUND = 0x02--><!--Device-WaitingReason-APP_BACKGROUND = 0x02-End-->
 
@@ -58,7 +66,9 @@ USER_INACTIVATED = 0x03
 
 The user is inactive.
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-WaitingReason-USER_INACTIVATED = 0x03--><!--Device-WaitingReason-USER_INACTIVATED = 0x03-End-->
 

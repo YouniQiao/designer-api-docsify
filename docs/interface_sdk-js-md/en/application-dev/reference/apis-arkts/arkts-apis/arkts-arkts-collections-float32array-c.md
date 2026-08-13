@@ -1,17 +1,12 @@
 # Float32Array
 
-A linear data structure that is implemented on [ArkTS ArrayBuffer](./arkts/@arkts.collections:collections).
-
-> **NOTE：**
-> 
-> - This module can be imported only to ArkTS files (with the file name extension .ets).
-> **Decorator**: \@Sendable
+A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections). > **NOTE：**> > - This module can be imported only to ArkTS files (with the file name extension .ets). > **Decorator**: \@Sendable
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Decorator:** @Sendable
+**Deprecated since:** -1
 
 <!--Device-collections-class Float32Array--><!--Device-collections-class Float32Array-End-->
 
@@ -35,6 +30,8 @@ Returns an iterator that iterates over numbers.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-[Symbol.iterator](): IterableIterator<number>--><!--Device-Float32Array-[Symbol.iterator](): IterableIterator<number>-End-->
@@ -51,7 +48,7 @@ Returns an iterator that iterates over numbers.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The Symbol.iterator method cannot be bound. |
 
 ## at
 
@@ -64,6 +61,8 @@ Returns the element at the given index. If no element is found, **undefined** is
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -87,8 +86,8 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The at method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## constructor
 
@@ -102,6 +101,8 @@ A constructor used to create an empty ArkTS Float32Array.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-constructor()--><!--Device-Float32Array-constructor()-End-->
@@ -112,7 +113,7 @@ A constructor used to create an empty ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -125,6 +126,8 @@ A constructor used to create an ArkTS Float32Array of a given length.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -142,7 +145,7 @@ A constructor used to create an ArkTS Float32Array of a given length.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -155,6 +158,8 @@ A constructor that creates an ArkTS Float32Array from an iterable object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -172,7 +177,7 @@ A constructor that creates an ArkTS Float32Array from an iterable object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -185,6 +190,8 @@ A constructor that creates an ArkTS Float32Array from an array-like object or Ar
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -202,7 +209,7 @@ A constructor that creates an ArkTS Float32Array from an array-like object or Ar
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## constructor
 
@@ -215,6 +222,8 @@ A constructor that creates an ArkTS Float32Array from an ArrayBuffer.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -234,7 +243,7 @@ A constructor that creates an ArkTS Float32Array from an ArrayBuffer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
+| [10200012](../errorcode-utils.md#10200012-constructor-calling-failure) | The Float32Array's constructor cannot be directly invoked. |
 
 ## copyWithin
 
@@ -247,6 +256,8 @@ Copies elements within a given range from this ArkTS Float32Array to another pos
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -272,8 +283,8 @@ Copies elements within a given range from this ArkTS Float32Array to another pos
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The copyWithin method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## entries
 
@@ -286,6 +297,8 @@ Returns an iterator object that contains the key-value pair of each element in t
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -303,8 +316,8 @@ Returns an iterator object that contains the key-value pair of each element in t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The entries method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## every
 
@@ -317,6 +330,8 @@ Checks whether all elements in this ArkTS Float32Array meet a given condition.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -340,8 +355,8 @@ Checks whether all elements in this ArkTS Float32Array meet a given condition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The every method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## fill
 
@@ -354,6 +369,8 @@ Fills all elements in a given range in this ArkTS Float32Array with a value.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -379,8 +396,8 @@ Fills all elements in a given range in this ArkTS Float32Array with a value.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The fill method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## filter
 
@@ -393,6 +410,8 @@ Returns a new ArkTS Float32Array that contains all elements that meet the given 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -416,8 +435,8 @@ Returns a new ArkTS Float32Array that contains all elements that meet the given 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The filter method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## find
 
@@ -430,6 +449,8 @@ Returns the value of the first element that passes a test provided by a callback
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -453,8 +474,8 @@ Returns the value of the first element that passes a test provided by a callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The find method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## findIndex
 
@@ -467,6 +488,8 @@ Returns the index of the first element that passes a test provided by a callback
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -490,8 +513,8 @@ Returns the index of the first element that passes a test provided by a callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The findIndex method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## forEach
 
@@ -504,6 +527,8 @@ Calls a callback function for each element in this ArkTS Float32Array.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -521,8 +546,8 @@ Calls a callback function for each element in this ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The forEach method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## from
 
@@ -535,6 +560,8 @@ Creates an ArkTS Float32Array from an array-like or iterator object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -565,6 +592,8 @@ Creates an ArkTS Float32Array from an array-like object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -597,6 +626,8 @@ Creates an ArkTS Float32Array from an iterator object.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Float32Array--><!--Device-Float32Array-static from(arrayLike: Iterable<number>, mapFn?: TypedArrayFromMapFn<number, number>): Float32Array-End-->
@@ -628,6 +659,8 @@ Checks whether elements are contained in this ArkTS Float32Array.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-includes(searchElement: number, fromIndex?: number): boolean--><!--Device-Float32Array-includes(searchElement: number, fromIndex?: number): boolean-End-->
@@ -651,8 +684,8 @@ Checks whether elements are contained in this ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The includes method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## indexOf
 
@@ -660,12 +693,13 @@ Checks whether elements are contained in this ArkTS Float32Array.
 indexOf(searchElement: number, fromIndex?: number): number
 ```
 
-Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found,  
-**-1** is returned.
+Returns the index of the first occurrence of a value in this ArkTS Float32Array. If the value is not found, **-1** is returned.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -690,8 +724,8 @@ Returns the index of the first occurrence of a value in this ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The indexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## join
 
@@ -704,6 +738,8 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -727,8 +763,8 @@ Concatenates all elements in this ArkTS Float32Array into a string, with a given
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The join method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## keys
 
@@ -741,6 +777,8 @@ Returns an iterator object that contains the key (index) of each element in this
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -758,8 +796,8 @@ Returns an iterator object that contains the key (index) of each element in this
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The keys method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## lastIndexOf
 
@@ -772,6 +810,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Fl
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -796,8 +836,8 @@ Obtains the index of the last occurrence of the specified value in this ArkTS Fl
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The lastIndexOf method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## map
 
@@ -810,6 +850,8 @@ Applies a callback function to each element in this ArkTS Float32Array and uses 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -833,8 +875,8 @@ Applies a callback function to each element in this ArkTS Float32Array and uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The map method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## of
 
@@ -847,6 +889,8 @@ Creates an ArkTS Float32Array with a variable number of parameters.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -878,6 +922,8 @@ Applies a reduce function on each element in this ArkTS Float32Array and returns
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number--><!--Device-Float32Array-reduce(callbackFn: TypedArrayReduceCallback<number, number, Float32Array>): number-End-->
@@ -900,8 +946,8 @@ Applies a reduce function on each element in this ArkTS Float32Array and returns
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduce
 
@@ -914,6 +960,8 @@ Applies a reduce function for each element in this ArkTS Float32Array, receives 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -938,8 +986,8 @@ Applies a reduce function for each element in this ArkTS Float32Array, receives 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduce method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -952,6 +1000,8 @@ Reversely traverses this ArkTS Float32Array, applies a reduce function for each 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -976,8 +1026,8 @@ Reversely traverses this ArkTS Float32Array, applies a reduce function for each 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reduceRight
 
@@ -990,6 +1040,8 @@ Reversely traverses this ArkTS Float32Array, applies a reduce function on each e
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1013,8 +1065,8 @@ Reversely traverses this ArkTS Float32Array, applies a reduce function on each e
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reduceRight method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## reverse
 
@@ -1027,6 +1079,8 @@ Reverses this ArkTS Float32Array.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1044,8 +1098,8 @@ Reverses this ArkTS Float32Array.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The reverse method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## set
 
@@ -1058,6 +1112,8 @@ Writes the elements in an array-like object to the given start position in seque
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1076,8 +1132,8 @@ Writes the elements in an array-like object to the given start position in seque
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The set method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## slice
 
@@ -1090,6 +1146,8 @@ Selects a range of elements in this ArkTS Float32Array to create an ArkTS Float3
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1114,8 +1172,8 @@ Selects a range of elements in this ArkTS Float32Array to create an ArkTS Float3
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The slice method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## some
 
@@ -1128,6 +1186,8 @@ Checks whether any element in this ArkTS Float32Array meets a given condition.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1151,8 +1211,8 @@ Checks whether any element in this ArkTS Float32Array meets a given condition.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The some method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## sort
 
@@ -1165,6 +1225,8 @@ Sorts elements in this ArkTS Float32Array and returns the sorted ArkTS Float32Ar
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1188,8 +1250,8 @@ Sorts elements in this ArkTS Float32Array and returns the sorted ArkTS Float32Ar
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The sort method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## subarray
 
@@ -1202,6 +1264,8 @@ Truncates an array from a specified position and returns a new ArkTS Float32Arra
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1226,8 +1290,8 @@ Truncates an array from a specified position and returns a new ArkTS Float32Arra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The subarray method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toLocaleString
 
@@ -1240,6 +1304,8 @@ Generates a string of digits that matches the cultural conventions of the curren
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1257,8 +1323,8 @@ Generates a string of digits that matches the cultural conventions of the curren
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toLocaleString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## toString
 
@@ -1271,6 +1337,8 @@ Converts an ArkTS Float32Array into a string.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -1288,8 +1356,8 @@ Converts an ArkTS Float32Array into a string.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The toString method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## values
 
@@ -1302,6 +1370,8 @@ Returns an iterator object that contains the value of each element in this ArkTS
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1319,8 +1389,8 @@ Returns an iterator object that contains the value of each element in this ArkTS
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
-| [10200201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkts/errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
+| [10200011](../errorcode-utils.md#10200011-passed-thisobject-is-not-an-instance-of-the-containers-class) | The values method cannot be bound. |
+| [10200201](../errorcode-utils.md#10200201-concurrent-modification-error) | Concurrent modification error. |
 
 ## BYTES_PER_ELEMENT
 
@@ -1336,29 +1406,11 @@ Number of bytes occupied by each element in the ArkTS Float32Array.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-static readonly BYTES_PER_ELEMENT: number--><!--Device-Float32Array-static readonly BYTES_PER_ELEMENT: number-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## [index: number]
-
-```TypeScript
-[index: number]: number
-```
-
-Returns the item at that index.
-
-**Type:** number
-
-**Since:** 12
-
-**ArkTS mode:** ArkTS-Dyn only, since version 12.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-Float32Array-[index: number]: number--><!--Device-Float32Array-[index: number]: number-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -1375,6 +1427,8 @@ Bottom-layer buffer used by an ArkTS Float32Array.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -1396,6 +1450,8 @@ Number of bytes occupied by an ArkTS Float32Array.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-readonly byteLength: number--><!--Device-Float32Array-readonly byteLength: number-End-->
@@ -1416,6 +1472,8 @@ Offset between the ArkTS Float32Array and the start position of the ArrayBuffer.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Float32Array-readonly byteOffset: number--><!--Device-Float32Array-readonly byteOffset: number-End-->
@@ -1435,6 +1493,8 @@ Number of elements in an ArkTS Float32Array.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

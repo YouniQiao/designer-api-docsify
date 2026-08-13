@@ -2,7 +2,9 @@
 
 Enumerates the parity check modes.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-serialManager-enum Parity--><!--Device-serialManager-enum Parity-End-->
 
@@ -16,7 +18,9 @@ PARITY_NONE = 0
 
 无校验。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parity-PARITY_NONE = 0--><!--Device-Parity-PARITY_NONE = 0-End-->
 
@@ -30,7 +34,9 @@ PARITY_ODD = 1
 
 奇校验。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parity-PARITY_ODD = 1--><!--Device-Parity-PARITY_ODD = 1-End-->
 
@@ -44,7 +50,9 @@ PARITY_EVEN = 2
 
 偶校验。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parity-PARITY_EVEN = 2--><!--Device-Parity-PARITY_EVEN = 2-End-->
 
@@ -58,7 +66,9 @@ PARITY_MARK = 3
 
 固定为1。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parity-PARITY_MARK = 3--><!--Device-Parity-PARITY_MARK = 3-End-->
 
@@ -72,7 +82,9 @@ PARITY_SPACE = 4
 
 固定为0。
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-Parity-PARITY_SPACE = 4--><!--Device-Parity-PARITY_SPACE = 4-End-->
 

@@ -2,7 +2,9 @@
 
 创建虚拟屏幕的参数。
 
-**起始版本：** 16
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-display-interface VirtualScreenConfig--><!--Device-display-interface VirtualScreenConfig-End-->
 
@@ -18,7 +20,9 @@ density: number
 
 **类型：** number
 
-**起始版本：** 16
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-density: double--><!--Device-VirtualScreenConfig-density: double-End-->
 
@@ -34,7 +38,9 @@ height: number
 
 **类型：** number
 
-**起始版本：** 16
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-height: long--><!--Device-VirtualScreenConfig-height: long-End-->
 
@@ -50,7 +56,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 16
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-name: string--><!--Device-VirtualScreenConfig-name: string-End-->
 
@@ -66,7 +74,9 @@ supportsFocus?: boolean
 
 **类型：** boolean
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-supportsFocus?: boolean--><!--Device-VirtualScreenConfig-supportsFocus?: boolean-End-->
 
@@ -82,7 +92,9 @@ surfaceId: string
 
 **类型：** string
 
-**起始版本：** 16
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-surfaceId: string--><!--Device-VirtualScreenConfig-surfaceId: string-End-->
 
@@ -98,7 +110,9 @@ width: number
 
 **类型：** number
 
-**起始版本：** 16
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VirtualScreenConfig-width: long--><!--Device-VirtualScreenConfig-width: long-End-->
 

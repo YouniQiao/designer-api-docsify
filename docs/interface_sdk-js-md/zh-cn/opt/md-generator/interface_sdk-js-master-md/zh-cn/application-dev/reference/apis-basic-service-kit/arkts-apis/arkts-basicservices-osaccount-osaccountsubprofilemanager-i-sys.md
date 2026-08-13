@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-osAccount-interface OsAccountSubProfileManager--><!--Device-osAccount-interface OsAccountSubProfileManager-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -19,6 +21,8 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 创建一个系统账号子身份资料。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -46,13 +50,13 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 
 | 错误码ID |
 | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12300402](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-受限的账号) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12300402](../../apis-basic-services-kit/errorcode-account.md#12300402-系统账号下的子身份资料数量已达到上限) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -85,6 +89,8 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -112,13 +118,13 @@ deleteOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 错误码ID |
 | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300403](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
-| [12300404](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [12300404](../../apis-basic-services-kit/errorcode-account.md#12300404-系统账号的前台子身份资料不允许被删除) |
 
 ## 示例
 
@@ -152,6 +158,8 @@ getOsAccountForegroundSubProfileId(): Promise<number>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>-End-->
@@ -170,9 +178,9 @@ getOsAccountForegroundSubProfileId(): Promise<number>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
 ## 示例
 
@@ -202,6 +210,8 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>-End-->
@@ -226,10 +236,10 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
 ## 示例
 
@@ -262,6 +272,8 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>-End-->
@@ -286,9 +298,9 @@ getOsAccountLocalIdForSubProfile(subProfileId: number): Promise<number>
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
 ## 示例
 
@@ -321,6 +333,8 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -347,10 +361,10 @@ getOsAccountSubProfile(subProfileId: number): Promise<OsAccountSubProfile>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
 ## 示例
 
@@ -383,6 +397,8 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -410,10 +426,10 @@ getOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promise<
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
 
 ## 示例
 
@@ -447,6 +463,8 @@ getOsAccountSubProfileIds(): Promise<number[]>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -467,9 +485,9 @@ getOsAccountSubProfileIds(): Promise<number[]>
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -499,6 +517,8 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -525,10 +545,10 @@ getOsAccountSubProfileIds(osAccountLocalId: number): Promise<number[]>
 
 | 错误码ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-账号不存在) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -561,6 +581,8 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void-End-->
@@ -579,8 +601,8 @@ offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): 
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -608,6 +630,8 @@ onOsAccountSubProfileEvent(
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void-End-->
@@ -627,9 +651,9 @@ onOsAccountSubProfileEvent(
 
 | 错误码ID |
 | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-无效参数) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
 
 ## 示例
 
@@ -660,6 +684,8 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -687,13 +713,13 @@ switchOsAccountSubProfile(osAccountLocalId: number, subProfileId: number): Promi
 
 | 错误码ID |
 | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
-| [12300403](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
-| [12300405](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-账号服务忙碌) |
+| [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-受限的系统账号子身份资料) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-系统服务异常) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-系统账号子身份资料不存在) |
+| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-已登录分布式账号的前台子身份不可直接切换到后台) |
 
 ## 示例
 

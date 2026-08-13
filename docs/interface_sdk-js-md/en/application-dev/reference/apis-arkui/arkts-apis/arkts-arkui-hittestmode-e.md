@@ -1,17 +1,12 @@
 # HitTestMode
 
-Sets the response logic and node blocking rules for the hit test.
-
-> **NOTE：**
-> 
-> When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child
-> component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch
-> testing for lower-layer nodes can only be triggered by setting the
-> [hitTestBehavior](CommonMethod#hitTestBehavior) of the topmost node to **HitTestMode.Transparent**.
+Sets the response logic and node blocking rules for the hit test. > **NOTE：**> > When multiple nodes in a **Stack** component have overlapping touch areas, if the touch point hits a child > component of the topmost node, only the topmost node will undergo hit testing by default. In this case, touch > testing for lower-layer nodes can only be triggered by setting the > hitTestBehavior of the topmost node to **HitTestMode.Transparent**.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum HitTestMode--><!--Device-unnamed-declare enum HitTestMode-End-->
 
@@ -28,6 +23,8 @@ Default hit test mode. The node itself and its child nodes respond to the hit te
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -49,6 +46,8 @@ The node itself responds to the hit test and blocks the hit test of child nodes,
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -68,6 +67,8 @@ Both the node itself and its child nodes respond to the hit test and do not bloc
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -89,6 +90,8 @@ The node itself does not respond to the hit test and does not block the hit test
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
@@ -108,6 +111,8 @@ The node itself and its child nodes respond to the hit test, preventing all sibl
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +135,8 @@ The node itself does not respond to the hit test, and all its descendants (child
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

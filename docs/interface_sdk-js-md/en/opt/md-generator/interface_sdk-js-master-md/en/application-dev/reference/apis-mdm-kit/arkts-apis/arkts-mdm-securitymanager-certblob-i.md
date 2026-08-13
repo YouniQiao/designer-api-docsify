@@ -4,6 +4,8 @@ Represents the certificate information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-securityManager-export interface CertBlob--><!--Device-securityManager-export interface CertBlob-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,6 +28,8 @@ Certificate alias. The value length must be less than 40 characters.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CertBlob-alias: string--><!--Device-CertBlob-alias: string-End-->
@@ -43,6 +47,8 @@ Binary content of the certificate.
 **Type:** Uint8Array
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

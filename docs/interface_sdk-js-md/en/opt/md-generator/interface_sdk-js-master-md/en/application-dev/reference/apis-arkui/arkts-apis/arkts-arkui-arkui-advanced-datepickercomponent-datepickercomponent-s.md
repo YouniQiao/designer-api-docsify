@@ -2,13 +2,11 @@
 
 DatePickerComponent component is used to select date (year, month, day) and time (hour, minute, second).
 
-## Child Components
-
-None
+## Child Components None
 
 **Since:** 26.0.0
 
-**Decorator:** @Component
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare struct DatePickerComponent--><!--Device-unnamed-export declare struct DatePickerComponent-End-->
 
@@ -23,7 +21,8 @@ import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerCompo
 ## options
 
 ```TypeScript
-options: DatePickerComponentOptions
+@Prop
+  options: DatePickerComponentOptions
 ```
 
 Defines options for the date time picker component.
@@ -32,12 +31,12 @@ Defines options for the date time picker component.
 
 **Since:** 26.0.0
 
-**Decorator:** @Prop
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-DatePickerComponent-options: DatePickerComponentOptions--><!--Device-DatePickerComponent-options: DatePickerComponentOptions-End-->
+<!--Device-DatePickerComponent-@Prop  options: DatePickerComponentOptions--><!--Device-DatePickerComponent-@Prop  options: DatePickerComponentOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

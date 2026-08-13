@@ -4,6 +4,8 @@ Notify progress data.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 <!--Device-backgroundTaskManager-export interface ProgressInfo--><!--Device-backgroundTaskManager-export interface ProgressInfo-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
@@ -26,6 +28,8 @@ Notification content.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressInfo-fileName: string--><!--Device-ProgressInfo-fileName: string-End-->
@@ -44,6 +48,8 @@ Whether to ring when the download progress reaches 100%.
 
 **Since:** 26.1.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProgressInfo-isMute?: boolean--><!--Device-ProgressInfo-isMute?: boolean-End-->
@@ -56,11 +62,13 @@ Whether to ring when the download progress reaches 100%.
 progressValue?: number
 ```
 
-Download progress. If this field does not exist, the progress ring will not be displayed.The value should be an integer.
+Download progress. If this field does not exist, the progress ring will not be displayed. The value should be an integer.
 
 **Type:** number
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -79,6 +87,8 @@ Notification title.
 **Type:** string
 
 **Since:** 26.1.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

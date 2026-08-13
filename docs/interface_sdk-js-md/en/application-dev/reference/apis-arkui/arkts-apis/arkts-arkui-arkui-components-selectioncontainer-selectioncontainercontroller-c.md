@@ -6,6 +6,8 @@ Defines the controller of the SelectionContainer component.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class SelectionContainerController--><!--Device-unnamed-export declare class SelectionContainerController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,11 +24,13 @@ import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithText
 clearTextSelection(): void
 ```
 
-Clears the current text selection of the SelectionContainer,and closes the selection menu if it is currently shown.
+Clears the current text selection of the SelectionContainer, and closes the selection menu if it is currently shown.
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +51,8 @@ Closes the custom or default selection menu of the SelectionContainer.
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

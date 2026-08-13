@@ -2,7 +2,9 @@
 
 Describes the value of the indication or notification sent by the Gatt server.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface NotifyCharacteristic--><!--Device-ble-interface NotifyCharacteristic-End-->
 
@@ -24,7 +26,9 @@ The UUID of a NotifyCharacteristic instance
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,7 +48,9 @@ The value of a NotifyCharacteristic instance
 
 **Type:** ArrayBuffer
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +70,9 @@ Specifies whether to request confirmation from the BLE peripheral device (indica
 
 **Type:** boolean
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,7 +92,9 @@ The UUID of the [GattService](arkts-connectivity-ble-gattservice-i.md#GattServic
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,17 +1,10 @@
 # @ohos.effectKit
 
-The Image Effect module provides basic capabilities for processing images, including brightness adjustment,blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes.
+The Image Effect module provides basic capabilities for processing images, including brightness adjustment, blurring, grayscale adjustment, and intelligent color picking. It is applicable to scenarios such as adding filter effects in image editing apps, blurring the background image of app startup pages, automatically extracting UI theme colors, and analyzing image color schemes. This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect (UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects. This module provides the following classes: - [Filter](arkts-arkgraphics2d-effectkit-filter-i.md#Filter): an effect class used to add a specified effect to the effect chain, enabling combined processing of multiple image effects through chained calls. - [Color](arkts-arkgraphics2d-effectkit-color-i.md#Color): a class used to store the color picked. - [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md#ColorPicker): a smart color picker.
 
-This module is used for offline processing of image.PixelMap to obtain visual effects, while uiEffect(UI Effect Service) connects to the rendering service in real time to process screen frame buffers for dynamic visual effects.
+**Since:** 23
 
-This module provides the following classes:
-
-- [Filter](arkts-arkgraphics2d-effectkit-filter-i.md#Filter): an effect class used to add a specified effect to the effect chain,  
- enabling combined processing of multiple image effects through chained calls.  
-- [Color](arkts-arkgraphics2d-effectkit-color-i.md#Color): a class used to store the color picked.  
-- [ColorPicker](arkts-arkgraphics2d-effectkit-colorpicker-i.md#ColorPicker): a smart color picker.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace effectKit--><!--Device-unnamed-declare namespace effectKit-End-->
 
@@ -29,11 +22,11 @@ import { effectKit } from '@kit.ArkGraphics2D';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker) |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-1) |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-2) |
-| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker-3) |
-| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect) |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) |
+| [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createColorPicker) |
+| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createEffect) |
 
 ### Interfaces
 

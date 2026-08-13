@@ -1,22 +1,12 @@
 # TextSpanType
 
-[Span](../../../reference/apis-arkui/arkui-ts/ts-basic-components-span.md)类型信息。
-
-> **说明：**
-> 
-> 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找：
-> 
-> 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单
-> 
-> 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单
-> 
-> 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单
-> 
-> 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
+[Span](../../../reference/apis-arkui/arkui-ts/ts-basic-components-span.md)类型信息。 > **说明：** > > 菜单类型的匹配顺序如下。例如，用户长按文本时，根据以下规则查找： > > 1. 查找是否注册了TextSpanType.TEXT、TextResponseType.LONG_PRESS菜单 > > 2. 查找是否注册了TextSpanType.TEXT、TextResponseType.DEFAULT菜单 > > 3. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.LONG_PRESS菜单 > > 4. 查找是否注册了TextSpanType.DEFAULT、TextResponseType.DEFAULT菜单
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export declare enum TextSpanType--><!--Device-unnamed-export declare enum TextSpanType-End-->
 
@@ -28,13 +18,13 @@
 TEXT = 0
 ```
 
-Span为文字类型。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Span为文字类型。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,13 +38,13 @@ Span为文字类型。
 IMAGE = 1
 ```
 
-Span为图像类型。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Span为图像类型。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,13 +58,13 @@ Span为图像类型。
 MIXED = 2
 ```
 
-Span为图文混合类型。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
+Span为图文混合类型。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 12开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -88,13 +78,13 @@ Span为图文混合类型。
 DEFAULT = 3
 ```
 
-注册此类型菜单但未注册TEXT、IMAGE、MIXED菜单时，文字类型、图片类型、图文混合类型都会触发并显示此类型对应的菜单。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
+注册此类型菜单但未注册TEXT、IMAGE、MIXED菜单时，文字类型、图片类型、图文混合类型都会触发并显示此类型对应的菜单。 **原子化服务API（仅ArkTS-Dyn）：** 从API version 15开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -18,6 +18,8 @@ Adds contacts in batches. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.WRITE_CONTACTS
 
 **Atomic service API:** This API can be used in atomic services since API version 23.
@@ -43,13 +45,13 @@ Adds contacts in batches. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [16700002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
-| [16700001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#16700001-system-internal-error) | General error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [16700002](../errorcode-contacts.md#16700002-parameter-check-failed) | Invalid parameter value. |
+| [16700001](../errorcode-contacts.md#16700001-system-internal-error) | General error. |
 
 ## Examples
 
-In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

@@ -14,7 +14,9 @@ function decodeImage(encodedImage: image.PixelMap): Promise<string>
 
 Decodes the information carried in the image. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>--><!--Device-metadataBinding-function decodeImage(encodedImage: image.PixelMap): Promise<string>-End-->
 
@@ -38,9 +40,9 @@ Decodes the information carried in the image. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [32100001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [32100003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100003-decoding-failed) |
+| [32100001](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100001-file-creation-failed) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [32100003](../../apis-multimodalawareness-kit/errorcode-metadataBinding.md#32100003-decoding-failed) |
 
 ## Examples
 

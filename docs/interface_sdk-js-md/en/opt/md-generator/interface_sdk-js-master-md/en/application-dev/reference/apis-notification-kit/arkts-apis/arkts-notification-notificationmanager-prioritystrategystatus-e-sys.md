@@ -4,6 +4,8 @@ Describes the application notification strategy.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-notificationManager-export enum PriorityStrategyStatus--><!--Device-notificationManager-export enum PriorityStrategyStatus-End-->
 
 **System capability:** SystemCapability.Notification.Notification
@@ -19,6 +21,8 @@ STATUS_SYSTEM_DEFAULT = 1 << 0
 Default priority strategy.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Only system rule.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PriorityStrategyStatus-STATUS_SYSTEM_RULE = 1 << 1--><!--Device-PriorityStrategyStatus-STATUS_SYSTEM_RULE = 1 << 1-End-->
@@ -55,6 +61,8 @@ STATUS_INTELLIGENT = 1 << 2
 Only intelligent recognition.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Only user-defined.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PriorityStrategyStatus-STATUS_USER_DEFINED = 1 << 3--><!--Device-PriorityStrategyStatus-STATUS_USER_DEFINED = 1 << 3-End-->
@@ -92,6 +102,8 @@ Only application-defined.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PriorityStrategyStatus-STATUS_APPLICATION_DEFINED = 1 << 4--><!--Device-PriorityStrategyStatus-STATUS_APPLICATION_DEFINED = 1 << 4-End-->
@@ -109,6 +121,8 @@ STATUS_ALL_PRIORITY = 1 << 5
 All.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

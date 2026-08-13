@@ -2,7 +2,9 @@
 
 The enum of reasons for destroying partner agent extension ability.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason--><!--Device-partnerAgent-export enum PartnerAgentExtensionAbilityDestroyReason-End-->
 
@@ -16,7 +18,9 @@ UNKNOWN_REASON = 0
 
 Unknown reason.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -32,7 +36,9 @@ USER_CLOSED_ABILITY = 1
 
 The user actively disables this ability feature.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +54,9 @@ DEVICE_UNPAIRED = 2
 
 The device is unpaired.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +72,9 @@ DEVICE_LOST = 3
 
 The device is lost.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -80,7 +90,9 @@ BLUETOOTH_DISABLED = 4
 
 Bluetooth is disabled.
 
-**Since:** 23
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

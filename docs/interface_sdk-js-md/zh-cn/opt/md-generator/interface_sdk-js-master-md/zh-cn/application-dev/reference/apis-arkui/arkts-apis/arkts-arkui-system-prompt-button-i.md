@@ -4,6 +4,8 @@
 
 **起始版本：** 3
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface Button--><!--Device-unnamed-export interface Button-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ color: string
 **类型：** string
 
 **起始版本：** 3
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -37,6 +41,8 @@ text: string
 **类型：** string
 
 **起始版本：** 3
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

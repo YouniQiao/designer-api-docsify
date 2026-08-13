@@ -12,11 +12,11 @@ import { remoteDevice } from '@kit.ConnectivityKit';
 function onPairingRequest(callback: Callback<PairingRequestParam>): void
 ```
 
-Subscribes to pairing request events from remote NearLink devices.
-
-This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission.If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission,the callback returns the real device address; otherwise, a random device address is returned.
+Subscribes to pairing request events from remote NearLink devices. This event is accessible only to system applications that granted the ohos.permission.NEARLINK_ACCESS permission. If the application is granted the ohos.permission.GET_NEARLINK_PEER_MAC permission, the callback returns the real device address; otherwise, a random device address is returned.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,5 +36,5 @@ This event is accessible only to system applications that granted the ohos.permi
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 36100099 |

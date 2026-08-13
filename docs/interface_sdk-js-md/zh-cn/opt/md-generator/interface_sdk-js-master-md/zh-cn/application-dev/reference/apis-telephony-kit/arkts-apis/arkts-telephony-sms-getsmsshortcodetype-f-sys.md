@@ -10,6 +10,8 @@ function getSmsShortCodeType(slotId: number, destAddr: string): Promise<SmsShort
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.SEND_MESSAGES
 
 <!--Device-sms-function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCodeType>--><!--Device-sms-function getSmsShortCodeType(slotId: int, destAddr: string): Promise<SmsShortCodeType>-End-->
@@ -35,10 +37,10 @@ function getSmsShortCodeType(slotId: number, destAddr: string): Promise<SmsShort
 
 | 错误码ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [8300999](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300999-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [8300004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300004-未识别sim卡) |
-| [8300002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300002-服务连接失败) |
-| [8300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300003-系统内部错误) |
-| [8300001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-telephony-kit/errorcode-telephony.md#8300001-输入参数不在处理范围内) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [8300999](../errorcode-telephony.md#8300999-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [8300004](../errorcode-telephony.md#8300004-未识别sim卡) |
+| [8300002](../errorcode-telephony.md#8300002-服务连接失败) |
+| [8300003](../errorcode-telephony.md#8300003-系统内部错误) |
+| [8300001](../errorcode-telephony.md#8300001-输入参数不在处理范围内) |

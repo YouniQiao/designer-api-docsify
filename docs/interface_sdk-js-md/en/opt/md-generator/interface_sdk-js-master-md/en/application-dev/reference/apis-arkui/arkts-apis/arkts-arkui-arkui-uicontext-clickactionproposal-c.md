@@ -1,21 +1,14 @@
 # ClickActionProposal
 
-Smart gesture click action handling. When dynamically customizing smart gesture behavior through the  
-[registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value  
-[GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type triggers a click operation on the target component.
-
-> **NOTE：**
-> 
-> - This action handling follows the "select first, then click" processing semantics.
-> 
-> - If the target node is not yet selected, this handling first establishes the selected state without immediately
-> triggering the click.
+Smart gesture click action handling. When dynamically customizing smart gesture behavior through the [registerMonitor](arkts-arkui-arkui-uicontext-smartgesturecontroller-c.md#registerMonitor) API, setting the return value [GestureHandlingResolution](arkts-arkui-arkui-uicontext-gesturehandlingresolution-c.md#GestureHandlingResolution)'s **selectedProposal** to an object of this type triggers a click operation on the target component. > **NOTE：**> > - This action handling follows the "select first, then click" processing semantics. > > - If the target node is not yet selected, this handling first establishes the selected state without immediately > triggering the click.
 
 **Inheritance/Implementation:** ClickActionProposal extends [TargetedGestureProposal](arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **Since:** 26.0.0
 
-<!--Device-unnamed-export class ClickActionProposal extends TargetedGestureProposal--><!--Device-unnamed-export class ClickActionProposal extends TargetedGestureProposal-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ClickActionProposal--><!--Device-unnamed-export class ClickActionProposal-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -34,6 +27,8 @@ constructor(node: FrameNode)
 Constructor for the smart gesture click action handling.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

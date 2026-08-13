@@ -8,7 +8,9 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 
 通知屏幕截屏的事件类型，使用Promise异步回调。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-window-function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>--><!--Device-window-function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>-End-->
 
@@ -32,9 +34,9 @@ function notifyScreenshotEvent(eventType: ScreenshotEventType): Promise<void>
 
 | 错误码ID |
 | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) |
-| [1300016](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300016-参数校验错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) |
+| [1300016](../errorcode-window.md#1300016-参数校验错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

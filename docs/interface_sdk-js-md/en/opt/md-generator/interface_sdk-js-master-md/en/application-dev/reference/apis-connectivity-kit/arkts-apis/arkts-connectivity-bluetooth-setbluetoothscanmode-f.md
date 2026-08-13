@@ -18,7 +18,7 @@ Sets the Bluetooth scan mode for a device.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setBluetoothScanMode](ohos.bluetoothManager/bluetoothManager.setBluetoothScanMode)
+**Substitutes:** [setBluetoothScanMode](arkts-connectivity-bluetoothmanager-setbluetoothscanmode-f.md#setBluetoothScanMode)
 
 **Required permissions:** ohos.permission.USE_BLUETOOTH
 

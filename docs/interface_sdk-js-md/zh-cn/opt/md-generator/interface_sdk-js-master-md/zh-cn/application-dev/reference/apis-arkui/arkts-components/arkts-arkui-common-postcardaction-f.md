@@ -10,6 +10,8 @@ Post Card Action.
 
 **起始版本：** 11
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -24,5 +26,5 @@ Post Card Action.
 
 | 参数名 | 类型 | 必填 |
 | --- | --- | --- |
-| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | 是 |
+| [component](../../apis-na/arkts-apis/arkts-na-interop-compatiblecomponentinfo-i.md) | Object | 是 |
 | action | Object | 是 |

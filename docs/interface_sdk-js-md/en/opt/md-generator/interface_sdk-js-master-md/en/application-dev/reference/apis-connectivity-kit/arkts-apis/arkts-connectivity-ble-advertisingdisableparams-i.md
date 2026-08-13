@@ -2,7 +2,9 @@
 
 Parameter for dynamically disable advertising.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ble-interface AdvertisingDisableParams--><!--Device-ble-interface AdvertisingDisableParams-End-->
 
@@ -24,7 +26,9 @@ Indicates the ID of current advertising.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

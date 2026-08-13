@@ -4,6 +4,8 @@
 
 **起始版本：** 20
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum ColorSpace--><!--Device-unnamed-declare enum ColorSpace-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -14,11 +16,11 @@
 BT2020 = 2
 ```
 
-BT2020颜色空间，具有更广的色域，适用于高端显示设备。
-
-**系统接口：** 此接口为系统接口。
+BT2020颜色空间，具有更广的色域，适用于高端显示设备。 **系统接口：** 此接口为系统接口。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

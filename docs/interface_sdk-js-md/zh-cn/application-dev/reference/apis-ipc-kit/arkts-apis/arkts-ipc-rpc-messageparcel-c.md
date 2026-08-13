@@ -1,6 +1,6 @@
 # MessageParcel
 
-在RPC过程中，发送方可以使用MessageParcel提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageParcel提供的读方法从该对象中读取特定格式的数据。数据格式包括：基础类型及数组、IPC对象、接口描述符和自定义序列化对象。
+在RPC过程中，发送方可以使用MessageParcel提供的写方法，将待发送的数据以特定格式写入该对象。接收方可以使用MessageParcel提供的读方法从该对象中读取特定格式的数据。数据格式包括：基础类型及数组、IPC对象、 接口描述符和自定义序列化对象。
 
 **起始版本：** 7
 
@@ -28,7 +28,7 @@ static closeFileDescriptor(fd: number): void
 
 **废弃版本：** 9
 
-**替代接口：** [closeFileDescriptor](rpc.MessageSequence.closeFileDescriptor(fd:)
+**替代接口：** [closeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#closeFileDescriptor)(fd: int)
 
 <!--Device-MessageParcel-static closeFileDescriptor(fd: number): void--><!--Device-MessageParcel-static closeFileDescriptor(fd: number): void-End-->
 
@@ -159,7 +159,7 @@ static dupFileDescriptor(fd: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [dupFileDescriptor](rpc.MessageSequence.dupFileDescriptor(fd:)
+**替代接口：** [dupFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#dupFileDescriptor)(fd: int)
 
 <!--Device-MessageParcel-static dupFileDescriptor(fd: number): number--><!--Device-MessageParcel-static dupFileDescriptor(fd: number): number-End-->
 
@@ -585,7 +585,7 @@ readBooleanArray(dataIn: boolean[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readBooleanArray](rpc.MessageSequence#readBooleanArray(dataIn:)
+**替代接口：** [readBooleanArray](arkts-ipc-rpc-messagesequence-c.md#readBooleanArray)(dataIn: boolean[])
 
 <!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageParcel-readBooleanArray(dataIn: boolean[]): void-End-->
 
@@ -715,7 +715,7 @@ readByteArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readByteArray](rpc.MessageSequence#readByteArray(dataIn:)
+**替代接口：** [readByteArray](arkts-ipc-rpc-messagesequence-c.md#readByteArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readByteArray(dataIn: number[]): void--><!--Device-MessageParcel-readByteArray(dataIn: number[]): void-End-->
 
@@ -846,7 +846,7 @@ readCharArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readCharArray](rpc.MessageSequence#readCharArray(dataIn:)
+**替代接口：** [readCharArray](arkts-ipc-rpc-messagesequence-c.md#readCharArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readCharArray(dataIn: number[]): void--><!--Device-MessageParcel-readCharArray(dataIn: number[]): void-End-->
 
@@ -976,7 +976,7 @@ readDoubleArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readDoubleArray](rpc.MessageSequence#readDoubleArray(dataIn:)
+**替代接口：** [readDoubleArray](arkts-ipc-rpc-messagesequence-c.md#readDoubleArray)(dataIn: double[])
 
 <!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void--><!--Device-MessageParcel-readDoubleArray(dataIn: number[]): void-End-->
 
@@ -1071,7 +1071,7 @@ readException(): void
 
 ## 示例
 
-在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../application-models/uiability-usage.md#获取uiability的上下文信息)。
+在本文档的示例中，通过this.getUIContext().getHostContext()来获取UIAbilityContext，其中this代表继承自UIAbility的UIAbility实例。如需要在页面中使用UIAbilityContext提供的能力，请参见[获取UIAbility的上下文信息](../../../application-models/uiability-usage.md#获取uiability的上下文信息)。
 
 ```TypeScript
 // FA模型需要从@kit.AbilityKit导入featureAbility
@@ -1247,7 +1247,7 @@ readFloatArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readFloatArray](rpc.MessageSequence#readFloatArray(dataIn:)
+**替代接口：** [readFloatArray](arkts-ipc-rpc-messagesequence-c.md#readFloatArray)(dataIn: double[])
 
 <!--Device-MessageParcel-readFloatArray(dataIn: number[]): void--><!--Device-MessageParcel-readFloatArray(dataIn: number[]): void-End-->
 
@@ -1377,7 +1377,7 @@ readIntArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readIntArray](rpc.MessageSequence#readIntArray(dataIn:)
+**替代接口：** [readIntArray](arkts-ipc-rpc-messagesequence-c.md#readIntArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readIntArray(dataIn: number[]): void--><!--Device-MessageParcel-readIntArray(dataIn: number[]): void-End-->
 
@@ -1549,7 +1549,7 @@ readLongArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readLongArray](rpc.MessageSequence#readLongArray(dataIn:)
+**替代接口：** [readLongArray](arkts-ipc-rpc-messagesequence-c.md#readLongArray)(dataIn: long[])
 
 <!--Device-MessageParcel-readLongArray(dataIn: number[]): void--><!--Device-MessageParcel-readLongArray(dataIn: number[]): void-End-->
 
@@ -1636,7 +1636,7 @@ readRawData(size: number): number[]
 
 **废弃版本：** 9
 
-**替代接口：** [readRawDataBuffer](rpc.MessageSequence#readRawDataBuffer(size:)
+**替代接口：** [readRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#readRawDataBuffer)(size: int)
 
 <!--Device-MessageParcel-readRawData(size: number): number[]--><!--Device-MessageParcel-readRawData(size: number): number[]-End-->
 
@@ -1740,7 +1740,7 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readRemoteObjectArray](rpc.MessageSequence#readRemoteObjectArray(objects:)
+**替代接口：** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readRemoteObjectArray)(objects: IRemoteObject[])
 
 <!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageParcel-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
@@ -1796,7 +1796,7 @@ readRemoteObjectArray(): IRemoteObject[]
 
 **废弃版本：** 9
 
-**替代接口：** [readRemoteObjectArray](rpc.MessageSequence#readRemoteObjectArray(objects:)
+**替代接口：** [readRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#readRemoteObjectArray)(objects: IRemoteObject[])
 
 <!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageParcel-readRemoteObjectArray(): IRemoteObject[]-End-->
 
@@ -1852,7 +1852,7 @@ readSequenceable(dataIn: Sequenceable): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [readParcelable](rpc.MessageSequence#readParcelable(dataIn:)
+**替代接口：** [readParcelable](arkts-ipc-rpc-messagesequence-c.md#readParcelable)(dataIn: Parcelable)
 
 <!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean--><!--Device-MessageParcel-readSequenceable(dataIn: Sequenceable): boolean-End-->
 
@@ -1922,7 +1922,7 @@ readSequenceableArray(sequenceableArray: Sequenceable[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readParcelableArray](rpc.MessageSequence#readParcelableArray(parcelableArray:)
+**替代接口：** [readParcelableArray](arkts-ipc-rpc-messagesequence-c.md#readParcelableArray)(parcelableArray: Parcelable[])
 
 <!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void--><!--Device-MessageParcel-readSequenceableArray(sequenceableArray: Sequenceable[]): void-End-->
 
@@ -2031,7 +2031,7 @@ readShortArray(dataIn: number[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readShortArray](rpc.MessageSequence#readShortArray(dataIn:)
+**替代接口：** [readShortArray](arkts-ipc-rpc-messagesequence-c.md#readShortArray)(dataIn: int[])
 
 <!--Device-MessageParcel-readShortArray(dataIn: number[]): void--><!--Device-MessageParcel-readShortArray(dataIn: number[]): void-End-->
 
@@ -2161,7 +2161,7 @@ readStringArray(dataIn: string[]): void
 
 **废弃版本：** 9
 
-**替代接口：** [readStringArray](rpc.MessageSequence#readStringArray(dataIn:)
+**替代接口：** [readStringArray](arkts-ipc-rpc-messagesequence-c.md#readStringArray)(dataIn: string[])
 
 <!--Device-MessageParcel-readStringArray(dataIn: string[]): void--><!--Device-MessageParcel-readStringArray(dataIn: string[]): void-End-->
 
@@ -2282,7 +2282,7 @@ rewindRead(pos: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [rewindRead](rpc.MessageSequence#rewindRead(pos:)
+**替代接口：** [rewindRead](arkts-ipc-rpc-messagesequence-c.md#rewindRead)(pos: int)
 
 <!--Device-MessageParcel-rewindRead(pos: number): boolean--><!--Device-MessageParcel-rewindRead(pos: number): boolean-End-->
 
@@ -2334,7 +2334,7 @@ rewindWrite(pos: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [rewindWrite](rpc.MessageSequence#rewindWrite(pos:)
+**替代接口：** [rewindWrite](arkts-ipc-rpc-messagesequence-c.md#rewindWrite)(pos: int)
 
 <!--Device-MessageParcel-rewindWrite(pos: number): boolean--><!--Device-MessageParcel-rewindWrite(pos: number): boolean-End-->
 
@@ -2384,7 +2384,7 @@ setCapacity(size: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setCapacity](rpc.MessageSequence#setCapacity(size:)
+**替代接口：** [setCapacity](arkts-ipc-rpc-messagesequence-c.md#setCapacity)(size: int)
 
 <!--Device-MessageParcel-setCapacity(size: number): boolean--><!--Device-MessageParcel-setCapacity(size: number): boolean-End-->
 
@@ -2431,7 +2431,7 @@ setSize(size: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [setSize](rpc.MessageSequence#setSize(size:)
+**替代接口：** [setSize](arkts-ipc-rpc-messagesequence-c.md#setSize)(size: int)
 
 <!--Device-MessageParcel-setSize(size: number): boolean--><!--Device-MessageParcel-setSize(size: number): boolean-End-->
 
@@ -2478,7 +2478,7 @@ writeAshmem(ashmem: Ashmem): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeAshmem](rpc.MessageSequence#writeAshmem(ashmem:)
+**替代接口：** [writeAshmem](arkts-ipc-rpc-messagesequence-c.md#writeAshmem)(ashmem: Ashmem)
 
 <!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean--><!--Device-MessageParcel-writeAshmem(ashmem: Ashmem): boolean-End-->
 
@@ -2526,7 +2526,7 @@ writeBoolean(val: boolean): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeBoolean](rpc.MessageSequence#writeBoolean(val:)
+**替代接口：** [writeBoolean](arkts-ipc-rpc-messagesequence-c.md#writeBoolean)(val: boolean)
 
 <!--Device-MessageParcel-writeBoolean(val: boolean): boolean--><!--Device-MessageParcel-writeBoolean(val: boolean): boolean-End-->
 
@@ -2573,7 +2573,7 @@ writeBooleanArray(booleanArray: boolean[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeBooleanArray](rpc.MessageSequence#writeBooleanArray(booleanArray:)
+**替代接口：** [writeBooleanArray](arkts-ipc-rpc-messagesequence-c.md#writeBooleanArray)(booleanArray: boolean[])
 
 <!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean--><!--Device-MessageParcel-writeBooleanArray(booleanArray: boolean[]): boolean-End-->
 
@@ -2620,7 +2620,7 @@ writeByte(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeByte](rpc.MessageSequence#writeByte(val:)
+**替代接口：** [writeByte](arkts-ipc-rpc-messagesequence-c.md#writeByte)(val: int)
 
 <!--Device-MessageParcel-writeByte(val: number): boolean--><!--Device-MessageParcel-writeByte(val: number): boolean-End-->
 
@@ -2667,7 +2667,7 @@ writeByteArray(byteArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeByteArray](rpc.MessageSequence#writeByteArray(byteArray:)
+**替代接口：** [writeByteArray](arkts-ipc-rpc-messagesequence-c.md#writeByteArray)(byteArray: int[])
 
 <!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean--><!--Device-MessageParcel-writeByteArray(byteArray: number[]): boolean-End-->
 
@@ -2715,7 +2715,7 @@ writeChar(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeChar](rpc.MessageSequence#writeChar(val:)
+**替代接口：** [writeChar](arkts-ipc-rpc-messagesequence-c.md#writeChar)(val: int)
 
 <!--Device-MessageParcel-writeChar(val: number): boolean--><!--Device-MessageParcel-writeChar(val: number): boolean-End-->
 
@@ -2762,7 +2762,7 @@ writeCharArray(charArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeCharArray](rpc.MessageSequence#writeCharArray(charArray:)
+**替代接口：** [writeCharArray](arkts-ipc-rpc-messagesequence-c.md#writeCharArray)(charArray: int[])
 
 <!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean--><!--Device-MessageParcel-writeCharArray(charArray: number[]): boolean-End-->
 
@@ -2809,7 +2809,7 @@ writeDouble(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeDouble](rpc.MessageSequence#writeDouble(val:)
+**替代接口：** [writeDouble](arkts-ipc-rpc-messagesequence-c.md#writeDouble)(val: double)
 
 <!--Device-MessageParcel-writeDouble(val: number): boolean--><!--Device-MessageParcel-writeDouble(val: number): boolean-End-->
 
@@ -2856,7 +2856,7 @@ writeDoubleArray(doubleArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeDoubleArray](rpc.MessageSequence#writeDoubleArray(doubleArray:)
+**替代接口：** [writeDoubleArray](arkts-ipc-rpc-messagesequence-c.md#writeDoubleArray)(doubleArray: double[])
 
 <!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean--><!--Device-MessageParcel-writeDoubleArray(doubleArray: number[]): boolean-End-->
 
@@ -2903,7 +2903,7 @@ writeFileDescriptor(fd: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeFileDescriptor](rpc.MessageSequence#writeFileDescriptor(fd:)
+**替代接口：** [writeFileDescriptor](arkts-ipc-rpc-messagesequence-c.md#writeFileDescriptor)(fd: int)
 
 <!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean--><!--Device-MessageParcel-writeFileDescriptor(fd: number): boolean-End-->
 
@@ -2953,7 +2953,7 @@ writeFloat(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeFloat](rpc.MessageSequence#writeFloat(val:)
+**替代接口：** [writeFloat](arkts-ipc-rpc-messagesequence-c.md#writeFloat)(val: double)
 
 <!--Device-MessageParcel-writeFloat(val: number): boolean--><!--Device-MessageParcel-writeFloat(val: number): boolean-End-->
 
@@ -3000,7 +3000,7 @@ writeFloatArray(floatArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeFloatArray](rpc.MessageSequence#writeFloatArray(floatArray:)
+**替代接口：** [writeFloatArray](arkts-ipc-rpc-messagesequence-c.md#writeFloatArray)(floatArray: double[])
 
 <!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean--><!--Device-MessageParcel-writeFloatArray(floatArray: number[]): boolean-End-->
 
@@ -3047,7 +3047,7 @@ writeInt(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeInt](rpc.MessageSequence#writeInt(val:)
+**替代接口：** [writeInt](arkts-ipc-rpc-messagesequence-c.md#writeInt)(val: int)
 
 <!--Device-MessageParcel-writeInt(val: number): boolean--><!--Device-MessageParcel-writeInt(val: number): boolean-End-->
 
@@ -3094,7 +3094,7 @@ writeIntArray(intArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeIntArray](rpc.MessageSequence#writeIntArray(intArray:)
+**替代接口：** [writeIntArray](arkts-ipc-rpc-messagesequence-c.md#writeIntArray)(intArray: int[])
 
 <!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean--><!--Device-MessageParcel-writeIntArray(intArray: number[]): boolean-End-->
 
@@ -3141,7 +3141,7 @@ writeInterfaceToken(token: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeInterfaceToken](rpc.MessageSequence#writeInterfaceToken(token:)
+**替代接口：** [writeInterfaceToken](arkts-ipc-rpc-messagesequence-c.md#writeInterfaceToken)(token: string)
 
 <!--Device-MessageParcel-writeInterfaceToken(token: string): boolean--><!--Device-MessageParcel-writeInterfaceToken(token: string): boolean-End-->
 
@@ -3188,7 +3188,7 @@ writeLong(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeLong](rpc.MessageSequence#writeLong(val:)
+**替代接口：** [writeLong](arkts-ipc-rpc-messagesequence-c.md#writeLong)(val: long)
 
 <!--Device-MessageParcel-writeLong(val: number): boolean--><!--Device-MessageParcel-writeLong(val: number): boolean-End-->
 
@@ -3235,7 +3235,7 @@ writeLongArray(longArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeLongArray](rpc.MessageSequence#writeLongArray(longArray:)
+**替代接口：** [writeLongArray](arkts-ipc-rpc-messagesequence-c.md#writeLongArray)(longArray: long[])
 
 <!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean--><!--Device-MessageParcel-writeLongArray(longArray: number[]): boolean-End-->
 
@@ -3331,7 +3331,7 @@ writeRawData(rawData: number[], size: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeRawDataBuffer](rpc.MessageSequence#writeRawDataBuffer(rawData:)
+**替代接口：** [writeRawDataBuffer](arkts-ipc-rpc-messagesequence-c.md#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean--><!--Device-MessageParcel-writeRawData(rawData: number[], size: number): boolean-End-->
 
@@ -3380,7 +3380,7 @@ writeRemoteObject(object: IRemoteObject): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeRemoteObject](rpc.MessageSequence#writeRemoteObject(obj:)
+**替代接口：** [writeRemoteObject](arkts-ipc-rpc-messagesequence-c.md#writeRemoteObject)(obj: IRemoteObject)
 
 <!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean--><!--Device-MessageParcel-writeRemoteObject(object: IRemoteObject): boolean-End-->
 
@@ -3437,7 +3437,7 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeRemoteObjectArray](rpc.MessageSequence#writeRemoteObjectArray(objectArray:)
+**替代接口：** [writeRemoteObjectArray](arkts-ipc-rpc-messagesequence-c.md#writeRemoteObjectArray)(objectArray: IRemoteObject[])
 
 <!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean--><!--Device-MessageParcel-writeRemoteObjectArray(objectArray: IRemoteObject[]): boolean-End-->
 
@@ -3496,7 +3496,7 @@ writeSequenceable(val: Sequenceable): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeParcelable](rpc.MessageSequence#writeParcelable(val:)
+**替代接口：** [writeParcelable](arkts-ipc-rpc-messagesequence-c.md#writeParcelable)(val: Parcelable)
 
 <!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean--><!--Device-MessageParcel-writeSequenceable(val: Sequenceable): boolean-End-->
 
@@ -3563,7 +3563,7 @@ writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeParcelableArray](rpc.MessageSequence#writeParcelableArray(parcelableArray:)
+**替代接口：** [writeParcelableArray](arkts-ipc-rpc-messagesequence-c.md#writeParcelableArray)(parcelableArray: Parcelable[])
 
 <!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean--><!--Device-MessageParcel-writeSequenceableArray(sequenceableArray: Sequenceable[]): boolean-End-->
 
@@ -3633,7 +3633,7 @@ writeShort(val: number): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeShort](rpc.MessageSequence#writeShort(val:)
+**替代接口：** [writeShort](arkts-ipc-rpc-messagesequence-c.md#writeShort)(val: int)
 
 <!--Device-MessageParcel-writeShort(val: number): boolean--><!--Device-MessageParcel-writeShort(val: number): boolean-End-->
 
@@ -3680,7 +3680,7 @@ writeShortArray(shortArray: number[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeShortArray](rpc.MessageSequence#writeShortArray(shortArray:)
+**替代接口：** [writeShortArray](arkts-ipc-rpc-messagesequence-c.md#writeShortArray)(shortArray: int[])
 
 <!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean--><!--Device-MessageParcel-writeShortArray(shortArray: number[]): boolean-End-->
 
@@ -3727,7 +3727,7 @@ writeString(val: string): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeString](rpc.MessageSequence#writeString(val:)
+**替代接口：** [writeString](arkts-ipc-rpc-messagesequence-c.md#writeString)(val: string)
 
 <!--Device-MessageParcel-writeString(val: string): boolean--><!--Device-MessageParcel-writeString(val: string): boolean-End-->
 
@@ -3774,7 +3774,7 @@ writeStringArray(stringArray: string[]): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [writeStringArray](rpc.MessageSequence#writeStringArray(stringArray:)
+**替代接口：** [writeStringArray](arkts-ipc-rpc-messagesequence-c.md#writeStringArray)(stringArray: string[])
 
 <!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean--><!--Device-MessageParcel-writeStringArray(stringArray: string[]): boolean-End-->
 

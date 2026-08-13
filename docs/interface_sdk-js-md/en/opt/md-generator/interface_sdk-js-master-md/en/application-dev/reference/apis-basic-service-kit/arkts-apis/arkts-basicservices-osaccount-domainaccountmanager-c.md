@@ -2,7 +2,9 @@
 
 Provides APIs for domain account management.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-class DomainAccountManager--><!--Device-osAccount-class DomainAccountManager-End-->
 
@@ -22,7 +24,9 @@ static updateAccountInfo(oldAccountInfo: DomainAccountInfo, newAccountInfo: Doma
 
 Updates information of a domain account. This API uses a promise to return the result.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.MANAGE_DOMAIN_ACCOUNTS
 
@@ -47,12 +51,12 @@ Updates information of a domain account. This API uses a promise to return the r
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300004](../../apis-basic-services-kit/errorcode-account.md#12300004-account-already-exists) |
 
 ## Examples
 

@@ -6,11 +6,11 @@
 function getDLPSupportedFileTypes(): Promise<Array<string>>
 ```
 
-查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用Promise异步回调。
-
-该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
+查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用Promise异步回调。 该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>--><!--Device-dlpPermission-function getDLPSupportedFileTypes(): Promise<Array<string>>-End-->
 
@@ -26,8 +26,8 @@ function getDLPSupportedFileTypes(): Promise<Array<string>>
 
 | 错误码ID |
 | --- |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 
@@ -48,11 +48,11 @@ dlpPermission.getDLPSupportedFileTypes().then((fileTypes) => { // 获取支持DL
 function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 ```
 
-查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用callback异步回调。
-
-该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
+查询当前可支持权限设置和校验的文件扩展名类型列表。调用成功后返回支持的文件类型列表，用于判断哪些文件类型可进行DLP权限管理。使用callback异步回调。 该接口用于获取支持DLP权限管理的文件类型列表，以便决定当前文件是否可以进行加密。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 <!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void--><!--Device-dlpPermission-function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -68,9 +68,9 @@ function getDLPSupportedFileTypes(callback: AsyncCallback<Array<string>>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100001-入参错误) |
-| [19100011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-data-protection-kit/errorcode-dlp.md#19100011-系统服务工作异常) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19100001](../errorcode-dlp.md#19100001-入参错误) |
+| [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) |
 
 ## 示例
 

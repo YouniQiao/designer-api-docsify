@@ -6,7 +6,9 @@ type NetHandle = connection.NetHandle
 
 Get the handle of the data network.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-sharing-type NetHandle = connection.NetHandle--><!--Device-sharing-type NetHandle = connection.NetHandle-End-->
 

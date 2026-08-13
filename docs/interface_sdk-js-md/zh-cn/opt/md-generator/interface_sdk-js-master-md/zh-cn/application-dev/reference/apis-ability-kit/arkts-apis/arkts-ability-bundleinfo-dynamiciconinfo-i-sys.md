@@ -2,7 +2,9 @@
 
 应用的动态图标信息。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DynamicIconInfo--><!--Device-unnamed-export interface DynamicIconInfo-End-->
 
@@ -20,7 +22,9 @@ readonly appIndex: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly appIndex: int--><!--Device-DynamicIconInfo-readonly appIndex: int-End-->
 
@@ -38,7 +42,9 @@ readonly bundleName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly bundleName: string--><!--Device-DynamicIconInfo-readonly bundleName: string-End-->
 
@@ -56,7 +62,9 @@ readonly moduleName: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly moduleName: string--><!--Device-DynamicIconInfo-readonly moduleName: string-End-->
 
@@ -74,7 +82,9 @@ readonly userId: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DynamicIconInfo-readonly userId: int--><!--Device-DynamicIconInfo-readonly userId: int-End-->
 

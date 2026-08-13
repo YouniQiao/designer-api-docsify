@@ -6,6 +6,8 @@ Handle the result of PIN verification.
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare class VerifyPinHandler--><!--Device-unnamed-declare class VerifyPinHandler-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -21,6 +23,8 @@ Passes the PIN verify result.
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void--><!--Device-VerifyPinHandler-confirm(result: PinVerifyResult): void-End-->
 
@@ -43,6 +47,8 @@ Constructor.
 **起始版本：** 22
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为22。
+
+**废弃版本：** -1
 
 <!--Device-VerifyPinHandler-constructor()--><!--Device-VerifyPinHandler-constructor()-End-->
 

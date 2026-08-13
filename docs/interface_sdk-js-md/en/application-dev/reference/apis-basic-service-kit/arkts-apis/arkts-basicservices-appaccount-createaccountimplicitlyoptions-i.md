@@ -2,9 +2,11 @@
 
 Defines the options for implicitly creating an application account.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-appAccount-interface CreateAccountImplicitlyOptions--><!--Device-appAccount-interface CreateAccountImplicitlyOptions-End-->
 
@@ -26,9 +28,11 @@ Authentication type.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CreateAccountImplicitlyOptions-authType?: string--><!--Device-CreateAccountImplicitlyOptions-authType?: string-End-->
 
@@ -37,18 +41,20 @@ Authentication type.
 ## parameters
 
 ```TypeScript
-parameters?: Record<string, Object>
+parameters?: Record<string, RecordData>
 ```
 
 Custom parameter object. By default, no value is passed in.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, Object>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>--><!--Device-CreateAccountImplicitlyOptions-parameters?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.AppAccount
 
@@ -62,9 +68,11 @@ Required labels. By default, no value is passed in.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>--><!--Device-CreateAccountImplicitlyOptions-requiredLabels?: Array<string>-End-->
 

@@ -1,10 +1,12 @@
 # CrownEvent
 
-Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity,rotation angle, crown action, and event propagation disabling.
+Defines a data structure for the crown event received by a component. It includes the timestamp, angular velocity, rotation angle, crown action, and event propagation disabling.
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface CrownEvent--><!--Device-unnamed-declare interface CrownEvent-End-->
 
@@ -24,6 +26,8 @@ Crown action.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -38,15 +42,15 @@ Crown action.
 angularVelocity: number
 ```
 
-Angular velocity.
-
-Unit: deg/s
+Angular velocity. Unit: deg/s
 
 **Type:** number
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,17 +66,15 @@ Unit: deg/s
 degree: number
 ```
 
-Relative rotation angle.
-
-Unit: deg
-
-Value range: [-360, 360]
+Relative rotation angle. Unit: deg Value range: [-360, 360]
 
 **Type:** number
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -96,6 +98,8 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
@@ -110,15 +114,15 @@ Disables [event bubbling](../../../ui/arkts-interaction-basic-principles.md#even
 timestamp: number
 ```
 
-Timestamp.
-
-Unit: ns
+Timestamp. Unit: ns
 
 **Type:** number
 
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

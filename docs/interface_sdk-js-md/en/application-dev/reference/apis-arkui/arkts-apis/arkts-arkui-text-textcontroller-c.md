@@ -6,6 +6,8 @@ Defines the controller of Text.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class TextController--><!--Device-unnamed-export declare class TextController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Close the select menu when menu is on.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ Get LayoutManager.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-TextController-getLayoutManager(): LayoutManager | undefined--><!--Device-TextController-getLayoutManager(): LayoutManager | undefined-End-->
@@ -58,13 +64,13 @@ Get LayoutManager.
 setStyledString(value: StyledString): void
 ```
 
-Update the styles of StyledString by setStyledString.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;The child class MutableStyledString of StyledString can also serve as the argument.&lt;/p&gt;
+Update the styles of StyledString by setStyledString. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The child class MutableStyledString of StyledString can also serve as the argument. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -84,13 +90,13 @@ Update the styles of StyledString by setStyledString.
 setTextSelection(selectionStart: int | undefined, selectionEnd: int | undefined, options?: SelectionOptions): void
 ```
 
-Text selection is achieved by specifying the start and end positions of the text.
-
-&lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used.&lt;br&gt;If a 2-in-1 device is used,calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW.&lt;br&gt;If the selected text contains an emoji,the emoji is selected when its start position is within the text selection range.&lt;/p&gt;
+Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used. &lt;br&gt;If a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW. &lt;br&gt;If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

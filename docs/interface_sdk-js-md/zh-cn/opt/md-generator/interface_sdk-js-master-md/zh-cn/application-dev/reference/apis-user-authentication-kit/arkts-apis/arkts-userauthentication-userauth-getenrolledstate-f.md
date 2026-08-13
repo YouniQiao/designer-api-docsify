@@ -8,11 +8,13 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 
 查询凭据注册的状态，以检测用户注册凭据的变更。该接口用于获取指定认证类型的凭据注册信息，包括凭据摘要和数量。应用可通过对比当前查询结果与之前保存的结果，判断用户是否新增或删除了凭据，从而采取相应的业务处理。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState--><!--Device-userAuth-function getEnrolledState(authType: UserAuthType): EnrolledState-End-->
 
@@ -34,11 +36,11 @@ function getEnrolledState(authType: UserAuthType): EnrolledState
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [12500010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12500005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) |
-| [12500002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) |
 
 ## 示例
 

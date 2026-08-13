@@ -2,7 +2,9 @@
 
 Describes the width and height of the auto-fill pop-up.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface PopupSize--><!--Device-unnamed-export interface PopupSize-End-->
 
@@ -20,7 +22,9 @@ Height of the auto-fill pop-up.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +44,9 @@ Width of the auto-fill pop-up.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

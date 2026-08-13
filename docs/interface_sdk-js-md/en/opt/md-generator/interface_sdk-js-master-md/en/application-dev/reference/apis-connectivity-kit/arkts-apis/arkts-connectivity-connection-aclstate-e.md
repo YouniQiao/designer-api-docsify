@@ -4,6 +4,8 @@ The enum of acl state.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-connection-export enum AclState--><!--Device-connection-export enum AclState-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
@@ -17,6 +19,8 @@ STATE_CONNECTED = 0
 acl is connected
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -33,6 +37,8 @@ STATE_DISCONNECTED = 1
 acl is disconnected
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

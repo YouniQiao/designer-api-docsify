@@ -4,6 +4,8 @@ Sliding effect
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare enum EdgeEffect--><!--Device-unnamed-declare enum EdgeEffect-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Spring
 Elastic physical action, sliding to the edge can continue to slide for a distance based on the initial speed or touch event, and spring back when released.
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -36,6 +40,8 @@ Fade.
 
 **起始版本：** 7
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
@@ -53,6 +59,8 @@ None
 Sliding to the edge has no effect.
 
 **起始版本：** 7
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

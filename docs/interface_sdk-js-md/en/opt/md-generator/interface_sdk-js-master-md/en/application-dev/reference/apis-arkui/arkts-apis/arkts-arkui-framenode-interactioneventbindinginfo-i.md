@@ -4,6 +4,8 @@ Describes the binding state of interaction events on components. When querying r
 
 **Since:** 19
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface InteractionEventBindingInfo--><!--Device-unnamed-declare interface InteractionEventBindingInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -14,13 +16,13 @@ Describes the binding state of interaction events on components. When querying r
 baseEventRegistered: boolean
 ```
 
-Whether the event is bound declaratively.
-
-**true** means that the event is bound declaratively, and **false** means the opposite.
+Whether the event is bound declaratively. **true** means that the event is bound declaratively, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,13 +38,13 @@ Whether the event is bound declaratively.
 builtInEventRegistered: boolean
 ```
 
-Whether the component has built-in events (events that are defined internally by the component and do not require manual binding).
-
-The value **true** means that the component has built-in events, and **false** means the opposite.
+Whether the component has built-in events (events that are defined internally by the component and do not require manual binding). The value **true** means that the component has built-in events, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,14 +60,13 @@ The value **true** means that the component has built-in events, and **false** m
 nativeEventRegistered: boolean
 ```
 
-Whether the event is bound through node event registration (  
-[registerNodeEvent](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#registernodeevent)).
-
-The value **true** means that the event is bound through node event registration, and **false** means the opposite.
+Whether the event is bound through node event registration ( [registerNodeEvent](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativenodeapi-1.md#registernodeevent) ). The value **true** means that the event is bound through node event registration, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -81,14 +82,13 @@ The value **true** means that the event is bound through node event registration
 nodeEventRegistered: boolean
 ```
 
-Whether the event is bound through a custom component node. For the implementation example, see  
-[Basic Event Example](../../../reference/apis-arkui/js-apis-arkui-frameNode.md#basic-event-example).
-
-The value **true** means that the event is bound through a custom component node, and **false** means the opposite.
+Whether the event is bound through a custom component node. For the implementation example, see Basic Event Example. The value **true** means that the event is bound through a custom component node, and **false** means the opposite.
 
 **Type:** boolean
 
 **Since:** 19
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

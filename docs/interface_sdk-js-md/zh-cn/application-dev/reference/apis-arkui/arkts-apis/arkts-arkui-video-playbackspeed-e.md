@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export declare enum PlaybackSpeed--><!--Device-unnamed-export declare enum PlaybackSpeed-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Speed_Forward_0_75_X = '0.75'
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ Speed_Forward_1_00_X = '1.00'
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlaybackSpeed-Speed_Forward_1_00_X = '1.00'--><!--Device-PlaybackSpeed-Speed_Forward_1_00_X = '1.00'-End-->
@@ -57,6 +63,8 @@ Speed_Forward_1_25_X = '1.25'
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +84,8 @@ Speed_Forward_1_75_X = '1.75'
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlaybackSpeed-Speed_Forward_1_75_X = '1.75'--><!--Device-PlaybackSpeed-Speed_Forward_1_75_X = '1.75'-End-->
@@ -93,6 +103,8 @@ Speed_Forward_2_00_X = '2.00'
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +124,8 @@ SPEED_FORWARD_0_50_X = '0.50'
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = '0.50'--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = '0.50'-End-->
@@ -129,6 +143,8 @@ SPEED_FORWARD_1_50_X = '1.50'
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -148,6 +164,8 @@ SPEED_FORWARD_3_00_X = '3.00'
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = '3.00'--><!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = '3.00'-End-->
@@ -166,6 +184,8 @@ SPEED_FORWARD_0_25_X = '0.25'
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = '0.25'--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = '0.25'-End-->
@@ -183,6 +203,8 @@ SPEED_FORWARD_0_125_X = '0.125'
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

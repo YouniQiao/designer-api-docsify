@@ -6,6 +6,8 @@ Provides APIs for handling data transformations related to state management.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export declare class UIUtils--><!--Device-unnamed-export declare class UIUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -22,12 +24,13 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 static addMonitor(target: object, path: string | string[], monitorCallback: MonitorCallback, options?: MonitorOptions): void
 ```
 
-Dynamically adds a listener to the state variable of state management V2. For details, see  
-[addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
+Dynamically adds a listener to the state variable of state management V2. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,9 +53,9 @@ Dynamically adds a listener to the state variable of state management V2. For de
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
-| [130000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
-| [130002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
+| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
+| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
+| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
 
 ## applySync
 
@@ -60,12 +63,13 @@ Dynamically adds a listener to the state variable of state management V2. For de
 static applySync<T>(task: TaskCallback): T
 ```
 
-Synchronously updates a specified state variable. This API receives a closure function and updates only the internal modifications, including the updates of [@Computed](../../../ui/state-management/arkts-new-computed.md)and [@Monitor](../../../ui/state-management/arkts-new-monitor.md) decorators, and re-rendering of the UI nodes.For details, see  
-[applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
+Synchronously updates a specified state variable. This API receives a closure function and updates only the internal modifications, including the updates of [@Computed](../../../ui/state-management/arkts-new-computed.md) and [@Monitor](../../../ui/state-management/arkts-new-monitor.md) decorators, and re-rendering of the UI nodes. For details, see [applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -91,7 +95,7 @@ Synchronously updates a specified state variable. This API receives a closure fu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
 ## Examples
 
@@ -145,12 +149,13 @@ struct Index {
 static canBeObserved<T extends object>(source: T): ObservedResult
 ```
 
-Determines whether a data object can be observed and returns the observation result. For details, see  
-[canBeObserved API: Determining Whether an Object Can Be Observed](../../../ui/state-management/arkts-new-canBeObserved.md).
+Determines whether a data object can be observed and returns the observation result. For details, see [canBeObserved API: Determining Whether an Object Can Be Observed](../../../ui/state-management/arkts-new-canBeObserved.md).
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -289,13 +294,13 @@ export struct School {
 static clearMonitor(target: object, path: string | string[], monitorCallback?: MonitorCallback) : void
 ```
 
-Deletes the listener added to the state variable of the state management V2 by calling the  
-[addMonitor](#addMonitor) API. For details, see  
-[addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
+Deletes the listener added to the state variable of the state management V2 by calling the [addMonitor](#addMonitor) API. For details, see [addMonitor and clearMonitor APIs: Dynamically Adding and Removing Listeners](../../../ui/state-management/arkts-new-addMonitor-clearMonitor.md).
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -317,9 +322,9 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [130001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
-| [130000](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
-| [130002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
+| [130001](../errorcode-stateManagement.md#130001-invalid-path-for-addmonitorclearmonitor) | The path is invalid. |
+| [130000](../errorcode-stateManagement.md#130000-invalid-target-object-for-addmonitorclearmonitor) | The target is not a custom component instance or V2 class instance. |
+| [130002](../errorcode-stateManagement.md#130002-invalid-callback-for-addmonitorclearmonitor) | monitorCallback is not a function or an anonymous function. |
 
 ## enableV2Compatibility
 
@@ -327,12 +332,13 @@ Deletes the listener added to the state variable of the state management V2 by c
 static enableV2Compatibility<T extends object>(source: T): T
 ```
 
-Enables V1 state variables to be observable in @ComponentV2. This API is primarily used in scenarios where V1 and V2 state management are mixed. For details, see  
-[Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
+Enables V1 state variables to be observable in @ComponentV2. This API is primarily used in scenarios where V1 and V 2 state management are mixed. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -401,13 +407,13 @@ struct CompV2 {
 static flushUIUpdates(): void
 ```
 
-Processes all state variable modifications before this API call and synchronizes the  
-[dirty](../../../ui/state-management/arkts-state-management-introduce.md#triggering-updates) UI nodes. However, it does not synchronize the execution of @Computed and @Monitor decorators. For details, see  
-[applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
+Processes all state variable modifications before this API call and synchronizes the [dirty](../../../ui/state-management/arkts-state-management-introduce.md#triggering-updates) UI nodes. However, it does not synchronize the execution of @Computed and @Monitor decorators. For details, see [applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -421,8 +427,8 @@ Processes all state variable modifications before this API call and synchronizes
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
-| [140001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
+| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
 ## Examples
 
@@ -475,12 +481,13 @@ struct Index {
 static flushUpdates(): void
 ```
 
-Synchronously updates all state variable modifications before this API call, including the updates of @Computed and @Monitor decorators, and re-rendering of the UI nodes. For details, see  
-[applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
+Synchronously updates all state variable modifications before this API call, including the updates of @Computed and @Monitor decorators, and re-rendering of the UI nodes. For details, see [applySync/flushUpdates/flushUIUpdates APIs: Synchronous Update](../../../ui/state-management/arkts-new-applySync-flushUpdates-flushUIUpdates.md).
 
 **Since:** 22
 
 **ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -494,8 +501,8 @@ Synchronously updates all state variable modifications before this API call, inc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [140002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
-| [140001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
+| [140002](../errorcode-stateManagement.md#140002-invalid-invocation-of-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Monitor |
+| [140001](../errorcode-stateManagement.md#140001-invalid-invocation-of-applysync-flushupdates-or-flushuiupdates) | The function is not allowed to be called in @Computed |
 
 ## Examples
 
@@ -548,13 +555,13 @@ struct Index {
 static getCustomComponentContext<T extends BaseCustomComponent>(customComponent: T): CustomComponentContext
 ```
 
-Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#CustomComponentContext) of the given @Component(V1) or @ComponentV2.  
-**CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool,see  
-[Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
+Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcomponentcontext-i.md#CustomComponentContext) of the given @Component(V1) or @ComponentV2. **CustomComponentContext** can be used to access the reuse pool of the component. For details about the reuse pool, see [Global Reuse: Centralized Component Recycling and Reuse](../../../ui/state-management/arkts-global-reuse-pool.md).
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -582,11 +589,13 @@ Obtains [CustomComponentContext](arkts-arkui-arkui-statemanagement-customcompone
 static getLifecycle<T extends BaseCustomComponent>(customComponent: T): CustomComponentLifecycle
 ```
 
-Obtains the [lifecycle of a custom component](arkts-arkui-decorator-componentinit-i.md#ComponentInit).
+Obtains the lifecycle of a custom component.
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -637,12 +646,13 @@ struct Index {
 static getTarget<T extends object>(source: T): T
 ```
 
-Obtains the original object from a proxy object wrapped by the state management framework. For details, see  
-[getTarget API: Obtaining Original Objects](../../../ui/state-management/arkts-new-getTarget.md).
+Obtains the original object from a proxy object wrapped by the state management framework. For details, see [getTarget API: Obtaining Original Objects](../../../ui/state-management/arkts-new-getTarget.md).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -701,6 +711,8 @@ Creates a read-only one-way data binding instance, which is used to construct th
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -772,11 +784,13 @@ struct CompV2 {
 static makeBinding<T>(getter: GetterCallback<T>, setter: SetterCallback<T>): MutableBinding<T>
 ```
 
-Creates a mutable two-way data binding instance, which is used to construct the argument of the **MutableBinding**type in the \@Builder function.
+Creates a mutable two-way data binding instance, which is used to construct the argument of the **MutableBinding** type in the \@Builder function.
 
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -853,12 +867,13 @@ struct CompV2 {
 static makeObserved<T extends object>(source: T): T
 ```
 
-Converts ordinary unobservable data into observable data. For details, see  
-[makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md).
+Converts ordinary unobservable data into observable data. For details, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md).
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -916,14 +931,13 @@ struct Index {
 static makeV1Observed<T extends object>(source: T): T
 ```
 
-Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @Observed and can be used to initialize @ObjectLink.
-
-This API can be used together with [enableV2Compatibility](#enableV2Compatibility) in scenarios where state management V1 and V2 are used together. For details, see  
-[Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
+Wraps an unobservable object into an object that is observable by V1 state management. This API is equivalent to @ Observed and can be used to initialize @ObjectLink. This API can be used together with [enableV2Compatibility](#enableV2Compatibility) in scenarios where state management V1 and V2 are used together. For details, see [Mixed Use of State Management V1 and V2 (API Version 19 and Later)](../../../ui/state-management/arkts-v1-v2-mixusage.md).
 
 **Since:** 19
 
 **ArkTS mode:** ArkTS-Dyn only, since version 19.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -937,7 +951,7 @@ This API can be used together with [enableV2Compatibility](#enableV2Compatibilit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. &lt;br&gt;[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#collections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. &lt;br&gt;**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeObserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. &lt;br&gt;[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#@arkts.collections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. &lt;br&gt;**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeObserved) are not supported. |
 
 **Return value:**
 

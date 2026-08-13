@@ -6,7 +6,7 @@
 
 **废弃版本：** 11
 
-**替代接口：** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState)
+**替代接口：** [CooperateState](arkts-distributedservice-cooperate-cooperatestate-e-sys.md#CooperateState（系统接口）)
 
 <!--Device-cooperate-enum CooperateMsg--><!--Device-cooperate-enum CooperateMsg-End-->
 

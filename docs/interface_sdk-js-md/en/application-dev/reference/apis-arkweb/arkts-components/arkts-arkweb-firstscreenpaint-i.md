@@ -6,6 +6,8 @@ Defines the event information when the first screen paint is detected.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface FirstScreenPaint--><!--Device-unnamed-declare interface FirstScreenPaint-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,13 +18,15 @@ Defines the event information when the first screen paint is detected.
 firstScreenPaintTime: number
 ```
 
-The first screen paint time of the url.&lt;br&gt;Unit:milliseconds.
+The first screen paint time of the url. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FirstScreenPaint-firstScreenPaintTime: number--><!--Device-FirstScreenPaint-firstScreenPaintTime: number-End-->
 
@@ -34,13 +38,15 @@ The first screen paint time of the url.&lt;br&gt;Unit:milliseconds.
 navigationStartTime: number
 ```
 
-The navigation start time of the url.&lt;br&gt;Unit:milliseconds.
+The navigation start time of the url. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FirstScreenPaint-navigationStartTime: number--><!--Device-FirstScreenPaint-navigationStartTime: number-End-->
 
@@ -59,6 +65,8 @@ URL of the first screen paint statistics.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-FirstScreenPaint-url: string--><!--Device-FirstScreenPaint-url: string-End-->
 

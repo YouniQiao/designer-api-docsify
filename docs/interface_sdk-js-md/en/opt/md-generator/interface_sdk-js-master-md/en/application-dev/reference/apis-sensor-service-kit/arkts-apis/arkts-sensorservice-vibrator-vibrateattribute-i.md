@@ -2,7 +2,9 @@
 
 Describes the vibration attribute.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-vibrator-interface VibrateAttribute--><!--Device-vibrator-interface VibrateAttribute-End-->
 
@@ -20,16 +22,15 @@ import { vibrator } from '@kit.SensorServiceKit';
 deviceId?: number
 ```
 
-Device ID. The default value is **-1**, indicating the local device. Since API version 19, you can use  
-[getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync) or [on](vibrator.on) to query the device ID.
-
-This API can be used in atomic services since API version 19.
+Device ID. The default value is **-1**, indicating the local device. Since API version 19, you can use [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md#getVibratorInfoSync) or on to query the device ID. This API can be used in atomic services since API version 19.
 
 **Type:** number
 
-**Since:** 19
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 19.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-VibrateAttribute-deviceId?: int--><!--Device-VibrateAttribute-deviceId?: int-End-->
 
@@ -45,7 +46,9 @@ Vibrator ID. The default value is **0**.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -59,12 +62,13 @@ Vibrator ID. The default value is **0**.
 usage: Usage
 ```
 
-Vibration scenario. The default value is **unknown**. The value must be an enum defined in  
-[Usage](arkts-sensorservice-vibrator-usage-t.md#Usage).
+Vibration scenario. The default value is **unknown**. The value must be an enum defined in [Usage](arkts-sensorservice-vibrator-usage-t.md#Usage).
 
 **Type:** [Usage](arkts-sensorservice-vibrator-usage-t.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

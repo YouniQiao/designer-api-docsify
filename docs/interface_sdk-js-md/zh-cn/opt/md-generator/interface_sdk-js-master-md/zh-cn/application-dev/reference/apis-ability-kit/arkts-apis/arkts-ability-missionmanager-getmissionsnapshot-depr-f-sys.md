@@ -12,7 +12,7 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 
 **废弃版本：** 9
 
-**替代接口：** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
+**替代接口：** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 
@@ -65,7 +65,7 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 
 **废弃版本：** 9
 
-**替代接口：** [getMissionSnapShot](ohos.app.ability.missionManager/missionManager#getMissionSnapShot)
+**替代接口：** [getMissionSnapShot](arkts-ability-missionmanager-getmissionsnapshot-f-sys.md#getMissionSnapShot（系统接口）)
 
 **需要权限：** ohos.permission.MANAGE_MISSIONS
 

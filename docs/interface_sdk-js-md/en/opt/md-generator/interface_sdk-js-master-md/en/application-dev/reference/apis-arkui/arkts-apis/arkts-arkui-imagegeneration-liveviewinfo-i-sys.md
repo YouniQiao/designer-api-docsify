@@ -4,6 +4,8 @@ Information for LiveView in AI image generation.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-imageGeneration-interface LiveViewInfo--><!--Device-imageGeneration-interface LiveViewInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -25,6 +27,8 @@ getLongTermTaskId(): number
 Get the long-term task ID for LiveView.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,6 +54,8 @@ Get the Want object for LiveView.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LiveViewInfo-getWant(): Want--><!--Device-LiveViewInfo-getWant(): Want-End-->
@@ -73,6 +79,8 @@ isLiveViewNeeded(): boolean
 Check whether LiveView is needed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

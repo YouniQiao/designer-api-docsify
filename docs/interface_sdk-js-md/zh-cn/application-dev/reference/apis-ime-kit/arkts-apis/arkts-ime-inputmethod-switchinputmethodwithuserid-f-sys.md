@@ -10,7 +10,9 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.CONNECT_IME_ABILITY
 
@@ -28,7 +30,7 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 目标输入法的包名。 |
 | subtypeId | string | 否 | 输入法子类型的ID。如果不设置该参数，则切换到使用默认子类型的目标输入法。 |
-| userId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 否 | 用户ID。如果不提供： &lt;br&gt;- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 &lt;br&gt;- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
+| userId | int | 否 | 用户ID。如果不提供： &lt;br&gt;- 如果调用者不是用户0的应用，该值默认为调用者的用户ID。 &lt;br&gt;- 如果调用者是用户0的应用，该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 
@@ -40,13 +42,13 @@ function switchInputMethodWithUserId(bundleName: string, subtypeId?: string, use
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [12800023](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
-| [12800005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800005-配置持久化失败) | configuration persistence error. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | permissions check fails. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | not system application. |
-| [12800025](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
-| [12800008](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
-| [12800024](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
+| [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
+| [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) | configuration persistence error. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | permissions check fails. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | not system application. |
+| [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
+| [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 
 ## 示例
 

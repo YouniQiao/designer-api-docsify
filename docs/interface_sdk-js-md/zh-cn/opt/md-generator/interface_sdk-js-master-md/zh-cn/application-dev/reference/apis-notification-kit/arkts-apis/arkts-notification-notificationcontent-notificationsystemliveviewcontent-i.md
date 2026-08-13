@@ -1,16 +1,14 @@
 # NotificationSystemLiveViewContent
 
-描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后，三方应用发布同ID的通知来更新指定内容。继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)。
-
-> **说明：**
-> 
-> 实际显示效果依赖于设备能力和通知中心UI样式。
+描述系统实况窗通知内容，用于在实况窗中展示实时状态信息。 不支持三方应用直接创建该类型通知，可以由系统代理创建系统实况窗类型通知后， 三方应用发布同ID的通知来更新指定内容。 继承自[NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)。 > **说明：** > > 实际显示效果依赖于设备能力和通知中心UI样式。
 
 **继承/实现关系：** NotificationSystemLiveViewContent extends [NotificationBasicContent](arkts-notification-notificationcontent-notificationbasiccontent-i.md#NotificationBasicContent)
 
-**起始版本：** 11
+**起始版本：** 23
 
-<!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent extends NotificationBasicContent-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-export interface NotificationSystemLiveViewContent--><!--Device-unnamed-export interface NotificationSystemLiveViewContent-End-->
 
 **系统能力：** SystemCapability.Notification.Notification
 
@@ -24,7 +22,9 @@ button?: NotificationButton
 
 **类型：** [NotificationButton](arkts-notification-notificationcontent-notificationbutton-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSystemLiveViewContent-button?: NotificationButton--><!--Device-NotificationSystemLiveViewContent-button?: NotificationButton-End-->
 
@@ -40,7 +40,9 @@ capsule?: NotificationCapsule
 
 **类型：** [NotificationCapsule](arkts-notification-notificationcontent-notificationcapsule-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule--><!--Device-NotificationSystemLiveViewContent-capsule?: NotificationCapsule-End-->
 
@@ -56,7 +58,9 @@ progress?: NotificationProgress
 
 **类型：** [NotificationProgress](arkts-notification-notificationcontent-notificationprogress-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress--><!--Device-NotificationSystemLiveViewContent-progress?: NotificationProgress-End-->
 
@@ -72,7 +76,9 @@ time?: NotificationTime
 
 **类型：** [NotificationTime](arkts-notification-notificationcontent-notificationtime-i.md)
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSystemLiveViewContent-time?: NotificationTime--><!--Device-NotificationSystemLiveViewContent-time?: NotificationTime-End-->
 
@@ -88,7 +94,9 @@ typeCode: number
 
 **类型：** number
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-NotificationSystemLiveViewContent-typeCode: int--><!--Device-NotificationSystemLiveViewContent-typeCode: int-End-->
 

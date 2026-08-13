@@ -2,11 +2,13 @@
 
 Defines user blow data.
 
-**Inheritance/Implementation:** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData)
+**Inheritance/Implementation:** UserBlowData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData-(System-API))
 
 **Since:** 26.0.0
 
-<!--Device-userStatus-export interface UserBlowData extends UserStatusData--><!--Device-userStatus-export interface UserBlowData extends UserStatusData-End-->
+**Deprecated since:** -1
+
+<!--Device-userStatus-export interface UserBlowData--><!--Device-userStatus-export interface UserBlowData-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.UserStatus
 
@@ -24,11 +26,13 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 blowDirection?: number
 ```
 
-Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
+Blow direction. The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bottom mic, 2: Blowing from top mic.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -44,11 +48,13 @@ Blow direction.The value ranges from 0 to 2. 0: Not blowing, 1: Blowing from bot
 emotion?: number
 ```
 
-User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm,3: A little unhappy, 4: Angry, 5: Crying.
+User emotion level. The value ranges from 0 to 5. 0: Very happy, 1: A little happy, 2: Calm, 3: A little unhappy, 4: Angry, 5: Crying.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,11 +70,13 @@ User emotion level.The value ranges from 0 to 5. 0: Very happy, 1: A little happ
 facePosition?: number[]
 ```
 
-Face position relative to screen.The normalized coordinate system ranges from 0 to 640.
+Face position relative to screen. The normalized coordinate system ranges from 0 to 640.
 
 **Type:** number[]
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,6 +98,8 @@ Gravity acceleration of user motion status, in m/s².
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserBlowData-gravityAcceleration?: double[]--><!--Device-UserBlowData-gravityAcceleration?: double[]-End-->
@@ -109,6 +119,8 @@ Whether user is gazing at screen.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -130,6 +142,8 @@ Linear acceleration of user motion status, in m/s²..
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UserBlowData-linearAcceleration?: double[][]--><!--Device-UserBlowData-linearAcceleration?: double[][]-End-->
@@ -144,11 +158,13 @@ Linear acceleration of user motion status, in m/s²..
 strengthLevel?: number
 ```
 
-Blow strength level.The value must be an integer within [1,12].
+Blow strength level. The value must be an integer within [1,12].
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

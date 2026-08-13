@@ -10,6 +10,8 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 <!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void--><!--Device-advertising-function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener, context: common.UIAbilityContext): void-End-->
 
 **系统能力：** SystemCapability.Advertising.Ads
@@ -26,14 +28,14 @@ function parseAdResponse(adResponse: string, listener: MultiSlotsAdLoadListener,
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [21800005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800005-广告数据解析失败) |
-| [21800001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-系统内部错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [21800005](../errorcode-ads.md#21800005-广告数据解析失败) |
+| [21800001](../errorcode-ads.md#21800001-系统内部错误) |
 
 ## 示例
 
-其中context的获取方式参见[各类context的获取方式](../../application-models/application-context-stage.md#context的获取方式)。
+其中context的获取方式参见[各类context的获取方式](../../../application-models/application-context-stage.md#context的获取方式)。
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

@@ -1,7 +1,6 @@
 # PhotoViewPicker
 
-Provides APIs for selecting and saving images or videos. You are advised to use  
-[PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#photoAccessHelper) to select a file.Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
+Provides APIs for selecting and saving images or videos. You are advised to use [PhotoViewPicker of PhotoAccessHelper](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#@ohos.file.photoAccessHelper) to select a file. Before using the APIs of **PhotoViewPicker**, you need to create a **PhotoViewPicker** instance.
 
 **Since:** 9
 
@@ -73,7 +72,7 @@ A constructor used to create a PhotoViewPicker instance. This constructor is rec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](./app/context). |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see Context. |
 
 ## Examples
 
@@ -117,7 +116,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [SaveButton](SaveButton)
+**Substitutes:** SaveButton
 
 <!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>--><!--Device-PhotoViewPicker-save(option?: PhotoSaveOptions): Promise<Array<string>>-End-->
 
@@ -172,7 +171,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [SaveButton](SaveButton)
+**Substitutes:** SaveButton
 
 <!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(option: PhotoSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -183,7 +182,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | [PhotoSaveOptions](arkts-corefile-picker-photosaveoptions-c.md) | Yes | Options for saving images or videos. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the images or videos saved. &lt;br&gt;**Note：**: This API saves files in **Files**, not in **Gallery**. For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the images or videos saved. &lt;br&gt;**Note：**: This API saves files in **Files**, not in **Gallery**. For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -224,7 +223,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 **Deprecated since:** 12
 
-**Substitutes:** [SaveButton](SaveButton)
+**Substitutes:** SaveButton
 
 <!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-PhotoViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -234,7 +233,7 @@ Starts a **photoPicker** page for the user to save one or more images or videos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the images or videos saved. &lt;br&gt;**Note：**: This API saves files in **Files**, not in **Gallery**. For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback invoked to return the URIs of the images or videos saved. &lt;br&gt;**Note：**: This API saves files in **Files**, not in **Gallery**. For details about how to use the returned URIs, see [Using a Document URI](../../../file-management/user-file-uri-intro.md#using-a-document-uri). |
 
 ## Examples
 
@@ -273,7 +272,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option?:)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option?: PhotoSelectOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -331,7 +330,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(option:)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -344,7 +343,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | option | PhotoSelectOptions | Yes | Options for selecting images or videos. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected. &lt;br&gt;**Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) . For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected. &lt;br&gt;**Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) . For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 ## Examples
 
@@ -386,7 +385,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](@ohos.file.photoAccessHelper:photoAccessHelper.PhotoViewPicker#select(callback:)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -398,7 +397,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected. &lt;br&gt;**Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) . For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;PhotoSelectResult&gt; | Yes | Callback used to return the images or videos selected. &lt;br&gt;**Note：**: The **photoUris** in the **PhotoSelectResult** object returned by this API can be used only by [photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getAssets) . For details, see [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri). |
 
 ## Examples
 

@@ -16,6 +16,8 @@ Sets the output type for hilog for the domainID list.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-hilog-function setOutputTypeByDomainID(type: OutputType, domainIDs: Array<int>, isExclude: boolean): OutputType--><!--Device-hilog-function setOutputTypeByDomainID(type: OutputType, domainIDs: Array<int>, isExclude: boolean): OutputType-End-->

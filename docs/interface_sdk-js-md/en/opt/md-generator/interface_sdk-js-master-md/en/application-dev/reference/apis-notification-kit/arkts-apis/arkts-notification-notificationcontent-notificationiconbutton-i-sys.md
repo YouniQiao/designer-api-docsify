@@ -2,7 +2,9 @@
 
 Describes the system notification button.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationIconButton--><!--Device-unnamed-export interface NotificationIconButton-End-->
 
@@ -16,14 +18,13 @@ Describes the system notification button.
 hidePanel?: boolean
 ```
 
-Whether to hide the notification panel when the button is tapped. The default value is **false**.
-
-- **true**: Yes.  
-- **false**: No.
+Whether to hide the notification panel when the button is tapped. The default value is **false**. - **true**: Yes. - **false**: No.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationIconButton-hidePanel?: boolean--><!--Device-NotificationIconButton-hidePanel?: boolean-End-->
 
@@ -41,7 +42,9 @@ Background image of a button.
 
 **Type:** [IconType](arkts-notification-icontype-t-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationIconButton-iconResource: IconType--><!--Device-NotificationIconButton-iconResource: IconType-End-->
 
@@ -59,7 +62,9 @@ Button identifier, used to distinguish multiple different buttons for the same n
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationIconButton-name: string--><!--Device-NotificationIconButton-name: string-End-->
 
@@ -77,7 +82,9 @@ Text displayed on the button, which defaults to empty. The string length cannot 
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationIconButton-text?: string--><!--Device-NotificationIconButton-text?: string-End-->
 

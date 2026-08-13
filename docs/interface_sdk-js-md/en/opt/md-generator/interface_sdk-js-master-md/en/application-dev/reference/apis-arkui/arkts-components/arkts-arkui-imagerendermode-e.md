@@ -4,6 +4,8 @@ Interpolation effect of the image.
 
 **Since:** 7
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum ImageRenderMode--><!--Device-unnamed-declare enum ImageRenderMode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ Original
 Render image pixels as they are in the original source image.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -35,6 +39,8 @@ Template
 Render image pixels to create a monochrome template image.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

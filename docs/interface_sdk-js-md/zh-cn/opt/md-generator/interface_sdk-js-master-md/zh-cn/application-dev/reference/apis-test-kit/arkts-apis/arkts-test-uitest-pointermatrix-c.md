@@ -2,7 +2,9 @@
 
 存储多指操作中每根手指每一步动作的坐标点及其行为的二维数组。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class PointerMatrix--><!--Device-unnamed-declare class PointerMatrix-End-->
 
@@ -16,7 +18,9 @@ static create(fingers: number, steps: number): PointerMatrix
 
 静态方法，构造一个PointerMatrix对象，并返回该对象。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -41,7 +45,7 @@ static create(fingers: number, steps: number): PointerMatrix
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -62,7 +66,9 @@ setPoint(finger: number, step: number, point: Point): void
 
 设置PointerMatrix对象中指定手指和步骤对应动作的坐标点。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -82,7 +88,7 @@ setPoint(finger: number, step: number, point: Point): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 

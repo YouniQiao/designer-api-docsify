@@ -2,7 +2,9 @@
 
 Surface configuration parameters.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-abilityConnectionManager-interface SurfaceParam--><!--Device-abilityConnectionManager-interface SurfaceParam-End-->
 
@@ -26,7 +28,9 @@ This value indicates whether the video is reversed.
 
 **Type:** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,11 +46,13 @@ This value indicates whether the video is reversed.
 format?: VideoPixelFormat
 ```
 
-Video PixelFormat, this option must be configured on the sender.Must be set before stream starts and cannot update once set.
+Video PixelFormat, this option must be configured on the sender. Must be set before stream starts and cannot update once set.
 
 **Type:** [VideoPixelFormat](arkts-distributedservice-abilityconnectionmanager-videopixelformat-e-sys.md)
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,7 +72,9 @@ Encoding length. Must be set before stream starts and cannot update once set.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,11 +90,13 @@ Encoding length. Must be set before stream starts and cannot update once set.
 rotation?: number
 ```
 
-This value identifies the rotation angle of the video.the range of rotation angle should be {0, 90, 180, 270}, default is 0
+This value identifies the rotation angle of the video. the range of rotation angle should be {0, 90, 180, 270}, default is 0
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -106,7 +116,9 @@ Encoding width. Must be set before stream starts and cannot update once set.
 
 **Type:** number
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

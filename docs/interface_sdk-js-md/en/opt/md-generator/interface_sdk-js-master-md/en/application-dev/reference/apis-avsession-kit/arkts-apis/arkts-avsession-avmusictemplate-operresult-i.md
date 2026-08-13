@@ -4,6 +4,8 @@ The definition of the operate result.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface OperResult--><!--Device-avMusicTemplate-interface OperResult-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ error code.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OperResult-errorCode: int--><!--Device-OperResult-errorCode: int-End-->
@@ -43,6 +47,8 @@ error message.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

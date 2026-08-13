@@ -2,7 +2,9 @@
 
 视频录制配置定义。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-interface VideoRecorderConfig--><!--Device-unnamed-interface VideoRecorderConfig-End-->
 
@@ -20,7 +22,9 @@ audioSourceType?: AudioSourceType
 
 **类型：** [AudioSourceType](arkts-media-multimedia-media-audiosourcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-VideoRecorderConfig-audioSourceType?: AudioSourceType-End-->
 
@@ -38,7 +42,9 @@ location?: Location
 
 **类型：** [Location](arkts-media-multimedia-media-location-i.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-location?: Location--><!--Device-VideoRecorderConfig-location?: Location-End-->
 
@@ -56,7 +62,9 @@ profile: VideoRecorderProfile
 
 **类型：** [VideoRecorderProfile](arkts-media-multimedia-media-videorecorderprofile-i-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-profile: VideoRecorderProfile--><!--Device-VideoRecorderConfig-profile: VideoRecorderProfile-End-->
 
@@ -70,11 +78,13 @@ profile: VideoRecorderProfile
 rotation?: number
 ```
 
-设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。旋转角度取值为{0, 90, 180, 270}，默认值为0。
+设置视频输出文件中的旋转角度，用于文件播放。仅mp4格式支持。 旋转角度取值为{0, 90, 180, 270}，默认值为0。
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-rotation?: int--><!--Device-VideoRecorderConfig-rotation?: int-End-->
 
@@ -88,11 +98,13 @@ rotation?: number
 url: string
 ```
 
-视频输出URI。支持两种URI格式。格式：scheme + "://" + "context"。fd格式：fd://fd
+视频输出URI。支持两种URI格式。 格式：scheme + "://" + "context"。 fd格式：fd://fd
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-url: string--><!--Device-VideoRecorderConfig-url: string-End-->
 
@@ -110,7 +122,9 @@ videoSourceType: VideoSourceType
 
 **类型：** [VideoSourceType](arkts-media-multimedia-media-videosourcetype-e.md)
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType--><!--Device-VideoRecorderConfig-videoSourceType: VideoSourceType-End-->
 

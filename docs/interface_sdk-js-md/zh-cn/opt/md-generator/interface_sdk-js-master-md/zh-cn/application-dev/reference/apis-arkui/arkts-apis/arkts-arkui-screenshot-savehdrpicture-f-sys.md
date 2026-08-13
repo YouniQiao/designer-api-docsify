@@ -6,14 +6,11 @@
 function saveHdrPicture(options?: HdrScreenshotOptions): Promise<Array<image.PixelMap>>
 ```
 
-获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。
+获取屏幕截图，使用Promise异步回调。SDR为标准动态范围图，HDR为高动态范围图。 - 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。 - 当物理屏不存在HDR资源时，与[save](arkts-arkui-screenshot-save-f-sys.md#save（系统接口）) 接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备 [save](arkts-arkui-screenshot-save-f-sys.md#save（系统接口）)接口的裁剪、拉伸、旋转功能。
 
-- 当物理屏存在HDR资源（包括HDR资源被遮挡）时，无论HDR是否开启，该接口返回一个包含SDR和HDR的PixelMap数组。  
-- 当物理屏不存在HDR资源时，与[save](arkts-arkui-screenshot-save-f-sys.md#save)  
-接口返回一个SDR的PixelMap不同，该接口返回包含一个SDR的PixelMap数组。同时该接口不具备  
-[save](arkts-arkui-screenshot-save-f-sys.md#save)接口的裁剪、拉伸、旋转功能。
+**起始版本：** 23
 
-**起始版本：** 20
+**废弃版本：** -1
 
 **需要权限：** 
 - API版本22+：ohos.permission.CAPTURE_SCREEN or ohos.permission.CUSTOM_SCREEN_RECORDING
@@ -41,12 +38,12 @@ function saveHdrPicture(options?: HdrScreenshotOptions): Promise<Array<image.Pix
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [1400004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400004-参数异常) |
-| [1400001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400001-无效的显示设备) |
-| [1400003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-arkui/errorcode-display.md#1400003-系统服务工作异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [1400004](../errorcode-display.md#1400004-参数异常) |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) |
+| [1400003](../errorcode-display.md#1400003-系统服务工作异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

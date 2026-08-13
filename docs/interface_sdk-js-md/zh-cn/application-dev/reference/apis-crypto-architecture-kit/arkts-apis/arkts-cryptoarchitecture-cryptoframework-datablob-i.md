@@ -1,14 +1,12 @@
 # DataBlob
 
-二进制数据的封装接口，核心字段data为Uint8Array类型。
+二进制数据的封装接口，核心字段data为Uint8Array类型。 > **说明：** > > Uint8Array类型数据表示8位无符号整数的数组。
 
-> **说明：**
-> 
-> Uint8Array类型数据表示8位无符号整数的数组。
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-cryptoFramework-interface DataBlob--><!--Device-cryptoFramework-interface DataBlob-End-->
 
@@ -24,9 +22,11 @@ data: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **模型约束：** 
 - API版本12+：此接口可在Stage模型和FA模型下使用。

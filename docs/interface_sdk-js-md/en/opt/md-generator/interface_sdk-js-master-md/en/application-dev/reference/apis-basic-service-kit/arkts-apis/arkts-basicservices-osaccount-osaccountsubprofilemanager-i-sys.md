@@ -4,6 +4,8 @@ Defines the OS account sub-profile manager class.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-osAccount-interface OsAccountSubProfileManager--><!--Device-osAccount-interface OsAccountSubProfileManager-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
@@ -25,6 +27,8 @@ createOsAccountSubProfile(osAccountLocalId: number): Promise<OsAccountSubProfile
 Creates an OS account sub-profile.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -52,13 +56,13 @@ Creates an OS account sub-profile.
 
 | Error Code ID |
 | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [12300402](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300402-number-of-os-account-subprofiles-has-reached-the-upper-limit) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [12300402](../../apis-basic-services-kit/errorcode-account.md#12300402-number-of-os-account-subprofiles-has-reached-the-upper-limit) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -91,6 +95,8 @@ Deletes an OS account sub-profile.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -118,13 +124,13 @@ Deletes an OS account sub-profile.
 
 | Error Code ID |
 | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300403](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300403-restricted-os-account-subprofile) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
-| [12300404](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300404-foreground-subprofile-of-the-os-account-cannot-be-deleted) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-restricted-os-account-subprofile) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [12300404](../../apis-basic-services-kit/errorcode-account.md#12300404-foreground-subprofile-of-the-os-account-cannot-be-deleted) |
 
 ## Examples
 
@@ -158,6 +164,8 @@ Gets the foreground sub-profile ID of the OS account to which the caller belongs
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(): Promise<int>-End-->
@@ -176,9 +184,9 @@ Gets the foreground sub-profile ID of the OS account to which the caller belongs
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
 
 ## Examples
 
@@ -208,6 +216,8 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>-End-->
@@ -232,10 +242,10 @@ Gets the foreground sub-profile ID of a specified OS account.
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
 
 ## Examples
 
@@ -268,6 +278,8 @@ Obtains the local ID of the OS account to which a sub-profile belongs.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>--><!--Device-OsAccountSubProfileManager-getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>-End-->
@@ -292,9 +304,9 @@ Obtains the local ID of the OS account to which a sub-profile belongs.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
 
 ## Examples
 
@@ -327,6 +339,8 @@ Gets the sub-profile object information of the OS account to which the caller be
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -353,10 +367,10 @@ Gets the sub-profile object information of the OS account to which the caller be
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
 
 ## Examples
 
@@ -389,6 +403,8 @@ Gets the sub-profile object information of the specified OS account.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNTS and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -416,10 +432,10 @@ Gets the sub-profile object information of the specified OS account.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
 
 ## Examples
 
@@ -453,6 +469,8 @@ Gets the ID list of sub-profile of the OS account to which the caller belongs.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -473,9 +491,9 @@ Gets the ID list of sub-profile of the OS account to which the caller belongs.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -505,6 +523,8 @@ Gets the ID list of sub-profile of a specified OS account.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -531,10 +551,10 @@ Gets the ID list of sub-profile of a specified OS account.
 
 | Error Code ID |
 | --- |
-| [12300003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -567,6 +587,8 @@ Unsubscribes from OS account sub-profile events.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-offOsAccountSubProfileEvent(callback?: Callback<OsAccountSubProfileEventData>): void-End-->
@@ -585,8 +607,8 @@ Unsubscribes from OS account sub-profile events.
 
 | Error Code ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -614,6 +636,8 @@ Subscribes to OS account sub-profile events.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void--><!--Device-OsAccountSubProfileManager-onOsAccountSubProfileEvent(      events: OsAccountSubProfileEvent[],      callback: Callback<OsAccountSubProfileEventData>): void-End-->
@@ -633,9 +657,9 @@ Subscribes to OS account sub-profile events.
 
 | Error Code ID |
 | --- |
-| [12300002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
 
 ## Examples
 
@@ -666,6 +690,8 @@ Switches to an OS account sub-profile.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
 **Model restriction:** This API can be used only in the stage model.
@@ -693,13 +719,13 @@ Switches to an OS account sub-profile.
 
 | Error Code ID |
 | --- |
-| [12300010](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
-| [12300403](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300403-restricted-os-account-subprofile) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [202](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
-| [12300001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
-| [12300401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
-| [12300405](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-basic-services-kit/errorcode-account.md#12300405-foreground-subprofile-with-a-loggedin-distributed-account-cannot-be-directly-switched-to-the-background) |
+| [12300010](../../apis-basic-services-kit/errorcode-account.md#12300010-account-service-not-respond) |
+| [12300403](../../apis-basic-services-kit/errorcode-account.md#12300403-restricted-os-account-subprofile) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |
+| [12300001](../../apis-basic-services-kit/errorcode-account.md#12300001-system-service-abnormal) |
+| [12300401](../../apis-basic-services-kit/errorcode-account.md#12300401-os-account-subprofile-not-found) |
+| [12300405](../../apis-basic-services-kit/errorcode-account.md#12300405-foreground-subprofile-with-a-loggedin-distributed-account-cannot-be-directly-switched-to-the-background) |
 
 ## Examples
 

@@ -2,9 +2,11 @@
 
 获取所有卷。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-volumeManager-export interface Volume--><!--Device-volumeManager-export interface Volume-End-->
 
@@ -22,9 +24,11 @@ description: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-description: string--><!--Device-Volume-description: string-End-->
 
@@ -42,9 +46,11 @@ diskId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-diskId: string--><!--Device-Volume-diskId: string-End-->
 
@@ -58,15 +64,15 @@ diskId: string
 fsType: string
 ```
 
-文件系统的类型，常见有ext2、vfat、NTFS等。
-
-**说明：**从API version 24开始，支持ISO9660、UDF。
+文件系统的类型，常见有ext2、vfat、NTFS等。 **说明：**从API version 24开始，支持ISO9660、UDF。
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为12；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-fsType: string--><!--Device-Volume-fsType: string-End-->
 
@@ -80,13 +86,15 @@ fsType: string
 id: string
 ```
 
-卷设备ID的格式为vol-{主设备号}-{次设备号}，主设备号用来区分不同种类的设备，次设备号用来区分同一类型的多个设备，卷设备ID会随着插卡顺序不同而变化。
+卷设备ID的格式为vol-{主设备号}-{次设备号}，主设备号用来区分不同种类的设备， 次设备号用来区分同一类型的多个设备，卷设备ID会随着插卡顺序不同而变化。
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-id: string--><!--Device-Volume-id: string-End-->
 
@@ -104,9 +112,11 @@ path: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-path: string--><!--Device-Volume-path: string-End-->
 
@@ -124,9 +134,11 @@ removable: boolean
 
 **类型：** boolean
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-removable: boolean--><!--Device-Volume-removable: boolean-End-->
 
@@ -140,21 +152,15 @@ removable: boolean
 state: int
 ```
 
-卷设备状态标识：
+卷设备状态标识： 0：卸载状态 UNMOUNTED。 1：检查状态 CHECKING。 2：挂载状态 MOUNTED。 3：正在弹出状态 EJECTING。
 
-0：卸载状态 UNMOUNTED。
+**类型：** int
 
-1：检查状态 CHECKING。
+**起始版本：** 23
 
-2：挂载状态 MOUNTED。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-3：正在弹出状态 EJECTING。
-
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
-
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-Volume-state: int--><!--Device-Volume-state: int-End-->
 
@@ -172,9 +178,11 @@ uuid: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Volume-uuid: string--><!--Device-Volume-uuid: string-End-->
 

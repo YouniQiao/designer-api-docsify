@@ -4,11 +4,13 @@ Defines additional options for selecting media assets from Gallery. It inherits 
 
 **Inheritance/Implementation:** PhotoSelectOptions extends [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)
 
-**Since:** 10
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-<!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions extends BaseSelectOptions-End-->
+**Deprecated since:** -1
+
+<!--Device-photoAccessHelper-class PhotoSelectOptions--><!--Device-photoAccessHelper-class PhotoSelectOptions-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -24,17 +26,17 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 completeButtonText?: CompleteButtonText
 ```
 
-Text displayed on the complete button.
-
-The complete button is located in the lower-right corner of the page. It is used by users to signify that they have finished selecting images.
+Text displayed on the complete button. The complete button is located in the lower-right corner of the page. It is used by users to signify that they have finished selecting images.
 
 **Type:** [CompleteButtonText](arkts-medialibrary-photoaccesshelper-completebuttontext-e.md)
 
-**Since:** 14
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 14; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 14.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-completeButtonText?: CompleteButtonText--><!--Device-PhotoSelectOptions-completeButtonText?: CompleteButtonText-End-->
 
@@ -46,17 +48,17 @@ The complete button is located in the lower-right corner of the page. It is used
 contextRecoveryInfo?: ContextRecoveryInfo
 ```
 
-Information for restoring the PhotoPicker's state from the last exit.
-
-When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The application can then use the information to restore the PhotoPicker's state and the last viewed grid interface the next time it starts the PhotoPicker.
+Information for restoring the PhotoPicker's state from the last exit. When the selection process is complete, the PhotoPicker returns **contextRecoveryInfo** to the application. The application can then use the information to restore the PhotoPicker's state and the last viewed grid interface the next time it starts the PhotoPicker.
 
 **Type:** [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md)
 
-**Since:** 21
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo--><!--Device-PhotoSelectOptions-contextRecoveryInfo?: ContextRecoveryInfo-End-->
 
@@ -68,18 +70,19 @@ When the selection process is complete, the PhotoPicker returns **contextRecover
 isDestroyedWithNavigation?: boolean
 ```
 
-Whether destruction with   
-[Navigation](Navigation) is supported. **true** if supported, **false** otherwise. The default value is **false**.
+Whether destruction with Navigation is supported. **true** if supported, **false** otherwise. The default value is **false**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean--><!--Device-PhotoSelectOptions-isDestroyedWithNavigation?: boolean-End-->
 
@@ -95,11 +98,13 @@ Whether the image can be edited. **true** if editable, **false** otherwise.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-isEditSupported?: boolean--><!--Device-PhotoSelectOptions-isEditSupported?: boolean-End-->
 
@@ -115,11 +120,13 @@ Whether to display the button for selecting the original image. **true** to disp
 
 **Type:** boolean
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-isOriginalSupported?: boolean--><!--Device-PhotoSelectOptions-isOriginalSupported?: boolean-End-->
 
@@ -131,23 +138,19 @@ Whether to display the button for selecting the original image. **true** to disp
 isReturnToPhotoBrowserEnabled?: boolean
 ```
 
-Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode.   
-**true** means to switch, and **false** means the opposite. The default value is **false**.
-
-Note: This parameter takes effect only when   
-[SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md#SingleSelectionMode) is set to   
-**BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and   
-[BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions)is set to **true**.
+Whether to automatically switch to the full image preview mode after a photo is taken in single-selection mode. **true** means to switch, and **false** means the opposite. The default value is **false**. Note: This parameter takes effect only when [SingleSelectionMode](arkts-medialibrary-photoaccesshelper-singleselectionmode-e.md#SingleSelectionMode) is set to **BROWSER_MODE** or **BROWSER_AND_SELECT_MODE** and [BaseSelectOptions.isPreviewForSingleSelectionSupported](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md#BaseSelectOptions) is set to **true**.
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean--><!--Device-PhotoSelectOptions-isReturnToPhotoBrowserEnabled?: boolean-End-->
 
@@ -165,7 +168,9 @@ Support displaying index numbers.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -187,7 +192,9 @@ Support selection order adjustment.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -203,19 +210,19 @@ Support selection order adjustment.
 maxPhotoSelectNumber?: int
 ```
 
-Maximum number of photos that can be selected. 
+Maximum number of photos that can be selected. A maximum of 500 photos can be selected. The default value is **500**.
 
-A maximum of 500 photos can be selected. The default value is **500**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxPhotoSelectNumber?: int-End-->
 
@@ -227,19 +234,19 @@ A maximum of 500 photos can be selected. The default value is **500**.
 maxVideoSelectNumber?: int
 ```
 
-Maximum number of videos that can be selected. 
+Maximum number of videos that can be selected. A maximum of 500 videos can be selected. The default value is **500**.
 
-A maximum of 500 videos can be selected. The default value is **500**.
+**Type:** int
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Since:** 26.0.0
 
-**Since:** 23
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**ArkTS mode:** ArkTS-Dyn since version 23; ArkTS-Sta since version 26.0.0.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int--><!--Device-PhotoSelectOptions-maxVideoSelectNumber?: int-End-->
 
@@ -251,13 +258,15 @@ A maximum of 500 videos can be selected. The default value is **500**.
 pickerColorMode?: PickerColorMode
 ```
 
-Picker color mode. Dark/light color mode of all content within the Picker.The default value is `PickerColorMode.AUTO`, which follows the system's dark/light color mode.
+Picker color mode. Dark/light color mode of all content within the Picker. The default value is `PickerColorMode.AUTO`, which follows the system's dark/light color mode.
 
 **Type:** PickerColorMode
 
 **Since:** 26.1.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -277,11 +286,13 @@ Name of the child window.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoSelectOptions-subWindowName?: string--><!--Device-PhotoSelectOptions-subWindowName?: string-End-->
 

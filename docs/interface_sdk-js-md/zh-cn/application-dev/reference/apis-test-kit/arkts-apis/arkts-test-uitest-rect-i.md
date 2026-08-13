@@ -2,9 +2,11 @@
 
 控件的边框信息。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface Rect--><!--Device-unnamed-declare interface Rect-End-->
 
@@ -16,17 +18,15 @@
 bottom: int
 ```
 
-控件边框的右下角的Y坐标，取值大于等于0的整数，单位：px。
+控件边框的右下角的Y坐标，取值大于等于0的整数，单位：px。 **说明：** 从API version 20开始，该属性不再为只读属性。 从API version 11开始，该接口支持在原子化服务中使用。
 
-**说明：** 从API version 20开始，该属性不再为只读属性。
+**类型：** int
 
-从API version 11开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -40,17 +40,17 @@ bottom: int
 displayId?: int
 ```
 
-控件边框所属的屏幕ID，取值大于或等于0的整数。默认值为设备默认屏幕ID。
+控件边框所属的屏幕ID，取值大于或等于0的整数。默认值为设备默认屏幕ID。 从API version 20开始，该接口支持在原子化服务中使用。
 
-从API version 20开始，该接口支持在原子化服务中使用。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 20
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-Rect-displayId?: int--><!--Device-Rect-displayId?: int-End-->
 
@@ -62,17 +62,15 @@ displayId?: int
 left: int
 ```
 
-控件边框的左上角的X坐标，取值大于等于0的整数，单位：px。
+控件边框的左上角的X坐标，取值大于等于0的整数，单位：px。 **说明：** 从API version 20开始，该属性不再为只读属性。 从API version 11开始，该接口支持在原子化服务中使用。
 
-**说明：** 从API version 20开始，该属性不再为只读属性。
+**类型：** int
 
-从API version 11开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -86,17 +84,15 @@ left: int
 right: int
 ```
 
-控件边框的右下角的X坐标，取值大于等于0的整数，单位：px。
+控件边框的右下角的X坐标，取值大于等于0的整数，单位：px。 **说明：** 从API version 20开始，该属性不再为只读属性。 从API version 11开始，该接口支持在原子化服务中使用。
 
-**说明：** 从API version 20开始，该属性不再为只读属性。
+**类型：** int
 
-从API version 11开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -110,17 +106,15 @@ right: int
 top: int
 ```
 
-控件边框的左上角的Y坐标，取值大于等于0的整数，单位：px。
+控件边框的左上角的Y坐标，取值大于等于0的整数，单位：px。 **说明：** 从API version 20开始，该属性不再为只读属性。 从API version 11开始，该接口支持在原子化服务中使用。
 
-**说明：** 从API version 20开始，该属性不再为只读属性。
+**类型：** int
 
-从API version 11开始，该接口支持在原子化服务中使用。
+**起始版本：** 23
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**起始版本：** 9
-
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

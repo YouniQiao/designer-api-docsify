@@ -1,10 +1,12 @@
 # ChildrenCountMode
 
-Enum for children count mode.Specifies how to count children when querying number of child nodes.
+Enumerates the modes of counting child nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export enum ChildrenCountMode--><!--Device-unnamed-export enum ChildrenCountMode-End-->
 
@@ -16,13 +18,17 @@ Enum for children count mode.Specifies how to count children when querying numbe
 ALL_EXPAND = 0
 ```
 
-Expand mode. When encountering lazy loaded nodes (e.g., LazyForEach),nodes are expanded and count includes all child nodes.This is the default behavior.
+Counting all child node after expansion. When a lazy loading node (for example, LazyForEach) is encountered, the node is expanded and the number of all child nodes is returned. Whether to expand lazy loading nodes: yes Application scenario: A node needs to be expanded and the number of all child nodes needs to be returned.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ChildrenCountMode-ALL_EXPAND = 0--><!--Device-ChildrenCountMode-ALL_EXPAND = 0-End-->
 
@@ -34,13 +40,17 @@ Expand mode. When encountering lazy loaded nodes (e.g., LazyForEach),nodes are e
 ONLY_EXPANDED = 1
 ```
 
-Count expanded mode. Does not expand lazy loaded nodes.Returns count of only currently expanded child nodes. Unexpanded lazy loaded nodes are not included in count.
+Counting currently expanded child nodes. Lazy loading nodes are not expanded, and only the number of currently expanded child nodes is returned. Lazy loading nodes that are not expanded are not included in the count. Whether to expand lazy loading nodes: yes Application scenario: Only the number of expanded child nodes needs to be queried.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ChildrenCountMode-ONLY_EXPANDED = 1--><!--Device-ChildrenCountMode-ONLY_EXPANDED = 1-End-->
 
@@ -52,13 +62,17 @@ Count expanded mode. Does not expand lazy loaded nodes.Returns count of only cur
 ALL_NOT_EXPAND = 2
 ```
 
-Count all mode. Does not expand lazy loaded nodes,but returns count including all potential children (both expanded and unexpanded lazy loaded nodes).This provides total potential child count without triggering expansion.
+Counting all child nodes. Lazy loading nodes are not expanded, but the total number of potential child nodes ( including both expanded and unexpanded lazy loading nodes) is returned. This counting mode provides the total number of potential child nodes without triggering any expansion. Whether to expand lazy loading nodes: yes Application scenario: This counting mode is used when the total number of all child nodes needs to be obtained. Unlike **ALL_EXPAND**, this mode does not expand child nodes.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ChildrenCountMode-ALL_NOT_EXPAND = 2--><!--Device-ChildrenCountMode-ALL_NOT_EXPAND = 2-End-->
 

@@ -4,6 +4,8 @@ Indicates the senior mode information of an application.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-config-interface AppSeniorModeInfo--><!--Device-config-interface AppSeniorModeInfo-End-->
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
@@ -22,11 +24,13 @@ import { config } from '@kit.AccessibilityKit';
 appIndex?: number
 ```
 
-Indicates the index of clone app.The value must be an integer greater than or equal to 0. Default value: 0.
+Indicates the index of clone app. The value must be an integer greater than or equal to 0. Default value: 0.
 
 **Type:** number
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,6 +52,8 @@ The bundle name of application.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AppSeniorModeInfo-bundleName: string--><!--Device-AppSeniorModeInfo-bundleName: string-End-->
@@ -67,6 +73,8 @@ The state of senior mode for application.
 **Type:** boolean
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

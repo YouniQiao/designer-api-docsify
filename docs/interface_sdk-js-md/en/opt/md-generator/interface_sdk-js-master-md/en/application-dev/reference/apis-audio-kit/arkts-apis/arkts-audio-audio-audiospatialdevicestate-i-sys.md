@@ -2,7 +2,9 @@
 
 Describes spatial device state.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-audio-interface AudioSpatialDeviceState--><!--Device-audio-interface AudioSpatialDeviceState-End-->
 
@@ -26,7 +28,9 @@ Spatial device address.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceState-address: string--><!--Device-AudioSpatialDeviceState-address: string-End-->
 
@@ -44,7 +48,9 @@ Whether the spatial device supports head tracking.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean--><!--Device-AudioSpatialDeviceState-isHeadTrackingSupported: boolean-End-->
 
@@ -62,7 +68,9 @@ Whether the spatial device supports spatial rendering.
 
 **Type:** boolean
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean--><!--Device-AudioSpatialDeviceState-isSpatializationSupported: boolean-End-->
 
@@ -80,7 +88,9 @@ Spatial device type.
 
 **Type:** [AudioSpatialDeviceType](arkts-audio-audio-audiospatialdevicetype-e-sys.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType--><!--Device-AudioSpatialDeviceState-spatialDeviceType: AudioSpatialDeviceType-End-->
 

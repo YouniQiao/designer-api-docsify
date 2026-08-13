@@ -1,21 +1,10 @@
 # AVPlayer
 
-播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过  
-[createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer)构建一个AVPlayer实例。
+播放管理类，用于管理和播放媒体资源。在调用AVPlayer的方法前，需要先通过 [createAVPlayer()](arkts-media-media-createavplayer-f.md#createAVPlayer)构建一个 AVPlayer实例。 在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。 on('stateChange')：监听播放状态机 AVPlayerState切换。on('error')：监听错误事件。 应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。 Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、 [视频播放开发指导](../../../media/media/video-playback.md)。 > **说明：** > > - 本Interface首批API从API version 9开始支持。
 
-在使用AVPlayer实例的方法时，建议开发者注册相关回调，主动获取当前状态变化。  
-[on('stateChange')](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))：监听播放状态机AVPlayerState切换。[on('error')](media.AVPlayer.on(type: 'error', callback: ErrorCallback))：监听错误事件。
+**起始版本：** 23
 
-应用需要按照实际业务需求合理使用AVPlayer对象，按需创建并及时释放，避免持有过多AVPlayer实例导致内存消耗过大，否则在一定情况下可能导致系统终止应用。
-
-Audio/Video播放demo可参考：[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)、  
-[视频播放开发指导](../../../media/media/video-playback.md)。
-
-> **说明：**
-> 
-> - 本Interface首批API从API version 9开始支持。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-media-interface AVPlayer--><!--Device-media-interface AVPlayer-End-->
 
@@ -29,9 +18,11 @@ addSubtitleFromFd(fd: number, offset?: number, length?: number): Promise<void>
 
 依据fd为视频添加外挂字幕，当前仅支持与视频资源同时设置（在avplayer设置fdSrc视频资源后设置外挂字幕）。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>--><!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>-End-->
 
@@ -55,8 +46,8 @@ addSubtitleFromFd(fd: number, offset?: number, length?: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## addSubtitleFromUrl
 
@@ -66,9 +57,11 @@ addSubtitleFromUrl(url: string): Promise<void>
 
 依据url为视频添加外挂字幕，当前仅支持与视频资源同时设置（在avplayer设置fdSrc视频资源后设置外挂字幕）。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>--><!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>-End-->
 
@@ -90,8 +83,8 @@ addSubtitleFromUrl(url: string): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## deselectTrack
 
@@ -101,9 +94,11 @@ deselectTrack(index: number): Promise<void>
 
 使用AVPlayer播放多音轨视频时取消指定音视频轨道播放，使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-deselectTrack(index: int): Promise<void>--><!--Device-AVPlayer-deselectTrack(index: int): Promise<void>-End-->
 
@@ -125,8 +120,8 @@ deselectTrack(index: number): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## getLoadedTimeRanges
 
@@ -134,15 +129,11 @@ deselectTrack(index: number): Promise<void>
 getLoadedTimeRanges(): Promise<Array<Range>>
 ```
 
-获取已加载的时间区间段的列表。使用Promise异步回调。
-
-> **说明：**
-> 
-> - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。
-> 
-> - 对于网络媒体资源，返回本地已缓存的时间区间段的列表。
+获取已加载的时间区间段的列表。使用Promise异步回调。 > **说明：** > > - 对于本地媒体资源，返回的时间区间为0到整个媒体时长。 > > - 对于网络媒体资源，返回本地已缓存的时间区间段的列表。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -164,7 +155,9 @@ getPlaybackInfo(): Promise<PlaybackInfo>
 
 获取播放过程信息，可以在prepared/playing/paused状态调用。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AVPlayer-getPlaybackInfo(): Promise<PlaybackInfo>--><!--Device-AVPlayer-getPlaybackInfo(): Promise<PlaybackInfo>-End-->
 
@@ -186,6 +179,8 @@ getPlaybackRate(): Promise<number>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-AVPlayer-getPlaybackRate(): Promise<double>--><!--Device-AVPlayer-getPlaybackRate(): Promise<double>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
@@ -206,6 +201,8 @@ getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 <!--Device-AVPlayer-getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>--><!--Device-AVPlayer-getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVPlayer
@@ -222,15 +219,11 @@ getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>
 getSeekableTimeRanges(): Promise<Array<Range>>
 ```
 
-获取可跳转的时间区间段的列表。使用Promise异步回调。
-
-> **说明：**
-> 
-> - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。
-> 
-> - 对于仅支持分块传输的媒体资源，没有可跳转的时间范围。
+获取可跳转的时间区间段的列表。使用Promise异步回调。 > **说明：** > > - 对于本地媒体资源及支持分段请求的媒体资源，返回的时间区间为0到整个媒体时长。 > > - 对于仅支持分块传输的媒体资源，没有可跳转的时间范围。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -252,9 +245,11 @@ getSelectedTracks(): Promise<Array<number>>
 
 获取已选择的音视频轨道索引，可以在prepared/playing/paused状态调用。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>--><!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>-End-->
 
@@ -270,7 +265,7 @@ getSelectedTracks(): Promise<Array<number>>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## getTrackDescription
 
@@ -280,7 +275,9 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 获取音视频轨道信息，可以在prepared/playing/paused状态调用。获取所有音视轨道信息，应在数据加载回调后调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -298,7 +295,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## getTrackDescription
 
@@ -308,7 +305,9 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 获取音视频轨道信息，可以在prepared/playing/paused状态调用。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -326,7 +325,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## getTrackSelectionFilter
 
@@ -337,6 +336,8 @@ getTrackSelectionFilter(): Promise<TrackSelectionFilter>
 获取播放器当前配置的轨道选择过滤器。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -354,7 +355,7 @@ getTrackSelectionFilter(): Promise<TrackSelectionFilter>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## pause
 
@@ -364,7 +365,9 @@ pause(callback: AsyncCallback<void>): void
 
 暂停播放音视频资源，只能在playing状态调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -382,7 +385,7 @@ pause(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## pause
 
@@ -392,7 +395,9 @@ pause(): Promise<void>
 
 暂停播放音视频资源，只能在playing状态调用。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -410,7 +415,7 @@ pause(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## play
 
@@ -420,7 +425,9 @@ play(callback: AsyncCallback<void>): void
 
 开始播放音视频资源，只能在prepared/paused/completed状态调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -438,7 +445,7 @@ play(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## play
 
@@ -448,7 +455,9 @@ play(): Promise<void>
 
 开始播放音视频资源，只能在prepared/paused/completed状态调用。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -466,7 +475,7 @@ play(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## prepare
 
@@ -474,9 +483,11 @@ play(): Promise<void>
 prepare(callback: AsyncCallback<void>): void
 ```
 
-准备播放音频/视频，需在[stateChange](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))事件成功触发至initialized状态后，才能调用。使用callback方式异步获取返回值。
+准备播放音频/视频，需在stateChange事件成 功触发至initialized状态后，才能调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -494,8 +505,8 @@ prepare(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
 ## prepare
 
@@ -503,12 +514,11 @@ prepare(callback: AsyncCallback<void>): void
 prepare(): Promise<void>
 ```
 
-准备播放音频/视频，需在[stateChange](media.AVPlayer.on(type: 'stateChange', callback: OnAVPlayerStateChangeHandle))事件成功触发至initialized状态后，才能调用。使用Promise异步回调。
+准备播放音频/视频，需在stateChange事件成 功触发至initialized状态后，才能调用。使用Promise异步回调。 如果应用使用到多个短视频频繁切换的场景，为了提升切换性能，可以考虑创建多个AVPlayer对象，提前准备下一个视频，详情参见 [在线短视频流畅切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-smooth-switching)。
 
-如果应用使用到多个短视频频繁切换的场景，为了提升切换性能，可以考虑创建多个AVPlayer对象，提前准备下一个视频，详情参见  
-[在线短视频流畅切换](https://developer.huawei.com/consumer/cn/doc/best-practices/bpta-smooth-switching)。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -526,8 +536,8 @@ prepare(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
-| [5400106](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400106-不支持的规格) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400106](../errorcode-media.md#5400106-不支持的规格) |
 
 ## release
 
@@ -537,7 +547,9 @@ release(callback: AsyncCallback<void>): void
 
 销毁播放资源，除released状态外，均可以调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -555,7 +567,7 @@ release(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## release
 
@@ -565,7 +577,9 @@ release(): Promise<void>
 
 销毁播放资源，除released状态，都可以调用。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -583,7 +597,7 @@ release(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## reset
 
@@ -593,7 +607,9 @@ reset(callback: AsyncCallback<void>): void
 
 重置播放，只能在initialized/prepared/playing/paused/completed/stopped/error状态调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -611,7 +627,7 @@ reset(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## reset
 
@@ -621,7 +637,9 @@ reset(): Promise<void>
 
 重置播放，只能在initialized/prepared/playing/paused/completed/stopped/error状态调用。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -639,7 +657,7 @@ reset(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## seek
 
@@ -647,14 +665,11 @@ reset(): Promise<void>
 seek(timeMs: number, mode?: SeekMode): void
 ```
 
-跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过  
-[on('seekDone')](media.AVPlayer.on(type: 'seekDone', callback: Callback&lt;int&gt;))事件确认是否生效。
+跳转到指定播放位置，只能在prepared/playing/paused/completed状态调用，可以通过 on('seekDone')事件确认是否生效。 > **注意：** > > 从API版本26.0.0开始，直播场景支持seek。
 
-> **注意：**
-> 
-> 从API版本26.0.0开始，直播场景支持seek。
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -681,6 +696,8 @@ seekToDefaultPosition(): void
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AVPlayer-seekToDefaultPosition(): void--><!--Device-AVPlayer-seekToDefaultPosition(): void-End-->
@@ -691,7 +708,7 @@ seekToDefaultPosition(): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## selectTrack
 
@@ -701,11 +718,13 @@ selectTrack(index: number, mode?: SwitchMode): Promise<void>
 
 使用AVPlayer播放多音视频轨资源时，允许用户以指定模式切换到指定轨道以继续播放。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>--><!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>-End-->
 
@@ -728,8 +747,8 @@ selectTrack(index: number, mode?: SwitchMode): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setMediaMuted
 
@@ -737,13 +756,13 @@ selectTrack(index: number, mode?: SwitchMode): Promise<void>
 setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 ```
 
-设置音频静音/取消音频静音，从API version 20开始，增加支持设置画面显示/不显示。使用Promise异步回调。
+设置音频静音/取消音频静音，从API version 20开始，增加支持设置画面显示/不显示。使用Promise异步回调。 只能在prepared/playing/paused/completed状态下调用。
 
-只能在prepared/playing/paused/completed状态下调用。
+**起始版本：** 23
 
-**起始版本：** 12
+**废弃版本：** -1
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>--><!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>-End-->
 
@@ -766,8 +785,8 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setMediaSource
 
@@ -777,9 +796,11 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 流媒体预下载资源设置，下载url对应的流媒体数据，并暂存在内存中。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>-End-->
 
@@ -802,8 +823,8 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setPlaybackStrategy
 
@@ -813,9 +834,11 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 
 设置播放策略，只能在initialized状态下调用。使用Promise异步回调。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>-End-->
 
@@ -837,8 +860,8 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setTrackSelectionFilter
 
@@ -849,6 +872,8 @@ setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
 为播放器设置轨道选择过滤器，播放器将使用该过滤器来选择可用的轨道用于播放。使用Promise异步回调。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -872,7 +897,7 @@ setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## setVolume
 
@@ -880,10 +905,11 @@ setTrackSelectionFilter(filter : TrackSelectionFilter): Promise<void>
 setVolume(volume: number): void
 ```
 
-设置媒体播放音量，只能在prepared/playing/paused/completed状态调用，可以通过  
-[on('volumeChange')](media.AVPlayer.on(type: 'volumeChange', callback: Callback&lt;double&gt;))事件确认是否生效。
+设置媒体播放音量，只能在prepared/playing/paused/completed状态调用，可以通过 on('volumeChange')事件确认是否生效。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -905,7 +931,9 @@ stop(callback: AsyncCallback<void>): void
 
 停止播放音视频资源，只能在prepared/playing/paused/completed状态调用。使用callback方式异步获取返回值。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -923,7 +951,7 @@ stop(callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |
 
 ## stop
 
@@ -933,7 +961,9 @@ stop(): Promise<void>
 
 停止播放音视频资源，只能在prepared/playing/paused/completed状态调用。使用Promise异步回调。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -951,4 +981,4 @@ stop(): Promise<void>
 
 | 错误码ID |
 | --- |
-| [5400102](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) |
+| [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) |

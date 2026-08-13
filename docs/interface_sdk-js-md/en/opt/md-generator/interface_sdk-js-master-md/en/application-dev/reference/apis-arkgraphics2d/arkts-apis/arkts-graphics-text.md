@@ -1,25 +1,10 @@
 # @ohos.graphics.text
 
-The Text module provides a set of APIs for text layout and font management. It aims to deliver high-quality typesetting through features like character-to-glyph conversion, kerning, line breaking, alignment, and text measurement. Additionally, it provides font management capabilities, including font registration, font descriptors,and font collection management.
+The Text module provides a set of APIs for text layout and font management. It aims to deliver high-quality typesetting through features like character-to-glyph conversion, kerning, line breaking, alignment, and text measurement. Additionally, it provides font management capabilities, including font registration, font descriptors, and font collection management. This module provides the following classes for creating complex text paragraphs: - [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle): defines the font type, size, spacing, and other text properties. - [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection): manages a collection of different fonts. - [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md#FontDescriptor): provides information about font descriptors. - [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle): controls line break and word break strategies for the entire paragraph. - [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder): used to create different paragraph objects. - [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph): created by calling [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the **ParagraphBuilder** class. - [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset): created by calling [buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset) of the **ParagraphBuilder** class. - [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine): paragraph text on a line-by-line basis, obtained by calling [getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the **Paragraph** class. - [Run](arkts-arkgraphics2d-text-run-c.md#Run): text typesetting unit, obtained by calling [getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the **TextLine** class.
 
-This module provides the following classes for creating complex text paragraphs:
+**Since:** 23
 
-- [TextStyle](arkts-arkgraphics2d-text-textstyle-i.md#TextStyle): defines the font type, size, spacing, and other text properties.  
-- [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md#FontCollection): manages a collection of different fonts.  
-- [FontDescriptor](arkts-arkgraphics2d-text-fontdescriptor-i.md#FontDescriptor): provides information about font descriptors.  
-- [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md#ParagraphStyle): controls line break and word break strategies for the entire  
-paragraph.  
-- [ParagraphBuilder](arkts-arkgraphics2d-text-paragraphbuilder-c.md#ParagraphBuilder): used to create different paragraph objects.  
-- [Paragraph](arkts-arkgraphics2d-text-paragraph-c.md#Paragraph): created by calling [build()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#build) of the  
-**ParagraphBuilder** class.  
-- [LineTypeset](arkts-arkgraphics2d-text-linetypeset-c.md#LineTypeset): created by calling  
-[buildLineTypeset()](arkts-arkgraphics2d-text-paragraphbuilder-c.md#buildLineTypeset) of the **ParagraphBuilder** class.  
-- [TextLine](arkts-arkgraphics2d-text-textline-c.md#TextLine): paragraph text on a line-by-line basis, obtained by calling  
-[getTextLines()](arkts-arkgraphics2d-text-paragraph-c.md#getTextLines) of the **Paragraph** class.  
-- [Run](arkts-arkgraphics2d-text-run-c.md#Run): text typesetting unit, obtained by calling  
-[getGlyphRuns()](arkts-arkgraphics2d-text-textline-c.md#getGlyphRuns) of the **TextLine** class.
-
-**Since:** 12
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace text--><!--Device-unnamed-declare namespace text-End-->
 
@@ -37,16 +22,16 @@ import { text } from '@kit.ArkGraphics2D';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md#getfontcount) |
-| [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md#getfontdescriptorbyfullname) |
-| [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md#getfontdescriptorsfrompath) |
-| [getFontPathsByType](arkts-arkgraphics2d-text-getfontpathsbytype-f.md#getfontpathsbytype) |
-| [getFontUnicodeSet](arkts-arkgraphics2d-text-getfontunicodeset-f.md#getfontunicodeset) |
-| [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getsystemfontfullnamesbytype) |
-| [isFontSupported](arkts-arkgraphics2d-text-isfontsupported-f.md#isfontsupported) |
-| [matchFontDescriptors](arkts-arkgraphics2d-text-matchfontdescriptors-f.md#matchfontdescriptors) |
-| [setTextHighContrast](arkts-arkgraphics2d-text-settexthighcontrast-f.md#settexthighcontrast) |
-| [setTextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-settextundefinedglyphdisplay-f.md#settextundefinedglyphdisplay) |
+| [getFontCount](arkts-arkgraphics2d-text-getfontcount-f.md#getFontCount) |
+| [getFontDescriptorByFullName](arkts-arkgraphics2d-text-getfontdescriptorbyfullname-f.md#getFontDescriptorByFullName) |
+| [getFontDescriptorsFromPath](arkts-arkgraphics2d-text-getfontdescriptorsfrompath-f.md#getFontDescriptorsFromPath) |
+| [getFontPathsByType](arkts-arkgraphics2d-text-getfontpathsbytype-f.md#getFontPathsByType) |
+| [getFontUnicodeSet](arkts-arkgraphics2d-text-getfontunicodeset-f.md#getFontUnicodeSet) |
+| [getSystemFontFullNamesByType](arkts-arkgraphics2d-text-getsystemfontfullnamesbytype-f.md#getSystemFontFullNamesByType) |
+| [isFontSupported](arkts-arkgraphics2d-text-isfontsupported-f.md#isFontSupported) |
+| [matchFontDescriptors](arkts-arkgraphics2d-text-matchfontdescriptors-f.md#matchFontDescriptors) |
+| [setTextHighContrast](arkts-arkgraphics2d-text-settexthighcontrast-f.md#setTextHighContrast) |
+| [setTextUndefinedGlyphDisplay](arkts-arkgraphics2d-text-settextundefinedglyphdisplay-f.md#setTextUndefinedGlyphDisplay) |
 
 ### Classes
 

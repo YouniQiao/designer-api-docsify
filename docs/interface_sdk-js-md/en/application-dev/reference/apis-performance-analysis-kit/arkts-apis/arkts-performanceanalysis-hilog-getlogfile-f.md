@@ -16,7 +16,9 @@ Returns the list of hilog log file paths in the sandbox for the specified recent
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -28,7 +30,7 @@ Returns the list of hilog log file paths in the sandbox for the specified recent
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| latestSeconds | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | the specified time period from a given number of seconds in the past to the present. |
+| latestSeconds | int | Yes | the specified time period from a given number of seconds in the past to the present. |
 
 **Return value:**
 

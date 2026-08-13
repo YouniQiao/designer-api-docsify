@@ -24,7 +24,7 @@ token: string
 
 **废弃版本：** 9
 
-**替代接口：** [tid](ohos.request.agent.Task.tid)
+**替代接口：** tid
 
 <!--Device-DownloadResponse-token: string--><!--Device-DownloadResponse-token: string-End-->
 

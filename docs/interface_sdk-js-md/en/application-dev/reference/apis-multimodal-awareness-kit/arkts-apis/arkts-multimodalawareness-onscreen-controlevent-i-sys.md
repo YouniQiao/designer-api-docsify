@@ -2,9 +2,11 @@
 
 Defines a control event.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-onScreen-export interface ControlEvent--><!--Device-onScreen-export interface ControlEvent-End-->
 
@@ -28,9 +30,11 @@ Control event type.
 
 **Type:** EventType
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ControlEvent-eventType: EventType--><!--Device-ControlEvent-eventType: EventType-End-->
 
@@ -44,14 +48,15 @@ Control event type.
 hookId?: long
 ```
 
-Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from   
-[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent) of a session.
+Hook ID corresponding to the control event. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent-(System-API)) of a session.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ControlEvent-hookId?: long--><!--Device-ControlEvent-hookId?: long-End-->
 
@@ -65,14 +70,15 @@ Hook ID corresponding to the control event. The hook ID and the session ID can b
 sessionId: long
 ```
 
-ID of the session to be operated. The hook ID and the session ID can be obtained from   
-[PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent) of a session.
+ID of the session to be operated. The hook ID and the session ID can be obtained from [PageContent](arkts-multimodalawareness-onscreen-pagecontent-i-sys.md#PageContent-(System-API)) of a session.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ControlEvent-sessionId: long--><!--Device-ControlEvent-sessionId: long-End-->
 
@@ -88,11 +94,13 @@ windowId: int
 
 ID of the window to be operated.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ControlEvent-windowId: int--><!--Device-ControlEvent-windowId: int-End-->
 

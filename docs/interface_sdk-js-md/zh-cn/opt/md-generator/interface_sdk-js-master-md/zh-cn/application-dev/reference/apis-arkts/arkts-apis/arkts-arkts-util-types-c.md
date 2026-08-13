@@ -4,6 +4,8 @@
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 <!--Device-util-class types--><!--Device-util-class types-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ constructor()
 用于创建 **Types** 对象的构造函数。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -39,6 +43,8 @@ isAnyArrayBuffer(value: Object): boolean
 判断入参是否为 ArrayBuffer 或 SharedArrayBuffer 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -76,6 +82,8 @@ isArgumentsObject(value: Object): boolean
 判断入参是否为 **arguments** 对象。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -117,6 +125,8 @@ isArrayBuffer(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isArrayBuffer(value: Object): boolean--><!--Device-types-isArrayBuffer(value: Object): boolean-End-->
@@ -154,6 +164,8 @@ isArrayBufferView(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isArrayBufferView(value: Object): boolean--><!--Device-types-isArrayBufferView(value: Object): boolean-End-->
@@ -187,15 +199,11 @@ console.info("result = " + result);
 isAsyncFunction(value: Object): boolean
 ```
 
-判断入参是否为异步函数。
-
-> **说明：**
-> 
-> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
-> 
-> 该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
+判断入参是否为异步函数。 > **说明：** > > 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。 > > 该接口无法对Sendable class中的async成员函数进行有效判断，无替代方案。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -264,6 +272,8 @@ isBigInt64Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isBigInt64Array(value: Object): boolean--><!--Device-types-isBigInt64Array(value: Object): boolean-End-->
@@ -301,6 +311,8 @@ isBigUint64Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isBigUint64Array(value: Object): boolean--><!--Device-types-isBigUint64Array(value: Object): boolean-End-->
@@ -334,11 +346,7 @@ console.info("result = " + result);
 isBooleanObject(value: Object): boolean
 ```
 
-判断入参是否为 Boolean 类型。
-
-> **NOTE：**
-> 
-> 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
+判断入参是否为 Boolean 类型。 > **NOTE：**> > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -377,11 +385,7 @@ console.info("result = " + result);
 isBoxedPrimitive(value: Object): boolean
 ```
 
-判断入参是否为 Boolean、Number、String 或 Symbol 类型。
-
-> **NOTE：**
-> 
-> 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
+判断入参是否为 Boolean、Number、String 或 Symbol 类型。 > **NOTE：**> > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -424,6 +428,8 @@ isDataView(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isDataView(value: Object): boolean--><!--Device-types-isDataView(value: Object): boolean-End-->
@@ -462,6 +468,8 @@ isDate(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isDate(value: Object): boolean--><!--Device-types-isDate(value: Object): boolean-End-->
@@ -498,6 +506,8 @@ isExternal(value: Object): boolean
 判断入参是否为 native external 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -574,6 +584,8 @@ isFloat32Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isFloat32Array(value: Object): boolean--><!--Device-types-isFloat32Array(value: Object): boolean-End-->
@@ -611,6 +623,8 @@ isFloat64Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isFloat64Array(value: Object): boolean--><!--Device-types-isFloat64Array(value: Object): boolean-End-->
@@ -644,13 +658,11 @@ console.info("result = " + result);
 isGeneratorFunction(value: Object): boolean
 ```
 
-判断入参是否为 generator 函数。
-
-> **说明：**
-> 
-> 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
+判断入参是否为 generator 函数。 > **说明：** > > 该接口无法对AsyncGenerator Function进行有效判断，建议通过获取函数的constructor.name属性与'AsyncGeneratorFunction'做判等的方式替代。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -716,6 +728,8 @@ isGeneratorObject(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isGeneratorObject(value: Object): boolean--><!--Device-types-isGeneratorObject(value: Object): boolean-End-->
@@ -761,6 +775,8 @@ isInt16Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isInt16Array(value: Object): boolean--><!--Device-types-isInt16Array(value: Object): boolean-End-->
@@ -797,6 +813,8 @@ isInt32Array(value: Object): boolean
 判断入参是否为 Int32Array 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -835,6 +853,8 @@ isInt8Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isInt8Array(value: Object): boolean--><!--Device-types-isInt8Array(value: Object): boolean-End-->
@@ -871,6 +891,8 @@ isMap(value: Object): boolean
 判断入参是否为 Map 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -909,6 +931,8 @@ isMapIterator(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isMapIterator(value: Object): boolean--><!--Device-types-isMapIterator(value: Object): boolean-End-->
@@ -946,6 +970,8 @@ isModuleNamespaceObject(value: Object): boolean
 判断入参是否为模块命名空间对象。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -993,6 +1019,8 @@ isNativeError(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isNativeError(value: Object): boolean--><!--Device-types-isNativeError(value: Object): boolean-End-->
@@ -1026,11 +1054,7 @@ console.info("result = " + result);
 isNumberObject(value: Object): boolean
 ```
 
-判断入参是否为 Number 类型。
-
-> **NOTE：**
-> 
-> 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
+判断入参是否为 Number 类型。 > **NOTE：**> > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -1073,6 +1097,8 @@ isPromise(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isPromise(value: Object): boolean--><!--Device-types-isPromise(value: Object): boolean-End-->
@@ -1109,6 +1135,8 @@ isProxy(value: Object): boolean
 判断入参是否为 proxy。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1151,6 +1179,8 @@ isRegExp(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isRegExp(value: Object): boolean--><!--Device-types-isRegExp(value: Object): boolean-End-->
@@ -1187,6 +1217,8 @@ isSet(value: Object): boolean
 判断入参是否为 Set 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1226,6 +1258,8 @@ isSetIterator(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isSetIterator(value: Object): boolean--><!--Device-types-isSetIterator(value: Object): boolean-End-->
@@ -1264,6 +1298,8 @@ isSharedArrayBuffer(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isSharedArrayBuffer(value: Object): boolean--><!--Device-types-isSharedArrayBuffer(value: Object): boolean-End-->
@@ -1297,11 +1333,7 @@ console.info("result = " + result);
 isStringObject(value: Object): boolean
 ```
 
-判断入参是否为字符串对象。
-
-> **NOTE：**
-> 
-> 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
+判断入参是否为字符串对象。 > **NOTE：**> > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -1340,11 +1372,7 @@ console.info("result = " + result);
 isSymbolObject(value: Object): boolean
 ```
 
-判断入参是否为 symbol 对象。
-
-> **NOTE：**
-> 
-> 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
+判断入参是否为 symbol 对象。 > **NOTE：**> > 本接口从 API version 8 起支持，从 API version 14 起废弃。无替代接口。
 
 **起始版本：** 8
 
@@ -1394,6 +1422,8 @@ isTypedArray(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isTypedArray(value: Object): boolean--><!--Device-types-isTypedArray(value: Object): boolean-End-->
@@ -1430,6 +1460,8 @@ isUint16Array(value: Object): boolean
 判断入参是否为 Uint16Array 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1468,6 +1500,8 @@ isUint32Array(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isUint32Array(value: Object): boolean--><!--Device-types-isUint32Array(value: Object): boolean-End-->
@@ -1504,6 +1538,8 @@ isUint8Array(value: Object): boolean
 判断入参是否为 Uint8Array 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1542,6 +1578,8 @@ isUint8ClampedArray(value: Object): boolean
 
 **起始版本：** 8
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
 <!--Device-types-isUint8ClampedArray(value: Object): boolean--><!--Device-types-isUint8ClampedArray(value: Object): boolean-End-->
@@ -1578,6 +1616,8 @@ isWeakMap(value: Object): boolean
 判断入参是否为 WeakMap 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -1616,6 +1656,8 @@ isWeakSet(value: Object): boolean
 判断入参是否为 WeakSet 类型。
 
 **起始版本：** 8
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

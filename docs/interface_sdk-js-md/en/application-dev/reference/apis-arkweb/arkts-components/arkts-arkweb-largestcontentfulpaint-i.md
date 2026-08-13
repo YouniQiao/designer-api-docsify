@@ -6,6 +6,8 @@ Provides detailed information about the largest contentful paint.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface LargestContentfulPaint--><!--Device-unnamed-declare interface LargestContentfulPaint-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -24,6 +26,8 @@ Number of pixels of the maximum image.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LargestContentfulPaint-imageBPP?: number--><!--Device-LargestContentfulPaint-imageBPP?: number-End-->
@@ -36,13 +40,15 @@ Number of pixels of the maximum image.
 largestImageLoadEndTime?: number
 ```
 
-End time of the loading of the maximum image.&lt;br&gt;Unit: milliseconds.
+End time of the loading of the maximum image. &lt;br&gt;Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -56,13 +62,15 @@ End time of the loading of the maximum image.&lt;br&gt;Unit: milliseconds.
 largestImageLoadStartTime?: number
 ```
 
-Start time of the loading of the maximum image.&lt;br&gt;Unit: milliseconds.
+Start time of the loading of the maximum image. &lt;br&gt;Unit: milliseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -76,13 +84,15 @@ Start time of the loading of the maximum image.&lt;br&gt;Unit: milliseconds.
 largestImagePaintTime?: number
 ```
 
-Paint time of largest image.&lt;br&gt;Unit:milliseconds.
+Paint time of largest image. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -96,13 +106,15 @@ Paint time of largest image.&lt;br&gt;Unit:milliseconds.
 largestTextPaintTime?: number
 ```
 
-Paint time of largest text.&lt;br&gt;Unit:milliseconds.
+Paint time of largest text. &lt;br&gt;Unit:milliseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -116,13 +128,15 @@ Paint time of largest text.&lt;br&gt;Unit:milliseconds.
 navigationStartTime?: number
 ```
 
-Start time of navigation.&lt;br&gt;Unit:microseconds.
+Start time of navigation. &lt;br&gt;Unit:microseconds.
 
 **Type:** number
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

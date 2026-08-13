@@ -2,7 +2,9 @@
 
 自定义通信对象。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-inputMethodEngine-interface MessageHandler--><!--Device-inputMethodEngine-interface MessageHandler-End-->
 
@@ -14,11 +16,11 @@
 onMessage(msgId: string, msgParam?: ArrayBuffer): void
 ```
 
-接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
-
-&lt;p&gt;当已注册的MessageHandler接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。&lt;/p&gt;&lt;p&gt;msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。&lt;/p&gt;
+接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。 &lt;p&gt;当已注册的MessageHandler接收到来自已绑定当前输入法应用的编辑框应用所发送的自定义通信数据时，会触发该回调函数。&lt;/p&gt; &lt;p&gt;msgId为必选参数，msgParam为可选参数。存在收到仅有msgId自定义数据的可能，需与数据发送方确认自定义数据。&lt;/p&gt;
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 <!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void--><!--Device-MessageHandler-onMessage(msgId: string, msgParam?: ArrayBuffer): void-End-->
 
@@ -55,11 +57,11 @@ inputMethodEngine.getInputMethodAbility()
 onTerminated(): void
 ```
 
-监听对象终止回调函数。
-
-&lt;p&gt;当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;&lt;p&gt;当应用取消注册时，会触发当前已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;
+监听对象终止回调函数。 &lt;p&gt;当应用注册新的MessageHandler对象时，会触发上一个已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt; &lt;p&gt;当应用取消注册时，会触发当前已注册MessageHandler对象的onTerminated回调函数。&lt;/p&gt;
 
 **起始版本：** 15
+
+**废弃版本：** -1
 
 <!--Device-MessageHandler-onTerminated(): void--><!--Device-MessageHandler-onTerminated(): void-End-->
 
@@ -82,3 +84,39 @@ inputMethodEngine.getInputMethodAbility()
       client.recvMessage(messageHandler);
     });
 ```
+
+## onMessage
+
+```TypeScript
+onMessage: OnMessageCallback
+```
+
+onMessage(msgId: string, msgParam?: ArrayBuffer): void 接收已绑定当前输入法应用的编辑框应用发送的自定义数据回调函数。
+
+**类型：** OnMessageCallback
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageHandler-onMessage: OnMessageCallback--><!--Device-MessageHandler-onMessage: OnMessageCallback-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework
+
+## onTerminated
+
+```TypeScript
+onTerminated: Callback<void>
+```
+
+onTerminated(): void 监听对象终止回调函数。
+
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+<!--Device-MessageHandler-onTerminated: Callback<void>--><!--Device-MessageHandler-onTerminated: Callback<void>-End-->
+
+**系统能力：** SystemCapability.MiscServices.InputMethodFramework

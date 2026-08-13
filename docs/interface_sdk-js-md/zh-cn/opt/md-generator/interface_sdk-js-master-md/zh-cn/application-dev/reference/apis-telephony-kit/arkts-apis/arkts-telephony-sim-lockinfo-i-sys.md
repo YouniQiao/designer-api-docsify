@@ -2,7 +2,9 @@
 
 Defines the personalized lock information.
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-sim-export interface LockInfo--><!--Device-sim-export interface LockInfo-End-->
 
@@ -20,7 +22,9 @@ Indicates the lock type.
 
 **类型：** [LockType](arkts-telephony-sim-locktype-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockInfo-lockType: LockType--><!--Device-LockInfo-lockType: LockType-End-->
 
@@ -38,7 +42,9 @@ Indicates the password.
 
 **类型：** string
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockInfo-password: string--><!--Device-LockInfo-password: string-End-->
 
@@ -56,7 +62,9 @@ Indicates the lock state.
 
 **类型：** [LockState](arkts-telephony-sim-lockstate-e-sys.md)
 
-**起始版本：** 8
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-LockInfo-state: LockState--><!--Device-LockInfo-state: LockState-End-->
 

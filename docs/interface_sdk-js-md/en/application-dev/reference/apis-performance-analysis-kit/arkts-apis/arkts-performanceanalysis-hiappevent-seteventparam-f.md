@@ -14,9 +14,11 @@ function setEventParam(params: Record<string, ParamType>, domain: string, name?:
 
 Sets custom event parameters. This API uses a promise to return the result. During the same lifecycle, system events and application events can be associated through event domain and event name.System events only support crash, freeze and resource leak events.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -42,13 +44,13 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11101001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101001-invalid-event-domain-name) | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [11101002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101002-invalid-event-name) | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11101005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101005-invalid-event-parameter-name) | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11101004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) | Invalid string length of the event parameter. |
-| [11101007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11101007-invalid-number-of-custom-event-parameters) | The number of parameter keys exceeds the limit. |
-| [11100001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiappevent.md#11100001-application-event-logging-disabled) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
+| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
+| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) | Invalid string length of the event parameter. |
+| [11101007](../errorcode-hiappevent.md#11101007-invalid-number-of-custom-event-parameters) | The number of parameter keys exceeds the limit. |
+| [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |
 
 ## Examples
 

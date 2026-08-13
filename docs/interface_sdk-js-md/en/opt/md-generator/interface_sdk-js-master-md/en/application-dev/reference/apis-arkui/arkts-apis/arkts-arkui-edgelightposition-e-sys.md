@@ -4,6 +4,8 @@ Defines the position of the edge light effect.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum EdgeLightPosition--><!--Device-unnamed-declare enum EdgeLightPosition-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ TOP_LEFT = 0
 Edge light effect in the upper left corner.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Edge light effect is in the upper right corner.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightPosition-TOP_RIGHT = 1--><!--Device-EdgeLightPosition-TOP_RIGHT = 1-End-->
@@ -55,6 +61,8 @@ BOTTOM_LEFT = 2
 Edge light effect is in the lower left corner.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Edge light effect is in the lower right corner.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightPosition-BOTTOM_RIGHT = 3--><!--Device-EdgeLightPosition-BOTTOM_RIGHT = 3-End-->
@@ -91,6 +101,8 @@ TOP = 4
 Edge light effect is on the top edge.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,6 +122,8 @@ The light effect starts from the bottom edge.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightPosition-BOTTOM = 5--><!--Device-EdgeLightPosition-BOTTOM = 5-End-->
@@ -128,6 +142,8 @@ Edge light effect is on the left edge.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-EdgeLightPosition-LEFT = 6--><!--Device-EdgeLightPosition-LEFT = 6-End-->
@@ -145,6 +161,8 @@ RIGHT = 7
 Edge light effect is on the right edge.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

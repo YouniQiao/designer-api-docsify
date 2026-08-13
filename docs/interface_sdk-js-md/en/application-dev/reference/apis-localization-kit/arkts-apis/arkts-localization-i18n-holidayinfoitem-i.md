@@ -4,7 +4,9 @@ Represents the holiday information.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export interface HolidayInfoItem--><!--Device-i18n-export interface HolidayInfoItem-End-->
 
@@ -28,9 +30,11 @@ Holiday name.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayInfoItem-baseName: string--><!--Device-HolidayInfoItem-baseName: string-End-->
 
@@ -42,15 +46,17 @@ Holiday name.
 day: int
 ```
 
-Day of the holiday.The value should be an integer.
+Day of the holiday.
 
 **Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayInfoItem-day: int--><!--Device-HolidayInfoItem-day: int-End-->
 
@@ -64,13 +70,15 @@ localNames?: Array<HolidayLocalName>
 
 Local names of the holiday.
 
-**Type:** Array&lt;[HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md)&gt;
+**Type:** Array&lt;[HolidayLocalName](../../apis-na/arkts-apis/arkts-na-i18n-holidaylocalname-i.md)&gt;
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayInfoItem-localNames?: Array<HolidayLocalName>--><!--Device-HolidayInfoItem-localNames?: Array<HolidayLocalName>-End-->
 
@@ -82,15 +90,17 @@ Local names of the holiday.
 month: int
 ```
 
-Month of the holiday.The value should be an integer.
+Month of the holiday.
 
 **Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayInfoItem-month: int--><!--Device-HolidayInfoItem-month: int-End-->
 
@@ -102,15 +112,17 @@ Month of the holiday.The value should be an integer.
 year: int
 ```
 
-Year of the holiday.The value should be an integer.
+Year of the holiday.
 
 **Type:** int
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 23.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-HolidayInfoItem-year: int--><!--Device-HolidayInfoItem-year: int-End-->
 

@@ -1,10 +1,12 @@
 # ArcButtonStyleMode
 
-Provides an arc button style.
+Enumerates the style modes that can be set for **ArcButton**.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ArcButtonStyleMode--><!--Device-unnamed-export declare enum ArcButtonStyleMode-End-->
 
@@ -16,11 +18,15 @@ Provides an arc button style.
 EMPHASIZED_LIGHT = 0
 ```
 
-Emphasis status, light style.
+Emphasized style in light color mode. Displayed as a blue background with white text.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-EMPHASIZED_LIGHT = 0--><!--Device-ArcButtonStyleMode-EMPHASIZED_LIGHT = 0-End-->
 
@@ -32,11 +38,15 @@ Emphasis status, light style.
 EMPHASIZED_DARK = 1
 ```
 
-Emphasis status, dark style.
+Warning style in dark color mode. Displayed as a red background with white text.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-EMPHASIZED_DARK = 1--><!--Device-ArcButtonStyleMode-EMPHASIZED_DARK = 1-End-->
 
@@ -48,11 +58,15 @@ Emphasis status, dark style.
 NORMAL_LIGHT = 2
 ```
 
-Normal status, light style.
+Normal style in light color mode. Displayed as a dark blue background with blue text.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-NORMAL_LIGHT = 2--><!--Device-ArcButtonStyleMode-NORMAL_LIGHT = 2-End-->
 
@@ -64,11 +78,15 @@ Normal status, light style.
 NORMAL_DARK = 3
 ```
 
-Normal status, dark style.
+Normal style in dark color mode. Displayed as a dark gray background with blue text.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-NORMAL_DARK = 3--><!--Device-ArcButtonStyleMode-NORMAL_DARK = 3-End-->
 
@@ -80,11 +98,15 @@ Normal status, dark style.
 CUSTOM = 4
 ```
 
-Custom status, custom style.
+Custom button color and font color.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcButtonStyleMode-CUSTOM = 4--><!--Device-ArcButtonStyleMode-CUSTOM = 4-End-->
 

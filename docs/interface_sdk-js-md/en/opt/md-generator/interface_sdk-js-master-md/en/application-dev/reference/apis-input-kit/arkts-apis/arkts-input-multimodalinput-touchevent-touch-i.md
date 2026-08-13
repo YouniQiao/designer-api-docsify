@@ -2,7 +2,9 @@
 
 Defines the touch point information.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare interface Touch--><!--Device-unnamed-export declare interface Touch-End-->
 
@@ -20,12 +22,13 @@ import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@
 globalX?: number
 ```
 
-X coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. &lt;!--Del--&gt; When being used as an input parameter, this parameter is mandatory if the value of  
-[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md#TouchEventData)is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
+X coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. &lt;!--Del--&gt; When being used as an input parameter, this parameter is mandatory if the value of [TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i-sys.md#TouchEventData-(System-API)) is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case, the X coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-globalX?: int--><!--Device-Touch-globalX?: int-End-->
 
@@ -37,12 +40,13 @@ X coordinate of the touch event in the global coordinate system with the upper-l
 globalY?: number
 ```
 
-Y coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. &lt;!--Del--&gt; When being used as an input parameter, this parameter is mandatory if the value of  
-[TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i.md#TouchEventData)is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case,the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
+Y coordinate of the touch event in the global coordinate system with the upper-left corner of the primary screen as the origin, in px. &lt;!--Del--&gt; When being used as an input parameter, this parameter is mandatory if the value of [TouchEventData.useGlobalCoordinate](arkts-input-inputeventclient-toucheventdata-i-sys.md#TouchEventData-(System-API)) is **true**, and its value can only be an integer. Otherwise, you do not need to set this parameter. In this case, the Y coordinate of the relative coordinate system with the upper left corner of the specified screen as the origin is used to calculate the injected event. &lt;!--DelEnd--&gt;When being used as an output parameter, its value is reported by the system.
 
 **Type:** number
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-globalY?: int--><!--Device-Touch-globalY?: int-End-->
 
@@ -58,7 +62,9 @@ Height of the touch area, in pixels. The value can only be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-height: int--><!--Device-Touch-height: int-End-->
 
@@ -74,7 +80,9 @@ Touch event ID.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-id: int--><!--Device-Touch-id: int-End-->
 
@@ -90,7 +98,9 @@ Press timestamp, in microseconds (μs) since the system starts.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-pressedTime: long--><!--Device-Touch-pressedTime: long-End-->
 
@@ -106,7 +116,9 @@ Pressure value. The value range is [0.0, 1.0]. The value **0.0** indicates that 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-pressure: double--><!--Device-Touch-pressure: double-End-->
 
@@ -122,7 +134,9 @@ X coordinate of the input device. Currently, only integers are supported. The un
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-rawX: int--><!--Device-Touch-rawX: int-End-->
 
@@ -138,7 +152,9 @@ Y coordinate of the input device. Currently, only integers are supported. The un
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-rawY: int--><!--Device-Touch-rawY: int-End-->
 
@@ -154,7 +170,9 @@ X coordinate of the touch event in the relative coordinate system with the upper
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-screenX: int--><!--Device-Touch-screenX: int-End-->
 
@@ -170,7 +188,9 @@ Y coordinate of the touch event in the relative coordinate system with the upper
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-screenY: int--><!--Device-Touch-screenY: int-End-->
 
@@ -186,7 +206,9 @@ Angle relative to the YZ plane, in degrees. The value range is [-90, 90]. A posi
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-tiltX: int--><!--Device-Touch-tiltX: int-End-->
 
@@ -202,7 +224,9 @@ Angle relative to the XZ plane, in degrees. The value range is [-90, 90]. A posi
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-tiltY: int--><!--Device-Touch-tiltY: int-End-->
 
@@ -218,7 +242,9 @@ Height of the tool area, in pixels. The value can only be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-toolHeight: int--><!--Device-Touch-toolHeight: int-End-->
 
@@ -234,7 +260,9 @@ Tool type.
 
 **Type:** [ToolType](arkts-input-multimodalinput-touchevent-tooltype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-toolType: ToolType--><!--Device-Touch-toolType: ToolType-End-->
 
@@ -250,7 +278,9 @@ Width of the tool area, in pixels. The value can only be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-toolWidth: int--><!--Device-Touch-toolWidth: int-End-->
 
@@ -266,7 +296,9 @@ X coordinate of the tool area center in the relative coordinate system with the 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-toolX: int--><!--Device-Touch-toolX: int-End-->
 
@@ -282,7 +314,9 @@ Y coordinate of the tool area center in the relative coordinate system with the 
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-toolY: int--><!--Device-Touch-toolY: int-End-->
 
@@ -298,7 +332,9 @@ Width of the touch area, in pixels. The value can only be an integer.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-width: int--><!--Device-Touch-width: int-End-->
 
@@ -314,7 +350,9 @@ X coordinate in the relative coordinate system with the upper-left corner of the
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-windowX: int--><!--Device-Touch-windowX: int-End-->
 
@@ -330,7 +368,9 @@ Y coordinate in the relative coordinate system with the upper-left corner of the
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Touch-windowY: int--><!--Device-Touch-windowY: int-End-->
 

@@ -6,6 +6,8 @@ Enumerates reasons for **NavDestination** visibility changes.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare enum VisibilityChangeReason--><!--Device-unnamed-declare enum VisibilityChangeReason-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Visibility changes due to page navigation.
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Visibility changes due to the opening or closing of a modal page.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 21.
@@ -61,6 +67,8 @@ Visibility changes due to switching between the foreground and background states
 **Since:** 21
 
 **ArkTS mode:** ArkTS-Dyn only, since version 21.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Defines the effect parameters used to preheat an image.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-camera-interface SettingParam--><!--Device-camera-interface SettingParam-End-->
 
@@ -22,12 +24,13 @@ import { camera } from '@kit.CameraKit';
 faceSlender: number
 ```
 
-Face slimming level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1**indicates level-1 slimming.
+Face slimming level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1** indicates level-1 slimming.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SettingParam-faceSlender: int--><!--Device-SettingParam-faceSlender: int-End-->
 
@@ -41,12 +44,13 @@ Face slimming level, which is obtained through
 skinSmoothLevel: number
 ```
 
-Skin smoothing level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1**indicates level-1 smoothing.
+Skin smoothing level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **1** indicates level-1 smoothing.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SettingParam-skinSmoothLevel: int--><!--Device-SettingParam-skinSmoothLevel: int-End-->
 
@@ -60,13 +64,13 @@ Skin smoothing level, which is obtained through
 skinTone: number
 ```
 
-Skin tone perfection level, which is obtained through  
-[Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value  
-**0xBF986C** indicates a specific color.
+Skin tone perfection level, which is obtained through [Beauty.getSupportedBeautyRange](arkts-camera-camera-beautyquery-i-sys.md#getSupportedBeautyRange). For example, the value **0xBF986C** indicates a specific color.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-SettingParam-skinTone: int--><!--Device-SettingParam-skinTone: int-End-->
 

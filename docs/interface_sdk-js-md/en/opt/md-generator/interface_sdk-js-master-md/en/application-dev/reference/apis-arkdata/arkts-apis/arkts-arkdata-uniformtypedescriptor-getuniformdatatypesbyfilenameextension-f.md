@@ -14,7 +14,9 @@ function getUniformDataTypesByFilenameExtension(filenameExtension: string, belon
 
 Obtains the uniform data type IDs based on the given file name extension and data type.
 
-**Since:** 13
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -39,7 +41,7 @@ Obtains the uniform data type IDs based on the given file name extension and dat
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 

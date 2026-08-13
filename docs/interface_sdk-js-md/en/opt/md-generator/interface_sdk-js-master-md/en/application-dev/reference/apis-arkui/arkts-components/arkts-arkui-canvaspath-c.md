@@ -1,8 +1,10 @@
 # CanvasPath
 
-Path object, which provides basic methods for drawing paths. For details about the path-related APIs,see the description in **CanvasRenderingContext2D**.
+Path object, which provides basic methods for drawing paths. For details about the path-related APIs, see the description in **CanvasRenderingContext2D**.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class CanvasPath--><!--Device-unnamed-declare class CanvasPath-End-->
 
@@ -17,6 +19,8 @@ arc(x: number, y: number, radius: number, startAngle: number, endAngle: number, 
 Draws an arc on the canvas.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -47,6 +51,8 @@ Creates a circular arc using the given control points and radius.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -74,6 +80,8 @@ bezierCurveTo(cp1x: number, cp1y: number, cp2x: number, cp2y: number, x: number,
 Draws a cubic Bezier curve on the canvas.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -104,6 +112,8 @@ Moves the current point of the path back to the start point of the path, and dra
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -130,6 +140,8 @@ ellipse(
 Draws an ellipse in the specified rectangular region on the canvas.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -162,6 +174,8 @@ Connects the current point to a target position using a line.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -183,17 +197,11 @@ Connects the current point to a target position using a line.
 moveTo(x: number, y: number): void
 ```
 
-Moves a drawing path from the current position to a target position on the canvas.  
-> **NOTE：**
-> 
-> In versions earlier than API version 18, if the **moveTo** API is not called or invalid arguments
-> are passed to it, the path starts from (0,0).
-> 
-> Starting from API version 18, if the **moveTo** API is not executed or invalid arguments are passed
-> to it, the path will begin at the start point of the first valid call to **lineTo**, **arcTo**,
-> **bezierCurveTo**, or **quadraticCurveTo**.
+Moves a drawing path from the current position to a target position on the canvas. > **NOTE：**> > In versions earlier than API version 18, if the **moveTo** API is not called or invalid arguments > are passed to it, the path starts from (0,0). > > Starting from API version 18, if the **moveTo** API is not executed or invalid arguments are passed > to it, the path will begin at the start point of the first valid call to **lineTo**, **arcTo**, > **bezierCurveTo**, or **quadraticCurveTo**.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -219,6 +227,8 @@ quadraticCurveTo(cpx: number, cpy: number, x: number, y: number): void
 Creates a path for a quadratic Bezier curve.
 
 **Since:** 8
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -247,6 +257,8 @@ Creates a rectangle on the canvas.
 
 **Since:** 8
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 **Widget capability:** This API can be used in ArkTS widgets since API version 9.
@@ -274,6 +286,8 @@ Creates a rounded rectangle path. This API does not directly render content. To 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -298,4 +312,4 @@ Creates a rounded rectangle path. This API does not directly render content. To 
 
 | Error Code ID |
 | --- |
-| [103701](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103701-parameter-error) |
+| [103701](../errorcode-canvas.md#103701-parameter-error) |

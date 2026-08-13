@@ -6,7 +6,9 @@ export type RawFileDescriptor = _RawFileDescriptor
 
 Describes the file descriptor information of the HAP where the rawfile is located.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

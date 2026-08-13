@@ -4,6 +4,8 @@ Specifies a result object that contains the application bundle name and the stat
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-cloudSyncManager-interface LocalFilePresentStatus--><!--Device-cloudSyncManager-interface LocalFilePresentStatus-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -28,6 +30,8 @@ Bundle name.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-LocalFilePresentStatus-bundleName: string--><!--Device-LocalFilePresentStatus-bundleName: string-End-->
 
 **System capability:** SystemCapability.FileManagement.DistributedFileService.CloudSyncManager
@@ -45,6 +49,8 @@ Whether there are local files that have not been synchronized to the cloud in th
 **Type:** boolean
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean--><!--Device-LocalFilePresentStatus-isLocalFilePresent: boolean-End-->
 

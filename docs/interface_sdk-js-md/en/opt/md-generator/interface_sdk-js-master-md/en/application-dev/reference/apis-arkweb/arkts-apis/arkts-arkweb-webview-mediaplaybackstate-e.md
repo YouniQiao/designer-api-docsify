@@ -4,6 +4,8 @@ Enumerates the playback states on the current web page.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-webview-enum MediaPlaybackState--><!--Device-webview-enum MediaPlaybackState-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -17,6 +19,8 @@ NONE = 0
 No audio or video playback is started on the page.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -34,6 +38,8 @@ The audio and video on the page are being played.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaPlaybackState-PLAYING = 1--><!--Device-MediaPlaybackState-PLAYING = 1-End-->
@@ -50,6 +56,8 @@ The audio and video on the page are paused.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaPlaybackState-PAUSED = 2--><!--Device-MediaPlaybackState-PAUSED = 2-End-->
@@ -65,6 +73,8 @@ STOPPED = 3
 The audio and video on the page are stopped.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

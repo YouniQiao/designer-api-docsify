@@ -2,7 +2,9 @@
 
 Defines the print attributes.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-print-interface PrintAttributes--><!--Device-print-interface PrintAttributes-End-->
 
@@ -24,7 +26,9 @@ Color mode of the files to print.
 
 **Type:** [PrintColorMode](arkts-basicservices-print-printcolormode-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintAttributes-colorMode?: PrintColorMode--><!--Device-PrintAttributes-colorMode?: PrintColorMode-End-->
 
@@ -40,7 +44,9 @@ Number of printed file copies. The default value is **1**.
 
 **Type:** number
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintAttributes-copyNumber?: int--><!--Device-PrintAttributes-copyNumber?: int-End-->
 
@@ -56,7 +62,9 @@ Print direction mode.
 
 **Type:** [PrintDirectionMode](arkts-basicservices-print-printdirectionmode-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintAttributes-directionMode?: PrintDirectionMode--><!--Device-PrintAttributes-directionMode?: PrintDirectionMode-End-->
 
@@ -72,7 +80,9 @@ Duplex mode of the files to print.
 
 **Type:** [PrintDuplexMode](arkts-basicservices-print-printduplexmode-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintAttributes-duplexMode?: PrintDuplexMode--><!--Device-PrintAttributes-duplexMode?: PrintDuplexMode-End-->
 
@@ -88,7 +98,9 @@ Page range of the file to print.
 
 **Type:** [PrintPageRange](arkts-basicservices-print-printpagerange-i.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintAttributes-pageRange?: PrintPageRange--><!--Device-PrintAttributes-pageRange?: PrintPageRange-End-->
 
@@ -104,7 +116,9 @@ Page size of the file to print.
 
 **Type:** [PrintPageSize](arkts-basicservices-print-printpagesize-i.md) \| [PrintPageType](arkts-basicservices-print-printpagetype-e.md)
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType--><!--Device-PrintAttributes-pageSize?: PrintPageSize | PrintPageType-End-->
 

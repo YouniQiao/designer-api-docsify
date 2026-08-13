@@ -2,7 +2,9 @@
 
 相对于参考点的旋转角度限制
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-mechanicManager-export interface RotationLimits--><!--Device-mechanicManager-export interface RotationLimits-End-->
 
@@ -16,11 +18,13 @@
 negativePitchMax: number
 ```
 
-Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians.If the value is less than or equal to -2*Math.PI, there is no restriction.
+Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians. If the value is less than or equal to -2*Math.PI, there is no restriction.
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationLimits-negativePitchMax: double--><!--Device-RotationLimits-negativePitchMax: double-End-->
 
@@ -34,11 +38,13 @@ Maximum pitch rotation angles in the negative direction, ranging from -2*Math.PI
 negativeRollMax: number
 ```
 
-Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians.If the value is less than or equal to -2*Math.PI, there is no restriction.
+Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians. If the value is less than or equal to -2*Math.PI, there is no restriction.
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationLimits-negativeRollMax: double--><!--Device-RotationLimits-negativeRollMax: double-End-->
 
@@ -52,11 +58,13 @@ Maximum roll rotation angles in the negative direction, ranging from -2*Math.PI 
 negativeYawMax: number
 ```
 
-Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians.If the value is less than or equal to -2*Math.PI, there is no restriction.
+Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI to 0, measured in radians. If the value is less than or equal to -2*Math.PI, there is no restriction.
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationLimits-negativeYawMax: double--><!--Device-RotationLimits-negativeYawMax: double-End-->
 
@@ -70,11 +78,13 @@ Maximum yaw rotation angles in the negative direction, ranging from -2*Math.PI t
 positivePitchMax: number
 ```
 
-Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians.If the value is greater than or equal to 2*Math.PI, there is no restriction.
+Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians. If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationLimits-positivePitchMax: double--><!--Device-RotationLimits-positivePitchMax: double-End-->
 
@@ -88,11 +98,13 @@ Maximum pitch rotation angles in the positive direction, ranging from 0 to 2*Mat
 positiveRollMax: number
 ```
 
-Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians.If the value is greater than or equal to 2*Math.PI, there is no restriction.
+Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians. If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationLimits-positiveRollMax: double--><!--Device-RotationLimits-positiveRollMax: double-End-->
 
@@ -106,11 +118,13 @@ Maximum roll rotation angles in the positive direction, ranging from 0 to 2*Math
 positiveYawMax: number
 ```
 
-Maximum yaw rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians.If the value is greater than or equal to 2*Math.PI, there is no restriction.
+Maximum yaw rotation angles in the positive direction, ranging from 0 to 2*Math.PI, measured in radians. If the value is greater than or equal to 2*Math.PI, there is no restriction.
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-RotationLimits-positiveYawMax: double--><!--Device-RotationLimits-positiveYawMax: double-End-->
 

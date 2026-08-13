@@ -1,9 +1,10 @@
 # DownloadTask
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile-1) or from a callback through   
-[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile).
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadFile) .
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-request-interface DownloadTask--><!--Device-request-interface DownloadTask-End-->
 
@@ -21,14 +22,11 @@ import { request } from '@kit.BasicServicesKit';
 delete(callback: AsyncCallback<boolean>): void
 ```
 
-Deletes the download task. This API uses an asynchronous callback to return the result.
+Deletes the download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -46,7 +44,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -81,14 +79,11 @@ try {
 delete(): Promise<boolean>
 ```
 
-Deletes the download task. This API uses a promise to return the result.
+Deletes the download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -106,7 +101,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -138,14 +133,11 @@ try {
 getTaskInfo(callback: AsyncCallback<DownloadInfo>): void
 ```
 
-Obtains the information about this download task. This API uses an asynchronous callback to return the result.
+Obtains the information about this download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -163,7 +155,7 @@ Obtains the information about this download task. This API uses an asynchronous 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -198,14 +190,11 @@ try {
 getTaskInfo(): Promise<DownloadInfo>
 ```
 
-Obtains the information about this download task. This API uses a promise to return the result.
+Obtains the information about this download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -223,7 +212,7 @@ Obtains the information about this download task. This API uses a promise to ret
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -256,14 +245,11 @@ try {
 getTaskMimeType(callback: AsyncCallback<string>): void
 ```
 
-Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result.
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -281,7 +267,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -316,14 +302,11 @@ try {
 getTaskMimeType(): Promise<string>
 ```
 
-Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result.
+Obtains the MIME type (that is, media type of resources in HTTP) of a download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -341,7 +324,7 @@ Obtains the MIME type (that is, media type of resources in HTTP) of a download t
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -368,17 +351,19 @@ try {
 }
 ```
 
-## off('progress')
+## offComplete
 
 ```TypeScript
-off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => void): void
+offComplete(callback?: DownloadCompleteCallback): void
 ```
 
-Unsubscribes from download progress events.
+Called when the current download session complete.
 
-**Since:** 6
+**Since:** 23
 
-<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void--><!--Device-DownloadTask-offComplete(callback?: DownloadCompleteCallback): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -386,48 +371,97 @@ Unsubscribes from download progress events.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| type | 'progress' | Yes |
-| callback | (receivedSize: number, totalSize: number) = & gt; void | No |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | No |
 
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
+## offFail
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let progressCallback1 = (receivedSize: number, totalSize: number) => {
-      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
-    };
-    let progressCallback2 = (receivedSize: number, totalSize: number) => {
-      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
-    };
-    downloadTask.on('progress', progressCallback1);
-    downloadTask.on('progress', progressCallback2);
-    // Unsubscribe from progressCallback1.
-    downloadTask.off('progress', progressCallback1);
-    // Unsubscribe from all callbacks of download progress events.
-    downloadTask.off('progress');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
+offFail(callback?: DownloadFailCallback): void
 ```
 
-## off('complete' | 'pause' | 'remove')
+Called when the current download session fails.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void--><!--Device-DownloadTask-offFail(callback?: DownloadFailCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | No |
+
+## offPause
+
+```TypeScript
+offPause(callback?: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void--><!--Device-DownloadTask-offPause(callback?: DownloadPauseCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | No |
+
+## offProgress
+
+```TypeScript
+offProgress(callback?: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void--><!--Device-DownloadTask-offProgress(callback?: DownloadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | No |
+
+## offRemove
+
+```TypeScript
+offRemove(callback?: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void--><!--Device-DownloadTask-offRemove(callback?: DownloadRemoveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | No |
+
+## off_complete
 
 ```TypeScript
 off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
@@ -436,6 +470,8 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 Unsubscribes from download events.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
 
@@ -452,7 +488,7 @@ Unsubscribes from download events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -512,177 +548,7 @@ try {
 }
 ```
 
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-Unsubscribes from download events.
-
-**Since:** 7
-
-<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // Unsubscribe from completeCallback1.
-    downloadTask.off('complete', completeCallback1);
-    // Unsubscribe from all callbacks of the download completion events.
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // Unsubscribe from pauseCallback1.
-    downloadTask.off('pause', pauseCallback1);
-    // Unsubscribe from all callbacks of the download pause events.
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // Unsubscribe from removeCallback1.
-    downloadTask.off('remove', removeCallback1);
-    // Unsubscribe from all callbacks of the download removal events.
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## off('complete' | 'pause' | 'remove')
-
-```TypeScript
-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
-```
-
-Unsubscribes from download events.
-
-**Since:** 7
-
-<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () = & gt; void | No |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback1 = () => {
-      console.info('Download delete complete notification.');
-    };
-    let completeCallback2 = () => {
-      console.info('Download delete complete notification.');
-    };
-    downloadTask.on('complete', completeCallback1);
-    downloadTask.on('complete', completeCallback2);
-    // Unsubscribe from completeCallback1.
-    downloadTask.off('complete', completeCallback1);
-    // Unsubscribe from all callbacks of the download completion events.
-    downloadTask.off('complete');
-
-    let pauseCallback1 = () => {
-      console.info('Download delete pause notification.');
-    };
-    let pauseCallback2 = () => {
-      console.info('Download delete pause notification.');
-    };
-    downloadTask.on('pause', pauseCallback1);
-    downloadTask.on('pause', pauseCallback2);
-    // Unsubscribe from pauseCallback1.
-    downloadTask.off('pause', pauseCallback1);
-    // Unsubscribe from all callbacks of the download pause events.
-    downloadTask.off('pause');
-
-    let removeCallback1 = () => {
-      console.info('Download delete remove notification.');
-    };
-    let removeCallback2 = () => {
-      console.info('Download delete remove notification.');
-    };
-    downloadTask.on('remove', removeCallback1);
-    downloadTask.on('remove', removeCallback2);
-    // Unsubscribe from removeCallback1.
-    downloadTask.off('remove', removeCallback1);
-    // Unsubscribe from all callbacks of the download removal events.
-    downloadTask.off('remove');
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## off('fail')
+## off_fail
 
 ```TypeScript
 off(type: 'fail', callback?: (err: number) => void): void
@@ -691,6 +557,8 @@ off(type: 'fail', callback?: (err: number) => void): void
 Unsubscribes from download failure events.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void--><!--Device-DownloadTask-off(type: 'fail', callback?: (err: int) => void): void-End-->
 
@@ -707,7 +575,7 @@ Unsubscribes from download failure events.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -741,22 +609,106 @@ try {
 }
 ```
 
-## on('progress')
+## off_pause
 
 ```TypeScript
-on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void): void
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 ```
 
-Subscribes to download progress events. This API uses an asynchronous callback to return the result.
+Unsubscribes from download events.
 
-> **NOTE：**
-> 
-> To maintain a balance between power consumption and performance, this API cannot be called when the application
-> is running in the background.
+**Since:** 7
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes |
+| callback | () = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // Unsubscribe from completeCallback1.
+    downloadTask.off('complete', completeCallback1);
+    // Unsubscribe from all callbacks of the download completion events.
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // Unsubscribe from pauseCallback1.
+    downloadTask.off('pause', pauseCallback1);
+    // Unsubscribe from all callbacks of the download pause events.
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // Unsubscribe from removeCallback1.
+    downloadTask.off('remove', removeCallback1);
+    // Unsubscribe from all callbacks of the download removal events.
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## off_progress
+
+```TypeScript
+off(type: 'progress', callback?: (receivedSize: number, totalSize: number) => void): void
+```
+
+Unsubscribes from download progress events.
 
 **Since:** 6
 
-<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void): void-End-->
 
 **System capability:** SystemCapability.MiscServices.Download
 
@@ -765,13 +717,13 @@ Subscribes to download progress events. This API uses an asynchronous callback t
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
 | type | 'progress' | Yes |
-| callback | (receivedSize: number, totalSize: number) = & gt; void | Yes |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | No |
 
 **Error codes:**
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -785,10 +737,18 @@ try {
   // Replace the URL with the HTTP address of the real server.
   request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
     let downloadTask: request.DownloadTask = data;
-    let progressCallback = (receivedSize: number, totalSize: number) => {
-      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    let progressCallback1 = (receivedSize: number, totalSize: number) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
     };
-    downloadTask.on('progress', progressCallback);
+    let progressCallback2 = (receivedSize: number, totalSize: number) => {
+      console.info('Download delete progress notification.' + 'receivedSize:' + receivedSize + 'totalSize:' + totalSize);
+    };
+    downloadTask.on('progress', progressCallback1);
+    downloadTask.on('progress', progressCallback2);
+    // Unsubscribe from progressCallback1.
+    downloadTask.off('progress', progressCallback1);
+    // Unsubscribe from all callbacks of download progress events.
+    downloadTask.off('progress');
   }).catch((err: BusinessError) => {
     console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
   })
@@ -797,7 +757,204 @@ try {
 }
 ```
 
-## on('complete' | 'pause' | 'remove')
+## off_remove
+
+```TypeScript
+off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
+```
+
+Unsubscribes from download events.
+
+**Since:** 7
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void--><!--Device-DownloadTask-off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes |
+| callback | () = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback1 = () => {
+      console.info('Download delete complete notification.');
+    };
+    let completeCallback2 = () => {
+      console.info('Download delete complete notification.');
+    };
+    downloadTask.on('complete', completeCallback1);
+    downloadTask.on('complete', completeCallback2);
+    // Unsubscribe from completeCallback1.
+    downloadTask.off('complete', completeCallback1);
+    // Unsubscribe from all callbacks of the download completion events.
+    downloadTask.off('complete');
+
+    let pauseCallback1 = () => {
+      console.info('Download delete pause notification.');
+    };
+    let pauseCallback2 = () => {
+      console.info('Download delete pause notification.');
+    };
+    downloadTask.on('pause', pauseCallback1);
+    downloadTask.on('pause', pauseCallback2);
+    // Unsubscribe from pauseCallback1.
+    downloadTask.off('pause', pauseCallback1);
+    // Unsubscribe from all callbacks of the download pause events.
+    downloadTask.off('pause');
+
+    let removeCallback1 = () => {
+      console.info('Download delete remove notification.');
+    };
+    let removeCallback2 = () => {
+      console.info('Download delete remove notification.');
+    };
+    downloadTask.on('remove', removeCallback1);
+    downloadTask.on('remove', removeCallback2);
+    // Unsubscribe from removeCallback1.
+    downloadTask.off('remove', removeCallback1);
+    // Unsubscribe from all callbacks of the download removal events.
+    downloadTask.off('remove');
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## onComplete
+
+```TypeScript
+onComplete(callback: DownloadCompleteCallback): void
+```
+
+Called when the current download session complete.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void--><!--Device-DownloadTask-onComplete(callback: DownloadCompleteCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | Yes |
+
+## onFail
+
+```TypeScript
+onFail(callback: DownloadFailCallback): void
+```
+
+Called when the current download session fails.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void--><!--Device-DownloadTask-onFail(callback: DownloadFailCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | Yes |
+
+## onPause
+
+```TypeScript
+onPause(callback: DownloadPauseCallback): void
+```
+
+Called when the current download session pause.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void--><!--Device-DownloadTask-onPause(callback: DownloadPauseCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | Yes |
+
+## onProgress
+
+```TypeScript
+onProgress(callback: DownloadProgressCallback): void
+```
+
+Called when the current download session is in process.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void--><!--Device-DownloadTask-onProgress(callback: DownloadProgressCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadProgressCallback](arkts-basicservices-request-downloadprogresscallback-t.md) | Yes |
+
+## onRemove
+
+```TypeScript
+onRemove(callback: DownloadRemoveCallback): void
+```
+
+Called when the current download session remove.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void--><!--Device-DownloadTask-onRemove(callback: DownloadRemoveCallback): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | Yes |
+
+## on_complete
 
 ```TypeScript
 on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
@@ -806,6 +963,8 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 Subscribes to download events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
 
@@ -822,7 +981,7 @@ Subscribes to download events. This API uses an asynchronous callback to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -858,129 +1017,7 @@ try {
 }
 ```
 
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-Subscribes to download events. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## on('complete' | 'pause' | 'remove')
-
-```TypeScript
-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
-```
-
-Subscribes to download events. This API uses an asynchronous callback to return the result.
-
-**Since:** 7
-
-<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
-
-**System capability:** SystemCapability.MiscServices.Download
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | Yes |
-| callback | () = & gt; void | Yes |
-
-**Error codes:**
-
-| Error Code ID |
-| --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-
-## Examples
-
-```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-import { common } from '@kit.AbilityKit';
-
-// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
-let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
-try {
-  // Replace the URL with the HTTP address of the real server.
-  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
-    let downloadTask: request.DownloadTask = data;
-    let completeCallback = () => {
-      console.info('Download task completed.');
-    };
-    downloadTask.on('complete', completeCallback);
-
-    let pauseCallback = () => {
-      console.info('Download task pause.');
-    };
-    downloadTask.on('pause', pauseCallback);
-
-    let removeCallback = () => {
-      console.info('Download task remove.');
-    };
-    downloadTask.on('remove', removeCallback);
-  }).catch((err: BusinessError) => {
-    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-  })
-} catch (err) {
-  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
-}
-```
-
-## on('fail')
+## on_fail
 
 ```TypeScript
 on(type: 'fail', callback: (err: number) => void): void
@@ -989,6 +1026,8 @@ on(type: 'fail', callback: (err: number) => void): void
 Subscribes to download failure events. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 <!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void--><!--Device-DownloadTask-on(type: 'fail', callback: (err: int) => void): void-End-->
 
@@ -1005,7 +1044,7 @@ Subscribes to download failure events. This API uses an asynchronous callback to
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 
 ## Examples
 
@@ -1031,6 +1070,185 @@ try {
 }
 ```
 
+## on_pause
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+Subscribes to download events. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes |
+| callback | () = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on_progress
+
+```TypeScript
+on(type: 'progress', callback: (receivedSize: number, totalSize: number) => void): void
+```
+
+Subscribes to download progress events. This API uses an asynchronous callback to return the result. > **NOTE：**> > To maintain a balance between power consumption and performance, this API cannot be called when the application > is running in the background.
+
+**Since:** 6
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void--><!--Device-DownloadTask-on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'progress' | Yes |
+| callback | (receivedSize: number, totalSize: number) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let progressCallback = (receivedSize: number, totalSize: number) => {
+      console.info("download receivedSize:" + receivedSize + " totalSize:" + totalSize);
+    };
+    downloadTask.on('progress', progressCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
+## on_remove
+
+```TypeScript
+on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
+```
+
+Subscribes to download events. This API uses an asynchronous callback to return the result.
+
+**Since:** 7
+
+**Deprecated since:** -1
+
+<!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void--><!--Device-DownloadTask-on(type: 'complete' | 'pause' | 'remove', callback: () => void): void-End-->
+
+**System capability:** SystemCapability.MiscServices.Download
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| type | 'complete' \| 'pause' \| 'remove' | Yes |
+| callback | () = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { common } from '@kit.AbilityKit';
+
+// Obtain the context from the component and ensure that the return value of this.getUIContext().getHostContext() is UIAbilityContext.
+let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+try {
+  // Replace the URL with the HTTP address of the real server.
+  request.downloadFile(context, { url: 'https://xxxx/xxxx.hap' }).then((data: request.DownloadTask) => {
+    let downloadTask: request.DownloadTask = data;
+    let completeCallback = () => {
+      console.info('Download task completed.');
+    };
+    downloadTask.on('complete', completeCallback);
+
+    let pauseCallback = () => {
+      console.info('Download task pause.');
+    };
+    downloadTask.on('pause', pauseCallback);
+
+    let removeCallback = () => {
+      console.info('Download task remove.');
+    };
+    downloadTask.on('remove', removeCallback);
+  }).catch((err: BusinessError) => {
+    console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+  })
+} catch (err) {
+  console.error(`Failed to request the download. Code: ${err.code}, message: ${err.message}`);
+}
+```
+
 ## pause
 
 ```TypeScript
@@ -1043,7 +1261,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [suspend](request.DownloadTask.suspend(callback:)
+**Substitutes:** [suspend](#suspend)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1061,7 +1279,7 @@ Pauses this download task. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1105,7 +1323,7 @@ Pauses this download task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1129,7 +1347,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskInfo](request.DownloadTask.getTaskInfo(callback:)
+**Substitutes:** [getTaskInfo](#getTaskInfo)(callback: AsyncCallback&lt;DownloadInfo&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1147,7 +1365,7 @@ Queries this download task. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1191,7 +1409,7 @@ Queries this download task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1215,7 +1433,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTaskMimeType](request.DownloadTask.getTaskMimeType(callback:)
+**Substitutes:** [getTaskMimeType](#getTaskMimeType)(callback: AsyncCallback&lt;string&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1233,7 +1451,7 @@ Queries the MIME type of this download task. This API uses an asynchronous callb
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1277,7 +1495,7 @@ Queries the MIME type of this download task. This API uses a promise to return t
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1301,7 +1519,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [delete](request.UploadTask.delete(callback:)
+**Substitutes:** [delete](arkts-basicservices-request-uploadtask-i.md#delete)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1319,7 +1537,7 @@ Deletes the download task. This API uses an asynchronous callback to return the 
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1363,7 +1581,7 @@ Deletes the download task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1381,14 +1599,11 @@ downloadTask.remove().then((result) => {
 restore(callback: AsyncCallback<boolean>): void
 ```
 
-Restores the download task. This API uses an asynchronous callback to return the result.
+Restores the download task. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1406,7 +1621,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1441,14 +1656,11 @@ try {
 restore(): Promise<boolean>
 ```
 
-Restores the download task. This API uses a promise to return the result.
+Restores the download task. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1466,7 +1678,7 @@ Restores the download task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1505,7 +1717,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 **Deprecated since:** 9
 
-**Substitutes:** [restore](request.DownloadTask.restore(callback:)
+**Substitutes:** [restore](#restore)(callback: AsyncCallback&lt;boolean&gt;)
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1523,7 +1735,7 @@ Restores the download task. This API uses an asynchronous callback to return the
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1567,7 +1779,7 @@ Restores the download task. This API uses a promise to return the result.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1585,14 +1797,11 @@ downloadTask.resume().then(() => {
 suspend(callback: AsyncCallback<boolean>): void
 ```
 
-Suspends this download task. You can use [restore](#restore) to restore the download.This API uses an asynchronous callback to return the result.
+Suspends this download task. You can use [restore](#restore) to restore the download. This API uses an asynchronous callback to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1610,7 +1819,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -1645,14 +1854,11 @@ try {
 suspend(): Promise<boolean>
 ```
 
-Suspends this download task. You can use [restore](#restore) to restore the download.This API uses a promise to return the result.
+Suspends this download task. You can use [restore](#restore) to restore the download. This API uses a promise to return the result. > **NOTE：**> > The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error > code is removed from API version 12.
 
-> **NOTE：**
-> 
-> The scenarios for triggering error code **401 the parameters check fails** do not exist. Therefore, this error
-> code is removed from API version 12.
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -1670,7 +1876,7 @@ Suspends this download task. You can use [restore](#restore) to restore the down
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 

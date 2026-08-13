@@ -1,8 +1,10 @@
 # HapFormInfo (System API)
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-usageStatistics-interface HapFormInfo--><!--Device-usageStatistics-interface HapFormInfo-End-->
 
@@ -24,11 +26,13 @@ count: int
 
 The click count of module.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-count: int--><!--Device-HapFormInfo-count: int-End-->
 
@@ -44,11 +48,13 @@ formDimension: int
 
 The form dimension.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formDimension: int--><!--Device-HapFormInfo-formDimension: int-End-->
 
@@ -64,11 +70,13 @@ formId: long
 
 The form id.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formId: long--><!--Device-HapFormInfo-formId: long-End-->
 
@@ -82,13 +90,15 @@ The form id.
 formLastUsedTime: long
 ```
 
-The last time when the form was accessed, in milliseconds.&lt;br&gt; Unit:ms
+The last time when the form was accessed, in milliseconds. &lt;br&gt; Unit:ms
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**Type:** long
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formLastUsedTime: long--><!--Device-HapFormInfo-formLastUsedTime: long-End-->
 
@@ -106,9 +116,11 @@ The form name.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-HapFormInfo-formName: string--><!--Device-HapFormInfo-formName: string-End-->
 

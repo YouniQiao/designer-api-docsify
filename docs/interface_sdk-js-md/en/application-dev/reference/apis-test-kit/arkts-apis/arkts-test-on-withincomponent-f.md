@@ -12,11 +12,13 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 export function withinComponent(com: Component): On
 ```
 
-Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component)object,used to locate Component relatively.
+Requires that the target Component which is inside of another Component that specified by the given [Component](arkts-test-uitest-component-c.md#Component) object,used to locate Component relatively.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-ON-export function withinComponent(com: Component): On--><!--Device-ON-export function withinComponent(com: Component): On-End-->
 
@@ -38,5 +40,5 @@ Requires that the target Component which is inside of another Component that spe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17000007](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-test-kit/errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
+| [17000007](../errorcode-uitest.md#17000007-parameters-are-invalid) | Parameter verification failed. |
 

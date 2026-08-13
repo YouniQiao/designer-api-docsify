@@ -1,14 +1,14 @@
 # DSACommonParamsSpec
 
-密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)的子类，用于指定DSA算法中公私钥包含的公共参数，随机生成公/私钥。
-
-&lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec)方法创建密钥生成器。
+密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)的子类，用于指定DSA算法中公私钥包含的公共参数，随机生成公/私钥。 &lt;br&gt;在使用密钥参数生成密钥时，将其传入[createAsyKeyGeneratorBySpec()](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createAsyKeyGeneratorBySpec) 方法创建密钥生成器。
 
 **继承/实现关系：** DSACommonParamsSpec extends [AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md#AsyKeySpec)
 
-**起始版本：** 10
+**起始版本：** 23
 
-<!--Device-cryptoFramework-interface DSACommonParamsSpec extends AsyKeySpec--><!--Device-cryptoFramework-interface DSACommonParamsSpec extends AsyKeySpec-End-->
+**废弃版本：** -1
+
+<!--Device-cryptoFramework-interface DSACommonParamsSpec--><!--Device-cryptoFramework-interface DSACommonParamsSpec-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
@@ -24,7 +24,9 @@ DSA算法的参数g。
 
 **类型：** bigint
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -44,7 +46,9 @@ DSA算法的素模数p。
 
 **类型：** bigint
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -64,7 +68,9 @@ DSA算法中密钥参数q（p-1的素因子）。
 
 **类型：** bigint
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

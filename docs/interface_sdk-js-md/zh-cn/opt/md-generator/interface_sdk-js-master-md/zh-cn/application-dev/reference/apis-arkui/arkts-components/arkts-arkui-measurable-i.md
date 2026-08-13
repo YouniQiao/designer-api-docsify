@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface Measurable--><!--Device-unnamed-declare interface Measurable-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -17,6 +19,8 @@ getBorderWidth() : DirectionalEdgesT<number>
 调用此方法获取子组件的borderWidth信息。
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -42,6 +46,8 @@ getMargin() : DirectionalEdgesT<number>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -66,6 +72,8 @@ getPadding() : DirectionalEdgesT<number>
 
 **起始版本：** 12
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -89,6 +97,8 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 调用此方法限制子组件的尺寸范围。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -116,11 +126,13 @@ measure(constraint: ConstraintSizeOptions) : MeasureResult
 uniqueId?: number
 ```
 
-系统为子组件分配的唯一标识UniqueID。取值限定为整数。
+系统为子组件分配的唯一标识UniqueID。 取值限定为整数。
 
 **类型：** number
 
 **起始版本：** 18
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

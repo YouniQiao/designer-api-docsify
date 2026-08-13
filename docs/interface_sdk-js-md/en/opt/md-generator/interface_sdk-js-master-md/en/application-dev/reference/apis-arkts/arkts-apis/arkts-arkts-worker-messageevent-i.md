@@ -6,7 +6,9 @@ Holds the data transferred between worker threads.
 
 **Since:** 7
 
-<!--Device-unnamed-export interface MessageEvent<T> extends Event--><!--Device-unnamed-export interface MessageEvent<T> extends Event-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export interface MessageEvent--><!--Device-unnamed-export interface MessageEvent-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -27,6 +29,8 @@ Data transferred when an exception occurs.
 **Type:** T
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

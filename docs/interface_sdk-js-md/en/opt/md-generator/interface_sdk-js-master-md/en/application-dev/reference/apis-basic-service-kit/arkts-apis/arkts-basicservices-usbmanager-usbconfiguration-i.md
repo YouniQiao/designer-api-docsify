@@ -1,8 +1,10 @@
 # USBConfiguration
 
-Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#USBDevice) can contain multiple **USBConfig**instances.
+Represents the USB configuration. One [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md#USBDevice) can contain multiple **USBConfig** instances.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-usbManager-interface USBConfiguration--><!--Device-usbManager-interface USBConfiguration-End-->
 
@@ -24,7 +26,9 @@ Configuration attributes.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-attributes: int--><!--Device-USBConfiguration-attributes: int-End-->
 
@@ -40,7 +44,9 @@ Unique ID of the USB configuration.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-id: int--><!--Device-USBConfiguration-id: int-End-->
 
@@ -56,7 +62,9 @@ Supported interface attributes.
 
 **Type:** Array&lt;USBInterface&gt;
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-interfaces: Array<USBInterface>--><!--Device-USBConfiguration-interfaces: Array<USBInterface>-End-->
 
@@ -68,12 +76,13 @@ Supported interface attributes.
 isRemoteWakeup: boolean
 ```
 
-Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false  
-** indicates the opposite.
+Whether remote wakeup is supported. The value **true** indicates that the remote wakeup is supported, and **false ** indicates the opposite.
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-isRemoteWakeup: boolean--><!--Device-USBConfiguration-isRemoteWakeup: boolean-End-->
 
@@ -89,7 +98,9 @@ Whether an independent power supply is supported. The value **true** indicates t
 
 **Type:** boolean
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-isSelfPowered: boolean--><!--Device-USBConfiguration-isSelfPowered: boolean-End-->
 
@@ -105,7 +116,9 @@ Maximum power consumption.Unit: mA.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-maxPower: int--><!--Device-USBConfiguration-maxPower: int-End-->
 
@@ -121,7 +134,9 @@ Configuration name, which can be left empty.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-USBConfiguration-name: string--><!--Device-USBConfiguration-name: string-End-->
 

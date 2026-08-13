@@ -2,7 +2,9 @@
 
 表示查询域账号信息的选项。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-interface GetDomainAccountInfoOptions--><!--Device-osAccount-interface GetDomainAccountInfoOptions-End-->
 
@@ -20,7 +22,9 @@ accountName: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetDomainAccountInfoOptions-accountName: string--><!--Device-GetDomainAccountInfoOptions-accountName: string-End-->
 
@@ -38,7 +42,9 @@ domain?: string
 
 **类型：** string
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetDomainAccountInfoOptions-domain?: string--><!--Device-GetDomainAccountInfoOptions-domain?: string-End-->
 
@@ -56,7 +62,9 @@ serverConfigId?: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GetDomainAccountInfoOptions-serverConfigId?: string--><!--Device-GetDomainAccountInfoOptions-serverConfigId?: string-End-->
 

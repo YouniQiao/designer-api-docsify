@@ -2,7 +2,9 @@
 
 描述音频设备。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-audio-interface AudioDeviceDescriptor--><!--Device-audio-interface AudioDeviceDescriptor-End-->
 
@@ -20,6 +22,8 @@ Extended information for distributed device, including whether the device suppor
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string--><!--Device-AudioDeviceDescriptor-readonly dmDeviceInfo?: string-End-->
@@ -34,11 +38,13 @@ Extended information for distributed device, including whether the device suppor
 readonly dmDeviceType?: number
 ```
 
-Only [SPEAKER](arkts-audio-audio-devicetype-e.md#SPEAKER) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#REMOTE_CAST)or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#REMOTE_DAUDIO) has dmDeviceType which indicated deviceTypeId.
+Only [SPEAKER](arkts-audio-audio-devicetype-e.md#SPEAKER) with networkId, [REMOTE_CAST](arkts-audio-audio-devicetype-e.md#REMOTE_CAST) or [REMOTE_DAUDIO](arkts-audio-audio-devicetype-e.md#REMOTE_DAUDIO) has dmDeviceType which indicated deviceTypeId.
 
 **类型：** number
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int--><!--Device-AudioDeviceDescriptor-readonly dmDeviceType?: int-End-->
 
@@ -56,7 +62,9 @@ Whether device supports high quality recording.
 
 **类型：** boolean
 
-**起始版本：** 21
+**起始版本：** 24
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean--><!--Device-AudioDeviceDescriptor-readonly highQualityRecordingSupported?: boolean-End-->
 
@@ -74,7 +82,9 @@ Interrupt group id
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int--><!--Device-AudioDeviceDescriptor-readonly interruptGroupId: int-End-->
 
@@ -90,7 +100,9 @@ readonly networkId: string
 
 **类型：** string
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly networkId: string--><!--Device-AudioDeviceDescriptor-readonly networkId: string-End-->
 
@@ -108,7 +120,9 @@ Volume group id
 
 **类型：** number
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int--><!--Device-AudioDeviceDescriptor-readonly volumeGroupId: int-End-->
 

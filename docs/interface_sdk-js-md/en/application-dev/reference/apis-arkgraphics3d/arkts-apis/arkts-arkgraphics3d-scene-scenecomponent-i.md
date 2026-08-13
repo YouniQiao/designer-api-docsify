@@ -1,10 +1,12 @@
 # SceneComponent
 
-Represents a basic scene component, which is used to describe the component information of a scene node,including the component name and its properties.
+Represents a basic scene component, which is used to describe the component information of a scene node, including the component name and its properties.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface SceneComponent--><!--Device-unnamed-export interface SceneComponent-End-->
 
@@ -20,9 +22,11 @@ Name of the scene component, which is customizable.
 
 **Type:** string
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneComponent-name: string--><!--Device-SceneComponent-name: string-End-->
 
@@ -35,13 +39,15 @@ readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneRe
   string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>
 ```
 
-A set of component properties stored in key-value pairs.It supports multiple basic and complex types to describe various properties of the scene component.The unit and value range depend on the specific scene component.
+A set of component properties stored in key-value pairs. It supports multiple basic and complex types to describe various properties of the scene component. The unit and value range depend on the specific scene component.
 
-**Type:** ArkTS-Dyn: Record&lt;string, string \| number \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) \| boolean \| number[] \| string[] \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] \| null \| undefined&gt;  <br>ArkTS-Sta：Record&lt;string, string \| double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) \| boolean \| double[] \| string[] \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] \| null \| undefined&gt;
+**Type:** Record&lt;string, string \| double \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md) \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md) \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md) \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md) \| boolean \| double[] \| string[] \| [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)[] \| [Vec2](arkts-arkgraphics3d-scenetypes-vec2-i.md)[] \| [Vec3](arkts-arkgraphics3d-scenetypes-vec3-i.md)[] \| [Vec4](arkts-arkgraphics3d-scenetypes-vec4-i.md)[] \| null \| undefined&gt;
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>--><!--Device-SceneComponent-readonly property: Record<string, string | double | Vec2 | Vec3 | Vec4 | SceneResource | boolean | double[] |  string[] | SceneResource[] | Vec2[] | Vec3[] | Vec4[] | null | undefined>-End-->
 

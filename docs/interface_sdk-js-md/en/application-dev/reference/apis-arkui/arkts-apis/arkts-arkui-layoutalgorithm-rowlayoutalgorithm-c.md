@@ -1,16 +1,16 @@
 # RowLayoutAlgorithm
 
-Defines the row layout algorithm.
+Horizontal linear layout algorithm class. > **NOTE：**> > The object of the **RowLayoutAlgorithm** class can be assigned to a variable of the **LayoutAlgorithm** type as the > input parameter of the > [DynamicLayout](../../../reference/apis-arkui/arkui-ts/ts-container-dynamiclayout.md) component to specify the > layout algorithm.
 
-**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
+**Inheritance/Implementation:** RowLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare class RowLayoutAlgorithm implements LayoutAlgorithm--><!--Device-unnamed-export declare class RowLayoutAlgorithm implements LayoutAlgorithm-End-->
+<!--Device-unnamed-export class RowLayoutAlgorithm--><!--Device-unnamed-export class RowLayoutAlgorithm-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -20,13 +20,19 @@ Defines the row layout algorithm.
 constructor(option?: RowLayoutAlgorithmOptions)
 ```
 
-constructor.
+Constructs the horizontal linear layout algorithm class.
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
 
 <!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)--><!--Device-RowLayoutAlgorithm-constructor(option?: RowLayoutAlgorithmOptions)-End-->
 
@@ -36,85 +42,109 @@ constructor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| option | [RowLayoutAlgorithmOptions](arkts-arkui-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | set properties of row layout algorithm. |
+| option | [RowLayoutAlgorithmOptions](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-rowlayoutalgorithmoptions-i.md) | No | Input parameters for constructing the horizontal linear layout algorithm, which are used to set the spacing, main axis alignment method, cross axis alignment method, and main axis arrangement direction of the layout algorithm. |
 
 ## alignItems
 
 ```TypeScript
-public alignItems?: VerticalAlign
+@Trace public alignItems?: VerticalAlign
 ```
 
-Sets the alignment format of the subassembly in the vertical direction.
+Vertical alignment mode of all child components. Default value: **VerticalAlign.Center** Invalid values are treated as the default value.
 
-**Type:** [VerticalAlign](arkts-arkui-enums-verticalalign-e.md)
+**Type:** [VerticalAlign](../../apis-na/arkts-apis/arkts-na-enums-verticalalign-e.md)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RowLayoutAlgorithm-public alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithm-public alignItems?: VerticalAlign-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-RowLayoutAlgorithm-@Trace public alignItems?: VerticalAlign--><!--Device-RowLayoutAlgorithm-@Trace public alignItems?: VerticalAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## isReverse
 
 ```TypeScript
-public isReverse?: boolean
+@Trace public isReverse?: boolean
 ```
 
-Whether the main axis is reversed.
+Whether to reverse the horizontal arrangement of child components. **true** indicates to reverse the horizontal arrangement of child components. The horizontal direction is affected by the common attribute [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction). If the [direction](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-location.md#direction) attribute takes effect, the arrangement is reversed again. **false** indicates to arrange child components in the horizontal direction in normal order. Default value: **false** Invalid values are treated as the default value.
 
 **Type:** boolean
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RowLayoutAlgorithm-public isReverse?: boolean--><!--Device-RowLayoutAlgorithm-public isReverse?: boolean-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-RowLayoutAlgorithm-@Trace public isReverse?: boolean--><!--Device-RowLayoutAlgorithm-@Trace public isReverse?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## justifyContent
 
 ```TypeScript
-public justifyContent?: FlexAlign
+@Trace public justifyContent?: FlexAlign
 ```
 
-Alignment mode of the child components along the horizontal axis.
+Horizontal alignment mode of all child components. Default value: **FlexAlign.Start** Invalid values are treated as the default value.
 
-**Type:** [FlexAlign](arkts-arkui-enums-flexalign-e.md)
+**Type:** [FlexAlign](../../apis-na/arkts-apis/arkts-na-enums-flexalign-e.md)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RowLayoutAlgorithm-public justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithm-public justifyContent?: FlexAlign-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-RowLayoutAlgorithm-@Trace public justifyContent?: FlexAlign--><!--Device-RowLayoutAlgorithm-@Trace public justifyContent?: FlexAlign-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## space
 
 ```TypeScript
-public space?: LengthMetrics
+@Trace public space?: LengthMetrics
 ```
 
-Horizontal layout element spacing.
+Horizontal spacing between elements in a horizontal layout. Default value: **LengthMetrics.vp(0)** Invalid values are treated as the default value.
 
-**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 
-**ArkTS mode:** ArkTS-Sta only, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-RowLayoutAlgorithm-public space?: LengthMetrics--><!--Device-RowLayoutAlgorithm-public space?: LengthMetrics-End-->
+**Atomic service API:** This API can be used in atomic services since API version 24.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 24.
+
+<!--Device-RowLayoutAlgorithm-@Trace public space?: LengthMetrics--><!--Device-RowLayoutAlgorithm-@Trace public space?: LengthMetrics-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

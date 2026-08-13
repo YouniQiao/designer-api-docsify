@@ -2,7 +2,9 @@
 
 The **inputMethod** module is oriented to common foreground applications (system applications such as Notes, Messaging, and Settings). It provides input method control and management capabilities, including displaying or hiding the soft keyboard, switching between input methods, and obtaining the list of all input methods.
 
-**Since:** 6
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace inputMethod--><!--Device-unnamed-declare namespace inputMethod-End-->
 
@@ -20,35 +22,35 @@ import { inputMethod } from '@kit.IMEKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getController](arkts-ime-inputmethod-getcontroller-f.md#getcontroller) |
-| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md#getcurrentinputmethod) |
-| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f.md#getcurrentinputmethodsubtype) |
-| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md#getdefaultinputmethod) |
-| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md#getinputmethodcontroller) |
-| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md#getinputmethodsetting) |
-| [getSetting](arkts-ime-inputmethod-getsetting-f.md#getsetting) |
-| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md#getsysteminputmethodconfigability) |
-| [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md#offattachmentdidfail) |
-| [onAttachmentDidFail](arkts-ime-inputmethod-onattachmentdidfail-f.md#onattachmentdidfail) |
-| [setSimpleKeyboardEnabled](arkts-ime-inputmethod-setsimplekeyboardenabled-f.md#setsimplekeyboardenabled) |
-| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md#switchcurrentinputmethodandsubtype) |
-| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md#switchcurrentinputmethodandsubtype-1) |
-| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchcurrentinputmethodsubtype) |
-| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchcurrentinputmethodsubtype-1) |
-| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod) |
-| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod-1) |
+| [getController](arkts-ime-inputmethod-getcontroller-f.md#getController) |
+| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md#getCurrentInputMethod) |
+| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f.md#getCurrentInputMethodSubtype) |
+| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md#getDefaultInputMethod) |
+| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md#getInputMethodController) |
+| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md#getInputMethodSetting) |
+| [getSetting](arkts-ime-inputmethod-getsetting-f.md#getSetting) |
+| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md#getSystemInputMethodConfigAbility) |
+| [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md#offAttachmentDidFail) |
+| [onAttachmentDidFail](arkts-ime-inputmethod-onattachmentdidfail-f.md#onAttachmentDidFail) |
+| [setSimpleKeyboardEnabled](arkts-ime-inputmethod-setsimplekeyboardenabled-f.md#setSimpleKeyboardEnabled) |
+| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md#switchCurrentInputMethodAndSubtype) |
+| [switchCurrentInputMethodAndSubtype](arkts-ime-inputmethod-switchcurrentinputmethodandsubtype-f.md#switchCurrentInputMethodAndSubtype) |
+| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchCurrentInputMethodSubtype) |
+| [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchCurrentInputMethodSubtype) |
+| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchInputMethod) |
+| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchInputMethod) |
 
 <!--Del-->
 ### Functions（系统接口）
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f-sys.md#getcurrentinputmethod-1) |
-| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f-sys.md#getcurrentinputmethodsubtype-1) |
-| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f-sys.md#getdefaultinputmethod-1) |
-| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f-sys.md#getsysteminputmethodconfigability-1) |
-| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f-sys.md#switchinputmethod-2) |
-| [switchInputMethodWithUserId](arkts-ime-inputmethod-switchinputmethodwithuserid-f-sys.md#switchinputmethodwithuserid) |
+| [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f-sys.md#getCurrentInputMethod-(System-API)) |
+| [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f-sys.md#getCurrentInputMethodSubtype-(System-API)) |
+| [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f-sys.md#getDefaultInputMethod-(System-API)) |
+| [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f-sys.md#getSystemInputMethodConfigAbility-(System-API)) |
+| [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f-sys.md#switchInputMethod-(System-API)) |
+| [switchInputMethodWithUserId](arkts-ime-inputmethod-switchinputmethodwithuserid-f-sys.md#switchInputMethodWithUserId-(System-API)) |
 <!--DelEnd-->
 
 ### Interfaces
@@ -96,6 +98,10 @@ import { inputMethod } from '@kit.IMEKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
+| [GetTextCallback](arkts-ime-inputmethod-gettextcallback-t.md) |
+| [GetTextIndexAtCursorCallback](arkts-ime-inputmethod-gettextindexatcursorcallback-t.md) |
+| [ImeChangeCallback](arkts-ime-inputmethod-imechangecallback-t.md) |
+| [OnMessageCallback](arkts-ime-inputmethod-onmessagecallback-t.md) |
 | [SetPreviewTextCallback](arkts-ime-inputmethod-setpreviewtextcallback-t.md) |
 
 <!--Del-->
@@ -110,4 +116,4 @@ import { inputMethod } from '@kit.IMEKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [MAX_TYPE_NUM](arkts-ime-inputmethod-con.md#max_type_num) |
+| [MAX_TYPE_NUM](arkts-ime-inputmethod-con.md#MAX_TYPE_NUM) |

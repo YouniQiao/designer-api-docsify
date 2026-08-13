@@ -4,10 +4,11 @@
 declare type ContentDidScrollCallback = (selectedIndex: number, index: number, position: number, mainAxisLength: number) => void
 ```
 
-Triggered during the swipe action of the **Swiper** component. For details about the parameters, see  
-[SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md#SwiperContentTransitionProxy).
+Triggered during the swipe action of the **Swiper** component. For details about the parameters, see [SwiperContentTransitionProxy](arkts-arkui-swipercontenttransitionproxy-i.md#SwiperContentTransitionProxy).
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

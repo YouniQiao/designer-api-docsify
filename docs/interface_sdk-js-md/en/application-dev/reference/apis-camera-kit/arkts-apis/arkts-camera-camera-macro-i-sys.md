@@ -1,0 +1,60 @@
+# Macro (System API)
+
+**Macro** inherits from [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API)). It provides the API to enable macro photography.
+
+**Inheritance/Implementation:** Macro extends [MacroQuery](arkts-camera-camera-macroquery-i-sys.md#MacroQuery-(System-API))
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+<!--Device-camera-interface Macro--><!--Device-camera-interface Macro-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+## Modules to Import
+
+```TypeScript
+import { camera } from '@kit.CameraKit';
+```
+
+## enableMacro
+
+```TypeScript
+enableMacro(enabled: boolean): void
+```
+
+Enables or disables macro photography. > **NOTE：**> > Before calling this API, call [isMacroSupported](arkts-camera-camera-macroquery-i-sys.md#isMacroSupported) to check whether the > current device supports macro photography.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 19.
+
+<!--Device-Macro-enableMacro(enabled: boolean): void--><!--Device-Macro-enableMacro(enabled: boolean): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | Whether to enable macro photography. **true** to enable, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [7400102](../errorcode-camera.md#7400102-invalid-operation) | Operation not allowed.<br>**Applicable version:** 12 and later |
+| [7400103](../errorcode-camera.md#7400103-session-not-configured) | Session not config. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System Application.<br>**Applicable version:** 11 - 18 |
+

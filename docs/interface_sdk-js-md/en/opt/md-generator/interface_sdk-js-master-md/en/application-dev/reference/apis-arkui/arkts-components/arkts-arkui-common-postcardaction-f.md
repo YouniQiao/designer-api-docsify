@@ -10,6 +10,8 @@ Post Card Action.
 
 **Since:** 11
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -24,5 +26,5 @@ Post Card Action.
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
 | --- | --- | --- |
-| [component](../arkts-apis/arkts-arkui-interop-compatiblecomponentinfo-i.md) | Object | Yes |
+| [component](../../apis-na/arkts-apis/arkts-na-interop-compatiblecomponentinfo-i.md) | Object | Yes |
 | action | Object | Yes |

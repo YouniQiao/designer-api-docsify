@@ -16,7 +16,9 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.SET_TELEPHONY_STATE
 
@@ -30,7 +32,7 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | ID of the card slot that sends the response. |
+| slotId | int | Yes | ID of the card slot that sends the response. |
 | content | string | Yes | Response content. |
 
 **Error codes:**
@@ -40,6 +42,6 @@ Sends a response to the Unstructured Supplementary Service Data (USSD) service t
 | 8400001 | Invalid parameter value. |
 | 8400002 | Operation failed. Cannot connect to service. |
 | 8400003 | System internal error, system database write fail. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 

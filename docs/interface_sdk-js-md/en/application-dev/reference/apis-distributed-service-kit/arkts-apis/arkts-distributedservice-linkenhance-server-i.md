@@ -2,9 +2,11 @@
 
 Represents a **Server** object, which provides methods for starting, stopping, and closing the server, and registering or unregistering event callbacks.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-linkEnhance-interface Server--><!--Device-linkEnhance-interface Server-End-->
 
@@ -22,12 +24,13 @@ import { linkEnhance } from '@kit.DistributedServiceKit';
 close(): void
 ```
 
-Destroys the **Server** object to release related resources. To interact with the peer device again, create a new  
-**Server** object.
+Destroys the **Server** object to release related resources. To interact with the peer device again, create a new **Server** object.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -41,7 +44,7 @@ Destroys the **Server** object to release related resources. To interact with th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -64,7 +67,77 @@ try {
 }
 ```
 
-## off('connectionAccepted')
+## offConnectionAccepted
+
+```TypeScript
+offConnectionAccepted(callback?: Callback<Connection>): void
+```
+
+Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+## offServerStopped
+
+```TypeScript
+offServerStopped(callback?: Callback<int>): void
+```
+
+Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+## off_connectionAccepted
 
 ```TypeScript
 off(type: 'connectionAccepted', callback?: Callback<Connection>): void
@@ -75,6 +148,8 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -89,14 +164,14 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -125,7 +200,7 @@ try {
 }
 ```
 
-## off('serverStopped')
+## off_serverStopped
 
 ```TypeScript
 off(type: 'serverStopped', callback?: Callback<number>): void
@@ -136,6 +211,8 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -150,14 +227,14 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Registered callback, where **number** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -186,23 +263,25 @@ try {
 }
 ```
 
-## offConnectionAccepted
+## onConnectionAccepted
 
 ```TypeScript
-offConnectionAccepted(callback?: Callback<Connection>): void
+onConnectionAccepted(callback: Callback<Connection>): void
 ```
 
-Unregisters the callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
+Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void--><!--Device-Server-offConnectionAccepted(callback?: Callback<Connection>): void-End-->
+<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -210,32 +289,34 @@ Unregisters the callback listener for **connectionAccepted** events. This API us
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | No | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to listen for the server is connected event. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## offServerStopped
+## onServerStopped
 
 ```TypeScript
-offServerStopped(callback?: Callback<int>): void
+onServerStopped(callback: Callback<int>): void
 ```
 
-Unregisters the callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
+Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-Server-offServerStopped(callback?: Callback<int>): void--><!--Device-Server-offServerStopped(callback?: Callback<int>): void-End-->
+<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
 
 **System capability:** SystemCapability.DistributedSched.AppCollaboration
 
@@ -243,16 +324,16 @@ Unregisters the callback listener for **serverStopped** events. This API uses an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | No | Registered callback, where **int** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
-## on('connectionAccepted')
+## on_connectionAccepted
 
 ```TypeScript
 on(type: 'connectionAccepted', callback: Callback<Connection>): void
@@ -263,6 +344,8 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -277,14 +360,14 @@ Registers a callback listener for **connectionAccepted** events. This API uses a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | Yes | Event type, which is **connectionAccepted**. This event is triggered when a connection from the peer end is received. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Registered callback, which is used to return the [Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection) object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -313,7 +396,7 @@ try {
 }
 ```
 
-## on('serverStopped')
+## on_serverStopped
 
 ```TypeScript
 on(type: 'serverStopped', callback: Callback<number>): void
@@ -324,6 +407,8 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 **Since:** 20
 
 **ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -338,14 +423,14 @@ Registers a callback listener for **serverStopped** events. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | Yes | Event type, which is **serverStopped**. This event is triggered when the server is stopped abnormally. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Registered callback, where **number** indicates the returned error code. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390206](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -374,72 +459,6 @@ try {
 }
 ```
 
-## onConnectionAccepted
-
-```TypeScript
-onConnectionAccepted(callback: Callback<Connection>): void
-```
-
-Registers a callback listener for **connectionAccepted** events. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void--><!--Device-Server-onConnectionAccepted(callback: Callback<Connection>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | Yes | Callback used to listen for the server is connected event. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-
-## onServerStopped
-
-```TypeScript
-onServerStopped(callback: Callback<int>): void
-```
-
-Registers a callback listener for **serverStopped** events. This API uses an asynchronous callback to return the result.
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-Server-onServerStopped(callback: Callback<int>): void--><!--Device-Server-onServerStopped(callback: Callback<int>): void-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | Yes | Registered callback, where **int** indicates the returned error code. |
-
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [32390206](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390206-invalid-parameter) | Parameter invalid. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
-
 ## start
 
 ```TypeScript
@@ -448,9 +467,11 @@ start(): void
 
 Starts a server so that it can be connected by the client. A maximum of 10 servers are supported.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -464,9 +485,9 @@ Starts a server so that it can be connected by the client. A maximum of 10 serve
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [32390300](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
-| [32390202](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) | The number of servers exceeds the limit. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [32390300](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390300-internal-error) | Internal error. |
+| [32390202](../../apis-distributedservice-kit/errorcode-link-enhance.md#32390202-number-of-services-exceeding-the-limit) | The number of servers exceeds the limit. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 
@@ -496,9 +517,11 @@ stop(): void
 
 Stops the server. After the server is stopped, you can call `start` to start it again.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -512,7 +535,7 @@ Stops the server. After the server is stopped, you can call `start` to start it 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples
 

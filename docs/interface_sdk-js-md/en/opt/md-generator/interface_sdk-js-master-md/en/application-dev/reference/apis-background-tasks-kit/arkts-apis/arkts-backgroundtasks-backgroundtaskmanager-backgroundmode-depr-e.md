@@ -24,7 +24,7 @@ Data transfer.
 
 **Deprecated since:** 9
 
-**Substitutes:** [DATA_TRANSFER](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.DATA_TRANSFER)
+**Substitutes:** DATA_TRANSFER
 
 <!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
 
@@ -42,7 +42,7 @@ Audio playback.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_PLAYBACK](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.AUDIO_PLAYBACK)
+**Substitutes:** AUDIO_PLAYBACK
 
 <!--Device-BackgroundMode-AUDIO_PLAYBACK = 2--><!--Device-BackgroundMode-AUDIO_PLAYBACK = 2-End-->
 
@@ -60,7 +60,7 @@ Audio recording.
 
 **Deprecated since:** 9
 
-**Substitutes:** [AUDIO_RECORDING](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.AUDIO_RECORDING)
+**Substitutes:** AUDIO_RECORDING
 
 <!--Device-BackgroundMode-AUDIO_RECORDING = 3--><!--Device-BackgroundMode-AUDIO_RECORDING = 3-End-->
 
@@ -78,7 +78,7 @@ Positioning and navigation.
 
 **Deprecated since:** 9
 
-**Substitutes:** [LOCATION](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.LOCATION)
+**Substitutes:** LOCATION
 
 <!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
 
@@ -96,7 +96,7 @@ Bluetooth-related task.
 
 **Deprecated since:** 9
 
-**Substitutes:** [BLUETOOTH_INTERACTION](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.BLUETOOTH_INTERACTION)
+**Substitutes:** BLUETOOTH_INTERACTION
 
 <!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5--><!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5-End-->
 
@@ -114,7 +114,7 @@ Multi-device connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [MULTI_DEVICE_CONNECTION](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.MULTI_DEVICE_CONNECTION)
+**Substitutes:** MULTI_DEVICE_CONNECTION
 
 <!--Device-BackgroundMode-MULTI_DEVICE_CONNECTION = 6--><!--Device-BackgroundMode-MULTI_DEVICE_CONNECTION = 6-End-->
 
@@ -132,7 +132,7 @@ Computing task (effective only for specific devices).
 
 **Deprecated since:** 9
 
-**Substitutes:** [TASK_KEEPING](ohos.resourceschedule.backgroundTaskManager.BackgroundMode.TASK_KEEPING)
+**Substitutes:** TASK_KEEPING
 
 <!--Device-BackgroundMode-TASK_KEEPING = 9--><!--Device-BackgroundMode-TASK_KEEPING = 9-End-->
 

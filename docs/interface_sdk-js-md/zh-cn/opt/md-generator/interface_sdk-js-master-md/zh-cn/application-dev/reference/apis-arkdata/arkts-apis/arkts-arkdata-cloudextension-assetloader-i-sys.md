@@ -2,7 +2,9 @@
 
 提供资产上传下载接口的类。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cloudExtension-export interface AssetLoader--><!--Device-cloudExtension-export interface AssetLoader-End-->
 
@@ -18,7 +20,9 @@ download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>):
 
 通过该接口实现资产的下载。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AssetLoader-download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>--><!--Device-AssetLoader-download(table: string, gid: string, prefix: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>-End-->
 
@@ -62,7 +66,9 @@ upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Res
 
 通过该接口实现资产的上传。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-AssetLoader-upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>--><!--Device-AssetLoader-upload(table: string, gid: string, assets: Array<CloudAsset>): Promise<Array<Result<CloudAsset>>>-End-->
 

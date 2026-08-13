@@ -4,6 +4,8 @@ Describes the state type of deep optimize space.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-photoAccessHelper-enum DeepOptimizeState--><!--Device-photoAccessHelper-enum DeepOptimizeState-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
@@ -19,6 +21,8 @@ RUNNING = 0
 Indicates that the deep optimize space in process now.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,6 +42,8 @@ Indicates that the deep optimize space finished successfully.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeepOptimizeState-COMPLETED = 1--><!--Device-DeepOptimizeState-COMPLETED = 1-End-->
@@ -55,6 +61,8 @@ FAILED = 2
 Indicates that the deep optimize space failed.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -74,6 +82,8 @@ Indicates that the deep optimize space stopped.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DeepOptimizeState-STOPPED = 3--><!--Device-DeepOptimizeState-STOPPED = 3-End-->
@@ -91,6 +101,8 @@ INTERRUPTED = 4
 Indicates that the deep optimize space interrupted.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

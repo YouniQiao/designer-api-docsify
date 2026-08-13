@@ -1,18 +1,10 @@
 # LiteResultSet
 
-Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called.
-
-The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data.
-
-In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as   
-[queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#queryWithoutRowCount) or   
-[querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querySqlWithoutRowCount), and then call the corresponding method through this instance.
-
-> **NOTE：**
-> 
-> - The initial APIs of this class are supported since API version 23.
+Defines APIs to access the result set obtained by querying the RDB store. This result set is the collection of results returned with the **query()** method called. The **LiteResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data. In the following API examples, you need to obtain an **LiteResultSet** instance by using a query method, such as [queryWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#queryWithoutRowCount) or [querySqlWithoutRowCount](arkts-arkdata-relationalstore-rdbstore-i.md#querySqlWithoutRowCount), and then call the corresponding method through this instance. > **NOTE：**> > - The initial APIs of this class are supported since API version 23.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-relationalStore-class LiteResultSet--><!--Device-relationalStore-class LiteResultSet-End-->
 
@@ -34,6 +26,8 @@ Closes this **resultSet** to release memory. If the **resultSet** is not closed,
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-LiteResultSet-close(): void--><!--Device-LiteResultSet-close(): void-End-->
@@ -46,12 +40,11 @@ Closes this **resultSet** to release memory. If the **resultSet** is not closed,
 getAsset(columnIndex: number): Asset
 ```
 
-Obtains the value in the specified column in the current row as an   
-[Asset](arkts-arkdata-relationalstore-asset-i.md#Asset).
-
-If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
+Obtains the value in the specified column in the current row as an [Asset](arkts-arkdata-relationalstore-asset-i.md#Asset). If the data type of the current column is Asset, the value is returned as an Asset. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Asset, 14800041 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,10 +68,10 @@ If the data type of the current column is Asset, the value is returned as an Ass
 
 | Error Code ID |
 | --- |
-| [14800041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-type-conversion-failure) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## getAssets
 
@@ -86,12 +79,11 @@ If the data type of the current column is Asset, the value is returned as an Ass
 getAssets(columnIndex: number): Assets
 ```
 
-Obtains the value in the specified column in the current row as   
-[Assets](arkts-arkdata-relationalstore-assets-t.md#Assets).
-
-If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
+Obtains the value in the specified column in the current row as [Assets](arkts-arkdata-relationalstore-assets-t.md#Assets). If the data type of the current column is Assets, the value is returned as Assets. If the value in the current column is **null**, **null** is returned. If the data type of the current column is not Assets, 14800041 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -115,10 +107,10 @@ If the data type of the current column is Assets, the value is returned as Asset
 
 | Error Code ID |
 | --- |
-| [14800041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-type-conversion-failure) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## getBlob
 
@@ -126,13 +118,11 @@ If the data type of the current column is Assets, the value is returned as Asset
 getBlob(columnIndex: number): Uint8Array
 ```
 
-Obtains the value in the specified column in the current row as a byte array.
-
-If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, the data is converted to a byte array and returned. If the content of the column is null/empty, an empty byte array is returned.
-
-If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value in the specified column in the current row as a byte array. If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, the data is converted to a byte array and returned. If the content of the column is null/empty, an empty byte array is returned. If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -156,10 +146,10 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 
 | Error Code ID |
 | --- |
-| [14800041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-type-conversion-failure) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## getColumnIndex
 
@@ -170,6 +160,8 @@ getColumnIndex(columnName: string): number
 Obtains the column index based on the column name.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -193,14 +185,14 @@ Obtains the column index based on the column name.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getColumnName
 
@@ -211,6 +203,8 @@ getColumnName(columnIndex: number): string
 Obtains the column name based on the column index.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -234,15 +228,15 @@ Obtains the column name based on the column index.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getColumnNames
 
@@ -250,11 +244,11 @@ Obtains the column name based on the column index.
 getColumnNames(): Array<string>
 ```
 
-Obtains the names of all columns in the result set.
-
-The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
+Obtains the names of all columns in the result set. The column names are returned in a string array. The sequence of strings in the array is the same as that of columns in the result set.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -272,14 +266,14 @@ The column names are returned in a string array. The sequence of strings in the 
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getColumnType
 
@@ -290,6 +284,8 @@ getColumnType(columnIdentifier: number | string): Promise<ColumnType>
 Obtains the column type based on the specified column index or column name. This API uses a promise to return the result.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -313,16 +309,16 @@ Obtains the column type based on the specified column index or column name. This
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getColumnTypeSync
 
@@ -333,6 +329,8 @@ getColumnTypeSync(columnIdentifier: number | string): ColumnType
 Obtains the column type based on the specified column index or column name.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -356,16 +354,16 @@ Obtains the column type based on the specified column index or column name.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getCurrentRowData
 
@@ -376,6 +374,8 @@ getCurrentRowData(): RowData
 Obtains the values of all columns in this row.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -393,15 +393,15 @@ Obtains the values of all columns in this row.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getDouble
 
@@ -409,13 +409,11 @@ Obtains the values of all columns in this row.
 getDouble(columnIndex: number): number
 ```
 
-Obtains the value in the specified column in the current row as a Double.
-
-If the data type of the current column is INTEGER, DOUBLE, or TEXT, the value is converted to the Double type and returned. Non-numeric TEXT and BLOB types return **0.0**. If the content of the column is null/empty, **0.0** is returned.
-
-If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value in the specified column in the current row as a Double. If the data type of the current column is INTEGER, DOUBLE, or TEXT, the value is converted to the Double type and returned. Non-numeric TEXT and BLOB types return **0.0**. If the content of the column is null/empty, **0.0** is returned. If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -439,10 +437,10 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 
 | Error Code ID |
 | --- |
-| [14800041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-type-conversion-failure) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## getLong
 
@@ -450,16 +448,11 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 getLong(columnIndex: number): number
 ```
 
-Obtains the value from the specified column in the current row, and returns a value of Long type.
-
-If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type is returned. If the column is null, **0** is returned. If the data type is INTEGER and the value is greater than  
-**Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the  
-[getString](#getString) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the  
-[getDouble](#getDouble) API to obtain the value without precision loss.
-
-If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value from the specified column in the current row, and returns a value of Long type. If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB, a value of Long type is returned. If the column is null, **0** is returned. If the data type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getString) API to obtain the value without losing precision. If the data type in the specified column is DOUBLE, you are advised to use the [getDouble](#getDouble) API to obtain the value without precision loss. If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -483,10 +476,10 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 
 | Error Code ID |
 | --- |
-| [14800041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-type-conversion-failure) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## getRow
 
@@ -497,6 +490,8 @@ getRow(): ValuesBucket
 Obtains data for the current row.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -514,15 +509,15 @@ Obtains data for the current row.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getRows
 
@@ -530,9 +525,11 @@ Obtains data for the current row.
 getRows(maxCount: number, position?: number): Promise<Array<ValuesBucket>>
 ```
 
-Obtains a specified amount of data from the result set. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [LiteResultSet](arkts-data-relationalstore.md#relationalStore). Otherwise, unexpected data may be obtained.
+Obtains a specified amount of data from the result set. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [LiteResultSet](arkts-data-relationalstore.md#@ohos.data.relationalStore). Otherwise, unexpected data may be obtained.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -557,16 +554,16 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getRowsData
 
@@ -574,10 +571,11 @@ Obtains a specified amount of data from the result set. This API uses a promise 
 getRowsData(maxCount: number, position?: number): Promise<RowsData>
 ```
 
-Obtains data of a specified number of rows from the specified position. This API uses a promise to return the result. Do not call this API concurrently with other APIs of   
-[ResultSet](arkts-data-relationalstore.md#relationalStore). Otherwise, unexpected data may be obtained.
+Obtains data of a specified number of rows from the specified position. This API uses a promise to return the result. Do not call this API concurrently with other APIs of [ResultSet](arkts-data-relationalstore.md#@ohos.data.relationalStore). Otherwise, unexpected data may be obtained.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -602,16 +600,16 @@ Obtains data of a specified number of rows from the specified position. This API
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## getString
 
@@ -619,16 +617,11 @@ Obtains data of a specified number of rows from the specified position. This API
 getString(columnIndex: number): string
 ```
 
-Obtains the value in the specified column in the current row as a string.
-
-If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB type, the value is returned as a string.If the content of the column is null/empty, an empty string **""** is returned.
-
-If the data type of the current column is DOUBLE, precision loss may occur. You are advised to use   
-[getDouble](#getDouble) API to obtain the value.
-
-If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
+Obtains the value in the specified column in the current row as a string. If the data type of the current column is INTEGER, DOUBLE, TEXT, or BLOB type, the value is returned as a string. If the content of the column is null/empty, an empty string **""** is returned. If the data type of the current column is DOUBLE, precision loss may occur. You are advised to use [getDouble](#getDouble) API to obtain the value. If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT, 14800041 is returned.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -652,10 +645,10 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 
 | Error Code ID |
 | --- |
-| [14800041](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800041-type-conversion-failure) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800041](../errorcode-data-rdb.md#14800041-type-conversion-failure) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## getValue
 
@@ -663,13 +656,11 @@ If the data type of the current column is ASSET, ASSETS, FLOATVECTOR, or BIGINT,
 getValue(columnIndex: number): ValueType
 ```
 
-Obtains the value of the specified column in the current row.
-
-If the value type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than   
-**Number.MIN_SAFE_INTEGER**, you are advised to use the   
-[getString](#getString) API to obtain the value without precision loss.
+Obtains the value of the specified column in the current row. If the value type is INTEGER and the value is greater than **Number.MAX_SAFE_INTEGER** or less than **Number.MIN_SAFE_INTEGER**, you are advised to use the [getString](#getString) API to obtain the value without precision loss.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -693,9 +684,9 @@ If the value type is INTEGER and the value is greater than **Number.MAX_SAFE_INT
 
 | Error Code ID |
 | --- |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
 
 ## goToNextRow
 
@@ -706,6 +697,8 @@ goToNextRow(): boolean
 Moves the result set to the next row.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -723,16 +716,16 @@ Moves the result set to the next row.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800031](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800031](../errorcode-data-rdb.md#14800031-sqlite-text-or-blob-exceeds-the-limit) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
 
 ## isColumnNull
 
@@ -743,6 +736,8 @@ isColumnNull(columnIndex: number): boolean
 Checks whether the value in the specified column is null.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -766,13 +761,13 @@ Checks whether the value in the specified column is null.
 
 | Error Code ID |
 | --- |
-| [14800001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800001-invalid-arguments) |
-| [14800019](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800019-sql-query-statement-required) |
-| [14800021](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800021-sqlite-generic-error) |
-| [14800011](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800011-database-file-corrupted) |
-| [14800026](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
-| [14800013](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
-| [14800012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
-| [14800028](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800028-sqlite-io-error) |
-| [14800014](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800014-target-instance-closed) |
-| [14800030](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-arkdata/errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) |
+| [14800019](../errorcode-data-rdb.md#14800019-sql-query-statement-required) |
+| [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) |
+| [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) |
+| [14800026](../errorcode-data-rdb.md#14800026-sqlite-insufficient-database-memory) |
+| [14800013](../errorcode-data-rdb.md#14800013-null-column-value-or-column-data-type-incompatible-with-the-api-called) |
+| [14800012](../errorcode-data-rdb.md#14800012-empty-result-set-or-invalid-position) |
+| [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) |
+| [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) |
+| [14800030](../errorcode-data-rdb.md#14800030-sqlite-unable-to-open-the-database-file) |

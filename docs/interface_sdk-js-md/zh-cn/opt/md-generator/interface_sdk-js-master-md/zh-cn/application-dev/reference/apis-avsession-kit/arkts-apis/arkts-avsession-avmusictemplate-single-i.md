@@ -6,7 +6,9 @@
 
 **起始版本：** 23
 
-<!--Device-avMusicTemplate-interface Single extends MediaEntity--><!--Device-avMusicTemplate-interface Single extends MediaEntity-End-->
+**废弃版本：** -1
+
+<!--Device-avMusicTemplate-interface Single--><!--Device-avMusicTemplate-interface Single-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -21,6 +23,8 @@ downloadProgress?: number
 **类型：** number
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,6 +44,8 @@ downloadStatus?: DownloadStatus
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Single-downloadStatus?: DownloadStatus--><!--Device-Single-downloadStatus?: DownloadStatus-End-->
@@ -57,6 +63,8 @@ favSubscribeData: FavoriteData
 **类型：** [FavoriteData](arkts-avsession-avmusictemplate-favoritedata-i.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,6 +84,8 @@ isVip: boolean
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Single-isVip: boolean--><!--Device-Single-isVip: boolean-End-->
@@ -93,6 +103,8 @@ playInfo: PlayInfo
 **类型：** [PlayInfo](arkts-avsession-avmusictemplate-playinfo-i.md)
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -112,6 +124,8 @@ settings?: SettingItem[]
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Single-settings?: SettingItem[]--><!--Device-Single-settings?: SettingItem[]-End-->
@@ -130,6 +144,8 @@ singer: string
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Single-singer: string--><!--Device-Single-singer: string-End-->
@@ -147,6 +163,8 @@ tags?: string[]
 **类型：** string[]
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

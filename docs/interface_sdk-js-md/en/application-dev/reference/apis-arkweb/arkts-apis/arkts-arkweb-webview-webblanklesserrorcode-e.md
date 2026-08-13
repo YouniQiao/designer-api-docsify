@@ -1,10 +1,12 @@
 # WebBlanklessErrorCode
 
-Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) or [BlanklessInfo](arkts-arkweb-webview-blanklessinfo-i.md#BlanklessInfo).
+Enumerates the error codes of the blankless loading.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum WebBlanklessErrorCode--><!--Device-webview-enum WebBlanklessErrorCode-End-->
 
@@ -16,11 +18,13 @@ Enumerates the error codes of blankless. For details, see [setBlanklessLoadingWi
 SUCCESS = 0
 ```
 
-The operation is successful.
+Operation successful.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebBlanklessErrorCode-SUCCESS = 0--><!--Device-WebBlanklessErrorCode-SUCCESS = 0-End-->
 
@@ -32,11 +36,13 @@ The operation is successful.
 ERR_UNKNOWN = -1
 ```
 
-Unknown error.
+Unknown error or internal status error.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_UNKNOWN = -1--><!--Device-WebBlanklessErrorCode-ERR_UNKNOWN = -1-End-->
 
@@ -50,9 +56,11 @@ ERR_INVALID_PARAM = -2
 
 Invalid parameter.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_INVALID_PARAM = -2--><!--Device-WebBlanklessErrorCode-ERR_INVALID_PARAM = -2-End-->
 
@@ -64,11 +72,13 @@ Invalid parameter.
 ERR_CONTROLLER_NOT_INITED = -3
 ```
 
-The web controller is not bound to any component.
+**WebViewController** is not bound to any component.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_CONTROLLER_NOT_INITED = -3--><!--Device-WebBlanklessErrorCode-ERR_CONTROLLER_NOT_INITED = -3-End-->
 
@@ -80,11 +90,13 @@ The web controller is not bound to any component.
 ERR_KEY_NOT_MATCH = -4
 ```
 
-The key value is not matched. This error code is returned when the key values of setBlanklessLodingWithKey and getBlanklessInfoWithKey are not matched.
+No key value is matched. [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getBlanklessInfoWithKey) and their key values must be the same. Otherwise, this error code is returned.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_KEY_NOT_MATCH = -4--><!--Device-WebBlanklessErrorCode-ERR_KEY_NOT_MATCH = -4-End-->
 
@@ -96,11 +108,13 @@ The key value is not matched. This error code is returned when the key values of
 ERR_SIGNIFICANT_CHANGE = -5
 ```
 
-The system determines that the change is too large when the similarity is less than 0.33. As a result,the setBlanklessLodingWithKey API fails to enable frame interpolation.
+The similarity is low, and the system determines that the scene change is too large. As a result, the [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) API does not enable frame interpolation.
 
-**Since:** 23
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-WebBlanklessErrorCode-ERR_SIGNIFICANT_CHANGE = -5--><!--Device-WebBlanklessErrorCode-ERR_SIGNIFICANT_CHANGE = -5-End-->
 
@@ -112,13 +126,13 @@ The system determines that the change is too large when the similarity is less t
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-The value of BlanklessLoadingParam.duration is out of the valid value range.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+The frame interpolation duration set in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,13 +146,13 @@ Device behavior differences: Only the mobile phone is supported. For other devic
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-The value of BlanklessLoadingParam.expirationTime is invalid.
-
-Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
+The historical frame expiration time set in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
 
 **Since:** 23
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 几何形状类型.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->
 
@@ -16,7 +18,9 @@ CUSTOM = 0
 
 自定义几何形状.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeometryType-CUSTOM = 0--><!--Device-GeometryType-CUSTOM = 0-End-->
 
@@ -30,7 +34,9 @@ CUBE = 1
 
 立方体.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
 
@@ -44,7 +50,9 @@ PLANE = 2
 
 平面.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeometryType-PLANE = 2--><!--Device-GeometryType-PLANE = 2-End-->
 
@@ -58,7 +66,9 @@ SPHERE = 3
 
 球体.
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
 
@@ -73,6 +83,8 @@ CYLINDER = 4
 圆柱体.
 
 **起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 

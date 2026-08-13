@@ -2,7 +2,9 @@
 
 证书吊销条目。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-cert-interface X509CRLEntry--><!--Device-cert-interface X509CRLEntry-End-->
 
@@ -14,13 +16,11 @@
 getCertIssuer(): DataBlob
 ```
 
-表示获取被吊销证书的颁发者名称。
+表示获取被吊销证书的颁发者名称。 > **说明：** > > 获取到的被吊销证书的颁发者名称数据带字符串结束符。
 
-> **说明：**
-> 
-> 获取到的被吊销证书的颁发者名称数据带字符串结束符。
+**起始版本：** 23
 
-**起始版本：** 11
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -38,10 +38,10 @@ getCertIssuer(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getCertIssuer
 
@@ -51,9 +51,11 @@ getCertIssuer(encodingType: EncodingType): string
 
 根据编码类型获取被吊销证书的颁发者名称。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**原子化服务API：** 从API版本20开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string--><!--Device-X509CRLEntry-getCertIssuer(encodingType: EncodingType): string-End-->
 
@@ -75,11 +77,11 @@ getCertIssuer(encodingType: EncodingType): string
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [19020003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020003-参数检查失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getCertIssuerX500DistinguishedName
 
@@ -89,9 +91,11 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 
 获取被吊销证书的颁发者的X.500可分辨名称对象。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName--><!--Device-X509CRLEntry-getCertIssuerX500DistinguishedName(): X500DistinguishedName-End-->
 
@@ -107,9 +111,9 @@ getCertIssuerX500DistinguishedName(): X500DistinguishedName
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getEncoded
 
@@ -119,7 +123,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 表示获取证书吊销条目的序列化数据。使用Callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -137,10 +143,10 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getEncoded
 
@@ -150,7 +156,9 @@ getEncoded(): Promise<EncodingBlob>
 
 表示获取证书吊销条目的序列化数据。使用Promise方式返回结果。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -168,10 +176,10 @@ getEncoded(): Promise<EncodingBlob>
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getExtensions
 
@@ -181,7 +189,9 @@ getExtensions(): DataBlob
 
 表示获取DER格式的CRL条目的扩展数据。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -199,9 +209,9 @@ getExtensions(): DataBlob
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getExtensionsObject
 
@@ -211,9 +221,11 @@ getExtensionsObject(): CertExtension
 
 获取CRL条目的扩展对象。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509CRLEntry-getExtensionsObject(): CertExtension--><!--Device-X509CRLEntry-getExtensionsObject(): CertExtension-End-->
 
@@ -229,9 +241,9 @@ getExtensionsObject(): CertExtension
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getRevocationDate
 
@@ -241,7 +253,9 @@ getRevocationDate(): string
 
 表示获取证书被吊销的日期。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -259,9 +273,9 @@ getRevocationDate(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## getSerialNumber
 
@@ -271,7 +285,9 @@ getSerialNumber(): bigint
 
 表示获取被吊销的证书的序列号。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -289,9 +305,9 @@ getSerialNumber(): bigint
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## hasExtensions
 
@@ -301,7 +317,9 @@ hasExtensions(): boolean
 
 表示判断CRL条目是否有扩展。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -319,9 +337,9 @@ hasExtensions(): boolean
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## hashCode
 
@@ -331,9 +349,11 @@ hashCode(): Uint8Array
 
 获取DER格式数据的哈希值。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509CRLEntry-hashCode(): Uint8Array--><!--Device-X509CRLEntry-hashCode(): Uint8Array-End-->
 
@@ -349,9 +369,9 @@ hashCode(): Uint8Array
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |
 
 ## toString
 
@@ -361,9 +381,11 @@ toString(): string
 
 获取对象的字符串类型数据。
 
-**起始版本：** 12
+**起始版本：** 23
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-X509CRLEntry-toString(): string--><!--Device-X509CRLEntry-toString(): string-End-->
 
@@ -379,6 +401,6 @@ toString(): string
 
 | 错误码ID |
 | --- |
-| [19020002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020002-运行时错误) |
-| [19020001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19020001-内存错误) |
-| [19030001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-device-certificate-kit/errorcode-cert.md#19030001-调用三方算法库api出错) |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) |
+| [19020001](../errorcode-cert.md#19020001-内存错误) |
+| [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) |

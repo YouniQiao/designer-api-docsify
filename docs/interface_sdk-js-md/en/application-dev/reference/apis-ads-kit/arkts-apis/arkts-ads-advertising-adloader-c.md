@@ -6,6 +6,8 @@ Provides the APIs for loading ads.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-advertising-export class AdLoader--><!--Device-advertising-export class AdLoader-End-->
 
 **System capability:** SystemCapability.Advertising.Ads
@@ -28,6 +30,8 @@ Constructor.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-constructor(context: common.Context)--><!--Device-AdLoader-constructor(context: common.Context)-End-->
@@ -42,7 +46,7 @@ Constructor.
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Various Contexts](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Various Contexts](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -66,6 +70,8 @@ Loads an ad.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void--><!--Device-AdLoader-loadAd(adParam: AdRequestParams, adOptions: AdOptions, listener: AdLoadListener): void-End-->
@@ -84,14 +90,14 @@ Loads an ad.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Various Contexts](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Various Contexts](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';
@@ -132,6 +138,8 @@ Loads multiple ads.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void--><!--Device-AdLoader-loadAdWithMultiSlots(adParams: AdRequestParams[], adOptions: AdOptions, listener: MultiSlotsAdLoadListener): void-End-->
@@ -150,14 +158,14 @@ Loads multiple ads.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
-| [21800001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800001-internal-system-error) | System internal error. |
-| [21800003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
+| [401](../errorcode-ads.md#401-incorrect-ads-request-parameter) | Invalid input parameter. Possible causes: 1. Mandatory parameters are left unspecified.2. Incorrect parameter types. 3.Parameter verification failed |
+| [801](../errorcode-ads.md#801-ad-request-failure) | Device not supported.<br>**Applicable version:** 12 and later |
+| [21800001](../errorcode-ads.md#21800001-internal-system-error) | System internal error. |
+| [21800003](../errorcode-ads.md#21800003-ad-loading-failure) | Failed to load the ad request. |
 
 ## Examples
 
-For details about how to obtain the context, see [Acquisition of Context](../../application-models/application-context-stage.md#acquisition-of-context).
+For details about how to obtain the context, see [Acquisition of Context](../../../application-models/application-context-stage.md#acquisition-of-context).
 
 ```TypeScript
 import { common } from '@kit.AbilityKit';

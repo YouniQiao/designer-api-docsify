@@ -12,16 +12,11 @@ import { applicationManager } from '@kit.MDMKit';
 function removeHideLauncherIcon(admin: Want, bundleNames: Array<string>): void
 ```
 
-Removes applications from the home screen icon hide list.
-
-> **NOTE：**
-> 
-> After unhiding, applications will be placed in the first available slot starting from the second screen of the
-> home screen. If no empty slot is found on screens 2 to 18, it will search for an empty slot on the first screen.
-> If no empty slot is available on the first screen, a small folder will be created at the position of the first
-> application on the second screen to contain the applications.
+Removes applications from the home screen icon hide list. > **NOTE：**> > After unhiding, applications will be placed in the first available slot starting from the second screen of the > home screen. If no empty slot is found on screens 2 to 18, it will search for an empty slot on the first screen. > If no empty slot is available on the first screen, a small folder will be created at the position of the first > application on the second screen to contain the applications.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_APPLICATION
 
@@ -42,11 +37,11 @@ Removes applications from the home screen icon hide list.
 
 | Error Code ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-parameter-verification-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-permission-denied) |
 
 ## Examples
 

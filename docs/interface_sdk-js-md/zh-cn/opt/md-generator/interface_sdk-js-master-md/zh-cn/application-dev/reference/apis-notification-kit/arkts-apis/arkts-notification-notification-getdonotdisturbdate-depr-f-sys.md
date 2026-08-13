@@ -12,7 +12,7 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -70,7 +70,7 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -100,7 +100,7 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 
 **废弃版本：** 9
 
-**替代接口：** [getDoNotDisturbDate](ohos.notificationManager/notificationManager#getDoNotDisturbDate)
+**替代接口：** [getDoNotDisturbDate](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md#getDoNotDisturbDate（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

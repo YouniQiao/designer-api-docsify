@@ -36,7 +36,7 @@ Button displayed in the reminder notification. (The parameter is optional. Up to
 
 **Deprecated since:** 9
 
-**Substitutes:** [actionButton](reminderAgentManager.ReminderRequest.actionButton)
+**Substitutes:** actionButton
 
 <!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]--><!--Device-ReminderRequest-actionButton?: [ActionButton?, ActionButton?]-End-->
 
@@ -58,7 +58,7 @@ Reminder content.
 
 **Deprecated since:** 9
 
-**Substitutes:** [content](reminderAgentManager.ReminderRequest.content)
+**Substitutes:** content
 
 <!--Device-ReminderRequest-content?: string--><!--Device-ReminderRequest-content?: string-End-->
 
@@ -80,7 +80,7 @@ Content to be displayed after the reminder expires.
 
 **Deprecated since:** 9
 
-**Substitutes:** [expiredContent](reminderAgentManager.ReminderRequest.expiredContent)
+**Substitutes:** expiredContent
 
 <!--Device-ReminderRequest-expiredContent?: string--><!--Device-ReminderRequest-expiredContent?: string-End-->
 
@@ -102,7 +102,7 @@ Information about the ability that is automatically started when the reminder ar
 
 **Deprecated since:** 9
 
-**Substitutes:** [maxScreenWantAgent](reminderAgentManager.ReminderRequest.maxScreenWantAgent)
+**Substitutes:** maxScreenWantAgent
 
 <!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent--><!--Device-ReminderRequest-maxScreenWantAgent?: MaxScreenWantAgent-End-->
 
@@ -124,7 +124,7 @@ Notification ID used by the reminder. If there are reminders with the same notif
 
 **Deprecated since:** 9
 
-**Substitutes:** [notificationId](reminderAgentManager.ReminderRequest.notificationId)
+**Substitutes:** notificationId
 
 <!--Device-ReminderRequest-notificationId?: number--><!--Device-ReminderRequest-notificationId?: number-End-->
 
@@ -146,7 +146,7 @@ Type of the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reminderType](reminderAgentManager.ReminderRequest.reminderType)
+**Substitutes:** reminderType
 
 <!--Device-ReminderRequest-reminderType: ReminderType--><!--Device-ReminderRequest-reminderType: ReminderType-End-->
 
@@ -158,7 +158,7 @@ Type of the reminder.
 ringDuration?: number
 ```
 
-Ringing duration, in seconds. The default value is **1**.Unit: s.
+Ringing duration, in seconds. The default value is **1**. Unit: s.
 
 **Type:** number
 
@@ -168,7 +168,7 @@ Ringing duration, in seconds. The default value is **1**.Unit: s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ringDuration](reminderAgentManager.ReminderRequest.ringDuration)
+**Substitutes:** ringDuration
 
 <!--Device-ReminderRequest-ringDuration?: number--><!--Device-ReminderRequest-ringDuration?: number-End-->
 
@@ -190,7 +190,7 @@ Type of the slot used by the reminder.
 
 **Deprecated since:** 9
 
-**Substitutes:** [slotType](reminderAgentManager.ReminderRequest.slotType)
+**Substitutes:** slotType
 
 <!--Device-ReminderRequest-slotType?: notification.SlotType--><!--Device-ReminderRequest-slotType?: notification.SlotType-End-->
 
@@ -212,7 +212,7 @@ Content to be displayed when the reminder is snoozing.
 
 **Deprecated since:** 9
 
-**Substitutes:** [snoozeContent](reminderAgentManager.ReminderRequest.snoozeContent)
+**Substitutes:** snoozeContent
 
 <!--Device-ReminderRequest-snoozeContent?: string--><!--Device-ReminderRequest-snoozeContent?: string-End-->
 
@@ -234,7 +234,7 @@ Number of reminder snooze times. The default value is **0**.
 
 **Deprecated since:** 9
 
-**Substitutes:** [snoozeTimes](reminderAgentManager.ReminderRequest.snoozeTimes)
+**Substitutes:** snoozeTimes
 
 <!--Device-ReminderRequest-snoozeTimes?: number--><!--Device-ReminderRequest-snoozeTimes?: number-End-->
 
@@ -246,7 +246,7 @@ Number of reminder snooze times. The default value is **0**.
 timeInterval?: number
 ```
 
-Reminder snooze interval, in seconds. The default value is **0**.Unit: s.
+Reminder snooze interval, in seconds. The default value is **0**. Unit: s.
 
 **Type:** number
 
@@ -256,7 +256,7 @@ Reminder snooze interval, in seconds. The default value is **0**.Unit: s.
 
 **Deprecated since:** 9
 
-**Substitutes:** [timeInterval](reminderAgentManager.ReminderRequest.timeInterval)
+**Substitutes:** timeInterval
 
 <!--Device-ReminderRequest-timeInterval?: number--><!--Device-ReminderRequest-timeInterval?: number-End-->
 
@@ -278,7 +278,7 @@ Reminder title.
 
 **Deprecated since:** 9
 
-**Substitutes:** [title](reminderAgentManager.ReminderRequest.title)
+**Substitutes:** title
 
 <!--Device-ReminderRequest-title?: string--><!--Device-ReminderRequest-title?: string-End-->
 
@@ -300,7 +300,7 @@ Information about the ability that is redirected to when the notification is cli
 
 **Deprecated since:** 9
 
-**Substitutes:** [wantAgent](reminderAgentManager.ReminderRequest.wantAgent)
+**Substitutes:** wantAgent
 
 <!--Device-ReminderRequest-wantAgent?: WantAgent--><!--Device-ReminderRequest-wantAgent?: WantAgent-End-->
 

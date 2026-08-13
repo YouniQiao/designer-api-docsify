@@ -14,7 +14,9 @@ function getDefaultInputMethod(): InputMethodProperty
 
 Get default input method
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty--><!--Device-inputMethod-function getDefaultInputMethod(): InputMethodProperty-End-->
 
@@ -30,7 +32,7 @@ Get default input method
 
 | Error Code ID |
 | --- |
-| [12800008](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ime-kit/errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
+| [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) |
 
 ## Examples
 

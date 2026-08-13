@@ -6,13 +6,13 @@
 function getSlotsByBundle(bundle: BundleOption, callback: AsyncCallback<Array<NotificationSlot>>): void
 ```
 
-Obtains the notification slots of a specified application.This API uses an asynchronous callback to return the result.
+Obtains the notification slots of a specified application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
+**Substitutes:** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md#getSlotsByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -42,7 +42,7 @@ Obtains the notification slots of a specified application. This API uses a promi
 
 **Deprecated since:** 9
 
-**Substitutes:** [getSlotsByBundle](ohos.notificationManager/notificationManager#getSlotsByBundle)
+**Substitutes:** [getSlotsByBundle](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md#getSlotsByBundle-(System-API))
 
 **Required permissions:** ohos.permission.NOTIFICATION_CONTROLLER
 

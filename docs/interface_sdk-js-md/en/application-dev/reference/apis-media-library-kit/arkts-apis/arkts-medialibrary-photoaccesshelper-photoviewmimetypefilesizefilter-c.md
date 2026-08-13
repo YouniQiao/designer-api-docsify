@@ -2,9 +2,11 @@
 
 Describes the settings for filtering media files by type and size.
 
-**Since:** 20
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-class PhotoViewMimeTypeFileSizeFilter--><!--Device-photoAccessHelper-class PhotoViewMimeTypeFileSizeFilter-End-->
 
@@ -26,11 +28,13 @@ Media file types used for filtering.
 
 **Type:** PhotoViewMIMETypes
 
-**Since:** 20
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoViewMimeTypeFileSizeFilter-photoViewMimeType: PhotoViewMIMETypes--><!--Device-PhotoViewMimeTypeFileSizeFilter-photoViewMimeType: PhotoViewMIMETypes-End-->
 
@@ -46,11 +50,13 @@ Media file size used for filtering.
 
 **Type:** [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md)
 
-**Since:** 20
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PhotoViewMimeTypeFileSizeFilter-sizeFilter: FileSizeFilter--><!--Device-PhotoViewMimeTypeFileSizeFilter-sizeFilter: FileSizeFilter-End-->
 

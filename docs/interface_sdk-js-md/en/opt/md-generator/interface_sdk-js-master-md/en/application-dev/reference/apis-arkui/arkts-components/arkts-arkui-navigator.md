@@ -2,9 +2,7 @@
 
 The **Navigator** component provides redirection.
 
-## Child Components
-
-Supported
+## Child Components Supported
 
 ## Navigator
 
@@ -44,7 +42,7 @@ Called when using the navigator.
 
 **Deprecated since:** 13
 
-**Substitutes:** [NavigationAttribute](arkts-arkui-navigation-attribute.md#NavigationAttribute)
+**Substitutes:** NavigationAttribute
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -54,4 +52,4 @@ Called when using the navigator.
 
 ## Summary
 
-- [NavigationType](arkts-arkui-navigator-navigationtype-e.md)
+- [NavigationType](arkts-arkui-navigationtype-e.md)

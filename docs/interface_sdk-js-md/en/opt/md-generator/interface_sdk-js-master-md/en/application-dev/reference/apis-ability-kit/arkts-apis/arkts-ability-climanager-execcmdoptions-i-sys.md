@@ -4,6 +4,8 @@ Options for executing a command.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 <!--Device-cliManager-interface ExecCmdOptions--><!--Device-cliManager-interface ExecCmdOptions-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -30,6 +32,8 @@ Indicates whether the command is executed in the background.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecCmdOptions-background?: boolean--><!--Device-ExecCmdOptions-background?: boolean-End-->
@@ -50,6 +54,8 @@ Indicates the event callback for receiving tool events. If provided, auto-subscr
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecCmdOptions-callback?: ToolEventCallback--><!--Device-ExecCmdOptions-callback?: ToolEventCallback-End-->
@@ -66,9 +72,11 @@ env?: Record<string, string>
 
 Indicates the environment variables for the command.
 
-**Type:** [Record](../../apis-default/arkts-apis/arkts-record-t.md)&lt;string, string&gt;
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, string&gt;
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -89,6 +97,8 @@ Indicates the security policy.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -112,6 +122,8 @@ Indicates the maximum execution time of the command, in seconds.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ExecCmdOptions-timeout?: long--><!--Device-ExecCmdOptions-timeout?: long-End-->
@@ -131,6 +143,8 @@ Indicates the working directory for the command.
 **Type:** string
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -153,6 +167,8 @@ Indicates the foreground waiting timeout in milliseconds.
 **Default:** 0
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

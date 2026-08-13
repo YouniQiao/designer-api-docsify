@@ -1,18 +1,20 @@
 # ArcSliderEnlargeHandler
 
 ```TypeScript
-export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
+declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
 ```
 
-Handler of ArcSlider, used in OnEnlarge.
+Defines the callback invoked to notify the application when the arc slider is enlarged or reduced.
 
-**Since:** 23
+**Since:** 18
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 18.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-unnamed-export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void--><!--Device-unnamed-export declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void-End-->
+**Atomic service API:** This API can be used in atomic services since API version 18.
+
+<!--Device-unnamed-declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void--><!--Device-unnamed-declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -20,5 +22,5 @@ Handler of ArcSlider, used in OnEnlarge.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnlarged | boolean | Yes | the enlarged type of the ArcSlider. True means enlarge, false means shrink. |
+| isEnlarged | boolean | Yes | Whether the arc slider is enlarged.<br>**false**: The arc slider is in a reduced state.<br>**true**: The arc slider is in an enlarged state. |
 

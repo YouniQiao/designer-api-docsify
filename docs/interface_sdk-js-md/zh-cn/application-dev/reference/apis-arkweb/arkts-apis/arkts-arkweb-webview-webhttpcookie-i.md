@@ -1,10 +1,12 @@
 # WebHttpCookie
 
-Defines the Web's HTTPCookie.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt;The maximum length allowed for each attribute value in a cookie string is 1024.&lt;/p&gt;
+Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt;
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-webview-interface WebHttpCookie--><!--Device-webview-interface WebHttpCookie-End-->
 
@@ -16,13 +18,15 @@ Defines the Web's HTTPCookie.&lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;
 domain: string
 ```
 
-Gets the domain of the cookie.
+获取cookie的域名
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-domain: string--><!--Device-WebHttpCookie-domain: string-End-->
 
@@ -34,13 +38,15 @@ Gets the domain of the cookie.
 expiresDate: string
 ```
 
-Gets the cookie's expiration date.
+获取cookie的失效日期
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-expiresDate: string--><!--Device-WebHttpCookie-expiresDate: string-End-->
 
@@ -52,13 +58,15 @@ Gets the cookie's expiration date.
 isHttpOnly: boolean
 ```
 
-Gets whether the current cookie is marked as HttpOnly.
+获取当前cookie是否被标记了HttpOnly
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-isHttpOnly: boolean--><!--Device-WebHttpCookie-isHttpOnly: boolean-End-->
 
@@ -70,13 +78,15 @@ Gets whether the current cookie is marked as HttpOnly.
 isSecure: boolean
 ```
 
-Gets whether the current cookie is marked as Secure.
+获取当前cookie是否是secure cookie
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-isSecure: boolean--><!--Device-WebHttpCookie-isSecure: boolean-End-->
 
@@ -88,13 +98,15 @@ Gets whether the current cookie is marked as Secure.
 isSessionCookie: boolean
 ```
 
-Gets if the cookie is session cookie.
+获取是否是session cookie
 
 **类型：** boolean
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-isSessionCookie: boolean--><!--Device-WebHttpCookie-isSessionCookie: boolean-End-->
 
@@ -106,13 +118,15 @@ Gets if the cookie is session cookie.
 name: string
 ```
 
-Gets the cookie's name.
+获取cookie的name
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-name: string--><!--Device-WebHttpCookie-name: string-End-->
 
@@ -124,13 +138,15 @@ Gets the cookie's name.
 path: string
 ```
 
-Gets the cookie's path.
+获取cookie的path
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-path: string--><!--Device-WebHttpCookie-path: string-End-->
 
@@ -142,13 +158,15 @@ Gets the cookie's path.
 samesitePolicy: WebHttpCookieSameSitePolicy
 ```
 
-Gets the cookie's samesite policy.
+获取当前cookie的samesite策略
 
-**类型：** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
+**类型：** [WebHttpCookieSameSitePolicy](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookiesamesitepolicy-e.md)
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy--><!--Device-WebHttpCookie-samesitePolicy: WebHttpCookieSameSitePolicy-End-->
 
@@ -160,13 +178,15 @@ Gets the cookie's samesite policy.
 value: string
 ```
 
-Gets the cookie's value.
+获取cookie的value
 
 **类型：** string
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-WebHttpCookie-value: string--><!--Device-WebHttpCookie-value: string-End-->
 

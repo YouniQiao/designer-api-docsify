@@ -8,7 +8,9 @@ function isScreenReaderOpenSync(): boolean
 
 是否开启了屏幕朗读模式。
 
-**起始版本：** 18
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 

@@ -2,7 +2,9 @@
 
 定义进度取消的函数，在粘贴过程中可选择取消任务，且仅当进度指示选项[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator)设置为NONE时此参数才生效。
 
-**起始版本：** 15
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-pasteboard-export class ProgressSignal--><!--Device-pasteboard-export class ProgressSignal-End-->
 
@@ -16,9 +18,11 @@ cancel(): void
 
 取消正在进行的拷贝粘贴任务。
 
-**起始版本：** 15
+**起始版本：** 23
 
-**原子化服务API：** 从API版本15开始，该接口支持在原子化服务API中使用。
+**废弃版本：** -1
+
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
 <!--Device-ProgressSignal-cancel(): void--><!--Device-ProgressSignal-cancel(): void-End-->
 

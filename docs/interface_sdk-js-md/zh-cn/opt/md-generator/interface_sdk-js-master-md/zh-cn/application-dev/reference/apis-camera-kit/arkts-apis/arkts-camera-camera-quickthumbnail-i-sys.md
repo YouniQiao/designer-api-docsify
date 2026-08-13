@@ -2,7 +2,9 @@
 
 Quick thumbnail object
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-interface QuickThumbnail--><!--Device-camera-interface QuickThumbnail-End-->
 
@@ -18,7 +20,9 @@ release(): Promise<void>
 
 Release quick thumbnail object.
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QuickThumbnail-release(): Promise<void>--><!--Device-QuickThumbnail-release(): Promise<void>-End-->
 
@@ -36,7 +40,7 @@ Release quick thumbnail object.
 
 | 错误码ID |
 | --- |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## captureId
 
@@ -48,7 +52,9 @@ capture id.
 
 **类型：** number
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QuickThumbnail-readonly captureId: int--><!--Device-QuickThumbnail-readonly captureId: int-End-->
 
@@ -66,7 +72,9 @@ Thumbnail image.
 
 **类型：** image.PixelMap
 
-**起始版本：** 19
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-QuickThumbnail-thumbnailImage: image.PixelMap--><!--Device-QuickThumbnail-thumbnailImage: image.PixelMap-End-->
 

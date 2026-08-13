@@ -2,7 +2,9 @@
 
 应用设置为开机自启动时的回调函数。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface AutoStartupCallback--><!--Device-unnamed-export interface AutoStartupCallback-End-->
 
@@ -18,7 +20,9 @@ onAutoStartupOff(info: AutoStartupInfo): void
 
 取消应用开机自启动时调用。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -68,7 +72,9 @@ onAutoStartupOn(info: AutoStartupInfo): void
 
 应用设置为开机自启动时调用。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

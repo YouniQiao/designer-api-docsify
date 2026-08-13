@@ -6,19 +6,11 @@
 function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>, accountId: number): Promise<Array<BundleStorageStats>>
 ```
 
-获取设备指定用户下已安装应用的存储占用信息。使用Promise异步回调。
-
-> **说明：**
-> 
-> 1.仅能获取已安装应用的存储占用信息。
-> 
-> 2.bundleNames参数为empty或全部传入未安装的应用包名，会抛出9200012错误码。
-> 
-> 3.bundleNames参数传递的包名部分应用已安装，部分应用未安装时，接口返回正常，已安装的应用返回实际的存储占用信息，未安装的应用存储占用信息为0。
-> 
-> 4.该接口支持跨用户查询，比如可以在100用户下，查询101用户下的某些应用的存储占用信息。
+获取设备指定用户下已安装应用的存储占用信息。使用Promise异步回调。 > **说明：** > > 1.仅能获取已安装应用的存储占用信息。 > > 2.bundleNames参数为empty或全部传入未安装的应用包名，会抛出9200012错误码。 > > 3.bundleNames参数传递的包名部分应用已安装，部分应用未安装时，接口返回正常，已安装的应用返回实际的存储占用信息，未安装的应用存储占用信息为0。 > > 4.该接口支持跨用户查询，比如可以在100用户下，查询101用户下的某些应用的存储占用信息。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ENTERPRISE_GET_ALL_BUNDLE_INFO
 
@@ -46,10 +38,10 @@ function getInstalledBundleStorageStats(admin: Want, bundleNames: Array<string>,
 
 | 错误码ID |
 | --- |
-| [9200012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [9200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
-| [9200002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-mdm-kit/errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
+| [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) |
+| [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) |
 
 ## 示例
 

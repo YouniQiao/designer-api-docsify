@@ -14,9 +14,11 @@ function removeNotificationSlot(slotType: notification.SlotType, callback: Async
 
 Removes a specified notification slot. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType, callback: AsyncCallback<void>): void-End-->
 
@@ -27,13 +29,13 @@ Removes a specified notification slot. This API uses an asynchronous callback to
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slotType | notification.SlotType | Yes | Type of the notification slot. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification slot is removed, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 
 ## Examples
 
@@ -61,9 +63,11 @@ function removeNotificationSlot(slotType: notification.SlotType): Promise<void>
 
 Removes a specified notification slot. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>--><!--Device-reminderAgentManager-function removeNotificationSlot(slotType: notification.SlotType): Promise<void>-End-->
 
@@ -85,7 +89,7 @@ Removes a specified notification slot. This API uses a promise to return the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | If the input parameter is not valid parameter. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | If the input parameter is not valid parameter. |
 
 ## Examples
 

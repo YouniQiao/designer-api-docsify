@@ -16,6 +16,8 @@ Get the total inodes.
 
 **Since:** 24
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-storageStatistics-function getTotalInodes(): Promise<long>--><!--Device-storageStatistics-function getTotalInodes(): Promise<long>-End-->

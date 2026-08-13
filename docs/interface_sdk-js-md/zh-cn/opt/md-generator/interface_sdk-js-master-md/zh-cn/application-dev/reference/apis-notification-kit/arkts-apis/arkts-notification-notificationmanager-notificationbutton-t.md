@@ -6,7 +6,9 @@ export type NotificationButton = _NotificationButton
 
 通知按钮。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-notificationManager-export type NotificationButton = _NotificationButton--><!--Device-notificationManager-export type NotificationButton = _NotificationButton-End-->
 

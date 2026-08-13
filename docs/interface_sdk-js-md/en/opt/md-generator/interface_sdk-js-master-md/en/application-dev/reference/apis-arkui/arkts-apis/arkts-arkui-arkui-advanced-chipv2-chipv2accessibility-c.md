@@ -4,7 +4,7 @@ Defines accessibility.
 
 **Since:** 26.0.0
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare class ChipV2Accessibility--><!--Device-unnamed-export declare class ChipV2Accessibility-End-->
 
@@ -26,6 +26,8 @@ The constructor of ChipV2Accessibility
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
@@ -43,7 +45,8 @@ The constructor of ChipV2Accessibility
 ## accessibilityDescription
 
 ```TypeScript
-public accessibilityDescription?: ResourceStr
+@Trace
+  public accessibilityDescription?: ResourceStr
 ```
 
 Set accessibility description.
@@ -52,18 +55,21 @@ Set accessibility description.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Accessibility-public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Accessibility-public accessibilityDescription?: ResourceStr-End-->
+<!--Device-ChipV2Accessibility-@Trace  public accessibilityDescription?: ResourceStr--><!--Device-ChipV2Accessibility-@Trace  public accessibilityDescription?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityLevel
 
 ```TypeScript
-public accessibilityLevel?: string
+@Trace
+  public accessibilityLevel?: string
 ```
 
 Set accessibility level.
@@ -74,18 +80,21 @@ Set accessibility level.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Accessibility-public accessibilityLevel?: string--><!--Device-ChipV2Accessibility-public accessibilityLevel?: string-End-->
+<!--Device-ChipV2Accessibility-@Trace  public accessibilityLevel?: string--><!--Device-ChipV2Accessibility-@Trace  public accessibilityLevel?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## accessibilityText
 
 ```TypeScript
-public accessibilityText?: ResourceStr
+@Trace
+  public accessibilityText?: ResourceStr
 ```
 
 Set accessibility text.
@@ -94,10 +103,12 @@ Set accessibility text.
 
 **Since:** 26.0.0
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
-<!--Device-ChipV2Accessibility-public accessibilityText?: ResourceStr--><!--Device-ChipV2Accessibility-public accessibilityText?: ResourceStr-End-->
+<!--Device-ChipV2Accessibility-@Trace  public accessibilityText?: ResourceStr--><!--Device-ChipV2Accessibility-@Trace  public accessibilityText?: ResourceStr-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

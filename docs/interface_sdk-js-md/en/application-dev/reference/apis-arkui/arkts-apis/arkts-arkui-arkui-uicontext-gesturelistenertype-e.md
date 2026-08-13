@@ -1,10 +1,12 @@
 # GestureListenerType
 
-This is an enumeration type indicating what kind of gesture you want to monitor for.
+Enumerates the types of gestures to be listened for.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export const enum GestureListenerType--><!--Device-unnamed-export const enum GestureListenerType-End-->
 
@@ -18,11 +20,15 @@ TAP = 0
 
 The tap gesture.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureListenerType-TAP = 0--><!--Device-GestureListenerType-TAP = 0-End-->
 
@@ -36,11 +42,15 @@ LONG_PRESS = 1
 
 The long press gesture.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureListenerType-LONG_PRESS = 1--><!--Device-GestureListenerType-LONG_PRESS = 1-End-->
 
@@ -54,11 +64,15 @@ PAN = 2
 
 The pan gesture.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureListenerType-PAN = 2--><!--Device-GestureListenerType-PAN = 2-End-->
 
@@ -72,11 +86,15 @@ PINCH = 3
 
 The pinch gesture.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureListenerType-PINCH = 3--><!--Device-GestureListenerType-PINCH = 3-End-->
 
@@ -90,11 +108,15 @@ SWIPE = 4
 
 The swipe gesture.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureListenerType-SWIPE = 4--><!--Device-GestureListenerType-SWIPE = 4-End-->
 
@@ -108,11 +130,15 @@ ROTATION = 5
 
 The rotation gesture.
 
-**Since:** 26.0.0
+**Since:** 20
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 20.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-GestureListenerType-ROTATION = 5--><!--Device-GestureListenerType-ROTATION = 5-End-->
 

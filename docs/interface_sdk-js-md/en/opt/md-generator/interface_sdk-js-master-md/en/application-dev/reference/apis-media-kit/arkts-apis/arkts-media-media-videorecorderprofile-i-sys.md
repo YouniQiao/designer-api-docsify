@@ -2,7 +2,9 @@
 
 Provides the video recorder profile definitions.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface VideoRecorderProfile--><!--Device-media-interface VideoRecorderProfile-End-->
 
@@ -26,7 +28,9 @@ Indicates the audio bit rate, in bit/s.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioBitrate: int--><!--Device-VideoRecorderProfile-readonly audioBitrate: int-End-->
 
@@ -44,7 +48,9 @@ Indicates the number of audio channels.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioChannels: int--><!--Device-VideoRecorderProfile-readonly audioChannels: int-End-->
 
@@ -62,7 +68,9 @@ Indicates the audio encoding format.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly audioCodec: CodecMimeType-End-->
 
@@ -80,7 +88,9 @@ Indicates the audio sampling rate, in Hz.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly audioSampleRate: int--><!--Device-VideoRecorderProfile-readonly audioSampleRate: int-End-->
 
@@ -98,7 +108,9 @@ Indicates the output file format.
 
 **Type:** [ContainerFormatType](arkts-media-media-containerformattype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType--><!--Device-VideoRecorderProfile-readonly fileFormat: ContainerFormatType-End-->
 
@@ -116,7 +128,9 @@ Indicates the video bit rate, in bit/s.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoBitrate: int--><!--Device-VideoRecorderProfile-readonly videoBitrate: int-End-->
 
@@ -134,7 +148,9 @@ Indicates the video encoding format.
 
 **Type:** [CodecMimeType](arkts-media-media-codecmimetype-e.md)
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType--><!--Device-VideoRecorderProfile-readonly videoCodec: CodecMimeType-End-->
 
@@ -152,7 +168,9 @@ Indicates the video height, in px.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameHeight: int--><!--Device-VideoRecorderProfile-readonly videoFrameHeight: int-End-->
 
@@ -170,7 +188,9 @@ Indicates the video frame rate, in fps.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameRate: int--><!--Device-VideoRecorderProfile-readonly videoFrameRate: int-End-->
 
@@ -188,7 +208,9 @@ Indicates the video width, in px.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-VideoRecorderProfile-readonly videoFrameWidth: int--><!--Device-VideoRecorderProfile-readonly videoFrameWidth: int-End-->
 

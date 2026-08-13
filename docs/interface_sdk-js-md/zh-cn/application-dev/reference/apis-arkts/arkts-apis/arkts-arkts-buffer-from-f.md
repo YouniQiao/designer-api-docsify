@@ -8,9 +8,11 @@ function from(array: double[]): Buffer
 
 根据指定数组创建新的Buffer对象，数组中的每个元素作为对应位置的字节存储。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -22,7 +24,7 @@ function from(array: double[]): Buffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | 是 | 由0~255范围内的整数组成的数组，用于根据数组内容创建新的Buffer对象。 |
+| array | double[] | 是 | 由0~255范围内的整数组成的数组，用于根据数组内容创建新的Buffer对象。 |
 
 **返回值：**
 
@@ -53,6 +55,8 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为9。
 
+**废弃版本：** -1
+
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
 <!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer--><!--Device-buffer-function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number, length?: number): Buffer-End-->
@@ -77,7 +81,7 @@ function from(arrayBuffer: ArrayBuffer | SharedArrayBuffer, byteOffset?: number,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 ## 示例
 
@@ -100,7 +104,9 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 **起始版本：** 23
 
-**ArkTS模式：** 仅支持ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本23开始，该接口支持在原子化服务API中使用。
 
@@ -126,7 +132,7 @@ function from(arrayBuffer: ArrayBuffer, byteOffset?: int, length?: int): Buffer
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkts/errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
 
 ## 示例
 
@@ -145,11 +151,13 @@ console.info(JSON.stringify(buf)); // {"type":"Buffer","data":[0,0]}
 function from(buffer: Buffer | Uint8Array): Buffer
 ```
 
-当入参为Buffer对象时，创建新的Buffer对象并复制入参Buffer对象的数据，然后返回新对象。基于Uint8Array对象的内存创建新的Buffer对象并返回，新Buffer与原Uint8Array共享同一底层ArrayBuffer内存区域。
+当入参为Buffer对象时，创建新的Buffer对象并复制入参Buffer对象的数据，然后返回新对象。 基于Uint8Array对象的内存创建新的Buffer对象并返回，新Buffer与原Uint8Array共享同一底层ArrayBuffer内存区域。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -195,9 +203,11 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 
 根据指定的`object`类型数据，创建新的Buffer对象。当object的valueOf()返回ArrayBuffer时，按字节偏移量和长度创建Buffer；其他类型则根据编码格式将对象值转换为Buffer。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -210,8 +220,8 @@ function from(object: Object, offsetOrEncoding: int | string, length: int): Buff
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | object | Object | 是 | 支持Symbol.toPrimitive或valueOf()的对象，valueOf()或Symbol.toPrimitive的返回值支持string和ArrayBuffer等类型。 |
-| offsetOrEncoding | ArkTS-Dyn: number \| string  <br>ArkTS-Sta：int \| string | 是 | 字节偏移量或编码格式。当object的valueOf()返回值为ArrayBuffer时，作为字节偏移量；其他情况下作为编码格式。 |
-| length | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 字节长度（此入参仅在object的valueOf()返回值为ArrayBuffer时生效，取值范围：0 <= length <= ArrayBuffer.byteLength，超出范 围时报错: 10200001）。其他情况下可填任意number类型值，该参数不会对结果产生影响。 |
+| offsetOrEncoding | int \| string | 是 | 字节偏移量或编码格式。当object的valueOf()返回值为ArrayBuffer时，作为字节偏移量；其他情况下作为编码格式。 |
+| length | int | 是 | 字节长度（此入参仅在object的valueOf()返回值为ArrayBuffer时生效，取值范围：0 <= length <= ArrayBuffer.byteLength，超出范 围时报错: 10200001）。其他情况下可填任意number类型值，该参数不会对结果产生影响。 |
 
 **返回值：**
 
@@ -237,9 +247,11 @@ function from(string: String, encoding?: BufferEncoding): Buffer
 
 根据指定编码格式的字符串，创建新的Buffer对象，字符串按编码格式转换为字节序列存入Buffer。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -2,11 +2,13 @@
 
 Represents the cloud asset information.
 
-**Inheritance/Implementation:** CloudAsset extends [relationalStore.Asset](relationalStore.Asset)
+**Inheritance/Implementation:** CloudAsset extends relationalStore.Asset
 
-**Since:** 11
+**Since:** 23
 
-<!--Device-cloudExtension-export interface CloudAsset extends relationalStore.Asset--><!--Device-cloudExtension-export interface CloudAsset extends relationalStore.Asset-End-->
+**Deprecated since:** -1
+
+<!--Device-cloudExtension-export interface CloudAsset--><!--Device-cloudExtension-export interface CloudAsset-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.CloudSync.Server
 
@@ -28,7 +30,9 @@ Asset ID.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudAsset-assetId: string--><!--Device-CloudAsset-assetId: string-End-->
 
@@ -46,7 +50,9 @@ Hashed value of the asset modification time and size.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-CloudAsset-hash: string--><!--Device-CloudAsset-hash: string-End-->
 

@@ -2,9 +2,11 @@
 
 Represents the configuration for parsing P12.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface Pkcs12ParsingConfig--><!--Device-cert-interface Pkcs12ParsingConfig-End-->
 
@@ -28,11 +30,13 @@ Whether to obtain the certificate. The default value is **true**. **true**: yes;
 
 **Default:** true
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12ParsingConfig-needsCert?: boolean--><!--Device-Pkcs12ParsingConfig-needsCert?: boolean-End-->
 
@@ -50,11 +54,13 @@ Whether to obtain other certificates. The default value is **false**. **true**: 
 
 **Default:** false
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12ParsingConfig-needsOtherCerts?: boolean--><!--Device-Pkcs12ParsingConfig-needsOtherCerts?: boolean-End-->
 
@@ -66,19 +72,19 @@ Whether to obtain other certificates. The default value is **false**. **true**: 
 needsPrivateKey?: boolean
 ```
 
-Whether to obtain the private key. The default value is **true**.
-
-**true**: To obtain the private key in PKCS #8 format; **false**: Not to obtain the private key.
+Whether to obtain the private key. The default value is **true**. **true**: To obtain the private key in PKCS #8 format; **false**: Not to obtain the private key.
 
 **Type:** boolean
 
 **Default:** true
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12ParsingConfig-needsPrivateKey?: boolean--><!--Device-Pkcs12ParsingConfig-needsPrivateKey?: boolean-End-->
 
@@ -94,11 +100,13 @@ Password.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12ParsingConfig-password: string--><!--Device-Pkcs12ParsingConfig-password: string-End-->
 
@@ -110,21 +118,19 @@ Password.
 privateKeyFormat?: EncodingBaseFormat
 ```
 
-Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default.
-
-> **NOTE：**
-> 
-> This parameter is valid only when **needsPrivateKey** is set to **true**.
+Format of the private key to be obtained. Currently, the PEM and DER formats are supported. If this parameter is not specified, the PEM format is used by default. > **NOTE：**> > This parameter is valid only when **needsPrivateKey** is set to **true**.
 
 **Type:** [EncodingBaseFormat](arkts-devicecertificate-cert-encodingbaseformat-e.md)
 
 **Default:** EncodingBaseFormat.PEM
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-Pkcs12ParsingConfig-privateKeyFormat?: EncodingBaseFormat--><!--Device-Pkcs12ParsingConfig-privateKeyFormat?: EncodingBaseFormat-End-->
 

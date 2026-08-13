@@ -1,14 +1,10 @@
 # PressureLevel
 
-Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the  
-**Web** kernel releases the cache based on the memory pressure level.
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Value](../../apis-arkdata/arkts-apis/arkts-arkdata-distributeddata-value-i.md) | Description|
-| ------------------------------- | - | ---------- |
-| [MEMORY_PRESSURE_LEVEL_MODERATE](arkts-arkweb-webview-pressurelevel-e.md) | 1 | Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.|
-| [MEMORY_PRESSURE_LEVEL_CRITICAL](arkts-arkweb-webview-pressurelevel-e.md) | 2 |
+Enumerates the memory pressure levels. When an application clears the cache occupied by the **Web** component, the **Web** kernel releases the cache based on the memory pressure level. | Name| Value| Description| | ------------------------------- | - | ---------- | | MEMORY_PRESSURE_LEVEL_MODERATE | 1 | Moderate memory pressure level. At this level, the **Web** kernel attempts to release the cache that has low reallocation overhead and does not need to be used immediately.| | MEMORY_PRESSURE_LEVEL_CRITICAL | 2 | Critical memory pressure level. At this level, the **Web** kernel attempts to release all possible memory caches.|
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 <!--Device-webview-enum PressureLevel--><!--Device-webview-enum PressureLevel-End-->
 
@@ -23,6 +19,8 @@ MEMORY_PRESSURE_LEVEL_MODERATE = 1
 Modules are advised to free buffers that are cheap to re-allocate and not immediately needed.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -39,6 +37,8 @@ MEMORY_PRESSURE_LEVEL_CRITICAL = 2
 At this level, modules are advised to free all possible memory.
 
 **Since:** 14
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 

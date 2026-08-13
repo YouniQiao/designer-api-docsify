@@ -2,9 +2,11 @@
 
 Defines parameters when an application obtains the Data from the pasteboard, including the destination path, file conflict options, and progress indicator types.
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-pasteboard-interface GetDataParams--><!--Device-pasteboard-interface GetDataParams-End-->
 
@@ -15,24 +17,6 @@ Defines parameters when an application obtains the Data from the pasteboard, inc
 ```TypeScript
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
-
-## progressListener
-
-```TypeScript
-progressListener?: ProgressListener
-```
-
-Defines a listener for progress data changes. If the default progress indicator is not used, you can set this type to obtain the paste progress. This parameter is left empty by default.
-
-**Since:** 15
-
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
-
-**Atomic service API:** This API can be used in atomic services since API version 15.
-
-<!--Device-GetDataParams-progressListener?: ProgressListener--><!--Device-GetDataParams-progressListener?: ProgressListener-End-->
-
-**System capability:** SystemCapability.MiscServices.Pasteboard
 
 ## destUri
 
@@ -46,11 +30,13 @@ Destination path for copying files. If file processing is not supported, this pa
 
 **Default:** -
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GetDataParams-destUri?: string--><!--Device-GetDataParams-destUri?: string-End-->
 
@@ -68,11 +54,13 @@ File conflict options for a paste task. The default value is **OVERWRITE**.
 
 **Default:** FileConflictOptions.OVERWRITE
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GetDataParams-fileConflictOptions?: FileConflictOptions--><!--Device-GetDataParams-fileConflictOptions?: FileConflictOptions-End-->
 
@@ -88,13 +76,39 @@ Progress indicator options. You can choose whether to use the default progress i
 
 **Type:** ProgressIndicator
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GetDataParams-progressIndicator: ProgressIndicator--><!--Device-GetDataParams-progressIndicator: ProgressIndicator-End-->
+
+**System capability:** SystemCapability.MiscServices.Pasteboard
+
+## progressListener
+
+```TypeScript
+progressListener?: ProgressListener
+```
+
+Defines a listener for progress data changes. If the default progress indicator is not used, you can set this type to obtain the paste progress. This parameter is left empty by default.
+
+**Type:** ProgressListener
+
+**Default:** -
+
+**Since:** 23
+
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
+
+<!--Device-GetDataParams-progressListener?: ProgressListener--><!--Device-GetDataParams-progressListener?: ProgressListener-End-->
 
 **System capability:** SystemCapability.MiscServices.Pasteboard
 
@@ -104,18 +118,19 @@ Progress indicator options. You can choose whether to use the default progress i
 progressSignal?: ProgressSignal
 ```
 
-Function for canceling the paste task. This parameter is valid only when  
-[ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**. This parameter is left empty by default.
+Function for canceling the paste task. This parameter is valid only when [ProgressIndicator](arkts-basicservices-pasteboard-progressindicator-e.md#ProgressIndicator) is set to **NONE**. This parameter is left empty by default.
 
 **Type:** [ProgressSignal](arkts-basicservices-pasteboard-progresssignal-c.md)
 
 **Default:** -
 
-**Since:** 15
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 15; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**Atomic service API:** This API can be used in atomic services since API version 15.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-GetDataParams-progressSignal?: ProgressSignal--><!--Device-GetDataParams-progressSignal?: ProgressSignal-End-->
 

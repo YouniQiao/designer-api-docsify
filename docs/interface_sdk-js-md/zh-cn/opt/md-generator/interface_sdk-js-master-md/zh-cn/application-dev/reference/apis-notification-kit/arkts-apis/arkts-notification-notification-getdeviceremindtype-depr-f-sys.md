@@ -12,7 +12,7 @@ function getDeviceRemindType(callback: AsyncCallback<DeviceRemindType>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceRemindType](ohos.notificationManager/notificationManager#getDeviceRemindType)
+**替代接口：** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md#getDeviceRemindType（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -41,7 +41,7 @@ function getDeviceRemindType(): Promise<DeviceRemindType>
 
 **废弃版本：** 9
 
-**替代接口：** [getDeviceRemindType](ohos.notificationManager/notificationManager#getDeviceRemindType)
+**替代接口：** [getDeviceRemindType](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md#getDeviceRemindType（系统接口）)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 

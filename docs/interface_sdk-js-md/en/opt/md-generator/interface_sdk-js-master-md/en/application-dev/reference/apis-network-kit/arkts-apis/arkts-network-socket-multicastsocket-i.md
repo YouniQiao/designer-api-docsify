@@ -6,7 +6,9 @@ Defines a UDP MulticastSocket connection.
 
 **Since:** 12
 
-<!--Device-socket-export interface MulticastSocket extends UDPSocket--><!--Device-socket-export interface MulticastSocket extends UDPSocket-End-->
+**Deprecated since:** -1
+
+<!--Device-socket-export interface MulticastSocket--><!--Device-socket-export interface MulticastSocket-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -26,6 +28,8 @@ Add the socket to the multicast group.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -43,9 +47,9 @@ Add the socket to the multicast group.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2301098 |
 | 2301022 |
 
@@ -78,6 +82,8 @@ Add the socket to the multicast group.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-addMembership(multicastAddress: NetAddress): Promise<void>-End-->
@@ -100,9 +106,9 @@ Add the socket to the multicast group.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2301098 |
 
 ## Examples
@@ -132,6 +138,8 @@ Drop the socket from the multicast group.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void-End-->
@@ -149,9 +157,9 @@ Drop the socket from the multicast group.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2301098 |
 
 ## Examples
@@ -183,6 +191,8 @@ Drop the socket from the multicast group.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Required permissions:** ohos.permission.INTERNET
 
 <!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>--><!--Device-MulticastSocket-dropMembership(multicastAddress: NetAddress): Promise<void>-End-->
@@ -205,9 +215,9 @@ Drop the socket from the multicast group.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 | 2301098 |
 
 ## Examples
@@ -237,6 +247,8 @@ Get the loopback mode of the socket.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void--><!--Device-MulticastSocket-getLoopbackMode(callback: AsyncCallback<boolean>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -251,7 +263,7 @@ Get the loopback mode of the socket.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
 ## Examples
@@ -279,6 +291,8 @@ Get the loopback mode of the socket.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>--><!--Device-MulticastSocket-getLoopbackMode(): Promise<boolean>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -293,7 +307,7 @@ Get the loopback mode of the socket.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
 ## Examples
@@ -319,6 +333,8 @@ Get the TTL value of socket multicast packet.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void--><!--Device-MulticastSocket-getMulticastTTL(callback: AsyncCallback<number>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -333,7 +349,7 @@ Get the TTL value of socket multicast packet.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
 ## Examples
@@ -361,6 +377,8 @@ Get the TTL value of socket multicast packet.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-getMulticastTTL(): Promise<number>--><!--Device-MulticastSocket-getMulticastTTL(): Promise<number>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -375,7 +393,7 @@ Get the TTL value of socket multicast packet.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
 ## Examples
@@ -399,7 +417,9 @@ getSocketFd(): Promise<number>
 
 Obtains the file descriptor of the MulticastSocket.
 
-**Since:** 24
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Required permissions:** ohos.permission.INTERNET
 
@@ -419,7 +439,7 @@ Obtains the file descriptor of the MulticastSocket.
 
 | Error Code ID |
 | --- |
-| [201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/errorcode-universal.md#201-permission-denied) |
+| [201](../../errorcode-universal.md#201-permission-denied) |
 
 ## Examples
 
@@ -455,6 +475,8 @@ Set the loopback mode for the socket.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -470,7 +492,7 @@ Set the loopback mode for the socket.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
 ## Examples
@@ -498,6 +520,8 @@ Set the loopback mode for the socket.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>--><!--Device-MulticastSocket-setLoopbackMode(flag: boolean): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -518,7 +542,7 @@ Set the loopback mode for the socket.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 
 ## Examples
@@ -544,6 +568,8 @@ Set the TTL value for socket multicast packets.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void--><!--Device-MulticastSocket-setMulticastTTL(ttl: number, callback: AsyncCallback<void>): void-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -559,7 +585,7 @@ Set the TTL value for socket multicast packets.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 | 2301022 |
 
@@ -589,6 +615,8 @@ Set the TTL value for socket multicast packet.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>--><!--Device-MulticastSocket-setMulticastTTL(ttl: number): Promise<void>-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -609,7 +637,7 @@ Set the TTL value for socket multicast packet.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
 | 2301088 |
 | 2301022 |
 
@@ -635,6 +663,8 @@ setReuseAddress(reuse: boolean): void
 Sets whether the multicast socket supports address reuse.
 
 **Since:** 26.0.0
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 UIExtensionAbility组件的界面操作类，提供页面加载、设置宿主应用窗口隐私模式等功能。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare class UIExtensionContentSession--><!--Device-unnamed-declare class UIExtensionContentSession-End-->
 
@@ -16,7 +18,9 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 获取当前UIExtension对应的窗口对象，用于通知宽高、位置、避让信息等。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,8 +40,8 @@ getUIExtensionHostWindowProxy(): uiExtensionHost.UIExtensionHostWindowProxy
 
 | 错误码ID |
 | --- |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -95,6 +99,8 @@ sendData(data: Record<string, Object>): void
 
 **起始版本：** 10
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void--><!--Device-UIExtensionContentSession-sendData(data: Record<string, Object>): void-End-->
@@ -113,9 +119,9 @@ sendData(data: Record<string, Object>): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -151,6 +157,39 @@ struct Index {
 }
 ```
 
+## sendData
+
+```TypeScript
+sendData(data: Record<string, RecordData>): void
+```
+
+发送数据给UIExtensionComponent控件。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-sendData(data: Record<string, RecordData>): void--><!--Device-UIExtensionContentSession-sendData(data: Record<string, RecordData>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| data | Record&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt; | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
 ## setReceiveDataCallback
 
 ```TypeScript
@@ -160,6 +199,8 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 设置从UIExtensionComponent控件接收数据的回调方法。使用callback异步回调。
 
 **起始版本：** 10
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -179,9 +220,9 @@ setReceiveDataCallback(callback: (data: Record<string, Object>) => void): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -210,6 +251,39 @@ struct Index {
 }
 ```
 
+## setReceiveDataCallback
+
+```TypeScript
+setReceiveDataCallback(callback: OnReceiveDataCallback): void
+```
+
+设置从UIExtensionComponent控件接收数据的回调方法。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: OnReceiveDataCallback): void--><!--Device-UIExtensionContentSession-setReceiveDataCallback(callback: OnReceiveDataCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnReceiveDataCallback](arkts-ability-onreceivedatacallback-t-sys.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
 ## setReceiveDataForResultCallback
 
 ```TypeScript
@@ -219,6 +293,8 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 设置从UIExtensionComponent控件接收数据带返回值的回调方法。使用callback异步回调。
 
 **起始版本：** 11
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -238,9 +314,9 @@ setReceiveDataForResultCallback(callback: (data: Record<string, Object>) => Reco
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -270,16 +346,50 @@ struct Index {
 }
 ```
 
+## setReceiveDataForResultCallback
+
+```TypeScript
+setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void
+```
+
+设置从UIExtensionComponent控件接收数据带返回值的回调方法。使用callback异步回调。
+
+**起始版本：** 23
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void--><!--Device-UIExtensionContentSession-setReceiveDataForResultCallback(callback: OnReceiveDataForResultCallback): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 |
+| --- | --- | --- |
+| callback | [OnReceiveDataForResultCallback](arkts-ability-onreceivedataforresultcallback-t-sys.md) | 是 |
+
+**错误码：**
+
+| 错误码ID |
+| --- |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+
 ## setWindowBackgroundColor
 
 ```TypeScript
 setWindowBackgroundColor(color: string): void
 ```
 
-设置UIExtensionAbility加载界面的背景色。该接口需要在  
-[loadContent()](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent)调用生效后使用。
+设置UIExtensionAbility加载界面的背景色。该接口需要在 [loadContent()](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#loadContent)调用生效后使用。
 
-**起始版本：** 10
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -299,9 +409,9 @@ setWindowBackgroundColor(color: string): void
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 
@@ -338,14 +448,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, callback: AsyncCallback<void>): void
 ```
 
-启动Ability。使用callback异步回调。
+启动Ability。使用callback异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -366,24 +473,24 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -414,14 +521,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-启动Ability。使用callback异步回调。
+启动Ability。使用callback异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -443,22 +547,22 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -493,14 +597,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-启动Ability。使用Promise异步回调。
+启动Ability。使用Promise异步回调。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
+**起始版本：** 23
 
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -527,24 +628,24 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -579,9 +680,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 ```
 
-初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
+初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -602,24 +705,24 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -655,9 +758,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<void>): void
 ```
 
-初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
+初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用callback异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -679,22 +784,22 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -734,9 +839,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 ```
 
-初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用Promise异步回调。
+初始Ability将自己的caller信息（如BundleName、AbilityName等）置于want参数中，传递给中间层的ExtensionAbility。当ExtensionAbility通过该接口拉起另外一个 Ability，被拉起的Ability可以从onCreate生命周期获取到初始Ability的caller信息。使用Promise异步回调。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -763,24 +870,24 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -820,20 +927,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 ```
 
-启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。Ability的终止方式包括以下几种情况：
+启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。 Ability的终止方式包括以下几种情况： - 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-- 正常情况下可通过调用  
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)接口使之终止并且返回结果给调用方。  
-- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
-- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -854,24 +952,24 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -902,20 +1000,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback<AbilityResult>): void
 ```
 
-启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。Ability的终止方式包括以下几种情况：
+启动一个Ability，在Ability终止后返回结果给调用方。使用callback异步回调。 Ability的终止方式包括以下几种情况： - 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-- 正常情况下可通过调用  
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)接口使之终止并且返回结果给调用方。  
-- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
-- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -937,22 +1026,22 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 
@@ -987,20 +1076,11 @@ export default class UIExtAbility extends UIExtensionAbility {
 startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult>
 ```
 
-启动一个Ability，在Ability终止后返回结果给调用方。使用Promise异步回调。Ability的终止方式包括以下几种情况：
+启动一个Ability，在Ability终止后返回结果给调用方。使用Promise异步回调。 Ability的终止方式包括以下几种情况： - 正常情况下可通过调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) 接口使之终止并且返回结果给调用方。 - 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。 - 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用 [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult) 接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。 > **说明：** > > 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。 > > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
 
-- 正常情况下可通过调用  
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)接口使之终止并且返回结果给调用方。  
-- 异常情况下比如杀死Ability会返回异常信息给调用方，异常信息中resultCode为-1。  
-- 如果被启动的Ability模式是单实例模式，不同应用多次调用该接口启动这个Ability，当这个Ability调用  
-[terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateSelfWithResult)接口使之终止时，只将正常结果返回给最后一个调用方，其他调用方返回异常信息，异常信息中resultCode为-1。
+**起始版本：** 23
 
-> **说明：**
-> 
-> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
-> > 对应UIExtensionComponent控件所在的应用需要处于前台获焦状态。
-
-**起始版本：** 10
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1027,24 +1107,24 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 | 错误码ID |
 | --- |
-| [16000053](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) |
-| [16000055](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000055-免安装超时) |
-| [16000050](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000050-内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [16000004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000004-可见性校验失败) |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
-| [16000005](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000005-指定的进程权限校验失败) |
-| [16000006](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000006-不允许跨用户操作) |
-| [16000001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000001-指定的ability名称不存在) |
-| [16000002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000002-接口调用ability类型错误) |
-| [16200001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) |
-| [16000012](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000012-应用被管控) |
-| [16000013](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000013-应用被edm管控) |
-| [16000008](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000008-众测应用到期) |
-| [16000009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
-| [16000010](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000010-不允许带迁移flag) |
-| [16000011](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) |
+| [16000050](../errorcode-ability.md#16000050-内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) |
+| [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) |
+| [16000012](../errorcode-ability.md#16000012-应用被管控) |
+| [16000013](../errorcode-ability.md#16000013-应用被edm管控) |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) |
+| [16000010](../errorcode-ability.md#16000010-不允许带迁移flag) |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) |
 
 ## 示例
 

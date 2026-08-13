@@ -6,27 +6,9 @@ Provides keyframe configuration options.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface KeyframeState--><!--Device-unnamed-declare interface KeyframeState-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## event
-
-```TypeScript
-event: () => void
-```
-
-Closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
-
-**Since:** 11
-
-**ArkTS mode:** ArkTS-Dyn only, since version 11.
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-KeyframeState-event: () => void--><!--Device-KeyframeState-event: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -36,20 +18,7 @@ Closure function of the state at the time of the keyframe, that is, the state to
 curve?: Curve | string | ICurve
 ```
 
-Animation curve used by the keyframe.
-
-You are advised to specify the curve using the **Curve** or **ICurve** type.
-
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the   
-**curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#AnimateParam).
-
-Default value: **Curve.EaseInOut**
-
-**NOTE：**
-
-Because the [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#springMotion),   
-[responsiveSpringMotion](../arkts-apis/arkts-arkui-curves-responsivespringmotion-f.md#responsiveSpringMotion), and   
-[interpolatingSpring](../arkts-apis/arkts-arkui-curves-interpolatingspring-f.md#interpolatingSpring) curves do not have effective duration settings, they are not supported.
+Animation curve used by the keyframe. You are advised to specify the curve using the **Curve** or **ICurve** type. For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-animateparam-i.md#AnimateParam). Default value: **Curve.EaseInOut** **NOTE：**Because the [springMotion](../../apis-na/arkts-apis/arkts-na-curves-springmotion-f.md#springMotion), [responsiveSpringMotion](../../apis-na/arkts-apis/arkts-na-curves-responsivespringmotion-f.md#responsiveSpringMotion), and [interpolatingSpring](../../apis-na/arkts-apis/arkts-na-curves-interpolatingspring-f.md#interpolatingSpring) curves do not have effective duration settings, they are not supported.
 
 **Type:** Curve \| string \| [ICurve](arkts-arkui-icurve-i.md)
 
@@ -58,6 +27,8 @@ Because the [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#sp
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,14 +44,7 @@ Because the [springMotion](../arkts-apis/arkts-arkui-curves-springmotion-f.md#sp
 duration: number
 ```
 
-Duration of the keyframe animation, in ms.
-
-Value range: [0, +∞)
-
-**NOTE：**
-
-- If this parameter is set to a value less than 0, the value **0** is used.  
-- Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
+Duration of the keyframe animation, in ms. Value range: [0, +∞) **NOTE：**- If this parameter is set to a value less than 0, the value **0** is used. - Floating-point values will be rounded down to integers. For example, if the value set is 1.2, **1** will be used.
 
 **Type:** number
 
@@ -88,11 +52,37 @@ Value range: [0, +∞)
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyframeState-duration: number--><!--Device-KeyframeState-duration: number-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## event
+
+```TypeScript
+event: () => void
+```
+
+Closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
+
+**Type:** () =&gt; void
+
+**Since:** 11
+
+**ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-KeyframeState-event: () => void--><!--Device-KeyframeState-event: () => void-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

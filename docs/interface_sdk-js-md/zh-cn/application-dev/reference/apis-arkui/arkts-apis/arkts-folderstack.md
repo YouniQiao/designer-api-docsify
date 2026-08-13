@@ -14,7 +14,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 当前设备的折叠状态。  Anonymous Object Rectification |
-| [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | 当前设备的悬停状态改变时触发的回调。  Anonymous Object Rectification |
+| [OnFoldStatusChangeCallback](arkts-arkui-onfoldstatuschangecallback-t.md) | 当前设备的折叠状态。 Anonymous Object Rectification |
+| [OnHoverStatusChangeCallback](arkts-arkui-onhoverstatuschangecallback-t.md) | 当前设备的悬停状态改变时触发的回调。 Anonymous Object Rectification |
 | [WindowStatusType](arkts-arkui-windowstatustype-t.md) | 窗口模式枚举。 |
 

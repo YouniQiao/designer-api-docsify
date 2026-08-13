@@ -2,9 +2,11 @@
 
 Represents the configuration of a domain server.
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-osAccount-interface DomainServerConfig--><!--Device-osAccount-interface DomainServerConfig-End-->
 
@@ -26,9 +28,11 @@ Domain to which the server belongs.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DomainServerConfig-domain: string--><!--Device-DomainServerConfig-domain: string-End-->
 
@@ -44,9 +48,11 @@ Server configuration ID.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-DomainServerConfig-id: string--><!--Device-DomainServerConfig-id: string-End-->
 
@@ -55,18 +61,20 @@ Server configuration ID.
 ## parameters
 
 ```TypeScript
-parameters: Record<string, Object>
+parameters: Record<string, RecordData>
 ```
 
 Server configuration parameters.
 
-**Type:** Record&lt;string, Object&gt;
+**Type:** Record&lt;string, [RecordData](arkts-basicservices-recorddata-t.md)&gt;
 
-**Since:** 18
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 18; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-DomainServerConfig-parameters: Record<string, Object>--><!--Device-DomainServerConfig-parameters: Record<string, Object>-End-->
+**Deprecated since:** -1
+
+<!--Device-DomainServerConfig-parameters: Record<string, RecordData>--><!--Device-DomainServerConfig-parameters: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Account.OsAccount
 

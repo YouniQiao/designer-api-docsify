@@ -2,7 +2,9 @@
 
 The **NotificationSorting** module provides APIs for defining the sorting information of active notifications.
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface NotificationSorting--><!--Device-unnamed-export interface NotificationSorting-End-->
 
@@ -20,7 +22,9 @@ Unique ID of the notification.
 
 **Type:** string
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSorting-readonly hashCode: string--><!--Device-NotificationSorting-readonly hashCode: string-End-->
 
@@ -38,7 +42,9 @@ Notification level. If this parameter is not set, the default value is used base
 
 **Type:** number
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSorting-readonly ranking: long--><!--Device-NotificationSorting-readonly ranking: long-End-->
 
@@ -56,7 +62,9 @@ Notification slot type.
 
 **Type:** [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
 
-**Since:** 7
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NotificationSorting-readonly slot: NotificationSlot--><!--Device-NotificationSorting-readonly slot: NotificationSlot-End-->
 

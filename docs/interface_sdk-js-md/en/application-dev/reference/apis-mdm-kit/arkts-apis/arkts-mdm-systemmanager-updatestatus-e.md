@@ -6,6 +6,8 @@ Enumerates the system update statuses.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-enum UpdateStatus--><!--Device-systemManager-enum UpdateStatus-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -21,6 +23,8 @@ The system update package of the specified version does not exist.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,6 +44,8 @@ The system update package is waiting to be installed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateStatus-UPDATE_WAITING = -3--><!--Device-UpdateStatus-UPDATE_WAITING = -3-End-->
@@ -57,6 +63,8 @@ The system update is being performed.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -76,6 +84,8 @@ The update failed.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UpdateStatus-UPDATE_FAILURE = -1--><!--Device-UpdateStatus-UPDATE_FAILURE = -1-End-->
@@ -93,6 +103,8 @@ The update is successful.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

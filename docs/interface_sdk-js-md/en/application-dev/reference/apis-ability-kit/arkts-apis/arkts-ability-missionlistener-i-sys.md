@@ -1,11 +1,12 @@
 # MissionListener (System API)
 
-The module defines the listeners used to observe the mission status. The listeners can be registered by using  
-[on](arkts-ability-missionmanager-on-f-sys.md#on).
+The module defines the listeners used to observe the mission status. The listeners can be registered by using on.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface MissionListener--><!--Device-unnamed-export interface MissionListener-End-->
 
@@ -15,21 +16,17 @@ The module defines the listeners used to observe the mission status. The listene
 
 ## onMissionClosed
 
-ArkTS-Dyn:
-```TypeScript
-onMissionClosed(mission: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionClosed(mission: int): void
 ```
 
 Called when the system closes a mission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionClosed(mission: int): void--><!--Device-MissionListener-onMissionClosed(mission: int): void-End-->
 
@@ -41,7 +38,7 @@ Called when the system closes a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 
 ## Examples
 
@@ -83,21 +80,17 @@ try {
 
 ## onMissionCreated
 
-ArkTS-Dyn:
-```TypeScript
-onMissionCreated(mission: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionCreated(mission: int): void
 ```
 
 Called when the system creates a mission.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionCreated(mission: int): void--><!--Device-MissionListener-onMissionCreated(mission: int): void-End-->
 
@@ -109,29 +102,25 @@ Called when the system creates a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionDestroyed
 
-ArkTS-Dyn:
-```TypeScript
-onMissionDestroyed(mission: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionDestroyed(mission: int): void
 ```
 
 Called when the system destroys a mission.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionDestroyed(mission: int): void--><!--Device-MissionListener-onMissionDestroyed(mission: int): void-End-->
 
@@ -143,29 +132,25 @@ Called when the system destroys a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionIconUpdated
 
-ArkTS-Dyn:
-```TypeScript
-onMissionIconUpdated(mission: number, icon: image.PixelMap): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionIconUpdated(mission: int, icon: image.PixelMap): void
 ```
 
 Called when the system updates the icon of a mission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void--><!--Device-MissionListener-onMissionIconUpdated(mission: int, icon: image.PixelMap): void-End-->
 
@@ -177,30 +162,26 @@ Called when the system updates the icon of a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 | icon | image.PixelMap | Yes | New mission icon. |
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionLabelUpdated
 
-ArkTS-Dyn:
-```TypeScript
-onMissionLabelUpdated(mission: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionLabelUpdated(mission: int): void
 ```
 
 Called when the system updates the label of a mission.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionLabelUpdated(mission: int): void--><!--Device-MissionListener-onMissionLabelUpdated(mission: int): void-End-->
 
@@ -212,29 +193,25 @@ Called when the system updates the label of a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionMovedToFront
 
-ArkTS-Dyn:
-```TypeScript
-onMissionMovedToFront(mission: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionMovedToFront(mission: int): void
 ```
 
 Called when the system moves a mission to the foreground.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionMovedToFront(mission: int): void--><!--Device-MissionListener-onMissionMovedToFront(mission: int): void-End-->
 
@@ -246,29 +223,25 @@ Called when the system moves a mission to the foreground.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 
 ## onMissionSnapshotChanged
 
-ArkTS-Dyn:
-```TypeScript
-onMissionSnapshotChanged(mission: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 onMissionSnapshotChanged(mission: int): void
 ```
 
 Called when the system updates the snapshot of a mission.
 
-**Since:** 8
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 8; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void--><!--Device-MissionListener-onMissionSnapshotChanged(mission: int): void-End-->
 
@@ -280,9 +253,9 @@ Called when the system updates the snapshot of a mission.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mission | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Mission ID. |
+| mission | int | Yes | Mission ID. |
 
 ## Examples
 
-For details, see [onMissionClosed](#onmissionclosed9).
+For details, see [onMissionClosed](#onMissionClosed).
 

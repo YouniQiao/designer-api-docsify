@@ -6,7 +6,9 @@ type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void
 
 监听屏幕亮度信息时使用的回调函数类型。
 
-**起始版本：** 22
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-display-type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void--><!--Device-display-type BrightnessCallback<T1, T2> = (data1: T1, data2: T2) => void-End-->
 

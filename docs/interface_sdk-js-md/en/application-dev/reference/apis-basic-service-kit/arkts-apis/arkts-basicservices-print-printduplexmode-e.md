@@ -2,9 +2,11 @@
 
 Enumerates the duplex modes.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-print-enum PrintDuplexMode--><!--Device-print-enum PrintDuplexMode-End-->
 
@@ -18,9 +20,11 @@ DUPLEX_MODE_NONE = 0
 
 Simplex (single-sided).
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDuplexMode-DUPLEX_MODE_NONE = 0--><!--Device-PrintDuplexMode-DUPLEX_MODE_NONE = 0-End-->
 
@@ -34,9 +38,11 @@ DUPLEX_MODE_LONG_EDGE = 1
 
 Duplex (double-sided) with flipping on long edge.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDuplexMode-DUPLEX_MODE_LONG_EDGE = 1--><!--Device-PrintDuplexMode-DUPLEX_MODE_LONG_EDGE = 1-End-->
 
@@ -50,9 +56,11 @@ DUPLEX_MODE_SHORT_EDGE = 2
 
 Duplex (double-sided) with flipping on short edge.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-PrintDuplexMode-DUPLEX_MODE_SHORT_EDGE = 2--><!--Device-PrintDuplexMode-DUPLEX_MODE_SHORT_EDGE = 2-End-->
 

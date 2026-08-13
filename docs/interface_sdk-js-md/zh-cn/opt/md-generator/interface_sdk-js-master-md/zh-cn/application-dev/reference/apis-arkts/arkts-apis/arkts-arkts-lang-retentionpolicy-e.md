@@ -4,6 +4,8 @@
 
 **起始版本：** 24
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export const enum RetentionPolicy--><!--Device-unnamed-export const enum RetentionPolicy-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
@@ -17,6 +19,8 @@ SOURCE = 'source'
 注解将在编译期被移除。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -33,6 +37,8 @@ BYTECODE = 'bytecode'
 注解将保留到编译产物中。
 
 **起始版本：** 24
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

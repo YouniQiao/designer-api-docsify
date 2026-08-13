@@ -14,7 +14,9 @@ function sppWriteAsync(clientSocket: number, data: ArrayBuffer): Promise<void>
 
 Asynchronous interface for writing data to the socket.
 
-**Since:** 18
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>--><!--Device-socket-function sppWriteAsync(clientSocket: int, data: ArrayBuffer): Promise<void>-End-->
 
@@ -37,7 +39,7 @@ Asynchronous interface for writing data to the socket.
 
 | Error Code ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 | 2901054 |
 | 2900099 |
 

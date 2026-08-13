@@ -6,6 +6,8 @@ Enumerates gesture competition results.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-unnamed-declare namespace GestureControl--><!--Device-unnamed-declare namespace GestureControl-End-->

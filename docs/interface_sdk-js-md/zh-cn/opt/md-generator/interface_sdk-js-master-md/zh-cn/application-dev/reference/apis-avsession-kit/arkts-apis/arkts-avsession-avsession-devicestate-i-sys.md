@@ -2,7 +2,9 @@
 
 投播设备的连接状态。
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-avSession-interface DeviceState--><!--Device-avSession-interface DeviceState-End-->
 
@@ -20,7 +22,9 @@ readonly deviceId: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceState-readonly deviceId: string--><!--Device-DeviceState-readonly deviceId: string-End-->
 
@@ -38,7 +42,9 @@ readonly deviceState: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceState-readonly deviceState: int--><!--Device-DeviceState-readonly deviceState: int-End-->
 
@@ -56,7 +62,9 @@ readonly radarErrorCode: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceState-readonly radarErrorCode: int--><!--Device-DeviceState-readonly radarErrorCode: int-End-->
 
@@ -74,7 +82,9 @@ readonly reasonCode: number
 
 **类型：** number
 
-**起始版本：** 20
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-DeviceState-readonly reasonCode: int--><!--Device-DeviceState-readonly reasonCode: int-End-->
 

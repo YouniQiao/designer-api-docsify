@@ -14,7 +14,7 @@ Calculates the hash value of a file. This API uses a promise to return the resul
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash](arkts-file-hash.md#hash)
+**Substitutes:** [hash](arkts-file-hash.md#@ohos.file.hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>--><!--Device-unnamed-declare function hash(path: string, algorithm: string): Promise<string>-End-->
 
@@ -48,7 +48,7 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [hash](arkts-file-hash.md#hash)
+**Substitutes:** [hash](arkts-file-hash.md#@ohos.file.hash)
 
 <!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void--><!--Device-unnamed-declare function hash(path: string, algorithm: string, callback: AsyncCallback<string>): void-End-->
 
@@ -60,5 +60,5 @@ Calculates the hash value of a file. This API uses an asynchronous callback to r
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file. |
 | algorithm | string | Yes | Algorithm used to calculate the hash value. The value can be **md5**, **sha1**, or **sha256**. **sha256** is recommended for security purposes. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | Yes | Callback used to return the hash value obtained. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the hash value obtained. The hash value is a hexadecimal string consisting of digits and uppercase letters. |
 

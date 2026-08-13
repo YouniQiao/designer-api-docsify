@@ -2,7 +2,9 @@
 
 Describes the audio and video recording profile.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
 
@@ -24,7 +26,9 @@ Whether to enable video encoding policy to quality stable encoding.
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-AVRecorderProfile-enableStableQualityMode?: boolean--><!--Device-AVRecorderProfile-enableStableQualityMode?: boolean-End-->
 

@@ -4,6 +4,8 @@ Provides the **TabContent** switching information.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-uiObserver-export interface TabContentInfo--><!--Device-uiObserver-export interface TabContentInfo-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ ID of the **Tabs** component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -46,6 +50,8 @@ Index of the **TabContent** component. The index is zero-based.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -60,11 +66,13 @@ Index of the **TabContent** component. The index is zero-based.
 lastIndex?: number
 ```
 
-Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](@ohos.arkui.UIContext:UIObserver#on(type: 'tabChange', callback:Callback&lt;observer.TabContentInfo&gt;)).
+Index of the previously focused **TabContent** component. The index is zero-based. This parameter is available only in the callback of [on('tabChange')](arkts-arkui-arkui-uicontext-uiobserver-c.md#on_navDestinationUpdate).
 
 **Type:** number
 
 **Since:** 22
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -86,6 +94,8 @@ Enumerates the **TabContent** component states.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -105,6 +115,8 @@ ID of the **TabContent** component.
 **Type:** string
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,6 +138,8 @@ Unique ID of the **TabContent** component.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -145,6 +159,8 @@ Unique ID of the **Tabs** component.
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

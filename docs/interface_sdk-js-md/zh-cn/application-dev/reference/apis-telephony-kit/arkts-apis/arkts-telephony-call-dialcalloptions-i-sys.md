@@ -2,9 +2,11 @@
 
 拨打电话的可选参数。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export interface DialCallOptions--><!--Device-call-export interface DialCallOptions-End-->
 
@@ -18,16 +20,15 @@
 accountId?: int
 ```
 
-帐户Id。
+帐户Id。 - 0：卡槽1。 - 1：卡槽2。
 
-- 0：卡槽1。  
-- 1：卡槽2。
+**类型：** int
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**起始版本：** 23
 
-**起始版本：** 9
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**废弃版本：** -1
 
 <!--Device-DialCallOptions-accountId?: int--><!--Device-DialCallOptions-accountId?: int-End-->
 
@@ -45,9 +46,11 @@ dialScene?: DialScene
 
 **类型：** [DialScene](arkts-telephony-call-dialscene-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DialCallOptions-dialScene?: DialScene--><!--Device-DialCallOptions-dialScene?: DialScene-End-->
 
@@ -65,9 +68,11 @@ dialType?: DialType
 
 **类型：** [DialType](arkts-telephony-call-dialtype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DialCallOptions-dialType?: DialType--><!--Device-DialCallOptions-dialType?: DialType-End-->
 
@@ -85,9 +90,11 @@ Indicates the extra call parameters.
 
 **类型：** Record&lt;string, Object&gt;
 
-**起始版本：** 14
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为14；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DialCallOptions-extraParams?: Record<string, Object>--><!--Device-DialCallOptions-extraParams?: Record<string, Object>-End-->
 
@@ -105,9 +112,11 @@ videoState?: VideoStateType
 
 **类型：** [VideoStateType](arkts-telephony-call-videostatetype-e-sys.md)
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-DialCallOptions-videoState?: VideoStateType--><!--Device-DialCallOptions-videoState?: VideoStateType-End-->
 
@@ -121,15 +130,15 @@ videoState?: VideoStateType
 xCallType?: XCallType
 ```
 
-XCALL类型。 
-
-**起始版本:** 26.0.0
+XCALL类型。 **起始版本:** 26.0.0
 
 **类型：** [XCallType](arkts-telephony-call-xcalltype-e-sys.md)
 
 **起始版本：** 26.0.0
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为26.0.0。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 <!--Device-DialCallOptions-xCallType?: XCallType--><!--Device-DialCallOptions-xCallType?: XCallType-End-->
 

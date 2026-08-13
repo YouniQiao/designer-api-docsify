@@ -1,10 +1,12 @@
 # ItemType
 
-ItemType. include CAMERA and THUMBNAIL
+Enumerates the types of the item clicked.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export declare enum ItemType--><!--Device-unnamed-export declare enum ItemType-End-->
 
@@ -16,13 +18,15 @@ ItemType. include CAMERA and THUMBNAIL
 THUMBNAIL = 0
 ```
 
-THUMBNAIL. photos or videos item
+Image or video (thumbnail).
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ItemType-THUMBNAIL = 0--><!--Device-ItemType-THUMBNAIL = 0-End-->
 
@@ -34,13 +38,15 @@ THUMBNAIL. photos or videos item
 CAMERA = 1
 ```
 
-CAMERA. camera item
+Camera item.
 
-**Since:** 26.0.0
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ItemType-CAMERA = 1--><!--Device-ItemType-CAMERA = 1-End-->
 

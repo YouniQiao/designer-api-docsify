@@ -1,18 +1,8 @@
 # Hyperlink
 
-The **Hyperlink** component implements a link from a location in the component to another location.
+The **Hyperlink** component implements a link from a location in the component to another location. > **NOTE** > > - This component must be used with the system browser.
 
-> **NOTE**
->
-> - This component must be used with the system browser.
-
-## Required Permissions
-
-If Internet access is required, you must apply for the **ohos.permission.INTERNET** permission. For details about how to apply for a permission, see [Declaring Permissions](docroot://security/AccessToken/declare-permissions.md).
-
-## Child Components
-
-This component can contain the [Image]{@link ./image} child component.
+## Required Permissions If Internet access is required, you must apply for the **ohos.permission.INTERNET** permission. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md). ###### Child Components This component can contain the Image child component.
 
 ## Hyperlink
 
@@ -25,6 +15,8 @@ Defines the constructor of Hyperlink.
 **Since:** 7
 
 **ArkTS mode:** ArkTS-Dyn only, since version 7.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

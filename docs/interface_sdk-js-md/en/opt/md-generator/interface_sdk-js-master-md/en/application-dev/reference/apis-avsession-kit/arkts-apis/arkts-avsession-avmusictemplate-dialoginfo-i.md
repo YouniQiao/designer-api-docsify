@@ -4,6 +4,8 @@ The definition of dialog information.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 <!--Device-avMusicTemplate-interface DialogInfo--><!--Device-avMusicTemplate-interface DialogInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -26,6 +28,8 @@ Buttons of the dialog.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogInfo-buttons?: DialogButtonInfo[]--><!--Device-DialogInfo-buttons?: DialogButtonInfo[]-End-->
@@ -43,6 +47,8 @@ Other message of the dialog.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -62,6 +68,8 @@ Unique id of the dialog.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogInfo-dialogId: string--><!--Device-DialogInfo-dialogId: string-End-->
@@ -80,6 +88,8 @@ Type of the dialog.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogInfo-dialogType: DialogType--><!--Device-DialogInfo-dialogType: DialogType-End-->
@@ -92,11 +102,13 @@ Type of the dialog.
 qrCodes?: QrCodeInfo[]
 ```
 
-QR code of the dialog.Once the QR code information is set,this pop-up will be recognized as a QR code pop-up and will display the QR code information with priority.A maximum of two can be set.
+QR code of the dialog. Once the QR code information is set, this pop-up will be recognized as a QR code pop-up and will display the QR code information with priority. A maximum of two can be set.
 
 **Type:** [QrCodeInfo](arkts-avsession-avmusictemplate-qrcodeinfo-i.md)[]
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -116,6 +128,8 @@ Text content of the dialog.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogInfo-text?: string--><!--Device-DialogInfo-text?: string-End-->
@@ -133,6 +147,8 @@ Title of the dialog.
 **Type:** string
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -1,15 +1,10 @@
 # @ohos.app.ability.dialogRequest
 
-dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo（用于绑定模态弹框）、获取RequestCallback（用于设置结果）。
+dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo（用于绑定模态弹框）、获取RequestCallback（用于设置结果）。 模态弹框是指一个系统弹框，该弹框会拦截弹框之下的页面的鼠标、键盘、触屏等事件。销毁该弹框后，才能对页面进行操作。 > **说明：** > > - 本模块接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则可以使用本模块的接口获取请求方的RequestInfo、RequestCallback并 > 返回请求结果。
 
-模态弹框是指一个系统弹框，该弹框会拦截弹框之下的页面的鼠标、键盘、触屏等事件。销毁该弹框后，才能对页面进行操作。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本模块接口可以在ServiceExtensionAbility下使用，如果ServiceExtensionAbility实现了模态弹框，则可以使用本模块的接口获取请求方的RequestInfo、RequestCallback并
-> 返回请求结果。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace dialogRequest--><!--Device-unnamed-declare namespace dialogRequest-End-->
 
@@ -21,8 +16,8 @@ dialogRequest模块用于处理模态弹框的能力，包括获取RequestInfo�
 
 | 名称 |
 | --- |
-| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getrequestcallback) |
-| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getrequestinfo) |
+| [getRequestCallback](arkts-ability-dialogrequest-getrequestcallback-f.md#getRequestCallback) |
+| [getRequestInfo](arkts-ability-dialogrequest-getrequestinfo-f.md#getRequestInfo) |
 
 ### 接口
 

@@ -6,6 +6,8 @@
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface MenuGridStyleOptions--><!--Device-unnamed-declare interface MenuGridStyleOptions-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,17 +18,7 @@
 count?: number
 ```
 
-栅格中元素的数量。
-
-默认值：3
-
-取值范围：
-
-当为上图下文形的栅格样式时，元素数量范围为[0, 6]。
-
-当为纯图标形的栅格样式时，元素数量范围[0, 4]。 
-
-未设置、异常值按照默认值处理。
+栅格中元素的数量。 默认值：3 取值范围： 当为上图下文形的栅格样式时，元素数量范围为[0, 6]。 当为纯图标形的栅格样式时，元素数量范围[0, 4]。 未设置、异常值按照默认值处理。
 
 **类型：** number
 
@@ -35,6 +27,8 @@ count?: number
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,17 +44,7 @@ count?: number
 horizontalSize?: number
 ```
 
-栅格中元素的水平尺寸，表示栅格内每行可显示的元素数量。
-
-默认值：3
-
-**说明：**
-
-当为上图下文形的栅格样式时，水平尺寸范围为[1, 3]，即栅格行数为[1, 2]。
-
-当为纯图标形的栅格样式时，水平尺寸范围为[1, 4]，即栅格行数为1。
-
-未设置、异常值按照默认值处理。
+栅格中元素的水平尺寸，表示栅格内每行可显示的元素数量。 默认值：3 **说明：** 当为上图下文形的栅格样式时，水平尺寸范围为[1, 3]，即栅格行数为[1, 2]。 当为纯图标形的栅格样式时，水平尺寸范围为[1, 4]，即栅格行数为1。 未设置、异常值按照默认值处理。
 
 **类型：** number
 
@@ -69,6 +53,8 @@ horizontalSize?: number
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -84,9 +70,7 @@ horizontalSize?: number
 position?: MenuGridPosition
 ```
 
-栅格在菜单中的位置。
-
-默认值：MenuGridPosition.TOP
+栅格在菜单中的位置。 默认值：MenuGridPosition.TOP
 
 **类型：** [MenuGridPosition](arkts-arkui-menugridposition-e.md)
 
@@ -95,6 +79,8 @@ position?: MenuGridPosition
 **起始版本：** 26.0.0
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

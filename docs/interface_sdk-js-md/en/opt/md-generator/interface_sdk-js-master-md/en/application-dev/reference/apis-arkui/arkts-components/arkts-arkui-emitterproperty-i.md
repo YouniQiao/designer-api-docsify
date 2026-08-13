@@ -4,6 +4,8 @@ Defines the emitter property.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-interface EmitterProperty--><!--Device-unnamed-interface EmitterProperty-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,6 +22,8 @@ the description of the annulus region. This parameter is valid only for emitter 
 
 **Since:** 20
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
@@ -34,14 +38,13 @@ the description of the annulus region. This parameter is valid only for emitter 
 emitRate?: number
 ```
 
-Emit rate, that is, the number of particles emitted per second.
-
-If no value is passed in, the current emit rate is retained. If a value less than 0 is passed in, the default value  
-**5** is used. The **emitRate** value can significantly impact performance when it exceeds 5000; you are advised to set it to be less than 5000.
+Emit rate, that is, the number of particles emitted per second. If no value is passed in, the current emit rate is retained. If a value less than 0 is passed in, the default value **5** is used. The **emitRate** value can significantly impact performance when it exceeds 5000; you are advised to set it to be less than 5000.
 
 **Type:** number
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -63,6 +66,8 @@ Index of the emitter based on the index array of the emitters in the initializat
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -77,15 +82,13 @@ Index of the emitter based on the index array of the emitters in the initializat
 position?: PositionT<number>
 ```
 
-Array of emitter positions. Only the number type is supported.
-
-If no value is passed in, the current emitter position is retained. Two valid values must be passed in; if either is an invalid value, **position** will not take effect.
-
-Value range of **x** and **y**: (-∞, +∞).
+Array of emitter positions. Only the number type is supported. If no value is passed in, the current emitter position is retained. Two valid values must be passed in; if either is an invalid value, **position** will not take effect. Value range of **x** and **y**: (-∞, +∞).
 
 **Type:** [PositionT](arkts-arkui-positiont-t.md)&lt;number&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -101,13 +104,13 @@ Value range of **x** and **y**: (-∞, +∞).
 size?: SizeT<number>
 ```
 
-Size of the emit window. Only the number type is supported.
-
-If no value is passed in, the current emitter window size is retained. Two valid values greater than 0 must be passed in; if either is an invalid value, **size** will not take effect.
+Size of the emit window. Only the number type is supported. If no value is passed in, the current emitter window size is retained. Two valid values greater than 0 must be passed in; if either is an invalid value, **size** will not take effect.
 
 **Type:** [SizeT](arkts-arkui-sizet-t.md)&lt;number&gt;
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,7 +2,9 @@
 
 Provides methods to operate or manage Bluetooth.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -22,28 +24,33 @@ import { ble } from '@kit.ConnectivityKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [createBleScanner](arkts-connectivity-ble-createblescanner-f.md#createblescanner) |
-| [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice) |
-| [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#creategattclientdevice-1) |
-| [createGattServer](arkts-connectivity-ble-creategattserver-f.md#creategattserver) |
-| [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableadvertising) |
-| [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableadvertising-1) |
-| [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableadvertising) |
-| [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableadvertising-1) |
-| [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md#getconnectedbledevices) |
-| [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md#getconnectedbledevices-1) |
-| [off](arkts-connectivity-ble-off-f.md#off) |
-| [off](arkts-connectivity-ble-off-f.md#off-1) |
-| [on](arkts-connectivity-ble-on-f.md#on) |
-| [on](arkts-connectivity-ble-on-f.md#on-1) |
-| [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising) |
-| [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising-1) |
-| [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising-2) |
-| [startBLEScan](arkts-connectivity-ble-startblescan-f.md#startblescan) |
-| [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopadvertising) |
-| [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopadvertising-1) |
-| [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopadvertising-2) |
-| [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md#stopblescan) |
+| [createBleScanner](arkts-connectivity-ble-createblescanner-f.md#createBleScanner) |
+| [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) |
+| [createGattClientDevice](arkts-connectivity-ble-creategattclientdevice-f.md#createGattClientDevice) |
+| [createGattServer](arkts-connectivity-ble-creategattserver-f.md#createGattServer) |
+| [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableAdvertising) |
+| [disableAdvertising](arkts-connectivity-ble-disableadvertising-f.md#disableAdvertising) |
+| [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableAdvertising) |
+| [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableAdvertising) |
+| [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md#getConnectedBLEDevices) |
+| [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md#getConnectedBLEDevices) |
+| [offAdvertisingStateChange](arkts-connectivity-ble-offadvertisingstatechange-f.md#offAdvertisingStateChange) |
+| [offBLEDeviceFind](arkts-connectivity-ble-offbledevicefind-f.md#offBLEDeviceFind) |
+| [off_BLEDeviceFind](arkts-connectivity-ble-offbledevicefind-f.md#off_BLEDeviceFind) |
+| [off_advertisingStateChange](arkts-connectivity-ble-offadvertisingstatechange-f.md) |
+| [onAdvertisingStateChange](arkts-connectivity-ble-onadvertisingstatechange-f.md#onAdvertisingStateChange) |
+| [onBLEDeviceFind](arkts-connectivity-ble-onbledevicefind-f.md#onBLEDeviceFind) |
+| [on_BLEDeviceFind](arkts-connectivity-ble-onbledevicefind-f.md#on_BLEDeviceFind) |
+| [on_advertisingStateChange](arkts-connectivity-ble-onadvertisingstatechange-f.md) |
+| [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startAdvertising) |
+| [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startAdvertising) |
+| [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startAdvertising) |
+| [startBLEScan](arkts-connectivity-ble-startblescan-f.md#startBLEScan) |
+| [startBLEScan](arkts-connectivity-ble-startblescan-f.md#startBLEScan) |
+| [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) |
+| [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) |
+| [stopAdvertising](arkts-connectivity-ble-stopadvertising-f.md#stopAdvertising) |
+| [stopBLEScan](arkts-connectivity-ble-stopblescan-f.md#stopBLEScan) |
 
 ### Interfaces
 

@@ -2,9 +2,11 @@
 
 Phy type used during scan.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-ble-enum PhyType--><!--Device-ble-enum PhyType-End-->
 
@@ -18,13 +20,15 @@ PHY_LE_1M = 1
 
 Use 1M phy for scanning.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhyType-PHY_LE_1M = 1--><!--Device-PhyType-PHY_LE_1M = 1-End-->
 
@@ -38,13 +42,15 @@ PHY_LE_ALL_SUPPORTED = 255
 
 Use all supported Phys for scanning.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PhyType-PHY_LE_ALL_SUPPORTED = 255--><!--Device-PhyType-PHY_LE_ALL_SUPPORTED = 255-End-->
 

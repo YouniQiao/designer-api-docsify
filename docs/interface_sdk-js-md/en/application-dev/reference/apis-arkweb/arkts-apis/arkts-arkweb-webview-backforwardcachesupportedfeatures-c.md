@@ -2,9 +2,11 @@
 
 This class is used to enable back forward cache supported features.
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-webview-class BackForwardCacheSupportedFeatures--><!--Device-webview-class BackForwardCacheSupportedFeatures-End-->
 
@@ -22,9 +24,11 @@ import { webview } from '@kit.ArkWeb';
 constructor()
 ```
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-BackForwardCacheSupportedFeatures-constructor()--><!--Device-BackForwardCacheSupportedFeatures-constructor()-End-->
 
@@ -36,13 +40,15 @@ constructor()
 mediaTakeOver: boolean
 ```
 
-Whether cache the pages that use media take over.Default is false;
+Whether cache the pages that use media take over. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; When the value is set to **true**, you need to maintain the lifecycle of system components created for video elements to avoid resource leak. &lt;/p&gt; Default is false;
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-BackForwardCacheSupportedFeatures-mediaTakeOver: boolean--><!--Device-BackForwardCacheSupportedFeatures-mediaTakeOver: boolean-End-->
 
@@ -54,13 +60,15 @@ Whether cache the pages that use media take over.Default is false;
 nativeEmbed: boolean
 ```
 
-Whether cache the pages that use native embed.Default is false;
+Whether cache the pages that use native embed. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; When the value is set to **true**, you need to maintain the lifecycle of system components created for the same-layer rendering elements to avoid resource leak. &lt;/p&gt; Default is false;
 
 **Type:** boolean
 
-**Since:** 23
+**Since:** 12
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-BackForwardCacheSupportedFeatures-nativeEmbed: boolean--><!--Device-BackForwardCacheSupportedFeatures-nativeEmbed: boolean-End-->
 

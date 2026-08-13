@@ -1,11 +1,12 @@
 # CanvasPattern
 
-一个Object对象，使用  
-[createPattern](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md#createpattern)方法创建，通过指定图像和重复方式创建图片填充的模板。
+一个Object对象，使用 [createPattern](../../../reference/apis-arkui/arkui-ts/ts-canvasrenderingcontext2d.md#createpattern) 方法创建，通过指定图像和重复方式创建图片填充的模板。
 
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-declare interface CanvasPattern--><!--Device-unnamed-declare interface CanvasPattern-End-->
 
@@ -22,6 +23,8 @@ setTransform(transform?: Matrix2D): void
 **起始版本：** 8
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为8。
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

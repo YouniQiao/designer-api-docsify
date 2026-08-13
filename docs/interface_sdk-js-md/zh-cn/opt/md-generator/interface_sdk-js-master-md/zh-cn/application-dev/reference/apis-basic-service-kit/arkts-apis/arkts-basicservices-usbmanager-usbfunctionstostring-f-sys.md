@@ -12,7 +12,7 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 **废弃版本：** 12
 
-**替代接口：** [getStringFromFunctions](usbManager.getStringFromFunctions(funcs:)
+**替代接口：** [getStringFromFunctions](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md#getStringFromFunctions（系统接口）)(funcs: FunctionType)
 
 <!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string--><!--Device-usbManager-function usbFunctionsToString(funcs: FunctionType): string-End-->
 
@@ -36,4 +36,4 @@ function usbFunctionsToString(funcs: FunctionType): string
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |

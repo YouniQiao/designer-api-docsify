@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-unnamed-export interface FileFilter--><!--Device-unnamed-export interface FileFilter-End-->
 
 **系统能力：** SystemCapability.FileManagement.File.FileIO
@@ -14,11 +16,11 @@
 filter(name: string): boolean
 ```
 
-过滤函数，判断指定的文件名是否应该包含在文件列表中。
-
-注意：此函数被频繁调用。尽量避免文件I/O、网络请求等耗时操作。
+过滤函数，判断指定的文件名是否应该包含在文件列表中。 注意：此函数被频繁调用。尽量避免文件I/O、网络请求等耗时操作。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

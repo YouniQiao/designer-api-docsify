@@ -6,11 +6,13 @@
 function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLevel): void
 ```
 
-查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应根据错误码判断具体原因并采取相应处理。
+查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应 根据错误码判断具体原因并采取相应处理。
 
-**起始版本：** 9
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为9；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.ACCESS_BIOMETRIC
 
@@ -31,13 +33,13 @@ function getAvailableStatus(authType: UserAuthType, authTrustLevel: AuthTrustLev
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. |
-| [12500013](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
-| [12500010](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
-| [12500006](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) | Permission denied. |
-| [12500005](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
-| [12500002](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-user-authentication-kit/errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. |
+| [12500013](../errorcode-useriam.md#12500013-密码过期) | Operation failed because of PIN expired.<br>**适用版本：** 12+ |
+| [12500010](../errorcode-useriam.md#12500010-该类型的凭据没有录入) | The type of credential has not been enrolled. |
+| [12500006](../errorcode-useriam.md#12500006-认证信任等级不支持) | The authentication trust level is not supported. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
+| [12500005](../errorcode-useriam.md#12500005-认证类型不支持) | The authentication type is not supported. |
+| [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
 ## 示例
 

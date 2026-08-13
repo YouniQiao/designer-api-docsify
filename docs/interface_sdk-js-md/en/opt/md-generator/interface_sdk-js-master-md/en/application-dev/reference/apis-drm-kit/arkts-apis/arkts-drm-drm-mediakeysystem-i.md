@@ -1,9 +1,10 @@
 # MediaKeySystem
 
-MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use   
-[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) to create a MediaKeySystem instance.
+MediaKeySystem manages MediaKeySystem instances, handles device certificate (DRM certificate) requests and processing, creates sessions, manages offline media keys, obtains DRM metrics, and obtain device configurations. Before calling any API in MediaKeySystem, you must use [createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createMediaKeySystem) to create a MediaKeySystem instance.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-drm-interface MediaKeySystem--><!--Device-drm-interface MediaKeySystem-End-->
 
@@ -23,7 +24,9 @@ clearOfflineMediaKeys(mediaKeyId: Uint8Array): void
 
 Clears offline media keys with the specified IDs.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -41,9 +44,9 @@ Clears offline media keys with the specified IDs.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## createMediaKeySession
 
@@ -54,6 +57,8 @@ createMediaKeySession(level: ContentProtectionLevel): MediaKeySession
 Creates a MediaKeySession instance with the specified content protection level.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -77,10 +82,47 @@ Creates a MediaKeySession instance with the specified content protection level.
 
 | Error Code ID |
 | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+
+## createMediaKeySession
+
+```TypeScript
+createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined
+```
+
+Create a MediaKeySession instance with level.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(level: ContentProtectionLevel): MediaKeySession | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| level | [ContentProtectionLevel](arkts-drm-drm-contentprotectionlevel-e.md) | Yes |
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## createMediaKeySession
 
@@ -91,6 +133,8 @@ createMediaKeySession(): MediaKeySession
 Creates a MediaKeySession instance with the default content protection level.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -108,9 +152,39 @@ Creates a MediaKeySession instance with the default content protection level.
 
 | Error Code ID |
 | --- |
-| [24700104](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+
+## createMediaKeySession
+
+```TypeScript
+createMediaKeySession(): MediaKeySession | undefined
+```
+
+Create a MediaKeySession instance.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined--><!--Device-MediaKeySystem-createMediaKeySession(): MediaKeySession | undefined-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Return value:**
+
+| [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) |
+| --- |
+| [MediaKeySession](arkts-drm-drm-mediakeysession-i.md) |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [24700104](../errorcode-drm.md#24700104-too-many-mediakeysession-instances) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## destroy
 
@@ -120,7 +194,9 @@ destroy(): void
 
 Destroys this MediaKeySystem instance.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -132,8 +208,8 @@ Destroys this MediaKeySystem instance.
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## generateKeySystemRequest
 
@@ -143,7 +219,9 @@ generateKeySystemRequest(): Promise<ProvisionRequest>
 
 Generates a request to obtain a device certificate for the MediaKeySystem. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -161,8 +239,8 @@ Generates a request to obtain a device certificate for the MediaKeySystem. This 
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getCertificateStatus
 
@@ -172,7 +250,9 @@ getCertificateStatus(): CertificateStatus
 
 Obtains the status of the device certificate.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -190,8 +270,8 @@ Obtains the status of the device certificate.
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getConfigurationByteArray
 
@@ -201,7 +281,9 @@ getConfigurationByteArray(configName: string): Uint8Array
 
 Obtains the value of a configuration item in the form of a byte array.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -225,9 +307,9 @@ Obtains the value of a configuration item in the form of a byte array.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getConfigurationString
 
@@ -237,7 +319,9 @@ getConfigurationString(configName: string): string
 
 Obtains the value of a configuration item in the form of a string.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -261,9 +345,9 @@ Obtains the value of a configuration item in the form of a string.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getMaxContentProtectionLevel
 
@@ -273,7 +357,9 @@ getMaxContentProtectionLevel(): ContentProtectionLevel
 
 Obtains the maximum content protection level supported by the current DRM solution.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -291,8 +377,8 @@ Obtains the maximum content protection level supported by the current DRM soluti
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getOfflineMediaKeyIds
 
@@ -302,7 +388,9 @@ getOfflineMediaKeyIds(): Uint8Array[]
 
 Obtains the IDs of offline media keys.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -320,8 +408,8 @@ Obtains the IDs of offline media keys.
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getOfflineMediaKeyStatus
 
@@ -331,7 +419,9 @@ getOfflineMediaKeyStatus(mediaKeyId: Uint8Array): OfflineMediaKeyStatus
 
 Obtains the status of offline media keys with the specified IDs.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -355,9 +445,9 @@ Obtains the status of offline media keys with the specified IDs.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## getStatistics
 
@@ -367,7 +457,9 @@ getStatistics(): StatisticKeyValue[]
 
 Obtains the DRM metrics, including the number of active sessions, plugin version details, the maximum decryption time for each session (over three attempts), the total count of decryption operations, and the number of decryption failures.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -385,10 +477,38 @@ Obtains the DRM metrics, including the number of active sessions, plugin version
 
 | Error Code ID |
 | --- |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
-## off('keySystemRequired')
+## offKeySystemRequired
+
+```TypeScript
+offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void
+```
+
+Unregister keySystemRequired events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-offKeySystemRequired(callback?: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | No |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+
+## off_keySystemRequired
 
 ```TypeScript
 off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
@@ -397,6 +517,8 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 Unsubscribes from events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -415,10 +537,38 @@ Unsubscribes from events indicating that the application requests a device certi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
-## on('keySystemRequired')
+## onKeySystemRequired
+
+```TypeScript
+onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void
+```
+
+Register keySystemRequired events.
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+<!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void--><!--Device-MediaKeySystem-onKeySystemRequired(callback: (eventInfo: EventInfo) => void): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+**Parameters:**
+
+| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | Mandatory |
+| --- | --- | --- |
+| callback | (eventInfo: EventInfo) = & gt; void | Yes |
+
+**Error codes:**
+
+| Error Code ID |
+| --- |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
+
+## on_keySystemRequired
 
 ```TypeScript
 on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
@@ -427,6 +577,8 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 Subscribes to events indicating that the application requests a device certificate. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -445,8 +597,8 @@ Subscribes to events indicating that the application requests a device certifica
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## processKeySystemResponse
 
@@ -456,7 +608,9 @@ processKeySystemResponse(response: Uint8Array): Promise<void>
 
 Processes the response to a previously generated device certificate request. This API uses a promise to return the result.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -480,9 +634,9 @@ Processes the response to a previously generated device certificate request. Thi
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## setConfigurationByteArray
 
@@ -492,7 +646,9 @@ setConfigurationByteArray(configName: string, value: Uint8Array): void
 
 Sets a configuration item in the form of a byte array.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -511,9 +667,9 @@ Sets a configuration item in the form of a byte array.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |
 
 ## setConfigurationString
 
@@ -523,7 +679,9 @@ setConfigurationString(configName: string, value: string): void
 
 Sets a configuration item in the form of a string.
 
-**Since:** 11
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
@@ -542,6 +700,6 @@ Sets a configuration item in the form of a string.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [24700201](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700201-service-exception) |
-| [24700101](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-drm-kit/errorcode-drm.md#24700101-unknown-error) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [24700201](../errorcode-drm.md#24700201-service-exception) |
+| [24700101](../errorcode-drm.md#24700101-unknown-error) |

@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 <!--Device-osAccount-interface OsAccountSubProfileEventData--><!--Device-osAccount-interface OsAccountSubProfileEventData-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -22,6 +24,8 @@ event: OsAccountSubProfileEvent
 
 **起始版本：** 26.0.0
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-OsAccountSubProfileEventData-event: OsAccountSubProfileEvent--><!--Device-OsAccountSubProfileEventData-event: OsAccountSubProfileEvent-End-->
@@ -36,11 +40,13 @@ event: OsAccountSubProfileEvent
 osAccountLocalId: number
 ```
 
-系统账号本地ID。取值范围为全体整数。
+系统账号本地ID。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -56,11 +62,13 @@ osAccountLocalId: number
 previousSubProfileId?: number
 ```
 
-上一个系统账号子Profile标识符。取值范围为全体整数。
+上一个系统账号子Profile标识符。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -76,11 +84,13 @@ previousSubProfileId?: number
 subProfileId: number
 ```
 
-系统账号子profile标识。取值范围为全体整数。
+系统账号子profile标识。 取值范围为全体整数。
 
 **类型：** number
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -1,16 +1,14 @@
 # ChipV2PrefixSymbolIcon
 
-ChipV2PrefixSymbolIcon定义前缀Symbol图标类。
-
-继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md#ChipV2SymbolIcon)。
+ChipV2PrefixSymbolIcon定义前缀Symbol图标类。 继承自[ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md#ChipV2SymbolIcon)。
 
 **继承/实现关系：** ChipV2PrefixSymbolIcon extends [ChipV2SymbolIcon](arkts-arkui-arkui-advanced-chipv2-chipv2symbolicon-c.md#ChipV2SymbolIcon)
 
 **起始版本：** 26.0.0
 
-**装饰器类型：** @ObservedV2
+**废弃版本：** -1
 
-<!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon extends ChipV2SymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon extends ChipV2SymbolIcon-End-->
+<!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon--><!--Device-unnamed-export declare class ChipV2PrefixSymbolIcon-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +21,8 @@ constructor(config: ChipV2PrefixSymbolIconConfig)
 ChipV2PrefixSymbolIcon的构造函数。
 
 **起始版本：** 26.0.0
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

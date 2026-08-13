@@ -11,6 +11,8 @@ function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 
 **起始版本：** 23
 
+**废弃版本：** -1
+
 **需要权限：** ohos.permission.ACCESS_SENSING_WITH_ULTRASOUND
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -32,12 +34,12 @@ function onDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 
 | 错误码ID |
 | --- |
-| [801](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) |
-| [35100004](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100004-无效参数) |
-| [35100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100002-订阅失败) |
-| [35100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100001-服务异常) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) |
+| [35100004](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100004-无效参数) |
+| [35100002](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100002-订阅失败) |
+| [35100001](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100001-服务异常) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
 
 ## 示例
 

@@ -2,7 +2,9 @@
 
 Enumerates the first day of a week. The value ranges from Monday to Sunday.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-i18n-export enum WeekDay--><!--Device-i18n-export enum WeekDay-End-->
 
@@ -16,9 +18,11 @@ MON = 1
 
 Monday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-MON = 1--><!--Device-WeekDay-MON = 1-End-->
 
@@ -32,9 +36,11 @@ TUE = 2
 
 Tuesday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
 
@@ -48,9 +54,11 @@ WED = 3
 
 Wednesday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-WED = 3--><!--Device-WeekDay-WED = 3-End-->
 
@@ -64,9 +72,11 @@ THU = 4
 
 Thursday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
 
@@ -80,9 +90,11 @@ FRI = 5
 
 Friday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-FRI = 5--><!--Device-WeekDay-FRI = 5-End-->
 
@@ -96,9 +108,11 @@ SAT = 6
 
 Saturday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-SAT = 6--><!--Device-WeekDay-SAT = 6-End-->
 
@@ -112,9 +126,11 @@ SUN = 7
 
 Sunday.
 
-**Since:** 18
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-WeekDay-SUN = 7--><!--Device-WeekDay-SUN = 7-End-->
 

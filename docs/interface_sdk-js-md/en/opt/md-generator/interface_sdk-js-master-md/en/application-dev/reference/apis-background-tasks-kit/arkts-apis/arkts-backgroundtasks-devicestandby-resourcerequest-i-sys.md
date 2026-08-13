@@ -2,7 +2,9 @@
 
 The request of standby resources.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-deviceStandby-export interface ResourceRequest--><!--Device-deviceStandby-export interface ResourceRequest-End-->
 
@@ -22,11 +24,13 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 duration: number
 ```
 
-The exemption duration.&lt;br&gt;Unit:s
+The exemption duration. &lt;br&gt;Unit:s
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceRequest-duration: int--><!--Device-ResourceRequest-duration: int-End-->
 
@@ -44,7 +48,9 @@ The application name.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceRequest-name: string--><!--Device-ResourceRequest-name: string-End-->
 
@@ -62,7 +68,9 @@ The reason for the request.
 
 **Type:** string
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceRequest-reason: string--><!--Device-ResourceRequest-reason: string-End-->
 
@@ -80,7 +88,9 @@ The set of resource types that an application requests.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceRequest-resourceTypes: int--><!--Device-ResourceRequest-resourceTypes: int-End-->
 
@@ -98,7 +108,9 @@ The application uid.
 
 **Type:** number
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceRequest-uid: int--><!--Device-ResourceRequest-uid: int-End-->
 

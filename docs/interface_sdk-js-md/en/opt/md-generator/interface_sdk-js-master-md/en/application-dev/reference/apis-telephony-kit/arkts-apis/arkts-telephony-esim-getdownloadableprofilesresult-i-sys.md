@@ -2,7 +2,9 @@
 
 Result of downloadable Profile list.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-eSIM-export interface GetDownloadableProfilesResult--><!--Device-eSIM-export interface GetDownloadableProfilesResult-End-->
 
@@ -26,7 +28,9 @@ Gets the downloadable Profiles with filled-in metadata.
 
 **Type:** Array&lt;[DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md)&gt;
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfilesResult-downloadableProfiles: Array<DownloadableProfile>--><!--Device-GetDownloadableProfilesResult-downloadableProfiles: Array<DownloadableProfile>-End-->
 
@@ -44,7 +48,9 @@ Gets the result of the operation.
 
 **Type:** ResultCode
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-GetDownloadableProfilesResult-responseResult: ResultCode--><!--Device-GetDownloadableProfilesResult-responseResult: ResultCode-End-->
 

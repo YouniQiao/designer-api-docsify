@@ -14,9 +14,11 @@ function attachId(uri: string, id: double): string
 
 Attaches an ID to the end of a given URI.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-dataUriUtils-function attachId(uri: string, id: double): string--><!--Device-dataUriUtils-function attachId(uri: string, id: double): string-End-->
 
@@ -27,7 +29,7 @@ Attaches an ID to the end of a given URI.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | Target URI object. |
-| id | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | ID to be attached. |
+| id | double | Yes | ID to be attached. |
 
 **Return value:**
 
@@ -39,7 +41,7 @@ Attaches an ID to the end of a given URI.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## Examples
 

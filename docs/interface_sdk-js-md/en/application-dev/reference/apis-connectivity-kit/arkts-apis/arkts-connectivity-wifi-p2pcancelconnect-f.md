@@ -20,7 +20,7 @@ Canceling a P2P connection.
 
 **Deprecated since:** 9
 
-**Substitutes:** [p2pCancelConnect](ohos.wifiManager/wifiManager.p2pCancelConnect)
+**Substitutes:** [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pCancelConnect)
 
 **Required permissions:** ohos.permission.GET_WIFI_INFO
 

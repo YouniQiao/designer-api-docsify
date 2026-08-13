@@ -2,7 +2,9 @@
 
 Describes the fields of notification intelligent unification information.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface UnifiedGroupInfo--><!--Device-unnamed-export interface UnifiedGroupInfo-End-->
 
@@ -20,7 +22,9 @@ Unified group summary.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-content?: string--><!--Device-UnifiedGroupInfo-content?: string-End-->
 
@@ -31,16 +35,18 @@ Unified group summary.
 ## extraInfo
 
 ```TypeScript
-extraInfo?: { [key: string]: any }
+extraInfo?: Record<string, RecordData>
 ```
 
 Other unification information.
 
-**Type:** { [key: string]: any }
+**Type:** [Record](../../apis-na/arkts-apis/arkts-na-record-t.md)&lt;string, [RecordData](../../apis-arkdata/arkts-apis/arkts-arkdata-preferences-recorddata-t.md)&gt;
 
-**Since:** 12
+**Since:** 23
 
-<!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }--><!--Device-UnifiedGroupInfo-extraInfo?: { [key: string]: any }-End-->
+**Deprecated since:** -1
+
+<!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>--><!--Device-UnifiedGroupInfo-extraInfo?: Record<string, RecordData>-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -56,7 +62,9 @@ Unified group ID.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-key?: string--><!--Device-UnifiedGroupInfo-key?: string-End-->
 
@@ -74,7 +82,9 @@ Name of a unification scene.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-sceneName?: string--><!--Device-UnifiedGroupInfo-sceneName?: string-End-->
 
@@ -92,7 +102,9 @@ Unified group title.
 
 **Type:** string
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-UnifiedGroupInfo-title?: string--><!--Device-UnifiedGroupInfo-title?: string-End-->
 

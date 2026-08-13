@@ -2,7 +2,9 @@
 
 Defines the device icon information filter options.
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions--><!--Device-distributedDeviceManager-interface DeviceIconInfoFilterOptions-End-->
 
@@ -26,7 +28,9 @@ Image type. This parameter has a fixed value of **ID**, indicating the product's
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-imageType: string--><!--Device-DeviceIconInfoFilterOptions-imageType: string-End-->
 
@@ -44,7 +48,9 @@ Internal product model. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-internalModel?: string--><!--Device-DeviceIconInfoFilterOptions-internalModel?: string-End-->
 
@@ -62,7 +68,9 @@ Product ID.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-productId: string--><!--Device-DeviceIconInfoFilterOptions-productId: string-End-->
 
@@ -76,14 +84,13 @@ Product ID.
 specName: string
 ```
 
-Image specification name. Value:
-
-- **lg**: large image (size: 1016064 pixels)  
-- **sm**: small image (size: 65536 pixels)
+Image specification name. Value: - **lg**: large image (size: 1016064 pixels) - **sm**: small image (size: 65536 pixels)
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-specName: string--><!--Device-DeviceIconInfoFilterOptions-specName: string-End-->
 
@@ -101,7 +108,9 @@ Sub-product ID. This parameter is left unspecified by default.
 
 **Type:** string
 
-**Since:** 18
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-DeviceIconInfoFilterOptions-subProductId?: string--><!--Device-DeviceIconInfoFilterOptions-subProductId?: string-End-->
 

@@ -6,6 +6,8 @@ Enumerates the types of attendees invited to a conference event.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 <!--Device-calendarManager-export enum AttendeeType--><!--Device-calendarManager-export enum AttendeeType-End-->
 
 **System capability:** SystemCapability.Applications.CalendarData
@@ -21,6 +23,8 @@ Required attendee.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -40,6 +44,8 @@ Optional attendee.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AttendeeType-OPTIONAL = 2--><!--Device-AttendeeType-OPTIONAL = 2-End-->
@@ -57,6 +63,8 @@ Resources (such as TVs or projectors) used in a conference.
 **Since:** 18
 
 **ArkTS mode:** ArkTS-Dyn only, since version 18.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

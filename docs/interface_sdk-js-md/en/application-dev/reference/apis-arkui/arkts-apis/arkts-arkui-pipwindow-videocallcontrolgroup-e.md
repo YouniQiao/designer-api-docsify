@@ -1,11 +1,12 @@
 # VideoCallControlGroup
 
-Enumerates the video call component groups. They are used only when  
-[PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_CALL**.
+Enumerates the video call component groups. They are used only when [PiPTemplateType](arkts-arkui-pipwindow-piptemplatetype-e.md#PiPTemplateType) is set to **VIDEO_CALL**.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-PiPWindow-enum VideoCallControlGroup--><!--Device-PiPWindow-enum VideoCallControlGroup-End-->
 
@@ -19,11 +20,13 @@ MICROPHONE_SWITCH = 201
 
 Microphone on/off component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoCallControlGroup-MICROPHONE_SWITCH = 201--><!--Device-VideoCallControlGroup-MICROPHONE_SWITCH = 201-End-->
 
@@ -37,11 +40,13 @@ HANG_UP_BUTTON = 202
 
 Hang-up component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoCallControlGroup-HANG_UP_BUTTON = 202--><!--Device-VideoCallControlGroup-HANG_UP_BUTTON = 202-End-->
 
@@ -55,11 +60,13 @@ CAMERA_SWITCH = 203
 
 Camera on/off component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoCallControlGroup-CAMERA_SWITCH = 203--><!--Device-VideoCallControlGroup-CAMERA_SWITCH = 203-End-->
 
@@ -73,11 +80,13 @@ MUTE_SWITCH = 204
 
 Mute/Unmute component group.
 
-**Since:** 12
+**Since:** 26.0.0
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-VideoCallControlGroup-MUTE_SWITCH = 204--><!--Device-VideoCallControlGroup-MUTE_SWITCH = 204-End-->
 

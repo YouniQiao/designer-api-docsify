@@ -9,18 +9,20 @@ import { curves } from '@kit.ArkUI';
 ## initCurve
 
 ```TypeScript
-export function initCurve(curve?: Curve): ICurve
+function initCurve(curve?: Curve): ICurve
 ```
 
-Implements initialization for the interpolation curve,which is used to create an interpolation curve based on the input parameter.
+Implements initialization for the interpolation curve, which is used to create an interpolation curve based on the input parameter.
 
-**Since:** 23
+**Since:** 9
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 9.
 
-**Model restriction:** This API can be used only in the stage model.
+**Deprecated since:** -1
 
-<!--Device-curves-export function initCurve(curve?: Curve): ICurve--><!--Device-curves-export function initCurve(curve?: Curve): ICurve-End-->
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-curves-function initCurve(curve?: Curve): ICurve--><!--Device-curves-function initCurve(curve?: Curve): ICurve-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +30,11 @@ Implements initialization for the interpolation curve,which is used to create an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | Curve | No | Curve type.&lt;br&gt;Default value: **Curve.Linear**. |
+| curve | Curve | No | Curve type.&lt;br&gt;Default value: **Curve.Linear |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ICurve |  |
+| ICurve | Interpolation curve. |
 

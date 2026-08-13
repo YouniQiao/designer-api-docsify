@@ -1,15 +1,12 @@
 # LauncherAbilityResourceInfo (System API)
 
-The module provides resource information of the entry ability of an application, such as the icon and label. The information can be obtained by calling  
-[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo).
+The module provides resource information of the entry ability of an application, such as the icon and label. The information can be obtained by calling [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md#getLauncherAbilityResourceInfo) . > **NOTE：**> > The APIs provided by this module are system APIs.
 
-> **NOTE：**
-> 
-> The APIs provided by this module are system APIs.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-unnamed-export interface LauncherAbilityResourceInfo--><!--Device-unnamed-export interface LauncherAbilityResourceInfo-End-->
 
@@ -27,9 +24,11 @@ Name of the entry ability.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LauncherAbilityResourceInfo-readonly abilityName: string--><!--Device-LauncherAbilityResourceInfo-readonly abilityName: string-End-->
 
@@ -45,11 +44,13 @@ readonly appIndex: int
 
 Index of an application clone.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LauncherAbilityResourceInfo-readonly appIndex: int--><!--Device-LauncherAbilityResourceInfo-readonly appIndex: int-End-->
 
@@ -67,9 +68,11 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LauncherAbilityResourceInfo-readonly bundleName: string--><!--Device-LauncherAbilityResourceInfo-readonly bundleName: string-End-->
 
@@ -80,18 +83,20 @@ Bundle name of the application.
 ## drawableDescriptor
 
 ```TypeScript
-readonly drawableDescriptor: DrawableDescriptor
+readonly drawableDescriptor: DrawableDescriptor | null
 ```
 
-**drawableDescriptor** object of the application icon.
+Indicates the drawable descriptor of this ability icon
 
-**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md)
+**Type:** [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| null
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-<!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor--><!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor-End-->
+**Deprecated since:** -1
+
+<!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null--><!--Device-LauncherAbilityResourceInfo-readonly drawableDescriptor: DrawableDescriptor | null-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -107,9 +112,11 @@ Application icon, which is encoded using Base64.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LauncherAbilityResourceInfo-readonly icon: string--><!--Device-LauncherAbilityResourceInfo-readonly icon: string-End-->
 
@@ -127,9 +134,11 @@ Application label.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LauncherAbilityResourceInfo-readonly label: string--><!--Device-LauncherAbilityResourceInfo-readonly label: string-End-->
 
@@ -147,9 +156,11 @@ Module name of the application.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-LauncherAbilityResourceInfo-readonly moduleName: string--><!--Device-LauncherAbilityResourceInfo-readonly moduleName: string-End-->
 

@@ -2,9 +2,11 @@
 
 段落信息。
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-onScreen-export interface Paragraph--><!--Device-onScreen-export interface Paragraph-End-->
 
@@ -20,11 +22,13 @@ chapterId?: int
 
 段落对应的chapter ID，每个子章节的标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**类型：** int
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-chapterId?: int--><!--Device-Paragraph-chapterId?: int-End-->
 
@@ -40,11 +44,13 @@ hookId?: long
 
 段落对应的hook ID，每个主要段落的标识。
 
-**类型：** ArkTS-Dyn: number  <br>ArkTS-Sta：long
+**类型：** long
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-hookId?: long--><!--Device-Paragraph-hookId?: long-End-->
 
@@ -62,9 +68,11 @@ text?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-text?: string--><!--Device-Paragraph-text?: string-End-->
 
@@ -82,9 +90,11 @@ title?: string
 
 **类型：** string
 
-**起始版本：** 20
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为20；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-Paragraph-title?: string--><!--Device-Paragraph-title?: string-End-->
 

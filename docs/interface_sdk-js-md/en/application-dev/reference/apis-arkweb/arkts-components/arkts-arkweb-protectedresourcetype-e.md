@@ -1,10 +1,12 @@
 # ProtectedResourceType
 
-Defines the accessible resource type, related to [onPermissionRequest](onPermissionRequest) method.
+Defines the accessible resource type, related to onPermissionRequest method.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare enum ProtectedResourceType--><!--Device-unnamed-declare enum ProtectedResourceType-End-->
 
@@ -16,13 +18,13 @@ Defines the accessible resource type, related to [onPermissionRequest](onPermiss
 MidiSysex = "TYPE_MIDI_SYSEX"
 ```
 
-MIDI SYSEX resource.
-
-Currently, only permission events can be reported. MIDI devices are not yet supported.
+MIDI SYSEX resource. Currently, only permission events can be reported. MIDI devices are not yet supported.
 
 **Since:** 9
 
 **ArkTS mode:** ArkTS-Dyn only, since version 9.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -42,6 +44,8 @@ Video capture resource, such as a camera.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ProtectedResourceType-VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"--><!--Device-ProtectedResourceType-VIDEO_CAPTURE = "TYPE_VIDEO_CAPTURE"-End-->
@@ -60,6 +64,8 @@ Audio capture resource, such as a microphone.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ProtectedResourceType-AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"--><!--Device-ProtectedResourceType-AUDIO_CAPTURE = "TYPE_AUDIO_CAPTURE"-End-->
@@ -77,6 +83,8 @@ Sensor resource, such as an acceleration sensor.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

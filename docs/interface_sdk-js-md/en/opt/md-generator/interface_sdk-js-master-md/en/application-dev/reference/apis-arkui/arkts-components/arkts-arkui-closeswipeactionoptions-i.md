@@ -1,8 +1,10 @@
 # CloseSwipeActionOptions
 
-Implements the callbacks and events for the [ListItem](list_item) in the [expanded](arkts-arkui-swipeactionstate-e.md#SwipeActionState)state.
+Implements the callbacks and events for the ListItem in the [expanded](arkts-arkui-swipeactionstate-e.md#SwipeActionState) state.
 
 **Since:** 11
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface CloseSwipeActionOptions--><!--Device-unnamed-declare interface CloseSwipeActionOptions-End-->
 
@@ -16,7 +18,11 @@ onFinish?: ()=>void
 
 Triggered after the collapse animation is complete.
 
+**Type:** ()=&gt;void
+
 **Since:** 11
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -2,9 +2,11 @@
 
 会议状态。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-call-export enum ConferenceState--><!--Device-call-export enum ConferenceState-End-->
 
@@ -20,9 +22,11 @@ TEL_CONFERENCE_IDLE = 0
 
 电话会议空闲。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0--><!--Device-ConferenceState-TEL_CONFERENCE_IDLE = 0-End-->
 
@@ -38,9 +42,11 @@ TEL_CONFERENCE_ACTIVE = 1
 
 电话会议激活。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1--><!--Device-ConferenceState-TEL_CONFERENCE_ACTIVE = 1-End-->
 
@@ -56,9 +62,11 @@ TEL_CONFERENCE_DISCONNECTING = 2
 
 电话会议断开。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTING = 2-End-->
 
@@ -74,9 +82,11 @@ TEL_CONFERENCE_DISCONNECTED = 3
 
 电话会议已断开。
 
-**起始版本：** 7
+**起始版本：** 23
 
-**ArkTS模式：** ArkTS-Dyn起始版本为7；ArkTS-Sta起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3--><!--Device-ConferenceState-TEL_CONFERENCE_DISCONNECTED = 3-End-->
 

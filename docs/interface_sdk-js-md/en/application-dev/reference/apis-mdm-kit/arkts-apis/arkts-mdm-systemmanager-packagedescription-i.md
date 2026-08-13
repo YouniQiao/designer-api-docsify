@@ -6,6 +6,8 @@ Represents the description of a system update package.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 <!--Device-systemManager-interface PackageDescription--><!--Device-systemManager-interface PackageDescription-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -29,6 +31,8 @@ Update notification defined by an enterprise.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

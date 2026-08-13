@@ -6,6 +6,8 @@ Distributed service type.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
 
+**Deprecated since:** -1
+
 <!--Device-applicationManager-enum ServiceType--><!--Device-applicationManager-enum ServiceType-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -16,14 +18,13 @@ Distributed service type.
 COLLABORATION_SERVICE  = 0
 ```
 
-Collaboration service. Applications allowed to use the collaboration service can launch pages of other applications across devices and transmit data to them by using the APIs in  
-[UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext) or  
-[UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext), or by using the method in  
-[Cross-Device UIAbility Connection Development](../../../distributedservice/abilityconnectmanager-guidelines.md).
+Collaboration service. Applications allowed to use the collaboration service can launch pages of other applications across devices and transmit data to them by using the APIs in [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md#UIAbilityContext) or [UIExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#UIExtensionContext), or by using the method in [Cross-Device UIAbility Connection Development](../../../distributedservice/abilityconnectmanager-guidelines.md).
 
 **Since:** 26.0.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

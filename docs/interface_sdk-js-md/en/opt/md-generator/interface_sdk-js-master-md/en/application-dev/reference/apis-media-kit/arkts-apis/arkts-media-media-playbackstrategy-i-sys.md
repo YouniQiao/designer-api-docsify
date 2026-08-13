@@ -2,7 +2,9 @@
 
 Provides preferred playback settings for player.
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-media-interface PlaybackStrategy--><!--Device-media-interface PlaybackStrategy-End-->
 
@@ -20,11 +22,13 @@ import { media } from '@kit.MediaKit';
 enableCameraPostprocessing?: boolean
 ```
 
-Indicates whether to enable camera post-processing during video playback,which is used to apply image enhancements when playing back video content.
+Indicates whether to enable camera post-processing during video playback, which is used to apply image enhancements when playing back video content.
 
 **Type:** boolean
 
-**Since:** 20
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean--><!--Device-PlaybackStrategy-enableCameraPostprocessing?: boolean-End-->
 

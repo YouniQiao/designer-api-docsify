@@ -2,9 +2,11 @@
 
 Provides methods to create a **Query** object, which defines different data query criteria. A **Query** object supports a maximum of 256 predicates.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-distributedKVStore-class Query--><!--Device-distributedKVStore-class Query-End-->
 
@@ -24,9 +26,11 @@ and(): Query
 
 Creates a **Query** object with the AND condition.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -67,9 +71,11 @@ beginGroup(): Query
 
 Creates a **Query** object for a query condition group with a left parenthesis.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,9 +116,11 @@ constructor()
 
 Defines a constructor used to create a **Query** instance.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -126,18 +134,13 @@ Defines a constructor used to create a **Query** instance.
 deviceId(deviceId: string): Query
 ```
 
-Creates a **Query** object with the device ID as the key prefix.
+Creates a **Query** object with the device ID as the key prefix. > **NOTE：**> > **deviceId** can be obtained by > [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync) > . > > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
 
-> **NOTE：**
-> 
-> **deviceId** can be obtained by
-> [deviceManager.getAvailableDeviceListSync](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getAvailableDeviceListSync)
-> .
-> > For details about how to obtain **deviceId**, see [sync()](arkts-arkdata-distributedkvstore-syncmode-e.md#SyncMode).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -161,7 +164,7 @@ Creates a **Query** object with the device ID as the key prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -188,9 +191,11 @@ endGroup(): Query
 
 Creates a **Query** object for a query condition group with a right parenthesis.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -225,29 +230,17 @@ try {
 
 ## equalTo
 
-ArkTS-Dyn:
-```TypeScript
-equalTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 equalTo(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is equal to the given value.
+Creates a **Query** object to match the specified field whose value is equal to the given value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -260,7 +253,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | Value specified. |
+| value | long \| double \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
@@ -272,7 +265,7 @@ Creates a **Query** object to match the specified field whose value is equal to 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## getSqlLike
 
@@ -282,9 +275,11 @@ getSqlLike(): string
 
 Obtains the query statement of the **Query** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -316,29 +311,17 @@ try {
 
 ## greaterThan
 
-ArkTS-Dyn:
-```TypeScript
-greaterThan(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 greaterThan(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than the specified value.
+Creates a **Query** object to match the specified field whose value is greater than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -351,7 +334,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Indicates the field, which cannot contain ^. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | Indicates the value to be compared. |
+| value | long \| double \| string \| boolean | Yes | Indicates the value to be compared. |
 
 **Return value:**
 
@@ -363,33 +346,21 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
-ArkTS-Dyn:
-```TypeScript
-greaterThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 greaterThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value.
+Creates a **Query** object to match the specified field whose value is greater than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -402,7 +373,7 @@ Creates a **Query** object to match the specified field whose value is greater t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | Value specified. |
+| value | long \| double \| string | Yes | Value specified. |
 
 **Return value:**
 
@@ -414,33 +385,21 @@ Creates a **Query** object to match the specified field whose value is greater t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inNumber
 
-ArkTS-Dyn:
-```TypeScript
-inNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 inNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of numbers.
+Creates a **Query** object to match the specified field whose value is within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -453,7 +412,7 @@ Creates a **Query** object to match the specified field whose value is within th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | List of numbers. |
+| valueList | long[] \| double[] | Yes | List of numbers. |
 
 **Return value:**
 
@@ -465,7 +424,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## inString
 
@@ -473,19 +432,13 @@ Creates a **Query** object to match the specified field whose value is within th
 inString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is within the specified list of strings.
+Creates a **Query** object to match the specified field whose value is within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -510,7 +463,7 @@ Creates a **Query** object to match the specified field whose value is within th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -536,19 +489,13 @@ try {
 isNotNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not **null**.
+Creates a **Query** object to match the specified field whose value is not **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -572,7 +519,7 @@ Creates a **Query** object to match the specified field whose value is not **nul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -598,19 +545,13 @@ try {
 isNull(field: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is **null**.
+Creates a **Query** object to match the specified field whose value is **null**. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -634,7 +575,7 @@ Creates a **Query** object to match the specified field whose value is **null**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -656,29 +597,17 @@ try {
 
 ## lessThan
 
-ArkTS-Dyn:
-```TypeScript
-lessThan(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 lessThan(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than the specified value.
+Creates a **Query** object to match the specified field whose value is less than the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -691,7 +620,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | Value specified. |
+| value | long \| double \| string | Yes | Value specified. |
 
 **Return value:**
 
@@ -703,33 +632,21 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
-ArkTS-Dyn:
-```TypeScript
-lessThanOrEqualTo(field: string, value: number | number | string): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 lessThanOrEqualTo(field: string, value: long | double | string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is less than or equal to the specified value.
+Creates a **Query** object to match the specified field whose value is less than or equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -742,7 +659,7 @@ Creates a **Query** object to match the specified field whose value is less than
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string  <br>ArkTS-Sta：long \| double \| string | Yes | Value specified. |
+| value | long \| double \| string | Yes | Value specified. |
 
 **Return value:**
 
@@ -754,7 +671,7 @@ Creates a **Query** object to match the specified field whose value is less than
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## like
 
@@ -762,19 +679,13 @@ Creates a **Query** object to match the specified field whose value is less than
 like(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is similar to the specified string.
+Creates a **Query** object to match the specified field whose value is similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -799,7 +710,7 @@ Creates a **Query** object to match the specified field whose value is similar t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -821,21 +732,17 @@ try {
 
 ## limit
 
-ArkTS-Dyn:
-```TypeScript
-limit(total: number, offset: number): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 limit(total: int, offset: int): Query
 ```
 
-Creates a **Query** object to specify the number of records of the query result and where to start. This API must  be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query**object.
+Creates a **Query** object to specify the number of records of the query result and where to start. This API must be called after the invocation of the **orderByAsc()**, **orderByDesc()**, and the query APIs of the **Query** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -847,8 +754,8 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| total | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Maximum number of results to query. The value must be a non-negative integer.&lt;br&gt;If the value is a negative number, the entire result set is queried. |
-| offset | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Start position of the query result. The value must be a non-negative integer.&lt;br&gt;If the value is a negative number, the entire result set is queried.&lt;br&gt;If **offset** exceeds the end of the result set, the query result is empty. |
+| total | int | Yes | Maximum number of results to query. The value must be a non-negative integer.&lt;br&gt;If the value is a negative number, the entire result set is queried. |
+| offset | int | Yes | Start position of the query result. The value must be a non-negative integer.&lt;br&gt;If the value is a negative number, the entire result set is queried.&lt;br&gt;If **offset** exceeds the end of the result set, the query result is empty. |
 
 **Return value:**
 
@@ -860,7 +767,7 @@ Creates a **Query** object to specify the number of records of the query result 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -885,29 +792,17 @@ try {
 
 ## notEqualTo
 
-ArkTS-Dyn:
-```TypeScript
-notEqualTo(field: string, value: number | number | string | boolean): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 notEqualTo(field: string, value: long | double | string | boolean): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not equal to the specified value.
+Creates a **Query** object to match the specified field whose value is not equal to the specified value. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -920,7 +815,7 @@ Creates a **Query** object to match the specified field whose value is not equal
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| value | ArkTS-Dyn: number \| number \| string \| boolean  <br>ArkTS-Sta：long \| double \| string \| boolean | Yes | Value specified. |
+| value | long \| double \| string \| boolean | Yes | Value specified. |
 
 **Return value:**
 
@@ -932,33 +827,21 @@ Creates a **Query** object to match the specified field whose value is not equal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInNumber
 
-ArkTS-Dyn:
-```TypeScript
-notInNumber(field: string, valueList: number[] | number[]): Query
-```
-
-ArkTS-Sta:
 ```TypeScript
 notInNumber(field: string, valueList: long[] | double[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of numbers.
+Creates a **Query** object to match the specified field whose value is not within the specified list of numbers. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -971,7 +854,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | field | string | Yes | Field to match. It cannot contain '^'. If the value contains '^', the predicate becomes invalid and all data in the KV store will be returned. |
-| valueList | ArkTS-Dyn: number[] \| number[]  <br>ArkTS-Sta：long[] \| double[] | Yes | List of numbers. |
+| valueList | long[] \| double[] | Yes | List of numbers. |
 
 **Return value:**
 
@@ -983,7 +866,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## notInString
 
@@ -991,19 +874,13 @@ Creates a **Query** object to match the specified field whose value is not withi
 notInString(field: string, valueList: string[]): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not within the specified list of strings.
+Creates a **Query** object to match the specified field whose value is not within the specified list of strings. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1028,7 +905,7 @@ Creates a **Query** object to match the specified field whose value is not withi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1056,9 +933,11 @@ or(): Query
 
 Creates a **Query** object with the OR condition.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1097,19 +976,13 @@ try {
 orderByAsc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in ascending order.
+Creates a **Query** object to sort the query results in ascending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1133,7 +1006,7 @@ Creates a **Query** object to sort the query results in ascending order.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1160,19 +1033,13 @@ try {
 orderByDesc(field: string): Query
 ```
 
-Creates a **Query** object to sort the query results in descending order.
+Creates a **Query** object to sort the query results in descending order. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1196,7 +1063,7 @@ Creates a **Query** object to sort the query results in descending order.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 
@@ -1225,9 +1092,11 @@ prefixKey(prefix: string): Query
 
 Creates a **Query** object with a specified key prefix.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1251,7 +1120,7 @@ Creates a **Query** object with a specified key prefix.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -1280,9 +1149,11 @@ reset(): Query
 
 Resets the **Query** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1323,9 +1194,11 @@ setSuggestIndex(index: string): Query
 
 Creates a **Query** object with an index preferentially used for query.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1349,7 +1222,7 @@ Creates a **Query** object with an index preferentially used for query.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types. |
 
 ## Examples
 
@@ -1376,19 +1249,13 @@ try {
 unlike(field: string, value: string): Query
 ```
 
-Creates a **Query** object to match the specified field whose value is not similar to the specified string.
+Creates a **Query** object to match the specified field whose value is not similar to the specified string. > **NOTE：**> > This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema). > > For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV > store using the **getKVStore()** method in > [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
 
-> **NOTE：**
-> 
-> This API should be used together with [Schema](arkts-arkdata-distributedkvstore-schema-c.md#Schema).
-> 
-> For details about how to use **Schema** to create a database, see the example of creating and obtaining a KV
-> store using the **getKVStore()** method in
-> [Persisting KV Store Data](../../../database/data-persistence-by-kv-store.md#how-to-develop).
+**Since:** 23
 
-**Since:** 9
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1413,7 +1280,7 @@ Creates a **Query** object to match the specified field whose value is not simil
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameters types; &lt;br&gt;3.Parameter verification failed. |
 
 ## Examples
 

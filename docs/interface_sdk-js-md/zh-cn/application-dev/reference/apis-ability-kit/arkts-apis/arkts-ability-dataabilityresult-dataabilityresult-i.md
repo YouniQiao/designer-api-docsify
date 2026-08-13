@@ -1,11 +1,12 @@
 # DataAbilityResult
 
-定义DataAbility数据操作结果，通过  
-[executeBatch](../../../reference/apis-ability-kit/js-apis-inner-ability-dataAbilityHelper.md#dataabilityhelperexecutebatch)操作数据库时，操作结果使用DataAbilityResult对象返回。
+定义DataAbility数据操作结果，通过 executeBatch 操作数据库时，操作结果使用DataAbilityResult对象返回。
 
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface DataAbilityResult--><!--Device-unnamed-export interface DataAbilityResult-End-->
 
@@ -24,6 +25,8 @@ count?: number
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 
@@ -44,6 +47,8 @@ uri?: string
 **起始版本：** 7
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为7。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在FA模型下使用。
 

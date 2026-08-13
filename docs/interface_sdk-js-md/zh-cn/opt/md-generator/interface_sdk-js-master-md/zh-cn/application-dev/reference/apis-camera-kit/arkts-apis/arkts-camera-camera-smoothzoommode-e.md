@@ -2,7 +2,9 @@
 
 平滑变焦模式。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-camera-enum SmoothZoomMode--><!--Device-camera-enum SmoothZoomMode-End-->
 
@@ -16,7 +18,9 @@ NORMAL = 0
 
 贝塞尔曲线模式。
 
-**起始版本：** 11
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本19开始，该接口支持在原子化服务API中使用。
 

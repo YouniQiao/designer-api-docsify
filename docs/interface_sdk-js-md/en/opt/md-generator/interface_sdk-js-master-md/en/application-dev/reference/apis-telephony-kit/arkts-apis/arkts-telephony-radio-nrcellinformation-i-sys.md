@@ -2,7 +2,9 @@
 
 Obtains NR cell information.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-radio-export interface NrCellInformation--><!--Device-radio-export interface NrCellInformation-End-->
 
@@ -26,7 +28,9 @@ Indicates the mobile country code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-mcc: string--><!--Device-NrCellInformation-mcc: string-End-->
 
@@ -44,7 +48,9 @@ Indicates the mobile network code.
 
 **Type:** string
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-mnc: string--><!--Device-NrCellInformation-mnc: string-End-->
 
@@ -62,7 +68,9 @@ Indicates the 5G network cell ID.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-nci: int--><!--Device-NrCellInformation-nci: int-End-->
 
@@ -80,7 +88,9 @@ Indicates the NR-ARFCN(NR Absolute Radio Frequency Channel Number).
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-nrArfcn: int--><!--Device-NrCellInformation-nrArfcn: int-End-->
 
@@ -98,7 +108,9 @@ Indicates the physical cell identification.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-pci: int--><!--Device-NrCellInformation-pci: int-End-->
 
@@ -116,7 +128,9 @@ Indicates the tracking area code.
 
 **Type:** number
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-NrCellInformation-tac: int--><!--Device-NrCellInformation-tac: int-End-->
 

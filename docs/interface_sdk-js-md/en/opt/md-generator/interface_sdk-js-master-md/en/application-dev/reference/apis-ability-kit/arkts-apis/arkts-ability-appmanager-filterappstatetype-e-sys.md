@@ -1,9 +1,10 @@
 # FilterAppStateType (System API)
 
-Enumerates the types of application states to filter. It can be used with  
-[AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#AppStateFilter) to filter the application state types you want to listen for.
+Enumerates the types of application states to filter. It can be used with [AppStateFilter](arkts-ability-appmanager-appstatefilter-i-sys.md#AppStateFilter-(System-API)) to filter the application state types you want to listen for.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-appManager-export enum FilterAppStateType--><!--Device-appManager-export enum FilterAppStateType-End-->
 
@@ -17,10 +18,11 @@ Enumerates the types of application states to filter. It can be used with
 CREATE = 1 << 0
 ```
 
-The application is initializing. It corresponds to the state whose value is **0** in  
-[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#properties).
+The application is initializing. It corresponds to the state whose value is **0** in [AppStateData](arkts-ability-appstatedata-c.md#AppStateData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterAppStateType-CREATE = 1 << 0--><!--Device-FilterAppStateType-CREATE = 1 << 0-End-->
 
@@ -34,10 +36,11 @@ The application is initializing. It corresponds to the state whose value is **0*
 FOREGROUND = 1 << 1
 ```
 
-The application is running in the foreground. It corresponds to the state whose value is **2** in  
-[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#properties).
+The application is running in the foreground. It corresponds to the state whose value is **2** in [AppStateData](arkts-ability-appstatedata-c.md#AppStateData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterAppStateType-FOREGROUND = 1 << 1--><!--Device-FilterAppStateType-FOREGROUND = 1 << 1-End-->
 
@@ -51,10 +54,11 @@ The application is running in the foreground. It corresponds to the state whose 
 BACKGROUND = 1 << 2
 ```
 
-The application is running in the background. It corresponds to the state whose value is **4** in  
-[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#properties).
+The application is running in the background. It corresponds to the state whose value is **4** in [AppStateData](arkts-ability-appstatedata-c.md#AppStateData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterAppStateType-BACKGROUND = 1 << 2--><!--Device-FilterAppStateType-BACKGROUND = 1 << 2-End-->
 
@@ -68,10 +72,11 @@ The application is running in the background. It corresponds to the state whose 
 DESTROY = 1 << 3
 ```
 
-The application has exited. It corresponds to the state whose value is **5** in  
-[AppStateData](../../../reference/apis-ability-kit/js-apis-inner-application-appStateData.md#properties).
+The application has exited. It corresponds to the state whose value is **5** in [AppStateData](arkts-ability-appstatedata-c.md#AppStateData).
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-FilterAppStateType-DESTROY = 1 << 3--><!--Device-FilterAppStateType-DESTROY = 1 << 3-End-->
 

@@ -1,8 +1,22 @@
 # @ohos.hichecker
 
-The HiChecker module allows you to check issues that may be easily ignored during development of applications (including system-built and third-party applications). Such issues include calling of time-consuming functions by key application threads, event distribution and execution timeout in application processes, and ability resource leakage in application processes. The issues are recorded in logs or lead to process crashes explicitly so that you can find and rectify them.
+/*
+ Copyright (c) 2022 Huawei Device Co., Ltd.
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
+ http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+ /
 
-**Since:** 8
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hichecker--><!--Device-unnamed-declare namespace hichecker-End-->
 
@@ -20,21 +34,21 @@ import { hichecker } from '@kit.PerformanceAnalysisKit';
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addcheckrule) |
-| [addRule](arkts-performanceanalysis-hichecker-addrule-f.md#addrule) |
+| [addCheckRule](arkts-performanceanalysis-hichecker-addcheckrule-f.md#addCheckRule) |
+| [addRule](arkts-performanceanalysis-hichecker-addrule-f.md#addRule) |
 | [contains](arkts-performanceanalysis-hichecker-contains-f.md#contains) |
-| [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containscheckrule) |
-| [getRule](arkts-performanceanalysis-hichecker-getrule-f.md#getrule) |
-| [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removecheckrule) |
-| [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md#removerule) |
+| [containsCheckRule](arkts-performanceanalysis-hichecker-containscheckrule-f.md#containsCheckRule) |
+| [getRule](arkts-performanceanalysis-hichecker-getrule-f.md#getRule) |
+| [removeCheckRule](arkts-performanceanalysis-hichecker-removecheckrule-f.md#removeCheckRule) |
+| [removeRule](arkts-performanceanalysis-hichecker-removerule-f.md#removeRule) |
 
 ### Constants
 
 | [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) |
 | --- |
-| [RULE_CAUTION_PRINT_LOG](arkts-performanceanalysis-hichecker-con.md#rule_caution_print_log) |
-| [RULE_CAUTION_TRIGGER_CRASH](arkts-performanceanalysis-hichecker-con.md#rule_caution_trigger_crash) |
-| [RULE_CHECK_ABILITY_CONNECTION_LEAK](arkts-performanceanalysis-hichecker-con.md#rule_check_ability_connection_leak) |
-| [RULE_CHECK_ARKUI_PERFORMANCE](arkts-performanceanalysis-hichecker-con.md#rule_check_arkui_performance) |
-| [RULE_THREAD_CHECK_NETWORK_USAGE](arkts-performanceanalysis-hichecker-con.md#rule_thread_check_network_usage) |
-| [RULE_THREAD_CHECK_SLOW_PROCESS](arkts-performanceanalysis-hichecker-con.md#rule_thread_check_slow_process) |
+| [RULE_CAUTION_PRINT_LOG](arkts-performanceanalysis-hichecker-con.md#RULE_CAUTION_PRINT_LOG) |
+| [RULE_CAUTION_TRIGGER_CRASH](arkts-performanceanalysis-hichecker-con.md#RULE_CAUTION_TRIGGER_CRASH) |
+| [RULE_CHECK_ABILITY_CONNECTION_LEAK](arkts-performanceanalysis-hichecker-con.md#RULE_CHECK_ABILITY_CONNECTION_LEAK) |
+| [RULE_CHECK_ARKUI_PERFORMANCE](arkts-performanceanalysis-hichecker-con.md#RULE_CHECK_ARKUI_PERFORMANCE) |
+| [RULE_THREAD_CHECK_NETWORK_USAGE](arkts-performanceanalysis-hichecker-con.md#RULE_THREAD_CHECK_NETWORK_USAGE) |
+| [RULE_THREAD_CHECK_SLOW_PROCESS](arkts-performanceanalysis-hichecker-con.md#RULE_THREAD_CHECK_SLOW_PROCESS) |

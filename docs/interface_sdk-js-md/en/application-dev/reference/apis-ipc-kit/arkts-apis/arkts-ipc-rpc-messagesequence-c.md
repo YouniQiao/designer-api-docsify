@@ -1,11 +1,12 @@
 # MessageSequence
 
-Provides APIs for reading and writing data in specific format. During RPC or IPC, the sender can use the  
- **write()** method provided by **MessageSequence** to write data in specific format to a **MessageSequence** object. The receiver can use the **read()** method provided by **MessageSequence** to read data in specific  format from a **MessageSequence** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
+Provides APIs for reading and writing data in specific format. During RPC or IPC, the sender can use the **write()** method provided by **MessageSequence** to write data in specific format to a **MessageSequence** object. The receiver can use the **read()** method provided by **MessageSequence** to read data in specific format from a **MessageSequence** object. The data formats include basic data types and arrays, IPC objects, interface tokens, and custom sequenceable objects.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-rpc-class MessageSequence--><!--Device-rpc-class MessageSequence-End-->
 
@@ -19,21 +20,17 @@ import { rpc } from '@kit.IPCKit';
 
 ## closeFileDescriptor
 
-ArkTS-Dyn:
-```TypeScript
-static closeFileDescriptor(fd: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 static closeFileDescriptor(fd: int): void
 ```
 
 Closes a file descriptor. This API is a static method.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-static closeFileDescriptor(fd: int): void--><!--Device-MessageSequence-static closeFileDescriptor(fd: int): void-End-->
 
@@ -43,13 +40,13 @@ Closes a file descriptor. This API is a static method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor to close. |
+| fd | int | Yes | File descriptor to close. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
 
 ## Examples
 
@@ -78,9 +75,11 @@ containFileDescriptors(): boolean
 
 Checks whether this **MessageSequence** object contains file descriptors.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-containFileDescriptors(): boolean--><!--Device-MessageSequence-containFileDescriptors(): boolean-End-->
 
@@ -121,9 +120,11 @@ static create(): MessageSequence
 
 Creates a **MessageSequence** object. This API is a static method.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-static create(): MessageSequence--><!--Device-MessageSequence-static create(): MessageSequence-End-->
 
@@ -157,21 +158,17 @@ try {
 
 ## dupFileDescriptor
 
-ArkTS-Dyn:
-```TypeScript
-static dupFileDescriptor(fd: number): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 static dupFileDescriptor(fd: int): int
 ```
 
 Duplicates a file descriptor. This API is a static method.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-static dupFileDescriptor(fd: int): int--><!--Device-MessageSequence-static dupFileDescriptor(fd: int): int-End-->
 
@@ -181,20 +178,20 @@ Duplicates a file descriptor. This API is a static method.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor to duplicate. |
+| fd | int | Yes | File descriptor to duplicate. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | New file descriptor. |
+| int | New file descriptor. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900013](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900013-failed-to-invoke-dup) | Failed to call dup. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900013](../errorcode-rpc.md#1900013-failed-to-invoke-dup) | Failed to call dup. |
 
 ## Examples
 
@@ -217,21 +214,17 @@ try {
 
 ## getCapacity
 
-ArkTS-Dyn:
-```TypeScript
-getCapacity(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getCapacity(): int
 ```
 
 Obtains the capacity of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getCapacity(): int--><!--Device-MessageSequence-getCapacity(): int-End-->
 
@@ -241,7 +234,7 @@ Obtains the capacity of this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Capacity of the obtained **MessageSequence** object, in bytes. |
+| int | Capacity of the obtained **MessageSequence** object, in bytes. |
 
 ## Examples
 
@@ -263,21 +256,17 @@ try {
 
 ## getRawDataCapacity
 
-ArkTS-Dyn:
-```TypeScript
-getRawDataCapacity(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getRawDataCapacity(): int
 ```
 
 Obtains the maximum amount of raw data that can be held by this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getRawDataCapacity(): int--><!--Device-MessageSequence-getRawDataCapacity(): int-End-->
 
@@ -287,7 +276,7 @@ Obtains the maximum amount of raw data that can be held by this **MessageSequenc
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Maximum amount of raw data that **MessageSequence** can hold, that is, 128 MB. |
+| int | Maximum amount of raw data that **MessageSequence** can hold, that is, 128 MB. |
 
 ## Examples
 
@@ -309,21 +298,17 @@ try {
 
 ## getReadPosition
 
-ArkTS-Dyn:
-```TypeScript
-getReadPosition(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getReadPosition(): int
 ```
 
 Obtains the read position of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getReadPosition(): int--><!--Device-MessageSequence-getReadPosition(): int-End-->
 
@@ -333,7 +318,7 @@ Obtains the read position of this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Read position obtained. |
+| int | Read position obtained. |
 
 ## Examples
 
@@ -356,21 +341,17 @@ try {
 
 ## getReadableBytes
 
-ArkTS-Dyn:
-```TypeScript
-getReadableBytes(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getReadableBytes(): int
 ```
 
 Obtains the readable capacity of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getReadableBytes(): int--><!--Device-MessageSequence-getReadableBytes(): int-End-->
 
@@ -380,7 +361,7 @@ Obtains the readable capacity of this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Readable capacity of the **MessageSequence** instance, in bytes. |
+| int | Readable capacity of the **MessageSequence** instance, in bytes. |
 
 ## Examples
 
@@ -403,21 +384,17 @@ try {
 
 ## getSize
 
-ArkTS-Dyn:
-```TypeScript
-getSize(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getSize(): int
 ```
 
 Obtains the data size of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getSize(): int--><!--Device-MessageSequence-getSize(): int-End-->
 
@@ -427,7 +404,7 @@ Obtains the data size of this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Size of the **MessageSequence** instance obtained, in bytes. |
+| int | Size of the **MessageSequence** instance obtained, in bytes. |
 
 ## Examples
 
@@ -449,21 +426,17 @@ try {
 
 ## getWritableBytes
 
-ArkTS-Dyn:
-```TypeScript
-getWritableBytes(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWritableBytes(): int
 ```
 
 Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getWritableBytes(): int--><!--Device-MessageSequence-getWritableBytes(): int-End-->
 
@@ -473,7 +446,7 @@ Obtains the writable capacity (in bytes) of this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Writable capacity of the **MessageSequence** instance, in bytes. |
+| int | Writable capacity of the **MessageSequence** instance, in bytes. |
 
 ## Examples
 
@@ -496,21 +469,17 @@ try {
 
 ## getWritePosition
 
-ArkTS-Dyn:
-```TypeScript
-getWritePosition(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 getWritePosition(): int
 ```
 
 Obtains the write position of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-getWritePosition(): int--><!--Device-MessageSequence-getWritePosition(): int-End-->
 
@@ -520,7 +489,7 @@ Obtains the write position of this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Write position obtained. |
+| int | Write position obtained. |
 
 ## Examples
 
@@ -549,9 +518,11 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 Reads data of the ArrayBuffer type from this **MessageSequence**.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer--><!--Device-MessageSequence-readArrayBuffer(typeCode: TypeCode): ArrayBuffer-End-->
 
@@ -573,8 +544,8 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The obtained value of typeCode is incorrect; |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -610,9 +581,11 @@ readAshmem(): Ashmem
 
 Reads the anonymous shared object from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readAshmem(): Ashmem--><!--Device-MessageSequence-readAshmem(): Ashmem-End-->
 
@@ -628,7 +601,7 @@ Reads the anonymous shared object from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -678,9 +651,11 @@ readBoolean(): boolean
 
 Reads the Boolean value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readBoolean(): boolean--><!--Device-MessageSequence-readBoolean(): boolean-End-->
 
@@ -696,7 +671,7 @@ Reads the Boolean value from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -725,9 +700,11 @@ readBooleanArray(dataIn: boolean[]): void
 
 Reads the Boolean array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void--><!--Device-MessageSequence-readBooleanArray(dataIn: boolean[]): void-End-->
 
@@ -743,8 +720,8 @@ Reads the Boolean array from this **MessageSequence** object and writes it to th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -774,9 +751,11 @@ readBooleanArray(): boolean[]
 
 Reads the Boolean array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readBooleanArray(): boolean[]--><!--Device-MessageSequence-readBooleanArray(): boolean[]-End-->
 
@@ -792,7 +771,7 @@ Reads the Boolean array from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -815,21 +794,17 @@ try {
 
 ## readByte
 
-ArkTS-Dyn:
-```TypeScript
-readByte(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readByte(): int
 ```
 
 Reads the byte value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readByte(): int--><!--Device-MessageSequence-readByte(): int-End-->
 
@@ -839,13 +814,13 @@ Reads the byte value from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Byte value read. |
+| int | Byte value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -868,21 +843,17 @@ try {
 
 ## readByteArray
 
-ArkTS-Dyn:
-```TypeScript
-readByteArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readByteArray(dataIn: int[]): void
 ```
 
 Reads the byte array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readByteArray(dataIn: int[]): void--><!--Device-MessageSequence-readByteArray(dataIn: int[]): void-End-->
 
@@ -892,14 +863,14 @@ Reads the byte array from this **MessageSequence** object and writes it to the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Byte array to read. |
+| dataIn | int[] | Yes | Byte array to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -924,21 +895,17 @@ try {
 
 ## readByteArray
 
-ArkTS-Dyn:
-```TypeScript
-readByteArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readByteArray(): int[]
 ```
 
 Reads the byte array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readByteArray(): int[]--><!--Device-MessageSequence-readByteArray(): int[]-End-->
 
@@ -948,13 +915,13 @@ Reads the byte array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Byte array read. |
+| int[] | Byte array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -978,21 +945,17 @@ try {
 
 ## readChar
 
-ArkTS-Dyn:
-```TypeScript
-readChar(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readChar(): int
 ```
 
 Reads the character from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readChar(): int--><!--Device-MessageSequence-readChar(): int-End-->
 
@@ -1002,13 +965,13 @@ Reads the character from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Char** value read. |
+| int | Char** value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1031,21 +994,17 @@ try {
 
 ## readCharArray
 
-ArkTS-Dyn:
-```TypeScript
-readCharArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readCharArray(dataIn: int[]): void
 ```
 
 Reads the character array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readCharArray(dataIn: int[]): void--><!--Device-MessageSequence-readCharArray(dataIn: int[]): void-End-->
 
@@ -1055,14 +1014,14 @@ Reads the character array from this **MessageSequence** object and writes it to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Character array to read. |
+| dataIn | int[] | Yes | Character array to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1086,21 +1045,17 @@ try {
 
 ## readCharArray
 
-ArkTS-Dyn:
-```TypeScript
-readCharArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readCharArray(): int[]
 ```
 
 Reads the character array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readCharArray(): int[]--><!--Device-MessageSequence-readCharArray(): int[]-End-->
 
@@ -1110,13 +1065,13 @@ Reads the character array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Character array read. |
+| int[] | Character array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1139,21 +1094,17 @@ try {
 
 ## readDouble
 
-ArkTS-Dyn:
-```TypeScript
-readDouble(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readDouble(): double
 ```
 
 Reads the double value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readDouble(): double--><!--Device-MessageSequence-readDouble(): double-End-->
 
@@ -1163,13 +1114,13 @@ Reads the double value from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Double value read. |
+| double | Double value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1192,21 +1143,17 @@ try {
 
 ## readDoubleArray
 
-ArkTS-Dyn:
-```TypeScript
-readDoubleArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readDoubleArray(dataIn: double[]): void
 ```
 
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void--><!--Device-MessageSequence-readDoubleArray(dataIn: double[]): void-End-->
 
@@ -1216,14 +1163,14 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Yes | Double array to read. |
+| dataIn | double[] | Yes | Double array to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1247,21 +1194,17 @@ try {
 
 ## readDoubleArray
 
-ArkTS-Dyn:
-```TypeScript
-readDoubleArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readDoubleArray(): double[]
 ```
 
 Reads the double array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readDoubleArray(): double[]--><!--Device-MessageSequence-readDoubleArray(): double[]-End-->
 
@@ -1271,13 +1214,13 @@ Reads the double array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Double array read. |
+| double[] | Double array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1306,9 +1249,11 @@ readException(): void
 
 Reads the exception information from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readException(): void--><!--Device-MessageSequence-readException(): void-End-->
 
@@ -1318,11 +1263,11 @@ Reads the exception information from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
-In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+In the sample code provided in this topic, this.getUIContext().getHostContext() is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 // If the FA model is used, import featureAbility from @kit.AbilityKit.
@@ -1400,21 +1345,17 @@ try {
 
 ## readFileDescriptor
 
-ArkTS-Dyn:
-```TypeScript
-readFileDescriptor(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readFileDescriptor(): int
 ```
 
 Reads the file descriptor from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFileDescriptor(): int--><!--Device-MessageSequence-readFileDescriptor(): int-End-->
 
@@ -1424,13 +1365,13 @@ Reads the file descriptor from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | File descriptor read. |
+| int | File descriptor read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1456,21 +1397,17 @@ try {
 
 ## readFloat
 
-ArkTS-Dyn:
-```TypeScript
-readFloat(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readFloat(): double
 ```
 
 Reads the double value from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFloat(): double--><!--Device-MessageSequence-readFloat(): double-End-->
 
@@ -1480,13 +1417,13 @@ Reads the double value from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：double | Double value read. |
+| double | Double value read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1509,21 +1446,17 @@ try {
 
 ## readFloatArray
 
-ArkTS-Dyn:
-```TypeScript
-readFloatArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readFloatArray(dataIn: double[]): void
 ```
 
 Reads the double array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFloatArray(dataIn: double[]): void--><!--Device-MessageSequence-readFloatArray(dataIn: double[]): void-End-->
 
@@ -1533,14 +1466,14 @@ Reads the double array from this **MessageSequence** object and writes it to the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| dataIn | double[] | Yes | Double array to read. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1564,21 +1497,17 @@ try {
 
 ## readFloatArray
 
-ArkTS-Dyn:
-```TypeScript
-readFloatArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readFloatArray(): double[]
 ```
 
 Reads the double array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readFloatArray(): double[]--><!--Device-MessageSequence-readFloatArray(): double[]-End-->
 
@@ -1588,13 +1517,13 @@ Reads the double array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Double array read. |
+| double[] | Double array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1617,21 +1546,17 @@ try {
 
 ## readInt
 
-ArkTS-Dyn:
-```TypeScript
-readInt(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readInt(): int
 ```
 
 Reads the integer from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -1643,13 +1568,13 @@ Reads the integer from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Integer read. |
+| int | Integer read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1672,21 +1597,17 @@ try {
 
 ## readIntArray
 
-ArkTS-Dyn:
-```TypeScript
-readIntArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readIntArray(dataIn: int[]): void
 ```
 
 Reads the integer array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readIntArray(dataIn: int[]): void--><!--Device-MessageSequence-readIntArray(dataIn: int[]): void-End-->
 
@@ -1696,14 +1617,14 @@ Reads the integer array from this **MessageSequence** object and writes it to th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Integer array to read. |
+| dataIn | int[] | Yes | Integer array to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1727,21 +1648,17 @@ try {
 
 ## readIntArray
 
-ArkTS-Dyn:
-```TypeScript
-readIntArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readIntArray(): int[]
 ```
 
 Reads the integer array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readIntArray(): int[]--><!--Device-MessageSequence-readIntArray(): int[]-End-->
 
@@ -1751,13 +1668,13 @@ Reads the integer array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Integer array read. |
+| int[] | Integer array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1784,11 +1701,13 @@ try {
 readInterfaceToken(): string
 ```
 
-Reads the interface token from this **MessageSequence** object. The interface token is read in the sequence in  which it is written to the **MessageSequence** object. The local object can use it to verify the  communication.
+Reads the interface token from this **MessageSequence** object. The interface token is read in the sequence in which it is written to the **MessageSequence** object. The local object can use it to verify the communication.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readInterfaceToken(): string--><!--Device-MessageSequence-readInterfaceToken(): string-End-->
 
@@ -1804,7 +1723,7 @@ Reads the interface token from this **MessageSequence** object. The interface to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1827,21 +1746,17 @@ try {
 
 ## readLong
 
-ArkTS-Dyn:
-```TypeScript
-readLong(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readLong(): long
 ```
 
 Reads the long integer from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readLong(): long--><!--Device-MessageSequence-readLong(): long-End-->
 
@@ -1851,13 +1766,13 @@ Reads the long integer from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：long | Long integer read. |
+| long | Long integer read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1880,21 +1795,17 @@ try {
 
 ## readLongArray
 
-ArkTS-Dyn:
-```TypeScript
-readLongArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readLongArray(dataIn: long[]): void
 ```
 
 Reads the long array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readLongArray(dataIn: long[]): void--><!--Device-MessageSequence-readLongArray(dataIn: long[]): void-End-->
 
@@ -1904,14 +1815,14 @@ Reads the long array from this **MessageSequence** object and writes it to the c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Long array to read. |
+| dataIn | long[] | Yes | Long array to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1935,21 +1846,17 @@ try {
 
 ## readLongArray
 
-ArkTS-Dyn:
-```TypeScript
-readLongArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readLongArray(): long[]
 ```
 
 Reads the long integer array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readLongArray(): long[]--><!--Device-MessageSequence-readLongArray(): long[]-End-->
 
@@ -1959,13 +1866,13 @@ Reads the long integer array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Long array read. |
+| long[] | Long array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -1994,9 +1901,11 @@ readParcelable(dataIn: Parcelable): void
 
 Reads the **Parcelable** object from this **MessageSequence** object to the specified object (**dataIn**).
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void--><!--Device-MessageSequence-readParcelable(dataIn: Parcelable): void-End-->
 
@@ -2012,9 +1921,9 @@ Reads the **Parcelable** object from this **MessageSequence** object to the spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2063,9 +1972,11 @@ readParcelableArray(parcelableArray: Parcelable[]): void
 
 Reads the **Parcelable** array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-readParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
@@ -2081,9 +1992,9 @@ Reads the **Parcelable** array from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900012](../errorcode-rpc.md#1900012-js-callback-execution-failed) | Failed to call the JS callback function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array; 5.The element does not exist in the array. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2141,7 +2052,7 @@ Reads raw data from this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [readRawDataBuffer](readRawDataBuffer(size:)
+**Substitutes:** [readRawDataBuffer](#readRawDataBuffer)(size: int)
 
 <!--Device-MessageSequence-readRawData(size: number): number[]--><!--Device-MessageSequence-readRawData(size: number): number[]-End-->
 
@@ -2163,8 +2074,8 @@ Reads raw data from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2189,21 +2100,17 @@ try {
 
 ## readRawDataBuffer
 
-ArkTS-Dyn:
-```TypeScript
-readRawDataBuffer(size: number): ArrayBuffer
-```
-
-ArkTS-Sta:
 ```TypeScript
 readRawDataBuffer(size: int): ArrayBuffer
 ```
 
 Reads raw data from this **MessageSequence** object.
 
-**Since:** 11
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer--><!--Device-MessageSequence-readRawDataBuffer(size: int): ArrayBuffer-End-->
 
@@ -2213,7 +2120,7 @@ Reads raw data from this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the raw data to read. |
+| size | int | Yes | Size of the raw data to read. |
 
 **Return value:**
 
@@ -2225,8 +2132,8 @@ Reads raw data from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2260,11 +2167,13 @@ try {
 readRemoteObject(): IRemoteObject
 ```
 
-Reads the remote object from **MessageSequence**. You can use this API to deserialize the **MessageSequence** object to generate an **IRemoteObject**. The remote object is read in the order in which it is written to  this **MessageSequence** object.
+Reads the remote object from **MessageSequence**. You can use this API to deserialize the **MessageSequence** object to generate an **IRemoteObject**. The remote object is read in the order in which it is written to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRemoteObject(): IRemoteObject--><!--Device-MessageSequence-readRemoteObject(): IRemoteObject-End-->
 
@@ -2280,8 +2189,8 @@ Reads the remote object from **MessageSequence**. You can use this API to deseri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2322,9 +2231,11 @@ readRemoteObjectArray(objects: IRemoteObject[]): void
 
 Reads the **IRemoteObject** array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void--><!--Device-MessageSequence-readRemoteObjectArray(objects: IRemoteObject[]): void-End-->
 
@@ -2340,8 +2251,8 @@ Reads the **IRemoteObject** array from this **MessageSequence** object and write
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The length of the array passed when reading is not equal to the length passed when writing to the array. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2383,9 +2294,11 @@ readRemoteObjectArray(): IRemoteObject[]
 
 Reads the **IRemoteObject** array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]--><!--Device-MessageSequence-readRemoteObjectArray(): IRemoteObject[]-End-->
 
@@ -2401,7 +2314,7 @@ Reads the **IRemoteObject** array from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2435,21 +2348,17 @@ try {
 
 ## readShort
 
-ArkTS-Dyn:
-```TypeScript
-readShort(): number
-```
-
-ArkTS-Sta:
 ```TypeScript
 readShort(): int
 ```
 
 Reads the short integer from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readShort(): int--><!--Device-MessageSequence-readShort(): int-End-->
 
@@ -2459,13 +2368,13 @@ Reads the short integer from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number  <br>ArkTS-Sta：int | Short integer read. |
+| int | Short integer read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2488,21 +2397,17 @@ try {
 
 ## readShortArray
 
-ArkTS-Dyn:
-```TypeScript
-readShortArray(dataIn: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 readShortArray(dataIn: int[]): void
 ```
 
 Reads the short array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readShortArray(dataIn: int[]): void--><!--Device-MessageSequence-readShortArray(dataIn: int[]): void-End-->
 
@@ -2512,14 +2417,14 @@ Reads the short array from this **MessageSequence** object and writes it to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dataIn | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Short array to read. |
+| dataIn | int[] | Yes | Short array to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2543,21 +2448,17 @@ try {
 
 ## readShortArray
 
-ArkTS-Dyn:
-```TypeScript
-readShortArray(): number[]
-```
-
-ArkTS-Sta:
 ```TypeScript
 readShortArray(): int[]
 ```
 
 Reads the short array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readShortArray(): int[]--><!--Device-MessageSequence-readShortArray(): int[]-End-->
 
@@ -2567,13 +2468,13 @@ Reads the short array from this **MessageSequence** object.
 
 | Type | Description |
 | --- | --- |
-| ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Short array read. |
+| int[] | Short array read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2602,9 +2503,11 @@ readString(): string
 
 Reads the string from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -2622,7 +2525,7 @@ Reads the string from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2651,9 +2554,11 @@ readStringArray(dataIn: string[]): void
 
 Reads the string array from this **MessageSequence** object and writes it to the created empty array.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readStringArray(dataIn: string[]): void--><!--Device-MessageSequence-readStringArray(dataIn: string[]): void-End-->
 
@@ -2669,8 +2574,8 @@ Reads the string array from this **MessageSequence** object and writes it to the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2700,9 +2605,11 @@ readStringArray(): string[]
 
 Reads the string array from this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-readStringArray(): string[]--><!--Device-MessageSequence-readStringArray(): string[]-End-->
 
@@ -2718,7 +2625,7 @@ Reads the string array from this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2747,9 +2654,11 @@ reclaim(): void
 
 Reclaims the **MessageSequence** object that is no longer used.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-reclaim(): void--><!--Device-MessageSequence-reclaim(): void-End-->
 
@@ -2774,21 +2683,17 @@ try {
 
 ## rewindRead
 
-ArkTS-Dyn:
-```TypeScript
-rewindRead(pos: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 rewindRead(pos: int): void
 ```
 
 Moves the read pointer to the specified position.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-rewindRead(pos: int): void--><!--Device-MessageSequence-rewindRead(pos: int): void-End-->
 
@@ -2798,14 +2703,14 @@ Moves the read pointer to the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position from which data is to read. |
+| pos | int | Yes | Position from which data is to read. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900010](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900010](../errorcode-rpc.md#1900010-failed-to-read-data-from-messagesequence) | Failed to read data from the message sequence. |
 
 ## Examples
 
@@ -2832,21 +2737,17 @@ try {
 
 ## rewindWrite
 
-ArkTS-Dyn:
-```TypeScript
-rewindWrite(pos: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 rewindWrite(pos: int): void
 ```
 
 Moves the write pointer to the specified position.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-rewindWrite(pos: int): void--><!--Device-MessageSequence-rewindWrite(pos: int): void-End-->
 
@@ -2856,14 +2757,14 @@ Moves the write pointer to the specified position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pos | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Position from which data is to write. |
+| pos | int | Yes | Position from which data is to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -2888,21 +2789,17 @@ try {
 
 ## setCapacity
 
-ArkTS-Dyn:
-```TypeScript
-setCapacity(size: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setCapacity(size: int): void
 ```
 
 Sets the storage capacity of this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-setCapacity(size: int): void--><!--Device-MessageSequence-setCapacity(size: int): void-End-->
 
@@ -2912,15 +2809,15 @@ Sets the storage capacity of this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Storage capacity of the **MessageSequence** object to set, in bytes. |
+| size | int | Yes | Storage capacity of the **MessageSequence** object to set, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
-| [1900011](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900011-memory-allocation-failed) | Memory allocation failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [1900011](../errorcode-rpc.md#1900011-memory-allocation-failed) | Memory allocation failed. |
 
 ## Examples
 
@@ -2941,21 +2838,17 @@ try {
 
 ## setSize
 
-ArkTS-Dyn:
-```TypeScript
-setSize(size: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 setSize(size: int): void
 ```
 
 Sets the size of the data contained in this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-setSize(size: int): void--><!--Device-MessageSequence-setSize(size: int): void-End-->
 
@@ -2965,14 +2858,14 @@ Sets the size of the data contained in this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Data size to set, in bytes. |
+| size | int | Yes | Data size to set, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3000,9 +2893,11 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 
 Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
-**Since:** 12
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 12; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void--><!--Device-MessageSequence-writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void-End-->
 
@@ -3019,8 +2914,8 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The obtained value of typeCode is incorrect; 5.Failed to obtain arrayBuffer information. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3053,9 +2948,11 @@ writeAshmem(ashmem: Ashmem): void
 
 Writes an anonymous shared object to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void--><!--Device-MessageSequence-writeAshmem(ashmem: Ashmem): void-End-->
 
@@ -3071,8 +2968,8 @@ Writes an anonymous shared object to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter is not an instance of the Ashmem object. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3112,9 +3009,11 @@ writeBoolean(val: boolean): void
 
 Writes a Boolean value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeBoolean(val: boolean): void--><!--Device-MessageSequence-writeBoolean(val: boolean): void-End-->
 
@@ -3130,8 +3029,8 @@ Writes a Boolean value to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3158,9 +3057,11 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 Writes a Boolean array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void--><!--Device-MessageSequence-writeBooleanArray(booleanArray: boolean[]): void-End-->
 
@@ -3176,8 +3077,8 @@ Writes a Boolean array to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3198,21 +3099,17 @@ try {
 
 ## writeByte
 
-ArkTS-Dyn:
-```TypeScript
-writeByte(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeByte(val: int): void
 ```
 
 Writes a byte value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeByte(val: int): void--><!--Device-MessageSequence-writeByte(val: int): void-End-->
 
@@ -3222,14 +3119,14 @@ Writes a byte value to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Byte value to write. |
+| val | int | Yes | Byte value to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3250,21 +3147,17 @@ try {
 
 ## writeByteArray
 
-ArkTS-Dyn:
-```TypeScript
-writeByteArray(byteArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeByteArray(byteArray: int[]): void
 ```
 
 Writes a byte array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeByteArray(byteArray: int[]): void--><!--Device-MessageSequence-writeByteArray(byteArray: int[]): void-End-->
 
@@ -3274,14 +3167,14 @@ Writes a byte array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Byte array to write. |
+| byteArray | int[] | Yes | Byte array to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3303,21 +3196,17 @@ try {
 
 ## writeChar
 
-ArkTS-Dyn:
-```TypeScript
-writeChar(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeChar(val: int): void
 ```
 
 Writes a character to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeChar(val: int): void--><!--Device-MessageSequence-writeChar(val: int): void-End-->
 
@@ -3327,14 +3216,14 @@ Writes a character to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Char** value to write. |
+| val | int | Yes | Char** value to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3355,21 +3244,17 @@ try {
 
 ## writeCharArray
 
-ArkTS-Dyn:
-```TypeScript
-writeCharArray(charArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeCharArray(charArray: int[]): void
 ```
 
 Writes a character array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeCharArray(charArray: int[]): void--><!--Device-MessageSequence-writeCharArray(charArray: int[]): void-End-->
 
@@ -3379,14 +3264,14 @@ Writes a character array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| charArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Character array to write. |
+| charArray | int[] | Yes | Character array to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3407,21 +3292,17 @@ try {
 
 ## writeDouble
 
-ArkTS-Dyn:
-```TypeScript
-writeDouble(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeDouble(val: double): void
 ```
 
 Writes a double value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeDouble(val: double): void--><!--Device-MessageSequence-writeDouble(val: double): void-End-->
 
@@ -3431,14 +3312,14 @@ Writes a double value to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Double value to write. |
+| val | double | Yes | Double value to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3459,21 +3340,17 @@ try {
 
 ## writeDoubleArray
 
-ArkTS-Dyn:
-```TypeScript
-writeDoubleArray(doubleArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeDoubleArray(doubleArray: double[]): void
 ```
 
 Writes a double array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void--><!--Device-MessageSequence-writeDoubleArray(doubleArray: double[]): void-End-->
 
@@ -3483,14 +3360,14 @@ Writes a double array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| doubleArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Yes | Double array to write. |
+| doubleArray | double[] | Yes | Double array to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3511,21 +3388,17 @@ try {
 
 ## writeFileDescriptor
 
-ArkTS-Dyn:
-```TypeScript
-writeFileDescriptor(fd: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeFileDescriptor(fd: int): void
 ```
 
 Writes a file descriptor to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeFileDescriptor(fd: int): void--><!--Device-MessageSequence-writeFileDescriptor(fd: int): void-End-->
 
@@ -3535,14 +3408,14 @@ Writes a file descriptor to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fd | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | File descriptor to write. |
+| fd | int | Yes | File descriptor to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3566,21 +3439,17 @@ try {
 
 ## writeFloat
 
-ArkTS-Dyn:
-```TypeScript
-writeFloat(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeFloat(val: double): void
 ```
 
 Writes a double value to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeFloat(val: double): void--><!--Device-MessageSequence-writeFloat(val: double): void-End-->
 
@@ -3590,14 +3459,14 @@ Writes a double value to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：double | Yes | Double value to write. |
+| val | double | Yes | Double value to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3618,21 +3487,17 @@ try {
 
 ## writeFloatArray
 
-ArkTS-Dyn:
-```TypeScript
-writeFloatArray(floatArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeFloatArray(floatArray: double[]): void
 ```
 
 Writes a double array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void--><!--Device-MessageSequence-writeFloatArray(floatArray: double[]): void-End-->
 
@@ -3642,14 +3507,14 @@ Writes a double array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| floatArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：double[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
+| floatArray | double[] | Yes | Double array to write. The system processes float data as that of the double type. Therefore, the total number of bytes occupied by a float array must be calculated as the double type. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3670,21 +3535,17 @@ try {
 
 ## writeInt
 
-ArkTS-Dyn:
-```TypeScript
-writeInt(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeInt(val: int): void
 ```
 
 Writes an integer to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -3696,14 +3557,14 @@ Writes an integer to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Integer to write. |
+| val | int | Yes | Integer to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3724,21 +3585,17 @@ try {
 
 ## writeIntArray
 
-ArkTS-Dyn:
-```TypeScript
-writeIntArray(intArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeIntArray(intArray: int[]): void
 ```
 
 Writes an integer array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeIntArray(intArray: int[]): void--><!--Device-MessageSequence-writeIntArray(intArray: int[]): void-End-->
 
@@ -3748,14 +3605,14 @@ Writes an integer array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| intArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Integer array to write. |
+| intArray | int[] | Yes | Integer array to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3780,11 +3637,13 @@ try {
 writeInterfaceToken(token: string): void
 ```
 
-Writes an interface token to this **MessageSequence** object. The remote object can use this interface token to  verify the communication.
+Writes an interface token to this **MessageSequence** object. The remote object can use this interface token to verify the communication.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeInterfaceToken(token: string): void--><!--Device-MessageSequence-writeInterfaceToken(token: string): void-End-->
 
@@ -3800,8 +3659,8 @@ Writes an interface token to this **MessageSequence** object. The remote object 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3822,21 +3681,17 @@ try {
 
 ## writeLong
 
-ArkTS-Dyn:
-```TypeScript
-writeLong(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeLong(val: long): void
 ```
 
 Writes a long integer to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeLong(val: long): void--><!--Device-MessageSequence-writeLong(val: long): void-End-->
 
@@ -3846,14 +3701,14 @@ Writes a long integer to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：long | Yes | Long integer to write. |
+| val | long | Yes | Long integer to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3874,21 +3729,17 @@ try {
 
 ## writeLongArray
 
-ArkTS-Dyn:
-```TypeScript
-writeLongArray(longArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeLongArray(longArray: long[]): void
 ```
 
 Writes a long array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeLongArray(longArray: long[]): void--><!--Device-MessageSequence-writeLongArray(longArray: long[]): void-End-->
 
@@ -3898,14 +3749,14 @@ Writes a long array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| longArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：long[] | Yes | Long array to write. |
+| longArray | long[] | Yes | Long array to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3932,9 +3783,11 @@ writeNoException(): void
 
 Writes information to this **MessageSequence** object indicating that no exception occurred.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeNoException(): void--><!--Device-MessageSequence-writeNoException(): void-End-->
 
@@ -3944,7 +3797,7 @@ Writes information to this **MessageSequence** object indicating that no excepti
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -3985,9 +3838,11 @@ writeParcelable(val: Parcelable): void
 
 Writes a **Parcelable** object to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeParcelable(val: Parcelable): void--><!--Device-MessageSequence-writeParcelable(val: Parcelable): void-End-->
 
@@ -4003,8 +3858,8 @@ Writes a **Parcelable** object to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4051,9 +3906,11 @@ writeParcelableArray(parcelableArray: Parcelable[]): void
 
 Writes the **Parcelable** array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void--><!--Device-MessageSequence-writeParcelableArray(parcelableArray: Parcelable[]): void-End-->
 
@@ -4069,8 +3926,8 @@ Writes the **Parcelable** array to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4118,14 +3975,7 @@ try {
 writeRawData(rawData: number[], size: number): void
 ```
 
-Writes raw data to this **MessageSequence** object.
-
-> **NOTE：**
-> 
-> - This API cannot be called for multiple times in one parcel communication.
-> 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
-> pay attention to the SELinux configuration.
+Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API cannot be called for multiple times in one parcel communication. > > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, > pay attention to the SELinux configuration.
 
 **Since:** 9
 
@@ -4133,7 +3983,7 @@ Writes raw data to this **MessageSequence** object.
 
 **Deprecated since:** 11
 
-**Substitutes:** [writeRawDataBuffer](writeRawDataBuffer(rawData:)
+**Substitutes:** [writeRawDataBuffer](#writeRawDataBuffer)(rawData: ArrayBuffer, size: int)
 
 <!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void--><!--Device-MessageSequence-writeRawData(rawData: number[], size: number): void-End-->
 
@@ -4150,8 +4000,8 @@ Writes raw data to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The element does not exist in the array; 7.Failed to obtain typedArray information; 8.The array is not of type int32; 9.The length of typedarray is smaller than the size of the original data sent. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4173,28 +4023,17 @@ try {
 
 ## writeRawDataBuffer
 
-ArkTS-Dyn:
-```TypeScript
-writeRawDataBuffer(rawData: ArrayBuffer, size: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeRawDataBuffer(rawData: ArrayBuffer, size: int): void
 ```
 
-Writes raw data to this **MessageSequence** object.
+Writes raw data to this **MessageSequence** object. > **NOTE：**> > - This API cannot be called for multiple times in one parcel communication. > > - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case, > pay attention to the SELinux configuration.
 
-> **NOTE：**
-> 
-> - This API cannot be called for multiple times in one parcel communication.
-> 
-> - When the data volume is large (greater than 32 KB), the shared memory is used to transmit data. In this case,
-> pay attention to the SELinux configuration.
+**Since:** 23
 
-**Since:** 11
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
-**ArkTS mode:** ArkTS-Dyn since version 11; ArkTS-Sta since version 23.
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void--><!--Device-MessageSequence-writeRawDataBuffer(rawData: ArrayBuffer, size: int): void-End-->
 
@@ -4205,14 +4044,14 @@ Writes raw data to this **MessageSequence** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | rawData | ArrayBuffer | Yes | Raw data to write. The size cannot exceed 128 MB. |
-| size | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Size of the raw data, in bytes. |
+| size | int | Yes | Size of the raw data, in bytes. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.Failed to obtain arrayBuffer information; 4.The transferred size cannot be obtained; 5.The transferred size is less than or equal to 0; 6.The transferred size is greater than the byte length of ArrayBuffer. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4245,9 +4084,11 @@ writeRemoteObject(obj: IRemoteObject): void
 
 Serializes the remote object and writes it to the [MessageSequence](#MessageSequence) object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void--><!--Device-MessageSequence-writeRemoteObject(obj: IRemoteObject): void-End-->
 
@@ -4263,9 +4104,9 @@ Serializes the remote object and writes it to the [MessageSequence](#MessageSequ
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900008](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900008](../errorcode-rpc.md#1900008-invalid-ipc-object) | The proxy or remote object is invalid. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4304,9 +4145,11 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 Writes an **IRemoteObject** array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void--><!--Device-MessageSequence-writeRemoteObjectArray(objectArray: IRemoteObject[]): void-End-->
 
@@ -4322,8 +4165,8 @@ Writes an **IRemoteObject** array to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The obtained remoteObject is null. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4356,21 +4199,17 @@ try {
 
 ## writeShort
 
-ArkTS-Dyn:
-```TypeScript
-writeShort(val: number): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeShort(val: int): void
 ```
 
 Writes a short integer to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeShort(val: int): void--><!--Device-MessageSequence-writeShort(val: int): void-End-->
 
@@ -4380,14 +4219,14 @@ Writes a short integer to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | ArkTS-Dyn: number  <br>ArkTS-Sta：int | Yes | Short integer to write. |
+| val | int | Yes | Short integer to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4408,21 +4247,17 @@ try {
 
 ## writeShortArray
 
-ArkTS-Dyn:
-```TypeScript
-writeShortArray(shortArray: number[]): void
-```
-
-ArkTS-Sta:
 ```TypeScript
 writeShortArray(shortArray: int[]): void
 ```
 
 Writes a short array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeShortArray(shortArray: int[]): void--><!--Device-MessageSequence-writeShortArray(shortArray: int[]): void-End-->
 
@@ -4432,14 +4267,14 @@ Writes a short array to this **MessageSequence** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortArray | ArkTS-Dyn: number[]  <br>ArkTS-Sta：int[] | Yes | Short array to write. |
+| shortArray | int[] | Yes | Short array to write. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The element does not exist in the array; 5.The type of the element in the array is incorrect. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4466,9 +4301,11 @@ writeString(val: string): void
 
 Writes a string to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -4486,8 +4323,8 @@ Writes a string to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The number of parameters is incorrect; 2.The parameter type does not match; 3.The string length is greater than or equal to 40960; 4.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 
@@ -4514,9 +4351,11 @@ writeStringArray(stringArray: string[]): void
 
 Writes a string array to this **MessageSequence** object.
 
-**Since:** 9
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 9; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-MessageSequence-writeStringArray(stringArray: string[]): void--><!--Device-MessageSequence-writeStringArray(stringArray: string[]): void-End-->
 
@@ -4532,8 +4371,8 @@ Writes a string array to this **MessageSequence** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
-| [1900009](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ipc-kit/errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The parameter is an empty array; 2.The number of parameters is incorrect; 3.The parameter type does not match; 4.The string length is greater than or equal to 40960; 5.The number of bytes copied to the buffer is different from the length of the obtained string. |
+| [1900009](../errorcode-rpc.md#1900009-failed-to-write-data-to-messagesequence) | Failed to write data to the message sequence. |
 
 ## Examples
 

@@ -1,23 +1,10 @@
-# @ohos.i18n(国际化-I18n)
+# @ohos.i18n
 
-本模块提供系统相关的以及增强的[国际化](../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为  
-[ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。  
-[国际化-Intl](arkts-intl.md#intl)模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下：
+本模块提供系统相关的以及增强的[国际化](../../../internationalization/i18n-l10n.md)能力，包括区域管理、电话号码处理、日历等，相关接口为 [ECMA 402](https://dev.ecma-international.org/publications-and-standards/standards/ecma-402/)标准中未定义的补充接口。 [国际化-Intl](arkts-intl.md#@ohos.intl(国际化-Intl))模块提供了ECMA 402标准定义的基础国际化接口，与本模块共同使用可提供完整的国际化能力。接口中使用的名词定义如下： - 模式字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)和单引号包裹的自定义文本自由组 合而成的字符串。 - 框架字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)自由组合而成的字符串，不支持自 定义文本。 > **说明：** > > - 本模块接口基于[CLDR](https://cldr.unicode.org)国际化数据库实现，随着CLDR标准的迭代演进，接口处理结果可能会相应调整。例如时间日期格式化接口，其返回值仅适用于界面展示场景，开发者请勿对返回格式 > 进行硬编码或假设性判断，否则可能导致版本兼容问题。其中，API version 12 对应[CLDR 42](https://cldr.unicode.org/downloads/cldr-42)版本，具体数据变更详情可查阅 > [CLDR官方文档](https://cldr.unicode.org/)。 > > - 从API version 11开始，本模块部分接口支持在ArkTS卡片中使用。
 
-- 模式字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)和单引号包裹的自定义文本自由组  
-合而成的字符串。  
-- 框架字符串：由[Unicode日期字段符号](https://www.unicode.org/reports/tr35/tr35-dates.html#Date_Field_Symbol_Table)自由组合而成的字符串，不支持自  
-定义文本。
+**起始版本：** 23
 
-> **说明：**
-> 
-> - 本模块接口基于[CLDR](https://cldr.unicode.org)国际化数据库实现，随着CLDR标准的迭代演进，接口处理结果可能会相应调整。例如时间日期格式化接口，其返回值仅适用于界面展示场景，开发者请勿对返回格式
-> 进行硬编码或假设性判断，否则可能导致版本兼容问题。其中，API version 12 对应[CLDR 42](https://cldr.unicode.org/downloads/cldr-42)版本，具体数据变更详情可查阅
-> [CLDR官方文档](https://cldr.unicode.org/)。
-> 
-> - 从API version 11开始，本模块部分接口支持在ArkTS卡片中使用。
-
-**起始版本：** 7
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace i18n--><!--Device-unnamed-declare namespace i18n-End-->
 
@@ -29,29 +16,29 @@
 
 | 名称 |
 | --- |
-| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md#addpreferredlanguage) |
-| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) |
-| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) |
-| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md#getdisplaycountry) |
-| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md#getdisplaylanguage) |
-| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md#getfirstpreferredlanguage) |
-| [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) |
-| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) |
-| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md#getpreferredlanguagelist) |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern) |
-| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern-1) |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton) |
-| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton-1) |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton) |
-| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getsimplenumberformatbyskeleton-1) |
-| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md#getsystemlanguage) |
-| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md#getsystemlocale) |
-| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md#getsystemregion) |
-| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#gettimezone) |
-| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md#is24hourclock) |
-| [isRTL](arkts-localization-i18n-isrtl-f.md#isrtl) |
-| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md#removepreferredlanguage) |
-| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md#set24hourclock) |
+| [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md#addPreferredLanguage) |
+| [getCalendar](arkts-localization-i18n-getcalendar-f.md#getCalendar) |
+| [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getChineseCalendar) |
+| [getDisplayCountry](arkts-localization-i18n-getdisplaycountry-f.md#getDisplayCountry) |
+| [getDisplayLanguage](arkts-localization-i18n-getdisplaylanguage-f.md#getDisplayLanguage) |
+| [getFirstPreferredLanguage](arkts-localization-i18n-getfirstpreferredlanguage-f.md#getFirstPreferredLanguage) |
+| [getInstance](arkts-localization-i18n-getinstance-f.md#getInstance) |
+| [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getLineInstance) |
+| [getPreferredLanguageList](arkts-localization-i18n-getpreferredlanguagelist-f.md#getPreferredLanguageList) |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) |
+| [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) |
+| [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) |
+| [getSimpleNumberFormatBySkeleton](arkts-localization-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) |
+| [getSystemLanguage](arkts-localization-i18n-getsystemlanguage-f.md#getSystemLanguage) |
+| [getSystemLocale](arkts-localization-i18n-getsystemlocale-f.md#getSystemLocale) |
+| [getSystemRegion](arkts-localization-i18n-getsystemregion-f.md#getSystemRegion) |
+| [getTimeZone](arkts-localization-i18n-gettimezone-f.md#getTimeZone) |
+| [is24HourClock](arkts-localization-i18n-is24hourclock-f.md#is24HourClock) |
+| [isRTL](arkts-localization-i18n-isrtl-f.md#isRTL) |
+| [removePreferredLanguage](arkts-localization-i18n-removepreferredlanguage-f.md#removePreferredLanguage) |
+| [set24HourClock](arkts-localization-i18n-set24hourclock-f.md#set24HourClock) |
 
 ### 类
 

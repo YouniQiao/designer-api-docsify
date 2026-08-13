@@ -1,9 +1,10 @@
 # SymKeyGenerator
 
-Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a  
-**SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator).
+Symmetric key generator interface, defining methods for generating symmetric keys. Before use, you must create a **SymKeyGenerator** instance by using [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createSymKeyGenerator).
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cryptoFramework-interface SymKeyGenerator--><!--Device-cryptoFramework-interface SymKeyGenerator-End-->
 
@@ -23,17 +24,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 convertKey(key: DataBlob, callback: AsyncCallback<SymKey>): void
 ```
 
-Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result.
+Converts specified data into a symmetric key. This API uses an asynchronous callback to return the result. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, the binary key data passed in must match the hash length (for > example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
 
-> **NOTE：**
-> 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
-> example, a 256-bit key for SHA256).
+**Since:** 23
 
-If no hash algorithm is specified when the symmetric key generator is created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is supported.
-
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -54,9 +49,9 @@ If no hash algorithm is specified when the symmetric key generator is created (f
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -89,7 +84,9 @@ convertKey(key: DataBlob): Promise<SymKey>
 
 Converts specified data into a symmetric key. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -115,9 +112,9 @@ Converts specified data into a symmetric key. This API uses a promise to return 
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -152,21 +149,13 @@ function testConvertKey() {
 convertKeySync(key: DataBlob): SymKey
 ```
 
-Converts specified data into a symmetric key.
+Converts specified data into a symmetric key. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, the binary key data passed in must match the hash length (for > example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is > created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is > supported. &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, convertKey. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-> **NOTE：**
-> 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, the binary key data passed in must match the hash length (for
-> example, a 256-bit key for SHA256). If no hash algorithm is specified when the symmetric key generator is
-> created (for example, only **HMAC** is specified), any binary key data with a length of 1 to 4,096 bytes is
-> supported.
+**Since:** 23
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [convertKey](convertKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
+**Deprecated since:** -1
 
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey--><!--Device-SymKeyGenerator-convertKeySync(key: DataBlob): SymKey-End-->
 
@@ -188,9 +177,9 @@ Converts specified data into a symmetric key.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
-| [17620003](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620003-parameter-check-failed) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) |
 
 ## Examples
 
@@ -217,17 +206,11 @@ function testConvertKeySync() {
 generateSymKey(callback: AsyncCallback<SymKey>): void
 ```
 
-Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result.&lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
+Generates a random key using this symmetric key generator. This API uses an asynchronous callback to return the result. &lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random > symmetric key generation is not supported. You can generate symmetric key data using > [convertKey](#convertKey).
 
-> **NOTE：**
-> 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
-> will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random
-> symmetric key generation is not supported. You can generate symmetric key data using
-> [convertKey](#convertKey).
+**Since:** 23
 
-**Since:** 9
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -247,8 +230,8 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 
 | Error Code ID |
 | --- |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -267,9 +250,11 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
 generateSymKey(): Promise<SymKey>
 ```
 
-Generates a random key using this symmetric key generator. This API uses a promise to return the result.&lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
+Generates a random key using this symmetric key generator. This API uses a promise to return the result. &lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -289,8 +274,8 @@ Generates a random key using this symmetric key generator. This API uses a promi
 
 | Error Code ID |
 | --- |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -313,22 +298,13 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('AES128');
 generateSymKeySync(): SymKey
 ```
 
-Generates a random key using this symmetric key generator. This API returns the result synchronously.&lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys.
+Generates a random key using this symmetric key generator. This API returns the result synchronously. &lt;br&gt;OpenSSL RAND_priv_bytes() is currently used to generate random keys. > **NOTE：**> > For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key) > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using [convertKeySync](#convertKeySync). &lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generateSymKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
-> **NOTE：**
-> 
-> For symmetric keys used in the HMAC algorithm, if a hash algorithm (for example, **HMAC|SHA256**) is specified
-> when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
-> will be randomly generated.
+**Since:** 23
 
-If no hash algorithm is specified, for example, only **HMAC** is specified, random symmetric key generation is not supported. You can generate symmetric key data using  
-[convertKeySync](#convertKeySync).
+**Deprecated since:** -1
 
-&lt;br&gt;&lt;br&gt;**NOTE：**&lt;br&gt;It is recommended to prioritize the use of asynchronous API, [generateSymKey](#generateSymKey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore,it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-SymKeyGenerator-generateSymKeySync(): SymKey--><!--Device-SymKeyGenerator-generateSymKeySync(): SymKey-End-->
 
@@ -344,8 +320,8 @@ If no hash algorithm is specified, for example, only **HMAC** is specified, rand
 
 | Error Code ID |
 | --- |
-| [17620004](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620004-invalid-function-call) |
-| [17620001](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-crypto-architecture-kit/errorcode-crypto-framework.md#17620001-memory-operation-failed) |
+| [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) |
+| [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) |
 
 ## Examples
 
@@ -372,7 +348,9 @@ Indicates the algorithm name of the SymKeyGenerator object.
 
 **Type:** string
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 

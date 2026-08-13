@@ -1,16 +1,8 @@
 # RichEditorController
 
-RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)。
+RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)。 > **说明：** > > 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addTextSpan)、 > [addImageSpan](#addImageSpan)、[addBuilderSpan](#addBuilderSpan) > 、[addSymbolSpan](#addSymbolSpan)），组件会自动滚动内容使得插入内容末尾可见。
 
-> **说明：**
-> 
-> 当内容的长度超过组件显示区域的高度时，调用插入接口（例如[addTextSpan](#addTextSpan)、
-> [addImageSpan](#addImageSpan)、[addBuilderSpan](#addBuilderSpan)
-> 、[addSymbolSpan](#addSymbolSpan)），组件会自动滚动内容使得插入内容末尾可见。
-
-## 导入对象
-
-```ts controller: RichEditorController = new RichEditorController();```
+## 导入对象 ```ts controller: RichEditorController = new RichEditorController(); ```
 
 **继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditorbasecontroller-c.md#RichEditorBaseController)
 
@@ -18,7 +10,9 @@ RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-r
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
-<!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController--><!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController-End-->
+**废弃版本：** -1
+
+<!--Device-unnamed-declare class RichEditorController--><!--Device-unnamed-declare class RichEditorController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,68 +22,13 @@ RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-r
 addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): number
 ```
 
-在RichEditor中添加用户自定义布局（BuilderSpan）。
-
-> **说明：**
-> 
-> - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。
-> 
-> - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions)设置此builder在RichEditor中的index（一个文字为一个单位）。
-> 
-> - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。
-> 
-> - 支持通过[bindSelectionMenu](RichEditorAttribute#bindSelectionMenu)设置自定义菜单。
-> 
-> - 不支持通过[getSpans](#getSpans)，[getSelection](#getSelection)，
-> [onSelect](RichEditorAttribute#onSelect)，[aboutToDelete](RichEditorAttribute#aboutToDelete)获取
-> builderSpan信息。
-> 
-> - 不支持通过[updateSpanStyle](#updateSpanStyle)，
-> [updateParagraphStyle](#updateParagraphStyle)等方式更新builder。
-> 
-> - 对此builder节点进行复制或粘贴不生效。
-> 
-> - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。
-> 
-> - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。
-> 
-> - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。
-> 
-> - 对[addBuilderSpan](#addBuilderSpan)的节点文本，
-> [enableDataDetector](RichEditorAttribute#enableDataDetector)、
-> [dataDetectorConfig](RichEditorAttribute#dataDetectorConfig)、
-> [enableSelectedDataDetector](RichEditorAttribute#enableSelectedDataDetector)功能不会生效。
-> 通用属性仅支持[size](CommonMethod#size)、[padding](CommonMethod#padding)、[margin](CommonMethod#margin)、
-> [aspectRatio](CommonMethod#aspectRatio)、[borderStyle](CommonMethod#borderStyle)、
-> [borderWidth](CommonMethod#borderWidth)、[borderColor](CommonMethod#borderColor)、
-> [borderRadius](CommonMethod#borderRadius(value: Length | BorderRadiuses | LocalizedBorderRadiuses))、
-> [backgroundColor](CommonMethod#backgroundColor(value: ResourceColor))、
-> [backgroundBlurStyle](CommonMethod#backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions))
-> 、[opacity](CommonMethod#opacity(value: number | Resource))、
-> [blur](CommonMethod#blur(value: number, options?: BlurOptions))、
-> [backdropBlur](CommonMethod#backdropBlur(value: number, options?: BlurOptions))、
-> [shadow](CommonMethod#shadow(value: ShadowOptions | ShadowStyle))、
-> [grayscale](CommonMethod#grayscale(value: number))、
-> [brightness](CommonMethod#brightness(value: number))、[saturate](CommonMethod#saturate(value: number))
-> 、[contrast](CommonMethod#contrast(value: number))、
-> [invert](CommonMethod#invert(value: number | InvertOptions))、
-> [sepia](CommonMethod#sepia(value: number))、
-> [hueRotate](CommonMethod#hueRotate(value: number | string))、
-> [colorBlend](CommonMethod#colorBlend(value: Color | string | Resource))、
-> [linearGradientBlur](CommonMethod#linearGradientBlur(value: number, options: LinearGradientBlurOptions))、
-> [clip](CommonMethod#clip(value: boolean))、[mask](CommonMethod#mask(value: ProgressMask))、
-> [foregroundBlurStyle](CommonMethod#foregroundBlurStyle(value: BlurStyle, options?: ForegroundBlurStyleOptions))
-> 、[accessibilityGroup](CommonMethod#accessibilityGroup(value: boolean))、
-> [accessibilityText](CommonMethod#accessibilityText(value: string))、
-> [accessibilityDescription](CommonMethod#accessibilityDescription(value: string))、
-> [accessibilityLevel](CommonMethod#accessibilityLevel)、
-> [sphericalEffect](CommonMethod#sphericalEffect(value: number))、
-> [lightUpEffect](CommonMethod#lightUpEffect(value: number))、
-> [pixelStretchEffect](CommonMethod#pixelStretchEffect(options: PixelStretchEffectOptions))。
+在RichEditor中添加用户自定义布局（BuilderSpan）。 > **说明：** > > - RichEditor组件添加占位Span，占位Span调用系统的measure方法计算真实的长宽和位置。 > > - 可通过[RichEditorBuilderSpanOptions](arkts-arkui-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions)设置此builder在RichEditor中的index（一个文字为一个单位）。 > > - 此占位Span不可获焦，支持拖拽，支持部分通用属性，占位、删除等能力等同于ImageSpan，长度视为一个文字。 > > - 支持通过bindSelectionMenu设置自定义菜单。 > > - 不支持通过[getSpans](#getSpans)，[getSelection](#getSelection)， > onSelect，aboutToDelete获取 > builderSpan信息。 > > - 不支持通过[updateSpanStyle](#updateSpanStyle)， > [updateParagraphStyle](#updateParagraphStyle)等方式更新builder。 > > - 对此builder节点进行复制或粘贴不生效。 > > - builder的布局约束由RichEditor传入，如果builder里最外层组件不设置大小，则会用RichEditor的大小作为maxSize。 > > - builder的手势相关事件机制与通用手势事件相同，如果builder中未设置透传，则仅有builder中的子组件响应。 > > - 如果组件光标闪烁，插入后光标位置更新为新插入builder的后面。 > > - 对[addBuilderSpan](#addBuilderSpan)的节点文本， > enableDataDetector、 > dataDetectorConfig、 > enableSelectedDataDetector功能不会生效。 > 通用属性仅支持size、padding、margin、 > aspectRatio、borderStyle、 > borderWidth、borderColor、 > borderRadius、 > backgroundColor、 > backgroundBlurStyle > 、opacity、 > blur、 > backdropBlur、 > shadow、 > grayscale、 > brightness、saturate > 、contrast、 > invert、 > sepia、 > hueRotate、 > colorBlend、 > linearGradientBlur、 > clip、mask、 > foregroundBlurStyle > 、accessibilityGroup、 > accessibilityText、 > accessibilityDescription、 > accessibilityLevel、 > sphericalEffect、 > lightUpEffect、 > pixelStretchEffect。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -118,13 +57,13 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): nu
 addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions): number
 ```
 
-添加图片内容。如果组件光标闪烁，插入后光标位置更新为新插入图片的后面。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
-
-该接口为同步接口，在弱网环境下，直接添加网络图片可能会阻塞UI线程造成冻屏问题。不建议直接添加网络图片。
+添加图片内容。如果组件光标闪烁，插入后光标位置更新为新插入图片的后面。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。 该接口为同步接口，在弱网环境下，直接添加网络图片可能会阻塞UI线程造成冻屏问题。不建议直接添加网络图片。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -153,13 +92,13 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number
 ```
 
-在RichEditor中添加图标小符号（SymbolSpan）。如果组件光标闪烁，插入后光标位置更新为新插入SymbolSpan的后面。
-
-SymbolSpan暂不支持手势、复制操作和拖拽处理。
+在RichEditor中添加图标小符号（SymbolSpan）。如果组件光标闪烁，插入后光标位置更新为新插入SymbolSpan的后面。 SymbolSpan暂不支持手势、复制操作和拖拽处理。
 
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -194,6 +133,8 @@ addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -227,6 +168,8 @@ deleteSpans(value?: RichEditorRange): void
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
@@ -253,6 +196,8 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -277,7 +222,7 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. |
 
 ## getParagraphs
 
@@ -290,6 +235,8 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -323,6 +270,8 @@ getSelection(): RichEditorSelection
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -348,6 +297,8 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -381,6 +332,8 @@ toStyledString(value: RichEditorRange): StyledString
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为12。
 
+**废弃版本：** -1
+
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
@@ -405,7 +358,7 @@ toStyledString(value: RichEditorRange): StyledString
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) | The parameter check failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameter check failed. |
 
 ## updateParagraphStyle
 
@@ -418,6 +371,8 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 **起始版本：** 11
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为11。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -439,15 +394,13 @@ updateParagraphStyle(value: RichEditorParagraphStyleOptions): void
 updateSpanStyle(value: RichEditorUpdateTextSpanStyleOptions | RichEditorUpdateImageSpanStyleOptions | RichEditorUpdateSymbolSpanStyleOptions): void
 ```
 
-更新文本、图片或SymbolSpan样式。
-
-若只更新了一个Span的部分内容，则会根据更新部分、未更新部分将该Span拆分为多个Span。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。
-
-使用该接口更新文本、图片或SymbolSpan样式时默认不会关闭自定义文本选择菜单。
+更新文本、图片或SymbolSpan样式。 若只更新了一个Span的部分内容，则会根据更新部分、未更新部分将该Span拆分为多个Span。当controller未绑定组件或绑定controller的组件被释放时，该接口调用无效。 使用该接口更新文本、图片或SymbolSpan样式时默认不会关闭自定义文本选择菜单。
 
 **起始版本：** 10
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为10。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

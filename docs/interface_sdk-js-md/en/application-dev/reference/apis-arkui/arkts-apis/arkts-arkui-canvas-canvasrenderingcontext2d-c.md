@@ -8,7 +8,9 @@ Draw context object for the Canvas component.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
-<!--Device-unnamed-export declare class CanvasRenderingContext2D extends CanvasRenderer--><!--Device-unnamed-export declare class CanvasRenderingContext2D extends CanvasRenderer-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export declare class CanvasRenderingContext2D--><!--Device-unnamed-export declare class CanvasRenderingContext2D-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -23,6 +25,8 @@ Constructor of the canvas drawing context object, which is used to create a draw
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -49,6 +53,8 @@ Retrieves a 2D rendering context from the specified drawing context.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasRenderingContext2D-static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, options?: RenderingContextOptions): CanvasRenderingContext2D--><!--Device-CanvasRenderingContext2D-static getContext2DFromDrawingContext(drawingContext: DrawingRenderingContext, options?: RenderingContextOptions): CanvasRenderingContext2D-End-->
@@ -72,7 +78,7 @@ Retrieves a 2D rendering context from the specified drawing context.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [103702](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. @static |
+| [103702](../errorcode-canvas.md#103702-drawing-context-is-not-bound-to-any-canvas-component) | The drawingContext is not bound to a canvas component. @static |
 
 ## offAttach
 
@@ -85,6 +91,8 @@ Unregister the listener that watches if the canvasrenderingcontext2d attached to
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +110,7 @@ Unregister the listener that watches if the canvasrenderingcontext2d attached to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## offDetach
 
@@ -115,6 +123,8 @@ Unregister the listener that watches if the canvasrenderingcontext2d detached fr
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -132,7 +142,7 @@ Unregister the listener that watches if the canvasrenderingcontext2d detached fr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onAttach
 
@@ -145,6 +155,8 @@ Register the listener that watches if the canvasrenderingcontext2d attached to t
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -162,7 +174,7 @@ Register the listener that watches if the canvasrenderingcontext2d attached to t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## onDetach
 
@@ -175,6 +187,8 @@ Register the listener that watches if the canvasrenderingcontext2d detached from
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -192,7 +206,7 @@ Register the listener that watches if the canvasrenderingcontext2d detached from
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Input parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## startImageAnalyzer
 
@@ -206,6 +220,8 @@ Start image analyzer.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasRenderingContext2D-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>--><!--Device-CanvasRenderingContext2D-startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>-End-->
@@ -216,7 +232,7 @@ Start image analyzer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [ImageAnalyzerConfig](arkts-arkui-imagecommon-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
+| config | [ImageAnalyzerConfig](../../apis-na/arkts-apis/arkts-na-imagecommon-imageanalyzerconfig-i.md) | Yes | Image analyzer config. |
 
 **Return value:**
 
@@ -228,9 +244,9 @@ Start image analyzer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [110001](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is not supported. |
-| [110003](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
-| [110002](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-arkui/arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
+| [110001](../arkui-ts/errorcode-image-analyzer.md#110001-ai-image-analysis-not-supported) | Image analysis feature is not supported. |
+| [110003](../arkui-ts/errorcode-image-analyzer.md#110003-ai-image-analysis-terminated) | Image analysis is stopped. |
+| [110002](../arkui-ts/errorcode-image-analyzer.md#110002-ai-image-analysis-already-in-progress) | Image analysis is currently being executed. |
 
 ## stopImageAnalyzer
 
@@ -243,6 +259,8 @@ Stop image analyzer.
 **Since:** 23
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -262,6 +280,8 @@ Generate a character string in the data url format.
 
 **ArkTS mode:** ArkTS-Sta only, since version 23.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CanvasRenderingContext2D-toDataURL(type?: string, quality?: double): string--><!--Device-CanvasRenderingContext2D-toDataURL(type?: string, quality?: double): string-End-->
@@ -280,64 +300,4 @@ Generate a character string in the data url format.
 | Type | Description |
 | --- | --- |
 | string |  |
-
-## canvas
-
-```TypeScript
-get canvas(): FrameNode | null
-```
-
-Frame node of the canvas. The default value is null.
-
-**Type:** [FrameNode](arkts-arkui-framenode-c.md)
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CanvasRenderingContext2D-get canvas(): FrameNode | null--><!--Device-CanvasRenderingContext2D-get canvas(): FrameNode | null-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## height
-
-```TypeScript
-get height(): double
-```
-
-The default value is 0, which is bound to the height of the specified canvas. The value is read-only.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CanvasRenderingContext2D-get height(): double--><!--Device-CanvasRenderingContext2D-get height(): double-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## width
-
-```TypeScript
-get width(): double
-```
-
-The default value is 0, which is bound to the width of the specified canvas. The value is read-only.
-
-**Type:** double
-
-**Since:** 23
-
-**ArkTS mode:** ArkTS-Sta only, since version 23.
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CanvasRenderingContext2D-get width(): double--><!--Device-CanvasRenderingContext2D-get width(): double-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 

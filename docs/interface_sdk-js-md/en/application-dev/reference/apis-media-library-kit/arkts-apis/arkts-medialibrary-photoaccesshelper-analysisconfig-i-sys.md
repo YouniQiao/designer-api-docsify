@@ -4,7 +4,9 @@ Defines the asset analysis configuration.
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-interface AnalysisConfig--><!--Device-photoAccessHelper-interface AnalysisConfig-End-->
 
@@ -24,15 +26,15 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 extraInfos?: string
 ```
 
-Extended information in JSON string format.
-
-Length range: (0, 500].
+Extended information in JSON string format. Length range: (0, 500].
 
 **Type:** string
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,14 +50,15 @@ Length range: (0, 500].
 types: AnalysisType[]
 ```
 
-Array of intelligent analysis types. The maximum size of the array is the number of members defined by the   
-[AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#AnalysisType) enum.
+Array of intelligent analysis types. The maximum size of the array is the number of members defined by the [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md#AnalysisType-(System-API)) enum.
 
 **Type:** [AnalysisType](arkts-medialibrary-photoaccesshelper-analysistype-e-sys.md)[]
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -71,15 +74,15 @@ Array of intelligent analysis types. The maximum size of the array is the number
 uris: string[]
 ```
 
-Asset URI array.
-
-Length range: [0, 100].
+Asset URI array. Length range: [0, 100].
 
 **Type:** string[]
 
 **Since:** 24
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

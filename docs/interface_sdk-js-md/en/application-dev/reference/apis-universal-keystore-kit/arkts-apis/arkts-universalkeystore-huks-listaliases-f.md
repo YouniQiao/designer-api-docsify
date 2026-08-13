@@ -18,6 +18,8 @@ Lists key aliases. This API uses a promise to return the result.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>--><!--Device-huks-function listAliases(options: HuksOptions): Promise<HuksListAliasesReturnResult>-End-->
@@ -40,12 +42,12 @@ Lists key aliases. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12000005](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
-| [12000004](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000004-file-error) | operating file failed |
-| [12000018](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
-| [12000014](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
-| [12000012](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-universal-keystore-kit/errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [12000005](../errorcode-huks.md#12000005-ipc-error) | IPC communication failed |
+| [12000004](../errorcode-huks.md#12000004-file-error) | operating file failed |
+| [12000018](../errorcode-huks.md#12000018-invalid-input-parameter) | the group id specified by the access group tag is invalid<br>**Applicable version:** 23 and later |
+| [12000014](../errorcode-huks.md#12000014-insufficient-memory) | memory is insufficient |
+| [12000012](../errorcode-huks.md#12000012-external-error) | Device environment or input parameter abnormal |
 
 ## Examples
 

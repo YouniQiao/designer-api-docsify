@@ -14,7 +14,9 @@ function createPbapServerProfile(): PbapServerProfile
 
 create the instance of PBAP server profile.
 
-**Since:** 11
+**Since:** 26.0.0
+
+**Deprecated since:** -1
 
 <!--Device-pbap-function createPbapServerProfile(): PbapServerProfile--><!--Device-pbap-function createPbapServerProfile(): PbapServerProfile-End-->
 
@@ -30,8 +32,8 @@ create the instance of PBAP server profile.
 
 | Error Code ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#401-incorrect-ads-request-parameter) |
-| [801](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) |
+| [801](../../errorcode-universal.md#801-api-not-supported) |
 
 ## Examples
 

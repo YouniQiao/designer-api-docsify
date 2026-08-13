@@ -1,13 +1,10 @@
 # @ohos.bundle.freeInstall
 
-The module provides APIs for setting and obtaining installation-free information and APIs for obtaining
- BundlePackInfo and DispatchInfo.
- > **NOTE**
- >
- > The APIs provided by this module are system APIs.
+本模块提供免安装相关的设置和查询能力，支持BundlePackInfo、DispatchInfo等信息的查询。 > **说明：** > > 本模块为系统接口。
 
+**起始版本：** 23
 
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-unnamed-declare namespace freeInstall--><!--Device-unnamed-declare namespace freeInstall-End-->
 
@@ -22,14 +19,14 @@ The module provides APIs for setting and obtaining installation-free information
 
 | 名称 |
 | --- |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo) |
-| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getbundlepackinfo-1) |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo) |
-| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo-1) |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#ishapmoduleremovable) |
-| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#ishapmoduleremovable-1) |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#sethapmoduleupgradeflag) |
-| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#sethapmoduleupgradeflag-1) |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo（系统接口）) |
+| [getBundlePackInfo](arkts-ability-freeinstall-getbundlepackinfo-f-sys.md#getBundlePackInfo（系统接口）) |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo（系统接口）) |
+| [getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getDispatchInfo（系统接口）) |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#isHapModuleRemovable（系统接口）) |
+| [isHapModuleRemovable](arkts-ability-freeinstall-ishapmoduleremovable-f-sys.md#isHapModuleRemovable（系统接口）) |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#setHapModuleUpgradeFlag（系统接口）) |
+| [setHapModuleUpgradeFlag](arkts-ability-freeinstall-sethapmoduleupgradeflag-f-sys.md#setHapModuleUpgradeFlag（系统接口）) |
 <!--DelEnd-->
 
 <!--Del-->

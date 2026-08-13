@@ -1,14 +1,16 @@
 # ResolvedUIContext
 
-Defines the result of UIContext.resolveUIContext.This class is a subclass of UIContext and additionally provides the strategy used to obtain this UIContext.
+**ResolvedUIContext** instance object. > **NOTE：**> > - You can preview how this component looks on a real device, but not in DevEco Studio Previewer. > > - **ResolvedUIContext** is inherited from [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext). Objects of this class contain > the [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) instance and its parsing policy.
 
 **Inheritance/Implementation:** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
 
-<!--Device-unnamed-export declare class ResolvedUIContext extends UIContext--><!--Device-unnamed-export declare class ResolvedUIContext extends UIContext-End-->
+**Deprecated since:** -1
+
+<!--Device-unnamed-export class ResolvedUIContext--><!--Device-unnamed-export class ResolvedUIContext-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -28,11 +30,15 @@ Resolving strategy of the UIContext.
 
 **Type:** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 
-**Since:** 23
+**Since:** 22
 
-**ArkTS mode:** ArkTS-Sta only, since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 22.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ResolvedUIContext-strategy: ResolveStrategy--><!--Device-ResolvedUIContext-strategy: ResolveStrategy-End-->
 

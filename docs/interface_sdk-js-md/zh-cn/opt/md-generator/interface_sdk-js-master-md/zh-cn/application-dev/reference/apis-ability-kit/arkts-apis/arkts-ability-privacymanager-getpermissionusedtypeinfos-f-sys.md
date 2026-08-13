@@ -10,7 +10,9 @@ function getPermissionUsedTypeInfos(
 
 查询设备上指定应用访问敏感权限时的信息（包括敏感权限名称、敏感权限访问方式）。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **需要权限：** ohos.permission.PERMISSION_USED_STATS
 
@@ -37,12 +39,12 @@ function getPermissionUsedTypeInfos(
 
 | 错误码ID |
 | --- |
-| [12100009](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100009-服务内部错误) |
-| [201](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#201-权限校验失败) |
-| [12100001](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100001-入参错误) |
-| [202](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) |
-| [12100002](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100002-tokenid不存在) |
-| [12100003](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-ability-kit/errorcode-access-token.md#12100003-权限名不存在) |
+| [12100009](../errorcode-access-token.md#12100009-服务内部错误) |
+| [201](../../errorcode-universal.md#201-权限校验失败) |
+| [12100001](../errorcode-access-token.md#12100001-入参错误) |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) |
+| [12100002](../errorcode-access-token.md#12100002-tokenid不存在) |
+| [12100003](../errorcode-access-token.md#12100003-权限名不存在) |
 
 ## 示例
 

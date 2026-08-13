@@ -6,6 +6,8 @@ Enum for dialog state.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-export enum DialogState--><!--Device-unnamed-export enum DialogState-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -21,6 +23,8 @@ Indicates it is uninitialized.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -42,6 +46,8 @@ Indicates it is initialized.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -61,6 +67,8 @@ Indicates it is appearing.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,6 +90,8 @@ Indicates it is appeared.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -102,6 +112,8 @@ Indicates it is disappearing.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
@@ -121,6 +133,8 @@ Indicates it is disappeared.
 **Since:** 26.1.0
 
 **ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

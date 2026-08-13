@@ -6,6 +6,8 @@ Defines the parameters for sending data over the TCPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-socket-export interface TCPSendOptions--><!--Device-socket-export interface TCPSendOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -30,6 +32,8 @@ Data to send.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
+**Deprecated since:** -1
+
 <!--Device-TCPSendOptions-data: string | ArrayBuffer--><!--Device-TCPSendOptions-data: string | ArrayBuffer-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
@@ -47,6 +51,8 @@ Character encoding format.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-TCPSendOptions-encoding?: string--><!--Device-TCPSendOptions-encoding?: string-End-->
 

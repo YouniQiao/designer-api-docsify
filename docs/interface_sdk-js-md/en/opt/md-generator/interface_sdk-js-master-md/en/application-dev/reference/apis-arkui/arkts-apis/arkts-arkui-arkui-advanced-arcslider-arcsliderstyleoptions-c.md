@@ -4,7 +4,7 @@ Defines the style of the arc slider.
 
 **Since:** 18
 
-**Decorator:** @ObservedV2
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class ArcSliderStyleOptions--><!--Device-unnamed-declare class ArcSliderStyleOptions-End-->
 
@@ -26,6 +26,8 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)--><!--Device-ArcSliderStyleOptions-constructor(options?: ArcSliderStyleOptionsConstructorOptions)-End-->
@@ -41,14 +43,11 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 ## activeTrackThickness
 
 ```TypeScript
-activeTrackThickness?: number
+@Trace
+  activeTrackThickness?: number
 ```
 
-Stroke width of the arc slider when it is in an enlarged state, in vp.
-
-Default value: **24**
-
-Value range: [24, 36]. If the value is invalid, the default value is used.
+Stroke width of the arc slider when it is in an enlarged state, in vp. Default value: **24** Value range: [24, 36]. If the value is invalid, the default value is used.
 
 **Type:** number
 
@@ -56,21 +55,22 @@ Value range: [24, 36]. If the value is invalid, the default value is used.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderStyleOptions-activeTrackThickness?: number--><!--Device-ArcSliderStyleOptions-activeTrackThickness?: number-End-->
+<!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: number--><!--Device-ArcSliderStyleOptions-@Trace  activeTrackThickness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## selectedColor
 
 ```TypeScript
-selectedColor?: string
+@Trace
+  selectedColor?: string
 ```
 
-Highlight color of the stroke.
-
-Default value: **#FF5EA1FF**
+Highlight color of the stroke. Default value: **#FF5EA1FF**
 
 **Type:** string
 
@@ -78,23 +78,22 @@ Default value: **#FF5EA1FF**
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderStyleOptions-selectedColor?: string--><!--Device-ArcSliderStyleOptions-selectedColor?: string-End-->
+<!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  selectedColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## trackBlur
 
 ```TypeScript
-trackBlur?: number
+@Trace
+  trackBlur?: number
 ```
 
-Blur effect applied to the stroke background, in vp.
-
-Default value: **20**
-
-If a value less than 0 is set, the default is used.
+Blur effect applied to the stroke background, in vp. Default value: **20** If a value less than 0 is set, the default is used.
 
 **Type:** number
 
@@ -102,21 +101,22 @@ If a value less than 0 is set, the default is used.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderStyleOptions-trackBlur?: number--><!--Device-ArcSliderStyleOptions-trackBlur?: number-End-->
+<!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: number--><!--Device-ArcSliderStyleOptions-@Trace  trackBlur?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## trackColor
 
 ```TypeScript
-trackColor?: string
+@Trace
+  trackColor?: string
 ```
 
-Background color of the stroke.
-
-Default value: **#33FFFFFF**
+Background color of the stroke. Default value: **#33FFFFFF**
 
 **Type:** string
 
@@ -124,23 +124,22 @@ Default value: **#33FFFFFF**
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderStyleOptions-trackColor?: string--><!--Device-ArcSliderStyleOptions-trackColor?: string-End-->
+<!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string--><!--Device-ArcSliderStyleOptions-@Trace  trackColor?: string-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
 ## trackThickness
 
 ```TypeScript
-trackThickness?: number
+@Trace
+  trackThickness?: number
 ```
 
-Stroke width of the arc slider in the normal state, in vp.
-
-Default value: **5**
-
-Value range: [5, 16]. If the value is invalid, the default value is used.
+Stroke width of the arc slider in the normal state, in vp. Default value: **5** Value range: [5, 16]. If the value is invalid, the default value is used.
 
 **Type:** number
 
@@ -148,8 +147,10 @@ Value range: [5, 16]. If the value is invalid, the default value is used.
 
 **Since:** 18
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcSliderStyleOptions-trackThickness?: number--><!--Device-ArcSliderStyleOptions-trackThickness?: number-End-->
+<!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: number--><!--Device-ArcSliderStyleOptions-@Trace  trackThickness?: number-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

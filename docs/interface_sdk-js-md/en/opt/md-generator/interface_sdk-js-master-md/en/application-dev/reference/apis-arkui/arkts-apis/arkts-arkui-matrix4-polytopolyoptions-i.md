@@ -4,6 +4,8 @@ Describes the configuration options for polygon-to-polygon transformation mappin
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-matrix4-export interface PolyToPolyOptions--><!--Device-matrix4-export interface PolyToPolyOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,6 +28,8 @@ Coordinates of the destination point.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -40,17 +44,15 @@ Coordinates of the destination point.
 dstIndex?: number
 ```
 
-Start index of the destination point coordinates.
-
-Default value: **src.length/2**.
-
-Value range: [0, +∞).
+Start index of the destination point coordinates. Default value: **src.length/2**. Value range: [0, +∞).
 
 **Type:** number
 
 **Default:** src.Length/2
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -66,17 +68,15 @@ Value range: [0, +∞).
 pointCount?:number
 ```
 
-Number of used points. **0**: returns an identity matrix. **1**: returns a translation matrix. 2-4: returns a transformation matrix.
-
-Default value: **0**.
-
-Value range: [0, +∞).
+Number of used points. **0**: returns an identity matrix. **1**: returns a translation matrix. 2-4: returns a transformation matrix. Default value: **0**. Value range: [0, +∞).
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,6 +98,8 @@ Coordinates of the source point.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -112,17 +114,15 @@ Coordinates of the source point.
 srcIndex?: number
 ```
 
-Start index of the source point coordinates.
-
-Default value: **0**.
-
-Value range: [0, +∞).
+Start index of the source point coordinates. Default value: **0**. Value range: [0, +∞).
 
 **Type:** number
 
 **Default:** 0
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

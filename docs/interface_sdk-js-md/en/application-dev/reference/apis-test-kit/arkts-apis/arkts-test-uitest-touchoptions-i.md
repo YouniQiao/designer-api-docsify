@@ -4,7 +4,9 @@ Common options for touch operations.
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface TouchOptions--><!--Device-unnamed-declare interface TouchOptions-End-->
 
@@ -22,13 +24,15 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 duration?: int
 ```
 
-Duration of the operation in milliseconds.&lt;br&gt;Value range: The value should be >= 1500&lt;br&gt;Unit: ms&lt;br&gt;Default value: 1500
+Duration of the operation in milliseconds. &lt;br&gt;Value range: The value should be >= 1500 &lt;br&gt;Unit: ms &lt;br&gt;Default value: 1500
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -42,14 +46,15 @@ Duration of the operation in milliseconds.&lt;br&gt;Value range: The value shoul
 pressure?: double
 ```
 
-Pressure value of the touch. The value range is [0, 1]. The default value is **0**. If the value is **null** or  
-**undefined**, the default value is used. If the value is out of the value range, the 17000007 error code is thrown.
+Pressure value of the touch. The value range is [0, 1]. The default value is **0**. If the value is **null** or **undefined**, the default value is used. If the value is out of the value range, the 17000007 error code is thrown.
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：double
+**Type:** double
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
@@ -63,13 +68,15 @@ Pressure value of the touch. The value range is [0, 1]. The default value is **0
 speed?: int
 ```
 
-Speed of touch action.&lt;br&gt;Value range:[200, 40000]&lt;br&gt;Unit: px/s.&lt;br&gt;If the value is out of range or null/undefined, the default value 600 is used.&lt;br&gt;Default value: 600
+Speed of touch action. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;If the value is out of range or null/undefined, the default value 600 is used. &lt;br&gt;Default value: 600
 
-**Type:** ArkTS-Dyn: number  <br>ArkTS-Sta：int
+**Type:** int
 
 **Since:** 26.0.0
 
-**ArkTS mode:** Both ArkTS-Dyn and ArkTS-Sta, since version 26.0.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.0.0.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 

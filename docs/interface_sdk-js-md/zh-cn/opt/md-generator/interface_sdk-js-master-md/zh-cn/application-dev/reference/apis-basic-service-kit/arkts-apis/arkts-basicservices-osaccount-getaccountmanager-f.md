@@ -8,7 +8,9 @@ function getAccountManager(): AccountManager
 
 获取系统账号管理对象。
 
-**起始版本：** 7
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-osAccount-function getAccountManager(): AccountManager--><!--Device-osAccount-function getAccountManager(): AccountManager-End-->
 

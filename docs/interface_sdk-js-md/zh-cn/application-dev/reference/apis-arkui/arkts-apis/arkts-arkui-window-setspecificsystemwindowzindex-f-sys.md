@@ -6,15 +6,13 @@
 function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>
 ```
 
-设置系统窗口的窗口层级。使用Promise异步回调。
-
-将所有该类型系统窗口zIndex调整为所设置的值，调整前后，该类型窗口之间相对层级保持不变，焦点窗口不发生变化。当应用关闭之后该类型窗口层级恢复默认值。
-
-推荐不同类型窗口设置不同的zIndex，如果已经存在相同zIndex的窗口，设置前后，窗口之间的相对层级保持不变。
+设置系统窗口的窗口层级。使用Promise异步回调。 将所有该类型系统窗口zIndex调整为所设置的值，调整前后，该类型窗口之间相对层级保持不变，焦点窗口不发生变化。当应用关闭之后该类型窗口层级恢复默认值。 推荐不同类型窗口设置不同的zIndex，如果已经存在相同zIndex的窗口，设置前后，窗口之间的相对层级保持不变。
 
 **起始版本：** 23
 
-**ArkTS模式：** 同时支持ArkTS-Dyn、ArkTS-Sta，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+
+**废弃版本：** -1
 
 <!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>--><!--Device-window-function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Promise<void>-End-->
 
@@ -27,7 +25,7 @@ function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Pro
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | windowType | WindowType | 是 | 窗口类型。仅支持TYPE_WALLET_SWIPE_CARD、TYPE_VOICE_INTERACTION、TYPE_SCREENSHOT、 TYPE_SCREEN_CONTROL、TYPE_FLOAT_NAVIGATION和TYPE_MUTISCREEN_COLLABORATION。 |
-| zIndex | ArkTS-Dyn: number  <br>ArkTS-Sta：int | 是 | 系统窗口的层级。该参数仅支持整数输入，浮点数输入将向下取整。0和负数会使窗口在桌面以下。 |
+| zIndex | int | 是 | 系统窗口的层级。该参数仅支持整数输入，浮点数输入将向下取整。0和负数会使窗口在桌面以下。 |
 
 **返回值：**
 
@@ -39,10 +37,10 @@ function setSpecificSystemWindowZIndex(windowType: WindowType, zIndex: int): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1300003](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300004](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/apis-arkui/errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. |
-| [202](../../../../../../../../gitee_tmp/docs/stamaster/zh-cn/application-dev/reference/errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300004](../errorcode-window.md#1300004-无权限操作) | Unauthorized operation. Possible cause: Invalid window type. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, non-system application uses system API. |
 
 ## 示例
 

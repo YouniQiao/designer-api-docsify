@@ -1,4 +1,4 @@
-# SceneResources(Defines 3D resource related interfaces)
+# SceneResources
 
 ## Summary
 

@@ -2,7 +2,9 @@
 
 定义被其他3D资源扩展的场景资源.
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-unnamed-export interface SceneResource--><!--Device-unnamed-export interface SceneResource-End-->
 
@@ -16,7 +18,9 @@ destroy(): void
 
 销毁场景资源，释放所有关联的资源或引用，一旦被释放，资源就不能被再次使用或访问。
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneResource-destroy(): void--><!--Device-SceneResource-destroy(): void-End-->
 
@@ -56,7 +60,9 @@ name: string
 
 **类型：** string
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneResource-name: string--><!--Device-SceneResource-name: string-End-->
 
@@ -72,7 +78,9 @@ readonly resourceType: SceneResourceType
 
 **类型：** [SceneResourceType](arkts-arkgraphics3d-sceneresources-sceneresourcetype-e.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneResource-readonly resourceType: SceneResourceType--><!--Device-SceneResource-readonly resourceType: SceneResourceType-End-->
 
@@ -88,7 +96,9 @@ readonly uri?: ResourceStr
 
 **类型：** [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 
-**起始版本：** 12
+**起始版本：** 23
+
+**废弃版本：** -1
 
 <!--Device-SceneResource-readonly uri?: ResourceStr--><!--Device-SceneResource-readonly uri?: ResourceStr-End-->
 

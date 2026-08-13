@@ -18,7 +18,7 @@ Creates a **PasteDataRecord** object of the URI type.
 
 **Deprecated since:** 9
 
-**Substitutes:** [createRecord](pasteboard.createRecord(mimeType:)
+**Substitutes:** [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createRecord)(mimeType: string, value: ValueType)
 
 <!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord--><!--Device-pasteboard-function createUriRecord(uri: string): PasteDataRecord-End-->
 

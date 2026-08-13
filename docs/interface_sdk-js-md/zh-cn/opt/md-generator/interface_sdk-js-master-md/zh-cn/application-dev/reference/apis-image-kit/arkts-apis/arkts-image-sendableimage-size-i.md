@@ -1,14 +1,14 @@
 # Size
 
-表示图片尺寸。
+表示图片尺寸。 继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
 
-继承自[lang.ISendable](../../../arkts-utils/arkts-sendable.md#isendable)。
-
-**继承/实现关系：** Size extends [lang.ISendable](lang.ISendable)
+**继承/实现关系：** Size extends lang.ISendable
 
 **起始版本：** 12
 
-<!--Device-sendableImage-interface Size extends lang.ISendable--><!--Device-sendableImage-interface Size extends lang.ISendable-End-->
+**废弃版本：** -1
+
+<!--Device-sendableImage-interface Size--><!--Device-sendableImage-interface Size-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -23,6 +23,8 @@ height: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 
@@ -43,6 +45,8 @@ width: number
 **类型：** number
 
 **起始版本：** 12
+
+**废弃版本：** -1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务API中使用。
 

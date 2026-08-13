@@ -44,7 +44,7 @@ Obtains the bundle name based on a UID. This API uses a promise to return the re
 
 **Deprecated since:** 9
 
-**Substitutes:** [null](null)
+**Substitutes:** null
 
 <!--Device-bundle-function getNameForUid(uid: number): Promise<string>--><!--Device-bundle-function getNameForUid(uid: number): Promise<string>-End-->
 

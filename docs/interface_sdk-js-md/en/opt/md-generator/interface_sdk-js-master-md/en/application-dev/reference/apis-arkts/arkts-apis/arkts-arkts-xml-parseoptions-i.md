@@ -2,7 +2,9 @@
 
 Parse options for XmlPullParser.
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-xml-interface ParseOptions--><!--Device-xml-interface ParseOptions-End-->
 
@@ -22,20 +24,17 @@ attributeValueCallbackFunction?: (name: string, value: string) => boolean
 
 Attribute value callback function.
 
-**Since:** 8
+**Type:** (name: string, value: string) =&gt; boolean
+
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ParseOptions-attributeValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-attributeValueCallbackFunction?: (name: string, value: string) => boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| value | string | Yes |
 
 ## attributeWithTagCallbackFunction
 
@@ -45,59 +44,17 @@ attributeWithTagCallbackFunction?: AttributeWithTagCb
 
 Attribute value and tag callback function.
 
-**Since:** 20
+**Type:** [AttributeWithTagCb](arkts-arkts-xml-attributewithtagcb-t.md)
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Since:** 24
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-ParseOptions-attributeWithTagCallbackFunction?: AttributeWithTagCb--><!--Device-ParseOptions-attributeWithTagCallbackFunction?: AttributeWithTagCb-End-->
 
 **System capability:** SystemCapability.Utils.Lang
-
-## tagValueCallbackFunction
-
-```TypeScript
-tagValueCallbackFunction?: (name: string, value: string) => boolean
-```
-
-Tag value callback function.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| name | string | Yes |
-| value | string | Yes |
-
-## tokenValueCallbackFunction
-
-```TypeScript
-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
-```
-
-Token value callback function.
-
-**Since:** 8
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean--><!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-**Parameters:**
-
-| [Name](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact-name-c.md) | [Type](arkts-arkts-util-type-e.md) | Mandatory |
-| --- | --- | --- |
-| eventType | [EventType](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-screenlock-eventtype-t-sys.md) | Yes |
-| value | [ParseInfo](arkts-arkts-xml-parseinfo-i.md) | Yes |
 
 ## ignoreNameSpace
 
@@ -109,7 +66,9 @@ Whether to ignore parsing texts of the elements.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -127,10 +86,52 @@ Whether to parsing Doctype of the elements.
 
 **Type:** boolean
 
-**Since:** 8
+**Since:** 23
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ParseOptions-supportDoctype?: boolean--><!--Device-ParseOptions-supportDoctype?: boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## tagValueCallbackFunction
+
+```TypeScript
+tagValueCallbackFunction?: (name: string, value: string) => boolean
+```
+
+Tag value callback function.
+
+**Type:** (name: string, value: string) =&gt; boolean
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean--><!--Device-ParseOptions-tagValueCallbackFunction?: (name: string, value: string) => boolean-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## tokenValueCallbackFunction
+
+```TypeScript
+tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean
+```
+
+Token value callback function.
+
+**Type:** (eventType: EventType, value: ParseInfo) =&gt; boolean
+
+**Since:** 23
+
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean--><!--Device-ParseOptions-tokenValueCallbackFunction?: (eventType: EventType, value: ParseInfo) => boolean-End-->
 
 **System capability:** SystemCapability.Utils.Lang

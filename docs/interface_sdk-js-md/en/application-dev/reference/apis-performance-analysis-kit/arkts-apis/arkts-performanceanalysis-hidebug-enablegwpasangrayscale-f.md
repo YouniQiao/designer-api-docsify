@@ -14,9 +14,11 @@ function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void
 
 Enable the GWP-ASAN grayscale of your application.
 
-**Since:** 20
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void--><!--Device-hidebug-function enableGwpAsanGrayscale(options?: GwpAsanOptions, duration?: int): void-End-->
 
@@ -27,13 +29,13 @@ Enable the GWP-ASAN grayscale of your application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [GwpAsanOptions](arkts-performanceanalysis-hidebug-gwpasanoptions-i.md) | No | The options of GWP-ASAN grayscale. |
-| duration | ArkTS-Dyn: number  <br>ArkTS-Sta：int | No | The duration days of GWP-ASAN grayscale. |
+| duration | int | No | The duration days of GWP-ASAN grayscale. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11400114](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-performance-analysis-kit/errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) | The number of GWP-ASAN applications of this device overflowed after last boot. |
+| [11400114](../errorcode-hiviewdfx-hidebug.md#11400114-failed-to-enable-gwpasan) | The number of GWP-ASAN applications of this device overflowed after last boot. |
 
 ## Examples
 

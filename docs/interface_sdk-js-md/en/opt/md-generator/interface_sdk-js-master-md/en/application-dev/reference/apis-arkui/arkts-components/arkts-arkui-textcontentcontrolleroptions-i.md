@@ -4,6 +4,8 @@ Provides configuration options for text insertion operations in text input compo
 
 **Since:** 15
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface TextContentControllerOptions--><!--Device-unnamed-declare interface TextContentControllerOptions-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -19,6 +21,8 @@ Insertion position for the text.
 **Type:** number
 
 **Since:** 15
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

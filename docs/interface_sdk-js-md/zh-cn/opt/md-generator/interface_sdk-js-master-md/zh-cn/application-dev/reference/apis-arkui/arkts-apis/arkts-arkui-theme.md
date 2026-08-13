@@ -1,8 +1,5 @@
 # @ohos.arkui.theme
 
-主题换肤
-
-
 ## 汇总
 
 ### 类

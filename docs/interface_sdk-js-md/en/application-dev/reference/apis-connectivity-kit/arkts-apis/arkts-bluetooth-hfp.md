@@ -2,9 +2,11 @@
 
 Provides methods to accessing bluetooth call-related capabilities.
 
-**Since:** 10
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 10; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare namespace hfp--><!--Device-unnamed-declare namespace hfp-End-->
 
@@ -22,8 +24,8 @@ import { hfp } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md#createhfpagprofile) | create the instance of hfp profile. |
-| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md#createhfphfprofile) | create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile). |
+| [createHfpAgProfile](arkts-connectivity-hfp-createhfpagprofile-f.md#createHfpAgProfile) | create the instance of hfp profile. |
+| [createHfpHfProfile](arkts-connectivity-hfp-createhfphfprofile-f.md#createHfpHfProfile) | create the instance of HF(Hands-Free Unit) for HFP(Hands-Free Profile). |
 
 <!--Del-->
 ### Interfaces（系统接口）

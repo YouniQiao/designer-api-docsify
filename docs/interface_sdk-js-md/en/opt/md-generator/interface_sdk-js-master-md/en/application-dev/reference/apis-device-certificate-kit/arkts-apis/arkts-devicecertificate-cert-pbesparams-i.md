@@ -2,7 +2,9 @@
 
 Represents PBES algorithm parameters. Currently, only PBES2 is supported.
 
-**Since:** 21
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-cert-interface PbesParams--><!--Device-cert-interface PbesParams-End-->
 
@@ -26,9 +28,11 @@ PBES algorithm type. The default value is **AES_256_CBC**.
 
 **Default:** PbesEncryptionAlgorithm.AES_256_CBC
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesParams-encryptionAlgorithm?: PbesEncryptionAlgorithm--><!--Device-PbesParams-encryptionAlgorithm?: PbesEncryptionAlgorithm-End-->
 
@@ -40,15 +44,17 @@ PBES algorithm type. The default value is **AES_256_CBC**.
 iterations?: number
 ```
 
-Number of iterations. The default value is **2048**.The value must be a positive integer.
+Number of iterations. The default value is **2048**. The value must be a positive integer.
 
 **Type:** number
 
 **Default:** 2048
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesParams-iterations?: int--><!--Device-PbesParams-iterations?: int-End-->
 
@@ -60,15 +66,17 @@ Number of iterations. The default value is **2048**.The value must be a positive
 saltLen?: number
 ```
 
-Length of the salt value. The default value is **16**, and the minimum value is **8**.The value must be an integer greater than or equal to 8.
+Length of the salt value. The default value is **16**, and the minimum value is **8**. The value must be an integer greater than or equal to 8.
 
 **Type:** number
 
 **Default:** 16
 
-**Since:** 21
+**Since:** 23
 
-**Atomic service API:** This API can be used in atomic services since API version 21.
+**Deprecated since:** -1
+
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PbesParams-saltLen?: int--><!--Device-PbesParams-saltLen?: int-End-->
 

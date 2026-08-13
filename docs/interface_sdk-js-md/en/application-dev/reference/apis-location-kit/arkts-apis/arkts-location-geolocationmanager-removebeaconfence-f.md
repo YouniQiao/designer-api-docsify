@@ -14,14 +14,16 @@ function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>
 
 Remove a beacon fence.
 
-**Since:** 20
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Dyn since version 20; ArkTS-Sta since version 26.1.0.
+**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
+
+**Deprecated since:** -1
 
 **Required permissions:** 
 - API version 20 - 24: ohos.permission.LOCATION and ohos.permission.APPROXIMATELY_LOCATION
 
-**Atomic service API:** This API can be used in atomic services since API version 20.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>--><!--Device-geoLocationManager-function removeBeaconFence(beaconFence?: BeaconFence): Promise<void>-End-->
 
@@ -43,9 +45,9 @@ Remove a beacon fence.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-ads-kit/errorcode-ads.md#801-ad-request-failure) | Capability not supported. Failed to call \\${geoLocationManager.removeBeaconFence} due to limited device capabilities. |
-| [3501602](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/apis-location-kit/errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) | Failed to delete the fence due to incorrect beacon fence information. |
-| [201](../../../../../../../../gitee_tmp/docs/stamaster/en/application-dev/reference/errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 - 24 |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call \\${geoLocationManager.removeBeaconFence} due to limited device capabilities. |
+| [3501602](../errorcode-geoLocationManager.md#3501602-failed-to-delete-a-beacon-fence-because-of-incorrect-information) | Failed to delete the fence due to incorrect beacon fence information. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API.<br>**Applicable version:** 20 - 24 |
 
 ## Examples
 

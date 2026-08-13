@@ -1,17 +1,10 @@
 # KVStoreResultSet
 
-提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。
+提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。 KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。 在调用KVStoreResultSet的方法前，需要先通过 getKVStore 构建一个SingleKVStore或者DeviceKVStore实例。 > **说明：** > > KVStoreResultSet的游标起始位置为-1。
 
-KVStoreResultSet实例不会实时刷新。使用结果集后，如果数据库中的数据发生变化（如增删改操作），需要重新查询才能获取到最新的数据。
+**起始版本：** 23
 
-在调用KVStoreResultSet的方法前，需要先通过  
-[getKVStore](distributedKVStore.KVManager.getKVStore&lt;T&gt;(storeId: string, options: Options, callback: AsyncCallback&lt;T&gt;))构建一个SingleKVStore或者DeviceKVStore实例。
-
-> **说明：**
-> 
-> KVStoreResultSet的游标起始位置为-1。
-
-**起始版本：** 9
+**废弃版本：** -1
 
 <!--Device-distributedKVStore-interface KVStoreResultSet--><!--Device-distributedKVStore-interface KVStoreResultSet-End-->
 
@@ -25,7 +18,9 @@ getCount(): number
 
 获取结果集中的总行数。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -69,7 +64,9 @@ getEntry(): Entry
 
 从当前位置获取对应的键值对。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -110,10 +107,11 @@ try {
 getPosition(): number
 ```
 
-获取结果集中当前的读取位置。读取位置会因[moveToFirst](#moveToFirst)、  
-[moveToLast](#moveToLast)等操作而发生变化。
+获取结果集中当前的读取位置。读取位置会因[moveToFirst](#moveToFirst)、 [moveToLast](#moveToLast)等操作而发生变化。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -157,7 +155,9 @@ isAfterLast(): boolean
 
 检查读取位置是否在最后一行之后。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -200,7 +200,9 @@ isBeforeFirst(): boolean
 
 检查读取位置是否在第一行之前。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -243,7 +245,9 @@ isFirst(): boolean
 
 检查读取位置是否为第一行。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -287,7 +291,9 @@ isLast(): boolean
 
 检查读取位置是否为最后一行。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -331,7 +337,9 @@ move(offset: number): boolean
 
 将读取位置移动到当前位置的相对偏移量。即当前游标位置向下偏移 offset 行。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -355,7 +363,7 @@ move(offset: number): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -387,7 +395,9 @@ moveToFirst(): boolean
 
 将读取位置移动到第一行。如果结果集为空，则返回false。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -431,7 +441,9 @@ moveToLast(): boolean
 
 将读取位置移动到最后一行。如果结果集为空，则返回false。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -475,7 +487,9 @@ moveToNext(): boolean
 
 将读取位置移动到下一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -521,7 +535,9 @@ moveToPosition(position: number): boolean
 
 将读取位置从 0 移动到绝对位置。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -545,7 +561,7 @@ moveToPosition(position: number): boolean
 
 | 错误码ID |
 | --- |
-| [401](../../../../../../../../gitee_tmp/docs/master/zh-cn/application-dev/reference/apis-contacts-kit/errorcode-contacts.md#401-打开联系人头像文件失败) |
+| [401](../../errorcode-universal.md#401-参数检查失败) |
 
 ## 示例
 
@@ -577,7 +593,9 @@ moveToPrevious(): boolean
 
 将读取位置移动到上一行。如果结果集为空，则返回false。适用于全量获取数据库结果集的场景。
 
-**起始版本：** 9
+**起始版本：** 23
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

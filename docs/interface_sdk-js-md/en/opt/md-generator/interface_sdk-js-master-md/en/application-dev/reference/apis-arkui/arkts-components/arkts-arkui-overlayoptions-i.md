@@ -1,17 +1,10 @@
 # OverlayOptions
 
-> **NOTE：**
-> 
-> To standardize anonymous object definitions, the element definitions here have been revised in API version 12.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer element
-> 's @since version number is higher than inner elements'. This does not affect interface usability.
-
-> **NOTE：**
-> 
-> When both **align** and **offset** are set, the effects are combined. The overlay is first aligned relative to the
-> component and then offset from its current upper left corner.
+> **NOTE：**> > To standardize anonymous object definitions, the element definitions here have been revised in API version 12. > While historical version information is preserved for anonymous objects, there may be cases where the outer element > 's @since version number is higher than inner elements'. This does not affect interface usability. > **NOTE：**> > When both **align** and **offset** are set, the effects are combined. The overlay is first aligned relative to the > component and then offset from its current upper left corner.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare interface OverlayOptions--><!--Device-unnamed-declare interface OverlayOptions-End-->
 
@@ -23,13 +16,13 @@
 align?: Alignment
 ```
 
-Alignment of the overlay relative to the component.
-
-Default value: **TopStart**
+Alignment of the overlay relative to the component. Default value: **TopStart**
 
 **Type:** [Alignment](../arkts-apis/arkts-arkui-alignment-e.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,6 +43,8 @@ Offset of the overlay from the upper left corner. By default, the overlay is in 
 **Type:** [OverlayOffset](arkts-arkui-overlayoffset-i.md)
 
 **Since:** 7
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

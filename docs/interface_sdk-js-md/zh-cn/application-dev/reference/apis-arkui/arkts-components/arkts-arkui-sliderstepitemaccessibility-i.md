@@ -6,6 +6,8 @@ Slider刻度点的无障碍文本信息。
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
 
+**废弃版本：** -1
+
 <!--Device-unnamed-declare interface SliderStepItemAccessibility--><!--Device-unnamed-declare interface SliderStepItemAccessibility-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -16,15 +18,15 @@ Slider刻度点的无障碍文本信息。
 text?: ResourceStr
 ```
 
-无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。 
-
-默认值：""
+无障碍文本，供屏幕阅读器等工具读取，增强无障碍功能。 默认值：""
 
 **类型：** ResourceStr
 
 **起始版本：** 20
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为20。
+
+**废弃版本：** -1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

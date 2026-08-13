@@ -8,9 +8,9 @@ const RTT_CALLING_STATUS: string
 
 Specifies whether real-time text (RTT) calling is enabled. If enabled, incoming and outgoing calls are answered as RTT calls when supported by the device and carrier. If the value is {@code 1}, RTT calling is enabled. If the value is {@code 0}, RTT calling is disabled.
 
-**Since:** 7
+**Since:** 23
 
-**ArkTS mode:** ArkTS-Dyn since version 7; ArkTS-Sta since version 23.
+**ArkTS mode:** ArkTS-Dyn only, since version 23.
 
 **Deprecated since:** 21
 

@@ -2,7 +2,9 @@
 
 Enumerates the efficiency resource types.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-backgroundTaskManager-export enum ResourceType--><!--Device-backgroundTaskManager-export enum ResourceType-End-->
 
@@ -18,7 +20,9 @@ CPU = 1
 
 CPU resource. Such type of resource prevents an application from being suspended.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-CPU = 1--><!--Device-ResourceType-CPU = 1-End-->
 
@@ -34,7 +38,9 @@ COMMON_EVENT = 1 << 1
 
 Common event resource. Such type of resource ensures that an application in the suspended state can receive common events.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-COMMON_EVENT = 1 << 1--><!--Device-ResourceType-COMMON_EVENT = 1 << 1-End-->
 
@@ -50,7 +56,9 @@ TIMER = 1 << 2
 
 Timer resource. Such type of resource ensures that an application in the suspended state can be woken up by system timers.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-TIMER = 1 << 2--><!--Device-ResourceType-TIMER = 1 << 2-End-->
 
@@ -66,7 +74,9 @@ WORK_SCHEDULER = 1 << 3
 
 Deferred task resource. Such type of resource provides a loose control policy for an application.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-WORK_SCHEDULER = 1 << 3--><!--Device-ResourceType-WORK_SCHEDULER = 1 << 3-End-->
 
@@ -82,7 +92,9 @@ BLUETOOTH = 1 << 4
 
 Bluetooth resource. Such type of resource ensures that an application in the suspended state can be woken up by Bluetooth-related events.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-BLUETOOTH = 1 << 4--><!--Device-ResourceType-BLUETOOTH = 1 << 4-End-->
 
@@ -96,9 +108,11 @@ Bluetooth resource. Such type of resource ensures that an application in the sus
 GPS = 1 << 5
 ```
 
-GPS resource. Such type of resource ensures that an application in the suspended state can be woken up by GPS-related events.
+GPS resource. Such type of resource ensures that an application in the suspended state can be woken up by GPS- related events.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-GPS = 1 << 5--><!--Device-ResourceType-GPS = 1 << 5-End-->
 
@@ -114,7 +128,9 @@ AUDIO = 1 << 6
 
 Audio resource. Such type of resource prevents an application from being suspended when the application has an audio being played.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-AUDIO = 1 << 6--><!--Device-ResourceType-AUDIO = 1 << 6-End-->
 
@@ -130,7 +146,9 @@ RUNNING_LOCK = 1 << 7
 
 RUNNING_LOCK resources are not proxied when the application is suspended.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-RUNNING_LOCK = 1 << 7--><!--Device-ResourceType-RUNNING_LOCK = 1 << 7-End-->
 
@@ -146,7 +164,9 @@ SENSOR = 1 << 8
 
 Sensor callbacks are not intercepted.
 
-**Since:** 10
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-ResourceType-SENSOR = 1 << 8--><!--Device-ResourceType-SENSOR = 1 << 8-End-->
 

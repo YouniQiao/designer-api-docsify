@@ -1,16 +1,12 @@
 # WaterFlowSections
 
-Describes the water flow item sections.
-
-> **NOTE：**
-> 
-> After the section information is modified using **splice**, **push**, and **update**, ensure that the total number
-> of child nodes in all sections matches the actual total number of child nodes in the **WaterFlow** component. Any
-> failure to do so may result in layout issues that prevent the **WaterFlow** component from scrolling properly.
+Describes the water flow item sections. > **NOTE：**> > After the section information is modified using **splice**, **push**, and **update**, ensure that the total number > of child nodes in all sections matches the actual total number of child nodes in the **WaterFlow** component. Any > failure to do so may result in layout issues that prevent the **WaterFlow** component from scrolling properly.
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 <!--Device-unnamed-declare class WaterFlowSections--><!--Device-unnamed-declare class WaterFlowSections-End-->
 
@@ -27,6 +23,8 @@ A constructor used to create a **WaterFlowSections** object.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -47,6 +45,8 @@ Obtains the number of sections in the **WaterFlow** component.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,6 +73,8 @@ Adds the specified sections to the end of the **WaterFlow** component.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -105,6 +107,8 @@ Changes sections by removing or replacing an existing section and/or adding a se
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -140,6 +144,8 @@ Updates the configuration of a specified water flow item section.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
@@ -172,6 +178,8 @@ Obtains the configuration of all sections in the **WaterFlow** component.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 

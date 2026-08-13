@@ -8,7 +8,9 @@ Defines other properties of the UDPSocket connection.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
 
-<!--Device-socket-export interface UDPExtraOptions extends ExtraOptionsBase--><!--Device-socket-export interface UDPExtraOptions extends ExtraOptionsBase-End-->
+**Deprecated since:** -1
+
+<!--Device-socket-export interface UDPExtraOptions--><!--Device-socket-export interface UDPExtraOptions-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -31,6 +33,8 @@ Whether to send broadcast messages. The default value is false.
 **Since:** 10
 
 **ArkTS mode:** ArkTS-Dyn only, since version 10.
+
+**Deprecated since:** -1
 
 <!--Device-UDPExtraOptions-broadcast?: boolean--><!--Device-UDPExtraOptions-broadcast?: boolean-End-->
 

@@ -1,15 +1,10 @@
 # Image
 
-The **Image** class is used to obtain image content.
+The **Image** class is used to obtain image content. An Image instance is returned when [readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage) and [readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage) are called. Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver) by the data source. Images occupy a large amount of memory. When you finish using an Image instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-An Image instance is returned when   
-[readNextImage](arkts-image-image-imagereceiver-i.md#readNextImage) and  
-[readLatestImage](arkts-image-image-imagereceiver-i.md#readLatestImage)are called.
+**Since:** 23
 
-Image properties are initialized only during image creation and cannot be changed later. These properties do not affect the actual image content. You should always rely on the properties written by the image producer, that is, the content actually sent to the [ImageReceiver](arkts-image-image-imagereceiver-i.md#ImageReceiver) by the data source.Images occupy a large amount of memory. When you finish using an Image instance, call   
-[release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-image-interface Image--><!--Device-image-interface Image-End-->
 
@@ -27,14 +22,11 @@ import { image } from '@kit.ImageKit';
 getBufferData(): ImageBufferData | null
 ```
 
-Obtains ImageBufferData from an image.
-
-> **NOTE：**
-> 
-> **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image
-> ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
+Obtains ImageBufferData from an image. > **NOTE：**> > **byteBuffer** in **ImageBufferData** is a shallow copy of the internal buffer. When the lifecycle of an image > ends, do not perform any operations on **byteBuffer**, as this may lead to undefined behavior.
 
 **Since:** 23
+
+**Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -56,7 +48,9 @@ getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): 
 
 Obtains the component buffer from the Image instance based on the color component type. This API uses an asynchronous callback to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void--><!--Device-Image-getComponent(componentType: ComponentType, callback: AsyncCallback<Component>): void-End-->
 
@@ -77,7 +71,9 @@ getComponent(componentType: ComponentType): Promise<Component>
 
 Obtains the component buffer from the Image instance based on the color component type. This API uses a promise to return the result.
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>--><!--Device-Image-getComponent(componentType: ComponentType): Promise<Component>-End-->
 
@@ -105,6 +101,8 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Image-getMetadata(key: HdrMetadataKey): HdrMetadataValue | null--><!--Device-Image-getMetadata(key: HdrMetadataKey): HdrMetadataValue | null-End-->
@@ -127,8 +125,8 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 
 | Error Code ID |
 | --- |
-| [7600206](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600206-invalid-parameter) |
-| [7600302](../../../../../../../../gitee_tmp/docs/master/en/application-dev/reference/apis-image-kit/errorcode-image.md#7600302-memory-copy-failure) |
+| [7600206](../errorcode-image.md#7600206-invalid-parameter) |
+| [7600302](../errorcode-image.md#7600302-memory-copy-failure) |
 
 ## release
 
@@ -136,15 +134,11 @@ Obtains the HDR metadata from an image based on the HDR metadata type.
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this Image instance. This API uses an asynchronous callback to return the result.
+Releases this Image instance. This API uses an asynchronous callback to return the result. The corresponding resources must be released before another image arrives. Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-The corresponding resources must be released before another image arrives.
+**Since:** 23
 
-Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-Image-release(callback: AsyncCallback<void>): void--><!--Device-Image-release(callback: AsyncCallback<void>): void-End-->
 
@@ -162,15 +156,11 @@ Before releasing the instance, ensure that all asynchronous operations associate
 release(): Promise<void>
 ```
 
-Releases this Image instance. This API uses a promise to return the result.
+Releases this Image instance. This API uses a promise to return the result. The corresponding resources must be released before another image arrives. Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-The corresponding resources must be released before another image arrives.
+**Since:** 23
 
-Images occupy a large amount of memory. When you finish using an Image instance, call this API to free the memory promptly.
-
-Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
-
-**Since:** 9
+**Deprecated since:** -1
 
 <!--Device-Image-release(): Promise<void>--><!--Device-Image-release(): Promise<void>-End-->
 
@@ -192,7 +182,9 @@ Image area to be cropped.
 
 **Type:** Region
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Image-clipRect: Region--><!--Device-Image-clipRect: Region-End-->
 
@@ -210,6 +202,8 @@ Color space of the image.
 
 **Since:** 23
 
+**Deprecated since:** -1
+
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-Image-readonly colorSpace: colorSpaceManager.ColorSpace--><!--Device-Image-readonly colorSpace: colorSpaceManager.ColorSpace-End-->
@@ -222,12 +216,13 @@ Color space of the image.
 readonly format: number
 ```
 
-Image format. For details, see   
-[OH_NativeBuffer_Format](../../../reference/apis-arkgraphics2d/c-apis/capi-buffer-common-h.md#oh_nativebuffer_format).
+Image format. For details, see OH_NativeBuffer_Format.
 
 **Type:** number
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Image-readonly format: int--><!--Device-Image-readonly format: int-End-->
 
@@ -239,21 +234,13 @@ Image format. For details, see
 readonly size: Size
 ```
 
-Image size.
-
-If the Image object stores camera preview stream data (YUV image data), the width and height in **size**reflect the dimensions of the YUV image.
-
-If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file,the width in **size** is the size of the JPEG file, while the height is set to **1**.
-
-The type of data stored in the Image object depends on whether the application passes the surface ID in the receiver to a previewOutput or captureOutput object of the camera.
-
-For details about the best practices of camera preview and photo capture, see  
-[Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and  
-[Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
+Image size. If the Image object stores camera preview stream data (YUV image data), the width and height in **size** reflect the dimensions of the YUV image. If the Image object stores camera capture stream data (JPEG image data), given that it is an encoded file, the width in **size** is the size of the JPEG file, while the height is set to **1**. The type of data stored in the Image object depends on whether the application passes the surface ID in the receiver to a previewOutput or captureOutput object of the camera. For details about the best practices of camera preview and photo capture, see [Dual-Channel Preview (ArkTS)](../../../media/camera/camera-dual-channel-preview.md) and [Photo Capture Sample (ArkTS)](../../../media/camera/camera-shooting-case.md).
 
 **Type:** Size
 
-**Since:** 9
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Image-readonly size: Size--><!--Device-Image-readonly size: Size-End-->
 
@@ -265,12 +252,13 @@ For details about the best practices of camera preview and photo capture, see
 readonly timestamp: number
 ```
 
-Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use   
-[getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty)to read the related Exif information.
+Image timestamp. Timestamps, measured in nanoseconds, are usually monotonically increasing. The specific meaning and baseline of these timestamps are determined by the image producer, which is the camera in the camera preview and photo scenarios. As a result, images from different producers may carry timestamps with distinct meanings and baselines, making direct comparison between them infeasible. To obtain the generation time of a photo, you can use [getImageProperty](arkts-image-image-imagesource-i.md#getImageProperty) to read the related Exif information.
 
 **Type:** number
 
-**Since:** 12
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-Image-readonly timestamp: long--><!--Device-Image-readonly timestamp: long-End-->
 

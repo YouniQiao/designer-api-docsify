@@ -6,7 +6,7 @@ Describes the contents of the scan results.
 
 **Deprecated since:** 9
 
-**Substitutes:** [ScanResult](ohos.bluetoothManager/bluetoothManager.ScanResult)
+**Substitutes:** [ScanResult](arkts-connectivity-bluetoothmanager-scanresult-i.md#ScanResult)
 
 <!--Device-bluetooth-interface ScanResult--><!--Device-bluetooth-interface ScanResult-End-->
 
@@ -32,7 +32,7 @@ The raw data of broadcast packet
 
 **Deprecated since:** 9
 
-**Substitutes:** [data](ohos.bluetoothManager/bluetoothManager.ScanResult.data)
+**Substitutes:** [data](arkts-connectivity-bluetoothmanager-scanresult-i.md#data)
 
 <!--Device-ScanResult-data: ArrayBuffer--><!--Device-ScanResult-data: ArrayBuffer-End-->
 
@@ -52,7 +52,7 @@ Address of the scanned device
 
 **Deprecated since:** 9
 
-**Substitutes:** [deviceId](ohos.bluetoothManager/bluetoothManager.ScanResult.deviceId)
+**Substitutes:** [deviceId](arkts-connectivity-bluetoothmanager-scanresult-i.md#deviceId)
 
 <!--Device-ScanResult-deviceId: string--><!--Device-ScanResult-deviceId: string-End-->
 
@@ -72,7 +72,7 @@ RSSI of the remote device
 
 **Deprecated since:** 9
 
-**Substitutes:** [rssi](ohos.bluetoothManager/bluetoothManager.ScanResult.rssi)
+**Substitutes:** [rssi](arkts-connectivity-bluetoothmanager-scanresult-i.md#rssi)
 
 <!--Device-ScanResult-rssi: number--><!--Device-ScanResult-rssi: number-End-->
 

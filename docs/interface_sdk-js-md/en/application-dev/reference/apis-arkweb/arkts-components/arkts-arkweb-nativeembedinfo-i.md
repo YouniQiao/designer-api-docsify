@@ -6,6 +6,8 @@ Provides detailed information about the same-layer tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 <!--Device-unnamed-declare interface NativeEmbedInfo--><!--Device-unnamed-declare interface NativeEmbedInfo-End-->
 
 **System capability:** SystemCapability.Web.Webview.Core
@@ -16,13 +18,15 @@ Provides detailed information about the same-layer tag.
 height?: number
 ```
 
-The embed tag height.&lt;br&gt;Unit:px.
+The embed tag height. &lt;br&gt;Unit:px.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -44,6 +48,8 @@ ID of the same-layer tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-id?: string--><!--Device-NativeEmbedInfo-id?: string-End-->
@@ -64,6 +70,8 @@ List of key-value pairs contained in the **object** tag that form a map of the O
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NativeEmbedInfo-params?: Map<string, string>--><!--Device-NativeEmbedInfo-params?: Map<string, string>-End-->
@@ -76,13 +84,15 @@ List of key-value pairs contained in the **object** tag that form a map of the O
 position?: Position
 ```
 
-Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin,This position is different from the standard position.&lt;br&gt;Unit: pixels.
+Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin, This position is different from the standard position. &lt;br&gt;Unit: pixels.
 
 **Type:** Position
 
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -104,6 +114,8 @@ src?: string
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-src?: string--><!--Device-NativeEmbedInfo-src?: string-End-->
@@ -123,6 +135,8 @@ Tag name, which is in uppercase.
 **Since:** 12
 
 **ArkTS mode:** ArkTS-Dyn only, since version 12.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -144,6 +158,8 @@ Type of the same-layer tag. The value is in lowercase.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-type?: string--><!--Device-NativeEmbedInfo-type?: string-End-->
@@ -164,6 +180,8 @@ URL of the same-layer tag.
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
 
+**Deprecated since:** -1
+
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NativeEmbedInfo-url?: string--><!--Device-NativeEmbedInfo-url?: string-End-->
@@ -176,13 +194,15 @@ URL of the same-layer tag.
 width?: number
 ```
 
-The embed tag width.&lt;br&gt;Unit:px.
+The embed tag width. &lt;br&gt;Unit:px.
 
 **Type:** number
 
 **Since:** 11
 
 **ArkTS mode:** ArkTS-Dyn only, since version 11.
+
+**Deprecated since:** -1
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

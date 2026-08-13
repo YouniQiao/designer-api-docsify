@@ -6,7 +6,9 @@ type ValueType = number | number | number | string | boolean | Uint8Array | null
 
 Defines the type of value in a KV pair. The type varies with the parameter function.
 
-**Since:** 22
+**Since:** 23
+
+**Deprecated since:** -1
 
 <!--Device-photoAccessHelper-type ValueType = int | long | double | string | boolean | Uint8Array | null--><!--Device-photoAccessHelper-type ValueType = int | long | double | string | boolean | Uint8Array | null-End-->
 

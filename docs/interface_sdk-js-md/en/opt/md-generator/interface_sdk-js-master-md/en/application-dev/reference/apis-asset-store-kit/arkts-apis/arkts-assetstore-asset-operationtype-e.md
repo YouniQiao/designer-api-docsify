@@ -4,6 +4,8 @@ Enumerates the types of additional operation to perform.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-asset-enum OperationType--><!--Device-asset-enum OperationType-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -18,6 +20,8 @@ Sync.
 
 **Since:** 12
 
+**Deprecated since:** -1
+
 <!--Device-OperationType-NEED_SYNC = 0--><!--Device-OperationType-NEED_SYNC = 0-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -31,6 +35,8 @@ NEED_LOGOUT = 1
 Logout.
 
 **Since:** 12
+
+**Deprecated since:** -1
 
 <!--Device-OperationType-NEED_LOGOUT = 1--><!--Device-OperationType-NEED_LOGOUT = 1-End-->
 

@@ -2,9 +2,11 @@
 
 Enumerates the device select strategy.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-audio-enum AudioDevcieSelectStrategy--><!--Device-audio-enum AudioDevcieSelectStrategy-End-->
 
@@ -20,9 +22,11 @@ SELECT_STRATEGY_DEFAULT = 0
 
 The default follow device select strategy.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_DEFAULT = 0--><!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_DEFAULT = 0-End-->
 
@@ -38,9 +42,11 @@ SELECT_STRATEGY_INDEPENDENT = 1
 
 The independent device select strategy.
 
-**Since:** 21
+**Since:** 24
 
-**ArkTS mode:** ArkTS-Dyn since version 21; ArkTS-Sta since version 24.
+**ArkTS mode:** ArkTS-Dyn only, since version 24.
+
+**Deprecated since:** -1
 
 <!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_INDEPENDENT = 1--><!--Device-AudioDevcieSelectStrategy-SELECT_STRATEGY_INDEPENDENT = 1-End-->
 
